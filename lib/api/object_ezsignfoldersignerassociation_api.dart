@@ -236,6 +236,70 @@ class ObjectEzsignfoldersignerassociationApi {
     return null;
   }
 
+  /// Retrieve an existing Ezsignfoldersignerassociation's children IDs
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfoldersignerassociationID (required):
+  ///   The unique ID of the Ezsignfoldersignerassociation
+  Future<Response> ezsignfoldersignerassociationGetChildrenV1WithHttpInfo(int pkiEzsignfoldersignerassociationID) async {
+    // Verify required params are set.
+    if (pkiEzsignfoldersignerassociationID == null) {
+     throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsignfoldersignerassociationID');
+    }
+
+    final path = '/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getChildren'.replaceAll('{format}', 'json')
+      .replaceAll('{' + 'pkiEzsignfoldersignerassociationID' + '}', pkiEzsignfoldersignerassociationID.toString());
+
+    Object postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    final contentTypes = <String>[];
+    final nullableContentType = contentTypes.isNotEmpty ? contentTypes[0] : null;
+    final authNames = <String>['Authorization'];
+
+    if (
+      nullableContentType != null &&
+      nullableContentType.toLowerCase().startsWith('multipart/form-data')
+    ) {
+      bool hasFields = false;
+      final mp = MultipartRequest(null, null);
+      if (hasFields) {
+        postBody = mp;
+      }
+    } else {
+    }
+
+    return await apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      nullableContentType,
+      authNames,
+    );
+  }
+
+  /// Retrieve an existing Ezsignfoldersignerassociation's children IDs
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfoldersignerassociationID (required):
+  ///   The unique ID of the Ezsignfoldersignerassociation
+  Future<void> ezsignfoldersignerassociationGetChildrenV1(int pkiEzsignfoldersignerassociationID) async {
+    final response = await ezsignfoldersignerassociationGetChildrenV1WithHttpInfo(pkiEzsignfoldersignerassociationID);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, _decodeBodyBytes(response));
+    }
+  }
+
   /// Retrieve a Login Url to allow In-Person signing
   ///
   /// This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.  The signer Login type must be configured as In-Person.
@@ -309,70 +373,6 @@ class ObjectEzsignfoldersignerassociationApi {
       return apiClient.deserialize(_decodeBodyBytes(response), 'EzsignfoldersignerassociationGetInPersonLoginUrlV1Response') as EzsignfoldersignerassociationGetInPersonLoginUrlV1Response;
     }
     return null;
-  }
-
-  /// Retrieve an existing Ezsignfoldersignerassociation's children IDs
-  ///
-  /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiEzsignfoldersignerassociationID (required):
-  ///   The unique ID of the Ezsignfoldersignerassociation
-  Future<Response> ezsignfoldersignerassociationGetObjectGetChildrenV1WithHttpInfo(int pkiEzsignfoldersignerassociationID) async {
-    // Verify required params are set.
-    if (pkiEzsignfoldersignerassociationID == null) {
-     throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsignfoldersignerassociationID');
-    }
-
-    final path = '/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getChildren'.replaceAll('{format}', 'json')
-      .replaceAll('{' + 'pkiEzsignfoldersignerassociationID' + '}', pkiEzsignfoldersignerassociationID.toString());
-
-    Object postBody;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    final contentTypes = <String>[];
-    final nullableContentType = contentTypes.isNotEmpty ? contentTypes[0] : null;
-    final authNames = <String>['Authorization'];
-
-    if (
-      nullableContentType != null &&
-      nullableContentType.toLowerCase().startsWith('multipart/form-data')
-    ) {
-      bool hasFields = false;
-      final mp = MultipartRequest(null, null);
-      if (hasFields) {
-        postBody = mp;
-      }
-    } else {
-    }
-
-    return await apiClient.invokeAPI(
-      path,
-      'GET',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      nullableContentType,
-      authNames,
-    );
-  }
-
-  /// Retrieve an existing Ezsignfoldersignerassociation's children IDs
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiEzsignfoldersignerassociationID (required):
-  ///   The unique ID of the Ezsignfoldersignerassociation
-  Future<void> ezsignfoldersignerassociationGetObjectGetChildrenV1(int pkiEzsignfoldersignerassociationID) async {
-    final response = await ezsignfoldersignerassociationGetObjectGetChildrenV1WithHttpInfo(pkiEzsignfoldersignerassociationID);
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, _decodeBodyBytes(response));
-    }
   }
 
   /// Retrieve an existing Ezsignfoldersignerassociation

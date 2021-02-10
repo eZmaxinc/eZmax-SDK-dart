@@ -244,7 +244,7 @@ class ObjectEzsignsignatureApi {
   ///
   /// * [int] pkiEzsignsignatureID (required):
   ///   The unique ID of the Ezsignsignature
-  Future<Response> ezsignsignatureGetObjectGetChildrenV1WithHttpInfo(int pkiEzsignsignatureID) async {
+  Future<Response> ezsignsignatureGetChildrenV1WithHttpInfo(int pkiEzsignsignatureID) async {
     // Verify required params are set.
     if (pkiEzsignsignatureID == null) {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsignsignatureID');
@@ -293,8 +293,8 @@ class ObjectEzsignsignatureApi {
   ///
   /// * [int] pkiEzsignsignatureID (required):
   ///   The unique ID of the Ezsignsignature
-  Future<void> ezsignsignatureGetObjectGetChildrenV1(int pkiEzsignsignatureID) async {
-    final response = await ezsignsignatureGetObjectGetChildrenV1WithHttpInfo(pkiEzsignsignatureID);
+  Future<void> ezsignsignatureGetChildrenV1(int pkiEzsignsignatureID) async {
+    final response = await ezsignsignatureGetChildrenV1WithHttpInfo(pkiEzsignsignatureID);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, _decodeBodyBytes(response));
     }

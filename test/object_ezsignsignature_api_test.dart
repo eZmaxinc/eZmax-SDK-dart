@@ -41,8 +41,8 @@ void main() {
 
     // Retrieve an existing Ezsignsignature's children IDs
     //
-    //Future ezsignsignatureGetObjectGetChildrenV1(int pkiEzsignsignatureID) async
-    test('test ezsignsignatureGetObjectGetChildrenV1', () async {
+    //Future ezsignsignatureGetChildrenV1(int pkiEzsignsignatureID) async
+    test('test ezsignsignatureGetChildrenV1', () async {
       // TODO
     });
 

@@ -347,6 +347,8 @@ class ApiClient {
           return FranchisereferalincomeRequest.fromJson(value);
         case 'FranchisereferalincomeRequestCompound':
           return FranchisereferalincomeRequestCompound.fromJson(value);
+        case 'GlobalCustomerGetEndpointV1Response':
+          return GlobalCustomerGetEndpointV1Response.fromJson(value);
         case 'MultilingualApikeyDescription':
           return MultilingualApikeyDescription.fromJson(value);
         case 'PhoneRequest':

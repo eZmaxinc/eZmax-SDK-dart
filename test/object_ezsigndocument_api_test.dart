@@ -48,19 +48,19 @@ void main() {
       // TODO
     });
 
+    // Retrieve an existing Ezsigndocument's children IDs
+    //
+    //Future ezsigndocumentGetChildrenV1(int pkiEzsigndocumentID) async
+    test('test ezsigndocumentGetChildrenV1', () async {
+      // TODO
+    });
+
     // Retrieve a URL to download documents.
     //
     // This endpoint returns URLs to different files that can be downloaded during the signing process.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
     //
     //Future<EzsigndocumentGetDownloadUrlV1Response> ezsigndocumentGetDownloadUrlV1(int pkiEzsigndocumentID, String eDocumentType) async
     test('test ezsigndocumentGetDownloadUrlV1', () async {
-      // TODO
-    });
-
-    // Retrieve an existing Ezsigndocument's children IDs
-    //
-    //Future ezsigndocumentGetObjectGetChildrenV1(int pkiEzsigndocumentID) async
-    test('test ezsigndocumentGetObjectGetChildrenV1', () async {
       // TODO
     });
 

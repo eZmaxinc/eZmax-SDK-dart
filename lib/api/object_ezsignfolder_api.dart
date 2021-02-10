@@ -244,7 +244,7 @@ class ObjectEzsignfolderApi {
   ///
   /// * [int] pkiEzsignfolderID (required):
   ///   The unique ID of the Ezsignfolder
-  Future<Response> ezsignfolderGetObjectGetChildrenV1WithHttpInfo(int pkiEzsignfolderID) async {
+  Future<Response> ezsignfolderGetChildrenV1WithHttpInfo(int pkiEzsignfolderID) async {
     // Verify required params are set.
     if (pkiEzsignfolderID == null) {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsignfolderID');
@@ -293,8 +293,8 @@ class ObjectEzsignfolderApi {
   ///
   /// * [int] pkiEzsignfolderID (required):
   ///   The unique ID of the Ezsignfolder
-  Future<void> ezsignfolderGetObjectGetChildrenV1(int pkiEzsignfolderID) async {
-    final response = await ezsignfolderGetObjectGetChildrenV1WithHttpInfo(pkiEzsignfolderID);
+  Future<void> ezsignfolderGetChildrenV1(int pkiEzsignfolderID) async {
+    final response = await ezsignfolderGetChildrenV1WithHttpInfo(pkiEzsignfolderID);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, _decodeBodyBytes(response));
     }

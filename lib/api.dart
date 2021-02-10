@@ -26,6 +26,7 @@ part 'auth/oauth.dart';
 part 'auth/http_basic_auth.dart';
 part 'auth/http_bearer_auth.dart';
 
+part 'api/global_customer_api.dart';
 part 'api/module_user_api.dart';
 part 'api/object_activesession_api.dart';
 part 'api/object_apikey_api.dart';
@@ -128,6 +129,7 @@ part 'model/franchisereferalincome_create_object_v1_response.dart';
 part 'model/franchisereferalincome_create_object_v1_response_m_payload.dart';
 part 'model/franchisereferalincome_request.dart';
 part 'model/franchisereferalincome_request_compound.dart';
+part 'model/global_customer_get_endpoint_v1_response.dart';
 part 'model/multilingual_apikey_description.dart';
 part 'model/phone_request.dart';
 part 'model/user_create_ezsignuser_v1_request.dart';

@@ -41,8 +41,8 @@ void main() {
 
     // Retrieve an existing Ezsignfolder's children IDs
     //
-    //Future ezsignfolderGetObjectGetChildrenV1(int pkiEzsignfolderID) async
-    test('test ezsignfolderGetObjectGetChildrenV1', () async {
+    //Future ezsignfolderGetChildrenV1(int pkiEzsignfolderID) async
+    test('test ezsignfolderGetChildrenV1', () async {
       // TODO
     });
 

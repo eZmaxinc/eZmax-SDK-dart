@@ -92,6 +92,8 @@ doc/FranchisereferalincomeCreateObjectV1Response.md
 doc/FranchisereferalincomeCreateObjectV1ResponseMPayload.md
 doc/FranchisereferalincomeRequest.md
 doc/FranchisereferalincomeRequestCompound.md
+doc/GlobalCustomerApi.md
+doc/GlobalCustomerGetEndpointV1Response.md
 doc/ModuleUserApi.md
 doc/MultilingualApikeyDescription.md
 doc/ObjectActivesessionApi.md
@@ -120,6 +122,7 @@ doc/WebhookUserUserCreatedAllOf.md
 doc/WebsiteRequest.md
 git_push.sh
 lib/api.dart
+lib/api/global_customer_api.dart
 lib/api/module_user_api.dart
 lib/api/object_activesession_api.dart
 lib/api/object_apikey_api.dart
@@ -229,6 +232,7 @@ lib/model/franchisereferalincome_create_object_v1_response.dart
 lib/model/franchisereferalincome_create_object_v1_response_m_payload.dart
 lib/model/franchisereferalincome_request.dart
 lib/model/franchisereferalincome_request_compound.dart
+lib/model/global_customer_get_endpoint_v1_response.dart
 lib/model/multilingual_apikey_description.dart
 lib/model/phone_request.dart
 lib/model/user_create_ezsignuser_v1_request.dart
@@ -335,6 +339,8 @@ test/franchisereferalincome_create_object_v1_response_m_payload_test.dart
 test/franchisereferalincome_create_object_v1_response_test.dart
 test/franchisereferalincome_request_compound_test.dart
 test/franchisereferalincome_request_test.dart
+test/global_customer_api_test.dart
+test/global_customer_get_endpoint_v1_response_test.dart
 test/module_user_api_test.dart
 test/multilingual_apikey_description_test.dart
 test/object_activesession_api_test.dart

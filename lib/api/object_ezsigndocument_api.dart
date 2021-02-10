@@ -318,6 +318,70 @@ class ObjectEzsigndocumentApi {
     return null;
   }
 
+  /// Retrieve an existing Ezsigndocument's children IDs
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  ///   The unique ID of the Ezsigndocument
+  Future<Response> ezsigndocumentGetChildrenV1WithHttpInfo(int pkiEzsigndocumentID) async {
+    // Verify required params are set.
+    if (pkiEzsigndocumentID == null) {
+     throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsigndocumentID');
+    }
+
+    final path = '/1/object/ezsigndocument/{pkiEzsigndocumentID}/getChildren'.replaceAll('{format}', 'json')
+      .replaceAll('{' + 'pkiEzsigndocumentID' + '}', pkiEzsigndocumentID.toString());
+
+    Object postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    final contentTypes = <String>[];
+    final nullableContentType = contentTypes.isNotEmpty ? contentTypes[0] : null;
+    final authNames = <String>['Authorization'];
+
+    if (
+      nullableContentType != null &&
+      nullableContentType.toLowerCase().startsWith('multipart/form-data')
+    ) {
+      bool hasFields = false;
+      final mp = MultipartRequest(null, null);
+      if (hasFields) {
+        postBody = mp;
+      }
+    } else {
+    }
+
+    return await apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      nullableContentType,
+      authNames,
+    );
+  }
+
+  /// Retrieve an existing Ezsigndocument's children IDs
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  ///   The unique ID of the Ezsigndocument
+  Future<void> ezsigndocumentGetChildrenV1(int pkiEzsigndocumentID) async {
+    final response = await ezsigndocumentGetChildrenV1WithHttpInfo(pkiEzsigndocumentID);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, _decodeBodyBytes(response));
+    }
+  }
+
   /// Retrieve a URL to download documents.
   ///
   /// This endpoint returns URLs to different files that can be downloaded during the signing process.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
@@ -401,70 +465,6 @@ class ObjectEzsigndocumentApi {
       return apiClient.deserialize(_decodeBodyBytes(response), 'EzsigndocumentGetDownloadUrlV1Response') as EzsigndocumentGetDownloadUrlV1Response;
     }
     return null;
-  }
-
-  /// Retrieve an existing Ezsigndocument's children IDs
-  ///
-  /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiEzsigndocumentID (required):
-  ///   The unique ID of the Ezsigndocument
-  Future<Response> ezsigndocumentGetObjectGetChildrenV1WithHttpInfo(int pkiEzsigndocumentID) async {
-    // Verify required params are set.
-    if (pkiEzsigndocumentID == null) {
-     throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsigndocumentID');
-    }
-
-    final path = '/1/object/ezsigndocument/{pkiEzsigndocumentID}/getChildren'.replaceAll('{format}', 'json')
-      .replaceAll('{' + 'pkiEzsigndocumentID' + '}', pkiEzsigndocumentID.toString());
-
-    Object postBody;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    final contentTypes = <String>[];
-    final nullableContentType = contentTypes.isNotEmpty ? contentTypes[0] : null;
-    final authNames = <String>['Authorization'];
-
-    if (
-      nullableContentType != null &&
-      nullableContentType.toLowerCase().startsWith('multipart/form-data')
-    ) {
-      bool hasFields = false;
-      final mp = MultipartRequest(null, null);
-      if (hasFields) {
-        postBody = mp;
-      }
-    } else {
-    }
-
-    return await apiClient.invokeAPI(
-      path,
-      'GET',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      nullableContentType,
-      authNames,
-    );
-  }
-
-  /// Retrieve an existing Ezsigndocument's children IDs
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiEzsigndocumentID (required):
-  ///   The unique ID of the Ezsigndocument
-  Future<void> ezsigndocumentGetObjectGetChildrenV1(int pkiEzsigndocumentID) async {
-    final response = await ezsigndocumentGetObjectGetChildrenV1WithHttpInfo(pkiEzsigndocumentID);
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, _decodeBodyBytes(response));
-    }
   }
 
   /// Retrieve an existing Ezsigndocument

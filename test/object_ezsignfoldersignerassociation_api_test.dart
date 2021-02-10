@@ -39,19 +39,19 @@ void main() {
       // TODO
     });
 
+    // Retrieve an existing Ezsignfoldersignerassociation's children IDs
+    //
+    //Future ezsignfoldersignerassociationGetChildrenV1(int pkiEzsignfoldersignerassociationID) async
+    test('test ezsignfoldersignerassociationGetChildrenV1', () async {
+      // TODO
+    });
+
     // Retrieve a Login Url to allow In-Person signing
     //
     // This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.  The signer Login type must be configured as In-Person.
     //
     //Future<EzsignfoldersignerassociationGetInPersonLoginUrlV1Response> ezsignfoldersignerassociationGetInPersonLoginUrlV1(int pkiEzsignfoldersignerassociationID) async
     test('test ezsignfoldersignerassociationGetInPersonLoginUrlV1', () async {
-      // TODO
-    });
-
-    // Retrieve an existing Ezsignfoldersignerassociation's children IDs
-    //
-    //Future ezsignfoldersignerassociationGetObjectGetChildrenV1(int pkiEzsignfoldersignerassociationID) async
-    test('test ezsignfoldersignerassociationGetObjectGetChildrenV1', () async {
       // TODO
     });
 

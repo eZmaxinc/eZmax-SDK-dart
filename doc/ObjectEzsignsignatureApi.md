@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**ezsignsignatureCreateObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureCreateObjectV1) | **POST** /1/object/ezsignsignature | Create a new Ezsignsignature
 [**ezsignsignatureDeleteObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureDeleteObjectV1) | **DELETE** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Delete an existing Ezsignsignature
 [**ezsignsignatureEditObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureEditObjectV1) | **PUT** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Modify an existing Ezsignsignature
-[**ezsignsignatureGetObjectGetChildrenV1**](ObjectEzsignsignatureApi.md#ezsignsignatureGetObjectGetChildrenV1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID}/getChildren | Retrieve an existing Ezsignsignature's children IDs
+[**ezsignsignatureGetChildrenV1**](ObjectEzsignsignatureApi.md#ezsignsignatureGetChildrenV1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID}/getChildren | Retrieve an existing Ezsignsignature's children IDs
 [**ezsignsignatureGetObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureGetObjectV1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
 
 
@@ -155,8 +155,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **ezsignsignatureGetObjectGetChildrenV1**
-> ezsignsignatureGetObjectGetChildrenV1(pkiEzsignsignatureID)
+# **ezsignsignatureGetChildrenV1**
+> ezsignsignatureGetChildrenV1(pkiEzsignsignatureID)
 
 Retrieve an existing Ezsignsignature's children IDs
 
@@ -172,9 +172,9 @@ final api_instance = ObjectEzsignsignatureApi();
 final pkiEzsignsignatureID = 56; // int | The unique ID of the Ezsignsignature
 
 try { 
-    api_instance.ezsignsignatureGetObjectGetChildrenV1(pkiEzsignsignatureID);
+    api_instance.ezsignsignatureGetChildrenV1(pkiEzsignsignatureID);
 } catch (e) {
-    print('Exception when calling ObjectEzsignsignatureApi->ezsignsignatureGetObjectGetChildrenV1: $e\n');
+    print('Exception when calling ObjectEzsignsignatureApi->ezsignsignatureGetChildrenV1: $e\n');
 }
 ```
 
