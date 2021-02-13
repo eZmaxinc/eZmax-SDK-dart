@@ -27,6 +27,7 @@ part 'auth/http_basic_auth.dart';
 part 'auth/http_bearer_auth.dart';
 
 part 'api/global_customer_api.dart';
+part 'api/module_sspr_api.dart';
 part 'api/module_user_api.dart';
 part 'api/object_activesession_api.dart';
 part 'api/object_apikey_api.dart';
