@@ -31,9 +31,7 @@ class EzsigndocumentCreateObjectV1ResponseMPayload {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (aPkiEzsigndocumentID != null) {
       json[r'a_pkiEzsigndocumentID'] = aPkiEzsigndocumentID;
-    }
     return json;
   }
 

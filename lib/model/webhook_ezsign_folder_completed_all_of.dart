@@ -30,9 +30,7 @@ class WebhookEzsignFolderCompletedAllOf {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (objEzsignfolder != null) {
       json[r'objEzsignfolder'] = objEzsignfolder;
-    }
     return json;
   }
 

@@ -62,24 +62,12 @@ class EzsignfolderRequestCompound {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (aEzsignfoldersignerassociation != null) {
       json[r'a_Ezsignfoldersignerassociation'] = aEzsignfoldersignerassociation;
-    }
-    if (fkiEzsignfoldertypeID != null) {
       json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
-    }
-    if (fkiEzsigntsarequirementID != null) {
       json[r'fkiEzsigntsarequirementID'] = fkiEzsigntsarequirementID;
-    }
-    if (sEzsignfolderDescription != null) {
       json[r'sEzsignfolderDescription'] = sEzsignfolderDescription;
-    }
-    if (tEzsignfolderNote != null) {
       json[r'tEzsignfolderNote'] = tEzsignfolderNote;
-    }
-    if (eEzsignfolderSendreminderfrequency != null) {
       json[r'eEzsignfolderSendreminderfrequency'] = eEzsignfolderSendreminderfrequency;
-    }
     return json;
   }
 

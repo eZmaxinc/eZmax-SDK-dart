@@ -67,27 +67,13 @@ class UserResponseAllOf {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (pkiUserID != null) {
       json[r'pkiUserID'] = pkiUserID;
-    }
-    if (fkiLanguageID != null) {
       json[r'fkiLanguageID'] = fkiLanguageID;
-    }
-    if (eUserType != null) {
       json[r'eUserType'] = eUserType;
-    }
-    if (sUserFirstname != null) {
       json[r'sUserFirstname'] = sUserFirstname;
-    }
-    if (sUserLastname != null) {
       json[r'sUserLastname'] = sUserLastname;
-    }
-    if (sUserLoginname != null) {
       json[r'sUserLoginname'] = sUserLoginname;
-    }
-    if (objAudit != null) {
       json[r'objAudit'] = objAudit;
-    }
     return json;
   }
 

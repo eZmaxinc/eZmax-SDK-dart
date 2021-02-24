@@ -30,9 +30,7 @@ class ApikeyCreateObjectV1ResponseMPayload {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (aObjApikey != null) {
       json[r'a_objApikey'] = aObjApikey;
-    }
     return json;
   }
 

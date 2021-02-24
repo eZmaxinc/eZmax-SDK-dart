@@ -69,27 +69,13 @@ class ActivesessionGetCurrentV1ResponseMPayload {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (sCustomerCode != null) {
       json[r'sCustomerCode'] = sCustomerCode;
-    }
-    if (eActivesessionSessiontype != null) {
       json[r'eActivesessionSessiontype'] = eActivesessionSessiontype;
-    }
-    if (fkiLanguageID != null) {
       json[r'fkiLanguageID'] = fkiLanguageID;
-    }
-    if (sCompanyNameX != null) {
       json[r'sCompanyNameX'] = sCompanyNameX;
-    }
-    if (sDepartmentNameX != null) {
       json[r'sDepartmentNameX'] = sDepartmentNameX;
-    }
-    if (aRegisteredModules != null) {
       json[r'a_RegisteredModules'] = aRegisteredModules;
-    }
-    if (aPermissions != null) {
       json[r'a_Permissions'] = aPermissions;
-    }
     return json;
   }
 

@@ -121,54 +121,22 @@ class EzsigndocumentResponse {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (fkiEzsignfolderID != null) {
       json[r'fkiEzsignfolderID'] = fkiEzsignfolderID;
-    }
-    if (dtEzsigndocumentDuedate != null) {
       json[r'dtEzsigndocumentDuedate'] = dtEzsigndocumentDuedate;
-    }
-    if (fkiLanguageID != null) {
       json[r'fkiLanguageID'] = fkiLanguageID;
-    }
-    if (sEzsigndocumentFilename != null) {
       json[r'sEzsigndocumentFilename'] = sEzsigndocumentFilename;
-    }
-    if (sEzsigndocumentName != null) {
       json[r'sEzsigndocumentName'] = sEzsigndocumentName;
-    }
-    if (pkiEzsigndocumentID != null) {
       json[r'pkiEzsigndocumentID'] = pkiEzsigndocumentID;
-    }
-    if (eEzsigndocumentStep != null) {
       json[r'eEzsigndocumentStep'] = eEzsigndocumentStep;
-    }
-    if (dtEzsigndocumentFirstsend != null) {
       json[r'dtEzsigndocumentFirstsend'] = dtEzsigndocumentFirstsend;
-    }
-    if (dtEzsigndocumentLastsend != null) {
       json[r'dtEzsigndocumentLastsend'] = dtEzsigndocumentLastsend;
-    }
-    if (iEzsigndocumentOrder != null) {
       json[r'iEzsigndocumentOrder'] = iEzsigndocumentOrder;
-    }
-    if (iEzsigndocumentPagetotal != null) {
       json[r'iEzsigndocumentPagetotal'] = iEzsigndocumentPagetotal;
-    }
-    if (iEzsigndocumentSignaturesigned != null) {
       json[r'iEzsigndocumentSignaturesigned'] = iEzsigndocumentSignaturesigned;
-    }
-    if (iEzsigndocumentSignaturetotal != null) {
       json[r'iEzsigndocumentSignaturetotal'] = iEzsigndocumentSignaturetotal;
-    }
-    if (sEzsigndocumentMD5initial != null) {
       json[r'sEzsigndocumentMD5initial'] = sEzsigndocumentMD5initial;
-    }
-    if (sEzsigndocumentMD5signed != null) {
       json[r'sEzsigndocumentMD5signed'] = sEzsigndocumentMD5signed;
-    }
-    if (objAudit != null) {
       json[r'objAudit'] = objAudit;
-    }
     return json;
   }
 

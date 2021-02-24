@@ -55,21 +55,11 @@ class CommonResponseObjDebug {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (sMemoryUsage != null) {
       json[r'sMemoryUsage'] = sMemoryUsage;
-    }
-    if (sRunTime != null) {
       json[r'sRunTime'] = sRunTime;
-    }
-    if (iSQLSelects != null) {
       json[r'iSQLSelects'] = iSQLSelects;
-    }
-    if (iSQLQueries != null) {
       json[r'iSQLQueries'] = iSQLQueries;
-    }
-    if (aObjSQLQuery != null) {
       json[r'a_objSQLQuery'] = aObjSQLQuery;
-    }
     return json;
   }
 

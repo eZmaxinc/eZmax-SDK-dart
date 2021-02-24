@@ -30,9 +30,7 @@ class WebhookUserUserCreatedAllOf {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (objUser != null) {
       json[r'objUser'] = objUser;
-    }
     return json;
   }
 

@@ -31,9 +31,7 @@ class EzsigndocumentGetDownloadUrlV1ResponseMPayload {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (sDownloadUrl != null) {
       json[r'sDownloadUrl'] = sDownloadUrl;
-    }
     return json;
   }
 

@@ -31,9 +31,7 @@ class CommonResponseError {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (sErrorMessage != null) {
       json[r'sErrorMessage'] = sErrorMessage;
-    }
     return json;
   }
 

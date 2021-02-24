@@ -37,12 +37,8 @@ class EmailRequest {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (fkiEmailtypeID != null) {
       json[r'fkiEmailtypeID'] = fkiEmailtypeID;
-    }
-    if (sEmailAddress != null) {
       json[r'sEmailAddress'] = sEmailAddress;
-    }
     return json;
   }
 

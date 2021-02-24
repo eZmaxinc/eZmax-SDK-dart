@@ -66,12 +66,8 @@ class PhoneRequest {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (fkiPhonetypeID != null) {
       json[r'fkiPhonetypeID'] = fkiPhonetypeID;
-    }
-    if (ePhoneType != null) {
       json[r'ePhoneType'] = ePhoneType;
-    }
     if (sPhoneRegion != null) {
       json[r'sPhoneRegion'] = sPhoneRegion;
     }

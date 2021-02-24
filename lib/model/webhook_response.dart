@@ -67,24 +67,14 @@ class WebhookResponse {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (pkiWebhookID != null) {
       json[r'pkiWebhookID'] = pkiWebhookID;
-    }
-    if (eWebhookModule != null) {
       json[r'eWebhookModule'] = eWebhookModule;
-    }
     if (eWebhookEzsignevent != null) {
       json[r'eWebhookEzsignevent'] = eWebhookEzsignevent;
     }
-    if (pksCustomerCode != null) {
       json[r'pksCustomerCode'] = pksCustomerCode;
-    }
-    if (sWebhookUrl != null) {
       json[r'sWebhookUrl'] = sWebhookUrl;
-    }
-    if (sWebhookEmailfailed != null) {
       json[r'sWebhookEmailfailed'] = sWebhookEmailfailed;
-    }
     if (eWebhookManagementevent != null) {
       json[r'eWebhookManagementevent'] = eWebhookManagementevent;
     }

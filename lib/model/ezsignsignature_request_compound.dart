@@ -67,27 +67,13 @@ class EzsignsignatureRequestCompound {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (fkiEzsignfoldersignerassociationID != null) {
       json[r'fkiEzsignfoldersignerassociationID'] = fkiEzsignfoldersignerassociationID;
-    }
-    if (iEzsignpagePagenumber != null) {
       json[r'iEzsignpagePagenumber'] = iEzsignpagePagenumber;
-    }
-    if (iEzsignsignatureX != null) {
       json[r'iEzsignsignatureX'] = iEzsignsignatureX;
-    }
-    if (iEzsignsignatureY != null) {
       json[r'iEzsignsignatureY'] = iEzsignsignatureY;
-    }
-    if (iEzsignsignatureStep != null) {
       json[r'iEzsignsignatureStep'] = iEzsignsignatureStep;
-    }
-    if (eEzsignsignatureType != null) {
       json[r'eEzsignsignatureType'] = eEzsignsignatureType;
-    }
-    if (fkiEzsigndocumentID != null) {
       json[r'fkiEzsigndocumentID'] = fkiEzsigndocumentID;
-    }
     return json;
   }
 

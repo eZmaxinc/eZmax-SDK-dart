@@ -31,9 +31,7 @@ class EzsignfoldersignerassociationCreateObjectV1ResponseMPayload {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (aPkiEzsignfoldersignerassociationID != null) {
       json[r'a_pkiEzsignfoldersignerassociationID'] = aPkiEzsignfoldersignerassociationID;
-    }
     return json;
   }
 

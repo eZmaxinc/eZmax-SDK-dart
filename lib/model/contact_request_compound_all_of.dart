@@ -30,9 +30,7 @@ class ContactRequestCompoundAllOf {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (objContactinformations != null) {
       json[r'objContactinformations'] = objContactinformations;
-    }
     return json;
   }
 

@@ -49,18 +49,10 @@ class ContactinformationsRequest {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (iAddressDefault != null) {
       json[r'iAddressDefault'] = iAddressDefault;
-    }
-    if (iPhoneDefault != null) {
       json[r'iPhoneDefault'] = iPhoneDefault;
-    }
-    if (iEmailDefault != null) {
       json[r'iEmailDefault'] = iEmailDefault;
-    }
-    if (iWebsiteDefault != null) {
       json[r'iWebsiteDefault'] = iWebsiteDefault;
-    }
     return json;
   }
 

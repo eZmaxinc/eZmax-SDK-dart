@@ -1,4 +1,4 @@
-# openapi.model.EzsignfoldersignerassociationEditObjectV1Request
+# openapi.model.UNUSEDEzsignsignatureEditObjectV1Request
 
 ## Load the model package
 ```dart
@@ -8,7 +8,7 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objEzsignfoldersignerassociation** | [**EzsignfoldersignerassociationRequest**](EzsignfoldersignerassociationRequest.md) |  | [optional] 
+**objEzsignsignature** | [**EzsignsignatureRequest**](EzsignsignatureRequest.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

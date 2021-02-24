@@ -37,12 +37,8 @@ class WebsiteRequest {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (fkiWebsitetypeID != null) {
       json[r'fkiWebsitetypeID'] = fkiWebsitetypeID;
-    }
-    if (sWebsiteAddress != null) {
       json[r'sWebsiteAddress'] = sWebsiteAddress;
-    }
     return json;
   }
 

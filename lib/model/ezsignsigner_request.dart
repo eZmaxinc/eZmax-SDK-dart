@@ -51,15 +51,11 @@ class EzsignsignerRequest {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (fkiTaxassignmentID != null) {
       json[r'fkiTaxassignmentID'] = fkiTaxassignmentID;
-    }
     if (fkiSecretquestionID != null) {
       json[r'fkiSecretquestionID'] = fkiSecretquestionID;
     }
-    if (eEzsignsignerLogintype != null) {
       json[r'eEzsignsignerLogintype'] = eEzsignsignerLogintype;
-    }
     if (sEzsignsignerSecretanswer != null) {
       json[r'sEzsignsignerSecretanswer'] = sEzsignsignerSecretanswer;
     }

@@ -41,15 +41,9 @@ class EzsigndocumentApplyEzsigntemplateV1Request {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (fkiEzsigntemplateID != null) {
       json[r'fkiEzsigntemplateID'] = fkiEzsigntemplateID;
-    }
-    if (aSEzsigntemplatesigner != null) {
       json[r'a_sEzsigntemplatesigner'] = aSEzsigntemplatesigner;
-    }
-    if (aPkiEzsignfoldersignerassociationID != null) {
       json[r'a_pkiEzsignfoldersignerassociationID'] = aPkiEzsignfoldersignerassociationID;
-    }
     return json;
   }
 

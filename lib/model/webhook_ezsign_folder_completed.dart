@@ -41,15 +41,9 @@ class WebhookEzsignFolderCompleted {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (objEzsignfolder != null) {
       json[r'objEzsignfolder'] = objEzsignfolder;
-    }
-    if (objWebhook != null) {
       json[r'objWebhook'] = objWebhook;
-    }
-    if (aObjAttempt != null) {
       json[r'a_objAttempt'] = aObjAttempt;
-    }
     return json;
   }
 

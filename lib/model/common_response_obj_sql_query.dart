@@ -37,12 +37,8 @@ class CommonResponseObjSQLQuery {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (sQuery != null) {
       json[r'sQuery'] = sQuery;
-    }
-    if (fDuration != null) {
       json[r'fDuration'] = fDuration;
-    }
     return json;
   }
 

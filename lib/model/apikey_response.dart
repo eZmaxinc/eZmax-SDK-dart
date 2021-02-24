@@ -47,18 +47,12 @@ class ApikeyResponse {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (objApikeyDescription != null) {
       json[r'objApikeyDescription'] = objApikeyDescription;
-    }
     if (sComputedToken != null) {
       json[r'sComputedToken'] = sComputedToken;
     }
-    if (pkiApikeyID != null) {
       json[r'pkiApikeyID'] = pkiApikeyID;
-    }
-    if (objAudit != null) {
       json[r'objAudit'] = objAudit;
-    }
     return json;
   }
 

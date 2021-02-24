@@ -75,27 +75,13 @@ class UserCreateEzsignuserV1Request {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (fkiLanguageID != null) {
       json[r'fkiLanguageID'] = fkiLanguageID;
-    }
-    if (sUserFirstname != null) {
       json[r'sUserFirstname'] = sUserFirstname;
-    }
-    if (sUserLastname != null) {
       json[r'sUserLastname'] = sUserLastname;
-    }
-    if (sEmailAddress != null) {
       json[r'sEmailAddress'] = sEmailAddress;
-    }
-    if (sPhoneRegion != null) {
       json[r'sPhoneRegion'] = sPhoneRegion;
-    }
-    if (sPhoneExchange != null) {
       json[r'sPhoneExchange'] = sPhoneExchange;
-    }
-    if (sPhoneNumber != null) {
       json[r'sPhoneNumber'] = sPhoneNumber;
-    }
     if (sPhoneExtension != null) {
       json[r'sPhoneExtension'] = sPhoneExtension;
     }

@@ -31,9 +31,7 @@ class GlobalCustomerGetEndpointV1Response {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (sEndpointURL != null) {
       json[r'sEndpointURL'] = sEndpointURL;
-    }
     return json;
   }
 

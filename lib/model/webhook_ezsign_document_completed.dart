@@ -41,15 +41,9 @@ class WebhookEzsignDocumentCompleted {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (objEzsigndocument != null) {
       json[r'objEzsigndocument'] = objEzsigndocument;
-    }
-    if (objWebhook != null) {
       json[r'objWebhook'] = objWebhook;
-    }
-    if (aObjAttempt != null) {
       json[r'a_objAttempt'] = aObjAttempt;
-    }
     return json;
   }
 

@@ -42,9 +42,7 @@ class EzsignfoldersignerassociationRequest {
     if (fkiUserID != null) {
       json[r'fkiUserID'] = fkiUserID;
     }
-    if (fkiEzsignfolderID != null) {
       json[r'fkiEzsignfolderID'] = fkiEzsignfolderID;
-    }
     return json;
   }
 

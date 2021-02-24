@@ -1,11 +1,11 @@
 import 'package:openapi/api.dart';
 import 'package:test/test.dart';
 
-// tests for EzsigndocumentEditObjectV1Request
+// tests for UNUSEDEzsigndocumentEditObjectV1Request
 void main() {
-  final instance = EzsigndocumentEditObjectV1Request();
+  final instance = UNUSEDEzsigndocumentEditObjectV1Request();
 
-  group('test EzsigndocumentEditObjectV1Request', () {
+  group('test UNUSEDEzsigndocumentEditObjectV1Request', () {
     // EzsigndocumentRequest objEzsigndocument
     test('to test the property `objEzsigndocument`', () async {
       // TODO

@@ -31,9 +31,7 @@ class EzsignfolderCreateObjectV1ResponseMPayload {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (aPkiEzsignfolderID != null) {
       json[r'a_pkiEzsignfolderID'] = aPkiEzsignfolderID;
-    }
     return json;
   }
 

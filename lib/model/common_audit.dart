@@ -61,24 +61,16 @@ class CommonAudit {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (fkiUserIDCreated != null) {
       json[r'fkiUserIDCreated'] = fkiUserIDCreated;
-    }
-    if (fkiUserIDModified != null) {
       json[r'fkiUserIDModified'] = fkiUserIDModified;
-    }
     if (fkiApikeyIDCreated != null) {
       json[r'fkiApikeyIDCreated'] = fkiApikeyIDCreated;
     }
     if (fkiApikeyIDModified != null) {
       json[r'fkiApikeyIDModified'] = fkiApikeyIDModified;
     }
-    if (dtCreatedDate != null) {
       json[r'dtCreatedDate'] = dtCreatedDate;
-    }
-    if (dtModifiedDate != null) {
       json[r'dtModifiedDate'] = dtModifiedDate;
-    }
     return json;
   }
 

@@ -76,30 +76,16 @@ class EzsigndocumentRequestCompound {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (eEzsigndocumentSource != null) {
       json[r'eEzsigndocumentSource'] = eEzsigndocumentSource;
-    }
-    if (eEzsigndocumentFormat != null) {
       json[r'eEzsigndocumentFormat'] = eEzsigndocumentFormat;
-    }
     if (sEzsigndocumentBase64 != null) {
       json[r'sEzsigndocumentBase64'] = sEzsigndocumentBase64;
     }
-    if (fkiEzsignfolderID != null) {
       json[r'fkiEzsignfolderID'] = fkiEzsignfolderID;
-    }
-    if (dtEzsigndocumentDuedate != null) {
       json[r'dtEzsigndocumentDuedate'] = dtEzsigndocumentDuedate;
-    }
-    if (fkiLanguageID != null) {
       json[r'fkiLanguageID'] = fkiLanguageID;
-    }
-    if (sEzsigndocumentFilename != null) {
       json[r'sEzsigndocumentFilename'] = sEzsigndocumentFilename;
-    }
-    if (sEzsigndocumentName != null) {
       json[r'sEzsigndocumentName'] = sEzsigndocumentName;
-    }
     return json;
   }
 

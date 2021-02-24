@@ -68,24 +68,12 @@ class ContactRequestCompound {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (objContactinformations != null) {
       json[r'objContactinformations'] = objContactinformations;
-    }
-    if (fkiContacttitleID != null) {
       json[r'fkiContacttitleID'] = fkiContacttitleID;
-    }
-    if (fkiLanguageID != null) {
       json[r'fkiLanguageID'] = fkiLanguageID;
-    }
-    if (sContactFirstname != null) {
       json[r'sContactFirstname'] = sContactFirstname;
-    }
-    if (sContactLastname != null) {
       json[r'sContactLastname'] = sContactLastname;
-    }
-    if (sContactCompany != null) {
       json[r'sContactCompany'] = sContactCompany;
-    }
     if (dtContactBirthdate != null) {
       json[r'dtContactBirthdate'] = dtContactBirthdate;
     }

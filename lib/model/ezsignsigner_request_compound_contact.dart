@@ -63,15 +63,9 @@ class EzsignsignerRequestCompoundContact {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (sContactFirstname != null) {
       json[r'sContactFirstname'] = sContactFirstname;
-    }
-    if (sContactLastname != null) {
       json[r'sContactLastname'] = sContactLastname;
-    }
-    if (fkiLanguageID != null) {
       json[r'fkiLanguageID'] = fkiLanguageID;
-    }
     if (sEmailAddress != null) {
       json[r'sEmailAddress'] = sEmailAddress;
     }

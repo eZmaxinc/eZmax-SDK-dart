@@ -32,13 +32,6 @@ void main() {
       // TODO
     });
 
-    // Modify an existing Ezsignfoldersignerassociation
-    //
-    //Future<EzsignfoldersignerassociationEditObjectV1Response> ezsignfoldersignerassociationEditObjectV1(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request) async
-    test('test ezsignfoldersignerassociationEditObjectV1', () async {
-      // TODO
-    });
-
     // Retrieve an existing Ezsignfoldersignerassociation's children IDs
     //
     //Future ezsignfoldersignerassociationGetChildrenV1(int pkiEzsignfoldersignerassociationID) async

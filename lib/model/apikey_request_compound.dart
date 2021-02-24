@@ -36,12 +36,8 @@ class ApikeyRequestCompound {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (fkiUserID != null) {
       json[r'fkiUserID'] = fkiUserID;
-    }
-    if (objApikeyDescription != null) {
       json[r'objApikeyDescription'] = objApikeyDescription;
-    }
     return json;
   }
 

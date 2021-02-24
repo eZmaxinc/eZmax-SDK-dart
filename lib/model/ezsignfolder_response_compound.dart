@@ -84,36 +84,16 @@ class EzsignfolderResponseCompound {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (fkiEzsignfoldertypeID != null) {
       json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
-    }
-    if (fkiEzsigntsarequirementID != null) {
       json[r'fkiEzsigntsarequirementID'] = fkiEzsigntsarequirementID;
-    }
-    if (sEzsignfolderDescription != null) {
       json[r'sEzsignfolderDescription'] = sEzsignfolderDescription;
-    }
-    if (tEzsignfolderNote != null) {
       json[r'tEzsignfolderNote'] = tEzsignfolderNote;
-    }
-    if (eEzsignfolderSendreminderfrequency != null) {
       json[r'eEzsignfolderSendreminderfrequency'] = eEzsignfolderSendreminderfrequency;
-    }
-    if (pkiEzsignfolderID != null) {
       json[r'pkiEzsignfolderID'] = pkiEzsignfolderID;
-    }
-    if (dtEzsignfolderSentdate != null) {
       json[r'dtEzsignfolderSentdate'] = dtEzsignfolderSentdate;
-    }
-    if (eEzsignfolderStep != null) {
       json[r'eEzsignfolderStep'] = eEzsignfolderStep;
-    }
-    if (dtEzsignfolderClose != null) {
       json[r'dtEzsignfolderClose'] = dtEzsignfolderClose;
-    }
-    if (objAudit != null) {
       json[r'objAudit'] = objAudit;
-    }
     return json;
   }
 

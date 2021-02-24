@@ -40,9 +40,7 @@ class EzsigndocumentCreateObjectV1Response {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (mPayload != null) {
       json[r'mPayload'] = mPayload;
-    }
     if (objDebugPayload != null) {
       json[r'objDebugPayload'] = objDebugPayload;
     }

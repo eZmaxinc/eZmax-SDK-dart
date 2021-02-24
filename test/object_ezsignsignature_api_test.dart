@@ -32,13 +32,6 @@ void main() {
       // TODO
     });
 
-    // Modify an existing Ezsignsignature
-    //
-    //Future<EzsignsignatureEditObjectV1Response> ezsignsignatureEditObjectV1(int pkiEzsignsignatureID, EzsignsignatureEditObjectV1Request ezsignsignatureEditObjectV1Request) async
-    test('test ezsignsignatureEditObjectV1', () async {
-      // TODO
-    });
-
     // Retrieve an existing Ezsignsignature's children IDs
     //
     //Future ezsignsignatureGetChildrenV1(int pkiEzsignsignatureID) async

@@ -69,30 +69,14 @@ class ContactinformationsRequestCompound {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (aObjAddress != null) {
       json[r'a_objAddress'] = aObjAddress;
-    }
-    if (aObjPhone != null) {
       json[r'a_objPhone'] = aObjPhone;
-    }
-    if (aObjEmail != null) {
       json[r'a_objEmail'] = aObjEmail;
-    }
-    if (aObjWebsite != null) {
       json[r'a_objWebsite'] = aObjWebsite;
-    }
-    if (iAddressDefault != null) {
       json[r'iAddressDefault'] = iAddressDefault;
-    }
-    if (iPhoneDefault != null) {
       json[r'iPhoneDefault'] = iPhoneDefault;
-    }
-    if (iEmailDefault != null) {
       json[r'iEmailDefault'] = iEmailDefault;
-    }
-    if (iWebsiteDefault != null) {
       json[r'iWebsiteDefault'] = iWebsiteDefault;
-    }
     return json;
   }
 

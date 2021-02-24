@@ -43,15 +43,9 @@ class AttemptResponse {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (dtAttemptStart != null) {
       json[r'dtAttemptStart'] = dtAttemptStart;
-    }
-    if (sAttemptResult != null) {
       json[r'sAttemptResult'] = sAttemptResult;
-    }
-    if (iAttemptDuration != null) {
       json[r'iAttemptDuration'] = iAttemptDuration;
-    }
     return json;
   }
 

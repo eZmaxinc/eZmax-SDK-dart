@@ -229,10 +229,6 @@ class ApiClient {
           return EzsigndocumentCreateObjectV1ResponseMPayload.fromJson(value);
         case 'EzsigndocumentDeleteObjectV1Response':
           return EzsigndocumentDeleteObjectV1Response.fromJson(value);
-        case 'EzsigndocumentEditObjectV1Request':
-          return EzsigndocumentEditObjectV1Request.fromJson(value);
-        case 'EzsigndocumentEditObjectV1Response':
-          return EzsigndocumentEditObjectV1Response.fromJson(value);
         case 'EzsigndocumentGetDownloadUrlV1Response':
           return EzsigndocumentGetDownloadUrlV1Response.fromJson(value);
         case 'EzsigndocumentGetDownloadUrlV1ResponseMPayload':
@@ -259,10 +255,6 @@ class ApiClient {
           return EzsignfolderCreateObjectV1ResponseMPayload.fromJson(value);
         case 'EzsignfolderDeleteObjectV1Response':
           return EzsignfolderDeleteObjectV1Response.fromJson(value);
-        case 'EzsignfolderEditObjectV1Request':
-          return EzsignfolderEditObjectV1Request.fromJson(value);
-        case 'EzsignfolderEditObjectV1Response':
-          return EzsignfolderEditObjectV1Response.fromJson(value);
         case 'EzsignfolderGetObjectV1Response':
           return EzsignfolderGetObjectV1Response.fromJson(value);
         case 'EzsignfolderGetObjectV1ResponseMPayload':
@@ -289,10 +281,6 @@ class ApiClient {
           return EzsignfoldersignerassociationCreateObjectV1ResponseMPayload.fromJson(value);
         case 'EzsignfoldersignerassociationDeleteObjectV1Response':
           return EzsignfoldersignerassociationDeleteObjectV1Response.fromJson(value);
-        case 'EzsignfoldersignerassociationEditObjectV1Request':
-          return EzsignfoldersignerassociationEditObjectV1Request.fromJson(value);
-        case 'EzsignfoldersignerassociationEditObjectV1Response':
-          return EzsignfoldersignerassociationEditObjectV1Response.fromJson(value);
         case 'EzsignfoldersignerassociationGetInPersonLoginUrlV1Response':
           return EzsignfoldersignerassociationGetInPersonLoginUrlV1Response.fromJson(value);
         case 'EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload':
@@ -311,10 +299,6 @@ class ApiClient {
           return EzsignsignatureCreateObjectV1ResponseMPayload.fromJson(value);
         case 'EzsignsignatureDeleteObjectV1Response':
           return EzsignsignatureDeleteObjectV1Response.fromJson(value);
-        case 'EzsignsignatureEditObjectV1Request':
-          return EzsignsignatureEditObjectV1Request.fromJson(value);
-        case 'EzsignsignatureEditObjectV1Response':
-          return EzsignsignatureEditObjectV1Response.fromJson(value);
         case 'EzsignsignatureGetObjectV1Response':
           return EzsignsignatureGetObjectV1Response.fromJson(value);
         case 'EzsignsignatureRequest':
@@ -353,6 +337,22 @@ class ApiClient {
           return MultilingualApikeyDescription.fromJson(value);
         case 'PhoneRequest':
           return PhoneRequest.fromJson(value);
+        case 'UNUSEDEzsigndocumentEditObjectV1Request':
+          return UNUSEDEzsigndocumentEditObjectV1Request.fromJson(value);
+        case 'UNUSEDEzsigndocumentEditObjectV1Response':
+          return UNUSEDEzsigndocumentEditObjectV1Response.fromJson(value);
+        case 'UNUSEDEzsignfolderEditObjectV1Request':
+          return UNUSEDEzsignfolderEditObjectV1Request.fromJson(value);
+        case 'UNUSEDEzsignfolderEditObjectV1Response':
+          return UNUSEDEzsignfolderEditObjectV1Response.fromJson(value);
+        case 'UNUSEDEzsignfoldersignerassociationEditObjectV1Request':
+          return UNUSEDEzsignfoldersignerassociationEditObjectV1Request.fromJson(value);
+        case 'UNUSEDEzsignfoldersignerassociationEditObjectV1Response':
+          return UNUSEDEzsignfoldersignerassociationEditObjectV1Response.fromJson(value);
+        case 'UNUSEDEzsignsignatureEditObjectV1Request':
+          return UNUSEDEzsignsignatureEditObjectV1Request.fromJson(value);
+        case 'UNUSEDEzsignsignatureEditObjectV1Response':
+          return UNUSEDEzsignsignatureEditObjectV1Response.fromJson(value);
         case 'UserCreateEzsignuserV1Request':
           return UserCreateEzsignuserV1Request.fromJson(value);
         case 'UserCreateEzsignuserV1Response':

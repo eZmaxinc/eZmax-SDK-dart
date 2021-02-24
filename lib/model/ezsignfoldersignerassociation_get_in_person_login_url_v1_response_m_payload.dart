@@ -31,9 +31,7 @@ class EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (sLoginUrl != null) {
       json[r'sLoginUrl'] = sLoginUrl;
-    }
     return json;
   }
 

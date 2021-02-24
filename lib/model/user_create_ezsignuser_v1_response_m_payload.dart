@@ -37,12 +37,8 @@ class UserCreateEzsignuserV1ResponseMPayload {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (aSEmailAddressSuccess != null) {
       json[r'a_sEmailAddressSuccess'] = aSEmailAddressSuccess;
-    }
-    if (aSEmailAddressFailure != null) {
       json[r'a_sEmailAddressFailure'] = aSEmailAddressFailure;
-    }
     return json;
   }
 

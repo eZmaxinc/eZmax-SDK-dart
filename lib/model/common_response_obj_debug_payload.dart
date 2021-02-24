@@ -43,15 +43,9 @@ class CommonResponseObjDebugPayload {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (iVersionMin != null) {
       json[r'iVersionMin'] = iVersionMin;
-    }
-    if (iVersionMax != null) {
       json[r'iVersionMax'] = iVersionMax;
-    }
-    if (aRequiredPermissions != null) {
       json[r'a_RequiredPermissions'] = aRequiredPermissions;
-    }
     return json;
   }
 

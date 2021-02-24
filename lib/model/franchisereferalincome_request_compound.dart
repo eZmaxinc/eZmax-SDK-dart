@@ -103,42 +103,18 @@ class FranchisereferalincomeRequestCompound {
     if (objAddress != null) {
       json[r'objAddress'] = objAddress;
     }
-    if (aObjContact != null) {
       json[r'a_objContact'] = aObjContact;
-    }
-    if (fkiFranchisebrokerID != null) {
       json[r'fkiFranchisebrokerID'] = fkiFranchisebrokerID;
-    }
-    if (fkiFranchisereferalincomeprogramID != null) {
       json[r'fkiFranchisereferalincomeprogramID'] = fkiFranchisereferalincomeprogramID;
-    }
-    if (fkiPeriodID != null) {
       json[r'fkiPeriodID'] = fkiPeriodID;
-    }
-    if (dFranchisereferalincomeLoan != null) {
       json[r'dFranchisereferalincomeLoan'] = dFranchisereferalincomeLoan;
-    }
-    if (dFranchisereferalincomeFranchiseamount != null) {
       json[r'dFranchisereferalincomeFranchiseamount'] = dFranchisereferalincomeFranchiseamount;
-    }
-    if (dFranchisereferalincomeFranchisoramount != null) {
       json[r'dFranchisereferalincomeFranchisoramount'] = dFranchisereferalincomeFranchisoramount;
-    }
-    if (dFranchisereferalincomeAgentamount != null) {
       json[r'dFranchisereferalincomeAgentamount'] = dFranchisereferalincomeAgentamount;
-    }
-    if (dtFranchisereferalincomeDisbursed != null) {
       json[r'dtFranchisereferalincomeDisbursed'] = dtFranchisereferalincomeDisbursed;
-    }
-    if (tFranchisereferalincomeComment != null) {
       json[r'tFranchisereferalincomeComment'] = tFranchisereferalincomeComment;
-    }
-    if (fkiFranchiseofficeID != null) {
       json[r'fkiFranchiseofficeID'] = fkiFranchiseofficeID;
-    }
-    if (sFranchisereferalincomeRemoteid != null) {
       json[r'sFranchisereferalincomeRemoteid'] = sFranchisereferalincomeRemoteid;
-    }
     return json;
   }
 

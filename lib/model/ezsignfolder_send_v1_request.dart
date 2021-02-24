@@ -31,9 +31,7 @@ class EzsignfolderSendV1Request {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (tExtraMessage != null) {
       json[r'tExtraMessage'] = tExtraMessage;
-    }
     return json;
   }
 

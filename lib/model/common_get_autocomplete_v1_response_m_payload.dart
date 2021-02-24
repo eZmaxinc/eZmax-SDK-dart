@@ -43,15 +43,9 @@ class CommonGetAutocompleteV1ResponseMPayload {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (group != null) {
       json[r'group'] = group;
-    }
-    if (id != null) {
       json[r'id'] = id;
-    }
-    if (option != null) {
       json[r'option'] = option;
-    }
     return json;
   }
 

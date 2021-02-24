@@ -73,30 +73,14 @@ class AddressRequest {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (fkiAddresstypeID != null) {
       json[r'fkiAddresstypeID'] = fkiAddresstypeID;
-    }
-    if (sAddressCivic != null) {
       json[r'sAddressCivic'] = sAddressCivic;
-    }
-    if (sAddressStreet != null) {
       json[r'sAddressStreet'] = sAddressStreet;
-    }
-    if (sAddressSuite != null) {
       json[r'sAddressSuite'] = sAddressSuite;
-    }
-    if (sAddressCity != null) {
       json[r'sAddressCity'] = sAddressCity;
-    }
-    if (fkiProvinceID != null) {
       json[r'fkiProvinceID'] = fkiProvinceID;
-    }
-    if (fkiCountryID != null) {
       json[r'fkiCountryID'] = fkiCountryID;
-    }
-    if (sAddressZip != null) {
       json[r'sAddressZip'] = sAddressZip;
-    }
     return json;
   }
 

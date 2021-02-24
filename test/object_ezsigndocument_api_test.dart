@@ -41,13 +41,6 @@ void main() {
       // TODO
     });
 
-    // Modify an existing Ezsigndocument
-    //
-    //Future<EzsigndocumentEditObjectV1Response> ezsigndocumentEditObjectV1(int pkiEzsigndocumentID, EzsigndocumentEditObjectV1Request ezsigndocumentEditObjectV1Request) async
-    test('test ezsigndocumentEditObjectV1', () async {
-      // TODO
-    });
-
     // Retrieve an existing Ezsigndocument's children IDs
     //
     //Future ezsigndocumentGetChildrenV1(int pkiEzsigndocumentID) async
