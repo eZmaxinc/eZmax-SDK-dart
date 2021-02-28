@@ -15,6 +15,7 @@ import 'dart:io';
 
 import 'package:http/http.dart';
 import 'package:intl/intl.dart';
+
 import 'package:meta/meta.dart';
 
 part 'api_client.dart';
@@ -117,6 +118,7 @@ part 'model/field_e_ezsignfolder_sendreminderfrequency.dart';
 part 'model/field_e_ezsignfolder_step.dart';
 part 'model/field_e_phone_type.dart';
 part 'model/field_e_user_type.dart';
+part 'model/field_e_user_type_sspr.dart';
 part 'model/franchisereferalincome_create_object_v1_request.dart';
 part 'model/franchisereferalincome_create_object_v1_response.dart';
 part 'model/franchisereferalincome_create_object_v1_response_m_payload.dart';
@@ -125,6 +127,11 @@ part 'model/franchisereferalincome_request_compound.dart';
 part 'model/global_customer_get_endpoint_v1_response.dart';
 part 'model/multilingual_apikey_description.dart';
 part 'model/phone_request.dart';
+part 'model/sspr_reset_password_request_v1_request.dart';
+part 'model/sspr_reset_password_v1_request.dart';
+part 'model/sspr_send_usernames_v1_request.dart';
+part 'model/sspr_unlock_account_request_v1_request.dart';
+part 'model/sspr_unlock_account_v1_request.dart';
 part 'model/unused_ezsigndocument_edit_object_v1_request.dart';
 part 'model/unused_ezsigndocument_edit_object_v1_response.dart';
 part 'model/unused_ezsignfolder_edit_object_v1_request.dart';
@@ -146,6 +153,7 @@ part 'model/webhook_response.dart';
 part 'model/webhook_user_user_created.dart';
 part 'model/webhook_user_user_created_all_of.dart';
 part 'model/website_request.dart';
+
 
 const _delimiters = {'csv': ',', 'ssv': ' ', 'tsv': '\t', 'pipes': '|'};
 const _dateEpochMarker = 'epoch';

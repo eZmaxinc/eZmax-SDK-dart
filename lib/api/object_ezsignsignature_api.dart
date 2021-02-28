@@ -30,7 +30,7 @@ class ObjectEzsignsignatureApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: ezsignsignatureCreateObjectV1Request');
     }
 
-    final path = '/1/object/ezsignsignature'.replaceAll('{format}', 'json');
+    final path = '/1/object/ezsignsignature';
 
     Object postBody = ezsignsignatureCreateObjectV1Request;
 
@@ -101,7 +101,7 @@ class ObjectEzsignsignatureApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsignsignatureID');
     }
 
-    final path = '/1/object/ezsignsignature/{pkiEzsignsignatureID}'.replaceAll('{format}', 'json')
+    final path = '/1/object/ezsignsignature/{pkiEzsignsignatureID}'
       .replaceAll('{' + 'pkiEzsignsignatureID' + '}', pkiEzsignsignatureID.toString());
 
     Object postBody;
@@ -172,7 +172,7 @@ class ObjectEzsignsignatureApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsignsignatureID');
     }
 
-    final path = '/1/object/ezsignsignature/{pkiEzsignsignatureID}/getChildren'.replaceAll('{format}', 'json')
+    final path = '/1/object/ezsignsignature/{pkiEzsignsignatureID}/getChildren'
       .replaceAll('{' + 'pkiEzsignsignatureID' + '}', pkiEzsignsignatureID.toString());
 
     Object postBody;
@@ -236,7 +236,7 @@ class ObjectEzsignsignatureApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsignsignatureID');
     }
 
-    final path = '/1/object/ezsignsignature/{pkiEzsignsignatureID}'.replaceAll('{format}', 'json')
+    final path = '/1/object/ezsignsignature/{pkiEzsignsignatureID}'
       .replaceAll('{' + 'pkiEzsignsignatureID' + '}', pkiEzsignsignatureID.toString());
 
     Object postBody;

@@ -30,7 +30,7 @@ class ObjectFranchisereferalincomeApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: franchisereferalincomeCreateObjectV1Request');
     }
 
-    final path = '/1/object/franchisereferalincome'.replaceAll('{format}', 'json');
+    final path = '/1/object/franchisereferalincome';
 
     Object postBody = franchisereferalincomeCreateObjectV1Request;
 

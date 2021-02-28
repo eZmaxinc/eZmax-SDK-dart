@@ -60,18 +60,27 @@ String parameterToString(dynamic value) {
   }
   if (value is FieldEEzsigndocumentStep) {
     return FieldEEzsigndocumentStepTypeTransformer().encode(value).toString();
+
   }
   if (value is FieldEEzsignfolderSendreminderfrequency) {
     return FieldEEzsignfolderSendreminderfrequencyTypeTransformer().encode(value).toString();
+
   }
   if (value is FieldEEzsignfolderStep) {
     return FieldEEzsignfolderStepTypeTransformer().encode(value).toString();
+
   }
   if (value is FieldEPhoneType) {
     return FieldEPhoneTypeTypeTransformer().encode(value).toString();
+
   }
   if (value is FieldEUserType) {
     return FieldEUserTypeTypeTransformer().encode(value).toString();
+
+  }
+  if (value is FieldEUserTypeSSPR) {
+    return FieldEUserTypeSSPRTypeTransformer().encode(value).toString();
+
   }
   return value.toString();
 }

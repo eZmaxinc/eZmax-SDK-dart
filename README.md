@@ -65,7 +65,11 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *GlobalCustomerApi* | [**globalCustomerGetEndpointV1**](doc//GlobalCustomerApi.md#globalcustomergetendpointv1) | **GET** /1/customer/{pksCustomerCode}/endpoint | Get customer endpoint
-*ModuleSsprApi* | [**ssprRemindUsernamesV1**](doc//ModuleSsprApi.md#ssprremindusernamesv1) | **POST** /1/module/sspr/remindUsernames | Remind of forgotten username(s)
+*ModuleSsprApi* | [**ssprResetPasswordRequestV1**](doc//ModuleSsprApi.md#ssprresetpasswordrequestv1) | **POST** /1/module/sspr/resetPasswordRequest/ | Reset Password Request
+*ModuleSsprApi* | [**ssprResetPasswordV1**](doc//ModuleSsprApi.md#ssprresetpasswordv1) | **POST** /1/module/sspr/resetPassword | Reset Password
+*ModuleSsprApi* | [**ssprSendUsernamesV1**](doc//ModuleSsprApi.md#ssprsendusernamesv1) | **POST** /1/module/sspr/sendUsernames | Send username(s)
+*ModuleSsprApi* | [**ssprUnlockAccountRequestV1**](doc//ModuleSsprApi.md#ssprunlockaccountrequestv1) | **POST** /1/module/sspr/unlockAccountRequest | Unlock Account Request
+*ModuleSsprApi* | [**ssprUnlockAccountV1**](doc//ModuleSsprApi.md#ssprunlockaccountv1) | **POST** /1/module/sspr/unlockAccount | Unlock Account
 *ModuleUserApi* | [**userCreateEzsignuserV1**](doc//ModuleUserApi.md#usercreateezsignuserv1) | **POST** /1/module/user/createezsignuser | Create a new User of type Ezsignuser
 *ObjectActivesessionApi* | [**activesessionGetCurrentV1**](doc//ObjectActivesessionApi.md#activesessiongetcurrentv1) | **GET** /1/object/activesession/getCurrent | Get Current Activesession
 *ObjectApikeyApi* | [**apikeyCreateObjectV1**](doc//ObjectApikeyApi.md#apikeycreateobjectv1) | **POST** /1/object/apikey | Create a new Apikey
@@ -174,6 +178,7 @@ Class | Method | HTTP request | Description
  - [FieldEEzsignfolderStep](doc//FieldEEzsignfolderStep.md)
  - [FieldEPhoneType](doc//FieldEPhoneType.md)
  - [FieldEUserType](doc//FieldEUserType.md)
+ - [FieldEUserTypeSSPR](doc//FieldEUserTypeSSPR.md)
  - [FranchisereferalincomeCreateObjectV1Request](doc//FranchisereferalincomeCreateObjectV1Request.md)
  - [FranchisereferalincomeCreateObjectV1Response](doc//FranchisereferalincomeCreateObjectV1Response.md)
  - [FranchisereferalincomeCreateObjectV1ResponseMPayload](doc//FranchisereferalincomeCreateObjectV1ResponseMPayload.md)
@@ -182,6 +187,11 @@ Class | Method | HTTP request | Description
  - [GlobalCustomerGetEndpointV1Response](doc//GlobalCustomerGetEndpointV1Response.md)
  - [MultilingualApikeyDescription](doc//MultilingualApikeyDescription.md)
  - [PhoneRequest](doc//PhoneRequest.md)
+ - [SsprResetPasswordRequestV1Request](doc//SsprResetPasswordRequestV1Request.md)
+ - [SsprResetPasswordV1Request](doc//SsprResetPasswordV1Request.md)
+ - [SsprSendUsernamesV1Request](doc//SsprSendUsernamesV1Request.md)
+ - [SsprUnlockAccountRequestV1Request](doc//SsprUnlockAccountRequestV1Request.md)
+ - [SsprUnlockAccountV1Request](doc//SsprUnlockAccountV1Request.md)
  - [UNUSEDEzsigndocumentEditObjectV1Request](doc//UNUSEDEzsigndocumentEditObjectV1Request.md)
  - [UNUSEDEzsigndocumentEditObjectV1Response](doc//UNUSEDEzsigndocumentEditObjectV1Response.md)
  - [UNUSEDEzsignfolderEditObjectV1Request](doc//UNUSEDEzsignfolderEditObjectV1Request.md)

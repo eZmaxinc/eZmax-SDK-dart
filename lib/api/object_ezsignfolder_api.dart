@@ -30,7 +30,7 @@ class ObjectEzsignfolderApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: ezsignfolderCreateObjectV1Request');
     }
 
-    final path = '/1/object/ezsignfolder'.replaceAll('{format}', 'json');
+    final path = '/1/object/ezsignfolder';
 
     Object postBody = ezsignfolderCreateObjectV1Request;
 
@@ -101,7 +101,7 @@ class ObjectEzsignfolderApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsignfolderID');
     }
 
-    final path = '/1/object/ezsignfolder/{pkiEzsignfolderID}'.replaceAll('{format}', 'json')
+    final path = '/1/object/ezsignfolder/{pkiEzsignfolderID}'
       .replaceAll('{' + 'pkiEzsignfolderID' + '}', pkiEzsignfolderID.toString());
 
     Object postBody;
@@ -172,7 +172,7 @@ class ObjectEzsignfolderApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsignfolderID');
     }
 
-    final path = '/1/object/ezsignfolder/{pkiEzsignfolderID}/getChildren'.replaceAll('{format}', 'json')
+    final path = '/1/object/ezsignfolder/{pkiEzsignfolderID}/getChildren'
       .replaceAll('{' + 'pkiEzsignfolderID' + '}', pkiEzsignfolderID.toString());
 
     Object postBody;
@@ -236,7 +236,7 @@ class ObjectEzsignfolderApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsignfolderID');
     }
 
-    final path = '/1/object/ezsignfolder/{pkiEzsignfolderID}'.replaceAll('{format}', 'json')
+    final path = '/1/object/ezsignfolder/{pkiEzsignfolderID}'
       .replaceAll('{' + 'pkiEzsignfolderID' + '}', pkiEzsignfolderID.toString());
 
     Object postBody;
@@ -312,7 +312,7 @@ class ObjectEzsignfolderApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: ezsignfolderSendV1Request');
     }
 
-    final path = '/1/object/ezsignfolder/{pkiEzsignfolderID}/send'.replaceAll('{format}', 'json')
+    final path = '/1/object/ezsignfolder/{pkiEzsignfolderID}/send'
       .replaceAll('{' + 'pkiEzsignfolderID' + '}', pkiEzsignfolderID.toString());
 
     Object postBody = ezsignfolderSendV1Request;

@@ -30,7 +30,7 @@ class ObjectEzsignfoldersignerassociationApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: ezsignfoldersignerassociationCreateObjectV1Request');
     }
 
-    final path = '/1/object/ezsignfoldersignerassociation'.replaceAll('{format}', 'json');
+    final path = '/1/object/ezsignfoldersignerassociation';
 
     Object postBody = ezsignfoldersignerassociationCreateObjectV1Request;
 
@@ -101,7 +101,7 @@ class ObjectEzsignfoldersignerassociationApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsignfoldersignerassociationID');
     }
 
-    final path = '/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}'.replaceAll('{format}', 'json')
+    final path = '/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}'
       .replaceAll('{' + 'pkiEzsignfoldersignerassociationID' + '}', pkiEzsignfoldersignerassociationID.toString());
 
     Object postBody;
@@ -172,7 +172,7 @@ class ObjectEzsignfoldersignerassociationApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsignfoldersignerassociationID');
     }
 
-    final path = '/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getChildren'.replaceAll('{format}', 'json')
+    final path = '/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getChildren'
       .replaceAll('{' + 'pkiEzsignfoldersignerassociationID' + '}', pkiEzsignfoldersignerassociationID.toString());
 
     Object postBody;
@@ -238,7 +238,7 @@ class ObjectEzsignfoldersignerassociationApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsignfoldersignerassociationID');
     }
 
-    final path = '/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getInPersonLoginUrl'.replaceAll('{format}', 'json')
+    final path = '/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getInPersonLoginUrl'
       .replaceAll('{' + 'pkiEzsignfoldersignerassociationID' + '}', pkiEzsignfoldersignerassociationID.toString());
 
     Object postBody;
@@ -311,7 +311,7 @@ class ObjectEzsignfoldersignerassociationApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsignfoldersignerassociationID');
     }
 
-    final path = '/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}'.replaceAll('{format}', 'json')
+    final path = '/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}'
       .replaceAll('{' + 'pkiEzsignfoldersignerassociationID' + '}', pkiEzsignfoldersignerassociationID.toString());
 
     Object postBody;

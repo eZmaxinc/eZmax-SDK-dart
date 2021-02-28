@@ -34,7 +34,7 @@ class ObjectPeriodApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: sSelector');
     }
 
-    final path = '/1/object/period/getAutocomplete/{sSelector}'.replaceAll('{format}', 'json')
+    final path = '/1/object/period/getAutocomplete/{sSelector}'
       .replaceAll('{' + 'sSelector' + '}', sSelector.toString());
 
     Object postBody;

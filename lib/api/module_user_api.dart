@@ -30,7 +30,7 @@ class ModuleUserApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: userCreateEzsignuserV1Request');
     }
 
-    final path = '/1/module/user/createezsignuser'.replaceAll('{format}', 'json');
+    final path = '/1/module/user/createezsignuser';
 
     Object postBody = userCreateEzsignuserV1Request;
 

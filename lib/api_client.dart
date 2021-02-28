@@ -313,14 +313,22 @@ class ApiClient {
           return EzsignsignerRequestCompoundContact.fromJson(value);
         case 'FieldEEzsigndocumentStep':
           return FieldEEzsigndocumentStepTypeTransformer().decode(value);
+          
         case 'FieldEEzsignfolderSendreminderfrequency':
           return FieldEEzsignfolderSendreminderfrequencyTypeTransformer().decode(value);
+          
         case 'FieldEEzsignfolderStep':
           return FieldEEzsignfolderStepTypeTransformer().decode(value);
+          
         case 'FieldEPhoneType':
           return FieldEPhoneTypeTypeTransformer().decode(value);
+          
         case 'FieldEUserType':
           return FieldEUserTypeTypeTransformer().decode(value);
+          
+        case 'FieldEUserTypeSSPR':
+          return FieldEUserTypeSSPRTypeTransformer().decode(value);
+          
         case 'FranchisereferalincomeCreateObjectV1Request':
           return FranchisereferalincomeCreateObjectV1Request.fromJson(value);
         case 'FranchisereferalincomeCreateObjectV1Response':
@@ -337,6 +345,16 @@ class ApiClient {
           return MultilingualApikeyDescription.fromJson(value);
         case 'PhoneRequest':
           return PhoneRequest.fromJson(value);
+        case 'SsprResetPasswordRequestV1Request':
+          return SsprResetPasswordRequestV1Request.fromJson(value);
+        case 'SsprResetPasswordV1Request':
+          return SsprResetPasswordV1Request.fromJson(value);
+        case 'SsprSendUsernamesV1Request':
+          return SsprSendUsernamesV1Request.fromJson(value);
+        case 'SsprUnlockAccountRequestV1Request':
+          return SsprUnlockAccountRequestV1Request.fromJson(value);
+        case 'SsprUnlockAccountV1Request':
+          return SsprUnlockAccountV1Request.fromJson(value);
         case 'UNUSEDEzsigndocumentEditObjectV1Request':
           return UNUSEDEzsigndocumentEditObjectV1Request.fromJson(value);
         case 'UNUSEDEzsigndocumentEditObjectV1Response':

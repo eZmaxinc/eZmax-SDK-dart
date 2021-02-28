@@ -21,7 +21,7 @@ class ObjectActivesessionApi {
   ///
   /// Note: This method returns the HTTP [Response].
   Future<Response> activesessionGetCurrentV1WithHttpInfo() async {
-    final path = '/1/object/activesession/getCurrent'.replaceAll('{format}', 'json');
+    final path = '/1/object/activesession/getCurrent';
 
     Object postBody;
 

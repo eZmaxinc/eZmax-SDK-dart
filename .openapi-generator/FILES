@@ -79,6 +79,7 @@ doc/FieldEEzsignfolderSendreminderfrequency.md
 doc/FieldEEzsignfolderStep.md
 doc/FieldEPhoneType.md
 doc/FieldEUserType.md
+doc/FieldEUserTypeSSPR.md
 doc/FranchisereferalincomeCreateObjectV1Request.md
 doc/FranchisereferalincomeCreateObjectV1Response.md
 doc/FranchisereferalincomeCreateObjectV1ResponseMPayload.md
@@ -100,6 +101,11 @@ doc/ObjectFranchiseofficeApi.md
 doc/ObjectFranchisereferalincomeApi.md
 doc/ObjectPeriodApi.md
 doc/PhoneRequest.md
+doc/SsprResetPasswordRequestV1Request.md
+doc/SsprResetPasswordV1Request.md
+doc/SsprSendUsernamesV1Request.md
+doc/SsprUnlockAccountRequestV1Request.md
+doc/SsprUnlockAccountV1Request.md
 doc/UNUSEDEzsigndocumentEditObjectV1Request.md
 doc/UNUSEDEzsigndocumentEditObjectV1Response.md
 doc/UNUSEDEzsignfolderEditObjectV1Request.md
@@ -221,6 +227,7 @@ lib/model/field_e_ezsignfolder_sendreminderfrequency.dart
 lib/model/field_e_ezsignfolder_step.dart
 lib/model/field_e_phone_type.dart
 lib/model/field_e_user_type.dart
+lib/model/field_e_user_type_sspr.dart
 lib/model/franchisereferalincome_create_object_v1_request.dart
 lib/model/franchisereferalincome_create_object_v1_response.dart
 lib/model/franchisereferalincome_create_object_v1_response_m_payload.dart
@@ -229,6 +236,11 @@ lib/model/franchisereferalincome_request_compound.dart
 lib/model/global_customer_get_endpoint_v1_response.dart
 lib/model/multilingual_apikey_description.dart
 lib/model/phone_request.dart
+lib/model/sspr_reset_password_request_v1_request.dart
+lib/model/sspr_reset_password_v1_request.dart
+lib/model/sspr_send_usernames_v1_request.dart
+lib/model/sspr_unlock_account_request_v1_request.dart
+lib/model/sspr_unlock_account_v1_request.dart
 lib/model/unused_ezsigndocument_edit_object_v1_request.dart
 lib/model/unused_ezsigndocument_edit_object_v1_response.dart
 lib/model/unused_ezsignfolder_edit_object_v1_request.dart
@@ -327,6 +339,7 @@ test/field_e_ezsigndocument_step_test.dart
 test/field_e_ezsignfolder_sendreminderfrequency_test.dart
 test/field_e_ezsignfolder_step_test.dart
 test/field_e_phone_type_test.dart
+test/field_e_user_type_sspr_test.dart
 test/field_e_user_type_test.dart
 test/franchisereferalincome_create_object_v1_request_test.dart
 test/franchisereferalincome_create_object_v1_response_m_payload_test.dart
@@ -349,6 +362,11 @@ test/object_franchiseoffice_api_test.dart
 test/object_franchisereferalincome_api_test.dart
 test/object_period_api_test.dart
 test/phone_request_test.dart
+test/sspr_reset_password_request_v1_request_test.dart
+test/sspr_reset_password_v1_request_test.dart
+test/sspr_send_usernames_v1_request_test.dart
+test/sspr_unlock_account_request_v1_request_test.dart
+test/sspr_unlock_account_v1_request_test.dart
 test/unused_ezsigndocument_edit_object_v1_request_test.dart
 test/unused_ezsigndocument_edit_object_v1_response_test.dart
 test/unused_ezsignfolder_edit_object_v1_request_test.dart

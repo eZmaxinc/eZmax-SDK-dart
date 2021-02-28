@@ -36,7 +36,7 @@ class ObjectEzsigndocumentApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: ezsigndocumentApplyEzsigntemplateV1Request');
     }
 
-    final path = '/1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate'.replaceAll('{format}', 'json')
+    final path = '/1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate'
       .replaceAll('{' + 'pkiEzsigndocumentID' + '}', pkiEzsigndocumentID.toString());
 
     Object postBody = ezsigndocumentApplyEzsigntemplateV1Request;
@@ -112,7 +112,7 @@ class ObjectEzsigndocumentApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: ezsigndocumentCreateObjectV1Request');
     }
 
-    final path = '/1/object/ezsigndocument'.replaceAll('{format}', 'json');
+    final path = '/1/object/ezsigndocument';
 
     Object postBody = ezsigndocumentCreateObjectV1Request;
 
@@ -183,7 +183,7 @@ class ObjectEzsigndocumentApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsigndocumentID');
     }
 
-    final path = '/1/object/ezsigndocument/{pkiEzsigndocumentID}'.replaceAll('{format}', 'json')
+    final path = '/1/object/ezsigndocument/{pkiEzsigndocumentID}'
       .replaceAll('{' + 'pkiEzsigndocumentID' + '}', pkiEzsigndocumentID.toString());
 
     Object postBody;
@@ -254,7 +254,7 @@ class ObjectEzsigndocumentApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsigndocumentID');
     }
 
-    final path = '/1/object/ezsigndocument/{pkiEzsigndocumentID}/getChildren'.replaceAll('{format}', 'json')
+    final path = '/1/object/ezsigndocument/{pkiEzsigndocumentID}/getChildren'
       .replaceAll('{' + 'pkiEzsigndocumentID' + '}', pkiEzsigndocumentID.toString());
 
     Object postBody;
@@ -326,7 +326,7 @@ class ObjectEzsigndocumentApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: eDocumentType');
     }
 
-    final path = '/1/object/ezsigndocument/{pkiEzsigndocumentID}/getDownloadUrl/{eDocumentType}'.replaceAll('{format}', 'json')
+    final path = '/1/object/ezsigndocument/{pkiEzsigndocumentID}/getDownloadUrl/{eDocumentType}'
       .replaceAll('{' + 'pkiEzsigndocumentID' + '}', pkiEzsigndocumentID.toString())
       .replaceAll('{' + 'eDocumentType' + '}', eDocumentType.toString());
 
@@ -403,7 +403,7 @@ class ObjectEzsigndocumentApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsigndocumentID');
     }
 
-    final path = '/1/object/ezsigndocument/{pkiEzsigndocumentID}'.replaceAll('{format}', 'json')
+    final path = '/1/object/ezsigndocument/{pkiEzsigndocumentID}'
       .replaceAll('{' + 'pkiEzsigndocumentID' + '}', pkiEzsigndocumentID.toString());
 
     Object postBody;

@@ -34,7 +34,7 @@ class GlobalCustomerApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: pksCustomerCode');
     }
 
-    final path = '/1/customer/{pksCustomerCode}/endpoint'.replaceAll('{format}', 'json')
+    final path = '/1/customer/{pksCustomerCode}/endpoint'
       .replaceAll('{' + 'pksCustomerCode' + '}', pksCustomerCode.toString());
 
     Object postBody;

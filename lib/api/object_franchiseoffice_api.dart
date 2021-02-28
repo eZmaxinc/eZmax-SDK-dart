@@ -34,7 +34,7 @@ class ObjectFranchiseofficeApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: sSelector');
     }
 
-    final path = '/1/object/franchiseoffice/getAutocomplete/{sSelector}'.replaceAll('{format}', 'json')
+    final path = '/1/object/franchiseoffice/getAutocomplete/{sSelector}'
       .replaceAll('{' + 'sSelector' + '}', sSelector.toString());
 
     Object postBody;

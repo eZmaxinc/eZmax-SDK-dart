@@ -30,7 +30,7 @@ class ObjectApikeyApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: apikeyCreateObjectV1Request');
     }
 
-    final path = '/1/object/apikey'.replaceAll('{format}', 'json');
+    final path = '/1/object/apikey';
 
     Object postBody = apikeyCreateObjectV1Request;
 
