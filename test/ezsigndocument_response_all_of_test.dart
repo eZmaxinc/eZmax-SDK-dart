@@ -24,12 +24,6 @@ void main() {
       // TODO
     });
 
-    // The actual file name that will be used when downloading or attaching to an email.
-    // String sEzsigndocumentFilename
-    test('to test the property `sEzsigndocumentFilename`', () async {
-      // TODO
-    });
-
     // The name of the document that will be presented to Ezsignfoldersignerassociations
     // String sEzsigndocumentName
     test('to test the property `sEzsigndocumentName`', () async {

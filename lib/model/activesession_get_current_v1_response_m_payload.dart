@@ -19,6 +19,8 @@ class ActivesessionGetCurrentV1ResponseMPayload {
     @required this.sDepartmentNameX,
     this.aRegisteredModules = const [],
     this.aPermissions = const [],
+    @required this.fkiUserID,
+    @required this.fkiApikeyID,
   });
 
   /// The customer code specific to the client in which the API request is being made
@@ -44,6 +46,12 @@ class ActivesessionGetCurrentV1ResponseMPayload {
   /// An array of permissions granted to the user or api key
   List<int> aPermissions;
 
+  /// The unique ID of the User
+  int fkiUserID;
+
+  /// The unique ID of the Apikey
+  int fkiApikeyID;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is ActivesessionGetCurrentV1ResponseMPayload &&
      other.sCustomerCode == sCustomerCode &&
@@ -52,7 +60,9 @@ class ActivesessionGetCurrentV1ResponseMPayload {
      other.sCompanyNameX == sCompanyNameX &&
      other.sDepartmentNameX == sDepartmentNameX &&
      other.aRegisteredModules == aRegisteredModules &&
-     other.aPermissions == aPermissions;
+     other.aPermissions == aPermissions &&
+     other.fkiUserID == fkiUserID &&
+     other.fkiApikeyID == fkiApikeyID;
 
   @override
   int get hashCode =>
@@ -62,10 +72,12 @@ class ActivesessionGetCurrentV1ResponseMPayload {
     (sCompanyNameX == null ? 0 : sCompanyNameX.hashCode) +
     (sDepartmentNameX == null ? 0 : sDepartmentNameX.hashCode) +
     (aRegisteredModules == null ? 0 : aRegisteredModules.hashCode) +
-    (aPermissions == null ? 0 : aPermissions.hashCode);
+    (aPermissions == null ? 0 : aPermissions.hashCode) +
+    (fkiUserID == null ? 0 : fkiUserID.hashCode) +
+    (fkiApikeyID == null ? 0 : fkiApikeyID.hashCode);
 
   @override
-  String toString() => 'ActivesessionGetCurrentV1ResponseMPayload[sCustomerCode=$sCustomerCode, eActivesessionSessiontype=$eActivesessionSessiontype, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, aRegisteredModules=$aRegisteredModules, aPermissions=$aPermissions]';
+  String toString() => 'ActivesessionGetCurrentV1ResponseMPayload[sCustomerCode=$sCustomerCode, eActivesessionSessiontype=$eActivesessionSessiontype, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, aRegisteredModules=$aRegisteredModules, aPermissions=$aPermissions, fkiUserID=$fkiUserID, fkiApikeyID=$fkiApikeyID]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -76,6 +88,8 @@ class ActivesessionGetCurrentV1ResponseMPayload {
       json[r'sDepartmentNameX'] = sDepartmentNameX;
       json[r'a_RegisteredModules'] = aRegisteredModules;
       json[r'a_Permissions'] = aPermissions;
+      json[r'fkiUserID'] = fkiUserID;
+      json[r'fkiApikeyID'] = fkiApikeyID;
     return json;
   }
 
@@ -95,6 +109,8 @@ class ActivesessionGetCurrentV1ResponseMPayload {
         aPermissions: json[r'a_Permissions'] == null
           ? null
           : (json[r'a_Permissions'] as List).cast<int>(),
+        fkiUserID: json[r'fkiUserID'],
+        fkiApikeyID: json[r'fkiApikeyID'],
     );
 
   static List<ActivesessionGetCurrentV1ResponseMPayload> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>

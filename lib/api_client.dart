@@ -355,6 +355,8 @@ class ApiClient {
           return SsprUnlockAccountRequestV1Request.fromJson(value);
         case 'SsprUnlockAccountV1Request':
           return SsprUnlockAccountV1Request.fromJson(value);
+        case 'SsprValidateTokenV1Request':
+          return SsprValidateTokenV1Request.fromJson(value);
         case 'UNUSEDEzsigndocumentEditObjectV1Request':
           return UNUSEDEzsigndocumentEditObjectV1Request.fromJson(value);
         case 'UNUSEDEzsigndocumentEditObjectV1Response':

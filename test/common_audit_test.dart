@@ -6,25 +6,25 @@ void main() {
   final instance = CommonAudit();
 
   group('test CommonAudit', () {
-    // The id of the User that created the object.
+    // The unique ID of the User
     // int fkiUserIDCreated
     test('to test the property `fkiUserIDCreated`', () async {
       // TODO
     });
 
-    // The id of the User that made the last modification on the object.
+    // The unique ID of the User
     // int fkiUserIDModified
     test('to test the property `fkiUserIDModified`', () async {
       // TODO
     });
 
-    // The id of the API Key that created the object.
+    // The unique ID of the Apikey
     // int fkiApikeyIDCreated
     test('to test the property `fkiApikeyIDCreated`', () async {
       // TODO
     });
 
-    // The id of the API Key that made the last modification on the object.
+    // The unique ID of the Apikey
     // int fkiApikeyIDModified
     test('to test the property `fkiApikeyIDModified`', () async {
       // TODO

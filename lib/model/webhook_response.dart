@@ -30,7 +30,7 @@ class WebhookResponse {
   /// This Ezsign Event. This property will be set only if the Module is \"Ezsign\".
   WebhookResponseEWebhookEzsigneventEnum eWebhookEzsignevent;
 
-  /// The Customer Code in which the event was generated
+  /// The customer code assigned to your account
   String pksCustomerCode;
 
   /// The url being called

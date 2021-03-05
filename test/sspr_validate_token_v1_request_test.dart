@@ -1,11 +1,11 @@
 import 'package:openapi/api.dart';
 import 'package:test/test.dart';
 
-// tests for SsprResetPasswordV1Request
+// tests for SsprValidateTokenV1Request
 void main() {
-  final instance = SsprResetPasswordV1Request();
+  final instance = SsprValidateTokenV1Request();
 
-  group('test SsprResetPasswordV1Request', () {
+  group('test SsprValidateTokenV1Request', () {
     // The customer code assigned to your account
     // String pksCustomerCode
     test('to test the property `pksCustomerCode`', () async {
@@ -38,12 +38,6 @@ void main() {
     // Hex Encoded Secret SSPR token
     // String binUserSSPRtoken
     test('to test the property `binUserSSPRtoken`', () async {
-      // TODO
-    });
-
-    // A Password.  Must meet complexity requirements
-    // String sPassword
-    test('to test the property `sPassword`', () async {
       // TODO
     });
 

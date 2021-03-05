@@ -339,4 +339,69 @@ class ModuleSsprApi {
       throw ApiException(response.statusCode, _decodeBodyBytes(response));
     }
   }
+
+  /// Validate Token
+  ///
+  /// This endpoint validates if a Token is valid and not expired. If the token has less than an hour to its life, the TTL is reset to 1 hour.  sEmailAddress must be set if eUserTypeSSPR = EzsignUser  sUserLoginname must be set if eUserTypeSSPR = Native
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [SsprValidateTokenV1Request] ssprValidateTokenV1Request (required):
+  Future<Response> ssprValidateTokenV1WithHttpInfo(SsprValidateTokenV1Request ssprValidateTokenV1Request) async {
+    // Verify required params are set.
+    if (ssprValidateTokenV1Request == null) {
+     throw ApiException(HttpStatus.badRequest, 'Missing required param: ssprValidateTokenV1Request');
+    }
+
+    final path = '/1/module/sspr/validateToken';
+
+    Object postBody = ssprValidateTokenV1Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    final contentTypes = <String>['application/json'];
+    final nullableContentType = contentTypes.isNotEmpty ? contentTypes[0] : null;
+    final authNames = <String>['Authorization'];
+
+    if (
+      nullableContentType != null &&
+      nullableContentType.toLowerCase().startsWith('multipart/form-data')
+    ) {
+      bool hasFields = false;
+      final mp = MultipartRequest(null, null);
+      if (hasFields) {
+        postBody = mp;
+      }
+    } else {
+    }
+
+    return await apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      nullableContentType,
+      authNames,
+    );
+  }
+
+  /// Validate Token
+  ///
+  /// This endpoint validates if a Token is valid and not expired. If the token has less than an hour to its life, the TTL is reset to 1 hour.  sEmailAddress must be set if eUserTypeSSPR = EzsignUser  sUserLoginname must be set if eUserTypeSSPR = Native
+  ///
+  /// Parameters:
+  ///
+  /// * [SsprValidateTokenV1Request] ssprValidateTokenV1Request (required):
+  Future<void> ssprValidateTokenV1(SsprValidateTokenV1Request ssprValidateTokenV1Request) async {
+    final response = await ssprValidateTokenV1WithHttpInfo(ssprValidateTokenV1Request);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, _decodeBodyBytes(response));
+    }
+  }
 }

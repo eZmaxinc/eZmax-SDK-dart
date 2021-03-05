@@ -132,6 +132,7 @@ part 'model/sspr_reset_password_v1_request.dart';
 part 'model/sspr_send_usernames_v1_request.dart';
 part 'model/sspr_unlock_account_request_v1_request.dart';
 part 'model/sspr_unlock_account_v1_request.dart';
+part 'model/sspr_validate_token_v1_request.dart';
 part 'model/unused_ezsigndocument_edit_object_v1_request.dart';
 part 'model/unused_ezsigndocument_edit_object_v1_response.dart';
 part 'model/unused_ezsignfolder_edit_object_v1_request.dart';

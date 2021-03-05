@@ -18,7 +18,6 @@ class EzsigndocumentRequest {
     @required this.fkiEzsignfolderID,
     @required this.dtEzsigndocumentDuedate,
     @required this.fkiLanguageID,
-    @required this.sEzsigndocumentFilename,
     @required this.sEzsigndocumentName,
   });
 
@@ -43,9 +42,6 @@ class EzsigndocumentRequest {
   // maximum: 2
   int fkiLanguageID;
 
-  /// The actual file name that will be used when downloading or attaching to an email.
-  String sEzsigndocumentFilename;
-
   /// The name of the document that will be presented to Ezsignfoldersignerassociations
   String sEzsigndocumentName;
 
@@ -57,7 +53,6 @@ class EzsigndocumentRequest {
      other.fkiEzsignfolderID == fkiEzsignfolderID &&
      other.dtEzsigndocumentDuedate == dtEzsigndocumentDuedate &&
      other.fkiLanguageID == fkiLanguageID &&
-     other.sEzsigndocumentFilename == sEzsigndocumentFilename &&
      other.sEzsigndocumentName == sEzsigndocumentName;
 
   @override
@@ -68,11 +63,10 @@ class EzsigndocumentRequest {
     (fkiEzsignfolderID == null ? 0 : fkiEzsignfolderID.hashCode) +
     (dtEzsigndocumentDuedate == null ? 0 : dtEzsigndocumentDuedate.hashCode) +
     (fkiLanguageID == null ? 0 : fkiLanguageID.hashCode) +
-    (sEzsigndocumentFilename == null ? 0 : sEzsigndocumentFilename.hashCode) +
     (sEzsigndocumentName == null ? 0 : sEzsigndocumentName.hashCode);
 
   @override
-  String toString() => 'EzsigndocumentRequest[eEzsigndocumentSource=$eEzsigndocumentSource, eEzsigndocumentFormat=$eEzsigndocumentFormat, sEzsigndocumentBase64=$sEzsigndocumentBase64, fkiEzsignfolderID=$fkiEzsignfolderID, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, fkiLanguageID=$fkiLanguageID, sEzsigndocumentFilename=$sEzsigndocumentFilename, sEzsigndocumentName=$sEzsigndocumentName]';
+  String toString() => 'EzsigndocumentRequest[eEzsigndocumentSource=$eEzsigndocumentSource, eEzsigndocumentFormat=$eEzsigndocumentFormat, sEzsigndocumentBase64=$sEzsigndocumentBase64, fkiEzsignfolderID=$fkiEzsignfolderID, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, fkiLanguageID=$fkiLanguageID, sEzsigndocumentName=$sEzsigndocumentName]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -84,7 +78,6 @@ class EzsigndocumentRequest {
       json[r'fkiEzsignfolderID'] = fkiEzsignfolderID;
       json[r'dtEzsigndocumentDuedate'] = dtEzsigndocumentDuedate;
       json[r'fkiLanguageID'] = fkiLanguageID;
-      json[r'sEzsigndocumentFilename'] = sEzsigndocumentFilename;
       json[r'sEzsigndocumentName'] = sEzsigndocumentName;
     return json;
   }
@@ -100,7 +93,6 @@ class EzsigndocumentRequest {
         fkiEzsignfolderID: json[r'fkiEzsignfolderID'],
         dtEzsigndocumentDuedate: json[r'dtEzsigndocumentDuedate'],
         fkiLanguageID: json[r'fkiLanguageID'],
-        sEzsigndocumentFilename: json[r'sEzsigndocumentFilename'],
         sEzsigndocumentName: json[r'sEzsigndocumentName'],
     );
 

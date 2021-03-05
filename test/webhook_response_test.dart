@@ -24,7 +24,7 @@ void main() {
       // TODO
     });
 
-    // The Customer Code in which the event was generated
+    // The customer code assigned to your account
     // String pksCustomerCode
     test('to test the property `pksCustomerCode`', () async {
       // TODO

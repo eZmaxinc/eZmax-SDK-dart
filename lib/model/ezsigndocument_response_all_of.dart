@@ -15,7 +15,6 @@ class EzsigndocumentResponseAllOf {
     @required this.fkiEzsignfolderID,
     @required this.dtEzsigndocumentDuedate,
     @required this.fkiLanguageID,
-    @required this.sEzsigndocumentFilename,
     @required this.sEzsigndocumentName,
     @required this.pkiEzsigndocumentID,
     @required this.eEzsigndocumentStep,
@@ -40,9 +39,6 @@ class EzsigndocumentResponseAllOf {
   // minimum: 1
   // maximum: 2
   int fkiLanguageID;
-
-  /// The actual file name that will be used when downloading or attaching to an email.
-  String sEzsigndocumentFilename;
 
   /// The name of the document that will be presented to Ezsignfoldersignerassociations
   String sEzsigndocumentName;
@@ -83,7 +79,6 @@ class EzsigndocumentResponseAllOf {
      other.fkiEzsignfolderID == fkiEzsignfolderID &&
      other.dtEzsigndocumentDuedate == dtEzsigndocumentDuedate &&
      other.fkiLanguageID == fkiLanguageID &&
-     other.sEzsigndocumentFilename == sEzsigndocumentFilename &&
      other.sEzsigndocumentName == sEzsigndocumentName &&
      other.pkiEzsigndocumentID == pkiEzsigndocumentID &&
      other.eEzsigndocumentStep == eEzsigndocumentStep &&
@@ -102,7 +97,6 @@ class EzsigndocumentResponseAllOf {
     (fkiEzsignfolderID == null ? 0 : fkiEzsignfolderID.hashCode) +
     (dtEzsigndocumentDuedate == null ? 0 : dtEzsigndocumentDuedate.hashCode) +
     (fkiLanguageID == null ? 0 : fkiLanguageID.hashCode) +
-    (sEzsigndocumentFilename == null ? 0 : sEzsigndocumentFilename.hashCode) +
     (sEzsigndocumentName == null ? 0 : sEzsigndocumentName.hashCode) +
     (pkiEzsigndocumentID == null ? 0 : pkiEzsigndocumentID.hashCode) +
     (eEzsigndocumentStep == null ? 0 : eEzsigndocumentStep.hashCode) +
@@ -117,14 +111,13 @@ class EzsigndocumentResponseAllOf {
     (objAudit == null ? 0 : objAudit.hashCode);
 
   @override
-  String toString() => 'EzsigndocumentResponseAllOf[fkiEzsignfolderID=$fkiEzsignfolderID, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, fkiLanguageID=$fkiLanguageID, sEzsigndocumentFilename=$sEzsigndocumentFilename, sEzsigndocumentName=$sEzsigndocumentName, pkiEzsigndocumentID=$pkiEzsigndocumentID, eEzsigndocumentStep=$eEzsigndocumentStep, dtEzsigndocumentFirstsend=$dtEzsigndocumentFirstsend, dtEzsigndocumentLastsend=$dtEzsigndocumentLastsend, iEzsigndocumentOrder=$iEzsigndocumentOrder, iEzsigndocumentPagetotal=$iEzsigndocumentPagetotal, iEzsigndocumentSignaturesigned=$iEzsigndocumentSignaturesigned, iEzsigndocumentSignaturetotal=$iEzsigndocumentSignaturetotal, sEzsigndocumentMD5initial=$sEzsigndocumentMD5initial, sEzsigndocumentMD5signed=$sEzsigndocumentMD5signed, objAudit=$objAudit]';
+  String toString() => 'EzsigndocumentResponseAllOf[fkiEzsignfolderID=$fkiEzsignfolderID, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, fkiLanguageID=$fkiLanguageID, sEzsigndocumentName=$sEzsigndocumentName, pkiEzsigndocumentID=$pkiEzsigndocumentID, eEzsigndocumentStep=$eEzsigndocumentStep, dtEzsigndocumentFirstsend=$dtEzsigndocumentFirstsend, dtEzsigndocumentLastsend=$dtEzsigndocumentLastsend, iEzsigndocumentOrder=$iEzsigndocumentOrder, iEzsigndocumentPagetotal=$iEzsigndocumentPagetotal, iEzsigndocumentSignaturesigned=$iEzsigndocumentSignaturesigned, iEzsigndocumentSignaturetotal=$iEzsigndocumentSignaturetotal, sEzsigndocumentMD5initial=$sEzsigndocumentMD5initial, sEzsigndocumentMD5signed=$sEzsigndocumentMD5signed, objAudit=$objAudit]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'fkiEzsignfolderID'] = fkiEzsignfolderID;
       json[r'dtEzsigndocumentDuedate'] = dtEzsigndocumentDuedate;
       json[r'fkiLanguageID'] = fkiLanguageID;
-      json[r'sEzsigndocumentFilename'] = sEzsigndocumentFilename;
       json[r'sEzsigndocumentName'] = sEzsigndocumentName;
       json[r'pkiEzsigndocumentID'] = pkiEzsigndocumentID;
       json[r'eEzsigndocumentStep'] = eEzsigndocumentStep;
@@ -148,7 +141,6 @@ class EzsigndocumentResponseAllOf {
         fkiEzsignfolderID: json[r'fkiEzsignfolderID'],
         dtEzsigndocumentDuedate: json[r'dtEzsigndocumentDuedate'],
         fkiLanguageID: json[r'fkiLanguageID'],
-        sEzsigndocumentFilename: json[r'sEzsigndocumentFilename'],
         sEzsigndocumentName: json[r'sEzsigndocumentName'],
         pkiEzsigndocumentID: json[r'pkiEzsigndocumentID'],
         eEzsigndocumentStep: FieldEEzsigndocumentStep.fromJson(json[r'eEzsigndocumentStep']),

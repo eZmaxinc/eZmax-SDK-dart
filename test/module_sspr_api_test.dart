@@ -61,5 +61,14 @@ void main() {
       // TODO
     });
 
+    // Validate Token
+    //
+    // This endpoint validates if a Token is valid and not expired. If the token has less than an hour to its life, the TTL is reset to 1 hour.  sEmailAddress must be set if eUserTypeSSPR = EzsignUser  sUserLoginname must be set if eUserTypeSSPR = Native
+    //
+    //Future ssprValidateTokenV1(SsprValidateTokenV1Request ssprValidateTokenV1Request) async
+    test('test ssprValidateTokenV1', () async {
+      // TODO
+    });
+
   });
 }

@@ -20,16 +20,16 @@ class CommonAudit {
     @required this.dtModifiedDate,
   });
 
-  /// The id of the User that created the object.
+  /// The unique ID of the User
   int fkiUserIDCreated;
 
-  /// The id of the User that made the last modification on the object.
+  /// The unique ID of the User
   int fkiUserIDModified;
 
-  /// The id of the API Key that created the object.
+  /// The unique ID of the Apikey
   int fkiApikeyIDCreated;
 
-  /// The id of the API Key that made the last modification on the object.
+  /// The unique ID of the Apikey
   int fkiApikeyIDModified;
 
   /// Represent a Date Time. The timezone is the one configured in the User's profile.

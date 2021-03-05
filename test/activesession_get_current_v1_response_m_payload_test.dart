@@ -48,6 +48,18 @@ void main() {
       // TODO
     });
 
+    // The unique ID of the User
+    // int fkiUserID
+    test('to test the property `fkiUserID`', () async {
+      // TODO
+    });
+
+    // The unique ID of the Apikey
+    // int fkiApikeyID
+    test('to test the property `fkiApikeyID`', () async {
+      // TODO
+    });
+
 
   });
 

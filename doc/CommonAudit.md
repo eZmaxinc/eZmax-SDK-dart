@@ -8,10 +8,10 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**fkiUserIDCreated** | **int** | The id of the User that created the object. | 
-**fkiUserIDModified** | **int** | The id of the User that made the last modification on the object. | 
-**fkiApikeyIDCreated** | **int** | The id of the API Key that created the object. | [optional] 
-**fkiApikeyIDModified** | **int** | The id of the API Key that made the last modification on the object. | [optional] 
+**fkiUserIDCreated** | **int** | The unique ID of the User | 
+**fkiUserIDModified** | **int** | The unique ID of the User | 
+**fkiApikeyIDCreated** | **int** | The unique ID of the Apikey | [optional] 
+**fkiApikeyIDModified** | **int** | The unique ID of the Apikey | [optional] 
 **dtCreatedDate** | **String** | Represent a Date Time. The timezone is the one configured in the User's profile. | 
 **dtModifiedDate** | **String** | Represent a Date Time. The timezone is the one configured in the User's profile. | 
 
