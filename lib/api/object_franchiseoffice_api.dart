@@ -34,7 +34,7 @@ class ObjectFranchiseofficeApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: sSelector');
     }
 
-    final path = '/1/object/franchiseoffice/getAutocomplete/{sSelector}'
+    final path = r'/1/object/franchiseoffice/getAutocomplete/{sSelector}'
       .replaceAll('{' + 'sSelector' + '}', sSelector.toString());
 
     Object postBody;
@@ -96,7 +96,7 @@ class ObjectFranchiseofficeApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return apiClient.deserialize(_decodeBodyBytes(response), 'CommonGetAutocompleteV1Response') as CommonGetAutocompleteV1Response;
-    }
-    return null;
+        }
+    return Future<CommonGetAutocompleteV1Response>.value(null);
   }
 }

@@ -30,7 +30,7 @@ class ObjectEzsignfolderApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: ezsignfolderCreateObjectV1Request');
     }
 
-    final path = '/1/object/ezsignfolder';
+    final path = r'/1/object/ezsignfolder';
 
     Object postBody = ezsignfolderCreateObjectV1Request;
 
@@ -83,8 +83,8 @@ class ObjectEzsignfolderApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return apiClient.deserialize(_decodeBodyBytes(response), 'EzsignfolderCreateObjectV1Response') as EzsignfolderCreateObjectV1Response;
-    }
-    return null;
+        }
+    return Future<EzsignfolderCreateObjectV1Response>.value(null);
   }
 
   /// Delete an existing Ezsignfolder
@@ -101,7 +101,7 @@ class ObjectEzsignfolderApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsignfolderID');
     }
 
-    final path = '/1/object/ezsignfolder/{pkiEzsignfolderID}'
+    final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}'
       .replaceAll('{' + 'pkiEzsignfolderID' + '}', pkiEzsignfolderID.toString());
 
     Object postBody;
@@ -154,8 +154,8 @@ class ObjectEzsignfolderApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return apiClient.deserialize(_decodeBodyBytes(response), 'EzsignfolderDeleteObjectV1Response') as EzsignfolderDeleteObjectV1Response;
-    }
-    return null;
+        }
+    return Future<EzsignfolderDeleteObjectV1Response>.value(null);
   }
 
   /// Retrieve an existing Ezsignfolder's children IDs
@@ -172,7 +172,7 @@ class ObjectEzsignfolderApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsignfolderID');
     }
 
-    final path = '/1/object/ezsignfolder/{pkiEzsignfolderID}/getChildren'
+    final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/getChildren'
       .replaceAll('{' + 'pkiEzsignfolderID' + '}', pkiEzsignfolderID.toString());
 
     Object postBody;
@@ -236,7 +236,7 @@ class ObjectEzsignfolderApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsignfolderID');
     }
 
-    final path = '/1/object/ezsignfolder/{pkiEzsignfolderID}'
+    final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}'
       .replaceAll('{' + 'pkiEzsignfolderID' + '}', pkiEzsignfolderID.toString());
 
     Object postBody;
@@ -289,8 +289,8 @@ class ObjectEzsignfolderApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return apiClient.deserialize(_decodeBodyBytes(response), 'EzsignfolderGetObjectV1Response') as EzsignfolderGetObjectV1Response;
-    }
-    return null;
+        }
+    return Future<EzsignfolderGetObjectV1Response>.value(null);
   }
 
   /// Send the Ezsignfolder to the signatories for signature
@@ -312,7 +312,7 @@ class ObjectEzsignfolderApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: ezsignfolderSendV1Request');
     }
 
-    final path = '/1/object/ezsignfolder/{pkiEzsignfolderID}/send'
+    final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/send'
       .replaceAll('{' + 'pkiEzsignfolderID' + '}', pkiEzsignfolderID.toString());
 
     Object postBody = ezsignfolderSendV1Request;
@@ -367,7 +367,7 @@ class ObjectEzsignfolderApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return apiClient.deserialize(_decodeBodyBytes(response), 'EzsignfolderSendV1Response') as EzsignfolderSendV1Response;
-    }
-    return null;
+        }
+    return Future<EzsignfolderSendV1Response>.value(null);
   }
 }

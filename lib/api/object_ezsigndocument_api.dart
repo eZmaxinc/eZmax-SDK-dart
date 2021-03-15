@@ -36,7 +36,7 @@ class ObjectEzsigndocumentApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: ezsigndocumentApplyEzsigntemplateV1Request');
     }
 
-    final path = '/1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate'
+    final path = r'/1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate'
       .replaceAll('{' + 'pkiEzsigndocumentID' + '}', pkiEzsigndocumentID.toString());
 
     Object postBody = ezsigndocumentApplyEzsigntemplateV1Request;
@@ -93,8 +93,8 @@ class ObjectEzsigndocumentApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return apiClient.deserialize(_decodeBodyBytes(response), 'EzsigndocumentApplyEzsigntemplateV1Response') as EzsigndocumentApplyEzsigntemplateV1Response;
-    }
-    return null;
+        }
+    return Future<EzsigndocumentApplyEzsigntemplateV1Response>.value(null);
   }
 
   /// Create a new Ezsigndocument
@@ -112,7 +112,7 @@ class ObjectEzsigndocumentApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: ezsigndocumentCreateObjectV1Request');
     }
 
-    final path = '/1/object/ezsigndocument';
+    final path = r'/1/object/ezsigndocument';
 
     Object postBody = ezsigndocumentCreateObjectV1Request;
 
@@ -165,8 +165,8 @@ class ObjectEzsigndocumentApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return apiClient.deserialize(_decodeBodyBytes(response), 'EzsigndocumentCreateObjectV1Response') as EzsigndocumentCreateObjectV1Response;
-    }
-    return null;
+        }
+    return Future<EzsigndocumentCreateObjectV1Response>.value(null);
   }
 
   /// Delete an existing Ezsigndocument
@@ -183,7 +183,7 @@ class ObjectEzsigndocumentApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsigndocumentID');
     }
 
-    final path = '/1/object/ezsigndocument/{pkiEzsigndocumentID}'
+    final path = r'/1/object/ezsigndocument/{pkiEzsigndocumentID}'
       .replaceAll('{' + 'pkiEzsigndocumentID' + '}', pkiEzsigndocumentID.toString());
 
     Object postBody;
@@ -236,8 +236,8 @@ class ObjectEzsigndocumentApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return apiClient.deserialize(_decodeBodyBytes(response), 'EzsigndocumentDeleteObjectV1Response') as EzsigndocumentDeleteObjectV1Response;
-    }
-    return null;
+        }
+    return Future<EzsigndocumentDeleteObjectV1Response>.value(null);
   }
 
   /// Retrieve an existing Ezsigndocument's children IDs
@@ -254,7 +254,7 @@ class ObjectEzsigndocumentApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsigndocumentID');
     }
 
-    final path = '/1/object/ezsigndocument/{pkiEzsigndocumentID}/getChildren'
+    final path = r'/1/object/ezsigndocument/{pkiEzsigndocumentID}/getChildren'
       .replaceAll('{' + 'pkiEzsigndocumentID' + '}', pkiEzsigndocumentID.toString());
 
     Object postBody;
@@ -326,7 +326,7 @@ class ObjectEzsigndocumentApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: eDocumentType');
     }
 
-    final path = '/1/object/ezsigndocument/{pkiEzsigndocumentID}/getDownloadUrl/{eDocumentType}'
+    final path = r'/1/object/ezsigndocument/{pkiEzsigndocumentID}/getDownloadUrl/{eDocumentType}'
       .replaceAll('{' + 'pkiEzsigndocumentID' + '}', pkiEzsigndocumentID.toString())
       .replaceAll('{' + 'eDocumentType' + '}', eDocumentType.toString());
 
@@ -385,8 +385,8 @@ class ObjectEzsigndocumentApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return apiClient.deserialize(_decodeBodyBytes(response), 'EzsigndocumentGetDownloadUrlV1Response') as EzsigndocumentGetDownloadUrlV1Response;
-    }
-    return null;
+        }
+    return Future<EzsigndocumentGetDownloadUrlV1Response>.value(null);
   }
 
   /// Retrieve an existing Ezsigndocument
@@ -403,7 +403,7 @@ class ObjectEzsigndocumentApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsigndocumentID');
     }
 
-    final path = '/1/object/ezsigndocument/{pkiEzsigndocumentID}'
+    final path = r'/1/object/ezsigndocument/{pkiEzsigndocumentID}'
       .replaceAll('{' + 'pkiEzsigndocumentID' + '}', pkiEzsigndocumentID.toString());
 
     Object postBody;
@@ -456,7 +456,7 @@ class ObjectEzsigndocumentApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return apiClient.deserialize(_decodeBodyBytes(response), 'EzsigndocumentGetObjectV1Response') as EzsigndocumentGetObjectV1Response;
-    }
-    return null;
+        }
+    return Future<EzsigndocumentGetObjectV1Response>.value(null);
   }
 }

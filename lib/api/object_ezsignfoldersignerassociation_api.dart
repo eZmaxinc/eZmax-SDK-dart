@@ -30,7 +30,7 @@ class ObjectEzsignfoldersignerassociationApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: ezsignfoldersignerassociationCreateObjectV1Request');
     }
 
-    final path = '/1/object/ezsignfoldersignerassociation';
+    final path = r'/1/object/ezsignfoldersignerassociation';
 
     Object postBody = ezsignfoldersignerassociationCreateObjectV1Request;
 
@@ -83,8 +83,8 @@ class ObjectEzsignfoldersignerassociationApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return apiClient.deserialize(_decodeBodyBytes(response), 'EzsignfoldersignerassociationCreateObjectV1Response') as EzsignfoldersignerassociationCreateObjectV1Response;
-    }
-    return null;
+        }
+    return Future<EzsignfoldersignerassociationCreateObjectV1Response>.value(null);
   }
 
   /// Delete an existing Ezsignfoldersignerassociation
@@ -101,7 +101,7 @@ class ObjectEzsignfoldersignerassociationApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsignfoldersignerassociationID');
     }
 
-    final path = '/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}'
+    final path = r'/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}'
       .replaceAll('{' + 'pkiEzsignfoldersignerassociationID' + '}', pkiEzsignfoldersignerassociationID.toString());
 
     Object postBody;
@@ -154,8 +154,8 @@ class ObjectEzsignfoldersignerassociationApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return apiClient.deserialize(_decodeBodyBytes(response), 'EzsignfoldersignerassociationDeleteObjectV1Response') as EzsignfoldersignerassociationDeleteObjectV1Response;
-    }
-    return null;
+        }
+    return Future<EzsignfoldersignerassociationDeleteObjectV1Response>.value(null);
   }
 
   /// Retrieve an existing Ezsignfoldersignerassociation's children IDs
@@ -172,7 +172,7 @@ class ObjectEzsignfoldersignerassociationApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsignfoldersignerassociationID');
     }
 
-    final path = '/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getChildren'
+    final path = r'/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getChildren'
       .replaceAll('{' + 'pkiEzsignfoldersignerassociationID' + '}', pkiEzsignfoldersignerassociationID.toString());
 
     Object postBody;
@@ -238,7 +238,7 @@ class ObjectEzsignfoldersignerassociationApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsignfoldersignerassociationID');
     }
 
-    final path = '/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getInPersonLoginUrl'
+    final path = r'/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getInPersonLoginUrl'
       .replaceAll('{' + 'pkiEzsignfoldersignerassociationID' + '}', pkiEzsignfoldersignerassociationID.toString());
 
     Object postBody;
@@ -293,8 +293,8 @@ class ObjectEzsignfoldersignerassociationApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return apiClient.deserialize(_decodeBodyBytes(response), 'EzsignfoldersignerassociationGetInPersonLoginUrlV1Response') as EzsignfoldersignerassociationGetInPersonLoginUrlV1Response;
-    }
-    return null;
+        }
+    return Future<EzsignfoldersignerassociationGetInPersonLoginUrlV1Response>.value(null);
   }
 
   /// Retrieve an existing Ezsignfoldersignerassociation
@@ -311,7 +311,7 @@ class ObjectEzsignfoldersignerassociationApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsignfoldersignerassociationID');
     }
 
-    final path = '/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}'
+    final path = r'/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}'
       .replaceAll('{' + 'pkiEzsignfoldersignerassociationID' + '}', pkiEzsignfoldersignerassociationID.toString());
 
     Object postBody;
@@ -364,7 +364,7 @@ class ObjectEzsignfoldersignerassociationApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return apiClient.deserialize(_decodeBodyBytes(response), 'EzsignfoldersignerassociationGetObjectV1Response') as EzsignfoldersignerassociationGetObjectV1Response;
-    }
-    return null;
+        }
+    return Future<EzsignfoldersignerassociationGetObjectV1Response>.value(null);
   }
 }

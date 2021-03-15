@@ -30,7 +30,7 @@ class ModuleUserApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: userCreateEzsignuserV1Request');
     }
 
-    final path = '/1/module/user/createezsignuser';
+    final path = r'/1/module/user/createezsignuser';
 
     Object postBody = userCreateEzsignuserV1Request;
 
@@ -83,7 +83,7 @@ class ModuleUserApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return apiClient.deserialize(_decodeBodyBytes(response), 'UserCreateEzsignuserV1Response') as UserCreateEzsignuserV1Response;
-    }
-    return null;
+        }
+    return Future<UserCreateEzsignuserV1Response>.value(null);
   }
 }

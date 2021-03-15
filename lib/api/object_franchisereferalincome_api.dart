@@ -30,7 +30,7 @@ class ObjectFranchisereferalincomeApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: franchisereferalincomeCreateObjectV1Request');
     }
 
-    final path = '/1/object/franchisereferalincome';
+    final path = r'/1/object/franchisereferalincome';
 
     Object postBody = franchisereferalincomeCreateObjectV1Request;
 
@@ -83,7 +83,7 @@ class ObjectFranchisereferalincomeApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return apiClient.deserialize(_decodeBodyBytes(response), 'FranchisereferalincomeCreateObjectV1Response') as FranchisereferalincomeCreateObjectV1Response;
-    }
-    return null;
+        }
+    return Future<FranchisereferalincomeCreateObjectV1Response>.value(null);
   }
 }

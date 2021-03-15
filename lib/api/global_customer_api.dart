@@ -34,7 +34,7 @@ class GlobalCustomerApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: pksCustomerCode');
     }
 
-    final path = '/1/customer/{pksCustomerCode}/endpoint'
+    final path = r'/1/customer/{pksCustomerCode}/endpoint'
       .replaceAll('{' + 'pksCustomerCode' + '}', pksCustomerCode.toString());
 
     Object postBody;
@@ -96,7 +96,7 @@ class GlobalCustomerApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return apiClient.deserialize(_decodeBodyBytes(response), 'GlobalCustomerGetEndpointV1Response') as GlobalCustomerGetEndpointV1Response;
-    }
-    return null;
+        }
+    return Future<GlobalCustomerGetEndpointV1Response>.value(null);
   }
 }

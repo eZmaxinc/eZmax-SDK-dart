@@ -30,7 +30,7 @@ class ModuleSsprApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: ssprResetPasswordRequestV1Request');
     }
 
-    final path = '/1/module/sspr/resetPasswordRequest/';
+    final path = r'/1/module/sspr/resetPasswordRequest';
 
     Object postBody = ssprResetPasswordRequestV1Request;
 
@@ -95,7 +95,7 @@ class ModuleSsprApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: ssprResetPasswordV1Request');
     }
 
-    final path = '/1/module/sspr/resetPassword';
+    final path = r'/1/module/sspr/resetPassword';
 
     Object postBody = ssprResetPasswordV1Request;
 
@@ -160,7 +160,7 @@ class ModuleSsprApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: ssprSendUsernamesV1Request');
     }
 
-    final path = '/1/module/sspr/sendUsernames';
+    final path = r'/1/module/sspr/sendUsernames';
 
     Object postBody = ssprSendUsernamesV1Request;
 
@@ -225,7 +225,7 @@ class ModuleSsprApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: ssprUnlockAccountRequestV1Request');
     }
 
-    final path = '/1/module/sspr/unlockAccountRequest';
+    final path = r'/1/module/sspr/unlockAccountRequest';
 
     Object postBody = ssprUnlockAccountRequestV1Request;
 
@@ -290,7 +290,7 @@ class ModuleSsprApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: ssprUnlockAccountV1Request');
     }
 
-    final path = '/1/module/sspr/unlockAccount';
+    final path = r'/1/module/sspr/unlockAccount';
 
     Object postBody = ssprUnlockAccountV1Request;
 
@@ -342,7 +342,7 @@ class ModuleSsprApi {
 
   /// Validate Token
   ///
-  /// This endpoint validates if a Token is valid and not expired. If the token has less than an hour to its life, the TTL is reset to 1 hour.  sEmailAddress must be set if eUserTypeSSPR = EzsignUser  sUserLoginname must be set if eUserTypeSSPR = Native
+  /// This endpoint validates if a Token is valid and not expired.  sEmailAddress must be set if eUserTypeSSPR = EzsignUser  sUserLoginname must be set if eUserTypeSSPR = Native
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -355,7 +355,7 @@ class ModuleSsprApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: ssprValidateTokenV1Request');
     }
 
-    final path = '/1/module/sspr/validateToken';
+    final path = r'/1/module/sspr/validateToken';
 
     Object postBody = ssprValidateTokenV1Request;
 
@@ -393,7 +393,7 @@ class ModuleSsprApi {
 
   /// Validate Token
   ///
-  /// This endpoint validates if a Token is valid and not expired. If the token has less than an hour to its life, the TTL is reset to 1 hour.  sEmailAddress must be set if eUserTypeSSPR = EzsignUser  sUserLoginname must be set if eUserTypeSSPR = Native
+  /// This endpoint validates if a Token is valid and not expired.  sEmailAddress must be set if eUserTypeSSPR = EzsignUser  sUserLoginname must be set if eUserTypeSSPR = Native
   ///
   /// Parameters:
   ///

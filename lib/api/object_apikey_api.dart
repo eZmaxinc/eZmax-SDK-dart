@@ -30,7 +30,7 @@ class ObjectApikeyApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: apikeyCreateObjectV1Request');
     }
 
-    final path = '/1/object/apikey';
+    final path = r'/1/object/apikey';
 
     Object postBody = apikeyCreateObjectV1Request;
 
@@ -83,7 +83,7 @@ class ObjectApikeyApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return apiClient.deserialize(_decodeBodyBytes(response), 'ApikeyCreateObjectV1Response') as ApikeyCreateObjectV1Response;
-    }
-    return null;
+        }
+    return Future<ApikeyCreateObjectV1Response>.value(null);
   }
 }

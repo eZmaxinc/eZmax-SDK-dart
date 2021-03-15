@@ -21,7 +21,7 @@ class ObjectActivesessionApi {
   ///
   /// Note: This method returns the HTTP [Response].
   Future<Response> activesessionGetCurrentV1WithHttpInfo() async {
-    final path = '/1/object/activesession/getCurrent';
+    final path = r'/1/object/activesession/getCurrent';
 
     Object postBody;
 
@@ -70,7 +70,7 @@ class ObjectActivesessionApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return apiClient.deserialize(_decodeBodyBytes(response), 'ActivesessionGetCurrentV1Response') as ActivesessionGetCurrentV1Response;
-    }
-    return null;
+        }
+    return Future<ActivesessionGetCurrentV1Response>.value(null);
   }
 }

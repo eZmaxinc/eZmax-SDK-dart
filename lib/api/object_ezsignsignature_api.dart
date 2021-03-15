@@ -30,7 +30,7 @@ class ObjectEzsignsignatureApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: ezsignsignatureCreateObjectV1Request');
     }
 
-    final path = '/1/object/ezsignsignature';
+    final path = r'/1/object/ezsignsignature';
 
     Object postBody = ezsignsignatureCreateObjectV1Request;
 
@@ -83,8 +83,8 @@ class ObjectEzsignsignatureApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return apiClient.deserialize(_decodeBodyBytes(response), 'EzsignsignatureCreateObjectV1Response') as EzsignsignatureCreateObjectV1Response;
-    }
-    return null;
+        }
+    return Future<EzsignsignatureCreateObjectV1Response>.value(null);
   }
 
   /// Delete an existing Ezsignsignature
@@ -101,7 +101,7 @@ class ObjectEzsignsignatureApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsignsignatureID');
     }
 
-    final path = '/1/object/ezsignsignature/{pkiEzsignsignatureID}'
+    final path = r'/1/object/ezsignsignature/{pkiEzsignsignatureID}'
       .replaceAll('{' + 'pkiEzsignsignatureID' + '}', pkiEzsignsignatureID.toString());
 
     Object postBody;
@@ -154,8 +154,8 @@ class ObjectEzsignsignatureApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return apiClient.deserialize(_decodeBodyBytes(response), 'EzsignsignatureDeleteObjectV1Response') as EzsignsignatureDeleteObjectV1Response;
-    }
-    return null;
+        }
+    return Future<EzsignsignatureDeleteObjectV1Response>.value(null);
   }
 
   /// Retrieve an existing Ezsignsignature's children IDs
@@ -172,7 +172,7 @@ class ObjectEzsignsignatureApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsignsignatureID');
     }
 
-    final path = '/1/object/ezsignsignature/{pkiEzsignsignatureID}/getChildren'
+    final path = r'/1/object/ezsignsignature/{pkiEzsignsignatureID}/getChildren'
       .replaceAll('{' + 'pkiEzsignsignatureID' + '}', pkiEzsignsignatureID.toString());
 
     Object postBody;
@@ -236,7 +236,7 @@ class ObjectEzsignsignatureApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsignsignatureID');
     }
 
-    final path = '/1/object/ezsignsignature/{pkiEzsignsignatureID}'
+    final path = r'/1/object/ezsignsignature/{pkiEzsignsignatureID}'
       .replaceAll('{' + 'pkiEzsignsignatureID' + '}', pkiEzsignsignatureID.toString());
 
     Object postBody;
@@ -289,7 +289,7 @@ class ObjectEzsignsignatureApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return apiClient.deserialize(_decodeBodyBytes(response), 'EzsignsignatureGetObjectV1Response') as EzsignsignatureGetObjectV1Response;
-    }
-    return null;
+        }
+    return Future<EzsignsignatureGetObjectV1Response>.value(null);
   }
 }
