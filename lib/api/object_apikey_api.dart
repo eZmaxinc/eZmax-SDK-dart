@@ -76,13 +76,13 @@ class ObjectApikeyApi {
   Future<ApikeyCreateObjectV1Response> apikeyCreateObjectV1(List<ApikeyCreateObjectV1Request> apikeyCreateObjectV1Request) async {
     final response = await apikeyCreateObjectV1WithHttpInfo(apikeyCreateObjectV1Request);
     if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, _decodeBodyBytes(response));
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
-      return apiClient.deserialize(_decodeBodyBytes(response), 'ApikeyCreateObjectV1Response') as ApikeyCreateObjectV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'ApikeyCreateObjectV1Response',) as ApikeyCreateObjectV1Response;
         }
     return Future<ApikeyCreateObjectV1Response>.value(null);
   }

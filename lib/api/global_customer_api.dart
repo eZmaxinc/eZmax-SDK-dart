@@ -89,13 +89,13 @@ class GlobalCustomerApi {
   Future<GlobalCustomerGetEndpointV1Response> globalCustomerGetEndpointV1(String pksCustomerCode, { String sInfrastructureproductCode }) async {
     final response = await globalCustomerGetEndpointV1WithHttpInfo(pksCustomerCode,  sInfrastructureproductCode: sInfrastructureproductCode );
     if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, _decodeBodyBytes(response));
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
-      return apiClient.deserialize(_decodeBodyBytes(response), 'GlobalCustomerGetEndpointV1Response') as GlobalCustomerGetEndpointV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GlobalCustomerGetEndpointV1Response',) as GlobalCustomerGetEndpointV1Response;
         }
     return Future<GlobalCustomerGetEndpointV1Response>.value(null);
   }

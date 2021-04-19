@@ -76,7 +76,7 @@ class ModuleSsprApi {
   Future<void> ssprResetPasswordRequestV1(SsprResetPasswordRequestV1Request ssprResetPasswordRequestV1Request) async {
     final response = await ssprResetPasswordRequestV1WithHttpInfo(ssprResetPasswordRequestV1Request);
     if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, _decodeBodyBytes(response));
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
   }
 
@@ -141,7 +141,7 @@ class ModuleSsprApi {
   Future<void> ssprResetPasswordV1(SsprResetPasswordV1Request ssprResetPasswordV1Request) async {
     final response = await ssprResetPasswordV1WithHttpInfo(ssprResetPasswordV1Request);
     if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, _decodeBodyBytes(response));
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
   }
 
@@ -206,7 +206,7 @@ class ModuleSsprApi {
   Future<void> ssprSendUsernamesV1(SsprSendUsernamesV1Request ssprSendUsernamesV1Request) async {
     final response = await ssprSendUsernamesV1WithHttpInfo(ssprSendUsernamesV1Request);
     if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, _decodeBodyBytes(response));
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
   }
 
@@ -271,7 +271,7 @@ class ModuleSsprApi {
   Future<void> ssprUnlockAccountRequestV1(SsprUnlockAccountRequestV1Request ssprUnlockAccountRequestV1Request) async {
     final response = await ssprUnlockAccountRequestV1WithHttpInfo(ssprUnlockAccountRequestV1Request);
     if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, _decodeBodyBytes(response));
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
   }
 
@@ -336,7 +336,7 @@ class ModuleSsprApi {
   Future<void> ssprUnlockAccountV1(SsprUnlockAccountV1Request ssprUnlockAccountV1Request) async {
     final response = await ssprUnlockAccountV1WithHttpInfo(ssprUnlockAccountV1Request);
     if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, _decodeBodyBytes(response));
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
   }
 
@@ -401,7 +401,7 @@ class ModuleSsprApi {
   Future<void> ssprValidateTokenV1(SsprValidateTokenV1Request ssprValidateTokenV1Request) async {
     final response = await ssprValidateTokenV1WithHttpInfo(ssprValidateTokenV1Request);
     if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, _decodeBodyBytes(response));
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
   }
 }

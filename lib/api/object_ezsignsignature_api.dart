@@ -76,13 +76,13 @@ class ObjectEzsignsignatureApi {
   Future<EzsignsignatureCreateObjectV1Response> ezsignsignatureCreateObjectV1(List<EzsignsignatureCreateObjectV1Request> ezsignsignatureCreateObjectV1Request) async {
     final response = await ezsignsignatureCreateObjectV1WithHttpInfo(ezsignsignatureCreateObjectV1Request);
     if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, _decodeBodyBytes(response));
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
-      return apiClient.deserialize(_decodeBodyBytes(response), 'EzsignsignatureCreateObjectV1Response') as EzsignsignatureCreateObjectV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignsignatureCreateObjectV1Response',) as EzsignsignatureCreateObjectV1Response;
         }
     return Future<EzsignsignatureCreateObjectV1Response>.value(null);
   }
@@ -147,13 +147,13 @@ class ObjectEzsignsignatureApi {
   Future<EzsignsignatureDeleteObjectV1Response> ezsignsignatureDeleteObjectV1(int pkiEzsignsignatureID) async {
     final response = await ezsignsignatureDeleteObjectV1WithHttpInfo(pkiEzsignsignatureID);
     if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, _decodeBodyBytes(response));
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
-      return apiClient.deserialize(_decodeBodyBytes(response), 'EzsignsignatureDeleteObjectV1Response') as EzsignsignatureDeleteObjectV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignsignatureDeleteObjectV1Response',) as EzsignsignatureDeleteObjectV1Response;
         }
     return Future<EzsignsignatureDeleteObjectV1Response>.value(null);
   }
@@ -218,7 +218,7 @@ class ObjectEzsignsignatureApi {
   Future<void> ezsignsignatureGetChildrenV1(int pkiEzsignsignatureID) async {
     final response = await ezsignsignatureGetChildrenV1WithHttpInfo(pkiEzsignsignatureID);
     if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, _decodeBodyBytes(response));
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
   }
 
@@ -282,13 +282,13 @@ class ObjectEzsignsignatureApi {
   Future<EzsignsignatureGetObjectV1Response> ezsignsignatureGetObjectV1(int pkiEzsignsignatureID) async {
     final response = await ezsignsignatureGetObjectV1WithHttpInfo(pkiEzsignsignatureID);
     if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, _decodeBodyBytes(response));
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
-      return apiClient.deserialize(_decodeBodyBytes(response), 'EzsignsignatureGetObjectV1Response') as EzsignsignatureGetObjectV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignsignatureGetObjectV1Response',) as EzsignsignatureGetObjectV1Response;
         }
     return Future<EzsignsignatureGetObjectV1Response>.value(null);
   }
