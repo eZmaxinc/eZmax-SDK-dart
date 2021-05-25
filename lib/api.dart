@@ -27,6 +27,7 @@ part 'auth/http_basic_auth.dart';
 part 'auth/http_bearer_auth.dart';
 
 part 'api/global_customer_api.dart';
+part 'api/module_authenticate_api.dart';
 part 'api/module_sspr_api.dart';
 part 'api/module_user_api.dart';
 part 'api/object_activesession_api.dart';
@@ -50,6 +51,9 @@ part 'model/apikey_request.dart';
 part 'model/apikey_request_compound.dart';
 part 'model/apikey_response.dart';
 part 'model/attempt_response.dart';
+part 'model/authenticate_authenticate_v2_request.dart';
+part 'model/authenticate_authenticate_v2_response.dart';
+part 'model/authenticate_authenticate_v2_response_m_payload.dart';
 part 'model/common_audit.dart';
 part 'model/common_get_autocomplete_v1_response.dart';
 part 'model/common_get_autocomplete_v1_response_m_payload.dart';

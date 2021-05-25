@@ -12,6 +12,9 @@ doc/ApikeyRequest.md
 doc/ApikeyRequestCompound.md
 doc/ApikeyResponse.md
 doc/AttemptResponse.md
+doc/AuthenticateAuthenticateV2Request.md
+doc/AuthenticateAuthenticateV2Response.md
+doc/AuthenticateAuthenticateV2ResponseMPayload.md
 doc/CommonAudit.md
 doc/CommonGetAutocompleteV1Response.md
 doc/CommonGetAutocompleteV1ResponseMPayload.md
@@ -87,6 +90,7 @@ doc/FranchisereferalincomeRequest.md
 doc/FranchisereferalincomeRequestCompound.md
 doc/GlobalCustomerApi.md
 doc/GlobalCustomerGetEndpointV1Response.md
+doc/ModuleAuthenticateApi.md
 doc/ModuleSsprApi.md
 doc/ModuleUserApi.md
 doc/MultilingualApikeyDescription.md
@@ -131,6 +135,7 @@ doc/WebsiteRequest.md
 git_push.sh
 lib/api.dart
 lib/api/global_customer_api.dart
+lib/api/module_authenticate_api.dart
 lib/api/module_sspr_api.dart
 lib/api/module_user_api.dart
 lib/api/object_activesession_api.dart
@@ -161,6 +166,9 @@ lib/model/apikey_request.dart
 lib/model/apikey_request_compound.dart
 lib/model/apikey_response.dart
 lib/model/attempt_response.dart
+lib/model/authenticate_authenticate_v2_request.dart
+lib/model/authenticate_authenticate_v2_response.dart
+lib/model/authenticate_authenticate_v2_response_m_payload.dart
 lib/model/common_audit.dart
 lib/model/common_get_autocomplete_v1_response.dart
 lib/model/common_get_autocomplete_v1_response_m_payload.dart
@@ -275,6 +283,9 @@ test/apikey_request_compound_test.dart
 test/apikey_request_test.dart
 test/apikey_response_test.dart
 test/attempt_response_test.dart
+test/authenticate_authenticate_v2_request_test.dart
+test/authenticate_authenticate_v2_response_m_payload_test.dart
+test/authenticate_authenticate_v2_response_test.dart
 test/common_audit_test.dart
 test/common_get_autocomplete_v1_response_m_payload_test.dart
 test/common_get_autocomplete_v1_response_test.dart
@@ -350,6 +361,7 @@ test/franchisereferalincome_request_compound_test.dart
 test/franchisereferalincome_request_test.dart
 test/global_customer_api_test.dart
 test/global_customer_get_endpoint_v1_response_test.dart
+test/module_authenticate_api_test.dart
 test/module_sspr_api_test.dart
 test/module_user_api_test.dart
 test/multilingual_apikey_description_test.dart

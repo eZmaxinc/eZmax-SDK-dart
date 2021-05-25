@@ -13,25 +13,34 @@ class CommonResponseError {
   /// Returns a new [CommonResponseError] instance.
   CommonResponseError({
     @required this.sErrorMessage,
+    this.eErrorCode,
   });
 
   /// More detail about the error
   String sErrorMessage;
 
+  /// The error code. See documentation for valid values
+  String eErrorCode;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonResponseError &&
-     other.sErrorMessage == sErrorMessage;
+     other.sErrorMessage == sErrorMessage &&
+     other.eErrorCode == eErrorCode;
 
   @override
   int get hashCode =>
-    (sErrorMessage == null ? 0 : sErrorMessage.hashCode);
+    (sErrorMessage == null ? 0 : sErrorMessage.hashCode) +
+    (eErrorCode == null ? 0 : eErrorCode.hashCode);
 
   @override
-  String toString() => 'CommonResponseError[sErrorMessage=$sErrorMessage]';
+  String toString() => 'CommonResponseError[sErrorMessage=$sErrorMessage, eErrorCode=$eErrorCode]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'sErrorMessage'] = sErrorMessage;
+    if (eErrorCode != null) {
+      json[r'eErrorCode'] = eErrorCode;
+    }
     return json;
   }
 
@@ -41,6 +50,7 @@ class CommonResponseError {
     ? null
     : CommonResponseError(
         sErrorMessage: json[r'sErrorMessage'],
+        eErrorCode: json[r'eErrorCode'],
     );
 
   static List<CommonResponseError> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>

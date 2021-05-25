@@ -21,6 +21,12 @@ void main() {
       // TODO
     });
 
+    // The error code. See documentation for valid values
+    // String eErrorCode
+    test('to test the property `eErrorCode`', () async {
+      // TODO
+    });
+
 
   });
 

@@ -1,4 +1,4 @@
-# openapi.model.CommonResponseError
+# openapi.model.AuthenticateAuthenticateV2ResponseMPayload
 
 ## Load the model package
 ```dart
@@ -8,8 +8,8 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**sErrorMessage** | **String** | More detail about the error | 
-**eErrorCode** | **String** | The error code. See documentation for valid values | [optional] 
+**sAuthorization** | **String** | The Authorization key | 
+**sSecret** | **String** | The secret key | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

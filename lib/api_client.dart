@@ -76,7 +76,7 @@ class ApiClient {
       ? '?${urlEncodedQueryParams.join('&')}'
       : '';
 
-    final url = '$basePath$path$queryString';
+    final Uri uri = Uri.parse('$basePath$path$queryString');
 
     if (nullableContentType != null) {
       headerParams['Content-Type'] = nullableContentType;
@@ -88,7 +88,7 @@ class ApiClient {
         body is MultipartFile && (nullableContentType == null ||
         !nullableContentType.toLowerCase().startsWith('multipart/form-data'))
       ) {
-        final request = StreamedRequest(method, Uri.parse(url));
+        final request = StreamedRequest(method, uri);
         request.headers.addAll(headerParams);
         request.contentLength = body.length;
         body.finalize().listen(
@@ -102,7 +102,7 @@ class ApiClient {
       }
 
       if (body is MultipartRequest) {
-        final request = MultipartRequest(method, Uri.parse(url));
+        final request = MultipartRequest(method, uri);
         request.fields.addAll(body.fields);
         request.files.addAll(body.files);
         request.headers.addAll(body.headers);
@@ -117,12 +117,12 @@ class ApiClient {
       final nullableHeaderParams = headerParams.isEmpty ? null : headerParams;
 
       switch(method) {
-        case 'POST': return await _client.post(url, headers: nullableHeaderParams, body: msgBody,);
-        case 'PUT': return await _client.put(url, headers: nullableHeaderParams, body: msgBody,);
-        case 'DELETE': return await _client.delete(url, headers: nullableHeaderParams,);
-        case 'PATCH': return await _client.patch(url, headers: nullableHeaderParams, body: msgBody,);
-        case 'HEAD': return await _client.head(url, headers: nullableHeaderParams,);
-        case 'GET': return await _client.get(url, headers: nullableHeaderParams,);
+        case 'POST': return await _client.post(uri, headers: nullableHeaderParams, body: msgBody,);
+        case 'PUT': return await _client.put(uri, headers: nullableHeaderParams, body: msgBody,);
+        case 'DELETE': return await _client.delete(uri, headers: nullableHeaderParams,);
+        case 'PATCH': return await _client.patch(uri, headers: nullableHeaderParams, body: msgBody,);
+        case 'HEAD': return await _client.head(uri, headers: nullableHeaderParams,);
+        case 'GET': return await _client.get(uri, headers: nullableHeaderParams,);
       }
     } on SocketException catch (e, trace) {
       throw ApiException.withInner(HttpStatus.badRequest, 'Socket operation failed: $method $path', e, trace,);
@@ -212,6 +212,12 @@ class ApiClient {
           return ApikeyResponse.fromJson(value);
         case 'AttemptResponse':
           return AttemptResponse.fromJson(value);
+        case 'AuthenticateAuthenticateV2Request':
+          return AuthenticateAuthenticateV2Request.fromJson(value);
+        case 'AuthenticateAuthenticateV2Response':
+          return AuthenticateAuthenticateV2Response.fromJson(value);
+        case 'AuthenticateAuthenticateV2ResponseMPayload':
+          return AuthenticateAuthenticateV2ResponseMPayload.fromJson(value);
         case 'CommonAudit':
           return CommonAudit.fromJson(value);
         case 'CommonGetAutocompleteV1Response':
