@@ -119,6 +119,7 @@ part 'model/ezsignsigner_request_compound_contact.dart';
 part 'model/field_e_ezsigndocument_step.dart';
 part 'model/field_e_ezsignfolder_sendreminderfrequency.dart';
 part 'model/field_e_ezsignfolder_step.dart';
+part 'model/field_e_ezsignsignature_type.dart';
 part 'model/field_e_phone_type.dart';
 part 'model/field_e_user_type.dart';
 part 'model/field_e_user_type_sspr.dart';

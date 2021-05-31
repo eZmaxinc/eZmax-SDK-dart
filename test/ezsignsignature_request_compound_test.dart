@@ -15,7 +15,7 @@ void main() {
   final instance = EzsignsignatureRequestCompound();
 
   group('test EzsignsignatureRequestCompound', () {
-    // A reference to a valid Ezsignfoldersignerassociation.  That value is returned after a successful Ezsignfoldersignerassociation Creation. 
+    // The unique ID of the Ezsignfoldersignerassociation
     // int fkiEzsignfoldersignerassociationID
     test('to test the property `fkiEzsignfoldersignerassociationID`', () async {
       // TODO
@@ -39,19 +39,18 @@ void main() {
       // TODO
     });
 
-    // The step when the Ezsignsigner will be invited to sign.  For example, if you say iEzsignsignatureStep=2, that block of signature will be available for signature only after ALL the signatures in step 1 are completed.
+    // The step when the Ezsignsigner will be invited to sign.
     // int iEzsignsignatureStep
     test('to test the property `iEzsignsignatureStep`', () async {
       // TODO
     });
 
-    // The type of signature required.  1. **Acknowledgement** is for an acknowledgment of receipt. 2. **Handwritten** is for a handwritten kind of signature where users needs to \"draw\" their signature on screen. 3. **Initials** is a simple \"click to add initials\" block. 4. **Name** is a simple \"Click to sign\" block. This is the most common block of signature.
-    // String eEzsignsignatureType
+    // FieldEEzsignsignatureType eEzsignsignatureType
     test('to test the property `eEzsignsignatureType`', () async {
       // TODO
     });
 
-    // A reference to a valid Ezsigndocument.  That value is returned after a successful Ezsigndocumentation Creation.
+    // The unique ID of the Ezsigntemplate
     // int fkiEzsigndocumentID
     test('to test the property `fkiEzsigndocumentID`', () async {
       // TODO

@@ -39,6 +39,12 @@ void main() {
       // TODO
     });
 
+    // A Password encrypted and encoded in Base64  Must meet complexity requirements
+    // String sPasswordEncrypted
+    test('to test the property `sPasswordEncrypted`', () async {
+      // TODO
+    });
+
 
   });
 

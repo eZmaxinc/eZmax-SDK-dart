@@ -351,6 +351,9 @@ class ApiClient {
         case 'FieldEEzsignfolderStep':
           return FieldEEzsignfolderStepTypeTransformer().decode(value);
           
+        case 'FieldEEzsignsignatureType':
+          return FieldEEzsignsignatureTypeTypeTransformer().decode(value);
+          
         case 'FieldEPhoneType':
           return FieldEPhoneTypeTypeTransformer().decode(value);
           

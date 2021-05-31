@@ -80,6 +80,7 @@ doc/EzsignsignerRequestCompoundContact.md
 doc/FieldEEzsigndocumentStep.md
 doc/FieldEEzsignfolderSendreminderfrequency.md
 doc/FieldEEzsignfolderStep.md
+doc/FieldEEzsignsignatureType.md
 doc/FieldEPhoneType.md
 doc/FieldEUserType.md
 doc/FieldEUserTypeSSPR.md
@@ -234,6 +235,7 @@ lib/model/ezsignsigner_request_compound_contact.dart
 lib/model/field_e_ezsigndocument_step.dart
 lib/model/field_e_ezsignfolder_sendreminderfrequency.dart
 lib/model/field_e_ezsignfolder_step.dart
+lib/model/field_e_ezsignsignature_type.dart
 lib/model/field_e_phone_type.dart
 lib/model/field_e_user_type.dart
 lib/model/field_e_user_type_sspr.dart
@@ -351,6 +353,7 @@ test/ezsignsigner_request_test.dart
 test/field_e_ezsigndocument_step_test.dart
 test/field_e_ezsignfolder_sendreminderfrequency_test.dart
 test/field_e_ezsignfolder_step_test.dart
+test/field_e_ezsignsignature_type_test.dart
 test/field_e_phone_type_test.dart
 test/field_e_user_type_sspr_test.dart
 test/field_e_user_type_test.dart

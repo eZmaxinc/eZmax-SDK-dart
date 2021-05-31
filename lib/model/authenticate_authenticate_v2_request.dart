@@ -15,7 +15,8 @@ class AuthenticateAuthenticateV2Request {
     @required this.pksCustomerCode,
     this.sEmailAddress,
     this.sUserLoginname,
-    @required this.sPassword,
+    this.sPassword,
+    this.sPasswordEncrypted,
   });
 
   /// The customer code assigned to your account
@@ -30,22 +31,27 @@ class AuthenticateAuthenticateV2Request {
   /// A Password.  Must meet complexity requirements
   String sPassword;
 
+  /// A Password encrypted and encoded in Base64  Must meet complexity requirements
+  String sPasswordEncrypted;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is AuthenticateAuthenticateV2Request &&
      other.pksCustomerCode == pksCustomerCode &&
      other.sEmailAddress == sEmailAddress &&
      other.sUserLoginname == sUserLoginname &&
-     other.sPassword == sPassword;
+     other.sPassword == sPassword &&
+     other.sPasswordEncrypted == sPasswordEncrypted;
 
   @override
   int get hashCode =>
     (pksCustomerCode == null ? 0 : pksCustomerCode.hashCode) +
     (sEmailAddress == null ? 0 : sEmailAddress.hashCode) +
     (sUserLoginname == null ? 0 : sUserLoginname.hashCode) +
-    (sPassword == null ? 0 : sPassword.hashCode);
+    (sPassword == null ? 0 : sPassword.hashCode) +
+    (sPasswordEncrypted == null ? 0 : sPasswordEncrypted.hashCode);
 
   @override
-  String toString() => 'AuthenticateAuthenticateV2Request[pksCustomerCode=$pksCustomerCode, sEmailAddress=$sEmailAddress, sUserLoginname=$sUserLoginname, sPassword=$sPassword]';
+  String toString() => 'AuthenticateAuthenticateV2Request[pksCustomerCode=$pksCustomerCode, sEmailAddress=$sEmailAddress, sUserLoginname=$sUserLoginname, sPassword=$sPassword, sPasswordEncrypted=$sPasswordEncrypted]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -56,7 +62,12 @@ class AuthenticateAuthenticateV2Request {
     if (sUserLoginname != null) {
       json[r'sUserLoginname'] = sUserLoginname;
     }
+    if (sPassword != null) {
       json[r'sPassword'] = sPassword;
+    }
+    if (sPasswordEncrypted != null) {
+      json[r'sPasswordEncrypted'] = sPasswordEncrypted;
+    }
     return json;
   }
 
@@ -69,6 +80,7 @@ class AuthenticateAuthenticateV2Request {
         sEmailAddress: json[r'sEmailAddress'],
         sUserLoginname: json[r'sUserLoginname'],
         sPassword: json[r'sPassword'],
+        sPasswordEncrypted: json[r'sPasswordEncrypted'],
     );
 
   static List<AuthenticateAuthenticateV2Request> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
