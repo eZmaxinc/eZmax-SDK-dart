@@ -25,6 +25,8 @@ class FieldEEzsigndocumentStep {
   static const unsent = FieldEEzsigndocumentStep._(r'Unsent');
   static const unsigned = FieldEEzsigndocumentStep._(r'Unsigned');
   static const partiallySigned = FieldEEzsigndocumentStep._(r'PartiallySigned');
+  static const declinedToSign = FieldEEzsigndocumentStep._(r'DeclinedToSign');
+  static const prematurelyEnded = FieldEEzsigndocumentStep._(r'PrematurelyEnded');
   static const completed = FieldEEzsigndocumentStep._(r'Completed');
 
   /// List of all possible values in this [enum][FieldEEzsigndocumentStep].
@@ -32,6 +34,8 @@ class FieldEEzsigndocumentStep {
     unsent,
     unsigned,
     partiallySigned,
+    declinedToSign,
+    prematurelyEnded,
     completed,
   ];
 
@@ -68,6 +72,8 @@ class FieldEEzsigndocumentStepTypeTransformer {
       case r'Unsent': return FieldEEzsigndocumentStep.unsent;
       case r'Unsigned': return FieldEEzsigndocumentStep.unsigned;
       case r'PartiallySigned': return FieldEEzsigndocumentStep.partiallySigned;
+      case r'DeclinedToSign': return FieldEEzsigndocumentStep.declinedToSign;
+      case r'PrematurelyEnded': return FieldEEzsigndocumentStep.prematurelyEnded;
       case r'Completed': return FieldEEzsigndocumentStep.completed;
       default:
         if (allowNull == false) {
