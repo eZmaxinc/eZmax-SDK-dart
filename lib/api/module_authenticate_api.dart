@@ -35,7 +35,7 @@ class ModuleAuthenticateApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: authenticateAuthenticateV2Request');
     }
 
-    final path = r'/2/module/authenticate/authenticate/ezsignuser/{eSessionType}'
+    final path = r'/2/module/authenticate/authenticate/{eSessionType}'
       .replaceAll('{' + 'eSessionType' + '}', eSessionType.toString());
 
     Object postBody = authenticateAuthenticateV2Request;
