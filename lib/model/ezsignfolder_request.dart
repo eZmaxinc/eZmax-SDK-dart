@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 
 part of openapi.api;
@@ -45,6 +46,7 @@ class EzsignfolderRequest {
 
   @override
   int get hashCode =>
+  // ignore: unnecessary_parenthesis
     (fkiEzsignfoldertypeID == null ? 0 : fkiEzsignfoldertypeID.hashCode) +
     (fkiEzsigntsarequirementID == null ? 0 : fkiEzsigntsarequirementID.hashCode) +
     (sEzsignfolderDescription == null ? 0 : sEzsignfolderDescription.hashCode) +
@@ -65,37 +67,50 @@ class EzsignfolderRequest {
   }
 
   /// Returns a new [EzsignfolderRequest] instance and imports its values from
-  /// [json] if it's non-null, null if [json] is null.
-  static EzsignfolderRequest fromJson(Map<String, dynamic> json) => json == null
-    ? null
-    : EzsignfolderRequest(
-        fkiEzsignfoldertypeID: json[r'fkiEzsignfoldertypeID'],
-        fkiEzsigntsarequirementID: json[r'fkiEzsigntsarequirementID'],
-        sEzsignfolderDescription: json[r'sEzsignfolderDescription'],
-        tEzsignfolderNote: json[r'tEzsignfolderNote'],
+  /// [value] if it's a [Map], null otherwise.
+  // ignore: prefer_constructors_over_static_methods
+  static EzsignfolderRequest fromJson(dynamic value) {
+    if (value is Map) {
+      final json = value.cast<String, dynamic>();
+      return EzsignfolderRequest(
+        fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID'),
+        fkiEzsigntsarequirementID: mapValueOfType<int>(json, r'fkiEzsigntsarequirementID'),
+        sEzsignfolderDescription: mapValueOfType<String>(json, r'sEzsignfolderDescription'),
+        tEzsignfolderNote: mapValueOfType<String>(json, r'tEzsignfolderNote'),
         eEzsignfolderSendreminderfrequency: FieldEEzsignfolderSendreminderfrequency.fromJson(json[r'eEzsignfolderSendreminderfrequency']),
-    );
+      );
+    }
+    return null;
+  }
 
-  static List<EzsignfolderRequest> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <EzsignfolderRequest>[]
-      : json.map((v) => EzsignfolderRequest.fromJson(v)).toList(growable: true == growable);
+  static List<EzsignfolderRequest> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(EzsignfolderRequest.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <EzsignfolderRequest>[];
 
-  static Map<String, EzsignfolderRequest> mapFromJson(Map<String, dynamic> json) {
+  static Map<String, EzsignfolderRequest> mapFromJson(dynamic json) {
     final map = <String, EzsignfolderRequest>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) => map[key] = EzsignfolderRequest.fromJson(v));
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) => map[key] = EzsignfolderRequest.fromJson(value));
     }
     return map;
   }
 
   // maps a json object with a list of EzsignfolderRequest-objects as value to a dart map
-  static Map<String, List<EzsignfolderRequest>> mapListFromJson(Map<String, dynamic> json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<EzsignfolderRequest>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
     final map = <String, List<EzsignfolderRequest>>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) {
-        map[key] = EzsignfolderRequest.listFromJson(v, emptyIsNull: emptyIsNull, growable: growable);
-      });
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) {
+          map[key] = EzsignfolderRequest.listFromJson(
+            value,
+            emptyIsNull: emptyIsNull,
+            growable: growable,
+          );
+        });
     }
     return map;
   }

@@ -19,7 +19,7 @@ Get customer endpoint
 
 Retrieve the customer's specific server endpoint where to send requests. This will help locate the proper region (ie: sInfrastructureregionCode) and the proper environment (ie: sInfrastructureenvironmenttypeDescription) where the customer's data is stored.
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
 // TODO Configure API key authorization: Authorization
@@ -31,7 +31,7 @@ final api_instance = GlobalCustomerApi();
 final pksCustomerCode = pksCustomerCode_example; // String | The customer code assigned to your account
 final sInfrastructureproductCode = sInfrastructureproductCode_example; // String | The infrastructure product Code  If undefined, \"appcluster01\" is assumed
 
-try { 
+try {
     final result = api_instance.globalCustomerGetEndpointV1(pksCustomerCode, sInfrastructureproductCode);
     print(result);
 } catch (e) {

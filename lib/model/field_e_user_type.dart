@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 
 part of openapi.api;
@@ -18,7 +19,7 @@ class FieldEUserType {
   final String value;
 
   @override
-  String toString() => value;
+  String toString() => value ?? '';
 
   String toJson() => value;
 
@@ -72,20 +73,18 @@ class FieldEUserType {
   static FieldEUserType fromJson(dynamic value) =>
     FieldEUserTypeTypeTransformer().decode(value);
 
-  static List<FieldEUserType> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <FieldEUserType>[]
-      : json
-          .map((value) => FieldEUserType.fromJson(value))
-          .toList(growable: true == growable);
+  static List<FieldEUserType> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(FieldEUserType.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <FieldEUserType>[];
 }
 
 /// Transformation class that can [encode] an instance of [FieldEUserType] to String,
 /// and [decode] dynamic data back to [FieldEUserType].
 class FieldEUserTypeTypeTransformer {
-  const FieldEUserTypeTypeTransformer._();
+  factory FieldEUserTypeTypeTransformer() => _instance ??= const FieldEUserTypeTypeTransformer._();
 
-  factory FieldEUserTypeTypeTransformer() => _instance ??= FieldEUserTypeTypeTransformer._();
+  const FieldEUserTypeTypeTransformer._();
 
   String encode(FieldEUserType data) => data.value;
 
@@ -98,32 +97,34 @@ class FieldEUserTypeTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEUserType decode(dynamic data, {bool allowNull}) {
-    switch (data) {
-      case r'AgentBroker': return FieldEUserType.agentBroker;
-      case r'Assistant': return FieldEUserType.assistant;
-      case r'Attendance': return FieldEUserType.attendance;
-      case r'Customer': return FieldEUserType.customer;
-      case r'Employee': return FieldEUserType.employee;
-      case r'Ezcom': return FieldEUserType.ezcom;
-      case r'EzsignSigner': return FieldEUserType.ezsignSigner;
-      case r'EzsignUser': return FieldEUserType.ezsignUser;
-      case r'FranchiseCustomerServer': return FieldEUserType.franchiseCustomerServer;
-      case r'Normal': return FieldEUserType.normal;
-      case r'RewardAdministration': return FieldEUserType.rewardAdministration;
-      case r'RewardMember': return FieldEUserType.rewardMember;
-      case r'RewardRepresentative': return FieldEUserType.rewardRepresentative;
-      case r'RewardCustomer': return FieldEUserType.rewardCustomer;
-      case r'RewardDistributorServer': return FieldEUserType.rewardDistributorServer;
-      case r'Supplier': return FieldEUserType.supplier;
-      case r'VetrxCustomer': return FieldEUserType.vetrxCustomer;
-      case r'Vetrxcustomergroup': return FieldEUserType.vetrxcustomergroup;
-      case r'VetrxCustomerServer': return FieldEUserType.vetrxCustomerServer;
-      case r'VetrxManufacturer': return FieldEUserType.vetrxManufacturer;
-      case r'VetrxVendor': return FieldEUserType.vetrxVendor;
-      default:
-        if (allowNull == false) {
-          throw ArgumentError('Unknown enum value to decode: $data');
-        }
+    if (data != null) {
+      switch (data.toString()) {
+        case r'AgentBroker': return FieldEUserType.agentBroker;
+        case r'Assistant': return FieldEUserType.assistant;
+        case r'Attendance': return FieldEUserType.attendance;
+        case r'Customer': return FieldEUserType.customer;
+        case r'Employee': return FieldEUserType.employee;
+        case r'Ezcom': return FieldEUserType.ezcom;
+        case r'EzsignSigner': return FieldEUserType.ezsignSigner;
+        case r'EzsignUser': return FieldEUserType.ezsignUser;
+        case r'FranchiseCustomerServer': return FieldEUserType.franchiseCustomerServer;
+        case r'Normal': return FieldEUserType.normal;
+        case r'RewardAdministration': return FieldEUserType.rewardAdministration;
+        case r'RewardMember': return FieldEUserType.rewardMember;
+        case r'RewardRepresentative': return FieldEUserType.rewardRepresentative;
+        case r'RewardCustomer': return FieldEUserType.rewardCustomer;
+        case r'RewardDistributorServer': return FieldEUserType.rewardDistributorServer;
+        case r'Supplier': return FieldEUserType.supplier;
+        case r'VetrxCustomer': return FieldEUserType.vetrxCustomer;
+        case r'Vetrxcustomergroup': return FieldEUserType.vetrxcustomergroup;
+        case r'VetrxCustomerServer': return FieldEUserType.vetrxCustomerServer;
+        case r'VetrxManufacturer': return FieldEUserType.vetrxManufacturer;
+        case r'VetrxVendor': return FieldEUserType.vetrxVendor;
+        default:
+          if (allowNull == false) {
+            throw ArgumentError('Unknown enum value to decode: $data');
+          }
+      }
     }
     return null;
   }
@@ -131,3 +132,4 @@ class FieldEUserTypeTypeTransformer {
   /// Singleton [FieldEUserTypeTypeTransformer] instance.
   static FieldEUserTypeTypeTransformer _instance;
 }
+

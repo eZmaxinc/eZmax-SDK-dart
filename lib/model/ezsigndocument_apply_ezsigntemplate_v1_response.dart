@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 
 part of openapi.api;
@@ -27,6 +28,7 @@ class EzsigndocumentApplyEzsigntemplateV1Response {
 
   @override
   int get hashCode =>
+  // ignore: unnecessary_parenthesis
     (objDebugPayload == null ? 0 : objDebugPayload.hashCode) +
     (objDebug == null ? 0 : objDebug.hashCode);
 
@@ -45,34 +47,47 @@ class EzsigndocumentApplyEzsigntemplateV1Response {
   }
 
   /// Returns a new [EzsigndocumentApplyEzsigntemplateV1Response] instance and imports its values from
-  /// [json] if it's non-null, null if [json] is null.
-  static EzsigndocumentApplyEzsigntemplateV1Response fromJson(Map<String, dynamic> json) => json == null
-    ? null
-    : EzsigndocumentApplyEzsigntemplateV1Response(
+  /// [value] if it's a [Map], null otherwise.
+  // ignore: prefer_constructors_over_static_methods
+  static EzsigndocumentApplyEzsigntemplateV1Response fromJson(dynamic value) {
+    if (value is Map) {
+      final json = value.cast<String, dynamic>();
+      return EzsigndocumentApplyEzsigntemplateV1Response(
         objDebugPayload: CommonResponseObjDebugPayload.fromJson(json[r'objDebugPayload']),
         objDebug: CommonResponseObjDebug.fromJson(json[r'objDebug']),
-    );
+      );
+    }
+    return null;
+  }
 
-  static List<EzsigndocumentApplyEzsigntemplateV1Response> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <EzsigndocumentApplyEzsigntemplateV1Response>[]
-      : json.map((v) => EzsigndocumentApplyEzsigntemplateV1Response.fromJson(v)).toList(growable: true == growable);
+  static List<EzsigndocumentApplyEzsigntemplateV1Response> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(EzsigndocumentApplyEzsigntemplateV1Response.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <EzsigndocumentApplyEzsigntemplateV1Response>[];
 
-  static Map<String, EzsigndocumentApplyEzsigntemplateV1Response> mapFromJson(Map<String, dynamic> json) {
+  static Map<String, EzsigndocumentApplyEzsigntemplateV1Response> mapFromJson(dynamic json) {
     final map = <String, EzsigndocumentApplyEzsigntemplateV1Response>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) => map[key] = EzsigndocumentApplyEzsigntemplateV1Response.fromJson(v));
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) => map[key] = EzsigndocumentApplyEzsigntemplateV1Response.fromJson(value));
     }
     return map;
   }
 
   // maps a json object with a list of EzsigndocumentApplyEzsigntemplateV1Response-objects as value to a dart map
-  static Map<String, List<EzsigndocumentApplyEzsigntemplateV1Response>> mapListFromJson(Map<String, dynamic> json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<EzsigndocumentApplyEzsigntemplateV1Response>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
     final map = <String, List<EzsigndocumentApplyEzsigntemplateV1Response>>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) {
-        map[key] = EzsigndocumentApplyEzsigntemplateV1Response.listFromJson(v, emptyIsNull: emptyIsNull, growable: growable);
-      });
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) {
+          map[key] = EzsigndocumentApplyEzsigntemplateV1Response.listFromJson(
+            value,
+            emptyIsNull: emptyIsNull,
+            growable: growable,
+          );
+        });
     }
     return map;
   }

@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 
 part of openapi.api;
@@ -27,6 +28,7 @@ class UNUSEDEzsignfoldersignerassociationEditObjectV1Response {
 
   @override
   int get hashCode =>
+  // ignore: unnecessary_parenthesis
     (objDebugPayload == null ? 0 : objDebugPayload.hashCode) +
     (objDebug == null ? 0 : objDebug.hashCode);
 
@@ -45,34 +47,47 @@ class UNUSEDEzsignfoldersignerassociationEditObjectV1Response {
   }
 
   /// Returns a new [UNUSEDEzsignfoldersignerassociationEditObjectV1Response] instance and imports its values from
-  /// [json] if it's non-null, null if [json] is null.
-  static UNUSEDEzsignfoldersignerassociationEditObjectV1Response fromJson(Map<String, dynamic> json) => json == null
-    ? null
-    : UNUSEDEzsignfoldersignerassociationEditObjectV1Response(
+  /// [value] if it's a [Map], null otherwise.
+  // ignore: prefer_constructors_over_static_methods
+  static UNUSEDEzsignfoldersignerassociationEditObjectV1Response fromJson(dynamic value) {
+    if (value is Map) {
+      final json = value.cast<String, dynamic>();
+      return UNUSEDEzsignfoldersignerassociationEditObjectV1Response(
         objDebugPayload: CommonResponseObjDebugPayload.fromJson(json[r'objDebugPayload']),
         objDebug: CommonResponseObjDebug.fromJson(json[r'objDebug']),
-    );
+      );
+    }
+    return null;
+  }
 
-  static List<UNUSEDEzsignfoldersignerassociationEditObjectV1Response> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <UNUSEDEzsignfoldersignerassociationEditObjectV1Response>[]
-      : json.map((v) => UNUSEDEzsignfoldersignerassociationEditObjectV1Response.fromJson(v)).toList(growable: true == growable);
+  static List<UNUSEDEzsignfoldersignerassociationEditObjectV1Response> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(UNUSEDEzsignfoldersignerassociationEditObjectV1Response.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <UNUSEDEzsignfoldersignerassociationEditObjectV1Response>[];
 
-  static Map<String, UNUSEDEzsignfoldersignerassociationEditObjectV1Response> mapFromJson(Map<String, dynamic> json) {
+  static Map<String, UNUSEDEzsignfoldersignerassociationEditObjectV1Response> mapFromJson(dynamic json) {
     final map = <String, UNUSEDEzsignfoldersignerassociationEditObjectV1Response>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) => map[key] = UNUSEDEzsignfoldersignerassociationEditObjectV1Response.fromJson(v));
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) => map[key] = UNUSEDEzsignfoldersignerassociationEditObjectV1Response.fromJson(value));
     }
     return map;
   }
 
   // maps a json object with a list of UNUSEDEzsignfoldersignerassociationEditObjectV1Response-objects as value to a dart map
-  static Map<String, List<UNUSEDEzsignfoldersignerassociationEditObjectV1Response>> mapListFromJson(Map<String, dynamic> json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<UNUSEDEzsignfoldersignerassociationEditObjectV1Response>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
     final map = <String, List<UNUSEDEzsignfoldersignerassociationEditObjectV1Response>>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) {
-        map[key] = UNUSEDEzsignfoldersignerassociationEditObjectV1Response.listFromJson(v, emptyIsNull: emptyIsNull, growable: growable);
-      });
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) {
+          map[key] = UNUSEDEzsignfoldersignerassociationEditObjectV1Response.listFromJson(
+            value,
+            emptyIsNull: emptyIsNull,
+            growable: growable,
+          );
+        });
     }
     return map;
   }

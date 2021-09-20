@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 
 part of openapi.api;
@@ -59,6 +60,7 @@ class AddressRequest {
 
   @override
   int get hashCode =>
+  // ignore: unnecessary_parenthesis
     (fkiAddresstypeID == null ? 0 : fkiAddresstypeID.hashCode) +
     (sAddressCivic == null ? 0 : sAddressCivic.hashCode) +
     (sAddressStreet == null ? 0 : sAddressStreet.hashCode) +
@@ -85,40 +87,53 @@ class AddressRequest {
   }
 
   /// Returns a new [AddressRequest] instance and imports its values from
-  /// [json] if it's non-null, null if [json] is null.
-  static AddressRequest fromJson(Map<String, dynamic> json) => json == null
-    ? null
-    : AddressRequest(
-        fkiAddresstypeID: json[r'fkiAddresstypeID'],
-        sAddressCivic: json[r'sAddressCivic'],
-        sAddressStreet: json[r'sAddressStreet'],
-        sAddressSuite: json[r'sAddressSuite'],
-        sAddressCity: json[r'sAddressCity'],
-        fkiProvinceID: json[r'fkiProvinceID'],
-        fkiCountryID: json[r'fkiCountryID'],
-        sAddressZip: json[r'sAddressZip'],
-    );
+  /// [value] if it's a [Map], null otherwise.
+  // ignore: prefer_constructors_over_static_methods
+  static AddressRequest fromJson(dynamic value) {
+    if (value is Map) {
+      final json = value.cast<String, dynamic>();
+      return AddressRequest(
+        fkiAddresstypeID: mapValueOfType<int>(json, r'fkiAddresstypeID'),
+        sAddressCivic: mapValueOfType<String>(json, r'sAddressCivic'),
+        sAddressStreet: mapValueOfType<String>(json, r'sAddressStreet'),
+        sAddressSuite: mapValueOfType<String>(json, r'sAddressSuite'),
+        sAddressCity: mapValueOfType<String>(json, r'sAddressCity'),
+        fkiProvinceID: mapValueOfType<int>(json, r'fkiProvinceID'),
+        fkiCountryID: mapValueOfType<int>(json, r'fkiCountryID'),
+        sAddressZip: mapValueOfType<String>(json, r'sAddressZip'),
+      );
+    }
+    return null;
+  }
 
-  static List<AddressRequest> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <AddressRequest>[]
-      : json.map((v) => AddressRequest.fromJson(v)).toList(growable: true == growable);
+  static List<AddressRequest> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(AddressRequest.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <AddressRequest>[];
 
-  static Map<String, AddressRequest> mapFromJson(Map<String, dynamic> json) {
+  static Map<String, AddressRequest> mapFromJson(dynamic json) {
     final map = <String, AddressRequest>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) => map[key] = AddressRequest.fromJson(v));
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) => map[key] = AddressRequest.fromJson(value));
     }
     return map;
   }
 
   // maps a json object with a list of AddressRequest-objects as value to a dart map
-  static Map<String, List<AddressRequest>> mapListFromJson(Map<String, dynamic> json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<AddressRequest>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
     final map = <String, List<AddressRequest>>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) {
-        map[key] = AddressRequest.listFromJson(v, emptyIsNull: emptyIsNull, growable: growable);
-      });
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) {
+          map[key] = AddressRequest.listFromJson(
+            value,
+            emptyIsNull: emptyIsNull,
+            growable: growable,
+          );
+        });
     }
     return map;
   }

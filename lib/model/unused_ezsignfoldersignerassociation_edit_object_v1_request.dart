@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 
 part of openapi.api;
@@ -23,6 +24,7 @@ class UNUSEDEzsignfoldersignerassociationEditObjectV1Request {
 
   @override
   int get hashCode =>
+  // ignore: unnecessary_parenthesis
     (objEzsignfoldersignerassociation == null ? 0 : objEzsignfoldersignerassociation.hashCode);
 
   @override
@@ -37,33 +39,46 @@ class UNUSEDEzsignfoldersignerassociationEditObjectV1Request {
   }
 
   /// Returns a new [UNUSEDEzsignfoldersignerassociationEditObjectV1Request] instance and imports its values from
-  /// [json] if it's non-null, null if [json] is null.
-  static UNUSEDEzsignfoldersignerassociationEditObjectV1Request fromJson(Map<String, dynamic> json) => json == null
-    ? null
-    : UNUSEDEzsignfoldersignerassociationEditObjectV1Request(
+  /// [value] if it's a [Map], null otherwise.
+  // ignore: prefer_constructors_over_static_methods
+  static UNUSEDEzsignfoldersignerassociationEditObjectV1Request fromJson(dynamic value) {
+    if (value is Map) {
+      final json = value.cast<String, dynamic>();
+      return UNUSEDEzsignfoldersignerassociationEditObjectV1Request(
         objEzsignfoldersignerassociation: EzsignfoldersignerassociationRequest.fromJson(json[r'objEzsignfoldersignerassociation']),
-    );
+      );
+    }
+    return null;
+  }
 
-  static List<UNUSEDEzsignfoldersignerassociationEditObjectV1Request> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <UNUSEDEzsignfoldersignerassociationEditObjectV1Request>[]
-      : json.map((v) => UNUSEDEzsignfoldersignerassociationEditObjectV1Request.fromJson(v)).toList(growable: true == growable);
+  static List<UNUSEDEzsignfoldersignerassociationEditObjectV1Request> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(UNUSEDEzsignfoldersignerassociationEditObjectV1Request.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <UNUSEDEzsignfoldersignerassociationEditObjectV1Request>[];
 
-  static Map<String, UNUSEDEzsignfoldersignerassociationEditObjectV1Request> mapFromJson(Map<String, dynamic> json) {
+  static Map<String, UNUSEDEzsignfoldersignerassociationEditObjectV1Request> mapFromJson(dynamic json) {
     final map = <String, UNUSEDEzsignfoldersignerassociationEditObjectV1Request>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) => map[key] = UNUSEDEzsignfoldersignerassociationEditObjectV1Request.fromJson(v));
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) => map[key] = UNUSEDEzsignfoldersignerassociationEditObjectV1Request.fromJson(value));
     }
     return map;
   }
 
   // maps a json object with a list of UNUSEDEzsignfoldersignerassociationEditObjectV1Request-objects as value to a dart map
-  static Map<String, List<UNUSEDEzsignfoldersignerassociationEditObjectV1Request>> mapListFromJson(Map<String, dynamic> json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<UNUSEDEzsignfoldersignerassociationEditObjectV1Request>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
     final map = <String, List<UNUSEDEzsignfoldersignerassociationEditObjectV1Request>>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) {
-        map[key] = UNUSEDEzsignfoldersignerassociationEditObjectV1Request.listFromJson(v, emptyIsNull: emptyIsNull, growable: growable);
-      });
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) {
+          map[key] = UNUSEDEzsignfoldersignerassociationEditObjectV1Request.listFromJson(
+            value,
+            emptyIsNull: emptyIsNull,
+            growable: growable,
+          );
+        });
     }
     return map;
   }

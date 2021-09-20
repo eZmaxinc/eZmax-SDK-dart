@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 
 part of openapi.api;
@@ -18,7 +19,7 @@ class FieldEEzsignfolderSendreminderfrequency {
   final String value;
 
   @override
-  String toString() => value;
+  String toString() => value ?? '';
 
   String toJson() => value;
 
@@ -36,20 +37,18 @@ class FieldEEzsignfolderSendreminderfrequency {
   static FieldEEzsignfolderSendreminderfrequency fromJson(dynamic value) =>
     FieldEEzsignfolderSendreminderfrequencyTypeTransformer().decode(value);
 
-  static List<FieldEEzsignfolderSendreminderfrequency> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <FieldEEzsignfolderSendreminderfrequency>[]
-      : json
-          .map((value) => FieldEEzsignfolderSendreminderfrequency.fromJson(value))
-          .toList(growable: true == growable);
+  static List<FieldEEzsignfolderSendreminderfrequency> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(FieldEEzsignfolderSendreminderfrequency.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <FieldEEzsignfolderSendreminderfrequency>[];
 }
 
 /// Transformation class that can [encode] an instance of [FieldEEzsignfolderSendreminderfrequency] to String,
 /// and [decode] dynamic data back to [FieldEEzsignfolderSendreminderfrequency].
 class FieldEEzsignfolderSendreminderfrequencyTypeTransformer {
-  const FieldEEzsignfolderSendreminderfrequencyTypeTransformer._();
+  factory FieldEEzsignfolderSendreminderfrequencyTypeTransformer() => _instance ??= const FieldEEzsignfolderSendreminderfrequencyTypeTransformer._();
 
-  factory FieldEEzsignfolderSendreminderfrequencyTypeTransformer() => _instance ??= FieldEEzsignfolderSendreminderfrequencyTypeTransformer._();
+  const FieldEEzsignfolderSendreminderfrequencyTypeTransformer._();
 
   String encode(FieldEEzsignfolderSendreminderfrequency data) => data.value;
 
@@ -62,14 +61,16 @@ class FieldEEzsignfolderSendreminderfrequencyTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsignfolderSendreminderfrequency decode(dynamic data, {bool allowNull}) {
-    switch (data) {
-      case r'None': return FieldEEzsignfolderSendreminderfrequency.none;
-      case r'Daily': return FieldEEzsignfolderSendreminderfrequency.daily;
-      case r'Weekly': return FieldEEzsignfolderSendreminderfrequency.weekly;
-      default:
-        if (allowNull == false) {
-          throw ArgumentError('Unknown enum value to decode: $data');
-        }
+    if (data != null) {
+      switch (data.toString()) {
+        case r'None': return FieldEEzsignfolderSendreminderfrequency.none;
+        case r'Daily': return FieldEEzsignfolderSendreminderfrequency.daily;
+        case r'Weekly': return FieldEEzsignfolderSendreminderfrequency.weekly;
+        default:
+          if (allowNull == false) {
+            throw ArgumentError('Unknown enum value to decode: $data');
+          }
+      }
     }
     return null;
   }
@@ -77,3 +78,4 @@ class FieldEEzsignfolderSendreminderfrequencyTypeTransformer {
   /// Singleton [FieldEEzsignfolderSendreminderfrequencyTypeTransformer] instance.
   static FieldEEzsignfolderSendreminderfrequencyTypeTransformer _instance;
 }
+

@@ -14,7 +14,9 @@ Method | HTTP request | Description
 [**ezsigndocumentDeleteObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentdeleteobjectv1) | **DELETE** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Delete an existing Ezsigndocument
 [**ezsigndocumentGetChildrenV1**](ObjectEzsigndocumentApi.md#ezsigndocumentgetchildrenv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getChildren | Retrieve an existing Ezsigndocument's children IDs
 [**ezsigndocumentGetDownloadUrlV1**](ObjectEzsigndocumentApi.md#ezsigndocumentgetdownloadurlv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getDownloadUrl/{eDocumentType} | Retrieve a URL to download documents.
+[**ezsigndocumentGetFormDataV1**](ObjectEzsigndocumentApi.md#ezsigndocumentgetformdatav1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getFormData | Retrieve an existing Ezsigndocument's Form Data
 [**ezsigndocumentGetObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentgetobjectv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Retrieve an existing Ezsigndocument
+[**ezsigndocumentGetWordsPositionsV1**](ObjectEzsigndocumentApi.md#ezsigndocumentgetwordspositionsv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions | Retrieve positions X,Y of given words from a Ezsigndocument
 
 
 # **ezsigndocumentApplyEzsigntemplateV1**
@@ -24,7 +26,7 @@ Apply an Ezsign Template to the Ezsigndocument.
 
 This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
 // TODO Configure API key authorization: Authorization
@@ -36,7 +38,7 @@ final api_instance = ObjectEzsigndocumentApi();
 final pkiEzsigndocumentID = 56; // int | The unique ID of the Ezsigndocument
 final ezsigndocumentApplyEzsigntemplateV1Request = EzsigndocumentApplyEzsigntemplateV1Request(); // EzsigndocumentApplyEzsigntemplateV1Request | 
 
-try { 
+try {
     final result = api_instance.ezsigndocumentApplyEzsigntemplateV1(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV1Request);
     print(result);
 } catch (e) {
@@ -73,7 +75,7 @@ Create a new Ezsigndocument
 
 The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
 // TODO Configure API key authorization: Authorization
@@ -84,7 +86,7 @@ import 'package:openapi/api.dart';
 final api_instance = ObjectEzsigndocumentApi();
 final ezsigndocumentCreateObjectV1Request = [List<EzsigndocumentCreateObjectV1Request>()]; // List<EzsigndocumentCreateObjectV1Request> | 
 
-try { 
+try {
     final result = api_instance.ezsigndocumentCreateObjectV1(ezsigndocumentCreateObjectV1Request);
     print(result);
 } catch (e) {
@@ -118,7 +120,7 @@ Name | Type | Description  | Notes
 
 Delete an existing Ezsigndocument
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
 // TODO Configure API key authorization: Authorization
@@ -129,7 +131,7 @@ import 'package:openapi/api.dart';
 final api_instance = ObjectEzsigndocumentApi();
 final pkiEzsigndocumentID = 56; // int | The unique ID of the Ezsigndocument
 
-try { 
+try {
     final result = api_instance.ezsigndocumentDeleteObjectV1(pkiEzsigndocumentID);
     print(result);
 } catch (e) {
@@ -163,7 +165,9 @@ Name | Type | Description  | Notes
 
 Retrieve an existing Ezsigndocument's children IDs
 
-### Example 
+## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+
+### Example
 ```dart
 import 'package:openapi/api.dart';
 // TODO Configure API key authorization: Authorization
@@ -174,7 +178,7 @@ import 'package:openapi/api.dart';
 final api_instance = ObjectEzsigndocumentApi();
 final pkiEzsigndocumentID = 56; // int | The unique ID of the Ezsigndocument
 
-try { 
+try {
     api_instance.ezsigndocumentGetChildrenV1(pkiEzsigndocumentID);
 } catch (e) {
     print('Exception when calling ObjectEzsigndocumentApi->ezsigndocumentGetChildrenV1: $e\n');
@@ -209,7 +213,7 @@ Retrieve a URL to download documents.
 
 This endpoint returns URLs to different files that can be downloaded during the signing process.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
 // TODO Configure API key authorization: Authorization
@@ -221,7 +225,7 @@ final api_instance = ObjectEzsigndocumentApi();
 final pkiEzsigndocumentID = 56; // int | The unique ID of the Ezsigndocument
 final eDocumentType = eDocumentType_example; // String | The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **Signed** Is the final document once all signatures were applied. 3. **Proofdocument** Is the evidence report. 4. **Proof** Is the complete evidence archive including all of the above and more. 
 
-try { 
+try {
     final result = api_instance.ezsigndocumentGetDownloadUrlV1(pkiEzsigndocumentID, eDocumentType);
     print(result);
 } catch (e) {
@@ -251,12 +255,14 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **ezsigndocumentGetObjectV1**
-> EzsigndocumentGetObjectV1Response ezsigndocumentGetObjectV1(pkiEzsigndocumentID)
+# **ezsigndocumentGetFormDataV1**
+> MultipartFile ezsigndocumentGetFormDataV1(pkiEzsigndocumentID)
 
-Retrieve an existing Ezsigndocument
+Retrieve an existing Ezsigndocument's Form Data
 
-### Example 
+## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+
+### Example
 ```dart
 import 'package:openapi/api.dart';
 // TODO Configure API key authorization: Authorization
@@ -267,7 +273,54 @@ import 'package:openapi/api.dart';
 final api_instance = ObjectEzsigndocumentApi();
 final pkiEzsigndocumentID = 56; // int | The unique ID of the Ezsigndocument
 
-try { 
+try {
+    final result = api_instance.ezsigndocumentGetFormDataV1(pkiEzsigndocumentID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectEzsigndocumentApi->ezsigndocumentGetFormDataV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigndocumentID** | **int**| The unique ID of the Ezsigndocument | 
+
+### Return type
+
+[**MultipartFile**](MultipartFile.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/zip, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsigndocumentGetObjectV1**
+> EzsigndocumentGetObjectV1Response ezsigndocumentGetObjectV1(pkiEzsigndocumentID)
+
+Retrieve an existing Ezsigndocument
+
+## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectEzsigndocumentApi();
+final pkiEzsigndocumentID = 56; // int | The unique ID of the Ezsigndocument
+
+try {
     final result = api_instance.ezsigndocumentGetObjectV1(pkiEzsigndocumentID);
     print(result);
 } catch (e) {
@@ -292,6 +345,55 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsigndocumentGetWordsPositionsV1**
+> EzsigndocumentGetWordsPositionsV1Response ezsigndocumentGetWordsPositionsV1(pkiEzsigndocumentID, ezsigndocumentGetWordsPositionsV1Request)
+
+Retrieve positions X,Y of given words from a Ezsigndocument
+
+## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectEzsigndocumentApi();
+final pkiEzsigndocumentID = 56; // int | The unique ID of the Ezsigndocument
+final ezsigndocumentGetWordsPositionsV1Request = EzsigndocumentGetWordsPositionsV1Request(); // EzsigndocumentGetWordsPositionsV1Request | 
+
+try {
+    final result = api_instance.ezsigndocumentGetWordsPositionsV1(pkiEzsigndocumentID, ezsigndocumentGetWordsPositionsV1Request);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectEzsigndocumentApi->ezsigndocumentGetWordsPositionsV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigndocumentID** | **int**| The unique ID of the Ezsigndocument | 
+ **ezsigndocumentGetWordsPositionsV1Request** | [**EzsigndocumentGetWordsPositionsV1Request**](EzsigndocumentGetWordsPositionsV1Request.md)|  | 
+
+### Return type
+
+[**EzsigndocumentGetWordsPositionsV1Response**](EzsigndocumentGetWordsPositionsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 
 part of openapi.api;
@@ -68,6 +69,7 @@ class EzsignfolderGetObjectV1ResponseMPayload {
 
   @override
   int get hashCode =>
+  // ignore: unnecessary_parenthesis
     (fkiEzsignfoldertypeID == null ? 0 : fkiEzsignfoldertypeID.hashCode) +
     (fkiEzsigntsarequirementID == null ? 0 : fkiEzsigntsarequirementID.hashCode) +
     (sEzsignfolderDescription == null ? 0 : sEzsignfolderDescription.hashCode) +
@@ -98,42 +100,55 @@ class EzsignfolderGetObjectV1ResponseMPayload {
   }
 
   /// Returns a new [EzsignfolderGetObjectV1ResponseMPayload] instance and imports its values from
-  /// [json] if it's non-null, null if [json] is null.
-  static EzsignfolderGetObjectV1ResponseMPayload fromJson(Map<String, dynamic> json) => json == null
-    ? null
-    : EzsignfolderGetObjectV1ResponseMPayload(
-        fkiEzsignfoldertypeID: json[r'fkiEzsignfoldertypeID'],
-        fkiEzsigntsarequirementID: json[r'fkiEzsigntsarequirementID'],
-        sEzsignfolderDescription: json[r'sEzsignfolderDescription'],
-        tEzsignfolderNote: json[r'tEzsignfolderNote'],
+  /// [value] if it's a [Map], null otherwise.
+  // ignore: prefer_constructors_over_static_methods
+  static EzsignfolderGetObjectV1ResponseMPayload fromJson(dynamic value) {
+    if (value is Map) {
+      final json = value.cast<String, dynamic>();
+      return EzsignfolderGetObjectV1ResponseMPayload(
+        fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID'),
+        fkiEzsigntsarequirementID: mapValueOfType<int>(json, r'fkiEzsigntsarequirementID'),
+        sEzsignfolderDescription: mapValueOfType<String>(json, r'sEzsignfolderDescription'),
+        tEzsignfolderNote: mapValueOfType<String>(json, r'tEzsignfolderNote'),
         eEzsignfolderSendreminderfrequency: FieldEEzsignfolderSendreminderfrequency.fromJson(json[r'eEzsignfolderSendreminderfrequency']),
-        pkiEzsignfolderID: json[r'pkiEzsignfolderID'],
-        dtEzsignfolderSentdate: json[r'dtEzsignfolderSentdate'],
+        pkiEzsignfolderID: mapValueOfType<int>(json, r'pkiEzsignfolderID'),
+        dtEzsignfolderSentdate: mapValueOfType<String>(json, r'dtEzsignfolderSentdate'),
         eEzsignfolderStep: FieldEEzsignfolderStep.fromJson(json[r'eEzsignfolderStep']),
-        dtEzsignfolderClose: json[r'dtEzsignfolderClose'],
+        dtEzsignfolderClose: mapValueOfType<String>(json, r'dtEzsignfolderClose'),
         objAudit: CommonAudit.fromJson(json[r'objAudit']),
-    );
+      );
+    }
+    return null;
+  }
 
-  static List<EzsignfolderGetObjectV1ResponseMPayload> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <EzsignfolderGetObjectV1ResponseMPayload>[]
-      : json.map((v) => EzsignfolderGetObjectV1ResponseMPayload.fromJson(v)).toList(growable: true == growable);
+  static List<EzsignfolderGetObjectV1ResponseMPayload> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(EzsignfolderGetObjectV1ResponseMPayload.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <EzsignfolderGetObjectV1ResponseMPayload>[];
 
-  static Map<String, EzsignfolderGetObjectV1ResponseMPayload> mapFromJson(Map<String, dynamic> json) {
+  static Map<String, EzsignfolderGetObjectV1ResponseMPayload> mapFromJson(dynamic json) {
     final map = <String, EzsignfolderGetObjectV1ResponseMPayload>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) => map[key] = EzsignfolderGetObjectV1ResponseMPayload.fromJson(v));
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) => map[key] = EzsignfolderGetObjectV1ResponseMPayload.fromJson(value));
     }
     return map;
   }
 
   // maps a json object with a list of EzsignfolderGetObjectV1ResponseMPayload-objects as value to a dart map
-  static Map<String, List<EzsignfolderGetObjectV1ResponseMPayload>> mapListFromJson(Map<String, dynamic> json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<EzsignfolderGetObjectV1ResponseMPayload>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
     final map = <String, List<EzsignfolderGetObjectV1ResponseMPayload>>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) {
-        map[key] = EzsignfolderGetObjectV1ResponseMPayload.listFromJson(v, emptyIsNull: emptyIsNull, growable: growable);
-      });
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) {
+          map[key] = EzsignfolderGetObjectV1ResponseMPayload.listFromJson(
+            value,
+            emptyIsNull: emptyIsNull,
+            growable: growable,
+          );
+        });
     }
     return map;
   }

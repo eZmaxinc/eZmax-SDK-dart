@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 
 part of openapi.api;
@@ -34,6 +35,7 @@ class CommonGetAutocompleteV1ResponseMPayload {
 
   @override
   int get hashCode =>
+  // ignore: unnecessary_parenthesis
     (group == null ? 0 : group.hashCode) +
     (id == null ? 0 : id.hashCode) +
     (option == null ? 0 : option.hashCode);
@@ -50,35 +52,48 @@ class CommonGetAutocompleteV1ResponseMPayload {
   }
 
   /// Returns a new [CommonGetAutocompleteV1ResponseMPayload] instance and imports its values from
-  /// [json] if it's non-null, null if [json] is null.
-  static CommonGetAutocompleteV1ResponseMPayload fromJson(Map<String, dynamic> json) => json == null
-    ? null
-    : CommonGetAutocompleteV1ResponseMPayload(
-        group: json[r'group'],
-        id: json[r'id'],
-        option: json[r'option'],
-    );
+  /// [value] if it's a [Map], null otherwise.
+  // ignore: prefer_constructors_over_static_methods
+  static CommonGetAutocompleteV1ResponseMPayload fromJson(dynamic value) {
+    if (value is Map) {
+      final json = value.cast<String, dynamic>();
+      return CommonGetAutocompleteV1ResponseMPayload(
+        group: mapValueOfType<String>(json, r'group'),
+        id: mapValueOfType<String>(json, r'id'),
+        option: mapValueOfType<String>(json, r'option'),
+      );
+    }
+    return null;
+  }
 
-  static List<CommonGetAutocompleteV1ResponseMPayload> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <CommonGetAutocompleteV1ResponseMPayload>[]
-      : json.map((v) => CommonGetAutocompleteV1ResponseMPayload.fromJson(v)).toList(growable: true == growable);
+  static List<CommonGetAutocompleteV1ResponseMPayload> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(CommonGetAutocompleteV1ResponseMPayload.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <CommonGetAutocompleteV1ResponseMPayload>[];
 
-  static Map<String, CommonGetAutocompleteV1ResponseMPayload> mapFromJson(Map<String, dynamic> json) {
+  static Map<String, CommonGetAutocompleteV1ResponseMPayload> mapFromJson(dynamic json) {
     final map = <String, CommonGetAutocompleteV1ResponseMPayload>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) => map[key] = CommonGetAutocompleteV1ResponseMPayload.fromJson(v));
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) => map[key] = CommonGetAutocompleteV1ResponseMPayload.fromJson(value));
     }
     return map;
   }
 
   // maps a json object with a list of CommonGetAutocompleteV1ResponseMPayload-objects as value to a dart map
-  static Map<String, List<CommonGetAutocompleteV1ResponseMPayload>> mapListFromJson(Map<String, dynamic> json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<CommonGetAutocompleteV1ResponseMPayload>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
     final map = <String, List<CommonGetAutocompleteV1ResponseMPayload>>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) {
-        map[key] = CommonGetAutocompleteV1ResponseMPayload.listFromJson(v, emptyIsNull: emptyIsNull, growable: growable);
-      });
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) {
+          map[key] = CommonGetAutocompleteV1ResponseMPayload.listFromJson(
+            value,
+            emptyIsNull: emptyIsNull,
+            growable: growable,
+          );
+        });
     }
     return map;
   }

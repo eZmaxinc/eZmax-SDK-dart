@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 
 part of openapi.api;
@@ -24,6 +25,7 @@ class EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload {
 
   @override
   int get hashCode =>
+  // ignore: unnecessary_parenthesis
     (sLoginUrl == null ? 0 : sLoginUrl.hashCode);
 
   @override
@@ -36,33 +38,46 @@ class EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload {
   }
 
   /// Returns a new [EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload] instance and imports its values from
-  /// [json] if it's non-null, null if [json] is null.
-  static EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload fromJson(Map<String, dynamic> json) => json == null
-    ? null
-    : EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload(
-        sLoginUrl: json[r'sLoginUrl'],
-    );
+  /// [value] if it's a [Map], null otherwise.
+  // ignore: prefer_constructors_over_static_methods
+  static EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload fromJson(dynamic value) {
+    if (value is Map) {
+      final json = value.cast<String, dynamic>();
+      return EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload(
+        sLoginUrl: mapValueOfType<String>(json, r'sLoginUrl'),
+      );
+    }
+    return null;
+  }
 
-  static List<EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload>[]
-      : json.map((v) => EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload.fromJson(v)).toList(growable: true == growable);
+  static List<EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload>[];
 
-  static Map<String, EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload> mapFromJson(Map<String, dynamic> json) {
+  static Map<String, EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload> mapFromJson(dynamic json) {
     final map = <String, EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) => map[key] = EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload.fromJson(v));
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) => map[key] = EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload.fromJson(value));
     }
     return map;
   }
 
   // maps a json object with a list of EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload-objects as value to a dart map
-  static Map<String, List<EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload>> mapListFromJson(Map<String, dynamic> json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
     final map = <String, List<EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload>>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) {
-        map[key] = EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload.listFromJson(v, emptyIsNull: emptyIsNull, growable: growable);
-      });
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) {
+          map[key] = EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload.listFromJson(
+            value,
+            emptyIsNull: emptyIsNull,
+            growable: growable,
+          );
+        });
     }
     return map;
   }

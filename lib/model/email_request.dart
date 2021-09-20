@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 
 part of openapi.api;
@@ -29,6 +30,7 @@ class EmailRequest {
 
   @override
   int get hashCode =>
+  // ignore: unnecessary_parenthesis
     (fkiEmailtypeID == null ? 0 : fkiEmailtypeID.hashCode) +
     (sEmailAddress == null ? 0 : sEmailAddress.hashCode);
 
@@ -43,34 +45,47 @@ class EmailRequest {
   }
 
   /// Returns a new [EmailRequest] instance and imports its values from
-  /// [json] if it's non-null, null if [json] is null.
-  static EmailRequest fromJson(Map<String, dynamic> json) => json == null
-    ? null
-    : EmailRequest(
-        fkiEmailtypeID: json[r'fkiEmailtypeID'],
-        sEmailAddress: json[r'sEmailAddress'],
-    );
+  /// [value] if it's a [Map], null otherwise.
+  // ignore: prefer_constructors_over_static_methods
+  static EmailRequest fromJson(dynamic value) {
+    if (value is Map) {
+      final json = value.cast<String, dynamic>();
+      return EmailRequest(
+        fkiEmailtypeID: mapValueOfType<int>(json, r'fkiEmailtypeID'),
+        sEmailAddress: mapValueOfType<String>(json, r'sEmailAddress'),
+      );
+    }
+    return null;
+  }
 
-  static List<EmailRequest> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <EmailRequest>[]
-      : json.map((v) => EmailRequest.fromJson(v)).toList(growable: true == growable);
+  static List<EmailRequest> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(EmailRequest.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <EmailRequest>[];
 
-  static Map<String, EmailRequest> mapFromJson(Map<String, dynamic> json) {
+  static Map<String, EmailRequest> mapFromJson(dynamic json) {
     final map = <String, EmailRequest>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) => map[key] = EmailRequest.fromJson(v));
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) => map[key] = EmailRequest.fromJson(value));
     }
     return map;
   }
 
   // maps a json object with a list of EmailRequest-objects as value to a dart map
-  static Map<String, List<EmailRequest>> mapListFromJson(Map<String, dynamic> json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<EmailRequest>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
     final map = <String, List<EmailRequest>>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) {
-        map[key] = EmailRequest.listFromJson(v, emptyIsNull: emptyIsNull, growable: growable);
-      });
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) {
+          map[key] = EmailRequest.listFromJson(
+            value,
+            emptyIsNull: emptyIsNull,
+            growable: growable,
+          );
+        });
     }
     return map;
   }

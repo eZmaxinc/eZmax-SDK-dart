@@ -24,7 +24,7 @@ Reset Password Request
 
 This endpoint sends an email with a link to reset the user's password.  sEmailAddress must be set if eUserTypeSSPR = EzsignUser  sUserLoginname must be set if eUserTypeSSPR = Native
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
 // TODO Configure API key authorization: Authorization
@@ -35,7 +35,7 @@ import 'package:openapi/api.dart';
 final api_instance = ModuleSsprApi();
 final ssprResetPasswordRequestV1Request = SsprResetPasswordRequestV1Request(); // SsprResetPasswordRequestV1Request | 
 
-try { 
+try {
     api_instance.ssprResetPasswordRequestV1(ssprResetPasswordRequestV1Request);
 } catch (e) {
     print('Exception when calling ModuleSsprApi->ssprResetPasswordRequestV1: $e\n');
@@ -70,7 +70,7 @@ Reset Password
 
 This endpoint resets the user's password.  sEmailAddress must be set if eUserTypeSSPR = EzsignUser  sUserLoginname must be set if eUserTypeSSPR = Native
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
 // TODO Configure API key authorization: Authorization
@@ -81,7 +81,7 @@ import 'package:openapi/api.dart';
 final api_instance = ModuleSsprApi();
 final ssprResetPasswordV1Request = SsprResetPasswordV1Request(); // SsprResetPasswordV1Request | 
 
-try { 
+try {
     api_instance.ssprResetPasswordV1(ssprResetPasswordV1Request);
 } catch (e) {
     print('Exception when calling ModuleSsprApi->ssprResetPasswordV1: $e\n');
@@ -116,7 +116,7 @@ Send username(s)
 
 This endpoint returns an email with the username(s) matching the email address provided in case of forgotten username
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
 // TODO Configure API key authorization: Authorization
@@ -127,7 +127,7 @@ import 'package:openapi/api.dart';
 final api_instance = ModuleSsprApi();
 final ssprSendUsernamesV1Request = SsprSendUsernamesV1Request(); // SsprSendUsernamesV1Request | 
 
-try { 
+try {
     api_instance.ssprSendUsernamesV1(ssprSendUsernamesV1Request);
 } catch (e) {
     print('Exception when calling ModuleSsprApi->ssprSendUsernamesV1: $e\n');
@@ -162,7 +162,7 @@ Unlock Account Request
 
 This endpoint sends an email with a link to unlock the user account.  sEmailAddress must be set if eUserTypeSSPR = EzsignUser  sUserLoginname must be set if eUserTypeSSPR = Native
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
 // TODO Configure API key authorization: Authorization
@@ -173,7 +173,7 @@ import 'package:openapi/api.dart';
 final api_instance = ModuleSsprApi();
 final ssprUnlockAccountRequestV1Request = SsprUnlockAccountRequestV1Request(); // SsprUnlockAccountRequestV1Request | 
 
-try { 
+try {
     api_instance.ssprUnlockAccountRequestV1(ssprUnlockAccountRequestV1Request);
 } catch (e) {
     print('Exception when calling ModuleSsprApi->ssprUnlockAccountRequestV1: $e\n');
@@ -208,7 +208,7 @@ Unlock Account
 
 This endpoint unlocks the user account.  sEmailAddress must be set if eUserTypeSSPR = EzsignUser  sUserLoginname must be set if eUserTypeSSPR = Native
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
 // TODO Configure API key authorization: Authorization
@@ -219,7 +219,7 @@ import 'package:openapi/api.dart';
 final api_instance = ModuleSsprApi();
 final ssprUnlockAccountV1Request = SsprUnlockAccountV1Request(); // SsprUnlockAccountV1Request | 
 
-try { 
+try {
     api_instance.ssprUnlockAccountV1(ssprUnlockAccountV1Request);
 } catch (e) {
     print('Exception when calling ModuleSsprApi->ssprUnlockAccountV1: $e\n');
@@ -254,7 +254,7 @@ Validate Token
 
 This endpoint validates if a Token is valid and not expired.  sEmailAddress must be set if eUserTypeSSPR = EzsignUser  sUserLoginname must be set if eUserTypeSSPR = Native
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
 // TODO Configure API key authorization: Authorization
@@ -265,7 +265,7 @@ import 'package:openapi/api.dart';
 final api_instance = ModuleSsprApi();
 final ssprValidateTokenV1Request = SsprValidateTokenV1Request(); // SsprValidateTokenV1Request | 
 
-try { 
+try {
     api_instance.ssprValidateTokenV1(ssprValidateTokenV1Request);
 } catch (e) {
     print('Exception when calling ModuleSsprApi->ssprValidateTokenV1: $e\n');

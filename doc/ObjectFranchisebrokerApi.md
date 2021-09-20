@@ -19,7 +19,7 @@ Retrieve Franchisebrokers and IDs
 
 Get the list of Franchisebrokers to be used in a dropdown or autocomplete control.
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
 // TODO Configure API key authorization: Authorization
@@ -31,7 +31,7 @@ final api_instance = ObjectFranchisebrokerApi();
 final sSelector = sSelector_example; // String | The type of Franchisebrokers to return
 final sQuery = sQuery_example; // String | Allow to filter on the option value
 
-try { 
+try {
     final result = api_instance.franchisebrokerGetAutocompleteV1(sSelector, sQuery);
     print(result);
 } catch (e) {

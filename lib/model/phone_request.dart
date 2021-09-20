@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 
 part of openapi.api;
@@ -53,6 +54,7 @@ class PhoneRequest {
 
   @override
   int get hashCode =>
+  // ignore: unnecessary_parenthesis
     (fkiPhonetypeID == null ? 0 : fkiPhonetypeID.hashCode) +
     (ePhoneType == null ? 0 : ePhoneType.hashCode) +
     (sPhoneRegion == null ? 0 : sPhoneRegion.hashCode) +
@@ -87,39 +89,52 @@ class PhoneRequest {
   }
 
   /// Returns a new [PhoneRequest] instance and imports its values from
-  /// [json] if it's non-null, null if [json] is null.
-  static PhoneRequest fromJson(Map<String, dynamic> json) => json == null
-    ? null
-    : PhoneRequest(
-        fkiPhonetypeID: json[r'fkiPhonetypeID'],
+  /// [value] if it's a [Map], null otherwise.
+  // ignore: prefer_constructors_over_static_methods
+  static PhoneRequest fromJson(dynamic value) {
+    if (value is Map) {
+      final json = value.cast<String, dynamic>();
+      return PhoneRequest(
+        fkiPhonetypeID: mapValueOfType<int>(json, r'fkiPhonetypeID'),
         ePhoneType: FieldEPhoneType.fromJson(json[r'ePhoneType']),
-        sPhoneRegion: json[r'sPhoneRegion'],
-        sPhoneExchange: json[r'sPhoneExchange'],
-        sPhoneNumber: json[r'sPhoneNumber'],
-        sPhoneInternational: json[r'sPhoneInternational'],
-        sPhoneExtension: json[r'sPhoneExtension'],
-    );
+        sPhoneRegion: mapValueOfType<String>(json, r'sPhoneRegion'),
+        sPhoneExchange: mapValueOfType<String>(json, r'sPhoneExchange'),
+        sPhoneNumber: mapValueOfType<String>(json, r'sPhoneNumber'),
+        sPhoneInternational: mapValueOfType<String>(json, r'sPhoneInternational'),
+        sPhoneExtension: mapValueOfType<String>(json, r'sPhoneExtension'),
+      );
+    }
+    return null;
+  }
 
-  static List<PhoneRequest> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <PhoneRequest>[]
-      : json.map((v) => PhoneRequest.fromJson(v)).toList(growable: true == growable);
+  static List<PhoneRequest> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(PhoneRequest.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <PhoneRequest>[];
 
-  static Map<String, PhoneRequest> mapFromJson(Map<String, dynamic> json) {
+  static Map<String, PhoneRequest> mapFromJson(dynamic json) {
     final map = <String, PhoneRequest>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) => map[key] = PhoneRequest.fromJson(v));
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) => map[key] = PhoneRequest.fromJson(value));
     }
     return map;
   }
 
   // maps a json object with a list of PhoneRequest-objects as value to a dart map
-  static Map<String, List<PhoneRequest>> mapListFromJson(Map<String, dynamic> json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<PhoneRequest>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
     final map = <String, List<PhoneRequest>>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) {
-        map[key] = PhoneRequest.listFromJson(v, emptyIsNull: emptyIsNull, growable: growable);
-      });
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) {
+          map[key] = PhoneRequest.listFromJson(
+            value,
+            emptyIsNull: emptyIsNull,
+            growable: growable,
+          );
+        });
     }
     return map;
   }

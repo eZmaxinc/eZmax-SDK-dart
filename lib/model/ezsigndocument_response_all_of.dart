@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 
 part of openapi.api;
@@ -94,6 +95,7 @@ class EzsigndocumentResponseAllOf {
 
   @override
   int get hashCode =>
+  // ignore: unnecessary_parenthesis
     (fkiEzsignfolderID == null ? 0 : fkiEzsignfolderID.hashCode) +
     (dtEzsigndocumentDuedate == null ? 0 : dtEzsigndocumentDuedate.hashCode) +
     (fkiLanguageID == null ? 0 : fkiLanguageID.hashCode) +
@@ -134,47 +136,60 @@ class EzsigndocumentResponseAllOf {
   }
 
   /// Returns a new [EzsigndocumentResponseAllOf] instance and imports its values from
-  /// [json] if it's non-null, null if [json] is null.
-  static EzsigndocumentResponseAllOf fromJson(Map<String, dynamic> json) => json == null
-    ? null
-    : EzsigndocumentResponseAllOf(
-        fkiEzsignfolderID: json[r'fkiEzsignfolderID'],
-        dtEzsigndocumentDuedate: json[r'dtEzsigndocumentDuedate'],
-        fkiLanguageID: json[r'fkiLanguageID'],
-        sEzsigndocumentName: json[r'sEzsigndocumentName'],
-        pkiEzsigndocumentID: json[r'pkiEzsigndocumentID'],
+  /// [value] if it's a [Map], null otherwise.
+  // ignore: prefer_constructors_over_static_methods
+  static EzsigndocumentResponseAllOf fromJson(dynamic value) {
+    if (value is Map) {
+      final json = value.cast<String, dynamic>();
+      return EzsigndocumentResponseAllOf(
+        fkiEzsignfolderID: mapValueOfType<int>(json, r'fkiEzsignfolderID'),
+        dtEzsigndocumentDuedate: mapValueOfType<String>(json, r'dtEzsigndocumentDuedate'),
+        fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID'),
+        sEzsigndocumentName: mapValueOfType<String>(json, r'sEzsigndocumentName'),
+        pkiEzsigndocumentID: mapValueOfType<int>(json, r'pkiEzsigndocumentID'),
         eEzsigndocumentStep: FieldEEzsigndocumentStep.fromJson(json[r'eEzsigndocumentStep']),
-        dtEzsigndocumentFirstsend: json[r'dtEzsigndocumentFirstsend'],
-        dtEzsigndocumentLastsend: json[r'dtEzsigndocumentLastsend'],
-        iEzsigndocumentOrder: json[r'iEzsigndocumentOrder'],
-        iEzsigndocumentPagetotal: json[r'iEzsigndocumentPagetotal'],
-        iEzsigndocumentSignaturesigned: json[r'iEzsigndocumentSignaturesigned'],
-        iEzsigndocumentSignaturetotal: json[r'iEzsigndocumentSignaturetotal'],
-        sEzsigndocumentMD5initial: json[r'sEzsigndocumentMD5initial'],
-        sEzsigndocumentMD5signed: json[r'sEzsigndocumentMD5signed'],
+        dtEzsigndocumentFirstsend: mapValueOfType<String>(json, r'dtEzsigndocumentFirstsend'),
+        dtEzsigndocumentLastsend: mapValueOfType<String>(json, r'dtEzsigndocumentLastsend'),
+        iEzsigndocumentOrder: mapValueOfType<int>(json, r'iEzsigndocumentOrder'),
+        iEzsigndocumentPagetotal: mapValueOfType<int>(json, r'iEzsigndocumentPagetotal'),
+        iEzsigndocumentSignaturesigned: mapValueOfType<int>(json, r'iEzsigndocumentSignaturesigned'),
+        iEzsigndocumentSignaturetotal: mapValueOfType<int>(json, r'iEzsigndocumentSignaturetotal'),
+        sEzsigndocumentMD5initial: mapValueOfType<String>(json, r'sEzsigndocumentMD5initial'),
+        sEzsigndocumentMD5signed: mapValueOfType<String>(json, r'sEzsigndocumentMD5signed'),
         objAudit: CommonAudit.fromJson(json[r'objAudit']),
-    );
+      );
+    }
+    return null;
+  }
 
-  static List<EzsigndocumentResponseAllOf> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <EzsigndocumentResponseAllOf>[]
-      : json.map((v) => EzsigndocumentResponseAllOf.fromJson(v)).toList(growable: true == growable);
+  static List<EzsigndocumentResponseAllOf> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(EzsigndocumentResponseAllOf.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <EzsigndocumentResponseAllOf>[];
 
-  static Map<String, EzsigndocumentResponseAllOf> mapFromJson(Map<String, dynamic> json) {
+  static Map<String, EzsigndocumentResponseAllOf> mapFromJson(dynamic json) {
     final map = <String, EzsigndocumentResponseAllOf>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) => map[key] = EzsigndocumentResponseAllOf.fromJson(v));
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) => map[key] = EzsigndocumentResponseAllOf.fromJson(value));
     }
     return map;
   }
 
   // maps a json object with a list of EzsigndocumentResponseAllOf-objects as value to a dart map
-  static Map<String, List<EzsigndocumentResponseAllOf>> mapListFromJson(Map<String, dynamic> json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<EzsigndocumentResponseAllOf>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
     final map = <String, List<EzsigndocumentResponseAllOf>>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) {
-        map[key] = EzsigndocumentResponseAllOf.listFromJson(v, emptyIsNull: emptyIsNull, growable: growable);
-      });
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) {
+          map[key] = EzsigndocumentResponseAllOf.listFromJson(
+            value,
+            emptyIsNull: emptyIsNull,
+            growable: growable,
+          );
+        });
     }
     return map;
   }

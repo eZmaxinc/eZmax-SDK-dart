@@ -23,7 +23,7 @@ Create a new Ezsignfolder
 
 The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
 // TODO Configure API key authorization: Authorization
@@ -34,7 +34,7 @@ import 'package:openapi/api.dart';
 final api_instance = ObjectEzsignfolderApi();
 final ezsignfolderCreateObjectV1Request = [List<EzsignfolderCreateObjectV1Request>()]; // List<EzsignfolderCreateObjectV1Request> | 
 
-try { 
+try {
     final result = api_instance.ezsignfolderCreateObjectV1(ezsignfolderCreateObjectV1Request);
     print(result);
 } catch (e) {
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 
 Delete an existing Ezsignfolder
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
 // TODO Configure API key authorization: Authorization
@@ -79,7 +79,7 @@ import 'package:openapi/api.dart';
 final api_instance = ObjectEzsignfolderApi();
 final pkiEzsignfolderID = 56; // int | The unique ID of the Ezsignfolder
 
-try { 
+try {
     final result = api_instance.ezsignfolderDeleteObjectV1(pkiEzsignfolderID);
     print(result);
 } catch (e) {
@@ -113,7 +113,9 @@ Name | Type | Description  | Notes
 
 Retrieve an existing Ezsignfolder's children IDs
 
-### Example 
+## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+
+### Example
 ```dart
 import 'package:openapi/api.dart';
 // TODO Configure API key authorization: Authorization
@@ -124,7 +126,7 @@ import 'package:openapi/api.dart';
 final api_instance = ObjectEzsignfolderApi();
 final pkiEzsignfolderID = 56; // int | The unique ID of the Ezsignfolder
 
-try { 
+try {
     api_instance.ezsignfolderGetChildrenV1(pkiEzsignfolderID);
 } catch (e) {
     print('Exception when calling ObjectEzsignfolderApi->ezsignfolderGetChildrenV1: $e\n');
@@ -157,7 +159,9 @@ void (empty response body)
 
 Retrieve an existing Ezsignfolder
 
-### Example 
+## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+
+### Example
 ```dart
 import 'package:openapi/api.dart';
 // TODO Configure API key authorization: Authorization
@@ -168,7 +172,7 @@ import 'package:openapi/api.dart';
 final api_instance = ObjectEzsignfolderApi();
 final pkiEzsignfolderID = 56; // int | The unique ID of the Ezsignfolder
 
-try { 
+try {
     final result = api_instance.ezsignfolderGetObjectV1(pkiEzsignfolderID);
     print(result);
 } catch (e) {
@@ -202,7 +206,7 @@ Name | Type | Description  | Notes
 
 Send the Ezsignfolder to the signatories for signature
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
 // TODO Configure API key authorization: Authorization
@@ -214,7 +218,7 @@ final api_instance = ObjectEzsignfolderApi();
 final pkiEzsignfolderID = 56; // int | The unique ID of the Ezsignfolder
 final ezsignfolderSendV1Request = EzsignfolderSendV1Request(); // EzsignfolderSendV1Request | 
 
-try { 
+try {
     final result = api_instance.ezsignfolderSendV1(pkiEzsignfolderID, ezsignfolderSendV1Request);
     print(result);
 } catch (e) {

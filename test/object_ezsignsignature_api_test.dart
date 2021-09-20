@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 
 import 'package:openapi/api.dart';
@@ -34,12 +35,16 @@ void main() {
 
     // Retrieve an existing Ezsignsignature's children IDs
     //
+    // ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+    //
     //Future ezsignsignatureGetChildrenV1(int pkiEzsignsignatureID) async
     test('test ezsignsignatureGetChildrenV1', () async {
       // TODO
     });
 
     // Retrieve an existing Ezsignsignature
+    //
+    // ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
     //
     //Future<EzsignsignatureGetObjectV1Response> ezsignsignatureGetObjectV1(int pkiEzsignsignatureID) async
     test('test ezsignsignatureGetObjectV1', () async {

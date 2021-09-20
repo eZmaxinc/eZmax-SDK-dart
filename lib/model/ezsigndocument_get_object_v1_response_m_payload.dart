@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 
 part of openapi.api;
@@ -94,6 +95,7 @@ class EzsigndocumentGetObjectV1ResponseMPayload {
 
   @override
   int get hashCode =>
+  // ignore: unnecessary_parenthesis
     (fkiEzsignfolderID == null ? 0 : fkiEzsignfolderID.hashCode) +
     (dtEzsigndocumentDuedate == null ? 0 : dtEzsigndocumentDuedate.hashCode) +
     (fkiLanguageID == null ? 0 : fkiLanguageID.hashCode) +
@@ -134,47 +136,60 @@ class EzsigndocumentGetObjectV1ResponseMPayload {
   }
 
   /// Returns a new [EzsigndocumentGetObjectV1ResponseMPayload] instance and imports its values from
-  /// [json] if it's non-null, null if [json] is null.
-  static EzsigndocumentGetObjectV1ResponseMPayload fromJson(Map<String, dynamic> json) => json == null
-    ? null
-    : EzsigndocumentGetObjectV1ResponseMPayload(
-        fkiEzsignfolderID: json[r'fkiEzsignfolderID'],
-        dtEzsigndocumentDuedate: json[r'dtEzsigndocumentDuedate'],
-        fkiLanguageID: json[r'fkiLanguageID'],
-        sEzsigndocumentName: json[r'sEzsigndocumentName'],
-        pkiEzsigndocumentID: json[r'pkiEzsigndocumentID'],
+  /// [value] if it's a [Map], null otherwise.
+  // ignore: prefer_constructors_over_static_methods
+  static EzsigndocumentGetObjectV1ResponseMPayload fromJson(dynamic value) {
+    if (value is Map) {
+      final json = value.cast<String, dynamic>();
+      return EzsigndocumentGetObjectV1ResponseMPayload(
+        fkiEzsignfolderID: mapValueOfType<int>(json, r'fkiEzsignfolderID'),
+        dtEzsigndocumentDuedate: mapValueOfType<String>(json, r'dtEzsigndocumentDuedate'),
+        fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID'),
+        sEzsigndocumentName: mapValueOfType<String>(json, r'sEzsigndocumentName'),
+        pkiEzsigndocumentID: mapValueOfType<int>(json, r'pkiEzsigndocumentID'),
         eEzsigndocumentStep: FieldEEzsigndocumentStep.fromJson(json[r'eEzsigndocumentStep']),
-        dtEzsigndocumentFirstsend: json[r'dtEzsigndocumentFirstsend'],
-        dtEzsigndocumentLastsend: json[r'dtEzsigndocumentLastsend'],
-        iEzsigndocumentOrder: json[r'iEzsigndocumentOrder'],
-        iEzsigndocumentPagetotal: json[r'iEzsigndocumentPagetotal'],
-        iEzsigndocumentSignaturesigned: json[r'iEzsigndocumentSignaturesigned'],
-        iEzsigndocumentSignaturetotal: json[r'iEzsigndocumentSignaturetotal'],
-        sEzsigndocumentMD5initial: json[r'sEzsigndocumentMD5initial'],
-        sEzsigndocumentMD5signed: json[r'sEzsigndocumentMD5signed'],
+        dtEzsigndocumentFirstsend: mapValueOfType<String>(json, r'dtEzsigndocumentFirstsend'),
+        dtEzsigndocumentLastsend: mapValueOfType<String>(json, r'dtEzsigndocumentLastsend'),
+        iEzsigndocumentOrder: mapValueOfType<int>(json, r'iEzsigndocumentOrder'),
+        iEzsigndocumentPagetotal: mapValueOfType<int>(json, r'iEzsigndocumentPagetotal'),
+        iEzsigndocumentSignaturesigned: mapValueOfType<int>(json, r'iEzsigndocumentSignaturesigned'),
+        iEzsigndocumentSignaturetotal: mapValueOfType<int>(json, r'iEzsigndocumentSignaturetotal'),
+        sEzsigndocumentMD5initial: mapValueOfType<String>(json, r'sEzsigndocumentMD5initial'),
+        sEzsigndocumentMD5signed: mapValueOfType<String>(json, r'sEzsigndocumentMD5signed'),
         objAudit: CommonAudit.fromJson(json[r'objAudit']),
-    );
+      );
+    }
+    return null;
+  }
 
-  static List<EzsigndocumentGetObjectV1ResponseMPayload> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <EzsigndocumentGetObjectV1ResponseMPayload>[]
-      : json.map((v) => EzsigndocumentGetObjectV1ResponseMPayload.fromJson(v)).toList(growable: true == growable);
+  static List<EzsigndocumentGetObjectV1ResponseMPayload> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(EzsigndocumentGetObjectV1ResponseMPayload.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <EzsigndocumentGetObjectV1ResponseMPayload>[];
 
-  static Map<String, EzsigndocumentGetObjectV1ResponseMPayload> mapFromJson(Map<String, dynamic> json) {
+  static Map<String, EzsigndocumentGetObjectV1ResponseMPayload> mapFromJson(dynamic json) {
     final map = <String, EzsigndocumentGetObjectV1ResponseMPayload>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) => map[key] = EzsigndocumentGetObjectV1ResponseMPayload.fromJson(v));
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) => map[key] = EzsigndocumentGetObjectV1ResponseMPayload.fromJson(value));
     }
     return map;
   }
 
   // maps a json object with a list of EzsigndocumentGetObjectV1ResponseMPayload-objects as value to a dart map
-  static Map<String, List<EzsigndocumentGetObjectV1ResponseMPayload>> mapListFromJson(Map<String, dynamic> json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<EzsigndocumentGetObjectV1ResponseMPayload>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
     final map = <String, List<EzsigndocumentGetObjectV1ResponseMPayload>>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) {
-        map[key] = EzsigndocumentGetObjectV1ResponseMPayload.listFromJson(v, emptyIsNull: emptyIsNull, growable: growable);
-      });
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) {
+          map[key] = EzsigndocumentGetObjectV1ResponseMPayload.listFromJson(
+            value,
+            emptyIsNull: emptyIsNull,
+            growable: growable,
+          );
+        });
     }
     return map;
   }

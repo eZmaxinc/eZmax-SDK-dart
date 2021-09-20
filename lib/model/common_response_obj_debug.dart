@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 
 part of openapi.api;
@@ -44,6 +45,7 @@ class CommonResponseObjDebug {
 
   @override
   int get hashCode =>
+  // ignore: unnecessary_parenthesis
     (sMemoryUsage == null ? 0 : sMemoryUsage.hashCode) +
     (sRunTime == null ? 0 : sRunTime.hashCode) +
     (iSQLSelects == null ? 0 : iSQLSelects.hashCode) +
@@ -64,37 +66,50 @@ class CommonResponseObjDebug {
   }
 
   /// Returns a new [CommonResponseObjDebug] instance and imports its values from
-  /// [json] if it's non-null, null if [json] is null.
-  static CommonResponseObjDebug fromJson(Map<String, dynamic> json) => json == null
-    ? null
-    : CommonResponseObjDebug(
-        sMemoryUsage: json[r'sMemoryUsage'],
-        sRunTime: json[r'sRunTime'],
-        iSQLSelects: json[r'iSQLSelects'],
-        iSQLQueries: json[r'iSQLQueries'],
+  /// [value] if it's a [Map], null otherwise.
+  // ignore: prefer_constructors_over_static_methods
+  static CommonResponseObjDebug fromJson(dynamic value) {
+    if (value is Map) {
+      final json = value.cast<String, dynamic>();
+      return CommonResponseObjDebug(
+        sMemoryUsage: mapValueOfType<String>(json, r'sMemoryUsage'),
+        sRunTime: mapValueOfType<String>(json, r'sRunTime'),
+        iSQLSelects: mapValueOfType<int>(json, r'iSQLSelects'),
+        iSQLQueries: mapValueOfType<int>(json, r'iSQLQueries'),
         aObjSQLQuery: CommonResponseObjSQLQuery.listFromJson(json[r'a_objSQLQuery']),
-    );
+      );
+    }
+    return null;
+  }
 
-  static List<CommonResponseObjDebug> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <CommonResponseObjDebug>[]
-      : json.map((v) => CommonResponseObjDebug.fromJson(v)).toList(growable: true == growable);
+  static List<CommonResponseObjDebug> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(CommonResponseObjDebug.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <CommonResponseObjDebug>[];
 
-  static Map<String, CommonResponseObjDebug> mapFromJson(Map<String, dynamic> json) {
+  static Map<String, CommonResponseObjDebug> mapFromJson(dynamic json) {
     final map = <String, CommonResponseObjDebug>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) => map[key] = CommonResponseObjDebug.fromJson(v));
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) => map[key] = CommonResponseObjDebug.fromJson(value));
     }
     return map;
   }
 
   // maps a json object with a list of CommonResponseObjDebug-objects as value to a dart map
-  static Map<String, List<CommonResponseObjDebug>> mapListFromJson(Map<String, dynamic> json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<CommonResponseObjDebug>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
     final map = <String, List<CommonResponseObjDebug>>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) {
-        map[key] = CommonResponseObjDebug.listFromJson(v, emptyIsNull: emptyIsNull, growable: growable);
-      });
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) {
+          map[key] = CommonResponseObjDebug.listFromJson(
+            value,
+            emptyIsNull: emptyIsNull,
+            growable: growable,
+          );
+        });
     }
     return map;
   }

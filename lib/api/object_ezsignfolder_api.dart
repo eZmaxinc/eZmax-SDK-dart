@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 
 part of openapi.api;
@@ -24,33 +25,34 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [List<EzsignfolderCreateObjectV1Request>] ezsignfolderCreateObjectV1Request (required):
-  Future<Response> ezsignfolderCreateObjectV1WithHttpInfo(List<EzsignfolderCreateObjectV1Request> ezsignfolderCreateObjectV1Request) async {
+  Future<Response> ezsignfolderCreateObjectV1WithHttpInfo(List<EzsignfolderCreateObjectV1Request> ezsignfolderCreateObjectV1Request,) async {
     // Verify required params are set.
     if (ezsignfolderCreateObjectV1Request == null) {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: ezsignfolderCreateObjectV1Request');
     }
 
+    // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfolder';
 
+    // ignore: prefer_final_locals
     Object postBody = ezsignfolderCreateObjectV1Request;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    final contentTypes = <String>['application/json'];
-    final nullableContentType = contentTypes.isNotEmpty ? contentTypes[0] : null;
-    final authNames = <String>['Authorization'];
+    const authNames = <String>['Authorization'];
+    const contentTypes = <String>['application/json'];
 
 
-    return await apiClient.invokeAPI(
+    return apiClient.invokeAPI(
       path,
       'POST',
       queryParams,
       postBody,
       headerParams,
       formParams,
-      nullableContentType,
+      contentTypes.isEmpty ? null : contentTypes[0],
       authNames,
     );
   }
@@ -62,8 +64,8 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [List<EzsignfolderCreateObjectV1Request>] ezsignfolderCreateObjectV1Request (required):
-  Future<EzsignfolderCreateObjectV1Response> ezsignfolderCreateObjectV1(List<EzsignfolderCreateObjectV1Request> ezsignfolderCreateObjectV1Request) async {
-    final response = await ezsignfolderCreateObjectV1WithHttpInfo(ezsignfolderCreateObjectV1Request);
+  Future<EzsignfolderCreateObjectV1Response> ezsignfolderCreateObjectV1(List<EzsignfolderCreateObjectV1Request> ezsignfolderCreateObjectV1Request,) async {
+    final response = await ezsignfolderCreateObjectV1WithHttpInfo(ezsignfolderCreateObjectV1Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -73,7 +75,7 @@ class ObjectEzsignfolderApi {
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderCreateObjectV1Response',) as EzsignfolderCreateObjectV1Response;
         }
-    return Future<EzsignfolderCreateObjectV1Response>.value(null);
+    return Future<EzsignfolderCreateObjectV1Response>.value();
   }
 
   /// Delete an existing Ezsignfolder
@@ -84,34 +86,35 @@ class ObjectEzsignfolderApi {
   ///
   /// * [int] pkiEzsignfolderID (required):
   ///   The unique ID of the Ezsignfolder
-  Future<Response> ezsignfolderDeleteObjectV1WithHttpInfo(int pkiEzsignfolderID) async {
+  Future<Response> ezsignfolderDeleteObjectV1WithHttpInfo(int pkiEzsignfolderID,) async {
     // Verify required params are set.
     if (pkiEzsignfolderID == null) {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsignfolderID');
     }
 
+    // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}'
-      .replaceAll('{' + 'pkiEzsignfolderID' + '}', pkiEzsignfolderID.toString());
+      .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
 
+    // ignore: prefer_final_locals
     Object postBody;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    final contentTypes = <String>[];
-    final nullableContentType = contentTypes.isNotEmpty ? contentTypes[0] : null;
-    final authNames = <String>['Authorization'];
+    const authNames = <String>['Authorization'];
+    const contentTypes = <String>[];
 
 
-    return await apiClient.invokeAPI(
+    return apiClient.invokeAPI(
       path,
       'DELETE',
       queryParams,
       postBody,
       headerParams,
       formParams,
-      nullableContentType,
+      contentTypes.isEmpty ? null : contentTypes[0],
       authNames,
     );
   }
@@ -122,8 +125,8 @@ class ObjectEzsignfolderApi {
   ///
   /// * [int] pkiEzsignfolderID (required):
   ///   The unique ID of the Ezsignfolder
-  Future<EzsignfolderDeleteObjectV1Response> ezsignfolderDeleteObjectV1(int pkiEzsignfolderID) async {
-    final response = await ezsignfolderDeleteObjectV1WithHttpInfo(pkiEzsignfolderID);
+  Future<EzsignfolderDeleteObjectV1Response> ezsignfolderDeleteObjectV1(int pkiEzsignfolderID,) async {
+    final response = await ezsignfolderDeleteObjectV1WithHttpInfo(pkiEzsignfolderID,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -133,10 +136,12 @@ class ObjectEzsignfolderApi {
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderDeleteObjectV1Response',) as EzsignfolderDeleteObjectV1Response;
         }
-    return Future<EzsignfolderDeleteObjectV1Response>.value(null);
+    return Future<EzsignfolderDeleteObjectV1Response>.value();
   }
 
   /// Retrieve an existing Ezsignfolder's children IDs
+  ///
+  /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -144,46 +149,49 @@ class ObjectEzsignfolderApi {
   ///
   /// * [int] pkiEzsignfolderID (required):
   ///   The unique ID of the Ezsignfolder
-  Future<Response> ezsignfolderGetChildrenV1WithHttpInfo(int pkiEzsignfolderID) async {
+  Future<Response> ezsignfolderGetChildrenV1WithHttpInfo(int pkiEzsignfolderID,) async {
     // Verify required params are set.
     if (pkiEzsignfolderID == null) {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsignfolderID');
     }
 
+    // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/getChildren'
-      .replaceAll('{' + 'pkiEzsignfolderID' + '}', pkiEzsignfolderID.toString());
+      .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
 
+    // ignore: prefer_final_locals
     Object postBody;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    final contentTypes = <String>[];
-    final nullableContentType = contentTypes.isNotEmpty ? contentTypes[0] : null;
-    final authNames = <String>['Authorization'];
+    const authNames = <String>['Authorization'];
+    const contentTypes = <String>[];
 
 
-    return await apiClient.invokeAPI(
+    return apiClient.invokeAPI(
       path,
       'GET',
       queryParams,
       postBody,
       headerParams,
       formParams,
-      nullableContentType,
+      contentTypes.isEmpty ? null : contentTypes[0],
       authNames,
     );
   }
 
   /// Retrieve an existing Ezsignfolder's children IDs
   ///
+  /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+  ///
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
   ///   The unique ID of the Ezsignfolder
-  Future<void> ezsignfolderGetChildrenV1(int pkiEzsignfolderID) async {
-    final response = await ezsignfolderGetChildrenV1WithHttpInfo(pkiEzsignfolderID);
+  Future<void> ezsignfolderGetChildrenV1(int pkiEzsignfolderID,) async {
+    final response = await ezsignfolderGetChildrenV1WithHttpInfo(pkiEzsignfolderID,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -191,52 +199,57 @@ class ObjectEzsignfolderApi {
 
   /// Retrieve an existing Ezsignfolder
   ///
+  /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+  ///
   /// Note: This method returns the HTTP [Response].
   ///
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
   ///   The unique ID of the Ezsignfolder
-  Future<Response> ezsignfolderGetObjectV1WithHttpInfo(int pkiEzsignfolderID) async {
+  Future<Response> ezsignfolderGetObjectV1WithHttpInfo(int pkiEzsignfolderID,) async {
     // Verify required params are set.
     if (pkiEzsignfolderID == null) {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsignfolderID');
     }
 
+    // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}'
-      .replaceAll('{' + 'pkiEzsignfolderID' + '}', pkiEzsignfolderID.toString());
+      .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
 
+    // ignore: prefer_final_locals
     Object postBody;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    final contentTypes = <String>[];
-    final nullableContentType = contentTypes.isNotEmpty ? contentTypes[0] : null;
-    final authNames = <String>['Authorization'];
+    const authNames = <String>['Authorization'];
+    const contentTypes = <String>[];
 
 
-    return await apiClient.invokeAPI(
+    return apiClient.invokeAPI(
       path,
       'GET',
       queryParams,
       postBody,
       headerParams,
       formParams,
-      nullableContentType,
+      contentTypes.isEmpty ? null : contentTypes[0],
       authNames,
     );
   }
 
   /// Retrieve an existing Ezsignfolder
   ///
+  /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+  ///
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
   ///   The unique ID of the Ezsignfolder
-  Future<EzsignfolderGetObjectV1Response> ezsignfolderGetObjectV1(int pkiEzsignfolderID) async {
-    final response = await ezsignfolderGetObjectV1WithHttpInfo(pkiEzsignfolderID);
+  Future<EzsignfolderGetObjectV1Response> ezsignfolderGetObjectV1(int pkiEzsignfolderID,) async {
+    final response = await ezsignfolderGetObjectV1WithHttpInfo(pkiEzsignfolderID,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -246,7 +259,7 @@ class ObjectEzsignfolderApi {
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderGetObjectV1Response',) as EzsignfolderGetObjectV1Response;
         }
-    return Future<EzsignfolderGetObjectV1Response>.value(null);
+    return Future<EzsignfolderGetObjectV1Response>.value();
   }
 
   /// Send the Ezsignfolder to the signatories for signature
@@ -259,7 +272,7 @@ class ObjectEzsignfolderApi {
   ///   The unique ID of the Ezsignfolder
   ///
   /// * [EzsignfolderSendV1Request] ezsignfolderSendV1Request (required):
-  Future<Response> ezsignfolderSendV1WithHttpInfo(int pkiEzsignfolderID, EzsignfolderSendV1Request ezsignfolderSendV1Request) async {
+  Future<Response> ezsignfolderSendV1WithHttpInfo(int pkiEzsignfolderID, EzsignfolderSendV1Request ezsignfolderSendV1Request,) async {
     // Verify required params are set.
     if (pkiEzsignfolderID == null) {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsignfolderID');
@@ -268,28 +281,29 @@ class ObjectEzsignfolderApi {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: ezsignfolderSendV1Request');
     }
 
+    // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/send'
-      .replaceAll('{' + 'pkiEzsignfolderID' + '}', pkiEzsignfolderID.toString());
+      .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
 
+    // ignore: prefer_final_locals
     Object postBody = ezsignfolderSendV1Request;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    final contentTypes = <String>['application/json'];
-    final nullableContentType = contentTypes.isNotEmpty ? contentTypes[0] : null;
-    final authNames = <String>['Authorization'];
+    const authNames = <String>['Authorization'];
+    const contentTypes = <String>['application/json'];
 
 
-    return await apiClient.invokeAPI(
+    return apiClient.invokeAPI(
       path,
       'POST',
       queryParams,
       postBody,
       headerParams,
       formParams,
-      nullableContentType,
+      contentTypes.isEmpty ? null : contentTypes[0],
       authNames,
     );
   }
@@ -302,8 +316,8 @@ class ObjectEzsignfolderApi {
   ///   The unique ID of the Ezsignfolder
   ///
   /// * [EzsignfolderSendV1Request] ezsignfolderSendV1Request (required):
-  Future<EzsignfolderSendV1Response> ezsignfolderSendV1(int pkiEzsignfolderID, EzsignfolderSendV1Request ezsignfolderSendV1Request) async {
-    final response = await ezsignfolderSendV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderSendV1Request);
+  Future<EzsignfolderSendV1Response> ezsignfolderSendV1(int pkiEzsignfolderID, EzsignfolderSendV1Request ezsignfolderSendV1Request,) async {
+    final response = await ezsignfolderSendV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderSendV1Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -313,6 +327,6 @@ class ObjectEzsignfolderApi {
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderSendV1Response',) as EzsignfolderSendV1Response;
         }
-    return Future<EzsignfolderSendV1Response>.value(null);
+    return Future<EzsignfolderSendV1Response>.value();
   }
 }

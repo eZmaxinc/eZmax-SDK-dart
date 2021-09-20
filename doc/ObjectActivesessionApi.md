@@ -19,7 +19,7 @@ Get Current Activesession
 
 Retrieve the details about the current activesession
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
 // TODO Configure API key authorization: Authorization
@@ -29,7 +29,7 @@ import 'package:openapi/api.dart';
 
 final api_instance = ObjectActivesessionApi();
 
-try { 
+try {
     final result = api_instance.activesessionGetCurrentV1();
     print(result);
 } catch (e) {

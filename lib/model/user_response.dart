@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 
 part of openapi.api;
@@ -54,6 +55,7 @@ class UserResponse {
 
   @override
   int get hashCode =>
+  // ignore: unnecessary_parenthesis
     (pkiUserID == null ? 0 : pkiUserID.hashCode) +
     (fkiLanguageID == null ? 0 : fkiLanguageID.hashCode) +
     (eUserType == null ? 0 : eUserType.hashCode) +
@@ -78,39 +80,52 @@ class UserResponse {
   }
 
   /// Returns a new [UserResponse] instance and imports its values from
-  /// [json] if it's non-null, null if [json] is null.
-  static UserResponse fromJson(Map<String, dynamic> json) => json == null
-    ? null
-    : UserResponse(
-        pkiUserID: json[r'pkiUserID'],
-        fkiLanguageID: json[r'fkiLanguageID'],
+  /// [value] if it's a [Map], null otherwise.
+  // ignore: prefer_constructors_over_static_methods
+  static UserResponse fromJson(dynamic value) {
+    if (value is Map) {
+      final json = value.cast<String, dynamic>();
+      return UserResponse(
+        pkiUserID: mapValueOfType<int>(json, r'pkiUserID'),
+        fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID'),
         eUserType: FieldEUserType.fromJson(json[r'eUserType']),
-        sUserFirstname: json[r'sUserFirstname'],
-        sUserLastname: json[r'sUserLastname'],
-        sUserLoginname: json[r'sUserLoginname'],
+        sUserFirstname: mapValueOfType<String>(json, r'sUserFirstname'),
+        sUserLastname: mapValueOfType<String>(json, r'sUserLastname'),
+        sUserLoginname: mapValueOfType<String>(json, r'sUserLoginname'),
         objAudit: CommonAudit.fromJson(json[r'objAudit']),
-    );
+      );
+    }
+    return null;
+  }
 
-  static List<UserResponse> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <UserResponse>[]
-      : json.map((v) => UserResponse.fromJson(v)).toList(growable: true == growable);
+  static List<UserResponse> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(UserResponse.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <UserResponse>[];
 
-  static Map<String, UserResponse> mapFromJson(Map<String, dynamic> json) {
+  static Map<String, UserResponse> mapFromJson(dynamic json) {
     final map = <String, UserResponse>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) => map[key] = UserResponse.fromJson(v));
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) => map[key] = UserResponse.fromJson(value));
     }
     return map;
   }
 
   // maps a json object with a list of UserResponse-objects as value to a dart map
-  static Map<String, List<UserResponse>> mapListFromJson(Map<String, dynamic> json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<UserResponse>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
     final map = <String, List<UserResponse>>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) {
-        map[key] = UserResponse.listFromJson(v, emptyIsNull: emptyIsNull, growable: growable);
-      });
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) {
+          map[key] = UserResponse.listFromJson(
+            value,
+            emptyIsNull: emptyIsNull,
+            growable: growable,
+          );
+        });
     }
     return map;
   }

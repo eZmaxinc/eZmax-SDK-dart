@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 
 part of openapi.api;
@@ -31,6 +32,7 @@ class EzsignfoldersignerassociationRequest {
 
   @override
   int get hashCode =>
+  // ignore: unnecessary_parenthesis
     (fkiUserID == null ? 0 : fkiUserID.hashCode) +
     (fkiEzsignfolderID == null ? 0 : fkiEzsignfolderID.hashCode);
 
@@ -47,34 +49,47 @@ class EzsignfoldersignerassociationRequest {
   }
 
   /// Returns a new [EzsignfoldersignerassociationRequest] instance and imports its values from
-  /// [json] if it's non-null, null if [json] is null.
-  static EzsignfoldersignerassociationRequest fromJson(Map<String, dynamic> json) => json == null
-    ? null
-    : EzsignfoldersignerassociationRequest(
-        fkiUserID: json[r'fkiUserID'],
-        fkiEzsignfolderID: json[r'fkiEzsignfolderID'],
-    );
+  /// [value] if it's a [Map], null otherwise.
+  // ignore: prefer_constructors_over_static_methods
+  static EzsignfoldersignerassociationRequest fromJson(dynamic value) {
+    if (value is Map) {
+      final json = value.cast<String, dynamic>();
+      return EzsignfoldersignerassociationRequest(
+        fkiUserID: mapValueOfType<int>(json, r'fkiUserID'),
+        fkiEzsignfolderID: mapValueOfType<int>(json, r'fkiEzsignfolderID'),
+      );
+    }
+    return null;
+  }
 
-  static List<EzsignfoldersignerassociationRequest> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <EzsignfoldersignerassociationRequest>[]
-      : json.map((v) => EzsignfoldersignerassociationRequest.fromJson(v)).toList(growable: true == growable);
+  static List<EzsignfoldersignerassociationRequest> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(EzsignfoldersignerassociationRequest.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <EzsignfoldersignerassociationRequest>[];
 
-  static Map<String, EzsignfoldersignerassociationRequest> mapFromJson(Map<String, dynamic> json) {
+  static Map<String, EzsignfoldersignerassociationRequest> mapFromJson(dynamic json) {
     final map = <String, EzsignfoldersignerassociationRequest>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) => map[key] = EzsignfoldersignerassociationRequest.fromJson(v));
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) => map[key] = EzsignfoldersignerassociationRequest.fromJson(value));
     }
     return map;
   }
 
   // maps a json object with a list of EzsignfoldersignerassociationRequest-objects as value to a dart map
-  static Map<String, List<EzsignfoldersignerassociationRequest>> mapListFromJson(Map<String, dynamic> json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<EzsignfoldersignerassociationRequest>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
     final map = <String, List<EzsignfoldersignerassociationRequest>>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) {
-        map[key] = EzsignfoldersignerassociationRequest.listFromJson(v, emptyIsNull: emptyIsNull, growable: growable);
-      });
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) {
+          map[key] = EzsignfoldersignerassociationRequest.listFromJson(
+            value,
+            emptyIsNull: emptyIsNull,
+            growable: growable,
+          );
+        });
     }
     return map;
   }

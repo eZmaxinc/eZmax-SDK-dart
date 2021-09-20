@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 
 import 'package:openapi/api.dart';
@@ -43,6 +44,8 @@ void main() {
 
     // Retrieve an existing Ezsigndocument's children IDs
     //
+    // ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+    //
     //Future ezsigndocumentGetChildrenV1(int pkiEzsigndocumentID) async
     test('test ezsigndocumentGetChildrenV1', () async {
       // TODO
@@ -57,10 +60,30 @@ void main() {
       // TODO
     });
 
+    // Retrieve an existing Ezsigndocument's Form Data
+    //
+    // ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+    //
+    //Future<MultipartFile> ezsigndocumentGetFormDataV1(int pkiEzsigndocumentID) async
+    test('test ezsigndocumentGetFormDataV1', () async {
+      // TODO
+    });
+
     // Retrieve an existing Ezsigndocument
+    //
+    // ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
     //
     //Future<EzsigndocumentGetObjectV1Response> ezsigndocumentGetObjectV1(int pkiEzsigndocumentID) async
     test('test ezsigndocumentGetObjectV1', () async {
+      // TODO
+    });
+
+    // Retrieve positions X,Y of given words from a Ezsigndocument
+    //
+    // ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+    //
+    //Future<EzsigndocumentGetWordsPositionsV1Response> ezsigndocumentGetWordsPositionsV1(int pkiEzsigndocumentID, EzsigndocumentGetWordsPositionsV1Request ezsigndocumentGetWordsPositionsV1Request) async
+    test('test ezsigndocumentGetWordsPositionsV1', () async {
       // TODO
     });
 

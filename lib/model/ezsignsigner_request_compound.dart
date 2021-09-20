@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 
 part of openapi.api;
@@ -45,6 +46,7 @@ class EzsignsignerRequestCompound {
 
   @override
   int get hashCode =>
+  // ignore: unnecessary_parenthesis
     (objContact == null ? 0 : objContact.hashCode) +
     (fkiTaxassignmentID == null ? 0 : fkiTaxassignmentID.hashCode) +
     (fkiSecretquestionID == null ? 0 : fkiSecretquestionID.hashCode) +
@@ -69,37 +71,50 @@ class EzsignsignerRequestCompound {
   }
 
   /// Returns a new [EzsignsignerRequestCompound] instance and imports its values from
-  /// [json] if it's non-null, null if [json] is null.
-  static EzsignsignerRequestCompound fromJson(Map<String, dynamic> json) => json == null
-    ? null
-    : EzsignsignerRequestCompound(
+  /// [value] if it's a [Map], null otherwise.
+  // ignore: prefer_constructors_over_static_methods
+  static EzsignsignerRequestCompound fromJson(dynamic value) {
+    if (value is Map) {
+      final json = value.cast<String, dynamic>();
+      return EzsignsignerRequestCompound(
         objContact: EzsignsignerRequestCompoundContact.fromJson(json[r'objContact']),
-        fkiTaxassignmentID: json[r'fkiTaxassignmentID'],
-        fkiSecretquestionID: json[r'fkiSecretquestionID'],
+        fkiTaxassignmentID: mapValueOfType<int>(json, r'fkiTaxassignmentID'),
+        fkiSecretquestionID: mapValueOfType<int>(json, r'fkiSecretquestionID'),
         eEzsignsignerLogintype: EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum.fromJson(json[r'eEzsignsignerLogintype']),
-        sEzsignsignerSecretanswer: json[r'sEzsignsignerSecretanswer'],
-    );
+        sEzsignsignerSecretanswer: mapValueOfType<String>(json, r'sEzsignsignerSecretanswer'),
+      );
+    }
+    return null;
+  }
 
-  static List<EzsignsignerRequestCompound> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <EzsignsignerRequestCompound>[]
-      : json.map((v) => EzsignsignerRequestCompound.fromJson(v)).toList(growable: true == growable);
+  static List<EzsignsignerRequestCompound> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(EzsignsignerRequestCompound.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <EzsignsignerRequestCompound>[];
 
-  static Map<String, EzsignsignerRequestCompound> mapFromJson(Map<String, dynamic> json) {
+  static Map<String, EzsignsignerRequestCompound> mapFromJson(dynamic json) {
     final map = <String, EzsignsignerRequestCompound>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) => map[key] = EzsignsignerRequestCompound.fromJson(v));
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) => map[key] = EzsignsignerRequestCompound.fromJson(value));
     }
     return map;
   }
 
   // maps a json object with a list of EzsignsignerRequestCompound-objects as value to a dart map
-  static Map<String, List<EzsignsignerRequestCompound>> mapListFromJson(Map<String, dynamic> json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<EzsignsignerRequestCompound>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
     final map = <String, List<EzsignsignerRequestCompound>>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) {
-        map[key] = EzsignsignerRequestCompound.listFromJson(v, emptyIsNull: emptyIsNull, growable: growable);
-      });
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) {
+          map[key] = EzsignsignerRequestCompound.listFromJson(
+            value,
+            emptyIsNull: emptyIsNull,
+            growable: growable,
+          );
+        });
     }
     return map;
   }
@@ -114,7 +129,7 @@ class EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum {
   final String value;
 
   @override
-  String toString() => value;
+  String toString() => value ?? '';
 
   String toJson() => value;
 
@@ -136,20 +151,18 @@ class EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum {
   static EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum fromJson(dynamic value) =>
     EzsignsignerRequestCompoundEEzsignsignerLogintypeEnumTypeTransformer().decode(value);
 
-  static List<EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum>[]
-      : json
-          .map((value) => EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum.fromJson(value))
-          .toList(growable: true == growable);
+  static List<EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum>[];
 }
 
 /// Transformation class that can [encode] an instance of [EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum] to String,
 /// and [decode] dynamic data back to [EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum].
 class EzsignsignerRequestCompoundEEzsignsignerLogintypeEnumTypeTransformer {
-  const EzsignsignerRequestCompoundEEzsignsignerLogintypeEnumTypeTransformer._();
+  factory EzsignsignerRequestCompoundEEzsignsignerLogintypeEnumTypeTransformer() => _instance ??= const EzsignsignerRequestCompoundEEzsignsignerLogintypeEnumTypeTransformer._();
 
-  factory EzsignsignerRequestCompoundEEzsignsignerLogintypeEnumTypeTransformer() => _instance ??= EzsignsignerRequestCompoundEEzsignsignerLogintypeEnumTypeTransformer._();
+  const EzsignsignerRequestCompoundEEzsignsignerLogintypeEnumTypeTransformer._();
 
   String encode(EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum data) => data.value;
 
@@ -162,16 +175,18 @@ class EzsignsignerRequestCompoundEEzsignsignerLogintypeEnumTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum decode(dynamic data, {bool allowNull}) {
-    switch (data) {
-      case r'Password': return EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum.password;
-      case r'PasswordPhone': return EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum.passwordPhone;
-      case r'PasswordQuestion': return EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum.passwordQuestion;
-      case r'InPersonPhone': return EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum.inPersonPhone;
-      case r'InPerson': return EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum.inPerson;
-      default:
-        if (allowNull == false) {
-          throw ArgumentError('Unknown enum value to decode: $data');
-        }
+    if (data != null) {
+      switch (data.toString()) {
+        case r'Password': return EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum.password;
+        case r'PasswordPhone': return EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum.passwordPhone;
+        case r'PasswordQuestion': return EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum.passwordQuestion;
+        case r'InPersonPhone': return EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum.inPersonPhone;
+        case r'InPerson': return EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum.inPerson;
+        default:
+          if (allowNull == false) {
+            throw ArgumentError('Unknown enum value to decode: $data');
+          }
+      }
     }
     return null;
   }
@@ -179,4 +194,5 @@ class EzsignsignerRequestCompoundEEzsignsignerLogintypeEnumTypeTransformer {
   /// Singleton [EzsignsignerRequestCompoundEEzsignsignerLogintypeEnumTypeTransformer] instance.
   static EzsignsignerRequestCompoundEEzsignsignerLogintypeEnumTypeTransformer _instance;
 }
+
 

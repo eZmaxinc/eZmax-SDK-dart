@@ -19,7 +19,7 @@ Authenticate a user
 
 This endpoint authenticates a user.
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
 // TODO Configure API key authorization: Authorization
@@ -31,7 +31,7 @@ final api_instance = ModuleAuthenticateApi();
 final eSessionType = eSessionType_example; // String | 
 final authenticateAuthenticateV2Request = AuthenticateAuthenticateV2Request(); // AuthenticateAuthenticateV2Request | 
 
-try { 
+try {
     final result = api_instance.authenticateAuthenticateV2(eSessionType, authenticateAuthenticateV2Request);
     print(result);
 } catch (e) {

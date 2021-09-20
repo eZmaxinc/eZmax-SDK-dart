@@ -19,7 +19,7 @@ Create a new Franchisereferalincome
 
 The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
 // TODO Configure API key authorization: Authorization
@@ -30,7 +30,7 @@ import 'package:openapi/api.dart';
 final api_instance = ObjectFranchisereferalincomeApi();
 final franchisereferalincomeCreateObjectV1Request = [List<FranchisereferalincomeCreateObjectV1Request>()]; // List<FranchisereferalincomeCreateObjectV1Request> | 
 
-try { 
+try {
     final result = api_instance.franchisereferalincomeCreateObjectV1(franchisereferalincomeCreateObjectV1Request);
     print(result);
 } catch (e) {

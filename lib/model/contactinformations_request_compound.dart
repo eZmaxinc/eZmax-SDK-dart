@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 
 part of openapi.api;
@@ -55,6 +56,7 @@ class ContactinformationsRequestCompound {
 
   @override
   int get hashCode =>
+  // ignore: unnecessary_parenthesis
     (aObjAddress == null ? 0 : aObjAddress.hashCode) +
     (aObjPhone == null ? 0 : aObjPhone.hashCode) +
     (aObjEmail == null ? 0 : aObjEmail.hashCode) +
@@ -81,40 +83,53 @@ class ContactinformationsRequestCompound {
   }
 
   /// Returns a new [ContactinformationsRequestCompound] instance and imports its values from
-  /// [json] if it's non-null, null if [json] is null.
-  static ContactinformationsRequestCompound fromJson(Map<String, dynamic> json) => json == null
-    ? null
-    : ContactinformationsRequestCompound(
+  /// [value] if it's a [Map], null otherwise.
+  // ignore: prefer_constructors_over_static_methods
+  static ContactinformationsRequestCompound fromJson(dynamic value) {
+    if (value is Map) {
+      final json = value.cast<String, dynamic>();
+      return ContactinformationsRequestCompound(
         aObjAddress: AddressRequest.listFromJson(json[r'a_objAddress']),
         aObjPhone: PhoneRequest.listFromJson(json[r'a_objPhone']),
         aObjEmail: EmailRequest.listFromJson(json[r'a_objEmail']),
         aObjWebsite: WebsiteRequest.listFromJson(json[r'a_objWebsite']),
-        iAddressDefault: json[r'iAddressDefault'],
-        iPhoneDefault: json[r'iPhoneDefault'],
-        iEmailDefault: json[r'iEmailDefault'],
-        iWebsiteDefault: json[r'iWebsiteDefault'],
-    );
+        iAddressDefault: mapValueOfType<int>(json, r'iAddressDefault'),
+        iPhoneDefault: mapValueOfType<int>(json, r'iPhoneDefault'),
+        iEmailDefault: mapValueOfType<int>(json, r'iEmailDefault'),
+        iWebsiteDefault: mapValueOfType<int>(json, r'iWebsiteDefault'),
+      );
+    }
+    return null;
+  }
 
-  static List<ContactinformationsRequestCompound> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <ContactinformationsRequestCompound>[]
-      : json.map((v) => ContactinformationsRequestCompound.fromJson(v)).toList(growable: true == growable);
+  static List<ContactinformationsRequestCompound> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(ContactinformationsRequestCompound.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <ContactinformationsRequestCompound>[];
 
-  static Map<String, ContactinformationsRequestCompound> mapFromJson(Map<String, dynamic> json) {
+  static Map<String, ContactinformationsRequestCompound> mapFromJson(dynamic json) {
     final map = <String, ContactinformationsRequestCompound>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) => map[key] = ContactinformationsRequestCompound.fromJson(v));
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) => map[key] = ContactinformationsRequestCompound.fromJson(value));
     }
     return map;
   }
 
   // maps a json object with a list of ContactinformationsRequestCompound-objects as value to a dart map
-  static Map<String, List<ContactinformationsRequestCompound>> mapListFromJson(Map<String, dynamic> json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<ContactinformationsRequestCompound>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
     final map = <String, List<ContactinformationsRequestCompound>>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) {
-        map[key] = ContactinformationsRequestCompound.listFromJson(v, emptyIsNull: emptyIsNull, growable: growable);
-      });
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) {
+          map[key] = ContactinformationsRequestCompound.listFromJson(
+            value,
+            emptyIsNull: emptyIsNull,
+            growable: growable,
+          );
+        });
     }
     return map;
   }

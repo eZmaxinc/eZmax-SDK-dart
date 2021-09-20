@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 
 part of openapi.api;
@@ -18,7 +19,7 @@ class FieldEEzsignsignatureType {
   final String value;
 
   @override
-  String toString() => value;
+  String toString() => value ?? '';
 
   String toJson() => value;
 
@@ -40,20 +41,18 @@ class FieldEEzsignsignatureType {
   static FieldEEzsignsignatureType fromJson(dynamic value) =>
     FieldEEzsignsignatureTypeTypeTransformer().decode(value);
 
-  static List<FieldEEzsignsignatureType> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <FieldEEzsignsignatureType>[]
-      : json
-          .map((value) => FieldEEzsignsignatureType.fromJson(value))
-          .toList(growable: true == growable);
+  static List<FieldEEzsignsignatureType> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(FieldEEzsignsignatureType.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <FieldEEzsignsignatureType>[];
 }
 
 /// Transformation class that can [encode] an instance of [FieldEEzsignsignatureType] to String,
 /// and [decode] dynamic data back to [FieldEEzsignsignatureType].
 class FieldEEzsignsignatureTypeTypeTransformer {
-  const FieldEEzsignsignatureTypeTypeTransformer._();
+  factory FieldEEzsignsignatureTypeTypeTransformer() => _instance ??= const FieldEEzsignsignatureTypeTypeTransformer._();
 
-  factory FieldEEzsignsignatureTypeTypeTransformer() => _instance ??= FieldEEzsignsignatureTypeTypeTransformer._();
+  const FieldEEzsignsignatureTypeTypeTransformer._();
 
   String encode(FieldEEzsignsignatureType data) => data.value;
 
@@ -66,16 +65,18 @@ class FieldEEzsignsignatureTypeTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsignsignatureType decode(dynamic data, {bool allowNull}) {
-    switch (data) {
-      case r'Acknowledgement': return FieldEEzsignsignatureType.acknowledgement;
-      case r'City': return FieldEEzsignsignatureType.city;
-      case r'Handwritten': return FieldEEzsignsignatureType.handwritten;
-      case r'Initials': return FieldEEzsignsignatureType.initials;
-      case r'Name': return FieldEEzsignsignatureType.name;
-      default:
-        if (allowNull == false) {
-          throw ArgumentError('Unknown enum value to decode: $data');
-        }
+    if (data != null) {
+      switch (data.toString()) {
+        case r'Acknowledgement': return FieldEEzsignsignatureType.acknowledgement;
+        case r'City': return FieldEEzsignsignatureType.city;
+        case r'Handwritten': return FieldEEzsignsignatureType.handwritten;
+        case r'Initials': return FieldEEzsignsignatureType.initials;
+        case r'Name': return FieldEEzsignsignatureType.name;
+        default:
+          if (allowNull == false) {
+            throw ArgumentError('Unknown enum value to decode: $data');
+          }
+      }
     }
     return null;
   }
@@ -83,3 +84,4 @@ class FieldEEzsignsignatureTypeTypeTransformer {
   /// Singleton [FieldEEzsignsignatureTypeTypeTransformer] instance.
   static FieldEEzsignsignatureTypeTypeTransformer _instance;
 }
+

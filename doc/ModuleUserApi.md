@@ -19,7 +19,7 @@ Create a new User of type Ezsignuser
 
 The endpoint allows to initiate the creation or a user of type Ezsignuser.  The user will be created only once the email verification process will be completed
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
 // TODO Configure API key authorization: Authorization
@@ -30,7 +30,7 @@ import 'package:openapi/api.dart';
 final api_instance = ModuleUserApi();
 final userCreateEzsignuserV1Request = [List<UserCreateEzsignuserV1Request>()]; // List<UserCreateEzsignuserV1Request> | 
 
-try { 
+try {
     final result = api_instance.userCreateEzsignuserV1(userCreateEzsignuserV1Request);
     print(result);
 } catch (e) {

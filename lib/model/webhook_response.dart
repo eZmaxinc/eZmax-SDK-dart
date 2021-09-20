@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 
 part of openapi.api;
@@ -54,6 +55,7 @@ class WebhookResponse {
 
   @override
   int get hashCode =>
+  // ignore: unnecessary_parenthesis
     (pkiWebhookID == null ? 0 : pkiWebhookID.hashCode) +
     (eWebhookModule == null ? 0 : eWebhookModule.hashCode) +
     (eWebhookEzsignevent == null ? 0 : eWebhookEzsignevent.hashCode) +
@@ -82,39 +84,52 @@ class WebhookResponse {
   }
 
   /// Returns a new [WebhookResponse] instance and imports its values from
-  /// [json] if it's non-null, null if [json] is null.
-  static WebhookResponse fromJson(Map<String, dynamic> json) => json == null
-    ? null
-    : WebhookResponse(
-        pkiWebhookID: json[r'pkiWebhookID'],
+  /// [value] if it's a [Map], null otherwise.
+  // ignore: prefer_constructors_over_static_methods
+  static WebhookResponse fromJson(dynamic value) {
+    if (value is Map) {
+      final json = value.cast<String, dynamic>();
+      return WebhookResponse(
+        pkiWebhookID: mapValueOfType<int>(json, r'pkiWebhookID'),
         eWebhookModule: WebhookResponseEWebhookModuleEnum.fromJson(json[r'eWebhookModule']),
         eWebhookEzsignevent: WebhookResponseEWebhookEzsigneventEnum.fromJson(json[r'eWebhookEzsignevent']),
-        pksCustomerCode: json[r'pksCustomerCode'],
-        sWebhookUrl: json[r'sWebhookUrl'],
-        sWebhookEmailfailed: json[r'sWebhookEmailfailed'],
+        pksCustomerCode: mapValueOfType<String>(json, r'pksCustomerCode'),
+        sWebhookUrl: mapValueOfType<String>(json, r'sWebhookUrl'),
+        sWebhookEmailfailed: mapValueOfType<String>(json, r'sWebhookEmailfailed'),
         eWebhookManagementevent: WebhookResponseEWebhookManagementeventEnum.fromJson(json[r'eWebhookManagementevent']),
-    );
+      );
+    }
+    return null;
+  }
 
-  static List<WebhookResponse> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <WebhookResponse>[]
-      : json.map((v) => WebhookResponse.fromJson(v)).toList(growable: true == growable);
+  static List<WebhookResponse> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(WebhookResponse.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <WebhookResponse>[];
 
-  static Map<String, WebhookResponse> mapFromJson(Map<String, dynamic> json) {
+  static Map<String, WebhookResponse> mapFromJson(dynamic json) {
     final map = <String, WebhookResponse>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) => map[key] = WebhookResponse.fromJson(v));
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) => map[key] = WebhookResponse.fromJson(value));
     }
     return map;
   }
 
   // maps a json object with a list of WebhookResponse-objects as value to a dart map
-  static Map<String, List<WebhookResponse>> mapListFromJson(Map<String, dynamic> json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<WebhookResponse>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
     final map = <String, List<WebhookResponse>>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) {
-        map[key] = WebhookResponse.listFromJson(v, emptyIsNull: emptyIsNull, growable: growable);
-      });
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) {
+          map[key] = WebhookResponse.listFromJson(
+            value,
+            emptyIsNull: emptyIsNull,
+            growable: growable,
+          );
+        });
     }
     return map;
   }
@@ -129,7 +144,7 @@ class WebhookResponseEWebhookModuleEnum {
   final String value;
 
   @override
-  String toString() => value;
+  String toString() => value ?? '';
 
   String toJson() => value;
 
@@ -145,20 +160,18 @@ class WebhookResponseEWebhookModuleEnum {
   static WebhookResponseEWebhookModuleEnum fromJson(dynamic value) =>
     WebhookResponseEWebhookModuleEnumTypeTransformer().decode(value);
 
-  static List<WebhookResponseEWebhookModuleEnum> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <WebhookResponseEWebhookModuleEnum>[]
-      : json
-          .map((value) => WebhookResponseEWebhookModuleEnum.fromJson(value))
-          .toList(growable: true == growable);
+  static List<WebhookResponseEWebhookModuleEnum> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(WebhookResponseEWebhookModuleEnum.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <WebhookResponseEWebhookModuleEnum>[];
 }
 
 /// Transformation class that can [encode] an instance of [WebhookResponseEWebhookModuleEnum] to String,
 /// and [decode] dynamic data back to [WebhookResponseEWebhookModuleEnum].
 class WebhookResponseEWebhookModuleEnumTypeTransformer {
-  const WebhookResponseEWebhookModuleEnumTypeTransformer._();
+  factory WebhookResponseEWebhookModuleEnumTypeTransformer() => _instance ??= const WebhookResponseEWebhookModuleEnumTypeTransformer._();
 
-  factory WebhookResponseEWebhookModuleEnumTypeTransformer() => _instance ??= WebhookResponseEWebhookModuleEnumTypeTransformer._();
+  const WebhookResponseEWebhookModuleEnumTypeTransformer._();
 
   String encode(WebhookResponseEWebhookModuleEnum data) => data.value;
 
@@ -171,13 +184,15 @@ class WebhookResponseEWebhookModuleEnumTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   WebhookResponseEWebhookModuleEnum decode(dynamic data, {bool allowNull}) {
-    switch (data) {
-      case r'Ezsign': return WebhookResponseEWebhookModuleEnum.ezsign;
-      case r'Management': return WebhookResponseEWebhookModuleEnum.management;
-      default:
-        if (allowNull == false) {
-          throw ArgumentError('Unknown enum value to decode: $data');
-        }
+    if (data != null) {
+      switch (data.toString()) {
+        case r'Ezsign': return WebhookResponseEWebhookModuleEnum.ezsign;
+        case r'Management': return WebhookResponseEWebhookModuleEnum.management;
+        default:
+          if (allowNull == false) {
+            throw ArgumentError('Unknown enum value to decode: $data');
+          }
+      }
     }
     return null;
   }
@@ -185,6 +200,7 @@ class WebhookResponseEWebhookModuleEnumTypeTransformer {
   /// Singleton [WebhookResponseEWebhookModuleEnumTypeTransformer] instance.
   static WebhookResponseEWebhookModuleEnumTypeTransformer _instance;
 }
+
 
 /// This Ezsign Event. This property will be set only if the Module is \"Ezsign\".
 class WebhookResponseEWebhookEzsigneventEnum {
@@ -195,7 +211,7 @@ class WebhookResponseEWebhookEzsigneventEnum {
   final String value;
 
   @override
-  String toString() => value;
+  String toString() => value ?? '';
 
   String toJson() => value;
 
@@ -211,20 +227,18 @@ class WebhookResponseEWebhookEzsigneventEnum {
   static WebhookResponseEWebhookEzsigneventEnum fromJson(dynamic value) =>
     WebhookResponseEWebhookEzsigneventEnumTypeTransformer().decode(value);
 
-  static List<WebhookResponseEWebhookEzsigneventEnum> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <WebhookResponseEWebhookEzsigneventEnum>[]
-      : json
-          .map((value) => WebhookResponseEWebhookEzsigneventEnum.fromJson(value))
-          .toList(growable: true == growable);
+  static List<WebhookResponseEWebhookEzsigneventEnum> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(WebhookResponseEWebhookEzsigneventEnum.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <WebhookResponseEWebhookEzsigneventEnum>[];
 }
 
 /// Transformation class that can [encode] an instance of [WebhookResponseEWebhookEzsigneventEnum] to String,
 /// and [decode] dynamic data back to [WebhookResponseEWebhookEzsigneventEnum].
 class WebhookResponseEWebhookEzsigneventEnumTypeTransformer {
-  const WebhookResponseEWebhookEzsigneventEnumTypeTransformer._();
+  factory WebhookResponseEWebhookEzsigneventEnumTypeTransformer() => _instance ??= const WebhookResponseEWebhookEzsigneventEnumTypeTransformer._();
 
-  factory WebhookResponseEWebhookEzsigneventEnumTypeTransformer() => _instance ??= WebhookResponseEWebhookEzsigneventEnumTypeTransformer._();
+  const WebhookResponseEWebhookEzsigneventEnumTypeTransformer._();
 
   String encode(WebhookResponseEWebhookEzsigneventEnum data) => data.value;
 
@@ -237,13 +251,15 @@ class WebhookResponseEWebhookEzsigneventEnumTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   WebhookResponseEWebhookEzsigneventEnum decode(dynamic data, {bool allowNull}) {
-    switch (data) {
-      case r'DocumentCompleted': return WebhookResponseEWebhookEzsigneventEnum.documentCompleted;
-      case r'FolderCompleted': return WebhookResponseEWebhookEzsigneventEnum.folderCompleted;
-      default:
-        if (allowNull == false) {
-          throw ArgumentError('Unknown enum value to decode: $data');
-        }
+    if (data != null) {
+      switch (data.toString()) {
+        case r'DocumentCompleted': return WebhookResponseEWebhookEzsigneventEnum.documentCompleted;
+        case r'FolderCompleted': return WebhookResponseEWebhookEzsigneventEnum.folderCompleted;
+        default:
+          if (allowNull == false) {
+            throw ArgumentError('Unknown enum value to decode: $data');
+          }
+      }
     }
     return null;
   }
@@ -251,6 +267,7 @@ class WebhookResponseEWebhookEzsigneventEnumTypeTransformer {
   /// Singleton [WebhookResponseEWebhookEzsigneventEnumTypeTransformer] instance.
   static WebhookResponseEWebhookEzsigneventEnumTypeTransformer _instance;
 }
+
 
 /// This Management Event. This property will be set only if the Module is \"Management\".
 class WebhookResponseEWebhookManagementeventEnum {
@@ -261,7 +278,7 @@ class WebhookResponseEWebhookManagementeventEnum {
   final String value;
 
   @override
-  String toString() => value;
+  String toString() => value ?? '';
 
   String toJson() => value;
 
@@ -275,20 +292,18 @@ class WebhookResponseEWebhookManagementeventEnum {
   static WebhookResponseEWebhookManagementeventEnum fromJson(dynamic value) =>
     WebhookResponseEWebhookManagementeventEnumTypeTransformer().decode(value);
 
-  static List<WebhookResponseEWebhookManagementeventEnum> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <WebhookResponseEWebhookManagementeventEnum>[]
-      : json
-          .map((value) => WebhookResponseEWebhookManagementeventEnum.fromJson(value))
-          .toList(growable: true == growable);
+  static List<WebhookResponseEWebhookManagementeventEnum> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(WebhookResponseEWebhookManagementeventEnum.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <WebhookResponseEWebhookManagementeventEnum>[];
 }
 
 /// Transformation class that can [encode] an instance of [WebhookResponseEWebhookManagementeventEnum] to String,
 /// and [decode] dynamic data back to [WebhookResponseEWebhookManagementeventEnum].
 class WebhookResponseEWebhookManagementeventEnumTypeTransformer {
-  const WebhookResponseEWebhookManagementeventEnumTypeTransformer._();
+  factory WebhookResponseEWebhookManagementeventEnumTypeTransformer() => _instance ??= const WebhookResponseEWebhookManagementeventEnumTypeTransformer._();
 
-  factory WebhookResponseEWebhookManagementeventEnumTypeTransformer() => _instance ??= WebhookResponseEWebhookManagementeventEnumTypeTransformer._();
+  const WebhookResponseEWebhookManagementeventEnumTypeTransformer._();
 
   String encode(WebhookResponseEWebhookManagementeventEnum data) => data.value;
 
@@ -301,12 +316,14 @@ class WebhookResponseEWebhookManagementeventEnumTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   WebhookResponseEWebhookManagementeventEnum decode(dynamic data, {bool allowNull}) {
-    switch (data) {
-      case r'UserCreated': return WebhookResponseEWebhookManagementeventEnum.userCreated;
-      default:
-        if (allowNull == false) {
-          throw ArgumentError('Unknown enum value to decode: $data');
-        }
+    if (data != null) {
+      switch (data.toString()) {
+        case r'UserCreated': return WebhookResponseEWebhookManagementeventEnum.userCreated;
+        default:
+          if (allowNull == false) {
+            throw ArgumentError('Unknown enum value to decode: $data');
+          }
+      }
     }
     return null;
   }
@@ -314,4 +331,5 @@ class WebhookResponseEWebhookManagementeventEnumTypeTransformer {
   /// Singleton [WebhookResponseEWebhookManagementeventEnumTypeTransformer] instance.
   static WebhookResponseEWebhookManagementeventEnumTypeTransformer _instance;
 }
+
 

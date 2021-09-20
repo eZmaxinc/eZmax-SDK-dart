@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 
 part of openapi.api;
@@ -12,7 +13,7 @@ part of openapi.api;
 class FranchisereferalincomeRequestCompound {
   /// Returns a new [FranchisereferalincomeRequestCompound] instance.
   FranchisereferalincomeRequestCompound({
-    this.objAddress,
+    @required this.objAddress,
     this.aObjContact = const [],
     @required this.fkiFranchisebrokerID,
     @required this.fkiFranchisereferalincomeprogramID,
@@ -81,6 +82,7 @@ class FranchisereferalincomeRequestCompound {
 
   @override
   int get hashCode =>
+  // ignore: unnecessary_parenthesis
     (objAddress == null ? 0 : objAddress.hashCode) +
     (aObjContact == null ? 0 : aObjContact.hashCode) +
     (fkiFranchisebrokerID == null ? 0 : fkiFranchisebrokerID.hashCode) +
@@ -100,9 +102,7 @@ class FranchisereferalincomeRequestCompound {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (objAddress != null) {
       json[r'objAddress'] = objAddress;
-    }
       json[r'a_objContact'] = aObjContact;
       json[r'fkiFranchisebrokerID'] = fkiFranchisebrokerID;
       json[r'fkiFranchisereferalincomeprogramID'] = fkiFranchisereferalincomeprogramID;
@@ -119,45 +119,58 @@ class FranchisereferalincomeRequestCompound {
   }
 
   /// Returns a new [FranchisereferalincomeRequestCompound] instance and imports its values from
-  /// [json] if it's non-null, null if [json] is null.
-  static FranchisereferalincomeRequestCompound fromJson(Map<String, dynamic> json) => json == null
-    ? null
-    : FranchisereferalincomeRequestCompound(
+  /// [value] if it's a [Map], null otherwise.
+  // ignore: prefer_constructors_over_static_methods
+  static FranchisereferalincomeRequestCompound fromJson(dynamic value) {
+    if (value is Map) {
+      final json = value.cast<String, dynamic>();
+      return FranchisereferalincomeRequestCompound(
         objAddress: AddressRequest.fromJson(json[r'objAddress']),
         aObjContact: ContactRequestCompound.listFromJson(json[r'a_objContact']),
-        fkiFranchisebrokerID: json[r'fkiFranchisebrokerID'],
-        fkiFranchisereferalincomeprogramID: json[r'fkiFranchisereferalincomeprogramID'],
-        fkiPeriodID: json[r'fkiPeriodID'],
-        dFranchisereferalincomeLoan: json[r'dFranchisereferalincomeLoan'],
-        dFranchisereferalincomeFranchiseamount: json[r'dFranchisereferalincomeFranchiseamount'],
-        dFranchisereferalincomeFranchisoramount: json[r'dFranchisereferalincomeFranchisoramount'],
-        dFranchisereferalincomeAgentamount: json[r'dFranchisereferalincomeAgentamount'],
-        dtFranchisereferalincomeDisbursed: json[r'dtFranchisereferalincomeDisbursed'],
-        tFranchisereferalincomeComment: json[r'tFranchisereferalincomeComment'],
-        fkiFranchiseofficeID: json[r'fkiFranchiseofficeID'],
-        sFranchisereferalincomeRemoteid: json[r'sFranchisereferalincomeRemoteid'],
-    );
+        fkiFranchisebrokerID: mapValueOfType<int>(json, r'fkiFranchisebrokerID'),
+        fkiFranchisereferalincomeprogramID: mapValueOfType<int>(json, r'fkiFranchisereferalincomeprogramID'),
+        fkiPeriodID: mapValueOfType<int>(json, r'fkiPeriodID'),
+        dFranchisereferalincomeLoan: mapValueOfType<String>(json, r'dFranchisereferalincomeLoan'),
+        dFranchisereferalincomeFranchiseamount: mapValueOfType<String>(json, r'dFranchisereferalincomeFranchiseamount'),
+        dFranchisereferalincomeFranchisoramount: mapValueOfType<String>(json, r'dFranchisereferalincomeFranchisoramount'),
+        dFranchisereferalincomeAgentamount: mapValueOfType<String>(json, r'dFranchisereferalincomeAgentamount'),
+        dtFranchisereferalincomeDisbursed: mapValueOfType<String>(json, r'dtFranchisereferalincomeDisbursed'),
+        tFranchisereferalincomeComment: mapValueOfType<String>(json, r'tFranchisereferalincomeComment'),
+        fkiFranchiseofficeID: mapValueOfType<int>(json, r'fkiFranchiseofficeID'),
+        sFranchisereferalincomeRemoteid: mapValueOfType<String>(json, r'sFranchisereferalincomeRemoteid'),
+      );
+    }
+    return null;
+  }
 
-  static List<FranchisereferalincomeRequestCompound> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <FranchisereferalincomeRequestCompound>[]
-      : json.map((v) => FranchisereferalincomeRequestCompound.fromJson(v)).toList(growable: true == growable);
+  static List<FranchisereferalincomeRequestCompound> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(FranchisereferalincomeRequestCompound.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <FranchisereferalincomeRequestCompound>[];
 
-  static Map<String, FranchisereferalincomeRequestCompound> mapFromJson(Map<String, dynamic> json) {
+  static Map<String, FranchisereferalincomeRequestCompound> mapFromJson(dynamic json) {
     final map = <String, FranchisereferalincomeRequestCompound>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) => map[key] = FranchisereferalincomeRequestCompound.fromJson(v));
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) => map[key] = FranchisereferalincomeRequestCompound.fromJson(value));
     }
     return map;
   }
 
   // maps a json object with a list of FranchisereferalincomeRequestCompound-objects as value to a dart map
-  static Map<String, List<FranchisereferalincomeRequestCompound>> mapListFromJson(Map<String, dynamic> json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<FranchisereferalincomeRequestCompound>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
     final map = <String, List<FranchisereferalincomeRequestCompound>>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) {
-        map[key] = FranchisereferalincomeRequestCompound.listFromJson(v, emptyIsNull: emptyIsNull, growable: growable);
-      });
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) {
+          map[key] = FranchisereferalincomeRequestCompound.listFromJson(
+            value,
+            emptyIsNull: emptyIsNull,
+            growable: growable,
+          );
+        });
     }
     return map;
   }

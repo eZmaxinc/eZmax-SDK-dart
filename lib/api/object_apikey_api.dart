@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 
 part of openapi.api;
@@ -24,33 +25,34 @@ class ObjectApikeyApi {
   /// Parameters:
   ///
   /// * [List<ApikeyCreateObjectV1Request>] apikeyCreateObjectV1Request (required):
-  Future<Response> apikeyCreateObjectV1WithHttpInfo(List<ApikeyCreateObjectV1Request> apikeyCreateObjectV1Request) async {
+  Future<Response> apikeyCreateObjectV1WithHttpInfo(List<ApikeyCreateObjectV1Request> apikeyCreateObjectV1Request,) async {
     // Verify required params are set.
     if (apikeyCreateObjectV1Request == null) {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: apikeyCreateObjectV1Request');
     }
 
+    // ignore: prefer_const_declarations
     final path = r'/1/object/apikey';
 
+    // ignore: prefer_final_locals
     Object postBody = apikeyCreateObjectV1Request;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    final contentTypes = <String>['application/json'];
-    final nullableContentType = contentTypes.isNotEmpty ? contentTypes[0] : null;
-    final authNames = <String>['Authorization'];
+    const authNames = <String>['Authorization'];
+    const contentTypes = <String>['application/json'];
 
 
-    return await apiClient.invokeAPI(
+    return apiClient.invokeAPI(
       path,
       'POST',
       queryParams,
       postBody,
       headerParams,
       formParams,
-      nullableContentType,
+      contentTypes.isEmpty ? null : contentTypes[0],
       authNames,
     );
   }
@@ -62,8 +64,8 @@ class ObjectApikeyApi {
   /// Parameters:
   ///
   /// * [List<ApikeyCreateObjectV1Request>] apikeyCreateObjectV1Request (required):
-  Future<ApikeyCreateObjectV1Response> apikeyCreateObjectV1(List<ApikeyCreateObjectV1Request> apikeyCreateObjectV1Request) async {
-    final response = await apikeyCreateObjectV1WithHttpInfo(apikeyCreateObjectV1Request);
+  Future<ApikeyCreateObjectV1Response> apikeyCreateObjectV1(List<ApikeyCreateObjectV1Request> apikeyCreateObjectV1Request,) async {
+    final response = await apikeyCreateObjectV1WithHttpInfo(apikeyCreateObjectV1Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -73,6 +75,6 @@ class ObjectApikeyApi {
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'ApikeyCreateObjectV1Response',) as ApikeyCreateObjectV1Response;
         }
-    return Future<ApikeyCreateObjectV1Response>.value(null);
+    return Future<ApikeyCreateObjectV1Response>.value();
   }
 }

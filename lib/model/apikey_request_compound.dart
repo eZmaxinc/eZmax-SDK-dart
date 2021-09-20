@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 
 part of openapi.api;
@@ -28,6 +29,7 @@ class ApikeyRequestCompound {
 
   @override
   int get hashCode =>
+  // ignore: unnecessary_parenthesis
     (fkiUserID == null ? 0 : fkiUserID.hashCode) +
     (objApikeyDescription == null ? 0 : objApikeyDescription.hashCode);
 
@@ -42,34 +44,47 @@ class ApikeyRequestCompound {
   }
 
   /// Returns a new [ApikeyRequestCompound] instance and imports its values from
-  /// [json] if it's non-null, null if [json] is null.
-  static ApikeyRequestCompound fromJson(Map<String, dynamic> json) => json == null
-    ? null
-    : ApikeyRequestCompound(
-        fkiUserID: json[r'fkiUserID'],
+  /// [value] if it's a [Map], null otherwise.
+  // ignore: prefer_constructors_over_static_methods
+  static ApikeyRequestCompound fromJson(dynamic value) {
+    if (value is Map) {
+      final json = value.cast<String, dynamic>();
+      return ApikeyRequestCompound(
+        fkiUserID: mapValueOfType<int>(json, r'fkiUserID'),
         objApikeyDescription: MultilingualApikeyDescription.fromJson(json[r'objApikeyDescription']),
-    );
+      );
+    }
+    return null;
+  }
 
-  static List<ApikeyRequestCompound> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <ApikeyRequestCompound>[]
-      : json.map((v) => ApikeyRequestCompound.fromJson(v)).toList(growable: true == growable);
+  static List<ApikeyRequestCompound> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(ApikeyRequestCompound.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <ApikeyRequestCompound>[];
 
-  static Map<String, ApikeyRequestCompound> mapFromJson(Map<String, dynamic> json) {
+  static Map<String, ApikeyRequestCompound> mapFromJson(dynamic json) {
     final map = <String, ApikeyRequestCompound>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) => map[key] = ApikeyRequestCompound.fromJson(v));
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) => map[key] = ApikeyRequestCompound.fromJson(value));
     }
     return map;
   }
 
   // maps a json object with a list of ApikeyRequestCompound-objects as value to a dart map
-  static Map<String, List<ApikeyRequestCompound>> mapListFromJson(Map<String, dynamic> json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<ApikeyRequestCompound>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
     final map = <String, List<ApikeyRequestCompound>>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) {
-        map[key] = ApikeyRequestCompound.listFromJson(v, emptyIsNull: emptyIsNull, growable: growable);
-      });
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) {
+          map[key] = ApikeyRequestCompound.listFromJson(
+            value,
+            emptyIsNull: emptyIsNull,
+            growable: growable,
+          );
+        });
     }
     return map;
   }

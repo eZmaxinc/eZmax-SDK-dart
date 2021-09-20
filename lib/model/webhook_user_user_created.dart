@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 
 part of openapi.api;
@@ -32,6 +33,7 @@ class WebhookUserUserCreated {
 
   @override
   int get hashCode =>
+  // ignore: unnecessary_parenthesis
     (objUser == null ? 0 : objUser.hashCode) +
     (objWebhook == null ? 0 : objWebhook.hashCode) +
     (aObjAttempt == null ? 0 : aObjAttempt.hashCode);
@@ -48,35 +50,48 @@ class WebhookUserUserCreated {
   }
 
   /// Returns a new [WebhookUserUserCreated] instance and imports its values from
-  /// [json] if it's non-null, null if [json] is null.
-  static WebhookUserUserCreated fromJson(Map<String, dynamic> json) => json == null
-    ? null
-    : WebhookUserUserCreated(
+  /// [value] if it's a [Map], null otherwise.
+  // ignore: prefer_constructors_over_static_methods
+  static WebhookUserUserCreated fromJson(dynamic value) {
+    if (value is Map) {
+      final json = value.cast<String, dynamic>();
+      return WebhookUserUserCreated(
         objUser: UserResponse.fromJson(json[r'objUser']),
         objWebhook: WebhookResponse.fromJson(json[r'objWebhook']),
         aObjAttempt: AttemptResponse.listFromJson(json[r'a_objAttempt']),
-    );
+      );
+    }
+    return null;
+  }
 
-  static List<WebhookUserUserCreated> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <WebhookUserUserCreated>[]
-      : json.map((v) => WebhookUserUserCreated.fromJson(v)).toList(growable: true == growable);
+  static List<WebhookUserUserCreated> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(WebhookUserUserCreated.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <WebhookUserUserCreated>[];
 
-  static Map<String, WebhookUserUserCreated> mapFromJson(Map<String, dynamic> json) {
+  static Map<String, WebhookUserUserCreated> mapFromJson(dynamic json) {
     final map = <String, WebhookUserUserCreated>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) => map[key] = WebhookUserUserCreated.fromJson(v));
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) => map[key] = WebhookUserUserCreated.fromJson(value));
     }
     return map;
   }
 
   // maps a json object with a list of WebhookUserUserCreated-objects as value to a dart map
-  static Map<String, List<WebhookUserUserCreated>> mapListFromJson(Map<String, dynamic> json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<WebhookUserUserCreated>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
     final map = <String, List<WebhookUserUserCreated>>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) {
-        map[key] = WebhookUserUserCreated.listFromJson(v, emptyIsNull: emptyIsNull, growable: growable);
-      });
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) {
+          map[key] = WebhookUserUserCreated.listFromJson(
+            value,
+            emptyIsNull: emptyIsNull,
+            growable: growable,
+          );
+        });
     }
     return map;
   }

@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 
 part of openapi.api;
@@ -18,7 +19,7 @@ class FieldEEzsignfolderStep {
   final String value;
 
   @override
-  String toString() => value;
+  String toString() => value ?? '';
 
   String toJson() => value;
 
@@ -44,20 +45,18 @@ class FieldEEzsignfolderStep {
   static FieldEEzsignfolderStep fromJson(dynamic value) =>
     FieldEEzsignfolderStepTypeTransformer().decode(value);
 
-  static List<FieldEEzsignfolderStep> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <FieldEEzsignfolderStep>[]
-      : json
-          .map((value) => FieldEEzsignfolderStep.fromJson(value))
-          .toList(growable: true == growable);
+  static List<FieldEEzsignfolderStep> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(FieldEEzsignfolderStep.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <FieldEEzsignfolderStep>[];
 }
 
 /// Transformation class that can [encode] an instance of [FieldEEzsignfolderStep] to String,
 /// and [decode] dynamic data back to [FieldEEzsignfolderStep].
 class FieldEEzsignfolderStepTypeTransformer {
-  const FieldEEzsignfolderStepTypeTransformer._();
+  factory FieldEEzsignfolderStepTypeTransformer() => _instance ??= const FieldEEzsignfolderStepTypeTransformer._();
 
-  factory FieldEEzsignfolderStepTypeTransformer() => _instance ??= FieldEEzsignfolderStepTypeTransformer._();
+  const FieldEEzsignfolderStepTypeTransformer._();
 
   String encode(FieldEEzsignfolderStep data) => data.value;
 
@@ -70,18 +69,20 @@ class FieldEEzsignfolderStepTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsignfolderStep decode(dynamic data, {bool allowNull}) {
-    switch (data) {
-      case r'Unsent': return FieldEEzsignfolderStep.unsent;
-      case r'Sent': return FieldEEzsignfolderStep.sent;
-      case r'PartiallySigned': return FieldEEzsignfolderStep.partiallySigned;
-      case r'Expired': return FieldEEzsignfolderStep.expired;
-      case r'Signed': return FieldEEzsignfolderStep.signed;
-      case r'Completed': return FieldEEzsignfolderStep.completed;
-      case r'Archived': return FieldEEzsignfolderStep.archived;
-      default:
-        if (allowNull == false) {
-          throw ArgumentError('Unknown enum value to decode: $data');
-        }
+    if (data != null) {
+      switch (data.toString()) {
+        case r'Unsent': return FieldEEzsignfolderStep.unsent;
+        case r'Sent': return FieldEEzsignfolderStep.sent;
+        case r'PartiallySigned': return FieldEEzsignfolderStep.partiallySigned;
+        case r'Expired': return FieldEEzsignfolderStep.expired;
+        case r'Signed': return FieldEEzsignfolderStep.signed;
+        case r'Completed': return FieldEEzsignfolderStep.completed;
+        case r'Archived': return FieldEEzsignfolderStep.archived;
+        default:
+          if (allowNull == false) {
+            throw ArgumentError('Unknown enum value to decode: $data');
+          }
+      }
     }
     return null;
   }
@@ -89,3 +90,4 @@ class FieldEEzsignfolderStepTypeTransformer {
   /// Singleton [FieldEEzsignfolderStepTypeTransformer] instance.
   static FieldEEzsignfolderStepTypeTransformer _instance;
 }
+

@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 
 part of openapi.api;
@@ -29,6 +30,7 @@ class MultilingualApikeyDescription {
 
   @override
   int get hashCode =>
+  // ignore: unnecessary_parenthesis
     (sApikeyDescription1 == null ? 0 : sApikeyDescription1.hashCode) +
     (sApikeyDescription2 == null ? 0 : sApikeyDescription2.hashCode);
 
@@ -47,34 +49,47 @@ class MultilingualApikeyDescription {
   }
 
   /// Returns a new [MultilingualApikeyDescription] instance and imports its values from
-  /// [json] if it's non-null, null if [json] is null.
-  static MultilingualApikeyDescription fromJson(Map<String, dynamic> json) => json == null
-    ? null
-    : MultilingualApikeyDescription(
-        sApikeyDescription1: json[r'sApikeyDescription1'],
-        sApikeyDescription2: json[r'sApikeyDescription2'],
-    );
+  /// [value] if it's a [Map], null otherwise.
+  // ignore: prefer_constructors_over_static_methods
+  static MultilingualApikeyDescription fromJson(dynamic value) {
+    if (value is Map) {
+      final json = value.cast<String, dynamic>();
+      return MultilingualApikeyDescription(
+        sApikeyDescription1: mapValueOfType<String>(json, r'sApikeyDescription1'),
+        sApikeyDescription2: mapValueOfType<String>(json, r'sApikeyDescription2'),
+      );
+    }
+    return null;
+  }
 
-  static List<MultilingualApikeyDescription> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <MultilingualApikeyDescription>[]
-      : json.map((v) => MultilingualApikeyDescription.fromJson(v)).toList(growable: true == growable);
+  static List<MultilingualApikeyDescription> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(MultilingualApikeyDescription.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <MultilingualApikeyDescription>[];
 
-  static Map<String, MultilingualApikeyDescription> mapFromJson(Map<String, dynamic> json) {
+  static Map<String, MultilingualApikeyDescription> mapFromJson(dynamic json) {
     final map = <String, MultilingualApikeyDescription>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) => map[key] = MultilingualApikeyDescription.fromJson(v));
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) => map[key] = MultilingualApikeyDescription.fromJson(value));
     }
     return map;
   }
 
   // maps a json object with a list of MultilingualApikeyDescription-objects as value to a dart map
-  static Map<String, List<MultilingualApikeyDescription>> mapListFromJson(Map<String, dynamic> json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<MultilingualApikeyDescription>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
     final map = <String, List<MultilingualApikeyDescription>>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) {
-        map[key] = MultilingualApikeyDescription.listFromJson(v, emptyIsNull: emptyIsNull, growable: growable);
-      });
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) {
+          map[key] = MultilingualApikeyDescription.listFromJson(
+            value,
+            emptyIsNull: emptyIsNull,
+            growable: growable,
+          );
+        });
     }
     return map;
   }

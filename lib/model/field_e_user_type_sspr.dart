@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 
 part of openapi.api;
@@ -18,7 +19,7 @@ class FieldEUserTypeSSPR {
   final String value;
 
   @override
-  String toString() => value;
+  String toString() => value ?? '';
 
   String toJson() => value;
 
@@ -34,20 +35,18 @@ class FieldEUserTypeSSPR {
   static FieldEUserTypeSSPR fromJson(dynamic value) =>
     FieldEUserTypeSSPRTypeTransformer().decode(value);
 
-  static List<FieldEUserTypeSSPR> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <FieldEUserTypeSSPR>[]
-      : json
-          .map((value) => FieldEUserTypeSSPR.fromJson(value))
-          .toList(growable: true == growable);
+  static List<FieldEUserTypeSSPR> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(FieldEUserTypeSSPR.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <FieldEUserTypeSSPR>[];
 }
 
 /// Transformation class that can [encode] an instance of [FieldEUserTypeSSPR] to String,
 /// and [decode] dynamic data back to [FieldEUserTypeSSPR].
 class FieldEUserTypeSSPRTypeTransformer {
-  const FieldEUserTypeSSPRTypeTransformer._();
+  factory FieldEUserTypeSSPRTypeTransformer() => _instance ??= const FieldEUserTypeSSPRTypeTransformer._();
 
-  factory FieldEUserTypeSSPRTypeTransformer() => _instance ??= FieldEUserTypeSSPRTypeTransformer._();
+  const FieldEUserTypeSSPRTypeTransformer._();
 
   String encode(FieldEUserTypeSSPR data) => data.value;
 
@@ -60,13 +59,15 @@ class FieldEUserTypeSSPRTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEUserTypeSSPR decode(dynamic data, {bool allowNull}) {
-    switch (data) {
-      case r'EzsignUser': return FieldEUserTypeSSPR.ezsignUser;
-      case r'Native': return FieldEUserTypeSSPR.native_;
-      default:
-        if (allowNull == false) {
-          throw ArgumentError('Unknown enum value to decode: $data');
-        }
+    if (data != null) {
+      switch (data.toString()) {
+        case r'EzsignUser': return FieldEUserTypeSSPR.ezsignUser;
+        case r'Native': return FieldEUserTypeSSPR.native_;
+        default:
+          if (allowNull == false) {
+            throw ArgumentError('Unknown enum value to decode: $data');
+          }
+      }
     }
     return null;
   }
@@ -74,3 +75,4 @@ class FieldEUserTypeSSPRTypeTransformer {
   /// Singleton [FieldEUserTypeSSPRTypeTransformer] instance.
   static FieldEUserTypeSSPRTypeTransformer _instance;
 }
+

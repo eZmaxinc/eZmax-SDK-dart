@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 
 part of openapi.api;
@@ -28,15 +29,17 @@ class ObjectFranchiseofficeApi {
   ///
   /// * [String] sQuery:
   ///   Allow to filter on the option value
-  Future<Response> franchiseofficeGetAutocompleteV1WithHttpInfo(String sSelector, { String sQuery }) async {
+  Future<Response> franchiseofficeGetAutocompleteV1WithHttpInfo(String sSelector, { String sQuery, }) async {
     // Verify required params are set.
     if (sSelector == null) {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: sSelector');
     }
 
+    // ignore: prefer_const_declarations
     final path = r'/1/object/franchiseoffice/getAutocomplete/{sSelector}'
-      .replaceAll('{' + 'sSelector' + '}', sSelector.toString());
+      .replaceAll('{sSelector}', sSelector);
 
+    // ignore: prefer_final_locals
     Object postBody;
 
     final queryParams = <QueryParam>[];
@@ -47,19 +50,18 @@ class ObjectFranchiseofficeApi {
       queryParams.addAll(_convertParametersForCollectionFormat('', 'sQuery', sQuery));
     }
 
-    final contentTypes = <String>[];
-    final nullableContentType = contentTypes.isNotEmpty ? contentTypes[0] : null;
-    final authNames = <String>['Authorization'];
+    const authNames = <String>['Authorization'];
+    const contentTypes = <String>[];
 
 
-    return await apiClient.invokeAPI(
+    return apiClient.invokeAPI(
       path,
       'GET',
       queryParams,
       postBody,
       headerParams,
       formParams,
-      nullableContentType,
+      contentTypes.isEmpty ? null : contentTypes[0],
       authNames,
     );
   }
@@ -75,8 +77,8 @@ class ObjectFranchiseofficeApi {
   ///
   /// * [String] sQuery:
   ///   Allow to filter on the option value
-  Future<CommonGetAutocompleteV1Response> franchiseofficeGetAutocompleteV1(String sSelector, { String sQuery }) async {
-    final response = await franchiseofficeGetAutocompleteV1WithHttpInfo(sSelector,  sQuery: sQuery );
+  Future<CommonGetAutocompleteV1Response> franchiseofficeGetAutocompleteV1(String sSelector, { String sQuery, }) async {
+    final response = await franchiseofficeGetAutocompleteV1WithHttpInfo(sSelector,  sQuery: sQuery, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -86,6 +88,6 @@ class ObjectFranchiseofficeApi {
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonGetAutocompleteV1Response',) as CommonGetAutocompleteV1Response;
         }
-    return Future<CommonGetAutocompleteV1Response>.value(null);
+    return Future<CommonGetAutocompleteV1Response>.value();
   }
 }

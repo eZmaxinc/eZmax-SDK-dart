@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 
 part of openapi.api;
@@ -28,15 +29,17 @@ class GlobalCustomerApi {
   ///
   /// * [String] sInfrastructureproductCode:
   ///   The infrastructure product Code  If undefined, \"appcluster01\" is assumed
-  Future<Response> globalCustomerGetEndpointV1WithHttpInfo(String pksCustomerCode, { String sInfrastructureproductCode }) async {
+  Future<Response> globalCustomerGetEndpointV1WithHttpInfo(String pksCustomerCode, { String sInfrastructureproductCode, }) async {
     // Verify required params are set.
     if (pksCustomerCode == null) {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: pksCustomerCode');
     }
 
+    // ignore: prefer_const_declarations
     final path = r'/1/customer/{pksCustomerCode}/endpoint'
-      .replaceAll('{' + 'pksCustomerCode' + '}', pksCustomerCode.toString());
+      .replaceAll('{pksCustomerCode}', pksCustomerCode);
 
+    // ignore: prefer_final_locals
     Object postBody;
 
     final queryParams = <QueryParam>[];
@@ -47,19 +50,18 @@ class GlobalCustomerApi {
       queryParams.addAll(_convertParametersForCollectionFormat('', 'sInfrastructureproductCode', sInfrastructureproductCode));
     }
 
-    final contentTypes = <String>[];
-    final nullableContentType = contentTypes.isNotEmpty ? contentTypes[0] : null;
-    final authNames = <String>['Authorization'];
+    const authNames = <String>['Authorization'];
+    const contentTypes = <String>[];
 
 
-    return await apiClient.invokeAPI(
+    return apiClient.invokeAPI(
       path,
       'GET',
       queryParams,
       postBody,
       headerParams,
       formParams,
-      nullableContentType,
+      contentTypes.isEmpty ? null : contentTypes[0],
       authNames,
     );
   }
@@ -75,8 +77,8 @@ class GlobalCustomerApi {
   ///
   /// * [String] sInfrastructureproductCode:
   ///   The infrastructure product Code  If undefined, \"appcluster01\" is assumed
-  Future<GlobalCustomerGetEndpointV1Response> globalCustomerGetEndpointV1(String pksCustomerCode, { String sInfrastructureproductCode }) async {
-    final response = await globalCustomerGetEndpointV1WithHttpInfo(pksCustomerCode,  sInfrastructureproductCode: sInfrastructureproductCode );
+  Future<GlobalCustomerGetEndpointV1Response> globalCustomerGetEndpointV1(String pksCustomerCode, { String sInfrastructureproductCode, }) async {
+    final response = await globalCustomerGetEndpointV1WithHttpInfo(pksCustomerCode,  sInfrastructureproductCode: sInfrastructureproductCode, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -86,6 +88,6 @@ class GlobalCustomerApi {
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GlobalCustomerGetEndpointV1Response',) as GlobalCustomerGetEndpointV1Response;
         }
-    return Future<GlobalCustomerGetEndpointV1Response>.value(null);
+    return Future<GlobalCustomerGetEndpointV1Response>.value();
   }
 }

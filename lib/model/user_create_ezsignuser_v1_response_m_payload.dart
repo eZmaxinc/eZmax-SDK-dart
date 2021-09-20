@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 
 part of openapi.api;
@@ -29,6 +30,7 @@ class UserCreateEzsignuserV1ResponseMPayload {
 
   @override
   int get hashCode =>
+  // ignore: unnecessary_parenthesis
     (aSEmailAddressSuccess == null ? 0 : aSEmailAddressSuccess.hashCode) +
     (aSEmailAddressFailure == null ? 0 : aSEmailAddressFailure.hashCode);
 
@@ -43,38 +45,51 @@ class UserCreateEzsignuserV1ResponseMPayload {
   }
 
   /// Returns a new [UserCreateEzsignuserV1ResponseMPayload] instance and imports its values from
-  /// [json] if it's non-null, null if [json] is null.
-  static UserCreateEzsignuserV1ResponseMPayload fromJson(Map<String, dynamic> json) => json == null
-    ? null
-    : UserCreateEzsignuserV1ResponseMPayload(
-        aSEmailAddressSuccess: json[r'a_sEmailAddressSuccess'] == null
-          ? null
-          : (json[r'a_sEmailAddressSuccess'] as List).cast<String>(),
-        aSEmailAddressFailure: json[r'a_sEmailAddressFailure'] == null
-          ? null
-          : (json[r'a_sEmailAddressFailure'] as List).cast<String>(),
-    );
+  /// [value] if it's a [Map], null otherwise.
+  // ignore: prefer_constructors_over_static_methods
+  static UserCreateEzsignuserV1ResponseMPayload fromJson(dynamic value) {
+    if (value is Map) {
+      final json = value.cast<String, dynamic>();
+      return UserCreateEzsignuserV1ResponseMPayload(
+        aSEmailAddressSuccess: json[r'a_sEmailAddressSuccess'] is List
+          ? (json[r'a_sEmailAddressSuccess'] as List).cast<String>()
+          : null,
+        aSEmailAddressFailure: json[r'a_sEmailAddressFailure'] is List
+          ? (json[r'a_sEmailAddressFailure'] as List).cast<String>()
+          : null,
+      );
+    }
+    return null;
+  }
 
-  static List<UserCreateEzsignuserV1ResponseMPayload> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <UserCreateEzsignuserV1ResponseMPayload>[]
-      : json.map((v) => UserCreateEzsignuserV1ResponseMPayload.fromJson(v)).toList(growable: true == growable);
+  static List<UserCreateEzsignuserV1ResponseMPayload> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(UserCreateEzsignuserV1ResponseMPayload.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <UserCreateEzsignuserV1ResponseMPayload>[];
 
-  static Map<String, UserCreateEzsignuserV1ResponseMPayload> mapFromJson(Map<String, dynamic> json) {
+  static Map<String, UserCreateEzsignuserV1ResponseMPayload> mapFromJson(dynamic json) {
     final map = <String, UserCreateEzsignuserV1ResponseMPayload>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) => map[key] = UserCreateEzsignuserV1ResponseMPayload.fromJson(v));
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) => map[key] = UserCreateEzsignuserV1ResponseMPayload.fromJson(value));
     }
     return map;
   }
 
   // maps a json object with a list of UserCreateEzsignuserV1ResponseMPayload-objects as value to a dart map
-  static Map<String, List<UserCreateEzsignuserV1ResponseMPayload>> mapListFromJson(Map<String, dynamic> json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<UserCreateEzsignuserV1ResponseMPayload>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
     final map = <String, List<UserCreateEzsignuserV1ResponseMPayload>>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) {
-        map[key] = UserCreateEzsignuserV1ResponseMPayload.listFromJson(v, emptyIsNull: emptyIsNull, growable: growable);
-      });
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) {
+          map[key] = UserCreateEzsignuserV1ResponseMPayload.listFromJson(
+            value,
+            emptyIsNull: emptyIsNull,
+            growable: growable,
+          );
+        });
     }
     return map;
   }

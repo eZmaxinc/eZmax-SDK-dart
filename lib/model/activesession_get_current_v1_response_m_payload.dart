@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 
 part of openapi.api;
@@ -66,6 +67,7 @@ class ActivesessionGetCurrentV1ResponseMPayload {
 
   @override
   int get hashCode =>
+  // ignore: unnecessary_parenthesis
     (sCustomerCode == null ? 0 : sCustomerCode.hashCode) +
     (eActivesessionSessiontype == null ? 0 : eActivesessionSessiontype.hashCode) +
     (fkiLanguageID == null ? 0 : fkiLanguageID.hashCode) +
@@ -94,45 +96,58 @@ class ActivesessionGetCurrentV1ResponseMPayload {
   }
 
   /// Returns a new [ActivesessionGetCurrentV1ResponseMPayload] instance and imports its values from
-  /// [json] if it's non-null, null if [json] is null.
-  static ActivesessionGetCurrentV1ResponseMPayload fromJson(Map<String, dynamic> json) => json == null
-    ? null
-    : ActivesessionGetCurrentV1ResponseMPayload(
-        sCustomerCode: json[r'sCustomerCode'],
+  /// [value] if it's a [Map], null otherwise.
+  // ignore: prefer_constructors_over_static_methods
+  static ActivesessionGetCurrentV1ResponseMPayload fromJson(dynamic value) {
+    if (value is Map) {
+      final json = value.cast<String, dynamic>();
+      return ActivesessionGetCurrentV1ResponseMPayload(
+        sCustomerCode: mapValueOfType<String>(json, r'sCustomerCode'),
         eActivesessionSessiontype: ActivesessionGetCurrentV1ResponseMPayloadEActivesessionSessiontypeEnum.fromJson(json[r'eActivesessionSessiontype']),
-        fkiLanguageID: json[r'fkiLanguageID'],
-        sCompanyNameX: json[r'sCompanyNameX'],
-        sDepartmentNameX: json[r'sDepartmentNameX'],
-        aRegisteredModules: json[r'a_RegisteredModules'] == null
-          ? null
-          : (json[r'a_RegisteredModules'] as List).cast<String>(),
-        aPermissions: json[r'a_Permissions'] == null
-          ? null
-          : (json[r'a_Permissions'] as List).cast<int>(),
-        fkiUserID: json[r'fkiUserID'],
-        fkiApikeyID: json[r'fkiApikeyID'],
-    );
+        fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID'),
+        sCompanyNameX: mapValueOfType<String>(json, r'sCompanyNameX'),
+        sDepartmentNameX: mapValueOfType<String>(json, r'sDepartmentNameX'),
+        aRegisteredModules: json[r'a_RegisteredModules'] is List
+          ? (json[r'a_RegisteredModules'] as List).cast<String>()
+          : null,
+        aPermissions: json[r'a_Permissions'] is List
+          ? (json[r'a_Permissions'] as List).cast<int>()
+          : null,
+        fkiUserID: mapValueOfType<int>(json, r'fkiUserID'),
+        fkiApikeyID: mapValueOfType<int>(json, r'fkiApikeyID'),
+      );
+    }
+    return null;
+  }
 
-  static List<ActivesessionGetCurrentV1ResponseMPayload> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <ActivesessionGetCurrentV1ResponseMPayload>[]
-      : json.map((v) => ActivesessionGetCurrentV1ResponseMPayload.fromJson(v)).toList(growable: true == growable);
+  static List<ActivesessionGetCurrentV1ResponseMPayload> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(ActivesessionGetCurrentV1ResponseMPayload.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <ActivesessionGetCurrentV1ResponseMPayload>[];
 
-  static Map<String, ActivesessionGetCurrentV1ResponseMPayload> mapFromJson(Map<String, dynamic> json) {
+  static Map<String, ActivesessionGetCurrentV1ResponseMPayload> mapFromJson(dynamic json) {
     final map = <String, ActivesessionGetCurrentV1ResponseMPayload>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) => map[key] = ActivesessionGetCurrentV1ResponseMPayload.fromJson(v));
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) => map[key] = ActivesessionGetCurrentV1ResponseMPayload.fromJson(value));
     }
     return map;
   }
 
   // maps a json object with a list of ActivesessionGetCurrentV1ResponseMPayload-objects as value to a dart map
-  static Map<String, List<ActivesessionGetCurrentV1ResponseMPayload>> mapListFromJson(Map<String, dynamic> json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<ActivesessionGetCurrentV1ResponseMPayload>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
     final map = <String, List<ActivesessionGetCurrentV1ResponseMPayload>>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) {
-        map[key] = ActivesessionGetCurrentV1ResponseMPayload.listFromJson(v, emptyIsNull: emptyIsNull, growable: growable);
-      });
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) {
+          map[key] = ActivesessionGetCurrentV1ResponseMPayload.listFromJson(
+            value,
+            emptyIsNull: emptyIsNull,
+            growable: growable,
+          );
+        });
     }
     return map;
   }
@@ -147,7 +162,7 @@ class ActivesessionGetCurrentV1ResponseMPayloadEActivesessionSessiontypeEnum {
   final String value;
 
   @override
-  String toString() => value;
+  String toString() => value ?? '';
 
   String toJson() => value;
 
@@ -161,20 +176,18 @@ class ActivesessionGetCurrentV1ResponseMPayloadEActivesessionSessiontypeEnum {
   static ActivesessionGetCurrentV1ResponseMPayloadEActivesessionSessiontypeEnum fromJson(dynamic value) =>
     ActivesessionGetCurrentV1ResponseMPayloadEActivesessionSessiontypeEnumTypeTransformer().decode(value);
 
-  static List<ActivesessionGetCurrentV1ResponseMPayloadEActivesessionSessiontypeEnum> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <ActivesessionGetCurrentV1ResponseMPayloadEActivesessionSessiontypeEnum>[]
-      : json
-          .map((value) => ActivesessionGetCurrentV1ResponseMPayloadEActivesessionSessiontypeEnum.fromJson(value))
-          .toList(growable: true == growable);
+  static List<ActivesessionGetCurrentV1ResponseMPayloadEActivesessionSessiontypeEnum> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(ActivesessionGetCurrentV1ResponseMPayloadEActivesessionSessiontypeEnum.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <ActivesessionGetCurrentV1ResponseMPayloadEActivesessionSessiontypeEnum>[];
 }
 
 /// Transformation class that can [encode] an instance of [ActivesessionGetCurrentV1ResponseMPayloadEActivesessionSessiontypeEnum] to String,
 /// and [decode] dynamic data back to [ActivesessionGetCurrentV1ResponseMPayloadEActivesessionSessiontypeEnum].
 class ActivesessionGetCurrentV1ResponseMPayloadEActivesessionSessiontypeEnumTypeTransformer {
-  const ActivesessionGetCurrentV1ResponseMPayloadEActivesessionSessiontypeEnumTypeTransformer._();
+  factory ActivesessionGetCurrentV1ResponseMPayloadEActivesessionSessiontypeEnumTypeTransformer() => _instance ??= const ActivesessionGetCurrentV1ResponseMPayloadEActivesessionSessiontypeEnumTypeTransformer._();
 
-  factory ActivesessionGetCurrentV1ResponseMPayloadEActivesessionSessiontypeEnumTypeTransformer() => _instance ??= ActivesessionGetCurrentV1ResponseMPayloadEActivesessionSessiontypeEnumTypeTransformer._();
+  const ActivesessionGetCurrentV1ResponseMPayloadEActivesessionSessiontypeEnumTypeTransformer._();
 
   String encode(ActivesessionGetCurrentV1ResponseMPayloadEActivesessionSessiontypeEnum data) => data.value;
 
@@ -187,12 +200,14 @@ class ActivesessionGetCurrentV1ResponseMPayloadEActivesessionSessiontypeEnumType
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   ActivesessionGetCurrentV1ResponseMPayloadEActivesessionSessiontypeEnum decode(dynamic data, {bool allowNull}) {
-    switch (data) {
-      case r'Normal': return ActivesessionGetCurrentV1ResponseMPayloadEActivesessionSessiontypeEnum.normal;
-      default:
-        if (allowNull == false) {
-          throw ArgumentError('Unknown enum value to decode: $data');
-        }
+    if (data != null) {
+      switch (data.toString()) {
+        case r'Normal': return ActivesessionGetCurrentV1ResponseMPayloadEActivesessionSessiontypeEnum.normal;
+        default:
+          if (allowNull == false) {
+            throw ArgumentError('Unknown enum value to decode: $data');
+          }
+      }
     }
     return null;
   }
@@ -200,4 +215,5 @@ class ActivesessionGetCurrentV1ResponseMPayloadEActivesessionSessiontypeEnumType
   /// Singleton [ActivesessionGetCurrentV1ResponseMPayloadEActivesessionSessiontypeEnumTypeTransformer] instance.
   static ActivesessionGetCurrentV1ResponseMPayloadEActivesessionSessiontypeEnumTypeTransformer _instance;
 }
+
 

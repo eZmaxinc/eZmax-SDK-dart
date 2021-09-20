@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 
 part of openapi.api;
@@ -55,6 +56,7 @@ class ContactRequestCompound {
 
   @override
   int get hashCode =>
+  // ignore: unnecessary_parenthesis
     (objContactinformations == null ? 0 : objContactinformations.hashCode) +
     (fkiContacttitleID == null ? 0 : fkiContacttitleID.hashCode) +
     (fkiLanguageID == null ? 0 : fkiLanguageID.hashCode) +
@@ -81,39 +83,52 @@ class ContactRequestCompound {
   }
 
   /// Returns a new [ContactRequestCompound] instance and imports its values from
-  /// [json] if it's non-null, null if [json] is null.
-  static ContactRequestCompound fromJson(Map<String, dynamic> json) => json == null
-    ? null
-    : ContactRequestCompound(
+  /// [value] if it's a [Map], null otherwise.
+  // ignore: prefer_constructors_over_static_methods
+  static ContactRequestCompound fromJson(dynamic value) {
+    if (value is Map) {
+      final json = value.cast<String, dynamic>();
+      return ContactRequestCompound(
         objContactinformations: ContactinformationsRequestCompound.fromJson(json[r'objContactinformations']),
-        fkiContacttitleID: json[r'fkiContacttitleID'],
-        fkiLanguageID: json[r'fkiLanguageID'],
-        sContactFirstname: json[r'sContactFirstname'],
-        sContactLastname: json[r'sContactLastname'],
-        sContactCompany: json[r'sContactCompany'],
-        dtContactBirthdate: json[r'dtContactBirthdate'],
-    );
+        fkiContacttitleID: mapValueOfType<int>(json, r'fkiContacttitleID'),
+        fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID'),
+        sContactFirstname: mapValueOfType<String>(json, r'sContactFirstname'),
+        sContactLastname: mapValueOfType<String>(json, r'sContactLastname'),
+        sContactCompany: mapValueOfType<String>(json, r'sContactCompany'),
+        dtContactBirthdate: mapValueOfType<String>(json, r'dtContactBirthdate'),
+      );
+    }
+    return null;
+  }
 
-  static List<ContactRequestCompound> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <ContactRequestCompound>[]
-      : json.map((v) => ContactRequestCompound.fromJson(v)).toList(growable: true == growable);
+  static List<ContactRequestCompound> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(ContactRequestCompound.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <ContactRequestCompound>[];
 
-  static Map<String, ContactRequestCompound> mapFromJson(Map<String, dynamic> json) {
+  static Map<String, ContactRequestCompound> mapFromJson(dynamic json) {
     final map = <String, ContactRequestCompound>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) => map[key] = ContactRequestCompound.fromJson(v));
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) => map[key] = ContactRequestCompound.fromJson(value));
     }
     return map;
   }
 
   // maps a json object with a list of ContactRequestCompound-objects as value to a dart map
-  static Map<String, List<ContactRequestCompound>> mapListFromJson(Map<String, dynamic> json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<ContactRequestCompound>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
     final map = <String, List<ContactRequestCompound>>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) {
-        map[key] = ContactRequestCompound.listFromJson(v, emptyIsNull: emptyIsNull, growable: growable);
-      });
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) {
+          map[key] = ContactRequestCompound.listFromJson(
+            value,
+            emptyIsNull: emptyIsNull,
+            growable: growable,
+          );
+        });
     }
     return map;
   }

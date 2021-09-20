@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 
 part of openapi.api;
@@ -57,6 +58,7 @@ class EzsigndocumentRequestCompound {
 
   @override
   int get hashCode =>
+  // ignore: unnecessary_parenthesis
     (eEzsigndocumentSource == null ? 0 : eEzsigndocumentSource.hashCode) +
     (eEzsigndocumentFormat == null ? 0 : eEzsigndocumentFormat.hashCode) +
     (sEzsigndocumentBase64 == null ? 0 : sEzsigndocumentBase64.hashCode) +
@@ -83,39 +85,52 @@ class EzsigndocumentRequestCompound {
   }
 
   /// Returns a new [EzsigndocumentRequestCompound] instance and imports its values from
-  /// [json] if it's non-null, null if [json] is null.
-  static EzsigndocumentRequestCompound fromJson(Map<String, dynamic> json) => json == null
-    ? null
-    : EzsigndocumentRequestCompound(
+  /// [value] if it's a [Map], null otherwise.
+  // ignore: prefer_constructors_over_static_methods
+  static EzsigndocumentRequestCompound fromJson(dynamic value) {
+    if (value is Map) {
+      final json = value.cast<String, dynamic>();
+      return EzsigndocumentRequestCompound(
         eEzsigndocumentSource: EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum.fromJson(json[r'eEzsigndocumentSource']),
         eEzsigndocumentFormat: EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum.fromJson(json[r'eEzsigndocumentFormat']),
-        sEzsigndocumentBase64: json[r'sEzsigndocumentBase64'],
-        fkiEzsignfolderID: json[r'fkiEzsignfolderID'],
-        dtEzsigndocumentDuedate: json[r'dtEzsigndocumentDuedate'],
-        fkiLanguageID: json[r'fkiLanguageID'],
-        sEzsigndocumentName: json[r'sEzsigndocumentName'],
-    );
+        sEzsigndocumentBase64: mapValueOfType<String>(json, r'sEzsigndocumentBase64'),
+        fkiEzsignfolderID: mapValueOfType<int>(json, r'fkiEzsignfolderID'),
+        dtEzsigndocumentDuedate: mapValueOfType<String>(json, r'dtEzsigndocumentDuedate'),
+        fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID'),
+        sEzsigndocumentName: mapValueOfType<String>(json, r'sEzsigndocumentName'),
+      );
+    }
+    return null;
+  }
 
-  static List<EzsigndocumentRequestCompound> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <EzsigndocumentRequestCompound>[]
-      : json.map((v) => EzsigndocumentRequestCompound.fromJson(v)).toList(growable: true == growable);
+  static List<EzsigndocumentRequestCompound> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(EzsigndocumentRequestCompound.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <EzsigndocumentRequestCompound>[];
 
-  static Map<String, EzsigndocumentRequestCompound> mapFromJson(Map<String, dynamic> json) {
+  static Map<String, EzsigndocumentRequestCompound> mapFromJson(dynamic json) {
     final map = <String, EzsigndocumentRequestCompound>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) => map[key] = EzsigndocumentRequestCompound.fromJson(v));
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) => map[key] = EzsigndocumentRequestCompound.fromJson(value));
     }
     return map;
   }
 
   // maps a json object with a list of EzsigndocumentRequestCompound-objects as value to a dart map
-  static Map<String, List<EzsigndocumentRequestCompound>> mapListFromJson(Map<String, dynamic> json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<EzsigndocumentRequestCompound>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
     final map = <String, List<EzsigndocumentRequestCompound>>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) {
-        map[key] = EzsigndocumentRequestCompound.listFromJson(v, emptyIsNull: emptyIsNull, growable: growable);
-      });
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) {
+          map[key] = EzsigndocumentRequestCompound.listFromJson(
+            value,
+            emptyIsNull: emptyIsNull,
+            growable: growable,
+          );
+        });
     }
     return map;
   }
@@ -130,7 +145,7 @@ class EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum {
   final String value;
 
   @override
-  String toString() => value;
+  String toString() => value ?? '';
 
   String toJson() => value;
 
@@ -144,20 +159,18 @@ class EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum {
   static EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum fromJson(dynamic value) =>
     EzsigndocumentRequestCompoundEEzsigndocumentSourceEnumTypeTransformer().decode(value);
 
-  static List<EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum>[]
-      : json
-          .map((value) => EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum.fromJson(value))
-          .toList(growable: true == growable);
+  static List<EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum>[];
 }
 
 /// Transformation class that can [encode] an instance of [EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum] to String,
 /// and [decode] dynamic data back to [EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum].
 class EzsigndocumentRequestCompoundEEzsigndocumentSourceEnumTypeTransformer {
-  const EzsigndocumentRequestCompoundEEzsigndocumentSourceEnumTypeTransformer._();
+  factory EzsigndocumentRequestCompoundEEzsigndocumentSourceEnumTypeTransformer() => _instance ??= const EzsigndocumentRequestCompoundEEzsigndocumentSourceEnumTypeTransformer._();
 
-  factory EzsigndocumentRequestCompoundEEzsigndocumentSourceEnumTypeTransformer() => _instance ??= EzsigndocumentRequestCompoundEEzsigndocumentSourceEnumTypeTransformer._();
+  const EzsigndocumentRequestCompoundEEzsigndocumentSourceEnumTypeTransformer._();
 
   String encode(EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum data) => data.value;
 
@@ -170,12 +183,14 @@ class EzsigndocumentRequestCompoundEEzsigndocumentSourceEnumTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum decode(dynamic data, {bool allowNull}) {
-    switch (data) {
-      case r'Base64': return EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum.base64;
-      default:
-        if (allowNull == false) {
-          throw ArgumentError('Unknown enum value to decode: $data');
-        }
+    if (data != null) {
+      switch (data.toString()) {
+        case r'Base64': return EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum.base64;
+        default:
+          if (allowNull == false) {
+            throw ArgumentError('Unknown enum value to decode: $data');
+          }
+      }
     }
     return null;
   }
@@ -183,6 +198,7 @@ class EzsigndocumentRequestCompoundEEzsigndocumentSourceEnumTypeTransformer {
   /// Singleton [EzsigndocumentRequestCompoundEEzsigndocumentSourceEnumTypeTransformer] instance.
   static EzsigndocumentRequestCompoundEEzsigndocumentSourceEnumTypeTransformer _instance;
 }
+
 
 /// Indicates the format of the document.
 class EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum {
@@ -193,7 +209,7 @@ class EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum {
   final String value;
 
   @override
-  String toString() => value;
+  String toString() => value ?? '';
 
   String toJson() => value;
 
@@ -207,20 +223,18 @@ class EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum {
   static EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum fromJson(dynamic value) =>
     EzsigndocumentRequestCompoundEEzsigndocumentFormatEnumTypeTransformer().decode(value);
 
-  static List<EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum>[]
-      : json
-          .map((value) => EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum.fromJson(value))
-          .toList(growable: true == growable);
+  static List<EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum>[];
 }
 
 /// Transformation class that can [encode] an instance of [EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum] to String,
 /// and [decode] dynamic data back to [EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum].
 class EzsigndocumentRequestCompoundEEzsigndocumentFormatEnumTypeTransformer {
-  const EzsigndocumentRequestCompoundEEzsigndocumentFormatEnumTypeTransformer._();
+  factory EzsigndocumentRequestCompoundEEzsigndocumentFormatEnumTypeTransformer() => _instance ??= const EzsigndocumentRequestCompoundEEzsigndocumentFormatEnumTypeTransformer._();
 
-  factory EzsigndocumentRequestCompoundEEzsigndocumentFormatEnumTypeTransformer() => _instance ??= EzsigndocumentRequestCompoundEEzsigndocumentFormatEnumTypeTransformer._();
+  const EzsigndocumentRequestCompoundEEzsigndocumentFormatEnumTypeTransformer._();
 
   String encode(EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum data) => data.value;
 
@@ -233,12 +247,14 @@ class EzsigndocumentRequestCompoundEEzsigndocumentFormatEnumTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum decode(dynamic data, {bool allowNull}) {
-    switch (data) {
-      case r'Pdf': return EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum.pdf;
-      default:
-        if (allowNull == false) {
-          throw ArgumentError('Unknown enum value to decode: $data');
-        }
+    if (data != null) {
+      switch (data.toString()) {
+        case r'Pdf': return EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum.pdf;
+        default:
+          if (allowNull == false) {
+            throw ArgumentError('Unknown enum value to decode: $data');
+          }
+      }
     }
     return null;
   }
@@ -246,4 +262,5 @@ class EzsigndocumentRequestCompoundEEzsigndocumentFormatEnumTypeTransformer {
   /// Singleton [EzsigndocumentRequestCompoundEEzsigndocumentFormatEnumTypeTransformer] instance.
   static EzsigndocumentRequestCompoundEEzsigndocumentFormatEnumTypeTransformer _instance;
 }
+
 

@@ -8,7 +8,7 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objAddress** | [**AddressRequest**](AddressRequest.md) |  | [optional] 
+**objAddress** | [**AddressRequest**](AddressRequest.md) |  | 
 **aObjContact** | [**List<ContactRequestCompound>**](ContactRequestCompound.md) |  | [default to const []]
 **fkiFranchisebrokerID** | **int** | The unique ID of the Franchisebroker | 
 **fkiFranchisereferalincomeprogramID** | **int** | The unique ID of the Franchisereferalincomeprogram | 

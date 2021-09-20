@@ -22,7 +22,7 @@ Create a new Ezsignsignature
 
 The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
 // TODO Configure API key authorization: Authorization
@@ -33,7 +33,7 @@ import 'package:openapi/api.dart';
 final api_instance = ObjectEzsignsignatureApi();
 final ezsignsignatureCreateObjectV1Request = [List<EzsignsignatureCreateObjectV1Request>()]; // List<EzsignsignatureCreateObjectV1Request> | 
 
-try { 
+try {
     final result = api_instance.ezsignsignatureCreateObjectV1(ezsignsignatureCreateObjectV1Request);
     print(result);
 } catch (e) {
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 
 Delete an existing Ezsignsignature
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
 // TODO Configure API key authorization: Authorization
@@ -78,7 +78,7 @@ import 'package:openapi/api.dart';
 final api_instance = ObjectEzsignsignatureApi();
 final pkiEzsignsignatureID = 56; // int | The unique ID of the Ezsignsignature
 
-try { 
+try {
     final result = api_instance.ezsignsignatureDeleteObjectV1(pkiEzsignsignatureID);
     print(result);
 } catch (e) {
@@ -112,7 +112,9 @@ Name | Type | Description  | Notes
 
 Retrieve an existing Ezsignsignature's children IDs
 
-### Example 
+## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+
+### Example
 ```dart
 import 'package:openapi/api.dart';
 // TODO Configure API key authorization: Authorization
@@ -123,7 +125,7 @@ import 'package:openapi/api.dart';
 final api_instance = ObjectEzsignsignatureApi();
 final pkiEzsignsignatureID = 56; // int | The unique ID of the Ezsignsignature
 
-try { 
+try {
     api_instance.ezsignsignatureGetChildrenV1(pkiEzsignsignatureID);
 } catch (e) {
     print('Exception when calling ObjectEzsignsignatureApi->ezsignsignatureGetChildrenV1: $e\n');
@@ -156,7 +158,9 @@ void (empty response body)
 
 Retrieve an existing Ezsignsignature
 
-### Example 
+## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+
+### Example
 ```dart
 import 'package:openapi/api.dart';
 // TODO Configure API key authorization: Authorization
@@ -167,7 +171,7 @@ import 'package:openapi/api.dart';
 final api_instance = ObjectEzsignsignatureApi();
 final pkiEzsignsignatureID = 56; // int | The unique ID of the Ezsignsignature
 
-try { 
+try {
     final result = api_instance.ezsignsignatureGetObjectV1(pkiEzsignsignatureID);
     print(result);
 } catch (e) {

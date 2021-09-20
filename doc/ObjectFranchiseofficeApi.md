@@ -19,7 +19,7 @@ Retrieve Franchiseoffices and IDs
 
 Get the list of Franchiseoffices to be used in a dropdown or autocomplete control.
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
 // TODO Configure API key authorization: Authorization
@@ -31,7 +31,7 @@ final api_instance = ObjectFranchiseofficeApi();
 final sSelector = sSelector_example; // String | The type of Franchiseoffices to return
 final sQuery = sQuery_example; // String | Allow to filter on the option value
 
-try { 
+try {
     final result = api_instance.franchiseofficeGetAutocompleteV1(sSelector, sQuery);
     print(result);
 } catch (e) {

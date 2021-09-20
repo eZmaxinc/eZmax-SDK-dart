@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 
 part of openapi.api;
@@ -50,6 +51,7 @@ class SsprValidateTokenV1Request {
 
   @override
   int get hashCode =>
+  // ignore: unnecessary_parenthesis
     (pksCustomerCode == null ? 0 : pksCustomerCode.hashCode) +
     (fkiLanguageID == null ? 0 : fkiLanguageID.hashCode) +
     (eUserTypeSSPR == null ? 0 : eUserTypeSSPR.hashCode) +
@@ -76,38 +78,51 @@ class SsprValidateTokenV1Request {
   }
 
   /// Returns a new [SsprValidateTokenV1Request] instance and imports its values from
-  /// [json] if it's non-null, null if [json] is null.
-  static SsprValidateTokenV1Request fromJson(Map<String, dynamic> json) => json == null
-    ? null
-    : SsprValidateTokenV1Request(
-        pksCustomerCode: json[r'pksCustomerCode'],
-        fkiLanguageID: json[r'fkiLanguageID'],
+  /// [value] if it's a [Map], null otherwise.
+  // ignore: prefer_constructors_over_static_methods
+  static SsprValidateTokenV1Request fromJson(dynamic value) {
+    if (value is Map) {
+      final json = value.cast<String, dynamic>();
+      return SsprValidateTokenV1Request(
+        pksCustomerCode: mapValueOfType<String>(json, r'pksCustomerCode'),
+        fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID'),
         eUserTypeSSPR: FieldEUserTypeSSPR.fromJson(json[r'eUserTypeSSPR']),
-        sEmailAddress: json[r'sEmailAddress'],
-        sUserLoginname: json[r'sUserLoginname'],
-        binUserSSPRtoken: json[r'binUserSSPRtoken'],
-    );
+        sEmailAddress: mapValueOfType<String>(json, r'sEmailAddress'),
+        sUserLoginname: mapValueOfType<String>(json, r'sUserLoginname'),
+        binUserSSPRtoken: mapValueOfType<String>(json, r'binUserSSPRtoken'),
+      );
+    }
+    return null;
+  }
 
-  static List<SsprValidateTokenV1Request> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <SsprValidateTokenV1Request>[]
-      : json.map((v) => SsprValidateTokenV1Request.fromJson(v)).toList(growable: true == growable);
+  static List<SsprValidateTokenV1Request> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(SsprValidateTokenV1Request.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <SsprValidateTokenV1Request>[];
 
-  static Map<String, SsprValidateTokenV1Request> mapFromJson(Map<String, dynamic> json) {
+  static Map<String, SsprValidateTokenV1Request> mapFromJson(dynamic json) {
     final map = <String, SsprValidateTokenV1Request>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) => map[key] = SsprValidateTokenV1Request.fromJson(v));
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) => map[key] = SsprValidateTokenV1Request.fromJson(value));
     }
     return map;
   }
 
   // maps a json object with a list of SsprValidateTokenV1Request-objects as value to a dart map
-  static Map<String, List<SsprValidateTokenV1Request>> mapListFromJson(Map<String, dynamic> json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<SsprValidateTokenV1Request>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
     final map = <String, List<SsprValidateTokenV1Request>>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) {
-        map[key] = SsprValidateTokenV1Request.listFromJson(v, emptyIsNull: emptyIsNull, growable: growable);
-      });
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) {
+          map[key] = SsprValidateTokenV1Request.listFromJson(
+            value,
+            emptyIsNull: emptyIsNull,
+            growable: growable,
+          );
+        });
     }
     return map;
   }

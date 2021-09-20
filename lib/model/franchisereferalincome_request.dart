@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 
 part of openapi.api;
@@ -73,6 +74,7 @@ class FranchisereferalincomeRequest {
 
   @override
   int get hashCode =>
+  // ignore: unnecessary_parenthesis
     (fkiFranchisebrokerID == null ? 0 : fkiFranchisebrokerID.hashCode) +
     (fkiFranchisereferalincomeprogramID == null ? 0 : fkiFranchisereferalincomeprogramID.hashCode) +
     (fkiPeriodID == null ? 0 : fkiPeriodID.hashCode) +
@@ -105,43 +107,56 @@ class FranchisereferalincomeRequest {
   }
 
   /// Returns a new [FranchisereferalincomeRequest] instance and imports its values from
-  /// [json] if it's non-null, null if [json] is null.
-  static FranchisereferalincomeRequest fromJson(Map<String, dynamic> json) => json == null
-    ? null
-    : FranchisereferalincomeRequest(
-        fkiFranchisebrokerID: json[r'fkiFranchisebrokerID'],
-        fkiFranchisereferalincomeprogramID: json[r'fkiFranchisereferalincomeprogramID'],
-        fkiPeriodID: json[r'fkiPeriodID'],
-        dFranchisereferalincomeLoan: json[r'dFranchisereferalincomeLoan'],
-        dFranchisereferalincomeFranchiseamount: json[r'dFranchisereferalincomeFranchiseamount'],
-        dFranchisereferalincomeFranchisoramount: json[r'dFranchisereferalincomeFranchisoramount'],
-        dFranchisereferalincomeAgentamount: json[r'dFranchisereferalincomeAgentamount'],
-        dtFranchisereferalincomeDisbursed: json[r'dtFranchisereferalincomeDisbursed'],
-        tFranchisereferalincomeComment: json[r'tFranchisereferalincomeComment'],
-        fkiFranchiseofficeID: json[r'fkiFranchiseofficeID'],
-        sFranchisereferalincomeRemoteid: json[r'sFranchisereferalincomeRemoteid'],
-    );
+  /// [value] if it's a [Map], null otherwise.
+  // ignore: prefer_constructors_over_static_methods
+  static FranchisereferalincomeRequest fromJson(dynamic value) {
+    if (value is Map) {
+      final json = value.cast<String, dynamic>();
+      return FranchisereferalincomeRequest(
+        fkiFranchisebrokerID: mapValueOfType<int>(json, r'fkiFranchisebrokerID'),
+        fkiFranchisereferalincomeprogramID: mapValueOfType<int>(json, r'fkiFranchisereferalincomeprogramID'),
+        fkiPeriodID: mapValueOfType<int>(json, r'fkiPeriodID'),
+        dFranchisereferalincomeLoan: mapValueOfType<String>(json, r'dFranchisereferalincomeLoan'),
+        dFranchisereferalincomeFranchiseamount: mapValueOfType<String>(json, r'dFranchisereferalincomeFranchiseamount'),
+        dFranchisereferalincomeFranchisoramount: mapValueOfType<String>(json, r'dFranchisereferalincomeFranchisoramount'),
+        dFranchisereferalincomeAgentamount: mapValueOfType<String>(json, r'dFranchisereferalincomeAgentamount'),
+        dtFranchisereferalincomeDisbursed: mapValueOfType<String>(json, r'dtFranchisereferalincomeDisbursed'),
+        tFranchisereferalincomeComment: mapValueOfType<String>(json, r'tFranchisereferalincomeComment'),
+        fkiFranchiseofficeID: mapValueOfType<int>(json, r'fkiFranchiseofficeID'),
+        sFranchisereferalincomeRemoteid: mapValueOfType<String>(json, r'sFranchisereferalincomeRemoteid'),
+      );
+    }
+    return null;
+  }
 
-  static List<FranchisereferalincomeRequest> listFromJson(List<dynamic> json, {bool emptyIsNull, bool growable,}) =>
-    json == null || json.isEmpty
-      ? true == emptyIsNull ? null : <FranchisereferalincomeRequest>[]
-      : json.map((v) => FranchisereferalincomeRequest.fromJson(v)).toList(growable: true == growable);
+  static List<FranchisereferalincomeRequest> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(FranchisereferalincomeRequest.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <FranchisereferalincomeRequest>[];
 
-  static Map<String, FranchisereferalincomeRequest> mapFromJson(Map<String, dynamic> json) {
+  static Map<String, FranchisereferalincomeRequest> mapFromJson(dynamic json) {
     final map = <String, FranchisereferalincomeRequest>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) => map[key] = FranchisereferalincomeRequest.fromJson(v));
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) => map[key] = FranchisereferalincomeRequest.fromJson(value));
     }
     return map;
   }
 
   // maps a json object with a list of FranchisereferalincomeRequest-objects as value to a dart map
-  static Map<String, List<FranchisereferalincomeRequest>> mapListFromJson(Map<String, dynamic> json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<FranchisereferalincomeRequest>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
     final map = <String, List<FranchisereferalincomeRequest>>{};
-    if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic v) {
-        map[key] = FranchisereferalincomeRequest.listFromJson(v, emptyIsNull: emptyIsNull, growable: growable);
-      });
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) {
+          map[key] = FranchisereferalincomeRequest.listFromJson(
+            value,
+            emptyIsNull: emptyIsNull,
+            growable: growable,
+          );
+        });
     }
     return map;
   }
