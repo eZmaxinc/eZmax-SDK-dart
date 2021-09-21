@@ -25,7 +25,6 @@ class ObjectEzsigndocumentApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigndocumentID (required):
-  ///   The unique ID of the Ezsigndocument
   ///
   /// * [EzsigndocumentApplyEzsigntemplateV1Request] ezsigndocumentApplyEzsigntemplateV1Request (required):
   Future<Response> ezsigndocumentApplyEzsigntemplateV1WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request,) async {
@@ -71,7 +70,6 @@ class ObjectEzsigndocumentApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigndocumentID (required):
-  ///   The unique ID of the Ezsigndocument
   ///
   /// * [EzsigndocumentApplyEzsigntemplateV1Request] ezsigndocumentApplyEzsigntemplateV1Request (required):
   Future<EzsigndocumentApplyEzsigntemplateV1Response> ezsigndocumentApplyEzsigntemplateV1(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request,) async {
@@ -157,7 +155,6 @@ class ObjectEzsigndocumentApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigndocumentID (required):
-  ///   The unique ID of the Ezsigndocument
   Future<Response> ezsigndocumentDeleteObjectV1WithHttpInfo(int pkiEzsigndocumentID,) async {
     // Verify required params are set.
     if (pkiEzsigndocumentID == null) {
@@ -196,7 +193,6 @@ class ObjectEzsigndocumentApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigndocumentID (required):
-  ///   The unique ID of the Ezsigndocument
   Future<EzsigndocumentDeleteObjectV1Response> ezsigndocumentDeleteObjectV1(int pkiEzsigndocumentID,) async {
     final response = await ezsigndocumentDeleteObjectV1WithHttpInfo(pkiEzsigndocumentID,);
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -220,7 +216,6 @@ class ObjectEzsigndocumentApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigndocumentID (required):
-  ///   The unique ID of the Ezsigndocument
   Future<Response> ezsigndocumentGetChildrenV1WithHttpInfo(int pkiEzsigndocumentID,) async {
     // Verify required params are set.
     if (pkiEzsigndocumentID == null) {
@@ -261,7 +256,6 @@ class ObjectEzsigndocumentApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigndocumentID (required):
-  ///   The unique ID of the Ezsigndocument
   Future<void> ezsigndocumentGetChildrenV1(int pkiEzsigndocumentID,) async {
     final response = await ezsigndocumentGetChildrenV1WithHttpInfo(pkiEzsigndocumentID,);
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -278,7 +272,6 @@ class ObjectEzsigndocumentApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigndocumentID (required):
-  ///   The unique ID of the Ezsigndocument
   ///
   /// * [String] eDocumentType (required):
   ///   The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **Signed** Is the final document once all signatures were applied. 3. **Proofdocument** Is the evidence report. 4. **Proof** Is the complete evidence archive including all of the above and more. 
@@ -326,7 +319,6 @@ class ObjectEzsigndocumentApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigndocumentID (required):
-  ///   The unique ID of the Ezsigndocument
   ///
   /// * [String] eDocumentType (required):
   ///   The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **Signed** Is the final document once all signatures were applied. 3. **Proofdocument** Is the evidence report. 4. **Proof** Is the complete evidence archive including all of the above and more. 
@@ -344,6 +336,69 @@ class ObjectEzsigndocumentApi {
     return Future<EzsigndocumentGetDownloadUrlV1Response>.value();
   }
 
+  /// Retrieve an existing Ezsigndocument's Ezsignpages
+  ///
+  /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  Future<Response> ezsigndocumentGetEzsignpagesV1WithHttpInfo(int pkiEzsigndocumentID,) async {
+    // Verify required params are set.
+    if (pkiEzsigndocumentID == null) {
+     throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsigndocumentID');
+    }
+
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignpages'
+      .replaceAll('{pkiEzsigndocumentID}', pkiEzsigndocumentID.toString());
+
+    // ignore: prefer_final_locals
+    Object postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const authNames = <String>['Authorization'];
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes[0],
+      authNames,
+    );
+  }
+
+  /// Retrieve an existing Ezsigndocument's Ezsignpages
+  ///
+  /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  Future<EzsigndocumentGetEzsignpagesV1Response> ezsigndocumentGetEzsignpagesV1(int pkiEzsigndocumentID,) async {
+    final response = await ezsigndocumentGetEzsignpagesV1WithHttpInfo(pkiEzsigndocumentID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body != null && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentGetEzsignpagesV1Response',) as EzsigndocumentGetEzsignpagesV1Response;
+        }
+    return Future<EzsigndocumentGetEzsignpagesV1Response>.value();
+  }
+
   /// Retrieve an existing Ezsigndocument's Form Data
   ///
   /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
@@ -353,7 +408,6 @@ class ObjectEzsigndocumentApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigndocumentID (required):
-  ///   The unique ID of the Ezsigndocument
   Future<Response> ezsigndocumentGetFormDataV1WithHttpInfo(int pkiEzsigndocumentID,) async {
     // Verify required params are set.
     if (pkiEzsigndocumentID == null) {
@@ -394,7 +448,6 @@ class ObjectEzsigndocumentApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigndocumentID (required):
-  ///   The unique ID of the Ezsigndocument
   Future<MultipartFile> ezsigndocumentGetFormDataV1(int pkiEzsigndocumentID,) async {
     final response = await ezsigndocumentGetFormDataV1WithHttpInfo(pkiEzsigndocumentID,);
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -418,7 +471,6 @@ class ObjectEzsigndocumentApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigndocumentID (required):
-  ///   The unique ID of the Ezsigndocument
   Future<Response> ezsigndocumentGetObjectV1WithHttpInfo(int pkiEzsigndocumentID,) async {
     // Verify required params are set.
     if (pkiEzsigndocumentID == null) {
@@ -459,7 +511,6 @@ class ObjectEzsigndocumentApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigndocumentID (required):
-  ///   The unique ID of the Ezsigndocument
   Future<EzsigndocumentGetObjectV1Response> ezsigndocumentGetObjectV1(int pkiEzsigndocumentID,) async {
     final response = await ezsigndocumentGetObjectV1WithHttpInfo(pkiEzsigndocumentID,);
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -483,7 +534,6 @@ class ObjectEzsigndocumentApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigndocumentID (required):
-  ///   The unique ID of the Ezsigndocument
   ///
   /// * [EzsigndocumentGetWordsPositionsV1Request] ezsigndocumentGetWordsPositionsV1Request (required):
   Future<Response> ezsigndocumentGetWordsPositionsV1WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentGetWordsPositionsV1Request ezsigndocumentGetWordsPositionsV1Request,) async {
@@ -529,7 +579,6 @@ class ObjectEzsigndocumentApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigndocumentID (required):
-  ///   The unique ID of the Ezsigndocument
   ///
   /// * [EzsigndocumentGetWordsPositionsV1Request] ezsigndocumentGetWordsPositionsV1Request (required):
   Future<EzsigndocumentGetWordsPositionsV1Response> ezsigndocumentGetWordsPositionsV1(int pkiEzsigndocumentID, EzsigndocumentGetWordsPositionsV1Request ezsigndocumentGetWordsPositionsV1Request,) async {

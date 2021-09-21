@@ -40,7 +40,7 @@ void main() {
       // TODO
     });
 
-    // The unique ID of the Ezsigntemplate
+    // The unique ID of the Ezsigndocument
     // int pkiEzsigndocumentID
     test('to test the property `pkiEzsigndocumentID`', () async {
       // TODO

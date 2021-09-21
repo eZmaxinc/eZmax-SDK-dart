@@ -42,6 +42,15 @@ void main() {
       // TODO
     });
 
+    // Retrieve an existing Ezsignfolder's forms data
+    //
+    // ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+    //
+    //Future<MultipartFile> ezsignfolderGetFormsDataV1(int pkiEzsignfolderID) async
+    test('test ezsignfolderGetFormsDataV1', () async {
+      // TODO
+    });
+
     // Retrieve an existing Ezsignfolder
     //
     // ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.

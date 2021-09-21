@@ -85,7 +85,6 @@ class ObjectEzsignsignatureApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignsignatureID (required):
-  ///   The unique ID of the Ezsignsignature
   Future<Response> ezsignsignatureDeleteObjectV1WithHttpInfo(int pkiEzsignsignatureID,) async {
     // Verify required params are set.
     if (pkiEzsignsignatureID == null) {
@@ -124,7 +123,6 @@ class ObjectEzsignsignatureApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignsignatureID (required):
-  ///   The unique ID of the Ezsignsignature
   Future<EzsignsignatureDeleteObjectV1Response> ezsignsignatureDeleteObjectV1(int pkiEzsignsignatureID,) async {
     final response = await ezsignsignatureDeleteObjectV1WithHttpInfo(pkiEzsignsignatureID,);
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -148,7 +146,6 @@ class ObjectEzsignsignatureApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignsignatureID (required):
-  ///   The unique ID of the Ezsignsignature
   Future<Response> ezsignsignatureGetChildrenV1WithHttpInfo(int pkiEzsignsignatureID,) async {
     // Verify required params are set.
     if (pkiEzsignsignatureID == null) {
@@ -189,7 +186,6 @@ class ObjectEzsignsignatureApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignsignatureID (required):
-  ///   The unique ID of the Ezsignsignature
   Future<void> ezsignsignatureGetChildrenV1(int pkiEzsignsignatureID,) async {
     final response = await ezsignsignatureGetChildrenV1WithHttpInfo(pkiEzsignsignatureID,);
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -206,7 +202,6 @@ class ObjectEzsignsignatureApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignsignatureID (required):
-  ///   The unique ID of the Ezsignsignature
   Future<Response> ezsignsignatureGetObjectV1WithHttpInfo(int pkiEzsignsignatureID,) async {
     // Verify required params are set.
     if (pkiEzsignsignatureID == null) {
@@ -247,7 +242,6 @@ class ObjectEzsignsignatureApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignsignatureID (required):
-  ///   The unique ID of the Ezsignsignature
   Future<EzsignsignatureGetObjectV1Response> ezsignsignatureGetObjectV1(int pkiEzsignsignatureID,) async {
     final response = await ezsignsignatureGetObjectV1WithHttpInfo(pkiEzsignsignatureID,);
     if (response.statusCode >= HttpStatus.badRequest) {

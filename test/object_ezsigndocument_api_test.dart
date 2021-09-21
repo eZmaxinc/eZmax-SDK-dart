@@ -60,6 +60,15 @@ void main() {
       // TODO
     });
 
+    // Retrieve an existing Ezsigndocument's Ezsignpages
+    //
+    // ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+    //
+    //Future<EzsigndocumentGetEzsignpagesV1Response> ezsigndocumentGetEzsignpagesV1(int pkiEzsigndocumentID) async
+    test('test ezsigndocumentGetEzsignpagesV1', () async {
+      // TODO
+    });
+
     // Retrieve an existing Ezsigndocument's Form Data
     //
     // ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.

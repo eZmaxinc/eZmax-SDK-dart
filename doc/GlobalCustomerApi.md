@@ -28,7 +28,7 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
 
 final api_instance = GlobalCustomerApi();
-final pksCustomerCode = pksCustomerCode_example; // String | The customer code assigned to your account
+final pksCustomerCode = pksCustomerCode_example; // String | 
 final sInfrastructureproductCode = sInfrastructureproductCode_example; // String | The infrastructure product Code  If undefined, \"appcluster01\" is assumed
 
 try {
@@ -43,7 +43,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pksCustomerCode** | **String**| The customer code assigned to your account | 
+ **pksCustomerCode** | **String**|  | 
  **sInfrastructureproductCode** | **String**| The infrastructure product Code  If undefined, \"appcluster01\" is assumed | [optional] 
 
 ### Return type

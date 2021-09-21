@@ -85,7 +85,6 @@ class ObjectEzsignfoldersignerassociationApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfoldersignerassociationID (required):
-  ///   The unique ID of the Ezsignfoldersignerassociation
   Future<Response> ezsignfoldersignerassociationDeleteObjectV1WithHttpInfo(int pkiEzsignfoldersignerassociationID,) async {
     // Verify required params are set.
     if (pkiEzsignfoldersignerassociationID == null) {
@@ -124,7 +123,6 @@ class ObjectEzsignfoldersignerassociationApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfoldersignerassociationID (required):
-  ///   The unique ID of the Ezsignfoldersignerassociation
   Future<EzsignfoldersignerassociationDeleteObjectV1Response> ezsignfoldersignerassociationDeleteObjectV1(int pkiEzsignfoldersignerassociationID,) async {
     final response = await ezsignfoldersignerassociationDeleteObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID,);
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -148,7 +146,6 @@ class ObjectEzsignfoldersignerassociationApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfoldersignerassociationID (required):
-  ///   The unique ID of the Ezsignfoldersignerassociation
   Future<Response> ezsignfoldersignerassociationGetChildrenV1WithHttpInfo(int pkiEzsignfoldersignerassociationID,) async {
     // Verify required params are set.
     if (pkiEzsignfoldersignerassociationID == null) {
@@ -189,7 +186,6 @@ class ObjectEzsignfoldersignerassociationApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfoldersignerassociationID (required):
-  ///   The unique ID of the Ezsignfoldersignerassociation
   Future<void> ezsignfoldersignerassociationGetChildrenV1(int pkiEzsignfoldersignerassociationID,) async {
     final response = await ezsignfoldersignerassociationGetChildrenV1WithHttpInfo(pkiEzsignfoldersignerassociationID,);
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -206,7 +202,6 @@ class ObjectEzsignfoldersignerassociationApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfoldersignerassociationID (required):
-  ///   The unique ID of the Ezsignfoldersignerassociation
   Future<Response> ezsignfoldersignerassociationGetInPersonLoginUrlV1WithHttpInfo(int pkiEzsignfoldersignerassociationID,) async {
     // Verify required params are set.
     if (pkiEzsignfoldersignerassociationID == null) {
@@ -247,7 +242,6 @@ class ObjectEzsignfoldersignerassociationApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfoldersignerassociationID (required):
-  ///   The unique ID of the Ezsignfoldersignerassociation
   Future<EzsignfoldersignerassociationGetInPersonLoginUrlV1Response> ezsignfoldersignerassociationGetInPersonLoginUrlV1(int pkiEzsignfoldersignerassociationID,) async {
     final response = await ezsignfoldersignerassociationGetInPersonLoginUrlV1WithHttpInfo(pkiEzsignfoldersignerassociationID,);
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -271,7 +265,6 @@ class ObjectEzsignfoldersignerassociationApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfoldersignerassociationID (required):
-  ///   The unique ID of the Ezsignfoldersignerassociation
   Future<Response> ezsignfoldersignerassociationGetObjectV1WithHttpInfo(int pkiEzsignfoldersignerassociationID,) async {
     // Verify required params are set.
     if (pkiEzsignfoldersignerassociationID == null) {
@@ -312,7 +305,6 @@ class ObjectEzsignfoldersignerassociationApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfoldersignerassociationID (required):
-  ///   The unique ID of the Ezsignfoldersignerassociation
   Future<EzsignfoldersignerassociationGetObjectV1Response> ezsignfoldersignerassociationGetObjectV1(int pkiEzsignfoldersignerassociationID,) async {
     final response = await ezsignfoldersignerassociationGetObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID,);
     if (response.statusCode >= HttpStatus.badRequest) {

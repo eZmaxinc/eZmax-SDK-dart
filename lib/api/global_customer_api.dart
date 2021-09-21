@@ -25,7 +25,6 @@ class GlobalCustomerApi {
   /// Parameters:
   ///
   /// * [String] pksCustomerCode (required):
-  ///   The customer code assigned to your account
   ///
   /// * [String] sInfrastructureproductCode:
   ///   The infrastructure product Code  If undefined, \"appcluster01\" is assumed
@@ -73,7 +72,6 @@ class GlobalCustomerApi {
   /// Parameters:
   ///
   /// * [String] pksCustomerCode (required):
-  ///   The customer code assigned to your account
   ///
   /// * [String] sInfrastructureproductCode:
   ///   The infrastructure product Code  If undefined, \"appcluster01\" is assumed

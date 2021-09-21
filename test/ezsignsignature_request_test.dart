@@ -22,7 +22,7 @@ void main() {
       // TODO
     });
 
-    // The page number in the document where to apply the signature
+    // The page number in the Ezsigndocument
     // int iEzsignpagePagenumber
     test('to test the property `iEzsignpagePagenumber`', () async {
       // TODO
@@ -51,7 +51,7 @@ void main() {
       // TODO
     });
 
-    // The unique ID of the Ezsigntemplate
+    // The unique ID of the Ezsigndocument
     // int fkiEzsigndocumentID
     test('to test the property `fkiEzsigndocumentID`', () async {
       // TODO

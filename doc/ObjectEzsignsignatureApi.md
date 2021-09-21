@@ -76,7 +76,7 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
 
 final api_instance = ObjectEzsignsignatureApi();
-final pkiEzsignsignatureID = 56; // int | The unique ID of the Ezsignsignature
+final pkiEzsignsignatureID = 56; // int | 
 
 try {
     final result = api_instance.ezsignsignatureDeleteObjectV1(pkiEzsignsignatureID);
@@ -90,7 +90,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignsignatureID** | **int**| The unique ID of the Ezsignsignature | 
+ **pkiEzsignsignatureID** | **int**|  | 
 
 ### Return type
 
@@ -123,7 +123,7 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
 
 final api_instance = ObjectEzsignsignatureApi();
-final pkiEzsignsignatureID = 56; // int | The unique ID of the Ezsignsignature
+final pkiEzsignsignatureID = 56; // int | 
 
 try {
     api_instance.ezsignsignatureGetChildrenV1(pkiEzsignsignatureID);
@@ -136,7 +136,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignsignatureID** | **int**| The unique ID of the Ezsignsignature | 
+ **pkiEzsignsignatureID** | **int**|  | 
 
 ### Return type
 
@@ -169,7 +169,7 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
 
 final api_instance = ObjectEzsignsignatureApi();
-final pkiEzsignsignatureID = 56; // int | The unique ID of the Ezsignsignature
+final pkiEzsignsignatureID = 56; // int | 
 
 try {
     final result = api_instance.ezsignsignatureGetObjectV1(pkiEzsignsignatureID);
@@ -183,7 +183,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignsignatureID** | **int**| The unique ID of the Ezsignsignature | 
+ **pkiEzsignsignatureID** | **int**|  | 
 
 ### Return type
 

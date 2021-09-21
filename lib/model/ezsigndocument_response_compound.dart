@@ -44,7 +44,7 @@ class EzsigndocumentResponseCompound {
   /// The name of the document that will be presented to Ezsignfoldersignerassociations
   String sEzsigndocumentName;
 
-  /// The unique ID of the Ezsigntemplate
+  /// The unique ID of the Ezsigndocument
   int pkiEzsigndocumentID;
 
   FieldEEzsigndocumentStep eEzsigndocumentStep;

@@ -77,7 +77,7 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
 
 final api_instance = ObjectEzsignfoldersignerassociationApi();
-final pkiEzsignfoldersignerassociationID = 56; // int | The unique ID of the Ezsignfoldersignerassociation
+final pkiEzsignfoldersignerassociationID = 56; // int | 
 
 try {
     final result = api_instance.ezsignfoldersignerassociationDeleteObjectV1(pkiEzsignfoldersignerassociationID);
@@ -91,7 +91,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfoldersignerassociationID** | **int**| The unique ID of the Ezsignfoldersignerassociation | 
+ **pkiEzsignfoldersignerassociationID** | **int**|  | 
 
 ### Return type
 
@@ -124,7 +124,7 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
 
 final api_instance = ObjectEzsignfoldersignerassociationApi();
-final pkiEzsignfoldersignerassociationID = 56; // int | The unique ID of the Ezsignfoldersignerassociation
+final pkiEzsignfoldersignerassociationID = 56; // int | 
 
 try {
     api_instance.ezsignfoldersignerassociationGetChildrenV1(pkiEzsignfoldersignerassociationID);
@@ -137,7 +137,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfoldersignerassociationID** | **int**| The unique ID of the Ezsignfoldersignerassociation | 
+ **pkiEzsignfoldersignerassociationID** | **int**|  | 
 
 ### Return type
 
@@ -170,7 +170,7 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
 
 final api_instance = ObjectEzsignfoldersignerassociationApi();
-final pkiEzsignfoldersignerassociationID = 56; // int | The unique ID of the Ezsignfoldersignerassociation
+final pkiEzsignfoldersignerassociationID = 56; // int | 
 
 try {
     final result = api_instance.ezsignfoldersignerassociationGetInPersonLoginUrlV1(pkiEzsignfoldersignerassociationID);
@@ -184,7 +184,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfoldersignerassociationID** | **int**| The unique ID of the Ezsignfoldersignerassociation | 
+ **pkiEzsignfoldersignerassociationID** | **int**|  | 
 
 ### Return type
 
@@ -217,7 +217,7 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
 
 final api_instance = ObjectEzsignfoldersignerassociationApi();
-final pkiEzsignfoldersignerassociationID = 56; // int | The unique ID of the Ezsignfoldersignerassociation
+final pkiEzsignfoldersignerassociationID = 56; // int | 
 
 try {
     final result = api_instance.ezsignfoldersignerassociationGetObjectV1(pkiEzsignfoldersignerassociationID);
@@ -231,7 +231,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfoldersignerassociationID** | **int**| The unique ID of the Ezsignfoldersignerassociation | 
+ **pkiEzsignfoldersignerassociationID** | **int**|  | 
 
 ### Return type
 
