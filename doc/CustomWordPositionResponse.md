@@ -1,4 +1,4 @@
-# openapi.model.WordPositionResponse
+# openapi.model.CustomWordPositionResponse
 
 ## Load the model package
 ```dart

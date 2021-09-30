@@ -1,4 +1,4 @@
-# openapi.model.EzsigndocumentGetWordsPositionsV1ResponseMPayload
+# openapi.model.EzsignfolderGetFormsDataV1ResponseAllOf
 
 ## Load the model package
 ```dart
@@ -8,7 +8,7 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aSWords** | [**List<CustomWordPositionResponse>**](CustomWordPositionResponse.md) | An array of words with an array of pages and positions X,Y  They are returned with the sames words that was sent in the request. | [default to const []]
+**mPayload** | [**EzsignfolderGetFormsDataV1ResponseMPayload**](EzsignfolderGetFormsDataV1ResponseMPayload.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

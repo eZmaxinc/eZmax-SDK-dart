@@ -242,7 +242,7 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<MultipartFile> ezsignfolderGetFormsDataV1(int pkiEzsignfolderID,) async {
+  Future<EzsignfolderGetFormsDataV1Response> ezsignfolderGetFormsDataV1(int pkiEzsignfolderID,) async {
     final response = await ezsignfolderGetFormsDataV1WithHttpInfo(pkiEzsignfolderID,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -251,9 +251,9 @@ class ObjectEzsignfolderApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'MultipartFile',) as MultipartFile;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderGetFormsDataV1Response',) as EzsignfolderGetFormsDataV1Response;
         }
-    return Future<MultipartFile>.value();
+    return Future<EzsignfolderGetFormsDataV1Response>.value();
   }
 
   /// Retrieve an existing Ezsignfolder

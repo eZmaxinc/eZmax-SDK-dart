@@ -19,10 +19,19 @@ void main() {
   group('tests for ObjectEzsigndocumentApi', () {
     // Apply an Ezsign Template to the Ezsigndocument.
     //
-    // This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+    // This function is deprecated. Please use *applyEzsigntemplate* instead which is doing the same thing but with a capital \"E\" to normalize the nomenclature.  This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
     //
     //Future<EzsigndocumentApplyEzsigntemplateV1Response> ezsigndocumentApplyEzsigntemplateV1(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request) async
     test('test ezsigndocumentApplyEzsigntemplateV1', () async {
+      // TODO
+    });
+
+    // Apply an Ezsign Template to the Ezsigndocument.
+    //
+    // This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+    //
+    //Future<EzsigndocumentApplyEzsigntemplateV2Response> ezsigndocumentApplyEzsigntemplateV2(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV2Request ezsigndocumentApplyEzsigntemplateV2Request) async
+    test('test ezsigndocumentApplyEzsigntemplateV2', () async {
       // TODO
     });
 
@@ -62,8 +71,6 @@ void main() {
 
     // Retrieve an existing Ezsigndocument's Ezsignpages
     //
-    // ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-    //
     //Future<EzsigndocumentGetEzsignpagesV1Response> ezsigndocumentGetEzsignpagesV1(int pkiEzsigndocumentID) async
     test('test ezsigndocumentGetEzsignpagesV1', () async {
       // TODO
@@ -73,7 +80,7 @@ void main() {
     //
     // ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
     //
-    //Future<MultipartFile> ezsigndocumentGetFormDataV1(int pkiEzsigndocumentID) async
+    //Future<EzsigndocumentGetFormDataV1Response> ezsigndocumentGetFormDataV1(int pkiEzsigndocumentID) async
     test('test ezsigndocumentGetFormDataV1', () async {
       // TODO
     });

@@ -17,7 +17,7 @@ class EzsigndocumentGetWordsPositionsV1ResponseMPayload {
   });
 
   /// An array of words with an array of pages and positions X,Y  They are returned with the sames words that was sent in the request.
-  List<WordPositionResponse> aSWords;
+  List<CustomWordPositionResponse> aSWords;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigndocumentGetWordsPositionsV1ResponseMPayload &&
@@ -44,7 +44,7 @@ class EzsigndocumentGetWordsPositionsV1ResponseMPayload {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
       return EzsigndocumentGetWordsPositionsV1ResponseMPayload(
-        aSWords: WordPositionResponse.listFromJson(json[r'a_sWords']),
+        aSWords: CustomWordPositionResponse.listFromJson(json[r'a_sWords']),
       );
     }
     return null;

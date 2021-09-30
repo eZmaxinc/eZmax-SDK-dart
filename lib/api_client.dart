@@ -257,12 +257,24 @@ class ApiClient {
           return ContactinformationsRequestCompound.fromJson(value);
         case 'ContactinformationsRequestCompoundAllOf':
           return ContactinformationsRequestCompoundAllOf.fromJson(value);
+        case 'CustomFormDataDocumentResponse':
+          return CustomFormDataDocumentResponse.fromJson(value);
+        case 'CustomFormDataFolderResponse':
+          return CustomFormDataFolderResponse.fromJson(value);
+        case 'CustomFormDataSignerResponse':
+          return CustomFormDataSignerResponse.fromJson(value);
+        case 'CustomWordPositionResponse':
+          return CustomWordPositionResponse.fromJson(value);
         case 'EmailRequest':
           return EmailRequest.fromJson(value);
         case 'EzsigndocumentApplyEzsigntemplateV1Request':
           return EzsigndocumentApplyEzsigntemplateV1Request.fromJson(value);
         case 'EzsigndocumentApplyEzsigntemplateV1Response':
           return EzsigndocumentApplyEzsigntemplateV1Response.fromJson(value);
+        case 'EzsigndocumentApplyEzsigntemplateV2Request':
+          return EzsigndocumentApplyEzsigntemplateV2Request.fromJson(value);
+        case 'EzsigndocumentApplyEzsigntemplateV2Response':
+          return EzsigndocumentApplyEzsigntemplateV2Response.fromJson(value);
         case 'EzsigndocumentCreateObjectV1Request':
           return EzsigndocumentCreateObjectV1Request.fromJson(value);
         case 'EzsigndocumentCreateObjectV1Response':
@@ -285,6 +297,12 @@ class ApiClient {
           return EzsigndocumentGetEzsignpagesV1ResponseAllOf.fromJson(value);
         case 'EzsigndocumentGetEzsignpagesV1ResponseMPayload':
           return EzsigndocumentGetEzsignpagesV1ResponseMPayload.fromJson(value);
+        case 'EzsigndocumentGetFormDataV1Response':
+          return EzsigndocumentGetFormDataV1Response.fromJson(value);
+        case 'EzsigndocumentGetFormDataV1ResponseAllOf':
+          return EzsigndocumentGetFormDataV1ResponseAllOf.fromJson(value);
+        case 'EzsigndocumentGetFormDataV1ResponseMPayload':
+          return EzsigndocumentGetFormDataV1ResponseMPayload.fromJson(value);
         case 'EzsigndocumentGetObjectV1Response':
           return EzsigndocumentGetObjectV1Response.fromJson(value);
         case 'EzsigndocumentGetObjectV1ResponseAllOf':
@@ -315,6 +333,12 @@ class ApiClient {
           return EzsignfolderCreateObjectV1ResponseMPayload.fromJson(value);
         case 'EzsignfolderDeleteObjectV1Response':
           return EzsignfolderDeleteObjectV1Response.fromJson(value);
+        case 'EzsignfolderGetFormsDataV1Response':
+          return EzsignfolderGetFormsDataV1Response.fromJson(value);
+        case 'EzsignfolderGetFormsDataV1ResponseAllOf':
+          return EzsignfolderGetFormsDataV1ResponseAllOf.fromJson(value);
+        case 'EzsignfolderGetFormsDataV1ResponseMPayload':
+          return EzsignfolderGetFormsDataV1ResponseMPayload.fromJson(value);
         case 'EzsignfolderGetObjectV1Response':
           return EzsignfolderGetObjectV1Response.fromJson(value);
         case 'EzsignfolderGetObjectV1ResponseAllOf':
@@ -361,6 +385,16 @@ class ApiClient {
           return EzsignfoldersignerassociationRequestCompound.fromJson(value);
         case 'EzsignfoldersignerassociationRequestCompoundAllOf':
           return EzsignfoldersignerassociationRequestCompoundAllOf.fromJson(value);
+        case 'EzsignformfieldResponse':
+          return EzsignformfieldResponse.fromJson(value);
+        case 'EzsignformfieldResponseCompound':
+          return EzsignformfieldResponseCompound.fromJson(value);
+        case 'EzsignformfieldgroupResponse':
+          return EzsignformfieldgroupResponse.fromJson(value);
+        case 'EzsignformfieldgroupResponseCompound':
+          return EzsignformfieldgroupResponseCompound.fromJson(value);
+        case 'EzsignformfieldgroupResponseCompoundAllOf':
+          return EzsignformfieldgroupResponseCompoundAllOf.fromJson(value);
         case 'EzsignpageResponse':
           return EzsignpageResponse.fromJson(value);
         case 'EzsignsignatureCreateObjectV1Request':
@@ -484,8 +518,6 @@ class ApiClient {
           return WebhookUserUserCreatedAllOf.fromJson(value);
         case 'WebsiteRequest':
           return WebsiteRequest.fromJson(value);
-        case 'WordPositionResponse':
-          return WordPositionResponse.fromJson(value);
         default:
           Match match;
           if (value is List && (match = _regList.firstMatch(targetType)) != null) {

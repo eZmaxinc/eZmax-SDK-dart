@@ -18,7 +18,7 @@ class ObjectEzsigndocumentApi {
 
   /// Apply an Ezsign Template to the Ezsigndocument.
   ///
-  /// This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+  /// This function is deprecated. Please use *applyEzsigntemplate* instead which is doing the same thing but with a capital \"E\" to normalize the nomenclature.  This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -65,7 +65,7 @@ class ObjectEzsigndocumentApi {
 
   /// Apply an Ezsign Template to the Ezsigndocument.
   ///
-  /// This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+  /// This function is deprecated. Please use *applyEzsigntemplate* instead which is doing the same thing but with a capital \"E\" to normalize the nomenclature.  This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
   ///
   /// Parameters:
   ///
@@ -84,6 +84,76 @@ class ObjectEzsigndocumentApi {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentApplyEzsigntemplateV1Response',) as EzsigndocumentApplyEzsigntemplateV1Response;
         }
     return Future<EzsigndocumentApplyEzsigntemplateV1Response>.value();
+  }
+
+  /// Apply an Ezsign Template to the Ezsigndocument.
+  ///
+  /// This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  ///
+  /// * [EzsigndocumentApplyEzsigntemplateV2Request] ezsigndocumentApplyEzsigntemplateV2Request (required):
+  Future<Response> ezsigndocumentApplyEzsigntemplateV2WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV2Request ezsigndocumentApplyEzsigntemplateV2Request,) async {
+    // Verify required params are set.
+    if (pkiEzsigndocumentID == null) {
+     throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsigndocumentID');
+    }
+    if (ezsigndocumentApplyEzsigntemplateV2Request == null) {
+     throw ApiException(HttpStatus.badRequest, 'Missing required param: ezsigndocumentApplyEzsigntemplateV2Request');
+    }
+
+    // ignore: prefer_const_declarations
+    final path = r'/2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate'
+      .replaceAll('{pkiEzsigndocumentID}', pkiEzsigndocumentID.toString());
+
+    // ignore: prefer_final_locals
+    Object postBody = ezsigndocumentApplyEzsigntemplateV2Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const authNames = <String>['Authorization'];
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes[0],
+      authNames,
+    );
+  }
+
+  /// Apply an Ezsign Template to the Ezsigndocument.
+  ///
+  /// This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  ///
+  /// * [EzsigndocumentApplyEzsigntemplateV2Request] ezsigndocumentApplyEzsigntemplateV2Request (required):
+  Future<EzsigndocumentApplyEzsigntemplateV2Response> ezsigndocumentApplyEzsigntemplateV2(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV2Request ezsigndocumentApplyEzsigntemplateV2Request,) async {
+    final response = await ezsigndocumentApplyEzsigntemplateV2WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV2Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body != null && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentApplyEzsigntemplateV2Response',) as EzsigndocumentApplyEzsigntemplateV2Response;
+        }
+    return Future<EzsigndocumentApplyEzsigntemplateV2Response>.value();
   }
 
   /// Create a new Ezsigndocument
@@ -338,8 +408,6 @@ class ObjectEzsigndocumentApi {
 
   /// Retrieve an existing Ezsigndocument's Ezsignpages
   ///
-  /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-  ///
   /// Note: This method returns the HTTP [Response].
   ///
   /// Parameters:
@@ -379,8 +447,6 @@ class ObjectEzsigndocumentApi {
   }
 
   /// Retrieve an existing Ezsigndocument's Ezsignpages
-  ///
-  /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
   ///
   /// Parameters:
   ///
@@ -448,7 +514,7 @@ class ObjectEzsigndocumentApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigndocumentID (required):
-  Future<MultipartFile> ezsigndocumentGetFormDataV1(int pkiEzsigndocumentID,) async {
+  Future<EzsigndocumentGetFormDataV1Response> ezsigndocumentGetFormDataV1(int pkiEzsigndocumentID,) async {
     final response = await ezsigndocumentGetFormDataV1WithHttpInfo(pkiEzsigndocumentID,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -457,9 +523,9 @@ class ObjectEzsigndocumentApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'MultipartFile',) as MultipartFile;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentGetFormDataV1Response',) as EzsigndocumentGetFormDataV1Response;
         }
-    return Future<MultipartFile>.value();
+    return Future<EzsigndocumentGetFormDataV1Response>.value();
   }
 
   /// Retrieve an existing Ezsigndocument

@@ -10,9 +10,9 @@
 
 part of openapi.api;
 
-class WordPositionResponse {
-  /// Returns a new [WordPositionResponse] instance.
-  WordPositionResponse({
+class CustomWordPositionResponse {
+  /// Returns a new [CustomWordPositionResponse] instance.
+  CustomWordPositionResponse({
     this.iPage,
     this.iX,
     this.iY,
@@ -31,7 +31,7 @@ class WordPositionResponse {
   int iY;
 
   @override
-  bool operator ==(Object other) => identical(this, other) || other is WordPositionResponse &&
+  bool operator ==(Object other) => identical(this, other) || other is CustomWordPositionResponse &&
      other.iPage == iPage &&
      other.iX == iX &&
      other.iY == iY;
@@ -44,7 +44,7 @@ class WordPositionResponse {
     (iY == null ? 0 : iY.hashCode);
 
   @override
-  String toString() => 'WordPositionResponse[iPage=$iPage, iX=$iX, iY=$iY]';
+  String toString() => 'CustomWordPositionResponse[iPage=$iPage, iX=$iX, iY=$iY]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -60,13 +60,13 @@ class WordPositionResponse {
     return json;
   }
 
-  /// Returns a new [WordPositionResponse] instance and imports its values from
+  /// Returns a new [CustomWordPositionResponse] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static WordPositionResponse fromJson(dynamic value) {
+  static CustomWordPositionResponse fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
-      return WordPositionResponse(
+      return CustomWordPositionResponse(
         iPage: mapValueOfType<int>(json, r'iPage'),
         iX: mapValueOfType<int>(json, r'iX'),
         iY: mapValueOfType<int>(json, r'iY'),
@@ -75,29 +75,29 @@ class WordPositionResponse {
     return null;
   }
 
-  static List<WordPositionResponse> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+  static List<CustomWordPositionResponse> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
     json is List && json.isNotEmpty
-      ? json.map(WordPositionResponse.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <WordPositionResponse>[];
+      ? json.map(CustomWordPositionResponse.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <CustomWordPositionResponse>[];
 
-  static Map<String, WordPositionResponse> mapFromJson(dynamic json) {
-    final map = <String, WordPositionResponse>{};
+  static Map<String, CustomWordPositionResponse> mapFromJson(dynamic json) {
+    final map = <String, CustomWordPositionResponse>{};
     if (json is Map && json.isNotEmpty) {
       json
         .cast<String, dynamic>()
-        .forEach((key, dynamic value) => map[key] = WordPositionResponse.fromJson(value));
+        .forEach((key, dynamic value) => map[key] = CustomWordPositionResponse.fromJson(value));
     }
     return map;
   }
 
-  // maps a json object with a list of WordPositionResponse-objects as value to a dart map
-  static Map<String, List<WordPositionResponse>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
-    final map = <String, List<WordPositionResponse>>{};
+  // maps a json object with a list of CustomWordPositionResponse-objects as value to a dart map
+  static Map<String, List<CustomWordPositionResponse>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
+    final map = <String, List<CustomWordPositionResponse>>{};
     if (json is Map && json.isNotEmpty) {
       json
         .cast<String, dynamic>()
         .forEach((key, dynamic value) {
-          map[key] = WordPositionResponse.listFromJson(
+          map[key] = CustomWordPositionResponse.listFromJson(
             value,
             emptyIsNull: emptyIsNull,
             growable: growable,

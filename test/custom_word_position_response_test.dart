@@ -11,11 +11,11 @@
 import 'package:openapi/api.dart';
 import 'package:test/test.dart';
 
-// tests for WordPositionResponse
+// tests for CustomWordPositionResponse
 void main() {
-  final instance = WordPositionResponse();
+  final instance = CustomWordPositionResponse();
 
-  group('test WordPositionResponse', () {
+  group('test CustomWordPositionResponse', () {
     // The page where the word occurence was found
     // int iPage
     test('to test the property `iPage`', () async {
