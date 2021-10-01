@@ -32,7 +32,6 @@ class CustomFormDataSignerResponse {
   /// The Last name of the contact
   String sContactLastname;
 
-  /// This array contains the labels or each Form fields in the form but WITHOUT the values
   List<EzsignformfieldgroupResponseCompound> aObjEzsignformfieldgroupCompound;
 
   @override

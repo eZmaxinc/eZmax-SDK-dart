@@ -16,8 +16,15 @@ void main() {
   final instance = EzsigndocumentGetWordsPositionsV1Request();
 
   group('test EzsigndocumentGetWordsPositionsV1Request', () {
-    // List<String> aSWords (default value: const [])
-    test('to test the property `aSWords`', () async {
+    // Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search in *a_sWord*.
+    // String eGet
+    test('to test the property `eGet`', () async {
+      // TODO
+    });
+
+    // Array of words to find in the document
+    // List<String> aSWord (default value: const [])
+    test('to test the property `aSWord`', () async {
       // TODO
     });
 

@@ -16,12 +16,6 @@ void main() {
   final instance = EzsigndocumentGetWordsPositionsV1ResponseMPayload();
 
   group('test EzsigndocumentGetWordsPositionsV1ResponseMPayload', () {
-    // An array of words with an array of pages and positions X,Y  They are returned with the sames words that was sent in the request.
-    // List<CustomWordPositionResponse> aSWords (default value: const [])
-    test('to test the property `aSWords`', () async {
-      // TODO
-    });
-
 
   });
 

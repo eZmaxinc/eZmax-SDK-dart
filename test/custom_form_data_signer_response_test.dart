@@ -40,7 +40,6 @@ void main() {
       // TODO
     });
 
-    // This array contains the labels or each Form fields in the form but WITHOUT the values
     // List<EzsignformfieldgroupResponseCompound> aObjEzsignformfieldgroupCompound (default value: const [])
     test('to test the property `aObjEzsignformfieldgroupCompound`', () async {
       // TODO

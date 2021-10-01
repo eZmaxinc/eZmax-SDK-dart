@@ -13,27 +13,20 @@ part of openapi.api;
 class EzsigndocumentGetWordsPositionsV1ResponseMPayload {
   /// Returns a new [EzsigndocumentGetWordsPositionsV1ResponseMPayload] instance.
   EzsigndocumentGetWordsPositionsV1ResponseMPayload({
-    this.aSWords = const [],
   });
-
-  /// An array of words with an array of pages and positions X,Y  They are returned with the sames words that was sent in the request.
-  List<CustomWordPositionResponse> aSWords;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigndocumentGetWordsPositionsV1ResponseMPayload &&
-     other.aSWords == aSWords;
 
   @override
   int get hashCode =>
   // ignore: unnecessary_parenthesis
-    (aSWords == null ? 0 : aSWords.hashCode);
 
   @override
-  String toString() => 'EzsigndocumentGetWordsPositionsV1ResponseMPayload[aSWords=$aSWords]';
+  String toString() => 'EzsigndocumentGetWordsPositionsV1ResponseMPayload[]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'a_sWords'] = aSWords;
     return json;
   }
 
@@ -44,7 +37,6 @@ class EzsigndocumentGetWordsPositionsV1ResponseMPayload {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
       return EzsigndocumentGetWordsPositionsV1ResponseMPayload(
-        aSWords: CustomWordPositionResponse.listFromJson(json[r'a_sWords']),
       );
     }
     return null;
