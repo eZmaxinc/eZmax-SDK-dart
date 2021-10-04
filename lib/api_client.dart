@@ -263,8 +263,10 @@ class ApiClient {
           return CustomFormDataFolderResponse.fromJson(value);
         case 'CustomFormDataSignerResponse':
           return CustomFormDataSignerResponse.fromJson(value);
-        case 'CustomWordPositionResponse':
-          return CustomWordPositionResponse.fromJson(value);
+        case 'CustomWordPositionOccurenceResponse':
+          return CustomWordPositionOccurenceResponse.fromJson(value);
+        case 'CustomWordPositionWordResponse':
+          return CustomWordPositionWordResponse.fromJson(value);
         case 'EmailRequest':
           return EmailRequest.fromJson(value);
         case 'EzsigndocumentApplyEzsigntemplateV1Request':
@@ -315,8 +317,6 @@ class ApiClient {
           return EzsigndocumentGetWordsPositionsV1Response.fromJson(value);
         case 'EzsigndocumentGetWordsPositionsV1ResponseAllOf':
           return EzsigndocumentGetWordsPositionsV1ResponseAllOf.fromJson(value);
-        case 'EzsigndocumentGetWordsPositionsV1ResponseMPayload':
-          return EzsigndocumentGetWordsPositionsV1ResponseMPayload.fromJson(value);
         case 'EzsigndocumentRequest':
           return EzsigndocumentRequest.fromJson(value);
         case 'EzsigndocumentRequestCompound':

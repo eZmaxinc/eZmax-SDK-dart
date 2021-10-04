@@ -13,10 +13,11 @@ part of openapi.api;
 class EzsigndocumentGetWordsPositionsV1ResponseAllOf {
   /// Returns a new [EzsigndocumentGetWordsPositionsV1ResponseAllOf] instance.
   EzsigndocumentGetWordsPositionsV1ResponseAllOf({
-    @required this.mPayload,
+    this.mPayload = const [],
   });
 
-  EzsigndocumentGetWordsPositionsV1ResponseMPayload mPayload;
+  /// Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request
+  List<CustomWordPositionWordResponse> mPayload;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigndocumentGetWordsPositionsV1ResponseAllOf &&
@@ -43,7 +44,7 @@ class EzsigndocumentGetWordsPositionsV1ResponseAllOf {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
       return EzsigndocumentGetWordsPositionsV1ResponseAllOf(
-        mPayload: EzsigndocumentGetWordsPositionsV1ResponseMPayload.fromJson(json[r'mPayload']),
+        mPayload: CustomWordPositionWordResponse.listFromJson(json[r'mPayload']),
       );
     }
     return null;

@@ -38,7 +38,8 @@ doc/ContactinformationsRequestCompoundAllOf.md
 doc/CustomFormDataDocumentResponse.md
 doc/CustomFormDataFolderResponse.md
 doc/CustomFormDataSignerResponse.md
-doc/CustomWordPositionResponse.md
+doc/CustomWordPositionOccurenceResponse.md
+doc/CustomWordPositionWordResponse.md
 doc/EmailRequest.md
 doc/EzsigndocumentApplyEzsigntemplateV1Request.md
 doc/EzsigndocumentApplyEzsigntemplateV1Response.md
@@ -64,7 +65,6 @@ doc/EzsigndocumentGetObjectV1ResponseMPayload.md
 doc/EzsigndocumentGetWordsPositionsV1Request.md
 doc/EzsigndocumentGetWordsPositionsV1Response.md
 doc/EzsigndocumentGetWordsPositionsV1ResponseAllOf.md
-doc/EzsigndocumentGetWordsPositionsV1ResponseMPayload.md
 doc/EzsigndocumentRequest.md
 doc/EzsigndocumentRequestCompound.md
 doc/EzsigndocumentResponse.md
@@ -235,7 +235,8 @@ lib/model/contactinformations_request_compound_all_of.dart
 lib/model/custom_form_data_document_response.dart
 lib/model/custom_form_data_folder_response.dart
 lib/model/custom_form_data_signer_response.dart
-lib/model/custom_word_position_response.dart
+lib/model/custom_word_position_occurence_response.dart
+lib/model/custom_word_position_word_response.dart
 lib/model/email_request.dart
 lib/model/ezsigndocument_apply_ezsigntemplate_v1_request.dart
 lib/model/ezsigndocument_apply_ezsigntemplate_v1_response.dart
@@ -261,7 +262,6 @@ lib/model/ezsigndocument_get_object_v1_response_m_payload.dart
 lib/model/ezsigndocument_get_words_positions_v1_request.dart
 lib/model/ezsigndocument_get_words_positions_v1_response.dart
 lib/model/ezsigndocument_get_words_positions_v1_response_all_of.dart
-lib/model/ezsigndocument_get_words_positions_v1_response_m_payload.dart
 lib/model/ezsigndocument_request.dart
 lib/model/ezsigndocument_request_compound.dart
 lib/model/ezsigndocument_response.dart
@@ -395,7 +395,8 @@ test/contactinformations_request_test.dart
 test/custom_form_data_document_response_test.dart
 test/custom_form_data_folder_response_test.dart
 test/custom_form_data_signer_response_test.dart
-test/custom_word_position_response_test.dart
+test/custom_word_position_occurence_response_test.dart
+test/custom_word_position_word_response_test.dart
 test/email_request_test.dart
 test/ezsigndocument_apply_ezsigntemplate_v1_request_test.dart
 test/ezsigndocument_apply_ezsigntemplate_v1_response_test.dart
@@ -420,7 +421,6 @@ test/ezsigndocument_get_object_v1_response_m_payload_test.dart
 test/ezsigndocument_get_object_v1_response_test.dart
 test/ezsigndocument_get_words_positions_v1_request_test.dart
 test/ezsigndocument_get_words_positions_v1_response_all_of_test.dart
-test/ezsigndocument_get_words_positions_v1_response_m_payload_test.dart
 test/ezsigndocument_get_words_positions_v1_response_test.dart
 test/ezsigndocument_request_compound_test.dart
 test/ezsigndocument_request_test.dart

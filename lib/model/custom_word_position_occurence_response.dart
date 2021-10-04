@@ -10,9 +10,9 @@
 
 part of openapi.api;
 
-class CustomWordPositionResponse {
-  /// Returns a new [CustomWordPositionResponse] instance.
-  CustomWordPositionResponse({
+class CustomWordPositionOccurenceResponse {
+  /// Returns a new [CustomWordPositionOccurenceResponse] instance.
+  CustomWordPositionOccurenceResponse({
     this.iPage,
     this.iX,
     this.iY,
@@ -31,7 +31,7 @@ class CustomWordPositionResponse {
   int iY;
 
   @override
-  bool operator ==(Object other) => identical(this, other) || other is CustomWordPositionResponse &&
+  bool operator ==(Object other) => identical(this, other) || other is CustomWordPositionOccurenceResponse &&
      other.iPage == iPage &&
      other.iX == iX &&
      other.iY == iY;
@@ -44,7 +44,7 @@ class CustomWordPositionResponse {
     (iY == null ? 0 : iY.hashCode);
 
   @override
-  String toString() => 'CustomWordPositionResponse[iPage=$iPage, iX=$iX, iY=$iY]';
+  String toString() => 'CustomWordPositionOccurenceResponse[iPage=$iPage, iX=$iX, iY=$iY]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -60,13 +60,13 @@ class CustomWordPositionResponse {
     return json;
   }
 
-  /// Returns a new [CustomWordPositionResponse] instance and imports its values from
+  /// Returns a new [CustomWordPositionOccurenceResponse] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static CustomWordPositionResponse fromJson(dynamic value) {
+  static CustomWordPositionOccurenceResponse fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
-      return CustomWordPositionResponse(
+      return CustomWordPositionOccurenceResponse(
         iPage: mapValueOfType<int>(json, r'iPage'),
         iX: mapValueOfType<int>(json, r'iX'),
         iY: mapValueOfType<int>(json, r'iY'),
@@ -75,29 +75,29 @@ class CustomWordPositionResponse {
     return null;
   }
 
-  static List<CustomWordPositionResponse> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+  static List<CustomWordPositionOccurenceResponse> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
     json is List && json.isNotEmpty
-      ? json.map(CustomWordPositionResponse.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <CustomWordPositionResponse>[];
+      ? json.map(CustomWordPositionOccurenceResponse.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <CustomWordPositionOccurenceResponse>[];
 
-  static Map<String, CustomWordPositionResponse> mapFromJson(dynamic json) {
-    final map = <String, CustomWordPositionResponse>{};
+  static Map<String, CustomWordPositionOccurenceResponse> mapFromJson(dynamic json) {
+    final map = <String, CustomWordPositionOccurenceResponse>{};
     if (json is Map && json.isNotEmpty) {
       json
         .cast<String, dynamic>()
-        .forEach((key, dynamic value) => map[key] = CustomWordPositionResponse.fromJson(value));
+        .forEach((key, dynamic value) => map[key] = CustomWordPositionOccurenceResponse.fromJson(value));
     }
     return map;
   }
 
-  // maps a json object with a list of CustomWordPositionResponse-objects as value to a dart map
-  static Map<String, List<CustomWordPositionResponse>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
-    final map = <String, List<CustomWordPositionResponse>>{};
+  // maps a json object with a list of CustomWordPositionOccurenceResponse-objects as value to a dart map
+  static Map<String, List<CustomWordPositionOccurenceResponse>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
+    final map = <String, List<CustomWordPositionOccurenceResponse>>{};
     if (json is Map && json.isNotEmpty) {
       json
         .cast<String, dynamic>()
         .forEach((key, dynamic value) {
-          map[key] = CustomWordPositionResponse.listFromJson(
+          map[key] = CustomWordPositionOccurenceResponse.listFromJson(
             value,
             emptyIsNull: emptyIsNull,
             growable: growable,

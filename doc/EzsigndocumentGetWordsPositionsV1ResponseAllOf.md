@@ -8,7 +8,7 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**EzsigndocumentGetWordsPositionsV1ResponseMPayload**](EzsigndocumentGetWordsPositionsV1ResponseMPayload.md) |  | 
+**mPayload** | [**List<CustomWordPositionWordResponse>**](CustomWordPositionWordResponse.md) | Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request | [default to const []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

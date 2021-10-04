@@ -13,12 +13,13 @@ part of openapi.api;
 class EzsigndocumentGetWordsPositionsV1Response {
   /// Returns a new [EzsigndocumentGetWordsPositionsV1Response] instance.
   EzsigndocumentGetWordsPositionsV1Response({
-    @required this.mPayload,
+    this.mPayload = const [],
     this.objDebugPayload,
     this.objDebug,
   });
 
-  EzsigndocumentGetWordsPositionsV1ResponseMPayload mPayload;
+  /// Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request
+  List<CustomWordPositionWordResponse> mPayload;
 
   CommonResponseObjDebugPayload objDebugPayload;
 
@@ -59,7 +60,7 @@ class EzsigndocumentGetWordsPositionsV1Response {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
       return EzsigndocumentGetWordsPositionsV1Response(
-        mPayload: EzsigndocumentGetWordsPositionsV1ResponseMPayload.fromJson(json[r'mPayload']),
+        mPayload: CustomWordPositionWordResponse.listFromJson(json[r'mPayload']),
         objDebugPayload: CommonResponseObjDebugPayload.fromJson(json[r'objDebugPayload']),
         objDebug: CommonResponseObjDebug.fromJson(json[r'objDebug']),
       );
