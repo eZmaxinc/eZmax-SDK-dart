@@ -14,33 +14,33 @@ class CustomWordPositionWordResponse {
   /// Returns a new [CustomWordPositionWordResponse] instance.
   CustomWordPositionWordResponse({
     @required this.sWord,
-    this.objWordPositionOccurence = const [],
+    this.aObjWordPositionOccurence = const [],
   });
 
   /// The searched word
   String sWord;
 
   /// The found occurences for the seached word
-  List<CustomWordPositionOccurenceResponse> objWordPositionOccurence;
+  List<CustomWordPositionOccurenceResponse> aObjWordPositionOccurence;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomWordPositionWordResponse &&
      other.sWord == sWord &&
-     other.objWordPositionOccurence == objWordPositionOccurence;
+     other.aObjWordPositionOccurence == aObjWordPositionOccurence;
 
   @override
   int get hashCode =>
   // ignore: unnecessary_parenthesis
     (sWord == null ? 0 : sWord.hashCode) +
-    (objWordPositionOccurence == null ? 0 : objWordPositionOccurence.hashCode);
+    (aObjWordPositionOccurence == null ? 0 : aObjWordPositionOccurence.hashCode);
 
   @override
-  String toString() => 'CustomWordPositionWordResponse[sWord=$sWord, objWordPositionOccurence=$objWordPositionOccurence]';
+  String toString() => 'CustomWordPositionWordResponse[sWord=$sWord, aObjWordPositionOccurence=$aObjWordPositionOccurence]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'sWord'] = sWord;
-      json[r'objWordPositionOccurence'] = objWordPositionOccurence;
+      json[r'a_objWordPositionOccurence'] = aObjWordPositionOccurence;
     return json;
   }
 
@@ -52,7 +52,7 @@ class CustomWordPositionWordResponse {
       final json = value.cast<String, dynamic>();
       return CustomWordPositionWordResponse(
         sWord: mapValueOfType<String>(json, r'sWord'),
-        objWordPositionOccurence: CustomWordPositionOccurenceResponse.listFromJson(json[r'objWordPositionOccurence']),
+        aObjWordPositionOccurence: CustomWordPositionOccurenceResponse.listFromJson(json[r'a_objWordPositionOccurence']),
       );
     }
     return null;

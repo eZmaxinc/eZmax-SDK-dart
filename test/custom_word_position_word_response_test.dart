@@ -23,8 +23,8 @@ void main() {
     });
 
     // The found occurences for the seached word
-    // List<CustomWordPositionOccurenceResponse> objWordPositionOccurence (default value: const [])
-    test('to test the property `objWordPositionOccurence`', () async {
+    // List<CustomWordPositionOccurenceResponse> aObjWordPositionOccurence (default value: const [])
+    test('to test the property `aObjWordPositionOccurence`', () async {
       // TODO
     });
 
