@@ -13,12 +13,16 @@ part of openapi.api;
 class EzsigndocumentGetWordsPositionsV1Request {
   /// Returns a new [EzsigndocumentGetWordsPositionsV1Request] instance.
   EzsigndocumentGetWordsPositionsV1Request({
-    this.eGet,
+    @required this.eGet,
+    @required this.bWordCaseSensitive,
     this.aSWord = const [],
   });
 
-  /// Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search in *a_sWord*.
+  /// Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*.
   EzsigndocumentGetWordsPositionsV1RequestEGetEnum eGet;
+
+  /// IF *true*, words will be searched case-sensitive and results will be returned case-sensitive. IF *false*, words will be searched case-insensitive and results will be returned case-insensitive.
+  bool bWordCaseSensitive;
 
   /// Array of words to find in the document
   List<String> aSWord;
@@ -26,22 +30,23 @@ class EzsigndocumentGetWordsPositionsV1Request {
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigndocumentGetWordsPositionsV1Request &&
      other.eGet == eGet &&
+     other.bWordCaseSensitive == bWordCaseSensitive &&
      other.aSWord == aSWord;
 
   @override
   int get hashCode =>
   // ignore: unnecessary_parenthesis
     (eGet == null ? 0 : eGet.hashCode) +
+    (bWordCaseSensitive == null ? 0 : bWordCaseSensitive.hashCode) +
     (aSWord == null ? 0 : aSWord.hashCode);
 
   @override
-  String toString() => 'EzsigndocumentGetWordsPositionsV1Request[eGet=$eGet, aSWord=$aSWord]';
+  String toString() => 'EzsigndocumentGetWordsPositionsV1Request[eGet=$eGet, bWordCaseSensitive=$bWordCaseSensitive, aSWord=$aSWord]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (eGet != null) {
       json[r'eGet'] = eGet;
-    }
+      json[r'bWordCaseSensitive'] = bWordCaseSensitive;
     if (aSWord != null) {
       json[r'a_sWord'] = aSWord;
     }
@@ -56,6 +61,7 @@ class EzsigndocumentGetWordsPositionsV1Request {
       final json = value.cast<String, dynamic>();
       return EzsigndocumentGetWordsPositionsV1Request(
         eGet: EzsigndocumentGetWordsPositionsV1RequestEGetEnum.fromJson(json[r'eGet']),
+        bWordCaseSensitive: mapValueOfType<bool>(json, r'bWordCaseSensitive'),
         aSWord: json[r'a_sWord'] is List
           ? (json[r'a_sWord'] as List).cast<String>()
           : null,
@@ -97,7 +103,7 @@ class EzsigndocumentGetWordsPositionsV1Request {
   }
 }
 
-/// Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search in *a_sWord*.
+/// Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*.
 class EzsigndocumentGetWordsPositionsV1RequestEGetEnum {
   /// Instantiate a new enum with the provided [value].
   const EzsigndocumentGetWordsPositionsV1RequestEGetEnum._(this.value);

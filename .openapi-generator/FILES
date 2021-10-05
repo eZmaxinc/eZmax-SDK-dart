@@ -23,6 +23,7 @@ doc/CommonAudit.md
 doc/CommonGetAutocompleteV1Response.md
 doc/CommonGetAutocompleteV1ResponseAllOf.md
 doc/CommonGetAutocompleteV1ResponseMPayload.md
+doc/CommonGetListV1ResponseMPayload.md
 doc/CommonResponse.md
 doc/CommonResponseError.md
 doc/CommonResponseObjDebug.md
@@ -99,6 +100,11 @@ doc/EzsignfoldersignerassociationGetObjectV1ResponseAllOf.md
 doc/EzsignfoldersignerassociationRequest.md
 doc/EzsignfoldersignerassociationRequestCompound.md
 doc/EzsignfoldersignerassociationRequestCompoundAllOf.md
+doc/EzsignfoldertypeGetListV1Response.md
+doc/EzsignfoldertypeGetListV1ResponseAllOf.md
+doc/EzsignfoldertypeGetListV1ResponseMPayload.md
+doc/EzsignfoldertypeGetListV1ResponseMPayloadAllOf.md
+doc/EzsignfoldertypeListElement.md
 doc/EzsignformfieldResponse.md
 doc/EzsignformfieldResponseCompound.md
 doc/EzsignformfieldgroupResponse.md
@@ -143,6 +149,7 @@ doc/ObjectApikeyApi.md
 doc/ObjectEzsigndocumentApi.md
 doc/ObjectEzsignfolderApi.md
 doc/ObjectEzsignfoldersignerassociationApi.md
+doc/ObjectEzsignfoldertypeApi.md
 doc/ObjectEzsignsignatureApi.md
 doc/ObjectFranchisebrokerApi.md
 doc/ObjectFranchiseofficeApi.md
@@ -187,6 +194,7 @@ lib/api/object_apikey_api.dart
 lib/api/object_ezsigndocument_api.dart
 lib/api/object_ezsignfolder_api.dart
 lib/api/object_ezsignfoldersignerassociation_api.dart
+lib/api/object_ezsignfoldertype_api.dart
 lib/api/object_ezsignsignature_api.dart
 lib/api/object_franchisebroker_api.dart
 lib/api/object_franchiseoffice_api.dart
@@ -220,6 +228,7 @@ lib/model/common_audit.dart
 lib/model/common_get_autocomplete_v1_response.dart
 lib/model/common_get_autocomplete_v1_response_all_of.dart
 lib/model/common_get_autocomplete_v1_response_m_payload.dart
+lib/model/common_get_list_v1_response_m_payload.dart
 lib/model/common_response.dart
 lib/model/common_response_error.dart
 lib/model/common_response_obj_debug.dart
@@ -296,6 +305,11 @@ lib/model/ezsignfoldersignerassociation_get_object_v1_response_all_of.dart
 lib/model/ezsignfoldersignerassociation_request.dart
 lib/model/ezsignfoldersignerassociation_request_compound.dart
 lib/model/ezsignfoldersignerassociation_request_compound_all_of.dart
+lib/model/ezsignfoldertype_get_list_v1_response.dart
+lib/model/ezsignfoldertype_get_list_v1_response_all_of.dart
+lib/model/ezsignfoldertype_get_list_v1_response_m_payload.dart
+lib/model/ezsignfoldertype_get_list_v1_response_m_payload_all_of.dart
+lib/model/ezsignfoldertype_list_element.dart
 lib/model/ezsignformfield_response.dart
 lib/model/ezsignformfield_response_compound.dart
 lib/model/ezsignformfieldgroup_response.dart
@@ -380,6 +394,7 @@ test/common_audit_test.dart
 test/common_get_autocomplete_v1_response_all_of_test.dart
 test/common_get_autocomplete_v1_response_m_payload_test.dart
 test/common_get_autocomplete_v1_response_test.dart
+test/common_get_list_v1_response_m_payload_test.dart
 test/common_response_error_test.dart
 test/common_response_obj_debug_payload_test.dart
 test/common_response_obj_debug_test.dart
@@ -456,6 +471,11 @@ test/ezsignfoldersignerassociation_get_object_v1_response_test.dart
 test/ezsignfoldersignerassociation_request_compound_all_of_test.dart
 test/ezsignfoldersignerassociation_request_compound_test.dart
 test/ezsignfoldersignerassociation_request_test.dart
+test/ezsignfoldertype_get_list_v1_response_all_of_test.dart
+test/ezsignfoldertype_get_list_v1_response_m_payload_all_of_test.dart
+test/ezsignfoldertype_get_list_v1_response_m_payload_test.dart
+test/ezsignfoldertype_get_list_v1_response_test.dart
+test/ezsignfoldertype_list_element_test.dart
 test/ezsignformfield_response_compound_test.dart
 test/ezsignformfield_response_test.dart
 test/ezsignformfieldgroup_response_compound_all_of_test.dart
@@ -500,6 +520,7 @@ test/object_apikey_api_test.dart
 test/object_ezsigndocument_api_test.dart
 test/object_ezsignfolder_api_test.dart
 test/object_ezsignfoldersignerassociation_api_test.dart
+test/object_ezsignfoldertype_api_test.dart
 test/object_ezsignsignature_api_test.dart
 test/object_franchisebroker_api_test.dart
 test/object_franchiseoffice_api_test.dart

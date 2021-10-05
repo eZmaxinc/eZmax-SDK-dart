@@ -16,9 +16,15 @@ void main() {
   final instance = EzsigndocumentGetWordsPositionsV1Request();
 
   group('test EzsigndocumentGetWordsPositionsV1Request', () {
-    // Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search in *a_sWord*.
+    // Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*.
     // String eGet
     test('to test the property `eGet`', () async {
+      // TODO
+    });
+
+    // IF *true*, words will be searched case-sensitive and results will be returned case-sensitive. IF *false*, words will be searched case-insensitive and results will be returned case-insensitive.
+    // bool bWordCaseSensitive
+    test('to test the property `bWordCaseSensitive`', () async {
       // TODO
     });
 

@@ -233,6 +233,8 @@ class ApiClient {
           return CommonGetAutocompleteV1ResponseAllOf.fromJson(value);
         case 'CommonGetAutocompleteV1ResponseMPayload':
           return CommonGetAutocompleteV1ResponseMPayload.fromJson(value);
+        case 'CommonGetListV1ResponseMPayload':
+          return CommonGetListV1ResponseMPayload.fromJson(value);
         case 'CommonResponse':
           return CommonResponse.fromJson(value);
         case 'CommonResponseError':
@@ -385,6 +387,16 @@ class ApiClient {
           return EzsignfoldersignerassociationRequestCompound.fromJson(value);
         case 'EzsignfoldersignerassociationRequestCompoundAllOf':
           return EzsignfoldersignerassociationRequestCompoundAllOf.fromJson(value);
+        case 'EzsignfoldertypeGetListV1Response':
+          return EzsignfoldertypeGetListV1Response.fromJson(value);
+        case 'EzsignfoldertypeGetListV1ResponseAllOf':
+          return EzsignfoldertypeGetListV1ResponseAllOf.fromJson(value);
+        case 'EzsignfoldertypeGetListV1ResponseMPayload':
+          return EzsignfoldertypeGetListV1ResponseMPayload.fromJson(value);
+        case 'EzsignfoldertypeGetListV1ResponseMPayloadAllOf':
+          return EzsignfoldertypeGetListV1ResponseMPayloadAllOf.fromJson(value);
+        case 'EzsignfoldertypeListElement':
+          return EzsignfoldertypeListElement.fromJson(value);
         case 'EzsignformfieldResponse':
           return EzsignformfieldResponse.fromJson(value);
         case 'EzsignformfieldResponseCompound':
