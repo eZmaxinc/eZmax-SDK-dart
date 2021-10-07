@@ -10,9 +10,9 @@
 
 part of openapi.api;
 
-class CustomFormDataFolderResponse {
-  /// Returns a new [CustomFormDataFolderResponse] instance.
-  CustomFormDataFolderResponse({
+class CustomFormsDataFolderResponse {
+  /// Returns a new [CustomFormsDataFolderResponse] instance.
+  CustomFormsDataFolderResponse({
     @required this.pkiEzsignfolderID,
     @required this.sEzsignfolderDescription,
     this.aObjFormDataDocument = const [],
@@ -27,7 +27,7 @@ class CustomFormDataFolderResponse {
   List<CustomFormDataDocumentResponse> aObjFormDataDocument;
 
   @override
-  bool operator ==(Object other) => identical(this, other) || other is CustomFormDataFolderResponse &&
+  bool operator ==(Object other) => identical(this, other) || other is CustomFormsDataFolderResponse &&
      other.pkiEzsignfolderID == pkiEzsignfolderID &&
      other.sEzsignfolderDescription == sEzsignfolderDescription &&
      other.aObjFormDataDocument == aObjFormDataDocument;
@@ -40,7 +40,7 @@ class CustomFormDataFolderResponse {
     (aObjFormDataDocument == null ? 0 : aObjFormDataDocument.hashCode);
 
   @override
-  String toString() => 'CustomFormDataFolderResponse[pkiEzsignfolderID=$pkiEzsignfolderID, sEzsignfolderDescription=$sEzsignfolderDescription, aObjFormDataDocument=$aObjFormDataDocument]';
+  String toString() => 'CustomFormsDataFolderResponse[pkiEzsignfolderID=$pkiEzsignfolderID, sEzsignfolderDescription=$sEzsignfolderDescription, aObjFormDataDocument=$aObjFormDataDocument]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -50,13 +50,13 @@ class CustomFormDataFolderResponse {
     return json;
   }
 
-  /// Returns a new [CustomFormDataFolderResponse] instance and imports its values from
+  /// Returns a new [CustomFormsDataFolderResponse] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static CustomFormDataFolderResponse fromJson(dynamic value) {
+  static CustomFormsDataFolderResponse fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
-      return CustomFormDataFolderResponse(
+      return CustomFormsDataFolderResponse(
         pkiEzsignfolderID: mapValueOfType<int>(json, r'pkiEzsignfolderID'),
         sEzsignfolderDescription: mapValueOfType<String>(json, r'sEzsignfolderDescription'),
         aObjFormDataDocument: CustomFormDataDocumentResponse.listFromJson(json[r'a_objFormDataDocument']),
@@ -65,29 +65,29 @@ class CustomFormDataFolderResponse {
     return null;
   }
 
-  static List<CustomFormDataFolderResponse> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+  static List<CustomFormsDataFolderResponse> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
     json is List && json.isNotEmpty
-      ? json.map(CustomFormDataFolderResponse.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <CustomFormDataFolderResponse>[];
+      ? json.map(CustomFormsDataFolderResponse.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <CustomFormsDataFolderResponse>[];
 
-  static Map<String, CustomFormDataFolderResponse> mapFromJson(dynamic json) {
-    final map = <String, CustomFormDataFolderResponse>{};
+  static Map<String, CustomFormsDataFolderResponse> mapFromJson(dynamic json) {
+    final map = <String, CustomFormsDataFolderResponse>{};
     if (json is Map && json.isNotEmpty) {
       json
         .cast<String, dynamic>()
-        .forEach((key, dynamic value) => map[key] = CustomFormDataFolderResponse.fromJson(value));
+        .forEach((key, dynamic value) => map[key] = CustomFormsDataFolderResponse.fromJson(value));
     }
     return map;
   }
 
-  // maps a json object with a list of CustomFormDataFolderResponse-objects as value to a dart map
-  static Map<String, List<CustomFormDataFolderResponse>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
-    final map = <String, List<CustomFormDataFolderResponse>>{};
+  // maps a json object with a list of CustomFormsDataFolderResponse-objects as value to a dart map
+  static Map<String, List<CustomFormsDataFolderResponse>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
+    final map = <String, List<CustomFormsDataFolderResponse>>{};
     if (json is Map && json.isNotEmpty) {
       json
         .cast<String, dynamic>()
         .forEach((key, dynamic value) {
-          map[key] = CustomFormDataFolderResponse.listFromJson(
+          map[key] = CustomFormsDataFolderResponse.listFromJson(
             value,
             emptyIsNull: emptyIsNull,
             growable: growable,

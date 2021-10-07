@@ -18,10 +18,25 @@ class ObjectEzsignfoldertypeApi {
 
   /// Retrieve Ezsignfoldertype list
   ///
-  /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+  /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |
   ///
   /// Note: This method returns the HTTP [Response].
-  Future<Response> ezsignfoldertypeGetListV1WithHttpInfo() async {
+  ///
+  /// Parameters:
+  ///
+  /// * [String] eOrderBy:
+  ///   Specify how you want the results to be sorted
+  ///
+  /// * [int] iRowMax:
+  ///
+  /// * [int] iRowOffset:
+  ///
+  /// * [HeaderAcceptLanguage] acceptLanguage:
+  ///
+  /// * [String] sFilter:
+  Future<Response> ezsignfoldertypeGetListV1WithHttpInfo({ String eOrderBy, int iRowMax, int iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter, }) async {
+    // Verify required params are set.
+
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfoldertype/getList';
 
@@ -31,6 +46,23 @@ class ObjectEzsignfoldertypeApi {
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
+
+    if (eOrderBy != null) {
+      queryParams.addAll(_convertParametersForCollectionFormat('', 'eOrderBy', eOrderBy));
+    }
+    if (iRowMax != null) {
+      queryParams.addAll(_convertParametersForCollectionFormat('', 'iRowMax', iRowMax));
+    }
+    if (iRowOffset != null) {
+      queryParams.addAll(_convertParametersForCollectionFormat('', 'iRowOffset', iRowOffset));
+    }
+    if (sFilter != null) {
+      queryParams.addAll(_convertParametersForCollectionFormat('', 'sFilter', sFilter));
+    }
+
+    if (acceptLanguage != null) {
+      headerParams[r'Accept-Language'] = parameterToString(acceptLanguage);
+    }
 
     const authNames = <String>['Authorization'];
     const contentTypes = <String>[];
@@ -50,9 +82,22 @@ class ObjectEzsignfoldertypeApi {
 
   /// Retrieve Ezsignfoldertype list
   ///
-  /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-  Future<EzsignfoldertypeGetListV1Response> ezsignfoldertypeGetListV1() async {
-    final response = await ezsignfoldertypeGetListV1WithHttpInfo();
+  /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |
+  ///
+  /// Parameters:
+  ///
+  /// * [String] eOrderBy:
+  ///   Specify how you want the results to be sorted
+  ///
+  /// * [int] iRowMax:
+  ///
+  /// * [int] iRowOffset:
+  ///
+  /// * [HeaderAcceptLanguage] acceptLanguage:
+  ///
+  /// * [String] sFilter:
+  Future<EzsignfoldertypeGetListV1Response> ezsignfoldertypeGetListV1({ String eOrderBy, int iRowMax, int iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter, }) async {
+    final response = await ezsignfoldertypeGetListV1WithHttpInfo( eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

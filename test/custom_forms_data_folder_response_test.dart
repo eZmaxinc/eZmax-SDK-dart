@@ -11,11 +11,11 @@
 import 'package:openapi/api.dart';
 import 'package:test/test.dart';
 
-// tests for CustomFormDataFolderResponse
+// tests for CustomFormsDataFolderResponse
 void main() {
-  final instance = CustomFormDataFolderResponse();
+  final instance = CustomFormsDataFolderResponse();
 
-  group('test CustomFormDataFolderResponse', () {
+  group('test CustomFormsDataFolderResponse', () {
     // The unique ID of the Ezsignfolder
     // int pkiEzsignfolderID
     test('to test the property `pkiEzsignfolderID`', () async {

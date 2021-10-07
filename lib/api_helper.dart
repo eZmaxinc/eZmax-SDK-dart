@@ -81,6 +81,9 @@ String parameterToString(dynamic value) {
   if (value is FieldEUserTypeSSPR) {
     return FieldEUserTypeSSPRTypeTransformer().encode(value).toString();
   }
+  if (value is HeaderAcceptLanguage) {
+    return HeaderAcceptLanguageTypeTransformer().encode(value).toString();
+  }
   return value.toString();
 }
 

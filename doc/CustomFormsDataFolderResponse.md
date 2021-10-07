@@ -1,4 +1,4 @@
-# openapi.model.CustomFormDataFolderResponse
+# openapi.model.CustomFormsDataFolderResponse
 
 ## Load the model package
 ```dart

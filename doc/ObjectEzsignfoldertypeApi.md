@@ -13,11 +13,11 @@ Method | HTTP request | Description
 
 
 # **ezsignfoldertypeGetListV1**
-> EzsignfoldertypeGetListV1Response ezsignfoldertypeGetListV1()
+> EzsignfoldertypeGetListV1Response ezsignfoldertypeGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
 Retrieve Ezsignfoldertype list
 
-## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |
 
 ### Example
 ```dart
@@ -28,9 +28,14 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
 
 final api_instance = ObjectEzsignfoldertypeApi();
+final eOrderBy = eOrderBy_example; // String | Specify how you want the results to be sorted
+final iRowMax = 56; // int | 
+final iRowOffset = 56; // int | 
+final acceptLanguage = ; // HeaderAcceptLanguage | 
+final sFilter = sFilter_example; // String | 
 
 try {
-    final result = api_instance.ezsignfoldertypeGetListV1();
+    final result = api_instance.ezsignfoldertypeGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
     print(result);
 } catch (e) {
     print('Exception when calling ObjectEzsignfoldertypeApi->ezsignfoldertypeGetListV1: $e\n');
@@ -38,7 +43,14 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] 
+ **iRowMax** | **int**|  | [optional] 
+ **iRowOffset** | **int**|  | [optional] 
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] 
+ **sFilter** | **String**|  | [optional] 
 
 ### Return type
 
@@ -51,7 +63,7 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

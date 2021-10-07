@@ -37,8 +37,8 @@ doc/ContactinformationsRequest.md
 doc/ContactinformationsRequestCompound.md
 doc/ContactinformationsRequestCompoundAllOf.md
 doc/CustomFormDataDocumentResponse.md
-doc/CustomFormDataFolderResponse.md
 doc/CustomFormDataSignerResponse.md
+doc/CustomFormsDataFolderResponse.md
 doc/CustomWordPositionOccurenceResponse.md
 doc/CustomWordPositionWordResponse.md
 doc/EmailRequest.md
@@ -140,6 +140,7 @@ doc/FranchisereferalincomeRequestCompound.md
 doc/FranchisereferalincomeRequestCompoundAllOf.md
 doc/GlobalCustomerApi.md
 doc/GlobalCustomerGetEndpointV1Response.md
+doc/HeaderAcceptLanguage.md
 doc/ModuleAuthenticateApi.md
 doc/ModuleSsprApi.md
 doc/ModuleUserApi.md
@@ -242,8 +243,8 @@ lib/model/contactinformations_request.dart
 lib/model/contactinformations_request_compound.dart
 lib/model/contactinformations_request_compound_all_of.dart
 lib/model/custom_form_data_document_response.dart
-lib/model/custom_form_data_folder_response.dart
 lib/model/custom_form_data_signer_response.dart
+lib/model/custom_forms_data_folder_response.dart
 lib/model/custom_word_position_occurence_response.dart
 lib/model/custom_word_position_word_response.dart
 lib/model/email_request.dart
@@ -344,6 +345,7 @@ lib/model/franchisereferalincome_request.dart
 lib/model/franchisereferalincome_request_compound.dart
 lib/model/franchisereferalincome_request_compound_all_of.dart
 lib/model/global_customer_get_endpoint_v1_response.dart
+lib/model/header_accept_language.dart
 lib/model/multilingual_apikey_description.dart
 lib/model/phone_request.dart
 lib/model/sspr_reset_password_request_v1_request.dart
@@ -408,8 +410,8 @@ test/contactinformations_request_compound_all_of_test.dart
 test/contactinformations_request_compound_test.dart
 test/contactinformations_request_test.dart
 test/custom_form_data_document_response_test.dart
-test/custom_form_data_folder_response_test.dart
 test/custom_form_data_signer_response_test.dart
+test/custom_forms_data_folder_response_test.dart
 test/custom_word_position_occurence_response_test.dart
 test/custom_word_position_word_response_test.dart
 test/email_request_test.dart
@@ -511,6 +513,7 @@ test/franchisereferalincome_request_compound_test.dart
 test/franchisereferalincome_request_test.dart
 test/global_customer_api_test.dart
 test/global_customer_get_endpoint_v1_response_test.dart
+test/header_accept_language_test.dart
 test/module_authenticate_api_test.dart
 test/module_sspr_api_test.dart
 test/module_user_api_test.dart

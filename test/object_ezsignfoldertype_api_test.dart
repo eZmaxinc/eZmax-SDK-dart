@@ -19,9 +19,9 @@ void main() {
   group('tests for ObjectEzsignfoldertypeApi', () {
     // Retrieve Ezsignfoldertype list
     //
-    // ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+    // ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |
     //
-    //Future<EzsignfoldertypeGetListV1Response> ezsignfoldertypeGetListV1() async
+    //Future<EzsignfoldertypeGetListV1Response> ezsignfoldertypeGetListV1({ String eOrderBy, int iRowMax, int iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter }) async
     test('test ezsignfoldertypeGetListV1', () async {
       // TODO
     });

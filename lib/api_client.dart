@@ -261,10 +261,10 @@ class ApiClient {
           return ContactinformationsRequestCompoundAllOf.fromJson(value);
         case 'CustomFormDataDocumentResponse':
           return CustomFormDataDocumentResponse.fromJson(value);
-        case 'CustomFormDataFolderResponse':
-          return CustomFormDataFolderResponse.fromJson(value);
         case 'CustomFormDataSignerResponse':
           return CustomFormDataSignerResponse.fromJson(value);
+        case 'CustomFormsDataFolderResponse':
+          return CustomFormsDataFolderResponse.fromJson(value);
         case 'CustomWordPositionOccurenceResponse':
           return CustomWordPositionOccurenceResponse.fromJson(value);
         case 'CustomWordPositionWordResponse':
@@ -472,6 +472,9 @@ class ApiClient {
           return FranchisereferalincomeRequestCompoundAllOf.fromJson(value);
         case 'GlobalCustomerGetEndpointV1Response':
           return GlobalCustomerGetEndpointV1Response.fromJson(value);
+        case 'HeaderAcceptLanguage':
+          return HeaderAcceptLanguageTypeTransformer().decode(value);
+          
         case 'MultilingualApikeyDescription':
           return MultilingualApikeyDescription.fromJson(value);
         case 'PhoneRequest':
