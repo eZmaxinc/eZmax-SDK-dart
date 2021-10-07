@@ -112,6 +112,7 @@ part 'model/ezsigndocument_response.dart';
 part 'model/ezsigndocument_response_compound.dart';
 part 'model/ezsignfolder_create_object_v1_request.dart';
 part 'model/ezsignfolder_create_object_v1_response.dart';
+part 'model/ezsignfolder_create_object_v1_response_all_of.dart';
 part 'model/ezsignfolder_create_object_v1_response_m_payload.dart';
 part 'model/ezsignfolder_delete_object_v1_response.dart';
 part 'model/ezsignfolder_get_forms_data_v1_response.dart';

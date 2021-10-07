@@ -72,6 +72,7 @@ doc/EzsigndocumentResponse.md
 doc/EzsigndocumentResponseCompound.md
 doc/EzsignfolderCreateObjectV1Request.md
 doc/EzsignfolderCreateObjectV1Response.md
+doc/EzsignfolderCreateObjectV1ResponseAllOf.md
 doc/EzsignfolderCreateObjectV1ResponseMPayload.md
 doc/EzsignfolderDeleteObjectV1Response.md
 doc/EzsignfolderGetFormsDataV1Response.md
@@ -278,6 +279,7 @@ lib/model/ezsigndocument_response.dart
 lib/model/ezsigndocument_response_compound.dart
 lib/model/ezsignfolder_create_object_v1_request.dart
 lib/model/ezsignfolder_create_object_v1_response.dart
+lib/model/ezsignfolder_create_object_v1_response_all_of.dart
 lib/model/ezsignfolder_create_object_v1_response_m_payload.dart
 lib/model/ezsignfolder_delete_object_v1_response.dart
 lib/model/ezsignfolder_get_forms_data_v1_response.dart
@@ -444,6 +446,7 @@ test/ezsigndocument_request_test.dart
 test/ezsigndocument_response_compound_test.dart
 test/ezsigndocument_response_test.dart
 test/ezsignfolder_create_object_v1_request_test.dart
+test/ezsignfolder_create_object_v1_response_all_of_test.dart
 test/ezsignfolder_create_object_v1_response_m_payload_test.dart
 test/ezsignfolder_create_object_v1_response_test.dart
 test/ezsignfolder_delete_object_v1_response_test.dart

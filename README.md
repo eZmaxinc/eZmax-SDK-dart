@@ -178,6 +178,7 @@ Class | Method | HTTP request | Description
  - [EzsigndocumentResponseCompound](doc//EzsigndocumentResponseCompound.md)
  - [EzsignfolderCreateObjectV1Request](doc//EzsignfolderCreateObjectV1Request.md)
  - [EzsignfolderCreateObjectV1Response](doc//EzsignfolderCreateObjectV1Response.md)
+ - [EzsignfolderCreateObjectV1ResponseAllOf](doc//EzsignfolderCreateObjectV1ResponseAllOf.md)
  - [EzsignfolderCreateObjectV1ResponseMPayload](doc//EzsignfolderCreateObjectV1ResponseMPayload.md)
  - [EzsignfolderDeleteObjectV1Response](doc//EzsignfolderDeleteObjectV1Response.md)
  - [EzsignfolderGetFormsDataV1Response](doc//EzsignfolderGetFormsDataV1Response.md)
