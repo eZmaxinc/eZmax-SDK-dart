@@ -1,4 +1,4 @@
-# openapi.model.EzsignfoldertypeGetListV1Response
+# openapi.model.CommonResponseGetList
 
 ## Load the model package
 ```dart
@@ -8,7 +8,6 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**EzsignfoldertypeGetListV1ResponseMPayload**](EzsignfoldertypeGetListV1ResponseMPayload.md) |  | 
 **objDebugPayload** | [**CommonResponseObjDebugPayloadGetList**](CommonResponseObjDebugPayloadGetList.md) |  | [optional] 
 **objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  | [optional] 
 

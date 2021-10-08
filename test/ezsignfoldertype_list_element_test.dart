@@ -22,9 +22,20 @@ void main() {
       // TODO
     });
 
+    // FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel
+    test('to test the property `eEzsignfoldertypePrivacylevel`', () async {
+      // TODO
+    });
+
     // The name of the Ezsignfoldertype in the language of the requester
     // String sEzsignfoldertypeNameX
     test('to test the property `sEzsignfoldertypeNameX`', () async {
+      // TODO
+    });
+
+    // Whether the Ezsignfoldertype is active or not
+    // bool bEzsignfoldertypeIsactive
+    test('to test the property `bEzsignfoldertypeIsactive`', () async {
       // TODO
     });
 

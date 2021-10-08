@@ -11,16 +11,11 @@
 import 'package:openapi/api.dart';
 import 'package:test/test.dart';
 
-// tests for EzsignfoldertypeGetListV1Response
+// tests for CommonResponseGetList
 void main() {
-  final instance = EzsignfoldertypeGetListV1Response();
+  final instance = CommonResponseGetList();
 
-  group('test EzsignfoldertypeGetListV1Response', () {
-    // EzsignfoldertypeGetListV1ResponseMPayload mPayload
-    test('to test the property `mPayload`', () async {
-      // TODO
-    });
-
+  group('test CommonResponseGetList', () {
     // CommonResponseObjDebugPayloadGetList objDebugPayload
     test('to test the property `objDebugPayload`', () async {
       // TODO

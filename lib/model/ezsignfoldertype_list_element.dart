@@ -14,33 +14,46 @@ class EzsignfoldertypeListElement {
   /// Returns a new [EzsignfoldertypeListElement] instance.
   EzsignfoldertypeListElement({
     @required this.pkiEzsignfoldertypeID,
+    @required this.eEzsignfoldertypePrivacylevel,
     @required this.sEzsignfoldertypeNameX,
+    @required this.bEzsignfoldertypeIsactive,
   });
 
   /// The unique ID of the Ezsignfoldertype.
   int pkiEzsignfoldertypeID;
 
+  FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel;
+
   /// The name of the Ezsignfoldertype in the language of the requester
   String sEzsignfoldertypeNameX;
+
+  /// Whether the Ezsignfoldertype is active or not
+  bool bEzsignfoldertypeIsactive;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfoldertypeListElement &&
      other.pkiEzsignfoldertypeID == pkiEzsignfoldertypeID &&
-     other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX;
+     other.eEzsignfoldertypePrivacylevel == eEzsignfoldertypePrivacylevel &&
+     other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
+     other.bEzsignfoldertypeIsactive == bEzsignfoldertypeIsactive;
 
   @override
   int get hashCode =>
   // ignore: unnecessary_parenthesis
     (pkiEzsignfoldertypeID == null ? 0 : pkiEzsignfoldertypeID.hashCode) +
-    (sEzsignfoldertypeNameX == null ? 0 : sEzsignfoldertypeNameX.hashCode);
+    (eEzsignfoldertypePrivacylevel == null ? 0 : eEzsignfoldertypePrivacylevel.hashCode) +
+    (sEzsignfoldertypeNameX == null ? 0 : sEzsignfoldertypeNameX.hashCode) +
+    (bEzsignfoldertypeIsactive == null ? 0 : bEzsignfoldertypeIsactive.hashCode);
 
   @override
-  String toString() => 'EzsignfoldertypeListElement[pkiEzsignfoldertypeID=$pkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX]';
+  String toString() => 'EzsignfoldertypeListElement[pkiEzsignfoldertypeID=$pkiEzsignfoldertypeID, eEzsignfoldertypePrivacylevel=$eEzsignfoldertypePrivacylevel, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, bEzsignfoldertypeIsactive=$bEzsignfoldertypeIsactive]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiEzsignfoldertypeID'] = pkiEzsignfoldertypeID;
+      json[r'eEzsignfoldertypePrivacylevel'] = eEzsignfoldertypePrivacylevel;
       json[r'sEzsignfoldertypeNameX'] = sEzsignfoldertypeNameX;
+      json[r'bEzsignfoldertypeIsactive'] = bEzsignfoldertypeIsactive;
     return json;
   }
 
@@ -52,7 +65,9 @@ class EzsignfoldertypeListElement {
       final json = value.cast<String, dynamic>();
       return EzsignfoldertypeListElement(
         pkiEzsignfoldertypeID: mapValueOfType<int>(json, r'pkiEzsignfoldertypeID'),
+        eEzsignfoldertypePrivacylevel: FieldEEzsignfoldertypePrivacylevel.fromJson(json[r'eEzsignfoldertypePrivacylevel']),
         sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX'),
+        bEzsignfoldertypeIsactive: mapValueOfType<bool>(json, r'bEzsignfoldertypeIsactive'),
       );
     }
     return null;

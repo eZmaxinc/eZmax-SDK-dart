@@ -11,11 +11,11 @@
 import 'package:openapi/api.dart';
 import 'package:test/test.dart';
 
-// tests for CommonResponseObjDebugPayload
+// tests for CommonResponseObjDebugPayloadGetList
 void main() {
-  final instance = CommonResponseObjDebugPayload();
+  final instance = CommonResponseObjDebugPayloadGetList();
 
-  group('test CommonResponseObjDebugPayload', () {
+  group('test CommonResponseObjDebugPayloadGetList', () {
     // The minimum version of the function that can be called
     // int iVersionMin
     test('to test the property `iVersionMin`', () async {
@@ -31,6 +31,17 @@ void main() {
     // An array of permissions required to access this function.  If the value \"0\" is present in the array, anyone can call this function.  You must have one of the permission to access the function. You don't need to have all of them.
     // List<int> aRequiredPermission (default value: const [])
     test('to test the property `aRequiredPermission`', () async {
+      // TODO
+    });
+
+    // CommonResponseFilter aFilter
+    test('to test the property `aFilter`', () async {
+      // TODO
+    });
+
+    // List of available values for *eOrderBy*
+    // Map<String, String> aOrderBy (default value: const {})
+    test('to test the property `aOrderBy`', () async {
       // TODO
     });
 

@@ -239,10 +239,18 @@ class ApiClient {
           return CommonResponse.fromJson(value);
         case 'CommonResponseError':
           return CommonResponseError.fromJson(value);
+        case 'CommonResponseFilter':
+          return CommonResponseFilter.fromJson(value);
+        case 'CommonResponseGetList':
+          return CommonResponseGetList.fromJson(value);
         case 'CommonResponseObjDebug':
           return CommonResponseObjDebug.fromJson(value);
         case 'CommonResponseObjDebugPayload':
           return CommonResponseObjDebugPayload.fromJson(value);
+        case 'CommonResponseObjDebugPayloadGetList':
+          return CommonResponseObjDebugPayloadGetList.fromJson(value);
+        case 'CommonResponseObjDebugPayloadGetListAllOf':
+          return CommonResponseObjDebugPayloadGetListAllOf.fromJson(value);
         case 'CommonResponseObjSQLQuery':
           return CommonResponseObjSQLQuery.fromJson(value);
         case 'CommonWebhook':
@@ -445,6 +453,9 @@ class ApiClient {
           
         case 'FieldEEzsignfolderStep':
           return FieldEEzsignfolderStepTypeTransformer().decode(value);
+          
+        case 'FieldEEzsignfoldertypePrivacylevel':
+          return FieldEEzsignfoldertypePrivacylevelTypeTransformer().decode(value);
           
         case 'FieldEEzsignsignatureType':
           return FieldEEzsignsignatureTypeTypeTransformer().decode(value);

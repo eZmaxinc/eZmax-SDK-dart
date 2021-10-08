@@ -20,7 +20,7 @@ class EzsignfoldertypeGetListV1Response {
 
   EzsignfoldertypeGetListV1ResponseMPayload mPayload;
 
-  CommonResponseObjDebugPayload objDebugPayload;
+  CommonResponseObjDebugPayloadGetList objDebugPayload;
 
   CommonResponseObjDebug objDebug;
 
@@ -60,7 +60,7 @@ class EzsignfoldertypeGetListV1Response {
       final json = value.cast<String, dynamic>();
       return EzsignfoldertypeGetListV1Response(
         mPayload: EzsignfoldertypeGetListV1ResponseMPayload.fromJson(json[r'mPayload']),
-        objDebugPayload: CommonResponseObjDebugPayload.fromJson(json[r'objDebugPayload']),
+        objDebugPayload: CommonResponseObjDebugPayloadGetList.fromJson(json[r'objDebugPayload']),
         objDebug: CommonResponseObjDebug.fromJson(json[r'objDebug']),
       );
     }

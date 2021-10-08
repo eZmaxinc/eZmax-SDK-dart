@@ -15,7 +15,7 @@ class CommonResponseObjDebugPayload {
   CommonResponseObjDebugPayload({
     @required this.iVersionMin,
     @required this.iVersionMax,
-    this.aRequiredPermissions = const [],
+    this.aRequiredPermission = const [],
   });
 
   /// The minimum version of the function that can be called
@@ -25,29 +25,29 @@ class CommonResponseObjDebugPayload {
   int iVersionMax;
 
   /// An array of permissions required to access this function.  If the value \"0\" is present in the array, anyone can call this function.  You must have one of the permission to access the function. You don't need to have all of them.
-  List<int> aRequiredPermissions;
+  List<int> aRequiredPermission;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonResponseObjDebugPayload &&
      other.iVersionMin == iVersionMin &&
      other.iVersionMax == iVersionMax &&
-     other.aRequiredPermissions == aRequiredPermissions;
+     other.aRequiredPermission == aRequiredPermission;
 
   @override
   int get hashCode =>
   // ignore: unnecessary_parenthesis
     (iVersionMin == null ? 0 : iVersionMin.hashCode) +
     (iVersionMax == null ? 0 : iVersionMax.hashCode) +
-    (aRequiredPermissions == null ? 0 : aRequiredPermissions.hashCode);
+    (aRequiredPermission == null ? 0 : aRequiredPermission.hashCode);
 
   @override
-  String toString() => 'CommonResponseObjDebugPayload[iVersionMin=$iVersionMin, iVersionMax=$iVersionMax, aRequiredPermissions=$aRequiredPermissions]';
+  String toString() => 'CommonResponseObjDebugPayload[iVersionMin=$iVersionMin, iVersionMax=$iVersionMax, aRequiredPermission=$aRequiredPermission]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'iVersionMin'] = iVersionMin;
       json[r'iVersionMax'] = iVersionMax;
-      json[r'a_RequiredPermissions'] = aRequiredPermissions;
+      json[r'a_RequiredPermission'] = aRequiredPermission;
     return json;
   }
 
@@ -60,8 +60,8 @@ class CommonResponseObjDebugPayload {
       return CommonResponseObjDebugPayload(
         iVersionMin: mapValueOfType<int>(json, r'iVersionMin'),
         iVersionMax: mapValueOfType<int>(json, r'iVersionMax'),
-        aRequiredPermissions: json[r'a_RequiredPermissions'] is List
-          ? (json[r'a_RequiredPermissions'] as List).cast<int>()
+        aRequiredPermission: json[r'a_RequiredPermission'] is List
+          ? (json[r'a_RequiredPermission'] as List).cast<int>()
           : null,
       );
     }

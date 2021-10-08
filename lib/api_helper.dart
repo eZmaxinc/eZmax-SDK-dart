@@ -69,6 +69,9 @@ String parameterToString(dynamic value) {
   if (value is FieldEEzsignfolderStep) {
     return FieldEEzsignfolderStepTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEEzsignfoldertypePrivacylevel) {
+    return FieldEEzsignfoldertypePrivacylevelTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEEzsignsignatureType) {
     return FieldEEzsignsignatureTypeTypeTransformer().encode(value).toString();
   }
