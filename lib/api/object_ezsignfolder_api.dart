@@ -74,7 +74,8 @@ class ObjectEzsignfolderApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderCreateObjectV1Response',) as EzsignfolderCreateObjectV1Response;
-        }
+    
+    }
     return Future<EzsignfolderCreateObjectV1Response>.value();
   }
 
@@ -133,7 +134,8 @@ class ObjectEzsignfolderApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderDeleteObjectV1Response',) as EzsignfolderDeleteObjectV1Response;
-        }
+    
+    }
     return Future<EzsignfolderDeleteObjectV1Response>.value();
   }
 
@@ -195,8 +197,6 @@ class ObjectEzsignfolderApi {
 
   /// Retrieve an existing Ezsignfolder's forms data
   ///
-  /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-  ///
   /// Note: This method returns the HTTP [Response].
   ///
   /// Parameters:
@@ -237,8 +237,6 @@ class ObjectEzsignfolderApi {
 
   /// Retrieve an existing Ezsignfolder's forms data
   ///
-  /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-  ///
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
@@ -252,8 +250,100 @@ class ObjectEzsignfolderApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderGetFormsDataV1Response',) as EzsignfolderGetFormsDataV1Response;
-        }
+    
+    }
     return Future<EzsignfolderGetFormsDataV1Response>.value();
+  }
+
+  /// Retrieve Ezsignfolder list
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [String] eOrderBy:
+  ///   Specify how you want the results to be sorted
+  ///
+  /// * [int] iRowMax:
+  ///
+  /// * [int] iRowOffset:
+  ///
+  /// * [HeaderAcceptLanguage] acceptLanguage:
+  ///
+  /// * [String] sFilter:
+  Future<Response> ezsignfolderGetListV1WithHttpInfo({ String eOrderBy, int iRowMax, int iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter, }) async {
+    // Verify required params are set.
+
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsignfolder/getList';
+
+    // ignore: prefer_final_locals
+    Object postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (eOrderBy != null) {
+      queryParams.addAll(_convertParametersForCollectionFormat('', 'eOrderBy', eOrderBy));
+    }
+    if (iRowMax != null) {
+      queryParams.addAll(_convertParametersForCollectionFormat('', 'iRowMax', iRowMax));
+    }
+    if (iRowOffset != null) {
+      queryParams.addAll(_convertParametersForCollectionFormat('', 'iRowOffset', iRowOffset));
+    }
+    if (sFilter != null) {
+      queryParams.addAll(_convertParametersForCollectionFormat('', 'sFilter', sFilter));
+    }
+
+    if (acceptLanguage != null) {
+      headerParams[r'Accept-Language'] = parameterToString(acceptLanguage);
+    }
+
+    const authNames = <String>['Authorization'];
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes[0],
+      authNames,
+    );
+  }
+
+  /// Retrieve Ezsignfolder list
+  ///
+  /// Parameters:
+  ///
+  /// * [String] eOrderBy:
+  ///   Specify how you want the results to be sorted
+  ///
+  /// * [int] iRowMax:
+  ///
+  /// * [int] iRowOffset:
+  ///
+  /// * [HeaderAcceptLanguage] acceptLanguage:
+  ///
+  /// * [String] sFilter:
+  Future<EzsignfolderGetListV1Response> ezsignfolderGetListV1({ String eOrderBy, int iRowMax, int iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter, }) async {
+    final response = await ezsignfolderGetListV1WithHttpInfo( eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body != null && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderGetListV1Response',) as EzsignfolderGetListV1Response;
+    
+    }
+    return Future<EzsignfolderGetListV1Response>.value();
   }
 
   /// Retrieve an existing Ezsignfolder
@@ -315,7 +405,8 @@ class ObjectEzsignfolderApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderGetObjectV1Response',) as EzsignfolderGetObjectV1Response;
-        }
+    
+    }
     return Future<EzsignfolderGetObjectV1Response>.value();
   }
 
@@ -381,7 +472,8 @@ class ObjectEzsignfolderApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderSendV1Response',) as EzsignfolderSendV1Response;
-        }
+    
+    }
     return Future<EzsignfolderSendV1Response>.value();
   }
 }

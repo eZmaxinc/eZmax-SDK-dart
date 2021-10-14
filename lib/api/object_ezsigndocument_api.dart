@@ -82,7 +82,8 @@ class ObjectEzsigndocumentApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentApplyEzsigntemplateV1Response',) as EzsigndocumentApplyEzsigntemplateV1Response;
-        }
+    
+    }
     return Future<EzsigndocumentApplyEzsigntemplateV1Response>.value();
   }
 
@@ -152,7 +153,8 @@ class ObjectEzsigndocumentApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentApplyEzsigntemplateV2Response',) as EzsigndocumentApplyEzsigntemplateV2Response;
-        }
+    
+    }
     return Future<EzsigndocumentApplyEzsigntemplateV2Response>.value();
   }
 
@@ -214,7 +216,8 @@ class ObjectEzsigndocumentApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentCreateObjectV1Response',) as EzsigndocumentCreateObjectV1Response;
-        }
+    
+    }
     return Future<EzsigndocumentCreateObjectV1Response>.value();
   }
 
@@ -273,7 +276,8 @@ class ObjectEzsigndocumentApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentDeleteObjectV1Response',) as EzsigndocumentDeleteObjectV1Response;
-        }
+    
+    }
     return Future<EzsigndocumentDeleteObjectV1Response>.value();
   }
 
@@ -402,7 +406,8 @@ class ObjectEzsigndocumentApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentGetDownloadUrlV1Response',) as EzsigndocumentGetDownloadUrlV1Response;
-        }
+    
+    }
     return Future<EzsigndocumentGetDownloadUrlV1Response>.value();
   }
 
@@ -461,13 +466,12 @@ class ObjectEzsigndocumentApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentGetEzsignpagesV1Response',) as EzsigndocumentGetEzsignpagesV1Response;
-        }
+    
+    }
     return Future<EzsigndocumentGetEzsignpagesV1Response>.value();
   }
 
   /// Retrieve an existing Ezsigndocument's Form Data
-  ///
-  /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -509,8 +513,6 @@ class ObjectEzsigndocumentApi {
 
   /// Retrieve an existing Ezsigndocument's Form Data
   ///
-  /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-  ///
   /// Parameters:
   ///
   /// * [int] pkiEzsigndocumentID (required):
@@ -524,7 +526,8 @@ class ObjectEzsigndocumentApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentGetFormDataV1Response',) as EzsigndocumentGetFormDataV1Response;
-        }
+    
+    }
     return Future<EzsigndocumentGetFormDataV1Response>.value();
   }
 
@@ -587,13 +590,12 @@ class ObjectEzsigndocumentApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentGetObjectV1Response',) as EzsigndocumentGetObjectV1Response;
-        }
+    
+    }
     return Future<EzsigndocumentGetObjectV1Response>.value();
   }
 
   /// Retrieve positions X,Y of given words from a Ezsigndocument
-  ///
-  /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -640,8 +642,6 @@ class ObjectEzsigndocumentApi {
 
   /// Retrieve positions X,Y of given words from a Ezsigndocument
   ///
-  /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-  ///
   /// Parameters:
   ///
   /// * [int] pkiEzsigndocumentID (required):
@@ -657,7 +657,8 @@ class ObjectEzsigndocumentApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentGetWordsPositionsV1Response',) as EzsigndocumentGetWordsPositionsV1Response;
-        }
+    
+    }
     return Future<EzsigndocumentGetWordsPositionsV1Response>.value();
   }
 }

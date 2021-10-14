@@ -74,7 +74,8 @@ class ObjectEzsignfoldersignerassociationApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfoldersignerassociationCreateObjectV1Response',) as EzsignfoldersignerassociationCreateObjectV1Response;
-        }
+    
+    }
     return Future<EzsignfoldersignerassociationCreateObjectV1Response>.value();
   }
 
@@ -133,7 +134,8 @@ class ObjectEzsignfoldersignerassociationApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfoldersignerassociationDeleteObjectV1Response',) as EzsignfoldersignerassociationDeleteObjectV1Response;
-        }
+    
+    }
     return Future<EzsignfoldersignerassociationDeleteObjectV1Response>.value();
   }
 
@@ -252,7 +254,8 @@ class ObjectEzsignfoldersignerassociationApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfoldersignerassociationGetInPersonLoginUrlV1Response',) as EzsignfoldersignerassociationGetInPersonLoginUrlV1Response;
-        }
+    
+    }
     return Future<EzsignfoldersignerassociationGetInPersonLoginUrlV1Response>.value();
   }
 
@@ -315,7 +318,8 @@ class ObjectEzsignfoldersignerassociationApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfoldersignerassociationGetObjectV1Response',) as EzsignfoldersignerassociationGetObjectV1Response;
-        }
+    
+    }
     return Future<EzsignfoldersignerassociationGetObjectV1Response>.value();
   }
 }

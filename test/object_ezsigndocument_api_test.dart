@@ -78,8 +78,6 @@ void main() {
 
     // Retrieve an existing Ezsigndocument's Form Data
     //
-    // ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-    //
     //Future<EzsigndocumentGetFormDataV1Response> ezsigndocumentGetFormDataV1(int pkiEzsigndocumentID) async
     test('test ezsigndocumentGetFormDataV1', () async {
       // TODO
@@ -95,8 +93,6 @@ void main() {
     });
 
     // Retrieve positions X,Y of given words from a Ezsigndocument
-    //
-    // ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
     //
     //Future<EzsigndocumentGetWordsPositionsV1Response> ezsigndocumentGetWordsPositionsV1(int pkiEzsigndocumentID, EzsigndocumentGetWordsPositionsV1Request ezsigndocumentGetWordsPositionsV1Request) async
     test('test ezsigndocumentGetWordsPositionsV1', () async {

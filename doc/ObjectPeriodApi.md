@@ -29,7 +29,7 @@ import 'package:openapi/api.dart';
 
 final api_instance = ObjectPeriodApi();
 final sSelector = sSelector_example; // String | The types of Periods to return
-final sQuery = sQuery_example; // String | Allow to filter on the option value
+final sQuery = sQuery_example; // String | Allow to filter the returned results
 
 try {
     final result = api_instance.periodGetAutocompleteV1(sSelector, sQuery);
@@ -44,7 +44,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **String**| The types of Periods to return | 
- **sQuery** | **String**| Allow to filter on the option value | [optional] 
+ **sQuery** | **String**| Allow to filter the returned results | [optional] 
 
 ### Return type
 

@@ -74,7 +74,8 @@ class ObjectEzsignsignatureApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignsignatureCreateObjectV1Response',) as EzsignsignatureCreateObjectV1Response;
-        }
+    
+    }
     return Future<EzsignsignatureCreateObjectV1Response>.value();
   }
 
@@ -133,7 +134,8 @@ class ObjectEzsignsignatureApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignsignatureDeleteObjectV1Response',) as EzsignsignatureDeleteObjectV1Response;
-        }
+    
+    }
     return Future<EzsignsignatureDeleteObjectV1Response>.value();
   }
 
@@ -252,7 +254,8 @@ class ObjectEzsignsignatureApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignsignatureGetObjectV1Response',) as EzsignsignatureGetObjectV1Response;
-        }
+    
+    }
     return Future<EzsignsignatureGetObjectV1Response>.value();
   }
 }

@@ -85,7 +85,8 @@ class GlobalCustomerApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GlobalCustomerGetEndpointV1Response',) as GlobalCustomerGetEndpointV1Response;
-        }
+    
+    }
     return Future<GlobalCustomerGetEndpointV1Response>.value();
   }
 }

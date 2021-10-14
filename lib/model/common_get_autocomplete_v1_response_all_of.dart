@@ -16,7 +16,8 @@ class CommonGetAutocompleteV1ResponseAllOf {
     this.mPayload = const [],
   });
 
-  List<CommonGetAutocompleteV1ResponseMPayload> mPayload;
+  /// Generic Autocomplete Response
+  List<CustomAutocompleteElementResponse> mPayload;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonGetAutocompleteV1ResponseAllOf &&
@@ -43,7 +44,7 @@ class CommonGetAutocompleteV1ResponseAllOf {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
       return CommonGetAutocompleteV1ResponseAllOf(
-        mPayload: CommonGetAutocompleteV1ResponseMPayload.listFromJson(json[r'mPayload']),
+        mPayload: CustomAutocompleteElementResponse.listFromJson(json[r'mPayload']),
       );
     }
     return null;

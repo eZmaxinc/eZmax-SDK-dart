@@ -18,7 +18,8 @@ class CommonGetAutocompleteV1Response {
     this.objDebug,
   });
 
-  List<CommonGetAutocompleteV1ResponseMPayload> mPayload;
+  /// Generic Autocomplete Response
+  List<CustomAutocompleteElementResponse> mPayload;
 
   CommonResponseObjDebugPayload objDebugPayload;
 
@@ -59,7 +60,7 @@ class CommonGetAutocompleteV1Response {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
       return CommonGetAutocompleteV1Response(
-        mPayload: CommonGetAutocompleteV1ResponseMPayload.listFromJson(json[r'mPayload']),
+        mPayload: CustomAutocompleteElementResponse.listFromJson(json[r'mPayload']),
         objDebugPayload: CommonResponseObjDebugPayload.fromJson(json[r'objDebugPayload']),
         objDebug: CommonResponseObjDebug.fromJson(json[r'objDebug']),
       );

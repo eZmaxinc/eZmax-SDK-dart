@@ -22,7 +22,6 @@ doc/AuthenticateAuthenticateV2ResponseMPayload.md
 doc/CommonAudit.md
 doc/CommonGetAutocompleteV1Response.md
 doc/CommonGetAutocompleteV1ResponseAllOf.md
-doc/CommonGetAutocompleteV1ResponseMPayload.md
 doc/CommonGetListV1ResponseMPayload.md
 doc/CommonResponse.md
 doc/CommonResponseError.md
@@ -40,6 +39,7 @@ doc/ContactRequestCompoundAllOf.md
 doc/ContactinformationsRequest.md
 doc/ContactinformationsRequestCompound.md
 doc/ContactinformationsRequestCompoundAllOf.md
+doc/CustomAutocompleteElementResponse.md
 doc/CustomFormDataDocumentResponse.md
 doc/CustomFormDataSignerResponse.md
 doc/CustomFormsDataFolderResponse.md
@@ -82,9 +82,14 @@ doc/EzsignfolderDeleteObjectV1Response.md
 doc/EzsignfolderGetFormsDataV1Response.md
 doc/EzsignfolderGetFormsDataV1ResponseAllOf.md
 doc/EzsignfolderGetFormsDataV1ResponseMPayload.md
+doc/EzsignfolderGetListV1Response.md
+doc/EzsignfolderGetListV1ResponseAllOf.md
+doc/EzsignfolderGetListV1ResponseMPayload.md
+doc/EzsignfolderGetListV1ResponseMPayloadAllOf.md
 doc/EzsignfolderGetObjectV1Response.md
 doc/EzsignfolderGetObjectV1ResponseAllOf.md
 doc/EzsignfolderGetObjectV1ResponseMPayload.md
+doc/EzsignfolderListElement.md
 doc/EzsignfolderRequest.md
 doc/EzsignfolderRequestCompound.md
 doc/EzsignfolderRequestCompoundAllOf.md
@@ -234,7 +239,6 @@ lib/model/authenticate_authenticate_v2_response_m_payload.dart
 lib/model/common_audit.dart
 lib/model/common_get_autocomplete_v1_response.dart
 lib/model/common_get_autocomplete_v1_response_all_of.dart
-lib/model/common_get_autocomplete_v1_response_m_payload.dart
 lib/model/common_get_list_v1_response_m_payload.dart
 lib/model/common_response.dart
 lib/model/common_response_error.dart
@@ -252,6 +256,7 @@ lib/model/contact_request_compound_all_of.dart
 lib/model/contactinformations_request.dart
 lib/model/contactinformations_request_compound.dart
 lib/model/contactinformations_request_compound_all_of.dart
+lib/model/custom_autocomplete_element_response.dart
 lib/model/custom_form_data_document_response.dart
 lib/model/custom_form_data_signer_response.dart
 lib/model/custom_forms_data_folder_response.dart
@@ -294,9 +299,14 @@ lib/model/ezsignfolder_delete_object_v1_response.dart
 lib/model/ezsignfolder_get_forms_data_v1_response.dart
 lib/model/ezsignfolder_get_forms_data_v1_response_all_of.dart
 lib/model/ezsignfolder_get_forms_data_v1_response_m_payload.dart
+lib/model/ezsignfolder_get_list_v1_response.dart
+lib/model/ezsignfolder_get_list_v1_response_all_of.dart
+lib/model/ezsignfolder_get_list_v1_response_m_payload.dart
+lib/model/ezsignfolder_get_list_v1_response_m_payload_all_of.dart
 lib/model/ezsignfolder_get_object_v1_response.dart
 lib/model/ezsignfolder_get_object_v1_response_all_of.dart
 lib/model/ezsignfolder_get_object_v1_response_m_payload.dart
+lib/model/ezsignfolder_list_element.dart
 lib/model/ezsignfolder_request.dart
 lib/model/ezsignfolder_request_compound.dart
 lib/model/ezsignfolder_request_compound_all_of.dart
@@ -406,7 +416,6 @@ test/authenticate_authenticate_v2_response_m_payload_test.dart
 test/authenticate_authenticate_v2_response_test.dart
 test/common_audit_test.dart
 test/common_get_autocomplete_v1_response_all_of_test.dart
-test/common_get_autocomplete_v1_response_m_payload_test.dart
 test/common_get_autocomplete_v1_response_test.dart
 test/common_get_list_v1_response_m_payload_test.dart
 test/common_response_error_test.dart
@@ -425,6 +434,7 @@ test/contact_request_test.dart
 test/contactinformations_request_compound_all_of_test.dart
 test/contactinformations_request_compound_test.dart
 test/contactinformations_request_test.dart
+test/custom_autocomplete_element_response_test.dart
 test/custom_form_data_document_response_test.dart
 test/custom_form_data_signer_response_test.dart
 test/custom_forms_data_folder_response_test.dart
@@ -467,9 +477,14 @@ test/ezsignfolder_delete_object_v1_response_test.dart
 test/ezsignfolder_get_forms_data_v1_response_all_of_test.dart
 test/ezsignfolder_get_forms_data_v1_response_m_payload_test.dart
 test/ezsignfolder_get_forms_data_v1_response_test.dart
+test/ezsignfolder_get_list_v1_response_all_of_test.dart
+test/ezsignfolder_get_list_v1_response_m_payload_all_of_test.dart
+test/ezsignfolder_get_list_v1_response_m_payload_test.dart
+test/ezsignfolder_get_list_v1_response_test.dart
 test/ezsignfolder_get_object_v1_response_all_of_test.dart
 test/ezsignfolder_get_object_v1_response_m_payload_test.dart
 test/ezsignfolder_get_object_v1_response_test.dart
+test/ezsignfolder_list_element_test.dart
 test/ezsignfolder_request_compound_all_of_test.dart
 test/ezsignfolder_request_compound_test.dart
 test/ezsignfolder_request_test.dart

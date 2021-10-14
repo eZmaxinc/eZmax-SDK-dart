@@ -11,18 +11,17 @@
 import 'package:openapi/api.dart';
 import 'package:test/test.dart';
 
-// tests for CommonGetAutocompleteV1Response
+// tests for EzsignfolderGetListV1Response
 void main() {
-  final instance = CommonGetAutocompleteV1Response();
+  final instance = EzsignfolderGetListV1Response();
 
-  group('test CommonGetAutocompleteV1Response', () {
-    // Generic Autocomplete Response
-    // List<CustomAutocompleteElementResponse> mPayload (default value: const [])
+  group('test EzsignfolderGetListV1Response', () {
+    // EzsignfolderGetListV1ResponseMPayload mPayload
     test('to test the property `mPayload`', () async {
       // TODO
     });
 
-    // CommonResponseObjDebugPayload objDebugPayload
+    // CommonResponseObjDebugPayloadGetList objDebugPayload
     test('to test the property `objDebugPayload`', () async {
       // TODO
     });

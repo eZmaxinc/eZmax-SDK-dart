@@ -61,7 +61,8 @@ class ObjectActivesessionApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'ActivesessionGetCurrentV1Response',) as ActivesessionGetCurrentV1Response;
-        }
+    
+    }
     return Future<ActivesessionGetCurrentV1Response>.value();
   }
 }

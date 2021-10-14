@@ -74,7 +74,8 @@ class ModuleUserApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'UserCreateEzsignuserV1Response',) as UserCreateEzsignuserV1Response;
-        }
+    
+    }
     return Future<UserCreateEzsignuserV1Response>.value();
   }
 }

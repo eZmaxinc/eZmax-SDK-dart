@@ -17,9 +17,18 @@ void main() {
   final instance = ObjectEzsignfoldertypeApi();
 
   group('tests for ObjectEzsignfoldertypeApi', () {
+    // Retrieve Ezsignfoldertypes and IDs
+    //
+    // Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete control.
+    //
+    //Future<CommonGetAutocompleteV1Response> ezsignfoldertypeGetAutocompleteV1(String sSelector, { HeaderAcceptLanguage acceptLanguage, String sQuery }) async
+    test('test ezsignfoldertypeGetAutocompleteV1', () async {
+      // TODO
+    });
+
     // Retrieve Ezsignfoldertype list
     //
-    // ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |
+    // Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |
     //
     //Future<EzsignfoldertypeGetListV1Response> ezsignfoldertypeGetListV1({ String eOrderBy, int iRowMax, int iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter }) async
     test('test ezsignfoldertypeGetListV1', () async {

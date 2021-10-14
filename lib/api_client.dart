@@ -231,8 +231,6 @@ class ApiClient {
           return CommonGetAutocompleteV1Response.fromJson(value);
         case 'CommonGetAutocompleteV1ResponseAllOf':
           return CommonGetAutocompleteV1ResponseAllOf.fromJson(value);
-        case 'CommonGetAutocompleteV1ResponseMPayload':
-          return CommonGetAutocompleteV1ResponseMPayload.fromJson(value);
         case 'CommonGetListV1ResponseMPayload':
           return CommonGetListV1ResponseMPayload.fromJson(value);
         case 'CommonResponse':
@@ -267,6 +265,8 @@ class ApiClient {
           return ContactinformationsRequestCompound.fromJson(value);
         case 'ContactinformationsRequestCompoundAllOf':
           return ContactinformationsRequestCompoundAllOf.fromJson(value);
+        case 'CustomAutocompleteElementResponse':
+          return CustomAutocompleteElementResponse.fromJson(value);
         case 'CustomFormDataDocumentResponse':
           return CustomFormDataDocumentResponse.fromJson(value);
         case 'CustomFormDataSignerResponse':
@@ -351,12 +351,22 @@ class ApiClient {
           return EzsignfolderGetFormsDataV1ResponseAllOf.fromJson(value);
         case 'EzsignfolderGetFormsDataV1ResponseMPayload':
           return EzsignfolderGetFormsDataV1ResponseMPayload.fromJson(value);
+        case 'EzsignfolderGetListV1Response':
+          return EzsignfolderGetListV1Response.fromJson(value);
+        case 'EzsignfolderGetListV1ResponseAllOf':
+          return EzsignfolderGetListV1ResponseAllOf.fromJson(value);
+        case 'EzsignfolderGetListV1ResponseMPayload':
+          return EzsignfolderGetListV1ResponseMPayload.fromJson(value);
+        case 'EzsignfolderGetListV1ResponseMPayloadAllOf':
+          return EzsignfolderGetListV1ResponseMPayloadAllOf.fromJson(value);
         case 'EzsignfolderGetObjectV1Response':
           return EzsignfolderGetObjectV1Response.fromJson(value);
         case 'EzsignfolderGetObjectV1ResponseAllOf':
           return EzsignfolderGetObjectV1ResponseAllOf.fromJson(value);
         case 'EzsignfolderGetObjectV1ResponseMPayload':
           return EzsignfolderGetObjectV1ResponseMPayload.fromJson(value);
+        case 'EzsignfolderListElement':
+          return EzsignfolderListElement.fromJson(value);
         case 'EzsignfolderRequest':
           return EzsignfolderRequest.fromJson(value);
         case 'EzsignfolderRequestCompound':
@@ -447,28 +457,20 @@ class ApiClient {
           return EzsignsignerRequestCompoundContact.fromJson(value);
         case 'FieldEEzsigndocumentStep':
           return FieldEEzsigndocumentStepTypeTransformer().decode(value);
-          
         case 'FieldEEzsignfolderSendreminderfrequency':
           return FieldEEzsignfolderSendreminderfrequencyTypeTransformer().decode(value);
-          
         case 'FieldEEzsignfolderStep':
           return FieldEEzsignfolderStepTypeTransformer().decode(value);
-          
         case 'FieldEEzsignfoldertypePrivacylevel':
           return FieldEEzsignfoldertypePrivacylevelTypeTransformer().decode(value);
-          
         case 'FieldEEzsignsignatureType':
           return FieldEEzsignsignatureTypeTypeTransformer().decode(value);
-          
         case 'FieldEPhoneType':
           return FieldEPhoneTypeTypeTransformer().decode(value);
-          
         case 'FieldEUserType':
           return FieldEUserTypeTypeTransformer().decode(value);
-          
         case 'FieldEUserTypeSSPR':
           return FieldEUserTypeSSPRTypeTransformer().decode(value);
-          
         case 'FranchisereferalincomeCreateObjectV1Request':
           return FranchisereferalincomeCreateObjectV1Request.fromJson(value);
         case 'FranchisereferalincomeCreateObjectV1Response':
@@ -487,7 +489,6 @@ class ApiClient {
           return GlobalCustomerGetEndpointV1Response.fromJson(value);
         case 'HeaderAcceptLanguage':
           return HeaderAcceptLanguageTypeTransformer().decode(value);
-          
         case 'MultilingualApikeyDescription':
           return MultilingualApikeyDescription.fromJson(value);
         case 'PhoneRequest':

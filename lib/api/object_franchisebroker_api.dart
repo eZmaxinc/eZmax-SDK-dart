@@ -28,7 +28,7 @@ class ObjectFranchisebrokerApi {
   ///   The type of Franchisebrokers to return
   ///
   /// * [String] sQuery:
-  ///   Allow to filter on the option value
+  ///   Allow to filter the returned results
   Future<Response> franchisebrokerGetAutocompleteV1WithHttpInfo(String sSelector, { String sQuery, }) async {
     // Verify required params are set.
     if (sSelector == null) {
@@ -76,7 +76,7 @@ class ObjectFranchisebrokerApi {
   ///   The type of Franchisebrokers to return
   ///
   /// * [String] sQuery:
-  ///   Allow to filter on the option value
+  ///   Allow to filter the returned results
   Future<CommonGetAutocompleteV1Response> franchisebrokerGetAutocompleteV1(String sSelector, { String sQuery, }) async {
     final response = await franchisebrokerGetAutocompleteV1WithHttpInfo(sSelector,  sQuery: sQuery, );
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -87,7 +87,8 @@ class ObjectFranchisebrokerApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonGetAutocompleteV1Response',) as CommonGetAutocompleteV1Response;
-        }
+    
+    }
     return Future<CommonGetAutocompleteV1Response>.value();
   }
 }

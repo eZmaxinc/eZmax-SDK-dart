@@ -74,7 +74,8 @@ class ObjectFranchisereferalincomeApi {
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'FranchisereferalincomeCreateObjectV1Response',) as FranchisereferalincomeCreateObjectV1Response;
-        }
+    
+    }
     return Future<FranchisereferalincomeCreateObjectV1Response>.value();
   }
 }
