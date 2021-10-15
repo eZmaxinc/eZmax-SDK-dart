@@ -257,6 +257,8 @@ class ObjectEzsignfolderApi {
 
   /// Retrieve Ezsignfolder list
   ///
+  /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived |
+  ///
   /// Note: This method returns the HTTP [Response].
   ///
   /// Parameters:
@@ -318,6 +320,8 @@ class ObjectEzsignfolderApi {
   }
 
   /// Retrieve Ezsignfolder list
+  ///
+  /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived |
   ///
   /// Parameters:
   ///

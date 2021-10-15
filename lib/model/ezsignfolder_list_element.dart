@@ -14,33 +14,101 @@ class EzsignfolderListElement {
   /// Returns a new [EzsignfolderListElement] instance.
   EzsignfolderListElement({
     @required this.pkiEzsignfolderID,
+    @required this.fkiEzsignfoldertypeID,
+    @required this.sEzsignfoldertypeNameX,
     @required this.sEzsignfolderDescription,
+    @required this.eEzsignfolderStep,
+    @required this.dtCreatedDate,
+    this.dtEzsignfolderSentdate,
+    this.dtDueDate,
+    @required this.iTotalDocument,
+    @required this.iTotalDocumentEdm,
+    @required this.iTotalSignature,
+    @required this.iTotalSignatureSigned,
   });
 
   /// The unique ID of the Ezsignfolder
   int pkiEzsignfolderID;
 
+  /// The unique ID of the Ezsignfoldertype.
+  int fkiEzsignfoldertypeID;
+
+  /// The name of the Ezsignfoldertype in the language of the requester
+  String sEzsignfoldertypeNameX;
+
   /// The description of the Ezsign Folder
   String sEzsignfolderDescription;
+
+  FieldEEzsignfolderStep eEzsignfolderStep;
+
+  /// The date and time at which the object was created
+  String dtCreatedDate;
+
+  OneOfstringnull dtEzsignfolderSentdate;
+
+  /// The date at which no more signature will be accepted on the folder
+  OneOfstringnull dtDueDate;
+
+  /// The total number of Ezsigndocument in the folder
+  int iTotalDocument;
+
+  /// The total number of Ezsigndocument in the folder that were saved in the edm system
+  int iTotalDocumentEdm;
+
+  /// The total number of signature blocks in all Ezsigndocuments in the folder
+  int iTotalSignature;
+
+  /// The total number of already signed signature blocks in all Ezsigndocuments in the folder
+  int iTotalSignatureSigned;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfolderListElement &&
      other.pkiEzsignfolderID == pkiEzsignfolderID &&
-     other.sEzsignfolderDescription == sEzsignfolderDescription;
+     other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
+     other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
+     other.sEzsignfolderDescription == sEzsignfolderDescription &&
+     other.eEzsignfolderStep == eEzsignfolderStep &&
+     other.dtCreatedDate == dtCreatedDate &&
+     other.dtEzsignfolderSentdate == dtEzsignfolderSentdate &&
+     other.dtDueDate == dtDueDate &&
+     other.iTotalDocument == iTotalDocument &&
+     other.iTotalDocumentEdm == iTotalDocumentEdm &&
+     other.iTotalSignature == iTotalSignature &&
+     other.iTotalSignatureSigned == iTotalSignatureSigned;
 
   @override
   int get hashCode =>
   // ignore: unnecessary_parenthesis
     (pkiEzsignfolderID == null ? 0 : pkiEzsignfolderID.hashCode) +
-    (sEzsignfolderDescription == null ? 0 : sEzsignfolderDescription.hashCode);
+    (fkiEzsignfoldertypeID == null ? 0 : fkiEzsignfoldertypeID.hashCode) +
+    (sEzsignfoldertypeNameX == null ? 0 : sEzsignfoldertypeNameX.hashCode) +
+    (sEzsignfolderDescription == null ? 0 : sEzsignfolderDescription.hashCode) +
+    (eEzsignfolderStep == null ? 0 : eEzsignfolderStep.hashCode) +
+    (dtCreatedDate == null ? 0 : dtCreatedDate.hashCode) +
+    (dtEzsignfolderSentdate == null ? 0 : dtEzsignfolderSentdate.hashCode) +
+    (dtDueDate == null ? 0 : dtDueDate.hashCode) +
+    (iTotalDocument == null ? 0 : iTotalDocument.hashCode) +
+    (iTotalDocumentEdm == null ? 0 : iTotalDocumentEdm.hashCode) +
+    (iTotalSignature == null ? 0 : iTotalSignature.hashCode) +
+    (iTotalSignatureSigned == null ? 0 : iTotalSignatureSigned.hashCode);
 
   @override
-  String toString() => 'EzsignfolderListElement[pkiEzsignfolderID=$pkiEzsignfolderID, sEzsignfolderDescription=$sEzsignfolderDescription]';
+  String toString() => 'EzsignfolderListElement[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, sEzsignfolderDescription=$sEzsignfolderDescription, eEzsignfolderStep=$eEzsignfolderStep, dtCreatedDate=$dtCreatedDate, dtEzsignfolderSentdate=$dtEzsignfolderSentdate, dtDueDate=$dtDueDate, iTotalDocument=$iTotalDocument, iTotalDocumentEdm=$iTotalDocumentEdm, iTotalSignature=$iTotalSignature, iTotalSignatureSigned=$iTotalSignatureSigned]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiEzsignfolderID'] = pkiEzsignfolderID;
+      json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
+      json[r'sEzsignfoldertypeNameX'] = sEzsignfoldertypeNameX;
       json[r'sEzsignfolderDescription'] = sEzsignfolderDescription;
+      json[r'eEzsignfolderStep'] = eEzsignfolderStep;
+      json[r'dtCreatedDate'] = dtCreatedDate;
+      json[r'dtEzsignfolderSentdate'] = dtEzsignfolderSentdate == null ? null : dtEzsignfolderSentdate;
+      json[r'dtDueDate'] = dtDueDate == null ? null : dtDueDate;
+      json[r'iTotalDocument'] = iTotalDocument;
+      json[r'iTotalDocumentEdm'] = iTotalDocumentEdm;
+      json[r'iTotalSignature'] = iTotalSignature;
+      json[r'iTotalSignatureSigned'] = iTotalSignatureSigned;
     return json;
   }
 
@@ -52,7 +120,17 @@ class EzsignfolderListElement {
       final json = value.cast<String, dynamic>();
       return EzsignfolderListElement(
         pkiEzsignfolderID: mapValueOfType<int>(json, r'pkiEzsignfolderID'),
+        fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID'),
+        sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX'),
         sEzsignfolderDescription: mapValueOfType<String>(json, r'sEzsignfolderDescription'),
+        eEzsignfolderStep: FieldEEzsignfolderStep.fromJson(json[r'eEzsignfolderStep']),
+        dtCreatedDate: mapValueOfType<String>(json, r'dtCreatedDate'),
+        dtEzsignfolderSentdate: OneOfstringnull.fromJson(json[r'dtEzsignfolderSentdate']),
+        dtDueDate: OneOfstringnull.fromJson(json[r'dtDueDate']),
+        iTotalDocument: mapValueOfType<int>(json, r'iTotalDocument'),
+        iTotalDocumentEdm: mapValueOfType<int>(json, r'iTotalDocumentEdm'),
+        iTotalSignature: mapValueOfType<int>(json, r'iTotalSignature'),
+        iTotalSignatureSigned: mapValueOfType<int>(json, r'iTotalSignatureSigned'),
       );
     }
     return null;

@@ -22,9 +22,67 @@ void main() {
       // TODO
     });
 
+    // The unique ID of the Ezsignfoldertype.
+    // int fkiEzsignfoldertypeID
+    test('to test the property `fkiEzsignfoldertypeID`', () async {
+      // TODO
+    });
+
+    // The name of the Ezsignfoldertype in the language of the requester
+    // String sEzsignfoldertypeNameX
+    test('to test the property `sEzsignfoldertypeNameX`', () async {
+      // TODO
+    });
+
     // The description of the Ezsign Folder
     // String sEzsignfolderDescription
     test('to test the property `sEzsignfolderDescription`', () async {
+      // TODO
+    });
+
+    // FieldEEzsignfolderStep eEzsignfolderStep
+    test('to test the property `eEzsignfolderStep`', () async {
+      // TODO
+    });
+
+    // The date and time at which the object was created
+    // String dtCreatedDate
+    test('to test the property `dtCreatedDate`', () async {
+      // TODO
+    });
+
+    // OneOfstringnull dtEzsignfolderSentdate
+    test('to test the property `dtEzsignfolderSentdate`', () async {
+      // TODO
+    });
+
+    // The date at which no more signature will be accepted on the folder
+    // OneOfstringnull dtDueDate
+    test('to test the property `dtDueDate`', () async {
+      // TODO
+    });
+
+    // The total number of Ezsigndocument in the folder
+    // int iTotalDocument
+    test('to test the property `iTotalDocument`', () async {
+      // TODO
+    });
+
+    // The total number of Ezsigndocument in the folder that were saved in the edm system
+    // int iTotalDocumentEdm
+    test('to test the property `iTotalDocumentEdm`', () async {
+      // TODO
+    });
+
+    // The total number of signature blocks in all Ezsigndocuments in the folder
+    // int iTotalSignature
+    test('to test the property `iTotalSignature`', () async {
+      // TODO
+    });
+
+    // The total number of already signed signature blocks in all Ezsigndocuments in the folder
+    // int iTotalSignatureSigned
+    test('to test the property `iTotalSignatureSigned`', () async {
       // TODO
     });
 

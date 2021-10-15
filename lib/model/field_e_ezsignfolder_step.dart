@@ -27,7 +27,6 @@ class FieldEEzsignfolderStep {
   static const sent = FieldEEzsignfolderStep._(r'Sent');
   static const partiallySigned = FieldEEzsignfolderStep._(r'PartiallySigned');
   static const expired = FieldEEzsignfolderStep._(r'Expired');
-  static const signed = FieldEEzsignfolderStep._(r'Signed');
   static const completed = FieldEEzsignfolderStep._(r'Completed');
   static const archived = FieldEEzsignfolderStep._(r'Archived');
 
@@ -37,7 +36,6 @@ class FieldEEzsignfolderStep {
     sent,
     partiallySigned,
     expired,
-    signed,
     completed,
     archived,
   ];
@@ -75,7 +73,6 @@ class FieldEEzsignfolderStepTypeTransformer {
         case r'Sent': return FieldEEzsignfolderStep.sent;
         case r'PartiallySigned': return FieldEEzsignfolderStep.partiallySigned;
         case r'Expired': return FieldEEzsignfolderStep.expired;
-        case r'Signed': return FieldEEzsignfolderStep.signed;
         case r'Completed': return FieldEEzsignfolderStep.completed;
         case r'Archived': return FieldEEzsignfolderStep.archived;
         default:

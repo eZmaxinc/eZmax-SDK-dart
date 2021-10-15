@@ -51,6 +51,8 @@ void main() {
 
     // Retrieve Ezsignfolder list
     //
+    // Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived |
+    //
     //Future<EzsignfolderGetListV1Response> ezsignfolderGetListV1({ String eOrderBy, int iRowMax, int iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter }) async
     test('test ezsignfolderGetListV1', () async {
       // TODO

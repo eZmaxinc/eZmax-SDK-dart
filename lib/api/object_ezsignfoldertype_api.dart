@@ -38,7 +38,7 @@ class ObjectEzsignfoldertypeApi {
     }
 
     // ignore: prefer_const_declarations
-    final path = r'/1/object/ezsignfoldertype/getAutocomplete/{sSelector}/'
+    final path = r'/1/object/ezsignfoldertype/getAutocomplete/{sSelector}'
       .replaceAll('{sSelector}', sSelector);
 
     // ignore: prefer_final_locals
