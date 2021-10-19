@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 # **ezsignfoldertypeGetAutocompleteV1**
-> CommonGetAutocompleteV1Response ezsignfoldertypeGetAutocompleteV1(sSelector, acceptLanguage, sQuery)
+> CommonGetAutocompleteV1Response ezsignfoldertypeGetAutocompleteV1(sSelector, sQuery, acceptLanguage)
 
 Retrieve Ezsignfoldertypes and IDs
 
@@ -30,11 +30,11 @@ import 'package:openapi/api.dart';
 
 final api_instance = ObjectEzsignfoldertypeApi();
 final sSelector = sSelector_example; // String | The type of Ezsignfoldertypes to return
-final acceptLanguage = ; // HeaderAcceptLanguage | 
 final sQuery = sQuery_example; // String | Allow to filter the returned results
+final acceptLanguage = ; // HeaderAcceptLanguage | 
 
 try {
-    final result = api_instance.ezsignfoldertypeGetAutocompleteV1(sSelector, acceptLanguage, sQuery);
+    final result = api_instance.ezsignfoldertypeGetAutocompleteV1(sSelector, sQuery, acceptLanguage);
     print(result);
 } catch (e) {
     print('Exception when calling ObjectEzsignfoldertypeApi->ezsignfoldertypeGetAutocompleteV1: $e\n');
@@ -46,8 +46,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **String**| The type of Ezsignfoldertypes to return | 
- **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] 
  **sQuery** | **String**| Allow to filter the returned results | [optional] 
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] 
 
 ### Return type
 

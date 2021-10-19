@@ -21,7 +21,7 @@ void main() {
     //
     // Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete control.
     //
-    //Future<CommonGetAutocompleteV1Response> ezsignfoldertypeGetAutocompleteV1(String sSelector, { HeaderAcceptLanguage acceptLanguage, String sQuery }) async
+    //Future<CommonGetAutocompleteV1Response> ezsignfoldertypeGetAutocompleteV1(String sSelector, { String sQuery, HeaderAcceptLanguage acceptLanguage }) async
     test('test ezsignfoldertypeGetAutocompleteV1', () async {
       // TODO
     });

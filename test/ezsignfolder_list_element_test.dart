@@ -51,13 +51,13 @@ void main() {
       // TODO
     });
 
-    // OneOfstringnull dtEzsignfolderSentdate
+    // OneOfstringobject dtEzsignfolderSentdate
     test('to test the property `dtEzsignfolderSentdate`', () async {
       // TODO
     });
 
     // The date at which no more signature will be accepted on the folder
-    // OneOfstringnull dtDueDate
+    // OneOfstringobject dtDueDate
     test('to test the property `dtDueDate`', () async {
       // TODO
     });

@@ -27,11 +27,11 @@ class ObjectEzsignfoldertypeApi {
   /// * [String] sSelector (required):
   ///   The type of Ezsignfoldertypes to return
   ///
-  /// * [HeaderAcceptLanguage] acceptLanguage:
-  ///
   /// * [String] sQuery:
   ///   Allow to filter the returned results
-  Future<Response> ezsignfoldertypeGetAutocompleteV1WithHttpInfo(String sSelector, { HeaderAcceptLanguage acceptLanguage, String sQuery, }) async {
+  ///
+  /// * [HeaderAcceptLanguage] acceptLanguage:
+  Future<Response> ezsignfoldertypeGetAutocompleteV1WithHttpInfo(String sSelector, { String sQuery, HeaderAcceptLanguage acceptLanguage, }) async {
     // Verify required params are set.
     if (sSelector == null) {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: sSelector');
@@ -81,12 +81,12 @@ class ObjectEzsignfoldertypeApi {
   /// * [String] sSelector (required):
   ///   The type of Ezsignfoldertypes to return
   ///
-  /// * [HeaderAcceptLanguage] acceptLanguage:
-  ///
   /// * [String] sQuery:
   ///   Allow to filter the returned results
-  Future<CommonGetAutocompleteV1Response> ezsignfoldertypeGetAutocompleteV1(String sSelector, { HeaderAcceptLanguage acceptLanguage, String sQuery, }) async {
-    final response = await ezsignfoldertypeGetAutocompleteV1WithHttpInfo(sSelector,  acceptLanguage: acceptLanguage, sQuery: sQuery, );
+  ///
+  /// * [HeaderAcceptLanguage] acceptLanguage:
+  Future<CommonGetAutocompleteV1Response> ezsignfoldertypeGetAutocompleteV1(String sSelector, { String sQuery, HeaderAcceptLanguage acceptLanguage, }) async {
+    final response = await ezsignfoldertypeGetAutocompleteV1WithHttpInfo(sSelector,  sQuery: sQuery, acceptLanguage: acceptLanguage, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
