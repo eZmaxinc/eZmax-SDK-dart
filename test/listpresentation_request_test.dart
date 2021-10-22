@@ -52,6 +52,12 @@ void main() {
       // TODO
     });
 
+    // Set to true if the user chose this Listpresentation as the default one. A single element should be set to true
+    // bool bListpresentationDefault
+    test('to test the property `bListpresentationDefault`', () async {
+      // TODO
+    });
+
 
   });
 

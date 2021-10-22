@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **aSColumnName** | **List<String>** | An array of column names that the user chose to bee visible | [default to const []]
 **iListpresentationRowMax** | **int** | The maximum numbers of results to be returned | 
 **iListpresentationRowOffset** | **int** | The starting element from where to start retrieving the results. For example if you started at iRowOffset=0 and asked for iRowMax=100, to get the next 100 results, you could specify iRowOffset=100&iRowMax=100, | 
+**bListpresentationDefault** | **bool** | Set to true if the user chose this Listpresentation as the default one. A single element should be set to true | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

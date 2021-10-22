@@ -19,6 +19,7 @@ class ListpresentationRequest {
     this.aSColumnName = const [],
     @required this.iListpresentationRowMax,
     @required this.iListpresentationRowOffset,
+    @required this.bListpresentationDefault,
   });
 
   /// A descriptive for the list presentation
@@ -39,6 +40,9 @@ class ListpresentationRequest {
   /// The starting element from where to start retrieving the results. For example if you started at iRowOffset=0 and asked for iRowMax=100, to get the next 100 results, you could specify iRowOffset=100&iRowMax=100,
   int iListpresentationRowOffset;
 
+  /// Set to true if the user chose this Listpresentation as the default one. A single element should be set to true
+  bool bListpresentationDefault;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is ListpresentationRequest &&
      other.sListpresentationDescription == sListpresentationDescription &&
@@ -46,7 +50,8 @@ class ListpresentationRequest {
      other.sListpresentationOrderby == sListpresentationOrderby &&
      other.aSColumnName == aSColumnName &&
      other.iListpresentationRowMax == iListpresentationRowMax &&
-     other.iListpresentationRowOffset == iListpresentationRowOffset;
+     other.iListpresentationRowOffset == iListpresentationRowOffset &&
+     other.bListpresentationDefault == bListpresentationDefault;
 
   @override
   int get hashCode =>
@@ -56,10 +61,11 @@ class ListpresentationRequest {
     (sListpresentationOrderby == null ? 0 : sListpresentationOrderby.hashCode) +
     (aSColumnName == null ? 0 : aSColumnName.hashCode) +
     (iListpresentationRowMax == null ? 0 : iListpresentationRowMax.hashCode) +
-    (iListpresentationRowOffset == null ? 0 : iListpresentationRowOffset.hashCode);
+    (iListpresentationRowOffset == null ? 0 : iListpresentationRowOffset.hashCode) +
+    (bListpresentationDefault == null ? 0 : bListpresentationDefault.hashCode);
 
   @override
-  String toString() => 'ListpresentationRequest[sListpresentationDescription=$sListpresentationDescription, sListpresentationFilter=$sListpresentationFilter, sListpresentationOrderby=$sListpresentationOrderby, aSColumnName=$aSColumnName, iListpresentationRowMax=$iListpresentationRowMax, iListpresentationRowOffset=$iListpresentationRowOffset]';
+  String toString() => 'ListpresentationRequest[sListpresentationDescription=$sListpresentationDescription, sListpresentationFilter=$sListpresentationFilter, sListpresentationOrderby=$sListpresentationOrderby, aSColumnName=$aSColumnName, iListpresentationRowMax=$iListpresentationRowMax, iListpresentationRowOffset=$iListpresentationRowOffset, bListpresentationDefault=$bListpresentationDefault]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -69,6 +75,7 @@ class ListpresentationRequest {
       json[r'a_sColumnName'] = aSColumnName;
       json[r'iListpresentationRowMax'] = iListpresentationRowMax;
       json[r'iListpresentationRowOffset'] = iListpresentationRowOffset;
+      json[r'bListpresentationDefault'] = bListpresentationDefault;
     return json;
   }
 
@@ -87,6 +94,7 @@ class ListpresentationRequest {
           : null,
         iListpresentationRowMax: mapValueOfType<int>(json, r'iListpresentationRowMax'),
         iListpresentationRowOffset: mapValueOfType<int>(json, r'iListpresentationRowOffset'),
+        bListpresentationDefault: mapValueOfType<bool>(json, r'bListpresentationDefault'),
       );
     }
     return null;
