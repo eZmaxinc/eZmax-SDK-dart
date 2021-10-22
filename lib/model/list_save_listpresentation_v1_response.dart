@@ -13,12 +13,9 @@ part of openapi.api;
 class ListSaveListpresentationV1Response {
   /// Returns a new [ListSaveListpresentationV1Response] instance.
   ListSaveListpresentationV1Response({
-    @required this.mPayload,
     this.objDebugPayload,
     this.objDebug,
   });
-
-  ListSaveListpresentationV1ResponseMPayload mPayload;
 
   CommonResponseObjDebugPayload objDebugPayload;
 
@@ -26,23 +23,20 @@ class ListSaveListpresentationV1Response {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ListSaveListpresentationV1Response &&
-     other.mPayload == mPayload &&
      other.objDebugPayload == objDebugPayload &&
      other.objDebug == objDebug;
 
   @override
   int get hashCode =>
   // ignore: unnecessary_parenthesis
-    (mPayload == null ? 0 : mPayload.hashCode) +
     (objDebugPayload == null ? 0 : objDebugPayload.hashCode) +
     (objDebug == null ? 0 : objDebug.hashCode);
 
   @override
-  String toString() => 'ListSaveListpresentationV1Response[mPayload=$mPayload, objDebugPayload=$objDebugPayload, objDebug=$objDebug]';
+  String toString() => 'ListSaveListpresentationV1Response[objDebugPayload=$objDebugPayload, objDebug=$objDebug]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'mPayload'] = mPayload;
     if (objDebugPayload != null) {
       json[r'objDebugPayload'] = objDebugPayload;
     }
@@ -59,7 +53,6 @@ class ListSaveListpresentationV1Response {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
       return ListSaveListpresentationV1Response(
-        mPayload: ListSaveListpresentationV1ResponseMPayload.fromJson(json[r'mPayload']),
         objDebugPayload: CommonResponseObjDebugPayload.fromJson(json[r'objDebugPayload']),
         objDebug: CommonResponseObjDebug.fromJson(json[r'objDebug']),
       );

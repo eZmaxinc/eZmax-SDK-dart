@@ -11,12 +11,12 @@
 import 'package:openapi/api.dart';
 import 'package:test/test.dart';
 
-// tests for ListSaveListpresentationV1ResponseAllOf
+// tests for ListGetListpresentationV1ResponseAllOf
 void main() {
-  final instance = ListSaveListpresentationV1ResponseAllOf();
+  final instance = ListGetListpresentationV1ResponseAllOf();
 
-  group('test ListSaveListpresentationV1ResponseAllOf', () {
-    // ListSaveListpresentationV1ResponseMPayload mPayload
+  group('test ListGetListpresentationV1ResponseAllOf', () {
+    // ListGetListpresentationV1ResponseMPayload mPayload
     test('to test the property `mPayload`', () async {
       // TODO
     });

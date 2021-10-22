@@ -1,4 +1,4 @@
-# openapi.model.ListSaveListpresentationV1ResponseMPayload
+# openapi.model.ListGetListpresentationV1ResponseMPayload
 
 ## Load the model package
 ```dart

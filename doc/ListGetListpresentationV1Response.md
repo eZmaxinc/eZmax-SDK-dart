@@ -1,4 +1,4 @@
-# openapi.model.ListSaveListpresentationV1Response
+# openapi.model.ListGetListpresentationV1Response
 
 ## Load the model package
 ```dart
@@ -8,6 +8,7 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**mPayload** | [**ListGetListpresentationV1ResponseMPayload**](ListGetListpresentationV1ResponseMPayload.md) |  | 
 **objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | [optional] 
 **objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  | [optional] 
 

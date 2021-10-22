@@ -491,14 +491,16 @@ class ApiClient {
           return GlobalCustomerGetEndpointV1Response.fromJson(value);
         case 'HeaderAcceptLanguage':
           return HeaderAcceptLanguageTypeTransformer().decode(value);
+        case 'ListGetListpresentationV1Response':
+          return ListGetListpresentationV1Response.fromJson(value);
+        case 'ListGetListpresentationV1ResponseAllOf':
+          return ListGetListpresentationV1ResponseAllOf.fromJson(value);
+        case 'ListGetListpresentationV1ResponseMPayload':
+          return ListGetListpresentationV1ResponseMPayload.fromJson(value);
         case 'ListSaveListpresentationV1Request':
           return ListSaveListpresentationV1Request.fromJson(value);
         case 'ListSaveListpresentationV1Response':
           return ListSaveListpresentationV1Response.fromJson(value);
-        case 'ListSaveListpresentationV1ResponseAllOf':
-          return ListSaveListpresentationV1ResponseAllOf.fromJson(value);
-        case 'ListSaveListpresentationV1ResponseMPayload':
-          return ListSaveListpresentationV1ResponseMPayload.fromJson(value);
         case 'ListpresentationRequest':
           return ListpresentationRequest.fromJson(value);
         case 'MultilingualApikeyDescription':

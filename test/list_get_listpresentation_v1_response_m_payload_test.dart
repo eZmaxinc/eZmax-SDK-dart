@@ -11,11 +11,11 @@
 import 'package:openapi/api.dart';
 import 'package:test/test.dart';
 
-// tests for ListSaveListpresentationV1ResponseMPayload
+// tests for ListGetListpresentationV1ResponseMPayload
 void main() {
-  final instance = ListSaveListpresentationV1ResponseMPayload();
+  final instance = ListGetListpresentationV1ResponseMPayload();
 
-  group('test ListSaveListpresentationV1ResponseMPayload', () {
+  group('test ListGetListpresentationV1ResponseMPayload', () {
     // List<ListpresentationRequest> aObjListpresentation (default value: const [])
     test('to test the property `aObjListpresentation`', () async {
       // TODO

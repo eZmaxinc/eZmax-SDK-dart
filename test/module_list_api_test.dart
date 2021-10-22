@@ -17,12 +17,21 @@ void main() {
   final instance = ModuleListApi();
 
   group('tests for ModuleListApi', () {
+    // Get all Listpresentation for a specific list
+    //
+    // Retrive previously saved Listpresentation
+    //
+    //Future<ListGetListpresentationV1Response> listGetListpresentationV1(String sListName) async
+    test('test listGetListpresentationV1', () async {
+      // TODO
+    });
+
     // Save all Listpresentation for a specific list
     //
     // Users can create many Listpresentations for lists in the system. They can customize orber by, filters, numbers of rows, etc.
     //
-    //Future<ListSaveListpresentationV1Response> listListpresentationV1(String sListName, ListSaveListpresentationV1Request listSaveListpresentationV1Request) async
-    test('test listListpresentationV1', () async {
+    //Future<ListSaveListpresentationV1Response> listSaveListpresentationV1(String sListName, ListSaveListpresentationV1Request listSaveListpresentationV1Request) async
+    test('test listSaveListpresentationV1', () async {
       // TODO
     });
 
