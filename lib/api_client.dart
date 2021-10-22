@@ -381,6 +381,8 @@ class ApiClient {
           return EzsignfolderSendV1Request.fromJson(value);
         case 'EzsignfolderSendV1Response':
           return EzsignfolderSendV1Response.fromJson(value);
+        case 'EzsignfolderUnsendV1Response':
+          return EzsignfolderUnsendV1Response.fromJson(value);
         case 'EzsignfoldersignerassociationCreateObjectV1Request':
           return EzsignfoldersignerassociationCreateObjectV1Request.fromJson(value);
         case 'EzsignfoldersignerassociationCreateObjectV1Response':
@@ -489,6 +491,16 @@ class ApiClient {
           return GlobalCustomerGetEndpointV1Response.fromJson(value);
         case 'HeaderAcceptLanguage':
           return HeaderAcceptLanguageTypeTransformer().decode(value);
+        case 'ListSaveListpresentationV1Request':
+          return ListSaveListpresentationV1Request.fromJson(value);
+        case 'ListSaveListpresentationV1Response':
+          return ListSaveListpresentationV1Response.fromJson(value);
+        case 'ListSaveListpresentationV1ResponseAllOf':
+          return ListSaveListpresentationV1ResponseAllOf.fromJson(value);
+        case 'ListSaveListpresentationV1ResponseMPayload':
+          return ListSaveListpresentationV1ResponseMPayload.fromJson(value);
+        case 'ListpresentationRequest':
+          return ListpresentationRequest.fromJson(value);
         case 'MultilingualApikeyDescription':
           return MultilingualApikeyDescription.fromJson(value);
         case 'PhoneRequest':

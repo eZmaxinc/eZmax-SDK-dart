@@ -34,13 +34,19 @@ void main() {
       // TODO
     });
 
-    // A reference to a valid Ezsignfolder.  That value is returned after a successful Ezsignfolder Creation.
+    // If the source document is password protected, the password to open/modify it.
+    // String sEzsigndocumentPassword (default value: '')
+    test('to test the property `sEzsigndocumentPassword`', () async {
+      // TODO
+    });
+
+    // The unique ID of the Ezsignfolder
     // int fkiEzsignfolderID
     test('to test the property `fkiEzsignfolderID`', () async {
       // TODO
     });
 
-    // Represent a Date Time. The timezone is the one configured in the User's profile.
+    // The maximum date and time at which the document can be signed.
     // String dtEzsigndocumentDuedate
     test('to test the property `dtEzsigndocumentDuedate`', () async {
       // TODO

@@ -16,6 +16,7 @@ class EzsigndocumentRequest {
     @required this.eEzsigndocumentSource,
     @required this.eEzsigndocumentFormat,
     this.sEzsigndocumentBase64,
+    this.sEzsigndocumentPassword = '',
     @required this.fkiEzsignfolderID,
     @required this.dtEzsigndocumentDuedate,
     @required this.fkiLanguageID,
@@ -31,11 +32,13 @@ class EzsigndocumentRequest {
   /// The Base64 encoded binary content of the document.  This field is Required when eEzsigndocumentSource = Base64.
   String sEzsigndocumentBase64;
 
-  /// A reference to a valid Ezsignfolder.  That value is returned after a successful Ezsignfolder Creation.
-  // minimum: 1
+  /// If the source document is password protected, the password to open/modify it.
+  String sEzsigndocumentPassword;
+
+  /// The unique ID of the Ezsignfolder
   int fkiEzsignfolderID;
 
-  /// Represent a Date Time. The timezone is the one configured in the User's profile.
+  /// The maximum date and time at which the document can be signed.
   String dtEzsigndocumentDuedate;
 
   /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
@@ -51,6 +54,7 @@ class EzsigndocumentRequest {
      other.eEzsigndocumentSource == eEzsigndocumentSource &&
      other.eEzsigndocumentFormat == eEzsigndocumentFormat &&
      other.sEzsigndocumentBase64 == sEzsigndocumentBase64 &&
+     other.sEzsigndocumentPassword == sEzsigndocumentPassword &&
      other.fkiEzsignfolderID == fkiEzsignfolderID &&
      other.dtEzsigndocumentDuedate == dtEzsigndocumentDuedate &&
      other.fkiLanguageID == fkiLanguageID &&
@@ -62,13 +66,14 @@ class EzsigndocumentRequest {
     (eEzsigndocumentSource == null ? 0 : eEzsigndocumentSource.hashCode) +
     (eEzsigndocumentFormat == null ? 0 : eEzsigndocumentFormat.hashCode) +
     (sEzsigndocumentBase64 == null ? 0 : sEzsigndocumentBase64.hashCode) +
+    (sEzsigndocumentPassword == null ? 0 : sEzsigndocumentPassword.hashCode) +
     (fkiEzsignfolderID == null ? 0 : fkiEzsignfolderID.hashCode) +
     (dtEzsigndocumentDuedate == null ? 0 : dtEzsigndocumentDuedate.hashCode) +
     (fkiLanguageID == null ? 0 : fkiLanguageID.hashCode) +
     (sEzsigndocumentName == null ? 0 : sEzsigndocumentName.hashCode);
 
   @override
-  String toString() => 'EzsigndocumentRequest[eEzsigndocumentSource=$eEzsigndocumentSource, eEzsigndocumentFormat=$eEzsigndocumentFormat, sEzsigndocumentBase64=$sEzsigndocumentBase64, fkiEzsignfolderID=$fkiEzsignfolderID, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, fkiLanguageID=$fkiLanguageID, sEzsigndocumentName=$sEzsigndocumentName]';
+  String toString() => 'EzsigndocumentRequest[eEzsigndocumentSource=$eEzsigndocumentSource, eEzsigndocumentFormat=$eEzsigndocumentFormat, sEzsigndocumentBase64=$sEzsigndocumentBase64, sEzsigndocumentPassword=$sEzsigndocumentPassword, fkiEzsignfolderID=$fkiEzsignfolderID, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, fkiLanguageID=$fkiLanguageID, sEzsigndocumentName=$sEzsigndocumentName]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -76,6 +81,9 @@ class EzsigndocumentRequest {
       json[r'eEzsigndocumentFormat'] = eEzsigndocumentFormat;
     if (sEzsigndocumentBase64 != null) {
       json[r'sEzsigndocumentBase64'] = sEzsigndocumentBase64;
+    }
+    if (sEzsigndocumentPassword != null) {
+      json[r'sEzsigndocumentPassword'] = sEzsigndocumentPassword;
     }
       json[r'fkiEzsignfolderID'] = fkiEzsignfolderID;
       json[r'dtEzsigndocumentDuedate'] = dtEzsigndocumentDuedate;
@@ -94,6 +102,7 @@ class EzsigndocumentRequest {
         eEzsigndocumentSource: EzsigndocumentRequestEEzsigndocumentSourceEnum.fromJson(json[r'eEzsigndocumentSource']),
         eEzsigndocumentFormat: EzsigndocumentRequestEEzsigndocumentFormatEnum.fromJson(json[r'eEzsigndocumentFormat']),
         sEzsigndocumentBase64: mapValueOfType<String>(json, r'sEzsigndocumentBase64'),
+        sEzsigndocumentPassword: mapValueOfType<String>(json, r'sEzsigndocumentPassword'),
         fkiEzsignfolderID: mapValueOfType<int>(json, r'fkiEzsignfolderID'),
         dtEzsigndocumentDuedate: mapValueOfType<String>(json, r'dtEzsigndocumentDuedate'),
         fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID'),

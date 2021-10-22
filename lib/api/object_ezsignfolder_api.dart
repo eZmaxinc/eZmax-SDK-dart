@@ -480,4 +480,75 @@ class ObjectEzsignfolderApi {
     }
     return Future<EzsignfolderSendV1Response>.value();
   }
+
+  /// Unsend the Ezsignfolder
+  ///
+  /// Once an Ezsignfolder has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsignfolder and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on \"Non-completed\" Ezsigndocuments will be lost.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfolderID (required):
+  ///
+  /// * [String] body (required):
+  Future<Response> ezsignfolderUnsendV1WithHttpInfo(int pkiEzsignfolderID, String body,) async {
+    // Verify required params are set.
+    if (pkiEzsignfolderID == null) {
+     throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsignfolderID');
+    }
+    if (body == null) {
+     throw ApiException(HttpStatus.badRequest, 'Missing required param: body');
+    }
+
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/unsend'
+      .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
+
+    // ignore: prefer_final_locals
+    Object postBody = body;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const authNames = <String>['Authorization'];
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes[0],
+      authNames,
+    );
+  }
+
+  /// Unsend the Ezsignfolder
+  ///
+  /// Once an Ezsignfolder has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsignfolder and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on \"Non-completed\" Ezsigndocuments will be lost.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfolderID (required):
+  ///
+  /// * [String] body (required):
+  Future<EzsignfolderUnsendV1Response> ezsignfolderUnsendV1(int pkiEzsignfolderID, String body,) async {
+    final response = await ezsignfolderUnsendV1WithHttpInfo(pkiEzsignfolderID, body,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body != null && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderUnsendV1Response',) as EzsignfolderUnsendV1Response;
+    
+    }
+    return Future<EzsignfolderUnsendV1Response>.value();
+  }
 }
