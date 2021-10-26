@@ -16,6 +16,8 @@ class EzsigndocumentRequest {
     @required this.eEzsigndocumentSource,
     @required this.eEzsigndocumentFormat,
     this.sEzsigndocumentBase64,
+    this.sEzsigndocumentUrl,
+    this.bEzsigndocumentForcerepair = true,
     this.sEzsigndocumentPassword = '',
     @required this.fkiEzsignfolderID,
     @required this.dtEzsigndocumentDuedate,
@@ -31,6 +33,12 @@ class EzsigndocumentRequest {
 
   /// The Base64 encoded binary content of the document.  This field is Required when eEzsigndocumentSource = Base64.
   String sEzsigndocumentBase64;
+
+  /// The url where the document content resides.  This field is Required when eEzsigndocumentSource = Url.
+  String sEzsigndocumentUrl;
+
+  /// Try to repair the document or flatten it if it cannot be used for electronic signature. 
+  bool bEzsigndocumentForcerepair;
 
   /// If the source document is password protected, the password to open/modify it.
   String sEzsigndocumentPassword;
@@ -54,6 +62,8 @@ class EzsigndocumentRequest {
      other.eEzsigndocumentSource == eEzsigndocumentSource &&
      other.eEzsigndocumentFormat == eEzsigndocumentFormat &&
      other.sEzsigndocumentBase64 == sEzsigndocumentBase64 &&
+     other.sEzsigndocumentUrl == sEzsigndocumentUrl &&
+     other.bEzsigndocumentForcerepair == bEzsigndocumentForcerepair &&
      other.sEzsigndocumentPassword == sEzsigndocumentPassword &&
      other.fkiEzsignfolderID == fkiEzsignfolderID &&
      other.dtEzsigndocumentDuedate == dtEzsigndocumentDuedate &&
@@ -66,6 +76,8 @@ class EzsigndocumentRequest {
     (eEzsigndocumentSource == null ? 0 : eEzsigndocumentSource.hashCode) +
     (eEzsigndocumentFormat == null ? 0 : eEzsigndocumentFormat.hashCode) +
     (sEzsigndocumentBase64 == null ? 0 : sEzsigndocumentBase64.hashCode) +
+    (sEzsigndocumentUrl == null ? 0 : sEzsigndocumentUrl.hashCode) +
+    (bEzsigndocumentForcerepair == null ? 0 : bEzsigndocumentForcerepair.hashCode) +
     (sEzsigndocumentPassword == null ? 0 : sEzsigndocumentPassword.hashCode) +
     (fkiEzsignfolderID == null ? 0 : fkiEzsignfolderID.hashCode) +
     (dtEzsigndocumentDuedate == null ? 0 : dtEzsigndocumentDuedate.hashCode) +
@@ -73,7 +85,7 @@ class EzsigndocumentRequest {
     (sEzsigndocumentName == null ? 0 : sEzsigndocumentName.hashCode);
 
   @override
-  String toString() => 'EzsigndocumentRequest[eEzsigndocumentSource=$eEzsigndocumentSource, eEzsigndocumentFormat=$eEzsigndocumentFormat, sEzsigndocumentBase64=$sEzsigndocumentBase64, sEzsigndocumentPassword=$sEzsigndocumentPassword, fkiEzsignfolderID=$fkiEzsignfolderID, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, fkiLanguageID=$fkiLanguageID, sEzsigndocumentName=$sEzsigndocumentName]';
+  String toString() => 'EzsigndocumentRequest[eEzsigndocumentSource=$eEzsigndocumentSource, eEzsigndocumentFormat=$eEzsigndocumentFormat, sEzsigndocumentBase64=$sEzsigndocumentBase64, sEzsigndocumentUrl=$sEzsigndocumentUrl, bEzsigndocumentForcerepair=$bEzsigndocumentForcerepair, sEzsigndocumentPassword=$sEzsigndocumentPassword, fkiEzsignfolderID=$fkiEzsignfolderID, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, fkiLanguageID=$fkiLanguageID, sEzsigndocumentName=$sEzsigndocumentName]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -81,6 +93,12 @@ class EzsigndocumentRequest {
       json[r'eEzsigndocumentFormat'] = eEzsigndocumentFormat;
     if (sEzsigndocumentBase64 != null) {
       json[r'sEzsigndocumentBase64'] = sEzsigndocumentBase64;
+    }
+    if (sEzsigndocumentUrl != null) {
+      json[r'sEzsigndocumentUrl'] = sEzsigndocumentUrl;
+    }
+    if (bEzsigndocumentForcerepair != null) {
+      json[r'bEzsigndocumentForcerepair'] = bEzsigndocumentForcerepair;
     }
     if (sEzsigndocumentPassword != null) {
       json[r'sEzsigndocumentPassword'] = sEzsigndocumentPassword;
@@ -102,6 +120,8 @@ class EzsigndocumentRequest {
         eEzsigndocumentSource: EzsigndocumentRequestEEzsigndocumentSourceEnum.fromJson(json[r'eEzsigndocumentSource']),
         eEzsigndocumentFormat: EzsigndocumentRequestEEzsigndocumentFormatEnum.fromJson(json[r'eEzsigndocumentFormat']),
         sEzsigndocumentBase64: mapValueOfType<String>(json, r'sEzsigndocumentBase64'),
+        sEzsigndocumentUrl: mapValueOfType<String>(json, r'sEzsigndocumentUrl'),
+        bEzsigndocumentForcerepair: mapValueOfType<bool>(json, r'bEzsigndocumentForcerepair'),
         sEzsigndocumentPassword: mapValueOfType<String>(json, r'sEzsigndocumentPassword'),
         fkiEzsignfolderID: mapValueOfType<int>(json, r'fkiEzsignfolderID'),
         dtEzsigndocumentDuedate: mapValueOfType<String>(json, r'dtEzsigndocumentDuedate'),
@@ -159,10 +179,12 @@ class EzsigndocumentRequestEEzsigndocumentSourceEnum {
   String toJson() => value;
 
   static const base64 = EzsigndocumentRequestEEzsigndocumentSourceEnum._(r'Base64');
+  static const url = EzsigndocumentRequestEEzsigndocumentSourceEnum._(r'Url');
 
   /// List of all possible values in this [enum][EzsigndocumentRequestEEzsigndocumentSourceEnum].
   static const values = <EzsigndocumentRequestEEzsigndocumentSourceEnum>[
     base64,
+    url,
   ];
 
   static EzsigndocumentRequestEEzsigndocumentSourceEnum fromJson(dynamic value) =>
@@ -195,6 +217,7 @@ class EzsigndocumentRequestEEzsigndocumentSourceEnumTypeTransformer {
     if (data != null) {
       switch (data.toString()) {
         case r'Base64': return EzsigndocumentRequestEEzsigndocumentSourceEnum.base64;
+        case r'Url': return EzsigndocumentRequestEEzsigndocumentSourceEnum.url;
         default:
           if (allowNull == false) {
             throw ArgumentError('Unknown enum value to decode: $data');

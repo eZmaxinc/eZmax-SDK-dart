@@ -34,6 +34,18 @@ void main() {
       // TODO
     });
 
+    // The url where the document content resides.  This field is Required when eEzsigndocumentSource = Url.
+    // String sEzsigndocumentUrl
+    test('to test the property `sEzsigndocumentUrl`', () async {
+      // TODO
+    });
+
+    // Try to repair the document or flatten it if it cannot be used for electronic signature. 
+    // bool bEzsigndocumentForcerepair (default value: true)
+    test('to test the property `bEzsigndocumentForcerepair`', () async {
+      // TODO
+    });
+
     // If the source document is password protected, the password to open/modify it.
     // String sEzsigndocumentPassword (default value: '')
     test('to test the property `sEzsigndocumentPassword`', () async {

@@ -15,6 +15,7 @@ class EzsignfolderListElement {
   EzsignfolderListElement({
     @required this.pkiEzsignfolderID,
     @required this.fkiEzsignfoldertypeID,
+    @required this.eEzsignfoldertypePrivacylevel,
     @required this.sEzsignfoldertypeNameX,
     @required this.sEzsignfolderDescription,
     @required this.eEzsignfolderStep,
@@ -32,6 +33,8 @@ class EzsignfolderListElement {
 
   /// The unique ID of the Ezsignfoldertype.
   int fkiEzsignfoldertypeID;
+
+  FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel;
 
   /// The name of the Ezsignfoldertype in the language of the requester
   String sEzsignfoldertypeNameX;
@@ -65,6 +68,7 @@ class EzsignfolderListElement {
   bool operator ==(Object other) => identical(this, other) || other is EzsignfolderListElement &&
      other.pkiEzsignfolderID == pkiEzsignfolderID &&
      other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
+     other.eEzsignfoldertypePrivacylevel == eEzsignfoldertypePrivacylevel &&
      other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
      other.sEzsignfolderDescription == sEzsignfolderDescription &&
      other.eEzsignfolderStep == eEzsignfolderStep &&
@@ -81,6 +85,7 @@ class EzsignfolderListElement {
   // ignore: unnecessary_parenthesis
     (pkiEzsignfolderID == null ? 0 : pkiEzsignfolderID.hashCode) +
     (fkiEzsignfoldertypeID == null ? 0 : fkiEzsignfoldertypeID.hashCode) +
+    (eEzsignfoldertypePrivacylevel == null ? 0 : eEzsignfoldertypePrivacylevel.hashCode) +
     (sEzsignfoldertypeNameX == null ? 0 : sEzsignfoldertypeNameX.hashCode) +
     (sEzsignfolderDescription == null ? 0 : sEzsignfolderDescription.hashCode) +
     (eEzsignfolderStep == null ? 0 : eEzsignfolderStep.hashCode) +
@@ -93,12 +98,13 @@ class EzsignfolderListElement {
     (iTotalSignatureSigned == null ? 0 : iTotalSignatureSigned.hashCode);
 
   @override
-  String toString() => 'EzsignfolderListElement[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, sEzsignfolderDescription=$sEzsignfolderDescription, eEzsignfolderStep=$eEzsignfolderStep, dtCreatedDate=$dtCreatedDate, dtEzsignfolderSentdate=$dtEzsignfolderSentdate, dtDueDate=$dtDueDate, iTotalDocument=$iTotalDocument, iTotalDocumentEdm=$iTotalDocumentEdm, iTotalSignature=$iTotalSignature, iTotalSignatureSigned=$iTotalSignatureSigned]';
+  String toString() => 'EzsignfolderListElement[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, eEzsignfoldertypePrivacylevel=$eEzsignfoldertypePrivacylevel, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, sEzsignfolderDescription=$sEzsignfolderDescription, eEzsignfolderStep=$eEzsignfolderStep, dtCreatedDate=$dtCreatedDate, dtEzsignfolderSentdate=$dtEzsignfolderSentdate, dtDueDate=$dtDueDate, iTotalDocument=$iTotalDocument, iTotalDocumentEdm=$iTotalDocumentEdm, iTotalSignature=$iTotalSignature, iTotalSignatureSigned=$iTotalSignatureSigned]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiEzsignfolderID'] = pkiEzsignfolderID;
       json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
+      json[r'eEzsignfoldertypePrivacylevel'] = eEzsignfoldertypePrivacylevel;
       json[r'sEzsignfoldertypeNameX'] = sEzsignfoldertypeNameX;
       json[r'sEzsignfolderDescription'] = sEzsignfolderDescription;
       json[r'eEzsignfolderStep'] = eEzsignfolderStep;
@@ -121,6 +127,7 @@ class EzsignfolderListElement {
       return EzsignfolderListElement(
         pkiEzsignfolderID: mapValueOfType<int>(json, r'pkiEzsignfolderID'),
         fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID'),
+        eEzsignfoldertypePrivacylevel: FieldEEzsignfoldertypePrivacylevel.fromJson(json[r'eEzsignfoldertypePrivacylevel']),
         sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX'),
         sEzsignfolderDescription: mapValueOfType<String>(json, r'sEzsignfolderDescription'),
         eEzsignfolderStep: FieldEEzsignfolderStep.fromJson(json[r'eEzsignfolderStep']),

@@ -28,6 +28,11 @@ void main() {
       // TODO
     });
 
+    // FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel
+    test('to test the property `eEzsignfoldertypePrivacylevel`', () async {
+      // TODO
+    });
+
     // The name of the Ezsignfoldertype in the language of the requester
     // String sEzsignfoldertypeNameX
     test('to test the property `sEzsignfoldertypeNameX`', () async {
