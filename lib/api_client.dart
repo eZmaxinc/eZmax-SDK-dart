@@ -237,6 +237,10 @@ class ApiClient {
           return CommonResponse.fromJson(value);
         case 'CommonResponseError':
           return CommonResponseError.fromJson(value);
+        case 'CommonResponseErrorSTemporaryFileUrl':
+          return CommonResponseErrorSTemporaryFileUrl.fromJson(value);
+        case 'CommonResponseErrorSTemporaryFileUrlAllOf':
+          return CommonResponseErrorSTemporaryFileUrlAllOf.fromJson(value);
         case 'CommonResponseFilter':
           return CommonResponseFilter.fromJson(value);
         case 'CommonResponseGetList':

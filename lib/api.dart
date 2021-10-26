@@ -66,6 +66,8 @@ part 'model/common_get_autocomplete_v1_response_all_of.dart';
 part 'model/common_get_list_v1_response_m_payload.dart';
 part 'model/common_response.dart';
 part 'model/common_response_error.dart';
+part 'model/common_response_error_s_temporary_file_url.dart';
+part 'model/common_response_error_s_temporary_file_url_all_of.dart';
 part 'model/common_response_filter.dart';
 part 'model/common_response_get_list.dart';
 part 'model/common_response_obj_debug.dart';
