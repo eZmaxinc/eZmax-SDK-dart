@@ -21,15 +21,21 @@ void main() {
       // TODO
     });
 
-    // A reference to a valid User.  This is only used if the signatory will be a user from the system.
+    // The unique ID of the User
     // int fkiUserID
     test('to test the property `fkiUserID`', () async {
       // TODO
     });
 
-    // A reference to a valid Ezsignfolder.  That value is returned after a successful Ezsignfolder Creation.
+    // The unique ID of the Ezsignfolder
     // int fkiEzsignfolderID
     test('to test the property `fkiEzsignfolderID`', () async {
+      // TODO
+    });
+
+    // If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document.
+    // bool bEzsignfoldersignerassociationReceivecopy
+    test('to test the property `bEzsignfoldersignerassociationReceivecopy`', () async {
       // TODO
     });
 

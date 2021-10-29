@@ -15,29 +15,33 @@ class EzsignfoldersignerassociationRequest {
   EzsignfoldersignerassociationRequest({
     this.fkiUserID,
     @required this.fkiEzsignfolderID,
+    this.bEzsignfoldersignerassociationReceivecopy,
   });
 
-  /// A reference to a valid User.  This is only used if the signatory will be a user from the system.
-  // minimum: 1
+  /// The unique ID of the User
   int fkiUserID;
 
-  /// A reference to a valid Ezsignfolder.  That value is returned after a successful Ezsignfolder Creation.
-  // minimum: 1
+  /// The unique ID of the Ezsignfolder
   int fkiEzsignfolderID;
+
+  /// If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document.
+  bool bEzsignfoldersignerassociationReceivecopy;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfoldersignerassociationRequest &&
      other.fkiUserID == fkiUserID &&
-     other.fkiEzsignfolderID == fkiEzsignfolderID;
+     other.fkiEzsignfolderID == fkiEzsignfolderID &&
+     other.bEzsignfoldersignerassociationReceivecopy == bEzsignfoldersignerassociationReceivecopy;
 
   @override
   int get hashCode =>
   // ignore: unnecessary_parenthesis
     (fkiUserID == null ? 0 : fkiUserID.hashCode) +
-    (fkiEzsignfolderID == null ? 0 : fkiEzsignfolderID.hashCode);
+    (fkiEzsignfolderID == null ? 0 : fkiEzsignfolderID.hashCode) +
+    (bEzsignfoldersignerassociationReceivecopy == null ? 0 : bEzsignfoldersignerassociationReceivecopy.hashCode);
 
   @override
-  String toString() => 'EzsignfoldersignerassociationRequest[fkiUserID=$fkiUserID, fkiEzsignfolderID=$fkiEzsignfolderID]';
+  String toString() => 'EzsignfoldersignerassociationRequest[fkiUserID=$fkiUserID, fkiEzsignfolderID=$fkiEzsignfolderID, bEzsignfoldersignerassociationReceivecopy=$bEzsignfoldersignerassociationReceivecopy]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -45,6 +49,9 @@ class EzsignfoldersignerassociationRequest {
       json[r'fkiUserID'] = fkiUserID;
     }
       json[r'fkiEzsignfolderID'] = fkiEzsignfolderID;
+    if (bEzsignfoldersignerassociationReceivecopy != null) {
+      json[r'bEzsignfoldersignerassociationReceivecopy'] = bEzsignfoldersignerassociationReceivecopy;
+    }
     return json;
   }
 
@@ -57,6 +64,7 @@ class EzsignfoldersignerassociationRequest {
       return EzsignfoldersignerassociationRequest(
         fkiUserID: mapValueOfType<int>(json, r'fkiUserID'),
         fkiEzsignfolderID: mapValueOfType<int>(json, r'fkiEzsignfolderID'),
+        bEzsignfoldersignerassociationReceivecopy: mapValueOfType<bool>(json, r'bEzsignfoldersignerassociationReceivecopy'),
       );
     }
     return null;
