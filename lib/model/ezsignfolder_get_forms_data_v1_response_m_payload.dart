@@ -21,7 +21,7 @@ class EzsignfolderGetFormsDataV1ResponseMPayload {
   /// The unique ID of the Ezsignfolder
   int pkiEzsignfolderID;
 
-  /// The description of the Ezsign Folder
+  /// The description of the Ezsignfolder
   String sEzsignfolderDescription;
 
   List<CustomFormDataDocumentResponse> aObjFormDataDocument;

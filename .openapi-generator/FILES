@@ -48,6 +48,11 @@ doc/CustomFormsDataFolderResponse.md
 doc/CustomWordPositionOccurenceResponse.md
 doc/CustomWordPositionWordResponse.md
 doc/EmailRequest.md
+doc/EzsignbulksendGetListV1Response.md
+doc/EzsignbulksendGetListV1ResponseAllOf.md
+doc/EzsignbulksendGetListV1ResponseMPayload.md
+doc/EzsignbulksendGetListV1ResponseMPayloadAllOf.md
+doc/EzsignbulksendListElement.md
 doc/EzsigndocumentApplyEzsigntemplateV1Request.md
 doc/EzsigndocumentApplyEzsigntemplateV1Response.md
 doc/EzsigndocumentApplyEzsigntemplateV2Request.md
@@ -168,6 +173,7 @@ doc/ModuleUserApi.md
 doc/MultilingualApikeyDescription.md
 doc/ObjectActivesessionApi.md
 doc/ObjectApikeyApi.md
+doc/ObjectEzsignbulksendApi.md
 doc/ObjectEzsigndocumentApi.md
 doc/ObjectEzsignfolderApi.md
 doc/ObjectEzsignfoldersignerassociationApi.md
@@ -214,6 +220,7 @@ lib/api/module_sspr_api.dart
 lib/api/module_user_api.dart
 lib/api/object_activesession_api.dart
 lib/api/object_apikey_api.dart
+lib/api/object_ezsignbulksend_api.dart
 lib/api/object_ezsigndocument_api.dart
 lib/api/object_ezsignfolder_api.dart
 lib/api/object_ezsignfoldersignerassociation_api.dart
@@ -276,6 +283,11 @@ lib/model/custom_forms_data_folder_response.dart
 lib/model/custom_word_position_occurence_response.dart
 lib/model/custom_word_position_word_response.dart
 lib/model/email_request.dart
+lib/model/ezsignbulksend_get_list_v1_response.dart
+lib/model/ezsignbulksend_get_list_v1_response_all_of.dart
+lib/model/ezsignbulksend_get_list_v1_response_m_payload.dart
+lib/model/ezsignbulksend_get_list_v1_response_m_payload_all_of.dart
+lib/model/ezsignbulksend_list_element.dart
 lib/model/ezsigndocument_apply_ezsigntemplate_v1_request.dart
 lib/model/ezsigndocument_apply_ezsigntemplate_v1_response.dart
 lib/model/ezsigndocument_apply_ezsigntemplate_v2_request.dart
@@ -463,6 +475,11 @@ test/custom_forms_data_folder_response_test.dart
 test/custom_word_position_occurence_response_test.dart
 test/custom_word_position_word_response_test.dart
 test/email_request_test.dart
+test/ezsignbulksend_get_list_v1_response_all_of_test.dart
+test/ezsignbulksend_get_list_v1_response_m_payload_all_of_test.dart
+test/ezsignbulksend_get_list_v1_response_m_payload_test.dart
+test/ezsignbulksend_get_list_v1_response_test.dart
+test/ezsignbulksend_list_element_test.dart
 test/ezsigndocument_apply_ezsigntemplate_v1_request_test.dart
 test/ezsigndocument_apply_ezsigntemplate_v1_response_test.dart
 test/ezsigndocument_apply_ezsigntemplate_v2_request_test.dart
@@ -583,6 +600,7 @@ test/module_user_api_test.dart
 test/multilingual_apikey_description_test.dart
 test/object_activesession_api_test.dart
 test/object_apikey_api_test.dart
+test/object_ezsignbulksend_api_test.dart
 test/object_ezsigndocument_api_test.dart
 test/object_ezsignfolder_api_test.dart
 test/object_ezsignfoldersignerassociation_api_test.dart

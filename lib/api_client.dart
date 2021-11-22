@@ -283,6 +283,16 @@ class ApiClient {
           return CustomWordPositionWordResponse.fromJson(value);
         case 'EmailRequest':
           return EmailRequest.fromJson(value);
+        case 'EzsignbulksendGetListV1Response':
+          return EzsignbulksendGetListV1Response.fromJson(value);
+        case 'EzsignbulksendGetListV1ResponseAllOf':
+          return EzsignbulksendGetListV1ResponseAllOf.fromJson(value);
+        case 'EzsignbulksendGetListV1ResponseMPayload':
+          return EzsignbulksendGetListV1ResponseMPayload.fromJson(value);
+        case 'EzsignbulksendGetListV1ResponseMPayloadAllOf':
+          return EzsignbulksendGetListV1ResponseMPayloadAllOf.fromJson(value);
+        case 'EzsignbulksendListElement':
+          return EzsignbulksendListElement.fromJson(value);
         case 'EzsigndocumentApplyEzsigntemplateV1Request':
           return EzsigndocumentApplyEzsigntemplateV1Request.fromJson(value);
         case 'EzsigndocumentApplyEzsigntemplateV1Response':

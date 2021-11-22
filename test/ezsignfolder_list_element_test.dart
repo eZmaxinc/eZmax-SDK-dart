@@ -39,7 +39,7 @@ void main() {
       // TODO
     });
 
-    // The description of the Ezsign Folder
+    // The description of the Ezsignfolder
     // String sEzsignfolderDescription
     test('to test the property `sEzsignfolderDescription`', () async {
       // TODO
@@ -68,26 +68,26 @@ void main() {
     });
 
     // The total number of Ezsigndocument in the folder
-    // int iTotalDocument
-    test('to test the property `iTotalDocument`', () async {
+    // int iEzsigndocument
+    test('to test the property `iEzsigndocument`', () async {
       // TODO
     });
 
     // The total number of Ezsigndocument in the folder that were saved in the edm system
-    // int iTotalDocumentEdm
-    test('to test the property `iTotalDocumentEdm`', () async {
+    // int iEzsigndocumentEdm
+    test('to test the property `iEzsigndocumentEdm`', () async {
       // TODO
     });
 
     // The total number of signature blocks in all Ezsigndocuments in the folder
-    // int iTotalSignature
-    test('to test the property `iTotalSignature`', () async {
+    // int iEzsignsignature
+    test('to test the property `iEzsignsignature`', () async {
       // TODO
     });
 
     // The total number of already signed signature blocks in all Ezsigndocuments in the folder
-    // int iTotalSignatureSigned
-    test('to test the property `iTotalSignatureSigned`', () async {
+    // int iEzsignsignatureSigned
+    test('to test the property `iEzsignsignatureSigned`', () async {
       // TODO
     });
 

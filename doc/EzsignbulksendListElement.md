@@ -1,0 +1,25 @@
+# openapi.model.EzsignbulksendListElement
+
+## Load the model package
+```dart
+import 'package:openapi/api.dart';
+```
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**pkiEzsignbulksendID** | **int** | The unique ID of the Ezsignbulksend | 
+**fkiEzsignfoldertypeID** | **int** | The unique ID of the Ezsignfoldertype. | 
+**sEzsignbulksendDescription** | **String** | The description of the Ezsignbulksend | 
+**sEzsignfoldertypeNameX** | **String** | The name of the Ezsignfoldertype in the language of the requester | 
+**eEzsignfoldertypePrivacylevel** | [**FieldEEzsignfoldertypePrivacylevel**](FieldEEzsignfoldertypePrivacylevel.md) |  | 
+**bEzsignbulksendIsactive** | **bool** | Whether the Ezsignbulksend is active or not | 
+**iEzsignbulksendtransmission** | **int** | The total number of Ezsignbulksendtransmissions in the Ezsignbulksend | 
+**iEzsignfolder** | **int** | The total number of Ezsignfolders in the Ezsignbulksend | 
+**iEzsigndocument** | **int** | The total number of Ezsigndocuments in the Ezsignbulksend | 
+**iEzsignsignature** | **int** | The total number of Ezsignsignature in the Ezsignbulksend | 
+**iEzsignsignatureSigned** | **int** | The total number of already signed Ezsignsignature blocks in the Ezsignbulksend | 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

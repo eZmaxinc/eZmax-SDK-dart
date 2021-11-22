@@ -32,7 +32,7 @@ class EzsignfolderRequestCompound {
   // maximum: 3
   int fkiEzsigntsarequirementID;
 
-  /// The description of the Ezsign Folder
+  /// The description of the Ezsignfolder
   String sEzsignfolderDescription;
 
   /// Somes extra notes about the eZsign Folder

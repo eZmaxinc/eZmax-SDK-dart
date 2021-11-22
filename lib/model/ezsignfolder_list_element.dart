@@ -22,10 +22,10 @@ class EzsignfolderListElement {
     @required this.dtCreatedDate,
     this.dtEzsignfolderSentdate,
     this.dtDueDate,
-    @required this.iTotalDocument,
-    @required this.iTotalDocumentEdm,
-    @required this.iTotalSignature,
-    @required this.iTotalSignatureSigned,
+    @required this.iEzsigndocument,
+    @required this.iEzsigndocumentEdm,
+    @required this.iEzsignsignature,
+    @required this.iEzsignsignatureSigned,
   });
 
   /// The unique ID of the Ezsignfolder
@@ -39,7 +39,7 @@ class EzsignfolderListElement {
   /// The name of the Ezsignfoldertype in the language of the requester
   String sEzsignfoldertypeNameX;
 
-  /// The description of the Ezsign Folder
+  /// The description of the Ezsignfolder
   String sEzsignfolderDescription;
 
   FieldEEzsignfolderStep eEzsignfolderStep;
@@ -53,16 +53,16 @@ class EzsignfolderListElement {
   OneOfstringobject dtDueDate;
 
   /// The total number of Ezsigndocument in the folder
-  int iTotalDocument;
+  int iEzsigndocument;
 
   /// The total number of Ezsigndocument in the folder that were saved in the edm system
-  int iTotalDocumentEdm;
+  int iEzsigndocumentEdm;
 
   /// The total number of signature blocks in all Ezsigndocuments in the folder
-  int iTotalSignature;
+  int iEzsignsignature;
 
   /// The total number of already signed signature blocks in all Ezsigndocuments in the folder
-  int iTotalSignatureSigned;
+  int iEzsignsignatureSigned;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfolderListElement &&
@@ -75,10 +75,10 @@ class EzsignfolderListElement {
      other.dtCreatedDate == dtCreatedDate &&
      other.dtEzsignfolderSentdate == dtEzsignfolderSentdate &&
      other.dtDueDate == dtDueDate &&
-     other.iTotalDocument == iTotalDocument &&
-     other.iTotalDocumentEdm == iTotalDocumentEdm &&
-     other.iTotalSignature == iTotalSignature &&
-     other.iTotalSignatureSigned == iTotalSignatureSigned;
+     other.iEzsigndocument == iEzsigndocument &&
+     other.iEzsigndocumentEdm == iEzsigndocumentEdm &&
+     other.iEzsignsignature == iEzsignsignature &&
+     other.iEzsignsignatureSigned == iEzsignsignatureSigned;
 
   @override
   int get hashCode =>
@@ -92,13 +92,13 @@ class EzsignfolderListElement {
     (dtCreatedDate == null ? 0 : dtCreatedDate.hashCode) +
     (dtEzsignfolderSentdate == null ? 0 : dtEzsignfolderSentdate.hashCode) +
     (dtDueDate == null ? 0 : dtDueDate.hashCode) +
-    (iTotalDocument == null ? 0 : iTotalDocument.hashCode) +
-    (iTotalDocumentEdm == null ? 0 : iTotalDocumentEdm.hashCode) +
-    (iTotalSignature == null ? 0 : iTotalSignature.hashCode) +
-    (iTotalSignatureSigned == null ? 0 : iTotalSignatureSigned.hashCode);
+    (iEzsigndocument == null ? 0 : iEzsigndocument.hashCode) +
+    (iEzsigndocumentEdm == null ? 0 : iEzsigndocumentEdm.hashCode) +
+    (iEzsignsignature == null ? 0 : iEzsignsignature.hashCode) +
+    (iEzsignsignatureSigned == null ? 0 : iEzsignsignatureSigned.hashCode);
 
   @override
-  String toString() => 'EzsignfolderListElement[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, eEzsignfoldertypePrivacylevel=$eEzsignfoldertypePrivacylevel, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, sEzsignfolderDescription=$sEzsignfolderDescription, eEzsignfolderStep=$eEzsignfolderStep, dtCreatedDate=$dtCreatedDate, dtEzsignfolderSentdate=$dtEzsignfolderSentdate, dtDueDate=$dtDueDate, iTotalDocument=$iTotalDocument, iTotalDocumentEdm=$iTotalDocumentEdm, iTotalSignature=$iTotalSignature, iTotalSignatureSigned=$iTotalSignatureSigned]';
+  String toString() => 'EzsignfolderListElement[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, eEzsignfoldertypePrivacylevel=$eEzsignfoldertypePrivacylevel, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, sEzsignfolderDescription=$sEzsignfolderDescription, eEzsignfolderStep=$eEzsignfolderStep, dtCreatedDate=$dtCreatedDate, dtEzsignfolderSentdate=$dtEzsignfolderSentdate, dtDueDate=$dtDueDate, iEzsigndocument=$iEzsigndocument, iEzsigndocumentEdm=$iEzsigndocumentEdm, iEzsignsignature=$iEzsignsignature, iEzsignsignatureSigned=$iEzsignsignatureSigned]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -111,10 +111,10 @@ class EzsignfolderListElement {
       json[r'dtCreatedDate'] = dtCreatedDate;
       json[r'dtEzsignfolderSentdate'] = dtEzsignfolderSentdate == null ? null : dtEzsignfolderSentdate;
       json[r'dtDueDate'] = dtDueDate == null ? null : dtDueDate;
-      json[r'iTotalDocument'] = iTotalDocument;
-      json[r'iTotalDocumentEdm'] = iTotalDocumentEdm;
-      json[r'iTotalSignature'] = iTotalSignature;
-      json[r'iTotalSignatureSigned'] = iTotalSignatureSigned;
+      json[r'iEzsigndocument'] = iEzsigndocument;
+      json[r'iEzsigndocumentEdm'] = iEzsigndocumentEdm;
+      json[r'iEzsignsignature'] = iEzsignsignature;
+      json[r'iEzsignsignatureSigned'] = iEzsignsignatureSigned;
     return json;
   }
 
@@ -134,10 +134,10 @@ class EzsignfolderListElement {
         dtCreatedDate: mapValueOfType<String>(json, r'dtCreatedDate'),
         dtEzsignfolderSentdate: OneOfstringobject.fromJson(json[r'dtEzsignfolderSentdate']),
         dtDueDate: OneOfstringobject.fromJson(json[r'dtDueDate']),
-        iTotalDocument: mapValueOfType<int>(json, r'iTotalDocument'),
-        iTotalDocumentEdm: mapValueOfType<int>(json, r'iTotalDocumentEdm'),
-        iTotalSignature: mapValueOfType<int>(json, r'iTotalSignature'),
-        iTotalSignatureSigned: mapValueOfType<int>(json, r'iTotalSignatureSigned'),
+        iEzsigndocument: mapValueOfType<int>(json, r'iEzsigndocument'),
+        iEzsigndocumentEdm: mapValueOfType<int>(json, r'iEzsigndocumentEdm'),
+        iEzsignsignature: mapValueOfType<int>(json, r'iEzsignsignature'),
+        iEzsignsignatureSigned: mapValueOfType<int>(json, r'iEzsignsignatureSigned'),
       );
     }
     return null;
