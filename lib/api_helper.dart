@@ -75,6 +75,9 @@ String parameterToString(dynamic value) {
   if (value is FieldEEzsignsignatureType) {
     return FieldEEzsignsignatureTypeTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEEzsigntemplatepackageType) {
+    return FieldEEzsigntemplatepackageTypeTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEPhoneType) {
     return FieldEPhoneTypeTypeTransformer().encode(value).toString();
   }

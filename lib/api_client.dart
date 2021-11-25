@@ -471,6 +471,16 @@ class ApiClient {
           return EzsignsignerRequestCompoundAllOf.fromJson(value);
         case 'EzsignsignerRequestCompoundContact':
           return EzsignsignerRequestCompoundContact.fromJson(value);
+        case 'EzsigntemplatepackageGetListV1Response':
+          return EzsigntemplatepackageGetListV1Response.fromJson(value);
+        case 'EzsigntemplatepackageGetListV1ResponseAllOf':
+          return EzsigntemplatepackageGetListV1ResponseAllOf.fromJson(value);
+        case 'EzsigntemplatepackageGetListV1ResponseMPayload':
+          return EzsigntemplatepackageGetListV1ResponseMPayload.fromJson(value);
+        case 'EzsigntemplatepackageGetListV1ResponseMPayloadAllOf':
+          return EzsigntemplatepackageGetListV1ResponseMPayloadAllOf.fromJson(value);
+        case 'EzsigntemplatepackageListElement':
+          return EzsigntemplatepackageListElement.fromJson(value);
         case 'FieldEEzsigndocumentStep':
           return FieldEEzsigndocumentStepTypeTransformer().decode(value);
         case 'FieldEEzsignfolderSendreminderfrequency':
@@ -481,6 +491,8 @@ class ApiClient {
           return FieldEEzsignfoldertypePrivacylevelTypeTransformer().decode(value);
         case 'FieldEEzsignsignatureType':
           return FieldEEzsignsignatureTypeTypeTransformer().decode(value);
+        case 'FieldEEzsigntemplatepackageType':
+          return FieldEEzsigntemplatepackageTypeTypeTransformer().decode(value);
         case 'FieldEPhoneType':
           return FieldEPhoneTypeTypeTransformer().decode(value);
         case 'FieldEUserType':

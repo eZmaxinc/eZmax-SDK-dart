@@ -107,6 +107,7 @@ Class | Method | HTTP request | Description
 *ObjectEzsignsignatureApi* | [**ezsignsignatureDeleteObjectV1**](doc//ObjectEzsignsignatureApi.md#ezsignsignaturedeleteobjectv1) | **DELETE** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Delete an existing Ezsignsignature
 *ObjectEzsignsignatureApi* | [**ezsignsignatureGetChildrenV1**](doc//ObjectEzsignsignatureApi.md#ezsignsignaturegetchildrenv1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID}/getChildren | Retrieve an existing Ezsignsignature's children IDs
 *ObjectEzsignsignatureApi* | [**ezsignsignatureGetObjectV1**](doc//ObjectEzsignsignatureApi.md#ezsignsignaturegetobjectv1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
+*ObjectEzsigntemplatepackageApi* | [**ezsigntemplatepackageGetListV1**](doc//ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackagegetlistv1) | **GET** /1/object/ezsigntemplatepackage/getList | Retrieve Ezsigntemplatepackage list
 *ObjectFranchisebrokerApi* | [**franchisebrokerGetAutocompleteV1**](doc//ObjectFranchisebrokerApi.md#franchisebrokergetautocompletev1) | **GET** /1/object/franchisebroker/getAutocomplete/{sSelector} | Retrieve Franchisebrokers and IDs
 *ObjectFranchiseofficeApi* | [**franchiseofficeGetAutocompleteV1**](doc//ObjectFranchiseofficeApi.md#franchiseofficegetautocompletev1) | **GET** /1/object/franchiseoffice/getAutocomplete/{sSelector} | Retrieve Franchiseoffices and IDs
 *ObjectFranchisereferalincomeApi* | [**franchisereferalincomeCreateObjectV1**](doc//ObjectFranchisereferalincomeApi.md#franchisereferalincomecreateobjectv1) | **POST** /1/object/franchisereferalincome | Create a new Franchisereferalincome
@@ -254,11 +255,17 @@ Class | Method | HTTP request | Description
  - [EzsignsignerRequestCompound](doc//EzsignsignerRequestCompound.md)
  - [EzsignsignerRequestCompoundAllOf](doc//EzsignsignerRequestCompoundAllOf.md)
  - [EzsignsignerRequestCompoundContact](doc//EzsignsignerRequestCompoundContact.md)
+ - [EzsigntemplatepackageGetListV1Response](doc//EzsigntemplatepackageGetListV1Response.md)
+ - [EzsigntemplatepackageGetListV1ResponseAllOf](doc//EzsigntemplatepackageGetListV1ResponseAllOf.md)
+ - [EzsigntemplatepackageGetListV1ResponseMPayload](doc//EzsigntemplatepackageGetListV1ResponseMPayload.md)
+ - [EzsigntemplatepackageGetListV1ResponseMPayloadAllOf](doc//EzsigntemplatepackageGetListV1ResponseMPayloadAllOf.md)
+ - [EzsigntemplatepackageListElement](doc//EzsigntemplatepackageListElement.md)
  - [FieldEEzsigndocumentStep](doc//FieldEEzsigndocumentStep.md)
  - [FieldEEzsignfolderSendreminderfrequency](doc//FieldEEzsignfolderSendreminderfrequency.md)
  - [FieldEEzsignfolderStep](doc//FieldEEzsignfolderStep.md)
  - [FieldEEzsignfoldertypePrivacylevel](doc//FieldEEzsignfoldertypePrivacylevel.md)
  - [FieldEEzsignsignatureType](doc//FieldEEzsignsignatureType.md)
+ - [FieldEEzsigntemplatepackageType](doc//FieldEEzsigntemplatepackageType.md)
  - [FieldEPhoneType](doc//FieldEPhoneType.md)
  - [FieldEUserType](doc//FieldEUserType.md)
  - [FieldEUserTypeSSPR](doc//FieldEUserTypeSSPR.md)
