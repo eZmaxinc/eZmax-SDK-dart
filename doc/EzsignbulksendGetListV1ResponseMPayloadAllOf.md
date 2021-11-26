@@ -8,7 +8,7 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjEzsignfolder** | [**List<EzsignbulksendListElement>**](EzsignbulksendListElement.md) |  | [optional] [default to const []]
+**aObjEzsignbulksend** | [**List<EzsignbulksendListElement>**](EzsignbulksendListElement.md) |  | [default to const []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -13,12 +13,12 @@ part of openapi.api;
 class EzsignbulksendGetListV1ResponseMPayload {
   /// Returns a new [EzsignbulksendGetListV1ResponseMPayload] instance.
   EzsignbulksendGetListV1ResponseMPayload({
-    this.aObjEzsignfolder = const [],
+    this.aObjEzsignbulksend = const [],
     @required this.iRowReturned,
     @required this.iRowFiltered,
   });
 
-  List<EzsignbulksendListElement> aObjEzsignfolder;
+  List<EzsignbulksendListElement> aObjEzsignbulksend;
 
   /// The number of rows returned
   int iRowReturned;
@@ -28,25 +28,23 @@ class EzsignbulksendGetListV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignbulksendGetListV1ResponseMPayload &&
-     other.aObjEzsignfolder == aObjEzsignfolder &&
+     other.aObjEzsignbulksend == aObjEzsignbulksend &&
      other.iRowReturned == iRowReturned &&
      other.iRowFiltered == iRowFiltered;
 
   @override
   int get hashCode =>
   // ignore: unnecessary_parenthesis
-    (aObjEzsignfolder == null ? 0 : aObjEzsignfolder.hashCode) +
+    (aObjEzsignbulksend == null ? 0 : aObjEzsignbulksend.hashCode) +
     (iRowReturned == null ? 0 : iRowReturned.hashCode) +
     (iRowFiltered == null ? 0 : iRowFiltered.hashCode);
 
   @override
-  String toString() => 'EzsignbulksendGetListV1ResponseMPayload[aObjEzsignfolder=$aObjEzsignfolder, iRowReturned=$iRowReturned, iRowFiltered=$iRowFiltered]';
+  String toString() => 'EzsignbulksendGetListV1ResponseMPayload[aObjEzsignbulksend=$aObjEzsignbulksend, iRowReturned=$iRowReturned, iRowFiltered=$iRowFiltered]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (aObjEzsignfolder != null) {
-      json[r'a_objEzsignfolder'] = aObjEzsignfolder;
-    }
+      json[r'a_objEzsignbulksend'] = aObjEzsignbulksend;
       json[r'iRowReturned'] = iRowReturned;
       json[r'iRowFiltered'] = iRowFiltered;
     return json;
@@ -59,7 +57,7 @@ class EzsignbulksendGetListV1ResponseMPayload {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
       return EzsignbulksendGetListV1ResponseMPayload(
-        aObjEzsignfolder: EzsignbulksendListElement.listFromJson(json[r'a_objEzsignfolder']),
+        aObjEzsignbulksend: EzsignbulksendListElement.listFromJson(json[r'a_objEzsignbulksend']),
         iRowReturned: mapValueOfType<int>(json, r'iRowReturned'),
         iRowFiltered: mapValueOfType<int>(json, r'iRowFiltered'),
       );

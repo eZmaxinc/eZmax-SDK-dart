@@ -8,7 +8,7 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjEzsignfolder** | [**List<EzsignbulksendListElement>**](EzsignbulksendListElement.md) |  | [optional] [default to const []]
+**aObjEzsignbulksend** | [**List<EzsignbulksendListElement>**](EzsignbulksendListElement.md) |  | [default to const []]
 **iRowReturned** | **int** | The number of rows returned | 
 **iRowFiltered** | **int** | The number of rows matching your filters (if any) or the total number of rows | 
 

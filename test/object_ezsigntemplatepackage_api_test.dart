@@ -19,7 +19,7 @@ void main() {
   group('tests for ObjectEzsigntemplatepackageApi', () {
     // Retrieve Ezsigntemplatepackage list
     //
-    // Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | ezsigntemplatepackage | Company<br>Department<br>Team<br>User<br>Usergroup |
+    // Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsigntemplatepackageType | Company<br>Department<br>Team<br>User<br>Usergroup |
     //
     //Future<EzsigntemplatepackageGetListV1Response> ezsigntemplatepackageGetListV1({ String eOrderBy, int iRowMax, int iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter }) async
     test('test ezsigntemplatepackageGetListV1', () async {

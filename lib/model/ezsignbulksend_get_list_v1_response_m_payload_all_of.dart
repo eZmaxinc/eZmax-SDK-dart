@@ -13,28 +13,26 @@ part of openapi.api;
 class EzsignbulksendGetListV1ResponseMPayloadAllOf {
   /// Returns a new [EzsignbulksendGetListV1ResponseMPayloadAllOf] instance.
   EzsignbulksendGetListV1ResponseMPayloadAllOf({
-    this.aObjEzsignfolder = const [],
+    this.aObjEzsignbulksend = const [],
   });
 
-  List<EzsignbulksendListElement> aObjEzsignfolder;
+  List<EzsignbulksendListElement> aObjEzsignbulksend;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignbulksendGetListV1ResponseMPayloadAllOf &&
-     other.aObjEzsignfolder == aObjEzsignfolder;
+     other.aObjEzsignbulksend == aObjEzsignbulksend;
 
   @override
   int get hashCode =>
   // ignore: unnecessary_parenthesis
-    (aObjEzsignfolder == null ? 0 : aObjEzsignfolder.hashCode);
+    (aObjEzsignbulksend == null ? 0 : aObjEzsignbulksend.hashCode);
 
   @override
-  String toString() => 'EzsignbulksendGetListV1ResponseMPayloadAllOf[aObjEzsignfolder=$aObjEzsignfolder]';
+  String toString() => 'EzsignbulksendGetListV1ResponseMPayloadAllOf[aObjEzsignbulksend=$aObjEzsignbulksend]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (aObjEzsignfolder != null) {
-      json[r'a_objEzsignfolder'] = aObjEzsignfolder;
-    }
+      json[r'a_objEzsignbulksend'] = aObjEzsignbulksend;
     return json;
   }
 
@@ -45,7 +43,7 @@ class EzsignbulksendGetListV1ResponseMPayloadAllOf {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
       return EzsignbulksendGetListV1ResponseMPayloadAllOf(
-        aObjEzsignfolder: EzsignbulksendListElement.listFromJson(json[r'a_objEzsignfolder']),
+        aObjEzsignbulksend: EzsignbulksendListElement.listFromJson(json[r'a_objEzsignbulksend']),
       );
     }
     return null;
