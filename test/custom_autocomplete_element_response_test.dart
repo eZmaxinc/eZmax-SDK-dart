@@ -29,7 +29,7 @@ void main() {
     });
 
     // The Unique ID of the element
-    // OneOfintegerstring mValue
+    // String mValue
     test('to test the property `mValue`', () async {
       // TODO
     });

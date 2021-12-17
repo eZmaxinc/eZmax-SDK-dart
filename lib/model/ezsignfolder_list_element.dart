@@ -47,10 +47,11 @@ class EzsignfolderListElement {
   /// The date and time at which the object was created
   String dtCreatedDate;
 
-  OneOfstringobject dtEzsignfolderSentdate;
+  /// The date and time at which the Ezsign folder was sent the last time.
+  String dtEzsignfolderSentdate;
 
-  /// The date at which no more signature will be accepted on the folder
-  OneOfstringobject dtDueDate;
+  /// Represent a Date Time. The timezone is the one configured in the User's profile.
+  String dtDueDate;
 
   /// The total number of Ezsigndocument in the folder
   int iEzsigndocument;
@@ -132,8 +133,8 @@ class EzsignfolderListElement {
         sEzsignfolderDescription: mapValueOfType<String>(json, r'sEzsignfolderDescription'),
         eEzsignfolderStep: FieldEEzsignfolderStep.fromJson(json[r'eEzsignfolderStep']),
         dtCreatedDate: mapValueOfType<String>(json, r'dtCreatedDate'),
-        dtEzsignfolderSentdate: OneOfstringobject.fromJson(json[r'dtEzsignfolderSentdate']),
-        dtDueDate: OneOfstringobject.fromJson(json[r'dtDueDate']),
+        dtEzsignfolderSentdate: mapValueOfType<String>(json, r'dtEzsignfolderSentdate'),
+        dtDueDate: mapValueOfType<String>(json, r'dtDueDate'),
         iEzsigndocument: mapValueOfType<int>(json, r'iEzsigndocument'),
         iEzsigndocumentEdm: mapValueOfType<int>(json, r'iEzsigndocumentEdm'),
         iEzsignsignature: mapValueOfType<int>(json, r'iEzsignsignature'),

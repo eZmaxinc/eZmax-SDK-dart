@@ -22,17 +22,20 @@ void main() {
       // TODO
     });
 
-    // OneOfintegerobject fkiDepartmentID
+    // The unique ID of the Department.
+    // int fkiDepartmentID
     test('to test the property `fkiDepartmentID`', () async {
       // TODO
     });
 
-    // OneOfintegerobject fkiTeamID
+    // The unique ID of the Team
+    // int fkiTeamID
     test('to test the property `fkiTeamID`', () async {
       // TODO
     });
 
-    // OneOfintegerobject fkiEzsignfoldertypeID
+    // The unique ID of the Ezsignfoldertype.
+    // int fkiEzsignfoldertypeID
     test('to test the property `fkiEzsignfoldertypeID`', () async {
       // TODO
     });

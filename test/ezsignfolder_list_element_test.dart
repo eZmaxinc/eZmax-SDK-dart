@@ -56,13 +56,14 @@ void main() {
       // TODO
     });
 
-    // OneOfstringobject dtEzsignfolderSentdate
+    // The date and time at which the Ezsign folder was sent the last time.
+    // String dtEzsignfolderSentdate
     test('to test the property `dtEzsignfolderSentdate`', () async {
       // TODO
     });
 
-    // The date at which no more signature will be accepted on the folder
-    // OneOfstringobject dtDueDate
+    // Represent a Date Time. The timezone is the one configured in the User's profile.
+    // String dtDueDate
     test('to test the property `dtDueDate`', () async {
       // TODO
     });

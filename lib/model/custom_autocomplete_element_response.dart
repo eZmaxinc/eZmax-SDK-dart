@@ -15,7 +15,7 @@ class CustomAutocompleteElementResponse {
   CustomAutocompleteElementResponse({
     @required this.sCategory,
     @required this.sLabel,
-    this.mValue,
+    @required this.mValue,
   });
 
   /// The Category for the dropdown or an empty string if not categorized
@@ -25,7 +25,7 @@ class CustomAutocompleteElementResponse {
   String sLabel;
 
   /// The Unique ID of the element
-  OneOfintegerstring mValue;
+  String mValue;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomAutocompleteElementResponse &&
@@ -47,7 +47,7 @@ class CustomAutocompleteElementResponse {
     final json = <String, dynamic>{};
       json[r'sCategory'] = sCategory;
       json[r'sLabel'] = sLabel;
-      json[r'mValue'] = mValue == null ? null : mValue;
+      json[r'mValue'] = mValue;
     return json;
   }
 
@@ -60,7 +60,7 @@ class CustomAutocompleteElementResponse {
       return CustomAutocompleteElementResponse(
         sCategory: mapValueOfType<String>(json, r'sCategory'),
         sLabel: mapValueOfType<String>(json, r'sLabel'),
-        mValue: OneOfintegerstring.fromJson(json[r'mValue']),
+        mValue: mapValueOfType<String>(json, r'mValue'),
       );
     }
     return null;

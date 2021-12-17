@@ -19,7 +19,7 @@ class EzsignfolderGetObjectV1ResponseMPayload {
     @required this.tEzsignfolderNote,
     @required this.eEzsignfolderSendreminderfrequency,
     @required this.pkiEzsignfolderID,
-    @required this.dtEzsignfolderSentdate,
+    this.dtEzsignfolderSentdate,
     @required this.eEzsignfolderStep,
     @required this.dtEzsignfolderClose,
     @required this.objAudit,
@@ -92,7 +92,7 @@ class EzsignfolderGetObjectV1ResponseMPayload {
       json[r'tEzsignfolderNote'] = tEzsignfolderNote;
       json[r'eEzsignfolderSendreminderfrequency'] = eEzsignfolderSendreminderfrequency;
       json[r'pkiEzsignfolderID'] = pkiEzsignfolderID;
-      json[r'dtEzsignfolderSentdate'] = dtEzsignfolderSentdate;
+      json[r'dtEzsignfolderSentdate'] = dtEzsignfolderSentdate == null ? null : dtEzsignfolderSentdate;
       json[r'eEzsignfolderStep'] = eEzsignfolderStep;
       json[r'dtEzsignfolderClose'] = dtEzsignfolderClose;
       json[r'objAudit'] = objAudit;

@@ -27,11 +27,14 @@ class EzsigntemplatepackageListElement {
   /// The unique ID of the Ezsigntemplatepackage
   int pkiEzsigntemplatepackageID;
 
-  OneOfintegerobject fkiDepartmentID;
+  /// The unique ID of the Department.
+  int fkiDepartmentID;
 
-  OneOfintegerobject fkiTeamID;
+  /// The unique ID of the Team
+  int fkiTeamID;
 
-  OneOfintegerobject fkiEzsignfoldertypeID;
+  /// The unique ID of the Ezsignfoldertype.
+  int fkiEzsignfoldertypeID;
 
   /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
   // minimum: 1
@@ -99,9 +102,9 @@ class EzsigntemplatepackageListElement {
       final json = value.cast<String, dynamic>();
       return EzsigntemplatepackageListElement(
         pkiEzsigntemplatepackageID: mapValueOfType<int>(json, r'pkiEzsigntemplatepackageID'),
-        fkiDepartmentID: OneOfintegerobject.fromJson(json[r'fkiDepartmentID']),
-        fkiTeamID: OneOfintegerobject.fromJson(json[r'fkiTeamID']),
-        fkiEzsignfoldertypeID: OneOfintegerobject.fromJson(json[r'fkiEzsignfoldertypeID']),
+        fkiDepartmentID: mapValueOfType<int>(json, r'fkiDepartmentID'),
+        fkiTeamID: mapValueOfType<int>(json, r'fkiTeamID'),
+        fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID'),
         fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID'),
         eEzsigntemplatepackageType: FieldEEzsigntemplatepackageType.fromJson(json[r'eEzsigntemplatepackageType']),
         sEzsigntemplatepackageDescription: mapValueOfType<String>(json, r'sEzsigntemplatepackageDescription'),
