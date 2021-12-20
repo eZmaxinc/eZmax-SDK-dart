@@ -11,7 +11,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ezsignfolderCreateObjectV1**](ObjectEzsignfolderApi.md#ezsignfoldercreateobjectv1) | **POST** /1/object/ezsignfolder | Create a new Ezsignfolder
 [**ezsignfolderDeleteObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderdeleteobjectv1) | **DELETE** /1/object/ezsignfolder/{pkiEzsignfolderID} | Delete an existing Ezsignfolder
-[**ezsignfolderGetChildrenV1**](ObjectEzsignfolderApi.md#ezsignfoldergetchildrenv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getChildren | Retrieve an existing Ezsignfolder's children IDs
+[**ezsignfolderGetEzsigndocumentsV1**](ObjectEzsignfolderApi.md#ezsignfoldergetezsigndocumentsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder's Ezsigndocuments
 [**ezsignfolderGetFormsDataV1**](ObjectEzsignfolderApi.md#ezsignfoldergetformsdatav1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData | Retrieve an existing Ezsignfolder's forms data
 [**ezsignfolderGetListV1**](ObjectEzsignfolderApi.md#ezsignfoldergetlistv1) | **GET** /1/object/ezsignfolder/getList | Retrieve Ezsignfolder list
 [**ezsignfolderGetObjectV1**](ObjectEzsignfolderApi.md#ezsignfoldergetobjectv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID} | Retrieve an existing Ezsignfolder
@@ -111,12 +111,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **ezsignfolderGetChildrenV1**
-> ezsignfolderGetChildrenV1(pkiEzsignfolderID)
+# **ezsignfolderGetEzsigndocumentsV1**
+> EzsignfolderGetEzsigndocumentsV1Response ezsignfolderGetEzsigndocumentsV1(pkiEzsignfolderID)
 
-Retrieve an existing Ezsignfolder's children IDs
-
-## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+Retrieve an existing Ezsignfolder's Ezsigndocuments
 
 ### Example
 ```dart
@@ -130,9 +128,10 @@ final api_instance = ObjectEzsignfolderApi();
 final pkiEzsignfolderID = 56; // int | 
 
 try {
-    api_instance.ezsignfolderGetChildrenV1(pkiEzsignfolderID);
+    final result = api_instance.ezsignfolderGetEzsigndocumentsV1(pkiEzsignfolderID);
+    print(result);
 } catch (e) {
-    print('Exception when calling ObjectEzsignfolderApi->ezsignfolderGetChildrenV1: $e\n');
+    print('Exception when calling ObjectEzsignfolderApi->ezsignfolderGetEzsigndocumentsV1: $e\n');
 }
 ```
 
@@ -144,7 +143,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**EzsignfolderGetEzsigndocumentsV1Response**](EzsignfolderGetEzsigndocumentsV1Response.md)
 
 ### Authorization
 
@@ -261,8 +260,6 @@ Name | Type | Description  | Notes
 > EzsignfolderGetObjectV1Response ezsignfolderGetObjectV1(pkiEzsignfolderID)
 
 Retrieve an existing Ezsignfolder
-
-## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
 
 ### Example
 ```dart

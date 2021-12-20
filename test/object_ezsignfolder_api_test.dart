@@ -33,12 +33,10 @@ void main() {
       // TODO
     });
 
-    // Retrieve an existing Ezsignfolder's children IDs
+    // Retrieve an existing Ezsignfolder's Ezsigndocuments
     //
-    // ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-    //
-    //Future ezsignfolderGetChildrenV1(int pkiEzsignfolderID) async
-    test('test ezsignfolderGetChildrenV1', () async {
+    //Future<EzsignfolderGetEzsigndocumentsV1Response> ezsignfolderGetEzsigndocumentsV1(int pkiEzsignfolderID) async
+    test('test ezsignfolderGetEzsigndocumentsV1', () async {
       // TODO
     });
 
@@ -59,8 +57,6 @@ void main() {
     });
 
     // Retrieve an existing Ezsignfolder
-    //
-    // ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
     //
     //Future<EzsignfolderGetObjectV1Response> ezsignfolderGetObjectV1(int pkiEzsignfolderID) async
     test('test ezsignfolderGetObjectV1', () async {

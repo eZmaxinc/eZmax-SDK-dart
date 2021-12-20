@@ -139,62 +139,6 @@ class ObjectEzsignsignatureApi {
     return Future<EzsignsignatureDeleteObjectV1Response>.value();
   }
 
-  /// Retrieve an existing Ezsignsignature's children IDs
-  ///
-  /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-  ///
-  /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiEzsignsignatureID (required):
-  Future<Response> ezsignsignatureGetChildrenV1WithHttpInfo(int pkiEzsignsignatureID,) async {
-    // Verify required params are set.
-    if (pkiEzsignsignatureID == null) {
-     throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsignsignatureID');
-    }
-
-    // ignore: prefer_const_declarations
-    final path = r'/1/object/ezsignsignature/{pkiEzsignsignatureID}/getChildren'
-      .replaceAll('{pkiEzsignsignatureID}', pkiEzsignsignatureID.toString());
-
-    // ignore: prefer_final_locals
-    Object postBody;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const authNames = <String>['Authorization'];
-    const contentTypes = <String>[];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'GET',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes[0],
-      authNames,
-    );
-  }
-
-  /// Retrieve an existing Ezsignsignature's children IDs
-  ///
-  /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiEzsignsignatureID (required):
-  Future<void> ezsignsignatureGetChildrenV1(int pkiEzsignsignatureID,) async {
-    final response = await ezsignsignatureGetChildrenV1WithHttpInfo(pkiEzsignsignatureID,);
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-  }
-
   /// Retrieve an existing Ezsignsignature
   ///
   /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.

@@ -33,7 +33,7 @@ class EzsigndocumentResponse {
   /// The unique ID of the Ezsignfolder
   int fkiEzsignfolderID;
 
-  /// The maximum date and time at which the document can be signed.
+  /// The maximum date and time at which the Ezsigndocument can be signed.
   String dtEzsigndocumentDuedate;
 
   /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|

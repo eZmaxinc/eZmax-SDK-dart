@@ -33,15 +33,6 @@ void main() {
       // TODO
     });
 
-    // Retrieve an existing Ezsignsignature's children IDs
-    //
-    // ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-    //
-    //Future ezsignsignatureGetChildrenV1(int pkiEzsignsignatureID) async
-    test('test ezsignsignatureGetChildrenV1', () async {
-      // TODO
-    });
-
     // Retrieve an existing Ezsignsignature
     //
     // ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.

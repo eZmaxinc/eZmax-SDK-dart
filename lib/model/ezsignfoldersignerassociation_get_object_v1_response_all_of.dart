@@ -16,8 +16,7 @@ class EzsignfoldersignerassociationGetObjectV1ResponseAllOf {
     @required this.mPayload,
   });
 
-  /// Payload for the /1/object/ezsignfoldersignerassociation/getObject API Request
-  Object mPayload;
+  EzsignfoldersignerassociationGetObjectV1ResponseMPayload mPayload;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfoldersignerassociationGetObjectV1ResponseAllOf &&
@@ -44,7 +43,7 @@ class EzsignfoldersignerassociationGetObjectV1ResponseAllOf {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
       return EzsignfoldersignerassociationGetObjectV1ResponseAllOf(
-        mPayload: mapValueOfType<Object>(json, r'mPayload'),
+        mPayload: EzsignfoldersignerassociationGetObjectV1ResponseMPayload.fromJson(json[r'mPayload']),
       );
     }
     return null;

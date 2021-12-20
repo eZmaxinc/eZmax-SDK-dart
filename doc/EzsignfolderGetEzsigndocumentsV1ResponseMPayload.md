@@ -1,4 +1,4 @@
-# openapi.model.EzsignfoldersignerassociationGetObjectV1ResponseAllOf
+# openapi.model.EzsignfolderGetEzsigndocumentsV1ResponseMPayload
 
 ## Load the model package
 ```dart
@@ -8,7 +8,7 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**EzsignfoldersignerassociationGetObjectV1ResponseMPayload**](EzsignfoldersignerassociationGetObjectV1ResponseMPayload.md) |  | 
+**aObjEzsigndocument** | [**List<EzsigndocumentResponse>**](EzsigndocumentResponse.md) |  | [default to const []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

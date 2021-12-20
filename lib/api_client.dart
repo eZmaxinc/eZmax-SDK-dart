@@ -359,6 +359,12 @@ class ApiClient {
           return EzsignfolderCreateObjectV1ResponseMPayload.fromJson(value);
         case 'EzsignfolderDeleteObjectV1Response':
           return EzsignfolderDeleteObjectV1Response.fromJson(value);
+        case 'EzsignfolderGetEzsigndocumentsV1Response':
+          return EzsignfolderGetEzsigndocumentsV1Response.fromJson(value);
+        case 'EzsignfolderGetEzsigndocumentsV1ResponseAllOf':
+          return EzsignfolderGetEzsigndocumentsV1ResponseAllOf.fromJson(value);
+        case 'EzsignfolderGetEzsigndocumentsV1ResponseMPayload':
+          return EzsignfolderGetEzsigndocumentsV1ResponseMPayload.fromJson(value);
         case 'EzsignfolderGetFormsDataV1Response':
           return EzsignfolderGetFormsDataV1Response.fromJson(value);
         case 'EzsignfolderGetFormsDataV1ResponseAllOf':
@@ -417,12 +423,18 @@ class ApiClient {
           return EzsignfoldersignerassociationGetObjectV1Response.fromJson(value);
         case 'EzsignfoldersignerassociationGetObjectV1ResponseAllOf':
           return EzsignfoldersignerassociationGetObjectV1ResponseAllOf.fromJson(value);
+        case 'EzsignfoldersignerassociationGetObjectV1ResponseMPayload':
+          return EzsignfoldersignerassociationGetObjectV1ResponseMPayload.fromJson(value);
         case 'EzsignfoldersignerassociationRequest':
           return EzsignfoldersignerassociationRequest.fromJson(value);
         case 'EzsignfoldersignerassociationRequestCompound':
           return EzsignfoldersignerassociationRequestCompound.fromJson(value);
         case 'EzsignfoldersignerassociationRequestCompoundAllOf':
           return EzsignfoldersignerassociationRequestCompoundAllOf.fromJson(value);
+        case 'EzsignfoldersignerassociationResponse':
+          return EzsignfoldersignerassociationResponse.fromJson(value);
+        case 'EzsignfoldersignerassociationResponseCompound':
+          return EzsignfoldersignerassociationResponseCompound.fromJson(value);
         case 'EzsignfoldertypeGetListV1Response':
           return EzsignfoldertypeGetListV1Response.fromJson(value);
         case 'EzsignfoldertypeGetListV1ResponseAllOf':

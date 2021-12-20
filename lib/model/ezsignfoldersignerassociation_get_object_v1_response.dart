@@ -18,8 +18,7 @@ class EzsignfoldersignerassociationGetObjectV1Response {
     this.objDebug,
   });
 
-  /// Payload for the /1/object/ezsignfoldersignerassociation/getObject API Request
-  Object mPayload;
+  EzsignfoldersignerassociationGetObjectV1ResponseMPayload mPayload;
 
   CommonResponseObjDebugPayload objDebugPayload;
 
@@ -60,7 +59,7 @@ class EzsignfoldersignerassociationGetObjectV1Response {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
       return EzsignfoldersignerassociationGetObjectV1Response(
-        mPayload: mapValueOfType<Object>(json, r'mPayload'),
+        mPayload: EzsignfoldersignerassociationGetObjectV1ResponseMPayload.fromJson(json[r'mPayload']),
         objDebugPayload: CommonResponseObjDebugPayload.fromJson(json[r'objDebugPayload']),
         objDebug: CommonResponseObjDebug.fromJson(json[r'objDebug']),
       );

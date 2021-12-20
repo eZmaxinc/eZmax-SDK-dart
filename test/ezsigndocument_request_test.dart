@@ -58,7 +58,7 @@ void main() {
       // TODO
     });
 
-    // The maximum date and time at which the document can be signed.
+    // The maximum date and time at which the Ezsigndocument can be signed.
     // String dtEzsigndocumentDuedate
     test('to test the property `dtEzsigndocumentDuedate`', () async {
       // TODO

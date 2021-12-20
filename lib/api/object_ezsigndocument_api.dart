@@ -281,62 +281,6 @@ class ObjectEzsigndocumentApi {
     return Future<EzsigndocumentDeleteObjectV1Response>.value();
   }
 
-  /// Retrieve an existing Ezsigndocument's children IDs
-  ///
-  /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-  ///
-  /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiEzsigndocumentID (required):
-  Future<Response> ezsigndocumentGetChildrenV1WithHttpInfo(int pkiEzsigndocumentID,) async {
-    // Verify required params are set.
-    if (pkiEzsigndocumentID == null) {
-     throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsigndocumentID');
-    }
-
-    // ignore: prefer_const_declarations
-    final path = r'/1/object/ezsigndocument/{pkiEzsigndocumentID}/getChildren'
-      .replaceAll('{pkiEzsigndocumentID}', pkiEzsigndocumentID.toString());
-
-    // ignore: prefer_final_locals
-    Object postBody;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const authNames = <String>['Authorization'];
-    const contentTypes = <String>[];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'GET',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes[0],
-      authNames,
-    );
-  }
-
-  /// Retrieve an existing Ezsigndocument's children IDs
-  ///
-  /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiEzsigndocumentID (required):
-  Future<void> ezsigndocumentGetChildrenV1(int pkiEzsigndocumentID,) async {
-    final response = await ezsigndocumentGetChildrenV1WithHttpInfo(pkiEzsigndocumentID,);
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-  }
-
   /// Retrieve a URL to download documents.
   ///
   /// This endpoint returns URLs to different files that can be downloaded during the signing process.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.

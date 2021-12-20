@@ -33,15 +33,6 @@ void main() {
       // TODO
     });
 
-    // Retrieve an existing Ezsignfoldersignerassociation's children IDs
-    //
-    // ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-    //
-    //Future ezsignfoldersignerassociationGetChildrenV1(int pkiEzsignfoldersignerassociationID) async
-    test('test ezsignfoldersignerassociationGetChildrenV1', () async {
-      // TODO
-    });
-
     // Retrieve a Login Url to allow In-Person signing
     //
     // This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.  The signer Login type must be configured as In-Person.
@@ -52,8 +43,6 @@ void main() {
     });
 
     // Retrieve an existing Ezsignfoldersignerassociation
-    //
-    // ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
     //
     //Future<EzsignfoldersignerassociationGetObjectV1Response> ezsignfoldersignerassociationGetObjectV1(int pkiEzsignfoldersignerassociationID) async
     test('test ezsignfoldersignerassociationGetObjectV1', () async {

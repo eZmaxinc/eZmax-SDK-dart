@@ -139,23 +139,21 @@ class ObjectEzsignfolderApi {
     return Future<EzsignfolderDeleteObjectV1Response>.value();
   }
 
-  /// Retrieve an existing Ezsignfolder's children IDs
-  ///
-  /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+  /// Retrieve an existing Ezsignfolder's Ezsigndocuments
   ///
   /// Note: This method returns the HTTP [Response].
   ///
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<Response> ezsignfolderGetChildrenV1WithHttpInfo(int pkiEzsignfolderID,) async {
+  Future<Response> ezsignfolderGetEzsigndocumentsV1WithHttpInfo(int pkiEzsignfolderID,) async {
     // Verify required params are set.
     if (pkiEzsignfolderID == null) {
      throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsignfolderID');
     }
 
     // ignore: prefer_const_declarations
-    final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/getChildren'
+    final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments'
       .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
 
     // ignore: prefer_final_locals
@@ -181,18 +179,24 @@ class ObjectEzsignfolderApi {
     );
   }
 
-  /// Retrieve an existing Ezsignfolder's children IDs
-  ///
-  /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+  /// Retrieve an existing Ezsignfolder's Ezsigndocuments
   ///
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<void> ezsignfolderGetChildrenV1(int pkiEzsignfolderID,) async {
-    final response = await ezsignfolderGetChildrenV1WithHttpInfo(pkiEzsignfolderID,);
+  Future<EzsignfolderGetEzsigndocumentsV1Response> ezsignfolderGetEzsigndocumentsV1(int pkiEzsignfolderID,) async {
+    final response = await ezsignfolderGetEzsigndocumentsV1WithHttpInfo(pkiEzsignfolderID,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body != null && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderGetEzsigndocumentsV1Response',) as EzsignfolderGetEzsigndocumentsV1Response;
+    
+    }
+    return Future<EzsignfolderGetEzsigndocumentsV1Response>.value();
   }
 
   /// Retrieve an existing Ezsignfolder's forms data
@@ -352,8 +356,6 @@ class ObjectEzsignfolderApi {
 
   /// Retrieve an existing Ezsignfolder
   ///
-  /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-  ///
   /// Note: This method returns the HTTP [Response].
   ///
   /// Parameters:
@@ -393,8 +395,6 @@ class ObjectEzsignfolderApi {
   }
 
   /// Retrieve an existing Ezsignfolder
-  ///
-  /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
   ///
   /// Parameters:
   ///

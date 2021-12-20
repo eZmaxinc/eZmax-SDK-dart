@@ -139,62 +139,6 @@ class ObjectEzsignfoldersignerassociationApi {
     return Future<EzsignfoldersignerassociationDeleteObjectV1Response>.value();
   }
 
-  /// Retrieve an existing Ezsignfoldersignerassociation's children IDs
-  ///
-  /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-  ///
-  /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiEzsignfoldersignerassociationID (required):
-  Future<Response> ezsignfoldersignerassociationGetChildrenV1WithHttpInfo(int pkiEzsignfoldersignerassociationID,) async {
-    // Verify required params are set.
-    if (pkiEzsignfoldersignerassociationID == null) {
-     throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsignfoldersignerassociationID');
-    }
-
-    // ignore: prefer_const_declarations
-    final path = r'/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getChildren'
-      .replaceAll('{pkiEzsignfoldersignerassociationID}', pkiEzsignfoldersignerassociationID.toString());
-
-    // ignore: prefer_final_locals
-    Object postBody;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const authNames = <String>['Authorization'];
-    const contentTypes = <String>[];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'GET',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes[0],
-      authNames,
-    );
-  }
-
-  /// Retrieve an existing Ezsignfoldersignerassociation's children IDs
-  ///
-  /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiEzsignfoldersignerassociationID (required):
-  Future<void> ezsignfoldersignerassociationGetChildrenV1(int pkiEzsignfoldersignerassociationID,) async {
-    final response = await ezsignfoldersignerassociationGetChildrenV1WithHttpInfo(pkiEzsignfoldersignerassociationID,);
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-  }
-
   /// Retrieve a Login Url to allow In-Person signing
   ///
   /// This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.  The signer Login type must be configured as In-Person.
@@ -261,8 +205,6 @@ class ObjectEzsignfoldersignerassociationApi {
 
   /// Retrieve an existing Ezsignfoldersignerassociation
   ///
-  /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-  ///
   /// Note: This method returns the HTTP [Response].
   ///
   /// Parameters:
@@ -302,8 +244,6 @@ class ObjectEzsignfoldersignerassociationApi {
   }
 
   /// Retrieve an existing Ezsignfoldersignerassociation
-  ///
-  /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
   ///
   /// Parameters:
   ///
