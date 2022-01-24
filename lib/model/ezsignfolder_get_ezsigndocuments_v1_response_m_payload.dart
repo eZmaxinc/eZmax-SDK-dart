@@ -16,7 +16,7 @@ class EzsignfolderGetEzsigndocumentsV1ResponseMPayload {
     this.aObjEzsigndocument = const [],
   });
 
-  List<EzsigndocumentResponse> aObjEzsigndocument;
+  List<EzsigndocumentResponseCompound> aObjEzsigndocument;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfolderGetEzsigndocumentsV1ResponseMPayload &&
@@ -43,7 +43,7 @@ class EzsignfolderGetEzsigndocumentsV1ResponseMPayload {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
       return EzsignfolderGetEzsigndocumentsV1ResponseMPayload(
-        aObjEzsigndocument: EzsigndocumentResponse.listFromJson(json[r'a_objEzsigndocument']),
+        aObjEzsigndocument: EzsigndocumentResponseCompound.listFromJson(json[r'a_objEzsigndocument']),
       );
     }
     return null;

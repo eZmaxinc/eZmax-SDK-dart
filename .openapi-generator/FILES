@@ -42,6 +42,8 @@ doc/ContactinformationsRequest.md
 doc/ContactinformationsRequestCompound.md
 doc/ContactinformationsRequestCompoundAllOf.md
 doc/CustomAutocompleteElementResponse.md
+doc/CustomEzsignfoldersignerassociationstatusResponse.md
+doc/CustomEzsignsignaturestatusResponse.md
 doc/CustomFormDataDocumentResponse.md
 doc/CustomFormDataSignerResponse.md
 doc/CustomFormsDataFolderResponse.md
@@ -89,6 +91,9 @@ doc/EzsignfolderDeleteObjectV1Response.md
 doc/EzsignfolderGetEzsigndocumentsV1Response.md
 doc/EzsignfolderGetEzsigndocumentsV1ResponseAllOf.md
 doc/EzsignfolderGetEzsigndocumentsV1ResponseMPayload.md
+doc/EzsignfolderGetEzsignfoldersignerassociationsV1Response.md
+doc/EzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf.md
+doc/EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload.md
 doc/EzsignfolderGetFormsDataV1Response.md
 doc/EzsignfolderGetFormsDataV1ResponseAllOf.md
 doc/EzsignfolderGetFormsDataV1ResponseMPayload.md
@@ -102,7 +107,6 @@ doc/EzsignfolderGetObjectV1ResponseMPayload.md
 doc/EzsignfolderListElement.md
 doc/EzsignfolderRequest.md
 doc/EzsignfolderRequestCompound.md
-doc/EzsignfolderRequestCompoundAllOf.md
 doc/EzsignfolderResponse.md
 doc/EzsignfolderResponseCompound.md
 doc/EzsignfolderSendV1Request.md
@@ -148,6 +152,10 @@ doc/EzsignsignerRequest.md
 doc/EzsignsignerRequestCompound.md
 doc/EzsignsignerRequestCompoundAllOf.md
 doc/EzsignsignerRequestCompoundContact.md
+doc/EzsignsignerResponse.md
+doc/EzsignsignerResponseCompound.md
+doc/EzsignsignerResponseCompoundAllOf.md
+doc/EzsignsignerResponseCompoundContact.md
 doc/EzsigntemplatepackageGetListV1Response.md
 doc/EzsigntemplatepackageGetListV1ResponseAllOf.md
 doc/EzsigntemplatepackageGetListV1ResponseMPayload.md
@@ -291,6 +299,8 @@ lib/model/contactinformations_request.dart
 lib/model/contactinformations_request_compound.dart
 lib/model/contactinformations_request_compound_all_of.dart
 lib/model/custom_autocomplete_element_response.dart
+lib/model/custom_ezsignfoldersignerassociationstatus_response.dart
+lib/model/custom_ezsignsignaturestatus_response.dart
 lib/model/custom_form_data_document_response.dart
 lib/model/custom_form_data_signer_response.dart
 lib/model/custom_forms_data_folder_response.dart
@@ -338,6 +348,9 @@ lib/model/ezsignfolder_delete_object_v1_response.dart
 lib/model/ezsignfolder_get_ezsigndocuments_v1_response.dart
 lib/model/ezsignfolder_get_ezsigndocuments_v1_response_all_of.dart
 lib/model/ezsignfolder_get_ezsigndocuments_v1_response_m_payload.dart
+lib/model/ezsignfolder_get_ezsignfoldersignerassociations_v1_response.dart
+lib/model/ezsignfolder_get_ezsignfoldersignerassociations_v1_response_all_of.dart
+lib/model/ezsignfolder_get_ezsignfoldersignerassociations_v1_response_m_payload.dart
 lib/model/ezsignfolder_get_forms_data_v1_response.dart
 lib/model/ezsignfolder_get_forms_data_v1_response_all_of.dart
 lib/model/ezsignfolder_get_forms_data_v1_response_m_payload.dart
@@ -351,7 +364,6 @@ lib/model/ezsignfolder_get_object_v1_response_m_payload.dart
 lib/model/ezsignfolder_list_element.dart
 lib/model/ezsignfolder_request.dart
 lib/model/ezsignfolder_request_compound.dart
-lib/model/ezsignfolder_request_compound_all_of.dart
 lib/model/ezsignfolder_response.dart
 lib/model/ezsignfolder_response_compound.dart
 lib/model/ezsignfolder_send_v1_request.dart
@@ -397,6 +409,10 @@ lib/model/ezsignsigner_request.dart
 lib/model/ezsignsigner_request_compound.dart
 lib/model/ezsignsigner_request_compound_all_of.dart
 lib/model/ezsignsigner_request_compound_contact.dart
+lib/model/ezsignsigner_response.dart
+lib/model/ezsignsigner_response_compound.dart
+lib/model/ezsignsigner_response_compound_all_of.dart
+lib/model/ezsignsigner_response_compound_contact.dart
 lib/model/ezsigntemplatepackage_get_list_v1_response.dart
 lib/model/ezsigntemplatepackage_get_list_v1_response_all_of.dart
 lib/model/ezsigntemplatepackage_get_list_v1_response_m_payload.dart
@@ -495,6 +511,8 @@ test/contactinformations_request_compound_all_of_test.dart
 test/contactinformations_request_compound_test.dart
 test/contactinformations_request_test.dart
 test/custom_autocomplete_element_response_test.dart
+test/custom_ezsignfoldersignerassociationstatus_response_test.dart
+test/custom_ezsignsignaturestatus_response_test.dart
 test/custom_form_data_document_response_test.dart
 test/custom_form_data_signer_response_test.dart
 test/custom_forms_data_folder_response_test.dart
@@ -542,6 +560,9 @@ test/ezsignfolder_delete_object_v1_response_test.dart
 test/ezsignfolder_get_ezsigndocuments_v1_response_all_of_test.dart
 test/ezsignfolder_get_ezsigndocuments_v1_response_m_payload_test.dart
 test/ezsignfolder_get_ezsigndocuments_v1_response_test.dart
+test/ezsignfolder_get_ezsignfoldersignerassociations_v1_response_all_of_test.dart
+test/ezsignfolder_get_ezsignfoldersignerassociations_v1_response_m_payload_test.dart
+test/ezsignfolder_get_ezsignfoldersignerassociations_v1_response_test.dart
 test/ezsignfolder_get_forms_data_v1_response_all_of_test.dart
 test/ezsignfolder_get_forms_data_v1_response_m_payload_test.dart
 test/ezsignfolder_get_forms_data_v1_response_test.dart
@@ -553,7 +574,6 @@ test/ezsignfolder_get_object_v1_response_all_of_test.dart
 test/ezsignfolder_get_object_v1_response_m_payload_test.dart
 test/ezsignfolder_get_object_v1_response_test.dart
 test/ezsignfolder_list_element_test.dart
-test/ezsignfolder_request_compound_all_of_test.dart
 test/ezsignfolder_request_compound_test.dart
 test/ezsignfolder_request_test.dart
 test/ezsignfolder_response_compound_test.dart
@@ -601,6 +621,10 @@ test/ezsignsigner_request_compound_all_of_test.dart
 test/ezsignsigner_request_compound_contact_test.dart
 test/ezsignsigner_request_compound_test.dart
 test/ezsignsigner_request_test.dart
+test/ezsignsigner_response_compound_all_of_test.dart
+test/ezsignsigner_response_compound_contact_test.dart
+test/ezsignsigner_response_compound_test.dart
+test/ezsignsigner_response_test.dart
 test/ezsigntemplatepackage_get_list_v1_response_all_of_test.dart
 test/ezsigntemplatepackage_get_list_v1_response_m_payload_all_of_test.dart
 test/ezsigntemplatepackage_get_list_v1_response_m_payload_test.dart

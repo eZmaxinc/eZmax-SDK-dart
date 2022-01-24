@@ -1,4 +1,4 @@
-# openapi.model.EzsignsignerRequestCompoundContact
+# openapi.model.EzsignsignerResponseCompoundContact
 
 ## Load the model package
 ```dart

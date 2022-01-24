@@ -271,6 +271,10 @@ class ApiClient {
           return ContactinformationsRequestCompoundAllOf.fromJson(value);
         case 'CustomAutocompleteElementResponse':
           return CustomAutocompleteElementResponse.fromJson(value);
+        case 'CustomEzsignfoldersignerassociationstatusResponse':
+          return CustomEzsignfoldersignerassociationstatusResponse.fromJson(value);
+        case 'CustomEzsignsignaturestatusResponse':
+          return CustomEzsignsignaturestatusResponse.fromJson(value);
         case 'CustomFormDataDocumentResponse':
           return CustomFormDataDocumentResponse.fromJson(value);
         case 'CustomFormDataSignerResponse':
@@ -365,6 +369,12 @@ class ApiClient {
           return EzsignfolderGetEzsigndocumentsV1ResponseAllOf.fromJson(value);
         case 'EzsignfolderGetEzsigndocumentsV1ResponseMPayload':
           return EzsignfolderGetEzsigndocumentsV1ResponseMPayload.fromJson(value);
+        case 'EzsignfolderGetEzsignfoldersignerassociationsV1Response':
+          return EzsignfolderGetEzsignfoldersignerassociationsV1Response.fromJson(value);
+        case 'EzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf':
+          return EzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf.fromJson(value);
+        case 'EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload':
+          return EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload.fromJson(value);
         case 'EzsignfolderGetFormsDataV1Response':
           return EzsignfolderGetFormsDataV1Response.fromJson(value);
         case 'EzsignfolderGetFormsDataV1ResponseAllOf':
@@ -391,8 +401,6 @@ class ApiClient {
           return EzsignfolderRequest.fromJson(value);
         case 'EzsignfolderRequestCompound':
           return EzsignfolderRequestCompound.fromJson(value);
-        case 'EzsignfolderRequestCompoundAllOf':
-          return EzsignfolderRequestCompoundAllOf.fromJson(value);
         case 'EzsignfolderResponse':
           return EzsignfolderResponse.fromJson(value);
         case 'EzsignfolderResponseCompound':
@@ -483,6 +491,14 @@ class ApiClient {
           return EzsignsignerRequestCompoundAllOf.fromJson(value);
         case 'EzsignsignerRequestCompoundContact':
           return EzsignsignerRequestCompoundContact.fromJson(value);
+        case 'EzsignsignerResponse':
+          return EzsignsignerResponse.fromJson(value);
+        case 'EzsignsignerResponseCompound':
+          return EzsignsignerResponseCompound.fromJson(value);
+        case 'EzsignsignerResponseCompoundAllOf':
+          return EzsignsignerResponseCompoundAllOf.fromJson(value);
+        case 'EzsignsignerResponseCompoundContact':
+          return EzsignsignerResponseCompoundContact.fromJson(value);
         case 'EzsigntemplatepackageGetListV1Response':
           return EzsigntemplatepackageGetListV1Response.fromJson(value);
         case 'EzsigntemplatepackageGetListV1ResponseAllOf':

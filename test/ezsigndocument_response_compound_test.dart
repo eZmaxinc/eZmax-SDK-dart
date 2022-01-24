@@ -16,6 +16,35 @@ void main() {
   final instance = EzsigndocumentResponseCompound();
 
   group('test EzsigndocumentResponseCompound', () {
+    // The total number of steps in the form filling phase
+    // int iEzsigndocumentStepformtotal
+    test('to test the property `iEzsigndocumentStepformtotal`', () async {
+      // TODO
+    });
+
+    // The current step in the form filling phase
+    // int iEzsigndocumentStepformcurrent
+    test('to test the property `iEzsigndocumentStepformcurrent`', () async {
+      // TODO
+    });
+
+    // The total number of steps in the signature filling phase
+    // int iEzsigndocumentStepsignaturetotal
+    test('to test the property `iEzsigndocumentStepsignaturetotal`', () async {
+      // TODO
+    });
+
+    // The current step in the signature phase
+    // int iEzsigndocumentStepsignatureCurrent
+    test('to test the property `iEzsigndocumentStepsignatureCurrent`', () async {
+      // TODO
+    });
+
+    // List<CustomEzsignfoldersignerassociationstatusResponse> aObjEzsignfoldersignerassociationstatus (default value: const [])
+    test('to test the property `aObjEzsignfoldersignerassociationstatus`', () async {
+      // TODO
+    });
+
     // The unique ID of the Ezsignfolder
     // int fkiEzsignfolderID
     test('to test the property `fkiEzsignfolderID`', () async {

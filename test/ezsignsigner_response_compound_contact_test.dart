@@ -11,11 +11,11 @@
 import 'package:openapi/api.dart';
 import 'package:test/test.dart';
 
-// tests for EzsignsignerRequestCompoundContact
+// tests for EzsignsignerResponseCompoundContact
 void main() {
-  final instance = EzsignsignerRequestCompoundContact();
+  final instance = EzsignsignerResponseCompoundContact();
 
-  group('test EzsignsignerRequestCompoundContact', () {
+  group('test EzsignsignerResponseCompoundContact', () {
     // The First name of the contact
     // String sContactFirstname
     test('to test the property `sContactFirstname`', () async {

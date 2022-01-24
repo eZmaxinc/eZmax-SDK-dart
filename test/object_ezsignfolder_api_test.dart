@@ -40,6 +40,13 @@ void main() {
       // TODO
     });
 
+    // Retrieve an existing Ezsignfolder's Ezsignfoldersignerassociations
+    //
+    //Future<EzsignfolderGetEzsignfoldersignerassociationsV1Response> ezsignfolderGetEzsignfoldersignerassociationsV1(int pkiEzsignfolderID) async
+    test('test ezsignfolderGetEzsignfoldersignerassociationsV1', () async {
+      // TODO
+    });
+
     // Retrieve an existing Ezsignfolder's forms data
     //
     //Future<EzsignfolderGetFormsDataV1Response> ezsignfolderGetFormsDataV1(int pkiEzsignfolderID) async

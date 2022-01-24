@@ -40,7 +40,7 @@ void main() {
       // TODO
     });
 
-    // The step when the Ezsignsigner will be invited to sign.
+    // The step when the Ezsignsigner will be invited to sign or fill form fields
     // int iEzsignsignatureStep
     test('to test the property `iEzsignsignatureStep`', () async {
       // TODO

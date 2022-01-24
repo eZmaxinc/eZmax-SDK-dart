@@ -10,9 +10,9 @@
 
 part of openapi.api;
 
-class EzsignsignerRequestCompoundContact {
-  /// Returns a new [EzsignsignerRequestCompoundContact] instance.
-  EzsignsignerRequestCompoundContact({
+class EzsignsignerResponseCompoundContact {
+  /// Returns a new [EzsignsignerResponseCompoundContact] instance.
+  EzsignsignerResponseCompoundContact({
     @required this.sContactFirstname,
     @required this.sContactLastname,
     @required this.fkiLanguageID,
@@ -42,7 +42,7 @@ class EzsignsignerRequestCompoundContact {
   String sPhoneNumberCell;
 
   @override
-  bool operator ==(Object other) => identical(this, other) || other is EzsignsignerRequestCompoundContact &&
+  bool operator ==(Object other) => identical(this, other) || other is EzsignsignerResponseCompoundContact &&
      other.sContactFirstname == sContactFirstname &&
      other.sContactLastname == sContactLastname &&
      other.fkiLanguageID == fkiLanguageID &&
@@ -61,7 +61,7 @@ class EzsignsignerRequestCompoundContact {
     (sPhoneNumberCell == null ? 0 : sPhoneNumberCell.hashCode);
 
   @override
-  String toString() => 'EzsignsignerRequestCompoundContact[sContactFirstname=$sContactFirstname, sContactLastname=$sContactLastname, fkiLanguageID=$fkiLanguageID, sEmailAddress=$sEmailAddress, sPhoneNumber=$sPhoneNumber, sPhoneNumberCell=$sPhoneNumberCell]';
+  String toString() => 'EzsignsignerResponseCompoundContact[sContactFirstname=$sContactFirstname, sContactLastname=$sContactLastname, fkiLanguageID=$fkiLanguageID, sEmailAddress=$sEmailAddress, sPhoneNumber=$sPhoneNumber, sPhoneNumberCell=$sPhoneNumberCell]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -80,13 +80,13 @@ class EzsignsignerRequestCompoundContact {
     return json;
   }
 
-  /// Returns a new [EzsignsignerRequestCompoundContact] instance and imports its values from
+  /// Returns a new [EzsignsignerResponseCompoundContact] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static EzsignsignerRequestCompoundContact fromJson(dynamic value) {
+  static EzsignsignerResponseCompoundContact fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
-      return EzsignsignerRequestCompoundContact(
+      return EzsignsignerResponseCompoundContact(
         sContactFirstname: mapValueOfType<String>(json, r'sContactFirstname'),
         sContactLastname: mapValueOfType<String>(json, r'sContactLastname'),
         fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID'),
@@ -98,29 +98,29 @@ class EzsignsignerRequestCompoundContact {
     return null;
   }
 
-  static List<EzsignsignerRequestCompoundContact> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
+  static List<EzsignsignerResponseCompoundContact> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
     json is List && json.isNotEmpty
-      ? json.map(EzsignsignerRequestCompoundContact.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <EzsignsignerRequestCompoundContact>[];
+      ? json.map(EzsignsignerResponseCompoundContact.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <EzsignsignerResponseCompoundContact>[];
 
-  static Map<String, EzsignsignerRequestCompoundContact> mapFromJson(dynamic json) {
-    final map = <String, EzsignsignerRequestCompoundContact>{};
+  static Map<String, EzsignsignerResponseCompoundContact> mapFromJson(dynamic json) {
+    final map = <String, EzsignsignerResponseCompoundContact>{};
     if (json is Map && json.isNotEmpty) {
       json
         .cast<String, dynamic>()
-        .forEach((key, dynamic value) => map[key] = EzsignsignerRequestCompoundContact.fromJson(value));
+        .forEach((key, dynamic value) => map[key] = EzsignsignerResponseCompoundContact.fromJson(value));
     }
     return map;
   }
 
-  // maps a json object with a list of EzsignsignerRequestCompoundContact-objects as value to a dart map
-  static Map<String, List<EzsignsignerRequestCompoundContact>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
-    final map = <String, List<EzsignsignerRequestCompoundContact>>{};
+  // maps a json object with a list of EzsignsignerResponseCompoundContact-objects as value to a dart map
+  static Map<String, List<EzsignsignerResponseCompoundContact>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
+    final map = <String, List<EzsignsignerResponseCompoundContact>>{};
     if (json is Map && json.isNotEmpty) {
       json
         .cast<String, dynamic>()
         .forEach((key, dynamic value) {
-          map[key] = EzsignsignerRequestCompoundContact.listFromJson(
+          map[key] = EzsignsignerResponseCompoundContact.listFromJson(
             value,
             emptyIsNull: emptyIsNull,
             growable: growable,

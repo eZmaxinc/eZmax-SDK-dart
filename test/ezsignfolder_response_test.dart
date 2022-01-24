@@ -87,6 +87,18 @@ void main() {
       // TODO
     });
 
+    // The scheduled date and time at which the Ezsignfolder should be archived.
+    // String dtEzsignfolderScheduledarchive
+    test('to test the property `dtEzsignfolderScheduledarchive`', () async {
+      // TODO
+    });
+
+    // The scheduled date and time at which the Ezsignfolder should be Destroyed.
+    // String dtEzsignfolderScheduleddestruction
+    test('to test the property `dtEzsignfolderScheduleddestruction`', () async {
+      // TODO
+    });
+
     // FieldEEzsignfolderStep eEzsignfolderStep
     test('to test the property `eEzsignfolderStep`', () async {
       // TODO

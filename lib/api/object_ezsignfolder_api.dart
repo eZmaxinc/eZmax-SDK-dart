@@ -199,6 +199,66 @@ class ObjectEzsignfolderApi {
     return Future<EzsignfolderGetEzsigndocumentsV1Response>.value();
   }
 
+  /// Retrieve an existing Ezsignfolder's Ezsignfoldersignerassociations
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfolderID (required):
+  Future<Response> ezsignfolderGetEzsignfoldersignerassociationsV1WithHttpInfo(int pkiEzsignfolderID,) async {
+    // Verify required params are set.
+    if (pkiEzsignfolderID == null) {
+     throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsignfolderID');
+    }
+
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations'
+      .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
+
+    // ignore: prefer_final_locals
+    Object postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const authNames = <String>['Authorization'];
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes[0],
+      authNames,
+    );
+  }
+
+  /// Retrieve an existing Ezsignfolder's Ezsignfoldersignerassociations
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfolderID (required):
+  Future<EzsignfolderGetEzsignfoldersignerassociationsV1Response> ezsignfolderGetEzsignfoldersignerassociationsV1(int pkiEzsignfolderID,) async {
+    final response = await ezsignfolderGetEzsignfoldersignerassociationsV1WithHttpInfo(pkiEzsignfolderID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body != null && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderGetEzsignfoldersignerassociationsV1Response',) as EzsignfolderGetEzsignfoldersignerassociationsV1Response;
+    
+    }
+    return Future<EzsignfolderGetEzsignfoldersignerassociationsV1Response>.value();
+  }
+
   /// Retrieve an existing Ezsignfolder's forms data
   ///
   /// Note: This method returns the HTTP [Response].

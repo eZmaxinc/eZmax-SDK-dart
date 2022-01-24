@@ -25,6 +25,8 @@ class EzsignfolderResponse {
     @required this.eEzsignfolderSendreminderfrequency,
     @required this.dtEzsignfolderDuedate,
     this.dtEzsignfolderSentdate,
+    @required this.dtEzsignfolderScheduledarchive,
+    @required this.dtEzsignfolderScheduleddestruction,
     @required this.eEzsignfolderStep,
     @required this.dtEzsignfolderClose,
     @required this.objAudit,
@@ -67,6 +69,12 @@ class EzsignfolderResponse {
   /// The date and time at which the Ezsign folder was sent the last time.
   String dtEzsignfolderSentdate;
 
+  /// The scheduled date and time at which the Ezsignfolder should be archived.
+  String dtEzsignfolderScheduledarchive;
+
+  /// The scheduled date and time at which the Ezsignfolder should be Destroyed.
+  String dtEzsignfolderScheduleddestruction;
+
   FieldEEzsignfolderStep eEzsignfolderStep;
 
   /// The date and time at which the folder was closed. Either by applying the last signature or by completing it prematurely.
@@ -88,6 +96,8 @@ class EzsignfolderResponse {
      other.eEzsignfolderSendreminderfrequency == eEzsignfolderSendreminderfrequency &&
      other.dtEzsignfolderDuedate == dtEzsignfolderDuedate &&
      other.dtEzsignfolderSentdate == dtEzsignfolderSentdate &&
+     other.dtEzsignfolderScheduledarchive == dtEzsignfolderScheduledarchive &&
+     other.dtEzsignfolderScheduleddestruction == dtEzsignfolderScheduleddestruction &&
      other.eEzsignfolderStep == eEzsignfolderStep &&
      other.dtEzsignfolderClose == dtEzsignfolderClose &&
      other.objAudit == objAudit;
@@ -107,12 +117,14 @@ class EzsignfolderResponse {
     (eEzsignfolderSendreminderfrequency == null ? 0 : eEzsignfolderSendreminderfrequency.hashCode) +
     (dtEzsignfolderDuedate == null ? 0 : dtEzsignfolderDuedate.hashCode) +
     (dtEzsignfolderSentdate == null ? 0 : dtEzsignfolderSentdate.hashCode) +
+    (dtEzsignfolderScheduledarchive == null ? 0 : dtEzsignfolderScheduledarchive.hashCode) +
+    (dtEzsignfolderScheduleddestruction == null ? 0 : dtEzsignfolderScheduleddestruction.hashCode) +
     (eEzsignfolderStep == null ? 0 : eEzsignfolderStep.hashCode) +
     (dtEzsignfolderClose == null ? 0 : dtEzsignfolderClose.hashCode) +
     (objAudit == null ? 0 : objAudit.hashCode);
 
   @override
-  String toString() => 'EzsignfolderResponse[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, fkiBillingentityinternalID=$fkiBillingentityinternalID, sBillingentityinternalDescriptionX=$sBillingentityinternalDescriptionX, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sEzsigntsarequirementDescriptionX=$sEzsigntsarequirementDescriptionX, sEzsignfolderDescription=$sEzsignfolderDescription, tEzsignfolderNote=$tEzsignfolderNote, eEzsignfolderSendreminderfrequency=$eEzsignfolderSendreminderfrequency, dtEzsignfolderDuedate=$dtEzsignfolderDuedate, dtEzsignfolderSentdate=$dtEzsignfolderSentdate, eEzsignfolderStep=$eEzsignfolderStep, dtEzsignfolderClose=$dtEzsignfolderClose, objAudit=$objAudit]';
+  String toString() => 'EzsignfolderResponse[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, fkiBillingentityinternalID=$fkiBillingentityinternalID, sBillingentityinternalDescriptionX=$sBillingentityinternalDescriptionX, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sEzsigntsarequirementDescriptionX=$sEzsigntsarequirementDescriptionX, sEzsignfolderDescription=$sEzsignfolderDescription, tEzsignfolderNote=$tEzsignfolderNote, eEzsignfolderSendreminderfrequency=$eEzsignfolderSendreminderfrequency, dtEzsignfolderDuedate=$dtEzsignfolderDuedate, dtEzsignfolderSentdate=$dtEzsignfolderSentdate, dtEzsignfolderScheduledarchive=$dtEzsignfolderScheduledarchive, dtEzsignfolderScheduleddestruction=$dtEzsignfolderScheduleddestruction, eEzsignfolderStep=$eEzsignfolderStep, dtEzsignfolderClose=$dtEzsignfolderClose, objAudit=$objAudit]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -128,6 +140,8 @@ class EzsignfolderResponse {
       json[r'eEzsignfolderSendreminderfrequency'] = eEzsignfolderSendreminderfrequency;
       json[r'dtEzsignfolderDuedate'] = dtEzsignfolderDuedate;
       json[r'dtEzsignfolderSentdate'] = dtEzsignfolderSentdate == null ? null : dtEzsignfolderSentdate;
+      json[r'dtEzsignfolderScheduledarchive'] = dtEzsignfolderScheduledarchive;
+      json[r'dtEzsignfolderScheduleddestruction'] = dtEzsignfolderScheduleddestruction;
       json[r'eEzsignfolderStep'] = eEzsignfolderStep;
       json[r'dtEzsignfolderClose'] = dtEzsignfolderClose;
       json[r'objAudit'] = objAudit;
@@ -153,6 +167,8 @@ class EzsignfolderResponse {
         eEzsignfolderSendreminderfrequency: FieldEEzsignfolderSendreminderfrequency.fromJson(json[r'eEzsignfolderSendreminderfrequency']),
         dtEzsignfolderDuedate: mapValueOfType<String>(json, r'dtEzsignfolderDuedate'),
         dtEzsignfolderSentdate: mapValueOfType<String>(json, r'dtEzsignfolderSentdate'),
+        dtEzsignfolderScheduledarchive: mapValueOfType<String>(json, r'dtEzsignfolderScheduledarchive'),
+        dtEzsignfolderScheduleddestruction: mapValueOfType<String>(json, r'dtEzsignfolderScheduleddestruction'),
         eEzsignfolderStep: FieldEEzsignfolderStep.fromJson(json[r'eEzsignfolderStep']),
         dtEzsignfolderClose: mapValueOfType<String>(json, r'dtEzsignfolderClose'),
         objAudit: CommonAudit.fromJson(json[r'objAudit']),

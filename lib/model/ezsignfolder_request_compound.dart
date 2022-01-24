@@ -13,16 +13,12 @@ part of openapi.api;
 class EzsignfolderRequestCompound {
   /// Returns a new [EzsignfolderRequestCompound] instance.
   EzsignfolderRequestCompound({
-    this.aEzsignfoldersignerassociation = const [],
     @required this.fkiEzsignfoldertypeID,
     @required this.fkiEzsigntsarequirementID,
     @required this.sEzsignfolderDescription,
     @required this.tEzsignfolderNote,
     @required this.eEzsignfolderSendreminderfrequency,
   });
-
-  /// An array of signers that will be invited to sign the Ezsigndocuments
-  List<EzsignfoldersignerassociationRequest> aEzsignfoldersignerassociation;
 
   /// The unique ID of the Ezsignfoldertype.
   int fkiEzsignfoldertypeID;
@@ -42,7 +38,6 @@ class EzsignfolderRequestCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfolderRequestCompound &&
-     other.aEzsignfoldersignerassociation == aEzsignfoldersignerassociation &&
      other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
      other.fkiEzsigntsarequirementID == fkiEzsigntsarequirementID &&
      other.sEzsignfolderDescription == sEzsignfolderDescription &&
@@ -52,7 +47,6 @@ class EzsignfolderRequestCompound {
   @override
   int get hashCode =>
   // ignore: unnecessary_parenthesis
-    (aEzsignfoldersignerassociation == null ? 0 : aEzsignfoldersignerassociation.hashCode) +
     (fkiEzsignfoldertypeID == null ? 0 : fkiEzsignfoldertypeID.hashCode) +
     (fkiEzsigntsarequirementID == null ? 0 : fkiEzsigntsarequirementID.hashCode) +
     (sEzsignfolderDescription == null ? 0 : sEzsignfolderDescription.hashCode) +
@@ -60,11 +54,10 @@ class EzsignfolderRequestCompound {
     (eEzsignfolderSendreminderfrequency == null ? 0 : eEzsignfolderSendreminderfrequency.hashCode);
 
   @override
-  String toString() => 'EzsignfolderRequestCompound[aEzsignfoldersignerassociation=$aEzsignfoldersignerassociation, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sEzsignfolderDescription=$sEzsignfolderDescription, tEzsignfolderNote=$tEzsignfolderNote, eEzsignfolderSendreminderfrequency=$eEzsignfolderSendreminderfrequency]';
+  String toString() => 'EzsignfolderRequestCompound[fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sEzsignfolderDescription=$sEzsignfolderDescription, tEzsignfolderNote=$tEzsignfolderNote, eEzsignfolderSendreminderfrequency=$eEzsignfolderSendreminderfrequency]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'a_Ezsignfoldersignerassociation'] = aEzsignfoldersignerassociation;
       json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
       json[r'fkiEzsigntsarequirementID'] = fkiEzsigntsarequirementID;
       json[r'sEzsignfolderDescription'] = sEzsignfolderDescription;
@@ -80,7 +73,6 @@ class EzsignfolderRequestCompound {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
       return EzsignfolderRequestCompound(
-        aEzsignfoldersignerassociation: EzsignfoldersignerassociationRequest.listFromJson(json[r'a_Ezsignfoldersignerassociation']),
         fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID'),
         fkiEzsigntsarequirementID: mapValueOfType<int>(json, r'fkiEzsigntsarequirementID'),
         sEzsignfolderDescription: mapValueOfType<String>(json, r'sEzsignfolderDescription'),

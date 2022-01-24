@@ -11,13 +11,13 @@
 import 'package:openapi/api.dart';
 import 'package:test/test.dart';
 
-// tests for EzsignfolderGetEzsigndocumentsV1ResponseMPayload
+// tests for EzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf
 void main() {
-  final instance = EzsignfolderGetEzsigndocumentsV1ResponseMPayload();
+  final instance = EzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf();
 
-  group('test EzsignfolderGetEzsigndocumentsV1ResponseMPayload', () {
-    // List<EzsigndocumentResponseCompound> aObjEzsigndocument (default value: const [])
-    test('to test the property `aObjEzsigndocument`', () async {
+  group('test EzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf', () {
+    // EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload mPayload
+    test('to test the property `mPayload`', () async {
       // TODO
     });
 

@@ -16,12 +16,6 @@ void main() {
   final instance = EzsignfolderRequestCompound();
 
   group('test EzsignfolderRequestCompound', () {
-    // An array of signers that will be invited to sign the Ezsigndocuments
-    // List<EzsignfoldersignerassociationRequest> aEzsignfoldersignerassociation (default value: const [])
-    test('to test the property `aEzsignfoldersignerassociation`', () async {
-      // TODO
-    });
-
     // The unique ID of the Ezsignfoldertype.
     // int fkiEzsignfoldertypeID
     test('to test the property `fkiEzsignfoldertypeID`', () async {
