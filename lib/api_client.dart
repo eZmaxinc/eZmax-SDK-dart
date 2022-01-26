@@ -483,6 +483,8 @@ class ApiClient {
           return EzsignsignatureRequest.fromJson(value);
         case 'EzsignsignatureRequestCompound':
           return EzsignsignatureRequestCompound.fromJson(value);
+        case 'EzsignsignaturecustomdateRequest':
+          return EzsignsignaturecustomdateRequest.fromJson(value);
         case 'EzsignsignerRequest':
           return EzsignsignerRequest.fromJson(value);
         case 'EzsignsignerRequestCompound':

@@ -191,6 +191,7 @@ part 'model/ezsignsignature_get_object_v1_response.dart';
 part 'model/ezsignsignature_get_object_v1_response_all_of.dart';
 part 'model/ezsignsignature_request.dart';
 part 'model/ezsignsignature_request_compound.dart';
+part 'model/ezsignsignaturecustomdate_request.dart';
 part 'model/ezsignsigner_request.dart';
 part 'model/ezsignsigner_request_compound.dart';
 part 'model/ezsignsigner_request_compound_all_of.dart';

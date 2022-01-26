@@ -148,6 +148,7 @@ doc/EzsignsignatureGetObjectV1Response.md
 doc/EzsignsignatureGetObjectV1ResponseAllOf.md
 doc/EzsignsignatureRequest.md
 doc/EzsignsignatureRequestCompound.md
+doc/EzsignsignaturecustomdateRequest.md
 doc/EzsignsignerRequest.md
 doc/EzsignsignerRequestCompound.md
 doc/EzsignsignerRequestCompoundAllOf.md
@@ -405,6 +406,7 @@ lib/model/ezsignsignature_get_object_v1_response.dart
 lib/model/ezsignsignature_get_object_v1_response_all_of.dart
 lib/model/ezsignsignature_request.dart
 lib/model/ezsignsignature_request_compound.dart
+lib/model/ezsignsignaturecustomdate_request.dart
 lib/model/ezsignsigner_request.dart
 lib/model/ezsignsigner_request_compound.dart
 lib/model/ezsignsigner_request_compound_all_of.dart
@@ -617,6 +619,7 @@ test/ezsignsignature_get_object_v1_response_all_of_test.dart
 test/ezsignsignature_get_object_v1_response_test.dart
 test/ezsignsignature_request_compound_test.dart
 test/ezsignsignature_request_test.dart
+test/ezsignsignaturecustomdate_request_test.dart
 test/ezsignsigner_request_compound_all_of_test.dart
 test/ezsignsigner_request_compound_contact_test.dart
 test/ezsignsigner_request_compound_test.dart

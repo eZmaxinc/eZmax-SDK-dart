@@ -13,6 +13,8 @@ part of openapi.api;
 class EzsignsignatureRequestCompound {
   /// Returns a new [EzsignsignatureRequestCompound] instance.
   EzsignsignatureRequestCompound({
+    this.bEzsignsignatureCustomdate,
+    this.aObjEzsignsignaturecustomdate = const [],
     @required this.fkiEzsignfoldersignerassociationID,
     @required this.iEzsignpagePagenumber,
     @required this.iEzsignsignatureX,
@@ -21,6 +23,12 @@ class EzsignsignatureRequestCompound {
     @required this.eEzsignsignatureType,
     @required this.fkiEzsigndocumentID,
   });
+
+  /// Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is \"Name\" or \"Handwritten\")
+  bool bEzsignsignatureCustomdate;
+
+  /// An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all.
+  List<EzsignsignaturecustomdateRequest> aObjEzsignsignaturecustomdate;
 
   /// The unique ID of the Ezsignfoldersignerassociation
   int fkiEzsignfoldersignerassociationID;
@@ -44,6 +52,8 @@ class EzsignsignatureRequestCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignsignatureRequestCompound &&
+     other.bEzsignsignatureCustomdate == bEzsignsignatureCustomdate &&
+     other.aObjEzsignsignaturecustomdate == aObjEzsignsignaturecustomdate &&
      other.fkiEzsignfoldersignerassociationID == fkiEzsignfoldersignerassociationID &&
      other.iEzsignpagePagenumber == iEzsignpagePagenumber &&
      other.iEzsignsignatureX == iEzsignsignatureX &&
@@ -55,6 +65,8 @@ class EzsignsignatureRequestCompound {
   @override
   int get hashCode =>
   // ignore: unnecessary_parenthesis
+    (bEzsignsignatureCustomdate == null ? 0 : bEzsignsignatureCustomdate.hashCode) +
+    (aObjEzsignsignaturecustomdate == null ? 0 : aObjEzsignsignaturecustomdate.hashCode) +
     (fkiEzsignfoldersignerassociationID == null ? 0 : fkiEzsignfoldersignerassociationID.hashCode) +
     (iEzsignpagePagenumber == null ? 0 : iEzsignpagePagenumber.hashCode) +
     (iEzsignsignatureX == null ? 0 : iEzsignsignatureX.hashCode) +
@@ -64,10 +76,16 @@ class EzsignsignatureRequestCompound {
     (fkiEzsigndocumentID == null ? 0 : fkiEzsigndocumentID.hashCode);
 
   @override
-  String toString() => 'EzsignsignatureRequestCompound[fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureStep=$iEzsignsignatureStep, eEzsignsignatureType=$eEzsignsignatureType, fkiEzsigndocumentID=$fkiEzsigndocumentID]';
+  String toString() => 'EzsignsignatureRequestCompound[bEzsignsignatureCustomdate=$bEzsignsignatureCustomdate, aObjEzsignsignaturecustomdate=$aObjEzsignsignaturecustomdate, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureStep=$iEzsignsignatureStep, eEzsignsignatureType=$eEzsignsignatureType, fkiEzsigndocumentID=$fkiEzsigndocumentID]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
+    if (bEzsignsignatureCustomdate != null) {
+      json[r'bEzsignsignatureCustomdate'] = bEzsignsignatureCustomdate;
+    }
+    if (aObjEzsignsignaturecustomdate != null) {
+      json[r'a_objEzsignsignaturecustomdate'] = aObjEzsignsignaturecustomdate;
+    }
       json[r'fkiEzsignfoldersignerassociationID'] = fkiEzsignfoldersignerassociationID;
       json[r'iEzsignpagePagenumber'] = iEzsignpagePagenumber;
       json[r'iEzsignsignatureX'] = iEzsignsignatureX;
@@ -85,6 +103,8 @@ class EzsignsignatureRequestCompound {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
       return EzsignsignatureRequestCompound(
+        bEzsignsignatureCustomdate: mapValueOfType<bool>(json, r'bEzsignsignatureCustomdate'),
+        aObjEzsignsignaturecustomdate: EzsignsignaturecustomdateRequest.listFromJson(json[r'a_objEzsignsignaturecustomdate']),
         fkiEzsignfoldersignerassociationID: mapValueOfType<int>(json, r'fkiEzsignfoldersignerassociationID'),
         iEzsignpagePagenumber: mapValueOfType<int>(json, r'iEzsignpagePagenumber'),
         iEzsignsignatureX: mapValueOfType<int>(json, r'iEzsignsignatureX'),

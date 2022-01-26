@@ -16,6 +16,18 @@ void main() {
   final instance = EzsignsignatureRequestCompound();
 
   group('test EzsignsignatureRequestCompound', () {
+    // Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is \"Name\" or \"Handwritten\")
+    // bool bEzsignsignatureCustomdate
+    test('to test the property `bEzsignsignatureCustomdate`', () async {
+      // TODO
+    });
+
+    // An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all.
+    // List<EzsignsignaturecustomdateRequest> aObjEzsignsignaturecustomdate (default value: const [])
+    test('to test the property `aObjEzsignsignaturecustomdate`', () async {
+      // TODO
+    });
+
     // The unique ID of the Ezsignfoldersignerassociation
     // int fkiEzsignfoldersignerassociationID
     test('to test the property `fkiEzsignfoldersignerassociationID`', () async {
