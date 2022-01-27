@@ -171,6 +171,7 @@ part 'model/ezsignfoldersignerassociation_request_compound.dart';
 part 'model/ezsignfoldersignerassociation_request_compound_all_of.dart';
 part 'model/ezsignfoldersignerassociation_response.dart';
 part 'model/ezsignfoldersignerassociation_response_compound.dart';
+part 'model/ezsignfoldersignerassociation_response_compound_user.dart';
 part 'model/ezsignfoldertype_get_list_v1_response.dart';
 part 'model/ezsignfoldertype_get_list_v1_response_all_of.dart';
 part 'model/ezsignfoldertype_get_list_v1_response_m_payload.dart';

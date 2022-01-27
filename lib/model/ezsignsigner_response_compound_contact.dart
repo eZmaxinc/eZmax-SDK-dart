@@ -17,8 +17,8 @@ class EzsignsignerResponseCompoundContact {
     @required this.sContactLastname,
     @required this.fkiLanguageID,
     this.sEmailAddress,
-    this.sPhoneNumber,
-    this.sPhoneNumberCell,
+    this.sPhoneE164,
+    this.sPhoneE164Cell,
   });
 
   /// The First name of the contact
@@ -35,11 +35,11 @@ class EzsignsignerResponseCompoundContact {
   /// The email address.
   String sEmailAddress;
 
-  /// The Phone number of the contact. Use format \"5149901516\" for North American Numbers (Without \"1\" for long distance code) you would dial like this: 1-514-990-1516. Use format \"498945233886\" for international numbers (Without \"011\") you would dial like this: +49 89 452 33 88-6. In this example \"49\" is the country code of Germany.
-  String sPhoneNumber;
+  /// A phone number in E.164 Format
+  String sPhoneE164;
 
-  /// The Cell Phone number of the contact. Use format \"5149901516\" for North American Numbers (Without \"1\" for long distance code) you would dial like this: 1-514-990-1516. Use format \"498945233886\" for international numbers (Without \"011\") you would dial like this: +49 89 452 33 88-6. In this example \"49\" is the country code of Germany.
-  String sPhoneNumberCell;
+  /// A phone number in E.164 Format
+  String sPhoneE164Cell;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignsignerResponseCompoundContact &&
@@ -47,8 +47,8 @@ class EzsignsignerResponseCompoundContact {
      other.sContactLastname == sContactLastname &&
      other.fkiLanguageID == fkiLanguageID &&
      other.sEmailAddress == sEmailAddress &&
-     other.sPhoneNumber == sPhoneNumber &&
-     other.sPhoneNumberCell == sPhoneNumberCell;
+     other.sPhoneE164 == sPhoneE164 &&
+     other.sPhoneE164Cell == sPhoneE164Cell;
 
   @override
   int get hashCode =>
@@ -57,11 +57,11 @@ class EzsignsignerResponseCompoundContact {
     (sContactLastname == null ? 0 : sContactLastname.hashCode) +
     (fkiLanguageID == null ? 0 : fkiLanguageID.hashCode) +
     (sEmailAddress == null ? 0 : sEmailAddress.hashCode) +
-    (sPhoneNumber == null ? 0 : sPhoneNumber.hashCode) +
-    (sPhoneNumberCell == null ? 0 : sPhoneNumberCell.hashCode);
+    (sPhoneE164 == null ? 0 : sPhoneE164.hashCode) +
+    (sPhoneE164Cell == null ? 0 : sPhoneE164Cell.hashCode);
 
   @override
-  String toString() => 'EzsignsignerResponseCompoundContact[sContactFirstname=$sContactFirstname, sContactLastname=$sContactLastname, fkiLanguageID=$fkiLanguageID, sEmailAddress=$sEmailAddress, sPhoneNumber=$sPhoneNumber, sPhoneNumberCell=$sPhoneNumberCell]';
+  String toString() => 'EzsignsignerResponseCompoundContact[sContactFirstname=$sContactFirstname, sContactLastname=$sContactLastname, fkiLanguageID=$fkiLanguageID, sEmailAddress=$sEmailAddress, sPhoneE164=$sPhoneE164, sPhoneE164Cell=$sPhoneE164Cell]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -71,11 +71,11 @@ class EzsignsignerResponseCompoundContact {
     if (sEmailAddress != null) {
       json[r'sEmailAddress'] = sEmailAddress;
     }
-    if (sPhoneNumber != null) {
-      json[r'sPhoneNumber'] = sPhoneNumber;
+    if (sPhoneE164 != null) {
+      json[r'sPhoneE164'] = sPhoneE164;
     }
-    if (sPhoneNumberCell != null) {
-      json[r'sPhoneNumberCell'] = sPhoneNumberCell;
+    if (sPhoneE164Cell != null) {
+      json[r'sPhoneE164Cell'] = sPhoneE164Cell;
     }
     return json;
   }
@@ -91,8 +91,8 @@ class EzsignsignerResponseCompoundContact {
         sContactLastname: mapValueOfType<String>(json, r'sContactLastname'),
         fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID'),
         sEmailAddress: mapValueOfType<String>(json, r'sEmailAddress'),
-        sPhoneNumber: mapValueOfType<String>(json, r'sPhoneNumber'),
-        sPhoneNumberCell: mapValueOfType<String>(json, r'sPhoneNumberCell'),
+        sPhoneE164: mapValueOfType<String>(json, r'sPhoneE164'),
+        sPhoneE164Cell: mapValueOfType<String>(json, r'sPhoneE164Cell'),
       );
     }
     return null;

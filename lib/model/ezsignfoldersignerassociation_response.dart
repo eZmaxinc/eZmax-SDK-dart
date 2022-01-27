@@ -15,8 +15,6 @@ class EzsignfoldersignerassociationResponse {
   EzsignfoldersignerassociationResponse({
     @required this.pkiEzsignfoldersignerassociationID,
     @required this.fkiEzsignfolderID,
-    this.fkiEzsignsignerID,
-    this.fkiUserID,
     @required this.bEzsignfoldersignerassociationReceivecopy,
   });
 
@@ -26,12 +24,6 @@ class EzsignfoldersignerassociationResponse {
   /// The unique ID of the Ezsignfolder
   int fkiEzsignfolderID;
 
-  /// The unique ID of the Ezsignsigner
-  int fkiEzsignsignerID;
-
-  /// The unique ID of the User
-  int fkiUserID;
-
   /// If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document.
   bool bEzsignfoldersignerassociationReceivecopy;
 
@@ -39,8 +31,6 @@ class EzsignfoldersignerassociationResponse {
   bool operator ==(Object other) => identical(this, other) || other is EzsignfoldersignerassociationResponse &&
      other.pkiEzsignfoldersignerassociationID == pkiEzsignfoldersignerassociationID &&
      other.fkiEzsignfolderID == fkiEzsignfolderID &&
-     other.fkiEzsignsignerID == fkiEzsignsignerID &&
-     other.fkiUserID == fkiUserID &&
      other.bEzsignfoldersignerassociationReceivecopy == bEzsignfoldersignerassociationReceivecopy;
 
   @override
@@ -48,19 +38,15 @@ class EzsignfoldersignerassociationResponse {
   // ignore: unnecessary_parenthesis
     (pkiEzsignfoldersignerassociationID == null ? 0 : pkiEzsignfoldersignerassociationID.hashCode) +
     (fkiEzsignfolderID == null ? 0 : fkiEzsignfolderID.hashCode) +
-    (fkiEzsignsignerID == null ? 0 : fkiEzsignsignerID.hashCode) +
-    (fkiUserID == null ? 0 : fkiUserID.hashCode) +
     (bEzsignfoldersignerassociationReceivecopy == null ? 0 : bEzsignfoldersignerassociationReceivecopy.hashCode);
 
   @override
-  String toString() => 'EzsignfoldersignerassociationResponse[pkiEzsignfoldersignerassociationID=$pkiEzsignfoldersignerassociationID, fkiEzsignfolderID=$fkiEzsignfolderID, fkiEzsignsignerID=$fkiEzsignsignerID, fkiUserID=$fkiUserID, bEzsignfoldersignerassociationReceivecopy=$bEzsignfoldersignerassociationReceivecopy]';
+  String toString() => 'EzsignfoldersignerassociationResponse[pkiEzsignfoldersignerassociationID=$pkiEzsignfoldersignerassociationID, fkiEzsignfolderID=$fkiEzsignfolderID, bEzsignfoldersignerassociationReceivecopy=$bEzsignfoldersignerassociationReceivecopy]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiEzsignfoldersignerassociationID'] = pkiEzsignfoldersignerassociationID;
       json[r'fkiEzsignfolderID'] = fkiEzsignfolderID;
-      json[r'fkiEzsignsignerID'] = fkiEzsignsignerID == null ? null : fkiEzsignsignerID;
-      json[r'fkiUserID'] = fkiUserID == null ? null : fkiUserID;
       json[r'bEzsignfoldersignerassociationReceivecopy'] = bEzsignfoldersignerassociationReceivecopy;
     return json;
   }
@@ -74,8 +60,6 @@ class EzsignfoldersignerassociationResponse {
       return EzsignfoldersignerassociationResponse(
         pkiEzsignfoldersignerassociationID: mapValueOfType<int>(json, r'pkiEzsignfoldersignerassociationID'),
         fkiEzsignfolderID: mapValueOfType<int>(json, r'fkiEzsignfolderID'),
-        fkiEzsignsignerID: mapValueOfType<int>(json, r'fkiEzsignsignerID'),
-        fkiUserID: mapValueOfType<int>(json, r'fkiUserID'),
         bEzsignfoldersignerassociationReceivecopy: mapValueOfType<bool>(json, r'bEzsignfoldersignerassociationReceivecopy'),
       );
     }

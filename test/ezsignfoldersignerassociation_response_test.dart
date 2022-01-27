@@ -28,18 +28,6 @@ void main() {
       // TODO
     });
 
-    // The unique ID of the Ezsignsigner
-    // int fkiEzsignsignerID
-    test('to test the property `fkiEzsignsignerID`', () async {
-      // TODO
-    });
-
-    // The unique ID of the User
-    // int fkiUserID
-    test('to test the property `fkiUserID`', () async {
-      // TODO
-    });
-
     // If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document.
     // bool bEzsignfoldersignerassociationReceivecopy
     test('to test the property `bEzsignfoldersignerassociationReceivecopy`', () async {

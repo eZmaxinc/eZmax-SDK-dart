@@ -16,7 +16,7 @@ class EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload {
     this.aObjEzsignfoldersignerassociation = const [],
   });
 
-  List<EzsignfoldersignerassociationResponse> aObjEzsignfoldersignerassociation;
+  List<EzsignfoldersignerassociationResponseCompound> aObjEzsignfoldersignerassociation;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload &&
@@ -43,7 +43,7 @@ class EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
       return EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload(
-        aObjEzsignfoldersignerassociation: EzsignfoldersignerassociationResponse.listFromJson(json[r'a_objEzsignfoldersignerassociation']),
+        aObjEzsignfoldersignerassociation: EzsignfoldersignerassociationResponseCompound.listFromJson(json[r'a_objEzsignfoldersignerassociation']),
       );
     }
     return null;

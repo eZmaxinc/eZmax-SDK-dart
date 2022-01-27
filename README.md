@@ -239,6 +239,7 @@ Class | Method | HTTP request | Description
  - [EzsignfoldersignerassociationRequestCompoundAllOf](doc//EzsignfoldersignerassociationRequestCompoundAllOf.md)
  - [EzsignfoldersignerassociationResponse](doc//EzsignfoldersignerassociationResponse.md)
  - [EzsignfoldersignerassociationResponseCompound](doc//EzsignfoldersignerassociationResponseCompound.md)
+ - [EzsignfoldersignerassociationResponseCompoundUser](doc//EzsignfoldersignerassociationResponseCompoundUser.md)
  - [EzsignfoldertypeGetListV1Response](doc//EzsignfoldertypeGetListV1Response.md)
  - [EzsignfoldertypeGetListV1ResponseAllOf](doc//EzsignfoldertypeGetListV1ResponseAllOf.md)
  - [EzsignfoldertypeGetListV1ResponseMPayload](doc//EzsignfoldertypeGetListV1ResponseMPayload.md)

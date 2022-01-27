@@ -443,6 +443,8 @@ class ApiClient {
           return EzsignfoldersignerassociationResponse.fromJson(value);
         case 'EzsignfoldersignerassociationResponseCompound':
           return EzsignfoldersignerassociationResponseCompound.fromJson(value);
+        case 'EzsignfoldersignerassociationResponseCompoundUser':
+          return EzsignfoldersignerassociationResponseCompoundUser.fromJson(value);
         case 'EzsignfoldertypeGetListV1Response':
           return EzsignfoldertypeGetListV1Response.fromJson(value);
         case 'EzsignfoldertypeGetListV1ResponseAllOf':
