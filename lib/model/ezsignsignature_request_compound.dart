@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -15,17 +15,23 @@ class EzsignsignatureRequestCompound {
   EzsignsignatureRequestCompound({
     this.bEzsignsignatureCustomdate,
     this.aObjEzsignsignaturecustomdate = const [],
-    @required this.fkiEzsignfoldersignerassociationID,
-    @required this.iEzsignpagePagenumber,
-    @required this.iEzsignsignatureX,
-    @required this.iEzsignsignatureY,
-    @required this.iEzsignsignatureStep,
-    @required this.eEzsignsignatureType,
-    @required this.fkiEzsigndocumentID,
+    required this.fkiEzsignfoldersignerassociationID,
+    required this.iEzsignpagePagenumber,
+    required this.iEzsignsignatureX,
+    required this.iEzsignsignatureY,
+    required this.iEzsignsignatureStep,
+    required this.eEzsignsignatureType,
+    required this.fkiEzsigndocumentID,
   });
 
   /// Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is \"Name\" or \"Handwritten\")
-  bool bEzsignsignatureCustomdate;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bEzsignsignatureCustomdate;
 
   /// An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all.
   List<EzsignsignaturecustomdateRequest> aObjEzsignsignaturecustomdate;
@@ -64,16 +70,16 @@ class EzsignsignatureRequestCompound {
 
   @override
   int get hashCode =>
-  // ignore: unnecessary_parenthesis
-    (bEzsignsignatureCustomdate == null ? 0 : bEzsignsignatureCustomdate.hashCode) +
-    (aObjEzsignsignaturecustomdate == null ? 0 : aObjEzsignsignaturecustomdate.hashCode) +
-    (fkiEzsignfoldersignerassociationID == null ? 0 : fkiEzsignfoldersignerassociationID.hashCode) +
-    (iEzsignpagePagenumber == null ? 0 : iEzsignpagePagenumber.hashCode) +
-    (iEzsignsignatureX == null ? 0 : iEzsignsignatureX.hashCode) +
-    (iEzsignsignatureY == null ? 0 : iEzsignsignatureY.hashCode) +
-    (iEzsignsignatureStep == null ? 0 : iEzsignsignatureStep.hashCode) +
-    (eEzsignsignatureType == null ? 0 : eEzsignsignatureType.hashCode) +
-    (fkiEzsigndocumentID == null ? 0 : fkiEzsigndocumentID.hashCode);
+    // ignore: unnecessary_parenthesis
+    (bEzsignsignatureCustomdate == null ? 0 : bEzsignsignatureCustomdate!.hashCode) +
+    (aObjEzsignsignaturecustomdate.hashCode) +
+    (fkiEzsignfoldersignerassociationID.hashCode) +
+    (iEzsignpagePagenumber.hashCode) +
+    (iEzsignsignatureX.hashCode) +
+    (iEzsignsignatureY.hashCode) +
+    (iEzsignsignatureStep.hashCode) +
+    (eEzsignsignatureType.hashCode) +
+    (fkiEzsigndocumentID.hashCode);
 
   @override
   String toString() => 'EzsignsignatureRequestCompound[bEzsignsignatureCustomdate=$bEzsignsignatureCustomdate, aObjEzsignsignaturecustomdate=$aObjEzsignsignaturecustomdate, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureStep=$iEzsignsignatureStep, eEzsignsignatureType=$eEzsignsignatureType, fkiEzsigndocumentID=$fkiEzsigndocumentID]';
@@ -83,9 +89,7 @@ class EzsignsignatureRequestCompound {
     if (bEzsignsignatureCustomdate != null) {
       json[r'bEzsignsignatureCustomdate'] = bEzsignsignatureCustomdate;
     }
-    if (aObjEzsignsignaturecustomdate != null) {
       json[r'a_objEzsignsignaturecustomdate'] = aObjEzsignsignaturecustomdate;
-    }
       json[r'fkiEzsignfoldersignerassociationID'] = fkiEzsignfoldersignerassociationID;
       json[r'iEzsignpagePagenumber'] = iEzsignpagePagenumber;
       json[r'iEzsignsignatureX'] = iEzsignsignatureX;
@@ -99,54 +103,87 @@ class EzsignsignatureRequestCompound {
   /// Returns a new [EzsignsignatureRequestCompound] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static EzsignsignatureRequestCompound fromJson(dynamic value) {
+  static EzsignsignatureRequestCompound? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
+
+      // Ensure that the map contains the required keys.
+      // Note 1: the values aren't checked for validity beyond being non-null.
+      // Note 2: this code is stripped in release mode!
+      assert(() {
+        requiredKeys.forEach((key) {
+          assert(json.containsKey(key), 'Required key "EzsignsignatureRequestCompound[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "EzsignsignatureRequestCompound[$key]" has a null value in JSON.');
+        });
+        return true;
+      }());
+
       return EzsignsignatureRequestCompound(
         bEzsignsignatureCustomdate: mapValueOfType<bool>(json, r'bEzsignsignatureCustomdate'),
-        aObjEzsignsignaturecustomdate: EzsignsignaturecustomdateRequest.listFromJson(json[r'a_objEzsignsignaturecustomdate']),
-        fkiEzsignfoldersignerassociationID: mapValueOfType<int>(json, r'fkiEzsignfoldersignerassociationID'),
-        iEzsignpagePagenumber: mapValueOfType<int>(json, r'iEzsignpagePagenumber'),
-        iEzsignsignatureX: mapValueOfType<int>(json, r'iEzsignsignatureX'),
-        iEzsignsignatureY: mapValueOfType<int>(json, r'iEzsignsignatureY'),
-        iEzsignsignatureStep: mapValueOfType<int>(json, r'iEzsignsignatureStep'),
-        eEzsignsignatureType: FieldEEzsignsignatureType.fromJson(json[r'eEzsignsignatureType']),
-        fkiEzsigndocumentID: mapValueOfType<int>(json, r'fkiEzsigndocumentID'),
+        aObjEzsignsignaturecustomdate: EzsignsignaturecustomdateRequest.listFromJson(json[r'a_objEzsignsignaturecustomdate']) ?? const [],
+        fkiEzsignfoldersignerassociationID: mapValueOfType<int>(json, r'fkiEzsignfoldersignerassociationID')!,
+        iEzsignpagePagenumber: mapValueOfType<int>(json, r'iEzsignpagePagenumber')!,
+        iEzsignsignatureX: mapValueOfType<int>(json, r'iEzsignsignatureX')!,
+        iEzsignsignatureY: mapValueOfType<int>(json, r'iEzsignsignatureY')!,
+        iEzsignsignatureStep: mapValueOfType<int>(json, r'iEzsignsignatureStep')!,
+        eEzsignsignatureType: FieldEEzsignsignatureType.fromJson(json[r'eEzsignsignatureType'])!,
+        fkiEzsigndocumentID: mapValueOfType<int>(json, r'fkiEzsigndocumentID')!,
       );
     }
     return null;
   }
 
-  static List<EzsignsignatureRequestCompound> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(EzsignsignatureRequestCompound.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <EzsignsignatureRequestCompound>[];
+  static List<EzsignsignatureRequestCompound>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <EzsignsignatureRequestCompound>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = EzsignsignatureRequestCompound.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
 
   static Map<String, EzsignsignatureRequestCompound> mapFromJson(dynamic json) {
     final map = <String, EzsignsignatureRequestCompound>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) => map[key] = EzsignsignatureRequestCompound.fromJson(value));
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = EzsignsignatureRequestCompound.fromJson(entry.value);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
 
   // maps a json object with a list of EzsignsignatureRequestCompound-objects as value to a dart map
-  static Map<String, List<EzsignsignatureRequestCompound>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<EzsignsignatureRequestCompound>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignsignatureRequestCompound>>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) {
-          map[key] = EzsignsignatureRequestCompound.listFromJson(
-            value,
-            emptyIsNull: emptyIsNull,
-            growable: growable,
-          );
-        });
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = EzsignsignatureRequestCompound.listFromJson(entry.value, growable: growable,);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
+
+  /// The list of required keys that must be present in a JSON.
+  static const requiredKeys = <String>{
+    'fkiEzsignfoldersignerassociationID',
+    'iEzsignpagePagenumber',
+    'iEzsignsignatureX',
+    'iEzsignsignatureY',
+    'iEzsignsignatureStep',
+    'eEzsignsignatureType',
+    'fkiEzsigndocumentID',
+  };
 }
 

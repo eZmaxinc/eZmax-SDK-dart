@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -24,8 +24,8 @@ class ListSaveListpresentationV1Request {
 
   @override
   int get hashCode =>
-  // ignore: unnecessary_parenthesis
-    (aObjListpresentation == null ? 0 : aObjListpresentation.hashCode);
+    // ignore: unnecessary_parenthesis
+    (aObjListpresentation.hashCode);
 
   @override
   String toString() => 'ListSaveListpresentationV1Request[aObjListpresentation=$aObjListpresentation]';
@@ -39,46 +39,73 @@ class ListSaveListpresentationV1Request {
   /// Returns a new [ListSaveListpresentationV1Request] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static ListSaveListpresentationV1Request fromJson(dynamic value) {
+  static ListSaveListpresentationV1Request? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
+
+      // Ensure that the map contains the required keys.
+      // Note 1: the values aren't checked for validity beyond being non-null.
+      // Note 2: this code is stripped in release mode!
+      assert(() {
+        requiredKeys.forEach((key) {
+          assert(json.containsKey(key), 'Required key "ListSaveListpresentationV1Request[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "ListSaveListpresentationV1Request[$key]" has a null value in JSON.');
+        });
+        return true;
+      }());
+
       return ListSaveListpresentationV1Request(
-        aObjListpresentation: ListpresentationRequest.listFromJson(json[r'a_objListpresentation']),
+        aObjListpresentation: ListpresentationRequest.listFromJson(json[r'a_objListpresentation'])!,
       );
     }
     return null;
   }
 
-  static List<ListSaveListpresentationV1Request> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(ListSaveListpresentationV1Request.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <ListSaveListpresentationV1Request>[];
+  static List<ListSaveListpresentationV1Request>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <ListSaveListpresentationV1Request>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = ListSaveListpresentationV1Request.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
 
   static Map<String, ListSaveListpresentationV1Request> mapFromJson(dynamic json) {
     final map = <String, ListSaveListpresentationV1Request>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) => map[key] = ListSaveListpresentationV1Request.fromJson(value));
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = ListSaveListpresentationV1Request.fromJson(entry.value);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
 
   // maps a json object with a list of ListSaveListpresentationV1Request-objects as value to a dart map
-  static Map<String, List<ListSaveListpresentationV1Request>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<ListSaveListpresentationV1Request>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<ListSaveListpresentationV1Request>>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) {
-          map[key] = ListSaveListpresentationV1Request.listFromJson(
-            value,
-            emptyIsNull: emptyIsNull,
-            growable: growable,
-          );
-        });
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = ListSaveListpresentationV1Request.listFromJson(entry.value, growable: growable,);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
+
+  /// The list of required keys that must be present in a JSON.
+  static const requiredKeys = <String>{
+    'a_objListpresentation',
+  };
 }
 

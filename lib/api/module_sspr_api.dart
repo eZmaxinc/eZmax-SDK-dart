@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -12,7 +12,7 @@ part of openapi.api;
 
 
 class ModuleSsprApi {
-  ModuleSsprApi([ApiClient apiClient]) : apiClient = apiClient ?? defaultApiClient;
+  ModuleSsprApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
 
   final ApiClient apiClient;
 
@@ -26,16 +26,11 @@ class ModuleSsprApi {
   ///
   /// * [SsprResetPasswordRequestV1Request] ssprResetPasswordRequestV1Request (required):
   Future<Response> ssprResetPasswordRequestV1WithHttpInfo(SsprResetPasswordRequestV1Request ssprResetPasswordRequestV1Request,) async {
-    // Verify required params are set.
-    if (ssprResetPasswordRequestV1Request == null) {
-     throw ApiException(HttpStatus.badRequest, 'Missing required param: ssprResetPasswordRequestV1Request');
-    }
-
     // ignore: prefer_const_declarations
     final path = r'/1/module/sspr/resetPasswordRequest';
 
     // ignore: prefer_final_locals
-    Object postBody = ssprResetPasswordRequestV1Request;
+    Object? postBody = ssprResetPasswordRequestV1Request;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
@@ -52,7 +47,7 @@ class ModuleSsprApi {
       postBody,
       headerParams,
       formParams,
-      contentTypes.isEmpty ? null : contentTypes[0],
+      contentTypes.isEmpty ? null : contentTypes.first,
       authNames,
     );
   }
@@ -81,16 +76,11 @@ class ModuleSsprApi {
   ///
   /// * [SsprResetPasswordV1Request] ssprResetPasswordV1Request (required):
   Future<Response> ssprResetPasswordV1WithHttpInfo(SsprResetPasswordV1Request ssprResetPasswordV1Request,) async {
-    // Verify required params are set.
-    if (ssprResetPasswordV1Request == null) {
-     throw ApiException(HttpStatus.badRequest, 'Missing required param: ssprResetPasswordV1Request');
-    }
-
     // ignore: prefer_const_declarations
     final path = r'/1/module/sspr/resetPassword';
 
     // ignore: prefer_final_locals
-    Object postBody = ssprResetPasswordV1Request;
+    Object? postBody = ssprResetPasswordV1Request;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
@@ -107,7 +97,7 @@ class ModuleSsprApi {
       postBody,
       headerParams,
       formParams,
-      contentTypes.isEmpty ? null : contentTypes[0],
+      contentTypes.isEmpty ? null : contentTypes.first,
       authNames,
     );
   }
@@ -136,16 +126,11 @@ class ModuleSsprApi {
   ///
   /// * [SsprSendUsernamesV1Request] ssprSendUsernamesV1Request (required):
   Future<Response> ssprSendUsernamesV1WithHttpInfo(SsprSendUsernamesV1Request ssprSendUsernamesV1Request,) async {
-    // Verify required params are set.
-    if (ssprSendUsernamesV1Request == null) {
-     throw ApiException(HttpStatus.badRequest, 'Missing required param: ssprSendUsernamesV1Request');
-    }
-
     // ignore: prefer_const_declarations
     final path = r'/1/module/sspr/sendUsernames';
 
     // ignore: prefer_final_locals
-    Object postBody = ssprSendUsernamesV1Request;
+    Object? postBody = ssprSendUsernamesV1Request;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
@@ -162,7 +147,7 @@ class ModuleSsprApi {
       postBody,
       headerParams,
       formParams,
-      contentTypes.isEmpty ? null : contentTypes[0],
+      contentTypes.isEmpty ? null : contentTypes.first,
       authNames,
     );
   }
@@ -191,16 +176,11 @@ class ModuleSsprApi {
   ///
   /// * [SsprUnlockAccountRequestV1Request] ssprUnlockAccountRequestV1Request (required):
   Future<Response> ssprUnlockAccountRequestV1WithHttpInfo(SsprUnlockAccountRequestV1Request ssprUnlockAccountRequestV1Request,) async {
-    // Verify required params are set.
-    if (ssprUnlockAccountRequestV1Request == null) {
-     throw ApiException(HttpStatus.badRequest, 'Missing required param: ssprUnlockAccountRequestV1Request');
-    }
-
     // ignore: prefer_const_declarations
     final path = r'/1/module/sspr/unlockAccountRequest';
 
     // ignore: prefer_final_locals
-    Object postBody = ssprUnlockAccountRequestV1Request;
+    Object? postBody = ssprUnlockAccountRequestV1Request;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
@@ -217,7 +197,7 @@ class ModuleSsprApi {
       postBody,
       headerParams,
       formParams,
-      contentTypes.isEmpty ? null : contentTypes[0],
+      contentTypes.isEmpty ? null : contentTypes.first,
       authNames,
     );
   }
@@ -246,16 +226,11 @@ class ModuleSsprApi {
   ///
   /// * [SsprUnlockAccountV1Request] ssprUnlockAccountV1Request (required):
   Future<Response> ssprUnlockAccountV1WithHttpInfo(SsprUnlockAccountV1Request ssprUnlockAccountV1Request,) async {
-    // Verify required params are set.
-    if (ssprUnlockAccountV1Request == null) {
-     throw ApiException(HttpStatus.badRequest, 'Missing required param: ssprUnlockAccountV1Request');
-    }
-
     // ignore: prefer_const_declarations
     final path = r'/1/module/sspr/unlockAccount';
 
     // ignore: prefer_final_locals
-    Object postBody = ssprUnlockAccountV1Request;
+    Object? postBody = ssprUnlockAccountV1Request;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
@@ -272,7 +247,7 @@ class ModuleSsprApi {
       postBody,
       headerParams,
       formParams,
-      contentTypes.isEmpty ? null : contentTypes[0],
+      contentTypes.isEmpty ? null : contentTypes.first,
       authNames,
     );
   }
@@ -301,16 +276,11 @@ class ModuleSsprApi {
   ///
   /// * [SsprValidateTokenV1Request] ssprValidateTokenV1Request (required):
   Future<Response> ssprValidateTokenV1WithHttpInfo(SsprValidateTokenV1Request ssprValidateTokenV1Request,) async {
-    // Verify required params are set.
-    if (ssprValidateTokenV1Request == null) {
-     throw ApiException(HttpStatus.badRequest, 'Missing required param: ssprValidateTokenV1Request');
-    }
-
     // ignore: prefer_const_declarations
     final path = r'/1/module/sspr/validateToken';
 
     // ignore: prefer_final_locals
-    Object postBody = ssprValidateTokenV1Request;
+    Object? postBody = ssprValidateTokenV1Request;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
@@ -327,7 +297,7 @@ class ModuleSsprApi {
       postBody,
       headerParams,
       formParams,
-      contentTypes.isEmpty ? null : contentTypes[0],
+      contentTypes.isEmpty ? null : contentTypes.first,
       authNames,
     );
   }

@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -13,7 +13,7 @@ import 'package:test/test.dart';
 
 // tests for SsprResetPasswordRequestV1Request
 void main() {
-  final instance = SsprResetPasswordRequestV1Request();
+  // final instance = SsprResetPasswordRequestV1Request();
 
   group('test SsprResetPasswordRequestV1Request', () {
     // The customer code assigned to your account

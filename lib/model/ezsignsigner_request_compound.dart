@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -13,28 +13,41 @@ part of openapi.api;
 class EzsignsignerRequestCompound {
   /// Returns a new [EzsignsignerRequestCompound] instance.
   EzsignsignerRequestCompound({
-    @required this.objContact,
-    @required this.fkiTaxassignmentID,
+    required this.objContact,
+    required this.fkiTaxassignmentID,
     this.fkiSecretquestionID,
-    @required this.eEzsignsignerLogintype,
+    required this.eEzsignsignerLogintype,
     this.sEzsignsignerSecretanswer,
   });
 
   EzsignsignerRequestCompoundContact objContact;
 
   /// The unique ID of the Taxassignment.  Valid values:  |Value|Description| |-|-| |1|No tax| |2|GST| |3|HST (ON)| |4|HST (NB)| |5|HST (NS)| |6|HST (NL)| |7|HST (PE)| |8|GST + QST (QC)| |9|GST + QST (QC) Non-Recoverable| |10|GST + PST (BC)| |11|GST + PST (SK)| |12|GST + RST (MB)| |13|GST + PST (BC) Non-Recoverable| |14|GST + PST (SK) Non-Recoverable| |15|GST + RST (MB) Non-Recoverable|
-  // minimum: 1
-  // maximum: 15
+  ///
+  /// Minimum value: 1
+  /// Maximum value: 15
   int fkiTaxassignmentID;
 
   /// The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father's middle name| |15|Your mother's maiden name| |16|Name of your eldest child| |17|Your spouse's middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat's name| |22|Date of Birth (YYYY-MM-DD)|
-  int fkiSecretquestionID;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiSecretquestionID;
 
   /// The method the Ezsignsigner will authenticate to the signing platform.  1. **Password** means the Ezsignsigner will receive a secure link by email. 2. **PasswordPhone** means the Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**. 3. **PasswordQuestion** means the Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer. 4. **InPersonPhone** means the Ezsignsigner will only be able to sign \"In-Person\" and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**. 5. **InPerson** means the Ezsignsigner will only be able to sign \"In-Person\" and there won't be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type.
   EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum eEzsignsignerLogintype;
 
   /// The predefined answer to the secret question the Ezsignsigner will need to provide to successfully authenticate.
-  String sEzsignsignerSecretanswer;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEzsignsignerSecretanswer;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignsignerRequestCompound &&
@@ -46,12 +59,12 @@ class EzsignsignerRequestCompound {
 
   @override
   int get hashCode =>
-  // ignore: unnecessary_parenthesis
-    (objContact == null ? 0 : objContact.hashCode) +
-    (fkiTaxassignmentID == null ? 0 : fkiTaxassignmentID.hashCode) +
-    (fkiSecretquestionID == null ? 0 : fkiSecretquestionID.hashCode) +
-    (eEzsignsignerLogintype == null ? 0 : eEzsignsignerLogintype.hashCode) +
-    (sEzsignsignerSecretanswer == null ? 0 : sEzsignsignerSecretanswer.hashCode);
+    // ignore: unnecessary_parenthesis
+    (objContact.hashCode) +
+    (fkiTaxassignmentID.hashCode) +
+    (fkiSecretquestionID == null ? 0 : fkiSecretquestionID!.hashCode) +
+    (eEzsignsignerLogintype.hashCode) +
+    (sEzsignsignerSecretanswer == null ? 0 : sEzsignsignerSecretanswer!.hashCode);
 
   @override
   String toString() => 'EzsignsignerRequestCompound[objContact=$objContact, fkiTaxassignmentID=$fkiTaxassignmentID, fkiSecretquestionID=$fkiSecretquestionID, eEzsignsignerLogintype=$eEzsignsignerLogintype, sEzsignsignerSecretanswer=$sEzsignsignerSecretanswer]';
@@ -73,51 +86,80 @@ class EzsignsignerRequestCompound {
   /// Returns a new [EzsignsignerRequestCompound] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static EzsignsignerRequestCompound fromJson(dynamic value) {
+  static EzsignsignerRequestCompound? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
+
+      // Ensure that the map contains the required keys.
+      // Note 1: the values aren't checked for validity beyond being non-null.
+      // Note 2: this code is stripped in release mode!
+      assert(() {
+        requiredKeys.forEach((key) {
+          assert(json.containsKey(key), 'Required key "EzsignsignerRequestCompound[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "EzsignsignerRequestCompound[$key]" has a null value in JSON.');
+        });
+        return true;
+      }());
+
       return EzsignsignerRequestCompound(
-        objContact: EzsignsignerRequestCompoundContact.fromJson(json[r'objContact']),
-        fkiTaxassignmentID: mapValueOfType<int>(json, r'fkiTaxassignmentID'),
+        objContact: EzsignsignerRequestCompoundContact.fromJson(json[r'objContact'])!,
+        fkiTaxassignmentID: mapValueOfType<int>(json, r'fkiTaxassignmentID')!,
         fkiSecretquestionID: mapValueOfType<int>(json, r'fkiSecretquestionID'),
-        eEzsignsignerLogintype: EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum.fromJson(json[r'eEzsignsignerLogintype']),
+        eEzsignsignerLogintype: EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum.fromJson(json[r'eEzsignsignerLogintype'])!,
         sEzsignsignerSecretanswer: mapValueOfType<String>(json, r'sEzsignsignerSecretanswer'),
       );
     }
     return null;
   }
 
-  static List<EzsignsignerRequestCompound> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(EzsignsignerRequestCompound.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <EzsignsignerRequestCompound>[];
+  static List<EzsignsignerRequestCompound>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <EzsignsignerRequestCompound>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = EzsignsignerRequestCompound.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
 
   static Map<String, EzsignsignerRequestCompound> mapFromJson(dynamic json) {
     final map = <String, EzsignsignerRequestCompound>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) => map[key] = EzsignsignerRequestCompound.fromJson(value));
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = EzsignsignerRequestCompound.fromJson(entry.value);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
 
   // maps a json object with a list of EzsignsignerRequestCompound-objects as value to a dart map
-  static Map<String, List<EzsignsignerRequestCompound>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<EzsignsignerRequestCompound>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignsignerRequestCompound>>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) {
-          map[key] = EzsignsignerRequestCompound.listFromJson(
-            value,
-            emptyIsNull: emptyIsNull,
-            growable: growable,
-          );
-        });
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = EzsignsignerRequestCompound.listFromJson(entry.value, growable: growable,);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
+
+  /// The list of required keys that must be present in a JSON.
+  static const requiredKeys = <String>{
+    'objContact',
+    'fkiTaxassignmentID',
+    'eEzsignsignerLogintype',
+  };
 }
 
 /// The method the Ezsignsigner will authenticate to the signing platform.  1. **Password** means the Ezsignsigner will receive a secure link by email. 2. **PasswordPhone** means the Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**. 3. **PasswordQuestion** means the Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer. 4. **InPersonPhone** means the Ezsignsigner will only be able to sign \"In-Person\" and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**. 5. **InPerson** means the Ezsignsigner will only be able to sign \"In-Person\" and there won't be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type.
@@ -129,7 +171,7 @@ class EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum {
   final String value;
 
   @override
-  String toString() => value ?? '';
+  String toString() => value;
 
   String toJson() => value;
 
@@ -148,13 +190,20 @@ class EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum {
     inPerson,
   ];
 
-  static EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum fromJson(dynamic value) =>
-    EzsignsignerRequestCompoundEEzsignsignerLogintypeEnumTypeTransformer().decode(value);
+  static EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum? fromJson(dynamic value) => EzsignsignerRequestCompoundEEzsignsignerLogintypeEnumTypeTransformer().decode(value);
 
-  static List<EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum>[];
+  static List<EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
 }
 
 /// Transformation class that can [encode] an instance of [EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum] to String,
@@ -174,7 +223,7 @@ class EzsignsignerRequestCompoundEEzsignsignerLogintypeEnumTypeTransformer {
   ///
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
-  EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum decode(dynamic data, {bool allowNull}) {
+  EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data.toString()) {
         case r'Password': return EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum.password;
@@ -183,7 +232,7 @@ class EzsignsignerRequestCompoundEEzsignsignerLogintypeEnumTypeTransformer {
         case r'InPersonPhone': return EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum.inPersonPhone;
         case r'InPerson': return EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum.inPerson;
         default:
-          if (allowNull == false) {
+          if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
           }
       }
@@ -192,7 +241,7 @@ class EzsignsignerRequestCompoundEEzsignsignerLogintypeEnumTypeTransformer {
   }
 
   /// Singleton [EzsignsignerRequestCompoundEEzsignsignerLogintypeEnumTypeTransformer] instance.
-  static EzsignsignerRequestCompoundEEzsignsignerLogintypeEnumTypeTransformer _instance;
+  static EzsignsignerRequestCompoundEEzsignsignerLogintypeEnumTypeTransformer? _instance;
 }
 
 

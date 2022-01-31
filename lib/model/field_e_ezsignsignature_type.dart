@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -19,7 +19,7 @@ class FieldEEzsignsignatureType {
   final String value;
 
   @override
-  String toString() => value ?? '';
+  String toString() => value;
 
   String toJson() => value;
 
@@ -38,13 +38,20 @@ class FieldEEzsignsignatureType {
     name,
   ];
 
-  static FieldEEzsignsignatureType fromJson(dynamic value) =>
-    FieldEEzsignsignatureTypeTypeTransformer().decode(value);
+  static FieldEEzsignsignatureType? fromJson(dynamic value) => FieldEEzsignsignatureTypeTypeTransformer().decode(value);
 
-  static List<FieldEEzsignsignatureType> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(FieldEEzsignsignatureType.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <FieldEEzsignsignatureType>[];
+  static List<FieldEEzsignsignatureType>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <FieldEEzsignsignatureType>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = FieldEEzsignsignatureType.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
 }
 
 /// Transformation class that can [encode] an instance of [FieldEEzsignsignatureType] to String,
@@ -64,7 +71,7 @@ class FieldEEzsignsignatureTypeTypeTransformer {
   ///
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
-  FieldEEzsignsignatureType decode(dynamic data, {bool allowNull}) {
+  FieldEEzsignsignatureType? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data.toString()) {
         case r'Acknowledgement': return FieldEEzsignsignatureType.acknowledgement;
@@ -73,7 +80,7 @@ class FieldEEzsignsignatureTypeTypeTransformer {
         case r'Initials': return FieldEEzsignsignatureType.initials;
         case r'Name': return FieldEEzsignsignatureType.name;
         default:
-          if (allowNull == false) {
+          if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
           }
       }
@@ -82,6 +89,6 @@ class FieldEEzsignsignatureTypeTypeTransformer {
   }
 
   /// Singleton [FieldEEzsignsignatureTypeTypeTransformer] instance.
-  static FieldEEzsignsignatureTypeTypeTransformer _instance;
+  static FieldEEzsignsignatureTypeTypeTransformer? _instance;
 }
 

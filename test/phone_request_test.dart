@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -13,7 +13,7 @@ import 'package:test/test.dart';
 
 // tests for PhoneRequest
 void main() {
-  final instance = PhoneRequest();
+  // final instance = PhoneRequest();
 
   group('test PhoneRequest', () {
     // The unique ID of the Phonetype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| |3|Mobile| |4|Fax| |5|Pager| |6|Toll Free|

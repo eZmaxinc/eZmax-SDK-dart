@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -13,16 +13,16 @@ part of openapi.api;
 class EzsigndocumentRequestCompound {
   /// Returns a new [EzsigndocumentRequestCompound] instance.
   EzsigndocumentRequestCompound({
-    @required this.eEzsigndocumentSource,
-    @required this.eEzsigndocumentFormat,
+    required this.eEzsigndocumentSource,
+    required this.eEzsigndocumentFormat,
     this.sEzsigndocumentBase64,
     this.sEzsigndocumentUrl,
     this.bEzsigndocumentForcerepair = true,
     this.sEzsigndocumentPassword = '',
-    @required this.fkiEzsignfolderID,
-    @required this.dtEzsigndocumentDuedate,
-    @required this.fkiLanguageID,
-    @required this.sEzsigndocumentName,
+    required this.fkiEzsignfolderID,
+    required this.dtEzsigndocumentDuedate,
+    required this.fkiLanguageID,
+    required this.sEzsigndocumentName,
   });
 
   /// Indicates where to look for the document binary content.
@@ -32,10 +32,22 @@ class EzsigndocumentRequestCompound {
   EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum eEzsigndocumentFormat;
 
   /// The Base64 encoded binary content of the document.  This field is Required when eEzsigndocumentSource = Base64.
-  String sEzsigndocumentBase64;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEzsigndocumentBase64;
 
   /// The url where the document content resides.  This field is Required when eEzsigndocumentSource = Url.
-  String sEzsigndocumentUrl;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEzsigndocumentUrl;
 
   /// Try to repair the document or flatten it if it cannot be used for electronic signature. 
   bool bEzsigndocumentForcerepair;
@@ -50,8 +62,9 @@ class EzsigndocumentRequestCompound {
   String dtEzsigndocumentDuedate;
 
   /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
-  // minimum: 1
-  // maximum: 2
+  ///
+  /// Minimum value: 1
+  /// Maximum value: 2
   int fkiLanguageID;
 
   /// The name of the document that will be presented to Ezsignfoldersignerassociations
@@ -72,17 +85,17 @@ class EzsigndocumentRequestCompound {
 
   @override
   int get hashCode =>
-  // ignore: unnecessary_parenthesis
-    (eEzsigndocumentSource == null ? 0 : eEzsigndocumentSource.hashCode) +
-    (eEzsigndocumentFormat == null ? 0 : eEzsigndocumentFormat.hashCode) +
-    (sEzsigndocumentBase64 == null ? 0 : sEzsigndocumentBase64.hashCode) +
-    (sEzsigndocumentUrl == null ? 0 : sEzsigndocumentUrl.hashCode) +
-    (bEzsigndocumentForcerepair == null ? 0 : bEzsigndocumentForcerepair.hashCode) +
-    (sEzsigndocumentPassword == null ? 0 : sEzsigndocumentPassword.hashCode) +
-    (fkiEzsignfolderID == null ? 0 : fkiEzsignfolderID.hashCode) +
-    (dtEzsigndocumentDuedate == null ? 0 : dtEzsigndocumentDuedate.hashCode) +
-    (fkiLanguageID == null ? 0 : fkiLanguageID.hashCode) +
-    (sEzsigndocumentName == null ? 0 : sEzsigndocumentName.hashCode);
+    // ignore: unnecessary_parenthesis
+    (eEzsigndocumentSource.hashCode) +
+    (eEzsigndocumentFormat.hashCode) +
+    (sEzsigndocumentBase64 == null ? 0 : sEzsigndocumentBase64!.hashCode) +
+    (sEzsigndocumentUrl == null ? 0 : sEzsigndocumentUrl!.hashCode) +
+    (bEzsigndocumentForcerepair.hashCode) +
+    (sEzsigndocumentPassword.hashCode) +
+    (fkiEzsignfolderID.hashCode) +
+    (dtEzsigndocumentDuedate.hashCode) +
+    (fkiLanguageID.hashCode) +
+    (sEzsigndocumentName.hashCode);
 
   @override
   String toString() => 'EzsigndocumentRequestCompound[eEzsigndocumentSource=$eEzsigndocumentSource, eEzsigndocumentFormat=$eEzsigndocumentFormat, sEzsigndocumentBase64=$sEzsigndocumentBase64, sEzsigndocumentUrl=$sEzsigndocumentUrl, bEzsigndocumentForcerepair=$bEzsigndocumentForcerepair, sEzsigndocumentPassword=$sEzsigndocumentPassword, fkiEzsignfolderID=$fkiEzsignfolderID, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, fkiLanguageID=$fkiLanguageID, sEzsigndocumentName=$sEzsigndocumentName]';
@@ -97,12 +110,8 @@ class EzsigndocumentRequestCompound {
     if (sEzsigndocumentUrl != null) {
       json[r'sEzsigndocumentUrl'] = sEzsigndocumentUrl;
     }
-    if (bEzsigndocumentForcerepair != null) {
       json[r'bEzsigndocumentForcerepair'] = bEzsigndocumentForcerepair;
-    }
-    if (sEzsigndocumentPassword != null) {
       json[r'sEzsigndocumentPassword'] = sEzsigndocumentPassword;
-    }
       json[r'fkiEzsignfolderID'] = fkiEzsignfolderID;
       json[r'dtEzsigndocumentDuedate'] = dtEzsigndocumentDuedate;
       json[r'fkiLanguageID'] = fkiLanguageID;
@@ -113,56 +122,88 @@ class EzsigndocumentRequestCompound {
   /// Returns a new [EzsigndocumentRequestCompound] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static EzsigndocumentRequestCompound fromJson(dynamic value) {
+  static EzsigndocumentRequestCompound? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
+
+      // Ensure that the map contains the required keys.
+      // Note 1: the values aren't checked for validity beyond being non-null.
+      // Note 2: this code is stripped in release mode!
+      assert(() {
+        requiredKeys.forEach((key) {
+          assert(json.containsKey(key), 'Required key "EzsigndocumentRequestCompound[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "EzsigndocumentRequestCompound[$key]" has a null value in JSON.');
+        });
+        return true;
+      }());
+
       return EzsigndocumentRequestCompound(
-        eEzsigndocumentSource: EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum.fromJson(json[r'eEzsigndocumentSource']),
-        eEzsigndocumentFormat: EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum.fromJson(json[r'eEzsigndocumentFormat']),
+        eEzsigndocumentSource: EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum.fromJson(json[r'eEzsigndocumentSource'])!,
+        eEzsigndocumentFormat: EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum.fromJson(json[r'eEzsigndocumentFormat'])!,
         sEzsigndocumentBase64: mapValueOfType<String>(json, r'sEzsigndocumentBase64'),
         sEzsigndocumentUrl: mapValueOfType<String>(json, r'sEzsigndocumentUrl'),
-        bEzsigndocumentForcerepair: mapValueOfType<bool>(json, r'bEzsigndocumentForcerepair'),
-        sEzsigndocumentPassword: mapValueOfType<String>(json, r'sEzsigndocumentPassword'),
-        fkiEzsignfolderID: mapValueOfType<int>(json, r'fkiEzsignfolderID'),
-        dtEzsigndocumentDuedate: mapValueOfType<String>(json, r'dtEzsigndocumentDuedate'),
-        fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID'),
-        sEzsigndocumentName: mapValueOfType<String>(json, r'sEzsigndocumentName'),
+        bEzsigndocumentForcerepair: mapValueOfType<bool>(json, r'bEzsigndocumentForcerepair') ?? true,
+        sEzsigndocumentPassword: mapValueOfType<String>(json, r'sEzsigndocumentPassword') ?? '',
+        fkiEzsignfolderID: mapValueOfType<int>(json, r'fkiEzsignfolderID')!,
+        dtEzsigndocumentDuedate: mapValueOfType<String>(json, r'dtEzsigndocumentDuedate')!,
+        fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID')!,
+        sEzsigndocumentName: mapValueOfType<String>(json, r'sEzsigndocumentName')!,
       );
     }
     return null;
   }
 
-  static List<EzsigndocumentRequestCompound> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(EzsigndocumentRequestCompound.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <EzsigndocumentRequestCompound>[];
+  static List<EzsigndocumentRequestCompound>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <EzsigndocumentRequestCompound>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = EzsigndocumentRequestCompound.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
 
   static Map<String, EzsigndocumentRequestCompound> mapFromJson(dynamic json) {
     final map = <String, EzsigndocumentRequestCompound>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) => map[key] = EzsigndocumentRequestCompound.fromJson(value));
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = EzsigndocumentRequestCompound.fromJson(entry.value);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
 
   // maps a json object with a list of EzsigndocumentRequestCompound-objects as value to a dart map
-  static Map<String, List<EzsigndocumentRequestCompound>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<EzsigndocumentRequestCompound>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsigndocumentRequestCompound>>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) {
-          map[key] = EzsigndocumentRequestCompound.listFromJson(
-            value,
-            emptyIsNull: emptyIsNull,
-            growable: growable,
-          );
-        });
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = EzsigndocumentRequestCompound.listFromJson(entry.value, growable: growable,);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
+
+  /// The list of required keys that must be present in a JSON.
+  static const requiredKeys = <String>{
+    'eEzsigndocumentSource',
+    'eEzsigndocumentFormat',
+    'fkiEzsignfolderID',
+    'dtEzsigndocumentDuedate',
+    'fkiLanguageID',
+    'sEzsigndocumentName',
+  };
 }
 
 /// Indicates where to look for the document binary content.
@@ -174,7 +215,7 @@ class EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum {
   final String value;
 
   @override
-  String toString() => value ?? '';
+  String toString() => value;
 
   String toJson() => value;
 
@@ -187,13 +228,20 @@ class EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum {
     url,
   ];
 
-  static EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum fromJson(dynamic value) =>
-    EzsigndocumentRequestCompoundEEzsigndocumentSourceEnumTypeTransformer().decode(value);
+  static EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum? fromJson(dynamic value) => EzsigndocumentRequestCompoundEEzsigndocumentSourceEnumTypeTransformer().decode(value);
 
-  static List<EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum>[];
+  static List<EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
 }
 
 /// Transformation class that can [encode] an instance of [EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum] to String,
@@ -213,13 +261,13 @@ class EzsigndocumentRequestCompoundEEzsigndocumentSourceEnumTypeTransformer {
   ///
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
-  EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum decode(dynamic data, {bool allowNull}) {
+  EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data.toString()) {
         case r'Base64': return EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum.base64;
         case r'Url': return EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum.url;
         default:
-          if (allowNull == false) {
+          if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
           }
       }
@@ -228,7 +276,7 @@ class EzsigndocumentRequestCompoundEEzsigndocumentSourceEnumTypeTransformer {
   }
 
   /// Singleton [EzsigndocumentRequestCompoundEEzsigndocumentSourceEnumTypeTransformer] instance.
-  static EzsigndocumentRequestCompoundEEzsigndocumentSourceEnumTypeTransformer _instance;
+  static EzsigndocumentRequestCompoundEEzsigndocumentSourceEnumTypeTransformer? _instance;
 }
 
 
@@ -241,7 +289,7 @@ class EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum {
   final String value;
 
   @override
-  String toString() => value ?? '';
+  String toString() => value;
 
   String toJson() => value;
 
@@ -252,13 +300,20 @@ class EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum {
     pdf,
   ];
 
-  static EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum fromJson(dynamic value) =>
-    EzsigndocumentRequestCompoundEEzsigndocumentFormatEnumTypeTransformer().decode(value);
+  static EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum? fromJson(dynamic value) => EzsigndocumentRequestCompoundEEzsigndocumentFormatEnumTypeTransformer().decode(value);
 
-  static List<EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum>[];
+  static List<EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
 }
 
 /// Transformation class that can [encode] an instance of [EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum] to String,
@@ -278,12 +333,12 @@ class EzsigndocumentRequestCompoundEEzsigndocumentFormatEnumTypeTransformer {
   ///
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
-  EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum decode(dynamic data, {bool allowNull}) {
+  EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data.toString()) {
         case r'Pdf': return EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum.pdf;
         default:
-          if (allowNull == false) {
+          if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
           }
       }
@@ -292,7 +347,7 @@ class EzsigndocumentRequestCompoundEEzsigndocumentFormatEnumTypeTransformer {
   }
 
   /// Singleton [EzsigndocumentRequestCompoundEEzsigndocumentFormatEnumTypeTransformer] instance.
-  static EzsigndocumentRequestCompoundEEzsigndocumentFormatEnumTypeTransformer _instance;
+  static EzsigndocumentRequestCompoundEEzsigndocumentFormatEnumTypeTransformer? _instance;
 }
 
 

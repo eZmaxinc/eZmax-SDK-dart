@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -12,7 +12,7 @@ part of openapi.api;
 
 
 class ObjectEzsigntemplatepackageApi {
-  ObjectEzsigntemplatepackageApi([ApiClient apiClient]) : apiClient = apiClient ?? defaultApiClient;
+  ObjectEzsigntemplatepackageApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
 
   final ApiClient apiClient;
 
@@ -34,30 +34,28 @@ class ObjectEzsigntemplatepackageApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<Response> ezsigntemplatepackageGetListV1WithHttpInfo({ String eOrderBy, int iRowMax, int iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter, }) async {
-    // Verify required params are set.
-
+  Future<Response> ezsigntemplatepackageGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsigntemplatepackage/getList';
 
     // ignore: prefer_final_locals
-    Object postBody;
+    Object? postBody;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
     if (eOrderBy != null) {
-      queryParams.addAll(_convertParametersForCollectionFormat('', 'eOrderBy', eOrderBy));
+      queryParams.addAll(_queryParams('', 'eOrderBy', eOrderBy));
     }
     if (iRowMax != null) {
-      queryParams.addAll(_convertParametersForCollectionFormat('', 'iRowMax', iRowMax));
+      queryParams.addAll(_queryParams('', 'iRowMax', iRowMax));
     }
     if (iRowOffset != null) {
-      queryParams.addAll(_convertParametersForCollectionFormat('', 'iRowOffset', iRowOffset));
+      queryParams.addAll(_queryParams('', 'iRowOffset', iRowOffset));
     }
     if (sFilter != null) {
-      queryParams.addAll(_convertParametersForCollectionFormat('', 'sFilter', sFilter));
+      queryParams.addAll(_queryParams('', 'sFilter', sFilter));
     }
 
     if (acceptLanguage != null) {
@@ -75,7 +73,7 @@ class ObjectEzsigntemplatepackageApi {
       postBody,
       headerParams,
       formParams,
-      contentTypes.isEmpty ? null : contentTypes[0],
+      contentTypes.isEmpty ? null : contentTypes.first,
       authNames,
     );
   }
@@ -96,7 +94,7 @@ class ObjectEzsigntemplatepackageApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<EzsigntemplatepackageGetListV1Response> ezsigntemplatepackageGetListV1({ String eOrderBy, int iRowMax, int iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter, }) async {
+  Future<EzsigntemplatepackageGetListV1Response?> ezsigntemplatepackageGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
     final response = await ezsigntemplatepackageGetListV1WithHttpInfo( eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -104,10 +102,10 @@ class ObjectEzsigntemplatepackageApi {
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body != null && response.statusCode != HttpStatus.noContent) {
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigntemplatepackageGetListV1Response',) as EzsigntemplatepackageGetListV1Response;
     
     }
-    return Future<EzsigntemplatepackageGetListV1Response>.value();
+    return null;
   }
 }

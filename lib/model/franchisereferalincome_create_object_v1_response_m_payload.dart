@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -25,8 +25,8 @@ class FranchisereferalincomeCreateObjectV1ResponseMPayload {
 
   @override
   int get hashCode =>
-  // ignore: unnecessary_parenthesis
-    (aPkiFranchisereferalincomeID == null ? 0 : aPkiFranchisereferalincomeID.hashCode);
+    // ignore: unnecessary_parenthesis
+    (aPkiFranchisereferalincomeID.hashCode);
 
   @override
   String toString() => 'FranchisereferalincomeCreateObjectV1ResponseMPayload[aPkiFranchisereferalincomeID=$aPkiFranchisereferalincomeID]';
@@ -40,48 +40,75 @@ class FranchisereferalincomeCreateObjectV1ResponseMPayload {
   /// Returns a new [FranchisereferalincomeCreateObjectV1ResponseMPayload] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static FranchisereferalincomeCreateObjectV1ResponseMPayload fromJson(dynamic value) {
+  static FranchisereferalincomeCreateObjectV1ResponseMPayload? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
+
+      // Ensure that the map contains the required keys.
+      // Note 1: the values aren't checked for validity beyond being non-null.
+      // Note 2: this code is stripped in release mode!
+      assert(() {
+        requiredKeys.forEach((key) {
+          assert(json.containsKey(key), 'Required key "FranchisereferalincomeCreateObjectV1ResponseMPayload[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "FranchisereferalincomeCreateObjectV1ResponseMPayload[$key]" has a null value in JSON.');
+        });
+        return true;
+      }());
+
       return FranchisereferalincomeCreateObjectV1ResponseMPayload(
         aPkiFranchisereferalincomeID: json[r'a_pkiFranchisereferalincomeID'] is List
-          ? (json[r'a_pkiFranchisereferalincomeID'] as List).cast<int>()
-          : null,
+            ? (json[r'a_pkiFranchisereferalincomeID'] as List).cast<int>()
+            : const [],
       );
     }
     return null;
   }
 
-  static List<FranchisereferalincomeCreateObjectV1ResponseMPayload> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(FranchisereferalincomeCreateObjectV1ResponseMPayload.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <FranchisereferalincomeCreateObjectV1ResponseMPayload>[];
+  static List<FranchisereferalincomeCreateObjectV1ResponseMPayload>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <FranchisereferalincomeCreateObjectV1ResponseMPayload>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = FranchisereferalincomeCreateObjectV1ResponseMPayload.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
 
   static Map<String, FranchisereferalincomeCreateObjectV1ResponseMPayload> mapFromJson(dynamic json) {
     final map = <String, FranchisereferalincomeCreateObjectV1ResponseMPayload>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) => map[key] = FranchisereferalincomeCreateObjectV1ResponseMPayload.fromJson(value));
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = FranchisereferalincomeCreateObjectV1ResponseMPayload.fromJson(entry.value);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
 
   // maps a json object with a list of FranchisereferalincomeCreateObjectV1ResponseMPayload-objects as value to a dart map
-  static Map<String, List<FranchisereferalincomeCreateObjectV1ResponseMPayload>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<FranchisereferalincomeCreateObjectV1ResponseMPayload>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<FranchisereferalincomeCreateObjectV1ResponseMPayload>>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) {
-          map[key] = FranchisereferalincomeCreateObjectV1ResponseMPayload.listFromJson(
-            value,
-            emptyIsNull: emptyIsNull,
-            growable: growable,
-          );
-        });
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = FranchisereferalincomeCreateObjectV1ResponseMPayload.listFromJson(entry.value, growable: growable,);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
+
+  /// The list of required keys that must be present in a JSON.
+  static const requiredKeys = <String>{
+    'a_pkiFranchisereferalincomeID',
+  };
 }
 

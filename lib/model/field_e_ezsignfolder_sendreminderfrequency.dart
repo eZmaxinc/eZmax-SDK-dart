@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -19,7 +19,7 @@ class FieldEEzsignfolderSendreminderfrequency {
   final String value;
 
   @override
-  String toString() => value ?? '';
+  String toString() => value;
 
   String toJson() => value;
 
@@ -34,13 +34,20 @@ class FieldEEzsignfolderSendreminderfrequency {
     weekly,
   ];
 
-  static FieldEEzsignfolderSendreminderfrequency fromJson(dynamic value) =>
-    FieldEEzsignfolderSendreminderfrequencyTypeTransformer().decode(value);
+  static FieldEEzsignfolderSendreminderfrequency? fromJson(dynamic value) => FieldEEzsignfolderSendreminderfrequencyTypeTransformer().decode(value);
 
-  static List<FieldEEzsignfolderSendreminderfrequency> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(FieldEEzsignfolderSendreminderfrequency.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <FieldEEzsignfolderSendreminderfrequency>[];
+  static List<FieldEEzsignfolderSendreminderfrequency>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <FieldEEzsignfolderSendreminderfrequency>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = FieldEEzsignfolderSendreminderfrequency.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
 }
 
 /// Transformation class that can [encode] an instance of [FieldEEzsignfolderSendreminderfrequency] to String,
@@ -60,14 +67,14 @@ class FieldEEzsignfolderSendreminderfrequencyTypeTransformer {
   ///
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
-  FieldEEzsignfolderSendreminderfrequency decode(dynamic data, {bool allowNull}) {
+  FieldEEzsignfolderSendreminderfrequency? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data.toString()) {
         case r'None': return FieldEEzsignfolderSendreminderfrequency.none;
         case r'Daily': return FieldEEzsignfolderSendreminderfrequency.daily;
         case r'Weekly': return FieldEEzsignfolderSendreminderfrequency.weekly;
         default:
-          if (allowNull == false) {
+          if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
           }
       }
@@ -76,6 +83,6 @@ class FieldEEzsignfolderSendreminderfrequencyTypeTransformer {
   }
 
   /// Singleton [FieldEEzsignfolderSendreminderfrequencyTypeTransformer] instance.
-  static FieldEEzsignfolderSendreminderfrequencyTypeTransformer _instance;
+  static FieldEEzsignfolderSendreminderfrequencyTypeTransformer? _instance;
 }
 

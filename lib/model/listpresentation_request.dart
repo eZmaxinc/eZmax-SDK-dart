@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -13,13 +13,13 @@ part of openapi.api;
 class ListpresentationRequest {
   /// Returns a new [ListpresentationRequest] instance.
   ListpresentationRequest({
-    @required this.sListpresentationDescription,
-    @required this.sListpresentationFilter,
-    @required this.sListpresentationOrderby,
+    required this.sListpresentationDescription,
+    required this.sListpresentationFilter,
+    required this.sListpresentationOrderby,
     this.aSColumnName = const [],
-    @required this.iListpresentationRowMax,
-    @required this.iListpresentationRowOffset,
-    @required this.bListpresentationDefault,
+    required this.iListpresentationRowMax,
+    required this.iListpresentationRowOffset,
+    required this.bListpresentationDefault,
   });
 
   /// A descriptive for the list presentation
@@ -55,14 +55,14 @@ class ListpresentationRequest {
 
   @override
   int get hashCode =>
-  // ignore: unnecessary_parenthesis
-    (sListpresentationDescription == null ? 0 : sListpresentationDescription.hashCode) +
-    (sListpresentationFilter == null ? 0 : sListpresentationFilter.hashCode) +
-    (sListpresentationOrderby == null ? 0 : sListpresentationOrderby.hashCode) +
-    (aSColumnName == null ? 0 : aSColumnName.hashCode) +
-    (iListpresentationRowMax == null ? 0 : iListpresentationRowMax.hashCode) +
-    (iListpresentationRowOffset == null ? 0 : iListpresentationRowOffset.hashCode) +
-    (bListpresentationDefault == null ? 0 : bListpresentationDefault.hashCode);
+    // ignore: unnecessary_parenthesis
+    (sListpresentationDescription.hashCode) +
+    (sListpresentationFilter.hashCode) +
+    (sListpresentationOrderby.hashCode) +
+    (aSColumnName.hashCode) +
+    (iListpresentationRowMax.hashCode) +
+    (iListpresentationRowOffset.hashCode) +
+    (bListpresentationDefault.hashCode);
 
   @override
   String toString() => 'ListpresentationRequest[sListpresentationDescription=$sListpresentationDescription, sListpresentationFilter=$sListpresentationFilter, sListpresentationOrderby=$sListpresentationOrderby, aSColumnName=$aSColumnName, iListpresentationRowMax=$iListpresentationRowMax, iListpresentationRowOffset=$iListpresentationRowOffset, bListpresentationDefault=$bListpresentationDefault]';
@@ -82,54 +82,87 @@ class ListpresentationRequest {
   /// Returns a new [ListpresentationRequest] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static ListpresentationRequest fromJson(dynamic value) {
+  static ListpresentationRequest? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
+
+      // Ensure that the map contains the required keys.
+      // Note 1: the values aren't checked for validity beyond being non-null.
+      // Note 2: this code is stripped in release mode!
+      assert(() {
+        requiredKeys.forEach((key) {
+          assert(json.containsKey(key), 'Required key "ListpresentationRequest[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "ListpresentationRequest[$key]" has a null value in JSON.');
+        });
+        return true;
+      }());
+
       return ListpresentationRequest(
-        sListpresentationDescription: mapValueOfType<String>(json, r'sListpresentationDescription'),
-        sListpresentationFilter: mapValueOfType<String>(json, r'sListpresentationFilter'),
-        sListpresentationOrderby: mapValueOfType<String>(json, r'sListpresentationOrderby'),
+        sListpresentationDescription: mapValueOfType<String>(json, r'sListpresentationDescription')!,
+        sListpresentationFilter: mapValueOfType<String>(json, r'sListpresentationFilter')!,
+        sListpresentationOrderby: mapValueOfType<String>(json, r'sListpresentationOrderby')!,
         aSColumnName: json[r'a_sColumnName'] is List
-          ? (json[r'a_sColumnName'] as List).cast<String>()
-          : null,
-        iListpresentationRowMax: mapValueOfType<int>(json, r'iListpresentationRowMax'),
-        iListpresentationRowOffset: mapValueOfType<int>(json, r'iListpresentationRowOffset'),
-        bListpresentationDefault: mapValueOfType<bool>(json, r'bListpresentationDefault'),
+            ? (json[r'a_sColumnName'] as List).cast<String>()
+            : const [],
+        iListpresentationRowMax: mapValueOfType<int>(json, r'iListpresentationRowMax')!,
+        iListpresentationRowOffset: mapValueOfType<int>(json, r'iListpresentationRowOffset')!,
+        bListpresentationDefault: mapValueOfType<bool>(json, r'bListpresentationDefault')!,
       );
     }
     return null;
   }
 
-  static List<ListpresentationRequest> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(ListpresentationRequest.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <ListpresentationRequest>[];
+  static List<ListpresentationRequest>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <ListpresentationRequest>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = ListpresentationRequest.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
 
   static Map<String, ListpresentationRequest> mapFromJson(dynamic json) {
     final map = <String, ListpresentationRequest>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) => map[key] = ListpresentationRequest.fromJson(value));
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = ListpresentationRequest.fromJson(entry.value);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
 
   // maps a json object with a list of ListpresentationRequest-objects as value to a dart map
-  static Map<String, List<ListpresentationRequest>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<ListpresentationRequest>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<ListpresentationRequest>>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) {
-          map[key] = ListpresentationRequest.listFromJson(
-            value,
-            emptyIsNull: emptyIsNull,
-            growable: growable,
-          );
-        });
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = ListpresentationRequest.listFromJson(entry.value, growable: growable,);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
+
+  /// The list of required keys that must be present in a JSON.
+  static const requiredKeys = <String>{
+    'sListpresentationDescription',
+    'sListpresentationFilter',
+    'sListpresentationOrderby',
+    'a_sColumnName',
+    'iListpresentationRowMax',
+    'iListpresentationRowOffset',
+    'bListpresentationDefault',
+  };
 }
 

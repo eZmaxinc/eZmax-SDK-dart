@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -19,7 +19,7 @@ class FieldEEzsignfolderStep {
   final String value;
 
   @override
-  String toString() => value ?? '';
+  String toString() => value;
 
   String toJson() => value;
 
@@ -40,13 +40,20 @@ class FieldEEzsignfolderStep {
     archived,
   ];
 
-  static FieldEEzsignfolderStep fromJson(dynamic value) =>
-    FieldEEzsignfolderStepTypeTransformer().decode(value);
+  static FieldEEzsignfolderStep? fromJson(dynamic value) => FieldEEzsignfolderStepTypeTransformer().decode(value);
 
-  static List<FieldEEzsignfolderStep> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(FieldEEzsignfolderStep.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <FieldEEzsignfolderStep>[];
+  static List<FieldEEzsignfolderStep>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <FieldEEzsignfolderStep>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = FieldEEzsignfolderStep.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
 }
 
 /// Transformation class that can [encode] an instance of [FieldEEzsignfolderStep] to String,
@@ -66,7 +73,7 @@ class FieldEEzsignfolderStepTypeTransformer {
   ///
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
-  FieldEEzsignfolderStep decode(dynamic data, {bool allowNull}) {
+  FieldEEzsignfolderStep? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data.toString()) {
         case r'Unsent': return FieldEEzsignfolderStep.unsent;
@@ -76,7 +83,7 @@ class FieldEEzsignfolderStepTypeTransformer {
         case r'Completed': return FieldEEzsignfolderStep.completed;
         case r'Archived': return FieldEEzsignfolderStep.archived;
         default:
-          if (allowNull == false) {
+          if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
           }
       }
@@ -85,6 +92,6 @@ class FieldEEzsignfolderStepTypeTransformer {
   }
 
   /// Singleton [FieldEEzsignfolderStepTypeTransformer] instance.
-  static FieldEEzsignfolderStepTypeTransformer _instance;
+  static FieldEEzsignfolderStepTypeTransformer? _instance;
 }
 

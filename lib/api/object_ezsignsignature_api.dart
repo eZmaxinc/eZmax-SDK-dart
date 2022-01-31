@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -12,7 +12,7 @@ part of openapi.api;
 
 
 class ObjectEzsignsignatureApi {
-  ObjectEzsignsignatureApi([ApiClient apiClient]) : apiClient = apiClient ?? defaultApiClient;
+  ObjectEzsignsignatureApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
 
   final ApiClient apiClient;
 
@@ -26,16 +26,11 @@ class ObjectEzsignsignatureApi {
   ///
   /// * [List<EzsignsignatureCreateObjectV1Request>] ezsignsignatureCreateObjectV1Request (required):
   Future<Response> ezsignsignatureCreateObjectV1WithHttpInfo(List<EzsignsignatureCreateObjectV1Request> ezsignsignatureCreateObjectV1Request,) async {
-    // Verify required params are set.
-    if (ezsignsignatureCreateObjectV1Request == null) {
-     throw ApiException(HttpStatus.badRequest, 'Missing required param: ezsignsignatureCreateObjectV1Request');
-    }
-
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignsignature';
 
     // ignore: prefer_final_locals
-    Object postBody = ezsignsignatureCreateObjectV1Request;
+    Object? postBody = ezsignsignatureCreateObjectV1Request;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
@@ -52,7 +47,7 @@ class ObjectEzsignsignatureApi {
       postBody,
       headerParams,
       formParams,
-      contentTypes.isEmpty ? null : contentTypes[0],
+      contentTypes.isEmpty ? null : contentTypes.first,
       authNames,
     );
   }
@@ -64,7 +59,7 @@ class ObjectEzsignsignatureApi {
   /// Parameters:
   ///
   /// * [List<EzsignsignatureCreateObjectV1Request>] ezsignsignatureCreateObjectV1Request (required):
-  Future<EzsignsignatureCreateObjectV1Response> ezsignsignatureCreateObjectV1(List<EzsignsignatureCreateObjectV1Request> ezsignsignatureCreateObjectV1Request,) async {
+  Future<EzsignsignatureCreateObjectV1Response?> ezsignsignatureCreateObjectV1(List<EzsignsignatureCreateObjectV1Request> ezsignsignatureCreateObjectV1Request,) async {
     final response = await ezsignsignatureCreateObjectV1WithHttpInfo(ezsignsignatureCreateObjectV1Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -72,11 +67,11 @@ class ObjectEzsignsignatureApi {
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body != null && response.statusCode != HttpStatus.noContent) {
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignsignatureCreateObjectV1Response',) as EzsignsignatureCreateObjectV1Response;
     
     }
-    return Future<EzsignsignatureCreateObjectV1Response>.value();
+    return null;
   }
 
   /// Delete an existing Ezsignsignature
@@ -87,17 +82,12 @@ class ObjectEzsignsignatureApi {
   ///
   /// * [int] pkiEzsignsignatureID (required):
   Future<Response> ezsignsignatureDeleteObjectV1WithHttpInfo(int pkiEzsignsignatureID,) async {
-    // Verify required params are set.
-    if (pkiEzsignsignatureID == null) {
-     throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsignsignatureID');
-    }
-
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignsignature/{pkiEzsignsignatureID}'
       .replaceAll('{pkiEzsignsignatureID}', pkiEzsignsignatureID.toString());
 
     // ignore: prefer_final_locals
-    Object postBody;
+    Object? postBody;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
@@ -114,7 +104,7 @@ class ObjectEzsignsignatureApi {
       postBody,
       headerParams,
       formParams,
-      contentTypes.isEmpty ? null : contentTypes[0],
+      contentTypes.isEmpty ? null : contentTypes.first,
       authNames,
     );
   }
@@ -124,7 +114,7 @@ class ObjectEzsignsignatureApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignsignatureID (required):
-  Future<EzsignsignatureDeleteObjectV1Response> ezsignsignatureDeleteObjectV1(int pkiEzsignsignatureID,) async {
+  Future<EzsignsignatureDeleteObjectV1Response?> ezsignsignatureDeleteObjectV1(int pkiEzsignsignatureID,) async {
     final response = await ezsignsignatureDeleteObjectV1WithHttpInfo(pkiEzsignsignatureID,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -132,11 +122,11 @@ class ObjectEzsignsignatureApi {
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body != null && response.statusCode != HttpStatus.noContent) {
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignsignatureDeleteObjectV1Response',) as EzsignsignatureDeleteObjectV1Response;
     
     }
-    return Future<EzsignsignatureDeleteObjectV1Response>.value();
+    return null;
   }
 
   /// Retrieve an existing Ezsignsignature
@@ -149,17 +139,12 @@ class ObjectEzsignsignatureApi {
   ///
   /// * [int] pkiEzsignsignatureID (required):
   Future<Response> ezsignsignatureGetObjectV1WithHttpInfo(int pkiEzsignsignatureID,) async {
-    // Verify required params are set.
-    if (pkiEzsignsignatureID == null) {
-     throw ApiException(HttpStatus.badRequest, 'Missing required param: pkiEzsignsignatureID');
-    }
-
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignsignature/{pkiEzsignsignatureID}'
       .replaceAll('{pkiEzsignsignatureID}', pkiEzsignsignatureID.toString());
 
     // ignore: prefer_final_locals
-    Object postBody;
+    Object? postBody;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
@@ -176,7 +161,7 @@ class ObjectEzsignsignatureApi {
       postBody,
       headerParams,
       formParams,
-      contentTypes.isEmpty ? null : contentTypes[0],
+      contentTypes.isEmpty ? null : contentTypes.first,
       authNames,
     );
   }
@@ -188,7 +173,7 @@ class ObjectEzsignsignatureApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignsignatureID (required):
-  Future<EzsignsignatureGetObjectV1Response> ezsignsignatureGetObjectV1(int pkiEzsignsignatureID,) async {
+  Future<EzsignsignatureGetObjectV1Response?> ezsignsignatureGetObjectV1(int pkiEzsignsignatureID,) async {
     final response = await ezsignsignatureGetObjectV1WithHttpInfo(pkiEzsignsignatureID,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -196,10 +181,10 @@ class ObjectEzsignsignatureApi {
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body != null && response.statusCode != HttpStatus.noContent) {
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignsignatureGetObjectV1Response',) as EzsignsignatureGetObjectV1Response;
     
     }
-    return Future<EzsignsignatureGetObjectV1Response>.value();
+    return null;
   }
 }

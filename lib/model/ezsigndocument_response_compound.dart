@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -13,26 +13,26 @@ part of openapi.api;
 class EzsigndocumentResponseCompound {
   /// Returns a new [EzsigndocumentResponseCompound] instance.
   EzsigndocumentResponseCompound({
-    @required this.iEzsigndocumentStepformtotal,
-    @required this.iEzsigndocumentStepformcurrent,
-    @required this.iEzsigndocumentStepsignaturetotal,
-    @required this.iEzsigndocumentStepsignatureCurrent,
+    required this.iEzsigndocumentStepformtotal,
+    required this.iEzsigndocumentStepformcurrent,
+    required this.iEzsigndocumentStepsignaturetotal,
+    required this.iEzsigndocumentStepsignatureCurrent,
     this.aObjEzsignfoldersignerassociationstatus = const [],
-    @required this.fkiEzsignfolderID,
-    @required this.dtEzsigndocumentDuedate,
-    @required this.fkiLanguageID,
-    @required this.sEzsigndocumentName,
-    @required this.pkiEzsigndocumentID,
-    @required this.eEzsigndocumentStep,
-    @required this.dtEzsigndocumentFirstsend,
-    @required this.dtEzsigndocumentLastsend,
-    @required this.iEzsigndocumentOrder,
-    @required this.iEzsigndocumentPagetotal,
-    @required this.iEzsigndocumentSignaturesigned,
-    @required this.iEzsigndocumentSignaturetotal,
-    @required this.sEzsigndocumentMD5initial,
-    @required this.sEzsigndocumentMD5signed,
-    @required this.objAudit,
+    required this.fkiEzsignfolderID,
+    required this.dtEzsigndocumentDuedate,
+    required this.fkiLanguageID,
+    required this.sEzsigndocumentName,
+    required this.pkiEzsigndocumentID,
+    required this.eEzsigndocumentStep,
+    required this.dtEzsigndocumentFirstsend,
+    required this.dtEzsigndocumentLastsend,
+    required this.iEzsigndocumentOrder,
+    required this.iEzsigndocumentPagetotal,
+    required this.iEzsigndocumentSignaturesigned,
+    required this.iEzsigndocumentSignaturetotal,
+    required this.sEzsigndocumentMD5initial,
+    required this.sEzsigndocumentMD5signed,
+    required this.objAudit,
   });
 
   /// The total number of steps in the form filling phase
@@ -56,8 +56,9 @@ class EzsigndocumentResponseCompound {
   String dtEzsigndocumentDuedate;
 
   /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
-  // minimum: 1
-  // maximum: 2
+  ///
+  /// Minimum value: 1
+  /// Maximum value: 2
   int fkiLanguageID;
 
   /// The name of the document that will be presented to Ezsignfoldersignerassociations
@@ -119,27 +120,27 @@ class EzsigndocumentResponseCompound {
 
   @override
   int get hashCode =>
-  // ignore: unnecessary_parenthesis
-    (iEzsigndocumentStepformtotal == null ? 0 : iEzsigndocumentStepformtotal.hashCode) +
-    (iEzsigndocumentStepformcurrent == null ? 0 : iEzsigndocumentStepformcurrent.hashCode) +
-    (iEzsigndocumentStepsignaturetotal == null ? 0 : iEzsigndocumentStepsignaturetotal.hashCode) +
-    (iEzsigndocumentStepsignatureCurrent == null ? 0 : iEzsigndocumentStepsignatureCurrent.hashCode) +
-    (aObjEzsignfoldersignerassociationstatus == null ? 0 : aObjEzsignfoldersignerassociationstatus.hashCode) +
-    (fkiEzsignfolderID == null ? 0 : fkiEzsignfolderID.hashCode) +
-    (dtEzsigndocumentDuedate == null ? 0 : dtEzsigndocumentDuedate.hashCode) +
-    (fkiLanguageID == null ? 0 : fkiLanguageID.hashCode) +
-    (sEzsigndocumentName == null ? 0 : sEzsigndocumentName.hashCode) +
-    (pkiEzsigndocumentID == null ? 0 : pkiEzsigndocumentID.hashCode) +
-    (eEzsigndocumentStep == null ? 0 : eEzsigndocumentStep.hashCode) +
-    (dtEzsigndocumentFirstsend == null ? 0 : dtEzsigndocumentFirstsend.hashCode) +
-    (dtEzsigndocumentLastsend == null ? 0 : dtEzsigndocumentLastsend.hashCode) +
-    (iEzsigndocumentOrder == null ? 0 : iEzsigndocumentOrder.hashCode) +
-    (iEzsigndocumentPagetotal == null ? 0 : iEzsigndocumentPagetotal.hashCode) +
-    (iEzsigndocumentSignaturesigned == null ? 0 : iEzsigndocumentSignaturesigned.hashCode) +
-    (iEzsigndocumentSignaturetotal == null ? 0 : iEzsigndocumentSignaturetotal.hashCode) +
-    (sEzsigndocumentMD5initial == null ? 0 : sEzsigndocumentMD5initial.hashCode) +
-    (sEzsigndocumentMD5signed == null ? 0 : sEzsigndocumentMD5signed.hashCode) +
-    (objAudit == null ? 0 : objAudit.hashCode);
+    // ignore: unnecessary_parenthesis
+    (iEzsigndocumentStepformtotal.hashCode) +
+    (iEzsigndocumentStepformcurrent.hashCode) +
+    (iEzsigndocumentStepsignaturetotal.hashCode) +
+    (iEzsigndocumentStepsignatureCurrent.hashCode) +
+    (aObjEzsignfoldersignerassociationstatus.hashCode) +
+    (fkiEzsignfolderID.hashCode) +
+    (dtEzsigndocumentDuedate.hashCode) +
+    (fkiLanguageID.hashCode) +
+    (sEzsigndocumentName.hashCode) +
+    (pkiEzsigndocumentID.hashCode) +
+    (eEzsigndocumentStep.hashCode) +
+    (dtEzsigndocumentFirstsend.hashCode) +
+    (dtEzsigndocumentLastsend.hashCode) +
+    (iEzsigndocumentOrder.hashCode) +
+    (iEzsigndocumentPagetotal.hashCode) +
+    (iEzsigndocumentSignaturesigned.hashCode) +
+    (iEzsigndocumentSignaturetotal.hashCode) +
+    (sEzsigndocumentMD5initial.hashCode) +
+    (sEzsigndocumentMD5signed.hashCode) +
+    (objAudit.hashCode);
 
   @override
   String toString() => 'EzsigndocumentResponseCompound[iEzsigndocumentStepformtotal=$iEzsigndocumentStepformtotal, iEzsigndocumentStepformcurrent=$iEzsigndocumentStepformcurrent, iEzsigndocumentStepsignaturetotal=$iEzsigndocumentStepsignaturetotal, iEzsigndocumentStepsignatureCurrent=$iEzsigndocumentStepsignatureCurrent, aObjEzsignfoldersignerassociationstatus=$aObjEzsignfoldersignerassociationstatus, fkiEzsignfolderID=$fkiEzsignfolderID, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, fkiLanguageID=$fkiLanguageID, sEzsigndocumentName=$sEzsigndocumentName, pkiEzsigndocumentID=$pkiEzsigndocumentID, eEzsigndocumentStep=$eEzsigndocumentStep, dtEzsigndocumentFirstsend=$dtEzsigndocumentFirstsend, dtEzsigndocumentLastsend=$dtEzsigndocumentLastsend, iEzsigndocumentOrder=$iEzsigndocumentOrder, iEzsigndocumentPagetotal=$iEzsigndocumentPagetotal, iEzsigndocumentSignaturesigned=$iEzsigndocumentSignaturesigned, iEzsigndocumentSignaturetotal=$iEzsigndocumentSignaturetotal, sEzsigndocumentMD5initial=$sEzsigndocumentMD5initial, sEzsigndocumentMD5signed=$sEzsigndocumentMD5signed, objAudit=$objAudit]';
@@ -172,65 +173,111 @@ class EzsigndocumentResponseCompound {
   /// Returns a new [EzsigndocumentResponseCompound] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static EzsigndocumentResponseCompound fromJson(dynamic value) {
+  static EzsigndocumentResponseCompound? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
+
+      // Ensure that the map contains the required keys.
+      // Note 1: the values aren't checked for validity beyond being non-null.
+      // Note 2: this code is stripped in release mode!
+      assert(() {
+        requiredKeys.forEach((key) {
+          assert(json.containsKey(key), 'Required key "EzsigndocumentResponseCompound[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "EzsigndocumentResponseCompound[$key]" has a null value in JSON.');
+        });
+        return true;
+      }());
+
       return EzsigndocumentResponseCompound(
-        iEzsigndocumentStepformtotal: mapValueOfType<int>(json, r'iEzsigndocumentStepformtotal'),
-        iEzsigndocumentStepformcurrent: mapValueOfType<int>(json, r'iEzsigndocumentStepformcurrent'),
-        iEzsigndocumentStepsignaturetotal: mapValueOfType<int>(json, r'iEzsigndocumentStepsignaturetotal'),
-        iEzsigndocumentStepsignatureCurrent: mapValueOfType<int>(json, r'iEzsigndocumentStepsignatureCurrent'),
-        aObjEzsignfoldersignerassociationstatus: CustomEzsignfoldersignerassociationstatusResponse.listFromJson(json[r'a_objEzsignfoldersignerassociationstatus']),
-        fkiEzsignfolderID: mapValueOfType<int>(json, r'fkiEzsignfolderID'),
-        dtEzsigndocumentDuedate: mapValueOfType<String>(json, r'dtEzsigndocumentDuedate'),
-        fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID'),
-        sEzsigndocumentName: mapValueOfType<String>(json, r'sEzsigndocumentName'),
-        pkiEzsigndocumentID: mapValueOfType<int>(json, r'pkiEzsigndocumentID'),
-        eEzsigndocumentStep: FieldEEzsigndocumentStep.fromJson(json[r'eEzsigndocumentStep']),
-        dtEzsigndocumentFirstsend: mapValueOfType<String>(json, r'dtEzsigndocumentFirstsend'),
-        dtEzsigndocumentLastsend: mapValueOfType<String>(json, r'dtEzsigndocumentLastsend'),
-        iEzsigndocumentOrder: mapValueOfType<int>(json, r'iEzsigndocumentOrder'),
-        iEzsigndocumentPagetotal: mapValueOfType<int>(json, r'iEzsigndocumentPagetotal'),
-        iEzsigndocumentSignaturesigned: mapValueOfType<int>(json, r'iEzsigndocumentSignaturesigned'),
-        iEzsigndocumentSignaturetotal: mapValueOfType<int>(json, r'iEzsigndocumentSignaturetotal'),
-        sEzsigndocumentMD5initial: mapValueOfType<String>(json, r'sEzsigndocumentMD5initial'),
-        sEzsigndocumentMD5signed: mapValueOfType<String>(json, r'sEzsigndocumentMD5signed'),
-        objAudit: CommonAudit.fromJson(json[r'objAudit']),
+        iEzsigndocumentStepformtotal: mapValueOfType<int>(json, r'iEzsigndocumentStepformtotal')!,
+        iEzsigndocumentStepformcurrent: mapValueOfType<int>(json, r'iEzsigndocumentStepformcurrent')!,
+        iEzsigndocumentStepsignaturetotal: mapValueOfType<int>(json, r'iEzsigndocumentStepsignaturetotal')!,
+        iEzsigndocumentStepsignatureCurrent: mapValueOfType<int>(json, r'iEzsigndocumentStepsignatureCurrent')!,
+        aObjEzsignfoldersignerassociationstatus: CustomEzsignfoldersignerassociationstatusResponse.listFromJson(json[r'a_objEzsignfoldersignerassociationstatus'])!,
+        fkiEzsignfolderID: mapValueOfType<int>(json, r'fkiEzsignfolderID')!,
+        dtEzsigndocumentDuedate: mapValueOfType<String>(json, r'dtEzsigndocumentDuedate')!,
+        fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID')!,
+        sEzsigndocumentName: mapValueOfType<String>(json, r'sEzsigndocumentName')!,
+        pkiEzsigndocumentID: mapValueOfType<int>(json, r'pkiEzsigndocumentID')!,
+        eEzsigndocumentStep: FieldEEzsigndocumentStep.fromJson(json[r'eEzsigndocumentStep'])!,
+        dtEzsigndocumentFirstsend: mapValueOfType<String>(json, r'dtEzsigndocumentFirstsend')!,
+        dtEzsigndocumentLastsend: mapValueOfType<String>(json, r'dtEzsigndocumentLastsend')!,
+        iEzsigndocumentOrder: mapValueOfType<int>(json, r'iEzsigndocumentOrder')!,
+        iEzsigndocumentPagetotal: mapValueOfType<int>(json, r'iEzsigndocumentPagetotal')!,
+        iEzsigndocumentSignaturesigned: mapValueOfType<int>(json, r'iEzsigndocumentSignaturesigned')!,
+        iEzsigndocumentSignaturetotal: mapValueOfType<int>(json, r'iEzsigndocumentSignaturetotal')!,
+        sEzsigndocumentMD5initial: mapValueOfType<String>(json, r'sEzsigndocumentMD5initial')!,
+        sEzsigndocumentMD5signed: mapValueOfType<String>(json, r'sEzsigndocumentMD5signed')!,
+        objAudit: CommonAudit.fromJson(json[r'objAudit'])!,
       );
     }
     return null;
   }
 
-  static List<EzsigndocumentResponseCompound> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(EzsigndocumentResponseCompound.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <EzsigndocumentResponseCompound>[];
+  static List<EzsigndocumentResponseCompound>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <EzsigndocumentResponseCompound>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = EzsigndocumentResponseCompound.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
 
   static Map<String, EzsigndocumentResponseCompound> mapFromJson(dynamic json) {
     final map = <String, EzsigndocumentResponseCompound>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) => map[key] = EzsigndocumentResponseCompound.fromJson(value));
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = EzsigndocumentResponseCompound.fromJson(entry.value);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
 
   // maps a json object with a list of EzsigndocumentResponseCompound-objects as value to a dart map
-  static Map<String, List<EzsigndocumentResponseCompound>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<EzsigndocumentResponseCompound>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsigndocumentResponseCompound>>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) {
-          map[key] = EzsigndocumentResponseCompound.listFromJson(
-            value,
-            emptyIsNull: emptyIsNull,
-            growable: growable,
-          );
-        });
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = EzsigndocumentResponseCompound.listFromJson(entry.value, growable: growable,);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
+
+  /// The list of required keys that must be present in a JSON.
+  static const requiredKeys = <String>{
+    'iEzsigndocumentStepformtotal',
+    'iEzsigndocumentStepformcurrent',
+    'iEzsigndocumentStepsignaturetotal',
+    'iEzsigndocumentStepsignatureCurrent',
+    'a_objEzsignfoldersignerassociationstatus',
+    'fkiEzsignfolderID',
+    'dtEzsigndocumentDuedate',
+    'fkiLanguageID',
+    'sEzsigndocumentName',
+    'pkiEzsigndocumentID',
+    'eEzsigndocumentStep',
+    'dtEzsigndocumentFirstsend',
+    'dtEzsigndocumentLastsend',
+    'iEzsigndocumentOrder',
+    'iEzsigndocumentPagetotal',
+    'iEzsigndocumentSignaturesigned',
+    'iEzsigndocumentSignaturetotal',
+    'sEzsigndocumentMD5initial',
+    'sEzsigndocumentMD5signed',
+    'objAudit',
+  };
 }
 

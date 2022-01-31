@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -14,8 +14,8 @@ class EzsignbulksendGetListV1ResponseMPayload {
   /// Returns a new [EzsignbulksendGetListV1ResponseMPayload] instance.
   EzsignbulksendGetListV1ResponseMPayload({
     this.aObjEzsignbulksend = const [],
-    @required this.iRowReturned,
-    @required this.iRowFiltered,
+    required this.iRowReturned,
+    required this.iRowFiltered,
   });
 
   List<EzsignbulksendListElement> aObjEzsignbulksend;
@@ -34,10 +34,10 @@ class EzsignbulksendGetListV1ResponseMPayload {
 
   @override
   int get hashCode =>
-  // ignore: unnecessary_parenthesis
-    (aObjEzsignbulksend == null ? 0 : aObjEzsignbulksend.hashCode) +
-    (iRowReturned == null ? 0 : iRowReturned.hashCode) +
-    (iRowFiltered == null ? 0 : iRowFiltered.hashCode);
+    // ignore: unnecessary_parenthesis
+    (aObjEzsignbulksend.hashCode) +
+    (iRowReturned.hashCode) +
+    (iRowFiltered.hashCode);
 
   @override
   String toString() => 'EzsignbulksendGetListV1ResponseMPayload[aObjEzsignbulksend=$aObjEzsignbulksend, iRowReturned=$iRowReturned, iRowFiltered=$iRowFiltered]';
@@ -53,48 +53,77 @@ class EzsignbulksendGetListV1ResponseMPayload {
   /// Returns a new [EzsignbulksendGetListV1ResponseMPayload] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static EzsignbulksendGetListV1ResponseMPayload fromJson(dynamic value) {
+  static EzsignbulksendGetListV1ResponseMPayload? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
+
+      // Ensure that the map contains the required keys.
+      // Note 1: the values aren't checked for validity beyond being non-null.
+      // Note 2: this code is stripped in release mode!
+      assert(() {
+        requiredKeys.forEach((key) {
+          assert(json.containsKey(key), 'Required key "EzsignbulksendGetListV1ResponseMPayload[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "EzsignbulksendGetListV1ResponseMPayload[$key]" has a null value in JSON.');
+        });
+        return true;
+      }());
+
       return EzsignbulksendGetListV1ResponseMPayload(
-        aObjEzsignbulksend: EzsignbulksendListElement.listFromJson(json[r'a_objEzsignbulksend']),
-        iRowReturned: mapValueOfType<int>(json, r'iRowReturned'),
-        iRowFiltered: mapValueOfType<int>(json, r'iRowFiltered'),
+        aObjEzsignbulksend: EzsignbulksendListElement.listFromJson(json[r'a_objEzsignbulksend'])!,
+        iRowReturned: mapValueOfType<int>(json, r'iRowReturned')!,
+        iRowFiltered: mapValueOfType<int>(json, r'iRowFiltered')!,
       );
     }
     return null;
   }
 
-  static List<EzsignbulksendGetListV1ResponseMPayload> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(EzsignbulksendGetListV1ResponseMPayload.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <EzsignbulksendGetListV1ResponseMPayload>[];
+  static List<EzsignbulksendGetListV1ResponseMPayload>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <EzsignbulksendGetListV1ResponseMPayload>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = EzsignbulksendGetListV1ResponseMPayload.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
 
   static Map<String, EzsignbulksendGetListV1ResponseMPayload> mapFromJson(dynamic json) {
     final map = <String, EzsignbulksendGetListV1ResponseMPayload>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) => map[key] = EzsignbulksendGetListV1ResponseMPayload.fromJson(value));
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = EzsignbulksendGetListV1ResponseMPayload.fromJson(entry.value);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
 
   // maps a json object with a list of EzsignbulksendGetListV1ResponseMPayload-objects as value to a dart map
-  static Map<String, List<EzsignbulksendGetListV1ResponseMPayload>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<EzsignbulksendGetListV1ResponseMPayload>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignbulksendGetListV1ResponseMPayload>>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) {
-          map[key] = EzsignbulksendGetListV1ResponseMPayload.listFromJson(
-            value,
-            emptyIsNull: emptyIsNull,
-            growable: growable,
-          );
-        });
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = EzsignbulksendGetListV1ResponseMPayload.listFromJson(entry.value, growable: growable,);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
+
+  /// The list of required keys that must be present in a JSON.
+  static const requiredKeys = <String>{
+    'a_objEzsignbulksend',
+    'iRowReturned',
+    'iRowFiltered',
+  };
 }
 

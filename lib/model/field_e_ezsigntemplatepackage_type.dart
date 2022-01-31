@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -19,7 +19,7 @@ class FieldEEzsigntemplatepackageType {
   final String value;
 
   @override
-  String toString() => value ?? '';
+  String toString() => value;
 
   String toJson() => value;
 
@@ -38,13 +38,20 @@ class FieldEEzsigntemplatepackageType {
     usergroup,
   ];
 
-  static FieldEEzsigntemplatepackageType fromJson(dynamic value) =>
-    FieldEEzsigntemplatepackageTypeTypeTransformer().decode(value);
+  static FieldEEzsigntemplatepackageType? fromJson(dynamic value) => FieldEEzsigntemplatepackageTypeTypeTransformer().decode(value);
 
-  static List<FieldEEzsigntemplatepackageType> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(FieldEEzsigntemplatepackageType.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <FieldEEzsigntemplatepackageType>[];
+  static List<FieldEEzsigntemplatepackageType>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <FieldEEzsigntemplatepackageType>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = FieldEEzsigntemplatepackageType.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
 }
 
 /// Transformation class that can [encode] an instance of [FieldEEzsigntemplatepackageType] to String,
@@ -64,7 +71,7 @@ class FieldEEzsigntemplatepackageTypeTypeTransformer {
   ///
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
-  FieldEEzsigntemplatepackageType decode(dynamic data, {bool allowNull}) {
+  FieldEEzsigntemplatepackageType? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data.toString()) {
         case r'Company': return FieldEEzsigntemplatepackageType.company;
@@ -73,7 +80,7 @@ class FieldEEzsigntemplatepackageTypeTypeTransformer {
         case r'User': return FieldEEzsigntemplatepackageType.user;
         case r'Usergroup': return FieldEEzsigntemplatepackageType.usergroup;
         default:
-          if (allowNull == false) {
+          if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
           }
       }
@@ -82,6 +89,6 @@ class FieldEEzsigntemplatepackageTypeTypeTransformer {
   }
 
   /// Singleton [FieldEEzsigntemplatepackageTypeTypeTransformer] instance.
-  static FieldEEzsigntemplatepackageTypeTypeTransformer _instance;
+  static FieldEEzsigntemplatepackageTypeTypeTransformer? _instance;
 }
 

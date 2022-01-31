@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -13,9 +13,15 @@ import 'package:test/test.dart';
 
 // tests for EzsignsignerResponseCompoundContact
 void main() {
-  final instance = EzsignsignerResponseCompoundContact();
+  // final instance = EzsignsignerResponseCompoundContact();
 
   group('test EzsignsignerResponseCompoundContact', () {
+    // The unique ID of the Contact
+    // int pkiContactID
+    test('to test the property `pkiContactID`', () async {
+      // TODO
+    });
+
     // The First name of the contact
     // String sContactFirstname
     test('to test the property `sContactFirstname`', () async {

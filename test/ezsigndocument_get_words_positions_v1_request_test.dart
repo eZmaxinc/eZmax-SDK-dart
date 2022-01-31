@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -13,7 +13,7 @@ import 'package:test/test.dart';
 
 // tests for EzsigndocumentGetWordsPositionsV1Request
 void main() {
-  final instance = EzsigndocumentGetWordsPositionsV1Request();
+  // final instance = EzsigndocumentGetWordsPositionsV1Request();
 
   group('test EzsigndocumentGetWordsPositionsV1Request', () {
     // Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*.

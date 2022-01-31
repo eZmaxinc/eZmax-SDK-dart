@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -19,7 +19,7 @@ class FieldEEzsignfoldertypePrivacylevel {
   final String value;
 
   @override
-  String toString() => value ?? '';
+  String toString() => value;
 
   String toJson() => value;
 
@@ -32,13 +32,20 @@ class FieldEEzsignfoldertypePrivacylevel {
     usergroup,
   ];
 
-  static FieldEEzsignfoldertypePrivacylevel fromJson(dynamic value) =>
-    FieldEEzsignfoldertypePrivacylevelTypeTransformer().decode(value);
+  static FieldEEzsignfoldertypePrivacylevel? fromJson(dynamic value) => FieldEEzsignfoldertypePrivacylevelTypeTransformer().decode(value);
 
-  static List<FieldEEzsignfoldertypePrivacylevel> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(FieldEEzsignfoldertypePrivacylevel.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <FieldEEzsignfoldertypePrivacylevel>[];
+  static List<FieldEEzsignfoldertypePrivacylevel>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <FieldEEzsignfoldertypePrivacylevel>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = FieldEEzsignfoldertypePrivacylevel.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
 }
 
 /// Transformation class that can [encode] an instance of [FieldEEzsignfoldertypePrivacylevel] to String,
@@ -58,13 +65,13 @@ class FieldEEzsignfoldertypePrivacylevelTypeTransformer {
   ///
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
-  FieldEEzsignfoldertypePrivacylevel decode(dynamic data, {bool allowNull}) {
+  FieldEEzsignfoldertypePrivacylevel? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data.toString()) {
         case r'User': return FieldEEzsignfoldertypePrivacylevel.user;
         case r'Usergroup': return FieldEEzsignfoldertypePrivacylevel.usergroup;
         default:
-          if (allowNull == false) {
+          if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
           }
       }
@@ -73,6 +80,6 @@ class FieldEEzsignfoldertypePrivacylevelTypeTransformer {
   }
 
   /// Singleton [FieldEEzsignfoldertypePrivacylevelTypeTransformer] instance.
-  static FieldEEzsignfoldertypePrivacylevelTypeTransformer _instance;
+  static FieldEEzsignfoldertypePrivacylevelTypeTransformer? _instance;
 }
 

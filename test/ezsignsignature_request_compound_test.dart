@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -13,7 +13,7 @@ import 'package:test/test.dart';
 
 // tests for EzsignsignatureRequestCompound
 void main() {
-  final instance = EzsignsignatureRequestCompound();
+  // final instance = EzsignsignatureRequestCompound();
 
   group('test EzsignsignatureRequestCompound', () {
     // Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is \"Name\" or \"Handwritten\")

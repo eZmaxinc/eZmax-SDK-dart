@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -12,7 +12,7 @@ part of openapi.api;
 
 
 class ObjectEzsignfoldertypeApi {
-  ObjectEzsignfoldertypeApi([ApiClient apiClient]) : apiClient = apiClient ?? defaultApiClient;
+  ObjectEzsignfoldertypeApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
 
   final ApiClient apiClient;
 
@@ -31,25 +31,20 @@ class ObjectEzsignfoldertypeApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<Response> ezsignfoldertypeGetAutocompleteV1WithHttpInfo(String sSelector, { String sQuery, HeaderAcceptLanguage acceptLanguage, }) async {
-    // Verify required params are set.
-    if (sSelector == null) {
-     throw ApiException(HttpStatus.badRequest, 'Missing required param: sSelector');
-    }
-
+  Future<Response> ezsignfoldertypeGetAutocompleteV1WithHttpInfo(String sSelector, { String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfoldertype/getAutocomplete/{sSelector}'
       .replaceAll('{sSelector}', sSelector);
 
     // ignore: prefer_final_locals
-    Object postBody;
+    Object? postBody;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
     if (sQuery != null) {
-      queryParams.addAll(_convertParametersForCollectionFormat('', 'sQuery', sQuery));
+      queryParams.addAll(_queryParams('', 'sQuery', sQuery));
     }
 
     if (acceptLanguage != null) {
@@ -67,7 +62,7 @@ class ObjectEzsignfoldertypeApi {
       postBody,
       headerParams,
       formParams,
-      contentTypes.isEmpty ? null : contentTypes[0],
+      contentTypes.isEmpty ? null : contentTypes.first,
       authNames,
     );
   }
@@ -85,7 +80,7 @@ class ObjectEzsignfoldertypeApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<CommonGetAutocompleteV1Response> ezsignfoldertypeGetAutocompleteV1(String sSelector, { String sQuery, HeaderAcceptLanguage acceptLanguage, }) async {
+  Future<CommonGetAutocompleteV1Response?> ezsignfoldertypeGetAutocompleteV1(String sSelector, { String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
     final response = await ezsignfoldertypeGetAutocompleteV1WithHttpInfo(sSelector,  sQuery: sQuery, acceptLanguage: acceptLanguage, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -93,11 +88,11 @@ class ObjectEzsignfoldertypeApi {
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body != null && response.statusCode != HttpStatus.noContent) {
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonGetAutocompleteV1Response',) as CommonGetAutocompleteV1Response;
     
     }
-    return Future<CommonGetAutocompleteV1Response>.value();
+    return null;
   }
 
   /// Retrieve Ezsignfoldertype list
@@ -118,30 +113,28 @@ class ObjectEzsignfoldertypeApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<Response> ezsignfoldertypeGetListV1WithHttpInfo({ String eOrderBy, int iRowMax, int iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter, }) async {
-    // Verify required params are set.
-
+  Future<Response> ezsignfoldertypeGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfoldertype/getList';
 
     // ignore: prefer_final_locals
-    Object postBody;
+    Object? postBody;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
     if (eOrderBy != null) {
-      queryParams.addAll(_convertParametersForCollectionFormat('', 'eOrderBy', eOrderBy));
+      queryParams.addAll(_queryParams('', 'eOrderBy', eOrderBy));
     }
     if (iRowMax != null) {
-      queryParams.addAll(_convertParametersForCollectionFormat('', 'iRowMax', iRowMax));
+      queryParams.addAll(_queryParams('', 'iRowMax', iRowMax));
     }
     if (iRowOffset != null) {
-      queryParams.addAll(_convertParametersForCollectionFormat('', 'iRowOffset', iRowOffset));
+      queryParams.addAll(_queryParams('', 'iRowOffset', iRowOffset));
     }
     if (sFilter != null) {
-      queryParams.addAll(_convertParametersForCollectionFormat('', 'sFilter', sFilter));
+      queryParams.addAll(_queryParams('', 'sFilter', sFilter));
     }
 
     if (acceptLanguage != null) {
@@ -159,7 +152,7 @@ class ObjectEzsignfoldertypeApi {
       postBody,
       headerParams,
       formParams,
-      contentTypes.isEmpty ? null : contentTypes[0],
+      contentTypes.isEmpty ? null : contentTypes.first,
       authNames,
     );
   }
@@ -180,7 +173,7 @@ class ObjectEzsignfoldertypeApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<EzsignfoldertypeGetListV1Response> ezsignfoldertypeGetListV1({ String eOrderBy, int iRowMax, int iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter, }) async {
+  Future<EzsignfoldertypeGetListV1Response?> ezsignfoldertypeGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
     final response = await ezsignfoldertypeGetListV1WithHttpInfo( eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -188,10 +181,10 @@ class ObjectEzsignfoldertypeApi {
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body != null && response.statusCode != HttpStatus.noContent) {
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfoldertypeGetListV1Response',) as EzsignfoldertypeGetListV1Response;
     
     }
-    return Future<EzsignfoldertypeGetListV1Response>.value();
+    return null;
   }
 }

@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -12,7 +12,7 @@ part of openapi.api;
 
 
 class ModuleUserApi {
-  ModuleUserApi([ApiClient apiClient]) : apiClient = apiClient ?? defaultApiClient;
+  ModuleUserApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
 
   final ApiClient apiClient;
 
@@ -26,16 +26,11 @@ class ModuleUserApi {
   ///
   /// * [List<UserCreateEzsignuserV1Request>] userCreateEzsignuserV1Request (required):
   Future<Response> userCreateEzsignuserV1WithHttpInfo(List<UserCreateEzsignuserV1Request> userCreateEzsignuserV1Request,) async {
-    // Verify required params are set.
-    if (userCreateEzsignuserV1Request == null) {
-     throw ApiException(HttpStatus.badRequest, 'Missing required param: userCreateEzsignuserV1Request');
-    }
-
     // ignore: prefer_const_declarations
     final path = r'/1/module/user/createezsignuser';
 
     // ignore: prefer_final_locals
-    Object postBody = userCreateEzsignuserV1Request;
+    Object? postBody = userCreateEzsignuserV1Request;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
@@ -52,7 +47,7 @@ class ModuleUserApi {
       postBody,
       headerParams,
       formParams,
-      contentTypes.isEmpty ? null : contentTypes[0],
+      contentTypes.isEmpty ? null : contentTypes.first,
       authNames,
     );
   }
@@ -64,7 +59,7 @@ class ModuleUserApi {
   /// Parameters:
   ///
   /// * [List<UserCreateEzsignuserV1Request>] userCreateEzsignuserV1Request (required):
-  Future<UserCreateEzsignuserV1Response> userCreateEzsignuserV1(List<UserCreateEzsignuserV1Request> userCreateEzsignuserV1Request,) async {
+  Future<UserCreateEzsignuserV1Response?> userCreateEzsignuserV1(List<UserCreateEzsignuserV1Request> userCreateEzsignuserV1Request,) async {
     final response = await userCreateEzsignuserV1WithHttpInfo(userCreateEzsignuserV1Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -72,10 +67,10 @@ class ModuleUserApi {
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body != null && response.statusCode != HttpStatus.noContent) {
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'UserCreateEzsignuserV1Response',) as UserCreateEzsignuserV1Response;
     
     }
-    return Future<UserCreateEzsignuserV1Response>.value();
+    return null;
   }
 }

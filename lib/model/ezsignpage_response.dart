@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -13,13 +13,13 @@ part of openapi.api;
 class EzsignpageResponse {
   /// Returns a new [EzsignpageResponse] instance.
   EzsignpageResponse({
-    @required this.pkiEzsignpageID,
-    @required this.iEzsignpageWidthimage,
-    @required this.iEzsignpageHeightimage,
-    @required this.iEzsignpageWidthpdf,
-    @required this.iEzsignpageHeightpdf,
-    @required this.iEzsignpagePagenumber,
-    @required this.sImageUrl,
+    required this.pkiEzsignpageID,
+    required this.iEzsignpageWidthimage,
+    required this.iEzsignpageHeightimage,
+    required this.iEzsignpageWidthpdf,
+    required this.iEzsignpageHeightpdf,
+    required this.iEzsignpagePagenumber,
+    required this.sImageUrl,
   });
 
   /// The unique ID of the Ezsignpage
@@ -55,14 +55,14 @@ class EzsignpageResponse {
 
   @override
   int get hashCode =>
-  // ignore: unnecessary_parenthesis
-    (pkiEzsignpageID == null ? 0 : pkiEzsignpageID.hashCode) +
-    (iEzsignpageWidthimage == null ? 0 : iEzsignpageWidthimage.hashCode) +
-    (iEzsignpageHeightimage == null ? 0 : iEzsignpageHeightimage.hashCode) +
-    (iEzsignpageWidthpdf == null ? 0 : iEzsignpageWidthpdf.hashCode) +
-    (iEzsignpageHeightpdf == null ? 0 : iEzsignpageHeightpdf.hashCode) +
-    (iEzsignpagePagenumber == null ? 0 : iEzsignpagePagenumber.hashCode) +
-    (sImageUrl == null ? 0 : sImageUrl.hashCode);
+    // ignore: unnecessary_parenthesis
+    (pkiEzsignpageID.hashCode) +
+    (iEzsignpageWidthimage.hashCode) +
+    (iEzsignpageHeightimage.hashCode) +
+    (iEzsignpageWidthpdf.hashCode) +
+    (iEzsignpageHeightpdf.hashCode) +
+    (iEzsignpagePagenumber.hashCode) +
+    (sImageUrl.hashCode);
 
   @override
   String toString() => 'EzsignpageResponse[pkiEzsignpageID=$pkiEzsignpageID, iEzsignpageWidthimage=$iEzsignpageWidthimage, iEzsignpageHeightimage=$iEzsignpageHeightimage, iEzsignpageWidthpdf=$iEzsignpageWidthpdf, iEzsignpageHeightpdf=$iEzsignpageHeightpdf, iEzsignpagePagenumber=$iEzsignpagePagenumber, sImageUrl=$sImageUrl]';
@@ -82,52 +82,85 @@ class EzsignpageResponse {
   /// Returns a new [EzsignpageResponse] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static EzsignpageResponse fromJson(dynamic value) {
+  static EzsignpageResponse? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
+
+      // Ensure that the map contains the required keys.
+      // Note 1: the values aren't checked for validity beyond being non-null.
+      // Note 2: this code is stripped in release mode!
+      assert(() {
+        requiredKeys.forEach((key) {
+          assert(json.containsKey(key), 'Required key "EzsignpageResponse[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "EzsignpageResponse[$key]" has a null value in JSON.');
+        });
+        return true;
+      }());
+
       return EzsignpageResponse(
-        pkiEzsignpageID: mapValueOfType<int>(json, r'pkiEzsignpageID'),
-        iEzsignpageWidthimage: mapValueOfType<int>(json, r'iEzsignpageWidthimage'),
-        iEzsignpageHeightimage: mapValueOfType<int>(json, r'iEzsignpageHeightimage'),
-        iEzsignpageWidthpdf: mapValueOfType<int>(json, r'iEzsignpageWidthpdf'),
-        iEzsignpageHeightpdf: mapValueOfType<int>(json, r'iEzsignpageHeightpdf'),
-        iEzsignpagePagenumber: mapValueOfType<int>(json, r'iEzsignpagePagenumber'),
-        sImageUrl: mapValueOfType<String>(json, r'sImageUrl'),
+        pkiEzsignpageID: mapValueOfType<int>(json, r'pkiEzsignpageID')!,
+        iEzsignpageWidthimage: mapValueOfType<int>(json, r'iEzsignpageWidthimage')!,
+        iEzsignpageHeightimage: mapValueOfType<int>(json, r'iEzsignpageHeightimage')!,
+        iEzsignpageWidthpdf: mapValueOfType<int>(json, r'iEzsignpageWidthpdf')!,
+        iEzsignpageHeightpdf: mapValueOfType<int>(json, r'iEzsignpageHeightpdf')!,
+        iEzsignpagePagenumber: mapValueOfType<int>(json, r'iEzsignpagePagenumber')!,
+        sImageUrl: mapValueOfType<String>(json, r'sImageUrl')!,
       );
     }
     return null;
   }
 
-  static List<EzsignpageResponse> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(EzsignpageResponse.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <EzsignpageResponse>[];
+  static List<EzsignpageResponse>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <EzsignpageResponse>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = EzsignpageResponse.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
 
   static Map<String, EzsignpageResponse> mapFromJson(dynamic json) {
     final map = <String, EzsignpageResponse>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) => map[key] = EzsignpageResponse.fromJson(value));
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = EzsignpageResponse.fromJson(entry.value);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
 
   // maps a json object with a list of EzsignpageResponse-objects as value to a dart map
-  static Map<String, List<EzsignpageResponse>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<EzsignpageResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignpageResponse>>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) {
-          map[key] = EzsignpageResponse.listFromJson(
-            value,
-            emptyIsNull: emptyIsNull,
-            growable: growable,
-          );
-        });
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = EzsignpageResponse.listFromJson(entry.value, growable: growable,);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
+
+  /// The list of required keys that must be present in a JSON.
+  static const requiredKeys = <String>{
+    'pkiEzsignpageID',
+    'iEzsignpageWidthimage',
+    'iEzsignpageHeightimage',
+    'iEzsignpageWidthpdf',
+    'iEzsignpageHeightpdf',
+    'iEzsignpagePagenumber',
+    'sImageUrl',
+  };
 }
 

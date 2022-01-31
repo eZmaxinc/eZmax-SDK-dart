@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -15,14 +15,26 @@ class EzsignfoldersignerassociationResponseCompound {
   EzsignfoldersignerassociationResponseCompound({
     this.objUser,
     this.objEzsignsigner,
-    @required this.pkiEzsignfoldersignerassociationID,
-    @required this.fkiEzsignfolderID,
-    @required this.bEzsignfoldersignerassociationReceivecopy,
+    required this.pkiEzsignfoldersignerassociationID,
+    required this.fkiEzsignfolderID,
+    required this.bEzsignfoldersignerassociationReceivecopy,
   });
 
-  EzsignfoldersignerassociationResponseCompoundUser objUser;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  EzsignfoldersignerassociationResponseCompoundUser? objUser;
 
-  EzsignsignerResponseCompound objEzsignsigner;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  EzsignsignerResponseCompound? objEzsignsigner;
 
   /// The unique ID of the Ezsignfoldersignerassociation
   int pkiEzsignfoldersignerassociationID;
@@ -43,12 +55,12 @@ class EzsignfoldersignerassociationResponseCompound {
 
   @override
   int get hashCode =>
-  // ignore: unnecessary_parenthesis
-    (objUser == null ? 0 : objUser.hashCode) +
-    (objEzsignsigner == null ? 0 : objEzsignsigner.hashCode) +
-    (pkiEzsignfoldersignerassociationID == null ? 0 : pkiEzsignfoldersignerassociationID.hashCode) +
-    (fkiEzsignfolderID == null ? 0 : fkiEzsignfolderID.hashCode) +
-    (bEzsignfoldersignerassociationReceivecopy == null ? 0 : bEzsignfoldersignerassociationReceivecopy.hashCode);
+    // ignore: unnecessary_parenthesis
+    (objUser == null ? 0 : objUser!.hashCode) +
+    (objEzsignsigner == null ? 0 : objEzsignsigner!.hashCode) +
+    (pkiEzsignfoldersignerassociationID.hashCode) +
+    (fkiEzsignfolderID.hashCode) +
+    (bEzsignfoldersignerassociationReceivecopy.hashCode);
 
   @override
   String toString() => 'EzsignfoldersignerassociationResponseCompound[objUser=$objUser, objEzsignsigner=$objEzsignsigner, pkiEzsignfoldersignerassociationID=$pkiEzsignfoldersignerassociationID, fkiEzsignfolderID=$fkiEzsignfolderID, bEzsignfoldersignerassociationReceivecopy=$bEzsignfoldersignerassociationReceivecopy]';
@@ -70,50 +82,79 @@ class EzsignfoldersignerassociationResponseCompound {
   /// Returns a new [EzsignfoldersignerassociationResponseCompound] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static EzsignfoldersignerassociationResponseCompound fromJson(dynamic value) {
+  static EzsignfoldersignerassociationResponseCompound? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
+
+      // Ensure that the map contains the required keys.
+      // Note 1: the values aren't checked for validity beyond being non-null.
+      // Note 2: this code is stripped in release mode!
+      assert(() {
+        requiredKeys.forEach((key) {
+          assert(json.containsKey(key), 'Required key "EzsignfoldersignerassociationResponseCompound[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "EzsignfoldersignerassociationResponseCompound[$key]" has a null value in JSON.');
+        });
+        return true;
+      }());
+
       return EzsignfoldersignerassociationResponseCompound(
         objUser: EzsignfoldersignerassociationResponseCompoundUser.fromJson(json[r'objUser']),
         objEzsignsigner: EzsignsignerResponseCompound.fromJson(json[r'objEzsignsigner']),
-        pkiEzsignfoldersignerassociationID: mapValueOfType<int>(json, r'pkiEzsignfoldersignerassociationID'),
-        fkiEzsignfolderID: mapValueOfType<int>(json, r'fkiEzsignfolderID'),
-        bEzsignfoldersignerassociationReceivecopy: mapValueOfType<bool>(json, r'bEzsignfoldersignerassociationReceivecopy'),
+        pkiEzsignfoldersignerassociationID: mapValueOfType<int>(json, r'pkiEzsignfoldersignerassociationID')!,
+        fkiEzsignfolderID: mapValueOfType<int>(json, r'fkiEzsignfolderID')!,
+        bEzsignfoldersignerassociationReceivecopy: mapValueOfType<bool>(json, r'bEzsignfoldersignerassociationReceivecopy')!,
       );
     }
     return null;
   }
 
-  static List<EzsignfoldersignerassociationResponseCompound> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(EzsignfoldersignerassociationResponseCompound.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <EzsignfoldersignerassociationResponseCompound>[];
+  static List<EzsignfoldersignerassociationResponseCompound>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <EzsignfoldersignerassociationResponseCompound>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = EzsignfoldersignerassociationResponseCompound.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
 
   static Map<String, EzsignfoldersignerassociationResponseCompound> mapFromJson(dynamic json) {
     final map = <String, EzsignfoldersignerassociationResponseCompound>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) => map[key] = EzsignfoldersignerassociationResponseCompound.fromJson(value));
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = EzsignfoldersignerassociationResponseCompound.fromJson(entry.value);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
 
   // maps a json object with a list of EzsignfoldersignerassociationResponseCompound-objects as value to a dart map
-  static Map<String, List<EzsignfoldersignerassociationResponseCompound>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<EzsignfoldersignerassociationResponseCompound>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignfoldersignerassociationResponseCompound>>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) {
-          map[key] = EzsignfoldersignerassociationResponseCompound.listFromJson(
-            value,
-            emptyIsNull: emptyIsNull,
-            growable: growable,
-          );
-        });
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = EzsignfoldersignerassociationResponseCompound.listFromJson(entry.value, growable: growable,);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
+
+  /// The list of required keys that must be present in a JSON.
+  static const requiredKeys = <String>{
+    'pkiEzsignfoldersignerassociationID',
+    'fkiEzsignfolderID',
+    'bEzsignfoldersignerassociationReceivecopy',
+  };
 }
 

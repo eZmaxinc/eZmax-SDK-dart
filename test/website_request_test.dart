@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -13,7 +13,7 @@ import 'package:test/test.dart';
 
 // tests for WebsiteRequest
 void main() {
-  final instance = WebsiteRequest();
+  // final instance = WebsiteRequest();
 
   group('test WebsiteRequest', () {
     // The unique ID of the Websitetype.  Valid values:  |Value|Description| |-|-| |1|Website| |2|Twitter| |3|Facebook| |4|Survey|

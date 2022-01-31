@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -13,7 +13,7 @@ part of openapi.api;
 class EzsignsignerRequestCompoundAllOf {
   /// Returns a new [EzsignsignerRequestCompoundAllOf] instance.
   EzsignsignerRequestCompoundAllOf({
-    @required this.objContact,
+    required this.objContact,
   });
 
   EzsignsignerRequestCompoundContact objContact;
@@ -24,8 +24,8 @@ class EzsignsignerRequestCompoundAllOf {
 
   @override
   int get hashCode =>
-  // ignore: unnecessary_parenthesis
-    (objContact == null ? 0 : objContact.hashCode);
+    // ignore: unnecessary_parenthesis
+    (objContact.hashCode);
 
   @override
   String toString() => 'EzsignsignerRequestCompoundAllOf[objContact=$objContact]';
@@ -39,46 +39,73 @@ class EzsignsignerRequestCompoundAllOf {
   /// Returns a new [EzsignsignerRequestCompoundAllOf] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static EzsignsignerRequestCompoundAllOf fromJson(dynamic value) {
+  static EzsignsignerRequestCompoundAllOf? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
+
+      // Ensure that the map contains the required keys.
+      // Note 1: the values aren't checked for validity beyond being non-null.
+      // Note 2: this code is stripped in release mode!
+      assert(() {
+        requiredKeys.forEach((key) {
+          assert(json.containsKey(key), 'Required key "EzsignsignerRequestCompoundAllOf[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "EzsignsignerRequestCompoundAllOf[$key]" has a null value in JSON.');
+        });
+        return true;
+      }());
+
       return EzsignsignerRequestCompoundAllOf(
-        objContact: EzsignsignerRequestCompoundContact.fromJson(json[r'objContact']),
+        objContact: EzsignsignerRequestCompoundContact.fromJson(json[r'objContact'])!,
       );
     }
     return null;
   }
 
-  static List<EzsignsignerRequestCompoundAllOf> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(EzsignsignerRequestCompoundAllOf.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <EzsignsignerRequestCompoundAllOf>[];
+  static List<EzsignsignerRequestCompoundAllOf>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <EzsignsignerRequestCompoundAllOf>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = EzsignsignerRequestCompoundAllOf.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
 
   static Map<String, EzsignsignerRequestCompoundAllOf> mapFromJson(dynamic json) {
     final map = <String, EzsignsignerRequestCompoundAllOf>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) => map[key] = EzsignsignerRequestCompoundAllOf.fromJson(value));
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = EzsignsignerRequestCompoundAllOf.fromJson(entry.value);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
 
   // maps a json object with a list of EzsignsignerRequestCompoundAllOf-objects as value to a dart map
-  static Map<String, List<EzsignsignerRequestCompoundAllOf>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<EzsignsignerRequestCompoundAllOf>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignsignerRequestCompoundAllOf>>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) {
-          map[key] = EzsignsignerRequestCompoundAllOf.listFromJson(
-            value,
-            emptyIsNull: emptyIsNull,
-            growable: growable,
-          );
-        });
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = EzsignsignerRequestCompoundAllOf.listFromJson(entry.value, growable: growable,);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
+
+  /// The list of required keys that must be present in a JSON.
+  static const requiredKeys = <String>{
+    'objContact',
+  };
 }
 

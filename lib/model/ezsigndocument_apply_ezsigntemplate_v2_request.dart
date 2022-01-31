@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -13,7 +13,7 @@ part of openapi.api;
 class EzsigndocumentApplyEzsigntemplateV2Request {
   /// Returns a new [EzsigndocumentApplyEzsigntemplateV2Request] instance.
   EzsigndocumentApplyEzsigntemplateV2Request({
-    @required this.fkiEzsigntemplateID,
+    required this.fkiEzsigntemplateID,
     this.aSEzsigntemplatesigner = const [],
     this.aPkiEzsignfoldersignerassociationID = const [],
   });
@@ -33,10 +33,10 @@ class EzsigndocumentApplyEzsigntemplateV2Request {
 
   @override
   int get hashCode =>
-  // ignore: unnecessary_parenthesis
-    (fkiEzsigntemplateID == null ? 0 : fkiEzsigntemplateID.hashCode) +
-    (aSEzsigntemplatesigner == null ? 0 : aSEzsigntemplatesigner.hashCode) +
-    (aPkiEzsignfoldersignerassociationID == null ? 0 : aPkiEzsignfoldersignerassociationID.hashCode);
+    // ignore: unnecessary_parenthesis
+    (fkiEzsigntemplateID.hashCode) +
+    (aSEzsigntemplatesigner.hashCode) +
+    (aPkiEzsignfoldersignerassociationID.hashCode);
 
   @override
   String toString() => 'EzsigndocumentApplyEzsigntemplateV2Request[fkiEzsigntemplateID=$fkiEzsigntemplateID, aSEzsigntemplatesigner=$aSEzsigntemplatesigner, aPkiEzsignfoldersignerassociationID=$aPkiEzsignfoldersignerassociationID]';
@@ -52,52 +52,81 @@ class EzsigndocumentApplyEzsigntemplateV2Request {
   /// Returns a new [EzsigndocumentApplyEzsigntemplateV2Request] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static EzsigndocumentApplyEzsigntemplateV2Request fromJson(dynamic value) {
+  static EzsigndocumentApplyEzsigntemplateV2Request? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
+
+      // Ensure that the map contains the required keys.
+      // Note 1: the values aren't checked for validity beyond being non-null.
+      // Note 2: this code is stripped in release mode!
+      assert(() {
+        requiredKeys.forEach((key) {
+          assert(json.containsKey(key), 'Required key "EzsigndocumentApplyEzsigntemplateV2Request[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "EzsigndocumentApplyEzsigntemplateV2Request[$key]" has a null value in JSON.');
+        });
+        return true;
+      }());
+
       return EzsigndocumentApplyEzsigntemplateV2Request(
-        fkiEzsigntemplateID: mapValueOfType<int>(json, r'fkiEzsigntemplateID'),
+        fkiEzsigntemplateID: mapValueOfType<int>(json, r'fkiEzsigntemplateID')!,
         aSEzsigntemplatesigner: json[r'a_sEzsigntemplatesigner'] is List
-          ? (json[r'a_sEzsigntemplatesigner'] as List).cast<String>()
-          : null,
+            ? (json[r'a_sEzsigntemplatesigner'] as List).cast<String>()
+            : const [],
         aPkiEzsignfoldersignerassociationID: json[r'a_pkiEzsignfoldersignerassociationID'] is List
-          ? (json[r'a_pkiEzsignfoldersignerassociationID'] as List).cast<int>()
-          : null,
+            ? (json[r'a_pkiEzsignfoldersignerassociationID'] as List).cast<int>()
+            : const [],
       );
     }
     return null;
   }
 
-  static List<EzsigndocumentApplyEzsigntemplateV2Request> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(EzsigndocumentApplyEzsigntemplateV2Request.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <EzsigndocumentApplyEzsigntemplateV2Request>[];
+  static List<EzsigndocumentApplyEzsigntemplateV2Request>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <EzsigndocumentApplyEzsigntemplateV2Request>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = EzsigndocumentApplyEzsigntemplateV2Request.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
 
   static Map<String, EzsigndocumentApplyEzsigntemplateV2Request> mapFromJson(dynamic json) {
     final map = <String, EzsigndocumentApplyEzsigntemplateV2Request>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) => map[key] = EzsigndocumentApplyEzsigntemplateV2Request.fromJson(value));
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = EzsigndocumentApplyEzsigntemplateV2Request.fromJson(entry.value);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
 
   // maps a json object with a list of EzsigndocumentApplyEzsigntemplateV2Request-objects as value to a dart map
-  static Map<String, List<EzsigndocumentApplyEzsigntemplateV2Request>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<EzsigndocumentApplyEzsigntemplateV2Request>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsigndocumentApplyEzsigntemplateV2Request>>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) {
-          map[key] = EzsigndocumentApplyEzsigntemplateV2Request.listFromJson(
-            value,
-            emptyIsNull: emptyIsNull,
-            growable: growable,
-          );
-        });
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = EzsigndocumentApplyEzsigntemplateV2Request.listFromJson(entry.value, growable: growable,);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
+
+  /// The list of required keys that must be present in a JSON.
+  static const requiredKeys = <String>{
+    'fkiEzsigntemplateID',
+    'a_sEzsigntemplatesigner',
+    'a_pkiEzsignfoldersignerassociationID',
+  };
 }
 

@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -13,10 +13,10 @@ part of openapi.api;
 class CustomEzsignsignaturestatusResponse {
   /// Returns a new [CustomEzsignsignaturestatusResponse] instance.
   CustomEzsignsignaturestatusResponse({
-    @required this.eEzsignsignaturestatusSteptype,
-    @required this.iEzsignsignaturestatusStep,
-    @required this.iEzsignsignaturestatusTotal,
-    @required this.iEzsignsignaturestatusSigned,
+    required this.eEzsignsignaturestatusSteptype,
+    required this.iEzsignsignaturestatusStep,
+    required this.iEzsignsignaturestatusTotal,
+    required this.iEzsignsignaturestatusSigned,
   });
 
   /// Type of step
@@ -40,11 +40,11 @@ class CustomEzsignsignaturestatusResponse {
 
   @override
   int get hashCode =>
-  // ignore: unnecessary_parenthesis
-    (eEzsignsignaturestatusSteptype == null ? 0 : eEzsignsignaturestatusSteptype.hashCode) +
-    (iEzsignsignaturestatusStep == null ? 0 : iEzsignsignaturestatusStep.hashCode) +
-    (iEzsignsignaturestatusTotal == null ? 0 : iEzsignsignaturestatusTotal.hashCode) +
-    (iEzsignsignaturestatusSigned == null ? 0 : iEzsignsignaturestatusSigned.hashCode);
+    // ignore: unnecessary_parenthesis
+    (eEzsignsignaturestatusSteptype.hashCode) +
+    (iEzsignsignaturestatusStep.hashCode) +
+    (iEzsignsignaturestatusTotal.hashCode) +
+    (iEzsignsignaturestatusSigned.hashCode);
 
   @override
   String toString() => 'CustomEzsignsignaturestatusResponse[eEzsignsignaturestatusSteptype=$eEzsignsignaturestatusSteptype, iEzsignsignaturestatusStep=$iEzsignsignaturestatusStep, iEzsignsignaturestatusTotal=$iEzsignsignaturestatusTotal, iEzsignsignaturestatusSigned=$iEzsignsignaturestatusSigned]';
@@ -61,50 +61,80 @@ class CustomEzsignsignaturestatusResponse {
   /// Returns a new [CustomEzsignsignaturestatusResponse] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static CustomEzsignsignaturestatusResponse fromJson(dynamic value) {
+  static CustomEzsignsignaturestatusResponse? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
+
+      // Ensure that the map contains the required keys.
+      // Note 1: the values aren't checked for validity beyond being non-null.
+      // Note 2: this code is stripped in release mode!
+      assert(() {
+        requiredKeys.forEach((key) {
+          assert(json.containsKey(key), 'Required key "CustomEzsignsignaturestatusResponse[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "CustomEzsignsignaturestatusResponse[$key]" has a null value in JSON.');
+        });
+        return true;
+      }());
+
       return CustomEzsignsignaturestatusResponse(
-        eEzsignsignaturestatusSteptype: CustomEzsignsignaturestatusResponseEEzsignsignaturestatusSteptypeEnum.fromJson(json[r'eEzsignsignaturestatusSteptype']),
-        iEzsignsignaturestatusStep: mapValueOfType<int>(json, r'iEzsignsignaturestatusStep'),
-        iEzsignsignaturestatusTotal: mapValueOfType<int>(json, r'iEzsignsignaturestatusTotal'),
-        iEzsignsignaturestatusSigned: mapValueOfType<int>(json, r'iEzsignsignaturestatusSigned'),
+        eEzsignsignaturestatusSteptype: CustomEzsignsignaturestatusResponseEEzsignsignaturestatusSteptypeEnum.fromJson(json[r'eEzsignsignaturestatusSteptype'])!,
+        iEzsignsignaturestatusStep: mapValueOfType<int>(json, r'iEzsignsignaturestatusStep')!,
+        iEzsignsignaturestatusTotal: mapValueOfType<int>(json, r'iEzsignsignaturestatusTotal')!,
+        iEzsignsignaturestatusSigned: mapValueOfType<int>(json, r'iEzsignsignaturestatusSigned')!,
       );
     }
     return null;
   }
 
-  static List<CustomEzsignsignaturestatusResponse> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(CustomEzsignsignaturestatusResponse.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <CustomEzsignsignaturestatusResponse>[];
+  static List<CustomEzsignsignaturestatusResponse>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <CustomEzsignsignaturestatusResponse>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = CustomEzsignsignaturestatusResponse.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
 
   static Map<String, CustomEzsignsignaturestatusResponse> mapFromJson(dynamic json) {
     final map = <String, CustomEzsignsignaturestatusResponse>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) => map[key] = CustomEzsignsignaturestatusResponse.fromJson(value));
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = CustomEzsignsignaturestatusResponse.fromJson(entry.value);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
 
   // maps a json object with a list of CustomEzsignsignaturestatusResponse-objects as value to a dart map
-  static Map<String, List<CustomEzsignsignaturestatusResponse>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<CustomEzsignsignaturestatusResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<CustomEzsignsignaturestatusResponse>>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) {
-          map[key] = CustomEzsignsignaturestatusResponse.listFromJson(
-            value,
-            emptyIsNull: emptyIsNull,
-            growable: growable,
-          );
-        });
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = CustomEzsignsignaturestatusResponse.listFromJson(entry.value, growable: growable,);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
+
+  /// The list of required keys that must be present in a JSON.
+  static const requiredKeys = <String>{
+    'eEzsignsignaturestatusSteptype',
+    'iEzsignsignaturestatusStep',
+    'iEzsignsignaturestatusTotal',
+    'iEzsignsignaturestatusSigned',
+  };
 }
 
 /// Type of step
@@ -116,7 +146,7 @@ class CustomEzsignsignaturestatusResponseEEzsignsignaturestatusSteptypeEnum {
   final String value;
 
   @override
-  String toString() => value ?? '';
+  String toString() => value;
 
   String toJson() => value;
 
@@ -129,13 +159,20 @@ class CustomEzsignsignaturestatusResponseEEzsignsignaturestatusSteptypeEnum {
     signature,
   ];
 
-  static CustomEzsignsignaturestatusResponseEEzsignsignaturestatusSteptypeEnum fromJson(dynamic value) =>
-    CustomEzsignsignaturestatusResponseEEzsignsignaturestatusSteptypeEnumTypeTransformer().decode(value);
+  static CustomEzsignsignaturestatusResponseEEzsignsignaturestatusSteptypeEnum? fromJson(dynamic value) => CustomEzsignsignaturestatusResponseEEzsignsignaturestatusSteptypeEnumTypeTransformer().decode(value);
 
-  static List<CustomEzsignsignaturestatusResponseEEzsignsignaturestatusSteptypeEnum> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(CustomEzsignsignaturestatusResponseEEzsignsignaturestatusSteptypeEnum.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <CustomEzsignsignaturestatusResponseEEzsignsignaturestatusSteptypeEnum>[];
+  static List<CustomEzsignsignaturestatusResponseEEzsignsignaturestatusSteptypeEnum>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <CustomEzsignsignaturestatusResponseEEzsignsignaturestatusSteptypeEnum>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = CustomEzsignsignaturestatusResponseEEzsignsignaturestatusSteptypeEnum.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
 }
 
 /// Transformation class that can [encode] an instance of [CustomEzsignsignaturestatusResponseEEzsignsignaturestatusSteptypeEnum] to String,
@@ -155,13 +192,13 @@ class CustomEzsignsignaturestatusResponseEEzsignsignaturestatusSteptypeEnumTypeT
   ///
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
-  CustomEzsignsignaturestatusResponseEEzsignsignaturestatusSteptypeEnum decode(dynamic data, {bool allowNull}) {
+  CustomEzsignsignaturestatusResponseEEzsignsignaturestatusSteptypeEnum? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data.toString()) {
         case r'Form': return CustomEzsignsignaturestatusResponseEEzsignsignaturestatusSteptypeEnum.form;
         case r'Signature': return CustomEzsignsignaturestatusResponseEEzsignsignaturestatusSteptypeEnum.signature;
         default:
-          if (allowNull == false) {
+          if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
           }
       }
@@ -170,7 +207,7 @@ class CustomEzsignsignaturestatusResponseEEzsignsignaturestatusSteptypeEnumTypeT
   }
 
   /// Singleton [CustomEzsignsignaturestatusResponseEEzsignsignaturestatusSteptypeEnumTypeTransformer] instance.
-  static CustomEzsignsignaturestatusResponseEEzsignsignaturestatusSteptypeEnumTypeTransformer _instance;
+  static CustomEzsignsignaturestatusResponseEEzsignsignaturestatusSteptypeEnumTypeTransformer? _instance;
 }
 
 

@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -13,7 +13,7 @@ part of openapi.api;
 class EzsignsignatureCreateObjectV1ResponseAllOf {
   /// Returns a new [EzsignsignatureCreateObjectV1ResponseAllOf] instance.
   EzsignsignatureCreateObjectV1ResponseAllOf({
-    @required this.mPayload,
+    required this.mPayload,
   });
 
   EzsignsignatureCreateObjectV1ResponseMPayload mPayload;
@@ -24,8 +24,8 @@ class EzsignsignatureCreateObjectV1ResponseAllOf {
 
   @override
   int get hashCode =>
-  // ignore: unnecessary_parenthesis
-    (mPayload == null ? 0 : mPayload.hashCode);
+    // ignore: unnecessary_parenthesis
+    (mPayload.hashCode);
 
   @override
   String toString() => 'EzsignsignatureCreateObjectV1ResponseAllOf[mPayload=$mPayload]';
@@ -39,46 +39,73 @@ class EzsignsignatureCreateObjectV1ResponseAllOf {
   /// Returns a new [EzsignsignatureCreateObjectV1ResponseAllOf] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static EzsignsignatureCreateObjectV1ResponseAllOf fromJson(dynamic value) {
+  static EzsignsignatureCreateObjectV1ResponseAllOf? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
+
+      // Ensure that the map contains the required keys.
+      // Note 1: the values aren't checked for validity beyond being non-null.
+      // Note 2: this code is stripped in release mode!
+      assert(() {
+        requiredKeys.forEach((key) {
+          assert(json.containsKey(key), 'Required key "EzsignsignatureCreateObjectV1ResponseAllOf[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "EzsignsignatureCreateObjectV1ResponseAllOf[$key]" has a null value in JSON.');
+        });
+        return true;
+      }());
+
       return EzsignsignatureCreateObjectV1ResponseAllOf(
-        mPayload: EzsignsignatureCreateObjectV1ResponseMPayload.fromJson(json[r'mPayload']),
+        mPayload: EzsignsignatureCreateObjectV1ResponseMPayload.fromJson(json[r'mPayload'])!,
       );
     }
     return null;
   }
 
-  static List<EzsignsignatureCreateObjectV1ResponseAllOf> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(EzsignsignatureCreateObjectV1ResponseAllOf.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <EzsignsignatureCreateObjectV1ResponseAllOf>[];
+  static List<EzsignsignatureCreateObjectV1ResponseAllOf>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <EzsignsignatureCreateObjectV1ResponseAllOf>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = EzsignsignatureCreateObjectV1ResponseAllOf.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
 
   static Map<String, EzsignsignatureCreateObjectV1ResponseAllOf> mapFromJson(dynamic json) {
     final map = <String, EzsignsignatureCreateObjectV1ResponseAllOf>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) => map[key] = EzsignsignatureCreateObjectV1ResponseAllOf.fromJson(value));
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = EzsignsignatureCreateObjectV1ResponseAllOf.fromJson(entry.value);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
 
   // maps a json object with a list of EzsignsignatureCreateObjectV1ResponseAllOf-objects as value to a dart map
-  static Map<String, List<EzsignsignatureCreateObjectV1ResponseAllOf>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<EzsignsignatureCreateObjectV1ResponseAllOf>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignsignatureCreateObjectV1ResponseAllOf>>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) {
-          map[key] = EzsignsignatureCreateObjectV1ResponseAllOf.listFromJson(
-            value,
-            emptyIsNull: emptyIsNull,
-            growable: growable,
-          );
-        });
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = EzsignsignatureCreateObjectV1ResponseAllOf.listFromJson(entry.value, growable: growable,);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
+
+  /// The list of required keys that must be present in a JSON.
+  static const requiredKeys = <String>{
+    'mPayload',
+  };
 }
 

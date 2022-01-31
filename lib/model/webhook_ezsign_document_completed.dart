@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -13,8 +13,8 @@ part of openapi.api;
 class WebhookEzsignDocumentCompleted {
   /// Returns a new [WebhookEzsignDocumentCompleted] instance.
   WebhookEzsignDocumentCompleted({
-    @required this.objEzsigndocument,
-    @required this.objWebhook,
+    required this.objEzsigndocument,
+    required this.objWebhook,
     this.aObjAttempt = const [],
   });
 
@@ -33,10 +33,10 @@ class WebhookEzsignDocumentCompleted {
 
   @override
   int get hashCode =>
-  // ignore: unnecessary_parenthesis
-    (objEzsigndocument == null ? 0 : objEzsigndocument.hashCode) +
-    (objWebhook == null ? 0 : objWebhook.hashCode) +
-    (aObjAttempt == null ? 0 : aObjAttempt.hashCode);
+    // ignore: unnecessary_parenthesis
+    (objEzsigndocument.hashCode) +
+    (objWebhook.hashCode) +
+    (aObjAttempt.hashCode);
 
   @override
   String toString() => 'WebhookEzsignDocumentCompleted[objEzsigndocument=$objEzsigndocument, objWebhook=$objWebhook, aObjAttempt=$aObjAttempt]';
@@ -52,48 +52,77 @@ class WebhookEzsignDocumentCompleted {
   /// Returns a new [WebhookEzsignDocumentCompleted] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static WebhookEzsignDocumentCompleted fromJson(dynamic value) {
+  static WebhookEzsignDocumentCompleted? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
+
+      // Ensure that the map contains the required keys.
+      // Note 1: the values aren't checked for validity beyond being non-null.
+      // Note 2: this code is stripped in release mode!
+      assert(() {
+        requiredKeys.forEach((key) {
+          assert(json.containsKey(key), 'Required key "WebhookEzsignDocumentCompleted[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "WebhookEzsignDocumentCompleted[$key]" has a null value in JSON.');
+        });
+        return true;
+      }());
+
       return WebhookEzsignDocumentCompleted(
-        objEzsigndocument: EzsigndocumentResponse.fromJson(json[r'objEzsigndocument']),
-        objWebhook: WebhookResponse.fromJson(json[r'objWebhook']),
-        aObjAttempt: AttemptResponse.listFromJson(json[r'a_objAttempt']),
+        objEzsigndocument: EzsigndocumentResponse.fromJson(json[r'objEzsigndocument'])!,
+        objWebhook: WebhookResponse.fromJson(json[r'objWebhook'])!,
+        aObjAttempt: AttemptResponse.listFromJson(json[r'a_objAttempt'])!,
       );
     }
     return null;
   }
 
-  static List<WebhookEzsignDocumentCompleted> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(WebhookEzsignDocumentCompleted.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <WebhookEzsignDocumentCompleted>[];
+  static List<WebhookEzsignDocumentCompleted>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <WebhookEzsignDocumentCompleted>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = WebhookEzsignDocumentCompleted.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
 
   static Map<String, WebhookEzsignDocumentCompleted> mapFromJson(dynamic json) {
     final map = <String, WebhookEzsignDocumentCompleted>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) => map[key] = WebhookEzsignDocumentCompleted.fromJson(value));
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = WebhookEzsignDocumentCompleted.fromJson(entry.value);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
 
   // maps a json object with a list of WebhookEzsignDocumentCompleted-objects as value to a dart map
-  static Map<String, List<WebhookEzsignDocumentCompleted>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<WebhookEzsignDocumentCompleted>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<WebhookEzsignDocumentCompleted>>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) {
-          map[key] = WebhookEzsignDocumentCompleted.listFromJson(
-            value,
-            emptyIsNull: emptyIsNull,
-            growable: growable,
-          );
-        });
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = WebhookEzsignDocumentCompleted.listFromJson(entry.value, growable: growable,);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
+
+  /// The list of required keys that must be present in a JSON.
+  static const requiredKeys = <String>{
+    'objEzsigndocument',
+    'objWebhook',
+    'a_objAttempt',
+  };
 }
 

@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -13,8 +13,8 @@ part of openapi.api;
 class EmailRequest {
   /// Returns a new [EmailRequest] instance.
   EmailRequest({
-    @required this.fkiEmailtypeID,
-    @required this.sEmailAddress,
+    required this.fkiEmailtypeID,
+    required this.sEmailAddress,
   });
 
   /// The unique ID of the Emailtype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home|
@@ -30,9 +30,9 @@ class EmailRequest {
 
   @override
   int get hashCode =>
-  // ignore: unnecessary_parenthesis
-    (fkiEmailtypeID == null ? 0 : fkiEmailtypeID.hashCode) +
-    (sEmailAddress == null ? 0 : sEmailAddress.hashCode);
+    // ignore: unnecessary_parenthesis
+    (fkiEmailtypeID.hashCode) +
+    (sEmailAddress.hashCode);
 
   @override
   String toString() => 'EmailRequest[fkiEmailtypeID=$fkiEmailtypeID, sEmailAddress=$sEmailAddress]';
@@ -47,47 +47,75 @@ class EmailRequest {
   /// Returns a new [EmailRequest] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static EmailRequest fromJson(dynamic value) {
+  static EmailRequest? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
+
+      // Ensure that the map contains the required keys.
+      // Note 1: the values aren't checked for validity beyond being non-null.
+      // Note 2: this code is stripped in release mode!
+      assert(() {
+        requiredKeys.forEach((key) {
+          assert(json.containsKey(key), 'Required key "EmailRequest[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "EmailRequest[$key]" has a null value in JSON.');
+        });
+        return true;
+      }());
+
       return EmailRequest(
-        fkiEmailtypeID: mapValueOfType<int>(json, r'fkiEmailtypeID'),
-        sEmailAddress: mapValueOfType<String>(json, r'sEmailAddress'),
+        fkiEmailtypeID: mapValueOfType<int>(json, r'fkiEmailtypeID')!,
+        sEmailAddress: mapValueOfType<String>(json, r'sEmailAddress')!,
       );
     }
     return null;
   }
 
-  static List<EmailRequest> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(EmailRequest.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <EmailRequest>[];
+  static List<EmailRequest>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <EmailRequest>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = EmailRequest.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
 
   static Map<String, EmailRequest> mapFromJson(dynamic json) {
     final map = <String, EmailRequest>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) => map[key] = EmailRequest.fromJson(value));
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = EmailRequest.fromJson(entry.value);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
 
   // maps a json object with a list of EmailRequest-objects as value to a dart map
-  static Map<String, List<EmailRequest>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<EmailRequest>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EmailRequest>>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) {
-          map[key] = EmailRequest.listFromJson(
-            value,
-            emptyIsNull: emptyIsNull,
-            growable: growable,
-          );
-        });
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = EmailRequest.listFromJson(entry.value, growable: growable,);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
+
+  /// The list of required keys that must be present in a JSON.
+  static const requiredKeys = <String>{
+    'fkiEmailtypeID',
+    'sEmailAddress',
+  };
 }
 

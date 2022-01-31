@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -13,8 +13,8 @@ part of openapi.api;
 class EzsigndocumentGetWordsPositionsV1Request {
   /// Returns a new [EzsigndocumentGetWordsPositionsV1Request] instance.
   EzsigndocumentGetWordsPositionsV1Request({
-    @required this.eGet,
-    @required this.bWordCaseSensitive,
+    required this.eGet,
+    required this.bWordCaseSensitive,
     this.aSWord = const [],
   });
 
@@ -35,10 +35,10 @@ class EzsigndocumentGetWordsPositionsV1Request {
 
   @override
   int get hashCode =>
-  // ignore: unnecessary_parenthesis
-    (eGet == null ? 0 : eGet.hashCode) +
-    (bWordCaseSensitive == null ? 0 : bWordCaseSensitive.hashCode) +
-    (aSWord == null ? 0 : aSWord.hashCode);
+    // ignore: unnecessary_parenthesis
+    (eGet.hashCode) +
+    (bWordCaseSensitive.hashCode) +
+    (aSWord.hashCode);
 
   @override
   String toString() => 'EzsigndocumentGetWordsPositionsV1Request[eGet=$eGet, bWordCaseSensitive=$bWordCaseSensitive, aSWord=$aSWord]';
@@ -47,60 +47,86 @@ class EzsigndocumentGetWordsPositionsV1Request {
     final json = <String, dynamic>{};
       json[r'eGet'] = eGet;
       json[r'bWordCaseSensitive'] = bWordCaseSensitive;
-    if (aSWord != null) {
       json[r'a_sWord'] = aSWord;
-    }
     return json;
   }
 
   /// Returns a new [EzsigndocumentGetWordsPositionsV1Request] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static EzsigndocumentGetWordsPositionsV1Request fromJson(dynamic value) {
+  static EzsigndocumentGetWordsPositionsV1Request? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
+
+      // Ensure that the map contains the required keys.
+      // Note 1: the values aren't checked for validity beyond being non-null.
+      // Note 2: this code is stripped in release mode!
+      assert(() {
+        requiredKeys.forEach((key) {
+          assert(json.containsKey(key), 'Required key "EzsigndocumentGetWordsPositionsV1Request[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "EzsigndocumentGetWordsPositionsV1Request[$key]" has a null value in JSON.');
+        });
+        return true;
+      }());
+
       return EzsigndocumentGetWordsPositionsV1Request(
-        eGet: EzsigndocumentGetWordsPositionsV1RequestEGetEnum.fromJson(json[r'eGet']),
-        bWordCaseSensitive: mapValueOfType<bool>(json, r'bWordCaseSensitive'),
+        eGet: EzsigndocumentGetWordsPositionsV1RequestEGetEnum.fromJson(json[r'eGet'])!,
+        bWordCaseSensitive: mapValueOfType<bool>(json, r'bWordCaseSensitive')!,
         aSWord: json[r'a_sWord'] is List
-          ? (json[r'a_sWord'] as List).cast<String>()
-          : null,
+            ? (json[r'a_sWord'] as List).cast<String>()
+            : const [],
       );
     }
     return null;
   }
 
-  static List<EzsigndocumentGetWordsPositionsV1Request> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(EzsigndocumentGetWordsPositionsV1Request.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <EzsigndocumentGetWordsPositionsV1Request>[];
+  static List<EzsigndocumentGetWordsPositionsV1Request>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <EzsigndocumentGetWordsPositionsV1Request>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = EzsigndocumentGetWordsPositionsV1Request.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
 
   static Map<String, EzsigndocumentGetWordsPositionsV1Request> mapFromJson(dynamic json) {
     final map = <String, EzsigndocumentGetWordsPositionsV1Request>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) => map[key] = EzsigndocumentGetWordsPositionsV1Request.fromJson(value));
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = EzsigndocumentGetWordsPositionsV1Request.fromJson(entry.value);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
 
   // maps a json object with a list of EzsigndocumentGetWordsPositionsV1Request-objects as value to a dart map
-  static Map<String, List<EzsigndocumentGetWordsPositionsV1Request>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<EzsigndocumentGetWordsPositionsV1Request>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsigndocumentGetWordsPositionsV1Request>>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) {
-          map[key] = EzsigndocumentGetWordsPositionsV1Request.listFromJson(
-            value,
-            emptyIsNull: emptyIsNull,
-            growable: growable,
-          );
-        });
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = EzsigndocumentGetWordsPositionsV1Request.listFromJson(entry.value, growable: growable,);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
+
+  /// The list of required keys that must be present in a JSON.
+  static const requiredKeys = <String>{
+    'eGet',
+    'bWordCaseSensitive',
+  };
 }
 
 /// Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*.
@@ -112,7 +138,7 @@ class EzsigndocumentGetWordsPositionsV1RequestEGetEnum {
   final String value;
 
   @override
-  String toString() => value ?? '';
+  String toString() => value;
 
   String toJson() => value;
 
@@ -125,13 +151,20 @@ class EzsigndocumentGetWordsPositionsV1RequestEGetEnum {
     words,
   ];
 
-  static EzsigndocumentGetWordsPositionsV1RequestEGetEnum fromJson(dynamic value) =>
-    EzsigndocumentGetWordsPositionsV1RequestEGetEnumTypeTransformer().decode(value);
+  static EzsigndocumentGetWordsPositionsV1RequestEGetEnum? fromJson(dynamic value) => EzsigndocumentGetWordsPositionsV1RequestEGetEnumTypeTransformer().decode(value);
 
-  static List<EzsigndocumentGetWordsPositionsV1RequestEGetEnum> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(EzsigndocumentGetWordsPositionsV1RequestEGetEnum.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <EzsigndocumentGetWordsPositionsV1RequestEGetEnum>[];
+  static List<EzsigndocumentGetWordsPositionsV1RequestEGetEnum>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <EzsigndocumentGetWordsPositionsV1RequestEGetEnum>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = EzsigndocumentGetWordsPositionsV1RequestEGetEnum.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
 }
 
 /// Transformation class that can [encode] an instance of [EzsigndocumentGetWordsPositionsV1RequestEGetEnum] to String,
@@ -151,13 +184,13 @@ class EzsigndocumentGetWordsPositionsV1RequestEGetEnumTypeTransformer {
   ///
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
-  EzsigndocumentGetWordsPositionsV1RequestEGetEnum decode(dynamic data, {bool allowNull}) {
+  EzsigndocumentGetWordsPositionsV1RequestEGetEnum? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data.toString()) {
         case r'All': return EzsigndocumentGetWordsPositionsV1RequestEGetEnum.all;
         case r'Words': return EzsigndocumentGetWordsPositionsV1RequestEGetEnum.words;
         default:
-          if (allowNull == false) {
+          if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
           }
       }
@@ -166,7 +199,7 @@ class EzsigndocumentGetWordsPositionsV1RequestEGetEnumTypeTransformer {
   }
 
   /// Singleton [EzsigndocumentGetWordsPositionsV1RequestEGetEnumTypeTransformer] instance.
-  static EzsigndocumentGetWordsPositionsV1RequestEGetEnumTypeTransformer _instance;
+  static EzsigndocumentGetWordsPositionsV1RequestEGetEnumTypeTransformer? _instance;
 }
 
 

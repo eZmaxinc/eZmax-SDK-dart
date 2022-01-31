@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -13,8 +13,8 @@ part of openapi.api;
 class EzsignformfieldResponse {
   /// Returns a new [EzsignformfieldResponse] instance.
   EzsignformfieldResponse({
-    @required this.sEzsignformfieldLabel,
-    @required this.sEzsignformfieldValue,
+    required this.sEzsignformfieldLabel,
+    required this.sEzsignformfieldValue,
   });
 
   /// The Label for the Ezsignformfield
@@ -30,9 +30,9 @@ class EzsignformfieldResponse {
 
   @override
   int get hashCode =>
-  // ignore: unnecessary_parenthesis
-    (sEzsignformfieldLabel == null ? 0 : sEzsignformfieldLabel.hashCode) +
-    (sEzsignformfieldValue == null ? 0 : sEzsignformfieldValue.hashCode);
+    // ignore: unnecessary_parenthesis
+    (sEzsignformfieldLabel.hashCode) +
+    (sEzsignformfieldValue.hashCode);
 
   @override
   String toString() => 'EzsignformfieldResponse[sEzsignformfieldLabel=$sEzsignformfieldLabel, sEzsignformfieldValue=$sEzsignformfieldValue]';
@@ -47,47 +47,75 @@ class EzsignformfieldResponse {
   /// Returns a new [EzsignformfieldResponse] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static EzsignformfieldResponse fromJson(dynamic value) {
+  static EzsignformfieldResponse? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
+
+      // Ensure that the map contains the required keys.
+      // Note 1: the values aren't checked for validity beyond being non-null.
+      // Note 2: this code is stripped in release mode!
+      assert(() {
+        requiredKeys.forEach((key) {
+          assert(json.containsKey(key), 'Required key "EzsignformfieldResponse[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "EzsignformfieldResponse[$key]" has a null value in JSON.');
+        });
+        return true;
+      }());
+
       return EzsignformfieldResponse(
-        sEzsignformfieldLabel: mapValueOfType<String>(json, r'sEzsignformfieldLabel'),
-        sEzsignformfieldValue: mapValueOfType<String>(json, r'sEzsignformfieldValue'),
+        sEzsignformfieldLabel: mapValueOfType<String>(json, r'sEzsignformfieldLabel')!,
+        sEzsignformfieldValue: mapValueOfType<String>(json, r'sEzsignformfieldValue')!,
       );
     }
     return null;
   }
 
-  static List<EzsignformfieldResponse> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(EzsignformfieldResponse.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <EzsignformfieldResponse>[];
+  static List<EzsignformfieldResponse>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <EzsignformfieldResponse>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = EzsignformfieldResponse.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
 
   static Map<String, EzsignformfieldResponse> mapFromJson(dynamic json) {
     final map = <String, EzsignformfieldResponse>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) => map[key] = EzsignformfieldResponse.fromJson(value));
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = EzsignformfieldResponse.fromJson(entry.value);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
 
   // maps a json object with a list of EzsignformfieldResponse-objects as value to a dart map
-  static Map<String, List<EzsignformfieldResponse>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<EzsignformfieldResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignformfieldResponse>>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) {
-          map[key] = EzsignformfieldResponse.listFromJson(
-            value,
-            emptyIsNull: emptyIsNull,
-            growable: growable,
-          );
-        });
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = EzsignformfieldResponse.listFromJson(entry.value, growable: growable,);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
+
+  /// The list of required keys that must be present in a JSON.
+  static const requiredKeys = <String>{
+    'sEzsignformfieldLabel',
+    'sEzsignformfieldValue',
+  };
 }
 

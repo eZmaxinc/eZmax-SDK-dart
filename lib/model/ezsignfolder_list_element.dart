@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -13,19 +13,19 @@ part of openapi.api;
 class EzsignfolderListElement {
   /// Returns a new [EzsignfolderListElement] instance.
   EzsignfolderListElement({
-    @required this.pkiEzsignfolderID,
-    @required this.fkiEzsignfoldertypeID,
-    @required this.eEzsignfoldertypePrivacylevel,
-    @required this.sEzsignfoldertypeNameX,
-    @required this.sEzsignfolderDescription,
-    @required this.eEzsignfolderStep,
-    @required this.dtCreatedDate,
-    this.dtEzsignfolderSentdate,
-    this.dtDueDate,
-    @required this.iEzsigndocument,
-    @required this.iEzsigndocumentEdm,
-    @required this.iEzsignsignature,
-    @required this.iEzsignsignatureSigned,
+    required this.pkiEzsignfolderID,
+    required this.fkiEzsignfoldertypeID,
+    required this.eEzsignfoldertypePrivacylevel,
+    required this.sEzsignfoldertypeNameX,
+    required this.sEzsignfolderDescription,
+    required this.eEzsignfolderStep,
+    required this.dtCreatedDate,
+    required this.dtEzsignfolderSentdate,
+    required this.dtDueDate,
+    required this.iEzsigndocument,
+    required this.iEzsigndocumentEdm,
+    required this.iEzsignsignature,
+    required this.iEzsignsignatureSigned,
   });
 
   /// The unique ID of the Ezsignfolder
@@ -48,10 +48,10 @@ class EzsignfolderListElement {
   String dtCreatedDate;
 
   /// The date and time at which the Ezsign folder was sent the last time.
-  String dtEzsignfolderSentdate;
+  String? dtEzsignfolderSentdate;
 
   /// Represent a Date Time. The timezone is the one configured in the User's profile.
-  String dtDueDate;
+  String? dtDueDate;
 
   /// The total number of Ezsigndocument in the folder
   int iEzsigndocument;
@@ -83,20 +83,20 @@ class EzsignfolderListElement {
 
   @override
   int get hashCode =>
-  // ignore: unnecessary_parenthesis
-    (pkiEzsignfolderID == null ? 0 : pkiEzsignfolderID.hashCode) +
-    (fkiEzsignfoldertypeID == null ? 0 : fkiEzsignfoldertypeID.hashCode) +
-    (eEzsignfoldertypePrivacylevel == null ? 0 : eEzsignfoldertypePrivacylevel.hashCode) +
-    (sEzsignfoldertypeNameX == null ? 0 : sEzsignfoldertypeNameX.hashCode) +
-    (sEzsignfolderDescription == null ? 0 : sEzsignfolderDescription.hashCode) +
-    (eEzsignfolderStep == null ? 0 : eEzsignfolderStep.hashCode) +
-    (dtCreatedDate == null ? 0 : dtCreatedDate.hashCode) +
-    (dtEzsignfolderSentdate == null ? 0 : dtEzsignfolderSentdate.hashCode) +
-    (dtDueDate == null ? 0 : dtDueDate.hashCode) +
-    (iEzsigndocument == null ? 0 : iEzsigndocument.hashCode) +
-    (iEzsigndocumentEdm == null ? 0 : iEzsigndocumentEdm.hashCode) +
-    (iEzsignsignature == null ? 0 : iEzsignsignature.hashCode) +
-    (iEzsignsignatureSigned == null ? 0 : iEzsignsignatureSigned.hashCode);
+    // ignore: unnecessary_parenthesis
+    (pkiEzsignfolderID.hashCode) +
+    (fkiEzsignfoldertypeID.hashCode) +
+    (eEzsignfoldertypePrivacylevel.hashCode) +
+    (sEzsignfoldertypeNameX.hashCode) +
+    (sEzsignfolderDescription.hashCode) +
+    (eEzsignfolderStep.hashCode) +
+    (dtCreatedDate.hashCode) +
+    (dtEzsignfolderSentdate == null ? 0 : dtEzsignfolderSentdate!.hashCode) +
+    (dtDueDate == null ? 0 : dtDueDate!.hashCode) +
+    (iEzsigndocument.hashCode) +
+    (iEzsigndocumentEdm.hashCode) +
+    (iEzsignsignature.hashCode) +
+    (iEzsignsignatureSigned.hashCode);
 
   @override
   String toString() => 'EzsignfolderListElement[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, eEzsignfoldertypePrivacylevel=$eEzsignfoldertypePrivacylevel, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, sEzsignfolderDescription=$sEzsignfolderDescription, eEzsignfolderStep=$eEzsignfolderStep, dtCreatedDate=$dtCreatedDate, dtEzsignfolderSentdate=$dtEzsignfolderSentdate, dtDueDate=$dtDueDate, iEzsigndocument=$iEzsigndocument, iEzsigndocumentEdm=$iEzsigndocumentEdm, iEzsignsignature=$iEzsignsignature, iEzsignsignatureSigned=$iEzsignsignatureSigned]';
@@ -110,8 +110,12 @@ class EzsignfolderListElement {
       json[r'sEzsignfolderDescription'] = sEzsignfolderDescription;
       json[r'eEzsignfolderStep'] = eEzsignfolderStep;
       json[r'dtCreatedDate'] = dtCreatedDate;
-      json[r'dtEzsignfolderSentdate'] = dtEzsignfolderSentdate == null ? null : dtEzsignfolderSentdate;
-      json[r'dtDueDate'] = dtDueDate == null ? null : dtDueDate;
+    if (dtEzsignfolderSentdate != null) {
+      json[r'dtEzsignfolderSentdate'] = dtEzsignfolderSentdate;
+    }
+    if (dtDueDate != null) {
+      json[r'dtDueDate'] = dtDueDate;
+    }
       json[r'iEzsigndocument'] = iEzsigndocument;
       json[r'iEzsigndocumentEdm'] = iEzsigndocumentEdm;
       json[r'iEzsignsignature'] = iEzsignsignature;
@@ -122,58 +126,97 @@ class EzsignfolderListElement {
   /// Returns a new [EzsignfolderListElement] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static EzsignfolderListElement fromJson(dynamic value) {
+  static EzsignfolderListElement? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
+
+      // Ensure that the map contains the required keys.
+      // Note 1: the values aren't checked for validity beyond being non-null.
+      // Note 2: this code is stripped in release mode!
+      assert(() {
+        requiredKeys.forEach((key) {
+          assert(json.containsKey(key), 'Required key "EzsignfolderListElement[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "EzsignfolderListElement[$key]" has a null value in JSON.');
+        });
+        return true;
+      }());
+
       return EzsignfolderListElement(
-        pkiEzsignfolderID: mapValueOfType<int>(json, r'pkiEzsignfolderID'),
-        fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID'),
-        eEzsignfoldertypePrivacylevel: FieldEEzsignfoldertypePrivacylevel.fromJson(json[r'eEzsignfoldertypePrivacylevel']),
-        sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX'),
-        sEzsignfolderDescription: mapValueOfType<String>(json, r'sEzsignfolderDescription'),
-        eEzsignfolderStep: FieldEEzsignfolderStep.fromJson(json[r'eEzsignfolderStep']),
-        dtCreatedDate: mapValueOfType<String>(json, r'dtCreatedDate'),
+        pkiEzsignfolderID: mapValueOfType<int>(json, r'pkiEzsignfolderID')!,
+        fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID')!,
+        eEzsignfoldertypePrivacylevel: FieldEEzsignfoldertypePrivacylevel.fromJson(json[r'eEzsignfoldertypePrivacylevel'])!,
+        sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX')!,
+        sEzsignfolderDescription: mapValueOfType<String>(json, r'sEzsignfolderDescription')!,
+        eEzsignfolderStep: FieldEEzsignfolderStep.fromJson(json[r'eEzsignfolderStep'])!,
+        dtCreatedDate: mapValueOfType<String>(json, r'dtCreatedDate')!,
         dtEzsignfolderSentdate: mapValueOfType<String>(json, r'dtEzsignfolderSentdate'),
         dtDueDate: mapValueOfType<String>(json, r'dtDueDate'),
-        iEzsigndocument: mapValueOfType<int>(json, r'iEzsigndocument'),
-        iEzsigndocumentEdm: mapValueOfType<int>(json, r'iEzsigndocumentEdm'),
-        iEzsignsignature: mapValueOfType<int>(json, r'iEzsignsignature'),
-        iEzsignsignatureSigned: mapValueOfType<int>(json, r'iEzsignsignatureSigned'),
+        iEzsigndocument: mapValueOfType<int>(json, r'iEzsigndocument')!,
+        iEzsigndocumentEdm: mapValueOfType<int>(json, r'iEzsigndocumentEdm')!,
+        iEzsignsignature: mapValueOfType<int>(json, r'iEzsignsignature')!,
+        iEzsignsignatureSigned: mapValueOfType<int>(json, r'iEzsignsignatureSigned')!,
       );
     }
     return null;
   }
 
-  static List<EzsignfolderListElement> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(EzsignfolderListElement.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <EzsignfolderListElement>[];
+  static List<EzsignfolderListElement>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <EzsignfolderListElement>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = EzsignfolderListElement.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
 
   static Map<String, EzsignfolderListElement> mapFromJson(dynamic json) {
     final map = <String, EzsignfolderListElement>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) => map[key] = EzsignfolderListElement.fromJson(value));
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = EzsignfolderListElement.fromJson(entry.value);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
 
   // maps a json object with a list of EzsignfolderListElement-objects as value to a dart map
-  static Map<String, List<EzsignfolderListElement>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<EzsignfolderListElement>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignfolderListElement>>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) {
-          map[key] = EzsignfolderListElement.listFromJson(
-            value,
-            emptyIsNull: emptyIsNull,
-            growable: growable,
-          );
-        });
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = EzsignfolderListElement.listFromJson(entry.value, growable: growable,);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
+
+  /// The list of required keys that must be present in a JSON.
+  static const requiredKeys = <String>{
+    'pkiEzsignfolderID',
+    'fkiEzsignfoldertypeID',
+    'eEzsignfoldertypePrivacylevel',
+    'sEzsignfoldertypeNameX',
+    'sEzsignfolderDescription',
+    'eEzsignfolderStep',
+    'dtCreatedDate',
+    'dtEzsignfolderSentdate',
+    'dtDueDate',
+    'iEzsigndocument',
+    'iEzsigndocumentEdm',
+    'iEzsignsignature',
+    'iEzsignsignatureSigned',
+  };
 }
 

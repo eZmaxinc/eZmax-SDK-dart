@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -13,7 +13,7 @@ part of openapi.api;
 class EzsignfolderGetListV1ResponseAllOf {
   /// Returns a new [EzsignfolderGetListV1ResponseAllOf] instance.
   EzsignfolderGetListV1ResponseAllOf({
-    @required this.mPayload,
+    required this.mPayload,
   });
 
   EzsignfolderGetListV1ResponseMPayload mPayload;
@@ -24,8 +24,8 @@ class EzsignfolderGetListV1ResponseAllOf {
 
   @override
   int get hashCode =>
-  // ignore: unnecessary_parenthesis
-    (mPayload == null ? 0 : mPayload.hashCode);
+    // ignore: unnecessary_parenthesis
+    (mPayload.hashCode);
 
   @override
   String toString() => 'EzsignfolderGetListV1ResponseAllOf[mPayload=$mPayload]';
@@ -39,46 +39,73 @@ class EzsignfolderGetListV1ResponseAllOf {
   /// Returns a new [EzsignfolderGetListV1ResponseAllOf] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static EzsignfolderGetListV1ResponseAllOf fromJson(dynamic value) {
+  static EzsignfolderGetListV1ResponseAllOf? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
+
+      // Ensure that the map contains the required keys.
+      // Note 1: the values aren't checked for validity beyond being non-null.
+      // Note 2: this code is stripped in release mode!
+      assert(() {
+        requiredKeys.forEach((key) {
+          assert(json.containsKey(key), 'Required key "EzsignfolderGetListV1ResponseAllOf[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "EzsignfolderGetListV1ResponseAllOf[$key]" has a null value in JSON.');
+        });
+        return true;
+      }());
+
       return EzsignfolderGetListV1ResponseAllOf(
-        mPayload: EzsignfolderGetListV1ResponseMPayload.fromJson(json[r'mPayload']),
+        mPayload: EzsignfolderGetListV1ResponseMPayload.fromJson(json[r'mPayload'])!,
       );
     }
     return null;
   }
 
-  static List<EzsignfolderGetListV1ResponseAllOf> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(EzsignfolderGetListV1ResponseAllOf.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <EzsignfolderGetListV1ResponseAllOf>[];
+  static List<EzsignfolderGetListV1ResponseAllOf>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <EzsignfolderGetListV1ResponseAllOf>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = EzsignfolderGetListV1ResponseAllOf.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
 
   static Map<String, EzsignfolderGetListV1ResponseAllOf> mapFromJson(dynamic json) {
     final map = <String, EzsignfolderGetListV1ResponseAllOf>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) => map[key] = EzsignfolderGetListV1ResponseAllOf.fromJson(value));
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = EzsignfolderGetListV1ResponseAllOf.fromJson(entry.value);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
 
   // maps a json object with a list of EzsignfolderGetListV1ResponseAllOf-objects as value to a dart map
-  static Map<String, List<EzsignfolderGetListV1ResponseAllOf>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<EzsignfolderGetListV1ResponseAllOf>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignfolderGetListV1ResponseAllOf>>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) {
-          map[key] = EzsignfolderGetListV1ResponseAllOf.listFromJson(
-            value,
-            emptyIsNull: emptyIsNull,
-            growable: growable,
-          );
-        });
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = EzsignfolderGetListV1ResponseAllOf.listFromJson(entry.value, growable: growable,);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
+
+  /// The list of required keys that must be present in a JSON.
+  static const requiredKeys = <String>{
+    'mPayload',
+  };
 }
 

@@ -234,6 +234,7 @@ doc/WebhookResponse.md
 doc/WebhookUserUserCreated.md
 doc/WebhookUserUserCreatedAllOf.md
 doc/WebsiteRequest.md
+doc/Xxxx.md
 git_push.sh
 lib/api.dart
 lib/api/global_customer_api.dart
@@ -475,6 +476,7 @@ lib/model/webhook_response.dart
 lib/model/webhook_user_user_created.dart
 lib/model/webhook_user_user_created_all_of.dart
 lib/model/website_request.dart
+lib/model/xxxx.dart
 pubspec.yaml
 test/activesession_get_current_v1_response_all_of_test.dart
 test/activesession_get_current_v1_response_m_payload_test.dart
@@ -707,3 +709,4 @@ test/webhook_response_test.dart
 test/webhook_user_user_created_all_of_test.dart
 test/webhook_user_user_created_test.dart
 test/website_request_test.dart
+test/xxxx_test.dart

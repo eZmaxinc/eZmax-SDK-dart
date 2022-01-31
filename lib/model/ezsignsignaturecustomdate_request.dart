@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -13,9 +13,9 @@ part of openapi.api;
 class EzsignsignaturecustomdateRequest {
   /// Returns a new [EzsignsignaturecustomdateRequest] instance.
   EzsignsignaturecustomdateRequest({
-    @required this.iEzsignsignaturecustomdateX,
-    @required this.iEzsignsignaturecustomdateY,
-    @required this.sEzsignsignaturecustomdateFormat,
+    required this.iEzsignsignaturecustomdateX,
+    required this.iEzsignsignaturecustomdateY,
+    required this.sEzsignsignaturecustomdateFormat,
   });
 
   /// The X coordinate (Horizontal) where to put the custom date block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the custom date block 2 inches from the left border of the page, you would use \"200\" for the X coordinate.
@@ -35,10 +35,10 @@ class EzsignsignaturecustomdateRequest {
 
   @override
   int get hashCode =>
-  // ignore: unnecessary_parenthesis
-    (iEzsignsignaturecustomdateX == null ? 0 : iEzsignsignaturecustomdateX.hashCode) +
-    (iEzsignsignaturecustomdateY == null ? 0 : iEzsignsignaturecustomdateY.hashCode) +
-    (sEzsignsignaturecustomdateFormat == null ? 0 : sEzsignsignaturecustomdateFormat.hashCode);
+    // ignore: unnecessary_parenthesis
+    (iEzsignsignaturecustomdateX.hashCode) +
+    (iEzsignsignaturecustomdateY.hashCode) +
+    (sEzsignsignaturecustomdateFormat.hashCode);
 
   @override
   String toString() => 'EzsignsignaturecustomdateRequest[iEzsignsignaturecustomdateX=$iEzsignsignaturecustomdateX, iEzsignsignaturecustomdateY=$iEzsignsignaturecustomdateY, sEzsignsignaturecustomdateFormat=$sEzsignsignaturecustomdateFormat]';
@@ -54,48 +54,77 @@ class EzsignsignaturecustomdateRequest {
   /// Returns a new [EzsignsignaturecustomdateRequest] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static EzsignsignaturecustomdateRequest fromJson(dynamic value) {
+  static EzsignsignaturecustomdateRequest? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
+
+      // Ensure that the map contains the required keys.
+      // Note 1: the values aren't checked for validity beyond being non-null.
+      // Note 2: this code is stripped in release mode!
+      assert(() {
+        requiredKeys.forEach((key) {
+          assert(json.containsKey(key), 'Required key "EzsignsignaturecustomdateRequest[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "EzsignsignaturecustomdateRequest[$key]" has a null value in JSON.');
+        });
+        return true;
+      }());
+
       return EzsignsignaturecustomdateRequest(
-        iEzsignsignaturecustomdateX: mapValueOfType<int>(json, r'iEzsignsignaturecustomdateX'),
-        iEzsignsignaturecustomdateY: mapValueOfType<int>(json, r'iEzsignsignaturecustomdateY'),
-        sEzsignsignaturecustomdateFormat: mapValueOfType<String>(json, r'sEzsignsignaturecustomdateFormat'),
+        iEzsignsignaturecustomdateX: mapValueOfType<int>(json, r'iEzsignsignaturecustomdateX')!,
+        iEzsignsignaturecustomdateY: mapValueOfType<int>(json, r'iEzsignsignaturecustomdateY')!,
+        sEzsignsignaturecustomdateFormat: mapValueOfType<String>(json, r'sEzsignsignaturecustomdateFormat')!,
       );
     }
     return null;
   }
 
-  static List<EzsignsignaturecustomdateRequest> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(EzsignsignaturecustomdateRequest.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <EzsignsignaturecustomdateRequest>[];
+  static List<EzsignsignaturecustomdateRequest>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <EzsignsignaturecustomdateRequest>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = EzsignsignaturecustomdateRequest.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
 
   static Map<String, EzsignsignaturecustomdateRequest> mapFromJson(dynamic json) {
     final map = <String, EzsignsignaturecustomdateRequest>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) => map[key] = EzsignsignaturecustomdateRequest.fromJson(value));
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = EzsignsignaturecustomdateRequest.fromJson(entry.value);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
 
   // maps a json object with a list of EzsignsignaturecustomdateRequest-objects as value to a dart map
-  static Map<String, List<EzsignsignaturecustomdateRequest>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<EzsignsignaturecustomdateRequest>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignsignaturecustomdateRequest>>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) {
-          map[key] = EzsignsignaturecustomdateRequest.listFromJson(
-            value,
-            emptyIsNull: emptyIsNull,
-            growable: growable,
-          );
-        });
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = EzsignsignaturecustomdateRequest.listFromJson(entry.value, growable: growable,);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
+
+  /// The list of required keys that must be present in a JSON.
+  static const requiredKeys = <String>{
+    'iEzsignsignaturecustomdateX',
+    'iEzsignsignaturecustomdateY',
+    'sEzsignsignaturecustomdateFormat',
+  };
 }
 

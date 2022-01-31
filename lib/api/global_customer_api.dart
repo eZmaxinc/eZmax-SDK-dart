@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -12,7 +12,7 @@ part of openapi.api;
 
 
 class GlobalCustomerApi {
-  GlobalCustomerApi([ApiClient apiClient]) : apiClient = apiClient ?? defaultApiClient;
+  GlobalCustomerApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
 
   final ApiClient apiClient;
 
@@ -28,25 +28,20 @@ class GlobalCustomerApi {
   ///
   /// * [String] sInfrastructureproductCode:
   ///   The infrastructure product Code  If undefined, \"appcluster01\" is assumed
-  Future<Response> globalCustomerGetEndpointV1WithHttpInfo(String pksCustomerCode, { String sInfrastructureproductCode, }) async {
-    // Verify required params are set.
-    if (pksCustomerCode == null) {
-     throw ApiException(HttpStatus.badRequest, 'Missing required param: pksCustomerCode');
-    }
-
+  Future<Response> globalCustomerGetEndpointV1WithHttpInfo(String pksCustomerCode, { String? sInfrastructureproductCode, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/customer/{pksCustomerCode}/endpoint'
       .replaceAll('{pksCustomerCode}', pksCustomerCode);
 
     // ignore: prefer_final_locals
-    Object postBody;
+    Object? postBody;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
     if (sInfrastructureproductCode != null) {
-      queryParams.addAll(_convertParametersForCollectionFormat('', 'sInfrastructureproductCode', sInfrastructureproductCode));
+      queryParams.addAll(_queryParams('', 'sInfrastructureproductCode', sInfrastructureproductCode));
     }
 
     const authNames = <String>['Authorization'];
@@ -60,7 +55,7 @@ class GlobalCustomerApi {
       postBody,
       headerParams,
       formParams,
-      contentTypes.isEmpty ? null : contentTypes[0],
+      contentTypes.isEmpty ? null : contentTypes.first,
       authNames,
     );
   }
@@ -75,7 +70,7 @@ class GlobalCustomerApi {
   ///
   /// * [String] sInfrastructureproductCode:
   ///   The infrastructure product Code  If undefined, \"appcluster01\" is assumed
-  Future<GlobalCustomerGetEndpointV1Response> globalCustomerGetEndpointV1(String pksCustomerCode, { String sInfrastructureproductCode, }) async {
+  Future<GlobalCustomerGetEndpointV1Response?> globalCustomerGetEndpointV1(String pksCustomerCode, { String? sInfrastructureproductCode, }) async {
     final response = await globalCustomerGetEndpointV1WithHttpInfo(pksCustomerCode,  sInfrastructureproductCode: sInfrastructureproductCode, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -83,10 +78,10 @@ class GlobalCustomerApi {
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body != null && response.statusCode != HttpStatus.noContent) {
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GlobalCustomerGetEndpointV1Response',) as GlobalCustomerGetEndpointV1Response;
     
     }
-    return Future<GlobalCustomerGetEndpointV1Response>.value();
+    return null;
   }
 }

@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -19,7 +19,7 @@ class HeaderAcceptLanguage {
   final String value;
 
   @override
-  String toString() => value ?? '';
+  String toString() => value;
 
   String toJson() => value;
 
@@ -34,13 +34,20 @@ class HeaderAcceptLanguage {
     fr,
   ];
 
-  static HeaderAcceptLanguage fromJson(dynamic value) =>
-    HeaderAcceptLanguageTypeTransformer().decode(value);
+  static HeaderAcceptLanguage? fromJson(dynamic value) => HeaderAcceptLanguageTypeTransformer().decode(value);
 
-  static List<HeaderAcceptLanguage> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(HeaderAcceptLanguage.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <HeaderAcceptLanguage>[];
+  static List<HeaderAcceptLanguage>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <HeaderAcceptLanguage>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = HeaderAcceptLanguage.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
 }
 
 /// Transformation class that can [encode] an instance of [HeaderAcceptLanguage] to String,
@@ -60,14 +67,14 @@ class HeaderAcceptLanguageTypeTransformer {
   ///
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
-  HeaderAcceptLanguage decode(dynamic data, {bool allowNull}) {
+  HeaderAcceptLanguage? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data.toString()) {
         case r'*': return HeaderAcceptLanguage.star;
         case r'en': return HeaderAcceptLanguage.en;
         case r'fr': return HeaderAcceptLanguage.fr;
         default:
-          if (allowNull == false) {
+          if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
           }
       }
@@ -76,6 +83,6 @@ class HeaderAcceptLanguageTypeTransformer {
   }
 
   /// Singleton [HeaderAcceptLanguageTypeTransformer] instance.
-  static HeaderAcceptLanguageTypeTransformer _instance;
+  static HeaderAcceptLanguageTypeTransformer? _instance;
 }
 

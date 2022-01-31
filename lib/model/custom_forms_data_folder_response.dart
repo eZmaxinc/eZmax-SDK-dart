@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -13,8 +13,8 @@ part of openapi.api;
 class CustomFormsDataFolderResponse {
   /// Returns a new [CustomFormsDataFolderResponse] instance.
   CustomFormsDataFolderResponse({
-    @required this.pkiEzsignfolderID,
-    @required this.sEzsignfolderDescription,
+    required this.pkiEzsignfolderID,
+    required this.sEzsignfolderDescription,
     this.aObjFormDataDocument = const [],
   });
 
@@ -34,10 +34,10 @@ class CustomFormsDataFolderResponse {
 
   @override
   int get hashCode =>
-  // ignore: unnecessary_parenthesis
-    (pkiEzsignfolderID == null ? 0 : pkiEzsignfolderID.hashCode) +
-    (sEzsignfolderDescription == null ? 0 : sEzsignfolderDescription.hashCode) +
-    (aObjFormDataDocument == null ? 0 : aObjFormDataDocument.hashCode);
+    // ignore: unnecessary_parenthesis
+    (pkiEzsignfolderID.hashCode) +
+    (sEzsignfolderDescription.hashCode) +
+    (aObjFormDataDocument.hashCode);
 
   @override
   String toString() => 'CustomFormsDataFolderResponse[pkiEzsignfolderID=$pkiEzsignfolderID, sEzsignfolderDescription=$sEzsignfolderDescription, aObjFormDataDocument=$aObjFormDataDocument]';
@@ -53,48 +53,77 @@ class CustomFormsDataFolderResponse {
   /// Returns a new [CustomFormsDataFolderResponse] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static CustomFormsDataFolderResponse fromJson(dynamic value) {
+  static CustomFormsDataFolderResponse? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
+
+      // Ensure that the map contains the required keys.
+      // Note 1: the values aren't checked for validity beyond being non-null.
+      // Note 2: this code is stripped in release mode!
+      assert(() {
+        requiredKeys.forEach((key) {
+          assert(json.containsKey(key), 'Required key "CustomFormsDataFolderResponse[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "CustomFormsDataFolderResponse[$key]" has a null value in JSON.');
+        });
+        return true;
+      }());
+
       return CustomFormsDataFolderResponse(
-        pkiEzsignfolderID: mapValueOfType<int>(json, r'pkiEzsignfolderID'),
-        sEzsignfolderDescription: mapValueOfType<String>(json, r'sEzsignfolderDescription'),
-        aObjFormDataDocument: CustomFormDataDocumentResponse.listFromJson(json[r'a_objFormDataDocument']),
+        pkiEzsignfolderID: mapValueOfType<int>(json, r'pkiEzsignfolderID')!,
+        sEzsignfolderDescription: mapValueOfType<String>(json, r'sEzsignfolderDescription')!,
+        aObjFormDataDocument: CustomFormDataDocumentResponse.listFromJson(json[r'a_objFormDataDocument'])!,
       );
     }
     return null;
   }
 
-  static List<CustomFormsDataFolderResponse> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(CustomFormsDataFolderResponse.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <CustomFormsDataFolderResponse>[];
+  static List<CustomFormsDataFolderResponse>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <CustomFormsDataFolderResponse>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = CustomFormsDataFolderResponse.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
 
   static Map<String, CustomFormsDataFolderResponse> mapFromJson(dynamic json) {
     final map = <String, CustomFormsDataFolderResponse>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) => map[key] = CustomFormsDataFolderResponse.fromJson(value));
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = CustomFormsDataFolderResponse.fromJson(entry.value);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
 
   // maps a json object with a list of CustomFormsDataFolderResponse-objects as value to a dart map
-  static Map<String, List<CustomFormsDataFolderResponse>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<CustomFormsDataFolderResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<CustomFormsDataFolderResponse>>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) {
-          map[key] = CustomFormsDataFolderResponse.listFromJson(
-            value,
-            emptyIsNull: emptyIsNull,
-            growable: growable,
-          );
-        });
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = CustomFormsDataFolderResponse.listFromJson(entry.value, growable: growable,);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
+
+  /// The list of required keys that must be present in a JSON.
+  static const requiredKeys = <String>{
+    'pkiEzsignfolderID',
+    'sEzsignfolderDescription',
+    'a_objFormDataDocument',
+  };
 }
 

@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -13,10 +13,10 @@ part of openapi.api;
 class CustomFormDataSignerResponse {
   /// Returns a new [CustomFormDataSignerResponse] instance.
   CustomFormDataSignerResponse({
-    @required this.fkiEzsignfoldersignerassociationID,
+    required this.fkiEzsignfoldersignerassociationID,
     this.fkiUserID,
-    @required this.sContactFirstname,
-    @required this.sContactLastname,
+    required this.sContactFirstname,
+    required this.sContactLastname,
     this.aObjEzsignformfieldgroupCompound = const [],
   });
 
@@ -24,7 +24,13 @@ class CustomFormDataSignerResponse {
   int fkiEzsignfoldersignerassociationID;
 
   /// The unique ID of the User
-  int fkiUserID;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiUserID;
 
   /// The First name of the contact
   String sContactFirstname;
@@ -44,12 +50,12 @@ class CustomFormDataSignerResponse {
 
   @override
   int get hashCode =>
-  // ignore: unnecessary_parenthesis
-    (fkiEzsignfoldersignerassociationID == null ? 0 : fkiEzsignfoldersignerassociationID.hashCode) +
-    (fkiUserID == null ? 0 : fkiUserID.hashCode) +
-    (sContactFirstname == null ? 0 : sContactFirstname.hashCode) +
-    (sContactLastname == null ? 0 : sContactLastname.hashCode) +
-    (aObjEzsignformfieldgroupCompound == null ? 0 : aObjEzsignformfieldgroupCompound.hashCode);
+    // ignore: unnecessary_parenthesis
+    (fkiEzsignfoldersignerassociationID.hashCode) +
+    (fkiUserID == null ? 0 : fkiUserID!.hashCode) +
+    (sContactFirstname.hashCode) +
+    (sContactLastname.hashCode) +
+    (aObjEzsignformfieldgroupCompound.hashCode);
 
   @override
   String toString() => 'CustomFormDataSignerResponse[fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, fkiUserID=$fkiUserID, sContactFirstname=$sContactFirstname, sContactLastname=$sContactLastname, aObjEzsignformfieldgroupCompound=$aObjEzsignformfieldgroupCompound]';
@@ -69,50 +75,80 @@ class CustomFormDataSignerResponse {
   /// Returns a new [CustomFormDataSignerResponse] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static CustomFormDataSignerResponse fromJson(dynamic value) {
+  static CustomFormDataSignerResponse? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
+
+      // Ensure that the map contains the required keys.
+      // Note 1: the values aren't checked for validity beyond being non-null.
+      // Note 2: this code is stripped in release mode!
+      assert(() {
+        requiredKeys.forEach((key) {
+          assert(json.containsKey(key), 'Required key "CustomFormDataSignerResponse[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "CustomFormDataSignerResponse[$key]" has a null value in JSON.');
+        });
+        return true;
+      }());
+
       return CustomFormDataSignerResponse(
-        fkiEzsignfoldersignerassociationID: mapValueOfType<int>(json, r'fkiEzsignfoldersignerassociationID'),
+        fkiEzsignfoldersignerassociationID: mapValueOfType<int>(json, r'fkiEzsignfoldersignerassociationID')!,
         fkiUserID: mapValueOfType<int>(json, r'fkiUserID'),
-        sContactFirstname: mapValueOfType<String>(json, r'sContactFirstname'),
-        sContactLastname: mapValueOfType<String>(json, r'sContactLastname'),
-        aObjEzsignformfieldgroupCompound: EzsignformfieldgroupResponseCompound.listFromJson(json[r'a_objEzsignformfieldgroupCompound']),
+        sContactFirstname: mapValueOfType<String>(json, r'sContactFirstname')!,
+        sContactLastname: mapValueOfType<String>(json, r'sContactLastname')!,
+        aObjEzsignformfieldgroupCompound: EzsignformfieldgroupResponseCompound.listFromJson(json[r'a_objEzsignformfieldgroupCompound'])!,
       );
     }
     return null;
   }
 
-  static List<CustomFormDataSignerResponse> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(CustomFormDataSignerResponse.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <CustomFormDataSignerResponse>[];
+  static List<CustomFormDataSignerResponse>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <CustomFormDataSignerResponse>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = CustomFormDataSignerResponse.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
 
   static Map<String, CustomFormDataSignerResponse> mapFromJson(dynamic json) {
     final map = <String, CustomFormDataSignerResponse>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) => map[key] = CustomFormDataSignerResponse.fromJson(value));
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = CustomFormDataSignerResponse.fromJson(entry.value);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
 
   // maps a json object with a list of CustomFormDataSignerResponse-objects as value to a dart map
-  static Map<String, List<CustomFormDataSignerResponse>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<CustomFormDataSignerResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<CustomFormDataSignerResponse>>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) {
-          map[key] = CustomFormDataSignerResponse.listFromJson(
-            value,
-            emptyIsNull: emptyIsNull,
-            growable: growable,
-          );
-        });
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = CustomFormDataSignerResponse.listFromJson(entry.value, growable: growable,);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
+
+  /// The list of required keys that must be present in a JSON.
+  static const requiredKeys = <String>{
+    'fkiEzsignfoldersignerassociationID',
+    'sContactFirstname',
+    'sContactLastname',
+    'a_objEzsignformfieldgroupCompound',
+  };
 }
 

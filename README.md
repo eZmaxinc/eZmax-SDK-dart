@@ -9,7 +9,7 @@ For more information, please visit [https://www.ezmax.ca/en/contact](https://www
 
 ## Requirements
 
-Dart 2.0 or later
+Dart 2.12 or later
 
 ## Installation & Usage
 
@@ -327,6 +327,7 @@ Class | Method | HTTP request | Description
  - [WebhookUserUserCreated](doc//WebhookUserUserCreated.md)
  - [WebhookUserUserCreatedAllOf](doc//WebhookUserUserCreatedAllOf.md)
  - [WebsiteRequest](doc//WebsiteRequest.md)
+ - [Xxxx](doc//Xxxx.md)
 
 
 ## Documentation For Authorization

@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -13,7 +13,7 @@ import 'package:test/test.dart';
 
 // tests for CommonResponseObjDebugPayloadGetList
 void main() {
-  final instance = CommonResponseObjDebugPayloadGetList();
+  // final instance = CommonResponseObjDebugPayloadGetList();
 
   group('test CommonResponseObjDebugPayloadGetList', () {
     // The minimum version of the function that can be called

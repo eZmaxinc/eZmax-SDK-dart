@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -19,7 +19,7 @@ class FieldEEzsigndocumentStep {
   final String value;
 
   @override
-  String toString() => value ?? '';
+  String toString() => value;
 
   String toJson() => value;
 
@@ -40,13 +40,20 @@ class FieldEEzsigndocumentStep {
     completed,
   ];
 
-  static FieldEEzsigndocumentStep fromJson(dynamic value) =>
-    FieldEEzsigndocumentStepTypeTransformer().decode(value);
+  static FieldEEzsigndocumentStep? fromJson(dynamic value) => FieldEEzsigndocumentStepTypeTransformer().decode(value);
 
-  static List<FieldEEzsigndocumentStep> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(FieldEEzsigndocumentStep.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <FieldEEzsigndocumentStep>[];
+  static List<FieldEEzsigndocumentStep>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <FieldEEzsigndocumentStep>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = FieldEEzsigndocumentStep.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
 }
 
 /// Transformation class that can [encode] an instance of [FieldEEzsigndocumentStep] to String,
@@ -66,7 +73,7 @@ class FieldEEzsigndocumentStepTypeTransformer {
   ///
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
-  FieldEEzsigndocumentStep decode(dynamic data, {bool allowNull}) {
+  FieldEEzsigndocumentStep? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data.toString()) {
         case r'Unsent': return FieldEEzsigndocumentStep.unsent;
@@ -76,7 +83,7 @@ class FieldEEzsigndocumentStepTypeTransformer {
         case r'PrematurelyEnded': return FieldEEzsigndocumentStep.prematurelyEnded;
         case r'Completed': return FieldEEzsigndocumentStep.completed;
         default:
-          if (allowNull == false) {
+          if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
           }
       }
@@ -85,6 +92,6 @@ class FieldEEzsigndocumentStepTypeTransformer {
   }
 
   /// Singleton [FieldEEzsigndocumentStepTypeTransformer] instance.
-  static FieldEEzsigndocumentStepTypeTransformer _instance;
+  static FieldEEzsigndocumentStepTypeTransformer? _instance;
 }
 

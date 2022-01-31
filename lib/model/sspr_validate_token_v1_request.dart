@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -13,29 +13,42 @@ part of openapi.api;
 class SsprValidateTokenV1Request {
   /// Returns a new [SsprValidateTokenV1Request] instance.
   SsprValidateTokenV1Request({
-    @required this.pksCustomerCode,
-    @required this.fkiLanguageID,
-    @required this.eUserTypeSSPR,
+    required this.pksCustomerCode,
+    required this.fkiLanguageID,
+    required this.eUserTypeSSPR,
     this.sEmailAddress,
     this.sUserLoginname,
-    @required this.binUserSSPRtoken,
+    required this.binUserSSPRtoken,
   });
 
   /// The customer code assigned to your account
   String pksCustomerCode;
 
   /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
-  // minimum: 1
-  // maximum: 2
+  ///
+  /// Minimum value: 1
+  /// Maximum value: 2
   int fkiLanguageID;
 
   FieldEUserTypeSSPR eUserTypeSSPR;
 
   /// The email address.
-  String sEmailAddress;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEmailAddress;
 
   /// The Login name of the User.
-  String sUserLoginname;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sUserLoginname;
 
   /// Hex Encoded Secret SSPR token
   String binUserSSPRtoken;
@@ -51,13 +64,13 @@ class SsprValidateTokenV1Request {
 
   @override
   int get hashCode =>
-  // ignore: unnecessary_parenthesis
-    (pksCustomerCode == null ? 0 : pksCustomerCode.hashCode) +
-    (fkiLanguageID == null ? 0 : fkiLanguageID.hashCode) +
-    (eUserTypeSSPR == null ? 0 : eUserTypeSSPR.hashCode) +
-    (sEmailAddress == null ? 0 : sEmailAddress.hashCode) +
-    (sUserLoginname == null ? 0 : sUserLoginname.hashCode) +
-    (binUserSSPRtoken == null ? 0 : binUserSSPRtoken.hashCode);
+    // ignore: unnecessary_parenthesis
+    (pksCustomerCode.hashCode) +
+    (fkiLanguageID.hashCode) +
+    (eUserTypeSSPR.hashCode) +
+    (sEmailAddress == null ? 0 : sEmailAddress!.hashCode) +
+    (sUserLoginname == null ? 0 : sUserLoginname!.hashCode) +
+    (binUserSSPRtoken.hashCode);
 
   @override
   String toString() => 'SsprValidateTokenV1Request[pksCustomerCode=$pksCustomerCode, fkiLanguageID=$fkiLanguageID, eUserTypeSSPR=$eUserTypeSSPR, sEmailAddress=$sEmailAddress, sUserLoginname=$sUserLoginname, binUserSSPRtoken=$binUserSSPRtoken]';
@@ -80,51 +93,81 @@ class SsprValidateTokenV1Request {
   /// Returns a new [SsprValidateTokenV1Request] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static SsprValidateTokenV1Request fromJson(dynamic value) {
+  static SsprValidateTokenV1Request? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
+
+      // Ensure that the map contains the required keys.
+      // Note 1: the values aren't checked for validity beyond being non-null.
+      // Note 2: this code is stripped in release mode!
+      assert(() {
+        requiredKeys.forEach((key) {
+          assert(json.containsKey(key), 'Required key "SsprValidateTokenV1Request[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "SsprValidateTokenV1Request[$key]" has a null value in JSON.');
+        });
+        return true;
+      }());
+
       return SsprValidateTokenV1Request(
-        pksCustomerCode: mapValueOfType<String>(json, r'pksCustomerCode'),
-        fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID'),
-        eUserTypeSSPR: FieldEUserTypeSSPR.fromJson(json[r'eUserTypeSSPR']),
+        pksCustomerCode: mapValueOfType<String>(json, r'pksCustomerCode')!,
+        fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID')!,
+        eUserTypeSSPR: FieldEUserTypeSSPR.fromJson(json[r'eUserTypeSSPR'])!,
         sEmailAddress: mapValueOfType<String>(json, r'sEmailAddress'),
         sUserLoginname: mapValueOfType<String>(json, r'sUserLoginname'),
-        binUserSSPRtoken: mapValueOfType<String>(json, r'binUserSSPRtoken'),
+        binUserSSPRtoken: mapValueOfType<String>(json, r'binUserSSPRtoken')!,
       );
     }
     return null;
   }
 
-  static List<SsprValidateTokenV1Request> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(SsprValidateTokenV1Request.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <SsprValidateTokenV1Request>[];
+  static List<SsprValidateTokenV1Request>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <SsprValidateTokenV1Request>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = SsprValidateTokenV1Request.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
 
   static Map<String, SsprValidateTokenV1Request> mapFromJson(dynamic json) {
     final map = <String, SsprValidateTokenV1Request>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) => map[key] = SsprValidateTokenV1Request.fromJson(value));
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = SsprValidateTokenV1Request.fromJson(entry.value);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
 
   // maps a json object with a list of SsprValidateTokenV1Request-objects as value to a dart map
-  static Map<String, List<SsprValidateTokenV1Request>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<SsprValidateTokenV1Request>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<SsprValidateTokenV1Request>>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) {
-          map[key] = SsprValidateTokenV1Request.listFromJson(
-            value,
-            emptyIsNull: emptyIsNull,
-            growable: growable,
-          );
-        });
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = SsprValidateTokenV1Request.listFromJson(entry.value, growable: growable,);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
+
+  /// The list of required keys that must be present in a JSON.
+  static const requiredKeys = <String>{
+    'pksCustomerCode',
+    'fkiLanguageID',
+    'eUserTypeSSPR',
+    'binUserSSPRtoken',
+  };
 }
 

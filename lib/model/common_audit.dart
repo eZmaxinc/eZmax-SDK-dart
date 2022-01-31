@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -13,12 +13,12 @@ part of openapi.api;
 class CommonAudit {
   /// Returns a new [CommonAudit] instance.
   CommonAudit({
-    @required this.fkiUserIDCreated,
-    @required this.fkiUserIDModified,
+    required this.fkiUserIDCreated,
+    required this.fkiUserIDModified,
     this.fkiApikeyIDCreated,
     this.fkiApikeyIDModified,
-    @required this.dtCreatedDate,
-    @required this.dtModifiedDate,
+    required this.dtCreatedDate,
+    required this.dtModifiedDate,
   });
 
   /// The unique ID of the User
@@ -28,10 +28,22 @@ class CommonAudit {
   int fkiUserIDModified;
 
   /// The unique ID of the Apikey
-  int fkiApikeyIDCreated;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiApikeyIDCreated;
 
   /// The unique ID of the Apikey
-  int fkiApikeyIDModified;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiApikeyIDModified;
 
   /// Represent a Date Time. The timezone is the one configured in the User's profile.
   String dtCreatedDate;
@@ -50,13 +62,13 @@ class CommonAudit {
 
   @override
   int get hashCode =>
-  // ignore: unnecessary_parenthesis
-    (fkiUserIDCreated == null ? 0 : fkiUserIDCreated.hashCode) +
-    (fkiUserIDModified == null ? 0 : fkiUserIDModified.hashCode) +
-    (fkiApikeyIDCreated == null ? 0 : fkiApikeyIDCreated.hashCode) +
-    (fkiApikeyIDModified == null ? 0 : fkiApikeyIDModified.hashCode) +
-    (dtCreatedDate == null ? 0 : dtCreatedDate.hashCode) +
-    (dtModifiedDate == null ? 0 : dtModifiedDate.hashCode);
+    // ignore: unnecessary_parenthesis
+    (fkiUserIDCreated.hashCode) +
+    (fkiUserIDModified.hashCode) +
+    (fkiApikeyIDCreated == null ? 0 : fkiApikeyIDCreated!.hashCode) +
+    (fkiApikeyIDModified == null ? 0 : fkiApikeyIDModified!.hashCode) +
+    (dtCreatedDate.hashCode) +
+    (dtModifiedDate.hashCode);
 
   @override
   String toString() => 'CommonAudit[fkiUserIDCreated=$fkiUserIDCreated, fkiUserIDModified=$fkiUserIDModified, fkiApikeyIDCreated=$fkiApikeyIDCreated, fkiApikeyIDModified=$fkiApikeyIDModified, dtCreatedDate=$dtCreatedDate, dtModifiedDate=$dtModifiedDate]';
@@ -79,51 +91,81 @@ class CommonAudit {
   /// Returns a new [CommonAudit] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static CommonAudit fromJson(dynamic value) {
+  static CommonAudit? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
+
+      // Ensure that the map contains the required keys.
+      // Note 1: the values aren't checked for validity beyond being non-null.
+      // Note 2: this code is stripped in release mode!
+      assert(() {
+        requiredKeys.forEach((key) {
+          assert(json.containsKey(key), 'Required key "CommonAudit[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "CommonAudit[$key]" has a null value in JSON.');
+        });
+        return true;
+      }());
+
       return CommonAudit(
-        fkiUserIDCreated: mapValueOfType<int>(json, r'fkiUserIDCreated'),
-        fkiUserIDModified: mapValueOfType<int>(json, r'fkiUserIDModified'),
+        fkiUserIDCreated: mapValueOfType<int>(json, r'fkiUserIDCreated')!,
+        fkiUserIDModified: mapValueOfType<int>(json, r'fkiUserIDModified')!,
         fkiApikeyIDCreated: mapValueOfType<int>(json, r'fkiApikeyIDCreated'),
         fkiApikeyIDModified: mapValueOfType<int>(json, r'fkiApikeyIDModified'),
-        dtCreatedDate: mapValueOfType<String>(json, r'dtCreatedDate'),
-        dtModifiedDate: mapValueOfType<String>(json, r'dtModifiedDate'),
+        dtCreatedDate: mapValueOfType<String>(json, r'dtCreatedDate')!,
+        dtModifiedDate: mapValueOfType<String>(json, r'dtModifiedDate')!,
       );
     }
     return null;
   }
 
-  static List<CommonAudit> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(CommonAudit.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <CommonAudit>[];
+  static List<CommonAudit>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <CommonAudit>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = CommonAudit.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
 
   static Map<String, CommonAudit> mapFromJson(dynamic json) {
     final map = <String, CommonAudit>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) => map[key] = CommonAudit.fromJson(value));
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = CommonAudit.fromJson(entry.value);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
 
   // maps a json object with a list of CommonAudit-objects as value to a dart map
-  static Map<String, List<CommonAudit>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<CommonAudit>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<CommonAudit>>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) {
-          map[key] = CommonAudit.listFromJson(
-            value,
-            emptyIsNull: emptyIsNull,
-            growable: growable,
-          );
-        });
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = CommonAudit.listFromJson(entry.value, growable: growable,);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
+
+  /// The list of required keys that must be present in a JSON.
+  static const requiredKeys = <String>{
+    'fkiUserIDCreated',
+    'fkiUserIDModified',
+    'dtCreatedDate',
+    'dtModifiedDate',
+  };
 }
 

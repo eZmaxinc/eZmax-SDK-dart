@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -13,23 +13,23 @@ part of openapi.api;
 class EzsignfolderResponseCompound {
   /// Returns a new [EzsignfolderResponseCompound] instance.
   EzsignfolderResponseCompound({
-    @required this.pkiEzsignfolderID,
-    @required this.fkiEzsignfoldertypeID,
-    @required this.sEzsignfoldertypeNameX,
-    @required this.fkiBillingentityinternalID,
-    @required this.sBillingentityinternalDescriptionX,
-    @required this.fkiEzsigntsarequirementID,
-    @required this.sEzsigntsarequirementDescriptionX,
-    @required this.sEzsignfolderDescription,
-    @required this.tEzsignfolderNote,
-    @required this.eEzsignfolderSendreminderfrequency,
-    @required this.dtEzsignfolderDuedate,
-    this.dtEzsignfolderSentdate,
-    @required this.dtEzsignfolderScheduledarchive,
-    @required this.dtEzsignfolderScheduleddestruction,
-    @required this.eEzsignfolderStep,
-    @required this.dtEzsignfolderClose,
-    @required this.objAudit,
+    required this.pkiEzsignfolderID,
+    required this.fkiEzsignfoldertypeID,
+    required this.sEzsignfoldertypeNameX,
+    required this.fkiBillingentityinternalID,
+    required this.sBillingentityinternalDescriptionX,
+    required this.fkiEzsigntsarequirementID,
+    required this.sEzsigntsarequirementDescriptionX,
+    required this.sEzsignfolderDescription,
+    required this.tEzsignfolderNote,
+    required this.eEzsignfolderSendreminderfrequency,
+    required this.dtEzsignfolderDuedate,
+    required this.dtEzsignfolderSentdate,
+    required this.dtEzsignfolderScheduledarchive,
+    required this.dtEzsignfolderScheduleddestruction,
+    required this.eEzsignfolderStep,
+    required this.dtEzsignfolderClose,
+    required this.objAudit,
   });
 
   /// The unique ID of the Ezsignfolder
@@ -48,8 +48,9 @@ class EzsignfolderResponseCompound {
   String sBillingentityinternalDescriptionX;
 
   /// The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server's time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server's time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|
-  // minimum: 1
-  // maximum: 3
+  ///
+  /// Minimum value: 1
+  /// Maximum value: 3
   int fkiEzsigntsarequirementID;
 
   /// The description of the Ezsigntsarequirement in the language of the requester
@@ -67,7 +68,7 @@ class EzsignfolderResponseCompound {
   String dtEzsignfolderDuedate;
 
   /// The date and time at which the Ezsign folder was sent the last time.
-  String dtEzsignfolderSentdate;
+  String? dtEzsignfolderSentdate;
 
   /// The scheduled date and time at which the Ezsignfolder should be archived.
   String dtEzsignfolderScheduledarchive;
@@ -104,24 +105,24 @@ class EzsignfolderResponseCompound {
 
   @override
   int get hashCode =>
-  // ignore: unnecessary_parenthesis
-    (pkiEzsignfolderID == null ? 0 : pkiEzsignfolderID.hashCode) +
-    (fkiEzsignfoldertypeID == null ? 0 : fkiEzsignfoldertypeID.hashCode) +
-    (sEzsignfoldertypeNameX == null ? 0 : sEzsignfoldertypeNameX.hashCode) +
-    (fkiBillingentityinternalID == null ? 0 : fkiBillingentityinternalID.hashCode) +
-    (sBillingentityinternalDescriptionX == null ? 0 : sBillingentityinternalDescriptionX.hashCode) +
-    (fkiEzsigntsarequirementID == null ? 0 : fkiEzsigntsarequirementID.hashCode) +
-    (sEzsigntsarequirementDescriptionX == null ? 0 : sEzsigntsarequirementDescriptionX.hashCode) +
-    (sEzsignfolderDescription == null ? 0 : sEzsignfolderDescription.hashCode) +
-    (tEzsignfolderNote == null ? 0 : tEzsignfolderNote.hashCode) +
-    (eEzsignfolderSendreminderfrequency == null ? 0 : eEzsignfolderSendreminderfrequency.hashCode) +
-    (dtEzsignfolderDuedate == null ? 0 : dtEzsignfolderDuedate.hashCode) +
-    (dtEzsignfolderSentdate == null ? 0 : dtEzsignfolderSentdate.hashCode) +
-    (dtEzsignfolderScheduledarchive == null ? 0 : dtEzsignfolderScheduledarchive.hashCode) +
-    (dtEzsignfolderScheduleddestruction == null ? 0 : dtEzsignfolderScheduleddestruction.hashCode) +
-    (eEzsignfolderStep == null ? 0 : eEzsignfolderStep.hashCode) +
-    (dtEzsignfolderClose == null ? 0 : dtEzsignfolderClose.hashCode) +
-    (objAudit == null ? 0 : objAudit.hashCode);
+    // ignore: unnecessary_parenthesis
+    (pkiEzsignfolderID.hashCode) +
+    (fkiEzsignfoldertypeID.hashCode) +
+    (sEzsignfoldertypeNameX.hashCode) +
+    (fkiBillingentityinternalID.hashCode) +
+    (sBillingentityinternalDescriptionX.hashCode) +
+    (fkiEzsigntsarequirementID.hashCode) +
+    (sEzsigntsarequirementDescriptionX.hashCode) +
+    (sEzsignfolderDescription.hashCode) +
+    (tEzsignfolderNote.hashCode) +
+    (eEzsignfolderSendreminderfrequency.hashCode) +
+    (dtEzsignfolderDuedate.hashCode) +
+    (dtEzsignfolderSentdate == null ? 0 : dtEzsignfolderSentdate!.hashCode) +
+    (dtEzsignfolderScheduledarchive.hashCode) +
+    (dtEzsignfolderScheduleddestruction.hashCode) +
+    (eEzsignfolderStep.hashCode) +
+    (dtEzsignfolderClose.hashCode) +
+    (objAudit.hashCode);
 
   @override
   String toString() => 'EzsignfolderResponseCompound[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, fkiBillingentityinternalID=$fkiBillingentityinternalID, sBillingentityinternalDescriptionX=$sBillingentityinternalDescriptionX, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sEzsigntsarequirementDescriptionX=$sEzsigntsarequirementDescriptionX, sEzsignfolderDescription=$sEzsignfolderDescription, tEzsignfolderNote=$tEzsignfolderNote, eEzsignfolderSendreminderfrequency=$eEzsignfolderSendreminderfrequency, dtEzsignfolderDuedate=$dtEzsignfolderDuedate, dtEzsignfolderSentdate=$dtEzsignfolderSentdate, dtEzsignfolderScheduledarchive=$dtEzsignfolderScheduledarchive, dtEzsignfolderScheduleddestruction=$dtEzsignfolderScheduleddestruction, eEzsignfolderStep=$eEzsignfolderStep, dtEzsignfolderClose=$dtEzsignfolderClose, objAudit=$objAudit]';
@@ -139,7 +140,9 @@ class EzsignfolderResponseCompound {
       json[r'tEzsignfolderNote'] = tEzsignfolderNote;
       json[r'eEzsignfolderSendreminderfrequency'] = eEzsignfolderSendreminderfrequency;
       json[r'dtEzsignfolderDuedate'] = dtEzsignfolderDuedate;
-      json[r'dtEzsignfolderSentdate'] = dtEzsignfolderSentdate == null ? null : dtEzsignfolderSentdate;
+    if (dtEzsignfolderSentdate != null) {
+      json[r'dtEzsignfolderSentdate'] = dtEzsignfolderSentdate;
+    }
       json[r'dtEzsignfolderScheduledarchive'] = dtEzsignfolderScheduledarchive;
       json[r'dtEzsignfolderScheduleddestruction'] = dtEzsignfolderScheduleddestruction;
       json[r'eEzsignfolderStep'] = eEzsignfolderStep;
@@ -151,62 +154,105 @@ class EzsignfolderResponseCompound {
   /// Returns a new [EzsignfolderResponseCompound] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static EzsignfolderResponseCompound fromJson(dynamic value) {
+  static EzsignfolderResponseCompound? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
+
+      // Ensure that the map contains the required keys.
+      // Note 1: the values aren't checked for validity beyond being non-null.
+      // Note 2: this code is stripped in release mode!
+      assert(() {
+        requiredKeys.forEach((key) {
+          assert(json.containsKey(key), 'Required key "EzsignfolderResponseCompound[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "EzsignfolderResponseCompound[$key]" has a null value in JSON.');
+        });
+        return true;
+      }());
+
       return EzsignfolderResponseCompound(
-        pkiEzsignfolderID: mapValueOfType<int>(json, r'pkiEzsignfolderID'),
-        fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID'),
-        sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX'),
-        fkiBillingentityinternalID: mapValueOfType<int>(json, r'fkiBillingentityinternalID'),
-        sBillingentityinternalDescriptionX: mapValueOfType<String>(json, r'sBillingentityinternalDescriptionX'),
-        fkiEzsigntsarequirementID: mapValueOfType<int>(json, r'fkiEzsigntsarequirementID'),
-        sEzsigntsarequirementDescriptionX: mapValueOfType<String>(json, r'sEzsigntsarequirementDescriptionX'),
-        sEzsignfolderDescription: mapValueOfType<String>(json, r'sEzsignfolderDescription'),
-        tEzsignfolderNote: mapValueOfType<String>(json, r'tEzsignfolderNote'),
-        eEzsignfolderSendreminderfrequency: FieldEEzsignfolderSendreminderfrequency.fromJson(json[r'eEzsignfolderSendreminderfrequency']),
-        dtEzsignfolderDuedate: mapValueOfType<String>(json, r'dtEzsignfolderDuedate'),
+        pkiEzsignfolderID: mapValueOfType<int>(json, r'pkiEzsignfolderID')!,
+        fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID')!,
+        sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX')!,
+        fkiBillingentityinternalID: mapValueOfType<int>(json, r'fkiBillingentityinternalID')!,
+        sBillingentityinternalDescriptionX: mapValueOfType<String>(json, r'sBillingentityinternalDescriptionX')!,
+        fkiEzsigntsarequirementID: mapValueOfType<int>(json, r'fkiEzsigntsarequirementID')!,
+        sEzsigntsarequirementDescriptionX: mapValueOfType<String>(json, r'sEzsigntsarequirementDescriptionX')!,
+        sEzsignfolderDescription: mapValueOfType<String>(json, r'sEzsignfolderDescription')!,
+        tEzsignfolderNote: mapValueOfType<String>(json, r'tEzsignfolderNote')!,
+        eEzsignfolderSendreminderfrequency: FieldEEzsignfolderSendreminderfrequency.fromJson(json[r'eEzsignfolderSendreminderfrequency'])!,
+        dtEzsignfolderDuedate: mapValueOfType<String>(json, r'dtEzsignfolderDuedate')!,
         dtEzsignfolderSentdate: mapValueOfType<String>(json, r'dtEzsignfolderSentdate'),
-        dtEzsignfolderScheduledarchive: mapValueOfType<String>(json, r'dtEzsignfolderScheduledarchive'),
-        dtEzsignfolderScheduleddestruction: mapValueOfType<String>(json, r'dtEzsignfolderScheduleddestruction'),
-        eEzsignfolderStep: FieldEEzsignfolderStep.fromJson(json[r'eEzsignfolderStep']),
-        dtEzsignfolderClose: mapValueOfType<String>(json, r'dtEzsignfolderClose'),
-        objAudit: CommonAudit.fromJson(json[r'objAudit']),
+        dtEzsignfolderScheduledarchive: mapValueOfType<String>(json, r'dtEzsignfolderScheduledarchive')!,
+        dtEzsignfolderScheduleddestruction: mapValueOfType<String>(json, r'dtEzsignfolderScheduleddestruction')!,
+        eEzsignfolderStep: FieldEEzsignfolderStep.fromJson(json[r'eEzsignfolderStep'])!,
+        dtEzsignfolderClose: mapValueOfType<String>(json, r'dtEzsignfolderClose')!,
+        objAudit: CommonAudit.fromJson(json[r'objAudit'])!,
       );
     }
     return null;
   }
 
-  static List<EzsignfolderResponseCompound> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(EzsignfolderResponseCompound.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <EzsignfolderResponseCompound>[];
+  static List<EzsignfolderResponseCompound>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <EzsignfolderResponseCompound>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = EzsignfolderResponseCompound.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
 
   static Map<String, EzsignfolderResponseCompound> mapFromJson(dynamic json) {
     final map = <String, EzsignfolderResponseCompound>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) => map[key] = EzsignfolderResponseCompound.fromJson(value));
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = EzsignfolderResponseCompound.fromJson(entry.value);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
 
   // maps a json object with a list of EzsignfolderResponseCompound-objects as value to a dart map
-  static Map<String, List<EzsignfolderResponseCompound>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
+  static Map<String, List<EzsignfolderResponseCompound>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignfolderResponseCompound>>{};
     if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) {
-          map[key] = EzsignfolderResponseCompound.listFromJson(
-            value,
-            emptyIsNull: emptyIsNull,
-            growable: growable,
-          );
-        });
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = EzsignfolderResponseCompound.listFromJson(entry.value, growable: growable,);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
     }
     return map;
   }
+
+  /// The list of required keys that must be present in a JSON.
+  static const requiredKeys = <String>{
+    'pkiEzsignfolderID',
+    'fkiEzsignfoldertypeID',
+    'sEzsignfoldertypeNameX',
+    'fkiBillingentityinternalID',
+    'sBillingentityinternalDescriptionX',
+    'fkiEzsigntsarequirementID',
+    'sEzsigntsarequirementDescriptionX',
+    'sEzsignfolderDescription',
+    'tEzsignfolderNote',
+    'eEzsignfolderSendreminderfrequency',
+    'dtEzsignfolderDuedate',
+    'dtEzsignfolderSentdate',
+    'dtEzsignfolderScheduledarchive',
+    'dtEzsignfolderScheduleddestruction',
+    'eEzsignfolderStep',
+    'dtEzsignfolderClose',
+    'objAudit',
+  };
 }
 

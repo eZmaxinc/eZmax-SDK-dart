@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.12
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -13,7 +13,7 @@ import 'package:test/test.dart';
 
 // tests for AuthenticateAuthenticateV2ResponseAllOf
 void main() {
-  final instance = AuthenticateAuthenticateV2ResponseAllOf();
+  // final instance = AuthenticateAuthenticateV2ResponseAllOf();
 
   group('test AuthenticateAuthenticateV2ResponseAllOf', () {
     // AuthenticateAuthenticateV2ResponseMPayload mPayload
