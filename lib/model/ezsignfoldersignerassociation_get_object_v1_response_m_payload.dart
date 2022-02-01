@@ -13,10 +13,28 @@ part of openapi.api;
 class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
   /// Returns a new [EzsignfoldersignerassociationGetObjectV1ResponseMPayload] instance.
   EzsignfoldersignerassociationGetObjectV1ResponseMPayload({
+    this.objUser,
+    this.objEzsignsigner,
     required this.pkiEzsignfoldersignerassociationID,
     required this.fkiEzsignfolderID,
     required this.bEzsignfoldersignerassociationReceivecopy,
   });
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  EzsignfoldersignerassociationResponseCompoundUser? objUser;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  EzsignsignerResponseCompound? objEzsignsigner;
 
   /// The unique ID of the Ezsignfoldersignerassociation
   int pkiEzsignfoldersignerassociationID;
@@ -29,6 +47,8 @@ class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfoldersignerassociationGetObjectV1ResponseMPayload &&
+     other.objUser == objUser &&
+     other.objEzsignsigner == objEzsignsigner &&
      other.pkiEzsignfoldersignerassociationID == pkiEzsignfoldersignerassociationID &&
      other.fkiEzsignfolderID == fkiEzsignfolderID &&
      other.bEzsignfoldersignerassociationReceivecopy == bEzsignfoldersignerassociationReceivecopy;
@@ -36,15 +56,23 @@ class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
+    (objUser == null ? 0 : objUser!.hashCode) +
+    (objEzsignsigner == null ? 0 : objEzsignsigner!.hashCode) +
     (pkiEzsignfoldersignerassociationID.hashCode) +
     (fkiEzsignfolderID.hashCode) +
     (bEzsignfoldersignerassociationReceivecopy.hashCode);
 
   @override
-  String toString() => 'EzsignfoldersignerassociationGetObjectV1ResponseMPayload[pkiEzsignfoldersignerassociationID=$pkiEzsignfoldersignerassociationID, fkiEzsignfolderID=$fkiEzsignfolderID, bEzsignfoldersignerassociationReceivecopy=$bEzsignfoldersignerassociationReceivecopy]';
+  String toString() => 'EzsignfoldersignerassociationGetObjectV1ResponseMPayload[objUser=$objUser, objEzsignsigner=$objEzsignsigner, pkiEzsignfoldersignerassociationID=$pkiEzsignfoldersignerassociationID, fkiEzsignfolderID=$fkiEzsignfolderID, bEzsignfoldersignerassociationReceivecopy=$bEzsignfoldersignerassociationReceivecopy]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
+    if (objUser != null) {
+      json[r'objUser'] = objUser;
+    }
+    if (objEzsignsigner != null) {
+      json[r'objEzsignsigner'] = objEzsignsigner;
+    }
       json[r'pkiEzsignfoldersignerassociationID'] = pkiEzsignfoldersignerassociationID;
       json[r'fkiEzsignfolderID'] = fkiEzsignfolderID;
       json[r'bEzsignfoldersignerassociationReceivecopy'] = bEzsignfoldersignerassociationReceivecopy;
@@ -70,6 +98,8 @@ class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
       }());
 
       return EzsignfoldersignerassociationGetObjectV1ResponseMPayload(
+        objUser: EzsignfoldersignerassociationResponseCompoundUser.fromJson(json[r'objUser']),
+        objEzsignsigner: EzsignsignerResponseCompound.fromJson(json[r'objEzsignsigner']),
         pkiEzsignfoldersignerassociationID: mapValueOfType<int>(json, r'pkiEzsignfoldersignerassociationID')!,
         fkiEzsignfolderID: mapValueOfType<int>(json, r'fkiEzsignfolderID')!,
         bEzsignfoldersignerassociationReceivecopy: mapValueOfType<bool>(json, r'bEzsignfoldersignerassociationReceivecopy')!,

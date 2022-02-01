@@ -13,6 +13,11 @@ part of openapi.api;
 class EzsigndocumentGetObjectV1ResponseMPayload {
   /// Returns a new [EzsigndocumentGetObjectV1ResponseMPayload] instance.
   EzsigndocumentGetObjectV1ResponseMPayload({
+    required this.iEzsigndocumentStepformtotal,
+    required this.iEzsigndocumentStepformcurrent,
+    required this.iEzsigndocumentStepsignaturetotal,
+    required this.iEzsigndocumentStepsignatureCurrent,
+    this.aObjEzsignfoldersignerassociationstatus = const [],
     required this.fkiEzsignfolderID,
     required this.dtEzsigndocumentDuedate,
     required this.fkiLanguageID,
@@ -29,6 +34,20 @@ class EzsigndocumentGetObjectV1ResponseMPayload {
     required this.sEzsigndocumentMD5signed,
     required this.objAudit,
   });
+
+  /// The total number of steps in the form filling phase
+  int iEzsigndocumentStepformtotal;
+
+  /// The current step in the form filling phase
+  int iEzsigndocumentStepformcurrent;
+
+  /// The total number of steps in the signature filling phase
+  int iEzsigndocumentStepsignaturetotal;
+
+  /// The current step in the signature phase
+  int iEzsigndocumentStepsignatureCurrent;
+
+  List<CustomEzsignfoldersignerassociationstatusResponse> aObjEzsignfoldersignerassociationstatus;
 
   /// The unique ID of the Ezsignfolder
   int fkiEzsignfolderID;
@@ -78,6 +97,11 @@ class EzsigndocumentGetObjectV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigndocumentGetObjectV1ResponseMPayload &&
+     other.iEzsigndocumentStepformtotal == iEzsigndocumentStepformtotal &&
+     other.iEzsigndocumentStepformcurrent == iEzsigndocumentStepformcurrent &&
+     other.iEzsigndocumentStepsignaturetotal == iEzsigndocumentStepsignaturetotal &&
+     other.iEzsigndocumentStepsignatureCurrent == iEzsigndocumentStepsignatureCurrent &&
+     other.aObjEzsignfoldersignerassociationstatus == aObjEzsignfoldersignerassociationstatus &&
      other.fkiEzsignfolderID == fkiEzsignfolderID &&
      other.dtEzsigndocumentDuedate == dtEzsigndocumentDuedate &&
      other.fkiLanguageID == fkiLanguageID &&
@@ -97,6 +121,11 @@ class EzsigndocumentGetObjectV1ResponseMPayload {
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
+    (iEzsigndocumentStepformtotal.hashCode) +
+    (iEzsigndocumentStepformcurrent.hashCode) +
+    (iEzsigndocumentStepsignaturetotal.hashCode) +
+    (iEzsigndocumentStepsignatureCurrent.hashCode) +
+    (aObjEzsignfoldersignerassociationstatus.hashCode) +
     (fkiEzsignfolderID.hashCode) +
     (dtEzsigndocumentDuedate.hashCode) +
     (fkiLanguageID.hashCode) +
@@ -114,10 +143,15 @@ class EzsigndocumentGetObjectV1ResponseMPayload {
     (objAudit.hashCode);
 
   @override
-  String toString() => 'EzsigndocumentGetObjectV1ResponseMPayload[fkiEzsignfolderID=$fkiEzsignfolderID, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, fkiLanguageID=$fkiLanguageID, sEzsigndocumentName=$sEzsigndocumentName, pkiEzsigndocumentID=$pkiEzsigndocumentID, eEzsigndocumentStep=$eEzsigndocumentStep, dtEzsigndocumentFirstsend=$dtEzsigndocumentFirstsend, dtEzsigndocumentLastsend=$dtEzsigndocumentLastsend, iEzsigndocumentOrder=$iEzsigndocumentOrder, iEzsigndocumentPagetotal=$iEzsigndocumentPagetotal, iEzsigndocumentSignaturesigned=$iEzsigndocumentSignaturesigned, iEzsigndocumentSignaturetotal=$iEzsigndocumentSignaturetotal, sEzsigndocumentMD5initial=$sEzsigndocumentMD5initial, sEzsigndocumentMD5signed=$sEzsigndocumentMD5signed, objAudit=$objAudit]';
+  String toString() => 'EzsigndocumentGetObjectV1ResponseMPayload[iEzsigndocumentStepformtotal=$iEzsigndocumentStepformtotal, iEzsigndocumentStepformcurrent=$iEzsigndocumentStepformcurrent, iEzsigndocumentStepsignaturetotal=$iEzsigndocumentStepsignaturetotal, iEzsigndocumentStepsignatureCurrent=$iEzsigndocumentStepsignatureCurrent, aObjEzsignfoldersignerassociationstatus=$aObjEzsignfoldersignerassociationstatus, fkiEzsignfolderID=$fkiEzsignfolderID, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, fkiLanguageID=$fkiLanguageID, sEzsigndocumentName=$sEzsigndocumentName, pkiEzsigndocumentID=$pkiEzsigndocumentID, eEzsigndocumentStep=$eEzsigndocumentStep, dtEzsigndocumentFirstsend=$dtEzsigndocumentFirstsend, dtEzsigndocumentLastsend=$dtEzsigndocumentLastsend, iEzsigndocumentOrder=$iEzsigndocumentOrder, iEzsigndocumentPagetotal=$iEzsigndocumentPagetotal, iEzsigndocumentSignaturesigned=$iEzsigndocumentSignaturesigned, iEzsigndocumentSignaturetotal=$iEzsigndocumentSignaturetotal, sEzsigndocumentMD5initial=$sEzsigndocumentMD5initial, sEzsigndocumentMD5signed=$sEzsigndocumentMD5signed, objAudit=$objAudit]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
+      json[r'iEzsigndocumentStepformtotal'] = iEzsigndocumentStepformtotal;
+      json[r'iEzsigndocumentStepformcurrent'] = iEzsigndocumentStepformcurrent;
+      json[r'iEzsigndocumentStepsignaturetotal'] = iEzsigndocumentStepsignaturetotal;
+      json[r'iEzsigndocumentStepsignatureCurrent'] = iEzsigndocumentStepsignatureCurrent;
+      json[r'a_objEzsignfoldersignerassociationstatus'] = aObjEzsignfoldersignerassociationstatus;
       json[r'fkiEzsignfolderID'] = fkiEzsignfolderID;
       json[r'dtEzsigndocumentDuedate'] = dtEzsigndocumentDuedate;
       json[r'fkiLanguageID'] = fkiLanguageID;
@@ -155,6 +189,11 @@ class EzsigndocumentGetObjectV1ResponseMPayload {
       }());
 
       return EzsigndocumentGetObjectV1ResponseMPayload(
+        iEzsigndocumentStepformtotal: mapValueOfType<int>(json, r'iEzsigndocumentStepformtotal')!,
+        iEzsigndocumentStepformcurrent: mapValueOfType<int>(json, r'iEzsigndocumentStepformcurrent')!,
+        iEzsigndocumentStepsignaturetotal: mapValueOfType<int>(json, r'iEzsigndocumentStepsignaturetotal')!,
+        iEzsigndocumentStepsignatureCurrent: mapValueOfType<int>(json, r'iEzsigndocumentStepsignatureCurrent')!,
+        aObjEzsignfoldersignerassociationstatus: CustomEzsignfoldersignerassociationstatusResponse.listFromJson(json[r'a_objEzsignfoldersignerassociationstatus'])!,
         fkiEzsignfolderID: mapValueOfType<int>(json, r'fkiEzsignfolderID')!,
         dtEzsigndocumentDuedate: mapValueOfType<String>(json, r'dtEzsigndocumentDuedate')!,
         fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID')!,
@@ -219,6 +258,11 @@ class EzsigndocumentGetObjectV1ResponseMPayload {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
+    'iEzsigndocumentStepformtotal',
+    'iEzsigndocumentStepformcurrent',
+    'iEzsigndocumentStepsignaturetotal',
+    'iEzsigndocumentStepsignatureCurrent',
+    'a_objEzsignfoldersignerassociationstatus',
     'fkiEzsignfolderID',
     'dtEzsigndocumentDuedate',
     'fkiLanguageID',

@@ -369,6 +369,8 @@ class ApiClient {
           return EzsigndocumentResponse.fromJson(value);
         case 'EzsigndocumentResponseCompound':
           return EzsigndocumentResponseCompound.fromJson(value);
+        case 'EzsigndocumentResponseCompoundAllOf':
+          return EzsigndocumentResponseCompoundAllOf.fromJson(value);
         case 'EzsignfolderCreateObjectV1Request':
           return EzsignfolderCreateObjectV1Request.fromJson(value);
         case 'EzsignfolderCreateObjectV1Response':
@@ -459,6 +461,8 @@ class ApiClient {
           return EzsignfoldersignerassociationResponse.fromJson(value);
         case 'EzsignfoldersignerassociationResponseCompound':
           return EzsignfoldersignerassociationResponseCompound.fromJson(value);
+        case 'EzsignfoldersignerassociationResponseCompoundAllOf':
+          return EzsignfoldersignerassociationResponseCompoundAllOf.fromJson(value);
         case 'EzsignfoldersignerassociationResponseCompoundUser':
           return EzsignfoldersignerassociationResponseCompoundUser.fromJson(value);
         case 'EzsignfoldertypeGetListV1Response':
@@ -501,6 +505,8 @@ class ApiClient {
           return EzsignsignatureRequest.fromJson(value);
         case 'EzsignsignatureRequestCompound':
           return EzsignsignatureRequestCompound.fromJson(value);
+        case 'EzsignsignatureRequestCompoundAllOf':
+          return EzsignsignatureRequestCompoundAllOf.fromJson(value);
         case 'EzsignsignaturecustomdateRequest':
           return EzsignsignaturecustomdateRequest.fromJson(value);
         case 'EzsignsignerRequest':
@@ -529,6 +535,8 @@ class ApiClient {
           return EzsigntemplatepackageGetListV1ResponseMPayloadAllOf.fromJson(value);
         case 'EzsigntemplatepackageListElement':
           return EzsigntemplatepackageListElement.fromJson(value);
+        case 'FieldEActivesessionWeekdaystart':
+          return FieldEActivesessionWeekdaystartTypeTransformer().decode(value);
         case 'FieldEEzsigndocumentStep':
           return FieldEEzsigndocumentStepTypeTransformer().decode(value);
         case 'FieldEEzsignfolderSendreminderfrequency':

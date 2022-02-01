@@ -16,6 +16,16 @@ void main() {
   // final instance = EzsignfoldersignerassociationGetObjectV1ResponseMPayload();
 
   group('test EzsignfoldersignerassociationGetObjectV1ResponseMPayload', () {
+    // EzsignfoldersignerassociationResponseCompoundUser objUser
+    test('to test the property `objUser`', () async {
+      // TODO
+    });
+
+    // EzsignsignerResponseCompound objEzsignsigner
+    test('to test the property `objEzsignsigner`', () async {
+      // TODO
+    });
+
     // The unique ID of the Ezsignfoldersignerassociation
     // int pkiEzsignfoldersignerassociationID
     test('to test the property `pkiEzsignfoldersignerassociationID`', () async {

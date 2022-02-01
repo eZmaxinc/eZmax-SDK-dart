@@ -83,6 +83,7 @@ doc/EzsigndocumentRequest.md
 doc/EzsigndocumentRequestCompound.md
 doc/EzsigndocumentResponse.md
 doc/EzsigndocumentResponseCompound.md
+doc/EzsigndocumentResponseCompoundAllOf.md
 doc/EzsignfolderCreateObjectV1Request.md
 doc/EzsignfolderCreateObjectV1Response.md
 doc/EzsignfolderCreateObjectV1ResponseAllOf.md
@@ -128,6 +129,7 @@ doc/EzsignfoldersignerassociationRequestCompound.md
 doc/EzsignfoldersignerassociationRequestCompoundAllOf.md
 doc/EzsignfoldersignerassociationResponse.md
 doc/EzsignfoldersignerassociationResponseCompound.md
+doc/EzsignfoldersignerassociationResponseCompoundAllOf.md
 doc/EzsignfoldersignerassociationResponseCompoundUser.md
 doc/EzsignfoldertypeGetListV1Response.md
 doc/EzsignfoldertypeGetListV1ResponseAllOf.md
@@ -149,6 +151,7 @@ doc/EzsignsignatureGetObjectV1Response.md
 doc/EzsignsignatureGetObjectV1ResponseAllOf.md
 doc/EzsignsignatureRequest.md
 doc/EzsignsignatureRequestCompound.md
+doc/EzsignsignatureRequestCompoundAllOf.md
 doc/EzsignsignaturecustomdateRequest.md
 doc/EzsignsignerRequest.md
 doc/EzsignsignerRequestCompound.md
@@ -163,6 +166,7 @@ doc/EzsigntemplatepackageGetListV1ResponseAllOf.md
 doc/EzsigntemplatepackageGetListV1ResponseMPayload.md
 doc/EzsigntemplatepackageGetListV1ResponseMPayloadAllOf.md
 doc/EzsigntemplatepackageListElement.md
+doc/FieldEActivesessionWeekdaystart.md
 doc/FieldEEzsigndocumentStep.md
 doc/FieldEEzsignfolderSendreminderfrequency.md
 doc/FieldEEzsignfolderStep.md
@@ -343,6 +347,7 @@ lib/model/ezsigndocument_request.dart
 lib/model/ezsigndocument_request_compound.dart
 lib/model/ezsigndocument_response.dart
 lib/model/ezsigndocument_response_compound.dart
+lib/model/ezsigndocument_response_compound_all_of.dart
 lib/model/ezsignfolder_create_object_v1_request.dart
 lib/model/ezsignfolder_create_object_v1_response.dart
 lib/model/ezsignfolder_create_object_v1_response_all_of.dart
@@ -388,6 +393,7 @@ lib/model/ezsignfoldersignerassociation_request_compound.dart
 lib/model/ezsignfoldersignerassociation_request_compound_all_of.dart
 lib/model/ezsignfoldersignerassociation_response.dart
 lib/model/ezsignfoldersignerassociation_response_compound.dart
+lib/model/ezsignfoldersignerassociation_response_compound_all_of.dart
 lib/model/ezsignfoldersignerassociation_response_compound_user.dart
 lib/model/ezsignfoldertype_get_list_v1_response.dart
 lib/model/ezsignfoldertype_get_list_v1_response_all_of.dart
@@ -409,6 +415,7 @@ lib/model/ezsignsignature_get_object_v1_response.dart
 lib/model/ezsignsignature_get_object_v1_response_all_of.dart
 lib/model/ezsignsignature_request.dart
 lib/model/ezsignsignature_request_compound.dart
+lib/model/ezsignsignature_request_compound_all_of.dart
 lib/model/ezsignsignaturecustomdate_request.dart
 lib/model/ezsignsigner_request.dart
 lib/model/ezsignsigner_request_compound.dart
@@ -423,6 +430,7 @@ lib/model/ezsigntemplatepackage_get_list_v1_response_all_of.dart
 lib/model/ezsigntemplatepackage_get_list_v1_response_m_payload.dart
 lib/model/ezsigntemplatepackage_get_list_v1_response_m_payload_all_of.dart
 lib/model/ezsigntemplatepackage_list_element.dart
+lib/model/field_e_activesession_weekdaystart.dart
 lib/model/field_e_ezsigndocument_step.dart
 lib/model/field_e_ezsignfolder_sendreminderfrequency.dart
 lib/model/field_e_ezsignfolder_step.dart
@@ -556,6 +564,7 @@ test/ezsigndocument_get_words_positions_v1_response_all_of_test.dart
 test/ezsigndocument_get_words_positions_v1_response_test.dart
 test/ezsigndocument_request_compound_test.dart
 test/ezsigndocument_request_test.dart
+test/ezsigndocument_response_compound_all_of_test.dart
 test/ezsigndocument_response_compound_test.dart
 test/ezsigndocument_response_test.dart
 test/ezsignfolder_create_object_v1_request_test.dart
@@ -601,6 +610,7 @@ test/ezsignfoldersignerassociation_get_object_v1_response_test.dart
 test/ezsignfoldersignerassociation_request_compound_all_of_test.dart
 test/ezsignfoldersignerassociation_request_compound_test.dart
 test/ezsignfoldersignerassociation_request_test.dart
+test/ezsignfoldersignerassociation_response_compound_all_of_test.dart
 test/ezsignfoldersignerassociation_response_compound_test.dart
 test/ezsignfoldersignerassociation_response_compound_user_test.dart
 test/ezsignfoldersignerassociation_response_test.dart
@@ -622,6 +632,7 @@ test/ezsignsignature_create_object_v1_response_test.dart
 test/ezsignsignature_delete_object_v1_response_test.dart
 test/ezsignsignature_get_object_v1_response_all_of_test.dart
 test/ezsignsignature_get_object_v1_response_test.dart
+test/ezsignsignature_request_compound_all_of_test.dart
 test/ezsignsignature_request_compound_test.dart
 test/ezsignsignature_request_test.dart
 test/ezsignsignaturecustomdate_request_test.dart
@@ -638,6 +649,7 @@ test/ezsigntemplatepackage_get_list_v1_response_m_payload_all_of_test.dart
 test/ezsigntemplatepackage_get_list_v1_response_m_payload_test.dart
 test/ezsigntemplatepackage_get_list_v1_response_test.dart
 test/ezsigntemplatepackage_list_element_test.dart
+test/field_e_activesession_weekdaystart_test.dart
 test/field_e_ezsigndocument_step_test.dart
 test/field_e_ezsignfolder_sendreminderfrequency_test.dart
 test/field_e_ezsignfolder_step_test.dart

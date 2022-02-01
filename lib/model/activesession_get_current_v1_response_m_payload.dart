@@ -15,6 +15,7 @@ class ActivesessionGetCurrentV1ResponseMPayload {
   ActivesessionGetCurrentV1ResponseMPayload({
     required this.sCustomerCode,
     required this.eActivesessionSessiontype,
+    required this.eActivesessionWeekdaystart,
     required this.fkiLanguageID,
     required this.sCompanyNameX,
     required this.sDepartmentNameX,
@@ -29,6 +30,8 @@ class ActivesessionGetCurrentV1ResponseMPayload {
 
   /// The type of session used for the API request call
   ActivesessionGetCurrentV1ResponseMPayloadEActivesessionSessiontypeEnum eActivesessionSessiontype;
+
+  FieldEActivesessionWeekdaystart eActivesessionWeekdaystart;
 
   /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
   ///
@@ -58,6 +61,7 @@ class ActivesessionGetCurrentV1ResponseMPayload {
   bool operator ==(Object other) => identical(this, other) || other is ActivesessionGetCurrentV1ResponseMPayload &&
      other.sCustomerCode == sCustomerCode &&
      other.eActivesessionSessiontype == eActivesessionSessiontype &&
+     other.eActivesessionWeekdaystart == eActivesessionWeekdaystart &&
      other.fkiLanguageID == fkiLanguageID &&
      other.sCompanyNameX == sCompanyNameX &&
      other.sDepartmentNameX == sDepartmentNameX &&
@@ -71,6 +75,7 @@ class ActivesessionGetCurrentV1ResponseMPayload {
     // ignore: unnecessary_parenthesis
     (sCustomerCode.hashCode) +
     (eActivesessionSessiontype.hashCode) +
+    (eActivesessionWeekdaystart.hashCode) +
     (fkiLanguageID.hashCode) +
     (sCompanyNameX.hashCode) +
     (sDepartmentNameX.hashCode) +
@@ -80,12 +85,13 @@ class ActivesessionGetCurrentV1ResponseMPayload {
     (fkiApikeyID.hashCode);
 
   @override
-  String toString() => 'ActivesessionGetCurrentV1ResponseMPayload[sCustomerCode=$sCustomerCode, eActivesessionSessiontype=$eActivesessionSessiontype, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, aRegisteredModules=$aRegisteredModules, aPermissions=$aPermissions, fkiUserID=$fkiUserID, fkiApikeyID=$fkiApikeyID]';
+  String toString() => 'ActivesessionGetCurrentV1ResponseMPayload[sCustomerCode=$sCustomerCode, eActivesessionSessiontype=$eActivesessionSessiontype, eActivesessionWeekdaystart=$eActivesessionWeekdaystart, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, aRegisteredModules=$aRegisteredModules, aPermissions=$aPermissions, fkiUserID=$fkiUserID, fkiApikeyID=$fkiApikeyID]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'sCustomerCode'] = sCustomerCode;
       json[r'eActivesessionSessiontype'] = eActivesessionSessiontype;
+      json[r'eActivesessionWeekdaystart'] = eActivesessionWeekdaystart;
       json[r'fkiLanguageID'] = fkiLanguageID;
       json[r'sCompanyNameX'] = sCompanyNameX;
       json[r'sDepartmentNameX'] = sDepartmentNameX;
@@ -117,6 +123,7 @@ class ActivesessionGetCurrentV1ResponseMPayload {
       return ActivesessionGetCurrentV1ResponseMPayload(
         sCustomerCode: mapValueOfType<String>(json, r'sCustomerCode')!,
         eActivesessionSessiontype: ActivesessionGetCurrentV1ResponseMPayloadEActivesessionSessiontypeEnum.fromJson(json[r'eActivesessionSessiontype'])!,
+        eActivesessionWeekdaystart: FieldEActivesessionWeekdaystart.fromJson(json[r'eActivesessionWeekdaystart'])!,
         fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID')!,
         sCompanyNameX: mapValueOfType<String>(json, r'sCompanyNameX')!,
         sDepartmentNameX: mapValueOfType<String>(json, r'sDepartmentNameX')!,
@@ -179,6 +186,7 @@ class ActivesessionGetCurrentV1ResponseMPayload {
   static const requiredKeys = <String>{
     'sCustomerCode',
     'eActivesessionSessiontype',
+    'eActivesessionWeekdaystart',
     'fkiLanguageID',
     'sCompanyNameX',
     'sDepartmentNameX',
