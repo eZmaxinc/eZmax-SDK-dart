@@ -1,4 +1,4 @@
-# openapi.model.ActivesessionGetCurrentV1ResponseMPayload
+# openapi.model.ActivesessionResponseCompound
 
 ## Load the model package
 ```dart

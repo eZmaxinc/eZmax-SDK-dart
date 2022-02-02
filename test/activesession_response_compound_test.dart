@@ -11,11 +11,11 @@
 import 'package:openapi/api.dart';
 import 'package:test/test.dart';
 
-// tests for ActivesessionGetCurrentV1ResponseMPayload
+// tests for ActivesessionResponseCompound
 void main() {
-  // final instance = ActivesessionGetCurrentV1ResponseMPayload();
+  // final instance = ActivesessionResponseCompound();
 
-  group('test ActivesessionGetCurrentV1ResponseMPayload', () {
+  group('test ActivesessionResponseCompound', () {
     // An array of permissions granted to the user or api key
     // List<int> aPkiPermissionID (default value: const [])
     test('to test the property `aPkiPermissionID`', () async {

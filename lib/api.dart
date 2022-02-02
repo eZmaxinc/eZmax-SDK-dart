@@ -49,6 +49,11 @@ part 'api/object_period_api.dart';
 part 'model/activesession_get_current_v1_response.dart';
 part 'model/activesession_get_current_v1_response_all_of.dart';
 part 'model/activesession_get_current_v1_response_m_payload.dart';
+part 'model/activesession_response.dart';
+part 'model/activesession_response_compound.dart';
+part 'model/activesession_response_compound_all_of.dart';
+part 'model/activesession_response_compound_apikey.dart';
+part 'model/activesession_response_compound_user.dart';
 part 'model/address_request.dart';
 part 'model/apikey_create_object_v1_request.dart';
 part 'model/apikey_create_object_v1_response.dart';
@@ -209,6 +214,7 @@ part 'model/ezsigntemplatepackage_get_list_v1_response_all_of.dart';
 part 'model/ezsigntemplatepackage_get_list_v1_response_m_payload.dart';
 part 'model/ezsigntemplatepackage_get_list_v1_response_m_payload_all_of.dart';
 part 'model/ezsigntemplatepackage_list_element.dart';
+part 'model/field_e_activesession_sessiontype.dart';
 part 'model/field_e_activesession_weekdaystart.dart';
 part 'model/field_e_ezsigndocument_step.dart';
 part 'model/field_e_ezsignfolder_sendreminderfrequency.dart';
@@ -263,7 +269,6 @@ part 'model/webhook_response.dart';
 part 'model/webhook_user_user_created.dart';
 part 'model/webhook_user_user_created_all_of.dart';
 part 'model/website_request.dart';
-part 'model/xxxx.dart';
 
 
 const _delimiters = {'csv': ',', 'ssv': ' ', 'tsv': '\t', 'pipes': '|'};

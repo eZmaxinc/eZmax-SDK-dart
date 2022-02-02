@@ -11,21 +11,10 @@
 import 'package:openapi/api.dart';
 import 'package:test/test.dart';
 
-// tests for Xxxx
+// tests for FieldEActivesessionSessiontype
 void main() {
-  // final instance = Xxxx();
 
-  group('test Xxxx', () {
-    // int foo
-    test('to test the property `foo`', () async {
-      // TODO
-    });
-
-    // int bar
-    test('to test the property `bar`', () async {
-      // TODO
-    });
-
+  group('test FieldEActivesessionSessiontype', () {
 
   });
 

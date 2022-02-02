@@ -215,6 +215,16 @@ class ApiClient {
           return ActivesessionGetCurrentV1ResponseAllOf.fromJson(value);
         case 'ActivesessionGetCurrentV1ResponseMPayload':
           return ActivesessionGetCurrentV1ResponseMPayload.fromJson(value);
+        case 'ActivesessionResponse':
+          return ActivesessionResponse.fromJson(value);
+        case 'ActivesessionResponseCompound':
+          return ActivesessionResponseCompound.fromJson(value);
+        case 'ActivesessionResponseCompoundAllOf':
+          return ActivesessionResponseCompoundAllOf.fromJson(value);
+        case 'ActivesessionResponseCompoundApikey':
+          return ActivesessionResponseCompoundApikey.fromJson(value);
+        case 'ActivesessionResponseCompoundUser':
+          return ActivesessionResponseCompoundUser.fromJson(value);
         case 'AddressRequest':
           return AddressRequest.fromJson(value);
         case 'ApikeyCreateObjectV1Request':
@@ -535,6 +545,8 @@ class ApiClient {
           return EzsigntemplatepackageGetListV1ResponseMPayloadAllOf.fromJson(value);
         case 'EzsigntemplatepackageListElement':
           return EzsigntemplatepackageListElement.fromJson(value);
+        case 'FieldEActivesessionSessiontype':
+          return FieldEActivesessionSessiontypeTypeTransformer().decode(value);
         case 'FieldEActivesessionWeekdaystart':
           return FieldEActivesessionWeekdaystartTypeTransformer().decode(value);
         case 'FieldEEzsigndocumentStep':
@@ -643,8 +655,6 @@ class ApiClient {
           return WebhookUserUserCreatedAllOf.fromJson(value);
         case 'WebsiteRequest':
           return WebsiteRequest.fromJson(value);
-        case 'Xxxx':
-          return Xxxx.fromJson(value);
         default:
           dynamic match;
           if (value is List && (match = _regList.firstMatch(targetType)?.group(1)) != null) {

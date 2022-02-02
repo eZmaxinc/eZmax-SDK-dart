@@ -55,6 +55,9 @@ String parameterToString(dynamic value) {
   if (value is DateTime) {
     return value.toUtc().toIso8601String();
   }
+  if (value is FieldEActivesessionSessiontype) {
+    return FieldEActivesessionSessiontypeTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEActivesessionWeekdaystart) {
     return FieldEActivesessionWeekdaystartTypeTransformer().encode(value).toString();
   }

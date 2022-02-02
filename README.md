@@ -117,6 +117,11 @@ Class | Method | HTTP request | Description
  - [ActivesessionGetCurrentV1Response](doc//ActivesessionGetCurrentV1Response.md)
  - [ActivesessionGetCurrentV1ResponseAllOf](doc//ActivesessionGetCurrentV1ResponseAllOf.md)
  - [ActivesessionGetCurrentV1ResponseMPayload](doc//ActivesessionGetCurrentV1ResponseMPayload.md)
+ - [ActivesessionResponse](doc//ActivesessionResponse.md)
+ - [ActivesessionResponseCompound](doc//ActivesessionResponseCompound.md)
+ - [ActivesessionResponseCompoundAllOf](doc//ActivesessionResponseCompoundAllOf.md)
+ - [ActivesessionResponseCompoundApikey](doc//ActivesessionResponseCompoundApikey.md)
+ - [ActivesessionResponseCompoundUser](doc//ActivesessionResponseCompoundUser.md)
  - [AddressRequest](doc//AddressRequest.md)
  - [ApikeyCreateObjectV1Request](doc//ApikeyCreateObjectV1Request.md)
  - [ApikeyCreateObjectV1Response](doc//ApikeyCreateObjectV1Response.md)
@@ -277,6 +282,7 @@ Class | Method | HTTP request | Description
  - [EzsigntemplatepackageGetListV1ResponseMPayload](doc//EzsigntemplatepackageGetListV1ResponseMPayload.md)
  - [EzsigntemplatepackageGetListV1ResponseMPayloadAllOf](doc//EzsigntemplatepackageGetListV1ResponseMPayloadAllOf.md)
  - [EzsigntemplatepackageListElement](doc//EzsigntemplatepackageListElement.md)
+ - [FieldEActivesessionSessiontype](doc//FieldEActivesessionSessiontype.md)
  - [FieldEActivesessionWeekdaystart](doc//FieldEActivesessionWeekdaystart.md)
  - [FieldEEzsigndocumentStep](doc//FieldEEzsigndocumentStep.md)
  - [FieldEEzsignfolderSendreminderfrequency](doc//FieldEEzsignfolderSendreminderfrequency.md)
@@ -331,7 +337,6 @@ Class | Method | HTTP request | Description
  - [WebhookUserUserCreated](doc//WebhookUserUserCreated.md)
  - [WebhookUserUserCreatedAllOf](doc//WebhookUserUserCreatedAllOf.md)
  - [WebsiteRequest](doc//WebsiteRequest.md)
- - [Xxxx](doc//Xxxx.md)
 
 
 ## Documentation For Authorization

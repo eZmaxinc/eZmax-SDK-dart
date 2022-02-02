@@ -10,9 +10,9 @@
 
 part of openapi.api;
 
-class ActivesessionGetCurrentV1ResponseMPayload {
-  /// Returns a new [ActivesessionGetCurrentV1ResponseMPayload] instance.
-  ActivesessionGetCurrentV1ResponseMPayload({
+class ActivesessionResponseCompound {
+  /// Returns a new [ActivesessionResponseCompound] instance.
+  ActivesessionResponseCompound({
     this.aPkiPermissionID = const [],
     required this.objUserReal,
     this.objUserCloned,
@@ -74,7 +74,7 @@ class ActivesessionGetCurrentV1ResponseMPayload {
   String pksCustomerCode;
 
   @override
-  bool operator ==(Object other) => identical(this, other) || other is ActivesessionGetCurrentV1ResponseMPayload &&
+  bool operator ==(Object other) => identical(this, other) || other is ActivesessionResponseCompound &&
      other.aPkiPermissionID == aPkiPermissionID &&
      other.objUserReal == objUserReal &&
      other.objUserCloned == objUserCloned &&
@@ -105,7 +105,7 @@ class ActivesessionGetCurrentV1ResponseMPayload {
     (pksCustomerCode.hashCode);
 
   @override
-  String toString() => 'ActivesessionGetCurrentV1ResponseMPayload[aPkiPermissionID=$aPkiPermissionID, objUserReal=$objUserReal, objUserCloned=$objUserCloned, objApikey=$objApikey, aEModuleInternalname=$aEModuleInternalname, eActivesessionSessiontype=$eActivesessionSessiontype, eActivesessionWeekdaystart=$eActivesessionWeekdaystart, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, bActivesessionDebug=$bActivesessionDebug, pksCustomerCode=$pksCustomerCode]';
+  String toString() => 'ActivesessionResponseCompound[aPkiPermissionID=$aPkiPermissionID, objUserReal=$objUserReal, objUserCloned=$objUserCloned, objApikey=$objApikey, aEModuleInternalname=$aEModuleInternalname, eActivesessionSessiontype=$eActivesessionSessiontype, eActivesessionWeekdaystart=$eActivesessionWeekdaystart, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, bActivesessionDebug=$bActivesessionDebug, pksCustomerCode=$pksCustomerCode]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -128,10 +128,10 @@ class ActivesessionGetCurrentV1ResponseMPayload {
     return json;
   }
 
-  /// Returns a new [ActivesessionGetCurrentV1ResponseMPayload] instance and imports its values from
+  /// Returns a new [ActivesessionResponseCompound] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static ActivesessionGetCurrentV1ResponseMPayload? fromJson(dynamic value) {
+  static ActivesessionResponseCompound? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
 
@@ -140,13 +140,13 @@ class ActivesessionGetCurrentV1ResponseMPayload {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "ActivesessionGetCurrentV1ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "ActivesessionGetCurrentV1ResponseMPayload[$key]" has a null value in JSON.');
+          assert(json.containsKey(key), 'Required key "ActivesessionResponseCompound[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "ActivesessionResponseCompound[$key]" has a null value in JSON.');
         });
         return true;
       }());
 
-      return ActivesessionGetCurrentV1ResponseMPayload(
+      return ActivesessionResponseCompound(
         aPkiPermissionID: json[r'a_pkiPermissionID'] is List
             ? (json[r'a_pkiPermissionID'] as List).cast<int>()
             : const [],
@@ -168,11 +168,11 @@ class ActivesessionGetCurrentV1ResponseMPayload {
     return null;
   }
 
-  static List<ActivesessionGetCurrentV1ResponseMPayload>? listFromJson(dynamic json, {bool growable = false,}) {
-    final result = <ActivesessionGetCurrentV1ResponseMPayload>[];
+  static List<ActivesessionResponseCompound>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <ActivesessionResponseCompound>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
-        final value = ActivesessionGetCurrentV1ResponseMPayload.fromJson(row);
+        final value = ActivesessionResponseCompound.fromJson(row);
         if (value != null) {
           result.add(value);
         }
@@ -181,12 +181,12 @@ class ActivesessionGetCurrentV1ResponseMPayload {
     return result.toList(growable: growable);
   }
 
-  static Map<String, ActivesessionGetCurrentV1ResponseMPayload> mapFromJson(dynamic json) {
-    final map = <String, ActivesessionGetCurrentV1ResponseMPayload>{};
+  static Map<String, ActivesessionResponseCompound> mapFromJson(dynamic json) {
+    final map = <String, ActivesessionResponseCompound>{};
     if (json is Map && json.isNotEmpty) {
       json = json.cast<String, dynamic>(); // ignore: parameter_assignments
       for (final entry in json.entries) {
-        final value = ActivesessionGetCurrentV1ResponseMPayload.fromJson(entry.value);
+        final value = ActivesessionResponseCompound.fromJson(entry.value);
         if (value != null) {
           map[entry.key] = value;
         }
@@ -195,13 +195,13 @@ class ActivesessionGetCurrentV1ResponseMPayload {
     return map;
   }
 
-  // maps a json object with a list of ActivesessionGetCurrentV1ResponseMPayload-objects as value to a dart map
-  static Map<String, List<ActivesessionGetCurrentV1ResponseMPayload>> mapListFromJson(dynamic json, {bool growable = false,}) {
-    final map = <String, List<ActivesessionGetCurrentV1ResponseMPayload>>{};
+  // maps a json object with a list of ActivesessionResponseCompound-objects as value to a dart map
+  static Map<String, List<ActivesessionResponseCompound>> mapListFromJson(dynamic json, {bool growable = false,}) {
+    final map = <String, List<ActivesessionResponseCompound>>{};
     if (json is Map && json.isNotEmpty) {
       json = json.cast<String, dynamic>(); // ignore: parameter_assignments
       for (final entry in json.entries) {
-        final value = ActivesessionGetCurrentV1ResponseMPayload.listFromJson(entry.value, growable: growable,);
+        final value = ActivesessionResponseCompound.listFromJson(entry.value, growable: growable,);
         if (value != null) {
           map[entry.key] = value;
         }
