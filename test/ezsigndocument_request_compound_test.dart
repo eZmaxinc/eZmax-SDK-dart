@@ -16,6 +16,12 @@ void main() {
   // final instance = EzsigndocumentRequestCompound();
 
   group('test EzsigndocumentRequestCompound', () {
+    // The unique ID of the Ezsigndocument
+    // int pkiEzsigndocumentID
+    test('to test the property `pkiEzsigndocumentID`', () async {
+      // TODO
+    });
+
     // Indicates where to look for the document binary content.
     // String eEzsigndocumentSource
     test('to test the property `eEzsigndocumentSource`', () async {

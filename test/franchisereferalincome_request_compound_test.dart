@@ -26,6 +26,12 @@ void main() {
       // TODO
     });
 
+    // The unique ID of the Franchisereferalincome
+    // int pkiFranchisereferalincomeID
+    test('to test the property `pkiFranchisereferalincomeID`', () async {
+      // TODO
+    });
+
     // The unique ID of the Franchisebroker
     // int fkiFranchisebrokerID
     test('to test the property `fkiFranchisebrokerID`', () async {

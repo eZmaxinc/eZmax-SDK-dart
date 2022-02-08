@@ -13,12 +13,22 @@ part of openapi.api;
 class EzsignfolderRequest {
   /// Returns a new [EzsignfolderRequest] instance.
   EzsignfolderRequest({
+    this.pkiEzsignfolderID,
     required this.fkiEzsignfoldertypeID,
     required this.fkiEzsigntsarequirementID,
     required this.sEzsignfolderDescription,
     required this.tEzsignfolderNote,
     required this.eEzsignfolderSendreminderfrequency,
   });
+
+  /// The unique ID of the Ezsignfolder
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? pkiEzsignfolderID;
 
   /// The unique ID of the Ezsignfoldertype.
   int fkiEzsignfoldertypeID;
@@ -39,6 +49,7 @@ class EzsignfolderRequest {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfolderRequest &&
+     other.pkiEzsignfolderID == pkiEzsignfolderID &&
      other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
      other.fkiEzsigntsarequirementID == fkiEzsigntsarequirementID &&
      other.sEzsignfolderDescription == sEzsignfolderDescription &&
@@ -48,6 +59,7 @@ class EzsignfolderRequest {
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
+    (pkiEzsignfolderID == null ? 0 : pkiEzsignfolderID!.hashCode) +
     (fkiEzsignfoldertypeID.hashCode) +
     (fkiEzsigntsarequirementID.hashCode) +
     (sEzsignfolderDescription.hashCode) +
@@ -55,10 +67,13 @@ class EzsignfolderRequest {
     (eEzsignfolderSendreminderfrequency.hashCode);
 
   @override
-  String toString() => 'EzsignfolderRequest[fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sEzsignfolderDescription=$sEzsignfolderDescription, tEzsignfolderNote=$tEzsignfolderNote, eEzsignfolderSendreminderfrequency=$eEzsignfolderSendreminderfrequency]';
+  String toString() => 'EzsignfolderRequest[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sEzsignfolderDescription=$sEzsignfolderDescription, tEzsignfolderNote=$tEzsignfolderNote, eEzsignfolderSendreminderfrequency=$eEzsignfolderSendreminderfrequency]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
+    if (pkiEzsignfolderID != null) {
+      json[r'pkiEzsignfolderID'] = pkiEzsignfolderID;
+    }
       json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
       json[r'fkiEzsigntsarequirementID'] = fkiEzsigntsarequirementID;
       json[r'sEzsignfolderDescription'] = sEzsignfolderDescription;
@@ -86,6 +101,7 @@ class EzsignfolderRequest {
       }());
 
       return EzsignfolderRequest(
+        pkiEzsignfolderID: mapValueOfType<int>(json, r'pkiEzsignfolderID'),
         fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID')!,
         fkiEzsigntsarequirementID: mapValueOfType<int>(json, r'fkiEzsigntsarequirementID')!,
         sEzsignfolderDescription: mapValueOfType<String>(json, r'sEzsignfolderDescription')!,

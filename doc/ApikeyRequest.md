@@ -8,6 +8,7 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**pkiApikeyID** | **int** | The unique ID of the Apikey | [optional] 
 **fkiUserID** | **int** | The unique ID of the User | 
 **objApikeyDescription** | [**MultilingualApikeyDescription**](MultilingualApikeyDescription.md) |  | 
 

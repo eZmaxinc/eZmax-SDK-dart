@@ -89,6 +89,7 @@ Class | Method | HTTP request | Description
 *ObjectEzsigndocumentApi* | [**ezsigndocumentGetWordsPositionsV1**](doc//ObjectEzsigndocumentApi.md#ezsigndocumentgetwordspositionsv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions | Retrieve positions X,Y of given words from a Ezsigndocument
 *ObjectEzsignfolderApi* | [**ezsignfolderCreateObjectV1**](doc//ObjectEzsignfolderApi.md#ezsignfoldercreateobjectv1) | **POST** /1/object/ezsignfolder | Create a new Ezsignfolder
 *ObjectEzsignfolderApi* | [**ezsignfolderDeleteObjectV1**](doc//ObjectEzsignfolderApi.md#ezsignfolderdeleteobjectv1) | **DELETE** /1/object/ezsignfolder/{pkiEzsignfolderID} | Delete an existing Ezsignfolder
+*ObjectEzsignfolderApi* | [**ezsignfolderEditObjectV1**](doc//ObjectEzsignfolderApi.md#ezsignfoldereditobjectv1) | **PUT** /1/object/ezsignfolder/{pkiEzsignfolderID} | Edit an Ezsignfolder
 *ObjectEzsignfolderApi* | [**ezsignfolderGetEzsigndocumentsV1**](doc//ObjectEzsignfolderApi.md#ezsignfoldergetezsigndocumentsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder's Ezsigndocuments
 *ObjectEzsignfolderApi* | [**ezsignfolderGetEzsignfoldersignerassociationsV1**](doc//ObjectEzsignfolderApi.md#ezsignfoldergetezsignfoldersignerassociationsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations | Retrieve an existing Ezsignfolder's Ezsignfoldersignerassociations
 *ObjectEzsignfolderApi* | [**ezsignfolderGetFormsDataV1**](doc//ObjectEzsignfolderApi.md#ezsignfoldergetformsdatav1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData | Retrieve an existing Ezsignfolder's forms data
@@ -205,6 +206,8 @@ Class | Method | HTTP request | Description
  - [EzsignfolderCreateObjectV1ResponseAllOf](doc//EzsignfolderCreateObjectV1ResponseAllOf.md)
  - [EzsignfolderCreateObjectV1ResponseMPayload](doc//EzsignfolderCreateObjectV1ResponseMPayload.md)
  - [EzsignfolderDeleteObjectV1Response](doc//EzsignfolderDeleteObjectV1Response.md)
+ - [EzsignfolderEditObjectV1Request](doc//EzsignfolderEditObjectV1Request.md)
+ - [EzsignfolderEditObjectV1Response](doc//EzsignfolderEditObjectV1Response.md)
  - [EzsignfolderGetEzsigndocumentsV1Response](doc//EzsignfolderGetEzsigndocumentsV1Response.md)
  - [EzsignfolderGetEzsigndocumentsV1ResponseAllOf](doc//EzsignfolderGetEzsigndocumentsV1ResponseAllOf.md)
  - [EzsignfolderGetEzsigndocumentsV1ResponseMPayload](doc//EzsignfolderGetEzsigndocumentsV1ResponseMPayload.md)

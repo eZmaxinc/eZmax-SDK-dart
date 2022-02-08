@@ -13,6 +13,7 @@ part of openapi.api;
 class EzsigndocumentRequest {
   /// Returns a new [EzsigndocumentRequest] instance.
   EzsigndocumentRequest({
+    this.pkiEzsigndocumentID,
     required this.eEzsigndocumentSource,
     required this.eEzsigndocumentFormat,
     this.sEzsigndocumentBase64,
@@ -24,6 +25,15 @@ class EzsigndocumentRequest {
     required this.fkiLanguageID,
     required this.sEzsigndocumentName,
   });
+
+  /// The unique ID of the Ezsigndocument
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? pkiEzsigndocumentID;
 
   /// Indicates where to look for the document binary content.
   EzsigndocumentRequestEEzsigndocumentSourceEnum eEzsigndocumentSource;
@@ -72,6 +82,7 @@ class EzsigndocumentRequest {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigndocumentRequest &&
+     other.pkiEzsigndocumentID == pkiEzsigndocumentID &&
      other.eEzsigndocumentSource == eEzsigndocumentSource &&
      other.eEzsigndocumentFormat == eEzsigndocumentFormat &&
      other.sEzsigndocumentBase64 == sEzsigndocumentBase64 &&
@@ -86,6 +97,7 @@ class EzsigndocumentRequest {
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
+    (pkiEzsigndocumentID == null ? 0 : pkiEzsigndocumentID!.hashCode) +
     (eEzsigndocumentSource.hashCode) +
     (eEzsigndocumentFormat.hashCode) +
     (sEzsigndocumentBase64 == null ? 0 : sEzsigndocumentBase64!.hashCode) +
@@ -98,10 +110,13 @@ class EzsigndocumentRequest {
     (sEzsigndocumentName.hashCode);
 
   @override
-  String toString() => 'EzsigndocumentRequest[eEzsigndocumentSource=$eEzsigndocumentSource, eEzsigndocumentFormat=$eEzsigndocumentFormat, sEzsigndocumentBase64=$sEzsigndocumentBase64, sEzsigndocumentUrl=$sEzsigndocumentUrl, bEzsigndocumentForcerepair=$bEzsigndocumentForcerepair, sEzsigndocumentPassword=$sEzsigndocumentPassword, fkiEzsignfolderID=$fkiEzsignfolderID, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, fkiLanguageID=$fkiLanguageID, sEzsigndocumentName=$sEzsigndocumentName]';
+  String toString() => 'EzsigndocumentRequest[pkiEzsigndocumentID=$pkiEzsigndocumentID, eEzsigndocumentSource=$eEzsigndocumentSource, eEzsigndocumentFormat=$eEzsigndocumentFormat, sEzsigndocumentBase64=$sEzsigndocumentBase64, sEzsigndocumentUrl=$sEzsigndocumentUrl, bEzsigndocumentForcerepair=$bEzsigndocumentForcerepair, sEzsigndocumentPassword=$sEzsigndocumentPassword, fkiEzsignfolderID=$fkiEzsignfolderID, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, fkiLanguageID=$fkiLanguageID, sEzsigndocumentName=$sEzsigndocumentName]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
+    if (pkiEzsigndocumentID != null) {
+      json[r'pkiEzsigndocumentID'] = pkiEzsigndocumentID;
+    }
       json[r'eEzsigndocumentSource'] = eEzsigndocumentSource;
       json[r'eEzsigndocumentFormat'] = eEzsigndocumentFormat;
     if (sEzsigndocumentBase64 != null) {
@@ -138,6 +153,7 @@ class EzsigndocumentRequest {
       }());
 
       return EzsigndocumentRequest(
+        pkiEzsigndocumentID: mapValueOfType<int>(json, r'pkiEzsigndocumentID'),
         eEzsigndocumentSource: EzsigndocumentRequestEEzsigndocumentSourceEnum.fromJson(json[r'eEzsigndocumentSource'])!,
         eEzsigndocumentFormat: EzsigndocumentRequestEEzsigndocumentFormatEnum.fromJson(json[r'eEzsigndocumentFormat'])!,
         sEzsigndocumentBase64: mapValueOfType<String>(json, r'sEzsigndocumentBase64'),

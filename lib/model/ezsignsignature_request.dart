@@ -13,6 +13,7 @@ part of openapi.api;
 class EzsignsignatureRequest {
   /// Returns a new [EzsignsignatureRequest] instance.
   EzsignsignatureRequest({
+    this.pkiEzsignsignatureID,
     required this.fkiEzsignfoldersignerassociationID,
     required this.iEzsignpagePagenumber,
     required this.iEzsignsignatureX,
@@ -21,6 +22,15 @@ class EzsignsignatureRequest {
     required this.eEzsignsignatureType,
     required this.fkiEzsigndocumentID,
   });
+
+  /// The unique ID of the Ezsignsignature
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? pkiEzsignsignatureID;
 
   /// The unique ID of the Ezsignfoldersignerassociation
   int fkiEzsignfoldersignerassociationID;
@@ -44,6 +54,7 @@ class EzsignsignatureRequest {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignsignatureRequest &&
+     other.pkiEzsignsignatureID == pkiEzsignsignatureID &&
      other.fkiEzsignfoldersignerassociationID == fkiEzsignfoldersignerassociationID &&
      other.iEzsignpagePagenumber == iEzsignpagePagenumber &&
      other.iEzsignsignatureX == iEzsignsignatureX &&
@@ -55,6 +66,7 @@ class EzsignsignatureRequest {
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
+    (pkiEzsignsignatureID == null ? 0 : pkiEzsignsignatureID!.hashCode) +
     (fkiEzsignfoldersignerassociationID.hashCode) +
     (iEzsignpagePagenumber.hashCode) +
     (iEzsignsignatureX.hashCode) +
@@ -64,10 +76,13 @@ class EzsignsignatureRequest {
     (fkiEzsigndocumentID.hashCode);
 
   @override
-  String toString() => 'EzsignsignatureRequest[fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureStep=$iEzsignsignatureStep, eEzsignsignatureType=$eEzsignsignatureType, fkiEzsigndocumentID=$fkiEzsigndocumentID]';
+  String toString() => 'EzsignsignatureRequest[pkiEzsignsignatureID=$pkiEzsignsignatureID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureStep=$iEzsignsignatureStep, eEzsignsignatureType=$eEzsignsignatureType, fkiEzsigndocumentID=$fkiEzsigndocumentID]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
+    if (pkiEzsignsignatureID != null) {
+      json[r'pkiEzsignsignatureID'] = pkiEzsignsignatureID;
+    }
       json[r'fkiEzsignfoldersignerassociationID'] = fkiEzsignfoldersignerassociationID;
       json[r'iEzsignpagePagenumber'] = iEzsignpagePagenumber;
       json[r'iEzsignsignatureX'] = iEzsignsignatureX;
@@ -97,6 +112,7 @@ class EzsignsignatureRequest {
       }());
 
       return EzsignsignatureRequest(
+        pkiEzsignsignatureID: mapValueOfType<int>(json, r'pkiEzsignsignatureID'),
         fkiEzsignfoldersignerassociationID: mapValueOfType<int>(json, r'fkiEzsignfoldersignerassociationID')!,
         iEzsignpagePagenumber: mapValueOfType<int>(json, r'iEzsignpagePagenumber')!,
         iEzsignsignatureX: mapValueOfType<int>(json, r'iEzsignsignatureX')!,

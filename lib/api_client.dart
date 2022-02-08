@@ -391,6 +391,10 @@ class ApiClient {
           return EzsignfolderCreateObjectV1ResponseMPayload.fromJson(value);
         case 'EzsignfolderDeleteObjectV1Response':
           return EzsignfolderDeleteObjectV1Response.fromJson(value);
+        case 'EzsignfolderEditObjectV1Request':
+          return EzsignfolderEditObjectV1Request.fromJson(value);
+        case 'EzsignfolderEditObjectV1Response':
+          return EzsignfolderEditObjectV1Response.fromJson(value);
         case 'EzsignfolderGetEzsigndocumentsV1Response':
           return EzsignfolderGetEzsigndocumentsV1Response.fromJson(value);
         case 'EzsignfolderGetEzsigndocumentsV1ResponseAllOf':

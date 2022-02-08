@@ -137,6 +137,8 @@ part 'model/ezsignfolder_create_object_v1_response.dart';
 part 'model/ezsignfolder_create_object_v1_response_all_of.dart';
 part 'model/ezsignfolder_create_object_v1_response_m_payload.dart';
 part 'model/ezsignfolder_delete_object_v1_response.dart';
+part 'model/ezsignfolder_edit_object_v1_request.dart';
+part 'model/ezsignfolder_edit_object_v1_response.dart';
 part 'model/ezsignfolder_get_ezsigndocuments_v1_response.dart';
 part 'model/ezsignfolder_get_ezsigndocuments_v1_response_all_of.dart';
 part 'model/ezsignfolder_get_ezsigndocuments_v1_response_m_payload.dart';

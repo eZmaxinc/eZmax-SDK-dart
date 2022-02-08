@@ -16,6 +16,12 @@ void main() {
   // final instance = ApikeyRequest();
 
   group('test ApikeyRequest', () {
+    // The unique ID of the Apikey
+    // int pkiApikeyID
+    test('to test the property `pkiApikeyID`', () async {
+      // TODO
+    });
+
     // The unique ID of the User
     // int fkiUserID
     test('to test the property `fkiUserID`', () async {

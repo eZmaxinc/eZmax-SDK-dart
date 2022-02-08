@@ -13,9 +13,19 @@ part of openapi.api;
 class ApikeyRequest {
   /// Returns a new [ApikeyRequest] instance.
   ApikeyRequest({
+    this.pkiApikeyID,
     required this.fkiUserID,
     required this.objApikeyDescription,
   });
+
+  /// The unique ID of the Apikey
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? pkiApikeyID;
 
   /// The unique ID of the User
   int fkiUserID;
@@ -24,20 +34,25 @@ class ApikeyRequest {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ApikeyRequest &&
+     other.pkiApikeyID == pkiApikeyID &&
      other.fkiUserID == fkiUserID &&
      other.objApikeyDescription == objApikeyDescription;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
+    (pkiApikeyID == null ? 0 : pkiApikeyID!.hashCode) +
     (fkiUserID.hashCode) +
     (objApikeyDescription.hashCode);
 
   @override
-  String toString() => 'ApikeyRequest[fkiUserID=$fkiUserID, objApikeyDescription=$objApikeyDescription]';
+  String toString() => 'ApikeyRequest[pkiApikeyID=$pkiApikeyID, fkiUserID=$fkiUserID, objApikeyDescription=$objApikeyDescription]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
+    if (pkiApikeyID != null) {
+      json[r'pkiApikeyID'] = pkiApikeyID;
+    }
       json[r'fkiUserID'] = fkiUserID;
       json[r'objApikeyDescription'] = objApikeyDescription;
     return json;
@@ -62,6 +77,7 @@ class ApikeyRequest {
       }());
 
       return ApikeyRequest(
+        pkiApikeyID: mapValueOfType<int>(json, r'pkiApikeyID'),
         fkiUserID: mapValueOfType<int>(json, r'fkiUserID')!,
         objApikeyDescription: MultilingualApikeyDescription.fromJson(json[r'objApikeyDescription'])!,
       );

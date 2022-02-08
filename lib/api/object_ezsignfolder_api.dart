@@ -129,6 +129,65 @@ class ObjectEzsignfolderApi {
     return null;
   }
 
+  /// Edit an Ezsignfolder
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfolderID (required):
+  ///
+  /// * [EzsignfolderEditObjectV1Request] ezsignfolderEditObjectV1Request (required):
+  Future<Response> ezsignfolderEditObjectV1WithHttpInfo(int pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}'
+      .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = ezsignfolderEditObjectV1Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const authNames = <String>['Authorization'];
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'PUT',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      authNames,
+    );
+  }
+
+  /// Edit an Ezsignfolder
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfolderID (required):
+  ///
+  /// * [EzsignfolderEditObjectV1Request] ezsignfolderEditObjectV1Request (required):
+  Future<EzsignfolderEditObjectV1Response?> ezsignfolderEditObjectV1(int pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request,) async {
+    final response = await ezsignfolderEditObjectV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderEditObjectV1Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderEditObjectV1Response',) as EzsignfolderEditObjectV1Response;
+    
+    }
+    return null;
+  }
+
   /// Retrieve an existing Ezsignfolder's Ezsigndocuments
   ///
   /// Note: This method returns the HTTP [Response].

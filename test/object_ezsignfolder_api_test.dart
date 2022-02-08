@@ -33,6 +33,13 @@ void main() {
       // TODO
     });
 
+    // Edit an Ezsignfolder
+    //
+    //Future<EzsignfolderEditObjectV1Response> ezsignfolderEditObjectV1(int pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request) async
+    test('test ezsignfolderEditObjectV1', () async {
+      // TODO
+    });
+
     // Retrieve an existing Ezsignfolder's Ezsigndocuments
     //
     //Future<EzsignfolderGetEzsigndocumentsV1Response> ezsignfolderGetEzsigndocumentsV1(int pkiEzsignfolderID) async

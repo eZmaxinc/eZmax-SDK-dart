@@ -13,6 +13,7 @@ part of openapi.api;
 class FranchisereferalincomeRequest {
   /// Returns a new [FranchisereferalincomeRequest] instance.
   FranchisereferalincomeRequest({
+    this.pkiFranchisereferalincomeID,
     required this.fkiFranchisebrokerID,
     required this.fkiFranchisereferalincomeprogramID,
     required this.fkiPeriodID,
@@ -25,6 +26,15 @@ class FranchisereferalincomeRequest {
     required this.fkiFranchiseofficeID,
     required this.sFranchisereferalincomeRemoteid,
   });
+
+  /// The unique ID of the Franchisereferalincome
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? pkiFranchisereferalincomeID;
 
   /// The unique ID of the Franchisebroker
   int fkiFranchisebrokerID;
@@ -60,6 +70,7 @@ class FranchisereferalincomeRequest {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is FranchisereferalincomeRequest &&
+     other.pkiFranchisereferalincomeID == pkiFranchisereferalincomeID &&
      other.fkiFranchisebrokerID == fkiFranchisebrokerID &&
      other.fkiFranchisereferalincomeprogramID == fkiFranchisereferalincomeprogramID &&
      other.fkiPeriodID == fkiPeriodID &&
@@ -75,6 +86,7 @@ class FranchisereferalincomeRequest {
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
+    (pkiFranchisereferalincomeID == null ? 0 : pkiFranchisereferalincomeID!.hashCode) +
     (fkiFranchisebrokerID.hashCode) +
     (fkiFranchisereferalincomeprogramID.hashCode) +
     (fkiPeriodID.hashCode) +
@@ -88,10 +100,13 @@ class FranchisereferalincomeRequest {
     (sFranchisereferalincomeRemoteid.hashCode);
 
   @override
-  String toString() => 'FranchisereferalincomeRequest[fkiFranchisebrokerID=$fkiFranchisebrokerID, fkiFranchisereferalincomeprogramID=$fkiFranchisereferalincomeprogramID, fkiPeriodID=$fkiPeriodID, dFranchisereferalincomeLoan=$dFranchisereferalincomeLoan, dFranchisereferalincomeFranchiseamount=$dFranchisereferalincomeFranchiseamount, dFranchisereferalincomeFranchisoramount=$dFranchisereferalincomeFranchisoramount, dFranchisereferalincomeAgentamount=$dFranchisereferalincomeAgentamount, dtFranchisereferalincomeDisbursed=$dtFranchisereferalincomeDisbursed, tFranchisereferalincomeComment=$tFranchisereferalincomeComment, fkiFranchiseofficeID=$fkiFranchiseofficeID, sFranchisereferalincomeRemoteid=$sFranchisereferalincomeRemoteid]';
+  String toString() => 'FranchisereferalincomeRequest[pkiFranchisereferalincomeID=$pkiFranchisereferalincomeID, fkiFranchisebrokerID=$fkiFranchisebrokerID, fkiFranchisereferalincomeprogramID=$fkiFranchisereferalincomeprogramID, fkiPeriodID=$fkiPeriodID, dFranchisereferalincomeLoan=$dFranchisereferalincomeLoan, dFranchisereferalincomeFranchiseamount=$dFranchisereferalincomeFranchiseamount, dFranchisereferalincomeFranchisoramount=$dFranchisereferalincomeFranchisoramount, dFranchisereferalincomeAgentamount=$dFranchisereferalincomeAgentamount, dtFranchisereferalincomeDisbursed=$dtFranchisereferalincomeDisbursed, tFranchisereferalincomeComment=$tFranchisereferalincomeComment, fkiFranchiseofficeID=$fkiFranchiseofficeID, sFranchisereferalincomeRemoteid=$sFranchisereferalincomeRemoteid]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
+    if (pkiFranchisereferalincomeID != null) {
+      json[r'pkiFranchisereferalincomeID'] = pkiFranchisereferalincomeID;
+    }
       json[r'fkiFranchisebrokerID'] = fkiFranchisebrokerID;
       json[r'fkiFranchisereferalincomeprogramID'] = fkiFranchisereferalincomeprogramID;
       json[r'fkiPeriodID'] = fkiPeriodID;
@@ -125,6 +140,7 @@ class FranchisereferalincomeRequest {
       }());
 
       return FranchisereferalincomeRequest(
+        pkiFranchisereferalincomeID: mapValueOfType<int>(json, r'pkiFranchisereferalincomeID'),
         fkiFranchisebrokerID: mapValueOfType<int>(json, r'fkiFranchisebrokerID')!,
         fkiFranchisereferalincomeprogramID: mapValueOfType<int>(json, r'fkiFranchisereferalincomeprogramID')!,
         fkiPeriodID: mapValueOfType<int>(json, r'fkiPeriodID')!,

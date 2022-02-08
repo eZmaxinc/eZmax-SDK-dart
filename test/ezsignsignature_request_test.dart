@@ -16,6 +16,12 @@ void main() {
   // final instance = EzsignsignatureRequest();
 
   group('test EzsignsignatureRequest', () {
+    // The unique ID of the Ezsignsignature
+    // int pkiEzsignsignatureID
+    test('to test the property `pkiEzsignsignatureID`', () async {
+      // TODO
+    });
+
     // The unique ID of the Ezsignfoldersignerassociation
     // int fkiEzsignfoldersignerassociationID
     test('to test the property `fkiEzsignfoldersignerassociationID`', () async {
