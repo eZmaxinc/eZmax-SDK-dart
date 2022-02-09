@@ -87,9 +87,10 @@ Class | Method | HTTP request | Description
 *ObjectEzsigndocumentApi* | [**ezsigndocumentGetFormDataV1**](doc//ObjectEzsigndocumentApi.md#ezsigndocumentgetformdatav1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getFormData | Retrieve an existing Ezsigndocument's Form Data
 *ObjectEzsigndocumentApi* | [**ezsigndocumentGetObjectV1**](doc//ObjectEzsigndocumentApi.md#ezsigndocumentgetobjectv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Retrieve an existing Ezsigndocument
 *ObjectEzsigndocumentApi* | [**ezsigndocumentGetWordsPositionsV1**](doc//ObjectEzsigndocumentApi.md#ezsigndocumentgetwordspositionsv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions | Retrieve positions X,Y of given words from a Ezsigndocument
+*ObjectEzsigndocumentApi* | [**ezsigndocumentPatchObjectV1**](doc//ObjectEzsigndocumentApi.md#ezsigndocumentpatchobjectv1) | **PATCH** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Patch an existing Ezsigndocument
 *ObjectEzsignfolderApi* | [**ezsignfolderCreateObjectV1**](doc//ObjectEzsignfolderApi.md#ezsignfoldercreateobjectv1) | **POST** /1/object/ezsignfolder | Create a new Ezsignfolder
 *ObjectEzsignfolderApi* | [**ezsignfolderDeleteObjectV1**](doc//ObjectEzsignfolderApi.md#ezsignfolderdeleteobjectv1) | **DELETE** /1/object/ezsignfolder/{pkiEzsignfolderID} | Delete an existing Ezsignfolder
-*ObjectEzsignfolderApi* | [**ezsignfolderEditObjectV1**](doc//ObjectEzsignfolderApi.md#ezsignfoldereditobjectv1) | **PUT** /1/object/ezsignfolder/{pkiEzsignfolderID} | Edit an Ezsignfolder
+*ObjectEzsignfolderApi* | [**ezsignfolderEditObjectV1**](doc//ObjectEzsignfolderApi.md#ezsignfoldereditobjectv1) | **PUT** /1/object/ezsignfolder/{pkiEzsignfolderID} | Modify an existing Ezsignfolder
 *ObjectEzsignfolderApi* | [**ezsignfolderGetEzsigndocumentsV1**](doc//ObjectEzsignfolderApi.md#ezsignfoldergetezsigndocumentsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder's Ezsigndocuments
 *ObjectEzsignfolderApi* | [**ezsignfolderGetEzsignfoldersignerassociationsV1**](doc//ObjectEzsignfolderApi.md#ezsignfoldergetezsignfoldersignerassociationsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations | Retrieve an existing Ezsignfolder's Ezsignfoldersignerassociations
 *ObjectEzsignfolderApi* | [**ezsignfolderGetFormsDataV1**](doc//ObjectEzsignfolderApi.md#ezsignfoldergetformsdatav1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData | Retrieve an existing Ezsignfolder's forms data
@@ -196,8 +197,11 @@ Class | Method | HTTP request | Description
  - [EzsigndocumentGetWordsPositionsV1Request](doc//EzsigndocumentGetWordsPositionsV1Request.md)
  - [EzsigndocumentGetWordsPositionsV1Response](doc//EzsigndocumentGetWordsPositionsV1Response.md)
  - [EzsigndocumentGetWordsPositionsV1ResponseAllOf](doc//EzsigndocumentGetWordsPositionsV1ResponseAllOf.md)
+ - [EzsigndocumentPatchObjectV1Request](doc//EzsigndocumentPatchObjectV1Request.md)
+ - [EzsigndocumentPatchObjectV1Response](doc//EzsigndocumentPatchObjectV1Response.md)
  - [EzsigndocumentRequest](doc//EzsigndocumentRequest.md)
  - [EzsigndocumentRequestCompound](doc//EzsigndocumentRequestCompound.md)
+ - [EzsigndocumentRequestPatch](doc//EzsigndocumentRequestPatch.md)
  - [EzsigndocumentResponse](doc//EzsigndocumentResponse.md)
  - [EzsigndocumentResponseCompound](doc//EzsigndocumentResponseCompound.md)
  - [EzsigndocumentResponseCompoundAllOf](doc//EzsigndocumentResponseCompoundAllOf.md)

@@ -548,4 +548,63 @@ class ObjectEzsigndocumentApi {
     }
     return null;
   }
+
+  /// Patch an existing Ezsigndocument
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  ///
+  /// * [EzsigndocumentPatchObjectV1Request] ezsigndocumentPatchObjectV1Request (required):
+  Future<Response> ezsigndocumentPatchObjectV1WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsigndocument/{pkiEzsigndocumentID}'
+      .replaceAll('{pkiEzsigndocumentID}', pkiEzsigndocumentID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = ezsigndocumentPatchObjectV1Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const authNames = <String>['Authorization'];
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'PATCH',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      authNames,
+    );
+  }
+
+  /// Patch an existing Ezsigndocument
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  ///
+  /// * [EzsigndocumentPatchObjectV1Request] ezsigndocumentPatchObjectV1Request (required):
+  Future<EzsigndocumentPatchObjectV1Response?> ezsigndocumentPatchObjectV1(int pkiEzsigndocumentID, EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request,) async {
+    final response = await ezsigndocumentPatchObjectV1WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentPatchObjectV1Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentPatchObjectV1Response',) as EzsigndocumentPatchObjectV1Response;
+    
+    }
+    return null;
+  }
 }

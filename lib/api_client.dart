@@ -371,10 +371,16 @@ class ApiClient {
           return EzsigndocumentGetWordsPositionsV1Response.fromJson(value);
         case 'EzsigndocumentGetWordsPositionsV1ResponseAllOf':
           return EzsigndocumentGetWordsPositionsV1ResponseAllOf.fromJson(value);
+        case 'EzsigndocumentPatchObjectV1Request':
+          return EzsigndocumentPatchObjectV1Request.fromJson(value);
+        case 'EzsigndocumentPatchObjectV1Response':
+          return EzsigndocumentPatchObjectV1Response.fromJson(value);
         case 'EzsigndocumentRequest':
           return EzsigndocumentRequest.fromJson(value);
         case 'EzsigndocumentRequestCompound':
           return EzsigndocumentRequestCompound.fromJson(value);
+        case 'EzsigndocumentRequestPatch':
+          return EzsigndocumentRequestPatch.fromJson(value);
         case 'EzsigndocumentResponse':
           return EzsigndocumentResponse.fromJson(value);
         case 'EzsigndocumentResponseCompound':

@@ -90,5 +90,12 @@ void main() {
       // TODO
     });
 
+    // Patch an existing Ezsigndocument
+    //
+    //Future<EzsigndocumentPatchObjectV1Response> ezsigndocumentPatchObjectV1(int pkiEzsigndocumentID, EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request) async
+    test('test ezsigndocumentPatchObjectV1', () async {
+      // TODO
+    });
+
   });
 }
