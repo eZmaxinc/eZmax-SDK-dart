@@ -129,6 +129,65 @@ class ObjectEzsignsignatureApi {
     return null;
   }
 
+  /// Edit an existing Ezsignsignature
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignsignatureID (required):
+  ///
+  /// * [EzsignsignatureEditObjectV1Request] ezsignsignatureEditObjectV1Request (required):
+  Future<Response> ezsignsignatureEditObjectV1WithHttpInfo(int pkiEzsignsignatureID, EzsignsignatureEditObjectV1Request ezsignsignatureEditObjectV1Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsignsignature/{pkiEzsignsignatureID}'
+      .replaceAll('{pkiEzsignsignatureID}', pkiEzsignsignatureID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = ezsignsignatureEditObjectV1Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const authNames = <String>['Authorization'];
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'PUT',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      authNames,
+    );
+  }
+
+  /// Edit an existing Ezsignsignature
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignsignatureID (required):
+  ///
+  /// * [EzsignsignatureEditObjectV1Request] ezsignsignatureEditObjectV1Request (required):
+  Future<EzsignsignatureEditObjectV1Response?> ezsignsignatureEditObjectV1(int pkiEzsignsignatureID, EzsignsignatureEditObjectV1Request ezsignsignatureEditObjectV1Request,) async {
+    final response = await ezsignsignatureEditObjectV1WithHttpInfo(pkiEzsignsignatureID, ezsignsignatureEditObjectV1Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignsignatureEditObjectV1Response',) as EzsignsignatureEditObjectV1Response;
+    
+    }
+    return null;
+  }
+
   /// Retrieve an existing Ezsignsignature
   ///
   /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.

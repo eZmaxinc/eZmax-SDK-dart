@@ -106,6 +106,7 @@ Class | Method | HTTP request | Description
 *ObjectEzsignfoldertypeApi* | [**ezsignfoldertypeGetListV1**](doc//ObjectEzsignfoldertypeApi.md#ezsignfoldertypegetlistv1) | **GET** /1/object/ezsignfoldertype/getList | Retrieve Ezsignfoldertype list
 *ObjectEzsignsignatureApi* | [**ezsignsignatureCreateObjectV1**](doc//ObjectEzsignsignatureApi.md#ezsignsignaturecreateobjectv1) | **POST** /1/object/ezsignsignature | Create a new Ezsignsignature
 *ObjectEzsignsignatureApi* | [**ezsignsignatureDeleteObjectV1**](doc//ObjectEzsignsignatureApi.md#ezsignsignaturedeleteobjectv1) | **DELETE** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Delete an existing Ezsignsignature
+*ObjectEzsignsignatureApi* | [**ezsignsignatureEditObjectV1**](doc//ObjectEzsignsignatureApi.md#ezsignsignatureeditobjectv1) | **PUT** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Edit an existing Ezsignsignature
 *ObjectEzsignsignatureApi* | [**ezsignsignatureGetObjectV1**](doc//ObjectEzsignsignatureApi.md#ezsignsignaturegetobjectv1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
 *ObjectEzsigntemplatepackageApi* | [**ezsigntemplatepackageGetListV1**](doc//ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackagegetlistv1) | **GET** /1/object/ezsigntemplatepackage/getList | Retrieve Ezsigntemplatepackage list
 *ObjectFranchisebrokerApi* | [**franchisebrokerGetAutocompleteV1**](doc//ObjectFranchisebrokerApi.md#franchisebrokergetautocompletev1) | **GET** /1/object/franchisebroker/getAutocomplete/{sSelector} | Retrieve Franchisebrokers and IDs
@@ -270,6 +271,8 @@ Class | Method | HTTP request | Description
  - [EzsignsignatureCreateObjectV1ResponseAllOf](doc//EzsignsignatureCreateObjectV1ResponseAllOf.md)
  - [EzsignsignatureCreateObjectV1ResponseMPayload](doc//EzsignsignatureCreateObjectV1ResponseMPayload.md)
  - [EzsignsignatureDeleteObjectV1Response](doc//EzsignsignatureDeleteObjectV1Response.md)
+ - [EzsignsignatureEditObjectV1Request](doc//EzsignsignatureEditObjectV1Request.md)
+ - [EzsignsignatureEditObjectV1Response](doc//EzsignsignatureEditObjectV1Response.md)
  - [EzsignsignatureGetObjectV1Response](doc//EzsignsignatureGetObjectV1Response.md)
  - [EzsignsignatureGetObjectV1ResponseAllOf](doc//EzsignsignatureGetObjectV1ResponseAllOf.md)
  - [EzsignsignatureRequest](doc//EzsignsignatureRequest.md)

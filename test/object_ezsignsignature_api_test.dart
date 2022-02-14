@@ -33,6 +33,13 @@ void main() {
       // TODO
     });
 
+    // Edit an existing Ezsignsignature
+    //
+    //Future<EzsignsignatureEditObjectV1Response> ezsignsignatureEditObjectV1(int pkiEzsignsignatureID, EzsignsignatureEditObjectV1Request ezsignsignatureEditObjectV1Request) async
+    test('test ezsignsignatureEditObjectV1', () async {
+      // TODO
+    });
+
     // Retrieve an existing Ezsignsignature
     //
     // ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.

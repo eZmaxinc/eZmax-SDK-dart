@@ -517,6 +517,10 @@ class ApiClient {
           return EzsignsignatureCreateObjectV1ResponseMPayload.fromJson(value);
         case 'EzsignsignatureDeleteObjectV1Response':
           return EzsignsignatureDeleteObjectV1Response.fromJson(value);
+        case 'EzsignsignatureEditObjectV1Request':
+          return EzsignsignatureEditObjectV1Request.fromJson(value);
+        case 'EzsignsignatureEditObjectV1Response':
+          return EzsignsignatureEditObjectV1Response.fromJson(value);
         case 'EzsignsignatureGetObjectV1Response':
           return EzsignsignatureGetObjectV1Response.fromJson(value);
         case 'EzsignsignatureGetObjectV1ResponseAllOf':
