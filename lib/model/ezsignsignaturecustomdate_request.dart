@@ -13,10 +13,20 @@ part of openapi.api;
 class EzsignsignaturecustomdateRequest {
   /// Returns a new [EzsignsignaturecustomdateRequest] instance.
   EzsignsignaturecustomdateRequest({
+    this.pkiEzsignsignaturecustomdateID,
     required this.iEzsignsignaturecustomdateX,
     required this.iEzsignsignaturecustomdateY,
     required this.sEzsignsignaturecustomdateFormat,
   });
+
+  /// The unique ID of the Ezsignsignaturecustomdate
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? pkiEzsignsignaturecustomdateID;
 
   /// The X coordinate (Horizontal) where to put the custom date block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the custom date block 2 inches from the left border of the page, you would use \"200\" for the X coordinate.
   int iEzsignsignaturecustomdateX;
@@ -29,6 +39,7 @@ class EzsignsignaturecustomdateRequest {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignsignaturecustomdateRequest &&
+     other.pkiEzsignsignaturecustomdateID == pkiEzsignsignaturecustomdateID &&
      other.iEzsignsignaturecustomdateX == iEzsignsignaturecustomdateX &&
      other.iEzsignsignaturecustomdateY == iEzsignsignaturecustomdateY &&
      other.sEzsignsignaturecustomdateFormat == sEzsignsignaturecustomdateFormat;
@@ -36,15 +47,19 @@ class EzsignsignaturecustomdateRequest {
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
+    (pkiEzsignsignaturecustomdateID == null ? 0 : pkiEzsignsignaturecustomdateID!.hashCode) +
     (iEzsignsignaturecustomdateX.hashCode) +
     (iEzsignsignaturecustomdateY.hashCode) +
     (sEzsignsignaturecustomdateFormat.hashCode);
 
   @override
-  String toString() => 'EzsignsignaturecustomdateRequest[iEzsignsignaturecustomdateX=$iEzsignsignaturecustomdateX, iEzsignsignaturecustomdateY=$iEzsignsignaturecustomdateY, sEzsignsignaturecustomdateFormat=$sEzsignsignaturecustomdateFormat]';
+  String toString() => 'EzsignsignaturecustomdateRequest[pkiEzsignsignaturecustomdateID=$pkiEzsignsignaturecustomdateID, iEzsignsignaturecustomdateX=$iEzsignsignaturecustomdateX, iEzsignsignaturecustomdateY=$iEzsignsignaturecustomdateY, sEzsignsignaturecustomdateFormat=$sEzsignsignaturecustomdateFormat]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
+    if (pkiEzsignsignaturecustomdateID != null) {
+      json[r'pkiEzsignsignaturecustomdateID'] = pkiEzsignsignaturecustomdateID;
+    }
       json[r'iEzsignsignaturecustomdateX'] = iEzsignsignaturecustomdateX;
       json[r'iEzsignsignaturecustomdateY'] = iEzsignsignaturecustomdateY;
       json[r'sEzsignsignaturecustomdateFormat'] = sEzsignsignaturecustomdateFormat;
@@ -70,6 +85,7 @@ class EzsignsignaturecustomdateRequest {
       }());
 
       return EzsignsignaturecustomdateRequest(
+        pkiEzsignsignaturecustomdateID: mapValueOfType<int>(json, r'pkiEzsignsignaturecustomdateID'),
         iEzsignsignaturecustomdateX: mapValueOfType<int>(json, r'iEzsignsignaturecustomdateX')!,
         iEzsignsignaturecustomdateY: mapValueOfType<int>(json, r'iEzsignsignaturecustomdateY')!,
         sEzsignsignaturecustomdateFormat: mapValueOfType<String>(json, r'sEzsignsignaturecustomdateFormat')!,
