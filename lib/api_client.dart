@@ -341,6 +341,8 @@ class ApiClient {
           return EzsigndocumentCreateObjectV1ResponseMPayload.fromJson(value);
         case 'EzsigndocumentDeleteObjectV1Response':
           return EzsigndocumentDeleteObjectV1Response.fromJson(value);
+        case 'EzsigndocumentEditEzsignsignaturesV1Response':
+          return EzsigndocumentEditEzsignsignaturesV1Response.fromJson(value);
         case 'EzsigndocumentGetDownloadUrlV1Response':
           return EzsigndocumentGetDownloadUrlV1Response.fromJson(value);
         case 'EzsigndocumentGetDownloadUrlV1ResponseAllOf':

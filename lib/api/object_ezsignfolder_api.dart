@@ -129,7 +129,7 @@ class ObjectEzsignfolderApi {
     return null;
   }
 
-  /// Modify an existing Ezsignfolder
+  /// Edit an existing Ezsignfolder
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -166,7 +166,7 @@ class ObjectEzsignfolderApi {
     );
   }
 
-  /// Modify an existing Ezsignfolder
+  /// Edit an existing Ezsignfolder
   ///
   /// Parameters:
   ///

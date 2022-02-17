@@ -112,6 +112,7 @@ part 'model/ezsigndocument_create_object_v1_response.dart';
 part 'model/ezsigndocument_create_object_v1_response_all_of.dart';
 part 'model/ezsigndocument_create_object_v1_response_m_payload.dart';
 part 'model/ezsigndocument_delete_object_v1_response.dart';
+part 'model/ezsigndocument_edit_ezsignsignatures_v1_response.dart';
 part 'model/ezsigndocument_get_download_url_v1_response.dart';
 part 'model/ezsigndocument_get_download_url_v1_response_all_of.dart';
 part 'model/ezsigndocument_get_download_url_v1_response_m_payload.dart';

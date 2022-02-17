@@ -51,6 +51,15 @@ void main() {
       // TODO
     });
 
+    // Edit multiple ezsignsignatures
+    //
+    // Using this endpoint, you can edit multiple ezsignsignatures at the same time.
+    //
+    //Future<EzsigndocumentEditEzsignsignaturesV1Response> ezsigndocumentEditEzsignsignaturesV1(int pkiEzsigndocumentID, List<EzsignsignatureRequestCompound> ezsignsignatureRequestCompound) async
+    test('test ezsigndocumentEditEzsignsignaturesV1', () async {
+      // TODO
+    });
+
     // Retrieve a URL to download documents.
     //
     // This endpoint returns URLs to different files that can be downloaded during the signing process.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.

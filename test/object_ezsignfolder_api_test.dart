@@ -33,7 +33,7 @@ void main() {
       // TODO
     });
 
-    // Modify an existing Ezsignfolder
+    // Edit an existing Ezsignfolder
     //
     //Future<EzsignfolderEditObjectV1Response> ezsignfolderEditObjectV1(int pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request) async
     test('test ezsignfolderEditObjectV1', () async {
