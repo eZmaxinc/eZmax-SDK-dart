@@ -265,14 +265,14 @@ class ObjectEzsigndocumentApi {
   ///
   /// * [int] pkiEzsigndocumentID (required):
   ///
-  /// * [List<EzsignsignatureRequestCompound>] ezsignsignatureRequestCompound (required):
-  Future<Response> ezsigndocumentEditEzsignsignaturesV1WithHttpInfo(int pkiEzsigndocumentID, List<EzsignsignatureRequestCompound> ezsignsignatureRequestCompound,) async {
+  /// * [EzsigndocumentEditEzsignsignaturesV1Request] ezsigndocumentEditEzsignsignaturesV1Request (required):
+  Future<Response> ezsigndocumentEditEzsignsignaturesV1WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentEditEzsignsignaturesV1Request ezsigndocumentEditEzsignsignaturesV1Request,) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures'
       .replaceAll('{pkiEzsigndocumentID}', pkiEzsigndocumentID.toString());
 
     // ignore: prefer_final_locals
-    Object? postBody = ezsignsignatureRequestCompound;
+    Object? postBody = ezsigndocumentEditEzsignsignaturesV1Request;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
@@ -302,9 +302,9 @@ class ObjectEzsigndocumentApi {
   ///
   /// * [int] pkiEzsigndocumentID (required):
   ///
-  /// * [List<EzsignsignatureRequestCompound>] ezsignsignatureRequestCompound (required):
-  Future<EzsigndocumentEditEzsignsignaturesV1Response?> ezsigndocumentEditEzsignsignaturesV1(int pkiEzsigndocumentID, List<EzsignsignatureRequestCompound> ezsignsignatureRequestCompound,) async {
-    final response = await ezsigndocumentEditEzsignsignaturesV1WithHttpInfo(pkiEzsigndocumentID, ezsignsignatureRequestCompound,);
+  /// * [EzsigndocumentEditEzsignsignaturesV1Request] ezsigndocumentEditEzsignsignaturesV1Request (required):
+  Future<EzsigndocumentEditEzsignsignaturesV1Response?> ezsigndocumentEditEzsignsignaturesV1(int pkiEzsigndocumentID, EzsigndocumentEditEzsignsignaturesV1Request ezsigndocumentEditEzsignsignaturesV1Request,) async {
+    final response = await ezsigndocumentEditEzsignsignaturesV1WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentEditEzsignsignaturesV1Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

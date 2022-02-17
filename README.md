@@ -184,6 +184,7 @@ Class | Method | HTTP request | Description
  - [EzsigndocumentCreateObjectV1ResponseAllOf](doc//EzsigndocumentCreateObjectV1ResponseAllOf.md)
  - [EzsigndocumentCreateObjectV1ResponseMPayload](doc//EzsigndocumentCreateObjectV1ResponseMPayload.md)
  - [EzsigndocumentDeleteObjectV1Response](doc//EzsigndocumentDeleteObjectV1Response.md)
+ - [EzsigndocumentEditEzsignsignaturesV1Request](doc//EzsigndocumentEditEzsignsignaturesV1Request.md)
  - [EzsigndocumentEditEzsignsignaturesV1Response](doc//EzsigndocumentEditEzsignsignaturesV1Response.md)
  - [EzsigndocumentGetDownloadUrlV1Response](doc//EzsigndocumentGetDownloadUrlV1Response.md)
  - [EzsigndocumentGetDownloadUrlV1ResponseAllOf](doc//EzsigndocumentGetDownloadUrlV1ResponseAllOf.md)

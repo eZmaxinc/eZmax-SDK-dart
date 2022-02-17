@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **ezsigndocumentEditEzsignsignaturesV1**
-> EzsigndocumentEditEzsignsignaturesV1Response ezsigndocumentEditEzsignsignaturesV1(pkiEzsigndocumentID, ezsignsignatureRequestCompound)
+> EzsigndocumentEditEzsignsignaturesV1Response ezsigndocumentEditEzsignsignaturesV1(pkiEzsigndocumentID, ezsigndocumentEditEzsignsignaturesV1Request)
 
 Edit multiple ezsignsignatures
 
@@ -229,10 +229,10 @@ import 'package:openapi/api.dart';
 
 final api_instance = ObjectEzsigndocumentApi();
 final pkiEzsigndocumentID = 56; // int | 
-final ezsignsignatureRequestCompound = [List<EzsignsignatureRequestCompound>()]; // List<EzsignsignatureRequestCompound> | 
+final ezsigndocumentEditEzsignsignaturesV1Request = EzsigndocumentEditEzsignsignaturesV1Request(); // EzsigndocumentEditEzsignsignaturesV1Request | 
 
 try {
-    final result = api_instance.ezsigndocumentEditEzsignsignaturesV1(pkiEzsigndocumentID, ezsignsignatureRequestCompound);
+    final result = api_instance.ezsigndocumentEditEzsignsignaturesV1(pkiEzsigndocumentID, ezsigndocumentEditEzsignsignaturesV1Request);
     print(result);
 } catch (e) {
     print('Exception when calling ObjectEzsigndocumentApi->ezsigndocumentEditEzsignsignaturesV1: $e\n');
@@ -244,7 +244,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsigndocumentID** | **int**|  | 
- **ezsignsignatureRequestCompound** | [**List<EzsignsignatureRequestCompound>**](EzsignsignatureRequestCompound.md)|  | 
+ **ezsigndocumentEditEzsignsignaturesV1Request** | [**EzsigndocumentEditEzsignsignaturesV1Request**](EzsigndocumentEditEzsignsignaturesV1Request.md)|  | 
 
 ### Return type
 

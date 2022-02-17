@@ -55,7 +55,7 @@ void main() {
     //
     // Using this endpoint, you can edit multiple ezsignsignatures at the same time.
     //
-    //Future<EzsigndocumentEditEzsignsignaturesV1Response> ezsigndocumentEditEzsignsignaturesV1(int pkiEzsigndocumentID, List<EzsignsignatureRequestCompound> ezsignsignatureRequestCompound) async
+    //Future<EzsigndocumentEditEzsignsignaturesV1Response> ezsigndocumentEditEzsignsignaturesV1(int pkiEzsigndocumentID, EzsigndocumentEditEzsignsignaturesV1Request ezsigndocumentEditEzsignsignaturesV1Request) async
     test('test ezsigndocumentEditEzsignsignaturesV1', () async {
       // TODO
     });
