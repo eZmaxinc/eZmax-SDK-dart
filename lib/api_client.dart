@@ -235,6 +235,14 @@ class ApiClient {
           return ApikeyCreateObjectV1ResponseAllOf.fromJson(value);
         case 'ApikeyCreateObjectV1ResponseMPayload':
           return ApikeyCreateObjectV1ResponseMPayload.fromJson(value);
+        case 'ApikeyCreateObjectV2Request':
+          return ApikeyCreateObjectV2Request.fromJson(value);
+        case 'ApikeyCreateObjectV2Response':
+          return ApikeyCreateObjectV2Response.fromJson(value);
+        case 'ApikeyCreateObjectV2ResponseAllOf':
+          return ApikeyCreateObjectV2ResponseAllOf.fromJson(value);
+        case 'ApikeyCreateObjectV2ResponseMPayload':
+          return ApikeyCreateObjectV2ResponseMPayload.fromJson(value);
         case 'ApikeyRequest':
           return ApikeyRequest.fromJson(value);
         case 'ApikeyRequestCompound':
@@ -349,6 +357,14 @@ class ApiClient {
           return EzsigndocumentCreateObjectV1ResponseAllOf.fromJson(value);
         case 'EzsigndocumentCreateObjectV1ResponseMPayload':
           return EzsigndocumentCreateObjectV1ResponseMPayload.fromJson(value);
+        case 'EzsigndocumentCreateObjectV2Request':
+          return EzsigndocumentCreateObjectV2Request.fromJson(value);
+        case 'EzsigndocumentCreateObjectV2Response':
+          return EzsigndocumentCreateObjectV2Response.fromJson(value);
+        case 'EzsigndocumentCreateObjectV2ResponseAllOf':
+          return EzsigndocumentCreateObjectV2ResponseAllOf.fromJson(value);
+        case 'EzsigndocumentCreateObjectV2ResponseMPayload':
+          return EzsigndocumentCreateObjectV2ResponseMPayload.fromJson(value);
         case 'EzsigndocumentDeleteObjectV1Response':
           return EzsigndocumentDeleteObjectV1Response.fromJson(value);
         case 'EzsigndocumentEditEzsignsignaturesV1Request':
@@ -419,6 +435,14 @@ class ApiClient {
           return EzsignfolderCreateObjectV1ResponseAllOf.fromJson(value);
         case 'EzsignfolderCreateObjectV1ResponseMPayload':
           return EzsignfolderCreateObjectV1ResponseMPayload.fromJson(value);
+        case 'EzsignfolderCreateObjectV2Request':
+          return EzsignfolderCreateObjectV2Request.fromJson(value);
+        case 'EzsignfolderCreateObjectV2Response':
+          return EzsignfolderCreateObjectV2Response.fromJson(value);
+        case 'EzsignfolderCreateObjectV2ResponseAllOf':
+          return EzsignfolderCreateObjectV2ResponseAllOf.fromJson(value);
+        case 'EzsignfolderCreateObjectV2ResponseMPayload':
+          return EzsignfolderCreateObjectV2ResponseMPayload.fromJson(value);
         case 'EzsignfolderDeleteObjectV1Response':
           return EzsignfolderDeleteObjectV1Response.fromJson(value);
         case 'EzsignfolderEditObjectV1Request':
@@ -481,6 +505,14 @@ class ApiClient {
           return EzsignfoldersignerassociationCreateObjectV1ResponseAllOf.fromJson(value);
         case 'EzsignfoldersignerassociationCreateObjectV1ResponseMPayload':
           return EzsignfoldersignerassociationCreateObjectV1ResponseMPayload.fromJson(value);
+        case 'EzsignfoldersignerassociationCreateObjectV2Request':
+          return EzsignfoldersignerassociationCreateObjectV2Request.fromJson(value);
+        case 'EzsignfoldersignerassociationCreateObjectV2Response':
+          return EzsignfoldersignerassociationCreateObjectV2Response.fromJson(value);
+        case 'EzsignfoldersignerassociationCreateObjectV2ResponseAllOf':
+          return EzsignfoldersignerassociationCreateObjectV2ResponseAllOf.fromJson(value);
+        case 'EzsignfoldersignerassociationCreateObjectV2ResponseMPayload':
+          return EzsignfoldersignerassociationCreateObjectV2ResponseMPayload.fromJson(value);
         case 'EzsignfoldersignerassociationDeleteObjectV1Response':
           return EzsignfoldersignerassociationDeleteObjectV1Response.fromJson(value);
         case 'EzsignfoldersignerassociationGetInPersonLoginUrlV1Response':
@@ -539,6 +571,14 @@ class ApiClient {
           return EzsignsignatureCreateObjectV1ResponseAllOf.fromJson(value);
         case 'EzsignsignatureCreateObjectV1ResponseMPayload':
           return EzsignsignatureCreateObjectV1ResponseMPayload.fromJson(value);
+        case 'EzsignsignatureCreateObjectV2Request':
+          return EzsignsignatureCreateObjectV2Request.fromJson(value);
+        case 'EzsignsignatureCreateObjectV2Response':
+          return EzsignsignatureCreateObjectV2Response.fromJson(value);
+        case 'EzsignsignatureCreateObjectV2ResponseAllOf':
+          return EzsignsignatureCreateObjectV2ResponseAllOf.fromJson(value);
+        case 'EzsignsignatureCreateObjectV2ResponseMPayload':
+          return EzsignsignatureCreateObjectV2ResponseMPayload.fromJson(value);
         case 'EzsignsignatureDeleteObjectV1Response':
           return EzsignsignatureDeleteObjectV1Response.fromJson(value);
         case 'EzsignsignatureEditObjectV1Request':
@@ -615,6 +655,14 @@ class ApiClient {
           return FranchisereferalincomeCreateObjectV1ResponseAllOf.fromJson(value);
         case 'FranchisereferalincomeCreateObjectV1ResponseMPayload':
           return FranchisereferalincomeCreateObjectV1ResponseMPayload.fromJson(value);
+        case 'FranchisereferalincomeCreateObjectV2Request':
+          return FranchisereferalincomeCreateObjectV2Request.fromJson(value);
+        case 'FranchisereferalincomeCreateObjectV2Response':
+          return FranchisereferalincomeCreateObjectV2Response.fromJson(value);
+        case 'FranchisereferalincomeCreateObjectV2ResponseAllOf':
+          return FranchisereferalincomeCreateObjectV2ResponseAllOf.fromJson(value);
+        case 'FranchisereferalincomeCreateObjectV2ResponseMPayload':
+          return FranchisereferalincomeCreateObjectV2ResponseMPayload.fromJson(value);
         case 'FranchisereferalincomeRequest':
           return FranchisereferalincomeRequest.fromJson(value);
         case 'FranchisereferalincomeRequestCompound':

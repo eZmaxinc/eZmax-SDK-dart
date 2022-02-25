@@ -26,6 +26,15 @@ void main() {
       // TODO
     });
 
+    // Create a new Ezsignfolder
+    //
+    // The endpoint allows to create one or many elements at once.
+    //
+    //Future<EzsignfolderCreateObjectV2Response> ezsignfolderCreateObjectV2(EzsignfolderCreateObjectV2Request ezsignfolderCreateObjectV2Request) async
+    test('test ezsignfolderCreateObjectV2', () async {
+      // TODO
+    });
+
     // Delete an existing Ezsignfolder
     //
     // 

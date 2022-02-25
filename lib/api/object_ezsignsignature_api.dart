@@ -74,6 +74,64 @@ class ObjectEzsignsignatureApi {
     return null;
   }
 
+  /// Create a new Ezsignsignature
+  ///
+  /// The endpoint allows to create one or many elements at once.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [EzsignsignatureCreateObjectV2Request] ezsignsignatureCreateObjectV2Request (required):
+  Future<Response> ezsignsignatureCreateObjectV2WithHttpInfo(EzsignsignatureCreateObjectV2Request ezsignsignatureCreateObjectV2Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/2/object/ezsignsignature';
+
+    // ignore: prefer_final_locals
+    Object? postBody = ezsignsignatureCreateObjectV2Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const authNames = <String>['Authorization'];
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      authNames,
+    );
+  }
+
+  /// Create a new Ezsignsignature
+  ///
+  /// The endpoint allows to create one or many elements at once.
+  ///
+  /// Parameters:
+  ///
+  /// * [EzsignsignatureCreateObjectV2Request] ezsignsignatureCreateObjectV2Request (required):
+  Future<EzsignsignatureCreateObjectV2Response?> ezsignsignatureCreateObjectV2(EzsignsignatureCreateObjectV2Request ezsignsignatureCreateObjectV2Request,) async {
+    final response = await ezsignsignatureCreateObjectV2WithHttpInfo(ezsignsignatureCreateObjectV2Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignsignatureCreateObjectV2Response',) as EzsignsignatureCreateObjectV2Response;
+    
+    }
+    return null;
+  }
+
   /// Delete an existing Ezsignsignature
   ///
   /// 

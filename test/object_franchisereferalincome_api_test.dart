@@ -26,5 +26,14 @@ void main() {
       // TODO
     });
 
+    // Create a new Franchisereferalincome
+    //
+    // The endpoint allows to create one or many elements at once.
+    //
+    //Future<FranchisereferalincomeCreateObjectV2Response> franchisereferalincomeCreateObjectV2(FranchisereferalincomeCreateObjectV2Request franchisereferalincomeCreateObjectV2Request) async
+    test('test franchisereferalincomeCreateObjectV2', () async {
+      // TODO
+    });
+
   });
 }

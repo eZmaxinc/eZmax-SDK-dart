@@ -26,6 +26,15 @@ void main() {
       // TODO
     });
 
+    // Create a new Ezsignfoldersignerassociation
+    //
+    // The endpoint allows to create one or many elements at once.
+    //
+    //Future<EzsignfoldersignerassociationCreateObjectV2Response> ezsignfoldersignerassociationCreateObjectV2(EzsignfoldersignerassociationCreateObjectV2Request ezsignfoldersignerassociationCreateObjectV2Request) async
+    test('test ezsignfoldersignerassociationCreateObjectV2', () async {
+      // TODO
+    });
+
     // Delete an existing Ezsignfoldersignerassociation
     //
     // 

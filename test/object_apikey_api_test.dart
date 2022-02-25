@@ -26,5 +26,14 @@ void main() {
       // TODO
     });
 
+    // Create a new Apikey
+    //
+    // The endpoint allows to create one or many elements at once.
+    //
+    //Future<ApikeyCreateObjectV2Response> apikeyCreateObjectV2(ApikeyCreateObjectV2Request apikeyCreateObjectV2Request) async
+    test('test apikeyCreateObjectV2', () async {
+      // TODO
+    });
+
   });
 }

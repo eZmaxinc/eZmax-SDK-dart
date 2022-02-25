@@ -44,6 +44,15 @@ void main() {
       // TODO
     });
 
+    // Create a new Ezsigndocument
+    //
+    // The endpoint allows to create one or many elements at once.
+    //
+    //Future<EzsigndocumentCreateObjectV2Response> ezsigndocumentCreateObjectV2(EzsigndocumentCreateObjectV2Request ezsigndocumentCreateObjectV2Request) async
+    test('test ezsigndocumentCreateObjectV2', () async {
+      // TODO
+    });
+
     // Delete an existing Ezsigndocument
     //
     // 

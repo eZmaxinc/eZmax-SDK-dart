@@ -26,6 +26,15 @@ void main() {
       // TODO
     });
 
+    // Create a new Ezsignsignature
+    //
+    // The endpoint allows to create one or many elements at once.
+    //
+    //Future<EzsignsignatureCreateObjectV2Response> ezsignsignatureCreateObjectV2(EzsignsignatureCreateObjectV2Request ezsignsignatureCreateObjectV2Request) async
+    test('test ezsignsignatureCreateObjectV2', () async {
+      // TODO
+    });
+
     // Delete an existing Ezsignsignature
     //
     // 
