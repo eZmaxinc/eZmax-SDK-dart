@@ -38,6 +38,7 @@ class CustomFormDataSignerResponse {
   /// The Last name of the contact
   String sContactLastname;
 
+  /// 
   List<EzsignformfieldgroupResponseCompound> aObjEzsignformfieldgroupCompound;
 
   @override

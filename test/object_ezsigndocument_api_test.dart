@@ -46,6 +46,8 @@ void main() {
 
     // Delete an existing Ezsigndocument
     //
+    // 
+    //
     //Future<EzsigndocumentDeleteObjectV1Response> ezsigndocumentDeleteObjectV1(int pkiEzsigndocumentID) async
     test('test ezsigndocumentDeleteObjectV1', () async {
       // TODO
@@ -60,6 +62,15 @@ void main() {
       // TODO
     });
 
+    // End prematurely
+    //
+    // End prematurely an Ezsigndocument when some signatures are still required
+    //
+    //Future<EzsigndocumentEndPrematurelyV1Response> ezsigndocumentEndPrematurelyV1(int pkiEzsigndocumentID) async
+    test('test ezsigndocumentEndPrematurelyV1', () async {
+      // TODO
+    });
+
     // Retrieve a URL to download documents.
     //
     // This endpoint returns URLs to different files that can be downloaded during the signing process.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
@@ -71,12 +82,16 @@ void main() {
 
     // Retrieve an existing Ezsigndocument's Ezsignpages
     //
+    // 
+    //
     //Future<EzsigndocumentGetEzsignpagesV1Response> ezsigndocumentGetEzsignpagesV1(int pkiEzsigndocumentID) async
     test('test ezsigndocumentGetEzsignpagesV1', () async {
       // TODO
     });
 
     // Retrieve an existing Ezsigndocument's Form Data
+    //
+    // 
     //
     //Future<EzsigndocumentGetFormDataV1Response> ezsigndocumentGetFormDataV1(int pkiEzsigndocumentID) async
     test('test ezsigndocumentGetFormDataV1', () async {
@@ -85,14 +100,23 @@ void main() {
 
     // Retrieve an existing Ezsigndocument
     //
-    // ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-    //
     //Future<EzsigndocumentGetObjectV1Response> ezsigndocumentGetObjectV1(int pkiEzsigndocumentID) async
     test('test ezsigndocumentGetObjectV1', () async {
       // TODO
     });
 
+    // Retrieve the temporary proof
+    //
+    // Retrieve the temporary proof while the Ezsigndocument is being processed since the proof isn't available until the Ezsigndocument is completed
+    //
+    //Future<EzsigndocumentGetTemporaryProofV1Response> ezsigndocumentGetTemporaryProofV1(int pkiEzsigndocumentID) async
+    test('test ezsigndocumentGetTemporaryProofV1', () async {
+      // TODO
+    });
+
     // Retrieve positions X,Y of given words from a Ezsigndocument
+    //
+    // 
     //
     //Future<EzsigndocumentGetWordsPositionsV1Response> ezsigndocumentGetWordsPositionsV1(int pkiEzsigndocumentID, EzsigndocumentGetWordsPositionsV1Request ezsigndocumentGetWordsPositionsV1Request) async
     test('test ezsigndocumentGetWordsPositionsV1', () async {
@@ -100,6 +124,8 @@ void main() {
     });
 
     // Patch an existing Ezsigndocument
+    //
+    // 
     //
     //Future<EzsigndocumentPatchObjectV1Response> ezsigndocumentPatchObjectV1(int pkiEzsigndocumentID, EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request) async
     test('test ezsigndocumentPatchObjectV1', () async {

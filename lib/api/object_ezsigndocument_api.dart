@@ -202,6 +202,8 @@ class ObjectEzsigndocumentApi {
 
   /// Delete an existing Ezsigndocument
   ///
+  /// 
+  ///
   /// Note: This method returns the HTTP [Response].
   ///
   /// Parameters:
@@ -236,6 +238,8 @@ class ObjectEzsigndocumentApi {
   }
 
   /// Delete an existing Ezsigndocument
+  ///
+  /// 
   ///
   /// Parameters:
   ///
@@ -318,6 +322,65 @@ class ObjectEzsigndocumentApi {
     return null;
   }
 
+  /// End prematurely
+  ///
+  /// End prematurely an Ezsigndocument when some signatures are still required
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  Future<Response> ezsigndocumentEndPrematurelyV1WithHttpInfo(int pkiEzsigndocumentID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsigndocument/{pkiEzsigndocumentID}/endPrematurely'
+      .replaceAll('{pkiEzsigndocumentID}', pkiEzsigndocumentID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const authNames = <String>['Authorization'];
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      authNames,
+    );
+  }
+
+  /// End prematurely
+  ///
+  /// End prematurely an Ezsigndocument when some signatures are still required
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  Future<EzsigndocumentEndPrematurelyV1Response?> ezsigndocumentEndPrematurelyV1(int pkiEzsigndocumentID,) async {
+    final response = await ezsigndocumentEndPrematurelyV1WithHttpInfo(pkiEzsigndocumentID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentEndPrematurelyV1Response',) as EzsigndocumentEndPrematurelyV1Response;
+    
+    }
+    return null;
+  }
+
   /// Retrieve a URL to download documents.
   ///
   /// This endpoint returns URLs to different files that can be downloaded during the signing process.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
@@ -386,6 +449,8 @@ class ObjectEzsigndocumentApi {
 
   /// Retrieve an existing Ezsigndocument's Ezsignpages
   ///
+  /// 
+  ///
   /// Note: This method returns the HTTP [Response].
   ///
   /// Parameters:
@@ -421,6 +486,8 @@ class ObjectEzsigndocumentApi {
 
   /// Retrieve an existing Ezsigndocument's Ezsignpages
   ///
+  /// 
+  ///
   /// Parameters:
   ///
   /// * [int] pkiEzsigndocumentID (required):
@@ -440,6 +507,8 @@ class ObjectEzsigndocumentApi {
   }
 
   /// Retrieve an existing Ezsigndocument's Form Data
+  ///
+  /// 
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -476,6 +545,8 @@ class ObjectEzsigndocumentApi {
 
   /// Retrieve an existing Ezsigndocument's Form Data
   ///
+  /// 
+  ///
   /// Parameters:
   ///
   /// * [int] pkiEzsigndocumentID (required):
@@ -495,8 +566,6 @@ class ObjectEzsigndocumentApi {
   }
 
   /// Retrieve an existing Ezsigndocument
-  ///
-  /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -533,8 +602,6 @@ class ObjectEzsigndocumentApi {
 
   /// Retrieve an existing Ezsigndocument
   ///
-  /// ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-  ///
   /// Parameters:
   ///
   /// * [int] pkiEzsigndocumentID (required):
@@ -553,7 +620,68 @@ class ObjectEzsigndocumentApi {
     return null;
   }
 
+  /// Retrieve the temporary proof
+  ///
+  /// Retrieve the temporary proof while the Ezsigndocument is being processed since the proof isn't available until the Ezsigndocument is completed
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  Future<Response> ezsigndocumentGetTemporaryProofV1WithHttpInfo(int pkiEzsigndocumentID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof'
+      .replaceAll('{pkiEzsigndocumentID}', pkiEzsigndocumentID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const authNames = <String>['Authorization'];
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      authNames,
+    );
+  }
+
+  /// Retrieve the temporary proof
+  ///
+  /// Retrieve the temporary proof while the Ezsigndocument is being processed since the proof isn't available until the Ezsigndocument is completed
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  Future<EzsigndocumentGetTemporaryProofV1Response?> ezsigndocumentGetTemporaryProofV1(int pkiEzsigndocumentID,) async {
+    final response = await ezsigndocumentGetTemporaryProofV1WithHttpInfo(pkiEzsigndocumentID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentGetTemporaryProofV1Response',) as EzsigndocumentGetTemporaryProofV1Response;
+    
+    }
+    return null;
+  }
+
   /// Retrieve positions X,Y of given words from a Ezsigndocument
+  ///
+  /// 
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -592,6 +720,8 @@ class ObjectEzsigndocumentApi {
 
   /// Retrieve positions X,Y of given words from a Ezsigndocument
   ///
+  /// 
+  ///
   /// Parameters:
   ///
   /// * [int] pkiEzsigndocumentID (required):
@@ -613,6 +743,8 @@ class ObjectEzsigndocumentApi {
   }
 
   /// Patch an existing Ezsigndocument
+  ///
+  /// 
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -650,6 +782,8 @@ class ObjectEzsigndocumentApi {
   }
 
   /// Patch an existing Ezsigndocument
+  ///
+  /// 
   ///
   /// Parameters:
   ///

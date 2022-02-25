@@ -73,6 +73,8 @@ Name | Type | Description  | Notes
 
 Delete an existing Ezsignfolder
 
+
+
 ### Example
 ```dart
 import 'package:openapi/api.dart';
@@ -117,6 +119,8 @@ Name | Type | Description  | Notes
 > EzsignfolderEditObjectV1Response ezsignfolderEditObjectV1(pkiEzsignfolderID, ezsignfolderEditObjectV1Request)
 
 Edit an existing Ezsignfolder
+
+
 
 ### Example
 ```dart
@@ -165,6 +169,8 @@ Name | Type | Description  | Notes
 
 Retrieve an existing Ezsignfolder's Ezsigndocuments
 
+
+
 ### Example
 ```dart
 import 'package:openapi/api.dart';
@@ -210,6 +216,8 @@ Name | Type | Description  | Notes
 
 Retrieve an existing Ezsignfolder's Ezsignfoldersignerassociations
 
+
+
 ### Example
 ```dart
 import 'package:openapi/api.dart';
@@ -254,6 +262,8 @@ Name | Type | Description  | Notes
 > EzsignfolderGetFormsDataV1Response ezsignfolderGetFormsDataV1(pkiEzsignfolderID)
 
 Retrieve an existing Ezsignfolder's forms data
+
+
 
 ### Example
 ```dart
@@ -355,6 +365,8 @@ Name | Type | Description  | Notes
 
 Retrieve an existing Ezsignfolder
 
+
+
 ### Example
 ```dart
 import 'package:openapi/api.dart';
@@ -399,6 +411,8 @@ Name | Type | Description  | Notes
 > EzsignfolderSendV1Response ezsignfolderSendV1(pkiEzsignfolderID, ezsignfolderSendV1Request)
 
 Send the Ezsignfolder to the signatories for signature
+
+
 
 ### Example
 ```dart
@@ -459,7 +473,7 @@ import 'package:openapi/api.dart';
 
 final api_instance = ObjectEzsignfolderApi();
 final pkiEzsignfolderID = 56; // int | 
-final body = String(); // String | 
+final body = Object(); // Object | 
 
 try {
     final result = api_instance.ezsignfolderUnsendV1(pkiEzsignfolderID, body);
@@ -474,7 +488,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsignfolderID** | **int**|  | 
- **body** | **String**|  | 
+ **body** | **Object**|  | 
 
 ### Return type
 

@@ -19,12 +19,16 @@ class ContactinformationsRequestCompoundAllOf {
     this.aObjWebsite = const [],
   });
 
+  /// 
   List<AddressRequest> aObjAddress;
 
+  /// 
   List<PhoneRequest> aObjPhone;
 
+  /// 
   List<EmailRequest> aObjEmail;
 
+  /// 
   List<WebsiteRequest> aObjWebsite;
 
   @override

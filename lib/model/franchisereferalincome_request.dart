@@ -60,12 +60,13 @@ class FranchisereferalincomeRequest {
   /// The date the amounts were disbursed
   String dtFranchisereferalincomeDisbursed;
 
-  /// A comment about the transaction
+  /// Comment about the transaction
   String tFranchisereferalincomeComment;
 
   /// The unique ID of the Franchisereoffice
   int fkiFranchiseofficeID;
 
+  /// 
   String sFranchisereferalincomeRemoteid;
 
   @override

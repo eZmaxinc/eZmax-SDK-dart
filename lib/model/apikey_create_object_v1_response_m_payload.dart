@@ -16,6 +16,7 @@ class ApikeyCreateObjectV1ResponseMPayload {
     this.aObjApikey = const [],
   });
 
+  /// 
   List<ApikeyResponse> aObjApikey;
 
   @override

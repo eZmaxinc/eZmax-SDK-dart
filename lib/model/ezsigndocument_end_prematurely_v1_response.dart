@@ -10,9 +10,9 @@
 
 part of openapi.api;
 
-class UNUSEDEzsignfoldersignerassociationEditObjectV1Response {
-  /// Returns a new [UNUSEDEzsignfoldersignerassociationEditObjectV1Response] instance.
-  UNUSEDEzsignfoldersignerassociationEditObjectV1Response({
+class EzsigndocumentEndPrematurelyV1Response {
+  /// Returns a new [EzsigndocumentEndPrematurelyV1Response] instance.
+  EzsigndocumentEndPrematurelyV1Response({
     this.objDebugPayload,
     this.objDebug,
   });
@@ -34,7 +34,7 @@ class UNUSEDEzsignfoldersignerassociationEditObjectV1Response {
   CommonResponseObjDebug? objDebug;
 
   @override
-  bool operator ==(Object other) => identical(this, other) || other is UNUSEDEzsignfoldersignerassociationEditObjectV1Response &&
+  bool operator ==(Object other) => identical(this, other) || other is EzsigndocumentEndPrematurelyV1Response &&
      other.objDebugPayload == objDebugPayload &&
      other.objDebug == objDebug;
 
@@ -45,7 +45,7 @@ class UNUSEDEzsignfoldersignerassociationEditObjectV1Response {
     (objDebug == null ? 0 : objDebug!.hashCode);
 
   @override
-  String toString() => 'UNUSEDEzsignfoldersignerassociationEditObjectV1Response[objDebugPayload=$objDebugPayload, objDebug=$objDebug]';
+  String toString() => 'EzsigndocumentEndPrematurelyV1Response[objDebugPayload=$objDebugPayload, objDebug=$objDebug]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -58,10 +58,10 @@ class UNUSEDEzsignfoldersignerassociationEditObjectV1Response {
     return json;
   }
 
-  /// Returns a new [UNUSEDEzsignfoldersignerassociationEditObjectV1Response] instance and imports its values from
+  /// Returns a new [EzsigndocumentEndPrematurelyV1Response] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static UNUSEDEzsignfoldersignerassociationEditObjectV1Response? fromJson(dynamic value) {
+  static EzsigndocumentEndPrematurelyV1Response? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
 
@@ -70,13 +70,13 @@ class UNUSEDEzsignfoldersignerassociationEditObjectV1Response {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "UNUSEDEzsignfoldersignerassociationEditObjectV1Response[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "UNUSEDEzsignfoldersignerassociationEditObjectV1Response[$key]" has a null value in JSON.');
+          assert(json.containsKey(key), 'Required key "EzsigndocumentEndPrematurelyV1Response[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "EzsigndocumentEndPrematurelyV1Response[$key]" has a null value in JSON.');
         });
         return true;
       }());
 
-      return UNUSEDEzsignfoldersignerassociationEditObjectV1Response(
+      return EzsigndocumentEndPrematurelyV1Response(
         objDebugPayload: CommonResponseObjDebugPayload.fromJson(json[r'objDebugPayload']),
         objDebug: CommonResponseObjDebug.fromJson(json[r'objDebug']),
       );
@@ -84,11 +84,11 @@ class UNUSEDEzsignfoldersignerassociationEditObjectV1Response {
     return null;
   }
 
-  static List<UNUSEDEzsignfoldersignerassociationEditObjectV1Response>? listFromJson(dynamic json, {bool growable = false,}) {
-    final result = <UNUSEDEzsignfoldersignerassociationEditObjectV1Response>[];
+  static List<EzsigndocumentEndPrematurelyV1Response>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <EzsigndocumentEndPrematurelyV1Response>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
-        final value = UNUSEDEzsignfoldersignerassociationEditObjectV1Response.fromJson(row);
+        final value = EzsigndocumentEndPrematurelyV1Response.fromJson(row);
         if (value != null) {
           result.add(value);
         }
@@ -97,12 +97,12 @@ class UNUSEDEzsignfoldersignerassociationEditObjectV1Response {
     return result.toList(growable: growable);
   }
 
-  static Map<String, UNUSEDEzsignfoldersignerassociationEditObjectV1Response> mapFromJson(dynamic json) {
-    final map = <String, UNUSEDEzsignfoldersignerassociationEditObjectV1Response>{};
+  static Map<String, EzsigndocumentEndPrematurelyV1Response> mapFromJson(dynamic json) {
+    final map = <String, EzsigndocumentEndPrematurelyV1Response>{};
     if (json is Map && json.isNotEmpty) {
       json = json.cast<String, dynamic>(); // ignore: parameter_assignments
       for (final entry in json.entries) {
-        final value = UNUSEDEzsignfoldersignerassociationEditObjectV1Response.fromJson(entry.value);
+        final value = EzsigndocumentEndPrematurelyV1Response.fromJson(entry.value);
         if (value != null) {
           map[entry.key] = value;
         }
@@ -111,13 +111,13 @@ class UNUSEDEzsignfoldersignerassociationEditObjectV1Response {
     return map;
   }
 
-  // maps a json object with a list of UNUSEDEzsignfoldersignerassociationEditObjectV1Response-objects as value to a dart map
-  static Map<String, List<UNUSEDEzsignfoldersignerassociationEditObjectV1Response>> mapListFromJson(dynamic json, {bool growable = false,}) {
-    final map = <String, List<UNUSEDEzsignfoldersignerassociationEditObjectV1Response>>{};
+  // maps a json object with a list of EzsigndocumentEndPrematurelyV1Response-objects as value to a dart map
+  static Map<String, List<EzsigndocumentEndPrematurelyV1Response>> mapListFromJson(dynamic json, {bool growable = false,}) {
+    final map = <String, List<EzsigndocumentEndPrematurelyV1Response>>{};
     if (json is Map && json.isNotEmpty) {
       json = json.cast<String, dynamic>(); // ignore: parameter_assignments
       for (final entry in json.entries) {
-        final value = UNUSEDEzsignfoldersignerassociationEditObjectV1Response.listFromJson(entry.value, growable: growable,);
+        final value = EzsigndocumentEndPrematurelyV1Response.listFromJson(entry.value, growable: growable,);
         if (value != null) {
           map[entry.key] = value;
         }

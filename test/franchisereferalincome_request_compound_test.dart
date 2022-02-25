@@ -21,6 +21,7 @@ void main() {
       // TODO
     });
 
+    // 
     // List<ContactRequestCompound> aObjContact (default value: const [])
     test('to test the property `aObjContact`', () async {
       // TODO
@@ -80,7 +81,7 @@ void main() {
       // TODO
     });
 
-    // A comment about the transaction
+    // Comment about the transaction
     // String tFranchisereferalincomeComment
     test('to test the property `tFranchisereferalincomeComment`', () async {
       // TODO
@@ -92,6 +93,7 @@ void main() {
       // TODO
     });
 
+    // 
     // String sFranchisereferalincomeRemoteid
     test('to test the property `sFranchisereferalincomeRemoteid`', () async {
       // TODO

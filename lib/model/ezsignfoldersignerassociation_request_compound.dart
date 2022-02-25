@@ -13,20 +13,14 @@ part of openapi.api;
 class EzsignfoldersignerassociationRequestCompound {
   /// Returns a new [EzsignfoldersignerassociationRequestCompound] instance.
   EzsignfoldersignerassociationRequestCompound({
-    this.objEzsignsigner,
+    required this.objEzsignsigner,
     this.pkiEzsignfoldersignerassociationID,
     this.fkiUserID,
     required this.fkiEzsignfolderID,
     this.bEzsignfoldersignerassociationReceivecopy,
   });
 
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  EzsignsignerRequestCompound? objEzsignsigner;
+  EzsignsignerRequestCompound objEzsignsigner;
 
   /// The unique ID of the Ezsignfoldersignerassociation
   ///
@@ -69,7 +63,7 @@ class EzsignfoldersignerassociationRequestCompound {
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (objEzsignsigner == null ? 0 : objEzsignsigner!.hashCode) +
+    (objEzsignsigner.hashCode) +
     (pkiEzsignfoldersignerassociationID == null ? 0 : pkiEzsignfoldersignerassociationID!.hashCode) +
     (fkiUserID == null ? 0 : fkiUserID!.hashCode) +
     (fkiEzsignfolderID.hashCode) +
@@ -80,9 +74,7 @@ class EzsignfoldersignerassociationRequestCompound {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (objEzsignsigner != null) {
       json[r'objEzsignsigner'] = objEzsignsigner;
-    }
     if (pkiEzsignfoldersignerassociationID != null) {
       json[r'pkiEzsignfoldersignerassociationID'] = pkiEzsignfoldersignerassociationID;
     }
@@ -115,7 +107,7 @@ class EzsignfoldersignerassociationRequestCompound {
       }());
 
       return EzsignfoldersignerassociationRequestCompound(
-        objEzsignsigner: EzsignsignerRequestCompound.fromJson(json[r'objEzsignsigner']),
+        objEzsignsigner: EzsignsignerRequestCompound.fromJson(json[r'objEzsignsigner'])!,
         pkiEzsignfoldersignerassociationID: mapValueOfType<int>(json, r'pkiEzsignfoldersignerassociationID'),
         fkiUserID: mapValueOfType<int>(json, r'fkiUserID'),
         fkiEzsignfolderID: mapValueOfType<int>(json, r'fkiEzsignfolderID')!,
@@ -169,6 +161,7 @@ class EzsignfoldersignerassociationRequestCompound {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
+    'objEzsignsigner',
     'fkiEzsignfolderID',
   };
 }

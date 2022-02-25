@@ -16,6 +16,7 @@ void main() {
   // final instance = EzsignformfieldgroupResponseCompoundAllOf();
 
   group('test EzsignformfieldgroupResponseCompoundAllOf', () {
+    // 
     // List<EzsignformfieldResponse> aObjEzsignformfield (default value: const [])
     test('to test the property `aObjEzsignformfield`', () async {
       // TODO

@@ -108,4 +108,63 @@ class ObjectEzsignbulksendApi {
     }
     return null;
   }
+
+  /// Retrieve an existing Ezsignbulksend
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignbulksendID (required):
+  Future<Response> ezsignbulksendGetObjectV1WithHttpInfo(int pkiEzsignbulksendID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsignbulksend/{pkiEzsignbulksendID}'
+      .replaceAll('{pkiEzsignbulksendID}', pkiEzsignbulksendID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const authNames = <String>['Authorization'];
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      authNames,
+    );
+  }
+
+  /// Retrieve an existing Ezsignbulksend
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignbulksendID (required):
+  Future<EzsignbulksendGetObjectV1Response?> ezsignbulksendGetObjectV1(int pkiEzsignbulksendID,) async {
+    final response = await ezsignbulksendGetObjectV1WithHttpInfo(pkiEzsignbulksendID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignbulksendGetObjectV1Response',) as EzsignbulksendGetObjectV1Response;
+    
+    }
+    return null;
+  }
 }

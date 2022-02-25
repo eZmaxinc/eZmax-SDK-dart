@@ -13,16 +13,10 @@ part of openapi.api;
 class EzsignfoldersignerassociationRequestCompoundAllOf {
   /// Returns a new [EzsignfoldersignerassociationRequestCompoundAllOf] instance.
   EzsignfoldersignerassociationRequestCompoundAllOf({
-    this.objEzsignsigner,
+    required this.objEzsignsigner,
   });
 
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  EzsignsignerRequestCompound? objEzsignsigner;
+  EzsignsignerRequestCompound objEzsignsigner;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfoldersignerassociationRequestCompoundAllOf &&
@@ -31,16 +25,14 @@ class EzsignfoldersignerassociationRequestCompoundAllOf {
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (objEzsignsigner == null ? 0 : objEzsignsigner!.hashCode);
+    (objEzsignsigner.hashCode);
 
   @override
   String toString() => 'EzsignfoldersignerassociationRequestCompoundAllOf[objEzsignsigner=$objEzsignsigner]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (objEzsignsigner != null) {
       json[r'objEzsignsigner'] = objEzsignsigner;
-    }
     return json;
   }
 
@@ -63,7 +55,7 @@ class EzsignfoldersignerassociationRequestCompoundAllOf {
       }());
 
       return EzsignfoldersignerassociationRequestCompoundAllOf(
-        objEzsignsigner: EzsignsignerRequestCompound.fromJson(json[r'objEzsignsigner']),
+        objEzsignsigner: EzsignsignerRequestCompound.fromJson(json[r'objEzsignsigner'])!,
       );
     }
     return null;
@@ -113,6 +105,7 @@ class EzsignfoldersignerassociationRequestCompoundAllOf {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
+    'objEzsignsigner',
   };
 }
 

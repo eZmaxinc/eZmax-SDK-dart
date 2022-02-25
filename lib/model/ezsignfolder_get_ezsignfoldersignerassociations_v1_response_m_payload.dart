@@ -16,6 +16,7 @@ class EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload {
     this.aObjEzsignfoldersignerassociation = const [],
   });
 
+  /// 
   List<EzsignfoldersignerassociationResponseCompound> aObjEzsignfoldersignerassociation;
 
   @override

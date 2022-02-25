@@ -76,6 +76,8 @@ class ObjectEzsignfolderApi {
 
   /// Delete an existing Ezsignfolder
   ///
+  /// 
+  ///
   /// Note: This method returns the HTTP [Response].
   ///
   /// Parameters:
@@ -111,6 +113,8 @@ class ObjectEzsignfolderApi {
 
   /// Delete an existing Ezsignfolder
   ///
+  /// 
+  ///
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
@@ -130,6 +134,8 @@ class ObjectEzsignfolderApi {
   }
 
   /// Edit an existing Ezsignfolder
+  ///
+  /// 
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -168,6 +174,8 @@ class ObjectEzsignfolderApi {
 
   /// Edit an existing Ezsignfolder
   ///
+  /// 
+  ///
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
@@ -189,6 +197,8 @@ class ObjectEzsignfolderApi {
   }
 
   /// Retrieve an existing Ezsignfolder's Ezsigndocuments
+  ///
+  /// 
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -225,6 +235,8 @@ class ObjectEzsignfolderApi {
 
   /// Retrieve an existing Ezsignfolder's Ezsigndocuments
   ///
+  /// 
+  ///
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
@@ -244,6 +256,8 @@ class ObjectEzsignfolderApi {
   }
 
   /// Retrieve an existing Ezsignfolder's Ezsignfoldersignerassociations
+  ///
+  /// 
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -280,6 +294,8 @@ class ObjectEzsignfolderApi {
 
   /// Retrieve an existing Ezsignfolder's Ezsignfoldersignerassociations
   ///
+  /// 
+  ///
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
@@ -299,6 +315,8 @@ class ObjectEzsignfolderApi {
   }
 
   /// Retrieve an existing Ezsignfolder's forms data
+  ///
+  /// 
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -334,6 +352,8 @@ class ObjectEzsignfolderApi {
   }
 
   /// Retrieve an existing Ezsignfolder's forms data
+  ///
+  /// 
   ///
   /// Parameters:
   ///
@@ -448,6 +468,8 @@ class ObjectEzsignfolderApi {
 
   /// Retrieve an existing Ezsignfolder
   ///
+  /// 
+  ///
   /// Note: This method returns the HTTP [Response].
   ///
   /// Parameters:
@@ -483,6 +505,8 @@ class ObjectEzsignfolderApi {
 
   /// Retrieve an existing Ezsignfolder
   ///
+  /// 
+  ///
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
@@ -502,6 +526,8 @@ class ObjectEzsignfolderApi {
   }
 
   /// Send the Ezsignfolder to the signatories for signature
+  ///
+  /// 
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -540,6 +566,8 @@ class ObjectEzsignfolderApi {
 
   /// Send the Ezsignfolder to the signatories for signature
   ///
+  /// 
+  ///
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
@@ -570,8 +598,8 @@ class ObjectEzsignfolderApi {
   ///
   /// * [int] pkiEzsignfolderID (required):
   ///
-  /// * [String] body (required):
-  Future<Response> ezsignfolderUnsendV1WithHttpInfo(int pkiEzsignfolderID, String body,) async {
+  /// * [Object] body (required):
+  Future<Response> ezsignfolderUnsendV1WithHttpInfo(int pkiEzsignfolderID, Object body,) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/unsend'
       .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
@@ -607,8 +635,8 @@ class ObjectEzsignfolderApi {
   ///
   /// * [int] pkiEzsignfolderID (required):
   ///
-  /// * [String] body (required):
-  Future<EzsignfolderUnsendV1Response?> ezsignfolderUnsendV1(int pkiEzsignfolderID, String body,) async {
+  /// * [Object] body (required):
+  Future<EzsignfolderUnsendV1Response?> ezsignfolderUnsendV1(int pkiEzsignfolderID, Object body,) async {
     final response = await ezsignfolderUnsendV1WithHttpInfo(pkiEzsignfolderID, body,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));

@@ -16,6 +16,7 @@ class ListSaveListpresentationV1Request {
     this.aObjListpresentation = const [],
   });
 
+  /// 
   List<ListpresentationRequest> aObjListpresentation;
 
   @override

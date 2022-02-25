@@ -24,6 +24,7 @@ class CustomFormsDataFolderResponse {
   /// The description of the Ezsignfolder
   String sEzsignfolderDescription;
 
+  /// 
   List<CustomFormDataDocumentResponse> aObjFormDataDocument;
 
   @override

@@ -26,5 +26,14 @@ void main() {
       // TODO
     });
 
+    // Retrieve an existing Ezsignbulksend
+    //
+    // 
+    //
+    //Future<EzsignbulksendGetObjectV1Response> ezsignbulksendGetObjectV1(int pkiEzsignbulksendID) async
+    test('test ezsignbulksendGetObjectV1', () async {
+      // TODO
+    });
+
   });
 }

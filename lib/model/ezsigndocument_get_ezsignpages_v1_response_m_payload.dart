@@ -16,6 +16,7 @@ class EzsigndocumentGetEzsignpagesV1ResponseMPayload {
     this.aObjEzsignpage = const [],
   });
 
+  /// 
   List<EzsignpageResponse> aObjEzsignpage;
 
   @override

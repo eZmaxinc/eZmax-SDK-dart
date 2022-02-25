@@ -11,11 +11,11 @@
 import 'package:openapi/api.dart';
 import 'package:test/test.dart';
 
-// tests for UNUSEDEzsignfoldersignerassociationEditObjectV1Response
+// tests for EzsigndocumentEndPrematurelyV1Response
 void main() {
-  // final instance = UNUSEDEzsignfoldersignerassociationEditObjectV1Response();
+  // final instance = EzsigndocumentEndPrematurelyV1Response();
 
-  group('test UNUSEDEzsignfoldersignerassociationEditObjectV1Response', () {
+  group('test EzsigndocumentEndPrematurelyV1Response', () {
     // CommonResponseObjDebugPayload objDebugPayload
     test('to test the property `objDebugPayload`', () async {
       // TODO

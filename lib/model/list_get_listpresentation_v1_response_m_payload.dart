@@ -16,6 +16,7 @@ class ListGetListpresentationV1ResponseMPayload {
     this.aObjListpresentation = const [],
   });
 
+  /// 
   List<ListpresentationRequest> aObjListpresentation;
 
   @override

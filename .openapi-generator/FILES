@@ -59,7 +59,12 @@ doc/EzsignbulksendGetListV1Response.md
 doc/EzsignbulksendGetListV1ResponseAllOf.md
 doc/EzsignbulksendGetListV1ResponseMPayload.md
 doc/EzsignbulksendGetListV1ResponseMPayloadAllOf.md
+doc/EzsignbulksendGetObjectV1Response.md
+doc/EzsignbulksendGetObjectV1ResponseAllOf.md
+doc/EzsignbulksendGetObjectV1ResponseMPayload.md
 doc/EzsignbulksendListElement.md
+doc/EzsignbulksendResponse.md
+doc/EzsignbulksendResponseCompound.md
 doc/EzsigndocumentApplyEzsigntemplateV1Request.md
 doc/EzsigndocumentApplyEzsigntemplateV1Response.md
 doc/EzsigndocumentApplyEzsigntemplateV2Request.md
@@ -71,6 +76,7 @@ doc/EzsigndocumentCreateObjectV1ResponseMPayload.md
 doc/EzsigndocumentDeleteObjectV1Response.md
 doc/EzsigndocumentEditEzsignsignaturesV1Request.md
 doc/EzsigndocumentEditEzsignsignaturesV1Response.md
+doc/EzsigndocumentEndPrematurelyV1Response.md
 doc/EzsigndocumentGetDownloadUrlV1Response.md
 doc/EzsigndocumentGetDownloadUrlV1ResponseAllOf.md
 doc/EzsigndocumentGetDownloadUrlV1ResponseMPayload.md
@@ -83,6 +89,9 @@ doc/EzsigndocumentGetFormDataV1ResponseMPayload.md
 doc/EzsigndocumentGetObjectV1Response.md
 doc/EzsigndocumentGetObjectV1ResponseAllOf.md
 doc/EzsigndocumentGetObjectV1ResponseMPayload.md
+doc/EzsigndocumentGetTemporaryProofV1Response.md
+doc/EzsigndocumentGetTemporaryProofV1ResponseAllOf.md
+doc/EzsigndocumentGetTemporaryProofV1ResponseMPayload.md
 doc/EzsigndocumentGetWordsPositionsV1Request.md
 doc/EzsigndocumentGetWordsPositionsV1Response.md
 doc/EzsigndocumentGetWordsPositionsV1ResponseAllOf.md
@@ -94,6 +103,7 @@ doc/EzsigndocumentRequestPatch.md
 doc/EzsigndocumentResponse.md
 doc/EzsigndocumentResponseCompound.md
 doc/EzsigndocumentResponseCompoundAllOf.md
+doc/EzsigndocumentlogResponse.md
 doc/EzsignfolderCreateObjectV1Request.md
 doc/EzsignfolderCreateObjectV1Response.md
 doc/EzsignfolderCreateObjectV1ResponseAllOf.md
@@ -183,6 +193,7 @@ doc/EzsigntemplatepackageListElement.md
 doc/FieldEActivesessionSessiontype.md
 doc/FieldEActivesessionWeekdaystart.md
 doc/FieldEEzsigndocumentStep.md
+doc/FieldEEzsigndocumentlogType.md
 doc/FieldEEzsignfolderSendreminderfrequency.md
 doc/FieldEEzsignfolderStep.md
 doc/FieldEEzsignfoldertypePrivacylevel.md
@@ -209,7 +220,6 @@ doc/ListSaveListpresentationV1Response.md
 doc/ListpresentationRequest.md
 doc/ModuleAuthenticateApi.md
 doc/ModuleListApi.md
-doc/ModuleSsprApi.md
 doc/ModuleUserApi.md
 doc/MultilingualApikeyDescription.md
 doc/ObjectActivesessionApi.md
@@ -232,14 +242,6 @@ doc/SsprSendUsernamesV1Request.md
 doc/SsprUnlockAccountRequestV1Request.md
 doc/SsprUnlockAccountV1Request.md
 doc/SsprValidateTokenV1Request.md
-doc/UNUSEDEzsigndocumentEditObjectV1Request.md
-doc/UNUSEDEzsigndocumentEditObjectV1Response.md
-doc/UNUSEDEzsignfolderEditObjectV1Request.md
-doc/UNUSEDEzsignfolderEditObjectV1Response.md
-doc/UNUSEDEzsignfoldersignerassociationEditObjectV1Request.md
-doc/UNUSEDEzsignfoldersignerassociationEditObjectV1Response.md
-doc/UNUSEDEzsignsignatureEditObjectV1Request.md
-doc/UNUSEDEzsignsignatureEditObjectV1Response.md
 doc/UserCreateEzsignuserV1Request.md
 doc/UserCreateEzsignuserV1Response.md
 doc/UserCreateEzsignuserV1ResponseAllOf.md
@@ -258,7 +260,6 @@ lib/api.dart
 lib/api/global_customer_api.dart
 lib/api/module_authenticate_api.dart
 lib/api/module_list_api.dart
-lib/api/module_sspr_api.dart
 lib/api/module_user_api.dart
 lib/api/object_activesession_api.dart
 lib/api/object_apikey_api.dart
@@ -337,7 +338,12 @@ lib/model/ezsignbulksend_get_list_v1_response.dart
 lib/model/ezsignbulksend_get_list_v1_response_all_of.dart
 lib/model/ezsignbulksend_get_list_v1_response_m_payload.dart
 lib/model/ezsignbulksend_get_list_v1_response_m_payload_all_of.dart
+lib/model/ezsignbulksend_get_object_v1_response.dart
+lib/model/ezsignbulksend_get_object_v1_response_all_of.dart
+lib/model/ezsignbulksend_get_object_v1_response_m_payload.dart
 lib/model/ezsignbulksend_list_element.dart
+lib/model/ezsignbulksend_response.dart
+lib/model/ezsignbulksend_response_compound.dart
 lib/model/ezsigndocument_apply_ezsigntemplate_v1_request.dart
 lib/model/ezsigndocument_apply_ezsigntemplate_v1_response.dart
 lib/model/ezsigndocument_apply_ezsigntemplate_v2_request.dart
@@ -349,6 +355,7 @@ lib/model/ezsigndocument_create_object_v1_response_m_payload.dart
 lib/model/ezsigndocument_delete_object_v1_response.dart
 lib/model/ezsigndocument_edit_ezsignsignatures_v1_request.dart
 lib/model/ezsigndocument_edit_ezsignsignatures_v1_response.dart
+lib/model/ezsigndocument_end_prematurely_v1_response.dart
 lib/model/ezsigndocument_get_download_url_v1_response.dart
 lib/model/ezsigndocument_get_download_url_v1_response_all_of.dart
 lib/model/ezsigndocument_get_download_url_v1_response_m_payload.dart
@@ -361,6 +368,9 @@ lib/model/ezsigndocument_get_form_data_v1_response_m_payload.dart
 lib/model/ezsigndocument_get_object_v1_response.dart
 lib/model/ezsigndocument_get_object_v1_response_all_of.dart
 lib/model/ezsigndocument_get_object_v1_response_m_payload.dart
+lib/model/ezsigndocument_get_temporary_proof_v1_response.dart
+lib/model/ezsigndocument_get_temporary_proof_v1_response_all_of.dart
+lib/model/ezsigndocument_get_temporary_proof_v1_response_m_payload.dart
 lib/model/ezsigndocument_get_words_positions_v1_request.dart
 lib/model/ezsigndocument_get_words_positions_v1_response.dart
 lib/model/ezsigndocument_get_words_positions_v1_response_all_of.dart
@@ -372,6 +382,7 @@ lib/model/ezsigndocument_request_patch.dart
 lib/model/ezsigndocument_response.dart
 lib/model/ezsigndocument_response_compound.dart
 lib/model/ezsigndocument_response_compound_all_of.dart
+lib/model/ezsigndocumentlog_response.dart
 lib/model/ezsignfolder_create_object_v1_request.dart
 lib/model/ezsignfolder_create_object_v1_response.dart
 lib/model/ezsignfolder_create_object_v1_response_all_of.dart
@@ -461,6 +472,7 @@ lib/model/ezsigntemplatepackage_list_element.dart
 lib/model/field_e_activesession_sessiontype.dart
 lib/model/field_e_activesession_weekdaystart.dart
 lib/model/field_e_ezsigndocument_step.dart
+lib/model/field_e_ezsigndocumentlog_type.dart
 lib/model/field_e_ezsignfolder_sendreminderfrequency.dart
 lib/model/field_e_ezsignfolder_step.dart
 lib/model/field_e_ezsignfoldertype_privacylevel.dart
@@ -492,14 +504,6 @@ lib/model/sspr_send_usernames_v1_request.dart
 lib/model/sspr_unlock_account_request_v1_request.dart
 lib/model/sspr_unlock_account_v1_request.dart
 lib/model/sspr_validate_token_v1_request.dart
-lib/model/unused_ezsigndocument_edit_object_v1_request.dart
-lib/model/unused_ezsigndocument_edit_object_v1_response.dart
-lib/model/unused_ezsignfolder_edit_object_v1_request.dart
-lib/model/unused_ezsignfolder_edit_object_v1_response.dart
-lib/model/unused_ezsignfoldersignerassociation_edit_object_v1_request.dart
-lib/model/unused_ezsignfoldersignerassociation_edit_object_v1_response.dart
-lib/model/unused_ezsignsignature_edit_object_v1_request.dart
-lib/model/unused_ezsignsignature_edit_object_v1_response.dart
 lib/model/user_create_ezsignuser_v1_request.dart
 lib/model/user_create_ezsignuser_v1_response.dart
 lib/model/user_create_ezsignuser_v1_response_all_of.dart
@@ -570,7 +574,12 @@ test/ezsignbulksend_get_list_v1_response_all_of_test.dart
 test/ezsignbulksend_get_list_v1_response_m_payload_all_of_test.dart
 test/ezsignbulksend_get_list_v1_response_m_payload_test.dart
 test/ezsignbulksend_get_list_v1_response_test.dart
+test/ezsignbulksend_get_object_v1_response_all_of_test.dart
+test/ezsignbulksend_get_object_v1_response_m_payload_test.dart
+test/ezsignbulksend_get_object_v1_response_test.dart
 test/ezsignbulksend_list_element_test.dart
+test/ezsignbulksend_response_compound_test.dart
+test/ezsignbulksend_response_test.dart
 test/ezsigndocument_apply_ezsigntemplate_v1_request_test.dart
 test/ezsigndocument_apply_ezsigntemplate_v1_response_test.dart
 test/ezsigndocument_apply_ezsigntemplate_v2_request_test.dart
@@ -582,6 +591,7 @@ test/ezsigndocument_create_object_v1_response_test.dart
 test/ezsigndocument_delete_object_v1_response_test.dart
 test/ezsigndocument_edit_ezsignsignatures_v1_request_test.dart
 test/ezsigndocument_edit_ezsignsignatures_v1_response_test.dart
+test/ezsigndocument_end_prematurely_v1_response_test.dart
 test/ezsigndocument_get_download_url_v1_response_all_of_test.dart
 test/ezsigndocument_get_download_url_v1_response_m_payload_test.dart
 test/ezsigndocument_get_download_url_v1_response_test.dart
@@ -594,6 +604,9 @@ test/ezsigndocument_get_form_data_v1_response_test.dart
 test/ezsigndocument_get_object_v1_response_all_of_test.dart
 test/ezsigndocument_get_object_v1_response_m_payload_test.dart
 test/ezsigndocument_get_object_v1_response_test.dart
+test/ezsigndocument_get_temporary_proof_v1_response_all_of_test.dart
+test/ezsigndocument_get_temporary_proof_v1_response_m_payload_test.dart
+test/ezsigndocument_get_temporary_proof_v1_response_test.dart
 test/ezsigndocument_get_words_positions_v1_request_test.dart
 test/ezsigndocument_get_words_positions_v1_response_all_of_test.dart
 test/ezsigndocument_get_words_positions_v1_response_test.dart
@@ -605,6 +618,7 @@ test/ezsigndocument_request_test.dart
 test/ezsigndocument_response_compound_all_of_test.dart
 test/ezsigndocument_response_compound_test.dart
 test/ezsigndocument_response_test.dart
+test/ezsigndocumentlog_response_test.dart
 test/ezsignfolder_create_object_v1_request_test.dart
 test/ezsignfolder_create_object_v1_response_all_of_test.dart
 test/ezsignfolder_create_object_v1_response_m_payload_test.dart
@@ -694,6 +708,7 @@ test/ezsigntemplatepackage_list_element_test.dart
 test/field_e_activesession_sessiontype_test.dart
 test/field_e_activesession_weekdaystart_test.dart
 test/field_e_ezsigndocument_step_test.dart
+test/field_e_ezsigndocumentlog_type_test.dart
 test/field_e_ezsignfolder_sendreminderfrequency_test.dart
 test/field_e_ezsignfolder_step_test.dart
 test/field_e_ezsignfoldertype_privacylevel_test.dart
@@ -720,7 +735,6 @@ test/list_save_listpresentation_v1_response_test.dart
 test/listpresentation_request_test.dart
 test/module_authenticate_api_test.dart
 test/module_list_api_test.dart
-test/module_sspr_api_test.dart
 test/module_user_api_test.dart
 test/multilingual_apikey_description_test.dart
 test/object_activesession_api_test.dart
@@ -743,14 +757,6 @@ test/sspr_send_usernames_v1_request_test.dart
 test/sspr_unlock_account_request_v1_request_test.dart
 test/sspr_unlock_account_v1_request_test.dart
 test/sspr_validate_token_v1_request_test.dart
-test/unused_ezsigndocument_edit_object_v1_request_test.dart
-test/unused_ezsigndocument_edit_object_v1_response_test.dart
-test/unused_ezsignfolder_edit_object_v1_request_test.dart
-test/unused_ezsignfolder_edit_object_v1_response_test.dart
-test/unused_ezsignfoldersignerassociation_edit_object_v1_request_test.dart
-test/unused_ezsignfoldersignerassociation_edit_object_v1_response_test.dart
-test/unused_ezsignsignature_edit_object_v1_request_test.dart
-test/unused_ezsignsignature_edit_object_v1_response_test.dart
 test/user_create_ezsignuser_v1_request_test.dart
 test/user_create_ezsignuser_v1_response_all_of_test.dart
 test/user_create_ezsignuser_v1_response_m_payload_test.dart

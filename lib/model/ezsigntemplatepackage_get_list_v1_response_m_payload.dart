@@ -18,6 +18,7 @@ class EzsigntemplatepackageGetListV1ResponseMPayload {
     required this.iRowFiltered,
   });
 
+  /// 
   List<EzsigntemplatepackageListElement> aObjEzsigntemplatepackage;
 
   /// The number of rows returned

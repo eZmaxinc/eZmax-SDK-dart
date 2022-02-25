@@ -27,6 +27,7 @@ class ModuleAuthenticateApi {
   /// * [String] eSessionType (required):
   ///
   /// * [AuthenticateAuthenticateV2Request] authenticateAuthenticateV2Request (required):
+  ///   
   Future<Response> authenticateAuthenticateV2WithHttpInfo(String eSessionType, AuthenticateAuthenticateV2Request authenticateAuthenticateV2Request,) async {
     // ignore: prefer_const_declarations
     final path = r'/2/module/authenticate/authenticate/{eSessionType}'
@@ -64,6 +65,7 @@ class ModuleAuthenticateApi {
   /// * [String] eSessionType (required):
   ///
   /// * [AuthenticateAuthenticateV2Request] authenticateAuthenticateV2Request (required):
+  ///   
   Future<AuthenticateAuthenticateV2Response?> authenticateAuthenticateV2(String eSessionType, AuthenticateAuthenticateV2Request authenticateAuthenticateV2Request,) async {
     final response = await authenticateAuthenticateV2WithHttpInfo(eSessionType, authenticateAuthenticateV2Request,);
     if (response.statusCode >= HttpStatus.badRequest) {

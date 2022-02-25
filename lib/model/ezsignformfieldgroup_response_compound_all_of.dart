@@ -16,6 +16,7 @@ class EzsignformfieldgroupResponseCompoundAllOf {
     this.aObjEzsignformfield = const [],
   });
 
+  /// 
   List<EzsignformfieldResponse> aObjEzsignformfield;
 
   @override

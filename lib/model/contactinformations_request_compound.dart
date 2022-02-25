@@ -23,12 +23,16 @@ class ContactinformationsRequestCompound {
     required this.iWebsiteDefault,
   });
 
+  /// 
   List<AddressRequest> aObjAddress;
 
+  /// 
   List<PhoneRequest> aObjPhone;
 
+  /// 
   List<EmailRequest> aObjEmail;
 
+  /// 
   List<WebsiteRequest> aObjWebsite;
 
   /// The index in the a_objAddress array (zero based index) representing the Address object that should become the default one.  You can leave the value to 0 if the array is empty.

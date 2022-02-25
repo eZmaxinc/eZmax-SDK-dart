@@ -16,6 +16,7 @@ class EzsignfolderGetEzsigndocumentsV1ResponseMPayload {
     this.aObjEzsigndocument = const [],
   });
 
+  /// 
   List<EzsigndocumentResponseCompound> aObjEzsigndocument;
 
   @override

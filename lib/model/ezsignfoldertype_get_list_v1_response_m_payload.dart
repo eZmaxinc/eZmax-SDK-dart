@@ -18,6 +18,7 @@ class EzsignfoldertypeGetListV1ResponseMPayload {
     required this.iRowFiltered,
   });
 
+  /// 
   List<EzsignfoldertypeListElement> aObjEzsignfoldertype;
 
   /// The number of rows returned

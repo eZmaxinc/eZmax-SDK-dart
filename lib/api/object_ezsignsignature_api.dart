@@ -76,6 +76,8 @@ class ObjectEzsignsignatureApi {
 
   /// Delete an existing Ezsignsignature
   ///
+  /// 
+  ///
   /// Note: This method returns the HTTP [Response].
   ///
   /// Parameters:
@@ -111,6 +113,8 @@ class ObjectEzsignsignatureApi {
 
   /// Delete an existing Ezsignsignature
   ///
+  /// 
+  ///
   /// Parameters:
   ///
   /// * [int] pkiEzsignsignatureID (required):
@@ -130,6 +134,8 @@ class ObjectEzsignsignatureApi {
   }
 
   /// Edit an existing Ezsignsignature
+  ///
+  /// 
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -167,6 +173,8 @@ class ObjectEzsignsignatureApi {
   }
 
   /// Edit an existing Ezsignsignature
+  ///
+  /// 
   ///
   /// Parameters:
   ///

@@ -11,11 +11,16 @@
 import 'package:openapi/api.dart';
 import 'package:test/test.dart';
 
-// tests for UNUSEDEzsignsignatureEditObjectV1Response
+// tests for EzsignbulksendGetObjectV1Response
 void main() {
-  // final instance = UNUSEDEzsignsignatureEditObjectV1Response();
+  // final instance = EzsignbulksendGetObjectV1Response();
 
-  group('test UNUSEDEzsignsignatureEditObjectV1Response', () {
+  group('test EzsignbulksendGetObjectV1Response', () {
+    // EzsignbulksendGetObjectV1ResponseMPayload mPayload
+    test('to test the property `mPayload`', () async {
+      // TODO
+    });
+
     // CommonResponseObjDebugPayload objDebugPayload
     test('to test the property `objDebugPayload`', () async {
       // TODO

@@ -64,6 +64,9 @@ String parameterToString(dynamic value) {
   if (value is FieldEEzsigndocumentStep) {
     return FieldEEzsigndocumentStepTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEEzsigndocumentlogType) {
+    return FieldEEzsigndocumentlogTypeTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEEzsignfolderSendreminderfrequency) {
     return FieldEEzsignfolderSendreminderfrequencyTypeTransformer().encode(value).toString();
   }

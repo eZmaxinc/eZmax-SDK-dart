@@ -11,11 +11,16 @@
 import 'package:openapi/api.dart';
 import 'package:test/test.dart';
 
-// tests for UNUSEDEzsigndocumentEditObjectV1Response
+// tests for EzsigndocumentGetTemporaryProofV1Response
 void main() {
-  // final instance = UNUSEDEzsigndocumentEditObjectV1Response();
+  // final instance = EzsigndocumentGetTemporaryProofV1Response();
 
-  group('test UNUSEDEzsigndocumentEditObjectV1Response', () {
+  group('test EzsigndocumentGetTemporaryProofV1Response', () {
+    // EzsigndocumentGetTemporaryProofV1ResponseMPayload mPayload
+    test('to test the property `mPayload`', () async {
+      // TODO
+    });
+
     // CommonResponseObjDebugPayload objDebugPayload
     test('to test the property `objDebugPayload`', () async {
       // TODO

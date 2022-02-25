@@ -59,7 +59,7 @@ class EzsignfolderResponse {
   /// The description of the Ezsignfolder
   String sEzsignfolderDescription;
 
-  /// Somes extra notes about the eZsign Folder
+  /// Note about the Ezsignfolder
   String tEzsignfolderNote;
 
   FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency;

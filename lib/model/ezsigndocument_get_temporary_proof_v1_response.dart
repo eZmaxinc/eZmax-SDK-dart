@@ -10,12 +10,15 @@
 
 part of openapi.api;
 
-class UNUSEDEzsignfolderEditObjectV1Response {
-  /// Returns a new [UNUSEDEzsignfolderEditObjectV1Response] instance.
-  UNUSEDEzsignfolderEditObjectV1Response({
+class EzsigndocumentGetTemporaryProofV1Response {
+  /// Returns a new [EzsigndocumentGetTemporaryProofV1Response] instance.
+  EzsigndocumentGetTemporaryProofV1Response({
+    required this.mPayload,
     this.objDebugPayload,
     this.objDebug,
   });
+
+  EzsigndocumentGetTemporaryProofV1ResponseMPayload mPayload;
 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -34,21 +37,24 @@ class UNUSEDEzsignfolderEditObjectV1Response {
   CommonResponseObjDebug? objDebug;
 
   @override
-  bool operator ==(Object other) => identical(this, other) || other is UNUSEDEzsignfolderEditObjectV1Response &&
+  bool operator ==(Object other) => identical(this, other) || other is EzsigndocumentGetTemporaryProofV1Response &&
+     other.mPayload == mPayload &&
      other.objDebugPayload == objDebugPayload &&
      other.objDebug == objDebug;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
+    (mPayload.hashCode) +
     (objDebugPayload == null ? 0 : objDebugPayload!.hashCode) +
     (objDebug == null ? 0 : objDebug!.hashCode);
 
   @override
-  String toString() => 'UNUSEDEzsignfolderEditObjectV1Response[objDebugPayload=$objDebugPayload, objDebug=$objDebug]';
+  String toString() => 'EzsigndocumentGetTemporaryProofV1Response[mPayload=$mPayload, objDebugPayload=$objDebugPayload, objDebug=$objDebug]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
+      json[r'mPayload'] = mPayload;
     if (objDebugPayload != null) {
       json[r'objDebugPayload'] = objDebugPayload;
     }
@@ -58,10 +64,10 @@ class UNUSEDEzsignfolderEditObjectV1Response {
     return json;
   }
 
-  /// Returns a new [UNUSEDEzsignfolderEditObjectV1Response] instance and imports its values from
+  /// Returns a new [EzsigndocumentGetTemporaryProofV1Response] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static UNUSEDEzsignfolderEditObjectV1Response? fromJson(dynamic value) {
+  static EzsigndocumentGetTemporaryProofV1Response? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
 
@@ -70,13 +76,14 @@ class UNUSEDEzsignfolderEditObjectV1Response {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "UNUSEDEzsignfolderEditObjectV1Response[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "UNUSEDEzsignfolderEditObjectV1Response[$key]" has a null value in JSON.');
+          assert(json.containsKey(key), 'Required key "EzsigndocumentGetTemporaryProofV1Response[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "EzsigndocumentGetTemporaryProofV1Response[$key]" has a null value in JSON.');
         });
         return true;
       }());
 
-      return UNUSEDEzsignfolderEditObjectV1Response(
+      return EzsigndocumentGetTemporaryProofV1Response(
+        mPayload: EzsigndocumentGetTemporaryProofV1ResponseMPayload.fromJson(json[r'mPayload'])!,
         objDebugPayload: CommonResponseObjDebugPayload.fromJson(json[r'objDebugPayload']),
         objDebug: CommonResponseObjDebug.fromJson(json[r'objDebug']),
       );
@@ -84,11 +91,11 @@ class UNUSEDEzsignfolderEditObjectV1Response {
     return null;
   }
 
-  static List<UNUSEDEzsignfolderEditObjectV1Response>? listFromJson(dynamic json, {bool growable = false,}) {
-    final result = <UNUSEDEzsignfolderEditObjectV1Response>[];
+  static List<EzsigndocumentGetTemporaryProofV1Response>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <EzsigndocumentGetTemporaryProofV1Response>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
-        final value = UNUSEDEzsignfolderEditObjectV1Response.fromJson(row);
+        final value = EzsigndocumentGetTemporaryProofV1Response.fromJson(row);
         if (value != null) {
           result.add(value);
         }
@@ -97,12 +104,12 @@ class UNUSEDEzsignfolderEditObjectV1Response {
     return result.toList(growable: growable);
   }
 
-  static Map<String, UNUSEDEzsignfolderEditObjectV1Response> mapFromJson(dynamic json) {
-    final map = <String, UNUSEDEzsignfolderEditObjectV1Response>{};
+  static Map<String, EzsigndocumentGetTemporaryProofV1Response> mapFromJson(dynamic json) {
+    final map = <String, EzsigndocumentGetTemporaryProofV1Response>{};
     if (json is Map && json.isNotEmpty) {
       json = json.cast<String, dynamic>(); // ignore: parameter_assignments
       for (final entry in json.entries) {
-        final value = UNUSEDEzsignfolderEditObjectV1Response.fromJson(entry.value);
+        final value = EzsigndocumentGetTemporaryProofV1Response.fromJson(entry.value);
         if (value != null) {
           map[entry.key] = value;
         }
@@ -111,13 +118,13 @@ class UNUSEDEzsignfolderEditObjectV1Response {
     return map;
   }
 
-  // maps a json object with a list of UNUSEDEzsignfolderEditObjectV1Response-objects as value to a dart map
-  static Map<String, List<UNUSEDEzsignfolderEditObjectV1Response>> mapListFromJson(dynamic json, {bool growable = false,}) {
-    final map = <String, List<UNUSEDEzsignfolderEditObjectV1Response>>{};
+  // maps a json object with a list of EzsigndocumentGetTemporaryProofV1Response-objects as value to a dart map
+  static Map<String, List<EzsigndocumentGetTemporaryProofV1Response>> mapListFromJson(dynamic json, {bool growable = false,}) {
+    final map = <String, List<EzsigndocumentGetTemporaryProofV1Response>>{};
     if (json is Map && json.isNotEmpty) {
       json = json.cast<String, dynamic>(); // ignore: parameter_assignments
       for (final entry in json.entries) {
-        final value = UNUSEDEzsignfolderEditObjectV1Response.listFromJson(entry.value, growable: growable,);
+        final value = EzsigndocumentGetTemporaryProofV1Response.listFromJson(entry.value, growable: growable,);
         if (value != null) {
           map[entry.key] = value;
         }
@@ -128,6 +135,7 @@ class UNUSEDEzsignfolderEditObjectV1Response {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
+    'mPayload',
   };
 }
 

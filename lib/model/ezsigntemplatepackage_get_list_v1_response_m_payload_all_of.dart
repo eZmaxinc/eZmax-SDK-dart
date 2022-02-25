@@ -16,6 +16,7 @@ class EzsigntemplatepackageGetListV1ResponseMPayloadAllOf {
     this.aObjEzsigntemplatepackage = const [],
   });
 
+  /// 
   List<EzsigntemplatepackageListElement> aObjEzsigntemplatepackage;
 
   @override

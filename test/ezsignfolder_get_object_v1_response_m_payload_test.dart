@@ -64,7 +64,7 @@ void main() {
       // TODO
     });
 
-    // Somes extra notes about the eZsign Folder
+    // Note about the Ezsignfolder
     // String tEzsignfolderNote
     test('to test the property `tEzsignfolderNote`', () async {
       // TODO

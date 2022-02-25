@@ -16,21 +16,25 @@ void main() {
   // final instance = ContactinformationsRequestCompoundAllOf();
 
   group('test ContactinformationsRequestCompoundAllOf', () {
+    // 
     // List<AddressRequest> aObjAddress (default value: const [])
     test('to test the property `aObjAddress`', () async {
       // TODO
     });
 
+    // 
     // List<PhoneRequest> aObjPhone (default value: const [])
     test('to test the property `aObjPhone`', () async {
       // TODO
     });
 
+    // 
     // List<EmailRequest> aObjEmail (default value: const [])
     test('to test the property `aObjEmail`', () async {
       // TODO
     });
 
+    // 
     // List<WebsiteRequest> aObjWebsite (default value: const [])
     test('to test the property `aObjWebsite`', () async {
       // TODO

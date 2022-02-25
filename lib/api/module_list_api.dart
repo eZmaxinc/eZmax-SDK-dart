@@ -89,6 +89,7 @@ class ModuleListApi {
   ///   The list Name
   ///
   /// * [ListSaveListpresentationV1Request] listSaveListpresentationV1Request (required):
+  ///   
   Future<Response> listSaveListpresentationV1WithHttpInfo(String sListName, ListSaveListpresentationV1Request listSaveListpresentationV1Request,) async {
     // ignore: prefer_const_declarations
     final path = r'/1/module/list/listpresentation/{sListName}'
@@ -127,6 +128,7 @@ class ModuleListApi {
   ///   The list Name
   ///
   /// * [ListSaveListpresentationV1Request] listSaveListpresentationV1Request (required):
+  ///   
   Future<ListSaveListpresentationV1Response?> listSaveListpresentationV1(String sListName, ListSaveListpresentationV1Request listSaveListpresentationV1Request,) async {
     final response = await listSaveListpresentationV1WithHttpInfo(sListName, listSaveListpresentationV1Request,);
     if (response.statusCode >= HttpStatus.badRequest) {

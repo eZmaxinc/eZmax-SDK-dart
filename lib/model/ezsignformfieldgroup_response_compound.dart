@@ -20,6 +20,7 @@ class EzsignformfieldgroupResponseCompound {
   /// The Label for the Ezsignformfieldgroup
   String sEzsignformfieldgroupLabel;
 
+  /// 
   List<EzsignformfieldResponse> aObjEzsignformfield;
 
   @override
