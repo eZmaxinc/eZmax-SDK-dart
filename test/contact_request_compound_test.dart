@@ -16,11 +16,6 @@ void main() {
   // final instance = ContactRequestCompound();
 
   group('test ContactRequestCompound', () {
-    // ContactinformationsRequestCompound objContactinformations
-    test('to test the property `objContactinformations`', () async {
-      // TODO
-    });
-
     // The unique ID of the Contacttitle.  Valid values:  |Value|Description| |-|-| |1|Ms.| |2|Mr.| |4|(Blank)| |5|Me (For Notaries)|
     // int fkiContacttitleID
     test('to test the property `fkiContacttitleID`', () async {
@@ -54,6 +49,11 @@ void main() {
     // The Birth Date of the contact
     // String dtContactBirthdate
     test('to test the property `dtContactBirthdate`', () async {
+      // TODO
+    });
+
+    // ContactinformationsRequestCompound objContactinformations
+    test('to test the property `objContactinformations`', () async {
       // TODO
     });
 

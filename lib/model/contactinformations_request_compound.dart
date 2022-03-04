@@ -13,27 +13,15 @@ part of openapi.api;
 class ContactinformationsRequestCompound {
   /// Returns a new [ContactinformationsRequestCompound] instance.
   ContactinformationsRequestCompound({
-    this.aObjAddress = const [],
-    this.aObjPhone = const [],
-    this.aObjEmail = const [],
-    this.aObjWebsite = const [],
     required this.iAddressDefault,
     required this.iPhoneDefault,
     required this.iEmailDefault,
     required this.iWebsiteDefault,
+    this.aObjAddress = const [],
+    this.aObjPhone = const [],
+    this.aObjEmail = const [],
+    this.aObjWebsite = const [],
   });
-
-  /// 
-  List<AddressRequest> aObjAddress;
-
-  /// 
-  List<PhoneRequest> aObjPhone;
-
-  /// 
-  List<EmailRequest> aObjEmail;
-
-  /// 
-  List<WebsiteRequest> aObjWebsite;
 
   /// The index in the a_objAddress array (zero based index) representing the Address object that should become the default one.  You can leave the value to 0 if the array is empty.
   int iAddressDefault;
@@ -47,42 +35,50 @@ class ContactinformationsRequestCompound {
   /// The index in the a_objWebsite array (zero based index) representing the Website object that should become the default one.  You can leave the value to 0 if the array is empty.
   int iWebsiteDefault;
 
+  List<AddressRequestCompound> aObjAddress;
+
+  List<PhoneRequestCompound> aObjPhone;
+
+  List<EmailRequestCompound> aObjEmail;
+
+  List<WebsiteRequestCompound> aObjWebsite;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is ContactinformationsRequestCompound &&
-     other.aObjAddress == aObjAddress &&
-     other.aObjPhone == aObjPhone &&
-     other.aObjEmail == aObjEmail &&
-     other.aObjWebsite == aObjWebsite &&
      other.iAddressDefault == iAddressDefault &&
      other.iPhoneDefault == iPhoneDefault &&
      other.iEmailDefault == iEmailDefault &&
-     other.iWebsiteDefault == iWebsiteDefault;
+     other.iWebsiteDefault == iWebsiteDefault &&
+     other.aObjAddress == aObjAddress &&
+     other.aObjPhone == aObjPhone &&
+     other.aObjEmail == aObjEmail &&
+     other.aObjWebsite == aObjWebsite;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (aObjAddress.hashCode) +
-    (aObjPhone.hashCode) +
-    (aObjEmail.hashCode) +
-    (aObjWebsite.hashCode) +
     (iAddressDefault.hashCode) +
     (iPhoneDefault.hashCode) +
     (iEmailDefault.hashCode) +
-    (iWebsiteDefault.hashCode);
+    (iWebsiteDefault.hashCode) +
+    (aObjAddress.hashCode) +
+    (aObjPhone.hashCode) +
+    (aObjEmail.hashCode) +
+    (aObjWebsite.hashCode);
 
   @override
-  String toString() => 'ContactinformationsRequestCompound[aObjAddress=$aObjAddress, aObjPhone=$aObjPhone, aObjEmail=$aObjEmail, aObjWebsite=$aObjWebsite, iAddressDefault=$iAddressDefault, iPhoneDefault=$iPhoneDefault, iEmailDefault=$iEmailDefault, iWebsiteDefault=$iWebsiteDefault]';
+  String toString() => 'ContactinformationsRequestCompound[iAddressDefault=$iAddressDefault, iPhoneDefault=$iPhoneDefault, iEmailDefault=$iEmailDefault, iWebsiteDefault=$iWebsiteDefault, aObjAddress=$aObjAddress, aObjPhone=$aObjPhone, aObjEmail=$aObjEmail, aObjWebsite=$aObjWebsite]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'a_objAddress'] = aObjAddress;
-      json[r'a_objPhone'] = aObjPhone;
-      json[r'a_objEmail'] = aObjEmail;
-      json[r'a_objWebsite'] = aObjWebsite;
       json[r'iAddressDefault'] = iAddressDefault;
       json[r'iPhoneDefault'] = iPhoneDefault;
       json[r'iEmailDefault'] = iEmailDefault;
       json[r'iWebsiteDefault'] = iWebsiteDefault;
+      json[r'a_objAddress'] = aObjAddress;
+      json[r'a_objPhone'] = aObjPhone;
+      json[r'a_objEmail'] = aObjEmail;
+      json[r'a_objWebsite'] = aObjWebsite;
     return json;
   }
 
@@ -105,14 +101,14 @@ class ContactinformationsRequestCompound {
       }());
 
       return ContactinformationsRequestCompound(
-        aObjAddress: AddressRequest.listFromJson(json[r'a_objAddress'])!,
-        aObjPhone: PhoneRequest.listFromJson(json[r'a_objPhone'])!,
-        aObjEmail: EmailRequest.listFromJson(json[r'a_objEmail'])!,
-        aObjWebsite: WebsiteRequest.listFromJson(json[r'a_objWebsite'])!,
         iAddressDefault: mapValueOfType<int>(json, r'iAddressDefault')!,
         iPhoneDefault: mapValueOfType<int>(json, r'iPhoneDefault')!,
         iEmailDefault: mapValueOfType<int>(json, r'iEmailDefault')!,
         iWebsiteDefault: mapValueOfType<int>(json, r'iWebsiteDefault')!,
+        aObjAddress: AddressRequestCompound.listFromJson(json[r'a_objAddress'])!,
+        aObjPhone: PhoneRequestCompound.listFromJson(json[r'a_objPhone'])!,
+        aObjEmail: EmailRequestCompound.listFromJson(json[r'a_objEmail'])!,
+        aObjWebsite: WebsiteRequestCompound.listFromJson(json[r'a_objWebsite'])!,
       );
     }
     return null;
@@ -162,14 +158,14 @@ class ContactinformationsRequestCompound {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'a_objAddress',
-    'a_objPhone',
-    'a_objEmail',
-    'a_objWebsite',
     'iAddressDefault',
     'iPhoneDefault',
     'iEmailDefault',
     'iWebsiteDefault',
+    'a_objAddress',
+    'a_objPhone',
+    'a_objEmail',
+    'a_objWebsite',
   };
 }
 

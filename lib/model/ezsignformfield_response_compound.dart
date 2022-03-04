@@ -13,34 +13,106 @@ part of openapi.api;
 class EzsignformfieldResponseCompound {
   /// Returns a new [EzsignformfieldResponseCompound] instance.
   EzsignformfieldResponseCompound({
+    required this.pkiEzsignformfieldID,
+    required this.iEzsignpagePagenumber,
     required this.sEzsignformfieldLabel,
     required this.sEzsignformfieldValue,
+    required this.iEzsignformfieldX,
+    required this.iEzsignformfieldY,
+    required this.iEzsignformfieldWidth,
+    required this.iEzsignformfieldHeight,
+    this.bEzsignformfieldSelected,
+    this.sEzsignformfieldEnteredvalue,
   });
+
+  /// The unique ID of the Ezsignformfield
+  int pkiEzsignformfieldID;
+
+  /// The page number in the Ezsigndocument
+  int iEzsignpagePagenumber;
 
   /// The Label for the Ezsignformfield
   String sEzsignformfieldLabel;
 
-  /// The Value for the Ezsignformfield
+  /// The value for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is Checkbox or Radio
   String sEzsignformfieldValue;
+
+  /// The X coordinate (Horizontal) where to put the Ezsignformfield on the Ezsignpage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignformfield 2 inches from the left border of the page, you would use \"200\" for the X coordinate.
+  int iEzsignformfieldX;
+
+  /// The Y coordinate (Vertical) where to put the Ezsignformfield on the Ezsignpage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignformfield 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.
+  int iEzsignformfieldY;
+
+  /// The Width of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22-65535     | | Radio                     | 22           | | Text                      | 22-65535     | | Textarea                  | 22-65535     |
+  int iEzsignformfieldWidth;
+
+  /// The Height of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     | 
+  int iEzsignformfieldHeight;
+
+  /// Whether the Ezsignformfield is selected or not by default.  This can only be set if eEzsignformfieldgroupType is **Checkbox** or **Radio**
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bEzsignformfieldSelected;
+
+  /// This is the value enterred for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is **Dropdown**, **Text** or **Textarea**
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEzsignformfieldEnteredvalue;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignformfieldResponseCompound &&
+     other.pkiEzsignformfieldID == pkiEzsignformfieldID &&
+     other.iEzsignpagePagenumber == iEzsignpagePagenumber &&
      other.sEzsignformfieldLabel == sEzsignformfieldLabel &&
-     other.sEzsignformfieldValue == sEzsignformfieldValue;
+     other.sEzsignformfieldValue == sEzsignformfieldValue &&
+     other.iEzsignformfieldX == iEzsignformfieldX &&
+     other.iEzsignformfieldY == iEzsignformfieldY &&
+     other.iEzsignformfieldWidth == iEzsignformfieldWidth &&
+     other.iEzsignformfieldHeight == iEzsignformfieldHeight &&
+     other.bEzsignformfieldSelected == bEzsignformfieldSelected &&
+     other.sEzsignformfieldEnteredvalue == sEzsignformfieldEnteredvalue;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
+    (pkiEzsignformfieldID.hashCode) +
+    (iEzsignpagePagenumber.hashCode) +
     (sEzsignformfieldLabel.hashCode) +
-    (sEzsignformfieldValue.hashCode);
+    (sEzsignformfieldValue.hashCode) +
+    (iEzsignformfieldX.hashCode) +
+    (iEzsignformfieldY.hashCode) +
+    (iEzsignformfieldWidth.hashCode) +
+    (iEzsignformfieldHeight.hashCode) +
+    (bEzsignformfieldSelected == null ? 0 : bEzsignformfieldSelected!.hashCode) +
+    (sEzsignformfieldEnteredvalue == null ? 0 : sEzsignformfieldEnteredvalue!.hashCode);
 
   @override
-  String toString() => 'EzsignformfieldResponseCompound[sEzsignformfieldLabel=$sEzsignformfieldLabel, sEzsignformfieldValue=$sEzsignformfieldValue]';
+  String toString() => 'EzsignformfieldResponseCompound[pkiEzsignformfieldID=$pkiEzsignformfieldID, iEzsignpagePagenumber=$iEzsignpagePagenumber, sEzsignformfieldLabel=$sEzsignformfieldLabel, sEzsignformfieldValue=$sEzsignformfieldValue, iEzsignformfieldX=$iEzsignformfieldX, iEzsignformfieldY=$iEzsignformfieldY, iEzsignformfieldWidth=$iEzsignformfieldWidth, iEzsignformfieldHeight=$iEzsignformfieldHeight, bEzsignformfieldSelected=$bEzsignformfieldSelected, sEzsignformfieldEnteredvalue=$sEzsignformfieldEnteredvalue]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
+      json[r'pkiEzsignformfieldID'] = pkiEzsignformfieldID;
+      json[r'iEzsignpagePagenumber'] = iEzsignpagePagenumber;
       json[r'sEzsignformfieldLabel'] = sEzsignformfieldLabel;
       json[r'sEzsignformfieldValue'] = sEzsignformfieldValue;
+      json[r'iEzsignformfieldX'] = iEzsignformfieldX;
+      json[r'iEzsignformfieldY'] = iEzsignformfieldY;
+      json[r'iEzsignformfieldWidth'] = iEzsignformfieldWidth;
+      json[r'iEzsignformfieldHeight'] = iEzsignformfieldHeight;
+    if (bEzsignformfieldSelected != null) {
+      json[r'bEzsignformfieldSelected'] = bEzsignformfieldSelected;
+    }
+    if (sEzsignformfieldEnteredvalue != null) {
+      json[r'sEzsignformfieldEnteredvalue'] = sEzsignformfieldEnteredvalue;
+    }
     return json;
   }
 
@@ -63,8 +135,16 @@ class EzsignformfieldResponseCompound {
       }());
 
       return EzsignformfieldResponseCompound(
+        pkiEzsignformfieldID: mapValueOfType<int>(json, r'pkiEzsignformfieldID')!,
+        iEzsignpagePagenumber: mapValueOfType<int>(json, r'iEzsignpagePagenumber')!,
         sEzsignformfieldLabel: mapValueOfType<String>(json, r'sEzsignformfieldLabel')!,
         sEzsignformfieldValue: mapValueOfType<String>(json, r'sEzsignformfieldValue')!,
+        iEzsignformfieldX: mapValueOfType<int>(json, r'iEzsignformfieldX')!,
+        iEzsignformfieldY: mapValueOfType<int>(json, r'iEzsignformfieldY')!,
+        iEzsignformfieldWidth: mapValueOfType<int>(json, r'iEzsignformfieldWidth')!,
+        iEzsignformfieldHeight: mapValueOfType<int>(json, r'iEzsignformfieldHeight')!,
+        bEzsignformfieldSelected: mapValueOfType<bool>(json, r'bEzsignformfieldSelected'),
+        sEzsignformfieldEnteredvalue: mapValueOfType<String>(json, r'sEzsignformfieldEnteredvalue'),
       );
     }
     return null;
@@ -114,8 +194,14 @@ class EzsignformfieldResponseCompound {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
+    'pkiEzsignformfieldID',
+    'iEzsignpagePagenumber',
     'sEzsignformfieldLabel',
     'sEzsignformfieldValue',
+    'iEzsignformfieldX',
+    'iEzsignformfieldY',
+    'iEzsignformfieldWidth',
+    'iEzsignformfieldHeight',
   };
 }
 

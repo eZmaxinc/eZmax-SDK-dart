@@ -8,8 +8,6 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objAddress** | [**AddressRequest**](AddressRequest.md) |  | 
-**aObjContact** | [**List<ContactRequestCompound>**](ContactRequestCompound.md) |  | [default to const []]
 **pkiFranchisereferalincomeID** | **int** | The unique ID of the Franchisereferalincome | [optional] 
 **fkiFranchisebrokerID** | **int** | The unique ID of the Franchisebroker | 
 **fkiFranchisereferalincomeprogramID** | **int** | The unique ID of the Franchisereferalincomeprogram | 
@@ -22,6 +20,8 @@ Name | Type | Description | Notes
 **tFranchisereferalincomeComment** | **String** | Comment about the transaction | 
 **fkiFranchiseofficeID** | **int** | The unique ID of the Franchisereoffice | 
 **sFranchisereferalincomeRemoteid** | **String** |  | 
+**objAddress** | [**AddressRequest**](AddressRequest.md) |  | 
+**aObjContact** | [**List<ContactRequestCompound>**](ContactRequestCompound.md) |  | [default to const []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

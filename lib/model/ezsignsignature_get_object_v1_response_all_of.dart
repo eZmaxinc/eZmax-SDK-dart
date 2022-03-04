@@ -16,8 +16,7 @@ class EzsignsignatureGetObjectV1ResponseAllOf {
     required this.mPayload,
   });
 
-  /// Payload for the /1/object/ezsignsignature/getObject API Request
-  Object mPayload;
+  EzsignsignatureGetObjectV1ResponseMPayload mPayload;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignsignatureGetObjectV1ResponseAllOf &&
@@ -56,7 +55,7 @@ class EzsignsignatureGetObjectV1ResponseAllOf {
       }());
 
       return EzsignsignatureGetObjectV1ResponseAllOf(
-        mPayload: mapValueOfType<Object>(json, r'mPayload')!,
+        mPayload: EzsignsignatureGetObjectV1ResponseMPayload.fromJson(json[r'mPayload'])!,
       );
     }
     return null;

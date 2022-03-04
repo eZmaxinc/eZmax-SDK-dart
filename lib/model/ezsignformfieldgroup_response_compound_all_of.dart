@@ -14,26 +14,37 @@ class EzsignformfieldgroupResponseCompoundAllOf {
   /// Returns a new [EzsignformfieldgroupResponseCompoundAllOf] instance.
   EzsignformfieldgroupResponseCompoundAllOf({
     this.aObjEzsignformfield = const [],
+    this.aObjDropdownElement = const [],
+    required this.aObjEzsignformfieldgroupsigner,
   });
 
-  /// 
-  List<EzsignformfieldResponse> aObjEzsignformfield;
+  List<EzsignformfieldResponseCompound> aObjEzsignformfield;
+
+  List<CustomDropdownElementResponseCompound> aObjDropdownElement;
+
+  EzsignformfieldgroupsignerResponseCompound aObjEzsignformfieldgroupsigner;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignformfieldgroupResponseCompoundAllOf &&
-     other.aObjEzsignformfield == aObjEzsignformfield;
+     other.aObjEzsignformfield == aObjEzsignformfield &&
+     other.aObjDropdownElement == aObjDropdownElement &&
+     other.aObjEzsignformfieldgroupsigner == aObjEzsignformfieldgroupsigner;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (aObjEzsignformfield.hashCode);
+    (aObjEzsignformfield.hashCode) +
+    (aObjDropdownElement.hashCode) +
+    (aObjEzsignformfieldgroupsigner.hashCode);
 
   @override
-  String toString() => 'EzsignformfieldgroupResponseCompoundAllOf[aObjEzsignformfield=$aObjEzsignformfield]';
+  String toString() => 'EzsignformfieldgroupResponseCompoundAllOf[aObjEzsignformfield=$aObjEzsignformfield, aObjDropdownElement=$aObjDropdownElement, aObjEzsignformfieldgroupsigner=$aObjEzsignformfieldgroupsigner]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'a_objEzsignformfield'] = aObjEzsignformfield;
+      json[r'a_objDropdownElement'] = aObjDropdownElement;
+      json[r'a_objEzsignformfieldgroupsigner'] = aObjEzsignformfieldgroupsigner;
     return json;
   }
 
@@ -56,7 +67,9 @@ class EzsignformfieldgroupResponseCompoundAllOf {
       }());
 
       return EzsignformfieldgroupResponseCompoundAllOf(
-        aObjEzsignformfield: EzsignformfieldResponse.listFromJson(json[r'a_objEzsignformfield'])!,
+        aObjEzsignformfield: EzsignformfieldResponseCompound.listFromJson(json[r'a_objEzsignformfield'])!,
+        aObjDropdownElement: CustomDropdownElementResponseCompound.listFromJson(json[r'a_objDropdownElement']) ?? const [],
+        aObjEzsignformfieldgroupsigner: EzsignformfieldgroupsignerResponseCompound.fromJson(json[r'a_objEzsignformfieldgroupsigner'])!,
       );
     }
     return null;
@@ -107,6 +120,7 @@ class EzsignformfieldgroupResponseCompoundAllOf {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'a_objEzsignformfield',
+    'a_objEzsignformfieldgroupsigner',
   };
 }
 

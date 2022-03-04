@@ -16,8 +16,7 @@ class EzsigndocumentGetEzsignpagesV1ResponseMPayload {
     this.aObjEzsignpage = const [],
   });
 
-  /// 
-  List<EzsignpageResponse> aObjEzsignpage;
+  List<EzsignpageResponseCompound> aObjEzsignpage;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigndocumentGetEzsignpagesV1ResponseMPayload &&
@@ -56,7 +55,7 @@ class EzsigndocumentGetEzsignpagesV1ResponseMPayload {
       }());
 
       return EzsigndocumentGetEzsignpagesV1ResponseMPayload(
-        aObjEzsignpage: EzsignpageResponse.listFromJson(json[r'a_objEzsignpage'])!,
+        aObjEzsignpage: EzsignpageResponseCompound.listFromJson(json[r'a_objEzsignpage'])!,
       );
     }
     return null;

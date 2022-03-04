@@ -18,8 +18,7 @@ class EzsignsignatureGetObjectV1Response {
     this.objDebug,
   });
 
-  /// Payload for the /1/object/ezsignsignature/getObject API Request
-  Object mPayload;
+  EzsignsignatureGetObjectV1ResponseMPayload mPayload;
 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -84,7 +83,7 @@ class EzsignsignatureGetObjectV1Response {
       }());
 
       return EzsignsignatureGetObjectV1Response(
-        mPayload: mapValueOfType<Object>(json, r'mPayload')!,
+        mPayload: EzsignsignatureGetObjectV1ResponseMPayload.fromJson(json[r'mPayload'])!,
         objDebugPayload: CommonResponseObjDebugPayload.fromJson(json[r'objDebugPayload']),
         objDebug: CommonResponseObjDebug.fromJson(json[r'objDebug']),
       );

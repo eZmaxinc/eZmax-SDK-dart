@@ -16,7 +16,7 @@ void main() {
   // final instance = WebhookUserUserCreatedAllOf();
 
   group('test WebhookUserUserCreatedAllOf', () {
-    // UserResponse objUser
+    // UserResponseCompound objUser
     test('to test the property `objUser`', () async {
       // TODO
     });

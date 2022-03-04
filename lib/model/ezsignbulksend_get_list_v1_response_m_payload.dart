@@ -18,7 +18,6 @@ class EzsignbulksendGetListV1ResponseMPayload {
     required this.iRowFiltered,
   });
 
-  /// 
   List<EzsignbulksendListElement> aObjEzsignbulksend;
 
   /// The number of rows returned

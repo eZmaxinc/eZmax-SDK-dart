@@ -16,7 +16,7 @@ void main() {
   // final instance = EzsigndocumentGetTemporaryProofV1ResponseMPayload();
 
   group('test EzsigndocumentGetTemporaryProofV1ResponseMPayload', () {
-    // EzsigndocumentlogResponse aObjEzsigndocumentlog
+    // EzsigndocumentlogResponseCompound aObjEzsigndocumentlog
     test('to test the property `aObjEzsigndocumentlog`', () async {
       // TODO
     });

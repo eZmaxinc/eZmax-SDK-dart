@@ -16,8 +16,7 @@ class ListSaveListpresentationV1Request {
     this.aObjListpresentation = const [],
   });
 
-  /// 
-  List<ListpresentationRequest> aObjListpresentation;
+  List<ListpresentationRequestCompound> aObjListpresentation;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ListSaveListpresentationV1Request &&
@@ -56,7 +55,7 @@ class ListSaveListpresentationV1Request {
       }());
 
       return ListSaveListpresentationV1Request(
-        aObjListpresentation: ListpresentationRequest.listFromJson(json[r'a_objListpresentation'])!,
+        aObjListpresentation: ListpresentationRequestCompound.listFromJson(json[r'a_objListpresentation'])!,
       );
     }
     return null;

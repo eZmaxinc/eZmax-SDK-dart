@@ -16,7 +16,7 @@ class WebhookUserUserCreatedAllOf {
     required this.objUser,
   });
 
-  UserResponse objUser;
+  UserResponseCompound objUser;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is WebhookUserUserCreatedAllOf &&
@@ -55,7 +55,7 @@ class WebhookUserUserCreatedAllOf {
       }());
 
       return WebhookUserUserCreatedAllOf(
-        objUser: UserResponse.fromJson(json[r'objUser'])!,
+        objUser: UserResponseCompound.fromJson(json[r'objUser'])!,
       );
     }
     return null;

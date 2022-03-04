@@ -32,7 +32,6 @@ class EzsigndocumentGetFormDataV1ResponseMPayload {
   /// The date and time at which the object was last modified
   String dtModifiedDate;
 
-  /// 
   List<CustomFormDataSignerResponse> aObjFormDataSigner;
 
   @override

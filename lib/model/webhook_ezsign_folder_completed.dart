@@ -23,7 +23,7 @@ class WebhookEzsignFolderCompleted {
   WebhookResponse objWebhook;
 
   /// An array containing details of previous attempts that were made to deliver the message. The array is empty if it's the first attempt.
-  List<AttemptResponse> aObjAttempt;
+  List<AttemptResponseCompound> aObjAttempt;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is WebhookEzsignFolderCompleted &&
@@ -70,7 +70,7 @@ class WebhookEzsignFolderCompleted {
       return WebhookEzsignFolderCompleted(
         objEzsignfolder: EzsignfolderResponse.fromJson(json[r'objEzsignfolder'])!,
         objWebhook: WebhookResponse.fromJson(json[r'objWebhook'])!,
-        aObjAttempt: AttemptResponse.listFromJson(json[r'a_objAttempt'])!,
+        aObjAttempt: AttemptResponseCompound.listFromJson(json[r'a_objAttempt'])!,
       );
     }
     return null;

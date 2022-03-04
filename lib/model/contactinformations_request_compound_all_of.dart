@@ -19,17 +19,13 @@ class ContactinformationsRequestCompoundAllOf {
     this.aObjWebsite = const [],
   });
 
-  /// 
-  List<AddressRequest> aObjAddress;
+  List<AddressRequestCompound> aObjAddress;
 
-  /// 
-  List<PhoneRequest> aObjPhone;
+  List<PhoneRequestCompound> aObjPhone;
 
-  /// 
-  List<EmailRequest> aObjEmail;
+  List<EmailRequestCompound> aObjEmail;
 
-  /// 
-  List<WebsiteRequest> aObjWebsite;
+  List<WebsiteRequestCompound> aObjWebsite;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ContactinformationsRequestCompoundAllOf &&
@@ -77,10 +73,10 @@ class ContactinformationsRequestCompoundAllOf {
       }());
 
       return ContactinformationsRequestCompoundAllOf(
-        aObjAddress: AddressRequest.listFromJson(json[r'a_objAddress'])!,
-        aObjPhone: PhoneRequest.listFromJson(json[r'a_objPhone'])!,
-        aObjEmail: EmailRequest.listFromJson(json[r'a_objEmail'])!,
-        aObjWebsite: WebsiteRequest.listFromJson(json[r'a_objWebsite'])!,
+        aObjAddress: AddressRequestCompound.listFromJson(json[r'a_objAddress'])!,
+        aObjPhone: PhoneRequestCompound.listFromJson(json[r'a_objPhone'])!,
+        aObjEmail: EmailRequestCompound.listFromJson(json[r'a_objEmail'])!,
+        aObjWebsite: WebsiteRequestCompound.listFromJson(json[r'a_objWebsite'])!,
       );
     }
     return null;

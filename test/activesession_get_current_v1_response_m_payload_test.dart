@@ -16,33 +16,6 @@ void main() {
   // final instance = ActivesessionGetCurrentV1ResponseMPayload();
 
   group('test ActivesessionGetCurrentV1ResponseMPayload', () {
-    // An array of permissions granted to the user or api key
-    // List<int> aPkiPermissionID (default value: const [])
-    test('to test the property `aPkiPermissionID`', () async {
-      // TODO
-    });
-
-    // ActivesessionResponseCompoundUser objUserReal
-    test('to test the property `objUserReal`', () async {
-      // TODO
-    });
-
-    // ActivesessionResponseCompoundUser objUserCloned
-    test('to test the property `objUserCloned`', () async {
-      // TODO
-    });
-
-    // ActivesessionResponseCompoundApikey objApikey
-    test('to test the property `objApikey`', () async {
-      // TODO
-    });
-
-    // An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key.
-    // List<String> aEModuleInternalname (default value: const [])
-    test('to test the property `aEModuleInternalname`', () async {
-      // TODO
-    });
-
     // FieldEActivesessionSessiontype eActivesessionSessiontype
     test('to test the property `eActivesessionSessiontype`', () async {
       // TODO
@@ -80,6 +53,33 @@ void main() {
     // The customer code assigned to your account
     // String pksCustomerCode
     test('to test the property `pksCustomerCode`', () async {
+      // TODO
+    });
+
+    // An array of permissions granted to the user or api key
+    // List<int> aPkiPermissionID (default value: const [])
+    test('to test the property `aPkiPermissionID`', () async {
+      // TODO
+    });
+
+    // ActivesessionResponseCompoundUser objUserReal
+    test('to test the property `objUserReal`', () async {
+      // TODO
+    });
+
+    // ActivesessionResponseCompoundUser objUserCloned
+    test('to test the property `objUserCloned`', () async {
+      // TODO
+    });
+
+    // ActivesessionResponseCompoundApikey objApikey
+    test('to test the property `objApikey`', () async {
+      // TODO
+    });
+
+    // An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key.
+    // List<String> aEModuleInternalname (default value: const [])
+    test('to test the property `aEModuleInternalname`', () async {
       // TODO
     });
 

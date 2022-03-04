@@ -16,8 +16,7 @@ void main() {
   // final instance = EzsignsignatureGetObjectV1Response();
 
   group('test EzsignsignatureGetObjectV1Response', () {
-    // Payload for the /1/object/ezsignsignature/getObject API Request
-    // Object mPayload
+    // EzsignsignatureGetObjectV1ResponseMPayload mPayload
     test('to test the property `mPayload`', () async {
       // TODO
     });

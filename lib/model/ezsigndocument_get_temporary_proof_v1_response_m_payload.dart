@@ -16,7 +16,7 @@ class EzsigndocumentGetTemporaryProofV1ResponseMPayload {
     required this.aObjEzsigndocumentlog,
   });
 
-  EzsigndocumentlogResponse aObjEzsigndocumentlog;
+  EzsigndocumentlogResponseCompound aObjEzsigndocumentlog;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigndocumentGetTemporaryProofV1ResponseMPayload &&
@@ -55,7 +55,7 @@ class EzsigndocumentGetTemporaryProofV1ResponseMPayload {
       }());
 
       return EzsigndocumentGetTemporaryProofV1ResponseMPayload(
-        aObjEzsigndocumentlog: EzsigndocumentlogResponse.fromJson(json[r'a_objEzsigndocumentlog'])!,
+        aObjEzsigndocumentlog: EzsigndocumentlogResponseCompound.fromJson(json[r'a_objEzsigndocumentlog'])!,
       );
     }
     return null;

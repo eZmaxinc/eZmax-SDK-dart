@@ -16,17 +16,6 @@ void main() {
   // final instance = FranchisereferalincomeRequestCompound();
 
   group('test FranchisereferalincomeRequestCompound', () {
-    // AddressRequest objAddress
-    test('to test the property `objAddress`', () async {
-      // TODO
-    });
-
-    // 
-    // List<ContactRequestCompound> aObjContact (default value: const [])
-    test('to test the property `aObjContact`', () async {
-      // TODO
-    });
-
     // The unique ID of the Franchisereferalincome
     // int pkiFranchisereferalincomeID
     test('to test the property `pkiFranchisereferalincomeID`', () async {
@@ -96,6 +85,16 @@ void main() {
     // 
     // String sFranchisereferalincomeRemoteid
     test('to test the property `sFranchisereferalincomeRemoteid`', () async {
+      // TODO
+    });
+
+    // AddressRequest objAddress
+    test('to test the property `objAddress`', () async {
+      // TODO
+    });
+
+    // List<ContactRequestCompound> aObjContact (default value: const [])
+    test('to test the property `aObjContact`', () async {
       // TODO
     });
 

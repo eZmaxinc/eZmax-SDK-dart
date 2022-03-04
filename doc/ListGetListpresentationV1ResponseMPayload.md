@@ -8,7 +8,7 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjListpresentation** | [**List<ListpresentationRequest>**](ListpresentationRequest.md) |  | [default to const []]
+**aObjListpresentation** | [**List<ListpresentationResponseCompound>**](ListpresentationResponseCompound.md) |  | [default to const []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

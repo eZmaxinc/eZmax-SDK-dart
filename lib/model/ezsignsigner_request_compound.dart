@@ -13,14 +13,22 @@ part of openapi.api;
 class EzsignsignerRequestCompound {
   /// Returns a new [EzsignsignerRequestCompound] instance.
   EzsignsignerRequestCompound({
-    required this.objContact,
+    this.fkiUserlogintypeID,
     required this.fkiTaxassignmentID,
     this.fkiSecretquestionID,
-    required this.eEzsignsignerLogintype,
+    this.eEzsignsignerLogintype,
     this.sEzsignsignerSecretanswer,
+    required this.objContact,
   });
 
-  EzsignsignerRequestCompoundContact objContact;
+  /// The unique ID of the Userlogintype  Valid values:  |Value|Description|Detail| |-|-|-| |1|**Email Only**|The Ezsignsigner will receive a secure link by email| |2|**Email and phone or SMS**|The Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**| |3|**Email and secret question**|The Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer| |4|**In person only**|The Ezsignsigner will only be able to sign \"In-Person\" and there won't be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type| |5|**In person with phone or SMS**|The Ezsignsigner will only be able to sign \"In-Person\" and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**|
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiUserlogintypeID;
 
   /// The unique ID of the Taxassignment.  Valid values:  |Value|Description| |-|-| |1|No tax| |2|GST| |3|HST (ON)| |4|HST (NB)| |5|HST (NS)| |6|HST (NL)| |7|HST (PE)| |8|GST + QST (QC)| |9|GST + QST (QC) Non-Recoverable| |10|GST + PST (BC)| |11|GST + PST (SK)| |12|GST + RST (MB)| |13|GST + PST (BC) Non-Recoverable| |14|GST + PST (SK) Non-Recoverable| |15|GST + RST (MB) Non-Recoverable|
   ///
@@ -38,7 +46,7 @@ class EzsignsignerRequestCompound {
   int? fkiSecretquestionID;
 
   /// The method the Ezsignsigner will authenticate to the signing platform.  1. **Password** means the Ezsignsigner will receive a secure link by email. 2. **PasswordPhone** means the Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**. 3. **PasswordQuestion** means the Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer. 4. **InPersonPhone** means the Ezsignsigner will only be able to sign \"In-Person\" and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**. 5. **InPerson** means the Ezsignsigner will only be able to sign \"In-Person\" and there won't be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type.
-  EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum eEzsignsignerLogintype;
+  EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum? eEzsignsignerLogintype;
 
   /// The predefined answer to the secret question the Ezsignsigner will need to provide to successfully authenticate.
   ///
@@ -49,37 +57,46 @@ class EzsignsignerRequestCompound {
   ///
   String? sEzsignsignerSecretanswer;
 
+  EzsignsignerRequestCompoundContact objContact;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignsignerRequestCompound &&
-     other.objContact == objContact &&
+     other.fkiUserlogintypeID == fkiUserlogintypeID &&
      other.fkiTaxassignmentID == fkiTaxassignmentID &&
      other.fkiSecretquestionID == fkiSecretquestionID &&
      other.eEzsignsignerLogintype == eEzsignsignerLogintype &&
-     other.sEzsignsignerSecretanswer == sEzsignsignerSecretanswer;
+     other.sEzsignsignerSecretanswer == sEzsignsignerSecretanswer &&
+     other.objContact == objContact;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (objContact.hashCode) +
+    (fkiUserlogintypeID == null ? 0 : fkiUserlogintypeID!.hashCode) +
     (fkiTaxassignmentID.hashCode) +
     (fkiSecretquestionID == null ? 0 : fkiSecretquestionID!.hashCode) +
-    (eEzsignsignerLogintype.hashCode) +
-    (sEzsignsignerSecretanswer == null ? 0 : sEzsignsignerSecretanswer!.hashCode);
+    (eEzsignsignerLogintype == null ? 0 : eEzsignsignerLogintype!.hashCode) +
+    (sEzsignsignerSecretanswer == null ? 0 : sEzsignsignerSecretanswer!.hashCode) +
+    (objContact.hashCode);
 
   @override
-  String toString() => 'EzsignsignerRequestCompound[objContact=$objContact, fkiTaxassignmentID=$fkiTaxassignmentID, fkiSecretquestionID=$fkiSecretquestionID, eEzsignsignerLogintype=$eEzsignsignerLogintype, sEzsignsignerSecretanswer=$sEzsignsignerSecretanswer]';
+  String toString() => 'EzsignsignerRequestCompound[fkiUserlogintypeID=$fkiUserlogintypeID, fkiTaxassignmentID=$fkiTaxassignmentID, fkiSecretquestionID=$fkiSecretquestionID, eEzsignsignerLogintype=$eEzsignsignerLogintype, sEzsignsignerSecretanswer=$sEzsignsignerSecretanswer, objContact=$objContact]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'objContact'] = objContact;
+    if (fkiUserlogintypeID != null) {
+      json[r'fkiUserlogintypeID'] = fkiUserlogintypeID;
+    }
       json[r'fkiTaxassignmentID'] = fkiTaxassignmentID;
     if (fkiSecretquestionID != null) {
       json[r'fkiSecretquestionID'] = fkiSecretquestionID;
     }
+    if (eEzsignsignerLogintype != null) {
       json[r'eEzsignsignerLogintype'] = eEzsignsignerLogintype;
+    }
     if (sEzsignsignerSecretanswer != null) {
       json[r'sEzsignsignerSecretanswer'] = sEzsignsignerSecretanswer;
     }
+      json[r'objContact'] = objContact;
     return json;
   }
 
@@ -102,11 +119,12 @@ class EzsignsignerRequestCompound {
       }());
 
       return EzsignsignerRequestCompound(
-        objContact: EzsignsignerRequestCompoundContact.fromJson(json[r'objContact'])!,
+        fkiUserlogintypeID: mapValueOfType<int>(json, r'fkiUserlogintypeID'),
         fkiTaxassignmentID: mapValueOfType<int>(json, r'fkiTaxassignmentID')!,
         fkiSecretquestionID: mapValueOfType<int>(json, r'fkiSecretquestionID'),
-        eEzsignsignerLogintype: EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum.fromJson(json[r'eEzsignsignerLogintype'])!,
+        eEzsignsignerLogintype: EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum.fromJson(json[r'eEzsignsignerLogintype']),
         sEzsignsignerSecretanswer: mapValueOfType<String>(json, r'sEzsignsignerSecretanswer'),
+        objContact: EzsignsignerRequestCompoundContact.fromJson(json[r'objContact'])!,
       );
     }
     return null;
@@ -156,9 +174,8 @@ class EzsignsignerRequestCompound {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'objContact',
     'fkiTaxassignmentID',
-    'eEzsignsignerLogintype',
+    'objContact',
   };
 }
 

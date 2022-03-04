@@ -25,7 +25,6 @@ class FranchisereferalincomeRequestCompoundAllOf {
   ///
   AddressRequest? objAddress;
 
-  /// 
   List<ContactRequestCompound> aObjContact;
 
   @override

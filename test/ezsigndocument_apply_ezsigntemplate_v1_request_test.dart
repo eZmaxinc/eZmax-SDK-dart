@@ -22,7 +22,6 @@ void main() {
       // TODO
     });
 
-    // 
     // List<String> aSEzsigntemplatesigner (default value: const [])
     test('to test the property `aSEzsigntemplatesigner`', () async {
       // TODO

@@ -16,7 +16,6 @@ class EzsignbulksendGetListV1ResponseMPayloadAllOf {
     this.aObjEzsignbulksend = const [],
   });
 
-  /// 
   List<EzsignbulksendListElement> aObjEzsignbulksend;
 
   @override

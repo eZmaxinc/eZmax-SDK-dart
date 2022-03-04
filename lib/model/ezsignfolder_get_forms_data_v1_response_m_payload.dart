@@ -24,7 +24,6 @@ class EzsignfolderGetFormsDataV1ResponseMPayload {
   /// The description of the Ezsignfolder
   String sEzsignfolderDescription;
 
-  /// 
   List<CustomFormDataDocumentResponse> aObjFormDataDocument;
 
   @override

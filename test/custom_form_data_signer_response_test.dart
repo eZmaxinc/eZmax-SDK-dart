@@ -40,9 +40,8 @@ void main() {
       // TODO
     });
 
-    // 
-    // List<EzsignformfieldgroupResponseCompound> aObjEzsignformfieldgroupCompound (default value: const [])
-    test('to test the property `aObjEzsignformfieldgroupCompound`', () async {
+    // List<CustomFormDataEzsignformfieldgroupResponse> aObjEzsignformfieldgroup (default value: const [])
+    test('to test the property `aObjEzsignformfieldgroup`', () async {
       // TODO
     });
 

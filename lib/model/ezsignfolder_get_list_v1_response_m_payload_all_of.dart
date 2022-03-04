@@ -16,7 +16,6 @@ class EzsignfolderGetListV1ResponseMPayloadAllOf {
     this.aObjEzsignfolder = const [],
   });
 
-  /// 
   List<EzsignfolderListElement> aObjEzsignfolder;
 
   @override

@@ -17,7 +17,7 @@ class CustomFormDataSignerResponse {
     this.fkiUserID,
     required this.sContactFirstname,
     required this.sContactLastname,
-    this.aObjEzsignformfieldgroupCompound = const [],
+    this.aObjEzsignformfieldgroup = const [],
   });
 
   /// The unique ID of the Ezsignfoldersignerassociation
@@ -38,8 +38,7 @@ class CustomFormDataSignerResponse {
   /// The Last name of the contact
   String sContactLastname;
 
-  /// 
-  List<EzsignformfieldgroupResponseCompound> aObjEzsignformfieldgroupCompound;
+  List<CustomFormDataEzsignformfieldgroupResponse> aObjEzsignformfieldgroup;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomFormDataSignerResponse &&
@@ -47,7 +46,7 @@ class CustomFormDataSignerResponse {
      other.fkiUserID == fkiUserID &&
      other.sContactFirstname == sContactFirstname &&
      other.sContactLastname == sContactLastname &&
-     other.aObjEzsignformfieldgroupCompound == aObjEzsignformfieldgroupCompound;
+     other.aObjEzsignformfieldgroup == aObjEzsignformfieldgroup;
 
   @override
   int get hashCode =>
@@ -56,10 +55,10 @@ class CustomFormDataSignerResponse {
     (fkiUserID == null ? 0 : fkiUserID!.hashCode) +
     (sContactFirstname.hashCode) +
     (sContactLastname.hashCode) +
-    (aObjEzsignformfieldgroupCompound.hashCode);
+    (aObjEzsignformfieldgroup.hashCode);
 
   @override
-  String toString() => 'CustomFormDataSignerResponse[fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, fkiUserID=$fkiUserID, sContactFirstname=$sContactFirstname, sContactLastname=$sContactLastname, aObjEzsignformfieldgroupCompound=$aObjEzsignformfieldgroupCompound]';
+  String toString() => 'CustomFormDataSignerResponse[fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, fkiUserID=$fkiUserID, sContactFirstname=$sContactFirstname, sContactLastname=$sContactLastname, aObjEzsignformfieldgroup=$aObjEzsignformfieldgroup]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -69,7 +68,7 @@ class CustomFormDataSignerResponse {
     }
       json[r'sContactFirstname'] = sContactFirstname;
       json[r'sContactLastname'] = sContactLastname;
-      json[r'a_objEzsignformfieldgroupCompound'] = aObjEzsignformfieldgroupCompound;
+      json[r'a_objEzsignformfieldgroup'] = aObjEzsignformfieldgroup;
     return json;
   }
 
@@ -96,7 +95,7 @@ class CustomFormDataSignerResponse {
         fkiUserID: mapValueOfType<int>(json, r'fkiUserID'),
         sContactFirstname: mapValueOfType<String>(json, r'sContactFirstname')!,
         sContactLastname: mapValueOfType<String>(json, r'sContactLastname')!,
-        aObjEzsignformfieldgroupCompound: EzsignformfieldgroupResponseCompound.listFromJson(json[r'a_objEzsignformfieldgroupCompound'])!,
+        aObjEzsignformfieldgroup: CustomFormDataEzsignformfieldgroupResponse.listFromJson(json[r'a_objEzsignformfieldgroup'])!,
       );
     }
     return null;
@@ -149,7 +148,7 @@ class CustomFormDataSignerResponse {
     'fkiEzsignfoldersignerassociationID',
     'sContactFirstname',
     'sContactLastname',
-    'a_objEzsignformfieldgroupCompound',
+    'a_objEzsignformfieldgroup',
   };
 }
 

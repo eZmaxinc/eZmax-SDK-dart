@@ -21,7 +21,6 @@ class EzsigndocumentApplyEzsigntemplateV1Request {
   /// The unique ID of the Ezsigndocument
   int fkiEzsigntemplateID;
 
-  /// 
   List<String> aSEzsigntemplatesigner;
 
   List<int> aPkiEzsignfoldersignerassociationID;

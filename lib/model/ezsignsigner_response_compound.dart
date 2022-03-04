@@ -13,15 +13,13 @@ part of openapi.api;
 class EzsignsignerResponseCompound {
   /// Returns a new [EzsignsignerResponseCompound] instance.
   EzsignsignerResponseCompound({
-    required this.objContact,
     required this.pkiEzsignsignerID,
     required this.fkiTaxassignmentID,
     this.fkiSecretquestionID,
     required this.fkiUserlogintypeID,
     required this.sUserlogintypeDescriptionX,
+    required this.objContact,
   });
-
-  EzsignsignerResponseCompoundContact objContact;
 
   /// The unique ID of the Ezsignsigner
   int pkiEzsignsignerID;
@@ -41,37 +39,38 @@ class EzsignsignerResponseCompound {
   ///
   int? fkiSecretquestionID;
 
-  /// The unique ID of the Userlogintype
+  /// The unique ID of the Userlogintype  Valid values:  |Value|Description|Detail| |-|-|-| |1|**Email Only**|The Ezsignsigner will receive a secure link by email| |2|**Email and phone or SMS**|The Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**| |3|**Email and secret question**|The Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer| |4|**In person only**|The Ezsignsigner will only be able to sign \"In-Person\" and there won't be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type| |5|**In person with phone or SMS**|The Ezsignsigner will only be able to sign \"In-Person\" and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**|
   int fkiUserlogintypeID;
 
   /// The description of the Userlogintype in the language of the requester
   String sUserlogintypeDescriptionX;
 
+  EzsignsignerResponseCompoundContact objContact;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignsignerResponseCompound &&
-     other.objContact == objContact &&
      other.pkiEzsignsignerID == pkiEzsignsignerID &&
      other.fkiTaxassignmentID == fkiTaxassignmentID &&
      other.fkiSecretquestionID == fkiSecretquestionID &&
      other.fkiUserlogintypeID == fkiUserlogintypeID &&
-     other.sUserlogintypeDescriptionX == sUserlogintypeDescriptionX;
+     other.sUserlogintypeDescriptionX == sUserlogintypeDescriptionX &&
+     other.objContact == objContact;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (objContact.hashCode) +
     (pkiEzsignsignerID.hashCode) +
     (fkiTaxassignmentID.hashCode) +
     (fkiSecretquestionID == null ? 0 : fkiSecretquestionID!.hashCode) +
     (fkiUserlogintypeID.hashCode) +
-    (sUserlogintypeDescriptionX.hashCode);
+    (sUserlogintypeDescriptionX.hashCode) +
+    (objContact.hashCode);
 
   @override
-  String toString() => 'EzsignsignerResponseCompound[objContact=$objContact, pkiEzsignsignerID=$pkiEzsignsignerID, fkiTaxassignmentID=$fkiTaxassignmentID, fkiSecretquestionID=$fkiSecretquestionID, fkiUserlogintypeID=$fkiUserlogintypeID, sUserlogintypeDescriptionX=$sUserlogintypeDescriptionX]';
+  String toString() => 'EzsignsignerResponseCompound[pkiEzsignsignerID=$pkiEzsignsignerID, fkiTaxassignmentID=$fkiTaxassignmentID, fkiSecretquestionID=$fkiSecretquestionID, fkiUserlogintypeID=$fkiUserlogintypeID, sUserlogintypeDescriptionX=$sUserlogintypeDescriptionX, objContact=$objContact]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'objContact'] = objContact;
       json[r'pkiEzsignsignerID'] = pkiEzsignsignerID;
       json[r'fkiTaxassignmentID'] = fkiTaxassignmentID;
     if (fkiSecretquestionID != null) {
@@ -79,6 +78,7 @@ class EzsignsignerResponseCompound {
     }
       json[r'fkiUserlogintypeID'] = fkiUserlogintypeID;
       json[r'sUserlogintypeDescriptionX'] = sUserlogintypeDescriptionX;
+      json[r'objContact'] = objContact;
     return json;
   }
 
@@ -101,12 +101,12 @@ class EzsignsignerResponseCompound {
       }());
 
       return EzsignsignerResponseCompound(
-        objContact: EzsignsignerResponseCompoundContact.fromJson(json[r'objContact'])!,
         pkiEzsignsignerID: mapValueOfType<int>(json, r'pkiEzsignsignerID')!,
         fkiTaxassignmentID: mapValueOfType<int>(json, r'fkiTaxassignmentID')!,
         fkiSecretquestionID: mapValueOfType<int>(json, r'fkiSecretquestionID'),
         fkiUserlogintypeID: mapValueOfType<int>(json, r'fkiUserlogintypeID')!,
         sUserlogintypeDescriptionX: mapValueOfType<String>(json, r'sUserlogintypeDescriptionX')!,
+        objContact: EzsignsignerResponseCompoundContact.fromJson(json[r'objContact'])!,
       );
     }
     return null;
@@ -156,11 +156,11 @@ class EzsignsignerResponseCompound {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'objContact',
     'pkiEzsignsignerID',
     'fkiTaxassignmentID',
     'fkiUserlogintypeID',
     'sUserlogintypeDescriptionX',
+    'objContact',
   };
 }
 

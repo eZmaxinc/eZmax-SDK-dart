@@ -76,6 +76,15 @@ String parameterToString(dynamic value) {
   if (value is FieldEEzsignfoldertypePrivacylevel) {
     return FieldEEzsignfoldertypePrivacylevelTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEEzsignformfieldgroupSignerrequirement) {
+    return FieldEEzsignformfieldgroupSignerrequirementTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsignformfieldgroupTooltipposition) {
+    return FieldEEzsignformfieldgroupTooltippositionTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsignformfieldgroupType) {
+    return FieldEEzsignformfieldgroupTypeTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEEzsignsignatureType) {
     return FieldEEzsignsignatureTypeTypeTransformer().encode(value).toString();
   }

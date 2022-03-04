@@ -16,18 +16,6 @@ void main() {
   // final instance = EzsignsignatureRequestCompound();
 
   group('test EzsignsignatureRequestCompound', () {
-    // Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is \"Name\" or \"Handwritten\")
-    // bool bEzsignsignatureCustomdate
-    test('to test the property `bEzsignsignatureCustomdate`', () async {
-      // TODO
-    });
-
-    // An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all.
-    // List<EzsignsignaturecustomdateRequest> aObjEzsignsignaturecustomdate (default value: const [])
-    test('to test the property `aObjEzsignsignaturecustomdate`', () async {
-      // TODO
-    });
-
     // The unique ID of the Ezsignsignature
     // int pkiEzsignsignatureID
     test('to test the property `pkiEzsignsignatureID`', () async {
@@ -46,7 +34,7 @@ void main() {
       // TODO
     });
 
-    // The X coordinate (Horizontal) where to put the signature block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 2 inches from the left border of the page, you would use \"200\" for the X coordinate.
+    // The X coordinate (Horizontal) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 2 inches from the left border of the page, you would use \"200\" for the X coordinate.
     // int iEzsignsignatureX
     test('to test the property `iEzsignsignatureX`', () async {
       // TODO
@@ -58,7 +46,7 @@ void main() {
       // TODO
     });
 
-    // The step when the Ezsignsigner will be invited to sign or fill form fields
+    // The step when the Ezsignsigner will be invited to sign
     // int iEzsignsignatureStep
     test('to test the property `iEzsignsignatureStep`', () async {
       // TODO
@@ -72,6 +60,18 @@ void main() {
     // The unique ID of the Ezsigndocument
     // int fkiEzsigndocumentID
     test('to test the property `fkiEzsigndocumentID`', () async {
+      // TODO
+    });
+
+    // Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is \"Name\" or \"Handwritten\")
+    // bool bEzsignsignatureCustomdate
+    test('to test the property `bEzsignsignatureCustomdate`', () async {
+      // TODO
+    });
+
+    // An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all.
+    // List<EzsignsignaturecustomdateRequestCompound> aObjEzsignsignaturecustomdate (default value: const [])
+    test('to test the property `aObjEzsignsignaturecustomdate`', () async {
       // TODO
     });
 

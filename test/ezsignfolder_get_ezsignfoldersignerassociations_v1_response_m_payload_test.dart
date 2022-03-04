@@ -16,7 +16,6 @@ void main() {
   // final instance = EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload();
 
   group('test EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload', () {
-    // 
     // List<EzsignfoldersignerassociationResponseCompound> aObjEzsignfoldersignerassociation (default value: const [])
     test('to test the property `aObjEzsignfoldersignerassociation`', () async {
       // TODO

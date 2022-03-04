@@ -16,7 +16,6 @@ void main() {
   // final instance = EzsignfolderGetEzsigndocumentsV1ResponseMPayload();
 
   group('test EzsignfolderGetEzsigndocumentsV1ResponseMPayload', () {
-    // 
     // List<EzsigndocumentResponseCompound> aObjEzsigndocument (default value: const [])
     test('to test the property `aObjEzsigndocument`', () async {
       // TODO

@@ -21,7 +21,6 @@ void main() {
       // TODO
     });
 
-    // 
     // List<ContactRequestCompound> aObjContact (default value: const [])
     test('to test the property `aObjContact`', () async {
       // TODO

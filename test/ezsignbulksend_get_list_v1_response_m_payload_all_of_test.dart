@@ -16,7 +16,6 @@ void main() {
   // final instance = EzsignbulksendGetListV1ResponseMPayloadAllOf();
 
   group('test EzsignbulksendGetListV1ResponseMPayloadAllOf', () {
-    // 
     // List<EzsignbulksendListElement> aObjEzsignbulksend (default value: const [])
     test('to test the property `aObjEzsignbulksend`', () async {
       // TODO

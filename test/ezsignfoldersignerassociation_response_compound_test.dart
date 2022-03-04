@@ -16,16 +16,6 @@ void main() {
   // final instance = EzsignfoldersignerassociationResponseCompound();
 
   group('test EzsignfoldersignerassociationResponseCompound', () {
-    // EzsignfoldersignerassociationResponseCompoundUser objUser
-    test('to test the property `objUser`', () async {
-      // TODO
-    });
-
-    // EzsignsignerResponseCompound objEzsignsigner
-    test('to test the property `objEzsignsigner`', () async {
-      // TODO
-    });
-
     // The unique ID of the Ezsignfoldersignerassociation
     // int pkiEzsignfoldersignerassociationID
     test('to test the property `pkiEzsignfoldersignerassociationID`', () async {
@@ -41,6 +31,16 @@ void main() {
     // If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document.
     // bool bEzsignfoldersignerassociationReceivecopy
     test('to test the property `bEzsignfoldersignerassociationReceivecopy`', () async {
+      // TODO
+    });
+
+    // EzsignfoldersignerassociationResponseCompoundUser objUser
+    test('to test the property `objUser`', () async {
+      // TODO
+    });
+
+    // EzsignsignerResponseCompound objEzsignsigner
+    test('to test the property `objEzsignsigner`', () async {
       // TODO
     });
 

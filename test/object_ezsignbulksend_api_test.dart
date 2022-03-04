@@ -17,6 +17,15 @@ void main() {
   // final instance = ObjectEzsignbulksendApi();
 
   group('tests for ObjectEzsignbulksendApi', () {
+    // Retrieve an existing Ezsignbulksend's Ezsignbulksendtransmissions
+    //
+    // 
+    //
+    //Future<EzsignbulksendGetEzsignbulksendtransmissionsV1Response> ezsignbulksendGetEzsignbulksendtransmissionsV1(int pkiEzsignbulksendID) async
+    test('test ezsignbulksendGetEzsignbulksendtransmissionsV1', () async {
+      // TODO
+    });
+
     // Retrieve Ezsignbulksend list
     //
     // Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |

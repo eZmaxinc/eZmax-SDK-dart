@@ -13,78 +13,40 @@ part of openapi.api;
 class CommonAudit {
   /// Returns a new [CommonAudit] instance.
   CommonAudit({
-    required this.fkiUserIDCreated,
-    required this.fkiUserIDModified,
-    this.fkiApikeyIDCreated,
-    this.fkiApikeyIDModified,
-    required this.dtCreatedDate,
-    required this.dtModifiedDate,
+    required this.objAuditdetailCreated,
+    this.objAuditdetailModified,
   });
 
-  /// The unique ID of the User
-  int fkiUserIDCreated;
+  CommonAuditdetail objAuditdetailCreated;
 
-  /// The unique ID of the User
-  int fkiUserIDModified;
-
-  /// The unique ID of the Apikey
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
   /// source code must fall back to having a nullable type.
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
-  int? fkiApikeyIDCreated;
-
-  /// The unique ID of the Apikey
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  int? fkiApikeyIDModified;
-
-  /// Represent a Date Time. The timezone is the one configured in the User's profile.
-  String dtCreatedDate;
-
-  /// Represent a Date Time. The timezone is the one configured in the User's profile.
-  String dtModifiedDate;
+  CommonAuditdetail? objAuditdetailModified;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonAudit &&
-     other.fkiUserIDCreated == fkiUserIDCreated &&
-     other.fkiUserIDModified == fkiUserIDModified &&
-     other.fkiApikeyIDCreated == fkiApikeyIDCreated &&
-     other.fkiApikeyIDModified == fkiApikeyIDModified &&
-     other.dtCreatedDate == dtCreatedDate &&
-     other.dtModifiedDate == dtModifiedDate;
+     other.objAuditdetailCreated == objAuditdetailCreated &&
+     other.objAuditdetailModified == objAuditdetailModified;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (fkiUserIDCreated.hashCode) +
-    (fkiUserIDModified.hashCode) +
-    (fkiApikeyIDCreated == null ? 0 : fkiApikeyIDCreated!.hashCode) +
-    (fkiApikeyIDModified == null ? 0 : fkiApikeyIDModified!.hashCode) +
-    (dtCreatedDate.hashCode) +
-    (dtModifiedDate.hashCode);
+    (objAuditdetailCreated.hashCode) +
+    (objAuditdetailModified == null ? 0 : objAuditdetailModified!.hashCode);
 
   @override
-  String toString() => 'CommonAudit[fkiUserIDCreated=$fkiUserIDCreated, fkiUserIDModified=$fkiUserIDModified, fkiApikeyIDCreated=$fkiApikeyIDCreated, fkiApikeyIDModified=$fkiApikeyIDModified, dtCreatedDate=$dtCreatedDate, dtModifiedDate=$dtModifiedDate]';
+  String toString() => 'CommonAudit[objAuditdetailCreated=$objAuditdetailCreated, objAuditdetailModified=$objAuditdetailModified]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'fkiUserIDCreated'] = fkiUserIDCreated;
-      json[r'fkiUserIDModified'] = fkiUserIDModified;
-    if (fkiApikeyIDCreated != null) {
-      json[r'fkiApikeyIDCreated'] = fkiApikeyIDCreated;
+      json[r'objAuditdetailCreated'] = objAuditdetailCreated;
+    if (objAuditdetailModified != null) {
+      json[r'objAuditdetailModified'] = objAuditdetailModified;
     }
-    if (fkiApikeyIDModified != null) {
-      json[r'fkiApikeyIDModified'] = fkiApikeyIDModified;
-    }
-      json[r'dtCreatedDate'] = dtCreatedDate;
-      json[r'dtModifiedDate'] = dtModifiedDate;
     return json;
   }
 
@@ -107,12 +69,8 @@ class CommonAudit {
       }());
 
       return CommonAudit(
-        fkiUserIDCreated: mapValueOfType<int>(json, r'fkiUserIDCreated')!,
-        fkiUserIDModified: mapValueOfType<int>(json, r'fkiUserIDModified')!,
-        fkiApikeyIDCreated: mapValueOfType<int>(json, r'fkiApikeyIDCreated'),
-        fkiApikeyIDModified: mapValueOfType<int>(json, r'fkiApikeyIDModified'),
-        dtCreatedDate: mapValueOfType<String>(json, r'dtCreatedDate')!,
-        dtModifiedDate: mapValueOfType<String>(json, r'dtModifiedDate')!,
+        objAuditdetailCreated: CommonAuditdetail.fromJson(json[r'objAuditdetailCreated'])!,
+        objAuditdetailModified: CommonAuditdetail.fromJson(json[r'objAuditdetailModified']),
       );
     }
     return null;
@@ -162,10 +120,7 @@ class CommonAudit {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'fkiUserIDCreated',
-    'fkiUserIDModified',
-    'dtCreatedDate',
-    'dtModifiedDate',
+    'objAuditdetailCreated',
   };
 }
 

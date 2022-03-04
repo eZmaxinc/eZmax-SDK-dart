@@ -13,16 +13,14 @@ part of openapi.api;
 class ContactRequestCompound {
   /// Returns a new [ContactRequestCompound] instance.
   ContactRequestCompound({
-    required this.objContactinformations,
     required this.fkiContacttitleID,
     required this.fkiLanguageID,
     required this.sContactFirstname,
     required this.sContactLastname,
     required this.sContactCompany,
     this.dtContactBirthdate,
+    required this.objContactinformations,
   });
-
-  ContactinformationsRequestCompound objContactinformations;
 
   /// The unique ID of the Contacttitle.  Valid values:  |Value|Description| |-|-| |1|Ms.| |2|Mr.| |4|(Blank)| |5|Me (For Notaries)|
   int fkiContacttitleID;
@@ -51,33 +49,34 @@ class ContactRequestCompound {
   ///
   String? dtContactBirthdate;
 
+  ContactinformationsRequestCompound objContactinformations;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is ContactRequestCompound &&
-     other.objContactinformations == objContactinformations &&
      other.fkiContacttitleID == fkiContacttitleID &&
      other.fkiLanguageID == fkiLanguageID &&
      other.sContactFirstname == sContactFirstname &&
      other.sContactLastname == sContactLastname &&
      other.sContactCompany == sContactCompany &&
-     other.dtContactBirthdate == dtContactBirthdate;
+     other.dtContactBirthdate == dtContactBirthdate &&
+     other.objContactinformations == objContactinformations;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (objContactinformations.hashCode) +
     (fkiContacttitleID.hashCode) +
     (fkiLanguageID.hashCode) +
     (sContactFirstname.hashCode) +
     (sContactLastname.hashCode) +
     (sContactCompany.hashCode) +
-    (dtContactBirthdate == null ? 0 : dtContactBirthdate!.hashCode);
+    (dtContactBirthdate == null ? 0 : dtContactBirthdate!.hashCode) +
+    (objContactinformations.hashCode);
 
   @override
-  String toString() => 'ContactRequestCompound[objContactinformations=$objContactinformations, fkiContacttitleID=$fkiContacttitleID, fkiLanguageID=$fkiLanguageID, sContactFirstname=$sContactFirstname, sContactLastname=$sContactLastname, sContactCompany=$sContactCompany, dtContactBirthdate=$dtContactBirthdate]';
+  String toString() => 'ContactRequestCompound[fkiContacttitleID=$fkiContacttitleID, fkiLanguageID=$fkiLanguageID, sContactFirstname=$sContactFirstname, sContactLastname=$sContactLastname, sContactCompany=$sContactCompany, dtContactBirthdate=$dtContactBirthdate, objContactinformations=$objContactinformations]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'objContactinformations'] = objContactinformations;
       json[r'fkiContacttitleID'] = fkiContacttitleID;
       json[r'fkiLanguageID'] = fkiLanguageID;
       json[r'sContactFirstname'] = sContactFirstname;
@@ -86,6 +85,7 @@ class ContactRequestCompound {
     if (dtContactBirthdate != null) {
       json[r'dtContactBirthdate'] = dtContactBirthdate;
     }
+      json[r'objContactinformations'] = objContactinformations;
     return json;
   }
 
@@ -108,13 +108,13 @@ class ContactRequestCompound {
       }());
 
       return ContactRequestCompound(
-        objContactinformations: ContactinformationsRequestCompound.fromJson(json[r'objContactinformations'])!,
         fkiContacttitleID: mapValueOfType<int>(json, r'fkiContacttitleID')!,
         fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID')!,
         sContactFirstname: mapValueOfType<String>(json, r'sContactFirstname')!,
         sContactLastname: mapValueOfType<String>(json, r'sContactLastname')!,
         sContactCompany: mapValueOfType<String>(json, r'sContactCompany')!,
         dtContactBirthdate: mapValueOfType<String>(json, r'dtContactBirthdate'),
+        objContactinformations: ContactinformationsRequestCompound.fromJson(json[r'objContactinformations'])!,
       );
     }
     return null;
@@ -164,12 +164,12 @@ class ContactRequestCompound {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'objContactinformations',
     'fkiContacttitleID',
     'fkiLanguageID',
     'sContactFirstname',
     'sContactLastname',
     'sContactCompany',
+    'objContactinformations',
   };
 }
 

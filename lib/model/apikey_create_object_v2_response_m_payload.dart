@@ -16,7 +16,7 @@ class ApikeyCreateObjectV2ResponseMPayload {
     this.aObjApikey = const [],
   });
 
-  List<ApikeyResponse> aObjApikey;
+  List<ApikeyResponseCompound> aObjApikey;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ApikeyCreateObjectV2ResponseMPayload &&
@@ -55,7 +55,7 @@ class ApikeyCreateObjectV2ResponseMPayload {
       }());
 
       return ApikeyCreateObjectV2ResponseMPayload(
-        aObjApikey: ApikeyResponse.listFromJson(json[r'a_objApikey'])!,
+        aObjApikey: ApikeyResponseCompound.listFromJson(json[r'a_objApikey'])!,
       );
     }
     return null;

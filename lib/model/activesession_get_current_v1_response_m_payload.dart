@@ -13,11 +13,6 @@ part of openapi.api;
 class ActivesessionGetCurrentV1ResponseMPayload {
   /// Returns a new [ActivesessionGetCurrentV1ResponseMPayload] instance.
   ActivesessionGetCurrentV1ResponseMPayload({
-    this.aPkiPermissionID = const [],
-    required this.objUserReal,
-    this.objUserCloned,
-    this.objApikey,
-    this.aEModuleInternalname = const [],
     required this.eActivesessionSessiontype,
     required this.eActivesessionWeekdaystart,
     required this.fkiLanguageID,
@@ -25,7 +20,34 @@ class ActivesessionGetCurrentV1ResponseMPayload {
     required this.sDepartmentNameX,
     required this.bActivesessionDebug,
     required this.pksCustomerCode,
+    this.aPkiPermissionID = const [],
+    required this.objUserReal,
+    this.objUserCloned,
+    this.objApikey,
+    this.aEModuleInternalname = const [],
   });
+
+  FieldEActivesessionSessiontype eActivesessionSessiontype;
+
+  FieldEActivesessionWeekdaystart eActivesessionWeekdaystart;
+
+  /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
+  ///
+  /// Minimum value: 1
+  /// Maximum value: 2
+  int fkiLanguageID;
+
+  /// The Name of the Company in the language of the requester
+  String sCompanyNameX;
+
+  /// The Name of the Department in the language of the requester
+  String sDepartmentNameX;
+
+  /// Whether the active session is in debug or not
+  bool bActivesessionDebug;
+
+  /// The customer code assigned to your account
+  String pksCustomerCode;
 
   /// An array of permissions granted to the user or api key
   List<int> aPkiPermissionID;
@@ -51,64 +73,49 @@ class ActivesessionGetCurrentV1ResponseMPayload {
   /// An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key.
   List<String> aEModuleInternalname;
 
-  FieldEActivesessionSessiontype eActivesessionSessiontype;
-
-  FieldEActivesessionWeekdaystart eActivesessionWeekdaystart;
-
-  /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
-  ///
-  /// Minimum value: 1
-  /// Maximum value: 2
-  int fkiLanguageID;
-
-  /// The Name of the Company in the language of the requester
-  String sCompanyNameX;
-
-  /// The Name of the Department in the language of the requester
-  String sDepartmentNameX;
-
-  /// Whether the active session is in debug or not
-  bool bActivesessionDebug;
-
-  /// The customer code assigned to your account
-  String pksCustomerCode;
-
   @override
   bool operator ==(Object other) => identical(this, other) || other is ActivesessionGetCurrentV1ResponseMPayload &&
-     other.aPkiPermissionID == aPkiPermissionID &&
-     other.objUserReal == objUserReal &&
-     other.objUserCloned == objUserCloned &&
-     other.objApikey == objApikey &&
-     other.aEModuleInternalname == aEModuleInternalname &&
      other.eActivesessionSessiontype == eActivesessionSessiontype &&
      other.eActivesessionWeekdaystart == eActivesessionWeekdaystart &&
      other.fkiLanguageID == fkiLanguageID &&
      other.sCompanyNameX == sCompanyNameX &&
      other.sDepartmentNameX == sDepartmentNameX &&
      other.bActivesessionDebug == bActivesessionDebug &&
-     other.pksCustomerCode == pksCustomerCode;
+     other.pksCustomerCode == pksCustomerCode &&
+     other.aPkiPermissionID == aPkiPermissionID &&
+     other.objUserReal == objUserReal &&
+     other.objUserCloned == objUserCloned &&
+     other.objApikey == objApikey &&
+     other.aEModuleInternalname == aEModuleInternalname;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (aPkiPermissionID.hashCode) +
-    (objUserReal.hashCode) +
-    (objUserCloned == null ? 0 : objUserCloned!.hashCode) +
-    (objApikey == null ? 0 : objApikey!.hashCode) +
-    (aEModuleInternalname.hashCode) +
     (eActivesessionSessiontype.hashCode) +
     (eActivesessionWeekdaystart.hashCode) +
     (fkiLanguageID.hashCode) +
     (sCompanyNameX.hashCode) +
     (sDepartmentNameX.hashCode) +
     (bActivesessionDebug.hashCode) +
-    (pksCustomerCode.hashCode);
+    (pksCustomerCode.hashCode) +
+    (aPkiPermissionID.hashCode) +
+    (objUserReal.hashCode) +
+    (objUserCloned == null ? 0 : objUserCloned!.hashCode) +
+    (objApikey == null ? 0 : objApikey!.hashCode) +
+    (aEModuleInternalname.hashCode);
 
   @override
-  String toString() => 'ActivesessionGetCurrentV1ResponseMPayload[aPkiPermissionID=$aPkiPermissionID, objUserReal=$objUserReal, objUserCloned=$objUserCloned, objApikey=$objApikey, aEModuleInternalname=$aEModuleInternalname, eActivesessionSessiontype=$eActivesessionSessiontype, eActivesessionWeekdaystart=$eActivesessionWeekdaystart, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, bActivesessionDebug=$bActivesessionDebug, pksCustomerCode=$pksCustomerCode]';
+  String toString() => 'ActivesessionGetCurrentV1ResponseMPayload[eActivesessionSessiontype=$eActivesessionSessiontype, eActivesessionWeekdaystart=$eActivesessionWeekdaystart, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, bActivesessionDebug=$bActivesessionDebug, pksCustomerCode=$pksCustomerCode, aPkiPermissionID=$aPkiPermissionID, objUserReal=$objUserReal, objUserCloned=$objUserCloned, objApikey=$objApikey, aEModuleInternalname=$aEModuleInternalname]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
+      json[r'eActivesessionSessiontype'] = eActivesessionSessiontype;
+      json[r'eActivesessionWeekdaystart'] = eActivesessionWeekdaystart;
+      json[r'fkiLanguageID'] = fkiLanguageID;
+      json[r'sCompanyNameX'] = sCompanyNameX;
+      json[r'sDepartmentNameX'] = sDepartmentNameX;
+      json[r'bActivesessionDebug'] = bActivesessionDebug;
+      json[r'pksCustomerCode'] = pksCustomerCode;
       json[r'a_pkiPermissionID'] = aPkiPermissionID;
       json[r'objUserReal'] = objUserReal;
     if (objUserCloned != null) {
@@ -118,13 +125,6 @@ class ActivesessionGetCurrentV1ResponseMPayload {
       json[r'objApikey'] = objApikey;
     }
       json[r'a_eModuleInternalname'] = aEModuleInternalname;
-      json[r'eActivesessionSessiontype'] = eActivesessionSessiontype;
-      json[r'eActivesessionWeekdaystart'] = eActivesessionWeekdaystart;
-      json[r'fkiLanguageID'] = fkiLanguageID;
-      json[r'sCompanyNameX'] = sCompanyNameX;
-      json[r'sDepartmentNameX'] = sDepartmentNameX;
-      json[r'bActivesessionDebug'] = bActivesessionDebug;
-      json[r'pksCustomerCode'] = pksCustomerCode;
     return json;
   }
 
@@ -147,6 +147,13 @@ class ActivesessionGetCurrentV1ResponseMPayload {
       }());
 
       return ActivesessionGetCurrentV1ResponseMPayload(
+        eActivesessionSessiontype: FieldEActivesessionSessiontype.fromJson(json[r'eActivesessionSessiontype'])!,
+        eActivesessionWeekdaystart: FieldEActivesessionWeekdaystart.fromJson(json[r'eActivesessionWeekdaystart'])!,
+        fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID')!,
+        sCompanyNameX: mapValueOfType<String>(json, r'sCompanyNameX')!,
+        sDepartmentNameX: mapValueOfType<String>(json, r'sDepartmentNameX')!,
+        bActivesessionDebug: mapValueOfType<bool>(json, r'bActivesessionDebug')!,
+        pksCustomerCode: mapValueOfType<String>(json, r'pksCustomerCode')!,
         aPkiPermissionID: json[r'a_pkiPermissionID'] is List
             ? (json[r'a_pkiPermissionID'] as List).cast<int>()
             : const [],
@@ -156,13 +163,6 @@ class ActivesessionGetCurrentV1ResponseMPayload {
         aEModuleInternalname: json[r'a_eModuleInternalname'] is List
             ? (json[r'a_eModuleInternalname'] as List).cast<String>()
             : const [],
-        eActivesessionSessiontype: FieldEActivesessionSessiontype.fromJson(json[r'eActivesessionSessiontype'])!,
-        eActivesessionWeekdaystart: FieldEActivesessionWeekdaystart.fromJson(json[r'eActivesessionWeekdaystart'])!,
-        fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID')!,
-        sCompanyNameX: mapValueOfType<String>(json, r'sCompanyNameX')!,
-        sDepartmentNameX: mapValueOfType<String>(json, r'sDepartmentNameX')!,
-        bActivesessionDebug: mapValueOfType<bool>(json, r'bActivesessionDebug')!,
-        pksCustomerCode: mapValueOfType<String>(json, r'pksCustomerCode')!,
       );
     }
     return null;
@@ -212,9 +212,6 @@ class ActivesessionGetCurrentV1ResponseMPayload {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'a_pkiPermissionID',
-    'objUserReal',
-    'a_eModuleInternalname',
     'eActivesessionSessiontype',
     'eActivesessionWeekdaystart',
     'fkiLanguageID',
@@ -222,6 +219,9 @@ class ActivesessionGetCurrentV1ResponseMPayload {
     'sDepartmentNameX',
     'bActivesessionDebug',
     'pksCustomerCode',
+    'a_pkiPermissionID',
+    'objUserReal',
+    'a_eModuleInternalname',
   };
 }
 

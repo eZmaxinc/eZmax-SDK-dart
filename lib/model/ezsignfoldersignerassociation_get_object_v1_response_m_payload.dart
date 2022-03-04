@@ -13,12 +13,21 @@ part of openapi.api;
 class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
   /// Returns a new [EzsignfoldersignerassociationGetObjectV1ResponseMPayload] instance.
   EzsignfoldersignerassociationGetObjectV1ResponseMPayload({
-    this.objUser,
-    this.objEzsignsigner,
     required this.pkiEzsignfoldersignerassociationID,
     required this.fkiEzsignfolderID,
     required this.bEzsignfoldersignerassociationReceivecopy,
+    this.objUser,
+    this.objEzsignsigner,
   });
+
+  /// The unique ID of the Ezsignfoldersignerassociation
+  int pkiEzsignfoldersignerassociationID;
+
+  /// The unique ID of the Ezsignfolder
+  int fkiEzsignfolderID;
+
+  /// If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document.
+  bool bEzsignfoldersignerassociationReceivecopy;
 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -36,46 +45,37 @@ class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
   ///
   EzsignsignerResponseCompound? objEzsignsigner;
 
-  /// The unique ID of the Ezsignfoldersignerassociation
-  int pkiEzsignfoldersignerassociationID;
-
-  /// The unique ID of the Ezsignfolder
-  int fkiEzsignfolderID;
-
-  /// If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document.
-  bool bEzsignfoldersignerassociationReceivecopy;
-
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfoldersignerassociationGetObjectV1ResponseMPayload &&
-     other.objUser == objUser &&
-     other.objEzsignsigner == objEzsignsigner &&
      other.pkiEzsignfoldersignerassociationID == pkiEzsignfoldersignerassociationID &&
      other.fkiEzsignfolderID == fkiEzsignfolderID &&
-     other.bEzsignfoldersignerassociationReceivecopy == bEzsignfoldersignerassociationReceivecopy;
+     other.bEzsignfoldersignerassociationReceivecopy == bEzsignfoldersignerassociationReceivecopy &&
+     other.objUser == objUser &&
+     other.objEzsignsigner == objEzsignsigner;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (objUser == null ? 0 : objUser!.hashCode) +
-    (objEzsignsigner == null ? 0 : objEzsignsigner!.hashCode) +
     (pkiEzsignfoldersignerassociationID.hashCode) +
     (fkiEzsignfolderID.hashCode) +
-    (bEzsignfoldersignerassociationReceivecopy.hashCode);
+    (bEzsignfoldersignerassociationReceivecopy.hashCode) +
+    (objUser == null ? 0 : objUser!.hashCode) +
+    (objEzsignsigner == null ? 0 : objEzsignsigner!.hashCode);
 
   @override
-  String toString() => 'EzsignfoldersignerassociationGetObjectV1ResponseMPayload[objUser=$objUser, objEzsignsigner=$objEzsignsigner, pkiEzsignfoldersignerassociationID=$pkiEzsignfoldersignerassociationID, fkiEzsignfolderID=$fkiEzsignfolderID, bEzsignfoldersignerassociationReceivecopy=$bEzsignfoldersignerassociationReceivecopy]';
+  String toString() => 'EzsignfoldersignerassociationGetObjectV1ResponseMPayload[pkiEzsignfoldersignerassociationID=$pkiEzsignfoldersignerassociationID, fkiEzsignfolderID=$fkiEzsignfolderID, bEzsignfoldersignerassociationReceivecopy=$bEzsignfoldersignerassociationReceivecopy, objUser=$objUser, objEzsignsigner=$objEzsignsigner]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
+      json[r'pkiEzsignfoldersignerassociationID'] = pkiEzsignfoldersignerassociationID;
+      json[r'fkiEzsignfolderID'] = fkiEzsignfolderID;
+      json[r'bEzsignfoldersignerassociationReceivecopy'] = bEzsignfoldersignerassociationReceivecopy;
     if (objUser != null) {
       json[r'objUser'] = objUser;
     }
     if (objEzsignsigner != null) {
       json[r'objEzsignsigner'] = objEzsignsigner;
     }
-      json[r'pkiEzsignfoldersignerassociationID'] = pkiEzsignfoldersignerassociationID;
-      json[r'fkiEzsignfolderID'] = fkiEzsignfolderID;
-      json[r'bEzsignfoldersignerassociationReceivecopy'] = bEzsignfoldersignerassociationReceivecopy;
     return json;
   }
 
@@ -98,11 +98,11 @@ class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
       }());
 
       return EzsignfoldersignerassociationGetObjectV1ResponseMPayload(
-        objUser: EzsignfoldersignerassociationResponseCompoundUser.fromJson(json[r'objUser']),
-        objEzsignsigner: EzsignsignerResponseCompound.fromJson(json[r'objEzsignsigner']),
         pkiEzsignfoldersignerassociationID: mapValueOfType<int>(json, r'pkiEzsignfoldersignerassociationID')!,
         fkiEzsignfolderID: mapValueOfType<int>(json, r'fkiEzsignfolderID')!,
         bEzsignfoldersignerassociationReceivecopy: mapValueOfType<bool>(json, r'bEzsignfoldersignerassociationReceivecopy')!,
+        objUser: EzsignfoldersignerassociationResponseCompoundUser.fromJson(json[r'objUser']),
+        objEzsignsigner: EzsignsignerResponseCompound.fromJson(json[r'objEzsignsigner']),
       );
     }
     return null;

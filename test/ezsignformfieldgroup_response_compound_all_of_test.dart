@@ -16,9 +16,18 @@ void main() {
   // final instance = EzsignformfieldgroupResponseCompoundAllOf();
 
   group('test EzsignformfieldgroupResponseCompoundAllOf', () {
-    // 
-    // List<EzsignformfieldResponse> aObjEzsignformfield (default value: const [])
+    // List<EzsignformfieldResponseCompound> aObjEzsignformfield (default value: const [])
     test('to test the property `aObjEzsignformfield`', () async {
+      // TODO
+    });
+
+    // List<CustomDropdownElementResponseCompound> aObjDropdownElement (default value: const [])
+    test('to test the property `aObjDropdownElement`', () async {
+      // TODO
+    });
+
+    // EzsignformfieldgroupsignerResponseCompound aObjEzsignformfieldgroupsigner
+    test('to test the property `aObjEzsignformfieldgroupsigner`', () async {
       // TODO
     });
 

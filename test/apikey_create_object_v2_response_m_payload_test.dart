@@ -16,7 +16,7 @@ void main() {
   // final instance = ApikeyCreateObjectV2ResponseMPayload();
 
   group('test ApikeyCreateObjectV2ResponseMPayload', () {
-    // List<ApikeyResponse> aObjApikey (default value: const [])
+    // List<ApikeyResponseCompound> aObjApikey (default value: const [])
     test('to test the property `aObjApikey`', () async {
       // TODO
     });

@@ -13,8 +13,6 @@ part of openapi.api;
 class FranchisereferalincomeRequestCompound {
   /// Returns a new [FranchisereferalincomeRequestCompound] instance.
   FranchisereferalincomeRequestCompound({
-    required this.objAddress,
-    this.aObjContact = const [],
     this.pkiFranchisereferalincomeID,
     required this.fkiFranchisebrokerID,
     required this.fkiFranchisereferalincomeprogramID,
@@ -27,12 +25,9 @@ class FranchisereferalincomeRequestCompound {
     required this.tFranchisereferalincomeComment,
     required this.fkiFranchiseofficeID,
     required this.sFranchisereferalincomeRemoteid,
+    required this.objAddress,
+    this.aObjContact = const [],
   });
-
-  AddressRequest objAddress;
-
-  /// 
-  List<ContactRequestCompound> aObjContact;
 
   /// The unique ID of the Franchisereferalincome
   ///
@@ -76,10 +71,12 @@ class FranchisereferalincomeRequestCompound {
   /// 
   String sFranchisereferalincomeRemoteid;
 
+  AddressRequest objAddress;
+
+  List<ContactRequestCompound> aObjContact;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is FranchisereferalincomeRequestCompound &&
-     other.objAddress == objAddress &&
-     other.aObjContact == aObjContact &&
      other.pkiFranchisereferalincomeID == pkiFranchisereferalincomeID &&
      other.fkiFranchisebrokerID == fkiFranchisebrokerID &&
      other.fkiFranchisereferalincomeprogramID == fkiFranchisereferalincomeprogramID &&
@@ -91,13 +88,13 @@ class FranchisereferalincomeRequestCompound {
      other.dtFranchisereferalincomeDisbursed == dtFranchisereferalincomeDisbursed &&
      other.tFranchisereferalincomeComment == tFranchisereferalincomeComment &&
      other.fkiFranchiseofficeID == fkiFranchiseofficeID &&
-     other.sFranchisereferalincomeRemoteid == sFranchisereferalincomeRemoteid;
+     other.sFranchisereferalincomeRemoteid == sFranchisereferalincomeRemoteid &&
+     other.objAddress == objAddress &&
+     other.aObjContact == aObjContact;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (objAddress.hashCode) +
-    (aObjContact.hashCode) +
     (pkiFranchisereferalincomeID == null ? 0 : pkiFranchisereferalincomeID!.hashCode) +
     (fkiFranchisebrokerID.hashCode) +
     (fkiFranchisereferalincomeprogramID.hashCode) +
@@ -109,15 +106,15 @@ class FranchisereferalincomeRequestCompound {
     (dtFranchisereferalincomeDisbursed.hashCode) +
     (tFranchisereferalincomeComment.hashCode) +
     (fkiFranchiseofficeID.hashCode) +
-    (sFranchisereferalincomeRemoteid.hashCode);
+    (sFranchisereferalincomeRemoteid.hashCode) +
+    (objAddress.hashCode) +
+    (aObjContact.hashCode);
 
   @override
-  String toString() => 'FranchisereferalincomeRequestCompound[objAddress=$objAddress, aObjContact=$aObjContact, pkiFranchisereferalincomeID=$pkiFranchisereferalincomeID, fkiFranchisebrokerID=$fkiFranchisebrokerID, fkiFranchisereferalincomeprogramID=$fkiFranchisereferalincomeprogramID, fkiPeriodID=$fkiPeriodID, dFranchisereferalincomeLoan=$dFranchisereferalincomeLoan, dFranchisereferalincomeFranchiseamount=$dFranchisereferalincomeFranchiseamount, dFranchisereferalincomeFranchisoramount=$dFranchisereferalincomeFranchisoramount, dFranchisereferalincomeAgentamount=$dFranchisereferalincomeAgentamount, dtFranchisereferalincomeDisbursed=$dtFranchisereferalincomeDisbursed, tFranchisereferalincomeComment=$tFranchisereferalincomeComment, fkiFranchiseofficeID=$fkiFranchiseofficeID, sFranchisereferalincomeRemoteid=$sFranchisereferalincomeRemoteid]';
+  String toString() => 'FranchisereferalincomeRequestCompound[pkiFranchisereferalincomeID=$pkiFranchisereferalincomeID, fkiFranchisebrokerID=$fkiFranchisebrokerID, fkiFranchisereferalincomeprogramID=$fkiFranchisereferalincomeprogramID, fkiPeriodID=$fkiPeriodID, dFranchisereferalincomeLoan=$dFranchisereferalincomeLoan, dFranchisereferalincomeFranchiseamount=$dFranchisereferalincomeFranchiseamount, dFranchisereferalincomeFranchisoramount=$dFranchisereferalincomeFranchisoramount, dFranchisereferalincomeAgentamount=$dFranchisereferalincomeAgentamount, dtFranchisereferalincomeDisbursed=$dtFranchisereferalincomeDisbursed, tFranchisereferalincomeComment=$tFranchisereferalincomeComment, fkiFranchiseofficeID=$fkiFranchiseofficeID, sFranchisereferalincomeRemoteid=$sFranchisereferalincomeRemoteid, objAddress=$objAddress, aObjContact=$aObjContact]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'objAddress'] = objAddress;
-      json[r'a_objContact'] = aObjContact;
     if (pkiFranchisereferalincomeID != null) {
       json[r'pkiFranchisereferalincomeID'] = pkiFranchisereferalincomeID;
     }
@@ -132,6 +129,8 @@ class FranchisereferalincomeRequestCompound {
       json[r'tFranchisereferalincomeComment'] = tFranchisereferalincomeComment;
       json[r'fkiFranchiseofficeID'] = fkiFranchiseofficeID;
       json[r'sFranchisereferalincomeRemoteid'] = sFranchisereferalincomeRemoteid;
+      json[r'objAddress'] = objAddress;
+      json[r'a_objContact'] = aObjContact;
     return json;
   }
 
@@ -154,8 +153,6 @@ class FranchisereferalincomeRequestCompound {
       }());
 
       return FranchisereferalincomeRequestCompound(
-        objAddress: AddressRequest.fromJson(json[r'objAddress'])!,
-        aObjContact: ContactRequestCompound.listFromJson(json[r'a_objContact'])!,
         pkiFranchisereferalincomeID: mapValueOfType<int>(json, r'pkiFranchisereferalincomeID'),
         fkiFranchisebrokerID: mapValueOfType<int>(json, r'fkiFranchisebrokerID')!,
         fkiFranchisereferalincomeprogramID: mapValueOfType<int>(json, r'fkiFranchisereferalincomeprogramID')!,
@@ -168,6 +165,8 @@ class FranchisereferalincomeRequestCompound {
         tFranchisereferalincomeComment: mapValueOfType<String>(json, r'tFranchisereferalincomeComment')!,
         fkiFranchiseofficeID: mapValueOfType<int>(json, r'fkiFranchiseofficeID')!,
         sFranchisereferalincomeRemoteid: mapValueOfType<String>(json, r'sFranchisereferalincomeRemoteid')!,
+        objAddress: AddressRequest.fromJson(json[r'objAddress'])!,
+        aObjContact: ContactRequestCompound.listFromJson(json[r'a_objContact'])!,
       );
     }
     return null;
@@ -217,8 +216,6 @@ class FranchisereferalincomeRequestCompound {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'objAddress',
-    'a_objContact',
     'fkiFranchisebrokerID',
     'fkiFranchisereferalincomeprogramID',
     'fkiPeriodID',
@@ -230,6 +227,8 @@ class FranchisereferalincomeRequestCompound {
     'tFranchisereferalincomeComment',
     'fkiFranchiseofficeID',
     'sFranchisereferalincomeRemoteid',
+    'objAddress',
+    'a_objContact',
   };
 }
 

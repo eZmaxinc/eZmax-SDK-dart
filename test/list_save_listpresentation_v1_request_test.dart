@@ -16,8 +16,7 @@ void main() {
   // final instance = ListSaveListpresentationV1Request();
 
   group('test ListSaveListpresentationV1Request', () {
-    // 
-    // List<ListpresentationRequest> aObjListpresentation (default value: const [])
+    // List<ListpresentationRequestCompound> aObjListpresentation (default value: const [])
     test('to test the property `aObjListpresentation`', () async {
       // TODO
     });

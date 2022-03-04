@@ -16,7 +16,7 @@ void main() {
   // final instance = WebhookUserUserCreated();
 
   group('test WebhookUserUserCreated', () {
-    // UserResponse objUser
+    // UserResponseCompound objUser
     test('to test the property `objUser`', () async {
       // TODO
     });
@@ -27,7 +27,7 @@ void main() {
     });
 
     // An array containing details of previous attempts that were made to deliver the message. The array is empty if it's the first attempt.
-    // List<AttemptResponse> aObjAttempt (default value: const [])
+    // List<AttemptResponseCompound> aObjAttempt (default value: const [])
     test('to test the property `aObjAttempt`', () async {
       // TODO
     });

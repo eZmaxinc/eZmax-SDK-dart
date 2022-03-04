@@ -62,9 +62,18 @@ void main() {
       // TODO
     });
 
-    // Edit multiple ezsignsignatures
+    // Edit multiple Ezsignformfieldgroups
     //
-    // Using this endpoint, you can edit multiple ezsignsignatures at the same time.
+    // Using this endpoint, you can edit multiple Ezsignformfieldgroups at the same time.
+    //
+    //Future<EzsigndocumentEditEzsignformfieldgroupsV1Response> ezsigndocumentEditEzsignformfieldgroupsV1(int pkiEzsigndocumentID, EzsigndocumentEditEzsignformfieldgroupsV1Request ezsigndocumentEditEzsignformfieldgroupsV1Request) async
+    test('test ezsigndocumentEditEzsignformfieldgroupsV1', () async {
+      // TODO
+    });
+
+    // Edit multiple Ezsignsignatures
+    //
+    // Using this endpoint, you can edit multiple Ezsignsignatures at the same time.
     //
     //Future<EzsigndocumentEditEzsignsignaturesV1Response> ezsigndocumentEditEzsignsignaturesV1(int pkiEzsigndocumentID, EzsigndocumentEditEzsignsignaturesV1Request ezsigndocumentEditEzsignsignaturesV1Request) async
     test('test ezsigndocumentEditEzsignsignaturesV1', () async {
@@ -75,7 +84,7 @@ void main() {
     //
     // End prematurely an Ezsigndocument when some signatures are still required
     //
-    //Future<EzsigndocumentEndPrematurelyV1Response> ezsigndocumentEndPrematurelyV1(int pkiEzsigndocumentID) async
+    //Future<EzsigndocumentEndPrematurelyV1Response> ezsigndocumentEndPrematurelyV1(int pkiEzsigndocumentID, Object body) async
     test('test ezsigndocumentEndPrematurelyV1', () async {
       // TODO
     });
@@ -89,12 +98,30 @@ void main() {
       // TODO
     });
 
+    // Retrieve an existing Ezsigndocument's Ezsignformfieldgroups
+    //
+    // 
+    //
+    //Future<EzsigndocumentGetEzsignformfieldgroupsV1Response> ezsigndocumentGetEzsignformfieldgroupsV1(int pkiEzsigndocumentID) async
+    test('test ezsigndocumentGetEzsignformfieldgroupsV1', () async {
+      // TODO
+    });
+
     // Retrieve an existing Ezsigndocument's Ezsignpages
     //
     // 
     //
     //Future<EzsigndocumentGetEzsignpagesV1Response> ezsigndocumentGetEzsignpagesV1(int pkiEzsigndocumentID) async
     test('test ezsigndocumentGetEzsignpagesV1', () async {
+      // TODO
+    });
+
+    // Retrieve an existing Ezsigndocument's Ezsignsignatures
+    //
+    // 
+    //
+    //Future<EzsigndocumentGetEzsignsignaturesV1Response> ezsigndocumentGetEzsignsignaturesV1(int pkiEzsigndocumentID) async
+    test('test ezsigndocumentGetEzsignsignaturesV1', () async {
       // TODO
     });
 

@@ -27,7 +27,7 @@ class EzsignsignatureRequestCompoundAllOf {
   bool? bEzsignsignatureCustomdate;
 
   /// An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all.
-  List<EzsignsignaturecustomdateRequest> aObjEzsignsignaturecustomdate;
+  List<EzsignsignaturecustomdateRequestCompound> aObjEzsignsignaturecustomdate;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignsignatureRequestCompoundAllOf &&
@@ -72,7 +72,7 @@ class EzsignsignatureRequestCompoundAllOf {
 
       return EzsignsignatureRequestCompoundAllOf(
         bEzsignsignatureCustomdate: mapValueOfType<bool>(json, r'bEzsignsignatureCustomdate'),
-        aObjEzsignsignaturecustomdate: EzsignsignaturecustomdateRequest.listFromJson(json[r'a_objEzsignsignaturecustomdate']) ?? const [],
+        aObjEzsignsignaturecustomdate: EzsignsignaturecustomdateRequestCompound.listFromJson(json[r'a_objEzsignsignaturecustomdate']) ?? const [],
       );
     }
     return null;

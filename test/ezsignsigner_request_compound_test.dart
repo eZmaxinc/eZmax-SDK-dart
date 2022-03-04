@@ -16,8 +16,9 @@ void main() {
   // final instance = EzsignsignerRequestCompound();
 
   group('test EzsignsignerRequestCompound', () {
-    // EzsignsignerRequestCompoundContact objContact
-    test('to test the property `objContact`', () async {
+    // The unique ID of the Userlogintype  Valid values:  |Value|Description|Detail| |-|-|-| |1|**Email Only**|The Ezsignsigner will receive a secure link by email| |2|**Email and phone or SMS**|The Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**| |3|**Email and secret question**|The Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer| |4|**In person only**|The Ezsignsigner will only be able to sign \"In-Person\" and there won't be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type| |5|**In person with phone or SMS**|The Ezsignsigner will only be able to sign \"In-Person\" and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**|
+    // int fkiUserlogintypeID
+    test('to test the property `fkiUserlogintypeID`', () async {
       // TODO
     });
 
@@ -42,6 +43,11 @@ void main() {
     // The predefined answer to the secret question the Ezsignsigner will need to provide to successfully authenticate.
     // String sEzsignsignerSecretanswer
     test('to test the property `sEzsignsignerSecretanswer`', () async {
+      // TODO
+    });
+
+    // EzsignsignerRequestCompoundContact objContact
+    test('to test the property `objContact`', () async {
       // TODO
     });
 

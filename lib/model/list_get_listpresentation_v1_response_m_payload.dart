@@ -16,8 +16,7 @@ class ListGetListpresentationV1ResponseMPayload {
     this.aObjListpresentation = const [],
   });
 
-  /// 
-  List<ListpresentationRequest> aObjListpresentation;
+  List<ListpresentationResponseCompound> aObjListpresentation;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ListGetListpresentationV1ResponseMPayload &&
@@ -56,7 +55,7 @@ class ListGetListpresentationV1ResponseMPayload {
       }());
 
       return ListGetListpresentationV1ResponseMPayload(
-        aObjListpresentation: ListpresentationRequest.listFromJson(json[r'a_objListpresentation'])!,
+        aObjListpresentation: ListpresentationResponseCompound.listFromJson(json[r'a_objListpresentation'])!,
       );
     }
     return null;
