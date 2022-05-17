@@ -17,6 +17,9 @@ class EzsignsignerRequestCompoundContact {
     required this.sContactLastname,
     required this.fkiLanguageID,
     this.sEmailAddress,
+    this.sPhoneE164,
+    this.sPhoneExtension,
+    this.sPhoneE164Cell,
     this.sPhoneNumber,
     this.sPhoneNumberCell,
   });
@@ -42,7 +45,33 @@ class EzsignsignerRequestCompoundContact {
   ///
   String? sEmailAddress;
 
-  /// The Phone number of the contact. Use format \"5149901516\" for North American Numbers (Without \"1\" for long distance code) you would dial like this: 1-514-990-1516. Use format \"498945233886\" for international numbers (Without \"011\") you would dial like this: +49 89 452 33 88-6. In this example \"49\" is the country code of Germany.
+  /// A phone number in E.164 Format
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sPhoneE164;
+
+  /// The extension of the phone number.  The extension is the \"123\" section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sPhoneExtension;
+
+  /// A phone number in E.164 Format
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sPhoneE164Cell;
+
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -51,7 +80,6 @@ class EzsignsignerRequestCompoundContact {
   ///
   String? sPhoneNumber;
 
-  /// The Cell Phone number of the contact. Use format \"5149901516\" for North American Numbers (Without \"1\" for long distance code) you would dial like this: 1-514-990-1516. Use format \"498945233886\" for international numbers (Without \"011\") you would dial like this: +49 89 452 33 88-6. In this example \"49\" is the country code of Germany.
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -66,6 +94,9 @@ class EzsignsignerRequestCompoundContact {
      other.sContactLastname == sContactLastname &&
      other.fkiLanguageID == fkiLanguageID &&
      other.sEmailAddress == sEmailAddress &&
+     other.sPhoneE164 == sPhoneE164 &&
+     other.sPhoneExtension == sPhoneExtension &&
+     other.sPhoneE164Cell == sPhoneE164Cell &&
      other.sPhoneNumber == sPhoneNumber &&
      other.sPhoneNumberCell == sPhoneNumberCell;
 
@@ -76,27 +107,39 @@ class EzsignsignerRequestCompoundContact {
     (sContactLastname.hashCode) +
     (fkiLanguageID.hashCode) +
     (sEmailAddress == null ? 0 : sEmailAddress!.hashCode) +
+    (sPhoneE164 == null ? 0 : sPhoneE164!.hashCode) +
+    (sPhoneExtension == null ? 0 : sPhoneExtension!.hashCode) +
+    (sPhoneE164Cell == null ? 0 : sPhoneE164Cell!.hashCode) +
     (sPhoneNumber == null ? 0 : sPhoneNumber!.hashCode) +
     (sPhoneNumberCell == null ? 0 : sPhoneNumberCell!.hashCode);
 
   @override
-  String toString() => 'EzsignsignerRequestCompoundContact[sContactFirstname=$sContactFirstname, sContactLastname=$sContactLastname, fkiLanguageID=$fkiLanguageID, sEmailAddress=$sEmailAddress, sPhoneNumber=$sPhoneNumber, sPhoneNumberCell=$sPhoneNumberCell]';
+  String toString() => 'EzsignsignerRequestCompoundContact[sContactFirstname=$sContactFirstname, sContactLastname=$sContactLastname, fkiLanguageID=$fkiLanguageID, sEmailAddress=$sEmailAddress, sPhoneE164=$sPhoneE164, sPhoneExtension=$sPhoneExtension, sPhoneE164Cell=$sPhoneE164Cell, sPhoneNumber=$sPhoneNumber, sPhoneNumberCell=$sPhoneNumberCell]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'sContactFirstname'] = sContactFirstname;
-      json[r'sContactLastname'] = sContactLastname;
-      json[r'fkiLanguageID'] = fkiLanguageID;
+    final _json = <String, dynamic>{};
+      _json[r'sContactFirstname'] = sContactFirstname;
+      _json[r'sContactLastname'] = sContactLastname;
+      _json[r'fkiLanguageID'] = fkiLanguageID;
     if (sEmailAddress != null) {
-      json[r'sEmailAddress'] = sEmailAddress;
+      _json[r'sEmailAddress'] = sEmailAddress;
+    }
+    if (sPhoneE164 != null) {
+      _json[r'sPhoneE164'] = sPhoneE164;
+    }
+    if (sPhoneExtension != null) {
+      _json[r'sPhoneExtension'] = sPhoneExtension;
+    }
+    if (sPhoneE164Cell != null) {
+      _json[r'sPhoneE164Cell'] = sPhoneE164Cell;
     }
     if (sPhoneNumber != null) {
-      json[r'sPhoneNumber'] = sPhoneNumber;
+      _json[r'sPhoneNumber'] = sPhoneNumber;
     }
     if (sPhoneNumberCell != null) {
-      json[r'sPhoneNumberCell'] = sPhoneNumberCell;
+      _json[r'sPhoneNumberCell'] = sPhoneNumberCell;
     }
-    return json;
+    return _json;
   }
 
   /// Returns a new [EzsignsignerRequestCompoundContact] instance and imports its values from
@@ -122,6 +165,9 @@ class EzsignsignerRequestCompoundContact {
         sContactLastname: mapValueOfType<String>(json, r'sContactLastname')!,
         fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID')!,
         sEmailAddress: mapValueOfType<String>(json, r'sEmailAddress'),
+        sPhoneE164: mapValueOfType<String>(json, r'sPhoneE164'),
+        sPhoneExtension: mapValueOfType<String>(json, r'sPhoneExtension'),
+        sPhoneE164Cell: mapValueOfType<String>(json, r'sPhoneE164Cell'),
         sPhoneNumber: mapValueOfType<String>(json, r'sPhoneNumber'),
         sPhoneNumberCell: mapValueOfType<String>(json, r'sPhoneNumberCell'),
       );

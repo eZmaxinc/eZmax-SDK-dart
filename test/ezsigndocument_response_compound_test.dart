@@ -99,6 +99,12 @@ void main() {
       // TODO
     });
 
+    // If the Ezsigndocument contains an Ezsignform or not
+    // bool bEzsigndocumentEzsignform
+    test('to test the property `bEzsigndocumentEzsignform`', () async {
+      // TODO
+    });
+
     // CommonAudit objAudit
     test('to test the property `objAudit`', () async {
       // TODO

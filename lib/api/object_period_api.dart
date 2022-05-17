@@ -29,7 +29,9 @@ class ObjectPeriodApi {
   ///
   /// * [String] sQuery:
   ///   Allow to filter the returned results
-  Future<Response> periodGetAutocompleteV1WithHttpInfo(String sSelector, { String? sQuery, }) async {
+  ///
+  /// * [HeaderAcceptLanguage] acceptLanguage:
+  Future<Response> periodGetAutocompleteV1WithHttpInfo(String sSelector, { String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/period/getAutocomplete/{sSelector}'
       .replaceAll('{sSelector}', sSelector);
@@ -45,7 +47,10 @@ class ObjectPeriodApi {
       queryParams.addAll(_queryParams('', 'sQuery', sQuery));
     }
 
-    const authNames = <String>['Authorization'];
+    if (acceptLanguage != null) {
+      headerParams[r'Accept-Language'] = parameterToString(acceptLanguage);
+    }
+
     const contentTypes = <String>[];
 
 
@@ -57,7 +62,6 @@ class ObjectPeriodApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
-      authNames,
     );
   }
 
@@ -72,8 +76,10 @@ class ObjectPeriodApi {
   ///
   /// * [String] sQuery:
   ///   Allow to filter the returned results
-  Future<CommonGetAutocompleteV1Response?> periodGetAutocompleteV1(String sSelector, { String? sQuery, }) async {
-    final response = await periodGetAutocompleteV1WithHttpInfo(sSelector,  sQuery: sQuery, );
+  ///
+  /// * [HeaderAcceptLanguage] acceptLanguage:
+  Future<CommonGetAutocompleteV1Response?> periodGetAutocompleteV1(String sSelector, { String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
+    final response = await periodGetAutocompleteV1WithHttpInfo(sSelector,  sQuery: sQuery, acceptLanguage: acceptLanguage, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

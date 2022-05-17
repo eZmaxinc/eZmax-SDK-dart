@@ -34,6 +34,18 @@ void main() {
       // TODO
     });
 
+    // The Name of the Language in the language of the requester
+    // String sLanguageNameX
+    test('to test the property `sLanguageNameX`', () async {
+      // TODO
+    });
+
+    // The name of the Ezsignfoldertype in the language of the requester
+    // String sEzsignfoldertypeNameX
+    test('to test the property `sEzsignfoldertypeNameX`', () async {
+      // TODO
+    });
+
     // The description of the Ezsignbulksend
     // String sEzsignbulksendDescription
     test('to test the property `sEzsignbulksendDescription`', () async {
@@ -46,6 +58,12 @@ void main() {
       // TODO
     });
 
+    // Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation
+    // bool bEzsignbulksendNeedvalidation
+    test('to test the property `bEzsignbulksendNeedvalidation`', () async {
+      // TODO
+    });
+
     // Whether the Ezsignbulksend is active or not
     // bool bEzsignbulksendIsactive
     test('to test the property `bEzsignbulksendIsactive`', () async {
@@ -54,6 +72,16 @@ void main() {
 
     // CommonAudit objAudit
     test('to test the property `objAudit`', () async {
+      // TODO
+    });
+
+    // List<EzsignbulksenddocumentmappingResponseCompound> aObjEzsignbulksenddocumentmapping (default value: const [])
+    test('to test the property `aObjEzsignbulksenddocumentmapping`', () async {
+      // TODO
+    });
+
+    // List<EzsignbulksendsignermappingResponse> aObjEzsignbulksendsignermapping (default value: const [])
+    test('to test the property `aObjEzsignbulksendsignermapping`', () async {
       // TODO
     });
 

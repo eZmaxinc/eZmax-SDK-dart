@@ -43,11 +43,11 @@ class EzsignfolderGetListV1ResponseMPayload {
   String toString() => 'EzsignfolderGetListV1ResponseMPayload[aObjEzsignfolder=$aObjEzsignfolder, iRowReturned=$iRowReturned, iRowFiltered=$iRowFiltered]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'a_objEzsignfolder'] = aObjEzsignfolder;
-      json[r'iRowReturned'] = iRowReturned;
-      json[r'iRowFiltered'] = iRowFiltered;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'a_objEzsignfolder'] = aObjEzsignfolder;
+      _json[r'iRowReturned'] = iRowReturned;
+      _json[r'iRowFiltered'] = iRowFiltered;
+    return _json;
   }
 
   /// Returns a new [EzsignfolderGetListV1ResponseMPayload] instance and imports its values from

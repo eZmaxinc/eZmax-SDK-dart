@@ -16,6 +16,12 @@ void main() {
   // final instance = WebhookResponse();
 
   group('test WebhookResponse', () {
+    // The customer code assigned to your account
+    // String pksCustomerCode
+    test('to test the property `pksCustomerCode`', () async {
+      // TODO
+    });
+
     // The Webhook ID. This value is visible in the admin interface.
     // int pkiWebhookID
     test('to test the property `pkiWebhookID`', () async {
@@ -34,9 +40,9 @@ void main() {
       // TODO
     });
 
-    // The customer code assigned to your account
-    // String pksCustomerCode
-    test('to test the property `pksCustomerCode`', () async {
+    // This Management Event. This property will be set only if the Module is \"Management\".
+    // String eWebhookManagementevent
+    test('to test the property `eWebhookManagementevent`', () async {
       // TODO
     });
 
@@ -46,15 +52,21 @@ void main() {
       // TODO
     });
 
-    // The email that will receive the webhook in case all attempts fail.
-    // String sWebhookEmailfailed
-    test('to test the property `sWebhookEmailfailed`', () async {
+    // Wheter the webhook received is a manual test or a real event
+    // bool bWebhookTest
+    test('to test the property `bWebhookTest`', () async {
       // TODO
     });
 
-    // This Management Event. This property will be set only if the Module is \"Management\".
-    // String eWebhookManagementevent
-    test('to test the property `eWebhookManagementevent`', () async {
+    // Wheter the server's SSL certificate should be validated or not. Not recommended for production use.
+    // bool bWebhookSkipsslvalidation
+    test('to test the property `bWebhookSkipsslvalidation`', () async {
+      // TODO
+    });
+
+    // The email that will receive the webhook in case all attempts fail.
+    // String sWebhookEmailfailed
+    test('to test the property `sWebhookEmailfailed`', () async {
       // TODO
     });
 

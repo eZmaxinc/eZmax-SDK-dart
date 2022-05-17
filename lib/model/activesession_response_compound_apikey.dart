@@ -38,10 +38,10 @@ class ActivesessionResponseCompoundApikey {
   String toString() => 'ActivesessionResponseCompoundApikey[pkiApikeyID=$pkiApikeyID, sApikeyDescriptionX=$sApikeyDescriptionX]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'pkiApikeyID'] = pkiApikeyID;
-      json[r'sApikeyDescriptionX'] = sApikeyDescriptionX;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'pkiApikeyID'] = pkiApikeyID;
+      _json[r'sApikeyDescriptionX'] = sApikeyDescriptionX;
+    return _json;
   }
 
   /// Returns a new [ActivesessionResponseCompoundApikey] instance and imports its values from

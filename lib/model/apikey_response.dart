@@ -54,14 +54,14 @@ class ApikeyResponse {
   String toString() => 'ApikeyResponse[objApikeyDescription=$objApikeyDescription, sComputedToken=$sComputedToken, pkiApikeyID=$pkiApikeyID, objAudit=$objAudit]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'objApikeyDescription'] = objApikeyDescription;
+    final _json = <String, dynamic>{};
+      _json[r'objApikeyDescription'] = objApikeyDescription;
     if (sComputedToken != null) {
-      json[r'sComputedToken'] = sComputedToken;
+      _json[r'sComputedToken'] = sComputedToken;
     }
-      json[r'pkiApikeyID'] = pkiApikeyID;
-      json[r'objAudit'] = objAudit;
-    return json;
+      _json[r'pkiApikeyID'] = pkiApikeyID;
+      _json[r'objAudit'] = objAudit;
+    return _json;
   }
 
   /// Returns a new [ApikeyResponse] instance and imports its values from

@@ -98,22 +98,22 @@ class EzsignformfieldResponseCompound {
   String toString() => 'EzsignformfieldResponseCompound[pkiEzsignformfieldID=$pkiEzsignformfieldID, iEzsignpagePagenumber=$iEzsignpagePagenumber, sEzsignformfieldLabel=$sEzsignformfieldLabel, sEzsignformfieldValue=$sEzsignformfieldValue, iEzsignformfieldX=$iEzsignformfieldX, iEzsignformfieldY=$iEzsignformfieldY, iEzsignformfieldWidth=$iEzsignformfieldWidth, iEzsignformfieldHeight=$iEzsignformfieldHeight, bEzsignformfieldSelected=$bEzsignformfieldSelected, sEzsignformfieldEnteredvalue=$sEzsignformfieldEnteredvalue]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'pkiEzsignformfieldID'] = pkiEzsignformfieldID;
-      json[r'iEzsignpagePagenumber'] = iEzsignpagePagenumber;
-      json[r'sEzsignformfieldLabel'] = sEzsignformfieldLabel;
-      json[r'sEzsignformfieldValue'] = sEzsignformfieldValue;
-      json[r'iEzsignformfieldX'] = iEzsignformfieldX;
-      json[r'iEzsignformfieldY'] = iEzsignformfieldY;
-      json[r'iEzsignformfieldWidth'] = iEzsignformfieldWidth;
-      json[r'iEzsignformfieldHeight'] = iEzsignformfieldHeight;
+    final _json = <String, dynamic>{};
+      _json[r'pkiEzsignformfieldID'] = pkiEzsignformfieldID;
+      _json[r'iEzsignpagePagenumber'] = iEzsignpagePagenumber;
+      _json[r'sEzsignformfieldLabel'] = sEzsignformfieldLabel;
+      _json[r'sEzsignformfieldValue'] = sEzsignformfieldValue;
+      _json[r'iEzsignformfieldX'] = iEzsignformfieldX;
+      _json[r'iEzsignformfieldY'] = iEzsignformfieldY;
+      _json[r'iEzsignformfieldWidth'] = iEzsignformfieldWidth;
+      _json[r'iEzsignformfieldHeight'] = iEzsignformfieldHeight;
     if (bEzsignformfieldSelected != null) {
-      json[r'bEzsignformfieldSelected'] = bEzsignformfieldSelected;
+      _json[r'bEzsignformfieldSelected'] = bEzsignformfieldSelected;
     }
     if (sEzsignformfieldEnteredvalue != null) {
-      json[r'sEzsignformfieldEnteredvalue'] = sEzsignformfieldEnteredvalue;
+      _json[r'sEzsignformfieldEnteredvalue'] = sEzsignformfieldEnteredvalue;
     }
-    return json;
+    return _json;
   }
 
   /// Returns a new [EzsignformfieldResponseCompound] instance and imports its values from

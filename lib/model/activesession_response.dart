@@ -13,7 +13,7 @@ part of openapi.api;
 class ActivesessionResponse {
   /// Returns a new [ActivesessionResponse] instance.
   ActivesessionResponse({
-    required this.eActivesessionSessiontype,
+    required this.eActivesessionUsertype,
     required this.eActivesessionWeekdaystart,
     required this.fkiLanguageID,
     required this.sCompanyNameX,
@@ -22,7 +22,7 @@ class ActivesessionResponse {
     required this.pksCustomerCode,
   });
 
-  FieldEActivesessionSessiontype eActivesessionSessiontype;
+  FieldEActivesessionUsertype eActivesessionUsertype;
 
   FieldEActivesessionWeekdaystart eActivesessionWeekdaystart;
 
@@ -46,7 +46,7 @@ class ActivesessionResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ActivesessionResponse &&
-     other.eActivesessionSessiontype == eActivesessionSessiontype &&
+     other.eActivesessionUsertype == eActivesessionUsertype &&
      other.eActivesessionWeekdaystart == eActivesessionWeekdaystart &&
      other.fkiLanguageID == fkiLanguageID &&
      other.sCompanyNameX == sCompanyNameX &&
@@ -57,7 +57,7 @@ class ActivesessionResponse {
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (eActivesessionSessiontype.hashCode) +
+    (eActivesessionUsertype.hashCode) +
     (eActivesessionWeekdaystart.hashCode) +
     (fkiLanguageID.hashCode) +
     (sCompanyNameX.hashCode) +
@@ -66,18 +66,18 @@ class ActivesessionResponse {
     (pksCustomerCode.hashCode);
 
   @override
-  String toString() => 'ActivesessionResponse[eActivesessionSessiontype=$eActivesessionSessiontype, eActivesessionWeekdaystart=$eActivesessionWeekdaystart, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, bActivesessionDebug=$bActivesessionDebug, pksCustomerCode=$pksCustomerCode]';
+  String toString() => 'ActivesessionResponse[eActivesessionUsertype=$eActivesessionUsertype, eActivesessionWeekdaystart=$eActivesessionWeekdaystart, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, bActivesessionDebug=$bActivesessionDebug, pksCustomerCode=$pksCustomerCode]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'eActivesessionSessiontype'] = eActivesessionSessiontype;
-      json[r'eActivesessionWeekdaystart'] = eActivesessionWeekdaystart;
-      json[r'fkiLanguageID'] = fkiLanguageID;
-      json[r'sCompanyNameX'] = sCompanyNameX;
-      json[r'sDepartmentNameX'] = sDepartmentNameX;
-      json[r'bActivesessionDebug'] = bActivesessionDebug;
-      json[r'pksCustomerCode'] = pksCustomerCode;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'eActivesessionUsertype'] = eActivesessionUsertype;
+      _json[r'eActivesessionWeekdaystart'] = eActivesessionWeekdaystart;
+      _json[r'fkiLanguageID'] = fkiLanguageID;
+      _json[r'sCompanyNameX'] = sCompanyNameX;
+      _json[r'sDepartmentNameX'] = sDepartmentNameX;
+      _json[r'bActivesessionDebug'] = bActivesessionDebug;
+      _json[r'pksCustomerCode'] = pksCustomerCode;
+    return _json;
   }
 
   /// Returns a new [ActivesessionResponse] instance and imports its values from
@@ -99,7 +99,7 @@ class ActivesessionResponse {
       }());
 
       return ActivesessionResponse(
-        eActivesessionSessiontype: FieldEActivesessionSessiontype.fromJson(json[r'eActivesessionSessiontype'])!,
+        eActivesessionUsertype: FieldEActivesessionUsertype.fromJson(json[r'eActivesessionUsertype'])!,
         eActivesessionWeekdaystart: FieldEActivesessionWeekdaystart.fromJson(json[r'eActivesessionWeekdaystart'])!,
         fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID')!,
         sCompanyNameX: mapValueOfType<String>(json, r'sCompanyNameX')!,
@@ -155,7 +155,7 @@ class ActivesessionResponse {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'eActivesessionSessiontype',
+    'eActivesessionUsertype',
     'eActivesessionWeekdaystart',
     'fkiLanguageID',
     'sCompanyNameX',

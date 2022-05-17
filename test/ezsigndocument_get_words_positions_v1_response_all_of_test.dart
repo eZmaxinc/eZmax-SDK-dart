@@ -16,7 +16,7 @@ void main() {
   // final instance = EzsigndocumentGetWordsPositionsV1ResponseAllOf();
 
   group('test EzsigndocumentGetWordsPositionsV1ResponseAllOf', () {
-    // Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request
+    // Payload for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
     // List<CustomWordPositionWordResponse> mPayload (default value: const [])
     test('to test the property `mPayload`', () async {
       // TODO

@@ -48,14 +48,14 @@ class FranchisereferalincomeCreateObjectV1Request {
   String toString() => 'FranchisereferalincomeCreateObjectV1Request[objFranchisereferalincome=$objFranchisereferalincome, objFranchisereferalincomeCompound=$objFranchisereferalincomeCompound]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
+    final _json = <String, dynamic>{};
     if (objFranchisereferalincome != null) {
-      json[r'objFranchisereferalincome'] = objFranchisereferalincome;
+      _json[r'objFranchisereferalincome'] = objFranchisereferalincome;
     }
     if (objFranchisereferalincomeCompound != null) {
-      json[r'objFranchisereferalincomeCompound'] = objFranchisereferalincomeCompound;
+      _json[r'objFranchisereferalincomeCompound'] = objFranchisereferalincomeCompound;
     }
-    return json;
+    return _json;
   }
 
   /// Returns a new [FranchisereferalincomeCreateObjectV1Request] instance and imports its values from

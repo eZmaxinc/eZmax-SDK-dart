@@ -44,11 +44,11 @@ class EzsigndocumentGetWordsPositionsV1Request {
   String toString() => 'EzsigndocumentGetWordsPositionsV1Request[eGet=$eGet, bWordCaseSensitive=$bWordCaseSensitive, aSWord=$aSWord]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'eGet'] = eGet;
-      json[r'bWordCaseSensitive'] = bWordCaseSensitive;
-      json[r'a_sWord'] = aSWord;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'eGet'] = eGet;
+      _json[r'bWordCaseSensitive'] = bWordCaseSensitive;
+      _json[r'a_sWord'] = aSWord;
+    return _json;
   }
 
   /// Returns a new [EzsigndocumentGetWordsPositionsV1Request] instance and imports its values from

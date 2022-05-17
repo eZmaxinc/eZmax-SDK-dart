@@ -50,12 +50,12 @@ class CustomEzsignsignaturestatusResponse {
   String toString() => 'CustomEzsignsignaturestatusResponse[eEzsignsignaturestatusSteptype=$eEzsignsignaturestatusSteptype, iEzsignsignaturestatusStep=$iEzsignsignaturestatusStep, iEzsignsignaturestatusTotal=$iEzsignsignaturestatusTotal, iEzsignsignaturestatusSigned=$iEzsignsignaturestatusSigned]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'eEzsignsignaturestatusSteptype'] = eEzsignsignaturestatusSteptype;
-      json[r'iEzsignsignaturestatusStep'] = iEzsignsignaturestatusStep;
-      json[r'iEzsignsignaturestatusTotal'] = iEzsignsignaturestatusTotal;
-      json[r'iEzsignsignaturestatusSigned'] = iEzsignsignaturestatusSigned;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'eEzsignsignaturestatusSteptype'] = eEzsignsignaturestatusSteptype;
+      _json[r'iEzsignsignaturestatusStep'] = iEzsignsignaturestatusStep;
+      _json[r'iEzsignsignaturestatusTotal'] = iEzsignsignaturestatusTotal;
+      _json[r'iEzsignsignaturestatusSigned'] = iEzsignsignaturestatusSigned;
+    return _json;
   }
 
   /// Returns a new [CustomEzsignsignaturestatusResponse] instance and imports its values from

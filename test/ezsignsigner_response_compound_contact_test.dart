@@ -52,6 +52,12 @@ void main() {
       // TODO
     });
 
+    // The extension of the phone number.  The extension is the \"123\" section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers
+    // String sPhoneExtension
+    test('to test the property `sPhoneExtension`', () async {
+      // TODO
+    });
+
     // A phone number in E.164 Format
     // String sPhoneE164Cell
     test('to test the property `sPhoneE164Cell`', () async {

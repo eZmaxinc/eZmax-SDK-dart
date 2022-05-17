@@ -34,6 +34,18 @@ void main() {
       // TODO
     });
 
+    // The Name of the Language in the language of the requester
+    // String sLanguageNameX
+    test('to test the property `sLanguageNameX`', () async {
+      // TODO
+    });
+
+    // The name of the Ezsignfoldertype in the language of the requester
+    // String sEzsignfoldertypeNameX
+    test('to test the property `sEzsignfoldertypeNameX`', () async {
+      // TODO
+    });
+
     // The description of the Ezsignbulksend
     // String sEzsignbulksendDescription
     test('to test the property `sEzsignbulksendDescription`', () async {
@@ -43,6 +55,12 @@ void main() {
     // Note about the Ezsignbulksend
     // String tEzsignbulksendNote
     test('to test the property `tEzsignbulksendNote`', () async {
+      // TODO
+    });
+
+    // Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation
+    // bool bEzsignbulksendNeedvalidation
+    test('to test the property `bEzsignbulksendNeedvalidation`', () async {
       // TODO
     });
 

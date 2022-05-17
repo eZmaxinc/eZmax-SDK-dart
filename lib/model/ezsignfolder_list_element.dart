@@ -20,8 +20,8 @@ class EzsignfolderListElement {
     required this.sEzsignfolderDescription,
     required this.eEzsignfolderStep,
     required this.dtCreatedDate,
-    required this.dtEzsignfolderSentdate,
-    required this.dtDueDate,
+    this.dtEzsignfolderSentdate,
+    this.dtEzsignfolderDuedate,
     required this.iEzsigndocument,
     required this.iEzsigndocumentEdm,
     required this.iEzsignsignature,
@@ -48,10 +48,22 @@ class EzsignfolderListElement {
   String dtCreatedDate;
 
   /// The date and time at which the Ezsign folder was sent the last time.
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
   String? dtEzsignfolderSentdate;
 
-  /// Represent a Date Time. The timezone is the one configured in the User's profile.
-  String? dtDueDate;
+  /// The maximum date and time at which the Ezsignfolder can be signed.
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? dtEzsignfolderDuedate;
 
   /// The total number of Ezsigndocument in the folder
   int iEzsigndocument;
@@ -75,7 +87,7 @@ class EzsignfolderListElement {
      other.eEzsignfolderStep == eEzsignfolderStep &&
      other.dtCreatedDate == dtCreatedDate &&
      other.dtEzsignfolderSentdate == dtEzsignfolderSentdate &&
-     other.dtDueDate == dtDueDate &&
+     other.dtEzsignfolderDuedate == dtEzsignfolderDuedate &&
      other.iEzsigndocument == iEzsigndocument &&
      other.iEzsigndocumentEdm == iEzsigndocumentEdm &&
      other.iEzsignsignature == iEzsignsignature &&
@@ -92,35 +104,35 @@ class EzsignfolderListElement {
     (eEzsignfolderStep.hashCode) +
     (dtCreatedDate.hashCode) +
     (dtEzsignfolderSentdate == null ? 0 : dtEzsignfolderSentdate!.hashCode) +
-    (dtDueDate == null ? 0 : dtDueDate!.hashCode) +
+    (dtEzsignfolderDuedate == null ? 0 : dtEzsignfolderDuedate!.hashCode) +
     (iEzsigndocument.hashCode) +
     (iEzsigndocumentEdm.hashCode) +
     (iEzsignsignature.hashCode) +
     (iEzsignsignatureSigned.hashCode);
 
   @override
-  String toString() => 'EzsignfolderListElement[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, eEzsignfoldertypePrivacylevel=$eEzsignfoldertypePrivacylevel, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, sEzsignfolderDescription=$sEzsignfolderDescription, eEzsignfolderStep=$eEzsignfolderStep, dtCreatedDate=$dtCreatedDate, dtEzsignfolderSentdate=$dtEzsignfolderSentdate, dtDueDate=$dtDueDate, iEzsigndocument=$iEzsigndocument, iEzsigndocumentEdm=$iEzsigndocumentEdm, iEzsignsignature=$iEzsignsignature, iEzsignsignatureSigned=$iEzsignsignatureSigned]';
+  String toString() => 'EzsignfolderListElement[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, eEzsignfoldertypePrivacylevel=$eEzsignfoldertypePrivacylevel, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, sEzsignfolderDescription=$sEzsignfolderDescription, eEzsignfolderStep=$eEzsignfolderStep, dtCreatedDate=$dtCreatedDate, dtEzsignfolderSentdate=$dtEzsignfolderSentdate, dtEzsignfolderDuedate=$dtEzsignfolderDuedate, iEzsigndocument=$iEzsigndocument, iEzsigndocumentEdm=$iEzsigndocumentEdm, iEzsignsignature=$iEzsignsignature, iEzsignsignatureSigned=$iEzsignsignatureSigned]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'pkiEzsignfolderID'] = pkiEzsignfolderID;
-      json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
-      json[r'eEzsignfoldertypePrivacylevel'] = eEzsignfoldertypePrivacylevel;
-      json[r'sEzsignfoldertypeNameX'] = sEzsignfoldertypeNameX;
-      json[r'sEzsignfolderDescription'] = sEzsignfolderDescription;
-      json[r'eEzsignfolderStep'] = eEzsignfolderStep;
-      json[r'dtCreatedDate'] = dtCreatedDate;
+    final _json = <String, dynamic>{};
+      _json[r'pkiEzsignfolderID'] = pkiEzsignfolderID;
+      _json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
+      _json[r'eEzsignfoldertypePrivacylevel'] = eEzsignfoldertypePrivacylevel;
+      _json[r'sEzsignfoldertypeNameX'] = sEzsignfoldertypeNameX;
+      _json[r'sEzsignfolderDescription'] = sEzsignfolderDescription;
+      _json[r'eEzsignfolderStep'] = eEzsignfolderStep;
+      _json[r'dtCreatedDate'] = dtCreatedDate;
     if (dtEzsignfolderSentdate != null) {
-      json[r'dtEzsignfolderSentdate'] = dtEzsignfolderSentdate;
+      _json[r'dtEzsignfolderSentdate'] = dtEzsignfolderSentdate;
     }
-    if (dtDueDate != null) {
-      json[r'dtDueDate'] = dtDueDate;
+    if (dtEzsignfolderDuedate != null) {
+      _json[r'dtEzsignfolderDuedate'] = dtEzsignfolderDuedate;
     }
-      json[r'iEzsigndocument'] = iEzsigndocument;
-      json[r'iEzsigndocumentEdm'] = iEzsigndocumentEdm;
-      json[r'iEzsignsignature'] = iEzsignsignature;
-      json[r'iEzsignsignatureSigned'] = iEzsignsignatureSigned;
-    return json;
+      _json[r'iEzsigndocument'] = iEzsigndocument;
+      _json[r'iEzsigndocumentEdm'] = iEzsigndocumentEdm;
+      _json[r'iEzsignsignature'] = iEzsignsignature;
+      _json[r'iEzsignsignatureSigned'] = iEzsignsignatureSigned;
+    return _json;
   }
 
   /// Returns a new [EzsignfolderListElement] instance and imports its values from
@@ -150,7 +162,7 @@ class EzsignfolderListElement {
         eEzsignfolderStep: FieldEEzsignfolderStep.fromJson(json[r'eEzsignfolderStep'])!,
         dtCreatedDate: mapValueOfType<String>(json, r'dtCreatedDate')!,
         dtEzsignfolderSentdate: mapValueOfType<String>(json, r'dtEzsignfolderSentdate'),
-        dtDueDate: mapValueOfType<String>(json, r'dtDueDate'),
+        dtEzsignfolderDuedate: mapValueOfType<String>(json, r'dtEzsignfolderDuedate'),
         iEzsigndocument: mapValueOfType<int>(json, r'iEzsigndocument')!,
         iEzsigndocumentEdm: mapValueOfType<int>(json, r'iEzsigndocumentEdm')!,
         iEzsignsignature: mapValueOfType<int>(json, r'iEzsignsignature')!,
@@ -211,8 +223,6 @@ class EzsignfolderListElement {
     'sEzsignfolderDescription',
     'eEzsignfolderStep',
     'dtCreatedDate',
-    'dtEzsignfolderSentdate',
-    'dtDueDate',
     'iEzsigndocument',
     'iEzsigndocumentEdm',
     'iEzsignsignature',

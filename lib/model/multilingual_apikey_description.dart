@@ -17,7 +17,7 @@ class MultilingualApikeyDescription {
     this.sApikeyDescription2,
   });
 
-  /// Value in French
+  /// The description of the Apikey in French
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -26,7 +26,7 @@ class MultilingualApikeyDescription {
   ///
   String? sApikeyDescription1;
 
-  /// Value in English
+  /// The description of the Apikey in English
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -50,14 +50,14 @@ class MultilingualApikeyDescription {
   String toString() => 'MultilingualApikeyDescription[sApikeyDescription1=$sApikeyDescription1, sApikeyDescription2=$sApikeyDescription2]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
+    final _json = <String, dynamic>{};
     if (sApikeyDescription1 != null) {
-      json[r'sApikeyDescription1'] = sApikeyDescription1;
+      _json[r'sApikeyDescription1'] = sApikeyDescription1;
     }
     if (sApikeyDescription2 != null) {
-      json[r'sApikeyDescription2'] = sApikeyDescription2;
+      _json[r'sApikeyDescription2'] = sApikeyDescription2;
     }
-    return json;
+    return _json;
   }
 
   /// Returns a new [MultilingualApikeyDescription] instance and imports its values from

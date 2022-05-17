@@ -29,7 +29,9 @@ class ObjectFranchiseofficeApi {
   ///
   /// * [String] sQuery:
   ///   Allow to filter the returned results
-  Future<Response> franchiseofficeGetAutocompleteV1WithHttpInfo(String sSelector, { String? sQuery, }) async {
+  ///
+  /// * [HeaderAcceptLanguage] acceptLanguage:
+  Future<Response> franchiseofficeGetAutocompleteV1WithHttpInfo(String sSelector, { String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/franchiseoffice/getAutocomplete/{sSelector}'
       .replaceAll('{sSelector}', sSelector);
@@ -45,7 +47,10 @@ class ObjectFranchiseofficeApi {
       queryParams.addAll(_queryParams('', 'sQuery', sQuery));
     }
 
-    const authNames = <String>['Authorization'];
+    if (acceptLanguage != null) {
+      headerParams[r'Accept-Language'] = parameterToString(acceptLanguage);
+    }
+
     const contentTypes = <String>[];
 
 
@@ -57,7 +62,6 @@ class ObjectFranchiseofficeApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
-      authNames,
     );
   }
 
@@ -72,8 +76,10 @@ class ObjectFranchiseofficeApi {
   ///
   /// * [String] sQuery:
   ///   Allow to filter the returned results
-  Future<CommonGetAutocompleteV1Response?> franchiseofficeGetAutocompleteV1(String sSelector, { String? sQuery, }) async {
-    final response = await franchiseofficeGetAutocompleteV1WithHttpInfo(sSelector,  sQuery: sQuery, );
+  ///
+  /// * [HeaderAcceptLanguage] acceptLanguage:
+  Future<CommonGetAutocompleteV1Response?> franchiseofficeGetAutocompleteV1(String sSelector, { String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
+    final response = await franchiseofficeGetAutocompleteV1WithHttpInfo(sSelector,  sQuery: sQuery, acceptLanguage: acceptLanguage, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

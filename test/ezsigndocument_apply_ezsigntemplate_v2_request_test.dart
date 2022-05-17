@@ -16,7 +16,7 @@ void main() {
   // final instance = EzsigndocumentApplyEzsigntemplateV2Request();
 
   group('test EzsigndocumentApplyEzsigntemplateV2Request', () {
-    // The unique ID of the Ezsigndocument
+    // The unique ID of the Ezsigntemplate
     // int fkiEzsigntemplateID
     test('to test the property `fkiEzsigntemplateID`', () async {
       // TODO

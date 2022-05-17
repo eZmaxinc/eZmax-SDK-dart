@@ -51,7 +51,6 @@ class ObjectEzsignfoldertypeApi {
       headerParams[r'Accept-Language'] = parameterToString(acceptLanguage);
     }
 
-    const authNames = <String>['Authorization'];
     const contentTypes = <String>[];
 
 
@@ -63,7 +62,6 @@ class ObjectEzsignfoldertypeApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
-      authNames,
     );
   }
 
@@ -141,7 +139,6 @@ class ObjectEzsignfoldertypeApi {
       headerParams[r'Accept-Language'] = parameterToString(acceptLanguage);
     }
 
-    const authNames = <String>['Authorization'];
     const contentTypes = <String>[];
 
 
@@ -153,7 +150,6 @@ class ObjectEzsignfoldertypeApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
-      authNames,
     );
   }
 

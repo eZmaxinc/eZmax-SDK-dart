@@ -36,7 +36,6 @@ class ObjectApikeyApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const authNames = <String>['Authorization'];
     const contentTypes = <String>['application/json'];
 
 
@@ -48,7 +47,6 @@ class ObjectApikeyApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
-      authNames,
     );
   }
 
@@ -94,7 +92,6 @@ class ObjectApikeyApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const authNames = <String>['Authorization'];
     const contentTypes = <String>['application/json'];
 
 
@@ -106,7 +103,6 @@ class ObjectApikeyApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
-      authNames,
     );
   }
 

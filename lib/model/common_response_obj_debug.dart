@@ -56,13 +56,13 @@ class CommonResponseObjDebug {
   String toString() => 'CommonResponseObjDebug[sMemoryUsage=$sMemoryUsage, sRunTime=$sRunTime, iSQLSelects=$iSQLSelects, iSQLQueries=$iSQLQueries, aObjSQLQuery=$aObjSQLQuery]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'sMemoryUsage'] = sMemoryUsage;
-      json[r'sRunTime'] = sRunTime;
-      json[r'iSQLSelects'] = iSQLSelects;
-      json[r'iSQLQueries'] = iSQLQueries;
-      json[r'a_objSQLQuery'] = aObjSQLQuery;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'sMemoryUsage'] = sMemoryUsage;
+      _json[r'sRunTime'] = sRunTime;
+      _json[r'iSQLSelects'] = iSQLSelects;
+      _json[r'iSQLQueries'] = iSQLQueries;
+      _json[r'a_objSQLQuery'] = aObjSQLQuery;
+    return _json;
   }
 
   /// Returns a new [CommonResponseObjDebug] instance and imports its values from

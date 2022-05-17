@@ -77,21 +77,21 @@ class EzsignsignerRequest {
   String toString() => 'EzsignsignerRequest[fkiUserlogintypeID=$fkiUserlogintypeID, fkiTaxassignmentID=$fkiTaxassignmentID, fkiSecretquestionID=$fkiSecretquestionID, eEzsignsignerLogintype=$eEzsignsignerLogintype, sEzsignsignerSecretanswer=$sEzsignsignerSecretanswer]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
+    final _json = <String, dynamic>{};
     if (fkiUserlogintypeID != null) {
-      json[r'fkiUserlogintypeID'] = fkiUserlogintypeID;
+      _json[r'fkiUserlogintypeID'] = fkiUserlogintypeID;
     }
-      json[r'fkiTaxassignmentID'] = fkiTaxassignmentID;
+      _json[r'fkiTaxassignmentID'] = fkiTaxassignmentID;
     if (fkiSecretquestionID != null) {
-      json[r'fkiSecretquestionID'] = fkiSecretquestionID;
+      _json[r'fkiSecretquestionID'] = fkiSecretquestionID;
     }
     if (eEzsignsignerLogintype != null) {
-      json[r'eEzsignsignerLogintype'] = eEzsignsignerLogintype;
+      _json[r'eEzsignsignerLogintype'] = eEzsignsignerLogintype;
     }
     if (sEzsignsignerSecretanswer != null) {
-      json[r'sEzsignsignerSecretanswer'] = sEzsignsignerSecretanswer;
+      _json[r'sEzsignsignerSecretanswer'] = sEzsignsignerSecretanswer;
     }
-    return json;
+    return _json;
   }
 
   /// Returns a new [EzsignsignerRequest] instance and imports its values from

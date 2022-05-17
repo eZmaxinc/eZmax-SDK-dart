@@ -31,9 +31,9 @@ class EzsignsignatureCreateObjectV1ResponseAllOf {
   String toString() => 'EzsignsignatureCreateObjectV1ResponseAllOf[mPayload=$mPayload]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'mPayload'] = mPayload;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'mPayload'] = mPayload;
+    return _json;
   }
 
   /// Returns a new [EzsignsignatureCreateObjectV1ResponseAllOf] instance and imports its values from

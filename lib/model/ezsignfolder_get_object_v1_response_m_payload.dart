@@ -23,8 +23,8 @@ class EzsignfolderGetObjectV1ResponseMPayload {
     required this.sEzsignfolderDescription,
     required this.tEzsignfolderNote,
     required this.eEzsignfolderSendreminderfrequency,
-    required this.dtEzsignfolderDuedate,
-    required this.dtEzsignfolderSentdate,
+    this.dtEzsignfolderDuedate,
+    this.dtEzsignfolderSentdate,
     required this.dtEzsignfolderScheduledarchive,
     required this.dtEzsignfolderScheduleddestruction,
     required this.eEzsignfolderStep,
@@ -65,9 +65,21 @@ class EzsignfolderGetObjectV1ResponseMPayload {
   FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency;
 
   /// The maximum date and time at which the Ezsignfolder can be signed.
-  String dtEzsignfolderDuedate;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? dtEzsignfolderDuedate;
 
   /// The date and time at which the Ezsign folder was sent the last time.
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
   String? dtEzsignfolderSentdate;
 
   /// The scheduled date and time at which the Ezsignfolder should be archived.
@@ -116,7 +128,7 @@ class EzsignfolderGetObjectV1ResponseMPayload {
     (sEzsignfolderDescription.hashCode) +
     (tEzsignfolderNote.hashCode) +
     (eEzsignfolderSendreminderfrequency.hashCode) +
-    (dtEzsignfolderDuedate.hashCode) +
+    (dtEzsignfolderDuedate == null ? 0 : dtEzsignfolderDuedate!.hashCode) +
     (dtEzsignfolderSentdate == null ? 0 : dtEzsignfolderSentdate!.hashCode) +
     (dtEzsignfolderScheduledarchive.hashCode) +
     (dtEzsignfolderScheduleddestruction.hashCode) +
@@ -128,27 +140,29 @@ class EzsignfolderGetObjectV1ResponseMPayload {
   String toString() => 'EzsignfolderGetObjectV1ResponseMPayload[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, fkiBillingentityinternalID=$fkiBillingentityinternalID, sBillingentityinternalDescriptionX=$sBillingentityinternalDescriptionX, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sEzsigntsarequirementDescriptionX=$sEzsigntsarequirementDescriptionX, sEzsignfolderDescription=$sEzsignfolderDescription, tEzsignfolderNote=$tEzsignfolderNote, eEzsignfolderSendreminderfrequency=$eEzsignfolderSendreminderfrequency, dtEzsignfolderDuedate=$dtEzsignfolderDuedate, dtEzsignfolderSentdate=$dtEzsignfolderSentdate, dtEzsignfolderScheduledarchive=$dtEzsignfolderScheduledarchive, dtEzsignfolderScheduleddestruction=$dtEzsignfolderScheduleddestruction, eEzsignfolderStep=$eEzsignfolderStep, dtEzsignfolderClose=$dtEzsignfolderClose, objAudit=$objAudit]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'pkiEzsignfolderID'] = pkiEzsignfolderID;
-      json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
-      json[r'sEzsignfoldertypeNameX'] = sEzsignfoldertypeNameX;
-      json[r'fkiBillingentityinternalID'] = fkiBillingentityinternalID;
-      json[r'sBillingentityinternalDescriptionX'] = sBillingentityinternalDescriptionX;
-      json[r'fkiEzsigntsarequirementID'] = fkiEzsigntsarequirementID;
-      json[r'sEzsigntsarequirementDescriptionX'] = sEzsigntsarequirementDescriptionX;
-      json[r'sEzsignfolderDescription'] = sEzsignfolderDescription;
-      json[r'tEzsignfolderNote'] = tEzsignfolderNote;
-      json[r'eEzsignfolderSendreminderfrequency'] = eEzsignfolderSendreminderfrequency;
-      json[r'dtEzsignfolderDuedate'] = dtEzsignfolderDuedate;
-    if (dtEzsignfolderSentdate != null) {
-      json[r'dtEzsignfolderSentdate'] = dtEzsignfolderSentdate;
+    final _json = <String, dynamic>{};
+      _json[r'pkiEzsignfolderID'] = pkiEzsignfolderID;
+      _json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
+      _json[r'sEzsignfoldertypeNameX'] = sEzsignfoldertypeNameX;
+      _json[r'fkiBillingentityinternalID'] = fkiBillingentityinternalID;
+      _json[r'sBillingentityinternalDescriptionX'] = sBillingentityinternalDescriptionX;
+      _json[r'fkiEzsigntsarequirementID'] = fkiEzsigntsarequirementID;
+      _json[r'sEzsigntsarequirementDescriptionX'] = sEzsigntsarequirementDescriptionX;
+      _json[r'sEzsignfolderDescription'] = sEzsignfolderDescription;
+      _json[r'tEzsignfolderNote'] = tEzsignfolderNote;
+      _json[r'eEzsignfolderSendreminderfrequency'] = eEzsignfolderSendreminderfrequency;
+    if (dtEzsignfolderDuedate != null) {
+      _json[r'dtEzsignfolderDuedate'] = dtEzsignfolderDuedate;
     }
-      json[r'dtEzsignfolderScheduledarchive'] = dtEzsignfolderScheduledarchive;
-      json[r'dtEzsignfolderScheduleddestruction'] = dtEzsignfolderScheduleddestruction;
-      json[r'eEzsignfolderStep'] = eEzsignfolderStep;
-      json[r'dtEzsignfolderClose'] = dtEzsignfolderClose;
-      json[r'objAudit'] = objAudit;
-    return json;
+    if (dtEzsignfolderSentdate != null) {
+      _json[r'dtEzsignfolderSentdate'] = dtEzsignfolderSentdate;
+    }
+      _json[r'dtEzsignfolderScheduledarchive'] = dtEzsignfolderScheduledarchive;
+      _json[r'dtEzsignfolderScheduleddestruction'] = dtEzsignfolderScheduleddestruction;
+      _json[r'eEzsignfolderStep'] = eEzsignfolderStep;
+      _json[r'dtEzsignfolderClose'] = dtEzsignfolderClose;
+      _json[r'objAudit'] = objAudit;
+    return _json;
   }
 
   /// Returns a new [EzsignfolderGetObjectV1ResponseMPayload] instance and imports its values from
@@ -180,7 +194,7 @@ class EzsignfolderGetObjectV1ResponseMPayload {
         sEzsignfolderDescription: mapValueOfType<String>(json, r'sEzsignfolderDescription')!,
         tEzsignfolderNote: mapValueOfType<String>(json, r'tEzsignfolderNote')!,
         eEzsignfolderSendreminderfrequency: FieldEEzsignfolderSendreminderfrequency.fromJson(json[r'eEzsignfolderSendreminderfrequency'])!,
-        dtEzsignfolderDuedate: mapValueOfType<String>(json, r'dtEzsignfolderDuedate')!,
+        dtEzsignfolderDuedate: mapValueOfType<String>(json, r'dtEzsignfolderDuedate'),
         dtEzsignfolderSentdate: mapValueOfType<String>(json, r'dtEzsignfolderSentdate'),
         dtEzsignfolderScheduledarchive: mapValueOfType<String>(json, r'dtEzsignfolderScheduledarchive')!,
         dtEzsignfolderScheduleddestruction: mapValueOfType<String>(json, r'dtEzsignfolderScheduleddestruction')!,
@@ -246,8 +260,6 @@ class EzsignfolderGetObjectV1ResponseMPayload {
     'sEzsignfolderDescription',
     'tEzsignfolderNote',
     'eEzsignfolderSendreminderfrequency',
-    'dtEzsignfolderDuedate',
-    'dtEzsignfolderSentdate',
     'dtEzsignfolderScheduledarchive',
     'dtEzsignfolderScheduleddestruction',
     'eEzsignfolderStep',

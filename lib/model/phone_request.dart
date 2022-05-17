@@ -97,25 +97,25 @@ class PhoneRequest {
   String toString() => 'PhoneRequest[fkiPhonetypeID=$fkiPhonetypeID, ePhoneType=$ePhoneType, sPhoneRegion=$sPhoneRegion, sPhoneExchange=$sPhoneExchange, sPhoneNumber=$sPhoneNumber, sPhoneInternational=$sPhoneInternational, sPhoneExtension=$sPhoneExtension]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'fkiPhonetypeID'] = fkiPhonetypeID;
-      json[r'ePhoneType'] = ePhoneType;
+    final _json = <String, dynamic>{};
+      _json[r'fkiPhonetypeID'] = fkiPhonetypeID;
+      _json[r'ePhoneType'] = ePhoneType;
     if (sPhoneRegion != null) {
-      json[r'sPhoneRegion'] = sPhoneRegion;
+      _json[r'sPhoneRegion'] = sPhoneRegion;
     }
     if (sPhoneExchange != null) {
-      json[r'sPhoneExchange'] = sPhoneExchange;
+      _json[r'sPhoneExchange'] = sPhoneExchange;
     }
     if (sPhoneNumber != null) {
-      json[r'sPhoneNumber'] = sPhoneNumber;
+      _json[r'sPhoneNumber'] = sPhoneNumber;
     }
     if (sPhoneInternational != null) {
-      json[r'sPhoneInternational'] = sPhoneInternational;
+      _json[r'sPhoneInternational'] = sPhoneInternational;
     }
     if (sPhoneExtension != null) {
-      json[r'sPhoneExtension'] = sPhoneExtension;
+      _json[r'sPhoneExtension'] = sPhoneExtension;
     }
-    return json;
+    return _json;
   }
 
   /// Returns a new [PhoneRequest] instance and imports its values from

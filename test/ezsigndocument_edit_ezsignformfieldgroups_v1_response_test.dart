@@ -16,6 +16,11 @@ void main() {
   // final instance = EzsigndocumentEditEzsignformfieldgroupsV1Response();
 
   group('test EzsigndocumentEditEzsignformfieldgroupsV1Response', () {
+    // EzsigndocumentEditEzsignformfieldgroupsV1ResponseMPayload mPayload
+    test('to test the property `mPayload`', () async {
+      // TODO
+    });
+
     // CommonResponseObjDebugPayload objDebugPayload
     test('to test the property `objDebugPayload`', () async {
       // TODO

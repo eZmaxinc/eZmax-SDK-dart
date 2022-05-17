@@ -36,7 +36,6 @@ class ObjectEzsignfoldersignerassociationApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const authNames = <String>['Authorization'];
     const contentTypes = <String>['application/json'];
 
 
@@ -48,7 +47,6 @@ class ObjectEzsignfoldersignerassociationApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
-      authNames,
     );
   }
 
@@ -94,7 +92,6 @@ class ObjectEzsignfoldersignerassociationApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const authNames = <String>['Authorization'];
     const contentTypes = <String>['application/json'];
 
 
@@ -106,7 +103,6 @@ class ObjectEzsignfoldersignerassociationApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
-      authNames,
     );
   }
 
@@ -153,7 +149,6 @@ class ObjectEzsignfoldersignerassociationApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const authNames = <String>['Authorization'];
     const contentTypes = <String>[];
 
 
@@ -165,7 +160,6 @@ class ObjectEzsignfoldersignerassociationApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
-      authNames,
     );
   }
 
@@ -186,6 +180,67 @@ class ObjectEzsignfoldersignerassociationApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfoldersignerassociationDeleteObjectV1Response',) as EzsignfoldersignerassociationDeleteObjectV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Edit an existing Ezsignfoldersignerassociation
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfoldersignerassociationID (required):
+  ///
+  /// * [EzsignfoldersignerassociationEditObjectV1Request] ezsignfoldersignerassociationEditObjectV1Request (required):
+  Future<Response> ezsignfoldersignerassociationEditObjectV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}'
+      .replaceAll('{pkiEzsignfoldersignerassociationID}', pkiEzsignfoldersignerassociationID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = ezsignfoldersignerassociationEditObjectV1Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'PUT',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Edit an existing Ezsignfoldersignerassociation
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfoldersignerassociationID (required):
+  ///
+  /// * [EzsignfoldersignerassociationEditObjectV1Request] ezsignfoldersignerassociationEditObjectV1Request (required):
+  Future<EzsignfoldersignerassociationEditObjectV1Response?> ezsignfoldersignerassociationEditObjectV1(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request,) async {
+    final response = await ezsignfoldersignerassociationEditObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationEditObjectV1Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfoldersignerassociationEditObjectV1Response',) as EzsignfoldersignerassociationEditObjectV1Response;
     
     }
     return null;
@@ -212,7 +267,6 @@ class ObjectEzsignfoldersignerassociationApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const authNames = <String>['Authorization'];
     const contentTypes = <String>[];
 
 
@@ -224,7 +278,6 @@ class ObjectEzsignfoldersignerassociationApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
-      authNames,
     );
   }
 
@@ -271,7 +324,6 @@ class ObjectEzsignfoldersignerassociationApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const authNames = <String>['Authorization'];
     const contentTypes = <String>[];
 
 
@@ -283,7 +335,6 @@ class ObjectEzsignfoldersignerassociationApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
-      authNames,
     );
   }
 

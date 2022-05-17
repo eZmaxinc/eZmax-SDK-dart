@@ -114,24 +114,24 @@ class FranchisereferalincomeRequestCompound {
   String toString() => 'FranchisereferalincomeRequestCompound[pkiFranchisereferalincomeID=$pkiFranchisereferalincomeID, fkiFranchisebrokerID=$fkiFranchisebrokerID, fkiFranchisereferalincomeprogramID=$fkiFranchisereferalincomeprogramID, fkiPeriodID=$fkiPeriodID, dFranchisereferalincomeLoan=$dFranchisereferalincomeLoan, dFranchisereferalincomeFranchiseamount=$dFranchisereferalincomeFranchiseamount, dFranchisereferalincomeFranchisoramount=$dFranchisereferalincomeFranchisoramount, dFranchisereferalincomeAgentamount=$dFranchisereferalincomeAgentamount, dtFranchisereferalincomeDisbursed=$dtFranchisereferalincomeDisbursed, tFranchisereferalincomeComment=$tFranchisereferalincomeComment, fkiFranchiseofficeID=$fkiFranchiseofficeID, sFranchisereferalincomeRemoteid=$sFranchisereferalincomeRemoteid, objAddress=$objAddress, aObjContact=$aObjContact]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
+    final _json = <String, dynamic>{};
     if (pkiFranchisereferalincomeID != null) {
-      json[r'pkiFranchisereferalincomeID'] = pkiFranchisereferalincomeID;
+      _json[r'pkiFranchisereferalincomeID'] = pkiFranchisereferalincomeID;
     }
-      json[r'fkiFranchisebrokerID'] = fkiFranchisebrokerID;
-      json[r'fkiFranchisereferalincomeprogramID'] = fkiFranchisereferalincomeprogramID;
-      json[r'fkiPeriodID'] = fkiPeriodID;
-      json[r'dFranchisereferalincomeLoan'] = dFranchisereferalincomeLoan;
-      json[r'dFranchisereferalincomeFranchiseamount'] = dFranchisereferalincomeFranchiseamount;
-      json[r'dFranchisereferalincomeFranchisoramount'] = dFranchisereferalincomeFranchisoramount;
-      json[r'dFranchisereferalincomeAgentamount'] = dFranchisereferalincomeAgentamount;
-      json[r'dtFranchisereferalincomeDisbursed'] = dtFranchisereferalincomeDisbursed;
-      json[r'tFranchisereferalincomeComment'] = tFranchisereferalincomeComment;
-      json[r'fkiFranchiseofficeID'] = fkiFranchiseofficeID;
-      json[r'sFranchisereferalincomeRemoteid'] = sFranchisereferalincomeRemoteid;
-      json[r'objAddress'] = objAddress;
-      json[r'a_objContact'] = aObjContact;
-    return json;
+      _json[r'fkiFranchisebrokerID'] = fkiFranchisebrokerID;
+      _json[r'fkiFranchisereferalincomeprogramID'] = fkiFranchisereferalincomeprogramID;
+      _json[r'fkiPeriodID'] = fkiPeriodID;
+      _json[r'dFranchisereferalincomeLoan'] = dFranchisereferalincomeLoan;
+      _json[r'dFranchisereferalincomeFranchiseamount'] = dFranchisereferalincomeFranchiseamount;
+      _json[r'dFranchisereferalincomeFranchisoramount'] = dFranchisereferalincomeFranchisoramount;
+      _json[r'dFranchisereferalincomeAgentamount'] = dFranchisereferalincomeAgentamount;
+      _json[r'dtFranchisereferalincomeDisbursed'] = dtFranchisereferalincomeDisbursed;
+      _json[r'tFranchisereferalincomeComment'] = tFranchisereferalincomeComment;
+      _json[r'fkiFranchiseofficeID'] = fkiFranchiseofficeID;
+      _json[r'sFranchisereferalincomeRemoteid'] = sFranchisereferalincomeRemoteid;
+      _json[r'objAddress'] = objAddress;
+      _json[r'a_objContact'] = aObjContact;
+    return _json;
   }
 
   /// Returns a new [FranchisereferalincomeRequestCompound] instance and imports its values from

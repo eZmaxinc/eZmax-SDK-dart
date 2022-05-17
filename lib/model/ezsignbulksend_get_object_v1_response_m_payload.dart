@@ -16,10 +16,15 @@ class EzsignbulksendGetObjectV1ResponseMPayload {
     required this.pkiEzsignbulksendID,
     required this.fkiEzsignfoldertypeID,
     required this.fkiLanguageID,
+    required this.sLanguageNameX,
+    required this.sEzsignfoldertypeNameX,
     required this.sEzsignbulksendDescription,
     required this.tEzsignbulksendNote,
+    required this.bEzsignbulksendNeedvalidation,
     required this.bEzsignbulksendIsactive,
     required this.objAudit,
+    this.aObjEzsignbulksenddocumentmapping = const [],
+    this.aObjEzsignbulksendsignermapping = const [],
   });
 
   /// The unique ID of the Ezsignbulksend
@@ -34,26 +39,44 @@ class EzsignbulksendGetObjectV1ResponseMPayload {
   /// Maximum value: 2
   int fkiLanguageID;
 
+  /// The Name of the Language in the language of the requester
+  String sLanguageNameX;
+
+  /// The name of the Ezsignfoldertype in the language of the requester
+  String sEzsignfoldertypeNameX;
+
   /// The description of the Ezsignbulksend
   String sEzsignbulksendDescription;
 
   /// Note about the Ezsignbulksend
   String tEzsignbulksendNote;
 
+  /// Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation
+  bool bEzsignbulksendNeedvalidation;
+
   /// Whether the Ezsignbulksend is active or not
   bool bEzsignbulksendIsactive;
 
   CommonAudit objAudit;
+
+  List<EzsignbulksenddocumentmappingResponseCompound> aObjEzsignbulksenddocumentmapping;
+
+  List<EzsignbulksendsignermappingResponse> aObjEzsignbulksendsignermapping;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignbulksendGetObjectV1ResponseMPayload &&
      other.pkiEzsignbulksendID == pkiEzsignbulksendID &&
      other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
      other.fkiLanguageID == fkiLanguageID &&
+     other.sLanguageNameX == sLanguageNameX &&
+     other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
      other.sEzsignbulksendDescription == sEzsignbulksendDescription &&
      other.tEzsignbulksendNote == tEzsignbulksendNote &&
+     other.bEzsignbulksendNeedvalidation == bEzsignbulksendNeedvalidation &&
      other.bEzsignbulksendIsactive == bEzsignbulksendIsactive &&
-     other.objAudit == objAudit;
+     other.objAudit == objAudit &&
+     other.aObjEzsignbulksenddocumentmapping == aObjEzsignbulksenddocumentmapping &&
+     other.aObjEzsignbulksendsignermapping == aObjEzsignbulksendsignermapping;
 
   @override
   int get hashCode =>
@@ -61,24 +84,34 @@ class EzsignbulksendGetObjectV1ResponseMPayload {
     (pkiEzsignbulksendID.hashCode) +
     (fkiEzsignfoldertypeID.hashCode) +
     (fkiLanguageID.hashCode) +
+    (sLanguageNameX.hashCode) +
+    (sEzsignfoldertypeNameX.hashCode) +
     (sEzsignbulksendDescription.hashCode) +
     (tEzsignbulksendNote.hashCode) +
+    (bEzsignbulksendNeedvalidation.hashCode) +
     (bEzsignbulksendIsactive.hashCode) +
-    (objAudit.hashCode);
+    (objAudit.hashCode) +
+    (aObjEzsignbulksenddocumentmapping.hashCode) +
+    (aObjEzsignbulksendsignermapping.hashCode);
 
   @override
-  String toString() => 'EzsignbulksendGetObjectV1ResponseMPayload[pkiEzsignbulksendID=$pkiEzsignbulksendID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiLanguageID=$fkiLanguageID, sEzsignbulksendDescription=$sEzsignbulksendDescription, tEzsignbulksendNote=$tEzsignbulksendNote, bEzsignbulksendIsactive=$bEzsignbulksendIsactive, objAudit=$objAudit]';
+  String toString() => 'EzsignbulksendGetObjectV1ResponseMPayload[pkiEzsignbulksendID=$pkiEzsignbulksendID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiLanguageID=$fkiLanguageID, sLanguageNameX=$sLanguageNameX, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, sEzsignbulksendDescription=$sEzsignbulksendDescription, tEzsignbulksendNote=$tEzsignbulksendNote, bEzsignbulksendNeedvalidation=$bEzsignbulksendNeedvalidation, bEzsignbulksendIsactive=$bEzsignbulksendIsactive, objAudit=$objAudit, aObjEzsignbulksenddocumentmapping=$aObjEzsignbulksenddocumentmapping, aObjEzsignbulksendsignermapping=$aObjEzsignbulksendsignermapping]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'pkiEzsignbulksendID'] = pkiEzsignbulksendID;
-      json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
-      json[r'fkiLanguageID'] = fkiLanguageID;
-      json[r'sEzsignbulksendDescription'] = sEzsignbulksendDescription;
-      json[r'tEzsignbulksendNote'] = tEzsignbulksendNote;
-      json[r'bEzsignbulksendIsactive'] = bEzsignbulksendIsactive;
-      json[r'objAudit'] = objAudit;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'pkiEzsignbulksendID'] = pkiEzsignbulksendID;
+      _json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
+      _json[r'fkiLanguageID'] = fkiLanguageID;
+      _json[r'sLanguageNameX'] = sLanguageNameX;
+      _json[r'sEzsignfoldertypeNameX'] = sEzsignfoldertypeNameX;
+      _json[r'sEzsignbulksendDescription'] = sEzsignbulksendDescription;
+      _json[r'tEzsignbulksendNote'] = tEzsignbulksendNote;
+      _json[r'bEzsignbulksendNeedvalidation'] = bEzsignbulksendNeedvalidation;
+      _json[r'bEzsignbulksendIsactive'] = bEzsignbulksendIsactive;
+      _json[r'objAudit'] = objAudit;
+      _json[r'a_objEzsignbulksenddocumentmapping'] = aObjEzsignbulksenddocumentmapping;
+      _json[r'a_objEzsignbulksendsignermapping'] = aObjEzsignbulksendsignermapping;
+    return _json;
   }
 
   /// Returns a new [EzsignbulksendGetObjectV1ResponseMPayload] instance and imports its values from
@@ -103,10 +136,15 @@ class EzsignbulksendGetObjectV1ResponseMPayload {
         pkiEzsignbulksendID: mapValueOfType<int>(json, r'pkiEzsignbulksendID')!,
         fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID')!,
         fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID')!,
+        sLanguageNameX: mapValueOfType<String>(json, r'sLanguageNameX')!,
+        sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX')!,
         sEzsignbulksendDescription: mapValueOfType<String>(json, r'sEzsignbulksendDescription')!,
         tEzsignbulksendNote: mapValueOfType<String>(json, r'tEzsignbulksendNote')!,
+        bEzsignbulksendNeedvalidation: mapValueOfType<bool>(json, r'bEzsignbulksendNeedvalidation')!,
         bEzsignbulksendIsactive: mapValueOfType<bool>(json, r'bEzsignbulksendIsactive')!,
         objAudit: CommonAudit.fromJson(json[r'objAudit'])!,
+        aObjEzsignbulksenddocumentmapping: EzsignbulksenddocumentmappingResponseCompound.listFromJson(json[r'a_objEzsignbulksenddocumentmapping'])!,
+        aObjEzsignbulksendsignermapping: EzsignbulksendsignermappingResponse.listFromJson(json[r'a_objEzsignbulksendsignermapping'])!,
       );
     }
     return null;
@@ -159,10 +197,15 @@ class EzsignbulksendGetObjectV1ResponseMPayload {
     'pkiEzsignbulksendID',
     'fkiEzsignfoldertypeID',
     'fkiLanguageID',
+    'sLanguageNameX',
+    'sEzsignfoldertypeNameX',
     'sEzsignbulksendDescription',
     'tEzsignbulksendNote',
+    'bEzsignbulksendNeedvalidation',
     'bEzsignbulksendIsactive',
     'objAudit',
+    'a_objEzsignbulksenddocumentmapping',
+    'a_objEzsignbulksendsignermapping',
   };
 }
 

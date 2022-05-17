@@ -27,6 +27,7 @@ class EzsigndocumentResponse {
     required this.iEzsigndocumentSignaturetotal,
     required this.sEzsigndocumentMD5initial,
     required this.sEzsigndocumentMD5signed,
+    required this.bEzsigndocumentEzsignform,
     required this.objAudit,
   });
 
@@ -74,6 +75,9 @@ class EzsigndocumentResponse {
   /// MD5 Hash of the final PDF Document after all signatures were applied to it.
   String sEzsigndocumentMD5signed;
 
+  /// If the Ezsigndocument contains an Ezsignform or not
+  bool bEzsigndocumentEzsignform;
+
   CommonAudit objAudit;
 
   @override
@@ -92,6 +96,7 @@ class EzsigndocumentResponse {
      other.iEzsigndocumentSignaturetotal == iEzsigndocumentSignaturetotal &&
      other.sEzsigndocumentMD5initial == sEzsigndocumentMD5initial &&
      other.sEzsigndocumentMD5signed == sEzsigndocumentMD5signed &&
+     other.bEzsigndocumentEzsignform == bEzsigndocumentEzsignform &&
      other.objAudit == objAudit;
 
   @override
@@ -111,29 +116,31 @@ class EzsigndocumentResponse {
     (iEzsigndocumentSignaturetotal.hashCode) +
     (sEzsigndocumentMD5initial.hashCode) +
     (sEzsigndocumentMD5signed.hashCode) +
+    (bEzsigndocumentEzsignform.hashCode) +
     (objAudit.hashCode);
 
   @override
-  String toString() => 'EzsigndocumentResponse[fkiEzsignfolderID=$fkiEzsignfolderID, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, fkiLanguageID=$fkiLanguageID, sEzsigndocumentName=$sEzsigndocumentName, pkiEzsigndocumentID=$pkiEzsigndocumentID, eEzsigndocumentStep=$eEzsigndocumentStep, dtEzsigndocumentFirstsend=$dtEzsigndocumentFirstsend, dtEzsigndocumentLastsend=$dtEzsigndocumentLastsend, iEzsigndocumentOrder=$iEzsigndocumentOrder, iEzsigndocumentPagetotal=$iEzsigndocumentPagetotal, iEzsigndocumentSignaturesigned=$iEzsigndocumentSignaturesigned, iEzsigndocumentSignaturetotal=$iEzsigndocumentSignaturetotal, sEzsigndocumentMD5initial=$sEzsigndocumentMD5initial, sEzsigndocumentMD5signed=$sEzsigndocumentMD5signed, objAudit=$objAudit]';
+  String toString() => 'EzsigndocumentResponse[fkiEzsignfolderID=$fkiEzsignfolderID, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, fkiLanguageID=$fkiLanguageID, sEzsigndocumentName=$sEzsigndocumentName, pkiEzsigndocumentID=$pkiEzsigndocumentID, eEzsigndocumentStep=$eEzsigndocumentStep, dtEzsigndocumentFirstsend=$dtEzsigndocumentFirstsend, dtEzsigndocumentLastsend=$dtEzsigndocumentLastsend, iEzsigndocumentOrder=$iEzsigndocumentOrder, iEzsigndocumentPagetotal=$iEzsigndocumentPagetotal, iEzsigndocumentSignaturesigned=$iEzsigndocumentSignaturesigned, iEzsigndocumentSignaturetotal=$iEzsigndocumentSignaturetotal, sEzsigndocumentMD5initial=$sEzsigndocumentMD5initial, sEzsigndocumentMD5signed=$sEzsigndocumentMD5signed, bEzsigndocumentEzsignform=$bEzsigndocumentEzsignform, objAudit=$objAudit]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'fkiEzsignfolderID'] = fkiEzsignfolderID;
-      json[r'dtEzsigndocumentDuedate'] = dtEzsigndocumentDuedate;
-      json[r'fkiLanguageID'] = fkiLanguageID;
-      json[r'sEzsigndocumentName'] = sEzsigndocumentName;
-      json[r'pkiEzsigndocumentID'] = pkiEzsigndocumentID;
-      json[r'eEzsigndocumentStep'] = eEzsigndocumentStep;
-      json[r'dtEzsigndocumentFirstsend'] = dtEzsigndocumentFirstsend;
-      json[r'dtEzsigndocumentLastsend'] = dtEzsigndocumentLastsend;
-      json[r'iEzsigndocumentOrder'] = iEzsigndocumentOrder;
-      json[r'iEzsigndocumentPagetotal'] = iEzsigndocumentPagetotal;
-      json[r'iEzsigndocumentSignaturesigned'] = iEzsigndocumentSignaturesigned;
-      json[r'iEzsigndocumentSignaturetotal'] = iEzsigndocumentSignaturetotal;
-      json[r'sEzsigndocumentMD5initial'] = sEzsigndocumentMD5initial;
-      json[r'sEzsigndocumentMD5signed'] = sEzsigndocumentMD5signed;
-      json[r'objAudit'] = objAudit;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'fkiEzsignfolderID'] = fkiEzsignfolderID;
+      _json[r'dtEzsigndocumentDuedate'] = dtEzsigndocumentDuedate;
+      _json[r'fkiLanguageID'] = fkiLanguageID;
+      _json[r'sEzsigndocumentName'] = sEzsigndocumentName;
+      _json[r'pkiEzsigndocumentID'] = pkiEzsigndocumentID;
+      _json[r'eEzsigndocumentStep'] = eEzsigndocumentStep;
+      _json[r'dtEzsigndocumentFirstsend'] = dtEzsigndocumentFirstsend;
+      _json[r'dtEzsigndocumentLastsend'] = dtEzsigndocumentLastsend;
+      _json[r'iEzsigndocumentOrder'] = iEzsigndocumentOrder;
+      _json[r'iEzsigndocumentPagetotal'] = iEzsigndocumentPagetotal;
+      _json[r'iEzsigndocumentSignaturesigned'] = iEzsigndocumentSignaturesigned;
+      _json[r'iEzsigndocumentSignaturetotal'] = iEzsigndocumentSignaturetotal;
+      _json[r'sEzsigndocumentMD5initial'] = sEzsigndocumentMD5initial;
+      _json[r'sEzsigndocumentMD5signed'] = sEzsigndocumentMD5signed;
+      _json[r'bEzsigndocumentEzsignform'] = bEzsigndocumentEzsignform;
+      _json[r'objAudit'] = objAudit;
+    return _json;
   }
 
   /// Returns a new [EzsigndocumentResponse] instance and imports its values from
@@ -169,6 +176,7 @@ class EzsigndocumentResponse {
         iEzsigndocumentSignaturetotal: mapValueOfType<int>(json, r'iEzsigndocumentSignaturetotal')!,
         sEzsigndocumentMD5initial: mapValueOfType<String>(json, r'sEzsigndocumentMD5initial')!,
         sEzsigndocumentMD5signed: mapValueOfType<String>(json, r'sEzsigndocumentMD5signed')!,
+        bEzsigndocumentEzsignform: mapValueOfType<bool>(json, r'bEzsigndocumentEzsignform')!,
         objAudit: CommonAudit.fromJson(json[r'objAudit'])!,
       );
     }
@@ -233,6 +241,7 @@ class EzsigndocumentResponse {
     'iEzsigndocumentSignaturetotal',
     'sEzsigndocumentMD5initial',
     'sEzsigndocumentMD5signed',
+    'bEzsigndocumentEzsignform',
     'objAudit',
   };
 }

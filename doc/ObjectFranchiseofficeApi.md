@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **franchiseofficeGetAutocompleteV1**
-> CommonGetAutocompleteV1Response franchiseofficeGetAutocompleteV1(sSelector, sQuery)
+> CommonGetAutocompleteV1Response franchiseofficeGetAutocompleteV1(sSelector, sQuery, acceptLanguage)
 
 Retrieve Franchiseoffices and IDs
 
@@ -30,9 +30,10 @@ import 'package:openapi/api.dart';
 final api_instance = ObjectFranchiseofficeApi();
 final sSelector = sSelector_example; // String | The type of Franchiseoffices to return
 final sQuery = sQuery_example; // String | Allow to filter the returned results
+final acceptLanguage = ; // HeaderAcceptLanguage | 
 
 try {
-    final result = api_instance.franchiseofficeGetAutocompleteV1(sSelector, sQuery);
+    final result = api_instance.franchiseofficeGetAutocompleteV1(sSelector, sQuery, acceptLanguage);
     print(result);
 } catch (e) {
     print('Exception when calling ObjectFranchiseofficeApi->franchiseofficeGetAutocompleteV1: $e\n');
@@ -45,6 +46,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **String**| The type of Franchiseoffices to return | 
  **sQuery** | **String**| Allow to filter the returned results | [optional] 
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] 
 
 ### Return type
 

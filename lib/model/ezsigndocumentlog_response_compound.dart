@@ -13,8 +13,8 @@ part of openapi.api;
 class EzsigndocumentlogResponseCompound {
   /// Returns a new [EzsigndocumentlogResponseCompound] instance.
   EzsigndocumentlogResponseCompound({
-    required this.fkiUserID,
-    required this.fkiEzsignsignerID,
+    this.fkiUserID,
+    this.fkiEzsignsignerID,
     required this.dtEzsigndocumentlogDatetime,
     required this.eEzsigndocumentlogType,
     required this.sEzsigndocumentlogDetail,
@@ -24,9 +24,21 @@ class EzsigndocumentlogResponseCompound {
   });
 
   /// The unique ID of the User
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
   int? fkiUserID;
 
   /// The unique ID of the Ezsignsigner
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
   int? fkiEzsignsignerID;
 
   /// The date and time at which the event was logged
@@ -73,20 +85,20 @@ class EzsigndocumentlogResponseCompound {
   String toString() => 'EzsigndocumentlogResponseCompound[fkiUserID=$fkiUserID, fkiEzsignsignerID=$fkiEzsignsignerID, dtEzsigndocumentlogDatetime=$dtEzsigndocumentlogDatetime, eEzsigndocumentlogType=$eEzsigndocumentlogType, sEzsigndocumentlogDetail=$sEzsigndocumentlogDetail, sEzsigndocumentlogLastname=$sEzsigndocumentlogLastname, sEzsigndocumentlogFirstname=$sEzsigndocumentlogFirstname, sEzsigndocumentlogIP=$sEzsigndocumentlogIP]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
+    final _json = <String, dynamic>{};
     if (fkiUserID != null) {
-      json[r'fkiUserID'] = fkiUserID;
+      _json[r'fkiUserID'] = fkiUserID;
     }
     if (fkiEzsignsignerID != null) {
-      json[r'fkiEzsignsignerID'] = fkiEzsignsignerID;
+      _json[r'fkiEzsignsignerID'] = fkiEzsignsignerID;
     }
-      json[r'dtEzsigndocumentlogDatetime'] = dtEzsigndocumentlogDatetime;
-      json[r'eEzsigndocumentlogType'] = eEzsigndocumentlogType;
-      json[r'sEzsigndocumentlogDetail'] = sEzsigndocumentlogDetail;
-      json[r'sEzsigndocumentlogLastname'] = sEzsigndocumentlogLastname;
-      json[r'sEzsigndocumentlogFirstname'] = sEzsigndocumentlogFirstname;
-      json[r'sEzsigndocumentlogIP'] = sEzsigndocumentlogIP;
-    return json;
+      _json[r'dtEzsigndocumentlogDatetime'] = dtEzsigndocumentlogDatetime;
+      _json[r'eEzsigndocumentlogType'] = eEzsigndocumentlogType;
+      _json[r'sEzsigndocumentlogDetail'] = sEzsigndocumentlogDetail;
+      _json[r'sEzsigndocumentlogLastname'] = sEzsigndocumentlogLastname;
+      _json[r'sEzsigndocumentlogFirstname'] = sEzsigndocumentlogFirstname;
+      _json[r'sEzsigndocumentlogIP'] = sEzsigndocumentlogIP;
+    return _json;
   }
 
   /// Returns a new [EzsigndocumentlogResponseCompound] instance and imports its values from
@@ -165,8 +177,6 @@ class EzsigndocumentlogResponseCompound {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'fkiUserID',
-    'fkiEzsignsignerID',
     'dtEzsigndocumentlogDatetime',
     'eEzsigndocumentlogType',
     'sEzsigndocumentlogDetail',

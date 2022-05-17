@@ -76,17 +76,17 @@ class ContactRequestCompound {
   String toString() => 'ContactRequestCompound[fkiContacttitleID=$fkiContacttitleID, fkiLanguageID=$fkiLanguageID, sContactFirstname=$sContactFirstname, sContactLastname=$sContactLastname, sContactCompany=$sContactCompany, dtContactBirthdate=$dtContactBirthdate, objContactinformations=$objContactinformations]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'fkiContacttitleID'] = fkiContacttitleID;
-      json[r'fkiLanguageID'] = fkiLanguageID;
-      json[r'sContactFirstname'] = sContactFirstname;
-      json[r'sContactLastname'] = sContactLastname;
-      json[r'sContactCompany'] = sContactCompany;
+    final _json = <String, dynamic>{};
+      _json[r'fkiContacttitleID'] = fkiContacttitleID;
+      _json[r'fkiLanguageID'] = fkiLanguageID;
+      _json[r'sContactFirstname'] = sContactFirstname;
+      _json[r'sContactLastname'] = sContactLastname;
+      _json[r'sContactCompany'] = sContactCompany;
     if (dtContactBirthdate != null) {
-      json[r'dtContactBirthdate'] = dtContactBirthdate;
+      _json[r'dtContactBirthdate'] = dtContactBirthdate;
     }
-      json[r'objContactinformations'] = objContactinformations;
-    return json;
+      _json[r'objContactinformations'] = objContactinformations;
+    return _json;
   }
 
   /// Returns a new [ContactRequestCompound] instance and imports its values from

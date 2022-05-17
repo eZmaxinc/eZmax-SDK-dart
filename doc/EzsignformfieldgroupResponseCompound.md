@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 **eEzsignformfieldgroupTooltipposition** | [**FieldEEzsignformfieldgroupTooltipposition**](FieldEEzsignformfieldgroupTooltipposition.md) |  | [optional] 
 **aObjEzsignformfield** | [**List<EzsignformfieldResponseCompound>**](EzsignformfieldResponseCompound.md) |  | [default to const []]
 **aObjDropdownElement** | [**List<CustomDropdownElementResponseCompound>**](CustomDropdownElementResponseCompound.md) |  | [optional] [default to const []]
-**aObjEzsignformfieldgroupsigner** | [**EzsignformfieldgroupsignerResponseCompound**](EzsignformfieldgroupsignerResponseCompound.md) |  | 
+**aObjEzsignformfieldgroupsigner** | [**List<EzsignformfieldgroupsignerResponseCompound>**](EzsignformfieldgroupsignerResponseCompound.md) |  | [default to const []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

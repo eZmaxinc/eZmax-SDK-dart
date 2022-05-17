@@ -65,17 +65,17 @@ class ActivesessionResponseCompoundAllOf {
   String toString() => 'ActivesessionResponseCompoundAllOf[aPkiPermissionID=$aPkiPermissionID, objUserReal=$objUserReal, objUserCloned=$objUserCloned, objApikey=$objApikey, aEModuleInternalname=$aEModuleInternalname]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'a_pkiPermissionID'] = aPkiPermissionID;
-      json[r'objUserReal'] = objUserReal;
+    final _json = <String, dynamic>{};
+      _json[r'a_pkiPermissionID'] = aPkiPermissionID;
+      _json[r'objUserReal'] = objUserReal;
     if (objUserCloned != null) {
-      json[r'objUserCloned'] = objUserCloned;
+      _json[r'objUserCloned'] = objUserCloned;
     }
     if (objApikey != null) {
-      json[r'objApikey'] = objApikey;
+      _json[r'objApikey'] = objApikey;
     }
-      json[r'a_eModuleInternalname'] = aEModuleInternalname;
-    return json;
+      _json[r'a_eModuleInternalname'] = aEModuleInternalname;
+    return _json;
   }
 
   /// Returns a new [ActivesessionResponseCompoundAllOf] instance and imports its values from

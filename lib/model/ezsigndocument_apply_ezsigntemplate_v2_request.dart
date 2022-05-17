@@ -18,7 +18,7 @@ class EzsigndocumentApplyEzsigntemplateV2Request {
     this.aPkiEzsignfoldersignerassociationID = const [],
   });
 
-  /// The unique ID of the Ezsigndocument
+  /// The unique ID of the Ezsigntemplate
   int fkiEzsigntemplateID;
 
   List<String> aSEzsigntemplatesigner;
@@ -42,11 +42,11 @@ class EzsigndocumentApplyEzsigntemplateV2Request {
   String toString() => 'EzsigndocumentApplyEzsigntemplateV2Request[fkiEzsigntemplateID=$fkiEzsigntemplateID, aSEzsigntemplatesigner=$aSEzsigntemplatesigner, aPkiEzsignfoldersignerassociationID=$aPkiEzsignfoldersignerassociationID]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'fkiEzsigntemplateID'] = fkiEzsigntemplateID;
-      json[r'a_sEzsigntemplatesigner'] = aSEzsigntemplatesigner;
-      json[r'a_pkiEzsignfoldersignerassociationID'] = aPkiEzsignfoldersignerassociationID;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'fkiEzsigntemplateID'] = fkiEzsigntemplateID;
+      _json[r'a_sEzsigntemplatesigner'] = aSEzsigntemplatesigner;
+      _json[r'a_pkiEzsignfoldersignerassociationID'] = aPkiEzsignfoldersignerassociationID;
+    return _json;
   }
 
   /// Returns a new [EzsigndocumentApplyEzsigntemplateV2Request] instance and imports its values from

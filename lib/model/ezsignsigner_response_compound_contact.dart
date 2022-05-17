@@ -19,6 +19,7 @@ class EzsignsignerResponseCompoundContact {
     required this.fkiLanguageID,
     this.sEmailAddress,
     this.sPhoneE164,
+    this.sPhoneExtension,
     this.sPhoneE164Cell,
   });
 
@@ -55,6 +56,15 @@ class EzsignsignerResponseCompoundContact {
   ///
   String? sPhoneE164;
 
+  /// The extension of the phone number.  The extension is the \"123\" section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sPhoneExtension;
+
   /// A phone number in E.164 Format
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -72,6 +82,7 @@ class EzsignsignerResponseCompoundContact {
      other.fkiLanguageID == fkiLanguageID &&
      other.sEmailAddress == sEmailAddress &&
      other.sPhoneE164 == sPhoneE164 &&
+     other.sPhoneExtension == sPhoneExtension &&
      other.sPhoneE164Cell == sPhoneE164Cell;
 
   @override
@@ -83,27 +94,31 @@ class EzsignsignerResponseCompoundContact {
     (fkiLanguageID.hashCode) +
     (sEmailAddress == null ? 0 : sEmailAddress!.hashCode) +
     (sPhoneE164 == null ? 0 : sPhoneE164!.hashCode) +
+    (sPhoneExtension == null ? 0 : sPhoneExtension!.hashCode) +
     (sPhoneE164Cell == null ? 0 : sPhoneE164Cell!.hashCode);
 
   @override
-  String toString() => 'EzsignsignerResponseCompoundContact[pkiContactID=$pkiContactID, sContactFirstname=$sContactFirstname, sContactLastname=$sContactLastname, fkiLanguageID=$fkiLanguageID, sEmailAddress=$sEmailAddress, sPhoneE164=$sPhoneE164, sPhoneE164Cell=$sPhoneE164Cell]';
+  String toString() => 'EzsignsignerResponseCompoundContact[pkiContactID=$pkiContactID, sContactFirstname=$sContactFirstname, sContactLastname=$sContactLastname, fkiLanguageID=$fkiLanguageID, sEmailAddress=$sEmailAddress, sPhoneE164=$sPhoneE164, sPhoneExtension=$sPhoneExtension, sPhoneE164Cell=$sPhoneE164Cell]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'pkiContactID'] = pkiContactID;
-      json[r'sContactFirstname'] = sContactFirstname;
-      json[r'sContactLastname'] = sContactLastname;
-      json[r'fkiLanguageID'] = fkiLanguageID;
+    final _json = <String, dynamic>{};
+      _json[r'pkiContactID'] = pkiContactID;
+      _json[r'sContactFirstname'] = sContactFirstname;
+      _json[r'sContactLastname'] = sContactLastname;
+      _json[r'fkiLanguageID'] = fkiLanguageID;
     if (sEmailAddress != null) {
-      json[r'sEmailAddress'] = sEmailAddress;
+      _json[r'sEmailAddress'] = sEmailAddress;
     }
     if (sPhoneE164 != null) {
-      json[r'sPhoneE164'] = sPhoneE164;
+      _json[r'sPhoneE164'] = sPhoneE164;
+    }
+    if (sPhoneExtension != null) {
+      _json[r'sPhoneExtension'] = sPhoneExtension;
     }
     if (sPhoneE164Cell != null) {
-      json[r'sPhoneE164Cell'] = sPhoneE164Cell;
+      _json[r'sPhoneE164Cell'] = sPhoneE164Cell;
     }
-    return json;
+    return _json;
   }
 
   /// Returns a new [EzsignsignerResponseCompoundContact] instance and imports its values from
@@ -131,6 +146,7 @@ class EzsignsignerResponseCompoundContact {
         fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID')!,
         sEmailAddress: mapValueOfType<String>(json, r'sEmailAddress'),
         sPhoneE164: mapValueOfType<String>(json, r'sPhoneE164'),
+        sPhoneExtension: mapValueOfType<String>(json, r'sPhoneExtension'),
         sPhoneE164Cell: mapValueOfType<String>(json, r'sPhoneE164Cell'),
       );
     }

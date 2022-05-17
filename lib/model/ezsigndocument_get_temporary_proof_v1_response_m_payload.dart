@@ -13,10 +13,10 @@ part of openapi.api;
 class EzsigndocumentGetTemporaryProofV1ResponseMPayload {
   /// Returns a new [EzsigndocumentGetTemporaryProofV1ResponseMPayload] instance.
   EzsigndocumentGetTemporaryProofV1ResponseMPayload({
-    required this.aObjEzsigndocumentlog,
+    this.aObjEzsigndocumentlog = const [],
   });
 
-  EzsigndocumentlogResponseCompound aObjEzsigndocumentlog;
+  List<EzsigndocumentlogResponseCompound> aObjEzsigndocumentlog;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigndocumentGetTemporaryProofV1ResponseMPayload &&
@@ -31,9 +31,9 @@ class EzsigndocumentGetTemporaryProofV1ResponseMPayload {
   String toString() => 'EzsigndocumentGetTemporaryProofV1ResponseMPayload[aObjEzsigndocumentlog=$aObjEzsigndocumentlog]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'a_objEzsigndocumentlog'] = aObjEzsigndocumentlog;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'a_objEzsigndocumentlog'] = aObjEzsigndocumentlog;
+    return _json;
   }
 
   /// Returns a new [EzsigndocumentGetTemporaryProofV1ResponseMPayload] instance and imports its values from
@@ -55,7 +55,7 @@ class EzsigndocumentGetTemporaryProofV1ResponseMPayload {
       }());
 
       return EzsigndocumentGetTemporaryProofV1ResponseMPayload(
-        aObjEzsigndocumentlog: EzsigndocumentlogResponseCompound.fromJson(json[r'a_objEzsigndocumentlog'])!,
+        aObjEzsigndocumentlog: EzsigndocumentlogResponseCompound.listFromJson(json[r'a_objEzsigndocumentlog'])!,
       );
     }
     return null;

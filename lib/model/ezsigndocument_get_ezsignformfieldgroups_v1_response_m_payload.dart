@@ -31,9 +31,9 @@ class EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload {
   String toString() => 'EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload[aObjEzsignformfieldgroup=$aObjEzsignformfieldgroup]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'a_objEzsignformfieldgroup'] = aObjEzsignformfieldgroup;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'a_objEzsignformfieldgroup'] = aObjEzsignformfieldgroup;
+    return _json;
   }
 
   /// Returns a new [EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload] instance and imports its values from
@@ -55,7 +55,7 @@ class EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload {
       }());
 
       return EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload(
-        aObjEzsignformfieldgroup: EzsignformfieldgroupResponseCompound.listFromJson(json[r'a_objEzsignformfieldgroup']) ?? const [],
+        aObjEzsignformfieldgroup: EzsignformfieldgroupResponseCompound.listFromJson(json[r'a_objEzsignformfieldgroup'])!,
       );
     }
     return null;
@@ -105,6 +105,7 @@ class EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
+    'a_objEzsignformfieldgroup',
   };
 }
 

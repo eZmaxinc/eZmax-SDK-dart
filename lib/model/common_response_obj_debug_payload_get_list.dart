@@ -55,13 +55,13 @@ class CommonResponseObjDebugPayloadGetList {
   String toString() => 'CommonResponseObjDebugPayloadGetList[iVersionMin=$iVersionMin, iVersionMax=$iVersionMax, aRequiredPermission=$aRequiredPermission, aFilter=$aFilter, aOrderBy=$aOrderBy]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'iVersionMin'] = iVersionMin;
-      json[r'iVersionMax'] = iVersionMax;
-      json[r'a_RequiredPermission'] = aRequiredPermission;
-      json[r'a_Filter'] = aFilter;
-      json[r'a_OrderBy'] = aOrderBy;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'iVersionMin'] = iVersionMin;
+      _json[r'iVersionMax'] = iVersionMax;
+      _json[r'a_RequiredPermission'] = aRequiredPermission;
+      _json[r'a_Filter'] = aFilter;
+      _json[r'a_OrderBy'] = aOrderBy;
+    return _json;
   }
 
   /// Returns a new [CommonResponseObjDebugPayloadGetList] instance and imports its values from

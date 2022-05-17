@@ -13,7 +13,7 @@ part of openapi.api;
 class ActivesessionGetCurrentV1ResponseMPayload {
   /// Returns a new [ActivesessionGetCurrentV1ResponseMPayload] instance.
   ActivesessionGetCurrentV1ResponseMPayload({
-    required this.eActivesessionSessiontype,
+    required this.eActivesessionUsertype,
     required this.eActivesessionWeekdaystart,
     required this.fkiLanguageID,
     required this.sCompanyNameX,
@@ -27,7 +27,7 @@ class ActivesessionGetCurrentV1ResponseMPayload {
     this.aEModuleInternalname = const [],
   });
 
-  FieldEActivesessionSessiontype eActivesessionSessiontype;
+  FieldEActivesessionUsertype eActivesessionUsertype;
 
   FieldEActivesessionWeekdaystart eActivesessionWeekdaystart;
 
@@ -75,7 +75,7 @@ class ActivesessionGetCurrentV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ActivesessionGetCurrentV1ResponseMPayload &&
-     other.eActivesessionSessiontype == eActivesessionSessiontype &&
+     other.eActivesessionUsertype == eActivesessionUsertype &&
      other.eActivesessionWeekdaystart == eActivesessionWeekdaystart &&
      other.fkiLanguageID == fkiLanguageID &&
      other.sCompanyNameX == sCompanyNameX &&
@@ -91,7 +91,7 @@ class ActivesessionGetCurrentV1ResponseMPayload {
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (eActivesessionSessiontype.hashCode) +
+    (eActivesessionUsertype.hashCode) +
     (eActivesessionWeekdaystart.hashCode) +
     (fkiLanguageID.hashCode) +
     (sCompanyNameX.hashCode) +
@@ -105,27 +105,27 @@ class ActivesessionGetCurrentV1ResponseMPayload {
     (aEModuleInternalname.hashCode);
 
   @override
-  String toString() => 'ActivesessionGetCurrentV1ResponseMPayload[eActivesessionSessiontype=$eActivesessionSessiontype, eActivesessionWeekdaystart=$eActivesessionWeekdaystart, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, bActivesessionDebug=$bActivesessionDebug, pksCustomerCode=$pksCustomerCode, aPkiPermissionID=$aPkiPermissionID, objUserReal=$objUserReal, objUserCloned=$objUserCloned, objApikey=$objApikey, aEModuleInternalname=$aEModuleInternalname]';
+  String toString() => 'ActivesessionGetCurrentV1ResponseMPayload[eActivesessionUsertype=$eActivesessionUsertype, eActivesessionWeekdaystart=$eActivesessionWeekdaystart, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, bActivesessionDebug=$bActivesessionDebug, pksCustomerCode=$pksCustomerCode, aPkiPermissionID=$aPkiPermissionID, objUserReal=$objUserReal, objUserCloned=$objUserCloned, objApikey=$objApikey, aEModuleInternalname=$aEModuleInternalname]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'eActivesessionSessiontype'] = eActivesessionSessiontype;
-      json[r'eActivesessionWeekdaystart'] = eActivesessionWeekdaystart;
-      json[r'fkiLanguageID'] = fkiLanguageID;
-      json[r'sCompanyNameX'] = sCompanyNameX;
-      json[r'sDepartmentNameX'] = sDepartmentNameX;
-      json[r'bActivesessionDebug'] = bActivesessionDebug;
-      json[r'pksCustomerCode'] = pksCustomerCode;
-      json[r'a_pkiPermissionID'] = aPkiPermissionID;
-      json[r'objUserReal'] = objUserReal;
+    final _json = <String, dynamic>{};
+      _json[r'eActivesessionUsertype'] = eActivesessionUsertype;
+      _json[r'eActivesessionWeekdaystart'] = eActivesessionWeekdaystart;
+      _json[r'fkiLanguageID'] = fkiLanguageID;
+      _json[r'sCompanyNameX'] = sCompanyNameX;
+      _json[r'sDepartmentNameX'] = sDepartmentNameX;
+      _json[r'bActivesessionDebug'] = bActivesessionDebug;
+      _json[r'pksCustomerCode'] = pksCustomerCode;
+      _json[r'a_pkiPermissionID'] = aPkiPermissionID;
+      _json[r'objUserReal'] = objUserReal;
     if (objUserCloned != null) {
-      json[r'objUserCloned'] = objUserCloned;
+      _json[r'objUserCloned'] = objUserCloned;
     }
     if (objApikey != null) {
-      json[r'objApikey'] = objApikey;
+      _json[r'objApikey'] = objApikey;
     }
-      json[r'a_eModuleInternalname'] = aEModuleInternalname;
-    return json;
+      _json[r'a_eModuleInternalname'] = aEModuleInternalname;
+    return _json;
   }
 
   /// Returns a new [ActivesessionGetCurrentV1ResponseMPayload] instance and imports its values from
@@ -147,7 +147,7 @@ class ActivesessionGetCurrentV1ResponseMPayload {
       }());
 
       return ActivesessionGetCurrentV1ResponseMPayload(
-        eActivesessionSessiontype: FieldEActivesessionSessiontype.fromJson(json[r'eActivesessionSessiontype'])!,
+        eActivesessionUsertype: FieldEActivesessionUsertype.fromJson(json[r'eActivesessionUsertype'])!,
         eActivesessionWeekdaystart: FieldEActivesessionWeekdaystart.fromJson(json[r'eActivesessionWeekdaystart'])!,
         fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID')!,
         sCompanyNameX: mapValueOfType<String>(json, r'sCompanyNameX')!,
@@ -212,7 +212,7 @@ class ActivesessionGetCurrentV1ResponseMPayload {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'eActivesessionSessiontype',
+    'eActivesessionUsertype',
     'eActivesessionWeekdaystart',
     'fkiLanguageID',
     'sCompanyNameX',

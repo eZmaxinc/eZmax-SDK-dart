@@ -83,18 +83,18 @@ class UserCreateEzsignuserV1Request {
   String toString() => 'UserCreateEzsignuserV1Request[fkiLanguageID=$fkiLanguageID, sUserFirstname=$sUserFirstname, sUserLastname=$sUserLastname, sEmailAddress=$sEmailAddress, sPhoneRegion=$sPhoneRegion, sPhoneExchange=$sPhoneExchange, sPhoneNumber=$sPhoneNumber, sPhoneExtension=$sPhoneExtension]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'fkiLanguageID'] = fkiLanguageID;
-      json[r'sUserFirstname'] = sUserFirstname;
-      json[r'sUserLastname'] = sUserLastname;
-      json[r'sEmailAddress'] = sEmailAddress;
-      json[r'sPhoneRegion'] = sPhoneRegion;
-      json[r'sPhoneExchange'] = sPhoneExchange;
-      json[r'sPhoneNumber'] = sPhoneNumber;
+    final _json = <String, dynamic>{};
+      _json[r'fkiLanguageID'] = fkiLanguageID;
+      _json[r'sUserFirstname'] = sUserFirstname;
+      _json[r'sUserLastname'] = sUserLastname;
+      _json[r'sEmailAddress'] = sEmailAddress;
+      _json[r'sPhoneRegion'] = sPhoneRegion;
+      _json[r'sPhoneExchange'] = sPhoneExchange;
+      _json[r'sPhoneNumber'] = sPhoneNumber;
     if (sPhoneExtension != null) {
-      json[r'sPhoneExtension'] = sPhoneExtension;
+      _json[r'sPhoneExtension'] = sPhoneExtension;
     }
-    return json;
+    return _json;
   }
 
   /// Returns a new [UserCreateEzsignuserV1Request] instance and imports its values from

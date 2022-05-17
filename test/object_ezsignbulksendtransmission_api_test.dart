@@ -17,6 +17,24 @@ void main() {
   // final instance = ObjectEzsignbulksendtransmissionApi();
 
   group('tests for ObjectEzsignbulksendtransmissionApi', () {
+    // Retrieve an existing Ezsignbulksendtransmission's Csv containing errors
+    //
+    // 
+    //
+    //Future<String> ezsignbulksendtransmissionGetCsvErrorsV1(int pkiEzsignbulksendtransmissionID) async
+    test('test ezsignbulksendtransmissionGetCsvErrorsV1', () async {
+      // TODO
+    });
+
+    // Retrieve an existing Ezsignbulksendtransmission's forms data
+    //
+    // 
+    //
+    //Future<EzsignbulksendtransmissionGetFormsDataV1Response> ezsignbulksendtransmissionGetFormsDataV1(int pkiEzsignbulksendtransmissionID) async
+    test('test ezsignbulksendtransmissionGetFormsDataV1', () async {
+      // TODO
+    });
+
     // Retrieve an existing Ezsignbulksendtransmission
     //
     // 

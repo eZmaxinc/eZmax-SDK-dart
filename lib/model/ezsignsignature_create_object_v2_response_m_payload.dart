@@ -32,9 +32,9 @@ class EzsignsignatureCreateObjectV2ResponseMPayload {
   String toString() => 'EzsignsignatureCreateObjectV2ResponseMPayload[aPkiEzsignsignatureID=$aPkiEzsignsignatureID]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'a_pkiEzsignsignatureID'] = aPkiEzsignsignatureID;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'a_pkiEzsignsignatureID'] = aPkiEzsignsignatureID;
+    return _json;
   }
 
   /// Returns a new [EzsignsignatureCreateObjectV2ResponseMPayload] instance and imports its values from

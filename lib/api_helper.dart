@@ -55,8 +55,8 @@ String parameterToString(dynamic value) {
   if (value is DateTime) {
     return value.toUtc().toIso8601String();
   }
-  if (value is FieldEActivesessionSessiontype) {
-    return FieldEActivesessionSessiontypeTypeTransformer().encode(value).toString();
+  if (value is FieldEActivesessionUsertype) {
+    return FieldEActivesessionUsertypeTypeTransformer().encode(value).toString();
   }
   if (value is FieldEActivesessionWeekdaystart) {
     return FieldEActivesessionWeekdaystartTypeTransformer().encode(value).toString();
@@ -85,20 +85,41 @@ String parameterToString(dynamic value) {
   if (value is FieldEEzsignformfieldgroupType) {
     return FieldEEzsignformfieldgroupTypeTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEEzsignsignatureFont) {
+    return FieldEEzsignsignatureFontTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsignsignatureTooltipposition) {
+    return FieldEEzsignsignatureTooltippositionTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEEzsignsignatureType) {
     return FieldEEzsignsignatureTypeTypeTransformer().encode(value).toString();
   }
-  if (value is FieldEEzsigntemplatepackageType) {
-    return FieldEEzsigntemplatepackageTypeTypeTransformer().encode(value).toString();
+  if (value is FieldEEzsigntemplateformfieldgroupSignerrequirement) {
+    return FieldEEzsigntemplateformfieldgroupSignerrequirementTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsigntemplateformfieldgroupTooltipposition) {
+    return FieldEEzsigntemplateformfieldgroupTooltippositionTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsigntemplateformfieldgroupType) {
+    return FieldEEzsigntemplateformfieldgroupTypeTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsigntemplatesignatureFont) {
+    return FieldEEzsigntemplatesignatureFontTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsigntemplatesignatureTooltipposition) {
+    return FieldEEzsigntemplatesignatureTooltippositionTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsigntemplatesignatureType) {
+    return FieldEEzsigntemplatesignatureTypeTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldENotificationpreferenceStatus) {
+    return FieldENotificationpreferenceStatusTypeTransformer().encode(value).toString();
   }
   if (value is FieldEPhoneType) {
     return FieldEPhoneTypeTypeTransformer().encode(value).toString();
   }
   if (value is FieldEUserType) {
     return FieldEUserTypeTypeTransformer().encode(value).toString();
-  }
-  if (value is FieldEUserTypeSSPR) {
-    return FieldEUserTypeSSPRTypeTransformer().encode(value).toString();
   }
   if (value is HeaderAcceptLanguage) {
     return HeaderAcceptLanguageTypeTransformer().encode(value).toString();

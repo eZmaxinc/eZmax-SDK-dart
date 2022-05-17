@@ -22,6 +22,30 @@ void main() {
       // TODO
     });
 
+    // The unique ID of the Ezsignfolder
+    // int fkiEzsignfolderID
+    test('to test the property `fkiEzsignfolderID`', () async {
+      // TODO
+    });
+
+    // The unique ID of the Ezsigntemplate
+    // int fkiEzsigntemplateID
+    test('to test the property `fkiEzsigntemplateID`', () async {
+      // TODO
+    });
+
+    // The unique ID of the Ezsignfoldersignerassociation
+    // int fkiEzsignfoldersignerassociationID
+    test('to test the property `fkiEzsignfoldersignerassociationID`', () async {
+      // TODO
+    });
+
+    // The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
+    // int fkiLanguageID
+    test('to test the property `fkiLanguageID`', () async {
+      // TODO
+    });
+
     // Indicates where to look for the document binary content.
     // String eEzsigndocumentSource
     test('to test the property `eEzsigndocumentSource`', () async {
@@ -53,26 +77,20 @@ void main() {
     });
 
     // If the source document is password protected, the password to open/modify it.
-    // String sEzsigndocumentPassword (default value: '')
+    // String sEzsigndocumentPassword
     test('to test the property `sEzsigndocumentPassword`', () async {
       // TODO
     });
 
-    // The unique ID of the Ezsignfolder
-    // int fkiEzsignfolderID
-    test('to test the property `fkiEzsignfolderID`', () async {
+    // If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**
+    // String eEzsigndocumentForm
+    test('to test the property `eEzsigndocumentForm`', () async {
       // TODO
     });
 
     // The maximum date and time at which the Ezsigndocument can be signed.
     // String dtEzsigndocumentDuedate
     test('to test the property `dtEzsigndocumentDuedate`', () async {
-      // TODO
-    });
-
-    // The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
-    // int fkiLanguageID
-    test('to test the property `fkiLanguageID`', () async {
       // TODO
     });
 

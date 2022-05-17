@@ -16,13 +16,13 @@ void main() {
   // final instance = MultilingualApikeyDescription();
 
   group('test MultilingualApikeyDescription', () {
-    // Value in French
+    // The description of the Apikey in French
     // String sApikeyDescription1
     test('to test the property `sApikeyDescription1`', () async {
       // TODO
     });
 
-    // Value in English
+    // The description of the Apikey in English
     // String sApikeyDescription2
     test('to test the property `sApikeyDescription2`', () async {
       // TODO

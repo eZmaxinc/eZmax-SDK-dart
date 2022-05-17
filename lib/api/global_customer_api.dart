@@ -44,7 +44,6 @@ class GlobalCustomerApi {
       queryParams.addAll(_queryParams('', 'sInfrastructureproductCode', sInfrastructureproductCode));
     }
 
-    const authNames = <String>['Authorization'];
     const contentTypes = <String>[];
 
 
@@ -56,7 +55,6 @@ class GlobalCustomerApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
-      authNames,
     );
   }
 

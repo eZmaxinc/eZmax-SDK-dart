@@ -44,6 +44,15 @@ void main() {
       // TODO
     });
 
+    // Edit an existing Ezsignfoldersignerassociation
+    //
+    // 
+    //
+    //Future<EzsignfoldersignerassociationEditObjectV1Response> ezsignfoldersignerassociationEditObjectV1(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request) async
+    test('test ezsignfoldersignerassociationEditObjectV1', () async {
+      // TODO
+    });
+
     // Retrieve a Login Url to allow In-Person signing
     //
     // This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.  The signer Login type must be configured as In-Person.

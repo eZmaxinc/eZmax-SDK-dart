@@ -62,9 +62,9 @@ void main() {
       // TODO
     });
 
-    // Represent a Date Time. The timezone is the one configured in the User's profile.
-    // String dtDueDate
-    test('to test the property `dtDueDate`', () async {
+    // The maximum date and time at which the Ezsignfolder can be signed.
+    // String dtEzsignfolderDuedate
+    test('to test the property `dtEzsignfolderDuedate`', () async {
       // TODO
     });
 

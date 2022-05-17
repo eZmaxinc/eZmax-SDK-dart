@@ -16,20 +16,8 @@ void main() {
   // final instance = EzsignfolderGetFormsDataV1ResponseMPayload();
 
   group('test EzsignfolderGetFormsDataV1ResponseMPayload', () {
-    // The unique ID of the Ezsignfolder
-    // int pkiEzsignfolderID
-    test('to test the property `pkiEzsignfolderID`', () async {
-      // TODO
-    });
-
-    // The description of the Ezsignfolder
-    // String sEzsignfolderDescription
-    test('to test the property `sEzsignfolderDescription`', () async {
-      // TODO
-    });
-
-    // List<CustomFormDataDocumentResponse> aObjFormDataDocument (default value: const [])
-    test('to test the property `aObjFormDataDocument`', () async {
+    // CustomFormsDataFolderResponse objFormsDataFolder
+    test('to test the property `objFormsDataFolder`', () async {
       // TODO
     });
 

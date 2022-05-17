@@ -26,7 +26,7 @@ void main() {
       // TODO
     });
 
-    // EzsignformfieldgroupsignerResponseCompound aObjEzsignformfieldgroupsigner
+    // List<EzsignformfieldgroupsignerResponseCompound> aObjEzsignformfieldgroupsigner (default value: const [])
     test('to test the property `aObjEzsignformfieldgroupsigner`', () async {
       // TODO
     });

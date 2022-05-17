@@ -21,7 +21,7 @@ void main() {
     //
     // Get the list of Periods to be used in a dropdown or autocomplete control.
     //
-    //Future<CommonGetAutocompleteV1Response> periodGetAutocompleteV1(String sSelector, { String sQuery }) async
+    //Future<CommonGetAutocompleteV1Response> periodGetAutocompleteV1(String sSelector, { String sQuery, HeaderAcceptLanguage acceptLanguage }) async
     test('test periodGetAutocompleteV1', () async {
       // TODO
     });

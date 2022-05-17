@@ -15,7 +15,8 @@ class CustomAutocompleteElementResponse {
   CustomAutocompleteElementResponse({
     required this.sCategory,
     required this.sLabel,
-    required this.mValue,
+    required this.sValue,
+    this.mValue,
   });
 
   /// The Category for the dropdown or an empty string if not categorized
@@ -25,12 +26,22 @@ class CustomAutocompleteElementResponse {
   String sLabel;
 
   /// The Unique ID of the element
-  String mValue;
+  String sValue;
+
+  /// The Unique ID of the element
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? mValue;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomAutocompleteElementResponse &&
      other.sCategory == sCategory &&
      other.sLabel == sLabel &&
+     other.sValue == sValue &&
      other.mValue == mValue;
 
   @override
@@ -38,17 +49,21 @@ class CustomAutocompleteElementResponse {
     // ignore: unnecessary_parenthesis
     (sCategory.hashCode) +
     (sLabel.hashCode) +
-    (mValue.hashCode);
+    (sValue.hashCode) +
+    (mValue == null ? 0 : mValue!.hashCode);
 
   @override
-  String toString() => 'CustomAutocompleteElementResponse[sCategory=$sCategory, sLabel=$sLabel, mValue=$mValue]';
+  String toString() => 'CustomAutocompleteElementResponse[sCategory=$sCategory, sLabel=$sLabel, sValue=$sValue, mValue=$mValue]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'sCategory'] = sCategory;
-      json[r'sLabel'] = sLabel;
-      json[r'mValue'] = mValue;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'sCategory'] = sCategory;
+      _json[r'sLabel'] = sLabel;
+      _json[r'sValue'] = sValue;
+    if (mValue != null) {
+      _json[r'mValue'] = mValue;
+    }
+    return _json;
   }
 
   /// Returns a new [CustomAutocompleteElementResponse] instance and imports its values from
@@ -72,7 +87,8 @@ class CustomAutocompleteElementResponse {
       return CustomAutocompleteElementResponse(
         sCategory: mapValueOfType<String>(json, r'sCategory')!,
         sLabel: mapValueOfType<String>(json, r'sLabel')!,
-        mValue: mapValueOfType<String>(json, r'mValue')!,
+        sValue: mapValueOfType<String>(json, r'sValue')!,
+        mValue: mapValueOfType<String>(json, r'mValue'),
       );
     }
     return null;
@@ -124,7 +140,7 @@ class CustomAutocompleteElementResponse {
   static const requiredKeys = <String>{
     'sCategory',
     'sLabel',
-    'mValue',
+    'sValue',
   };
 }
 

@@ -32,7 +32,6 @@ class ObjectActivesessionApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const authNames = <String>['Authorization'];
     const contentTypes = <String>[];
 
 
@@ -44,7 +43,6 @@ class ObjectActivesessionApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
-      authNames,
     );
   }
 

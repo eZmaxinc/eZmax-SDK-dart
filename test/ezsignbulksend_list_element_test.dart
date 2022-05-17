@@ -40,8 +40,9 @@ void main() {
       // TODO
     });
 
-    // FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel
-    test('to test the property `eEzsignfoldertypePrivacylevel`', () async {
+    // Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation
+    // bool bEzsignbulksendNeedvalidation
+    test('to test the property `bEzsignbulksendNeedvalidation`', () async {
       // TODO
     });
 

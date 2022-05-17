@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **fkiEzsignfoldertypeID** | **int** | The unique ID of the Ezsignfoldertype. | 
 **sEzsignbulksendDescription** | **String** | The description of the Ezsignbulksend | 
 **sEzsignfoldertypeNameX** | **String** | The name of the Ezsignfoldertype in the language of the requester | 
-**eEzsignfoldertypePrivacylevel** | [**FieldEEzsignfoldertypePrivacylevel**](FieldEEzsignfoldertypePrivacylevel.md) |  | 
+**bEzsignbulksendNeedvalidation** | **bool** | Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation | 
 **bEzsignbulksendIsactive** | **bool** | Whether the Ezsignbulksend is active or not | 
 **iEzsignbulksendtransmission** | **int** | The total number of Ezsignbulksendtransmissions in the Ezsignbulksend | 
 **iEzsignfolder** | **int** | The total number of Ezsignfolders in the Ezsignbulksend | 

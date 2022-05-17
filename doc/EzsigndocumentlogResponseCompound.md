@@ -8,8 +8,8 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**fkiUserID** | **int** | The unique ID of the User | 
-**fkiEzsignsignerID** | **int** | The unique ID of the Ezsignsigner | 
+**fkiUserID** | **int** | The unique ID of the User | [optional] 
+**fkiEzsignsignerID** | **int** | The unique ID of the Ezsignsigner | [optional] 
 **dtEzsigndocumentlogDatetime** | **String** | The date and time at which the event was logged | 
 **eEzsigndocumentlogType** | [**FieldEEzsigndocumentlogType**](FieldEEzsigndocumentlogType.md) |  | 
 **sEzsigndocumentlogDetail** | **String** | The detail of the Ezsigndocumentlog | 

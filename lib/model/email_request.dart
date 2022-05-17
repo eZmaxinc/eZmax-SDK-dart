@@ -38,10 +38,10 @@ class EmailRequest {
   String toString() => 'EmailRequest[fkiEmailtypeID=$fkiEmailtypeID, sEmailAddress=$sEmailAddress]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'fkiEmailtypeID'] = fkiEmailtypeID;
-      json[r'sEmailAddress'] = sEmailAddress;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'fkiEmailtypeID'] = fkiEmailtypeID;
+      _json[r'sEmailAddress'] = sEmailAddress;
+    return _json;
   }
 
   /// Returns a new [EmailRequest] instance and imports its values from

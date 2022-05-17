@@ -31,9 +31,9 @@ class ApikeyCreateObjectV2ResponseMPayload {
   String toString() => 'ApikeyCreateObjectV2ResponseMPayload[aObjApikey=$aObjApikey]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'a_objApikey'] = aObjApikey;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'a_objApikey'] = aObjApikey;
+    return _json;
   }
 
   /// Returns a new [ApikeyCreateObjectV2ResponseMPayload] instance and imports its values from

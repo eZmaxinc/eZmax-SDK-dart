@@ -48,14 +48,14 @@ class EzsignfoldersignerassociationCreateObjectV1Request {
   String toString() => 'EzsignfoldersignerassociationCreateObjectV1Request[objEzsignfoldersignerassociation=$objEzsignfoldersignerassociation, objEzsignfoldersignerassociationCompound=$objEzsignfoldersignerassociationCompound]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
+    final _json = <String, dynamic>{};
     if (objEzsignfoldersignerassociation != null) {
-      json[r'objEzsignfoldersignerassociation'] = objEzsignfoldersignerassociation;
+      _json[r'objEzsignfoldersignerassociation'] = objEzsignfoldersignerassociation;
     }
     if (objEzsignfoldersignerassociationCompound != null) {
-      json[r'objEzsignfoldersignerassociationCompound'] = objEzsignfoldersignerassociationCompound;
+      _json[r'objEzsignfoldersignerassociationCompound'] = objEzsignfoldersignerassociationCompound;
     }
-    return json;
+    return _json;
   }
 
   /// Returns a new [EzsignfoldersignerassociationCreateObjectV1Request] instance and imports its values from

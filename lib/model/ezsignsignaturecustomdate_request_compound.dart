@@ -56,14 +56,14 @@ class EzsignsignaturecustomdateRequestCompound {
   String toString() => 'EzsignsignaturecustomdateRequestCompound[pkiEzsignsignaturecustomdateID=$pkiEzsignsignaturecustomdateID, iEzsignsignaturecustomdateX=$iEzsignsignaturecustomdateX, iEzsignsignaturecustomdateY=$iEzsignsignaturecustomdateY, sEzsignsignaturecustomdateFormat=$sEzsignsignaturecustomdateFormat]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
+    final _json = <String, dynamic>{};
     if (pkiEzsignsignaturecustomdateID != null) {
-      json[r'pkiEzsignsignaturecustomdateID'] = pkiEzsignsignaturecustomdateID;
+      _json[r'pkiEzsignsignaturecustomdateID'] = pkiEzsignsignaturecustomdateID;
     }
-      json[r'iEzsignsignaturecustomdateX'] = iEzsignsignaturecustomdateX;
-      json[r'iEzsignsignaturecustomdateY'] = iEzsignsignaturecustomdateY;
-      json[r'sEzsignsignaturecustomdateFormat'] = sEzsignsignaturecustomdateFormat;
-    return json;
+      _json[r'iEzsignsignaturecustomdateX'] = iEzsignsignaturecustomdateX;
+      _json[r'iEzsignsignaturecustomdateY'] = iEzsignsignaturecustomdateY;
+      _json[r'sEzsignsignaturecustomdateFormat'] = sEzsignsignaturecustomdateFormat;
+    return _json;
   }
 
   /// Returns a new [EzsignsignaturecustomdateRequestCompound] instance and imports its values from

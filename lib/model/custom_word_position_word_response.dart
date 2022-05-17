@@ -38,10 +38,10 @@ class CustomWordPositionWordResponse {
   String toString() => 'CustomWordPositionWordResponse[sWord=$sWord, aObjWordPositionOccurence=$aObjWordPositionOccurence]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'sWord'] = sWord;
-      json[r'a_objWordPositionOccurence'] = aObjWordPositionOccurence;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'sWord'] = sWord;
+      _json[r'a_objWordPositionOccurence'] = aObjWordPositionOccurence;
+    return _json;
   }
 
   /// Returns a new [CustomWordPositionWordResponse] instance and imports its values from

@@ -43,11 +43,11 @@ class EzsignbulksendGetListV1ResponseMPayload {
   String toString() => 'EzsignbulksendGetListV1ResponseMPayload[aObjEzsignbulksend=$aObjEzsignbulksend, iRowReturned=$iRowReturned, iRowFiltered=$iRowFiltered]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'a_objEzsignbulksend'] = aObjEzsignbulksend;
-      json[r'iRowReturned'] = iRowReturned;
-      json[r'iRowFiltered'] = iRowFiltered;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'a_objEzsignbulksend'] = aObjEzsignbulksend;
+      _json[r'iRowReturned'] = iRowReturned;
+      _json[r'iRowFiltered'] = iRowFiltered;
+    return _json;
   }
 
   /// Returns a new [EzsignbulksendGetListV1ResponseMPayload] instance and imports its values from

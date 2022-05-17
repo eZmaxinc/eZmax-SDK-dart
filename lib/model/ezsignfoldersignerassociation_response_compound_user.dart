@@ -59,13 +59,13 @@ class EzsignfoldersignerassociationResponseCompoundUser {
   String toString() => 'EzsignfoldersignerassociationResponseCompoundUser[pkiUserID=$pkiUserID, fkiLanguageID=$fkiLanguageID, sUserFirstname=$sUserFirstname, sUserLastname=$sUserLastname, sEmailAddress=$sEmailAddress]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'pkiUserID'] = pkiUserID;
-      json[r'fkiLanguageID'] = fkiLanguageID;
-      json[r'sUserFirstname'] = sUserFirstname;
-      json[r'sUserLastname'] = sUserLastname;
-      json[r'sEmailAddress'] = sEmailAddress;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'pkiUserID'] = pkiUserID;
+      _json[r'fkiLanguageID'] = fkiLanguageID;
+      _json[r'sUserFirstname'] = sUserFirstname;
+      _json[r'sUserLastname'] = sUserLastname;
+      _json[r'sEmailAddress'] = sEmailAddress;
+    return _json;
   }
 
   /// Returns a new [EzsignfoldersignerassociationResponseCompoundUser] instance and imports its values from

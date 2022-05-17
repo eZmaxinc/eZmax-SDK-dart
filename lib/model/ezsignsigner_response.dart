@@ -65,15 +65,15 @@ class EzsignsignerResponse {
   String toString() => 'EzsignsignerResponse[pkiEzsignsignerID=$pkiEzsignsignerID, fkiTaxassignmentID=$fkiTaxassignmentID, fkiSecretquestionID=$fkiSecretquestionID, fkiUserlogintypeID=$fkiUserlogintypeID, sUserlogintypeDescriptionX=$sUserlogintypeDescriptionX]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'pkiEzsignsignerID'] = pkiEzsignsignerID;
-      json[r'fkiTaxassignmentID'] = fkiTaxassignmentID;
+    final _json = <String, dynamic>{};
+      _json[r'pkiEzsignsignerID'] = pkiEzsignsignerID;
+      _json[r'fkiTaxassignmentID'] = fkiTaxassignmentID;
     if (fkiSecretquestionID != null) {
-      json[r'fkiSecretquestionID'] = fkiSecretquestionID;
+      _json[r'fkiSecretquestionID'] = fkiSecretquestionID;
     }
-      json[r'fkiUserlogintypeID'] = fkiUserlogintypeID;
-      json[r'sUserlogintypeDescriptionX'] = sUserlogintypeDescriptionX;
-    return json;
+      _json[r'fkiUserlogintypeID'] = fkiUserlogintypeID;
+      _json[r'sUserlogintypeDescriptionX'] = sUserlogintypeDescriptionX;
+    return _json;
   }
 
   /// Returns a new [EzsignsignerResponse] instance and imports its values from

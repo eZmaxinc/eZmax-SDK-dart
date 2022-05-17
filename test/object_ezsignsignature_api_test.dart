@@ -62,5 +62,14 @@ void main() {
       // TODO
     });
 
+    // Sign the Ezsignsignature
+    //
+    // 
+    //
+    //Future<EzsignsignatureSignV1Response> ezsignsignatureSignV1(int pkiEzsignsignatureID, EzsignsignatureSignV1Request ezsignsignatureSignV1Request) async
+    test('test ezsignsignatureSignV1', () async {
+      // TODO
+    });
+
   });
 }

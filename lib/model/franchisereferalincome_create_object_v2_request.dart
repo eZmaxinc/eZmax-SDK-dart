@@ -31,9 +31,9 @@ class FranchisereferalincomeCreateObjectV2Request {
   String toString() => 'FranchisereferalincomeCreateObjectV2Request[aObjFranchisereferalincome=$aObjFranchisereferalincome]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'a_objFranchisereferalincome'] = aObjFranchisereferalincome;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'a_objFranchisereferalincome'] = aObjFranchisereferalincome;
+    return _json;
   }
 
   /// Returns a new [FranchisereferalincomeCreateObjectV2Request] instance and imports its values from

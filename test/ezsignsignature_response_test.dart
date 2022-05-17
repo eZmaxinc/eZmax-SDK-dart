@@ -22,6 +22,12 @@ void main() {
       // TODO
     });
 
+    // The unique ID of the Ezsigndocument
+    // int fkiEzsigndocumentID
+    test('to test the property `fkiEzsigndocumentID`', () async {
+      // TODO
+    });
+
     // The unique ID of the Ezsignfoldersignerassociation
     // int fkiEzsignfoldersignerassociationID
     test('to test the property `fkiEzsignfoldersignerassociationID`', () async {
@@ -40,7 +46,7 @@ void main() {
       // TODO
     });
 
-    // The Y coordinate (Vertical) where to put the signature block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.
+    // The Y coordinate (Vertical) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.
     // int iEzsignsignatureY
     test('to test the property `iEzsignsignatureY`', () async {
       // TODO
@@ -57,9 +63,19 @@ void main() {
       // TODO
     });
 
-    // The unique ID of the Ezsigndocument
-    // int fkiEzsigndocumentID
-    test('to test the property `fkiEzsigndocumentID`', () async {
+    // A tooltip that will be presented to Ezsignsigner about the Ezsignsignature
+    // String tEzsignsignatureTooltip
+    test('to test the property `tEzsignsignatureTooltip`', () async {
+      // TODO
+    });
+
+    // FieldEEzsignsignatureTooltipposition eEzsignsignatureTooltipposition
+    test('to test the property `eEzsignsignatureTooltipposition`', () async {
+      // TODO
+    });
+
+    // FieldEEzsignsignatureFont eEzsignsignatureFont
+    test('to test the property `eEzsignsignatureFont`', () async {
       // TODO
     });
 

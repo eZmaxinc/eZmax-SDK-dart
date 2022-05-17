@@ -17,6 +17,22 @@ void main() {
   // final instance = ObjectEzsignfolderApi();
 
   group('tests for ObjectEzsignfolderApi', () {
+    // Archive the Ezsignfolder
+    //
+    // 
+    //
+    //Future<EzsignfolderArchiveV1Response> ezsignfolderArchiveV1(int pkiEzsignfolderID, Object body) async
+    test('test ezsignfolderArchiveV1', () async {
+      // TODO
+    });
+
+    // Download multiples files from an Ezsignfolder
+    //
+    //Future<MultipartFile> ezsignfolderBatchDownloadV1(int pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request) async
+    test('test ezsignfolderBatchDownloadV1', () async {
+      // TODO
+    });
+
     // Create a new Ezsignfolder
     //
     // The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
@@ -37,8 +53,6 @@ void main() {
 
     // Delete an existing Ezsignfolder
     //
-    // 
-    //
     //Future<EzsignfolderDeleteObjectV1Response> ezsignfolderDeleteObjectV1(int pkiEzsignfolderID) async
     test('test ezsignfolderDeleteObjectV1', () async {
       // TODO
@@ -50,6 +64,15 @@ void main() {
     //
     //Future<EzsignfolderEditObjectV1Response> ezsignfolderEditObjectV1(int pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request) async
     test('test ezsignfolderEditObjectV1', () async {
+      // TODO
+    });
+
+    // Retrieve actionable elements for the Ezsignfolder
+    //
+    // Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+    //
+    //Future<EzsignfolderGetActionableElementsV1Response> ezsignfolderGetActionableElementsV1(int pkiEzsignfolderID) async
+    test('test ezsignfolderGetActionableElementsV1', () async {
       // TODO
     });
 
@@ -82,7 +105,7 @@ void main() {
 
     // Retrieve Ezsignfolder list
     //
-    // Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived | | eEzsignfoldertypePrivacylevel | User<br>Usergroup |
+    // Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived<br>Disposed| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |
     //
     //Future<EzsignfolderGetListV1Response> ezsignfolderGetListV1({ String eOrderBy, int iRowMax, int iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter }) async
     test('test ezsignfolderGetListV1', () async {
@@ -91,10 +114,24 @@ void main() {
 
     // Retrieve an existing Ezsignfolder
     //
-    // 
-    //
     //Future<EzsignfolderGetObjectV1Response> ezsignfolderGetObjectV1(int pkiEzsignfolderID) async
     test('test ezsignfolderGetObjectV1', () async {
+      // TODO
+    });
+
+    // Import an Ezsigntemplatepackage in the Ezsignfolder.
+    //
+    // This endpoint imports all of the Ezsigntemplates from the Ezsigntemplatepackage into the Ezsignfolder as Ezsigndocuments.  This allows to automatically apply all the Ezsigntemplateformfieldgroups and Ezsigntemplatesignatures on the newly created Ezsigndocuments in a single step.
+    //
+    //Future<EzsignfolderImportEzsigntemplatepackageV1Response> ezsignfolderImportEzsigntemplatepackageV1(int pkiEzsignfolderID, EzsignfolderImportEzsigntemplatepackageV1Request ezsignfolderImportEzsigntemplatepackageV1Request) async
+    test('test ezsignfolderImportEzsigntemplatepackageV1', () async {
+      // TODO
+    });
+
+    // Reorder Ezsigndocuments in the Ezsignfolder
+    //
+    //Future<EzsignfolderReorderV1Response> ezsignfolderReorderV1(int pkiEzsignfolderID, EzsignfolderReorderV1Request ezsignfolderReorderV1Request) async
+    test('test ezsignfolderReorderV1', () async {
       // TODO
     });
 

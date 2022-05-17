@@ -38,10 +38,10 @@ class CustomFormDataEzsignformfieldResponse {
   String toString() => 'CustomFormDataEzsignformfieldResponse[sEzsignformfieldLabel=$sEzsignformfieldLabel, sEzsignformfieldValue=$sEzsignformfieldValue]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'sEzsignformfieldLabel'] = sEzsignformfieldLabel;
-      json[r'sEzsignformfieldValue'] = sEzsignformfieldValue;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'sEzsignformfieldLabel'] = sEzsignformfieldLabel;
+      _json[r'sEzsignformfieldValue'] = sEzsignformfieldValue;
+    return _json;
   }
 
   /// Returns a new [CustomFormDataEzsignformfieldResponse] instance and imports its values from

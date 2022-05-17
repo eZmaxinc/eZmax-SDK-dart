@@ -13,55 +13,27 @@ part of openapi.api;
 class EzsigndocumentGetFormDataV1ResponseMPayload {
   /// Returns a new [EzsigndocumentGetFormDataV1ResponseMPayload] instance.
   EzsigndocumentGetFormDataV1ResponseMPayload({
-    required this.pkiEzsigndocumentID,
-    required this.fkiEzsignfolderID,
-    required this.sEzsigndocumentName,
-    required this.dtModifiedDate,
-    this.aObjFormDataSigner = const [],
+    required this.objFormDataDocument,
   });
 
-  /// The unique ID of the Ezsigndocument
-  int pkiEzsigndocumentID;
-
-  /// The unique ID of the Ezsignfolder
-  int fkiEzsignfolderID;
-
-  /// The name of the document that will be presented to Ezsignfoldersignerassociations
-  String sEzsigndocumentName;
-
-  /// The date and time at which the object was last modified
-  String dtModifiedDate;
-
-  List<CustomFormDataSignerResponse> aObjFormDataSigner;
+  CustomFormDataDocumentResponse objFormDataDocument;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigndocumentGetFormDataV1ResponseMPayload &&
-     other.pkiEzsigndocumentID == pkiEzsigndocumentID &&
-     other.fkiEzsignfolderID == fkiEzsignfolderID &&
-     other.sEzsigndocumentName == sEzsigndocumentName &&
-     other.dtModifiedDate == dtModifiedDate &&
-     other.aObjFormDataSigner == aObjFormDataSigner;
+     other.objFormDataDocument == objFormDataDocument;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (pkiEzsigndocumentID.hashCode) +
-    (fkiEzsignfolderID.hashCode) +
-    (sEzsigndocumentName.hashCode) +
-    (dtModifiedDate.hashCode) +
-    (aObjFormDataSigner.hashCode);
+    (objFormDataDocument.hashCode);
 
   @override
-  String toString() => 'EzsigndocumentGetFormDataV1ResponseMPayload[pkiEzsigndocumentID=$pkiEzsigndocumentID, fkiEzsignfolderID=$fkiEzsignfolderID, sEzsigndocumentName=$sEzsigndocumentName, dtModifiedDate=$dtModifiedDate, aObjFormDataSigner=$aObjFormDataSigner]';
+  String toString() => 'EzsigndocumentGetFormDataV1ResponseMPayload[objFormDataDocument=$objFormDataDocument]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'pkiEzsigndocumentID'] = pkiEzsigndocumentID;
-      json[r'fkiEzsignfolderID'] = fkiEzsignfolderID;
-      json[r'sEzsigndocumentName'] = sEzsigndocumentName;
-      json[r'dtModifiedDate'] = dtModifiedDate;
-      json[r'a_objFormDataSigner'] = aObjFormDataSigner;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'objFormDataDocument'] = objFormDataDocument;
+    return _json;
   }
 
   /// Returns a new [EzsigndocumentGetFormDataV1ResponseMPayload] instance and imports its values from
@@ -83,11 +55,7 @@ class EzsigndocumentGetFormDataV1ResponseMPayload {
       }());
 
       return EzsigndocumentGetFormDataV1ResponseMPayload(
-        pkiEzsigndocumentID: mapValueOfType<int>(json, r'pkiEzsigndocumentID')!,
-        fkiEzsignfolderID: mapValueOfType<int>(json, r'fkiEzsignfolderID')!,
-        sEzsigndocumentName: mapValueOfType<String>(json, r'sEzsigndocumentName')!,
-        dtModifiedDate: mapValueOfType<String>(json, r'dtModifiedDate')!,
-        aObjFormDataSigner: CustomFormDataSignerResponse.listFromJson(json[r'a_objFormDataSigner'])!,
+        objFormDataDocument: CustomFormDataDocumentResponse.fromJson(json[r'objFormDataDocument'])!,
       );
     }
     return null;
@@ -137,11 +105,7 @@ class EzsigndocumentGetFormDataV1ResponseMPayload {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'pkiEzsigndocumentID',
-    'fkiEzsignfolderID',
-    'sEzsigndocumentName',
-    'dtModifiedDate',
-    'a_objFormDataSigner',
+    'objFormDataDocument',
   };
 }
 

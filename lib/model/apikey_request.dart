@@ -49,13 +49,13 @@ class ApikeyRequest {
   String toString() => 'ApikeyRequest[pkiApikeyID=$pkiApikeyID, fkiUserID=$fkiUserID, objApikeyDescription=$objApikeyDescription]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
+    final _json = <String, dynamic>{};
     if (pkiApikeyID != null) {
-      json[r'pkiApikeyID'] = pkiApikeyID;
+      _json[r'pkiApikeyID'] = pkiApikeyID;
     }
-      json[r'fkiUserID'] = fkiUserID;
-      json[r'objApikeyDescription'] = objApikeyDescription;
-    return json;
+      _json[r'fkiUserID'] = fkiUserID;
+      _json[r'objApikeyDescription'] = objApikeyDescription;
+    return _json;
   }
 
   /// Returns a new [ApikeyRequest] instance and imports its values from

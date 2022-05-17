@@ -13,41 +13,27 @@ part of openapi.api;
 class EzsignfolderGetFormsDataV1ResponseMPayload {
   /// Returns a new [EzsignfolderGetFormsDataV1ResponseMPayload] instance.
   EzsignfolderGetFormsDataV1ResponseMPayload({
-    required this.pkiEzsignfolderID,
-    required this.sEzsignfolderDescription,
-    this.aObjFormDataDocument = const [],
+    required this.objFormsDataFolder,
   });
 
-  /// The unique ID of the Ezsignfolder
-  int pkiEzsignfolderID;
-
-  /// The description of the Ezsignfolder
-  String sEzsignfolderDescription;
-
-  List<CustomFormDataDocumentResponse> aObjFormDataDocument;
+  CustomFormsDataFolderResponse objFormsDataFolder;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfolderGetFormsDataV1ResponseMPayload &&
-     other.pkiEzsignfolderID == pkiEzsignfolderID &&
-     other.sEzsignfolderDescription == sEzsignfolderDescription &&
-     other.aObjFormDataDocument == aObjFormDataDocument;
+     other.objFormsDataFolder == objFormsDataFolder;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (pkiEzsignfolderID.hashCode) +
-    (sEzsignfolderDescription.hashCode) +
-    (aObjFormDataDocument.hashCode);
+    (objFormsDataFolder.hashCode);
 
   @override
-  String toString() => 'EzsignfolderGetFormsDataV1ResponseMPayload[pkiEzsignfolderID=$pkiEzsignfolderID, sEzsignfolderDescription=$sEzsignfolderDescription, aObjFormDataDocument=$aObjFormDataDocument]';
+  String toString() => 'EzsignfolderGetFormsDataV1ResponseMPayload[objFormsDataFolder=$objFormsDataFolder]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'pkiEzsignfolderID'] = pkiEzsignfolderID;
-      json[r'sEzsignfolderDescription'] = sEzsignfolderDescription;
-      json[r'a_objFormDataDocument'] = aObjFormDataDocument;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'objFormsDataFolder'] = objFormsDataFolder;
+    return _json;
   }
 
   /// Returns a new [EzsignfolderGetFormsDataV1ResponseMPayload] instance and imports its values from
@@ -69,9 +55,7 @@ class EzsignfolderGetFormsDataV1ResponseMPayload {
       }());
 
       return EzsignfolderGetFormsDataV1ResponseMPayload(
-        pkiEzsignfolderID: mapValueOfType<int>(json, r'pkiEzsignfolderID')!,
-        sEzsignfolderDescription: mapValueOfType<String>(json, r'sEzsignfolderDescription')!,
-        aObjFormDataDocument: CustomFormDataDocumentResponse.listFromJson(json[r'a_objFormDataDocument'])!,
+        objFormsDataFolder: CustomFormsDataFolderResponse.fromJson(json[r'objFormsDataFolder'])!,
       );
     }
     return null;
@@ -121,9 +105,7 @@ class EzsignfolderGetFormsDataV1ResponseMPayload {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'pkiEzsignfolderID',
-    'sEzsignfolderDescription',
-    'a_objFormDataDocument',
+    'objFormsDataFolder',
   };
 }
 

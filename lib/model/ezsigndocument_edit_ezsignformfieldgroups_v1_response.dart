@@ -13,9 +13,12 @@ part of openapi.api;
 class EzsigndocumentEditEzsignformfieldgroupsV1Response {
   /// Returns a new [EzsigndocumentEditEzsignformfieldgroupsV1Response] instance.
   EzsigndocumentEditEzsignformfieldgroupsV1Response({
+    required this.mPayload,
     this.objDebugPayload,
     this.objDebug,
   });
+
+  EzsigndocumentEditEzsignformfieldgroupsV1ResponseMPayload mPayload;
 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -35,27 +38,30 @@ class EzsigndocumentEditEzsignformfieldgroupsV1Response {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigndocumentEditEzsignformfieldgroupsV1Response &&
+     other.mPayload == mPayload &&
      other.objDebugPayload == objDebugPayload &&
      other.objDebug == objDebug;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
+    (mPayload.hashCode) +
     (objDebugPayload == null ? 0 : objDebugPayload!.hashCode) +
     (objDebug == null ? 0 : objDebug!.hashCode);
 
   @override
-  String toString() => 'EzsigndocumentEditEzsignformfieldgroupsV1Response[objDebugPayload=$objDebugPayload, objDebug=$objDebug]';
+  String toString() => 'EzsigndocumentEditEzsignformfieldgroupsV1Response[mPayload=$mPayload, objDebugPayload=$objDebugPayload, objDebug=$objDebug]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
+    final _json = <String, dynamic>{};
+      _json[r'mPayload'] = mPayload;
     if (objDebugPayload != null) {
-      json[r'objDebugPayload'] = objDebugPayload;
+      _json[r'objDebugPayload'] = objDebugPayload;
     }
     if (objDebug != null) {
-      json[r'objDebug'] = objDebug;
+      _json[r'objDebug'] = objDebug;
     }
-    return json;
+    return _json;
   }
 
   /// Returns a new [EzsigndocumentEditEzsignformfieldgroupsV1Response] instance and imports its values from
@@ -77,6 +83,7 @@ class EzsigndocumentEditEzsignformfieldgroupsV1Response {
       }());
 
       return EzsigndocumentEditEzsignformfieldgroupsV1Response(
+        mPayload: EzsigndocumentEditEzsignformfieldgroupsV1ResponseMPayload.fromJson(json[r'mPayload'])!,
         objDebugPayload: CommonResponseObjDebugPayload.fromJson(json[r'objDebugPayload']),
         objDebug: CommonResponseObjDebug.fromJson(json[r'objDebug']),
       );
@@ -128,6 +135,7 @@ class EzsigndocumentEditEzsignformfieldgroupsV1Response {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
+    'mPayload',
   };
 }
 

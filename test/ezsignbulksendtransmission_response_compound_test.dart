@@ -45,6 +45,11 @@ void main() {
       // TODO
     });
 
+    // List<CustomEzsignfoldertransmissionResponse> aObjEzsignfoldertransmission (default value: const [])
+    test('to test the property `aObjEzsignfoldertransmission`', () async {
+      // TODO
+    });
+
 
   });
 

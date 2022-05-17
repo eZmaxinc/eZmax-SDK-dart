@@ -37,10 +37,10 @@ class CommonResponseObjDebugPayloadGetListAllOf {
   String toString() => 'CommonResponseObjDebugPayloadGetListAllOf[aFilter=$aFilter, aOrderBy=$aOrderBy]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'a_Filter'] = aFilter;
-      json[r'a_OrderBy'] = aOrderBy;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'a_Filter'] = aFilter;
+      _json[r'a_OrderBy'] = aOrderBy;
+    return _json;
   }
 
   /// Returns a new [CommonResponseObjDebugPayloadGetListAllOf] instance and imports its values from

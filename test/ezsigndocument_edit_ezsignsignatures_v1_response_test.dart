@@ -16,6 +16,11 @@ void main() {
   // final instance = EzsigndocumentEditEzsignsignaturesV1Response();
 
   group('test EzsigndocumentEditEzsignsignaturesV1Response', () {
+    // EzsigndocumentEditEzsignsignaturesV1ResponseMPayload mPayload
+    test('to test the property `mPayload`', () async {
+      // TODO
+    });
+
     // CommonResponseObjDebugPayload objDebugPayload
     test('to test the property `objDebugPayload`', () async {
       // TODO

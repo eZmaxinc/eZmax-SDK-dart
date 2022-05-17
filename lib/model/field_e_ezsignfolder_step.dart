@@ -29,6 +29,7 @@ class FieldEEzsignfolderStep {
   static const expired = FieldEEzsignfolderStep._(r'Expired');
   static const completed = FieldEEzsignfolderStep._(r'Completed');
   static const archived = FieldEEzsignfolderStep._(r'Archived');
+  static const disposed = FieldEEzsignfolderStep._(r'Disposed');
 
   /// List of all possible values in this [enum][FieldEEzsignfolderStep].
   static const values = <FieldEEzsignfolderStep>[
@@ -38,6 +39,7 @@ class FieldEEzsignfolderStep {
     expired,
     completed,
     archived,
+    disposed,
   ];
 
   static FieldEEzsignfolderStep? fromJson(dynamic value) => FieldEEzsignfolderStepTypeTransformer().decode(value);
@@ -82,6 +84,7 @@ class FieldEEzsignfolderStepTypeTransformer {
         case r'Expired': return FieldEEzsignfolderStep.expired;
         case r'Completed': return FieldEEzsignfolderStep.completed;
         case r'Archived': return FieldEEzsignfolderStep.archived;
+        case r'Disposed': return FieldEEzsignfolderStep.disposed;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');

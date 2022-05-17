@@ -70,16 +70,16 @@ class ContactinformationsRequestCompound {
   String toString() => 'ContactinformationsRequestCompound[iAddressDefault=$iAddressDefault, iPhoneDefault=$iPhoneDefault, iEmailDefault=$iEmailDefault, iWebsiteDefault=$iWebsiteDefault, aObjAddress=$aObjAddress, aObjPhone=$aObjPhone, aObjEmail=$aObjEmail, aObjWebsite=$aObjWebsite]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'iAddressDefault'] = iAddressDefault;
-      json[r'iPhoneDefault'] = iPhoneDefault;
-      json[r'iEmailDefault'] = iEmailDefault;
-      json[r'iWebsiteDefault'] = iWebsiteDefault;
-      json[r'a_objAddress'] = aObjAddress;
-      json[r'a_objPhone'] = aObjPhone;
-      json[r'a_objEmail'] = aObjEmail;
-      json[r'a_objWebsite'] = aObjWebsite;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'iAddressDefault'] = iAddressDefault;
+      _json[r'iPhoneDefault'] = iPhoneDefault;
+      _json[r'iEmailDefault'] = iEmailDefault;
+      _json[r'iWebsiteDefault'] = iWebsiteDefault;
+      _json[r'a_objAddress'] = aObjAddress;
+      _json[r'a_objPhone'] = aObjPhone;
+      _json[r'a_objEmail'] = aObjEmail;
+      _json[r'a_objWebsite'] = aObjWebsite;
+    return _json;
   }
 
   /// Returns a new [ContactinformationsRequestCompound] instance and imports its values from

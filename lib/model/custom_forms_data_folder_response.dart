@@ -43,11 +43,11 @@ class CustomFormsDataFolderResponse {
   String toString() => 'CustomFormsDataFolderResponse[pkiEzsignfolderID=$pkiEzsignfolderID, sEzsignfolderDescription=$sEzsignfolderDescription, aObjFormDataDocument=$aObjFormDataDocument]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'pkiEzsignfolderID'] = pkiEzsignfolderID;
-      json[r'sEzsignfolderDescription'] = sEzsignfolderDescription;
-      json[r'a_objFormDataDocument'] = aObjFormDataDocument;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'pkiEzsignfolderID'] = pkiEzsignfolderID;
+      _json[r'sEzsignfolderDescription'] = sEzsignfolderDescription;
+      _json[r'a_objFormDataDocument'] = aObjFormDataDocument;
+    return _json;
   }
 
   /// Returns a new [CustomFormsDataFolderResponse] instance and imports its values from

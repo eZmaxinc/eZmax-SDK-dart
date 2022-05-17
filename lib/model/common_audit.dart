@@ -42,12 +42,12 @@ class CommonAudit {
   String toString() => 'CommonAudit[objAuditdetailCreated=$objAuditdetailCreated, objAuditdetailModified=$objAuditdetailModified]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'objAuditdetailCreated'] = objAuditdetailCreated;
+    final _json = <String, dynamic>{};
+      _json[r'objAuditdetailCreated'] = objAuditdetailCreated;
     if (objAuditdetailModified != null) {
-      json[r'objAuditdetailModified'] = objAuditdetailModified;
+      _json[r'objAuditdetailModified'] = objAuditdetailModified;
     }
-    return json;
+    return _json;
   }
 
   /// Returns a new [CommonAudit] instance and imports its values from

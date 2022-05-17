@@ -70,16 +70,16 @@ class EzsignsignerResponseCompound {
   String toString() => 'EzsignsignerResponseCompound[pkiEzsignsignerID=$pkiEzsignsignerID, fkiTaxassignmentID=$fkiTaxassignmentID, fkiSecretquestionID=$fkiSecretquestionID, fkiUserlogintypeID=$fkiUserlogintypeID, sUserlogintypeDescriptionX=$sUserlogintypeDescriptionX, objContact=$objContact]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'pkiEzsignsignerID'] = pkiEzsignsignerID;
-      json[r'fkiTaxassignmentID'] = fkiTaxassignmentID;
+    final _json = <String, dynamic>{};
+      _json[r'pkiEzsignsignerID'] = pkiEzsignsignerID;
+      _json[r'fkiTaxassignmentID'] = fkiTaxassignmentID;
     if (fkiSecretquestionID != null) {
-      json[r'fkiSecretquestionID'] = fkiSecretquestionID;
+      _json[r'fkiSecretquestionID'] = fkiSecretquestionID;
     }
-      json[r'fkiUserlogintypeID'] = fkiUserlogintypeID;
-      json[r'sUserlogintypeDescriptionX'] = sUserlogintypeDescriptionX;
-      json[r'objContact'] = objContact;
-    return json;
+      _json[r'fkiUserlogintypeID'] = fkiUserlogintypeID;
+      _json[r'sUserlogintypeDescriptionX'] = sUserlogintypeDescriptionX;
+      _json[r'objContact'] = objContact;
+    return _json;
   }
 
   /// Returns a new [EzsignsignerResponseCompound] instance and imports its values from

@@ -36,7 +36,6 @@ class ObjectEzsignsignatureApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const authNames = <String>['Authorization'];
     const contentTypes = <String>['application/json'];
 
 
@@ -48,7 +47,6 @@ class ObjectEzsignsignatureApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
-      authNames,
     );
   }
 
@@ -94,7 +92,6 @@ class ObjectEzsignsignatureApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const authNames = <String>['Authorization'];
     const contentTypes = <String>['application/json'];
 
 
@@ -106,7 +103,6 @@ class ObjectEzsignsignatureApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
-      authNames,
     );
   }
 
@@ -153,7 +149,6 @@ class ObjectEzsignsignatureApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const authNames = <String>['Authorization'];
     const contentTypes = <String>[];
 
 
@@ -165,7 +160,6 @@ class ObjectEzsignsignatureApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
-      authNames,
     );
   }
 
@@ -214,7 +208,6 @@ class ObjectEzsignsignatureApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const authNames = <String>['Authorization'];
     const contentTypes = <String>['application/json'];
 
 
@@ -226,7 +219,6 @@ class ObjectEzsignsignatureApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
-      authNames,
     );
   }
 
@@ -275,7 +267,6 @@ class ObjectEzsignsignatureApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const authNames = <String>['Authorization'];
     const contentTypes = <String>[];
 
 
@@ -287,7 +278,6 @@ class ObjectEzsignsignatureApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
-      authNames,
     );
   }
 
@@ -308,6 +298,67 @@ class ObjectEzsignsignatureApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignsignatureGetObjectV1Response',) as EzsignsignatureGetObjectV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Sign the Ezsignsignature
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignsignatureID (required):
+  ///
+  /// * [EzsignsignatureSignV1Request] ezsignsignatureSignV1Request (required):
+  Future<Response> ezsignsignatureSignV1WithHttpInfo(int pkiEzsignsignatureID, EzsignsignatureSignV1Request ezsignsignatureSignV1Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsignsignature/{pkiEzsignsignatureID}/sign'
+      .replaceAll('{pkiEzsignsignatureID}', pkiEzsignsignatureID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = ezsignsignatureSignV1Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Sign the Ezsignsignature
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignsignatureID (required):
+  ///
+  /// * [EzsignsignatureSignV1Request] ezsignsignatureSignV1Request (required):
+  Future<EzsignsignatureSignV1Response?> ezsignsignatureSignV1(int pkiEzsignsignatureID, EzsignsignatureSignV1Request ezsignsignatureSignV1Request,) async {
+    final response = await ezsignsignatureSignV1WithHttpInfo(pkiEzsignsignatureID, ezsignsignatureSignV1Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignsignatureSignV1Response',) as EzsignsignatureSignV1Response;
     
     }
     return null;

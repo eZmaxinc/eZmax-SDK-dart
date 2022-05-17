@@ -31,9 +31,9 @@ class EzsignfolderCreateObjectV2Request {
   String toString() => 'EzsignfolderCreateObjectV2Request[aObjEzsignfolder=$aObjEzsignfolder]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'a_objEzsignfolder'] = aObjEzsignfolder;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'a_objEzsignfolder'] = aObjEzsignfolder;
+    return _json;
   }
 
   /// Returns a new [EzsignfolderCreateObjectV2Request] instance and imports its values from

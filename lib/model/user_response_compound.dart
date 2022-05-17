@@ -69,15 +69,15 @@ class UserResponseCompound {
   String toString() => 'UserResponseCompound[pkiUserID=$pkiUserID, fkiLanguageID=$fkiLanguageID, eUserType=$eUserType, sUserFirstname=$sUserFirstname, sUserLastname=$sUserLastname, sUserLoginname=$sUserLoginname, objAudit=$objAudit]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'pkiUserID'] = pkiUserID;
-      json[r'fkiLanguageID'] = fkiLanguageID;
-      json[r'eUserType'] = eUserType;
-      json[r'sUserFirstname'] = sUserFirstname;
-      json[r'sUserLastname'] = sUserLastname;
-      json[r'sUserLoginname'] = sUserLoginname;
-      json[r'objAudit'] = objAudit;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'pkiUserID'] = pkiUserID;
+      _json[r'fkiLanguageID'] = fkiLanguageID;
+      _json[r'eUserType'] = eUserType;
+      _json[r'sUserFirstname'] = sUserFirstname;
+      _json[r'sUserLastname'] = sUserLastname;
+      _json[r'sUserLoginname'] = sUserLoginname;
+      _json[r'objAudit'] = objAudit;
+    return _json;
   }
 
   /// Returns a new [UserResponseCompound] instance and imports its values from

@@ -48,14 +48,14 @@ class EzsignsignatureDeleteObjectV1Response {
   String toString() => 'EzsignsignatureDeleteObjectV1Response[objDebugPayload=$objDebugPayload, objDebug=$objDebug]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
+    final _json = <String, dynamic>{};
     if (objDebugPayload != null) {
-      json[r'objDebugPayload'] = objDebugPayload;
+      _json[r'objDebugPayload'] = objDebugPayload;
     }
     if (objDebug != null) {
-      json[r'objDebug'] = objDebug;
+      _json[r'objDebug'] = objDebug;
     }
-    return json;
+    return _json;
   }
 
   /// Returns a new [EzsignsignatureDeleteObjectV1Response] instance and imports its values from

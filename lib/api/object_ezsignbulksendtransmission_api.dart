@@ -16,6 +16,120 @@ class ObjectEzsignbulksendtransmissionApi {
 
   final ApiClient apiClient;
 
+  /// Retrieve an existing Ezsignbulksendtransmission's Csv containing errors
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignbulksendtransmissionID (required):
+  Future<Response> ezsignbulksendtransmissionGetCsvErrorsV1WithHttpInfo(int pkiEzsignbulksendtransmissionID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getCsvErrors'
+      .replaceAll('{pkiEzsignbulksendtransmissionID}', pkiEzsignbulksendtransmissionID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve an existing Ezsignbulksendtransmission's Csv containing errors
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignbulksendtransmissionID (required):
+  Future<String?> ezsignbulksendtransmissionGetCsvErrorsV1(int pkiEzsignbulksendtransmissionID,) async {
+    final response = await ezsignbulksendtransmissionGetCsvErrorsV1WithHttpInfo(pkiEzsignbulksendtransmissionID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'String',) as String;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve an existing Ezsignbulksendtransmission's forms data
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignbulksendtransmissionID (required):
+  Future<Response> ezsignbulksendtransmissionGetFormsDataV1WithHttpInfo(int pkiEzsignbulksendtransmissionID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getFormsData'
+      .replaceAll('{pkiEzsignbulksendtransmissionID}', pkiEzsignbulksendtransmissionID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve an existing Ezsignbulksendtransmission's forms data
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignbulksendtransmissionID (required):
+  Future<EzsignbulksendtransmissionGetFormsDataV1Response?> ezsignbulksendtransmissionGetFormsDataV1(int pkiEzsignbulksendtransmissionID,) async {
+    final response = await ezsignbulksendtransmissionGetFormsDataV1WithHttpInfo(pkiEzsignbulksendtransmissionID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignbulksendtransmissionGetFormsDataV1Response',) as EzsignbulksendtransmissionGetFormsDataV1Response;
+    
+    }
+    return null;
+  }
+
   /// Retrieve an existing Ezsignbulksendtransmission
   ///
   /// 
@@ -37,7 +151,6 @@ class ObjectEzsignbulksendtransmissionApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const authNames = <String>['Authorization'];
     const contentTypes = <String>[];
 
 
@@ -49,7 +162,6 @@ class ObjectEzsignbulksendtransmissionApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
-      authNames,
     );
   }
 

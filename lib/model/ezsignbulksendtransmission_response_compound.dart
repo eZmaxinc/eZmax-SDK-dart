@@ -18,6 +18,7 @@ class EzsignbulksendtransmissionResponseCompound {
     required this.sEzsignbulksendtransmissionDescription,
     required this.iEzsignbulksendtransmissionErrors,
     required this.objAudit,
+    this.aObjEzsignfoldertransmission = const [],
   });
 
   /// The unique ID of the Ezsignbulksendtransmission
@@ -34,13 +35,16 @@ class EzsignbulksendtransmissionResponseCompound {
 
   CommonAudit objAudit;
 
+  List<CustomEzsignfoldertransmissionResponse> aObjEzsignfoldertransmission;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignbulksendtransmissionResponseCompound &&
      other.pkiEzsignbulksendtransmissionID == pkiEzsignbulksendtransmissionID &&
      other.fkiEzsignbulksendID == fkiEzsignbulksendID &&
      other.sEzsignbulksendtransmissionDescription == sEzsignbulksendtransmissionDescription &&
      other.iEzsignbulksendtransmissionErrors == iEzsignbulksendtransmissionErrors &&
-     other.objAudit == objAudit;
+     other.objAudit == objAudit &&
+     other.aObjEzsignfoldertransmission == aObjEzsignfoldertransmission;
 
   @override
   int get hashCode =>
@@ -49,19 +53,21 @@ class EzsignbulksendtransmissionResponseCompound {
     (fkiEzsignbulksendID.hashCode) +
     (sEzsignbulksendtransmissionDescription.hashCode) +
     (iEzsignbulksendtransmissionErrors.hashCode) +
-    (objAudit.hashCode);
+    (objAudit.hashCode) +
+    (aObjEzsignfoldertransmission.hashCode);
 
   @override
-  String toString() => 'EzsignbulksendtransmissionResponseCompound[pkiEzsignbulksendtransmissionID=$pkiEzsignbulksendtransmissionID, fkiEzsignbulksendID=$fkiEzsignbulksendID, sEzsignbulksendtransmissionDescription=$sEzsignbulksendtransmissionDescription, iEzsignbulksendtransmissionErrors=$iEzsignbulksendtransmissionErrors, objAudit=$objAudit]';
+  String toString() => 'EzsignbulksendtransmissionResponseCompound[pkiEzsignbulksendtransmissionID=$pkiEzsignbulksendtransmissionID, fkiEzsignbulksendID=$fkiEzsignbulksendID, sEzsignbulksendtransmissionDescription=$sEzsignbulksendtransmissionDescription, iEzsignbulksendtransmissionErrors=$iEzsignbulksendtransmissionErrors, objAudit=$objAudit, aObjEzsignfoldertransmission=$aObjEzsignfoldertransmission]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'pkiEzsignbulksendtransmissionID'] = pkiEzsignbulksendtransmissionID;
-      json[r'fkiEzsignbulksendID'] = fkiEzsignbulksendID;
-      json[r'sEzsignbulksendtransmissionDescription'] = sEzsignbulksendtransmissionDescription;
-      json[r'iEzsignbulksendtransmissionErrors'] = iEzsignbulksendtransmissionErrors;
-      json[r'objAudit'] = objAudit;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'pkiEzsignbulksendtransmissionID'] = pkiEzsignbulksendtransmissionID;
+      _json[r'fkiEzsignbulksendID'] = fkiEzsignbulksendID;
+      _json[r'sEzsignbulksendtransmissionDescription'] = sEzsignbulksendtransmissionDescription;
+      _json[r'iEzsignbulksendtransmissionErrors'] = iEzsignbulksendtransmissionErrors;
+      _json[r'objAudit'] = objAudit;
+      _json[r'a_objEzsignfoldertransmission'] = aObjEzsignfoldertransmission;
+    return _json;
   }
 
   /// Returns a new [EzsignbulksendtransmissionResponseCompound] instance and imports its values from
@@ -88,6 +94,7 @@ class EzsignbulksendtransmissionResponseCompound {
         sEzsignbulksendtransmissionDescription: mapValueOfType<String>(json, r'sEzsignbulksendtransmissionDescription')!,
         iEzsignbulksendtransmissionErrors: mapValueOfType<int>(json, r'iEzsignbulksendtransmissionErrors')!,
         objAudit: CommonAudit.fromJson(json[r'objAudit'])!,
+        aObjEzsignfoldertransmission: CustomEzsignfoldertransmissionResponse.listFromJson(json[r'a_objEzsignfoldertransmission'])!,
       );
     }
     return null;
@@ -142,6 +149,7 @@ class EzsignbulksendtransmissionResponseCompound {
     'sEzsignbulksendtransmissionDescription',
     'iEzsignbulksendtransmissionErrors',
     'objAudit',
+    'a_objEzsignfoldertransmission',
   };
 }
 

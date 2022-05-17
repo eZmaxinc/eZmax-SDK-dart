@@ -15,7 +15,7 @@ class EzsignfolderRequest {
   EzsignfolderRequest({
     this.pkiEzsignfolderID,
     required this.fkiEzsignfoldertypeID,
-    required this.fkiEzsigntsarequirementID,
+    this.fkiEzsigntsarequirementID,
     required this.sEzsignfolderDescription,
     required this.tEzsignfolderNote,
     required this.eEzsignfolderSendreminderfrequency,
@@ -37,7 +37,13 @@ class EzsignfolderRequest {
   ///
   /// Minimum value: 1
   /// Maximum value: 3
-  int fkiEzsigntsarequirementID;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiEzsigntsarequirementID;
 
   /// The description of the Ezsignfolder
   String sEzsignfolderDescription;
@@ -61,7 +67,7 @@ class EzsignfolderRequest {
     // ignore: unnecessary_parenthesis
     (pkiEzsignfolderID == null ? 0 : pkiEzsignfolderID!.hashCode) +
     (fkiEzsignfoldertypeID.hashCode) +
-    (fkiEzsigntsarequirementID.hashCode) +
+    (fkiEzsigntsarequirementID == null ? 0 : fkiEzsigntsarequirementID!.hashCode) +
     (sEzsignfolderDescription.hashCode) +
     (tEzsignfolderNote.hashCode) +
     (eEzsignfolderSendreminderfrequency.hashCode);
@@ -70,16 +76,18 @@ class EzsignfolderRequest {
   String toString() => 'EzsignfolderRequest[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sEzsignfolderDescription=$sEzsignfolderDescription, tEzsignfolderNote=$tEzsignfolderNote, eEzsignfolderSendreminderfrequency=$eEzsignfolderSendreminderfrequency]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
+    final _json = <String, dynamic>{};
     if (pkiEzsignfolderID != null) {
-      json[r'pkiEzsignfolderID'] = pkiEzsignfolderID;
+      _json[r'pkiEzsignfolderID'] = pkiEzsignfolderID;
     }
-      json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
-      json[r'fkiEzsigntsarequirementID'] = fkiEzsigntsarequirementID;
-      json[r'sEzsignfolderDescription'] = sEzsignfolderDescription;
-      json[r'tEzsignfolderNote'] = tEzsignfolderNote;
-      json[r'eEzsignfolderSendreminderfrequency'] = eEzsignfolderSendreminderfrequency;
-    return json;
+      _json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
+    if (fkiEzsigntsarequirementID != null) {
+      _json[r'fkiEzsigntsarequirementID'] = fkiEzsigntsarequirementID;
+    }
+      _json[r'sEzsignfolderDescription'] = sEzsignfolderDescription;
+      _json[r'tEzsignfolderNote'] = tEzsignfolderNote;
+      _json[r'eEzsignfolderSendreminderfrequency'] = eEzsignfolderSendreminderfrequency;
+    return _json;
   }
 
   /// Returns a new [EzsignfolderRequest] instance and imports its values from
@@ -103,7 +111,7 @@ class EzsignfolderRequest {
       return EzsignfolderRequest(
         pkiEzsignfolderID: mapValueOfType<int>(json, r'pkiEzsignfolderID'),
         fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID')!,
-        fkiEzsigntsarequirementID: mapValueOfType<int>(json, r'fkiEzsigntsarequirementID')!,
+        fkiEzsigntsarequirementID: mapValueOfType<int>(json, r'fkiEzsigntsarequirementID'),
         sEzsignfolderDescription: mapValueOfType<String>(json, r'sEzsignfolderDescription')!,
         tEzsignfolderNote: mapValueOfType<String>(json, r'tEzsignfolderNote')!,
         eEzsignfolderSendreminderfrequency: FieldEEzsignfolderSendreminderfrequency.fromJson(json[r'eEzsignfolderSendreminderfrequency'])!,
@@ -157,7 +165,6 @@ class EzsignfolderRequest {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'fkiEzsignfoldertypeID',
-    'fkiEzsigntsarequirementID',
     'sEzsignfolderDescription',
     'tEzsignfolderNote',
     'eEzsignfolderSendreminderfrequency',

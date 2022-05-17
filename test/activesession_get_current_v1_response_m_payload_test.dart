@@ -16,8 +16,8 @@ void main() {
   // final instance = ActivesessionGetCurrentV1ResponseMPayload();
 
   group('test ActivesessionGetCurrentV1ResponseMPayload', () {
-    // FieldEActivesessionSessiontype eActivesessionSessiontype
-    test('to test the property `eActivesessionSessiontype`', () async {
+    // FieldEActivesessionUsertype eActivesessionUsertype
+    test('to test the property `eActivesessionUsertype`', () async {
       // TODO
     });
 

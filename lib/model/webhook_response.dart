@@ -13,14 +13,19 @@ part of openapi.api;
 class WebhookResponse {
   /// Returns a new [WebhookResponse] instance.
   WebhookResponse({
+    required this.pksCustomerCode,
     required this.pkiWebhookID,
     required this.eWebhookModule,
     this.eWebhookEzsignevent,
-    required this.pksCustomerCode,
-    required this.sWebhookUrl,
-    required this.sWebhookEmailfailed,
     this.eWebhookManagementevent,
+    required this.sWebhookUrl,
+    required this.bWebhookTest,
+    required this.bWebhookSkipsslvalidation,
+    required this.sWebhookEmailfailed,
   });
+
+  /// The customer code assigned to your account
+  String pksCustomerCode;
 
   /// The Webhook ID. This value is visible in the admin interface.
   int pkiWebhookID;
@@ -31,56 +36,65 @@ class WebhookResponse {
   /// This Ezsign Event. This property will be set only if the Module is \"Ezsign\".
   WebhookResponseEWebhookEzsigneventEnum? eWebhookEzsignevent;
 
-  /// The customer code assigned to your account
-  String pksCustomerCode;
+  /// This Management Event. This property will be set only if the Module is \"Management\".
+  WebhookResponseEWebhookManagementeventEnum? eWebhookManagementevent;
 
   /// The url being called
   String sWebhookUrl;
 
+  /// Wheter the webhook received is a manual test or a real event
+  bool bWebhookTest;
+
+  /// Wheter the server's SSL certificate should be validated or not. Not recommended for production use.
+  bool bWebhookSkipsslvalidation;
+
   /// The email that will receive the webhook in case all attempts fail.
   String sWebhookEmailfailed;
 
-  /// This Management Event. This property will be set only if the Module is \"Management\".
-  WebhookResponseEWebhookManagementeventEnum? eWebhookManagementevent;
-
   @override
   bool operator ==(Object other) => identical(this, other) || other is WebhookResponse &&
+     other.pksCustomerCode == pksCustomerCode &&
      other.pkiWebhookID == pkiWebhookID &&
      other.eWebhookModule == eWebhookModule &&
      other.eWebhookEzsignevent == eWebhookEzsignevent &&
-     other.pksCustomerCode == pksCustomerCode &&
+     other.eWebhookManagementevent == eWebhookManagementevent &&
      other.sWebhookUrl == sWebhookUrl &&
-     other.sWebhookEmailfailed == sWebhookEmailfailed &&
-     other.eWebhookManagementevent == eWebhookManagementevent;
+     other.bWebhookTest == bWebhookTest &&
+     other.bWebhookSkipsslvalidation == bWebhookSkipsslvalidation &&
+     other.sWebhookEmailfailed == sWebhookEmailfailed;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
+    (pksCustomerCode.hashCode) +
     (pkiWebhookID.hashCode) +
     (eWebhookModule.hashCode) +
     (eWebhookEzsignevent == null ? 0 : eWebhookEzsignevent!.hashCode) +
-    (pksCustomerCode.hashCode) +
+    (eWebhookManagementevent == null ? 0 : eWebhookManagementevent!.hashCode) +
     (sWebhookUrl.hashCode) +
-    (sWebhookEmailfailed.hashCode) +
-    (eWebhookManagementevent == null ? 0 : eWebhookManagementevent!.hashCode);
+    (bWebhookTest.hashCode) +
+    (bWebhookSkipsslvalidation.hashCode) +
+    (sWebhookEmailfailed.hashCode);
 
   @override
-  String toString() => 'WebhookResponse[pkiWebhookID=$pkiWebhookID, eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, pksCustomerCode=$pksCustomerCode, sWebhookUrl=$sWebhookUrl, sWebhookEmailfailed=$sWebhookEmailfailed, eWebhookManagementevent=$eWebhookManagementevent]';
+  String toString() => 'WebhookResponse[pksCustomerCode=$pksCustomerCode, pkiWebhookID=$pkiWebhookID, eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, sWebhookUrl=$sWebhookUrl, bWebhookTest=$bWebhookTest, bWebhookSkipsslvalidation=$bWebhookSkipsslvalidation, sWebhookEmailfailed=$sWebhookEmailfailed]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'pkiWebhookID'] = pkiWebhookID;
-      json[r'eWebhookModule'] = eWebhookModule;
+    final _json = <String, dynamic>{};
+      _json[r'pksCustomerCode'] = pksCustomerCode;
+      _json[r'pkiWebhookID'] = pkiWebhookID;
+      _json[r'eWebhookModule'] = eWebhookModule;
     if (eWebhookEzsignevent != null) {
-      json[r'eWebhookEzsignevent'] = eWebhookEzsignevent;
+      _json[r'eWebhookEzsignevent'] = eWebhookEzsignevent;
     }
-      json[r'pksCustomerCode'] = pksCustomerCode;
-      json[r'sWebhookUrl'] = sWebhookUrl;
-      json[r'sWebhookEmailfailed'] = sWebhookEmailfailed;
     if (eWebhookManagementevent != null) {
-      json[r'eWebhookManagementevent'] = eWebhookManagementevent;
+      _json[r'eWebhookManagementevent'] = eWebhookManagementevent;
     }
-    return json;
+      _json[r'sWebhookUrl'] = sWebhookUrl;
+      _json[r'bWebhookTest'] = bWebhookTest;
+      _json[r'bWebhookSkipsslvalidation'] = bWebhookSkipsslvalidation;
+      _json[r'sWebhookEmailfailed'] = sWebhookEmailfailed;
+    return _json;
   }
 
   /// Returns a new [WebhookResponse] instance and imports its values from
@@ -102,13 +116,15 @@ class WebhookResponse {
       }());
 
       return WebhookResponse(
+        pksCustomerCode: mapValueOfType<String>(json, r'pksCustomerCode')!,
         pkiWebhookID: mapValueOfType<int>(json, r'pkiWebhookID')!,
         eWebhookModule: WebhookResponseEWebhookModuleEnum.fromJson(json[r'eWebhookModule'])!,
         eWebhookEzsignevent: WebhookResponseEWebhookEzsigneventEnum.fromJson(json[r'eWebhookEzsignevent']),
-        pksCustomerCode: mapValueOfType<String>(json, r'pksCustomerCode')!,
-        sWebhookUrl: mapValueOfType<String>(json, r'sWebhookUrl')!,
-        sWebhookEmailfailed: mapValueOfType<String>(json, r'sWebhookEmailfailed')!,
         eWebhookManagementevent: WebhookResponseEWebhookManagementeventEnum.fromJson(json[r'eWebhookManagementevent']),
+        sWebhookUrl: mapValueOfType<String>(json, r'sWebhookUrl')!,
+        bWebhookTest: mapValueOfType<bool>(json, r'bWebhookTest')!,
+        bWebhookSkipsslvalidation: mapValueOfType<bool>(json, r'bWebhookSkipsslvalidation')!,
+        sWebhookEmailfailed: mapValueOfType<String>(json, r'sWebhookEmailfailed')!,
       );
     }
     return null;
@@ -158,10 +174,12 @@ class WebhookResponse {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
+    'pksCustomerCode',
     'pkiWebhookID',
     'eWebhookModule',
-    'pksCustomerCode',
     'sWebhookUrl',
+    'bWebhookTest',
+    'bWebhookSkipsslvalidation',
     'sWebhookEmailfailed',
   };
 }

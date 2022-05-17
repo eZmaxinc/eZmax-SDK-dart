@@ -17,7 +17,7 @@ class EzsignsignatureResponseCompoundAllOf {
     this.aObjEzsignsignaturecustomdate = const [],
   });
 
-  /// Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is \"Name\" or \"Handwritten\")
+  /// Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -44,12 +44,12 @@ class EzsignsignatureResponseCompoundAllOf {
   String toString() => 'EzsignsignatureResponseCompoundAllOf[bEzsignsignatureCustomdate=$bEzsignsignatureCustomdate, aObjEzsignsignaturecustomdate=$aObjEzsignsignaturecustomdate]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
+    final _json = <String, dynamic>{};
     if (bEzsignsignatureCustomdate != null) {
-      json[r'bEzsignsignatureCustomdate'] = bEzsignsignatureCustomdate;
+      _json[r'bEzsignsignatureCustomdate'] = bEzsignsignatureCustomdate;
     }
-      json[r'a_objEzsignsignaturecustomdate'] = aObjEzsignsignaturecustomdate;
-    return json;
+      _json[r'a_objEzsignsignaturecustomdate'] = aObjEzsignsignaturecustomdate;
+    return _json;
   }
 
   /// Returns a new [EzsignsignatureResponseCompoundAllOf] instance and imports its values from

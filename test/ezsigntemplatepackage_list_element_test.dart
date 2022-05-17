@@ -22,18 +22,6 @@ void main() {
       // TODO
     });
 
-    // The unique ID of the Department.
-    // int fkiDepartmentID
-    test('to test the property `fkiDepartmentID`', () async {
-      // TODO
-    });
-
-    // The unique ID of the Team
-    // int fkiTeamID
-    test('to test the property `fkiTeamID`', () async {
-      // TODO
-    });
-
     // The unique ID of the Ezsignfoldertype.
     // int fkiEzsignfoldertypeID
     test('to test the property `fkiEzsignfoldertypeID`', () async {
@@ -43,11 +31,6 @@ void main() {
     // The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
     // int fkiLanguageID
     test('to test the property `fkiLanguageID`', () async {
-      // TODO
-    });
-
-    // FieldEEzsigntemplatepackageType eEzsigntemplatepackageType
-    test('to test the property `eEzsigntemplatepackageType`', () async {
       // TODO
     });
 
@@ -63,9 +46,21 @@ void main() {
       // TODO
     });
 
+    // Whether the Ezsignbulksend was automatically modified and needs a manual validation
+    // bool bEzsigntemplatepackageNeedvalidation
+    test('to test the property `bEzsigntemplatepackageNeedvalidation`', () async {
+      // TODO
+    });
+
     // The total number of Ezsigntemplatepackagemembership in the Ezsigntemplatepackage
     // int iEzsigntemplatepackagemembership
     test('to test the property `iEzsigntemplatepackagemembership`', () async {
+      // TODO
+    });
+
+    // The name of the Ezsignfoldertype in the language of the requester
+    // String sEzsignfoldertypeNameX
+    test('to test the property `sEzsignfoldertypeNameX`', () async {
       // TODO
     });
 

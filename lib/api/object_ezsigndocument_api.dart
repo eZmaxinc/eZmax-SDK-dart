@@ -16,7 +16,7 @@ class ObjectEzsigndocumentApi {
 
   final ApiClient apiClient;
 
-  /// Apply an Ezsign Template to the Ezsigndocument.
+  /// Apply an Ezsigntemplate to the Ezsigndocument.
   ///
   /// This function is deprecated. Please use *applyEzsigntemplate* instead which is doing the same thing but with a capital \"E\" to normalize the nomenclature.  This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
   ///
@@ -39,7 +39,6 @@ class ObjectEzsigndocumentApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const authNames = <String>['Authorization'];
     const contentTypes = <String>['application/json'];
 
 
@@ -51,11 +50,10 @@ class ObjectEzsigndocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
-      authNames,
     );
   }
 
-  /// Apply an Ezsign Template to the Ezsigndocument.
+  /// Apply an Ezsigntemplate to the Ezsigndocument.
   ///
   /// This function is deprecated. Please use *applyEzsigntemplate* instead which is doing the same thing but with a capital \"E\" to normalize the nomenclature.  This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
   ///
@@ -79,7 +77,7 @@ class ObjectEzsigndocumentApi {
     return null;
   }
 
-  /// Apply an Ezsign Template to the Ezsigndocument.
+  /// Apply an Ezsigntemplate to the Ezsigndocument.
   ///
   /// This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
   ///
@@ -102,7 +100,6 @@ class ObjectEzsigndocumentApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const authNames = <String>['Authorization'];
     const contentTypes = <String>['application/json'];
 
 
@@ -114,11 +111,10 @@ class ObjectEzsigndocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
-      authNames,
     );
   }
 
-  /// Apply an Ezsign Template to the Ezsigndocument.
+  /// Apply an Ezsigntemplate to the Ezsigndocument.
   ///
   /// This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
   ///
@@ -162,7 +158,6 @@ class ObjectEzsigndocumentApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const authNames = <String>['Authorization'];
     const contentTypes = <String>['application/json'];
 
 
@@ -174,7 +169,6 @@ class ObjectEzsigndocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
-      authNames,
     );
   }
 
@@ -220,7 +214,6 @@ class ObjectEzsigndocumentApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const authNames = <String>['Authorization'];
     const contentTypes = <String>['application/json'];
 
 
@@ -232,7 +225,6 @@ class ObjectEzsigndocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
-      authNames,
     );
   }
 
@@ -279,7 +271,6 @@ class ObjectEzsigndocumentApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const authNames = <String>['Authorization'];
     const contentTypes = <String>[];
 
 
@@ -291,7 +282,6 @@ class ObjectEzsigndocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
-      authNames,
     );
   }
 
@@ -340,7 +330,6 @@ class ObjectEzsigndocumentApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const authNames = <String>['Authorization'];
     const contentTypes = <String>['application/json'];
 
 
@@ -352,7 +341,6 @@ class ObjectEzsigndocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
-      authNames,
     );
   }
 
@@ -403,7 +391,6 @@ class ObjectEzsigndocumentApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const authNames = <String>['Authorization'];
     const contentTypes = <String>['application/json'];
 
 
@@ -415,7 +402,6 @@ class ObjectEzsigndocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
-      authNames,
     );
   }
 
@@ -466,7 +452,6 @@ class ObjectEzsigndocumentApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const authNames = <String>['Authorization'];
     const contentTypes = <String>['application/json'];
 
 
@@ -478,7 +463,6 @@ class ObjectEzsigndocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
-      authNames,
     );
   }
 
@@ -501,6 +485,63 @@ class ObjectEzsigndocumentApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentEndPrematurelyV1Response',) as EzsigndocumentEndPrematurelyV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve actionable elements for the Ezsigndocument
+  ///
+  /// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  Future<Response> ezsigndocumentGetActionableElementsV1WithHttpInfo(int pkiEzsigndocumentID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements'
+      .replaceAll('{pkiEzsigndocumentID}', pkiEzsigndocumentID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve actionable elements for the Ezsigndocument
+  ///
+  /// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  Future<EzsigndocumentGetActionableElementsV1Response?> ezsigndocumentGetActionableElementsV1(int pkiEzsigndocumentID,) async {
+    final response = await ezsigndocumentGetActionableElementsV1WithHttpInfo(pkiEzsigndocumentID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentGetActionableElementsV1Response',) as EzsigndocumentGetActionableElementsV1Response;
     
     }
     return null;
@@ -531,7 +572,6 @@ class ObjectEzsigndocumentApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const authNames = <String>['Authorization'];
     const contentTypes = <String>[];
 
 
@@ -543,7 +583,6 @@ class ObjectEzsigndocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
-      authNames,
     );
   }
 
@@ -593,7 +632,6 @@ class ObjectEzsigndocumentApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const authNames = <String>['Authorization'];
     const contentTypes = <String>[];
 
 
@@ -605,7 +643,6 @@ class ObjectEzsigndocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
-      authNames,
     );
   }
 
@@ -652,7 +689,6 @@ class ObjectEzsigndocumentApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const authNames = <String>['Authorization'];
     const contentTypes = <String>[];
 
 
@@ -664,7 +700,6 @@ class ObjectEzsigndocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
-      authNames,
     );
   }
 
@@ -711,7 +746,6 @@ class ObjectEzsigndocumentApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const authNames = <String>['Authorization'];
     const contentTypes = <String>[];
 
 
@@ -723,7 +757,6 @@ class ObjectEzsigndocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
-      authNames,
     );
   }
 
@@ -770,7 +803,6 @@ class ObjectEzsigndocumentApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const authNames = <String>['Authorization'];
     const contentTypes = <String>[];
 
 
@@ -782,7 +814,6 @@ class ObjectEzsigndocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
-      authNames,
     );
   }
 
@@ -827,7 +858,6 @@ class ObjectEzsigndocumentApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const authNames = <String>['Authorization'];
     const contentTypes = <String>[];
 
 
@@ -839,7 +869,6 @@ class ObjectEzsigndocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
-      authNames,
     );
   }
 
@@ -884,7 +913,6 @@ class ObjectEzsigndocumentApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const authNames = <String>['Authorization'];
     const contentTypes = <String>[];
 
 
@@ -896,7 +924,6 @@ class ObjectEzsigndocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
-      authNames,
     );
   }
 
@@ -945,7 +972,6 @@ class ObjectEzsigndocumentApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const authNames = <String>['Authorization'];
     const contentTypes = <String>['application/json'];
 
 
@@ -957,7 +983,6 @@ class ObjectEzsigndocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
-      authNames,
     );
   }
 
@@ -1008,7 +1033,6 @@ class ObjectEzsigndocumentApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const authNames = <String>['Authorization'];
     const contentTypes = <String>['application/json'];
 
 
@@ -1020,7 +1044,6 @@ class ObjectEzsigndocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
-      authNames,
     );
   }
 
@@ -1043,6 +1066,67 @@ class ObjectEzsigndocumentApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentPatchObjectV1Response',) as EzsigndocumentPatchObjectV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Unsend the Ezsigndocument
+  ///
+  /// Once an Ezsigndocument has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsigndocument and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on this Ezsigndocumentswill be lost.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  ///
+  /// * [Object] body (required):
+  Future<Response> ezsigndocumentUnsendV1WithHttpInfo(int pkiEzsigndocumentID, Object body,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsigndocument/{pkiEzsigndocumentID}/unsend'
+      .replaceAll('{pkiEzsigndocumentID}', pkiEzsigndocumentID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = body;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Unsend the Ezsigndocument
+  ///
+  /// Once an Ezsigndocument has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsigndocument and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on this Ezsigndocumentswill be lost.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  ///
+  /// * [Object] body (required):
+  Future<EzsigndocumentUnsendV1Response?> ezsigndocumentUnsendV1(int pkiEzsigndocumentID, Object body,) async {
+    final response = await ezsigndocumentUnsendV1WithHttpInfo(pkiEzsigndocumentID, body,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentUnsendV1Response',) as EzsigndocumentUnsendV1Response;
     
     }
     return null;

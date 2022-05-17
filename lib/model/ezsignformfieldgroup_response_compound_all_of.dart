@@ -15,14 +15,14 @@ class EzsignformfieldgroupResponseCompoundAllOf {
   EzsignformfieldgroupResponseCompoundAllOf({
     this.aObjEzsignformfield = const [],
     this.aObjDropdownElement = const [],
-    required this.aObjEzsignformfieldgroupsigner,
+    this.aObjEzsignformfieldgroupsigner = const [],
   });
 
   List<EzsignformfieldResponseCompound> aObjEzsignformfield;
 
   List<CustomDropdownElementResponseCompound> aObjDropdownElement;
 
-  EzsignformfieldgroupsignerResponseCompound aObjEzsignformfieldgroupsigner;
+  List<EzsignformfieldgroupsignerResponseCompound> aObjEzsignformfieldgroupsigner;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignformfieldgroupResponseCompoundAllOf &&
@@ -41,11 +41,11 @@ class EzsignformfieldgroupResponseCompoundAllOf {
   String toString() => 'EzsignformfieldgroupResponseCompoundAllOf[aObjEzsignformfield=$aObjEzsignformfield, aObjDropdownElement=$aObjDropdownElement, aObjEzsignformfieldgroupsigner=$aObjEzsignformfieldgroupsigner]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'a_objEzsignformfield'] = aObjEzsignformfield;
-      json[r'a_objDropdownElement'] = aObjDropdownElement;
-      json[r'a_objEzsignformfieldgroupsigner'] = aObjEzsignformfieldgroupsigner;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'a_objEzsignformfield'] = aObjEzsignformfield;
+      _json[r'a_objDropdownElement'] = aObjDropdownElement;
+      _json[r'a_objEzsignformfieldgroupsigner'] = aObjEzsignformfieldgroupsigner;
+    return _json;
   }
 
   /// Returns a new [EzsignformfieldgroupResponseCompoundAllOf] instance and imports its values from
@@ -69,7 +69,7 @@ class EzsignformfieldgroupResponseCompoundAllOf {
       return EzsignformfieldgroupResponseCompoundAllOf(
         aObjEzsignformfield: EzsignformfieldResponseCompound.listFromJson(json[r'a_objEzsignformfield'])!,
         aObjDropdownElement: CustomDropdownElementResponseCompound.listFromJson(json[r'a_objDropdownElement']) ?? const [],
-        aObjEzsignformfieldgroupsigner: EzsignformfieldgroupsignerResponseCompound.fromJson(json[r'a_objEzsignformfieldgroupsigner'])!,
+        aObjEzsignformfieldgroupsigner: EzsignformfieldgroupsignerResponseCompound.listFromJson(json[r'a_objEzsignformfieldgroupsigner'])!,
       );
     }
     return null;

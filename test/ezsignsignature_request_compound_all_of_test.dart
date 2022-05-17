@@ -16,7 +16,7 @@ void main() {
   // final instance = EzsignsignatureRequestCompoundAllOf();
 
   group('test EzsignsignatureRequestCompoundAllOf', () {
-    // Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is \"Name\" or \"Handwritten\")
+    // Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)
     // bool bEzsignsignatureCustomdate
     test('to test the property `bEzsignsignatureCustomdate`', () async {
       // TODO

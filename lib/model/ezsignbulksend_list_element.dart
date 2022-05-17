@@ -17,7 +17,7 @@ class EzsignbulksendListElement {
     required this.fkiEzsignfoldertypeID,
     required this.sEzsignbulksendDescription,
     required this.sEzsignfoldertypeNameX,
-    required this.eEzsignfoldertypePrivacylevel,
+    required this.bEzsignbulksendNeedvalidation,
     required this.bEzsignbulksendIsactive,
     required this.iEzsignbulksendtransmission,
     required this.iEzsignfolder,
@@ -38,7 +38,8 @@ class EzsignbulksendListElement {
   /// The name of the Ezsignfoldertype in the language of the requester
   String sEzsignfoldertypeNameX;
 
-  FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel;
+  /// Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation
+  bool bEzsignbulksendNeedvalidation;
 
   /// Whether the Ezsignbulksend is active or not
   bool bEzsignbulksendIsactive;
@@ -64,7 +65,7 @@ class EzsignbulksendListElement {
      other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
      other.sEzsignbulksendDescription == sEzsignbulksendDescription &&
      other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
-     other.eEzsignfoldertypePrivacylevel == eEzsignfoldertypePrivacylevel &&
+     other.bEzsignbulksendNeedvalidation == bEzsignbulksendNeedvalidation &&
      other.bEzsignbulksendIsactive == bEzsignbulksendIsactive &&
      other.iEzsignbulksendtransmission == iEzsignbulksendtransmission &&
      other.iEzsignfolder == iEzsignfolder &&
@@ -79,7 +80,7 @@ class EzsignbulksendListElement {
     (fkiEzsignfoldertypeID.hashCode) +
     (sEzsignbulksendDescription.hashCode) +
     (sEzsignfoldertypeNameX.hashCode) +
-    (eEzsignfoldertypePrivacylevel.hashCode) +
+    (bEzsignbulksendNeedvalidation.hashCode) +
     (bEzsignbulksendIsactive.hashCode) +
     (iEzsignbulksendtransmission.hashCode) +
     (iEzsignfolder.hashCode) +
@@ -88,22 +89,22 @@ class EzsignbulksendListElement {
     (iEzsignsignatureSigned.hashCode);
 
   @override
-  String toString() => 'EzsignbulksendListElement[pkiEzsignbulksendID=$pkiEzsignbulksendID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignbulksendDescription=$sEzsignbulksendDescription, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, eEzsignfoldertypePrivacylevel=$eEzsignfoldertypePrivacylevel, bEzsignbulksendIsactive=$bEzsignbulksendIsactive, iEzsignbulksendtransmission=$iEzsignbulksendtransmission, iEzsignfolder=$iEzsignfolder, iEzsigndocument=$iEzsigndocument, iEzsignsignature=$iEzsignsignature, iEzsignsignatureSigned=$iEzsignsignatureSigned]';
+  String toString() => 'EzsignbulksendListElement[pkiEzsignbulksendID=$pkiEzsignbulksendID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignbulksendDescription=$sEzsignbulksendDescription, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, bEzsignbulksendNeedvalidation=$bEzsignbulksendNeedvalidation, bEzsignbulksendIsactive=$bEzsignbulksendIsactive, iEzsignbulksendtransmission=$iEzsignbulksendtransmission, iEzsignfolder=$iEzsignfolder, iEzsigndocument=$iEzsigndocument, iEzsignsignature=$iEzsignsignature, iEzsignsignatureSigned=$iEzsignsignatureSigned]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'pkiEzsignbulksendID'] = pkiEzsignbulksendID;
-      json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
-      json[r'sEzsignbulksendDescription'] = sEzsignbulksendDescription;
-      json[r'sEzsignfoldertypeNameX'] = sEzsignfoldertypeNameX;
-      json[r'eEzsignfoldertypePrivacylevel'] = eEzsignfoldertypePrivacylevel;
-      json[r'bEzsignbulksendIsactive'] = bEzsignbulksendIsactive;
-      json[r'iEzsignbulksendtransmission'] = iEzsignbulksendtransmission;
-      json[r'iEzsignfolder'] = iEzsignfolder;
-      json[r'iEzsigndocument'] = iEzsigndocument;
-      json[r'iEzsignsignature'] = iEzsignsignature;
-      json[r'iEzsignsignatureSigned'] = iEzsignsignatureSigned;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'pkiEzsignbulksendID'] = pkiEzsignbulksendID;
+      _json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
+      _json[r'sEzsignbulksendDescription'] = sEzsignbulksendDescription;
+      _json[r'sEzsignfoldertypeNameX'] = sEzsignfoldertypeNameX;
+      _json[r'bEzsignbulksendNeedvalidation'] = bEzsignbulksendNeedvalidation;
+      _json[r'bEzsignbulksendIsactive'] = bEzsignbulksendIsactive;
+      _json[r'iEzsignbulksendtransmission'] = iEzsignbulksendtransmission;
+      _json[r'iEzsignfolder'] = iEzsignfolder;
+      _json[r'iEzsigndocument'] = iEzsigndocument;
+      _json[r'iEzsignsignature'] = iEzsignsignature;
+      _json[r'iEzsignsignatureSigned'] = iEzsignsignatureSigned;
+    return _json;
   }
 
   /// Returns a new [EzsignbulksendListElement] instance and imports its values from
@@ -129,7 +130,7 @@ class EzsignbulksendListElement {
         fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID')!,
         sEzsignbulksendDescription: mapValueOfType<String>(json, r'sEzsignbulksendDescription')!,
         sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX')!,
-        eEzsignfoldertypePrivacylevel: FieldEEzsignfoldertypePrivacylevel.fromJson(json[r'eEzsignfoldertypePrivacylevel'])!,
+        bEzsignbulksendNeedvalidation: mapValueOfType<bool>(json, r'bEzsignbulksendNeedvalidation')!,
         bEzsignbulksendIsactive: mapValueOfType<bool>(json, r'bEzsignbulksendIsactive')!,
         iEzsignbulksendtransmission: mapValueOfType<int>(json, r'iEzsignbulksendtransmission')!,
         iEzsignfolder: mapValueOfType<int>(json, r'iEzsignfolder')!,
@@ -189,7 +190,7 @@ class EzsignbulksendListElement {
     'fkiEzsignfoldertypeID',
     'sEzsignbulksendDescription',
     'sEzsignfoldertypeNameX',
-    'eEzsignfoldertypePrivacylevel',
+    'bEzsignbulksendNeedvalidation',
     'bEzsignbulksendIsactive',
     'iEzsignbulksendtransmission',
     'iEzsignfolder',

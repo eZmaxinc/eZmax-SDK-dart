@@ -38,10 +38,10 @@ class WebsiteRequest {
   String toString() => 'WebsiteRequest[fkiWebsitetypeID=$fkiWebsitetypeID, sWebsiteAddress=$sWebsiteAddress]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'fkiWebsitetypeID'] = fkiWebsitetypeID;
-      json[r'sWebsiteAddress'] = sWebsiteAddress;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'fkiWebsitetypeID'] = fkiWebsitetypeID;
+      _json[r'sWebsiteAddress'] = sWebsiteAddress;
+    return _json;
   }
 
   /// Returns a new [WebsiteRequest] instance and imports its values from

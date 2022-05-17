@@ -21,6 +21,9 @@ class EzsignsignatureRequest {
     required this.iEzsignsignatureStep,
     required this.eEzsignsignatureType,
     required this.fkiEzsigndocumentID,
+    this.tEzsignsignatureTooltip,
+    this.eEzsignsignatureTooltipposition,
+    this.eEzsignsignatureFont,
   });
 
   /// The unique ID of the Ezsignsignature
@@ -41,7 +44,7 @@ class EzsignsignatureRequest {
   /// The X coordinate (Horizontal) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 2 inches from the left border of the page, you would use \"200\" for the X coordinate.
   int iEzsignsignatureX;
 
-  /// The Y coordinate (Vertical) where to put the signature block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.
+  /// The Y coordinate (Vertical) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.
   int iEzsignsignatureY;
 
   /// The step when the Ezsignsigner will be invited to sign
@@ -52,6 +55,31 @@ class EzsignsignatureRequest {
   /// The unique ID of the Ezsigndocument
   int fkiEzsigndocumentID;
 
+  /// A tooltip that will be presented to Ezsignsigner about the Ezsignsignature
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? tEzsignsignatureTooltip;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEEzsignsignatureTooltipposition? eEzsignsignatureTooltipposition;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEEzsignsignatureFont? eEzsignsignatureFont;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignsignatureRequest &&
      other.pkiEzsignsignatureID == pkiEzsignsignatureID &&
@@ -61,7 +89,10 @@ class EzsignsignatureRequest {
      other.iEzsignsignatureY == iEzsignsignatureY &&
      other.iEzsignsignatureStep == iEzsignsignatureStep &&
      other.eEzsignsignatureType == eEzsignsignatureType &&
-     other.fkiEzsigndocumentID == fkiEzsigndocumentID;
+     other.fkiEzsigndocumentID == fkiEzsigndocumentID &&
+     other.tEzsignsignatureTooltip == tEzsignsignatureTooltip &&
+     other.eEzsignsignatureTooltipposition == eEzsignsignatureTooltipposition &&
+     other.eEzsignsignatureFont == eEzsignsignatureFont;
 
   @override
   int get hashCode =>
@@ -73,24 +104,36 @@ class EzsignsignatureRequest {
     (iEzsignsignatureY.hashCode) +
     (iEzsignsignatureStep.hashCode) +
     (eEzsignsignatureType.hashCode) +
-    (fkiEzsigndocumentID.hashCode);
+    (fkiEzsigndocumentID.hashCode) +
+    (tEzsignsignatureTooltip == null ? 0 : tEzsignsignatureTooltip!.hashCode) +
+    (eEzsignsignatureTooltipposition == null ? 0 : eEzsignsignatureTooltipposition!.hashCode) +
+    (eEzsignsignatureFont == null ? 0 : eEzsignsignatureFont!.hashCode);
 
   @override
-  String toString() => 'EzsignsignatureRequest[pkiEzsignsignatureID=$pkiEzsignsignatureID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureStep=$iEzsignsignatureStep, eEzsignsignatureType=$eEzsignsignatureType, fkiEzsigndocumentID=$fkiEzsigndocumentID]';
+  String toString() => 'EzsignsignatureRequest[pkiEzsignsignatureID=$pkiEzsignsignatureID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureStep=$iEzsignsignatureStep, eEzsignsignatureType=$eEzsignsignatureType, fkiEzsigndocumentID=$fkiEzsigndocumentID, tEzsignsignatureTooltip=$tEzsignsignatureTooltip, eEzsignsignatureTooltipposition=$eEzsignsignatureTooltipposition, eEzsignsignatureFont=$eEzsignsignatureFont]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
+    final _json = <String, dynamic>{};
     if (pkiEzsignsignatureID != null) {
-      json[r'pkiEzsignsignatureID'] = pkiEzsignsignatureID;
+      _json[r'pkiEzsignsignatureID'] = pkiEzsignsignatureID;
     }
-      json[r'fkiEzsignfoldersignerassociationID'] = fkiEzsignfoldersignerassociationID;
-      json[r'iEzsignpagePagenumber'] = iEzsignpagePagenumber;
-      json[r'iEzsignsignatureX'] = iEzsignsignatureX;
-      json[r'iEzsignsignatureY'] = iEzsignsignatureY;
-      json[r'iEzsignsignatureStep'] = iEzsignsignatureStep;
-      json[r'eEzsignsignatureType'] = eEzsignsignatureType;
-      json[r'fkiEzsigndocumentID'] = fkiEzsigndocumentID;
-    return json;
+      _json[r'fkiEzsignfoldersignerassociationID'] = fkiEzsignfoldersignerassociationID;
+      _json[r'iEzsignpagePagenumber'] = iEzsignpagePagenumber;
+      _json[r'iEzsignsignatureX'] = iEzsignsignatureX;
+      _json[r'iEzsignsignatureY'] = iEzsignsignatureY;
+      _json[r'iEzsignsignatureStep'] = iEzsignsignatureStep;
+      _json[r'eEzsignsignatureType'] = eEzsignsignatureType;
+      _json[r'fkiEzsigndocumentID'] = fkiEzsigndocumentID;
+    if (tEzsignsignatureTooltip != null) {
+      _json[r'tEzsignsignatureTooltip'] = tEzsignsignatureTooltip;
+    }
+    if (eEzsignsignatureTooltipposition != null) {
+      _json[r'eEzsignsignatureTooltipposition'] = eEzsignsignatureTooltipposition;
+    }
+    if (eEzsignsignatureFont != null) {
+      _json[r'eEzsignsignatureFont'] = eEzsignsignatureFont;
+    }
+    return _json;
   }
 
   /// Returns a new [EzsignsignatureRequest] instance and imports its values from
@@ -120,6 +163,9 @@ class EzsignsignatureRequest {
         iEzsignsignatureStep: mapValueOfType<int>(json, r'iEzsignsignatureStep')!,
         eEzsignsignatureType: FieldEEzsignsignatureType.fromJson(json[r'eEzsignsignatureType'])!,
         fkiEzsigndocumentID: mapValueOfType<int>(json, r'fkiEzsigndocumentID')!,
+        tEzsignsignatureTooltip: mapValueOfType<String>(json, r'tEzsignsignatureTooltip'),
+        eEzsignsignatureTooltipposition: FieldEEzsignsignatureTooltipposition.fromJson(json[r'eEzsignsignatureTooltipposition']),
+        eEzsignsignatureFont: FieldEEzsignsignatureFont.fromJson(json[r'eEzsignsignatureFont']),
       );
     }
     return null;

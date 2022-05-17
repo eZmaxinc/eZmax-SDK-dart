@@ -8,7 +8,7 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**fkiEzsigntemplateID** | **int** | The unique ID of the Ezsigndocument | 
+**fkiEzsigntemplateID** | **int** | The unique ID of the Ezsigntemplate | 
 **aSEzsigntemplatesigner** | **List<String>** |  | [default to const []]
 **aPkiEzsignfoldersignerassociationID** | **List<int>** |  | [default to const []]
 

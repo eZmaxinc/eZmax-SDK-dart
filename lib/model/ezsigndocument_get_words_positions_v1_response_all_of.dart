@@ -16,7 +16,7 @@ class EzsigndocumentGetWordsPositionsV1ResponseAllOf {
     this.mPayload = const [],
   });
 
-  /// Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request
+  /// Payload for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
   List<CustomWordPositionWordResponse> mPayload;
 
   @override
@@ -32,9 +32,9 @@ class EzsigndocumentGetWordsPositionsV1ResponseAllOf {
   String toString() => 'EzsigndocumentGetWordsPositionsV1ResponseAllOf[mPayload=$mPayload]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'mPayload'] = mPayload;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'mPayload'] = mPayload;
+    return _json;
   }
 
   /// Returns a new [EzsigndocumentGetWordsPositionsV1ResponseAllOf] instance and imports its values from

@@ -29,7 +29,9 @@ class ObjectFranchisebrokerApi {
   ///
   /// * [String] sQuery:
   ///   Allow to filter the returned results
-  Future<Response> franchisebrokerGetAutocompleteV1WithHttpInfo(String sSelector, { String? sQuery, }) async {
+  ///
+  /// * [HeaderAcceptLanguage] acceptLanguage:
+  Future<Response> franchisebrokerGetAutocompleteV1WithHttpInfo(String sSelector, { String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/franchisebroker/getAutocomplete/{sSelector}'
       .replaceAll('{sSelector}', sSelector);
@@ -45,7 +47,10 @@ class ObjectFranchisebrokerApi {
       queryParams.addAll(_queryParams('', 'sQuery', sQuery));
     }
 
-    const authNames = <String>['Authorization'];
+    if (acceptLanguage != null) {
+      headerParams[r'Accept-Language'] = parameterToString(acceptLanguage);
+    }
+
     const contentTypes = <String>[];
 
 
@@ -57,7 +62,6 @@ class ObjectFranchisebrokerApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
-      authNames,
     );
   }
 
@@ -72,8 +76,10 @@ class ObjectFranchisebrokerApi {
   ///
   /// * [String] sQuery:
   ///   Allow to filter the returned results
-  Future<CommonGetAutocompleteV1Response?> franchisebrokerGetAutocompleteV1(String sSelector, { String? sQuery, }) async {
-    final response = await franchisebrokerGetAutocompleteV1WithHttpInfo(sSelector,  sQuery: sQuery, );
+  ///
+  /// * [HeaderAcceptLanguage] acceptLanguage:
+  Future<CommonGetAutocompleteV1Response?> franchisebrokerGetAutocompleteV1(String sSelector, { String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
+    final response = await franchisebrokerGetAutocompleteV1WithHttpInfo(sSelector,  sQuery: sQuery, acceptLanguage: acceptLanguage, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

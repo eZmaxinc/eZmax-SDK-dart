@@ -53,15 +53,15 @@ class EzsigndocumentCreateObjectV2Response {
   String toString() => 'EzsigndocumentCreateObjectV2Response[mPayload=$mPayload, objDebugPayload=$objDebugPayload, objDebug=$objDebug]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'mPayload'] = mPayload;
+    final _json = <String, dynamic>{};
+      _json[r'mPayload'] = mPayload;
     if (objDebugPayload != null) {
-      json[r'objDebugPayload'] = objDebugPayload;
+      _json[r'objDebugPayload'] = objDebugPayload;
     }
     if (objDebug != null) {
-      json[r'objDebug'] = objDebug;
+      _json[r'objDebug'] = objDebug;
     }
-    return json;
+    return _json;
   }
 
   /// Returns a new [EzsigndocumentCreateObjectV2Response] instance and imports its values from

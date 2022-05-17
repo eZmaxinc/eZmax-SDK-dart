@@ -16,8 +16,8 @@ void main() {
   // final instance = ActivesessionResponseCompound();
 
   group('test ActivesessionResponseCompound', () {
-    // FieldEActivesessionSessiontype eActivesessionSessiontype
-    test('to test the property `eActivesessionSessiontype`', () async {
+    // FieldEActivesessionUsertype eActivesessionUsertype
+    test('to test the property `eActivesessionUsertype`', () async {
       // TODO
     });
 

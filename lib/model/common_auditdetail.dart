@@ -80,19 +80,19 @@ class CommonAuditdetail {
   String toString() => 'CommonAuditdetail[fkiUserID=$fkiUserID, fkiApikeyID=$fkiApikeyID, sUserLoginname=$sUserLoginname, sUserLastname=$sUserLastname, sUserFirstname=$sUserFirstname, sApikeyDescriptionX=$sApikeyDescriptionX, dtAuditdetailDate=$dtAuditdetailDate]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'fkiUserID'] = fkiUserID;
+    final _json = <String, dynamic>{};
+      _json[r'fkiUserID'] = fkiUserID;
     if (fkiApikeyID != null) {
-      json[r'fkiApikeyID'] = fkiApikeyID;
+      _json[r'fkiApikeyID'] = fkiApikeyID;
     }
-      json[r'sUserLoginname'] = sUserLoginname;
-      json[r'sUserLastname'] = sUserLastname;
-      json[r'sUserFirstname'] = sUserFirstname;
+      _json[r'sUserLoginname'] = sUserLoginname;
+      _json[r'sUserLastname'] = sUserLastname;
+      _json[r'sUserFirstname'] = sUserFirstname;
     if (sApikeyDescriptionX != null) {
-      json[r'sApikeyDescriptionX'] = sApikeyDescriptionX;
+      _json[r'sApikeyDescriptionX'] = sApikeyDescriptionX;
     }
-      json[r'dtAuditdetailDate'] = dtAuditdetailDate;
-    return json;
+      _json[r'dtAuditdetailDate'] = dtAuditdetailDate;
+    return _json;
   }
 
   /// Returns a new [CommonAuditdetail] instance and imports its values from

@@ -31,9 +31,9 @@ class EzsignformfieldgroupEditObjectV1Request {
   String toString() => 'EzsignformfieldgroupEditObjectV1Request[objEzsignformfieldgroup=$objEzsignformfieldgroup]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'objEzsignformfieldgroup'] = objEzsignformfieldgroup;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'objEzsignformfieldgroup'] = objEzsignformfieldgroup;
+    return _json;
   }
 
   /// Returns a new [EzsignformfieldgroupEditObjectV1Request] instance and imports its values from

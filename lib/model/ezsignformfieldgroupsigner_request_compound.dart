@@ -44,12 +44,12 @@ class EzsignformfieldgroupsignerRequestCompound {
   String toString() => 'EzsignformfieldgroupsignerRequestCompound[pkiEzsignformfieldgroupsignerID=$pkiEzsignformfieldgroupsignerID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
+    final _json = <String, dynamic>{};
     if (pkiEzsignformfieldgroupsignerID != null) {
-      json[r'pkiEzsignformfieldgroupsignerID'] = pkiEzsignformfieldgroupsignerID;
+      _json[r'pkiEzsignformfieldgroupsignerID'] = pkiEzsignformfieldgroupsignerID;
     }
-      json[r'fkiEzsignfoldersignerassociationID'] = fkiEzsignfoldersignerassociationID;
-    return json;
+      _json[r'fkiEzsignfoldersignerassociationID'] = fkiEzsignfoldersignerassociationID;
+    return _json;
   }
 
   /// Returns a new [EzsignformfieldgroupsignerRequestCompound] instance and imports its values from

@@ -32,9 +32,9 @@ class EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload {
   String toString() => 'EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload[sLoginUrl=$sLoginUrl]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'sLoginUrl'] = sLoginUrl;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'sLoginUrl'] = sLoginUrl;
+    return _json;
   }
 
   /// Returns a new [EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload] instance and imports its values from

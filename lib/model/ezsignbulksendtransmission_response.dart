@@ -55,13 +55,13 @@ class EzsignbulksendtransmissionResponse {
   String toString() => 'EzsignbulksendtransmissionResponse[pkiEzsignbulksendtransmissionID=$pkiEzsignbulksendtransmissionID, fkiEzsignbulksendID=$fkiEzsignbulksendID, sEzsignbulksendtransmissionDescription=$sEzsignbulksendtransmissionDescription, iEzsignbulksendtransmissionErrors=$iEzsignbulksendtransmissionErrors, objAudit=$objAudit]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'pkiEzsignbulksendtransmissionID'] = pkiEzsignbulksendtransmissionID;
-      json[r'fkiEzsignbulksendID'] = fkiEzsignbulksendID;
-      json[r'sEzsignbulksendtransmissionDescription'] = sEzsignbulksendtransmissionDescription;
-      json[r'iEzsignbulksendtransmissionErrors'] = iEzsignbulksendtransmissionErrors;
-      json[r'objAudit'] = objAudit;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'pkiEzsignbulksendtransmissionID'] = pkiEzsignbulksendtransmissionID;
+      _json[r'fkiEzsignbulksendID'] = fkiEzsignbulksendID;
+      _json[r'sEzsignbulksendtransmissionDescription'] = sEzsignbulksendtransmissionDescription;
+      _json[r'iEzsignbulksendtransmissionErrors'] = iEzsignbulksendtransmissionErrors;
+      _json[r'objAudit'] = objAudit;
+    return _json;
   }
 
   /// Returns a new [EzsignbulksendtransmissionResponse] instance and imports its values from

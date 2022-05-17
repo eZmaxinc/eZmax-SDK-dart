@@ -68,17 +68,17 @@ class CustomWordPositionOccurenceResponse {
   String toString() => 'CustomWordPositionOccurenceResponse[iPage=$iPage, iX=$iX, iY=$iY]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
+    final _json = <String, dynamic>{};
     if (iPage != null) {
-      json[r'iPage'] = iPage;
+      _json[r'iPage'] = iPage;
     }
     if (iX != null) {
-      json[r'iX'] = iX;
+      _json[r'iX'] = iX;
     }
     if (iY != null) {
-      json[r'iY'] = iY;
+      _json[r'iY'] = iY;
     }
-    return json;
+    return _json;
   }
 
   /// Returns a new [CustomWordPositionOccurenceResponse] instance and imports its values from

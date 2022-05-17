@@ -44,11 +44,11 @@ class CommonResponseObjDebugPayload {
   String toString() => 'CommonResponseObjDebugPayload[iVersionMin=$iVersionMin, iVersionMax=$iVersionMax, aRequiredPermission=$aRequiredPermission]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'iVersionMin'] = iVersionMin;
-      json[r'iVersionMax'] = iVersionMax;
-      json[r'a_RequiredPermission'] = aRequiredPermission;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'iVersionMin'] = iVersionMin;
+      _json[r'iVersionMax'] = iVersionMax;
+      _json[r'a_RequiredPermission'] = aRequiredPermission;
+    return _json;
   }
 
   /// Returns a new [CommonResponseObjDebugPayload] instance and imports its values from

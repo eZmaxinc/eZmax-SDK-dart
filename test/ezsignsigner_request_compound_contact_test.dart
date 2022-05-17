@@ -40,13 +40,29 @@ void main() {
       // TODO
     });
 
-    // The Phone number of the contact. Use format \"5149901516\" for North American Numbers (Without \"1\" for long distance code) you would dial like this: 1-514-990-1516. Use format \"498945233886\" for international numbers (Without \"011\") you would dial like this: +49 89 452 33 88-6. In this example \"49\" is the country code of Germany.
+    // A phone number in E.164 Format
+    // String sPhoneE164
+    test('to test the property `sPhoneE164`', () async {
+      // TODO
+    });
+
+    // The extension of the phone number.  The extension is the \"123\" section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers
+    // String sPhoneExtension
+    test('to test the property `sPhoneExtension`', () async {
+      // TODO
+    });
+
+    // A phone number in E.164 Format
+    // String sPhoneE164Cell
+    test('to test the property `sPhoneE164Cell`', () async {
+      // TODO
+    });
+
     // String sPhoneNumber
     test('to test the property `sPhoneNumber`', () async {
       // TODO
     });
 
-    // The Cell Phone number of the contact. Use format \"5149901516\" for North American Numbers (Without \"1\" for long distance code) you would dial like this: 1-514-990-1516. Use format \"498945233886\" for international numbers (Without \"011\") you would dial like this: +49 89 452 33 88-6. In this example \"49\" is the country code of Germany.
     // String sPhoneNumberCell
     test('to test the property `sPhoneNumberCell`', () async {
       // TODO

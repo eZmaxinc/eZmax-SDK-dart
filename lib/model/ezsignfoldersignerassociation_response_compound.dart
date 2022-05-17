@@ -66,17 +66,17 @@ class EzsignfoldersignerassociationResponseCompound {
   String toString() => 'EzsignfoldersignerassociationResponseCompound[pkiEzsignfoldersignerassociationID=$pkiEzsignfoldersignerassociationID, fkiEzsignfolderID=$fkiEzsignfolderID, bEzsignfoldersignerassociationReceivecopy=$bEzsignfoldersignerassociationReceivecopy, objUser=$objUser, objEzsignsigner=$objEzsignsigner]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'pkiEzsignfoldersignerassociationID'] = pkiEzsignfoldersignerassociationID;
-      json[r'fkiEzsignfolderID'] = fkiEzsignfolderID;
-      json[r'bEzsignfoldersignerassociationReceivecopy'] = bEzsignfoldersignerassociationReceivecopy;
+    final _json = <String, dynamic>{};
+      _json[r'pkiEzsignfoldersignerassociationID'] = pkiEzsignfoldersignerassociationID;
+      _json[r'fkiEzsignfolderID'] = fkiEzsignfolderID;
+      _json[r'bEzsignfoldersignerassociationReceivecopy'] = bEzsignfoldersignerassociationReceivecopy;
     if (objUser != null) {
-      json[r'objUser'] = objUser;
+      _json[r'objUser'] = objUser;
     }
     if (objEzsignsigner != null) {
-      json[r'objEzsignsigner'] = objEzsignsigner;
+      _json[r'objEzsignsigner'] = objEzsignsigner;
     }
-    return json;
+    return _json;
   }
 
   /// Returns a new [EzsignfoldersignerassociationResponseCompound] instance and imports its values from

@@ -48,14 +48,14 @@ class EzsignsignatureCreateObjectV1Request {
   String toString() => 'EzsignsignatureCreateObjectV1Request[objEzsignsignature=$objEzsignsignature, objEzsignsignatureCompound=$objEzsignsignatureCompound]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
+    final _json = <String, dynamic>{};
     if (objEzsignsignature != null) {
-      json[r'objEzsignsignature'] = objEzsignsignature;
+      _json[r'objEzsignsignature'] = objEzsignsignature;
     }
     if (objEzsignsignatureCompound != null) {
-      json[r'objEzsignsignatureCompound'] = objEzsignsignatureCompound;
+      _json[r'objEzsignsignatureCompound'] = objEzsignsignatureCompound;
     }
-    return json;
+    return _json;
   }
 
   /// Returns a new [EzsignsignatureCreateObjectV1Request] instance and imports its values from

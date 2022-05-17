@@ -14,15 +14,18 @@ class EzsigndocumentRequest {
   /// Returns a new [EzsigndocumentRequest] instance.
   EzsigndocumentRequest({
     this.pkiEzsigndocumentID,
+    required this.fkiEzsignfolderID,
+    this.fkiEzsigntemplateID,
+    this.fkiEzsignfoldersignerassociationID,
+    required this.fkiLanguageID,
     required this.eEzsigndocumentSource,
-    required this.eEzsigndocumentFormat,
+    this.eEzsigndocumentFormat,
     this.sEzsigndocumentBase64,
     this.sEzsigndocumentUrl,
     this.bEzsigndocumentForcerepair = true,
-    this.sEzsigndocumentPassword = '',
-    required this.fkiEzsignfolderID,
+    this.sEzsigndocumentPassword,
+    this.eEzsigndocumentForm,
     required this.dtEzsigndocumentDuedate,
-    required this.fkiLanguageID,
     required this.sEzsigndocumentName,
   });
 
@@ -35,11 +38,38 @@ class EzsigndocumentRequest {
   ///
   int? pkiEzsigndocumentID;
 
+  /// The unique ID of the Ezsignfolder
+  int fkiEzsignfolderID;
+
+  /// The unique ID of the Ezsigntemplate
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiEzsigntemplateID;
+
+  /// The unique ID of the Ezsignfoldersignerassociation
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiEzsignfoldersignerassociationID;
+
+  /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
+  ///
+  /// Minimum value: 1
+  /// Maximum value: 2
+  int fkiLanguageID;
+
   /// Indicates where to look for the document binary content.
   EzsigndocumentRequestEEzsigndocumentSourceEnum eEzsigndocumentSource;
 
   /// Indicates the format of the document.
-  EzsigndocumentRequestEEzsigndocumentFormatEnum eEzsigndocumentFormat;
+  EzsigndocumentRequestEEzsigndocumentFormatEnum? eEzsigndocumentFormat;
 
   /// The Base64 encoded binary content of the document.  This field is Required when eEzsigndocumentSource = Base64.
   ///
@@ -63,19 +93,19 @@ class EzsigndocumentRequest {
   bool bEzsigndocumentForcerepair;
 
   /// If the source document is password protected, the password to open/modify it.
-  String sEzsigndocumentPassword;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEzsigndocumentPassword;
 
-  /// The unique ID of the Ezsignfolder
-  int fkiEzsignfolderID;
+  /// If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**
+  EzsigndocumentRequestEEzsigndocumentFormEnum? eEzsigndocumentForm;
 
   /// The maximum date and time at which the Ezsigndocument can be signed.
   String dtEzsigndocumentDuedate;
-
-  /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
-  ///
-  /// Minimum value: 1
-  /// Maximum value: 2
-  int fkiLanguageID;
 
   /// The name of the document that will be presented to Ezsignfoldersignerassociations
   String sEzsigndocumentName;
@@ -83,55 +113,74 @@ class EzsigndocumentRequest {
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigndocumentRequest &&
      other.pkiEzsigndocumentID == pkiEzsigndocumentID &&
+     other.fkiEzsignfolderID == fkiEzsignfolderID &&
+     other.fkiEzsigntemplateID == fkiEzsigntemplateID &&
+     other.fkiEzsignfoldersignerassociationID == fkiEzsignfoldersignerassociationID &&
+     other.fkiLanguageID == fkiLanguageID &&
      other.eEzsigndocumentSource == eEzsigndocumentSource &&
      other.eEzsigndocumentFormat == eEzsigndocumentFormat &&
      other.sEzsigndocumentBase64 == sEzsigndocumentBase64 &&
      other.sEzsigndocumentUrl == sEzsigndocumentUrl &&
      other.bEzsigndocumentForcerepair == bEzsigndocumentForcerepair &&
      other.sEzsigndocumentPassword == sEzsigndocumentPassword &&
-     other.fkiEzsignfolderID == fkiEzsignfolderID &&
+     other.eEzsigndocumentForm == eEzsigndocumentForm &&
      other.dtEzsigndocumentDuedate == dtEzsigndocumentDuedate &&
-     other.fkiLanguageID == fkiLanguageID &&
      other.sEzsigndocumentName == sEzsigndocumentName;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiEzsigndocumentID == null ? 0 : pkiEzsigndocumentID!.hashCode) +
+    (fkiEzsignfolderID.hashCode) +
+    (fkiEzsigntemplateID == null ? 0 : fkiEzsigntemplateID!.hashCode) +
+    (fkiEzsignfoldersignerassociationID == null ? 0 : fkiEzsignfoldersignerassociationID!.hashCode) +
+    (fkiLanguageID.hashCode) +
     (eEzsigndocumentSource.hashCode) +
-    (eEzsigndocumentFormat.hashCode) +
+    (eEzsigndocumentFormat == null ? 0 : eEzsigndocumentFormat!.hashCode) +
     (sEzsigndocumentBase64 == null ? 0 : sEzsigndocumentBase64!.hashCode) +
     (sEzsigndocumentUrl == null ? 0 : sEzsigndocumentUrl!.hashCode) +
     (bEzsigndocumentForcerepair.hashCode) +
-    (sEzsigndocumentPassword.hashCode) +
-    (fkiEzsignfolderID.hashCode) +
+    (sEzsigndocumentPassword == null ? 0 : sEzsigndocumentPassword!.hashCode) +
+    (eEzsigndocumentForm == null ? 0 : eEzsigndocumentForm!.hashCode) +
     (dtEzsigndocumentDuedate.hashCode) +
-    (fkiLanguageID.hashCode) +
     (sEzsigndocumentName.hashCode);
 
   @override
-  String toString() => 'EzsigndocumentRequest[pkiEzsigndocumentID=$pkiEzsigndocumentID, eEzsigndocumentSource=$eEzsigndocumentSource, eEzsigndocumentFormat=$eEzsigndocumentFormat, sEzsigndocumentBase64=$sEzsigndocumentBase64, sEzsigndocumentUrl=$sEzsigndocumentUrl, bEzsigndocumentForcerepair=$bEzsigndocumentForcerepair, sEzsigndocumentPassword=$sEzsigndocumentPassword, fkiEzsignfolderID=$fkiEzsignfolderID, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, fkiLanguageID=$fkiLanguageID, sEzsigndocumentName=$sEzsigndocumentName]';
+  String toString() => 'EzsigndocumentRequest[pkiEzsigndocumentID=$pkiEzsigndocumentID, fkiEzsignfolderID=$fkiEzsignfolderID, fkiEzsigntemplateID=$fkiEzsigntemplateID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, fkiLanguageID=$fkiLanguageID, eEzsigndocumentSource=$eEzsigndocumentSource, eEzsigndocumentFormat=$eEzsigndocumentFormat, sEzsigndocumentBase64=$sEzsigndocumentBase64, sEzsigndocumentUrl=$sEzsigndocumentUrl, bEzsigndocumentForcerepair=$bEzsigndocumentForcerepair, sEzsigndocumentPassword=$sEzsigndocumentPassword, eEzsigndocumentForm=$eEzsigndocumentForm, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, sEzsigndocumentName=$sEzsigndocumentName]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
+    final _json = <String, dynamic>{};
     if (pkiEzsigndocumentID != null) {
-      json[r'pkiEzsigndocumentID'] = pkiEzsigndocumentID;
+      _json[r'pkiEzsigndocumentID'] = pkiEzsigndocumentID;
     }
-      json[r'eEzsigndocumentSource'] = eEzsigndocumentSource;
-      json[r'eEzsigndocumentFormat'] = eEzsigndocumentFormat;
+      _json[r'fkiEzsignfolderID'] = fkiEzsignfolderID;
+    if (fkiEzsigntemplateID != null) {
+      _json[r'fkiEzsigntemplateID'] = fkiEzsigntemplateID;
+    }
+    if (fkiEzsignfoldersignerassociationID != null) {
+      _json[r'fkiEzsignfoldersignerassociationID'] = fkiEzsignfoldersignerassociationID;
+    }
+      _json[r'fkiLanguageID'] = fkiLanguageID;
+      _json[r'eEzsigndocumentSource'] = eEzsigndocumentSource;
+    if (eEzsigndocumentFormat != null) {
+      _json[r'eEzsigndocumentFormat'] = eEzsigndocumentFormat;
+    }
     if (sEzsigndocumentBase64 != null) {
-      json[r'sEzsigndocumentBase64'] = sEzsigndocumentBase64;
+      _json[r'sEzsigndocumentBase64'] = sEzsigndocumentBase64;
     }
     if (sEzsigndocumentUrl != null) {
-      json[r'sEzsigndocumentUrl'] = sEzsigndocumentUrl;
+      _json[r'sEzsigndocumentUrl'] = sEzsigndocumentUrl;
     }
-      json[r'bEzsigndocumentForcerepair'] = bEzsigndocumentForcerepair;
-      json[r'sEzsigndocumentPassword'] = sEzsigndocumentPassword;
-      json[r'fkiEzsignfolderID'] = fkiEzsignfolderID;
-      json[r'dtEzsigndocumentDuedate'] = dtEzsigndocumentDuedate;
-      json[r'fkiLanguageID'] = fkiLanguageID;
-      json[r'sEzsigndocumentName'] = sEzsigndocumentName;
-    return json;
+      _json[r'bEzsigndocumentForcerepair'] = bEzsigndocumentForcerepair;
+    if (sEzsigndocumentPassword != null) {
+      _json[r'sEzsigndocumentPassword'] = sEzsigndocumentPassword;
+    }
+    if (eEzsigndocumentForm != null) {
+      _json[r'eEzsigndocumentForm'] = eEzsigndocumentForm;
+    }
+      _json[r'dtEzsigndocumentDuedate'] = dtEzsigndocumentDuedate;
+      _json[r'sEzsigndocumentName'] = sEzsigndocumentName;
+    return _json;
   }
 
   /// Returns a new [EzsigndocumentRequest] instance and imports its values from
@@ -154,15 +203,18 @@ class EzsigndocumentRequest {
 
       return EzsigndocumentRequest(
         pkiEzsigndocumentID: mapValueOfType<int>(json, r'pkiEzsigndocumentID'),
+        fkiEzsignfolderID: mapValueOfType<int>(json, r'fkiEzsignfolderID')!,
+        fkiEzsigntemplateID: mapValueOfType<int>(json, r'fkiEzsigntemplateID'),
+        fkiEzsignfoldersignerassociationID: mapValueOfType<int>(json, r'fkiEzsignfoldersignerassociationID'),
+        fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID')!,
         eEzsigndocumentSource: EzsigndocumentRequestEEzsigndocumentSourceEnum.fromJson(json[r'eEzsigndocumentSource'])!,
-        eEzsigndocumentFormat: EzsigndocumentRequestEEzsigndocumentFormatEnum.fromJson(json[r'eEzsigndocumentFormat'])!,
+        eEzsigndocumentFormat: EzsigndocumentRequestEEzsigndocumentFormatEnum.fromJson(json[r'eEzsigndocumentFormat']),
         sEzsigndocumentBase64: mapValueOfType<String>(json, r'sEzsigndocumentBase64'),
         sEzsigndocumentUrl: mapValueOfType<String>(json, r'sEzsigndocumentUrl'),
         bEzsigndocumentForcerepair: mapValueOfType<bool>(json, r'bEzsigndocumentForcerepair') ?? true,
-        sEzsigndocumentPassword: mapValueOfType<String>(json, r'sEzsigndocumentPassword') ?? '',
-        fkiEzsignfolderID: mapValueOfType<int>(json, r'fkiEzsignfolderID')!,
+        sEzsigndocumentPassword: mapValueOfType<String>(json, r'sEzsigndocumentPassword'),
+        eEzsigndocumentForm: EzsigndocumentRequestEEzsigndocumentFormEnum.fromJson(json[r'eEzsigndocumentForm']),
         dtEzsigndocumentDuedate: mapValueOfType<String>(json, r'dtEzsigndocumentDuedate')!,
-        fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID')!,
         sEzsigndocumentName: mapValueOfType<String>(json, r'sEzsigndocumentName')!,
       );
     }
@@ -213,11 +265,10 @@ class EzsigndocumentRequest {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'eEzsigndocumentSource',
-    'eEzsigndocumentFormat',
     'fkiEzsignfolderID',
-    'dtEzsigndocumentDuedate',
     'fkiLanguageID',
+    'eEzsigndocumentSource',
+    'dtEzsigndocumentDuedate',
     'sEzsigndocumentName',
   };
 }
@@ -236,11 +287,13 @@ class EzsigndocumentRequestEEzsigndocumentSourceEnum {
   String toJson() => value;
 
   static const base64 = EzsigndocumentRequestEEzsigndocumentSourceEnum._(r'Base64');
+  static const ezsigntemplate = EzsigndocumentRequestEEzsigndocumentSourceEnum._(r'Ezsigntemplate');
   static const url = EzsigndocumentRequestEEzsigndocumentSourceEnum._(r'Url');
 
   /// List of all possible values in this [enum][EzsigndocumentRequestEEzsigndocumentSourceEnum].
   static const values = <EzsigndocumentRequestEEzsigndocumentSourceEnum>[
     base64,
+    ezsigntemplate,
     url,
   ];
 
@@ -281,6 +334,7 @@ class EzsigndocumentRequestEEzsigndocumentSourceEnumTypeTransformer {
     if (data != null) {
       switch (data.toString()) {
         case r'Base64': return EzsigndocumentRequestEEzsigndocumentSourceEnum.base64;
+        case r'Ezsigntemplate': return EzsigndocumentRequestEEzsigndocumentSourceEnum.ezsigntemplate;
         case r'Url': return EzsigndocumentRequestEEzsigndocumentSourceEnum.url;
         default:
           if (!allowNull) {
@@ -364,6 +418,80 @@ class EzsigndocumentRequestEEzsigndocumentFormatEnumTypeTransformer {
 
   /// Singleton [EzsigndocumentRequestEEzsigndocumentFormatEnumTypeTransformer] instance.
   static EzsigndocumentRequestEEzsigndocumentFormatEnumTypeTransformer? _instance;
+}
+
+
+/// If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**
+class EzsigndocumentRequestEEzsigndocumentFormEnum {
+  /// Instantiate a new enum with the provided [value].
+  const EzsigndocumentRequestEEzsigndocumentFormEnum._(this.value);
+
+  /// The underlying value of this enum member.
+  final String value;
+
+  @override
+  String toString() => value;
+
+  String toJson() => value;
+
+  static const keep = EzsigndocumentRequestEEzsigndocumentFormEnum._(r'Keep');
+  static const convert = EzsigndocumentRequestEEzsigndocumentFormEnum._(r'Convert');
+
+  /// List of all possible values in this [enum][EzsigndocumentRequestEEzsigndocumentFormEnum].
+  static const values = <EzsigndocumentRequestEEzsigndocumentFormEnum>[
+    keep,
+    convert,
+  ];
+
+  static EzsigndocumentRequestEEzsigndocumentFormEnum? fromJson(dynamic value) => EzsigndocumentRequestEEzsigndocumentFormEnumTypeTransformer().decode(value);
+
+  static List<EzsigndocumentRequestEEzsigndocumentFormEnum>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <EzsigndocumentRequestEEzsigndocumentFormEnum>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = EzsigndocumentRequestEEzsigndocumentFormEnum.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
+}
+
+/// Transformation class that can [encode] an instance of [EzsigndocumentRequestEEzsigndocumentFormEnum] to String,
+/// and [decode] dynamic data back to [EzsigndocumentRequestEEzsigndocumentFormEnum].
+class EzsigndocumentRequestEEzsigndocumentFormEnumTypeTransformer {
+  factory EzsigndocumentRequestEEzsigndocumentFormEnumTypeTransformer() => _instance ??= const EzsigndocumentRequestEEzsigndocumentFormEnumTypeTransformer._();
+
+  const EzsigndocumentRequestEEzsigndocumentFormEnumTypeTransformer._();
+
+  String encode(EzsigndocumentRequestEEzsigndocumentFormEnum data) => data.value;
+
+  /// Decodes a [dynamic value][data] to a EzsigndocumentRequestEEzsigndocumentFormEnum.
+  ///
+  /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
+  /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
+  /// cannot be decoded successfully, then an [UnimplementedError] is thrown.
+  ///
+  /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
+  /// and users are still using an old app with the old code.
+  EzsigndocumentRequestEEzsigndocumentFormEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data != null) {
+      switch (data.toString()) {
+        case r'Keep': return EzsigndocumentRequestEEzsigndocumentFormEnum.keep;
+        case r'Convert': return EzsigndocumentRequestEEzsigndocumentFormEnum.convert;
+        default:
+          if (!allowNull) {
+            throw ArgumentError('Unknown enum value to decode: $data');
+          }
+      }
+    }
+    return null;
+  }
+
+  /// Singleton [EzsigndocumentRequestEEzsigndocumentFormEnumTypeTransformer] instance.
+  static EzsigndocumentRequestEEzsigndocumentFormEnumTypeTransformer? _instance;
 }
 
 

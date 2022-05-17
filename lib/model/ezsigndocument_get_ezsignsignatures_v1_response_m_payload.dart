@@ -31,9 +31,9 @@ class EzsigndocumentGetEzsignsignaturesV1ResponseMPayload {
   String toString() => 'EzsigndocumentGetEzsignsignaturesV1ResponseMPayload[aObjEzsignsignature=$aObjEzsignsignature]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'a_objEzsignsignature'] = aObjEzsignsignature;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'a_objEzsignsignature'] = aObjEzsignsignature;
+    return _json;
   }
 
   /// Returns a new [EzsigndocumentGetEzsignsignaturesV1ResponseMPayload] instance and imports its values from
@@ -55,7 +55,7 @@ class EzsigndocumentGetEzsignsignaturesV1ResponseMPayload {
       }());
 
       return EzsigndocumentGetEzsignsignaturesV1ResponseMPayload(
-        aObjEzsignsignature: EzsignsignatureResponseCompound.listFromJson(json[r'a_objEzsignsignature']) ?? const [],
+        aObjEzsignsignature: EzsignsignatureResponseCompound.listFromJson(json[r'a_objEzsignsignature'])!,
       );
     }
     return null;
@@ -105,6 +105,7 @@ class EzsigndocumentGetEzsignsignaturesV1ResponseMPayload {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
+    'a_objEzsignsignature',
   };
 }
 

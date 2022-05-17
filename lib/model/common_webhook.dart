@@ -37,10 +37,10 @@ class CommonWebhook {
   String toString() => 'CommonWebhook[objWebhook=$objWebhook, aObjAttempt=$aObjAttempt]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'objWebhook'] = objWebhook;
-      json[r'a_objAttempt'] = aObjAttempt;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'objWebhook'] = objWebhook;
+      _json[r'a_objAttempt'] = aObjAttempt;
+    return _json;
   }
 
   /// Returns a new [CommonWebhook] instance and imports its values from

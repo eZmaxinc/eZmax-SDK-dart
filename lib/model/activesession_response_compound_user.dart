@@ -56,13 +56,13 @@ class ActivesessionResponseCompoundUser {
   String toString() => 'ActivesessionResponseCompoundUser[pkiUserID=$pkiUserID, sAvatarUrl=$sAvatarUrl, sUserFirstname=$sUserFirstname, sUserLastname=$sUserLastname, sEmailAddress=$sEmailAddress]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'pkiUserID'] = pkiUserID;
-      json[r'sAvatarUrl'] = sAvatarUrl;
-      json[r'sUserFirstname'] = sUserFirstname;
-      json[r'sUserLastname'] = sUserLastname;
-      json[r'sEmailAddress'] = sEmailAddress;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'pkiUserID'] = pkiUserID;
+      _json[r'sAvatarUrl'] = sAvatarUrl;
+      _json[r'sUserFirstname'] = sUserFirstname;
+      _json[r'sUserLastname'] = sUserLastname;
+      _json[r'sEmailAddress'] = sEmailAddress;
+    return _json;
   }
 
   /// Returns a new [ActivesessionResponseCompoundUser] instance and imports its values from

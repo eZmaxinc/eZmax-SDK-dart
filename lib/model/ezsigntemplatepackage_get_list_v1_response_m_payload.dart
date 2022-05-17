@@ -43,11 +43,11 @@ class EzsigntemplatepackageGetListV1ResponseMPayload {
   String toString() => 'EzsigntemplatepackageGetListV1ResponseMPayload[aObjEzsigntemplatepackage=$aObjEzsigntemplatepackage, iRowReturned=$iRowReturned, iRowFiltered=$iRowFiltered]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'a_objEzsigntemplatepackage'] = aObjEzsigntemplatepackage;
-      json[r'iRowReturned'] = iRowReturned;
-      json[r'iRowFiltered'] = iRowFiltered;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'a_objEzsigntemplatepackage'] = aObjEzsigntemplatepackage;
+      _json[r'iRowReturned'] = iRowReturned;
+      _json[r'iRowFiltered'] = iRowFiltered;
+    return _json;
   }
 
   /// Returns a new [EzsigntemplatepackageGetListV1ResponseMPayload] instance and imports its values from

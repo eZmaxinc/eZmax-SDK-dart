@@ -79,21 +79,21 @@ class EzsignfoldersignerassociationRequestCompound {
   String toString() => 'EzsignfoldersignerassociationRequestCompound[pkiEzsignfoldersignerassociationID=$pkiEzsignfoldersignerassociationID, fkiUserID=$fkiUserID, fkiEzsignfolderID=$fkiEzsignfolderID, bEzsignfoldersignerassociationReceivecopy=$bEzsignfoldersignerassociationReceivecopy, objEzsignsigner=$objEzsignsigner]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
+    final _json = <String, dynamic>{};
     if (pkiEzsignfoldersignerassociationID != null) {
-      json[r'pkiEzsignfoldersignerassociationID'] = pkiEzsignfoldersignerassociationID;
+      _json[r'pkiEzsignfoldersignerassociationID'] = pkiEzsignfoldersignerassociationID;
     }
     if (fkiUserID != null) {
-      json[r'fkiUserID'] = fkiUserID;
+      _json[r'fkiUserID'] = fkiUserID;
     }
-      json[r'fkiEzsignfolderID'] = fkiEzsignfolderID;
+      _json[r'fkiEzsignfolderID'] = fkiEzsignfolderID;
     if (bEzsignfoldersignerassociationReceivecopy != null) {
-      json[r'bEzsignfoldersignerassociationReceivecopy'] = bEzsignfoldersignerassociationReceivecopy;
+      _json[r'bEzsignfoldersignerassociationReceivecopy'] = bEzsignfoldersignerassociationReceivecopy;
     }
     if (objEzsignsigner != null) {
-      json[r'objEzsignsigner'] = objEzsignsigner;
+      _json[r'objEzsignsigner'] = objEzsignsigner;
     }
-    return json;
+    return _json;
   }
 
   /// Returns a new [EzsignfoldersignerassociationRequestCompound] instance and imports its values from

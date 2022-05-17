@@ -50,12 +50,12 @@ class ContactinformationsRequest {
   String toString() => 'ContactinformationsRequest[iAddressDefault=$iAddressDefault, iPhoneDefault=$iPhoneDefault, iEmailDefault=$iEmailDefault, iWebsiteDefault=$iWebsiteDefault]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'iAddressDefault'] = iAddressDefault;
-      json[r'iPhoneDefault'] = iPhoneDefault;
-      json[r'iEmailDefault'] = iEmailDefault;
-      json[r'iWebsiteDefault'] = iWebsiteDefault;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'iAddressDefault'] = iAddressDefault;
+      _json[r'iPhoneDefault'] = iPhoneDefault;
+      _json[r'iEmailDefault'] = iEmailDefault;
+      _json[r'iWebsiteDefault'] = iWebsiteDefault;
+    return _json;
   }
 
   /// Returns a new [ContactinformationsRequest] instance and imports its values from

@@ -27,7 +27,6 @@ class FieldEEzsignformfieldgroupTooltipposition {
   static const topCenter = FieldEEzsignformfieldgroupTooltipposition._(r'TopCenter');
   static const topRight = FieldEEzsignformfieldgroupTooltipposition._(r'TopRight');
   static const middleLeft = FieldEEzsignformfieldgroupTooltipposition._(r'MiddleLeft');
-  static const middleCenter = FieldEEzsignformfieldgroupTooltipposition._(r'MiddleCenter');
   static const middleRight = FieldEEzsignformfieldgroupTooltipposition._(r'MiddleRight');
   static const bottomLeft = FieldEEzsignformfieldgroupTooltipposition._(r'BottomLeft');
   static const bottomCenter = FieldEEzsignformfieldgroupTooltipposition._(r'BottomCenter');
@@ -39,7 +38,6 @@ class FieldEEzsignformfieldgroupTooltipposition {
     topCenter,
     topRight,
     middleLeft,
-    middleCenter,
     middleRight,
     bottomLeft,
     bottomCenter,
@@ -86,7 +84,6 @@ class FieldEEzsignformfieldgroupTooltippositionTypeTransformer {
         case r'TopCenter': return FieldEEzsignformfieldgroupTooltipposition.topCenter;
         case r'TopRight': return FieldEEzsignformfieldgroupTooltipposition.topRight;
         case r'MiddleLeft': return FieldEEzsignformfieldgroupTooltipposition.middleLeft;
-        case r'MiddleCenter': return FieldEEzsignformfieldgroupTooltipposition.middleCenter;
         case r'MiddleRight': return FieldEEzsignformfieldgroupTooltipposition.middleRight;
         case r'BottomLeft': return FieldEEzsignformfieldgroupTooltipposition.bottomLeft;
         case r'BottomCenter': return FieldEEzsignformfieldgroupTooltipposition.bottomCenter;

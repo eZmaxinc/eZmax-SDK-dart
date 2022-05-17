@@ -74,16 +74,16 @@ class AddressRequest {
   String toString() => 'AddressRequest[fkiAddresstypeID=$fkiAddresstypeID, sAddressCivic=$sAddressCivic, sAddressStreet=$sAddressStreet, sAddressSuite=$sAddressSuite, sAddressCity=$sAddressCity, fkiProvinceID=$fkiProvinceID, fkiCountryID=$fkiCountryID, sAddressZip=$sAddressZip]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'fkiAddresstypeID'] = fkiAddresstypeID;
-      json[r'sAddressCivic'] = sAddressCivic;
-      json[r'sAddressStreet'] = sAddressStreet;
-      json[r'sAddressSuite'] = sAddressSuite;
-      json[r'sAddressCity'] = sAddressCity;
-      json[r'fkiProvinceID'] = fkiProvinceID;
-      json[r'fkiCountryID'] = fkiCountryID;
-      json[r'sAddressZip'] = sAddressZip;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'fkiAddresstypeID'] = fkiAddresstypeID;
+      _json[r'sAddressCivic'] = sAddressCivic;
+      _json[r'sAddressStreet'] = sAddressStreet;
+      _json[r'sAddressSuite'] = sAddressSuite;
+      _json[r'sAddressCity'] = sAddressCity;
+      _json[r'fkiProvinceID'] = fkiProvinceID;
+      _json[r'fkiCountryID'] = fkiCountryID;
+      _json[r'sAddressZip'] = sAddressZip;
+    return _json;
   }
 
   /// Returns a new [AddressRequest] instance and imports its values from

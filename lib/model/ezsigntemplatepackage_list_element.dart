@@ -14,27 +14,20 @@ class EzsigntemplatepackageListElement {
   /// Returns a new [EzsigntemplatepackageListElement] instance.
   EzsigntemplatepackageListElement({
     required this.pkiEzsigntemplatepackageID,
-    required this.fkiDepartmentID,
-    required this.fkiTeamID,
     required this.fkiEzsignfoldertypeID,
     required this.fkiLanguageID,
-    required this.eEzsigntemplatepackageType,
     required this.sEzsigntemplatepackageDescription,
     required this.bEzsigntemplatepackageIsactive,
+    required this.bEzsigntemplatepackageNeedvalidation,
     required this.iEzsigntemplatepackagemembership,
+    required this.sEzsignfoldertypeNameX,
   });
 
   /// The unique ID of the Ezsigntemplatepackage
   int pkiEzsigntemplatepackageID;
 
-  /// The unique ID of the Department.
-  int? fkiDepartmentID;
-
-  /// The unique ID of the Team
-  int? fkiTeamID;
-
   /// The unique ID of the Ezsignfoldertype.
-  int? fkiEzsignfoldertypeID;
+  int fkiEzsignfoldertypeID;
 
   /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
   ///
@@ -42,63 +35,58 @@ class EzsigntemplatepackageListElement {
   /// Maximum value: 2
   int fkiLanguageID;
 
-  FieldEEzsigntemplatepackageType eEzsigntemplatepackageType;
-
   /// The description of the Ezsigntemplatepackage
   String sEzsigntemplatepackageDescription;
 
   /// Whether the Ezsigntemplatepackage is active or not
   bool bEzsigntemplatepackageIsactive;
 
+  /// Whether the Ezsignbulksend was automatically modified and needs a manual validation
+  bool bEzsigntemplatepackageNeedvalidation;
+
   /// The total number of Ezsigntemplatepackagemembership in the Ezsigntemplatepackage
   int iEzsigntemplatepackagemembership;
+
+  /// The name of the Ezsignfoldertype in the language of the requester
+  String sEzsignfoldertypeNameX;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplatepackageListElement &&
      other.pkiEzsigntemplatepackageID == pkiEzsigntemplatepackageID &&
-     other.fkiDepartmentID == fkiDepartmentID &&
-     other.fkiTeamID == fkiTeamID &&
      other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
      other.fkiLanguageID == fkiLanguageID &&
-     other.eEzsigntemplatepackageType == eEzsigntemplatepackageType &&
      other.sEzsigntemplatepackageDescription == sEzsigntemplatepackageDescription &&
      other.bEzsigntemplatepackageIsactive == bEzsigntemplatepackageIsactive &&
-     other.iEzsigntemplatepackagemembership == iEzsigntemplatepackagemembership;
+     other.bEzsigntemplatepackageNeedvalidation == bEzsigntemplatepackageNeedvalidation &&
+     other.iEzsigntemplatepackagemembership == iEzsigntemplatepackagemembership &&
+     other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiEzsigntemplatepackageID.hashCode) +
-    (fkiDepartmentID == null ? 0 : fkiDepartmentID!.hashCode) +
-    (fkiTeamID == null ? 0 : fkiTeamID!.hashCode) +
-    (fkiEzsignfoldertypeID == null ? 0 : fkiEzsignfoldertypeID!.hashCode) +
+    (fkiEzsignfoldertypeID.hashCode) +
     (fkiLanguageID.hashCode) +
-    (eEzsigntemplatepackageType.hashCode) +
     (sEzsigntemplatepackageDescription.hashCode) +
     (bEzsigntemplatepackageIsactive.hashCode) +
-    (iEzsigntemplatepackagemembership.hashCode);
+    (bEzsigntemplatepackageNeedvalidation.hashCode) +
+    (iEzsigntemplatepackagemembership.hashCode) +
+    (sEzsignfoldertypeNameX.hashCode);
 
   @override
-  String toString() => 'EzsigntemplatepackageListElement[pkiEzsigntemplatepackageID=$pkiEzsigntemplatepackageID, fkiDepartmentID=$fkiDepartmentID, fkiTeamID=$fkiTeamID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiLanguageID=$fkiLanguageID, eEzsigntemplatepackageType=$eEzsigntemplatepackageType, sEzsigntemplatepackageDescription=$sEzsigntemplatepackageDescription, bEzsigntemplatepackageIsactive=$bEzsigntemplatepackageIsactive, iEzsigntemplatepackagemembership=$iEzsigntemplatepackagemembership]';
+  String toString() => 'EzsigntemplatepackageListElement[pkiEzsigntemplatepackageID=$pkiEzsigntemplatepackageID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiLanguageID=$fkiLanguageID, sEzsigntemplatepackageDescription=$sEzsigntemplatepackageDescription, bEzsigntemplatepackageIsactive=$bEzsigntemplatepackageIsactive, bEzsigntemplatepackageNeedvalidation=$bEzsigntemplatepackageNeedvalidation, iEzsigntemplatepackagemembership=$iEzsigntemplatepackagemembership, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX]';
 
   Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'pkiEzsigntemplatepackageID'] = pkiEzsigntemplatepackageID;
-    if (fkiDepartmentID != null) {
-      json[r'fkiDepartmentID'] = fkiDepartmentID;
-    }
-    if (fkiTeamID != null) {
-      json[r'fkiTeamID'] = fkiTeamID;
-    }
-    if (fkiEzsignfoldertypeID != null) {
-      json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
-    }
-      json[r'fkiLanguageID'] = fkiLanguageID;
-      json[r'eEzsigntemplatepackageType'] = eEzsigntemplatepackageType;
-      json[r'sEzsigntemplatepackageDescription'] = sEzsigntemplatepackageDescription;
-      json[r'bEzsigntemplatepackageIsactive'] = bEzsigntemplatepackageIsactive;
-      json[r'iEzsigntemplatepackagemembership'] = iEzsigntemplatepackagemembership;
-    return json;
+    final _json = <String, dynamic>{};
+      _json[r'pkiEzsigntemplatepackageID'] = pkiEzsigntemplatepackageID;
+      _json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
+      _json[r'fkiLanguageID'] = fkiLanguageID;
+      _json[r'sEzsigntemplatepackageDescription'] = sEzsigntemplatepackageDescription;
+      _json[r'bEzsigntemplatepackageIsactive'] = bEzsigntemplatepackageIsactive;
+      _json[r'bEzsigntemplatepackageNeedvalidation'] = bEzsigntemplatepackageNeedvalidation;
+      _json[r'iEzsigntemplatepackagemembership'] = iEzsigntemplatepackagemembership;
+      _json[r'sEzsignfoldertypeNameX'] = sEzsignfoldertypeNameX;
+    return _json;
   }
 
   /// Returns a new [EzsigntemplatepackageListElement] instance and imports its values from
@@ -121,14 +109,13 @@ class EzsigntemplatepackageListElement {
 
       return EzsigntemplatepackageListElement(
         pkiEzsigntemplatepackageID: mapValueOfType<int>(json, r'pkiEzsigntemplatepackageID')!,
-        fkiDepartmentID: mapValueOfType<int>(json, r'fkiDepartmentID'),
-        fkiTeamID: mapValueOfType<int>(json, r'fkiTeamID'),
-        fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID'),
+        fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID')!,
         fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID')!,
-        eEzsigntemplatepackageType: FieldEEzsigntemplatepackageType.fromJson(json[r'eEzsigntemplatepackageType'])!,
         sEzsigntemplatepackageDescription: mapValueOfType<String>(json, r'sEzsigntemplatepackageDescription')!,
         bEzsigntemplatepackageIsactive: mapValueOfType<bool>(json, r'bEzsigntemplatepackageIsactive')!,
+        bEzsigntemplatepackageNeedvalidation: mapValueOfType<bool>(json, r'bEzsigntemplatepackageNeedvalidation')!,
         iEzsigntemplatepackagemembership: mapValueOfType<int>(json, r'iEzsigntemplatepackagemembership')!,
+        sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX')!,
       );
     }
     return null;
@@ -179,14 +166,13 @@ class EzsigntemplatepackageListElement {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'pkiEzsigntemplatepackageID',
-    'fkiDepartmentID',
-    'fkiTeamID',
     'fkiEzsignfoldertypeID',
     'fkiLanguageID',
-    'eEzsigntemplatepackageType',
     'sEzsigntemplatepackageDescription',
     'bEzsigntemplatepackageIsactive',
+    'bEzsigntemplatepackageNeedvalidation',
     'iEzsigntemplatepackagemembership',
+    'sEzsignfoldertypeNameX',
   };
 }
 
