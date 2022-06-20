@@ -19,6 +19,8 @@ class EzsignfolderImportEzsigntemplatepackageV1Request {
   });
 
   /// The unique ID of the Ezsigntemplatepackage
+  ///
+  /// Minimum value: 0
   int fkiEzsigntemplatepackageID;
 
   /// The maximum date and time at which the Ezsigndocument can be signed.

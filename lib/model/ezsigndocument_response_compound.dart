@@ -37,6 +37,8 @@ class EzsigndocumentResponseCompound {
   });
 
   /// The unique ID of the Ezsignfolder
+  ///
+  /// Minimum value: 0
   int fkiEzsignfolderID;
 
   /// The maximum date and time at which the Ezsigndocument can be signed.
@@ -52,6 +54,8 @@ class EzsigndocumentResponseCompound {
   String sEzsigndocumentName;
 
   /// The unique ID of the Ezsigndocument
+  ///
+  /// Minimum value: 0
   int pkiEzsigndocumentID;
 
   FieldEEzsigndocumentStep eEzsigndocumentStep;
@@ -63,15 +67,23 @@ class EzsigndocumentResponseCompound {
   String dtEzsigndocumentLastsend;
 
   /// The order in which the Ezsigndocument will be presented to the signatory in the Ezsignfolder.
+  ///
+  /// Minimum value: 1
   int iEzsigndocumentOrder;
 
   /// The number of pages in the Ezsigndocument.
+  ///
+  /// Minimum value: 1
   int iEzsigndocumentPagetotal;
 
   /// The number of signatures that were signed in the document.
+  ///
+  /// Minimum value: 0
   int iEzsigndocumentSignaturesigned;
 
   /// The number of total signatures that were requested in the Ezsigndocument.
+  ///
+  /// Minimum value: 0
   int iEzsigndocumentSignaturetotal;
 
   /// MD5 Hash of the initial PDF Document before signatures were applied to it.

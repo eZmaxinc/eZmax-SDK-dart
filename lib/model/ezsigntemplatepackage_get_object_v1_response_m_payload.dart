@@ -27,9 +27,13 @@ class EzsigntemplatepackageGetObjectV1ResponseMPayload {
   });
 
   /// The unique ID of the Ezsigntemplatepackage
+  ///
+  /// Minimum value: 0
   int pkiEzsigntemplatepackageID;
 
   /// The unique ID of the Ezsignfoldertype.
+  ///
+  /// Minimum value: 0
   int fkiEzsignfoldertypeID;
 
   /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|

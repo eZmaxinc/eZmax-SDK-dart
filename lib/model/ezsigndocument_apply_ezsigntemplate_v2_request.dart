@@ -19,6 +19,8 @@ class EzsigndocumentApplyEzsigntemplateV2Request {
   });
 
   /// The unique ID of the Ezsigntemplate
+  ///
+  /// Minimum value: 0
   int fkiEzsigntemplateID;
 
   List<String> aSEzsigntemplatesigner;

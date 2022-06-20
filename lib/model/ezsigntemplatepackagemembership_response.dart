@@ -20,15 +20,23 @@ class EzsigntemplatepackagemembershipResponse {
   });
 
   /// The unique ID of the Ezsigntemplatepackagemembership
+  ///
+  /// Minimum value: 0
   int pkiEzsigntemplatepackagemembershipID;
 
   /// The unique ID of the Ezsigntemplatepackage
+  ///
+  /// Minimum value: 0
   int fkiEzsigntemplatepackageID;
 
   /// The unique ID of the Ezsigntemplate
+  ///
+  /// Minimum value: 0
   int fkiEzsigntemplateID;
 
   /// The order in which the Ezsigntemplate will be imported when using an Ezsigntemplatepackage.
+  ///
+  /// Minimum value: 1
   int iEzsigntemplatepackagemembershipOrder;
 
   @override

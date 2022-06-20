@@ -19,9 +19,13 @@ class EzsigntemplatesignerResponse {
   });
 
   /// The unique ID of the Ezsigntemplatesigner
+  ///
+  /// Minimum value: 0
   int pkiEzsigntemplatesignerID;
 
   /// The unique ID of the Ezsigntemplate
+  ///
+  /// Minimum value: 0
   int fkiEzsigntemplateID;
 
   /// The description of the Ezsigntemplatesigner

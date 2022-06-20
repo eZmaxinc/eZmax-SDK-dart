@@ -20,6 +20,8 @@ class EzsigntemplatesignerRequest {
 
   /// The unique ID of the Ezsigntemplatesigner
   ///
+  /// Minimum value: 0
+  ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
   /// source code must fall back to having a nullable type.
@@ -28,6 +30,8 @@ class EzsigntemplatesignerRequest {
   int? pkiEzsigntemplatesignerID;
 
   /// The unique ID of the Ezsigntemplate
+  ///
+  /// Minimum value: 0
   int fkiEzsigntemplateID;
 
   /// The description of the Ezsigntemplatesigner

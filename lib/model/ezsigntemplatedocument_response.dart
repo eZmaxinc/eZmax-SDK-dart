@@ -21,15 +21,21 @@ class EzsigntemplatedocumentResponse {
   });
 
   /// The unique ID of the Ezsigntemplatedocument
+  ///
+  /// Minimum value: 0
   int pkiEzsigntemplatedocumentID;
 
   /// The unique ID of the Ezsigntemplate
+  ///
+  /// Minimum value: 0
   int fkiEzsigntemplateID;
 
   /// The name of the Ezsigntemplatedocument.
   String sEzsigntemplatedocumentName;
 
   /// The number of pages in the Ezsigntemplatedocument.
+  ///
+  /// Minimum value: 1
   int iEzsigntemplatedocumentPagetotal;
 
   /// The number of total signatures in the Ezsigntemplate.

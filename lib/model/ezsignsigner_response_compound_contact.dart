@@ -24,6 +24,8 @@ class EzsignsignerResponseCompoundContact {
   });
 
   /// The unique ID of the Contact
+  ///
+  /// Minimum value: 0
   int pkiContactID;
 
   /// The First name of the contact

@@ -23,6 +23,8 @@ class ContactRequestCompound {
   });
 
   /// The unique ID of the Contacttitle.  Valid values:  |Value|Description| |-|-| |1|Ms.| |2|Mr.| |4|(Blank)| |5|Me (For Notaries)|
+  ///
+  /// Minimum value: 0
   int fkiContacttitleID;
 
   /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|

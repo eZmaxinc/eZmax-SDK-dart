@@ -22,26 +22,33 @@ class EzsignfolderGetObjectV1ResponseMPayload {
     required this.sEzsigntsarequirementDescriptionX,
     required this.sEzsignfolderDescription,
     required this.tEzsignfolderNote,
+    required this.bEzsignfolderIsdisposable,
     required this.eEzsignfolderSendreminderfrequency,
     this.dtEzsignfolderDuedate,
     this.dtEzsignfolderSentdate,
-    required this.dtEzsignfolderScheduledarchive,
-    required this.dtEzsignfolderScheduleddestruction,
+    this.dtEzsignfolderScheduledarchive,
+    this.dtEzsignfolderScheduleddispose,
     required this.eEzsignfolderStep,
     required this.dtEzsignfolderClose,
     required this.objAudit,
   });
 
   /// The unique ID of the Ezsignfolder
+  ///
+  /// Minimum value: 0
   int pkiEzsignfolderID;
 
   /// The unique ID of the Ezsignfoldertype.
+  ///
+  /// Minimum value: 0
   int fkiEzsignfoldertypeID;
 
   /// The name of the Ezsignfoldertype in the language of the requester
   String sEzsignfoldertypeNameX;
 
   /// The unique ID of the Billingentityinternal.
+  ///
+  /// Minimum value: 0
   int fkiBillingentityinternalID;
 
   /// The description of the Billingentityinternal in the language of the requester
@@ -61,6 +68,9 @@ class EzsignfolderGetObjectV1ResponseMPayload {
 
   /// Note about the Ezsignfolder
   String tEzsignfolderNote;
+
+  /// If the Ezsigndocument can be disposed
+  bool bEzsignfolderIsdisposable;
 
   FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency;
 
@@ -83,10 +93,22 @@ class EzsignfolderGetObjectV1ResponseMPayload {
   String? dtEzsignfolderSentdate;
 
   /// The scheduled date and time at which the Ezsignfolder should be archived.
-  String dtEzsignfolderScheduledarchive;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? dtEzsignfolderScheduledarchive;
 
-  /// The scheduled date and time at which the Ezsignfolder should be Destroyed.
-  String dtEzsignfolderScheduleddestruction;
+  /// The scheduled date at which the Ezsignfolder should be Disposed.
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? dtEzsignfolderScheduleddispose;
 
   FieldEEzsignfolderStep eEzsignfolderStep;
 
@@ -106,11 +128,12 @@ class EzsignfolderGetObjectV1ResponseMPayload {
      other.sEzsigntsarequirementDescriptionX == sEzsigntsarequirementDescriptionX &&
      other.sEzsignfolderDescription == sEzsignfolderDescription &&
      other.tEzsignfolderNote == tEzsignfolderNote &&
+     other.bEzsignfolderIsdisposable == bEzsignfolderIsdisposable &&
      other.eEzsignfolderSendreminderfrequency == eEzsignfolderSendreminderfrequency &&
      other.dtEzsignfolderDuedate == dtEzsignfolderDuedate &&
      other.dtEzsignfolderSentdate == dtEzsignfolderSentdate &&
      other.dtEzsignfolderScheduledarchive == dtEzsignfolderScheduledarchive &&
-     other.dtEzsignfolderScheduleddestruction == dtEzsignfolderScheduleddestruction &&
+     other.dtEzsignfolderScheduleddispose == dtEzsignfolderScheduleddispose &&
      other.eEzsignfolderStep == eEzsignfolderStep &&
      other.dtEzsignfolderClose == dtEzsignfolderClose &&
      other.objAudit == objAudit;
@@ -127,17 +150,18 @@ class EzsignfolderGetObjectV1ResponseMPayload {
     (sEzsigntsarequirementDescriptionX.hashCode) +
     (sEzsignfolderDescription.hashCode) +
     (tEzsignfolderNote.hashCode) +
+    (bEzsignfolderIsdisposable.hashCode) +
     (eEzsignfolderSendreminderfrequency.hashCode) +
     (dtEzsignfolderDuedate == null ? 0 : dtEzsignfolderDuedate!.hashCode) +
     (dtEzsignfolderSentdate == null ? 0 : dtEzsignfolderSentdate!.hashCode) +
-    (dtEzsignfolderScheduledarchive.hashCode) +
-    (dtEzsignfolderScheduleddestruction.hashCode) +
+    (dtEzsignfolderScheduledarchive == null ? 0 : dtEzsignfolderScheduledarchive!.hashCode) +
+    (dtEzsignfolderScheduleddispose == null ? 0 : dtEzsignfolderScheduleddispose!.hashCode) +
     (eEzsignfolderStep.hashCode) +
     (dtEzsignfolderClose.hashCode) +
     (objAudit.hashCode);
 
   @override
-  String toString() => 'EzsignfolderGetObjectV1ResponseMPayload[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, fkiBillingentityinternalID=$fkiBillingentityinternalID, sBillingentityinternalDescriptionX=$sBillingentityinternalDescriptionX, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sEzsigntsarequirementDescriptionX=$sEzsigntsarequirementDescriptionX, sEzsignfolderDescription=$sEzsignfolderDescription, tEzsignfolderNote=$tEzsignfolderNote, eEzsignfolderSendreminderfrequency=$eEzsignfolderSendreminderfrequency, dtEzsignfolderDuedate=$dtEzsignfolderDuedate, dtEzsignfolderSentdate=$dtEzsignfolderSentdate, dtEzsignfolderScheduledarchive=$dtEzsignfolderScheduledarchive, dtEzsignfolderScheduleddestruction=$dtEzsignfolderScheduleddestruction, eEzsignfolderStep=$eEzsignfolderStep, dtEzsignfolderClose=$dtEzsignfolderClose, objAudit=$objAudit]';
+  String toString() => 'EzsignfolderGetObjectV1ResponseMPayload[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, fkiBillingentityinternalID=$fkiBillingentityinternalID, sBillingentityinternalDescriptionX=$sBillingentityinternalDescriptionX, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sEzsigntsarequirementDescriptionX=$sEzsigntsarequirementDescriptionX, sEzsignfolderDescription=$sEzsignfolderDescription, tEzsignfolderNote=$tEzsignfolderNote, bEzsignfolderIsdisposable=$bEzsignfolderIsdisposable, eEzsignfolderSendreminderfrequency=$eEzsignfolderSendreminderfrequency, dtEzsignfolderDuedate=$dtEzsignfolderDuedate, dtEzsignfolderSentdate=$dtEzsignfolderSentdate, dtEzsignfolderScheduledarchive=$dtEzsignfolderScheduledarchive, dtEzsignfolderScheduleddispose=$dtEzsignfolderScheduleddispose, eEzsignfolderStep=$eEzsignfolderStep, dtEzsignfolderClose=$dtEzsignfolderClose, objAudit=$objAudit]';
 
   Map<String, dynamic> toJson() {
     final _json = <String, dynamic>{};
@@ -150,6 +174,7 @@ class EzsignfolderGetObjectV1ResponseMPayload {
       _json[r'sEzsigntsarequirementDescriptionX'] = sEzsigntsarequirementDescriptionX;
       _json[r'sEzsignfolderDescription'] = sEzsignfolderDescription;
       _json[r'tEzsignfolderNote'] = tEzsignfolderNote;
+      _json[r'bEzsignfolderIsdisposable'] = bEzsignfolderIsdisposable;
       _json[r'eEzsignfolderSendreminderfrequency'] = eEzsignfolderSendreminderfrequency;
     if (dtEzsignfolderDuedate != null) {
       _json[r'dtEzsignfolderDuedate'] = dtEzsignfolderDuedate;
@@ -157,8 +182,12 @@ class EzsignfolderGetObjectV1ResponseMPayload {
     if (dtEzsignfolderSentdate != null) {
       _json[r'dtEzsignfolderSentdate'] = dtEzsignfolderSentdate;
     }
+    if (dtEzsignfolderScheduledarchive != null) {
       _json[r'dtEzsignfolderScheduledarchive'] = dtEzsignfolderScheduledarchive;
-      _json[r'dtEzsignfolderScheduleddestruction'] = dtEzsignfolderScheduleddestruction;
+    }
+    if (dtEzsignfolderScheduleddispose != null) {
+      _json[r'dtEzsignfolderScheduleddispose'] = dtEzsignfolderScheduleddispose;
+    }
       _json[r'eEzsignfolderStep'] = eEzsignfolderStep;
       _json[r'dtEzsignfolderClose'] = dtEzsignfolderClose;
       _json[r'objAudit'] = objAudit;
@@ -193,11 +222,12 @@ class EzsignfolderGetObjectV1ResponseMPayload {
         sEzsigntsarequirementDescriptionX: mapValueOfType<String>(json, r'sEzsigntsarequirementDescriptionX')!,
         sEzsignfolderDescription: mapValueOfType<String>(json, r'sEzsignfolderDescription')!,
         tEzsignfolderNote: mapValueOfType<String>(json, r'tEzsignfolderNote')!,
+        bEzsignfolderIsdisposable: mapValueOfType<bool>(json, r'bEzsignfolderIsdisposable')!,
         eEzsignfolderSendreminderfrequency: FieldEEzsignfolderSendreminderfrequency.fromJson(json[r'eEzsignfolderSendreminderfrequency'])!,
         dtEzsignfolderDuedate: mapValueOfType<String>(json, r'dtEzsignfolderDuedate'),
         dtEzsignfolderSentdate: mapValueOfType<String>(json, r'dtEzsignfolderSentdate'),
-        dtEzsignfolderScheduledarchive: mapValueOfType<String>(json, r'dtEzsignfolderScheduledarchive')!,
-        dtEzsignfolderScheduleddestruction: mapValueOfType<String>(json, r'dtEzsignfolderScheduleddestruction')!,
+        dtEzsignfolderScheduledarchive: mapValueOfType<String>(json, r'dtEzsignfolderScheduledarchive'),
+        dtEzsignfolderScheduleddispose: mapValueOfType<String>(json, r'dtEzsignfolderScheduleddispose'),
         eEzsignfolderStep: FieldEEzsignfolderStep.fromJson(json[r'eEzsignfolderStep'])!,
         dtEzsignfolderClose: mapValueOfType<String>(json, r'dtEzsignfolderClose')!,
         objAudit: CommonAudit.fromJson(json[r'objAudit'])!,
@@ -259,9 +289,8 @@ class EzsignfolderGetObjectV1ResponseMPayload {
     'sEzsigntsarequirementDescriptionX',
     'sEzsignfolderDescription',
     'tEzsignfolderNote',
+    'bEzsignfolderIsdisposable',
     'eEzsignfolderSendreminderfrequency',
-    'dtEzsignfolderScheduledarchive',
-    'dtEzsignfolderScheduleddestruction',
     'eEzsignfolderStep',
     'dtEzsignfolderClose',
     'objAudit',

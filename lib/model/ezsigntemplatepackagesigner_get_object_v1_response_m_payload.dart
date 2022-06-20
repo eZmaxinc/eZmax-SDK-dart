@@ -19,9 +19,13 @@ class EzsigntemplatepackagesignerGetObjectV1ResponseMPayload {
   });
 
   /// The unique ID of the Ezsigntemplatepackagesigner
+  ///
+  /// Minimum value: 0
   int pkiEzsigntemplatepackagesignerID;
 
   /// The unique ID of the Ezsigntemplatepackage
+  ///
+  /// Minimum value: 0
   int fkiEzsigntemplatepackageID;
 
   /// The description of the Ezsigntemplatepackagesigner

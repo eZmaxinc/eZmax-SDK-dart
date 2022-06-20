@@ -18,6 +18,8 @@ class ActivesessionResponseCompoundApikey {
   });
 
   /// The unique ID of the Apikey
+  ///
+  /// Minimum value: 0
   int pkiApikeyID;
 
   /// The description of the Apikey in the language of the requester

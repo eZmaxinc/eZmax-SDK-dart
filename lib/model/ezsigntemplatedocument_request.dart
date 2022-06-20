@@ -29,6 +29,8 @@ class EzsigntemplatedocumentRequest {
 
   /// The unique ID of the Ezsigntemplatedocument
   ///
+  /// Minimum value: 0
+  ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
   /// source code must fall back to having a nullable type.
@@ -37,9 +39,13 @@ class EzsigntemplatedocumentRequest {
   int? pkiEzsigntemplatedocumentID;
 
   /// The unique ID of the Ezsigntemplate
+  ///
+  /// Minimum value: 0
   int fkiEzsigntemplateID;
 
   /// The unique ID of the Ezsigndocument
+  ///
+  /// Minimum value: 0
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -49,6 +55,8 @@ class EzsigntemplatedocumentRequest {
   int? fkiEzsigndocumentID;
 
   /// The unique ID of the Ezsigntemplatesigner
+  ///
+  /// Minimum value: 0
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated

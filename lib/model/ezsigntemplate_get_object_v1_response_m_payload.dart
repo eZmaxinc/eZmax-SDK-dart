@@ -26,9 +26,13 @@ class EzsigntemplateGetObjectV1ResponseMPayload {
   });
 
   /// The unique ID of the Ezsigntemplate
+  ///
+  /// Minimum value: 0
   int pkiEzsigntemplateID;
 
   /// The unique ID of the Ezsigntemplatedocument
+  ///
+  /// Minimum value: 0
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -38,6 +42,8 @@ class EzsigntemplateGetObjectV1ResponseMPayload {
   int? fkiEzsigntemplatedocumentID;
 
   /// The unique ID of the Ezsignfoldertype.
+  ///
+  /// Minimum value: 0
   int fkiEzsignfoldertypeID;
 
   /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|

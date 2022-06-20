@@ -21,6 +21,8 @@ class CustomEzsignfoldertransmissionResponse {
   });
 
   /// The unique ID of the Ezsignfolder
+  ///
+  /// Minimum value: 0
   int pkiEzsignfolderID;
 
   FieldEEzsignfolderStep eEzsignfolderStep;

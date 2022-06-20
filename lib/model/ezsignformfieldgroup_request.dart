@@ -32,6 +32,8 @@ class EzsignformfieldgroupRequest {
 
   /// The unique ID of the Ezsignformfieldgroup
   ///
+  /// Minimum value: 0
+  ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
   /// source code must fall back to having a nullable type.
@@ -40,6 +42,8 @@ class EzsignformfieldgroupRequest {
   int? pkiEzsignformfieldgroupID;
 
   /// The unique ID of the Ezsigndocument
+  ///
+  /// Minimum value: 0
   int fkiEzsigndocumentID;
 
   FieldEEzsignformfieldgroupType eEzsignformfieldgroupType;
@@ -50,21 +54,29 @@ class EzsignformfieldgroupRequest {
   String sEzsignformfieldgroupLabel;
 
   /// The step when the Ezsignsigner will be invited to fill the form fields
+  ///
+  /// Minimum value: 1
   int iEzsignformfieldgroupStep;
 
   /// The default value for the Ezsignformfieldgroup
   String sEzsignformfieldgroupDefaultvalue;
 
   /// The minimum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup
+  ///
+  /// Minimum value: 0
   int iEzsignformfieldgroupFilledmin;
 
   /// The maximum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup
+  ///
+  /// Minimum value: 0
   int iEzsignformfieldgroupFilledmax;
 
   /// Whether the Ezsignformfieldgroup is read only or not.
   bool bEzsignformfieldgroupReadonly;
 
   /// The maximum length for the value in the Ezsignformfieldgroup  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**
+  ///
+  /// Minimum value: 0
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated

@@ -274,6 +274,10 @@ class ApiClient {
           return CommonResponseObjDebugPayloadGetListAllOf.fromJson(value);
         case 'CommonResponseObjSQLQuery':
           return CommonResponseObjSQLQuery.fromJson(value);
+        case 'CommonResponseRedirectSSecretquestionTextX':
+          return CommonResponseRedirectSSecretquestionTextX.fromJson(value);
+        case 'CommonResponseWarning':
+          return CommonResponseWarning.fromJson(value);
         case 'CommonWebhook':
           return CommonWebhook.fromJson(value);
         case 'ContactRequest':
@@ -626,6 +630,12 @@ class ApiClient {
           return EzsignfolderCreateObjectV2ResponseMPayload.fromJson(value);
         case 'EzsignfolderDeleteObjectV1Response':
           return EzsignfolderDeleteObjectV1Response.fromJson(value);
+        case 'EzsignfolderDisposeEzsignfoldersV1Request':
+          return EzsignfolderDisposeEzsignfoldersV1Request.fromJson(value);
+        case 'EzsignfolderDisposeEzsignfoldersV1Response':
+          return EzsignfolderDisposeEzsignfoldersV1Response.fromJson(value);
+        case 'EzsignfolderDisposeV1Response':
+          return EzsignfolderDisposeV1Response.fromJson(value);
         case 'EzsignfolderEditObjectV1Request':
           return EzsignfolderEditObjectV1Request.fromJson(value);
         case 'EzsignfolderEditObjectV1Response':
@@ -944,6 +954,8 @@ class ApiClient {
           return EzsigntemplatedocumentEditObjectV1Request.fromJson(value);
         case 'EzsigntemplatedocumentEditObjectV1Response':
           return EzsigntemplatedocumentEditObjectV1Response.fromJson(value);
+        case 'EzsigntemplatedocumentEditObjectV1ResponseAllOf':
+          return EzsigntemplatedocumentEditObjectV1ResponseAllOf.fromJson(value);
         case 'EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1Response':
           return EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1Response.fromJson(value);
         case 'EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseAllOf':
@@ -1284,6 +1296,8 @@ class ApiClient {
           return FieldENotificationpreferenceStatusTypeTransformer().decode(value);
         case 'FieldEPhoneType':
           return FieldEPhoneTypeTypeTransformer().decode(value);
+        case 'FieldEUserEzsignsendreminderfrequency':
+          return FieldEUserEzsignsendreminderfrequencyTypeTransformer().decode(value);
         case 'FieldEUserType':
           return FieldEUserTypeTypeTransformer().decode(value);
         case 'FranchisereferalincomeCreateObjectV1Request':
@@ -1322,6 +1336,12 @@ class ApiClient {
           return NotificationsectionGetNotificationtestsV1ResponseMPayload.fromJson(value);
         case 'NotificationsubsectionResponse':
           return NotificationsubsectionResponse.fromJson(value);
+        case 'NotificationtestGetElementsV1Response':
+          return NotificationtestGetElementsV1Response.fromJson(value);
+        case 'NotificationtestGetElementsV1ResponseAllOf':
+          return NotificationtestGetElementsV1ResponseAllOf.fromJson(value);
+        case 'NotificationtestGetElementsV1ResponseMPayload':
+          return NotificationtestGetElementsV1ResponseMPayload.fromJson(value);
         case 'NotificationtestResponse':
           return NotificationtestResponse.fromJson(value);
         case 'PhoneRequest':

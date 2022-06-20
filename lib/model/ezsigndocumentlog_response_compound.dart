@@ -25,6 +25,8 @@ class EzsigndocumentlogResponseCompound {
 
   /// The unique ID of the User
   ///
+  /// Minimum value: 0
+  ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
   /// source code must fall back to having a nullable type.
@@ -33,6 +35,8 @@ class EzsigndocumentlogResponseCompound {
   int? fkiUserID;
 
   /// The unique ID of the Ezsignsigner
+  ///
+  /// Minimum value: 0
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated

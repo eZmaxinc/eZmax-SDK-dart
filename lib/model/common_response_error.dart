@@ -14,20 +14,14 @@ class CommonResponseError {
   /// Returns a new [CommonResponseError] instance.
   CommonResponseError({
     required this.sErrorMessage,
-    this.eErrorCode,
+    required this.eErrorCode,
   });
 
   /// More detail about the error
   String sErrorMessage;
 
   /// The error code. See documentation for valid values
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  String? eErrorCode;
+  String eErrorCode;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonResponseError &&
@@ -38,7 +32,7 @@ class CommonResponseError {
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (sErrorMessage.hashCode) +
-    (eErrorCode == null ? 0 : eErrorCode!.hashCode);
+    (eErrorCode.hashCode);
 
   @override
   String toString() => 'CommonResponseError[sErrorMessage=$sErrorMessage, eErrorCode=$eErrorCode]';
@@ -46,9 +40,7 @@ class CommonResponseError {
   Map<String, dynamic> toJson() {
     final _json = <String, dynamic>{};
       _json[r'sErrorMessage'] = sErrorMessage;
-    if (eErrorCode != null) {
       _json[r'eErrorCode'] = eErrorCode;
-    }
     return _json;
   }
 
@@ -72,7 +64,7 @@ class CommonResponseError {
 
       return CommonResponseError(
         sErrorMessage: mapValueOfType<String>(json, r'sErrorMessage')!,
-        eErrorCode: mapValueOfType<String>(json, r'eErrorCode'),
+        eErrorCode: mapValueOfType<String>(json, r'eErrorCode')!,
       );
     }
     return null;
@@ -123,6 +115,7 @@ class CommonResponseError {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'sErrorMessage',
+    'eErrorCode',
   };
 }
 

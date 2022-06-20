@@ -29,6 +29,8 @@ class FranchisereferalincomeRequest {
 
   /// The unique ID of the Franchisereferalincome
   ///
+  /// Minimum value: 0
+  ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
   /// source code must fall back to having a nullable type.
@@ -37,12 +39,18 @@ class FranchisereferalincomeRequest {
   int? pkiFranchisereferalincomeID;
 
   /// The unique ID of the Franchisebroker
+  ///
+  /// Minimum value: 0
   int fkiFranchisebrokerID;
 
   /// The unique ID of the Franchisereferalincomeprogram
+  ///
+  /// Minimum value: 0
   int fkiFranchisereferalincomeprogramID;
 
   /// The unique ID of the Period
+  ///
+  /// Minimum value: 0
   int fkiPeriodID;
 
   /// The loan amount
@@ -64,6 +72,8 @@ class FranchisereferalincomeRequest {
   String tFranchisereferalincomeComment;
 
   /// The unique ID of the Franchisereoffice
+  ///
+  /// Minimum value: 0
   int fkiFranchiseofficeID;
 
   /// 

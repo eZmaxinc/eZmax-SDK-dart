@@ -27,6 +27,8 @@ class EzsignformfieldRequestCompound {
 
   /// The unique ID of the Ezsignformfield
   ///
+  /// Minimum value: 0
+  ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
   /// source code must fall back to having a nullable type.
@@ -35,6 +37,8 @@ class EzsignformfieldRequestCompound {
   int? pkiEzsignformfieldID;
 
   /// The page number in the Ezsigndocument
+  ///
+  /// Minimum value: 1
   int iEzsignpagePagenumber;
 
   /// The Label for the Ezsignformfield
@@ -50,15 +54,23 @@ class EzsignformfieldRequestCompound {
   String? sEzsignformfieldValue;
 
   /// The X coordinate (Horizontal) where to put the Ezsignformfield on the Ezsignpage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignformfield 2 inches from the left border of the page, you would use \"200\" for the X coordinate.
+  ///
+  /// Minimum value: 0
   int iEzsignformfieldX;
 
   /// The Y coordinate (Vertical) where to put the Ezsignformfield on the Ezsignpage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignformfield 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.
+  ///
+  /// Minimum value: 0
   int iEzsignformfieldY;
 
   /// The Width of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22-65535     | | Radio                     | 22           | | Text                      | 22-65535     | | Textarea                  | 22-65535     |
+  ///
+  /// Minimum value: 0
   int iEzsignformfieldWidth;
 
   /// The Height of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     | 
+  ///
+  /// Minimum value: 0
   int iEzsignformfieldHeight;
 
   /// Whether the Ezsignformfield is selected or not by default.  This can only be set if eEzsignformfieldgroupType is **Checkbox** or **Radio**

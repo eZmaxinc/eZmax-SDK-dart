@@ -21,18 +21,28 @@ class EzsigntemplatepackagesignermembershipResponseCompound {
   });
 
   /// The unique ID of the Ezsigntemplatepackagesignermembership
+  ///
+  /// Minimum value: 0
   int pkiEzsigntemplatepackagesignermembershipID;
 
   /// The unique ID of the Ezsigntemplatepackagemembership
+  ///
+  /// Minimum value: 0
   int fkiEzsigntemplatepackagemembershipID;
 
   /// The unique ID of the Ezsigntemplatepackagesigner
+  ///
+  /// Minimum value: 0
   int fkiEzsigntemplatepackagesignerID;
 
   /// The unique ID of the Ezsigntemplatesigner
+  ///
+  /// Minimum value: 0
   int fkiEzsigntemplatesignerID;
 
   /// The Copy number in case of multiple copies.
+  ///
+  /// Minimum value: 1
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated

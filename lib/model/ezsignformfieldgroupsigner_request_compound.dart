@@ -19,6 +19,8 @@ class EzsignformfieldgroupsignerRequestCompound {
 
   /// The unique ID of the Ezsignformfieldgroupsigner
   ///
+  /// Minimum value: 0
+  ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
   /// source code must fall back to having a nullable type.
@@ -27,6 +29,8 @@ class EzsignformfieldgroupsignerRequestCompound {
   int? pkiEzsignformfieldgroupsignerID;
 
   /// The unique ID of the Ezsignfoldersignerassociation
+  ///
+  /// Minimum value: 0
   int fkiEzsignfoldersignerassociationID;
 
   @override

@@ -45,6 +45,8 @@ doc/CommonResponseObjDebugPayload.md
 doc/CommonResponseObjDebugPayloadGetList.md
 doc/CommonResponseObjDebugPayloadGetListAllOf.md
 doc/CommonResponseObjSQLQuery.md
+doc/CommonResponseRedirectSSecretquestionTextX.md
+doc/CommonResponseWarning.md
 doc/CommonWebhook.md
 doc/ContactRequest.md
 doc/ContactRequestCompound.md
@@ -221,6 +223,9 @@ doc/EzsignfolderCreateObjectV2Response.md
 doc/EzsignfolderCreateObjectV2ResponseAllOf.md
 doc/EzsignfolderCreateObjectV2ResponseMPayload.md
 doc/EzsignfolderDeleteObjectV1Response.md
+doc/EzsignfolderDisposeEzsignfoldersV1Request.md
+doc/EzsignfolderDisposeEzsignfoldersV1Response.md
+doc/EzsignfolderDisposeV1Response.md
 doc/EzsignfolderEditObjectV1Request.md
 doc/EzsignfolderEditObjectV1Response.md
 doc/EzsignfolderGetActionableElementsV1Response.md
@@ -380,6 +385,7 @@ doc/EzsigntemplatedocumentEditEzsigntemplatesignaturesV1ResponseAllOf.md
 doc/EzsigntemplatedocumentEditEzsigntemplatesignaturesV1ResponseMPayload.md
 doc/EzsigntemplatedocumentEditObjectV1Request.md
 doc/EzsigntemplatedocumentEditObjectV1Response.md
+doc/EzsigntemplatedocumentEditObjectV1ResponseAllOf.md
 doc/EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1Response.md
 doc/EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseAllOf.md
 doc/EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseMPayload.md
@@ -550,6 +556,7 @@ doc/FieldEEzsigntemplatesignatureTooltipposition.md
 doc/FieldEEzsigntemplatesignatureType.md
 doc/FieldENotificationpreferenceStatus.md
 doc/FieldEPhoneType.md
+doc/FieldEUserEzsignsendreminderfrequency.md
 doc/FieldEUserType.md
 doc/FranchisereferalincomeCreateObjectV1Request.md
 doc/FranchisereferalincomeCreateObjectV1Response.md
@@ -572,9 +579,14 @@ doc/NotificationsectionGetNotificationtestsV1Response.md
 doc/NotificationsectionGetNotificationtestsV1ResponseAllOf.md
 doc/NotificationsectionGetNotificationtestsV1ResponseMPayload.md
 doc/NotificationsubsectionResponse.md
+doc/NotificationtestGetElementsV1Response.md
+doc/NotificationtestGetElementsV1ResponseAllOf.md
+doc/NotificationtestGetElementsV1ResponseMPayload.md
 doc/NotificationtestResponse.md
 doc/ObjectActivesessionApi.md
 doc/ObjectApikeyApi.md
+doc/ObjectBillingentityinternalApi.md
+doc/ObjectBrandingApi.md
 doc/ObjectEzsignbulksendApi.md
 doc/ObjectEzsignbulksenddocumentmappingApi.md
 doc/ObjectEzsignbulksendsignermappingApi.md
@@ -599,8 +611,13 @@ doc/ObjectFranchisebrokerApi.md
 doc/ObjectFranchiseofficeApi.md
 doc/ObjectFranchisereferalincomeApi.md
 doc/ObjectNotificationsectionApi.md
+doc/ObjectNotificationtestApi.md
 doc/ObjectPeriodApi.md
 doc/ObjectSecretquestionApi.md
+doc/ObjectTaxassignmentApi.md
+doc/ObjectTimezoneApi.md
+doc/ObjectUserApi.md
+doc/ObjectUsergroupApi.md
 doc/PhoneRequest.md
 doc/PhoneRequestCompound.md
 doc/UserCreateEzsignuserV1Request.md
@@ -625,6 +642,8 @@ lib/api/module_ezsign_api.dart
 lib/api/module_user_api.dart
 lib/api/object_activesession_api.dart
 lib/api/object_apikey_api.dart
+lib/api/object_billingentityinternal_api.dart
+lib/api/object_branding_api.dart
 lib/api/object_ezsignbulksend_api.dart
 lib/api/object_ezsignbulksenddocumentmapping_api.dart
 lib/api/object_ezsignbulksendsignermapping_api.dart
@@ -649,8 +668,13 @@ lib/api/object_franchisebroker_api.dart
 lib/api/object_franchiseoffice_api.dart
 lib/api/object_franchisereferalincome_api.dart
 lib/api/object_notificationsection_api.dart
+lib/api/object_notificationtest_api.dart
 lib/api/object_period_api.dart
 lib/api/object_secretquestion_api.dart
+lib/api/object_taxassignment_api.dart
+lib/api/object_timezone_api.dart
+lib/api/object_user_api.dart
+lib/api/object_usergroup_api.dart
 lib/api_client.dart
 lib/api_exception.dart
 lib/api_helper.dart
@@ -701,6 +725,8 @@ lib/model/common_response_obj_debug_payload.dart
 lib/model/common_response_obj_debug_payload_get_list.dart
 lib/model/common_response_obj_debug_payload_get_list_all_of.dart
 lib/model/common_response_obj_sql_query.dart
+lib/model/common_response_redirect_s_secretquestion_text_x.dart
+lib/model/common_response_warning.dart
 lib/model/common_webhook.dart
 lib/model/contact_request.dart
 lib/model/contact_request_compound.dart
@@ -877,6 +903,9 @@ lib/model/ezsignfolder_create_object_v2_response.dart
 lib/model/ezsignfolder_create_object_v2_response_all_of.dart
 lib/model/ezsignfolder_create_object_v2_response_m_payload.dart
 lib/model/ezsignfolder_delete_object_v1_response.dart
+lib/model/ezsignfolder_dispose_ezsignfolders_v1_request.dart
+lib/model/ezsignfolder_dispose_ezsignfolders_v1_response.dart
+lib/model/ezsignfolder_dispose_v1_response.dart
 lib/model/ezsignfolder_edit_object_v1_request.dart
 lib/model/ezsignfolder_edit_object_v1_response.dart
 lib/model/ezsignfolder_get_actionable_elements_v1_response.dart
@@ -1036,6 +1065,7 @@ lib/model/ezsigntemplatedocument_edit_ezsigntemplatesignatures_v1_response_all_o
 lib/model/ezsigntemplatedocument_edit_ezsigntemplatesignatures_v1_response_m_payload.dart
 lib/model/ezsigntemplatedocument_edit_object_v1_request.dart
 lib/model/ezsigntemplatedocument_edit_object_v1_response.dart
+lib/model/ezsigntemplatedocument_edit_object_v1_response_all_of.dart
 lib/model/ezsigntemplatedocument_get_ezsigntemplatedocumentpages_v1_response.dart
 lib/model/ezsigntemplatedocument_get_ezsigntemplatedocumentpages_v1_response_all_of.dart
 lib/model/ezsigntemplatedocument_get_ezsigntemplatedocumentpages_v1_response_m_payload.dart
@@ -1206,6 +1236,7 @@ lib/model/field_e_ezsigntemplatesignature_tooltipposition.dart
 lib/model/field_e_ezsigntemplatesignature_type.dart
 lib/model/field_e_notificationpreference_status.dart
 lib/model/field_e_phone_type.dart
+lib/model/field_e_user_ezsignsendreminderfrequency.dart
 lib/model/field_e_user_type.dart
 lib/model/franchisereferalincome_create_object_v1_request.dart
 lib/model/franchisereferalincome_create_object_v1_response.dart
@@ -1225,6 +1256,9 @@ lib/model/notificationsection_get_notificationtests_v1_response.dart
 lib/model/notificationsection_get_notificationtests_v1_response_all_of.dart
 lib/model/notificationsection_get_notificationtests_v1_response_m_payload.dart
 lib/model/notificationsubsection_response.dart
+lib/model/notificationtest_get_elements_v1_response.dart
+lib/model/notificationtest_get_elements_v1_response_all_of.dart
+lib/model/notificationtest_get_elements_v1_response_m_payload.dart
 lib/model/notificationtest_response.dart
 lib/model/phone_request.dart
 lib/model/phone_request_compound.dart
@@ -1285,7 +1319,9 @@ test/common_response_obj_debug_payload_get_list_test.dart
 test/common_response_obj_debug_payload_test.dart
 test/common_response_obj_debug_test.dart
 test/common_response_obj_sql_query_test.dart
+test/common_response_redirect_s_secretquestion_text_x_test.dart
 test/common_response_test.dart
+test/common_response_warning_test.dart
 test/common_webhook_test.dart
 test/contact_request_compound_all_of_test.dart
 test/contact_request_compound_test.dart
@@ -1462,6 +1498,9 @@ test/ezsignfolder_create_object_v2_response_all_of_test.dart
 test/ezsignfolder_create_object_v2_response_m_payload_test.dart
 test/ezsignfolder_create_object_v2_response_test.dart
 test/ezsignfolder_delete_object_v1_response_test.dart
+test/ezsignfolder_dispose_ezsignfolders_v1_request_test.dart
+test/ezsignfolder_dispose_ezsignfolders_v1_response_test.dart
+test/ezsignfolder_dispose_v1_response_test.dart
 test/ezsignfolder_edit_object_v1_request_test.dart
 test/ezsignfolder_edit_object_v1_response_test.dart
 test/ezsignfolder_get_actionable_elements_v1_response_all_of_test.dart
@@ -1620,6 +1659,7 @@ test/ezsigntemplatedocument_edit_ezsigntemplatesignatures_v1_response_all_of_tes
 test/ezsigntemplatedocument_edit_ezsigntemplatesignatures_v1_response_m_payload_test.dart
 test/ezsigntemplatedocument_edit_ezsigntemplatesignatures_v1_response_test.dart
 test/ezsigntemplatedocument_edit_object_v1_request_test.dart
+test/ezsigntemplatedocument_edit_object_v1_response_all_of_test.dart
 test/ezsigntemplatedocument_edit_object_v1_response_test.dart
 test/ezsigntemplatedocument_get_ezsigntemplatedocumentpages_v1_response_all_of_test.dart
 test/ezsigntemplatedocument_get_ezsigntemplatedocumentpages_v1_response_m_payload_test.dart
@@ -1791,6 +1831,7 @@ test/field_e_ezsigntemplatesignature_tooltipposition_test.dart
 test/field_e_ezsigntemplatesignature_type_test.dart
 test/field_e_notificationpreference_status_test.dart
 test/field_e_phone_type_test.dart
+test/field_e_user_ezsignsendreminderfrequency_test.dart
 test/field_e_user_type_test.dart
 test/franchisereferalincome_create_object_v1_request_test.dart
 test/franchisereferalincome_create_object_v1_response_all_of_test.dart
@@ -1813,9 +1854,14 @@ test/notificationsection_get_notificationtests_v1_response_all_of_test.dart
 test/notificationsection_get_notificationtests_v1_response_m_payload_test.dart
 test/notificationsection_get_notificationtests_v1_response_test.dart
 test/notificationsubsection_response_test.dart
+test/notificationtest_get_elements_v1_response_all_of_test.dart
+test/notificationtest_get_elements_v1_response_m_payload_test.dart
+test/notificationtest_get_elements_v1_response_test.dart
 test/notificationtest_response_test.dart
 test/object_activesession_api_test.dart
 test/object_apikey_api_test.dart
+test/object_billingentityinternal_api_test.dart
+test/object_branding_api_test.dart
 test/object_ezsignbulksend_api_test.dart
 test/object_ezsignbulksenddocumentmapping_api_test.dart
 test/object_ezsignbulksendsignermapping_api_test.dart
@@ -1840,8 +1886,13 @@ test/object_franchisebroker_api_test.dart
 test/object_franchiseoffice_api_test.dart
 test/object_franchisereferalincome_api_test.dart
 test/object_notificationsection_api_test.dart
+test/object_notificationtest_api_test.dart
 test/object_period_api_test.dart
 test/object_secretquestion_api_test.dart
+test/object_taxassignment_api_test.dart
+test/object_timezone_api_test.dart
+test/object_user_api_test.dart
+test/object_usergroup_api_test.dart
 test/phone_request_compound_test.dart
 test/phone_request_test.dart
 test/user_create_ezsignuser_v1_request_test.dart

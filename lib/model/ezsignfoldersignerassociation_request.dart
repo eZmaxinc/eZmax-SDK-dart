@@ -21,6 +21,8 @@ class EzsignfoldersignerassociationRequest {
 
   /// The unique ID of the Ezsignfoldersignerassociation
   ///
+  /// Minimum value: 0
+  ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
   /// source code must fall back to having a nullable type.
@@ -30,6 +32,8 @@ class EzsignfoldersignerassociationRequest {
 
   /// The unique ID of the User
   ///
+  /// Minimum value: 0
+  ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
   /// source code must fall back to having a nullable type.
@@ -38,6 +42,8 @@ class EzsignfoldersignerassociationRequest {
   int? fkiUserID;
 
   /// The unique ID of the Ezsignfolder
+  ///
+  /// Minimum value: 0
   int fkiEzsignfolderID;
 
   /// If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document.

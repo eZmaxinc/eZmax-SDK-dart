@@ -23,6 +23,8 @@ class UserResponse {
   });
 
   /// The unique ID of the User
+  ///
+  /// Minimum value: 0
   int pkiUserID;
 
   /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|

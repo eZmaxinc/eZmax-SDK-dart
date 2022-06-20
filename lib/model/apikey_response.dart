@@ -31,6 +31,8 @@ class ApikeyResponse {
   String? sComputedToken;
 
   /// The unique ID of the Apikey
+  ///
+  /// Minimum value: 0
   int pkiApikeyID;
 
   CommonAudit objAudit;

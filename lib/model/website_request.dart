@@ -18,6 +18,8 @@ class WebsiteRequest {
   });
 
   /// The unique ID of the Websitetype.  Valid values:  |Value|Description| |-|-| |1|Website| |2|Twitter| |3|Facebook| |4|Survey|
+  ///
+  /// Minimum value: 0
   int fkiWebsitetypeID;
 
   /// The URL of the website.

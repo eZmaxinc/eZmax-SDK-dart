@@ -20,9 +20,13 @@ class CustomNotificationsubsectiongetnotificationtestsResponse {
   });
 
   /// The unique ID of the Notificationsubsection
+  ///
+  /// Minimum value: 0
   int pkiNotificationsubsectionID;
 
   /// The unique ID of the Notificationsection
+  ///
+  /// Minimum value: 0
   int fkiNotificationsectionID;
 
   /// The name of the Notificationsubsection in the language of the requester

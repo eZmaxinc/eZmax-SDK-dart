@@ -118,6 +118,9 @@ String parameterToString(dynamic value) {
   if (value is FieldEPhoneType) {
     return FieldEPhoneTypeTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEUserEzsignsendreminderfrequency) {
+    return FieldEUserEzsignsendreminderfrequencyTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEUserType) {
     return FieldEUserTypeTypeTransformer().encode(value).toString();
   }

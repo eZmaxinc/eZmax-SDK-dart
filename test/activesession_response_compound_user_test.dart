@@ -22,6 +22,12 @@ void main() {
       // TODO
     });
 
+    // The unique ID of the Timezone
+    // int fkiTimezoneID
+    test('to test the property `fkiTimezoneID`', () async {
+      // TODO
+    });
+
     // The url of the picture used as avatar
     // String sAvatarUrl
     test('to test the property `sAvatarUrl`', () async {
@@ -43,6 +49,29 @@ void main() {
     // The email address.
     // String sEmailAddress
     test('to test the property `sEmailAddress`', () async {
+      // TODO
+    });
+
+    // FieldEUserEzsignsendreminderfrequency eUserEzsignsendreminderfrequency
+    test('to test the property `eUserEzsignsendreminderfrequency`', () async {
+      // TODO
+    });
+
+    // The int32 representation of the interface color. For example, RGB color #39435B would be 3752795
+    // int iUserInterfacecolor
+    test('to test the property `iUserInterfacecolor`', () async {
+      // TODO
+    });
+
+    // Whether to use a dark mode interface
+    // bool bUserInterfacedark
+    test('to test the property `bUserInterfacedark`', () async {
+      // TODO
+    });
+
+    // The number of rows to return by default in lists
+    // int iUserListresult
+    test('to test the property `iUserListresult`', () async {
       // TODO
     });
 

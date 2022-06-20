@@ -21,9 +21,13 @@ class EzsignfoldersignerassociationResponseCompound {
   });
 
   /// The unique ID of the Ezsignfoldersignerassociation
+  ///
+  /// Minimum value: 0
   int pkiEzsignfoldersignerassociationID;
 
   /// The unique ID of the Ezsignfolder
+  ///
+  /// Minimum value: 0
   int fkiEzsignfolderID;
 
   /// If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document.

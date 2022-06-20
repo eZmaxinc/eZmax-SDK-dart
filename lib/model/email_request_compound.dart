@@ -18,6 +18,8 @@ class EmailRequestCompound {
   });
 
   /// The unique ID of the Emailtype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home|
+  ///
+  /// Minimum value: 0
   int fkiEmailtypeID;
 
   /// The email address.

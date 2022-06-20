@@ -14,14 +14,26 @@ class ActivesessionResponseCompoundUser {
   /// Returns a new [ActivesessionResponseCompoundUser] instance.
   ActivesessionResponseCompoundUser({
     required this.pkiUserID,
+    required this.fkiTimezoneID,
     required this.sAvatarUrl,
     required this.sUserFirstname,
     required this.sUserLastname,
     required this.sEmailAddress,
+    required this.eUserEzsignsendreminderfrequency,
+    required this.iUserInterfacecolor,
+    required this.bUserInterfacedark,
+    required this.iUserListresult,
   });
 
   /// The unique ID of the User
+  ///
+  /// Minimum value: 0
   int pkiUserID;
+
+  /// The unique ID of the Timezone
+  ///
+  /// Minimum value: 0
+  int fkiTimezoneID;
 
   /// The url of the picture used as avatar
   String sAvatarUrl;
@@ -35,33 +47,64 @@ class ActivesessionResponseCompoundUser {
   /// The email address.
   String sEmailAddress;
 
+  FieldEUserEzsignsendreminderfrequency eUserEzsignsendreminderfrequency;
+
+  /// The int32 representation of the interface color. For example, RGB color #39435B would be 3752795
+  ///
+  /// Minimum value: 0
+  int iUserInterfacecolor;
+
+  /// Whether to use a dark mode interface
+  bool bUserInterfacedark;
+
+  /// The number of rows to return by default in lists
+  ///
+  /// Minimum value: 5
+  /// Maximum value: 500
+  int iUserListresult;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is ActivesessionResponseCompoundUser &&
      other.pkiUserID == pkiUserID &&
+     other.fkiTimezoneID == fkiTimezoneID &&
      other.sAvatarUrl == sAvatarUrl &&
      other.sUserFirstname == sUserFirstname &&
      other.sUserLastname == sUserLastname &&
-     other.sEmailAddress == sEmailAddress;
+     other.sEmailAddress == sEmailAddress &&
+     other.eUserEzsignsendreminderfrequency == eUserEzsignsendreminderfrequency &&
+     other.iUserInterfacecolor == iUserInterfacecolor &&
+     other.bUserInterfacedark == bUserInterfacedark &&
+     other.iUserListresult == iUserListresult;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiUserID.hashCode) +
+    (fkiTimezoneID.hashCode) +
     (sAvatarUrl.hashCode) +
     (sUserFirstname.hashCode) +
     (sUserLastname.hashCode) +
-    (sEmailAddress.hashCode);
+    (sEmailAddress.hashCode) +
+    (eUserEzsignsendreminderfrequency.hashCode) +
+    (iUserInterfacecolor.hashCode) +
+    (bUserInterfacedark.hashCode) +
+    (iUserListresult.hashCode);
 
   @override
-  String toString() => 'ActivesessionResponseCompoundUser[pkiUserID=$pkiUserID, sAvatarUrl=$sAvatarUrl, sUserFirstname=$sUserFirstname, sUserLastname=$sUserLastname, sEmailAddress=$sEmailAddress]';
+  String toString() => 'ActivesessionResponseCompoundUser[pkiUserID=$pkiUserID, fkiTimezoneID=$fkiTimezoneID, sAvatarUrl=$sAvatarUrl, sUserFirstname=$sUserFirstname, sUserLastname=$sUserLastname, sEmailAddress=$sEmailAddress, eUserEzsignsendreminderfrequency=$eUserEzsignsendreminderfrequency, iUserInterfacecolor=$iUserInterfacecolor, bUserInterfacedark=$bUserInterfacedark, iUserListresult=$iUserListresult]';
 
   Map<String, dynamic> toJson() {
     final _json = <String, dynamic>{};
       _json[r'pkiUserID'] = pkiUserID;
+      _json[r'fkiTimezoneID'] = fkiTimezoneID;
       _json[r'sAvatarUrl'] = sAvatarUrl;
       _json[r'sUserFirstname'] = sUserFirstname;
       _json[r'sUserLastname'] = sUserLastname;
       _json[r'sEmailAddress'] = sEmailAddress;
+      _json[r'eUserEzsignsendreminderfrequency'] = eUserEzsignsendreminderfrequency;
+      _json[r'iUserInterfacecolor'] = iUserInterfacecolor;
+      _json[r'bUserInterfacedark'] = bUserInterfacedark;
+      _json[r'iUserListresult'] = iUserListresult;
     return _json;
   }
 
@@ -85,10 +128,15 @@ class ActivesessionResponseCompoundUser {
 
       return ActivesessionResponseCompoundUser(
         pkiUserID: mapValueOfType<int>(json, r'pkiUserID')!,
+        fkiTimezoneID: mapValueOfType<int>(json, r'fkiTimezoneID')!,
         sAvatarUrl: mapValueOfType<String>(json, r'sAvatarUrl')!,
         sUserFirstname: mapValueOfType<String>(json, r'sUserFirstname')!,
         sUserLastname: mapValueOfType<String>(json, r'sUserLastname')!,
         sEmailAddress: mapValueOfType<String>(json, r'sEmailAddress')!,
+        eUserEzsignsendreminderfrequency: FieldEUserEzsignsendreminderfrequency.fromJson(json[r'eUserEzsignsendreminderfrequency'])!,
+        iUserInterfacecolor: mapValueOfType<int>(json, r'iUserInterfacecolor')!,
+        bUserInterfacedark: mapValueOfType<bool>(json, r'bUserInterfacedark')!,
+        iUserListresult: mapValueOfType<int>(json, r'iUserListresult')!,
       );
     }
     return null;
@@ -139,10 +187,15 @@ class ActivesessionResponseCompoundUser {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'pkiUserID',
+    'fkiTimezoneID',
     'sAvatarUrl',
     'sUserFirstname',
     'sUserLastname',
     'sEmailAddress',
+    'eUserEzsignsendreminderfrequency',
+    'iUserInterfacecolor',
+    'bUserInterfacedark',
+    'iUserListresult',
   };
 }
 

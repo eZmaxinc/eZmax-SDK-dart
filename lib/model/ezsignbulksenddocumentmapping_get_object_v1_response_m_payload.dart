@@ -23,12 +23,18 @@ class EzsignbulksenddocumentmappingGetObjectV1ResponseMPayload {
   });
 
   /// The unique ID of the Ezsignbulksenddocumentmapping.
+  ///
+  /// Minimum value: 0
   int pkiEzsignbulksenddocumentmappingID;
 
   /// The unique ID of the Ezsignbulksend
+  ///
+  /// Minimum value: 0
   int fkiEzsignbulksendID;
 
   /// The unique ID of the Ezsigntemplatepackage
+  ///
+  /// Minimum value: 0
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -39,6 +45,8 @@ class EzsignbulksenddocumentmappingGetObjectV1ResponseMPayload {
 
   /// The unique ID of the Ezsigntemplate
   ///
+  /// Minimum value: 0
+  ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
   /// source code must fall back to having a nullable type.
@@ -47,6 +55,8 @@ class EzsignbulksenddocumentmappingGetObjectV1ResponseMPayload {
   int? fkiEzsigntemplateID;
 
   /// The order in which the Ezsigntemplate or Ezsigntemplatepackage will be presented to the signatory in the Ezsignfolder.
+  ///
+  /// Minimum value: 0
   int iEzsignbulksenddocumentmappingOrder;
 
   ///

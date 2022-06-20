@@ -24,9 +24,13 @@ class EzsigntemplateListElement {
   });
 
   /// The unique ID of the Ezsigntemplate
+  ///
+  /// Minimum value: 0
   int pkiEzsigntemplateID;
 
   /// The unique ID of the Ezsignfoldertype.
+  ///
+  /// Minimum value: 0
   int fkiEzsignfoldertypeID;
 
   /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
@@ -39,6 +43,8 @@ class EzsigntemplateListElement {
   String sEzsigntemplateDescription;
 
   /// The number of pages in the Ezsigntemplatedocument.
+  ///
+  /// Minimum value: 1
   int iEzsigntemplatedocumentPagetotal;
 
   /// The number of total signatures in the Ezsigntemplate.

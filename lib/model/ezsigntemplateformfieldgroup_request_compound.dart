@@ -35,6 +35,8 @@ class EzsigntemplateformfieldgroupRequestCompound {
 
   /// The unique ID of the Ezsigntemplateformfieldgroup
   ///
+  /// Minimum value: 0
+  ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
   /// source code must fall back to having a nullable type.
@@ -43,6 +45,8 @@ class EzsigntemplateformfieldgroupRequestCompound {
   int? pkiEzsigntemplateformfieldgroupID;
 
   /// The unique ID of the Ezsigntemplatedocument
+  ///
+  /// Minimum value: 0
   int fkiEzsigntemplatedocumentID;
 
   FieldEEzsigntemplateformfieldgroupType eEzsigntemplateformfieldgroupType;
@@ -53,21 +57,29 @@ class EzsigntemplateformfieldgroupRequestCompound {
   String sEzsigntemplateformfieldgroupLabel;
 
   /// The step when the Ezsigntemplatesigner will be invited to fill the form fields
+  ///
+  /// Minimum value: 1
   int iEzsigntemplateformfieldgroupStep;
 
   /// The default value for the Ezsigntemplateformfieldgroup
   String sEzsigntemplateformfieldgroupDefaultvalue;
 
   /// The minimum number of Ezsigntemplateformfield that must be filled in the Ezsigntemplateformfieldgroup
+  ///
+  /// Minimum value: 0
   int iEzsigntemplateformfieldgroupFilledmin;
 
   /// The maximum number of Ezsigntemplateformfield that must be filled in the Ezsigntemplateformfieldgroup
+  ///
+  /// Minimum value: 0
   int iEzsigntemplateformfieldgroupFilledmax;
 
   /// Whether the Ezsigntemplateformfieldgroup is read only or not.
   bool bEzsigntemplateformfieldgroupReadonly;
 
   /// The maximum length for the value in the Ezsigntemplateformfieldgroup  This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea**
+  ///
+  /// Minimum value: 0
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated

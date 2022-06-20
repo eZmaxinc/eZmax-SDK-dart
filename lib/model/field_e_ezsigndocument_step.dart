@@ -29,6 +29,7 @@ class FieldEEzsigndocumentStep {
   static const declinedToSign = FieldEEzsigndocumentStep._(r'DeclinedToSign');
   static const prematurelyEnded = FieldEEzsigndocumentStep._(r'PrematurelyEnded');
   static const completed = FieldEEzsigndocumentStep._(r'Completed');
+  static const disposed = FieldEEzsigndocumentStep._(r'Disposed');
 
   /// List of all possible values in this [enum][FieldEEzsigndocumentStep].
   static const values = <FieldEEzsigndocumentStep>[
@@ -38,6 +39,7 @@ class FieldEEzsigndocumentStep {
     declinedToSign,
     prematurelyEnded,
     completed,
+    disposed,
   ];
 
   static FieldEEzsigndocumentStep? fromJson(dynamic value) => FieldEEzsigndocumentStepTypeTransformer().decode(value);
@@ -82,6 +84,7 @@ class FieldEEzsigndocumentStepTypeTransformer {
         case r'DeclinedToSign': return FieldEEzsigndocumentStep.declinedToSign;
         case r'PrematurelyEnded': return FieldEEzsigndocumentStep.prematurelyEnded;
         case r'Completed': return FieldEEzsigndocumentStep.completed;
+        case r'Disposed': return FieldEEzsigndocumentStep.disposed;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');

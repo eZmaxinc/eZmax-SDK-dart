@@ -26,6 +26,8 @@ class EzsigntemplateformfieldRequestCompound {
 
   /// The unique ID of the Ezsigntemplateformfield
   ///
+  /// Minimum value: 0
+  ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
   /// source code must fall back to having a nullable type.
@@ -34,6 +36,8 @@ class EzsigntemplateformfieldRequestCompound {
   int? pkiEzsigntemplateformfieldID;
 
   /// The page number in the Ezsigntemplatedocument
+  ///
+  /// Minimum value: 1
   int iEzsigntemplatedocumentpagePagenumber;
 
   /// The Label for the Ezsigntemplateformfield
@@ -49,15 +53,23 @@ class EzsigntemplateformfieldRequestCompound {
   String? sEzsigntemplateformfieldValue;
 
   /// The X coordinate (Horizontal) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 2 inches from the left border of the page, you would use \"200\" for the X coordinate.
+  ///
+  /// Minimum value: 0
   int iEzsigntemplateformfieldX;
 
   /// The Y coordinate (Vertical) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.
+  ///
+  /// Minimum value: 0
   int iEzsigntemplateformfieldY;
 
   /// The Width of the Ezsigntemplateformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsigntemplateformfieldgroupType.  | eEzsigntemplateformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22-65535     | | Radio                     | 22           | | Text                      | 22-65535     | | Textarea                  | 22-65535     |
+  ///
+  /// Minimum value: 0
   int iEzsigntemplateformfieldWidth;
 
   /// The Height of the Ezsigntemplateformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsigntemplateformfieldgroupType.  | eEzsigntemplateformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     | 
+  ///
+  /// Minimum value: 0
   int iEzsigntemplateformfieldHeight;
 
   /// Whether the Ezsigntemplateformfield is selected or not by default.  This can only be set if eEzsigntemplateformfieldgroupType is **Checkbox** or **Radio**

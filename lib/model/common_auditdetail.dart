@@ -23,9 +23,13 @@ class CommonAuditdetail {
   });
 
   /// The unique ID of the User
+  ///
+  /// Minimum value: 0
   int fkiUserID;
 
   /// The unique ID of the Apikey
+  ///
+  /// Minimum value: 0
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated

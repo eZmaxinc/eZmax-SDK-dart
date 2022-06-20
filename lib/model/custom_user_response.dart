@@ -20,6 +20,8 @@ class CustomUserResponse {
   });
 
   /// The unique ID of the User
+  ///
+  /// Minimum value: 0
   int pkiUserID;
 
   /// The Last name of the user

@@ -70,6 +70,12 @@ void main() {
       // TODO
     });
 
+    // If the Ezsigndocument can be disposed
+    // bool bEzsignfolderIsdisposable
+    test('to test the property `bEzsignfolderIsdisposable`', () async {
+      // TODO
+    });
+
     // FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency
     test('to test the property `eEzsignfolderSendreminderfrequency`', () async {
       // TODO
@@ -93,9 +99,9 @@ void main() {
       // TODO
     });
 
-    // The scheduled date and time at which the Ezsignfolder should be Destroyed.
-    // String dtEzsignfolderScheduleddestruction
-    test('to test the property `dtEzsignfolderScheduleddestruction`', () async {
+    // The scheduled date at which the Ezsignfolder should be Disposed.
+    // String dtEzsignfolderScheduleddispose
+    test('to test the property `dtEzsignfolderScheduleddispose`', () async {
       // TODO
     });
 

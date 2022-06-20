@@ -18,9 +18,13 @@ class EzsignformfieldgroupsignerResponse {
   });
 
   /// The unique ID of the Ezsignformfieldgroupsigner
+  ///
+  /// Minimum value: 0
   int pkiEzsignformfieldgroupsignerID;
 
   /// The unique ID of the Ezsignfoldersignerassociation
+  ///
+  /// Minimum value: 0
   int fkiEzsignfoldersignerassociationID;
 
   @override

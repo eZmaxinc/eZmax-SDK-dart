@@ -21,9 +21,13 @@ class CustomFormDataDocumentResponse {
   });
 
   /// The unique ID of the Ezsigndocument
+  ///
+  /// Minimum value: 0
   int pkiEzsigndocumentID;
 
   /// The unique ID of the Ezsignfolder
+  ///
+  /// Minimum value: 0
   int fkiEzsignfolderID;
 
   /// The name of the document that will be presented to Ezsignfoldersignerassociations

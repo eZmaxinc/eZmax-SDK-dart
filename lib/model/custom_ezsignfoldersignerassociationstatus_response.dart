@@ -20,6 +20,8 @@ class CustomEzsignfoldersignerassociationstatusResponse {
   });
 
   /// The unique ID of the Ezsignfoldersignerassociation
+  ///
+  /// Minimum value: 0
   int fkiEzsignfoldersignerassociationID;
 
   /// The last name of the Ezsignsigner

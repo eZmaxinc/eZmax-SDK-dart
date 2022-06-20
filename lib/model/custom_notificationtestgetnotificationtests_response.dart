@@ -22,9 +22,13 @@ class CustomNotificationtestgetnotificationtestsResponse {
   });
 
   /// The unique ID of the Notificationtest
+  ///
+  /// Minimum value: 0
   int pkiNotificationtestID;
 
   /// The unique ID of the Notificationsubsection
+  ///
+  /// Minimum value: 0
   int fkiNotificationsubsectionID;
 
   /// The function name of the Notificationtest

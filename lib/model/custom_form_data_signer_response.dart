@@ -21,9 +21,13 @@ class CustomFormDataSignerResponse {
   });
 
   /// The unique ID of the Ezsignfoldersignerassociation
+  ///
+  /// Minimum value: 0
   int fkiEzsignfoldersignerassociationID;
 
   /// The unique ID of the User
+  ///
+  /// Minimum value: 0
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated

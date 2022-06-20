@@ -20,6 +20,8 @@ class EzsignfoldertypeListElement {
   });
 
   /// The unique ID of the Ezsignfoldertype.
+  ///
+  /// Minimum value: 0
   int pkiEzsignfoldertypeID;
 
   FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel;

@@ -27,9 +27,13 @@ class EzsignbulksendListElement {
   });
 
   /// The unique ID of the Ezsignbulksend
+  ///
+  /// Minimum value: 0
   int pkiEzsignbulksendID;
 
   /// The unique ID of the Ezsignfoldertype.
+  ///
+  /// Minimum value: 0
   int fkiEzsignfoldertypeID;
 
   /// The description of the Ezsignbulksend

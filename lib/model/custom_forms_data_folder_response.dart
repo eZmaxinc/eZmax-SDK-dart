@@ -19,6 +19,8 @@ class CustomFormsDataFolderResponse {
   });
 
   /// The unique ID of the Ezsignfolder
+  ///
+  /// Minimum value: 0
   int pkiEzsignfolderID;
 
   /// The description of the Ezsignfolder

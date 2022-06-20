@@ -58,6 +58,24 @@ void main() {
       // TODO
     });
 
+    // Dispose Ezsignfolders
+    //
+    // 
+    //
+    //Future<EzsignfolderDisposeEzsignfoldersV1Response> ezsignfolderDisposeEzsignfoldersV1(EzsignfolderDisposeEzsignfoldersV1Request ezsignfolderDisposeEzsignfoldersV1Request) async
+    test('test ezsignfolderDisposeEzsignfoldersV1', () async {
+      // TODO
+    });
+
+    // Dispose the Ezsignfolder
+    //
+    // 
+    //
+    //Future<EzsignfolderDisposeV1Response> ezsignfolderDisposeV1(int pkiEzsignfolderID, Object body) async
+    test('test ezsignfolderDisposeV1', () async {
+      // TODO
+    });
+
     // Edit an existing Ezsignfolder
     //
     // 

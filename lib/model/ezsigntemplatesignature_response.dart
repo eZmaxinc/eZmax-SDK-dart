@@ -27,24 +27,38 @@ class EzsigntemplatesignatureResponse {
   });
 
   /// The unique ID of the Ezsigntemplatesignature
+  ///
+  /// Minimum value: 0
   int pkiEzsigntemplatesignatureID;
 
   /// The unique ID of the Ezsigntemplatedocument
+  ///
+  /// Minimum value: 0
   int fkiEzsigntemplatedocumentID;
 
   /// The unique ID of the Ezsigntemplatesigner
+  ///
+  /// Minimum value: 0
   int fkiEzsigntemplatesignerID;
 
   /// The page number in the Ezsigntemplatedocument
+  ///
+  /// Minimum value: 1
   int iEzsigntemplatedocumentpagePagenumber;
 
   /// The X coordinate (Horizontal) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 2 inches from the left border of the page, you would use \"200\" for the X coordinate.
+  ///
+  /// Minimum value: 0
   int iEzsigntemplatesignatureX;
 
   /// The Y coordinate (Vertical) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.
+  ///
+  /// Minimum value: 0
   int iEzsigntemplatesignatureY;
 
   /// The step when the Ezsigntemplatesigner will be invited to sign
+  ///
+  /// Minimum value: 1
   int iEzsigntemplatesignatureStep;
 
   FieldEEzsigntemplatesignatureType eEzsigntemplatesignatureType;

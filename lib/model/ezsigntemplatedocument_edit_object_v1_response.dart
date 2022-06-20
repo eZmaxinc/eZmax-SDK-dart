@@ -15,6 +15,7 @@ class EzsigntemplatedocumentEditObjectV1Response {
   EzsigntemplatedocumentEditObjectV1Response({
     this.objDebugPayload,
     this.objDebug,
+    this.aObjWarning = const [],
   });
 
   ///
@@ -33,19 +34,23 @@ class EzsigntemplatedocumentEditObjectV1Response {
   ///
   CommonResponseObjDebug? objDebug;
 
+  List<CommonResponseWarning> aObjWarning;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplatedocumentEditObjectV1Response &&
      other.objDebugPayload == objDebugPayload &&
-     other.objDebug == objDebug;
+     other.objDebug == objDebug &&
+     other.aObjWarning == aObjWarning;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (objDebugPayload == null ? 0 : objDebugPayload!.hashCode) +
-    (objDebug == null ? 0 : objDebug!.hashCode);
+    (objDebug == null ? 0 : objDebug!.hashCode) +
+    (aObjWarning.hashCode);
 
   @override
-  String toString() => 'EzsigntemplatedocumentEditObjectV1Response[objDebugPayload=$objDebugPayload, objDebug=$objDebug]';
+  String toString() => 'EzsigntemplatedocumentEditObjectV1Response[objDebugPayload=$objDebugPayload, objDebug=$objDebug, aObjWarning=$aObjWarning]';
 
   Map<String, dynamic> toJson() {
     final _json = <String, dynamic>{};
@@ -55,6 +60,7 @@ class EzsigntemplatedocumentEditObjectV1Response {
     if (objDebug != null) {
       _json[r'objDebug'] = objDebug;
     }
+      _json[r'a_objWarning'] = aObjWarning;
     return _json;
   }
 
@@ -79,6 +85,7 @@ class EzsigntemplatedocumentEditObjectV1Response {
       return EzsigntemplatedocumentEditObjectV1Response(
         objDebugPayload: CommonResponseObjDebugPayload.fromJson(json[r'objDebugPayload']),
         objDebug: CommonResponseObjDebug.fromJson(json[r'objDebug']),
+        aObjWarning: CommonResponseWarning.listFromJson(json[r'a_objWarning']) ?? const [],
       );
     }
     return null;

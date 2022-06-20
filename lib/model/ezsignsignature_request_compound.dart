@@ -30,6 +30,8 @@ class EzsignsignatureRequestCompound {
 
   /// The unique ID of the Ezsignsignature
   ///
+  /// Minimum value: 0
+  ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
   /// source code must fall back to having a nullable type.
@@ -38,15 +40,23 @@ class EzsignsignatureRequestCompound {
   int? pkiEzsignsignatureID;
 
   /// The unique ID of the Ezsignfoldersignerassociation
+  ///
+  /// Minimum value: 0
   int fkiEzsignfoldersignerassociationID;
 
   /// The page number in the Ezsigndocument
+  ///
+  /// Minimum value: 1
   int iEzsignpagePagenumber;
 
   /// The X coordinate (Horizontal) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 2 inches from the left border of the page, you would use \"200\" for the X coordinate.
+  ///
+  /// Minimum value: 0
   int iEzsignsignatureX;
 
   /// The Y coordinate (Vertical) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.
+  ///
+  /// Minimum value: 0
   int iEzsignsignatureY;
 
   /// The step when the Ezsignsigner will be invited to sign
@@ -55,6 +65,8 @@ class EzsignsignatureRequestCompound {
   FieldEEzsignsignatureType eEzsignsignatureType;
 
   /// The unique ID of the Ezsigndocument
+  ///
+  /// Minimum value: 0
   int fkiEzsigndocumentID;
 
   /// A tooltip that will be presented to Ezsignsigner about the Ezsignsignature

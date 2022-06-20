@@ -22,15 +22,21 @@ class EzsignbulksendtransmissionResponseCompound {
   });
 
   /// The unique ID of the Ezsignbulksendtransmission
+  ///
+  /// Minimum value: 0
   int pkiEzsignbulksendtransmissionID;
 
   /// The unique ID of the Ezsignbulksend
+  ///
+  /// Minimum value: 0
   int fkiEzsignbulksendID;
 
   /// The description of the Ezsignbulksendtransmission
   String sEzsignbulksendtransmissionDescription;
 
   /// The number of errors during the Ezsignbulksendtransmission
+  ///
+  /// Minimum value: 0
   int iEzsignbulksendtransmissionErrors;
 
   CommonAudit objAudit;

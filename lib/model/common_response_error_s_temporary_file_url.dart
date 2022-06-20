@@ -15,7 +15,7 @@ class CommonResponseErrorSTemporaryFileUrl {
   CommonResponseErrorSTemporaryFileUrl({
     this.sTemporaryFileUrl,
     required this.sErrorMessage,
-    this.eErrorCode,
+    required this.eErrorCode,
   });
 
   /// The Temporary File Url of the document that was uploaded. That url can be reused instead of uploading the file again.
@@ -31,13 +31,7 @@ class CommonResponseErrorSTemporaryFileUrl {
   String sErrorMessage;
 
   /// The error code. See documentation for valid values
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  String? eErrorCode;
+  String eErrorCode;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonResponseErrorSTemporaryFileUrl &&
@@ -50,7 +44,7 @@ class CommonResponseErrorSTemporaryFileUrl {
     // ignore: unnecessary_parenthesis
     (sTemporaryFileUrl == null ? 0 : sTemporaryFileUrl!.hashCode) +
     (sErrorMessage.hashCode) +
-    (eErrorCode == null ? 0 : eErrorCode!.hashCode);
+    (eErrorCode.hashCode);
 
   @override
   String toString() => 'CommonResponseErrorSTemporaryFileUrl[sTemporaryFileUrl=$sTemporaryFileUrl, sErrorMessage=$sErrorMessage, eErrorCode=$eErrorCode]';
@@ -61,9 +55,7 @@ class CommonResponseErrorSTemporaryFileUrl {
       _json[r'sTemporaryFileUrl'] = sTemporaryFileUrl;
     }
       _json[r'sErrorMessage'] = sErrorMessage;
-    if (eErrorCode != null) {
       _json[r'eErrorCode'] = eErrorCode;
-    }
     return _json;
   }
 
@@ -88,7 +80,7 @@ class CommonResponseErrorSTemporaryFileUrl {
       return CommonResponseErrorSTemporaryFileUrl(
         sTemporaryFileUrl: mapValueOfType<String>(json, r'sTemporaryFileUrl'),
         sErrorMessage: mapValueOfType<String>(json, r'sErrorMessage')!,
-        eErrorCode: mapValueOfType<String>(json, r'eErrorCode'),
+        eErrorCode: mapValueOfType<String>(json, r'eErrorCode')!,
       );
     }
     return null;
@@ -139,6 +131,7 @@ class CommonResponseErrorSTemporaryFileUrl {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'sErrorMessage',
+    'eErrorCode',
   };
 }
 

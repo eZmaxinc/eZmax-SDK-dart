@@ -23,21 +23,33 @@ class EzsigntemplatedocumentpageResponseCompound {
   });
 
   /// The unique ID of the Ezsigntemplatedocumentpage
+  ///
+  /// Minimum value: 0
   int pkiEzsigntemplatedocumentpageID;
 
   /// The Width of the page's image in pixels calculated at 100 DPI
+  ///
+  /// Minimum value: 0
   int iEzsigntemplatedocumentpageWidthimage;
 
   /// The Height of the page's image in pixels calculated at 100 DPI
+  ///
+  /// Minimum value: 0
   int iEzsigntemplatedocumentpageHeightimage;
 
   /// The Width of the page in points calculated at 72 DPI
+  ///
+  /// Minimum value: 0
   int iEzsigntemplatedocumentpageWidthpdf;
 
   /// The Height of the page in points calculated at 72 DPI
+  ///
+  /// Minimum value: 0
   int iEzsigntemplatedocumentpageHeightpdf;
 
   /// The page number in the Ezsigntemplatedocument
+  ///
+  /// Minimum value: 1
   int iEzsigntemplatedocumentpagePagenumber;
 
   /// The Url to the Ezsigntemplatedocumentpage's rasterized image.  Url will expire after 5 minutes.

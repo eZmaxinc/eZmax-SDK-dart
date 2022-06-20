@@ -299,6 +299,123 @@ class ObjectEzsignfolderApi {
     return null;
   }
 
+  /// Dispose Ezsignfolders
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [EzsignfolderDisposeEzsignfoldersV1Request] ezsignfolderDisposeEzsignfoldersV1Request (required):
+  Future<Response> ezsignfolderDisposeEzsignfoldersV1WithHttpInfo(EzsignfolderDisposeEzsignfoldersV1Request ezsignfolderDisposeEzsignfoldersV1Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsignfolder/disposeEzsignfolders';
+
+    // ignore: prefer_final_locals
+    Object? postBody = ezsignfolderDisposeEzsignfoldersV1Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Dispose Ezsignfolders
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [EzsignfolderDisposeEzsignfoldersV1Request] ezsignfolderDisposeEzsignfoldersV1Request (required):
+  Future<EzsignfolderDisposeEzsignfoldersV1Response?> ezsignfolderDisposeEzsignfoldersV1(EzsignfolderDisposeEzsignfoldersV1Request ezsignfolderDisposeEzsignfoldersV1Request,) async {
+    final response = await ezsignfolderDisposeEzsignfoldersV1WithHttpInfo(ezsignfolderDisposeEzsignfoldersV1Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderDisposeEzsignfoldersV1Response',) as EzsignfolderDisposeEzsignfoldersV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Dispose the Ezsignfolder
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfolderID (required):
+  ///
+  /// * [Object] body (required):
+  Future<Response> ezsignfolderDisposeV1WithHttpInfo(int pkiEzsignfolderID, Object body,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/dispose'
+      .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = body;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Dispose the Ezsignfolder
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfolderID (required):
+  ///
+  /// * [Object] body (required):
+  Future<EzsignfolderDisposeV1Response?> ezsignfolderDisposeV1(int pkiEzsignfolderID, Object body,) async {
+    final response = await ezsignfolderDisposeV1WithHttpInfo(pkiEzsignfolderID, body,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderDisposeV1Response',) as EzsignfolderDisposeV1Response;
+    
+    }
+    return null;
+  }
+
   /// Edit an existing Ezsignfolder
   ///
   /// 

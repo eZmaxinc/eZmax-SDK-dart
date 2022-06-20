@@ -23,21 +23,33 @@ class EzsignpageResponseCompound {
   });
 
   /// The unique ID of the Ezsignpage
+  ///
+  /// Minimum value: 0
   int pkiEzsignpageID;
 
   /// The Width of the page's image in pixels calculated at 100 DPI
+  ///
+  /// Minimum value: 0
   int iEzsignpageWidthimage;
 
   /// The Height of the page's image in pixels calculated at 100 DPI
+  ///
+  /// Minimum value: 0
   int iEzsignpageHeightimage;
 
   /// The Width of the page in points calculated at 72 DPI
+  ///
+  /// Minimum value: 0
   int iEzsignpageWidthpdf;
 
   /// The Height of the page in points calculated at 72 DPI
+  ///
+  /// Minimum value: 0
   int iEzsignpageHeightpdf;
 
   /// The page number in the Ezsigndocument
+  ///
+  /// Minimum value: 1
   int iEzsignpagePagenumber;
 
   /// The Url to the Ezsignpage's rasterized image.  Url will expire after 5 minutes.
