@@ -29,7 +29,7 @@ class EzsignfolderGetObjectV1ResponseMPayload {
     this.dtEzsignfolderScheduledarchive,
     this.dtEzsignfolderScheduleddispose,
     required this.eEzsignfolderStep,
-    required this.dtEzsignfolderClose,
+    this.dtEzsignfolderClose,
     required this.objAudit,
   });
 
@@ -113,7 +113,13 @@ class EzsignfolderGetObjectV1ResponseMPayload {
   FieldEEzsignfolderStep eEzsignfolderStep;
 
   /// The date and time at which the folder was closed. Either by applying the last signature or by completing it prematurely.
-  String dtEzsignfolderClose;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? dtEzsignfolderClose;
 
   CommonAudit objAudit;
 
@@ -157,7 +163,7 @@ class EzsignfolderGetObjectV1ResponseMPayload {
     (dtEzsignfolderScheduledarchive == null ? 0 : dtEzsignfolderScheduledarchive!.hashCode) +
     (dtEzsignfolderScheduleddispose == null ? 0 : dtEzsignfolderScheduleddispose!.hashCode) +
     (eEzsignfolderStep.hashCode) +
-    (dtEzsignfolderClose.hashCode) +
+    (dtEzsignfolderClose == null ? 0 : dtEzsignfolderClose!.hashCode) +
     (objAudit.hashCode);
 
   @override
@@ -189,7 +195,9 @@ class EzsignfolderGetObjectV1ResponseMPayload {
       _json[r'dtEzsignfolderScheduleddispose'] = dtEzsignfolderScheduleddispose;
     }
       _json[r'eEzsignfolderStep'] = eEzsignfolderStep;
+    if (dtEzsignfolderClose != null) {
       _json[r'dtEzsignfolderClose'] = dtEzsignfolderClose;
+    }
       _json[r'objAudit'] = objAudit;
     return _json;
   }
@@ -229,7 +237,7 @@ class EzsignfolderGetObjectV1ResponseMPayload {
         dtEzsignfolderScheduledarchive: mapValueOfType<String>(json, r'dtEzsignfolderScheduledarchive'),
         dtEzsignfolderScheduleddispose: mapValueOfType<String>(json, r'dtEzsignfolderScheduleddispose'),
         eEzsignfolderStep: FieldEEzsignfolderStep.fromJson(json[r'eEzsignfolderStep'])!,
-        dtEzsignfolderClose: mapValueOfType<String>(json, r'dtEzsignfolderClose')!,
+        dtEzsignfolderClose: mapValueOfType<String>(json, r'dtEzsignfolderClose'),
         objAudit: CommonAudit.fromJson(json[r'objAudit'])!,
       );
     }
@@ -292,7 +300,6 @@ class EzsignfolderGetObjectV1ResponseMPayload {
     'bEzsignfolderIsdisposable',
     'eEzsignfolderSendreminderfrequency',
     'eEzsignfolderStep',
-    'dtEzsignfolderClose',
     'objAudit',
   };
 }

@@ -190,6 +190,8 @@ class ApiClient {
           }
           final valueString = '$value'.toLowerCase();
           return valueString == 'true' || valueString == '1';
+        case 'DateTime':
+          return value is DateTime ? value : DateTime.tryParse(value);
         case 'ActivesessionGetCurrentV1Response':
           return ActivesessionGetCurrentV1Response.fromJson(value);
         case 'ActivesessionGetCurrentV1ResponseAllOf':

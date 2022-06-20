@@ -19,8 +19,8 @@ class EzsigndocumentGetObjectV1ResponseMPayload {
     required this.sEzsigndocumentName,
     required this.pkiEzsigndocumentID,
     required this.eEzsigndocumentStep,
-    required this.dtEzsigndocumentFirstsend,
-    required this.dtEzsigndocumentLastsend,
+    this.dtEzsigndocumentFirstsend,
+    this.dtEzsigndocumentLastsend,
     required this.iEzsigndocumentOrder,
     required this.iEzsigndocumentPagetotal,
     required this.iEzsigndocumentSignaturesigned,
@@ -61,10 +61,22 @@ class EzsigndocumentGetObjectV1ResponseMPayload {
   FieldEEzsigndocumentStep eEzsigndocumentStep;
 
   /// The date and time when the Ezsigndocument was first sent.
-  String dtEzsigndocumentFirstsend;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? dtEzsigndocumentFirstsend;
 
   /// The date and time when the Ezsigndocument was sent the last time.
-  String dtEzsigndocumentLastsend;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? dtEzsigndocumentLastsend;
 
   /// The order in which the Ezsigndocument will be presented to the signatory in the Ezsignfolder.
   ///
@@ -144,8 +156,8 @@ class EzsigndocumentGetObjectV1ResponseMPayload {
     (sEzsigndocumentName.hashCode) +
     (pkiEzsigndocumentID.hashCode) +
     (eEzsigndocumentStep.hashCode) +
-    (dtEzsigndocumentFirstsend.hashCode) +
-    (dtEzsigndocumentLastsend.hashCode) +
+    (dtEzsigndocumentFirstsend == null ? 0 : dtEzsigndocumentFirstsend!.hashCode) +
+    (dtEzsigndocumentLastsend == null ? 0 : dtEzsigndocumentLastsend!.hashCode) +
     (iEzsigndocumentOrder.hashCode) +
     (iEzsigndocumentPagetotal.hashCode) +
     (iEzsigndocumentSignaturesigned.hashCode) +
@@ -171,8 +183,12 @@ class EzsigndocumentGetObjectV1ResponseMPayload {
       _json[r'sEzsigndocumentName'] = sEzsigndocumentName;
       _json[r'pkiEzsigndocumentID'] = pkiEzsigndocumentID;
       _json[r'eEzsigndocumentStep'] = eEzsigndocumentStep;
+    if (dtEzsigndocumentFirstsend != null) {
       _json[r'dtEzsigndocumentFirstsend'] = dtEzsigndocumentFirstsend;
+    }
+    if (dtEzsigndocumentLastsend != null) {
       _json[r'dtEzsigndocumentLastsend'] = dtEzsigndocumentLastsend;
+    }
       _json[r'iEzsigndocumentOrder'] = iEzsigndocumentOrder;
       _json[r'iEzsigndocumentPagetotal'] = iEzsigndocumentPagetotal;
       _json[r'iEzsigndocumentSignaturesigned'] = iEzsigndocumentSignaturesigned;
@@ -214,8 +230,8 @@ class EzsigndocumentGetObjectV1ResponseMPayload {
         sEzsigndocumentName: mapValueOfType<String>(json, r'sEzsigndocumentName')!,
         pkiEzsigndocumentID: mapValueOfType<int>(json, r'pkiEzsigndocumentID')!,
         eEzsigndocumentStep: FieldEEzsigndocumentStep.fromJson(json[r'eEzsigndocumentStep'])!,
-        dtEzsigndocumentFirstsend: mapValueOfType<String>(json, r'dtEzsigndocumentFirstsend')!,
-        dtEzsigndocumentLastsend: mapValueOfType<String>(json, r'dtEzsigndocumentLastsend')!,
+        dtEzsigndocumentFirstsend: mapValueOfType<String>(json, r'dtEzsigndocumentFirstsend'),
+        dtEzsigndocumentLastsend: mapValueOfType<String>(json, r'dtEzsigndocumentLastsend'),
         iEzsigndocumentOrder: mapValueOfType<int>(json, r'iEzsigndocumentOrder')!,
         iEzsigndocumentPagetotal: mapValueOfType<int>(json, r'iEzsigndocumentPagetotal')!,
         iEzsigndocumentSignaturesigned: mapValueOfType<int>(json, r'iEzsigndocumentSignaturesigned')!,
@@ -284,8 +300,6 @@ class EzsigndocumentGetObjectV1ResponseMPayload {
     'sEzsigndocumentName',
     'pkiEzsigndocumentID',
     'eEzsigndocumentStep',
-    'dtEzsigndocumentFirstsend',
-    'dtEzsigndocumentLastsend',
     'iEzsigndocumentOrder',
     'iEzsigndocumentPagetotal',
     'iEzsigndocumentSignaturesigned',
