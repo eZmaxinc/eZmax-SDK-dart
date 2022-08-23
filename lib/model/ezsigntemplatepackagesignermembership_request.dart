@@ -81,12 +81,16 @@ class EzsigntemplatepackagesignermembershipRequest {
     final _json = <String, dynamic>{};
     if (pkiEzsigntemplatepackagesignermembershipID != null) {
       _json[r'pkiEzsigntemplatepackagesignermembershipID'] = pkiEzsigntemplatepackagesignermembershipID;
+    } else {
+      _json[r'pkiEzsigntemplatepackagesignermembershipID'] = null;
     }
       _json[r'fkiEzsigntemplatepackagemembershipID'] = fkiEzsigntemplatepackagemembershipID;
       _json[r'fkiEzsigntemplatepackagesignerID'] = fkiEzsigntemplatepackagesignerID;
       _json[r'fkiEzsigntemplatesignerID'] = fkiEzsigntemplatesignerID;
     if (iEzsigntemplatepackagesignermembershipCopy != null) {
       _json[r'iEzsigntemplatepackagesignermembershipCopy'] = iEzsigntemplatepackagesignermembershipCopy;
+    } else {
+      _json[r'iEzsigntemplatepackagesignermembershipCopy'] = null;
     }
     return _json;
   }

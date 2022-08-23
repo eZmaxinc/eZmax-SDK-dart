@@ -56,6 +56,8 @@ class ApikeyRequestCompound {
     final _json = <String, dynamic>{};
     if (pkiApikeyID != null) {
       _json[r'pkiApikeyID'] = pkiApikeyID;
+    } else {
+      _json[r'pkiApikeyID'] = null;
     }
       _json[r'fkiUserID'] = fkiUserID;
       _json[r'objApikeyDescription'] = objApikeyDescription;

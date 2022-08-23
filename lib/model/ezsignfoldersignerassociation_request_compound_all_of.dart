@@ -40,6 +40,8 @@ class EzsignfoldersignerassociationRequestCompoundAllOf {
     final _json = <String, dynamic>{};
     if (objEzsignsigner != null) {
       _json[r'objEzsignsigner'] = objEzsignsigner;
+    } else {
+      _json[r'objEzsignsigner'] = null;
     }
     return _json;
   }

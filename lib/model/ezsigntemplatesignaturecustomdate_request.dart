@@ -65,6 +65,8 @@ class EzsigntemplatesignaturecustomdateRequest {
     final _json = <String, dynamic>{};
     if (pkiEzsigntemplatesignaturecustomdateID != null) {
       _json[r'pkiEzsigntemplatesignaturecustomdateID'] = pkiEzsigntemplatesignaturecustomdateID;
+    } else {
+      _json[r'pkiEzsigntemplatesignaturecustomdateID'] = null;
     }
       _json[r'iEzsigntemplatesignaturecustomdateX'] = iEzsigntemplatesignaturecustomdateX;
       _json[r'iEzsigntemplatesignaturecustomdateY'] = iEzsigntemplatesignaturecustomdateY;

@@ -22,6 +22,11 @@ void main() {
       // TODO
     });
 
+    // MultilingualNotificationtestName objNotificationtestName
+    test('to test the property `objNotificationtestName`', () async {
+      // TODO
+    });
+
     // The unique ID of the Notificationsubsection
     // int fkiNotificationsubsectionID
     test('to test the property `fkiNotificationsubsectionID`', () async {

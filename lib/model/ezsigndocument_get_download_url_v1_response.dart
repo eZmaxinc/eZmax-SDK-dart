@@ -57,9 +57,13 @@ class EzsigndocumentGetDownloadUrlV1Response {
       _json[r'mPayload'] = mPayload;
     if (objDebugPayload != null) {
       _json[r'objDebugPayload'] = objDebugPayload;
+    } else {
+      _json[r'objDebugPayload'] = null;
     }
     if (objDebug != null) {
       _json[r'objDebug'] = objDebug;
+    } else {
+      _json[r'objDebug'] = null;
     }
     return _json;
   }

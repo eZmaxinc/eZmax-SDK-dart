@@ -262,11 +262,14 @@ class ObjectEzsigntemplatepackageApi {
   /// * [String] sSelector (required):
   ///   The type of Ezsigntemplatepackages to return
   ///
+  /// * [String] eFilterActive:
+  ///   Specify which results we want to display.
+  ///
   /// * [String] sQuery:
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<Response> ezsigntemplatepackageGetAutocompleteV1WithHttpInfo(String sSelector, { String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
+  Future<Response> ezsigntemplatepackageGetAutocompleteV1WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsigntemplatepackage/getAutocomplete/{sSelector}'
       .replaceAll('{sSelector}', sSelector);
@@ -278,6 +281,9 @@ class ObjectEzsigntemplatepackageApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
+    if (eFilterActive != null) {
+      queryParams.addAll(_queryParams('', 'eFilterActive', eFilterActive));
+    }
     if (sQuery != null) {
       queryParams.addAll(_queryParams('', 'sQuery', sQuery));
     }
@@ -309,12 +315,15 @@ class ObjectEzsigntemplatepackageApi {
   /// * [String] sSelector (required):
   ///   The type of Ezsigntemplatepackages to return
   ///
+  /// * [String] eFilterActive:
+  ///   Specify which results we want to display.
+  ///
   /// * [String] sQuery:
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<CommonGetAutocompleteDisabledV1Response?> ezsigntemplatepackageGetAutocompleteV1(String sSelector, { String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
-    final response = await ezsigntemplatepackageGetAutocompleteV1WithHttpInfo(sSelector,  sQuery: sQuery, acceptLanguage: acceptLanguage, );
+  Future<CommonGetAutocompleteDisabledV1Response?> ezsigntemplatepackageGetAutocompleteV1(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
+    final response = await ezsigntemplatepackageGetAutocompleteV1WithHttpInfo(sSelector,  eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

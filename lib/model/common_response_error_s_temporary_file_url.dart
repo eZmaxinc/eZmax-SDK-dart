@@ -53,6 +53,8 @@ class CommonResponseErrorSTemporaryFileUrl {
     final _json = <String, dynamic>{};
     if (sTemporaryFileUrl != null) {
       _json[r'sTemporaryFileUrl'] = sTemporaryFileUrl;
+    } else {
+      _json[r'sTemporaryFileUrl'] = null;
     }
       _json[r'sErrorMessage'] = sErrorMessage;
       _json[r'eErrorCode'] = eErrorCode;

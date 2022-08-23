@@ -21,7 +21,7 @@ void main() {
     //
     // Get the list of Ezsigntsarequirement to be used in a dropdown or autocomplete control.
     //
-    //Future<CommonGetAutocompleteDisabledV1Response> ezsigntsarequirementGetAutocompleteV1(String sSelector, { int fkiEzsignfoldertypeID, String sQuery, HeaderAcceptLanguage acceptLanguage }) async
+    //Future<CommonGetAutocompleteDisabledV1Response> ezsigntsarequirementGetAutocompleteV1(String sSelector, { int fkiEzsignfoldertypeID, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage }) async
     test('test ezsigntsarequirementGetAutocompleteV1', () async {
       // TODO
     });

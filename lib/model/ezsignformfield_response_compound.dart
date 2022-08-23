@@ -121,9 +121,13 @@ class EzsignformfieldResponseCompound {
       _json[r'iEzsignformfieldHeight'] = iEzsignformfieldHeight;
     if (bEzsignformfieldSelected != null) {
       _json[r'bEzsignformfieldSelected'] = bEzsignformfieldSelected;
+    } else {
+      _json[r'bEzsignformfieldSelected'] = null;
     }
     if (sEzsignformfieldEnteredvalue != null) {
       _json[r'sEzsignformfieldEnteredvalue'] = sEzsignformfieldEnteredvalue;
+    } else {
+      _json[r'sEzsignformfieldEnteredvalue'] = null;
     }
     return _json;
   }

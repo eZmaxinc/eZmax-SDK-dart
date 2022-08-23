@@ -55,6 +55,8 @@ class CustomEzsignfoldertransmissionSignerResponse {
     final _json = <String, dynamic>{};
     if (fkiUserID != null) {
       _json[r'fkiUserID'] = fkiUserID;
+    } else {
+      _json[r'fkiUserID'] = null;
     }
       _json[r'sContactFirstname'] = sContactFirstname;
       _json[r'sContactLastname'] = sContactLastname;

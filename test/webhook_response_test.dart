@@ -16,57 +16,66 @@ void main() {
   // final instance = WebhookResponse();
 
   group('test WebhookResponse', () {
-    // The customer code assigned to your account
-    // String pksCustomerCode
-    test('to test the property `pksCustomerCode`', () async {
-      // TODO
-    });
-
-    // The Webhook ID. This value is visible in the admin interface.
+    // The unique ID of the Webhook
     // int pkiWebhookID
     test('to test the property `pkiWebhookID`', () async {
       // TODO
     });
 
-    // The Module generating the Event.
-    // String eWebhookModule
+    // The description of the Webhook
+    // String sWebhookDescription
+    test('to test the property `sWebhookDescription`', () async {
+      // TODO
+    });
+
+    // The unique ID of the Ezsignfoldertype.
+    // int fkiEzsignfoldertypeID
+    test('to test the property `fkiEzsignfoldertypeID`', () async {
+      // TODO
+    });
+
+    // The name of the Ezsignfoldertype in the language of the requester
+    // String sEzsignfoldertypeNameX
+    test('to test the property `sEzsignfoldertypeNameX`', () async {
+      // TODO
+    });
+
+    // FieldEWebhookModule eWebhookModule
     test('to test the property `eWebhookModule`', () async {
       // TODO
     });
 
-    // This Ezsign Event. This property will be set only if the Module is \"Ezsign\".
-    // String eWebhookEzsignevent
+    // FieldEWebhookEzsignevent eWebhookEzsignevent
     test('to test the property `eWebhookEzsignevent`', () async {
       // TODO
     });
 
-    // This Management Event. This property will be set only if the Module is \"Management\".
-    // String eWebhookManagementevent
+    // FieldEWebhookManagementevent eWebhookManagementevent
     test('to test the property `eWebhookManagementevent`', () async {
       // TODO
     });
 
-    // The url being called
+    // The URL of the Webhook callback
     // String sWebhookUrl
     test('to test the property `sWebhookUrl`', () async {
       // TODO
     });
 
-    // Wheter the webhook received is a manual test or a real event
-    // bool bWebhookTest
-    test('to test the property `bWebhookTest`', () async {
-      // TODO
-    });
-
-    // Wheter the server's SSL certificate should be validated or not. Not recommended for production use.
-    // bool bWebhookSkipsslvalidation
-    test('to test the property `bWebhookSkipsslvalidation`', () async {
-      // TODO
-    });
-
-    // The email that will receive the webhook in case all attempts fail.
+    // The email that will receive the Webhook in case all attempts fail
     // String sWebhookEmailfailed
     test('to test the property `sWebhookEmailfailed`', () async {
+      // TODO
+    });
+
+    // Whether the Webhook is active or not
+    // bool bWebhookIsactive
+    test('to test the property `bWebhookIsactive`', () async {
+      // TODO
+    });
+
+    // Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use
+    // bool bWebhookSkipsslvalidation
+    test('to test the property `bWebhookSkipsslvalidation`', () async {
       // TODO
     });
 

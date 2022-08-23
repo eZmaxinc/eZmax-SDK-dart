@@ -27,11 +27,14 @@ class ObjectUsergroupApi {
   /// * [String] sSelector (required):
   ///   The type of Usergroups to return
   ///
+  /// * [String] eFilterActive:
+  ///   Specify which results we want to display.
+  ///
   /// * [String] sQuery:
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<Response> usergroupGetAutocompleteV1WithHttpInfo(String sSelector, { String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
+  Future<Response> usergroupGetAutocompleteV1WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/usergroup/getAutocomplete/{sSelector}'
       .replaceAll('{sSelector}', sSelector);
@@ -43,6 +46,9 @@ class ObjectUsergroupApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
+    if (eFilterActive != null) {
+      queryParams.addAll(_queryParams('', 'eFilterActive', eFilterActive));
+    }
     if (sQuery != null) {
       queryParams.addAll(_queryParams('', 'sQuery', sQuery));
     }
@@ -74,12 +80,15 @@ class ObjectUsergroupApi {
   /// * [String] sSelector (required):
   ///   The type of Usergroups to return
   ///
+  /// * [String] eFilterActive:
+  ///   Specify which results we want to display.
+  ///
   /// * [String] sQuery:
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<CommonGetAutocompleteV1Response?> usergroupGetAutocompleteV1(String sSelector, { String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
-    final response = await usergroupGetAutocompleteV1WithHttpInfo(sSelector,  sQuery: sQuery, acceptLanguage: acceptLanguage, );
+  Future<CommonGetAutocompleteV1Response?> usergroupGetAutocompleteV1(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
+    final response = await usergroupGetAutocompleteV1WithHttpInfo(sSelector,  eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

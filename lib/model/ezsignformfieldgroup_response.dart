@@ -168,18 +168,28 @@ class EzsignformfieldgroupResponse {
       _json[r'bEzsignformfieldgroupReadonly'] = bEzsignformfieldgroupReadonly;
     if (iEzsignformfieldgroupMaxlength != null) {
       _json[r'iEzsignformfieldgroupMaxlength'] = iEzsignformfieldgroupMaxlength;
+    } else {
+      _json[r'iEzsignformfieldgroupMaxlength'] = null;
     }
     if (bEzsignformfieldgroupEncrypted != null) {
       _json[r'bEzsignformfieldgroupEncrypted'] = bEzsignformfieldgroupEncrypted;
+    } else {
+      _json[r'bEzsignformfieldgroupEncrypted'] = null;
     }
     if (sEzsignformfieldgroupRegexp != null) {
       _json[r'sEzsignformfieldgroupRegexp'] = sEzsignformfieldgroupRegexp;
+    } else {
+      _json[r'sEzsignformfieldgroupRegexp'] = null;
     }
     if (tEzsignformfieldgroupTooltip != null) {
       _json[r'tEzsignformfieldgroupTooltip'] = tEzsignformfieldgroupTooltip;
+    } else {
+      _json[r'tEzsignformfieldgroupTooltip'] = null;
     }
     if (eEzsignformfieldgroupTooltipposition != null) {
       _json[r'eEzsignformfieldgroupTooltipposition'] = eEzsignformfieldgroupTooltipposition;
+    } else {
+      _json[r'eEzsignformfieldgroupTooltipposition'] = null;
     }
     return _json;
   }

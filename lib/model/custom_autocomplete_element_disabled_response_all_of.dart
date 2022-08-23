@@ -16,7 +16,7 @@ class CustomAutocompleteElementDisabledResponseAllOf {
     required this.bDisabled,
   });
 
-  /// 
+  /// Indicates if the element is disabled in the context
   bool bDisabled;
 
   @override

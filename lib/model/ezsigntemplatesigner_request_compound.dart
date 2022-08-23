@@ -57,6 +57,8 @@ class EzsigntemplatesignerRequestCompound {
     final _json = <String, dynamic>{};
     if (pkiEzsigntemplatesignerID != null) {
       _json[r'pkiEzsigntemplatesignerID'] = pkiEzsigntemplatesignerID;
+    } else {
+      _json[r'pkiEzsigntemplatesignerID'] = null;
     }
       _json[r'fkiEzsigntemplateID'] = fkiEzsigntemplateID;
       _json[r'sEzsigntemplatesignerDescription'] = sEzsigntemplatesignerDescription;

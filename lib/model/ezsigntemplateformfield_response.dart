@@ -109,6 +109,8 @@ class EzsigntemplateformfieldResponse {
       _json[r'iEzsigntemplateformfieldHeight'] = iEzsigntemplateformfieldHeight;
     if (bEzsigntemplateformfieldSelected != null) {
       _json[r'bEzsigntemplateformfieldSelected'] = bEzsigntemplateformfieldSelected;
+    } else {
+      _json[r'bEzsigntemplateformfieldSelected'] = null;
     }
     return _json;
   }

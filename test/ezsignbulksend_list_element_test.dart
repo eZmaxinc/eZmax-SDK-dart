@@ -46,12 +46,6 @@ void main() {
       // TODO
     });
 
-    // Whether the Ezsignbulksend is active or not
-    // bool bEzsignbulksendIsactive
-    test('to test the property `bEzsignbulksendIsactive`', () async {
-      // TODO
-    });
-
     // The total number of Ezsignbulksendtransmissions in the Ezsignbulksend
     // int iEzsignbulksendtransmission
     test('to test the property `iEzsignbulksendtransmission`', () async {
@@ -79,6 +73,12 @@ void main() {
     // The total number of already signed Ezsignsignature blocks in the Ezsignbulksend
     // int iEzsignsignatureSigned
     test('to test the property `iEzsignsignatureSigned`', () async {
+      // TODO
+    });
+
+    // Whether the Ezsignbulksend is active or not
+    // bool bEzsignbulksendIsactive
+    test('to test the property `bEzsignbulksendIsactive`', () async {
       // TODO
     });
 

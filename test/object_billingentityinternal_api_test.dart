@@ -21,7 +21,7 @@ void main() {
     //
     // Get the list of Billingentityinternal to be used in a dropdown or autocomplete control.
     //
-    //Future<CommonGetAutocompleteV1Response> billingentityinternalGetAutocompleteV1(String sSelector, { String sQuery, HeaderAcceptLanguage acceptLanguage }) async
+    //Future<CommonGetAutocompleteV1Response> billingentityinternalGetAutocompleteV1(String sSelector, { String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage }) async
     test('test billingentityinternalGetAutocompleteV1', () async {
       // TODO
     });

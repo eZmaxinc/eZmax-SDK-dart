@@ -51,6 +51,8 @@ class EzsignformfieldgroupsignerRequestCompound {
     final _json = <String, dynamic>{};
     if (pkiEzsignformfieldgroupsignerID != null) {
       _json[r'pkiEzsignformfieldgroupsignerID'] = pkiEzsignformfieldgroupsignerID;
+    } else {
+      _json[r'pkiEzsignformfieldgroupsignerID'] = null;
     }
       _json[r'fkiEzsignfoldersignerassociationID'] = fkiEzsignfoldersignerassociationID;
     return _json;

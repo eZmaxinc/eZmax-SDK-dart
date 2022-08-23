@@ -16,7 +16,7 @@ void main() {
   // final instance = CommonWebhook();
 
   group('test CommonWebhook', () {
-    // WebhookResponse objWebhook
+    // CustomWebhookResponse objWebhook
     test('to test the property `objWebhook`', () async {
       // TODO
     });

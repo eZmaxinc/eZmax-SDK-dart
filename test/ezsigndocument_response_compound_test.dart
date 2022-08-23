@@ -28,6 +28,12 @@ void main() {
       // TODO
     });
 
+    // The date and time at which the Ezsignform has been completed.
+    // String dtEzsignformCompleted
+    test('to test the property `dtEzsignformCompleted`', () async {
+      // TODO
+    });
+
     // The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
     // int fkiLanguageID
     test('to test the property `fkiLanguageID`', () async {

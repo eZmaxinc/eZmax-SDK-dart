@@ -14,6 +14,7 @@ class CustomNotificationtestgetnotificationtestsResponse {
   /// Returns a new [CustomNotificationtestgetnotificationtestsResponse] instance.
   CustomNotificationtestgetnotificationtestsResponse({
     required this.pkiNotificationtestID,
+    required this.objNotificationtestName,
     required this.fkiNotificationsubsectionID,
     required this.sNotificationtestFunction,
     required this.sNotificationtestNameX,
@@ -25,6 +26,8 @@ class CustomNotificationtestgetnotificationtestsResponse {
   ///
   /// Minimum value: 0
   int pkiNotificationtestID;
+
+  MultilingualNotificationtestName objNotificationtestName;
 
   /// The unique ID of the Notificationsubsection
   ///
@@ -45,6 +48,7 @@ class CustomNotificationtestgetnotificationtestsResponse {
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomNotificationtestgetnotificationtestsResponse &&
      other.pkiNotificationtestID == pkiNotificationtestID &&
+     other.objNotificationtestName == objNotificationtestName &&
      other.fkiNotificationsubsectionID == fkiNotificationsubsectionID &&
      other.sNotificationtestFunction == sNotificationtestFunction &&
      other.sNotificationtestNameX == sNotificationtestNameX &&
@@ -55,6 +59,7 @@ class CustomNotificationtestgetnotificationtestsResponse {
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiNotificationtestID.hashCode) +
+    (objNotificationtestName.hashCode) +
     (fkiNotificationsubsectionID.hashCode) +
     (sNotificationtestFunction.hashCode) +
     (sNotificationtestNameX.hashCode) +
@@ -62,11 +67,12 @@ class CustomNotificationtestgetnotificationtestsResponse {
     (iNotificationtest.hashCode);
 
   @override
-  String toString() => 'CustomNotificationtestgetnotificationtestsResponse[pkiNotificationtestID=$pkiNotificationtestID, fkiNotificationsubsectionID=$fkiNotificationsubsectionID, sNotificationtestFunction=$sNotificationtestFunction, sNotificationtestNameX=$sNotificationtestNameX, eNotificationpreferenceStatus=$eNotificationpreferenceStatus, iNotificationtest=$iNotificationtest]';
+  String toString() => 'CustomNotificationtestgetnotificationtestsResponse[pkiNotificationtestID=$pkiNotificationtestID, objNotificationtestName=$objNotificationtestName, fkiNotificationsubsectionID=$fkiNotificationsubsectionID, sNotificationtestFunction=$sNotificationtestFunction, sNotificationtestNameX=$sNotificationtestNameX, eNotificationpreferenceStatus=$eNotificationpreferenceStatus, iNotificationtest=$iNotificationtest]';
 
   Map<String, dynamic> toJson() {
     final _json = <String, dynamic>{};
       _json[r'pkiNotificationtestID'] = pkiNotificationtestID;
+      _json[r'objNotificationtestName'] = objNotificationtestName;
       _json[r'fkiNotificationsubsectionID'] = fkiNotificationsubsectionID;
       _json[r'sNotificationtestFunction'] = sNotificationtestFunction;
       _json[r'sNotificationtestNameX'] = sNotificationtestNameX;
@@ -95,6 +101,7 @@ class CustomNotificationtestgetnotificationtestsResponse {
 
       return CustomNotificationtestgetnotificationtestsResponse(
         pkiNotificationtestID: mapValueOfType<int>(json, r'pkiNotificationtestID')!,
+        objNotificationtestName: MultilingualNotificationtestName.fromJson(json[r'objNotificationtestName'])!,
         fkiNotificationsubsectionID: mapValueOfType<int>(json, r'fkiNotificationsubsectionID')!,
         sNotificationtestFunction: mapValueOfType<String>(json, r'sNotificationtestFunction')!,
         sNotificationtestNameX: mapValueOfType<String>(json, r'sNotificationtestNameX')!,
@@ -150,6 +157,7 @@ class CustomNotificationtestgetnotificationtestsResponse {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'pkiNotificationtestID',
+    'objNotificationtestName',
     'fkiNotificationsubsectionID',
     'sNotificationtestFunction',
     'sNotificationtestNameX',

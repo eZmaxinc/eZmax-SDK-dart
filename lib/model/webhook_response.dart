@@ -13,87 +13,146 @@ part of openapi.api;
 class WebhookResponse {
   /// Returns a new [WebhookResponse] instance.
   WebhookResponse({
-    required this.pksCustomerCode,
     required this.pkiWebhookID,
+    required this.sWebhookDescription,
+    this.fkiEzsignfoldertypeID,
+    this.sEzsignfoldertypeNameX,
     required this.eWebhookModule,
     this.eWebhookEzsignevent,
     this.eWebhookManagementevent,
     required this.sWebhookUrl,
-    required this.bWebhookTest,
-    required this.bWebhookSkipsslvalidation,
     required this.sWebhookEmailfailed,
+    this.bWebhookIsactive,
+    required this.bWebhookSkipsslvalidation,
   });
 
-  /// The customer code assigned to your account
-  String pksCustomerCode;
-
-  /// The Webhook ID. This value is visible in the admin interface.
+  /// The unique ID of the Webhook
   int pkiWebhookID;
 
-  /// The Module generating the Event.
-  WebhookResponseEWebhookModuleEnum eWebhookModule;
+  /// The description of the Webhook
+  String sWebhookDescription;
 
-  /// This Ezsign Event. This property will be set only if the Module is \"Ezsign\".
-  WebhookResponseEWebhookEzsigneventEnum? eWebhookEzsignevent;
+  /// The unique ID of the Ezsignfoldertype.
+  ///
+  /// Minimum value: 0
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiEzsignfoldertypeID;
 
-  /// This Management Event. This property will be set only if the Module is \"Management\".
-  WebhookResponseEWebhookManagementeventEnum? eWebhookManagementevent;
+  /// The name of the Ezsignfoldertype in the language of the requester
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEzsignfoldertypeNameX;
 
-  /// The url being called
+  FieldEWebhookModule eWebhookModule;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEWebhookEzsignevent? eWebhookEzsignevent;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEWebhookManagementevent? eWebhookManagementevent;
+
+  /// The URL of the Webhook callback
   String sWebhookUrl;
 
-  /// Wheter the webhook received is a manual test or a real event
-  bool bWebhookTest;
-
-  /// Wheter the server's SSL certificate should be validated or not. Not recommended for production use.
-  bool bWebhookSkipsslvalidation;
-
-  /// The email that will receive the webhook in case all attempts fail.
+  /// The email that will receive the Webhook in case all attempts fail
   String sWebhookEmailfailed;
+
+  /// Whether the Webhook is active or not
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bWebhookIsactive;
+
+  /// Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use
+  bool bWebhookSkipsslvalidation;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is WebhookResponse &&
-     other.pksCustomerCode == pksCustomerCode &&
      other.pkiWebhookID == pkiWebhookID &&
+     other.sWebhookDescription == sWebhookDescription &&
+     other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
+     other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
      other.eWebhookModule == eWebhookModule &&
      other.eWebhookEzsignevent == eWebhookEzsignevent &&
      other.eWebhookManagementevent == eWebhookManagementevent &&
      other.sWebhookUrl == sWebhookUrl &&
-     other.bWebhookTest == bWebhookTest &&
-     other.bWebhookSkipsslvalidation == bWebhookSkipsslvalidation &&
-     other.sWebhookEmailfailed == sWebhookEmailfailed;
+     other.sWebhookEmailfailed == sWebhookEmailfailed &&
+     other.bWebhookIsactive == bWebhookIsactive &&
+     other.bWebhookSkipsslvalidation == bWebhookSkipsslvalidation;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (pksCustomerCode.hashCode) +
     (pkiWebhookID.hashCode) +
+    (sWebhookDescription.hashCode) +
+    (fkiEzsignfoldertypeID == null ? 0 : fkiEzsignfoldertypeID!.hashCode) +
+    (sEzsignfoldertypeNameX == null ? 0 : sEzsignfoldertypeNameX!.hashCode) +
     (eWebhookModule.hashCode) +
     (eWebhookEzsignevent == null ? 0 : eWebhookEzsignevent!.hashCode) +
     (eWebhookManagementevent == null ? 0 : eWebhookManagementevent!.hashCode) +
     (sWebhookUrl.hashCode) +
-    (bWebhookTest.hashCode) +
-    (bWebhookSkipsslvalidation.hashCode) +
-    (sWebhookEmailfailed.hashCode);
+    (sWebhookEmailfailed.hashCode) +
+    (bWebhookIsactive == null ? 0 : bWebhookIsactive!.hashCode) +
+    (bWebhookSkipsslvalidation.hashCode);
 
   @override
-  String toString() => 'WebhookResponse[pksCustomerCode=$pksCustomerCode, pkiWebhookID=$pkiWebhookID, eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, sWebhookUrl=$sWebhookUrl, bWebhookTest=$bWebhookTest, bWebhookSkipsslvalidation=$bWebhookSkipsslvalidation, sWebhookEmailfailed=$sWebhookEmailfailed]';
+  String toString() => 'WebhookResponse[pkiWebhookID=$pkiWebhookID, sWebhookDescription=$sWebhookDescription, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, sWebhookUrl=$sWebhookUrl, sWebhookEmailfailed=$sWebhookEmailfailed, bWebhookIsactive=$bWebhookIsactive, bWebhookSkipsslvalidation=$bWebhookSkipsslvalidation]';
 
   Map<String, dynamic> toJson() {
     final _json = <String, dynamic>{};
-      _json[r'pksCustomerCode'] = pksCustomerCode;
       _json[r'pkiWebhookID'] = pkiWebhookID;
+      _json[r'sWebhookDescription'] = sWebhookDescription;
+    if (fkiEzsignfoldertypeID != null) {
+      _json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
+    } else {
+      _json[r'fkiEzsignfoldertypeID'] = null;
+    }
+    if (sEzsignfoldertypeNameX != null) {
+      _json[r'sEzsignfoldertypeNameX'] = sEzsignfoldertypeNameX;
+    } else {
+      _json[r'sEzsignfoldertypeNameX'] = null;
+    }
       _json[r'eWebhookModule'] = eWebhookModule;
     if (eWebhookEzsignevent != null) {
       _json[r'eWebhookEzsignevent'] = eWebhookEzsignevent;
+    } else {
+      _json[r'eWebhookEzsignevent'] = null;
     }
     if (eWebhookManagementevent != null) {
       _json[r'eWebhookManagementevent'] = eWebhookManagementevent;
+    } else {
+      _json[r'eWebhookManagementevent'] = null;
     }
       _json[r'sWebhookUrl'] = sWebhookUrl;
-      _json[r'bWebhookTest'] = bWebhookTest;
-      _json[r'bWebhookSkipsslvalidation'] = bWebhookSkipsslvalidation;
       _json[r'sWebhookEmailfailed'] = sWebhookEmailfailed;
+    if (bWebhookIsactive != null) {
+      _json[r'bWebhookIsactive'] = bWebhookIsactive;
+    } else {
+      _json[r'bWebhookIsactive'] = null;
+    }
+      _json[r'bWebhookSkipsslvalidation'] = bWebhookSkipsslvalidation;
     return _json;
   }
 
@@ -116,15 +175,17 @@ class WebhookResponse {
       }());
 
       return WebhookResponse(
-        pksCustomerCode: mapValueOfType<String>(json, r'pksCustomerCode')!,
         pkiWebhookID: mapValueOfType<int>(json, r'pkiWebhookID')!,
-        eWebhookModule: WebhookResponseEWebhookModuleEnum.fromJson(json[r'eWebhookModule'])!,
-        eWebhookEzsignevent: WebhookResponseEWebhookEzsigneventEnum.fromJson(json[r'eWebhookEzsignevent']),
-        eWebhookManagementevent: WebhookResponseEWebhookManagementeventEnum.fromJson(json[r'eWebhookManagementevent']),
+        sWebhookDescription: mapValueOfType<String>(json, r'sWebhookDescription')!,
+        fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID'),
+        sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX'),
+        eWebhookModule: FieldEWebhookModule.fromJson(json[r'eWebhookModule'])!,
+        eWebhookEzsignevent: FieldEWebhookEzsignevent.fromJson(json[r'eWebhookEzsignevent']),
+        eWebhookManagementevent: FieldEWebhookManagementevent.fromJson(json[r'eWebhookManagementevent']),
         sWebhookUrl: mapValueOfType<String>(json, r'sWebhookUrl')!,
-        bWebhookTest: mapValueOfType<bool>(json, r'bWebhookTest')!,
-        bWebhookSkipsslvalidation: mapValueOfType<bool>(json, r'bWebhookSkipsslvalidation')!,
         sWebhookEmailfailed: mapValueOfType<String>(json, r'sWebhookEmailfailed')!,
+        bWebhookIsactive: mapValueOfType<bool>(json, r'bWebhookIsactive'),
+        bWebhookSkipsslvalidation: mapValueOfType<bool>(json, r'bWebhookSkipsslvalidation')!,
       );
     }
     return null;
@@ -174,232 +235,12 @@ class WebhookResponse {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'pksCustomerCode',
     'pkiWebhookID',
+    'sWebhookDescription',
     'eWebhookModule',
     'sWebhookUrl',
-    'bWebhookTest',
-    'bWebhookSkipsslvalidation',
     'sWebhookEmailfailed',
+    'bWebhookSkipsslvalidation',
   };
 }
-
-/// The Module generating the Event.
-class WebhookResponseEWebhookModuleEnum {
-  /// Instantiate a new enum with the provided [value].
-  const WebhookResponseEWebhookModuleEnum._(this.value);
-
-  /// The underlying value of this enum member.
-  final String value;
-
-  @override
-  String toString() => value;
-
-  String toJson() => value;
-
-  static const ezsign = WebhookResponseEWebhookModuleEnum._(r'Ezsign');
-  static const management = WebhookResponseEWebhookModuleEnum._(r'Management');
-
-  /// List of all possible values in this [enum][WebhookResponseEWebhookModuleEnum].
-  static const values = <WebhookResponseEWebhookModuleEnum>[
-    ezsign,
-    management,
-  ];
-
-  static WebhookResponseEWebhookModuleEnum? fromJson(dynamic value) => WebhookResponseEWebhookModuleEnumTypeTransformer().decode(value);
-
-  static List<WebhookResponseEWebhookModuleEnum>? listFromJson(dynamic json, {bool growable = false,}) {
-    final result = <WebhookResponseEWebhookModuleEnum>[];
-    if (json is List && json.isNotEmpty) {
-      for (final row in json) {
-        final value = WebhookResponseEWebhookModuleEnum.fromJson(row);
-        if (value != null) {
-          result.add(value);
-        }
-      }
-    }
-    return result.toList(growable: growable);
-  }
-}
-
-/// Transformation class that can [encode] an instance of [WebhookResponseEWebhookModuleEnum] to String,
-/// and [decode] dynamic data back to [WebhookResponseEWebhookModuleEnum].
-class WebhookResponseEWebhookModuleEnumTypeTransformer {
-  factory WebhookResponseEWebhookModuleEnumTypeTransformer() => _instance ??= const WebhookResponseEWebhookModuleEnumTypeTransformer._();
-
-  const WebhookResponseEWebhookModuleEnumTypeTransformer._();
-
-  String encode(WebhookResponseEWebhookModuleEnum data) => data.value;
-
-  /// Decodes a [dynamic value][data] to a WebhookResponseEWebhookModuleEnum.
-  ///
-  /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
-  /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
-  /// cannot be decoded successfully, then an [UnimplementedError] is thrown.
-  ///
-  /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
-  /// and users are still using an old app with the old code.
-  WebhookResponseEWebhookModuleEnum? decode(dynamic data, {bool allowNull = true}) {
-    if (data != null) {
-      switch (data.toString()) {
-        case r'Ezsign': return WebhookResponseEWebhookModuleEnum.ezsign;
-        case r'Management': return WebhookResponseEWebhookModuleEnum.management;
-        default:
-          if (!allowNull) {
-            throw ArgumentError('Unknown enum value to decode: $data');
-          }
-      }
-    }
-    return null;
-  }
-
-  /// Singleton [WebhookResponseEWebhookModuleEnumTypeTransformer] instance.
-  static WebhookResponseEWebhookModuleEnumTypeTransformer? _instance;
-}
-
-
-/// This Ezsign Event. This property will be set only if the Module is \"Ezsign\".
-class WebhookResponseEWebhookEzsigneventEnum {
-  /// Instantiate a new enum with the provided [value].
-  const WebhookResponseEWebhookEzsigneventEnum._(this.value);
-
-  /// The underlying value of this enum member.
-  final String value;
-
-  @override
-  String toString() => value;
-
-  String toJson() => value;
-
-  static const documentCompleted = WebhookResponseEWebhookEzsigneventEnum._(r'DocumentCompleted');
-  static const folderCompleted = WebhookResponseEWebhookEzsigneventEnum._(r'FolderCompleted');
-
-  /// List of all possible values in this [enum][WebhookResponseEWebhookEzsigneventEnum].
-  static const values = <WebhookResponseEWebhookEzsigneventEnum>[
-    documentCompleted,
-    folderCompleted,
-  ];
-
-  static WebhookResponseEWebhookEzsigneventEnum? fromJson(dynamic value) => WebhookResponseEWebhookEzsigneventEnumTypeTransformer().decode(value);
-
-  static List<WebhookResponseEWebhookEzsigneventEnum>? listFromJson(dynamic json, {bool growable = false,}) {
-    final result = <WebhookResponseEWebhookEzsigneventEnum>[];
-    if (json is List && json.isNotEmpty) {
-      for (final row in json) {
-        final value = WebhookResponseEWebhookEzsigneventEnum.fromJson(row);
-        if (value != null) {
-          result.add(value);
-        }
-      }
-    }
-    return result.toList(growable: growable);
-  }
-}
-
-/// Transformation class that can [encode] an instance of [WebhookResponseEWebhookEzsigneventEnum] to String,
-/// and [decode] dynamic data back to [WebhookResponseEWebhookEzsigneventEnum].
-class WebhookResponseEWebhookEzsigneventEnumTypeTransformer {
-  factory WebhookResponseEWebhookEzsigneventEnumTypeTransformer() => _instance ??= const WebhookResponseEWebhookEzsigneventEnumTypeTransformer._();
-
-  const WebhookResponseEWebhookEzsigneventEnumTypeTransformer._();
-
-  String encode(WebhookResponseEWebhookEzsigneventEnum data) => data.value;
-
-  /// Decodes a [dynamic value][data] to a WebhookResponseEWebhookEzsigneventEnum.
-  ///
-  /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
-  /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
-  /// cannot be decoded successfully, then an [UnimplementedError] is thrown.
-  ///
-  /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
-  /// and users are still using an old app with the old code.
-  WebhookResponseEWebhookEzsigneventEnum? decode(dynamic data, {bool allowNull = true}) {
-    if (data != null) {
-      switch (data.toString()) {
-        case r'DocumentCompleted': return WebhookResponseEWebhookEzsigneventEnum.documentCompleted;
-        case r'FolderCompleted': return WebhookResponseEWebhookEzsigneventEnum.folderCompleted;
-        default:
-          if (!allowNull) {
-            throw ArgumentError('Unknown enum value to decode: $data');
-          }
-      }
-    }
-    return null;
-  }
-
-  /// Singleton [WebhookResponseEWebhookEzsigneventEnumTypeTransformer] instance.
-  static WebhookResponseEWebhookEzsigneventEnumTypeTransformer? _instance;
-}
-
-
-/// This Management Event. This property will be set only if the Module is \"Management\".
-class WebhookResponseEWebhookManagementeventEnum {
-  /// Instantiate a new enum with the provided [value].
-  const WebhookResponseEWebhookManagementeventEnum._(this.value);
-
-  /// The underlying value of this enum member.
-  final String value;
-
-  @override
-  String toString() => value;
-
-  String toJson() => value;
-
-  static const userCreated = WebhookResponseEWebhookManagementeventEnum._(r'UserCreated');
-
-  /// List of all possible values in this [enum][WebhookResponseEWebhookManagementeventEnum].
-  static const values = <WebhookResponseEWebhookManagementeventEnum>[
-    userCreated,
-  ];
-
-  static WebhookResponseEWebhookManagementeventEnum? fromJson(dynamic value) => WebhookResponseEWebhookManagementeventEnumTypeTransformer().decode(value);
-
-  static List<WebhookResponseEWebhookManagementeventEnum>? listFromJson(dynamic json, {bool growable = false,}) {
-    final result = <WebhookResponseEWebhookManagementeventEnum>[];
-    if (json is List && json.isNotEmpty) {
-      for (final row in json) {
-        final value = WebhookResponseEWebhookManagementeventEnum.fromJson(row);
-        if (value != null) {
-          result.add(value);
-        }
-      }
-    }
-    return result.toList(growable: growable);
-  }
-}
-
-/// Transformation class that can [encode] an instance of [WebhookResponseEWebhookManagementeventEnum] to String,
-/// and [decode] dynamic data back to [WebhookResponseEWebhookManagementeventEnum].
-class WebhookResponseEWebhookManagementeventEnumTypeTransformer {
-  factory WebhookResponseEWebhookManagementeventEnumTypeTransformer() => _instance ??= const WebhookResponseEWebhookManagementeventEnumTypeTransformer._();
-
-  const WebhookResponseEWebhookManagementeventEnumTypeTransformer._();
-
-  String encode(WebhookResponseEWebhookManagementeventEnum data) => data.value;
-
-  /// Decodes a [dynamic value][data] to a WebhookResponseEWebhookManagementeventEnum.
-  ///
-  /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
-  /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
-  /// cannot be decoded successfully, then an [UnimplementedError] is thrown.
-  ///
-  /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
-  /// and users are still using an old app with the old code.
-  WebhookResponseEWebhookManagementeventEnum? decode(dynamic data, {bool allowNull = true}) {
-    if (data != null) {
-      switch (data.toString()) {
-        case r'UserCreated': return WebhookResponseEWebhookManagementeventEnum.userCreated;
-        default:
-          if (!allowNull) {
-            throw ArgumentError('Unknown enum value to decode: $data');
-          }
-      }
-    }
-    return null;
-  }
-
-  /// Singleton [WebhookResponseEWebhookManagementeventEnumTypeTransformer] instance.
-  static WebhookResponseEWebhookManagementeventEnumTypeTransformer? _instance;
-}
-
 

@@ -113,11 +113,15 @@ class EzsigntemplateformfieldRequestCompound {
     final _json = <String, dynamic>{};
     if (pkiEzsigntemplateformfieldID != null) {
       _json[r'pkiEzsigntemplateformfieldID'] = pkiEzsigntemplateformfieldID;
+    } else {
+      _json[r'pkiEzsigntemplateformfieldID'] = null;
     }
       _json[r'iEzsigntemplatedocumentpagePagenumber'] = iEzsigntemplatedocumentpagePagenumber;
       _json[r'sEzsigntemplateformfieldLabel'] = sEzsigntemplateformfieldLabel;
     if (sEzsigntemplateformfieldValue != null) {
       _json[r'sEzsigntemplateformfieldValue'] = sEzsigntemplateformfieldValue;
+    } else {
+      _json[r'sEzsigntemplateformfieldValue'] = null;
     }
       _json[r'iEzsigntemplateformfieldX'] = iEzsigntemplateformfieldX;
       _json[r'iEzsigntemplateformfieldY'] = iEzsigntemplateformfieldY;
@@ -125,6 +129,8 @@ class EzsigntemplateformfieldRequestCompound {
       _json[r'iEzsigntemplateformfieldHeight'] = iEzsigntemplateformfieldHeight;
     if (bEzsigntemplateformfieldSelected != null) {
       _json[r'bEzsigntemplateformfieldSelected'] = bEzsigntemplateformfieldSelected;
+    } else {
+      _json[r'bEzsigntemplateformfieldSelected'] = null;
     }
     return _json;
   }

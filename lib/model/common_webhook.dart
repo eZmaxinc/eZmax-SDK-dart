@@ -17,7 +17,7 @@ class CommonWebhook {
     this.aObjAttempt = const [],
   });
 
-  WebhookResponse objWebhook;
+  CustomWebhookResponse objWebhook;
 
   /// An array containing details of previous attempts that were made to deliver the message. The array is empty if it's the first attempt.
   List<AttemptResponseCompound> aObjAttempt;
@@ -62,7 +62,7 @@ class CommonWebhook {
       }());
 
       return CommonWebhook(
-        objWebhook: WebhookResponse.fromJson(json[r'objWebhook'])!,
+        objWebhook: CustomWebhookResponse.fromJson(json[r'objWebhook'])!,
         aObjAttempt: AttemptResponseCompound.listFromJson(json[r'a_objAttempt'])!,
       );
     }

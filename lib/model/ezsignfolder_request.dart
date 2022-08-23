@@ -83,10 +83,14 @@ class EzsignfolderRequest {
     final _json = <String, dynamic>{};
     if (pkiEzsignfolderID != null) {
       _json[r'pkiEzsignfolderID'] = pkiEzsignfolderID;
+    } else {
+      _json[r'pkiEzsignfolderID'] = null;
     }
       _json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
     if (fkiEzsigntsarequirementID != null) {
       _json[r'fkiEzsigntsarequirementID'] = fkiEzsigntsarequirementID;
+    } else {
+      _json[r'fkiEzsigntsarequirementID'] = null;
     }
       _json[r'sEzsignfolderDescription'] = sEzsignfolderDescription;
       _json[r'tEzsignfolderNote'] = tEzsignfolderNote;

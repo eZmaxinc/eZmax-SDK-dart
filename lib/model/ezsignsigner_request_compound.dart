@@ -89,16 +89,24 @@ class EzsignsignerRequestCompound {
     final _json = <String, dynamic>{};
     if (fkiUserlogintypeID != null) {
       _json[r'fkiUserlogintypeID'] = fkiUserlogintypeID;
+    } else {
+      _json[r'fkiUserlogintypeID'] = null;
     }
       _json[r'fkiTaxassignmentID'] = fkiTaxassignmentID;
     if (fkiSecretquestionID != null) {
       _json[r'fkiSecretquestionID'] = fkiSecretquestionID;
+    } else {
+      _json[r'fkiSecretquestionID'] = null;
     }
     if (eEzsignsignerLogintype != null) {
       _json[r'eEzsignsignerLogintype'] = eEzsignsignerLogintype;
+    } else {
+      _json[r'eEzsignsignerLogintype'] = null;
     }
     if (sEzsignsignerSecretanswer != null) {
       _json[r'sEzsignsignerSecretanswer'] = sEzsignsignerSecretanswer;
+    } else {
+      _json[r'sEzsignsignerSecretanswer'] = null;
     }
       _json[r'objContact'] = objContact;
     return _json;

@@ -160,31 +160,47 @@ class EzsigndocumentRequest {
     final _json = <String, dynamic>{};
     if (pkiEzsigndocumentID != null) {
       _json[r'pkiEzsigndocumentID'] = pkiEzsigndocumentID;
+    } else {
+      _json[r'pkiEzsigndocumentID'] = null;
     }
       _json[r'fkiEzsignfolderID'] = fkiEzsignfolderID;
     if (fkiEzsigntemplateID != null) {
       _json[r'fkiEzsigntemplateID'] = fkiEzsigntemplateID;
+    } else {
+      _json[r'fkiEzsigntemplateID'] = null;
     }
     if (fkiEzsignfoldersignerassociationID != null) {
       _json[r'fkiEzsignfoldersignerassociationID'] = fkiEzsignfoldersignerassociationID;
+    } else {
+      _json[r'fkiEzsignfoldersignerassociationID'] = null;
     }
       _json[r'fkiLanguageID'] = fkiLanguageID;
       _json[r'eEzsigndocumentSource'] = eEzsigndocumentSource;
     if (eEzsigndocumentFormat != null) {
       _json[r'eEzsigndocumentFormat'] = eEzsigndocumentFormat;
+    } else {
+      _json[r'eEzsigndocumentFormat'] = null;
     }
     if (sEzsigndocumentBase64 != null) {
       _json[r'sEzsigndocumentBase64'] = sEzsigndocumentBase64;
+    } else {
+      _json[r'sEzsigndocumentBase64'] = null;
     }
     if (sEzsigndocumentUrl != null) {
       _json[r'sEzsigndocumentUrl'] = sEzsigndocumentUrl;
+    } else {
+      _json[r'sEzsigndocumentUrl'] = null;
     }
       _json[r'bEzsigndocumentForcerepair'] = bEzsigndocumentForcerepair;
     if (sEzsigndocumentPassword != null) {
       _json[r'sEzsigndocumentPassword'] = sEzsigndocumentPassword;
+    } else {
+      _json[r'sEzsigndocumentPassword'] = null;
     }
     if (eEzsigndocumentForm != null) {
       _json[r'eEzsigndocumentForm'] = eEzsigndocumentForm;
+    } else {
+      _json[r'eEzsigndocumentForm'] = null;
     }
       _json[r'dtEzsigndocumentDuedate'] = dtEzsigndocumentDuedate;
       _json[r'sEzsigndocumentName'] = sEzsigndocumentName;

@@ -130,6 +130,8 @@ class EzsigntemplatesignatureRequest {
     final _json = <String, dynamic>{};
     if (pkiEzsigntemplatesignatureID != null) {
       _json[r'pkiEzsigntemplatesignatureID'] = pkiEzsigntemplatesignatureID;
+    } else {
+      _json[r'pkiEzsigntemplatesignatureID'] = null;
     }
       _json[r'fkiEzsigntemplatedocumentID'] = fkiEzsigntemplatedocumentID;
       _json[r'fkiEzsigntemplatesignerID'] = fkiEzsigntemplatesignerID;
@@ -140,12 +142,18 @@ class EzsigntemplatesignatureRequest {
       _json[r'eEzsigntemplatesignatureType'] = eEzsigntemplatesignatureType;
     if (tEzsigntemplatesignatureTooltip != null) {
       _json[r'tEzsigntemplatesignatureTooltip'] = tEzsigntemplatesignatureTooltip;
+    } else {
+      _json[r'tEzsigntemplatesignatureTooltip'] = null;
     }
     if (eEzsigntemplatesignatureTooltipposition != null) {
       _json[r'eEzsigntemplatesignatureTooltipposition'] = eEzsigntemplatesignatureTooltipposition;
+    } else {
+      _json[r'eEzsigntemplatesignatureTooltipposition'] = null;
     }
     if (eEzsigntemplatesignatureFont != null) {
       _json[r'eEzsigntemplatesignatureFont'] = eEzsigntemplatesignatureFont;
+    } else {
+      _json[r'eEzsigntemplatesignatureFont'] = null;
     }
     return _json;
   }

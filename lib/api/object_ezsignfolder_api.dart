@@ -849,6 +849,67 @@ class ObjectEzsignfolderApi {
     return null;
   }
 
+  /// Import an existing Ezsignfoldersignerassociation into this Ezsignfolder
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfolderID (required):
+  ///
+  /// * [EzsignfolderImportEzsignfoldersignerassociationsV1Request] ezsignfolderImportEzsignfoldersignerassociationsV1Request (required):
+  Future<Response> ezsignfolderImportEzsignfoldersignerassociationsV1WithHttpInfo(int pkiEzsignfolderID, EzsignfolderImportEzsignfoldersignerassociationsV1Request ezsignfolderImportEzsignfoldersignerassociationsV1Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsignfoldersignerassociations'
+      .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = ezsignfolderImportEzsignfoldersignerassociationsV1Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Import an existing Ezsignfoldersignerassociation into this Ezsignfolder
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfolderID (required):
+  ///
+  /// * [EzsignfolderImportEzsignfoldersignerassociationsV1Request] ezsignfolderImportEzsignfoldersignerassociationsV1Request (required):
+  Future<EzsignfolderImportEzsignfoldersignerassociationsV1Response?> ezsignfolderImportEzsignfoldersignerassociationsV1(int pkiEzsignfolderID, EzsignfolderImportEzsignfoldersignerassociationsV1Request ezsignfolderImportEzsignfoldersignerassociationsV1Request,) async {
+    final response = await ezsignfolderImportEzsignfoldersignerassociationsV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderImportEzsignfoldersignerassociationsV1Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderImportEzsignfoldersignerassociationsV1Response',) as EzsignfolderImportEzsignfoldersignerassociationsV1Response;
+    
+    }
+    return null;
+  }
+
   /// Import an Ezsigntemplatepackage in the Ezsignfolder.
   ///
   /// This endpoint imports all of the Ezsigntemplates from the Ezsigntemplatepackage into the Ezsignfolder as Ezsigndocuments.  This allows to automatically apply all the Ezsigntemplateformfieldgroups and Ezsigntemplatesignatures on the newly created Ezsigndocuments in a single step.
@@ -1023,6 +1084,67 @@ class ObjectEzsignfolderApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderSendV1Response',) as EzsignfolderSendV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Send the Ezsignfolder to the signatories for signature
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfolderID (required):
+  ///
+  /// * [EzsignfolderSendV2Request] ezsignfolderSendV2Request (required):
+  Future<Response> ezsignfolderSendV2WithHttpInfo(int pkiEzsignfolderID, EzsignfolderSendV2Request ezsignfolderSendV2Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/2/object/ezsignfolder/{pkiEzsignfolderID}/send'
+      .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = ezsignfolderSendV2Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Send the Ezsignfolder to the signatories for signature
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfolderID (required):
+  ///
+  /// * [EzsignfolderSendV2Request] ezsignfolderSendV2Request (required):
+  Future<EzsignfolderSendV2Response?> ezsignfolderSendV2(int pkiEzsignfolderID, EzsignfolderSendV2Request ezsignfolderSendV2Request,) async {
+    final response = await ezsignfolderSendV2WithHttpInfo(pkiEzsignfolderID, ezsignfolderSendV2Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderSendV2Response',) as EzsignfolderSendV2Response;
     
     }
     return null;

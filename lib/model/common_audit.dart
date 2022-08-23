@@ -46,6 +46,8 @@ class CommonAudit {
       _json[r'objAuditdetailCreated'] = objAuditdetailCreated;
     if (objAuditdetailModified != null) {
       _json[r'objAuditdetailModified'] = objAuditdetailModified;
+    } else {
+      _json[r'objAuditdetailModified'] = null;
     }
     return _json;
   }

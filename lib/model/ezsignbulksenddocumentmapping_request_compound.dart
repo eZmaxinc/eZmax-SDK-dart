@@ -79,13 +79,19 @@ class EzsignbulksenddocumentmappingRequestCompound {
     final _json = <String, dynamic>{};
     if (pkiEzsignbulksenddocumentmappingID != null) {
       _json[r'pkiEzsignbulksenddocumentmappingID'] = pkiEzsignbulksenddocumentmappingID;
+    } else {
+      _json[r'pkiEzsignbulksenddocumentmappingID'] = null;
     }
       _json[r'fkiEzsignbulksendID'] = fkiEzsignbulksendID;
     if (fkiEzsigntemplatepackageID != null) {
       _json[r'fkiEzsigntemplatepackageID'] = fkiEzsigntemplatepackageID;
+    } else {
+      _json[r'fkiEzsigntemplatepackageID'] = null;
     }
     if (fkiEzsigntemplateID != null) {
       _json[r'fkiEzsigntemplateID'] = fkiEzsigntemplateID;
+    } else {
+      _json[r'fkiEzsigntemplateID'] = null;
     }
     return _json;
   }

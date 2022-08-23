@@ -51,9 +51,13 @@ class EzsignfoldersignerassociationCreateObjectV1Request {
     final _json = <String, dynamic>{};
     if (objEzsignfoldersignerassociation != null) {
       _json[r'objEzsignfoldersignerassociation'] = objEzsignfoldersignerassociation;
+    } else {
+      _json[r'objEzsignfoldersignerassociation'] = null;
     }
     if (objEzsignfoldersignerassociationCompound != null) {
       _json[r'objEzsignfoldersignerassociationCompound'] = objEzsignfoldersignerassociationCompound;
+    } else {
+      _json[r'objEzsignfoldersignerassociationCompound'] = null;
     }
     return _json;
   }

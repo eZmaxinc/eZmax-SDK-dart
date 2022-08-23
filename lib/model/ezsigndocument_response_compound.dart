@@ -15,6 +15,7 @@ class EzsigndocumentResponseCompound {
   EzsigndocumentResponseCompound({
     required this.fkiEzsignfolderID,
     required this.dtEzsigndocumentDuedate,
+    this.dtEzsignformCompleted,
     required this.fkiLanguageID,
     required this.sEzsigndocumentName,
     required this.pkiEzsigndocumentID,
@@ -43,6 +44,15 @@ class EzsigndocumentResponseCompound {
 
   /// The maximum date and time at which the Ezsigndocument can be signed.
   String dtEzsigndocumentDuedate;
+
+  /// The date and time at which the Ezsignform has been completed.
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? dtEzsignformCompleted;
 
   /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
   ///
@@ -127,6 +137,7 @@ class EzsigndocumentResponseCompound {
   bool operator ==(Object other) => identical(this, other) || other is EzsigndocumentResponseCompound &&
      other.fkiEzsignfolderID == fkiEzsignfolderID &&
      other.dtEzsigndocumentDuedate == dtEzsigndocumentDuedate &&
+     other.dtEzsignformCompleted == dtEzsignformCompleted &&
      other.fkiLanguageID == fkiLanguageID &&
      other.sEzsigndocumentName == sEzsigndocumentName &&
      other.pkiEzsigndocumentID == pkiEzsigndocumentID &&
@@ -152,6 +163,7 @@ class EzsigndocumentResponseCompound {
     // ignore: unnecessary_parenthesis
     (fkiEzsignfolderID.hashCode) +
     (dtEzsigndocumentDuedate.hashCode) +
+    (dtEzsignformCompleted == null ? 0 : dtEzsignformCompleted!.hashCode) +
     (fkiLanguageID.hashCode) +
     (sEzsigndocumentName.hashCode) +
     (pkiEzsigndocumentID.hashCode) +
@@ -173,21 +185,30 @@ class EzsigndocumentResponseCompound {
     (aObjEzsignfoldersignerassociationstatus.hashCode);
 
   @override
-  String toString() => 'EzsigndocumentResponseCompound[fkiEzsignfolderID=$fkiEzsignfolderID, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, fkiLanguageID=$fkiLanguageID, sEzsigndocumentName=$sEzsigndocumentName, pkiEzsigndocumentID=$pkiEzsigndocumentID, eEzsigndocumentStep=$eEzsigndocumentStep, dtEzsigndocumentFirstsend=$dtEzsigndocumentFirstsend, dtEzsigndocumentLastsend=$dtEzsigndocumentLastsend, iEzsigndocumentOrder=$iEzsigndocumentOrder, iEzsigndocumentPagetotal=$iEzsigndocumentPagetotal, iEzsigndocumentSignaturesigned=$iEzsigndocumentSignaturesigned, iEzsigndocumentSignaturetotal=$iEzsigndocumentSignaturetotal, sEzsigndocumentMD5initial=$sEzsigndocumentMD5initial, sEzsigndocumentMD5signed=$sEzsigndocumentMD5signed, bEzsigndocumentEzsignform=$bEzsigndocumentEzsignform, objAudit=$objAudit, iEzsigndocumentStepformtotal=$iEzsigndocumentStepformtotal, iEzsigndocumentStepformcurrent=$iEzsigndocumentStepformcurrent, iEzsigndocumentStepsignaturetotal=$iEzsigndocumentStepsignaturetotal, iEzsigndocumentStepsignatureCurrent=$iEzsigndocumentStepsignatureCurrent, aObjEzsignfoldersignerassociationstatus=$aObjEzsignfoldersignerassociationstatus]';
+  String toString() => 'EzsigndocumentResponseCompound[fkiEzsignfolderID=$fkiEzsignfolderID, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, dtEzsignformCompleted=$dtEzsignformCompleted, fkiLanguageID=$fkiLanguageID, sEzsigndocumentName=$sEzsigndocumentName, pkiEzsigndocumentID=$pkiEzsigndocumentID, eEzsigndocumentStep=$eEzsigndocumentStep, dtEzsigndocumentFirstsend=$dtEzsigndocumentFirstsend, dtEzsigndocumentLastsend=$dtEzsigndocumentLastsend, iEzsigndocumentOrder=$iEzsigndocumentOrder, iEzsigndocumentPagetotal=$iEzsigndocumentPagetotal, iEzsigndocumentSignaturesigned=$iEzsigndocumentSignaturesigned, iEzsigndocumentSignaturetotal=$iEzsigndocumentSignaturetotal, sEzsigndocumentMD5initial=$sEzsigndocumentMD5initial, sEzsigndocumentMD5signed=$sEzsigndocumentMD5signed, bEzsigndocumentEzsignform=$bEzsigndocumentEzsignform, objAudit=$objAudit, iEzsigndocumentStepformtotal=$iEzsigndocumentStepformtotal, iEzsigndocumentStepformcurrent=$iEzsigndocumentStepformcurrent, iEzsigndocumentStepsignaturetotal=$iEzsigndocumentStepsignaturetotal, iEzsigndocumentStepsignatureCurrent=$iEzsigndocumentStepsignatureCurrent, aObjEzsignfoldersignerassociationstatus=$aObjEzsignfoldersignerassociationstatus]';
 
   Map<String, dynamic> toJson() {
     final _json = <String, dynamic>{};
       _json[r'fkiEzsignfolderID'] = fkiEzsignfolderID;
       _json[r'dtEzsigndocumentDuedate'] = dtEzsigndocumentDuedate;
+    if (dtEzsignformCompleted != null) {
+      _json[r'dtEzsignformCompleted'] = dtEzsignformCompleted;
+    } else {
+      _json[r'dtEzsignformCompleted'] = null;
+    }
       _json[r'fkiLanguageID'] = fkiLanguageID;
       _json[r'sEzsigndocumentName'] = sEzsigndocumentName;
       _json[r'pkiEzsigndocumentID'] = pkiEzsigndocumentID;
       _json[r'eEzsigndocumentStep'] = eEzsigndocumentStep;
     if (dtEzsigndocumentFirstsend != null) {
       _json[r'dtEzsigndocumentFirstsend'] = dtEzsigndocumentFirstsend;
+    } else {
+      _json[r'dtEzsigndocumentFirstsend'] = null;
     }
     if (dtEzsigndocumentLastsend != null) {
       _json[r'dtEzsigndocumentLastsend'] = dtEzsigndocumentLastsend;
+    } else {
+      _json[r'dtEzsigndocumentLastsend'] = null;
     }
       _json[r'iEzsigndocumentOrder'] = iEzsigndocumentOrder;
       _json[r'iEzsigndocumentPagetotal'] = iEzsigndocumentPagetotal;
@@ -226,6 +247,7 @@ class EzsigndocumentResponseCompound {
       return EzsigndocumentResponseCompound(
         fkiEzsignfolderID: mapValueOfType<int>(json, r'fkiEzsignfolderID')!,
         dtEzsigndocumentDuedate: mapValueOfType<String>(json, r'dtEzsigndocumentDuedate')!,
+        dtEzsignformCompleted: mapValueOfType<String>(json, r'dtEzsignformCompleted'),
         fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID')!,
         sEzsigndocumentName: mapValueOfType<String>(json, r'sEzsigndocumentName')!,
         pkiEzsigndocumentID: mapValueOfType<int>(json, r'pkiEzsigndocumentID')!,

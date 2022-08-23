@@ -71,12 +71,18 @@ class CustomWordPositionOccurenceResponse {
     final _json = <String, dynamic>{};
     if (iPage != null) {
       _json[r'iPage'] = iPage;
+    } else {
+      _json[r'iPage'] = null;
     }
     if (iX != null) {
       _json[r'iX'] = iX;
+    } else {
+      _json[r'iX'] = null;
     }
     if (iY != null) {
       _json[r'iY'] = iY;
+    } else {
+      _json[r'iY'] = null;
     }
     return _json;
   }

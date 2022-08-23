@@ -51,9 +51,13 @@ class EzsignsignatureCreateObjectV1Request {
     final _json = <String, dynamic>{};
     if (objEzsignsignature != null) {
       _json[r'objEzsignsignature'] = objEzsignsignature;
+    } else {
+      _json[r'objEzsignsignature'] = null;
     }
     if (objEzsignsignatureCompound != null) {
       _json[r'objEzsignsignatureCompound'] = objEzsignsignatureCompound;
+    } else {
+      _json[r'objEzsignsignatureCompound'] = null;
     }
     return _json;
   }

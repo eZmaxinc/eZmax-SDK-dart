@@ -41,6 +41,8 @@ class CommonResponseErrorSTemporaryFileUrlAllOf {
     final _json = <String, dynamic>{};
     if (sTemporaryFileUrl != null) {
       _json[r'sTemporaryFileUrl'] = sTemporaryFileUrl;
+    } else {
+      _json[r'sTemporaryFileUrl'] = null;
     }
     return _json;
   }

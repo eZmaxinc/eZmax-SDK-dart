@@ -21,7 +21,7 @@ void main() {
     //
     // Get the list of Franchiseoffices to be used in a dropdown or autocomplete control.
     //
-    //Future<CommonGetAutocompleteV1Response> franchiseofficeGetAutocompleteV1(String sSelector, { String sQuery, HeaderAcceptLanguage acceptLanguage }) async
+    //Future<CommonGetAutocompleteV1Response> franchiseofficeGetAutocompleteV1(String sSelector, { String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage }) async
     test('test franchiseofficeGetAutocompleteV1', () async {
       // TODO
     });

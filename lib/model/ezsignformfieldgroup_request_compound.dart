@@ -179,6 +179,8 @@ class EzsignformfieldgroupRequestCompound {
     final _json = <String, dynamic>{};
     if (pkiEzsignformfieldgroupID != null) {
       _json[r'pkiEzsignformfieldgroupID'] = pkiEzsignformfieldgroupID;
+    } else {
+      _json[r'pkiEzsignformfieldgroupID'] = null;
     }
       _json[r'fkiEzsigndocumentID'] = fkiEzsigndocumentID;
       _json[r'eEzsignformfieldgroupType'] = eEzsignformfieldgroupType;
@@ -191,18 +193,28 @@ class EzsignformfieldgroupRequestCompound {
       _json[r'bEzsignformfieldgroupReadonly'] = bEzsignformfieldgroupReadonly;
     if (iEzsignformfieldgroupMaxlength != null) {
       _json[r'iEzsignformfieldgroupMaxlength'] = iEzsignformfieldgroupMaxlength;
+    } else {
+      _json[r'iEzsignformfieldgroupMaxlength'] = null;
     }
     if (bEzsignformfieldgroupEncrypted != null) {
       _json[r'bEzsignformfieldgroupEncrypted'] = bEzsignformfieldgroupEncrypted;
+    } else {
+      _json[r'bEzsignformfieldgroupEncrypted'] = null;
     }
     if (sEzsignformfieldgroupRegexp != null) {
       _json[r'sEzsignformfieldgroupRegexp'] = sEzsignformfieldgroupRegexp;
+    } else {
+      _json[r'sEzsignformfieldgroupRegexp'] = null;
     }
     if (tEzsignformfieldgroupTooltip != null) {
       _json[r'tEzsignformfieldgroupTooltip'] = tEzsignformfieldgroupTooltip;
+    } else {
+      _json[r'tEzsignformfieldgroupTooltip'] = null;
     }
     if (eEzsignformfieldgroupTooltipposition != null) {
       _json[r'eEzsignformfieldgroupTooltipposition'] = eEzsignformfieldgroupTooltipposition;
+    } else {
+      _json[r'eEzsignformfieldgroupTooltipposition'] = null;
     }
       _json[r'a_objEzsignformfieldgroupsigner'] = aObjEzsignformfieldgroupsigner;
       _json[r'a_objDropdownElement'] = aObjDropdownElement;

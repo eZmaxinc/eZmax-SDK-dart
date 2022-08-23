@@ -18,9 +18,10 @@ class CustomAutocompleteElementDisabledResponse {
     required this.sLabel,
     required this.sValue,
     this.mValue,
+    required this.bActive,
   });
 
-  /// 
+  /// Indicates if the element is disabled in the context
   bool bDisabled;
 
   /// The Category for the dropdown or an empty string if not categorized
@@ -41,13 +42,17 @@ class CustomAutocompleteElementDisabledResponse {
   ///
   String? mValue;
 
+  /// Indicates if the element is active
+  bool bActive;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomAutocompleteElementDisabledResponse &&
      other.bDisabled == bDisabled &&
      other.sCategory == sCategory &&
      other.sLabel == sLabel &&
      other.sValue == sValue &&
-     other.mValue == mValue;
+     other.mValue == mValue &&
+     other.bActive == bActive;
 
   @override
   int get hashCode =>
@@ -56,10 +61,11 @@ class CustomAutocompleteElementDisabledResponse {
     (sCategory.hashCode) +
     (sLabel.hashCode) +
     (sValue.hashCode) +
-    (mValue == null ? 0 : mValue!.hashCode);
+    (mValue == null ? 0 : mValue!.hashCode) +
+    (bActive.hashCode);
 
   @override
-  String toString() => 'CustomAutocompleteElementDisabledResponse[bDisabled=$bDisabled, sCategory=$sCategory, sLabel=$sLabel, sValue=$sValue, mValue=$mValue]';
+  String toString() => 'CustomAutocompleteElementDisabledResponse[bDisabled=$bDisabled, sCategory=$sCategory, sLabel=$sLabel, sValue=$sValue, mValue=$mValue, bActive=$bActive]';
 
   Map<String, dynamic> toJson() {
     final _json = <String, dynamic>{};
@@ -69,7 +75,10 @@ class CustomAutocompleteElementDisabledResponse {
       _json[r'sValue'] = sValue;
     if (mValue != null) {
       _json[r'mValue'] = mValue;
+    } else {
+      _json[r'mValue'] = null;
     }
+      _json[r'bActive'] = bActive;
     return _json;
   }
 
@@ -97,6 +106,7 @@ class CustomAutocompleteElementDisabledResponse {
         sLabel: mapValueOfType<String>(json, r'sLabel')!,
         sValue: mapValueOfType<String>(json, r'sValue')!,
         mValue: mapValueOfType<String>(json, r'mValue'),
+        bActive: mapValueOfType<bool>(json, r'bActive')!,
       );
     }
     return null;
@@ -150,6 +160,7 @@ class CustomAutocompleteElementDisabledResponse {
     'sCategory',
     'sLabel',
     'sValue',
+    'bActive',
   };
 }
 

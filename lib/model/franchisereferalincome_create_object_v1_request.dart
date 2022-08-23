@@ -51,9 +51,13 @@ class FranchisereferalincomeCreateObjectV1Request {
     final _json = <String, dynamic>{};
     if (objFranchisereferalincome != null) {
       _json[r'objFranchisereferalincome'] = objFranchisereferalincome;
+    } else {
+      _json[r'objFranchisereferalincome'] = null;
     }
     if (objFranchisereferalincomeCompound != null) {
       _json[r'objFranchisereferalincomeCompound'] = objFranchisereferalincomeCompound;
+    } else {
+      _json[r'objFranchisereferalincomeCompound'] = null;
     }
     return _json;
   }

@@ -40,12 +40,6 @@ void main() {
       // TODO
     });
 
-    // Whether the Ezsigntemplatepackage is active or not
-    // bool bEzsigntemplatepackageIsactive
-    test('to test the property `bEzsigntemplatepackageIsactive`', () async {
-      // TODO
-    });
-
     // Whether the Ezsignbulksend was automatically modified and needs a manual validation
     // bool bEzsigntemplatepackageNeedvalidation
     test('to test the property `bEzsigntemplatepackageNeedvalidation`', () async {
@@ -61,6 +55,12 @@ void main() {
     // The name of the Ezsignfoldertype in the language of the requester
     // String sEzsignfoldertypeNameX
     test('to test the property `sEzsignfoldertypeNameX`', () async {
+      // TODO
+    });
+
+    // Whether the Ezsigntemplatepackage is active or not
+    // bool bEzsigntemplatepackageIsactive
+    test('to test the property `bEzsigntemplatepackageIsactive`', () async {
       // TODO
     });
 

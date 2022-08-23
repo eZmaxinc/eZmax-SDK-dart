@@ -51,9 +51,13 @@ class EzsignfolderCreateObjectV1Request {
     final _json = <String, dynamic>{};
     if (objEzsignfolder != null) {
       _json[r'objEzsignfolder'] = objEzsignfolder;
+    } else {
+      _json[r'objEzsignfolder'] = null;
     }
     if (objEzsignfolderCompound != null) {
       _json[r'objEzsignfolderCompound'] = objEzsignfolderCompound;
+    } else {
+      _json[r'objEzsignfolderCompound'] = null;
     }
     return _json;
   }

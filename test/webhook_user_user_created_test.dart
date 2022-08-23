@@ -21,7 +21,7 @@ void main() {
       // TODO
     });
 
-    // WebhookResponse objWebhook
+    // CustomWebhookResponse objWebhook
     test('to test the property `objWebhook`', () async {
       // TODO
     });

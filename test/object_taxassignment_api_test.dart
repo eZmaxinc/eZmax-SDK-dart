@@ -21,7 +21,7 @@ void main() {
     //
     // Get the list of Taxassignment to be used in a dropdown or autocomplete control.
     //
-    //Future<CommonGetAutocompleteV1Response> taxassignmentGetAutocompleteV1(String sSelector, { String sQuery, HeaderAcceptLanguage acceptLanguage }) async
+    //Future<CommonGetAutocompleteV1Response> taxassignmentGetAutocompleteV1(String sSelector, { String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage }) async
     test('test taxassignmentGetAutocompleteV1', () async {
       // TODO
     });

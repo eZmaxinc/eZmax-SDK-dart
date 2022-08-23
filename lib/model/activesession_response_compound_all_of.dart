@@ -70,9 +70,13 @@ class ActivesessionResponseCompoundAllOf {
       _json[r'objUserReal'] = objUserReal;
     if (objUserCloned != null) {
       _json[r'objUserCloned'] = objUserCloned;
+    } else {
+      _json[r'objUserCloned'] = null;
     }
     if (objApikey != null) {
       _json[r'objApikey'] = objApikey;
+    } else {
+      _json[r'objApikey'] = null;
     }
       _json[r'a_eModuleInternalname'] = aEModuleInternalname;
     return _json;

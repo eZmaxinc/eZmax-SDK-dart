@@ -40,6 +40,12 @@ void main() {
       // TODO
     });
 
+    // A custom text message that will be added to the email sent.
+    // String tEzsignfoldersignerassociationMessage
+    test('to test the property `tEzsignfoldersignerassociationMessage`', () async {
+      // TODO
+    });
+
 
   });
 

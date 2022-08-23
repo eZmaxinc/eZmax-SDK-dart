@@ -16,7 +16,7 @@ class EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload {
     this.aObjEzsignfoldersignerassociation = const [],
   });
 
-  List<EzsignfoldersignerassociationResponseCompound> aObjEzsignfoldersignerassociation;
+  List<CustomEzsignfoldersignerassociationActionableElementResponse> aObjEzsignfoldersignerassociation;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload &&
@@ -55,7 +55,7 @@ class EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload {
       }());
 
       return EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload(
-        aObjEzsignfoldersignerassociation: EzsignfoldersignerassociationResponseCompound.listFromJson(json[r'a_objEzsignfoldersignerassociation'])!,
+        aObjEzsignfoldersignerassociation: CustomEzsignfoldersignerassociationActionableElementResponse.listFromJson(json[r'a_objEzsignfoldersignerassociation'])!,
       );
     }
     return null;

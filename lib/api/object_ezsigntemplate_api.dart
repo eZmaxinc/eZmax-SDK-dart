@@ -201,11 +201,14 @@ class ObjectEzsigntemplateApi {
   /// * [String] sSelector (required):
   ///   The type of Ezsigntemplate to return
   ///
+  /// * [String] eFilterActive:
+  ///   Specify which results we want to display.
+  ///
   /// * [String] sQuery:
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<Response> ezsigntemplateGetAutocompleteV1WithHttpInfo(String sSelector, { String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
+  Future<Response> ezsigntemplateGetAutocompleteV1WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsigntemplate/getAutocomplete/{sSelector}'
       .replaceAll('{sSelector}', sSelector);
@@ -217,6 +220,9 @@ class ObjectEzsigntemplateApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
+    if (eFilterActive != null) {
+      queryParams.addAll(_queryParams('', 'eFilterActive', eFilterActive));
+    }
     if (sQuery != null) {
       queryParams.addAll(_queryParams('', 'sQuery', sQuery));
     }
@@ -248,12 +254,15 @@ class ObjectEzsigntemplateApi {
   /// * [String] sSelector (required):
   ///   The type of Ezsigntemplate to return
   ///
+  /// * [String] eFilterActive:
+  ///   Specify which results we want to display.
+  ///
   /// * [String] sQuery:
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<CommonGetAutocompleteV1Response?> ezsigntemplateGetAutocompleteV1(String sSelector, { String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
-    final response = await ezsigntemplateGetAutocompleteV1WithHttpInfo(sSelector,  sQuery: sQuery, acceptLanguage: acceptLanguage, );
+  Future<CommonGetAutocompleteV1Response?> ezsigntemplateGetAutocompleteV1(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
+    final response = await ezsigntemplateGetAutocompleteV1WithHttpInfo(sSelector,  eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

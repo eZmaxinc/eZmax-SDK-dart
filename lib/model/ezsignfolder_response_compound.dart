@@ -30,6 +30,7 @@ class EzsignfolderResponseCompound {
     this.dtEzsignfolderScheduleddispose,
     required this.eEzsignfolderStep,
     this.dtEzsignfolderClose,
+    required this.tEzsignfolderMessage,
     required this.objAudit,
   });
 
@@ -121,6 +122,9 @@ class EzsignfolderResponseCompound {
   ///
   String? dtEzsignfolderClose;
 
+  /// A custom text message that will be added to the email sent.
+  String tEzsignfolderMessage;
+
   CommonAudit objAudit;
 
   @override
@@ -142,6 +146,7 @@ class EzsignfolderResponseCompound {
      other.dtEzsignfolderScheduleddispose == dtEzsignfolderScheduleddispose &&
      other.eEzsignfolderStep == eEzsignfolderStep &&
      other.dtEzsignfolderClose == dtEzsignfolderClose &&
+     other.tEzsignfolderMessage == tEzsignfolderMessage &&
      other.objAudit == objAudit;
 
   @override
@@ -164,10 +169,11 @@ class EzsignfolderResponseCompound {
     (dtEzsignfolderScheduleddispose == null ? 0 : dtEzsignfolderScheduleddispose!.hashCode) +
     (eEzsignfolderStep.hashCode) +
     (dtEzsignfolderClose == null ? 0 : dtEzsignfolderClose!.hashCode) +
+    (tEzsignfolderMessage.hashCode) +
     (objAudit.hashCode);
 
   @override
-  String toString() => 'EzsignfolderResponseCompound[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, fkiBillingentityinternalID=$fkiBillingentityinternalID, sBillingentityinternalDescriptionX=$sBillingentityinternalDescriptionX, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sEzsigntsarequirementDescriptionX=$sEzsigntsarequirementDescriptionX, sEzsignfolderDescription=$sEzsignfolderDescription, tEzsignfolderNote=$tEzsignfolderNote, bEzsignfolderIsdisposable=$bEzsignfolderIsdisposable, eEzsignfolderSendreminderfrequency=$eEzsignfolderSendreminderfrequency, dtEzsignfolderDuedate=$dtEzsignfolderDuedate, dtEzsignfolderSentdate=$dtEzsignfolderSentdate, dtEzsignfolderScheduledarchive=$dtEzsignfolderScheduledarchive, dtEzsignfolderScheduleddispose=$dtEzsignfolderScheduleddispose, eEzsignfolderStep=$eEzsignfolderStep, dtEzsignfolderClose=$dtEzsignfolderClose, objAudit=$objAudit]';
+  String toString() => 'EzsignfolderResponseCompound[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, fkiBillingentityinternalID=$fkiBillingentityinternalID, sBillingentityinternalDescriptionX=$sBillingentityinternalDescriptionX, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sEzsigntsarequirementDescriptionX=$sEzsigntsarequirementDescriptionX, sEzsignfolderDescription=$sEzsignfolderDescription, tEzsignfolderNote=$tEzsignfolderNote, bEzsignfolderIsdisposable=$bEzsignfolderIsdisposable, eEzsignfolderSendreminderfrequency=$eEzsignfolderSendreminderfrequency, dtEzsignfolderDuedate=$dtEzsignfolderDuedate, dtEzsignfolderSentdate=$dtEzsignfolderSentdate, dtEzsignfolderScheduledarchive=$dtEzsignfolderScheduledarchive, dtEzsignfolderScheduleddispose=$dtEzsignfolderScheduleddispose, eEzsignfolderStep=$eEzsignfolderStep, dtEzsignfolderClose=$dtEzsignfolderClose, tEzsignfolderMessage=$tEzsignfolderMessage, objAudit=$objAudit]';
 
   Map<String, dynamic> toJson() {
     final _json = <String, dynamic>{};
@@ -184,20 +190,31 @@ class EzsignfolderResponseCompound {
       _json[r'eEzsignfolderSendreminderfrequency'] = eEzsignfolderSendreminderfrequency;
     if (dtEzsignfolderDuedate != null) {
       _json[r'dtEzsignfolderDuedate'] = dtEzsignfolderDuedate;
+    } else {
+      _json[r'dtEzsignfolderDuedate'] = null;
     }
     if (dtEzsignfolderSentdate != null) {
       _json[r'dtEzsignfolderSentdate'] = dtEzsignfolderSentdate;
+    } else {
+      _json[r'dtEzsignfolderSentdate'] = null;
     }
     if (dtEzsignfolderScheduledarchive != null) {
       _json[r'dtEzsignfolderScheduledarchive'] = dtEzsignfolderScheduledarchive;
+    } else {
+      _json[r'dtEzsignfolderScheduledarchive'] = null;
     }
     if (dtEzsignfolderScheduleddispose != null) {
       _json[r'dtEzsignfolderScheduleddispose'] = dtEzsignfolderScheduleddispose;
+    } else {
+      _json[r'dtEzsignfolderScheduleddispose'] = null;
     }
       _json[r'eEzsignfolderStep'] = eEzsignfolderStep;
     if (dtEzsignfolderClose != null) {
       _json[r'dtEzsignfolderClose'] = dtEzsignfolderClose;
+    } else {
+      _json[r'dtEzsignfolderClose'] = null;
     }
+      _json[r'tEzsignfolderMessage'] = tEzsignfolderMessage;
       _json[r'objAudit'] = objAudit;
     return _json;
   }
@@ -238,6 +255,7 @@ class EzsignfolderResponseCompound {
         dtEzsignfolderScheduleddispose: mapValueOfType<String>(json, r'dtEzsignfolderScheduleddispose'),
         eEzsignfolderStep: FieldEEzsignfolderStep.fromJson(json[r'eEzsignfolderStep'])!,
         dtEzsignfolderClose: mapValueOfType<String>(json, r'dtEzsignfolderClose'),
+        tEzsignfolderMessage: mapValueOfType<String>(json, r'tEzsignfolderMessage')!,
         objAudit: CommonAudit.fromJson(json[r'objAudit'])!,
       );
     }
@@ -300,6 +318,7 @@ class EzsignfolderResponseCompound {
     'bEzsignfolderIsdisposable',
     'eEzsignfolderSendreminderfrequency',
     'eEzsignfolderStep',
+    'tEzsignfolderMessage',
     'objAudit',
   };
 }

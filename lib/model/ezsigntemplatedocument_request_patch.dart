@@ -41,6 +41,8 @@ class EzsigntemplatedocumentRequestPatch {
     final _json = <String, dynamic>{};
     if (sEzsigntemplatedocumentName != null) {
       _json[r'sEzsigntemplatedocumentName'] = sEzsigntemplatedocumentName;
+    } else {
+      _json[r'sEzsigntemplatedocumentName'] = null;
     }
     return _json;
   }

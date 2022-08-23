@@ -53,9 +53,13 @@ class MultilingualApikeyDescription {
     final _json = <String, dynamic>{};
     if (sApikeyDescription1 != null) {
       _json[r'sApikeyDescription1'] = sApikeyDescription1;
+    } else {
+      _json[r'sApikeyDescription1'] = null;
     }
     if (sApikeyDescription2 != null) {
       _json[r'sApikeyDescription2'] = sApikeyDescription2;
+    } else {
+      _json[r'sApikeyDescription2'] = null;
     }
     return _json;
   }

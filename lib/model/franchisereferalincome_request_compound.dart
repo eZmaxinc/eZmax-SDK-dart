@@ -127,6 +127,8 @@ class FranchisereferalincomeRequestCompound {
     final _json = <String, dynamic>{};
     if (pkiFranchisereferalincomeID != null) {
       _json[r'pkiFranchisereferalincomeID'] = pkiFranchisereferalincomeID;
+    } else {
+      _json[r'pkiFranchisereferalincomeID'] = null;
     }
       _json[r'fkiFranchisebrokerID'] = fkiFranchisebrokerID;
       _json[r'fkiFranchisereferalincomeprogramID'] = fkiFranchisereferalincomeprogramID;

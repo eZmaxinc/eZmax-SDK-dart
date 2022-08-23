@@ -104,18 +104,28 @@ class PhoneRequest {
       _json[r'ePhoneType'] = ePhoneType;
     if (sPhoneRegion != null) {
       _json[r'sPhoneRegion'] = sPhoneRegion;
+    } else {
+      _json[r'sPhoneRegion'] = null;
     }
     if (sPhoneExchange != null) {
       _json[r'sPhoneExchange'] = sPhoneExchange;
+    } else {
+      _json[r'sPhoneExchange'] = null;
     }
     if (sPhoneNumber != null) {
       _json[r'sPhoneNumber'] = sPhoneNumber;
+    } else {
+      _json[r'sPhoneNumber'] = null;
     }
     if (sPhoneInternational != null) {
       _json[r'sPhoneInternational'] = sPhoneInternational;
+    } else {
+      _json[r'sPhoneInternational'] = null;
     }
     if (sPhoneExtension != null) {
       _json[r'sPhoneExtension'] = sPhoneExtension;
+    } else {
+      _json[r'sPhoneExtension'] = null;
     }
     return _json;
   }

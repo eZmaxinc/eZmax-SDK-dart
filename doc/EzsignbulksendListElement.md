@@ -13,12 +13,12 @@ Name | Type | Description | Notes
 **sEzsignbulksendDescription** | **String** | The description of the Ezsignbulksend | 
 **sEzsignfoldertypeNameX** | **String** | The name of the Ezsignfoldertype in the language of the requester | 
 **bEzsignbulksendNeedvalidation** | **bool** | Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation | 
-**bEzsignbulksendIsactive** | **bool** | Whether the Ezsignbulksend is active or not | 
 **iEzsignbulksendtransmission** | **int** | The total number of Ezsignbulksendtransmissions in the Ezsignbulksend | 
 **iEzsignfolder** | **int** | The total number of Ezsignfolders in the Ezsignbulksend | 
 **iEzsigndocument** | **int** | The total number of Ezsigndocuments in the Ezsignbulksend | 
 **iEzsignsignature** | **int** | The total number of Ezsignsignature in the Ezsignbulksend | 
 **iEzsignsignatureSigned** | **int** | The total number of already signed Ezsignsignature blocks in the Ezsignbulksend | 
+**bEzsignbulksendIsactive** | **bool** | Whether the Ezsignbulksend is active or not | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

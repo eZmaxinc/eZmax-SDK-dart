@@ -116,6 +116,12 @@ void main() {
       // TODO
     });
 
+    // A custom text message that will be added to the email sent.
+    // String tEzsignfolderMessage
+    test('to test the property `tEzsignfolderMessage`', () async {
+      // TODO
+    });
+
     // CommonAudit objAudit
     test('to test the property `objAudit`', () async {
       // TODO

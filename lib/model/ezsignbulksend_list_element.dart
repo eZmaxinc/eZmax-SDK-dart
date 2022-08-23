@@ -18,12 +18,12 @@ class EzsignbulksendListElement {
     required this.sEzsignbulksendDescription,
     required this.sEzsignfoldertypeNameX,
     required this.bEzsignbulksendNeedvalidation,
-    required this.bEzsignbulksendIsactive,
     required this.iEzsignbulksendtransmission,
     required this.iEzsignfolder,
     required this.iEzsigndocument,
     required this.iEzsignsignature,
     required this.iEzsignsignatureSigned,
+    required this.bEzsignbulksendIsactive,
   });
 
   /// The unique ID of the Ezsignbulksend
@@ -45,9 +45,6 @@ class EzsignbulksendListElement {
   /// Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation
   bool bEzsignbulksendNeedvalidation;
 
-  /// Whether the Ezsignbulksend is active or not
-  bool bEzsignbulksendIsactive;
-
   /// The total number of Ezsignbulksendtransmissions in the Ezsignbulksend
   int iEzsignbulksendtransmission;
 
@@ -63,6 +60,9 @@ class EzsignbulksendListElement {
   /// The total number of already signed Ezsignsignature blocks in the Ezsignbulksend
   int iEzsignsignatureSigned;
 
+  /// Whether the Ezsignbulksend is active or not
+  bool bEzsignbulksendIsactive;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignbulksendListElement &&
      other.pkiEzsignbulksendID == pkiEzsignbulksendID &&
@@ -70,12 +70,12 @@ class EzsignbulksendListElement {
      other.sEzsignbulksendDescription == sEzsignbulksendDescription &&
      other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
      other.bEzsignbulksendNeedvalidation == bEzsignbulksendNeedvalidation &&
-     other.bEzsignbulksendIsactive == bEzsignbulksendIsactive &&
      other.iEzsignbulksendtransmission == iEzsignbulksendtransmission &&
      other.iEzsignfolder == iEzsignfolder &&
      other.iEzsigndocument == iEzsigndocument &&
      other.iEzsignsignature == iEzsignsignature &&
-     other.iEzsignsignatureSigned == iEzsignsignatureSigned;
+     other.iEzsignsignatureSigned == iEzsignsignatureSigned &&
+     other.bEzsignbulksendIsactive == bEzsignbulksendIsactive;
 
   @override
   int get hashCode =>
@@ -85,15 +85,15 @@ class EzsignbulksendListElement {
     (sEzsignbulksendDescription.hashCode) +
     (sEzsignfoldertypeNameX.hashCode) +
     (bEzsignbulksendNeedvalidation.hashCode) +
-    (bEzsignbulksendIsactive.hashCode) +
     (iEzsignbulksendtransmission.hashCode) +
     (iEzsignfolder.hashCode) +
     (iEzsigndocument.hashCode) +
     (iEzsignsignature.hashCode) +
-    (iEzsignsignatureSigned.hashCode);
+    (iEzsignsignatureSigned.hashCode) +
+    (bEzsignbulksendIsactive.hashCode);
 
   @override
-  String toString() => 'EzsignbulksendListElement[pkiEzsignbulksendID=$pkiEzsignbulksendID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignbulksendDescription=$sEzsignbulksendDescription, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, bEzsignbulksendNeedvalidation=$bEzsignbulksendNeedvalidation, bEzsignbulksendIsactive=$bEzsignbulksendIsactive, iEzsignbulksendtransmission=$iEzsignbulksendtransmission, iEzsignfolder=$iEzsignfolder, iEzsigndocument=$iEzsigndocument, iEzsignsignature=$iEzsignsignature, iEzsignsignatureSigned=$iEzsignsignatureSigned]';
+  String toString() => 'EzsignbulksendListElement[pkiEzsignbulksendID=$pkiEzsignbulksendID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignbulksendDescription=$sEzsignbulksendDescription, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, bEzsignbulksendNeedvalidation=$bEzsignbulksendNeedvalidation, iEzsignbulksendtransmission=$iEzsignbulksendtransmission, iEzsignfolder=$iEzsignfolder, iEzsigndocument=$iEzsigndocument, iEzsignsignature=$iEzsignsignature, iEzsignsignatureSigned=$iEzsignsignatureSigned, bEzsignbulksendIsactive=$bEzsignbulksendIsactive]';
 
   Map<String, dynamic> toJson() {
     final _json = <String, dynamic>{};
@@ -102,12 +102,12 @@ class EzsignbulksendListElement {
       _json[r'sEzsignbulksendDescription'] = sEzsignbulksendDescription;
       _json[r'sEzsignfoldertypeNameX'] = sEzsignfoldertypeNameX;
       _json[r'bEzsignbulksendNeedvalidation'] = bEzsignbulksendNeedvalidation;
-      _json[r'bEzsignbulksendIsactive'] = bEzsignbulksendIsactive;
       _json[r'iEzsignbulksendtransmission'] = iEzsignbulksendtransmission;
       _json[r'iEzsignfolder'] = iEzsignfolder;
       _json[r'iEzsigndocument'] = iEzsigndocument;
       _json[r'iEzsignsignature'] = iEzsignsignature;
       _json[r'iEzsignsignatureSigned'] = iEzsignsignatureSigned;
+      _json[r'bEzsignbulksendIsactive'] = bEzsignbulksendIsactive;
     return _json;
   }
 
@@ -135,12 +135,12 @@ class EzsignbulksendListElement {
         sEzsignbulksendDescription: mapValueOfType<String>(json, r'sEzsignbulksendDescription')!,
         sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX')!,
         bEzsignbulksendNeedvalidation: mapValueOfType<bool>(json, r'bEzsignbulksendNeedvalidation')!,
-        bEzsignbulksendIsactive: mapValueOfType<bool>(json, r'bEzsignbulksendIsactive')!,
         iEzsignbulksendtransmission: mapValueOfType<int>(json, r'iEzsignbulksendtransmission')!,
         iEzsignfolder: mapValueOfType<int>(json, r'iEzsignfolder')!,
         iEzsigndocument: mapValueOfType<int>(json, r'iEzsigndocument')!,
         iEzsignsignature: mapValueOfType<int>(json, r'iEzsignsignature')!,
         iEzsignsignatureSigned: mapValueOfType<int>(json, r'iEzsignsignatureSigned')!,
+        bEzsignbulksendIsactive: mapValueOfType<bool>(json, r'bEzsignbulksendIsactive')!,
       );
     }
     return null;
@@ -195,12 +195,12 @@ class EzsignbulksendListElement {
     'sEzsignbulksendDescription',
     'sEzsignfoldertypeNameX',
     'bEzsignbulksendNeedvalidation',
-    'bEzsignbulksendIsactive',
     'iEzsignbulksendtransmission',
     'iEzsignfolder',
     'iEzsigndocument',
     'iEzsignsignature',
     'iEzsignsignatureSigned',
+    'bEzsignbulksendIsactive',
   };
 }
 

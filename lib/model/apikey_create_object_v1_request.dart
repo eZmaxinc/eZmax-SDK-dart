@@ -51,9 +51,13 @@ class ApikeyCreateObjectV1Request {
     final _json = <String, dynamic>{};
     if (objApikey != null) {
       _json[r'objApikey'] = objApikey;
+    } else {
+      _json[r'objApikey'] = null;
     }
     if (objApikeyCompound != null) {
       _json[r'objApikeyCompound'] = objApikeyCompound;
+    } else {
+      _json[r'objApikeyCompound'] = null;
     }
     return _json;
   }

@@ -81,6 +81,8 @@ class EzsignsignerResponseCompound {
       _json[r'fkiTaxassignmentID'] = fkiTaxassignmentID;
     if (fkiSecretquestionID != null) {
       _json[r'fkiSecretquestionID'] = fkiSecretquestionID;
+    } else {
+      _json[r'fkiSecretquestionID'] = null;
     }
       _json[r'fkiUserlogintypeID'] = fkiUserlogintypeID;
       _json[r'sUserlogintypeDescriptionX'] = sUserlogintypeDescriptionX;

@@ -110,15 +110,23 @@ class EzsignsignerResponseCompoundContact {
       _json[r'fkiLanguageID'] = fkiLanguageID;
     if (sEmailAddress != null) {
       _json[r'sEmailAddress'] = sEmailAddress;
+    } else {
+      _json[r'sEmailAddress'] = null;
     }
     if (sPhoneE164 != null) {
       _json[r'sPhoneE164'] = sPhoneE164;
+    } else {
+      _json[r'sPhoneE164'] = null;
     }
     if (sPhoneExtension != null) {
       _json[r'sPhoneExtension'] = sPhoneExtension;
+    } else {
+      _json[r'sPhoneExtension'] = null;
     }
     if (sPhoneE164Cell != null) {
       _json[r'sPhoneE164Cell'] = sPhoneE164Cell;
+    } else {
+      _json[r'sPhoneE164Cell'] = null;
     }
     return _json;
   }

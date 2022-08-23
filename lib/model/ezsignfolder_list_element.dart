@@ -128,9 +128,13 @@ class EzsignfolderListElement {
       _json[r'dtCreatedDate'] = dtCreatedDate;
     if (dtEzsignfolderSentdate != null) {
       _json[r'dtEzsignfolderSentdate'] = dtEzsignfolderSentdate;
+    } else {
+      _json[r'dtEzsignfolderSentdate'] = null;
     }
     if (dtEzsignfolderDuedate != null) {
       _json[r'dtEzsignfolderDuedate'] = dtEzsignfolderDuedate;
+    } else {
+      _json[r'dtEzsignfolderDuedate'] = null;
     }
       _json[r'iEzsigndocument'] = iEzsigndocument;
       _json[r'iEzsigndocumentEdm'] = iEzsigndocumentEdm;

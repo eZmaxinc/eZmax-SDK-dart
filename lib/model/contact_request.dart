@@ -81,6 +81,8 @@ class ContactRequest {
       _json[r'sContactCompany'] = sContactCompany;
     if (dtContactBirthdate != null) {
       _json[r'dtContactBirthdate'] = dtContactBirthdate;
+    } else {
+      _json[r'dtContactBirthdate'] = null;
     }
     return _json;
   }

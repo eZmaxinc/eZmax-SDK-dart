@@ -47,6 +47,8 @@ class EzsigntemplatesignatureRequestCompoundAllOf {
     final _json = <String, dynamic>{};
     if (bEzsigntemplatesignatureCustomdate != null) {
       _json[r'bEzsigntemplatesignatureCustomdate'] = bEzsigntemplatesignatureCustomdate;
+    } else {
+      _json[r'bEzsigntemplatesignatureCustomdate'] = null;
     }
       _json[r'a_objEzsigntemplatesignaturecustomdate'] = aObjEzsigntemplatesignaturecustomdate;
     return _json;

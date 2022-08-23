@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **periodGetAutocompleteV1**
-> CommonGetAutocompleteV1Response periodGetAutocompleteV1(sSelector, sQuery, acceptLanguage)
+> CommonGetAutocompleteV1Response periodGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
 
 Retrieve Periods and IDs
 
@@ -29,11 +29,12 @@ import 'package:openapi/api.dart';
 
 final api_instance = ObjectPeriodApi();
 final sSelector = sSelector_example; // String | The types of Periods to return
+final eFilterActive = eFilterActive_example; // String | Specify which results we want to display.
 final sQuery = sQuery_example; // String | Allow to filter the returned results
 final acceptLanguage = ; // HeaderAcceptLanguage | 
 
 try {
-    final result = api_instance.periodGetAutocompleteV1(sSelector, sQuery, acceptLanguage);
+    final result = api_instance.periodGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage);
     print(result);
 } catch (e) {
     print('Exception when calling ObjectPeriodApi->periodGetAutocompleteV1: $e\n');
@@ -45,6 +46,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **String**| The types of Periods to return | 
+ **eFilterActive** | **String**| Specify which results we want to display. | [optional] [default to 'Active']
  **sQuery** | **String**| Allow to filter the returned results | [optional] 
  **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] 
 

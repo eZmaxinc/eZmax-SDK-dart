@@ -16,7 +16,7 @@ void main() {
   // final instance = CustomAutocompleteElementDisabledResponse();
 
   group('test CustomAutocompleteElementDisabledResponse', () {
-    // 
+    // Indicates if the element is disabled in the context
     // bool bDisabled
     test('to test the property `bDisabled`', () async {
       // TODO
@@ -43,6 +43,12 @@ void main() {
     // The Unique ID of the element
     // String mValue
     test('to test the property `mValue`', () async {
+      // TODO
+    });
+
+    // Indicates if the element is active
+    // bool bActive
+    test('to test the property `bActive`', () async {
       // TODO
     });
 

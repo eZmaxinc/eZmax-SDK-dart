@@ -17,6 +17,7 @@ class EzsignfoldersignerassociationRequest {
     this.fkiUserID,
     required this.fkiEzsignfolderID,
     this.bEzsignfoldersignerassociationReceivecopy,
+    this.tEzsignfoldersignerassociationMessage,
   });
 
   /// The unique ID of the Ezsignfoldersignerassociation
@@ -55,12 +56,22 @@ class EzsignfoldersignerassociationRequest {
   ///
   bool? bEzsignfoldersignerassociationReceivecopy;
 
+  /// A custom text message that will be added to the email sent.
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? tEzsignfoldersignerassociationMessage;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfoldersignerassociationRequest &&
      other.pkiEzsignfoldersignerassociationID == pkiEzsignfoldersignerassociationID &&
      other.fkiUserID == fkiUserID &&
      other.fkiEzsignfolderID == fkiEzsignfolderID &&
-     other.bEzsignfoldersignerassociationReceivecopy == bEzsignfoldersignerassociationReceivecopy;
+     other.bEzsignfoldersignerassociationReceivecopy == bEzsignfoldersignerassociationReceivecopy &&
+     other.tEzsignfoldersignerassociationMessage == tEzsignfoldersignerassociationMessage;
 
   @override
   int get hashCode =>
@@ -68,22 +79,34 @@ class EzsignfoldersignerassociationRequest {
     (pkiEzsignfoldersignerassociationID == null ? 0 : pkiEzsignfoldersignerassociationID!.hashCode) +
     (fkiUserID == null ? 0 : fkiUserID!.hashCode) +
     (fkiEzsignfolderID.hashCode) +
-    (bEzsignfoldersignerassociationReceivecopy == null ? 0 : bEzsignfoldersignerassociationReceivecopy!.hashCode);
+    (bEzsignfoldersignerassociationReceivecopy == null ? 0 : bEzsignfoldersignerassociationReceivecopy!.hashCode) +
+    (tEzsignfoldersignerassociationMessage == null ? 0 : tEzsignfoldersignerassociationMessage!.hashCode);
 
   @override
-  String toString() => 'EzsignfoldersignerassociationRequest[pkiEzsignfoldersignerassociationID=$pkiEzsignfoldersignerassociationID, fkiUserID=$fkiUserID, fkiEzsignfolderID=$fkiEzsignfolderID, bEzsignfoldersignerassociationReceivecopy=$bEzsignfoldersignerassociationReceivecopy]';
+  String toString() => 'EzsignfoldersignerassociationRequest[pkiEzsignfoldersignerassociationID=$pkiEzsignfoldersignerassociationID, fkiUserID=$fkiUserID, fkiEzsignfolderID=$fkiEzsignfolderID, bEzsignfoldersignerassociationReceivecopy=$bEzsignfoldersignerassociationReceivecopy, tEzsignfoldersignerassociationMessage=$tEzsignfoldersignerassociationMessage]';
 
   Map<String, dynamic> toJson() {
     final _json = <String, dynamic>{};
     if (pkiEzsignfoldersignerassociationID != null) {
       _json[r'pkiEzsignfoldersignerassociationID'] = pkiEzsignfoldersignerassociationID;
+    } else {
+      _json[r'pkiEzsignfoldersignerassociationID'] = null;
     }
     if (fkiUserID != null) {
       _json[r'fkiUserID'] = fkiUserID;
+    } else {
+      _json[r'fkiUserID'] = null;
     }
       _json[r'fkiEzsignfolderID'] = fkiEzsignfolderID;
     if (bEzsignfoldersignerassociationReceivecopy != null) {
       _json[r'bEzsignfoldersignerassociationReceivecopy'] = bEzsignfoldersignerassociationReceivecopy;
+    } else {
+      _json[r'bEzsignfoldersignerassociationReceivecopy'] = null;
+    }
+    if (tEzsignfoldersignerassociationMessage != null) {
+      _json[r'tEzsignfoldersignerassociationMessage'] = tEzsignfoldersignerassociationMessage;
+    } else {
+      _json[r'tEzsignfoldersignerassociationMessage'] = null;
     }
     return _json;
   }
@@ -111,6 +134,7 @@ class EzsignfoldersignerassociationRequest {
         fkiUserID: mapValueOfType<int>(json, r'fkiUserID'),
         fkiEzsignfolderID: mapValueOfType<int>(json, r'fkiEzsignfolderID')!,
         bEzsignfoldersignerassociationReceivecopy: mapValueOfType<bool>(json, r'bEzsignfoldersignerassociationReceivecopy'),
+        tEzsignfoldersignerassociationMessage: mapValueOfType<String>(json, r'tEzsignfoldersignerassociationMessage'),
       );
     }
     return null;

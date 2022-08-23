@@ -61,6 +61,9 @@ String parameterToString(dynamic value) {
   if (value is FieldEActivesessionWeekdaystart) {
     return FieldEActivesessionWeekdaystartTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEBrandingLogo) {
+    return FieldEBrandingLogoTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEEzsigndocumentStep) {
     return FieldEEzsigndocumentStepTypeTransformer().encode(value).toString();
   }
@@ -73,8 +76,14 @@ String parameterToString(dynamic value) {
   if (value is FieldEEzsignfolderStep) {
     return FieldEEzsignfolderStepTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEEzsignfoldertypeDisposal) {
+    return FieldEEzsignfoldertypeDisposalTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEEzsignfoldertypePrivacylevel) {
     return FieldEEzsignfoldertypePrivacylevelTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsignfoldertypeSendreminderfrequency) {
+    return FieldEEzsignfoldertypeSendreminderfrequencyTypeTransformer().encode(value).toString();
   }
   if (value is FieldEEzsignformfieldgroupSignerrequirement) {
     return FieldEEzsignformfieldgroupSignerrequirementTypeTransformer().encode(value).toString();
@@ -84,6 +93,9 @@ String parameterToString(dynamic value) {
   }
   if (value is FieldEEzsignformfieldgroupType) {
     return FieldEEzsignformfieldgroupTypeTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsignsignatureAttachmentnamesource) {
+    return FieldEEzsignsignatureAttachmentnamesourceTypeTransformer().encode(value).toString();
   }
   if (value is FieldEEzsignsignatureFont) {
     return FieldEEzsignsignatureFontTypeTransformer().encode(value).toString();
@@ -123,6 +135,15 @@ String parameterToString(dynamic value) {
   }
   if (value is FieldEUserType) {
     return FieldEUserTypeTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEWebhookEzsignevent) {
+    return FieldEWebhookEzsigneventTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEWebhookManagementevent) {
+    return FieldEWebhookManagementeventTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEWebhookModule) {
+    return FieldEWebhookModuleTypeTransformer().encode(value).toString();
   }
   if (value is HeaderAcceptLanguage) {
     return HeaderAcceptLanguageTypeTransformer().encode(value).toString();

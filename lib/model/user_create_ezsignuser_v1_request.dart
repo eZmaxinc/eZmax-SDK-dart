@@ -93,6 +93,8 @@ class UserCreateEzsignuserV1Request {
       _json[r'sPhoneNumber'] = sPhoneNumber;
     if (sPhoneExtension != null) {
       _json[r'sPhoneExtension'] = sPhoneExtension;
+    } else {
+      _json[r'sPhoneExtension'] = null;
     }
     return _json;
   }

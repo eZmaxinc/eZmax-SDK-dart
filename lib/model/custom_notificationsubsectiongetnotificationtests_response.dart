@@ -15,6 +15,8 @@ class CustomNotificationsubsectiongetnotificationtestsResponse {
   CustomNotificationsubsectiongetnotificationtestsResponse({
     required this.pkiNotificationsubsectionID,
     required this.fkiNotificationsectionID,
+    this.objNotificationsubsectionName,
+    this.sNotificationsectionNameX,
     required this.sNotificationsubsectionNameX,
     this.aObjNotificationtest = const [],
   });
@@ -29,6 +31,23 @@ class CustomNotificationsubsectiongetnotificationtestsResponse {
   /// Minimum value: 0
   int fkiNotificationsectionID;
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  MultilingualNotificationsubsectionName? objNotificationsubsectionName;
+
+  /// The name of the Notificationsection in the language of the requester
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sNotificationsectionNameX;
+
   /// The name of the Notificationsubsection in the language of the requester
   String sNotificationsubsectionNameX;
 
@@ -38,6 +57,8 @@ class CustomNotificationsubsectiongetnotificationtestsResponse {
   bool operator ==(Object other) => identical(this, other) || other is CustomNotificationsubsectiongetnotificationtestsResponse &&
      other.pkiNotificationsubsectionID == pkiNotificationsubsectionID &&
      other.fkiNotificationsectionID == fkiNotificationsectionID &&
+     other.objNotificationsubsectionName == objNotificationsubsectionName &&
+     other.sNotificationsectionNameX == sNotificationsectionNameX &&
      other.sNotificationsubsectionNameX == sNotificationsubsectionNameX &&
      other.aObjNotificationtest == aObjNotificationtest;
 
@@ -46,16 +67,28 @@ class CustomNotificationsubsectiongetnotificationtestsResponse {
     // ignore: unnecessary_parenthesis
     (pkiNotificationsubsectionID.hashCode) +
     (fkiNotificationsectionID.hashCode) +
+    (objNotificationsubsectionName == null ? 0 : objNotificationsubsectionName!.hashCode) +
+    (sNotificationsectionNameX == null ? 0 : sNotificationsectionNameX!.hashCode) +
     (sNotificationsubsectionNameX.hashCode) +
     (aObjNotificationtest.hashCode);
 
   @override
-  String toString() => 'CustomNotificationsubsectiongetnotificationtestsResponse[pkiNotificationsubsectionID=$pkiNotificationsubsectionID, fkiNotificationsectionID=$fkiNotificationsectionID, sNotificationsubsectionNameX=$sNotificationsubsectionNameX, aObjNotificationtest=$aObjNotificationtest]';
+  String toString() => 'CustomNotificationsubsectiongetnotificationtestsResponse[pkiNotificationsubsectionID=$pkiNotificationsubsectionID, fkiNotificationsectionID=$fkiNotificationsectionID, objNotificationsubsectionName=$objNotificationsubsectionName, sNotificationsectionNameX=$sNotificationsectionNameX, sNotificationsubsectionNameX=$sNotificationsubsectionNameX, aObjNotificationtest=$aObjNotificationtest]';
 
   Map<String, dynamic> toJson() {
     final _json = <String, dynamic>{};
       _json[r'pkiNotificationsubsectionID'] = pkiNotificationsubsectionID;
       _json[r'fkiNotificationsectionID'] = fkiNotificationsectionID;
+    if (objNotificationsubsectionName != null) {
+      _json[r'objNotificationsubsectionName'] = objNotificationsubsectionName;
+    } else {
+      _json[r'objNotificationsubsectionName'] = null;
+    }
+    if (sNotificationsectionNameX != null) {
+      _json[r'sNotificationsectionNameX'] = sNotificationsectionNameX;
+    } else {
+      _json[r'sNotificationsectionNameX'] = null;
+    }
       _json[r'sNotificationsubsectionNameX'] = sNotificationsubsectionNameX;
       _json[r'a_objNotificationtest'] = aObjNotificationtest;
     return _json;
@@ -82,6 +115,8 @@ class CustomNotificationsubsectiongetnotificationtestsResponse {
       return CustomNotificationsubsectiongetnotificationtestsResponse(
         pkiNotificationsubsectionID: mapValueOfType<int>(json, r'pkiNotificationsubsectionID')!,
         fkiNotificationsectionID: mapValueOfType<int>(json, r'fkiNotificationsectionID')!,
+        objNotificationsubsectionName: MultilingualNotificationsubsectionName.fromJson(json[r'objNotificationsubsectionName']),
+        sNotificationsectionNameX: mapValueOfType<String>(json, r'sNotificationsectionNameX'),
         sNotificationsubsectionNameX: mapValueOfType<String>(json, r'sNotificationsubsectionNameX')!,
         aObjNotificationtest: CustomNotificationtestgetnotificationtestsResponse.listFromJson(json[r'a_objNotificationtest'])!,
       );

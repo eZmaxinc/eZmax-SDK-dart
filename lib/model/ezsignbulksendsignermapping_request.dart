@@ -71,10 +71,14 @@ class EzsignbulksendsignermappingRequest {
     final _json = <String, dynamic>{};
     if (pkiEzsignbulksendsignermappingID != null) {
       _json[r'pkiEzsignbulksendsignermappingID'] = pkiEzsignbulksendsignermappingID;
+    } else {
+      _json[r'pkiEzsignbulksendsignermappingID'] = null;
     }
       _json[r'fkiEzsignbulksendID'] = fkiEzsignbulksendID;
     if (fkiUserID != null) {
       _json[r'fkiUserID'] = fkiUserID;
+    } else {
+      _json[r'fkiUserID'] = null;
     }
       _json[r'sEzsignbulksendsignermappingDescription'] = sEzsignbulksendsignermappingDescription;
     return _json;

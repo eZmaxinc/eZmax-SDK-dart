@@ -93,6 +93,8 @@ class EzsigntemplateResponse {
       _json[r'pkiEzsigntemplateID'] = pkiEzsigntemplateID;
     if (fkiEzsigntemplatedocumentID != null) {
       _json[r'fkiEzsigntemplatedocumentID'] = fkiEzsigntemplatedocumentID;
+    } else {
+      _json[r'fkiEzsigntemplatedocumentID'] = null;
     }
       _json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
       _json[r'fkiLanguageID'] = fkiLanguageID;

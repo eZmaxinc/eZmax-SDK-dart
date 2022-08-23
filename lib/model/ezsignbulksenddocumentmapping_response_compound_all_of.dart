@@ -51,9 +51,13 @@ class EzsignbulksenddocumentmappingResponseCompoundAllOf {
     final _json = <String, dynamic>{};
     if (objEzsigntemplate != null) {
       _json[r'objEzsigntemplate'] = objEzsigntemplate;
+    } else {
+      _json[r'objEzsigntemplate'] = null;
     }
     if (objEzsigntemplatepackage != null) {
       _json[r'objEzsigntemplatepackage'] = objEzsigntemplatepackage;
+    } else {
+      _json[r'objEzsigntemplatepackage'] = null;
     }
     return _json;
   }

@@ -88,12 +88,16 @@ class CommonAuditdetail {
       _json[r'fkiUserID'] = fkiUserID;
     if (fkiApikeyID != null) {
       _json[r'fkiApikeyID'] = fkiApikeyID;
+    } else {
+      _json[r'fkiApikeyID'] = null;
     }
       _json[r'sUserLoginname'] = sUserLoginname;
       _json[r'sUserLastname'] = sUserLastname;
       _json[r'sUserFirstname'] = sUserFirstname;
     if (sApikeyDescriptionX != null) {
       _json[r'sApikeyDescriptionX'] = sApikeyDescriptionX;
+    } else {
+      _json[r'sApikeyDescriptionX'] = null;
     }
       _json[r'dtAuditdetailDate'] = dtAuditdetailDate;
     return _json;

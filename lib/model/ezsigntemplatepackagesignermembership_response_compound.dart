@@ -79,6 +79,8 @@ class EzsigntemplatepackagesignermembershipResponseCompound {
       _json[r'fkiEzsigntemplatesignerID'] = fkiEzsigntemplatesignerID;
     if (iEzsigntemplatepackagesignermembershipCopy != null) {
       _json[r'iEzsigntemplatepackagesignermembershipCopy'] = iEzsigntemplatepackagesignermembershipCopy;
+    } else {
+      _json[r'iEzsigntemplatepackagesignermembershipCopy'] = null;
     }
     return _json;
   }

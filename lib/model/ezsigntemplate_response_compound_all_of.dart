@@ -45,6 +45,8 @@ class EzsigntemplateResponseCompoundAllOf {
     final _json = <String, dynamic>{};
     if (objEzsigntemplatedocument != null) {
       _json[r'objEzsigntemplatedocument'] = objEzsigntemplatedocument;
+    } else {
+      _json[r'objEzsigntemplatedocument'] = null;
     }
       _json[r'a_objEzsigntemplatesigner'] = aObjEzsigntemplatesigner;
     return _json;

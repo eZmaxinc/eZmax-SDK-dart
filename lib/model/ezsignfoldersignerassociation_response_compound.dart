@@ -16,6 +16,7 @@ class EzsignfoldersignerassociationResponseCompound {
     required this.pkiEzsignfoldersignerassociationID,
     required this.fkiEzsignfolderID,
     required this.bEzsignfoldersignerassociationReceivecopy,
+    required this.tEzsignfoldersignerassociationMessage,
     this.objUser,
     this.objEzsignsigner,
   });
@@ -32,6 +33,9 @@ class EzsignfoldersignerassociationResponseCompound {
 
   /// If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document.
   bool bEzsignfoldersignerassociationReceivecopy;
+
+  /// A custom text message that will be added to the email sent.
+  String tEzsignfoldersignerassociationMessage;
 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -54,6 +58,7 @@ class EzsignfoldersignerassociationResponseCompound {
      other.pkiEzsignfoldersignerassociationID == pkiEzsignfoldersignerassociationID &&
      other.fkiEzsignfolderID == fkiEzsignfolderID &&
      other.bEzsignfoldersignerassociationReceivecopy == bEzsignfoldersignerassociationReceivecopy &&
+     other.tEzsignfoldersignerassociationMessage == tEzsignfoldersignerassociationMessage &&
      other.objUser == objUser &&
      other.objEzsignsigner == objEzsignsigner;
 
@@ -63,22 +68,28 @@ class EzsignfoldersignerassociationResponseCompound {
     (pkiEzsignfoldersignerassociationID.hashCode) +
     (fkiEzsignfolderID.hashCode) +
     (bEzsignfoldersignerassociationReceivecopy.hashCode) +
+    (tEzsignfoldersignerassociationMessage.hashCode) +
     (objUser == null ? 0 : objUser!.hashCode) +
     (objEzsignsigner == null ? 0 : objEzsignsigner!.hashCode);
 
   @override
-  String toString() => 'EzsignfoldersignerassociationResponseCompound[pkiEzsignfoldersignerassociationID=$pkiEzsignfoldersignerassociationID, fkiEzsignfolderID=$fkiEzsignfolderID, bEzsignfoldersignerassociationReceivecopy=$bEzsignfoldersignerassociationReceivecopy, objUser=$objUser, objEzsignsigner=$objEzsignsigner]';
+  String toString() => 'EzsignfoldersignerassociationResponseCompound[pkiEzsignfoldersignerassociationID=$pkiEzsignfoldersignerassociationID, fkiEzsignfolderID=$fkiEzsignfolderID, bEzsignfoldersignerassociationReceivecopy=$bEzsignfoldersignerassociationReceivecopy, tEzsignfoldersignerassociationMessage=$tEzsignfoldersignerassociationMessage, objUser=$objUser, objEzsignsigner=$objEzsignsigner]';
 
   Map<String, dynamic> toJson() {
     final _json = <String, dynamic>{};
       _json[r'pkiEzsignfoldersignerassociationID'] = pkiEzsignfoldersignerassociationID;
       _json[r'fkiEzsignfolderID'] = fkiEzsignfolderID;
       _json[r'bEzsignfoldersignerassociationReceivecopy'] = bEzsignfoldersignerassociationReceivecopy;
+      _json[r'tEzsignfoldersignerassociationMessage'] = tEzsignfoldersignerassociationMessage;
     if (objUser != null) {
       _json[r'objUser'] = objUser;
+    } else {
+      _json[r'objUser'] = null;
     }
     if (objEzsignsigner != null) {
       _json[r'objEzsignsigner'] = objEzsignsigner;
+    } else {
+      _json[r'objEzsignsigner'] = null;
     }
     return _json;
   }
@@ -105,6 +116,7 @@ class EzsignfoldersignerassociationResponseCompound {
         pkiEzsignfoldersignerassociationID: mapValueOfType<int>(json, r'pkiEzsignfoldersignerassociationID')!,
         fkiEzsignfolderID: mapValueOfType<int>(json, r'fkiEzsignfolderID')!,
         bEzsignfoldersignerassociationReceivecopy: mapValueOfType<bool>(json, r'bEzsignfoldersignerassociationReceivecopy')!,
+        tEzsignfoldersignerassociationMessage: mapValueOfType<String>(json, r'tEzsignfoldersignerassociationMessage')!,
         objUser: EzsignfoldersignerassociationResponseCompoundUser.fromJson(json[r'objUser']),
         objEzsignsigner: EzsignsignerResponseCompound.fromJson(json[r'objEzsignsigner']),
       );
@@ -159,6 +171,7 @@ class EzsignfoldersignerassociationResponseCompound {
     'pkiEzsignfoldersignerassociationID',
     'fkiEzsignfolderID',
     'bEzsignfoldersignerassociationReceivecopy',
+    'tEzsignfoldersignerassociationMessage',
   };
 }
 

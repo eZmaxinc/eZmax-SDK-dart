@@ -132,12 +132,18 @@ class EzsigntemplatesignatureResponse {
       _json[r'eEzsigntemplatesignatureType'] = eEzsigntemplatesignatureType;
     if (tEzsigntemplatesignatureTooltip != null) {
       _json[r'tEzsigntemplatesignatureTooltip'] = tEzsigntemplatesignatureTooltip;
+    } else {
+      _json[r'tEzsigntemplatesignatureTooltip'] = null;
     }
     if (eEzsigntemplatesignatureTooltipposition != null) {
       _json[r'eEzsigntemplatesignatureTooltipposition'] = eEzsigntemplatesignatureTooltipposition;
+    } else {
+      _json[r'eEzsigntemplatesignatureTooltipposition'] = null;
     }
     if (eEzsigntemplatesignatureFont != null) {
       _json[r'eEzsigntemplatesignatureFont'] = eEzsigntemplatesignatureFont;
+    } else {
+      _json[r'eEzsigntemplatesignatureFont'] = null;
     }
     return _json;
   }

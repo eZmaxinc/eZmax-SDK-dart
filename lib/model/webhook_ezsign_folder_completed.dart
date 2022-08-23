@@ -20,7 +20,7 @@ class WebhookEzsignFolderCompleted {
 
   EzsignfolderResponse objEzsignfolder;
 
-  WebhookResponse objWebhook;
+  CustomWebhookResponse objWebhook;
 
   /// An array containing details of previous attempts that were made to deliver the message. The array is empty if it's the first attempt.
   List<AttemptResponseCompound> aObjAttempt;
@@ -69,7 +69,7 @@ class WebhookEzsignFolderCompleted {
 
       return WebhookEzsignFolderCompleted(
         objEzsignfolder: EzsignfolderResponse.fromJson(json[r'objEzsignfolder'])!,
-        objWebhook: WebhookResponse.fromJson(json[r'objWebhook'])!,
+        objWebhook: CustomWebhookResponse.fromJson(json[r'objWebhook'])!,
         aObjAttempt: AttemptResponseCompound.listFromJson(json[r'a_objAttempt'])!,
       );
     }

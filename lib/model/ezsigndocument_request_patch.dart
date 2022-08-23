@@ -53,9 +53,13 @@ class EzsigndocumentRequestPatch {
     final _json = <String, dynamic>{};
     if (dtEzsigndocumentDuedate != null) {
       _json[r'dtEzsigndocumentDuedate'] = dtEzsigndocumentDuedate;
+    } else {
+      _json[r'dtEzsigndocumentDuedate'] = null;
     }
     if (sEzsigndocumentName != null) {
       _json[r'sEzsigndocumentName'] = sEzsigndocumentName;
+    } else {
+      _json[r'sEzsigndocumentName'] = null;
     }
     return _json;
   }

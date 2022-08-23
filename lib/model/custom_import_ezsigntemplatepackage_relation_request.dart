@@ -63,10 +63,14 @@ class CustomImportEzsigntemplatepackageRelationRequest {
     final _json = <String, dynamic>{};
     if (fkiEzsigntemplatepackagesignerID != null) {
       _json[r'fkiEzsigntemplatepackagesignerID'] = fkiEzsigntemplatepackagesignerID;
+    } else {
+      _json[r'fkiEzsigntemplatepackagesignerID'] = null;
     }
       _json[r'fkiEzsignfoldersignerassociationID'] = fkiEzsignfoldersignerassociationID;
     if (sEzsigntemplatepackagesignerDescription != null) {
       _json[r'sEzsigntemplatepackagesignerDescription'] = sEzsigntemplatepackagesignerDescription;
+    } else {
+      _json[r'sEzsigntemplatepackagesignerDescription'] = null;
     }
     return _json;
   }

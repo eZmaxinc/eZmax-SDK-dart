@@ -82,6 +82,8 @@ class EzsignbulksendCreateEzsignbulksendtransmissionV1Request {
       _json[r'fkiUserlogintypeID'] = fkiUserlogintypeID;
     if (fkiEzsigntsarequirementID != null) {
       _json[r'fkiEzsigntsarequirementID'] = fkiEzsigntsarequirementID;
+    } else {
+      _json[r'fkiEzsigntsarequirementID'] = null;
     }
       _json[r'sEzsignbulksendtransmissionDescription'] = sEzsignbulksendtransmissionDescription;
       _json[r'dtEzsigndocumentDuedate'] = dtEzsigndocumentDuedate;

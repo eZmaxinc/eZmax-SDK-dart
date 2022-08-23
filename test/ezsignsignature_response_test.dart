@@ -79,6 +79,35 @@ void main() {
       // TODO
     });
 
+    // The step when the Ezsignsigner will be invited to validate the Ezsignsignature of eEzsignsignatureType Attachments
+    // int iEzsignsignatureValidationstep
+    test('to test the property `iEzsignsignatureValidationstep`', () async {
+      // TODO
+    });
+
+    // The description attached to the attachment name added in Ezsignsignature of eEzsignsignatureType Attachments
+    // String sEzsignsignatureAttachmentdescription
+    test('to test the property `sEzsignsignatureAttachmentdescription`', () async {
+      // TODO
+    });
+
+    // FieldEEzsignsignatureAttachmentnamesource eEzsignsignatureAttachmentnamesource
+    test('to test the property `eEzsignsignatureAttachmentnamesource`', () async {
+      // TODO
+    });
+
+    // Whether the Ezsignsignature is required or not. This field is relevant only with Ezsignsignature with eEzsignsignatureType = Attachments.
+    // bool bEzsignsignatureRequired
+    test('to test the property `bEzsignsignatureRequired`', () async {
+      // TODO
+    });
+
+    // The unique ID of the User
+    // int fkiUserID
+    test('to test the property `fkiUserID`', () async {
+      // TODO
+    });
+
 
   });
 

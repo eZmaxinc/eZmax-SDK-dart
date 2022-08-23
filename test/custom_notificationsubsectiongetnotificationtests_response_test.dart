@@ -28,6 +28,17 @@ void main() {
       // TODO
     });
 
+    // MultilingualNotificationsubsectionName objNotificationsubsectionName
+    test('to test the property `objNotificationsubsectionName`', () async {
+      // TODO
+    });
+
+    // The name of the Notificationsection in the language of the requester
+    // String sNotificationsectionNameX
+    test('to test the property `sNotificationsectionNameX`', () async {
+      // TODO
+    });
+
     // The name of the Notificationsubsection in the language of the requester
     // String sNotificationsubsectionNameX
     test('to test the property `sNotificationsubsectionNameX`', () async {

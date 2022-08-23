@@ -150,15 +150,23 @@ class EzsigntemplatesignatureResponseCompound {
       _json[r'eEzsigntemplatesignatureType'] = eEzsigntemplatesignatureType;
     if (tEzsigntemplatesignatureTooltip != null) {
       _json[r'tEzsigntemplatesignatureTooltip'] = tEzsigntemplatesignatureTooltip;
+    } else {
+      _json[r'tEzsigntemplatesignatureTooltip'] = null;
     }
     if (eEzsigntemplatesignatureTooltipposition != null) {
       _json[r'eEzsigntemplatesignatureTooltipposition'] = eEzsigntemplatesignatureTooltipposition;
+    } else {
+      _json[r'eEzsigntemplatesignatureTooltipposition'] = null;
     }
     if (eEzsigntemplatesignatureFont != null) {
       _json[r'eEzsigntemplatesignatureFont'] = eEzsigntemplatesignatureFont;
+    } else {
+      _json[r'eEzsigntemplatesignatureFont'] = null;
     }
     if (bEzsigntemplatesignatureCustomdate != null) {
       _json[r'bEzsigntemplatesignatureCustomdate'] = bEzsigntemplatesignatureCustomdate;
+    } else {
+      _json[r'bEzsigntemplatesignatureCustomdate'] = null;
     }
       _json[r'a_objEzsigntemplatesignaturecustomdate'] = aObjEzsigntemplatesignaturecustomdate;
     return _json;

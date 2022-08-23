@@ -109,6 +109,8 @@ class EzsigntemplateGetObjectV1ResponseMPayload {
       _json[r'pkiEzsigntemplateID'] = pkiEzsigntemplateID;
     if (fkiEzsigntemplatedocumentID != null) {
       _json[r'fkiEzsigntemplatedocumentID'] = fkiEzsigntemplatedocumentID;
+    } else {
+      _json[r'fkiEzsigntemplatedocumentID'] = null;
     }
       _json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
       _json[r'fkiLanguageID'] = fkiLanguageID;
@@ -118,6 +120,8 @@ class EzsigntemplateGetObjectV1ResponseMPayload {
       _json[r'sEzsignfoldertypeNameX'] = sEzsignfoldertypeNameX;
     if (objEzsigntemplatedocument != null) {
       _json[r'objEzsigntemplatedocument'] = objEzsigntemplatedocument;
+    } else {
+      _json[r'objEzsigntemplatedocument'] = null;
     }
       _json[r'a_objEzsigntemplatesigner'] = aObjEzsigntemplatesigner;
     return _json;

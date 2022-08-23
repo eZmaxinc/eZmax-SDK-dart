@@ -24,6 +24,11 @@ class EzsignsignatureGetObjectV1ResponseMPayload {
     this.tEzsignsignatureTooltip,
     this.eEzsignsignatureTooltipposition,
     this.eEzsignsignatureFont,
+    this.iEzsignsignatureValidationstep,
+    this.sEzsignsignatureAttachmentdescription,
+    this.eEzsignsignatureAttachmentnamesource,
+    this.bEzsignsignatureRequired,
+    this.fkiUserID,
     this.bEzsignsignatureCustomdate,
     this.aObjEzsignsignaturecustomdate = const [],
   });
@@ -88,6 +93,52 @@ class EzsignsignatureGetObjectV1ResponseMPayload {
   ///
   FieldEEzsignsignatureFont? eEzsignsignatureFont;
 
+  /// The step when the Ezsignsigner will be invited to validate the Ezsignsignature of eEzsignsignatureType Attachments
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? iEzsignsignatureValidationstep;
+
+  /// The description attached to the attachment name added in Ezsignsignature of eEzsignsignatureType Attachments
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEzsignsignatureAttachmentdescription;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEEzsignsignatureAttachmentnamesource? eEzsignsignatureAttachmentnamesource;
+
+  /// Whether the Ezsignsignature is required or not. This field is relevant only with Ezsignsignature with eEzsignsignatureType = Attachments.
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bEzsignsignatureRequired;
+
+  /// The unique ID of the User
+  ///
+  /// Minimum value: 0
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiUserID;
+
   /// Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -113,6 +164,11 @@ class EzsignsignatureGetObjectV1ResponseMPayload {
      other.tEzsignsignatureTooltip == tEzsignsignatureTooltip &&
      other.eEzsignsignatureTooltipposition == eEzsignsignatureTooltipposition &&
      other.eEzsignsignatureFont == eEzsignsignatureFont &&
+     other.iEzsignsignatureValidationstep == iEzsignsignatureValidationstep &&
+     other.sEzsignsignatureAttachmentdescription == sEzsignsignatureAttachmentdescription &&
+     other.eEzsignsignatureAttachmentnamesource == eEzsignsignatureAttachmentnamesource &&
+     other.bEzsignsignatureRequired == bEzsignsignatureRequired &&
+     other.fkiUserID == fkiUserID &&
      other.bEzsignsignatureCustomdate == bEzsignsignatureCustomdate &&
      other.aObjEzsignsignaturecustomdate == aObjEzsignsignaturecustomdate;
 
@@ -130,11 +186,16 @@ class EzsignsignatureGetObjectV1ResponseMPayload {
     (tEzsignsignatureTooltip == null ? 0 : tEzsignsignatureTooltip!.hashCode) +
     (eEzsignsignatureTooltipposition == null ? 0 : eEzsignsignatureTooltipposition!.hashCode) +
     (eEzsignsignatureFont == null ? 0 : eEzsignsignatureFont!.hashCode) +
+    (iEzsignsignatureValidationstep == null ? 0 : iEzsignsignatureValidationstep!.hashCode) +
+    (sEzsignsignatureAttachmentdescription == null ? 0 : sEzsignsignatureAttachmentdescription!.hashCode) +
+    (eEzsignsignatureAttachmentnamesource == null ? 0 : eEzsignsignatureAttachmentnamesource!.hashCode) +
+    (bEzsignsignatureRequired == null ? 0 : bEzsignsignatureRequired!.hashCode) +
+    (fkiUserID == null ? 0 : fkiUserID!.hashCode) +
     (bEzsignsignatureCustomdate == null ? 0 : bEzsignsignatureCustomdate!.hashCode) +
     (aObjEzsignsignaturecustomdate.hashCode);
 
   @override
-  String toString() => 'EzsignsignatureGetObjectV1ResponseMPayload[pkiEzsignsignatureID=$pkiEzsignsignatureID, fkiEzsigndocumentID=$fkiEzsigndocumentID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureStep=$iEzsignsignatureStep, eEzsignsignatureType=$eEzsignsignatureType, tEzsignsignatureTooltip=$tEzsignsignatureTooltip, eEzsignsignatureTooltipposition=$eEzsignsignatureTooltipposition, eEzsignsignatureFont=$eEzsignsignatureFont, bEzsignsignatureCustomdate=$bEzsignsignatureCustomdate, aObjEzsignsignaturecustomdate=$aObjEzsignsignaturecustomdate]';
+  String toString() => 'EzsignsignatureGetObjectV1ResponseMPayload[pkiEzsignsignatureID=$pkiEzsignsignatureID, fkiEzsigndocumentID=$fkiEzsigndocumentID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureStep=$iEzsignsignatureStep, eEzsignsignatureType=$eEzsignsignatureType, tEzsignsignatureTooltip=$tEzsignsignatureTooltip, eEzsignsignatureTooltipposition=$eEzsignsignatureTooltipposition, eEzsignsignatureFont=$eEzsignsignatureFont, iEzsignsignatureValidationstep=$iEzsignsignatureValidationstep, sEzsignsignatureAttachmentdescription=$sEzsignsignatureAttachmentdescription, eEzsignsignatureAttachmentnamesource=$eEzsignsignatureAttachmentnamesource, bEzsignsignatureRequired=$bEzsignsignatureRequired, fkiUserID=$fkiUserID, bEzsignsignatureCustomdate=$bEzsignsignatureCustomdate, aObjEzsignsignaturecustomdate=$aObjEzsignsignaturecustomdate]';
 
   Map<String, dynamic> toJson() {
     final _json = <String, dynamic>{};
@@ -148,15 +209,48 @@ class EzsignsignatureGetObjectV1ResponseMPayload {
       _json[r'eEzsignsignatureType'] = eEzsignsignatureType;
     if (tEzsignsignatureTooltip != null) {
       _json[r'tEzsignsignatureTooltip'] = tEzsignsignatureTooltip;
+    } else {
+      _json[r'tEzsignsignatureTooltip'] = null;
     }
     if (eEzsignsignatureTooltipposition != null) {
       _json[r'eEzsignsignatureTooltipposition'] = eEzsignsignatureTooltipposition;
+    } else {
+      _json[r'eEzsignsignatureTooltipposition'] = null;
     }
     if (eEzsignsignatureFont != null) {
       _json[r'eEzsignsignatureFont'] = eEzsignsignatureFont;
+    } else {
+      _json[r'eEzsignsignatureFont'] = null;
+    }
+    if (iEzsignsignatureValidationstep != null) {
+      _json[r'iEzsignsignatureValidationstep'] = iEzsignsignatureValidationstep;
+    } else {
+      _json[r'iEzsignsignatureValidationstep'] = null;
+    }
+    if (sEzsignsignatureAttachmentdescription != null) {
+      _json[r'sEzsignsignatureAttachmentdescription'] = sEzsignsignatureAttachmentdescription;
+    } else {
+      _json[r'sEzsignsignatureAttachmentdescription'] = null;
+    }
+    if (eEzsignsignatureAttachmentnamesource != null) {
+      _json[r'eEzsignsignatureAttachmentnamesource'] = eEzsignsignatureAttachmentnamesource;
+    } else {
+      _json[r'eEzsignsignatureAttachmentnamesource'] = null;
+    }
+    if (bEzsignsignatureRequired != null) {
+      _json[r'bEzsignsignatureRequired'] = bEzsignsignatureRequired;
+    } else {
+      _json[r'bEzsignsignatureRequired'] = null;
+    }
+    if (fkiUserID != null) {
+      _json[r'fkiUserID'] = fkiUserID;
+    } else {
+      _json[r'fkiUserID'] = null;
     }
     if (bEzsignsignatureCustomdate != null) {
       _json[r'bEzsignsignatureCustomdate'] = bEzsignsignatureCustomdate;
+    } else {
+      _json[r'bEzsignsignatureCustomdate'] = null;
     }
       _json[r'a_objEzsignsignaturecustomdate'] = aObjEzsignsignaturecustomdate;
     return _json;
@@ -192,6 +286,11 @@ class EzsignsignatureGetObjectV1ResponseMPayload {
         tEzsignsignatureTooltip: mapValueOfType<String>(json, r'tEzsignsignatureTooltip'),
         eEzsignsignatureTooltipposition: FieldEEzsignsignatureTooltipposition.fromJson(json[r'eEzsignsignatureTooltipposition']),
         eEzsignsignatureFont: FieldEEzsignsignatureFont.fromJson(json[r'eEzsignsignatureFont']),
+        iEzsignsignatureValidationstep: mapValueOfType<int>(json, r'iEzsignsignatureValidationstep'),
+        sEzsignsignatureAttachmentdescription: mapValueOfType<String>(json, r'sEzsignsignatureAttachmentdescription'),
+        eEzsignsignatureAttachmentnamesource: FieldEEzsignsignatureAttachmentnamesource.fromJson(json[r'eEzsignsignatureAttachmentnamesource']),
+        bEzsignsignatureRequired: mapValueOfType<bool>(json, r'bEzsignsignatureRequired'),
+        fkiUserID: mapValueOfType<int>(json, r'fkiUserID'),
         bEzsignsignatureCustomdate: mapValueOfType<bool>(json, r'bEzsignsignatureCustomdate'),
         aObjEzsignsignaturecustomdate: EzsignsignaturecustomdateResponseCompound.listFromJson(json[r'a_objEzsignsignaturecustomdate']) ?? const [],
       );

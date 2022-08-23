@@ -60,6 +60,8 @@ class ApikeyResponseCompound {
       _json[r'objApikeyDescription'] = objApikeyDescription;
     if (sComputedToken != null) {
       _json[r'sComputedToken'] = sComputedToken;
+    } else {
+      _json[r'sComputedToken'] = null;
     }
       _json[r'pkiApikeyID'] = pkiApikeyID;
       _json[r'objAudit'] = objAudit;

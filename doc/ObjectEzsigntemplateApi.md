@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **ezsigntemplateGetAutocompleteV1**
-> CommonGetAutocompleteV1Response ezsigntemplateGetAutocompleteV1(sSelector, sQuery, acceptLanguage)
+> CommonGetAutocompleteV1Response ezsigntemplateGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
 
 Retrieve Ezsigntemplate and IDs
 
@@ -177,11 +177,12 @@ import 'package:openapi/api.dart';
 
 final api_instance = ObjectEzsigntemplateApi();
 final sSelector = sSelector_example; // String | The type of Ezsigntemplate to return
+final eFilterActive = eFilterActive_example; // String | Specify which results we want to display.
 final sQuery = sQuery_example; // String | Allow to filter the returned results
 final acceptLanguage = ; // HeaderAcceptLanguage | 
 
 try {
-    final result = api_instance.ezsigntemplateGetAutocompleteV1(sSelector, sQuery, acceptLanguage);
+    final result = api_instance.ezsigntemplateGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage);
     print(result);
 } catch (e) {
     print('Exception when calling ObjectEzsigntemplateApi->ezsigntemplateGetAutocompleteV1: $e\n');
@@ -193,6 +194,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **String**| The type of Ezsigntemplate to return | 
+ **eFilterActive** | **String**| Specify which results we want to display. | [optional] [default to 'Active']
  **sQuery** | **String**| Allow to filter the returned results | [optional] 
  **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] 
 

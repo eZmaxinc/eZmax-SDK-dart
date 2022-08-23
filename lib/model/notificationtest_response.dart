@@ -14,6 +14,7 @@ class NotificationtestResponse {
   /// Returns a new [NotificationtestResponse] instance.
   NotificationtestResponse({
     required this.pkiNotificationtestID,
+    required this.objNotificationtestName,
     required this.fkiNotificationsubsectionID,
     required this.sNotificationtestFunction,
     required this.sNotificationtestNameX,
@@ -23,6 +24,8 @@ class NotificationtestResponse {
   ///
   /// Minimum value: 0
   int pkiNotificationtestID;
+
+  MultilingualNotificationtestName objNotificationtestName;
 
   /// The unique ID of the Notificationsubsection
   ///
@@ -38,6 +41,7 @@ class NotificationtestResponse {
   @override
   bool operator ==(Object other) => identical(this, other) || other is NotificationtestResponse &&
      other.pkiNotificationtestID == pkiNotificationtestID &&
+     other.objNotificationtestName == objNotificationtestName &&
      other.fkiNotificationsubsectionID == fkiNotificationsubsectionID &&
      other.sNotificationtestFunction == sNotificationtestFunction &&
      other.sNotificationtestNameX == sNotificationtestNameX;
@@ -46,16 +50,18 @@ class NotificationtestResponse {
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiNotificationtestID.hashCode) +
+    (objNotificationtestName.hashCode) +
     (fkiNotificationsubsectionID.hashCode) +
     (sNotificationtestFunction.hashCode) +
     (sNotificationtestNameX.hashCode);
 
   @override
-  String toString() => 'NotificationtestResponse[pkiNotificationtestID=$pkiNotificationtestID, fkiNotificationsubsectionID=$fkiNotificationsubsectionID, sNotificationtestFunction=$sNotificationtestFunction, sNotificationtestNameX=$sNotificationtestNameX]';
+  String toString() => 'NotificationtestResponse[pkiNotificationtestID=$pkiNotificationtestID, objNotificationtestName=$objNotificationtestName, fkiNotificationsubsectionID=$fkiNotificationsubsectionID, sNotificationtestFunction=$sNotificationtestFunction, sNotificationtestNameX=$sNotificationtestNameX]';
 
   Map<String, dynamic> toJson() {
     final _json = <String, dynamic>{};
       _json[r'pkiNotificationtestID'] = pkiNotificationtestID;
+      _json[r'objNotificationtestName'] = objNotificationtestName;
       _json[r'fkiNotificationsubsectionID'] = fkiNotificationsubsectionID;
       _json[r'sNotificationtestFunction'] = sNotificationtestFunction;
       _json[r'sNotificationtestNameX'] = sNotificationtestNameX;
@@ -82,6 +88,7 @@ class NotificationtestResponse {
 
       return NotificationtestResponse(
         pkiNotificationtestID: mapValueOfType<int>(json, r'pkiNotificationtestID')!,
+        objNotificationtestName: MultilingualNotificationtestName.fromJson(json[r'objNotificationtestName'])!,
         fkiNotificationsubsectionID: mapValueOfType<int>(json, r'fkiNotificationsubsectionID')!,
         sNotificationtestFunction: mapValueOfType<String>(json, r'sNotificationtestFunction')!,
         sNotificationtestNameX: mapValueOfType<String>(json, r'sNotificationtestNameX')!,
@@ -135,6 +142,7 @@ class NotificationtestResponse {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'pkiNotificationtestID',
+    'objNotificationtestName',
     'fkiNotificationsubsectionID',
     'sNotificationtestFunction',
     'sNotificationtestNameX',

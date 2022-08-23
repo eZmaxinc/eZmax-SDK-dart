@@ -45,6 +45,8 @@ class FranchisereferalincomeRequestCompoundAllOf {
     final _json = <String, dynamic>{};
     if (objAddress != null) {
       _json[r'objAddress'] = objAddress;
+    } else {
+      _json[r'objAddress'] = null;
     }
       _json[r'a_objContact'] = aObjContact;
     return _json;

@@ -16,7 +16,7 @@ void main() {
   // final instance = CustomAutocompleteElementDisabledResponseAllOf();
 
   group('test CustomAutocompleteElementDisabledResponseAllOf', () {
-    // 
+    // Indicates if the element is disabled in the context
     // bool bDisabled
     test('to test the property `bDisabled`', () async {
       // TODO

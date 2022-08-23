@@ -84,6 +84,8 @@ class EzsignbulksendRequest {
     final _json = <String, dynamic>{};
     if (pkiEzsignbulksendID != null) {
       _json[r'pkiEzsignbulksendID'] = pkiEzsignbulksendID;
+    } else {
+      _json[r'pkiEzsignbulksendID'] = null;
     }
       _json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
       _json[r'fkiLanguageID'] = fkiLanguageID;

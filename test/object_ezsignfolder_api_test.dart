@@ -137,6 +137,15 @@ void main() {
       // TODO
     });
 
+    // Import an existing Ezsignfoldersignerassociation into this Ezsignfolder
+    //
+    // 
+    //
+    //Future<EzsignfolderImportEzsignfoldersignerassociationsV1Response> ezsignfolderImportEzsignfoldersignerassociationsV1(int pkiEzsignfolderID, EzsignfolderImportEzsignfoldersignerassociationsV1Request ezsignfolderImportEzsignfoldersignerassociationsV1Request) async
+    test('test ezsignfolderImportEzsignfoldersignerassociationsV1', () async {
+      // TODO
+    });
+
     // Import an Ezsigntemplatepackage in the Ezsignfolder.
     //
     // This endpoint imports all of the Ezsigntemplates from the Ezsigntemplatepackage into the Ezsignfolder as Ezsigndocuments.  This allows to automatically apply all the Ezsigntemplateformfieldgroups and Ezsigntemplatesignatures on the newly created Ezsigndocuments in a single step.
@@ -159,6 +168,15 @@ void main() {
     //
     //Future<EzsignfolderSendV1Response> ezsignfolderSendV1(int pkiEzsignfolderID, EzsignfolderSendV1Request ezsignfolderSendV1Request) async
     test('test ezsignfolderSendV1', () async {
+      // TODO
+    });
+
+    // Send the Ezsignfolder to the signatories for signature
+    //
+    // 
+    //
+    //Future<EzsignfolderSendV2Response> ezsignfolderSendV2(int pkiEzsignfolderID, EzsignfolderSendV2Request ezsignfolderSendV2Request) async
+    test('test ezsignfolderSendV2', () async {
       // TODO
     });
 

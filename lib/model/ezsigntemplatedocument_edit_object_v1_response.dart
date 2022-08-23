@@ -56,9 +56,13 @@ class EzsigntemplatedocumentEditObjectV1Response {
     final _json = <String, dynamic>{};
     if (objDebugPayload != null) {
       _json[r'objDebugPayload'] = objDebugPayload;
+    } else {
+      _json[r'objDebugPayload'] = null;
     }
     if (objDebug != null) {
       _json[r'objDebug'] = objDebug;
+    } else {
+      _json[r'objDebug'] = null;
     }
       _json[r'a_objWarning'] = aObjWarning;
     return _json;

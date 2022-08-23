@@ -47,6 +47,8 @@ class EzsignsignatureSignV1Request {
     final _json = <String, dynamic>{};
     if (sValue != null) {
       _json[r'sValue'] = sValue;
+    } else {
+      _json[r'sValue'] = null;
     }
       _json[r'bIsAutomatic'] = bIsAutomatic;
     return _json;

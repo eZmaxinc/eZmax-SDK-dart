@@ -40,6 +40,12 @@ void main() {
       // TODO
     });
 
+    // Indicates if the element is active
+    // bool bActive
+    test('to test the property `bActive`', () async {
+      // TODO
+    });
+
 
   });
 

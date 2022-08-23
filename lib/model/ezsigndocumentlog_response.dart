@@ -92,9 +92,13 @@ class EzsigndocumentlogResponse {
     final _json = <String, dynamic>{};
     if (fkiUserID != null) {
       _json[r'fkiUserID'] = fkiUserID;
+    } else {
+      _json[r'fkiUserID'] = null;
     }
     if (fkiEzsignsignerID != null) {
       _json[r'fkiEzsignsignerID'] = fkiEzsignsignerID;
+    } else {
+      _json[r'fkiEzsignsignerID'] = null;
     }
       _json[r'dtEzsigndocumentlogDatetime'] = dtEzsigndocumentlogDatetime;
       _json[r'eEzsigndocumentlogType'] = eEzsigndocumentlogType;

@@ -83,9 +83,13 @@ class EzsignbulksenddocumentmappingResponse {
       _json[r'fkiEzsignbulksendID'] = fkiEzsignbulksendID;
     if (fkiEzsigntemplatepackageID != null) {
       _json[r'fkiEzsigntemplatepackageID'] = fkiEzsigntemplatepackageID;
+    } else {
+      _json[r'fkiEzsigntemplatepackageID'] = null;
     }
     if (fkiEzsigntemplateID != null) {
       _json[r'fkiEzsigntemplateID'] = fkiEzsigntemplateID;
+    } else {
+      _json[r'fkiEzsigntemplateID'] = null;
     }
       _json[r'iEzsignbulksenddocumentmappingOrder'] = iEzsignbulksenddocumentmappingOrder;
     return _json;

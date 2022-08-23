@@ -51,9 +51,13 @@ class EzsigndocumentCreateObjectV1Request {
     final _json = <String, dynamic>{};
     if (objEzsigndocument != null) {
       _json[r'objEzsigndocument'] = objEzsigndocument;
+    } else {
+      _json[r'objEzsigndocument'] = null;
     }
     if (objEzsigndocumentCompound != null) {
       _json[r'objEzsigndocumentCompound'] = objEzsigndocumentCompound;
+    } else {
+      _json[r'objEzsigndocumentCompound'] = null;
     }
     return _json;
   }

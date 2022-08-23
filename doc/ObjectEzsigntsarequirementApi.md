@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **ezsigntsarequirementGetAutocompleteV1**
-> CommonGetAutocompleteDisabledV1Response ezsigntsarequirementGetAutocompleteV1(sSelector, fkiEzsignfoldertypeID, sQuery, acceptLanguage)
+> CommonGetAutocompleteDisabledV1Response ezsigntsarequirementGetAutocompleteV1(sSelector, fkiEzsignfoldertypeID, eFilterActive, sQuery, acceptLanguage)
 
 Retrieve Ezsigntsarequirements and IDs
 
@@ -30,11 +30,12 @@ import 'package:openapi/api.dart';
 final api_instance = ObjectEzsigntsarequirementApi();
 final sSelector = sSelector_example; // String | The type of Ezsigntsarequirements to return
 final fkiEzsignfoldertypeID = 56; // int | 
+final eFilterActive = eFilterActive_example; // String | Specify which results we want to display.
 final sQuery = sQuery_example; // String | Allow to filter the returned results
 final acceptLanguage = ; // HeaderAcceptLanguage | 
 
 try {
-    final result = api_instance.ezsigntsarequirementGetAutocompleteV1(sSelector, fkiEzsignfoldertypeID, sQuery, acceptLanguage);
+    final result = api_instance.ezsigntsarequirementGetAutocompleteV1(sSelector, fkiEzsignfoldertypeID, eFilterActive, sQuery, acceptLanguage);
     print(result);
 } catch (e) {
     print('Exception when calling ObjectEzsigntsarequirementApi->ezsigntsarequirementGetAutocompleteV1: $e\n');
@@ -47,6 +48,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **String**| The type of Ezsigntsarequirements to return | 
  **fkiEzsignfoldertypeID** | **int**|  | [optional] 
+ **eFilterActive** | **String**| Specify which results we want to display. | [optional] [default to 'Active']
  **sQuery** | **String**| Allow to filter the returned results | [optional] 
  **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] 
 

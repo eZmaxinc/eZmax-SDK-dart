@@ -179,6 +179,8 @@ class EzsigntemplateformfieldgroupRequestCompound {
     final _json = <String, dynamic>{};
     if (pkiEzsigntemplateformfieldgroupID != null) {
       _json[r'pkiEzsigntemplateformfieldgroupID'] = pkiEzsigntemplateformfieldgroupID;
+    } else {
+      _json[r'pkiEzsigntemplateformfieldgroupID'] = null;
     }
       _json[r'fkiEzsigntemplatedocumentID'] = fkiEzsigntemplatedocumentID;
       _json[r'eEzsigntemplateformfieldgroupType'] = eEzsigntemplateformfieldgroupType;
@@ -191,18 +193,28 @@ class EzsigntemplateformfieldgroupRequestCompound {
       _json[r'bEzsigntemplateformfieldgroupReadonly'] = bEzsigntemplateformfieldgroupReadonly;
     if (iEzsigntemplateformfieldgroupMaxlength != null) {
       _json[r'iEzsigntemplateformfieldgroupMaxlength'] = iEzsigntemplateformfieldgroupMaxlength;
+    } else {
+      _json[r'iEzsigntemplateformfieldgroupMaxlength'] = null;
     }
     if (bEzsigntemplateformfieldgroupEncrypted != null) {
       _json[r'bEzsigntemplateformfieldgroupEncrypted'] = bEzsigntemplateformfieldgroupEncrypted;
+    } else {
+      _json[r'bEzsigntemplateformfieldgroupEncrypted'] = null;
     }
     if (sEzsigntemplateformfieldgroupRegexp != null) {
       _json[r'sEzsigntemplateformfieldgroupRegexp'] = sEzsigntemplateformfieldgroupRegexp;
+    } else {
+      _json[r'sEzsigntemplateformfieldgroupRegexp'] = null;
     }
     if (tEzsigntemplateformfieldgroupTooltip != null) {
       _json[r'tEzsigntemplateformfieldgroupTooltip'] = tEzsigntemplateformfieldgroupTooltip;
+    } else {
+      _json[r'tEzsigntemplateformfieldgroupTooltip'] = null;
     }
     if (eEzsigntemplateformfieldgroupTooltipposition != null) {
       _json[r'eEzsigntemplateformfieldgroupTooltipposition'] = eEzsigntemplateformfieldgroupTooltipposition;
+    } else {
+      _json[r'eEzsigntemplateformfieldgroupTooltipposition'] = null;
     }
       _json[r'a_objEzsigntemplateformfieldgroupsigner'] = aObjEzsigntemplateformfieldgroupsigner;
       _json[r'a_objDropdownElement'] = aObjDropdownElement;
