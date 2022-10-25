@@ -19,7 +19,7 @@ class EzsignpageResponseCompound {
     required this.iEzsignpageWidthpdf,
     required this.iEzsignpageHeightpdf,
     required this.iEzsignpagePagenumber,
-    required this.sImageUrl,
+    required this.sComputedImageurl,
   });
 
   /// The unique ID of the Ezsignpage
@@ -53,7 +53,7 @@ class EzsignpageResponseCompound {
   int iEzsignpagePagenumber;
 
   /// The Url to the Ezsignpage's rasterized image.  Url will expire after 5 minutes.
-  String sImageUrl;
+  String sComputedImageurl;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignpageResponseCompound &&
@@ -63,7 +63,7 @@ class EzsignpageResponseCompound {
      other.iEzsignpageWidthpdf == iEzsignpageWidthpdf &&
      other.iEzsignpageHeightpdf == iEzsignpageHeightpdf &&
      other.iEzsignpagePagenumber == iEzsignpagePagenumber &&
-     other.sImageUrl == sImageUrl;
+     other.sComputedImageurl == sComputedImageurl;
 
   @override
   int get hashCode =>
@@ -74,10 +74,10 @@ class EzsignpageResponseCompound {
     (iEzsignpageWidthpdf.hashCode) +
     (iEzsignpageHeightpdf.hashCode) +
     (iEzsignpagePagenumber.hashCode) +
-    (sImageUrl.hashCode);
+    (sComputedImageurl.hashCode);
 
   @override
-  String toString() => 'EzsignpageResponseCompound[pkiEzsignpageID=$pkiEzsignpageID, iEzsignpageWidthimage=$iEzsignpageWidthimage, iEzsignpageHeightimage=$iEzsignpageHeightimage, iEzsignpageWidthpdf=$iEzsignpageWidthpdf, iEzsignpageHeightpdf=$iEzsignpageHeightpdf, iEzsignpagePagenumber=$iEzsignpagePagenumber, sImageUrl=$sImageUrl]';
+  String toString() => 'EzsignpageResponseCompound[pkiEzsignpageID=$pkiEzsignpageID, iEzsignpageWidthimage=$iEzsignpageWidthimage, iEzsignpageHeightimage=$iEzsignpageHeightimage, iEzsignpageWidthpdf=$iEzsignpageWidthpdf, iEzsignpageHeightpdf=$iEzsignpageHeightpdf, iEzsignpagePagenumber=$iEzsignpagePagenumber, sComputedImageurl=$sComputedImageurl]';
 
   Map<String, dynamic> toJson() {
     final _json = <String, dynamic>{};
@@ -87,7 +87,7 @@ class EzsignpageResponseCompound {
       _json[r'iEzsignpageWidthpdf'] = iEzsignpageWidthpdf;
       _json[r'iEzsignpageHeightpdf'] = iEzsignpageHeightpdf;
       _json[r'iEzsignpagePagenumber'] = iEzsignpagePagenumber;
-      _json[r'sImageUrl'] = sImageUrl;
+      _json[r'sComputedImageurl'] = sComputedImageurl;
     return _json;
   }
 
@@ -116,7 +116,7 @@ class EzsignpageResponseCompound {
         iEzsignpageWidthpdf: mapValueOfType<int>(json, r'iEzsignpageWidthpdf')!,
         iEzsignpageHeightpdf: mapValueOfType<int>(json, r'iEzsignpageHeightpdf')!,
         iEzsignpagePagenumber: mapValueOfType<int>(json, r'iEzsignpagePagenumber')!,
-        sImageUrl: mapValueOfType<String>(json, r'sImageUrl')!,
+        sComputedImageurl: mapValueOfType<String>(json, r'sComputedImageurl')!,
       );
     }
     return null;
@@ -172,7 +172,7 @@ class EzsignpageResponseCompound {
     'iEzsignpageWidthpdf',
     'iEzsignpageHeightpdf',
     'iEzsignpagePagenumber',
-    'sImageUrl',
+    'sComputedImageurl',
   };
 }
 

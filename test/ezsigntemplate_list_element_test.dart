@@ -52,6 +52,12 @@ void main() {
       // TODO
     });
 
+    // The number of total form fields in the Ezsigntemplate.
+    // int iEzsigntemplateFormfieldtotal
+    test('to test the property `iEzsigntemplateFormfieldtotal`', () async {
+      // TODO
+    });
+
     // Indicate the Ezsigntemplate is incomplete and cannot be used
     // bool bEzsigntemplateIncomplete
     test('to test the property `bEzsigntemplateIncomplete`', () async {

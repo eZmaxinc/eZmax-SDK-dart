@@ -56,6 +56,12 @@ void main() {
       // TODO
     });
 
+    // The unique ID of the Systemconfigurationtype
+    // int fkiSystemconfigurationtypeID
+    test('to test the property `fkiSystemconfigurationtypeID`', () async {
+      // TODO
+    });
+
     // An array of permissions granted to the user or api key
     // List<int> aPkiPermissionID (default value: const [])
     test('to test the property `aPkiPermissionID`', () async {

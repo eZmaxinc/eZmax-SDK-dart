@@ -412,19 +412,21 @@ class ObjectWebhookApi {
   /// Parameters:
   ///
   /// * [int] pkiWebhookID (required):
-  Future<Response> webhookTestUrlV1WithHttpInfo(int pkiWebhookID,) async {
+  ///
+  /// * [Object] body (required):
+  Future<Response> webhookTestV1WithHttpInfo(int pkiWebhookID, Object body,) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/webhook/{pkiWebhookID}/test'
       .replaceAll('{pkiWebhookID}', pkiWebhookID.toString());
 
     // ignore: prefer_final_locals
-    Object? postBody;
+    Object? postBody = body;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const contentTypes = <String>[];
+    const contentTypes = <String>['application/json'];
 
 
     return apiClient.invokeAPI(
@@ -445,8 +447,10 @@ class ObjectWebhookApi {
   /// Parameters:
   ///
   /// * [int] pkiWebhookID (required):
-  Future<WebhookTestV1Response?> webhookTestUrlV1(int pkiWebhookID,) async {
-    final response = await webhookTestUrlV1WithHttpInfo(pkiWebhookID,);
+  ///
+  /// * [Object] body (required):
+  Future<WebhookTestV1Response?> webhookTestV1(int pkiWebhookID, Object body,) async {
+    final response = await webhookTestV1WithHttpInfo(pkiWebhookID, body,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

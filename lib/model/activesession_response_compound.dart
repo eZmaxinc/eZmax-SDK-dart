@@ -20,6 +20,7 @@ class ActivesessionResponseCompound {
     required this.sDepartmentNameX,
     required this.bActivesessionDebug,
     required this.pksCustomerCode,
+    this.fkiSystemconfigurationtypeID,
     this.aPkiPermissionID = const [],
     required this.objUserReal,
     this.objUserCloned,
@@ -48,6 +49,17 @@ class ActivesessionResponseCompound {
 
   /// The customer code assigned to your account
   String pksCustomerCode;
+
+  /// The unique ID of the Systemconfigurationtype
+  ///
+  /// Minimum value: 1
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiSystemconfigurationtypeID;
 
   /// An array of permissions granted to the user or api key
   List<int> aPkiPermissionID;
@@ -82,6 +94,7 @@ class ActivesessionResponseCompound {
      other.sDepartmentNameX == sDepartmentNameX &&
      other.bActivesessionDebug == bActivesessionDebug &&
      other.pksCustomerCode == pksCustomerCode &&
+     other.fkiSystemconfigurationtypeID == fkiSystemconfigurationtypeID &&
      other.aPkiPermissionID == aPkiPermissionID &&
      other.objUserReal == objUserReal &&
      other.objUserCloned == objUserCloned &&
@@ -98,6 +111,7 @@ class ActivesessionResponseCompound {
     (sDepartmentNameX.hashCode) +
     (bActivesessionDebug.hashCode) +
     (pksCustomerCode.hashCode) +
+    (fkiSystemconfigurationtypeID == null ? 0 : fkiSystemconfigurationtypeID!.hashCode) +
     (aPkiPermissionID.hashCode) +
     (objUserReal.hashCode) +
     (objUserCloned == null ? 0 : objUserCloned!.hashCode) +
@@ -105,7 +119,7 @@ class ActivesessionResponseCompound {
     (aEModuleInternalname.hashCode);
 
   @override
-  String toString() => 'ActivesessionResponseCompound[eActivesessionUsertype=$eActivesessionUsertype, eActivesessionWeekdaystart=$eActivesessionWeekdaystart, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, bActivesessionDebug=$bActivesessionDebug, pksCustomerCode=$pksCustomerCode, aPkiPermissionID=$aPkiPermissionID, objUserReal=$objUserReal, objUserCloned=$objUserCloned, objApikey=$objApikey, aEModuleInternalname=$aEModuleInternalname]';
+  String toString() => 'ActivesessionResponseCompound[eActivesessionUsertype=$eActivesessionUsertype, eActivesessionWeekdaystart=$eActivesessionWeekdaystart, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, bActivesessionDebug=$bActivesessionDebug, pksCustomerCode=$pksCustomerCode, fkiSystemconfigurationtypeID=$fkiSystemconfigurationtypeID, aPkiPermissionID=$aPkiPermissionID, objUserReal=$objUserReal, objUserCloned=$objUserCloned, objApikey=$objApikey, aEModuleInternalname=$aEModuleInternalname]';
 
   Map<String, dynamic> toJson() {
     final _json = <String, dynamic>{};
@@ -116,6 +130,11 @@ class ActivesessionResponseCompound {
       _json[r'sDepartmentNameX'] = sDepartmentNameX;
       _json[r'bActivesessionDebug'] = bActivesessionDebug;
       _json[r'pksCustomerCode'] = pksCustomerCode;
+    if (fkiSystemconfigurationtypeID != null) {
+      _json[r'fkiSystemconfigurationtypeID'] = fkiSystemconfigurationtypeID;
+    } else {
+      _json[r'fkiSystemconfigurationtypeID'] = null;
+    }
       _json[r'a_pkiPermissionID'] = aPkiPermissionID;
       _json[r'objUserReal'] = objUserReal;
     if (objUserCloned != null) {
@@ -158,6 +177,7 @@ class ActivesessionResponseCompound {
         sDepartmentNameX: mapValueOfType<String>(json, r'sDepartmentNameX')!,
         bActivesessionDebug: mapValueOfType<bool>(json, r'bActivesessionDebug')!,
         pksCustomerCode: mapValueOfType<String>(json, r'pksCustomerCode')!,
+        fkiSystemconfigurationtypeID: mapValueOfType<int>(json, r'fkiSystemconfigurationtypeID'),
         aPkiPermissionID: json[r'a_pkiPermissionID'] is List
             ? (json[r'a_pkiPermissionID'] as List).cast<int>()
             : const [],

@@ -17,8 +17,9 @@ class EzsigntemplateListElement {
     required this.fkiEzsignfoldertypeID,
     required this.fkiLanguageID,
     required this.sEzsigntemplateDescription,
-    required this.iEzsigntemplatedocumentPagetotal,
-    required this.iEzsigntemplateSignaturetotal,
+    this.iEzsigntemplatedocumentPagetotal,
+    this.iEzsigntemplateSignaturetotal,
+    this.iEzsigntemplateFormfieldtotal,
     required this.bEzsigntemplateIncomplete,
     required this.sEzsignfoldertypeNameX,
   });
@@ -45,10 +46,31 @@ class EzsigntemplateListElement {
   /// The number of pages in the Ezsigntemplatedocument.
   ///
   /// Minimum value: 1
-  int iEzsigntemplatedocumentPagetotal;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? iEzsigntemplatedocumentPagetotal;
 
   /// The number of total signatures in the Ezsigntemplate.
-  int iEzsigntemplateSignaturetotal;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? iEzsigntemplateSignaturetotal;
+
+  /// The number of total form fields in the Ezsigntemplate.
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? iEzsigntemplateFormfieldtotal;
 
   /// Indicate the Ezsigntemplate is incomplete and cannot be used
   bool bEzsigntemplateIncomplete;
@@ -64,6 +86,7 @@ class EzsigntemplateListElement {
      other.sEzsigntemplateDescription == sEzsigntemplateDescription &&
      other.iEzsigntemplatedocumentPagetotal == iEzsigntemplatedocumentPagetotal &&
      other.iEzsigntemplateSignaturetotal == iEzsigntemplateSignaturetotal &&
+     other.iEzsigntemplateFormfieldtotal == iEzsigntemplateFormfieldtotal &&
      other.bEzsigntemplateIncomplete == bEzsigntemplateIncomplete &&
      other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX;
 
@@ -74,13 +97,14 @@ class EzsigntemplateListElement {
     (fkiEzsignfoldertypeID.hashCode) +
     (fkiLanguageID.hashCode) +
     (sEzsigntemplateDescription.hashCode) +
-    (iEzsigntemplatedocumentPagetotal.hashCode) +
-    (iEzsigntemplateSignaturetotal.hashCode) +
+    (iEzsigntemplatedocumentPagetotal == null ? 0 : iEzsigntemplatedocumentPagetotal!.hashCode) +
+    (iEzsigntemplateSignaturetotal == null ? 0 : iEzsigntemplateSignaturetotal!.hashCode) +
+    (iEzsigntemplateFormfieldtotal == null ? 0 : iEzsigntemplateFormfieldtotal!.hashCode) +
     (bEzsigntemplateIncomplete.hashCode) +
     (sEzsignfoldertypeNameX.hashCode);
 
   @override
-  String toString() => 'EzsigntemplateListElement[pkiEzsigntemplateID=$pkiEzsigntemplateID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiLanguageID=$fkiLanguageID, sEzsigntemplateDescription=$sEzsigntemplateDescription, iEzsigntemplatedocumentPagetotal=$iEzsigntemplatedocumentPagetotal, iEzsigntemplateSignaturetotal=$iEzsigntemplateSignaturetotal, bEzsigntemplateIncomplete=$bEzsigntemplateIncomplete, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX]';
+  String toString() => 'EzsigntemplateListElement[pkiEzsigntemplateID=$pkiEzsigntemplateID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiLanguageID=$fkiLanguageID, sEzsigntemplateDescription=$sEzsigntemplateDescription, iEzsigntemplatedocumentPagetotal=$iEzsigntemplatedocumentPagetotal, iEzsigntemplateSignaturetotal=$iEzsigntemplateSignaturetotal, iEzsigntemplateFormfieldtotal=$iEzsigntemplateFormfieldtotal, bEzsigntemplateIncomplete=$bEzsigntemplateIncomplete, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX]';
 
   Map<String, dynamic> toJson() {
     final _json = <String, dynamic>{};
@@ -88,8 +112,21 @@ class EzsigntemplateListElement {
       _json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
       _json[r'fkiLanguageID'] = fkiLanguageID;
       _json[r'sEzsigntemplateDescription'] = sEzsigntemplateDescription;
+    if (iEzsigntemplatedocumentPagetotal != null) {
       _json[r'iEzsigntemplatedocumentPagetotal'] = iEzsigntemplatedocumentPagetotal;
+    } else {
+      _json[r'iEzsigntemplatedocumentPagetotal'] = null;
+    }
+    if (iEzsigntemplateSignaturetotal != null) {
       _json[r'iEzsigntemplateSignaturetotal'] = iEzsigntemplateSignaturetotal;
+    } else {
+      _json[r'iEzsigntemplateSignaturetotal'] = null;
+    }
+    if (iEzsigntemplateFormfieldtotal != null) {
+      _json[r'iEzsigntemplateFormfieldtotal'] = iEzsigntemplateFormfieldtotal;
+    } else {
+      _json[r'iEzsigntemplateFormfieldtotal'] = null;
+    }
       _json[r'bEzsigntemplateIncomplete'] = bEzsigntemplateIncomplete;
       _json[r'sEzsignfoldertypeNameX'] = sEzsignfoldertypeNameX;
     return _json;
@@ -118,8 +155,9 @@ class EzsigntemplateListElement {
         fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID')!,
         fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID')!,
         sEzsigntemplateDescription: mapValueOfType<String>(json, r'sEzsigntemplateDescription')!,
-        iEzsigntemplatedocumentPagetotal: mapValueOfType<int>(json, r'iEzsigntemplatedocumentPagetotal')!,
-        iEzsigntemplateSignaturetotal: mapValueOfType<int>(json, r'iEzsigntemplateSignaturetotal')!,
+        iEzsigntemplatedocumentPagetotal: mapValueOfType<int>(json, r'iEzsigntemplatedocumentPagetotal'),
+        iEzsigntemplateSignaturetotal: mapValueOfType<int>(json, r'iEzsigntemplateSignaturetotal'),
+        iEzsigntemplateFormfieldtotal: mapValueOfType<int>(json, r'iEzsigntemplateFormfieldtotal'),
         bEzsigntemplateIncomplete: mapValueOfType<bool>(json, r'bEzsigntemplateIncomplete')!,
         sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX')!,
       );
@@ -175,8 +213,6 @@ class EzsigntemplateListElement {
     'fkiEzsignfoldertypeID',
     'fkiLanguageID',
     'sEzsigntemplateDescription',
-    'iEzsigntemplatedocumentPagetotal',
-    'iEzsigntemplateSignaturetotal',
     'bEzsigntemplateIncomplete',
     'sEzsignfoldertypeNameX',
   };

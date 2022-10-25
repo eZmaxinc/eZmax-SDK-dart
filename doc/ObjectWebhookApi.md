@@ -15,7 +15,7 @@ Method | HTTP request | Description
 [**webhookGetHistoryV1**](ObjectWebhookApi.md#webhookgethistoryv1) | **GET** /1/object/webhook/{pkiWebhookID}/getHistory | Retrieve the logs for recent Webhook calls
 [**webhookGetListV1**](ObjectWebhookApi.md#webhookgetlistv1) | **GET** /1/object/webhook/getList | Retrieve Webhook list
 [**webhookGetObjectV1**](ObjectWebhookApi.md#webhookgetobjectv1) | **GET** /1/object/webhook/{pkiWebhookID} | Retrieve an existing Webhook
-[**webhookTestUrlV1**](ObjectWebhookApi.md#webhooktesturlv1) | **POST** /1/object/webhook/{pkiWebhookID}/test | Test the Webhook by calling the Url
+[**webhookTestV1**](ObjectWebhookApi.md#webhooktestv1) | **POST** /1/object/webhook/{pkiWebhookID}/test | Test the Webhook by calling the Url
 
 
 # **webhookCreateObjectV1**
@@ -312,8 +312,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **webhookTestUrlV1**
-> WebhookTestV1Response webhookTestUrlV1(pkiWebhookID)
+# **webhookTestV1**
+> WebhookTestV1Response webhookTestV1(pkiWebhookID, body)
 
 Test the Webhook by calling the Url
 
@@ -329,12 +329,13 @@ import 'package:openapi/api.dart';
 
 final api_instance = ObjectWebhookApi();
 final pkiWebhookID = 56; // int | 
+final body = Object(); // Object | 
 
 try {
-    final result = api_instance.webhookTestUrlV1(pkiWebhookID);
+    final result = api_instance.webhookTestV1(pkiWebhookID, body);
     print(result);
 } catch (e) {
-    print('Exception when calling ObjectWebhookApi->webhookTestUrlV1: $e\n');
+    print('Exception when calling ObjectWebhookApi->webhookTestV1: $e\n');
 }
 ```
 
@@ -343,6 +344,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiWebhookID** | **int**|  | 
+ **body** | **Object**|  | 
 
 ### Return type
 
@@ -354,7 +356,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

@@ -17,6 +17,7 @@ class EzsignbulksendResponse {
     required this.fkiEzsignfoldertypeID,
     required this.fkiLanguageID,
     required this.sLanguageNameX,
+    required this.eEzsignfoldertypePrivacylevel,
     required this.sEzsignfoldertypeNameX,
     required this.sEzsignbulksendDescription,
     required this.tEzsignbulksendNote,
@@ -44,6 +45,8 @@ class EzsignbulksendResponse {
   /// The Name of the Language in the language of the requester
   String sLanguageNameX;
 
+  FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel;
+
   /// The name of the Ezsignfoldertype in the language of the requester
   String sEzsignfoldertypeNameX;
 
@@ -67,6 +70,7 @@ class EzsignbulksendResponse {
      other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
      other.fkiLanguageID == fkiLanguageID &&
      other.sLanguageNameX == sLanguageNameX &&
+     other.eEzsignfoldertypePrivacylevel == eEzsignfoldertypePrivacylevel &&
      other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
      other.sEzsignbulksendDescription == sEzsignbulksendDescription &&
      other.tEzsignbulksendNote == tEzsignbulksendNote &&
@@ -81,6 +85,7 @@ class EzsignbulksendResponse {
     (fkiEzsignfoldertypeID.hashCode) +
     (fkiLanguageID.hashCode) +
     (sLanguageNameX.hashCode) +
+    (eEzsignfoldertypePrivacylevel.hashCode) +
     (sEzsignfoldertypeNameX.hashCode) +
     (sEzsignbulksendDescription.hashCode) +
     (tEzsignbulksendNote.hashCode) +
@@ -89,7 +94,7 @@ class EzsignbulksendResponse {
     (objAudit.hashCode);
 
   @override
-  String toString() => 'EzsignbulksendResponse[pkiEzsignbulksendID=$pkiEzsignbulksendID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiLanguageID=$fkiLanguageID, sLanguageNameX=$sLanguageNameX, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, sEzsignbulksendDescription=$sEzsignbulksendDescription, tEzsignbulksendNote=$tEzsignbulksendNote, bEzsignbulksendNeedvalidation=$bEzsignbulksendNeedvalidation, bEzsignbulksendIsactive=$bEzsignbulksendIsactive, objAudit=$objAudit]';
+  String toString() => 'EzsignbulksendResponse[pkiEzsignbulksendID=$pkiEzsignbulksendID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiLanguageID=$fkiLanguageID, sLanguageNameX=$sLanguageNameX, eEzsignfoldertypePrivacylevel=$eEzsignfoldertypePrivacylevel, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, sEzsignbulksendDescription=$sEzsignbulksendDescription, tEzsignbulksendNote=$tEzsignbulksendNote, bEzsignbulksendNeedvalidation=$bEzsignbulksendNeedvalidation, bEzsignbulksendIsactive=$bEzsignbulksendIsactive, objAudit=$objAudit]';
 
   Map<String, dynamic> toJson() {
     final _json = <String, dynamic>{};
@@ -97,6 +102,7 @@ class EzsignbulksendResponse {
       _json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
       _json[r'fkiLanguageID'] = fkiLanguageID;
       _json[r'sLanguageNameX'] = sLanguageNameX;
+      _json[r'eEzsignfoldertypePrivacylevel'] = eEzsignfoldertypePrivacylevel;
       _json[r'sEzsignfoldertypeNameX'] = sEzsignfoldertypeNameX;
       _json[r'sEzsignbulksendDescription'] = sEzsignbulksendDescription;
       _json[r'tEzsignbulksendNote'] = tEzsignbulksendNote;
@@ -129,6 +135,7 @@ class EzsignbulksendResponse {
         fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID')!,
         fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID')!,
         sLanguageNameX: mapValueOfType<String>(json, r'sLanguageNameX')!,
+        eEzsignfoldertypePrivacylevel: FieldEEzsignfoldertypePrivacylevel.fromJson(json[r'eEzsignfoldertypePrivacylevel'])!,
         sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX')!,
         sEzsignbulksendDescription: mapValueOfType<String>(json, r'sEzsignbulksendDescription')!,
         tEzsignbulksendNote: mapValueOfType<String>(json, r'tEzsignbulksendNote')!,
@@ -188,6 +195,7 @@ class EzsignbulksendResponse {
     'fkiEzsignfoldertypeID',
     'fkiLanguageID',
     'sLanguageNameX',
+    'eEzsignfoldertypePrivacylevel',
     'sEzsignfoldertypeNameX',
     'sEzsignbulksendDescription',
     'tEzsignbulksendNote',

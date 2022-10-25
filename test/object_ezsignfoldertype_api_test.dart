@@ -44,6 +44,15 @@ void main() {
       // TODO
     });
 
+    // Retrieve Ezsignfoldertypes and IDs
+    //
+    // Get the list of Ezsignfoldertype to be used in a dropdown or autocomplete control.
+    //
+    //Future<EzsignfoldertypeGetAutocompleteV2Response> ezsignfoldertypeGetAutocompleteV2(String sSelector, { String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage }) async
+    test('test ezsignfoldertypeGetAutocompleteV2', () async {
+      // TODO
+    });
+
     // Retrieve Ezsignfoldertype list
     //
     // Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |

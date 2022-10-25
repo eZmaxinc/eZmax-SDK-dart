@@ -34,6 +34,12 @@ void main() {
       // TODO
     });
 
+    // The unique ID of the Ezsigntemplatesigner
+    // int fkiEzsigntemplatesignerIDValidation
+    test('to test the property `fkiEzsigntemplatesignerIDValidation`', () async {
+      // TODO
+    });
+
     // The page number in the Ezsigntemplatedocument
     // int iEzsigntemplatedocumentpagePagenumber
     test('to test the property `iEzsigntemplatedocumentpagePagenumber`', () async {
@@ -76,6 +82,29 @@ void main() {
 
     // FieldEEzsigntemplatesignatureFont eEzsigntemplatesignatureFont
     test('to test the property `eEzsigntemplatesignatureFont`', () async {
+      // TODO
+    });
+
+    // The step when the Ezsigntemplatesigner will be invited to validate the Ezsigntemplatesignature of eEzsigntemplatesignatureType Attachments
+    // int iEzsigntemplatesignatureValidationstep
+    test('to test the property `iEzsigntemplatesignatureValidationstep`', () async {
+      // TODO
+    });
+
+    // The description attached to the attachment name added in Ezsigntemplatesignature of eEzsigntemplatesignatureType Attachments
+    // String sEzsigntemplatesignatureAttachmentdescription
+    test('to test the property `sEzsigntemplatesignatureAttachmentdescription`', () async {
+      // TODO
+    });
+
+    // FieldEEzsigntemplatesignatureAttachmentnamesource eEzsigntemplatesignatureAttachmentnamesource
+    test('to test the property `eEzsigntemplatesignatureAttachmentnamesource`', () async {
+      // TODO
+    });
+
+    // Whether the Ezsigntemplatesignature is required or not. This field is relevant only with Ezsigntemplatesignature with eEzsigntemplatesignatureType = Attachments.
+    // bool bEzsigntemplatesignatureRequired
+    test('to test the property `bEzsigntemplatesignatureRequired`', () async {
       // TODO
     });
 

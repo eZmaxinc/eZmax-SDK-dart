@@ -168,6 +168,18 @@ void main() {
       // TODO
     });
 
+    // Whether we include the proof with the signed Ezsigndocument for Ezsignsigners
+    // bool bEzsignfoldertypeIncludeproofsigner
+    test('to test the property `bEzsignfoldertypeIncludeproofsigner`', () async {
+      // TODO
+    });
+
+    // Whether we include the proof with the signed Ezsigndocument for users
+    // bool bEzsignfoldertypeIncludeproofuser
+    test('to test the property `bEzsignfoldertypeIncludeproofuser`', () async {
+      // TODO
+    });
+
     // Whether the Ezsignfoldertype is active or not
     // bool bEzsignfoldertypeIsactive
     test('to test the property `bEzsignfoldertypeIsactive`', () async {

@@ -10,7 +10,7 @@
 
 part of openapi.api;
 
-/// The type of signature.  1. **Acknowledgement** is for an acknowledgment of receipt. 2. **City** is to request the city where the document is signed. 2. **Handwritten** is for a handwritten kind of signature where users needs to \"draw\" their signature on screen. 3. **Initials** is a simple \"click to add initials\" block. 4. **Name** is a simple \"Click to sign\" block. This is the most common block of signature.
+/// The type of signature.  1. **Acknowledgement** is for an acknowledgment of receipt. 2. **City** is to request the city where the document is signed. 3. **Handwritten** is for a handwritten kind of signature where users needs to \"draw\" their signature on screen. 4. **Initials** is a simple \"click to add initials\" block. 5. **Name** is a simple \"Click to sign\" block. This is the most common block of signature. 6. **Attachments** is to ask for files as attachment that may be validate in another step.    
 class FieldEEzsigntemplatesignatureType {
   /// Instantiate a new enum with the provided [value].
   const FieldEEzsigntemplatesignatureType._(this.value);
@@ -28,6 +28,7 @@ class FieldEEzsigntemplatesignatureType {
   static const handwritten = FieldEEzsigntemplatesignatureType._(r'Handwritten');
   static const initials = FieldEEzsigntemplatesignatureType._(r'Initials');
   static const name = FieldEEzsigntemplatesignatureType._(r'Name');
+  static const attachments = FieldEEzsigntemplatesignatureType._(r'Attachments');
 
   /// List of all possible values in this [enum][FieldEEzsigntemplatesignatureType].
   static const values = <FieldEEzsigntemplatesignatureType>[
@@ -36,6 +37,7 @@ class FieldEEzsigntemplatesignatureType {
     handwritten,
     initials,
     name,
+    attachments,
   ];
 
   static FieldEEzsigntemplatesignatureType? fromJson(dynamic value) => FieldEEzsigntemplatesignatureTypeTypeTransformer().decode(value);
@@ -79,6 +81,7 @@ class FieldEEzsigntemplatesignatureTypeTypeTransformer {
         case r'Handwritten': return FieldEEzsigntemplatesignatureType.handwritten;
         case r'Initials': return FieldEEzsigntemplatesignatureType.initials;
         case r'Name': return FieldEEzsigntemplatesignatureType.name;
+        case r'Attachments': return FieldEEzsigntemplatesignatureType.attachments;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');

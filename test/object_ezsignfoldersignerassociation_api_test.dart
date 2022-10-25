@@ -53,6 +53,15 @@ void main() {
       // TODO
     });
 
+    // Disconnects the Ezsignfoldersignerassociation
+    //
+    // 
+    //
+    //Future<EzsignfoldersignerassociationForceDisconnectV1Response> ezsignfoldersignerassociationForceDisconnectV1(int pkiEzsignfoldersignerassociationID, Object body) async
+    test('test ezsignfoldersignerassociationForceDisconnectV1', () async {
+      // TODO
+    });
+
     // Retrieve a Login Url to allow In-Person signing
     //
     // This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.  The signer Login type must be configured as In-Person.

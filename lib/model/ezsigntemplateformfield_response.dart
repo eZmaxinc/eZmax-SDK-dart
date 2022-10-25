@@ -16,7 +16,7 @@ class EzsigntemplateformfieldResponse {
     required this.pkiEzsigntemplateformfieldID,
     required this.iEzsigntemplatedocumentpagePagenumber,
     required this.sEzsigntemplateformfieldLabel,
-    required this.sEzsigntemplateformfieldValue,
+    this.sEzsigntemplateformfieldValue,
     required this.iEzsigntemplateformfieldX,
     required this.iEzsigntemplateformfieldY,
     required this.iEzsigntemplateformfieldWidth,
@@ -38,7 +38,13 @@ class EzsigntemplateformfieldResponse {
   String sEzsigntemplateformfieldLabel;
 
   /// The value for the Ezsigntemplateformfield  This can only be set if eEzsigntemplateformfieldgroupType is Checkbox or Radio
-  String sEzsigntemplateformfieldValue;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEzsigntemplateformfieldValue;
 
   /// The X coordinate (Horizontal) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 2 inches from the left border of the page, you would use \"200\" for the X coordinate.
   ///
@@ -87,7 +93,7 @@ class EzsigntemplateformfieldResponse {
     (pkiEzsigntemplateformfieldID.hashCode) +
     (iEzsigntemplatedocumentpagePagenumber.hashCode) +
     (sEzsigntemplateformfieldLabel.hashCode) +
-    (sEzsigntemplateformfieldValue.hashCode) +
+    (sEzsigntemplateformfieldValue == null ? 0 : sEzsigntemplateformfieldValue!.hashCode) +
     (iEzsigntemplateformfieldX.hashCode) +
     (iEzsigntemplateformfieldY.hashCode) +
     (iEzsigntemplateformfieldWidth.hashCode) +
@@ -102,7 +108,11 @@ class EzsigntemplateformfieldResponse {
       _json[r'pkiEzsigntemplateformfieldID'] = pkiEzsigntemplateformfieldID;
       _json[r'iEzsigntemplatedocumentpagePagenumber'] = iEzsigntemplatedocumentpagePagenumber;
       _json[r'sEzsigntemplateformfieldLabel'] = sEzsigntemplateformfieldLabel;
+    if (sEzsigntemplateformfieldValue != null) {
       _json[r'sEzsigntemplateformfieldValue'] = sEzsigntemplateformfieldValue;
+    } else {
+      _json[r'sEzsigntemplateformfieldValue'] = null;
+    }
       _json[r'iEzsigntemplateformfieldX'] = iEzsigntemplateformfieldX;
       _json[r'iEzsigntemplateformfieldY'] = iEzsigntemplateformfieldY;
       _json[r'iEzsigntemplateformfieldWidth'] = iEzsigntemplateformfieldWidth;
@@ -137,7 +147,7 @@ class EzsigntemplateformfieldResponse {
         pkiEzsigntemplateformfieldID: mapValueOfType<int>(json, r'pkiEzsigntemplateformfieldID')!,
         iEzsigntemplatedocumentpagePagenumber: mapValueOfType<int>(json, r'iEzsigntemplatedocumentpagePagenumber')!,
         sEzsigntemplateformfieldLabel: mapValueOfType<String>(json, r'sEzsigntemplateformfieldLabel')!,
-        sEzsigntemplateformfieldValue: mapValueOfType<String>(json, r'sEzsigntemplateformfieldValue')!,
+        sEzsigntemplateformfieldValue: mapValueOfType<String>(json, r'sEzsigntemplateformfieldValue'),
         iEzsigntemplateformfieldX: mapValueOfType<int>(json, r'iEzsigntemplateformfieldX')!,
         iEzsigntemplateformfieldY: mapValueOfType<int>(json, r'iEzsigntemplateformfieldY')!,
         iEzsigntemplateformfieldWidth: mapValueOfType<int>(json, r'iEzsigntemplateformfieldWidth')!,
@@ -195,7 +205,6 @@ class EzsigntemplateformfieldResponse {
     'pkiEzsigntemplateformfieldID',
     'iEzsigntemplatedocumentpagePagenumber',
     'sEzsigntemplateformfieldLabel',
-    'sEzsigntemplateformfieldValue',
     'iEzsigntemplateformfieldX',
     'iEzsigntemplateformfieldY',
     'iEzsigntemplateformfieldWidth',

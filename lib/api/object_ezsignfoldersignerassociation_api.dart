@@ -246,6 +246,67 @@ class ObjectEzsignfoldersignerassociationApi {
     return null;
   }
 
+  /// Disconnects the Ezsignfoldersignerassociation
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfoldersignerassociationID (required):
+  ///
+  /// * [Object] body (required):
+  Future<Response> ezsignfoldersignerassociationForceDisconnectV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, Object body,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/forceDisconnect'
+      .replaceAll('{pkiEzsignfoldersignerassociationID}', pkiEzsignfoldersignerassociationID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = body;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Disconnects the Ezsignfoldersignerassociation
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfoldersignerassociationID (required):
+  ///
+  /// * [Object] body (required):
+  Future<EzsignfoldersignerassociationForceDisconnectV1Response?> ezsignfoldersignerassociationForceDisconnectV1(int pkiEzsignfoldersignerassociationID, Object body,) async {
+    final response = await ezsignfoldersignerassociationForceDisconnectV1WithHttpInfo(pkiEzsignfoldersignerassociationID, body,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfoldersignerassociationForceDisconnectV1Response',) as EzsignfoldersignerassociationForceDisconnectV1Response;
+    
+    }
+    return null;
+  }
+
   /// Retrieve a Login Url to allow In-Person signing
   ///
   /// This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.  The signer Login type must be configured as In-Person.

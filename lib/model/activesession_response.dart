@@ -20,6 +20,7 @@ class ActivesessionResponse {
     required this.sDepartmentNameX,
     required this.bActivesessionDebug,
     required this.pksCustomerCode,
+    this.fkiSystemconfigurationtypeID,
   });
 
   FieldEActivesessionUsertype eActivesessionUsertype;
@@ -44,6 +45,17 @@ class ActivesessionResponse {
   /// The customer code assigned to your account
   String pksCustomerCode;
 
+  /// The unique ID of the Systemconfigurationtype
+  ///
+  /// Minimum value: 1
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiSystemconfigurationtypeID;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is ActivesessionResponse &&
      other.eActivesessionUsertype == eActivesessionUsertype &&
@@ -52,7 +64,8 @@ class ActivesessionResponse {
      other.sCompanyNameX == sCompanyNameX &&
      other.sDepartmentNameX == sDepartmentNameX &&
      other.bActivesessionDebug == bActivesessionDebug &&
-     other.pksCustomerCode == pksCustomerCode;
+     other.pksCustomerCode == pksCustomerCode &&
+     other.fkiSystemconfigurationtypeID == fkiSystemconfigurationtypeID;
 
   @override
   int get hashCode =>
@@ -63,10 +76,11 @@ class ActivesessionResponse {
     (sCompanyNameX.hashCode) +
     (sDepartmentNameX.hashCode) +
     (bActivesessionDebug.hashCode) +
-    (pksCustomerCode.hashCode);
+    (pksCustomerCode.hashCode) +
+    (fkiSystemconfigurationtypeID == null ? 0 : fkiSystemconfigurationtypeID!.hashCode);
 
   @override
-  String toString() => 'ActivesessionResponse[eActivesessionUsertype=$eActivesessionUsertype, eActivesessionWeekdaystart=$eActivesessionWeekdaystart, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, bActivesessionDebug=$bActivesessionDebug, pksCustomerCode=$pksCustomerCode]';
+  String toString() => 'ActivesessionResponse[eActivesessionUsertype=$eActivesessionUsertype, eActivesessionWeekdaystart=$eActivesessionWeekdaystart, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, bActivesessionDebug=$bActivesessionDebug, pksCustomerCode=$pksCustomerCode, fkiSystemconfigurationtypeID=$fkiSystemconfigurationtypeID]';
 
   Map<String, dynamic> toJson() {
     final _json = <String, dynamic>{};
@@ -77,6 +91,11 @@ class ActivesessionResponse {
       _json[r'sDepartmentNameX'] = sDepartmentNameX;
       _json[r'bActivesessionDebug'] = bActivesessionDebug;
       _json[r'pksCustomerCode'] = pksCustomerCode;
+    if (fkiSystemconfigurationtypeID != null) {
+      _json[r'fkiSystemconfigurationtypeID'] = fkiSystemconfigurationtypeID;
+    } else {
+      _json[r'fkiSystemconfigurationtypeID'] = null;
+    }
     return _json;
   }
 
@@ -106,6 +125,7 @@ class ActivesessionResponse {
         sDepartmentNameX: mapValueOfType<String>(json, r'sDepartmentNameX')!,
         bActivesessionDebug: mapValueOfType<bool>(json, r'bActivesessionDebug')!,
         pksCustomerCode: mapValueOfType<String>(json, r'pksCustomerCode')!,
+        fkiSystemconfigurationtypeID: mapValueOfType<int>(json, r'fkiSystemconfigurationtypeID'),
       );
     }
     return null;

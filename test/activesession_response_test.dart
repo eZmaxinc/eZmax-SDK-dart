@@ -56,6 +56,12 @@ void main() {
       // TODO
     });
 
+    // The unique ID of the Systemconfigurationtype
+    // int fkiSystemconfigurationtypeID
+    test('to test the property `fkiSystemconfigurationtypeID`', () async {
+      // TODO
+    });
+
 
   });
 

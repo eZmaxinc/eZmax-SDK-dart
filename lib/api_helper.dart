@@ -64,6 +64,21 @@ String parameterToString(dynamic value) {
   if (value is FieldEBrandingLogo) {
     return FieldEBrandingLogoTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEEzmaxinvoicingPaymenttype) {
+    return FieldEEzmaxinvoicingPaymenttypeTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzmaxinvoicingagentVariationezmax) {
+    return FieldEEzmaxinvoicingagentVariationezmaxTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzmaxinvoicingagentVariationezsign) {
+    return FieldEEzmaxinvoicingagentVariationezsignTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzmaxinvoicingcontractPaymenttype) {
+    return FieldEEzmaxinvoicingcontractPaymenttypeTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzmaxinvoicinguserVariationezsign) {
+    return FieldEEzmaxinvoicinguserVariationezsignTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEEzsigndocumentStep) {
     return FieldEEzsigndocumentStepTypeTransformer().encode(value).toString();
   }
@@ -114,6 +129,9 @@ String parameterToString(dynamic value) {
   }
   if (value is FieldEEzsigntemplateformfieldgroupType) {
     return FieldEEzsigntemplateformfieldgroupTypeTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsigntemplatesignatureAttachmentnamesource) {
+    return FieldEEzsigntemplatesignatureAttachmentnamesourceTypeTransformer().encode(value).toString();
   }
   if (value is FieldEEzsigntemplatesignatureFont) {
     return FieldEEzsigntemplatesignatureFontTypeTransformer().encode(value).toString();

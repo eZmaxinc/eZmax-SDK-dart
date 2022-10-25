@@ -26,5 +26,14 @@ void main() {
       // TODO
     });
 
+    // Retrieve Usergroups and IDs
+    //
+    // Get the list of Usergroup to be used in a dropdown or autocomplete control.
+    //
+    //Future<UsergroupGetAutocompleteV2Response> usergroupGetAutocompleteV2(String sSelector, { String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage }) async
+    test('test usergroupGetAutocompleteV2', () async {
+      // TODO
+    });
+
   });
 }

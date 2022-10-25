@@ -39,6 +39,8 @@ class EzsignfoldertypeRequestCompound {
     this.bEzsignfoldertypeSendsummarytofullgroup,
     this.bEzsignfoldertypeSendsummarytolimitedgroup,
     required this.bEzsignfoldertypeSendsummarytocolleague,
+    required this.bEzsignfoldertypeIncludeproofsigner,
+    required this.bEzsignfoldertypeIncludeproofuser,
     required this.bEzsignfoldertypeIsactive,
     this.aFkiUserIDSigned = const [],
     this.aFkiUserIDSummary = const [],
@@ -218,6 +220,12 @@ class EzsignfoldertypeRequestCompound {
   /// Whether we send the summary to the colleagues
   bool bEzsignfoldertypeSendsummarytocolleague;
 
+  /// Whether we include the proof with the signed Ezsigndocument for Ezsignsigners
+  bool bEzsignfoldertypeIncludeproofsigner;
+
+  /// Whether we include the proof with the signed Ezsigndocument for users
+  bool bEzsignfoldertypeIncludeproofuser;
+
   /// Whether the Ezsignfoldertype is active or not
   bool bEzsignfoldertypeIsactive;
 
@@ -253,6 +261,8 @@ class EzsignfoldertypeRequestCompound {
      other.bEzsignfoldertypeSendsummarytofullgroup == bEzsignfoldertypeSendsummarytofullgroup &&
      other.bEzsignfoldertypeSendsummarytolimitedgroup == bEzsignfoldertypeSendsummarytolimitedgroup &&
      other.bEzsignfoldertypeSendsummarytocolleague == bEzsignfoldertypeSendsummarytocolleague &&
+     other.bEzsignfoldertypeIncludeproofsigner == bEzsignfoldertypeIncludeproofsigner &&
+     other.bEzsignfoldertypeIncludeproofuser == bEzsignfoldertypeIncludeproofuser &&
      other.bEzsignfoldertypeIsactive == bEzsignfoldertypeIsactive &&
      other.aFkiUserIDSigned == aFkiUserIDSigned &&
      other.aFkiUserIDSummary == aFkiUserIDSummary;
@@ -286,12 +296,14 @@ class EzsignfoldertypeRequestCompound {
     (bEzsignfoldertypeSendsummarytofullgroup == null ? 0 : bEzsignfoldertypeSendsummarytofullgroup!.hashCode) +
     (bEzsignfoldertypeSendsummarytolimitedgroup == null ? 0 : bEzsignfoldertypeSendsummarytolimitedgroup!.hashCode) +
     (bEzsignfoldertypeSendsummarytocolleague.hashCode) +
+    (bEzsignfoldertypeIncludeproofsigner.hashCode) +
+    (bEzsignfoldertypeIncludeproofuser.hashCode) +
     (bEzsignfoldertypeIsactive.hashCode) +
     (aFkiUserIDSigned.hashCode) +
     (aFkiUserIDSummary.hashCode);
 
   @override
-  String toString() => 'EzsignfoldertypeRequestCompound[pkiEzsignfoldertypeID=$pkiEzsignfoldertypeID, objEzsignfoldertypeName=$objEzsignfoldertypeName, fkiBrandingID=$fkiBrandingID, fkiBillingentityinternalID=$fkiBillingentityinternalID, fkiUsergroupID=$fkiUsergroupID, fkiUsergroupIDRestricted=$fkiUsergroupIDRestricted, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sEmailAddressSigned=$sEmailAddressSigned, sEmailAddressSummary=$sEmailAddressSummary, eEzsignfoldertypePrivacylevel=$eEzsignfoldertypePrivacylevel, eEzsignfoldertypeSendreminderfrequency=$eEzsignfoldertypeSendreminderfrequency, iEzsignfoldertypeArchivaldays=$iEzsignfoldertypeArchivaldays, eEzsignfoldertypeDisposal=$eEzsignfoldertypeDisposal, iEzsignfoldertypeDisposaldays=$iEzsignfoldertypeDisposaldays, iEzsignfoldertypeDeadlinedays=$iEzsignfoldertypeDeadlinedays, bEzsignfoldertypeSendattatchmentsigner=$bEzsignfoldertypeSendattatchmentsigner, bEzsignfoldertypeSendsignedtodocumentowner=$bEzsignfoldertypeSendsignedtodocumentowner, bEzsignfoldertypeSendsignedtofolderowner=$bEzsignfoldertypeSendsignedtofolderowner, bEzsignfoldertypeSendsignedtofullgroup=$bEzsignfoldertypeSendsignedtofullgroup, bEzsignfoldertypeSendsignedtolimitedgroup=$bEzsignfoldertypeSendsignedtolimitedgroup, bEzsignfoldertypeSendsignedtocolleague=$bEzsignfoldertypeSendsignedtocolleague, bEzsignfoldertypeSendsummarytodocumentowner=$bEzsignfoldertypeSendsummarytodocumentowner, bEzsignfoldertypeSendsummarytofolderowner=$bEzsignfoldertypeSendsummarytofolderowner, bEzsignfoldertypeSendsummarytofullgroup=$bEzsignfoldertypeSendsummarytofullgroup, bEzsignfoldertypeSendsummarytolimitedgroup=$bEzsignfoldertypeSendsummarytolimitedgroup, bEzsignfoldertypeSendsummarytocolleague=$bEzsignfoldertypeSendsummarytocolleague, bEzsignfoldertypeIsactive=$bEzsignfoldertypeIsactive, aFkiUserIDSigned=$aFkiUserIDSigned, aFkiUserIDSummary=$aFkiUserIDSummary]';
+  String toString() => 'EzsignfoldertypeRequestCompound[pkiEzsignfoldertypeID=$pkiEzsignfoldertypeID, objEzsignfoldertypeName=$objEzsignfoldertypeName, fkiBrandingID=$fkiBrandingID, fkiBillingentityinternalID=$fkiBillingentityinternalID, fkiUsergroupID=$fkiUsergroupID, fkiUsergroupIDRestricted=$fkiUsergroupIDRestricted, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sEmailAddressSigned=$sEmailAddressSigned, sEmailAddressSummary=$sEmailAddressSummary, eEzsignfoldertypePrivacylevel=$eEzsignfoldertypePrivacylevel, eEzsignfoldertypeSendreminderfrequency=$eEzsignfoldertypeSendreminderfrequency, iEzsignfoldertypeArchivaldays=$iEzsignfoldertypeArchivaldays, eEzsignfoldertypeDisposal=$eEzsignfoldertypeDisposal, iEzsignfoldertypeDisposaldays=$iEzsignfoldertypeDisposaldays, iEzsignfoldertypeDeadlinedays=$iEzsignfoldertypeDeadlinedays, bEzsignfoldertypeSendattatchmentsigner=$bEzsignfoldertypeSendattatchmentsigner, bEzsignfoldertypeSendsignedtodocumentowner=$bEzsignfoldertypeSendsignedtodocumentowner, bEzsignfoldertypeSendsignedtofolderowner=$bEzsignfoldertypeSendsignedtofolderowner, bEzsignfoldertypeSendsignedtofullgroup=$bEzsignfoldertypeSendsignedtofullgroup, bEzsignfoldertypeSendsignedtolimitedgroup=$bEzsignfoldertypeSendsignedtolimitedgroup, bEzsignfoldertypeSendsignedtocolleague=$bEzsignfoldertypeSendsignedtocolleague, bEzsignfoldertypeSendsummarytodocumentowner=$bEzsignfoldertypeSendsummarytodocumentowner, bEzsignfoldertypeSendsummarytofolderowner=$bEzsignfoldertypeSendsummarytofolderowner, bEzsignfoldertypeSendsummarytofullgroup=$bEzsignfoldertypeSendsummarytofullgroup, bEzsignfoldertypeSendsummarytolimitedgroup=$bEzsignfoldertypeSendsummarytolimitedgroup, bEzsignfoldertypeSendsummarytocolleague=$bEzsignfoldertypeSendsummarytocolleague, bEzsignfoldertypeIncludeproofsigner=$bEzsignfoldertypeIncludeproofsigner, bEzsignfoldertypeIncludeproofuser=$bEzsignfoldertypeIncludeproofuser, bEzsignfoldertypeIsactive=$bEzsignfoldertypeIsactive, aFkiUserIDSigned=$aFkiUserIDSigned, aFkiUserIDSummary=$aFkiUserIDSummary]';
 
   Map<String, dynamic> toJson() {
     final _json = <String, dynamic>{};
@@ -373,6 +385,8 @@ class EzsignfoldertypeRequestCompound {
       _json[r'bEzsignfoldertypeSendsummarytolimitedgroup'] = null;
     }
       _json[r'bEzsignfoldertypeSendsummarytocolleague'] = bEzsignfoldertypeSendsummarytocolleague;
+      _json[r'bEzsignfoldertypeIncludeproofsigner'] = bEzsignfoldertypeIncludeproofsigner;
+      _json[r'bEzsignfoldertypeIncludeproofuser'] = bEzsignfoldertypeIncludeproofuser;
       _json[r'bEzsignfoldertypeIsactive'] = bEzsignfoldertypeIsactive;
       _json[r'a_fkiUserIDSigned'] = aFkiUserIDSigned;
       _json[r'a_fkiUserIDSummary'] = aFkiUserIDSummary;
@@ -424,6 +438,8 @@ class EzsignfoldertypeRequestCompound {
         bEzsignfoldertypeSendsummarytofullgroup: mapValueOfType<bool>(json, r'bEzsignfoldertypeSendsummarytofullgroup'),
         bEzsignfoldertypeSendsummarytolimitedgroup: mapValueOfType<bool>(json, r'bEzsignfoldertypeSendsummarytolimitedgroup'),
         bEzsignfoldertypeSendsummarytocolleague: mapValueOfType<bool>(json, r'bEzsignfoldertypeSendsummarytocolleague')!,
+        bEzsignfoldertypeIncludeproofsigner: mapValueOfType<bool>(json, r'bEzsignfoldertypeIncludeproofsigner')!,
+        bEzsignfoldertypeIncludeproofuser: mapValueOfType<bool>(json, r'bEzsignfoldertypeIncludeproofuser')!,
         bEzsignfoldertypeIsactive: mapValueOfType<bool>(json, r'bEzsignfoldertypeIsactive')!,
         aFkiUserIDSigned: json[r'a_fkiUserIDSigned'] is List
             ? (json[r'a_fkiUserIDSigned'] as List).cast<int>()
@@ -493,6 +509,8 @@ class EzsignfoldertypeRequestCompound {
     'bEzsignfoldertypeSendsummarytodocumentowner',
     'bEzsignfoldertypeSendsummarytofolderowner',
     'bEzsignfoldertypeSendsummarytocolleague',
+    'bEzsignfoldertypeIncludeproofsigner',
+    'bEzsignfoldertypeIncludeproofuser',
     'bEzsignfoldertypeIsactive',
   };
 }

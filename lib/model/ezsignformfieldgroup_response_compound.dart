@@ -19,7 +19,7 @@ class EzsignformfieldgroupResponseCompound {
     required this.eEzsignformfieldgroupSignerrequirement,
     required this.sEzsignformfieldgroupLabel,
     required this.iEzsignformfieldgroupStep,
-    required this.sEzsignformfieldgroupDefaultvalue,
+    this.sEzsignformfieldgroupDefaultvalue,
     required this.iEzsignformfieldgroupFilledmin,
     required this.iEzsignformfieldgroupFilledmax,
     required this.bEzsignformfieldgroupReadonly,
@@ -56,7 +56,13 @@ class EzsignformfieldgroupResponseCompound {
   int iEzsignformfieldgroupStep;
 
   /// The default value for the Ezsignformfieldgroup
-  String sEzsignformfieldgroupDefaultvalue;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEzsignformfieldgroupDefaultvalue;
 
   /// The minimum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup
   ///
@@ -153,7 +159,7 @@ class EzsignformfieldgroupResponseCompound {
     (eEzsignformfieldgroupSignerrequirement.hashCode) +
     (sEzsignformfieldgroupLabel.hashCode) +
     (iEzsignformfieldgroupStep.hashCode) +
-    (sEzsignformfieldgroupDefaultvalue.hashCode) +
+    (sEzsignformfieldgroupDefaultvalue == null ? 0 : sEzsignformfieldgroupDefaultvalue!.hashCode) +
     (iEzsignformfieldgroupFilledmin.hashCode) +
     (iEzsignformfieldgroupFilledmax.hashCode) +
     (bEzsignformfieldgroupReadonly.hashCode) +
@@ -177,7 +183,11 @@ class EzsignformfieldgroupResponseCompound {
       _json[r'eEzsignformfieldgroupSignerrequirement'] = eEzsignformfieldgroupSignerrequirement;
       _json[r'sEzsignformfieldgroupLabel'] = sEzsignformfieldgroupLabel;
       _json[r'iEzsignformfieldgroupStep'] = iEzsignformfieldgroupStep;
+    if (sEzsignformfieldgroupDefaultvalue != null) {
       _json[r'sEzsignformfieldgroupDefaultvalue'] = sEzsignformfieldgroupDefaultvalue;
+    } else {
+      _json[r'sEzsignformfieldgroupDefaultvalue'] = null;
+    }
       _json[r'iEzsignformfieldgroupFilledmin'] = iEzsignformfieldgroupFilledmin;
       _json[r'iEzsignformfieldgroupFilledmax'] = iEzsignformfieldgroupFilledmax;
       _json[r'bEzsignformfieldgroupReadonly'] = bEzsignformfieldgroupReadonly;
@@ -237,7 +247,7 @@ class EzsignformfieldgroupResponseCompound {
         eEzsignformfieldgroupSignerrequirement: FieldEEzsignformfieldgroupSignerrequirement.fromJson(json[r'eEzsignformfieldgroupSignerrequirement'])!,
         sEzsignformfieldgroupLabel: mapValueOfType<String>(json, r'sEzsignformfieldgroupLabel')!,
         iEzsignformfieldgroupStep: mapValueOfType<int>(json, r'iEzsignformfieldgroupStep')!,
-        sEzsignformfieldgroupDefaultvalue: mapValueOfType<String>(json, r'sEzsignformfieldgroupDefaultvalue')!,
+        sEzsignformfieldgroupDefaultvalue: mapValueOfType<String>(json, r'sEzsignformfieldgroupDefaultvalue'),
         iEzsignformfieldgroupFilledmin: mapValueOfType<int>(json, r'iEzsignformfieldgroupFilledmin')!,
         iEzsignformfieldgroupFilledmax: mapValueOfType<int>(json, r'iEzsignformfieldgroupFilledmax')!,
         bEzsignformfieldgroupReadonly: mapValueOfType<bool>(json, r'bEzsignformfieldgroupReadonly')!,
@@ -304,7 +314,6 @@ class EzsignformfieldgroupResponseCompound {
     'eEzsignformfieldgroupSignerrequirement',
     'sEzsignformfieldgroupLabel',
     'iEzsignformfieldgroupStep',
-    'sEzsignformfieldgroupDefaultvalue',
     'iEzsignformfieldgroupFilledmin',
     'iEzsignformfieldgroupFilledmax',
     'bEzsignformfieldgroupReadonly',

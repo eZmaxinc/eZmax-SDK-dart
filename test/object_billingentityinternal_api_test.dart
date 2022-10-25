@@ -26,5 +26,14 @@ void main() {
       // TODO
     });
 
+    // Retrieve Billingentityinternals and IDs
+    //
+    // Get the list of Billingentityinternal to be used in a dropdown or autocomplete control.
+    //
+    //Future<BillingentityinternalGetAutocompleteV2Response> billingentityinternalGetAutocompleteV2(String sSelector, { String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage }) async
+    test('test billingentityinternalGetAutocompleteV2', () async {
+      // TODO
+    });
+
   });
 }

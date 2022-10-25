@@ -17,6 +17,7 @@ class EzsignbulksendGetObjectV1ResponseMPayload {
     required this.fkiEzsignfoldertypeID,
     required this.fkiLanguageID,
     required this.sLanguageNameX,
+    required this.eEzsignfoldertypePrivacylevel,
     required this.sEzsignfoldertypeNameX,
     required this.sEzsignbulksendDescription,
     required this.tEzsignbulksendNote,
@@ -46,6 +47,8 @@ class EzsignbulksendGetObjectV1ResponseMPayload {
   /// The Name of the Language in the language of the requester
   String sLanguageNameX;
 
+  FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel;
+
   /// The name of the Ezsignfoldertype in the language of the requester
   String sEzsignfoldertypeNameX;
 
@@ -73,6 +76,7 @@ class EzsignbulksendGetObjectV1ResponseMPayload {
      other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
      other.fkiLanguageID == fkiLanguageID &&
      other.sLanguageNameX == sLanguageNameX &&
+     other.eEzsignfoldertypePrivacylevel == eEzsignfoldertypePrivacylevel &&
      other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
      other.sEzsignbulksendDescription == sEzsignbulksendDescription &&
      other.tEzsignbulksendNote == tEzsignbulksendNote &&
@@ -89,6 +93,7 @@ class EzsignbulksendGetObjectV1ResponseMPayload {
     (fkiEzsignfoldertypeID.hashCode) +
     (fkiLanguageID.hashCode) +
     (sLanguageNameX.hashCode) +
+    (eEzsignfoldertypePrivacylevel.hashCode) +
     (sEzsignfoldertypeNameX.hashCode) +
     (sEzsignbulksendDescription.hashCode) +
     (tEzsignbulksendNote.hashCode) +
@@ -99,7 +104,7 @@ class EzsignbulksendGetObjectV1ResponseMPayload {
     (aObjEzsignbulksendsignermapping.hashCode);
 
   @override
-  String toString() => 'EzsignbulksendGetObjectV1ResponseMPayload[pkiEzsignbulksendID=$pkiEzsignbulksendID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiLanguageID=$fkiLanguageID, sLanguageNameX=$sLanguageNameX, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, sEzsignbulksendDescription=$sEzsignbulksendDescription, tEzsignbulksendNote=$tEzsignbulksendNote, bEzsignbulksendNeedvalidation=$bEzsignbulksendNeedvalidation, bEzsignbulksendIsactive=$bEzsignbulksendIsactive, objAudit=$objAudit, aObjEzsignbulksenddocumentmapping=$aObjEzsignbulksenddocumentmapping, aObjEzsignbulksendsignermapping=$aObjEzsignbulksendsignermapping]';
+  String toString() => 'EzsignbulksendGetObjectV1ResponseMPayload[pkiEzsignbulksendID=$pkiEzsignbulksendID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiLanguageID=$fkiLanguageID, sLanguageNameX=$sLanguageNameX, eEzsignfoldertypePrivacylevel=$eEzsignfoldertypePrivacylevel, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, sEzsignbulksendDescription=$sEzsignbulksendDescription, tEzsignbulksendNote=$tEzsignbulksendNote, bEzsignbulksendNeedvalidation=$bEzsignbulksendNeedvalidation, bEzsignbulksendIsactive=$bEzsignbulksendIsactive, objAudit=$objAudit, aObjEzsignbulksenddocumentmapping=$aObjEzsignbulksenddocumentmapping, aObjEzsignbulksendsignermapping=$aObjEzsignbulksendsignermapping]';
 
   Map<String, dynamic> toJson() {
     final _json = <String, dynamic>{};
@@ -107,6 +112,7 @@ class EzsignbulksendGetObjectV1ResponseMPayload {
       _json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
       _json[r'fkiLanguageID'] = fkiLanguageID;
       _json[r'sLanguageNameX'] = sLanguageNameX;
+      _json[r'eEzsignfoldertypePrivacylevel'] = eEzsignfoldertypePrivacylevel;
       _json[r'sEzsignfoldertypeNameX'] = sEzsignfoldertypeNameX;
       _json[r'sEzsignbulksendDescription'] = sEzsignbulksendDescription;
       _json[r'tEzsignbulksendNote'] = tEzsignbulksendNote;
@@ -141,6 +147,7 @@ class EzsignbulksendGetObjectV1ResponseMPayload {
         fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID')!,
         fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID')!,
         sLanguageNameX: mapValueOfType<String>(json, r'sLanguageNameX')!,
+        eEzsignfoldertypePrivacylevel: FieldEEzsignfoldertypePrivacylevel.fromJson(json[r'eEzsignfoldertypePrivacylevel'])!,
         sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX')!,
         sEzsignbulksendDescription: mapValueOfType<String>(json, r'sEzsignbulksendDescription')!,
         tEzsignbulksendNote: mapValueOfType<String>(json, r'tEzsignbulksendNote')!,
@@ -202,6 +209,7 @@ class EzsignbulksendGetObjectV1ResponseMPayload {
     'fkiEzsignfoldertypeID',
     'fkiLanguageID',
     'sLanguageNameX',
+    'eEzsignfoldertypePrivacylevel',
     'sEzsignfoldertypeNameX',
     'sEzsignbulksendDescription',
     'tEzsignbulksendNote',

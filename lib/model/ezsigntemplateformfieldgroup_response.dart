@@ -19,7 +19,7 @@ class EzsigntemplateformfieldgroupResponse {
     required this.eEzsigntemplateformfieldgroupSignerrequirement,
     required this.sEzsigntemplateformfieldgroupLabel,
     required this.iEzsigntemplateformfieldgroupStep,
-    required this.sEzsigntemplateformfieldgroupDefaultvalue,
+    this.sEzsigntemplateformfieldgroupDefaultvalue,
     required this.iEzsigntemplateformfieldgroupFilledmin,
     required this.iEzsigntemplateformfieldgroupFilledmax,
     required this.bEzsigntemplateformfieldgroupReadonly,
@@ -53,7 +53,13 @@ class EzsigntemplateformfieldgroupResponse {
   int iEzsigntemplateformfieldgroupStep;
 
   /// The default value for the Ezsigntemplateformfieldgroup
-  String sEzsigntemplateformfieldgroupDefaultvalue;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEzsigntemplateformfieldgroupDefaultvalue;
 
   /// The minimum number of Ezsigntemplateformfield that must be filled in the Ezsigntemplateformfieldgroup
   ///
@@ -141,7 +147,7 @@ class EzsigntemplateformfieldgroupResponse {
     (eEzsigntemplateformfieldgroupSignerrequirement.hashCode) +
     (sEzsigntemplateformfieldgroupLabel.hashCode) +
     (iEzsigntemplateformfieldgroupStep.hashCode) +
-    (sEzsigntemplateformfieldgroupDefaultvalue.hashCode) +
+    (sEzsigntemplateformfieldgroupDefaultvalue == null ? 0 : sEzsigntemplateformfieldgroupDefaultvalue!.hashCode) +
     (iEzsigntemplateformfieldgroupFilledmin.hashCode) +
     (iEzsigntemplateformfieldgroupFilledmax.hashCode) +
     (bEzsigntemplateformfieldgroupReadonly.hashCode) +
@@ -162,7 +168,11 @@ class EzsigntemplateformfieldgroupResponse {
       _json[r'eEzsigntemplateformfieldgroupSignerrequirement'] = eEzsigntemplateformfieldgroupSignerrequirement;
       _json[r'sEzsigntemplateformfieldgroupLabel'] = sEzsigntemplateformfieldgroupLabel;
       _json[r'iEzsigntemplateformfieldgroupStep'] = iEzsigntemplateformfieldgroupStep;
+    if (sEzsigntemplateformfieldgroupDefaultvalue != null) {
       _json[r'sEzsigntemplateformfieldgroupDefaultvalue'] = sEzsigntemplateformfieldgroupDefaultvalue;
+    } else {
+      _json[r'sEzsigntemplateformfieldgroupDefaultvalue'] = null;
+    }
       _json[r'iEzsigntemplateformfieldgroupFilledmin'] = iEzsigntemplateformfieldgroupFilledmin;
       _json[r'iEzsigntemplateformfieldgroupFilledmax'] = iEzsigntemplateformfieldgroupFilledmax;
       _json[r'bEzsigntemplateformfieldgroupReadonly'] = bEzsigntemplateformfieldgroupReadonly;
@@ -219,7 +229,7 @@ class EzsigntemplateformfieldgroupResponse {
         eEzsigntemplateformfieldgroupSignerrequirement: FieldEEzsigntemplateformfieldgroupSignerrequirement.fromJson(json[r'eEzsigntemplateformfieldgroupSignerrequirement'])!,
         sEzsigntemplateformfieldgroupLabel: mapValueOfType<String>(json, r'sEzsigntemplateformfieldgroupLabel')!,
         iEzsigntemplateformfieldgroupStep: mapValueOfType<int>(json, r'iEzsigntemplateformfieldgroupStep')!,
-        sEzsigntemplateformfieldgroupDefaultvalue: mapValueOfType<String>(json, r'sEzsigntemplateformfieldgroupDefaultvalue')!,
+        sEzsigntemplateformfieldgroupDefaultvalue: mapValueOfType<String>(json, r'sEzsigntemplateformfieldgroupDefaultvalue'),
         iEzsigntemplateformfieldgroupFilledmin: mapValueOfType<int>(json, r'iEzsigntemplateformfieldgroupFilledmin')!,
         iEzsigntemplateformfieldgroupFilledmax: mapValueOfType<int>(json, r'iEzsigntemplateformfieldgroupFilledmax')!,
         bEzsigntemplateformfieldgroupReadonly: mapValueOfType<bool>(json, r'bEzsigntemplateformfieldgroupReadonly')!,
@@ -283,7 +293,6 @@ class EzsigntemplateformfieldgroupResponse {
     'eEzsigntemplateformfieldgroupSignerrequirement',
     'sEzsigntemplateformfieldgroupLabel',
     'iEzsigntemplateformfieldgroupStep',
-    'sEzsigntemplateformfieldgroupDefaultvalue',
     'iEzsigntemplateformfieldgroupFilledmin',
     'iEzsigntemplateformfieldgroupFilledmax',
     'bEzsigntemplateformfieldgroupReadonly',

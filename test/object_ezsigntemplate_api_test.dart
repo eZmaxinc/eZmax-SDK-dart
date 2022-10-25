@@ -53,6 +53,15 @@ void main() {
       // TODO
     });
 
+    // Retrieve Ezsigntemplates and IDs
+    //
+    // Get the list of Ezsigntemplate to be used in a dropdown or autocomplete control.
+    //
+    //Future<EzsigntemplateGetAutocompleteV2Response> ezsigntemplateGetAutocompleteV2(String sSelector, { String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage }) async
+    test('test ezsigntemplateGetAutocompleteV2', () async {
+      // TODO
+    });
+
     // Retrieve Ezsigntemplate list
     //
     // Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsigntemplateType | Company<br>Team<br>User<br>Usergroup | 

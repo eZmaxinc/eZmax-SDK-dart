@@ -44,6 +44,15 @@ void main() {
       // TODO
     });
 
+    // Retrieve Brandings and IDs
+    //
+    // Get the list of Branding to be used in a dropdown or autocomplete control.
+    //
+    //Future<BrandingGetAutocompleteV2Response> brandingGetAutocompleteV2(String sSelector, { String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage }) async
+    test('test brandingGetAutocompleteV2', () async {
+      // TODO
+    });
+
     // Retrieve Branding list
     //
     // Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eBrandingLogo | Default<br>JPEG<br>PNG |

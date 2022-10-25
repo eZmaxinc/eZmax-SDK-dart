@@ -10,6 +10,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**taxassignmentGetAutocompleteV1**](ObjectTaxassignmentApi.md#taxassignmentgetautocompletev1) | **GET** /1/object/taxassignment/getAutocomplete/{sSelector} | Retrieve Taxassignments and IDs
+[**taxassignmentGetAutocompleteV2**](ObjectTaxassignmentApi.md#taxassignmentgetautocompletev2) | **GET** /2/object/taxassignment/getAutocomplete/{sSelector} | Retrieve Taxassignments and IDs
 
 
 # **taxassignmentGetAutocompleteV1**
@@ -53,6 +54,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CommonGetAutocompleteV1Response**](CommonGetAutocompleteV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **taxassignmentGetAutocompleteV2**
+> TaxassignmentGetAutocompleteV2Response taxassignmentGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+
+Retrieve Taxassignments and IDs
+
+Get the list of Taxassignment to be used in a dropdown or autocomplete control.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectTaxassignmentApi();
+final sSelector = sSelector_example; // String | The type of Taxassignments to return
+final eFilterActive = eFilterActive_example; // String | Specify which results we want to display.
+final sQuery = sQuery_example; // String | Allow to filter the returned results
+final acceptLanguage = ; // HeaderAcceptLanguage | 
+
+try {
+    final result = api_instance.taxassignmentGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectTaxassignmentApi->taxassignmentGetAutocompleteV2: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sSelector** | **String**| The type of Taxassignments to return | 
+ **eFilterActive** | **String**| Specify which results we want to display. | [optional] [default to 'Active']
+ **sQuery** | **String**| Allow to filter the returned results | [optional] 
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] 
+
+### Return type
+
+[**TaxassignmentGetAutocompleteV2Response**](TaxassignmentGetAutocompleteV2Response.md)
 
 ### Authorization
 

@@ -53,8 +53,8 @@ void main() {
     });
 
     // The Url to the Ezsigntemplatedocumentpage's rasterized image.  Url will expire after 5 minutes.
-    // String sImageUrl
-    test('to test the property `sImageUrl`', () async {
+    // String sComputedImageurl
+    test('to test the property `sComputedImageurl`', () async {
       // TODO
     });
 

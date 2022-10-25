@@ -19,7 +19,7 @@ class EzsigntemplatedocumentpageResponseCompound {
     required this.iEzsigntemplatedocumentpageWidthpdf,
     required this.iEzsigntemplatedocumentpageHeightpdf,
     required this.iEzsigntemplatedocumentpagePagenumber,
-    required this.sImageUrl,
+    required this.sComputedImageurl,
   });
 
   /// The unique ID of the Ezsigntemplatedocumentpage
@@ -53,7 +53,7 @@ class EzsigntemplatedocumentpageResponseCompound {
   int iEzsigntemplatedocumentpagePagenumber;
 
   /// The Url to the Ezsigntemplatedocumentpage's rasterized image.  Url will expire after 5 minutes.
-  String sImageUrl;
+  String sComputedImageurl;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplatedocumentpageResponseCompound &&
@@ -63,7 +63,7 @@ class EzsigntemplatedocumentpageResponseCompound {
      other.iEzsigntemplatedocumentpageWidthpdf == iEzsigntemplatedocumentpageWidthpdf &&
      other.iEzsigntemplatedocumentpageHeightpdf == iEzsigntemplatedocumentpageHeightpdf &&
      other.iEzsigntemplatedocumentpagePagenumber == iEzsigntemplatedocumentpagePagenumber &&
-     other.sImageUrl == sImageUrl;
+     other.sComputedImageurl == sComputedImageurl;
 
   @override
   int get hashCode =>
@@ -74,10 +74,10 @@ class EzsigntemplatedocumentpageResponseCompound {
     (iEzsigntemplatedocumentpageWidthpdf.hashCode) +
     (iEzsigntemplatedocumentpageHeightpdf.hashCode) +
     (iEzsigntemplatedocumentpagePagenumber.hashCode) +
-    (sImageUrl.hashCode);
+    (sComputedImageurl.hashCode);
 
   @override
-  String toString() => 'EzsigntemplatedocumentpageResponseCompound[pkiEzsigntemplatedocumentpageID=$pkiEzsigntemplatedocumentpageID, iEzsigntemplatedocumentpageWidthimage=$iEzsigntemplatedocumentpageWidthimage, iEzsigntemplatedocumentpageHeightimage=$iEzsigntemplatedocumentpageHeightimage, iEzsigntemplatedocumentpageWidthpdf=$iEzsigntemplatedocumentpageWidthpdf, iEzsigntemplatedocumentpageHeightpdf=$iEzsigntemplatedocumentpageHeightpdf, iEzsigntemplatedocumentpagePagenumber=$iEzsigntemplatedocumentpagePagenumber, sImageUrl=$sImageUrl]';
+  String toString() => 'EzsigntemplatedocumentpageResponseCompound[pkiEzsigntemplatedocumentpageID=$pkiEzsigntemplatedocumentpageID, iEzsigntemplatedocumentpageWidthimage=$iEzsigntemplatedocumentpageWidthimage, iEzsigntemplatedocumentpageHeightimage=$iEzsigntemplatedocumentpageHeightimage, iEzsigntemplatedocumentpageWidthpdf=$iEzsigntemplatedocumentpageWidthpdf, iEzsigntemplatedocumentpageHeightpdf=$iEzsigntemplatedocumentpageHeightpdf, iEzsigntemplatedocumentpagePagenumber=$iEzsigntemplatedocumentpagePagenumber, sComputedImageurl=$sComputedImageurl]';
 
   Map<String, dynamic> toJson() {
     final _json = <String, dynamic>{};
@@ -87,7 +87,7 @@ class EzsigntemplatedocumentpageResponseCompound {
       _json[r'iEzsigntemplatedocumentpageWidthpdf'] = iEzsigntemplatedocumentpageWidthpdf;
       _json[r'iEzsigntemplatedocumentpageHeightpdf'] = iEzsigntemplatedocumentpageHeightpdf;
       _json[r'iEzsigntemplatedocumentpagePagenumber'] = iEzsigntemplatedocumentpagePagenumber;
-      _json[r'sImageUrl'] = sImageUrl;
+      _json[r'sComputedImageurl'] = sComputedImageurl;
     return _json;
   }
 
@@ -116,7 +116,7 @@ class EzsigntemplatedocumentpageResponseCompound {
         iEzsigntemplatedocumentpageWidthpdf: mapValueOfType<int>(json, r'iEzsigntemplatedocumentpageWidthpdf')!,
         iEzsigntemplatedocumentpageHeightpdf: mapValueOfType<int>(json, r'iEzsigntemplatedocumentpageHeightpdf')!,
         iEzsigntemplatedocumentpagePagenumber: mapValueOfType<int>(json, r'iEzsigntemplatedocumentpagePagenumber')!,
-        sImageUrl: mapValueOfType<String>(json, r'sImageUrl')!,
+        sComputedImageurl: mapValueOfType<String>(json, r'sComputedImageurl')!,
       );
     }
     return null;
@@ -172,7 +172,7 @@ class EzsigntemplatedocumentpageResponseCompound {
     'iEzsigntemplatedocumentpageWidthpdf',
     'iEzsigntemplatedocumentpageHeightpdf',
     'iEzsigntemplatedocumentpagePagenumber',
-    'sImageUrl',
+    'sComputedImageurl',
   };
 }
 
