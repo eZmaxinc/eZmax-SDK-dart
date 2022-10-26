@@ -24,7 +24,7 @@ class EzsignsignatureRequest {
     this.tEzsignsignatureTooltip,
     this.eEzsignsignatureTooltipposition,
     this.eEzsignsignatureFont,
-    this.fkiUserID,
+    this.fkiEzsignfoldersignerassociationIDValidation,
     this.bEzsignsignatureRequired,
     this.eEzsignsignatureAttachmentnamesource,
     this.sEzsignsignatureAttachmentdescription,
@@ -97,7 +97,7 @@ class EzsignsignatureRequest {
   ///
   FieldEEzsignsignatureFont? eEzsignsignatureFont;
 
-  /// The unique ID of the User
+  /// The unique ID of the Ezsignfoldersignerassociation
   ///
   /// Minimum value: 0
   ///
@@ -106,7 +106,7 @@ class EzsignsignatureRequest {
   /// source code must fall back to having a nullable type.
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
-  int? fkiUserID;
+  int? fkiEzsignfoldersignerassociationIDValidation;
 
   /// Whether the Ezsignsignature is required or not. This field is relevant only with Ezsignsignature with eEzsignsignatureType = Attachments.
   ///
@@ -156,7 +156,7 @@ class EzsignsignatureRequest {
      other.tEzsignsignatureTooltip == tEzsignsignatureTooltip &&
      other.eEzsignsignatureTooltipposition == eEzsignsignatureTooltipposition &&
      other.eEzsignsignatureFont == eEzsignsignatureFont &&
-     other.fkiUserID == fkiUserID &&
+     other.fkiEzsignfoldersignerassociationIDValidation == fkiEzsignfoldersignerassociationIDValidation &&
      other.bEzsignsignatureRequired == bEzsignsignatureRequired &&
      other.eEzsignsignatureAttachmentnamesource == eEzsignsignatureAttachmentnamesource &&
      other.sEzsignsignatureAttachmentdescription == sEzsignsignatureAttachmentdescription &&
@@ -176,14 +176,14 @@ class EzsignsignatureRequest {
     (tEzsignsignatureTooltip == null ? 0 : tEzsignsignatureTooltip!.hashCode) +
     (eEzsignsignatureTooltipposition == null ? 0 : eEzsignsignatureTooltipposition!.hashCode) +
     (eEzsignsignatureFont == null ? 0 : eEzsignsignatureFont!.hashCode) +
-    (fkiUserID == null ? 0 : fkiUserID!.hashCode) +
+    (fkiEzsignfoldersignerassociationIDValidation == null ? 0 : fkiEzsignfoldersignerassociationIDValidation!.hashCode) +
     (bEzsignsignatureRequired == null ? 0 : bEzsignsignatureRequired!.hashCode) +
     (eEzsignsignatureAttachmentnamesource == null ? 0 : eEzsignsignatureAttachmentnamesource!.hashCode) +
     (sEzsignsignatureAttachmentdescription == null ? 0 : sEzsignsignatureAttachmentdescription!.hashCode) +
     (iEzsignsignatureValidationstep == null ? 0 : iEzsignsignatureValidationstep!.hashCode);
 
   @override
-  String toString() => 'EzsignsignatureRequest[pkiEzsignsignatureID=$pkiEzsignsignatureID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureStep=$iEzsignsignatureStep, eEzsignsignatureType=$eEzsignsignatureType, fkiEzsigndocumentID=$fkiEzsigndocumentID, tEzsignsignatureTooltip=$tEzsignsignatureTooltip, eEzsignsignatureTooltipposition=$eEzsignsignatureTooltipposition, eEzsignsignatureFont=$eEzsignsignatureFont, fkiUserID=$fkiUserID, bEzsignsignatureRequired=$bEzsignsignatureRequired, eEzsignsignatureAttachmentnamesource=$eEzsignsignatureAttachmentnamesource, sEzsignsignatureAttachmentdescription=$sEzsignsignatureAttachmentdescription, iEzsignsignatureValidationstep=$iEzsignsignatureValidationstep]';
+  String toString() => 'EzsignsignatureRequest[pkiEzsignsignatureID=$pkiEzsignsignatureID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureStep=$iEzsignsignatureStep, eEzsignsignatureType=$eEzsignsignatureType, fkiEzsigndocumentID=$fkiEzsigndocumentID, tEzsignsignatureTooltip=$tEzsignsignatureTooltip, eEzsignsignatureTooltipposition=$eEzsignsignatureTooltipposition, eEzsignsignatureFont=$eEzsignsignatureFont, fkiEzsignfoldersignerassociationIDValidation=$fkiEzsignfoldersignerassociationIDValidation, bEzsignsignatureRequired=$bEzsignsignatureRequired, eEzsignsignatureAttachmentnamesource=$eEzsignsignatureAttachmentnamesource, sEzsignsignatureAttachmentdescription=$sEzsignsignatureAttachmentdescription, iEzsignsignatureValidationstep=$iEzsignsignatureValidationstep]';
 
   Map<String, dynamic> toJson() {
     final _json = <String, dynamic>{};
@@ -214,10 +214,10 @@ class EzsignsignatureRequest {
     } else {
       _json[r'eEzsignsignatureFont'] = null;
     }
-    if (fkiUserID != null) {
-      _json[r'fkiUserID'] = fkiUserID;
+    if (fkiEzsignfoldersignerassociationIDValidation != null) {
+      _json[r'fkiEzsignfoldersignerassociationIDValidation'] = fkiEzsignfoldersignerassociationIDValidation;
     } else {
-      _json[r'fkiUserID'] = null;
+      _json[r'fkiEzsignfoldersignerassociationIDValidation'] = null;
     }
     if (bEzsignsignatureRequired != null) {
       _json[r'bEzsignsignatureRequired'] = bEzsignsignatureRequired;
@@ -272,7 +272,7 @@ class EzsignsignatureRequest {
         tEzsignsignatureTooltip: mapValueOfType<String>(json, r'tEzsignsignatureTooltip'),
         eEzsignsignatureTooltipposition: FieldEEzsignsignatureTooltipposition.fromJson(json[r'eEzsignsignatureTooltipposition']),
         eEzsignsignatureFont: FieldEEzsignsignatureFont.fromJson(json[r'eEzsignsignatureFont']),
-        fkiUserID: mapValueOfType<int>(json, r'fkiUserID'),
+        fkiEzsignfoldersignerassociationIDValidation: mapValueOfType<int>(json, r'fkiEzsignfoldersignerassociationIDValidation'),
         bEzsignsignatureRequired: mapValueOfType<bool>(json, r'bEzsignsignatureRequired'),
         eEzsignsignatureAttachmentnamesource: FieldEEzsignsignatureAttachmentnamesource.fromJson(json[r'eEzsignsignatureAttachmentnamesource']),
         sEzsignsignatureAttachmentdescription: mapValueOfType<String>(json, r'sEzsignsignatureAttachmentdescription'),

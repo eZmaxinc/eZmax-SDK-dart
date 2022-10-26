@@ -79,9 +79,9 @@ void main() {
       // TODO
     });
 
-    // The unique ID of the User
-    // int fkiUserID
-    test('to test the property `fkiUserID`', () async {
+    // The unique ID of the Ezsignfoldersignerassociation
+    // int fkiEzsignfoldersignerassociationIDValidation
+    test('to test the property `fkiEzsignfoldersignerassociationIDValidation`', () async {
       // TODO
     });
 
