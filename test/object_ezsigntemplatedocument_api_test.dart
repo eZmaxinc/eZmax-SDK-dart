@@ -89,6 +89,15 @@ void main() {
       // TODO
     });
 
+    // Retrieve an existing Ezsigntemplatedocument
+    //
+    // 
+    //
+    //Future<EzsigntemplatedocumentGetObjectV2Response> ezsigntemplatedocumentGetObjectV2(int pkiEzsigntemplatedocumentID) async
+    test('test ezsigntemplatedocumentGetObjectV2', () async {
+      // TODO
+    });
+
     // Retrieve positions X,Y of given words from a Ezsigntemplatedocument
     //
     // 

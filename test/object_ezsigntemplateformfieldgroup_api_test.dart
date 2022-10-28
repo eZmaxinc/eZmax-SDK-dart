@@ -53,5 +53,14 @@ void main() {
       // TODO
     });
 
+    // Retrieve an existing Ezsigntemplateformfieldgroup
+    //
+    // 
+    //
+    //Future<EzsigntemplateformfieldgroupGetObjectV2Response> ezsigntemplateformfieldgroupGetObjectV2(int pkiEzsigntemplateformfieldgroupID) async
+    test('test ezsigntemplateformfieldgroupGetObjectV2', () async {
+      // TODO
+    });
+
   });
 }

@@ -24,6 +24,7 @@ class WebhookGetObjectV1ResponseMPayload {
     required this.sWebhookEmailfailed,
     this.bWebhookIsactive,
     required this.bWebhookSkipsslvalidation,
+    required this.sWebhookEvent,
   });
 
   /// The unique ID of the Webhook
@@ -88,6 +89,9 @@ class WebhookGetObjectV1ResponseMPayload {
   /// Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use
   bool bWebhookSkipsslvalidation;
 
+  /// The concatenated string to describe the Webhook event
+  String sWebhookEvent;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is WebhookGetObjectV1ResponseMPayload &&
      other.pkiWebhookID == pkiWebhookID &&
@@ -100,7 +104,8 @@ class WebhookGetObjectV1ResponseMPayload {
      other.sWebhookUrl == sWebhookUrl &&
      other.sWebhookEmailfailed == sWebhookEmailfailed &&
      other.bWebhookIsactive == bWebhookIsactive &&
-     other.bWebhookSkipsslvalidation == bWebhookSkipsslvalidation;
+     other.bWebhookSkipsslvalidation == bWebhookSkipsslvalidation &&
+     other.sWebhookEvent == sWebhookEvent;
 
   @override
   int get hashCode =>
@@ -115,10 +120,11 @@ class WebhookGetObjectV1ResponseMPayload {
     (sWebhookUrl.hashCode) +
     (sWebhookEmailfailed.hashCode) +
     (bWebhookIsactive == null ? 0 : bWebhookIsactive!.hashCode) +
-    (bWebhookSkipsslvalidation.hashCode);
+    (bWebhookSkipsslvalidation.hashCode) +
+    (sWebhookEvent.hashCode);
 
   @override
-  String toString() => 'WebhookGetObjectV1ResponseMPayload[pkiWebhookID=$pkiWebhookID, sWebhookDescription=$sWebhookDescription, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, sWebhookUrl=$sWebhookUrl, sWebhookEmailfailed=$sWebhookEmailfailed, bWebhookIsactive=$bWebhookIsactive, bWebhookSkipsslvalidation=$bWebhookSkipsslvalidation]';
+  String toString() => 'WebhookGetObjectV1ResponseMPayload[pkiWebhookID=$pkiWebhookID, sWebhookDescription=$sWebhookDescription, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, sWebhookUrl=$sWebhookUrl, sWebhookEmailfailed=$sWebhookEmailfailed, bWebhookIsactive=$bWebhookIsactive, bWebhookSkipsslvalidation=$bWebhookSkipsslvalidation, sWebhookEvent=$sWebhookEvent]';
 
   Map<String, dynamic> toJson() {
     final _json = <String, dynamic>{};
@@ -153,6 +159,7 @@ class WebhookGetObjectV1ResponseMPayload {
       _json[r'bWebhookIsactive'] = null;
     }
       _json[r'bWebhookSkipsslvalidation'] = bWebhookSkipsslvalidation;
+      _json[r'sWebhookEvent'] = sWebhookEvent;
     return _json;
   }
 
@@ -186,6 +193,7 @@ class WebhookGetObjectV1ResponseMPayload {
         sWebhookEmailfailed: mapValueOfType<String>(json, r'sWebhookEmailfailed')!,
         bWebhookIsactive: mapValueOfType<bool>(json, r'bWebhookIsactive'),
         bWebhookSkipsslvalidation: mapValueOfType<bool>(json, r'bWebhookSkipsslvalidation')!,
+        sWebhookEvent: mapValueOfType<String>(json, r'sWebhookEvent')!,
       );
     }
     return null;
@@ -241,6 +249,7 @@ class WebhookGetObjectV1ResponseMPayload {
     'sWebhookUrl',
     'sWebhookEmailfailed',
     'bWebhookSkipsslvalidation',
+    'sWebhookEvent',
   };
 }
 

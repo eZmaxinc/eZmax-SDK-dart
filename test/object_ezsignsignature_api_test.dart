@@ -62,6 +62,15 @@ void main() {
       // TODO
     });
 
+    // Retrieve an existing Ezsignsignature
+    //
+    // 
+    //
+    //Future<EzsignsignatureGetObjectV2Response> ezsignsignatureGetObjectV2(int pkiEzsignsignatureID) async
+    test('test ezsignsignatureGetObjectV2', () async {
+      // TODO
+    });
+
     // Sign the Ezsignsignature
     //
     // 

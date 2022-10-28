@@ -53,5 +53,14 @@ void main() {
       // TODO
     });
 
+    // Retrieve an existing Ezsigntemplatepackagesigner
+    //
+    // 
+    //
+    //Future<EzsigntemplatepackagesignerGetObjectV2Response> ezsigntemplatepackagesignerGetObjectV2(int pkiEzsigntemplatepackagesignerID) async
+    test('test ezsigntemplatepackagesignerGetObjectV2', () async {
+      // TODO
+    });
+
   });
 }

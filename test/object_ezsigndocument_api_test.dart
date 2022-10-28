@@ -150,6 +150,15 @@ void main() {
       // TODO
     });
 
+    // Retrieve an existing Ezsigndocument
+    //
+    // 
+    //
+    //Future<EzsigndocumentGetObjectV2Response> ezsigndocumentGetObjectV2(int pkiEzsigndocumentID) async
+    test('test ezsigndocumentGetObjectV2', () async {
+      // TODO
+    });
+
     // Retrieve the temporary proof
     //
     // Retrieve the temporary proof while the Ezsigndocument is being processed since the proof isn't available until the Ezsigndocument is completed

@@ -28,7 +28,7 @@ class EzsignsignatureResponse {
     this.sEzsignsignatureAttachmentdescription,
     this.eEzsignsignatureAttachmentnamesource,
     this.bEzsignsignatureRequired,
-    this.fkiUserID,
+    this.fkiEzsignfoldersignerassociationIDValidation,
   });
 
   /// The unique ID of the Ezsignsignature
@@ -126,7 +126,7 @@ class EzsignsignatureResponse {
   ///
   bool? bEzsignsignatureRequired;
 
-  /// The unique ID of the User
+  /// The unique ID of the Ezsignfoldersignerassociation
   ///
   /// Minimum value: 0
   ///
@@ -135,7 +135,7 @@ class EzsignsignatureResponse {
   /// source code must fall back to having a nullable type.
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
-  int? fkiUserID;
+  int? fkiEzsignfoldersignerassociationIDValidation;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignsignatureResponse &&
@@ -154,7 +154,7 @@ class EzsignsignatureResponse {
      other.sEzsignsignatureAttachmentdescription == sEzsignsignatureAttachmentdescription &&
      other.eEzsignsignatureAttachmentnamesource == eEzsignsignatureAttachmentnamesource &&
      other.bEzsignsignatureRequired == bEzsignsignatureRequired &&
-     other.fkiUserID == fkiUserID;
+     other.fkiEzsignfoldersignerassociationIDValidation == fkiEzsignfoldersignerassociationIDValidation;
 
   @override
   int get hashCode =>
@@ -174,10 +174,10 @@ class EzsignsignatureResponse {
     (sEzsignsignatureAttachmentdescription == null ? 0 : sEzsignsignatureAttachmentdescription!.hashCode) +
     (eEzsignsignatureAttachmentnamesource == null ? 0 : eEzsignsignatureAttachmentnamesource!.hashCode) +
     (bEzsignsignatureRequired == null ? 0 : bEzsignsignatureRequired!.hashCode) +
-    (fkiUserID == null ? 0 : fkiUserID!.hashCode);
+    (fkiEzsignfoldersignerassociationIDValidation == null ? 0 : fkiEzsignfoldersignerassociationIDValidation!.hashCode);
 
   @override
-  String toString() => 'EzsignsignatureResponse[pkiEzsignsignatureID=$pkiEzsignsignatureID, fkiEzsigndocumentID=$fkiEzsigndocumentID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureStep=$iEzsignsignatureStep, eEzsignsignatureType=$eEzsignsignatureType, tEzsignsignatureTooltip=$tEzsignsignatureTooltip, eEzsignsignatureTooltipposition=$eEzsignsignatureTooltipposition, eEzsignsignatureFont=$eEzsignsignatureFont, iEzsignsignatureValidationstep=$iEzsignsignatureValidationstep, sEzsignsignatureAttachmentdescription=$sEzsignsignatureAttachmentdescription, eEzsignsignatureAttachmentnamesource=$eEzsignsignatureAttachmentnamesource, bEzsignsignatureRequired=$bEzsignsignatureRequired, fkiUserID=$fkiUserID]';
+  String toString() => 'EzsignsignatureResponse[pkiEzsignsignatureID=$pkiEzsignsignatureID, fkiEzsigndocumentID=$fkiEzsigndocumentID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureStep=$iEzsignsignatureStep, eEzsignsignatureType=$eEzsignsignatureType, tEzsignsignatureTooltip=$tEzsignsignatureTooltip, eEzsignsignatureTooltipposition=$eEzsignsignatureTooltipposition, eEzsignsignatureFont=$eEzsignsignatureFont, iEzsignsignatureValidationstep=$iEzsignsignatureValidationstep, sEzsignsignatureAttachmentdescription=$sEzsignsignatureAttachmentdescription, eEzsignsignatureAttachmentnamesource=$eEzsignsignatureAttachmentnamesource, bEzsignsignatureRequired=$bEzsignsignatureRequired, fkiEzsignfoldersignerassociationIDValidation=$fkiEzsignfoldersignerassociationIDValidation]';
 
   Map<String, dynamic> toJson() {
     final _json = <String, dynamic>{};
@@ -224,10 +224,10 @@ class EzsignsignatureResponse {
     } else {
       _json[r'bEzsignsignatureRequired'] = null;
     }
-    if (fkiUserID != null) {
-      _json[r'fkiUserID'] = fkiUserID;
+    if (fkiEzsignfoldersignerassociationIDValidation != null) {
+      _json[r'fkiEzsignfoldersignerassociationIDValidation'] = fkiEzsignfoldersignerassociationIDValidation;
     } else {
-      _json[r'fkiUserID'] = null;
+      _json[r'fkiEzsignfoldersignerassociationIDValidation'] = null;
     }
     return _json;
   }
@@ -266,7 +266,7 @@ class EzsignsignatureResponse {
         sEzsignsignatureAttachmentdescription: mapValueOfType<String>(json, r'sEzsignsignatureAttachmentdescription'),
         eEzsignsignatureAttachmentnamesource: FieldEEzsignsignatureAttachmentnamesource.fromJson(json[r'eEzsignsignatureAttachmentnamesource']),
         bEzsignsignatureRequired: mapValueOfType<bool>(json, r'bEzsignsignatureRequired'),
-        fkiUserID: mapValueOfType<int>(json, r'fkiUserID'),
+        fkiEzsignfoldersignerassociationIDValidation: mapValueOfType<int>(json, r'fkiEzsignfoldersignerassociationIDValidation'),
       );
     }
     return null;

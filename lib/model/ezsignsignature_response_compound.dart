@@ -28,7 +28,7 @@ class EzsignsignatureResponseCompound {
     this.sEzsignsignatureAttachmentdescription,
     this.eEzsignsignatureAttachmentnamesource,
     this.bEzsignsignatureRequired,
-    this.fkiUserID,
+    this.fkiEzsignfoldersignerassociationIDValidation,
     this.bEzsignsignatureCustomdate,
     this.aObjEzsignsignaturecustomdate = const [],
   });
@@ -128,7 +128,7 @@ class EzsignsignatureResponseCompound {
   ///
   bool? bEzsignsignatureRequired;
 
-  /// The unique ID of the User
+  /// The unique ID of the Ezsignfoldersignerassociation
   ///
   /// Minimum value: 0
   ///
@@ -137,7 +137,7 @@ class EzsignsignatureResponseCompound {
   /// source code must fall back to having a nullable type.
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
-  int? fkiUserID;
+  int? fkiEzsignfoldersignerassociationIDValidation;
 
   /// Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)
   ///
@@ -168,7 +168,7 @@ class EzsignsignatureResponseCompound {
      other.sEzsignsignatureAttachmentdescription == sEzsignsignatureAttachmentdescription &&
      other.eEzsignsignatureAttachmentnamesource == eEzsignsignatureAttachmentnamesource &&
      other.bEzsignsignatureRequired == bEzsignsignatureRequired &&
-     other.fkiUserID == fkiUserID &&
+     other.fkiEzsignfoldersignerassociationIDValidation == fkiEzsignfoldersignerassociationIDValidation &&
      other.bEzsignsignatureCustomdate == bEzsignsignatureCustomdate &&
      other.aObjEzsignsignaturecustomdate == aObjEzsignsignaturecustomdate;
 
@@ -190,12 +190,12 @@ class EzsignsignatureResponseCompound {
     (sEzsignsignatureAttachmentdescription == null ? 0 : sEzsignsignatureAttachmentdescription!.hashCode) +
     (eEzsignsignatureAttachmentnamesource == null ? 0 : eEzsignsignatureAttachmentnamesource!.hashCode) +
     (bEzsignsignatureRequired == null ? 0 : bEzsignsignatureRequired!.hashCode) +
-    (fkiUserID == null ? 0 : fkiUserID!.hashCode) +
+    (fkiEzsignfoldersignerassociationIDValidation == null ? 0 : fkiEzsignfoldersignerassociationIDValidation!.hashCode) +
     (bEzsignsignatureCustomdate == null ? 0 : bEzsignsignatureCustomdate!.hashCode) +
     (aObjEzsignsignaturecustomdate.hashCode);
 
   @override
-  String toString() => 'EzsignsignatureResponseCompound[pkiEzsignsignatureID=$pkiEzsignsignatureID, fkiEzsigndocumentID=$fkiEzsigndocumentID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureStep=$iEzsignsignatureStep, eEzsignsignatureType=$eEzsignsignatureType, tEzsignsignatureTooltip=$tEzsignsignatureTooltip, eEzsignsignatureTooltipposition=$eEzsignsignatureTooltipposition, eEzsignsignatureFont=$eEzsignsignatureFont, iEzsignsignatureValidationstep=$iEzsignsignatureValidationstep, sEzsignsignatureAttachmentdescription=$sEzsignsignatureAttachmentdescription, eEzsignsignatureAttachmentnamesource=$eEzsignsignatureAttachmentnamesource, bEzsignsignatureRequired=$bEzsignsignatureRequired, fkiUserID=$fkiUserID, bEzsignsignatureCustomdate=$bEzsignsignatureCustomdate, aObjEzsignsignaturecustomdate=$aObjEzsignsignaturecustomdate]';
+  String toString() => 'EzsignsignatureResponseCompound[pkiEzsignsignatureID=$pkiEzsignsignatureID, fkiEzsigndocumentID=$fkiEzsigndocumentID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureStep=$iEzsignsignatureStep, eEzsignsignatureType=$eEzsignsignatureType, tEzsignsignatureTooltip=$tEzsignsignatureTooltip, eEzsignsignatureTooltipposition=$eEzsignsignatureTooltipposition, eEzsignsignatureFont=$eEzsignsignatureFont, iEzsignsignatureValidationstep=$iEzsignsignatureValidationstep, sEzsignsignatureAttachmentdescription=$sEzsignsignatureAttachmentdescription, eEzsignsignatureAttachmentnamesource=$eEzsignsignatureAttachmentnamesource, bEzsignsignatureRequired=$bEzsignsignatureRequired, fkiEzsignfoldersignerassociationIDValidation=$fkiEzsignfoldersignerassociationIDValidation, bEzsignsignatureCustomdate=$bEzsignsignatureCustomdate, aObjEzsignsignaturecustomdate=$aObjEzsignsignaturecustomdate]';
 
   Map<String, dynamic> toJson() {
     final _json = <String, dynamic>{};
@@ -242,10 +242,10 @@ class EzsignsignatureResponseCompound {
     } else {
       _json[r'bEzsignsignatureRequired'] = null;
     }
-    if (fkiUserID != null) {
-      _json[r'fkiUserID'] = fkiUserID;
+    if (fkiEzsignfoldersignerassociationIDValidation != null) {
+      _json[r'fkiEzsignfoldersignerassociationIDValidation'] = fkiEzsignfoldersignerassociationIDValidation;
     } else {
-      _json[r'fkiUserID'] = null;
+      _json[r'fkiEzsignfoldersignerassociationIDValidation'] = null;
     }
     if (bEzsignsignatureCustomdate != null) {
       _json[r'bEzsignsignatureCustomdate'] = bEzsignsignatureCustomdate;
@@ -290,7 +290,7 @@ class EzsignsignatureResponseCompound {
         sEzsignsignatureAttachmentdescription: mapValueOfType<String>(json, r'sEzsignsignatureAttachmentdescription'),
         eEzsignsignatureAttachmentnamesource: FieldEEzsignsignatureAttachmentnamesource.fromJson(json[r'eEzsignsignatureAttachmentnamesource']),
         bEzsignsignatureRequired: mapValueOfType<bool>(json, r'bEzsignsignatureRequired'),
-        fkiUserID: mapValueOfType<int>(json, r'fkiUserID'),
+        fkiEzsignfoldersignerassociationIDValidation: mapValueOfType<int>(json, r'fkiEzsignfoldersignerassociationIDValidation'),
         bEzsignsignatureCustomdate: mapValueOfType<bool>(json, r'bEzsignsignatureCustomdate'),
         aObjEzsignsignaturecustomdate: EzsignsignaturecustomdateResponseCompound.listFromJson(json[r'a_objEzsignsignaturecustomdate']) ?? const [],
       );

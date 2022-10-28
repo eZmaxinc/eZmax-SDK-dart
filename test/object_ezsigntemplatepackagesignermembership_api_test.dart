@@ -44,5 +44,14 @@ void main() {
       // TODO
     });
 
+    // Retrieve an existing Ezsigntemplatepackagesignermembership
+    //
+    // 
+    //
+    //Future<EzsigntemplatepackagesignermembershipGetObjectV2Response> ezsigntemplatepackagesignermembershipGetObjectV2(int pkiEzsigntemplatepackagesignermembershipID) async
+    test('test ezsigntemplatepackagesignermembershipGetObjectV2', () async {
+      // TODO
+    });
+
   });
 }

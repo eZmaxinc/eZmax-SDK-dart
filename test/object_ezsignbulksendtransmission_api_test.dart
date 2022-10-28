@@ -44,5 +44,14 @@ void main() {
       // TODO
     });
 
+    // Retrieve an existing Ezsignbulksendtransmission
+    //
+    // 
+    //
+    //Future<EzsignbulksendtransmissionGetObjectV2Response> ezsignbulksendtransmissionGetObjectV2(int pkiEzsignbulksendtransmissionID) async
+    test('test ezsignbulksendtransmissionGetObjectV2', () async {
+      // TODO
+    });
+
   });
 }

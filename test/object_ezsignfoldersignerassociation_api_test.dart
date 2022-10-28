@@ -80,5 +80,14 @@ void main() {
       // TODO
     });
 
+    // Retrieve an existing Ezsignfoldersignerassociation
+    //
+    // 
+    //
+    //Future<EzsignfoldersignerassociationGetObjectV2Response> ezsignfoldersignerassociationGetObjectV2(int pkiEzsignfoldersignerassociationID) async
+    test('test ezsignfoldersignerassociationGetObjectV2', () async {
+      // TODO
+    });
+
   });
 }

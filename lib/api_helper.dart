@@ -154,6 +154,12 @@ String parameterToString(dynamic value) {
   if (value is FieldEUserType) {
     return FieldEUserTypeTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEVersionhistoryType) {
+    return FieldEVersionhistoryTypeTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEVersionhistoryUsertype) {
+    return FieldEVersionhistoryUsertypeTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEWebhookEzsignevent) {
     return FieldEWebhookEzsigneventTypeTransformer().encode(value).toString();
   }

@@ -44,5 +44,14 @@ void main() {
       // TODO
     });
 
+    // Retrieve an existing Ezsignbulksenddocumentmapping
+    //
+    // 
+    //
+    //Future<EzsignbulksenddocumentmappingGetObjectV2Response> ezsignbulksenddocumentmappingGetObjectV2(int pkiEzsignbulksenddocumentmappingID) async
+    test('test ezsignbulksenddocumentmappingGetObjectV2', () async {
+      // TODO
+    });
+
   });
 }

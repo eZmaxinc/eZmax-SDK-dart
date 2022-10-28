@@ -246,4 +246,61 @@ class ObjectEzsigntemplatesignerApi {
     }
     return null;
   }
+
+  /// Retrieve an existing Ezsigntemplatesigner
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigntemplatesignerID (required):
+  Future<Response> ezsigntemplatesignerGetObjectV2WithHttpInfo(int pkiEzsigntemplatesignerID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/2/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}'
+      .replaceAll('{pkiEzsigntemplatesignerID}', pkiEzsigntemplatesignerID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve an existing Ezsigntemplatesigner
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigntemplatesignerID (required):
+  Future<EzsigntemplatesignerGetObjectV2Response?> ezsigntemplatesignerGetObjectV2(int pkiEzsigntemplatesignerID,) async {
+    final response = await ezsigntemplatesignerGetObjectV2WithHttpInfo(pkiEzsigntemplatesignerID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigntemplatesignerGetObjectV2Response',) as EzsigntemplatesignerGetObjectV2Response;
+    
+    }
+    return null;
+  }
 }

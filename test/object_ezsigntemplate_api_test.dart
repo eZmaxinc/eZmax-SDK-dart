@@ -80,5 +80,14 @@ void main() {
       // TODO
     });
 
+    // Retrieve an existing Ezsigntemplate
+    //
+    // 
+    //
+    //Future<EzsigntemplateGetObjectV2Response> ezsigntemplateGetObjectV2(int pkiEzsigntemplateID) async
+    test('test ezsigntemplateGetObjectV2', () async {
+      // TODO
+    });
+
   });
 }

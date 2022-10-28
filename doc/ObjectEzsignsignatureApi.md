@@ -14,6 +14,7 @@ Method | HTTP request | Description
 [**ezsignsignatureDeleteObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignaturedeleteobjectv1) | **DELETE** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Delete an existing Ezsignsignature
 [**ezsignsignatureEditObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureeditobjectv1) | **PUT** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Edit an existing Ezsignsignature
 [**ezsignsignatureGetObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignaturegetobjectv1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
+[**ezsignsignatureGetObjectV2**](ObjectEzsignsignatureApi.md#ezsignsignaturegetobjectv2) | **GET** /2/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
 [**ezsignsignatureSignV1**](ObjectEzsignsignatureApi.md#ezsignsignaturesignv1) | **POST** /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign | Sign the Ezsignsignature
 
 
@@ -242,6 +243,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignsignatureGetObjectV1Response**](EzsignsignatureGetObjectV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsignsignatureGetObjectV2**
+> EzsignsignatureGetObjectV2Response ezsignsignatureGetObjectV2(pkiEzsignsignatureID)
+
+Retrieve an existing Ezsignsignature
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectEzsignsignatureApi();
+final pkiEzsignsignatureID = 56; // int | 
+
+try {
+    final result = api_instance.ezsignsignatureGetObjectV2(pkiEzsignsignatureID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectEzsignsignatureApi->ezsignsignatureGetObjectV2: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignsignatureID** | **int**|  | 
+
+### Return type
+
+[**EzsignsignatureGetObjectV2Response**](EzsignsignatureGetObjectV2Response.md)
 
 ### Authorization
 

@@ -8,7 +8,6 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**sWebhookEvent** | **String** | The concatenated string to describe the Webhook event | 
 **pkiWebhookID** | **int** | The unique ID of the Webhook | 
 **sWebhookDescription** | **String** | The description of the Webhook | 
 **fkiEzsignfoldertypeID** | **int** | The unique ID of the Ezsignfoldertype. | [optional] 
@@ -20,6 +19,7 @@ Name | Type | Description | Notes
 **sWebhookEmailfailed** | **String** | The email that will receive the Webhook in case all attempts fail | 
 **bWebhookIsactive** | **bool** | Whether the Webhook is active or not | [optional] 
 **bWebhookSkipsslvalidation** | **bool** | Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use | 
+**sWebhookEvent** | **String** | The concatenated string to describe the Webhook event | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

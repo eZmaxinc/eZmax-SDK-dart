@@ -137,6 +137,15 @@ void main() {
       // TODO
     });
 
+    // Retrieve an existing Ezsignfolder
+    //
+    // 
+    //
+    //Future<EzsignfolderGetObjectV2Response> ezsignfolderGetObjectV2(int pkiEzsignfolderID) async
+    test('test ezsignfolderGetObjectV2', () async {
+      // TODO
+    });
+
     // Import an existing Ezsignfoldersignerassociation into this Ezsignfolder
     //
     // 

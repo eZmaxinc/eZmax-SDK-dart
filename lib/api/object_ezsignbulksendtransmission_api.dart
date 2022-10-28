@@ -186,4 +186,61 @@ class ObjectEzsignbulksendtransmissionApi {
     }
     return null;
   }
+
+  /// Retrieve an existing Ezsignbulksendtransmission
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignbulksendtransmissionID (required):
+  Future<Response> ezsignbulksendtransmissionGetObjectV2WithHttpInfo(int pkiEzsignbulksendtransmissionID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/2/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}'
+      .replaceAll('{pkiEzsignbulksendtransmissionID}', pkiEzsignbulksendtransmissionID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve an existing Ezsignbulksendtransmission
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignbulksendtransmissionID (required):
+  Future<EzsignbulksendtransmissionGetObjectV2Response?> ezsignbulksendtransmissionGetObjectV2(int pkiEzsignbulksendtransmissionID,) async {
+    final response = await ezsignbulksendtransmissionGetObjectV2WithHttpInfo(pkiEzsignbulksendtransmissionID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignbulksendtransmissionGetObjectV2Response',) as EzsignbulksendtransmissionGetObjectV2Response;
+    
+    }
+    return null;
+  }
 }

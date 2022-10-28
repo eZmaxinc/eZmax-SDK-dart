@@ -44,6 +44,15 @@ void main() {
       // TODO
     });
 
+    // Retrieve an existing Ezmaxinvoicing
+    //
+    // 
+    //
+    //Future<EzmaxinvoicingGetObjectV2Response> ezmaxinvoicingGetObjectV2(int pkiEzmaxinvoicingID) async
+    test('test ezmaxinvoicingGetObjectV2', () async {
+      // TODO
+    });
+
     // Retrieve provisional Ezmaxinvoicing
     //
     // 

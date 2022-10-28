@@ -96,6 +96,15 @@ void main() {
       // TODO
     });
 
+    // Retrieve an existing Ezsignbulksend
+    //
+    // 
+    //
+    //Future<EzsignbulksendGetObjectV2Response> ezsignbulksendGetObjectV2(int pkiEzsignbulksendID) async
+    test('test ezsignbulksendGetObjectV2', () async {
+      // TODO
+    });
+
     // Reorder Ezsignbulksenddocumentmappings in the Ezsignbulksend
     //
     //Future<EzsignbulksendReorderV1Response> ezsignbulksendReorderV1(int pkiEzsignbulksendID, EzsignbulksendReorderV1Request ezsignbulksendReorderV1Request) async

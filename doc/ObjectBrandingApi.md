@@ -15,6 +15,7 @@ Method | HTTP request | Description
 [**brandingGetAutocompleteV2**](ObjectBrandingApi.md#brandinggetautocompletev2) | **GET** /2/object/branding/getAutocomplete/{sSelector} | Retrieve Brandings and IDs
 [**brandingGetListV1**](ObjectBrandingApi.md#brandinggetlistv1) | **GET** /1/object/branding/getList | Retrieve Branding list
 [**brandingGetObjectV1**](ObjectBrandingApi.md#brandinggetobjectv1) | **GET** /1/object/branding/{pkiBrandingID} | Retrieve an existing Branding
+[**brandingGetObjectV2**](ObjectBrandingApi.md#brandinggetobjectv2) | **GET** /2/object/branding/{pkiBrandingID} | Retrieve an existing Branding
 
 
 # **brandingCreateObjectV1**
@@ -309,6 +310,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**BrandingGetObjectV1Response**](BrandingGetObjectV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **brandingGetObjectV2**
+> BrandingGetObjectV2Response brandingGetObjectV2(pkiBrandingID)
+
+Retrieve an existing Branding
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectBrandingApi();
+final pkiBrandingID = 56; // int | 
+
+try {
+    final result = api_instance.brandingGetObjectV2(pkiBrandingID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectBrandingApi->brandingGetObjectV2: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiBrandingID** | **int**|  | 
+
+### Return type
+
+[**BrandingGetObjectV2Response**](BrandingGetObjectV2Response.md)
 
 ### Authorization
 

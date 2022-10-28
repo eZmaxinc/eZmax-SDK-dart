@@ -71,5 +71,14 @@ void main() {
       // TODO
     });
 
+    // Retrieve an existing Ezsignfoldertype
+    //
+    // 
+    //
+    //Future<EzsignfoldertypeGetObjectV2Response> ezsignfoldertypeGetObjectV2(int pkiEzsignfoldertypeID) async
+    test('test ezsignfoldertypeGetObjectV2', () async {
+      // TODO
+    });
+
   });
 }

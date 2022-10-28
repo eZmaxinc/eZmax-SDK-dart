@@ -185,4 +185,61 @@ class ObjectEzsigntemplatepackagemembershipApi {
     }
     return null;
   }
+
+  /// Retrieve an existing Ezsigntemplatepackagemembership
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigntemplatepackagemembershipID (required):
+  Future<Response> ezsigntemplatepackagemembershipGetObjectV2WithHttpInfo(int pkiEzsigntemplatepackagemembershipID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/2/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID}'
+      .replaceAll('{pkiEzsigntemplatepackagemembershipID}', pkiEzsigntemplatepackagemembershipID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve an existing Ezsigntemplatepackagemembership
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigntemplatepackagemembershipID (required):
+  Future<EzsigntemplatepackagemembershipGetObjectV2Response?> ezsigntemplatepackagemembershipGetObjectV2(int pkiEzsigntemplatepackagemembershipID,) async {
+    final response = await ezsigntemplatepackagemembershipGetObjectV2WithHttpInfo(pkiEzsigntemplatepackagemembershipID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigntemplatepackagemembershipGetObjectV2Response',) as EzsigntemplatepackagemembershipGetObjectV2Response;
+    
+    }
+    return null;
+  }
 }

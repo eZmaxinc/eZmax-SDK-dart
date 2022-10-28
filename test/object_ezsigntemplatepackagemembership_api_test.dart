@@ -44,5 +44,14 @@ void main() {
       // TODO
     });
 
+    // Retrieve an existing Ezsigntemplatepackagemembership
+    //
+    // 
+    //
+    //Future<EzsigntemplatepackagemembershipGetObjectV2Response> ezsigntemplatepackagemembershipGetObjectV2(int pkiEzsigntemplatepackagemembershipID) async
+    test('test ezsigntemplatepackagemembershipGetObjectV2', () async {
+      // TODO
+    });
+
   });
 }

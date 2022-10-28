@@ -71,5 +71,14 @@ void main() {
       // TODO
     });
 
+    // Retrieve an existing Branding
+    //
+    // 
+    //
+    //Future<BrandingGetObjectV2Response> brandingGetObjectV2(int pkiBrandingID) async
+    test('test brandingGetObjectV2', () async {
+      // TODO
+    });
+
   });
 }
