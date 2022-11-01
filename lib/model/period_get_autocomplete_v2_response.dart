@@ -10,12 +10,15 @@
 
 part of openapi.api;
 
-class EzsignsignatureSignV1Response {
-  /// Returns a new [EzsignsignatureSignV1Response] instance.
-  EzsignsignatureSignV1Response({
+class PeriodGetAutocompleteV2Response {
+  /// Returns a new [PeriodGetAutocompleteV2Response] instance.
+  PeriodGetAutocompleteV2Response({
+    required this.mPayload,
     this.objDebugPayload,
     this.objDebug,
   });
+
+  PeriodGetAutocompleteV2ResponseMPayload mPayload;
 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -34,21 +37,24 @@ class EzsignsignatureSignV1Response {
   CommonResponseObjDebug? objDebug;
 
   @override
-  bool operator ==(Object other) => identical(this, other) || other is EzsignsignatureSignV1Response &&
+  bool operator ==(Object other) => identical(this, other) || other is PeriodGetAutocompleteV2Response &&
+     other.mPayload == mPayload &&
      other.objDebugPayload == objDebugPayload &&
      other.objDebug == objDebug;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
+    (mPayload.hashCode) +
     (objDebugPayload == null ? 0 : objDebugPayload!.hashCode) +
     (objDebug == null ? 0 : objDebug!.hashCode);
 
   @override
-  String toString() => 'EzsignsignatureSignV1Response[objDebugPayload=$objDebugPayload, objDebug=$objDebug]';
+  String toString() => 'PeriodGetAutocompleteV2Response[mPayload=$mPayload, objDebugPayload=$objDebugPayload, objDebug=$objDebug]';
 
   Map<String, dynamic> toJson() {
     final _json = <String, dynamic>{};
+      _json[r'mPayload'] = mPayload;
     if (objDebugPayload != null) {
       _json[r'objDebugPayload'] = objDebugPayload;
     } else {
@@ -62,10 +68,10 @@ class EzsignsignatureSignV1Response {
     return _json;
   }
 
-  /// Returns a new [EzsignsignatureSignV1Response] instance and imports its values from
+  /// Returns a new [PeriodGetAutocompleteV2Response] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static EzsignsignatureSignV1Response? fromJson(dynamic value) {
+  static PeriodGetAutocompleteV2Response? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
 
@@ -74,13 +80,14 @@ class EzsignsignatureSignV1Response {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignsignatureSignV1Response[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignsignatureSignV1Response[$key]" has a null value in JSON.');
+          assert(json.containsKey(key), 'Required key "PeriodGetAutocompleteV2Response[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "PeriodGetAutocompleteV2Response[$key]" has a null value in JSON.');
         });
         return true;
       }());
 
-      return EzsignsignatureSignV1Response(
+      return PeriodGetAutocompleteV2Response(
+        mPayload: PeriodGetAutocompleteV2ResponseMPayload.fromJson(json[r'mPayload'])!,
         objDebugPayload: CommonResponseObjDebugPayload.fromJson(json[r'objDebugPayload']),
         objDebug: CommonResponseObjDebug.fromJson(json[r'objDebug']),
       );
@@ -88,11 +95,11 @@ class EzsignsignatureSignV1Response {
     return null;
   }
 
-  static List<EzsignsignatureSignV1Response>? listFromJson(dynamic json, {bool growable = false,}) {
-    final result = <EzsignsignatureSignV1Response>[];
+  static List<PeriodGetAutocompleteV2Response>? listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <PeriodGetAutocompleteV2Response>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
-        final value = EzsignsignatureSignV1Response.fromJson(row);
+        final value = PeriodGetAutocompleteV2Response.fromJson(row);
         if (value != null) {
           result.add(value);
         }
@@ -101,12 +108,12 @@ class EzsignsignatureSignV1Response {
     return result.toList(growable: growable);
   }
 
-  static Map<String, EzsignsignatureSignV1Response> mapFromJson(dynamic json) {
-    final map = <String, EzsignsignatureSignV1Response>{};
+  static Map<String, PeriodGetAutocompleteV2Response> mapFromJson(dynamic json) {
+    final map = <String, PeriodGetAutocompleteV2Response>{};
     if (json is Map && json.isNotEmpty) {
       json = json.cast<String, dynamic>(); // ignore: parameter_assignments
       for (final entry in json.entries) {
-        final value = EzsignsignatureSignV1Response.fromJson(entry.value);
+        final value = PeriodGetAutocompleteV2Response.fromJson(entry.value);
         if (value != null) {
           map[entry.key] = value;
         }
@@ -115,13 +122,13 @@ class EzsignsignatureSignV1Response {
     return map;
   }
 
-  // maps a json object with a list of EzsignsignatureSignV1Response-objects as value to a dart map
-  static Map<String, List<EzsignsignatureSignV1Response>> mapListFromJson(dynamic json, {bool growable = false,}) {
-    final map = <String, List<EzsignsignatureSignV1Response>>{};
+  // maps a json object with a list of PeriodGetAutocompleteV2Response-objects as value to a dart map
+  static Map<String, List<PeriodGetAutocompleteV2Response>> mapListFromJson(dynamic json, {bool growable = false,}) {
+    final map = <String, List<PeriodGetAutocompleteV2Response>>{};
     if (json is Map && json.isNotEmpty) {
       json = json.cast<String, dynamic>(); // ignore: parameter_assignments
       for (final entry in json.entries) {
-        final value = EzsignsignatureSignV1Response.listFromJson(entry.value, growable: growable,);
+        final value = PeriodGetAutocompleteV2Response.listFromJson(entry.value, growable: growable,);
         if (value != null) {
           map[entry.key] = value;
         }
@@ -132,6 +139,7 @@ class EzsignsignatureSignV1Response {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
+    'mPayload',
   };
 }
 

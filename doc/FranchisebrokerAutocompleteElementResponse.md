@@ -1,4 +1,4 @@
-# openapi.model.EzsignsignatureSignV1Response
+# openapi.model.FranchisebrokerAutocompleteElementResponse
 
 ## Load the model package
 ```dart
@@ -8,8 +8,9 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | [optional] 
-**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  | [optional] 
+**sFranchisebrokerName** | **String** | The name of the Franchisebroker in the language of the requester | 
+**pkiFranchisebrokerID** | **int** | The unique ID of the Franchisebroker | 
+**bFranchisebrokerIsactive** | **bool** | Whether the Franchisebroker is active or not | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

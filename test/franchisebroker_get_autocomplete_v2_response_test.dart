@@ -11,11 +11,16 @@
 import 'package:openapi/api.dart';
 import 'package:test/test.dart';
 
-// tests for EzsignsignatureSignV1Response
+// tests for FranchisebrokerGetAutocompleteV2Response
 void main() {
-  // final instance = EzsignsignatureSignV1Response();
+  // final instance = FranchisebrokerGetAutocompleteV2Response();
 
-  group('test EzsignsignatureSignV1Response', () {
+  group('test FranchisebrokerGetAutocompleteV2Response', () {
+    // FranchisebrokerGetAutocompleteV2ResponseMPayload mPayload
+    test('to test the property `mPayload`', () async {
+      // TODO
+    });
+
     // CommonResponseObjDebugPayload objDebugPayload
     test('to test the property `objDebugPayload`', () async {
       // TODO

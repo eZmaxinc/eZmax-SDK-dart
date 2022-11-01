@@ -11,14 +11,14 @@
 import 'package:openapi/api.dart';
 import 'package:test/test.dart';
 
-// tests for EzsignsignatureSignV1ResponseAllOf
+// tests for PeriodGetAutocompleteV2ResponseMPayload
 void main() {
-  // final instance = EzsignsignatureSignV1ResponseAllOf();
+  // final instance = PeriodGetAutocompleteV2ResponseMPayload();
 
-  group('test EzsignsignatureSignV1ResponseAllOf', () {
-    // Payload for POST /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign
-    // Object mPayload
-    test('to test the property `mPayload`', () async {
+  group('test PeriodGetAutocompleteV2ResponseMPayload', () {
+    // An array of Period autocomplete element response.
+    // List<PeriodAutocompleteElementResponse> aObjPeriod (default value: const [])
+    test('to test the property `aObjPeriod`', () async {
       // TODO
     });
 

@@ -26,5 +26,14 @@ void main() {
       // TODO
     });
 
+    // Retrieve Periods and IDs
+    //
+    // Get the list of Period to be used in a dropdown or autocomplete control.
+    //
+    //Future<PeriodGetAutocompleteV2Response> periodGetAutocompleteV2(String sSelector, { String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage }) async
+    test('test periodGetAutocompleteV2', () async {
+      // TODO
+    });
+
   });
 }

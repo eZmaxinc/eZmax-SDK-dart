@@ -26,5 +26,14 @@ void main() {
       // TODO
     });
 
+    // Retrieve Franchisebrokers and IDs
+    //
+    // Get the list of Franchisebroker to be used in a dropdown or autocomplete control.
+    //
+    //Future<FranchisebrokerGetAutocompleteV2Response> franchisebrokerGetAutocompleteV2(String sSelector, { String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage }) async
+    test('test franchisebrokerGetAutocompleteV2', () async {
+      // TODO
+    });
+
   });
 }

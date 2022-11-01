@@ -1152,8 +1152,6 @@ class ApiClient {
           return EzsignsignatureSignV1Request.fromJson(value);
         case 'EzsignsignatureSignV1Response':
           return EzsignsignatureSignV1Response.fromJson(value);
-        case 'EzsignsignatureSignV1ResponseAllOf':
-          return EzsignsignatureSignV1ResponseAllOf.fromJson(value);
         case 'EzsignsignaturecustomdateRequest':
           return EzsignsignaturecustomdateRequest.fromJson(value);
         case 'EzsignsignaturecustomdateRequestCompound':
@@ -1700,6 +1698,22 @@ class ApiClient {
           return FieldEWebhookManagementeventTypeTransformer().decode(value);
         case 'FieldEWebhookModule':
           return FieldEWebhookModuleTypeTransformer().decode(value);
+        case 'FranchisebrokerAutocompleteElementResponse':
+          return FranchisebrokerAutocompleteElementResponse.fromJson(value);
+        case 'FranchisebrokerGetAutocompleteV2Response':
+          return FranchisebrokerGetAutocompleteV2Response.fromJson(value);
+        case 'FranchisebrokerGetAutocompleteV2ResponseAllOf':
+          return FranchisebrokerGetAutocompleteV2ResponseAllOf.fromJson(value);
+        case 'FranchisebrokerGetAutocompleteV2ResponseMPayload':
+          return FranchisebrokerGetAutocompleteV2ResponseMPayload.fromJson(value);
+        case 'FranchiseofficeAutocompleteElementResponse':
+          return FranchiseofficeAutocompleteElementResponse.fromJson(value);
+        case 'FranchiseofficeGetAutocompleteV2Response':
+          return FranchiseofficeGetAutocompleteV2Response.fromJson(value);
+        case 'FranchiseofficeGetAutocompleteV2ResponseAllOf':
+          return FranchiseofficeGetAutocompleteV2ResponseAllOf.fromJson(value);
+        case 'FranchiseofficeGetAutocompleteV2ResponseMPayload':
+          return FranchiseofficeGetAutocompleteV2ResponseMPayload.fromJson(value);
         case 'FranchisereferalincomeCreateObjectV1Request':
           return FranchisereferalincomeCreateObjectV1Request.fromJson(value);
         case 'FranchisereferalincomeCreateObjectV1Response':
@@ -1756,6 +1770,14 @@ class ApiClient {
           return NotificationtestGetElementsV1ResponseMPayload.fromJson(value);
         case 'NotificationtestResponse':
           return NotificationtestResponse.fromJson(value);
+        case 'PeriodAutocompleteElementResponse':
+          return PeriodAutocompleteElementResponse.fromJson(value);
+        case 'PeriodGetAutocompleteV2Response':
+          return PeriodGetAutocompleteV2Response.fromJson(value);
+        case 'PeriodGetAutocompleteV2ResponseAllOf':
+          return PeriodGetAutocompleteV2ResponseAllOf.fromJson(value);
+        case 'PeriodGetAutocompleteV2ResponseMPayload':
+          return PeriodGetAutocompleteV2ResponseMPayload.fromJson(value);
         case 'PhoneRequest':
           return PhoneRequest.fromJson(value);
         case 'PhoneRequestCompound':

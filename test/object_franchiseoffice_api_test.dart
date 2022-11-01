@@ -26,5 +26,14 @@ void main() {
       // TODO
     });
 
+    // Retrieve Franchiseoffices and IDs
+    //
+    // Get the list of Franchiseoffice to be used in a dropdown or autocomplete control.
+    //
+    //Future<FranchiseofficeGetAutocompleteV2Response> franchiseofficeGetAutocompleteV2(String sSelector, { String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage }) async
+    test('test franchiseofficeGetAutocompleteV2', () async {
+      // TODO
+    });
+
   });
 }
