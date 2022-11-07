@@ -81,13 +81,19 @@ void main() {
       // TODO
     });
 
+    // The date and time at which the Ezsignfolder will be sent in the future.
+    // String dtEzsignfolderDelayedsenddate
+    test('to test the property `dtEzsignfolderDelayedsenddate`', () async {
+      // TODO
+    });
+
     // The maximum date and time at which the Ezsignfolder can be signed.
     // String dtEzsignfolderDuedate
     test('to test the property `dtEzsignfolderDuedate`', () async {
       // TODO
     });
 
-    // The date and time at which the Ezsign folder was sent the last time.
+    // The date and time at which the Ezsignfolder was sent the last time.
     // String dtEzsignfolderSentdate
     test('to test the property `dtEzsignfolderSentdate`', () async {
       // TODO
@@ -110,7 +116,7 @@ void main() {
       // TODO
     });
 
-    // The date and time at which the folder was closed. Either by applying the last signature or by completing it prematurely.
+    // The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely.
     // String dtEzsignfolderClose
     test('to test the property `dtEzsignfolderClose`', () async {
       // TODO

@@ -1207,6 +1207,67 @@ class ObjectEzsignfolderApi {
     return null;
   }
 
+  /// Send the Ezsignfolder to the signatories for signature
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfolderID (required):
+  ///
+  /// * [EzsignfolderSendV3Request] ezsignfolderSendV3Request (required):
+  Future<Response> ezsignfolderSendV3WithHttpInfo(int pkiEzsignfolderID, EzsignfolderSendV3Request ezsignfolderSendV3Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/3/object/ezsignfolder/{pkiEzsignfolderID}/send'
+      .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = ezsignfolderSendV3Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Send the Ezsignfolder to the signatories for signature
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfolderID (required):
+  ///
+  /// * [EzsignfolderSendV3Request] ezsignfolderSendV3Request (required):
+  Future<EzsignfolderSendV3Response?> ezsignfolderSendV3(int pkiEzsignfolderID, EzsignfolderSendV3Request ezsignfolderSendV3Request,) async {
+    final response = await ezsignfolderSendV3WithHttpInfo(pkiEzsignfolderID, ezsignfolderSendV3Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderSendV3Response',) as EzsignfolderSendV3Response;
+    
+    }
+    return null;
+  }
+
   /// Unsend the Ezsignfolder
   ///
   /// Once an Ezsignfolder has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsignfolder and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on \"Non-completed\" Ezsigndocuments will be lost.

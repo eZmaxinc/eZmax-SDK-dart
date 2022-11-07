@@ -934,6 +934,10 @@ class ApiClient {
           return EzsignfolderSendV2Request.fromJson(value);
         case 'EzsignfolderSendV2Response':
           return EzsignfolderSendV2Response.fromJson(value);
+        case 'EzsignfolderSendV3Request':
+          return EzsignfolderSendV3Request.fromJson(value);
+        case 'EzsignfolderSendV3Response':
+          return EzsignfolderSendV3Response.fromJson(value);
         case 'EzsignfolderUnsendV1Response':
           return EzsignfolderUnsendV1Response.fromJson(value);
         case 'EzsignfoldersignerassociationCreateObjectV1Request':
@@ -978,12 +982,18 @@ class ApiClient {
           return EzsignfoldersignerassociationGetObjectV2ResponseAllOf.fromJson(value);
         case 'EzsignfoldersignerassociationGetObjectV2ResponseMPayload':
           return EzsignfoldersignerassociationGetObjectV2ResponseMPayload.fromJson(value);
+        case 'EzsignfoldersignerassociationPatchObjectV1Request':
+          return EzsignfoldersignerassociationPatchObjectV1Request.fromJson(value);
+        case 'EzsignfoldersignerassociationPatchObjectV1Response':
+          return EzsignfoldersignerassociationPatchObjectV1Response.fromJson(value);
         case 'EzsignfoldersignerassociationRequest':
           return EzsignfoldersignerassociationRequest.fromJson(value);
         case 'EzsignfoldersignerassociationRequestCompound':
           return EzsignfoldersignerassociationRequestCompound.fromJson(value);
         case 'EzsignfoldersignerassociationRequestCompoundAllOf':
           return EzsignfoldersignerassociationRequestCompoundAllOf.fromJson(value);
+        case 'EzsignfoldersignerassociationRequestPatch':
+          return EzsignfoldersignerassociationRequestPatch.fromJson(value);
         case 'EzsignfoldersignerassociationResponse':
           return EzsignfoldersignerassociationResponse.fromJson(value);
         case 'EzsignfoldersignerassociationResponseCompound':

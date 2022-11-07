@@ -28,6 +28,12 @@ void main() {
       // TODO
     });
 
+    // If this flag is true the signatory is part of a delayed send.
+    // bool bEzsignfoldersignerassociationDelayedsend
+    test('to test the property `bEzsignfoldersignerassociationDelayedsend`', () async {
+      // TODO
+    });
+
     // If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document.
     // bool bEzsignfoldersignerassociationReceivecopy
     test('to test the property `bEzsignfoldersignerassociationReceivecopy`', () async {

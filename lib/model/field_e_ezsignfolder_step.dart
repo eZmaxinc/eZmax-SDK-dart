@@ -24,6 +24,7 @@ class FieldEEzsignfolderStep {
   String toJson() => value;
 
   static const unsent = FieldEEzsignfolderStep._(r'Unsent');
+  static const pendingSend = FieldEEzsignfolderStep._(r'PendingSend');
   static const sent = FieldEEzsignfolderStep._(r'Sent');
   static const partiallySigned = FieldEEzsignfolderStep._(r'PartiallySigned');
   static const expired = FieldEEzsignfolderStep._(r'Expired');
@@ -34,6 +35,7 @@ class FieldEEzsignfolderStep {
   /// List of all possible values in this [enum][FieldEEzsignfolderStep].
   static const values = <FieldEEzsignfolderStep>[
     unsent,
+    pendingSend,
     sent,
     partiallySigned,
     expired,
@@ -79,6 +81,7 @@ class FieldEEzsignfolderStepTypeTransformer {
     if (data != null) {
       switch (data.toString()) {
         case r'Unsent': return FieldEEzsignfolderStep.unsent;
+        case r'PendingSend': return FieldEEzsignfolderStep.pendingSend;
         case r'Sent': return FieldEEzsignfolderStep.sent;
         case r'PartiallySigned': return FieldEEzsignfolderStep.partiallySigned;
         case r'Expired': return FieldEEzsignfolderStep.expired;

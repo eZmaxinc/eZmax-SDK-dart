@@ -89,5 +89,12 @@ void main() {
       // TODO
     });
 
+    // Patch an existing Ezsignfoldersignerassociation
+    //
+    //Future<EzsignfoldersignerassociationPatchObjectV1Response> ezsignfoldersignerassociationPatchObjectV1(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request) async
+    test('test ezsignfoldersignerassociationPatchObjectV1', () async {
+      // TODO
+    });
+
   });
 }

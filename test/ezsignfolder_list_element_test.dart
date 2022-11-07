@@ -56,7 +56,7 @@ void main() {
       // TODO
     });
 
-    // The date and time at which the Ezsign folder was sent the last time.
+    // The date and time at which the Ezsignfolder was sent the last time.
     // String dtEzsignfolderSentdate
     test('to test the property `dtEzsignfolderSentdate`', () async {
       // TODO

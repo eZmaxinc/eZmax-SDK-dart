@@ -15,6 +15,7 @@ class EzsignfoldersignerassociationResponse {
   EzsignfoldersignerassociationResponse({
     required this.pkiEzsignfoldersignerassociationID,
     required this.fkiEzsignfolderID,
+    required this.bEzsignfoldersignerassociationDelayedsend,
     required this.bEzsignfoldersignerassociationReceivecopy,
     required this.tEzsignfoldersignerassociationMessage,
   });
@@ -29,6 +30,9 @@ class EzsignfoldersignerassociationResponse {
   /// Minimum value: 0
   int fkiEzsignfolderID;
 
+  /// If this flag is true the signatory is part of a delayed send.
+  bool bEzsignfoldersignerassociationDelayedsend;
+
   /// If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document.
   bool bEzsignfoldersignerassociationReceivecopy;
 
@@ -39,6 +43,7 @@ class EzsignfoldersignerassociationResponse {
   bool operator ==(Object other) => identical(this, other) || other is EzsignfoldersignerassociationResponse &&
      other.pkiEzsignfoldersignerassociationID == pkiEzsignfoldersignerassociationID &&
      other.fkiEzsignfolderID == fkiEzsignfolderID &&
+     other.bEzsignfoldersignerassociationDelayedsend == bEzsignfoldersignerassociationDelayedsend &&
      other.bEzsignfoldersignerassociationReceivecopy == bEzsignfoldersignerassociationReceivecopy &&
      other.tEzsignfoldersignerassociationMessage == tEzsignfoldersignerassociationMessage;
 
@@ -47,16 +52,18 @@ class EzsignfoldersignerassociationResponse {
     // ignore: unnecessary_parenthesis
     (pkiEzsignfoldersignerassociationID.hashCode) +
     (fkiEzsignfolderID.hashCode) +
+    (bEzsignfoldersignerassociationDelayedsend.hashCode) +
     (bEzsignfoldersignerassociationReceivecopy.hashCode) +
     (tEzsignfoldersignerassociationMessage.hashCode);
 
   @override
-  String toString() => 'EzsignfoldersignerassociationResponse[pkiEzsignfoldersignerassociationID=$pkiEzsignfoldersignerassociationID, fkiEzsignfolderID=$fkiEzsignfolderID, bEzsignfoldersignerassociationReceivecopy=$bEzsignfoldersignerassociationReceivecopy, tEzsignfoldersignerassociationMessage=$tEzsignfoldersignerassociationMessage]';
+  String toString() => 'EzsignfoldersignerassociationResponse[pkiEzsignfoldersignerassociationID=$pkiEzsignfoldersignerassociationID, fkiEzsignfolderID=$fkiEzsignfolderID, bEzsignfoldersignerassociationDelayedsend=$bEzsignfoldersignerassociationDelayedsend, bEzsignfoldersignerassociationReceivecopy=$bEzsignfoldersignerassociationReceivecopy, tEzsignfoldersignerassociationMessage=$tEzsignfoldersignerassociationMessage]';
 
   Map<String, dynamic> toJson() {
     final _json = <String, dynamic>{};
       _json[r'pkiEzsignfoldersignerassociationID'] = pkiEzsignfoldersignerassociationID;
       _json[r'fkiEzsignfolderID'] = fkiEzsignfolderID;
+      _json[r'bEzsignfoldersignerassociationDelayedsend'] = bEzsignfoldersignerassociationDelayedsend;
       _json[r'bEzsignfoldersignerassociationReceivecopy'] = bEzsignfoldersignerassociationReceivecopy;
       _json[r'tEzsignfoldersignerassociationMessage'] = tEzsignfoldersignerassociationMessage;
     return _json;
@@ -83,6 +90,7 @@ class EzsignfoldersignerassociationResponse {
       return EzsignfoldersignerassociationResponse(
         pkiEzsignfoldersignerassociationID: mapValueOfType<int>(json, r'pkiEzsignfoldersignerassociationID')!,
         fkiEzsignfolderID: mapValueOfType<int>(json, r'fkiEzsignfolderID')!,
+        bEzsignfoldersignerassociationDelayedsend: mapValueOfType<bool>(json, r'bEzsignfoldersignerassociationDelayedsend')!,
         bEzsignfoldersignerassociationReceivecopy: mapValueOfType<bool>(json, r'bEzsignfoldersignerassociationReceivecopy')!,
         tEzsignfoldersignerassociationMessage: mapValueOfType<String>(json, r'tEzsignfoldersignerassociationMessage')!,
       );
@@ -136,6 +144,7 @@ class EzsignfoldersignerassociationResponse {
   static const requiredKeys = <String>{
     'pkiEzsignfoldersignerassociationID',
     'fkiEzsignfolderID',
+    'bEzsignfoldersignerassociationDelayedsend',
     'bEzsignfoldersignerassociationReceivecopy',
     'tEzsignfoldersignerassociationMessage',
   };
