@@ -501,6 +501,10 @@ doc/EzsignsignerResponseCompound.md
 doc/EzsignsignerResponseCompoundAllOf.md
 doc/EzsignsignerResponseCompoundContact.md
 doc/EzsigntemplateAutocompleteElementResponse.md
+doc/EzsigntemplateCopyV1Request.md
+doc/EzsigntemplateCopyV1Response.md
+doc/EzsigntemplateCopyV1ResponseAllOf.md
+doc/EzsigntemplateCopyV1ResponseMPayload.md
 doc/EzsigntemplateCreateObjectV1Request.md
 doc/EzsigntemplateCreateObjectV1Response.md
 doc/EzsigntemplateCreateObjectV1ResponseAllOf.md
@@ -1462,6 +1466,10 @@ lib/model/ezsignsigner_response_compound.dart
 lib/model/ezsignsigner_response_compound_all_of.dart
 lib/model/ezsignsigner_response_compound_contact.dart
 lib/model/ezsigntemplate_autocomplete_element_response.dart
+lib/model/ezsigntemplate_copy_v1_request.dart
+lib/model/ezsigntemplate_copy_v1_response.dart
+lib/model/ezsigntemplate_copy_v1_response_all_of.dart
+lib/model/ezsigntemplate_copy_v1_response_m_payload.dart
 lib/model/ezsigntemplate_create_object_v1_request.dart
 lib/model/ezsigntemplate_create_object_v1_response.dart
 lib/model/ezsigntemplate_create_object_v1_response_all_of.dart
@@ -2330,6 +2338,10 @@ test/ezsignsigner_response_compound_contact_test.dart
 test/ezsignsigner_response_compound_test.dart
 test/ezsignsigner_response_test.dart
 test/ezsigntemplate_autocomplete_element_response_test.dart
+test/ezsigntemplate_copy_v1_request_test.dart
+test/ezsigntemplate_copy_v1_response_all_of_test.dart
+test/ezsigntemplate_copy_v1_response_m_payload_test.dart
+test/ezsigntemplate_copy_v1_response_test.dart
 test/ezsigntemplate_create_object_v1_request_test.dart
 test/ezsigntemplate_create_object_v1_response_all_of_test.dart
 test/ezsigntemplate_create_object_v1_response_m_payload_test.dart

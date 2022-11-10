@@ -14,6 +14,7 @@ class CustomEzmaxpricingResponse {
   /// Returns a new [CustomEzmaxpricingResponse] instance.
   CustomEzmaxpricingResponse({
     required this.pkiEzmaxpricingID,
+    required this.dEzmaxpricingRebateezsignallagents,
     required this.dtEzmaxpricingStart,
     this.dtEzmaxpricingEnd,
   });
@@ -22,6 +23,9 @@ class CustomEzmaxpricingResponse {
   ///
   /// Minimum value: 1
   int pkiEzmaxpricingID;
+
+  /// The rebate offered when eZsign is taken for all agents
+  String dEzmaxpricingRebateezsignallagents;
 
   /// The start date of the Ezmaxpricing
   String dtEzmaxpricingStart;
@@ -38,6 +42,7 @@ class CustomEzmaxpricingResponse {
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomEzmaxpricingResponse &&
      other.pkiEzmaxpricingID == pkiEzmaxpricingID &&
+     other.dEzmaxpricingRebateezsignallagents == dEzmaxpricingRebateezsignallagents &&
      other.dtEzmaxpricingStart == dtEzmaxpricingStart &&
      other.dtEzmaxpricingEnd == dtEzmaxpricingEnd;
 
@@ -45,15 +50,17 @@ class CustomEzmaxpricingResponse {
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiEzmaxpricingID.hashCode) +
+    (dEzmaxpricingRebateezsignallagents.hashCode) +
     (dtEzmaxpricingStart.hashCode) +
     (dtEzmaxpricingEnd == null ? 0 : dtEzmaxpricingEnd!.hashCode);
 
   @override
-  String toString() => 'CustomEzmaxpricingResponse[pkiEzmaxpricingID=$pkiEzmaxpricingID, dtEzmaxpricingStart=$dtEzmaxpricingStart, dtEzmaxpricingEnd=$dtEzmaxpricingEnd]';
+  String toString() => 'CustomEzmaxpricingResponse[pkiEzmaxpricingID=$pkiEzmaxpricingID, dEzmaxpricingRebateezsignallagents=$dEzmaxpricingRebateezsignallagents, dtEzmaxpricingStart=$dtEzmaxpricingStart, dtEzmaxpricingEnd=$dtEzmaxpricingEnd]';
 
   Map<String, dynamic> toJson() {
     final _json = <String, dynamic>{};
       _json[r'pkiEzmaxpricingID'] = pkiEzmaxpricingID;
+      _json[r'dEzmaxpricingRebateezsignallagents'] = dEzmaxpricingRebateezsignallagents;
       _json[r'dtEzmaxpricingStart'] = dtEzmaxpricingStart;
     if (dtEzmaxpricingEnd != null) {
       _json[r'dtEzmaxpricingEnd'] = dtEzmaxpricingEnd;
@@ -83,6 +90,7 @@ class CustomEzmaxpricingResponse {
 
       return CustomEzmaxpricingResponse(
         pkiEzmaxpricingID: mapValueOfType<int>(json, r'pkiEzmaxpricingID')!,
+        dEzmaxpricingRebateezsignallagents: mapValueOfType<String>(json, r'dEzmaxpricingRebateezsignallagents')!,
         dtEzmaxpricingStart: mapValueOfType<String>(json, r'dtEzmaxpricingStart')!,
         dtEzmaxpricingEnd: mapValueOfType<String>(json, r'dtEzmaxpricingEnd'),
       );
@@ -135,6 +143,7 @@ class CustomEzmaxpricingResponse {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'pkiEzmaxpricingID',
+    'dEzmaxpricingRebateezsignallagents',
     'dtEzmaxpricingStart',
   };
 }

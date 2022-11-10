@@ -17,6 +17,15 @@ void main() {
   // final instance = ObjectEzsigntemplateApi();
 
   group('tests for ObjectEzsigntemplateApi', () {
+    // Copy the Ezsigntemplate
+    //
+    // 
+    //
+    //Future<EzsigntemplateCopyV1Response> ezsigntemplateCopyV1(int pkiEzsigntemplateID, EzsigntemplateCopyV1Request ezsigntemplateCopyV1Request) async
+    test('test ezsigntemplateCopyV1', () async {
+      // TODO
+    });
+
     // Create a new Ezsigntemplate
     //
     // The endpoint allows to create one or many elements at once.

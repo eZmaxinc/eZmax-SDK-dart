@@ -1188,6 +1188,14 @@ class ApiClient {
           return EzsignsignerResponseCompoundContact.fromJson(value);
         case 'EzsigntemplateAutocompleteElementResponse':
           return EzsigntemplateAutocompleteElementResponse.fromJson(value);
+        case 'EzsigntemplateCopyV1Request':
+          return EzsigntemplateCopyV1Request.fromJson(value);
+        case 'EzsigntemplateCopyV1Response':
+          return EzsigntemplateCopyV1Response.fromJson(value);
+        case 'EzsigntemplateCopyV1ResponseAllOf':
+          return EzsigntemplateCopyV1ResponseAllOf.fromJson(value);
+        case 'EzsigntemplateCopyV1ResponseMPayload':
+          return EzsigntemplateCopyV1ResponseMPayload.fromJson(value);
         case 'EzsigntemplateCreateObjectV1Request':
           return EzsigntemplateCreateObjectV1Request.fromJson(value);
         case 'EzsigntemplateCreateObjectV1Response':

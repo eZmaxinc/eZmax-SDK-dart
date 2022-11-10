@@ -22,6 +22,12 @@ void main() {
       // TODO
     });
 
+    // The unique ID of the Ezsignfoldersignerassociation
+    // int fkiEzsignfoldersignerassociationIDDeclinedtosign
+    test('to test the property `fkiEzsignfoldersignerassociationIDDeclinedtosign`', () async {
+      // TODO
+    });
+
     // The maximum date and time at which the Ezsigndocument can be signed.
     // String dtEzsigndocumentDuedate
     test('to test the property `dtEzsigndocumentDuedate`', () async {
@@ -96,6 +102,12 @@ void main() {
     // MD5 Hash of the initial PDF Document before signatures were applied to it.
     // String sEzsigndocumentMD5initial
     test('to test the property `sEzsigndocumentMD5initial`', () async {
+      // TODO
+    });
+
+    // A custom text message that will contain the refusal message if the Ezsigndocument is declined to sign
+    // String tEzsigndocumentDeclinedtosignreason
+    test('to test the property `tEzsigndocumentDeclinedtosignreason`', () async {
       // TODO
     });
 

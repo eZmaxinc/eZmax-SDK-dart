@@ -14,6 +14,7 @@ class EzsigndocumentResponseCompound {
   /// Returns a new [EzsigndocumentResponseCompound] instance.
   EzsigndocumentResponseCompound({
     required this.fkiEzsignfolderID,
+    this.fkiEzsignfoldersignerassociationIDDeclinedtosign,
     required this.dtEzsigndocumentDuedate,
     this.dtEzsignformCompleted,
     required this.fkiLanguageID,
@@ -27,6 +28,7 @@ class EzsigndocumentResponseCompound {
     required this.iEzsigndocumentSignaturesigned,
     required this.iEzsigndocumentSignaturetotal,
     required this.sEzsigndocumentMD5initial,
+    this.tEzsigndocumentDeclinedtosignreason,
     required this.sEzsigndocumentMD5signed,
     required this.bEzsigndocumentEzsignform,
     required this.objAudit,
@@ -41,6 +43,17 @@ class EzsigndocumentResponseCompound {
   ///
   /// Minimum value: 0
   int fkiEzsignfolderID;
+
+  /// The unique ID of the Ezsignfoldersignerassociation
+  ///
+  /// Minimum value: 0
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiEzsignfoldersignerassociationIDDeclinedtosign;
 
   /// The maximum date and time at which the Ezsigndocument can be signed.
   String dtEzsigndocumentDuedate;
@@ -111,6 +124,15 @@ class EzsigndocumentResponseCompound {
   /// MD5 Hash of the initial PDF Document before signatures were applied to it.
   String sEzsigndocumentMD5initial;
 
+  /// A custom text message that will contain the refusal message if the Ezsigndocument is declined to sign
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? tEzsigndocumentDeclinedtosignreason;
+
   /// MD5 Hash of the final PDF Document after all signatures were applied to it.
   String sEzsigndocumentMD5signed;
 
@@ -136,6 +158,7 @@ class EzsigndocumentResponseCompound {
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigndocumentResponseCompound &&
      other.fkiEzsignfolderID == fkiEzsignfolderID &&
+     other.fkiEzsignfoldersignerassociationIDDeclinedtosign == fkiEzsignfoldersignerassociationIDDeclinedtosign &&
      other.dtEzsigndocumentDuedate == dtEzsigndocumentDuedate &&
      other.dtEzsignformCompleted == dtEzsignformCompleted &&
      other.fkiLanguageID == fkiLanguageID &&
@@ -149,6 +172,7 @@ class EzsigndocumentResponseCompound {
      other.iEzsigndocumentSignaturesigned == iEzsigndocumentSignaturesigned &&
      other.iEzsigndocumentSignaturetotal == iEzsigndocumentSignaturetotal &&
      other.sEzsigndocumentMD5initial == sEzsigndocumentMD5initial &&
+     other.tEzsigndocumentDeclinedtosignreason == tEzsigndocumentDeclinedtosignreason &&
      other.sEzsigndocumentMD5signed == sEzsigndocumentMD5signed &&
      other.bEzsigndocumentEzsignform == bEzsigndocumentEzsignform &&
      other.objAudit == objAudit &&
@@ -162,6 +186,7 @@ class EzsigndocumentResponseCompound {
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (fkiEzsignfolderID.hashCode) +
+    (fkiEzsignfoldersignerassociationIDDeclinedtosign == null ? 0 : fkiEzsignfoldersignerassociationIDDeclinedtosign!.hashCode) +
     (dtEzsigndocumentDuedate.hashCode) +
     (dtEzsignformCompleted == null ? 0 : dtEzsignformCompleted!.hashCode) +
     (fkiLanguageID.hashCode) +
@@ -175,6 +200,7 @@ class EzsigndocumentResponseCompound {
     (iEzsigndocumentSignaturesigned.hashCode) +
     (iEzsigndocumentSignaturetotal.hashCode) +
     (sEzsigndocumentMD5initial.hashCode) +
+    (tEzsigndocumentDeclinedtosignreason == null ? 0 : tEzsigndocumentDeclinedtosignreason!.hashCode) +
     (sEzsigndocumentMD5signed.hashCode) +
     (bEzsigndocumentEzsignform.hashCode) +
     (objAudit.hashCode) +
@@ -185,11 +211,16 @@ class EzsigndocumentResponseCompound {
     (aObjEzsignfoldersignerassociationstatus.hashCode);
 
   @override
-  String toString() => 'EzsigndocumentResponseCompound[fkiEzsignfolderID=$fkiEzsignfolderID, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, dtEzsignformCompleted=$dtEzsignformCompleted, fkiLanguageID=$fkiLanguageID, sEzsigndocumentName=$sEzsigndocumentName, pkiEzsigndocumentID=$pkiEzsigndocumentID, eEzsigndocumentStep=$eEzsigndocumentStep, dtEzsigndocumentFirstsend=$dtEzsigndocumentFirstsend, dtEzsigndocumentLastsend=$dtEzsigndocumentLastsend, iEzsigndocumentOrder=$iEzsigndocumentOrder, iEzsigndocumentPagetotal=$iEzsigndocumentPagetotal, iEzsigndocumentSignaturesigned=$iEzsigndocumentSignaturesigned, iEzsigndocumentSignaturetotal=$iEzsigndocumentSignaturetotal, sEzsigndocumentMD5initial=$sEzsigndocumentMD5initial, sEzsigndocumentMD5signed=$sEzsigndocumentMD5signed, bEzsigndocumentEzsignform=$bEzsigndocumentEzsignform, objAudit=$objAudit, iEzsigndocumentStepformtotal=$iEzsigndocumentStepformtotal, iEzsigndocumentStepformcurrent=$iEzsigndocumentStepformcurrent, iEzsigndocumentStepsignaturetotal=$iEzsigndocumentStepsignaturetotal, iEzsigndocumentStepsignatureCurrent=$iEzsigndocumentStepsignatureCurrent, aObjEzsignfoldersignerassociationstatus=$aObjEzsignfoldersignerassociationstatus]';
+  String toString() => 'EzsigndocumentResponseCompound[fkiEzsignfolderID=$fkiEzsignfolderID, fkiEzsignfoldersignerassociationIDDeclinedtosign=$fkiEzsignfoldersignerassociationIDDeclinedtosign, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, dtEzsignformCompleted=$dtEzsignformCompleted, fkiLanguageID=$fkiLanguageID, sEzsigndocumentName=$sEzsigndocumentName, pkiEzsigndocumentID=$pkiEzsigndocumentID, eEzsigndocumentStep=$eEzsigndocumentStep, dtEzsigndocumentFirstsend=$dtEzsigndocumentFirstsend, dtEzsigndocumentLastsend=$dtEzsigndocumentLastsend, iEzsigndocumentOrder=$iEzsigndocumentOrder, iEzsigndocumentPagetotal=$iEzsigndocumentPagetotal, iEzsigndocumentSignaturesigned=$iEzsigndocumentSignaturesigned, iEzsigndocumentSignaturetotal=$iEzsigndocumentSignaturetotal, sEzsigndocumentMD5initial=$sEzsigndocumentMD5initial, tEzsigndocumentDeclinedtosignreason=$tEzsigndocumentDeclinedtosignreason, sEzsigndocumentMD5signed=$sEzsigndocumentMD5signed, bEzsigndocumentEzsignform=$bEzsigndocumentEzsignform, objAudit=$objAudit, iEzsigndocumentStepformtotal=$iEzsigndocumentStepformtotal, iEzsigndocumentStepformcurrent=$iEzsigndocumentStepformcurrent, iEzsigndocumentStepsignaturetotal=$iEzsigndocumentStepsignaturetotal, iEzsigndocumentStepsignatureCurrent=$iEzsigndocumentStepsignatureCurrent, aObjEzsignfoldersignerassociationstatus=$aObjEzsignfoldersignerassociationstatus]';
 
   Map<String, dynamic> toJson() {
     final _json = <String, dynamic>{};
       _json[r'fkiEzsignfolderID'] = fkiEzsignfolderID;
+    if (fkiEzsignfoldersignerassociationIDDeclinedtosign != null) {
+      _json[r'fkiEzsignfoldersignerassociationIDDeclinedtosign'] = fkiEzsignfoldersignerassociationIDDeclinedtosign;
+    } else {
+      _json[r'fkiEzsignfoldersignerassociationIDDeclinedtosign'] = null;
+    }
       _json[r'dtEzsigndocumentDuedate'] = dtEzsigndocumentDuedate;
     if (dtEzsignformCompleted != null) {
       _json[r'dtEzsignformCompleted'] = dtEzsignformCompleted;
@@ -215,6 +246,11 @@ class EzsigndocumentResponseCompound {
       _json[r'iEzsigndocumentSignaturesigned'] = iEzsigndocumentSignaturesigned;
       _json[r'iEzsigndocumentSignaturetotal'] = iEzsigndocumentSignaturetotal;
       _json[r'sEzsigndocumentMD5initial'] = sEzsigndocumentMD5initial;
+    if (tEzsigndocumentDeclinedtosignreason != null) {
+      _json[r'tEzsigndocumentDeclinedtosignreason'] = tEzsigndocumentDeclinedtosignreason;
+    } else {
+      _json[r'tEzsigndocumentDeclinedtosignreason'] = null;
+    }
       _json[r'sEzsigndocumentMD5signed'] = sEzsigndocumentMD5signed;
       _json[r'bEzsigndocumentEzsignform'] = bEzsigndocumentEzsignform;
       _json[r'objAudit'] = objAudit;
@@ -246,6 +282,7 @@ class EzsigndocumentResponseCompound {
 
       return EzsigndocumentResponseCompound(
         fkiEzsignfolderID: mapValueOfType<int>(json, r'fkiEzsignfolderID')!,
+        fkiEzsignfoldersignerassociationIDDeclinedtosign: mapValueOfType<int>(json, r'fkiEzsignfoldersignerassociationIDDeclinedtosign'),
         dtEzsigndocumentDuedate: mapValueOfType<String>(json, r'dtEzsigndocumentDuedate')!,
         dtEzsignformCompleted: mapValueOfType<String>(json, r'dtEzsignformCompleted'),
         fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID')!,
@@ -259,6 +296,7 @@ class EzsigndocumentResponseCompound {
         iEzsigndocumentSignaturesigned: mapValueOfType<int>(json, r'iEzsigndocumentSignaturesigned')!,
         iEzsigndocumentSignaturetotal: mapValueOfType<int>(json, r'iEzsigndocumentSignaturetotal')!,
         sEzsigndocumentMD5initial: mapValueOfType<String>(json, r'sEzsigndocumentMD5initial')!,
+        tEzsigndocumentDeclinedtosignreason: mapValueOfType<String>(json, r'tEzsigndocumentDeclinedtosignreason'),
         sEzsigndocumentMD5signed: mapValueOfType<String>(json, r'sEzsigndocumentMD5signed')!,
         bEzsigndocumentEzsignform: mapValueOfType<bool>(json, r'bEzsigndocumentEzsignform')!,
         objAudit: CommonAudit.fromJson(json[r'objAudit'])!,

@@ -22,6 +22,12 @@ void main() {
       // TODO
     });
 
+    // The rebate offered when eZsign is taken for all agents
+    // String dEzmaxpricingRebateezsignallagents
+    test('to test the property `dEzmaxpricingRebateezsignallagents`', () async {
+      // TODO
+    });
+
     // The start date of the Ezmaxpricing
     // String dtEzmaxpricingStart
     test('to test the property `dtEzmaxpricingStart`', () async {
