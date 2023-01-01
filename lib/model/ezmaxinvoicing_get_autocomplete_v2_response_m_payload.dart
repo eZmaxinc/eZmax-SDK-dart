@@ -32,9 +32,9 @@ class EzmaxinvoicingGetAutocompleteV2ResponseMPayload {
   String toString() => 'EzmaxinvoicingGetAutocompleteV2ResponseMPayload[aObjEzmaxinvoicing=$aObjEzmaxinvoicing]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_objEzmaxinvoicing'] = aObjEzmaxinvoicing;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_objEzmaxinvoicing'] = this.aObjEzmaxinvoicing;
+    return json;
   }
 
   /// Returns a new [EzmaxinvoicingGetAutocompleteV2ResponseMPayload] instance and imports its values from

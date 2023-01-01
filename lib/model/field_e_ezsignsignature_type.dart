@@ -75,7 +75,7 @@ class FieldEEzsignsignatureTypeTypeTransformer {
   /// and users are still using an old app with the old code.
   FieldEEzsignsignatureType? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
-      switch (data.toString()) {
+      switch (data) {
         case r'Acknowledgement': return FieldEEzsignsignatureType.acknowledgement;
         case r'City': return FieldEEzsignsignatureType.city;
         case r'Handwritten': return FieldEEzsignsignatureType.handwritten;

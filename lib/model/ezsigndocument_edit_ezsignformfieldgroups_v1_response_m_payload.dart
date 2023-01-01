@@ -31,9 +31,9 @@ class EzsigndocumentEditEzsignformfieldgroupsV1ResponseMPayload {
   String toString() => 'EzsigndocumentEditEzsignformfieldgroupsV1ResponseMPayload[aPkiEzsignformfieldgroupID=$aPkiEzsignformfieldgroupID]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_pkiEzsignformfieldgroupID'] = aPkiEzsignformfieldgroupID;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_pkiEzsignformfieldgroupID'] = this.aPkiEzsignformfieldgroupID;
+    return json;
   }
 
   /// Returns a new [EzsigndocumentEditEzsignformfieldgroupsV1ResponseMPayload] instance and imports its values from

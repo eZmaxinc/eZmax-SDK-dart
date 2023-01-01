@@ -50,12 +50,12 @@ class NotificationtestGetElementsV1ResponseMPayload {
   String toString() => 'NotificationtestGetElementsV1ResponseMPayload[pkiNotificationtestID=$pkiNotificationtestID, sNotificationtestFunction=$sNotificationtestFunction, aSVariableobjectProperty=$aSVariableobjectProperty, aObjVariableobject=$aObjVariableobject]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiNotificationtestID'] = pkiNotificationtestID;
-      _json[r'sNotificationtestFunction'] = sNotificationtestFunction;
-      _json[r'a_sVariableobjectProperty'] = aSVariableobjectProperty;
-      _json[r'a_objVariableobject'] = aObjVariableobject;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'pkiNotificationtestID'] = this.pkiNotificationtestID;
+      json[r'sNotificationtestFunction'] = this.sNotificationtestFunction;
+      json[r'a_sVariableobjectProperty'] = this.aSVariableobjectProperty;
+      json[r'a_objVariableobject'] = this.aObjVariableobject;
+    return json;
   }
 
   /// Returns a new [NotificationtestGetElementsV1ResponseMPayload] instance and imports its values from

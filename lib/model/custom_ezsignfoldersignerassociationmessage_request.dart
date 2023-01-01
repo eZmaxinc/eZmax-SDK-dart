@@ -46,14 +46,14 @@ class CustomEzsignfoldersignerassociationmessageRequest {
   String toString() => 'CustomEzsignfoldersignerassociationmessageRequest[fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, tEzsignfoldersignerassociationMessage=$tEzsignfoldersignerassociationMessage]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'fkiEzsignfoldersignerassociationID'] = fkiEzsignfoldersignerassociationID;
-    if (tEzsignfoldersignerassociationMessage != null) {
-      _json[r'tEzsignfoldersignerassociationMessage'] = tEzsignfoldersignerassociationMessage;
+    final json = <String, dynamic>{};
+      json[r'fkiEzsignfoldersignerassociationID'] = this.fkiEzsignfoldersignerassociationID;
+    if (this.tEzsignfoldersignerassociationMessage != null) {
+      json[r'tEzsignfoldersignerassociationMessage'] = this.tEzsignfoldersignerassociationMessage;
     } else {
-      _json[r'tEzsignfoldersignerassociationMessage'] = null;
+      json[r'tEzsignfoldersignerassociationMessage'] = null;
     }
-    return _json;
+    return json;
   }
 
   /// Returns a new [CustomEzsignfoldersignerassociationmessageRequest] instance and imports its values from

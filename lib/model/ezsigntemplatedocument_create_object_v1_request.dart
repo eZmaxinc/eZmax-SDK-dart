@@ -31,9 +31,9 @@ class EzsigntemplatedocumentCreateObjectV1Request {
   String toString() => 'EzsigntemplatedocumentCreateObjectV1Request[aObjEzsigntemplatedocument=$aObjEzsigntemplatedocument]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_objEzsigntemplatedocument'] = aObjEzsigntemplatedocument;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_objEzsigntemplatedocument'] = this.aObjEzsigntemplatedocument;
+    return json;
   }
 
   /// Returns a new [EzsigntemplatedocumentCreateObjectV1Request] instance and imports its values from

@@ -44,11 +44,11 @@ class EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload {
   String toString() => 'EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload[aPkiEzsigntemplatepackagemembershipID=$aPkiEzsigntemplatepackagemembershipID, bEzsigntemplatepackageNeedvalidation=$bEzsigntemplatepackageNeedvalidation, bEzsignbulksendNeedvalidation=$bEzsignbulksendNeedvalidation]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_pkiEzsigntemplatepackagemembershipID'] = aPkiEzsigntemplatepackagemembershipID;
-      _json[r'bEzsigntemplatepackageNeedvalidation'] = bEzsigntemplatepackageNeedvalidation;
-      _json[r'bEzsignbulksendNeedvalidation'] = bEzsignbulksendNeedvalidation;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_pkiEzsigntemplatepackagemembershipID'] = this.aPkiEzsigntemplatepackagemembershipID;
+      json[r'bEzsigntemplatepackageNeedvalidation'] = this.bEzsigntemplatepackageNeedvalidation;
+      json[r'bEzsignbulksendNeedvalidation'] = this.bEzsignbulksendNeedvalidation;
+    return json;
   }
 
   /// Returns a new [EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload] instance and imports its values from

@@ -31,9 +31,9 @@ class EzsigndocumentGetObjectV2ResponseMPayload {
   String toString() => 'EzsigndocumentGetObjectV2ResponseMPayload[objEzsigndocument=$objEzsigndocument]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'objEzsigndocument'] = objEzsigndocument;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'objEzsigndocument'] = this.objEzsigndocument;
+    return json;
   }
 
   /// Returns a new [EzsigndocumentGetObjectV2ResponseMPayload] instance and imports its values from

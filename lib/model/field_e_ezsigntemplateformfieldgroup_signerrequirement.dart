@@ -67,7 +67,7 @@ class FieldEEzsigntemplateformfieldgroupSignerrequirementTypeTransformer {
   /// and users are still using an old app with the old code.
   FieldEEzsigntemplateformfieldgroupSignerrequirement? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
-      switch (data.toString()) {
+      switch (data) {
         case r'All': return FieldEEzsigntemplateformfieldgroupSignerrequirement.all;
         case r'One': return FieldEEzsigntemplateformfieldgroupSignerrequirement.one;
         default:

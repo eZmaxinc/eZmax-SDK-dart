@@ -96,19 +96,19 @@ class EzsignbulksendListElement {
   String toString() => 'EzsignbulksendListElement[pkiEzsignbulksendID=$pkiEzsignbulksendID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignbulksendDescription=$sEzsignbulksendDescription, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, bEzsignbulksendNeedvalidation=$bEzsignbulksendNeedvalidation, iEzsignbulksendtransmission=$iEzsignbulksendtransmission, iEzsignfolder=$iEzsignfolder, iEzsigndocument=$iEzsigndocument, iEzsignsignature=$iEzsignsignature, iEzsignsignatureSigned=$iEzsignsignatureSigned, bEzsignbulksendIsactive=$bEzsignbulksendIsactive]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiEzsignbulksendID'] = pkiEzsignbulksendID;
-      _json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
-      _json[r'sEzsignbulksendDescription'] = sEzsignbulksendDescription;
-      _json[r'sEzsignfoldertypeNameX'] = sEzsignfoldertypeNameX;
-      _json[r'bEzsignbulksendNeedvalidation'] = bEzsignbulksendNeedvalidation;
-      _json[r'iEzsignbulksendtransmission'] = iEzsignbulksendtransmission;
-      _json[r'iEzsignfolder'] = iEzsignfolder;
-      _json[r'iEzsigndocument'] = iEzsigndocument;
-      _json[r'iEzsignsignature'] = iEzsignsignature;
-      _json[r'iEzsignsignatureSigned'] = iEzsignsignatureSigned;
-      _json[r'bEzsignbulksendIsactive'] = bEzsignbulksendIsactive;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'pkiEzsignbulksendID'] = this.pkiEzsignbulksendID;
+      json[r'fkiEzsignfoldertypeID'] = this.fkiEzsignfoldertypeID;
+      json[r'sEzsignbulksendDescription'] = this.sEzsignbulksendDescription;
+      json[r'sEzsignfoldertypeNameX'] = this.sEzsignfoldertypeNameX;
+      json[r'bEzsignbulksendNeedvalidation'] = this.bEzsignbulksendNeedvalidation;
+      json[r'iEzsignbulksendtransmission'] = this.iEzsignbulksendtransmission;
+      json[r'iEzsignfolder'] = this.iEzsignfolder;
+      json[r'iEzsigndocument'] = this.iEzsigndocument;
+      json[r'iEzsignsignature'] = this.iEzsignsignature;
+      json[r'iEzsignsignatureSigned'] = this.iEzsignsignatureSigned;
+      json[r'bEzsignbulksendIsactive'] = this.bEzsignbulksendIsactive;
+    return json;
   }
 
   /// Returns a new [EzsignbulksendListElement] instance and imports its values from

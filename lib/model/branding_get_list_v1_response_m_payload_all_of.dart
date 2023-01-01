@@ -31,9 +31,9 @@ class BrandingGetListV1ResponseMPayloadAllOf {
   String toString() => 'BrandingGetListV1ResponseMPayloadAllOf[aObjBranding=$aObjBranding]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_objBranding'] = aObjBranding;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_objBranding'] = this.aObjBranding;
+    return json;
   }
 
   /// Returns a new [BrandingGetListV1ResponseMPayloadAllOf] instance and imports its values from

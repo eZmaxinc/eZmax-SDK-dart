@@ -70,15 +70,15 @@ class CustomNotificationtestgetnotificationtestsResponse {
   String toString() => 'CustomNotificationtestgetnotificationtestsResponse[pkiNotificationtestID=$pkiNotificationtestID, objNotificationtestName=$objNotificationtestName, fkiNotificationsubsectionID=$fkiNotificationsubsectionID, sNotificationtestFunction=$sNotificationtestFunction, sNotificationtestNameX=$sNotificationtestNameX, eNotificationpreferenceStatus=$eNotificationpreferenceStatus, iNotificationtest=$iNotificationtest]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiNotificationtestID'] = pkiNotificationtestID;
-      _json[r'objNotificationtestName'] = objNotificationtestName;
-      _json[r'fkiNotificationsubsectionID'] = fkiNotificationsubsectionID;
-      _json[r'sNotificationtestFunction'] = sNotificationtestFunction;
-      _json[r'sNotificationtestNameX'] = sNotificationtestNameX;
-      _json[r'eNotificationpreferenceStatus'] = eNotificationpreferenceStatus;
-      _json[r'iNotificationtest'] = iNotificationtest;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'pkiNotificationtestID'] = this.pkiNotificationtestID;
+      json[r'objNotificationtestName'] = this.objNotificationtestName;
+      json[r'fkiNotificationsubsectionID'] = this.fkiNotificationsubsectionID;
+      json[r'sNotificationtestFunction'] = this.sNotificationtestFunction;
+      json[r'sNotificationtestNameX'] = this.sNotificationtestNameX;
+      json[r'eNotificationpreferenceStatus'] = this.eNotificationpreferenceStatus;
+      json[r'iNotificationtest'] = this.iNotificationtest;
+    return json;
   }
 
   /// Returns a new [CustomNotificationtestgetnotificationtestsResponse] instance and imports its values from

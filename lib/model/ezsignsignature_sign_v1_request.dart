@@ -44,14 +44,14 @@ class EzsignsignatureSignV1Request {
   String toString() => 'EzsignsignatureSignV1Request[sValue=$sValue, bIsAutomatic=$bIsAutomatic]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (sValue != null) {
-      _json[r'sValue'] = sValue;
+    final json = <String, dynamic>{};
+    if (this.sValue != null) {
+      json[r'sValue'] = this.sValue;
     } else {
-      _json[r'sValue'] = null;
+      json[r'sValue'] = null;
     }
-      _json[r'bIsAutomatic'] = bIsAutomatic;
-    return _json;
+      json[r'bIsAutomatic'] = this.bIsAutomatic;
+    return json;
   }
 
   /// Returns a new [EzsignsignatureSignV1Request] instance and imports its values from

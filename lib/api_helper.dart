@@ -64,6 +64,18 @@ String parameterToString(dynamic value) {
   if (value is FieldEBrandingLogo) {
     return FieldEBrandingLogoTypeTransformer().encode(value).toString();
   }
+  if (value is FieldECommunicationEmailimportance) {
+    return FieldECommunicationEmailimportanceTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldECommunicationType) {
+    return FieldECommunicationTypeTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldECommunicationexternalrecipientType) {
+    return FieldECommunicationexternalrecipientTypeTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldECommunicationrecipientType) {
+    return FieldECommunicationrecipientTypeTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEEzmaxinvoicingPaymenttype) {
     return FieldEEzmaxinvoicingPaymenttypeTypeTransformer().encode(value).toString();
   }

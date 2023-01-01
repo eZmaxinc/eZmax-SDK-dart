@@ -32,9 +32,9 @@ class FranchisereferalincomeCreateObjectV1ResponseMPayload {
   String toString() => 'FranchisereferalincomeCreateObjectV1ResponseMPayload[aPkiFranchisereferalincomeID=$aPkiFranchisereferalincomeID]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_pkiFranchisereferalincomeID'] = aPkiFranchisereferalincomeID;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_pkiFranchisereferalincomeID'] = this.aPkiFranchisereferalincomeID;
+    return json;
   }
 
   /// Returns a new [FranchisereferalincomeCreateObjectV1ResponseMPayload] instance and imports its values from

@@ -105,7 +105,7 @@ class FieldEUserTypeTypeTransformer {
   /// and users are still using an old app with the old code.
   FieldEUserType? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
-      switch (data.toString()) {
+      switch (data) {
         case r'AgentBroker': return FieldEUserType.agentBroker;
         case r'Assistant': return FieldEUserType.assistant;
         case r'Attendance': return FieldEUserType.attendance;

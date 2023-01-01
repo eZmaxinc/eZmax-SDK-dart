@@ -11,11 +11,13 @@
 part of openapi.api;
 
 class ApiClient {
-  ApiClient({this.basePath = 'https://prod.api.appcluster01.ca-central-1.ezmax.com/rest', this.authentication});
+  ApiClient({this.basePath = 'https://prod.api.appcluster01.ca-central-1.ezmax.com/rest', this.authentication,});
 
   final String basePath;
+  final Authentication? authentication;
 
   var _client = Client();
+  final _defaultHeaderMap = <String, String>{};
 
   /// Returns the current HTTP [Client] instance to use in this class.
   ///
@@ -27,14 +29,11 @@ class ApiClient {
     _client = newClient;
   }
 
-  final _defaultHeaderMap = <String, String>{};
-  final Authentication? authentication;
+  Map<String, String> get defaultHeaderMap => _defaultHeaderMap;
 
   void addDefaultHeader(String key, String value) {
      _defaultHeaderMap[key] = value;
   }
-
-  Map<String,String> get defaultHeaderMap => _defaultHeaderMap;
 
   // We don't use a Map<String, String> for queryParams.
   // If collectionFormat is 'multi', a key might appear multiple times.
@@ -47,7 +46,7 @@ class ApiClient {
     Map<String, String> formParams,
     String? contentType,
   ) async {
-    _updateParamsForAuth(queryParams, headerParams);
+    await authentication?.applyToParams(queryParams, headerParams);
 
     headerParams.addAll(_defaultHeaderMap);
     if (contentType != null) {
@@ -164,16 +163,6 @@ class ApiClient {
 
   @Deprecated('Scheduled for removal in OpenAPI Generator 6.x. Use serializeAsync() instead.')
   String serialize(Object? value) => value == null ? '' : json.encode(value);
-
-  /// Update query and header parameters based on authentication settings.
-  void _updateParamsForAuth(
-    List<QueryParam> queryParams,
-    Map<String, String> headerParams,
-  ) {
-    if (authentication != null) {
-      authentication!.applyToParams(queryParams, headerParams);
-    }
-  }
 
   static dynamic _deserialize(dynamic value, String targetType, {bool growable = false}) {
     try {
@@ -344,6 +333,52 @@ class ApiClient {
           return CommonResponseWarning.fromJson(value);
         case 'CommonWebhook':
           return CommonWebhook.fromJson(value);
+        case 'CommunicationGetCountV1Response':
+          return CommunicationGetCountV1Response.fromJson(value);
+        case 'CommunicationGetCountV1ResponseAllOf':
+          return CommunicationGetCountV1ResponseAllOf.fromJson(value);
+        case 'CommunicationGetCountV1ResponseMPayload':
+          return CommunicationGetCountV1ResponseMPayload.fromJson(value);
+        case 'CommunicationGetListV1Response':
+          return CommunicationGetListV1Response.fromJson(value);
+        case 'CommunicationGetListV1ResponseAllOf':
+          return CommunicationGetListV1ResponseAllOf.fromJson(value);
+        case 'CommunicationGetListV1ResponseMPayload':
+          return CommunicationGetListV1ResponseMPayload.fromJson(value);
+        case 'CommunicationGetObjectV2Response':
+          return CommunicationGetObjectV2Response.fromJson(value);
+        case 'CommunicationGetObjectV2ResponseAllOf':
+          return CommunicationGetObjectV2ResponseAllOf.fromJson(value);
+        case 'CommunicationGetObjectV2ResponseMPayload':
+          return CommunicationGetObjectV2ResponseMPayload.fromJson(value);
+        case 'CommunicationListElement':
+          return CommunicationListElement.fromJson(value);
+        case 'CommunicationResponse':
+          return CommunicationResponse.fromJson(value);
+        case 'CommunicationResponseCompound':
+          return CommunicationResponseCompound.fromJson(value);
+        case 'CommunicationResponseCompoundAllOf':
+          return CommunicationResponseCompoundAllOf.fromJson(value);
+        case 'CommunicationattachmentResponse':
+          return CommunicationattachmentResponse.fromJson(value);
+        case 'CommunicationattachmentResponseCompound':
+          return CommunicationattachmentResponseCompound.fromJson(value);
+        case 'CommunicationexternalimageResponse':
+          return CommunicationexternalimageResponse.fromJson(value);
+        case 'CommunicationexternalimageResponseCompound':
+          return CommunicationexternalimageResponseCompound.fromJson(value);
+        case 'CommunicationexternalrecipientResponse':
+          return CommunicationexternalrecipientResponse.fromJson(value);
+        case 'CommunicationexternalrecipientResponseCompound':
+          return CommunicationexternalrecipientResponseCompound.fromJson(value);
+        case 'CommunicationimageResponse':
+          return CommunicationimageResponse.fromJson(value);
+        case 'CommunicationimageResponseCompound':
+          return CommunicationimageResponseCompound.fromJson(value);
+        case 'CommunicationrecipientResponse':
+          return CommunicationrecipientResponse.fromJson(value);
+        case 'CommunicationrecipientResponseCompound':
+          return CommunicationrecipientResponseCompound.fromJson(value);
         case 'ContactRequest':
           return ContactRequest.fromJson(value);
         case 'ContactRequestCompound':
@@ -1646,6 +1681,14 @@ class ApiClient {
           return FieldEActivesessionWeekdaystartTypeTransformer().decode(value);
         case 'FieldEBrandingLogo':
           return FieldEBrandingLogoTypeTransformer().decode(value);
+        case 'FieldECommunicationEmailimportance':
+          return FieldECommunicationEmailimportanceTypeTransformer().decode(value);
+        case 'FieldECommunicationType':
+          return FieldECommunicationTypeTypeTransformer().decode(value);
+        case 'FieldECommunicationexternalrecipientType':
+          return FieldECommunicationexternalrecipientTypeTypeTransformer().decode(value);
+        case 'FieldECommunicationrecipientType':
+          return FieldECommunicationrecipientTypeTypeTransformer().decode(value);
         case 'FieldEEzmaxinvoicingPaymenttype':
           return FieldEEzmaxinvoicingPaymenttypeTypeTransformer().decode(value);
         case 'FieldEEzmaxinvoicingagentVariationezmax':
@@ -1800,6 +1843,10 @@ class ApiClient {
           return PhoneRequest.fromJson(value);
         case 'PhoneRequestCompound':
           return PhoneRequestCompound.fromJson(value);
+        case 'PhoneResponse':
+          return PhoneResponse.fromJson(value);
+        case 'PhoneResponseCompound':
+          return PhoneResponseCompound.fromJson(value);
         case 'SecretquestionAutocompleteElementResponse':
           return SecretquestionAutocompleteElementResponse.fromJson(value);
         case 'SecretquestionGetAutocompleteV2Response':

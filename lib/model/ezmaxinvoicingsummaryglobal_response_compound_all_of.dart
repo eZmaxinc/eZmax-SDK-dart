@@ -31,9 +31,9 @@ class EzmaxinvoicingsummaryglobalResponseCompoundAllOf {
   String toString() => 'EzmaxinvoicingsummaryglobalResponseCompoundAllOf[aObjEzmaxinvoicingcommission=$aObjEzmaxinvoicingcommission]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_objEzmaxinvoicingcommission'] = aObjEzmaxinvoicingcommission;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_objEzmaxinvoicingcommission'] = this.aObjEzmaxinvoicingcommission;
+    return json;
   }
 
   /// Returns a new [EzmaxinvoicingsummaryglobalResponseCompoundAllOf] instance and imports its values from

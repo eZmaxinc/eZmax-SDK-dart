@@ -54,15 +54,15 @@ class EzsigntemplatepackagesignerRequest {
   String toString() => 'EzsigntemplatepackagesignerRequest[pkiEzsigntemplatepackagesignerID=$pkiEzsigntemplatepackagesignerID, fkiEzsigntemplatepackageID=$fkiEzsigntemplatepackageID, sEzsigntemplatepackagesignerDescription=$sEzsigntemplatepackagesignerDescription]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (pkiEzsigntemplatepackagesignerID != null) {
-      _json[r'pkiEzsigntemplatepackagesignerID'] = pkiEzsigntemplatepackagesignerID;
+    final json = <String, dynamic>{};
+    if (this.pkiEzsigntemplatepackagesignerID != null) {
+      json[r'pkiEzsigntemplatepackagesignerID'] = this.pkiEzsigntemplatepackagesignerID;
     } else {
-      _json[r'pkiEzsigntemplatepackagesignerID'] = null;
+      json[r'pkiEzsigntemplatepackagesignerID'] = null;
     }
-      _json[r'fkiEzsigntemplatepackageID'] = fkiEzsigntemplatepackageID;
-      _json[r'sEzsigntemplatepackagesignerDescription'] = sEzsigntemplatepackagesignerDescription;
-    return _json;
+      json[r'fkiEzsigntemplatepackageID'] = this.fkiEzsigntemplatepackageID;
+      json[r'sEzsigntemplatepackagesignerDescription'] = this.sEzsigntemplatepackagesignerDescription;
+    return json;
   }
 
   /// Returns a new [EzsigntemplatepackagesignerRequest] instance and imports its values from

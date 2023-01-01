@@ -42,10 +42,10 @@ class EzsignformfieldgroupsignerResponse {
   String toString() => 'EzsignformfieldgroupsignerResponse[pkiEzsignformfieldgroupsignerID=$pkiEzsignformfieldgroupsignerID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiEzsignformfieldgroupsignerID'] = pkiEzsignformfieldgroupsignerID;
-      _json[r'fkiEzsignfoldersignerassociationID'] = fkiEzsignfoldersignerassociationID;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'pkiEzsignformfieldgroupsignerID'] = this.pkiEzsignformfieldgroupsignerID;
+      json[r'fkiEzsignfoldersignerassociationID'] = this.fkiEzsignfoldersignerassociationID;
+    return json;
   }
 
   /// Returns a new [EzsignformfieldgroupsignerResponse] instance and imports its values from

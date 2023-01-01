@@ -53,19 +53,19 @@ class EzmaxinvoicingGetAutocompleteV2Response {
   String toString() => 'EzmaxinvoicingGetAutocompleteV2Response[mPayload=$mPayload, objDebugPayload=$objDebugPayload, objDebug=$objDebug]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'mPayload'] = mPayload;
-    if (objDebugPayload != null) {
-      _json[r'objDebugPayload'] = objDebugPayload;
+    final json = <String, dynamic>{};
+      json[r'mPayload'] = this.mPayload;
+    if (this.objDebugPayload != null) {
+      json[r'objDebugPayload'] = this.objDebugPayload;
     } else {
-      _json[r'objDebugPayload'] = null;
+      json[r'objDebugPayload'] = null;
     }
-    if (objDebug != null) {
-      _json[r'objDebug'] = objDebug;
+    if (this.objDebug != null) {
+      json[r'objDebug'] = this.objDebug;
     } else {
-      _json[r'objDebug'] = null;
+      json[r'objDebug'] = null;
     }
-    return _json;
+    return json;
   }
 
   /// Returns a new [EzmaxinvoicingGetAutocompleteV2Response] instance and imports its values from

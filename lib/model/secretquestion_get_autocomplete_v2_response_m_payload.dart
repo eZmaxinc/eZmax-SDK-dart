@@ -32,9 +32,9 @@ class SecretquestionGetAutocompleteV2ResponseMPayload {
   String toString() => 'SecretquestionGetAutocompleteV2ResponseMPayload[aObjSecretquestion=$aObjSecretquestion]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_objSecretquestion'] = aObjSecretquestion;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_objSecretquestion'] = this.aObjSecretquestion;
+    return json;
   }
 
   /// Returns a new [SecretquestionGetAutocompleteV2ResponseMPayload] instance and imports its values from

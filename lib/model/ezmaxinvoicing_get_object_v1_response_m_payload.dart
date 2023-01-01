@@ -171,38 +171,38 @@ class EzmaxinvoicingGetObjectV1ResponseMPayload {
   String toString() => 'EzmaxinvoicingGetObjectV1ResponseMPayload[pkiEzmaxinvoicingID=$pkiEzmaxinvoicingID, fkiEzmaxinvoicingcontractID=$fkiEzmaxinvoicingcontractID, fkiEzmaxpricingID=$fkiEzmaxpricingID, fkiSystemconfigurationtypeID=$fkiSystemconfigurationtypeID, sSystemconfigurationtypeDescriptionX=$sSystemconfigurationtypeDescriptionX, yyyymmEzmaxinvoicing=$yyyymmEzmaxinvoicing, iEzmaxinvoicingDays=$iEzmaxinvoicingDays, eEzmaxinvoicingPaymenttype=$eEzmaxinvoicingPaymenttype, dEzmaxinvoicingRebatepaymenttype=$dEzmaxinvoicingRebatepaymenttype, iEzmaxinvoicingContractlength=$iEzmaxinvoicingContractlength, dEzmaxinvoicingRebatecontractlength=$dEzmaxinvoicingRebatecontractlength, bEzmaxinvoicingRebateEzsignallagents=$bEzmaxinvoicingRebateEzsignallagents, objAudit=$objAudit, objEzmaxinvoicingcontract=$objEzmaxinvoicingcontract, objEzmaxpricing=$objEzmaxpricing, aObjEzmaxinvoicingsummaryglobal=$aObjEzmaxinvoicingsummaryglobal, aObjEzmaxinvoicingsummaryexternal=$aObjEzmaxinvoicingsummaryexternal, aObjEzmaxinvoicingsummaryinternal=$aObjEzmaxinvoicingsummaryinternal, aObjEzmaxinvoicingagent=$aObjEzmaxinvoicingagent, aObjEzmaxinvoicinguser=$aObjEzmaxinvoicinguser, aObjEzmaxinvoicingezsignfolder=$aObjEzmaxinvoicingezsignfolder, aObjEzmaxinvoicingezsigndocument=$aObjEzmaxinvoicingezsigndocument]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (pkiEzmaxinvoicingID != null) {
-      _json[r'pkiEzmaxinvoicingID'] = pkiEzmaxinvoicingID;
+    final json = <String, dynamic>{};
+    if (this.pkiEzmaxinvoicingID != null) {
+      json[r'pkiEzmaxinvoicingID'] = this.pkiEzmaxinvoicingID;
     } else {
-      _json[r'pkiEzmaxinvoicingID'] = null;
+      json[r'pkiEzmaxinvoicingID'] = null;
     }
-      _json[r'fkiEzmaxinvoicingcontractID'] = fkiEzmaxinvoicingcontractID;
-      _json[r'fkiEzmaxpricingID'] = fkiEzmaxpricingID;
-      _json[r'fkiSystemconfigurationtypeID'] = fkiSystemconfigurationtypeID;
-      _json[r'sSystemconfigurationtypeDescriptionX'] = sSystemconfigurationtypeDescriptionX;
-      _json[r'yyyymmEzmaxinvoicing'] = yyyymmEzmaxinvoicing;
-      _json[r'iEzmaxinvoicingDays'] = iEzmaxinvoicingDays;
-      _json[r'eEzmaxinvoicingPaymenttype'] = eEzmaxinvoicingPaymenttype;
-      _json[r'dEzmaxinvoicingRebatepaymenttype'] = dEzmaxinvoicingRebatepaymenttype;
-      _json[r'iEzmaxinvoicingContractlength'] = iEzmaxinvoicingContractlength;
-      _json[r'dEzmaxinvoicingRebatecontractlength'] = dEzmaxinvoicingRebatecontractlength;
-      _json[r'bEzmaxinvoicingRebateEzsignallagents'] = bEzmaxinvoicingRebateEzsignallagents;
-    if (objAudit != null) {
-      _json[r'objAudit'] = objAudit;
+      json[r'fkiEzmaxinvoicingcontractID'] = this.fkiEzmaxinvoicingcontractID;
+      json[r'fkiEzmaxpricingID'] = this.fkiEzmaxpricingID;
+      json[r'fkiSystemconfigurationtypeID'] = this.fkiSystemconfigurationtypeID;
+      json[r'sSystemconfigurationtypeDescriptionX'] = this.sSystemconfigurationtypeDescriptionX;
+      json[r'yyyymmEzmaxinvoicing'] = this.yyyymmEzmaxinvoicing;
+      json[r'iEzmaxinvoicingDays'] = this.iEzmaxinvoicingDays;
+      json[r'eEzmaxinvoicingPaymenttype'] = this.eEzmaxinvoicingPaymenttype;
+      json[r'dEzmaxinvoicingRebatepaymenttype'] = this.dEzmaxinvoicingRebatepaymenttype;
+      json[r'iEzmaxinvoicingContractlength'] = this.iEzmaxinvoicingContractlength;
+      json[r'dEzmaxinvoicingRebatecontractlength'] = this.dEzmaxinvoicingRebatecontractlength;
+      json[r'bEzmaxinvoicingRebateEzsignallagents'] = this.bEzmaxinvoicingRebateEzsignallagents;
+    if (this.objAudit != null) {
+      json[r'objAudit'] = this.objAudit;
     } else {
-      _json[r'objAudit'] = null;
+      json[r'objAudit'] = null;
     }
-      _json[r'objEzmaxinvoicingcontract'] = objEzmaxinvoicingcontract;
-      _json[r'objEzmaxpricing'] = objEzmaxpricing;
-      _json[r'a_objEzmaxinvoicingsummaryglobal'] = aObjEzmaxinvoicingsummaryglobal;
-      _json[r'a_objEzmaxinvoicingsummaryexternal'] = aObjEzmaxinvoicingsummaryexternal;
-      _json[r'a_objEzmaxinvoicingsummaryinternal'] = aObjEzmaxinvoicingsummaryinternal;
-      _json[r'a_objEzmaxinvoicingagent'] = aObjEzmaxinvoicingagent;
-      _json[r'a_objEzmaxinvoicinguser'] = aObjEzmaxinvoicinguser;
-      _json[r'a_objEzmaxinvoicingezsignfolder'] = aObjEzmaxinvoicingezsignfolder;
-      _json[r'a_objEzmaxinvoicingezsigndocument'] = aObjEzmaxinvoicingezsigndocument;
-    return _json;
+      json[r'objEzmaxinvoicingcontract'] = this.objEzmaxinvoicingcontract;
+      json[r'objEzmaxpricing'] = this.objEzmaxpricing;
+      json[r'a_objEzmaxinvoicingsummaryglobal'] = this.aObjEzmaxinvoicingsummaryglobal;
+      json[r'a_objEzmaxinvoicingsummaryexternal'] = this.aObjEzmaxinvoicingsummaryexternal;
+      json[r'a_objEzmaxinvoicingsummaryinternal'] = this.aObjEzmaxinvoicingsummaryinternal;
+      json[r'a_objEzmaxinvoicingagent'] = this.aObjEzmaxinvoicingagent;
+      json[r'a_objEzmaxinvoicinguser'] = this.aObjEzmaxinvoicinguser;
+      json[r'a_objEzmaxinvoicingezsignfolder'] = this.aObjEzmaxinvoicingezsignfolder;
+      json[r'a_objEzmaxinvoicingezsigndocument'] = this.aObjEzmaxinvoicingezsigndocument;
+    return json;
   }
 
   /// Returns a new [EzmaxinvoicingGetObjectV1ResponseMPayload] instance and imports its values from

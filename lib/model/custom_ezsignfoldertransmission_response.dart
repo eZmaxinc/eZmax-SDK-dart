@@ -56,13 +56,13 @@ class CustomEzsignfoldertransmissionResponse {
   String toString() => 'CustomEzsignfoldertransmissionResponse[pkiEzsignfolderID=$pkiEzsignfolderID, eEzsignfolderStep=$eEzsignfolderStep, iEzsignfolderSignaturetotal=$iEzsignfolderSignaturetotal, iEzsignfolderSignaturesigned=$iEzsignfolderSignaturesigned, aObjEzsignfoldertransmissionSigner=$aObjEzsignfoldertransmissionSigner]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiEzsignfolderID'] = pkiEzsignfolderID;
-      _json[r'eEzsignfolderStep'] = eEzsignfolderStep;
-      _json[r'iEzsignfolderSignaturetotal'] = iEzsignfolderSignaturetotal;
-      _json[r'iEzsignfolderSignaturesigned'] = iEzsignfolderSignaturesigned;
-      _json[r'a_objEzsignfoldertransmissionSigner'] = aObjEzsignfoldertransmissionSigner;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'pkiEzsignfolderID'] = this.pkiEzsignfolderID;
+      json[r'eEzsignfolderStep'] = this.eEzsignfolderStep;
+      json[r'iEzsignfolderSignaturetotal'] = this.iEzsignfolderSignaturetotal;
+      json[r'iEzsignfolderSignaturesigned'] = this.iEzsignfolderSignaturesigned;
+      json[r'a_objEzsignfoldertransmissionSigner'] = this.aObjEzsignfoldertransmissionSigner;
+    return json;
   }
 
   /// Returns a new [CustomEzsignfoldertransmissionResponse] instance and imports its values from

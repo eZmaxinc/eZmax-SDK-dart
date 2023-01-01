@@ -32,9 +32,9 @@ class EzsignfoldersignerassociationCreateObjectV2ResponseMPayload {
   String toString() => 'EzsignfoldersignerassociationCreateObjectV2ResponseMPayload[aPkiEzsignfoldersignerassociationID=$aPkiEzsignfoldersignerassociationID]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_pkiEzsignfoldersignerassociationID'] = aPkiEzsignfoldersignerassociationID;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_pkiEzsignfoldersignerassociationID'] = this.aPkiEzsignfoldersignerassociationID;
+    return json;
   }
 
   /// Returns a new [EzsignfoldersignerassociationCreateObjectV2ResponseMPayload] instance and imports its values from

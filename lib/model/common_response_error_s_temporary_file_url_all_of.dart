@@ -38,13 +38,13 @@ class CommonResponseErrorSTemporaryFileUrlAllOf {
   String toString() => 'CommonResponseErrorSTemporaryFileUrlAllOf[sTemporaryFileUrl=$sTemporaryFileUrl]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (sTemporaryFileUrl != null) {
-      _json[r'sTemporaryFileUrl'] = sTemporaryFileUrl;
+    final json = <String, dynamic>{};
+    if (this.sTemporaryFileUrl != null) {
+      json[r'sTemporaryFileUrl'] = this.sTemporaryFileUrl;
     } else {
-      _json[r'sTemporaryFileUrl'] = null;
+      json[r'sTemporaryFileUrl'] = null;
     }
-    return _json;
+    return json;
   }
 
   /// Returns a new [CommonResponseErrorSTemporaryFileUrlAllOf] instance and imports its values from

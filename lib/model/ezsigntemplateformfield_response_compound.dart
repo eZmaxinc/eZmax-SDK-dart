@@ -37,7 +37,7 @@ class EzsigntemplateformfieldResponseCompound {
   /// The Label for the Ezsigntemplateformfield
   String sEzsigntemplateformfieldLabel;
 
-  /// The value for the Ezsigntemplateformfield  This can only be set if eEzsigntemplateformfieldgroupType is Checkbox or Radio
+  /// The value for the Ezsigntemplateformfield
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -104,25 +104,25 @@ class EzsigntemplateformfieldResponseCompound {
   String toString() => 'EzsigntemplateformfieldResponseCompound[pkiEzsigntemplateformfieldID=$pkiEzsigntemplateformfieldID, iEzsigntemplatedocumentpagePagenumber=$iEzsigntemplatedocumentpagePagenumber, sEzsigntemplateformfieldLabel=$sEzsigntemplateformfieldLabel, sEzsigntemplateformfieldValue=$sEzsigntemplateformfieldValue, iEzsigntemplateformfieldX=$iEzsigntemplateformfieldX, iEzsigntemplateformfieldY=$iEzsigntemplateformfieldY, iEzsigntemplateformfieldWidth=$iEzsigntemplateformfieldWidth, iEzsigntemplateformfieldHeight=$iEzsigntemplateformfieldHeight, bEzsigntemplateformfieldSelected=$bEzsigntemplateformfieldSelected]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiEzsigntemplateformfieldID'] = pkiEzsigntemplateformfieldID;
-      _json[r'iEzsigntemplatedocumentpagePagenumber'] = iEzsigntemplatedocumentpagePagenumber;
-      _json[r'sEzsigntemplateformfieldLabel'] = sEzsigntemplateformfieldLabel;
-    if (sEzsigntemplateformfieldValue != null) {
-      _json[r'sEzsigntemplateformfieldValue'] = sEzsigntemplateformfieldValue;
+    final json = <String, dynamic>{};
+      json[r'pkiEzsigntemplateformfieldID'] = this.pkiEzsigntemplateformfieldID;
+      json[r'iEzsigntemplatedocumentpagePagenumber'] = this.iEzsigntemplatedocumentpagePagenumber;
+      json[r'sEzsigntemplateformfieldLabel'] = this.sEzsigntemplateformfieldLabel;
+    if (this.sEzsigntemplateformfieldValue != null) {
+      json[r'sEzsigntemplateformfieldValue'] = this.sEzsigntemplateformfieldValue;
     } else {
-      _json[r'sEzsigntemplateformfieldValue'] = null;
+      json[r'sEzsigntemplateformfieldValue'] = null;
     }
-      _json[r'iEzsigntemplateformfieldX'] = iEzsigntemplateformfieldX;
-      _json[r'iEzsigntemplateformfieldY'] = iEzsigntemplateformfieldY;
-      _json[r'iEzsigntemplateformfieldWidth'] = iEzsigntemplateformfieldWidth;
-      _json[r'iEzsigntemplateformfieldHeight'] = iEzsigntemplateformfieldHeight;
-    if (bEzsigntemplateformfieldSelected != null) {
-      _json[r'bEzsigntemplateformfieldSelected'] = bEzsigntemplateformfieldSelected;
+      json[r'iEzsigntemplateformfieldX'] = this.iEzsigntemplateformfieldX;
+      json[r'iEzsigntemplateformfieldY'] = this.iEzsigntemplateformfieldY;
+      json[r'iEzsigntemplateformfieldWidth'] = this.iEzsigntemplateformfieldWidth;
+      json[r'iEzsigntemplateformfieldHeight'] = this.iEzsigntemplateformfieldHeight;
+    if (this.bEzsigntemplateformfieldSelected != null) {
+      json[r'bEzsigntemplateformfieldSelected'] = this.bEzsigntemplateformfieldSelected;
     } else {
-      _json[r'bEzsigntemplateformfieldSelected'] = null;
+      json[r'bEzsigntemplateformfieldSelected'] = null;
     }
-    return _json;
+    return json;
   }
 
   /// Returns a new [EzsigntemplateformfieldResponseCompound] instance and imports its values from

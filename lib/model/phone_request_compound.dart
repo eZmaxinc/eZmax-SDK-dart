@@ -99,35 +99,35 @@ class PhoneRequestCompound {
   String toString() => 'PhoneRequestCompound[fkiPhonetypeID=$fkiPhonetypeID, ePhoneType=$ePhoneType, sPhoneRegion=$sPhoneRegion, sPhoneExchange=$sPhoneExchange, sPhoneNumber=$sPhoneNumber, sPhoneInternational=$sPhoneInternational, sPhoneExtension=$sPhoneExtension]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'fkiPhonetypeID'] = fkiPhonetypeID;
-      _json[r'ePhoneType'] = ePhoneType;
-    if (sPhoneRegion != null) {
-      _json[r'sPhoneRegion'] = sPhoneRegion;
+    final json = <String, dynamic>{};
+      json[r'fkiPhonetypeID'] = this.fkiPhonetypeID;
+      json[r'ePhoneType'] = this.ePhoneType;
+    if (this.sPhoneRegion != null) {
+      json[r'sPhoneRegion'] = this.sPhoneRegion;
     } else {
-      _json[r'sPhoneRegion'] = null;
+      json[r'sPhoneRegion'] = null;
     }
-    if (sPhoneExchange != null) {
-      _json[r'sPhoneExchange'] = sPhoneExchange;
+    if (this.sPhoneExchange != null) {
+      json[r'sPhoneExchange'] = this.sPhoneExchange;
     } else {
-      _json[r'sPhoneExchange'] = null;
+      json[r'sPhoneExchange'] = null;
     }
-    if (sPhoneNumber != null) {
-      _json[r'sPhoneNumber'] = sPhoneNumber;
+    if (this.sPhoneNumber != null) {
+      json[r'sPhoneNumber'] = this.sPhoneNumber;
     } else {
-      _json[r'sPhoneNumber'] = null;
+      json[r'sPhoneNumber'] = null;
     }
-    if (sPhoneInternational != null) {
-      _json[r'sPhoneInternational'] = sPhoneInternational;
+    if (this.sPhoneInternational != null) {
+      json[r'sPhoneInternational'] = this.sPhoneInternational;
     } else {
-      _json[r'sPhoneInternational'] = null;
+      json[r'sPhoneInternational'] = null;
     }
-    if (sPhoneExtension != null) {
-      _json[r'sPhoneExtension'] = sPhoneExtension;
+    if (this.sPhoneExtension != null) {
+      json[r'sPhoneExtension'] = this.sPhoneExtension;
     } else {
-      _json[r'sPhoneExtension'] = null;
+      json[r'sPhoneExtension'] = null;
     }
-    return _json;
+    return json;
   }
 
   /// Returns a new [PhoneRequestCompound] instance and imports its values from

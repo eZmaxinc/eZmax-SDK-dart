@@ -131,43 +131,43 @@ class VersionhistoryResponse {
   String toString() => 'VersionhistoryResponse[pkiVersionhistoryID=$pkiVersionhistoryID, fkiModuleID=$fkiModuleID, fkiModulesectionID=$fkiModulesectionID, sModuleNameX=$sModuleNameX, sModulesectionNameX=$sModulesectionNameX, eVersionhistoryUsertype=$eVersionhistoryUsertype, objVersionhistoryDetail=$objVersionhistoryDetail, dtVersionhistoryDate=$dtVersionhistoryDate, dtVersionhistoryDateend=$dtVersionhistoryDateend, eVersionhistoryType=$eVersionhistoryType, bVersionhistoryDraft=$bVersionhistoryDraft]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiVersionhistoryID'] = pkiVersionhistoryID;
-    if (fkiModuleID != null) {
-      _json[r'fkiModuleID'] = fkiModuleID;
+    final json = <String, dynamic>{};
+      json[r'pkiVersionhistoryID'] = this.pkiVersionhistoryID;
+    if (this.fkiModuleID != null) {
+      json[r'fkiModuleID'] = this.fkiModuleID;
     } else {
-      _json[r'fkiModuleID'] = null;
+      json[r'fkiModuleID'] = null;
     }
-    if (fkiModulesectionID != null) {
-      _json[r'fkiModulesectionID'] = fkiModulesectionID;
+    if (this.fkiModulesectionID != null) {
+      json[r'fkiModulesectionID'] = this.fkiModulesectionID;
     } else {
-      _json[r'fkiModulesectionID'] = null;
+      json[r'fkiModulesectionID'] = null;
     }
-    if (sModuleNameX != null) {
-      _json[r'sModuleNameX'] = sModuleNameX;
+    if (this.sModuleNameX != null) {
+      json[r'sModuleNameX'] = this.sModuleNameX;
     } else {
-      _json[r'sModuleNameX'] = null;
+      json[r'sModuleNameX'] = null;
     }
-    if (sModulesectionNameX != null) {
-      _json[r'sModulesectionNameX'] = sModulesectionNameX;
+    if (this.sModulesectionNameX != null) {
+      json[r'sModulesectionNameX'] = this.sModulesectionNameX;
     } else {
-      _json[r'sModulesectionNameX'] = null;
+      json[r'sModulesectionNameX'] = null;
     }
-    if (eVersionhistoryUsertype != null) {
-      _json[r'eVersionhistoryUsertype'] = eVersionhistoryUsertype;
+    if (this.eVersionhistoryUsertype != null) {
+      json[r'eVersionhistoryUsertype'] = this.eVersionhistoryUsertype;
     } else {
-      _json[r'eVersionhistoryUsertype'] = null;
+      json[r'eVersionhistoryUsertype'] = null;
     }
-      _json[r'objVersionhistoryDetail'] = objVersionhistoryDetail;
-      _json[r'dtVersionhistoryDate'] = dtVersionhistoryDate;
-    if (dtVersionhistoryDateend != null) {
-      _json[r'dtVersionhistoryDateend'] = dtVersionhistoryDateend;
+      json[r'objVersionhistoryDetail'] = this.objVersionhistoryDetail;
+      json[r'dtVersionhistoryDate'] = this.dtVersionhistoryDate;
+    if (this.dtVersionhistoryDateend != null) {
+      json[r'dtVersionhistoryDateend'] = this.dtVersionhistoryDateend;
     } else {
-      _json[r'dtVersionhistoryDateend'] = null;
+      json[r'dtVersionhistoryDateend'] = null;
     }
-      _json[r'eVersionhistoryType'] = eVersionhistoryType;
-      _json[r'bVersionhistoryDraft'] = bVersionhistoryDraft;
-    return _json;
+      json[r'eVersionhistoryType'] = this.eVersionhistoryType;
+      json[r'bVersionhistoryDraft'] = this.bVersionhistoryDraft;
+    return json;
   }
 
   /// Returns a new [VersionhistoryResponse] instance and imports its values from

@@ -32,9 +32,9 @@ class BrandingGetAutocompleteV2ResponseMPayload {
   String toString() => 'BrandingGetAutocompleteV2ResponseMPayload[aObjBranding=$aObjBranding]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_objBranding'] = aObjBranding;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_objBranding'] = this.aObjBranding;
+    return json;
   }
 
   /// Returns a new [BrandingGetAutocompleteV2ResponseMPayload] instance and imports its values from

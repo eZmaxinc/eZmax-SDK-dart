@@ -354,108 +354,108 @@ class EzsignfoldertypeResponseCompound {
   String toString() => 'EzsignfoldertypeResponseCompound[pkiEzsignfoldertypeID=$pkiEzsignfoldertypeID, objEzsignfoldertypeName=$objEzsignfoldertypeName, fkiBrandingID=$fkiBrandingID, fkiBillingentityinternalID=$fkiBillingentityinternalID, fkiUsergroupID=$fkiUsergroupID, fkiUsergroupIDRestricted=$fkiUsergroupIDRestricted, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sBrandingDescriptionX=$sBrandingDescriptionX, sBillingentityinternalDescriptionX=$sBillingentityinternalDescriptionX, sEzsigntsarequirementDescriptionX=$sEzsigntsarequirementDescriptionX, sEmailAddressSigned=$sEmailAddressSigned, sEmailAddressSummary=$sEmailAddressSummary, sUsergroupNameX=$sUsergroupNameX, sUsergroupNameXRestricted=$sUsergroupNameXRestricted, eEzsignfoldertypePrivacylevel=$eEzsignfoldertypePrivacylevel, eEzsignfoldertypeSendreminderfrequency=$eEzsignfoldertypeSendreminderfrequency, iEzsignfoldertypeArchivaldays=$iEzsignfoldertypeArchivaldays, eEzsignfoldertypeDisposal=$eEzsignfoldertypeDisposal, iEzsignfoldertypeDisposaldays=$iEzsignfoldertypeDisposaldays, iEzsignfoldertypeDeadlinedays=$iEzsignfoldertypeDeadlinedays, bEzsignfoldertypeSendattatchmentsigner=$bEzsignfoldertypeSendattatchmentsigner, bEzsignfoldertypeSendsignedtodocumentowner=$bEzsignfoldertypeSendsignedtodocumentowner, bEzsignfoldertypeSendsignedtofolderowner=$bEzsignfoldertypeSendsignedtofolderowner, bEzsignfoldertypeSendsignedtofullgroup=$bEzsignfoldertypeSendsignedtofullgroup, bEzsignfoldertypeSendsignedtolimitedgroup=$bEzsignfoldertypeSendsignedtolimitedgroup, bEzsignfoldertypeSendsignedtocolleague=$bEzsignfoldertypeSendsignedtocolleague, bEzsignfoldertypeSendsummarytodocumentowner=$bEzsignfoldertypeSendsummarytodocumentowner, bEzsignfoldertypeSendsummarytofolderowner=$bEzsignfoldertypeSendsummarytofolderowner, bEzsignfoldertypeSendsummarytofullgroup=$bEzsignfoldertypeSendsummarytofullgroup, bEzsignfoldertypeSendsummarytolimitedgroup=$bEzsignfoldertypeSendsummarytolimitedgroup, bEzsignfoldertypeSendsummarytocolleague=$bEzsignfoldertypeSendsummarytocolleague, bEzsignfoldertypeIncludeproofsigner=$bEzsignfoldertypeIncludeproofsigner, bEzsignfoldertypeIncludeproofuser=$bEzsignfoldertypeIncludeproofuser, bEzsignfoldertypeIsactive=$bEzsignfoldertypeIsactive, aFkiUserIDSigned=$aFkiUserIDSigned, aFkiUserIDSummary=$aFkiUserIDSummary]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiEzsignfoldertypeID'] = pkiEzsignfoldertypeID;
-      _json[r'objEzsignfoldertypeName'] = objEzsignfoldertypeName;
-      _json[r'fkiBrandingID'] = fkiBrandingID;
-    if (fkiBillingentityinternalID != null) {
-      _json[r'fkiBillingentityinternalID'] = fkiBillingentityinternalID;
+    final json = <String, dynamic>{};
+      json[r'pkiEzsignfoldertypeID'] = this.pkiEzsignfoldertypeID;
+      json[r'objEzsignfoldertypeName'] = this.objEzsignfoldertypeName;
+      json[r'fkiBrandingID'] = this.fkiBrandingID;
+    if (this.fkiBillingentityinternalID != null) {
+      json[r'fkiBillingentityinternalID'] = this.fkiBillingentityinternalID;
     } else {
-      _json[r'fkiBillingentityinternalID'] = null;
+      json[r'fkiBillingentityinternalID'] = null;
     }
-    if (fkiUsergroupID != null) {
-      _json[r'fkiUsergroupID'] = fkiUsergroupID;
+    if (this.fkiUsergroupID != null) {
+      json[r'fkiUsergroupID'] = this.fkiUsergroupID;
     } else {
-      _json[r'fkiUsergroupID'] = null;
+      json[r'fkiUsergroupID'] = null;
     }
-    if (fkiUsergroupIDRestricted != null) {
-      _json[r'fkiUsergroupIDRestricted'] = fkiUsergroupIDRestricted;
+    if (this.fkiUsergroupIDRestricted != null) {
+      json[r'fkiUsergroupIDRestricted'] = this.fkiUsergroupIDRestricted;
     } else {
-      _json[r'fkiUsergroupIDRestricted'] = null;
+      json[r'fkiUsergroupIDRestricted'] = null;
     }
-    if (fkiEzsigntsarequirementID != null) {
-      _json[r'fkiEzsigntsarequirementID'] = fkiEzsigntsarequirementID;
+    if (this.fkiEzsigntsarequirementID != null) {
+      json[r'fkiEzsigntsarequirementID'] = this.fkiEzsigntsarequirementID;
     } else {
-      _json[r'fkiEzsigntsarequirementID'] = null;
+      json[r'fkiEzsigntsarequirementID'] = null;
     }
-      _json[r'sBrandingDescriptionX'] = sBrandingDescriptionX;
-    if (sBillingentityinternalDescriptionX != null) {
-      _json[r'sBillingentityinternalDescriptionX'] = sBillingentityinternalDescriptionX;
+      json[r'sBrandingDescriptionX'] = this.sBrandingDescriptionX;
+    if (this.sBillingentityinternalDescriptionX != null) {
+      json[r'sBillingentityinternalDescriptionX'] = this.sBillingentityinternalDescriptionX;
     } else {
-      _json[r'sBillingentityinternalDescriptionX'] = null;
+      json[r'sBillingentityinternalDescriptionX'] = null;
     }
-    if (sEzsigntsarequirementDescriptionX != null) {
-      _json[r'sEzsigntsarequirementDescriptionX'] = sEzsigntsarequirementDescriptionX;
+    if (this.sEzsigntsarequirementDescriptionX != null) {
+      json[r'sEzsigntsarequirementDescriptionX'] = this.sEzsigntsarequirementDescriptionX;
     } else {
-      _json[r'sEzsigntsarequirementDescriptionX'] = null;
+      json[r'sEzsigntsarequirementDescriptionX'] = null;
     }
-    if (sEmailAddressSigned != null) {
-      _json[r'sEmailAddressSigned'] = sEmailAddressSigned;
+    if (this.sEmailAddressSigned != null) {
+      json[r'sEmailAddressSigned'] = this.sEmailAddressSigned;
     } else {
-      _json[r'sEmailAddressSigned'] = null;
+      json[r'sEmailAddressSigned'] = null;
     }
-    if (sEmailAddressSummary != null) {
-      _json[r'sEmailAddressSummary'] = sEmailAddressSummary;
+    if (this.sEmailAddressSummary != null) {
+      json[r'sEmailAddressSummary'] = this.sEmailAddressSummary;
     } else {
-      _json[r'sEmailAddressSummary'] = null;
+      json[r'sEmailAddressSummary'] = null;
     }
-    if (sUsergroupNameX != null) {
-      _json[r'sUsergroupNameX'] = sUsergroupNameX;
+    if (this.sUsergroupNameX != null) {
+      json[r'sUsergroupNameX'] = this.sUsergroupNameX;
     } else {
-      _json[r'sUsergroupNameX'] = null;
+      json[r'sUsergroupNameX'] = null;
     }
-    if (sUsergroupNameXRestricted != null) {
-      _json[r'sUsergroupNameXRestricted'] = sUsergroupNameXRestricted;
+    if (this.sUsergroupNameXRestricted != null) {
+      json[r'sUsergroupNameXRestricted'] = this.sUsergroupNameXRestricted;
     } else {
-      _json[r'sUsergroupNameXRestricted'] = null;
+      json[r'sUsergroupNameXRestricted'] = null;
     }
-      _json[r'eEzsignfoldertypePrivacylevel'] = eEzsignfoldertypePrivacylevel;
-    if (eEzsignfoldertypeSendreminderfrequency != null) {
-      _json[r'eEzsignfoldertypeSendreminderfrequency'] = eEzsignfoldertypeSendreminderfrequency;
+      json[r'eEzsignfoldertypePrivacylevel'] = this.eEzsignfoldertypePrivacylevel;
+    if (this.eEzsignfoldertypeSendreminderfrequency != null) {
+      json[r'eEzsignfoldertypeSendreminderfrequency'] = this.eEzsignfoldertypeSendreminderfrequency;
     } else {
-      _json[r'eEzsignfoldertypeSendreminderfrequency'] = null;
+      json[r'eEzsignfoldertypeSendreminderfrequency'] = null;
     }
-      _json[r'iEzsignfoldertypeArchivaldays'] = iEzsignfoldertypeArchivaldays;
-      _json[r'eEzsignfoldertypeDisposal'] = eEzsignfoldertypeDisposal;
-    if (iEzsignfoldertypeDisposaldays != null) {
-      _json[r'iEzsignfoldertypeDisposaldays'] = iEzsignfoldertypeDisposaldays;
+      json[r'iEzsignfoldertypeArchivaldays'] = this.iEzsignfoldertypeArchivaldays;
+      json[r'eEzsignfoldertypeDisposal'] = this.eEzsignfoldertypeDisposal;
+    if (this.iEzsignfoldertypeDisposaldays != null) {
+      json[r'iEzsignfoldertypeDisposaldays'] = this.iEzsignfoldertypeDisposaldays;
     } else {
-      _json[r'iEzsignfoldertypeDisposaldays'] = null;
+      json[r'iEzsignfoldertypeDisposaldays'] = null;
     }
-      _json[r'iEzsignfoldertypeDeadlinedays'] = iEzsignfoldertypeDeadlinedays;
-      _json[r'bEzsignfoldertypeSendattatchmentsigner'] = bEzsignfoldertypeSendattatchmentsigner;
-      _json[r'bEzsignfoldertypeSendsignedtodocumentowner'] = bEzsignfoldertypeSendsignedtodocumentowner;
-      _json[r'bEzsignfoldertypeSendsignedtofolderowner'] = bEzsignfoldertypeSendsignedtofolderowner;
-    if (bEzsignfoldertypeSendsignedtofullgroup != null) {
-      _json[r'bEzsignfoldertypeSendsignedtofullgroup'] = bEzsignfoldertypeSendsignedtofullgroup;
+      json[r'iEzsignfoldertypeDeadlinedays'] = this.iEzsignfoldertypeDeadlinedays;
+      json[r'bEzsignfoldertypeSendattatchmentsigner'] = this.bEzsignfoldertypeSendattatchmentsigner;
+      json[r'bEzsignfoldertypeSendsignedtodocumentowner'] = this.bEzsignfoldertypeSendsignedtodocumentowner;
+      json[r'bEzsignfoldertypeSendsignedtofolderowner'] = this.bEzsignfoldertypeSendsignedtofolderowner;
+    if (this.bEzsignfoldertypeSendsignedtofullgroup != null) {
+      json[r'bEzsignfoldertypeSendsignedtofullgroup'] = this.bEzsignfoldertypeSendsignedtofullgroup;
     } else {
-      _json[r'bEzsignfoldertypeSendsignedtofullgroup'] = null;
+      json[r'bEzsignfoldertypeSendsignedtofullgroup'] = null;
     }
-    if (bEzsignfoldertypeSendsignedtolimitedgroup != null) {
-      _json[r'bEzsignfoldertypeSendsignedtolimitedgroup'] = bEzsignfoldertypeSendsignedtolimitedgroup;
+    if (this.bEzsignfoldertypeSendsignedtolimitedgroup != null) {
+      json[r'bEzsignfoldertypeSendsignedtolimitedgroup'] = this.bEzsignfoldertypeSendsignedtolimitedgroup;
     } else {
-      _json[r'bEzsignfoldertypeSendsignedtolimitedgroup'] = null;
+      json[r'bEzsignfoldertypeSendsignedtolimitedgroup'] = null;
     }
-      _json[r'bEzsignfoldertypeSendsignedtocolleague'] = bEzsignfoldertypeSendsignedtocolleague;
-      _json[r'bEzsignfoldertypeSendsummarytodocumentowner'] = bEzsignfoldertypeSendsummarytodocumentowner;
-      _json[r'bEzsignfoldertypeSendsummarytofolderowner'] = bEzsignfoldertypeSendsummarytofolderowner;
-    if (bEzsignfoldertypeSendsummarytofullgroup != null) {
-      _json[r'bEzsignfoldertypeSendsummarytofullgroup'] = bEzsignfoldertypeSendsummarytofullgroup;
+      json[r'bEzsignfoldertypeSendsignedtocolleague'] = this.bEzsignfoldertypeSendsignedtocolleague;
+      json[r'bEzsignfoldertypeSendsummarytodocumentowner'] = this.bEzsignfoldertypeSendsummarytodocumentowner;
+      json[r'bEzsignfoldertypeSendsummarytofolderowner'] = this.bEzsignfoldertypeSendsummarytofolderowner;
+    if (this.bEzsignfoldertypeSendsummarytofullgroup != null) {
+      json[r'bEzsignfoldertypeSendsummarytofullgroup'] = this.bEzsignfoldertypeSendsummarytofullgroup;
     } else {
-      _json[r'bEzsignfoldertypeSendsummarytofullgroup'] = null;
+      json[r'bEzsignfoldertypeSendsummarytofullgroup'] = null;
     }
-    if (bEzsignfoldertypeSendsummarytolimitedgroup != null) {
-      _json[r'bEzsignfoldertypeSendsummarytolimitedgroup'] = bEzsignfoldertypeSendsummarytolimitedgroup;
+    if (this.bEzsignfoldertypeSendsummarytolimitedgroup != null) {
+      json[r'bEzsignfoldertypeSendsummarytolimitedgroup'] = this.bEzsignfoldertypeSendsummarytolimitedgroup;
     } else {
-      _json[r'bEzsignfoldertypeSendsummarytolimitedgroup'] = null;
+      json[r'bEzsignfoldertypeSendsummarytolimitedgroup'] = null;
     }
-      _json[r'bEzsignfoldertypeSendsummarytocolleague'] = bEzsignfoldertypeSendsummarytocolleague;
-      _json[r'bEzsignfoldertypeIncludeproofsigner'] = bEzsignfoldertypeIncludeproofsigner;
-      _json[r'bEzsignfoldertypeIncludeproofuser'] = bEzsignfoldertypeIncludeproofuser;
-      _json[r'bEzsignfoldertypeIsactive'] = bEzsignfoldertypeIsactive;
-      _json[r'a_fkiUserIDSigned'] = aFkiUserIDSigned;
-      _json[r'a_fkiUserIDSummary'] = aFkiUserIDSummary;
-    return _json;
+      json[r'bEzsignfoldertypeSendsummarytocolleague'] = this.bEzsignfoldertypeSendsummarytocolleague;
+      json[r'bEzsignfoldertypeIncludeproofsigner'] = this.bEzsignfoldertypeIncludeproofsigner;
+      json[r'bEzsignfoldertypeIncludeproofuser'] = this.bEzsignfoldertypeIncludeproofuser;
+      json[r'bEzsignfoldertypeIsactive'] = this.bEzsignfoldertypeIsactive;
+      json[r'a_fkiUserIDSigned'] = this.aFkiUserIDSigned;
+      json[r'a_fkiUserIDSummary'] = this.aFkiUserIDSummary;
+    return json;
   }
 
   /// Returns a new [EzsignfoldertypeResponseCompound] instance and imports its values from

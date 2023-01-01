@@ -44,11 +44,11 @@ class EzsigndocumentGetWordsPositionsV1Request {
   String toString() => 'EzsigndocumentGetWordsPositionsV1Request[eGet=$eGet, bWordCaseSensitive=$bWordCaseSensitive, aSWord=$aSWord]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'eGet'] = eGet;
-      _json[r'bWordCaseSensitive'] = bWordCaseSensitive;
-      _json[r'a_sWord'] = aSWord;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'eGet'] = this.eGet;
+      json[r'bWordCaseSensitive'] = this.bWordCaseSensitive;
+      json[r'a_sWord'] = this.aSWord;
+    return json;
   }
 
   /// Returns a new [EzsigndocumentGetWordsPositionsV1Request] instance and imports its values from
@@ -186,7 +186,7 @@ class EzsigndocumentGetWordsPositionsV1RequestEGetEnumTypeTransformer {
   /// and users are still using an old app with the old code.
   EzsigndocumentGetWordsPositionsV1RequestEGetEnum? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
-      switch (data.toString()) {
+      switch (data) {
         case r'All': return EzsigndocumentGetWordsPositionsV1RequestEGetEnum.all;
         case r'Words': return EzsigndocumentGetWordsPositionsV1RequestEGetEnum.words;
         default:

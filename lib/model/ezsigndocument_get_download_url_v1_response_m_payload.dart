@@ -32,9 +32,9 @@ class EzsigndocumentGetDownloadUrlV1ResponseMPayload {
   String toString() => 'EzsigndocumentGetDownloadUrlV1ResponseMPayload[sDownloadUrl=$sDownloadUrl]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'sDownloadUrl'] = sDownloadUrl;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'sDownloadUrl'] = this.sDownloadUrl;
+    return json;
   }
 
   /// Returns a new [EzsigndocumentGetDownloadUrlV1ResponseMPayload] instance and imports its values from

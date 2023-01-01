@@ -52,12 +52,12 @@ class CustomUserResponse {
   String toString() => 'CustomUserResponse[pkiUserID=$pkiUserID, sUserLastname=$sUserLastname, sUserFirstname=$sUserFirstname, sEmailAddress=$sEmailAddress]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiUserID'] = pkiUserID;
-      _json[r'sUserLastname'] = sUserLastname;
-      _json[r'sUserFirstname'] = sUserFirstname;
-      _json[r'sEmailAddress'] = sEmailAddress;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'pkiUserID'] = this.pkiUserID;
+      json[r'sUserLastname'] = this.sUserLastname;
+      json[r'sUserFirstname'] = this.sUserFirstname;
+      json[r'sEmailAddress'] = this.sEmailAddress;
+    return json;
   }
 
   /// Returns a new [CustomUserResponse] instance and imports its values from

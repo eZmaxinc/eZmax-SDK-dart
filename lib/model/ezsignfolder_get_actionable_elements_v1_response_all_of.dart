@@ -31,9 +31,9 @@ class EzsignfolderGetActionableElementsV1ResponseAllOf {
   String toString() => 'EzsignfolderGetActionableElementsV1ResponseAllOf[mPayload=$mPayload]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'mPayload'] = mPayload;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'mPayload'] = this.mPayload;
+    return json;
   }
 
   /// Returns a new [EzsignfolderGetActionableElementsV1ResponseAllOf] instance and imports its values from

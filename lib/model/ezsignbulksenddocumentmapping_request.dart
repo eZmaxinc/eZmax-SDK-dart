@@ -76,24 +76,24 @@ class EzsignbulksenddocumentmappingRequest {
   String toString() => 'EzsignbulksenddocumentmappingRequest[pkiEzsignbulksenddocumentmappingID=$pkiEzsignbulksenddocumentmappingID, fkiEzsignbulksendID=$fkiEzsignbulksendID, fkiEzsigntemplatepackageID=$fkiEzsigntemplatepackageID, fkiEzsigntemplateID=$fkiEzsigntemplateID]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (pkiEzsignbulksenddocumentmappingID != null) {
-      _json[r'pkiEzsignbulksenddocumentmappingID'] = pkiEzsignbulksenddocumentmappingID;
+    final json = <String, dynamic>{};
+    if (this.pkiEzsignbulksenddocumentmappingID != null) {
+      json[r'pkiEzsignbulksenddocumentmappingID'] = this.pkiEzsignbulksenddocumentmappingID;
     } else {
-      _json[r'pkiEzsignbulksenddocumentmappingID'] = null;
+      json[r'pkiEzsignbulksenddocumentmappingID'] = null;
     }
-      _json[r'fkiEzsignbulksendID'] = fkiEzsignbulksendID;
-    if (fkiEzsigntemplatepackageID != null) {
-      _json[r'fkiEzsigntemplatepackageID'] = fkiEzsigntemplatepackageID;
+      json[r'fkiEzsignbulksendID'] = this.fkiEzsignbulksendID;
+    if (this.fkiEzsigntemplatepackageID != null) {
+      json[r'fkiEzsigntemplatepackageID'] = this.fkiEzsigntemplatepackageID;
     } else {
-      _json[r'fkiEzsigntemplatepackageID'] = null;
+      json[r'fkiEzsigntemplatepackageID'] = null;
     }
-    if (fkiEzsigntemplateID != null) {
-      _json[r'fkiEzsigntemplateID'] = fkiEzsigntemplateID;
+    if (this.fkiEzsigntemplateID != null) {
+      json[r'fkiEzsigntemplateID'] = this.fkiEzsigntemplateID;
     } else {
-      _json[r'fkiEzsigntemplateID'] = null;
+      json[r'fkiEzsigntemplateID'] = null;
     }
-    return _json;
+    return json;
   }
 
   /// Returns a new [EzsignbulksenddocumentmappingRequest] instance and imports its values from

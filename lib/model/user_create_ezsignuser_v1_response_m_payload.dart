@@ -38,10 +38,10 @@ class UserCreateEzsignuserV1ResponseMPayload {
   String toString() => 'UserCreateEzsignuserV1ResponseMPayload[aSEmailAddressSuccess=$aSEmailAddressSuccess, aSEmailAddressFailure=$aSEmailAddressFailure]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_sEmailAddressSuccess'] = aSEmailAddressSuccess;
-      _json[r'a_sEmailAddressFailure'] = aSEmailAddressFailure;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_sEmailAddressSuccess'] = this.aSEmailAddressSuccess;
+      json[r'a_sEmailAddressFailure'] = this.aSEmailAddressFailure;
+    return json;
   }
 
   /// Returns a new [UserCreateEzsignuserV1ResponseMPayload] instance and imports its values from

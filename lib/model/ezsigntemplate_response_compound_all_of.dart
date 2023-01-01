@@ -42,14 +42,14 @@ class EzsigntemplateResponseCompoundAllOf {
   String toString() => 'EzsigntemplateResponseCompoundAllOf[objEzsigntemplatedocument=$objEzsigntemplatedocument, aObjEzsigntemplatesigner=$aObjEzsigntemplatesigner]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (objEzsigntemplatedocument != null) {
-      _json[r'objEzsigntemplatedocument'] = objEzsigntemplatedocument;
+    final json = <String, dynamic>{};
+    if (this.objEzsigntemplatedocument != null) {
+      json[r'objEzsigntemplatedocument'] = this.objEzsigntemplatedocument;
     } else {
-      _json[r'objEzsigntemplatedocument'] = null;
+      json[r'objEzsigntemplatedocument'] = null;
     }
-      _json[r'a_objEzsigntemplatesigner'] = aObjEzsigntemplatesigner;
-    return _json;
+      json[r'a_objEzsigntemplatesigner'] = this.aObjEzsigntemplatesigner;
+    return json;
   }
 
   /// Returns a new [EzsigntemplateResponseCompoundAllOf] instance and imports its values from

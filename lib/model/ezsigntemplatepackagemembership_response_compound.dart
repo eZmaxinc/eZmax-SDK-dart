@@ -68,14 +68,14 @@ class EzsigntemplatepackagemembershipResponseCompound {
   String toString() => 'EzsigntemplatepackagemembershipResponseCompound[pkiEzsigntemplatepackagemembershipID=$pkiEzsigntemplatepackagemembershipID, fkiEzsigntemplatepackageID=$fkiEzsigntemplatepackageID, fkiEzsigntemplateID=$fkiEzsigntemplateID, iEzsigntemplatepackagemembershipOrder=$iEzsigntemplatepackagemembershipOrder, objEzsigntemplate=$objEzsigntemplate, aObjEzsigntemplatepackagesignermembership=$aObjEzsigntemplatepackagesignermembership]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiEzsigntemplatepackagemembershipID'] = pkiEzsigntemplatepackagemembershipID;
-      _json[r'fkiEzsigntemplatepackageID'] = fkiEzsigntemplatepackageID;
-      _json[r'fkiEzsigntemplateID'] = fkiEzsigntemplateID;
-      _json[r'iEzsigntemplatepackagemembershipOrder'] = iEzsigntemplatepackagemembershipOrder;
-      _json[r'objEzsigntemplate'] = objEzsigntemplate;
-      _json[r'a_objEzsigntemplatepackagesignermembership'] = aObjEzsigntemplatepackagesignermembership;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'pkiEzsigntemplatepackagemembershipID'] = this.pkiEzsigntemplatepackagemembershipID;
+      json[r'fkiEzsigntemplatepackageID'] = this.fkiEzsigntemplatepackageID;
+      json[r'fkiEzsigntemplateID'] = this.fkiEzsigntemplateID;
+      json[r'iEzsigntemplatepackagemembershipOrder'] = this.iEzsigntemplatepackagemembershipOrder;
+      json[r'objEzsigntemplate'] = this.objEzsigntemplate;
+      json[r'a_objEzsigntemplatepackagesignermembership'] = this.aObjEzsigntemplatepackagesignermembership;
+    return json;
   }
 
   /// Returns a new [EzsigntemplatepackagemembershipResponseCompound] instance and imports its values from

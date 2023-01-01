@@ -50,18 +50,18 @@ class MultilingualVersionhistoryDetail {
   String toString() => 'MultilingualVersionhistoryDetail[tVersionhistoryDetail1=$tVersionhistoryDetail1, tVersionhistoryDetail2=$tVersionhistoryDetail2]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (tVersionhistoryDetail1 != null) {
-      _json[r'tVersionhistoryDetail1'] = tVersionhistoryDetail1;
+    final json = <String, dynamic>{};
+    if (this.tVersionhistoryDetail1 != null) {
+      json[r'tVersionhistoryDetail1'] = this.tVersionhistoryDetail1;
     } else {
-      _json[r'tVersionhistoryDetail1'] = null;
+      json[r'tVersionhistoryDetail1'] = null;
     }
-    if (tVersionhistoryDetail2 != null) {
-      _json[r'tVersionhistoryDetail2'] = tVersionhistoryDetail2;
+    if (this.tVersionhistoryDetail2 != null) {
+      json[r'tVersionhistoryDetail2'] = this.tVersionhistoryDetail2;
     } else {
-      _json[r'tVersionhistoryDetail2'] = null;
+      json[r'tVersionhistoryDetail2'] = null;
     }
-    return _json;
+    return json;
   }
 
   /// Returns a new [MultilingualVersionhistoryDetail] instance and imports its values from

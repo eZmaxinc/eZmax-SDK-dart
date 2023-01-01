@@ -32,9 +32,9 @@ class EzsignformfieldgroupCreateObjectV1ResponseMPayload {
   String toString() => 'EzsignformfieldgroupCreateObjectV1ResponseMPayload[aPkiEzsignformfieldgroupID=$aPkiEzsignformfieldgroupID]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_pkiEzsignformfieldgroupID'] = aPkiEzsignformfieldgroupID;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_pkiEzsignformfieldgroupID'] = this.aPkiEzsignformfieldgroupID;
+    return json;
   }
 
   /// Returns a new [EzsignformfieldgroupCreateObjectV1ResponseMPayload] instance and imports its values from

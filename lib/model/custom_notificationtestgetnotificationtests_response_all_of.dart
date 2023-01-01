@@ -37,10 +37,10 @@ class CustomNotificationtestgetnotificationtestsResponseAllOf {
   String toString() => 'CustomNotificationtestgetnotificationtestsResponseAllOf[eNotificationpreferenceStatus=$eNotificationpreferenceStatus, iNotificationtest=$iNotificationtest]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'eNotificationpreferenceStatus'] = eNotificationpreferenceStatus;
-      _json[r'iNotificationtest'] = iNotificationtest;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'eNotificationpreferenceStatus'] = this.eNotificationpreferenceStatus;
+      json[r'iNotificationtest'] = this.iNotificationtest;
+    return json;
   }
 
   /// Returns a new [CustomNotificationtestgetnotificationtestsResponseAllOf] instance and imports its values from

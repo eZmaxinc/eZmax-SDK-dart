@@ -68,20 +68,20 @@ class EzsignbulksendsignermappingRequest {
   String toString() => 'EzsignbulksendsignermappingRequest[pkiEzsignbulksendsignermappingID=$pkiEzsignbulksendsignermappingID, fkiEzsignbulksendID=$fkiEzsignbulksendID, fkiUserID=$fkiUserID, sEzsignbulksendsignermappingDescription=$sEzsignbulksendsignermappingDescription]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (pkiEzsignbulksendsignermappingID != null) {
-      _json[r'pkiEzsignbulksendsignermappingID'] = pkiEzsignbulksendsignermappingID;
+    final json = <String, dynamic>{};
+    if (this.pkiEzsignbulksendsignermappingID != null) {
+      json[r'pkiEzsignbulksendsignermappingID'] = this.pkiEzsignbulksendsignermappingID;
     } else {
-      _json[r'pkiEzsignbulksendsignermappingID'] = null;
+      json[r'pkiEzsignbulksendsignermappingID'] = null;
     }
-      _json[r'fkiEzsignbulksendID'] = fkiEzsignbulksendID;
-    if (fkiUserID != null) {
-      _json[r'fkiUserID'] = fkiUserID;
+      json[r'fkiEzsignbulksendID'] = this.fkiEzsignbulksendID;
+    if (this.fkiUserID != null) {
+      json[r'fkiUserID'] = this.fkiUserID;
     } else {
-      _json[r'fkiUserID'] = null;
+      json[r'fkiUserID'] = null;
     }
-      _json[r'sEzsignbulksendsignermappingDescription'] = sEzsignbulksendsignermappingDescription;
-    return _json;
+      json[r'sEzsignbulksendsignermappingDescription'] = this.sEzsignbulksendsignermappingDescription;
+    return json;
   }
 
   /// Returns a new [EzsignbulksendsignermappingRequest] instance and imports its values from

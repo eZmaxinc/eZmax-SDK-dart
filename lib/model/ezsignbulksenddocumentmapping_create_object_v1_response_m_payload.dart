@@ -32,9 +32,9 @@ class EzsignbulksenddocumentmappingCreateObjectV1ResponseMPayload {
   String toString() => 'EzsignbulksenddocumentmappingCreateObjectV1ResponseMPayload[aPkiEzsignbulksenddocumentmappingID=$aPkiEzsignbulksenddocumentmappingID]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_pkiEzsignbulksenddocumentmappingID'] = aPkiEzsignbulksenddocumentmappingID;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_pkiEzsignbulksenddocumentmappingID'] = this.aPkiEzsignbulksenddocumentmappingID;
+    return json;
   }
 
   /// Returns a new [EzsignbulksenddocumentmappingCreateObjectV1ResponseMPayload] instance and imports its values from

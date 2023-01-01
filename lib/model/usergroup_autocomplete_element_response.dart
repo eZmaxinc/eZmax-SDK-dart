@@ -46,11 +46,11 @@ class UsergroupAutocompleteElementResponse {
   String toString() => 'UsergroupAutocompleteElementResponse[sUsergroupNameX=$sUsergroupNameX, pkiUsergroupID=$pkiUsergroupID, bUsergroupIsactive=$bUsergroupIsactive]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'sUsergroupNameX'] = sUsergroupNameX;
-      _json[r'pkiUsergroupID'] = pkiUsergroupID;
-      _json[r'bUsergroupIsactive'] = bUsergroupIsactive;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'sUsergroupNameX'] = this.sUsergroupNameX;
+      json[r'pkiUsergroupID'] = this.pkiUsergroupID;
+      json[r'bUsergroupIsactive'] = this.bUsergroupIsactive;
+    return json;
   }
 
   /// Returns a new [UsergroupAutocompleteElementResponse] instance and imports its values from

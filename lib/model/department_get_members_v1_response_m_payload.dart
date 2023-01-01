@@ -46,12 +46,12 @@ class DepartmentGetMembersV1ResponseMPayload {
   String toString() => 'DepartmentGetMembersV1ResponseMPayload[aFkiAgentID=$aFkiAgentID, aFkiBrokerID=$aFkiBrokerID, aFkiCustomerID=$aFkiCustomerID, aFkiEmployeeID=$aFkiEmployeeID]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_fkiAgentID'] = aFkiAgentID;
-      _json[r'a_fkiBrokerID'] = aFkiBrokerID;
-      _json[r'a_fkiCustomerID'] = aFkiCustomerID;
-      _json[r'a_fkiEmployeeID'] = aFkiEmployeeID;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_fkiAgentID'] = this.aFkiAgentID;
+      json[r'a_fkiBrokerID'] = this.aFkiBrokerID;
+      json[r'a_fkiCustomerID'] = this.aFkiCustomerID;
+      json[r'a_fkiEmployeeID'] = this.aFkiEmployeeID;
+    return json;
   }
 
   /// Returns a new [DepartmentGetMembersV1ResponseMPayload] instance and imports its values from

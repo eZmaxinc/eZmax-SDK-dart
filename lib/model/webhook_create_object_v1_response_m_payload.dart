@@ -32,9 +32,9 @@ class WebhookCreateObjectV1ResponseMPayload {
   String toString() => 'WebhookCreateObjectV1ResponseMPayload[aPkiWebhookID=$aPkiWebhookID]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_pkiWebhookID'] = aPkiWebhookID;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_pkiWebhookID'] = this.aPkiWebhookID;
+    return json;
   }
 
   /// Returns a new [WebhookCreateObjectV1ResponseMPayload] instance and imports its values from

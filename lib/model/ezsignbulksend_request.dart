@@ -81,19 +81,19 @@ class EzsignbulksendRequest {
   String toString() => 'EzsignbulksendRequest[pkiEzsignbulksendID=$pkiEzsignbulksendID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiLanguageID=$fkiLanguageID, sEzsignbulksendDescription=$sEzsignbulksendDescription, tEzsignbulksendNote=$tEzsignbulksendNote, bEzsignbulksendNeedvalidation=$bEzsignbulksendNeedvalidation, bEzsignbulksendIsactive=$bEzsignbulksendIsactive]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (pkiEzsignbulksendID != null) {
-      _json[r'pkiEzsignbulksendID'] = pkiEzsignbulksendID;
+    final json = <String, dynamic>{};
+    if (this.pkiEzsignbulksendID != null) {
+      json[r'pkiEzsignbulksendID'] = this.pkiEzsignbulksendID;
     } else {
-      _json[r'pkiEzsignbulksendID'] = null;
+      json[r'pkiEzsignbulksendID'] = null;
     }
-      _json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
-      _json[r'fkiLanguageID'] = fkiLanguageID;
-      _json[r'sEzsignbulksendDescription'] = sEzsignbulksendDescription;
-      _json[r'tEzsignbulksendNote'] = tEzsignbulksendNote;
-      _json[r'bEzsignbulksendNeedvalidation'] = bEzsignbulksendNeedvalidation;
-      _json[r'bEzsignbulksendIsactive'] = bEzsignbulksendIsactive;
-    return _json;
+      json[r'fkiEzsignfoldertypeID'] = this.fkiEzsignfoldertypeID;
+      json[r'fkiLanguageID'] = this.fkiLanguageID;
+      json[r'sEzsignbulksendDescription'] = this.sEzsignbulksendDescription;
+      json[r'tEzsignbulksendNote'] = this.tEzsignbulksendNote;
+      json[r'bEzsignbulksendNeedvalidation'] = this.bEzsignbulksendNeedvalidation;
+      json[r'bEzsignbulksendIsactive'] = this.bEzsignbulksendIsactive;
+    return json;
   }
 
   /// Returns a new [EzsignbulksendRequest] instance and imports its values from

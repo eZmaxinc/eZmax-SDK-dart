@@ -31,9 +31,9 @@ class EzsignformfieldgroupGetObjectV2ResponseMPayload {
   String toString() => 'EzsignformfieldgroupGetObjectV2ResponseMPayload[objEzsignformfieldgroup=$objEzsignformfieldgroup]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'objEzsignformfieldgroup'] = objEzsignformfieldgroup;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'objEzsignformfieldgroup'] = this.objEzsignformfieldgroup;
+    return json;
   }
 
   /// Returns a new [EzsignformfieldgroupGetObjectV2ResponseMPayload] instance and imports its values from

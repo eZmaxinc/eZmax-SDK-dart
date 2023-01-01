@@ -50,18 +50,18 @@ class MultilingualEzmaxinvoicingsummaryinternalDescription {
   String toString() => 'MultilingualEzmaxinvoicingsummaryinternalDescription[sEzmaxinvoicingsummaryinternalDescription1=$sEzmaxinvoicingsummaryinternalDescription1, sEzmaxinvoicingsummaryinternalDescription2=$sEzmaxinvoicingsummaryinternalDescription2]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (sEzmaxinvoicingsummaryinternalDescription1 != null) {
-      _json[r'sEzmaxinvoicingsummaryinternalDescription1'] = sEzmaxinvoicingsummaryinternalDescription1;
+    final json = <String, dynamic>{};
+    if (this.sEzmaxinvoicingsummaryinternalDescription1 != null) {
+      json[r'sEzmaxinvoicingsummaryinternalDescription1'] = this.sEzmaxinvoicingsummaryinternalDescription1;
     } else {
-      _json[r'sEzmaxinvoicingsummaryinternalDescription1'] = null;
+      json[r'sEzmaxinvoicingsummaryinternalDescription1'] = null;
     }
-    if (sEzmaxinvoicingsummaryinternalDescription2 != null) {
-      _json[r'sEzmaxinvoicingsummaryinternalDescription2'] = sEzmaxinvoicingsummaryinternalDescription2;
+    if (this.sEzmaxinvoicingsummaryinternalDescription2 != null) {
+      json[r'sEzmaxinvoicingsummaryinternalDescription2'] = this.sEzmaxinvoicingsummaryinternalDescription2;
     } else {
-      _json[r'sEzmaxinvoicingsummaryinternalDescription2'] = null;
+      json[r'sEzmaxinvoicingsummaryinternalDescription2'] = null;
     }
-    return _json;
+    return json;
   }
 
   /// Returns a new [MultilingualEzmaxinvoicingsummaryinternalDescription] instance and imports its values from

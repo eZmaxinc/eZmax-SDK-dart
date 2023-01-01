@@ -32,9 +32,9 @@ class TaxassignmentGetAutocompleteV2ResponseMPayload {
   String toString() => 'TaxassignmentGetAutocompleteV2ResponseMPayload[aObjTaxassignment=$aObjTaxassignment]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_objTaxassignment'] = aObjTaxassignment;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_objTaxassignment'] = this.aObjTaxassignment;
+    return json;
   }
 
   /// Returns a new [TaxassignmentGetAutocompleteV2ResponseMPayload] instance and imports its values from

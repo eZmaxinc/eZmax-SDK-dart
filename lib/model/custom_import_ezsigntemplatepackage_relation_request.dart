@@ -60,19 +60,19 @@ class CustomImportEzsigntemplatepackageRelationRequest {
   String toString() => 'CustomImportEzsigntemplatepackageRelationRequest[fkiEzsigntemplatepackagesignerID=$fkiEzsigntemplatepackagesignerID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, sEzsigntemplatepackagesignerDescription=$sEzsigntemplatepackagesignerDescription]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (fkiEzsigntemplatepackagesignerID != null) {
-      _json[r'fkiEzsigntemplatepackagesignerID'] = fkiEzsigntemplatepackagesignerID;
+    final json = <String, dynamic>{};
+    if (this.fkiEzsigntemplatepackagesignerID != null) {
+      json[r'fkiEzsigntemplatepackagesignerID'] = this.fkiEzsigntemplatepackagesignerID;
     } else {
-      _json[r'fkiEzsigntemplatepackagesignerID'] = null;
+      json[r'fkiEzsigntemplatepackagesignerID'] = null;
     }
-      _json[r'fkiEzsignfoldersignerassociationID'] = fkiEzsignfoldersignerassociationID;
-    if (sEzsigntemplatepackagesignerDescription != null) {
-      _json[r'sEzsigntemplatepackagesignerDescription'] = sEzsigntemplatepackagesignerDescription;
+      json[r'fkiEzsignfoldersignerassociationID'] = this.fkiEzsignfoldersignerassociationID;
+    if (this.sEzsigntemplatepackagesignerDescription != null) {
+      json[r'sEzsigntemplatepackagesignerDescription'] = this.sEzsigntemplatepackagesignerDescription;
     } else {
-      _json[r'sEzsigntemplatepackagesignerDescription'] = null;
+      json[r'sEzsigntemplatepackagesignerDescription'] = null;
     }
-    return _json;
+    return json;
   }
 
   /// Returns a new [CustomImportEzsigntemplatepackageRelationRequest] instance and imports its values from

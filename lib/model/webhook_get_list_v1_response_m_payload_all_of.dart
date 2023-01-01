@@ -31,9 +31,9 @@ class WebhookGetListV1ResponseMPayloadAllOf {
   String toString() => 'WebhookGetListV1ResponseMPayloadAllOf[aObjWebhook=$aObjWebhook]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_objWebhook'] = aObjWebhook;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_objWebhook'] = this.aObjWebhook;
+    return json;
   }
 
   /// Returns a new [WebhookGetListV1ResponseMPayloadAllOf] instance and imports its values from

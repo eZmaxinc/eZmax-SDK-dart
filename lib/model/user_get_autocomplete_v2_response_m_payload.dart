@@ -32,9 +32,9 @@ class UserGetAutocompleteV2ResponseMPayload {
   String toString() => 'UserGetAutocompleteV2ResponseMPayload[aObjUser=$aObjUser]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_objUser'] = aObjUser;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_objUser'] = this.aObjUser;
+    return json;
   }
 
   /// Returns a new [UserGetAutocompleteV2ResponseMPayload] instance and imports its values from

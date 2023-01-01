@@ -112,27 +112,27 @@ class EzmaxinvoicingsummaryinternaldetailResponse {
   String toString() => 'EzmaxinvoicingsummaryinternaldetailResponse[pkiEzmaxinvoicingsummaryinternaldetailID=$pkiEzmaxinvoicingsummaryinternaldetailID, fkiEzmaxinvoicingsummaryinternalID=$fkiEzmaxinvoicingsummaryinternalID, fkiEzmaxproductID=$fkiEzmaxproductID, sEzmaxproductDescriptionX=$sEzmaxproductDescriptionX, fkiBillingentityexternalID=$fkiBillingentityexternalID, sBillingentityexternalDescription=$sBillingentityexternalDescription, dEzmaxinvoicingsummaryinternaldetailCountreal=$dEzmaxinvoicingsummaryinternaldetailCountreal, dEzmaxinvoicingsummaryinternaldetailSubtotal=$dEzmaxinvoicingsummaryinternaldetailSubtotal, dEzmaxinvoicingsummaryinternaldetailRebate=$dEzmaxinvoicingsummaryinternaldetailRebate, dEzmaxinvoicingsummaryinternaldetailTotal=$dEzmaxinvoicingsummaryinternaldetailTotal, bEzmaxinvoicingsummaryinternaldetailAdjustment=$bEzmaxinvoicingsummaryinternaldetailAdjustment]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (pkiEzmaxinvoicingsummaryinternaldetailID != null) {
-      _json[r'pkiEzmaxinvoicingsummaryinternaldetailID'] = pkiEzmaxinvoicingsummaryinternaldetailID;
+    final json = <String, dynamic>{};
+    if (this.pkiEzmaxinvoicingsummaryinternaldetailID != null) {
+      json[r'pkiEzmaxinvoicingsummaryinternaldetailID'] = this.pkiEzmaxinvoicingsummaryinternaldetailID;
     } else {
-      _json[r'pkiEzmaxinvoicingsummaryinternaldetailID'] = null;
+      json[r'pkiEzmaxinvoicingsummaryinternaldetailID'] = null;
     }
-    if (fkiEzmaxinvoicingsummaryinternalID != null) {
-      _json[r'fkiEzmaxinvoicingsummaryinternalID'] = fkiEzmaxinvoicingsummaryinternalID;
+    if (this.fkiEzmaxinvoicingsummaryinternalID != null) {
+      json[r'fkiEzmaxinvoicingsummaryinternalID'] = this.fkiEzmaxinvoicingsummaryinternalID;
     } else {
-      _json[r'fkiEzmaxinvoicingsummaryinternalID'] = null;
+      json[r'fkiEzmaxinvoicingsummaryinternalID'] = null;
     }
-      _json[r'fkiEzmaxproductID'] = fkiEzmaxproductID;
-      _json[r'sEzmaxproductDescriptionX'] = sEzmaxproductDescriptionX;
-      _json[r'fkiBillingentityexternalID'] = fkiBillingentityexternalID;
-      _json[r'sBillingentityexternalDescription'] = sBillingentityexternalDescription;
-      _json[r'dEzmaxinvoicingsummaryinternaldetailCountreal'] = dEzmaxinvoicingsummaryinternaldetailCountreal;
-      _json[r'dEzmaxinvoicingsummaryinternaldetailSubtotal'] = dEzmaxinvoicingsummaryinternaldetailSubtotal;
-      _json[r'dEzmaxinvoicingsummaryinternaldetailRebate'] = dEzmaxinvoicingsummaryinternaldetailRebate;
-      _json[r'dEzmaxinvoicingsummaryinternaldetailTotal'] = dEzmaxinvoicingsummaryinternaldetailTotal;
-      _json[r'bEzmaxinvoicingsummaryinternaldetailAdjustment'] = bEzmaxinvoicingsummaryinternaldetailAdjustment;
-    return _json;
+      json[r'fkiEzmaxproductID'] = this.fkiEzmaxproductID;
+      json[r'sEzmaxproductDescriptionX'] = this.sEzmaxproductDescriptionX;
+      json[r'fkiBillingentityexternalID'] = this.fkiBillingentityexternalID;
+      json[r'sBillingentityexternalDescription'] = this.sBillingentityexternalDescription;
+      json[r'dEzmaxinvoicingsummaryinternaldetailCountreal'] = this.dEzmaxinvoicingsummaryinternaldetailCountreal;
+      json[r'dEzmaxinvoicingsummaryinternaldetailSubtotal'] = this.dEzmaxinvoicingsummaryinternaldetailSubtotal;
+      json[r'dEzmaxinvoicingsummaryinternaldetailRebate'] = this.dEzmaxinvoicingsummaryinternaldetailRebate;
+      json[r'dEzmaxinvoicingsummaryinternaldetailTotal'] = this.dEzmaxinvoicingsummaryinternaldetailTotal;
+      json[r'bEzmaxinvoicingsummaryinternaldetailAdjustment'] = this.bEzmaxinvoicingsummaryinternaldetailAdjustment;
+    return json;
   }
 
   /// Returns a new [EzmaxinvoicingsummaryinternaldetailResponse] instance and imports its values from

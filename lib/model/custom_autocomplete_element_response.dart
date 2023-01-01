@@ -62,17 +62,17 @@ class CustomAutocompleteElementResponse {
   String toString() => 'CustomAutocompleteElementResponse[sCategory=$sCategory, sLabel=$sLabel, sValue=$sValue, mValue=$mValue, bActive=$bActive]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'sCategory'] = sCategory;
-      _json[r'sLabel'] = sLabel;
-      _json[r'sValue'] = sValue;
-    if (mValue != null) {
-      _json[r'mValue'] = mValue;
+    final json = <String, dynamic>{};
+      json[r'sCategory'] = this.sCategory;
+      json[r'sLabel'] = this.sLabel;
+      json[r'sValue'] = this.sValue;
+    if (this.mValue != null) {
+      json[r'mValue'] = this.mValue;
     } else {
-      _json[r'mValue'] = null;
+      json[r'mValue'] = null;
     }
-      _json[r'bActive'] = bActive;
-    return _json;
+      json[r'bActive'] = this.bActive;
+    return json;
   }
 
   /// Returns a new [CustomAutocompleteElementResponse] instance and imports its values from

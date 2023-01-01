@@ -48,18 +48,18 @@ class EzsignbulksenddocumentmappingResponseCompoundAllOf {
   String toString() => 'EzsignbulksenddocumentmappingResponseCompoundAllOf[objEzsigntemplate=$objEzsigntemplate, objEzsigntemplatepackage=$objEzsigntemplatepackage]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (objEzsigntemplate != null) {
-      _json[r'objEzsigntemplate'] = objEzsigntemplate;
+    final json = <String, dynamic>{};
+    if (this.objEzsigntemplate != null) {
+      json[r'objEzsigntemplate'] = this.objEzsigntemplate;
     } else {
-      _json[r'objEzsigntemplate'] = null;
+      json[r'objEzsigntemplate'] = null;
     }
-    if (objEzsigntemplatepackage != null) {
-      _json[r'objEzsigntemplatepackage'] = objEzsigntemplatepackage;
+    if (this.objEzsigntemplatepackage != null) {
+      json[r'objEzsigntemplatepackage'] = this.objEzsigntemplatepackage;
     } else {
-      _json[r'objEzsigntemplatepackage'] = null;
+      json[r'objEzsigntemplatepackage'] = null;
     }
-    return _json;
+    return json;
   }
 
   /// Returns a new [EzsignbulksenddocumentmappingResponseCompoundAllOf] instance and imports its values from

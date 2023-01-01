@@ -31,9 +31,9 @@ class NotificationsectionGetNotificationtestsV1ResponseMPayload {
   String toString() => 'NotificationsectionGetNotificationtestsV1ResponseMPayload[aObjNotificationsubsection=$aObjNotificationsubsection]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_objNotificationsubsection'] = aObjNotificationsubsection;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_objNotificationsubsection'] = this.aObjNotificationsubsection;
+    return json;
   }
 
   /// Returns a new [NotificationsectionGetNotificationtestsV1ResponseMPayload] instance and imports its values from

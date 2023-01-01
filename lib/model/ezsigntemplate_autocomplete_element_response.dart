@@ -51,12 +51,12 @@ class EzsigntemplateAutocompleteElementResponse {
   String toString() => 'EzsigntemplateAutocompleteElementResponse[eEzsignfoldertypePrivacylevel=$eEzsignfoldertypePrivacylevel, sEzsigntemplateDescription=$sEzsigntemplateDescription, pkiEzsigntemplateID=$pkiEzsigntemplateID, bEzsigntemplateIsactive=$bEzsigntemplateIsactive]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'eEzsignfoldertypePrivacylevel'] = eEzsignfoldertypePrivacylevel;
-      _json[r'sEzsigntemplateDescription'] = sEzsigntemplateDescription;
-      _json[r'pkiEzsigntemplateID'] = pkiEzsigntemplateID;
-      _json[r'bEzsigntemplateIsactive'] = bEzsigntemplateIsactive;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'eEzsignfoldertypePrivacylevel'] = this.eEzsignfoldertypePrivacylevel;
+      json[r'sEzsigntemplateDescription'] = this.sEzsigntemplateDescription;
+      json[r'pkiEzsigntemplateID'] = this.pkiEzsigntemplateID;
+      json[r'bEzsigntemplateIsactive'] = this.bEzsigntemplateIsactive;
+    return json;
   }
 
   /// Returns a new [EzsigntemplateAutocompleteElementResponse] instance and imports its values from

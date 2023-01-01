@@ -32,9 +32,9 @@ class BrandingCreateObjectV1ResponseMPayload {
   String toString() => 'BrandingCreateObjectV1ResponseMPayload[aPkiBrandingID=$aPkiBrandingID]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_pkiBrandingID'] = aPkiBrandingID;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_pkiBrandingID'] = this.aPkiBrandingID;
+    return json;
   }
 
   /// Returns a new [BrandingCreateObjectV1ResponseMPayload] instance and imports its values from

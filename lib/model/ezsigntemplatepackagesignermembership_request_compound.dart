@@ -78,21 +78,21 @@ class EzsigntemplatepackagesignermembershipRequestCompound {
   String toString() => 'EzsigntemplatepackagesignermembershipRequestCompound[pkiEzsigntemplatepackagesignermembershipID=$pkiEzsigntemplatepackagesignermembershipID, fkiEzsigntemplatepackagemembershipID=$fkiEzsigntemplatepackagemembershipID, fkiEzsigntemplatepackagesignerID=$fkiEzsigntemplatepackagesignerID, fkiEzsigntemplatesignerID=$fkiEzsigntemplatesignerID, iEzsigntemplatepackagesignermembershipCopy=$iEzsigntemplatepackagesignermembershipCopy]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (pkiEzsigntemplatepackagesignermembershipID != null) {
-      _json[r'pkiEzsigntemplatepackagesignermembershipID'] = pkiEzsigntemplatepackagesignermembershipID;
+    final json = <String, dynamic>{};
+    if (this.pkiEzsigntemplatepackagesignermembershipID != null) {
+      json[r'pkiEzsigntemplatepackagesignermembershipID'] = this.pkiEzsigntemplatepackagesignermembershipID;
     } else {
-      _json[r'pkiEzsigntemplatepackagesignermembershipID'] = null;
+      json[r'pkiEzsigntemplatepackagesignermembershipID'] = null;
     }
-      _json[r'fkiEzsigntemplatepackagemembershipID'] = fkiEzsigntemplatepackagemembershipID;
-      _json[r'fkiEzsigntemplatepackagesignerID'] = fkiEzsigntemplatepackagesignerID;
-      _json[r'fkiEzsigntemplatesignerID'] = fkiEzsigntemplatesignerID;
-    if (iEzsigntemplatepackagesignermembershipCopy != null) {
-      _json[r'iEzsigntemplatepackagesignermembershipCopy'] = iEzsigntemplatepackagesignermembershipCopy;
+      json[r'fkiEzsigntemplatepackagemembershipID'] = this.fkiEzsigntemplatepackagemembershipID;
+      json[r'fkiEzsigntemplatepackagesignerID'] = this.fkiEzsigntemplatepackagesignerID;
+      json[r'fkiEzsigntemplatesignerID'] = this.fkiEzsigntemplatesignerID;
+    if (this.iEzsigntemplatepackagesignermembershipCopy != null) {
+      json[r'iEzsigntemplatepackagesignermembershipCopy'] = this.iEzsigntemplatepackagesignermembershipCopy;
     } else {
-      _json[r'iEzsigntemplatepackagesignermembershipCopy'] = null;
+      json[r'iEzsigntemplatepackagesignermembershipCopy'] = null;
     }
-    return _json;
+    return json;
   }
 
   /// Returns a new [EzsigntemplatepackagesignermembershipRequestCompound] instance and imports its values from

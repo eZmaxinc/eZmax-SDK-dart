@@ -31,9 +31,9 @@ class EzsignbulksendGetListV1ResponseMPayloadAllOf {
   String toString() => 'EzsignbulksendGetListV1ResponseMPayloadAllOf[aObjEzsignbulksend=$aObjEzsignbulksend]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_objEzsignbulksend'] = aObjEzsignbulksend;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_objEzsignbulksend'] = this.aObjEzsignbulksend;
+    return json;
   }
 
   /// Returns a new [EzsignbulksendGetListV1ResponseMPayloadAllOf] instance and imports its values from

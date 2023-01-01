@@ -118,29 +118,29 @@ class EzsignfolderListElement {
   String toString() => 'EzsignfolderListElement[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, eEzsignfoldertypePrivacylevel=$eEzsignfoldertypePrivacylevel, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, sEzsignfolderDescription=$sEzsignfolderDescription, eEzsignfolderStep=$eEzsignfolderStep, dtCreatedDate=$dtCreatedDate, dtEzsignfolderSentdate=$dtEzsignfolderSentdate, dtEzsignfolderDuedate=$dtEzsignfolderDuedate, iEzsigndocument=$iEzsigndocument, iEzsigndocumentEdm=$iEzsigndocumentEdm, iEzsignsignature=$iEzsignsignature, iEzsignsignatureSigned=$iEzsignsignatureSigned]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiEzsignfolderID'] = pkiEzsignfolderID;
-      _json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
-      _json[r'eEzsignfoldertypePrivacylevel'] = eEzsignfoldertypePrivacylevel;
-      _json[r'sEzsignfoldertypeNameX'] = sEzsignfoldertypeNameX;
-      _json[r'sEzsignfolderDescription'] = sEzsignfolderDescription;
-      _json[r'eEzsignfolderStep'] = eEzsignfolderStep;
-      _json[r'dtCreatedDate'] = dtCreatedDate;
-    if (dtEzsignfolderSentdate != null) {
-      _json[r'dtEzsignfolderSentdate'] = dtEzsignfolderSentdate;
+    final json = <String, dynamic>{};
+      json[r'pkiEzsignfolderID'] = this.pkiEzsignfolderID;
+      json[r'fkiEzsignfoldertypeID'] = this.fkiEzsignfoldertypeID;
+      json[r'eEzsignfoldertypePrivacylevel'] = this.eEzsignfoldertypePrivacylevel;
+      json[r'sEzsignfoldertypeNameX'] = this.sEzsignfoldertypeNameX;
+      json[r'sEzsignfolderDescription'] = this.sEzsignfolderDescription;
+      json[r'eEzsignfolderStep'] = this.eEzsignfolderStep;
+      json[r'dtCreatedDate'] = this.dtCreatedDate;
+    if (this.dtEzsignfolderSentdate != null) {
+      json[r'dtEzsignfolderSentdate'] = this.dtEzsignfolderSentdate;
     } else {
-      _json[r'dtEzsignfolderSentdate'] = null;
+      json[r'dtEzsignfolderSentdate'] = null;
     }
-    if (dtEzsignfolderDuedate != null) {
-      _json[r'dtEzsignfolderDuedate'] = dtEzsignfolderDuedate;
+    if (this.dtEzsignfolderDuedate != null) {
+      json[r'dtEzsignfolderDuedate'] = this.dtEzsignfolderDuedate;
     } else {
-      _json[r'dtEzsignfolderDuedate'] = null;
+      json[r'dtEzsignfolderDuedate'] = null;
     }
-      _json[r'iEzsigndocument'] = iEzsigndocument;
-      _json[r'iEzsigndocumentEdm'] = iEzsigndocumentEdm;
-      _json[r'iEzsignsignature'] = iEzsignsignature;
-      _json[r'iEzsignsignatureSigned'] = iEzsignsignatureSigned;
-    return _json;
+      json[r'iEzsigndocument'] = this.iEzsigndocument;
+      json[r'iEzsigndocumentEdm'] = this.iEzsigndocumentEdm;
+      json[r'iEzsignsignature'] = this.iEzsignsignature;
+      json[r'iEzsignsignatureSigned'] = this.iEzsignsignatureSigned;
+    return json;
   }
 
   /// Returns a new [EzsignfolderListElement] instance and imports its values from

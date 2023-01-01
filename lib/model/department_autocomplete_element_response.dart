@@ -52,12 +52,12 @@ class DepartmentAutocompleteElementResponse {
   String toString() => 'DepartmentAutocompleteElementResponse[sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, pkiDepartmentID=$pkiDepartmentID, bDepartmentIsactive=$bDepartmentIsactive]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'sCompanyNameX'] = sCompanyNameX;
-      _json[r'sDepartmentNameX'] = sDepartmentNameX;
-      _json[r'pkiDepartmentID'] = pkiDepartmentID;
-      _json[r'bDepartmentIsactive'] = bDepartmentIsactive;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'sCompanyNameX'] = this.sCompanyNameX;
+      json[r'sDepartmentNameX'] = this.sDepartmentNameX;
+      json[r'pkiDepartmentID'] = this.pkiDepartmentID;
+      json[r'bDepartmentIsactive'] = this.bDepartmentIsactive;
+    return json;
   }
 
   /// Returns a new [DepartmentAutocompleteElementResponse] instance and imports its values from

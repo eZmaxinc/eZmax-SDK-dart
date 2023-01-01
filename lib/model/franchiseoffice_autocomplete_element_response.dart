@@ -46,11 +46,11 @@ class FranchiseofficeAutocompleteElementResponse {
   String toString() => 'FranchiseofficeAutocompleteElementResponse[sFranchiseofficeDescription=$sFranchiseofficeDescription, pkiFranchiseofficeID=$pkiFranchiseofficeID, bFranchiseofficeIsactive=$bFranchiseofficeIsactive]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'sFranchiseofficeDescription'] = sFranchiseofficeDescription;
-      _json[r'pkiFranchiseofficeID'] = pkiFranchiseofficeID;
-      _json[r'bFranchiseofficeIsactive'] = bFranchiseofficeIsactive;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'sFranchiseofficeDescription'] = this.sFranchiseofficeDescription;
+      json[r'pkiFranchiseofficeID'] = this.pkiFranchiseofficeID;
+      json[r'bFranchiseofficeIsactive'] = this.bFranchiseofficeIsactive;
+    return json;
   }
 
   /// Returns a new [FranchiseofficeAutocompleteElementResponse] instance and imports its values from

@@ -31,9 +31,9 @@ class EzsigndocumentGetTemporaryProofV1ResponseMPayload {
   String toString() => 'EzsigndocumentGetTemporaryProofV1ResponseMPayload[aObjEzsigndocumentlog=$aObjEzsigndocumentlog]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_objEzsigndocumentlog'] = aObjEzsigndocumentlog;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_objEzsigndocumentlog'] = this.aObjEzsigndocumentlog;
+    return json;
   }
 
   /// Returns a new [EzsigndocumentGetTemporaryProofV1ResponseMPayload] instance and imports its values from

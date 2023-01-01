@@ -38,10 +38,10 @@ class CustomDropdownElementRequestCompound {
   String toString() => 'CustomDropdownElementRequestCompound[sLabel=$sLabel, sValue=$sValue]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'sLabel'] = sLabel;
-      _json[r'sValue'] = sValue;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'sLabel'] = this.sLabel;
+      json[r'sValue'] = this.sValue;
+    return json;
   }
 
   /// Returns a new [CustomDropdownElementRequestCompound] instance and imports its values from

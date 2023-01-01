@@ -31,9 +31,9 @@ class ActivesessionGetCurrentV1ResponseAllOf {
   String toString() => 'ActivesessionGetCurrentV1ResponseAllOf[mPayload=$mPayload]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'mPayload'] = mPayload;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'mPayload'] = this.mPayload;
+    return json;
   }
 
   /// Returns a new [ActivesessionGetCurrentV1ResponseAllOf] instance and imports its values from

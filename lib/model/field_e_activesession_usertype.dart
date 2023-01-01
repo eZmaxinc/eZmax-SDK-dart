@@ -71,7 +71,7 @@ class FieldEActivesessionUsertypeTypeTransformer {
   /// and users are still using an old app with the old code.
   FieldEActivesessionUsertype? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
-      switch (data.toString()) {
+      switch (data) {
         case r'AgentBroker': return FieldEActivesessionUsertype.agentBroker;
         case r'Assistant': return FieldEActivesessionUsertype.assistant;
         case r'EzsignUser': return FieldEActivesessionUsertype.ezsignUser;

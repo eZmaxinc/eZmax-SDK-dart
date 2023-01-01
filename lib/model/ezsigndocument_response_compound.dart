@@ -214,52 +214,52 @@ class EzsigndocumentResponseCompound {
   String toString() => 'EzsigndocumentResponseCompound[fkiEzsignfolderID=$fkiEzsignfolderID, fkiEzsignfoldersignerassociationIDDeclinedtosign=$fkiEzsignfoldersignerassociationIDDeclinedtosign, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, dtEzsignformCompleted=$dtEzsignformCompleted, fkiLanguageID=$fkiLanguageID, sEzsigndocumentName=$sEzsigndocumentName, pkiEzsigndocumentID=$pkiEzsigndocumentID, eEzsigndocumentStep=$eEzsigndocumentStep, dtEzsigndocumentFirstsend=$dtEzsigndocumentFirstsend, dtEzsigndocumentLastsend=$dtEzsigndocumentLastsend, iEzsigndocumentOrder=$iEzsigndocumentOrder, iEzsigndocumentPagetotal=$iEzsigndocumentPagetotal, iEzsigndocumentSignaturesigned=$iEzsigndocumentSignaturesigned, iEzsigndocumentSignaturetotal=$iEzsigndocumentSignaturetotal, sEzsigndocumentMD5initial=$sEzsigndocumentMD5initial, tEzsigndocumentDeclinedtosignreason=$tEzsigndocumentDeclinedtosignreason, sEzsigndocumentMD5signed=$sEzsigndocumentMD5signed, bEzsigndocumentEzsignform=$bEzsigndocumentEzsignform, objAudit=$objAudit, iEzsigndocumentStepformtotal=$iEzsigndocumentStepformtotal, iEzsigndocumentStepformcurrent=$iEzsigndocumentStepformcurrent, iEzsigndocumentStepsignaturetotal=$iEzsigndocumentStepsignaturetotal, iEzsigndocumentStepsignatureCurrent=$iEzsigndocumentStepsignatureCurrent, aObjEzsignfoldersignerassociationstatus=$aObjEzsignfoldersignerassociationstatus]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'fkiEzsignfolderID'] = fkiEzsignfolderID;
-    if (fkiEzsignfoldersignerassociationIDDeclinedtosign != null) {
-      _json[r'fkiEzsignfoldersignerassociationIDDeclinedtosign'] = fkiEzsignfoldersignerassociationIDDeclinedtosign;
+    final json = <String, dynamic>{};
+      json[r'fkiEzsignfolderID'] = this.fkiEzsignfolderID;
+    if (this.fkiEzsignfoldersignerassociationIDDeclinedtosign != null) {
+      json[r'fkiEzsignfoldersignerassociationIDDeclinedtosign'] = this.fkiEzsignfoldersignerassociationIDDeclinedtosign;
     } else {
-      _json[r'fkiEzsignfoldersignerassociationIDDeclinedtosign'] = null;
+      json[r'fkiEzsignfoldersignerassociationIDDeclinedtosign'] = null;
     }
-      _json[r'dtEzsigndocumentDuedate'] = dtEzsigndocumentDuedate;
-    if (dtEzsignformCompleted != null) {
-      _json[r'dtEzsignformCompleted'] = dtEzsignformCompleted;
+      json[r'dtEzsigndocumentDuedate'] = this.dtEzsigndocumentDuedate;
+    if (this.dtEzsignformCompleted != null) {
+      json[r'dtEzsignformCompleted'] = this.dtEzsignformCompleted;
     } else {
-      _json[r'dtEzsignformCompleted'] = null;
+      json[r'dtEzsignformCompleted'] = null;
     }
-      _json[r'fkiLanguageID'] = fkiLanguageID;
-      _json[r'sEzsigndocumentName'] = sEzsigndocumentName;
-      _json[r'pkiEzsigndocumentID'] = pkiEzsigndocumentID;
-      _json[r'eEzsigndocumentStep'] = eEzsigndocumentStep;
-    if (dtEzsigndocumentFirstsend != null) {
-      _json[r'dtEzsigndocumentFirstsend'] = dtEzsigndocumentFirstsend;
+      json[r'fkiLanguageID'] = this.fkiLanguageID;
+      json[r'sEzsigndocumentName'] = this.sEzsigndocumentName;
+      json[r'pkiEzsigndocumentID'] = this.pkiEzsigndocumentID;
+      json[r'eEzsigndocumentStep'] = this.eEzsigndocumentStep;
+    if (this.dtEzsigndocumentFirstsend != null) {
+      json[r'dtEzsigndocumentFirstsend'] = this.dtEzsigndocumentFirstsend;
     } else {
-      _json[r'dtEzsigndocumentFirstsend'] = null;
+      json[r'dtEzsigndocumentFirstsend'] = null;
     }
-    if (dtEzsigndocumentLastsend != null) {
-      _json[r'dtEzsigndocumentLastsend'] = dtEzsigndocumentLastsend;
+    if (this.dtEzsigndocumentLastsend != null) {
+      json[r'dtEzsigndocumentLastsend'] = this.dtEzsigndocumentLastsend;
     } else {
-      _json[r'dtEzsigndocumentLastsend'] = null;
+      json[r'dtEzsigndocumentLastsend'] = null;
     }
-      _json[r'iEzsigndocumentOrder'] = iEzsigndocumentOrder;
-      _json[r'iEzsigndocumentPagetotal'] = iEzsigndocumentPagetotal;
-      _json[r'iEzsigndocumentSignaturesigned'] = iEzsigndocumentSignaturesigned;
-      _json[r'iEzsigndocumentSignaturetotal'] = iEzsigndocumentSignaturetotal;
-      _json[r'sEzsigndocumentMD5initial'] = sEzsigndocumentMD5initial;
-    if (tEzsigndocumentDeclinedtosignreason != null) {
-      _json[r'tEzsigndocumentDeclinedtosignreason'] = tEzsigndocumentDeclinedtosignreason;
+      json[r'iEzsigndocumentOrder'] = this.iEzsigndocumentOrder;
+      json[r'iEzsigndocumentPagetotal'] = this.iEzsigndocumentPagetotal;
+      json[r'iEzsigndocumentSignaturesigned'] = this.iEzsigndocumentSignaturesigned;
+      json[r'iEzsigndocumentSignaturetotal'] = this.iEzsigndocumentSignaturetotal;
+      json[r'sEzsigndocumentMD5initial'] = this.sEzsigndocumentMD5initial;
+    if (this.tEzsigndocumentDeclinedtosignreason != null) {
+      json[r'tEzsigndocumentDeclinedtosignreason'] = this.tEzsigndocumentDeclinedtosignreason;
     } else {
-      _json[r'tEzsigndocumentDeclinedtosignreason'] = null;
+      json[r'tEzsigndocumentDeclinedtosignreason'] = null;
     }
-      _json[r'sEzsigndocumentMD5signed'] = sEzsigndocumentMD5signed;
-      _json[r'bEzsigndocumentEzsignform'] = bEzsigndocumentEzsignform;
-      _json[r'objAudit'] = objAudit;
-      _json[r'iEzsigndocumentStepformtotal'] = iEzsigndocumentStepformtotal;
-      _json[r'iEzsigndocumentStepformcurrent'] = iEzsigndocumentStepformcurrent;
-      _json[r'iEzsigndocumentStepsignaturetotal'] = iEzsigndocumentStepsignaturetotal;
-      _json[r'iEzsigndocumentStepsignatureCurrent'] = iEzsigndocumentStepsignatureCurrent;
-      _json[r'a_objEzsignfoldersignerassociationstatus'] = aObjEzsignfoldersignerassociationstatus;
-    return _json;
+      json[r'sEzsigndocumentMD5signed'] = this.sEzsigndocumentMD5signed;
+      json[r'bEzsigndocumentEzsignform'] = this.bEzsigndocumentEzsignform;
+      json[r'objAudit'] = this.objAudit;
+      json[r'iEzsigndocumentStepformtotal'] = this.iEzsigndocumentStepformtotal;
+      json[r'iEzsigndocumentStepformcurrent'] = this.iEzsigndocumentStepformcurrent;
+      json[r'iEzsigndocumentStepsignaturetotal'] = this.iEzsigndocumentStepsignaturetotal;
+      json[r'iEzsigndocumentStepsignatureCurrent'] = this.iEzsigndocumentStepsignatureCurrent;
+      json[r'a_objEzsignfoldersignerassociationstatus'] = this.aObjEzsignfoldersignerassociationstatus;
+    return json;
   }
 
   /// Returns a new [EzsigndocumentResponseCompound] instance and imports its values from

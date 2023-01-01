@@ -31,9 +31,9 @@ class CustomNotificationsubsectiongetnotificationtestsResponseAllOf {
   String toString() => 'CustomNotificationsubsectiongetnotificationtestsResponseAllOf[aObjNotificationtest=$aObjNotificationtest]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_objNotificationtest'] = aObjNotificationtest;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_objNotificationtest'] = this.aObjNotificationtest;
+    return json;
   }
 
   /// Returns a new [CustomNotificationsubsectiongetnotificationtestsResponseAllOf] instance and imports its values from

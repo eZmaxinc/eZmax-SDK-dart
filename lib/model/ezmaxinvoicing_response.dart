@@ -126,29 +126,29 @@ class EzmaxinvoicingResponse {
   String toString() => 'EzmaxinvoicingResponse[pkiEzmaxinvoicingID=$pkiEzmaxinvoicingID, fkiEzmaxinvoicingcontractID=$fkiEzmaxinvoicingcontractID, fkiEzmaxpricingID=$fkiEzmaxpricingID, fkiSystemconfigurationtypeID=$fkiSystemconfigurationtypeID, sSystemconfigurationtypeDescriptionX=$sSystemconfigurationtypeDescriptionX, yyyymmEzmaxinvoicing=$yyyymmEzmaxinvoicing, iEzmaxinvoicingDays=$iEzmaxinvoicingDays, eEzmaxinvoicingPaymenttype=$eEzmaxinvoicingPaymenttype, dEzmaxinvoicingRebatepaymenttype=$dEzmaxinvoicingRebatepaymenttype, iEzmaxinvoicingContractlength=$iEzmaxinvoicingContractlength, dEzmaxinvoicingRebatecontractlength=$dEzmaxinvoicingRebatecontractlength, bEzmaxinvoicingRebateEzsignallagents=$bEzmaxinvoicingRebateEzsignallagents, objAudit=$objAudit]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (pkiEzmaxinvoicingID != null) {
-      _json[r'pkiEzmaxinvoicingID'] = pkiEzmaxinvoicingID;
+    final json = <String, dynamic>{};
+    if (this.pkiEzmaxinvoicingID != null) {
+      json[r'pkiEzmaxinvoicingID'] = this.pkiEzmaxinvoicingID;
     } else {
-      _json[r'pkiEzmaxinvoicingID'] = null;
+      json[r'pkiEzmaxinvoicingID'] = null;
     }
-      _json[r'fkiEzmaxinvoicingcontractID'] = fkiEzmaxinvoicingcontractID;
-      _json[r'fkiEzmaxpricingID'] = fkiEzmaxpricingID;
-      _json[r'fkiSystemconfigurationtypeID'] = fkiSystemconfigurationtypeID;
-      _json[r'sSystemconfigurationtypeDescriptionX'] = sSystemconfigurationtypeDescriptionX;
-      _json[r'yyyymmEzmaxinvoicing'] = yyyymmEzmaxinvoicing;
-      _json[r'iEzmaxinvoicingDays'] = iEzmaxinvoicingDays;
-      _json[r'eEzmaxinvoicingPaymenttype'] = eEzmaxinvoicingPaymenttype;
-      _json[r'dEzmaxinvoicingRebatepaymenttype'] = dEzmaxinvoicingRebatepaymenttype;
-      _json[r'iEzmaxinvoicingContractlength'] = iEzmaxinvoicingContractlength;
-      _json[r'dEzmaxinvoicingRebatecontractlength'] = dEzmaxinvoicingRebatecontractlength;
-      _json[r'bEzmaxinvoicingRebateEzsignallagents'] = bEzmaxinvoicingRebateEzsignallagents;
-    if (objAudit != null) {
-      _json[r'objAudit'] = objAudit;
+      json[r'fkiEzmaxinvoicingcontractID'] = this.fkiEzmaxinvoicingcontractID;
+      json[r'fkiEzmaxpricingID'] = this.fkiEzmaxpricingID;
+      json[r'fkiSystemconfigurationtypeID'] = this.fkiSystemconfigurationtypeID;
+      json[r'sSystemconfigurationtypeDescriptionX'] = this.sSystemconfigurationtypeDescriptionX;
+      json[r'yyyymmEzmaxinvoicing'] = this.yyyymmEzmaxinvoicing;
+      json[r'iEzmaxinvoicingDays'] = this.iEzmaxinvoicingDays;
+      json[r'eEzmaxinvoicingPaymenttype'] = this.eEzmaxinvoicingPaymenttype;
+      json[r'dEzmaxinvoicingRebatepaymenttype'] = this.dEzmaxinvoicingRebatepaymenttype;
+      json[r'iEzmaxinvoicingContractlength'] = this.iEzmaxinvoicingContractlength;
+      json[r'dEzmaxinvoicingRebatecontractlength'] = this.dEzmaxinvoicingRebatecontractlength;
+      json[r'bEzmaxinvoicingRebateEzsignallagents'] = this.bEzmaxinvoicingRebateEzsignallagents;
+    if (this.objAudit != null) {
+      json[r'objAudit'] = this.objAudit;
     } else {
-      _json[r'objAudit'] = null;
+      json[r'objAudit'] = null;
     }
-    return _json;
+    return json;
   }
 
   /// Returns a new [EzmaxinvoicingResponse] instance and imports its values from

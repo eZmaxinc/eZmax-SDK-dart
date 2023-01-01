@@ -106,32 +106,32 @@ class EzmaxinvoicingcommissionResponse {
   String toString() => 'EzmaxinvoicingcommissionResponse[pkiEzmaxinvoicingcommissionID=$pkiEzmaxinvoicingcommissionID, fkiEzmaxinvoicingsummaryglobalID=$fkiEzmaxinvoicingsummaryglobalID, fkiEzmaxpartnerID=$fkiEzmaxpartnerID, fkiEzmaxrepresentativeID=$fkiEzmaxrepresentativeID, dtEzmaxinvoicingcommissionStart=$dtEzmaxinvoicingcommissionStart, dtEzmaxinvoicingcommissionEnd=$dtEzmaxinvoicingcommissionEnd, iEzmaxinvoicingcommissionDays=$iEzmaxinvoicingcommissionDays, dEzmaxinvoicingcommissionAmount=$dEzmaxinvoicingcommissionAmount]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (pkiEzmaxinvoicingcommissionID != null) {
-      _json[r'pkiEzmaxinvoicingcommissionID'] = pkiEzmaxinvoicingcommissionID;
+    final json = <String, dynamic>{};
+    if (this.pkiEzmaxinvoicingcommissionID != null) {
+      json[r'pkiEzmaxinvoicingcommissionID'] = this.pkiEzmaxinvoicingcommissionID;
     } else {
-      _json[r'pkiEzmaxinvoicingcommissionID'] = null;
+      json[r'pkiEzmaxinvoicingcommissionID'] = null;
     }
-    if (fkiEzmaxinvoicingsummaryglobalID != null) {
-      _json[r'fkiEzmaxinvoicingsummaryglobalID'] = fkiEzmaxinvoicingsummaryglobalID;
+    if (this.fkiEzmaxinvoicingsummaryglobalID != null) {
+      json[r'fkiEzmaxinvoicingsummaryglobalID'] = this.fkiEzmaxinvoicingsummaryglobalID;
     } else {
-      _json[r'fkiEzmaxinvoicingsummaryglobalID'] = null;
+      json[r'fkiEzmaxinvoicingsummaryglobalID'] = null;
     }
-    if (fkiEzmaxpartnerID != null) {
-      _json[r'fkiEzmaxpartnerID'] = fkiEzmaxpartnerID;
+    if (this.fkiEzmaxpartnerID != null) {
+      json[r'fkiEzmaxpartnerID'] = this.fkiEzmaxpartnerID;
     } else {
-      _json[r'fkiEzmaxpartnerID'] = null;
+      json[r'fkiEzmaxpartnerID'] = null;
     }
-    if (fkiEzmaxrepresentativeID != null) {
-      _json[r'fkiEzmaxrepresentativeID'] = fkiEzmaxrepresentativeID;
+    if (this.fkiEzmaxrepresentativeID != null) {
+      json[r'fkiEzmaxrepresentativeID'] = this.fkiEzmaxrepresentativeID;
     } else {
-      _json[r'fkiEzmaxrepresentativeID'] = null;
+      json[r'fkiEzmaxrepresentativeID'] = null;
     }
-      _json[r'dtEzmaxinvoicingcommissionStart'] = dtEzmaxinvoicingcommissionStart;
-      _json[r'dtEzmaxinvoicingcommissionEnd'] = dtEzmaxinvoicingcommissionEnd;
-      _json[r'iEzmaxinvoicingcommissionDays'] = iEzmaxinvoicingcommissionDays;
-      _json[r'dEzmaxinvoicingcommissionAmount'] = dEzmaxinvoicingcommissionAmount;
-    return _json;
+      json[r'dtEzmaxinvoicingcommissionStart'] = this.dtEzmaxinvoicingcommissionStart;
+      json[r'dtEzmaxinvoicingcommissionEnd'] = this.dtEzmaxinvoicingcommissionEnd;
+      json[r'iEzmaxinvoicingcommissionDays'] = this.iEzmaxinvoicingcommissionDays;
+      json[r'dEzmaxinvoicingcommissionAmount'] = this.dEzmaxinvoicingcommissionAmount;
+    return json;
   }
 
   /// Returns a new [EzmaxinvoicingcommissionResponse] instance and imports its values from

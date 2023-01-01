@@ -32,9 +32,9 @@ class EzsigntemplateformfieldgroupCreateObjectV1ResponseMPayload {
   String toString() => 'EzsigntemplateformfieldgroupCreateObjectV1ResponseMPayload[aPkiEzsigntemplateformfieldgroupID=$aPkiEzsigntemplateformfieldgroupID]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_pkiEzsigntemplateformfieldgroupID'] = aPkiEzsigntemplateformfieldgroupID;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_pkiEzsigntemplateformfieldgroupID'] = this.aPkiEzsigntemplateformfieldgroupID;
+    return json;
   }
 
   /// Returns a new [EzsigntemplateformfieldgroupCreateObjectV1ResponseMPayload] instance and imports its values from

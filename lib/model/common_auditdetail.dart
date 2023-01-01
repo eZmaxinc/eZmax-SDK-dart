@@ -84,23 +84,23 @@ class CommonAuditdetail {
   String toString() => 'CommonAuditdetail[fkiUserID=$fkiUserID, fkiApikeyID=$fkiApikeyID, sUserLoginname=$sUserLoginname, sUserLastname=$sUserLastname, sUserFirstname=$sUserFirstname, sApikeyDescriptionX=$sApikeyDescriptionX, dtAuditdetailDate=$dtAuditdetailDate]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'fkiUserID'] = fkiUserID;
-    if (fkiApikeyID != null) {
-      _json[r'fkiApikeyID'] = fkiApikeyID;
+    final json = <String, dynamic>{};
+      json[r'fkiUserID'] = this.fkiUserID;
+    if (this.fkiApikeyID != null) {
+      json[r'fkiApikeyID'] = this.fkiApikeyID;
     } else {
-      _json[r'fkiApikeyID'] = null;
+      json[r'fkiApikeyID'] = null;
     }
-      _json[r'sUserLoginname'] = sUserLoginname;
-      _json[r'sUserLastname'] = sUserLastname;
-      _json[r'sUserFirstname'] = sUserFirstname;
-    if (sApikeyDescriptionX != null) {
-      _json[r'sApikeyDescriptionX'] = sApikeyDescriptionX;
+      json[r'sUserLoginname'] = this.sUserLoginname;
+      json[r'sUserLastname'] = this.sUserLastname;
+      json[r'sUserFirstname'] = this.sUserFirstname;
+    if (this.sApikeyDescriptionX != null) {
+      json[r'sApikeyDescriptionX'] = this.sApikeyDescriptionX;
     } else {
-      _json[r'sApikeyDescriptionX'] = null;
+      json[r'sApikeyDescriptionX'] = null;
     }
-      _json[r'dtAuditdetailDate'] = dtAuditdetailDate;
-    return _json;
+      json[r'dtAuditdetailDate'] = this.dtAuditdetailDate;
+    return json;
   }
 
   /// Returns a new [CommonAuditdetail] instance and imports its values from

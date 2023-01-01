@@ -65,21 +65,21 @@ class ActivesessionResponseCompoundAllOf {
   String toString() => 'ActivesessionResponseCompoundAllOf[aPkiPermissionID=$aPkiPermissionID, objUserReal=$objUserReal, objUserCloned=$objUserCloned, objApikey=$objApikey, aEModuleInternalname=$aEModuleInternalname]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_pkiPermissionID'] = aPkiPermissionID;
-      _json[r'objUserReal'] = objUserReal;
-    if (objUserCloned != null) {
-      _json[r'objUserCloned'] = objUserCloned;
+    final json = <String, dynamic>{};
+      json[r'a_pkiPermissionID'] = this.aPkiPermissionID;
+      json[r'objUserReal'] = this.objUserReal;
+    if (this.objUserCloned != null) {
+      json[r'objUserCloned'] = this.objUserCloned;
     } else {
-      _json[r'objUserCloned'] = null;
+      json[r'objUserCloned'] = null;
     }
-    if (objApikey != null) {
-      _json[r'objApikey'] = objApikey;
+    if (this.objApikey != null) {
+      json[r'objApikey'] = this.objApikey;
     } else {
-      _json[r'objApikey'] = null;
+      json[r'objApikey'] = null;
     }
-      _json[r'a_eModuleInternalname'] = aEModuleInternalname;
-    return _json;
+      json[r'a_eModuleInternalname'] = this.aEModuleInternalname;
+    return json;
   }
 
   /// Returns a new [ActivesessionResponseCompoundAllOf] instance and imports its values from

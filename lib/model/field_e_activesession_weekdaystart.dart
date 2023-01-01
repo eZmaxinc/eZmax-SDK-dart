@@ -77,7 +77,7 @@ class FieldEActivesessionWeekdaystartTypeTransformer {
   /// and users are still using an old app with the old code.
   FieldEActivesessionWeekdaystart? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
-      switch (data.toString()) {
+      switch (data) {
         case r'Sunday': return FieldEActivesessionWeekdaystart.sunday;
         case r'Monday': return FieldEActivesessionWeekdaystart.monday;
         case r'Tuesday': return FieldEActivesessionWeekdaystart.tuesday;

@@ -31,9 +31,9 @@ class EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1ResponseMPayload {
   String toString() => 'EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1ResponseMPayload[aObjEzsigntemplateformfieldgroup=$aObjEzsigntemplateformfieldgroup]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_objEzsigntemplateformfieldgroup'] = aObjEzsigntemplateformfieldgroup;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_objEzsigntemplateformfieldgroup'] = this.aObjEzsigntemplateformfieldgroup;
+    return json;
   }
 
   /// Returns a new [EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1ResponseMPayload] instance and imports its values from

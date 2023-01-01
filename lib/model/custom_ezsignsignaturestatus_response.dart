@@ -50,12 +50,12 @@ class CustomEzsignsignaturestatusResponse {
   String toString() => 'CustomEzsignsignaturestatusResponse[eEzsignsignaturestatusSteptype=$eEzsignsignaturestatusSteptype, iEzsignsignaturestatusStep=$iEzsignsignaturestatusStep, iEzsignsignaturestatusTotal=$iEzsignsignaturestatusTotal, iEzsignsignaturestatusSigned=$iEzsignsignaturestatusSigned]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'eEzsignsignaturestatusSteptype'] = eEzsignsignaturestatusSteptype;
-      _json[r'iEzsignsignaturestatusStep'] = iEzsignsignaturestatusStep;
-      _json[r'iEzsignsignaturestatusTotal'] = iEzsignsignaturestatusTotal;
-      _json[r'iEzsignsignaturestatusSigned'] = iEzsignsignaturestatusSigned;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'eEzsignsignaturestatusSteptype'] = this.eEzsignsignaturestatusSteptype;
+      json[r'iEzsignsignaturestatusStep'] = this.iEzsignsignaturestatusStep;
+      json[r'iEzsignsignaturestatusTotal'] = this.iEzsignsignaturestatusTotal;
+      json[r'iEzsignsignaturestatusSigned'] = this.iEzsignsignaturestatusSigned;
+    return json;
   }
 
   /// Returns a new [CustomEzsignsignaturestatusResponse] instance and imports its values from
@@ -194,7 +194,7 @@ class CustomEzsignsignaturestatusResponseEEzsignsignaturestatusSteptypeEnumTypeT
   /// and users are still using an old app with the old code.
   CustomEzsignsignaturestatusResponseEEzsignsignaturestatusSteptypeEnum? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
-      switch (data.toString()) {
+      switch (data) {
         case r'Form': return CustomEzsignsignaturestatusResponseEEzsignsignaturestatusSteptypeEnum.form;
         case r'Signature': return CustomEzsignsignaturestatusResponseEEzsignsignaturestatusSteptypeEnum.signature;
         default:

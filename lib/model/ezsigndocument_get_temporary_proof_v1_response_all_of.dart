@@ -31,9 +31,9 @@ class EzsigndocumentGetTemporaryProofV1ResponseAllOf {
   String toString() => 'EzsigndocumentGetTemporaryProofV1ResponseAllOf[mPayload=$mPayload]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'mPayload'] = mPayload;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'mPayload'] = this.mPayload;
+    return json;
   }
 
   /// Returns a new [EzsigndocumentGetTemporaryProofV1ResponseAllOf] instance and imports its values from

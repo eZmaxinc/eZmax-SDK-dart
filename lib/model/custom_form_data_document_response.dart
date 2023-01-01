@@ -59,13 +59,13 @@ class CustomFormDataDocumentResponse {
   String toString() => 'CustomFormDataDocumentResponse[pkiEzsigndocumentID=$pkiEzsigndocumentID, fkiEzsignfolderID=$fkiEzsignfolderID, sEzsigndocumentName=$sEzsigndocumentName, dtModifiedDate=$dtModifiedDate, aObjFormDataSigner=$aObjFormDataSigner]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiEzsigndocumentID'] = pkiEzsigndocumentID;
-      _json[r'fkiEzsignfolderID'] = fkiEzsignfolderID;
-      _json[r'sEzsigndocumentName'] = sEzsigndocumentName;
-      _json[r'dtModifiedDate'] = dtModifiedDate;
-      _json[r'a_objFormDataSigner'] = aObjFormDataSigner;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'pkiEzsigndocumentID'] = this.pkiEzsigndocumentID;
+      json[r'fkiEzsignfolderID'] = this.fkiEzsignfolderID;
+      json[r'sEzsigndocumentName'] = this.sEzsigndocumentName;
+      json[r'dtModifiedDate'] = this.dtModifiedDate;
+      json[r'a_objFormDataSigner'] = this.aObjFormDataSigner;
+    return json;
   }
 
   /// Returns a new [CustomFormDataDocumentResponse] instance and imports its values from

@@ -31,9 +31,9 @@ class EzmaxinvoicingagentResponseCompoundAllOf {
   String toString() => 'EzmaxinvoicingagentResponseCompoundAllOf[objContactName=$objContactName]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'objContactName'] = objContactName;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'objContactName'] = this.objContactName;
+    return json;
   }
 
   /// Returns a new [EzmaxinvoicingagentResponseCompoundAllOf] instance and imports its values from

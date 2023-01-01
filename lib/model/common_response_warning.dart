@@ -38,10 +38,10 @@ class CommonResponseWarning {
   String toString() => 'CommonResponseWarning[sWarningMessage=$sWarningMessage, eWarningCode=$eWarningCode]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'sWarningMessage'] = sWarningMessage;
-      _json[r'eWarningCode'] = eWarningCode;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'sWarningMessage'] = this.sWarningMessage;
+      json[r'eWarningCode'] = this.eWarningCode;
+    return json;
   }
 
   /// Returns a new [CommonResponseWarning] instance and imports its values from

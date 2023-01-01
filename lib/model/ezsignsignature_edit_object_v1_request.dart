@@ -31,9 +31,9 @@ class EzsignsignatureEditObjectV1Request {
   String toString() => 'EzsignsignatureEditObjectV1Request[objEzsignsignature=$objEzsignsignature]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'objEzsignsignature'] = objEzsignsignature;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'objEzsignsignature'] = this.objEzsignsignature;
+    return json;
   }
 
   /// Returns a new [EzsignsignatureEditObjectV1Request] instance and imports its values from

@@ -44,11 +44,11 @@ class EzsigndocumentApplyEzsigntemplateV1Request {
   String toString() => 'EzsigndocumentApplyEzsigntemplateV1Request[fkiEzsigntemplateID=$fkiEzsigntemplateID, aSEzsigntemplatesigner=$aSEzsigntemplatesigner, aPkiEzsignfoldersignerassociationID=$aPkiEzsignfoldersignerassociationID]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'fkiEzsigntemplateID'] = fkiEzsigntemplateID;
-      _json[r'a_sEzsigntemplatesigner'] = aSEzsigntemplatesigner;
-      _json[r'a_pkiEzsignfoldersignerassociationID'] = aPkiEzsignfoldersignerassociationID;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'fkiEzsigntemplateID'] = this.fkiEzsigntemplateID;
+      json[r'a_sEzsigntemplatesigner'] = this.aSEzsigntemplatesigner;
+      json[r'a_pkiEzsignfoldersignerassociationID'] = this.aPkiEzsignfoldersignerassociationID;
+    return json;
   }
 
   /// Returns a new [EzsigndocumentApplyEzsigntemplateV1Request] instance and imports its values from

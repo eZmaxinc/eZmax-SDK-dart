@@ -38,13 +38,13 @@ class EzsigntemplatedocumentRequestPatch {
   String toString() => 'EzsigntemplatedocumentRequestPatch[sEzsigntemplatedocumentName=$sEzsigntemplatedocumentName]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (sEzsigntemplatedocumentName != null) {
-      _json[r'sEzsigntemplatedocumentName'] = sEzsigntemplatedocumentName;
+    final json = <String, dynamic>{};
+    if (this.sEzsigntemplatedocumentName != null) {
+      json[r'sEzsigntemplatedocumentName'] = this.sEzsigntemplatedocumentName;
     } else {
-      _json[r'sEzsigntemplatedocumentName'] = null;
+      json[r'sEzsigntemplatedocumentName'] = null;
     }
-    return _json;
+    return json;
   }
 
   /// Returns a new [EzsigntemplatedocumentRequestPatch] instance and imports its values from

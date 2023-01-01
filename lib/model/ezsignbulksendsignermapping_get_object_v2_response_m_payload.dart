@@ -31,9 +31,9 @@ class EzsignbulksendsignermappingGetObjectV2ResponseMPayload {
   String toString() => 'EzsignbulksendsignermappingGetObjectV2ResponseMPayload[objEzsignbulksendsignermapping=$objEzsignbulksendsignermapping]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'objEzsignbulksendsignermapping'] = objEzsignbulksendsignermapping;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'objEzsignbulksendsignermapping'] = this.objEzsignbulksendsignermapping;
+    return json;
   }
 
   /// Returns a new [EzsignbulksendsignermappingGetObjectV2ResponseMPayload] instance and imports its values from

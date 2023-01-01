@@ -46,11 +46,11 @@ class SecretquestionAutocompleteElementResponse {
   String toString() => 'SecretquestionAutocompleteElementResponse[sSecretquestionTextX=$sSecretquestionTextX, pkiSecretquestionID=$pkiSecretquestionID, bSecretquestionIsactive=$bSecretquestionIsactive]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'sSecretquestionTextX'] = sSecretquestionTextX;
-      _json[r'pkiSecretquestionID'] = pkiSecretquestionID;
-      _json[r'bSecretquestionIsactive'] = bSecretquestionIsactive;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'sSecretquestionTextX'] = this.sSecretquestionTextX;
+      json[r'pkiSecretquestionID'] = this.pkiSecretquestionID;
+      json[r'bSecretquestionIsactive'] = this.bSecretquestionIsactive;
+    return json;
   }
 
   /// Returns a new [SecretquestionAutocompleteElementResponse] instance and imports its values from

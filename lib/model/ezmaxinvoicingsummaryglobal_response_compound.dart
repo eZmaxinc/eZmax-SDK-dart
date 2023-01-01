@@ -177,47 +177,47 @@ class EzmaxinvoicingsummaryglobalResponseCompound {
   String toString() => 'EzmaxinvoicingsummaryglobalResponseCompound[pkiEzmaxinvoicingsummaryglobalID=$pkiEzmaxinvoicingsummaryglobalID, fkiEzmaxinvoicingID=$fkiEzmaxinvoicingID, fkiEzmaxproductID=$fkiEzmaxproductID, sEzmaxproductDescriptionX=$sEzmaxproductDescriptionX, dtEzmaxinvoicingsummaryglobalStart=$dtEzmaxinvoicingsummaryglobalStart, dtEzmaxinvoicingsummaryglobalEnd=$dtEzmaxinvoicingsummaryglobalEnd, iEzmaxinvoicingsummaryglobalDays=$iEzmaxinvoicingsummaryglobalDays, dEzmaxinvoicingsummaryglobalCountreal=$dEzmaxinvoicingsummaryglobalCountreal, dEzmaxinvoicingsummaryglobalCountbilled=$dEzmaxinvoicingsummaryglobalCountbilled, dEzmaxinvoicingsummaryglobalSubtotal=$dEzmaxinvoicingsummaryglobalSubtotal, dEzmaxinvoicingsummaryglobalRebateamount=$dEzmaxinvoicingsummaryglobalRebateamount, dEzmaxinvoicingsummaryglobalRebatepercent=$dEzmaxinvoicingsummaryglobalRebatepercent, dEzmaxinvoicingsummaryglobalRebatetotal=$dEzmaxinvoicingsummaryglobalRebatetotal, dEzmaxinvoicingsummaryglobalTotal=$dEzmaxinvoicingsummaryglobalTotal, dEzmaxinvoicingsummaryglobalRepresentative=$dEzmaxinvoicingsummaryglobalRepresentative, dEzmaxinvoicingsummaryglobalPartner=$dEzmaxinvoicingsummaryglobalPartner, dEzmaxinvoicingsummaryglobalNet=$dEzmaxinvoicingsummaryglobalNet, bEzmaxinvoicingsummaryglobalAdjustment=$bEzmaxinvoicingsummaryglobalAdjustment, aObjEzmaxinvoicingcommission=$aObjEzmaxinvoicingcommission]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (pkiEzmaxinvoicingsummaryglobalID != null) {
-      _json[r'pkiEzmaxinvoicingsummaryglobalID'] = pkiEzmaxinvoicingsummaryglobalID;
+    final json = <String, dynamic>{};
+    if (this.pkiEzmaxinvoicingsummaryglobalID != null) {
+      json[r'pkiEzmaxinvoicingsummaryglobalID'] = this.pkiEzmaxinvoicingsummaryglobalID;
     } else {
-      _json[r'pkiEzmaxinvoicingsummaryglobalID'] = null;
+      json[r'pkiEzmaxinvoicingsummaryglobalID'] = null;
     }
-    if (fkiEzmaxinvoicingID != null) {
-      _json[r'fkiEzmaxinvoicingID'] = fkiEzmaxinvoicingID;
+    if (this.fkiEzmaxinvoicingID != null) {
+      json[r'fkiEzmaxinvoicingID'] = this.fkiEzmaxinvoicingID;
     } else {
-      _json[r'fkiEzmaxinvoicingID'] = null;
+      json[r'fkiEzmaxinvoicingID'] = null;
     }
-      _json[r'fkiEzmaxproductID'] = fkiEzmaxproductID;
-      _json[r'sEzmaxproductDescriptionX'] = sEzmaxproductDescriptionX;
-      _json[r'dtEzmaxinvoicingsummaryglobalStart'] = dtEzmaxinvoicingsummaryglobalStart;
-      _json[r'dtEzmaxinvoicingsummaryglobalEnd'] = dtEzmaxinvoicingsummaryglobalEnd;
-      _json[r'iEzmaxinvoicingsummaryglobalDays'] = iEzmaxinvoicingsummaryglobalDays;
-      _json[r'dEzmaxinvoicingsummaryglobalCountreal'] = dEzmaxinvoicingsummaryglobalCountreal;
-      _json[r'dEzmaxinvoicingsummaryglobalCountbilled'] = dEzmaxinvoicingsummaryglobalCountbilled;
-      _json[r'dEzmaxinvoicingsummaryglobalSubtotal'] = dEzmaxinvoicingsummaryglobalSubtotal;
-      _json[r'dEzmaxinvoicingsummaryglobalRebateamount'] = dEzmaxinvoicingsummaryglobalRebateamount;
-      _json[r'dEzmaxinvoicingsummaryglobalRebatepercent'] = dEzmaxinvoicingsummaryglobalRebatepercent;
-      _json[r'dEzmaxinvoicingsummaryglobalRebatetotal'] = dEzmaxinvoicingsummaryglobalRebatetotal;
-      _json[r'dEzmaxinvoicingsummaryglobalTotal'] = dEzmaxinvoicingsummaryglobalTotal;
-    if (dEzmaxinvoicingsummaryglobalRepresentative != null) {
-      _json[r'dEzmaxinvoicingsummaryglobalRepresentative'] = dEzmaxinvoicingsummaryglobalRepresentative;
+      json[r'fkiEzmaxproductID'] = this.fkiEzmaxproductID;
+      json[r'sEzmaxproductDescriptionX'] = this.sEzmaxproductDescriptionX;
+      json[r'dtEzmaxinvoicingsummaryglobalStart'] = this.dtEzmaxinvoicingsummaryglobalStart;
+      json[r'dtEzmaxinvoicingsummaryglobalEnd'] = this.dtEzmaxinvoicingsummaryglobalEnd;
+      json[r'iEzmaxinvoicingsummaryglobalDays'] = this.iEzmaxinvoicingsummaryglobalDays;
+      json[r'dEzmaxinvoicingsummaryglobalCountreal'] = this.dEzmaxinvoicingsummaryglobalCountreal;
+      json[r'dEzmaxinvoicingsummaryglobalCountbilled'] = this.dEzmaxinvoicingsummaryglobalCountbilled;
+      json[r'dEzmaxinvoicingsummaryglobalSubtotal'] = this.dEzmaxinvoicingsummaryglobalSubtotal;
+      json[r'dEzmaxinvoicingsummaryglobalRebateamount'] = this.dEzmaxinvoicingsummaryglobalRebateamount;
+      json[r'dEzmaxinvoicingsummaryglobalRebatepercent'] = this.dEzmaxinvoicingsummaryglobalRebatepercent;
+      json[r'dEzmaxinvoicingsummaryglobalRebatetotal'] = this.dEzmaxinvoicingsummaryglobalRebatetotal;
+      json[r'dEzmaxinvoicingsummaryglobalTotal'] = this.dEzmaxinvoicingsummaryglobalTotal;
+    if (this.dEzmaxinvoicingsummaryglobalRepresentative != null) {
+      json[r'dEzmaxinvoicingsummaryglobalRepresentative'] = this.dEzmaxinvoicingsummaryglobalRepresentative;
     } else {
-      _json[r'dEzmaxinvoicingsummaryglobalRepresentative'] = null;
+      json[r'dEzmaxinvoicingsummaryglobalRepresentative'] = null;
     }
-    if (dEzmaxinvoicingsummaryglobalPartner != null) {
-      _json[r'dEzmaxinvoicingsummaryglobalPartner'] = dEzmaxinvoicingsummaryglobalPartner;
+    if (this.dEzmaxinvoicingsummaryglobalPartner != null) {
+      json[r'dEzmaxinvoicingsummaryglobalPartner'] = this.dEzmaxinvoicingsummaryglobalPartner;
     } else {
-      _json[r'dEzmaxinvoicingsummaryglobalPartner'] = null;
+      json[r'dEzmaxinvoicingsummaryglobalPartner'] = null;
     }
-    if (dEzmaxinvoicingsummaryglobalNet != null) {
-      _json[r'dEzmaxinvoicingsummaryglobalNet'] = dEzmaxinvoicingsummaryglobalNet;
+    if (this.dEzmaxinvoicingsummaryglobalNet != null) {
+      json[r'dEzmaxinvoicingsummaryglobalNet'] = this.dEzmaxinvoicingsummaryglobalNet;
     } else {
-      _json[r'dEzmaxinvoicingsummaryglobalNet'] = null;
+      json[r'dEzmaxinvoicingsummaryglobalNet'] = null;
     }
-      _json[r'bEzmaxinvoicingsummaryglobalAdjustment'] = bEzmaxinvoicingsummaryglobalAdjustment;
-      _json[r'a_objEzmaxinvoicingcommission'] = aObjEzmaxinvoicingcommission;
-    return _json;
+      json[r'bEzmaxinvoicingsummaryglobalAdjustment'] = this.bEzmaxinvoicingsummaryglobalAdjustment;
+      json[r'a_objEzmaxinvoicingcommission'] = this.aObjEzmaxinvoicingcommission;
+    return json;
   }
 
   /// Returns a new [EzmaxinvoicingsummaryglobalResponseCompound] instance and imports its values from

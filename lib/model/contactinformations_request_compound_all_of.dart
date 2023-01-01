@@ -46,12 +46,12 @@ class ContactinformationsRequestCompoundAllOf {
   String toString() => 'ContactinformationsRequestCompoundAllOf[aObjAddress=$aObjAddress, aObjPhone=$aObjPhone, aObjEmail=$aObjEmail, aObjWebsite=$aObjWebsite]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_objAddress'] = aObjAddress;
-      _json[r'a_objPhone'] = aObjPhone;
-      _json[r'a_objEmail'] = aObjEmail;
-      _json[r'a_objWebsite'] = aObjWebsite;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_objAddress'] = this.aObjAddress;
+      json[r'a_objPhone'] = this.aObjPhone;
+      json[r'a_objEmail'] = this.aObjEmail;
+      json[r'a_objWebsite'] = this.aObjWebsite;
+    return json;
   }
 
   /// Returns a new [ContactinformationsRequestCompoundAllOf] instance and imports its values from

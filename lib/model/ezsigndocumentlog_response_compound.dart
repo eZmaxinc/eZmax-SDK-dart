@@ -89,24 +89,24 @@ class EzsigndocumentlogResponseCompound {
   String toString() => 'EzsigndocumentlogResponseCompound[fkiUserID=$fkiUserID, fkiEzsignsignerID=$fkiEzsignsignerID, dtEzsigndocumentlogDatetime=$dtEzsigndocumentlogDatetime, eEzsigndocumentlogType=$eEzsigndocumentlogType, sEzsigndocumentlogDetail=$sEzsigndocumentlogDetail, sEzsigndocumentlogLastname=$sEzsigndocumentlogLastname, sEzsigndocumentlogFirstname=$sEzsigndocumentlogFirstname, sEzsigndocumentlogIP=$sEzsigndocumentlogIP]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (fkiUserID != null) {
-      _json[r'fkiUserID'] = fkiUserID;
+    final json = <String, dynamic>{};
+    if (this.fkiUserID != null) {
+      json[r'fkiUserID'] = this.fkiUserID;
     } else {
-      _json[r'fkiUserID'] = null;
+      json[r'fkiUserID'] = null;
     }
-    if (fkiEzsignsignerID != null) {
-      _json[r'fkiEzsignsignerID'] = fkiEzsignsignerID;
+    if (this.fkiEzsignsignerID != null) {
+      json[r'fkiEzsignsignerID'] = this.fkiEzsignsignerID;
     } else {
-      _json[r'fkiEzsignsignerID'] = null;
+      json[r'fkiEzsignsignerID'] = null;
     }
-      _json[r'dtEzsigndocumentlogDatetime'] = dtEzsigndocumentlogDatetime;
-      _json[r'eEzsigndocumentlogType'] = eEzsigndocumentlogType;
-      _json[r'sEzsigndocumentlogDetail'] = sEzsigndocumentlogDetail;
-      _json[r'sEzsigndocumentlogLastname'] = sEzsigndocumentlogLastname;
-      _json[r'sEzsigndocumentlogFirstname'] = sEzsigndocumentlogFirstname;
-      _json[r'sEzsigndocumentlogIP'] = sEzsigndocumentlogIP;
-    return _json;
+      json[r'dtEzsigndocumentlogDatetime'] = this.dtEzsigndocumentlogDatetime;
+      json[r'eEzsigndocumentlogType'] = this.eEzsigndocumentlogType;
+      json[r'sEzsigndocumentlogDetail'] = this.sEzsigndocumentlogDetail;
+      json[r'sEzsigndocumentlogLastname'] = this.sEzsigndocumentlogLastname;
+      json[r'sEzsigndocumentlogFirstname'] = this.sEzsigndocumentlogFirstname;
+      json[r'sEzsigndocumentlogIP'] = this.sEzsigndocumentlogIP;
+    return json;
   }
 
   /// Returns a new [EzsigndocumentlogResponseCompound] instance and imports its values from

@@ -100,31 +100,31 @@ class EzsignbulksenddocumentmappingResponseCompound {
   String toString() => 'EzsignbulksenddocumentmappingResponseCompound[pkiEzsignbulksenddocumentmappingID=$pkiEzsignbulksenddocumentmappingID, fkiEzsignbulksendID=$fkiEzsignbulksendID, fkiEzsigntemplatepackageID=$fkiEzsigntemplatepackageID, fkiEzsigntemplateID=$fkiEzsigntemplateID, iEzsignbulksenddocumentmappingOrder=$iEzsignbulksenddocumentmappingOrder, objEzsigntemplate=$objEzsigntemplate, objEzsigntemplatepackage=$objEzsigntemplatepackage]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiEzsignbulksenddocumentmappingID'] = pkiEzsignbulksenddocumentmappingID;
-      _json[r'fkiEzsignbulksendID'] = fkiEzsignbulksendID;
-    if (fkiEzsigntemplatepackageID != null) {
-      _json[r'fkiEzsigntemplatepackageID'] = fkiEzsigntemplatepackageID;
+    final json = <String, dynamic>{};
+      json[r'pkiEzsignbulksenddocumentmappingID'] = this.pkiEzsignbulksenddocumentmappingID;
+      json[r'fkiEzsignbulksendID'] = this.fkiEzsignbulksendID;
+    if (this.fkiEzsigntemplatepackageID != null) {
+      json[r'fkiEzsigntemplatepackageID'] = this.fkiEzsigntemplatepackageID;
     } else {
-      _json[r'fkiEzsigntemplatepackageID'] = null;
+      json[r'fkiEzsigntemplatepackageID'] = null;
     }
-    if (fkiEzsigntemplateID != null) {
-      _json[r'fkiEzsigntemplateID'] = fkiEzsigntemplateID;
+    if (this.fkiEzsigntemplateID != null) {
+      json[r'fkiEzsigntemplateID'] = this.fkiEzsigntemplateID;
     } else {
-      _json[r'fkiEzsigntemplateID'] = null;
+      json[r'fkiEzsigntemplateID'] = null;
     }
-      _json[r'iEzsignbulksenddocumentmappingOrder'] = iEzsignbulksenddocumentmappingOrder;
-    if (objEzsigntemplate != null) {
-      _json[r'objEzsigntemplate'] = objEzsigntemplate;
+      json[r'iEzsignbulksenddocumentmappingOrder'] = this.iEzsignbulksenddocumentmappingOrder;
+    if (this.objEzsigntemplate != null) {
+      json[r'objEzsigntemplate'] = this.objEzsigntemplate;
     } else {
-      _json[r'objEzsigntemplate'] = null;
+      json[r'objEzsigntemplate'] = null;
     }
-    if (objEzsigntemplatepackage != null) {
-      _json[r'objEzsigntemplatepackage'] = objEzsigntemplatepackage;
+    if (this.objEzsigntemplatepackage != null) {
+      json[r'objEzsigntemplatepackage'] = this.objEzsigntemplatepackage;
     } else {
-      _json[r'objEzsigntemplatepackage'] = null;
+      json[r'objEzsigntemplatepackage'] = null;
     }
-    return _json;
+    return json;
   }
 
   /// Returns a new [EzsignbulksenddocumentmappingResponseCompound] instance and imports its values from

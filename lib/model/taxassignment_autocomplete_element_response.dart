@@ -47,11 +47,11 @@ class TaxassignmentAutocompleteElementResponse {
   String toString() => 'TaxassignmentAutocompleteElementResponse[sTaxassignmentDescriptionX=$sTaxassignmentDescriptionX, pkiTaxassignmentID=$pkiTaxassignmentID, bTaxassignmentIsactive=$bTaxassignmentIsactive]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'sTaxassignmentDescriptionX'] = sTaxassignmentDescriptionX;
-      _json[r'pkiTaxassignmentID'] = pkiTaxassignmentID;
-      _json[r'bTaxassignmentIsactive'] = bTaxassignmentIsactive;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'sTaxassignmentDescriptionX'] = this.sTaxassignmentDescriptionX;
+      json[r'pkiTaxassignmentID'] = this.pkiTaxassignmentID;
+      json[r'bTaxassignmentIsactive'] = this.bTaxassignmentIsactive;
+    return json;
   }
 
   /// Returns a new [TaxassignmentAutocompleteElementResponse] instance and imports its values from

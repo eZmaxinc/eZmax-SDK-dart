@@ -46,6 +46,7 @@ class FieldEEzsigndocumentlogType {
   static const signatureAttachmentRefused = FieldEEzsigndocumentlogType._(r'SignatureAttachmentRefused');
   static const signatureAttachmentDeleted = FieldEEzsigndocumentlogType._(r'SignatureAttachmentDeleted');
   static const declinedToSign = FieldEEzsigndocumentlogType._(r'DeclinedToSign');
+  static const delayedSendEmail = FieldEEzsigndocumentlogType._(r'DelayedSendEmail');
 
   /// List of all possible values in this [enum][FieldEEzsigndocumentlogType].
   static const values = <FieldEEzsigndocumentlogType>[
@@ -72,6 +73,7 @@ class FieldEEzsigndocumentlogType {
     signatureAttachmentRefused,
     signatureAttachmentDeleted,
     declinedToSign,
+    delayedSendEmail,
   ];
 
   static FieldEEzsigndocumentlogType? fromJson(dynamic value) => FieldEEzsigndocumentlogTypeTypeTransformer().decode(value);
@@ -109,7 +111,7 @@ class FieldEEzsigndocumentlogTypeTypeTransformer {
   /// and users are still using an old app with the old code.
   FieldEEzsigndocumentlogType? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
-      switch (data.toString()) {
+      switch (data) {
         case r'Clone': return FieldEEzsigndocumentlogType.clone;
         case r'Login': return FieldEEzsigndocumentlogType.login;
         case r'Sendcode': return FieldEEzsigndocumentlogType.sendcode;
@@ -133,6 +135,7 @@ class FieldEEzsigndocumentlogTypeTypeTransformer {
         case r'SignatureAttachmentRefused': return FieldEEzsigndocumentlogType.signatureAttachmentRefused;
         case r'SignatureAttachmentDeleted': return FieldEEzsigndocumentlogType.signatureAttachmentDeleted;
         case r'DeclinedToSign': return FieldEEzsigndocumentlogType.declinedToSign;
+        case r'DelayedSendEmail': return FieldEEzsigndocumentlogType.delayedSendEmail;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');

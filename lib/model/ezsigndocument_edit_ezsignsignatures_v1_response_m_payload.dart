@@ -31,9 +31,9 @@ class EzsigndocumentEditEzsignsignaturesV1ResponseMPayload {
   String toString() => 'EzsigndocumentEditEzsignsignaturesV1ResponseMPayload[aPkiEzsignsignatureID=$aPkiEzsignsignatureID]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_pkiEzsignsignatureID'] = aPkiEzsignsignatureID;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_pkiEzsignsignatureID'] = this.aPkiEzsignsignatureID;
+    return json;
   }
 
   /// Returns a new [EzsigndocumentEditEzsignsignaturesV1ResponseMPayload] instance and imports its values from

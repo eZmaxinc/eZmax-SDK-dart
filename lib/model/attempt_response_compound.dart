@@ -44,11 +44,11 @@ class AttemptResponseCompound {
   String toString() => 'AttemptResponseCompound[dtAttemptStart=$dtAttemptStart, sAttemptResult=$sAttemptResult, iAttemptDuration=$iAttemptDuration]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'dtAttemptStart'] = dtAttemptStart;
-      _json[r'sAttemptResult'] = sAttemptResult;
-      _json[r'iAttemptDuration'] = iAttemptDuration;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'dtAttemptStart'] = this.dtAttemptStart;
+      json[r'sAttemptResult'] = this.sAttemptResult;
+      json[r'iAttemptDuration'] = this.iAttemptDuration;
+    return json;
   }
 
   /// Returns a new [AttemptResponseCompound] instance and imports its values from

@@ -32,9 +32,9 @@ class EzsigntemplateGetAutocompleteV2ResponseMPayload {
   String toString() => 'EzsigntemplateGetAutocompleteV2ResponseMPayload[aObjEzsigntemplate=$aObjEzsigntemplate]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_objEzsigntemplate'] = aObjEzsigntemplate;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_objEzsigntemplate'] = this.aObjEzsigntemplate;
+    return json;
   }
 
   /// Returns a new [EzsigntemplateGetAutocompleteV2ResponseMPayload] instance and imports its values from

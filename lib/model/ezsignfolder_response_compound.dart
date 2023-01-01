@@ -188,52 +188,52 @@ class EzsignfolderResponseCompound {
   String toString() => 'EzsignfolderResponseCompound[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, fkiBillingentityinternalID=$fkiBillingentityinternalID, sBillingentityinternalDescriptionX=$sBillingentityinternalDescriptionX, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sEzsigntsarequirementDescriptionX=$sEzsigntsarequirementDescriptionX, sEzsignfolderDescription=$sEzsignfolderDescription, tEzsignfolderNote=$tEzsignfolderNote, bEzsignfolderIsdisposable=$bEzsignfolderIsdisposable, eEzsignfolderSendreminderfrequency=$eEzsignfolderSendreminderfrequency, dtEzsignfolderDelayedsenddate=$dtEzsignfolderDelayedsenddate, dtEzsignfolderDuedate=$dtEzsignfolderDuedate, dtEzsignfolderSentdate=$dtEzsignfolderSentdate, dtEzsignfolderScheduledarchive=$dtEzsignfolderScheduledarchive, dtEzsignfolderScheduleddispose=$dtEzsignfolderScheduleddispose, eEzsignfolderStep=$eEzsignfolderStep, dtEzsignfolderClose=$dtEzsignfolderClose, tEzsignfolderMessage=$tEzsignfolderMessage, objAudit=$objAudit]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiEzsignfolderID'] = pkiEzsignfolderID;
-      _json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
-      _json[r'sEzsignfoldertypeNameX'] = sEzsignfoldertypeNameX;
-      _json[r'fkiBillingentityinternalID'] = fkiBillingentityinternalID;
-      _json[r'sBillingentityinternalDescriptionX'] = sBillingentityinternalDescriptionX;
-      _json[r'fkiEzsigntsarequirementID'] = fkiEzsigntsarequirementID;
-      _json[r'sEzsigntsarequirementDescriptionX'] = sEzsigntsarequirementDescriptionX;
-      _json[r'sEzsignfolderDescription'] = sEzsignfolderDescription;
-      _json[r'tEzsignfolderNote'] = tEzsignfolderNote;
-      _json[r'bEzsignfolderIsdisposable'] = bEzsignfolderIsdisposable;
-      _json[r'eEzsignfolderSendreminderfrequency'] = eEzsignfolderSendreminderfrequency;
-    if (dtEzsignfolderDelayedsenddate != null) {
-      _json[r'dtEzsignfolderDelayedsenddate'] = dtEzsignfolderDelayedsenddate;
+    final json = <String, dynamic>{};
+      json[r'pkiEzsignfolderID'] = this.pkiEzsignfolderID;
+      json[r'fkiEzsignfoldertypeID'] = this.fkiEzsignfoldertypeID;
+      json[r'sEzsignfoldertypeNameX'] = this.sEzsignfoldertypeNameX;
+      json[r'fkiBillingentityinternalID'] = this.fkiBillingentityinternalID;
+      json[r'sBillingentityinternalDescriptionX'] = this.sBillingentityinternalDescriptionX;
+      json[r'fkiEzsigntsarequirementID'] = this.fkiEzsigntsarequirementID;
+      json[r'sEzsigntsarequirementDescriptionX'] = this.sEzsigntsarequirementDescriptionX;
+      json[r'sEzsignfolderDescription'] = this.sEzsignfolderDescription;
+      json[r'tEzsignfolderNote'] = this.tEzsignfolderNote;
+      json[r'bEzsignfolderIsdisposable'] = this.bEzsignfolderIsdisposable;
+      json[r'eEzsignfolderSendreminderfrequency'] = this.eEzsignfolderSendreminderfrequency;
+    if (this.dtEzsignfolderDelayedsenddate != null) {
+      json[r'dtEzsignfolderDelayedsenddate'] = this.dtEzsignfolderDelayedsenddate;
     } else {
-      _json[r'dtEzsignfolderDelayedsenddate'] = null;
+      json[r'dtEzsignfolderDelayedsenddate'] = null;
     }
-    if (dtEzsignfolderDuedate != null) {
-      _json[r'dtEzsignfolderDuedate'] = dtEzsignfolderDuedate;
+    if (this.dtEzsignfolderDuedate != null) {
+      json[r'dtEzsignfolderDuedate'] = this.dtEzsignfolderDuedate;
     } else {
-      _json[r'dtEzsignfolderDuedate'] = null;
+      json[r'dtEzsignfolderDuedate'] = null;
     }
-    if (dtEzsignfolderSentdate != null) {
-      _json[r'dtEzsignfolderSentdate'] = dtEzsignfolderSentdate;
+    if (this.dtEzsignfolderSentdate != null) {
+      json[r'dtEzsignfolderSentdate'] = this.dtEzsignfolderSentdate;
     } else {
-      _json[r'dtEzsignfolderSentdate'] = null;
+      json[r'dtEzsignfolderSentdate'] = null;
     }
-    if (dtEzsignfolderScheduledarchive != null) {
-      _json[r'dtEzsignfolderScheduledarchive'] = dtEzsignfolderScheduledarchive;
+    if (this.dtEzsignfolderScheduledarchive != null) {
+      json[r'dtEzsignfolderScheduledarchive'] = this.dtEzsignfolderScheduledarchive;
     } else {
-      _json[r'dtEzsignfolderScheduledarchive'] = null;
+      json[r'dtEzsignfolderScheduledarchive'] = null;
     }
-    if (dtEzsignfolderScheduleddispose != null) {
-      _json[r'dtEzsignfolderScheduleddispose'] = dtEzsignfolderScheduleddispose;
+    if (this.dtEzsignfolderScheduleddispose != null) {
+      json[r'dtEzsignfolderScheduleddispose'] = this.dtEzsignfolderScheduleddispose;
     } else {
-      _json[r'dtEzsignfolderScheduleddispose'] = null;
+      json[r'dtEzsignfolderScheduleddispose'] = null;
     }
-      _json[r'eEzsignfolderStep'] = eEzsignfolderStep;
-    if (dtEzsignfolderClose != null) {
-      _json[r'dtEzsignfolderClose'] = dtEzsignfolderClose;
+      json[r'eEzsignfolderStep'] = this.eEzsignfolderStep;
+    if (this.dtEzsignfolderClose != null) {
+      json[r'dtEzsignfolderClose'] = this.dtEzsignfolderClose;
     } else {
-      _json[r'dtEzsignfolderClose'] = null;
+      json[r'dtEzsignfolderClose'] = null;
     }
-      _json[r'tEzsignfolderMessage'] = tEzsignfolderMessage;
-      _json[r'objAudit'] = objAudit;
-    return _json;
+      json[r'tEzsignfolderMessage'] = this.tEzsignfolderMessage;
+      json[r'objAudit'] = this.objAudit;
+    return json;
   }
 
   /// Returns a new [EzsignfolderResponseCompound] instance and imports its values from

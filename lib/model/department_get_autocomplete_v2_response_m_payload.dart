@@ -32,9 +32,9 @@ class DepartmentGetAutocompleteV2ResponseMPayload {
   String toString() => 'DepartmentGetAutocompleteV2ResponseMPayload[aObjDepartment=$aObjDepartment]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_objDepartment'] = aObjDepartment;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_objDepartment'] = this.aObjDepartment;
+    return json;
   }
 
   /// Returns a new [DepartmentGetAutocompleteV2ResponseMPayload] instance and imports its values from

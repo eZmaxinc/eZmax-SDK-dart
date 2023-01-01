@@ -67,7 +67,7 @@ class FieldEWebhookEzsigneventTypeTransformer {
   /// and users are still using an old app with the old code.
   FieldEWebhookEzsignevent? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
-      switch (data.toString()) {
+      switch (data) {
         case r'DocumentCompleted': return FieldEWebhookEzsignevent.documentCompleted;
         case r'FolderCompleted': return FieldEWebhookEzsignevent.folderCompleted;
         default:

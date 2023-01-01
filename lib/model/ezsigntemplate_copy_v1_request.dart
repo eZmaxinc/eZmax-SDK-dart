@@ -31,9 +31,9 @@ class EzsigntemplateCopyV1Request {
   String toString() => 'EzsigntemplateCopyV1Request[aFkiEzsignfoldertypeID=$aFkiEzsignfoldertypeID]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_fkiEzsignfoldertypeID'] = aFkiEzsignfoldertypeID;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_fkiEzsignfoldertypeID'] = this.aFkiEzsignfoldertypeID;
+    return json;
   }
 
   /// Returns a new [EzsigntemplateCopyV1Request] instance and imports its values from

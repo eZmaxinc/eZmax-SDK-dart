@@ -67,7 +67,7 @@ class FieldEEzsigntemplatesignatureFontTypeTransformer {
   /// and users are still using an old app with the old code.
   FieldEEzsigntemplatesignatureFont? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
-      switch (data.toString()) {
+      switch (data) {
         case r'Normal': return FieldEEzsigntemplatesignatureFont.normal;
         case r'Cursive': return FieldEEzsigntemplatesignatureFont.cursive;
         default:

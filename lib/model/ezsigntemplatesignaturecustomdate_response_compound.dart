@@ -56,12 +56,12 @@ class EzsigntemplatesignaturecustomdateResponseCompound {
   String toString() => 'EzsigntemplatesignaturecustomdateResponseCompound[pkiEzsigntemplatesignaturecustomdateID=$pkiEzsigntemplatesignaturecustomdateID, iEzsigntemplatesignaturecustomdateX=$iEzsigntemplatesignaturecustomdateX, iEzsigntemplatesignaturecustomdateY=$iEzsigntemplatesignaturecustomdateY, sEzsigntemplatesignaturecustomdateFormat=$sEzsigntemplatesignaturecustomdateFormat]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiEzsigntemplatesignaturecustomdateID'] = pkiEzsigntemplatesignaturecustomdateID;
-      _json[r'iEzsigntemplatesignaturecustomdateX'] = iEzsigntemplatesignaturecustomdateX;
-      _json[r'iEzsigntemplatesignaturecustomdateY'] = iEzsigntemplatesignaturecustomdateY;
-      _json[r'sEzsigntemplatesignaturecustomdateFormat'] = sEzsigntemplatesignaturecustomdateFormat;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'pkiEzsigntemplatesignaturecustomdateID'] = this.pkiEzsigntemplatesignaturecustomdateID;
+      json[r'iEzsigntemplatesignaturecustomdateX'] = this.iEzsigntemplatesignaturecustomdateX;
+      json[r'iEzsigntemplatesignaturecustomdateY'] = this.iEzsigntemplatesignaturecustomdateY;
+      json[r'sEzsigntemplatesignaturecustomdateFormat'] = this.sEzsigntemplatesignaturecustomdateFormat;
+    return json;
   }
 
   /// Returns a new [EzsigntemplatesignaturecustomdateResponseCompound] instance and imports its values from

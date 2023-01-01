@@ -89,25 +89,25 @@ class WebhookListElement {
   String toString() => 'WebhookListElement[pkiWebhookID=$pkiWebhookID, sWebhookDescription=$sWebhookDescription, sWebhookUrl=$sWebhookUrl, sWebhookEvent=$sWebhookEvent, sWebhookEmailfailed=$sWebhookEmailfailed, eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, bWebhookIsactive=$bWebhookIsactive]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiWebhookID'] = pkiWebhookID;
-      _json[r'sWebhookDescription'] = sWebhookDescription;
-      _json[r'sWebhookUrl'] = sWebhookUrl;
-      _json[r'sWebhookEvent'] = sWebhookEvent;
-      _json[r'sWebhookEmailfailed'] = sWebhookEmailfailed;
-      _json[r'eWebhookModule'] = eWebhookModule;
-    if (eWebhookEzsignevent != null) {
-      _json[r'eWebhookEzsignevent'] = eWebhookEzsignevent;
+    final json = <String, dynamic>{};
+      json[r'pkiWebhookID'] = this.pkiWebhookID;
+      json[r'sWebhookDescription'] = this.sWebhookDescription;
+      json[r'sWebhookUrl'] = this.sWebhookUrl;
+      json[r'sWebhookEvent'] = this.sWebhookEvent;
+      json[r'sWebhookEmailfailed'] = this.sWebhookEmailfailed;
+      json[r'eWebhookModule'] = this.eWebhookModule;
+    if (this.eWebhookEzsignevent != null) {
+      json[r'eWebhookEzsignevent'] = this.eWebhookEzsignevent;
     } else {
-      _json[r'eWebhookEzsignevent'] = null;
+      json[r'eWebhookEzsignevent'] = null;
     }
-    if (eWebhookManagementevent != null) {
-      _json[r'eWebhookManagementevent'] = eWebhookManagementevent;
+    if (this.eWebhookManagementevent != null) {
+      json[r'eWebhookManagementevent'] = this.eWebhookManagementevent;
     } else {
-      _json[r'eWebhookManagementevent'] = null;
+      json[r'eWebhookManagementevent'] = null;
     }
-      _json[r'bWebhookIsactive'] = bWebhookIsactive;
-    return _json;
+      json[r'bWebhookIsactive'] = this.bWebhookIsactive;
+    return json;
   }
 
   /// Returns a new [WebhookListElement] instance and imports its values from

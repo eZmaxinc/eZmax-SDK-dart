@@ -48,18 +48,18 @@ class EzsignfolderCreateObjectV1Request {
   String toString() => 'EzsignfolderCreateObjectV1Request[objEzsignfolder=$objEzsignfolder, objEzsignfolderCompound=$objEzsignfolderCompound]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (objEzsignfolder != null) {
-      _json[r'objEzsignfolder'] = objEzsignfolder;
+    final json = <String, dynamic>{};
+    if (this.objEzsignfolder != null) {
+      json[r'objEzsignfolder'] = this.objEzsignfolder;
     } else {
-      _json[r'objEzsignfolder'] = null;
+      json[r'objEzsignfolder'] = null;
     }
-    if (objEzsignfolderCompound != null) {
-      _json[r'objEzsignfolderCompound'] = objEzsignfolderCompound;
+    if (this.objEzsignfolderCompound != null) {
+      json[r'objEzsignfolderCompound'] = this.objEzsignfolderCompound;
     } else {
-      _json[r'objEzsignfolderCompound'] = null;
+      json[r'objEzsignfolderCompound'] = null;
     }
-    return _json;
+    return json;
   }
 
   /// Returns a new [EzsignfolderCreateObjectV1Request] instance and imports its values from

@@ -75,18 +75,18 @@ class EzsigntemplatepackageRequestCompound {
   String toString() => 'EzsigntemplatepackageRequestCompound[pkiEzsigntemplatepackageID=$pkiEzsigntemplatepackageID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiLanguageID=$fkiLanguageID, sEzsigntemplatepackageDescription=$sEzsigntemplatepackageDescription, bEzsigntemplatepackageAdminonly=$bEzsigntemplatepackageAdminonly, bEzsigntemplatepackageIsactive=$bEzsigntemplatepackageIsactive]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (pkiEzsigntemplatepackageID != null) {
-      _json[r'pkiEzsigntemplatepackageID'] = pkiEzsigntemplatepackageID;
+    final json = <String, dynamic>{};
+    if (this.pkiEzsigntemplatepackageID != null) {
+      json[r'pkiEzsigntemplatepackageID'] = this.pkiEzsigntemplatepackageID;
     } else {
-      _json[r'pkiEzsigntemplatepackageID'] = null;
+      json[r'pkiEzsigntemplatepackageID'] = null;
     }
-      _json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
-      _json[r'fkiLanguageID'] = fkiLanguageID;
-      _json[r'sEzsigntemplatepackageDescription'] = sEzsigntemplatepackageDescription;
-      _json[r'bEzsigntemplatepackageAdminonly'] = bEzsigntemplatepackageAdminonly;
-      _json[r'bEzsigntemplatepackageIsactive'] = bEzsigntemplatepackageIsactive;
-    return _json;
+      json[r'fkiEzsignfoldertypeID'] = this.fkiEzsignfoldertypeID;
+      json[r'fkiLanguageID'] = this.fkiLanguageID;
+      json[r'sEzsigntemplatepackageDescription'] = this.sEzsigntemplatepackageDescription;
+      json[r'bEzsigntemplatepackageAdminonly'] = this.bEzsigntemplatepackageAdminonly;
+      json[r'bEzsigntemplatepackageIsactive'] = this.bEzsigntemplatepackageIsactive;
+    return json;
   }
 
   /// Returns a new [EzsigntemplatepackageRequestCompound] instance and imports its values from

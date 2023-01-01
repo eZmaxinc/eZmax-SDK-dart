@@ -53,12 +53,12 @@ class EzsigntsarequirementAutocompleteElementResponse {
   String toString() => 'EzsigntsarequirementAutocompleteElementResponse[sEzsigntsarequirementDescriptionX=$sEzsigntsarequirementDescriptionX, pkiEzsigntsarequirementID=$pkiEzsigntsarequirementID, bEzsigntsarequirementIsactive=$bEzsigntsarequirementIsactive, bDisabled=$bDisabled]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'sEzsigntsarequirementDescriptionX'] = sEzsigntsarequirementDescriptionX;
-      _json[r'pkiEzsigntsarequirementID'] = pkiEzsigntsarequirementID;
-      _json[r'bEzsigntsarequirementIsactive'] = bEzsigntsarequirementIsactive;
-      _json[r'bDisabled'] = bDisabled;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'sEzsigntsarequirementDescriptionX'] = this.sEzsigntsarequirementDescriptionX;
+      json[r'pkiEzsigntsarequirementID'] = this.pkiEzsigntsarequirementID;
+      json[r'bEzsigntsarequirementIsactive'] = this.bEzsigntsarequirementIsactive;
+      json[r'bDisabled'] = this.bDisabled;
+    return json;
   }
 
   /// Returns a new [EzsigntsarequirementAutocompleteElementResponse] instance and imports its values from

@@ -31,9 +31,9 @@ class EzsignfolderReorderV1Request {
   String toString() => 'EzsignfolderReorderV1Request[aPkiEzsigndocumentID=$aPkiEzsigndocumentID]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_pkiEzsigndocumentID'] = aPkiEzsigndocumentID;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_pkiEzsigndocumentID'] = this.aPkiEzsigndocumentID;
+    return json;
   }
 
   /// Returns a new [EzsignfolderReorderV1Request] instance and imports its values from

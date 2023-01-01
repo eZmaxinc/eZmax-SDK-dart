@@ -38,13 +38,13 @@ class WebhookResponseCompoundAllOf {
   String toString() => 'WebhookResponseCompoundAllOf[sWebhookEvent=$sWebhookEvent]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (sWebhookEvent != null) {
-      _json[r'sWebhookEvent'] = sWebhookEvent;
+    final json = <String, dynamic>{};
+    if (this.sWebhookEvent != null) {
+      json[r'sWebhookEvent'] = this.sWebhookEvent;
     } else {
-      _json[r'sWebhookEvent'] = null;
+      json[r'sWebhookEvent'] = null;
     }
-    return _json;
+    return json;
   }
 
   /// Returns a new [WebhookResponseCompoundAllOf] instance and imports its values from

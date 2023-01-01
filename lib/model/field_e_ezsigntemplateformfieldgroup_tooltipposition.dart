@@ -79,7 +79,7 @@ class FieldEEzsigntemplateformfieldgroupTooltippositionTypeTransformer {
   /// and users are still using an old app with the old code.
   FieldEEzsigntemplateformfieldgroupTooltipposition? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
-      switch (data.toString()) {
+      switch (data) {
         case r'TopLeft': return FieldEEzsigntemplateformfieldgroupTooltipposition.topLeft;
         case r'TopCenter': return FieldEEzsigntemplateformfieldgroupTooltipposition.topCenter;
         case r'TopRight': return FieldEEzsigntemplateformfieldgroupTooltipposition.topRight;

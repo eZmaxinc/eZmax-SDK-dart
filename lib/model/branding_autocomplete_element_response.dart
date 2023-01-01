@@ -46,11 +46,11 @@ class BrandingAutocompleteElementResponse {
   String toString() => 'BrandingAutocompleteElementResponse[sBrandingDescriptionX=$sBrandingDescriptionX, pkiBrandingID=$pkiBrandingID, bBrandingIsactive=$bBrandingIsactive]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'sBrandingDescriptionX'] = sBrandingDescriptionX;
-      _json[r'pkiBrandingID'] = pkiBrandingID;
-      _json[r'bBrandingIsactive'] = bBrandingIsactive;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'sBrandingDescriptionX'] = this.sBrandingDescriptionX;
+      json[r'pkiBrandingID'] = this.pkiBrandingID;
+      json[r'bBrandingIsactive'] = this.bBrandingIsactive;
+    return json;
   }
 
   /// Returns a new [BrandingAutocompleteElementResponse] instance and imports its values from

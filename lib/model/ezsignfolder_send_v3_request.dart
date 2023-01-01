@@ -49,15 +49,15 @@ class EzsignfolderSendV3Request {
   String toString() => 'EzsignfolderSendV3Request[tEzsignfolderMessage=$tEzsignfolderMessage, dtEzsignfolderDelayedsenddate=$dtEzsignfolderDelayedsenddate, aFkiEzsignfoldersignerassociationID=$aFkiEzsignfoldersignerassociationID]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'tEzsignfolderMessage'] = tEzsignfolderMessage;
-    if (dtEzsignfolderDelayedsenddate != null) {
-      _json[r'dtEzsignfolderDelayedsenddate'] = dtEzsignfolderDelayedsenddate;
+    final json = <String, dynamic>{};
+      json[r'tEzsignfolderMessage'] = this.tEzsignfolderMessage;
+    if (this.dtEzsignfolderDelayedsenddate != null) {
+      json[r'dtEzsignfolderDelayedsenddate'] = this.dtEzsignfolderDelayedsenddate;
     } else {
-      _json[r'dtEzsignfolderDelayedsenddate'] = null;
+      json[r'dtEzsignfolderDelayedsenddate'] = null;
     }
-      _json[r'a_fkiEzsignfoldersignerassociationID'] = aFkiEzsignfoldersignerassociationID;
-    return _json;
+      json[r'a_fkiEzsignfoldersignerassociationID'] = this.aFkiEzsignfoldersignerassociationID;
+    return json;
   }
 
   /// Returns a new [EzsignfolderSendV3Request] instance and imports its values from

@@ -50,18 +50,18 @@ class MultilingualApikeyDescription {
   String toString() => 'MultilingualApikeyDescription[sApikeyDescription1=$sApikeyDescription1, sApikeyDescription2=$sApikeyDescription2]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (sApikeyDescription1 != null) {
-      _json[r'sApikeyDescription1'] = sApikeyDescription1;
+    final json = <String, dynamic>{};
+    if (this.sApikeyDescription1 != null) {
+      json[r'sApikeyDescription1'] = this.sApikeyDescription1;
     } else {
-      _json[r'sApikeyDescription1'] = null;
+      json[r'sApikeyDescription1'] = null;
     }
-    if (sApikeyDescription2 != null) {
-      _json[r'sApikeyDescription2'] = sApikeyDescription2;
+    if (this.sApikeyDescription2 != null) {
+      json[r'sApikeyDescription2'] = this.sApikeyDescription2;
     } else {
-      _json[r'sApikeyDescription2'] = null;
+      json[r'sApikeyDescription2'] = null;
     }
-    return _json;
+    return json;
   }
 
   /// Returns a new [MultilingualApikeyDescription] instance and imports its values from

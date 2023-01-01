@@ -31,9 +31,9 @@ class EzsignbulksendtransmissionResponseCompoundAllOf {
   String toString() => 'EzsignbulksendtransmissionResponseCompoundAllOf[aObjEzsignfoldertransmission=$aObjEzsignfoldertransmission]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_objEzsignfoldertransmission'] = aObjEzsignfoldertransmission;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_objEzsignfoldertransmission'] = this.aObjEzsignfoldertransmission;
+    return json;
   }
 
   /// Returns a new [EzsignbulksendtransmissionResponseCompoundAllOf] instance and imports its values from

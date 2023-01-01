@@ -55,13 +55,13 @@ class EzsigndocumentResponseCompoundAllOf {
   String toString() => 'EzsigndocumentResponseCompoundAllOf[iEzsigndocumentStepformtotal=$iEzsigndocumentStepformtotal, iEzsigndocumentStepformcurrent=$iEzsigndocumentStepformcurrent, iEzsigndocumentStepsignaturetotal=$iEzsigndocumentStepsignaturetotal, iEzsigndocumentStepsignatureCurrent=$iEzsigndocumentStepsignatureCurrent, aObjEzsignfoldersignerassociationstatus=$aObjEzsignfoldersignerassociationstatus]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'iEzsigndocumentStepformtotal'] = iEzsigndocumentStepformtotal;
-      _json[r'iEzsigndocumentStepformcurrent'] = iEzsigndocumentStepformcurrent;
-      _json[r'iEzsigndocumentStepsignaturetotal'] = iEzsigndocumentStepsignaturetotal;
-      _json[r'iEzsigndocumentStepsignatureCurrent'] = iEzsigndocumentStepsignatureCurrent;
-      _json[r'a_objEzsignfoldersignerassociationstatus'] = aObjEzsignfoldersignerassociationstatus;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'iEzsigndocumentStepformtotal'] = this.iEzsigndocumentStepformtotal;
+      json[r'iEzsigndocumentStepformcurrent'] = this.iEzsigndocumentStepformcurrent;
+      json[r'iEzsigndocumentStepsignaturetotal'] = this.iEzsigndocumentStepsignaturetotal;
+      json[r'iEzsigndocumentStepsignatureCurrent'] = this.iEzsigndocumentStepsignatureCurrent;
+      json[r'a_objEzsignfoldersignerassociationstatus'] = this.aObjEzsignfoldersignerassociationstatus;
+    return json;
   }
 
   /// Returns a new [EzsigndocumentResponseCompoundAllOf] instance and imports its values from

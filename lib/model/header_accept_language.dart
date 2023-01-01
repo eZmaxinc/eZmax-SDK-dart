@@ -69,7 +69,7 @@ class HeaderAcceptLanguageTypeTransformer {
   /// and users are still using an old app with the old code.
   HeaderAcceptLanguage? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
-      switch (data.toString()) {
+      switch (data) {
         case r'*': return HeaderAcceptLanguage.star;
         case r'en': return HeaderAcceptLanguage.en;
         case r'fr': return HeaderAcceptLanguage.fr;

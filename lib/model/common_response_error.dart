@@ -38,10 +38,10 @@ class CommonResponseError {
   String toString() => 'CommonResponseError[sErrorMessage=$sErrorMessage, eErrorCode=$eErrorCode]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'sErrorMessage'] = sErrorMessage;
-      _json[r'eErrorCode'] = eErrorCode;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'sErrorMessage'] = this.sErrorMessage;
+      json[r'eErrorCode'] = this.eErrorCode;
+    return json;
   }
 
   /// Returns a new [CommonResponseError] instance and imports its values from

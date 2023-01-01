@@ -32,9 +32,9 @@ class EzsignfoldertypeCreateObjectV1ResponseMPayload {
   String toString() => 'EzsignfoldertypeCreateObjectV1ResponseMPayload[aPkiEzsignfoldertypeID=$aPkiEzsignfoldertypeID]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_pkiEzsignfoldertypeID'] = aPkiEzsignfoldertypeID;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_pkiEzsignfoldertypeID'] = this.aPkiEzsignfoldertypeID;
+    return json;
   }
 
   /// Returns a new [EzsignfoldertypeCreateObjectV1ResponseMPayload] instance and imports its values from

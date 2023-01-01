@@ -80,22 +80,22 @@ class EzsignfolderRequest {
   String toString() => 'EzsignfolderRequest[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sEzsignfolderDescription=$sEzsignfolderDescription, tEzsignfolderNote=$tEzsignfolderNote, eEzsignfolderSendreminderfrequency=$eEzsignfolderSendreminderfrequency]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (pkiEzsignfolderID != null) {
-      _json[r'pkiEzsignfolderID'] = pkiEzsignfolderID;
+    final json = <String, dynamic>{};
+    if (this.pkiEzsignfolderID != null) {
+      json[r'pkiEzsignfolderID'] = this.pkiEzsignfolderID;
     } else {
-      _json[r'pkiEzsignfolderID'] = null;
+      json[r'pkiEzsignfolderID'] = null;
     }
-      _json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
-    if (fkiEzsigntsarequirementID != null) {
-      _json[r'fkiEzsigntsarequirementID'] = fkiEzsigntsarequirementID;
+      json[r'fkiEzsignfoldertypeID'] = this.fkiEzsignfoldertypeID;
+    if (this.fkiEzsigntsarequirementID != null) {
+      json[r'fkiEzsigntsarequirementID'] = this.fkiEzsigntsarequirementID;
     } else {
-      _json[r'fkiEzsigntsarequirementID'] = null;
+      json[r'fkiEzsigntsarequirementID'] = null;
     }
-      _json[r'sEzsignfolderDescription'] = sEzsignfolderDescription;
-      _json[r'tEzsignfolderNote'] = tEzsignfolderNote;
-      _json[r'eEzsignfolderSendreminderfrequency'] = eEzsignfolderSendreminderfrequency;
-    return _json;
+      json[r'sEzsignfolderDescription'] = this.sEzsignfolderDescription;
+      json[r'tEzsignfolderNote'] = this.tEzsignfolderNote;
+      json[r'eEzsignfolderSendreminderfrequency'] = this.eEzsignfolderSendreminderfrequency;
+    return json;
   }
 
   /// Returns a new [EzsignfolderRequest] instance and imports its values from

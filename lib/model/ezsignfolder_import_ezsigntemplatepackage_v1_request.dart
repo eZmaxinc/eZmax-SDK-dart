@@ -45,11 +45,11 @@ class EzsignfolderImportEzsigntemplatepackageV1Request {
   String toString() => 'EzsignfolderImportEzsigntemplatepackageV1Request[fkiEzsigntemplatepackageID=$fkiEzsigntemplatepackageID, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, aObjImportEzsigntemplatepackageRelation=$aObjImportEzsigntemplatepackageRelation]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'fkiEzsigntemplatepackageID'] = fkiEzsigntemplatepackageID;
-      _json[r'dtEzsigndocumentDuedate'] = dtEzsigndocumentDuedate;
-      _json[r'a_objImportEzsigntemplatepackageRelation'] = aObjImportEzsigntemplatepackageRelation;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'fkiEzsigntemplatepackageID'] = this.fkiEzsigntemplatepackageID;
+      json[r'dtEzsigndocumentDuedate'] = this.dtEzsigndocumentDuedate;
+      json[r'a_objImportEzsigntemplatepackageRelation'] = this.aObjImportEzsigntemplatepackageRelation;
+    return json;
   }
 
   /// Returns a new [EzsignfolderImportEzsigntemplatepackageV1Request] instance and imports its values from

@@ -31,9 +31,9 @@ class EzsignbulksendtransmissionGetFormsDataV1ResponseMPayload {
   String toString() => 'EzsignbulksendtransmissionGetFormsDataV1ResponseMPayload[aObjFormsDataFolder=$aObjFormsDataFolder]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_objFormsDataFolder'] = aObjFormsDataFolder;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_objFormsDataFolder'] = this.aObjFormsDataFolder;
+    return json;
   }
 
   /// Returns a new [EzsignbulksendtransmissionGetFormsDataV1ResponseMPayload] instance and imports its values from

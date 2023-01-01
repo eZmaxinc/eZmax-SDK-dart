@@ -32,9 +32,9 @@ class PeriodGetAutocompleteV2ResponseMPayload {
   String toString() => 'PeriodGetAutocompleteV2ResponseMPayload[aObjPeriod=$aObjPeriod]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_objPeriod'] = aObjPeriod;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_objPeriod'] = this.aObjPeriod;
+    return json;
   }
 
   /// Returns a new [PeriodGetAutocompleteV2ResponseMPayload] instance and imports its values from

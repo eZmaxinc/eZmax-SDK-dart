@@ -31,9 +31,9 @@ class EzsignfoldertypeGetObjectV2ResponseMPayload {
   String toString() => 'EzsignfoldertypeGetObjectV2ResponseMPayload[objEzsignfoldertype=$objEzsignfoldertype]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'objEzsignfoldertype'] = objEzsignfoldertype;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'objEzsignfoldertype'] = this.objEzsignfoldertype;
+    return json;
   }
 
   /// Returns a new [EzsignfoldertypeGetObjectV2ResponseMPayload] instance and imports its values from

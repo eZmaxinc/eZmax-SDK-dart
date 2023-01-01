@@ -97,19 +97,19 @@ class EzsignbulksendResponse {
   String toString() => 'EzsignbulksendResponse[pkiEzsignbulksendID=$pkiEzsignbulksendID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiLanguageID=$fkiLanguageID, sLanguageNameX=$sLanguageNameX, eEzsignfoldertypePrivacylevel=$eEzsignfoldertypePrivacylevel, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, sEzsignbulksendDescription=$sEzsignbulksendDescription, tEzsignbulksendNote=$tEzsignbulksendNote, bEzsignbulksendNeedvalidation=$bEzsignbulksendNeedvalidation, bEzsignbulksendIsactive=$bEzsignbulksendIsactive, objAudit=$objAudit]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiEzsignbulksendID'] = pkiEzsignbulksendID;
-      _json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
-      _json[r'fkiLanguageID'] = fkiLanguageID;
-      _json[r'sLanguageNameX'] = sLanguageNameX;
-      _json[r'eEzsignfoldertypePrivacylevel'] = eEzsignfoldertypePrivacylevel;
-      _json[r'sEzsignfoldertypeNameX'] = sEzsignfoldertypeNameX;
-      _json[r'sEzsignbulksendDescription'] = sEzsignbulksendDescription;
-      _json[r'tEzsignbulksendNote'] = tEzsignbulksendNote;
-      _json[r'bEzsignbulksendNeedvalidation'] = bEzsignbulksendNeedvalidation;
-      _json[r'bEzsignbulksendIsactive'] = bEzsignbulksendIsactive;
-      _json[r'objAudit'] = objAudit;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'pkiEzsignbulksendID'] = this.pkiEzsignbulksendID;
+      json[r'fkiEzsignfoldertypeID'] = this.fkiEzsignfoldertypeID;
+      json[r'fkiLanguageID'] = this.fkiLanguageID;
+      json[r'sLanguageNameX'] = this.sLanguageNameX;
+      json[r'eEzsignfoldertypePrivacylevel'] = this.eEzsignfoldertypePrivacylevel;
+      json[r'sEzsignfoldertypeNameX'] = this.sEzsignfoldertypeNameX;
+      json[r'sEzsignbulksendDescription'] = this.sEzsignbulksendDescription;
+      json[r'tEzsignbulksendNote'] = this.tEzsignbulksendNote;
+      json[r'bEzsignbulksendNeedvalidation'] = this.bEzsignbulksendNeedvalidation;
+      json[r'bEzsignbulksendIsactive'] = this.bEzsignbulksendIsactive;
+      json[r'objAudit'] = this.objAudit;
+    return json;
   }
 
   /// Returns a new [EzsignbulksendResponse] instance and imports its values from

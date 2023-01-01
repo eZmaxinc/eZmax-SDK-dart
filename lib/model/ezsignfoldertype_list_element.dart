@@ -51,12 +51,12 @@ class EzsignfoldertypeListElement {
   String toString() => 'EzsignfoldertypeListElement[pkiEzsignfoldertypeID=$pkiEzsignfoldertypeID, eEzsignfoldertypePrivacylevel=$eEzsignfoldertypePrivacylevel, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, bEzsignfoldertypeIsactive=$bEzsignfoldertypeIsactive]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiEzsignfoldertypeID'] = pkiEzsignfoldertypeID;
-      _json[r'eEzsignfoldertypePrivacylevel'] = eEzsignfoldertypePrivacylevel;
-      _json[r'sEzsignfoldertypeNameX'] = sEzsignfoldertypeNameX;
-      _json[r'bEzsignfoldertypeIsactive'] = bEzsignfoldertypeIsactive;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'pkiEzsignfoldertypeID'] = this.pkiEzsignfoldertypeID;
+      json[r'eEzsignfoldertypePrivacylevel'] = this.eEzsignfoldertypePrivacylevel;
+      json[r'sEzsignfoldertypeNameX'] = this.sEzsignfoldertypeNameX;
+      json[r'bEzsignfoldertypeIsactive'] = this.bEzsignfoldertypeIsactive;
+    return json;
   }
 
   /// Returns a new [EzsignfoldertypeListElement] instance and imports its values from

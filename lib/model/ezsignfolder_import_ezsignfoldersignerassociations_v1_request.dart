@@ -31,9 +31,9 @@ class EzsignfolderImportEzsignfoldersignerassociationsV1Request {
   String toString() => 'EzsignfolderImportEzsignfoldersignerassociationsV1Request[aFkiEzsignfoldersignerassociationID=$aFkiEzsignfoldersignerassociationID]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_fkiEzsignfoldersignerassociationID'] = aFkiEzsignfoldersignerassociationID;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_fkiEzsignfoldersignerassociationID'] = this.aFkiEzsignfoldersignerassociationID;
+    return json;
   }
 
   /// Returns a new [EzsignfolderImportEzsignfoldersignerassociationsV1Request] instance and imports its values from

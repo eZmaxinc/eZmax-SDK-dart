@@ -72,17 +72,17 @@ class EzsigntemplatepackagesignermembershipGetObjectV1ResponseMPayload {
   String toString() => 'EzsigntemplatepackagesignermembershipGetObjectV1ResponseMPayload[pkiEzsigntemplatepackagesignermembershipID=$pkiEzsigntemplatepackagesignermembershipID, fkiEzsigntemplatepackagemembershipID=$fkiEzsigntemplatepackagemembershipID, fkiEzsigntemplatepackagesignerID=$fkiEzsigntemplatepackagesignerID, fkiEzsigntemplatesignerID=$fkiEzsigntemplatesignerID, iEzsigntemplatepackagesignermembershipCopy=$iEzsigntemplatepackagesignermembershipCopy]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiEzsigntemplatepackagesignermembershipID'] = pkiEzsigntemplatepackagesignermembershipID;
-      _json[r'fkiEzsigntemplatepackagemembershipID'] = fkiEzsigntemplatepackagemembershipID;
-      _json[r'fkiEzsigntemplatepackagesignerID'] = fkiEzsigntemplatepackagesignerID;
-      _json[r'fkiEzsigntemplatesignerID'] = fkiEzsigntemplatesignerID;
-    if (iEzsigntemplatepackagesignermembershipCopy != null) {
-      _json[r'iEzsigntemplatepackagesignermembershipCopy'] = iEzsigntemplatepackagesignermembershipCopy;
+    final json = <String, dynamic>{};
+      json[r'pkiEzsigntemplatepackagesignermembershipID'] = this.pkiEzsigntemplatepackagesignermembershipID;
+      json[r'fkiEzsigntemplatepackagemembershipID'] = this.fkiEzsigntemplatepackagemembershipID;
+      json[r'fkiEzsigntemplatepackagesignerID'] = this.fkiEzsigntemplatepackagesignerID;
+      json[r'fkiEzsigntemplatesignerID'] = this.fkiEzsigntemplatesignerID;
+    if (this.iEzsigntemplatepackagesignermembershipCopy != null) {
+      json[r'iEzsigntemplatepackagesignermembershipCopy'] = this.iEzsigntemplatepackagesignermembershipCopy;
     } else {
-      _json[r'iEzsigntemplatepackagesignermembershipCopy'] = null;
+      json[r'iEzsigntemplatepackagesignermembershipCopy'] = null;
     }
-    return _json;
+    return json;
   }
 
   /// Returns a new [EzsigntemplatepackagesignermembershipGetObjectV1ResponseMPayload] instance and imports its values from

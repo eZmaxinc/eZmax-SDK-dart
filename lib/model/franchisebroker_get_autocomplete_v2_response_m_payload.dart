@@ -32,9 +32,9 @@ class FranchisebrokerGetAutocompleteV2ResponseMPayload {
   String toString() => 'FranchisebrokerGetAutocompleteV2ResponseMPayload[aObjFranchisebroker=$aObjFranchisebroker]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_objFranchisebroker'] = aObjFranchisebroker;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_objFranchisebroker'] = this.aObjFranchisebroker;
+    return json;
   }
 
   /// Returns a new [FranchisebrokerGetAutocompleteV2ResponseMPayload] instance and imports its values from

@@ -31,9 +31,9 @@ class EzsignbulksendCreateObjectV1Request {
   String toString() => 'EzsignbulksendCreateObjectV1Request[aObjEzsignbulksend=$aObjEzsignbulksend]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_objEzsignbulksend'] = aObjEzsignbulksend;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_objEzsignbulksend'] = this.aObjEzsignbulksend;
+    return json;
   }
 
   /// Returns a new [EzsignbulksendCreateObjectV1Request] instance and imports its values from

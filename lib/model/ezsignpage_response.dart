@@ -80,15 +80,15 @@ class EzsignpageResponse {
   String toString() => 'EzsignpageResponse[pkiEzsignpageID=$pkiEzsignpageID, iEzsignpageWidthimage=$iEzsignpageWidthimage, iEzsignpageHeightimage=$iEzsignpageHeightimage, iEzsignpageWidthpdf=$iEzsignpageWidthpdf, iEzsignpageHeightpdf=$iEzsignpageHeightpdf, iEzsignpagePagenumber=$iEzsignpagePagenumber, sComputedImageurl=$sComputedImageurl]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiEzsignpageID'] = pkiEzsignpageID;
-      _json[r'iEzsignpageWidthimage'] = iEzsignpageWidthimage;
-      _json[r'iEzsignpageHeightimage'] = iEzsignpageHeightimage;
-      _json[r'iEzsignpageWidthpdf'] = iEzsignpageWidthpdf;
-      _json[r'iEzsignpageHeightpdf'] = iEzsignpageHeightpdf;
-      _json[r'iEzsignpagePagenumber'] = iEzsignpagePagenumber;
-      _json[r'sComputedImageurl'] = sComputedImageurl;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'pkiEzsignpageID'] = this.pkiEzsignpageID;
+      json[r'iEzsignpageWidthimage'] = this.iEzsignpageWidthimage;
+      json[r'iEzsignpageHeightimage'] = this.iEzsignpageHeightimage;
+      json[r'iEzsignpageWidthpdf'] = this.iEzsignpageWidthpdf;
+      json[r'iEzsignpageHeightpdf'] = this.iEzsignpageHeightpdf;
+      json[r'iEzsignpagePagenumber'] = this.iEzsignpagePagenumber;
+      json[r'sComputedImageurl'] = this.sComputedImageurl;
+    return json;
   }
 
   /// Returns a new [EzsignpageResponse] instance and imports its values from

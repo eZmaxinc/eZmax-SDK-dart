@@ -50,15 +50,15 @@ class CommonResponseErrorSTemporaryFileUrl {
   String toString() => 'CommonResponseErrorSTemporaryFileUrl[sTemporaryFileUrl=$sTemporaryFileUrl, sErrorMessage=$sErrorMessage, eErrorCode=$eErrorCode]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (sTemporaryFileUrl != null) {
-      _json[r'sTemporaryFileUrl'] = sTemporaryFileUrl;
+    final json = <String, dynamic>{};
+    if (this.sTemporaryFileUrl != null) {
+      json[r'sTemporaryFileUrl'] = this.sTemporaryFileUrl;
     } else {
-      _json[r'sTemporaryFileUrl'] = null;
+      json[r'sTemporaryFileUrl'] = null;
     }
-      _json[r'sErrorMessage'] = sErrorMessage;
-      _json[r'eErrorCode'] = eErrorCode;
-    return _json;
+      json[r'sErrorMessage'] = this.sErrorMessage;
+      json[r'eErrorCode'] = this.eErrorCode;
+    return json;
   }
 
   /// Returns a new [CommonResponseErrorSTemporaryFileUrl] instance and imports its values from

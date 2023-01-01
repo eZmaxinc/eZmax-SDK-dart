@@ -46,11 +46,11 @@ class PeriodAutocompleteElementResponse {
   String toString() => 'PeriodAutocompleteElementResponse[sPeriodYYYYMM=$sPeriodYYYYMM, pkiPeriodID=$pkiPeriodID, bPeriodIsactive=$bPeriodIsactive]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'sPeriodYYYYMM'] = sPeriodYYYYMM;
-      _json[r'pkiPeriodID'] = pkiPeriodID;
-      _json[r'bPeriodIsactive'] = bPeriodIsactive;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'sPeriodYYYYMM'] = this.sPeriodYYYYMM;
+      json[r'pkiPeriodID'] = this.pkiPeriodID;
+      json[r'bPeriodIsactive'] = this.bPeriodIsactive;
+    return json;
   }
 
   /// Returns a new [PeriodAutocompleteElementResponse] instance and imports its values from

@@ -77,7 +77,7 @@ class FieldEEzsigndocumentStepTypeTransformer {
   /// and users are still using an old app with the old code.
   FieldEEzsigndocumentStep? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
-      switch (data.toString()) {
+      switch (data) {
         case r'Unsent': return FieldEEzsigndocumentStep.unsent;
         case r'Unsigned': return FieldEEzsigndocumentStep.unsigned;
         case r'PartiallySigned': return FieldEEzsigndocumentStep.partiallySigned;

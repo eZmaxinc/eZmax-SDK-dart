@@ -42,11 +42,11 @@ class EzsignfolderSendV2Request {
   String toString() => 'EzsignfolderSendV2Request[tEzsignfolderMessage=$tEzsignfolderMessage, aFkiEzsignfoldersignerassociationID=$aFkiEzsignfoldersignerassociationID, aObjEzsignfoldersignerassociationmessage=$aObjEzsignfoldersignerassociationmessage]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'tEzsignfolderMessage'] = tEzsignfolderMessage;
-      _json[r'a_fkiEzsignfoldersignerassociationID'] = aFkiEzsignfoldersignerassociationID;
-      _json[r'a_objEzsignfoldersignerassociationmessage'] = aObjEzsignfoldersignerassociationmessage;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'tEzsignfolderMessage'] = this.tEzsignfolderMessage;
+      json[r'a_fkiEzsignfoldersignerassociationID'] = this.aFkiEzsignfoldersignerassociationID;
+      json[r'a_objEzsignfoldersignerassociationmessage'] = this.aObjEzsignfoldersignerassociationmessage;
+    return json;
   }
 
   /// Returns a new [EzsignfolderSendV2Request] instance and imports its values from

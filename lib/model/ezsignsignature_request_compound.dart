@@ -204,66 +204,66 @@ class EzsignsignatureRequestCompound {
   String toString() => 'EzsignsignatureRequestCompound[pkiEzsignsignatureID=$pkiEzsignsignatureID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureStep=$iEzsignsignatureStep, eEzsignsignatureType=$eEzsignsignatureType, fkiEzsigndocumentID=$fkiEzsigndocumentID, tEzsignsignatureTooltip=$tEzsignsignatureTooltip, eEzsignsignatureTooltipposition=$eEzsignsignatureTooltipposition, eEzsignsignatureFont=$eEzsignsignatureFont, fkiEzsignfoldersignerassociationIDValidation=$fkiEzsignfoldersignerassociationIDValidation, bEzsignsignatureRequired=$bEzsignsignatureRequired, eEzsignsignatureAttachmentnamesource=$eEzsignsignatureAttachmentnamesource, sEzsignsignatureAttachmentdescription=$sEzsignsignatureAttachmentdescription, iEzsignsignatureValidationstep=$iEzsignsignatureValidationstep, bEzsignsignatureCustomdate=$bEzsignsignatureCustomdate, aObjEzsignsignaturecustomdate=$aObjEzsignsignaturecustomdate]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (pkiEzsignsignatureID != null) {
-      _json[r'pkiEzsignsignatureID'] = pkiEzsignsignatureID;
+    final json = <String, dynamic>{};
+    if (this.pkiEzsignsignatureID != null) {
+      json[r'pkiEzsignsignatureID'] = this.pkiEzsignsignatureID;
     } else {
-      _json[r'pkiEzsignsignatureID'] = null;
+      json[r'pkiEzsignsignatureID'] = null;
     }
-      _json[r'fkiEzsignfoldersignerassociationID'] = fkiEzsignfoldersignerassociationID;
-      _json[r'iEzsignpagePagenumber'] = iEzsignpagePagenumber;
-      _json[r'iEzsignsignatureX'] = iEzsignsignatureX;
-      _json[r'iEzsignsignatureY'] = iEzsignsignatureY;
-      _json[r'iEzsignsignatureStep'] = iEzsignsignatureStep;
-      _json[r'eEzsignsignatureType'] = eEzsignsignatureType;
-      _json[r'fkiEzsigndocumentID'] = fkiEzsigndocumentID;
-    if (tEzsignsignatureTooltip != null) {
-      _json[r'tEzsignsignatureTooltip'] = tEzsignsignatureTooltip;
+      json[r'fkiEzsignfoldersignerassociationID'] = this.fkiEzsignfoldersignerassociationID;
+      json[r'iEzsignpagePagenumber'] = this.iEzsignpagePagenumber;
+      json[r'iEzsignsignatureX'] = this.iEzsignsignatureX;
+      json[r'iEzsignsignatureY'] = this.iEzsignsignatureY;
+      json[r'iEzsignsignatureStep'] = this.iEzsignsignatureStep;
+      json[r'eEzsignsignatureType'] = this.eEzsignsignatureType;
+      json[r'fkiEzsigndocumentID'] = this.fkiEzsigndocumentID;
+    if (this.tEzsignsignatureTooltip != null) {
+      json[r'tEzsignsignatureTooltip'] = this.tEzsignsignatureTooltip;
     } else {
-      _json[r'tEzsignsignatureTooltip'] = null;
+      json[r'tEzsignsignatureTooltip'] = null;
     }
-    if (eEzsignsignatureTooltipposition != null) {
-      _json[r'eEzsignsignatureTooltipposition'] = eEzsignsignatureTooltipposition;
+    if (this.eEzsignsignatureTooltipposition != null) {
+      json[r'eEzsignsignatureTooltipposition'] = this.eEzsignsignatureTooltipposition;
     } else {
-      _json[r'eEzsignsignatureTooltipposition'] = null;
+      json[r'eEzsignsignatureTooltipposition'] = null;
     }
-    if (eEzsignsignatureFont != null) {
-      _json[r'eEzsignsignatureFont'] = eEzsignsignatureFont;
+    if (this.eEzsignsignatureFont != null) {
+      json[r'eEzsignsignatureFont'] = this.eEzsignsignatureFont;
     } else {
-      _json[r'eEzsignsignatureFont'] = null;
+      json[r'eEzsignsignatureFont'] = null;
     }
-    if (fkiEzsignfoldersignerassociationIDValidation != null) {
-      _json[r'fkiEzsignfoldersignerassociationIDValidation'] = fkiEzsignfoldersignerassociationIDValidation;
+    if (this.fkiEzsignfoldersignerassociationIDValidation != null) {
+      json[r'fkiEzsignfoldersignerassociationIDValidation'] = this.fkiEzsignfoldersignerassociationIDValidation;
     } else {
-      _json[r'fkiEzsignfoldersignerassociationIDValidation'] = null;
+      json[r'fkiEzsignfoldersignerassociationIDValidation'] = null;
     }
-    if (bEzsignsignatureRequired != null) {
-      _json[r'bEzsignsignatureRequired'] = bEzsignsignatureRequired;
+    if (this.bEzsignsignatureRequired != null) {
+      json[r'bEzsignsignatureRequired'] = this.bEzsignsignatureRequired;
     } else {
-      _json[r'bEzsignsignatureRequired'] = null;
+      json[r'bEzsignsignatureRequired'] = null;
     }
-    if (eEzsignsignatureAttachmentnamesource != null) {
-      _json[r'eEzsignsignatureAttachmentnamesource'] = eEzsignsignatureAttachmentnamesource;
+    if (this.eEzsignsignatureAttachmentnamesource != null) {
+      json[r'eEzsignsignatureAttachmentnamesource'] = this.eEzsignsignatureAttachmentnamesource;
     } else {
-      _json[r'eEzsignsignatureAttachmentnamesource'] = null;
+      json[r'eEzsignsignatureAttachmentnamesource'] = null;
     }
-    if (sEzsignsignatureAttachmentdescription != null) {
-      _json[r'sEzsignsignatureAttachmentdescription'] = sEzsignsignatureAttachmentdescription;
+    if (this.sEzsignsignatureAttachmentdescription != null) {
+      json[r'sEzsignsignatureAttachmentdescription'] = this.sEzsignsignatureAttachmentdescription;
     } else {
-      _json[r'sEzsignsignatureAttachmentdescription'] = null;
+      json[r'sEzsignsignatureAttachmentdescription'] = null;
     }
-    if (iEzsignsignatureValidationstep != null) {
-      _json[r'iEzsignsignatureValidationstep'] = iEzsignsignatureValidationstep;
+    if (this.iEzsignsignatureValidationstep != null) {
+      json[r'iEzsignsignatureValidationstep'] = this.iEzsignsignatureValidationstep;
     } else {
-      _json[r'iEzsignsignatureValidationstep'] = null;
+      json[r'iEzsignsignatureValidationstep'] = null;
     }
-    if (bEzsignsignatureCustomdate != null) {
-      _json[r'bEzsignsignatureCustomdate'] = bEzsignsignatureCustomdate;
+    if (this.bEzsignsignatureCustomdate != null) {
+      json[r'bEzsignsignatureCustomdate'] = this.bEzsignsignatureCustomdate;
     } else {
-      _json[r'bEzsignsignatureCustomdate'] = null;
+      json[r'bEzsignsignatureCustomdate'] = null;
     }
-      _json[r'a_objEzsignsignaturecustomdate'] = aObjEzsignsignaturecustomdate;
-    return _json;
+      json[r'a_objEzsignsignaturecustomdate'] = this.aObjEzsignsignaturecustomdate;
+    return json;
   }
 
   /// Returns a new [EzsignsignatureRequestCompound] instance and imports its values from

@@ -81,29 +81,29 @@ class EzsignsignerRequest {
   String toString() => 'EzsignsignerRequest[fkiUserlogintypeID=$fkiUserlogintypeID, fkiTaxassignmentID=$fkiTaxassignmentID, fkiSecretquestionID=$fkiSecretquestionID, eEzsignsignerLogintype=$eEzsignsignerLogintype, sEzsignsignerSecretanswer=$sEzsignsignerSecretanswer]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (fkiUserlogintypeID != null) {
-      _json[r'fkiUserlogintypeID'] = fkiUserlogintypeID;
+    final json = <String, dynamic>{};
+    if (this.fkiUserlogintypeID != null) {
+      json[r'fkiUserlogintypeID'] = this.fkiUserlogintypeID;
     } else {
-      _json[r'fkiUserlogintypeID'] = null;
+      json[r'fkiUserlogintypeID'] = null;
     }
-      _json[r'fkiTaxassignmentID'] = fkiTaxassignmentID;
-    if (fkiSecretquestionID != null) {
-      _json[r'fkiSecretquestionID'] = fkiSecretquestionID;
+      json[r'fkiTaxassignmentID'] = this.fkiTaxassignmentID;
+    if (this.fkiSecretquestionID != null) {
+      json[r'fkiSecretquestionID'] = this.fkiSecretquestionID;
     } else {
-      _json[r'fkiSecretquestionID'] = null;
+      json[r'fkiSecretquestionID'] = null;
     }
-    if (eEzsignsignerLogintype != null) {
-      _json[r'eEzsignsignerLogintype'] = eEzsignsignerLogintype;
+    if (this.eEzsignsignerLogintype != null) {
+      json[r'eEzsignsignerLogintype'] = this.eEzsignsignerLogintype;
     } else {
-      _json[r'eEzsignsignerLogintype'] = null;
+      json[r'eEzsignsignerLogintype'] = null;
     }
-    if (sEzsignsignerSecretanswer != null) {
-      _json[r'sEzsignsignerSecretanswer'] = sEzsignsignerSecretanswer;
+    if (this.sEzsignsignerSecretanswer != null) {
+      json[r'sEzsignsignerSecretanswer'] = this.sEzsignsignerSecretanswer;
     } else {
-      _json[r'sEzsignsignerSecretanswer'] = null;
+      json[r'sEzsignsignerSecretanswer'] = null;
     }
-    return _json;
+    return json;
   }
 
   /// Returns a new [EzsignsignerRequest] instance and imports its values from
@@ -246,7 +246,7 @@ class EzsignsignerRequestEEzsignsignerLogintypeEnumTypeTransformer {
   /// and users are still using an old app with the old code.
   EzsignsignerRequestEEzsignsignerLogintypeEnum? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
-      switch (data.toString()) {
+      switch (data) {
         case r'Password': return EzsignsignerRequestEEzsignsignerLogintypeEnum.password;
         case r'PasswordPhone': return EzsignsignerRequestEEzsignsignerLogintypeEnum.passwordPhone;
         case r'PasswordQuestion': return EzsignsignerRequestEEzsignsignerLogintypeEnum.passwordQuestion;

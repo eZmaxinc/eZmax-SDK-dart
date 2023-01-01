@@ -36,10 +36,10 @@ class EzsigntemplatepackagemembershipResponseCompoundAllOf {
   String toString() => 'EzsigntemplatepackagemembershipResponseCompoundAllOf[objEzsigntemplate=$objEzsigntemplate, aObjEzsigntemplatepackagesignermembership=$aObjEzsigntemplatepackagesignermembership]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'objEzsigntemplate'] = objEzsigntemplate;
-      _json[r'a_objEzsigntemplatepackagesignermembership'] = aObjEzsigntemplatepackagesignermembership;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'objEzsigntemplate'] = this.objEzsigntemplate;
+      json[r'a_objEzsigntemplatepackagesignermembership'] = this.aObjEzsigntemplatepackagesignermembership;
+    return json;
   }
 
   /// Returns a new [EzsigntemplatepackagemembershipResponseCompoundAllOf] instance and imports its values from

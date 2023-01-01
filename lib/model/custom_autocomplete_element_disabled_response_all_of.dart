@@ -32,9 +32,9 @@ class CustomAutocompleteElementDisabledResponseAllOf {
   String toString() => 'CustomAutocompleteElementDisabledResponseAllOf[bDisabled=$bDisabled]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'bDisabled'] = bDisabled;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'bDisabled'] = this.bDisabled;
+    return json;
   }
 
   /// Returns a new [CustomAutocompleteElementDisabledResponseAllOf] instance and imports its values from

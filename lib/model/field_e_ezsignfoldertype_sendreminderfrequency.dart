@@ -69,7 +69,7 @@ class FieldEEzsignfoldertypeSendreminderfrequencyTypeTransformer {
   /// and users are still using an old app with the old code.
   FieldEEzsignfoldertypeSendreminderfrequency? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
-      switch (data.toString()) {
+      switch (data) {
         case r'None': return FieldEEzsignfoldertypeSendreminderfrequency.none;
         case r'Daily': return FieldEEzsignfoldertypeSendreminderfrequency.daily;
         case r'Weekly': return FieldEEzsignfoldertypeSendreminderfrequency.weekly;

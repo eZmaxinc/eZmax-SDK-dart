@@ -31,9 +31,9 @@ class WebhookEzsignFolderCompletedAllOf {
   String toString() => 'WebhookEzsignFolderCompletedAllOf[objEzsignfolder=$objEzsignfolder]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'objEzsignfolder'] = objEzsignfolder;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'objEzsignfolder'] = this.objEzsignfolder;
+    return json;
   }
 
   /// Returns a new [WebhookEzsignFolderCompletedAllOf] instance and imports its values from

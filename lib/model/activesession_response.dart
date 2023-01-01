@@ -19,6 +19,7 @@ class ActivesessionResponse {
     required this.sCompanyNameX,
     required this.sDepartmentNameX,
     required this.bActivesessionDebug,
+    required this.bActivesessionIssuperadmin,
     required this.pksCustomerCode,
     this.fkiSystemconfigurationtypeID,
   });
@@ -42,6 +43,9 @@ class ActivesessionResponse {
   /// Whether the active session is in debug or not
   bool bActivesessionDebug;
 
+  /// Whether the active session is superadmin or not
+  bool bActivesessionIssuperadmin;
+
   /// The customer code assigned to your account
   String pksCustomerCode;
 
@@ -64,6 +68,7 @@ class ActivesessionResponse {
      other.sCompanyNameX == sCompanyNameX &&
      other.sDepartmentNameX == sDepartmentNameX &&
      other.bActivesessionDebug == bActivesessionDebug &&
+     other.bActivesessionIssuperadmin == bActivesessionIssuperadmin &&
      other.pksCustomerCode == pksCustomerCode &&
      other.fkiSystemconfigurationtypeID == fkiSystemconfigurationtypeID;
 
@@ -76,27 +81,29 @@ class ActivesessionResponse {
     (sCompanyNameX.hashCode) +
     (sDepartmentNameX.hashCode) +
     (bActivesessionDebug.hashCode) +
+    (bActivesessionIssuperadmin.hashCode) +
     (pksCustomerCode.hashCode) +
     (fkiSystemconfigurationtypeID == null ? 0 : fkiSystemconfigurationtypeID!.hashCode);
 
   @override
-  String toString() => 'ActivesessionResponse[eActivesessionUsertype=$eActivesessionUsertype, eActivesessionWeekdaystart=$eActivesessionWeekdaystart, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, bActivesessionDebug=$bActivesessionDebug, pksCustomerCode=$pksCustomerCode, fkiSystemconfigurationtypeID=$fkiSystemconfigurationtypeID]';
+  String toString() => 'ActivesessionResponse[eActivesessionUsertype=$eActivesessionUsertype, eActivesessionWeekdaystart=$eActivesessionWeekdaystart, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, bActivesessionDebug=$bActivesessionDebug, bActivesessionIssuperadmin=$bActivesessionIssuperadmin, pksCustomerCode=$pksCustomerCode, fkiSystemconfigurationtypeID=$fkiSystemconfigurationtypeID]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'eActivesessionUsertype'] = eActivesessionUsertype;
-      _json[r'eActivesessionWeekdaystart'] = eActivesessionWeekdaystart;
-      _json[r'fkiLanguageID'] = fkiLanguageID;
-      _json[r'sCompanyNameX'] = sCompanyNameX;
-      _json[r'sDepartmentNameX'] = sDepartmentNameX;
-      _json[r'bActivesessionDebug'] = bActivesessionDebug;
-      _json[r'pksCustomerCode'] = pksCustomerCode;
-    if (fkiSystemconfigurationtypeID != null) {
-      _json[r'fkiSystemconfigurationtypeID'] = fkiSystemconfigurationtypeID;
+    final json = <String, dynamic>{};
+      json[r'eActivesessionUsertype'] = this.eActivesessionUsertype;
+      json[r'eActivesessionWeekdaystart'] = this.eActivesessionWeekdaystart;
+      json[r'fkiLanguageID'] = this.fkiLanguageID;
+      json[r'sCompanyNameX'] = this.sCompanyNameX;
+      json[r'sDepartmentNameX'] = this.sDepartmentNameX;
+      json[r'bActivesessionDebug'] = this.bActivesessionDebug;
+      json[r'bActivesessionIssuperadmin'] = this.bActivesessionIssuperadmin;
+      json[r'pksCustomerCode'] = this.pksCustomerCode;
+    if (this.fkiSystemconfigurationtypeID != null) {
+      json[r'fkiSystemconfigurationtypeID'] = this.fkiSystemconfigurationtypeID;
     } else {
-      _json[r'fkiSystemconfigurationtypeID'] = null;
+      json[r'fkiSystemconfigurationtypeID'] = null;
     }
-    return _json;
+    return json;
   }
 
   /// Returns a new [ActivesessionResponse] instance and imports its values from
@@ -124,6 +131,7 @@ class ActivesessionResponse {
         sCompanyNameX: mapValueOfType<String>(json, r'sCompanyNameX')!,
         sDepartmentNameX: mapValueOfType<String>(json, r'sDepartmentNameX')!,
         bActivesessionDebug: mapValueOfType<bool>(json, r'bActivesessionDebug')!,
+        bActivesessionIssuperadmin: mapValueOfType<bool>(json, r'bActivesessionIssuperadmin')!,
         pksCustomerCode: mapValueOfType<String>(json, r'pksCustomerCode')!,
         fkiSystemconfigurationtypeID: mapValueOfType<int>(json, r'fkiSystemconfigurationtypeID'),
       );
@@ -181,6 +189,7 @@ class ActivesessionResponse {
     'sCompanyNameX',
     'sDepartmentNameX',
     'bActivesessionDebug',
+    'bActivesessionIssuperadmin',
     'pksCustomerCode',
   };
 }

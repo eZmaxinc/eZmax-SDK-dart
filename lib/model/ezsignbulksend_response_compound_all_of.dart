@@ -36,10 +36,10 @@ class EzsignbulksendResponseCompoundAllOf {
   String toString() => 'EzsignbulksendResponseCompoundAllOf[aObjEzsignbulksenddocumentmapping=$aObjEzsignbulksenddocumentmapping, aObjEzsignbulksendsignermapping=$aObjEzsignbulksendsignermapping]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_objEzsignbulksenddocumentmapping'] = aObjEzsignbulksenddocumentmapping;
-      _json[r'a_objEzsignbulksendsignermapping'] = aObjEzsignbulksendsignermapping;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_objEzsignbulksenddocumentmapping'] = this.aObjEzsignbulksenddocumentmapping;
+      json[r'a_objEzsignbulksendsignermapping'] = this.aObjEzsignbulksendsignermapping;
+    return json;
   }
 
   /// Returns a new [EzsignbulksendResponseCompoundAllOf] instance and imports its values from

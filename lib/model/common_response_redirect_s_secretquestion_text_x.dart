@@ -32,9 +32,9 @@ class CommonResponseRedirectSSecretquestionTextX {
   String toString() => 'CommonResponseRedirectSSecretquestionTextX[sSecretquestionTextX=$sSecretquestionTextX]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'sSecretquestionTextX'] = sSecretquestionTextX;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'sSecretquestionTextX'] = this.sSecretquestionTextX;
+    return json;
   }
 
   /// Returns a new [CommonResponseRedirectSSecretquestionTextX] instance and imports its values from

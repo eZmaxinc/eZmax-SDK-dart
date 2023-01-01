@@ -31,9 +31,9 @@ class EzsignsignerResponseCompoundAllOf {
   String toString() => 'EzsignsignerResponseCompoundAllOf[objContact=$objContact]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'objContact'] = objContact;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'objContact'] = this.objContact;
+    return json;
   }
 
   /// Returns a new [EzsignsignerResponseCompoundAllOf] instance and imports its values from

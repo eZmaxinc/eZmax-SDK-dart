@@ -69,7 +69,7 @@ class FieldEEzmaxinvoicinguserVariationezsignTypeTransformer {
   /// and users are still using an old app with the old code.
   FieldEEzmaxinvoicinguserVariationezsign? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
-      switch (data.toString()) {
+      switch (data) {
         case r'Charge': return FieldEEzmaxinvoicinguserVariationezsign.charge;
         case r'Refund': return FieldEEzmaxinvoicinguserVariationezsign.refund;
         case r'Same': return FieldEEzmaxinvoicinguserVariationezsign.same;

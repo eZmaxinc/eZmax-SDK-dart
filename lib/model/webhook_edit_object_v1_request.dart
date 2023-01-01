@@ -31,9 +31,9 @@ class WebhookEditObjectV1Request {
   String toString() => 'WebhookEditObjectV1Request[objWebhook=$objWebhook]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'objWebhook'] = objWebhook;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'objWebhook'] = this.objWebhook;
+    return json;
   }
 
   /// Returns a new [WebhookEditObjectV1Request] instance and imports its values from

@@ -38,10 +38,10 @@ class CommonResponseFilter {
   String toString() => 'CommonResponseFilter[aAutoType=$aAutoType, aEnum=$aEnum]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_AutoType'] = aAutoType;
-      _json[r'a_Enum'] = aEnum;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_AutoType'] = this.aAutoType;
+      json[r'a_Enum'] = this.aEnum;
+    return json;
   }
 
   /// Returns a new [CommonResponseFilter] instance and imports its values from

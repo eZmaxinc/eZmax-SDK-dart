@@ -31,9 +31,9 @@ class EzsigndocumentGetFormDataV1ResponseMPayload {
   String toString() => 'EzsigndocumentGetFormDataV1ResponseMPayload[objFormDataDocument=$objFormDataDocument]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'objFormDataDocument'] = objFormDataDocument;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'objFormDataDocument'] = this.objFormDataDocument;
+    return json;
   }
 
   /// Returns a new [EzsigndocumentGetFormDataV1ResponseMPayload] instance and imports its values from

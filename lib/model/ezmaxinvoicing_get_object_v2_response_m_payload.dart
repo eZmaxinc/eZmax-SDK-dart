@@ -31,9 +31,9 @@ class EzmaxinvoicingGetObjectV2ResponseMPayload {
   String toString() => 'EzmaxinvoicingGetObjectV2ResponseMPayload[objEzmaxinvoicing=$objEzmaxinvoicing]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'objEzmaxinvoicing'] = objEzmaxinvoicing;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'objEzmaxinvoicing'] = this.objEzmaxinvoicing;
+    return json;
   }
 
   /// Returns a new [EzmaxinvoicingGetObjectV2ResponseMPayload] instance and imports its values from

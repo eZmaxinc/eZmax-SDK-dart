@@ -40,10 +40,10 @@ class EmailRequestCompound {
   String toString() => 'EmailRequestCompound[fkiEmailtypeID=$fkiEmailtypeID, sEmailAddress=$sEmailAddress]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'fkiEmailtypeID'] = fkiEmailtypeID;
-      _json[r'sEmailAddress'] = sEmailAddress;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'fkiEmailtypeID'] = this.fkiEmailtypeID;
+      json[r'sEmailAddress'] = this.sEmailAddress;
+    return json;
   }
 
   /// Returns a new [EmailRequestCompound] instance and imports its values from

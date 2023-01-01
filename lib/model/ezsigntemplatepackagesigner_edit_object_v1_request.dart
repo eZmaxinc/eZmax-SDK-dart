@@ -31,9 +31,9 @@ class EzsigntemplatepackagesignerEditObjectV1Request {
   String toString() => 'EzsigntemplatepackagesignerEditObjectV1Request[objEzsigntemplatepackagesigner=$objEzsigntemplatepackagesigner]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'objEzsigntemplatepackagesigner'] = objEzsigntemplatepackagesigner;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'objEzsigntemplatepackagesigner'] = this.objEzsigntemplatepackagesigner;
+    return json;
   }
 
   /// Returns a new [EzsigntemplatepackagesignerEditObjectV1Request] instance and imports its values from

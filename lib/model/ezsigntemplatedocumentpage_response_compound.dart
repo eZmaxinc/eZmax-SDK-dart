@@ -80,15 +80,15 @@ class EzsigntemplatedocumentpageResponseCompound {
   String toString() => 'EzsigntemplatedocumentpageResponseCompound[pkiEzsigntemplatedocumentpageID=$pkiEzsigntemplatedocumentpageID, iEzsigntemplatedocumentpageWidthimage=$iEzsigntemplatedocumentpageWidthimage, iEzsigntemplatedocumentpageHeightimage=$iEzsigntemplatedocumentpageHeightimage, iEzsigntemplatedocumentpageWidthpdf=$iEzsigntemplatedocumentpageWidthpdf, iEzsigntemplatedocumentpageHeightpdf=$iEzsigntemplatedocumentpageHeightpdf, iEzsigntemplatedocumentpagePagenumber=$iEzsigntemplatedocumentpagePagenumber, sComputedImageurl=$sComputedImageurl]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiEzsigntemplatedocumentpageID'] = pkiEzsigntemplatedocumentpageID;
-      _json[r'iEzsigntemplatedocumentpageWidthimage'] = iEzsigntemplatedocumentpageWidthimage;
-      _json[r'iEzsigntemplatedocumentpageHeightimage'] = iEzsigntemplatedocumentpageHeightimage;
-      _json[r'iEzsigntemplatedocumentpageWidthpdf'] = iEzsigntemplatedocumentpageWidthpdf;
-      _json[r'iEzsigntemplatedocumentpageHeightpdf'] = iEzsigntemplatedocumentpageHeightpdf;
-      _json[r'iEzsigntemplatedocumentpagePagenumber'] = iEzsigntemplatedocumentpagePagenumber;
-      _json[r'sComputedImageurl'] = sComputedImageurl;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'pkiEzsigntemplatedocumentpageID'] = this.pkiEzsigntemplatedocumentpageID;
+      json[r'iEzsigntemplatedocumentpageWidthimage'] = this.iEzsigntemplatedocumentpageWidthimage;
+      json[r'iEzsigntemplatedocumentpageHeightimage'] = this.iEzsigntemplatedocumentpageHeightimage;
+      json[r'iEzsigntemplatedocumentpageWidthpdf'] = this.iEzsigntemplatedocumentpageWidthpdf;
+      json[r'iEzsigntemplatedocumentpageHeightpdf'] = this.iEzsigntemplatedocumentpageHeightpdf;
+      json[r'iEzsigntemplatedocumentpagePagenumber'] = this.iEzsigntemplatedocumentpagePagenumber;
+      json[r'sComputedImageurl'] = this.sComputedImageurl;
+    return json;
   }
 
   /// Returns a new [EzsigntemplatedocumentpageResponseCompound] instance and imports its values from

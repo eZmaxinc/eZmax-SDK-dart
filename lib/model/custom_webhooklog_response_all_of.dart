@@ -38,10 +38,10 @@ class CustomWebhooklogResponseAllOf {
   String toString() => 'CustomWebhooklogResponseAllOf[dtWebhooklogDate=$dtWebhooklogDate, tWebhooklogJson=$tWebhooklogJson]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'dtWebhooklogDate'] = dtWebhooklogDate;
-      _json[r'tWebhooklogJson'] = tWebhooklogJson;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'dtWebhooklogDate'] = this.dtWebhooklogDate;
+      json[r'tWebhooklogJson'] = this.tWebhooklogJson;
+    return json;
   }
 
   /// Returns a new [CustomWebhooklogResponseAllOf] instance and imports its values from

@@ -50,18 +50,18 @@ class MultilingualNotificationsubsectionName {
   String toString() => 'MultilingualNotificationsubsectionName[sNotificationsubsectionName1=$sNotificationsubsectionName1, sNotificationsubsectionName2=$sNotificationsubsectionName2]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (sNotificationsubsectionName1 != null) {
-      _json[r'sNotificationsubsectionName1'] = sNotificationsubsectionName1;
+    final json = <String, dynamic>{};
+    if (this.sNotificationsubsectionName1 != null) {
+      json[r'sNotificationsubsectionName1'] = this.sNotificationsubsectionName1;
     } else {
-      _json[r'sNotificationsubsectionName1'] = null;
+      json[r'sNotificationsubsectionName1'] = null;
     }
-    if (sNotificationsubsectionName2 != null) {
-      _json[r'sNotificationsubsectionName2'] = sNotificationsubsectionName2;
+    if (this.sNotificationsubsectionName2 != null) {
+      json[r'sNotificationsubsectionName2'] = this.sNotificationsubsectionName2;
     } else {
-      _json[r'sNotificationsubsectionName2'] = null;
+      json[r'sNotificationsubsectionName2'] = null;
     }
-    return _json;
+    return json;
   }
 
   /// Returns a new [MultilingualNotificationsubsectionName] instance and imports its values from

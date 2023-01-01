@@ -32,9 +32,9 @@ class EzsignfolderSendV1Request {
   String toString() => 'EzsignfolderSendV1Request[tExtraMessage=$tExtraMessage]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'tExtraMessage'] = tExtraMessage;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'tExtraMessage'] = this.tExtraMessage;
+    return json;
   }
 
   /// Returns a new [EzsignfolderSendV1Request] instance and imports its values from

@@ -79,7 +79,7 @@ class FieldEEzsignfolderStepTypeTransformer {
   /// and users are still using an old app with the old code.
   FieldEEzsignfolderStep? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
-      switch (data.toString()) {
+      switch (data) {
         case r'Unsent': return FieldEEzsignfolderStep.unsent;
         case r'PendingSend': return FieldEEzsignfolderStep.pendingSend;
         case r'Sent': return FieldEEzsignfolderStep.sent;

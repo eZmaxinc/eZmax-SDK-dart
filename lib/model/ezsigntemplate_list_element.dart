@@ -107,29 +107,29 @@ class EzsigntemplateListElement {
   String toString() => 'EzsigntemplateListElement[pkiEzsigntemplateID=$pkiEzsigntemplateID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiLanguageID=$fkiLanguageID, sEzsigntemplateDescription=$sEzsigntemplateDescription, iEzsigntemplatedocumentPagetotal=$iEzsigntemplatedocumentPagetotal, iEzsigntemplateSignaturetotal=$iEzsigntemplateSignaturetotal, iEzsigntemplateFormfieldtotal=$iEzsigntemplateFormfieldtotal, bEzsigntemplateIncomplete=$bEzsigntemplateIncomplete, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiEzsigntemplateID'] = pkiEzsigntemplateID;
-      _json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
-      _json[r'fkiLanguageID'] = fkiLanguageID;
-      _json[r'sEzsigntemplateDescription'] = sEzsigntemplateDescription;
-    if (iEzsigntemplatedocumentPagetotal != null) {
-      _json[r'iEzsigntemplatedocumentPagetotal'] = iEzsigntemplatedocumentPagetotal;
+    final json = <String, dynamic>{};
+      json[r'pkiEzsigntemplateID'] = this.pkiEzsigntemplateID;
+      json[r'fkiEzsignfoldertypeID'] = this.fkiEzsignfoldertypeID;
+      json[r'fkiLanguageID'] = this.fkiLanguageID;
+      json[r'sEzsigntemplateDescription'] = this.sEzsigntemplateDescription;
+    if (this.iEzsigntemplatedocumentPagetotal != null) {
+      json[r'iEzsigntemplatedocumentPagetotal'] = this.iEzsigntemplatedocumentPagetotal;
     } else {
-      _json[r'iEzsigntemplatedocumentPagetotal'] = null;
+      json[r'iEzsigntemplatedocumentPagetotal'] = null;
     }
-    if (iEzsigntemplateSignaturetotal != null) {
-      _json[r'iEzsigntemplateSignaturetotal'] = iEzsigntemplateSignaturetotal;
+    if (this.iEzsigntemplateSignaturetotal != null) {
+      json[r'iEzsigntemplateSignaturetotal'] = this.iEzsigntemplateSignaturetotal;
     } else {
-      _json[r'iEzsigntemplateSignaturetotal'] = null;
+      json[r'iEzsigntemplateSignaturetotal'] = null;
     }
-    if (iEzsigntemplateFormfieldtotal != null) {
-      _json[r'iEzsigntemplateFormfieldtotal'] = iEzsigntemplateFormfieldtotal;
+    if (this.iEzsigntemplateFormfieldtotal != null) {
+      json[r'iEzsigntemplateFormfieldtotal'] = this.iEzsigntemplateFormfieldtotal;
     } else {
-      _json[r'iEzsigntemplateFormfieldtotal'] = null;
+      json[r'iEzsigntemplateFormfieldtotal'] = null;
     }
-      _json[r'bEzsigntemplateIncomplete'] = bEzsigntemplateIncomplete;
-      _json[r'sEzsignfoldertypeNameX'] = sEzsignfoldertypeNameX;
-    return _json;
+      json[r'bEzsigntemplateIncomplete'] = this.bEzsigntemplateIncomplete;
+      json[r'sEzsignfoldertypeNameX'] = this.sEzsignfoldertypeNameX;
+    return json;
   }
 
   /// Returns a new [EzsigntemplateListElement] instance and imports its values from

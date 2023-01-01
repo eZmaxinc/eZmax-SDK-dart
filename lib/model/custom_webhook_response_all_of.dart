@@ -38,10 +38,10 @@ class CustomWebhookResponseAllOf {
   String toString() => 'CustomWebhookResponseAllOf[pksCustomerCode=$pksCustomerCode, bWebhookTest=$bWebhookTest]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pksCustomerCode'] = pksCustomerCode;
-      _json[r'bWebhookTest'] = bWebhookTest;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'pksCustomerCode'] = this.pksCustomerCode;
+      json[r'bWebhookTest'] = this.bWebhookTest;
+    return json;
   }
 
   /// Returns a new [CustomWebhookResponseAllOf] instance and imports its values from

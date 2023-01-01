@@ -200,62 +200,62 @@ class EzsigntemplatesignatureResponseCompound {
   String toString() => 'EzsigntemplatesignatureResponseCompound[pkiEzsigntemplatesignatureID=$pkiEzsigntemplatesignatureID, fkiEzsigntemplatedocumentID=$fkiEzsigntemplatedocumentID, fkiEzsigntemplatesignerID=$fkiEzsigntemplatesignerID, fkiEzsigntemplatesignerIDValidation=$fkiEzsigntemplatesignerIDValidation, iEzsigntemplatedocumentpagePagenumber=$iEzsigntemplatedocumentpagePagenumber, iEzsigntemplatesignatureX=$iEzsigntemplatesignatureX, iEzsigntemplatesignatureY=$iEzsigntemplatesignatureY, iEzsigntemplatesignatureStep=$iEzsigntemplatesignatureStep, eEzsigntemplatesignatureType=$eEzsigntemplatesignatureType, tEzsigntemplatesignatureTooltip=$tEzsigntemplatesignatureTooltip, eEzsigntemplatesignatureTooltipposition=$eEzsigntemplatesignatureTooltipposition, eEzsigntemplatesignatureFont=$eEzsigntemplatesignatureFont, iEzsigntemplatesignatureValidationstep=$iEzsigntemplatesignatureValidationstep, sEzsigntemplatesignatureAttachmentdescription=$sEzsigntemplatesignatureAttachmentdescription, eEzsigntemplatesignatureAttachmentnamesource=$eEzsigntemplatesignatureAttachmentnamesource, bEzsigntemplatesignatureRequired=$bEzsigntemplatesignatureRequired, bEzsigntemplatesignatureCustomdate=$bEzsigntemplatesignatureCustomdate, aObjEzsigntemplatesignaturecustomdate=$aObjEzsigntemplatesignaturecustomdate]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiEzsigntemplatesignatureID'] = pkiEzsigntemplatesignatureID;
-      _json[r'fkiEzsigntemplatedocumentID'] = fkiEzsigntemplatedocumentID;
-      _json[r'fkiEzsigntemplatesignerID'] = fkiEzsigntemplatesignerID;
-    if (fkiEzsigntemplatesignerIDValidation != null) {
-      _json[r'fkiEzsigntemplatesignerIDValidation'] = fkiEzsigntemplatesignerIDValidation;
+    final json = <String, dynamic>{};
+      json[r'pkiEzsigntemplatesignatureID'] = this.pkiEzsigntemplatesignatureID;
+      json[r'fkiEzsigntemplatedocumentID'] = this.fkiEzsigntemplatedocumentID;
+      json[r'fkiEzsigntemplatesignerID'] = this.fkiEzsigntemplatesignerID;
+    if (this.fkiEzsigntemplatesignerIDValidation != null) {
+      json[r'fkiEzsigntemplatesignerIDValidation'] = this.fkiEzsigntemplatesignerIDValidation;
     } else {
-      _json[r'fkiEzsigntemplatesignerIDValidation'] = null;
+      json[r'fkiEzsigntemplatesignerIDValidation'] = null;
     }
-      _json[r'iEzsigntemplatedocumentpagePagenumber'] = iEzsigntemplatedocumentpagePagenumber;
-      _json[r'iEzsigntemplatesignatureX'] = iEzsigntemplatesignatureX;
-      _json[r'iEzsigntemplatesignatureY'] = iEzsigntemplatesignatureY;
-      _json[r'iEzsigntemplatesignatureStep'] = iEzsigntemplatesignatureStep;
-      _json[r'eEzsigntemplatesignatureType'] = eEzsigntemplatesignatureType;
-    if (tEzsigntemplatesignatureTooltip != null) {
-      _json[r'tEzsigntemplatesignatureTooltip'] = tEzsigntemplatesignatureTooltip;
+      json[r'iEzsigntemplatedocumentpagePagenumber'] = this.iEzsigntemplatedocumentpagePagenumber;
+      json[r'iEzsigntemplatesignatureX'] = this.iEzsigntemplatesignatureX;
+      json[r'iEzsigntemplatesignatureY'] = this.iEzsigntemplatesignatureY;
+      json[r'iEzsigntemplatesignatureStep'] = this.iEzsigntemplatesignatureStep;
+      json[r'eEzsigntemplatesignatureType'] = this.eEzsigntemplatesignatureType;
+    if (this.tEzsigntemplatesignatureTooltip != null) {
+      json[r'tEzsigntemplatesignatureTooltip'] = this.tEzsigntemplatesignatureTooltip;
     } else {
-      _json[r'tEzsigntemplatesignatureTooltip'] = null;
+      json[r'tEzsigntemplatesignatureTooltip'] = null;
     }
-    if (eEzsigntemplatesignatureTooltipposition != null) {
-      _json[r'eEzsigntemplatesignatureTooltipposition'] = eEzsigntemplatesignatureTooltipposition;
+    if (this.eEzsigntemplatesignatureTooltipposition != null) {
+      json[r'eEzsigntemplatesignatureTooltipposition'] = this.eEzsigntemplatesignatureTooltipposition;
     } else {
-      _json[r'eEzsigntemplatesignatureTooltipposition'] = null;
+      json[r'eEzsigntemplatesignatureTooltipposition'] = null;
     }
-    if (eEzsigntemplatesignatureFont != null) {
-      _json[r'eEzsigntemplatesignatureFont'] = eEzsigntemplatesignatureFont;
+    if (this.eEzsigntemplatesignatureFont != null) {
+      json[r'eEzsigntemplatesignatureFont'] = this.eEzsigntemplatesignatureFont;
     } else {
-      _json[r'eEzsigntemplatesignatureFont'] = null;
+      json[r'eEzsigntemplatesignatureFont'] = null;
     }
-    if (iEzsigntemplatesignatureValidationstep != null) {
-      _json[r'iEzsigntemplatesignatureValidationstep'] = iEzsigntemplatesignatureValidationstep;
+    if (this.iEzsigntemplatesignatureValidationstep != null) {
+      json[r'iEzsigntemplatesignatureValidationstep'] = this.iEzsigntemplatesignatureValidationstep;
     } else {
-      _json[r'iEzsigntemplatesignatureValidationstep'] = null;
+      json[r'iEzsigntemplatesignatureValidationstep'] = null;
     }
-    if (sEzsigntemplatesignatureAttachmentdescription != null) {
-      _json[r'sEzsigntemplatesignatureAttachmentdescription'] = sEzsigntemplatesignatureAttachmentdescription;
+    if (this.sEzsigntemplatesignatureAttachmentdescription != null) {
+      json[r'sEzsigntemplatesignatureAttachmentdescription'] = this.sEzsigntemplatesignatureAttachmentdescription;
     } else {
-      _json[r'sEzsigntemplatesignatureAttachmentdescription'] = null;
+      json[r'sEzsigntemplatesignatureAttachmentdescription'] = null;
     }
-    if (eEzsigntemplatesignatureAttachmentnamesource != null) {
-      _json[r'eEzsigntemplatesignatureAttachmentnamesource'] = eEzsigntemplatesignatureAttachmentnamesource;
+    if (this.eEzsigntemplatesignatureAttachmentnamesource != null) {
+      json[r'eEzsigntemplatesignatureAttachmentnamesource'] = this.eEzsigntemplatesignatureAttachmentnamesource;
     } else {
-      _json[r'eEzsigntemplatesignatureAttachmentnamesource'] = null;
+      json[r'eEzsigntemplatesignatureAttachmentnamesource'] = null;
     }
-    if (bEzsigntemplatesignatureRequired != null) {
-      _json[r'bEzsigntemplatesignatureRequired'] = bEzsigntemplatesignatureRequired;
+    if (this.bEzsigntemplatesignatureRequired != null) {
+      json[r'bEzsigntemplatesignatureRequired'] = this.bEzsigntemplatesignatureRequired;
     } else {
-      _json[r'bEzsigntemplatesignatureRequired'] = null;
+      json[r'bEzsigntemplatesignatureRequired'] = null;
     }
-    if (bEzsigntemplatesignatureCustomdate != null) {
-      _json[r'bEzsigntemplatesignatureCustomdate'] = bEzsigntemplatesignatureCustomdate;
+    if (this.bEzsigntemplatesignatureCustomdate != null) {
+      json[r'bEzsigntemplatesignatureCustomdate'] = this.bEzsigntemplatesignatureCustomdate;
     } else {
-      _json[r'bEzsigntemplatesignatureCustomdate'] = null;
+      json[r'bEzsigntemplatesignatureCustomdate'] = null;
     }
-      _json[r'a_objEzsigntemplatesignaturecustomdate'] = aObjEzsigntemplatesignaturecustomdate;
-    return _json;
+      json[r'a_objEzsigntemplatesignaturecustomdate'] = this.aObjEzsigntemplatesignaturecustomdate;
+    return json;
   }
 
   /// Returns a new [EzsigntemplatesignatureResponseCompound] instance and imports its values from

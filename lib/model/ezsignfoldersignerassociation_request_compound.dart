@@ -97,34 +97,34 @@ class EzsignfoldersignerassociationRequestCompound {
   String toString() => 'EzsignfoldersignerassociationRequestCompound[pkiEzsignfoldersignerassociationID=$pkiEzsignfoldersignerassociationID, fkiUserID=$fkiUserID, fkiEzsignfolderID=$fkiEzsignfolderID, bEzsignfoldersignerassociationReceivecopy=$bEzsignfoldersignerassociationReceivecopy, tEzsignfoldersignerassociationMessage=$tEzsignfoldersignerassociationMessage, objEzsignsigner=$objEzsignsigner]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (pkiEzsignfoldersignerassociationID != null) {
-      _json[r'pkiEzsignfoldersignerassociationID'] = pkiEzsignfoldersignerassociationID;
+    final json = <String, dynamic>{};
+    if (this.pkiEzsignfoldersignerassociationID != null) {
+      json[r'pkiEzsignfoldersignerassociationID'] = this.pkiEzsignfoldersignerassociationID;
     } else {
-      _json[r'pkiEzsignfoldersignerassociationID'] = null;
+      json[r'pkiEzsignfoldersignerassociationID'] = null;
     }
-    if (fkiUserID != null) {
-      _json[r'fkiUserID'] = fkiUserID;
+    if (this.fkiUserID != null) {
+      json[r'fkiUserID'] = this.fkiUserID;
     } else {
-      _json[r'fkiUserID'] = null;
+      json[r'fkiUserID'] = null;
     }
-      _json[r'fkiEzsignfolderID'] = fkiEzsignfolderID;
-    if (bEzsignfoldersignerassociationReceivecopy != null) {
-      _json[r'bEzsignfoldersignerassociationReceivecopy'] = bEzsignfoldersignerassociationReceivecopy;
+      json[r'fkiEzsignfolderID'] = this.fkiEzsignfolderID;
+    if (this.bEzsignfoldersignerassociationReceivecopy != null) {
+      json[r'bEzsignfoldersignerassociationReceivecopy'] = this.bEzsignfoldersignerassociationReceivecopy;
     } else {
-      _json[r'bEzsignfoldersignerassociationReceivecopy'] = null;
+      json[r'bEzsignfoldersignerassociationReceivecopy'] = null;
     }
-    if (tEzsignfoldersignerassociationMessage != null) {
-      _json[r'tEzsignfoldersignerassociationMessage'] = tEzsignfoldersignerassociationMessage;
+    if (this.tEzsignfoldersignerassociationMessage != null) {
+      json[r'tEzsignfoldersignerassociationMessage'] = this.tEzsignfoldersignerassociationMessage;
     } else {
-      _json[r'tEzsignfoldersignerassociationMessage'] = null;
+      json[r'tEzsignfoldersignerassociationMessage'] = null;
     }
-    if (objEzsignsigner != null) {
-      _json[r'objEzsignsigner'] = objEzsignsigner;
+    if (this.objEzsignsigner != null) {
+      json[r'objEzsignsigner'] = this.objEzsignsigner;
     } else {
-      _json[r'objEzsignsigner'] = null;
+      json[r'objEzsignsigner'] = null;
     }
-    return _json;
+    return json;
   }
 
   /// Returns a new [EzsignfoldersignerassociationRequestCompound] instance and imports its values from

@@ -50,18 +50,18 @@ class EzsigndocumentRequestPatch {
   String toString() => 'EzsigndocumentRequestPatch[dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, sEzsigndocumentName=$sEzsigndocumentName]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (dtEzsigndocumentDuedate != null) {
-      _json[r'dtEzsigndocumentDuedate'] = dtEzsigndocumentDuedate;
+    final json = <String, dynamic>{};
+    if (this.dtEzsigndocumentDuedate != null) {
+      json[r'dtEzsigndocumentDuedate'] = this.dtEzsigndocumentDuedate;
     } else {
-      _json[r'dtEzsigndocumentDuedate'] = null;
+      json[r'dtEzsigndocumentDuedate'] = null;
     }
-    if (sEzsigndocumentName != null) {
-      _json[r'sEzsigndocumentName'] = sEzsigndocumentName;
+    if (this.sEzsigndocumentName != null) {
+      json[r'sEzsigndocumentName'] = this.sEzsigndocumentName;
     } else {
-      _json[r'sEzsigndocumentName'] = null;
+      json[r'sEzsigndocumentName'] = null;
     }
-    return _json;
+    return json;
   }
 
   /// Returns a new [EzsigndocumentRequestPatch] instance and imports its values from

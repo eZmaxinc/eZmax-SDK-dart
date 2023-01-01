@@ -76,22 +76,22 @@ class CustomNotificationsubsectiongetnotificationtestsResponse {
   String toString() => 'CustomNotificationsubsectiongetnotificationtestsResponse[pkiNotificationsubsectionID=$pkiNotificationsubsectionID, fkiNotificationsectionID=$fkiNotificationsectionID, objNotificationsubsectionName=$objNotificationsubsectionName, sNotificationsectionNameX=$sNotificationsectionNameX, sNotificationsubsectionNameX=$sNotificationsubsectionNameX, aObjNotificationtest=$aObjNotificationtest]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiNotificationsubsectionID'] = pkiNotificationsubsectionID;
-      _json[r'fkiNotificationsectionID'] = fkiNotificationsectionID;
-    if (objNotificationsubsectionName != null) {
-      _json[r'objNotificationsubsectionName'] = objNotificationsubsectionName;
+    final json = <String, dynamic>{};
+      json[r'pkiNotificationsubsectionID'] = this.pkiNotificationsubsectionID;
+      json[r'fkiNotificationsectionID'] = this.fkiNotificationsectionID;
+    if (this.objNotificationsubsectionName != null) {
+      json[r'objNotificationsubsectionName'] = this.objNotificationsubsectionName;
     } else {
-      _json[r'objNotificationsubsectionName'] = null;
+      json[r'objNotificationsubsectionName'] = null;
     }
-    if (sNotificationsectionNameX != null) {
-      _json[r'sNotificationsectionNameX'] = sNotificationsectionNameX;
+    if (this.sNotificationsectionNameX != null) {
+      json[r'sNotificationsectionNameX'] = this.sNotificationsectionNameX;
     } else {
-      _json[r'sNotificationsectionNameX'] = null;
+      json[r'sNotificationsectionNameX'] = null;
     }
-      _json[r'sNotificationsubsectionNameX'] = sNotificationsubsectionNameX;
-      _json[r'a_objNotificationtest'] = aObjNotificationtest;
-    return _json;
+      json[r'sNotificationsubsectionNameX'] = this.sNotificationsubsectionNameX;
+      json[r'a_objNotificationtest'] = this.aObjNotificationtest;
+    return json;
   }
 
   /// Returns a new [CustomNotificationsubsectiongetnotificationtestsResponse] instance and imports its values from

@@ -41,11 +41,11 @@ class EzsignformfieldgroupResponseCompoundAllOf {
   String toString() => 'EzsignformfieldgroupResponseCompoundAllOf[aObjEzsignformfield=$aObjEzsignformfield, aObjDropdownElement=$aObjDropdownElement, aObjEzsignformfieldgroupsigner=$aObjEzsignformfieldgroupsigner]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_objEzsignformfield'] = aObjEzsignformfield;
-      _json[r'a_objDropdownElement'] = aObjDropdownElement;
-      _json[r'a_objEzsignformfieldgroupsigner'] = aObjEzsignformfieldgroupsigner;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_objEzsignformfield'] = this.aObjEzsignformfield;
+      json[r'a_objDropdownElement'] = this.aObjDropdownElement;
+      json[r'a_objEzsignformfieldgroupsigner'] = this.aObjEzsignformfieldgroupsigner;
+    return json;
   }
 
   /// Returns a new [EzsignformfieldgroupResponseCompoundAllOf] instance and imports its values from

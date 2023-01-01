@@ -42,14 +42,14 @@ class CommonAudit {
   String toString() => 'CommonAudit[objAuditdetailCreated=$objAuditdetailCreated, objAuditdetailModified=$objAuditdetailModified]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'objAuditdetailCreated'] = objAuditdetailCreated;
-    if (objAuditdetailModified != null) {
-      _json[r'objAuditdetailModified'] = objAuditdetailModified;
+    final json = <String, dynamic>{};
+      json[r'objAuditdetailCreated'] = this.objAuditdetailCreated;
+    if (this.objAuditdetailModified != null) {
+      json[r'objAuditdetailModified'] = this.objAuditdetailModified;
     } else {
-      _json[r'objAuditdetailModified'] = null;
+      json[r'objAuditdetailModified'] = null;
     }
-    return _json;
+    return json;
   }
 
   /// Returns a new [CommonAudit] instance and imports its values from

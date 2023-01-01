@@ -46,11 +46,11 @@ class TimezoneAutocompleteElementResponse {
   String toString() => 'TimezoneAutocompleteElementResponse[sTimezoneName=$sTimezoneName, pkiTimezoneID=$pkiTimezoneID, bTimezoneIsactive=$bTimezoneIsactive]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'sTimezoneName'] = sTimezoneName;
-      _json[r'pkiTimezoneID'] = pkiTimezoneID;
-      _json[r'bTimezoneIsactive'] = bTimezoneIsactive;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'sTimezoneName'] = this.sTimezoneName;
+      json[r'pkiTimezoneID'] = this.pkiTimezoneID;
+      json[r'bTimezoneIsactive'] = this.bTimezoneIsactive;
+    return json;
   }
 
   /// Returns a new [TimezoneAutocompleteElementResponse] instance and imports its values from

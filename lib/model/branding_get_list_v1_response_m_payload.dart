@@ -43,11 +43,11 @@ class BrandingGetListV1ResponseMPayload {
   String toString() => 'BrandingGetListV1ResponseMPayload[aObjBranding=$aObjBranding, iRowReturned=$iRowReturned, iRowFiltered=$iRowFiltered]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_objBranding'] = aObjBranding;
-      _json[r'iRowReturned'] = iRowReturned;
-      _json[r'iRowFiltered'] = iRowFiltered;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_objBranding'] = this.aObjBranding;
+      json[r'iRowReturned'] = this.iRowReturned;
+      json[r'iRowFiltered'] = this.iRowFiltered;
+    return json;
   }
 
   /// Returns a new [BrandingGetListV1ResponseMPayload] instance and imports its values from

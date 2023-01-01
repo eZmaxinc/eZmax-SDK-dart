@@ -38,10 +38,10 @@ class EzsigntemplatepackagesignerDeleteObjectV1ResponseMPayload {
   String toString() => 'EzsigntemplatepackagesignerDeleteObjectV1ResponseMPayload[bEzsigntemplatepackageNeedvalidation=$bEzsigntemplatepackageNeedvalidation, bEzsignbulksendNeedvalidation=$bEzsignbulksendNeedvalidation]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'bEzsigntemplatepackageNeedvalidation'] = bEzsigntemplatepackageNeedvalidation;
-      _json[r'bEzsignbulksendNeedvalidation'] = bEzsignbulksendNeedvalidation;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'bEzsigntemplatepackageNeedvalidation'] = this.bEzsigntemplatepackageNeedvalidation;
+      json[r'bEzsignbulksendNeedvalidation'] = this.bEzsignbulksendNeedvalidation;
+    return json;
   }
 
   /// Returns a new [EzsigntemplatepackagesignerDeleteObjectV1ResponseMPayload] instance and imports its values from

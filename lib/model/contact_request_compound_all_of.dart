@@ -31,9 +31,9 @@ class ContactRequestCompoundAllOf {
   String toString() => 'ContactRequestCompoundAllOf[objContactinformations=$objContactinformations]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'objContactinformations'] = objContactinformations;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'objContactinformations'] = this.objContactinformations;
+    return json;
   }
 
   /// Returns a new [ContactRequestCompoundAllOf] instance and imports its values from

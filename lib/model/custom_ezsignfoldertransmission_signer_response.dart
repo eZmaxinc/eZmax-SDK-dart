@@ -52,15 +52,15 @@ class CustomEzsignfoldertransmissionSignerResponse {
   String toString() => 'CustomEzsignfoldertransmissionSignerResponse[fkiUserID=$fkiUserID, sContactFirstname=$sContactFirstname, sContactLastname=$sContactLastname]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (fkiUserID != null) {
-      _json[r'fkiUserID'] = fkiUserID;
+    final json = <String, dynamic>{};
+    if (this.fkiUserID != null) {
+      json[r'fkiUserID'] = this.fkiUserID;
     } else {
-      _json[r'fkiUserID'] = null;
+      json[r'fkiUserID'] = null;
     }
-      _json[r'sContactFirstname'] = sContactFirstname;
-      _json[r'sContactLastname'] = sContactLastname;
-    return _json;
+      json[r'sContactFirstname'] = this.sContactFirstname;
+      json[r'sContactLastname'] = this.sContactLastname;
+    return json;
   }
 
   /// Returns a new [CustomEzsignfoldertransmissionSignerResponse] instance and imports its values from

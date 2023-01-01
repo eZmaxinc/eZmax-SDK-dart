@@ -46,11 +46,11 @@ class EzmaxinvoicingAutocompleteElementResponse {
   String toString() => 'EzmaxinvoicingAutocompleteElementResponse[yyyymmEzmaxinvoicing=$yyyymmEzmaxinvoicing, pkiEzmaxinvoicingID=$pkiEzmaxinvoicingID, bEzmaxinvoicingIsactive=$bEzmaxinvoicingIsactive]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'yyyymmEzmaxinvoicing'] = yyyymmEzmaxinvoicing;
-      _json[r'pkiEzmaxinvoicingID'] = pkiEzmaxinvoicingID;
-      _json[r'bEzmaxinvoicingIsactive'] = bEzmaxinvoicingIsactive;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'yyyymmEzmaxinvoicing'] = this.yyyymmEzmaxinvoicing;
+      json[r'pkiEzmaxinvoicingID'] = this.pkiEzmaxinvoicingID;
+      json[r'bEzmaxinvoicingIsactive'] = this.bEzmaxinvoicingIsactive;
+    return json;
   }
 
   /// Returns a new [EzmaxinvoicingAutocompleteElementResponse] instance and imports its values from

@@ -89,20 +89,20 @@ class EzsigntemplateResponse {
   String toString() => 'EzsigntemplateResponse[pkiEzsigntemplateID=$pkiEzsigntemplateID, fkiEzsigntemplatedocumentID=$fkiEzsigntemplatedocumentID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiLanguageID=$fkiLanguageID, sLanguageNameX=$sLanguageNameX, sEzsigntemplateDescription=$sEzsigntemplateDescription, bEzsigntemplateAdminonly=$bEzsigntemplateAdminonly, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiEzsigntemplateID'] = pkiEzsigntemplateID;
-    if (fkiEzsigntemplatedocumentID != null) {
-      _json[r'fkiEzsigntemplatedocumentID'] = fkiEzsigntemplatedocumentID;
+    final json = <String, dynamic>{};
+      json[r'pkiEzsigntemplateID'] = this.pkiEzsigntemplateID;
+    if (this.fkiEzsigntemplatedocumentID != null) {
+      json[r'fkiEzsigntemplatedocumentID'] = this.fkiEzsigntemplatedocumentID;
     } else {
-      _json[r'fkiEzsigntemplatedocumentID'] = null;
+      json[r'fkiEzsigntemplatedocumentID'] = null;
     }
-      _json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
-      _json[r'fkiLanguageID'] = fkiLanguageID;
-      _json[r'sLanguageNameX'] = sLanguageNameX;
-      _json[r'sEzsigntemplateDescription'] = sEzsigntemplateDescription;
-      _json[r'bEzsigntemplateAdminonly'] = bEzsigntemplateAdminonly;
-      _json[r'sEzsignfoldertypeNameX'] = sEzsignfoldertypeNameX;
-    return _json;
+      json[r'fkiEzsignfoldertypeID'] = this.fkiEzsignfoldertypeID;
+      json[r'fkiLanguageID'] = this.fkiLanguageID;
+      json[r'sLanguageNameX'] = this.sLanguageNameX;
+      json[r'sEzsigntemplateDescription'] = this.sEzsigntemplateDescription;
+      json[r'bEzsigntemplateAdminonly'] = this.bEzsigntemplateAdminonly;
+      json[r'sEzsignfoldertypeNameX'] = this.sEzsignfoldertypeNameX;
+    return json;
   }
 
   /// Returns a new [EzsigntemplateResponse] instance and imports its values from

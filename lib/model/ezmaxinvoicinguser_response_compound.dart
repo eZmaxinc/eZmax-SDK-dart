@@ -106,26 +106,26 @@ class EzmaxinvoicinguserResponseCompound {
   String toString() => 'EzmaxinvoicinguserResponseCompound[pkiEzmaxinvoicinguserID=$pkiEzmaxinvoicinguserID, fkiEzmaxinvoicingID=$fkiEzmaxinvoicingID, fkiBillingentityinternalID=$fkiBillingentityinternalID, sBillingentityinternalDescriptionX=$sBillingentityinternalDescriptionX, fkiUserID=$fkiUserID, iEzmaxinvoicinguserEzsigndocument=$iEzmaxinvoicinguserEzsigndocument, bEzmaxinvoicinguserEzsignaccount=$bEzmaxinvoicinguserEzsignaccount, bEzmaxinvoicinguserBillableezsign=$bEzmaxinvoicinguserBillableezsign, eEzmaxinvoicinguserVariationezsign=$eEzmaxinvoicinguserVariationezsign, objContactName=$objContactName]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (pkiEzmaxinvoicinguserID != null) {
-      _json[r'pkiEzmaxinvoicinguserID'] = pkiEzmaxinvoicinguserID;
+    final json = <String, dynamic>{};
+    if (this.pkiEzmaxinvoicinguserID != null) {
+      json[r'pkiEzmaxinvoicinguserID'] = this.pkiEzmaxinvoicinguserID;
     } else {
-      _json[r'pkiEzmaxinvoicinguserID'] = null;
+      json[r'pkiEzmaxinvoicinguserID'] = null;
     }
-    if (fkiEzmaxinvoicingID != null) {
-      _json[r'fkiEzmaxinvoicingID'] = fkiEzmaxinvoicingID;
+    if (this.fkiEzmaxinvoicingID != null) {
+      json[r'fkiEzmaxinvoicingID'] = this.fkiEzmaxinvoicingID;
     } else {
-      _json[r'fkiEzmaxinvoicingID'] = null;
+      json[r'fkiEzmaxinvoicingID'] = null;
     }
-      _json[r'fkiBillingentityinternalID'] = fkiBillingentityinternalID;
-      _json[r'sBillingentityinternalDescriptionX'] = sBillingentityinternalDescriptionX;
-      _json[r'fkiUserID'] = fkiUserID;
-      _json[r'iEzmaxinvoicinguserEzsigndocument'] = iEzmaxinvoicinguserEzsigndocument;
-      _json[r'bEzmaxinvoicinguserEzsignaccount'] = bEzmaxinvoicinguserEzsignaccount;
-      _json[r'bEzmaxinvoicinguserBillableezsign'] = bEzmaxinvoicinguserBillableezsign;
-      _json[r'eEzmaxinvoicinguserVariationezsign'] = eEzmaxinvoicinguserVariationezsign;
-      _json[r'objContactName'] = objContactName;
-    return _json;
+      json[r'fkiBillingentityinternalID'] = this.fkiBillingentityinternalID;
+      json[r'sBillingentityinternalDescriptionX'] = this.sBillingentityinternalDescriptionX;
+      json[r'fkiUserID'] = this.fkiUserID;
+      json[r'iEzmaxinvoicinguserEzsigndocument'] = this.iEzmaxinvoicinguserEzsigndocument;
+      json[r'bEzmaxinvoicinguserEzsignaccount'] = this.bEzmaxinvoicinguserEzsignaccount;
+      json[r'bEzmaxinvoicinguserBillableezsign'] = this.bEzmaxinvoicinguserBillableezsign;
+      json[r'eEzmaxinvoicinguserVariationezsign'] = this.eEzmaxinvoicinguserVariationezsign;
+      json[r'objContactName'] = this.objContactName;
+    return json;
   }
 
   /// Returns a new [EzmaxinvoicinguserResponseCompound] instance and imports its values from

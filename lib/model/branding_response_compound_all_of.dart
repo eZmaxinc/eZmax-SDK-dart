@@ -38,13 +38,13 @@ class BrandingResponseCompoundAllOf {
   String toString() => 'BrandingResponseCompoundAllOf[sBrandingLogourl=$sBrandingLogourl]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (sBrandingLogourl != null) {
-      _json[r'sBrandingLogourl'] = sBrandingLogourl;
+    final json = <String, dynamic>{};
+    if (this.sBrandingLogourl != null) {
+      json[r'sBrandingLogourl'] = this.sBrandingLogourl;
     } else {
-      _json[r'sBrandingLogourl'] = null;
+      json[r'sBrandingLogourl'] = null;
     }
-    return _json;
+    return json;
   }
 
   /// Returns a new [BrandingResponseCompoundAllOf] instance and imports its values from

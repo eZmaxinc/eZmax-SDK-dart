@@ -87,17 +87,17 @@ class EzsigntemplatepackageResponse {
   String toString() => 'EzsigntemplatepackageResponse[pkiEzsigntemplatepackageID=$pkiEzsigntemplatepackageID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiLanguageID=$fkiLanguageID, sLanguageNameX=$sLanguageNameX, sEzsigntemplatepackageDescription=$sEzsigntemplatepackageDescription, bEzsigntemplatepackageAdminonly=$bEzsigntemplatepackageAdminonly, bEzsigntemplatepackageNeedvalidation=$bEzsigntemplatepackageNeedvalidation, bEzsigntemplatepackageIsactive=$bEzsigntemplatepackageIsactive, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiEzsigntemplatepackageID'] = pkiEzsigntemplatepackageID;
-      _json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
-      _json[r'fkiLanguageID'] = fkiLanguageID;
-      _json[r'sLanguageNameX'] = sLanguageNameX;
-      _json[r'sEzsigntemplatepackageDescription'] = sEzsigntemplatepackageDescription;
-      _json[r'bEzsigntemplatepackageAdminonly'] = bEzsigntemplatepackageAdminonly;
-      _json[r'bEzsigntemplatepackageNeedvalidation'] = bEzsigntemplatepackageNeedvalidation;
-      _json[r'bEzsigntemplatepackageIsactive'] = bEzsigntemplatepackageIsactive;
-      _json[r'sEzsignfoldertypeNameX'] = sEzsignfoldertypeNameX;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'pkiEzsigntemplatepackageID'] = this.pkiEzsigntemplatepackageID;
+      json[r'fkiEzsignfoldertypeID'] = this.fkiEzsignfoldertypeID;
+      json[r'fkiLanguageID'] = this.fkiLanguageID;
+      json[r'sLanguageNameX'] = this.sLanguageNameX;
+      json[r'sEzsigntemplatepackageDescription'] = this.sEzsigntemplatepackageDescription;
+      json[r'bEzsigntemplatepackageAdminonly'] = this.bEzsigntemplatepackageAdminonly;
+      json[r'bEzsigntemplatepackageNeedvalidation'] = this.bEzsigntemplatepackageNeedvalidation;
+      json[r'bEzsigntemplatepackageIsactive'] = this.bEzsigntemplatepackageIsactive;
+      json[r'sEzsignfoldertypeNameX'] = this.sEzsignfoldertypeNameX;
+    return json;
   }
 
   /// Returns a new [EzsigntemplatepackageResponse] instance and imports its values from

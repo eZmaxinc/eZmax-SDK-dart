@@ -51,12 +51,12 @@ class CustomEzsignfoldersignerassociationstatusResponse {
   String toString() => 'CustomEzsignfoldersignerassociationstatusResponse[fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, sEzsignfoldersignerassociationstatusLastname=$sEzsignfoldersignerassociationstatusLastname, sEzsignfoldersignerassociationstatusFirstname=$sEzsignfoldersignerassociationstatusFirstname, aObjEzsignsignaturestatus=$aObjEzsignsignaturestatus]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'fkiEzsignfoldersignerassociationID'] = fkiEzsignfoldersignerassociationID;
-      _json[r'sEzsignfoldersignerassociationstatusLastname'] = sEzsignfoldersignerassociationstatusLastname;
-      _json[r'sEzsignfoldersignerassociationstatusFirstname'] = sEzsignfoldersignerassociationstatusFirstname;
-      _json[r'a_objEzsignsignaturestatus'] = aObjEzsignsignaturestatus;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'fkiEzsignfoldersignerassociationID'] = this.fkiEzsignfoldersignerassociationID;
+      json[r'sEzsignfoldersignerassociationstatusLastname'] = this.sEzsignfoldersignerassociationstatusLastname;
+      json[r'sEzsignfoldersignerassociationstatusFirstname'] = this.sEzsignfoldersignerassociationstatusFirstname;
+      json[r'a_objEzsignsignaturestatus'] = this.aObjEzsignsignaturestatus;
+    return json;
   }
 
   /// Returns a new [CustomEzsignfoldersignerassociationstatusResponse] instance and imports its values from

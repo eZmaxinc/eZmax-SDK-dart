@@ -60,13 +60,13 @@ class EzsignfoldersignerassociationResponse {
   String toString() => 'EzsignfoldersignerassociationResponse[pkiEzsignfoldersignerassociationID=$pkiEzsignfoldersignerassociationID, fkiEzsignfolderID=$fkiEzsignfolderID, bEzsignfoldersignerassociationDelayedsend=$bEzsignfoldersignerassociationDelayedsend, bEzsignfoldersignerassociationReceivecopy=$bEzsignfoldersignerassociationReceivecopy, tEzsignfoldersignerassociationMessage=$tEzsignfoldersignerassociationMessage]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiEzsignfoldersignerassociationID'] = pkiEzsignfoldersignerassociationID;
-      _json[r'fkiEzsignfolderID'] = fkiEzsignfolderID;
-      _json[r'bEzsignfoldersignerassociationDelayedsend'] = bEzsignfoldersignerassociationDelayedsend;
-      _json[r'bEzsignfoldersignerassociationReceivecopy'] = bEzsignfoldersignerassociationReceivecopy;
-      _json[r'tEzsignfoldersignerassociationMessage'] = tEzsignfoldersignerassociationMessage;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'pkiEzsignfoldersignerassociationID'] = this.pkiEzsignfoldersignerassociationID;
+      json[r'fkiEzsignfolderID'] = this.fkiEzsignfolderID;
+      json[r'bEzsignfoldersignerassociationDelayedsend'] = this.bEzsignfoldersignerassociationDelayedsend;
+      json[r'bEzsignfoldersignerassociationReceivecopy'] = this.bEzsignfoldersignerassociationReceivecopy;
+      json[r'tEzsignfoldersignerassociationMessage'] = this.tEzsignfoldersignerassociationMessage;
+    return json;
   }
 
   /// Returns a new [EzsignfoldersignerassociationResponse] instance and imports its values from

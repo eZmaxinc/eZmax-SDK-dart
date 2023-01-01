@@ -176,50 +176,50 @@ class EzsignformfieldgroupGetObjectV1ResponseMPayload {
   String toString() => 'EzsignformfieldgroupGetObjectV1ResponseMPayload[pkiEzsignformfieldgroupID=$pkiEzsignformfieldgroupID, fkiEzsigndocumentID=$fkiEzsigndocumentID, eEzsignformfieldgroupType=$eEzsignformfieldgroupType, eEzsignformfieldgroupSignerrequirement=$eEzsignformfieldgroupSignerrequirement, sEzsignformfieldgroupLabel=$sEzsignformfieldgroupLabel, iEzsignformfieldgroupStep=$iEzsignformfieldgroupStep, sEzsignformfieldgroupDefaultvalue=$sEzsignformfieldgroupDefaultvalue, iEzsignformfieldgroupFilledmin=$iEzsignformfieldgroupFilledmin, iEzsignformfieldgroupFilledmax=$iEzsignformfieldgroupFilledmax, bEzsignformfieldgroupReadonly=$bEzsignformfieldgroupReadonly, iEzsignformfieldgroupMaxlength=$iEzsignformfieldgroupMaxlength, bEzsignformfieldgroupEncrypted=$bEzsignformfieldgroupEncrypted, sEzsignformfieldgroupRegexp=$sEzsignformfieldgroupRegexp, tEzsignformfieldgroupTooltip=$tEzsignformfieldgroupTooltip, eEzsignformfieldgroupTooltipposition=$eEzsignformfieldgroupTooltipposition, aObjEzsignformfield=$aObjEzsignformfield, aObjDropdownElement=$aObjDropdownElement, aObjEzsignformfieldgroupsigner=$aObjEzsignformfieldgroupsigner]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiEzsignformfieldgroupID'] = pkiEzsignformfieldgroupID;
-      _json[r'fkiEzsigndocumentID'] = fkiEzsigndocumentID;
-      _json[r'eEzsignformfieldgroupType'] = eEzsignformfieldgroupType;
-      _json[r'eEzsignformfieldgroupSignerrequirement'] = eEzsignformfieldgroupSignerrequirement;
-      _json[r'sEzsignformfieldgroupLabel'] = sEzsignformfieldgroupLabel;
-      _json[r'iEzsignformfieldgroupStep'] = iEzsignformfieldgroupStep;
-    if (sEzsignformfieldgroupDefaultvalue != null) {
-      _json[r'sEzsignformfieldgroupDefaultvalue'] = sEzsignformfieldgroupDefaultvalue;
+    final json = <String, dynamic>{};
+      json[r'pkiEzsignformfieldgroupID'] = this.pkiEzsignformfieldgroupID;
+      json[r'fkiEzsigndocumentID'] = this.fkiEzsigndocumentID;
+      json[r'eEzsignformfieldgroupType'] = this.eEzsignformfieldgroupType;
+      json[r'eEzsignformfieldgroupSignerrequirement'] = this.eEzsignformfieldgroupSignerrequirement;
+      json[r'sEzsignformfieldgroupLabel'] = this.sEzsignformfieldgroupLabel;
+      json[r'iEzsignformfieldgroupStep'] = this.iEzsignformfieldgroupStep;
+    if (this.sEzsignformfieldgroupDefaultvalue != null) {
+      json[r'sEzsignformfieldgroupDefaultvalue'] = this.sEzsignformfieldgroupDefaultvalue;
     } else {
-      _json[r'sEzsignformfieldgroupDefaultvalue'] = null;
+      json[r'sEzsignformfieldgroupDefaultvalue'] = null;
     }
-      _json[r'iEzsignformfieldgroupFilledmin'] = iEzsignformfieldgroupFilledmin;
-      _json[r'iEzsignformfieldgroupFilledmax'] = iEzsignformfieldgroupFilledmax;
-      _json[r'bEzsignformfieldgroupReadonly'] = bEzsignformfieldgroupReadonly;
-    if (iEzsignformfieldgroupMaxlength != null) {
-      _json[r'iEzsignformfieldgroupMaxlength'] = iEzsignformfieldgroupMaxlength;
+      json[r'iEzsignformfieldgroupFilledmin'] = this.iEzsignformfieldgroupFilledmin;
+      json[r'iEzsignformfieldgroupFilledmax'] = this.iEzsignformfieldgroupFilledmax;
+      json[r'bEzsignformfieldgroupReadonly'] = this.bEzsignformfieldgroupReadonly;
+    if (this.iEzsignformfieldgroupMaxlength != null) {
+      json[r'iEzsignformfieldgroupMaxlength'] = this.iEzsignformfieldgroupMaxlength;
     } else {
-      _json[r'iEzsignformfieldgroupMaxlength'] = null;
+      json[r'iEzsignformfieldgroupMaxlength'] = null;
     }
-    if (bEzsignformfieldgroupEncrypted != null) {
-      _json[r'bEzsignformfieldgroupEncrypted'] = bEzsignformfieldgroupEncrypted;
+    if (this.bEzsignformfieldgroupEncrypted != null) {
+      json[r'bEzsignformfieldgroupEncrypted'] = this.bEzsignformfieldgroupEncrypted;
     } else {
-      _json[r'bEzsignformfieldgroupEncrypted'] = null;
+      json[r'bEzsignformfieldgroupEncrypted'] = null;
     }
-    if (sEzsignformfieldgroupRegexp != null) {
-      _json[r'sEzsignformfieldgroupRegexp'] = sEzsignformfieldgroupRegexp;
+    if (this.sEzsignformfieldgroupRegexp != null) {
+      json[r'sEzsignformfieldgroupRegexp'] = this.sEzsignformfieldgroupRegexp;
     } else {
-      _json[r'sEzsignformfieldgroupRegexp'] = null;
+      json[r'sEzsignformfieldgroupRegexp'] = null;
     }
-    if (tEzsignformfieldgroupTooltip != null) {
-      _json[r'tEzsignformfieldgroupTooltip'] = tEzsignformfieldgroupTooltip;
+    if (this.tEzsignformfieldgroupTooltip != null) {
+      json[r'tEzsignformfieldgroupTooltip'] = this.tEzsignformfieldgroupTooltip;
     } else {
-      _json[r'tEzsignformfieldgroupTooltip'] = null;
+      json[r'tEzsignformfieldgroupTooltip'] = null;
     }
-    if (eEzsignformfieldgroupTooltipposition != null) {
-      _json[r'eEzsignformfieldgroupTooltipposition'] = eEzsignformfieldgroupTooltipposition;
+    if (this.eEzsignformfieldgroupTooltipposition != null) {
+      json[r'eEzsignformfieldgroupTooltipposition'] = this.eEzsignformfieldgroupTooltipposition;
     } else {
-      _json[r'eEzsignformfieldgroupTooltipposition'] = null;
+      json[r'eEzsignformfieldgroupTooltipposition'] = null;
     }
-      _json[r'a_objEzsignformfield'] = aObjEzsignformfield;
-      _json[r'a_objDropdownElement'] = aObjDropdownElement;
-      _json[r'a_objEzsignformfieldgroupsigner'] = aObjEzsignformfieldgroupsigner;
-    return _json;
+      json[r'a_objEzsignformfield'] = this.aObjEzsignformfield;
+      json[r'a_objDropdownElement'] = this.aObjDropdownElement;
+      json[r'a_objEzsignformfieldgroupsigner'] = this.aObjEzsignformfieldgroupsigner;
+    return json;
   }
 
   /// Returns a new [EzsignformfieldgroupGetObjectV1ResponseMPayload] instance and imports its values from

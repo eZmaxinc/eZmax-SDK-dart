@@ -122,24 +122,24 @@ class BrandingResponseCompound {
   String toString() => 'BrandingResponseCompound[pkiBrandingID=$pkiBrandingID, objBrandingDescription=$objBrandingDescription, sBrandingDescriptionX=$sBrandingDescriptionX, eBrandingLogo=$eBrandingLogo, iBrandingColortext=$iBrandingColortext, iBrandingColortextlinkbox=$iBrandingColortextlinkbox, iBrandingColortextbutton=$iBrandingColortextbutton, iBrandingColorbackground=$iBrandingColorbackground, iBrandingColorbackgroundbutton=$iBrandingColorbackgroundbutton, iBrandingColorbackgroundsmallbox=$iBrandingColorbackgroundsmallbox, bBrandingIsactive=$bBrandingIsactive, sBrandingLogourl=$sBrandingLogourl]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiBrandingID'] = pkiBrandingID;
-      _json[r'objBrandingDescription'] = objBrandingDescription;
-      _json[r'sBrandingDescriptionX'] = sBrandingDescriptionX;
-      _json[r'eBrandingLogo'] = eBrandingLogo;
-      _json[r'iBrandingColortext'] = iBrandingColortext;
-      _json[r'iBrandingColortextlinkbox'] = iBrandingColortextlinkbox;
-      _json[r'iBrandingColortextbutton'] = iBrandingColortextbutton;
-      _json[r'iBrandingColorbackground'] = iBrandingColorbackground;
-      _json[r'iBrandingColorbackgroundbutton'] = iBrandingColorbackgroundbutton;
-      _json[r'iBrandingColorbackgroundsmallbox'] = iBrandingColorbackgroundsmallbox;
-      _json[r'bBrandingIsactive'] = bBrandingIsactive;
-    if (sBrandingLogourl != null) {
-      _json[r'sBrandingLogourl'] = sBrandingLogourl;
+    final json = <String, dynamic>{};
+      json[r'pkiBrandingID'] = this.pkiBrandingID;
+      json[r'objBrandingDescription'] = this.objBrandingDescription;
+      json[r'sBrandingDescriptionX'] = this.sBrandingDescriptionX;
+      json[r'eBrandingLogo'] = this.eBrandingLogo;
+      json[r'iBrandingColortext'] = this.iBrandingColortext;
+      json[r'iBrandingColortextlinkbox'] = this.iBrandingColortextlinkbox;
+      json[r'iBrandingColortextbutton'] = this.iBrandingColortextbutton;
+      json[r'iBrandingColorbackground'] = this.iBrandingColorbackground;
+      json[r'iBrandingColorbackgroundbutton'] = this.iBrandingColorbackgroundbutton;
+      json[r'iBrandingColorbackgroundsmallbox'] = this.iBrandingColorbackgroundsmallbox;
+      json[r'bBrandingIsactive'] = this.bBrandingIsactive;
+    if (this.sBrandingLogourl != null) {
+      json[r'sBrandingLogourl'] = this.sBrandingLogourl;
     } else {
-      _json[r'sBrandingLogourl'] = null;
+      json[r'sBrandingLogourl'] = null;
     }
-    return _json;
+    return json;
   }
 
   /// Returns a new [BrandingResponseCompound] instance and imports its values from

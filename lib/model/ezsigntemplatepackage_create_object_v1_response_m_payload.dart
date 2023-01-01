@@ -32,9 +32,9 @@ class EzsigntemplatepackageCreateObjectV1ResponseMPayload {
   String toString() => 'EzsigntemplatepackageCreateObjectV1ResponseMPayload[aPkiEzsigntemplatepackageID=$aPkiEzsigntemplatepackageID]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_pkiEzsigntemplatepackageID'] = aPkiEzsigntemplatepackageID;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_pkiEzsigntemplatepackageID'] = this.aPkiEzsigntemplatepackageID;
+    return json;
   }
 
   /// Returns a new [EzsigntemplatepackageCreateObjectV1ResponseMPayload] instance and imports its values from

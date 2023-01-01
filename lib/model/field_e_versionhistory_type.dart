@@ -73,7 +73,7 @@ class FieldEVersionhistoryTypeTypeTransformer {
   /// and users are still using an old app with the old code.
   FieldEVersionhistoryType? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
-      switch (data.toString()) {
+      switch (data) {
         case r'AgentBroker': return FieldEVersionhistoryType.agentBroker;
         case r'NewFeature': return FieldEVersionhistoryType.newFeature;
         case r'Correction': return FieldEVersionhistoryType.correction;

@@ -62,23 +62,23 @@ class CustomContactNameResponse {
   String toString() => 'CustomContactNameResponse[sContactFirstname=$sContactFirstname, sContactLastname=$sContactLastname, sContactCompany=$sContactCompany]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (sContactFirstname != null) {
-      _json[r'sContactFirstname'] = sContactFirstname;
+    final json = <String, dynamic>{};
+    if (this.sContactFirstname != null) {
+      json[r'sContactFirstname'] = this.sContactFirstname;
     } else {
-      _json[r'sContactFirstname'] = null;
+      json[r'sContactFirstname'] = null;
     }
-    if (sContactLastname != null) {
-      _json[r'sContactLastname'] = sContactLastname;
+    if (this.sContactLastname != null) {
+      json[r'sContactLastname'] = this.sContactLastname;
     } else {
-      _json[r'sContactLastname'] = null;
+      json[r'sContactLastname'] = null;
     }
-    if (sContactCompany != null) {
-      _json[r'sContactCompany'] = sContactCompany;
+    if (this.sContactCompany != null) {
+      json[r'sContactCompany'] = this.sContactCompany;
     } else {
-      _json[r'sContactCompany'] = null;
+      json[r'sContactCompany'] = null;
     }
-    return _json;
+    return json;
   }
 
   /// Returns a new [CustomContactNameResponse] instance and imports its values from

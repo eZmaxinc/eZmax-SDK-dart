@@ -51,12 +51,12 @@ class EzsignfoldertypeAutocompleteElementResponse {
   String toString() => 'EzsignfoldertypeAutocompleteElementResponse[eEzsignfoldertypePrivacylevel=$eEzsignfoldertypePrivacylevel, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, pkiEzsignfoldertypeID=$pkiEzsignfoldertypeID, bEzsignfoldertypeIsactive=$bEzsignfoldertypeIsactive]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'eEzsignfoldertypePrivacylevel'] = eEzsignfoldertypePrivacylevel;
-      _json[r'sEzsignfoldertypeNameX'] = sEzsignfoldertypeNameX;
-      _json[r'pkiEzsignfoldertypeID'] = pkiEzsignfoldertypeID;
-      _json[r'bEzsignfoldertypeIsactive'] = bEzsignfoldertypeIsactive;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'eEzsignfoldertypePrivacylevel'] = this.eEzsignfoldertypePrivacylevel;
+      json[r'sEzsignfoldertypeNameX'] = this.sEzsignfoldertypeNameX;
+      json[r'pkiEzsignfoldertypeID'] = this.pkiEzsignfoldertypeID;
+      json[r'bEzsignfoldertypeIsactive'] = this.bEzsignfoldertypeIsactive;
+    return json;
   }
 
   /// Returns a new [EzsignfoldertypeAutocompleteElementResponse] instance and imports its values from

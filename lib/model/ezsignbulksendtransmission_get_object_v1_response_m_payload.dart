@@ -66,14 +66,14 @@ class EzsignbulksendtransmissionGetObjectV1ResponseMPayload {
   String toString() => 'EzsignbulksendtransmissionGetObjectV1ResponseMPayload[pkiEzsignbulksendtransmissionID=$pkiEzsignbulksendtransmissionID, fkiEzsignbulksendID=$fkiEzsignbulksendID, sEzsignbulksendtransmissionDescription=$sEzsignbulksendtransmissionDescription, iEzsignbulksendtransmissionErrors=$iEzsignbulksendtransmissionErrors, objAudit=$objAudit, aObjEzsignfoldertransmission=$aObjEzsignfoldertransmission]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiEzsignbulksendtransmissionID'] = pkiEzsignbulksendtransmissionID;
-      _json[r'fkiEzsignbulksendID'] = fkiEzsignbulksendID;
-      _json[r'sEzsignbulksendtransmissionDescription'] = sEzsignbulksendtransmissionDescription;
-      _json[r'iEzsignbulksendtransmissionErrors'] = iEzsignbulksendtransmissionErrors;
-      _json[r'objAudit'] = objAudit;
-      _json[r'a_objEzsignfoldertransmission'] = aObjEzsignfoldertransmission;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'pkiEzsignbulksendtransmissionID'] = this.pkiEzsignbulksendtransmissionID;
+      json[r'fkiEzsignbulksendID'] = this.fkiEzsignbulksendID;
+      json[r'sEzsignbulksendtransmissionDescription'] = this.sEzsignbulksendtransmissionDescription;
+      json[r'iEzsignbulksendtransmissionErrors'] = this.iEzsignbulksendtransmissionErrors;
+      json[r'objAudit'] = this.objAudit;
+      json[r'a_objEzsignfoldertransmission'] = this.aObjEzsignfoldertransmission;
+    return json;
   }
 
   /// Returns a new [EzsignbulksendtransmissionGetObjectV1ResponseMPayload] instance and imports its values from

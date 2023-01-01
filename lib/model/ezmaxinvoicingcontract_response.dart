@@ -82,17 +82,17 @@ class EzmaxinvoicingcontractResponse {
   String toString() => 'EzmaxinvoicingcontractResponse[pkiEzmaxinvoicingcontractID=$pkiEzmaxinvoicingcontractID, eEzmaxinvoicingcontractPaymenttype=$eEzmaxinvoicingcontractPaymenttype, iEzmaxinvoicingcontractLength=$iEzmaxinvoicingcontractLength, dtEzmaxinvoicingcontractStart=$dtEzmaxinvoicingcontractStart, dtEzmaxinvoicingcontractEnd=$dtEzmaxinvoicingcontractEnd, dEzmaxinvoicingcontractLicense=$dEzmaxinvoicingcontractLicense, dEzmaxinvoicingcontract121qa=$dEzmaxinvoicingcontract121qa, bEzmaxinvoicingcontractEzsignallagents=$bEzmaxinvoicingcontractEzsignallagents, objAudit=$objAudit]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiEzmaxinvoicingcontractID'] = pkiEzmaxinvoicingcontractID;
-      _json[r'eEzmaxinvoicingcontractPaymenttype'] = eEzmaxinvoicingcontractPaymenttype;
-      _json[r'iEzmaxinvoicingcontractLength'] = iEzmaxinvoicingcontractLength;
-      _json[r'dtEzmaxinvoicingcontractStart'] = dtEzmaxinvoicingcontractStart;
-      _json[r'dtEzmaxinvoicingcontractEnd'] = dtEzmaxinvoicingcontractEnd;
-      _json[r'dEzmaxinvoicingcontractLicense'] = dEzmaxinvoicingcontractLicense;
-      _json[r'dEzmaxinvoicingcontract121qa'] = dEzmaxinvoicingcontract121qa;
-      _json[r'bEzmaxinvoicingcontractEzsignallagents'] = bEzmaxinvoicingcontractEzsignallagents;
-      _json[r'objAudit'] = objAudit;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'pkiEzmaxinvoicingcontractID'] = this.pkiEzmaxinvoicingcontractID;
+      json[r'eEzmaxinvoicingcontractPaymenttype'] = this.eEzmaxinvoicingcontractPaymenttype;
+      json[r'iEzmaxinvoicingcontractLength'] = this.iEzmaxinvoicingcontractLength;
+      json[r'dtEzmaxinvoicingcontractStart'] = this.dtEzmaxinvoicingcontractStart;
+      json[r'dtEzmaxinvoicingcontractEnd'] = this.dtEzmaxinvoicingcontractEnd;
+      json[r'dEzmaxinvoicingcontractLicense'] = this.dEzmaxinvoicingcontractLicense;
+      json[r'dEzmaxinvoicingcontract121qa'] = this.dEzmaxinvoicingcontract121qa;
+      json[r'bEzmaxinvoicingcontractEzsignallagents'] = this.bEzmaxinvoicingcontractEzsignallagents;
+      json[r'objAudit'] = this.objAudit;
+    return json;
   }
 
   /// Returns a new [EzmaxinvoicingcontractResponse] instance and imports its values from

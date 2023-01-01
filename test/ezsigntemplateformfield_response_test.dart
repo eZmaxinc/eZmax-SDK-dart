@@ -34,7 +34,7 @@ void main() {
       // TODO
     });
 
-    // The value for the Ezsigntemplateformfield  This can only be set if eEzsigntemplateformfieldgroupType is Checkbox or Radio
+    // The value for the Ezsigntemplateformfield
     // String sEzsigntemplateformfieldValue
     test('to test the property `sEzsigntemplateformfieldValue`', () async {
       // TODO

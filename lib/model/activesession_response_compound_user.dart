@@ -94,18 +94,18 @@ class ActivesessionResponseCompoundUser {
   String toString() => 'ActivesessionResponseCompoundUser[pkiUserID=$pkiUserID, fkiTimezoneID=$fkiTimezoneID, sAvatarUrl=$sAvatarUrl, sUserFirstname=$sUserFirstname, sUserLastname=$sUserLastname, sEmailAddress=$sEmailAddress, eUserEzsignsendreminderfrequency=$eUserEzsignsendreminderfrequency, iUserInterfacecolor=$iUserInterfacecolor, bUserInterfacedark=$bUserInterfacedark, iUserListresult=$iUserListresult]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiUserID'] = pkiUserID;
-      _json[r'fkiTimezoneID'] = fkiTimezoneID;
-      _json[r'sAvatarUrl'] = sAvatarUrl;
-      _json[r'sUserFirstname'] = sUserFirstname;
-      _json[r'sUserLastname'] = sUserLastname;
-      _json[r'sEmailAddress'] = sEmailAddress;
-      _json[r'eUserEzsignsendreminderfrequency'] = eUserEzsignsendreminderfrequency;
-      _json[r'iUserInterfacecolor'] = iUserInterfacecolor;
-      _json[r'bUserInterfacedark'] = bUserInterfacedark;
-      _json[r'iUserListresult'] = iUserListresult;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'pkiUserID'] = this.pkiUserID;
+      json[r'fkiTimezoneID'] = this.fkiTimezoneID;
+      json[r'sAvatarUrl'] = this.sAvatarUrl;
+      json[r'sUserFirstname'] = this.sUserFirstname;
+      json[r'sUserLastname'] = this.sUserLastname;
+      json[r'sEmailAddress'] = this.sEmailAddress;
+      json[r'eUserEzsignsendreminderfrequency'] = this.eUserEzsignsendreminderfrequency;
+      json[r'iUserInterfacecolor'] = this.iUserInterfacecolor;
+      json[r'bUserInterfacedark'] = this.bUserInterfacedark;
+      json[r'iUserListresult'] = this.iUserListresult;
+    return json;
   }
 
   /// Returns a new [ActivesessionResponseCompoundUser] instance and imports its values from

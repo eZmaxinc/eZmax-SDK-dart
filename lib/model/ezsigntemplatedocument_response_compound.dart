@@ -62,13 +62,13 @@ class EzsigntemplatedocumentResponseCompound {
   String toString() => 'EzsigntemplatedocumentResponseCompound[pkiEzsigntemplatedocumentID=$pkiEzsigntemplatedocumentID, fkiEzsigntemplateID=$fkiEzsigntemplateID, sEzsigntemplatedocumentName=$sEzsigntemplatedocumentName, iEzsigntemplatedocumentPagetotal=$iEzsigntemplatedocumentPagetotal, iEzsigntemplatedocumentSignaturetotal=$iEzsigntemplatedocumentSignaturetotal]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiEzsigntemplatedocumentID'] = pkiEzsigntemplatedocumentID;
-      _json[r'fkiEzsigntemplateID'] = fkiEzsigntemplateID;
-      _json[r'sEzsigntemplatedocumentName'] = sEzsigntemplatedocumentName;
-      _json[r'iEzsigntemplatedocumentPagetotal'] = iEzsigntemplatedocumentPagetotal;
-      _json[r'iEzsigntemplatedocumentSignaturetotal'] = iEzsigntemplatedocumentSignaturetotal;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'pkiEzsigntemplatedocumentID'] = this.pkiEzsigntemplatedocumentID;
+      json[r'fkiEzsigntemplateID'] = this.fkiEzsigntemplateID;
+      json[r'sEzsigntemplatedocumentName'] = this.sEzsigntemplatedocumentName;
+      json[r'iEzsigntemplatedocumentPagetotal'] = this.iEzsigntemplatedocumentPagetotal;
+      json[r'iEzsigntemplatedocumentSignaturetotal'] = this.iEzsigntemplatedocumentSignaturetotal;
+    return json;
   }
 
   /// Returns a new [EzsigntemplatedocumentResponseCompound] instance and imports its values from

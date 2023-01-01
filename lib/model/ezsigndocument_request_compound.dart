@@ -157,54 +157,54 @@ class EzsigndocumentRequestCompound {
   String toString() => 'EzsigndocumentRequestCompound[pkiEzsigndocumentID=$pkiEzsigndocumentID, fkiEzsignfolderID=$fkiEzsignfolderID, fkiEzsigntemplateID=$fkiEzsigntemplateID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, fkiLanguageID=$fkiLanguageID, eEzsigndocumentSource=$eEzsigndocumentSource, eEzsigndocumentFormat=$eEzsigndocumentFormat, sEzsigndocumentBase64=$sEzsigndocumentBase64, sEzsigndocumentUrl=$sEzsigndocumentUrl, bEzsigndocumentForcerepair=$bEzsigndocumentForcerepair, sEzsigndocumentPassword=$sEzsigndocumentPassword, eEzsigndocumentForm=$eEzsigndocumentForm, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, sEzsigndocumentName=$sEzsigndocumentName]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (pkiEzsigndocumentID != null) {
-      _json[r'pkiEzsigndocumentID'] = pkiEzsigndocumentID;
+    final json = <String, dynamic>{};
+    if (this.pkiEzsigndocumentID != null) {
+      json[r'pkiEzsigndocumentID'] = this.pkiEzsigndocumentID;
     } else {
-      _json[r'pkiEzsigndocumentID'] = null;
+      json[r'pkiEzsigndocumentID'] = null;
     }
-      _json[r'fkiEzsignfolderID'] = fkiEzsignfolderID;
-    if (fkiEzsigntemplateID != null) {
-      _json[r'fkiEzsigntemplateID'] = fkiEzsigntemplateID;
+      json[r'fkiEzsignfolderID'] = this.fkiEzsignfolderID;
+    if (this.fkiEzsigntemplateID != null) {
+      json[r'fkiEzsigntemplateID'] = this.fkiEzsigntemplateID;
     } else {
-      _json[r'fkiEzsigntemplateID'] = null;
+      json[r'fkiEzsigntemplateID'] = null;
     }
-    if (fkiEzsignfoldersignerassociationID != null) {
-      _json[r'fkiEzsignfoldersignerassociationID'] = fkiEzsignfoldersignerassociationID;
+    if (this.fkiEzsignfoldersignerassociationID != null) {
+      json[r'fkiEzsignfoldersignerassociationID'] = this.fkiEzsignfoldersignerassociationID;
     } else {
-      _json[r'fkiEzsignfoldersignerassociationID'] = null;
+      json[r'fkiEzsignfoldersignerassociationID'] = null;
     }
-      _json[r'fkiLanguageID'] = fkiLanguageID;
-      _json[r'eEzsigndocumentSource'] = eEzsigndocumentSource;
-    if (eEzsigndocumentFormat != null) {
-      _json[r'eEzsigndocumentFormat'] = eEzsigndocumentFormat;
+      json[r'fkiLanguageID'] = this.fkiLanguageID;
+      json[r'eEzsigndocumentSource'] = this.eEzsigndocumentSource;
+    if (this.eEzsigndocumentFormat != null) {
+      json[r'eEzsigndocumentFormat'] = this.eEzsigndocumentFormat;
     } else {
-      _json[r'eEzsigndocumentFormat'] = null;
+      json[r'eEzsigndocumentFormat'] = null;
     }
-    if (sEzsigndocumentBase64 != null) {
-      _json[r'sEzsigndocumentBase64'] = sEzsigndocumentBase64;
+    if (this.sEzsigndocumentBase64 != null) {
+      json[r'sEzsigndocumentBase64'] = this.sEzsigndocumentBase64;
     } else {
-      _json[r'sEzsigndocumentBase64'] = null;
+      json[r'sEzsigndocumentBase64'] = null;
     }
-    if (sEzsigndocumentUrl != null) {
-      _json[r'sEzsigndocumentUrl'] = sEzsigndocumentUrl;
+    if (this.sEzsigndocumentUrl != null) {
+      json[r'sEzsigndocumentUrl'] = this.sEzsigndocumentUrl;
     } else {
-      _json[r'sEzsigndocumentUrl'] = null;
+      json[r'sEzsigndocumentUrl'] = null;
     }
-      _json[r'bEzsigndocumentForcerepair'] = bEzsigndocumentForcerepair;
-    if (sEzsigndocumentPassword != null) {
-      _json[r'sEzsigndocumentPassword'] = sEzsigndocumentPassword;
+      json[r'bEzsigndocumentForcerepair'] = this.bEzsigndocumentForcerepair;
+    if (this.sEzsigndocumentPassword != null) {
+      json[r'sEzsigndocumentPassword'] = this.sEzsigndocumentPassword;
     } else {
-      _json[r'sEzsigndocumentPassword'] = null;
+      json[r'sEzsigndocumentPassword'] = null;
     }
-    if (eEzsigndocumentForm != null) {
-      _json[r'eEzsigndocumentForm'] = eEzsigndocumentForm;
+    if (this.eEzsigndocumentForm != null) {
+      json[r'eEzsigndocumentForm'] = this.eEzsigndocumentForm;
     } else {
-      _json[r'eEzsigndocumentForm'] = null;
+      json[r'eEzsigndocumentForm'] = null;
     }
-      _json[r'dtEzsigndocumentDuedate'] = dtEzsigndocumentDuedate;
-      _json[r'sEzsigndocumentName'] = sEzsigndocumentName;
-    return _json;
+      json[r'dtEzsigndocumentDuedate'] = this.dtEzsigndocumentDuedate;
+      json[r'sEzsigndocumentName'] = this.sEzsigndocumentName;
+    return json;
   }
 
   /// Returns a new [EzsigndocumentRequestCompound] instance and imports its values from
@@ -356,7 +356,7 @@ class EzsigndocumentRequestCompoundEEzsigndocumentSourceEnumTypeTransformer {
   /// and users are still using an old app with the old code.
   EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
-      switch (data.toString()) {
+      switch (data) {
         case r'Base64': return EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum.base64;
         case r'Ezsigntemplate': return EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum.ezsigntemplate;
         case r'Url': return EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum.url;
@@ -429,7 +429,7 @@ class EzsigndocumentRequestCompoundEEzsigndocumentFormatEnumTypeTransformer {
   /// and users are still using an old app with the old code.
   EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
-      switch (data.toString()) {
+      switch (data) {
         case r'Pdf': return EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum.pdf;
         default:
           if (!allowNull) {
@@ -502,7 +502,7 @@ class EzsigndocumentRequestCompoundEEzsigndocumentFormEnumTypeTransformer {
   /// and users are still using an old app with the old code.
   EzsigndocumentRequestCompoundEEzsigndocumentFormEnum? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
-      switch (data.toString()) {
+      switch (data) {
         case r'Keep': return EzsigndocumentRequestCompoundEEzsigndocumentFormEnum.keep;
         case r'Convert': return EzsigndocumentRequestCompoundEEzsigndocumentFormEnum.convert;
         default:

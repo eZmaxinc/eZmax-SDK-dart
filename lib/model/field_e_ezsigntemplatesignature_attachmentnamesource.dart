@@ -69,7 +69,7 @@ class FieldEEzsigntemplatesignatureAttachmentnamesourceTypeTransformer {
   /// and users are still using an old app with the old code.
   FieldEEzsigntemplatesignatureAttachmentnamesource? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
-      switch (data.toString()) {
+      switch (data) {
         case r'Description': return FieldEEzsigntemplatesignatureAttachmentnamesource.description;
         case r'Customer': return FieldEEzsigntemplatesignatureAttachmentnamesource.customer;
         case r'DescriptionCustomer': return FieldEEzsigntemplatesignatureAttachmentnamesource.descriptionCustomer;

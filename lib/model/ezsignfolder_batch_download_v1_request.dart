@@ -37,10 +37,10 @@ class EzsignfolderBatchDownloadV1Request {
   String toString() => 'EzsignfolderBatchDownloadV1Request[aPkiEzsigndocumentID=$aPkiEzsigndocumentID, aEDocumentType=$aEDocumentType]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_pkiEzsigndocumentID'] = aPkiEzsigndocumentID;
-      _json[r'a_eDocumentType'] = aEDocumentType;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_pkiEzsigndocumentID'] = this.aPkiEzsigndocumentID;
+      json[r'a_eDocumentType'] = this.aEDocumentType;
+    return json;
   }
 
   /// Returns a new [EzsignfolderBatchDownloadV1Request] instance and imports its values from
@@ -179,7 +179,7 @@ class EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnumTypeTransformer {
   /// and users are still using an old app with the old code.
   EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnum? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
-      switch (data.toString()) {
+      switch (data) {
         case r'Signed': return EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnum.signed;
         case r'Proof': return EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnum.proof;
         case r'Proofdocument': return EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnum.proofdocument;

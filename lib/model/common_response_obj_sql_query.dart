@@ -38,10 +38,10 @@ class CommonResponseObjSQLQuery {
   String toString() => 'CommonResponseObjSQLQuery[sQuery=$sQuery, fDuration=$fDuration]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'sQuery'] = sQuery;
-      _json[r'fDuration'] = fDuration;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'sQuery'] = this.sQuery;
+      json[r'fDuration'] = this.fDuration;
+    return json;
   }
 
   /// Returns a new [CommonResponseObjSQLQuery] instance and imports its values from

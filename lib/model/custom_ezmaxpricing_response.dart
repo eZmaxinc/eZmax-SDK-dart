@@ -58,16 +58,16 @@ class CustomEzmaxpricingResponse {
   String toString() => 'CustomEzmaxpricingResponse[pkiEzmaxpricingID=$pkiEzmaxpricingID, dEzmaxpricingRebateezsignallagents=$dEzmaxpricingRebateezsignallagents, dtEzmaxpricingStart=$dtEzmaxpricingStart, dtEzmaxpricingEnd=$dtEzmaxpricingEnd]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiEzmaxpricingID'] = pkiEzmaxpricingID;
-      _json[r'dEzmaxpricingRebateezsignallagents'] = dEzmaxpricingRebateezsignallagents;
-      _json[r'dtEzmaxpricingStart'] = dtEzmaxpricingStart;
-    if (dtEzmaxpricingEnd != null) {
-      _json[r'dtEzmaxpricingEnd'] = dtEzmaxpricingEnd;
+    final json = <String, dynamic>{};
+      json[r'pkiEzmaxpricingID'] = this.pkiEzmaxpricingID;
+      json[r'dEzmaxpricingRebateezsignallagents'] = this.dEzmaxpricingRebateezsignallagents;
+      json[r'dtEzmaxpricingStart'] = this.dtEzmaxpricingStart;
+    if (this.dtEzmaxpricingEnd != null) {
+      json[r'dtEzmaxpricingEnd'] = this.dtEzmaxpricingEnd;
     } else {
-      _json[r'dtEzmaxpricingEnd'] = null;
+      json[r'dtEzmaxpricingEnd'] = null;
     }
-    return _json;
+    return json;
   }
 
   /// Returns a new [CustomEzmaxpricingResponse] instance and imports its values from

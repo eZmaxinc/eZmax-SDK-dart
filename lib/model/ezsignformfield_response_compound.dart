@@ -116,30 +116,30 @@ class EzsignformfieldResponseCompound {
   String toString() => 'EzsignformfieldResponseCompound[pkiEzsignformfieldID=$pkiEzsignformfieldID, iEzsignpagePagenumber=$iEzsignpagePagenumber, sEzsignformfieldLabel=$sEzsignformfieldLabel, sEzsignformfieldValue=$sEzsignformfieldValue, iEzsignformfieldX=$iEzsignformfieldX, iEzsignformfieldY=$iEzsignformfieldY, iEzsignformfieldWidth=$iEzsignformfieldWidth, iEzsignformfieldHeight=$iEzsignformfieldHeight, bEzsignformfieldSelected=$bEzsignformfieldSelected, sEzsignformfieldEnteredvalue=$sEzsignformfieldEnteredvalue]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiEzsignformfieldID'] = pkiEzsignformfieldID;
-      _json[r'iEzsignpagePagenumber'] = iEzsignpagePagenumber;
-      _json[r'sEzsignformfieldLabel'] = sEzsignformfieldLabel;
-    if (sEzsignformfieldValue != null) {
-      _json[r'sEzsignformfieldValue'] = sEzsignformfieldValue;
+    final json = <String, dynamic>{};
+      json[r'pkiEzsignformfieldID'] = this.pkiEzsignformfieldID;
+      json[r'iEzsignpagePagenumber'] = this.iEzsignpagePagenumber;
+      json[r'sEzsignformfieldLabel'] = this.sEzsignformfieldLabel;
+    if (this.sEzsignformfieldValue != null) {
+      json[r'sEzsignformfieldValue'] = this.sEzsignformfieldValue;
     } else {
-      _json[r'sEzsignformfieldValue'] = null;
+      json[r'sEzsignformfieldValue'] = null;
     }
-      _json[r'iEzsignformfieldX'] = iEzsignformfieldX;
-      _json[r'iEzsignformfieldY'] = iEzsignformfieldY;
-      _json[r'iEzsignformfieldWidth'] = iEzsignformfieldWidth;
-      _json[r'iEzsignformfieldHeight'] = iEzsignformfieldHeight;
-    if (bEzsignformfieldSelected != null) {
-      _json[r'bEzsignformfieldSelected'] = bEzsignformfieldSelected;
+      json[r'iEzsignformfieldX'] = this.iEzsignformfieldX;
+      json[r'iEzsignformfieldY'] = this.iEzsignformfieldY;
+      json[r'iEzsignformfieldWidth'] = this.iEzsignformfieldWidth;
+      json[r'iEzsignformfieldHeight'] = this.iEzsignformfieldHeight;
+    if (this.bEzsignformfieldSelected != null) {
+      json[r'bEzsignformfieldSelected'] = this.bEzsignformfieldSelected;
     } else {
-      _json[r'bEzsignformfieldSelected'] = null;
+      json[r'bEzsignformfieldSelected'] = null;
     }
-    if (sEzsignformfieldEnteredvalue != null) {
-      _json[r'sEzsignformfieldEnteredvalue'] = sEzsignformfieldEnteredvalue;
+    if (this.sEzsignformfieldEnteredvalue != null) {
+      json[r'sEzsignformfieldEnteredvalue'] = this.sEzsignformfieldEnteredvalue;
     } else {
-      _json[r'sEzsignformfieldEnteredvalue'] = null;
+      json[r'sEzsignformfieldEnteredvalue'] = null;
     }
-    return _json;
+    return json;
   }
 
   /// Returns a new [EzsignformfieldResponseCompound] instance and imports its values from

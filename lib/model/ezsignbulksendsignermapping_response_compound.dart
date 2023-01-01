@@ -62,16 +62,16 @@ class EzsignbulksendsignermappingResponseCompound {
   String toString() => 'EzsignbulksendsignermappingResponseCompound[pkiEzsignbulksendsignermappingID=$pkiEzsignbulksendsignermappingID, fkiEzsignbulksendID=$fkiEzsignbulksendID, fkiUserID=$fkiUserID, sEzsignbulksendsignermappingDescription=$sEzsignbulksendsignermappingDescription]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiEzsignbulksendsignermappingID'] = pkiEzsignbulksendsignermappingID;
-      _json[r'fkiEzsignbulksendID'] = fkiEzsignbulksendID;
-    if (fkiUserID != null) {
-      _json[r'fkiUserID'] = fkiUserID;
+    final json = <String, dynamic>{};
+      json[r'pkiEzsignbulksendsignermappingID'] = this.pkiEzsignbulksendsignermappingID;
+      json[r'fkiEzsignbulksendID'] = this.fkiEzsignbulksendID;
+    if (this.fkiUserID != null) {
+      json[r'fkiUserID'] = this.fkiUserID;
     } else {
-      _json[r'fkiUserID'] = null;
+      json[r'fkiUserID'] = null;
     }
-      _json[r'sEzsignbulksendsignermappingDescription'] = sEzsignbulksendsignermappingDescription;
-    return _json;
+      json[r'sEzsignbulksendsignermappingDescription'] = this.sEzsignbulksendsignermappingDescription;
+    return json;
   }
 
   /// Returns a new [EzsignbulksendsignermappingResponseCompound] instance and imports its values from

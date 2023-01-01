@@ -32,9 +32,9 @@ class EzsigntemplatedocumentCreateObjectV1ResponseMPayload {
   String toString() => 'EzsigntemplatedocumentCreateObjectV1ResponseMPayload[aPkiEzsigntemplatedocumentID=$aPkiEzsigntemplatedocumentID]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_pkiEzsigntemplatedocumentID'] = aPkiEzsigntemplatedocumentID;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_pkiEzsigntemplatedocumentID'] = this.aPkiEzsigntemplatedocumentID;
+    return json;
   }
 
   /// Returns a new [EzsigntemplatedocumentCreateObjectV1ResponseMPayload] instance and imports its values from

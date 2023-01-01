@@ -73,7 +73,7 @@ class FieldEEzsignformfieldgroupTypeTypeTransformer {
   /// and users are still using an old app with the old code.
   FieldEEzsignformfieldgroupType? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
-      switch (data.toString()) {
+      switch (data) {
         case r'Text': return FieldEEzsignformfieldgroupType.text;
         case r'Textarea': return FieldEEzsignformfieldgroupType.textarea;
         case r'Dropdown': return FieldEEzsignformfieldgroupType.dropdown;

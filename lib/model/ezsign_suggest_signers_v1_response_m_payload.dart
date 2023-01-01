@@ -41,11 +41,11 @@ class EzsignSuggestSignersV1ResponseMPayload {
   String toString() => 'EzsignSuggestSignersV1ResponseMPayload[aObjEzsignfoldersignerassociation=$aObjEzsignfoldersignerassociation, aObjUserTeam=$aObjUserTeam, aObjUser=$aObjUser]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_objEzsignfoldersignerassociation'] = aObjEzsignfoldersignerassociation;
-      _json[r'a_objUserTeam'] = aObjUserTeam;
-      _json[r'a_objUser'] = aObjUser;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_objEzsignfoldersignerassociation'] = this.aObjEzsignfoldersignerassociation;
+      json[r'a_objUserTeam'] = this.aObjUserTeam;
+      json[r'a_objUser'] = this.aObjUser;
+    return json;
   }
 
   /// Returns a new [EzsignSuggestSignersV1ResponseMPayload] instance and imports its values from

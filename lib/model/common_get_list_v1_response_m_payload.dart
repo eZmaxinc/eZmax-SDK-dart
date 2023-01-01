@@ -38,10 +38,10 @@ class CommonGetListV1ResponseMPayload {
   String toString() => 'CommonGetListV1ResponseMPayload[iRowReturned=$iRowReturned, iRowFiltered=$iRowFiltered]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'iRowReturned'] = iRowReturned;
-      _json[r'iRowFiltered'] = iRowFiltered;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'iRowReturned'] = this.iRowReturned;
+      json[r'iRowFiltered'] = this.iRowFiltered;
+    return json;
   }
 
   /// Returns a new [CommonGetListV1ResponseMPayload] instance and imports its values from

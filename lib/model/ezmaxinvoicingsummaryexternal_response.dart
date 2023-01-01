@@ -74,21 +74,21 @@ class EzmaxinvoicingsummaryexternalResponse {
   String toString() => 'EzmaxinvoicingsummaryexternalResponse[pkiEzmaxinvoicingsummaryexternalID=$pkiEzmaxinvoicingsummaryexternalID, fkiEzmaxinvoicingID=$fkiEzmaxinvoicingID, fkiBillingentityexternalID=$fkiBillingentityexternalID, sBillingentityexternalDescription=$sBillingentityexternalDescription, sEzmaxinvoicingsummaryexternalDescription=$sEzmaxinvoicingsummaryexternalDescription]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (pkiEzmaxinvoicingsummaryexternalID != null) {
-      _json[r'pkiEzmaxinvoicingsummaryexternalID'] = pkiEzmaxinvoicingsummaryexternalID;
+    final json = <String, dynamic>{};
+    if (this.pkiEzmaxinvoicingsummaryexternalID != null) {
+      json[r'pkiEzmaxinvoicingsummaryexternalID'] = this.pkiEzmaxinvoicingsummaryexternalID;
     } else {
-      _json[r'pkiEzmaxinvoicingsummaryexternalID'] = null;
+      json[r'pkiEzmaxinvoicingsummaryexternalID'] = null;
     }
-    if (fkiEzmaxinvoicingID != null) {
-      _json[r'fkiEzmaxinvoicingID'] = fkiEzmaxinvoicingID;
+    if (this.fkiEzmaxinvoicingID != null) {
+      json[r'fkiEzmaxinvoicingID'] = this.fkiEzmaxinvoicingID;
     } else {
-      _json[r'fkiEzmaxinvoicingID'] = null;
+      json[r'fkiEzmaxinvoicingID'] = null;
     }
-      _json[r'fkiBillingentityexternalID'] = fkiBillingentityexternalID;
-      _json[r'sBillingentityexternalDescription'] = sBillingentityexternalDescription;
-      _json[r'sEzmaxinvoicingsummaryexternalDescription'] = sEzmaxinvoicingsummaryexternalDescription;
-    return _json;
+      json[r'fkiBillingentityexternalID'] = this.fkiBillingentityexternalID;
+      json[r'sBillingentityexternalDescription'] = this.sBillingentityexternalDescription;
+      json[r'sEzmaxinvoicingsummaryexternalDescription'] = this.sEzmaxinvoicingsummaryexternalDescription;
+    return json;
   }
 
   /// Returns a new [EzmaxinvoicingsummaryexternalResponse] instance and imports its values from

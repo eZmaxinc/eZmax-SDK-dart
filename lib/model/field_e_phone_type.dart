@@ -67,7 +67,7 @@ class FieldEPhoneTypeTypeTransformer {
   /// and users are still using an old app with the old code.
   FieldEPhoneType? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
-      switch (data.toString()) {
+      switch (data) {
         case r'Local': return FieldEPhoneType.local;
         case r'International': return FieldEPhoneType.international;
         default:

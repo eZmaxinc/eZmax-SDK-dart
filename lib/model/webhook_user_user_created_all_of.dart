@@ -31,9 +31,9 @@ class WebhookUserUserCreatedAllOf {
   String toString() => 'WebhookUserUserCreatedAllOf[objUser=$objUser]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'objUser'] = objUser;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'objUser'] = this.objUser;
+    return json;
   }
 
   /// Returns a new [WebhookUserUserCreatedAllOf] instance and imports its values from

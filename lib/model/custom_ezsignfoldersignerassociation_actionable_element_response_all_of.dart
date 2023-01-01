@@ -44,14 +44,14 @@ class CustomEzsignfoldersignerassociationActionableElementResponseAllOf {
   String toString() => 'CustomEzsignfoldersignerassociationActionableElementResponseAllOf[bEzsignfoldersignerassociationHasactionableelementsCurrent=$bEzsignfoldersignerassociationHasactionableelementsCurrent, bEzsignfoldersignerassociationHasactionableelementsFuture=$bEzsignfoldersignerassociationHasactionableelementsFuture]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'bEzsignfoldersignerassociationHasactionableelementsCurrent'] = bEzsignfoldersignerassociationHasactionableelementsCurrent;
-    if (bEzsignfoldersignerassociationHasactionableelementsFuture != null) {
-      _json[r'bEzsignfoldersignerassociationHasactionableelementsFuture'] = bEzsignfoldersignerassociationHasactionableelementsFuture;
+    final json = <String, dynamic>{};
+      json[r'bEzsignfoldersignerassociationHasactionableelementsCurrent'] = this.bEzsignfoldersignerassociationHasactionableelementsCurrent;
+    if (this.bEzsignfoldersignerassociationHasactionableelementsFuture != null) {
+      json[r'bEzsignfoldersignerassociationHasactionableelementsFuture'] = this.bEzsignfoldersignerassociationHasactionableelementsFuture;
     } else {
-      _json[r'bEzsignfoldersignerassociationHasactionableelementsFuture'] = null;
+      json[r'bEzsignfoldersignerassociationHasactionableelementsFuture'] = null;
     }
-    return _json;
+    return json;
   }
 
   /// Returns a new [CustomEzsignfoldersignerassociationActionableElementResponseAllOf] instance and imports its values from

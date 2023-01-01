@@ -196,44 +196,44 @@ class EzmaxinvoicingagentResponse {
   String toString() => 'EzmaxinvoicingagentResponse[pkiEzmaxinvoicingagentID=$pkiEzmaxinvoicingagentID, fkiEzmaxinvoicingID=$fkiEzmaxinvoicingID, fkiBillingentityinternalID=$fkiBillingentityinternalID, sBillingentityinternalDescriptionX=$sBillingentityinternalDescriptionX, fkiAgentID=$fkiAgentID, fkiBrokerID=$fkiBrokerID, iEzmaxinvoicingagentSession=$iEzmaxinvoicingagentSession, iEzmaxinvoicingagentCloned=$iEzmaxinvoicingagentCloned, iEzmaxinvoicingagentInvoice=$iEzmaxinvoicingagentInvoice, iEzmaxinvoicingagentInscription=$iEzmaxinvoicingagentInscription, iEzmaxinvoicingagentInscriptionactive=$iEzmaxinvoicingagentInscriptionactive, iEzmaxinvoicingagentSale=$iEzmaxinvoicingagentSale, iEzmaxinvoicingagentOtherincome=$iEzmaxinvoicingagentOtherincome, iEzmaxinvoicingagentCommissioncalculation=$iEzmaxinvoicingagentCommissioncalculation, iEzmaxinvoicingagentEzsigndocument=$iEzmaxinvoicingagentEzsigndocument, bEzmaxinvoicingagentEzsignaccount=$bEzmaxinvoicingagentEzsignaccount, bEzmaxinvoicingagentBillableezmax=$bEzmaxinvoicingagentBillableezmax, eEzmaxinvoicingagentVariationezmax=$eEzmaxinvoicingagentVariationezmax, bEzmaxinvoicingagentBillableezsign=$bEzmaxinvoicingagentBillableezsign, eEzmaxinvoicingagentVariationezsign=$eEzmaxinvoicingagentVariationezsign]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (pkiEzmaxinvoicingagentID != null) {
-      _json[r'pkiEzmaxinvoicingagentID'] = pkiEzmaxinvoicingagentID;
+    final json = <String, dynamic>{};
+    if (this.pkiEzmaxinvoicingagentID != null) {
+      json[r'pkiEzmaxinvoicingagentID'] = this.pkiEzmaxinvoicingagentID;
     } else {
-      _json[r'pkiEzmaxinvoicingagentID'] = null;
+      json[r'pkiEzmaxinvoicingagentID'] = null;
     }
-    if (fkiEzmaxinvoicingID != null) {
-      _json[r'fkiEzmaxinvoicingID'] = fkiEzmaxinvoicingID;
+    if (this.fkiEzmaxinvoicingID != null) {
+      json[r'fkiEzmaxinvoicingID'] = this.fkiEzmaxinvoicingID;
     } else {
-      _json[r'fkiEzmaxinvoicingID'] = null;
+      json[r'fkiEzmaxinvoicingID'] = null;
     }
-      _json[r'fkiBillingentityinternalID'] = fkiBillingentityinternalID;
-      _json[r'sBillingentityinternalDescriptionX'] = sBillingentityinternalDescriptionX;
-    if (fkiAgentID != null) {
-      _json[r'fkiAgentID'] = fkiAgentID;
+      json[r'fkiBillingentityinternalID'] = this.fkiBillingentityinternalID;
+      json[r'sBillingentityinternalDescriptionX'] = this.sBillingentityinternalDescriptionX;
+    if (this.fkiAgentID != null) {
+      json[r'fkiAgentID'] = this.fkiAgentID;
     } else {
-      _json[r'fkiAgentID'] = null;
+      json[r'fkiAgentID'] = null;
     }
-    if (fkiBrokerID != null) {
-      _json[r'fkiBrokerID'] = fkiBrokerID;
+    if (this.fkiBrokerID != null) {
+      json[r'fkiBrokerID'] = this.fkiBrokerID;
     } else {
-      _json[r'fkiBrokerID'] = null;
+      json[r'fkiBrokerID'] = null;
     }
-      _json[r'iEzmaxinvoicingagentSession'] = iEzmaxinvoicingagentSession;
-      _json[r'iEzmaxinvoicingagentCloned'] = iEzmaxinvoicingagentCloned;
-      _json[r'iEzmaxinvoicingagentInvoice'] = iEzmaxinvoicingagentInvoice;
-      _json[r'iEzmaxinvoicingagentInscription'] = iEzmaxinvoicingagentInscription;
-      _json[r'iEzmaxinvoicingagentInscriptionactive'] = iEzmaxinvoicingagentInscriptionactive;
-      _json[r'iEzmaxinvoicingagentSale'] = iEzmaxinvoicingagentSale;
-      _json[r'iEzmaxinvoicingagentOtherincome'] = iEzmaxinvoicingagentOtherincome;
-      _json[r'iEzmaxinvoicingagentCommissioncalculation'] = iEzmaxinvoicingagentCommissioncalculation;
-      _json[r'iEzmaxinvoicingagentEzsigndocument'] = iEzmaxinvoicingagentEzsigndocument;
-      _json[r'bEzmaxinvoicingagentEzsignaccount'] = bEzmaxinvoicingagentEzsignaccount;
-      _json[r'bEzmaxinvoicingagentBillableezmax'] = bEzmaxinvoicingagentBillableezmax;
-      _json[r'eEzmaxinvoicingagentVariationezmax'] = eEzmaxinvoicingagentVariationezmax;
-      _json[r'bEzmaxinvoicingagentBillableezsign'] = bEzmaxinvoicingagentBillableezsign;
-      _json[r'eEzmaxinvoicingagentVariationezsign'] = eEzmaxinvoicingagentVariationezsign;
-    return _json;
+      json[r'iEzmaxinvoicingagentSession'] = this.iEzmaxinvoicingagentSession;
+      json[r'iEzmaxinvoicingagentCloned'] = this.iEzmaxinvoicingagentCloned;
+      json[r'iEzmaxinvoicingagentInvoice'] = this.iEzmaxinvoicingagentInvoice;
+      json[r'iEzmaxinvoicingagentInscription'] = this.iEzmaxinvoicingagentInscription;
+      json[r'iEzmaxinvoicingagentInscriptionactive'] = this.iEzmaxinvoicingagentInscriptionactive;
+      json[r'iEzmaxinvoicingagentSale'] = this.iEzmaxinvoicingagentSale;
+      json[r'iEzmaxinvoicingagentOtherincome'] = this.iEzmaxinvoicingagentOtherincome;
+      json[r'iEzmaxinvoicingagentCommissioncalculation'] = this.iEzmaxinvoicingagentCommissioncalculation;
+      json[r'iEzmaxinvoicingagentEzsigndocument'] = this.iEzmaxinvoicingagentEzsigndocument;
+      json[r'bEzmaxinvoicingagentEzsignaccount'] = this.bEzmaxinvoicingagentEzsignaccount;
+      json[r'bEzmaxinvoicingagentBillableezmax'] = this.bEzmaxinvoicingagentBillableezmax;
+      json[r'eEzmaxinvoicingagentVariationezmax'] = this.eEzmaxinvoicingagentVariationezmax;
+      json[r'bEzmaxinvoicingagentBillableezsign'] = this.bEzmaxinvoicingagentBillableezsign;
+      json[r'eEzmaxinvoicingagentVariationezsign'] = this.eEzmaxinvoicingagentVariationezsign;
+    return json;
   }
 
   /// Returns a new [EzmaxinvoicingagentResponse] instance and imports its values from

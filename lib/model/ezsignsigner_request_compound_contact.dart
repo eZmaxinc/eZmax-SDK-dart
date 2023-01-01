@@ -117,41 +117,41 @@ class EzsignsignerRequestCompoundContact {
   String toString() => 'EzsignsignerRequestCompoundContact[sContactFirstname=$sContactFirstname, sContactLastname=$sContactLastname, fkiLanguageID=$fkiLanguageID, sEmailAddress=$sEmailAddress, sPhoneE164=$sPhoneE164, sPhoneExtension=$sPhoneExtension, sPhoneE164Cell=$sPhoneE164Cell, sPhoneNumber=$sPhoneNumber, sPhoneNumberCell=$sPhoneNumberCell]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'sContactFirstname'] = sContactFirstname;
-      _json[r'sContactLastname'] = sContactLastname;
-      _json[r'fkiLanguageID'] = fkiLanguageID;
-    if (sEmailAddress != null) {
-      _json[r'sEmailAddress'] = sEmailAddress;
+    final json = <String, dynamic>{};
+      json[r'sContactFirstname'] = this.sContactFirstname;
+      json[r'sContactLastname'] = this.sContactLastname;
+      json[r'fkiLanguageID'] = this.fkiLanguageID;
+    if (this.sEmailAddress != null) {
+      json[r'sEmailAddress'] = this.sEmailAddress;
     } else {
-      _json[r'sEmailAddress'] = null;
+      json[r'sEmailAddress'] = null;
     }
-    if (sPhoneE164 != null) {
-      _json[r'sPhoneE164'] = sPhoneE164;
+    if (this.sPhoneE164 != null) {
+      json[r'sPhoneE164'] = this.sPhoneE164;
     } else {
-      _json[r'sPhoneE164'] = null;
+      json[r'sPhoneE164'] = null;
     }
-    if (sPhoneExtension != null) {
-      _json[r'sPhoneExtension'] = sPhoneExtension;
+    if (this.sPhoneExtension != null) {
+      json[r'sPhoneExtension'] = this.sPhoneExtension;
     } else {
-      _json[r'sPhoneExtension'] = null;
+      json[r'sPhoneExtension'] = null;
     }
-    if (sPhoneE164Cell != null) {
-      _json[r'sPhoneE164Cell'] = sPhoneE164Cell;
+    if (this.sPhoneE164Cell != null) {
+      json[r'sPhoneE164Cell'] = this.sPhoneE164Cell;
     } else {
-      _json[r'sPhoneE164Cell'] = null;
+      json[r'sPhoneE164Cell'] = null;
     }
-    if (sPhoneNumber != null) {
-      _json[r'sPhoneNumber'] = sPhoneNumber;
+    if (this.sPhoneNumber != null) {
+      json[r'sPhoneNumber'] = this.sPhoneNumber;
     } else {
-      _json[r'sPhoneNumber'] = null;
+      json[r'sPhoneNumber'] = null;
     }
-    if (sPhoneNumberCell != null) {
-      _json[r'sPhoneNumberCell'] = sPhoneNumberCell;
+    if (this.sPhoneNumberCell != null) {
+      json[r'sPhoneNumberCell'] = this.sPhoneNumberCell;
     } else {
-      _json[r'sPhoneNumberCell'] = null;
+      json[r'sPhoneNumberCell'] = null;
     }
-    return _json;
+    return json;
   }
 
   /// Returns a new [EzsignsignerRequestCompoundContact] instance and imports its values from

@@ -31,9 +31,9 @@ class VersionhistoryGetObjectV2ResponseMPayload {
   String toString() => 'VersionhistoryGetObjectV2ResponseMPayload[objVersionhistory=$objVersionhistory]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'objVersionhistory'] = objVersionhistory;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'objVersionhistory'] = this.objVersionhistory;
+    return json;
   }
 
   /// Returns a new [VersionhistoryGetObjectV2ResponseMPayload] instance and imports its values from

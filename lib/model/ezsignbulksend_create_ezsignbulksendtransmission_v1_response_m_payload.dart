@@ -31,9 +31,9 @@ class EzsignbulksendCreateEzsignbulksendtransmissionV1ResponseMPayload {
   String toString() => 'EzsignbulksendCreateEzsignbulksendtransmissionV1ResponseMPayload[objEzsignbulksendtransmission=$objEzsignbulksendtransmission]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'objEzsignbulksendtransmission'] = objEzsignbulksendtransmission;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'objEzsignbulksendtransmission'] = this.objEzsignbulksendtransmission;
+    return json;
   }
 
   /// Returns a new [EzsignbulksendCreateEzsignbulksendtransmissionV1ResponseMPayload] instance and imports its values from

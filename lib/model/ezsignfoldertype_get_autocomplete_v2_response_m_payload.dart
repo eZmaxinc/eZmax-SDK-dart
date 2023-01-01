@@ -32,9 +32,9 @@ class EzsignfoldertypeGetAutocompleteV2ResponseMPayload {
   String toString() => 'EzsignfoldertypeGetAutocompleteV2ResponseMPayload[aObjEzsignfoldertype=$aObjEzsignfoldertype]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_objEzsignfoldertype'] = aObjEzsignfoldertype;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_objEzsignfoldertype'] = this.aObjEzsignfoldertype;
+    return json;
   }
 
   /// Returns a new [EzsignfoldertypeGetAutocompleteV2ResponseMPayload] instance and imports its values from

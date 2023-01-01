@@ -109,34 +109,34 @@ class WebhookRequestCompound {
   String toString() => 'WebhookRequestCompound[pkiWebhookID=$pkiWebhookID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sWebhookDescription=$sWebhookDescription, eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, sWebhookUrl=$sWebhookUrl, sWebhookEmailfailed=$sWebhookEmailfailed, bWebhookIsactive=$bWebhookIsactive, bWebhookSkipsslvalidation=$bWebhookSkipsslvalidation]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (pkiWebhookID != null) {
-      _json[r'pkiWebhookID'] = pkiWebhookID;
+    final json = <String, dynamic>{};
+    if (this.pkiWebhookID != null) {
+      json[r'pkiWebhookID'] = this.pkiWebhookID;
     } else {
-      _json[r'pkiWebhookID'] = null;
+      json[r'pkiWebhookID'] = null;
     }
-    if (fkiEzsignfoldertypeID != null) {
-      _json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
+    if (this.fkiEzsignfoldertypeID != null) {
+      json[r'fkiEzsignfoldertypeID'] = this.fkiEzsignfoldertypeID;
     } else {
-      _json[r'fkiEzsignfoldertypeID'] = null;
+      json[r'fkiEzsignfoldertypeID'] = null;
     }
-      _json[r'sWebhookDescription'] = sWebhookDescription;
-      _json[r'eWebhookModule'] = eWebhookModule;
-    if (eWebhookEzsignevent != null) {
-      _json[r'eWebhookEzsignevent'] = eWebhookEzsignevent;
+      json[r'sWebhookDescription'] = this.sWebhookDescription;
+      json[r'eWebhookModule'] = this.eWebhookModule;
+    if (this.eWebhookEzsignevent != null) {
+      json[r'eWebhookEzsignevent'] = this.eWebhookEzsignevent;
     } else {
-      _json[r'eWebhookEzsignevent'] = null;
+      json[r'eWebhookEzsignevent'] = null;
     }
-    if (eWebhookManagementevent != null) {
-      _json[r'eWebhookManagementevent'] = eWebhookManagementevent;
+    if (this.eWebhookManagementevent != null) {
+      json[r'eWebhookManagementevent'] = this.eWebhookManagementevent;
     } else {
-      _json[r'eWebhookManagementevent'] = null;
+      json[r'eWebhookManagementevent'] = null;
     }
-      _json[r'sWebhookUrl'] = sWebhookUrl;
-      _json[r'sWebhookEmailfailed'] = sWebhookEmailfailed;
-      _json[r'bWebhookIsactive'] = bWebhookIsactive;
-      _json[r'bWebhookSkipsslvalidation'] = bWebhookSkipsslvalidation;
-    return _json;
+      json[r'sWebhookUrl'] = this.sWebhookUrl;
+      json[r'sWebhookEmailfailed'] = this.sWebhookEmailfailed;
+      json[r'bWebhookIsactive'] = this.bWebhookIsactive;
+      json[r'bWebhookSkipsslvalidation'] = this.bWebhookSkipsslvalidation;
+    return json;
   }
 
   /// Returns a new [WebhookRequestCompound] instance and imports its values from

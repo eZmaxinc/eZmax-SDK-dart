@@ -100,29 +100,29 @@ class CustomEzsignfoldersignerassociationActionableElementResponse {
   String toString() => 'CustomEzsignfoldersignerassociationActionableElementResponse[pkiEzsignfoldersignerassociationID=$pkiEzsignfoldersignerassociationID, fkiEzsignfolderID=$fkiEzsignfolderID, bEzsignfoldersignerassociationDelayedsend=$bEzsignfoldersignerassociationDelayedsend, bEzsignfoldersignerassociationReceivecopy=$bEzsignfoldersignerassociationReceivecopy, tEzsignfoldersignerassociationMessage=$tEzsignfoldersignerassociationMessage, objUser=$objUser, objEzsignsigner=$objEzsignsigner, bEzsignfoldersignerassociationHasactionableelementsCurrent=$bEzsignfoldersignerassociationHasactionableelementsCurrent, bEzsignfoldersignerassociationHasactionableelementsFuture=$bEzsignfoldersignerassociationHasactionableelementsFuture]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiEzsignfoldersignerassociationID'] = pkiEzsignfoldersignerassociationID;
-      _json[r'fkiEzsignfolderID'] = fkiEzsignfolderID;
-      _json[r'bEzsignfoldersignerassociationDelayedsend'] = bEzsignfoldersignerassociationDelayedsend;
-      _json[r'bEzsignfoldersignerassociationReceivecopy'] = bEzsignfoldersignerassociationReceivecopy;
-      _json[r'tEzsignfoldersignerassociationMessage'] = tEzsignfoldersignerassociationMessage;
-    if (objUser != null) {
-      _json[r'objUser'] = objUser;
+    final json = <String, dynamic>{};
+      json[r'pkiEzsignfoldersignerassociationID'] = this.pkiEzsignfoldersignerassociationID;
+      json[r'fkiEzsignfolderID'] = this.fkiEzsignfolderID;
+      json[r'bEzsignfoldersignerassociationDelayedsend'] = this.bEzsignfoldersignerassociationDelayedsend;
+      json[r'bEzsignfoldersignerassociationReceivecopy'] = this.bEzsignfoldersignerassociationReceivecopy;
+      json[r'tEzsignfoldersignerassociationMessage'] = this.tEzsignfoldersignerassociationMessage;
+    if (this.objUser != null) {
+      json[r'objUser'] = this.objUser;
     } else {
-      _json[r'objUser'] = null;
+      json[r'objUser'] = null;
     }
-    if (objEzsignsigner != null) {
-      _json[r'objEzsignsigner'] = objEzsignsigner;
+    if (this.objEzsignsigner != null) {
+      json[r'objEzsignsigner'] = this.objEzsignsigner;
     } else {
-      _json[r'objEzsignsigner'] = null;
+      json[r'objEzsignsigner'] = null;
     }
-      _json[r'bEzsignfoldersignerassociationHasactionableelementsCurrent'] = bEzsignfoldersignerassociationHasactionableelementsCurrent;
-    if (bEzsignfoldersignerassociationHasactionableelementsFuture != null) {
-      _json[r'bEzsignfoldersignerassociationHasactionableelementsFuture'] = bEzsignfoldersignerassociationHasactionableelementsFuture;
+      json[r'bEzsignfoldersignerassociationHasactionableelementsCurrent'] = this.bEzsignfoldersignerassociationHasactionableelementsCurrent;
+    if (this.bEzsignfoldersignerassociationHasactionableelementsFuture != null) {
+      json[r'bEzsignfoldersignerassociationHasactionableelementsFuture'] = this.bEzsignfoldersignerassociationHasactionableelementsFuture;
     } else {
-      _json[r'bEzsignfoldersignerassociationHasactionableelementsFuture'] = null;
+      json[r'bEzsignfoldersignerassociationHasactionableelementsFuture'] = null;
     }
-    return _json;
+    return json;
   }
 
   /// Returns a new [CustomEzsignfoldersignerassociationActionableElementResponse] instance and imports its values from

@@ -69,7 +69,7 @@ class FieldEBrandingLogoTypeTransformer {
   /// and users are still using an old app with the old code.
   FieldEBrandingLogo? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
-      switch (data.toString()) {
+      switch (data) {
         case r'Default': return FieldEBrandingLogo.default_;
         case r'JPEG': return FieldEBrandingLogo.JPEG;
         case r'PNG': return FieldEBrandingLogo.PNG;

@@ -69,17 +69,17 @@ class EzsigntemplateRequestCompound {
   String toString() => 'EzsigntemplateRequestCompound[pkiEzsigntemplateID=$pkiEzsigntemplateID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiLanguageID=$fkiLanguageID, sEzsigntemplateDescription=$sEzsigntemplateDescription, bEzsigntemplateAdminonly=$bEzsigntemplateAdminonly]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (pkiEzsigntemplateID != null) {
-      _json[r'pkiEzsigntemplateID'] = pkiEzsigntemplateID;
+    final json = <String, dynamic>{};
+    if (this.pkiEzsigntemplateID != null) {
+      json[r'pkiEzsigntemplateID'] = this.pkiEzsigntemplateID;
     } else {
-      _json[r'pkiEzsigntemplateID'] = null;
+      json[r'pkiEzsigntemplateID'] = null;
     }
-      _json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
-      _json[r'fkiLanguageID'] = fkiLanguageID;
-      _json[r'sEzsigntemplateDescription'] = sEzsigntemplateDescription;
-      _json[r'bEzsigntemplateAdminonly'] = bEzsigntemplateAdminonly;
-    return _json;
+      json[r'fkiEzsignfoldertypeID'] = this.fkiEzsignfoldertypeID;
+      json[r'fkiLanguageID'] = this.fkiLanguageID;
+      json[r'sEzsigntemplateDescription'] = this.sEzsigntemplateDescription;
+      json[r'bEzsigntemplateAdminonly'] = this.bEzsigntemplateAdminonly;
+    return json;
   }
 
   /// Returns a new [EzsigntemplateRequestCompound] instance and imports its values from

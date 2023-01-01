@@ -44,14 +44,14 @@ class EzsigntemplatesignatureRequestCompoundAllOf {
   String toString() => 'EzsigntemplatesignatureRequestCompoundAllOf[bEzsigntemplatesignatureCustomdate=$bEzsigntemplatesignatureCustomdate, aObjEzsigntemplatesignaturecustomdate=$aObjEzsigntemplatesignaturecustomdate]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (bEzsigntemplatesignatureCustomdate != null) {
-      _json[r'bEzsigntemplatesignatureCustomdate'] = bEzsigntemplatesignatureCustomdate;
+    final json = <String, dynamic>{};
+    if (this.bEzsigntemplatesignatureCustomdate != null) {
+      json[r'bEzsigntemplatesignatureCustomdate'] = this.bEzsigntemplatesignatureCustomdate;
     } else {
-      _json[r'bEzsigntemplatesignatureCustomdate'] = null;
+      json[r'bEzsigntemplatesignatureCustomdate'] = null;
     }
-      _json[r'a_objEzsigntemplatesignaturecustomdate'] = aObjEzsigntemplatesignaturecustomdate;
-    return _json;
+      json[r'a_objEzsigntemplatesignaturecustomdate'] = this.aObjEzsigntemplatesignaturecustomdate;
+    return json;
   }
 
   /// Returns a new [EzsigntemplatesignatureRequestCompoundAllOf] instance and imports its values from

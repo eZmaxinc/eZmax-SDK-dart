@@ -62,16 +62,16 @@ class EzsigntemplatesignaturecustomdateRequestCompound {
   String toString() => 'EzsigntemplatesignaturecustomdateRequestCompound[pkiEzsigntemplatesignaturecustomdateID=$pkiEzsigntemplatesignaturecustomdateID, iEzsigntemplatesignaturecustomdateX=$iEzsigntemplatesignaturecustomdateX, iEzsigntemplatesignaturecustomdateY=$iEzsigntemplatesignaturecustomdateY, sEzsigntemplatesignaturecustomdateFormat=$sEzsigntemplatesignaturecustomdateFormat]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (pkiEzsigntemplatesignaturecustomdateID != null) {
-      _json[r'pkiEzsigntemplatesignaturecustomdateID'] = pkiEzsigntemplatesignaturecustomdateID;
+    final json = <String, dynamic>{};
+    if (this.pkiEzsigntemplatesignaturecustomdateID != null) {
+      json[r'pkiEzsigntemplatesignaturecustomdateID'] = this.pkiEzsigntemplatesignaturecustomdateID;
     } else {
-      _json[r'pkiEzsigntemplatesignaturecustomdateID'] = null;
+      json[r'pkiEzsigntemplatesignaturecustomdateID'] = null;
     }
-      _json[r'iEzsigntemplatesignaturecustomdateX'] = iEzsigntemplatesignaturecustomdateX;
-      _json[r'iEzsigntemplatesignaturecustomdateY'] = iEzsigntemplatesignaturecustomdateY;
-      _json[r'sEzsigntemplatesignaturecustomdateFormat'] = sEzsigntemplatesignaturecustomdateFormat;
-    return _json;
+      json[r'iEzsigntemplatesignaturecustomdateX'] = this.iEzsigntemplatesignaturecustomdateX;
+      json[r'iEzsigntemplatesignaturecustomdateY'] = this.iEzsigntemplatesignaturecustomdateY;
+      json[r'sEzsigntemplatesignaturecustomdateFormat'] = this.sEzsigntemplatesignaturecustomdateFormat;
+    return json;
   }
 
   /// Returns a new [EzsigntemplatesignaturecustomdateRequestCompound] instance and imports its values from

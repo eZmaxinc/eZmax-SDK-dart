@@ -105,26 +105,26 @@ class EzsigntemplateResponseCompound {
   String toString() => 'EzsigntemplateResponseCompound[pkiEzsigntemplateID=$pkiEzsigntemplateID, fkiEzsigntemplatedocumentID=$fkiEzsigntemplatedocumentID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiLanguageID=$fkiLanguageID, sLanguageNameX=$sLanguageNameX, sEzsigntemplateDescription=$sEzsigntemplateDescription, bEzsigntemplateAdminonly=$bEzsigntemplateAdminonly, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, objEzsigntemplatedocument=$objEzsigntemplatedocument, aObjEzsigntemplatesigner=$aObjEzsigntemplatesigner]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiEzsigntemplateID'] = pkiEzsigntemplateID;
-    if (fkiEzsigntemplatedocumentID != null) {
-      _json[r'fkiEzsigntemplatedocumentID'] = fkiEzsigntemplatedocumentID;
+    final json = <String, dynamic>{};
+      json[r'pkiEzsigntemplateID'] = this.pkiEzsigntemplateID;
+    if (this.fkiEzsigntemplatedocumentID != null) {
+      json[r'fkiEzsigntemplatedocumentID'] = this.fkiEzsigntemplatedocumentID;
     } else {
-      _json[r'fkiEzsigntemplatedocumentID'] = null;
+      json[r'fkiEzsigntemplatedocumentID'] = null;
     }
-      _json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
-      _json[r'fkiLanguageID'] = fkiLanguageID;
-      _json[r'sLanguageNameX'] = sLanguageNameX;
-      _json[r'sEzsigntemplateDescription'] = sEzsigntemplateDescription;
-      _json[r'bEzsigntemplateAdminonly'] = bEzsigntemplateAdminonly;
-      _json[r'sEzsignfoldertypeNameX'] = sEzsignfoldertypeNameX;
-    if (objEzsigntemplatedocument != null) {
-      _json[r'objEzsigntemplatedocument'] = objEzsigntemplatedocument;
+      json[r'fkiEzsignfoldertypeID'] = this.fkiEzsignfoldertypeID;
+      json[r'fkiLanguageID'] = this.fkiLanguageID;
+      json[r'sLanguageNameX'] = this.sLanguageNameX;
+      json[r'sEzsigntemplateDescription'] = this.sEzsigntemplateDescription;
+      json[r'bEzsigntemplateAdminonly'] = this.bEzsigntemplateAdminonly;
+      json[r'sEzsignfoldertypeNameX'] = this.sEzsignfoldertypeNameX;
+    if (this.objEzsigntemplatedocument != null) {
+      json[r'objEzsigntemplatedocument'] = this.objEzsigntemplatedocument;
     } else {
-      _json[r'objEzsigntemplatedocument'] = null;
+      json[r'objEzsigntemplatedocument'] = null;
     }
-      _json[r'a_objEzsigntemplatesigner'] = aObjEzsigntemplatesigner;
-    return _json;
+      json[r'a_objEzsigntemplatesigner'] = this.aObjEzsigntemplatesigner;
+    return json;
   }
 
   /// Returns a new [EzsigntemplateResponseCompound] instance and imports its values from

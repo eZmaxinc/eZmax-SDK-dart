@@ -31,9 +31,9 @@ class EzsignfolderGetFormsDataV1ResponseMPayload {
   String toString() => 'EzsignfolderGetFormsDataV1ResponseMPayload[objFormsDataFolder=$objFormsDataFolder]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'objFormsDataFolder'] = objFormsDataFolder;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'objFormsDataFolder'] = this.objFormsDataFolder;
+    return json;
   }
 
   /// Returns a new [EzsignfolderGetFormsDataV1ResponseMPayload] instance and imports its values from

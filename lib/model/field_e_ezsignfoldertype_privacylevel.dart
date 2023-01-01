@@ -67,7 +67,7 @@ class FieldEEzsignfoldertypePrivacylevelTypeTransformer {
   /// and users are still using an old app with the old code.
   FieldEEzsignfoldertypePrivacylevel? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
-      switch (data.toString()) {
+      switch (data) {
         case r'User': return FieldEEzsignfoldertypePrivacylevel.user;
         case r'Usergroup': return FieldEEzsignfoldertypePrivacylevel.usergroup;
         default:

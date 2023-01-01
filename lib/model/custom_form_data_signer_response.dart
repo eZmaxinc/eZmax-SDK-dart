@@ -65,17 +65,17 @@ class CustomFormDataSignerResponse {
   String toString() => 'CustomFormDataSignerResponse[fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, fkiUserID=$fkiUserID, sContactFirstname=$sContactFirstname, sContactLastname=$sContactLastname, aObjEzsignformfieldgroup=$aObjEzsignformfieldgroup]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'fkiEzsignfoldersignerassociationID'] = fkiEzsignfoldersignerassociationID;
-    if (fkiUserID != null) {
-      _json[r'fkiUserID'] = fkiUserID;
+    final json = <String, dynamic>{};
+      json[r'fkiEzsignfoldersignerassociationID'] = this.fkiEzsignfoldersignerassociationID;
+    if (this.fkiUserID != null) {
+      json[r'fkiUserID'] = this.fkiUserID;
     } else {
-      _json[r'fkiUserID'] = null;
+      json[r'fkiUserID'] = null;
     }
-      _json[r'sContactFirstname'] = sContactFirstname;
-      _json[r'sContactLastname'] = sContactLastname;
-      _json[r'a_objEzsignformfieldgroup'] = aObjEzsignformfieldgroup;
-    return _json;
+      json[r'sContactFirstname'] = this.sContactFirstname;
+      json[r'sContactLastname'] = this.sContactLastname;
+      json[r'a_objEzsignformfieldgroup'] = this.aObjEzsignformfieldgroup;
+    return json;
   }
 
   /// Returns a new [CustomFormDataSignerResponse] instance and imports its values from

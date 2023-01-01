@@ -42,14 +42,14 @@ class FranchisereferalincomeRequestCompoundAllOf {
   String toString() => 'FranchisereferalincomeRequestCompoundAllOf[objAddress=$objAddress, aObjContact=$aObjContact]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (objAddress != null) {
-      _json[r'objAddress'] = objAddress;
+    final json = <String, dynamic>{};
+    if (this.objAddress != null) {
+      json[r'objAddress'] = this.objAddress;
     } else {
-      _json[r'objAddress'] = null;
+      json[r'objAddress'] = null;
     }
-      _json[r'a_objContact'] = aObjContact;
-    return _json;
+      json[r'a_objContact'] = this.aObjContact;
+    return json;
   }
 
   /// Returns a new [FranchisereferalincomeRequestCompoundAllOf] instance and imports its values from

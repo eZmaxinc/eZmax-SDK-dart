@@ -50,18 +50,18 @@ class MultilingualBrandingDescription {
   String toString() => 'MultilingualBrandingDescription[sBrandingDescription1=$sBrandingDescription1, sBrandingDescription2=$sBrandingDescription2]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (sBrandingDescription1 != null) {
-      _json[r'sBrandingDescription1'] = sBrandingDescription1;
+    final json = <String, dynamic>{};
+    if (this.sBrandingDescription1 != null) {
+      json[r'sBrandingDescription1'] = this.sBrandingDescription1;
     } else {
-      _json[r'sBrandingDescription1'] = null;
+      json[r'sBrandingDescription1'] = null;
     }
-    if (sBrandingDescription2 != null) {
-      _json[r'sBrandingDescription2'] = sBrandingDescription2;
+    if (this.sBrandingDescription2 != null) {
+      json[r'sBrandingDescription2'] = this.sBrandingDescription2;
     } else {
-      _json[r'sBrandingDescription2'] = null;
+      json[r'sBrandingDescription2'] = null;
     }
-    return _json;
+    return json;
   }
 
   /// Returns a new [MultilingualBrandingDescription] instance and imports its values from

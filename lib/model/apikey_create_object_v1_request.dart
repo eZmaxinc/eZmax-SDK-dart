@@ -48,18 +48,18 @@ class ApikeyCreateObjectV1Request {
   String toString() => 'ApikeyCreateObjectV1Request[objApikey=$objApikey, objApikeyCompound=$objApikeyCompound]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (objApikey != null) {
-      _json[r'objApikey'] = objApikey;
+    final json = <String, dynamic>{};
+    if (this.objApikey != null) {
+      json[r'objApikey'] = this.objApikey;
     } else {
-      _json[r'objApikey'] = null;
+      json[r'objApikey'] = null;
     }
-    if (objApikeyCompound != null) {
-      _json[r'objApikeyCompound'] = objApikeyCompound;
+    if (this.objApikeyCompound != null) {
+      json[r'objApikeyCompound'] = this.objApikeyCompound;
     } else {
-      _json[r'objApikeyCompound'] = null;
+      json[r'objApikeyCompound'] = null;
     }
-    return _json;
+    return json;
   }
 
   /// Returns a new [ApikeyCreateObjectV1Request] instance and imports its values from

@@ -51,12 +51,12 @@ class UserAutocompleteElementResponse {
   String toString() => 'UserAutocompleteElementResponse[eUserType=$eUserType, sUserName=$sUserName, pkiUserID=$pkiUserID, bUserIsactive=$bUserIsactive]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'eUserType'] = eUserType;
-      _json[r'sUserName'] = sUserName;
-      _json[r'pkiUserID'] = pkiUserID;
-      _json[r'bUserIsactive'] = bUserIsactive;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'eUserType'] = this.eUserType;
+      json[r'sUserName'] = this.sUserName;
+      json[r'pkiUserID'] = this.pkiUserID;
+      json[r'bUserIsactive'] = this.bUserIsactive;
+    return json;
   }
 
   /// Returns a new [UserAutocompleteElementResponse] instance and imports its values from

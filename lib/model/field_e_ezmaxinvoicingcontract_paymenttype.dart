@@ -69,7 +69,7 @@ class FieldEEzmaxinvoicingcontractPaymenttypeTypeTransformer {
   /// and users are still using an old app with the old code.
   FieldEEzmaxinvoicingcontractPaymenttype? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
-      switch (data.toString()) {
+      switch (data) {
         case r'Cheque': return FieldEEzmaxinvoicingcontractPaymenttype.cheque;
         case r'CreditCard': return FieldEEzmaxinvoicingcontractPaymenttype.creditCard;
         case r'DirectDebit': return FieldEEzmaxinvoicingcontractPaymenttype.directDebit;

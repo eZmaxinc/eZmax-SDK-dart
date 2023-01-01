@@ -50,6 +50,12 @@ void main() {
       // TODO
     });
 
+    // Whether the active session is superadmin or not
+    // bool bActivesessionIssuperadmin
+    test('to test the property `bActivesessionIssuperadmin`', () async {
+      // TODO
+    });
+
     // The customer code assigned to your account
     // String pksCustomerCode
     test('to test the property `pksCustomerCode`', () async {

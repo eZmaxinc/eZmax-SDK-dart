@@ -31,9 +31,9 @@ class EzsignfoldersignerassociationGetObjectV2ResponseMPayload {
   String toString() => 'EzsignfoldersignerassociationGetObjectV2ResponseMPayload[objEzsignfoldersignerassociation=$objEzsignfoldersignerassociation]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'objEzsignfoldersignerassociation'] = objEzsignfoldersignerassociation;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'objEzsignfoldersignerassociation'] = this.objEzsignfoldersignerassociation;
+    return json;
   }
 
   /// Returns a new [EzsignfoldersignerassociationGetObjectV2ResponseMPayload] instance and imports its values from

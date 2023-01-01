@@ -142,52 +142,52 @@ class EzsigntemplatedocumentRequestCompound {
   String toString() => 'EzsigntemplatedocumentRequestCompound[pkiEzsigntemplatedocumentID=$pkiEzsigntemplatedocumentID, fkiEzsigntemplateID=$fkiEzsigntemplateID, fkiEzsigndocumentID=$fkiEzsigndocumentID, fkiEzsigntemplatesignerID=$fkiEzsigntemplatesignerID, sEzsigntemplatedocumentName=$sEzsigntemplatedocumentName, eEzsigntemplatedocumentSource=$eEzsigntemplatedocumentSource, eEzsigntemplatedocumentFormat=$eEzsigntemplatedocumentFormat, sEzsigntemplatedocumentBase64=$sEzsigntemplatedocumentBase64, sEzsigntemplatedocumentUrl=$sEzsigntemplatedocumentUrl, bEzsigntemplatedocumentForcerepair=$bEzsigntemplatedocumentForcerepair, eEzsigntemplatedocumentForm=$eEzsigntemplatedocumentForm, sEzsigntemplatedocumentPassword=$sEzsigntemplatedocumentPassword]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (pkiEzsigntemplatedocumentID != null) {
-      _json[r'pkiEzsigntemplatedocumentID'] = pkiEzsigntemplatedocumentID;
+    final json = <String, dynamic>{};
+    if (this.pkiEzsigntemplatedocumentID != null) {
+      json[r'pkiEzsigntemplatedocumentID'] = this.pkiEzsigntemplatedocumentID;
     } else {
-      _json[r'pkiEzsigntemplatedocumentID'] = null;
+      json[r'pkiEzsigntemplatedocumentID'] = null;
     }
-      _json[r'fkiEzsigntemplateID'] = fkiEzsigntemplateID;
-    if (fkiEzsigndocumentID != null) {
-      _json[r'fkiEzsigndocumentID'] = fkiEzsigndocumentID;
+      json[r'fkiEzsigntemplateID'] = this.fkiEzsigntemplateID;
+    if (this.fkiEzsigndocumentID != null) {
+      json[r'fkiEzsigndocumentID'] = this.fkiEzsigndocumentID;
     } else {
-      _json[r'fkiEzsigndocumentID'] = null;
+      json[r'fkiEzsigndocumentID'] = null;
     }
-    if (fkiEzsigntemplatesignerID != null) {
-      _json[r'fkiEzsigntemplatesignerID'] = fkiEzsigntemplatesignerID;
+    if (this.fkiEzsigntemplatesignerID != null) {
+      json[r'fkiEzsigntemplatesignerID'] = this.fkiEzsigntemplatesignerID;
     } else {
-      _json[r'fkiEzsigntemplatesignerID'] = null;
+      json[r'fkiEzsigntemplatesignerID'] = null;
     }
-      _json[r'sEzsigntemplatedocumentName'] = sEzsigntemplatedocumentName;
-      _json[r'eEzsigntemplatedocumentSource'] = eEzsigntemplatedocumentSource;
-    if (eEzsigntemplatedocumentFormat != null) {
-      _json[r'eEzsigntemplatedocumentFormat'] = eEzsigntemplatedocumentFormat;
+      json[r'sEzsigntemplatedocumentName'] = this.sEzsigntemplatedocumentName;
+      json[r'eEzsigntemplatedocumentSource'] = this.eEzsigntemplatedocumentSource;
+    if (this.eEzsigntemplatedocumentFormat != null) {
+      json[r'eEzsigntemplatedocumentFormat'] = this.eEzsigntemplatedocumentFormat;
     } else {
-      _json[r'eEzsigntemplatedocumentFormat'] = null;
+      json[r'eEzsigntemplatedocumentFormat'] = null;
     }
-    if (sEzsigntemplatedocumentBase64 != null) {
-      _json[r'sEzsigntemplatedocumentBase64'] = sEzsigntemplatedocumentBase64;
+    if (this.sEzsigntemplatedocumentBase64 != null) {
+      json[r'sEzsigntemplatedocumentBase64'] = this.sEzsigntemplatedocumentBase64;
     } else {
-      _json[r'sEzsigntemplatedocumentBase64'] = null;
+      json[r'sEzsigntemplatedocumentBase64'] = null;
     }
-    if (sEzsigntemplatedocumentUrl != null) {
-      _json[r'sEzsigntemplatedocumentUrl'] = sEzsigntemplatedocumentUrl;
+    if (this.sEzsigntemplatedocumentUrl != null) {
+      json[r'sEzsigntemplatedocumentUrl'] = this.sEzsigntemplatedocumentUrl;
     } else {
-      _json[r'sEzsigntemplatedocumentUrl'] = null;
+      json[r'sEzsigntemplatedocumentUrl'] = null;
     }
-    if (bEzsigntemplatedocumentForcerepair != null) {
-      _json[r'bEzsigntemplatedocumentForcerepair'] = bEzsigntemplatedocumentForcerepair;
+    if (this.bEzsigntemplatedocumentForcerepair != null) {
+      json[r'bEzsigntemplatedocumentForcerepair'] = this.bEzsigntemplatedocumentForcerepair;
     } else {
-      _json[r'bEzsigntemplatedocumentForcerepair'] = null;
+      json[r'bEzsigntemplatedocumentForcerepair'] = null;
     }
-    if (eEzsigntemplatedocumentForm != null) {
-      _json[r'eEzsigntemplatedocumentForm'] = eEzsigntemplatedocumentForm;
+    if (this.eEzsigntemplatedocumentForm != null) {
+      json[r'eEzsigntemplatedocumentForm'] = this.eEzsigntemplatedocumentForm;
     } else {
-      _json[r'eEzsigntemplatedocumentForm'] = null;
+      json[r'eEzsigntemplatedocumentForm'] = null;
     }
-      _json[r'sEzsigntemplatedocumentPassword'] = sEzsigntemplatedocumentPassword;
-    return _json;
+      json[r'sEzsigntemplatedocumentPassword'] = this.sEzsigntemplatedocumentPassword;
+    return json;
   }
 
   /// Returns a new [EzsigntemplatedocumentRequestCompound] instance and imports its values from
@@ -335,7 +335,7 @@ class EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentSourceEnumType
   /// and users are still using an old app with the old code.
   EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentSourceEnum? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
-      switch (data.toString()) {
+      switch (data) {
         case r'Base64': return EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentSourceEnum.base64;
         case r'Url': return EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentSourceEnum.url;
         case r'Ezsigndocument': return EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentSourceEnum.ezsigndocument;
@@ -408,7 +408,7 @@ class EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnumType
   /// and users are still using an old app with the old code.
   EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
-      switch (data.toString()) {
+      switch (data) {
         case r'Pdf': return EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum.pdf;
         default:
           if (!allowNull) {
@@ -481,7 +481,7 @@ class EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormEnumTypeTr
   /// and users are still using an old app with the old code.
   EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormEnum? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
-      switch (data.toString()) {
+      switch (data) {
         case r'Keep': return EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormEnum.keep;
         case r'Convert': return EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormEnum.convert;
         default:

@@ -48,18 +48,18 @@ class EzsignfoldersignerassociationResponseCompoundAllOf {
   String toString() => 'EzsignfoldersignerassociationResponseCompoundAllOf[objUser=$objUser, objEzsignsigner=$objEzsignsigner]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (objUser != null) {
-      _json[r'objUser'] = objUser;
+    final json = <String, dynamic>{};
+    if (this.objUser != null) {
+      json[r'objUser'] = this.objUser;
     } else {
-      _json[r'objUser'] = null;
+      json[r'objUser'] = null;
     }
-    if (objEzsignsigner != null) {
-      _json[r'objEzsignsigner'] = objEzsignsigner;
+    if (this.objEzsignsigner != null) {
+      json[r'objEzsignsigner'] = this.objEzsignsigner;
     } else {
-      _json[r'objEzsignsigner'] = null;
+      json[r'objEzsignsigner'] = null;
     }
-    return _json;
+    return json;
   }
 
   /// Returns a new [EzsignfoldersignerassociationResponseCompoundAllOf] instance and imports its values from

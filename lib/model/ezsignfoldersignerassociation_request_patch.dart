@@ -38,13 +38,13 @@ class EzsignfoldersignerassociationRequestPatch {
   String toString() => 'EzsignfoldersignerassociationRequestPatch[tEzsignfoldersignerassociationMessage=$tEzsignfoldersignerassociationMessage]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (tEzsignfoldersignerassociationMessage != null) {
-      _json[r'tEzsignfoldersignerassociationMessage'] = tEzsignfoldersignerassociationMessage;
+    final json = <String, dynamic>{};
+    if (this.tEzsignfoldersignerassociationMessage != null) {
+      json[r'tEzsignfoldersignerassociationMessage'] = this.tEzsignfoldersignerassociationMessage;
     } else {
-      _json[r'tEzsignfoldersignerassociationMessage'] = null;
+      json[r'tEzsignfoldersignerassociationMessage'] = null;
     }
-    return _json;
+    return json;
   }
 
   /// Returns a new [EzsignfoldersignerassociationRequestPatch] instance and imports its values from

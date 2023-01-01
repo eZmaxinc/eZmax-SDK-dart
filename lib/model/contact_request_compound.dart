@@ -78,19 +78,19 @@ class ContactRequestCompound {
   String toString() => 'ContactRequestCompound[fkiContacttitleID=$fkiContacttitleID, fkiLanguageID=$fkiLanguageID, sContactFirstname=$sContactFirstname, sContactLastname=$sContactLastname, sContactCompany=$sContactCompany, dtContactBirthdate=$dtContactBirthdate, objContactinformations=$objContactinformations]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'fkiContacttitleID'] = fkiContacttitleID;
-      _json[r'fkiLanguageID'] = fkiLanguageID;
-      _json[r'sContactFirstname'] = sContactFirstname;
-      _json[r'sContactLastname'] = sContactLastname;
-      _json[r'sContactCompany'] = sContactCompany;
-    if (dtContactBirthdate != null) {
-      _json[r'dtContactBirthdate'] = dtContactBirthdate;
+    final json = <String, dynamic>{};
+      json[r'fkiContacttitleID'] = this.fkiContacttitleID;
+      json[r'fkiLanguageID'] = this.fkiLanguageID;
+      json[r'sContactFirstname'] = this.sContactFirstname;
+      json[r'sContactLastname'] = this.sContactLastname;
+      json[r'sContactCompany'] = this.sContactCompany;
+    if (this.dtContactBirthdate != null) {
+      json[r'dtContactBirthdate'] = this.dtContactBirthdate;
     } else {
-      _json[r'dtContactBirthdate'] = null;
+      json[r'dtContactBirthdate'] = null;
     }
-      _json[r'objContactinformations'] = objContactinformations;
-    return _json;
+      json[r'objContactinformations'] = this.objContactinformations;
+    return json;
   }
 
   /// Returns a new [ContactRequestCompound] instance and imports its values from

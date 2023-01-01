@@ -50,18 +50,18 @@ class MultilingualEzsignfoldertypeName {
   String toString() => 'MultilingualEzsignfoldertypeName[sEzsignfoldertypeName1=$sEzsignfoldertypeName1, sEzsignfoldertypeName2=$sEzsignfoldertypeName2]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (sEzsignfoldertypeName1 != null) {
-      _json[r'sEzsignfoldertypeName1'] = sEzsignfoldertypeName1;
+    final json = <String, dynamic>{};
+    if (this.sEzsignfoldertypeName1 != null) {
+      json[r'sEzsignfoldertypeName1'] = this.sEzsignfoldertypeName1;
     } else {
-      _json[r'sEzsignfoldertypeName1'] = null;
+      json[r'sEzsignfoldertypeName1'] = null;
     }
-    if (sEzsignfoldertypeName2 != null) {
-      _json[r'sEzsignfoldertypeName2'] = sEzsignfoldertypeName2;
+    if (this.sEzsignfoldertypeName2 != null) {
+      json[r'sEzsignfoldertypeName2'] = this.sEzsignfoldertypeName2;
     } else {
-      _json[r'sEzsignfoldertypeName2'] = null;
+      json[r'sEzsignfoldertypeName2'] = null;
     }
-    return _json;
+    return json;
   }
 
   /// Returns a new [MultilingualEzsignfoldertypeName] instance and imports its values from

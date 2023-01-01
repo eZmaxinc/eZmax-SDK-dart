@@ -32,9 +32,9 @@ class GlobalCustomerGetEndpointV1Response {
   String toString() => 'GlobalCustomerGetEndpointV1Response[sEndpointURL=$sEndpointURL]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'sEndpointURL'] = sEndpointURL;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'sEndpointURL'] = this.sEndpointURL;
+    return json;
   }
 
   /// Returns a new [GlobalCustomerGetEndpointV1Response] instance and imports its values from

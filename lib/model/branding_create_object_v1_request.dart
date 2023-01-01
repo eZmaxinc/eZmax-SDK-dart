@@ -31,9 +31,9 @@ class BrandingCreateObjectV1Request {
   String toString() => 'BrandingCreateObjectV1Request[aObjBranding=$aObjBranding]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_objBranding'] = aObjBranding;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_objBranding'] = this.aObjBranding;
+    return json;
   }
 
   /// Returns a new [BrandingCreateObjectV1Request] instance and imports its values from

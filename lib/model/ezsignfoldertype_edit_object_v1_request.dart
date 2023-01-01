@@ -31,9 +31,9 @@ class EzsignfoldertypeEditObjectV1Request {
   String toString() => 'EzsignfoldertypeEditObjectV1Request[objEzsignfoldertype=$objEzsignfoldertype]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'objEzsignfoldertype'] = objEzsignfoldertype;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'objEzsignfoldertype'] = this.objEzsignfoldertype;
+    return json;
   }
 
   /// Returns a new [EzsignfoldertypeEditObjectV1Request] instance and imports its values from

@@ -114,24 +114,24 @@ class FranchisereferalincomeRequest {
   String toString() => 'FranchisereferalincomeRequest[pkiFranchisereferalincomeID=$pkiFranchisereferalincomeID, fkiFranchisebrokerID=$fkiFranchisebrokerID, fkiFranchisereferalincomeprogramID=$fkiFranchisereferalincomeprogramID, fkiPeriodID=$fkiPeriodID, dFranchisereferalincomeLoan=$dFranchisereferalincomeLoan, dFranchisereferalincomeFranchiseamount=$dFranchisereferalincomeFranchiseamount, dFranchisereferalincomeFranchisoramount=$dFranchisereferalincomeFranchisoramount, dFranchisereferalincomeAgentamount=$dFranchisereferalincomeAgentamount, dtFranchisereferalincomeDisbursed=$dtFranchisereferalincomeDisbursed, tFranchisereferalincomeComment=$tFranchisereferalincomeComment, fkiFranchiseofficeID=$fkiFranchiseofficeID, sFranchisereferalincomeRemoteid=$sFranchisereferalincomeRemoteid]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (pkiFranchisereferalincomeID != null) {
-      _json[r'pkiFranchisereferalincomeID'] = pkiFranchisereferalincomeID;
+    final json = <String, dynamic>{};
+    if (this.pkiFranchisereferalincomeID != null) {
+      json[r'pkiFranchisereferalincomeID'] = this.pkiFranchisereferalincomeID;
     } else {
-      _json[r'pkiFranchisereferalincomeID'] = null;
+      json[r'pkiFranchisereferalincomeID'] = null;
     }
-      _json[r'fkiFranchisebrokerID'] = fkiFranchisebrokerID;
-      _json[r'fkiFranchisereferalincomeprogramID'] = fkiFranchisereferalincomeprogramID;
-      _json[r'fkiPeriodID'] = fkiPeriodID;
-      _json[r'dFranchisereferalincomeLoan'] = dFranchisereferalincomeLoan;
-      _json[r'dFranchisereferalincomeFranchiseamount'] = dFranchisereferalincomeFranchiseamount;
-      _json[r'dFranchisereferalincomeFranchisoramount'] = dFranchisereferalincomeFranchisoramount;
-      _json[r'dFranchisereferalincomeAgentamount'] = dFranchisereferalincomeAgentamount;
-      _json[r'dtFranchisereferalincomeDisbursed'] = dtFranchisereferalincomeDisbursed;
-      _json[r'tFranchisereferalincomeComment'] = tFranchisereferalincomeComment;
-      _json[r'fkiFranchiseofficeID'] = fkiFranchiseofficeID;
-      _json[r'sFranchisereferalincomeRemoteid'] = sFranchisereferalincomeRemoteid;
-    return _json;
+      json[r'fkiFranchisebrokerID'] = this.fkiFranchisebrokerID;
+      json[r'fkiFranchisereferalincomeprogramID'] = this.fkiFranchisereferalincomeprogramID;
+      json[r'fkiPeriodID'] = this.fkiPeriodID;
+      json[r'dFranchisereferalincomeLoan'] = this.dFranchisereferalincomeLoan;
+      json[r'dFranchisereferalincomeFranchiseamount'] = this.dFranchisereferalincomeFranchiseamount;
+      json[r'dFranchisereferalincomeFranchisoramount'] = this.dFranchisereferalincomeFranchisoramount;
+      json[r'dFranchisereferalincomeAgentamount'] = this.dFranchisereferalincomeAgentamount;
+      json[r'dtFranchisereferalincomeDisbursed'] = this.dtFranchisereferalincomeDisbursed;
+      json[r'tFranchisereferalincomeComment'] = this.tFranchisereferalincomeComment;
+      json[r'fkiFranchiseofficeID'] = this.fkiFranchiseofficeID;
+      json[r'sFranchisereferalincomeRemoteid'] = this.sFranchisereferalincomeRemoteid;
+    return json;
   }
 
   /// Returns a new [FranchisereferalincomeRequest] instance and imports its values from

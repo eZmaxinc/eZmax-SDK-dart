@@ -78,19 +78,19 @@ class EzsignbulksendCreateEzsignbulksendtransmissionV1Request {
   String toString() => 'EzsignbulksendCreateEzsignbulksendtransmissionV1Request[fkiUserlogintypeID=$fkiUserlogintypeID, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sEzsignbulksendtransmissionDescription=$sEzsignbulksendtransmissionDescription, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, eEzsignfolderSendreminderfrequency=$eEzsignfolderSendreminderfrequency, tExtraMessage=$tExtraMessage, sCsvBase64=$sCsvBase64]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'fkiUserlogintypeID'] = fkiUserlogintypeID;
-    if (fkiEzsigntsarequirementID != null) {
-      _json[r'fkiEzsigntsarequirementID'] = fkiEzsigntsarequirementID;
+    final json = <String, dynamic>{};
+      json[r'fkiUserlogintypeID'] = this.fkiUserlogintypeID;
+    if (this.fkiEzsigntsarequirementID != null) {
+      json[r'fkiEzsigntsarequirementID'] = this.fkiEzsigntsarequirementID;
     } else {
-      _json[r'fkiEzsigntsarequirementID'] = null;
+      json[r'fkiEzsigntsarequirementID'] = null;
     }
-      _json[r'sEzsignbulksendtransmissionDescription'] = sEzsignbulksendtransmissionDescription;
-      _json[r'dtEzsigndocumentDuedate'] = dtEzsigndocumentDuedate;
-      _json[r'eEzsignfolderSendreminderfrequency'] = eEzsignfolderSendreminderfrequency;
-      _json[r'tExtraMessage'] = tExtraMessage;
-      _json[r'sCsvBase64'] = sCsvBase64;
-    return _json;
+      json[r'sEzsignbulksendtransmissionDescription'] = this.sEzsignbulksendtransmissionDescription;
+      json[r'dtEzsigndocumentDuedate'] = this.dtEzsigndocumentDuedate;
+      json[r'eEzsignfolderSendreminderfrequency'] = this.eEzsignfolderSendreminderfrequency;
+      json[r'tExtraMessage'] = this.tExtraMessage;
+      json[r'sCsvBase64'] = this.sCsvBase64;
+    return json;
   }
 
   /// Returns a new [EzsignbulksendCreateEzsignbulksendtransmissionV1Request] instance and imports its values from

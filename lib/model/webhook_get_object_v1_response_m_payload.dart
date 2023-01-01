@@ -127,40 +127,40 @@ class WebhookGetObjectV1ResponseMPayload {
   String toString() => 'WebhookGetObjectV1ResponseMPayload[pkiWebhookID=$pkiWebhookID, sWebhookDescription=$sWebhookDescription, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, sWebhookUrl=$sWebhookUrl, sWebhookEmailfailed=$sWebhookEmailfailed, bWebhookIsactive=$bWebhookIsactive, bWebhookSkipsslvalidation=$bWebhookSkipsslvalidation, sWebhookEvent=$sWebhookEvent]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiWebhookID'] = pkiWebhookID;
-      _json[r'sWebhookDescription'] = sWebhookDescription;
-    if (fkiEzsignfoldertypeID != null) {
-      _json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
+    final json = <String, dynamic>{};
+      json[r'pkiWebhookID'] = this.pkiWebhookID;
+      json[r'sWebhookDescription'] = this.sWebhookDescription;
+    if (this.fkiEzsignfoldertypeID != null) {
+      json[r'fkiEzsignfoldertypeID'] = this.fkiEzsignfoldertypeID;
     } else {
-      _json[r'fkiEzsignfoldertypeID'] = null;
+      json[r'fkiEzsignfoldertypeID'] = null;
     }
-    if (sEzsignfoldertypeNameX != null) {
-      _json[r'sEzsignfoldertypeNameX'] = sEzsignfoldertypeNameX;
+    if (this.sEzsignfoldertypeNameX != null) {
+      json[r'sEzsignfoldertypeNameX'] = this.sEzsignfoldertypeNameX;
     } else {
-      _json[r'sEzsignfoldertypeNameX'] = null;
+      json[r'sEzsignfoldertypeNameX'] = null;
     }
-      _json[r'eWebhookModule'] = eWebhookModule;
-    if (eWebhookEzsignevent != null) {
-      _json[r'eWebhookEzsignevent'] = eWebhookEzsignevent;
+      json[r'eWebhookModule'] = this.eWebhookModule;
+    if (this.eWebhookEzsignevent != null) {
+      json[r'eWebhookEzsignevent'] = this.eWebhookEzsignevent;
     } else {
-      _json[r'eWebhookEzsignevent'] = null;
+      json[r'eWebhookEzsignevent'] = null;
     }
-    if (eWebhookManagementevent != null) {
-      _json[r'eWebhookManagementevent'] = eWebhookManagementevent;
+    if (this.eWebhookManagementevent != null) {
+      json[r'eWebhookManagementevent'] = this.eWebhookManagementevent;
     } else {
-      _json[r'eWebhookManagementevent'] = null;
+      json[r'eWebhookManagementevent'] = null;
     }
-      _json[r'sWebhookUrl'] = sWebhookUrl;
-      _json[r'sWebhookEmailfailed'] = sWebhookEmailfailed;
-    if (bWebhookIsactive != null) {
-      _json[r'bWebhookIsactive'] = bWebhookIsactive;
+      json[r'sWebhookUrl'] = this.sWebhookUrl;
+      json[r'sWebhookEmailfailed'] = this.sWebhookEmailfailed;
+    if (this.bWebhookIsactive != null) {
+      json[r'bWebhookIsactive'] = this.bWebhookIsactive;
     } else {
-      _json[r'bWebhookIsactive'] = null;
+      json[r'bWebhookIsactive'] = null;
     }
-      _json[r'bWebhookSkipsslvalidation'] = bWebhookSkipsslvalidation;
-      _json[r'sWebhookEvent'] = sWebhookEvent;
-    return _json;
+      json[r'bWebhookSkipsslvalidation'] = this.bWebhookSkipsslvalidation;
+      json[r'sWebhookEvent'] = this.sWebhookEvent;
+    return json;
   }
 
   /// Returns a new [WebhookGetObjectV1ResponseMPayload] instance and imports its values from

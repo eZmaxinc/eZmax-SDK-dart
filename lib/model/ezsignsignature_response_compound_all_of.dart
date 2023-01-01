@@ -44,14 +44,14 @@ class EzsignsignatureResponseCompoundAllOf {
   String toString() => 'EzsignsignatureResponseCompoundAllOf[bEzsignsignatureCustomdate=$bEzsignsignatureCustomdate, aObjEzsignsignaturecustomdate=$aObjEzsignsignaturecustomdate]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (bEzsignsignatureCustomdate != null) {
-      _json[r'bEzsignsignatureCustomdate'] = bEzsignsignatureCustomdate;
+    final json = <String, dynamic>{};
+    if (this.bEzsignsignatureCustomdate != null) {
+      json[r'bEzsignsignatureCustomdate'] = this.bEzsignsignatureCustomdate;
     } else {
-      _json[r'bEzsignsignatureCustomdate'] = null;
+      json[r'bEzsignsignatureCustomdate'] = null;
     }
-      _json[r'a_objEzsignsignaturecustomdate'] = aObjEzsignsignaturecustomdate;
-    return _json;
+      json[r'a_objEzsignsignaturecustomdate'] = this.aObjEzsignsignaturecustomdate;
+    return json;
   }
 
   /// Returns a new [EzsignsignatureResponseCompoundAllOf] instance and imports its values from

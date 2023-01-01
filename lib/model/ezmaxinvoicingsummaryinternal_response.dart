@@ -79,22 +79,22 @@ class EzmaxinvoicingsummaryinternalResponse {
   String toString() => 'EzmaxinvoicingsummaryinternalResponse[pkiEzmaxinvoicingsummaryinternalID=$pkiEzmaxinvoicingsummaryinternalID, objEzmaxinvoicingsummaryinternalDescription=$objEzmaxinvoicingsummaryinternalDescription, sEzmaxinvoicingsummaryinternalDescriptionX=$sEzmaxinvoicingsummaryinternalDescriptionX, fkiEzmaxinvoicingID=$fkiEzmaxinvoicingID, fkiBillingentityinternalID=$fkiBillingentityinternalID, sBillingentityinternalDescriptionX=$sBillingentityinternalDescriptionX]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-    if (pkiEzmaxinvoicingsummaryinternalID != null) {
-      _json[r'pkiEzmaxinvoicingsummaryinternalID'] = pkiEzmaxinvoicingsummaryinternalID;
+    final json = <String, dynamic>{};
+    if (this.pkiEzmaxinvoicingsummaryinternalID != null) {
+      json[r'pkiEzmaxinvoicingsummaryinternalID'] = this.pkiEzmaxinvoicingsummaryinternalID;
     } else {
-      _json[r'pkiEzmaxinvoicingsummaryinternalID'] = null;
+      json[r'pkiEzmaxinvoicingsummaryinternalID'] = null;
     }
-      _json[r'objEzmaxinvoicingsummaryinternalDescription'] = objEzmaxinvoicingsummaryinternalDescription;
-      _json[r'sEzmaxinvoicingsummaryinternalDescriptionX'] = sEzmaxinvoicingsummaryinternalDescriptionX;
-    if (fkiEzmaxinvoicingID != null) {
-      _json[r'fkiEzmaxinvoicingID'] = fkiEzmaxinvoicingID;
+      json[r'objEzmaxinvoicingsummaryinternalDescription'] = this.objEzmaxinvoicingsummaryinternalDescription;
+      json[r'sEzmaxinvoicingsummaryinternalDescriptionX'] = this.sEzmaxinvoicingsummaryinternalDescriptionX;
+    if (this.fkiEzmaxinvoicingID != null) {
+      json[r'fkiEzmaxinvoicingID'] = this.fkiEzmaxinvoicingID;
     } else {
-      _json[r'fkiEzmaxinvoicingID'] = null;
+      json[r'fkiEzmaxinvoicingID'] = null;
     }
-      _json[r'fkiBillingentityinternalID'] = fkiBillingentityinternalID;
-      _json[r'sBillingentityinternalDescriptionX'] = sBillingentityinternalDescriptionX;
-    return _json;
+      json[r'fkiBillingentityinternalID'] = this.fkiBillingentityinternalID;
+      json[r'sBillingentityinternalDescriptionX'] = this.sBillingentityinternalDescriptionX;
+    return json;
   }
 
   /// Returns a new [EzmaxinvoicingsummaryinternalResponse] instance and imports its values from

@@ -59,13 +59,13 @@ class NotificationtestResponse {
   String toString() => 'NotificationtestResponse[pkiNotificationtestID=$pkiNotificationtestID, objNotificationtestName=$objNotificationtestName, fkiNotificationsubsectionID=$fkiNotificationsubsectionID, sNotificationtestFunction=$sNotificationtestFunction, sNotificationtestNameX=$sNotificationtestNameX]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiNotificationtestID'] = pkiNotificationtestID;
-      _json[r'objNotificationtestName'] = objNotificationtestName;
-      _json[r'fkiNotificationsubsectionID'] = fkiNotificationsubsectionID;
-      _json[r'sNotificationtestFunction'] = sNotificationtestFunction;
-      _json[r'sNotificationtestNameX'] = sNotificationtestNameX;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'pkiNotificationtestID'] = this.pkiNotificationtestID;
+      json[r'objNotificationtestName'] = this.objNotificationtestName;
+      json[r'fkiNotificationsubsectionID'] = this.fkiNotificationsubsectionID;
+      json[r'sNotificationtestFunction'] = this.sNotificationtestFunction;
+      json[r'sNotificationtestNameX'] = this.sNotificationtestNameX;
+    return json;
   }
 
   /// Returns a new [NotificationtestResponse] instance and imports its values from

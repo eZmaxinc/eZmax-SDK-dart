@@ -46,11 +46,11 @@ class BillingentityinternalAutocompleteElementResponse {
   String toString() => 'BillingentityinternalAutocompleteElementResponse[sBillingentityinternalDescriptionX=$sBillingentityinternalDescriptionX, pkiBillingentityinternalID=$pkiBillingentityinternalID, bBillingentityinternalIsactive=$bBillingentityinternalIsactive]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'sBillingentityinternalDescriptionX'] = sBillingentityinternalDescriptionX;
-      _json[r'pkiBillingentityinternalID'] = pkiBillingentityinternalID;
-      _json[r'bBillingentityinternalIsactive'] = bBillingentityinternalIsactive;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'sBillingentityinternalDescriptionX'] = this.sBillingentityinternalDescriptionX;
+      json[r'pkiBillingentityinternalID'] = this.pkiBillingentityinternalID;
+      json[r'bBillingentityinternalIsactive'] = this.bBillingentityinternalIsactive;
+    return json;
   }
 
   /// Returns a new [BillingentityinternalAutocompleteElementResponse] instance and imports its values from

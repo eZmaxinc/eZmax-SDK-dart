@@ -69,7 +69,7 @@ class FieldENotificationpreferenceStatusTypeTransformer {
   /// and users are still using an old app with the old code.
   FieldENotificationpreferenceStatus? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
-      switch (data.toString()) {
+      switch (data) {
         case r'Show': return FieldENotificationpreferenceStatus.show_;
         case r'Hide': return FieldENotificationpreferenceStatus.hide_;
         case r'Pin': return FieldENotificationpreferenceStatus.pin;

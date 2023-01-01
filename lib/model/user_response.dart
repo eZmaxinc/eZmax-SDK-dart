@@ -71,15 +71,15 @@ class UserResponse {
   String toString() => 'UserResponse[pkiUserID=$pkiUserID, fkiLanguageID=$fkiLanguageID, eUserType=$eUserType, sUserFirstname=$sUserFirstname, sUserLastname=$sUserLastname, sUserLoginname=$sUserLoginname, objAudit=$objAudit]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiUserID'] = pkiUserID;
-      _json[r'fkiLanguageID'] = fkiLanguageID;
-      _json[r'eUserType'] = eUserType;
-      _json[r'sUserFirstname'] = sUserFirstname;
-      _json[r'sUserLastname'] = sUserLastname;
-      _json[r'sUserLoginname'] = sUserLoginname;
-      _json[r'objAudit'] = objAudit;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'pkiUserID'] = this.pkiUserID;
+      json[r'fkiLanguageID'] = this.fkiLanguageID;
+      json[r'eUserType'] = this.eUserType;
+      json[r'sUserFirstname'] = this.sUserFirstname;
+      json[r'sUserLastname'] = this.sUserLastname;
+      json[r'sUserLoginname'] = this.sUserLoginname;
+      json[r'objAudit'] = this.objAudit;
+    return json;
   }
 
   /// Returns a new [UserResponse] instance and imports its values from

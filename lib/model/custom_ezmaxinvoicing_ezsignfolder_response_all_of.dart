@@ -63,14 +63,14 @@ class CustomEzmaxinvoicingEzsignfolderResponseAllOf {
   String toString() => 'CustomEzmaxinvoicingEzsignfolderResponseAllOf[fkiEzsignfolderID=$fkiEzsignfolderID, sEzsignfolderDescription=$sEzsignfolderDescription, bEzsigntsarequirementBillable=$bEzsigntsarequirementBillable, bEzsignfolderMfaused=$bEzsignfolderMfaused, bEzsignfolderPaymentused=$bEzsignfolderPaymentused, bEzsignfolderAllowed=$bEzsignfolderAllowed]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'fkiEzsignfolderID'] = fkiEzsignfolderID;
-      _json[r'sEzsignfolderDescription'] = sEzsignfolderDescription;
-      _json[r'bEzsigntsarequirementBillable'] = bEzsigntsarequirementBillable;
-      _json[r'bEzsignfolderMfaused'] = bEzsignfolderMfaused;
-      _json[r'bEzsignfolderPaymentused'] = bEzsignfolderPaymentused;
-      _json[r'bEzsignfolderAllowed'] = bEzsignfolderAllowed;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'fkiEzsignfolderID'] = this.fkiEzsignfolderID;
+      json[r'sEzsignfolderDescription'] = this.sEzsignfolderDescription;
+      json[r'bEzsigntsarequirementBillable'] = this.bEzsigntsarequirementBillable;
+      json[r'bEzsignfolderMfaused'] = this.bEzsignfolderMfaused;
+      json[r'bEzsignfolderPaymentused'] = this.bEzsignfolderPaymentused;
+      json[r'bEzsignfolderAllowed'] = this.bEzsignfolderAllowed;
+    return json;
   }
 
   /// Returns a new [CustomEzmaxinvoicingEzsignfolderResponseAllOf] instance and imports its values from

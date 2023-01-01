@@ -31,9 +31,9 @@ class EzsigntemplatedocumentGetEzsigntemplatesignaturesV1ResponseMPayload {
   String toString() => 'EzsigntemplatedocumentGetEzsigntemplatesignaturesV1ResponseMPayload[aObjEzsigntemplatesignature=$aObjEzsigntemplatesignature]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_objEzsigntemplatesignature'] = aObjEzsigntemplatesignature;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_objEzsigntemplatesignature'] = this.aObjEzsigntemplatesignature;
+    return json;
   }
 
   /// Returns a new [EzsigntemplatedocumentGetEzsigntemplatesignaturesV1ResponseMPayload] instance and imports its values from

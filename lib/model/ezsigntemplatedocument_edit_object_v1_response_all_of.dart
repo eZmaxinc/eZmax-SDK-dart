@@ -31,9 +31,9 @@ class EzsigntemplatedocumentEditObjectV1ResponseAllOf {
   String toString() => 'EzsigntemplatedocumentEditObjectV1ResponseAllOf[aObjWarning=$aObjWarning]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_objWarning'] = aObjWarning;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_objWarning'] = this.aObjWarning;
+    return json;
   }
 
   /// Returns a new [EzsigntemplatedocumentEditObjectV1ResponseAllOf] instance and imports its values from

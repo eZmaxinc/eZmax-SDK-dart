@@ -81,16 +81,16 @@ class EzsigntemplatepackageListElement {
   String toString() => 'EzsigntemplatepackageListElement[pkiEzsigntemplatepackageID=$pkiEzsigntemplatepackageID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiLanguageID=$fkiLanguageID, sEzsigntemplatepackageDescription=$sEzsigntemplatepackageDescription, bEzsigntemplatepackageNeedvalidation=$bEzsigntemplatepackageNeedvalidation, iEzsigntemplatepackagemembership=$iEzsigntemplatepackagemembership, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, bEzsigntemplatepackageIsactive=$bEzsigntemplatepackageIsactive]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiEzsigntemplatepackageID'] = pkiEzsigntemplatepackageID;
-      _json[r'fkiEzsignfoldertypeID'] = fkiEzsignfoldertypeID;
-      _json[r'fkiLanguageID'] = fkiLanguageID;
-      _json[r'sEzsigntemplatepackageDescription'] = sEzsigntemplatepackageDescription;
-      _json[r'bEzsigntemplatepackageNeedvalidation'] = bEzsigntemplatepackageNeedvalidation;
-      _json[r'iEzsigntemplatepackagemembership'] = iEzsigntemplatepackagemembership;
-      _json[r'sEzsignfoldertypeNameX'] = sEzsignfoldertypeNameX;
-      _json[r'bEzsigntemplatepackageIsactive'] = bEzsigntemplatepackageIsactive;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'pkiEzsigntemplatepackageID'] = this.pkiEzsigntemplatepackageID;
+      json[r'fkiEzsignfoldertypeID'] = this.fkiEzsignfoldertypeID;
+      json[r'fkiLanguageID'] = this.fkiLanguageID;
+      json[r'sEzsigntemplatepackageDescription'] = this.sEzsigntemplatepackageDescription;
+      json[r'bEzsigntemplatepackageNeedvalidation'] = this.bEzsigntemplatepackageNeedvalidation;
+      json[r'iEzsigntemplatepackagemembership'] = this.iEzsigntemplatepackagemembership;
+      json[r'sEzsignfoldertypeNameX'] = this.sEzsignfoldertypeNameX;
+      json[r'bEzsigntemplatepackageIsactive'] = this.bEzsigntemplatepackageIsactive;
+    return json;
   }
 
   /// Returns a new [EzsigntemplatepackageListElement] instance and imports its values from

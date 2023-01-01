@@ -56,13 +56,13 @@ class CustomEzmaxinvoicingEzsigndocumentResponseAllOf {
   String toString() => 'CustomEzmaxinvoicingEzsigndocumentResponseAllOf[fkiEzsignfolderID=$fkiEzsignfolderID, sName=$sName, sEzsignfolderDescription=$sEzsignfolderDescription, sEzsigndocumentName=$sEzsigndocumentName, bEzsignfolderAllowed=$bEzsignfolderAllowed]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'fkiEzsignfolderID'] = fkiEzsignfolderID;
-      _json[r'sName'] = sName;
-      _json[r'sEzsignfolderDescription'] = sEzsignfolderDescription;
-      _json[r'sEzsigndocumentName'] = sEzsigndocumentName;
-      _json[r'bEzsignfolderAllowed'] = bEzsignfolderAllowed;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'fkiEzsignfolderID'] = this.fkiEzsignfolderID;
+      json[r'sName'] = this.sName;
+      json[r'sEzsignfolderDescription'] = this.sEzsignfolderDescription;
+      json[r'sEzsigndocumentName'] = this.sEzsigndocumentName;
+      json[r'bEzsignfolderAllowed'] = this.bEzsignfolderAllowed;
+    return json;
   }
 
   /// Returns a new [CustomEzmaxinvoicingEzsigndocumentResponseAllOf] instance and imports its values from

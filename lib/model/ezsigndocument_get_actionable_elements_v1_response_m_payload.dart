@@ -36,10 +36,10 @@ class EzsigndocumentGetActionableElementsV1ResponseMPayload {
   String toString() => 'EzsigndocumentGetActionableElementsV1ResponseMPayload[aObjEzsignsignature=$aObjEzsignsignature, aObjEzsignformfieldgroup=$aObjEzsignformfieldgroup]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_objEzsignsignature'] = aObjEzsignsignature;
-      _json[r'a_objEzsignformfieldgroup'] = aObjEzsignformfieldgroup;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_objEzsignsignature'] = this.aObjEzsignsignature;
+      json[r'a_objEzsignformfieldgroup'] = this.aObjEzsignformfieldgroup;
+    return json;
   }
 
   /// Returns a new [EzsigndocumentGetActionableElementsV1ResponseMPayload] instance and imports its values from

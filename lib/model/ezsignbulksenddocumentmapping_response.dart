@@ -78,21 +78,21 @@ class EzsignbulksenddocumentmappingResponse {
   String toString() => 'EzsignbulksenddocumentmappingResponse[pkiEzsignbulksenddocumentmappingID=$pkiEzsignbulksenddocumentmappingID, fkiEzsignbulksendID=$fkiEzsignbulksendID, fkiEzsigntemplatepackageID=$fkiEzsigntemplatepackageID, fkiEzsigntemplateID=$fkiEzsigntemplateID, iEzsignbulksenddocumentmappingOrder=$iEzsignbulksenddocumentmappingOrder]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'pkiEzsignbulksenddocumentmappingID'] = pkiEzsignbulksenddocumentmappingID;
-      _json[r'fkiEzsignbulksendID'] = fkiEzsignbulksendID;
-    if (fkiEzsigntemplatepackageID != null) {
-      _json[r'fkiEzsigntemplatepackageID'] = fkiEzsigntemplatepackageID;
+    final json = <String, dynamic>{};
+      json[r'pkiEzsignbulksenddocumentmappingID'] = this.pkiEzsignbulksenddocumentmappingID;
+      json[r'fkiEzsignbulksendID'] = this.fkiEzsignbulksendID;
+    if (this.fkiEzsigntemplatepackageID != null) {
+      json[r'fkiEzsigntemplatepackageID'] = this.fkiEzsigntemplatepackageID;
     } else {
-      _json[r'fkiEzsigntemplatepackageID'] = null;
+      json[r'fkiEzsigntemplatepackageID'] = null;
     }
-    if (fkiEzsigntemplateID != null) {
-      _json[r'fkiEzsigntemplateID'] = fkiEzsigntemplateID;
+    if (this.fkiEzsigntemplateID != null) {
+      json[r'fkiEzsigntemplateID'] = this.fkiEzsigntemplateID;
     } else {
-      _json[r'fkiEzsigntemplateID'] = null;
+      json[r'fkiEzsigntemplateID'] = null;
     }
-      _json[r'iEzsignbulksenddocumentmappingOrder'] = iEzsignbulksenddocumentmappingOrder;
-    return _json;
+      json[r'iEzsignbulksenddocumentmappingOrder'] = this.iEzsignbulksenddocumentmappingOrder;
+    return json;
   }
 
   /// Returns a new [EzsignbulksenddocumentmappingResponse] instance and imports its values from

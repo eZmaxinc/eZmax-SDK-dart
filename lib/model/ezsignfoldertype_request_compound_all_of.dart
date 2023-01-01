@@ -36,10 +36,10 @@ class EzsignfoldertypeRequestCompoundAllOf {
   String toString() => 'EzsignfoldertypeRequestCompoundAllOf[aFkiUserIDSigned=$aFkiUserIDSigned, aFkiUserIDSummary=$aFkiUserIDSummary]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'a_fkiUserIDSigned'] = aFkiUserIDSigned;
-      _json[r'a_fkiUserIDSummary'] = aFkiUserIDSummary;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'a_fkiUserIDSigned'] = this.aFkiUserIDSigned;
+      json[r'a_fkiUserIDSummary'] = this.aFkiUserIDSummary;
+    return json;
   }
 
   /// Returns a new [EzsignfoldertypeRequestCompoundAllOf] instance and imports its values from

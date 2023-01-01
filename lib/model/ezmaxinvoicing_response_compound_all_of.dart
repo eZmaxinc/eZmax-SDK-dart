@@ -71,17 +71,17 @@ class EzmaxinvoicingResponseCompoundAllOf {
   String toString() => 'EzmaxinvoicingResponseCompoundAllOf[objEzmaxinvoicingcontract=$objEzmaxinvoicingcontract, objEzmaxpricing=$objEzmaxpricing, aObjEzmaxinvoicingsummaryglobal=$aObjEzmaxinvoicingsummaryglobal, aObjEzmaxinvoicingsummaryexternal=$aObjEzmaxinvoicingsummaryexternal, aObjEzmaxinvoicingsummaryinternal=$aObjEzmaxinvoicingsummaryinternal, aObjEzmaxinvoicingagent=$aObjEzmaxinvoicingagent, aObjEzmaxinvoicinguser=$aObjEzmaxinvoicinguser, aObjEzmaxinvoicingezsignfolder=$aObjEzmaxinvoicingezsignfolder, aObjEzmaxinvoicingezsigndocument=$aObjEzmaxinvoicingezsigndocument]';
 
   Map<String, dynamic> toJson() {
-    final _json = <String, dynamic>{};
-      _json[r'objEzmaxinvoicingcontract'] = objEzmaxinvoicingcontract;
-      _json[r'objEzmaxpricing'] = objEzmaxpricing;
-      _json[r'a_objEzmaxinvoicingsummaryglobal'] = aObjEzmaxinvoicingsummaryglobal;
-      _json[r'a_objEzmaxinvoicingsummaryexternal'] = aObjEzmaxinvoicingsummaryexternal;
-      _json[r'a_objEzmaxinvoicingsummaryinternal'] = aObjEzmaxinvoicingsummaryinternal;
-      _json[r'a_objEzmaxinvoicingagent'] = aObjEzmaxinvoicingagent;
-      _json[r'a_objEzmaxinvoicinguser'] = aObjEzmaxinvoicinguser;
-      _json[r'a_objEzmaxinvoicingezsignfolder'] = aObjEzmaxinvoicingezsignfolder;
-      _json[r'a_objEzmaxinvoicingezsigndocument'] = aObjEzmaxinvoicingezsigndocument;
-    return _json;
+    final json = <String, dynamic>{};
+      json[r'objEzmaxinvoicingcontract'] = this.objEzmaxinvoicingcontract;
+      json[r'objEzmaxpricing'] = this.objEzmaxpricing;
+      json[r'a_objEzmaxinvoicingsummaryglobal'] = this.aObjEzmaxinvoicingsummaryglobal;
+      json[r'a_objEzmaxinvoicingsummaryexternal'] = this.aObjEzmaxinvoicingsummaryexternal;
+      json[r'a_objEzmaxinvoicingsummaryinternal'] = this.aObjEzmaxinvoicingsummaryinternal;
+      json[r'a_objEzmaxinvoicingagent'] = this.aObjEzmaxinvoicingagent;
+      json[r'a_objEzmaxinvoicinguser'] = this.aObjEzmaxinvoicinguser;
+      json[r'a_objEzmaxinvoicingezsignfolder'] = this.aObjEzmaxinvoicingezsignfolder;
+      json[r'a_objEzmaxinvoicingezsigndocument'] = this.aObjEzmaxinvoicingezsigndocument;
+    return json;
   }
 
   /// Returns a new [EzmaxinvoicingResponseCompoundAllOf] instance and imports its values from
