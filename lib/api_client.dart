@@ -345,6 +345,8 @@ class ApiClient {
           return CommunicationGetListV1ResponseAllOf.fromJson(value);
         case 'CommunicationGetListV1ResponseMPayload':
           return CommunicationGetListV1ResponseMPayload.fromJson(value);
+        case 'CommunicationGetListV1ResponseMPayloadAllOf':
+          return CommunicationGetListV1ResponseMPayloadAllOf.fromJson(value);
         case 'CommunicationGetObjectV2Response':
           return CommunicationGetObjectV2Response.fromJson(value);
         case 'CommunicationGetObjectV2ResponseAllOf':
@@ -363,22 +365,16 @@ class ApiClient {
           return CommunicationattachmentResponse.fromJson(value);
         case 'CommunicationattachmentResponseCompound':
           return CommunicationattachmentResponseCompound.fromJson(value);
-        case 'CommunicationexternalimageResponse':
-          return CommunicationexternalimageResponse.fromJson(value);
-        case 'CommunicationexternalimageResponseCompound':
-          return CommunicationexternalimageResponseCompound.fromJson(value);
         case 'CommunicationexternalrecipientResponse':
           return CommunicationexternalrecipientResponse.fromJson(value);
         case 'CommunicationexternalrecipientResponseCompound':
           return CommunicationexternalrecipientResponseCompound.fromJson(value);
-        case 'CommunicationimageResponse':
-          return CommunicationimageResponse.fromJson(value);
-        case 'CommunicationimageResponseCompound':
-          return CommunicationimageResponseCompound.fromJson(value);
         case 'CommunicationrecipientResponse':
           return CommunicationrecipientResponse.fromJson(value);
         case 'CommunicationrecipientResponseCompound':
           return CommunicationrecipientResponseCompound.fromJson(value);
+        case 'ComputedECommunicationDirection':
+          return ComputedECommunicationDirectionTypeTransformer().decode(value);
         case 'ContactRequest':
           return ContactRequest.fromJson(value);
         case 'ContactRequestCompound':
@@ -479,10 +475,18 @@ class ApiClient {
           return DepartmentGetMembersV1ResponseAllOf.fromJson(value);
         case 'DepartmentGetMembersV1ResponseMPayload':
           return DepartmentGetMembersV1ResponseMPayload.fromJson(value);
+        case 'DescriptionstaticResponse':
+          return DescriptionstaticResponse.fromJson(value);
+        case 'DescriptionstaticResponseCompound':
+          return DescriptionstaticResponseCompound.fromJson(value);
         case 'EmailRequest':
           return EmailRequest.fromJson(value);
         case 'EmailRequestCompound':
           return EmailRequestCompound.fromJson(value);
+        case 'EmailstaticResponse':
+          return EmailstaticResponse.fromJson(value);
+        case 'EmailstaticResponseCompound':
+          return EmailstaticResponseCompound.fromJson(value);
         case 'EzmaxinvoicingAutocompleteElementResponse':
           return EzmaxinvoicingAutocompleteElementResponse.fromJson(value);
         case 'EzmaxinvoicingGetAutocompleteV2Response':
@@ -1681,12 +1685,14 @@ class ApiClient {
           return FieldEActivesessionWeekdaystartTypeTransformer().decode(value);
         case 'FieldEBrandingLogo':
           return FieldEBrandingLogoTypeTransformer().decode(value);
-        case 'FieldECommunicationEmailimportance':
-          return FieldECommunicationEmailimportanceTypeTransformer().decode(value);
+        case 'FieldECommunicationImportance':
+          return FieldECommunicationImportanceTypeTransformer().decode(value);
         case 'FieldECommunicationType':
           return FieldECommunicationTypeTypeTransformer().decode(value);
         case 'FieldECommunicationexternalrecipientType':
           return FieldECommunicationexternalrecipientTypeTypeTransformer().decode(value);
+        case 'FieldECommunicationrecipientObjecttype':
+          return FieldECommunicationrecipientObjecttypeTypeTransformer().decode(value);
         case 'FieldECommunicationrecipientType':
           return FieldECommunicationrecipientTypeTypeTransformer().decode(value);
         case 'FieldEEzmaxinvoicingPaymenttype':
@@ -1813,6 +1819,8 @@ class ApiClient {
           return MultilingualNotificationsubsectionName.fromJson(value);
         case 'MultilingualNotificationtestName':
           return MultilingualNotificationtestName.fromJson(value);
+        case 'MultilingualPaymenttermDescription':
+          return MultilingualPaymenttermDescription.fromJson(value);
         case 'MultilingualVersionhistoryDetail':
           return MultilingualVersionhistoryDetail.fromJson(value);
         case 'NotificationsectionGetNotificationtestsV1Response':
@@ -1831,6 +1839,52 @@ class ApiClient {
           return NotificationtestGetElementsV1ResponseMPayload.fromJson(value);
         case 'NotificationtestResponse':
           return NotificationtestResponse.fromJson(value);
+        case 'PaymenttermAutocompleteElementResponse':
+          return PaymenttermAutocompleteElementResponse.fromJson(value);
+        case 'PaymenttermCreateObjectV1Request':
+          return PaymenttermCreateObjectV1Request.fromJson(value);
+        case 'PaymenttermCreateObjectV1Response':
+          return PaymenttermCreateObjectV1Response.fromJson(value);
+        case 'PaymenttermCreateObjectV1ResponseAllOf':
+          return PaymenttermCreateObjectV1ResponseAllOf.fromJson(value);
+        case 'PaymenttermCreateObjectV1ResponseMPayload':
+          return PaymenttermCreateObjectV1ResponseMPayload.fromJson(value);
+        case 'PaymenttermDeleteObjectV1Response':
+          return PaymenttermDeleteObjectV1Response.fromJson(value);
+        case 'PaymenttermEditObjectV1Request':
+          return PaymenttermEditObjectV1Request.fromJson(value);
+        case 'PaymenttermEditObjectV1Response':
+          return PaymenttermEditObjectV1Response.fromJson(value);
+        case 'PaymenttermGetAutocompleteV2Response':
+          return PaymenttermGetAutocompleteV2Response.fromJson(value);
+        case 'PaymenttermGetAutocompleteV2ResponseAllOf':
+          return PaymenttermGetAutocompleteV2ResponseAllOf.fromJson(value);
+        case 'PaymenttermGetAutocompleteV2ResponseMPayload':
+          return PaymenttermGetAutocompleteV2ResponseMPayload.fromJson(value);
+        case 'PaymenttermGetListV1Response':
+          return PaymenttermGetListV1Response.fromJson(value);
+        case 'PaymenttermGetListV1ResponseAllOf':
+          return PaymenttermGetListV1ResponseAllOf.fromJson(value);
+        case 'PaymenttermGetListV1ResponseMPayload':
+          return PaymenttermGetListV1ResponseMPayload.fromJson(value);
+        case 'PaymenttermGetListV1ResponseMPayloadAllOf':
+          return PaymenttermGetListV1ResponseMPayloadAllOf.fromJson(value);
+        case 'PaymenttermGetObjectV2Response':
+          return PaymenttermGetObjectV2Response.fromJson(value);
+        case 'PaymenttermGetObjectV2ResponseAllOf':
+          return PaymenttermGetObjectV2ResponseAllOf.fromJson(value);
+        case 'PaymenttermGetObjectV2ResponseMPayload':
+          return PaymenttermGetObjectV2ResponseMPayload.fromJson(value);
+        case 'PaymenttermListElement':
+          return PaymenttermListElement.fromJson(value);
+        case 'PaymenttermRequest':
+          return PaymenttermRequest.fromJson(value);
+        case 'PaymenttermRequestCompound':
+          return PaymenttermRequestCompound.fromJson(value);
+        case 'PaymenttermResponse':
+          return PaymenttermResponse.fromJson(value);
+        case 'PaymenttermResponseCompound':
+          return PaymenttermResponseCompound.fromJson(value);
         case 'PeriodAutocompleteElementResponse':
           return PeriodAutocompleteElementResponse.fromJson(value);
         case 'PeriodGetAutocompleteV2Response':
@@ -1843,10 +1897,10 @@ class ApiClient {
           return PhoneRequest.fromJson(value);
         case 'PhoneRequestCompound':
           return PhoneRequestCompound.fromJson(value);
-        case 'PhoneResponse':
-          return PhoneResponse.fromJson(value);
-        case 'PhoneResponseCompound':
-          return PhoneResponseCompound.fromJson(value);
+        case 'PhonestaticResponse':
+          return PhonestaticResponse.fromJson(value);
+        case 'PhonestaticResponseCompound':
+          return PhonestaticResponseCompound.fromJson(value);
         case 'SecretquestionAutocompleteElementResponse':
           return SecretquestionAutocompleteElementResponse.fromJson(value);
         case 'SecretquestionGetAutocompleteV2Response':

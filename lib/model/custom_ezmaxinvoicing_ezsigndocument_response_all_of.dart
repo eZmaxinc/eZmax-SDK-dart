@@ -33,6 +33,7 @@ class CustomEzmaxinvoicingEzsigndocumentResponseAllOf {
   /// The name of the document that will be presented to Ezsignfoldersignerassociations
   String sEzsigndocumentName;
 
+  /// Whether you have access to the Ezsignfolder or not
   bool bEzsignfolderAllowed;
 
   @override

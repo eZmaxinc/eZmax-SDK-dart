@@ -26,7 +26,7 @@ class CommunicationGetListV1Response {
   /// source code must fall back to having a nullable type.
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
-  CommonResponseObjDebugPayload? objDebugPayload;
+  CommonResponseObjDebugPayloadGetList? objDebugPayload;
 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -88,7 +88,7 @@ class CommunicationGetListV1Response {
 
       return CommunicationGetListV1Response(
         mPayload: CommunicationGetListV1ResponseMPayload.fromJson(json[r'mPayload'])!,
-        objDebugPayload: CommonResponseObjDebugPayload.fromJson(json[r'objDebugPayload']),
+        objDebugPayload: CommonResponseObjDebugPayloadGetList.fromJson(json[r'objDebugPayload']),
         objDebug: CommonResponseObjDebug.fromJson(json[r'objDebug']),
       );
     }

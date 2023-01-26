@@ -9,16 +9,16 @@ import 'package:openapi/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiCommunicationID** | **int** | The unique ID of the Communication. | 
-**eCommunicationEmailimportance** | [**FieldECommunicationEmailimportance**](FieldECommunicationEmailimportance.md) |  | [optional] 
+**eCommunicationImportance** | [**FieldECommunicationImportance**](FieldECommunicationImportance.md) |  | 
 **eCommunicationType** | [**FieldECommunicationType**](FieldECommunicationType.md) |  | 
-**sCommunicationSubject** | **String** | The Subject of the Communication | 
-**dtCommunicationSentdate** | **String** | The send date and time at which the Communication was sent. | 
+**sCommunicationSubject** | **String** | The subject of the Communication | 
+**eCommunicationDirection** | [**ComputedECommunicationDirection**](ComputedECommunicationDirection.md) |  | 
+**iCommunicationrecipientCount** | **int** | The count of Communicationrecipient | 
 **objContactFrom** | [**CustomContactNameResponse**](CustomContactNameResponse.md) |  | 
+**objAudit** | [**CommonAudit**](CommonAudit.md) |  | 
 **aObjCommunicationattachment** | [**List<CommunicationattachmentResponseCompound>**](CommunicationattachmentResponseCompound.md) |  | [default to const []]
 **aObjCommunicationrecipient** | [**List<CommunicationrecipientResponseCompound>**](CommunicationrecipientResponseCompound.md) |  | [default to const []]
 **aObjCommunicationexternalrecipient** | [**List<CommunicationexternalrecipientResponseCompound>**](CommunicationexternalrecipientResponseCompound.md) |  | [default to const []]
-**aObjCommunicationimage** | [**List<CommunicationimageResponseCompound>**](CommunicationimageResponseCompound.md) |  | [default to const []]
-**aObjCommunicationexternalimage** | [**List<CommunicationexternalimageResponseCompound>**](CommunicationexternalimageResponseCompound.md) |  | [default to const []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

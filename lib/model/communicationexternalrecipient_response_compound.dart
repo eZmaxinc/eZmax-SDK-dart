@@ -14,72 +14,70 @@ class CommunicationexternalrecipientResponseCompound {
   /// Returns a new [CommunicationexternalrecipientResponseCompound] instance.
   CommunicationexternalrecipientResponseCompound({
     required this.pkiCommunicationexternalrecipientID,
-    this.sEmailAddress,
-    this.objPhoneSms,
     required this.eCommunicationexternalrecipientType,
-    required this.sCommunicationexternalrecipientName,
+    required this.objDescriptionstatic,
+    this.objEmailstatic,
+    this.objPhonestatic,
   });
 
   /// The unique ID of the Communicationexternalrecipient
   int pkiCommunicationexternalrecipientID;
 
-  /// The email address.
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  String? sEmailAddress;
-
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  PhoneResponseCompound? objPhoneSms;
-
   FieldECommunicationexternalrecipientType eCommunicationexternalrecipientType;
 
-  /// The Name of the Communicationexternalrecipient
-  String sCommunicationexternalrecipientName;
+  DescriptionstaticResponseCompound objDescriptionstatic;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  EmailstaticResponseCompound? objEmailstatic;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  PhonestaticResponseCompound? objPhonestatic;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommunicationexternalrecipientResponseCompound &&
      other.pkiCommunicationexternalrecipientID == pkiCommunicationexternalrecipientID &&
-     other.sEmailAddress == sEmailAddress &&
-     other.objPhoneSms == objPhoneSms &&
      other.eCommunicationexternalrecipientType == eCommunicationexternalrecipientType &&
-     other.sCommunicationexternalrecipientName == sCommunicationexternalrecipientName;
+     other.objDescriptionstatic == objDescriptionstatic &&
+     other.objEmailstatic == objEmailstatic &&
+     other.objPhonestatic == objPhonestatic;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiCommunicationexternalrecipientID.hashCode) +
-    (sEmailAddress == null ? 0 : sEmailAddress!.hashCode) +
-    (objPhoneSms == null ? 0 : objPhoneSms!.hashCode) +
     (eCommunicationexternalrecipientType.hashCode) +
-    (sCommunicationexternalrecipientName.hashCode);
+    (objDescriptionstatic.hashCode) +
+    (objEmailstatic == null ? 0 : objEmailstatic!.hashCode) +
+    (objPhonestatic == null ? 0 : objPhonestatic!.hashCode);
 
   @override
-  String toString() => 'CommunicationexternalrecipientResponseCompound[pkiCommunicationexternalrecipientID=$pkiCommunicationexternalrecipientID, sEmailAddress=$sEmailAddress, objPhoneSms=$objPhoneSms, eCommunicationexternalrecipientType=$eCommunicationexternalrecipientType, sCommunicationexternalrecipientName=$sCommunicationexternalrecipientName]';
+  String toString() => 'CommunicationexternalrecipientResponseCompound[pkiCommunicationexternalrecipientID=$pkiCommunicationexternalrecipientID, eCommunicationexternalrecipientType=$eCommunicationexternalrecipientType, objDescriptionstatic=$objDescriptionstatic, objEmailstatic=$objEmailstatic, objPhonestatic=$objPhonestatic]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiCommunicationexternalrecipientID'] = this.pkiCommunicationexternalrecipientID;
-    if (this.sEmailAddress != null) {
-      json[r'sEmailAddress'] = this.sEmailAddress;
-    } else {
-      json[r'sEmailAddress'] = null;
-    }
-    if (this.objPhoneSms != null) {
-      json[r'objPhoneSms'] = this.objPhoneSms;
-    } else {
-      json[r'objPhoneSms'] = null;
-    }
       json[r'eCommunicationexternalrecipientType'] = this.eCommunicationexternalrecipientType;
-      json[r'sCommunicationexternalrecipientName'] = this.sCommunicationexternalrecipientName;
+      json[r'objDescriptionstatic'] = this.objDescriptionstatic;
+    if (this.objEmailstatic != null) {
+      json[r'objEmailstatic'] = this.objEmailstatic;
+    } else {
+      json[r'objEmailstatic'] = null;
+    }
+    if (this.objPhonestatic != null) {
+      json[r'objPhonestatic'] = this.objPhonestatic;
+    } else {
+      json[r'objPhonestatic'] = null;
+    }
     return json;
   }
 
@@ -103,10 +101,10 @@ class CommunicationexternalrecipientResponseCompound {
 
       return CommunicationexternalrecipientResponseCompound(
         pkiCommunicationexternalrecipientID: mapValueOfType<int>(json, r'pkiCommunicationexternalrecipientID')!,
-        sEmailAddress: mapValueOfType<String>(json, r'sEmailAddress'),
-        objPhoneSms: PhoneResponseCompound.fromJson(json[r'objPhoneSms']),
         eCommunicationexternalrecipientType: FieldECommunicationexternalrecipientType.fromJson(json[r'eCommunicationexternalrecipientType'])!,
-        sCommunicationexternalrecipientName: mapValueOfType<String>(json, r'sCommunicationexternalrecipientName')!,
+        objDescriptionstatic: DescriptionstaticResponseCompound.fromJson(json[r'objDescriptionstatic'])!,
+        objEmailstatic: EmailstaticResponseCompound.fromJson(json[r'objEmailstatic']),
+        objPhonestatic: PhonestaticResponseCompound.fromJson(json[r'objPhonestatic']),
       );
     }
     return null;
@@ -158,7 +156,7 @@ class CommunicationexternalrecipientResponseCompound {
   static const requiredKeys = <String>{
     'pkiCommunicationexternalrecipientID',
     'eCommunicationexternalrecipientType',
-    'sCommunicationexternalrecipientName',
+    'objDescriptionstatic',
   };
 }
 

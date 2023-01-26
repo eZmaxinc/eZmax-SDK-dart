@@ -22,8 +22,37 @@ void main() {
       // TODO
     });
 
-    // FieldECommunicationEmailimportance eCommunicationEmailimportance
-    test('to test the property `eCommunicationEmailimportance`', () async {
+    // The unique ID of the Ezsignfolder
+    // int fkiEzsignfolderID
+    test('to test the property `fkiEzsignfolderID`', () async {
+      // TODO
+    });
+
+    // The unique ID of the Inscription.
+    // int fkiInscriptionID
+    test('to test the property `fkiInscriptionID`', () async {
+      // TODO
+    });
+
+    // The unique ID of the Inscriptionnotauthenticated.
+    // int fkiInscriptionnotauthenticatedID
+    test('to test the property `fkiInscriptionnotauthenticatedID`', () async {
+      // TODO
+    });
+
+    // The date and time at which the object was created
+    // String dtCreatedDate
+    test('to test the property `dtCreatedDate`', () async {
+      // TODO
+    });
+
+    // ComputedECommunicationDirection eCommunicationDirection
+    test('to test the property `eCommunicationDirection`', () async {
+      // TODO
+    });
+
+    // FieldECommunicationImportance eCommunicationImportance
+    test('to test the property `eCommunicationImportance`', () async {
       // TODO
     });
 
@@ -32,20 +61,27 @@ void main() {
       // TODO
     });
 
-    // The Subject of the Communication
+    // The count of Communicationrecipient
+    // int iCommunicationrecipientCount
+    test('to test the property `iCommunicationrecipientCount`', () async {
+      // TODO
+    });
+
+    // The subject of the Communication
     // String sCommunicationSubject
     test('to test the property `sCommunicationSubject`', () async {
       // TODO
     });
 
-    // The send date and time at which the Communication was sent.
-    // String dtCommunicationSentdate
-    test('to test the property `dtCommunicationSentdate`', () async {
+    // The sender name of the Communication
+    // String sCommunicationSender
+    test('to test the property `sCommunicationSender`', () async {
       // TODO
     });
 
-    // CustomContactNameResponse objContactFrom
-    test('to test the property `objContactFrom`', () async {
+    // The recipients' name of the Communication
+    // String sCommunicationRecipient
+    test('to test the property `sCommunicationRecipient`', () async {
       // TODO
     });
 

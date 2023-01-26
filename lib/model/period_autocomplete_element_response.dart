@@ -18,7 +18,7 @@ class PeriodAutocompleteElementResponse {
     required this.bPeriodIsactive,
   });
 
-  /// The period YYYYMM
+  /// The YYYYMM of the Period
   String sPeriodYYYYMM;
 
   /// The unique ID of the Period

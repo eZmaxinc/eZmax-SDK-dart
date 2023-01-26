@@ -16,7 +16,7 @@ class CommunicationGetCountV1ResponseMPayload {
     required this.iCommunicationCount,
   });
 
-  /// The number of total signatures in the Ezsigntemplate.
+  /// The count of Communication.
   int iCommunicationCount;
 
   @override

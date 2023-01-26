@@ -16,7 +16,7 @@ void main() {
   // final instance = PeriodAutocompleteElementResponse();
 
   group('test PeriodAutocompleteElementResponse', () {
-    // The period YYYYMM
+    // The YYYYMM of the Period
     // String sPeriodYYYYMM
     test('to test the property `sPeriodYYYYMM`', () async {
       // TODO

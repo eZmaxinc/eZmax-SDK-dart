@@ -17,21 +17,12 @@ void main() {
   // final instance = ModuleCommunicationApi();
 
   group('tests for ModuleCommunicationApi', () {
-    // Get the number of communication
+    // Retrieve Communication count
     //
-    // Get the number of communication in specified module
+    // 
     //
-    //Future<CommunicationGetCountV1Response> communicationGetCommunicationCountV1(String eCommunicationModule, { int pkiEzsignfolderID }) async
+    //Future<CommunicationGetCountV1Response> communicationGetCommunicationCountV1(String eCommunicationObjecttype, { int pkiEzsignfolderID }) async
     test('test communicationGetCommunicationCountV1', () async {
-      // TODO
-    });
-
-    // Retrieve communication list
-    //
-    // Retrieve communication list
-    //
-    //Future<CommunicationGetListV1Response> communicationGetCommunicationListV1(String eCommunicationModule, { int pkiEzsignfolderID }) async
-    test('test communicationGetCommunicationListV1', () async {
       // TODO
     });
 

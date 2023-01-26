@@ -22,6 +22,7 @@ class EzmaxinvoicingsummaryexternaldetailResponse {
     required this.dEzmaxinvoicingsummaryexternaldetailRebate,
     required this.dEzmaxinvoicingsummaryexternaldetailTotal,
     required this.bEzmaxinvoicingsummaryexternaldetailAdjustment,
+    required this.tEzmaxproductHelpX,
   });
 
   /// The unique ID of the Ezmaxinvoicingsummaryexternaldetail
@@ -69,6 +70,9 @@ class EzmaxinvoicingsummaryexternaldetailResponse {
   /// Whether it's an adjustment
   bool bEzmaxinvoicingsummaryexternaldetailAdjustment;
 
+  /// The help message of the Ezmaxproduct in the language of the requester
+  String tEzmaxproductHelpX;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzmaxinvoicingsummaryexternaldetailResponse &&
      other.pkiEzmaxinvoicingsummaryexternaldetailID == pkiEzmaxinvoicingsummaryexternaldetailID &&
@@ -79,7 +83,8 @@ class EzmaxinvoicingsummaryexternaldetailResponse {
      other.dEzmaxinvoicingsummaryexternaldetailSubtotal == dEzmaxinvoicingsummaryexternaldetailSubtotal &&
      other.dEzmaxinvoicingsummaryexternaldetailRebate == dEzmaxinvoicingsummaryexternaldetailRebate &&
      other.dEzmaxinvoicingsummaryexternaldetailTotal == dEzmaxinvoicingsummaryexternaldetailTotal &&
-     other.bEzmaxinvoicingsummaryexternaldetailAdjustment == bEzmaxinvoicingsummaryexternaldetailAdjustment;
+     other.bEzmaxinvoicingsummaryexternaldetailAdjustment == bEzmaxinvoicingsummaryexternaldetailAdjustment &&
+     other.tEzmaxproductHelpX == tEzmaxproductHelpX;
 
   @override
   int get hashCode =>
@@ -92,10 +97,11 @@ class EzmaxinvoicingsummaryexternaldetailResponse {
     (dEzmaxinvoicingsummaryexternaldetailSubtotal.hashCode) +
     (dEzmaxinvoicingsummaryexternaldetailRebate.hashCode) +
     (dEzmaxinvoicingsummaryexternaldetailTotal.hashCode) +
-    (bEzmaxinvoicingsummaryexternaldetailAdjustment.hashCode);
+    (bEzmaxinvoicingsummaryexternaldetailAdjustment.hashCode) +
+    (tEzmaxproductHelpX.hashCode);
 
   @override
-  String toString() => 'EzmaxinvoicingsummaryexternaldetailResponse[pkiEzmaxinvoicingsummaryexternaldetailID=$pkiEzmaxinvoicingsummaryexternaldetailID, fkiEzmaxinvoicingsummaryexternalID=$fkiEzmaxinvoicingsummaryexternalID, fkiEzmaxproductID=$fkiEzmaxproductID, sEzmaxproductDescriptionX=$sEzmaxproductDescriptionX, dEzmaxinvoicingsummaryexternaldetailCountreal=$dEzmaxinvoicingsummaryexternaldetailCountreal, dEzmaxinvoicingsummaryexternaldetailSubtotal=$dEzmaxinvoicingsummaryexternaldetailSubtotal, dEzmaxinvoicingsummaryexternaldetailRebate=$dEzmaxinvoicingsummaryexternaldetailRebate, dEzmaxinvoicingsummaryexternaldetailTotal=$dEzmaxinvoicingsummaryexternaldetailTotal, bEzmaxinvoicingsummaryexternaldetailAdjustment=$bEzmaxinvoicingsummaryexternaldetailAdjustment]';
+  String toString() => 'EzmaxinvoicingsummaryexternaldetailResponse[pkiEzmaxinvoicingsummaryexternaldetailID=$pkiEzmaxinvoicingsummaryexternaldetailID, fkiEzmaxinvoicingsummaryexternalID=$fkiEzmaxinvoicingsummaryexternalID, fkiEzmaxproductID=$fkiEzmaxproductID, sEzmaxproductDescriptionX=$sEzmaxproductDescriptionX, dEzmaxinvoicingsummaryexternaldetailCountreal=$dEzmaxinvoicingsummaryexternaldetailCountreal, dEzmaxinvoicingsummaryexternaldetailSubtotal=$dEzmaxinvoicingsummaryexternaldetailSubtotal, dEzmaxinvoicingsummaryexternaldetailRebate=$dEzmaxinvoicingsummaryexternaldetailRebate, dEzmaxinvoicingsummaryexternaldetailTotal=$dEzmaxinvoicingsummaryexternaldetailTotal, bEzmaxinvoicingsummaryexternaldetailAdjustment=$bEzmaxinvoicingsummaryexternaldetailAdjustment, tEzmaxproductHelpX=$tEzmaxproductHelpX]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -116,6 +122,7 @@ class EzmaxinvoicingsummaryexternaldetailResponse {
       json[r'dEzmaxinvoicingsummaryexternaldetailRebate'] = this.dEzmaxinvoicingsummaryexternaldetailRebate;
       json[r'dEzmaxinvoicingsummaryexternaldetailTotal'] = this.dEzmaxinvoicingsummaryexternaldetailTotal;
       json[r'bEzmaxinvoicingsummaryexternaldetailAdjustment'] = this.bEzmaxinvoicingsummaryexternaldetailAdjustment;
+      json[r'tEzmaxproductHelpX'] = this.tEzmaxproductHelpX;
     return json;
   }
 
@@ -147,6 +154,7 @@ class EzmaxinvoicingsummaryexternaldetailResponse {
         dEzmaxinvoicingsummaryexternaldetailRebate: mapValueOfType<String>(json, r'dEzmaxinvoicingsummaryexternaldetailRebate')!,
         dEzmaxinvoicingsummaryexternaldetailTotal: mapValueOfType<String>(json, r'dEzmaxinvoicingsummaryexternaldetailTotal')!,
         bEzmaxinvoicingsummaryexternaldetailAdjustment: mapValueOfType<bool>(json, r'bEzmaxinvoicingsummaryexternaldetailAdjustment')!,
+        tEzmaxproductHelpX: mapValueOfType<String>(json, r'tEzmaxproductHelpX')!,
       );
     }
     return null;
@@ -203,6 +211,7 @@ class EzmaxinvoicingsummaryexternaldetailResponse {
     'dEzmaxinvoicingsummaryexternaldetailRebate',
     'dEzmaxinvoicingsummaryexternaldetailTotal',
     'bEzmaxinvoicingsummaryexternaldetailAdjustment',
+    'tEzmaxproductHelpX',
   };
 }
 

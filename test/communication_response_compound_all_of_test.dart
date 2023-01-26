@@ -31,16 +31,6 @@ void main() {
       // TODO
     });
 
-    // List<CommunicationimageResponseCompound> aObjCommunicationimage (default value: const [])
-    test('to test the property `aObjCommunicationimage`', () async {
-      // TODO
-    });
-
-    // List<CommunicationexternalimageResponseCompound> aObjCommunicationexternalimage (default value: const [])
-    test('to test the property `aObjCommunicationexternalimage`', () async {
-      // TODO
-    });
-
 
   });
 

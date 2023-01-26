@@ -58,13 +58,13 @@ void main() {
       // TODO
     });
 
-    // The The count item calculated
+    // The count item calculated
     // String dEzmaxinvoicingsummaryglobalCountreal
     test('to test the property `dEzmaxinvoicingsummaryglobalCountreal`', () async {
       // TODO
     });
 
-    // The The count item billed
+    // The count item billed
     // String dEzmaxinvoicingsummaryglobalCountbilled
     test('to test the property `dEzmaxinvoicingsummaryglobalCountbilled`', () async {
       // TODO
@@ -121,6 +121,12 @@ void main() {
     // Whether it is adjustment for the Ezmaxinvoicingsummaryglobal
     // bool bEzmaxinvoicingsummaryglobalAdjustment
     test('to test the property `bEzmaxinvoicingsummaryglobalAdjustment`', () async {
+      // TODO
+    });
+
+    // The help message of the Ezmaxproduct in the language of the requester
+    // String tEzmaxproductHelpX
+    test('to test the property `tEzmaxproductHelpX`', () async {
       // TODO
     });
 

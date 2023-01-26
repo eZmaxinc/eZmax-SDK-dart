@@ -22,8 +22,8 @@ void main() {
       // TODO
     });
 
-    // FieldECommunicationEmailimportance eCommunicationEmailimportance
-    test('to test the property `eCommunicationEmailimportance`', () async {
+    // FieldECommunicationImportance eCommunicationImportance
+    test('to test the property `eCommunicationImportance`', () async {
       // TODO
     });
 
@@ -32,20 +32,30 @@ void main() {
       // TODO
     });
 
-    // The Subject of the Communication
+    // The subject of the Communication
     // String sCommunicationSubject
     test('to test the property `sCommunicationSubject`', () async {
       // TODO
     });
 
-    // The send date and time at which the Communication was sent.
-    // String dtCommunicationSentdate
-    test('to test the property `dtCommunicationSentdate`', () async {
+    // ComputedECommunicationDirection eCommunicationDirection
+    test('to test the property `eCommunicationDirection`', () async {
+      // TODO
+    });
+
+    // The count of Communicationrecipient
+    // int iCommunicationrecipientCount
+    test('to test the property `iCommunicationrecipientCount`', () async {
       // TODO
     });
 
     // CustomContactNameResponse objContactFrom
     test('to test the property `objContactFrom`', () async {
+      // TODO
+    });
+
+    // CommonAudit objAudit
+    test('to test the property `objAudit`', () async {
       // TODO
     });
 

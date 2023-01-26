@@ -39,6 +39,7 @@ void main() {
       // TODO
     });
 
+    // Whether you have access to the Ezsignfolder or not
     // bool bEzsignfolderAllowed
     test('to test the property `bEzsignfolderAllowed`', () async {
       // TODO

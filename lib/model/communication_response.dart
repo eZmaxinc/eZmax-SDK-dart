@@ -14,11 +14,13 @@ class CommunicationResponse {
   /// Returns a new [CommunicationResponse] instance.
   CommunicationResponse({
     required this.pkiCommunicationID,
-    this.eCommunicationEmailimportance,
+    required this.eCommunicationImportance,
     required this.eCommunicationType,
     required this.sCommunicationSubject,
-    required this.dtCommunicationSentdate,
+    required this.eCommunicationDirection,
+    required this.iCommunicationrecipientCount,
     required this.objContactFrom,
+    required this.objAudit,
   });
 
   /// The unique ID of the Communication.
@@ -26,58 +28,58 @@ class CommunicationResponse {
   /// Minimum value: 0
   int pkiCommunicationID;
 
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  FieldECommunicationEmailimportance? eCommunicationEmailimportance;
+  FieldECommunicationImportance eCommunicationImportance;
 
   FieldECommunicationType eCommunicationType;
 
-  /// The Subject of the Communication
+  /// The subject of the Communication
   String sCommunicationSubject;
 
-  /// The send date and time at which the Communication was sent.
-  String dtCommunicationSentdate;
+  ComputedECommunicationDirection eCommunicationDirection;
+
+  /// The count of Communicationrecipient
+  int iCommunicationrecipientCount;
 
   CustomContactNameResponse objContactFrom;
+
+  CommonAudit objAudit;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommunicationResponse &&
      other.pkiCommunicationID == pkiCommunicationID &&
-     other.eCommunicationEmailimportance == eCommunicationEmailimportance &&
+     other.eCommunicationImportance == eCommunicationImportance &&
      other.eCommunicationType == eCommunicationType &&
      other.sCommunicationSubject == sCommunicationSubject &&
-     other.dtCommunicationSentdate == dtCommunicationSentdate &&
-     other.objContactFrom == objContactFrom;
+     other.eCommunicationDirection == eCommunicationDirection &&
+     other.iCommunicationrecipientCount == iCommunicationrecipientCount &&
+     other.objContactFrom == objContactFrom &&
+     other.objAudit == objAudit;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiCommunicationID.hashCode) +
-    (eCommunicationEmailimportance == null ? 0 : eCommunicationEmailimportance!.hashCode) +
+    (eCommunicationImportance.hashCode) +
     (eCommunicationType.hashCode) +
     (sCommunicationSubject.hashCode) +
-    (dtCommunicationSentdate.hashCode) +
-    (objContactFrom.hashCode);
+    (eCommunicationDirection.hashCode) +
+    (iCommunicationrecipientCount.hashCode) +
+    (objContactFrom.hashCode) +
+    (objAudit.hashCode);
 
   @override
-  String toString() => 'CommunicationResponse[pkiCommunicationID=$pkiCommunicationID, eCommunicationEmailimportance=$eCommunicationEmailimportance, eCommunicationType=$eCommunicationType, sCommunicationSubject=$sCommunicationSubject, dtCommunicationSentdate=$dtCommunicationSentdate, objContactFrom=$objContactFrom]';
+  String toString() => 'CommunicationResponse[pkiCommunicationID=$pkiCommunicationID, eCommunicationImportance=$eCommunicationImportance, eCommunicationType=$eCommunicationType, sCommunicationSubject=$sCommunicationSubject, eCommunicationDirection=$eCommunicationDirection, iCommunicationrecipientCount=$iCommunicationrecipientCount, objContactFrom=$objContactFrom, objAudit=$objAudit]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiCommunicationID'] = this.pkiCommunicationID;
-    if (this.eCommunicationEmailimportance != null) {
-      json[r'eCommunicationEmailimportance'] = this.eCommunicationEmailimportance;
-    } else {
-      json[r'eCommunicationEmailimportance'] = null;
-    }
+      json[r'eCommunicationImportance'] = this.eCommunicationImportance;
       json[r'eCommunicationType'] = this.eCommunicationType;
       json[r'sCommunicationSubject'] = this.sCommunicationSubject;
-      json[r'dtCommunicationSentdate'] = this.dtCommunicationSentdate;
+      json[r'eCommunicationDirection'] = this.eCommunicationDirection;
+      json[r'iCommunicationrecipientCount'] = this.iCommunicationrecipientCount;
       json[r'objContactFrom'] = this.objContactFrom;
+      json[r'objAudit'] = this.objAudit;
     return json;
   }
 
@@ -101,11 +103,13 @@ class CommunicationResponse {
 
       return CommunicationResponse(
         pkiCommunicationID: mapValueOfType<int>(json, r'pkiCommunicationID')!,
-        eCommunicationEmailimportance: FieldECommunicationEmailimportance.fromJson(json[r'eCommunicationEmailimportance']),
+        eCommunicationImportance: FieldECommunicationImportance.fromJson(json[r'eCommunicationImportance'])!,
         eCommunicationType: FieldECommunicationType.fromJson(json[r'eCommunicationType'])!,
         sCommunicationSubject: mapValueOfType<String>(json, r'sCommunicationSubject')!,
-        dtCommunicationSentdate: mapValueOfType<String>(json, r'dtCommunicationSentdate')!,
+        eCommunicationDirection: ComputedECommunicationDirection.fromJson(json[r'eCommunicationDirection'])!,
+        iCommunicationrecipientCount: mapValueOfType<int>(json, r'iCommunicationrecipientCount')!,
         objContactFrom: CustomContactNameResponse.fromJson(json[r'objContactFrom'])!,
+        objAudit: CommonAudit.fromJson(json[r'objAudit'])!,
       );
     }
     return null;
@@ -156,10 +160,13 @@ class CommunicationResponse {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'pkiCommunicationID',
+    'eCommunicationImportance',
     'eCommunicationType',
     'sCommunicationSubject',
-    'dtCommunicationSentdate',
+    'eCommunicationDirection',
+    'iCommunicationrecipientCount',
     'objContactFrom',
+    'objAudit',
   };
 }
 

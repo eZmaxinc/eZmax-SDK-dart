@@ -14,16 +14,16 @@ class CommunicationResponseCompound {
   /// Returns a new [CommunicationResponseCompound] instance.
   CommunicationResponseCompound({
     required this.pkiCommunicationID,
-    this.eCommunicationEmailimportance,
+    required this.eCommunicationImportance,
     required this.eCommunicationType,
     required this.sCommunicationSubject,
-    required this.dtCommunicationSentdate,
+    required this.eCommunicationDirection,
+    required this.iCommunicationrecipientCount,
     required this.objContactFrom,
+    required this.objAudit,
     this.aObjCommunicationattachment = const [],
     this.aObjCommunicationrecipient = const [],
     this.aObjCommunicationexternalrecipient = const [],
-    this.aObjCommunicationimage = const [],
-    this.aObjCommunicationexternalimage = const [],
   });
 
   /// The unique ID of the Communication.
@@ -31,23 +31,21 @@ class CommunicationResponseCompound {
   /// Minimum value: 0
   int pkiCommunicationID;
 
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  FieldECommunicationEmailimportance? eCommunicationEmailimportance;
+  FieldECommunicationImportance eCommunicationImportance;
 
   FieldECommunicationType eCommunicationType;
 
-  /// The Subject of the Communication
+  /// The subject of the Communication
   String sCommunicationSubject;
 
-  /// The send date and time at which the Communication was sent.
-  String dtCommunicationSentdate;
+  ComputedECommunicationDirection eCommunicationDirection;
+
+  /// The count of Communicationrecipient
+  int iCommunicationrecipientCount;
 
   CustomContactNameResponse objContactFrom;
+
+  CommonAudit objAudit;
 
   List<CommunicationattachmentResponseCompound> aObjCommunicationattachment;
 
@@ -55,59 +53,51 @@ class CommunicationResponseCompound {
 
   List<CommunicationexternalrecipientResponseCompound> aObjCommunicationexternalrecipient;
 
-  List<CommunicationimageResponseCompound> aObjCommunicationimage;
-
-  List<CommunicationexternalimageResponseCompound> aObjCommunicationexternalimage;
-
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommunicationResponseCompound &&
      other.pkiCommunicationID == pkiCommunicationID &&
-     other.eCommunicationEmailimportance == eCommunicationEmailimportance &&
+     other.eCommunicationImportance == eCommunicationImportance &&
      other.eCommunicationType == eCommunicationType &&
      other.sCommunicationSubject == sCommunicationSubject &&
-     other.dtCommunicationSentdate == dtCommunicationSentdate &&
+     other.eCommunicationDirection == eCommunicationDirection &&
+     other.iCommunicationrecipientCount == iCommunicationrecipientCount &&
      other.objContactFrom == objContactFrom &&
+     other.objAudit == objAudit &&
      other.aObjCommunicationattachment == aObjCommunicationattachment &&
      other.aObjCommunicationrecipient == aObjCommunicationrecipient &&
-     other.aObjCommunicationexternalrecipient == aObjCommunicationexternalrecipient &&
-     other.aObjCommunicationimage == aObjCommunicationimage &&
-     other.aObjCommunicationexternalimage == aObjCommunicationexternalimage;
+     other.aObjCommunicationexternalrecipient == aObjCommunicationexternalrecipient;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiCommunicationID.hashCode) +
-    (eCommunicationEmailimportance == null ? 0 : eCommunicationEmailimportance!.hashCode) +
+    (eCommunicationImportance.hashCode) +
     (eCommunicationType.hashCode) +
     (sCommunicationSubject.hashCode) +
-    (dtCommunicationSentdate.hashCode) +
+    (eCommunicationDirection.hashCode) +
+    (iCommunicationrecipientCount.hashCode) +
     (objContactFrom.hashCode) +
+    (objAudit.hashCode) +
     (aObjCommunicationattachment.hashCode) +
     (aObjCommunicationrecipient.hashCode) +
-    (aObjCommunicationexternalrecipient.hashCode) +
-    (aObjCommunicationimage.hashCode) +
-    (aObjCommunicationexternalimage.hashCode);
+    (aObjCommunicationexternalrecipient.hashCode);
 
   @override
-  String toString() => 'CommunicationResponseCompound[pkiCommunicationID=$pkiCommunicationID, eCommunicationEmailimportance=$eCommunicationEmailimportance, eCommunicationType=$eCommunicationType, sCommunicationSubject=$sCommunicationSubject, dtCommunicationSentdate=$dtCommunicationSentdate, objContactFrom=$objContactFrom, aObjCommunicationattachment=$aObjCommunicationattachment, aObjCommunicationrecipient=$aObjCommunicationrecipient, aObjCommunicationexternalrecipient=$aObjCommunicationexternalrecipient, aObjCommunicationimage=$aObjCommunicationimage, aObjCommunicationexternalimage=$aObjCommunicationexternalimage]';
+  String toString() => 'CommunicationResponseCompound[pkiCommunicationID=$pkiCommunicationID, eCommunicationImportance=$eCommunicationImportance, eCommunicationType=$eCommunicationType, sCommunicationSubject=$sCommunicationSubject, eCommunicationDirection=$eCommunicationDirection, iCommunicationrecipientCount=$iCommunicationrecipientCount, objContactFrom=$objContactFrom, objAudit=$objAudit, aObjCommunicationattachment=$aObjCommunicationattachment, aObjCommunicationrecipient=$aObjCommunicationrecipient, aObjCommunicationexternalrecipient=$aObjCommunicationexternalrecipient]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiCommunicationID'] = this.pkiCommunicationID;
-    if (this.eCommunicationEmailimportance != null) {
-      json[r'eCommunicationEmailimportance'] = this.eCommunicationEmailimportance;
-    } else {
-      json[r'eCommunicationEmailimportance'] = null;
-    }
+      json[r'eCommunicationImportance'] = this.eCommunicationImportance;
       json[r'eCommunicationType'] = this.eCommunicationType;
       json[r'sCommunicationSubject'] = this.sCommunicationSubject;
-      json[r'dtCommunicationSentdate'] = this.dtCommunicationSentdate;
+      json[r'eCommunicationDirection'] = this.eCommunicationDirection;
+      json[r'iCommunicationrecipientCount'] = this.iCommunicationrecipientCount;
       json[r'objContactFrom'] = this.objContactFrom;
+      json[r'objAudit'] = this.objAudit;
       json[r'a_objCommunicationattachment'] = this.aObjCommunicationattachment;
       json[r'a_objCommunicationrecipient'] = this.aObjCommunicationrecipient;
       json[r'a_objCommunicationexternalrecipient'] = this.aObjCommunicationexternalrecipient;
-      json[r'a_objCommunicationimage'] = this.aObjCommunicationimage;
-      json[r'a_objCommunicationexternalimage'] = this.aObjCommunicationexternalimage;
     return json;
   }
 
@@ -131,16 +121,16 @@ class CommunicationResponseCompound {
 
       return CommunicationResponseCompound(
         pkiCommunicationID: mapValueOfType<int>(json, r'pkiCommunicationID')!,
-        eCommunicationEmailimportance: FieldECommunicationEmailimportance.fromJson(json[r'eCommunicationEmailimportance']),
+        eCommunicationImportance: FieldECommunicationImportance.fromJson(json[r'eCommunicationImportance'])!,
         eCommunicationType: FieldECommunicationType.fromJson(json[r'eCommunicationType'])!,
         sCommunicationSubject: mapValueOfType<String>(json, r'sCommunicationSubject')!,
-        dtCommunicationSentdate: mapValueOfType<String>(json, r'dtCommunicationSentdate')!,
+        eCommunicationDirection: ComputedECommunicationDirection.fromJson(json[r'eCommunicationDirection'])!,
+        iCommunicationrecipientCount: mapValueOfType<int>(json, r'iCommunicationrecipientCount')!,
         objContactFrom: CustomContactNameResponse.fromJson(json[r'objContactFrom'])!,
+        objAudit: CommonAudit.fromJson(json[r'objAudit'])!,
         aObjCommunicationattachment: CommunicationattachmentResponseCompound.listFromJson(json[r'a_objCommunicationattachment'])!,
         aObjCommunicationrecipient: CommunicationrecipientResponseCompound.listFromJson(json[r'a_objCommunicationrecipient'])!,
         aObjCommunicationexternalrecipient: CommunicationexternalrecipientResponseCompound.listFromJson(json[r'a_objCommunicationexternalrecipient'])!,
-        aObjCommunicationimage: CommunicationimageResponseCompound.listFromJson(json[r'a_objCommunicationimage'])!,
-        aObjCommunicationexternalimage: CommunicationexternalimageResponseCompound.listFromJson(json[r'a_objCommunicationexternalimage'])!,
       );
     }
     return null;
@@ -191,15 +181,16 @@ class CommunicationResponseCompound {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'pkiCommunicationID',
+    'eCommunicationImportance',
     'eCommunicationType',
     'sCommunicationSubject',
-    'dtCommunicationSentdate',
+    'eCommunicationDirection',
+    'iCommunicationrecipientCount',
     'objContactFrom',
+    'objAudit',
     'a_objCommunicationattachment',
     'a_objCommunicationrecipient',
     'a_objCommunicationexternalrecipient',
-    'a_objCommunicationimage',
-    'a_objCommunicationexternalimage',
   };
 }
 

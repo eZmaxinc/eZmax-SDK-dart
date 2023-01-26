@@ -14,11 +14,17 @@ class CommunicationListElement {
   /// Returns a new [CommunicationListElement] instance.
   CommunicationListElement({
     required this.pkiCommunicationID,
-    this.eCommunicationEmailimportance,
+    this.fkiEzsignfolderID,
+    this.fkiInscriptionID,
+    this.fkiInscriptionnotauthenticatedID,
+    required this.dtCreatedDate,
+    required this.eCommunicationDirection,
+    required this.eCommunicationImportance,
     required this.eCommunicationType,
+    required this.iCommunicationrecipientCount,
     required this.sCommunicationSubject,
-    required this.dtCommunicationSentdate,
-    required this.objContactFrom,
+    required this.sCommunicationSender,
+    required this.sCommunicationRecipient,
   });
 
   /// The unique ID of the Communication.
@@ -26,58 +32,120 @@ class CommunicationListElement {
   /// Minimum value: 0
   int pkiCommunicationID;
 
+  /// The unique ID of the Ezsignfolder
+  ///
+  /// Minimum value: 0
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
   /// source code must fall back to having a nullable type.
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
-  FieldECommunicationEmailimportance? eCommunicationEmailimportance;
+  int? fkiEzsignfolderID;
+
+  /// The unique ID of the Inscription.
+  ///
+  /// Minimum value: 0
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiInscriptionID;
+
+  /// The unique ID of the Inscriptionnotauthenticated.
+  ///
+  /// Minimum value: 0
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiInscriptionnotauthenticatedID;
+
+  /// The date and time at which the object was created
+  String dtCreatedDate;
+
+  ComputedECommunicationDirection eCommunicationDirection;
+
+  FieldECommunicationImportance eCommunicationImportance;
 
   FieldECommunicationType eCommunicationType;
 
-  /// The Subject of the Communication
+  /// The count of Communicationrecipient
+  int iCommunicationrecipientCount;
+
+  /// The subject of the Communication
   String sCommunicationSubject;
 
-  /// The send date and time at which the Communication was sent.
-  String dtCommunicationSentdate;
+  /// The sender name of the Communication
+  String sCommunicationSender;
 
-  CustomContactNameResponse objContactFrom;
+  /// The recipients' name of the Communication
+  String sCommunicationRecipient;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommunicationListElement &&
      other.pkiCommunicationID == pkiCommunicationID &&
-     other.eCommunicationEmailimportance == eCommunicationEmailimportance &&
+     other.fkiEzsignfolderID == fkiEzsignfolderID &&
+     other.fkiInscriptionID == fkiInscriptionID &&
+     other.fkiInscriptionnotauthenticatedID == fkiInscriptionnotauthenticatedID &&
+     other.dtCreatedDate == dtCreatedDate &&
+     other.eCommunicationDirection == eCommunicationDirection &&
+     other.eCommunicationImportance == eCommunicationImportance &&
      other.eCommunicationType == eCommunicationType &&
+     other.iCommunicationrecipientCount == iCommunicationrecipientCount &&
      other.sCommunicationSubject == sCommunicationSubject &&
-     other.dtCommunicationSentdate == dtCommunicationSentdate &&
-     other.objContactFrom == objContactFrom;
+     other.sCommunicationSender == sCommunicationSender &&
+     other.sCommunicationRecipient == sCommunicationRecipient;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiCommunicationID.hashCode) +
-    (eCommunicationEmailimportance == null ? 0 : eCommunicationEmailimportance!.hashCode) +
+    (fkiEzsignfolderID == null ? 0 : fkiEzsignfolderID!.hashCode) +
+    (fkiInscriptionID == null ? 0 : fkiInscriptionID!.hashCode) +
+    (fkiInscriptionnotauthenticatedID == null ? 0 : fkiInscriptionnotauthenticatedID!.hashCode) +
+    (dtCreatedDate.hashCode) +
+    (eCommunicationDirection.hashCode) +
+    (eCommunicationImportance.hashCode) +
     (eCommunicationType.hashCode) +
+    (iCommunicationrecipientCount.hashCode) +
     (sCommunicationSubject.hashCode) +
-    (dtCommunicationSentdate.hashCode) +
-    (objContactFrom.hashCode);
+    (sCommunicationSender.hashCode) +
+    (sCommunicationRecipient.hashCode);
 
   @override
-  String toString() => 'CommunicationListElement[pkiCommunicationID=$pkiCommunicationID, eCommunicationEmailimportance=$eCommunicationEmailimportance, eCommunicationType=$eCommunicationType, sCommunicationSubject=$sCommunicationSubject, dtCommunicationSentdate=$dtCommunicationSentdate, objContactFrom=$objContactFrom]';
+  String toString() => 'CommunicationListElement[pkiCommunicationID=$pkiCommunicationID, fkiEzsignfolderID=$fkiEzsignfolderID, fkiInscriptionID=$fkiInscriptionID, fkiInscriptionnotauthenticatedID=$fkiInscriptionnotauthenticatedID, dtCreatedDate=$dtCreatedDate, eCommunicationDirection=$eCommunicationDirection, eCommunicationImportance=$eCommunicationImportance, eCommunicationType=$eCommunicationType, iCommunicationrecipientCount=$iCommunicationrecipientCount, sCommunicationSubject=$sCommunicationSubject, sCommunicationSender=$sCommunicationSender, sCommunicationRecipient=$sCommunicationRecipient]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiCommunicationID'] = this.pkiCommunicationID;
-    if (this.eCommunicationEmailimportance != null) {
-      json[r'eCommunicationEmailimportance'] = this.eCommunicationEmailimportance;
+    if (this.fkiEzsignfolderID != null) {
+      json[r'fkiEzsignfolderID'] = this.fkiEzsignfolderID;
     } else {
-      json[r'eCommunicationEmailimportance'] = null;
+      json[r'fkiEzsignfolderID'] = null;
     }
+    if (this.fkiInscriptionID != null) {
+      json[r'fkiInscriptionID'] = this.fkiInscriptionID;
+    } else {
+      json[r'fkiInscriptionID'] = null;
+    }
+    if (this.fkiInscriptionnotauthenticatedID != null) {
+      json[r'fkiInscriptionnotauthenticatedID'] = this.fkiInscriptionnotauthenticatedID;
+    } else {
+      json[r'fkiInscriptionnotauthenticatedID'] = null;
+    }
+      json[r'dtCreatedDate'] = this.dtCreatedDate;
+      json[r'eCommunicationDirection'] = this.eCommunicationDirection;
+      json[r'eCommunicationImportance'] = this.eCommunicationImportance;
       json[r'eCommunicationType'] = this.eCommunicationType;
+      json[r'iCommunicationrecipientCount'] = this.iCommunicationrecipientCount;
       json[r'sCommunicationSubject'] = this.sCommunicationSubject;
-      json[r'dtCommunicationSentdate'] = this.dtCommunicationSentdate;
-      json[r'objContactFrom'] = this.objContactFrom;
+      json[r'sCommunicationSender'] = this.sCommunicationSender;
+      json[r'sCommunicationRecipient'] = this.sCommunicationRecipient;
     return json;
   }
 
@@ -101,11 +169,17 @@ class CommunicationListElement {
 
       return CommunicationListElement(
         pkiCommunicationID: mapValueOfType<int>(json, r'pkiCommunicationID')!,
-        eCommunicationEmailimportance: FieldECommunicationEmailimportance.fromJson(json[r'eCommunicationEmailimportance']),
+        fkiEzsignfolderID: mapValueOfType<int>(json, r'fkiEzsignfolderID'),
+        fkiInscriptionID: mapValueOfType<int>(json, r'fkiInscriptionID'),
+        fkiInscriptionnotauthenticatedID: mapValueOfType<int>(json, r'fkiInscriptionnotauthenticatedID'),
+        dtCreatedDate: mapValueOfType<String>(json, r'dtCreatedDate')!,
+        eCommunicationDirection: ComputedECommunicationDirection.fromJson(json[r'eCommunicationDirection'])!,
+        eCommunicationImportance: FieldECommunicationImportance.fromJson(json[r'eCommunicationImportance'])!,
         eCommunicationType: FieldECommunicationType.fromJson(json[r'eCommunicationType'])!,
+        iCommunicationrecipientCount: mapValueOfType<int>(json, r'iCommunicationrecipientCount')!,
         sCommunicationSubject: mapValueOfType<String>(json, r'sCommunicationSubject')!,
-        dtCommunicationSentdate: mapValueOfType<String>(json, r'dtCommunicationSentdate')!,
-        objContactFrom: CustomContactNameResponse.fromJson(json[r'objContactFrom'])!,
+        sCommunicationSender: mapValueOfType<String>(json, r'sCommunicationSender')!,
+        sCommunicationRecipient: mapValueOfType<String>(json, r'sCommunicationRecipient')!,
       );
     }
     return null;
@@ -156,10 +230,14 @@ class CommunicationListElement {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'pkiCommunicationID',
+    'dtCreatedDate',
+    'eCommunicationDirection',
+    'eCommunicationImportance',
     'eCommunicationType',
+    'iCommunicationrecipientCount',
     'sCommunicationSubject',
-    'dtCommunicationSentdate',
-    'objContactFrom',
+    'sCommunicationSender',
+    'sCommunicationRecipient',
   };
 }
 

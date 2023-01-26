@@ -21,6 +21,18 @@ void main() {
       // TODO
     });
 
+    // The number of rows returned
+    // int iRowReturned
+    test('to test the property `iRowReturned`', () async {
+      // TODO
+    });
+
+    // The number of rows matching your filters (if any) or the total number of rows
+    // int iRowFiltered
+    test('to test the property `iRowFiltered`', () async {
+      // TODO
+    });
+
 
   });
 

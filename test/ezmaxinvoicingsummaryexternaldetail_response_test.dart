@@ -70,6 +70,12 @@ void main() {
       // TODO
     });
 
+    // The help message of the Ezmaxproduct in the language of the requester
+    // String tEzmaxproductHelpX
+    test('to test the property `tEzmaxproductHelpX`', () async {
+      // TODO
+    });
+
 
   });
 

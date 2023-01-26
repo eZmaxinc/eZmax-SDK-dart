@@ -31,6 +31,7 @@ class EzmaxinvoicingsummaryglobalResponse {
     this.dEzmaxinvoicingsummaryglobalPartner,
     this.dEzmaxinvoicingsummaryglobalNet,
     required this.bEzmaxinvoicingsummaryglobalAdjustment,
+    required this.tEzmaxproductHelpX,
   });
 
   /// The unique ID of the Ezmaxinvoicingsummaryglobal
@@ -74,10 +75,10 @@ class EzmaxinvoicingsummaryglobalResponse {
   /// Minimum value: 1
   int iEzmaxinvoicingsummaryglobalDays;
 
-  /// The The count item calculated
+  /// The count item calculated
   String dEzmaxinvoicingsummaryglobalCountreal;
 
-  /// The The count item billed
+  /// The count item billed
   String dEzmaxinvoicingsummaryglobalCountbilled;
 
   /// The Ezmaxinvoicingsummaryglobal subtotal
@@ -125,6 +126,9 @@ class EzmaxinvoicingsummaryglobalResponse {
   /// Whether it is adjustment for the Ezmaxinvoicingsummaryglobal
   bool bEzmaxinvoicingsummaryglobalAdjustment;
 
+  /// The help message of the Ezmaxproduct in the language of the requester
+  String tEzmaxproductHelpX;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzmaxinvoicingsummaryglobalResponse &&
      other.pkiEzmaxinvoicingsummaryglobalID == pkiEzmaxinvoicingsummaryglobalID &&
@@ -144,7 +148,8 @@ class EzmaxinvoicingsummaryglobalResponse {
      other.dEzmaxinvoicingsummaryglobalRepresentative == dEzmaxinvoicingsummaryglobalRepresentative &&
      other.dEzmaxinvoicingsummaryglobalPartner == dEzmaxinvoicingsummaryglobalPartner &&
      other.dEzmaxinvoicingsummaryglobalNet == dEzmaxinvoicingsummaryglobalNet &&
-     other.bEzmaxinvoicingsummaryglobalAdjustment == bEzmaxinvoicingsummaryglobalAdjustment;
+     other.bEzmaxinvoicingsummaryglobalAdjustment == bEzmaxinvoicingsummaryglobalAdjustment &&
+     other.tEzmaxproductHelpX == tEzmaxproductHelpX;
 
   @override
   int get hashCode =>
@@ -166,10 +171,11 @@ class EzmaxinvoicingsummaryglobalResponse {
     (dEzmaxinvoicingsummaryglobalRepresentative == null ? 0 : dEzmaxinvoicingsummaryglobalRepresentative!.hashCode) +
     (dEzmaxinvoicingsummaryglobalPartner == null ? 0 : dEzmaxinvoicingsummaryglobalPartner!.hashCode) +
     (dEzmaxinvoicingsummaryglobalNet == null ? 0 : dEzmaxinvoicingsummaryglobalNet!.hashCode) +
-    (bEzmaxinvoicingsummaryglobalAdjustment.hashCode);
+    (bEzmaxinvoicingsummaryglobalAdjustment.hashCode) +
+    (tEzmaxproductHelpX.hashCode);
 
   @override
-  String toString() => 'EzmaxinvoicingsummaryglobalResponse[pkiEzmaxinvoicingsummaryglobalID=$pkiEzmaxinvoicingsummaryglobalID, fkiEzmaxinvoicingID=$fkiEzmaxinvoicingID, fkiEzmaxproductID=$fkiEzmaxproductID, sEzmaxproductDescriptionX=$sEzmaxproductDescriptionX, dtEzmaxinvoicingsummaryglobalStart=$dtEzmaxinvoicingsummaryglobalStart, dtEzmaxinvoicingsummaryglobalEnd=$dtEzmaxinvoicingsummaryglobalEnd, iEzmaxinvoicingsummaryglobalDays=$iEzmaxinvoicingsummaryglobalDays, dEzmaxinvoicingsummaryglobalCountreal=$dEzmaxinvoicingsummaryglobalCountreal, dEzmaxinvoicingsummaryglobalCountbilled=$dEzmaxinvoicingsummaryglobalCountbilled, dEzmaxinvoicingsummaryglobalSubtotal=$dEzmaxinvoicingsummaryglobalSubtotal, dEzmaxinvoicingsummaryglobalRebateamount=$dEzmaxinvoicingsummaryglobalRebateamount, dEzmaxinvoicingsummaryglobalRebatepercent=$dEzmaxinvoicingsummaryglobalRebatepercent, dEzmaxinvoicingsummaryglobalRebatetotal=$dEzmaxinvoicingsummaryglobalRebatetotal, dEzmaxinvoicingsummaryglobalTotal=$dEzmaxinvoicingsummaryglobalTotal, dEzmaxinvoicingsummaryglobalRepresentative=$dEzmaxinvoicingsummaryglobalRepresentative, dEzmaxinvoicingsummaryglobalPartner=$dEzmaxinvoicingsummaryglobalPartner, dEzmaxinvoicingsummaryglobalNet=$dEzmaxinvoicingsummaryglobalNet, bEzmaxinvoicingsummaryglobalAdjustment=$bEzmaxinvoicingsummaryglobalAdjustment]';
+  String toString() => 'EzmaxinvoicingsummaryglobalResponse[pkiEzmaxinvoicingsummaryglobalID=$pkiEzmaxinvoicingsummaryglobalID, fkiEzmaxinvoicingID=$fkiEzmaxinvoicingID, fkiEzmaxproductID=$fkiEzmaxproductID, sEzmaxproductDescriptionX=$sEzmaxproductDescriptionX, dtEzmaxinvoicingsummaryglobalStart=$dtEzmaxinvoicingsummaryglobalStart, dtEzmaxinvoicingsummaryglobalEnd=$dtEzmaxinvoicingsummaryglobalEnd, iEzmaxinvoicingsummaryglobalDays=$iEzmaxinvoicingsummaryglobalDays, dEzmaxinvoicingsummaryglobalCountreal=$dEzmaxinvoicingsummaryglobalCountreal, dEzmaxinvoicingsummaryglobalCountbilled=$dEzmaxinvoicingsummaryglobalCountbilled, dEzmaxinvoicingsummaryglobalSubtotal=$dEzmaxinvoicingsummaryglobalSubtotal, dEzmaxinvoicingsummaryglobalRebateamount=$dEzmaxinvoicingsummaryglobalRebateamount, dEzmaxinvoicingsummaryglobalRebatepercent=$dEzmaxinvoicingsummaryglobalRebatepercent, dEzmaxinvoicingsummaryglobalRebatetotal=$dEzmaxinvoicingsummaryglobalRebatetotal, dEzmaxinvoicingsummaryglobalTotal=$dEzmaxinvoicingsummaryglobalTotal, dEzmaxinvoicingsummaryglobalRepresentative=$dEzmaxinvoicingsummaryglobalRepresentative, dEzmaxinvoicingsummaryglobalPartner=$dEzmaxinvoicingsummaryglobalPartner, dEzmaxinvoicingsummaryglobalNet=$dEzmaxinvoicingsummaryglobalNet, bEzmaxinvoicingsummaryglobalAdjustment=$bEzmaxinvoicingsummaryglobalAdjustment, tEzmaxproductHelpX=$tEzmaxproductHelpX]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -211,6 +217,7 @@ class EzmaxinvoicingsummaryglobalResponse {
       json[r'dEzmaxinvoicingsummaryglobalNet'] = null;
     }
       json[r'bEzmaxinvoicingsummaryglobalAdjustment'] = this.bEzmaxinvoicingsummaryglobalAdjustment;
+      json[r'tEzmaxproductHelpX'] = this.tEzmaxproductHelpX;
     return json;
   }
 
@@ -251,6 +258,7 @@ class EzmaxinvoicingsummaryglobalResponse {
         dEzmaxinvoicingsummaryglobalPartner: mapValueOfType<String>(json, r'dEzmaxinvoicingsummaryglobalPartner'),
         dEzmaxinvoicingsummaryglobalNet: mapValueOfType<String>(json, r'dEzmaxinvoicingsummaryglobalNet'),
         bEzmaxinvoicingsummaryglobalAdjustment: mapValueOfType<bool>(json, r'bEzmaxinvoicingsummaryglobalAdjustment')!,
+        tEzmaxproductHelpX: mapValueOfType<String>(json, r'tEzmaxproductHelpX')!,
       );
     }
     return null;
@@ -313,6 +321,7 @@ class EzmaxinvoicingsummaryglobalResponse {
     'dEzmaxinvoicingsummaryglobalRebatetotal',
     'dEzmaxinvoicingsummaryglobalTotal',
     'bEzmaxinvoicingsummaryglobalAdjustment',
+    'tEzmaxproductHelpX',
   };
 }
 

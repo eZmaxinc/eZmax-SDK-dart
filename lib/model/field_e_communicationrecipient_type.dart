@@ -10,7 +10,7 @@
 
 part of openapi.api;
 
-/// The Type for the Communicationrecipient
+/// The type for the Communicationrecipient
 class FieldECommunicationrecipientType {
   /// Instantiate a new enum with the provided [value].
   const FieldECommunicationrecipientType._(this.value);

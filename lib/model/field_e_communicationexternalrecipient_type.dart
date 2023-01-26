@@ -10,7 +10,7 @@
 
 part of openapi.api;
 
-/// The Type of Communicationexternalrecipient
+/// The type of Communicationexternalrecipient
 class FieldECommunicationexternalrecipientType {
   /// Instantiate a new enum with the provided [value].
   const FieldECommunicationexternalrecipientType._(this.value);

@@ -38,6 +38,7 @@ class CustomEzmaxinvoicingEzsignfolderResponseAllOf {
   /// Whether there was a signature is of type payment
   bool bEzsignfolderPaymentused;
 
+  /// Whether you have access to the Ezsignfolder or not
   bool bEzsignfolderAllowed;
 
   @override

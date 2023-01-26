@@ -24,6 +24,7 @@ class EzmaxinvoicingsummaryinternaldetailResponse {
     required this.dEzmaxinvoicingsummaryinternaldetailRebate,
     required this.dEzmaxinvoicingsummaryinternaldetailTotal,
     required this.bEzmaxinvoicingsummaryinternaldetailAdjustment,
+    required this.tEzmaxproductHelpX,
   });
 
   /// The unique ID of the Ezmaxinvoicingsummaryinternaldetail
@@ -79,6 +80,9 @@ class EzmaxinvoicingsummaryinternaldetailResponse {
   /// Whether if it's an adjustment
   bool bEzmaxinvoicingsummaryinternaldetailAdjustment;
 
+  /// The help message of the Ezmaxproduct in the language of the requester
+  String tEzmaxproductHelpX;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzmaxinvoicingsummaryinternaldetailResponse &&
      other.pkiEzmaxinvoicingsummaryinternaldetailID == pkiEzmaxinvoicingsummaryinternaldetailID &&
@@ -91,7 +95,8 @@ class EzmaxinvoicingsummaryinternaldetailResponse {
      other.dEzmaxinvoicingsummaryinternaldetailSubtotal == dEzmaxinvoicingsummaryinternaldetailSubtotal &&
      other.dEzmaxinvoicingsummaryinternaldetailRebate == dEzmaxinvoicingsummaryinternaldetailRebate &&
      other.dEzmaxinvoicingsummaryinternaldetailTotal == dEzmaxinvoicingsummaryinternaldetailTotal &&
-     other.bEzmaxinvoicingsummaryinternaldetailAdjustment == bEzmaxinvoicingsummaryinternaldetailAdjustment;
+     other.bEzmaxinvoicingsummaryinternaldetailAdjustment == bEzmaxinvoicingsummaryinternaldetailAdjustment &&
+     other.tEzmaxproductHelpX == tEzmaxproductHelpX;
 
   @override
   int get hashCode =>
@@ -106,10 +111,11 @@ class EzmaxinvoicingsummaryinternaldetailResponse {
     (dEzmaxinvoicingsummaryinternaldetailSubtotal.hashCode) +
     (dEzmaxinvoicingsummaryinternaldetailRebate.hashCode) +
     (dEzmaxinvoicingsummaryinternaldetailTotal.hashCode) +
-    (bEzmaxinvoicingsummaryinternaldetailAdjustment.hashCode);
+    (bEzmaxinvoicingsummaryinternaldetailAdjustment.hashCode) +
+    (tEzmaxproductHelpX.hashCode);
 
   @override
-  String toString() => 'EzmaxinvoicingsummaryinternaldetailResponse[pkiEzmaxinvoicingsummaryinternaldetailID=$pkiEzmaxinvoicingsummaryinternaldetailID, fkiEzmaxinvoicingsummaryinternalID=$fkiEzmaxinvoicingsummaryinternalID, fkiEzmaxproductID=$fkiEzmaxproductID, sEzmaxproductDescriptionX=$sEzmaxproductDescriptionX, fkiBillingentityexternalID=$fkiBillingentityexternalID, sBillingentityexternalDescription=$sBillingentityexternalDescription, dEzmaxinvoicingsummaryinternaldetailCountreal=$dEzmaxinvoicingsummaryinternaldetailCountreal, dEzmaxinvoicingsummaryinternaldetailSubtotal=$dEzmaxinvoicingsummaryinternaldetailSubtotal, dEzmaxinvoicingsummaryinternaldetailRebate=$dEzmaxinvoicingsummaryinternaldetailRebate, dEzmaxinvoicingsummaryinternaldetailTotal=$dEzmaxinvoicingsummaryinternaldetailTotal, bEzmaxinvoicingsummaryinternaldetailAdjustment=$bEzmaxinvoicingsummaryinternaldetailAdjustment]';
+  String toString() => 'EzmaxinvoicingsummaryinternaldetailResponse[pkiEzmaxinvoicingsummaryinternaldetailID=$pkiEzmaxinvoicingsummaryinternaldetailID, fkiEzmaxinvoicingsummaryinternalID=$fkiEzmaxinvoicingsummaryinternalID, fkiEzmaxproductID=$fkiEzmaxproductID, sEzmaxproductDescriptionX=$sEzmaxproductDescriptionX, fkiBillingentityexternalID=$fkiBillingentityexternalID, sBillingentityexternalDescription=$sBillingentityexternalDescription, dEzmaxinvoicingsummaryinternaldetailCountreal=$dEzmaxinvoicingsummaryinternaldetailCountreal, dEzmaxinvoicingsummaryinternaldetailSubtotal=$dEzmaxinvoicingsummaryinternaldetailSubtotal, dEzmaxinvoicingsummaryinternaldetailRebate=$dEzmaxinvoicingsummaryinternaldetailRebate, dEzmaxinvoicingsummaryinternaldetailTotal=$dEzmaxinvoicingsummaryinternaldetailTotal, bEzmaxinvoicingsummaryinternaldetailAdjustment=$bEzmaxinvoicingsummaryinternaldetailAdjustment, tEzmaxproductHelpX=$tEzmaxproductHelpX]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -132,6 +138,7 @@ class EzmaxinvoicingsummaryinternaldetailResponse {
       json[r'dEzmaxinvoicingsummaryinternaldetailRebate'] = this.dEzmaxinvoicingsummaryinternaldetailRebate;
       json[r'dEzmaxinvoicingsummaryinternaldetailTotal'] = this.dEzmaxinvoicingsummaryinternaldetailTotal;
       json[r'bEzmaxinvoicingsummaryinternaldetailAdjustment'] = this.bEzmaxinvoicingsummaryinternaldetailAdjustment;
+      json[r'tEzmaxproductHelpX'] = this.tEzmaxproductHelpX;
     return json;
   }
 
@@ -165,6 +172,7 @@ class EzmaxinvoicingsummaryinternaldetailResponse {
         dEzmaxinvoicingsummaryinternaldetailRebate: mapValueOfType<String>(json, r'dEzmaxinvoicingsummaryinternaldetailRebate')!,
         dEzmaxinvoicingsummaryinternaldetailTotal: mapValueOfType<String>(json, r'dEzmaxinvoicingsummaryinternaldetailTotal')!,
         bEzmaxinvoicingsummaryinternaldetailAdjustment: mapValueOfType<bool>(json, r'bEzmaxinvoicingsummaryinternaldetailAdjustment')!,
+        tEzmaxproductHelpX: mapValueOfType<String>(json, r'tEzmaxproductHelpX')!,
       );
     }
     return null;
@@ -223,6 +231,7 @@ class EzmaxinvoicingsummaryinternaldetailResponse {
     'dEzmaxinvoicingsummaryinternaldetailRebate',
     'dEzmaxinvoicingsummaryinternaldetailTotal',
     'bEzmaxinvoicingsummaryinternaldetailAdjustment',
+    'tEzmaxproductHelpX',
   };
 }
 

@@ -22,25 +22,23 @@ void main() {
       // TODO
     });
 
-    // The email address.
-    // String sEmailAddress
-    test('to test the property `sEmailAddress`', () async {
-      // TODO
-    });
-
-    // PhoneResponseCompound objPhoneSms
-    test('to test the property `objPhoneSms`', () async {
-      // TODO
-    });
-
     // FieldECommunicationexternalrecipientType eCommunicationexternalrecipientType
     test('to test the property `eCommunicationexternalrecipientType`', () async {
       // TODO
     });
 
-    // The Name of the Communicationexternalrecipient
-    // String sCommunicationexternalrecipientName
-    test('to test the property `sCommunicationexternalrecipientName`', () async {
+    // DescriptionstaticResponseCompound objDescriptionstatic
+    test('to test the property `objDescriptionstatic`', () async {
+      // TODO
+    });
+
+    // EmailstaticResponseCompound objEmailstatic
+    test('to test the property `objEmailstatic`', () async {
+      // TODO
+    });
+
+    // PhonestaticResponseCompound objPhonestatic
+    test('to test the property `objPhonestatic`', () async {
       // TODO
     });
 

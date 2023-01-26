@@ -8,7 +8,7 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**iCommunicationCount** | **int** | The number of total signatures in the Ezsigntemplate. | 
+**iCommunicationCount** | **int** | The count of Communication. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

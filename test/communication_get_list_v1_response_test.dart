@@ -21,7 +21,7 @@ void main() {
       // TODO
     });
 
-    // CommonResponseObjDebugPayload objDebugPayload
+    // CommonResponseObjDebugPayloadGetList objDebugPayload
     test('to test the property `objDebugPayload`', () async {
       // TODO
     });

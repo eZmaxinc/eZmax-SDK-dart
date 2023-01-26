@@ -16,7 +16,7 @@ void main() {
   // final instance = CommunicationGetCountV1ResponseMPayload();
 
   group('test CommunicationGetCountV1ResponseMPayload', () {
-    // The number of total signatures in the Ezsigntemplate.
+    // The count of Communication.
     // int iCommunicationCount
     test('to test the property `iCommunicationCount`', () async {
       // TODO

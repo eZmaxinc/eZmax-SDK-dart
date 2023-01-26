@@ -8,7 +8,7 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**sPeriodYYYYMM** | **String** | The period YYYYMM | 
+**sPeriodYYYYMM** | **String** | The YYYYMM of the Period | 
 **pkiPeriodID** | **int** | The unique ID of the Period | 
 **bPeriodIsactive** | **bool** | Whether the Period is active or not | 
 

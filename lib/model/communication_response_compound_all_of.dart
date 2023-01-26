@@ -16,8 +16,6 @@ class CommunicationResponseCompoundAllOf {
     this.aObjCommunicationattachment = const [],
     this.aObjCommunicationrecipient = const [],
     this.aObjCommunicationexternalrecipient = const [],
-    this.aObjCommunicationimage = const [],
-    this.aObjCommunicationexternalimage = const [],
   });
 
   List<CommunicationattachmentResponseCompound> aObjCommunicationattachment;
@@ -26,37 +24,27 @@ class CommunicationResponseCompoundAllOf {
 
   List<CommunicationexternalrecipientResponseCompound> aObjCommunicationexternalrecipient;
 
-  List<CommunicationimageResponseCompound> aObjCommunicationimage;
-
-  List<CommunicationexternalimageResponseCompound> aObjCommunicationexternalimage;
-
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommunicationResponseCompoundAllOf &&
      other.aObjCommunicationattachment == aObjCommunicationattachment &&
      other.aObjCommunicationrecipient == aObjCommunicationrecipient &&
-     other.aObjCommunicationexternalrecipient == aObjCommunicationexternalrecipient &&
-     other.aObjCommunicationimage == aObjCommunicationimage &&
-     other.aObjCommunicationexternalimage == aObjCommunicationexternalimage;
+     other.aObjCommunicationexternalrecipient == aObjCommunicationexternalrecipient;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (aObjCommunicationattachment.hashCode) +
     (aObjCommunicationrecipient.hashCode) +
-    (aObjCommunicationexternalrecipient.hashCode) +
-    (aObjCommunicationimage.hashCode) +
-    (aObjCommunicationexternalimage.hashCode);
+    (aObjCommunicationexternalrecipient.hashCode);
 
   @override
-  String toString() => 'CommunicationResponseCompoundAllOf[aObjCommunicationattachment=$aObjCommunicationattachment, aObjCommunicationrecipient=$aObjCommunicationrecipient, aObjCommunicationexternalrecipient=$aObjCommunicationexternalrecipient, aObjCommunicationimage=$aObjCommunicationimage, aObjCommunicationexternalimage=$aObjCommunicationexternalimage]';
+  String toString() => 'CommunicationResponseCompoundAllOf[aObjCommunicationattachment=$aObjCommunicationattachment, aObjCommunicationrecipient=$aObjCommunicationrecipient, aObjCommunicationexternalrecipient=$aObjCommunicationexternalrecipient]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'a_objCommunicationattachment'] = this.aObjCommunicationattachment;
       json[r'a_objCommunicationrecipient'] = this.aObjCommunicationrecipient;
       json[r'a_objCommunicationexternalrecipient'] = this.aObjCommunicationexternalrecipient;
-      json[r'a_objCommunicationimage'] = this.aObjCommunicationimage;
-      json[r'a_objCommunicationexternalimage'] = this.aObjCommunicationexternalimage;
     return json;
   }
 
@@ -82,8 +70,6 @@ class CommunicationResponseCompoundAllOf {
         aObjCommunicationattachment: CommunicationattachmentResponseCompound.listFromJson(json[r'a_objCommunicationattachment'])!,
         aObjCommunicationrecipient: CommunicationrecipientResponseCompound.listFromJson(json[r'a_objCommunicationrecipient'])!,
         aObjCommunicationexternalrecipient: CommunicationexternalrecipientResponseCompound.listFromJson(json[r'a_objCommunicationexternalrecipient'])!,
-        aObjCommunicationimage: CommunicationimageResponseCompound.listFromJson(json[r'a_objCommunicationimage'])!,
-        aObjCommunicationexternalimage: CommunicationexternalimageResponseCompound.listFromJson(json[r'a_objCommunicationexternalimage'])!,
       );
     }
     return null;
@@ -136,8 +122,6 @@ class CommunicationResponseCompoundAllOf {
     'a_objCommunicationattachment',
     'a_objCommunicationrecipient',
     'a_objCommunicationexternalrecipient',
-    'a_objCommunicationimage',
-    'a_objCommunicationexternalimage',
   };
 }
 

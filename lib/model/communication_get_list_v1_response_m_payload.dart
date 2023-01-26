@@ -14,25 +14,39 @@ class CommunicationGetListV1ResponseMPayload {
   /// Returns a new [CommunicationGetListV1ResponseMPayload] instance.
   CommunicationGetListV1ResponseMPayload({
     this.aObjCommunication = const [],
+    required this.iRowReturned,
+    required this.iRowFiltered,
   });
 
   List<CommunicationListElement> aObjCommunication;
 
+  /// The number of rows returned
+  int iRowReturned;
+
+  /// The number of rows matching your filters (if any) or the total number of rows
+  int iRowFiltered;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommunicationGetListV1ResponseMPayload &&
-     other.aObjCommunication == aObjCommunication;
+     other.aObjCommunication == aObjCommunication &&
+     other.iRowReturned == iRowReturned &&
+     other.iRowFiltered == iRowFiltered;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (aObjCommunication.hashCode);
+    (aObjCommunication.hashCode) +
+    (iRowReturned.hashCode) +
+    (iRowFiltered.hashCode);
 
   @override
-  String toString() => 'CommunicationGetListV1ResponseMPayload[aObjCommunication=$aObjCommunication]';
+  String toString() => 'CommunicationGetListV1ResponseMPayload[aObjCommunication=$aObjCommunication, iRowReturned=$iRowReturned, iRowFiltered=$iRowFiltered]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'a_objCommunication'] = this.aObjCommunication;
+      json[r'iRowReturned'] = this.iRowReturned;
+      json[r'iRowFiltered'] = this.iRowFiltered;
     return json;
   }
 
@@ -56,6 +70,8 @@ class CommunicationGetListV1ResponseMPayload {
 
       return CommunicationGetListV1ResponseMPayload(
         aObjCommunication: CommunicationListElement.listFromJson(json[r'a_objCommunication'])!,
+        iRowReturned: mapValueOfType<int>(json, r'iRowReturned')!,
+        iRowFiltered: mapValueOfType<int>(json, r'iRowFiltered')!,
       );
     }
     return null;
@@ -106,6 +122,8 @@ class CommunicationGetListV1ResponseMPayload {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'a_objCommunication',
+    'iRowReturned',
+    'iRowFiltered',
   };
 }
 

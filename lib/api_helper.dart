@@ -55,6 +55,9 @@ String parameterToString(dynamic value) {
   if (value is DateTime) {
     return value.toUtc().toIso8601String();
   }
+  if (value is ComputedECommunicationDirection) {
+    return ComputedECommunicationDirectionTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEActivesessionUsertype) {
     return FieldEActivesessionUsertypeTypeTransformer().encode(value).toString();
   }
@@ -64,14 +67,17 @@ String parameterToString(dynamic value) {
   if (value is FieldEBrandingLogo) {
     return FieldEBrandingLogoTypeTransformer().encode(value).toString();
   }
-  if (value is FieldECommunicationEmailimportance) {
-    return FieldECommunicationEmailimportanceTypeTransformer().encode(value).toString();
+  if (value is FieldECommunicationImportance) {
+    return FieldECommunicationImportanceTypeTransformer().encode(value).toString();
   }
   if (value is FieldECommunicationType) {
     return FieldECommunicationTypeTypeTransformer().encode(value).toString();
   }
   if (value is FieldECommunicationexternalrecipientType) {
     return FieldECommunicationexternalrecipientTypeTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldECommunicationrecipientObjecttype) {
+    return FieldECommunicationrecipientObjecttypeTypeTransformer().encode(value).toString();
   }
   if (value is FieldECommunicationrecipientType) {
     return FieldECommunicationrecipientTypeTypeTransformer().encode(value).toString();

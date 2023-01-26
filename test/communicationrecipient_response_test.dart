@@ -22,6 +22,11 @@ void main() {
       // TODO
     });
 
+    // FieldECommunicationrecipientObjecttype eCommunicationrecipientObjecttype
+    test('to test the property `eCommunicationrecipientObjecttype`', () async {
+      // TODO
+    });
+
     // The unique ID of the Agent.
     // int fkiAgentID
     test('to test the property `fkiAgentID`', () async {
@@ -70,17 +75,6 @@ void main() {
       // TODO
     });
 
-    // The email address.
-    // String sEmailAddress
-    test('to test the property `sEmailAddress`', () async {
-      // TODO
-    });
-
-    // FieldECommunicationrecipientType eCommunicationrecipientType
-    test('to test the property `eCommunicationrecipientType`', () async {
-      // TODO
-    });
-
     // The unique ID of the Agentincorporation.
     // int fkiAgentincorporationID
     test('to test the property `fkiAgentincorporationID`', () async {
@@ -123,8 +117,23 @@ void main() {
       // TODO
     });
 
-    // PhoneResponseCompound objPhoneSms
-    test('to test the property `objPhoneSms`', () async {
+    // FieldECommunicationrecipientType eCommunicationrecipientType
+    test('to test the property `eCommunicationrecipientType`', () async {
+      // TODO
+    });
+
+    // DescriptionstaticResponseCompound objDescriptionstatic
+    test('to test the property `objDescriptionstatic`', () async {
+      // TODO
+    });
+
+    // EmailstaticResponseCompound objEmailstatic
+    test('to test the property `objEmailstatic`', () async {
+      // TODO
+    });
+
+    // PhonestaticResponseCompound objPhonestatic
+    test('to test the property `objPhonestatic`', () async {
       // TODO
     });
 
