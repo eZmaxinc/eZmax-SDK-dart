@@ -66,15 +66,6 @@ void main() {
     //
     // 
     //
-    //Future<WebhookGetObjectV1Response> webhookGetObjectV1(int pkiWebhookID) async
-    test('test webhookGetObjectV1', () async {
-      // TODO
-    });
-
-    // Retrieve an existing Webhook
-    //
-    // 
-    //
     //Future<WebhookGetObjectV2Response> webhookGetObjectV2(int pkiWebhookID) async
     test('test webhookGetObjectV2', () async {
       // TODO

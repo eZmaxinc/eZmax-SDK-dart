@@ -48,15 +48,6 @@ void main() {
     //
     // 
     //
-    //Future<EzsigntemplatepackagesignerGetObjectV1Response> ezsigntemplatepackagesignerGetObjectV1(int pkiEzsigntemplatepackagesignerID) async
-    test('test ezsigntemplatepackagesignerGetObjectV1', () async {
-      // TODO
-    });
-
-    // Retrieve an existing Ezsigntemplatepackagesigner
-    //
-    // 
-    //
     //Future<EzsigntemplatepackagesignerGetObjectV2Response> ezsigntemplatepackagesignerGetObjectV2(int pkiEzsigntemplatepackagesignerID) async
     test('test ezsigntemplatepackagesignerGetObjectV2', () async {
       // TODO

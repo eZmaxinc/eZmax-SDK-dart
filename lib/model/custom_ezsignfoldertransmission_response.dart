@@ -14,6 +14,7 @@ class CustomEzsignfoldertransmissionResponse {
   /// Returns a new [CustomEzsignfoldertransmissionResponse] instance.
   CustomEzsignfoldertransmissionResponse({
     required this.pkiEzsignfolderID,
+    required this.sEzsignfolderDescription,
     required this.eEzsignfolderStep,
     required this.iEzsignfolderSignaturetotal,
     required this.iEzsignfolderSignaturesigned,
@@ -24,6 +25,9 @@ class CustomEzsignfoldertransmissionResponse {
   ///
   /// Minimum value: 0
   int pkiEzsignfolderID;
+
+  /// The description of the Ezsignfolder
+  String sEzsignfolderDescription;
 
   FieldEEzsignfolderStep eEzsignfolderStep;
 
@@ -38,6 +42,7 @@ class CustomEzsignfoldertransmissionResponse {
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomEzsignfoldertransmissionResponse &&
      other.pkiEzsignfolderID == pkiEzsignfolderID &&
+     other.sEzsignfolderDescription == sEzsignfolderDescription &&
      other.eEzsignfolderStep == eEzsignfolderStep &&
      other.iEzsignfolderSignaturetotal == iEzsignfolderSignaturetotal &&
      other.iEzsignfolderSignaturesigned == iEzsignfolderSignaturesigned &&
@@ -47,17 +52,19 @@ class CustomEzsignfoldertransmissionResponse {
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiEzsignfolderID.hashCode) +
+    (sEzsignfolderDescription.hashCode) +
     (eEzsignfolderStep.hashCode) +
     (iEzsignfolderSignaturetotal.hashCode) +
     (iEzsignfolderSignaturesigned.hashCode) +
     (aObjEzsignfoldertransmissionSigner.hashCode);
 
   @override
-  String toString() => 'CustomEzsignfoldertransmissionResponse[pkiEzsignfolderID=$pkiEzsignfolderID, eEzsignfolderStep=$eEzsignfolderStep, iEzsignfolderSignaturetotal=$iEzsignfolderSignaturetotal, iEzsignfolderSignaturesigned=$iEzsignfolderSignaturesigned, aObjEzsignfoldertransmissionSigner=$aObjEzsignfoldertransmissionSigner]';
+  String toString() => 'CustomEzsignfoldertransmissionResponse[pkiEzsignfolderID=$pkiEzsignfolderID, sEzsignfolderDescription=$sEzsignfolderDescription, eEzsignfolderStep=$eEzsignfolderStep, iEzsignfolderSignaturetotal=$iEzsignfolderSignaturetotal, iEzsignfolderSignaturesigned=$iEzsignfolderSignaturesigned, aObjEzsignfoldertransmissionSigner=$aObjEzsignfoldertransmissionSigner]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiEzsignfolderID'] = this.pkiEzsignfolderID;
+      json[r'sEzsignfolderDescription'] = this.sEzsignfolderDescription;
       json[r'eEzsignfolderStep'] = this.eEzsignfolderStep;
       json[r'iEzsignfolderSignaturetotal'] = this.iEzsignfolderSignaturetotal;
       json[r'iEzsignfolderSignaturesigned'] = this.iEzsignfolderSignaturesigned;
@@ -85,6 +92,7 @@ class CustomEzsignfoldertransmissionResponse {
 
       return CustomEzsignfoldertransmissionResponse(
         pkiEzsignfolderID: mapValueOfType<int>(json, r'pkiEzsignfolderID')!,
+        sEzsignfolderDescription: mapValueOfType<String>(json, r'sEzsignfolderDescription')!,
         eEzsignfolderStep: FieldEEzsignfolderStep.fromJson(json[r'eEzsignfolderStep'])!,
         iEzsignfolderSignaturetotal: mapValueOfType<int>(json, r'iEzsignfolderSignaturetotal')!,
         iEzsignfolderSignaturesigned: mapValueOfType<int>(json, r'iEzsignfolderSignaturesigned')!,
@@ -139,6 +147,7 @@ class CustomEzsignfoldertransmissionResponse {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'pkiEzsignfolderID',
+    'sEzsignfolderDescription',
     'eEzsignfolderStep',
     'iEzsignfolderSignaturetotal',
     'iEzsignfolderSignaturesigned',

@@ -18,62 +18,6 @@ class ObjectApikeyApi {
 
   /// Create a new Apikey
   ///
-  /// The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
-  ///
-  /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [List<ApikeyCreateObjectV1Request>] apikeyCreateObjectV1Request (required):
-  Future<Response> apikeyCreateObjectV1WithHttpInfo(List<ApikeyCreateObjectV1Request> apikeyCreateObjectV1Request,) async {
-    // ignore: prefer_const_declarations
-    final path = r'/1/object/apikey';
-
-    // ignore: prefer_final_locals
-    Object? postBody = apikeyCreateObjectV1Request;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>['application/json'];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'POST',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-    );
-  }
-
-  /// Create a new Apikey
-  ///
-  /// The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
-  ///
-  /// Parameters:
-  ///
-  /// * [List<ApikeyCreateObjectV1Request>] apikeyCreateObjectV1Request (required):
-  Future<ApikeyCreateObjectV1Response?> apikeyCreateObjectV1(List<ApikeyCreateObjectV1Request> apikeyCreateObjectV1Request,) async {
-    final response = await apikeyCreateObjectV1WithHttpInfo(apikeyCreateObjectV1Request,);
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'ApikeyCreateObjectV1Response',) as ApikeyCreateObjectV1Response;
-    
-    }
-    return null;
-  }
-
-  /// Create a new Apikey
-  ///
   /// The endpoint allows to create one or many elements at once.
   ///
   /// Note: This method returns the HTTP [Response].

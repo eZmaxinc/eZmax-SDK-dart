@@ -197,63 +197,6 @@ class ObjectEzmaxinvoicingApi {
   /// Parameters:
   ///
   /// * [int] pkiEzmaxinvoicingID (required):
-  Future<Response> ezmaxinvoicingGetObjectV1WithHttpInfo(int pkiEzmaxinvoicingID,) async {
-    // ignore: prefer_const_declarations
-    final path = r'/1/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}'
-      .replaceAll('{pkiEzmaxinvoicingID}', pkiEzmaxinvoicingID.toString());
-
-    // ignore: prefer_final_locals
-    Object? postBody;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>[];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'GET',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-    );
-  }
-
-  /// Retrieve an existing Ezmaxinvoicing
-  ///
-  /// 
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiEzmaxinvoicingID (required):
-  Future<EzmaxinvoicingGetObjectV1Response?> ezmaxinvoicingGetObjectV1(int pkiEzmaxinvoicingID,) async {
-    final response = await ezmaxinvoicingGetObjectV1WithHttpInfo(pkiEzmaxinvoicingID,);
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzmaxinvoicingGetObjectV1Response',) as EzmaxinvoicingGetObjectV1Response;
-    
-    }
-    return null;
-  }
-
-  /// Retrieve an existing Ezmaxinvoicing
-  ///
-  /// 
-  ///
-  /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiEzmaxinvoicingID (required):
   Future<Response> ezmaxinvoicingGetObjectV2WithHttpInfo(int pkiEzmaxinvoicingID,) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}'

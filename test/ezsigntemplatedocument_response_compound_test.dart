@@ -46,6 +46,12 @@ void main() {
       // TODO
     });
 
+    // If the Ezsigntemplatedocument contains signed signatures (From internal or external sources)
+    // bool bEzsigntemplatedocumentHassignedsignatures
+    test('to test the property `bEzsigntemplatedocumentHassignedsignatures`', () async {
+      // TODO
+    });
+
 
   });
 

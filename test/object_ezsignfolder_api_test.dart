@@ -94,6 +94,24 @@ void main() {
       // TODO
     });
 
+    // Retrieve Communication count
+    //
+    // 
+    //
+    //Future<EzsignfolderGetCommunicationCountV1Response> ezsignfolderGetCommunicationCountV1(int pkiEzsignfolderID) async
+    test('test ezsignfolderGetCommunicationCountV1', () async {
+      // TODO
+    });
+
+    // Retrieve Communication list
+    //
+    // 
+    //
+    //Future<EzsignfolderGetCommunicationListV1Response> ezsignfolderGetCommunicationListV1(int pkiEzsignfolderID) async
+    test('test ezsignfolderGetCommunicationListV1', () async {
+      // TODO
+    });
+
     // Retrieve an existing Ezsignfolder's Ezsigndocuments
     //
     // 
@@ -109,6 +127,15 @@ void main() {
     //
     //Future<EzsignfolderGetEzsignfoldersignerassociationsV1Response> ezsignfolderGetEzsignfoldersignerassociationsV1(int pkiEzsignfolderID) async
     test('test ezsignfolderGetEzsignfoldersignerassociationsV1', () async {
+      // TODO
+    });
+
+    // Retrieve an existing Ezsignfolder's automatic Ezsignsignatures
+    //
+    // Return the Ezsignsignatures that can be signed by the current user at the current step in the process
+    //
+    //Future<EzsignfolderGetEzsignsignaturesAutomaticV1Response> ezsignfolderGetEzsignsignaturesAutomaticV1(int pkiEzsignfolderID) async
+    test('test ezsignfolderGetEzsignsignaturesAutomaticV1', () async {
       // TODO
     });
 

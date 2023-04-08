@@ -19,15 +19,6 @@ void main() {
   group('tests for ObjectFranchiseofficeApi', () {
     // Retrieve Franchiseoffices and IDs
     //
-    // Get the list of Franchiseoffices to be used in a dropdown or autocomplete control.
-    //
-    //Future<CommonGetAutocompleteV1Response> franchiseofficeGetAutocompleteV1(String sSelector, { String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage }) async
-    test('test franchiseofficeGetAutocompleteV1', () async {
-      // TODO
-    });
-
-    // Retrieve Franchiseoffices and IDs
-    //
     // Get the list of Franchiseoffice to be used in a dropdown or autocomplete control.
     //
     //Future<FranchiseofficeGetAutocompleteV2Response> franchiseofficeGetAutocompleteV2(String sSelector, { String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage }) async

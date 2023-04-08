@@ -57,15 +57,6 @@ void main() {
     //
     // Get the list of Ezsigntemplatepackage to be used in a dropdown or autocomplete control.
     //
-    //Future<CommonGetAutocompleteDisabledV1Response> ezsigntemplatepackageGetAutocompleteV1(String sSelector, { String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage }) async
-    test('test ezsigntemplatepackageGetAutocompleteV1', () async {
-      // TODO
-    });
-
-    // Retrieve Ezsigntemplatepackages and IDs
-    //
-    // Get the list of Ezsigntemplatepackage to be used in a dropdown or autocomplete control.
-    //
     //Future<EzsigntemplatepackageGetAutocompleteV2Response> ezsigntemplatepackageGetAutocompleteV2(String sSelector, { String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage }) async
     test('test ezsigntemplatepackageGetAutocompleteV2', () async {
       // TODO
@@ -77,15 +68,6 @@ void main() {
     //
     //Future<EzsigntemplatepackageGetListV1Response> ezsigntemplatepackageGetListV1({ String eOrderBy, int iRowMax, int iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter }) async
     test('test ezsigntemplatepackageGetListV1', () async {
-      // TODO
-    });
-
-    // Retrieve an existing Ezsigntemplatepackage
-    //
-    // 
-    //
-    //Future<EzsigntemplatepackageGetObjectV1Response> ezsigntemplatepackageGetObjectV1(int pkiEzsigntemplatepackageID) async
-    test('test ezsigntemplatepackageGetObjectV1', () async {
       // TODO
     });
 

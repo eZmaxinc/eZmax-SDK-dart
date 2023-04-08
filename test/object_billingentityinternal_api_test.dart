@@ -17,12 +17,30 @@ void main() {
   // final instance = ObjectBillingentityinternalApi();
 
   group('tests for ObjectBillingentityinternalApi', () {
-    // Retrieve Billingentityinternals and IDs
+    // Create a new Billingentityinternal
     //
-    // Get the list of Billingentityinternal to be used in a dropdown or autocomplete control.
+    // The endpoint allows to create one or many elements at once.
     //
-    //Future<CommonGetAutocompleteV1Response> billingentityinternalGetAutocompleteV1(String sSelector, { String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage }) async
-    test('test billingentityinternalGetAutocompleteV1', () async {
+    //Future<BillingentityinternalCreateObjectV1Response> billingentityinternalCreateObjectV1(BillingentityinternalCreateObjectV1Request billingentityinternalCreateObjectV1Request) async
+    test('test billingentityinternalCreateObjectV1', () async {
+      // TODO
+    });
+
+    // Delete an existing Billingentityinternal
+    //
+    // 
+    //
+    //Future<BillingentityinternalDeleteObjectV1Response> billingentityinternalDeleteObjectV1(int pkiBillingentityinternalID) async
+    test('test billingentityinternalDeleteObjectV1', () async {
+      // TODO
+    });
+
+    // Edit an existing Billingentityinternal
+    //
+    // 
+    //
+    //Future<BillingentityinternalEditObjectV1Response> billingentityinternalEditObjectV1(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request) async
+    test('test billingentityinternalEditObjectV1', () async {
       // TODO
     });
 
@@ -32,6 +50,24 @@ void main() {
     //
     //Future<BillingentityinternalGetAutocompleteV2Response> billingentityinternalGetAutocompleteV2(String sSelector, { String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage }) async
     test('test billingentityinternalGetAutocompleteV2', () async {
+      // TODO
+    });
+
+    // Retrieve Billingentityinternal list
+    //
+    // 
+    //
+    //Future<BillingentityinternalGetListV1Response> billingentityinternalGetListV1({ String eOrderBy, int iRowMax, int iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter }) async
+    test('test billingentityinternalGetListV1', () async {
+      // TODO
+    });
+
+    // Retrieve an existing Billingentityinternal
+    //
+    // 
+    //
+    //Future<BillingentityinternalGetObjectV2Response> billingentityinternalGetObjectV2(int pkiBillingentityinternalID) async
+    test('test billingentityinternalGetObjectV2', () async {
       // TODO
     });
 

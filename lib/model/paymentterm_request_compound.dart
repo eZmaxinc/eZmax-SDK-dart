@@ -15,6 +15,8 @@ class PaymenttermRequestCompound {
   PaymenttermRequestCompound({
     this.pkiPaymenttermID,
     required this.sPaymenttermCode,
+    required this.ePaymenttermType,
+    required this.iPaymenttermDay,
     required this.objPaymenttermDescription,
     required this.bPaymenttermIsactive,
   });
@@ -31,6 +33,14 @@ class PaymenttermRequestCompound {
   /// The code of the Paymentterm
   String sPaymenttermCode;
 
+  FieldEPaymenttermType ePaymenttermType;
+
+  /// The day of the Paymentterm
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 255
+  int iPaymenttermDay;
+
   MultilingualPaymenttermDescription objPaymenttermDescription;
 
   /// Whether the Paymentterm is active or not
@@ -40,6 +50,8 @@ class PaymenttermRequestCompound {
   bool operator ==(Object other) => identical(this, other) || other is PaymenttermRequestCompound &&
      other.pkiPaymenttermID == pkiPaymenttermID &&
      other.sPaymenttermCode == sPaymenttermCode &&
+     other.ePaymenttermType == ePaymenttermType &&
+     other.iPaymenttermDay == iPaymenttermDay &&
      other.objPaymenttermDescription == objPaymenttermDescription &&
      other.bPaymenttermIsactive == bPaymenttermIsactive;
 
@@ -48,11 +60,13 @@ class PaymenttermRequestCompound {
     // ignore: unnecessary_parenthesis
     (pkiPaymenttermID == null ? 0 : pkiPaymenttermID!.hashCode) +
     (sPaymenttermCode.hashCode) +
+    (ePaymenttermType.hashCode) +
+    (iPaymenttermDay.hashCode) +
     (objPaymenttermDescription.hashCode) +
     (bPaymenttermIsactive.hashCode);
 
   @override
-  String toString() => 'PaymenttermRequestCompound[pkiPaymenttermID=$pkiPaymenttermID, sPaymenttermCode=$sPaymenttermCode, objPaymenttermDescription=$objPaymenttermDescription, bPaymenttermIsactive=$bPaymenttermIsactive]';
+  String toString() => 'PaymenttermRequestCompound[pkiPaymenttermID=$pkiPaymenttermID, sPaymenttermCode=$sPaymenttermCode, ePaymenttermType=$ePaymenttermType, iPaymenttermDay=$iPaymenttermDay, objPaymenttermDescription=$objPaymenttermDescription, bPaymenttermIsactive=$bPaymenttermIsactive]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -62,6 +76,8 @@ class PaymenttermRequestCompound {
       json[r'pkiPaymenttermID'] = null;
     }
       json[r'sPaymenttermCode'] = this.sPaymenttermCode;
+      json[r'ePaymenttermType'] = this.ePaymenttermType;
+      json[r'iPaymenttermDay'] = this.iPaymenttermDay;
       json[r'objPaymenttermDescription'] = this.objPaymenttermDescription;
       json[r'bPaymenttermIsactive'] = this.bPaymenttermIsactive;
     return json;
@@ -88,6 +104,8 @@ class PaymenttermRequestCompound {
       return PaymenttermRequestCompound(
         pkiPaymenttermID: mapValueOfType<int>(json, r'pkiPaymenttermID'),
         sPaymenttermCode: mapValueOfType<String>(json, r'sPaymenttermCode')!,
+        ePaymenttermType: FieldEPaymenttermType.fromJson(json[r'ePaymenttermType'])!,
+        iPaymenttermDay: mapValueOfType<int>(json, r'iPaymenttermDay')!,
         objPaymenttermDescription: MultilingualPaymenttermDescription.fromJson(json[r'objPaymenttermDescription'])!,
         bPaymenttermIsactive: mapValueOfType<bool>(json, r'bPaymenttermIsactive')!,
       );
@@ -140,6 +158,8 @@ class PaymenttermRequestCompound {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'sPaymenttermCode',
+    'ePaymenttermType',
+    'iPaymenttermDay',
     'objPaymenttermDescription',
     'bPaymenttermIsactive',
   };

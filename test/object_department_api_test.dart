@@ -21,15 +21,6 @@ void main() {
     //
     // Get the list of Department to be used in a dropdown or autocomplete control.
     //
-    //Future<CommonGetAutocompleteV1Response> departmentGetAutocompleteV1(String sSelector, { String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage }) async
-    test('test departmentGetAutocompleteV1', () async {
-      // TODO
-    });
-
-    // Retrieve Departments and IDs
-    //
-    // Get the list of Department to be used in a dropdown or autocomplete control.
-    //
     //Future<DepartmentGetAutocompleteV2Response> departmentGetAutocompleteV2(String sSelector, { String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage }) async
     test('test departmentGetAutocompleteV2', () async {
       // TODO

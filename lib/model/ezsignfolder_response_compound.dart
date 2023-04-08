@@ -33,6 +33,7 @@ class EzsignfolderResponseCompound {
     this.dtEzsignfolderClose,
     required this.tEzsignfolderMessage,
     required this.objAudit,
+    required this.sEzsignfolderExternalid,
   });
 
   /// The unique ID of the Ezsignfolder
@@ -137,6 +138,9 @@ class EzsignfolderResponseCompound {
 
   CommonAudit objAudit;
 
+  /// This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
+  String sEzsignfolderExternalid;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfolderResponseCompound &&
      other.pkiEzsignfolderID == pkiEzsignfolderID &&
@@ -158,7 +162,8 @@ class EzsignfolderResponseCompound {
      other.eEzsignfolderStep == eEzsignfolderStep &&
      other.dtEzsignfolderClose == dtEzsignfolderClose &&
      other.tEzsignfolderMessage == tEzsignfolderMessage &&
-     other.objAudit == objAudit;
+     other.objAudit == objAudit &&
+     other.sEzsignfolderExternalid == sEzsignfolderExternalid;
 
   @override
   int get hashCode =>
@@ -182,10 +187,11 @@ class EzsignfolderResponseCompound {
     (eEzsignfolderStep.hashCode) +
     (dtEzsignfolderClose == null ? 0 : dtEzsignfolderClose!.hashCode) +
     (tEzsignfolderMessage.hashCode) +
-    (objAudit.hashCode);
+    (objAudit.hashCode) +
+    (sEzsignfolderExternalid.hashCode);
 
   @override
-  String toString() => 'EzsignfolderResponseCompound[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, fkiBillingentityinternalID=$fkiBillingentityinternalID, sBillingentityinternalDescriptionX=$sBillingentityinternalDescriptionX, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sEzsigntsarequirementDescriptionX=$sEzsigntsarequirementDescriptionX, sEzsignfolderDescription=$sEzsignfolderDescription, tEzsignfolderNote=$tEzsignfolderNote, bEzsignfolderIsdisposable=$bEzsignfolderIsdisposable, eEzsignfolderSendreminderfrequency=$eEzsignfolderSendreminderfrequency, dtEzsignfolderDelayedsenddate=$dtEzsignfolderDelayedsenddate, dtEzsignfolderDuedate=$dtEzsignfolderDuedate, dtEzsignfolderSentdate=$dtEzsignfolderSentdate, dtEzsignfolderScheduledarchive=$dtEzsignfolderScheduledarchive, dtEzsignfolderScheduleddispose=$dtEzsignfolderScheduleddispose, eEzsignfolderStep=$eEzsignfolderStep, dtEzsignfolderClose=$dtEzsignfolderClose, tEzsignfolderMessage=$tEzsignfolderMessage, objAudit=$objAudit]';
+  String toString() => 'EzsignfolderResponseCompound[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, fkiBillingentityinternalID=$fkiBillingentityinternalID, sBillingentityinternalDescriptionX=$sBillingentityinternalDescriptionX, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sEzsigntsarequirementDescriptionX=$sEzsigntsarequirementDescriptionX, sEzsignfolderDescription=$sEzsignfolderDescription, tEzsignfolderNote=$tEzsignfolderNote, bEzsignfolderIsdisposable=$bEzsignfolderIsdisposable, eEzsignfolderSendreminderfrequency=$eEzsignfolderSendreminderfrequency, dtEzsignfolderDelayedsenddate=$dtEzsignfolderDelayedsenddate, dtEzsignfolderDuedate=$dtEzsignfolderDuedate, dtEzsignfolderSentdate=$dtEzsignfolderSentdate, dtEzsignfolderScheduledarchive=$dtEzsignfolderScheduledarchive, dtEzsignfolderScheduleddispose=$dtEzsignfolderScheduleddispose, eEzsignfolderStep=$eEzsignfolderStep, dtEzsignfolderClose=$dtEzsignfolderClose, tEzsignfolderMessage=$tEzsignfolderMessage, objAudit=$objAudit, sEzsignfolderExternalid=$sEzsignfolderExternalid]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -233,6 +239,7 @@ class EzsignfolderResponseCompound {
     }
       json[r'tEzsignfolderMessage'] = this.tEzsignfolderMessage;
       json[r'objAudit'] = this.objAudit;
+      json[r'sEzsignfolderExternalid'] = this.sEzsignfolderExternalid;
     return json;
   }
 
@@ -275,6 +282,7 @@ class EzsignfolderResponseCompound {
         dtEzsignfolderClose: mapValueOfType<String>(json, r'dtEzsignfolderClose'),
         tEzsignfolderMessage: mapValueOfType<String>(json, r'tEzsignfolderMessage')!,
         objAudit: CommonAudit.fromJson(json[r'objAudit'])!,
+        sEzsignfolderExternalid: mapValueOfType<String>(json, r'sEzsignfolderExternalid')!,
       );
     }
     return null;
@@ -338,6 +346,7 @@ class EzsignfolderResponseCompound {
     'eEzsignfolderStep',
     'tEzsignfolderMessage',
     'objAudit',
+    'sEzsignfolderExternalid',
   };
 }
 

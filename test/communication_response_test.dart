@@ -38,6 +38,12 @@ void main() {
       // TODO
     });
 
+    // The url of the body used as body in the Communication
+    // String sCommunicationBodyurl
+    test('to test the property `sCommunicationBodyurl`', () async {
+      // TODO
+    });
+
     // ComputedECommunicationDirection eCommunicationDirection
     test('to test the property `eCommunicationDirection`', () async {
       // TODO
@@ -49,8 +55,18 @@ void main() {
       // TODO
     });
 
-    // CustomContactNameResponse objContactFrom
-    test('to test the property `objContactFrom`', () async {
+    // DescriptionstaticResponse objDescriptionstaticSender
+    test('to test the property `objDescriptionstaticSender`', () async {
+      // TODO
+    });
+
+    // EmailstaticResponse objEmailstaticSender
+    test('to test the property `objEmailstaticSender`', () async {
+      // TODO
+    });
+
+    // PhonestaticResponse objPhonestaticSender
+    test('to test the property `objPhonestaticSender`', () async {
       // TODO
     });
 

@@ -22,6 +22,12 @@ void main() {
       // TODO
     });
 
+    // The description of the Ezsignfolder
+    // String sEzsignfolderDescription
+    test('to test the property `sEzsignfolderDescription`', () async {
+      // TODO
+    });
+
     // FieldEEzsignfolderStep eEzsignfolderStep
     test('to test the property `eEzsignfolderStep`', () async {
       // TODO

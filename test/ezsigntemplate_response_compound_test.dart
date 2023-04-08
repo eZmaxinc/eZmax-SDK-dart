@@ -64,6 +64,11 @@ void main() {
       // TODO
     });
 
+    // CommonAudit objAudit
+    test('to test the property `objAudit`', () async {
+      // TODO
+    });
+
     // EzsigntemplatedocumentResponse objEzsigntemplatedocument
     test('to test the property `objEzsigntemplatedocument`', () async {
       // TODO

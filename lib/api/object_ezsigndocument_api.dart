@@ -490,6 +490,67 @@ class ObjectEzsigndocumentApi {
     return null;
   }
 
+  /// Flatten
+  ///
+  /// Flatten an Ezsigndocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  ///
+  /// * [Object] body (required):
+  Future<Response> ezsigndocumentFlattenV1WithHttpInfo(int pkiEzsigndocumentID, Object body,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsigndocument/{pkiEzsigndocumentID}/flatten'
+      .replaceAll('{pkiEzsigndocumentID}', pkiEzsigndocumentID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = body;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Flatten
+  ///
+  /// Flatten an Ezsigndocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  ///
+  /// * [Object] body (required):
+  Future<EzsigndocumentFlattenV1Response?> ezsigndocumentFlattenV1(int pkiEzsigndocumentID, Object body,) async {
+    final response = await ezsigndocumentFlattenV1WithHttpInfo(pkiEzsigndocumentID, body,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentFlattenV1Response',) as EzsigndocumentFlattenV1Response;
+    
+    }
+    return null;
+  }
+
   /// Retrieve actionable elements for the Ezsigndocument
   ///
   /// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
@@ -611,6 +672,63 @@ class ObjectEzsigndocumentApi {
     return null;
   }
 
+  /// Retrieve an existing Ezsigndocument's Ezsignannotations
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  Future<Response> ezsigndocumentGetEzsignannotationsV1WithHttpInfo(int pkiEzsigndocumentID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignannotations'
+      .replaceAll('{pkiEzsigndocumentID}', pkiEzsigndocumentID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve an existing Ezsigndocument's Ezsignannotations
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  Future<EzsigndocumentGetEzsignannotationsV1Response?> ezsigndocumentGetEzsignannotationsV1(int pkiEzsigndocumentID,) async {
+    final response = await ezsigndocumentGetEzsignannotationsV1WithHttpInfo(pkiEzsigndocumentID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentGetEzsignannotationsV1Response',) as EzsigndocumentGetEzsignannotationsV1Response;
+    
+    }
+    return null;
+  }
+
   /// Retrieve an existing Ezsigndocument's Ezsignformfieldgroups
   ///
   /// 
@@ -720,6 +838,63 @@ class ObjectEzsigndocumentApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentGetEzsignpagesV1Response',) as EzsigndocumentGetEzsignpagesV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve an existing Ezsigndocument's automatic Ezsignsignatures
+  ///
+  /// Return the Ezsignsignatures that can be signed by the current user at the current step in the process
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  Future<Response> ezsigndocumentGetEzsignsignaturesAutomaticV1WithHttpInfo(int pkiEzsigndocumentID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignsignaturesAutomatic'
+      .replaceAll('{pkiEzsigndocumentID}', pkiEzsigndocumentID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve an existing Ezsigndocument's automatic Ezsignsignatures
+  ///
+  /// Return the Ezsignsignatures that can be signed by the current user at the current step in the process
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  Future<EzsigndocumentGetEzsignsignaturesAutomaticV1Response?> ezsigndocumentGetEzsignsignaturesAutomaticV1(int pkiEzsigndocumentID,) async {
+    final response = await ezsigndocumentGetEzsignsignaturesAutomaticV1WithHttpInfo(pkiEzsigndocumentID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentGetEzsignsignaturesAutomaticV1Response',) as EzsigndocumentGetEzsignsignaturesAutomaticV1Response;
     
     }
     return null;

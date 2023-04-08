@@ -21,6 +21,7 @@ class EzsigntemplateGetObjectV1ResponseMPayload {
     required this.sEzsigntemplateDescription,
     required this.bEzsigntemplateAdminonly,
     required this.sEzsignfoldertypeNameX,
+    required this.objAudit,
     this.objEzsigntemplatedocument,
     this.aObjEzsigntemplatesigner = const [],
   });
@@ -64,6 +65,8 @@ class EzsigntemplateGetObjectV1ResponseMPayload {
   /// The name of the Ezsignfoldertype in the language of the requester
   String sEzsignfoldertypeNameX;
 
+  CommonAudit objAudit;
+
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -84,6 +87,7 @@ class EzsigntemplateGetObjectV1ResponseMPayload {
      other.sEzsigntemplateDescription == sEzsigntemplateDescription &&
      other.bEzsigntemplateAdminonly == bEzsigntemplateAdminonly &&
      other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
+     other.objAudit == objAudit &&
      other.objEzsigntemplatedocument == objEzsigntemplatedocument &&
      other.aObjEzsigntemplatesigner == aObjEzsigntemplatesigner;
 
@@ -98,11 +102,12 @@ class EzsigntemplateGetObjectV1ResponseMPayload {
     (sEzsigntemplateDescription.hashCode) +
     (bEzsigntemplateAdminonly.hashCode) +
     (sEzsignfoldertypeNameX.hashCode) +
+    (objAudit.hashCode) +
     (objEzsigntemplatedocument == null ? 0 : objEzsigntemplatedocument!.hashCode) +
     (aObjEzsigntemplatesigner.hashCode);
 
   @override
-  String toString() => 'EzsigntemplateGetObjectV1ResponseMPayload[pkiEzsigntemplateID=$pkiEzsigntemplateID, fkiEzsigntemplatedocumentID=$fkiEzsigntemplatedocumentID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiLanguageID=$fkiLanguageID, sLanguageNameX=$sLanguageNameX, sEzsigntemplateDescription=$sEzsigntemplateDescription, bEzsigntemplateAdminonly=$bEzsigntemplateAdminonly, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, objEzsigntemplatedocument=$objEzsigntemplatedocument, aObjEzsigntemplatesigner=$aObjEzsigntemplatesigner]';
+  String toString() => 'EzsigntemplateGetObjectV1ResponseMPayload[pkiEzsigntemplateID=$pkiEzsigntemplateID, fkiEzsigntemplatedocumentID=$fkiEzsigntemplatedocumentID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiLanguageID=$fkiLanguageID, sLanguageNameX=$sLanguageNameX, sEzsigntemplateDescription=$sEzsigntemplateDescription, bEzsigntemplateAdminonly=$bEzsigntemplateAdminonly, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, objAudit=$objAudit, objEzsigntemplatedocument=$objEzsigntemplatedocument, aObjEzsigntemplatesigner=$aObjEzsigntemplatesigner]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -118,6 +123,7 @@ class EzsigntemplateGetObjectV1ResponseMPayload {
       json[r'sEzsigntemplateDescription'] = this.sEzsigntemplateDescription;
       json[r'bEzsigntemplateAdminonly'] = this.bEzsigntemplateAdminonly;
       json[r'sEzsignfoldertypeNameX'] = this.sEzsignfoldertypeNameX;
+      json[r'objAudit'] = this.objAudit;
     if (this.objEzsigntemplatedocument != null) {
       json[r'objEzsigntemplatedocument'] = this.objEzsigntemplatedocument;
     } else {
@@ -154,6 +160,7 @@ class EzsigntemplateGetObjectV1ResponseMPayload {
         sEzsigntemplateDescription: mapValueOfType<String>(json, r'sEzsigntemplateDescription')!,
         bEzsigntemplateAdminonly: mapValueOfType<bool>(json, r'bEzsigntemplateAdminonly')!,
         sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX')!,
+        objAudit: CommonAudit.fromJson(json[r'objAudit'])!,
         objEzsigntemplatedocument: EzsigntemplatedocumentResponse.fromJson(json[r'objEzsigntemplatedocument']),
         aObjEzsigntemplatesigner: EzsigntemplatesignerResponseCompound.listFromJson(json[r'a_objEzsigntemplatesigner'])!,
       );
@@ -212,6 +219,7 @@ class EzsigntemplateGetObjectV1ResponseMPayload {
     'sEzsigntemplateDescription',
     'bEzsigntemplateAdminonly',
     'sEzsignfoldertypeNameX',
+    'objAudit',
     'a_objEzsigntemplatesigner',
   };
 }

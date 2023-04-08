@@ -39,15 +39,6 @@ void main() {
     //
     // 
     //
-    //Future<EzsignbulksendsignermappingGetObjectV1Response> ezsignbulksendsignermappingGetObjectV1(int pkiEzsignbulksendsignermappingID) async
-    test('test ezsignbulksendsignermappingGetObjectV1', () async {
-      // TODO
-    });
-
-    // Retrieve an existing Ezsignbulksendsignermapping
-    //
-    // 
-    //
     //Future<EzsignbulksendsignermappingGetObjectV2Response> ezsignbulksendsignermappingGetObjectV2(int pkiEzsignbulksendsignermappingID) async
     test('test ezsignbulksendsignermappingGetObjectV2', () async {
       // TODO

@@ -89,6 +89,15 @@ void main() {
       // TODO
     });
 
+    // Flatten
+    //
+    // Flatten an Ezsigndocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
+    //
+    //Future<EzsigndocumentFlattenV1Response> ezsigndocumentFlattenV1(int pkiEzsigndocumentID, Object body) async
+    test('test ezsigndocumentFlattenV1', () async {
+      // TODO
+    });
+
     // Retrieve actionable elements for the Ezsigndocument
     //
     // Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
@@ -107,6 +116,15 @@ void main() {
       // TODO
     });
 
+    // Retrieve an existing Ezsigndocument's Ezsignannotations
+    //
+    // 
+    //
+    //Future<EzsigndocumentGetEzsignannotationsV1Response> ezsigndocumentGetEzsignannotationsV1(int pkiEzsigndocumentID) async
+    test('test ezsigndocumentGetEzsignannotationsV1', () async {
+      // TODO
+    });
+
     // Retrieve an existing Ezsigndocument's Ezsignformfieldgroups
     //
     // 
@@ -122,6 +140,15 @@ void main() {
     //
     //Future<EzsigndocumentGetEzsignpagesV1Response> ezsigndocumentGetEzsignpagesV1(int pkiEzsigndocumentID) async
     test('test ezsigndocumentGetEzsignpagesV1', () async {
+      // TODO
+    });
+
+    // Retrieve an existing Ezsigndocument's automatic Ezsignsignatures
+    //
+    // Return the Ezsignsignatures that can be signed by the current user at the current step in the process
+    //
+    //Future<EzsigndocumentGetEzsignsignaturesAutomaticV1Response> ezsigndocumentGetEzsignsignaturesAutomaticV1(int pkiEzsigndocumentID) async
+    test('test ezsigndocumentGetEzsignsignaturesAutomaticV1', () async {
       // TODO
     });
 

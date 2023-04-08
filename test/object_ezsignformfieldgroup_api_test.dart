@@ -46,13 +46,6 @@ void main() {
 
     // Retrieve an existing Ezsignformfieldgroup
     //
-    //Future<EzsignformfieldgroupGetObjectV1Response> ezsignformfieldgroupGetObjectV1(int pkiEzsignformfieldgroupID) async
-    test('test ezsignformfieldgroupGetObjectV1', () async {
-      // TODO
-    });
-
-    // Retrieve an existing Ezsignformfieldgroup
-    //
     // 
     //
     //Future<EzsignformfieldgroupGetObjectV2Response> ezsignformfieldgroupGetObjectV2(int pkiEzsignformfieldgroupID) async

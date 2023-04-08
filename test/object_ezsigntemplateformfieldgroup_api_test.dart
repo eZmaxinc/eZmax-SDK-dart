@@ -48,15 +48,6 @@ void main() {
     //
     // 
     //
-    //Future<EzsigntemplateformfieldgroupGetObjectV1Response> ezsigntemplateformfieldgroupGetObjectV1(int pkiEzsigntemplateformfieldgroupID) async
-    test('test ezsigntemplateformfieldgroupGetObjectV1', () async {
-      // TODO
-    });
-
-    // Retrieve an existing Ezsigntemplateformfieldgroup
-    //
-    // 
-    //
     //Future<EzsigntemplateformfieldgroupGetObjectV2Response> ezsigntemplateformfieldgroupGetObjectV2(int pkiEzsigntemplateformfieldgroupID) async
     test('test ezsigntemplateformfieldgroupGetObjectV2', () async {
       // TODO

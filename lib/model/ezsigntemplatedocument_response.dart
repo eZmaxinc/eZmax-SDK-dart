@@ -18,6 +18,7 @@ class EzsigntemplatedocumentResponse {
     required this.sEzsigntemplatedocumentName,
     required this.iEzsigntemplatedocumentPagetotal,
     required this.iEzsigntemplatedocumentSignaturetotal,
+    required this.bEzsigntemplatedocumentHassignedsignatures,
   });
 
   /// The unique ID of the Ezsigntemplatedocument
@@ -41,13 +42,17 @@ class EzsigntemplatedocumentResponse {
   /// The number of total signatures in the Ezsigntemplate.
   int iEzsigntemplatedocumentSignaturetotal;
 
+  /// If the Ezsigntemplatedocument contains signed signatures (From internal or external sources)
+  bool bEzsigntemplatedocumentHassignedsignatures;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplatedocumentResponse &&
      other.pkiEzsigntemplatedocumentID == pkiEzsigntemplatedocumentID &&
      other.fkiEzsigntemplateID == fkiEzsigntemplateID &&
      other.sEzsigntemplatedocumentName == sEzsigntemplatedocumentName &&
      other.iEzsigntemplatedocumentPagetotal == iEzsigntemplatedocumentPagetotal &&
-     other.iEzsigntemplatedocumentSignaturetotal == iEzsigntemplatedocumentSignaturetotal;
+     other.iEzsigntemplatedocumentSignaturetotal == iEzsigntemplatedocumentSignaturetotal &&
+     other.bEzsigntemplatedocumentHassignedsignatures == bEzsigntemplatedocumentHassignedsignatures;
 
   @override
   int get hashCode =>
@@ -56,10 +61,11 @@ class EzsigntemplatedocumentResponse {
     (fkiEzsigntemplateID.hashCode) +
     (sEzsigntemplatedocumentName.hashCode) +
     (iEzsigntemplatedocumentPagetotal.hashCode) +
-    (iEzsigntemplatedocumentSignaturetotal.hashCode);
+    (iEzsigntemplatedocumentSignaturetotal.hashCode) +
+    (bEzsigntemplatedocumentHassignedsignatures.hashCode);
 
   @override
-  String toString() => 'EzsigntemplatedocumentResponse[pkiEzsigntemplatedocumentID=$pkiEzsigntemplatedocumentID, fkiEzsigntemplateID=$fkiEzsigntemplateID, sEzsigntemplatedocumentName=$sEzsigntemplatedocumentName, iEzsigntemplatedocumentPagetotal=$iEzsigntemplatedocumentPagetotal, iEzsigntemplatedocumentSignaturetotal=$iEzsigntemplatedocumentSignaturetotal]';
+  String toString() => 'EzsigntemplatedocumentResponse[pkiEzsigntemplatedocumentID=$pkiEzsigntemplatedocumentID, fkiEzsigntemplateID=$fkiEzsigntemplateID, sEzsigntemplatedocumentName=$sEzsigntemplatedocumentName, iEzsigntemplatedocumentPagetotal=$iEzsigntemplatedocumentPagetotal, iEzsigntemplatedocumentSignaturetotal=$iEzsigntemplatedocumentSignaturetotal, bEzsigntemplatedocumentHassignedsignatures=$bEzsigntemplatedocumentHassignedsignatures]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -68,6 +74,7 @@ class EzsigntemplatedocumentResponse {
       json[r'sEzsigntemplatedocumentName'] = this.sEzsigntemplatedocumentName;
       json[r'iEzsigntemplatedocumentPagetotal'] = this.iEzsigntemplatedocumentPagetotal;
       json[r'iEzsigntemplatedocumentSignaturetotal'] = this.iEzsigntemplatedocumentSignaturetotal;
+      json[r'bEzsigntemplatedocumentHassignedsignatures'] = this.bEzsigntemplatedocumentHassignedsignatures;
     return json;
   }
 
@@ -95,6 +102,7 @@ class EzsigntemplatedocumentResponse {
         sEzsigntemplatedocumentName: mapValueOfType<String>(json, r'sEzsigntemplatedocumentName')!,
         iEzsigntemplatedocumentPagetotal: mapValueOfType<int>(json, r'iEzsigntemplatedocumentPagetotal')!,
         iEzsigntemplatedocumentSignaturetotal: mapValueOfType<int>(json, r'iEzsigntemplatedocumentSignaturetotal')!,
+        bEzsigntemplatedocumentHassignedsignatures: mapValueOfType<bool>(json, r'bEzsigntemplatedocumentHassignedsignatures')!,
       );
     }
     return null;
@@ -149,6 +157,7 @@ class EzsigntemplatedocumentResponse {
     'sEzsigntemplatedocumentName',
     'iEzsigntemplatedocumentPagetotal',
     'iEzsigntemplatedocumentSignaturetotal',
+    'bEzsigntemplatedocumentHassignedsignatures',
   };
 }
 

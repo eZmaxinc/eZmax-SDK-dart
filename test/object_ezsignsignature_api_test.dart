@@ -53,12 +53,12 @@ void main() {
       // TODO
     });
 
-    // Retrieve an existing Ezsignsignature
+    // Retrieve all automatic Ezsignsignatures
     //
-    // 
+    // Return all the Ezsignsignatures that can be signed by the current user
     //
-    //Future<EzsignsignatureGetObjectV1Response> ezsignsignatureGetObjectV1(int pkiEzsignsignatureID) async
-    test('test ezsignsignatureGetObjectV1', () async {
+    //Future<EzsignsignatureGetEzsignsignaturesAutomaticV1Response> ezsignsignatureGetEzsignsignaturesAutomaticV1() async
+    test('test ezsignsignatureGetEzsignsignaturesAutomaticV1', () async {
       // TODO
     });
 

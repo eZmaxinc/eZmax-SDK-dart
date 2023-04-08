@@ -17,15 +17,6 @@ void main() {
   // final instance = ObjectCommunicationApi();
 
   group('tests for ObjectCommunicationApi', () {
-    // Retrieve Communication list
-    //
-    // Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eCommunicationImportance | High<br>Normal<br>Low | | eCommunicationType | Email<br>Fax<br>Sms | | eCommunicationDirection | Inbound<br>Outbound |
-    //
-    //Future<CommunicationGetListV1Response> communicationGetListV1({ String eOrderBy, int iRowMax, int iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter }) async
-    test('test communicationGetListV1', () async {
-      // TODO
-    });
-
     // Retrieve an existing Communication
     //
     // 

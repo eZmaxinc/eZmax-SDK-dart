@@ -19,15 +19,6 @@ void main() {
   group('tests for ObjectApikeyApi', () {
     // Create a new Apikey
     //
-    // The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
-    //
-    //Future<ApikeyCreateObjectV1Response> apikeyCreateObjectV1(List<ApikeyCreateObjectV1Request> apikeyCreateObjectV1Request) async
-    test('test apikeyCreateObjectV1', () async {
-      // TODO
-    });
-
-    // Create a new Apikey
-    //
     // The endpoint allows to create one or many elements at once.
     //
     //Future<ApikeyCreateObjectV2Response> apikeyCreateObjectV2(ApikeyCreateObjectV2Request apikeyCreateObjectV2Request) async

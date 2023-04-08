@@ -355,63 +355,6 @@ class ObjectWebhookApi {
   /// Parameters:
   ///
   /// * [int] pkiWebhookID (required):
-  Future<Response> webhookGetObjectV1WithHttpInfo(int pkiWebhookID,) async {
-    // ignore: prefer_const_declarations
-    final path = r'/1/object/webhook/{pkiWebhookID}'
-      .replaceAll('{pkiWebhookID}', pkiWebhookID.toString());
-
-    // ignore: prefer_final_locals
-    Object? postBody;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>[];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'GET',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-    );
-  }
-
-  /// Retrieve an existing Webhook
-  ///
-  /// 
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiWebhookID (required):
-  Future<WebhookGetObjectV1Response?> webhookGetObjectV1(int pkiWebhookID,) async {
-    final response = await webhookGetObjectV1WithHttpInfo(pkiWebhookID,);
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'WebhookGetObjectV1Response',) as WebhookGetObjectV1Response;
-    
-    }
-    return null;
-  }
-
-  /// Retrieve an existing Webhook
-  ///
-  /// 
-  ///
-  /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiWebhookID (required):
   Future<Response> webhookGetObjectV2WithHttpInfo(int pkiWebhookID,) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/webhook/{pkiWebhookID}'

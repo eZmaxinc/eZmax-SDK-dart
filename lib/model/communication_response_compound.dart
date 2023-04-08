@@ -17,9 +17,12 @@ class CommunicationResponseCompound {
     required this.eCommunicationImportance,
     required this.eCommunicationType,
     required this.sCommunicationSubject,
+    this.sCommunicationBodyurl,
     required this.eCommunicationDirection,
     required this.iCommunicationrecipientCount,
-    required this.objContactFrom,
+    this.objDescriptionstaticSender,
+    this.objEmailstaticSender,
+    this.objPhonestaticSender,
     required this.objAudit,
     this.aObjCommunicationattachment = const [],
     this.aObjCommunicationrecipient = const [],
@@ -38,12 +41,43 @@ class CommunicationResponseCompound {
   /// The subject of the Communication
   String sCommunicationSubject;
 
+  /// The url of the body used as body in the Communication
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sCommunicationBodyurl;
+
   ComputedECommunicationDirection eCommunicationDirection;
 
   /// The count of Communicationrecipient
   int iCommunicationrecipientCount;
 
-  CustomContactNameResponse objContactFrom;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  DescriptionstaticResponse? objDescriptionstaticSender;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  EmailstaticResponse? objEmailstaticSender;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  PhonestaticResponse? objPhonestaticSender;
 
   CommonAudit objAudit;
 
@@ -59,9 +93,12 @@ class CommunicationResponseCompound {
      other.eCommunicationImportance == eCommunicationImportance &&
      other.eCommunicationType == eCommunicationType &&
      other.sCommunicationSubject == sCommunicationSubject &&
+     other.sCommunicationBodyurl == sCommunicationBodyurl &&
      other.eCommunicationDirection == eCommunicationDirection &&
      other.iCommunicationrecipientCount == iCommunicationrecipientCount &&
-     other.objContactFrom == objContactFrom &&
+     other.objDescriptionstaticSender == objDescriptionstaticSender &&
+     other.objEmailstaticSender == objEmailstaticSender &&
+     other.objPhonestaticSender == objPhonestaticSender &&
      other.objAudit == objAudit &&
      other.aObjCommunicationattachment == aObjCommunicationattachment &&
      other.aObjCommunicationrecipient == aObjCommunicationrecipient &&
@@ -74,16 +111,19 @@ class CommunicationResponseCompound {
     (eCommunicationImportance.hashCode) +
     (eCommunicationType.hashCode) +
     (sCommunicationSubject.hashCode) +
+    (sCommunicationBodyurl == null ? 0 : sCommunicationBodyurl!.hashCode) +
     (eCommunicationDirection.hashCode) +
     (iCommunicationrecipientCount.hashCode) +
-    (objContactFrom.hashCode) +
+    (objDescriptionstaticSender == null ? 0 : objDescriptionstaticSender!.hashCode) +
+    (objEmailstaticSender == null ? 0 : objEmailstaticSender!.hashCode) +
+    (objPhonestaticSender == null ? 0 : objPhonestaticSender!.hashCode) +
     (objAudit.hashCode) +
     (aObjCommunicationattachment.hashCode) +
     (aObjCommunicationrecipient.hashCode) +
     (aObjCommunicationexternalrecipient.hashCode);
 
   @override
-  String toString() => 'CommunicationResponseCompound[pkiCommunicationID=$pkiCommunicationID, eCommunicationImportance=$eCommunicationImportance, eCommunicationType=$eCommunicationType, sCommunicationSubject=$sCommunicationSubject, eCommunicationDirection=$eCommunicationDirection, iCommunicationrecipientCount=$iCommunicationrecipientCount, objContactFrom=$objContactFrom, objAudit=$objAudit, aObjCommunicationattachment=$aObjCommunicationattachment, aObjCommunicationrecipient=$aObjCommunicationrecipient, aObjCommunicationexternalrecipient=$aObjCommunicationexternalrecipient]';
+  String toString() => 'CommunicationResponseCompound[pkiCommunicationID=$pkiCommunicationID, eCommunicationImportance=$eCommunicationImportance, eCommunicationType=$eCommunicationType, sCommunicationSubject=$sCommunicationSubject, sCommunicationBodyurl=$sCommunicationBodyurl, eCommunicationDirection=$eCommunicationDirection, iCommunicationrecipientCount=$iCommunicationrecipientCount, objDescriptionstaticSender=$objDescriptionstaticSender, objEmailstaticSender=$objEmailstaticSender, objPhonestaticSender=$objPhonestaticSender, objAudit=$objAudit, aObjCommunicationattachment=$aObjCommunicationattachment, aObjCommunicationrecipient=$aObjCommunicationrecipient, aObjCommunicationexternalrecipient=$aObjCommunicationexternalrecipient]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -91,9 +131,28 @@ class CommunicationResponseCompound {
       json[r'eCommunicationImportance'] = this.eCommunicationImportance;
       json[r'eCommunicationType'] = this.eCommunicationType;
       json[r'sCommunicationSubject'] = this.sCommunicationSubject;
+    if (this.sCommunicationBodyurl != null) {
+      json[r'sCommunicationBodyurl'] = this.sCommunicationBodyurl;
+    } else {
+      json[r'sCommunicationBodyurl'] = null;
+    }
       json[r'eCommunicationDirection'] = this.eCommunicationDirection;
       json[r'iCommunicationrecipientCount'] = this.iCommunicationrecipientCount;
-      json[r'objContactFrom'] = this.objContactFrom;
+    if (this.objDescriptionstaticSender != null) {
+      json[r'objDescriptionstaticSender'] = this.objDescriptionstaticSender;
+    } else {
+      json[r'objDescriptionstaticSender'] = null;
+    }
+    if (this.objEmailstaticSender != null) {
+      json[r'objEmailstaticSender'] = this.objEmailstaticSender;
+    } else {
+      json[r'objEmailstaticSender'] = null;
+    }
+    if (this.objPhonestaticSender != null) {
+      json[r'objPhonestaticSender'] = this.objPhonestaticSender;
+    } else {
+      json[r'objPhonestaticSender'] = null;
+    }
       json[r'objAudit'] = this.objAudit;
       json[r'a_objCommunicationattachment'] = this.aObjCommunicationattachment;
       json[r'a_objCommunicationrecipient'] = this.aObjCommunicationrecipient;
@@ -124,9 +183,12 @@ class CommunicationResponseCompound {
         eCommunicationImportance: FieldECommunicationImportance.fromJson(json[r'eCommunicationImportance'])!,
         eCommunicationType: FieldECommunicationType.fromJson(json[r'eCommunicationType'])!,
         sCommunicationSubject: mapValueOfType<String>(json, r'sCommunicationSubject')!,
+        sCommunicationBodyurl: mapValueOfType<String>(json, r'sCommunicationBodyurl'),
         eCommunicationDirection: ComputedECommunicationDirection.fromJson(json[r'eCommunicationDirection'])!,
         iCommunicationrecipientCount: mapValueOfType<int>(json, r'iCommunicationrecipientCount')!,
-        objContactFrom: CustomContactNameResponse.fromJson(json[r'objContactFrom'])!,
+        objDescriptionstaticSender: DescriptionstaticResponse.fromJson(json[r'objDescriptionstaticSender']),
+        objEmailstaticSender: EmailstaticResponse.fromJson(json[r'objEmailstaticSender']),
+        objPhonestaticSender: PhonestaticResponse.fromJson(json[r'objPhonestaticSender']),
         objAudit: CommonAudit.fromJson(json[r'objAudit'])!,
         aObjCommunicationattachment: CommunicationattachmentResponseCompound.listFromJson(json[r'a_objCommunicationattachment'])!,
         aObjCommunicationrecipient: CommunicationrecipientResponseCompound.listFromJson(json[r'a_objCommunicationrecipient'])!,
@@ -186,7 +248,6 @@ class CommunicationResponseCompound {
     'sCommunicationSubject',
     'eCommunicationDirection',
     'iCommunicationrecipientCount',
-    'objContactFrom',
     'objAudit',
     'a_objCommunicationattachment',
     'a_objCommunicationrecipient',

@@ -21,6 +21,7 @@ class EzsigntemplateResponse {
     required this.sEzsigntemplateDescription,
     required this.bEzsigntemplateAdminonly,
     required this.sEzsignfoldertypeNameX,
+    required this.objAudit,
   });
 
   /// The unique ID of the Ezsigntemplate
@@ -62,6 +63,8 @@ class EzsigntemplateResponse {
   /// The name of the Ezsignfoldertype in the language of the requester
   String sEzsignfoldertypeNameX;
 
+  CommonAudit objAudit;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplateResponse &&
      other.pkiEzsigntemplateID == pkiEzsigntemplateID &&
@@ -71,7 +74,8 @@ class EzsigntemplateResponse {
      other.sLanguageNameX == sLanguageNameX &&
      other.sEzsigntemplateDescription == sEzsigntemplateDescription &&
      other.bEzsigntemplateAdminonly == bEzsigntemplateAdminonly &&
-     other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX;
+     other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
+     other.objAudit == objAudit;
 
   @override
   int get hashCode =>
@@ -83,10 +87,11 @@ class EzsigntemplateResponse {
     (sLanguageNameX.hashCode) +
     (sEzsigntemplateDescription.hashCode) +
     (bEzsigntemplateAdminonly.hashCode) +
-    (sEzsignfoldertypeNameX.hashCode);
+    (sEzsignfoldertypeNameX.hashCode) +
+    (objAudit.hashCode);
 
   @override
-  String toString() => 'EzsigntemplateResponse[pkiEzsigntemplateID=$pkiEzsigntemplateID, fkiEzsigntemplatedocumentID=$fkiEzsigntemplatedocumentID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiLanguageID=$fkiLanguageID, sLanguageNameX=$sLanguageNameX, sEzsigntemplateDescription=$sEzsigntemplateDescription, bEzsigntemplateAdminonly=$bEzsigntemplateAdminonly, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX]';
+  String toString() => 'EzsigntemplateResponse[pkiEzsigntemplateID=$pkiEzsigntemplateID, fkiEzsigntemplatedocumentID=$fkiEzsigntemplatedocumentID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiLanguageID=$fkiLanguageID, sLanguageNameX=$sLanguageNameX, sEzsigntemplateDescription=$sEzsigntemplateDescription, bEzsigntemplateAdminonly=$bEzsigntemplateAdminonly, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, objAudit=$objAudit]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -102,6 +107,7 @@ class EzsigntemplateResponse {
       json[r'sEzsigntemplateDescription'] = this.sEzsigntemplateDescription;
       json[r'bEzsigntemplateAdminonly'] = this.bEzsigntemplateAdminonly;
       json[r'sEzsignfoldertypeNameX'] = this.sEzsignfoldertypeNameX;
+      json[r'objAudit'] = this.objAudit;
     return json;
   }
 
@@ -132,6 +138,7 @@ class EzsigntemplateResponse {
         sEzsigntemplateDescription: mapValueOfType<String>(json, r'sEzsigntemplateDescription')!,
         bEzsigntemplateAdminonly: mapValueOfType<bool>(json, r'bEzsigntemplateAdminonly')!,
         sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX')!,
+        objAudit: CommonAudit.fromJson(json[r'objAudit'])!,
       );
     }
     return null;
@@ -188,6 +195,7 @@ class EzsigntemplateResponse {
     'sEzsigntemplateDescription',
     'bEzsigntemplateAdminonly',
     'sEzsignfoldertypeNameX',
+    'objAudit',
   };
 }
 

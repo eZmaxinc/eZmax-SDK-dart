@@ -367,10 +367,22 @@ class EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum {
   String toJson() => value;
 
   static const pdf = EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum._(r'Pdf');
+  static const doc = EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum._(r'Doc');
+  static const docx = EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum._(r'Docx');
+  static const xls = EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum._(r'Xls');
+  static const xlsx = EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum._(r'Xlsx');
+  static const ppt = EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum._(r'Ppt');
+  static const pptx = EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum._(r'Pptx');
 
   /// List of all possible values in this [enum][EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum].
   static const values = <EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum>[
     pdf,
+    doc,
+    docx,
+    xls,
+    xlsx,
+    ppt,
+    pptx,
   ];
 
   static EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum? fromJson(dynamic value) => EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnumTypeTransformer().decode(value);
@@ -410,6 +422,12 @@ class EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnumType
     if (data != null) {
       switch (data) {
         case r'Pdf': return EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum.pdf;
+        case r'Doc': return EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum.doc;
+        case r'Docx': return EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum.docx;
+        case r'Xls': return EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum.xls;
+        case r'Xlsx': return EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum.xlsx;
+        case r'Ppt': return EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum.ppt;
+        case r'Pptx': return EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum.pptx;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');

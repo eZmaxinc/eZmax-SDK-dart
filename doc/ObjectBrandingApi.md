@@ -11,10 +11,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**brandingCreateObjectV1**](ObjectBrandingApi.md#brandingcreateobjectv1) | **POST** /1/object/branding | Create a new Branding
 [**brandingEditObjectV1**](ObjectBrandingApi.md#brandingeditobjectv1) | **PUT** /1/object/branding/{pkiBrandingID} | Edit an existing Branding
-[**brandingGetAutocompleteV1**](ObjectBrandingApi.md#brandinggetautocompletev1) | **GET** /1/object/branding/getAutocomplete/{sSelector} | Retrieve Brandings and IDs
 [**brandingGetAutocompleteV2**](ObjectBrandingApi.md#brandinggetautocompletev2) | **GET** /2/object/branding/getAutocomplete/{sSelector} | Retrieve Brandings and IDs
 [**brandingGetListV1**](ObjectBrandingApi.md#brandinggetlistv1) | **GET** /1/object/branding/getList | Retrieve Branding list
-[**brandingGetObjectV1**](ObjectBrandingApi.md#brandinggetobjectv1) | **GET** /1/object/branding/{pkiBrandingID} | Retrieve an existing Branding
 [**brandingGetObjectV2**](ObjectBrandingApi.md#brandinggetobjectv2) | **GET** /2/object/branding/{pkiBrandingID} | Retrieve an existing Branding
 
 
@@ -110,59 +108,6 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **brandingGetAutocompleteV1**
-> CommonGetAutocompleteV1Response brandingGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
-
-Retrieve Brandings and IDs
-
-Get the list of Branding to be used in a dropdown or autocomplete control.
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectBrandingApi();
-final sSelector = sSelector_example; // String | The type of Brandings to return
-final eFilterActive = eFilterActive_example; // String | Specify which results we want to display.
-final sQuery = sQuery_example; // String | Allow to filter the returned results
-final acceptLanguage = ; // HeaderAcceptLanguage | 
-
-try {
-    final result = api_instance.brandingGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectBrandingApi->brandingGetAutocompleteV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sSelector** | **String**| The type of Brandings to return | 
- **eFilterActive** | **String**| Specify which results we want to display. | [optional] [default to 'Active']
- **sQuery** | **String**| Allow to filter the returned results | [optional] 
- **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] 
-
-### Return type
-
-[**CommonGetAutocompleteV1Response**](CommonGetAutocompleteV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -272,53 +217,6 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **brandingGetObjectV1**
-> BrandingGetObjectV1Response brandingGetObjectV1(pkiBrandingID)
-
-Retrieve an existing Branding
-
-
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectBrandingApi();
-final pkiBrandingID = 56; // int | 
-
-try {
-    final result = api_instance.brandingGetObjectV1(pkiBrandingID);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectBrandingApi->brandingGetObjectV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiBrandingID** | **int**|  | 
-
-### Return type
-
-[**BrandingGetObjectV1Response**](BrandingGetObjectV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

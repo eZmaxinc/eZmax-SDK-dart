@@ -21,15 +21,6 @@ void main() {
     //
     // Get the list of User to be used in a dropdown or autocomplete control.
     //
-    //Future<CommonGetAutocompleteV1Response> userGetAutocompleteV1(String sSelector, { String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage }) async
-    test('test userGetAutocompleteV1', () async {
-      // TODO
-    });
-
-    // Retrieve Users and IDs
-    //
-    // Get the list of User to be used in a dropdown or autocomplete control.
-    //
     //Future<UserGetAutocompleteV2Response> userGetAutocompleteV2(String sSelector, { String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage }) async
     test('test userGetAutocompleteV2', () async {
       // TODO

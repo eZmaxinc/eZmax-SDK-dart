@@ -28,6 +28,17 @@ void main() {
       // TODO
     });
 
+    // FieldEPaymenttermType ePaymenttermType
+    test('to test the property `ePaymenttermType`', () async {
+      // TODO
+    });
+
+    // The day of the Paymentterm
+    // int iPaymenttermDay
+    test('to test the property `iPaymenttermDay`', () async {
+      // TODO
+    });
+
     // MultilingualPaymenttermDescription objPaymenttermDescription
     test('to test the property `objPaymenttermDescription`', () async {
       // TODO

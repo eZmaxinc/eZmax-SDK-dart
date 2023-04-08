@@ -9,6 +9,7 @@ import 'package:openapi/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiEzsignfolderID** | **int** | The unique ID of the Ezsignfolder | 
+**sEzsignfolderDescription** | **String** | The description of the Ezsignfolder | 
 **eEzsignfolderStep** | [**FieldEEzsignfolderStep**](FieldEEzsignfolderStep.md) |  | 
 **iEzsignfolderSignaturetotal** | **int** | The number of total signatures that were requested in the Ezsignfolder | 
 **iEzsignfolderSignaturesigned** | **int** | The number of signatures that were signed in the Ezsignfolder. | 

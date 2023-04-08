@@ -199,63 +199,6 @@ class ObjectEzsigntemplatesignatureApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigntemplatesignatureID (required):
-  Future<Response> ezsigntemplatesignatureGetObjectV1WithHttpInfo(int pkiEzsigntemplatesignatureID,) async {
-    // ignore: prefer_const_declarations
-    final path = r'/1/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}'
-      .replaceAll('{pkiEzsigntemplatesignatureID}', pkiEzsigntemplatesignatureID.toString());
-
-    // ignore: prefer_final_locals
-    Object? postBody;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>[];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'GET',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-    );
-  }
-
-  /// Retrieve an existing Ezsigntemplatesignature
-  ///
-  /// 
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiEzsigntemplatesignatureID (required):
-  Future<EzsigntemplatesignatureGetObjectV1Response?> ezsigntemplatesignatureGetObjectV1(int pkiEzsigntemplatesignatureID,) async {
-    final response = await ezsigntemplatesignatureGetObjectV1WithHttpInfo(pkiEzsigntemplatesignatureID,);
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigntemplatesignatureGetObjectV1Response',) as EzsigntemplatesignatureGetObjectV1Response;
-    
-    }
-    return null;
-  }
-
-  /// Retrieve an existing Ezsigntemplatesignature
-  ///
-  /// 
-  ///
-  /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiEzsigntemplatesignatureID (required):
   Future<Response> ezsigntemplatesignatureGetObjectV2WithHttpInfo(int pkiEzsigntemplatesignatureID,) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}'

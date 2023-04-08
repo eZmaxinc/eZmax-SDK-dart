@@ -39,15 +39,6 @@ void main() {
     //
     // 
     //
-    //Future<EzsigntemplatepackagemembershipGetObjectV1Response> ezsigntemplatepackagemembershipGetObjectV1(int pkiEzsigntemplatepackagemembershipID) async
-    test('test ezsigntemplatepackagemembershipGetObjectV1', () async {
-      // TODO
-    });
-
-    // Retrieve an existing Ezsigntemplatepackagemembership
-    //
-    // 
-    //
     //Future<EzsigntemplatepackagemembershipGetObjectV2Response> ezsigntemplatepackagemembershipGetObjectV2(int pkiEzsigntemplatepackagemembershipID) async
     test('test ezsigntemplatepackagemembershipGetObjectV2', () async {
       // TODO

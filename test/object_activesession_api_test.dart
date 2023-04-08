@@ -26,5 +26,12 @@ void main() {
       // TODO
     });
 
+    // Retrieve Activesession list
+    //
+    //Future<ActivesessionGetListV1Response> activesessionGetListV1({ String eOrderBy, int iRowMax, int iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter }) async
+    test('test activesessionGetListV1', () async {
+      // TODO
+    });
+
   });
 }

@@ -19,15 +19,6 @@ void main() {
   group('tests for ObjectSecretquestionApi', () {
     // Retrieve Secretquestions and IDs
     //
-    // Get the list of Secretquestions to be used in a dropdown or autocomplete control.
-    //
-    //Future<CommonGetAutocompleteV1Response> secretquestionGetAutocompleteV1(String sSelector, { String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage }) async
-    test('test secretquestionGetAutocompleteV1', () async {
-      // TODO
-    });
-
-    // Retrieve Secretquestions and IDs
-    //
     // Get the list of Secretquestion to be used in a dropdown or autocomplete control.
     //
     //Future<SecretquestionGetAutocompleteV2Response> secretquestionGetAutocompleteV2(String sSelector, { String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage }) async

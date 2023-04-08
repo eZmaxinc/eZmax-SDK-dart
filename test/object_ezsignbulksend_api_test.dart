@@ -69,6 +69,15 @@ void main() {
       // TODO
     });
 
+    // Retrieve an existing Ezsignbulksend's automatic Ezsignsignatures
+    //
+    // Return the Ezsignsignatures that can be signed by the current user at the current step in the process
+    //
+    //Future<EzsignbulksendGetEzsignsignaturesAutomaticV1Response> ezsignbulksendGetEzsignsignaturesAutomaticV1(int pkiEzsignbulksendID) async
+    test('test ezsignbulksendGetEzsignsignaturesAutomaticV1', () async {
+      // TODO
+    });
+
     // Retrieve an existing Ezsignbulksend's forms data
     //
     // 
@@ -84,15 +93,6 @@ void main() {
     //
     //Future<EzsignbulksendGetListV1Response> ezsignbulksendGetListV1({ String eOrderBy, int iRowMax, int iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter }) async
     test('test ezsignbulksendGetListV1', () async {
-      // TODO
-    });
-
-    // Retrieve an existing Ezsignbulksend
-    //
-    // 
-    //
-    //Future<EzsignbulksendGetObjectV1Response> ezsignbulksendGetObjectV1(int pkiEzsignbulksendID) async
-    test('test ezsignbulksendGetObjectV1', () async {
       // TODO
     });
 

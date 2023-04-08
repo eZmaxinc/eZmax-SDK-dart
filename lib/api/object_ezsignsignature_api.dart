@@ -246,19 +246,14 @@ class ObjectEzsignsignatureApi {
     return null;
   }
 
-  /// Retrieve an existing Ezsignsignature
+  /// Retrieve all automatic Ezsignsignatures
   ///
-  /// 
+  /// Return all the Ezsignsignatures that can be signed by the current user
   ///
   /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiEzsignsignatureID (required):
-  Future<Response> ezsignsignatureGetObjectV1WithHttpInfo(int pkiEzsignsignatureID,) async {
+  Future<Response> ezsignsignatureGetEzsignsignaturesAutomaticV1WithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/1/object/ezsignsignature/{pkiEzsignsignatureID}'
-      .replaceAll('{pkiEzsignsignatureID}', pkiEzsignsignatureID.toString());
+    final path = r'/1/object/ezsignsignature/getEzsignsignaturesAutomatic';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -281,15 +276,11 @@ class ObjectEzsignsignatureApi {
     );
   }
 
-  /// Retrieve an existing Ezsignsignature
+  /// Retrieve all automatic Ezsignsignatures
   ///
-  /// 
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiEzsignsignatureID (required):
-  Future<EzsignsignatureGetObjectV1Response?> ezsignsignatureGetObjectV1(int pkiEzsignsignatureID,) async {
-    final response = await ezsignsignatureGetObjectV1WithHttpInfo(pkiEzsignsignatureID,);
+  /// Return all the Ezsignsignatures that can be signed by the current user
+  Future<EzsignsignatureGetEzsignsignaturesAutomaticV1Response?> ezsignsignatureGetEzsignsignaturesAutomaticV1() async {
+    final response = await ezsignsignatureGetEzsignsignaturesAutomaticV1WithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -297,7 +288,7 @@ class ObjectEzsignsignatureApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignsignatureGetObjectV1Response',) as EzsignsignatureGetObjectV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignsignatureGetEzsignsignaturesAutomaticV1Response',) as EzsignsignatureGetEzsignsignaturesAutomaticV1Response;
     
     }
     return null;

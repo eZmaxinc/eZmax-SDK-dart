@@ -27,6 +27,7 @@ class EzsigndocumentRequestCompound {
     this.eEzsigndocumentForm,
     required this.dtEzsigndocumentDuedate,
     required this.sEzsigndocumentName,
+    this.sEzsigndocumentExternalid,
   });
 
   /// The unique ID of the Ezsigndocument
@@ -118,6 +119,15 @@ class EzsigndocumentRequestCompound {
   /// The name of the document that will be presented to Ezsignfoldersignerassociations
   String sEzsigndocumentName;
 
+  /// This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEzsigndocumentExternalid;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigndocumentRequestCompound &&
      other.pkiEzsigndocumentID == pkiEzsigndocumentID &&
@@ -133,7 +143,8 @@ class EzsigndocumentRequestCompound {
      other.sEzsigndocumentPassword == sEzsigndocumentPassword &&
      other.eEzsigndocumentForm == eEzsigndocumentForm &&
      other.dtEzsigndocumentDuedate == dtEzsigndocumentDuedate &&
-     other.sEzsigndocumentName == sEzsigndocumentName;
+     other.sEzsigndocumentName == sEzsigndocumentName &&
+     other.sEzsigndocumentExternalid == sEzsigndocumentExternalid;
 
   @override
   int get hashCode =>
@@ -151,10 +162,11 @@ class EzsigndocumentRequestCompound {
     (sEzsigndocumentPassword == null ? 0 : sEzsigndocumentPassword!.hashCode) +
     (eEzsigndocumentForm == null ? 0 : eEzsigndocumentForm!.hashCode) +
     (dtEzsigndocumentDuedate.hashCode) +
-    (sEzsigndocumentName.hashCode);
+    (sEzsigndocumentName.hashCode) +
+    (sEzsigndocumentExternalid == null ? 0 : sEzsigndocumentExternalid!.hashCode);
 
   @override
-  String toString() => 'EzsigndocumentRequestCompound[pkiEzsigndocumentID=$pkiEzsigndocumentID, fkiEzsignfolderID=$fkiEzsignfolderID, fkiEzsigntemplateID=$fkiEzsigntemplateID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, fkiLanguageID=$fkiLanguageID, eEzsigndocumentSource=$eEzsigndocumentSource, eEzsigndocumentFormat=$eEzsigndocumentFormat, sEzsigndocumentBase64=$sEzsigndocumentBase64, sEzsigndocumentUrl=$sEzsigndocumentUrl, bEzsigndocumentForcerepair=$bEzsigndocumentForcerepair, sEzsigndocumentPassword=$sEzsigndocumentPassword, eEzsigndocumentForm=$eEzsigndocumentForm, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, sEzsigndocumentName=$sEzsigndocumentName]';
+  String toString() => 'EzsigndocumentRequestCompound[pkiEzsigndocumentID=$pkiEzsigndocumentID, fkiEzsignfolderID=$fkiEzsignfolderID, fkiEzsigntemplateID=$fkiEzsigntemplateID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, fkiLanguageID=$fkiLanguageID, eEzsigndocumentSource=$eEzsigndocumentSource, eEzsigndocumentFormat=$eEzsigndocumentFormat, sEzsigndocumentBase64=$sEzsigndocumentBase64, sEzsigndocumentUrl=$sEzsigndocumentUrl, bEzsigndocumentForcerepair=$bEzsigndocumentForcerepair, sEzsigndocumentPassword=$sEzsigndocumentPassword, eEzsigndocumentForm=$eEzsigndocumentForm, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, sEzsigndocumentName=$sEzsigndocumentName, sEzsigndocumentExternalid=$sEzsigndocumentExternalid]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -204,6 +216,11 @@ class EzsigndocumentRequestCompound {
     }
       json[r'dtEzsigndocumentDuedate'] = this.dtEzsigndocumentDuedate;
       json[r'sEzsigndocumentName'] = this.sEzsigndocumentName;
+    if (this.sEzsigndocumentExternalid != null) {
+      json[r'sEzsigndocumentExternalid'] = this.sEzsigndocumentExternalid;
+    } else {
+      json[r'sEzsigndocumentExternalid'] = null;
+    }
     return json;
   }
 
@@ -240,6 +257,7 @@ class EzsigndocumentRequestCompound {
         eEzsigndocumentForm: EzsigndocumentRequestCompoundEEzsigndocumentFormEnum.fromJson(json[r'eEzsigndocumentForm']),
         dtEzsigndocumentDuedate: mapValueOfType<String>(json, r'dtEzsigndocumentDuedate')!,
         sEzsigndocumentName: mapValueOfType<String>(json, r'sEzsigndocumentName')!,
+        sEzsigndocumentExternalid: mapValueOfType<String>(json, r'sEzsigndocumentExternalid'),
       );
     }
     return null;
@@ -388,10 +406,22 @@ class EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum {
   String toJson() => value;
 
   static const pdf = EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum._(r'Pdf');
+  static const doc = EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum._(r'Doc');
+  static const docx = EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum._(r'Docx');
+  static const xls = EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum._(r'Xls');
+  static const xlsx = EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum._(r'Xlsx');
+  static const ppt = EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum._(r'Ppt');
+  static const pptx = EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum._(r'Pptx');
 
   /// List of all possible values in this [enum][EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum].
   static const values = <EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum>[
     pdf,
+    doc,
+    docx,
+    xls,
+    xlsx,
+    ppt,
+    pptx,
   ];
 
   static EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum? fromJson(dynamic value) => EzsigndocumentRequestCompoundEEzsigndocumentFormatEnumTypeTransformer().decode(value);
@@ -431,6 +461,12 @@ class EzsigndocumentRequestCompoundEEzsigndocumentFormatEnumTypeTransformer {
     if (data != null) {
       switch (data) {
         case r'Pdf': return EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum.pdf;
+        case r'Doc': return EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum.doc;
+        case r'Docx': return EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum.docx;
+        case r'Xls': return EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum.xls;
+        case r'Xlsx': return EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum.xlsx;
+        case r'Ppt': return EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum.ppt;
+        case r'Pptx': return EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum.pptx;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');

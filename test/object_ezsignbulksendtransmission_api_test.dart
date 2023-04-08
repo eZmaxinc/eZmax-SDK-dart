@@ -26,21 +26,21 @@ void main() {
       // TODO
     });
 
+    // Retrieve an existing Ezsignbulksendtransmission's automatic Ezsignsignatures
+    //
+    // Return the Ezsignsignatures that can be signed by the current user at the current step in the process
+    //
+    //Future<EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response> ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1(int pkiEzsignbulksendtransmissionID) async
+    test('test ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1', () async {
+      // TODO
+    });
+
     // Retrieve an existing Ezsignbulksendtransmission's forms data
     //
     // 
     //
     //Future<EzsignbulksendtransmissionGetFormsDataV1Response> ezsignbulksendtransmissionGetFormsDataV1(int pkiEzsignbulksendtransmissionID) async
     test('test ezsignbulksendtransmissionGetFormsDataV1', () async {
-      // TODO
-    });
-
-    // Retrieve an existing Ezsignbulksendtransmission
-    //
-    // 
-    //
-    //Future<EzsignbulksendtransmissionGetObjectV1Response> ezsignbulksendtransmissionGetObjectV1(int pkiEzsignbulksendtransmissionID) async
-    test('test ezsignbulksendtransmissionGetObjectV1', () async {
       // TODO
     });
 

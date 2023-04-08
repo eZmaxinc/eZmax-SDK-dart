@@ -123,8 +123,20 @@ void main() {
       // TODO
     });
 
+    // If the Ezsigndocument contains signed signatures (From internal or external sources)
+    // bool bEzsigndocumentHassignedsignatures
+    test('to test the property `bEzsigndocumentHassignedsignatures`', () async {
+      // TODO
+    });
+
     // CommonAudit objAudit
     test('to test the property `objAudit`', () async {
+      // TODO
+    });
+
+    // This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
+    // String sEzsigndocumentExternalid
+    test('to test the property `sEzsigndocumentExternalid`', () async {
       // TODO
     });
 

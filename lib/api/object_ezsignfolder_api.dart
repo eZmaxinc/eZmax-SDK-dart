@@ -534,6 +534,120 @@ class ObjectEzsignfolderApi {
     return null;
   }
 
+  /// Retrieve Communication count
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfolderID (required):
+  Future<Response> ezsignfolderGetCommunicationCountV1WithHttpInfo(int pkiEzsignfolderID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationCount'
+      .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve Communication count
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfolderID (required):
+  Future<EzsignfolderGetCommunicationCountV1Response?> ezsignfolderGetCommunicationCountV1(int pkiEzsignfolderID,) async {
+    final response = await ezsignfolderGetCommunicationCountV1WithHttpInfo(pkiEzsignfolderID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderGetCommunicationCountV1Response',) as EzsignfolderGetCommunicationCountV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve Communication list
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfolderID (required):
+  Future<Response> ezsignfolderGetCommunicationListV1WithHttpInfo(int pkiEzsignfolderID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationList'
+      .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve Communication list
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfolderID (required):
+  Future<EzsignfolderGetCommunicationListV1Response?> ezsignfolderGetCommunicationListV1(int pkiEzsignfolderID,) async {
+    final response = await ezsignfolderGetCommunicationListV1WithHttpInfo(pkiEzsignfolderID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderGetCommunicationListV1Response',) as EzsignfolderGetCommunicationListV1Response;
+    
+    }
+    return null;
+  }
+
   /// Retrieve an existing Ezsignfolder's Ezsigndocuments
   ///
   /// 
@@ -643,6 +757,63 @@ class ObjectEzsignfolderApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderGetEzsignfoldersignerassociationsV1Response',) as EzsignfolderGetEzsignfoldersignerassociationsV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve an existing Ezsignfolder's automatic Ezsignsignatures
+  ///
+  /// Return the Ezsignsignatures that can be signed by the current user at the current step in the process
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfolderID (required):
+  Future<Response> ezsignfolderGetEzsignsignaturesAutomaticV1WithHttpInfo(int pkiEzsignfolderID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignsignaturesAutomatic'
+      .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve an existing Ezsignfolder's automatic Ezsignsignatures
+  ///
+  /// Return the Ezsignsignatures that can be signed by the current user at the current step in the process
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfolderID (required):
+  Future<EzsignfolderGetEzsignsignaturesAutomaticV1Response?> ezsignfolderGetEzsignsignaturesAutomaticV1(int pkiEzsignfolderID,) async {
+    final response = await ezsignfolderGetEzsignsignaturesAutomaticV1WithHttpInfo(pkiEzsignfolderID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderGetEzsignsignaturesAutomaticV1Response',) as EzsignfolderGetEzsignsignaturesAutomaticV1Response;
     
     }
     return null;

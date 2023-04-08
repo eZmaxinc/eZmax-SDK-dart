@@ -19,6 +19,7 @@ class EzsignfolderRequestCompound {
     required this.sEzsignfolderDescription,
     required this.tEzsignfolderNote,
     required this.eEzsignfolderSendreminderfrequency,
+    this.sEzsignfolderExternalid,
   });
 
   /// The unique ID of the Ezsignfolder
@@ -57,6 +58,15 @@ class EzsignfolderRequestCompound {
 
   FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency;
 
+  /// This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEzsignfolderExternalid;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfolderRequestCompound &&
      other.pkiEzsignfolderID == pkiEzsignfolderID &&
@@ -64,7 +74,8 @@ class EzsignfolderRequestCompound {
      other.fkiEzsigntsarequirementID == fkiEzsigntsarequirementID &&
      other.sEzsignfolderDescription == sEzsignfolderDescription &&
      other.tEzsignfolderNote == tEzsignfolderNote &&
-     other.eEzsignfolderSendreminderfrequency == eEzsignfolderSendreminderfrequency;
+     other.eEzsignfolderSendreminderfrequency == eEzsignfolderSendreminderfrequency &&
+     other.sEzsignfolderExternalid == sEzsignfolderExternalid;
 
   @override
   int get hashCode =>
@@ -74,10 +85,11 @@ class EzsignfolderRequestCompound {
     (fkiEzsigntsarequirementID == null ? 0 : fkiEzsigntsarequirementID!.hashCode) +
     (sEzsignfolderDescription.hashCode) +
     (tEzsignfolderNote.hashCode) +
-    (eEzsignfolderSendreminderfrequency.hashCode);
+    (eEzsignfolderSendreminderfrequency.hashCode) +
+    (sEzsignfolderExternalid == null ? 0 : sEzsignfolderExternalid!.hashCode);
 
   @override
-  String toString() => 'EzsignfolderRequestCompound[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sEzsignfolderDescription=$sEzsignfolderDescription, tEzsignfolderNote=$tEzsignfolderNote, eEzsignfolderSendreminderfrequency=$eEzsignfolderSendreminderfrequency]';
+  String toString() => 'EzsignfolderRequestCompound[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sEzsignfolderDescription=$sEzsignfolderDescription, tEzsignfolderNote=$tEzsignfolderNote, eEzsignfolderSendreminderfrequency=$eEzsignfolderSendreminderfrequency, sEzsignfolderExternalid=$sEzsignfolderExternalid]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -95,6 +107,11 @@ class EzsignfolderRequestCompound {
       json[r'sEzsignfolderDescription'] = this.sEzsignfolderDescription;
       json[r'tEzsignfolderNote'] = this.tEzsignfolderNote;
       json[r'eEzsignfolderSendreminderfrequency'] = this.eEzsignfolderSendreminderfrequency;
+    if (this.sEzsignfolderExternalid != null) {
+      json[r'sEzsignfolderExternalid'] = this.sEzsignfolderExternalid;
+    } else {
+      json[r'sEzsignfolderExternalid'] = null;
+    }
     return json;
   }
 
@@ -123,6 +140,7 @@ class EzsignfolderRequestCompound {
         sEzsignfolderDescription: mapValueOfType<String>(json, r'sEzsignfolderDescription')!,
         tEzsignfolderNote: mapValueOfType<String>(json, r'tEzsignfolderNote')!,
         eEzsignfolderSendreminderfrequency: FieldEEzsignfolderSendreminderfrequency.fromJson(json[r'eEzsignfolderSendreminderfrequency'])!,
+        sEzsignfolderExternalid: mapValueOfType<String>(json, r'sEzsignfolderExternalid'),
       );
     }
     return null;

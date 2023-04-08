@@ -138,63 +138,6 @@ class ObjectEzsignbulksenddocumentmappingApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignbulksenddocumentmappingID (required):
-  Future<Response> ezsignbulksenddocumentmappingGetObjectV1WithHttpInfo(int pkiEzsignbulksenddocumentmappingID,) async {
-    // ignore: prefer_const_declarations
-    final path = r'/1/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}'
-      .replaceAll('{pkiEzsignbulksenddocumentmappingID}', pkiEzsignbulksenddocumentmappingID.toString());
-
-    // ignore: prefer_final_locals
-    Object? postBody;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>[];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'GET',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-    );
-  }
-
-  /// Retrieve an existing Ezsignbulksenddocumentmapping
-  ///
-  /// 
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiEzsignbulksenddocumentmappingID (required):
-  Future<EzsignbulksenddocumentmappingGetObjectV1Response?> ezsignbulksenddocumentmappingGetObjectV1(int pkiEzsignbulksenddocumentmappingID,) async {
-    final response = await ezsignbulksenddocumentmappingGetObjectV1WithHttpInfo(pkiEzsignbulksenddocumentmappingID,);
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignbulksenddocumentmappingGetObjectV1Response',) as EzsignbulksenddocumentmappingGetObjectV1Response;
-    
-    }
-    return null;
-  }
-
-  /// Retrieve an existing Ezsignbulksenddocumentmapping
-  ///
-  /// 
-  ///
-  /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiEzsignbulksenddocumentmappingID (required):
   Future<Response> ezsignbulksenddocumentmappingGetObjectV2WithHttpInfo(int pkiEzsignbulksenddocumentmappingID,) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}'

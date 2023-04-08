@@ -58,6 +58,12 @@ String parameterToString(dynamic value) {
   if (value is ComputedECommunicationDirection) {
     return ComputedECommunicationDirectionTypeTransformer().encode(value).toString();
   }
+  if (value is EnumHorizontalalignment) {
+    return EnumHorizontalalignmentTypeTransformer().encode(value).toString();
+  }
+  if (value is EnumVerticalalignment) {
+    return EnumVerticalalignmentTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEActivesessionUsertype) {
     return FieldEActivesessionUsertypeTypeTransformer().encode(value).toString();
   }
@@ -96,6 +102,9 @@ String parameterToString(dynamic value) {
   }
   if (value is FieldEEzmaxinvoicinguserVariationezsign) {
     return FieldEEzmaxinvoicinguserVariationezsignTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsignannotationType) {
+    return FieldEEzsignannotationTypeTypeTransformer().encode(value).toString();
   }
   if (value is FieldEEzsigndocumentStep) {
     return FieldEEzsigndocumentStepTypeTransformer().encode(value).toString();
@@ -163,6 +172,9 @@ String parameterToString(dynamic value) {
   if (value is FieldENotificationpreferenceStatus) {
     return FieldENotificationpreferenceStatusTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEPaymenttermType) {
+    return FieldEPaymenttermTypeTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEPhoneType) {
     return FieldEPhoneTypeTypeTransformer().encode(value).toString();
   }
@@ -171,6 +183,9 @@ String parameterToString(dynamic value) {
   }
   if (value is FieldEUserType) {
     return FieldEUserTypeTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEVariableexpenseTaxable) {
+    return FieldEVariableexpenseTaxableTypeTransformer().encode(value).toString();
   }
   if (value is FieldEVersionhistoryType) {
     return FieldEVersionhistoryTypeTypeTransformer().encode(value).toString();
@@ -186,6 +201,9 @@ String parameterToString(dynamic value) {
   }
   if (value is FieldEWebhookModule) {
     return FieldEWebhookModuleTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldPksEzmaxclientOs) {
+    return FieldPksEzmaxclientOsTypeTransformer().encode(value).toString();
   }
   if (value is HeaderAcceptLanguage) {
     return HeaderAcceptLanguageTypeTransformer().encode(value).toString();

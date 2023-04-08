@@ -39,15 +39,6 @@ void main() {
     //
     // Get the list of Branding to be used in a dropdown or autocomplete control.
     //
-    //Future<CommonGetAutocompleteV1Response> brandingGetAutocompleteV1(String sSelector, { String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage }) async
-    test('test brandingGetAutocompleteV1', () async {
-      // TODO
-    });
-
-    // Retrieve Brandings and IDs
-    //
-    // Get the list of Branding to be used in a dropdown or autocomplete control.
-    //
     //Future<BrandingGetAutocompleteV2Response> brandingGetAutocompleteV2(String sSelector, { String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage }) async
     test('test brandingGetAutocompleteV2', () async {
       // TODO
@@ -59,15 +50,6 @@ void main() {
     //
     //Future<BrandingGetListV1Response> brandingGetListV1({ String eOrderBy, int iRowMax, int iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter }) async
     test('test brandingGetListV1', () async {
-      // TODO
-    });
-
-    // Retrieve an existing Branding
-    //
-    // 
-    //
-    //Future<BrandingGetObjectV1Response> brandingGetObjectV1(int pkiBrandingID) async
-    test('test brandingGetObjectV1', () async {
       // TODO
     });
 

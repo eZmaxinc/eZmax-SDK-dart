@@ -53,15 +53,6 @@ void main() {
       // TODO
     });
 
-    // Retrieve Ezsigntemplate and IDs
-    //
-    // Get the list of Ezsigntemplate to be used in a dropdown or autocomplete control.
-    //
-    //Future<CommonGetAutocompleteV1Response> ezsigntemplateGetAutocompleteV1(String sSelector, { String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage }) async
-    test('test ezsigntemplateGetAutocompleteV1', () async {
-      // TODO
-    });
-
     // Retrieve Ezsigntemplates and IDs
     //
     // Get the list of Ezsigntemplate to be used in a dropdown or autocomplete control.

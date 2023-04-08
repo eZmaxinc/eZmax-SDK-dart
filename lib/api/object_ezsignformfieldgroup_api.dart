@@ -192,59 +192,6 @@ class ObjectEzsignformfieldgroupApi {
 
   /// Retrieve an existing Ezsignformfieldgroup
   ///
-  /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiEzsignformfieldgroupID (required):
-  Future<Response> ezsignformfieldgroupGetObjectV1WithHttpInfo(int pkiEzsignformfieldgroupID,) async {
-    // ignore: prefer_const_declarations
-    final path = r'/1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}'
-      .replaceAll('{pkiEzsignformfieldgroupID}', pkiEzsignformfieldgroupID.toString());
-
-    // ignore: prefer_final_locals
-    Object? postBody;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>[];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'GET',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-    );
-  }
-
-  /// Retrieve an existing Ezsignformfieldgroup
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiEzsignformfieldgroupID (required):
-  Future<EzsignformfieldgroupGetObjectV1Response?> ezsignformfieldgroupGetObjectV1(int pkiEzsignformfieldgroupID,) async {
-    final response = await ezsignformfieldgroupGetObjectV1WithHttpInfo(pkiEzsignformfieldgroupID,);
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignformfieldgroupGetObjectV1Response',) as EzsignformfieldgroupGetObjectV1Response;
-    
-    }
-    return null;
-  }
-
-  /// Retrieve an existing Ezsignformfieldgroup
-  ///
   /// 
   ///
   /// Note: This method returns the HTTP [Response].

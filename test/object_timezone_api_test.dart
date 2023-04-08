@@ -21,15 +21,6 @@ void main() {
     //
     // Get the list of Timezone to be used in a dropdown or autocomplete control.
     //
-    //Future<CommonGetAutocompleteV1Response> timezoneGetAutocompleteV1(String sSelector, { String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage }) async
-    test('test timezoneGetAutocompleteV1', () async {
-      // TODO
-    });
-
-    // Retrieve Timezones and IDs
-    //
-    // Get the list of Timezone to be used in a dropdown or autocomplete control.
-    //
     //Future<TimezoneGetAutocompleteV2Response> timezoneGetAutocompleteV2(String sSelector, { String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage }) async
     test('test timezoneGetAutocompleteV2', () async {
       // TODO

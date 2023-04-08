@@ -15,6 +15,8 @@ class PaymenttermListElement {
   PaymenttermListElement({
     required this.pkiPaymenttermID,
     required this.sPaymenttermCode,
+    required this.ePaymenttermType,
+    required this.iPaymenttermDay,
     required this.sPaymenttermDescriptionX,
     required this.bPaymenttermIsactive,
   });
@@ -24,6 +26,14 @@ class PaymenttermListElement {
 
   /// The code of the Paymentterm
   String sPaymenttermCode;
+
+  FieldEPaymenttermType ePaymenttermType;
+
+  /// The day of the Paymentterm
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 255
+  int iPaymenttermDay;
 
   /// The description of the Paymentterm in the language of the requester
   String sPaymenttermDescriptionX;
@@ -35,6 +45,8 @@ class PaymenttermListElement {
   bool operator ==(Object other) => identical(this, other) || other is PaymenttermListElement &&
      other.pkiPaymenttermID == pkiPaymenttermID &&
      other.sPaymenttermCode == sPaymenttermCode &&
+     other.ePaymenttermType == ePaymenttermType &&
+     other.iPaymenttermDay == iPaymenttermDay &&
      other.sPaymenttermDescriptionX == sPaymenttermDescriptionX &&
      other.bPaymenttermIsactive == bPaymenttermIsactive;
 
@@ -43,16 +55,20 @@ class PaymenttermListElement {
     // ignore: unnecessary_parenthesis
     (pkiPaymenttermID.hashCode) +
     (sPaymenttermCode.hashCode) +
+    (ePaymenttermType.hashCode) +
+    (iPaymenttermDay.hashCode) +
     (sPaymenttermDescriptionX.hashCode) +
     (bPaymenttermIsactive.hashCode);
 
   @override
-  String toString() => 'PaymenttermListElement[pkiPaymenttermID=$pkiPaymenttermID, sPaymenttermCode=$sPaymenttermCode, sPaymenttermDescriptionX=$sPaymenttermDescriptionX, bPaymenttermIsactive=$bPaymenttermIsactive]';
+  String toString() => 'PaymenttermListElement[pkiPaymenttermID=$pkiPaymenttermID, sPaymenttermCode=$sPaymenttermCode, ePaymenttermType=$ePaymenttermType, iPaymenttermDay=$iPaymenttermDay, sPaymenttermDescriptionX=$sPaymenttermDescriptionX, bPaymenttermIsactive=$bPaymenttermIsactive]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiPaymenttermID'] = this.pkiPaymenttermID;
       json[r'sPaymenttermCode'] = this.sPaymenttermCode;
+      json[r'ePaymenttermType'] = this.ePaymenttermType;
+      json[r'iPaymenttermDay'] = this.iPaymenttermDay;
       json[r'sPaymenttermDescriptionX'] = this.sPaymenttermDescriptionX;
       json[r'bPaymenttermIsactive'] = this.bPaymenttermIsactive;
     return json;
@@ -79,6 +95,8 @@ class PaymenttermListElement {
       return PaymenttermListElement(
         pkiPaymenttermID: mapValueOfType<int>(json, r'pkiPaymenttermID')!,
         sPaymenttermCode: mapValueOfType<String>(json, r'sPaymenttermCode')!,
+        ePaymenttermType: FieldEPaymenttermType.fromJson(json[r'ePaymenttermType'])!,
+        iPaymenttermDay: mapValueOfType<int>(json, r'iPaymenttermDay')!,
         sPaymenttermDescriptionX: mapValueOfType<String>(json, r'sPaymenttermDescriptionX')!,
         bPaymenttermIsactive: mapValueOfType<bool>(json, r'bPaymenttermIsactive')!,
       );
@@ -132,6 +150,8 @@ class PaymenttermListElement {
   static const requiredKeys = <String>{
     'pkiPaymenttermID',
     'sPaymenttermCode',
+    'ePaymenttermType',
+    'iPaymenttermDay',
     'sPaymenttermDescriptionX',
     'bPaymenttermIsactive',
   };
