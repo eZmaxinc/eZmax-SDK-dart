@@ -16,13 +16,13 @@ void main() {
   // final instance = MultilingualPaymenttermDescription();
 
   group('test MultilingualPaymenttermDescription', () {
-    // The description of the Paymentterm in french
+    // The description of the Paymentterm in French
     // String sPaymenttermDescription1
     test('to test the property `sPaymenttermDescription1`', () async {
       // TODO
     });
 
-    // The description of the Paymentterm in english
+    // The description of the Paymentterm in English
     // String sPaymenttermDescription2
     test('to test the property `sPaymenttermDescription2`', () async {
       // TODO

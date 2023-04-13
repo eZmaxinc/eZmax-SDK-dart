@@ -17,7 +17,7 @@ class MultilingualPaymenttermDescription {
     this.sPaymenttermDescription2,
   });
 
-  /// The description of the Paymentterm in french
+  /// The description of the Paymentterm in French
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -26,7 +26,7 @@ class MultilingualPaymenttermDescription {
   ///
   String? sPaymenttermDescription1;
 
-  /// The description of the Paymentterm in english
+  /// The description of the Paymentterm in English
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated

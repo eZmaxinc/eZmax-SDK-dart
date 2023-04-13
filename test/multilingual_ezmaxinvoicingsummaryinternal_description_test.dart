@@ -16,13 +16,13 @@ void main() {
   // final instance = MultilingualEzmaxinvoicingsummaryinternalDescription();
 
   group('test MultilingualEzmaxinvoicingsummaryinternalDescription', () {
-    // The Ezmaxinvoicingsummaryinternal description in french
+    // The Ezmaxinvoicingsummaryinternal description in French
     // String sEzmaxinvoicingsummaryinternalDescription1
     test('to test the property `sEzmaxinvoicingsummaryinternalDescription1`', () async {
       // TODO
     });
 
-    // The Ezmaxinvoicingsummaryinternal description in english
+    // The Ezmaxinvoicingsummaryinternal description in English
     // String sEzmaxinvoicingsummaryinternalDescription2
     test('to test the property `sEzmaxinvoicingsummaryinternalDescription2`', () async {
       // TODO

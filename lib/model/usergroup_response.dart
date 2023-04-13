@@ -19,7 +19,8 @@ class UsergroupResponse {
 
   /// The unique ID of the Usergroup
   ///
-  /// Minimum value: 0
+  /// Minimum value: 1
+  /// Maximum value: 255
   int pkiUsergroupID;
 
   MultilingualUsergroupName objUsergroupName;

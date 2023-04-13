@@ -19,7 +19,8 @@ class UsergroupListElement {
 
   /// The unique ID of the Usergroup
   ///
-  /// Minimum value: 0
+  /// Minimum value: 1
+  /// Maximum value: 255
   int pkiUsergroupID;
 
   /// The Name of the Usergroup in the language of the requester

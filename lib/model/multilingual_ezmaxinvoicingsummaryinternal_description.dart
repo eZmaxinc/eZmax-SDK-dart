@@ -17,7 +17,7 @@ class MultilingualEzmaxinvoicingsummaryinternalDescription {
     this.sEzmaxinvoicingsummaryinternalDescription2,
   });
 
-  /// The Ezmaxinvoicingsummaryinternal description in french
+  /// The Ezmaxinvoicingsummaryinternal description in French
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -26,7 +26,7 @@ class MultilingualEzmaxinvoicingsummaryinternalDescription {
   ///
   String? sEzmaxinvoicingsummaryinternalDescription1;
 
-  /// The Ezmaxinvoicingsummaryinternal description in english
+  /// The Ezmaxinvoicingsummaryinternal description in English
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
