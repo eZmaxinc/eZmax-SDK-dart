@@ -26,15 +26,6 @@ void main() {
       // TODO
     });
 
-    // Delete an existing Variableexpense
-    //
-    // 
-    //
-    //Future<VariableexpenseDeleteObjectV1Response> variableexpenseDeleteObjectV1(int pkiVariableexpenseID) async
-    test('test variableexpenseDeleteObjectV1', () async {
-      // TODO
-    });
-
     // Edit an existing Variableexpense
     //
     // 

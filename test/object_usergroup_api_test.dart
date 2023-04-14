@@ -26,15 +26,6 @@ void main() {
       // TODO
     });
 
-    // Delete an existing Usergroup
-    //
-    // 
-    //
-    //Future<UsergroupDeleteObjectV1Response> usergroupDeleteObjectV1(int pkiUsergroupID) async
-    test('test usergroupDeleteObjectV1', () async {
-      // TODO
-    });
-
     // Edit an existing Usergroup
     //
     // 
@@ -59,13 +50,6 @@ void main() {
     //
     //Future<UsergroupGetListV1Response> usergroupGetListV1({ String eOrderBy, int iRowMax, int iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter }) async
     test('test usergroupGetListV1', () async {
-      // TODO
-    });
-
-    // Retrieve an existing Usergroup's members
-    //
-    //Future<UsergroupGetMembersV1Response> usergroupGetMembersV1(int pkiUsergroupID) async
-    test('test usergroupGetMembersV1', () async {
       // TODO
     });
 

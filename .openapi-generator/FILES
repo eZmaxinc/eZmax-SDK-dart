@@ -37,7 +37,6 @@ doc/BillingentityinternalCreateObjectV1Request.md
 doc/BillingentityinternalCreateObjectV1Response.md
 doc/BillingentityinternalCreateObjectV1ResponseAllOf.md
 doc/BillingentityinternalCreateObjectV1ResponseMPayload.md
-doc/BillingentityinternalDeleteObjectV1Response.md
 doc/BillingentityinternalEditObjectV1Request.md
 doc/BillingentityinternalEditObjectV1Response.md
 doc/BillingentityinternalGetAutocompleteV2Response.md
@@ -160,9 +159,6 @@ doc/DepartmentAutocompleteElementResponse.md
 doc/DepartmentGetAutocompleteV2Response.md
 doc/DepartmentGetAutocompleteV2ResponseAllOf.md
 doc/DepartmentGetAutocompleteV2ResponseMPayload.md
-doc/DepartmentGetMembersV1Response.md
-doc/DepartmentGetMembersV1ResponseAllOf.md
-doc/DepartmentGetMembersV1ResponseMPayload.md
 doc/DescriptionstaticResponse.md
 doc/DescriptionstaticResponseCompound.md
 doc/EmailRequest.md
@@ -899,7 +895,6 @@ doc/PaymenttermCreateObjectV1Request.md
 doc/PaymenttermCreateObjectV1Response.md
 doc/PaymenttermCreateObjectV1ResponseAllOf.md
 doc/PaymenttermCreateObjectV1ResponseMPayload.md
-doc/PaymenttermDeleteObjectV1Response.md
 doc/PaymenttermEditObjectV1Request.md
 doc/PaymenttermEditObjectV1Response.md
 doc/PaymenttermGetAutocompleteV2Response.md
@@ -954,7 +949,6 @@ doc/UsergroupCreateObjectV1Request.md
 doc/UsergroupCreateObjectV1Response.md
 doc/UsergroupCreateObjectV1ResponseAllOf.md
 doc/UsergroupCreateObjectV1ResponseMPayload.md
-doc/UsergroupDeleteObjectV1Response.md
 doc/UsergroupEditObjectV1Request.md
 doc/UsergroupEditObjectV1Response.md
 doc/UsergroupGetAutocompleteV2Response.md
@@ -964,9 +958,6 @@ doc/UsergroupGetListV1Response.md
 doc/UsergroupGetListV1ResponseAllOf.md
 doc/UsergroupGetListV1ResponseMPayload.md
 doc/UsergroupGetListV1ResponseMPayloadAllOf.md
-doc/UsergroupGetMembersV1Response.md
-doc/UsergroupGetMembersV1ResponseAllOf.md
-doc/UsergroupGetMembersV1ResponseMPayload.md
 doc/UsergroupGetObjectV2Response.md
 doc/UsergroupGetObjectV2ResponseAllOf.md
 doc/UsergroupGetObjectV2ResponseMPayload.md
@@ -980,7 +971,6 @@ doc/VariableexpenseCreateObjectV1Request.md
 doc/VariableexpenseCreateObjectV1Response.md
 doc/VariableexpenseCreateObjectV1ResponseAllOf.md
 doc/VariableexpenseCreateObjectV1ResponseMPayload.md
-doc/VariableexpenseDeleteObjectV1Response.md
 doc/VariableexpenseEditObjectV1Request.md
 doc/VariableexpenseEditObjectV1Response.md
 doc/VariableexpenseGetAutocompleteV2Response.md
@@ -1129,7 +1119,6 @@ lib/model/billingentityinternal_create_object_v1_request.dart
 lib/model/billingentityinternal_create_object_v1_response.dart
 lib/model/billingentityinternal_create_object_v1_response_all_of.dart
 lib/model/billingentityinternal_create_object_v1_response_m_payload.dart
-lib/model/billingentityinternal_delete_object_v1_response.dart
 lib/model/billingentityinternal_edit_object_v1_request.dart
 lib/model/billingentityinternal_edit_object_v1_response.dart
 lib/model/billingentityinternal_get_autocomplete_v2_response.dart
@@ -1252,9 +1241,6 @@ lib/model/department_autocomplete_element_response.dart
 lib/model/department_get_autocomplete_v2_response.dart
 lib/model/department_get_autocomplete_v2_response_all_of.dart
 lib/model/department_get_autocomplete_v2_response_m_payload.dart
-lib/model/department_get_members_v1_response.dart
-lib/model/department_get_members_v1_response_all_of.dart
-lib/model/department_get_members_v1_response_m_payload.dart
 lib/model/descriptionstatic_response.dart
 lib/model/descriptionstatic_response_compound.dart
 lib/model/email_request.dart
@@ -1942,7 +1928,6 @@ lib/model/paymentterm_create_object_v1_request.dart
 lib/model/paymentterm_create_object_v1_response.dart
 lib/model/paymentterm_create_object_v1_response_all_of.dart
 lib/model/paymentterm_create_object_v1_response_m_payload.dart
-lib/model/paymentterm_delete_object_v1_response.dart
 lib/model/paymentterm_edit_object_v1_request.dart
 lib/model/paymentterm_edit_object_v1_response.dart
 lib/model/paymentterm_get_autocomplete_v2_response.dart
@@ -1997,7 +1982,6 @@ lib/model/usergroup_create_object_v1_request.dart
 lib/model/usergroup_create_object_v1_response.dart
 lib/model/usergroup_create_object_v1_response_all_of.dart
 lib/model/usergroup_create_object_v1_response_m_payload.dart
-lib/model/usergroup_delete_object_v1_response.dart
 lib/model/usergroup_edit_object_v1_request.dart
 lib/model/usergroup_edit_object_v1_response.dart
 lib/model/usergroup_get_autocomplete_v2_response.dart
@@ -2007,9 +1991,6 @@ lib/model/usergroup_get_list_v1_response.dart
 lib/model/usergroup_get_list_v1_response_all_of.dart
 lib/model/usergroup_get_list_v1_response_m_payload.dart
 lib/model/usergroup_get_list_v1_response_m_payload_all_of.dart
-lib/model/usergroup_get_members_v1_response.dart
-lib/model/usergroup_get_members_v1_response_all_of.dart
-lib/model/usergroup_get_members_v1_response_m_payload.dart
 lib/model/usergroup_get_object_v2_response.dart
 lib/model/usergroup_get_object_v2_response_all_of.dart
 lib/model/usergroup_get_object_v2_response_m_payload.dart
@@ -2023,7 +2004,6 @@ lib/model/variableexpense_create_object_v1_request.dart
 lib/model/variableexpense_create_object_v1_response.dart
 lib/model/variableexpense_create_object_v1_response_all_of.dart
 lib/model/variableexpense_create_object_v1_response_m_payload.dart
-lib/model/variableexpense_delete_object_v1_response.dart
 lib/model/variableexpense_edit_object_v1_request.dart
 lib/model/variableexpense_edit_object_v1_response.dart
 lib/model/variableexpense_get_autocomplete_v2_response.dart
@@ -2114,7 +2094,6 @@ test/billingentityinternal_create_object_v1_request_test.dart
 test/billingentityinternal_create_object_v1_response_all_of_test.dart
 test/billingentityinternal_create_object_v1_response_m_payload_test.dart
 test/billingentityinternal_create_object_v1_response_test.dart
-test/billingentityinternal_delete_object_v1_response_test.dart
 test/billingentityinternal_edit_object_v1_request_test.dart
 test/billingentityinternal_edit_object_v1_response_test.dart
 test/billingentityinternal_get_autocomplete_v2_response_all_of_test.dart
@@ -2237,9 +2216,6 @@ test/department_autocomplete_element_response_test.dart
 test/department_get_autocomplete_v2_response_all_of_test.dart
 test/department_get_autocomplete_v2_response_m_payload_test.dart
 test/department_get_autocomplete_v2_response_test.dart
-test/department_get_members_v1_response_all_of_test.dart
-test/department_get_members_v1_response_m_payload_test.dart
-test/department_get_members_v1_response_test.dart
 test/descriptionstatic_response_compound_test.dart
 test/descriptionstatic_response_test.dart
 test/email_request_compound_test.dart
@@ -2976,7 +2952,6 @@ test/paymentterm_create_object_v1_request_test.dart
 test/paymentterm_create_object_v1_response_all_of_test.dart
 test/paymentterm_create_object_v1_response_m_payload_test.dart
 test/paymentterm_create_object_v1_response_test.dart
-test/paymentterm_delete_object_v1_response_test.dart
 test/paymentterm_edit_object_v1_request_test.dart
 test/paymentterm_edit_object_v1_response_test.dart
 test/paymentterm_get_autocomplete_v2_response_all_of_test.dart
@@ -3031,7 +3006,6 @@ test/usergroup_create_object_v1_request_test.dart
 test/usergroup_create_object_v1_response_all_of_test.dart
 test/usergroup_create_object_v1_response_m_payload_test.dart
 test/usergroup_create_object_v1_response_test.dart
-test/usergroup_delete_object_v1_response_test.dart
 test/usergroup_edit_object_v1_request_test.dart
 test/usergroup_edit_object_v1_response_test.dart
 test/usergroup_get_autocomplete_v2_response_all_of_test.dart
@@ -3041,9 +3015,6 @@ test/usergroup_get_list_v1_response_all_of_test.dart
 test/usergroup_get_list_v1_response_m_payload_all_of_test.dart
 test/usergroup_get_list_v1_response_m_payload_test.dart
 test/usergroup_get_list_v1_response_test.dart
-test/usergroup_get_members_v1_response_all_of_test.dart
-test/usergroup_get_members_v1_response_m_payload_test.dart
-test/usergroup_get_members_v1_response_test.dart
 test/usergroup_get_object_v2_response_all_of_test.dart
 test/usergroup_get_object_v2_response_m_payload_test.dart
 test/usergroup_get_object_v2_response_test.dart
@@ -3057,7 +3028,6 @@ test/variableexpense_create_object_v1_request_test.dart
 test/variableexpense_create_object_v1_response_all_of_test.dart
 test/variableexpense_create_object_v1_response_m_payload_test.dart
 test/variableexpense_create_object_v1_response_test.dart
-test/variableexpense_delete_object_v1_response_test.dart
 test/variableexpense_edit_object_v1_request_test.dart
 test/variableexpense_edit_object_v1_response_test.dart
 test/variableexpense_get_autocomplete_v2_response_all_of_test.dart

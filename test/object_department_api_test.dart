@@ -26,14 +26,5 @@ void main() {
       // TODO
     });
 
-    // Retrieve an existing Department's members
-    //
-    // 
-    //
-    //Future<DepartmentGetMembersV1Response> departmentGetMembersV1(int pkiDepartmentID) async
-    test('test departmentGetMembersV1', () async {
-      // TODO
-    });
-
   });
 }

@@ -72,63 +72,6 @@ class ObjectPaymenttermApi {
     return null;
   }
 
-  /// Delete an existing Paymentterm
-  ///
-  /// 
-  ///
-  /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiPaymenttermID (required):
-  Future<Response> paymenttermDeleteObjectV1WithHttpInfo(int pkiPaymenttermID,) async {
-    // ignore: prefer_const_declarations
-    final path = r'/1/object/paymentterm/{pkiPaymenttermID}'
-      .replaceAll('{pkiPaymenttermID}', pkiPaymenttermID.toString());
-
-    // ignore: prefer_final_locals
-    Object? postBody;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>[];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'DELETE',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-    );
-  }
-
-  /// Delete an existing Paymentterm
-  ///
-  /// 
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiPaymenttermID (required):
-  Future<PaymenttermDeleteObjectV1Response?> paymenttermDeleteObjectV1(int pkiPaymenttermID,) async {
-    final response = await paymenttermDeleteObjectV1WithHttpInfo(pkiPaymenttermID,);
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'PaymenttermDeleteObjectV1Response',) as PaymenttermDeleteObjectV1Response;
-    
-    }
-    return null;
-  }
-
   /// Edit an existing Paymentterm
   ///
   /// 

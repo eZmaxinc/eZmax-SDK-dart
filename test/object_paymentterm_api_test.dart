@@ -26,15 +26,6 @@ void main() {
       // TODO
     });
 
-    // Delete an existing Paymentterm
-    //
-    // 
-    //
-    //Future<PaymenttermDeleteObjectV1Response> paymenttermDeleteObjectV1(int pkiPaymenttermID) async
-    test('test paymenttermDeleteObjectV1', () async {
-      // TODO
-    });
-
     // Edit an existing Paymentterm
     //
     // 

@@ -26,15 +26,6 @@ void main() {
       // TODO
     });
 
-    // Delete an existing Billingentityinternal
-    //
-    // 
-    //
-    //Future<BillingentityinternalDeleteObjectV1Response> billingentityinternalDeleteObjectV1(int pkiBillingentityinternalID) async
-    test('test billingentityinternalDeleteObjectV1', () async {
-      // TODO
-    });
-
     // Edit an existing Billingentityinternal
     //
     // 

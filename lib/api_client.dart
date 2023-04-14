@@ -249,8 +249,6 @@ class ApiClient {
           return BillingentityinternalCreateObjectV1ResponseAllOf.fromJson(value);
         case 'BillingentityinternalCreateObjectV1ResponseMPayload':
           return BillingentityinternalCreateObjectV1ResponseMPayload.fromJson(value);
-        case 'BillingentityinternalDeleteObjectV1Response':
-          return BillingentityinternalDeleteObjectV1Response.fromJson(value);
         case 'BillingentityinternalEditObjectV1Request':
           return BillingentityinternalEditObjectV1Request.fromJson(value);
         case 'BillingentityinternalEditObjectV1Response':
@@ -495,12 +493,6 @@ class ApiClient {
           return DepartmentGetAutocompleteV2ResponseAllOf.fromJson(value);
         case 'DepartmentGetAutocompleteV2ResponseMPayload':
           return DepartmentGetAutocompleteV2ResponseMPayload.fromJson(value);
-        case 'DepartmentGetMembersV1Response':
-          return DepartmentGetMembersV1Response.fromJson(value);
-        case 'DepartmentGetMembersV1ResponseAllOf':
-          return DepartmentGetMembersV1ResponseAllOf.fromJson(value);
-        case 'DepartmentGetMembersV1ResponseMPayload':
-          return DepartmentGetMembersV1ResponseMPayload.fromJson(value);
         case 'DescriptionstaticResponse':
           return DescriptionstaticResponse.fromJson(value);
         case 'DescriptionstaticResponseCompound':
@@ -1875,8 +1867,6 @@ class ApiClient {
           return PaymenttermCreateObjectV1ResponseAllOf.fromJson(value);
         case 'PaymenttermCreateObjectV1ResponseMPayload':
           return PaymenttermCreateObjectV1ResponseMPayload.fromJson(value);
-        case 'PaymenttermDeleteObjectV1Response':
-          return PaymenttermDeleteObjectV1Response.fromJson(value);
         case 'PaymenttermEditObjectV1Request':
           return PaymenttermEditObjectV1Request.fromJson(value);
         case 'PaymenttermEditObjectV1Response':
@@ -1985,8 +1975,6 @@ class ApiClient {
           return UsergroupCreateObjectV1ResponseAllOf.fromJson(value);
         case 'UsergroupCreateObjectV1ResponseMPayload':
           return UsergroupCreateObjectV1ResponseMPayload.fromJson(value);
-        case 'UsergroupDeleteObjectV1Response':
-          return UsergroupDeleteObjectV1Response.fromJson(value);
         case 'UsergroupEditObjectV1Request':
           return UsergroupEditObjectV1Request.fromJson(value);
         case 'UsergroupEditObjectV1Response':
@@ -2005,12 +1993,6 @@ class ApiClient {
           return UsergroupGetListV1ResponseMPayload.fromJson(value);
         case 'UsergroupGetListV1ResponseMPayloadAllOf':
           return UsergroupGetListV1ResponseMPayloadAllOf.fromJson(value);
-        case 'UsergroupGetMembersV1Response':
-          return UsergroupGetMembersV1Response.fromJson(value);
-        case 'UsergroupGetMembersV1ResponseAllOf':
-          return UsergroupGetMembersV1ResponseAllOf.fromJson(value);
-        case 'UsergroupGetMembersV1ResponseMPayload':
-          return UsergroupGetMembersV1ResponseMPayload.fromJson(value);
         case 'UsergroupGetObjectV2Response':
           return UsergroupGetObjectV2Response.fromJson(value);
         case 'UsergroupGetObjectV2ResponseAllOf':
@@ -2037,8 +2019,6 @@ class ApiClient {
           return VariableexpenseCreateObjectV1ResponseAllOf.fromJson(value);
         case 'VariableexpenseCreateObjectV1ResponseMPayload':
           return VariableexpenseCreateObjectV1ResponseMPayload.fromJson(value);
-        case 'VariableexpenseDeleteObjectV1Response':
-          return VariableexpenseDeleteObjectV1Response.fromJson(value);
         case 'VariableexpenseEditObjectV1Request':
           return VariableexpenseEditObjectV1Request.fromJson(value);
         case 'VariableexpenseEditObjectV1Response':

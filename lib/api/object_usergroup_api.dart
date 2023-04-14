@@ -72,65 +72,6 @@ class ObjectUsergroupApi {
     return null;
   }
 
-  /// Delete an existing Usergroup
-  ///
-  /// 
-  ///
-  /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiUsergroupID (required):
-  ///   The unique ID of the Usergroup
-  Future<Response> usergroupDeleteObjectV1WithHttpInfo(int pkiUsergroupID,) async {
-    // ignore: prefer_const_declarations
-    final path = r'/1/object/usergroup/{pkiUsergroupID}'
-      .replaceAll('{pkiUsergroupID}', pkiUsergroupID.toString());
-
-    // ignore: prefer_final_locals
-    Object? postBody;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>[];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'DELETE',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-    );
-  }
-
-  /// Delete an existing Usergroup
-  ///
-  /// 
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiUsergroupID (required):
-  ///   The unique ID of the Usergroup
-  Future<UsergroupDeleteObjectV1Response?> usergroupDeleteObjectV1(int pkiUsergroupID,) async {
-    final response = await usergroupDeleteObjectV1WithHttpInfo(pkiUsergroupID,);
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'UsergroupDeleteObjectV1Response',) as UsergroupDeleteObjectV1Response;
-    
-    }
-    return null;
-  }
-
   /// Edit an existing Usergroup
   ///
   /// 
@@ -366,61 +307,6 @@ class ObjectUsergroupApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'UsergroupGetListV1Response',) as UsergroupGetListV1Response;
-    
-    }
-    return null;
-  }
-
-  /// Retrieve an existing Usergroup's members
-  ///
-  /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiUsergroupID (required):
-  ///   The unique ID of the Usergroup
-  Future<Response> usergroupGetMembersV1WithHttpInfo(int pkiUsergroupID,) async {
-    // ignore: prefer_const_declarations
-    final path = r'/1/object/usergroup/{pkiUsergroupID}/getMembers'
-      .replaceAll('{pkiUsergroupID}', pkiUsergroupID.toString());
-
-    // ignore: prefer_final_locals
-    Object? postBody;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>[];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'GET',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-    );
-  }
-
-  /// Retrieve an existing Usergroup's members
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiUsergroupID (required):
-  ///   The unique ID of the Usergroup
-  Future<UsergroupGetMembersV1Response?> usergroupGetMembersV1(int pkiUsergroupID,) async {
-    final response = await usergroupGetMembersV1WithHttpInfo(pkiUsergroupID,);
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'UsergroupGetMembersV1Response',) as UsergroupGetMembersV1Response;
     
     }
     return null;
