@@ -28,7 +28,7 @@ class SessionhistoryListElement {
   /// The unique ID of the Sessionhistory
   ///
   /// Minimum value: 1
-  /// Maximum value: 4294967295
+  /// Maximum value: 2147483647
   int pkiSessionhistoryID;
 
   /// The unique ID of the Computer
