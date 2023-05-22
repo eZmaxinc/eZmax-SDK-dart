@@ -61,7 +61,7 @@ class BillingentityinternalGetAutocompleteV2ResponseAllOf {
     return null;
   }
 
-  static List<BillingentityinternalGetAutocompleteV2ResponseAllOf>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<BillingentityinternalGetAutocompleteV2ResponseAllOf> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <BillingentityinternalGetAutocompleteV2ResponseAllOf>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -92,12 +92,10 @@ class BillingentityinternalGetAutocompleteV2ResponseAllOf {
   static Map<String, List<BillingentityinternalGetAutocompleteV2ResponseAllOf>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<BillingentityinternalGetAutocompleteV2ResponseAllOf>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = BillingentityinternalGetAutocompleteV2ResponseAllOf.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = BillingentityinternalGetAutocompleteV2ResponseAllOf.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

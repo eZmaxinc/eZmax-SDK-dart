@@ -36,7 +36,7 @@ class FieldEUserEzsignsendreminderfrequency {
 
   static FieldEUserEzsignsendreminderfrequency? fromJson(dynamic value) => FieldEUserEzsignsendreminderfrequencyTypeTransformer().decode(value);
 
-  static List<FieldEUserEzsignsendreminderfrequency>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<FieldEUserEzsignsendreminderfrequency> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEUserEzsignsendreminderfrequency>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

@@ -142,7 +142,7 @@ class EzsignsignerRequestCompound {
     return null;
   }
 
-  static List<EzsignsignerRequestCompound>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsignsignerRequestCompound> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsignsignerRequestCompound>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -173,12 +173,10 @@ class EzsignsignerRequestCompound {
   static Map<String, List<EzsignsignerRequestCompound>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignsignerRequestCompound>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsignsignerRequestCompound.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsignsignerRequestCompound.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;
@@ -221,7 +219,7 @@ class EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum {
 
   static EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum? fromJson(dynamic value) => EzsignsignerRequestCompoundEEzsignsignerLogintypeEnumTypeTransformer().decode(value);
 
-  static List<EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

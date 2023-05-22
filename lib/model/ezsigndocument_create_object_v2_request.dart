@@ -55,13 +55,13 @@ class EzsigndocumentCreateObjectV2Request {
       }());
 
       return EzsigndocumentCreateObjectV2Request(
-        aObjEzsigndocument: EzsigndocumentRequestCompound.listFromJson(json[r'a_objEzsigndocument'])!,
+        aObjEzsigndocument: EzsigndocumentRequestCompound.listFromJson(json[r'a_objEzsigndocument']),
       );
     }
     return null;
   }
 
-  static List<EzsigndocumentCreateObjectV2Request>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsigndocumentCreateObjectV2Request> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsigndocumentCreateObjectV2Request>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -92,12 +92,10 @@ class EzsigndocumentCreateObjectV2Request {
   static Map<String, List<EzsigndocumentCreateObjectV2Request>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsigndocumentCreateObjectV2Request>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsigndocumentCreateObjectV2Request.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsigndocumentCreateObjectV2Request.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

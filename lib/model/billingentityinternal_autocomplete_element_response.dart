@@ -13,42 +13,42 @@ part of openapi.api;
 class BillingentityinternalAutocompleteElementResponse {
   /// Returns a new [BillingentityinternalAutocompleteElementResponse] instance.
   BillingentityinternalAutocompleteElementResponse({
-    required this.sBillingentityinternalDescriptionX,
     required this.pkiBillingentityinternalID,
+    required this.sBillingentityinternalDescriptionX,
     required this.bBillingentityinternalIsactive,
   });
-
-  /// The description of the Billingentityinternal in the language of the requester
-  String sBillingentityinternalDescriptionX;
 
   /// The unique ID of the Billingentityinternal.
   ///
   /// Minimum value: 0
   int pkiBillingentityinternalID;
 
+  /// The description of the Billingentityinternal in the language of the requester
+  String sBillingentityinternalDescriptionX;
+
   /// Whether the Billingentityinternal is active or not
   bool bBillingentityinternalIsactive;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is BillingentityinternalAutocompleteElementResponse &&
-     other.sBillingentityinternalDescriptionX == sBillingentityinternalDescriptionX &&
      other.pkiBillingentityinternalID == pkiBillingentityinternalID &&
+     other.sBillingentityinternalDescriptionX == sBillingentityinternalDescriptionX &&
      other.bBillingentityinternalIsactive == bBillingentityinternalIsactive;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (sBillingentityinternalDescriptionX.hashCode) +
     (pkiBillingentityinternalID.hashCode) +
+    (sBillingentityinternalDescriptionX.hashCode) +
     (bBillingentityinternalIsactive.hashCode);
 
   @override
-  String toString() => 'BillingentityinternalAutocompleteElementResponse[sBillingentityinternalDescriptionX=$sBillingentityinternalDescriptionX, pkiBillingentityinternalID=$pkiBillingentityinternalID, bBillingentityinternalIsactive=$bBillingentityinternalIsactive]';
+  String toString() => 'BillingentityinternalAutocompleteElementResponse[pkiBillingentityinternalID=$pkiBillingentityinternalID, sBillingentityinternalDescriptionX=$sBillingentityinternalDescriptionX, bBillingentityinternalIsactive=$bBillingentityinternalIsactive]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'sBillingentityinternalDescriptionX'] = this.sBillingentityinternalDescriptionX;
       json[r'pkiBillingentityinternalID'] = this.pkiBillingentityinternalID;
+      json[r'sBillingentityinternalDescriptionX'] = this.sBillingentityinternalDescriptionX;
       json[r'bBillingentityinternalIsactive'] = this.bBillingentityinternalIsactive;
     return json;
   }
@@ -72,15 +72,15 @@ class BillingentityinternalAutocompleteElementResponse {
       }());
 
       return BillingentityinternalAutocompleteElementResponse(
-        sBillingentityinternalDescriptionX: mapValueOfType<String>(json, r'sBillingentityinternalDescriptionX')!,
         pkiBillingentityinternalID: mapValueOfType<int>(json, r'pkiBillingentityinternalID')!,
+        sBillingentityinternalDescriptionX: mapValueOfType<String>(json, r'sBillingentityinternalDescriptionX')!,
         bBillingentityinternalIsactive: mapValueOfType<bool>(json, r'bBillingentityinternalIsactive')!,
       );
     }
     return null;
   }
 
-  static List<BillingentityinternalAutocompleteElementResponse>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<BillingentityinternalAutocompleteElementResponse> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <BillingentityinternalAutocompleteElementResponse>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -111,12 +111,10 @@ class BillingentityinternalAutocompleteElementResponse {
   static Map<String, List<BillingentityinternalAutocompleteElementResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<BillingentityinternalAutocompleteElementResponse>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = BillingentityinternalAutocompleteElementResponse.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = BillingentityinternalAutocompleteElementResponse.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;
@@ -124,8 +122,8 @@ class BillingentityinternalAutocompleteElementResponse {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'sBillingentityinternalDescriptionX',
     'pkiBillingentityinternalID',
+    'sBillingentityinternalDescriptionX',
     'bBillingentityinternalIsactive',
   };
 }

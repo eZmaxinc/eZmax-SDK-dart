@@ -36,7 +36,7 @@ class FieldPksEzmaxclientOs {
 
   static FieldPksEzmaxclientOs? fromJson(dynamic value) => FieldPksEzmaxclientOsTypeTransformer().decode(value);
 
-  static List<FieldPksEzmaxclientOs>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<FieldPksEzmaxclientOs> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldPksEzmaxclientOs>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

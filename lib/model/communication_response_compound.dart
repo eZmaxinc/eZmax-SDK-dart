@@ -190,15 +190,15 @@ class CommunicationResponseCompound {
         objEmailstaticSender: EmailstaticResponse.fromJson(json[r'objEmailstaticSender']),
         objPhonestaticSender: PhonestaticResponse.fromJson(json[r'objPhonestaticSender']),
         objAudit: CommonAudit.fromJson(json[r'objAudit'])!,
-        aObjCommunicationattachment: CommunicationattachmentResponseCompound.listFromJson(json[r'a_objCommunicationattachment'])!,
-        aObjCommunicationrecipient: CommunicationrecipientResponseCompound.listFromJson(json[r'a_objCommunicationrecipient'])!,
-        aObjCommunicationexternalrecipient: CommunicationexternalrecipientResponseCompound.listFromJson(json[r'a_objCommunicationexternalrecipient'])!,
+        aObjCommunicationattachment: CommunicationattachmentResponseCompound.listFromJson(json[r'a_objCommunicationattachment']),
+        aObjCommunicationrecipient: CommunicationrecipientResponseCompound.listFromJson(json[r'a_objCommunicationrecipient']),
+        aObjCommunicationexternalrecipient: CommunicationexternalrecipientResponseCompound.listFromJson(json[r'a_objCommunicationexternalrecipient']),
       );
     }
     return null;
   }
 
-  static List<CommunicationResponseCompound>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<CommunicationResponseCompound> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <CommunicationResponseCompound>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -229,12 +229,10 @@ class CommunicationResponseCompound {
   static Map<String, List<CommunicationResponseCompound>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<CommunicationResponseCompound>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = CommunicationResponseCompound.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = CommunicationResponseCompound.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

@@ -125,7 +125,7 @@ class VariableexpenseResponseCompound {
     return null;
   }
 
-  static List<VariableexpenseResponseCompound>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<VariableexpenseResponseCompound> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <VariableexpenseResponseCompound>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -156,12 +156,10 @@ class VariableexpenseResponseCompound {
   static Map<String, List<VariableexpenseResponseCompound>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<VariableexpenseResponseCompound>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = VariableexpenseResponseCompound.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = VariableexpenseResponseCompound.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

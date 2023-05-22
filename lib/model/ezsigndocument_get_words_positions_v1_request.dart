@@ -80,7 +80,7 @@ class EzsigndocumentGetWordsPositionsV1Request {
     return null;
   }
 
-  static List<EzsigndocumentGetWordsPositionsV1Request>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsigndocumentGetWordsPositionsV1Request> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsigndocumentGetWordsPositionsV1Request>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -111,12 +111,10 @@ class EzsigndocumentGetWordsPositionsV1Request {
   static Map<String, List<EzsigndocumentGetWordsPositionsV1Request>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsigndocumentGetWordsPositionsV1Request>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsigndocumentGetWordsPositionsV1Request.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsigndocumentGetWordsPositionsV1Request.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;
@@ -153,7 +151,7 @@ class EzsigndocumentGetWordsPositionsV1RequestEGetEnum {
 
   static EzsigndocumentGetWordsPositionsV1RequestEGetEnum? fromJson(dynamic value) => EzsigndocumentGetWordsPositionsV1RequestEGetEnumTypeTransformer().decode(value);
 
-  static List<EzsigndocumentGetWordsPositionsV1RequestEGetEnum>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsigndocumentGetWordsPositionsV1RequestEGetEnum> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsigndocumentGetWordsPositionsV1RequestEGetEnum>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

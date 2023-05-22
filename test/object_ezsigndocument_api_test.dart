@@ -107,6 +107,15 @@ void main() {
       // TODO
     });
 
+    // Retrieve completed elements for the Ezsigndocument
+    //
+    // Return the completed Ezsignsignatures, Ezsignformfieldgroups and Ezsignannotations at the current step in the process
+    //
+    //Future<EzsigndocumentGetCompletedElementsV1Response> ezsigndocumentGetCompletedElementsV1(int pkiEzsigndocumentID) async
+    test('test ezsigndocumentGetCompletedElementsV1', () async {
+      // TODO
+    });
+
     // Retrieve a URL to download documents.
     //
     // This endpoint returns URLs to different files that can be downloaded during the signing process.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.

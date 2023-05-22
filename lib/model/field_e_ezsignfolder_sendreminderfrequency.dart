@@ -36,7 +36,7 @@ class FieldEEzsignfolderSendreminderfrequency {
 
   static FieldEEzsignfolderSendreminderfrequency? fromJson(dynamic value) => FieldEEzsignfolderSendreminderfrequencyTypeTransformer().decode(value);
 
-  static List<FieldEEzsignfolderSendreminderfrequency>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<FieldEEzsignfolderSendreminderfrequency> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsignfolderSendreminderfrequency>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

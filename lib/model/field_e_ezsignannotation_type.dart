@@ -36,7 +36,7 @@ class FieldEEzsignannotationType {
 
   static FieldEEzsignannotationType? fromJson(dynamic value) => FieldEEzsignannotationTypeTypeTransformer().decode(value);
 
-  static List<FieldEEzsignannotationType>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<FieldEEzsignannotationType> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsignannotationType>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

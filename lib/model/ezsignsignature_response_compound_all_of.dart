@@ -15,6 +15,7 @@ class EzsignsignatureResponseCompoundAllOf {
   EzsignsignatureResponseCompoundAllOf({
     this.bEzsignsignatureCustomdate,
     this.aObjEzsignsignaturecustomdate = const [],
+    this.objCreditcardtransaction,
   });
 
   /// Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)
@@ -29,19 +30,29 @@ class EzsignsignatureResponseCompoundAllOf {
   /// An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all.
   List<EzsignsignaturecustomdateResponseCompound> aObjEzsignsignaturecustomdate;
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  CustomCreditcardtransactionResponse? objCreditcardtransaction;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignsignatureResponseCompoundAllOf &&
      other.bEzsignsignatureCustomdate == bEzsignsignatureCustomdate &&
-     other.aObjEzsignsignaturecustomdate == aObjEzsignsignaturecustomdate;
+     other.aObjEzsignsignaturecustomdate == aObjEzsignsignaturecustomdate &&
+     other.objCreditcardtransaction == objCreditcardtransaction;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (bEzsignsignatureCustomdate == null ? 0 : bEzsignsignatureCustomdate!.hashCode) +
-    (aObjEzsignsignaturecustomdate.hashCode);
+    (aObjEzsignsignaturecustomdate.hashCode) +
+    (objCreditcardtransaction == null ? 0 : objCreditcardtransaction!.hashCode);
 
   @override
-  String toString() => 'EzsignsignatureResponseCompoundAllOf[bEzsignsignatureCustomdate=$bEzsignsignatureCustomdate, aObjEzsignsignaturecustomdate=$aObjEzsignsignaturecustomdate]';
+  String toString() => 'EzsignsignatureResponseCompoundAllOf[bEzsignsignatureCustomdate=$bEzsignsignatureCustomdate, aObjEzsignsignaturecustomdate=$aObjEzsignsignaturecustomdate, objCreditcardtransaction=$objCreditcardtransaction]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -51,6 +62,11 @@ class EzsignsignatureResponseCompoundAllOf {
       json[r'bEzsignsignatureCustomdate'] = null;
     }
       json[r'a_objEzsignsignaturecustomdate'] = this.aObjEzsignsignaturecustomdate;
+    if (this.objCreditcardtransaction != null) {
+      json[r'objCreditcardtransaction'] = this.objCreditcardtransaction;
+    } else {
+      json[r'objCreditcardtransaction'] = null;
+    }
     return json;
   }
 
@@ -74,13 +90,14 @@ class EzsignsignatureResponseCompoundAllOf {
 
       return EzsignsignatureResponseCompoundAllOf(
         bEzsignsignatureCustomdate: mapValueOfType<bool>(json, r'bEzsignsignatureCustomdate'),
-        aObjEzsignsignaturecustomdate: EzsignsignaturecustomdateResponseCompound.listFromJson(json[r'a_objEzsignsignaturecustomdate']) ?? const [],
+        aObjEzsignsignaturecustomdate: EzsignsignaturecustomdateResponseCompound.listFromJson(json[r'a_objEzsignsignaturecustomdate']),
+        objCreditcardtransaction: CustomCreditcardtransactionResponse.fromJson(json[r'objCreditcardtransaction']),
       );
     }
     return null;
   }
 
-  static List<EzsignsignatureResponseCompoundAllOf>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsignsignatureResponseCompoundAllOf> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsignsignatureResponseCompoundAllOf>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -111,12 +128,10 @@ class EzsignsignatureResponseCompoundAllOf {
   static Map<String, List<EzsignsignatureResponseCompoundAllOf>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignsignatureResponseCompoundAllOf>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsignsignatureResponseCompoundAllOf.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsignsignatureResponseCompoundAllOf.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

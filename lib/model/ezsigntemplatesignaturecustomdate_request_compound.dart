@@ -102,7 +102,7 @@ class EzsigntemplatesignaturecustomdateRequestCompound {
     return null;
   }
 
-  static List<EzsigntemplatesignaturecustomdateRequestCompound>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsigntemplatesignaturecustomdateRequestCompound> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsigntemplatesignaturecustomdateRequestCompound>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -133,12 +133,10 @@ class EzsigntemplatesignaturecustomdateRequestCompound {
   static Map<String, List<EzsigntemplatesignaturecustomdateRequestCompound>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsigntemplatesignaturecustomdateRequestCompound>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsigntemplatesignaturecustomdateRequestCompound.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsigntemplatesignaturecustomdateRequestCompound.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

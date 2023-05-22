@@ -86,7 +86,7 @@ class ContactinformationsRequest {
     return null;
   }
 
-  static List<ContactinformationsRequest>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<ContactinformationsRequest> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <ContactinformationsRequest>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -117,12 +117,10 @@ class ContactinformationsRequest {
   static Map<String, List<ContactinformationsRequest>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<ContactinformationsRequest>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = ContactinformationsRequest.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = ContactinformationsRequest.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

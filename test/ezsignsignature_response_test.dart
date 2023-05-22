@@ -108,6 +108,17 @@ void main() {
       // TODO
     });
 
+    // The date the Ezsignsignature was signed
+    // String dtEzsignsignatureDate
+    test('to test the property `dtEzsignsignatureDate`', () async {
+      // TODO
+    });
+
+    // CustomContactNameResponse objContactName
+    test('to test the property `objContactName`', () async {
+      // TODO
+    });
+
 
   });
 

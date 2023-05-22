@@ -44,7 +44,7 @@ class FieldEEzsigndocumentStep {
 
   static FieldEEzsigndocumentStep? fromJson(dynamic value) => FieldEEzsigndocumentStepTypeTransformer().decode(value);
 
-  static List<FieldEEzsigndocumentStep>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<FieldEEzsigndocumentStep> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsigndocumentStep>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

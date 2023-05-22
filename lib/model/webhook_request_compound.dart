@@ -173,7 +173,7 @@ class WebhookRequestCompound {
     return null;
   }
 
-  static List<WebhookRequestCompound>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<WebhookRequestCompound> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <WebhookRequestCompound>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -204,12 +204,10 @@ class WebhookRequestCompound {
   static Map<String, List<WebhookRequestCompound>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<WebhookRequestCompound>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = WebhookRequestCompound.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = WebhookRequestCompound.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

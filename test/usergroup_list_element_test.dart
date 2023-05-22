@@ -28,6 +28,12 @@ void main() {
       // TODO
     });
 
+    // Numer of user in group
+    // int iCountUser
+    test('to test the property `iCountUser`', () async {
+      // TODO
+    });
+
 
   });
 

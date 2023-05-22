@@ -34,7 +34,7 @@ class FieldEEzsignformfieldgroupSignerrequirement {
 
   static FieldEEzsignformfieldgroupSignerrequirement? fromJson(dynamic value) => FieldEEzsignformfieldgroupSignerrequirementTypeTransformer().decode(value);
 
-  static List<FieldEEzsignformfieldgroupSignerrequirement>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<FieldEEzsignformfieldgroupSignerrequirement> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsignformfieldgroupSignerrequirement>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

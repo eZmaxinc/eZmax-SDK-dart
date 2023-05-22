@@ -100,13 +100,13 @@ class EzsignbulksendtransmissionResponseCompound {
         sEzsignbulksendtransmissionDescription: mapValueOfType<String>(json, r'sEzsignbulksendtransmissionDescription')!,
         iEzsignbulksendtransmissionErrors: mapValueOfType<int>(json, r'iEzsignbulksendtransmissionErrors')!,
         objAudit: CommonAudit.fromJson(json[r'objAudit'])!,
-        aObjEzsignfoldertransmission: CustomEzsignfoldertransmissionResponse.listFromJson(json[r'a_objEzsignfoldertransmission'])!,
+        aObjEzsignfoldertransmission: CustomEzsignfoldertransmissionResponse.listFromJson(json[r'a_objEzsignfoldertransmission']),
       );
     }
     return null;
   }
 
-  static List<EzsignbulksendtransmissionResponseCompound>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsignbulksendtransmissionResponseCompound> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsignbulksendtransmissionResponseCompound>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -137,12 +137,10 @@ class EzsignbulksendtransmissionResponseCompound {
   static Map<String, List<EzsignbulksendtransmissionResponseCompound>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignbulksendtransmissionResponseCompound>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsignbulksendtransmissionResponseCompound.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsignbulksendtransmissionResponseCompound.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

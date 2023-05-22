@@ -88,13 +88,13 @@ class CommonResponseObjDebug {
         sRunTime: mapValueOfType<String>(json, r'sRunTime')!,
         iSQLSelects: mapValueOfType<int>(json, r'iSQLSelects')!,
         iSQLQueries: mapValueOfType<int>(json, r'iSQLQueries')!,
-        aObjSQLQuery: CommonResponseObjSQLQuery.listFromJson(json[r'a_objSQLQuery'])!,
+        aObjSQLQuery: CommonResponseObjSQLQuery.listFromJson(json[r'a_objSQLQuery']),
       );
     }
     return null;
   }
 
-  static List<CommonResponseObjDebug>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<CommonResponseObjDebug> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <CommonResponseObjDebug>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -125,12 +125,10 @@ class CommonResponseObjDebug {
   static Map<String, List<CommonResponseObjDebug>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<CommonResponseObjDebug>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = CommonResponseObjDebug.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = CommonResponseObjDebug.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

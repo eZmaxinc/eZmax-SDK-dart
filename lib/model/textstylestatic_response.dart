@@ -138,7 +138,7 @@ class TextstylestaticResponse {
     return null;
   }
 
-  static List<TextstylestaticResponse>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<TextstylestaticResponse> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <TextstylestaticResponse>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -169,12 +169,10 @@ class TextstylestaticResponse {
   static Map<String, List<TextstylestaticResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<TextstylestaticResponse>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = TextstylestaticResponse.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = TextstylestaticResponse.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

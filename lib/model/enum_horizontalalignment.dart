@@ -36,7 +36,7 @@ class EnumHorizontalalignment {
 
   static EnumHorizontalalignment? fromJson(dynamic value) => EnumHorizontalalignmentTypeTransformer().decode(value);
 
-  static List<EnumHorizontalalignment>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EnumHorizontalalignment> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EnumHorizontalalignment>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

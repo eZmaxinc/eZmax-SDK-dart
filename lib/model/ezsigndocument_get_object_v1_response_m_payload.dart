@@ -320,13 +320,13 @@ class EzsigndocumentGetObjectV1ResponseMPayload {
         iEzsigndocumentStepformcurrent: mapValueOfType<int>(json, r'iEzsigndocumentStepformcurrent')!,
         iEzsigndocumentStepsignaturetotal: mapValueOfType<int>(json, r'iEzsigndocumentStepsignaturetotal')!,
         iEzsigndocumentStepsignatureCurrent: mapValueOfType<int>(json, r'iEzsigndocumentStepsignatureCurrent')!,
-        aObjEzsignfoldersignerassociationstatus: CustomEzsignfoldersignerassociationstatusResponse.listFromJson(json[r'a_objEzsignfoldersignerassociationstatus'])!,
+        aObjEzsignfoldersignerassociationstatus: CustomEzsignfoldersignerassociationstatusResponse.listFromJson(json[r'a_objEzsignfoldersignerassociationstatus']),
       );
     }
     return null;
   }
 
-  static List<EzsigndocumentGetObjectV1ResponseMPayload>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsigndocumentGetObjectV1ResponseMPayload> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsigndocumentGetObjectV1ResponseMPayload>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -357,12 +357,10 @@ class EzsigndocumentGetObjectV1ResponseMPayload {
   static Map<String, List<EzsigndocumentGetObjectV1ResponseMPayload>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsigndocumentGetObjectV1ResponseMPayload>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsigndocumentGetObjectV1ResponseMPayload.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsigndocumentGetObjectV1ResponseMPayload.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

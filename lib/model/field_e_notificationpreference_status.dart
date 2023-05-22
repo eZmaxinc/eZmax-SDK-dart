@@ -36,7 +36,7 @@ class FieldENotificationpreferenceStatus {
 
   static FieldENotificationpreferenceStatus? fromJson(dynamic value) => FieldENotificationpreferenceStatusTypeTransformer().decode(value);
 
-  static List<FieldENotificationpreferenceStatus>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<FieldENotificationpreferenceStatus> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldENotificationpreferenceStatus>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

@@ -64,6 +64,9 @@ String parameterToString(dynamic value) {
   if (value is EnumVerticalalignment) {
     return EnumVerticalalignmentTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEActivesessionOrigin) {
+    return FieldEActivesessionOriginTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEActivesessionUsertype) {
     return FieldEActivesessionUsertypeTypeTransformer().encode(value).toString();
   }
@@ -177,6 +180,9 @@ String parameterToString(dynamic value) {
   }
   if (value is FieldEPhoneType) {
     return FieldEPhoneTypeTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldESessionhistoryEndby) {
+    return FieldESessionhistoryEndbyTypeTransformer().encode(value).toString();
   }
   if (value is FieldEUserEzsignsendreminderfrequency) {
     return FieldEUserEzsignsendreminderfrequencyTypeTransformer().encode(value).toString();

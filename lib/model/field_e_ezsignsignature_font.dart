@@ -34,7 +34,7 @@ class FieldEEzsignsignatureFont {
 
   static FieldEEzsignsignatureFont? fromJson(dynamic value) => FieldEEzsignsignatureFontTypeTransformer().decode(value);
 
-  static List<FieldEEzsignsignatureFont>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<FieldEEzsignsignatureFont> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsignsignatureFont>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

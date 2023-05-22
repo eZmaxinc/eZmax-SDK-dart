@@ -61,7 +61,7 @@ class EzsigndocumentGetTemporaryProofV1ResponseAllOf {
     return null;
   }
 
-  static List<EzsigndocumentGetTemporaryProofV1ResponseAllOf>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsigndocumentGetTemporaryProofV1ResponseAllOf> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsigndocumentGetTemporaryProofV1ResponseAllOf>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -92,12 +92,10 @@ class EzsigndocumentGetTemporaryProofV1ResponseAllOf {
   static Map<String, List<EzsigndocumentGetTemporaryProofV1ResponseAllOf>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsigndocumentGetTemporaryProofV1ResponseAllOf>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsigndocumentGetTemporaryProofV1ResponseAllOf.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsigndocumentGetTemporaryProofV1ResponseAllOf.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

@@ -55,13 +55,13 @@ class EzsigntemplatedocumentEditObjectV1ResponseAllOf {
       }());
 
       return EzsigntemplatedocumentEditObjectV1ResponseAllOf(
-        aObjWarning: CommonResponseWarning.listFromJson(json[r'a_objWarning']) ?? const [],
+        aObjWarning: CommonResponseWarning.listFromJson(json[r'a_objWarning']),
       );
     }
     return null;
   }
 
-  static List<EzsigntemplatedocumentEditObjectV1ResponseAllOf>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsigntemplatedocumentEditObjectV1ResponseAllOf> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsigntemplatedocumentEditObjectV1ResponseAllOf>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -92,12 +92,10 @@ class EzsigntemplatedocumentEditObjectV1ResponseAllOf {
   static Map<String, List<EzsigntemplatedocumentEditObjectV1ResponseAllOf>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsigntemplatedocumentEditObjectV1ResponseAllOf>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsigntemplatedocumentEditObjectV1ResponseAllOf.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsigntemplatedocumentEditObjectV1ResponseAllOf.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

@@ -118,13 +118,13 @@ class CustomNotificationsubsectiongetnotificationtestsResponse {
         objNotificationsubsectionName: MultilingualNotificationsubsectionName.fromJson(json[r'objNotificationsubsectionName']),
         sNotificationsectionNameX: mapValueOfType<String>(json, r'sNotificationsectionNameX'),
         sNotificationsubsectionNameX: mapValueOfType<String>(json, r'sNotificationsubsectionNameX')!,
-        aObjNotificationtest: CustomNotificationtestgetnotificationtestsResponse.listFromJson(json[r'a_objNotificationtest'])!,
+        aObjNotificationtest: CustomNotificationtestgetnotificationtestsResponse.listFromJson(json[r'a_objNotificationtest']),
       );
     }
     return null;
   }
 
-  static List<CustomNotificationsubsectiongetnotificationtestsResponse>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<CustomNotificationsubsectiongetnotificationtestsResponse> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <CustomNotificationsubsectiongetnotificationtestsResponse>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -155,12 +155,10 @@ class CustomNotificationsubsectiongetnotificationtestsResponse {
   static Map<String, List<CustomNotificationsubsectiongetnotificationtestsResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<CustomNotificationsubsectiongetnotificationtestsResponse>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = CustomNotificationsubsectiongetnotificationtestsResponse.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = CustomNotificationsubsectiongetnotificationtestsResponse.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

@@ -67,15 +67,15 @@ class EzsignformfieldgroupResponseCompoundAllOf {
       }());
 
       return EzsignformfieldgroupResponseCompoundAllOf(
-        aObjEzsignformfield: EzsignformfieldResponseCompound.listFromJson(json[r'a_objEzsignformfield'])!,
-        aObjDropdownElement: CustomDropdownElementResponseCompound.listFromJson(json[r'a_objDropdownElement']) ?? const [],
-        aObjEzsignformfieldgroupsigner: EzsignformfieldgroupsignerResponseCompound.listFromJson(json[r'a_objEzsignformfieldgroupsigner'])!,
+        aObjEzsignformfield: EzsignformfieldResponseCompound.listFromJson(json[r'a_objEzsignformfield']),
+        aObjDropdownElement: CustomDropdownElementResponseCompound.listFromJson(json[r'a_objDropdownElement']),
+        aObjEzsignformfieldgroupsigner: EzsignformfieldgroupsignerResponseCompound.listFromJson(json[r'a_objEzsignformfieldgroupsigner']),
       );
     }
     return null;
   }
 
-  static List<EzsignformfieldgroupResponseCompoundAllOf>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsignformfieldgroupResponseCompoundAllOf> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsignformfieldgroupResponseCompoundAllOf>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -106,12 +106,10 @@ class EzsignformfieldgroupResponseCompoundAllOf {
   static Map<String, List<EzsignformfieldgroupResponseCompoundAllOf>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignformfieldgroupResponseCompoundAllOf>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsignformfieldgroupResponseCompoundAllOf.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsignformfieldgroupResponseCompoundAllOf.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

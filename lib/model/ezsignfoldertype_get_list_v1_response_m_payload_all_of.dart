@@ -56,13 +56,13 @@ class EzsignfoldertypeGetListV1ResponseMPayloadAllOf {
       }());
 
       return EzsignfoldertypeGetListV1ResponseMPayloadAllOf(
-        aObjEzsignfoldertype: EzsignfoldertypeListElement.listFromJson(json[r'a_objEzsignfoldertype'])!,
+        aObjEzsignfoldertype: EzsignfoldertypeListElement.listFromJson(json[r'a_objEzsignfoldertype']),
       );
     }
     return null;
   }
 
-  static List<EzsignfoldertypeGetListV1ResponseMPayloadAllOf>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsignfoldertypeGetListV1ResponseMPayloadAllOf> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsignfoldertypeGetListV1ResponseMPayloadAllOf>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -93,12 +93,10 @@ class EzsignfoldertypeGetListV1ResponseMPayloadAllOf {
   static Map<String, List<EzsignfoldertypeGetListV1ResponseMPayloadAllOf>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignfoldertypeGetListV1ResponseMPayloadAllOf>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsignfoldertypeGetListV1ResponseMPayloadAllOf.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsignfoldertypeGetListV1ResponseMPayloadAllOf.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

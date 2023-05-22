@@ -61,7 +61,7 @@ class EzsignfolderGetFormsDataV1ResponseMPayload {
     return null;
   }
 
-  static List<EzsignfolderGetFormsDataV1ResponseMPayload>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsignfolderGetFormsDataV1ResponseMPayload> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsignfolderGetFormsDataV1ResponseMPayload>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -92,12 +92,10 @@ class EzsignfolderGetFormsDataV1ResponseMPayload {
   static Map<String, List<EzsignfolderGetFormsDataV1ResponseMPayload>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignfolderGetFormsDataV1ResponseMPayload>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsignfolderGetFormsDataV1ResponseMPayload.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsignfolderGetFormsDataV1ResponseMPayload.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

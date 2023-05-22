@@ -67,15 +67,15 @@ class EzsigntemplateformfieldgroupRequestCompoundAllOf {
       }());
 
       return EzsigntemplateformfieldgroupRequestCompoundAllOf(
-        aObjEzsigntemplateformfieldgroupsigner: EzsigntemplateformfieldgroupsignerRequestCompound.listFromJson(json[r'a_objEzsigntemplateformfieldgroupsigner'])!,
-        aObjDropdownElement: CustomDropdownElementRequestCompound.listFromJson(json[r'a_objDropdownElement']) ?? const [],
-        aObjEzsigntemplateformfield: EzsigntemplateformfieldRequestCompound.listFromJson(json[r'a_objEzsigntemplateformfield'])!,
+        aObjEzsigntemplateformfieldgroupsigner: EzsigntemplateformfieldgroupsignerRequestCompound.listFromJson(json[r'a_objEzsigntemplateformfieldgroupsigner']),
+        aObjDropdownElement: CustomDropdownElementRequestCompound.listFromJson(json[r'a_objDropdownElement']),
+        aObjEzsigntemplateformfield: EzsigntemplateformfieldRequestCompound.listFromJson(json[r'a_objEzsigntemplateformfield']),
       );
     }
     return null;
   }
 
-  static List<EzsigntemplateformfieldgroupRequestCompoundAllOf>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsigntemplateformfieldgroupRequestCompoundAllOf> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsigntemplateformfieldgroupRequestCompoundAllOf>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -106,12 +106,10 @@ class EzsigntemplateformfieldgroupRequestCompoundAllOf {
   static Map<String, List<EzsigntemplateformfieldgroupRequestCompoundAllOf>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsigntemplateformfieldgroupRequestCompoundAllOf>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsigntemplateformfieldgroupRequestCompoundAllOf.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsigntemplateformfieldgroupRequestCompoundAllOf.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

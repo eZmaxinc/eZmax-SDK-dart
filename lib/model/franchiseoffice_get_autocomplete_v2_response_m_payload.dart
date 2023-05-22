@@ -56,13 +56,13 @@ class FranchiseofficeGetAutocompleteV2ResponseMPayload {
       }());
 
       return FranchiseofficeGetAutocompleteV2ResponseMPayload(
-        aObjFranchiseoffice: FranchiseofficeAutocompleteElementResponse.listFromJson(json[r'a_objFranchiseoffice']) ?? const [],
+        aObjFranchiseoffice: FranchiseofficeAutocompleteElementResponse.listFromJson(json[r'a_objFranchiseoffice']),
       );
     }
     return null;
   }
 
-  static List<FranchiseofficeGetAutocompleteV2ResponseMPayload>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<FranchiseofficeGetAutocompleteV2ResponseMPayload> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FranchiseofficeGetAutocompleteV2ResponseMPayload>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -93,12 +93,10 @@ class FranchiseofficeGetAutocompleteV2ResponseMPayload {
   static Map<String, List<FranchiseofficeGetAutocompleteV2ResponseMPayload>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<FranchiseofficeGetAutocompleteV2ResponseMPayload>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = FranchiseofficeGetAutocompleteV2ResponseMPayload.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = FranchiseofficeGetAutocompleteV2ResponseMPayload.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

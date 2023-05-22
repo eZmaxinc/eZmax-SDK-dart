@@ -36,7 +36,7 @@ class FieldEEzsignfoldertypeDisposal {
 
   static FieldEEzsignfoldertypeDisposal? fromJson(dynamic value) => FieldEEzsignfoldertypeDisposalTypeTransformer().decode(value);
 
-  static List<FieldEEzsignfoldertypeDisposal>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<FieldEEzsignfoldertypeDisposal> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsignfoldertypeDisposal>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

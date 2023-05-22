@@ -90,7 +90,7 @@ class MultilingualVariableexpenseDescription {
     return null;
   }
 
-  static List<MultilingualVariableexpenseDescription>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<MultilingualVariableexpenseDescription> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <MultilingualVariableexpenseDescription>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -121,12 +121,10 @@ class MultilingualVariableexpenseDescription {
   static Map<String, List<MultilingualVariableexpenseDescription>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<MultilingualVariableexpenseDescription>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = MultilingualVariableexpenseDescription.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = MultilingualVariableexpenseDescription.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

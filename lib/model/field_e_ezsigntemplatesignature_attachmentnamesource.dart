@@ -36,7 +36,7 @@ class FieldEEzsigntemplatesignatureAttachmentnamesource {
 
   static FieldEEzsigntemplatesignatureAttachmentnamesource? fromJson(dynamic value) => FieldEEzsigntemplatesignatureAttachmentnamesourceTypeTransformer().decode(value);
 
-  static List<FieldEEzsigntemplatesignatureAttachmentnamesource>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<FieldEEzsigntemplatesignatureAttachmentnamesource> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsigntemplatesignatureAttachmentnamesource>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

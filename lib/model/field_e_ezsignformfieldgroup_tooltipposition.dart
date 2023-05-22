@@ -46,7 +46,7 @@ class FieldEEzsignformfieldgroupTooltipposition {
 
   static FieldEEzsignformfieldgroupTooltipposition? fromJson(dynamic value) => FieldEEzsignformfieldgroupTooltippositionTypeTransformer().decode(value);
 
-  static List<FieldEEzsignformfieldgroupTooltipposition>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<FieldEEzsignformfieldgroupTooltipposition> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsignformfieldgroupTooltipposition>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

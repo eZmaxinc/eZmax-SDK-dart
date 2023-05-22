@@ -105,16 +105,16 @@ class ContactinformationsRequestCompound {
         iPhoneDefault: mapValueOfType<int>(json, r'iPhoneDefault')!,
         iEmailDefault: mapValueOfType<int>(json, r'iEmailDefault')!,
         iWebsiteDefault: mapValueOfType<int>(json, r'iWebsiteDefault')!,
-        aObjAddress: AddressRequestCompound.listFromJson(json[r'a_objAddress'])!,
-        aObjPhone: PhoneRequestCompound.listFromJson(json[r'a_objPhone'])!,
-        aObjEmail: EmailRequestCompound.listFromJson(json[r'a_objEmail'])!,
-        aObjWebsite: WebsiteRequestCompound.listFromJson(json[r'a_objWebsite'])!,
+        aObjAddress: AddressRequestCompound.listFromJson(json[r'a_objAddress']),
+        aObjPhone: PhoneRequestCompound.listFromJson(json[r'a_objPhone']),
+        aObjEmail: EmailRequestCompound.listFromJson(json[r'a_objEmail']),
+        aObjWebsite: WebsiteRequestCompound.listFromJson(json[r'a_objWebsite']),
       );
     }
     return null;
   }
 
-  static List<ContactinformationsRequestCompound>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<ContactinformationsRequestCompound> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <ContactinformationsRequestCompound>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -145,12 +145,10 @@ class ContactinformationsRequestCompound {
   static Map<String, List<ContactinformationsRequestCompound>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<ContactinformationsRequestCompound>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = ContactinformationsRequestCompound.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = ContactinformationsRequestCompound.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

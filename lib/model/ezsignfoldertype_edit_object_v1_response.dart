@@ -88,7 +88,7 @@ class EzsignfoldertypeEditObjectV1Response {
     return null;
   }
 
-  static List<EzsignfoldertypeEditObjectV1Response>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsignfoldertypeEditObjectV1Response> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsignfoldertypeEditObjectV1Response>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -119,12 +119,10 @@ class EzsignfoldertypeEditObjectV1Response {
   static Map<String, List<EzsignfoldertypeEditObjectV1Response>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignfoldertypeEditObjectV1Response>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsignfoldertypeEditObjectV1Response.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsignfoldertypeEditObjectV1Response.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

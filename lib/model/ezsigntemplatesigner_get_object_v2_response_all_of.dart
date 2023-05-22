@@ -61,7 +61,7 @@ class EzsigntemplatesignerGetObjectV2ResponseAllOf {
     return null;
   }
 
-  static List<EzsigntemplatesignerGetObjectV2ResponseAllOf>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsigntemplatesignerGetObjectV2ResponseAllOf> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsigntemplatesignerGetObjectV2ResponseAllOf>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -92,12 +92,10 @@ class EzsigntemplatesignerGetObjectV2ResponseAllOf {
   static Map<String, List<EzsigntemplatesignerGetObjectV2ResponseAllOf>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsigntemplatesignerGetObjectV2ResponseAllOf>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsigntemplatesignerGetObjectV2ResponseAllOf.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsigntemplatesignerGetObjectV2ResponseAllOf.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

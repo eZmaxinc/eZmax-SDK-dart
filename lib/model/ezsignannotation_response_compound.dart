@@ -218,7 +218,7 @@ class EzsignannotationResponseCompound {
     return null;
   }
 
-  static List<EzsignannotationResponseCompound>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsignannotationResponseCompound> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsignannotationResponseCompound>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -249,12 +249,10 @@ class EzsignannotationResponseCompound {
   static Map<String, List<EzsignannotationResponseCompound>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignannotationResponseCompound>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsignannotationResponseCompound.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsignannotationResponseCompound.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

@@ -72,7 +72,7 @@ class EmailstaticResponseCompound {
     return null;
   }
 
-  static List<EmailstaticResponseCompound>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EmailstaticResponseCompound> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EmailstaticResponseCompound>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -103,12 +103,10 @@ class EmailstaticResponseCompound {
   static Map<String, List<EmailstaticResponseCompound>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EmailstaticResponseCompound>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EmailstaticResponseCompound.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EmailstaticResponseCompound.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

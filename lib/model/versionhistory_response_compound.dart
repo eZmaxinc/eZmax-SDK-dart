@@ -205,7 +205,7 @@ class VersionhistoryResponseCompound {
     return null;
   }
 
-  static List<VersionhistoryResponseCompound>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<VersionhistoryResponseCompound> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <VersionhistoryResponseCompound>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -236,12 +236,10 @@ class VersionhistoryResponseCompound {
   static Map<String, List<VersionhistoryResponseCompound>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<VersionhistoryResponseCompound>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = VersionhistoryResponseCompound.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = VersionhistoryResponseCompound.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

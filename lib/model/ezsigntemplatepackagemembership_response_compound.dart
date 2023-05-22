@@ -102,13 +102,13 @@ class EzsigntemplatepackagemembershipResponseCompound {
         fkiEzsigntemplateID: mapValueOfType<int>(json, r'fkiEzsigntemplateID')!,
         iEzsigntemplatepackagemembershipOrder: mapValueOfType<int>(json, r'iEzsigntemplatepackagemembershipOrder')!,
         objEzsigntemplate: EzsigntemplateResponseCompound.fromJson(json[r'objEzsigntemplate'])!,
-        aObjEzsigntemplatepackagesignermembership: EzsigntemplatepackagesignermembershipResponseCompound.listFromJson(json[r'a_objEzsigntemplatepackagesignermembership'])!,
+        aObjEzsigntemplatepackagesignermembership: EzsigntemplatepackagesignermembershipResponseCompound.listFromJson(json[r'a_objEzsigntemplatepackagesignermembership']),
       );
     }
     return null;
   }
 
-  static List<EzsigntemplatepackagemembershipResponseCompound>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsigntemplatepackagemembershipResponseCompound> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsigntemplatepackagemembershipResponseCompound>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -139,12 +139,10 @@ class EzsigntemplatepackagemembershipResponseCompound {
   static Map<String, List<EzsigntemplatepackagemembershipResponseCompound>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsigntemplatepackagemembershipResponseCompound>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsigntemplatepackagemembershipResponseCompound.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsigntemplatepackagemembershipResponseCompound.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

@@ -70,7 +70,7 @@ class CustomDropdownElementRequestCompound {
     return null;
   }
 
-  static List<CustomDropdownElementRequestCompound>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<CustomDropdownElementRequestCompound> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <CustomDropdownElementRequestCompound>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -101,12 +101,10 @@ class CustomDropdownElementRequestCompound {
   static Map<String, List<CustomDropdownElementRequestCompound>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<CustomDropdownElementRequestCompound>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = CustomDropdownElementRequestCompound.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = CustomDropdownElementRequestCompound.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

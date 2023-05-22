@@ -38,7 +38,7 @@ class FieldEVersionhistoryUsertype {
 
   static FieldEVersionhistoryUsertype? fromJson(dynamic value) => FieldEVersionhistoryUsertypeTypeTransformer().decode(value);
 
-  static List<FieldEVersionhistoryUsertype>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<FieldEVersionhistoryUsertype> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEVersionhistoryUsertype>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

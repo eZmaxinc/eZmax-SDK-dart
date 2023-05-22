@@ -78,7 +78,7 @@ class FieldEEzsigndocumentlogType {
 
   static FieldEEzsigndocumentlogType? fromJson(dynamic value) => FieldEEzsigndocumentlogTypeTypeTransformer().decode(value);
 
-  static List<FieldEEzsigndocumentlogType>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<FieldEEzsigndocumentlogType> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsigndocumentlogType>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

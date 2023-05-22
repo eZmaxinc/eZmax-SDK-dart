@@ -158,7 +158,7 @@ class CustomEzsignfoldersignerassociationActionableElementResponse {
     return null;
   }
 
-  static List<CustomEzsignfoldersignerassociationActionableElementResponse>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<CustomEzsignfoldersignerassociationActionableElementResponse> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <CustomEzsignfoldersignerassociationActionableElementResponse>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -189,12 +189,10 @@ class CustomEzsignfoldersignerassociationActionableElementResponse {
   static Map<String, List<CustomEzsignfoldersignerassociationActionableElementResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<CustomEzsignfoldersignerassociationActionableElementResponse>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = CustomEzsignfoldersignerassociationActionableElementResponse.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = CustomEzsignfoldersignerassociationActionableElementResponse.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

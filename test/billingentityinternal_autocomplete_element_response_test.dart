@@ -16,15 +16,15 @@ void main() {
   // final instance = BillingentityinternalAutocompleteElementResponse();
 
   group('test BillingentityinternalAutocompleteElementResponse', () {
-    // The description of the Billingentityinternal in the language of the requester
-    // String sBillingentityinternalDescriptionX
-    test('to test the property `sBillingentityinternalDescriptionX`', () async {
-      // TODO
-    });
-
     // The unique ID of the Billingentityinternal.
     // int pkiBillingentityinternalID
     test('to test the property `pkiBillingentityinternalID`', () async {
+      // TODO
+    });
+
+    // The description of the Billingentityinternal in the language of the requester
+    // String sBillingentityinternalDescriptionX
+    test('to test the property `sBillingentityinternalDescriptionX`', () async {
       // TODO
     });
 

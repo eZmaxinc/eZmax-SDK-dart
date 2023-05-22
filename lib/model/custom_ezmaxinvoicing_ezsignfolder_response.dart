@@ -104,7 +104,7 @@ class CustomEzmaxinvoicingEzsignfolderResponse {
     return null;
   }
 
-  static List<CustomEzmaxinvoicingEzsignfolderResponse>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<CustomEzmaxinvoicingEzsignfolderResponse> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <CustomEzmaxinvoicingEzsignfolderResponse>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -135,12 +135,10 @@ class CustomEzmaxinvoicingEzsignfolderResponse {
   static Map<String, List<CustomEzmaxinvoicingEzsignfolderResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<CustomEzmaxinvoicingEzsignfolderResponse>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = CustomEzmaxinvoicingEzsignfolderResponse.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = CustomEzmaxinvoicingEzsignfolderResponse.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

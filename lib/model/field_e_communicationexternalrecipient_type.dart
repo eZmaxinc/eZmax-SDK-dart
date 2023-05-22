@@ -36,7 +36,7 @@ class FieldECommunicationexternalrecipientType {
 
   static FieldECommunicationexternalrecipientType? fromJson(dynamic value) => FieldECommunicationexternalrecipientTypeTypeTransformer().decode(value);
 
-  static List<FieldECommunicationexternalrecipientType>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<FieldECommunicationexternalrecipientType> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldECommunicationexternalrecipientType>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

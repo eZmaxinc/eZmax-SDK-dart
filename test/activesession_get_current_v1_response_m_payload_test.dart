@@ -21,6 +21,11 @@ void main() {
       // TODO
     });
 
+    // FieldEActivesessionOrigin eActivesessionOrigin
+    test('to test the property `eActivesessionOrigin`', () async {
+      // TODO
+    });
+
     // FieldEActivesessionWeekdaystart eActivesessionWeekdaystart
     test('to test the property `eActivesessionWeekdaystart`', () async {
       // TODO

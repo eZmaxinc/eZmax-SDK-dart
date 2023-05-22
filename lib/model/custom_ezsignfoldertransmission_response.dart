@@ -96,13 +96,13 @@ class CustomEzsignfoldertransmissionResponse {
         eEzsignfolderStep: FieldEEzsignfolderStep.fromJson(json[r'eEzsignfolderStep'])!,
         iEzsignfolderSignaturetotal: mapValueOfType<int>(json, r'iEzsignfolderSignaturetotal')!,
         iEzsignfolderSignaturesigned: mapValueOfType<int>(json, r'iEzsignfolderSignaturesigned')!,
-        aObjEzsignfoldertransmissionSigner: CustomEzsignfoldertransmissionSignerResponse.listFromJson(json[r'a_objEzsignfoldertransmissionSigner'])!,
+        aObjEzsignfoldertransmissionSigner: CustomEzsignfoldertransmissionSignerResponse.listFromJson(json[r'a_objEzsignfoldertransmissionSigner']),
       );
     }
     return null;
   }
 
-  static List<CustomEzsignfoldertransmissionResponse>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<CustomEzsignfoldertransmissionResponse> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <CustomEzsignfoldertransmissionResponse>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -133,12 +133,10 @@ class CustomEzsignfoldertransmissionResponse {
   static Map<String, List<CustomEzsignfoldertransmissionResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<CustomEzsignfoldertransmissionResponse>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = CustomEzsignfoldertransmissionResponse.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = CustomEzsignfoldertransmissionResponse.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

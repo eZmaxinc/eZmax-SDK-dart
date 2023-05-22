@@ -154,14 +154,14 @@ class EzsignbulksendResponseCompound {
         bEzsignbulksendNeedvalidation: mapValueOfType<bool>(json, r'bEzsignbulksendNeedvalidation')!,
         bEzsignbulksendIsactive: mapValueOfType<bool>(json, r'bEzsignbulksendIsactive')!,
         objAudit: CommonAudit.fromJson(json[r'objAudit'])!,
-        aObjEzsignbulksenddocumentmapping: EzsignbulksenddocumentmappingResponseCompound.listFromJson(json[r'a_objEzsignbulksenddocumentmapping'])!,
-        aObjEzsignbulksendsignermapping: EzsignbulksendsignermappingResponse.listFromJson(json[r'a_objEzsignbulksendsignermapping'])!,
+        aObjEzsignbulksenddocumentmapping: EzsignbulksenddocumentmappingResponseCompound.listFromJson(json[r'a_objEzsignbulksenddocumentmapping']),
+        aObjEzsignbulksendsignermapping: EzsignbulksendsignermappingResponse.listFromJson(json[r'a_objEzsignbulksendsignermapping']),
       );
     }
     return null;
   }
 
-  static List<EzsignbulksendResponseCompound>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsignbulksendResponseCompound> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsignbulksendResponseCompound>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -192,12 +192,10 @@ class EzsignbulksendResponseCompound {
   static Map<String, List<EzsignbulksendResponseCompound>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignbulksendResponseCompound>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsignbulksendResponseCompound.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsignbulksendResponseCompound.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

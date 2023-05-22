@@ -40,7 +40,7 @@ class FieldEEzsignformfieldgroupType {
 
   static FieldEEzsignformfieldgroupType? fromJson(dynamic value) => FieldEEzsignformfieldgroupTypeTypeTransformer().decode(value);
 
-  static List<FieldEEzsignformfieldgroupType>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<FieldEEzsignformfieldgroupType> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsignformfieldgroupType>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

@@ -55,13 +55,13 @@ class ActivesessionGetListV1ResponseMPayloadAllOf {
       }());
 
       return ActivesessionGetListV1ResponseMPayloadAllOf(
-        aObjActivesession: ActivesessionListElement.listFromJson(json[r'a_objActivesession'])!,
+        aObjActivesession: ActivesessionListElement.listFromJson(json[r'a_objActivesession']),
       );
     }
     return null;
   }
 
-  static List<ActivesessionGetListV1ResponseMPayloadAllOf>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<ActivesessionGetListV1ResponseMPayloadAllOf> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <ActivesessionGetListV1ResponseMPayloadAllOf>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -92,12 +92,10 @@ class ActivesessionGetListV1ResponseMPayloadAllOf {
   static Map<String, List<ActivesessionGetListV1ResponseMPayloadAllOf>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<ActivesessionGetListV1ResponseMPayloadAllOf>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = ActivesessionGetListV1ResponseMPayloadAllOf.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = ActivesessionGetListV1ResponseMPayloadAllOf.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

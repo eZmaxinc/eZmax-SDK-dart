@@ -140,14 +140,14 @@ class EzsigntemplatepackageResponseCompound {
         bEzsigntemplatepackageNeedvalidation: mapValueOfType<bool>(json, r'bEzsigntemplatepackageNeedvalidation')!,
         bEzsigntemplatepackageIsactive: mapValueOfType<bool>(json, r'bEzsigntemplatepackageIsactive')!,
         sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX')!,
-        aObjEzsigntemplatepackagesigner: EzsigntemplatepackagesignerResponseCompound.listFromJson(json[r'a_objEzsigntemplatepackagesigner'])!,
-        aObjEzsigntemplatepackagemembership: EzsigntemplatepackagemembershipResponseCompound.listFromJson(json[r'a_objEzsigntemplatepackagemembership'])!,
+        aObjEzsigntemplatepackagesigner: EzsigntemplatepackagesignerResponseCompound.listFromJson(json[r'a_objEzsigntemplatepackagesigner']),
+        aObjEzsigntemplatepackagemembership: EzsigntemplatepackagemembershipResponseCompound.listFromJson(json[r'a_objEzsigntemplatepackagemembership']),
       );
     }
     return null;
   }
 
-  static List<EzsigntemplatepackageResponseCompound>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsigntemplatepackageResponseCompound> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsigntemplatepackageResponseCompound>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -178,12 +178,10 @@ class EzsigntemplatepackageResponseCompound {
   static Map<String, List<EzsigntemplatepackageResponseCompound>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsigntemplatepackageResponseCompound>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsigntemplatepackageResponseCompound.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsigntemplatepackageResponseCompound.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

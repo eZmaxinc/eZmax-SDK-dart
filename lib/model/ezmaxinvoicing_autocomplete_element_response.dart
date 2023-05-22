@@ -80,7 +80,7 @@ class EzmaxinvoicingAutocompleteElementResponse {
     return null;
   }
 
-  static List<EzmaxinvoicingAutocompleteElementResponse>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzmaxinvoicingAutocompleteElementResponse> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzmaxinvoicingAutocompleteElementResponse>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -111,12 +111,10 @@ class EzmaxinvoicingAutocompleteElementResponse {
   static Map<String, List<EzmaxinvoicingAutocompleteElementResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzmaxinvoicingAutocompleteElementResponse>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzmaxinvoicingAutocompleteElementResponse.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzmaxinvoicingAutocompleteElementResponse.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

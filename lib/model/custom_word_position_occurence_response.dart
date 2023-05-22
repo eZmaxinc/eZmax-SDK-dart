@@ -114,7 +114,7 @@ class CustomWordPositionOccurenceResponse {
     return null;
   }
 
-  static List<CustomWordPositionOccurenceResponse>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<CustomWordPositionOccurenceResponse> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <CustomWordPositionOccurenceResponse>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -145,12 +145,10 @@ class CustomWordPositionOccurenceResponse {
   static Map<String, List<CustomWordPositionOccurenceResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<CustomWordPositionOccurenceResponse>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = CustomWordPositionOccurenceResponse.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = CustomWordPositionOccurenceResponse.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

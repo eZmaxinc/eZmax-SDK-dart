@@ -100,7 +100,7 @@ class PhonestaticResponseCompound {
     return null;
   }
 
-  static List<PhonestaticResponseCompound>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<PhonestaticResponseCompound> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <PhonestaticResponseCompound>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -131,12 +131,10 @@ class PhonestaticResponseCompound {
   static Map<String, List<PhonestaticResponseCompound>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<PhonestaticResponseCompound>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = PhonestaticResponseCompound.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = PhonestaticResponseCompound.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

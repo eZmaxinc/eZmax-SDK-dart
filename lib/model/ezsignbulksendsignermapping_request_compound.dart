@@ -112,7 +112,7 @@ class EzsignbulksendsignermappingRequestCompound {
     return null;
   }
 
-  static List<EzsignbulksendsignermappingRequestCompound>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsignbulksendsignermappingRequestCompound> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsignbulksendsignermappingRequestCompound>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -143,12 +143,10 @@ class EzsignbulksendsignermappingRequestCompound {
   static Map<String, List<EzsignbulksendsignermappingRequestCompound>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignbulksendsignermappingRequestCompound>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsignbulksendsignermappingRequestCompound.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsignbulksendsignermappingRequestCompound.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

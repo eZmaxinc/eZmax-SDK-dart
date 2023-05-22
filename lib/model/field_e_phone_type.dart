@@ -34,7 +34,7 @@ class FieldEPhoneType {
 
   static FieldEPhoneType? fromJson(dynamic value) => FieldEPhoneTypeTypeTransformer().decode(value);
 
-  static List<FieldEPhoneType>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<FieldEPhoneType> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEPhoneType>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

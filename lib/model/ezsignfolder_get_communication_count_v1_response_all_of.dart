@@ -61,7 +61,7 @@ class EzsignfolderGetCommunicationCountV1ResponseAllOf {
     return null;
   }
 
-  static List<EzsignfolderGetCommunicationCountV1ResponseAllOf>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsignfolderGetCommunicationCountV1ResponseAllOf> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsignfolderGetCommunicationCountV1ResponseAllOf>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -92,12 +92,10 @@ class EzsignfolderGetCommunicationCountV1ResponseAllOf {
   static Map<String, List<EzsignfolderGetCommunicationCountV1ResponseAllOf>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignfolderGetCommunicationCountV1ResponseAllOf>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsignfolderGetCommunicationCountV1ResponseAllOf.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsignfolderGetCommunicationCountV1ResponseAllOf.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

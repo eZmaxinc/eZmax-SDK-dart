@@ -256,15 +256,15 @@ class EzsigntemplateformfieldgroupRequestCompound {
         sEzsigntemplateformfieldgroupRegexp: mapValueOfType<String>(json, r'sEzsigntemplateformfieldgroupRegexp'),
         tEzsigntemplateformfieldgroupTooltip: mapValueOfType<String>(json, r'tEzsigntemplateformfieldgroupTooltip'),
         eEzsigntemplateformfieldgroupTooltipposition: FieldEEzsigntemplateformfieldgroupTooltipposition.fromJson(json[r'eEzsigntemplateformfieldgroupTooltipposition']),
-        aObjEzsigntemplateformfieldgroupsigner: EzsigntemplateformfieldgroupsignerRequestCompound.listFromJson(json[r'a_objEzsigntemplateformfieldgroupsigner'])!,
-        aObjDropdownElement: CustomDropdownElementRequestCompound.listFromJson(json[r'a_objDropdownElement']) ?? const [],
-        aObjEzsigntemplateformfield: EzsigntemplateformfieldRequestCompound.listFromJson(json[r'a_objEzsigntemplateformfield'])!,
+        aObjEzsigntemplateformfieldgroupsigner: EzsigntemplateformfieldgroupsignerRequestCompound.listFromJson(json[r'a_objEzsigntemplateformfieldgroupsigner']),
+        aObjDropdownElement: CustomDropdownElementRequestCompound.listFromJson(json[r'a_objDropdownElement']),
+        aObjEzsigntemplateformfield: EzsigntemplateformfieldRequestCompound.listFromJson(json[r'a_objEzsigntemplateformfield']),
       );
     }
     return null;
   }
 
-  static List<EzsigntemplateformfieldgroupRequestCompound>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsigntemplateformfieldgroupRequestCompound> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsigntemplateformfieldgroupRequestCompound>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -295,12 +295,10 @@ class EzsigntemplateformfieldgroupRequestCompound {
   static Map<String, List<EzsigntemplateformfieldgroupRequestCompound>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsigntemplateformfieldgroupRequestCompound>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsigntemplateformfieldgroupRequestCompound.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsigntemplateformfieldgroupRequestCompound.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

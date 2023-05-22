@@ -66,6 +66,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *GlobalCustomerApi* | [**globalCustomerGetEndpointV1**](doc//GlobalCustomerApi.md#globalcustomergetendpointv1) | **GET** /1/customer/{pksCustomerCode}/endpoint | Get customer endpoint
 *GlobalEzmaxclientApi* | [**globalEzmaxclientVersionV1**](doc//GlobalEzmaxclientApi.md#globalezmaxclientversionv1) | **GET** /1/ezmaxclient/{pksEzmaxclientOs}/version | Retrieve the latest version of the Ezmaxclient
+*GlobalEzmaxcustomerApi* | [**globalEzmaxcustomerGetConfigurationV1**](doc//GlobalEzmaxcustomerApi.md#globalezmaxcustomergetconfigurationv1) | **GET** /1/ezmaxcustomer/{pksEzmaxcustomerCode}/getConfiguration | Get ezmaxcustomer configuration
 *ModuleEzsignApi* | [**ezsignSuggestSignersV1**](doc//ModuleEzsignApi.md#ezsignsuggestsignersv1) | **GET** /1/module/ezsign/suggestSigners | Suggest signers
 *ModuleEzsignApi* | [**ezsignSuggestTemplatesV1**](doc//ModuleEzsignApi.md#ezsignsuggesttemplatesv1) | **GET** /1/module/ezsign/suggestTemplates | Suggest templates
 *ModuleUserApi* | [**userCreateEzsignuserV1**](doc//ModuleUserApi.md#usercreateezsignuserv1) | **POST** /1/module/user/createezsignuser | Create a new User of type Ezsignuser
@@ -83,6 +84,7 @@ Class | Method | HTTP request | Description
 *ObjectBrandingApi* | [**brandingGetAutocompleteV2**](doc//ObjectBrandingApi.md#brandinggetautocompletev2) | **GET** /2/object/branding/getAutocomplete/{sSelector} | Retrieve Brandings and IDs
 *ObjectBrandingApi* | [**brandingGetListV1**](doc//ObjectBrandingApi.md#brandinggetlistv1) | **GET** /1/object/branding/getList | Retrieve Branding list
 *ObjectBrandingApi* | [**brandingGetObjectV2**](doc//ObjectBrandingApi.md#brandinggetobjectv2) | **GET** /2/object/branding/{pkiBrandingID} | Retrieve an existing Branding
+*ObjectClonehistoryApi* | [**clonehistoryGetListV1**](doc//ObjectClonehistoryApi.md#clonehistorygetlistv1) | **GET** /1/object/clonehistory/getList | Retrieve Clonehistory list
 *ObjectCommunicationApi* | [**communicationGetObjectV2**](doc//ObjectCommunicationApi.md#communicationgetobjectv2) | **GET** /2/object/communication/{pkiCommunicationID} | Retrieve an existing Communication
 *ObjectDepartmentApi* | [**departmentGetAutocompleteV2**](doc//ObjectDepartmentApi.md#departmentgetautocompletev2) | **GET** /2/object/department/getAutocomplete/{sSelector} | Retrieve Departments and IDs
 *ObjectEzmaxinvoicingApi* | [**ezmaxinvoicingGetAutocompleteV1**](doc//ObjectEzmaxinvoicingApi.md#ezmaxinvoicinggetautocompletev1) | **GET** /1/object/ezmaxinvoicing/getAutocomplete/{sSelector} | Retrieve Ezmaxinvoicings and IDs
@@ -121,6 +123,7 @@ Class | Method | HTTP request | Description
 *ObjectEzsigndocumentApi* | [**ezsigndocumentEndPrematurelyV1**](doc//ObjectEzsigndocumentApi.md#ezsigndocumentendprematurelyv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/endPrematurely | End prematurely
 *ObjectEzsigndocumentApi* | [**ezsigndocumentFlattenV1**](doc//ObjectEzsigndocumentApi.md#ezsigndocumentflattenv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/flatten | Flatten
 *ObjectEzsigndocumentApi* | [**ezsigndocumentGetActionableElementsV1**](doc//ObjectEzsigndocumentApi.md#ezsigndocumentgetactionableelementsv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements | Retrieve actionable elements for the Ezsigndocument
+*ObjectEzsigndocumentApi* | [**ezsigndocumentGetCompletedElementsV1**](doc//ObjectEzsigndocumentApi.md#ezsigndocumentgetcompletedelementsv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getCompletedElements | Retrieve completed elements for the Ezsigndocument
 *ObjectEzsigndocumentApi* | [**ezsigndocumentGetDownloadUrlV1**](doc//ObjectEzsigndocumentApi.md#ezsigndocumentgetdownloadurlv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getDownloadUrl/{eDocumentType} | Retrieve a URL to download documents.
 *ObjectEzsigndocumentApi* | [**ezsigndocumentGetEzsignannotationsV1**](doc//ObjectEzsigndocumentApi.md#ezsigndocumentgetezsignannotationsv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignannotations | Retrieve an existing Ezsigndocument's Ezsignannotations
 *ObjectEzsigndocumentApi* | [**ezsigndocumentGetEzsignformfieldgroupsV1**](doc//ObjectEzsigndocumentApi.md#ezsigndocumentgetezsignformfieldgroupsv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignformfieldgroups | Retrieve an existing Ezsigndocument's Ezsignformfieldgroups
@@ -250,6 +253,7 @@ Class | Method | HTTP request | Description
 *ObjectPeriodApi* | [**periodGetAutocompleteV1**](doc//ObjectPeriodApi.md#periodgetautocompletev1) | **GET** /1/object/period/getAutocomplete/{sSelector} | Retrieve Periods and IDs
 *ObjectPeriodApi* | [**periodGetAutocompleteV2**](doc//ObjectPeriodApi.md#periodgetautocompletev2) | **GET** /2/object/period/getAutocomplete/{sSelector} | Retrieve Periods and IDs
 *ObjectSecretquestionApi* | [**secretquestionGetAutocompleteV2**](doc//ObjectSecretquestionApi.md#secretquestiongetautocompletev2) | **GET** /2/object/secretquestion/getAutocomplete/{sSelector} | Retrieve Secretquestions and IDs
+*ObjectSessionhistoryApi* | [**sessionhistoryGetListV1**](doc//ObjectSessionhistoryApi.md#sessionhistorygetlistv1) | **GET** /1/object/sessionhistory/getList | Retrieve Sessionhistory list
 *ObjectTaxassignmentApi* | [**taxassignmentGetAutocompleteV2**](doc//ObjectTaxassignmentApi.md#taxassignmentgetautocompletev2) | **GET** /2/object/taxassignment/getAutocomplete/{sSelector} | Retrieve Taxassignments and IDs
 *ObjectTimezoneApi* | [**timezoneGetAutocompleteV2**](doc//ObjectTimezoneApi.md#timezonegetautocompletev2) | **GET** /2/object/timezone/getAutocomplete/{sSelector} | Retrieve Timezones and IDs
 *ObjectUserApi* | [**userGetAutocompleteV2**](doc//ObjectUserApi.md#usergetautocompletev2) | **GET** /2/object/user/getAutocomplete/{sSelector} | Retrieve Users and IDs
@@ -258,6 +262,10 @@ Class | Method | HTTP request | Description
 *ObjectUsergroupApi* | [**usergroupGetAutocompleteV2**](doc//ObjectUsergroupApi.md#usergroupgetautocompletev2) | **GET** /2/object/usergroup/getAutocomplete/{sSelector} | Retrieve Usergroups and IDs
 *ObjectUsergroupApi* | [**usergroupGetListV1**](doc//ObjectUsergroupApi.md#usergroupgetlistv1) | **GET** /1/object/usergroup/getList | Retrieve Usergroup list
 *ObjectUsergroupApi* | [**usergroupGetObjectV2**](doc//ObjectUsergroupApi.md#usergroupgetobjectv2) | **GET** /2/object/usergroup/{pkiUsergroupID} | Retrieve an existing Usergroup
+*ObjectUserstagedApi* | [**userstagedDeleteObjectV1**](doc//ObjectUserstagedApi.md#userstageddeleteobjectv1) | **DELETE** /1/object/userstaged/{pkiUserstagedID} | Delete an existing Userstaged
+*ObjectUserstagedApi* | [**userstagedGetListV1**](doc//ObjectUserstagedApi.md#userstagedgetlistv1) | **GET** /1/object/userstaged/getList | Retrieve Userstaged list
+*ObjectUserstagedApi* | [**userstagedGetObjectV2**](doc//ObjectUserstagedApi.md#userstagedgetobjectv2) | **GET** /2/object/userstaged/{pkiUserstagedID} | Retrieve an existing Userstaged
+*ObjectUserstagedApi* | [**userstagedMapV1**](doc//ObjectUserstagedApi.md#userstagedmapv1) | **POST** /1/object/userstaged/{pkiUserstagedID}/map | Map the Userstaged to an existing user
 *ObjectVariableexpenseApi* | [**variableexpenseCreateObjectV1**](doc//ObjectVariableexpenseApi.md#variableexpensecreateobjectv1) | **POST** /1/object/variableexpense | Create a new Variableexpense
 *ObjectVariableexpenseApi* | [**variableexpenseEditObjectV1**](doc//ObjectVariableexpenseApi.md#variableexpenseeditobjectv1) | **PUT** /1/object/variableexpense/{pkiVariableexpenseID} | Edit an existing Variableexpense
 *ObjectVariableexpenseApi* | [**variableexpenseGetAutocompleteV2**](doc//ObjectVariableexpenseApi.md#variableexpensegetautocompletev2) | **GET** /2/object/variableexpense/getAutocomplete/{sSelector} | Retrieve Variableexpenses and IDs
@@ -349,6 +357,11 @@ Class | Method | HTTP request | Description
  - [BrandingResponse](doc//BrandingResponse.md)
  - [BrandingResponseCompound](doc//BrandingResponseCompound.md)
  - [BrandingResponseCompoundAllOf](doc//BrandingResponseCompoundAllOf.md)
+ - [ClonehistoryGetListV1Response](doc//ClonehistoryGetListV1Response.md)
+ - [ClonehistoryGetListV1ResponseAllOf](doc//ClonehistoryGetListV1ResponseAllOf.md)
+ - [ClonehistoryGetListV1ResponseMPayload](doc//ClonehistoryGetListV1ResponseMPayload.md)
+ - [ClonehistoryGetListV1ResponseMPayloadAllOf](doc//ClonehistoryGetListV1ResponseMPayloadAllOf.md)
+ - [ClonehistoryListElement](doc//ClonehistoryListElement.md)
  - [CommonAudit](doc//CommonAudit.md)
  - [CommonAuditdetail](doc//CommonAuditdetail.md)
  - [CommonGetAutocompleteV1Response](doc//CommonGetAutocompleteV1Response.md)
@@ -391,6 +404,7 @@ Class | Method | HTTP request | Description
  - [CustomAutocompleteElementResponse](doc//CustomAutocompleteElementResponse.md)
  - [CustomCommunicationListElementResponse](doc//CustomCommunicationListElementResponse.md)
  - [CustomContactNameResponse](doc//CustomContactNameResponse.md)
+ - [CustomCreditcardtransactionResponse](doc//CustomCreditcardtransactionResponse.md)
  - [CustomDropdownElementRequest](doc//CustomDropdownElementRequest.md)
  - [CustomDropdownElementRequestCompound](doc//CustomDropdownElementRequestCompound.md)
  - [CustomDropdownElementResponse](doc//CustomDropdownElementResponse.md)
@@ -586,6 +600,9 @@ Class | Method | HTTP request | Description
  - [EzsigndocumentGetActionableElementsV1Response](doc//EzsigndocumentGetActionableElementsV1Response.md)
  - [EzsigndocumentGetActionableElementsV1ResponseAllOf](doc//EzsigndocumentGetActionableElementsV1ResponseAllOf.md)
  - [EzsigndocumentGetActionableElementsV1ResponseMPayload](doc//EzsigndocumentGetActionableElementsV1ResponseMPayload.md)
+ - [EzsigndocumentGetCompletedElementsV1Response](doc//EzsigndocumentGetCompletedElementsV1Response.md)
+ - [EzsigndocumentGetCompletedElementsV1ResponseAllOf](doc//EzsigndocumentGetCompletedElementsV1ResponseAllOf.md)
+ - [EzsigndocumentGetCompletedElementsV1ResponseMPayload](doc//EzsigndocumentGetCompletedElementsV1ResponseMPayload.md)
  - [EzsigndocumentGetDownloadUrlV1Response](doc//EzsigndocumentGetDownloadUrlV1Response.md)
  - [EzsigndocumentGetDownloadUrlV1ResponseAllOf](doc//EzsigndocumentGetDownloadUrlV1ResponseAllOf.md)
  - [EzsigndocumentGetDownloadUrlV1ResponseMPayload](doc//EzsigndocumentGetDownloadUrlV1ResponseMPayload.md)
@@ -1021,6 +1038,7 @@ Class | Method | HTTP request | Description
  - [EzsigntsarequirementGetAutocompleteV2Response](doc//EzsigntsarequirementGetAutocompleteV2Response.md)
  - [EzsigntsarequirementGetAutocompleteV2ResponseAllOf](doc//EzsigntsarequirementGetAutocompleteV2ResponseAllOf.md)
  - [EzsigntsarequirementGetAutocompleteV2ResponseMPayload](doc//EzsigntsarequirementGetAutocompleteV2ResponseMPayload.md)
+ - [FieldEActivesessionOrigin](doc//FieldEActivesessionOrigin.md)
  - [FieldEActivesessionUsertype](doc//FieldEActivesessionUsertype.md)
  - [FieldEActivesessionWeekdaystart](doc//FieldEActivesessionWeekdaystart.md)
  - [FieldEBrandingLogo](doc//FieldEBrandingLogo.md)
@@ -1059,6 +1077,7 @@ Class | Method | HTTP request | Description
  - [FieldENotificationpreferenceStatus](doc//FieldENotificationpreferenceStatus.md)
  - [FieldEPaymenttermType](doc//FieldEPaymenttermType.md)
  - [FieldEPhoneType](doc//FieldEPhoneType.md)
+ - [FieldESessionhistoryEndby](doc//FieldESessionhistoryEndby.md)
  - [FieldEUserEzsignsendreminderfrequency](doc//FieldEUserEzsignsendreminderfrequency.md)
  - [FieldEUserType](doc//FieldEUserType.md)
  - [FieldEVariableexpenseTaxable](doc//FieldEVariableexpenseTaxable.md)
@@ -1093,6 +1112,7 @@ Class | Method | HTTP request | Description
  - [FranchisereferalincomeRequestCompoundAllOf](doc//FranchisereferalincomeRequestCompoundAllOf.md)
  - [GlobalCustomerGetEndpointV1Response](doc//GlobalCustomerGetEndpointV1Response.md)
  - [GlobalEzmaxclientVersionV1Response](doc//GlobalEzmaxclientVersionV1Response.md)
+ - [GlobalEzmaxcustomerGetConfigurationV1Response](doc//GlobalEzmaxcustomerGetConfigurationV1Response.md)
  - [HeaderAcceptLanguage](doc//HeaderAcceptLanguage.md)
  - [MultilingualApikeyDescription](doc//MultilingualApikeyDescription.md)
  - [MultilingualBillingentityinternalDescription](doc//MultilingualBillingentityinternalDescription.md)
@@ -1147,6 +1167,11 @@ Class | Method | HTTP request | Description
  - [SecretquestionGetAutocompleteV2Response](doc//SecretquestionGetAutocompleteV2Response.md)
  - [SecretquestionGetAutocompleteV2ResponseAllOf](doc//SecretquestionGetAutocompleteV2ResponseAllOf.md)
  - [SecretquestionGetAutocompleteV2ResponseMPayload](doc//SecretquestionGetAutocompleteV2ResponseMPayload.md)
+ - [SessionhistoryGetListV1Response](doc//SessionhistoryGetListV1Response.md)
+ - [SessionhistoryGetListV1ResponseAllOf](doc//SessionhistoryGetListV1ResponseAllOf.md)
+ - [SessionhistoryGetListV1ResponseMPayload](doc//SessionhistoryGetListV1ResponseMPayload.md)
+ - [SessionhistoryGetListV1ResponseMPayloadAllOf](doc//SessionhistoryGetListV1ResponseMPayloadAllOf.md)
+ - [SessionhistoryListElement](doc//SessionhistoryListElement.md)
  - [TaxassignmentAutocompleteElementResponse](doc//TaxassignmentAutocompleteElementResponse.md)
  - [TaxassignmentGetAutocompleteV2Response](doc//TaxassignmentGetAutocompleteV2Response.md)
  - [TaxassignmentGetAutocompleteV2ResponseAllOf](doc//TaxassignmentGetAutocompleteV2ResponseAllOf.md)
@@ -1189,6 +1214,19 @@ Class | Method | HTTP request | Description
  - [UsergroupRequestCompound](doc//UsergroupRequestCompound.md)
  - [UsergroupResponse](doc//UsergroupResponse.md)
  - [UsergroupResponseCompound](doc//UsergroupResponseCompound.md)
+ - [UserstagedDeleteObjectV1Response](doc//UserstagedDeleteObjectV1Response.md)
+ - [UserstagedGetListV1Response](doc//UserstagedGetListV1Response.md)
+ - [UserstagedGetListV1ResponseAllOf](doc//UserstagedGetListV1ResponseAllOf.md)
+ - [UserstagedGetListV1ResponseMPayload](doc//UserstagedGetListV1ResponseMPayload.md)
+ - [UserstagedGetListV1ResponseMPayloadAllOf](doc//UserstagedGetListV1ResponseMPayloadAllOf.md)
+ - [UserstagedGetObjectV2Response](doc//UserstagedGetObjectV2Response.md)
+ - [UserstagedGetObjectV2ResponseAllOf](doc//UserstagedGetObjectV2ResponseAllOf.md)
+ - [UserstagedGetObjectV2ResponseMPayload](doc//UserstagedGetObjectV2ResponseMPayload.md)
+ - [UserstagedListElement](doc//UserstagedListElement.md)
+ - [UserstagedMapV1Request](doc//UserstagedMapV1Request.md)
+ - [UserstagedMapV1Response](doc//UserstagedMapV1Response.md)
+ - [UserstagedResponse](doc//UserstagedResponse.md)
+ - [UserstagedResponseCompound](doc//UserstagedResponseCompound.md)
  - [VariableexpenseAutocompleteElementResponse](doc//VariableexpenseAutocompleteElementResponse.md)
  - [VariableexpenseCreateObjectV1Request](doc//VariableexpenseCreateObjectV1Request.md)
  - [VariableexpenseCreateObjectV1Response](doc//VariableexpenseCreateObjectV1Response.md)
@@ -1225,6 +1263,9 @@ Class | Method | HTTP request | Description
  - [WebhookEditObjectV1Response](doc//WebhookEditObjectV1Response.md)
  - [WebhookEzsignDocumentCompleted](doc//WebhookEzsignDocumentCompleted.md)
  - [WebhookEzsignDocumentCompletedAllOf](doc//WebhookEzsignDocumentCompletedAllOf.md)
+ - [WebhookEzsignEzsignsignerAcceptclause](doc//WebhookEzsignEzsignsignerAcceptclause.md)
+ - [WebhookEzsignEzsignsignerAcceptclauseAllOf](doc//WebhookEzsignEzsignsignerAcceptclauseAllOf.md)
+ - [WebhookEzsignEzsignsignerConnect](doc//WebhookEzsignEzsignsignerConnect.md)
  - [WebhookEzsignFolderCompleted](doc//WebhookEzsignFolderCompleted.md)
  - [WebhookEzsignFolderCompletedAllOf](doc//WebhookEzsignFolderCompletedAllOf.md)
  - [WebhookGetHistoryV1Response](doc//WebhookGetHistoryV1Response.md)
@@ -1254,7 +1295,8 @@ Class | Method | HTTP request | Description
 ## Documentation For Authorization
 
 
-## Authorization
+Authentication schemes defined for the API:
+### Authorization
 
 - **Type**: API key
 - **API key parameter name**: Authorization

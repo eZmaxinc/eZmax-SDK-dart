@@ -178,13 +178,13 @@ class FranchisereferalincomeRequestCompound {
         fkiFranchiseofficeID: mapValueOfType<int>(json, r'fkiFranchiseofficeID')!,
         sFranchisereferalincomeRemoteid: mapValueOfType<String>(json, r'sFranchisereferalincomeRemoteid')!,
         objAddress: AddressRequest.fromJson(json[r'objAddress'])!,
-        aObjContact: ContactRequestCompound.listFromJson(json[r'a_objContact'])!,
+        aObjContact: ContactRequestCompound.listFromJson(json[r'a_objContact']),
       );
     }
     return null;
   }
 
-  static List<FranchisereferalincomeRequestCompound>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<FranchisereferalincomeRequestCompound> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FranchisereferalincomeRequestCompound>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -215,12 +215,10 @@ class FranchisereferalincomeRequestCompound {
   static Map<String, List<FranchisereferalincomeRequestCompound>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<FranchisereferalincomeRequestCompound>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = FranchisereferalincomeRequestCompound.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = FranchisereferalincomeRequestCompound.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

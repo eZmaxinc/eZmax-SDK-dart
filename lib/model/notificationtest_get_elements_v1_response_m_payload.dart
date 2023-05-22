@@ -82,13 +82,13 @@ class NotificationtestGetElementsV1ResponseMPayload {
         aSVariableobjectProperty: json[r'a_sVariableobjectProperty'] is List
             ? (json[r'a_sVariableobjectProperty'] as List).cast<String>()
             : const [],
-        aObjVariableobject: Map.listFromJson(json[r'a_objVariableobject'])!,
+        aObjVariableobject: Map.listFromJson(json[r'a_objVariableobject']),
       );
     }
     return null;
   }
 
-  static List<NotificationtestGetElementsV1ResponseMPayload>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<NotificationtestGetElementsV1ResponseMPayload> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <NotificationtestGetElementsV1ResponseMPayload>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -119,12 +119,10 @@ class NotificationtestGetElementsV1ResponseMPayload {
   static Map<String, List<NotificationtestGetElementsV1ResponseMPayload>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<NotificationtestGetElementsV1ResponseMPayload>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = NotificationtestGetElementsV1ResponseMPayload.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = NotificationtestGetElementsV1ResponseMPayload.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

@@ -55,13 +55,13 @@ class EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload {
       }());
 
       return EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload(
-        aObjEzsignfoldersignerassociation: CustomEzsignfoldersignerassociationActionableElementResponse.listFromJson(json[r'a_objEzsignfoldersignerassociation'])!,
+        aObjEzsignfoldersignerassociation: CustomEzsignfoldersignerassociationActionableElementResponse.listFromJson(json[r'a_objEzsignfoldersignerassociation']),
       );
     }
     return null;
   }
 
-  static List<EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -92,12 +92,10 @@ class EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload {
   static Map<String, List<EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

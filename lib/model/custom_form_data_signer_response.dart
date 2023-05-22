@@ -101,13 +101,13 @@ class CustomFormDataSignerResponse {
         fkiUserID: mapValueOfType<int>(json, r'fkiUserID'),
         sContactFirstname: mapValueOfType<String>(json, r'sContactFirstname')!,
         sContactLastname: mapValueOfType<String>(json, r'sContactLastname')!,
-        aObjEzsignformfieldgroup: CustomFormDataEzsignformfieldgroupResponse.listFromJson(json[r'a_objEzsignformfieldgroup'])!,
+        aObjEzsignformfieldgroup: CustomFormDataEzsignformfieldgroupResponse.listFromJson(json[r'a_objEzsignformfieldgroup']),
       );
     }
     return null;
   }
 
-  static List<CustomFormDataSignerResponse>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<CustomFormDataSignerResponse> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <CustomFormDataSignerResponse>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -138,12 +138,10 @@ class CustomFormDataSignerResponse {
   static Map<String, List<CustomFormDataSignerResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<CustomFormDataSignerResponse>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = CustomFormDataSignerResponse.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = CustomFormDataSignerResponse.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

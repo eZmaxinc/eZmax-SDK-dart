@@ -287,7 +287,7 @@ class EzsigndocumentResponse {
     return null;
   }
 
-  static List<EzsigndocumentResponse>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsigndocumentResponse> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsigndocumentResponse>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -318,12 +318,10 @@ class EzsigndocumentResponse {
   static Map<String, List<EzsigndocumentResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsigndocumentResponse>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsigndocumentResponse.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsigndocumentResponse.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

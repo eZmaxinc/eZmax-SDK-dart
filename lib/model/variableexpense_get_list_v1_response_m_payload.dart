@@ -69,7 +69,7 @@ class VariableexpenseGetListV1ResponseMPayload {
       }());
 
       return VariableexpenseGetListV1ResponseMPayload(
-        aObjVariableexpense: VariableexpenseListElement.listFromJson(json[r'a_objVariableexpense'])!,
+        aObjVariableexpense: VariableexpenseListElement.listFromJson(json[r'a_objVariableexpense']),
         iRowReturned: mapValueOfType<int>(json, r'iRowReturned')!,
         iRowFiltered: mapValueOfType<int>(json, r'iRowFiltered')!,
       );
@@ -77,7 +77,7 @@ class VariableexpenseGetListV1ResponseMPayload {
     return null;
   }
 
-  static List<VariableexpenseGetListV1ResponseMPayload>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<VariableexpenseGetListV1ResponseMPayload> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <VariableexpenseGetListV1ResponseMPayload>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -108,12 +108,10 @@ class VariableexpenseGetListV1ResponseMPayload {
   static Map<String, List<VariableexpenseGetListV1ResponseMPayload>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<VariableexpenseGetListV1ResponseMPayload>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = VariableexpenseGetListV1ResponseMPayload.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = VariableexpenseGetListV1ResponseMPayload.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

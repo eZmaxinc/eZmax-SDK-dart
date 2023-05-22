@@ -124,7 +124,7 @@ class AddressRequestCompound {
     return null;
   }
 
-  static List<AddressRequestCompound>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<AddressRequestCompound> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <AddressRequestCompound>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -155,12 +155,10 @@ class AddressRequestCompound {
   static Map<String, List<AddressRequestCompound>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<AddressRequestCompound>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = AddressRequestCompound.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = AddressRequestCompound.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

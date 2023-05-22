@@ -73,13 +73,13 @@ class CustomEzsigndocumentEzsignsignaturesAutomaticResponse {
       return CustomEzsigndocumentEzsignsignaturesAutomaticResponse(
         pkiEzsigndocumentID: mapValueOfType<int>(json, r'pkiEzsigndocumentID')!,
         sEzsigndocumentName: mapValueOfType<String>(json, r'sEzsigndocumentName')!,
-        aObjEzsignsignature: CustomEzsignsignatureEzsignsignaturesAutomaticResponse.listFromJson(json[r'a_objEzsignsignature'])!,
+        aObjEzsignsignature: CustomEzsignsignatureEzsignsignaturesAutomaticResponse.listFromJson(json[r'a_objEzsignsignature']),
       );
     }
     return null;
   }
 
-  static List<CustomEzsigndocumentEzsignsignaturesAutomaticResponse>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<CustomEzsigndocumentEzsignsignaturesAutomaticResponse> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <CustomEzsigndocumentEzsignsignaturesAutomaticResponse>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -110,12 +110,10 @@ class CustomEzsigndocumentEzsignsignaturesAutomaticResponse {
   static Map<String, List<CustomEzsigndocumentEzsignsignaturesAutomaticResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<CustomEzsigndocumentEzsignsignaturesAutomaticResponse>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = CustomEzsigndocumentEzsignsignaturesAutomaticResponse.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = CustomEzsigndocumentEzsignsignaturesAutomaticResponse.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

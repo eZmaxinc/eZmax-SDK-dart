@@ -55,13 +55,13 @@ class EzsignfolderCreateObjectV2Request {
       }());
 
       return EzsignfolderCreateObjectV2Request(
-        aObjEzsignfolder: EzsignfolderRequestCompound.listFromJson(json[r'a_objEzsignfolder'])!,
+        aObjEzsignfolder: EzsignfolderRequestCompound.listFromJson(json[r'a_objEzsignfolder']),
       );
     }
     return null;
   }
 
-  static List<EzsignfolderCreateObjectV2Request>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsignfolderCreateObjectV2Request> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsignfolderCreateObjectV2Request>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -92,12 +92,10 @@ class EzsignfolderCreateObjectV2Request {
   static Map<String, List<EzsignfolderCreateObjectV2Request>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignfolderCreateObjectV2Request>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsignfolderCreateObjectV2Request.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsignfolderCreateObjectV2Request.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

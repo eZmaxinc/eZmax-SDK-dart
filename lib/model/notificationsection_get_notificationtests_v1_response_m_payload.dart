@@ -55,13 +55,13 @@ class NotificationsectionGetNotificationtestsV1ResponseMPayload {
       }());
 
       return NotificationsectionGetNotificationtestsV1ResponseMPayload(
-        aObjNotificationsubsection: CustomNotificationsubsectiongetnotificationtestsResponse.listFromJson(json[r'a_objNotificationsubsection'])!,
+        aObjNotificationsubsection: CustomNotificationsubsectiongetnotificationtestsResponse.listFromJson(json[r'a_objNotificationsubsection']),
       );
     }
     return null;
   }
 
-  static List<NotificationsectionGetNotificationtestsV1ResponseMPayload>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<NotificationsectionGetNotificationtestsV1ResponseMPayload> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <NotificationsectionGetNotificationtestsV1ResponseMPayload>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -92,12 +92,10 @@ class NotificationsectionGetNotificationtestsV1ResponseMPayload {
   static Map<String, List<NotificationsectionGetNotificationtestsV1ResponseMPayload>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<NotificationsectionGetNotificationtestsV1ResponseMPayload>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = NotificationsectionGetNotificationtestsV1ResponseMPayload.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = NotificationsectionGetNotificationtestsV1ResponseMPayload.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

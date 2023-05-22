@@ -110,7 +110,7 @@ class PaymenttermResponseCompound {
     return null;
   }
 
-  static List<PaymenttermResponseCompound>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<PaymenttermResponseCompound> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <PaymenttermResponseCompound>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -141,12 +141,10 @@ class PaymenttermResponseCompound {
   static Map<String, List<PaymenttermResponseCompound>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<PaymenttermResponseCompound>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = PaymenttermResponseCompound.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = PaymenttermResponseCompound.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

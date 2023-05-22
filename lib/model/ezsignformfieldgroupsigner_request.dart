@@ -84,7 +84,7 @@ class EzsignformfieldgroupsignerRequest {
     return null;
   }
 
-  static List<EzsignformfieldgroupsignerRequest>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsignformfieldgroupsignerRequest> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsignformfieldgroupsignerRequest>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -115,12 +115,10 @@ class EzsignformfieldgroupsignerRequest {
   static Map<String, List<EzsignformfieldgroupsignerRequest>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignformfieldgroupsignerRequest>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsignformfieldgroupsignerRequest.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsignformfieldgroupsignerRequest.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

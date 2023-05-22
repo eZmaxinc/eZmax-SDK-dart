@@ -55,13 +55,13 @@ class EzsignbulksenddocumentmappingCreateObjectV1Request {
       }());
 
       return EzsignbulksenddocumentmappingCreateObjectV1Request(
-        aObjEzsignbulksenddocumentmapping: EzsignbulksenddocumentmappingRequestCompound.listFromJson(json[r'a_objEzsignbulksenddocumentmapping'])!,
+        aObjEzsignbulksenddocumentmapping: EzsignbulksenddocumentmappingRequestCompound.listFromJson(json[r'a_objEzsignbulksenddocumentmapping']),
       );
     }
     return null;
   }
 
-  static List<EzsignbulksenddocumentmappingCreateObjectV1Request>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsignbulksenddocumentmappingCreateObjectV1Request> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsignbulksenddocumentmappingCreateObjectV1Request>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -92,12 +92,10 @@ class EzsignbulksenddocumentmappingCreateObjectV1Request {
   static Map<String, List<EzsignbulksenddocumentmappingCreateObjectV1Request>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignbulksenddocumentmappingCreateObjectV1Request>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsignbulksenddocumentmappingCreateObjectV1Request.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsignbulksenddocumentmappingCreateObjectV1Request.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

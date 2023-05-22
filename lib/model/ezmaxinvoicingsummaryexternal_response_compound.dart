@@ -121,13 +121,13 @@ class EzmaxinvoicingsummaryexternalResponseCompound {
         fkiBillingentityexternalID: mapValueOfType<int>(json, r'fkiBillingentityexternalID')!,
         sBillingentityexternalDescription: mapValueOfType<String>(json, r'sBillingentityexternalDescription')!,
         sEzmaxinvoicingsummaryexternalDescription: mapValueOfType<String>(json, r'sEzmaxinvoicingsummaryexternalDescription')!,
-        aObjEzmaxinvoicingsummaryexternaldetail: EzmaxinvoicingsummaryexternaldetailResponseCompound.listFromJson(json[r'a_objEzmaxinvoicingsummaryexternaldetail'])!,
+        aObjEzmaxinvoicingsummaryexternaldetail: EzmaxinvoicingsummaryexternaldetailResponseCompound.listFromJson(json[r'a_objEzmaxinvoicingsummaryexternaldetail']),
       );
     }
     return null;
   }
 
-  static List<EzmaxinvoicingsummaryexternalResponseCompound>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzmaxinvoicingsummaryexternalResponseCompound> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzmaxinvoicingsummaryexternalResponseCompound>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -158,12 +158,10 @@ class EzmaxinvoicingsummaryexternalResponseCompound {
   static Map<String, List<EzmaxinvoicingsummaryexternalResponseCompound>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzmaxinvoicingsummaryexternalResponseCompound>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzmaxinvoicingsummaryexternalResponseCompound.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzmaxinvoicingsummaryexternalResponseCompound.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

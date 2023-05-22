@@ -72,7 +72,7 @@ class FieldEUserType {
 
   static FieldEUserType? fromJson(dynamic value) => FieldEUserTypeTypeTransformer().decode(value);
 
-  static List<FieldEUserType>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<FieldEUserType> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEUserType>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

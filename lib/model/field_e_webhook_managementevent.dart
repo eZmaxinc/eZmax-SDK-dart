@@ -32,7 +32,7 @@ class FieldEWebhookManagementevent {
 
   static FieldEWebhookManagementevent? fromJson(dynamic value) => FieldEWebhookManagementeventTypeTransformer().decode(value);
 
-  static List<FieldEWebhookManagementevent>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<FieldEWebhookManagementevent> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEWebhookManagementevent>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

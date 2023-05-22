@@ -178,7 +178,7 @@ class BrandingResponseCompound {
     return null;
   }
 
-  static List<BrandingResponseCompound>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<BrandingResponseCompound> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <BrandingResponseCompound>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -209,12 +209,10 @@ class BrandingResponseCompound {
   static Map<String, List<BrandingResponseCompound>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<BrandingResponseCompound>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = BrandingResponseCompound.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = BrandingResponseCompound.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

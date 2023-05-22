@@ -56,13 +56,13 @@ class EzsignfoldertypeGetAutocompleteV2ResponseMPayload {
       }());
 
       return EzsignfoldertypeGetAutocompleteV2ResponseMPayload(
-        aObjEzsignfoldertype: EzsignfoldertypeAutocompleteElementResponse.listFromJson(json[r'a_objEzsignfoldertype'])!,
+        aObjEzsignfoldertype: EzsignfoldertypeAutocompleteElementResponse.listFromJson(json[r'a_objEzsignfoldertype']),
       );
     }
     return null;
   }
 
-  static List<EzsignfoldertypeGetAutocompleteV2ResponseMPayload>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsignfoldertypeGetAutocompleteV2ResponseMPayload> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsignfoldertypeGetAutocompleteV2ResponseMPayload>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -93,12 +93,10 @@ class EzsignfoldertypeGetAutocompleteV2ResponseMPayload {
   static Map<String, List<EzsignfoldertypeGetAutocompleteV2ResponseMPayload>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignfoldertypeGetAutocompleteV2ResponseMPayload>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsignfoldertypeGetAutocompleteV2ResponseMPayload.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsignfoldertypeGetAutocompleteV2ResponseMPayload.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

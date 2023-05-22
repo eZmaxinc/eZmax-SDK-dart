@@ -70,7 +70,7 @@ class CommonResponseError {
     return null;
   }
 
-  static List<CommonResponseError>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<CommonResponseError> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <CommonResponseError>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -101,12 +101,10 @@ class CommonResponseError {
   static Map<String, List<CommonResponseError>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<CommonResponseError>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = CommonResponseError.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = CommonResponseError.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

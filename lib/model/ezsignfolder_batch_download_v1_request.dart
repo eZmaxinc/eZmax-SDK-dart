@@ -65,13 +65,13 @@ class EzsignfolderBatchDownloadV1Request {
         aPkiEzsigndocumentID: json[r'a_pkiEzsigndocumentID'] is List
             ? (json[r'a_pkiEzsigndocumentID'] as List).cast<int>()
             : const [],
-        aEDocumentType: EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnum.listFromJson(json[r'a_eDocumentType'])!,
+        aEDocumentType: EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnum.listFromJson(json[r'a_eDocumentType']),
       );
     }
     return null;
   }
 
-  static List<EzsignfolderBatchDownloadV1Request>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsignfolderBatchDownloadV1Request> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsignfolderBatchDownloadV1Request>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -102,12 +102,10 @@ class EzsignfolderBatchDownloadV1Request {
   static Map<String, List<EzsignfolderBatchDownloadV1Request>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignfolderBatchDownloadV1Request>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsignfolderBatchDownloadV1Request.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsignfolderBatchDownloadV1Request.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;
@@ -146,7 +144,7 @@ class EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnum {
 
   static EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnum? fromJson(dynamic value) => EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnumTypeTransformer().decode(value);
 
-  static List<EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnum>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnum> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnum>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

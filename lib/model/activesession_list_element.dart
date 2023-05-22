@@ -160,7 +160,7 @@ class ActivesessionListElement {
     return null;
   }
 
-  static List<ActivesessionListElement>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<ActivesessionListElement> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <ActivesessionListElement>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -191,12 +191,10 @@ class ActivesessionListElement {
   static Map<String, List<ActivesessionListElement>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<ActivesessionListElement>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = ActivesessionListElement.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = ActivesessionListElement.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

@@ -284,7 +284,7 @@ class EzsigntemplatesignatureRequest {
     return null;
   }
 
-  static List<EzsigntemplatesignatureRequest>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsigntemplatesignatureRequest> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsigntemplatesignatureRequest>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -315,12 +315,10 @@ class EzsigntemplatesignatureRequest {
   static Map<String, List<EzsigntemplatesignatureRequest>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsigntemplatesignatureRequest>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsigntemplatesignatureRequest.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsigntemplatesignatureRequest.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

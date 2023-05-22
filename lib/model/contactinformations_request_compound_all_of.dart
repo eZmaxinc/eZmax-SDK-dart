@@ -73,16 +73,16 @@ class ContactinformationsRequestCompoundAllOf {
       }());
 
       return ContactinformationsRequestCompoundAllOf(
-        aObjAddress: AddressRequestCompound.listFromJson(json[r'a_objAddress'])!,
-        aObjPhone: PhoneRequestCompound.listFromJson(json[r'a_objPhone'])!,
-        aObjEmail: EmailRequestCompound.listFromJson(json[r'a_objEmail'])!,
-        aObjWebsite: WebsiteRequestCompound.listFromJson(json[r'a_objWebsite'])!,
+        aObjAddress: AddressRequestCompound.listFromJson(json[r'a_objAddress']),
+        aObjPhone: PhoneRequestCompound.listFromJson(json[r'a_objPhone']),
+        aObjEmail: EmailRequestCompound.listFromJson(json[r'a_objEmail']),
+        aObjWebsite: WebsiteRequestCompound.listFromJson(json[r'a_objWebsite']),
       );
     }
     return null;
   }
 
-  static List<ContactinformationsRequestCompoundAllOf>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<ContactinformationsRequestCompoundAllOf> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <ContactinformationsRequestCompoundAllOf>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -113,12 +113,10 @@ class ContactinformationsRequestCompoundAllOf {
   static Map<String, List<ContactinformationsRequestCompoundAllOf>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<ContactinformationsRequestCompoundAllOf>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = ContactinformationsRequestCompoundAllOf.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = ContactinformationsRequestCompoundAllOf.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

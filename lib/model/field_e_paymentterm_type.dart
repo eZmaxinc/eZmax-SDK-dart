@@ -34,7 +34,7 @@ class FieldEPaymenttermType {
 
   static FieldEPaymenttermType? fromJson(dynamic value) => FieldEPaymenttermTypeTypeTransformer().decode(value);
 
-  static List<FieldEPaymenttermType>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<FieldEPaymenttermType> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEPaymenttermType>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

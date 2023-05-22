@@ -70,13 +70,13 @@ class WebhookUserUserCreated {
       return WebhookUserUserCreated(
         objUser: UserResponseCompound.fromJson(json[r'objUser'])!,
         objWebhook: CustomWebhookResponse.fromJson(json[r'objWebhook'])!,
-        aObjAttempt: AttemptResponseCompound.listFromJson(json[r'a_objAttempt'])!,
+        aObjAttempt: AttemptResponseCompound.listFromJson(json[r'a_objAttempt']),
       );
     }
     return null;
   }
 
-  static List<WebhookUserUserCreated>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<WebhookUserUserCreated> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <WebhookUserUserCreated>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -107,12 +107,10 @@ class WebhookUserUserCreated {
   static Map<String, List<WebhookUserUserCreated>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<WebhookUserUserCreated>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = WebhookUserUserCreated.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = WebhookUserUserCreated.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

@@ -122,7 +122,7 @@ class EzsigntemplatedocumentpageResponseCompound {
     return null;
   }
 
-  static List<EzsigntemplatedocumentpageResponseCompound>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsigntemplatedocumentpageResponseCompound> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsigntemplatedocumentpageResponseCompound>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -153,12 +153,10 @@ class EzsigntemplatedocumentpageResponseCompound {
   static Map<String, List<EzsigntemplatedocumentpageResponseCompound>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsigntemplatedocumentpageResponseCompound>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsigntemplatedocumentpageResponseCompound.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsigntemplatedocumentpageResponseCompound.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

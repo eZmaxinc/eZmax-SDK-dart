@@ -34,7 +34,7 @@ class ComputedECommunicationDirection {
 
   static ComputedECommunicationDirection? fromJson(dynamic value) => ComputedECommunicationDirectionTypeTransformer().decode(value);
 
-  static List<ComputedECommunicationDirection>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<ComputedECommunicationDirection> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <ComputedECommunicationDirection>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

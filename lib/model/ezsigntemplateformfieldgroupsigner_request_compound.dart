@@ -84,7 +84,7 @@ class EzsigntemplateformfieldgroupsignerRequestCompound {
     return null;
   }
 
-  static List<EzsigntemplateformfieldgroupsignerRequestCompound>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsigntemplateformfieldgroupsignerRequestCompound> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsigntemplateformfieldgroupsignerRequestCompound>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -115,12 +115,10 @@ class EzsigntemplateformfieldgroupsignerRequestCompound {
   static Map<String, List<EzsigntemplateformfieldgroupsignerRequestCompound>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsigntemplateformfieldgroupsignerRequestCompound>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsigntemplateformfieldgroupsignerRequestCompound.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsigntemplateformfieldgroupsignerRequestCompound.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

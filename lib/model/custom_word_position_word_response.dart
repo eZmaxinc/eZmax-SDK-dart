@@ -64,13 +64,13 @@ class CustomWordPositionWordResponse {
 
       return CustomWordPositionWordResponse(
         sWord: mapValueOfType<String>(json, r'sWord')!,
-        aObjWordPositionOccurence: CustomWordPositionOccurenceResponse.listFromJson(json[r'a_objWordPositionOccurence'])!,
+        aObjWordPositionOccurence: CustomWordPositionOccurenceResponse.listFromJson(json[r'a_objWordPositionOccurence']),
       );
     }
     return null;
   }
 
-  static List<CustomWordPositionWordResponse>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<CustomWordPositionWordResponse> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <CustomWordPositionWordResponse>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -101,12 +101,10 @@ class CustomWordPositionWordResponse {
   static Map<String, List<CustomWordPositionWordResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<CustomWordPositionWordResponse>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = CustomWordPositionWordResponse.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = CustomWordPositionWordResponse.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

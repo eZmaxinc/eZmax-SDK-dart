@@ -55,13 +55,13 @@ class WebhookGetListV1ResponseMPayloadAllOf {
       }());
 
       return WebhookGetListV1ResponseMPayloadAllOf(
-        aObjWebhook: WebhookListElement.listFromJson(json[r'a_objWebhook'])!,
+        aObjWebhook: WebhookListElement.listFromJson(json[r'a_objWebhook']),
       );
     }
     return null;
   }
 
-  static List<WebhookGetListV1ResponseMPayloadAllOf>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<WebhookGetListV1ResponseMPayloadAllOf> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <WebhookGetListV1ResponseMPayloadAllOf>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -92,12 +92,10 @@ class WebhookGetListV1ResponseMPayloadAllOf {
   static Map<String, List<WebhookGetListV1ResponseMPayloadAllOf>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<WebhookGetListV1ResponseMPayloadAllOf>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = WebhookGetListV1ResponseMPayloadAllOf.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = WebhookGetListV1ResponseMPayloadAllOf.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

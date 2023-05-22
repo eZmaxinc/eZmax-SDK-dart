@@ -29,8 +29,11 @@ class EzsignsignatureResponseCompound {
     this.eEzsignsignatureAttachmentnamesource,
     this.bEzsignsignatureRequired,
     this.fkiEzsignfoldersignerassociationIDValidation,
+    this.dtEzsignsignatureDate,
+    required this.objContactName,
     this.bEzsignsignatureCustomdate,
     this.aObjEzsignsignaturecustomdate = const [],
+    this.objCreditcardtransaction,
   });
 
   /// The unique ID of the Ezsignsignature
@@ -139,6 +142,17 @@ class EzsignsignatureResponseCompound {
   ///
   int? fkiEzsignfoldersignerassociationIDValidation;
 
+  /// The date the Ezsignsignature was signed
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? dtEzsignsignatureDate;
+
+  CustomContactNameResponse objContactName;
+
   /// Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -150,6 +164,14 @@ class EzsignsignatureResponseCompound {
 
   /// An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all.
   List<EzsignsignaturecustomdateResponseCompound> aObjEzsignsignaturecustomdate;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  CustomCreditcardtransactionResponse? objCreditcardtransaction;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignsignatureResponseCompound &&
@@ -169,8 +191,11 @@ class EzsignsignatureResponseCompound {
      other.eEzsignsignatureAttachmentnamesource == eEzsignsignatureAttachmentnamesource &&
      other.bEzsignsignatureRequired == bEzsignsignatureRequired &&
      other.fkiEzsignfoldersignerassociationIDValidation == fkiEzsignfoldersignerassociationIDValidation &&
+     other.dtEzsignsignatureDate == dtEzsignsignatureDate &&
+     other.objContactName == objContactName &&
      other.bEzsignsignatureCustomdate == bEzsignsignatureCustomdate &&
-     other.aObjEzsignsignaturecustomdate == aObjEzsignsignaturecustomdate;
+     other.aObjEzsignsignaturecustomdate == aObjEzsignsignaturecustomdate &&
+     other.objCreditcardtransaction == objCreditcardtransaction;
 
   @override
   int get hashCode =>
@@ -191,11 +216,14 @@ class EzsignsignatureResponseCompound {
     (eEzsignsignatureAttachmentnamesource == null ? 0 : eEzsignsignatureAttachmentnamesource!.hashCode) +
     (bEzsignsignatureRequired == null ? 0 : bEzsignsignatureRequired!.hashCode) +
     (fkiEzsignfoldersignerassociationIDValidation == null ? 0 : fkiEzsignfoldersignerassociationIDValidation!.hashCode) +
+    (dtEzsignsignatureDate == null ? 0 : dtEzsignsignatureDate!.hashCode) +
+    (objContactName.hashCode) +
     (bEzsignsignatureCustomdate == null ? 0 : bEzsignsignatureCustomdate!.hashCode) +
-    (aObjEzsignsignaturecustomdate.hashCode);
+    (aObjEzsignsignaturecustomdate.hashCode) +
+    (objCreditcardtransaction == null ? 0 : objCreditcardtransaction!.hashCode);
 
   @override
-  String toString() => 'EzsignsignatureResponseCompound[pkiEzsignsignatureID=$pkiEzsignsignatureID, fkiEzsigndocumentID=$fkiEzsigndocumentID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureStep=$iEzsignsignatureStep, eEzsignsignatureType=$eEzsignsignatureType, tEzsignsignatureTooltip=$tEzsignsignatureTooltip, eEzsignsignatureTooltipposition=$eEzsignsignatureTooltipposition, eEzsignsignatureFont=$eEzsignsignatureFont, iEzsignsignatureValidationstep=$iEzsignsignatureValidationstep, sEzsignsignatureAttachmentdescription=$sEzsignsignatureAttachmentdescription, eEzsignsignatureAttachmentnamesource=$eEzsignsignatureAttachmentnamesource, bEzsignsignatureRequired=$bEzsignsignatureRequired, fkiEzsignfoldersignerassociationIDValidation=$fkiEzsignfoldersignerassociationIDValidation, bEzsignsignatureCustomdate=$bEzsignsignatureCustomdate, aObjEzsignsignaturecustomdate=$aObjEzsignsignaturecustomdate]';
+  String toString() => 'EzsignsignatureResponseCompound[pkiEzsignsignatureID=$pkiEzsignsignatureID, fkiEzsigndocumentID=$fkiEzsigndocumentID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureStep=$iEzsignsignatureStep, eEzsignsignatureType=$eEzsignsignatureType, tEzsignsignatureTooltip=$tEzsignsignatureTooltip, eEzsignsignatureTooltipposition=$eEzsignsignatureTooltipposition, eEzsignsignatureFont=$eEzsignsignatureFont, iEzsignsignatureValidationstep=$iEzsignsignatureValidationstep, sEzsignsignatureAttachmentdescription=$sEzsignsignatureAttachmentdescription, eEzsignsignatureAttachmentnamesource=$eEzsignsignatureAttachmentnamesource, bEzsignsignatureRequired=$bEzsignsignatureRequired, fkiEzsignfoldersignerassociationIDValidation=$fkiEzsignfoldersignerassociationIDValidation, dtEzsignsignatureDate=$dtEzsignsignatureDate, objContactName=$objContactName, bEzsignsignatureCustomdate=$bEzsignsignatureCustomdate, aObjEzsignsignaturecustomdate=$aObjEzsignsignaturecustomdate, objCreditcardtransaction=$objCreditcardtransaction]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -247,12 +275,23 @@ class EzsignsignatureResponseCompound {
     } else {
       json[r'fkiEzsignfoldersignerassociationIDValidation'] = null;
     }
+    if (this.dtEzsignsignatureDate != null) {
+      json[r'dtEzsignsignatureDate'] = this.dtEzsignsignatureDate;
+    } else {
+      json[r'dtEzsignsignatureDate'] = null;
+    }
+      json[r'objContactName'] = this.objContactName;
     if (this.bEzsignsignatureCustomdate != null) {
       json[r'bEzsignsignatureCustomdate'] = this.bEzsignsignatureCustomdate;
     } else {
       json[r'bEzsignsignatureCustomdate'] = null;
     }
       json[r'a_objEzsignsignaturecustomdate'] = this.aObjEzsignsignaturecustomdate;
+    if (this.objCreditcardtransaction != null) {
+      json[r'objCreditcardtransaction'] = this.objCreditcardtransaction;
+    } else {
+      json[r'objCreditcardtransaction'] = null;
+    }
     return json;
   }
 
@@ -291,14 +330,17 @@ class EzsignsignatureResponseCompound {
         eEzsignsignatureAttachmentnamesource: FieldEEzsignsignatureAttachmentnamesource.fromJson(json[r'eEzsignsignatureAttachmentnamesource']),
         bEzsignsignatureRequired: mapValueOfType<bool>(json, r'bEzsignsignatureRequired'),
         fkiEzsignfoldersignerassociationIDValidation: mapValueOfType<int>(json, r'fkiEzsignfoldersignerassociationIDValidation'),
+        dtEzsignsignatureDate: mapValueOfType<String>(json, r'dtEzsignsignatureDate'),
+        objContactName: CustomContactNameResponse.fromJson(json[r'objContactName'])!,
         bEzsignsignatureCustomdate: mapValueOfType<bool>(json, r'bEzsignsignatureCustomdate'),
-        aObjEzsignsignaturecustomdate: EzsignsignaturecustomdateResponseCompound.listFromJson(json[r'a_objEzsignsignaturecustomdate']) ?? const [],
+        aObjEzsignsignaturecustomdate: EzsignsignaturecustomdateResponseCompound.listFromJson(json[r'a_objEzsignsignaturecustomdate']),
+        objCreditcardtransaction: CustomCreditcardtransactionResponse.fromJson(json[r'objCreditcardtransaction']),
       );
     }
     return null;
   }
 
-  static List<EzsignsignatureResponseCompound>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsignsignatureResponseCompound> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsignsignatureResponseCompound>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -329,12 +371,10 @@ class EzsignsignatureResponseCompound {
   static Map<String, List<EzsignsignatureResponseCompound>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignsignatureResponseCompound>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsignsignatureResponseCompound.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsignsignatureResponseCompound.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;
@@ -350,6 +390,7 @@ class EzsignsignatureResponseCompound {
     'iEzsignsignatureY',
     'iEzsignsignatureStep',
     'eEzsignsignatureType',
+    'objContactName',
   };
 }
 

@@ -55,13 +55,13 @@ class EzsignbulksendtransmissionGetFormsDataV1ResponseMPayload {
       }());
 
       return EzsignbulksendtransmissionGetFormsDataV1ResponseMPayload(
-        aObjFormsDataFolder: CustomFormsDataFolderResponse.listFromJson(json[r'a_objFormsDataFolder'])!,
+        aObjFormsDataFolder: CustomFormsDataFolderResponse.listFromJson(json[r'a_objFormsDataFolder']),
       );
     }
     return null;
   }
 
-  static List<EzsignbulksendtransmissionGetFormsDataV1ResponseMPayload>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsignbulksendtransmissionGetFormsDataV1ResponseMPayload> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsignbulksendtransmissionGetFormsDataV1ResponseMPayload>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -92,12 +92,10 @@ class EzsignbulksendtransmissionGetFormsDataV1ResponseMPayload {
   static Map<String, List<EzsignbulksendtransmissionGetFormsDataV1ResponseMPayload>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignbulksendtransmissionGetFormsDataV1ResponseMPayload>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsignbulksendtransmissionGetFormsDataV1ResponseMPayload.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsignbulksendtransmissionGetFormsDataV1ResponseMPayload.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

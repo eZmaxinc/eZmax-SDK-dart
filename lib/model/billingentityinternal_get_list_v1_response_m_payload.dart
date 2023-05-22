@@ -69,7 +69,7 @@ class BillingentityinternalGetListV1ResponseMPayload {
       }());
 
       return BillingentityinternalGetListV1ResponseMPayload(
-        aObjBillingentityinternal: BillingentityinternalListElement.listFromJson(json[r'a_objBillingentityinternal'])!,
+        aObjBillingentityinternal: BillingentityinternalListElement.listFromJson(json[r'a_objBillingentityinternal']),
         iRowReturned: mapValueOfType<int>(json, r'iRowReturned')!,
         iRowFiltered: mapValueOfType<int>(json, r'iRowFiltered')!,
       );
@@ -77,7 +77,7 @@ class BillingentityinternalGetListV1ResponseMPayload {
     return null;
   }
 
-  static List<BillingentityinternalGetListV1ResponseMPayload>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<BillingentityinternalGetListV1ResponseMPayload> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <BillingentityinternalGetListV1ResponseMPayload>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -108,12 +108,10 @@ class BillingentityinternalGetListV1ResponseMPayload {
   static Map<String, List<BillingentityinternalGetListV1ResponseMPayload>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<BillingentityinternalGetListV1ResponseMPayload>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = BillingentityinternalGetListV1ResponseMPayload.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = BillingentityinternalGetListV1ResponseMPayload.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

@@ -56,13 +56,13 @@ class DepartmentGetAutocompleteV2ResponseMPayload {
       }());
 
       return DepartmentGetAutocompleteV2ResponseMPayload(
-        aObjDepartment: DepartmentAutocompleteElementResponse.listFromJson(json[r'a_objDepartment'])!,
+        aObjDepartment: DepartmentAutocompleteElementResponse.listFromJson(json[r'a_objDepartment']),
       );
     }
     return null;
   }
 
-  static List<DepartmentGetAutocompleteV2ResponseMPayload>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<DepartmentGetAutocompleteV2ResponseMPayload> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <DepartmentGetAutocompleteV2ResponseMPayload>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -93,12 +93,10 @@ class DepartmentGetAutocompleteV2ResponseMPayload {
   static Map<String, List<DepartmentGetAutocompleteV2ResponseMPayload>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<DepartmentGetAutocompleteV2ResponseMPayload>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = DepartmentGetAutocompleteV2ResponseMPayload.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = DepartmentGetAutocompleteV2ResponseMPayload.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

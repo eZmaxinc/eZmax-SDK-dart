@@ -34,7 +34,7 @@ class FieldEWebhookModule {
 
   static FieldEWebhookModule? fromJson(dynamic value) => FieldEWebhookModuleTypeTransformer().decode(value);
 
-  static List<FieldEWebhookModule>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<FieldEWebhookModule> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEWebhookModule>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

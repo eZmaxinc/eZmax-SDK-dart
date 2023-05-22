@@ -81,7 +81,7 @@ class TaxassignmentAutocompleteElementResponse {
     return null;
   }
 
-  static List<TaxassignmentAutocompleteElementResponse>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<TaxassignmentAutocompleteElementResponse> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <TaxassignmentAutocompleteElementResponse>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -112,12 +112,10 @@ class TaxassignmentAutocompleteElementResponse {
   static Map<String, List<TaxassignmentAutocompleteElementResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<TaxassignmentAutocompleteElementResponse>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = TaxassignmentAutocompleteElementResponse.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = TaxassignmentAutocompleteElementResponse.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

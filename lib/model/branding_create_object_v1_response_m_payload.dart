@@ -64,7 +64,7 @@ class BrandingCreateObjectV1ResponseMPayload {
     return null;
   }
 
-  static List<BrandingCreateObjectV1ResponseMPayload>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<BrandingCreateObjectV1ResponseMPayload> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <BrandingCreateObjectV1ResponseMPayload>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -95,12 +95,10 @@ class BrandingCreateObjectV1ResponseMPayload {
   static Map<String, List<BrandingCreateObjectV1ResponseMPayload>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<BrandingCreateObjectV1ResponseMPayload>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = BrandingCreateObjectV1ResponseMPayload.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = BrandingCreateObjectV1ResponseMPayload.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

@@ -78,7 +78,7 @@ class AttemptResponse {
     return null;
   }
 
-  static List<AttemptResponse>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<AttemptResponse> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <AttemptResponse>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -109,12 +109,10 @@ class AttemptResponse {
   static Map<String, List<AttemptResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<AttemptResponse>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = AttemptResponse.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = AttemptResponse.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

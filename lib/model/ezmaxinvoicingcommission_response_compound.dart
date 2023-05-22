@@ -173,7 +173,7 @@ class EzmaxinvoicingcommissionResponseCompound {
     return null;
   }
 
-  static List<EzmaxinvoicingcommissionResponseCompound>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzmaxinvoicingcommissionResponseCompound> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzmaxinvoicingcommissionResponseCompound>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -204,12 +204,10 @@ class EzmaxinvoicingcommissionResponseCompound {
   static Map<String, List<EzmaxinvoicingcommissionResponseCompound>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzmaxinvoicingcommissionResponseCompound>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzmaxinvoicingcommissionResponseCompound.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzmaxinvoicingcommissionResponseCompound.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

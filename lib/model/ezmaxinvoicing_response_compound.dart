@@ -239,19 +239,19 @@ class EzmaxinvoicingResponseCompound {
         objAudit: CommonAudit.fromJson(json[r'objAudit']),
         objEzmaxinvoicingcontract: EzmaxinvoicingcontractResponseCompound.fromJson(json[r'objEzmaxinvoicingcontract'])!,
         objEzmaxpricing: CustomEzmaxpricingResponse.fromJson(json[r'objEzmaxpricing'])!,
-        aObjEzmaxinvoicingsummaryglobal: EzmaxinvoicingsummaryglobalResponseCompound.listFromJson(json[r'a_objEzmaxinvoicingsummaryglobal'])!,
-        aObjEzmaxinvoicingsummaryexternal: EzmaxinvoicingsummaryexternalResponseCompound.listFromJson(json[r'a_objEzmaxinvoicingsummaryexternal'])!,
-        aObjEzmaxinvoicingsummaryinternal: EzmaxinvoicingsummaryinternalResponseCompound.listFromJson(json[r'a_objEzmaxinvoicingsummaryinternal'])!,
-        aObjEzmaxinvoicingagent: EzmaxinvoicingagentResponseCompound.listFromJson(json[r'a_objEzmaxinvoicingagent'])!,
-        aObjEzmaxinvoicinguser: EzmaxinvoicinguserResponseCompound.listFromJson(json[r'a_objEzmaxinvoicinguser'])!,
-        aObjEzmaxinvoicingezsignfolder: CustomEzmaxinvoicingEzsignfolderResponse.listFromJson(json[r'a_objEzmaxinvoicingezsignfolder'])!,
-        aObjEzmaxinvoicingezsigndocument: CustomEzmaxinvoicingEzsigndocumentResponse.listFromJson(json[r'a_objEzmaxinvoicingezsigndocument'])!,
+        aObjEzmaxinvoicingsummaryglobal: EzmaxinvoicingsummaryglobalResponseCompound.listFromJson(json[r'a_objEzmaxinvoicingsummaryglobal']),
+        aObjEzmaxinvoicingsummaryexternal: EzmaxinvoicingsummaryexternalResponseCompound.listFromJson(json[r'a_objEzmaxinvoicingsummaryexternal']),
+        aObjEzmaxinvoicingsummaryinternal: EzmaxinvoicingsummaryinternalResponseCompound.listFromJson(json[r'a_objEzmaxinvoicingsummaryinternal']),
+        aObjEzmaxinvoicingagent: EzmaxinvoicingagentResponseCompound.listFromJson(json[r'a_objEzmaxinvoicingagent']),
+        aObjEzmaxinvoicinguser: EzmaxinvoicinguserResponseCompound.listFromJson(json[r'a_objEzmaxinvoicinguser']),
+        aObjEzmaxinvoicingezsignfolder: CustomEzmaxinvoicingEzsignfolderResponse.listFromJson(json[r'a_objEzmaxinvoicingezsignfolder']),
+        aObjEzmaxinvoicingezsigndocument: CustomEzmaxinvoicingEzsigndocumentResponse.listFromJson(json[r'a_objEzmaxinvoicingezsigndocument']),
       );
     }
     return null;
   }
 
-  static List<EzmaxinvoicingResponseCompound>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzmaxinvoicingResponseCompound> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzmaxinvoicingResponseCompound>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -282,12 +282,10 @@ class EzmaxinvoicingResponseCompound {
   static Map<String, List<EzmaxinvoicingResponseCompound>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzmaxinvoicingResponseCompound>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzmaxinvoicingResponseCompound.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzmaxinvoicingResponseCompound.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

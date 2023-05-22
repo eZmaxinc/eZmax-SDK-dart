@@ -67,15 +67,15 @@ class CommunicationResponseCompoundAllOf {
       }());
 
       return CommunicationResponseCompoundAllOf(
-        aObjCommunicationattachment: CommunicationattachmentResponseCompound.listFromJson(json[r'a_objCommunicationattachment'])!,
-        aObjCommunicationrecipient: CommunicationrecipientResponseCompound.listFromJson(json[r'a_objCommunicationrecipient'])!,
-        aObjCommunicationexternalrecipient: CommunicationexternalrecipientResponseCompound.listFromJson(json[r'a_objCommunicationexternalrecipient'])!,
+        aObjCommunicationattachment: CommunicationattachmentResponseCompound.listFromJson(json[r'a_objCommunicationattachment']),
+        aObjCommunicationrecipient: CommunicationrecipientResponseCompound.listFromJson(json[r'a_objCommunicationrecipient']),
+        aObjCommunicationexternalrecipient: CommunicationexternalrecipientResponseCompound.listFromJson(json[r'a_objCommunicationexternalrecipient']),
       );
     }
     return null;
   }
 
-  static List<CommunicationResponseCompoundAllOf>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<CommunicationResponseCompoundAllOf> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <CommunicationResponseCompoundAllOf>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -106,12 +106,10 @@ class CommunicationResponseCompoundAllOf {
   static Map<String, List<CommunicationResponseCompoundAllOf>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<CommunicationResponseCompoundAllOf>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = CommunicationResponseCompoundAllOf.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = CommunicationResponseCompoundAllOf.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

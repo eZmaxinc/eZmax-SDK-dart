@@ -55,13 +55,13 @@ class EzmaxinvoicingsummaryglobalResponseCompoundAllOf {
       }());
 
       return EzmaxinvoicingsummaryglobalResponseCompoundAllOf(
-        aObjEzmaxinvoicingcommission: EzmaxinvoicingcommissionResponseCompound.listFromJson(json[r'a_objEzmaxinvoicingcommission']) ?? const [],
+        aObjEzmaxinvoicingcommission: EzmaxinvoicingcommissionResponseCompound.listFromJson(json[r'a_objEzmaxinvoicingcommission']),
       );
     }
     return null;
   }
 
-  static List<EzmaxinvoicingsummaryglobalResponseCompoundAllOf>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzmaxinvoicingsummaryglobalResponseCompoundAllOf> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzmaxinvoicingsummaryglobalResponseCompoundAllOf>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -92,12 +92,10 @@ class EzmaxinvoicingsummaryglobalResponseCompoundAllOf {
   static Map<String, List<EzmaxinvoicingsummaryglobalResponseCompoundAllOf>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzmaxinvoicingsummaryglobalResponseCompoundAllOf>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzmaxinvoicingsummaryglobalResponseCompoundAllOf.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzmaxinvoicingsummaryglobalResponseCompoundAllOf.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

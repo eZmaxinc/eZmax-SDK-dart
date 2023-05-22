@@ -70,7 +70,7 @@ class CustomDropdownElementResponse {
     return null;
   }
 
-  static List<CustomDropdownElementResponse>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<CustomDropdownElementResponse> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <CustomDropdownElementResponse>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -101,12 +101,10 @@ class CustomDropdownElementResponse {
   static Map<String, List<CustomDropdownElementResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<CustomDropdownElementResponse>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = CustomDropdownElementResponse.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = CustomDropdownElementResponse.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

@@ -55,13 +55,13 @@ class EzsignbulksendGetListV1ResponseMPayloadAllOf {
       }());
 
       return EzsignbulksendGetListV1ResponseMPayloadAllOf(
-        aObjEzsignbulksend: EzsignbulksendListElement.listFromJson(json[r'a_objEzsignbulksend'])!,
+        aObjEzsignbulksend: EzsignbulksendListElement.listFromJson(json[r'a_objEzsignbulksend']),
       );
     }
     return null;
   }
 
-  static List<EzsignbulksendGetListV1ResponseMPayloadAllOf>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsignbulksendGetListV1ResponseMPayloadAllOf> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsignbulksendGetListV1ResponseMPayloadAllOf>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -92,12 +92,10 @@ class EzsignbulksendGetListV1ResponseMPayloadAllOf {
   static Map<String, List<EzsignbulksendGetListV1ResponseMPayloadAllOf>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignbulksendGetListV1ResponseMPayloadAllOf>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsignbulksendGetListV1ResponseMPayloadAllOf.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsignbulksendGetListV1ResponseMPayloadAllOf.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

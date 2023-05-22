@@ -72,7 +72,7 @@ class WebsiteRequest {
     return null;
   }
 
-  static List<WebsiteRequest>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<WebsiteRequest> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <WebsiteRequest>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -103,12 +103,10 @@ class WebsiteRequest {
   static Map<String, List<WebsiteRequest>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<WebsiteRequest>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = WebsiteRequest.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = WebsiteRequest.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

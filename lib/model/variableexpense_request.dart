@@ -105,7 +105,7 @@ class VariableexpenseRequest {
     return null;
   }
 
-  static List<VariableexpenseRequest>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<VariableexpenseRequest> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <VariableexpenseRequest>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -136,12 +136,10 @@ class VariableexpenseRequest {
   static Map<String, List<VariableexpenseRequest>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<VariableexpenseRequest>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = VariableexpenseRequest.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = VariableexpenseRequest.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

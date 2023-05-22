@@ -67,15 +67,15 @@ class EzsignSuggestSignersV1ResponseMPayload {
       }());
 
       return EzsignSuggestSignersV1ResponseMPayload(
-        aObjEzsignfoldersignerassociation: EzsignfoldersignerassociationResponseCompound.listFromJson(json[r'a_objEzsignfoldersignerassociation'])!,
-        aObjUserTeam: CustomUserResponse.listFromJson(json[r'a_objUserTeam'])!,
-        aObjUser: CustomUserResponse.listFromJson(json[r'a_objUser'])!,
+        aObjEzsignfoldersignerassociation: EzsignfoldersignerassociationResponseCompound.listFromJson(json[r'a_objEzsignfoldersignerassociation']),
+        aObjUserTeam: CustomUserResponse.listFromJson(json[r'a_objUserTeam']),
+        aObjUser: CustomUserResponse.listFromJson(json[r'a_objUser']),
       );
     }
     return null;
   }
 
-  static List<EzsignSuggestSignersV1ResponseMPayload>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsignSuggestSignersV1ResponseMPayload> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsignSuggestSignersV1ResponseMPayload>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -106,12 +106,10 @@ class EzsignSuggestSignersV1ResponseMPayload {
   static Map<String, List<EzsignSuggestSignersV1ResponseMPayload>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignSuggestSignersV1ResponseMPayload>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsignSuggestSignersV1ResponseMPayload.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsignSuggestSignersV1ResponseMPayload.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

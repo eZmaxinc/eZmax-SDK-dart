@@ -89,13 +89,13 @@ class EzsigntemplatedocumentEditObjectV1Response {
       return EzsigntemplatedocumentEditObjectV1Response(
         objDebugPayload: CommonResponseObjDebugPayload.fromJson(json[r'objDebugPayload']),
         objDebug: CommonResponseObjDebug.fromJson(json[r'objDebug']),
-        aObjWarning: CommonResponseWarning.listFromJson(json[r'a_objWarning']) ?? const [],
+        aObjWarning: CommonResponseWarning.listFromJson(json[r'a_objWarning']),
       );
     }
     return null;
   }
 
-  static List<EzsigntemplatedocumentEditObjectV1Response>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsigntemplatedocumentEditObjectV1Response> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsigntemplatedocumentEditObjectV1Response>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -126,12 +126,10 @@ class EzsigntemplatedocumentEditObjectV1Response {
   static Map<String, List<EzsigntemplatedocumentEditObjectV1Response>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsigntemplatedocumentEditObjectV1Response>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsigntemplatedocumentEditObjectV1Response.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsigntemplatedocumentEditObjectV1Response.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

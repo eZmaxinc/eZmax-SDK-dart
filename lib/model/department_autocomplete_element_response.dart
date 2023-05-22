@@ -88,7 +88,7 @@ class DepartmentAutocompleteElementResponse {
     return null;
   }
 
-  static List<DepartmentAutocompleteElementResponse>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<DepartmentAutocompleteElementResponse> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <DepartmentAutocompleteElementResponse>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -119,12 +119,10 @@ class DepartmentAutocompleteElementResponse {
   static Map<String, List<DepartmentAutocompleteElementResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<DepartmentAutocompleteElementResponse>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = DepartmentAutocompleteElementResponse.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = DepartmentAutocompleteElementResponse.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

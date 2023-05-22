@@ -125,7 +125,7 @@ class CustomCommunicationListElementResponse {
     return null;
   }
 
-  static List<CustomCommunicationListElementResponse>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<CustomCommunicationListElementResponse> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <CustomCommunicationListElementResponse>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -156,12 +156,10 @@ class CustomCommunicationListElementResponse {
   static Map<String, List<CustomCommunicationListElementResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<CustomCommunicationListElementResponse>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = CustomCommunicationListElementResponse.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = CustomCommunicationListElementResponse.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

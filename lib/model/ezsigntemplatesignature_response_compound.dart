@@ -294,13 +294,13 @@ class EzsigntemplatesignatureResponseCompound {
         eEzsigntemplatesignatureAttachmentnamesource: FieldEEzsigntemplatesignatureAttachmentnamesource.fromJson(json[r'eEzsigntemplatesignatureAttachmentnamesource']),
         bEzsigntemplatesignatureRequired: mapValueOfType<bool>(json, r'bEzsigntemplatesignatureRequired'),
         bEzsigntemplatesignatureCustomdate: mapValueOfType<bool>(json, r'bEzsigntemplatesignatureCustomdate'),
-        aObjEzsigntemplatesignaturecustomdate: EzsigntemplatesignaturecustomdateResponseCompound.listFromJson(json[r'a_objEzsigntemplatesignaturecustomdate']) ?? const [],
+        aObjEzsigntemplatesignaturecustomdate: EzsigntemplatesignaturecustomdateResponseCompound.listFromJson(json[r'a_objEzsigntemplatesignaturecustomdate']),
       );
     }
     return null;
   }
 
-  static List<EzsigntemplatesignatureResponseCompound>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsigntemplatesignatureResponseCompound> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsigntemplatesignatureResponseCompound>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -331,12 +331,10 @@ class EzsigntemplatesignatureResponseCompound {
   static Map<String, List<EzsigntemplatesignatureResponseCompound>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsigntemplatesignatureResponseCompound>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsigntemplatesignatureResponseCompound.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsigntemplatesignatureResponseCompound.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

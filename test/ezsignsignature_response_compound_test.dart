@@ -108,6 +108,17 @@ void main() {
       // TODO
     });
 
+    // The date the Ezsignsignature was signed
+    // String dtEzsignsignatureDate
+    test('to test the property `dtEzsignsignatureDate`', () async {
+      // TODO
+    });
+
+    // CustomContactNameResponse objContactName
+    test('to test the property `objContactName`', () async {
+      // TODO
+    });
+
     // Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)
     // bool bEzsignsignatureCustomdate
     test('to test the property `bEzsignsignatureCustomdate`', () async {
@@ -117,6 +128,11 @@ void main() {
     // An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all.
     // List<EzsignsignaturecustomdateResponseCompound> aObjEzsignsignaturecustomdate (default value: const [])
     test('to test the property `aObjEzsignsignaturecustomdate`', () async {
+      // TODO
+    });
+
+    // CustomCreditcardtransactionResponse objCreditcardtransaction
+    test('to test the property `objCreditcardtransaction`', () async {
       // TODO
     });
 

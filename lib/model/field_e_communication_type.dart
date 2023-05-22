@@ -36,7 +36,7 @@ class FieldECommunicationType {
 
   static FieldECommunicationType? fromJson(dynamic value) => FieldECommunicationTypeTypeTransformer().decode(value);
 
-  static List<FieldECommunicationType>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<FieldECommunicationType> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldECommunicationType>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

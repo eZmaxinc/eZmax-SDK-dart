@@ -98,7 +98,7 @@ class CustomEzmaxpricingResponse {
     return null;
   }
 
-  static List<CustomEzmaxpricingResponse>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<CustomEzmaxpricingResponse> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <CustomEzmaxpricingResponse>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -129,12 +129,10 @@ class CustomEzmaxpricingResponse {
   static Map<String, List<CustomEzmaxpricingResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<CustomEzmaxpricingResponse>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = CustomEzmaxpricingResponse.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = CustomEzmaxpricingResponse.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

@@ -46,7 +46,7 @@ class FieldEEzsignfolderStep {
 
   static FieldEEzsignfolderStep? fromJson(dynamic value) => FieldEEzsignfolderStepTypeTransformer().decode(value);
 
-  static List<FieldEEzsignfolderStep>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<FieldEEzsignfolderStep> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsignfolderStep>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

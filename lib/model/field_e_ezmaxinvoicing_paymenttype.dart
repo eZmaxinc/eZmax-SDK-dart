@@ -36,7 +36,7 @@ class FieldEEzmaxinvoicingPaymenttype {
 
   static FieldEEzmaxinvoicingPaymenttype? fromJson(dynamic value) => FieldEEzmaxinvoicingPaymenttypeTypeTransformer().decode(value);
 
-  static List<FieldEEzmaxinvoicingPaymenttype>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<FieldEEzmaxinvoicingPaymenttype> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzmaxinvoicingPaymenttype>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

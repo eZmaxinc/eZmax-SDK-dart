@@ -40,7 +40,7 @@ class FieldEActivesessionUsertype {
 
   static FieldEActivesessionUsertype? fromJson(dynamic value) => FieldEActivesessionUsertypeTypeTransformer().decode(value);
 
-  static List<FieldEActivesessionUsertype>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<FieldEActivesessionUsertype> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEActivesessionUsertype>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

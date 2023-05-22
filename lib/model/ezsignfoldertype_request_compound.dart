@@ -454,7 +454,7 @@ class EzsignfoldertypeRequestCompound {
     return null;
   }
 
-  static List<EzsignfoldertypeRequestCompound>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsignfoldertypeRequestCompound> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsignfoldertypeRequestCompound>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -485,12 +485,10 @@ class EzsignfoldertypeRequestCompound {
   static Map<String, List<EzsignfoldertypeRequestCompound>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignfoldertypeRequestCompound>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsignfoldertypeRequestCompound.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsignfoldertypeRequestCompound.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

@@ -24,17 +24,21 @@ class FieldEWebhookEzsignevent {
   String toJson() => value;
 
   static const documentCompleted = FieldEWebhookEzsignevent._(r'DocumentCompleted');
+  static const ezsignsignerAcceptclause = FieldEWebhookEzsignevent._(r'EzsignsignerAcceptclause');
+  static const ezsignsignerConnect = FieldEWebhookEzsignevent._(r'EzsignsignerConnect');
   static const folderCompleted = FieldEWebhookEzsignevent._(r'FolderCompleted');
 
   /// List of all possible values in this [enum][FieldEWebhookEzsignevent].
   static const values = <FieldEWebhookEzsignevent>[
     documentCompleted,
+    ezsignsignerAcceptclause,
+    ezsignsignerConnect,
     folderCompleted,
   ];
 
   static FieldEWebhookEzsignevent? fromJson(dynamic value) => FieldEWebhookEzsigneventTypeTransformer().decode(value);
 
-  static List<FieldEWebhookEzsignevent>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<FieldEWebhookEzsignevent> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEWebhookEzsignevent>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -69,6 +73,8 @@ class FieldEWebhookEzsigneventTypeTransformer {
     if (data != null) {
       switch (data) {
         case r'DocumentCompleted': return FieldEWebhookEzsignevent.documentCompleted;
+        case r'EzsignsignerAcceptclause': return FieldEWebhookEzsignevent.ezsignsignerAcceptclause;
+        case r'EzsignsignerConnect': return FieldEWebhookEzsignevent.ezsignsignerConnect;
         case r'FolderCompleted': return FieldEWebhookEzsignevent.folderCompleted;
         default:
           if (!allowNull) {

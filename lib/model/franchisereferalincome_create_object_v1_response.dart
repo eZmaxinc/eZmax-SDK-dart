@@ -95,7 +95,7 @@ class FranchisereferalincomeCreateObjectV1Response {
     return null;
   }
 
-  static List<FranchisereferalincomeCreateObjectV1Response>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<FranchisereferalincomeCreateObjectV1Response> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FranchisereferalincomeCreateObjectV1Response>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -126,12 +126,10 @@ class FranchisereferalincomeCreateObjectV1Response {
   static Map<String, List<FranchisereferalincomeCreateObjectV1Response>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<FranchisereferalincomeCreateObjectV1Response>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = FranchisereferalincomeCreateObjectV1Response.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = FranchisereferalincomeCreateObjectV1Response.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

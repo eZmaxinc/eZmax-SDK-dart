@@ -89,7 +89,7 @@ class EzsignfolderSendV3Request {
     return null;
   }
 
-  static List<EzsignfolderSendV3Request>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsignfolderSendV3Request> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsignfolderSendV3Request>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -120,12 +120,10 @@ class EzsignfolderSendV3Request {
   static Map<String, List<EzsignfolderSendV3Request>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignfolderSendV3Request>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsignfolderSendV3Request.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsignfolderSendV3Request.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

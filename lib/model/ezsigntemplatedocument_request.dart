@@ -226,7 +226,7 @@ class EzsigntemplatedocumentRequest {
     return null;
   }
 
-  static List<EzsigntemplatedocumentRequest>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsigntemplatedocumentRequest> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsigntemplatedocumentRequest>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -257,12 +257,10 @@ class EzsigntemplatedocumentRequest {
   static Map<String, List<EzsigntemplatedocumentRequest>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsigntemplatedocumentRequest>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsigntemplatedocumentRequest.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsigntemplatedocumentRequest.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;
@@ -302,7 +300,7 @@ class EzsigntemplatedocumentRequestEEzsigntemplatedocumentSourceEnum {
 
   static EzsigntemplatedocumentRequestEEzsigntemplatedocumentSourceEnum? fromJson(dynamic value) => EzsigntemplatedocumentRequestEEzsigntemplatedocumentSourceEnumTypeTransformer().decode(value);
 
-  static List<EzsigntemplatedocumentRequestEEzsigntemplatedocumentSourceEnum>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsigntemplatedocumentRequestEEzsigntemplatedocumentSourceEnum> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsigntemplatedocumentRequestEEzsigntemplatedocumentSourceEnum>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -387,7 +385,7 @@ class EzsigntemplatedocumentRequestEEzsigntemplatedocumentFormatEnum {
 
   static EzsigntemplatedocumentRequestEEzsigntemplatedocumentFormatEnum? fromJson(dynamic value) => EzsigntemplatedocumentRequestEEzsigntemplatedocumentFormatEnumTypeTransformer().decode(value);
 
-  static List<EzsigntemplatedocumentRequestEEzsigntemplatedocumentFormatEnum>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsigntemplatedocumentRequestEEzsigntemplatedocumentFormatEnum> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsigntemplatedocumentRequestEEzsigntemplatedocumentFormatEnum>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -466,7 +464,7 @@ class EzsigntemplatedocumentRequestEEzsigntemplatedocumentFormEnum {
 
   static EzsigntemplatedocumentRequestEEzsigntemplatedocumentFormEnum? fromJson(dynamic value) => EzsigntemplatedocumentRequestEEzsigntemplatedocumentFormEnumTypeTransformer().decode(value);
 
-  static List<EzsigntemplatedocumentRequestEEzsigntemplatedocumentFormEnum>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsigntemplatedocumentRequestEEzsigntemplatedocumentFormEnum> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsigntemplatedocumentRequestEEzsigntemplatedocumentFormEnum>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

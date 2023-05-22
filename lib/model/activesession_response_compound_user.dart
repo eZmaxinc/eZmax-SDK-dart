@@ -142,7 +142,7 @@ class ActivesessionResponseCompoundUser {
     return null;
   }
 
-  static List<ActivesessionResponseCompoundUser>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<ActivesessionResponseCompoundUser> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <ActivesessionResponseCompoundUser>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -173,12 +173,10 @@ class ActivesessionResponseCompoundUser {
   static Map<String, List<ActivesessionResponseCompoundUser>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<ActivesessionResponseCompoundUser>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = ActivesessionResponseCompoundUser.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = ActivesessionResponseCompoundUser.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

@@ -56,13 +56,13 @@ class EzsigndocumentGetWordsPositionsV1ResponseAllOf {
       }());
 
       return EzsigndocumentGetWordsPositionsV1ResponseAllOf(
-        mPayload: CustomWordPositionWordResponse.listFromJson(json[r'mPayload'])!,
+        mPayload: CustomWordPositionWordResponse.listFromJson(json[r'mPayload']),
       );
     }
     return null;
   }
 
-  static List<EzsigndocumentGetWordsPositionsV1ResponseAllOf>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsigndocumentGetWordsPositionsV1ResponseAllOf> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsigndocumentGetWordsPositionsV1ResponseAllOf>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -93,12 +93,10 @@ class EzsigndocumentGetWordsPositionsV1ResponseAllOf {
   static Map<String, List<EzsigndocumentGetWordsPositionsV1ResponseAllOf>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsigndocumentGetWordsPositionsV1ResponseAllOf>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsigndocumentGetWordsPositionsV1ResponseAllOf.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsigndocumentGetWordsPositionsV1ResponseAllOf.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

@@ -44,7 +44,7 @@ class FieldEActivesessionWeekdaystart {
 
   static FieldEActivesessionWeekdaystart? fromJson(dynamic value) => FieldEActivesessionWeekdaystartTypeTransformer().decode(value);
 
-  static List<FieldEActivesessionWeekdaystart>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<FieldEActivesessionWeekdaystart> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEActivesessionWeekdaystart>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

@@ -14,6 +14,7 @@ class ActivesessionResponseCompound {
   /// Returns a new [ActivesessionResponseCompound] instance.
   ActivesessionResponseCompound({
     required this.eActivesessionUsertype,
+    required this.eActivesessionOrigin,
     required this.eActivesessionWeekdaystart,
     required this.fkiLanguageID,
     required this.sCompanyNameX,
@@ -30,6 +31,8 @@ class ActivesessionResponseCompound {
   });
 
   FieldEActivesessionUsertype eActivesessionUsertype;
+
+  FieldEActivesessionOrigin eActivesessionOrigin;
 
   FieldEActivesessionWeekdaystart eActivesessionWeekdaystart;
 
@@ -92,6 +95,7 @@ class ActivesessionResponseCompound {
   @override
   bool operator ==(Object other) => identical(this, other) || other is ActivesessionResponseCompound &&
      other.eActivesessionUsertype == eActivesessionUsertype &&
+     other.eActivesessionOrigin == eActivesessionOrigin &&
      other.eActivesessionWeekdaystart == eActivesessionWeekdaystart &&
      other.fkiLanguageID == fkiLanguageID &&
      other.sCompanyNameX == sCompanyNameX &&
@@ -110,6 +114,7 @@ class ActivesessionResponseCompound {
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (eActivesessionUsertype.hashCode) +
+    (eActivesessionOrigin.hashCode) +
     (eActivesessionWeekdaystart.hashCode) +
     (fkiLanguageID.hashCode) +
     (sCompanyNameX.hashCode) +
@@ -125,11 +130,12 @@ class ActivesessionResponseCompound {
     (aEModuleInternalname.hashCode);
 
   @override
-  String toString() => 'ActivesessionResponseCompound[eActivesessionUsertype=$eActivesessionUsertype, eActivesessionWeekdaystart=$eActivesessionWeekdaystart, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, bActivesessionDebug=$bActivesessionDebug, bActivesessionIssuperadmin=$bActivesessionIssuperadmin, pksCustomerCode=$pksCustomerCode, fkiSystemconfigurationtypeID=$fkiSystemconfigurationtypeID, aPkiPermissionID=$aPkiPermissionID, objUserReal=$objUserReal, objUserCloned=$objUserCloned, objApikey=$objApikey, aEModuleInternalname=$aEModuleInternalname]';
+  String toString() => 'ActivesessionResponseCompound[eActivesessionUsertype=$eActivesessionUsertype, eActivesessionOrigin=$eActivesessionOrigin, eActivesessionWeekdaystart=$eActivesessionWeekdaystart, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, bActivesessionDebug=$bActivesessionDebug, bActivesessionIssuperadmin=$bActivesessionIssuperadmin, pksCustomerCode=$pksCustomerCode, fkiSystemconfigurationtypeID=$fkiSystemconfigurationtypeID, aPkiPermissionID=$aPkiPermissionID, objUserReal=$objUserReal, objUserCloned=$objUserCloned, objApikey=$objApikey, aEModuleInternalname=$aEModuleInternalname]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'eActivesessionUsertype'] = this.eActivesessionUsertype;
+      json[r'eActivesessionOrigin'] = this.eActivesessionOrigin;
       json[r'eActivesessionWeekdaystart'] = this.eActivesessionWeekdaystart;
       json[r'fkiLanguageID'] = this.fkiLanguageID;
       json[r'sCompanyNameX'] = this.sCompanyNameX;
@@ -178,6 +184,7 @@ class ActivesessionResponseCompound {
 
       return ActivesessionResponseCompound(
         eActivesessionUsertype: FieldEActivesessionUsertype.fromJson(json[r'eActivesessionUsertype'])!,
+        eActivesessionOrigin: FieldEActivesessionOrigin.fromJson(json[r'eActivesessionOrigin'])!,
         eActivesessionWeekdaystart: FieldEActivesessionWeekdaystart.fromJson(json[r'eActivesessionWeekdaystart'])!,
         fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID')!,
         sCompanyNameX: mapValueOfType<String>(json, r'sCompanyNameX')!,
@@ -200,7 +207,7 @@ class ActivesessionResponseCompound {
     return null;
   }
 
-  static List<ActivesessionResponseCompound>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<ActivesessionResponseCompound> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <ActivesessionResponseCompound>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -231,12 +238,10 @@ class ActivesessionResponseCompound {
   static Map<String, List<ActivesessionResponseCompound>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<ActivesessionResponseCompound>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = ActivesessionResponseCompound.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = ActivesessionResponseCompound.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;
@@ -245,6 +250,7 @@ class ActivesessionResponseCompound {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'eActivesessionUsertype',
+    'eActivesessionOrigin',
     'eActivesessionWeekdaystart',
     'fkiLanguageID',
     'sCompanyNameX',

@@ -61,7 +61,7 @@ class EzsigntemplatepackageEditObjectV1Request {
     return null;
   }
 
-  static List<EzsigntemplatepackageEditObjectV1Request>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsigntemplatepackageEditObjectV1Request> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsigntemplatepackageEditObjectV1Request>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -92,12 +92,10 @@ class EzsigntemplatepackageEditObjectV1Request {
   static Map<String, List<EzsigntemplatepackageEditObjectV1Request>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsigntemplatepackageEditObjectV1Request>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsigntemplatepackageEditObjectV1Request.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsigntemplatepackageEditObjectV1Request.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

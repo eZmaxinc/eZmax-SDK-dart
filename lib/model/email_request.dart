@@ -72,7 +72,7 @@ class EmailRequest {
     return null;
   }
 
-  static List<EmailRequest>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EmailRequest> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EmailRequest>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -103,12 +103,10 @@ class EmailRequest {
   static Map<String, List<EmailRequest>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EmailRequest>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EmailRequest.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EmailRequest.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

@@ -36,7 +36,7 @@ class FieldEBrandingLogo {
 
   static FieldEBrandingLogo? fromJson(dynamic value) => FieldEBrandingLogoTypeTransformer().decode(value);
 
-  static List<FieldEBrandingLogo>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<FieldEBrandingLogo> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEBrandingLogo>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

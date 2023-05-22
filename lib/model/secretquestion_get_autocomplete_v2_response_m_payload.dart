@@ -56,13 +56,13 @@ class SecretquestionGetAutocompleteV2ResponseMPayload {
       }());
 
       return SecretquestionGetAutocompleteV2ResponseMPayload(
-        aObjSecretquestion: SecretquestionAutocompleteElementResponse.listFromJson(json[r'a_objSecretquestion'])!,
+        aObjSecretquestion: SecretquestionAutocompleteElementResponse.listFromJson(json[r'a_objSecretquestion']),
       );
     }
     return null;
   }
 
-  static List<SecretquestionGetAutocompleteV2ResponseMPayload>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<SecretquestionGetAutocompleteV2ResponseMPayload> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <SecretquestionGetAutocompleteV2ResponseMPayload>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -93,12 +93,10 @@ class SecretquestionGetAutocompleteV2ResponseMPayload {
   static Map<String, List<SecretquestionGetAutocompleteV2ResponseMPayload>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<SecretquestionGetAutocompleteV2ResponseMPayload>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = SecretquestionGetAutocompleteV2ResponseMPayload.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = SecretquestionGetAutocompleteV2ResponseMPayload.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

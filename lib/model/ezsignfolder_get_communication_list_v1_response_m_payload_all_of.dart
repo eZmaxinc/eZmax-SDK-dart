@@ -55,13 +55,13 @@ class EzsignfolderGetCommunicationListV1ResponseMPayloadAllOf {
       }());
 
       return EzsignfolderGetCommunicationListV1ResponseMPayloadAllOf(
-        aObjCommunication: CustomCommunicationListElementResponse.listFromJson(json[r'a_objCommunication'])!,
+        aObjCommunication: CustomCommunicationListElementResponse.listFromJson(json[r'a_objCommunication']),
       );
     }
     return null;
   }
 
-  static List<EzsignfolderGetCommunicationListV1ResponseMPayloadAllOf>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsignfolderGetCommunicationListV1ResponseMPayloadAllOf> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsignfolderGetCommunicationListV1ResponseMPayloadAllOf>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -92,12 +92,10 @@ class EzsignfolderGetCommunicationListV1ResponseMPayloadAllOf {
   static Map<String, List<EzsignfolderGetCommunicationListV1ResponseMPayloadAllOf>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignfolderGetCommunicationListV1ResponseMPayloadAllOf>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsignfolderGetCommunicationListV1ResponseMPayloadAllOf.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsignfolderGetCommunicationListV1ResponseMPayloadAllOf.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

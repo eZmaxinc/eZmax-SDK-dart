@@ -70,7 +70,7 @@ class CommonGetListV1ResponseMPayload {
     return null;
   }
 
-  static List<CommonGetListV1ResponseMPayload>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<CommonGetListV1ResponseMPayload> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <CommonGetListV1ResponseMPayload>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -101,12 +101,10 @@ class CommonGetListV1ResponseMPayload {
   static Map<String, List<CommonGetListV1ResponseMPayload>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<CommonGetListV1ResponseMPayload>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = CommonGetListV1ResponseMPayload.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = CommonGetListV1ResponseMPayload.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

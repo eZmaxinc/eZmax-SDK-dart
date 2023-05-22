@@ -42,7 +42,7 @@ class FieldEEzsigntemplatesignatureType {
 
   static FieldEEzsigntemplatesignatureType? fromJson(dynamic value) => FieldEEzsigntemplatesignatureTypeTypeTransformer().decode(value);
 
-  static List<FieldEEzsigntemplatesignatureType>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<FieldEEzsigntemplatesignatureType> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsigntemplatesignatureType>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

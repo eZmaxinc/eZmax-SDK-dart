@@ -69,7 +69,7 @@ class PaymenttermGetListV1ResponseMPayload {
       }());
 
       return PaymenttermGetListV1ResponseMPayload(
-        aObjPaymentterm: PaymenttermListElement.listFromJson(json[r'a_objPaymentterm'])!,
+        aObjPaymentterm: PaymenttermListElement.listFromJson(json[r'a_objPaymentterm']),
         iRowReturned: mapValueOfType<int>(json, r'iRowReturned')!,
         iRowFiltered: mapValueOfType<int>(json, r'iRowFiltered')!,
       );
@@ -77,7 +77,7 @@ class PaymenttermGetListV1ResponseMPayload {
     return null;
   }
 
-  static List<PaymenttermGetListV1ResponseMPayload>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<PaymenttermGetListV1ResponseMPayload> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <PaymenttermGetListV1ResponseMPayload>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -108,12 +108,10 @@ class PaymenttermGetListV1ResponseMPayload {
   static Map<String, List<PaymenttermGetListV1ResponseMPayload>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<PaymenttermGetListV1ResponseMPayload>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = PaymenttermGetListV1ResponseMPayload.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = PaymenttermGetListV1ResponseMPayload.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

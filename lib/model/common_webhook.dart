@@ -63,13 +63,13 @@ class CommonWebhook {
 
       return CommonWebhook(
         objWebhook: CustomWebhookResponse.fromJson(json[r'objWebhook'])!,
-        aObjAttempt: AttemptResponseCompound.listFromJson(json[r'a_objAttempt'])!,
+        aObjAttempt: AttemptResponseCompound.listFromJson(json[r'a_objAttempt']),
       );
     }
     return null;
   }
 
-  static List<CommonWebhook>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<CommonWebhook> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <CommonWebhook>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -100,12 +100,10 @@ class CommonWebhook {
   static Map<String, List<CommonWebhook>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<CommonWebhook>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = CommonWebhook.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = CommonWebhook.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

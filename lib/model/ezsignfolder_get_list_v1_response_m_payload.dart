@@ -69,7 +69,7 @@ class EzsignfolderGetListV1ResponseMPayload {
       }());
 
       return EzsignfolderGetListV1ResponseMPayload(
-        aObjEzsignfolder: EzsignfolderListElement.listFromJson(json[r'a_objEzsignfolder'])!,
+        aObjEzsignfolder: EzsignfolderListElement.listFromJson(json[r'a_objEzsignfolder']),
         iRowReturned: mapValueOfType<int>(json, r'iRowReturned')!,
         iRowFiltered: mapValueOfType<int>(json, r'iRowFiltered')!,
       );
@@ -77,7 +77,7 @@ class EzsignfolderGetListV1ResponseMPayload {
     return null;
   }
 
-  static List<EzsignfolderGetListV1ResponseMPayload>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsignfolderGetListV1ResponseMPayload> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsignfolderGetListV1ResponseMPayload>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -108,12 +108,10 @@ class EzsignfolderGetListV1ResponseMPayload {
   static Map<String, List<EzsignfolderGetListV1ResponseMPayload>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignfolderGetListV1ResponseMPayload>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsignfolderGetListV1ResponseMPayload.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsignfolderGetListV1ResponseMPayload.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

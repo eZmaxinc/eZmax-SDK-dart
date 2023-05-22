@@ -55,13 +55,13 @@ class UsergroupGetListV1ResponseMPayloadAllOf {
       }());
 
       return UsergroupGetListV1ResponseMPayloadAllOf(
-        aObjUsergroup: UsergroupListElement.listFromJson(json[r'a_objUsergroup'])!,
+        aObjUsergroup: UsergroupListElement.listFromJson(json[r'a_objUsergroup']),
       );
     }
     return null;
   }
 
-  static List<UsergroupGetListV1ResponseMPayloadAllOf>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<UsergroupGetListV1ResponseMPayloadAllOf> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <UsergroupGetListV1ResponseMPayloadAllOf>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -92,12 +92,10 @@ class UsergroupGetListV1ResponseMPayloadAllOf {
   static Map<String, List<UsergroupGetListV1ResponseMPayloadAllOf>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<UsergroupGetListV1ResponseMPayloadAllOf>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = UsergroupGetListV1ResponseMPayloadAllOf.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = UsergroupGetListV1ResponseMPayloadAllOf.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

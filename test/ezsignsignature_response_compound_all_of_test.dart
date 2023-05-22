@@ -28,6 +28,11 @@ void main() {
       // TODO
     });
 
+    // CustomCreditcardtransactionResponse objCreditcardtransaction
+    test('to test the property `objCreditcardtransaction`', () async {
+      // TODO
+    });
+
 
   });
 

@@ -36,7 +36,7 @@ class FieldEVariableexpenseTaxable {
 
   static FieldEVariableexpenseTaxable? fromJson(dynamic value) => FieldEVariableexpenseTaxableTypeTransformer().decode(value);
 
-  static List<FieldEVariableexpenseTaxable>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<FieldEVariableexpenseTaxable> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEVariableexpenseTaxable>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

@@ -34,7 +34,7 @@ class FieldEEzsignfoldertypePrivacylevel {
 
   static FieldEEzsignfoldertypePrivacylevel? fromJson(dynamic value) => FieldEEzsignfoldertypePrivacylevelTypeTransformer().decode(value);
 
-  static List<FieldEEzsignfoldertypePrivacylevel>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<FieldEEzsignfoldertypePrivacylevel> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsignfoldertypePrivacylevel>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

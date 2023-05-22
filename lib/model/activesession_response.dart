@@ -14,6 +14,7 @@ class ActivesessionResponse {
   /// Returns a new [ActivesessionResponse] instance.
   ActivesessionResponse({
     required this.eActivesessionUsertype,
+    required this.eActivesessionOrigin,
     required this.eActivesessionWeekdaystart,
     required this.fkiLanguageID,
     required this.sCompanyNameX,
@@ -25,6 +26,8 @@ class ActivesessionResponse {
   });
 
   FieldEActivesessionUsertype eActivesessionUsertype;
+
+  FieldEActivesessionOrigin eActivesessionOrigin;
 
   FieldEActivesessionWeekdaystart eActivesessionWeekdaystart;
 
@@ -63,6 +66,7 @@ class ActivesessionResponse {
   @override
   bool operator ==(Object other) => identical(this, other) || other is ActivesessionResponse &&
      other.eActivesessionUsertype == eActivesessionUsertype &&
+     other.eActivesessionOrigin == eActivesessionOrigin &&
      other.eActivesessionWeekdaystart == eActivesessionWeekdaystart &&
      other.fkiLanguageID == fkiLanguageID &&
      other.sCompanyNameX == sCompanyNameX &&
@@ -76,6 +80,7 @@ class ActivesessionResponse {
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (eActivesessionUsertype.hashCode) +
+    (eActivesessionOrigin.hashCode) +
     (eActivesessionWeekdaystart.hashCode) +
     (fkiLanguageID.hashCode) +
     (sCompanyNameX.hashCode) +
@@ -86,11 +91,12 @@ class ActivesessionResponse {
     (fkiSystemconfigurationtypeID == null ? 0 : fkiSystemconfigurationtypeID!.hashCode);
 
   @override
-  String toString() => 'ActivesessionResponse[eActivesessionUsertype=$eActivesessionUsertype, eActivesessionWeekdaystart=$eActivesessionWeekdaystart, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, bActivesessionDebug=$bActivesessionDebug, bActivesessionIssuperadmin=$bActivesessionIssuperadmin, pksCustomerCode=$pksCustomerCode, fkiSystemconfigurationtypeID=$fkiSystemconfigurationtypeID]';
+  String toString() => 'ActivesessionResponse[eActivesessionUsertype=$eActivesessionUsertype, eActivesessionOrigin=$eActivesessionOrigin, eActivesessionWeekdaystart=$eActivesessionWeekdaystart, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, bActivesessionDebug=$bActivesessionDebug, bActivesessionIssuperadmin=$bActivesessionIssuperadmin, pksCustomerCode=$pksCustomerCode, fkiSystemconfigurationtypeID=$fkiSystemconfigurationtypeID]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'eActivesessionUsertype'] = this.eActivesessionUsertype;
+      json[r'eActivesessionOrigin'] = this.eActivesessionOrigin;
       json[r'eActivesessionWeekdaystart'] = this.eActivesessionWeekdaystart;
       json[r'fkiLanguageID'] = this.fkiLanguageID;
       json[r'sCompanyNameX'] = this.sCompanyNameX;
@@ -126,6 +132,7 @@ class ActivesessionResponse {
 
       return ActivesessionResponse(
         eActivesessionUsertype: FieldEActivesessionUsertype.fromJson(json[r'eActivesessionUsertype'])!,
+        eActivesessionOrigin: FieldEActivesessionOrigin.fromJson(json[r'eActivesessionOrigin'])!,
         eActivesessionWeekdaystart: FieldEActivesessionWeekdaystart.fromJson(json[r'eActivesessionWeekdaystart'])!,
         fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID')!,
         sCompanyNameX: mapValueOfType<String>(json, r'sCompanyNameX')!,
@@ -139,7 +146,7 @@ class ActivesessionResponse {
     return null;
   }
 
-  static List<ActivesessionResponse>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<ActivesessionResponse> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <ActivesessionResponse>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -170,12 +177,10 @@ class ActivesessionResponse {
   static Map<String, List<ActivesessionResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<ActivesessionResponse>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = ActivesessionResponse.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = ActivesessionResponse.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;
@@ -184,6 +189,7 @@ class ActivesessionResponse {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'eActivesessionUsertype',
+    'eActivesessionOrigin',
     'eActivesessionWeekdaystart',
     'fkiLanguageID',
     'sCompanyNameX',

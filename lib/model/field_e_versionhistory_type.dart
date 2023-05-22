@@ -40,7 +40,7 @@ class FieldEVersionhistoryType {
 
   static FieldEVersionhistoryType? fromJson(dynamic value) => FieldEVersionhistoryTypeTypeTransformer().decode(value);
 
-  static List<FieldEVersionhistoryType>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<FieldEVersionhistoryType> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEVersionhistoryType>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

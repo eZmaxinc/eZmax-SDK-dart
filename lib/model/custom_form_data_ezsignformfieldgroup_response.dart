@@ -63,13 +63,13 @@ class CustomFormDataEzsignformfieldgroupResponse {
 
       return CustomFormDataEzsignformfieldgroupResponse(
         sEzsignformfieldgroupLabel: mapValueOfType<String>(json, r'sEzsignformfieldgroupLabel')!,
-        aObjEzsignformfield: CustomFormDataEzsignformfieldResponse.listFromJson(json[r'a_objEzsignformfield'])!,
+        aObjEzsignformfield: CustomFormDataEzsignformfieldResponse.listFromJson(json[r'a_objEzsignformfield']),
       );
     }
     return null;
   }
 
-  static List<CustomFormDataEzsignformfieldgroupResponse>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<CustomFormDataEzsignformfieldgroupResponse> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <CustomFormDataEzsignformfieldgroupResponse>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -100,12 +100,10 @@ class CustomFormDataEzsignformfieldgroupResponse {
   static Map<String, List<CustomFormDataEzsignformfieldgroupResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<CustomFormDataEzsignformfieldgroupResponse>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = CustomFormDataEzsignformfieldgroupResponse.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = CustomFormDataEzsignformfieldgroupResponse.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

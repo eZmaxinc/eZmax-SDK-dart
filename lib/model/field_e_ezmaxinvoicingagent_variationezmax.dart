@@ -36,7 +36,7 @@ class FieldEEzmaxinvoicingagentVariationezmax {
 
   static FieldEEzmaxinvoicingagentVariationezmax? fromJson(dynamic value) => FieldEEzmaxinvoicingagentVariationezmaxTypeTransformer().decode(value);
 
-  static List<FieldEEzmaxinvoicingagentVariationezmax>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<FieldEEzmaxinvoicingagentVariationezmax> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzmaxinvoicingagentVariationezmax>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {

@@ -61,7 +61,7 @@ class EzsigntemplatepackagesignermembershipDeleteObjectV1ResponseAllOf {
     return null;
   }
 
-  static List<EzsigntemplatepackagesignermembershipDeleteObjectV1ResponseAllOf>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsigntemplatepackagesignermembershipDeleteObjectV1ResponseAllOf> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsigntemplatepackagesignermembershipDeleteObjectV1ResponseAllOf>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -92,12 +92,10 @@ class EzsigntemplatepackagesignermembershipDeleteObjectV1ResponseAllOf {
   static Map<String, List<EzsigntemplatepackagesignermembershipDeleteObjectV1ResponseAllOf>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsigntemplatepackagesignermembershipDeleteObjectV1ResponseAllOf>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsigntemplatepackagesignermembershipDeleteObjectV1ResponseAllOf.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsigntemplatepackagesignermembershipDeleteObjectV1ResponseAllOf.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

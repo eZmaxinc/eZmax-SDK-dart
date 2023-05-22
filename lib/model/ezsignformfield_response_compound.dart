@@ -176,7 +176,7 @@ class EzsignformfieldResponseCompound {
     return null;
   }
 
-  static List<EzsignformfieldResponseCompound>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsignformfieldResponseCompound> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsignformfieldResponseCompound>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -207,12 +207,10 @@ class EzsignformfieldResponseCompound {
   static Map<String, List<EzsignformfieldResponseCompound>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignformfieldResponseCompound>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsignformfieldResponseCompound.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsignformfieldResponseCompound.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

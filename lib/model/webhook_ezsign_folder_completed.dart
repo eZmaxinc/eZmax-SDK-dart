@@ -70,13 +70,13 @@ class WebhookEzsignFolderCompleted {
       return WebhookEzsignFolderCompleted(
         objEzsignfolder: EzsignfolderResponse.fromJson(json[r'objEzsignfolder'])!,
         objWebhook: CustomWebhookResponse.fromJson(json[r'objWebhook'])!,
-        aObjAttempt: AttemptResponseCompound.listFromJson(json[r'a_objAttempt'])!,
+        aObjAttempt: AttemptResponseCompound.listFromJson(json[r'a_objAttempt']),
       );
     }
     return null;
   }
 
-  static List<WebhookEzsignFolderCompleted>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<WebhookEzsignFolderCompleted> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <WebhookEzsignFolderCompleted>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -107,12 +107,10 @@ class WebhookEzsignFolderCompleted {
   static Map<String, List<WebhookEzsignFolderCompleted>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<WebhookEzsignFolderCompleted>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = WebhookEzsignFolderCompleted.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = WebhookEzsignFolderCompleted.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

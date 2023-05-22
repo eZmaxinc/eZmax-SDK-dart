@@ -61,7 +61,7 @@ class EzsignbulksendGetEzsignsignaturesAutomaticV1ResponseAllOf {
     return null;
   }
 
-  static List<EzsignbulksendGetEzsignsignaturesAutomaticV1ResponseAllOf>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsignbulksendGetEzsignsignaturesAutomaticV1ResponseAllOf> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsignbulksendGetEzsignsignaturesAutomaticV1ResponseAllOf>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -92,12 +92,10 @@ class EzsignbulksendGetEzsignsignaturesAutomaticV1ResponseAllOf {
   static Map<String, List<EzsignbulksendGetEzsignsignaturesAutomaticV1ResponseAllOf>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignbulksendGetEzsignsignaturesAutomaticV1ResponseAllOf>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsignbulksendGetEzsignsignaturesAutomaticV1ResponseAllOf.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsignbulksendGetEzsignsignaturesAutomaticV1ResponseAllOf.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

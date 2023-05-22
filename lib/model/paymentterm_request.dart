@@ -113,7 +113,7 @@ class PaymenttermRequest {
     return null;
   }
 
-  static List<PaymenttermRequest>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<PaymenttermRequest> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <PaymenttermRequest>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -144,12 +144,10 @@ class PaymenttermRequest {
   static Map<String, List<PaymenttermRequest>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<PaymenttermRequest>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = PaymenttermRequest.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = PaymenttermRequest.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

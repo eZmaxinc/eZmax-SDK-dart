@@ -55,13 +55,13 @@ class EzsigndocumentEditEzsignsignaturesV1Request {
       }());
 
       return EzsigndocumentEditEzsignsignaturesV1Request(
-        aObjEzsignsignature: EzsignsignatureRequestCompound.listFromJson(json[r'a_objEzsignsignature'])!,
+        aObjEzsignsignature: EzsignsignatureRequestCompound.listFromJson(json[r'a_objEzsignsignature']),
       );
     }
     return null;
   }
 
-  static List<EzsigndocumentEditEzsignsignaturesV1Request>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsigndocumentEditEzsignsignaturesV1Request> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsigndocumentEditEzsignsignaturesV1Request>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -92,12 +92,10 @@ class EzsigndocumentEditEzsignsignaturesV1Request {
   static Map<String, List<EzsigndocumentEditEzsignsignaturesV1Request>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsigndocumentEditEzsignsignaturesV1Request>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsigndocumentEditEzsignsignaturesV1Request.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsigndocumentEditEzsignsignaturesV1Request.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

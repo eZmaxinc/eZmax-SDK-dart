@@ -15,6 +15,7 @@ class UsergroupListElement {
   UsergroupListElement({
     required this.pkiUsergroupID,
     required this.sUsergroupNameX,
+    required this.iCountUser,
   });
 
   /// The unique ID of the Usergroup
@@ -26,24 +27,33 @@ class UsergroupListElement {
   /// The Name of the Usergroup in the language of the requester
   String sUsergroupNameX;
 
+  /// Numer of user in group
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 16777215
+  int iCountUser;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is UsergroupListElement &&
      other.pkiUsergroupID == pkiUsergroupID &&
-     other.sUsergroupNameX == sUsergroupNameX;
+     other.sUsergroupNameX == sUsergroupNameX &&
+     other.iCountUser == iCountUser;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiUsergroupID.hashCode) +
-    (sUsergroupNameX.hashCode);
+    (sUsergroupNameX.hashCode) +
+    (iCountUser.hashCode);
 
   @override
-  String toString() => 'UsergroupListElement[pkiUsergroupID=$pkiUsergroupID, sUsergroupNameX=$sUsergroupNameX]';
+  String toString() => 'UsergroupListElement[pkiUsergroupID=$pkiUsergroupID, sUsergroupNameX=$sUsergroupNameX, iCountUser=$iCountUser]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiUsergroupID'] = this.pkiUsergroupID;
       json[r'sUsergroupNameX'] = this.sUsergroupNameX;
+      json[r'iCountUser'] = this.iCountUser;
     return json;
   }
 
@@ -68,12 +78,13 @@ class UsergroupListElement {
       return UsergroupListElement(
         pkiUsergroupID: mapValueOfType<int>(json, r'pkiUsergroupID')!,
         sUsergroupNameX: mapValueOfType<String>(json, r'sUsergroupNameX')!,
+        iCountUser: mapValueOfType<int>(json, r'iCountUser')!,
       );
     }
     return null;
   }
 
-  static List<UsergroupListElement>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<UsergroupListElement> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <UsergroupListElement>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -104,12 +115,10 @@ class UsergroupListElement {
   static Map<String, List<UsergroupListElement>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<UsergroupListElement>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = UsergroupListElement.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = UsergroupListElement.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;
@@ -119,6 +128,7 @@ class UsergroupListElement {
   static const requiredKeys = <String>{
     'pkiUsergroupID',
     'sUsergroupNameX',
+    'iCountUser',
   };
 }
 

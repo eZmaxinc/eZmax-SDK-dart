@@ -61,7 +61,7 @@ class EzmaxinvoicingGetAutocompleteV2ResponseAllOf {
     return null;
   }
 
-  static List<EzmaxinvoicingGetAutocompleteV2ResponseAllOf>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzmaxinvoicingGetAutocompleteV2ResponseAllOf> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzmaxinvoicingGetAutocompleteV2ResponseAllOf>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -92,12 +92,10 @@ class EzmaxinvoicingGetAutocompleteV2ResponseAllOf {
   static Map<String, List<EzmaxinvoicingGetAutocompleteV2ResponseAllOf>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzmaxinvoicingGetAutocompleteV2ResponseAllOf>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzmaxinvoicingGetAutocompleteV2ResponseAllOf.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzmaxinvoicingGetAutocompleteV2ResponseAllOf.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

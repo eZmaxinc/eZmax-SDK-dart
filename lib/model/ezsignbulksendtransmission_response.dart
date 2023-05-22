@@ -99,7 +99,7 @@ class EzsignbulksendtransmissionResponse {
     return null;
   }
 
-  static List<EzsignbulksendtransmissionResponse>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsignbulksendtransmissionResponse> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsignbulksendtransmissionResponse>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -130,12 +130,10 @@ class EzsignbulksendtransmissionResponse {
   static Map<String, List<EzsignbulksendtransmissionResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsignbulksendtransmissionResponse>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsignbulksendtransmissionResponse.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsignbulksendtransmissionResponse.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

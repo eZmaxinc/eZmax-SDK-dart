@@ -56,13 +56,13 @@ class EzsigntemplateGetAutocompleteV2ResponseMPayload {
       }());
 
       return EzsigntemplateGetAutocompleteV2ResponseMPayload(
-        aObjEzsigntemplate: EzsigntemplateAutocompleteElementResponse.listFromJson(json[r'a_objEzsigntemplate'])!,
+        aObjEzsigntemplate: EzsigntemplateAutocompleteElementResponse.listFromJson(json[r'a_objEzsigntemplate']),
       );
     }
     return null;
   }
 
-  static List<EzsigntemplateGetAutocompleteV2ResponseMPayload>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<EzsigntemplateGetAutocompleteV2ResponseMPayload> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsigntemplateGetAutocompleteV2ResponseMPayload>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -93,12 +93,10 @@ class EzsigntemplateGetAutocompleteV2ResponseMPayload {
   static Map<String, List<EzsigntemplateGetAutocompleteV2ResponseMPayload>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<EzsigntemplateGetAutocompleteV2ResponseMPayload>>{};
     if (json is Map && json.isNotEmpty) {
-      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        final value = EzsigntemplateGetAutocompleteV2ResponseMPayload.listFromJson(entry.value, growable: growable,);
-        if (value != null) {
-          map[entry.key] = value;
-        }
+        map[entry.key] = EzsigntemplateGetAutocompleteV2ResponseMPayload.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

@@ -36,7 +36,7 @@ class HeaderAcceptLanguage {
 
   static HeaderAcceptLanguage? fromJson(dynamic value) => HeaderAcceptLanguageTypeTransformer().decode(value);
 
-  static List<HeaderAcceptLanguage>? listFromJson(dynamic json, {bool growable = false,}) {
+  static List<HeaderAcceptLanguage> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <HeaderAcceptLanguage>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
