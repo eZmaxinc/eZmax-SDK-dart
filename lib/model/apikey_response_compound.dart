@@ -13,11 +13,23 @@ part of openapi.api;
 class ApikeyResponseCompound {
   /// Returns a new [ApikeyResponseCompound] instance.
   ApikeyResponseCompound({
+    required this.pkiApikeyID,
+    required this.fkiUserID,
     required this.objApikeyDescription,
     this.sComputedToken,
-    required this.pkiApikeyID,
+    required this.bApikeyIsactive,
     required this.objAudit,
   });
+
+  /// The unique ID of the Apikey
+  ///
+  /// Minimum value: 0
+  int pkiApikeyID;
+
+  /// The unique ID of the User
+  ///
+  /// Minimum value: 0
+  int fkiUserID;
 
   MultilingualApikeyDescription objApikeyDescription;
 
@@ -30,40 +42,44 @@ class ApikeyResponseCompound {
   ///
   String? sComputedToken;
 
-  /// The unique ID of the Apikey
-  ///
-  /// Minimum value: 0
-  int pkiApikeyID;
+  /// Whether the apikey is active or not
+  bool bApikeyIsactive;
 
   CommonAudit objAudit;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ApikeyResponseCompound &&
+     other.pkiApikeyID == pkiApikeyID &&
+     other.fkiUserID == fkiUserID &&
      other.objApikeyDescription == objApikeyDescription &&
      other.sComputedToken == sComputedToken &&
-     other.pkiApikeyID == pkiApikeyID &&
+     other.bApikeyIsactive == bApikeyIsactive &&
      other.objAudit == objAudit;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
+    (pkiApikeyID.hashCode) +
+    (fkiUserID.hashCode) +
     (objApikeyDescription.hashCode) +
     (sComputedToken == null ? 0 : sComputedToken!.hashCode) +
-    (pkiApikeyID.hashCode) +
+    (bApikeyIsactive.hashCode) +
     (objAudit.hashCode);
 
   @override
-  String toString() => 'ApikeyResponseCompound[objApikeyDescription=$objApikeyDescription, sComputedToken=$sComputedToken, pkiApikeyID=$pkiApikeyID, objAudit=$objAudit]';
+  String toString() => 'ApikeyResponseCompound[pkiApikeyID=$pkiApikeyID, fkiUserID=$fkiUserID, objApikeyDescription=$objApikeyDescription, sComputedToken=$sComputedToken, bApikeyIsactive=$bApikeyIsactive, objAudit=$objAudit]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
+      json[r'pkiApikeyID'] = this.pkiApikeyID;
+      json[r'fkiUserID'] = this.fkiUserID;
       json[r'objApikeyDescription'] = this.objApikeyDescription;
     if (this.sComputedToken != null) {
       json[r'sComputedToken'] = this.sComputedToken;
     } else {
       json[r'sComputedToken'] = null;
     }
-      json[r'pkiApikeyID'] = this.pkiApikeyID;
+      json[r'bApikeyIsactive'] = this.bApikeyIsactive;
       json[r'objAudit'] = this.objAudit;
     return json;
   }
@@ -87,9 +103,11 @@ class ApikeyResponseCompound {
       }());
 
       return ApikeyResponseCompound(
+        pkiApikeyID: mapValueOfType<int>(json, r'pkiApikeyID')!,
+        fkiUserID: mapValueOfType<int>(json, r'fkiUserID')!,
         objApikeyDescription: MultilingualApikeyDescription.fromJson(json[r'objApikeyDescription'])!,
         sComputedToken: mapValueOfType<String>(json, r'sComputedToken'),
-        pkiApikeyID: mapValueOfType<int>(json, r'pkiApikeyID')!,
+        bApikeyIsactive: mapValueOfType<bool>(json, r'bApikeyIsactive')!,
         objAudit: CommonAudit.fromJson(json[r'objAudit'])!,
       );
     }
@@ -138,8 +156,10 @@ class ApikeyResponseCompound {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'objApikeyDescription',
     'pkiApikeyID',
+    'fkiUserID',
+    'objApikeyDescription',
+    'bApikeyIsactive',
     'objAudit',
   };
 }

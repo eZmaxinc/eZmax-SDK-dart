@@ -246,6 +246,59 @@ class ObjectEzsignsignatureApi {
     return null;
   }
 
+  /// Retrieve an existing Ezsignsignature's Ezsignsignatureattachments
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignsignatureID (required):
+  Future<Response> ezsignsignatureGetEzsignsignatureattachmentV1WithHttpInfo(int pkiEzsignsignatureID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsignsignature/{pkiEzsignsignatureID}/getEzsignsignatureattachment'
+      .replaceAll('{pkiEzsignsignatureID}', pkiEzsignsignatureID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve an existing Ezsignsignature's Ezsignsignatureattachments
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignsignatureID (required):
+  Future<EzsignsignatureGetEzsignsignatureattachmentV1Response?> ezsignsignatureGetEzsignsignatureattachmentV1(int pkiEzsignsignatureID,) async {
+    final response = await ezsignsignatureGetEzsignsignatureattachmentV1WithHttpInfo(pkiEzsignsignatureID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignsignatureGetEzsignsignatureattachmentV1Response',) as EzsignsignatureGetEzsignsignatureattachmentV1Response;
+    
+    }
+    return null;
+  }
+
   /// Retrieve all automatic Ezsignsignatures
   ///
   /// Return all the Ezsignsignatures that can be signed by the current user

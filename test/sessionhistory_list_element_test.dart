@@ -69,7 +69,7 @@ void main() {
       // TODO
     });
 
-    // The Login name of the User.
+    // The login name of the User.
     // String sUserLoginname
     test('to test the property `sUserLoginname`', () async {
       // TODO

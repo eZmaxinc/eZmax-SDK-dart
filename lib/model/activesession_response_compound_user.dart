@@ -38,10 +38,10 @@ class ActivesessionResponseCompoundUser {
   /// The url of the picture used as avatar
   String sAvatarUrl;
 
-  /// The First name of the user
+  /// The first name of the user
   String sUserFirstname;
 
-  /// The Last name of the user
+  /// The last name of the user
   String sUserLastname;
 
   /// The email address.

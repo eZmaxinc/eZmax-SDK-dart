@@ -16,6 +16,12 @@ void main() {
   // final instance = EmailRequestCompound();
 
   group('test EmailRequestCompound', () {
+    // The unique ID of the Email
+    // int pkiEmailID
+    test('to test the property `pkiEmailID`', () async {
+      // TODO
+    });
+
     // The unique ID of the Emailtype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home|
     // int fkiEmailtypeID
     test('to test the property `fkiEmailtypeID`', () async {

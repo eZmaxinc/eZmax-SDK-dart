@@ -53,6 +53,15 @@ void main() {
       // TODO
     });
 
+    // Decline to sign
+    //
+    // Decline to sign
+    //
+    //Future<EzsigndocumentDeclineToSignV1Response> ezsigndocumentDeclineToSignV1(int pkiEzsigndocumentID, EzsigndocumentDeclineToSignV1Request ezsigndocumentDeclineToSignV1Request) async
+    test('test ezsigndocumentDeclineToSignV1', () async {
+      // TODO
+    });
+
     // Delete an existing Ezsigndocument
     //
     // 
@@ -219,6 +228,15 @@ void main() {
     //
     //Future<EzsigndocumentPatchObjectV1Response> ezsigndocumentPatchObjectV1(int pkiEzsigndocumentID, EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request) async
     test('test ezsigndocumentPatchObjectV1', () async {
+      // TODO
+    });
+
+    // Submit the Ezsignform
+    //
+    // 
+    //
+    //Future<EzsigndocumentSubmitEzsignformV1Response> ezsigndocumentSubmitEzsignformV1(int pkiEzsigndocumentID, EzsigndocumentSubmitEzsignformV1Request ezsigndocumentSubmitEzsignformV1Request) async
+    test('test ezsigndocumentSubmitEzsignformV1', () async {
       // TODO
     });
 

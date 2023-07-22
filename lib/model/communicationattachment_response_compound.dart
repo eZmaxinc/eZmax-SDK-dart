@@ -18,6 +18,7 @@ class CommunicationattachmentResponseCompound {
     this.fkiInvoiceID,
     this.fkiSalarypreparationID,
     required this.sCommunicationattachmentName,
+    this.sDownloadUrl,
   });
 
   /// The unique ID of the Communicationattachment
@@ -59,13 +60,23 @@ class CommunicationattachmentResponseCompound {
   /// The name of the Communicationattachment
   String sCommunicationattachmentName;
 
+  /// The Url to the requested document.  Url will expire after 3 hours.
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sDownloadUrl;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommunicationattachmentResponseCompound &&
      other.pkiCommunicationattachmentID == pkiCommunicationattachmentID &&
      other.fkiAttachmentID == fkiAttachmentID &&
      other.fkiInvoiceID == fkiInvoiceID &&
      other.fkiSalarypreparationID == fkiSalarypreparationID &&
-     other.sCommunicationattachmentName == sCommunicationattachmentName;
+     other.sCommunicationattachmentName == sCommunicationattachmentName &&
+     other.sDownloadUrl == sDownloadUrl;
 
   @override
   int get hashCode =>
@@ -74,10 +85,11 @@ class CommunicationattachmentResponseCompound {
     (fkiAttachmentID == null ? 0 : fkiAttachmentID!.hashCode) +
     (fkiInvoiceID == null ? 0 : fkiInvoiceID!.hashCode) +
     (fkiSalarypreparationID == null ? 0 : fkiSalarypreparationID!.hashCode) +
-    (sCommunicationattachmentName.hashCode);
+    (sCommunicationattachmentName.hashCode) +
+    (sDownloadUrl == null ? 0 : sDownloadUrl!.hashCode);
 
   @override
-  String toString() => 'CommunicationattachmentResponseCompound[pkiCommunicationattachmentID=$pkiCommunicationattachmentID, fkiAttachmentID=$fkiAttachmentID, fkiInvoiceID=$fkiInvoiceID, fkiSalarypreparationID=$fkiSalarypreparationID, sCommunicationattachmentName=$sCommunicationattachmentName]';
+  String toString() => 'CommunicationattachmentResponseCompound[pkiCommunicationattachmentID=$pkiCommunicationattachmentID, fkiAttachmentID=$fkiAttachmentID, fkiInvoiceID=$fkiInvoiceID, fkiSalarypreparationID=$fkiSalarypreparationID, sCommunicationattachmentName=$sCommunicationattachmentName, sDownloadUrl=$sDownloadUrl]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -98,6 +110,11 @@ class CommunicationattachmentResponseCompound {
       json[r'fkiSalarypreparationID'] = null;
     }
       json[r'sCommunicationattachmentName'] = this.sCommunicationattachmentName;
+    if (this.sDownloadUrl != null) {
+      json[r'sDownloadUrl'] = this.sDownloadUrl;
+    } else {
+      json[r'sDownloadUrl'] = null;
+    }
     return json;
   }
 
@@ -125,6 +142,7 @@ class CommunicationattachmentResponseCompound {
         fkiInvoiceID: mapValueOfType<int>(json, r'fkiInvoiceID'),
         fkiSalarypreparationID: mapValueOfType<int>(json, r'fkiSalarypreparationID'),
         sCommunicationattachmentName: mapValueOfType<String>(json, r'sCommunicationattachmentName')!,
+        sDownloadUrl: mapValueOfType<String>(json, r'sDownloadUrl'),
       );
     }
     return null;

@@ -81,7 +81,6 @@ class ObjectUsergroupApi {
   /// Parameters:
   ///
   /// * [int] pkiUsergroupID (required):
-  ///   The unique ID of the Usergroup
   ///
   /// * [UsergroupEditObjectV1Request] usergroupEditObjectV1Request (required):
   Future<Response> usergroupEditObjectV1WithHttpInfo(int pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request,) async {
@@ -117,7 +116,6 @@ class ObjectUsergroupApi {
   /// Parameters:
   ///
   /// * [int] pkiUsergroupID (required):
-  ///   The unique ID of the Usergroup
   ///
   /// * [UsergroupEditObjectV1Request] usergroupEditObjectV1Request (required):
   Future<UsergroupEditObjectV1Response?> usergroupEditObjectV1(int pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request,) async {
@@ -130,6 +128,128 @@ class ObjectUsergroupApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'UsergroupEditObjectV1Response',) as UsergroupEditObjectV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Edit multiple Permissions
+  ///
+  /// Using this endpoint, you can edit multiple Permissions at the same time.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiUsergroupID (required):
+  ///
+  /// * [UsergroupEditPermissionsV1Request] usergroupEditPermissionsV1Request (required):
+  Future<Response> usergroupEditPermissionsV1WithHttpInfo(int pkiUsergroupID, UsergroupEditPermissionsV1Request usergroupEditPermissionsV1Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/usergroup/{pkiUsergroupID}/editPermissions'
+      .replaceAll('{pkiUsergroupID}', pkiUsergroupID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = usergroupEditPermissionsV1Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'PUT',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Edit multiple Permissions
+  ///
+  /// Using this endpoint, you can edit multiple Permissions at the same time.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiUsergroupID (required):
+  ///
+  /// * [UsergroupEditPermissionsV1Request] usergroupEditPermissionsV1Request (required):
+  Future<UsergroupEditPermissionsV1Response?> usergroupEditPermissionsV1(int pkiUsergroupID, UsergroupEditPermissionsV1Request usergroupEditPermissionsV1Request,) async {
+    final response = await usergroupEditPermissionsV1WithHttpInfo(pkiUsergroupID, usergroupEditPermissionsV1Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'UsergroupEditPermissionsV1Response',) as UsergroupEditPermissionsV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Edit multiple Usergroupmemberships
+  ///
+  /// Using this endpoint, you can edit multiple Usergroupmemberships at the same time.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiUsergroupID (required):
+  ///
+  /// * [UsergroupEditUsergroupmembershipsV1Request] usergroupEditUsergroupmembershipsV1Request (required):
+  Future<Response> usergroupEditUsergroupmembershipsV1WithHttpInfo(int pkiUsergroupID, UsergroupEditUsergroupmembershipsV1Request usergroupEditUsergroupmembershipsV1Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/usergroup/{pkiUsergroupID}/editUsergroupmemberships'
+      .replaceAll('{pkiUsergroupID}', pkiUsergroupID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = usergroupEditUsergroupmembershipsV1Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'PUT',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Edit multiple Usergroupmemberships
+  ///
+  /// Using this endpoint, you can edit multiple Usergroupmemberships at the same time.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiUsergroupID (required):
+  ///
+  /// * [UsergroupEditUsergroupmembershipsV1Request] usergroupEditUsergroupmembershipsV1Request (required):
+  Future<UsergroupEditUsergroupmembershipsV1Response?> usergroupEditUsergroupmembershipsV1(int pkiUsergroupID, UsergroupEditUsergroupmembershipsV1Request usergroupEditUsergroupmembershipsV1Request,) async {
+    final response = await usergroupEditUsergroupmembershipsV1WithHttpInfo(pkiUsergroupID, usergroupEditUsergroupmembershipsV1Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'UsergroupEditUsergroupmembershipsV1Response',) as UsergroupEditUsergroupmembershipsV1Response;
     
     }
     return null;
@@ -321,7 +441,6 @@ class ObjectUsergroupApi {
   /// Parameters:
   ///
   /// * [int] pkiUsergroupID (required):
-  ///   The unique ID of the Usergroup
   Future<Response> usergroupGetObjectV2WithHttpInfo(int pkiUsergroupID,) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/usergroup/{pkiUsergroupID}'
@@ -355,7 +474,6 @@ class ObjectUsergroupApi {
   /// Parameters:
   ///
   /// * [int] pkiUsergroupID (required):
-  ///   The unique ID of the Usergroup
   Future<UsergroupGetObjectV2Response?> usergroupGetObjectV2(int pkiUsergroupID,) async {
     final response = await usergroupGetObjectV2WithHttpInfo(pkiUsergroupID,);
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -366,6 +484,112 @@ class ObjectUsergroupApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'UsergroupGetObjectV2Response',) as UsergroupGetObjectV2Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve an existing Usergroup's Permissions
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiUsergroupID (required):
+  Future<Response> usergroupGetPermissionsV1WithHttpInfo(int pkiUsergroupID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/usergroup/{pkiUsergroupID}/getPermissions'
+      .replaceAll('{pkiUsergroupID}', pkiUsergroupID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve an existing Usergroup's Permissions
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiUsergroupID (required):
+  Future<UsergroupGetPermissionsV1Response?> usergroupGetPermissionsV1(int pkiUsergroupID,) async {
+    final response = await usergroupGetPermissionsV1WithHttpInfo(pkiUsergroupID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'UsergroupGetPermissionsV1Response',) as UsergroupGetPermissionsV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve an existing Usergroup's Usergroupmemberships
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiUsergroupID (required):
+  Future<Response> usergroupGetUsergroupmembershipsV1WithHttpInfo(int pkiUsergroupID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/usergroup/{pkiUsergroupID}/getUsergroupmemberships'
+      .replaceAll('{pkiUsergroupID}', pkiUsergroupID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve an existing Usergroup's Usergroupmemberships
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiUsergroupID (required):
+  Future<UsergroupGetUsergroupmembershipsV1Response?> usergroupGetUsergroupmembershipsV1(int pkiUsergroupID,) async {
+    final response = await usergroupGetUsergroupmembershipsV1WithHttpInfo(pkiUsergroupID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'UsergroupGetUsergroupmembershipsV1Response',) as UsergroupGetUsergroupmembershipsV1Response;
     
     }
     return null;

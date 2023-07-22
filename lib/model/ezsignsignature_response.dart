@@ -19,6 +19,8 @@ class EzsignsignatureResponse {
     required this.iEzsignpagePagenumber,
     required this.iEzsignsignatureX,
     required this.iEzsignsignatureY,
+    this.iEzsignsignatureHeight,
+    this.iEzsignsignatureWidth,
     required this.iEzsignsignatureStep,
     required this.eEzsignsignatureType,
     this.tEzsignsignatureTooltip,
@@ -30,7 +32,12 @@ class EzsignsignatureResponse {
     this.bEzsignsignatureRequired,
     this.fkiEzsignfoldersignerassociationIDValidation,
     this.dtEzsignsignatureDate,
+    this.iEzsignsignatureattachmentCount,
+    this.sEzsignsignatureDescription,
+    this.eEzsignsignatureTextvalidation,
+    this.sEzsignsignatureRegexp,
     required this.objContactName,
+    this.objSignature,
   });
 
   /// The unique ID of the Ezsignsignature
@@ -62,6 +69,28 @@ class EzsignsignatureResponse {
   ///
   /// Minimum value: 0
   int iEzsignsignatureY;
+
+  /// The height of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have an height of 2 inches, you would use \"200\" for the iEzsignsignatureHeight.
+  ///
+  /// Minimum value: 0
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? iEzsignsignatureHeight;
+
+  /// The width of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have a width of 2 inches, you would use \"200\" for the iEzsignsignatureWidth.
+  ///
+  /// Minimum value: 0
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? iEzsignsignatureWidth;
 
   /// The step when the Ezsignsigner will be invited to sign
   int iEzsignsignatureStep;
@@ -148,7 +177,50 @@ class EzsignsignatureResponse {
   ///
   String? dtEzsignsignatureDate;
 
+  /// The count of Ezsignsignatureattachment
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? iEzsignsignatureattachmentCount;
+
+  /// The value entered while signing Ezsignsignature of eEzsignsignatureType **City**, **FieldText** and **FieldTextarea**
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEzsignsignatureDescription;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  EnumTextvalidation? eEzsignsignatureTextvalidation;
+
+  /// A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom**
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEzsignsignatureRegexp;
+
   CustomContactNameResponse objContactName;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  SignatureResponseCompound? objSignature;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignsignatureResponse &&
@@ -158,6 +230,8 @@ class EzsignsignatureResponse {
      other.iEzsignpagePagenumber == iEzsignpagePagenumber &&
      other.iEzsignsignatureX == iEzsignsignatureX &&
      other.iEzsignsignatureY == iEzsignsignatureY &&
+     other.iEzsignsignatureHeight == iEzsignsignatureHeight &&
+     other.iEzsignsignatureWidth == iEzsignsignatureWidth &&
      other.iEzsignsignatureStep == iEzsignsignatureStep &&
      other.eEzsignsignatureType == eEzsignsignatureType &&
      other.tEzsignsignatureTooltip == tEzsignsignatureTooltip &&
@@ -169,7 +243,12 @@ class EzsignsignatureResponse {
      other.bEzsignsignatureRequired == bEzsignsignatureRequired &&
      other.fkiEzsignfoldersignerassociationIDValidation == fkiEzsignfoldersignerassociationIDValidation &&
      other.dtEzsignsignatureDate == dtEzsignsignatureDate &&
-     other.objContactName == objContactName;
+     other.iEzsignsignatureattachmentCount == iEzsignsignatureattachmentCount &&
+     other.sEzsignsignatureDescription == sEzsignsignatureDescription &&
+     other.eEzsignsignatureTextvalidation == eEzsignsignatureTextvalidation &&
+     other.sEzsignsignatureRegexp == sEzsignsignatureRegexp &&
+     other.objContactName == objContactName &&
+     other.objSignature == objSignature;
 
   @override
   int get hashCode =>
@@ -180,6 +259,8 @@ class EzsignsignatureResponse {
     (iEzsignpagePagenumber.hashCode) +
     (iEzsignsignatureX.hashCode) +
     (iEzsignsignatureY.hashCode) +
+    (iEzsignsignatureHeight == null ? 0 : iEzsignsignatureHeight!.hashCode) +
+    (iEzsignsignatureWidth == null ? 0 : iEzsignsignatureWidth!.hashCode) +
     (iEzsignsignatureStep.hashCode) +
     (eEzsignsignatureType.hashCode) +
     (tEzsignsignatureTooltip == null ? 0 : tEzsignsignatureTooltip!.hashCode) +
@@ -191,10 +272,15 @@ class EzsignsignatureResponse {
     (bEzsignsignatureRequired == null ? 0 : bEzsignsignatureRequired!.hashCode) +
     (fkiEzsignfoldersignerassociationIDValidation == null ? 0 : fkiEzsignfoldersignerassociationIDValidation!.hashCode) +
     (dtEzsignsignatureDate == null ? 0 : dtEzsignsignatureDate!.hashCode) +
-    (objContactName.hashCode);
+    (iEzsignsignatureattachmentCount == null ? 0 : iEzsignsignatureattachmentCount!.hashCode) +
+    (sEzsignsignatureDescription == null ? 0 : sEzsignsignatureDescription!.hashCode) +
+    (eEzsignsignatureTextvalidation == null ? 0 : eEzsignsignatureTextvalidation!.hashCode) +
+    (sEzsignsignatureRegexp == null ? 0 : sEzsignsignatureRegexp!.hashCode) +
+    (objContactName.hashCode) +
+    (objSignature == null ? 0 : objSignature!.hashCode);
 
   @override
-  String toString() => 'EzsignsignatureResponse[pkiEzsignsignatureID=$pkiEzsignsignatureID, fkiEzsigndocumentID=$fkiEzsigndocumentID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureStep=$iEzsignsignatureStep, eEzsignsignatureType=$eEzsignsignatureType, tEzsignsignatureTooltip=$tEzsignsignatureTooltip, eEzsignsignatureTooltipposition=$eEzsignsignatureTooltipposition, eEzsignsignatureFont=$eEzsignsignatureFont, iEzsignsignatureValidationstep=$iEzsignsignatureValidationstep, sEzsignsignatureAttachmentdescription=$sEzsignsignatureAttachmentdescription, eEzsignsignatureAttachmentnamesource=$eEzsignsignatureAttachmentnamesource, bEzsignsignatureRequired=$bEzsignsignatureRequired, fkiEzsignfoldersignerassociationIDValidation=$fkiEzsignfoldersignerassociationIDValidation, dtEzsignsignatureDate=$dtEzsignsignatureDate, objContactName=$objContactName]';
+  String toString() => 'EzsignsignatureResponse[pkiEzsignsignatureID=$pkiEzsignsignatureID, fkiEzsigndocumentID=$fkiEzsigndocumentID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureHeight=$iEzsignsignatureHeight, iEzsignsignatureWidth=$iEzsignsignatureWidth, iEzsignsignatureStep=$iEzsignsignatureStep, eEzsignsignatureType=$eEzsignsignatureType, tEzsignsignatureTooltip=$tEzsignsignatureTooltip, eEzsignsignatureTooltipposition=$eEzsignsignatureTooltipposition, eEzsignsignatureFont=$eEzsignsignatureFont, iEzsignsignatureValidationstep=$iEzsignsignatureValidationstep, sEzsignsignatureAttachmentdescription=$sEzsignsignatureAttachmentdescription, eEzsignsignatureAttachmentnamesource=$eEzsignsignatureAttachmentnamesource, bEzsignsignatureRequired=$bEzsignsignatureRequired, fkiEzsignfoldersignerassociationIDValidation=$fkiEzsignfoldersignerassociationIDValidation, dtEzsignsignatureDate=$dtEzsignsignatureDate, iEzsignsignatureattachmentCount=$iEzsignsignatureattachmentCount, sEzsignsignatureDescription=$sEzsignsignatureDescription, eEzsignsignatureTextvalidation=$eEzsignsignatureTextvalidation, sEzsignsignatureRegexp=$sEzsignsignatureRegexp, objContactName=$objContactName, objSignature=$objSignature]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -204,6 +290,16 @@ class EzsignsignatureResponse {
       json[r'iEzsignpagePagenumber'] = this.iEzsignpagePagenumber;
       json[r'iEzsignsignatureX'] = this.iEzsignsignatureX;
       json[r'iEzsignsignatureY'] = this.iEzsignsignatureY;
+    if (this.iEzsignsignatureHeight != null) {
+      json[r'iEzsignsignatureHeight'] = this.iEzsignsignatureHeight;
+    } else {
+      json[r'iEzsignsignatureHeight'] = null;
+    }
+    if (this.iEzsignsignatureWidth != null) {
+      json[r'iEzsignsignatureWidth'] = this.iEzsignsignatureWidth;
+    } else {
+      json[r'iEzsignsignatureWidth'] = null;
+    }
       json[r'iEzsignsignatureStep'] = this.iEzsignsignatureStep;
       json[r'eEzsignsignatureType'] = this.eEzsignsignatureType;
     if (this.tEzsignsignatureTooltip != null) {
@@ -251,7 +347,32 @@ class EzsignsignatureResponse {
     } else {
       json[r'dtEzsignsignatureDate'] = null;
     }
+    if (this.iEzsignsignatureattachmentCount != null) {
+      json[r'iEzsignsignatureattachmentCount'] = this.iEzsignsignatureattachmentCount;
+    } else {
+      json[r'iEzsignsignatureattachmentCount'] = null;
+    }
+    if (this.sEzsignsignatureDescription != null) {
+      json[r'sEzsignsignatureDescription'] = this.sEzsignsignatureDescription;
+    } else {
+      json[r'sEzsignsignatureDescription'] = null;
+    }
+    if (this.eEzsignsignatureTextvalidation != null) {
+      json[r'eEzsignsignatureTextvalidation'] = this.eEzsignsignatureTextvalidation;
+    } else {
+      json[r'eEzsignsignatureTextvalidation'] = null;
+    }
+    if (this.sEzsignsignatureRegexp != null) {
+      json[r'sEzsignsignatureRegexp'] = this.sEzsignsignatureRegexp;
+    } else {
+      json[r'sEzsignsignatureRegexp'] = null;
+    }
       json[r'objContactName'] = this.objContactName;
+    if (this.objSignature != null) {
+      json[r'objSignature'] = this.objSignature;
+    } else {
+      json[r'objSignature'] = null;
+    }
     return json;
   }
 
@@ -280,6 +401,8 @@ class EzsignsignatureResponse {
         iEzsignpagePagenumber: mapValueOfType<int>(json, r'iEzsignpagePagenumber')!,
         iEzsignsignatureX: mapValueOfType<int>(json, r'iEzsignsignatureX')!,
         iEzsignsignatureY: mapValueOfType<int>(json, r'iEzsignsignatureY')!,
+        iEzsignsignatureHeight: mapValueOfType<int>(json, r'iEzsignsignatureHeight'),
+        iEzsignsignatureWidth: mapValueOfType<int>(json, r'iEzsignsignatureWidth'),
         iEzsignsignatureStep: mapValueOfType<int>(json, r'iEzsignsignatureStep')!,
         eEzsignsignatureType: FieldEEzsignsignatureType.fromJson(json[r'eEzsignsignatureType'])!,
         tEzsignsignatureTooltip: mapValueOfType<String>(json, r'tEzsignsignatureTooltip'),
@@ -291,7 +414,12 @@ class EzsignsignatureResponse {
         bEzsignsignatureRequired: mapValueOfType<bool>(json, r'bEzsignsignatureRequired'),
         fkiEzsignfoldersignerassociationIDValidation: mapValueOfType<int>(json, r'fkiEzsignfoldersignerassociationIDValidation'),
         dtEzsignsignatureDate: mapValueOfType<String>(json, r'dtEzsignsignatureDate'),
+        iEzsignsignatureattachmentCount: mapValueOfType<int>(json, r'iEzsignsignatureattachmentCount'),
+        sEzsignsignatureDescription: mapValueOfType<String>(json, r'sEzsignsignatureDescription'),
+        eEzsignsignatureTextvalidation: EnumTextvalidation.fromJson(json[r'eEzsignsignatureTextvalidation']),
+        sEzsignsignatureRegexp: mapValueOfType<String>(json, r'sEzsignsignatureRegexp'),
         objContactName: CustomContactNameResponse.fromJson(json[r'objContactName'])!,
+        objSignature: SignatureResponseCompound.fromJson(json[r'objSignature']),
       );
     }
     return null;

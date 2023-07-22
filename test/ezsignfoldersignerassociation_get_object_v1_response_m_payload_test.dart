@@ -46,8 +46,18 @@ void main() {
       // TODO
     });
 
+    // EzsignsignergroupResponseCompound objEzsignsignergroup
+    test('to test the property `objEzsignsignergroup`', () async {
+      // TODO
+    });
+
     // EzsignfoldersignerassociationResponseCompoundUser objUser
     test('to test the property `objUser`', () async {
+      // TODO
+    });
+
+    // UsergroupResponseCompound objUsergroup
+    test('to test the property `objUsergroup`', () async {
       // TODO
     });
 

@@ -16,6 +16,12 @@ void main() {
   // final instance = EzsigndocumentResponseCompound();
 
   group('test EzsigndocumentResponseCompound', () {
+    // The unique ID of the Ezsigndocument
+    // int pkiEzsigndocumentID
+    test('to test the property `pkiEzsigndocumentID`', () async {
+      // TODO
+    });
+
     // The unique ID of the Ezsignfolder
     // int fkiEzsignfolderID
     test('to test the property `fkiEzsignfolderID`', () async {
@@ -49,12 +55,6 @@ void main() {
     // The name of the document that will be presented to Ezsignfoldersignerassociations
     // String sEzsigndocumentName
     test('to test the property `sEzsigndocumentName`', () async {
-      // TODO
-    });
-
-    // The unique ID of the Ezsigndocument
-    // int pkiEzsigndocumentID
-    test('to test the property `pkiEzsigndocumentID`', () async {
       // TODO
     });
 

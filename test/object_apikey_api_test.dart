@@ -26,5 +26,46 @@ void main() {
       // TODO
     });
 
+    // Edit an existing Apikey
+    //
+    // 
+    //
+    //Future<ApikeyEditObjectV1Response> apikeyEditObjectV1(int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request) async
+    test('test apikeyEditObjectV1', () async {
+      // TODO
+    });
+
+    // Edit multiple Permissions
+    //
+    // Using this endpoint, you can edit multiple Permissions at the same time.
+    //
+    //Future<ApikeyEditPermissionsV1Response> apikeyEditPermissionsV1(int pkiApikeyID, ApikeyEditPermissionsV1Request apikeyEditPermissionsV1Request) async
+    test('test apikeyEditPermissionsV1', () async {
+      // TODO
+    });
+
+    // Retrieve an existing Apikey
+    //
+    // 
+    //
+    //Future<ApikeyGetObjectV2Response> apikeyGetObjectV2(int pkiApikeyID) async
+    test('test apikeyGetObjectV2', () async {
+      // TODO
+    });
+
+    // Retrieve an existing Apikey's Permissions
+    //
+    //Future<ApikeyGetPermissionsV1Response> apikeyGetPermissionsV1(int pkiApikeyID) async
+    test('test apikeyGetPermissionsV1', () async {
+      // TODO
+    });
+
+    // Retrieve an existing Apikey's subnets
+    //
+    //Future<ApikeyGetSubnetsV1Response> apikeyGetSubnetsV1(int pkiApikeyID) async
+    test('test apikeyGetSubnetsV1', () async {
+      // TODO
+    });
+
   });
 }

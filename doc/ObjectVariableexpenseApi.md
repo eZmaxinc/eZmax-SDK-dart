@@ -79,7 +79,7 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
 
 final api_instance = ObjectVariableexpenseApi();
-final pkiVariableexpenseID = 56; // int | The unique ID of the Variableexpense
+final pkiVariableexpenseID = 56; // int | 
 final variableexpenseEditObjectV1Request = VariableexpenseEditObjectV1Request(); // VariableexpenseEditObjectV1Request | 
 
 try {
@@ -94,7 +94,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiVariableexpenseID** | **int**| The unique ID of the Variableexpense | 
+ **pkiVariableexpenseID** | **int**|  | 
  **variableexpenseEditObjectV1Request** | [**VariableexpenseEditObjectV1Request**](VariableexpenseEditObjectV1Request.md)|  | 
 
 ### Return type
@@ -236,7 +236,7 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
 
 final api_instance = ObjectVariableexpenseApi();
-final pkiVariableexpenseID = 56; // int | The unique ID of the Variableexpense
+final pkiVariableexpenseID = 56; // int | 
 
 try {
     final result = api_instance.variableexpenseGetObjectV2(pkiVariableexpenseID);
@@ -250,7 +250,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiVariableexpenseID** | **int**| The unique ID of the Variableexpense | 
+ **pkiVariableexpenseID** | **int**|  | 
 
 ### Return type
 

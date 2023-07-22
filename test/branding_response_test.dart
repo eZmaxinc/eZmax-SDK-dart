@@ -22,6 +22,12 @@ void main() {
       // TODO
     });
 
+    // The unique ID of the Email
+    // int fkiEmailID
+    test('to test the property `fkiEmailID`', () async {
+      // TODO
+    });
+
     // MultilingualBrandingDescription objBrandingDescription
     test('to test the property `objBrandingDescription`', () async {
       // TODO
@@ -30,6 +36,18 @@ void main() {
     // The Description of the Branding in the language of the requester
     // String sBrandingDescriptionX
     test('to test the property `sBrandingDescriptionX`', () async {
+      // TODO
+    });
+
+    // The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty
+    // String sBrandingName
+    test('to test the property `sBrandingName`', () async {
+      // TODO
+    });
+
+    // The email address.
+    // String sEmailAddress
+    test('to test the property `sEmailAddress`', () async {
       // TODO
     });
 

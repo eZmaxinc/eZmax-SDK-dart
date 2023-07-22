@@ -28,6 +28,7 @@ class EzsignformfieldgroupRequest {
     this.sEzsignformfieldgroupRegexp,
     this.tEzsignformfieldgroupTooltip,
     this.eEzsignformfieldgroupTooltipposition,
+    this.eEzsignformfieldgroupTextvalidation,
   });
 
   /// The unique ID of the Ezsignformfieldgroup
@@ -120,6 +121,14 @@ class EzsignformfieldgroupRequest {
   ///
   FieldEEzsignformfieldgroupTooltipposition? eEzsignformfieldgroupTooltipposition;
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  EnumTextvalidation? eEzsignformfieldgroupTextvalidation;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignformfieldgroupRequest &&
      other.pkiEzsignformfieldgroupID == pkiEzsignformfieldgroupID &&
@@ -136,7 +145,8 @@ class EzsignformfieldgroupRequest {
      other.bEzsignformfieldgroupEncrypted == bEzsignformfieldgroupEncrypted &&
      other.sEzsignformfieldgroupRegexp == sEzsignformfieldgroupRegexp &&
      other.tEzsignformfieldgroupTooltip == tEzsignformfieldgroupTooltip &&
-     other.eEzsignformfieldgroupTooltipposition == eEzsignformfieldgroupTooltipposition;
+     other.eEzsignformfieldgroupTooltipposition == eEzsignformfieldgroupTooltipposition &&
+     other.eEzsignformfieldgroupTextvalidation == eEzsignformfieldgroupTextvalidation;
 
   @override
   int get hashCode =>
@@ -155,10 +165,11 @@ class EzsignformfieldgroupRequest {
     (bEzsignformfieldgroupEncrypted == null ? 0 : bEzsignformfieldgroupEncrypted!.hashCode) +
     (sEzsignformfieldgroupRegexp == null ? 0 : sEzsignformfieldgroupRegexp!.hashCode) +
     (tEzsignformfieldgroupTooltip == null ? 0 : tEzsignformfieldgroupTooltip!.hashCode) +
-    (eEzsignformfieldgroupTooltipposition == null ? 0 : eEzsignformfieldgroupTooltipposition!.hashCode);
+    (eEzsignformfieldgroupTooltipposition == null ? 0 : eEzsignformfieldgroupTooltipposition!.hashCode) +
+    (eEzsignformfieldgroupTextvalidation == null ? 0 : eEzsignformfieldgroupTextvalidation!.hashCode);
 
   @override
-  String toString() => 'EzsignformfieldgroupRequest[pkiEzsignformfieldgroupID=$pkiEzsignformfieldgroupID, fkiEzsigndocumentID=$fkiEzsigndocumentID, eEzsignformfieldgroupType=$eEzsignformfieldgroupType, eEzsignformfieldgroupSignerrequirement=$eEzsignformfieldgroupSignerrequirement, sEzsignformfieldgroupLabel=$sEzsignformfieldgroupLabel, iEzsignformfieldgroupStep=$iEzsignformfieldgroupStep, sEzsignformfieldgroupDefaultvalue=$sEzsignformfieldgroupDefaultvalue, iEzsignformfieldgroupFilledmin=$iEzsignformfieldgroupFilledmin, iEzsignformfieldgroupFilledmax=$iEzsignformfieldgroupFilledmax, bEzsignformfieldgroupReadonly=$bEzsignformfieldgroupReadonly, iEzsignformfieldgroupMaxlength=$iEzsignformfieldgroupMaxlength, bEzsignformfieldgroupEncrypted=$bEzsignformfieldgroupEncrypted, sEzsignformfieldgroupRegexp=$sEzsignformfieldgroupRegexp, tEzsignformfieldgroupTooltip=$tEzsignformfieldgroupTooltip, eEzsignformfieldgroupTooltipposition=$eEzsignformfieldgroupTooltipposition]';
+  String toString() => 'EzsignformfieldgroupRequest[pkiEzsignformfieldgroupID=$pkiEzsignformfieldgroupID, fkiEzsigndocumentID=$fkiEzsigndocumentID, eEzsignformfieldgroupType=$eEzsignformfieldgroupType, eEzsignformfieldgroupSignerrequirement=$eEzsignformfieldgroupSignerrequirement, sEzsignformfieldgroupLabel=$sEzsignformfieldgroupLabel, iEzsignformfieldgroupStep=$iEzsignformfieldgroupStep, sEzsignformfieldgroupDefaultvalue=$sEzsignformfieldgroupDefaultvalue, iEzsignformfieldgroupFilledmin=$iEzsignformfieldgroupFilledmin, iEzsignformfieldgroupFilledmax=$iEzsignformfieldgroupFilledmax, bEzsignformfieldgroupReadonly=$bEzsignformfieldgroupReadonly, iEzsignformfieldgroupMaxlength=$iEzsignformfieldgroupMaxlength, bEzsignformfieldgroupEncrypted=$bEzsignformfieldgroupEncrypted, sEzsignformfieldgroupRegexp=$sEzsignformfieldgroupRegexp, tEzsignformfieldgroupTooltip=$tEzsignformfieldgroupTooltip, eEzsignformfieldgroupTooltipposition=$eEzsignformfieldgroupTooltipposition, eEzsignformfieldgroupTextvalidation=$eEzsignformfieldgroupTextvalidation]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -201,6 +212,11 @@ class EzsignformfieldgroupRequest {
     } else {
       json[r'eEzsignformfieldgroupTooltipposition'] = null;
     }
+    if (this.eEzsignformfieldgroupTextvalidation != null) {
+      json[r'eEzsignformfieldgroupTextvalidation'] = this.eEzsignformfieldgroupTextvalidation;
+    } else {
+      json[r'eEzsignformfieldgroupTextvalidation'] = null;
+    }
     return json;
   }
 
@@ -238,6 +254,7 @@ class EzsignformfieldgroupRequest {
         sEzsignformfieldgroupRegexp: mapValueOfType<String>(json, r'sEzsignformfieldgroupRegexp'),
         tEzsignformfieldgroupTooltip: mapValueOfType<String>(json, r'tEzsignformfieldgroupTooltip'),
         eEzsignformfieldgroupTooltipposition: FieldEEzsignformfieldgroupTooltipposition.fromJson(json[r'eEzsignformfieldgroupTooltipposition']),
+        eEzsignformfieldgroupTextvalidation: EnumTextvalidation.fromJson(json[r'eEzsignformfieldgroupTextvalidation']),
       );
     }
     return null;

@@ -23,7 +23,7 @@ class UsergroupAutocompleteElementResponse {
 
   /// The unique ID of the Usergroup
   ///
-  /// Minimum value: 1
+  /// Minimum value: 0
   /// Maximum value: 255
   int pkiUsergroupID;
 

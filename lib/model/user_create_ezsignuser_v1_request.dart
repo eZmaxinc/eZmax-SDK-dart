@@ -29,10 +29,10 @@ class UserCreateEzsignuserV1Request {
   /// Maximum value: 2
   int fkiLanguageID;
 
-  /// The First name of the user
+  /// The first name of the user
   String sUserFirstname;
 
-  /// The Last name of the user
+  /// The last name of the user
   String sUserLastname;
 
   /// The email address.

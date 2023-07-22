@@ -46,6 +46,12 @@ void main() {
       // TODO
     });
 
+    // The Url to the requested document.  Url will expire after 3 hours.
+    // String sDownloadUrl
+    test('to test the property `sDownloadUrl`', () async {
+      // TODO
+    });
+
 
   });
 

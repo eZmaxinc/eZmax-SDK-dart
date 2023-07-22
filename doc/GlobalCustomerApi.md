@@ -22,10 +22,6 @@ Retrieve the customer's specific server endpoint where to send requests. This wi
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
 
 final api_instance = GlobalCustomerApi();
 final pksCustomerCode = pksCustomerCode_example; // String | 
@@ -52,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 

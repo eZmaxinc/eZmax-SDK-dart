@@ -13,9 +13,22 @@ part of openapi.api;
 class EmailRequest {
   /// Returns a new [EmailRequest] instance.
   EmailRequest({
+    this.pkiEmailID,
     required this.fkiEmailtypeID,
     required this.sEmailAddress,
   });
+
+  /// The unique ID of the Email
+  ///
+  /// Minimum value: 1
+  /// Maximum value: 16777215
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? pkiEmailID;
 
   /// The unique ID of the Emailtype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home|
   ///
@@ -27,20 +40,27 @@ class EmailRequest {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EmailRequest &&
+     other.pkiEmailID == pkiEmailID &&
      other.fkiEmailtypeID == fkiEmailtypeID &&
      other.sEmailAddress == sEmailAddress;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
+    (pkiEmailID == null ? 0 : pkiEmailID!.hashCode) +
     (fkiEmailtypeID.hashCode) +
     (sEmailAddress.hashCode);
 
   @override
-  String toString() => 'EmailRequest[fkiEmailtypeID=$fkiEmailtypeID, sEmailAddress=$sEmailAddress]';
+  String toString() => 'EmailRequest[pkiEmailID=$pkiEmailID, fkiEmailtypeID=$fkiEmailtypeID, sEmailAddress=$sEmailAddress]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
+    if (this.pkiEmailID != null) {
+      json[r'pkiEmailID'] = this.pkiEmailID;
+    } else {
+      json[r'pkiEmailID'] = null;
+    }
       json[r'fkiEmailtypeID'] = this.fkiEmailtypeID;
       json[r'sEmailAddress'] = this.sEmailAddress;
     return json;
@@ -65,6 +85,7 @@ class EmailRequest {
       }());
 
       return EmailRequest(
+        pkiEmailID: mapValueOfType<int>(json, r'pkiEmailID'),
         fkiEmailtypeID: mapValueOfType<int>(json, r'fkiEmailtypeID')!,
         sEmailAddress: mapValueOfType<String>(json, r'sEmailAddress')!,
       );

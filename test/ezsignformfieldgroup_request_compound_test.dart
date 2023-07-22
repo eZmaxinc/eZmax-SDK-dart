@@ -103,6 +103,11 @@ void main() {
       // TODO
     });
 
+    // EnumTextvalidation eEzsignformfieldgroupTextvalidation
+    test('to test the property `eEzsignformfieldgroupTextvalidation`', () async {
+      // TODO
+    });
+
     // List<EzsignformfieldgroupsignerRequestCompound> aObjEzsignformfieldgroupsigner (default value: const [])
     test('to test the property `aObjEzsignformfieldgroupsigner`', () async {
       // TODO

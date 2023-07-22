@@ -16,14 +16,13 @@ void main() {
   // final instance = CommonResponseErrorTooManyRequests();
 
   group('test CommonResponseErrorTooManyRequests', () {
-    // More detail about the error
+    // The message giving details about the error
     // String sErrorMessage
     test('to test the property `sErrorMessage`', () async {
       // TODO
     });
 
-    // The error code. See documentation for valid values
-    // String eErrorCode
+    // FieldEErrorCode eErrorCode
     test('to test the property `eErrorCode`', () async {
       // TODO
     });

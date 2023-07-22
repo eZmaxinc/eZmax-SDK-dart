@@ -28,6 +28,7 @@ class EzsignformfieldgroupRequestCompound {
     this.sEzsignformfieldgroupRegexp,
     this.tEzsignformfieldgroupTooltip,
     this.eEzsignformfieldgroupTooltipposition,
+    this.eEzsignformfieldgroupTextvalidation,
     this.aObjEzsignformfieldgroupsigner = const [],
     this.aObjDropdownElement = const [],
     this.aObjEzsignformfield = const [],
@@ -123,6 +124,14 @@ class EzsignformfieldgroupRequestCompound {
   ///
   FieldEEzsignformfieldgroupTooltipposition? eEzsignformfieldgroupTooltipposition;
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  EnumTextvalidation? eEzsignformfieldgroupTextvalidation;
+
   List<EzsignformfieldgroupsignerRequestCompound> aObjEzsignformfieldgroupsigner;
 
   List<CustomDropdownElementRequestCompound> aObjDropdownElement;
@@ -146,6 +155,7 @@ class EzsignformfieldgroupRequestCompound {
      other.sEzsignformfieldgroupRegexp == sEzsignformfieldgroupRegexp &&
      other.tEzsignformfieldgroupTooltip == tEzsignformfieldgroupTooltip &&
      other.eEzsignformfieldgroupTooltipposition == eEzsignformfieldgroupTooltipposition &&
+     other.eEzsignformfieldgroupTextvalidation == eEzsignformfieldgroupTextvalidation &&
      other.aObjEzsignformfieldgroupsigner == aObjEzsignformfieldgroupsigner &&
      other.aObjDropdownElement == aObjDropdownElement &&
      other.aObjEzsignformfield == aObjEzsignformfield;
@@ -168,12 +178,13 @@ class EzsignformfieldgroupRequestCompound {
     (sEzsignformfieldgroupRegexp == null ? 0 : sEzsignformfieldgroupRegexp!.hashCode) +
     (tEzsignformfieldgroupTooltip == null ? 0 : tEzsignformfieldgroupTooltip!.hashCode) +
     (eEzsignformfieldgroupTooltipposition == null ? 0 : eEzsignformfieldgroupTooltipposition!.hashCode) +
+    (eEzsignformfieldgroupTextvalidation == null ? 0 : eEzsignformfieldgroupTextvalidation!.hashCode) +
     (aObjEzsignformfieldgroupsigner.hashCode) +
     (aObjDropdownElement.hashCode) +
     (aObjEzsignformfield.hashCode);
 
   @override
-  String toString() => 'EzsignformfieldgroupRequestCompound[pkiEzsignformfieldgroupID=$pkiEzsignformfieldgroupID, fkiEzsigndocumentID=$fkiEzsigndocumentID, eEzsignformfieldgroupType=$eEzsignformfieldgroupType, eEzsignformfieldgroupSignerrequirement=$eEzsignformfieldgroupSignerrequirement, sEzsignformfieldgroupLabel=$sEzsignformfieldgroupLabel, iEzsignformfieldgroupStep=$iEzsignformfieldgroupStep, sEzsignformfieldgroupDefaultvalue=$sEzsignformfieldgroupDefaultvalue, iEzsignformfieldgroupFilledmin=$iEzsignformfieldgroupFilledmin, iEzsignformfieldgroupFilledmax=$iEzsignformfieldgroupFilledmax, bEzsignformfieldgroupReadonly=$bEzsignformfieldgroupReadonly, iEzsignformfieldgroupMaxlength=$iEzsignformfieldgroupMaxlength, bEzsignformfieldgroupEncrypted=$bEzsignformfieldgroupEncrypted, sEzsignformfieldgroupRegexp=$sEzsignformfieldgroupRegexp, tEzsignformfieldgroupTooltip=$tEzsignformfieldgroupTooltip, eEzsignformfieldgroupTooltipposition=$eEzsignformfieldgroupTooltipposition, aObjEzsignformfieldgroupsigner=$aObjEzsignformfieldgroupsigner, aObjDropdownElement=$aObjDropdownElement, aObjEzsignformfield=$aObjEzsignformfield]';
+  String toString() => 'EzsignformfieldgroupRequestCompound[pkiEzsignformfieldgroupID=$pkiEzsignformfieldgroupID, fkiEzsigndocumentID=$fkiEzsigndocumentID, eEzsignformfieldgroupType=$eEzsignformfieldgroupType, eEzsignformfieldgroupSignerrequirement=$eEzsignformfieldgroupSignerrequirement, sEzsignformfieldgroupLabel=$sEzsignformfieldgroupLabel, iEzsignformfieldgroupStep=$iEzsignformfieldgroupStep, sEzsignformfieldgroupDefaultvalue=$sEzsignformfieldgroupDefaultvalue, iEzsignformfieldgroupFilledmin=$iEzsignformfieldgroupFilledmin, iEzsignformfieldgroupFilledmax=$iEzsignformfieldgroupFilledmax, bEzsignformfieldgroupReadonly=$bEzsignformfieldgroupReadonly, iEzsignformfieldgroupMaxlength=$iEzsignformfieldgroupMaxlength, bEzsignformfieldgroupEncrypted=$bEzsignformfieldgroupEncrypted, sEzsignformfieldgroupRegexp=$sEzsignformfieldgroupRegexp, tEzsignformfieldgroupTooltip=$tEzsignformfieldgroupTooltip, eEzsignformfieldgroupTooltipposition=$eEzsignformfieldgroupTooltipposition, eEzsignformfieldgroupTextvalidation=$eEzsignformfieldgroupTextvalidation, aObjEzsignformfieldgroupsigner=$aObjEzsignformfieldgroupsigner, aObjDropdownElement=$aObjDropdownElement, aObjEzsignformfield=$aObjEzsignformfield]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -216,6 +227,11 @@ class EzsignformfieldgroupRequestCompound {
     } else {
       json[r'eEzsignformfieldgroupTooltipposition'] = null;
     }
+    if (this.eEzsignformfieldgroupTextvalidation != null) {
+      json[r'eEzsignformfieldgroupTextvalidation'] = this.eEzsignformfieldgroupTextvalidation;
+    } else {
+      json[r'eEzsignformfieldgroupTextvalidation'] = null;
+    }
       json[r'a_objEzsignformfieldgroupsigner'] = this.aObjEzsignformfieldgroupsigner;
       json[r'a_objDropdownElement'] = this.aObjDropdownElement;
       json[r'a_objEzsignformfield'] = this.aObjEzsignformfield;
@@ -256,6 +272,7 @@ class EzsignformfieldgroupRequestCompound {
         sEzsignformfieldgroupRegexp: mapValueOfType<String>(json, r'sEzsignformfieldgroupRegexp'),
         tEzsignformfieldgroupTooltip: mapValueOfType<String>(json, r'tEzsignformfieldgroupTooltip'),
         eEzsignformfieldgroupTooltipposition: FieldEEzsignformfieldgroupTooltipposition.fromJson(json[r'eEzsignformfieldgroupTooltipposition']),
+        eEzsignformfieldgroupTextvalidation: EnumTextvalidation.fromJson(json[r'eEzsignformfieldgroupTextvalidation']),
         aObjEzsignformfieldgroupsigner: EzsignformfieldgroupsignerRequestCompound.listFromJson(json[r'a_objEzsignformfieldgroupsigner']),
         aObjDropdownElement: CustomDropdownElementRequestCompound.listFromJson(json[r'a_objDropdownElement']),
         aObjEzsignformfield: EzsignformfieldRequestCompound.listFromJson(json[r'a_objEzsignformfield']),

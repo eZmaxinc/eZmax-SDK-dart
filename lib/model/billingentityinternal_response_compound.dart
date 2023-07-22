@@ -15,6 +15,7 @@ class BillingentityinternalResponseCompound {
   BillingentityinternalResponseCompound({
     required this.pkiBillingentityinternalID,
     required this.objBillingentityinternalDescription,
+    this.aObjBillingentityinternalproduct = const [],
   });
 
   /// The unique ID of the Billingentityinternal.
@@ -24,24 +25,29 @@ class BillingentityinternalResponseCompound {
 
   MultilingualBillingentityinternalDescription objBillingentityinternalDescription;
 
+  List<BillingentityinternalproductResponseCompound> aObjBillingentityinternalproduct;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is BillingentityinternalResponseCompound &&
      other.pkiBillingentityinternalID == pkiBillingentityinternalID &&
-     other.objBillingentityinternalDescription == objBillingentityinternalDescription;
+     other.objBillingentityinternalDescription == objBillingentityinternalDescription &&
+     other.aObjBillingentityinternalproduct == aObjBillingentityinternalproduct;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiBillingentityinternalID.hashCode) +
-    (objBillingentityinternalDescription.hashCode);
+    (objBillingentityinternalDescription.hashCode) +
+    (aObjBillingentityinternalproduct.hashCode);
 
   @override
-  String toString() => 'BillingentityinternalResponseCompound[pkiBillingentityinternalID=$pkiBillingentityinternalID, objBillingentityinternalDescription=$objBillingentityinternalDescription]';
+  String toString() => 'BillingentityinternalResponseCompound[pkiBillingentityinternalID=$pkiBillingentityinternalID, objBillingentityinternalDescription=$objBillingentityinternalDescription, aObjBillingentityinternalproduct=$aObjBillingentityinternalproduct]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiBillingentityinternalID'] = this.pkiBillingentityinternalID;
       json[r'objBillingentityinternalDescription'] = this.objBillingentityinternalDescription;
+      json[r'a_objBillingentityinternalproduct'] = this.aObjBillingentityinternalproduct;
     return json;
   }
 
@@ -66,6 +72,7 @@ class BillingentityinternalResponseCompound {
       return BillingentityinternalResponseCompound(
         pkiBillingentityinternalID: mapValueOfType<int>(json, r'pkiBillingentityinternalID')!,
         objBillingentityinternalDescription: MultilingualBillingentityinternalDescription.fromJson(json[r'objBillingentityinternalDescription'])!,
+        aObjBillingentityinternalproduct: BillingentityinternalproductResponseCompound.listFromJson(json[r'a_objBillingentityinternalproduct']),
       );
     }
     return null;
@@ -115,6 +122,7 @@ class BillingentityinternalResponseCompound {
   static const requiredKeys = <String>{
     'pkiBillingentityinternalID',
     'objBillingentityinternalDescription',
+    'a_objBillingentityinternalproduct',
   };
 }
 

@@ -23,6 +23,7 @@ class ActivesessionResponse {
     required this.bActivesessionIssuperadmin,
     required this.pksCustomerCode,
     this.fkiSystemconfigurationtypeID,
+    this.fkiSignatureID,
   });
 
   FieldEActivesessionUsertype eActivesessionUsertype;
@@ -63,6 +64,18 @@ class ActivesessionResponse {
   ///
   int? fkiSystemconfigurationtypeID;
 
+  /// The unique ID of the Signature
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 16777215
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiSignatureID;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is ActivesessionResponse &&
      other.eActivesessionUsertype == eActivesessionUsertype &&
@@ -74,7 +87,8 @@ class ActivesessionResponse {
      other.bActivesessionDebug == bActivesessionDebug &&
      other.bActivesessionIssuperadmin == bActivesessionIssuperadmin &&
      other.pksCustomerCode == pksCustomerCode &&
-     other.fkiSystemconfigurationtypeID == fkiSystemconfigurationtypeID;
+     other.fkiSystemconfigurationtypeID == fkiSystemconfigurationtypeID &&
+     other.fkiSignatureID == fkiSignatureID;
 
   @override
   int get hashCode =>
@@ -88,10 +102,11 @@ class ActivesessionResponse {
     (bActivesessionDebug.hashCode) +
     (bActivesessionIssuperadmin.hashCode) +
     (pksCustomerCode.hashCode) +
-    (fkiSystemconfigurationtypeID == null ? 0 : fkiSystemconfigurationtypeID!.hashCode);
+    (fkiSystemconfigurationtypeID == null ? 0 : fkiSystemconfigurationtypeID!.hashCode) +
+    (fkiSignatureID == null ? 0 : fkiSignatureID!.hashCode);
 
   @override
-  String toString() => 'ActivesessionResponse[eActivesessionUsertype=$eActivesessionUsertype, eActivesessionOrigin=$eActivesessionOrigin, eActivesessionWeekdaystart=$eActivesessionWeekdaystart, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, bActivesessionDebug=$bActivesessionDebug, bActivesessionIssuperadmin=$bActivesessionIssuperadmin, pksCustomerCode=$pksCustomerCode, fkiSystemconfigurationtypeID=$fkiSystemconfigurationtypeID]';
+  String toString() => 'ActivesessionResponse[eActivesessionUsertype=$eActivesessionUsertype, eActivesessionOrigin=$eActivesessionOrigin, eActivesessionWeekdaystart=$eActivesessionWeekdaystart, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, bActivesessionDebug=$bActivesessionDebug, bActivesessionIssuperadmin=$bActivesessionIssuperadmin, pksCustomerCode=$pksCustomerCode, fkiSystemconfigurationtypeID=$fkiSystemconfigurationtypeID, fkiSignatureID=$fkiSignatureID]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -108,6 +123,11 @@ class ActivesessionResponse {
       json[r'fkiSystemconfigurationtypeID'] = this.fkiSystemconfigurationtypeID;
     } else {
       json[r'fkiSystemconfigurationtypeID'] = null;
+    }
+    if (this.fkiSignatureID != null) {
+      json[r'fkiSignatureID'] = this.fkiSignatureID;
+    } else {
+      json[r'fkiSignatureID'] = null;
     }
     return json;
   }
@@ -141,6 +161,7 @@ class ActivesessionResponse {
         bActivesessionIssuperadmin: mapValueOfType<bool>(json, r'bActivesessionIssuperadmin')!,
         pksCustomerCode: mapValueOfType<String>(json, r'pksCustomerCode')!,
         fkiSystemconfigurationtypeID: mapValueOfType<int>(json, r'fkiSystemconfigurationtypeID'),
+        fkiSignatureID: mapValueOfType<int>(json, r'fkiSignatureID'),
       );
     }
     return null;

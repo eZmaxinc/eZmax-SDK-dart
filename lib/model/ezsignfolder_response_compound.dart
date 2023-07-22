@@ -14,26 +14,26 @@ class EzsignfolderResponseCompound {
   /// Returns a new [EzsignfolderResponseCompound] instance.
   EzsignfolderResponseCompound({
     required this.pkiEzsignfolderID,
-    required this.fkiEzsignfoldertypeID,
-    required this.sEzsignfoldertypeNameX,
-    required this.fkiBillingentityinternalID,
-    required this.sBillingentityinternalDescriptionX,
-    required this.fkiEzsigntsarequirementID,
-    required this.sEzsigntsarequirementDescriptionX,
+    this.fkiEzsignfoldertypeID,
+    this.sEzsignfoldertypeNameX,
+    this.fkiBillingentityinternalID,
+    this.sBillingentityinternalDescriptionX,
+    this.fkiEzsigntsarequirementID,
+    this.sEzsigntsarequirementDescriptionX,
     required this.sEzsignfolderDescription,
-    required this.tEzsignfolderNote,
-    required this.bEzsignfolderIsdisposable,
-    required this.eEzsignfolderSendreminderfrequency,
+    this.tEzsignfolderNote,
+    this.bEzsignfolderIsdisposable,
+    this.eEzsignfolderSendreminderfrequency,
     this.dtEzsignfolderDelayedsenddate,
     this.dtEzsignfolderDuedate,
     this.dtEzsignfolderSentdate,
     this.dtEzsignfolderScheduledarchive,
     this.dtEzsignfolderScheduleddispose,
-    required this.eEzsignfolderStep,
+    this.eEzsignfolderStep,
     this.dtEzsignfolderClose,
-    required this.tEzsignfolderMessage,
-    required this.objAudit,
-    required this.sEzsignfolderExternalid,
+    this.tEzsignfolderMessage,
+    this.objAudit,
+    this.sEzsignfolderExternalid,
   });
 
   /// The unique ID of the Ezsignfolder
@@ -44,38 +44,92 @@ class EzsignfolderResponseCompound {
   /// The unique ID of the Ezsignfoldertype.
   ///
   /// Minimum value: 0
-  int fkiEzsignfoldertypeID;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiEzsignfoldertypeID;
 
   /// The name of the Ezsignfoldertype in the language of the requester
-  String sEzsignfoldertypeNameX;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEzsignfoldertypeNameX;
 
   /// The unique ID of the Billingentityinternal.
   ///
   /// Minimum value: 0
-  int fkiBillingentityinternalID;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiBillingentityinternalID;
 
   /// The description of the Billingentityinternal in the language of the requester
-  String sBillingentityinternalDescriptionX;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sBillingentityinternalDescriptionX;
 
   /// The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server's time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server's time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|
   ///
   /// Minimum value: 1
   /// Maximum value: 3
-  int fkiEzsigntsarequirementID;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiEzsigntsarequirementID;
 
   /// The description of the Ezsigntsarequirement in the language of the requester
-  String sEzsigntsarequirementDescriptionX;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEzsigntsarequirementDescriptionX;
 
   /// The description of the Ezsignfolder
   String sEzsignfolderDescription;
 
   /// Note about the Ezsignfolder
-  String tEzsignfolderNote;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? tEzsignfolderNote;
 
   /// If the Ezsigndocument can be disposed
-  bool bEzsignfolderIsdisposable;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bEzsignfolderIsdisposable;
 
-  FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEEzsignfolderSendreminderfrequency? eEzsignfolderSendreminderfrequency;
 
   /// The date and time at which the Ezsignfolder will be sent in the future.
   ///
@@ -122,7 +176,13 @@ class EzsignfolderResponseCompound {
   ///
   String? dtEzsignfolderScheduleddispose;
 
-  FieldEEzsignfolderStep eEzsignfolderStep;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEEzsignfolderStep? eEzsignfolderStep;
 
   /// The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely.
   ///
@@ -134,12 +194,30 @@ class EzsignfolderResponseCompound {
   String? dtEzsignfolderClose;
 
   /// A custom text message that will be added to the email sent.
-  String tEzsignfolderMessage;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? tEzsignfolderMessage;
 
-  CommonAudit objAudit;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  CommonAudit? objAudit;
 
   /// This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
-  String sEzsignfolderExternalid;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEzsignfolderExternalid;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfolderResponseCompound &&
@@ -169,26 +247,26 @@ class EzsignfolderResponseCompound {
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiEzsignfolderID.hashCode) +
-    (fkiEzsignfoldertypeID.hashCode) +
-    (sEzsignfoldertypeNameX.hashCode) +
-    (fkiBillingentityinternalID.hashCode) +
-    (sBillingentityinternalDescriptionX.hashCode) +
-    (fkiEzsigntsarequirementID.hashCode) +
-    (sEzsigntsarequirementDescriptionX.hashCode) +
+    (fkiEzsignfoldertypeID == null ? 0 : fkiEzsignfoldertypeID!.hashCode) +
+    (sEzsignfoldertypeNameX == null ? 0 : sEzsignfoldertypeNameX!.hashCode) +
+    (fkiBillingentityinternalID == null ? 0 : fkiBillingentityinternalID!.hashCode) +
+    (sBillingentityinternalDescriptionX == null ? 0 : sBillingentityinternalDescriptionX!.hashCode) +
+    (fkiEzsigntsarequirementID == null ? 0 : fkiEzsigntsarequirementID!.hashCode) +
+    (sEzsigntsarequirementDescriptionX == null ? 0 : sEzsigntsarequirementDescriptionX!.hashCode) +
     (sEzsignfolderDescription.hashCode) +
-    (tEzsignfolderNote.hashCode) +
-    (bEzsignfolderIsdisposable.hashCode) +
-    (eEzsignfolderSendreminderfrequency.hashCode) +
+    (tEzsignfolderNote == null ? 0 : tEzsignfolderNote!.hashCode) +
+    (bEzsignfolderIsdisposable == null ? 0 : bEzsignfolderIsdisposable!.hashCode) +
+    (eEzsignfolderSendreminderfrequency == null ? 0 : eEzsignfolderSendreminderfrequency!.hashCode) +
     (dtEzsignfolderDelayedsenddate == null ? 0 : dtEzsignfolderDelayedsenddate!.hashCode) +
     (dtEzsignfolderDuedate == null ? 0 : dtEzsignfolderDuedate!.hashCode) +
     (dtEzsignfolderSentdate == null ? 0 : dtEzsignfolderSentdate!.hashCode) +
     (dtEzsignfolderScheduledarchive == null ? 0 : dtEzsignfolderScheduledarchive!.hashCode) +
     (dtEzsignfolderScheduleddispose == null ? 0 : dtEzsignfolderScheduleddispose!.hashCode) +
-    (eEzsignfolderStep.hashCode) +
+    (eEzsignfolderStep == null ? 0 : eEzsignfolderStep!.hashCode) +
     (dtEzsignfolderClose == null ? 0 : dtEzsignfolderClose!.hashCode) +
-    (tEzsignfolderMessage.hashCode) +
-    (objAudit.hashCode) +
-    (sEzsignfolderExternalid.hashCode);
+    (tEzsignfolderMessage == null ? 0 : tEzsignfolderMessage!.hashCode) +
+    (objAudit == null ? 0 : objAudit!.hashCode) +
+    (sEzsignfolderExternalid == null ? 0 : sEzsignfolderExternalid!.hashCode);
 
   @override
   String toString() => 'EzsignfolderResponseCompound[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, fkiBillingentityinternalID=$fkiBillingentityinternalID, sBillingentityinternalDescriptionX=$sBillingentityinternalDescriptionX, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sEzsigntsarequirementDescriptionX=$sEzsigntsarequirementDescriptionX, sEzsignfolderDescription=$sEzsignfolderDescription, tEzsignfolderNote=$tEzsignfolderNote, bEzsignfolderIsdisposable=$bEzsignfolderIsdisposable, eEzsignfolderSendreminderfrequency=$eEzsignfolderSendreminderfrequency, dtEzsignfolderDelayedsenddate=$dtEzsignfolderDelayedsenddate, dtEzsignfolderDuedate=$dtEzsignfolderDuedate, dtEzsignfolderSentdate=$dtEzsignfolderSentdate, dtEzsignfolderScheduledarchive=$dtEzsignfolderScheduledarchive, dtEzsignfolderScheduleddispose=$dtEzsignfolderScheduleddispose, eEzsignfolderStep=$eEzsignfolderStep, dtEzsignfolderClose=$dtEzsignfolderClose, tEzsignfolderMessage=$tEzsignfolderMessage, objAudit=$objAudit, sEzsignfolderExternalid=$sEzsignfolderExternalid]';
@@ -196,16 +274,52 @@ class EzsignfolderResponseCompound {
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiEzsignfolderID'] = this.pkiEzsignfolderID;
+    if (this.fkiEzsignfoldertypeID != null) {
       json[r'fkiEzsignfoldertypeID'] = this.fkiEzsignfoldertypeID;
+    } else {
+      json[r'fkiEzsignfoldertypeID'] = null;
+    }
+    if (this.sEzsignfoldertypeNameX != null) {
       json[r'sEzsignfoldertypeNameX'] = this.sEzsignfoldertypeNameX;
+    } else {
+      json[r'sEzsignfoldertypeNameX'] = null;
+    }
+    if (this.fkiBillingentityinternalID != null) {
       json[r'fkiBillingentityinternalID'] = this.fkiBillingentityinternalID;
+    } else {
+      json[r'fkiBillingentityinternalID'] = null;
+    }
+    if (this.sBillingentityinternalDescriptionX != null) {
       json[r'sBillingentityinternalDescriptionX'] = this.sBillingentityinternalDescriptionX;
+    } else {
+      json[r'sBillingentityinternalDescriptionX'] = null;
+    }
+    if (this.fkiEzsigntsarequirementID != null) {
       json[r'fkiEzsigntsarequirementID'] = this.fkiEzsigntsarequirementID;
+    } else {
+      json[r'fkiEzsigntsarequirementID'] = null;
+    }
+    if (this.sEzsigntsarequirementDescriptionX != null) {
       json[r'sEzsigntsarequirementDescriptionX'] = this.sEzsigntsarequirementDescriptionX;
+    } else {
+      json[r'sEzsigntsarequirementDescriptionX'] = null;
+    }
       json[r'sEzsignfolderDescription'] = this.sEzsignfolderDescription;
+    if (this.tEzsignfolderNote != null) {
       json[r'tEzsignfolderNote'] = this.tEzsignfolderNote;
+    } else {
+      json[r'tEzsignfolderNote'] = null;
+    }
+    if (this.bEzsignfolderIsdisposable != null) {
       json[r'bEzsignfolderIsdisposable'] = this.bEzsignfolderIsdisposable;
+    } else {
+      json[r'bEzsignfolderIsdisposable'] = null;
+    }
+    if (this.eEzsignfolderSendreminderfrequency != null) {
       json[r'eEzsignfolderSendreminderfrequency'] = this.eEzsignfolderSendreminderfrequency;
+    } else {
+      json[r'eEzsignfolderSendreminderfrequency'] = null;
+    }
     if (this.dtEzsignfolderDelayedsenddate != null) {
       json[r'dtEzsignfolderDelayedsenddate'] = this.dtEzsignfolderDelayedsenddate;
     } else {
@@ -231,15 +345,31 @@ class EzsignfolderResponseCompound {
     } else {
       json[r'dtEzsignfolderScheduleddispose'] = null;
     }
+    if (this.eEzsignfolderStep != null) {
       json[r'eEzsignfolderStep'] = this.eEzsignfolderStep;
+    } else {
+      json[r'eEzsignfolderStep'] = null;
+    }
     if (this.dtEzsignfolderClose != null) {
       json[r'dtEzsignfolderClose'] = this.dtEzsignfolderClose;
     } else {
       json[r'dtEzsignfolderClose'] = null;
     }
+    if (this.tEzsignfolderMessage != null) {
       json[r'tEzsignfolderMessage'] = this.tEzsignfolderMessage;
+    } else {
+      json[r'tEzsignfolderMessage'] = null;
+    }
+    if (this.objAudit != null) {
       json[r'objAudit'] = this.objAudit;
+    } else {
+      json[r'objAudit'] = null;
+    }
+    if (this.sEzsignfolderExternalid != null) {
       json[r'sEzsignfolderExternalid'] = this.sEzsignfolderExternalid;
+    } else {
+      json[r'sEzsignfolderExternalid'] = null;
+    }
     return json;
   }
 
@@ -263,26 +393,26 @@ class EzsignfolderResponseCompound {
 
       return EzsignfolderResponseCompound(
         pkiEzsignfolderID: mapValueOfType<int>(json, r'pkiEzsignfolderID')!,
-        fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID')!,
-        sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX')!,
-        fkiBillingentityinternalID: mapValueOfType<int>(json, r'fkiBillingentityinternalID')!,
-        sBillingentityinternalDescriptionX: mapValueOfType<String>(json, r'sBillingentityinternalDescriptionX')!,
-        fkiEzsigntsarequirementID: mapValueOfType<int>(json, r'fkiEzsigntsarequirementID')!,
-        sEzsigntsarequirementDescriptionX: mapValueOfType<String>(json, r'sEzsigntsarequirementDescriptionX')!,
+        fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID'),
+        sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX'),
+        fkiBillingentityinternalID: mapValueOfType<int>(json, r'fkiBillingentityinternalID'),
+        sBillingentityinternalDescriptionX: mapValueOfType<String>(json, r'sBillingentityinternalDescriptionX'),
+        fkiEzsigntsarequirementID: mapValueOfType<int>(json, r'fkiEzsigntsarequirementID'),
+        sEzsigntsarequirementDescriptionX: mapValueOfType<String>(json, r'sEzsigntsarequirementDescriptionX'),
         sEzsignfolderDescription: mapValueOfType<String>(json, r'sEzsignfolderDescription')!,
-        tEzsignfolderNote: mapValueOfType<String>(json, r'tEzsignfolderNote')!,
-        bEzsignfolderIsdisposable: mapValueOfType<bool>(json, r'bEzsignfolderIsdisposable')!,
-        eEzsignfolderSendreminderfrequency: FieldEEzsignfolderSendreminderfrequency.fromJson(json[r'eEzsignfolderSendreminderfrequency'])!,
+        tEzsignfolderNote: mapValueOfType<String>(json, r'tEzsignfolderNote'),
+        bEzsignfolderIsdisposable: mapValueOfType<bool>(json, r'bEzsignfolderIsdisposable'),
+        eEzsignfolderSendreminderfrequency: FieldEEzsignfolderSendreminderfrequency.fromJson(json[r'eEzsignfolderSendreminderfrequency']),
         dtEzsignfolderDelayedsenddate: mapValueOfType<String>(json, r'dtEzsignfolderDelayedsenddate'),
         dtEzsignfolderDuedate: mapValueOfType<String>(json, r'dtEzsignfolderDuedate'),
         dtEzsignfolderSentdate: mapValueOfType<String>(json, r'dtEzsignfolderSentdate'),
         dtEzsignfolderScheduledarchive: mapValueOfType<String>(json, r'dtEzsignfolderScheduledarchive'),
         dtEzsignfolderScheduleddispose: mapValueOfType<String>(json, r'dtEzsignfolderScheduleddispose'),
-        eEzsignfolderStep: FieldEEzsignfolderStep.fromJson(json[r'eEzsignfolderStep'])!,
+        eEzsignfolderStep: FieldEEzsignfolderStep.fromJson(json[r'eEzsignfolderStep']),
         dtEzsignfolderClose: mapValueOfType<String>(json, r'dtEzsignfolderClose'),
-        tEzsignfolderMessage: mapValueOfType<String>(json, r'tEzsignfolderMessage')!,
-        objAudit: CommonAudit.fromJson(json[r'objAudit'])!,
-        sEzsignfolderExternalid: mapValueOfType<String>(json, r'sEzsignfolderExternalid')!,
+        tEzsignfolderMessage: mapValueOfType<String>(json, r'tEzsignfolderMessage'),
+        objAudit: CommonAudit.fromJson(json[r'objAudit']),
+        sEzsignfolderExternalid: mapValueOfType<String>(json, r'sEzsignfolderExternalid'),
       );
     }
     return null;
@@ -331,20 +461,7 @@ class EzsignfolderResponseCompound {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'pkiEzsignfolderID',
-    'fkiEzsignfoldertypeID',
-    'sEzsignfoldertypeNameX',
-    'fkiBillingentityinternalID',
-    'sBillingentityinternalDescriptionX',
-    'fkiEzsigntsarequirementID',
-    'sEzsigntsarequirementDescriptionX',
     'sEzsignfolderDescription',
-    'tEzsignfolderNote',
-    'bEzsignfolderIsdisposable',
-    'eEzsignfolderSendreminderfrequency',
-    'eEzsignfolderStep',
-    'tEzsignfolderMessage',
-    'objAudit',
-    'sEzsignfolderExternalid',
   };
 }
 

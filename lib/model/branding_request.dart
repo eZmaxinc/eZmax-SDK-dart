@@ -23,6 +23,8 @@ class BrandingRequest {
     required this.iBrandingColorbackground,
     required this.iBrandingColorbackgroundbutton,
     required this.iBrandingColorbackgroundsmallbox,
+    this.sBrandingName,
+    this.sEmailAddress,
     required this.bBrandingIsactive,
   });
 
@@ -86,6 +88,24 @@ class BrandingRequest {
   /// Maximum value: 16777215
   int iBrandingColorbackgroundsmallbox;
 
+  /// The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sBrandingName;
+
+  /// The email address.
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEmailAddress;
+
   /// Whether the Branding is active or not
   bool bBrandingIsactive;
 
@@ -101,6 +121,8 @@ class BrandingRequest {
      other.iBrandingColorbackground == iBrandingColorbackground &&
      other.iBrandingColorbackgroundbutton == iBrandingColorbackgroundbutton &&
      other.iBrandingColorbackgroundsmallbox == iBrandingColorbackgroundsmallbox &&
+     other.sBrandingName == sBrandingName &&
+     other.sEmailAddress == sEmailAddress &&
      other.bBrandingIsactive == bBrandingIsactive;
 
   @override
@@ -116,10 +138,12 @@ class BrandingRequest {
     (iBrandingColorbackground.hashCode) +
     (iBrandingColorbackgroundbutton.hashCode) +
     (iBrandingColorbackgroundsmallbox.hashCode) +
+    (sBrandingName == null ? 0 : sBrandingName!.hashCode) +
+    (sEmailAddress == null ? 0 : sEmailAddress!.hashCode) +
     (bBrandingIsactive.hashCode);
 
   @override
-  String toString() => 'BrandingRequest[pkiBrandingID=$pkiBrandingID, objBrandingDescription=$objBrandingDescription, eBrandingLogo=$eBrandingLogo, sBrandingBase64=$sBrandingBase64, iBrandingColortext=$iBrandingColortext, iBrandingColortextlinkbox=$iBrandingColortextlinkbox, iBrandingColortextbutton=$iBrandingColortextbutton, iBrandingColorbackground=$iBrandingColorbackground, iBrandingColorbackgroundbutton=$iBrandingColorbackgroundbutton, iBrandingColorbackgroundsmallbox=$iBrandingColorbackgroundsmallbox, bBrandingIsactive=$bBrandingIsactive]';
+  String toString() => 'BrandingRequest[pkiBrandingID=$pkiBrandingID, objBrandingDescription=$objBrandingDescription, eBrandingLogo=$eBrandingLogo, sBrandingBase64=$sBrandingBase64, iBrandingColortext=$iBrandingColortext, iBrandingColortextlinkbox=$iBrandingColortextlinkbox, iBrandingColortextbutton=$iBrandingColortextbutton, iBrandingColorbackground=$iBrandingColorbackground, iBrandingColorbackgroundbutton=$iBrandingColorbackgroundbutton, iBrandingColorbackgroundsmallbox=$iBrandingColorbackgroundsmallbox, sBrandingName=$sBrandingName, sEmailAddress=$sEmailAddress, bBrandingIsactive=$bBrandingIsactive]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -141,6 +165,16 @@ class BrandingRequest {
       json[r'iBrandingColorbackground'] = this.iBrandingColorbackground;
       json[r'iBrandingColorbackgroundbutton'] = this.iBrandingColorbackgroundbutton;
       json[r'iBrandingColorbackgroundsmallbox'] = this.iBrandingColorbackgroundsmallbox;
+    if (this.sBrandingName != null) {
+      json[r'sBrandingName'] = this.sBrandingName;
+    } else {
+      json[r'sBrandingName'] = null;
+    }
+    if (this.sEmailAddress != null) {
+      json[r'sEmailAddress'] = this.sEmailAddress;
+    } else {
+      json[r'sEmailAddress'] = null;
+    }
       json[r'bBrandingIsactive'] = this.bBrandingIsactive;
     return json;
   }
@@ -174,6 +208,8 @@ class BrandingRequest {
         iBrandingColorbackground: mapValueOfType<int>(json, r'iBrandingColorbackground')!,
         iBrandingColorbackgroundbutton: mapValueOfType<int>(json, r'iBrandingColorbackgroundbutton')!,
         iBrandingColorbackgroundsmallbox: mapValueOfType<int>(json, r'iBrandingColorbackgroundsmallbox')!,
+        sBrandingName: mapValueOfType<String>(json, r'sBrandingName'),
+        sEmailAddress: mapValueOfType<String>(json, r'sEmailAddress'),
         bBrandingIsactive: mapValueOfType<bool>(json, r'bBrandingIsactive')!,
       );
     }

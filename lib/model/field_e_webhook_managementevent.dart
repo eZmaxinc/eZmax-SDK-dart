@@ -24,10 +24,12 @@ class FieldEWebhookManagementevent {
   String toJson() => value;
 
   static const userCreated = FieldEWebhookManagementevent._(r'UserCreated');
+  static const userstagedCreated = FieldEWebhookManagementevent._(r'UserstagedCreated');
 
   /// List of all possible values in this [enum][FieldEWebhookManagementevent].
   static const values = <FieldEWebhookManagementevent>[
     userCreated,
+    userstagedCreated,
   ];
 
   static FieldEWebhookManagementevent? fromJson(dynamic value) => FieldEWebhookManagementeventTypeTransformer().decode(value);
@@ -67,6 +69,7 @@ class FieldEWebhookManagementeventTypeTransformer {
     if (data != null) {
       switch (data) {
         case r'UserCreated': return FieldEWebhookManagementevent.userCreated;
+        case r'UserstagedCreated': return FieldEWebhookManagementevent.userstagedCreated;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');

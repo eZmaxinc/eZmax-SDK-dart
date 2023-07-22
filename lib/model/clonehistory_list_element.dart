@@ -54,22 +54,22 @@ class ClonehistoryListElement {
   ///
   String? dtClonehistoryLasthit;
 
-  /// The Login name of the User.
+  /// The login name of the User.
   String sUserLoginnameCloning;
 
-  /// The First name of the user
+  /// The first name of the user
   String sUserFirstnameCloning;
 
-  /// The Last name of the user
+  /// The last name of the user
   String sUserLastnameCloning;
 
-  /// The Login name of the User.
+  /// The login name of the User.
   String sUserLoginnameCloned;
 
-  /// The First name of the user
+  /// The first name of the user
   String sUserFirstnameCloned;
 
-  /// The Last name of the user
+  /// The last name of the user
   String sUserLastnameCloned;
 
   @override

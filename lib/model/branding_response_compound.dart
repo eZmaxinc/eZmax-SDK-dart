@@ -14,8 +14,11 @@ class BrandingResponseCompound {
   /// Returns a new [BrandingResponseCompound] instance.
   BrandingResponseCompound({
     required this.pkiBrandingID,
+    this.fkiEmailID,
     required this.objBrandingDescription,
     required this.sBrandingDescriptionX,
+    this.sBrandingName,
+    this.sEmailAddress,
     required this.eBrandingLogo,
     required this.iBrandingColortext,
     required this.iBrandingColortextlinkbox,
@@ -32,10 +35,40 @@ class BrandingResponseCompound {
   /// Minimum value: 0
   int pkiBrandingID;
 
+  /// The unique ID of the Email
+  ///
+  /// Minimum value: 1
+  /// Maximum value: 16777215
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiEmailID;
+
   MultilingualBrandingDescription objBrandingDescription;
 
   /// The Description of the Branding in the language of the requester
   String sBrandingDescriptionX;
+
+  /// The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sBrandingName;
+
+  /// The email address.
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEmailAddress;
 
   FieldEBrandingLogo eBrandingLogo;
 
@@ -90,8 +123,11 @@ class BrandingResponseCompound {
   @override
   bool operator ==(Object other) => identical(this, other) || other is BrandingResponseCompound &&
      other.pkiBrandingID == pkiBrandingID &&
+     other.fkiEmailID == fkiEmailID &&
      other.objBrandingDescription == objBrandingDescription &&
      other.sBrandingDescriptionX == sBrandingDescriptionX &&
+     other.sBrandingName == sBrandingName &&
+     other.sEmailAddress == sEmailAddress &&
      other.eBrandingLogo == eBrandingLogo &&
      other.iBrandingColortext == iBrandingColortext &&
      other.iBrandingColortextlinkbox == iBrandingColortextlinkbox &&
@@ -106,8 +142,11 @@ class BrandingResponseCompound {
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiBrandingID.hashCode) +
+    (fkiEmailID == null ? 0 : fkiEmailID!.hashCode) +
     (objBrandingDescription.hashCode) +
     (sBrandingDescriptionX.hashCode) +
+    (sBrandingName == null ? 0 : sBrandingName!.hashCode) +
+    (sEmailAddress == null ? 0 : sEmailAddress!.hashCode) +
     (eBrandingLogo.hashCode) +
     (iBrandingColortext.hashCode) +
     (iBrandingColortextlinkbox.hashCode) +
@@ -119,13 +158,28 @@ class BrandingResponseCompound {
     (sBrandingLogourl == null ? 0 : sBrandingLogourl!.hashCode);
 
   @override
-  String toString() => 'BrandingResponseCompound[pkiBrandingID=$pkiBrandingID, objBrandingDescription=$objBrandingDescription, sBrandingDescriptionX=$sBrandingDescriptionX, eBrandingLogo=$eBrandingLogo, iBrandingColortext=$iBrandingColortext, iBrandingColortextlinkbox=$iBrandingColortextlinkbox, iBrandingColortextbutton=$iBrandingColortextbutton, iBrandingColorbackground=$iBrandingColorbackground, iBrandingColorbackgroundbutton=$iBrandingColorbackgroundbutton, iBrandingColorbackgroundsmallbox=$iBrandingColorbackgroundsmallbox, bBrandingIsactive=$bBrandingIsactive, sBrandingLogourl=$sBrandingLogourl]';
+  String toString() => 'BrandingResponseCompound[pkiBrandingID=$pkiBrandingID, fkiEmailID=$fkiEmailID, objBrandingDescription=$objBrandingDescription, sBrandingDescriptionX=$sBrandingDescriptionX, sBrandingName=$sBrandingName, sEmailAddress=$sEmailAddress, eBrandingLogo=$eBrandingLogo, iBrandingColortext=$iBrandingColortext, iBrandingColortextlinkbox=$iBrandingColortextlinkbox, iBrandingColortextbutton=$iBrandingColortextbutton, iBrandingColorbackground=$iBrandingColorbackground, iBrandingColorbackgroundbutton=$iBrandingColorbackgroundbutton, iBrandingColorbackgroundsmallbox=$iBrandingColorbackgroundsmallbox, bBrandingIsactive=$bBrandingIsactive, sBrandingLogourl=$sBrandingLogourl]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiBrandingID'] = this.pkiBrandingID;
+    if (this.fkiEmailID != null) {
+      json[r'fkiEmailID'] = this.fkiEmailID;
+    } else {
+      json[r'fkiEmailID'] = null;
+    }
       json[r'objBrandingDescription'] = this.objBrandingDescription;
       json[r'sBrandingDescriptionX'] = this.sBrandingDescriptionX;
+    if (this.sBrandingName != null) {
+      json[r'sBrandingName'] = this.sBrandingName;
+    } else {
+      json[r'sBrandingName'] = null;
+    }
+    if (this.sEmailAddress != null) {
+      json[r'sEmailAddress'] = this.sEmailAddress;
+    } else {
+      json[r'sEmailAddress'] = null;
+    }
       json[r'eBrandingLogo'] = this.eBrandingLogo;
       json[r'iBrandingColortext'] = this.iBrandingColortext;
       json[r'iBrandingColortextlinkbox'] = this.iBrandingColortextlinkbox;
@@ -162,8 +216,11 @@ class BrandingResponseCompound {
 
       return BrandingResponseCompound(
         pkiBrandingID: mapValueOfType<int>(json, r'pkiBrandingID')!,
+        fkiEmailID: mapValueOfType<int>(json, r'fkiEmailID'),
         objBrandingDescription: MultilingualBrandingDescription.fromJson(json[r'objBrandingDescription'])!,
         sBrandingDescriptionX: mapValueOfType<String>(json, r'sBrandingDescriptionX')!,
+        sBrandingName: mapValueOfType<String>(json, r'sBrandingName'),
+        sEmailAddress: mapValueOfType<String>(json, r'sEmailAddress'),
         eBrandingLogo: FieldEBrandingLogo.fromJson(json[r'eBrandingLogo'])!,
         iBrandingColortext: mapValueOfType<int>(json, r'iBrandingColortext')!,
         iBrandingColortextlinkbox: mapValueOfType<int>(json, r'iBrandingColortextlinkbox')!,

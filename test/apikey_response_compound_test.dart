@@ -16,6 +16,18 @@ void main() {
   // final instance = ApikeyResponseCompound();
 
   group('test ApikeyResponseCompound', () {
+    // The unique ID of the Apikey
+    // int pkiApikeyID
+    test('to test the property `pkiApikeyID`', () async {
+      // TODO
+    });
+
+    // The unique ID of the User
+    // int fkiUserID
+    test('to test the property `fkiUserID`', () async {
+      // TODO
+    });
+
     // MultilingualApikeyDescription objApikeyDescription
     test('to test the property `objApikeyDescription`', () async {
       // TODO
@@ -27,9 +39,9 @@ void main() {
       // TODO
     });
 
-    // The unique ID of the Apikey
-    // int pkiApikeyID
-    test('to test the property `pkiApikeyID`', () async {
+    // Whether the apikey is active or not
+    // bool bApikeyIsactive
+    test('to test the property `bApikeyIsactive`', () async {
       // TODO
     });
 

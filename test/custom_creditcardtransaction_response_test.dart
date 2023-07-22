@@ -16,9 +16,8 @@ void main() {
   // final instance = CustomCreditcardtransactionResponse();
 
   group('test CustomCreditcardtransactionResponse', () {
-    // The codename of the Creditcardtype
-    // String sCreditcardtypeCodename
-    test('to test the property `sCreditcardtypeCodename`', () async {
+    // FieldECreditcardtypeCodename eCreditcardtypeCodename
+    test('to test the property `eCreditcardtypeCodename`', () async {
       // TODO
     });
 

@@ -10,7 +10,7 @@
 
 part of openapi.api;
 
-/// The Verticalalignment of the Ezsignannotation.  This can only be set if eEzsignannotationType is **Text**
+/// The Vertical alignment
 class EnumVerticalalignment {
   /// Instantiate a new enum with the provided [value].
   const EnumVerticalalignment._(this.value);

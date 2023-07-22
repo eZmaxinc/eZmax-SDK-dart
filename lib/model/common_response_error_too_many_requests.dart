@@ -17,11 +17,10 @@ class CommonResponseErrorTooManyRequests {
     required this.eErrorCode,
   });
 
-  /// More detail about the error
+  /// The message giving details about the error
   String sErrorMessage;
 
-  /// The error code. See documentation for valid values
-  String eErrorCode;
+  FieldEErrorCode eErrorCode;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonResponseErrorTooManyRequests &&
@@ -64,7 +63,7 @@ class CommonResponseErrorTooManyRequests {
 
       return CommonResponseErrorTooManyRequests(
         sErrorMessage: mapValueOfType<String>(json, r'sErrorMessage')!,
-        eErrorCode: mapValueOfType<String>(json, r'eErrorCode')!,
+        eErrorCode: FieldEErrorCode.fromJson(json[r'eErrorCode'])!,
       );
     }
     return null;

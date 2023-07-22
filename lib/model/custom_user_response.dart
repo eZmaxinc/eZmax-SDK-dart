@@ -24,10 +24,10 @@ class CustomUserResponse {
   /// Minimum value: 0
   int pkiUserID;
 
-  /// The Last name of the user
+  /// The last name of the user
   String sUserLastname;
 
-  /// The First name of the user
+  /// The first name of the user
   String sUserFirstname;
 
   /// The email address.

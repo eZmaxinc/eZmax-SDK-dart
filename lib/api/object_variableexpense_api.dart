@@ -81,7 +81,6 @@ class ObjectVariableexpenseApi {
   /// Parameters:
   ///
   /// * [int] pkiVariableexpenseID (required):
-  ///   The unique ID of the Variableexpense
   ///
   /// * [VariableexpenseEditObjectV1Request] variableexpenseEditObjectV1Request (required):
   Future<Response> variableexpenseEditObjectV1WithHttpInfo(int pkiVariableexpenseID, VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request,) async {
@@ -117,7 +116,6 @@ class ObjectVariableexpenseApi {
   /// Parameters:
   ///
   /// * [int] pkiVariableexpenseID (required):
-  ///   The unique ID of the Variableexpense
   ///
   /// * [VariableexpenseEditObjectV1Request] variableexpenseEditObjectV1Request (required):
   Future<VariableexpenseEditObjectV1Response?> variableexpenseEditObjectV1(int pkiVariableexpenseID, VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request,) async {
@@ -321,7 +319,6 @@ class ObjectVariableexpenseApi {
   /// Parameters:
   ///
   /// * [int] pkiVariableexpenseID (required):
-  ///   The unique ID of the Variableexpense
   Future<Response> variableexpenseGetObjectV2WithHttpInfo(int pkiVariableexpenseID,) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/variableexpense/{pkiVariableexpenseID}'
@@ -355,7 +352,6 @@ class ObjectVariableexpenseApi {
   /// Parameters:
   ///
   /// * [int] pkiVariableexpenseID (required):
-  ///   The unique ID of the Variableexpense
   Future<VariableexpenseGetObjectV2Response?> variableexpenseGetObjectV2(int pkiVariableexpenseID,) async {
     final response = await variableexpenseGetObjectV2WithHttpInfo(pkiVariableexpenseID,);
     if (response.statusCode >= HttpStatus.badRequest) {

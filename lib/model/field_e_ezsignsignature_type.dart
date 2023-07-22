@@ -10,7 +10,7 @@
 
 part of openapi.api;
 
-/// The type of signature.  1. **Acknowledgement** is for an acknowledgment of receipt. 2. **City** is to request the city where the document is signed. 2. **Handwritten** is for a handwritten kind of signature where users needs to \"draw\" their signature on screen. 3. **Initials** is a simple \"click to add initials\" block. 4. **Name** is a simple \"Click to sign\" block. This is the most common block of signature. 5. **Attachments** is to ask for files as attachment that may be validate in another step.
+/// The type of signature.  1. **Acknowledgement** is for an acknowledgment of receipt. 2. **City** is to request the city where the document is signed. 3. **Handwritten** is for a handwritten kind of signature where users needs to \"draw\" their signature on screen. 4. **Initials** is a simple \"click to add initials\" block. 5. **Name** is a simple \"Click to sign\" block. This is the most common block of signature. 6. **Attachments** is to ask for files as attachment that may be validate in another step.  7. **FieldText** is to ask for a short text. 8. **Fieldtextarea** is to ask for a text
 class FieldEEzsignsignatureType {
   /// Instantiate a new enum with the provided [value].
   const FieldEEzsignsignatureType._(this.value);
@@ -29,6 +29,9 @@ class FieldEEzsignsignatureType {
   static const initials = FieldEEzsignsignatureType._(r'Initials');
   static const name = FieldEEzsignsignatureType._(r'Name');
   static const attachments = FieldEEzsignsignatureType._(r'Attachments');
+  static const attachmentsConfirmation = FieldEEzsignsignatureType._(r'AttachmentsConfirmation');
+  static const fieldText = FieldEEzsignsignatureType._(r'FieldText');
+  static const fieldTextarea = FieldEEzsignsignatureType._(r'FieldTextarea');
 
   /// List of all possible values in this [enum][FieldEEzsignsignatureType].
   static const values = <FieldEEzsignsignatureType>[
@@ -38,6 +41,9 @@ class FieldEEzsignsignatureType {
     initials,
     name,
     attachments,
+    attachmentsConfirmation,
+    fieldText,
+    fieldTextarea,
   ];
 
   static FieldEEzsignsignatureType? fromJson(dynamic value) => FieldEEzsignsignatureTypeTypeTransformer().decode(value);
@@ -82,6 +88,9 @@ class FieldEEzsignsignatureTypeTypeTransformer {
         case r'Initials': return FieldEEzsignsignatureType.initials;
         case r'Name': return FieldEEzsignsignatureType.name;
         case r'Attachments': return FieldEEzsignsignatureType.attachments;
+        case r'AttachmentsConfirmation': return FieldEEzsignsignatureType.attachmentsConfirmation;
+        case r'FieldText': return FieldEEzsignsignatureType.fieldText;
+        case r'FieldTextarea': return FieldEEzsignsignatureType.fieldTextarea;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');

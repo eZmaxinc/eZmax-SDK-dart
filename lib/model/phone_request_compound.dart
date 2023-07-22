@@ -13,21 +13,40 @@ part of openapi.api;
 class PhoneRequestCompound {
   /// Returns a new [PhoneRequestCompound] instance.
   PhoneRequestCompound({
+    this.pkiPhoneID,
     required this.fkiPhonetypeID,
-    required this.ePhoneType,
+    this.ePhoneType,
     this.sPhoneRegion,
     this.sPhoneExchange,
     this.sPhoneNumber,
     this.sPhoneInternational,
     this.sPhoneExtension,
+    this.sPhoneE164,
   });
+
+  /// The unique ID of the Phone.
+  ///
+  /// Minimum value: 0
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? pkiPhoneID;
 
   /// The unique ID of the Phonetype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| |3|Mobile| |4|Fax| |5|Pager| |6|Toll Free|
   ///
   /// Minimum value: 0
   int fkiPhonetypeID;
 
-  FieldEPhoneType ePhoneType;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEPhoneType? ePhoneType;
 
   /// The region of the phone number. (For a North America Number only)  The region is the \"514\" section in this sample phone number: (514) 990-1516 x123
   ///
@@ -56,7 +75,7 @@ class PhoneRequestCompound {
   ///
   String? sPhoneNumber;
 
-  /// A phone number in E.164 Format
+  /// The international phone number.
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -74,34 +93,56 @@ class PhoneRequestCompound {
   ///
   String? sPhoneExtension;
 
+  /// A phone number in E.164 Format
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sPhoneE164;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is PhoneRequestCompound &&
+     other.pkiPhoneID == pkiPhoneID &&
      other.fkiPhonetypeID == fkiPhonetypeID &&
      other.ePhoneType == ePhoneType &&
      other.sPhoneRegion == sPhoneRegion &&
      other.sPhoneExchange == sPhoneExchange &&
      other.sPhoneNumber == sPhoneNumber &&
      other.sPhoneInternational == sPhoneInternational &&
-     other.sPhoneExtension == sPhoneExtension;
+     other.sPhoneExtension == sPhoneExtension &&
+     other.sPhoneE164 == sPhoneE164;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
+    (pkiPhoneID == null ? 0 : pkiPhoneID!.hashCode) +
     (fkiPhonetypeID.hashCode) +
-    (ePhoneType.hashCode) +
+    (ePhoneType == null ? 0 : ePhoneType!.hashCode) +
     (sPhoneRegion == null ? 0 : sPhoneRegion!.hashCode) +
     (sPhoneExchange == null ? 0 : sPhoneExchange!.hashCode) +
     (sPhoneNumber == null ? 0 : sPhoneNumber!.hashCode) +
     (sPhoneInternational == null ? 0 : sPhoneInternational!.hashCode) +
-    (sPhoneExtension == null ? 0 : sPhoneExtension!.hashCode);
+    (sPhoneExtension == null ? 0 : sPhoneExtension!.hashCode) +
+    (sPhoneE164 == null ? 0 : sPhoneE164!.hashCode);
 
   @override
-  String toString() => 'PhoneRequestCompound[fkiPhonetypeID=$fkiPhonetypeID, ePhoneType=$ePhoneType, sPhoneRegion=$sPhoneRegion, sPhoneExchange=$sPhoneExchange, sPhoneNumber=$sPhoneNumber, sPhoneInternational=$sPhoneInternational, sPhoneExtension=$sPhoneExtension]';
+  String toString() => 'PhoneRequestCompound[pkiPhoneID=$pkiPhoneID, fkiPhonetypeID=$fkiPhonetypeID, ePhoneType=$ePhoneType, sPhoneRegion=$sPhoneRegion, sPhoneExchange=$sPhoneExchange, sPhoneNumber=$sPhoneNumber, sPhoneInternational=$sPhoneInternational, sPhoneExtension=$sPhoneExtension, sPhoneE164=$sPhoneE164]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
+    if (this.pkiPhoneID != null) {
+      json[r'pkiPhoneID'] = this.pkiPhoneID;
+    } else {
+      json[r'pkiPhoneID'] = null;
+    }
       json[r'fkiPhonetypeID'] = this.fkiPhonetypeID;
+    if (this.ePhoneType != null) {
       json[r'ePhoneType'] = this.ePhoneType;
+    } else {
+      json[r'ePhoneType'] = null;
+    }
     if (this.sPhoneRegion != null) {
       json[r'sPhoneRegion'] = this.sPhoneRegion;
     } else {
@@ -127,6 +168,11 @@ class PhoneRequestCompound {
     } else {
       json[r'sPhoneExtension'] = null;
     }
+    if (this.sPhoneE164 != null) {
+      json[r'sPhoneE164'] = this.sPhoneE164;
+    } else {
+      json[r'sPhoneE164'] = null;
+    }
     return json;
   }
 
@@ -149,13 +195,15 @@ class PhoneRequestCompound {
       }());
 
       return PhoneRequestCompound(
+        pkiPhoneID: mapValueOfType<int>(json, r'pkiPhoneID'),
         fkiPhonetypeID: mapValueOfType<int>(json, r'fkiPhonetypeID')!,
-        ePhoneType: FieldEPhoneType.fromJson(json[r'ePhoneType'])!,
+        ePhoneType: FieldEPhoneType.fromJson(json[r'ePhoneType']),
         sPhoneRegion: mapValueOfType<String>(json, r'sPhoneRegion'),
         sPhoneExchange: mapValueOfType<String>(json, r'sPhoneExchange'),
         sPhoneNumber: mapValueOfType<String>(json, r'sPhoneNumber'),
         sPhoneInternational: mapValueOfType<String>(json, r'sPhoneInternational'),
         sPhoneExtension: mapValueOfType<String>(json, r'sPhoneExtension'),
+        sPhoneE164: mapValueOfType<String>(json, r'sPhoneE164'),
       );
     }
     return null;
@@ -204,7 +252,6 @@ class PhoneRequestCompound {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'fkiPhonetypeID',
-    'ePhoneType',
   };
 }
 

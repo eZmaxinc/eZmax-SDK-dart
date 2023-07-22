@@ -17,6 +17,15 @@ void main() {
   // final instance = ObjectUserstagedApi();
 
   group('tests for ObjectUserstagedApi', () {
+    // Create a User from a Userstaged and then map it
+    //
+    // Default values will be used while creating the User. If you need to change those values, you should use the route to edit a User.
+    //
+    //Future<UserstagedCreateUserV1Response> userstagedCreateUserV1(int pkiUserstagedID, Object body) async
+    test('test userstagedCreateUserV1', () async {
+      // TODO
+    });
+
     // Delete an existing Userstaged
     //
     // 

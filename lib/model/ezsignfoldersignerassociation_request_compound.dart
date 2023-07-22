@@ -15,6 +15,8 @@ class EzsignfoldersignerassociationRequestCompound {
   EzsignfoldersignerassociationRequestCompound({
     this.pkiEzsignfoldersignerassociationID,
     this.fkiUserID,
+    this.fkiUsergroupID,
+    this.fkiEzsignsignergroupID,
     required this.fkiEzsignfolderID,
     this.bEzsignfoldersignerassociationReceivecopy,
     this.tEzsignfoldersignerassociationMessage,
@@ -42,6 +44,30 @@ class EzsignfoldersignerassociationRequestCompound {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   int? fkiUserID;
+
+  /// The unique ID of the Usergroup
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 255
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiUsergroupID;
+
+  /// The unique ID of the Ezsignsignergroup
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 65535
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiEzsignsignergroupID;
 
   /// The unique ID of the Ezsignfolder
   ///
@@ -78,6 +104,8 @@ class EzsignfoldersignerassociationRequestCompound {
   bool operator ==(Object other) => identical(this, other) || other is EzsignfoldersignerassociationRequestCompound &&
      other.pkiEzsignfoldersignerassociationID == pkiEzsignfoldersignerassociationID &&
      other.fkiUserID == fkiUserID &&
+     other.fkiUsergroupID == fkiUsergroupID &&
+     other.fkiEzsignsignergroupID == fkiEzsignsignergroupID &&
      other.fkiEzsignfolderID == fkiEzsignfolderID &&
      other.bEzsignfoldersignerassociationReceivecopy == bEzsignfoldersignerassociationReceivecopy &&
      other.tEzsignfoldersignerassociationMessage == tEzsignfoldersignerassociationMessage &&
@@ -88,13 +116,15 @@ class EzsignfoldersignerassociationRequestCompound {
     // ignore: unnecessary_parenthesis
     (pkiEzsignfoldersignerassociationID == null ? 0 : pkiEzsignfoldersignerassociationID!.hashCode) +
     (fkiUserID == null ? 0 : fkiUserID!.hashCode) +
+    (fkiUsergroupID == null ? 0 : fkiUsergroupID!.hashCode) +
+    (fkiEzsignsignergroupID == null ? 0 : fkiEzsignsignergroupID!.hashCode) +
     (fkiEzsignfolderID.hashCode) +
     (bEzsignfoldersignerassociationReceivecopy == null ? 0 : bEzsignfoldersignerassociationReceivecopy!.hashCode) +
     (tEzsignfoldersignerassociationMessage == null ? 0 : tEzsignfoldersignerassociationMessage!.hashCode) +
     (objEzsignsigner == null ? 0 : objEzsignsigner!.hashCode);
 
   @override
-  String toString() => 'EzsignfoldersignerassociationRequestCompound[pkiEzsignfoldersignerassociationID=$pkiEzsignfoldersignerassociationID, fkiUserID=$fkiUserID, fkiEzsignfolderID=$fkiEzsignfolderID, bEzsignfoldersignerassociationReceivecopy=$bEzsignfoldersignerassociationReceivecopy, tEzsignfoldersignerassociationMessage=$tEzsignfoldersignerassociationMessage, objEzsignsigner=$objEzsignsigner]';
+  String toString() => 'EzsignfoldersignerassociationRequestCompound[pkiEzsignfoldersignerassociationID=$pkiEzsignfoldersignerassociationID, fkiUserID=$fkiUserID, fkiUsergroupID=$fkiUsergroupID, fkiEzsignsignergroupID=$fkiEzsignsignergroupID, fkiEzsignfolderID=$fkiEzsignfolderID, bEzsignfoldersignerassociationReceivecopy=$bEzsignfoldersignerassociationReceivecopy, tEzsignfoldersignerassociationMessage=$tEzsignfoldersignerassociationMessage, objEzsignsigner=$objEzsignsigner]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -107,6 +137,16 @@ class EzsignfoldersignerassociationRequestCompound {
       json[r'fkiUserID'] = this.fkiUserID;
     } else {
       json[r'fkiUserID'] = null;
+    }
+    if (this.fkiUsergroupID != null) {
+      json[r'fkiUsergroupID'] = this.fkiUsergroupID;
+    } else {
+      json[r'fkiUsergroupID'] = null;
+    }
+    if (this.fkiEzsignsignergroupID != null) {
+      json[r'fkiEzsignsignergroupID'] = this.fkiEzsignsignergroupID;
+    } else {
+      json[r'fkiEzsignsignergroupID'] = null;
     }
       json[r'fkiEzsignfolderID'] = this.fkiEzsignfolderID;
     if (this.bEzsignfoldersignerassociationReceivecopy != null) {
@@ -148,6 +188,8 @@ class EzsignfoldersignerassociationRequestCompound {
       return EzsignfoldersignerassociationRequestCompound(
         pkiEzsignfoldersignerassociationID: mapValueOfType<int>(json, r'pkiEzsignfoldersignerassociationID'),
         fkiUserID: mapValueOfType<int>(json, r'fkiUserID'),
+        fkiUsergroupID: mapValueOfType<int>(json, r'fkiUsergroupID'),
+        fkiEzsignsignergroupID: mapValueOfType<int>(json, r'fkiEzsignsignergroupID'),
         fkiEzsignfolderID: mapValueOfType<int>(json, r'fkiEzsignfolderID')!,
         bEzsignfoldersignerassociationReceivecopy: mapValueOfType<bool>(json, r'bEzsignfoldersignerassociationReceivecopy'),
         tEzsignfoldersignerassociationMessage: mapValueOfType<String>(json, r'tEzsignfoldersignerassociationMessage'),

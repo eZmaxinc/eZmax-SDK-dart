@@ -79,7 +79,7 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
 
 final api_instance = ObjectBillingentityinternalApi();
-final pkiBillingentityinternalID = 56; // int | The unique ID of the Billingentityinternal
+final pkiBillingentityinternalID = 56; // int | 
 final billingentityinternalEditObjectV1Request = BillingentityinternalEditObjectV1Request(); // BillingentityinternalEditObjectV1Request | 
 
 try {
@@ -94,7 +94,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiBillingentityinternalID** | **int**| The unique ID of the Billingentityinternal | 
+ **pkiBillingentityinternalID** | **int**|  | 
  **billingentityinternalEditObjectV1Request** | [**BillingentityinternalEditObjectV1Request**](BillingentityinternalEditObjectV1Request.md)|  | 
 
 ### Return type
@@ -236,7 +236,7 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
 
 final api_instance = ObjectBillingentityinternalApi();
-final pkiBillingentityinternalID = 56; // int | The unique ID of the Billingentityinternal
+final pkiBillingentityinternalID = 56; // int | 
 
 try {
     final result = api_instance.billingentityinternalGetObjectV2(pkiBillingentityinternalID);
@@ -250,7 +250,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiBillingentityinternalID** | **int**| The unique ID of the Billingentityinternal | 
+ **pkiBillingentityinternalID** | **int**|  | 
 
 ### Return type
 

@@ -16,6 +16,7 @@ class ApikeyRequestCompound {
     this.pkiApikeyID,
     required this.fkiUserID,
     required this.objApikeyDescription,
+    this.bApikeyIsactive,
   });
 
   /// The unique ID of the Apikey
@@ -36,21 +37,32 @@ class ApikeyRequestCompound {
 
   MultilingualApikeyDescription objApikeyDescription;
 
+  /// Whether the apikey is active or not
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bApikeyIsactive;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is ApikeyRequestCompound &&
      other.pkiApikeyID == pkiApikeyID &&
      other.fkiUserID == fkiUserID &&
-     other.objApikeyDescription == objApikeyDescription;
+     other.objApikeyDescription == objApikeyDescription &&
+     other.bApikeyIsactive == bApikeyIsactive;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiApikeyID == null ? 0 : pkiApikeyID!.hashCode) +
     (fkiUserID.hashCode) +
-    (objApikeyDescription.hashCode);
+    (objApikeyDescription.hashCode) +
+    (bApikeyIsactive == null ? 0 : bApikeyIsactive!.hashCode);
 
   @override
-  String toString() => 'ApikeyRequestCompound[pkiApikeyID=$pkiApikeyID, fkiUserID=$fkiUserID, objApikeyDescription=$objApikeyDescription]';
+  String toString() => 'ApikeyRequestCompound[pkiApikeyID=$pkiApikeyID, fkiUserID=$fkiUserID, objApikeyDescription=$objApikeyDescription, bApikeyIsactive=$bApikeyIsactive]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -61,6 +73,11 @@ class ApikeyRequestCompound {
     }
       json[r'fkiUserID'] = this.fkiUserID;
       json[r'objApikeyDescription'] = this.objApikeyDescription;
+    if (this.bApikeyIsactive != null) {
+      json[r'bApikeyIsactive'] = this.bApikeyIsactive;
+    } else {
+      json[r'bApikeyIsactive'] = null;
+    }
     return json;
   }
 
@@ -86,6 +103,7 @@ class ApikeyRequestCompound {
         pkiApikeyID: mapValueOfType<int>(json, r'pkiApikeyID'),
         fkiUserID: mapValueOfType<int>(json, r'fkiUserID')!,
         objApikeyDescription: MultilingualApikeyDescription.fromJson(json[r'objApikeyDescription'])!,
+        bApikeyIsactive: mapValueOfType<bool>(json, r'bApikeyIsactive'),
       );
     }
     return null;

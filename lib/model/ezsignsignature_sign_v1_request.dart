@@ -14,6 +14,10 @@ class EzsignsignatureSignV1Request {
   /// Returns a new [EzsignsignatureSignV1Request] instance.
   EzsignsignatureSignV1Request({
     this.sValue,
+    this.eAttachmentsConfirmationDecision,
+    this.sAttachmentsRefusalReason,
+    this.sSvg,
+    this.aObjFile = const [],
     required this.bIsAutomatic,
   });
 
@@ -26,22 +30,53 @@ class EzsignsignatureSignV1Request {
   ///
   String? sValue;
 
+  /// Whether the attachment are accepted or refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**
+  EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum? eAttachmentsConfirmationDecision;
+
+  /// The reason of refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sAttachmentsRefusalReason;
+
+  /// The SVG of the handwritten signature.  This can only be set if eEzsignsignatureType is **Handwritten** and **bIsAutomatic** is false
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sSvg;
+
+  List<CommonFile> aObjFile;
+
   /// Indicates if the Ezsignsignature was part of an automatic process or not.  This can only be true if eEzsignsignatureType is **Acknowledgement**, **City**, **Handwritten**, **Initials**, **Name** or **Stamp**. 
   bool bIsAutomatic;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignsignatureSignV1Request &&
      other.sValue == sValue &&
+     other.eAttachmentsConfirmationDecision == eAttachmentsConfirmationDecision &&
+     other.sAttachmentsRefusalReason == sAttachmentsRefusalReason &&
+     other.sSvg == sSvg &&
+     other.aObjFile == aObjFile &&
      other.bIsAutomatic == bIsAutomatic;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (sValue == null ? 0 : sValue!.hashCode) +
+    (eAttachmentsConfirmationDecision == null ? 0 : eAttachmentsConfirmationDecision!.hashCode) +
+    (sAttachmentsRefusalReason == null ? 0 : sAttachmentsRefusalReason!.hashCode) +
+    (sSvg == null ? 0 : sSvg!.hashCode) +
+    (aObjFile.hashCode) +
     (bIsAutomatic.hashCode);
 
   @override
-  String toString() => 'EzsignsignatureSignV1Request[sValue=$sValue, bIsAutomatic=$bIsAutomatic]';
+  String toString() => 'EzsignsignatureSignV1Request[sValue=$sValue, eAttachmentsConfirmationDecision=$eAttachmentsConfirmationDecision, sAttachmentsRefusalReason=$sAttachmentsRefusalReason, sSvg=$sSvg, aObjFile=$aObjFile, bIsAutomatic=$bIsAutomatic]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -50,6 +85,22 @@ class EzsignsignatureSignV1Request {
     } else {
       json[r'sValue'] = null;
     }
+    if (this.eAttachmentsConfirmationDecision != null) {
+      json[r'eAttachmentsConfirmationDecision'] = this.eAttachmentsConfirmationDecision;
+    } else {
+      json[r'eAttachmentsConfirmationDecision'] = null;
+    }
+    if (this.sAttachmentsRefusalReason != null) {
+      json[r'sAttachmentsRefusalReason'] = this.sAttachmentsRefusalReason;
+    } else {
+      json[r'sAttachmentsRefusalReason'] = null;
+    }
+    if (this.sSvg != null) {
+      json[r'sSvg'] = this.sSvg;
+    } else {
+      json[r'sSvg'] = null;
+    }
+      json[r'a_objFile'] = this.aObjFile;
       json[r'bIsAutomatic'] = this.bIsAutomatic;
     return json;
   }
@@ -74,6 +125,10 @@ class EzsignsignatureSignV1Request {
 
       return EzsignsignatureSignV1Request(
         sValue: mapValueOfType<String>(json, r'sValue'),
+        eAttachmentsConfirmationDecision: EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum.fromJson(json[r'eAttachmentsConfirmationDecision']),
+        sAttachmentsRefusalReason: mapValueOfType<String>(json, r'sAttachmentsRefusalReason'),
+        sSvg: mapValueOfType<String>(json, r'sSvg'),
+        aObjFile: CommonFile.listFromJson(json[r'a_objFile']),
         bIsAutomatic: mapValueOfType<bool>(json, r'bIsAutomatic')!,
       );
     }
@@ -125,4 +180,78 @@ class EzsignsignatureSignV1Request {
     'bIsAutomatic',
   };
 }
+
+/// Whether the attachment are accepted or refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**
+class EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum {
+  /// Instantiate a new enum with the provided [value].
+  const EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum._(this.value);
+
+  /// The underlying value of this enum member.
+  final String value;
+
+  @override
+  String toString() => value;
+
+  String toJson() => value;
+
+  static const accepted = EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum._(r'Accepted');
+  static const refused = EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum._(r'Refused');
+
+  /// List of all possible values in this [enum][EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum].
+  static const values = <EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum>[
+    accepted,
+    refused,
+  ];
+
+  static EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum? fromJson(dynamic value) => EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnumTypeTransformer().decode(value);
+
+  static List<EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum> listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
+}
+
+/// Transformation class that can [encode] an instance of [EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum] to String,
+/// and [decode] dynamic data back to [EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum].
+class EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnumTypeTransformer {
+  factory EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnumTypeTransformer() => _instance ??= const EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnumTypeTransformer._();
+
+  const EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnumTypeTransformer._();
+
+  String encode(EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum data) => data.value;
+
+  /// Decodes a [dynamic value][data] to a EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum.
+  ///
+  /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
+  /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
+  /// cannot be decoded successfully, then an [UnimplementedError] is thrown.
+  ///
+  /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
+  /// and users are still using an old app with the old code.
+  EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data != null) {
+      switch (data) {
+        case r'Accepted': return EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum.accepted;
+        case r'Refused': return EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum.refused;
+        default:
+          if (!allowNull) {
+            throw ArgumentError('Unknown enum value to decode: $data');
+          }
+      }
+    }
+    return null;
+  }
+
+  /// Singleton [EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnumTypeTransformer] instance.
+  static EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnumTypeTransformer? _instance;
+}
+
 

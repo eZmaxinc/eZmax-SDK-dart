@@ -74,6 +74,18 @@ void main() {
       // TODO
     });
 
+    // The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty
+    // String sBrandingName
+    test('to test the property `sBrandingName`', () async {
+      // TODO
+    });
+
+    // The email address.
+    // String sEmailAddress
+    test('to test the property `sEmailAddress`', () async {
+      // TODO
+    });
+
     // Whether the Branding is active or not
     // bool bBrandingIsactive
     test('to test the property `bBrandingIsactive`', () async {

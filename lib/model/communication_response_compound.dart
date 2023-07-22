@@ -20,6 +20,7 @@ class CommunicationResponseCompound {
     this.sCommunicationBodyurl,
     required this.eCommunicationDirection,
     required this.iCommunicationrecipientCount,
+    required this.bCommunicationPrivate,
     this.objDescriptionstaticSender,
     this.objEmailstaticSender,
     this.objPhonestaticSender,
@@ -54,6 +55,9 @@ class CommunicationResponseCompound {
 
   /// The count of Communicationrecipient
   int iCommunicationrecipientCount;
+
+  /// Whether the Communication is private or not
+  bool bCommunicationPrivate;
 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -96,6 +100,7 @@ class CommunicationResponseCompound {
      other.sCommunicationBodyurl == sCommunicationBodyurl &&
      other.eCommunicationDirection == eCommunicationDirection &&
      other.iCommunicationrecipientCount == iCommunicationrecipientCount &&
+     other.bCommunicationPrivate == bCommunicationPrivate &&
      other.objDescriptionstaticSender == objDescriptionstaticSender &&
      other.objEmailstaticSender == objEmailstaticSender &&
      other.objPhonestaticSender == objPhonestaticSender &&
@@ -114,6 +119,7 @@ class CommunicationResponseCompound {
     (sCommunicationBodyurl == null ? 0 : sCommunicationBodyurl!.hashCode) +
     (eCommunicationDirection.hashCode) +
     (iCommunicationrecipientCount.hashCode) +
+    (bCommunicationPrivate.hashCode) +
     (objDescriptionstaticSender == null ? 0 : objDescriptionstaticSender!.hashCode) +
     (objEmailstaticSender == null ? 0 : objEmailstaticSender!.hashCode) +
     (objPhonestaticSender == null ? 0 : objPhonestaticSender!.hashCode) +
@@ -123,7 +129,7 @@ class CommunicationResponseCompound {
     (aObjCommunicationexternalrecipient.hashCode);
 
   @override
-  String toString() => 'CommunicationResponseCompound[pkiCommunicationID=$pkiCommunicationID, eCommunicationImportance=$eCommunicationImportance, eCommunicationType=$eCommunicationType, sCommunicationSubject=$sCommunicationSubject, sCommunicationBodyurl=$sCommunicationBodyurl, eCommunicationDirection=$eCommunicationDirection, iCommunicationrecipientCount=$iCommunicationrecipientCount, objDescriptionstaticSender=$objDescriptionstaticSender, objEmailstaticSender=$objEmailstaticSender, objPhonestaticSender=$objPhonestaticSender, objAudit=$objAudit, aObjCommunicationattachment=$aObjCommunicationattachment, aObjCommunicationrecipient=$aObjCommunicationrecipient, aObjCommunicationexternalrecipient=$aObjCommunicationexternalrecipient]';
+  String toString() => 'CommunicationResponseCompound[pkiCommunicationID=$pkiCommunicationID, eCommunicationImportance=$eCommunicationImportance, eCommunicationType=$eCommunicationType, sCommunicationSubject=$sCommunicationSubject, sCommunicationBodyurl=$sCommunicationBodyurl, eCommunicationDirection=$eCommunicationDirection, iCommunicationrecipientCount=$iCommunicationrecipientCount, bCommunicationPrivate=$bCommunicationPrivate, objDescriptionstaticSender=$objDescriptionstaticSender, objEmailstaticSender=$objEmailstaticSender, objPhonestaticSender=$objPhonestaticSender, objAudit=$objAudit, aObjCommunicationattachment=$aObjCommunicationattachment, aObjCommunicationrecipient=$aObjCommunicationrecipient, aObjCommunicationexternalrecipient=$aObjCommunicationexternalrecipient]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -138,6 +144,7 @@ class CommunicationResponseCompound {
     }
       json[r'eCommunicationDirection'] = this.eCommunicationDirection;
       json[r'iCommunicationrecipientCount'] = this.iCommunicationrecipientCount;
+      json[r'bCommunicationPrivate'] = this.bCommunicationPrivate;
     if (this.objDescriptionstaticSender != null) {
       json[r'objDescriptionstaticSender'] = this.objDescriptionstaticSender;
     } else {
@@ -186,6 +193,7 @@ class CommunicationResponseCompound {
         sCommunicationBodyurl: mapValueOfType<String>(json, r'sCommunicationBodyurl'),
         eCommunicationDirection: ComputedECommunicationDirection.fromJson(json[r'eCommunicationDirection'])!,
         iCommunicationrecipientCount: mapValueOfType<int>(json, r'iCommunicationrecipientCount')!,
+        bCommunicationPrivate: mapValueOfType<bool>(json, r'bCommunicationPrivate')!,
         objDescriptionstaticSender: DescriptionstaticResponse.fromJson(json[r'objDescriptionstaticSender']),
         objEmailstaticSender: EmailstaticResponse.fromJson(json[r'objEmailstaticSender']),
         objPhonestaticSender: PhonestaticResponse.fromJson(json[r'objPhonestaticSender']),
@@ -246,6 +254,7 @@ class CommunicationResponseCompound {
     'sCommunicationSubject',
     'eCommunicationDirection',
     'iCommunicationrecipientCount',
+    'bCommunicationPrivate',
     'objAudit',
     'a_objCommunicationattachment',
     'a_objCommunicationrecipient',

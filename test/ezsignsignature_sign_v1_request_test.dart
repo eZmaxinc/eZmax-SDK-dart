@@ -22,6 +22,29 @@ void main() {
       // TODO
     });
 
+    // Whether the attachment are accepted or refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**
+    // String eAttachmentsConfirmationDecision
+    test('to test the property `eAttachmentsConfirmationDecision`', () async {
+      // TODO
+    });
+
+    // The reason of refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**
+    // String sAttachmentsRefusalReason
+    test('to test the property `sAttachmentsRefusalReason`', () async {
+      // TODO
+    });
+
+    // The SVG of the handwritten signature.  This can only be set if eEzsignsignatureType is **Handwritten** and **bIsAutomatic** is false
+    // String sSvg
+    test('to test the property `sSvg`', () async {
+      // TODO
+    });
+
+    // List<CommonFile> aObjFile (default value: const [])
+    test('to test the property `aObjFile`', () async {
+      // TODO
+    });
+
     // Indicates if the Ezsignsignature was part of an automatic process or not.  This can only be true if eEzsignsignatureType is **Acknowledgement**, **City**, **Handwritten**, **Initials**, **Name** or **Stamp**. 
     // bool bIsAutomatic
     test('to test the property `bIsAutomatic`', () async {

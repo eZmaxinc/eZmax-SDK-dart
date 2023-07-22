@@ -27,6 +27,11 @@ void main() {
       // TODO
     });
 
+    // List<BillingentityinternalproductResponseCompound> aObjBillingentityinternalproduct (default value: const [])
+    test('to test the property `aObjBillingentityinternalproduct`', () async {
+      // TODO
+    });
+
 
   });
 

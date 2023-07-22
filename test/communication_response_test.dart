@@ -55,6 +55,12 @@ void main() {
       // TODO
     });
 
+    // Whether the Communication is private or not
+    // bool bCommunicationPrivate
+    test('to test the property `bCommunicationPrivate`', () async {
+      // TODO
+    });
+
     // DescriptionstaticResponse objDescriptionstaticSender
     test('to test the property `objDescriptionstaticSender`', () async {
       // TODO

@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **bActivesessionIssuperadmin** | **bool** | Whether the active session is superadmin or not | 
 **pksCustomerCode** | **String** | The customer code assigned to your account | 
 **fkiSystemconfigurationtypeID** | **int** | The unique ID of the Systemconfigurationtype | [optional] 
+**fkiSignatureID** | **int** | The unique ID of the Signature | [optional] 
 **aPkiPermissionID** | **List<int>** | An array of permissions granted to the user or api key | [default to const []]
 **objUserReal** | [**ActivesessionResponseCompoundUser**](ActivesessionResponseCompoundUser.md) |  | 
 **objUserCloned** | [**ActivesessionResponseCompoundUser**](ActivesessionResponseCompoundUser.md) |  | [optional] 

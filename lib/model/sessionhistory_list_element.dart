@@ -77,7 +77,7 @@ class SessionhistoryListElement {
   /// Represent an IP address.
   String sSessionhistoryIP;
 
-  /// The Login name of the User.
+  /// The login name of the User.
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated

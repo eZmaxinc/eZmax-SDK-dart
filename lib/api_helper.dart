@@ -58,8 +58,17 @@ String parameterToString(dynamic value) {
   if (value is ComputedECommunicationDirection) {
     return ComputedECommunicationDirectionTypeTransformer().encode(value).toString();
   }
+  if (value is EnumFontunderline) {
+    return EnumFontunderlineTypeTransformer().encode(value).toString();
+  }
+  if (value is EnumFontweight) {
+    return EnumFontweightTypeTransformer().encode(value).toString();
+  }
   if (value is EnumHorizontalalignment) {
     return EnumHorizontalalignmentTypeTransformer().encode(value).toString();
+  }
+  if (value is EnumTextvalidation) {
+    return EnumTextvalidationTypeTransformer().encode(value).toString();
   }
   if (value is EnumVerticalalignment) {
     return EnumVerticalalignmentTypeTransformer().encode(value).toString();
@@ -90,6 +99,12 @@ String parameterToString(dynamic value) {
   }
   if (value is FieldECommunicationrecipientType) {
     return FieldECommunicationrecipientTypeTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldECreditcardtypeCodename) {
+    return FieldECreditcardtypeCodenameTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEErrorCode) {
+    return FieldEErrorCodeTypeTransformer().encode(value).toString();
   }
   if (value is FieldEEzmaxinvoicingPaymenttype) {
     return FieldEEzmaxinvoicingPaymenttypeTypeTransformer().encode(value).toString();
@@ -184,8 +199,29 @@ String parameterToString(dynamic value) {
   if (value is FieldESessionhistoryEndby) {
     return FieldESessionhistoryEndbyTypeTransformer().encode(value).toString();
   }
+  if (value is FieldESystemconfigurationEzsign) {
+    return FieldESystemconfigurationEzsignTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldESystemconfigurationLanguage1) {
+    return FieldESystemconfigurationLanguage1TypeTransformer().encode(value).toString();
+  }
+  if (value is FieldESystemconfigurationLanguage2) {
+    return FieldESystemconfigurationLanguage2TypeTransformer().encode(value).toString();
+  }
+  if (value is FieldESystemconfigurationNewexternaluseraction) {
+    return FieldESystemconfigurationNewexternaluseractionTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEUserEzsignaccess) {
+    return FieldEUserEzsignaccessTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEUserEzsignsendreminderfrequency) {
     return FieldEUserEzsignsendreminderfrequencyTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEUserLogintype) {
+    return FieldEUserLogintypeTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEUserOrigin) {
+    return FieldEUserOriginTypeTransformer().encode(value).toString();
   }
   if (value is FieldEUserType) {
     return FieldEUserTypeTypeTransformer().encode(value).toString();

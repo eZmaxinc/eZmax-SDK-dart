@@ -35,6 +35,24 @@ void main() {
       // TODO
     });
 
+    // Edit multiple Permissions
+    //
+    // Using this endpoint, you can edit multiple Permissions at the same time.
+    //
+    //Future<UsergroupEditPermissionsV1Response> usergroupEditPermissionsV1(int pkiUsergroupID, UsergroupEditPermissionsV1Request usergroupEditPermissionsV1Request) async
+    test('test usergroupEditPermissionsV1', () async {
+      // TODO
+    });
+
+    // Edit multiple Usergroupmemberships
+    //
+    // Using this endpoint, you can edit multiple Usergroupmemberships at the same time.
+    //
+    //Future<UsergroupEditUsergroupmembershipsV1Response> usergroupEditUsergroupmembershipsV1(int pkiUsergroupID, UsergroupEditUsergroupmembershipsV1Request usergroupEditUsergroupmembershipsV1Request) async
+    test('test usergroupEditUsergroupmembershipsV1', () async {
+      // TODO
+    });
+
     // Retrieve Usergroups and IDs
     //
     // Get the list of Usergroup to be used in a dropdown or autocomplete control.
@@ -59,6 +77,20 @@ void main() {
     //
     //Future<UsergroupGetObjectV2Response> usergroupGetObjectV2(int pkiUsergroupID) async
     test('test usergroupGetObjectV2', () async {
+      // TODO
+    });
+
+    // Retrieve an existing Usergroup's Permissions
+    //
+    //Future<UsergroupGetPermissionsV1Response> usergroupGetPermissionsV1(int pkiUsergroupID) async
+    test('test usergroupGetPermissionsV1', () async {
+      // TODO
+    });
+
+    // Retrieve an existing Usergroup's Usergroupmemberships
+    //
+    //Future<UsergroupGetUsergroupmembershipsV1Response> usergroupGetUsergroupmembershipsV1(int pkiUsergroupID) async
+    test('test usergroupGetUsergroupmembershipsV1', () async {
       // TODO
     });
 

@@ -28,6 +28,12 @@ void main() {
       // TODO
     });
 
+    // The email address.
+    // String sEmailAddress
+    test('to test the property `sEmailAddress`', () async {
+      // TODO
+    });
+
     // The firstname of the Userstaged
     // String sUserstagedFirstname
     test('to test the property `sUserstagedFirstname`', () async {

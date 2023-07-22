@@ -46,37 +46,37 @@ void main() {
       // TODO
     });
 
-    // The Login name of the User.
+    // The login name of the User.
     // String sUserLoginnameCloning
     test('to test the property `sUserLoginnameCloning`', () async {
       // TODO
     });
 
-    // The First name of the user
+    // The first name of the user
     // String sUserFirstnameCloning
     test('to test the property `sUserFirstnameCloning`', () async {
       // TODO
     });
 
-    // The Last name of the user
+    // The last name of the user
     // String sUserLastnameCloning
     test('to test the property `sUserLastnameCloning`', () async {
       // TODO
     });
 
-    // The Login name of the User.
+    // The login name of the User.
     // String sUserLoginnameCloned
     test('to test the property `sUserLoginnameCloned`', () async {
       // TODO
     });
 
-    // The First name of the user
+    // The first name of the user
     // String sUserFirstnameCloned
     test('to test the property `sUserFirstnameCloned`', () async {
       // TODO
     });
 
-    // The Last name of the user
+    // The last name of the user
     // String sUserLastnameCloned
     test('to test the property `sUserLastnameCloned`', () async {
       // TODO

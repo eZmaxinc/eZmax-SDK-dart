@@ -103,6 +103,11 @@ void main() {
       // TODO
     });
 
+    // EnumTextvalidation eEzsignformfieldgroupTextvalidation
+    test('to test the property `eEzsignformfieldgroupTextvalidation`', () async {
+      // TODO
+    });
+
 
   });
 

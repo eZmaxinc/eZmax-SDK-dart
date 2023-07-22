@@ -16,6 +16,67 @@ class ObjectUserstagedApi {
 
   final ApiClient apiClient;
 
+  /// Create a User from a Userstaged and then map it
+  ///
+  /// Default values will be used while creating the User. If you need to change those values, you should use the route to edit a User.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiUserstagedID (required):
+  ///
+  /// * [Object] body (required):
+  Future<Response> userstagedCreateUserV1WithHttpInfo(int pkiUserstagedID, Object body,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/userstaged/{pkiUserstagedID}/createUser'
+      .replaceAll('{pkiUserstagedID}', pkiUserstagedID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = body;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Create a User from a Userstaged and then map it
+  ///
+  /// Default values will be used while creating the User. If you need to change those values, you should use the route to edit a User.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiUserstagedID (required):
+  ///
+  /// * [Object] body (required):
+  Future<UserstagedCreateUserV1Response?> userstagedCreateUserV1(int pkiUserstagedID, Object body,) async {
+    final response = await userstagedCreateUserV1WithHttpInfo(pkiUserstagedID, body,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'UserstagedCreateUserV1Response',) as UserstagedCreateUserV1Response;
+    
+    }
+    return null;
+  }
+
   /// Delete an existing Userstaged
   ///
   /// 
@@ -25,7 +86,6 @@ class ObjectUserstagedApi {
   /// Parameters:
   ///
   /// * [int] pkiUserstagedID (required):
-  ///   The unique ID of the Userstaged
   Future<Response> userstagedDeleteObjectV1WithHttpInfo(int pkiUserstagedID,) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/userstaged/{pkiUserstagedID}'
@@ -59,7 +119,6 @@ class ObjectUserstagedApi {
   /// Parameters:
   ///
   /// * [int] pkiUserstagedID (required):
-  ///   The unique ID of the Userstaged
   Future<UserstagedDeleteObjectV1Response?> userstagedDeleteObjectV1(int pkiUserstagedID,) async {
     final response = await userstagedDeleteObjectV1WithHttpInfo(pkiUserstagedID,);
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -175,7 +234,6 @@ class ObjectUserstagedApi {
   /// Parameters:
   ///
   /// * [int] pkiUserstagedID (required):
-  ///   The unique ID of the Userstaged
   Future<Response> userstagedGetObjectV2WithHttpInfo(int pkiUserstagedID,) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/userstaged/{pkiUserstagedID}'
@@ -209,7 +267,6 @@ class ObjectUserstagedApi {
   /// Parameters:
   ///
   /// * [int] pkiUserstagedID (required):
-  ///   The unique ID of the Userstaged
   Future<UserstagedGetObjectV2Response?> userstagedGetObjectV2(int pkiUserstagedID,) async {
     final response = await userstagedGetObjectV2WithHttpInfo(pkiUserstagedID,);
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -234,7 +291,6 @@ class ObjectUserstagedApi {
   /// Parameters:
   ///
   /// * [int] pkiUserstagedID (required):
-  ///   The unique ID of the Userstaged
   ///
   /// * [UserstagedMapV1Request] userstagedMapV1Request (required):
   Future<Response> userstagedMapV1WithHttpInfo(int pkiUserstagedID, UserstagedMapV1Request userstagedMapV1Request,) async {
@@ -270,7 +326,6 @@ class ObjectUserstagedApi {
   /// Parameters:
   ///
   /// * [int] pkiUserstagedID (required):
-  ///   The unique ID of the Userstaged
   ///
   /// * [UserstagedMapV1Request] userstagedMapV1Request (required):
   Future<UserstagedMapV1Response?> userstagedMapV1(int pkiUserstagedID, UserstagedMapV1Request userstagedMapV1Request,) async {

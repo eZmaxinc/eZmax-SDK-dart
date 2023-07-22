@@ -38,13 +38,13 @@ class CommonAuditdetail {
   ///
   int? fkiApikeyID;
 
-  /// The Login name of the User.
+  /// The login name of the User.
   String sUserLoginname;
 
-  /// The Last name of the user
+  /// The last name of the user
   String sUserLastname;
 
-  /// The First name of the user
+  /// The first name of the user
   String sUserFirstname;
 
   /// The description of the Apikey in the language of the requester

@@ -20,6 +20,7 @@ class CommunicationResponse {
     this.sCommunicationBodyurl,
     required this.eCommunicationDirection,
     required this.iCommunicationrecipientCount,
+    required this.bCommunicationPrivate,
     this.objDescriptionstaticSender,
     this.objEmailstaticSender,
     this.objPhonestaticSender,
@@ -51,6 +52,9 @@ class CommunicationResponse {
 
   /// The count of Communicationrecipient
   int iCommunicationrecipientCount;
+
+  /// Whether the Communication is private or not
+  bool bCommunicationPrivate;
 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -87,6 +91,7 @@ class CommunicationResponse {
      other.sCommunicationBodyurl == sCommunicationBodyurl &&
      other.eCommunicationDirection == eCommunicationDirection &&
      other.iCommunicationrecipientCount == iCommunicationrecipientCount &&
+     other.bCommunicationPrivate == bCommunicationPrivate &&
      other.objDescriptionstaticSender == objDescriptionstaticSender &&
      other.objEmailstaticSender == objEmailstaticSender &&
      other.objPhonestaticSender == objPhonestaticSender &&
@@ -102,13 +107,14 @@ class CommunicationResponse {
     (sCommunicationBodyurl == null ? 0 : sCommunicationBodyurl!.hashCode) +
     (eCommunicationDirection.hashCode) +
     (iCommunicationrecipientCount.hashCode) +
+    (bCommunicationPrivate.hashCode) +
     (objDescriptionstaticSender == null ? 0 : objDescriptionstaticSender!.hashCode) +
     (objEmailstaticSender == null ? 0 : objEmailstaticSender!.hashCode) +
     (objPhonestaticSender == null ? 0 : objPhonestaticSender!.hashCode) +
     (objAudit.hashCode);
 
   @override
-  String toString() => 'CommunicationResponse[pkiCommunicationID=$pkiCommunicationID, eCommunicationImportance=$eCommunicationImportance, eCommunicationType=$eCommunicationType, sCommunicationSubject=$sCommunicationSubject, sCommunicationBodyurl=$sCommunicationBodyurl, eCommunicationDirection=$eCommunicationDirection, iCommunicationrecipientCount=$iCommunicationrecipientCount, objDescriptionstaticSender=$objDescriptionstaticSender, objEmailstaticSender=$objEmailstaticSender, objPhonestaticSender=$objPhonestaticSender, objAudit=$objAudit]';
+  String toString() => 'CommunicationResponse[pkiCommunicationID=$pkiCommunicationID, eCommunicationImportance=$eCommunicationImportance, eCommunicationType=$eCommunicationType, sCommunicationSubject=$sCommunicationSubject, sCommunicationBodyurl=$sCommunicationBodyurl, eCommunicationDirection=$eCommunicationDirection, iCommunicationrecipientCount=$iCommunicationrecipientCount, bCommunicationPrivate=$bCommunicationPrivate, objDescriptionstaticSender=$objDescriptionstaticSender, objEmailstaticSender=$objEmailstaticSender, objPhonestaticSender=$objPhonestaticSender, objAudit=$objAudit]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -123,6 +129,7 @@ class CommunicationResponse {
     }
       json[r'eCommunicationDirection'] = this.eCommunicationDirection;
       json[r'iCommunicationrecipientCount'] = this.iCommunicationrecipientCount;
+      json[r'bCommunicationPrivate'] = this.bCommunicationPrivate;
     if (this.objDescriptionstaticSender != null) {
       json[r'objDescriptionstaticSender'] = this.objDescriptionstaticSender;
     } else {
@@ -168,6 +175,7 @@ class CommunicationResponse {
         sCommunicationBodyurl: mapValueOfType<String>(json, r'sCommunicationBodyurl'),
         eCommunicationDirection: ComputedECommunicationDirection.fromJson(json[r'eCommunicationDirection'])!,
         iCommunicationrecipientCount: mapValueOfType<int>(json, r'iCommunicationrecipientCount')!,
+        bCommunicationPrivate: mapValueOfType<bool>(json, r'bCommunicationPrivate')!,
         objDescriptionstaticSender: DescriptionstaticResponse.fromJson(json[r'objDescriptionstaticSender']),
         objEmailstaticSender: EmailstaticResponse.fromJson(json[r'objEmailstaticSender']),
         objPhonestaticSender: PhonestaticResponse.fromJson(json[r'objPhonestaticSender']),
@@ -225,6 +233,7 @@ class CommunicationResponse {
     'sCommunicationSubject',
     'eCommunicationDirection',
     'iCommunicationrecipientCount',
+    'bCommunicationPrivate',
     'objAudit',
   };
 }

@@ -23,6 +23,7 @@ class ActivesessionResponseCompound {
     required this.bActivesessionIssuperadmin,
     required this.pksCustomerCode,
     this.fkiSystemconfigurationtypeID,
+    this.fkiSignatureID,
     this.aPkiPermissionID = const [],
     required this.objUserReal,
     this.objUserCloned,
@@ -68,6 +69,18 @@ class ActivesessionResponseCompound {
   ///
   int? fkiSystemconfigurationtypeID;
 
+  /// The unique ID of the Signature
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 16777215
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiSignatureID;
+
   /// An array of permissions granted to the user or api key
   List<int> aPkiPermissionID;
 
@@ -104,6 +117,7 @@ class ActivesessionResponseCompound {
      other.bActivesessionIssuperadmin == bActivesessionIssuperadmin &&
      other.pksCustomerCode == pksCustomerCode &&
      other.fkiSystemconfigurationtypeID == fkiSystemconfigurationtypeID &&
+     other.fkiSignatureID == fkiSignatureID &&
      other.aPkiPermissionID == aPkiPermissionID &&
      other.objUserReal == objUserReal &&
      other.objUserCloned == objUserCloned &&
@@ -123,6 +137,7 @@ class ActivesessionResponseCompound {
     (bActivesessionIssuperadmin.hashCode) +
     (pksCustomerCode.hashCode) +
     (fkiSystemconfigurationtypeID == null ? 0 : fkiSystemconfigurationtypeID!.hashCode) +
+    (fkiSignatureID == null ? 0 : fkiSignatureID!.hashCode) +
     (aPkiPermissionID.hashCode) +
     (objUserReal.hashCode) +
     (objUserCloned == null ? 0 : objUserCloned!.hashCode) +
@@ -130,7 +145,7 @@ class ActivesessionResponseCompound {
     (aEModuleInternalname.hashCode);
 
   @override
-  String toString() => 'ActivesessionResponseCompound[eActivesessionUsertype=$eActivesessionUsertype, eActivesessionOrigin=$eActivesessionOrigin, eActivesessionWeekdaystart=$eActivesessionWeekdaystart, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, bActivesessionDebug=$bActivesessionDebug, bActivesessionIssuperadmin=$bActivesessionIssuperadmin, pksCustomerCode=$pksCustomerCode, fkiSystemconfigurationtypeID=$fkiSystemconfigurationtypeID, aPkiPermissionID=$aPkiPermissionID, objUserReal=$objUserReal, objUserCloned=$objUserCloned, objApikey=$objApikey, aEModuleInternalname=$aEModuleInternalname]';
+  String toString() => 'ActivesessionResponseCompound[eActivesessionUsertype=$eActivesessionUsertype, eActivesessionOrigin=$eActivesessionOrigin, eActivesessionWeekdaystart=$eActivesessionWeekdaystart, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, bActivesessionDebug=$bActivesessionDebug, bActivesessionIssuperadmin=$bActivesessionIssuperadmin, pksCustomerCode=$pksCustomerCode, fkiSystemconfigurationtypeID=$fkiSystemconfigurationtypeID, fkiSignatureID=$fkiSignatureID, aPkiPermissionID=$aPkiPermissionID, objUserReal=$objUserReal, objUserCloned=$objUserCloned, objApikey=$objApikey, aEModuleInternalname=$aEModuleInternalname]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -147,6 +162,11 @@ class ActivesessionResponseCompound {
       json[r'fkiSystemconfigurationtypeID'] = this.fkiSystemconfigurationtypeID;
     } else {
       json[r'fkiSystemconfigurationtypeID'] = null;
+    }
+    if (this.fkiSignatureID != null) {
+      json[r'fkiSignatureID'] = this.fkiSignatureID;
+    } else {
+      json[r'fkiSignatureID'] = null;
     }
       json[r'a_pkiPermissionID'] = this.aPkiPermissionID;
       json[r'objUserReal'] = this.objUserReal;
@@ -193,6 +213,7 @@ class ActivesessionResponseCompound {
         bActivesessionIssuperadmin: mapValueOfType<bool>(json, r'bActivesessionIssuperadmin')!,
         pksCustomerCode: mapValueOfType<String>(json, r'pksCustomerCode')!,
         fkiSystemconfigurationtypeID: mapValueOfType<int>(json, r'fkiSystemconfigurationtypeID'),
+        fkiSignatureID: mapValueOfType<int>(json, r'fkiSignatureID'),
         aPkiPermissionID: json[r'a_pkiPermissionID'] is List
             ? (json[r'a_pkiPermissionID'] as List).cast<int>()
             : const [],

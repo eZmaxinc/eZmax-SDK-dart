@@ -16,7 +16,7 @@ void main() {
   // final instance = TimezoneAutocompleteElementResponse();
 
   group('test TimezoneAutocompleteElementResponse', () {
-    // The description of the Timezone in the language of the requester
+    // The description of the Timezone
     // String sTimezoneName
     test('to test the property `sTimezoneName`', () async {
       // TODO

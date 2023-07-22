@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **bActivesessionIssuperadmin** | **bool** | Whether the active session is superadmin or not | 
 **pksCustomerCode** | **String** | The customer code assigned to your account | 
 **fkiSystemconfigurationtypeID** | **int** | The unique ID of the Systemconfigurationtype | [optional] 
+**fkiSignatureID** | **int** | The unique ID of the Signature | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

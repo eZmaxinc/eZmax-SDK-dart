@@ -81,7 +81,6 @@ class ObjectBillingentityinternalApi {
   /// Parameters:
   ///
   /// * [int] pkiBillingentityinternalID (required):
-  ///   The unique ID of the Billingentityinternal
   ///
   /// * [BillingentityinternalEditObjectV1Request] billingentityinternalEditObjectV1Request (required):
   Future<Response> billingentityinternalEditObjectV1WithHttpInfo(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request,) async {
@@ -117,7 +116,6 @@ class ObjectBillingentityinternalApi {
   /// Parameters:
   ///
   /// * [int] pkiBillingentityinternalID (required):
-  ///   The unique ID of the Billingentityinternal
   ///
   /// * [BillingentityinternalEditObjectV1Request] billingentityinternalEditObjectV1Request (required):
   Future<BillingentityinternalEditObjectV1Response?> billingentityinternalEditObjectV1(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request,) async {
@@ -321,7 +319,6 @@ class ObjectBillingentityinternalApi {
   /// Parameters:
   ///
   /// * [int] pkiBillingentityinternalID (required):
-  ///   The unique ID of the Billingentityinternal
   Future<Response> billingentityinternalGetObjectV2WithHttpInfo(int pkiBillingentityinternalID,) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/billingentityinternal/{pkiBillingentityinternalID}'
@@ -355,7 +352,6 @@ class ObjectBillingentityinternalApi {
   /// Parameters:
   ///
   /// * [int] pkiBillingentityinternalID (required):
-  ///   The unique ID of the Billingentityinternal
   Future<BillingentityinternalGetObjectV2Response?> billingentityinternalGetObjectV2(int pkiBillingentityinternalID,) async {
     final response = await billingentityinternalGetObjectV2WithHttpInfo(pkiBillingentityinternalID,);
     if (response.statusCode >= HttpStatus.badRequest) {

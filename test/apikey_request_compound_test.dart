@@ -33,6 +33,12 @@ void main() {
       // TODO
     });
 
+    // Whether the apikey is active or not
+    // bool bApikeyIsactive
+    test('to test the property `bApikeyIsactive`', () async {
+      // TODO
+    });
+
 
   });
 

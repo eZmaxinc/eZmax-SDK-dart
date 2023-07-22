@@ -73,6 +73,12 @@ void main() {
       // TODO
     });
 
+    // The unique ID of the Signature
+    // int fkiSignatureID
+    test('to test the property `fkiSignatureID`', () async {
+      // TODO
+    });
+
     // An array of permissions granted to the user or api key
     // List<int> aPkiPermissionID (default value: const [])
     test('to test the property `aPkiPermissionID`', () async {

@@ -18,7 +18,9 @@ class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
     required this.bEzsignfoldersignerassociationDelayedsend,
     required this.bEzsignfoldersignerassociationReceivecopy,
     required this.tEzsignfoldersignerassociationMessage,
+    this.objEzsignsignergroup,
     this.objUser,
+    this.objUsergroup,
     this.objEzsignsigner,
   });
 
@@ -47,7 +49,23 @@ class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
   /// source code must fall back to having a nullable type.
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
+  EzsignsignergroupResponseCompound? objEzsignsignergroup;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
   EzsignfoldersignerassociationResponseCompoundUser? objUser;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  UsergroupResponseCompound? objUsergroup;
 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -64,7 +82,9 @@ class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
      other.bEzsignfoldersignerassociationDelayedsend == bEzsignfoldersignerassociationDelayedsend &&
      other.bEzsignfoldersignerassociationReceivecopy == bEzsignfoldersignerassociationReceivecopy &&
      other.tEzsignfoldersignerassociationMessage == tEzsignfoldersignerassociationMessage &&
+     other.objEzsignsignergroup == objEzsignsignergroup &&
      other.objUser == objUser &&
+     other.objUsergroup == objUsergroup &&
      other.objEzsignsigner == objEzsignsigner;
 
   @override
@@ -75,11 +95,13 @@ class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
     (bEzsignfoldersignerassociationDelayedsend.hashCode) +
     (bEzsignfoldersignerassociationReceivecopy.hashCode) +
     (tEzsignfoldersignerassociationMessage.hashCode) +
+    (objEzsignsignergroup == null ? 0 : objEzsignsignergroup!.hashCode) +
     (objUser == null ? 0 : objUser!.hashCode) +
+    (objUsergroup == null ? 0 : objUsergroup!.hashCode) +
     (objEzsignsigner == null ? 0 : objEzsignsigner!.hashCode);
 
   @override
-  String toString() => 'EzsignfoldersignerassociationGetObjectV1ResponseMPayload[pkiEzsignfoldersignerassociationID=$pkiEzsignfoldersignerassociationID, fkiEzsignfolderID=$fkiEzsignfolderID, bEzsignfoldersignerassociationDelayedsend=$bEzsignfoldersignerassociationDelayedsend, bEzsignfoldersignerassociationReceivecopy=$bEzsignfoldersignerassociationReceivecopy, tEzsignfoldersignerassociationMessage=$tEzsignfoldersignerassociationMessage, objUser=$objUser, objEzsignsigner=$objEzsignsigner]';
+  String toString() => 'EzsignfoldersignerassociationGetObjectV1ResponseMPayload[pkiEzsignfoldersignerassociationID=$pkiEzsignfoldersignerassociationID, fkiEzsignfolderID=$fkiEzsignfolderID, bEzsignfoldersignerassociationDelayedsend=$bEzsignfoldersignerassociationDelayedsend, bEzsignfoldersignerassociationReceivecopy=$bEzsignfoldersignerassociationReceivecopy, tEzsignfoldersignerassociationMessage=$tEzsignfoldersignerassociationMessage, objEzsignsignergroup=$objEzsignsignergroup, objUser=$objUser, objUsergroup=$objUsergroup, objEzsignsigner=$objEzsignsigner]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -88,10 +110,20 @@ class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
       json[r'bEzsignfoldersignerassociationDelayedsend'] = this.bEzsignfoldersignerassociationDelayedsend;
       json[r'bEzsignfoldersignerassociationReceivecopy'] = this.bEzsignfoldersignerassociationReceivecopy;
       json[r'tEzsignfoldersignerassociationMessage'] = this.tEzsignfoldersignerassociationMessage;
+    if (this.objEzsignsignergroup != null) {
+      json[r'objEzsignsignergroup'] = this.objEzsignsignergroup;
+    } else {
+      json[r'objEzsignsignergroup'] = null;
+    }
     if (this.objUser != null) {
       json[r'objUser'] = this.objUser;
     } else {
       json[r'objUser'] = null;
+    }
+    if (this.objUsergroup != null) {
+      json[r'objUsergroup'] = this.objUsergroup;
+    } else {
+      json[r'objUsergroup'] = null;
     }
     if (this.objEzsignsigner != null) {
       json[r'objEzsignsigner'] = this.objEzsignsigner;
@@ -125,7 +157,9 @@ class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
         bEzsignfoldersignerassociationDelayedsend: mapValueOfType<bool>(json, r'bEzsignfoldersignerassociationDelayedsend')!,
         bEzsignfoldersignerassociationReceivecopy: mapValueOfType<bool>(json, r'bEzsignfoldersignerassociationReceivecopy')!,
         tEzsignfoldersignerassociationMessage: mapValueOfType<String>(json, r'tEzsignfoldersignerassociationMessage')!,
+        objEzsignsignergroup: EzsignsignergroupResponseCompound.fromJson(json[r'objEzsignsignergroup']),
         objUser: EzsignfoldersignerassociationResponseCompoundUser.fromJson(json[r'objUser']),
+        objUsergroup: UsergroupResponseCompound.fromJson(json[r'objUsergroup']),
         objEzsignsigner: EzsignsignerResponseCompound.fromJson(json[r'objEzsignsigner']),
       );
     }

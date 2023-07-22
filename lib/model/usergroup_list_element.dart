@@ -20,14 +20,14 @@ class UsergroupListElement {
 
   /// The unique ID of the Usergroup
   ///
-  /// Minimum value: 1
+  /// Minimum value: 0
   /// Maximum value: 255
   int pkiUsergroupID;
 
   /// The Name of the Usergroup in the language of the requester
   String sUsergroupNameX;
 
-  /// Numer of user in group
+  /// Number of users in group
   ///
   /// Minimum value: 0
   /// Maximum value: 16777215

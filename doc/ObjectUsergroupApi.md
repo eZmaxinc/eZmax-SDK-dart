@@ -11,9 +11,13 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**usergroupCreateObjectV1**](ObjectUsergroupApi.md#usergroupcreateobjectv1) | **POST** /1/object/usergroup | Create a new Usergroup
 [**usergroupEditObjectV1**](ObjectUsergroupApi.md#usergroupeditobjectv1) | **PUT** /1/object/usergroup/{pkiUsergroupID} | Edit an existing Usergroup
+[**usergroupEditPermissionsV1**](ObjectUsergroupApi.md#usergroupeditpermissionsv1) | **PUT** /1/object/usergroup/{pkiUsergroupID}/editPermissions | Edit multiple Permissions
+[**usergroupEditUsergroupmembershipsV1**](ObjectUsergroupApi.md#usergroupeditusergroupmembershipsv1) | **PUT** /1/object/usergroup/{pkiUsergroupID}/editUsergroupmemberships | Edit multiple Usergroupmemberships
 [**usergroupGetAutocompleteV2**](ObjectUsergroupApi.md#usergroupgetautocompletev2) | **GET** /2/object/usergroup/getAutocomplete/{sSelector} | Retrieve Usergroups and IDs
 [**usergroupGetListV1**](ObjectUsergroupApi.md#usergroupgetlistv1) | **GET** /1/object/usergroup/getList | Retrieve Usergroup list
 [**usergroupGetObjectV2**](ObjectUsergroupApi.md#usergroupgetobjectv2) | **GET** /2/object/usergroup/{pkiUsergroupID} | Retrieve an existing Usergroup
+[**usergroupGetPermissionsV1**](ObjectUsergroupApi.md#usergroupgetpermissionsv1) | **GET** /1/object/usergroup/{pkiUsergroupID}/getPermissions | Retrieve an existing Usergroup's Permissions
+[**usergroupGetUsergroupmembershipsV1**](ObjectUsergroupApi.md#usergroupgetusergroupmembershipsv1) | **GET** /1/object/usergroup/{pkiUsergroupID}/getUsergroupmemberships | Retrieve an existing Usergroup's Usergroupmemberships
 
 
 # **usergroupCreateObjectV1**
@@ -79,7 +83,7 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
 
 final api_instance = ObjectUsergroupApi();
-final pkiUsergroupID = 56; // int | The unique ID of the Usergroup
+final pkiUsergroupID = 56; // int | 
 final usergroupEditObjectV1Request = UsergroupEditObjectV1Request(); // UsergroupEditObjectV1Request | 
 
 try {
@@ -94,12 +98,110 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiUsergroupID** | **int**| The unique ID of the Usergroup | 
+ **pkiUsergroupID** | **int**|  | 
  **usergroupEditObjectV1Request** | [**UsergroupEditObjectV1Request**](UsergroupEditObjectV1Request.md)|  | 
 
 ### Return type
 
 [**UsergroupEditObjectV1Response**](UsergroupEditObjectV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **usergroupEditPermissionsV1**
+> UsergroupEditPermissionsV1Response usergroupEditPermissionsV1(pkiUsergroupID, usergroupEditPermissionsV1Request)
+
+Edit multiple Permissions
+
+Using this endpoint, you can edit multiple Permissions at the same time.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectUsergroupApi();
+final pkiUsergroupID = 56; // int | 
+final usergroupEditPermissionsV1Request = UsergroupEditPermissionsV1Request(); // UsergroupEditPermissionsV1Request | 
+
+try {
+    final result = api_instance.usergroupEditPermissionsV1(pkiUsergroupID, usergroupEditPermissionsV1Request);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectUsergroupApi->usergroupEditPermissionsV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiUsergroupID** | **int**|  | 
+ **usergroupEditPermissionsV1Request** | [**UsergroupEditPermissionsV1Request**](UsergroupEditPermissionsV1Request.md)|  | 
+
+### Return type
+
+[**UsergroupEditPermissionsV1Response**](UsergroupEditPermissionsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **usergroupEditUsergroupmembershipsV1**
+> UsergroupEditUsergroupmembershipsV1Response usergroupEditUsergroupmembershipsV1(pkiUsergroupID, usergroupEditUsergroupmembershipsV1Request)
+
+Edit multiple Usergroupmemberships
+
+Using this endpoint, you can edit multiple Usergroupmemberships at the same time.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectUsergroupApi();
+final pkiUsergroupID = 56; // int | 
+final usergroupEditUsergroupmembershipsV1Request = UsergroupEditUsergroupmembershipsV1Request(); // UsergroupEditUsergroupmembershipsV1Request | 
+
+try {
+    final result = api_instance.usergroupEditUsergroupmembershipsV1(pkiUsergroupID, usergroupEditUsergroupmembershipsV1Request);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectUsergroupApi->usergroupEditUsergroupmembershipsV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiUsergroupID** | **int**|  | 
+ **usergroupEditUsergroupmembershipsV1Request** | [**UsergroupEditUsergroupmembershipsV1Request**](UsergroupEditUsergroupmembershipsV1Request.md)|  | 
+
+### Return type
+
+[**UsergroupEditUsergroupmembershipsV1Response**](UsergroupEditUsergroupmembershipsV1Response.md)
 
 ### Authorization
 
@@ -236,7 +338,7 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
 
 final api_instance = ObjectUsergroupApi();
-final pkiUsergroupID = 56; // int | The unique ID of the Usergroup
+final pkiUsergroupID = 56; // int | 
 
 try {
     final result = api_instance.usergroupGetObjectV2(pkiUsergroupID);
@@ -250,11 +352,101 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiUsergroupID** | **int**| The unique ID of the Usergroup | 
+ **pkiUsergroupID** | **int**|  | 
 
 ### Return type
 
 [**UsergroupGetObjectV2Response**](UsergroupGetObjectV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **usergroupGetPermissionsV1**
+> UsergroupGetPermissionsV1Response usergroupGetPermissionsV1(pkiUsergroupID)
+
+Retrieve an existing Usergroup's Permissions
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectUsergroupApi();
+final pkiUsergroupID = 56; // int | 
+
+try {
+    final result = api_instance.usergroupGetPermissionsV1(pkiUsergroupID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectUsergroupApi->usergroupGetPermissionsV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiUsergroupID** | **int**|  | 
+
+### Return type
+
+[**UsergroupGetPermissionsV1Response**](UsergroupGetPermissionsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **usergroupGetUsergroupmembershipsV1**
+> UsergroupGetUsergroupmembershipsV1Response usergroupGetUsergroupmembershipsV1(pkiUsergroupID)
+
+Retrieve an existing Usergroup's Usergroupmemberships
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectUsergroupApi();
+final pkiUsergroupID = 56; // int | 
+
+try {
+    final result = api_instance.usergroupGetUsergroupmembershipsV1(pkiUsergroupID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectUsergroupApi->usergroupGetUsergroupmembershipsV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiUsergroupID** | **int**|  | 
+
+### Return type
+
+[**UsergroupGetUsergroupmembershipsV1Response**](UsergroupGetUsergroupmembershipsV1Response.md)
 
 ### Authorization
 

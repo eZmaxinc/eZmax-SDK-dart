@@ -46,6 +46,18 @@ void main() {
       // TODO
     });
 
+    // The width of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have a width of 2 inches, you would use \"200\" for the iEzsignsignatureWidth.
+    // int iEzsignsignatureWidth
+    test('to test the property `iEzsignsignatureWidth`', () async {
+      // TODO
+    });
+
+    // The height of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have an height of 2 inches, you would use \"200\" for the iEzsignsignatureHeight.
+    // int iEzsignsignatureHeight
+    test('to test the property `iEzsignsignatureHeight`', () async {
+      // TODO
+    });
+
     // The step when the Ezsignsigner will be invited to sign
     // int iEzsignsignatureStep
     test('to test the property `iEzsignsignatureStep`', () async {
@@ -105,6 +117,17 @@ void main() {
     // The step when the Ezsignsigner will be invited to validate the Ezsignsignature of eEzsignsignatureType Attachments
     // int iEzsignsignatureValidationstep
     test('to test the property `iEzsignsignatureValidationstep`', () async {
+      // TODO
+    });
+
+    // EnumTextvalidation eEzsignsignatureTextvalidation
+    test('to test the property `eEzsignsignatureTextvalidation`', () async {
+      // TODO
+    });
+
+    // A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom**
+    // String sEzsignsignatureRegexp
+    test('to test the property `sEzsignsignatureRegexp`', () async {
       // TODO
     });
 

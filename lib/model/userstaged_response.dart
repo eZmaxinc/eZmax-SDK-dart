@@ -15,6 +15,7 @@ class UserstagedResponse {
   UserstagedResponse({
     required this.pkiUserstagedID,
     required this.fkiEmailID,
+    required this.sEmailAddress,
     required this.sUserstagedFirstname,
     required this.sUserstagedLastname,
     required this.sUserstagedExternalid,
@@ -32,6 +33,9 @@ class UserstagedResponse {
   /// Maximum value: 16777215
   int fkiEmailID;
 
+  /// The email address.
+  String sEmailAddress;
+
   /// The firstname of the Userstaged
   String sUserstagedFirstname;
 
@@ -45,6 +49,7 @@ class UserstagedResponse {
   bool operator ==(Object other) => identical(this, other) || other is UserstagedResponse &&
      other.pkiUserstagedID == pkiUserstagedID &&
      other.fkiEmailID == fkiEmailID &&
+     other.sEmailAddress == sEmailAddress &&
      other.sUserstagedFirstname == sUserstagedFirstname &&
      other.sUserstagedLastname == sUserstagedLastname &&
      other.sUserstagedExternalid == sUserstagedExternalid;
@@ -54,17 +59,19 @@ class UserstagedResponse {
     // ignore: unnecessary_parenthesis
     (pkiUserstagedID.hashCode) +
     (fkiEmailID.hashCode) +
+    (sEmailAddress.hashCode) +
     (sUserstagedFirstname.hashCode) +
     (sUserstagedLastname.hashCode) +
     (sUserstagedExternalid.hashCode);
 
   @override
-  String toString() => 'UserstagedResponse[pkiUserstagedID=$pkiUserstagedID, fkiEmailID=$fkiEmailID, sUserstagedFirstname=$sUserstagedFirstname, sUserstagedLastname=$sUserstagedLastname, sUserstagedExternalid=$sUserstagedExternalid]';
+  String toString() => 'UserstagedResponse[pkiUserstagedID=$pkiUserstagedID, fkiEmailID=$fkiEmailID, sEmailAddress=$sEmailAddress, sUserstagedFirstname=$sUserstagedFirstname, sUserstagedLastname=$sUserstagedLastname, sUserstagedExternalid=$sUserstagedExternalid]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiUserstagedID'] = this.pkiUserstagedID;
       json[r'fkiEmailID'] = this.fkiEmailID;
+      json[r'sEmailAddress'] = this.sEmailAddress;
       json[r'sUserstagedFirstname'] = this.sUserstagedFirstname;
       json[r'sUserstagedLastname'] = this.sUserstagedLastname;
       json[r'sUserstagedExternalid'] = this.sUserstagedExternalid;
@@ -92,6 +99,7 @@ class UserstagedResponse {
       return UserstagedResponse(
         pkiUserstagedID: mapValueOfType<int>(json, r'pkiUserstagedID')!,
         fkiEmailID: mapValueOfType<int>(json, r'fkiEmailID')!,
+        sEmailAddress: mapValueOfType<String>(json, r'sEmailAddress')!,
         sUserstagedFirstname: mapValueOfType<String>(json, r'sUserstagedFirstname')!,
         sUserstagedLastname: mapValueOfType<String>(json, r'sUserstagedLastname')!,
         sUserstagedExternalid: mapValueOfType<String>(json, r'sUserstagedExternalid')!,
@@ -144,6 +152,7 @@ class UserstagedResponse {
   static const requiredKeys = <String>{
     'pkiUserstagedID',
     'fkiEmailID',
+    'sEmailAddress',
     'sUserstagedFirstname',
     'sUserstagedLastname',
     'sUserstagedExternalid',
