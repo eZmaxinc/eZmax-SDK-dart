@@ -22,6 +22,17 @@ void main() {
       // TODO
     });
 
+    // MultilingualEzsignsignergroupDescription objEzsignsignergroupDescription
+    test('to test the property `objEzsignsignergroupDescription`', () async {
+      // TODO
+    });
+
+    // The Description of the Ezsignsignergroup in the language of the requester
+    // String sEzsignsignergroupDescriptionX
+    test('to test the property `sEzsignsignergroupDescriptionX`', () async {
+      // TODO
+    });
+
 
   });
 

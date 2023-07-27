@@ -16,6 +16,7 @@ class CustomEzsignfoldersignerassociationstatusResponse {
     required this.fkiEzsignfoldersignerassociationID,
     this.sEzsignfoldersignerassociationstatusLastname,
     this.sEzsignfoldersignerassociationstatusFirstname,
+    this.sEzsignfoldersignerassociationstatusDescriptionX,
     this.aObjEzsignsignaturestatus = const [],
   });
 
@@ -42,6 +43,15 @@ class CustomEzsignfoldersignerassociationstatusResponse {
   ///
   String? sEzsignfoldersignerassociationstatusFirstname;
 
+  /// The description of the Ezsignsigner
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEzsignfoldersignerassociationstatusDescriptionX;
+
   List<CustomEzsignsignaturestatusResponse> aObjEzsignsignaturestatus;
 
   @override
@@ -49,6 +59,7 @@ class CustomEzsignfoldersignerassociationstatusResponse {
      other.fkiEzsignfoldersignerassociationID == fkiEzsignfoldersignerassociationID &&
      other.sEzsignfoldersignerassociationstatusLastname == sEzsignfoldersignerassociationstatusLastname &&
      other.sEzsignfoldersignerassociationstatusFirstname == sEzsignfoldersignerassociationstatusFirstname &&
+     other.sEzsignfoldersignerassociationstatusDescriptionX == sEzsignfoldersignerassociationstatusDescriptionX &&
      other.aObjEzsignsignaturestatus == aObjEzsignsignaturestatus;
 
   @override
@@ -57,10 +68,11 @@ class CustomEzsignfoldersignerassociationstatusResponse {
     (fkiEzsignfoldersignerassociationID.hashCode) +
     (sEzsignfoldersignerassociationstatusLastname == null ? 0 : sEzsignfoldersignerassociationstatusLastname!.hashCode) +
     (sEzsignfoldersignerassociationstatusFirstname == null ? 0 : sEzsignfoldersignerassociationstatusFirstname!.hashCode) +
+    (sEzsignfoldersignerassociationstatusDescriptionX == null ? 0 : sEzsignfoldersignerassociationstatusDescriptionX!.hashCode) +
     (aObjEzsignsignaturestatus.hashCode);
 
   @override
-  String toString() => 'CustomEzsignfoldersignerassociationstatusResponse[fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, sEzsignfoldersignerassociationstatusLastname=$sEzsignfoldersignerassociationstatusLastname, sEzsignfoldersignerassociationstatusFirstname=$sEzsignfoldersignerassociationstatusFirstname, aObjEzsignsignaturestatus=$aObjEzsignsignaturestatus]';
+  String toString() => 'CustomEzsignfoldersignerassociationstatusResponse[fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, sEzsignfoldersignerassociationstatusLastname=$sEzsignfoldersignerassociationstatusLastname, sEzsignfoldersignerassociationstatusFirstname=$sEzsignfoldersignerassociationstatusFirstname, sEzsignfoldersignerassociationstatusDescriptionX=$sEzsignfoldersignerassociationstatusDescriptionX, aObjEzsignsignaturestatus=$aObjEzsignsignaturestatus]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -74,6 +86,11 @@ class CustomEzsignfoldersignerassociationstatusResponse {
       json[r'sEzsignfoldersignerassociationstatusFirstname'] = this.sEzsignfoldersignerassociationstatusFirstname;
     } else {
       json[r'sEzsignfoldersignerassociationstatusFirstname'] = null;
+    }
+    if (this.sEzsignfoldersignerassociationstatusDescriptionX != null) {
+      json[r'sEzsignfoldersignerassociationstatusDescriptionX'] = this.sEzsignfoldersignerassociationstatusDescriptionX;
+    } else {
+      json[r'sEzsignfoldersignerassociationstatusDescriptionX'] = null;
     }
       json[r'a_objEzsignsignaturestatus'] = this.aObjEzsignsignaturestatus;
     return json;
@@ -101,6 +118,7 @@ class CustomEzsignfoldersignerassociationstatusResponse {
         fkiEzsignfoldersignerassociationID: mapValueOfType<int>(json, r'fkiEzsignfoldersignerassociationID')!,
         sEzsignfoldersignerassociationstatusLastname: mapValueOfType<String>(json, r'sEzsignfoldersignerassociationstatusLastname'),
         sEzsignfoldersignerassociationstatusFirstname: mapValueOfType<String>(json, r'sEzsignfoldersignerassociationstatusFirstname'),
+        sEzsignfoldersignerassociationstatusDescriptionX: mapValueOfType<String>(json, r'sEzsignfoldersignerassociationstatusDescriptionX'),
         aObjEzsignsignaturestatus: CustomEzsignsignaturestatusResponse.listFromJson(json[r'a_objEzsignsignaturestatus']),
       );
     }

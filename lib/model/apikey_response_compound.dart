@@ -16,8 +16,11 @@ class ApikeyResponseCompound {
     required this.pkiApikeyID,
     required this.fkiUserID,
     required this.objApikeyDescription,
-    this.sComputedToken,
+    required this.objContactName,
+    this.sApikeyApikey,
+    this.sApikeySecret,
     required this.bApikeyIsactive,
+    this.bApikeyIssigned,
     required this.objAudit,
   });
 
@@ -33,17 +36,37 @@ class ApikeyResponseCompound {
 
   MultilingualApikeyDescription objApikeyDescription;
 
-  /// The secret token for the API key.  This will be returned only on creation.
+  CustomContactNameResponse objContactName;
+
+  /// The Apikey for the API key.  This will be hidden if we are not creating or regenerating the Apikey.
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
   /// source code must fall back to having a nullable type.
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
-  String? sComputedToken;
+  String? sApikeyApikey;
+
+  /// The Secret for the API key.  This will be hidden if we are not creating or regenerating the Apikey.
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sApikeySecret;
 
   /// Whether the apikey is active or not
   bool bApikeyIsactive;
+
+  /// Whether the apikey is signed or not
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bApikeyIssigned;
 
   CommonAudit objAudit;
 
@@ -52,8 +75,11 @@ class ApikeyResponseCompound {
      other.pkiApikeyID == pkiApikeyID &&
      other.fkiUserID == fkiUserID &&
      other.objApikeyDescription == objApikeyDescription &&
-     other.sComputedToken == sComputedToken &&
+     other.objContactName == objContactName &&
+     other.sApikeyApikey == sApikeyApikey &&
+     other.sApikeySecret == sApikeySecret &&
      other.bApikeyIsactive == bApikeyIsactive &&
+     other.bApikeyIssigned == bApikeyIssigned &&
      other.objAudit == objAudit;
 
   @override
@@ -62,24 +88,38 @@ class ApikeyResponseCompound {
     (pkiApikeyID.hashCode) +
     (fkiUserID.hashCode) +
     (objApikeyDescription.hashCode) +
-    (sComputedToken == null ? 0 : sComputedToken!.hashCode) +
+    (objContactName.hashCode) +
+    (sApikeyApikey == null ? 0 : sApikeyApikey!.hashCode) +
+    (sApikeySecret == null ? 0 : sApikeySecret!.hashCode) +
     (bApikeyIsactive.hashCode) +
+    (bApikeyIssigned == null ? 0 : bApikeyIssigned!.hashCode) +
     (objAudit.hashCode);
 
   @override
-  String toString() => 'ApikeyResponseCompound[pkiApikeyID=$pkiApikeyID, fkiUserID=$fkiUserID, objApikeyDescription=$objApikeyDescription, sComputedToken=$sComputedToken, bApikeyIsactive=$bApikeyIsactive, objAudit=$objAudit]';
+  String toString() => 'ApikeyResponseCompound[pkiApikeyID=$pkiApikeyID, fkiUserID=$fkiUserID, objApikeyDescription=$objApikeyDescription, objContactName=$objContactName, sApikeyApikey=$sApikeyApikey, sApikeySecret=$sApikeySecret, bApikeyIsactive=$bApikeyIsactive, bApikeyIssigned=$bApikeyIssigned, objAudit=$objAudit]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiApikeyID'] = this.pkiApikeyID;
       json[r'fkiUserID'] = this.fkiUserID;
       json[r'objApikeyDescription'] = this.objApikeyDescription;
-    if (this.sComputedToken != null) {
-      json[r'sComputedToken'] = this.sComputedToken;
+      json[r'objContactName'] = this.objContactName;
+    if (this.sApikeyApikey != null) {
+      json[r'sApikeyApikey'] = this.sApikeyApikey;
     } else {
-      json[r'sComputedToken'] = null;
+      json[r'sApikeyApikey'] = null;
+    }
+    if (this.sApikeySecret != null) {
+      json[r'sApikeySecret'] = this.sApikeySecret;
+    } else {
+      json[r'sApikeySecret'] = null;
     }
       json[r'bApikeyIsactive'] = this.bApikeyIsactive;
+    if (this.bApikeyIssigned != null) {
+      json[r'bApikeyIssigned'] = this.bApikeyIssigned;
+    } else {
+      json[r'bApikeyIssigned'] = null;
+    }
       json[r'objAudit'] = this.objAudit;
     return json;
   }
@@ -106,8 +146,11 @@ class ApikeyResponseCompound {
         pkiApikeyID: mapValueOfType<int>(json, r'pkiApikeyID')!,
         fkiUserID: mapValueOfType<int>(json, r'fkiUserID')!,
         objApikeyDescription: MultilingualApikeyDescription.fromJson(json[r'objApikeyDescription'])!,
-        sComputedToken: mapValueOfType<String>(json, r'sComputedToken'),
+        objContactName: CustomContactNameResponse.fromJson(json[r'objContactName'])!,
+        sApikeyApikey: mapValueOfType<String>(json, r'sApikeyApikey'),
+        sApikeySecret: mapValueOfType<String>(json, r'sApikeySecret'),
         bApikeyIsactive: mapValueOfType<bool>(json, r'bApikeyIsactive')!,
+        bApikeyIssigned: mapValueOfType<bool>(json, r'bApikeyIssigned'),
         objAudit: CommonAudit.fromJson(json[r'objAudit'])!,
       );
     }
@@ -159,6 +202,7 @@ class ApikeyResponseCompound {
     'pkiApikeyID',
     'fkiUserID',
     'objApikeyDescription',
+    'objContactName',
     'bApikeyIsactive',
     'objAudit',
   };

@@ -17,6 +17,7 @@ class ApikeyRequest {
     required this.fkiUserID,
     required this.objApikeyDescription,
     this.bApikeyIsactive,
+    this.bApikeyIssigned,
   });
 
   /// The unique ID of the Apikey
@@ -46,12 +47,22 @@ class ApikeyRequest {
   ///
   bool? bApikeyIsactive;
 
+  /// Whether the apikey is signed or not
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bApikeyIssigned;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is ApikeyRequest &&
      other.pkiApikeyID == pkiApikeyID &&
      other.fkiUserID == fkiUserID &&
      other.objApikeyDescription == objApikeyDescription &&
-     other.bApikeyIsactive == bApikeyIsactive;
+     other.bApikeyIsactive == bApikeyIsactive &&
+     other.bApikeyIssigned == bApikeyIssigned;
 
   @override
   int get hashCode =>
@@ -59,10 +70,11 @@ class ApikeyRequest {
     (pkiApikeyID == null ? 0 : pkiApikeyID!.hashCode) +
     (fkiUserID.hashCode) +
     (objApikeyDescription.hashCode) +
-    (bApikeyIsactive == null ? 0 : bApikeyIsactive!.hashCode);
+    (bApikeyIsactive == null ? 0 : bApikeyIsactive!.hashCode) +
+    (bApikeyIssigned == null ? 0 : bApikeyIssigned!.hashCode);
 
   @override
-  String toString() => 'ApikeyRequest[pkiApikeyID=$pkiApikeyID, fkiUserID=$fkiUserID, objApikeyDescription=$objApikeyDescription, bApikeyIsactive=$bApikeyIsactive]';
+  String toString() => 'ApikeyRequest[pkiApikeyID=$pkiApikeyID, fkiUserID=$fkiUserID, objApikeyDescription=$objApikeyDescription, bApikeyIsactive=$bApikeyIsactive, bApikeyIssigned=$bApikeyIssigned]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -77,6 +89,11 @@ class ApikeyRequest {
       json[r'bApikeyIsactive'] = this.bApikeyIsactive;
     } else {
       json[r'bApikeyIsactive'] = null;
+    }
+    if (this.bApikeyIssigned != null) {
+      json[r'bApikeyIssigned'] = this.bApikeyIssigned;
+    } else {
+      json[r'bApikeyIssigned'] = null;
     }
     return json;
   }
@@ -104,6 +121,7 @@ class ApikeyRequest {
         fkiUserID: mapValueOfType<int>(json, r'fkiUserID')!,
         objApikeyDescription: MultilingualApikeyDescription.fromJson(json[r'objApikeyDescription'])!,
         bApikeyIsactive: mapValueOfType<bool>(json, r'bApikeyIsactive'),
+        bApikeyIssigned: mapValueOfType<bool>(json, r'bApikeyIssigned'),
       );
     }
     return null;

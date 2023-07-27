@@ -14,6 +14,8 @@ class EzsignsignergroupResponse {
   /// Returns a new [EzsignsignergroupResponse] instance.
   EzsignsignergroupResponse({
     required this.pkiEzsignsignergroupID,
+    required this.objEzsignsignergroupDescription,
+    this.sEzsignsignergroupDescriptionX,
   });
 
   /// The unique ID of the Ezsignsignergroup
@@ -22,21 +24,42 @@ class EzsignsignergroupResponse {
   /// Maximum value: 65535
   int pkiEzsignsignergroupID;
 
+  MultilingualEzsignsignergroupDescription objEzsignsignergroupDescription;
+
+  /// The Description of the Ezsignsignergroup in the language of the requester
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEzsignsignergroupDescriptionX;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignsignergroupResponse &&
-     other.pkiEzsignsignergroupID == pkiEzsignsignergroupID;
+     other.pkiEzsignsignergroupID == pkiEzsignsignergroupID &&
+     other.objEzsignsignergroupDescription == objEzsignsignergroupDescription &&
+     other.sEzsignsignergroupDescriptionX == sEzsignsignergroupDescriptionX;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (pkiEzsignsignergroupID.hashCode);
+    (pkiEzsignsignergroupID.hashCode) +
+    (objEzsignsignergroupDescription.hashCode) +
+    (sEzsignsignergroupDescriptionX == null ? 0 : sEzsignsignergroupDescriptionX!.hashCode);
 
   @override
-  String toString() => 'EzsignsignergroupResponse[pkiEzsignsignergroupID=$pkiEzsignsignergroupID]';
+  String toString() => 'EzsignsignergroupResponse[pkiEzsignsignergroupID=$pkiEzsignsignergroupID, objEzsignsignergroupDescription=$objEzsignsignergroupDescription, sEzsignsignergroupDescriptionX=$sEzsignsignergroupDescriptionX]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiEzsignsignergroupID'] = this.pkiEzsignsignergroupID;
+      json[r'objEzsignsignergroupDescription'] = this.objEzsignsignergroupDescription;
+    if (this.sEzsignsignergroupDescriptionX != null) {
+      json[r'sEzsignsignergroupDescriptionX'] = this.sEzsignsignergroupDescriptionX;
+    } else {
+      json[r'sEzsignsignergroupDescriptionX'] = null;
+    }
     return json;
   }
 
@@ -60,6 +83,8 @@ class EzsignsignergroupResponse {
 
       return EzsignsignergroupResponse(
         pkiEzsignsignergroupID: mapValueOfType<int>(json, r'pkiEzsignsignergroupID')!,
+        objEzsignsignergroupDescription: MultilingualEzsignsignergroupDescription.fromJson(json[r'objEzsignsignergroupDescription'])!,
+        sEzsignsignergroupDescriptionX: mapValueOfType<String>(json, r'sEzsignsignergroupDescriptionX'),
       );
     }
     return null;
@@ -108,6 +133,7 @@ class EzsignsignergroupResponse {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'pkiEzsignsignergroupID',
+    'objEzsignsignergroupDescription',
   };
 }
 

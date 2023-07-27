@@ -20,7 +20,6 @@ class EzsignfoldersignerassociationResponseCompound {
     required this.tEzsignfoldersignerassociationMessage,
     this.objEzsignsignergroup,
     this.objUser,
-    this.objUsergroup,
     this.objEzsignsigner,
   });
 
@@ -65,14 +64,6 @@ class EzsignfoldersignerassociationResponseCompound {
   /// source code must fall back to having a nullable type.
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
-  UsergroupResponseCompound? objUsergroup;
-
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
   EzsignsignerResponseCompound? objEzsignsigner;
 
   @override
@@ -84,7 +75,6 @@ class EzsignfoldersignerassociationResponseCompound {
      other.tEzsignfoldersignerassociationMessage == tEzsignfoldersignerassociationMessage &&
      other.objEzsignsignergroup == objEzsignsignergroup &&
      other.objUser == objUser &&
-     other.objUsergroup == objUsergroup &&
      other.objEzsignsigner == objEzsignsigner;
 
   @override
@@ -97,11 +87,10 @@ class EzsignfoldersignerassociationResponseCompound {
     (tEzsignfoldersignerassociationMessage.hashCode) +
     (objEzsignsignergroup == null ? 0 : objEzsignsignergroup!.hashCode) +
     (objUser == null ? 0 : objUser!.hashCode) +
-    (objUsergroup == null ? 0 : objUsergroup!.hashCode) +
     (objEzsignsigner == null ? 0 : objEzsignsigner!.hashCode);
 
   @override
-  String toString() => 'EzsignfoldersignerassociationResponseCompound[pkiEzsignfoldersignerassociationID=$pkiEzsignfoldersignerassociationID, fkiEzsignfolderID=$fkiEzsignfolderID, bEzsignfoldersignerassociationDelayedsend=$bEzsignfoldersignerassociationDelayedsend, bEzsignfoldersignerassociationReceivecopy=$bEzsignfoldersignerassociationReceivecopy, tEzsignfoldersignerassociationMessage=$tEzsignfoldersignerassociationMessage, objEzsignsignergroup=$objEzsignsignergroup, objUser=$objUser, objUsergroup=$objUsergroup, objEzsignsigner=$objEzsignsigner]';
+  String toString() => 'EzsignfoldersignerassociationResponseCompound[pkiEzsignfoldersignerassociationID=$pkiEzsignfoldersignerassociationID, fkiEzsignfolderID=$fkiEzsignfolderID, bEzsignfoldersignerassociationDelayedsend=$bEzsignfoldersignerassociationDelayedsend, bEzsignfoldersignerassociationReceivecopy=$bEzsignfoldersignerassociationReceivecopy, tEzsignfoldersignerassociationMessage=$tEzsignfoldersignerassociationMessage, objEzsignsignergroup=$objEzsignsignergroup, objUser=$objUser, objEzsignsigner=$objEzsignsigner]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -119,11 +108,6 @@ class EzsignfoldersignerassociationResponseCompound {
       json[r'objUser'] = this.objUser;
     } else {
       json[r'objUser'] = null;
-    }
-    if (this.objUsergroup != null) {
-      json[r'objUsergroup'] = this.objUsergroup;
-    } else {
-      json[r'objUsergroup'] = null;
     }
     if (this.objEzsignsigner != null) {
       json[r'objEzsignsigner'] = this.objEzsignsigner;
@@ -159,7 +143,6 @@ class EzsignfoldersignerassociationResponseCompound {
         tEzsignfoldersignerassociationMessage: mapValueOfType<String>(json, r'tEzsignfoldersignerassociationMessage')!,
         objEzsignsignergroup: EzsignsignergroupResponseCompound.fromJson(json[r'objEzsignsignergroup']),
         objUser: EzsignfoldersignerassociationResponseCompoundUser.fromJson(json[r'objUser']),
-        objUsergroup: UsergroupResponseCompound.fromJson(json[r'objUsergroup']),
         objEzsignsigner: EzsignsignerResponseCompound.fromJson(json[r'objEzsignsigner']),
       );
     }

@@ -26,11 +26,6 @@ void main() {
       // TODO
     });
 
-    // UsergroupResponseCompound objUsergroup
-    test('to test the property `objUsergroup`', () async {
-      // TODO
-    });
-
     // EzsignsignerResponseCompound objEzsignsigner
     test('to test the property `objEzsignsigner`', () async {
       // TODO

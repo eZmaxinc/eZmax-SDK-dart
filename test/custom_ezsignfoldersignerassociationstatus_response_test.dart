@@ -34,6 +34,12 @@ void main() {
       // TODO
     });
 
+    // The description of the Ezsignsigner
+    // String sEzsignfoldersignerassociationstatusDescriptionX
+    test('to test the property `sEzsignfoldersignerassociationstatusDescriptionX`', () async {
+      // TODO
+    });
+
     // List<CustomEzsignsignaturestatusResponse> aObjEzsignsignaturestatus (default value: const [])
     test('to test the property `aObjEzsignsignaturestatus`', () async {
       // TODO

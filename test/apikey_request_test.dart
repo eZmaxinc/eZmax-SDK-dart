@@ -39,6 +39,12 @@ void main() {
       // TODO
     });
 
+    // Whether the apikey is signed or not
+    // bool bApikeyIssigned
+    test('to test the property `bApikeyIssigned`', () async {
+      // TODO
+    });
+
 
   });
 

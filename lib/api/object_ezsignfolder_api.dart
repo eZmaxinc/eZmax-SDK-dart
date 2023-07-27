@@ -762,6 +762,63 @@ class ObjectEzsignfolderApi {
     return null;
   }
 
+  /// Retrieve your own Ezsignfoldersignerassociations from an existing Ezsignfolder
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfolderID (required):
+  Future<Response> ezsignfolderGetEzsignfoldersignerassociationsmineV1WithHttpInfo(int pkiEzsignfolderID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociationsmine'
+      .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve your own Ezsignfoldersignerassociations from an existing Ezsignfolder
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfolderID (required):
+  Future<EzsignfolderGetEzsignfoldersignerassociationsmineV1Response?> ezsignfolderGetEzsignfoldersignerassociationsmineV1(int pkiEzsignfolderID,) async {
+    final response = await ezsignfolderGetEzsignfoldersignerassociationsmineV1WithHttpInfo(pkiEzsignfolderID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderGetEzsignfoldersignerassociationsmineV1Response',) as EzsignfolderGetEzsignfoldersignerassociationsmineV1Response;
+    
+    }
+    return null;
+  }
+
   /// Retrieve an existing Ezsignfolder's automatic Ezsignsignatures
   ///
   /// Return the Ezsignsignatures that can be signed by the current user at the current step in the process

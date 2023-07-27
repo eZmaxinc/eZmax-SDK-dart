@@ -33,15 +33,32 @@ void main() {
       // TODO
     });
 
-    // The secret token for the API key.  This will be returned only on creation.
-    // String sComputedToken
-    test('to test the property `sComputedToken`', () async {
+    // CustomContactNameResponse objContactName
+    test('to test the property `objContactName`', () async {
+      // TODO
+    });
+
+    // The Apikey for the API key.  This will be hidden if we are not creating or regenerating the Apikey.
+    // String sApikeyApikey
+    test('to test the property `sApikeyApikey`', () async {
+      // TODO
+    });
+
+    // The Secret for the API key.  This will be hidden if we are not creating or regenerating the Apikey.
+    // String sApikeySecret
+    test('to test the property `sApikeySecret`', () async {
       // TODO
     });
 
     // Whether the apikey is active or not
     // bool bApikeyIsactive
     test('to test the property `bApikeyIsactive`', () async {
+      // TODO
+    });
+
+    // Whether the apikey is signed or not
+    // bool bApikeyIssigned
+    test('to test the property `bApikeyIssigned`', () async {
       // TODO
     });
 

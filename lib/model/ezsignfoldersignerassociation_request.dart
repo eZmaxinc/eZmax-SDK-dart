@@ -15,7 +15,6 @@ class EzsignfoldersignerassociationRequest {
   EzsignfoldersignerassociationRequest({
     this.pkiEzsignfoldersignerassociationID,
     this.fkiUserID,
-    this.fkiUsergroupID,
     this.fkiEzsignsignergroupID,
     required this.fkiEzsignfolderID,
     this.bEzsignfoldersignerassociationReceivecopy,
@@ -43,18 +42,6 @@ class EzsignfoldersignerassociationRequest {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   int? fkiUserID;
-
-  /// The unique ID of the Usergroup
-  ///
-  /// Minimum value: 0
-  /// Maximum value: 255
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  int? fkiUsergroupID;
 
   /// The unique ID of the Ezsignsignergroup
   ///
@@ -95,7 +82,6 @@ class EzsignfoldersignerassociationRequest {
   bool operator ==(Object other) => identical(this, other) || other is EzsignfoldersignerassociationRequest &&
      other.pkiEzsignfoldersignerassociationID == pkiEzsignfoldersignerassociationID &&
      other.fkiUserID == fkiUserID &&
-     other.fkiUsergroupID == fkiUsergroupID &&
      other.fkiEzsignsignergroupID == fkiEzsignsignergroupID &&
      other.fkiEzsignfolderID == fkiEzsignfolderID &&
      other.bEzsignfoldersignerassociationReceivecopy == bEzsignfoldersignerassociationReceivecopy &&
@@ -106,14 +92,13 @@ class EzsignfoldersignerassociationRequest {
     // ignore: unnecessary_parenthesis
     (pkiEzsignfoldersignerassociationID == null ? 0 : pkiEzsignfoldersignerassociationID!.hashCode) +
     (fkiUserID == null ? 0 : fkiUserID!.hashCode) +
-    (fkiUsergroupID == null ? 0 : fkiUsergroupID!.hashCode) +
     (fkiEzsignsignergroupID == null ? 0 : fkiEzsignsignergroupID!.hashCode) +
     (fkiEzsignfolderID.hashCode) +
     (bEzsignfoldersignerassociationReceivecopy == null ? 0 : bEzsignfoldersignerassociationReceivecopy!.hashCode) +
     (tEzsignfoldersignerassociationMessage == null ? 0 : tEzsignfoldersignerassociationMessage!.hashCode);
 
   @override
-  String toString() => 'EzsignfoldersignerassociationRequest[pkiEzsignfoldersignerassociationID=$pkiEzsignfoldersignerassociationID, fkiUserID=$fkiUserID, fkiUsergroupID=$fkiUsergroupID, fkiEzsignsignergroupID=$fkiEzsignsignergroupID, fkiEzsignfolderID=$fkiEzsignfolderID, bEzsignfoldersignerassociationReceivecopy=$bEzsignfoldersignerassociationReceivecopy, tEzsignfoldersignerassociationMessage=$tEzsignfoldersignerassociationMessage]';
+  String toString() => 'EzsignfoldersignerassociationRequest[pkiEzsignfoldersignerassociationID=$pkiEzsignfoldersignerassociationID, fkiUserID=$fkiUserID, fkiEzsignsignergroupID=$fkiEzsignsignergroupID, fkiEzsignfolderID=$fkiEzsignfolderID, bEzsignfoldersignerassociationReceivecopy=$bEzsignfoldersignerassociationReceivecopy, tEzsignfoldersignerassociationMessage=$tEzsignfoldersignerassociationMessage]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -126,11 +111,6 @@ class EzsignfoldersignerassociationRequest {
       json[r'fkiUserID'] = this.fkiUserID;
     } else {
       json[r'fkiUserID'] = null;
-    }
-    if (this.fkiUsergroupID != null) {
-      json[r'fkiUsergroupID'] = this.fkiUsergroupID;
-    } else {
-      json[r'fkiUsergroupID'] = null;
     }
     if (this.fkiEzsignsignergroupID != null) {
       json[r'fkiEzsignsignergroupID'] = this.fkiEzsignsignergroupID;
@@ -172,7 +152,6 @@ class EzsignfoldersignerassociationRequest {
       return EzsignfoldersignerassociationRequest(
         pkiEzsignfoldersignerassociationID: mapValueOfType<int>(json, r'pkiEzsignfoldersignerassociationID'),
         fkiUserID: mapValueOfType<int>(json, r'fkiUserID'),
-        fkiUsergroupID: mapValueOfType<int>(json, r'fkiUsergroupID'),
         fkiEzsignsignergroupID: mapValueOfType<int>(json, r'fkiEzsignsignergroupID'),
         fkiEzsignfolderID: mapValueOfType<int>(json, r'fkiEzsignfolderID')!,
         bEzsignfoldersignerassociationReceivecopy: mapValueOfType<bool>(json, r'bEzsignfoldersignerassociationReceivecopy'),

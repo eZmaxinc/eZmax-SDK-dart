@@ -44,6 +44,22 @@ void main() {
       // TODO
     });
 
+    // Retrieve an existing Apikey's cors
+    //
+    //Future<ApikeyGetCorsV1Response> apikeyGetCorsV1(int pkiApikeyID) async
+    test('test apikeyGetCorsV1', () async {
+      // TODO
+    });
+
+    // Retrieve Apikey list
+    //
+    // Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---|
+    //
+    //Future<ApikeyGetListV1Response> apikeyGetListV1({ String eOrderBy, int iRowMax, int iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter }) async
+    test('test apikeyGetListV1', () async {
+      // TODO
+    });
+
     // Retrieve an existing Apikey
     //
     // 
@@ -64,6 +80,15 @@ void main() {
     //
     //Future<ApikeyGetSubnetsV1Response> apikeyGetSubnetsV1(int pkiApikeyID) async
     test('test apikeyGetSubnetsV1', () async {
+      // TODO
+    });
+
+    // Regenerate the Apikey
+    //
+    // 
+    //
+    //Future<ApikeyRegenerateV1Response> apikeyRegenerateV1(int pkiApikeyID, ApikeyRegenerateV1Request apikeyRegenerateV1Request) async
+    test('test apikeyRegenerateV1', () async {
       // TODO
     });
 

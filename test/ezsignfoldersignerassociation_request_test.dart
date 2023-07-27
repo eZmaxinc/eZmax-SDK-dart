@@ -28,12 +28,6 @@ void main() {
       // TODO
     });
 
-    // The unique ID of the Usergroup
-    // int fkiUsergroupID
-    test('to test the property `fkiUsergroupID`', () async {
-      // TODO
-    });
-
     // The unique ID of the Ezsignsignergroup
     // int fkiEzsignsignergroupID
     test('to test the property `fkiEzsignsignergroupID`', () async {
