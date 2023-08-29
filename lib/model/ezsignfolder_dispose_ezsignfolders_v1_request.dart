@@ -20,7 +20,7 @@ class EzsignfolderDisposeEzsignfoldersV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfolderDisposeEzsignfoldersV1Request &&
-     other.aPkiEzsignfolderID == aPkiEzsignfolderID;
+    _deepEquality.equals(other.aPkiEzsignfolderID, aPkiEzsignfolderID);
 
   @override
   int get hashCode =>
@@ -55,8 +55,8 @@ class EzsignfolderDisposeEzsignfoldersV1Request {
       }());
 
       return EzsignfolderDisposeEzsignfoldersV1Request(
-        aPkiEzsignfolderID: json[r'a_pkiEzsignfolderID'] is List
-            ? (json[r'a_pkiEzsignfolderID'] as List).cast<int>()
+        aPkiEzsignfolderID: json[r'a_pkiEzsignfolderID'] is Iterable
+            ? (json[r'a_pkiEzsignfolderID'] as Iterable).cast<int>().toList(growable: false)
             : const [],
       );
     }

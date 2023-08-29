@@ -55,13 +55,13 @@ class ContactRequestCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ContactRequestCompound &&
-     other.fkiContacttitleID == fkiContacttitleID &&
-     other.fkiLanguageID == fkiLanguageID &&
-     other.sContactFirstname == sContactFirstname &&
-     other.sContactLastname == sContactLastname &&
-     other.sContactCompany == sContactCompany &&
-     other.dtContactBirthdate == dtContactBirthdate &&
-     other.objContactinformations == objContactinformations;
+    other.fkiContacttitleID == fkiContacttitleID &&
+    other.fkiLanguageID == fkiLanguageID &&
+    other.sContactFirstname == sContactFirstname &&
+    other.sContactLastname == sContactLastname &&
+    other.sContactCompany == sContactCompany &&
+    other.dtContactBirthdate == dtContactBirthdate &&
+    other.objContactinformations == objContactinformations;
 
   @override
   int get hashCode =>

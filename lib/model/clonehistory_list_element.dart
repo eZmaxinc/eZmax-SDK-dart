@@ -74,17 +74,17 @@ class ClonehistoryListElement {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ClonehistoryListElement &&
-     other.pkiClonehistoryID == pkiClonehistoryID &&
-     other.fkiUserIDCloning == fkiUserIDCloning &&
-     other.fkiUserIDCloned == fkiUserIDCloned &&
-     other.dtClonehistoryFirsthit == dtClonehistoryFirsthit &&
-     other.dtClonehistoryLasthit == dtClonehistoryLasthit &&
-     other.sUserLoginnameCloning == sUserLoginnameCloning &&
-     other.sUserFirstnameCloning == sUserFirstnameCloning &&
-     other.sUserLastnameCloning == sUserLastnameCloning &&
-     other.sUserLoginnameCloned == sUserLoginnameCloned &&
-     other.sUserFirstnameCloned == sUserFirstnameCloned &&
-     other.sUserLastnameCloned == sUserLastnameCloned;
+    other.pkiClonehistoryID == pkiClonehistoryID &&
+    other.fkiUserIDCloning == fkiUserIDCloning &&
+    other.fkiUserIDCloned == fkiUserIDCloned &&
+    other.dtClonehistoryFirsthit == dtClonehistoryFirsthit &&
+    other.dtClonehistoryLasthit == dtClonehistoryLasthit &&
+    other.sUserLoginnameCloning == sUserLoginnameCloning &&
+    other.sUserFirstnameCloning == sUserFirstnameCloning &&
+    other.sUserLastnameCloning == sUserLastnameCloning &&
+    other.sUserLoginnameCloned == sUserLoginnameCloned &&
+    other.sUserFirstnameCloned == sUserFirstnameCloned &&
+    other.sUserLastnameCloned == sUserLastnameCloned;
 
   @override
   int get hashCode =>

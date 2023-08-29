@@ -43,11 +43,11 @@ class GlobalEzmaxcustomerGetConfigurationV1Response {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is GlobalEzmaxcustomerGetConfigurationV1Response &&
-     other.sInfrastructureregionCode == sInfrastructureregionCode &&
-     other.sInfrastructureregionCodeWeb == sInfrastructureregionCodeWeb &&
-     other.sInfrastructureenvironmenttypeDescription == sInfrastructureenvironmenttypeDescription &&
-     other.sCognitoClientIDExternal == sCognitoClientIDExternal &&
-     other.sCognitoClientIDEzmaxpublic == sCognitoClientIDEzmaxpublic;
+    other.sInfrastructureregionCode == sInfrastructureregionCode &&
+    other.sInfrastructureregionCodeWeb == sInfrastructureregionCodeWeb &&
+    other.sInfrastructureenvironmenttypeDescription == sInfrastructureenvironmenttypeDescription &&
+    other.sCognitoClientIDExternal == sCognitoClientIDExternal &&
+    other.sCognitoClientIDEzmaxpublic == sCognitoClientIDEzmaxpublic;
 
   @override
   int get hashCode =>

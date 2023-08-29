@@ -26,6 +26,7 @@ class EzsigntemplateformfieldgroupRequestCompound {
     this.iEzsigntemplateformfieldgroupMaxlength,
     this.bEzsigntemplateformfieldgroupEncrypted,
     this.sEzsigntemplateformfieldgroupRegexp,
+    this.eEzsigntemplateformfieldgroupTextvalidation,
     this.tEzsigntemplateformfieldgroupTooltip,
     this.eEzsigntemplateformfieldgroupTooltipposition,
     this.aObjEzsigntemplateformfieldgroupsigner = const [],
@@ -80,6 +81,7 @@ class EzsigntemplateformfieldgroupRequestCompound {
   /// The maximum length for the value in the Ezsigntemplateformfieldgroup  This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea**
   ///
   /// Minimum value: 0
+  /// Maximum value: 65535
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -106,6 +108,14 @@ class EzsigntemplateformfieldgroupRequestCompound {
   ///
   String? sEzsigntemplateformfieldgroupRegexp;
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  EnumTextvalidation? eEzsigntemplateformfieldgroupTextvalidation;
+
   /// A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplateformfieldgroup
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -131,24 +141,25 @@ class EzsigntemplateformfieldgroupRequestCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplateformfieldgroupRequestCompound &&
-     other.pkiEzsigntemplateformfieldgroupID == pkiEzsigntemplateformfieldgroupID &&
-     other.fkiEzsigntemplatedocumentID == fkiEzsigntemplatedocumentID &&
-     other.eEzsigntemplateformfieldgroupType == eEzsigntemplateformfieldgroupType &&
-     other.eEzsigntemplateformfieldgroupSignerrequirement == eEzsigntemplateformfieldgroupSignerrequirement &&
-     other.sEzsigntemplateformfieldgroupLabel == sEzsigntemplateformfieldgroupLabel &&
-     other.iEzsigntemplateformfieldgroupStep == iEzsigntemplateformfieldgroupStep &&
-     other.sEzsigntemplateformfieldgroupDefaultvalue == sEzsigntemplateformfieldgroupDefaultvalue &&
-     other.iEzsigntemplateformfieldgroupFilledmin == iEzsigntemplateformfieldgroupFilledmin &&
-     other.iEzsigntemplateformfieldgroupFilledmax == iEzsigntemplateformfieldgroupFilledmax &&
-     other.bEzsigntemplateformfieldgroupReadonly == bEzsigntemplateformfieldgroupReadonly &&
-     other.iEzsigntemplateformfieldgroupMaxlength == iEzsigntemplateformfieldgroupMaxlength &&
-     other.bEzsigntemplateformfieldgroupEncrypted == bEzsigntemplateformfieldgroupEncrypted &&
-     other.sEzsigntemplateformfieldgroupRegexp == sEzsigntemplateformfieldgroupRegexp &&
-     other.tEzsigntemplateformfieldgroupTooltip == tEzsigntemplateformfieldgroupTooltip &&
-     other.eEzsigntemplateformfieldgroupTooltipposition == eEzsigntemplateformfieldgroupTooltipposition &&
-     other.aObjEzsigntemplateformfieldgroupsigner == aObjEzsigntemplateformfieldgroupsigner &&
-     other.aObjDropdownElement == aObjDropdownElement &&
-     other.aObjEzsigntemplateformfield == aObjEzsigntemplateformfield;
+    other.pkiEzsigntemplateformfieldgroupID == pkiEzsigntemplateformfieldgroupID &&
+    other.fkiEzsigntemplatedocumentID == fkiEzsigntemplatedocumentID &&
+    other.eEzsigntemplateformfieldgroupType == eEzsigntemplateformfieldgroupType &&
+    other.eEzsigntemplateformfieldgroupSignerrequirement == eEzsigntemplateformfieldgroupSignerrequirement &&
+    other.sEzsigntemplateformfieldgroupLabel == sEzsigntemplateformfieldgroupLabel &&
+    other.iEzsigntemplateformfieldgroupStep == iEzsigntemplateformfieldgroupStep &&
+    other.sEzsigntemplateformfieldgroupDefaultvalue == sEzsigntemplateformfieldgroupDefaultvalue &&
+    other.iEzsigntemplateformfieldgroupFilledmin == iEzsigntemplateformfieldgroupFilledmin &&
+    other.iEzsigntemplateformfieldgroupFilledmax == iEzsigntemplateformfieldgroupFilledmax &&
+    other.bEzsigntemplateformfieldgroupReadonly == bEzsigntemplateformfieldgroupReadonly &&
+    other.iEzsigntemplateformfieldgroupMaxlength == iEzsigntemplateformfieldgroupMaxlength &&
+    other.bEzsigntemplateformfieldgroupEncrypted == bEzsigntemplateformfieldgroupEncrypted &&
+    other.sEzsigntemplateformfieldgroupRegexp == sEzsigntemplateformfieldgroupRegexp &&
+    other.eEzsigntemplateformfieldgroupTextvalidation == eEzsigntemplateformfieldgroupTextvalidation &&
+    other.tEzsigntemplateformfieldgroupTooltip == tEzsigntemplateformfieldgroupTooltip &&
+    other.eEzsigntemplateformfieldgroupTooltipposition == eEzsigntemplateformfieldgroupTooltipposition &&
+    _deepEquality.equals(other.aObjEzsigntemplateformfieldgroupsigner, aObjEzsigntemplateformfieldgroupsigner) &&
+    _deepEquality.equals(other.aObjDropdownElement, aObjDropdownElement) &&
+    _deepEquality.equals(other.aObjEzsigntemplateformfield, aObjEzsigntemplateformfield);
 
   @override
   int get hashCode =>
@@ -166,6 +177,7 @@ class EzsigntemplateformfieldgroupRequestCompound {
     (iEzsigntemplateformfieldgroupMaxlength == null ? 0 : iEzsigntemplateformfieldgroupMaxlength!.hashCode) +
     (bEzsigntemplateformfieldgroupEncrypted == null ? 0 : bEzsigntemplateformfieldgroupEncrypted!.hashCode) +
     (sEzsigntemplateformfieldgroupRegexp == null ? 0 : sEzsigntemplateformfieldgroupRegexp!.hashCode) +
+    (eEzsigntemplateformfieldgroupTextvalidation == null ? 0 : eEzsigntemplateformfieldgroupTextvalidation!.hashCode) +
     (tEzsigntemplateformfieldgroupTooltip == null ? 0 : tEzsigntemplateformfieldgroupTooltip!.hashCode) +
     (eEzsigntemplateformfieldgroupTooltipposition == null ? 0 : eEzsigntemplateformfieldgroupTooltipposition!.hashCode) +
     (aObjEzsigntemplateformfieldgroupsigner.hashCode) +
@@ -173,7 +185,7 @@ class EzsigntemplateformfieldgroupRequestCompound {
     (aObjEzsigntemplateformfield.hashCode);
 
   @override
-  String toString() => 'EzsigntemplateformfieldgroupRequestCompound[pkiEzsigntemplateformfieldgroupID=$pkiEzsigntemplateformfieldgroupID, fkiEzsigntemplatedocumentID=$fkiEzsigntemplatedocumentID, eEzsigntemplateformfieldgroupType=$eEzsigntemplateformfieldgroupType, eEzsigntemplateformfieldgroupSignerrequirement=$eEzsigntemplateformfieldgroupSignerrequirement, sEzsigntemplateformfieldgroupLabel=$sEzsigntemplateformfieldgroupLabel, iEzsigntemplateformfieldgroupStep=$iEzsigntemplateformfieldgroupStep, sEzsigntemplateformfieldgroupDefaultvalue=$sEzsigntemplateformfieldgroupDefaultvalue, iEzsigntemplateformfieldgroupFilledmin=$iEzsigntemplateformfieldgroupFilledmin, iEzsigntemplateformfieldgroupFilledmax=$iEzsigntemplateformfieldgroupFilledmax, bEzsigntemplateformfieldgroupReadonly=$bEzsigntemplateformfieldgroupReadonly, iEzsigntemplateformfieldgroupMaxlength=$iEzsigntemplateformfieldgroupMaxlength, bEzsigntemplateformfieldgroupEncrypted=$bEzsigntemplateformfieldgroupEncrypted, sEzsigntemplateformfieldgroupRegexp=$sEzsigntemplateformfieldgroupRegexp, tEzsigntemplateformfieldgroupTooltip=$tEzsigntemplateformfieldgroupTooltip, eEzsigntemplateformfieldgroupTooltipposition=$eEzsigntemplateformfieldgroupTooltipposition, aObjEzsigntemplateformfieldgroupsigner=$aObjEzsigntemplateformfieldgroupsigner, aObjDropdownElement=$aObjDropdownElement, aObjEzsigntemplateformfield=$aObjEzsigntemplateformfield]';
+  String toString() => 'EzsigntemplateformfieldgroupRequestCompound[pkiEzsigntemplateformfieldgroupID=$pkiEzsigntemplateformfieldgroupID, fkiEzsigntemplatedocumentID=$fkiEzsigntemplatedocumentID, eEzsigntemplateformfieldgroupType=$eEzsigntemplateformfieldgroupType, eEzsigntemplateformfieldgroupSignerrequirement=$eEzsigntemplateformfieldgroupSignerrequirement, sEzsigntemplateformfieldgroupLabel=$sEzsigntemplateformfieldgroupLabel, iEzsigntemplateformfieldgroupStep=$iEzsigntemplateformfieldgroupStep, sEzsigntemplateformfieldgroupDefaultvalue=$sEzsigntemplateformfieldgroupDefaultvalue, iEzsigntemplateformfieldgroupFilledmin=$iEzsigntemplateformfieldgroupFilledmin, iEzsigntemplateformfieldgroupFilledmax=$iEzsigntemplateformfieldgroupFilledmax, bEzsigntemplateformfieldgroupReadonly=$bEzsigntemplateformfieldgroupReadonly, iEzsigntemplateformfieldgroupMaxlength=$iEzsigntemplateformfieldgroupMaxlength, bEzsigntemplateformfieldgroupEncrypted=$bEzsigntemplateformfieldgroupEncrypted, sEzsigntemplateformfieldgroupRegexp=$sEzsigntemplateformfieldgroupRegexp, eEzsigntemplateformfieldgroupTextvalidation=$eEzsigntemplateformfieldgroupTextvalidation, tEzsigntemplateformfieldgroupTooltip=$tEzsigntemplateformfieldgroupTooltip, eEzsigntemplateformfieldgroupTooltipposition=$eEzsigntemplateformfieldgroupTooltipposition, aObjEzsigntemplateformfieldgroupsigner=$aObjEzsigntemplateformfieldgroupsigner, aObjDropdownElement=$aObjDropdownElement, aObjEzsigntemplateformfield=$aObjEzsigntemplateformfield]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -205,6 +217,11 @@ class EzsigntemplateformfieldgroupRequestCompound {
       json[r'sEzsigntemplateformfieldgroupRegexp'] = this.sEzsigntemplateformfieldgroupRegexp;
     } else {
       json[r'sEzsigntemplateformfieldgroupRegexp'] = null;
+    }
+    if (this.eEzsigntemplateformfieldgroupTextvalidation != null) {
+      json[r'eEzsigntemplateformfieldgroupTextvalidation'] = this.eEzsigntemplateformfieldgroupTextvalidation;
+    } else {
+      json[r'eEzsigntemplateformfieldgroupTextvalidation'] = null;
     }
     if (this.tEzsigntemplateformfieldgroupTooltip != null) {
       json[r'tEzsigntemplateformfieldgroupTooltip'] = this.tEzsigntemplateformfieldgroupTooltip;
@@ -254,6 +271,7 @@ class EzsigntemplateformfieldgroupRequestCompound {
         iEzsigntemplateformfieldgroupMaxlength: mapValueOfType<int>(json, r'iEzsigntemplateformfieldgroupMaxlength'),
         bEzsigntemplateformfieldgroupEncrypted: mapValueOfType<bool>(json, r'bEzsigntemplateformfieldgroupEncrypted'),
         sEzsigntemplateformfieldgroupRegexp: mapValueOfType<String>(json, r'sEzsigntemplateformfieldgroupRegexp'),
+        eEzsigntemplateformfieldgroupTextvalidation: EnumTextvalidation.fromJson(json[r'eEzsigntemplateformfieldgroupTextvalidation']),
         tEzsigntemplateformfieldgroupTooltip: mapValueOfType<String>(json, r'tEzsigntemplateformfieldgroupTooltip'),
         eEzsigntemplateformfieldgroupTooltipposition: FieldEEzsigntemplateformfieldgroupTooltipposition.fromJson(json[r'eEzsigntemplateformfieldgroupTooltipposition']),
         aObjEzsigntemplateformfieldgroupsigner: EzsigntemplateformfieldgroupsignerRequestCompound.listFromJson(json[r'a_objEzsigntemplateformfieldgroupsigner']),

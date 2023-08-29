@@ -20,7 +20,7 @@ class VariableexpenseGetObjectV2ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is VariableexpenseGetObjectV2ResponseMPayload &&
-     other.objVariableexpense == objVariableexpense;
+    other.objVariableexpense == objVariableexpense;
 
   @override
   int get hashCode =>

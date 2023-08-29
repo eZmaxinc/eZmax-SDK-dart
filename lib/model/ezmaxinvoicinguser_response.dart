@@ -74,15 +74,15 @@ class EzmaxinvoicinguserResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzmaxinvoicinguserResponse &&
-     other.pkiEzmaxinvoicinguserID == pkiEzmaxinvoicinguserID &&
-     other.fkiEzmaxinvoicingID == fkiEzmaxinvoicingID &&
-     other.fkiBillingentityinternalID == fkiBillingentityinternalID &&
-     other.sBillingentityinternalDescriptionX == sBillingentityinternalDescriptionX &&
-     other.fkiUserID == fkiUserID &&
-     other.iEzmaxinvoicinguserEzsigndocument == iEzmaxinvoicinguserEzsigndocument &&
-     other.bEzmaxinvoicinguserEzsignaccount == bEzmaxinvoicinguserEzsignaccount &&
-     other.bEzmaxinvoicinguserBillableezsign == bEzmaxinvoicinguserBillableezsign &&
-     other.eEzmaxinvoicinguserVariationezsign == eEzmaxinvoicinguserVariationezsign;
+    other.pkiEzmaxinvoicinguserID == pkiEzmaxinvoicinguserID &&
+    other.fkiEzmaxinvoicingID == fkiEzmaxinvoicingID &&
+    other.fkiBillingentityinternalID == fkiBillingentityinternalID &&
+    other.sBillingentityinternalDescriptionX == sBillingentityinternalDescriptionX &&
+    other.fkiUserID == fkiUserID &&
+    other.iEzmaxinvoicinguserEzsigndocument == iEzmaxinvoicinguserEzsigndocument &&
+    other.bEzmaxinvoicinguserEzsignaccount == bEzmaxinvoicinguserEzsignaccount &&
+    other.bEzmaxinvoicinguserBillableezsign == bEzmaxinvoicinguserBillableezsign &&
+    other.eEzmaxinvoicinguserVariationezsign == eEzmaxinvoicinguserVariationezsign;
 
   @override
   int get hashCode =>

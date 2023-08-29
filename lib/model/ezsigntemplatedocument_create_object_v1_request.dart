@@ -20,7 +20,7 @@ class EzsigntemplatedocumentCreateObjectV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplatedocumentCreateObjectV1Request &&
-     other.aObjEzsigntemplatedocument == aObjEzsigntemplatedocument;
+    _deepEquality.equals(other.aObjEzsigntemplatedocument, aObjEzsigntemplatedocument);
 
   @override
   int get hashCode =>

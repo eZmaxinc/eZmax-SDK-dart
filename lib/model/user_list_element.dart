@@ -62,16 +62,16 @@ class UserListElement {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is UserListElement &&
-     other.pkiUserID == pkiUserID &&
-     other.sUserFirstname == sUserFirstname &&
-     other.sUserLastname == sUserLastname &&
-     other.sUserLoginname == sUserLoginname &&
-     other.bUserIsactive == bUserIsactive &&
-     other.eUserType == eUserType &&
-     other.eUserOrigin == eUserOrigin &&
-     other.eUserEzsignaccess == eUserEzsignaccess &&
-     other.dtUserEzsignprepaidexpiration == dtUserEzsignprepaidexpiration &&
-     other.sEmailAddress == sEmailAddress;
+    other.pkiUserID == pkiUserID &&
+    other.sUserFirstname == sUserFirstname &&
+    other.sUserLastname == sUserLastname &&
+    other.sUserLoginname == sUserLoginname &&
+    other.bUserIsactive == bUserIsactive &&
+    other.eUserType == eUserType &&
+    other.eUserOrigin == eUserOrigin &&
+    other.eUserEzsignaccess == eUserEzsignaccess &&
+    other.dtUserEzsignprepaidexpiration == dtUserEzsignprepaidexpiration &&
+    other.sEmailAddress == sEmailAddress;
 
   @override
   int get hashCode =>

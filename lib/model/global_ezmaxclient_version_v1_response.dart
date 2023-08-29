@@ -21,7 +21,7 @@ class GlobalEzmaxclientVersionV1Response {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is GlobalEzmaxclientVersionV1Response &&
-     other.sEzmaxclientVersion == sEzmaxclientVersion;
+    other.sEzmaxclientVersion == sEzmaxclientVersion;
 
   @override
   int get hashCode =>

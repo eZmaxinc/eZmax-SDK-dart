@@ -16,11 +16,6 @@ void main() {
   // final instance = WebhookGetListV1ResponseMPayload();
 
   group('test WebhookGetListV1ResponseMPayload', () {
-    // List<WebhookListElement> aObjWebhook (default value: const [])
-    test('to test the property `aObjWebhook`', () async {
-      // TODO
-    });
-
     // The number of rows returned
     // int iRowReturned
     test('to test the property `iRowReturned`', () async {
@@ -30,6 +25,11 @@ void main() {
     // The number of rows matching your filters (if any) or the total number of rows
     // int iRowFiltered
     test('to test the property `iRowFiltered`', () async {
+      // TODO
+    });
+
+    // List<WebhookListElement> aObjWebhook (default value: const [])
+    test('to test the property `aObjWebhook`', () async {
       // TODO
     });
 

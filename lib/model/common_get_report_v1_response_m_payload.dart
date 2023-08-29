@@ -20,7 +20,7 @@ class CommonGetReportV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonGetReportV1ResponseMPayload &&
-     other.objReportgroup == objReportgroup;
+    other.objReportgroup == objReportgroup;
 
   @override
   int get hashCode =>

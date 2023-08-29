@@ -66,17 +66,17 @@ class EzsigntemplatepackageResponseCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplatepackageResponseCompound &&
-     other.pkiEzsigntemplatepackageID == pkiEzsigntemplatepackageID &&
-     other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
-     other.fkiLanguageID == fkiLanguageID &&
-     other.sLanguageNameX == sLanguageNameX &&
-     other.sEzsigntemplatepackageDescription == sEzsigntemplatepackageDescription &&
-     other.bEzsigntemplatepackageAdminonly == bEzsigntemplatepackageAdminonly &&
-     other.bEzsigntemplatepackageNeedvalidation == bEzsigntemplatepackageNeedvalidation &&
-     other.bEzsigntemplatepackageIsactive == bEzsigntemplatepackageIsactive &&
-     other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
-     other.aObjEzsigntemplatepackagesigner == aObjEzsigntemplatepackagesigner &&
-     other.aObjEzsigntemplatepackagemembership == aObjEzsigntemplatepackagemembership;
+    other.pkiEzsigntemplatepackageID == pkiEzsigntemplatepackageID &&
+    other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
+    other.fkiLanguageID == fkiLanguageID &&
+    other.sLanguageNameX == sLanguageNameX &&
+    other.sEzsigntemplatepackageDescription == sEzsigntemplatepackageDescription &&
+    other.bEzsigntemplatepackageAdminonly == bEzsigntemplatepackageAdminonly &&
+    other.bEzsigntemplatepackageNeedvalidation == bEzsigntemplatepackageNeedvalidation &&
+    other.bEzsigntemplatepackageIsactive == bEzsigntemplatepackageIsactive &&
+    other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
+    _deepEquality.equals(other.aObjEzsigntemplatepackagesigner, aObjEzsigntemplatepackagesigner) &&
+    _deepEquality.equals(other.aObjEzsigntemplatepackagemembership, aObjEzsigntemplatepackagemembership);
 
   @override
   int get hashCode =>

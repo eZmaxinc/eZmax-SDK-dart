@@ -16,11 +16,6 @@ void main() {
   // final instance = BrandingGetObjectV2Response();
 
   group('test BrandingGetObjectV2Response', () {
-    // BrandingGetObjectV2ResponseMPayload mPayload
-    test('to test the property `mPayload`', () async {
-      // TODO
-    });
-
     // CommonResponseObjDebugPayload objDebugPayload
     test('to test the property `objDebugPayload`', () async {
       // TODO
@@ -28,6 +23,11 @@ void main() {
 
     // CommonResponseObjDebug objDebug
     test('to test the property `objDebug`', () async {
+      // TODO
+    });
+
+    // BrandingGetObjectV2ResponseMPayload mPayload
+    test('to test the property `mPayload`', () async {
       // TODO
     });
 

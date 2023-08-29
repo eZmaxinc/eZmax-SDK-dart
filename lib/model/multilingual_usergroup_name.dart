@@ -37,8 +37,8 @@ class MultilingualUsergroupName {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is MultilingualUsergroupName &&
-     other.sUsergroupName1 == sUsergroupName1 &&
-     other.sUsergroupName2 == sUsergroupName2;
+    other.sUsergroupName1 == sUsergroupName1 &&
+    other.sUsergroupName2 == sUsergroupName2;
 
   @override
   int get hashCode =>

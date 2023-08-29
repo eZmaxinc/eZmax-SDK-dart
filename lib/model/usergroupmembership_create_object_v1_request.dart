@@ -20,7 +20,7 @@ class UsergroupmembershipCreateObjectV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is UsergroupmembershipCreateObjectV1Request &&
-     other.aObjUsergroupmembership == aObjUsergroupmembership;
+    _deepEquality.equals(other.aObjUsergroupmembership, aObjUsergroupmembership);
 
   @override
   int get hashCode =>

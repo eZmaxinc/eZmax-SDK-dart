@@ -20,7 +20,7 @@ class EzsignfoldersignerassociationCreateObjectV2Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfoldersignerassociationCreateObjectV2Request &&
-     other.aObjEzsignfoldersignerassociation == aObjEzsignfoldersignerassociation;
+    _deepEquality.equals(other.aObjEzsignfoldersignerassociation, aObjEzsignfoldersignerassociation);
 
   @override
   int get hashCode =>

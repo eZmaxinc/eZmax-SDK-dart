@@ -55,13 +55,13 @@ class EzsignbulksendCreateEzsignbulksendtransmissionV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignbulksendCreateEzsignbulksendtransmissionV1Request &&
-     other.fkiUserlogintypeID == fkiUserlogintypeID &&
-     other.fkiEzsigntsarequirementID == fkiEzsigntsarequirementID &&
-     other.sEzsignbulksendtransmissionDescription == sEzsignbulksendtransmissionDescription &&
-     other.dtEzsigndocumentDuedate == dtEzsigndocumentDuedate &&
-     other.eEzsignfolderSendreminderfrequency == eEzsignfolderSendreminderfrequency &&
-     other.tExtraMessage == tExtraMessage &&
-     other.sCsvBase64 == sCsvBase64;
+    other.fkiUserlogintypeID == fkiUserlogintypeID &&
+    other.fkiEzsigntsarequirementID == fkiEzsigntsarequirementID &&
+    other.sEzsignbulksendtransmissionDescription == sEzsignbulksendtransmissionDescription &&
+    other.dtEzsigndocumentDuedate == dtEzsigndocumentDuedate &&
+    other.eEzsignfolderSendreminderfrequency == eEzsignfolderSendreminderfrequency &&
+    other.tExtraMessage == tExtraMessage &&
+    other.sCsvBase64 == sCsvBase64;
 
   @override
   int get hashCode =>

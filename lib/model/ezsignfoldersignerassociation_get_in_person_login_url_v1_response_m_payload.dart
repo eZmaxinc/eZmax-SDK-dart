@@ -21,7 +21,7 @@ class EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload &&
-     other.sLoginUrl == sLoginUrl;
+    other.sLoginUrl == sLoginUrl;
 
   @override
   int get hashCode =>

@@ -16,11 +16,6 @@ void main() {
   // final instance = EzsigntemplateGetListV1Response();
 
   group('test EzsigntemplateGetListV1Response', () {
-    // EzsigntemplateGetListV1ResponseMPayload mPayload
-    test('to test the property `mPayload`', () async {
-      // TODO
-    });
-
     // CommonResponseObjDebugPayloadGetList objDebugPayload
     test('to test the property `objDebugPayload`', () async {
       // TODO
@@ -28,6 +23,11 @@ void main() {
 
     // CommonResponseObjDebug objDebug
     test('to test the property `objDebug`', () async {
+      // TODO
+    });
+
+    // EzsigntemplateGetListV1ResponseMPayload mPayload
+    test('to test the property `mPayload`', () async {
       // TODO
     });
 

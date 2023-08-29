@@ -87,16 +87,16 @@ class EzsignformfieldResponseCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignformfieldResponseCompound &&
-     other.pkiEzsignformfieldID == pkiEzsignformfieldID &&
-     other.iEzsignpagePagenumber == iEzsignpagePagenumber &&
-     other.sEzsignformfieldLabel == sEzsignformfieldLabel &&
-     other.sEzsignformfieldValue == sEzsignformfieldValue &&
-     other.iEzsignformfieldX == iEzsignformfieldX &&
-     other.iEzsignformfieldY == iEzsignformfieldY &&
-     other.iEzsignformfieldWidth == iEzsignformfieldWidth &&
-     other.iEzsignformfieldHeight == iEzsignformfieldHeight &&
-     other.bEzsignformfieldSelected == bEzsignformfieldSelected &&
-     other.sEzsignformfieldEnteredvalue == sEzsignformfieldEnteredvalue;
+    other.pkiEzsignformfieldID == pkiEzsignformfieldID &&
+    other.iEzsignpagePagenumber == iEzsignpagePagenumber &&
+    other.sEzsignformfieldLabel == sEzsignformfieldLabel &&
+    other.sEzsignformfieldValue == sEzsignformfieldValue &&
+    other.iEzsignformfieldX == iEzsignformfieldX &&
+    other.iEzsignformfieldY == iEzsignformfieldY &&
+    other.iEzsignformfieldWidth == iEzsignformfieldWidth &&
+    other.iEzsignformfieldHeight == iEzsignformfieldHeight &&
+    other.bEzsignformfieldSelected == bEzsignformfieldSelected &&
+    other.sEzsignformfieldEnteredvalue == sEzsignformfieldEnteredvalue;
 
   @override
   int get hashCode =>

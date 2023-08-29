@@ -84,15 +84,15 @@ class EzmaxinvoicingcommissionResponseCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzmaxinvoicingcommissionResponseCompound &&
-     other.pkiEzmaxinvoicingcommissionID == pkiEzmaxinvoicingcommissionID &&
-     other.fkiEzmaxinvoicingsummaryglobalID == fkiEzmaxinvoicingsummaryglobalID &&
-     other.fkiEzmaxpartnerID == fkiEzmaxpartnerID &&
-     other.fkiEzmaxrepresentativeID == fkiEzmaxrepresentativeID &&
-     other.dtEzmaxinvoicingcommissionStart == dtEzmaxinvoicingcommissionStart &&
-     other.dtEzmaxinvoicingcommissionEnd == dtEzmaxinvoicingcommissionEnd &&
-     other.iEzmaxinvoicingcommissionDays == iEzmaxinvoicingcommissionDays &&
-     other.dEzmaxinvoicingcommissionAmount == dEzmaxinvoicingcommissionAmount &&
-     other.objContactName == objContactName;
+    other.pkiEzmaxinvoicingcommissionID == pkiEzmaxinvoicingcommissionID &&
+    other.fkiEzmaxinvoicingsummaryglobalID == fkiEzmaxinvoicingsummaryglobalID &&
+    other.fkiEzmaxpartnerID == fkiEzmaxpartnerID &&
+    other.fkiEzmaxrepresentativeID == fkiEzmaxrepresentativeID &&
+    other.dtEzmaxinvoicingcommissionStart == dtEzmaxinvoicingcommissionStart &&
+    other.dtEzmaxinvoicingcommissionEnd == dtEzmaxinvoicingcommissionEnd &&
+    other.iEzmaxinvoicingcommissionDays == iEzmaxinvoicingcommissionDays &&
+    other.dEzmaxinvoicingcommissionAmount == dEzmaxinvoicingcommissionAmount &&
+    other.objContactName == objContactName;
 
   @override
   int get hashCode =>

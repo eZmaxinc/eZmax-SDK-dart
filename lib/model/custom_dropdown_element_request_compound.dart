@@ -25,8 +25,8 @@ class CustomDropdownElementRequestCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomDropdownElementRequestCompound &&
-     other.sLabel == sLabel &&
-     other.sValue == sValue;
+    other.sLabel == sLabel &&
+    other.sValue == sValue;
 
   @override
   int get hashCode =>

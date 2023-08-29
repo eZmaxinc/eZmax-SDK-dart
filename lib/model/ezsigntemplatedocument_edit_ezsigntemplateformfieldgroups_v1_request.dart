@@ -20,7 +20,7 @@ class EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request &&
-     other.aObjEzsigntemplateformfieldgroup == aObjEzsigntemplateformfieldgroup;
+    _deepEquality.equals(other.aObjEzsigntemplateformfieldgroup, aObjEzsigntemplateformfieldgroup);
 
   @override
   int get hashCode =>

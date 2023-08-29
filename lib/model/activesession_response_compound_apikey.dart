@@ -27,8 +27,8 @@ class ActivesessionResponseCompoundApikey {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ActivesessionResponseCompoundApikey &&
-     other.pkiApikeyID == pkiApikeyID &&
-     other.sApikeyDescriptionX == sApikeyDescriptionX;
+    other.pkiApikeyID == pkiApikeyID &&
+    other.sApikeyDescriptionX == sApikeyDescriptionX;
 
   @override
   int get hashCode =>

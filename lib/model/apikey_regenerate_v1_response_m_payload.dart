@@ -20,7 +20,7 @@ class ApikeyRegenerateV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ApikeyRegenerateV1ResponseMPayload &&
-     other.objApikey == objApikey;
+    other.objApikey == objApikey;
 
   @override
   int get hashCode =>

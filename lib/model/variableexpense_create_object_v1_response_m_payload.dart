@@ -21,7 +21,7 @@ class VariableexpenseCreateObjectV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is VariableexpenseCreateObjectV1ResponseMPayload &&
-     other.aPkiVariableexpenseID == aPkiVariableexpenseID;
+    _deepEquality.equals(other.aPkiVariableexpenseID, aPkiVariableexpenseID);
 
   @override
   int get hashCode =>
@@ -56,8 +56,8 @@ class VariableexpenseCreateObjectV1ResponseMPayload {
       }());
 
       return VariableexpenseCreateObjectV1ResponseMPayload(
-        aPkiVariableexpenseID: json[r'a_pkiVariableexpenseID'] is List
-            ? (json[r'a_pkiVariableexpenseID'] as List).cast<int>()
+        aPkiVariableexpenseID: json[r'a_pkiVariableexpenseID'] is Iterable
+            ? (json[r'a_pkiVariableexpenseID'] as Iterable).cast<int>().toList(growable: false)
             : const [],
       );
     }

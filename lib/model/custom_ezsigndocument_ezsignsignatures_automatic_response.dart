@@ -30,9 +30,9 @@ class CustomEzsigndocumentEzsignsignaturesAutomaticResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomEzsigndocumentEzsignsignaturesAutomaticResponse &&
-     other.pkiEzsigndocumentID == pkiEzsigndocumentID &&
-     other.sEzsigndocumentName == sEzsigndocumentName &&
-     other.aObjEzsignsignature == aObjEzsignsignature;
+    other.pkiEzsigndocumentID == pkiEzsigndocumentID &&
+    other.sEzsigndocumentName == sEzsigndocumentName &&
+    _deepEquality.equals(other.aObjEzsignsignature, aObjEzsignsignature);
 
   @override
   int get hashCode =>

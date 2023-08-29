@@ -13,39 +13,39 @@ part of openapi.api;
 class WebhookEzsignDocumentCompleted {
   /// Returns a new [WebhookEzsignDocumentCompleted] instance.
   WebhookEzsignDocumentCompleted({
-    required this.objEzsigndocument,
     required this.objWebhook,
     this.aObjAttempt = const [],
+    required this.objEzsigndocument,
   });
-
-  EzsigndocumentResponse objEzsigndocument;
 
   CustomWebhookResponse objWebhook;
 
   /// An array containing details of previous attempts that were made to deliver the message. The array is empty if it's the first attempt.
   List<AttemptResponseCompound> aObjAttempt;
 
+  EzsigndocumentResponse objEzsigndocument;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is WebhookEzsignDocumentCompleted &&
-     other.objEzsigndocument == objEzsigndocument &&
-     other.objWebhook == objWebhook &&
-     other.aObjAttempt == aObjAttempt;
+    other.objWebhook == objWebhook &&
+    _deepEquality.equals(other.aObjAttempt, aObjAttempt) &&
+    other.objEzsigndocument == objEzsigndocument;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (objEzsigndocument.hashCode) +
     (objWebhook.hashCode) +
-    (aObjAttempt.hashCode);
+    (aObjAttempt.hashCode) +
+    (objEzsigndocument.hashCode);
 
   @override
-  String toString() => 'WebhookEzsignDocumentCompleted[objEzsigndocument=$objEzsigndocument, objWebhook=$objWebhook, aObjAttempt=$aObjAttempt]';
+  String toString() => 'WebhookEzsignDocumentCompleted[objWebhook=$objWebhook, aObjAttempt=$aObjAttempt, objEzsigndocument=$objEzsigndocument]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'objEzsigndocument'] = this.objEzsigndocument;
       json[r'objWebhook'] = this.objWebhook;
       json[r'a_objAttempt'] = this.aObjAttempt;
+      json[r'objEzsigndocument'] = this.objEzsigndocument;
     return json;
   }
 
@@ -68,9 +68,9 @@ class WebhookEzsignDocumentCompleted {
       }());
 
       return WebhookEzsignDocumentCompleted(
-        objEzsigndocument: EzsigndocumentResponse.fromJson(json[r'objEzsigndocument'])!,
         objWebhook: CustomWebhookResponse.fromJson(json[r'objWebhook'])!,
         aObjAttempt: AttemptResponseCompound.listFromJson(json[r'a_objAttempt']),
+        objEzsigndocument: EzsigndocumentResponse.fromJson(json[r'objEzsigndocument'])!,
       );
     }
     return null;
@@ -118,9 +118,9 @@ class WebhookEzsignDocumentCompleted {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'objEzsigndocument',
     'objWebhook',
     'a_objAttempt',
+    'objEzsigndocument',
   };
 }
 

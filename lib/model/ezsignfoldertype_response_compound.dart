@@ -275,42 +275,42 @@ class EzsignfoldertypeResponseCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfoldertypeResponseCompound &&
-     other.pkiEzsignfoldertypeID == pkiEzsignfoldertypeID &&
-     other.objEzsignfoldertypeName == objEzsignfoldertypeName &&
-     other.fkiBrandingID == fkiBrandingID &&
-     other.fkiBillingentityinternalID == fkiBillingentityinternalID &&
-     other.fkiUsergroupID == fkiUsergroupID &&
-     other.fkiUsergroupIDRestricted == fkiUsergroupIDRestricted &&
-     other.fkiEzsigntsarequirementID == fkiEzsigntsarequirementID &&
-     other.sBrandingDescriptionX == sBrandingDescriptionX &&
-     other.sBillingentityinternalDescriptionX == sBillingentityinternalDescriptionX &&
-     other.sEzsigntsarequirementDescriptionX == sEzsigntsarequirementDescriptionX &&
-     other.sEmailAddressSigned == sEmailAddressSigned &&
-     other.sEmailAddressSummary == sEmailAddressSummary &&
-     other.sUsergroupNameX == sUsergroupNameX &&
-     other.sUsergroupNameXRestricted == sUsergroupNameXRestricted &&
-     other.eEzsignfoldertypePrivacylevel == eEzsignfoldertypePrivacylevel &&
-     other.eEzsignfoldertypeSendreminderfrequency == eEzsignfoldertypeSendreminderfrequency &&
-     other.iEzsignfoldertypeArchivaldays == iEzsignfoldertypeArchivaldays &&
-     other.eEzsignfoldertypeDisposal == eEzsignfoldertypeDisposal &&
-     other.iEzsignfoldertypeDisposaldays == iEzsignfoldertypeDisposaldays &&
-     other.iEzsignfoldertypeDeadlinedays == iEzsignfoldertypeDeadlinedays &&
-     other.bEzsignfoldertypeSendattatchmentsigner == bEzsignfoldertypeSendattatchmentsigner &&
-     other.bEzsignfoldertypeSendsignedtodocumentowner == bEzsignfoldertypeSendsignedtodocumentowner &&
-     other.bEzsignfoldertypeSendsignedtofolderowner == bEzsignfoldertypeSendsignedtofolderowner &&
-     other.bEzsignfoldertypeSendsignedtofullgroup == bEzsignfoldertypeSendsignedtofullgroup &&
-     other.bEzsignfoldertypeSendsignedtolimitedgroup == bEzsignfoldertypeSendsignedtolimitedgroup &&
-     other.bEzsignfoldertypeSendsignedtocolleague == bEzsignfoldertypeSendsignedtocolleague &&
-     other.bEzsignfoldertypeSendsummarytodocumentowner == bEzsignfoldertypeSendsummarytodocumentowner &&
-     other.bEzsignfoldertypeSendsummarytofolderowner == bEzsignfoldertypeSendsummarytofolderowner &&
-     other.bEzsignfoldertypeSendsummarytofullgroup == bEzsignfoldertypeSendsummarytofullgroup &&
-     other.bEzsignfoldertypeSendsummarytolimitedgroup == bEzsignfoldertypeSendsummarytolimitedgroup &&
-     other.bEzsignfoldertypeSendsummarytocolleague == bEzsignfoldertypeSendsummarytocolleague &&
-     other.bEzsignfoldertypeIncludeproofsigner == bEzsignfoldertypeIncludeproofsigner &&
-     other.bEzsignfoldertypeIncludeproofuser == bEzsignfoldertypeIncludeproofuser &&
-     other.bEzsignfoldertypeIsactive == bEzsignfoldertypeIsactive &&
-     other.aFkiUserIDSigned == aFkiUserIDSigned &&
-     other.aFkiUserIDSummary == aFkiUserIDSummary;
+    other.pkiEzsignfoldertypeID == pkiEzsignfoldertypeID &&
+    other.objEzsignfoldertypeName == objEzsignfoldertypeName &&
+    other.fkiBrandingID == fkiBrandingID &&
+    other.fkiBillingentityinternalID == fkiBillingentityinternalID &&
+    other.fkiUsergroupID == fkiUsergroupID &&
+    other.fkiUsergroupIDRestricted == fkiUsergroupIDRestricted &&
+    other.fkiEzsigntsarequirementID == fkiEzsigntsarequirementID &&
+    other.sBrandingDescriptionX == sBrandingDescriptionX &&
+    other.sBillingentityinternalDescriptionX == sBillingentityinternalDescriptionX &&
+    other.sEzsigntsarequirementDescriptionX == sEzsigntsarequirementDescriptionX &&
+    other.sEmailAddressSigned == sEmailAddressSigned &&
+    other.sEmailAddressSummary == sEmailAddressSummary &&
+    other.sUsergroupNameX == sUsergroupNameX &&
+    other.sUsergroupNameXRestricted == sUsergroupNameXRestricted &&
+    other.eEzsignfoldertypePrivacylevel == eEzsignfoldertypePrivacylevel &&
+    other.eEzsignfoldertypeSendreminderfrequency == eEzsignfoldertypeSendreminderfrequency &&
+    other.iEzsignfoldertypeArchivaldays == iEzsignfoldertypeArchivaldays &&
+    other.eEzsignfoldertypeDisposal == eEzsignfoldertypeDisposal &&
+    other.iEzsignfoldertypeDisposaldays == iEzsignfoldertypeDisposaldays &&
+    other.iEzsignfoldertypeDeadlinedays == iEzsignfoldertypeDeadlinedays &&
+    other.bEzsignfoldertypeSendattatchmentsigner == bEzsignfoldertypeSendattatchmentsigner &&
+    other.bEzsignfoldertypeSendsignedtodocumentowner == bEzsignfoldertypeSendsignedtodocumentowner &&
+    other.bEzsignfoldertypeSendsignedtofolderowner == bEzsignfoldertypeSendsignedtofolderowner &&
+    other.bEzsignfoldertypeSendsignedtofullgroup == bEzsignfoldertypeSendsignedtofullgroup &&
+    other.bEzsignfoldertypeSendsignedtolimitedgroup == bEzsignfoldertypeSendsignedtolimitedgroup &&
+    other.bEzsignfoldertypeSendsignedtocolleague == bEzsignfoldertypeSendsignedtocolleague &&
+    other.bEzsignfoldertypeSendsummarytodocumentowner == bEzsignfoldertypeSendsummarytodocumentowner &&
+    other.bEzsignfoldertypeSendsummarytofolderowner == bEzsignfoldertypeSendsummarytofolderowner &&
+    other.bEzsignfoldertypeSendsummarytofullgroup == bEzsignfoldertypeSendsummarytofullgroup &&
+    other.bEzsignfoldertypeSendsummarytolimitedgroup == bEzsignfoldertypeSendsummarytolimitedgroup &&
+    other.bEzsignfoldertypeSendsummarytocolleague == bEzsignfoldertypeSendsummarytocolleague &&
+    other.bEzsignfoldertypeIncludeproofsigner == bEzsignfoldertypeIncludeproofsigner &&
+    other.bEzsignfoldertypeIncludeproofuser == bEzsignfoldertypeIncludeproofuser &&
+    other.bEzsignfoldertypeIsactive == bEzsignfoldertypeIsactive &&
+    _deepEquality.equals(other.aFkiUserIDSigned, aFkiUserIDSigned) &&
+    _deepEquality.equals(other.aFkiUserIDSummary, aFkiUserIDSummary);
 
   @override
   int get hashCode =>
@@ -513,11 +513,11 @@ class EzsignfoldertypeResponseCompound {
         bEzsignfoldertypeIncludeproofsigner: mapValueOfType<bool>(json, r'bEzsignfoldertypeIncludeproofsigner')!,
         bEzsignfoldertypeIncludeproofuser: mapValueOfType<bool>(json, r'bEzsignfoldertypeIncludeproofuser')!,
         bEzsignfoldertypeIsactive: mapValueOfType<bool>(json, r'bEzsignfoldertypeIsactive')!,
-        aFkiUserIDSigned: json[r'a_fkiUserIDSigned'] is List
-            ? (json[r'a_fkiUserIDSigned'] as List).cast<int>()
+        aFkiUserIDSigned: json[r'a_fkiUserIDSigned'] is Iterable
+            ? (json[r'a_fkiUserIDSigned'] as Iterable).cast<int>().toList(growable: false)
             : const [],
-        aFkiUserIDSummary: json[r'a_fkiUserIDSummary'] is List
-            ? (json[r'a_fkiUserIDSummary'] as List).cast<int>()
+        aFkiUserIDSummary: json[r'a_fkiUserIDSummary'] is Iterable
+            ? (json[r'a_fkiUserIDSummary'] as Iterable).cast<int>().toList(growable: false)
             : const [],
       );
     }

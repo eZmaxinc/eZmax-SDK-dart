@@ -35,8 +35,8 @@ class EzsigntemplateformfieldgroupsignerRequestCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplateformfieldgroupsignerRequestCompound &&
-     other.pkiEzsigntemplateformfieldgroupsignerID == pkiEzsigntemplateformfieldgroupsignerID &&
-     other.fkiEzsigntemplatesignerID == fkiEzsigntemplatesignerID;
+    other.pkiEzsigntemplateformfieldgroupsignerID == pkiEzsigntemplateformfieldgroupsignerID &&
+    other.fkiEzsigntemplatesignerID == fkiEzsigntemplatesignerID;
 
   @override
   int get hashCode =>

@@ -21,7 +21,7 @@ class ScimServiceProviderConfigEtag {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ScimServiceProviderConfigEtag &&
-     other.supported == supported;
+    other.supported == supported;
 
   @override
   int get hashCode =>

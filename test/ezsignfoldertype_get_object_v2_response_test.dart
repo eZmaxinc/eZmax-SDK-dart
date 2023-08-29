@@ -16,11 +16,6 @@ void main() {
   // final instance = EzsignfoldertypeGetObjectV2Response();
 
   group('test EzsignfoldertypeGetObjectV2Response', () {
-    // EzsignfoldertypeGetObjectV2ResponseMPayload mPayload
-    test('to test the property `mPayload`', () async {
-      // TODO
-    });
-
     // CommonResponseObjDebugPayload objDebugPayload
     test('to test the property `objDebugPayload`', () async {
       // TODO
@@ -28,6 +23,11 @@ void main() {
 
     // CommonResponseObjDebug objDebug
     test('to test the property `objDebug`', () async {
+      // TODO
+    });
+
+    // EzsignfoldertypeGetObjectV2ResponseMPayload mPayload
+    test('to test the property `mPayload`', () async {
       // TODO
     });
 

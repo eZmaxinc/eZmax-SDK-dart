@@ -25,8 +25,8 @@ class CommonResponseObjSQLQuery {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonResponseObjSQLQuery &&
-     other.sQuery == sQuery &&
-     other.fDuration == fDuration;
+    other.sQuery == sQuery &&
+    other.fDuration == fDuration;
 
   @override
   int get hashCode =>

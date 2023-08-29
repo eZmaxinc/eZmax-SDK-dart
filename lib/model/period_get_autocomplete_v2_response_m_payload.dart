@@ -21,7 +21,7 @@ class PeriodGetAutocompleteV2ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is PeriodGetAutocompleteV2ResponseMPayload &&
-     other.aObjPeriod == aObjPeriod;
+    _deepEquality.equals(other.aObjPeriod, aObjPeriod);
 
   @override
   int get hashCode =>

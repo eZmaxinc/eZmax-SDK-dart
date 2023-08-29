@@ -20,7 +20,7 @@ class SubnetCreateObjectV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is SubnetCreateObjectV1Request &&
-     other.aObjSubnet == aObjSubnet;
+    _deepEquality.equals(other.aObjSubnet, aObjSubnet);
 
   @override
   int get hashCode =>

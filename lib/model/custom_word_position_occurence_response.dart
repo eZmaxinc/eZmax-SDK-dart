@@ -53,9 +53,9 @@ class CustomWordPositionOccurenceResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomWordPositionOccurenceResponse &&
-     other.iPage == iPage &&
-     other.iX == iX &&
-     other.iY == iY;
+    other.iPage == iPage &&
+    other.iX == iX &&
+    other.iY == iY;
 
   @override
   int get hashCode =>

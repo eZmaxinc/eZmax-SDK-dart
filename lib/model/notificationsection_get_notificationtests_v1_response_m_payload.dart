@@ -20,7 +20,7 @@ class NotificationsectionGetNotificationtestsV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is NotificationsectionGetNotificationtestsV1ResponseMPayload &&
-     other.aObjNotificationsubsection == aObjNotificationsubsection;
+    _deepEquality.equals(other.aObjNotificationsubsection, aObjNotificationsubsection);
 
   @override
   int get hashCode =>

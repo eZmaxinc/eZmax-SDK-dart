@@ -104,15 +104,15 @@ class PhoneRequestCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is PhoneRequestCompound &&
-     other.pkiPhoneID == pkiPhoneID &&
-     other.fkiPhonetypeID == fkiPhonetypeID &&
-     other.ePhoneType == ePhoneType &&
-     other.sPhoneRegion == sPhoneRegion &&
-     other.sPhoneExchange == sPhoneExchange &&
-     other.sPhoneNumber == sPhoneNumber &&
-     other.sPhoneInternational == sPhoneInternational &&
-     other.sPhoneExtension == sPhoneExtension &&
-     other.sPhoneE164 == sPhoneE164;
+    other.pkiPhoneID == pkiPhoneID &&
+    other.fkiPhonetypeID == fkiPhonetypeID &&
+    other.ePhoneType == ePhoneType &&
+    other.sPhoneRegion == sPhoneRegion &&
+    other.sPhoneExchange == sPhoneExchange &&
+    other.sPhoneNumber == sPhoneNumber &&
+    other.sPhoneInternational == sPhoneInternational &&
+    other.sPhoneExtension == sPhoneExtension &&
+    other.sPhoneE164 == sPhoneE164;
 
   @override
   int get hashCode =>

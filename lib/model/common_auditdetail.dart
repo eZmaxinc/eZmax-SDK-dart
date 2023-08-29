@@ -61,13 +61,13 @@ class CommonAuditdetail {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonAuditdetail &&
-     other.fkiUserID == fkiUserID &&
-     other.fkiApikeyID == fkiApikeyID &&
-     other.sUserLoginname == sUserLoginname &&
-     other.sUserLastname == sUserLastname &&
-     other.sUserFirstname == sUserFirstname &&
-     other.sApikeyDescriptionX == sApikeyDescriptionX &&
-     other.dtAuditdetailDate == dtAuditdetailDate;
+    other.fkiUserID == fkiUserID &&
+    other.fkiApikeyID == fkiApikeyID &&
+    other.sUserLoginname == sUserLoginname &&
+    other.sUserLastname == sUserLastname &&
+    other.sUserFirstname == sUserFirstname &&
+    other.sApikeyDescriptionX == sApikeyDescriptionX &&
+    other.dtAuditdetailDate == dtAuditdetailDate;
 
   @override
   int get hashCode =>

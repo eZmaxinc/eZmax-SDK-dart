@@ -20,7 +20,7 @@ class EzsigndocumentGetEzsignannotationsV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigndocumentGetEzsignannotationsV1ResponseMPayload &&
-     other.aObjEzsignannotation == aObjEzsignannotation;
+    _deepEquality.equals(other.aObjEzsignannotation, aObjEzsignannotation);
 
   @override
   int get hashCode =>

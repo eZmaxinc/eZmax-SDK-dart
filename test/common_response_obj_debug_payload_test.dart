@@ -34,6 +34,12 @@ void main() {
       // TODO
     });
 
+    // Wheter the current route is deprecated or not
+    // bool bVersionDeprecated
+    test('to test the property `bVersionDeprecated`', () async {
+      // TODO
+    });
+
 
   });
 

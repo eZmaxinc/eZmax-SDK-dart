@@ -20,7 +20,7 @@ class UserCreateObjectV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is UserCreateObjectV1Request &&
-     other.aObjUser == aObjUser;
+    _deepEquality.equals(other.aObjUser, aObjUser);
 
   @override
   int get hashCode =>

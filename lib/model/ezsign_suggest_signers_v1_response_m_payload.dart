@@ -26,9 +26,9 @@ class EzsignSuggestSignersV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignSuggestSignersV1ResponseMPayload &&
-     other.aObjEzsignfoldersignerassociation == aObjEzsignfoldersignerassociation &&
-     other.aObjUserTeam == aObjUserTeam &&
-     other.aObjUser == aObjUser;
+    _deepEquality.equals(other.aObjEzsignfoldersignerassociation, aObjEzsignfoldersignerassociation) &&
+    _deepEquality.equals(other.aObjUserTeam, aObjUserTeam) &&
+    _deepEquality.equals(other.aObjUser, aObjUser);
 
   @override
   int get hashCode =>

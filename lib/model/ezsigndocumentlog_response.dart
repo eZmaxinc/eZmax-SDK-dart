@@ -64,14 +64,14 @@ class EzsigndocumentlogResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigndocumentlogResponse &&
-     other.fkiUserID == fkiUserID &&
-     other.fkiEzsignsignerID == fkiEzsignsignerID &&
-     other.dtEzsigndocumentlogDatetime == dtEzsigndocumentlogDatetime &&
-     other.eEzsigndocumentlogType == eEzsigndocumentlogType &&
-     other.sEzsigndocumentlogDetail == sEzsigndocumentlogDetail &&
-     other.sEzsigndocumentlogLastname == sEzsigndocumentlogLastname &&
-     other.sEzsigndocumentlogFirstname == sEzsigndocumentlogFirstname &&
-     other.sEzsigndocumentlogIP == sEzsigndocumentlogIP;
+    other.fkiUserID == fkiUserID &&
+    other.fkiEzsignsignerID == fkiEzsignsignerID &&
+    other.dtEzsigndocumentlogDatetime == dtEzsigndocumentlogDatetime &&
+    other.eEzsigndocumentlogType == eEzsigndocumentlogType &&
+    other.sEzsigndocumentlogDetail == sEzsigndocumentlogDetail &&
+    other.sEzsigndocumentlogLastname == sEzsigndocumentlogLastname &&
+    other.sEzsigndocumentlogFirstname == sEzsigndocumentlogFirstname &&
+    other.sEzsigndocumentlogIP == sEzsigndocumentlogIP;
 
   @override
   int get hashCode =>

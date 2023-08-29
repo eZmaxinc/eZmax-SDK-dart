@@ -20,7 +20,7 @@ class EzmaxinvoicingGetObjectV2ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzmaxinvoicingGetObjectV2ResponseMPayload &&
-     other.objEzmaxinvoicing == objEzmaxinvoicing;
+    other.objEzmaxinvoicing == objEzmaxinvoicing;
 
   @override
   int get hashCode =>

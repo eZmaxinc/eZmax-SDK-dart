@@ -20,7 +20,7 @@ class SignatureCreateObjectV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is SignatureCreateObjectV1Request &&
-     other.aObjSignature == aObjSignature;
+    _deepEquality.equals(other.aObjSignature, aObjSignature);
 
   @override
   int get hashCode =>

@@ -16,11 +16,6 @@ void main() {
   // final instance = PaymenttermGetListV1ResponseMPayload();
 
   group('test PaymenttermGetListV1ResponseMPayload', () {
-    // List<PaymenttermListElement> aObjPaymentterm (default value: const [])
-    test('to test the property `aObjPaymentterm`', () async {
-      // TODO
-    });
-
     // The number of rows returned
     // int iRowReturned
     test('to test the property `iRowReturned`', () async {
@@ -30,6 +25,11 @@ void main() {
     // The number of rows matching your filters (if any) or the total number of rows
     // int iRowFiltered
     test('to test the property `iRowFiltered`', () async {
+      // TODO
+    });
+
+    // List<PaymenttermListElement> aObjPaymentterm (default value: const [])
+    test('to test the property `aObjPaymentterm`', () async {
       // TODO
     });
 

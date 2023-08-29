@@ -35,9 +35,9 @@ class UsergroupListElement {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is UsergroupListElement &&
-     other.pkiUsergroupID == pkiUsergroupID &&
-     other.sUsergroupNameX == sUsergroupNameX &&
-     other.iCountUser == iCountUser;
+    other.pkiUsergroupID == pkiUsergroupID &&
+    other.sUsergroupNameX == sUsergroupNameX &&
+    other.iCountUser == iCountUser;
 
   @override
   int get hashCode =>

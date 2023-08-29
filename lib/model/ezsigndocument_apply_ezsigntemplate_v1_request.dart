@@ -29,9 +29,9 @@ class EzsigndocumentApplyEzsigntemplateV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigndocumentApplyEzsigntemplateV1Request &&
-     other.fkiEzsigntemplateID == fkiEzsigntemplateID &&
-     other.aSEzsigntemplatesigner == aSEzsigntemplatesigner &&
-     other.aPkiEzsignfoldersignerassociationID == aPkiEzsignfoldersignerassociationID;
+    other.fkiEzsigntemplateID == fkiEzsigntemplateID &&
+    _deepEquality.equals(other.aSEzsigntemplatesigner, aSEzsigntemplatesigner) &&
+    _deepEquality.equals(other.aPkiEzsignfoldersignerassociationID, aPkiEzsignfoldersignerassociationID);
 
   @override
   int get hashCode =>
@@ -71,11 +71,11 @@ class EzsigndocumentApplyEzsigntemplateV1Request {
 
       return EzsigndocumentApplyEzsigntemplateV1Request(
         fkiEzsigntemplateID: mapValueOfType<int>(json, r'fkiEzsigntemplateID')!,
-        aSEzsigntemplatesigner: json[r'a_sEzsigntemplatesigner'] is List
-            ? (json[r'a_sEzsigntemplatesigner'] as List).cast<String>()
+        aSEzsigntemplatesigner: json[r'a_sEzsigntemplatesigner'] is Iterable
+            ? (json[r'a_sEzsigntemplatesigner'] as Iterable).cast<String>().toList(growable: false)
             : const [],
-        aPkiEzsignfoldersignerassociationID: json[r'a_pkiEzsignfoldersignerassociationID'] is List
-            ? (json[r'a_pkiEzsignfoldersignerassociationID'] as List).cast<int>()
+        aPkiEzsignfoldersignerassociationID: json[r'a_pkiEzsignfoldersignerassociationID'] is Iterable
+            ? (json[r'a_pkiEzsignfoldersignerassociationID'] as Iterable).cast<int>().toList(growable: false)
             : const [],
       );
     }

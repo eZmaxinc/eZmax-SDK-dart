@@ -24,8 +24,8 @@ class EzsignfolderBatchDownloadV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfolderBatchDownloadV1Request &&
-     other.aPkiEzsigndocumentID == aPkiEzsigndocumentID &&
-     other.aEDocumentType == aEDocumentType;
+    _deepEquality.equals(other.aPkiEzsigndocumentID, aPkiEzsigndocumentID) &&
+    _deepEquality.equals(other.aEDocumentType, aEDocumentType);
 
   @override
   int get hashCode =>
@@ -62,8 +62,8 @@ class EzsignfolderBatchDownloadV1Request {
       }());
 
       return EzsignfolderBatchDownloadV1Request(
-        aPkiEzsigndocumentID: json[r'a_pkiEzsigndocumentID'] is List
-            ? (json[r'a_pkiEzsigndocumentID'] as List).cast<int>()
+        aPkiEzsigndocumentID: json[r'a_pkiEzsigndocumentID'] is Iterable
+            ? (json[r'a_pkiEzsigndocumentID'] as Iterable).cast<int>().toList(growable: false)
             : const [],
         aEDocumentType: EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnum.listFromJson(json[r'a_eDocumentType']),
       );

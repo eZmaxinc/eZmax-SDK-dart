@@ -25,8 +25,8 @@ class CustomFormDataEzsignformfieldResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomFormDataEzsignformfieldResponse &&
-     other.sEzsignformfieldLabel == sEzsignformfieldLabel &&
-     other.sEzsignformfieldValue == sEzsignformfieldValue;
+    other.sEzsignformfieldLabel == sEzsignformfieldLabel &&
+    other.sEzsignformfieldValue == sEzsignformfieldValue;
 
   @override
   int get hashCode =>

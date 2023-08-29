@@ -73,15 +73,15 @@ class BrandingListElement {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is BrandingListElement &&
-     other.pkiBrandingID == pkiBrandingID &&
-     other.sBrandingDescriptionX == sBrandingDescriptionX &&
-     other.iBrandingColortext == iBrandingColortext &&
-     other.iBrandingColortextlinkbox == iBrandingColortextlinkbox &&
-     other.iBrandingColortextbutton == iBrandingColortextbutton &&
-     other.iBrandingColorbackground == iBrandingColorbackground &&
-     other.iBrandingColorbackgroundbutton == iBrandingColorbackgroundbutton &&
-     other.iBrandingColorbackgroundsmallbox == iBrandingColorbackgroundsmallbox &&
-     other.bBrandingIsactive == bBrandingIsactive;
+    other.pkiBrandingID == pkiBrandingID &&
+    other.sBrandingDescriptionX == sBrandingDescriptionX &&
+    other.iBrandingColortext == iBrandingColortext &&
+    other.iBrandingColortextlinkbox == iBrandingColortextlinkbox &&
+    other.iBrandingColortextbutton == iBrandingColortextbutton &&
+    other.iBrandingColorbackground == iBrandingColorbackground &&
+    other.iBrandingColorbackgroundbutton == iBrandingColorbackgroundbutton &&
+    other.iBrandingColorbackgroundsmallbox == iBrandingColorbackgroundsmallbox &&
+    other.bBrandingIsactive == bBrandingIsactive;
 
   @override
   int get hashCode =>

@@ -34,10 +34,10 @@ class EzsignfoldertypeListElement {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfoldertypeListElement &&
-     other.pkiEzsignfoldertypeID == pkiEzsignfoldertypeID &&
-     other.eEzsignfoldertypePrivacylevel == eEzsignfoldertypePrivacylevel &&
-     other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
-     other.bEzsignfoldertypeIsactive == bEzsignfoldertypeIsactive;
+    other.pkiEzsignfoldertypeID == pkiEzsignfoldertypeID &&
+    other.eEzsignfoldertypePrivacylevel == eEzsignfoldertypePrivacylevel &&
+    other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
+    other.bEzsignfoldertypeIsactive == bEzsignfoldertypeIsactive;
 
   @override
   int get hashCode =>

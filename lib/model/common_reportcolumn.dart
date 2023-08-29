@@ -24,8 +24,8 @@ class CommonReportcolumn {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonReportcolumn &&
-     other.objReportcellstyleDefault == objReportcellstyleDefault &&
-     other.iReportcolumnWidth == iReportcolumnWidth;
+    other.objReportcellstyleDefault == objReportcellstyleDefault &&
+    other.iReportcolumnWidth == iReportcolumnWidth;
 
   @override
   int get hashCode =>

@@ -16,11 +16,6 @@ void main() {
   // final instance = EzsignfolderGetListV1ResponseMPayload();
 
   group('test EzsignfolderGetListV1ResponseMPayload', () {
-    // List<EzsignfolderListElement> aObjEzsignfolder (default value: const [])
-    test('to test the property `aObjEzsignfolder`', () async {
-      // TODO
-    });
-
     // The number of rows returned
     // int iRowReturned
     test('to test the property `iRowReturned`', () async {
@@ -30,6 +25,11 @@ void main() {
     // The number of rows matching your filters (if any) or the total number of rows
     // int iRowFiltered
     test('to test the property `iRowFiltered`', () async {
+      // TODO
+    });
+
+    // List<EzsignfolderListElement> aObjEzsignfolder (default value: const [])
+    test('to test the property `aObjEzsignfolder`', () async {
       // TODO
     });
 

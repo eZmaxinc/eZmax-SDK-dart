@@ -37,8 +37,8 @@ class MultilingualSubnetDescription {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is MultilingualSubnetDescription &&
-     other.sSubnetDescription1 == sSubnetDescription1 &&
-     other.sSubnetDescription2 == sSubnetDescription2;
+    other.sSubnetDescription1 == sSubnetDescription1 &&
+    other.sSubnetDescription2 == sSubnetDescription2;
 
   @override
   int get hashCode =>

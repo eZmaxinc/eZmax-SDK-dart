@@ -8,7 +8,7 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | [optional] 
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
 **objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  | [optional] 
 **aObjWarning** | [**List<CommonResponseWarning>**](CommonResponseWarning.md) |  | [optional] [default to const []]
 

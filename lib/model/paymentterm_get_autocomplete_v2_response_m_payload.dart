@@ -21,7 +21,7 @@ class PaymenttermGetAutocompleteV2ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is PaymenttermGetAutocompleteV2ResponseMPayload &&
-     other.aObjPaymentterm == aObjPaymentterm;
+    _deepEquality.equals(other.aObjPaymentterm, aObjPaymentterm);
 
   @override
   int get hashCode =>

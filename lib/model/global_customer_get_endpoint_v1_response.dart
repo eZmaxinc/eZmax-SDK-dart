@@ -21,7 +21,7 @@ class GlobalCustomerGetEndpointV1Response {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is GlobalCustomerGetEndpointV1Response &&
-     other.sEndpointURL == sEndpointURL;
+    other.sEndpointURL == sEndpointURL;
 
   @override
   int get hashCode =>

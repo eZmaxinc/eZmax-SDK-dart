@@ -20,7 +20,7 @@ class ApikeyEditPermissionsV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ApikeyEditPermissionsV1Request &&
-     other.aObjPermission == aObjPermission;
+    _deepEquality.equals(other.aObjPermission, aObjPermission);
 
   @override
   int get hashCode =>

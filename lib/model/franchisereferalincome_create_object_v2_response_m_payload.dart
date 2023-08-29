@@ -21,7 +21,7 @@ class FranchisereferalincomeCreateObjectV2ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is FranchisereferalincomeCreateObjectV2ResponseMPayload &&
-     other.aPkiFranchisereferalincomeID == aPkiFranchisereferalincomeID;
+    _deepEquality.equals(other.aPkiFranchisereferalincomeID, aPkiFranchisereferalincomeID);
 
   @override
   int get hashCode =>
@@ -56,8 +56,8 @@ class FranchisereferalincomeCreateObjectV2ResponseMPayload {
       }());
 
       return FranchisereferalincomeCreateObjectV2ResponseMPayload(
-        aPkiFranchisereferalincomeID: json[r'a_pkiFranchisereferalincomeID'] is List
-            ? (json[r'a_pkiFranchisereferalincomeID'] as List).cast<int>()
+        aPkiFranchisereferalincomeID: json[r'a_pkiFranchisereferalincomeID'] is Iterable
+            ? (json[r'a_pkiFranchisereferalincomeID'] as Iterable).cast<int>().toList(growable: false)
             : const [],
       );
     }

@@ -78,17 +78,17 @@ class ActivesessionResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ActivesessionResponse &&
-     other.eActivesessionUsertype == eActivesessionUsertype &&
-     other.eActivesessionOrigin == eActivesessionOrigin &&
-     other.eActivesessionWeekdaystart == eActivesessionWeekdaystart &&
-     other.fkiLanguageID == fkiLanguageID &&
-     other.sCompanyNameX == sCompanyNameX &&
-     other.sDepartmentNameX == sDepartmentNameX &&
-     other.bActivesessionDebug == bActivesessionDebug &&
-     other.bActivesessionIssuperadmin == bActivesessionIssuperadmin &&
-     other.pksCustomerCode == pksCustomerCode &&
-     other.fkiSystemconfigurationtypeID == fkiSystemconfigurationtypeID &&
-     other.fkiSignatureID == fkiSignatureID;
+    other.eActivesessionUsertype == eActivesessionUsertype &&
+    other.eActivesessionOrigin == eActivesessionOrigin &&
+    other.eActivesessionWeekdaystart == eActivesessionWeekdaystart &&
+    other.fkiLanguageID == fkiLanguageID &&
+    other.sCompanyNameX == sCompanyNameX &&
+    other.sDepartmentNameX == sDepartmentNameX &&
+    other.bActivesessionDebug == bActivesessionDebug &&
+    other.bActivesessionIssuperadmin == bActivesessionIssuperadmin &&
+    other.pksCustomerCode == pksCustomerCode &&
+    other.fkiSystemconfigurationtypeID == fkiSystemconfigurationtypeID &&
+    other.fkiSignatureID == fkiSignatureID;
 
   @override
   int get hashCode =>

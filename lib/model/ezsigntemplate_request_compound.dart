@@ -50,11 +50,11 @@ class EzsigntemplateRequestCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplateRequestCompound &&
-     other.pkiEzsigntemplateID == pkiEzsigntemplateID &&
-     other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
-     other.fkiLanguageID == fkiLanguageID &&
-     other.sEzsigntemplateDescription == sEzsigntemplateDescription &&
-     other.bEzsigntemplateAdminonly == bEzsigntemplateAdminonly;
+    other.pkiEzsigntemplateID == pkiEzsigntemplateID &&
+    other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
+    other.fkiLanguageID == fkiLanguageID &&
+    other.sEzsigntemplateDescription == sEzsigntemplateDescription &&
+    other.bEzsigntemplateAdminonly == bEzsigntemplateAdminonly;
 
   @override
   int get hashCode =>

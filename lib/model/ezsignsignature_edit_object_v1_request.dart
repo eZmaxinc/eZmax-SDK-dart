@@ -20,7 +20,7 @@ class EzsignsignatureEditObjectV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignsignatureEditObjectV1Request &&
-     other.objEzsignsignature == objEzsignsignature;
+    other.objEzsignsignature == objEzsignsignature;
 
   @override
   int get hashCode =>

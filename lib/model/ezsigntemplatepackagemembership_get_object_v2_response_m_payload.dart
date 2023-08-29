@@ -20,7 +20,7 @@ class EzsigntemplatepackagemembershipGetObjectV2ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplatepackagemembershipGetObjectV2ResponseMPayload &&
-     other.objEzsigntemplatepackagemembership == objEzsigntemplatepackagemembership;
+    other.objEzsigntemplatepackagemembership == objEzsigntemplatepackagemembership;
 
   @override
   int get hashCode =>

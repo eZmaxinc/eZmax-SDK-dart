@@ -55,12 +55,12 @@ class CustomNotificationsubsectiongetnotificationtestsResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomNotificationsubsectiongetnotificationtestsResponse &&
-     other.pkiNotificationsubsectionID == pkiNotificationsubsectionID &&
-     other.fkiNotificationsectionID == fkiNotificationsectionID &&
-     other.objNotificationsubsectionName == objNotificationsubsectionName &&
-     other.sNotificationsectionNameX == sNotificationsectionNameX &&
-     other.sNotificationsubsectionNameX == sNotificationsubsectionNameX &&
-     other.aObjNotificationtest == aObjNotificationtest;
+    other.pkiNotificationsubsectionID == pkiNotificationsubsectionID &&
+    other.fkiNotificationsectionID == fkiNotificationsectionID &&
+    other.objNotificationsubsectionName == objNotificationsubsectionName &&
+    other.sNotificationsectionNameX == sNotificationsectionNameX &&
+    other.sNotificationsubsectionNameX == sNotificationsubsectionNameX &&
+    _deepEquality.equals(other.aObjNotificationtest, aObjNotificationtest);
 
   @override
   int get hashCode =>

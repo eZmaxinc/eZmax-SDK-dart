@@ -27,7 +27,7 @@ class EzsigntemplatedocumentRequestPatch {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplatedocumentRequestPatch &&
-     other.sEzsigntemplatedocumentName == sEzsigntemplatedocumentName;
+    other.sEzsigntemplatedocumentName == sEzsigntemplatedocumentName;
 
   @override
   int get hashCode =>

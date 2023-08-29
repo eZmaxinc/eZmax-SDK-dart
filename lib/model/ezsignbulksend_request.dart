@@ -58,13 +58,13 @@ class EzsignbulksendRequest {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignbulksendRequest &&
-     other.pkiEzsignbulksendID == pkiEzsignbulksendID &&
-     other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
-     other.fkiLanguageID == fkiLanguageID &&
-     other.sEzsignbulksendDescription == sEzsignbulksendDescription &&
-     other.tEzsignbulksendNote == tEzsignbulksendNote &&
-     other.bEzsignbulksendNeedvalidation == bEzsignbulksendNeedvalidation &&
-     other.bEzsignbulksendIsactive == bEzsignbulksendIsactive;
+    other.pkiEzsignbulksendID == pkiEzsignbulksendID &&
+    other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
+    other.fkiLanguageID == fkiLanguageID &&
+    other.sEzsignbulksendDescription == sEzsignbulksendDescription &&
+    other.tEzsignbulksendNote == tEzsignbulksendNote &&
+    other.bEzsignbulksendNeedvalidation == bEzsignbulksendNeedvalidation &&
+    other.bEzsignbulksendIsactive == bEzsignbulksendIsactive;
 
   @override
   int get hashCode =>

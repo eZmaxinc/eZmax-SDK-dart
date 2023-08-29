@@ -13,12 +13,10 @@ part of openapi.api;
 class EzsigntemplatepackageGetListV1ResponseMPayload {
   /// Returns a new [EzsigntemplatepackageGetListV1ResponseMPayload] instance.
   EzsigntemplatepackageGetListV1ResponseMPayload({
-    this.aObjEzsigntemplatepackage = const [],
     required this.iRowReturned,
     required this.iRowFiltered,
+    this.aObjEzsigntemplatepackage = const [],
   });
-
-  List<EzsigntemplatepackageListElement> aObjEzsigntemplatepackage;
 
   /// The number of rows returned
   int iRowReturned;
@@ -26,27 +24,29 @@ class EzsigntemplatepackageGetListV1ResponseMPayload {
   /// The number of rows matching your filters (if any) or the total number of rows
   int iRowFiltered;
 
+  List<EzsigntemplatepackageListElement> aObjEzsigntemplatepackage;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplatepackageGetListV1ResponseMPayload &&
-     other.aObjEzsigntemplatepackage == aObjEzsigntemplatepackage &&
-     other.iRowReturned == iRowReturned &&
-     other.iRowFiltered == iRowFiltered;
+    other.iRowReturned == iRowReturned &&
+    other.iRowFiltered == iRowFiltered &&
+    _deepEquality.equals(other.aObjEzsigntemplatepackage, aObjEzsigntemplatepackage);
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (aObjEzsigntemplatepackage.hashCode) +
     (iRowReturned.hashCode) +
-    (iRowFiltered.hashCode);
+    (iRowFiltered.hashCode) +
+    (aObjEzsigntemplatepackage.hashCode);
 
   @override
-  String toString() => 'EzsigntemplatepackageGetListV1ResponseMPayload[aObjEzsigntemplatepackage=$aObjEzsigntemplatepackage, iRowReturned=$iRowReturned, iRowFiltered=$iRowFiltered]';
+  String toString() => 'EzsigntemplatepackageGetListV1ResponseMPayload[iRowReturned=$iRowReturned, iRowFiltered=$iRowFiltered, aObjEzsigntemplatepackage=$aObjEzsigntemplatepackage]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'a_objEzsigntemplatepackage'] = this.aObjEzsigntemplatepackage;
       json[r'iRowReturned'] = this.iRowReturned;
       json[r'iRowFiltered'] = this.iRowFiltered;
+      json[r'a_objEzsigntemplatepackage'] = this.aObjEzsigntemplatepackage;
     return json;
   }
 
@@ -69,9 +69,9 @@ class EzsigntemplatepackageGetListV1ResponseMPayload {
       }());
 
       return EzsigntemplatepackageGetListV1ResponseMPayload(
-        aObjEzsigntemplatepackage: EzsigntemplatepackageListElement.listFromJson(json[r'a_objEzsigntemplatepackage']),
         iRowReturned: mapValueOfType<int>(json, r'iRowReturned')!,
         iRowFiltered: mapValueOfType<int>(json, r'iRowFiltered')!,
+        aObjEzsigntemplatepackage: EzsigntemplatepackageListElement.listFromJson(json[r'a_objEzsigntemplatepackage']),
       );
     }
     return null;
@@ -119,9 +119,9 @@ class EzsigntemplatepackageGetListV1ResponseMPayload {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'a_objEzsigntemplatepackage',
     'iRowReturned',
     'iRowFiltered',
+    'a_objEzsigntemplatepackage',
   };
 }
 

@@ -21,7 +21,7 @@ class SecretquestionGetAutocompleteV2ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is SecretquestionGetAutocompleteV2ResponseMPayload &&
-     other.aObjSecretquestion == aObjSecretquestion;
+    _deepEquality.equals(other.aObjSecretquestion, aObjSecretquestion);
 
   @override
   int get hashCode =>

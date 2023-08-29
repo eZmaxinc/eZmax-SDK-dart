@@ -20,7 +20,7 @@ class EzsignfoldertypeGetObjectV2ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfoldertypeGetObjectV2ResponseMPayload &&
-     other.objEzsignfoldertype == objEzsignfoldertype;
+    other.objEzsignfoldertype == objEzsignfoldertype;
 
   @override
   int get hashCode =>

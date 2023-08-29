@@ -72,15 +72,15 @@ class ApikeyResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ApikeyResponse &&
-     other.pkiApikeyID == pkiApikeyID &&
-     other.fkiUserID == fkiUserID &&
-     other.objApikeyDescription == objApikeyDescription &&
-     other.objContactName == objContactName &&
-     other.sApikeyApikey == sApikeyApikey &&
-     other.sApikeySecret == sApikeySecret &&
-     other.bApikeyIsactive == bApikeyIsactive &&
-     other.bApikeyIssigned == bApikeyIssigned &&
-     other.objAudit == objAudit;
+    other.pkiApikeyID == pkiApikeyID &&
+    other.fkiUserID == fkiUserID &&
+    other.objApikeyDescription == objApikeyDescription &&
+    other.objContactName == objContactName &&
+    other.sApikeyApikey == sApikeyApikey &&
+    other.sApikeySecret == sApikeySecret &&
+    other.bApikeyIsactive == bApikeyIsactive &&
+    other.bApikeyIssigned == bApikeyIssigned &&
+    other.objAudit == objAudit;
 
   @override
   int get hashCode =>

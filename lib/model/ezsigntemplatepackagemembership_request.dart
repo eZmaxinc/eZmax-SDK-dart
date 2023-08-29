@@ -41,9 +41,9 @@ class EzsigntemplatepackagemembershipRequest {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplatepackagemembershipRequest &&
-     other.pkiEzsigntemplatepackagemembershipID == pkiEzsigntemplatepackagemembershipID &&
-     other.fkiEzsigntemplatepackageID == fkiEzsigntemplatepackageID &&
-     other.fkiEzsigntemplateID == fkiEzsigntemplateID;
+    other.pkiEzsigntemplatepackagemembershipID == pkiEzsigntemplatepackagemembershipID &&
+    other.fkiEzsigntemplatepackageID == fkiEzsigntemplatepackageID &&
+    other.fkiEzsigntemplateID == fkiEzsigntemplateID;
 
   @override
   int get hashCode =>

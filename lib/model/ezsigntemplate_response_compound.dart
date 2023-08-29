@@ -79,17 +79,17 @@ class EzsigntemplateResponseCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplateResponseCompound &&
-     other.pkiEzsigntemplateID == pkiEzsigntemplateID &&
-     other.fkiEzsigntemplatedocumentID == fkiEzsigntemplatedocumentID &&
-     other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
-     other.fkiLanguageID == fkiLanguageID &&
-     other.sLanguageNameX == sLanguageNameX &&
-     other.sEzsigntemplateDescription == sEzsigntemplateDescription &&
-     other.bEzsigntemplateAdminonly == bEzsigntemplateAdminonly &&
-     other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
-     other.objAudit == objAudit &&
-     other.objEzsigntemplatedocument == objEzsigntemplatedocument &&
-     other.aObjEzsigntemplatesigner == aObjEzsigntemplatesigner;
+    other.pkiEzsigntemplateID == pkiEzsigntemplateID &&
+    other.fkiEzsigntemplatedocumentID == fkiEzsigntemplatedocumentID &&
+    other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
+    other.fkiLanguageID == fkiLanguageID &&
+    other.sLanguageNameX == sLanguageNameX &&
+    other.sEzsigntemplateDescription == sEzsigntemplateDescription &&
+    other.bEzsigntemplateAdminonly == bEzsigntemplateAdminonly &&
+    other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
+    other.objAudit == objAudit &&
+    other.objEzsigntemplatedocument == objEzsigntemplatedocument &&
+    _deepEquality.equals(other.aObjEzsigntemplatesigner, aObjEzsigntemplatesigner);
 
   @override
   int get hashCode =>

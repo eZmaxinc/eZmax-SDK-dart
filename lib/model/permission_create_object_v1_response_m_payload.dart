@@ -21,7 +21,7 @@ class PermissionCreateObjectV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is PermissionCreateObjectV1ResponseMPayload &&
-     other.aPkiPermissionID == aPkiPermissionID;
+    _deepEquality.equals(other.aPkiPermissionID, aPkiPermissionID);
 
   @override
   int get hashCode =>
@@ -56,8 +56,8 @@ class PermissionCreateObjectV1ResponseMPayload {
       }());
 
       return PermissionCreateObjectV1ResponseMPayload(
-        aPkiPermissionID: json[r'a_pkiPermissionID'] is List
-            ? (json[r'a_pkiPermissionID'] as List).cast<int>()
+        aPkiPermissionID: json[r'a_pkiPermissionID'] is Iterable
+            ? (json[r'a_pkiPermissionID'] as Iterable).cast<int>().toList(growable: false)
             : const [],
       );
     }

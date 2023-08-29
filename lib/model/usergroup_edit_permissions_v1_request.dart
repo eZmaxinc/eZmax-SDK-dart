@@ -20,7 +20,7 @@ class UsergroupEditPermissionsV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is UsergroupEditPermissionsV1Request &&
-     other.aObjPermission == aObjPermission;
+    _deepEquality.equals(other.aObjPermission, aObjPermission);
 
   @override
   int get hashCode =>

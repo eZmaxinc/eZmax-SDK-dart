@@ -20,7 +20,7 @@ class EzsignbulksenddocumentmappingGetObjectV2ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignbulksenddocumentmappingGetObjectV2ResponseMPayload &&
-     other.objEzsignbulksenddocumentmapping == objEzsignbulksenddocumentmapping;
+    other.objEzsignbulksenddocumentmapping == objEzsignbulksenddocumentmapping;
 
   @override
   int get hashCode =>

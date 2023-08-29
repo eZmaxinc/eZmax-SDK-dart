@@ -31,9 +31,9 @@ class FranchiseofficeAutocompleteElementResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is FranchiseofficeAutocompleteElementResponse &&
-     other.sFranchiseofficeDescription == sFranchiseofficeDescription &&
-     other.pkiFranchiseofficeID == pkiFranchiseofficeID &&
-     other.bFranchiseofficeIsactive == bFranchiseofficeIsactive;
+    other.sFranchiseofficeDescription == sFranchiseofficeDescription &&
+    other.pkiFranchiseofficeID == pkiFranchiseofficeID &&
+    other.bFranchiseofficeIsactive == bFranchiseofficeIsactive;
 
   @override
   int get hashCode =>

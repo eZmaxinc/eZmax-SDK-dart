@@ -16,11 +16,6 @@ void main() {
   // final instance = CompanyGetAutocompleteV2Response();
 
   group('test CompanyGetAutocompleteV2Response', () {
-    // CompanyGetAutocompleteV2ResponseMPayload mPayload
-    test('to test the property `mPayload`', () async {
-      // TODO
-    });
-
     // CommonResponseObjDebugPayload objDebugPayload
     test('to test the property `objDebugPayload`', () async {
       // TODO
@@ -28,6 +23,11 @@ void main() {
 
     // CommonResponseObjDebug objDebug
     test('to test the property `objDebug`', () async {
+      // TODO
+    });
+
+    // CompanyGetAutocompleteV2ResponseMPayload mPayload
+    test('to test the property `mPayload`', () async {
       // TODO
     });
 

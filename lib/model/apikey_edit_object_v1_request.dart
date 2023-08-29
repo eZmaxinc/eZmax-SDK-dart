@@ -20,7 +20,7 @@ class ApikeyEditObjectV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ApikeyEditObjectV1Request &&
-     other.objApikey == objApikey;
+    other.objApikey == objApikey;
 
   @override
   int get hashCode =>

@@ -21,7 +21,7 @@ class EzsignfolderSendV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfolderSendV1Request &&
-     other.tExtraMessage == tExtraMessage;
+    other.tExtraMessage == tExtraMessage;
 
   @override
   int get hashCode =>

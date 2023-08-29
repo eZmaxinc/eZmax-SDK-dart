@@ -43,9 +43,9 @@ class PhonestaticResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is PhonestaticResponse &&
-     other.pkiPhonestaticID == pkiPhonestaticID &&
-     other.sPhonestaticE164 == sPhonestaticE164 &&
-     other.sPhonestaticExtension == sPhonestaticExtension;
+    other.pkiPhonestaticID == pkiPhonestaticID &&
+    other.sPhonestaticE164 == sPhonestaticE164 &&
+    other.sPhonestaticExtension == sPhonestaticExtension;
 
   @override
   int get hashCode =>

@@ -77,13 +77,13 @@ class EzsignbulksenddocumentmappingResponseCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignbulksenddocumentmappingResponseCompound &&
-     other.pkiEzsignbulksenddocumentmappingID == pkiEzsignbulksenddocumentmappingID &&
-     other.fkiEzsignbulksendID == fkiEzsignbulksendID &&
-     other.fkiEzsigntemplatepackageID == fkiEzsigntemplatepackageID &&
-     other.fkiEzsigntemplateID == fkiEzsigntemplateID &&
-     other.iEzsignbulksenddocumentmappingOrder == iEzsignbulksenddocumentmappingOrder &&
-     other.objEzsigntemplate == objEzsigntemplate &&
-     other.objEzsigntemplatepackage == objEzsigntemplatepackage;
+    other.pkiEzsignbulksenddocumentmappingID == pkiEzsignbulksenddocumentmappingID &&
+    other.fkiEzsignbulksendID == fkiEzsignbulksendID &&
+    other.fkiEzsigntemplatepackageID == fkiEzsigntemplatepackageID &&
+    other.fkiEzsigntemplateID == fkiEzsigntemplateID &&
+    other.iEzsignbulksenddocumentmappingOrder == iEzsignbulksenddocumentmappingOrder &&
+    other.objEzsigntemplate == objEzsigntemplate &&
+    other.objEzsigntemplatepackage == objEzsigntemplatepackage;
 
   @override
   int get hashCode =>

@@ -29,9 +29,9 @@ class EzsigndocumentGetWordsPositionsV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigndocumentGetWordsPositionsV1Request &&
-     other.eGet == eGet &&
-     other.bWordCaseSensitive == bWordCaseSensitive &&
-     other.aSWord == aSWord;
+    other.eGet == eGet &&
+    other.bWordCaseSensitive == bWordCaseSensitive &&
+    _deepEquality.equals(other.aSWord, aSWord);
 
   @override
   int get hashCode =>
@@ -72,8 +72,8 @@ class EzsigndocumentGetWordsPositionsV1Request {
       return EzsigndocumentGetWordsPositionsV1Request(
         eGet: EzsigndocumentGetWordsPositionsV1RequestEGetEnum.fromJson(json[r'eGet'])!,
         bWordCaseSensitive: mapValueOfType<bool>(json, r'bWordCaseSensitive')!,
-        aSWord: json[r'a_sWord'] is List
-            ? (json[r'a_sWord'] as List).cast<String>()
+        aSWord: json[r'a_sWord'] is Iterable
+            ? (json[r'a_sWord'] as Iterable).cast<String>().toList(growable: false)
             : const [],
       );
     }

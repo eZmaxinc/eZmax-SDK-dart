@@ -29,6 +29,8 @@ class FieldEEzsigntemplatesignatureType {
   static const initials = FieldEEzsigntemplatesignatureType._(r'Initials');
   static const name = FieldEEzsigntemplatesignatureType._(r'Name');
   static const attachments = FieldEEzsigntemplatesignatureType._(r'Attachments');
+  static const fieldText = FieldEEzsigntemplatesignatureType._(r'FieldText');
+  static const fieldTextarea = FieldEEzsigntemplatesignatureType._(r'FieldTextarea');
 
   /// List of all possible values in this [enum][FieldEEzsigntemplatesignatureType].
   static const values = <FieldEEzsigntemplatesignatureType>[
@@ -38,6 +40,8 @@ class FieldEEzsigntemplatesignatureType {
     initials,
     name,
     attachments,
+    fieldText,
+    fieldTextarea,
   ];
 
   static FieldEEzsigntemplatesignatureType? fromJson(dynamic value) => FieldEEzsigntemplatesignatureTypeTypeTransformer().decode(value);
@@ -82,6 +86,8 @@ class FieldEEzsigntemplatesignatureTypeTypeTransformer {
         case r'Initials': return FieldEEzsigntemplatesignatureType.initials;
         case r'Name': return FieldEEzsigntemplatesignatureType.name;
         case r'Attachments': return FieldEEzsigntemplatesignatureType.attachments;
+        case r'FieldText': return FieldEEzsigntemplatesignatureType.fieldText;
+        case r'FieldTextarea': return FieldEEzsigntemplatesignatureType.fieldTextarea;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');

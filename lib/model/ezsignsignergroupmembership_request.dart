@@ -15,9 +15,9 @@ class EzsignsignergroupmembershipRequest {
   EzsignsignergroupmembershipRequest({
     this.pkiEzsignsignergroupmembershipID,
     required this.fkiEzsignsignergroupID,
-    required this.fkiEzsignsignerID,
-    required this.fkiUserID,
-    required this.fkiUsergroupID,
+    this.fkiEzsignsignerID,
+    this.fkiUserID,
+    this.fkiUsergroupID,
   });
 
   /// The unique ID of the Ezsignsignergroupmembership
@@ -41,35 +41,53 @@ class EzsignsignergroupmembershipRequest {
   /// The unique ID of the Ezsignsigner
   ///
   /// Minimum value: 0
-  int fkiEzsignsignerID;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiEzsignsignerID;
 
   /// The unique ID of the User
   ///
   /// Minimum value: 0
-  int fkiUserID;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiUserID;
 
   /// The unique ID of the Usergroup
   ///
   /// Minimum value: 0
   /// Maximum value: 255
-  int fkiUsergroupID;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiUsergroupID;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignsignergroupmembershipRequest &&
-     other.pkiEzsignsignergroupmembershipID == pkiEzsignsignergroupmembershipID &&
-     other.fkiEzsignsignergroupID == fkiEzsignsignergroupID &&
-     other.fkiEzsignsignerID == fkiEzsignsignerID &&
-     other.fkiUserID == fkiUserID &&
-     other.fkiUsergroupID == fkiUsergroupID;
+    other.pkiEzsignsignergroupmembershipID == pkiEzsignsignergroupmembershipID &&
+    other.fkiEzsignsignergroupID == fkiEzsignsignergroupID &&
+    other.fkiEzsignsignerID == fkiEzsignsignerID &&
+    other.fkiUserID == fkiUserID &&
+    other.fkiUsergroupID == fkiUsergroupID;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiEzsignsignergroupmembershipID == null ? 0 : pkiEzsignsignergroupmembershipID!.hashCode) +
     (fkiEzsignsignergroupID.hashCode) +
-    (fkiEzsignsignerID.hashCode) +
-    (fkiUserID.hashCode) +
-    (fkiUsergroupID.hashCode);
+    (fkiEzsignsignerID == null ? 0 : fkiEzsignsignerID!.hashCode) +
+    (fkiUserID == null ? 0 : fkiUserID!.hashCode) +
+    (fkiUsergroupID == null ? 0 : fkiUsergroupID!.hashCode);
 
   @override
   String toString() => 'EzsignsignergroupmembershipRequest[pkiEzsignsignergroupmembershipID=$pkiEzsignsignergroupmembershipID, fkiEzsignsignergroupID=$fkiEzsignsignergroupID, fkiEzsignsignerID=$fkiEzsignsignerID, fkiUserID=$fkiUserID, fkiUsergroupID=$fkiUsergroupID]';
@@ -82,9 +100,21 @@ class EzsignsignergroupmembershipRequest {
       json[r'pkiEzsignsignergroupmembershipID'] = null;
     }
       json[r'fkiEzsignsignergroupID'] = this.fkiEzsignsignergroupID;
+    if (this.fkiEzsignsignerID != null) {
       json[r'fkiEzsignsignerID'] = this.fkiEzsignsignerID;
+    } else {
+      json[r'fkiEzsignsignerID'] = null;
+    }
+    if (this.fkiUserID != null) {
       json[r'fkiUserID'] = this.fkiUserID;
+    } else {
+      json[r'fkiUserID'] = null;
+    }
+    if (this.fkiUsergroupID != null) {
       json[r'fkiUsergroupID'] = this.fkiUsergroupID;
+    } else {
+      json[r'fkiUsergroupID'] = null;
+    }
     return json;
   }
 
@@ -109,9 +139,9 @@ class EzsignsignergroupmembershipRequest {
       return EzsignsignergroupmembershipRequest(
         pkiEzsignsignergroupmembershipID: mapValueOfType<int>(json, r'pkiEzsignsignergroupmembershipID'),
         fkiEzsignsignergroupID: mapValueOfType<int>(json, r'fkiEzsignsignergroupID')!,
-        fkiEzsignsignerID: mapValueOfType<int>(json, r'fkiEzsignsignerID')!,
-        fkiUserID: mapValueOfType<int>(json, r'fkiUserID')!,
-        fkiUsergroupID: mapValueOfType<int>(json, r'fkiUsergroupID')!,
+        fkiEzsignsignerID: mapValueOfType<int>(json, r'fkiEzsignsignerID'),
+        fkiUserID: mapValueOfType<int>(json, r'fkiUserID'),
+        fkiUsergroupID: mapValueOfType<int>(json, r'fkiUsergroupID'),
       );
     }
     return null;
@@ -160,9 +190,6 @@ class EzsignsignergroupmembershipRequest {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'fkiEzsignsignergroupID',
-    'fkiEzsignsignerID',
-    'fkiUserID',
-    'fkiUsergroupID',
   };
 }
 

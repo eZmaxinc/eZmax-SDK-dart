@@ -21,7 +21,7 @@ class ScimServiceProviderConfigPatch {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ScimServiceProviderConfigPatch &&
-     other.supported == supported;
+    other.supported == supported;
 
   @override
   int get hashCode =>

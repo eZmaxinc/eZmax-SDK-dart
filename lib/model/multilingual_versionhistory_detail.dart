@@ -37,8 +37,8 @@ class MultilingualVersionhistoryDetail {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is MultilingualVersionhistoryDetail &&
-     other.tVersionhistoryDetail1 == tVersionhistoryDetail1 &&
-     other.tVersionhistoryDetail2 == tVersionhistoryDetail2;
+    other.tVersionhistoryDetail1 == tVersionhistoryDetail1 &&
+    other.tVersionhistoryDetail2 == tVersionhistoryDetail2;
 
   @override
   int get hashCode =>

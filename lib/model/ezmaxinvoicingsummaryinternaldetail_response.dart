@@ -85,18 +85,18 @@ class EzmaxinvoicingsummaryinternaldetailResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzmaxinvoicingsummaryinternaldetailResponse &&
-     other.pkiEzmaxinvoicingsummaryinternaldetailID == pkiEzmaxinvoicingsummaryinternaldetailID &&
-     other.fkiEzmaxinvoicingsummaryinternalID == fkiEzmaxinvoicingsummaryinternalID &&
-     other.fkiEzmaxproductID == fkiEzmaxproductID &&
-     other.sEzmaxproductDescriptionX == sEzmaxproductDescriptionX &&
-     other.fkiBillingentityexternalID == fkiBillingentityexternalID &&
-     other.sBillingentityexternalDescription == sBillingentityexternalDescription &&
-     other.dEzmaxinvoicingsummaryinternaldetailCountreal == dEzmaxinvoicingsummaryinternaldetailCountreal &&
-     other.dEzmaxinvoicingsummaryinternaldetailSubtotal == dEzmaxinvoicingsummaryinternaldetailSubtotal &&
-     other.dEzmaxinvoicingsummaryinternaldetailRebate == dEzmaxinvoicingsummaryinternaldetailRebate &&
-     other.dEzmaxinvoicingsummaryinternaldetailTotal == dEzmaxinvoicingsummaryinternaldetailTotal &&
-     other.bEzmaxinvoicingsummaryinternaldetailAdjustment == bEzmaxinvoicingsummaryinternaldetailAdjustment &&
-     other.tEzmaxproductHelpX == tEzmaxproductHelpX;
+    other.pkiEzmaxinvoicingsummaryinternaldetailID == pkiEzmaxinvoicingsummaryinternaldetailID &&
+    other.fkiEzmaxinvoicingsummaryinternalID == fkiEzmaxinvoicingsummaryinternalID &&
+    other.fkiEzmaxproductID == fkiEzmaxproductID &&
+    other.sEzmaxproductDescriptionX == sEzmaxproductDescriptionX &&
+    other.fkiBillingentityexternalID == fkiBillingentityexternalID &&
+    other.sBillingentityexternalDescription == sBillingentityexternalDescription &&
+    other.dEzmaxinvoicingsummaryinternaldetailCountreal == dEzmaxinvoicingsummaryinternaldetailCountreal &&
+    other.dEzmaxinvoicingsummaryinternaldetailSubtotal == dEzmaxinvoicingsummaryinternaldetailSubtotal &&
+    other.dEzmaxinvoicingsummaryinternaldetailRebate == dEzmaxinvoicingsummaryinternaldetailRebate &&
+    other.dEzmaxinvoicingsummaryinternaldetailTotal == dEzmaxinvoicingsummaryinternaldetailTotal &&
+    other.bEzmaxinvoicingsummaryinternaldetailAdjustment == bEzmaxinvoicingsummaryinternaldetailAdjustment &&
+    other.tEzmaxproductHelpX == tEzmaxproductHelpX;
 
   @override
   int get hashCode =>

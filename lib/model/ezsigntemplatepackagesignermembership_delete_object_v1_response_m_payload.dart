@@ -25,8 +25,8 @@ class EzsigntemplatepackagesignermembershipDeleteObjectV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplatepackagesignermembershipDeleteObjectV1ResponseMPayload &&
-     other.bEzsigntemplatepackageNeedvalidation == bEzsigntemplatepackageNeedvalidation &&
-     other.bEzsignbulksendNeedvalidation == bEzsignbulksendNeedvalidation;
+    other.bEzsigntemplatepackageNeedvalidation == bEzsigntemplatepackageNeedvalidation &&
+    other.bEzsignbulksendNeedvalidation == bEzsignbulksendNeedvalidation;
 
   @override
   int get hashCode =>

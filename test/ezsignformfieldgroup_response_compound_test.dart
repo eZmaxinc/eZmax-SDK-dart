@@ -86,6 +86,11 @@ void main() {
       // TODO
     });
 
+    // EnumTextvalidation eEzsignformfieldgroupTextvalidation
+    test('to test the property `eEzsignformfieldgroupTextvalidation`', () async {
+      // TODO
+    });
+
     // A regular expression to indicate what values are acceptable for the Ezsignformfieldgroup.  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**
     // String sEzsignformfieldgroupRegexp
     test('to test the property `sEzsignformfieldgroupRegexp`', () async {

@@ -21,7 +21,7 @@ class EzsignbulksenddocumentmappingCreateObjectV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignbulksenddocumentmappingCreateObjectV1ResponseMPayload &&
-     other.aPkiEzsignbulksenddocumentmappingID == aPkiEzsignbulksenddocumentmappingID;
+    _deepEquality.equals(other.aPkiEzsignbulksenddocumentmappingID, aPkiEzsignbulksenddocumentmappingID);
 
   @override
   int get hashCode =>
@@ -56,8 +56,8 @@ class EzsignbulksenddocumentmappingCreateObjectV1ResponseMPayload {
       }());
 
       return EzsignbulksenddocumentmappingCreateObjectV1ResponseMPayload(
-        aPkiEzsignbulksenddocumentmappingID: json[r'a_pkiEzsignbulksenddocumentmappingID'] is List
-            ? (json[r'a_pkiEzsignbulksenddocumentmappingID'] as List).cast<int>()
+        aPkiEzsignbulksenddocumentmappingID: json[r'a_pkiEzsignbulksenddocumentmappingID'] is Iterable
+            ? (json[r'a_pkiEzsignbulksenddocumentmappingID'] as Iterable).cast<int>().toList(growable: false)
             : const [],
       );
     }

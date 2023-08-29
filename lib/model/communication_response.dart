@@ -84,18 +84,18 @@ class CommunicationResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommunicationResponse &&
-     other.pkiCommunicationID == pkiCommunicationID &&
-     other.eCommunicationImportance == eCommunicationImportance &&
-     other.eCommunicationType == eCommunicationType &&
-     other.sCommunicationSubject == sCommunicationSubject &&
-     other.sCommunicationBodyurl == sCommunicationBodyurl &&
-     other.eCommunicationDirection == eCommunicationDirection &&
-     other.iCommunicationrecipientCount == iCommunicationrecipientCount &&
-     other.bCommunicationPrivate == bCommunicationPrivate &&
-     other.objDescriptionstaticSender == objDescriptionstaticSender &&
-     other.objEmailstaticSender == objEmailstaticSender &&
-     other.objPhonestaticSender == objPhonestaticSender &&
-     other.objAudit == objAudit;
+    other.pkiCommunicationID == pkiCommunicationID &&
+    other.eCommunicationImportance == eCommunicationImportance &&
+    other.eCommunicationType == eCommunicationType &&
+    other.sCommunicationSubject == sCommunicationSubject &&
+    other.sCommunicationBodyurl == sCommunicationBodyurl &&
+    other.eCommunicationDirection == eCommunicationDirection &&
+    other.iCommunicationrecipientCount == iCommunicationrecipientCount &&
+    other.bCommunicationPrivate == bCommunicationPrivate &&
+    other.objDescriptionstaticSender == objDescriptionstaticSender &&
+    other.objEmailstaticSender == objEmailstaticSender &&
+    other.objPhonestaticSender == objPhonestaticSender &&
+    other.objAudit == objAudit;
 
   @override
   int get hashCode =>

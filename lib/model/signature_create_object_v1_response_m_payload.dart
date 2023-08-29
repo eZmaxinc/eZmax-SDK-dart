@@ -21,7 +21,7 @@ class SignatureCreateObjectV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is SignatureCreateObjectV1ResponseMPayload &&
-     other.aPkiSignatureID == aPkiSignatureID;
+    _deepEquality.equals(other.aPkiSignatureID, aPkiSignatureID);
 
   @override
   int get hashCode =>
@@ -56,8 +56,8 @@ class SignatureCreateObjectV1ResponseMPayload {
       }());
 
       return SignatureCreateObjectV1ResponseMPayload(
-        aPkiSignatureID: json[r'a_pkiSignatureID'] is List
-            ? (json[r'a_pkiSignatureID'] as List).cast<int>()
+        aPkiSignatureID: json[r'a_pkiSignatureID'] is Iterable
+            ? (json[r'a_pkiSignatureID'] as Iterable).cast<int>().toList(growable: false)
             : const [],
       );
     }

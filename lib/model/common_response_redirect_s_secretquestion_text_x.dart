@@ -21,7 +21,7 @@ class CommonResponseRedirectSSecretquestionTextX {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonResponseRedirectSSecretquestionTextX &&
-     other.sSecretquestionTextX == sSecretquestionTextX;
+    other.sSecretquestionTextX == sSecretquestionTextX;
 
   @override
   int get hashCode =>

@@ -120,6 +120,12 @@ void main() {
       // TODO
     });
 
+    // The maximum length for the value in the Ezsignsignature  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea**
+    // int iEzsignsignatureMaxlength
+    test('to test the property `iEzsignsignatureMaxlength`', () async {
+      // TODO
+    });
+
     // EnumTextvalidation eEzsignsignatureTextvalidation
     test('to test the property `eEzsignsignatureTextvalidation`', () async {
       // TODO

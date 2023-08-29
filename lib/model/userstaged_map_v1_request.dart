@@ -23,7 +23,7 @@ class UserstagedMapV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is UserstagedMapV1Request &&
-     other.fkiUserID == fkiUserID;
+    other.fkiUserID == fkiUserID;
 
   @override
   int get hashCode =>

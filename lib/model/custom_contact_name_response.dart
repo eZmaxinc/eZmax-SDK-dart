@@ -47,9 +47,9 @@ class CustomContactNameResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomContactNameResponse &&
-     other.sContactFirstname == sContactFirstname &&
-     other.sContactLastname == sContactLastname &&
-     other.sContactCompany == sContactCompany;
+    other.sContactFirstname == sContactFirstname &&
+    other.sContactLastname == sContactLastname &&
+    other.sContactCompany == sContactCompany;
 
   @override
   int get hashCode =>

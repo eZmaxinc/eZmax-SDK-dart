@@ -20,7 +20,7 @@ class SubnetEditObjectV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is SubnetEditObjectV1Request &&
-     other.objSubnet == objSubnet;
+    other.objSubnet == objSubnet;
 
   @override
   int get hashCode =>

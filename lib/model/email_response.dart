@@ -34,9 +34,9 @@ class EmailResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EmailResponse &&
-     other.pkiEmailID == pkiEmailID &&
-     other.fkiEmailtypeID == fkiEmailtypeID &&
-     other.sEmailAddress == sEmailAddress;
+    other.pkiEmailID == pkiEmailID &&
+    other.fkiEmailtypeID == fkiEmailtypeID &&
+    other.sEmailAddress == sEmailAddress;
 
   @override
   int get hashCode =>

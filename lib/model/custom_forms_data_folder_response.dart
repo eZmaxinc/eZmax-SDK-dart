@@ -30,9 +30,9 @@ class CustomFormsDataFolderResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomFormsDataFolderResponse &&
-     other.pkiEzsignfolderID == pkiEzsignfolderID &&
-     other.sEzsignfolderDescription == sEzsignfolderDescription &&
-     other.aObjFormDataDocument == aObjFormDataDocument;
+    other.pkiEzsignfolderID == pkiEzsignfolderID &&
+    other.sEzsignfolderDescription == sEzsignfolderDescription &&
+    _deepEquality.equals(other.aObjFormDataDocument, aObjFormDataDocument);
 
   @override
   int get hashCode =>

@@ -33,10 +33,10 @@ class NotificationtestGetElementsV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is NotificationtestGetElementsV1ResponseMPayload &&
-     other.pkiNotificationtestID == pkiNotificationtestID &&
-     other.sNotificationtestFunction == sNotificationtestFunction &&
-     other.aSVariableobjectProperty == aSVariableobjectProperty &&
-     other.aObjVariableobject == aObjVariableobject;
+    other.pkiNotificationtestID == pkiNotificationtestID &&
+    other.sNotificationtestFunction == sNotificationtestFunction &&
+    _deepEquality.equals(other.aSVariableobjectProperty, aSVariableobjectProperty) &&
+    _deepEquality.equals(other.aObjVariableobject, aObjVariableobject);
 
   @override
   int get hashCode =>
@@ -79,8 +79,8 @@ class NotificationtestGetElementsV1ResponseMPayload {
       return NotificationtestGetElementsV1ResponseMPayload(
         pkiNotificationtestID: mapValueOfType<int>(json, r'pkiNotificationtestID')!,
         sNotificationtestFunction: mapValueOfType<String>(json, r'sNotificationtestFunction')!,
-        aSVariableobjectProperty: json[r'a_sVariableobjectProperty'] is List
-            ? (json[r'a_sVariableobjectProperty'] as List).cast<String>()
+        aSVariableobjectProperty: json[r'a_sVariableobjectProperty'] is Iterable
+            ? (json[r'a_sVariableobjectProperty'] as Iterable).cast<String>().toList(growable: false)
             : const [],
         aObjVariableobject: Map.listFromJson(json[r'a_objVariableobject']),
       );

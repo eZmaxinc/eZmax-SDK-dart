@@ -47,12 +47,12 @@ class EzsigntemplatedocumentResponseCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplatedocumentResponseCompound &&
-     other.pkiEzsigntemplatedocumentID == pkiEzsigntemplatedocumentID &&
-     other.fkiEzsigntemplateID == fkiEzsigntemplateID &&
-     other.sEzsigntemplatedocumentName == sEzsigntemplatedocumentName &&
-     other.iEzsigntemplatedocumentPagetotal == iEzsigntemplatedocumentPagetotal &&
-     other.iEzsigntemplatedocumentSignaturetotal == iEzsigntemplatedocumentSignaturetotal &&
-     other.bEzsigntemplatedocumentHassignedsignatures == bEzsigntemplatedocumentHassignedsignatures;
+    other.pkiEzsigntemplatedocumentID == pkiEzsigntemplatedocumentID &&
+    other.fkiEzsigntemplateID == fkiEzsigntemplateID &&
+    other.sEzsigntemplatedocumentName == sEzsigntemplatedocumentName &&
+    other.iEzsigntemplatedocumentPagetotal == iEzsigntemplatedocumentPagetotal &&
+    other.iEzsigntemplatedocumentSignaturetotal == iEzsigntemplatedocumentSignaturetotal &&
+    other.bEzsigntemplatedocumentHassignedsignatures == bEzsigntemplatedocumentHassignedsignatures;
 
   @override
   int get hashCode =>

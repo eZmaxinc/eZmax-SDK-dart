@@ -24,8 +24,8 @@ class CommonReportsubsectionpart {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonReportsubsectionpart &&
-     other.eReportsubsectionpartType == eReportsubsectionpartType &&
-     other.aObjReportrow == aObjReportrow;
+    other.eReportsubsectionpartType == eReportsubsectionpartType &&
+    _deepEquality.equals(other.aObjReportrow, aObjReportrow);
 
   @override
   int get hashCode =>

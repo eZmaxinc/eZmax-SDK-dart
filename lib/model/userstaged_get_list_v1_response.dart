@@ -13,20 +13,12 @@ part of openapi.api;
 class UserstagedGetListV1Response {
   /// Returns a new [UserstagedGetListV1Response] instance.
   UserstagedGetListV1Response({
-    required this.mPayload,
-    this.objDebugPayload,
+    required this.objDebugPayload,
     this.objDebug,
+    required this.mPayload,
   });
 
-  UserstagedGetListV1ResponseMPayload mPayload;
-
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  CommonResponseObjDebugPayloadGetList? objDebugPayload;
+  CommonResponseObjDebugPayloadGetList objDebugPayload;
 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -36,35 +28,33 @@ class UserstagedGetListV1Response {
   ///
   CommonResponseObjDebug? objDebug;
 
+  UserstagedGetListV1ResponseMPayload mPayload;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is UserstagedGetListV1Response &&
-     other.mPayload == mPayload &&
-     other.objDebugPayload == objDebugPayload &&
-     other.objDebug == objDebug;
+    other.objDebugPayload == objDebugPayload &&
+    other.objDebug == objDebug &&
+    other.mPayload == mPayload;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (mPayload.hashCode) +
-    (objDebugPayload == null ? 0 : objDebugPayload!.hashCode) +
-    (objDebug == null ? 0 : objDebug!.hashCode);
+    (objDebugPayload.hashCode) +
+    (objDebug == null ? 0 : objDebug!.hashCode) +
+    (mPayload.hashCode);
 
   @override
-  String toString() => 'UserstagedGetListV1Response[mPayload=$mPayload, objDebugPayload=$objDebugPayload, objDebug=$objDebug]';
+  String toString() => 'UserstagedGetListV1Response[objDebugPayload=$objDebugPayload, objDebug=$objDebug, mPayload=$mPayload]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'mPayload'] = this.mPayload;
-    if (this.objDebugPayload != null) {
       json[r'objDebugPayload'] = this.objDebugPayload;
-    } else {
-      json[r'objDebugPayload'] = null;
-    }
     if (this.objDebug != null) {
       json[r'objDebug'] = this.objDebug;
     } else {
       json[r'objDebug'] = null;
     }
+      json[r'mPayload'] = this.mPayload;
     return json;
   }
 
@@ -87,9 +77,9 @@ class UserstagedGetListV1Response {
       }());
 
       return UserstagedGetListV1Response(
-        mPayload: UserstagedGetListV1ResponseMPayload.fromJson(json[r'mPayload'])!,
-        objDebugPayload: CommonResponseObjDebugPayloadGetList.fromJson(json[r'objDebugPayload']),
+        objDebugPayload: CommonResponseObjDebugPayloadGetList.fromJson(json[r'objDebugPayload'])!,
         objDebug: CommonResponseObjDebug.fromJson(json[r'objDebug']),
+        mPayload: UserstagedGetListV1ResponseMPayload.fromJson(json[r'mPayload'])!,
       );
     }
     return null;
@@ -137,6 +127,7 @@ class UserstagedGetListV1Response {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
+    'objDebugPayload',
     'mPayload',
   };
 }

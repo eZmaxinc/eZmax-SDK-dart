@@ -13,12 +13,10 @@ part of openapi.api;
 class EzsigntemplateGetListV1ResponseMPayload {
   /// Returns a new [EzsigntemplateGetListV1ResponseMPayload] instance.
   EzsigntemplateGetListV1ResponseMPayload({
-    this.aObjEzsigntemplate = const [],
     required this.iRowReturned,
     required this.iRowFiltered,
+    this.aObjEzsigntemplate = const [],
   });
-
-  List<EzsigntemplateListElement> aObjEzsigntemplate;
 
   /// The number of rows returned
   int iRowReturned;
@@ -26,27 +24,29 @@ class EzsigntemplateGetListV1ResponseMPayload {
   /// The number of rows matching your filters (if any) or the total number of rows
   int iRowFiltered;
 
+  List<EzsigntemplateListElement> aObjEzsigntemplate;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplateGetListV1ResponseMPayload &&
-     other.aObjEzsigntemplate == aObjEzsigntemplate &&
-     other.iRowReturned == iRowReturned &&
-     other.iRowFiltered == iRowFiltered;
+    other.iRowReturned == iRowReturned &&
+    other.iRowFiltered == iRowFiltered &&
+    _deepEquality.equals(other.aObjEzsigntemplate, aObjEzsigntemplate);
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (aObjEzsigntemplate.hashCode) +
     (iRowReturned.hashCode) +
-    (iRowFiltered.hashCode);
+    (iRowFiltered.hashCode) +
+    (aObjEzsigntemplate.hashCode);
 
   @override
-  String toString() => 'EzsigntemplateGetListV1ResponseMPayload[aObjEzsigntemplate=$aObjEzsigntemplate, iRowReturned=$iRowReturned, iRowFiltered=$iRowFiltered]';
+  String toString() => 'EzsigntemplateGetListV1ResponseMPayload[iRowReturned=$iRowReturned, iRowFiltered=$iRowFiltered, aObjEzsigntemplate=$aObjEzsigntemplate]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'a_objEzsigntemplate'] = this.aObjEzsigntemplate;
       json[r'iRowReturned'] = this.iRowReturned;
       json[r'iRowFiltered'] = this.iRowFiltered;
+      json[r'a_objEzsigntemplate'] = this.aObjEzsigntemplate;
     return json;
   }
 
@@ -69,9 +69,9 @@ class EzsigntemplateGetListV1ResponseMPayload {
       }());
 
       return EzsigntemplateGetListV1ResponseMPayload(
-        aObjEzsigntemplate: EzsigntemplateListElement.listFromJson(json[r'a_objEzsigntemplate']),
         iRowReturned: mapValueOfType<int>(json, r'iRowReturned')!,
         iRowFiltered: mapValueOfType<int>(json, r'iRowFiltered')!,
+        aObjEzsigntemplate: EzsigntemplateListElement.listFromJson(json[r'a_objEzsigntemplate']),
       );
     }
     return null;
@@ -119,9 +119,9 @@ class EzsigntemplateGetListV1ResponseMPayload {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'a_objEzsigntemplate',
     'iRowReturned',
     'iRowFiltered',
+    'a_objEzsigntemplate',
   };
 }
 

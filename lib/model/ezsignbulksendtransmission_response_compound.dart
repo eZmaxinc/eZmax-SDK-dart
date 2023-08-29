@@ -45,12 +45,12 @@ class EzsignbulksendtransmissionResponseCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignbulksendtransmissionResponseCompound &&
-     other.pkiEzsignbulksendtransmissionID == pkiEzsignbulksendtransmissionID &&
-     other.fkiEzsignbulksendID == fkiEzsignbulksendID &&
-     other.sEzsignbulksendtransmissionDescription == sEzsignbulksendtransmissionDescription &&
-     other.iEzsignbulksendtransmissionErrors == iEzsignbulksendtransmissionErrors &&
-     other.objAudit == objAudit &&
-     other.aObjEzsignfoldertransmission == aObjEzsignfoldertransmission;
+    other.pkiEzsignbulksendtransmissionID == pkiEzsignbulksendtransmissionID &&
+    other.fkiEzsignbulksendID == fkiEzsignbulksendID &&
+    other.sEzsignbulksendtransmissionDescription == sEzsignbulksendtransmissionDescription &&
+    other.iEzsignbulksendtransmissionErrors == iEzsignbulksendtransmissionErrors &&
+    other.objAudit == objAudit &&
+    _deepEquality.equals(other.aObjEzsignfoldertransmission, aObjEzsignfoldertransmission);
 
   @override
   int get hashCode =>

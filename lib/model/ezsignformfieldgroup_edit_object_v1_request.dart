@@ -20,7 +20,7 @@ class EzsignformfieldgroupEditObjectV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignformfieldgroupEditObjectV1Request &&
-     other.objEzsignformfieldgroup == objEzsignformfieldgroup;
+    other.objEzsignformfieldgroup == objEzsignformfieldgroup;
 
   @override
   int get hashCode =>

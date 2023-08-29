@@ -20,7 +20,7 @@ class WebhookEditObjectV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is WebhookEditObjectV1Request &&
-     other.objWebhook == objWebhook;
+    other.objWebhook == objWebhook;
 
   @override
   int get hashCode =>

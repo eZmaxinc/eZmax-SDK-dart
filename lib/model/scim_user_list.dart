@@ -50,11 +50,11 @@ class ScimUserList {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ScimUserList &&
-     other.totalResults == totalResults &&
-     other.itemsPerPage == itemsPerPage &&
-     other.startIndex == startIndex &&
-     other.schemas == schemas &&
-     other.resources == resources;
+    other.totalResults == totalResults &&
+    other.itemsPerPage == itemsPerPage &&
+    other.startIndex == startIndex &&
+    _deepEquality.equals(other.schemas, schemas) &&
+    _deepEquality.equals(other.resources, resources);
 
   @override
   int get hashCode =>
@@ -112,8 +112,8 @@ class ScimUserList {
         totalResults: mapValueOfType<int>(json, r'totalResults'),
         itemsPerPage: mapValueOfType<int>(json, r'itemsPerPage'),
         startIndex: mapValueOfType<int>(json, r'startIndex'),
-        schemas: json[r'schemas'] is List
-            ? (json[r'schemas'] as List).cast<String>()
+        schemas: json[r'schemas'] is Iterable
+            ? (json[r'schemas'] as Iterable).cast<String>().toList(growable: false)
             : const [],
         resources: ScimUser.listFromJson(json[r'Resources']),
       );

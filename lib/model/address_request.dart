@@ -55,14 +55,14 @@ class AddressRequest {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is AddressRequest &&
-     other.fkiAddresstypeID == fkiAddresstypeID &&
-     other.sAddressCivic == sAddressCivic &&
-     other.sAddressStreet == sAddressStreet &&
-     other.sAddressSuite == sAddressSuite &&
-     other.sAddressCity == sAddressCity &&
-     other.fkiProvinceID == fkiProvinceID &&
-     other.fkiCountryID == fkiCountryID &&
-     other.sAddressZip == sAddressZip;
+    other.fkiAddresstypeID == fkiAddresstypeID &&
+    other.sAddressCivic == sAddressCivic &&
+    other.sAddressStreet == sAddressStreet &&
+    other.sAddressSuite == sAddressSuite &&
+    other.sAddressCity == sAddressCity &&
+    other.fkiProvinceID == fkiProvinceID &&
+    other.fkiCountryID == fkiCountryID &&
+    other.sAddressZip == sAddressZip;
 
   @override
   int get hashCode =>

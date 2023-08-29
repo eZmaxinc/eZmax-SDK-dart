@@ -32,9 +32,9 @@ class CustomEzsignsignatureEzsignsignaturesAutomaticResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomEzsignsignatureEzsignsignaturesAutomaticResponse &&
-     other.pkiEzsignsignatureID == pkiEzsignsignatureID &&
-     other.eEzsignsignatureType == eEzsignsignatureType &&
-     other.iEzsignpagePagenumber == iEzsignpagePagenumber;
+    other.pkiEzsignsignatureID == pkiEzsignsignatureID &&
+    other.eEzsignsignatureType == eEzsignsignatureType &&
+    other.iEzsignpagePagenumber == iEzsignpagePagenumber;
 
   @override
   int get hashCode =>

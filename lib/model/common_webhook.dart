@@ -24,8 +24,8 @@ class CommonWebhook {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonWebhook &&
-     other.objWebhook == objWebhook &&
-     other.aObjAttempt == aObjAttempt;
+    other.objWebhook == objWebhook &&
+    _deepEquality.equals(other.aObjAttempt, aObjAttempt);
 
   @override
   int get hashCode =>

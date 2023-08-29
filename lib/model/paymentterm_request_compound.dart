@@ -48,12 +48,12 @@ class PaymenttermRequestCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is PaymenttermRequestCompound &&
-     other.pkiPaymenttermID == pkiPaymenttermID &&
-     other.sPaymenttermCode == sPaymenttermCode &&
-     other.ePaymenttermType == ePaymenttermType &&
-     other.iPaymenttermDay == iPaymenttermDay &&
-     other.objPaymenttermDescription == objPaymenttermDescription &&
-     other.bPaymenttermIsactive == bPaymenttermIsactive;
+    other.pkiPaymenttermID == pkiPaymenttermID &&
+    other.sPaymenttermCode == sPaymenttermCode &&
+    other.ePaymenttermType == ePaymenttermType &&
+    other.iPaymenttermDay == iPaymenttermDay &&
+    other.objPaymenttermDescription == objPaymenttermDescription &&
+    other.bPaymenttermIsactive == bPaymenttermIsactive;
 
   @override
   int get hashCode =>

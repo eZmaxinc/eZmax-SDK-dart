@@ -20,7 +20,7 @@ class SystemconfigurationGetObjectV2ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is SystemconfigurationGetObjectV2ResponseMPayload &&
-     other.objSystemconfiguration == objSystemconfiguration;
+    other.objSystemconfiguration == objSystemconfiguration;
 
   @override
   int get hashCode =>

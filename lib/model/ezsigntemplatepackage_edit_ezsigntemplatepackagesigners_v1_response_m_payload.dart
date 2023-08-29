@@ -20,7 +20,7 @@ class EzsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseMPayload &&
-     other.aPkiEzsigntemplatepackagesignerID == aPkiEzsigntemplatepackagesignerID;
+    _deepEquality.equals(other.aPkiEzsigntemplatepackagesignerID, aPkiEzsigntemplatepackagesignerID);
 
   @override
   int get hashCode =>
@@ -55,8 +55,8 @@ class EzsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseMPayload {
       }());
 
       return EzsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseMPayload(
-        aPkiEzsigntemplatepackagesignerID: json[r'a_pkiEzsigntemplatepackagesignerID'] is List
-            ? (json[r'a_pkiEzsigntemplatepackagesignerID'] as List).cast<int>()
+        aPkiEzsigntemplatepackagesignerID: json[r'a_pkiEzsigntemplatepackagesignerID'] is Iterable
+            ? (json[r'a_pkiEzsigntemplatepackagesignerID'] as Iterable).cast<int>().toList(growable: false)
             : const [],
       );
     }

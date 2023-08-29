@@ -31,9 +31,9 @@ class TimezoneAutocompleteElementResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is TimezoneAutocompleteElementResponse &&
-     other.sTimezoneName == sTimezoneName &&
-     other.pkiTimezoneID == pkiTimezoneID &&
-     other.bTimezoneIsactive == bTimezoneIsactive;
+    other.sTimezoneName == sTimezoneName &&
+    other.pkiTimezoneID == pkiTimezoneID &&
+    other.bTimezoneIsactive == bTimezoneIsactive;
 
   @override
   int get hashCode =>

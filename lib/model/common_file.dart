@@ -45,10 +45,10 @@ class CommonFile {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonFile &&
-     other.sFileName == sFileName &&
-     other.sFileUrl == sFileUrl &&
-     other.sFileBase64 == sFileBase64 &&
-     other.eFileSource == eFileSource;
+    other.sFileName == sFileName &&
+    other.sFileUrl == sFileUrl &&
+    other.sFileBase64 == sFileBase64 &&
+    other.eFileSource == eFileSource;
 
   @override
   int get hashCode =>

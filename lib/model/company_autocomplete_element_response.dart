@@ -32,9 +32,9 @@ class CompanyAutocompleteElementResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CompanyAutocompleteElementResponse &&
-     other.pkiCompanyID == pkiCompanyID &&
-     other.sCompanyNameX == sCompanyNameX &&
-     other.bCompanyIsactive == bCompanyIsactive;
+    other.pkiCompanyID == pkiCompanyID &&
+    other.sCompanyNameX == sCompanyNameX &&
+    other.bCompanyIsactive == bCompanyIsactive;
 
   @override
   int get hashCode =>

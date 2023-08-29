@@ -81,14 +81,14 @@ class EzmaxinvoicingcommissionResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzmaxinvoicingcommissionResponse &&
-     other.pkiEzmaxinvoicingcommissionID == pkiEzmaxinvoicingcommissionID &&
-     other.fkiEzmaxinvoicingsummaryglobalID == fkiEzmaxinvoicingsummaryglobalID &&
-     other.fkiEzmaxpartnerID == fkiEzmaxpartnerID &&
-     other.fkiEzmaxrepresentativeID == fkiEzmaxrepresentativeID &&
-     other.dtEzmaxinvoicingcommissionStart == dtEzmaxinvoicingcommissionStart &&
-     other.dtEzmaxinvoicingcommissionEnd == dtEzmaxinvoicingcommissionEnd &&
-     other.iEzmaxinvoicingcommissionDays == iEzmaxinvoicingcommissionDays &&
-     other.dEzmaxinvoicingcommissionAmount == dEzmaxinvoicingcommissionAmount;
+    other.pkiEzmaxinvoicingcommissionID == pkiEzmaxinvoicingcommissionID &&
+    other.fkiEzmaxinvoicingsummaryglobalID == fkiEzmaxinvoicingsummaryglobalID &&
+    other.fkiEzmaxpartnerID == fkiEzmaxpartnerID &&
+    other.fkiEzmaxrepresentativeID == fkiEzmaxrepresentativeID &&
+    other.dtEzmaxinvoicingcommissionStart == dtEzmaxinvoicingcommissionStart &&
+    other.dtEzmaxinvoicingcommissionEnd == dtEzmaxinvoicingcommissionEnd &&
+    other.iEzmaxinvoicingcommissionDays == iEzmaxinvoicingcommissionDays &&
+    other.dEzmaxinvoicingcommissionAmount == dEzmaxinvoicingcommissionAmount;
 
   @override
   int get hashCode =>

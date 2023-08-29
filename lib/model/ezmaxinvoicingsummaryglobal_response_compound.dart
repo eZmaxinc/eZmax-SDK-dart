@@ -134,26 +134,26 @@ class EzmaxinvoicingsummaryglobalResponseCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzmaxinvoicingsummaryglobalResponseCompound &&
-     other.pkiEzmaxinvoicingsummaryglobalID == pkiEzmaxinvoicingsummaryglobalID &&
-     other.fkiEzmaxinvoicingID == fkiEzmaxinvoicingID &&
-     other.fkiEzmaxproductID == fkiEzmaxproductID &&
-     other.sEzmaxproductDescriptionX == sEzmaxproductDescriptionX &&
-     other.dtEzmaxinvoicingsummaryglobalStart == dtEzmaxinvoicingsummaryglobalStart &&
-     other.dtEzmaxinvoicingsummaryglobalEnd == dtEzmaxinvoicingsummaryglobalEnd &&
-     other.iEzmaxinvoicingsummaryglobalDays == iEzmaxinvoicingsummaryglobalDays &&
-     other.dEzmaxinvoicingsummaryglobalCountreal == dEzmaxinvoicingsummaryglobalCountreal &&
-     other.dEzmaxinvoicingsummaryglobalCountbilled == dEzmaxinvoicingsummaryglobalCountbilled &&
-     other.dEzmaxinvoicingsummaryglobalSubtotal == dEzmaxinvoicingsummaryglobalSubtotal &&
-     other.dEzmaxinvoicingsummaryglobalRebateamount == dEzmaxinvoicingsummaryglobalRebateamount &&
-     other.dEzmaxinvoicingsummaryglobalRebatepercent == dEzmaxinvoicingsummaryglobalRebatepercent &&
-     other.dEzmaxinvoicingsummaryglobalRebatetotal == dEzmaxinvoicingsummaryglobalRebatetotal &&
-     other.dEzmaxinvoicingsummaryglobalTotal == dEzmaxinvoicingsummaryglobalTotal &&
-     other.dEzmaxinvoicingsummaryglobalRepresentative == dEzmaxinvoicingsummaryglobalRepresentative &&
-     other.dEzmaxinvoicingsummaryglobalPartner == dEzmaxinvoicingsummaryglobalPartner &&
-     other.dEzmaxinvoicingsummaryglobalNet == dEzmaxinvoicingsummaryglobalNet &&
-     other.bEzmaxinvoicingsummaryglobalAdjustment == bEzmaxinvoicingsummaryglobalAdjustment &&
-     other.tEzmaxproductHelpX == tEzmaxproductHelpX &&
-     other.aObjEzmaxinvoicingcommission == aObjEzmaxinvoicingcommission;
+    other.pkiEzmaxinvoicingsummaryglobalID == pkiEzmaxinvoicingsummaryglobalID &&
+    other.fkiEzmaxinvoicingID == fkiEzmaxinvoicingID &&
+    other.fkiEzmaxproductID == fkiEzmaxproductID &&
+    other.sEzmaxproductDescriptionX == sEzmaxproductDescriptionX &&
+    other.dtEzmaxinvoicingsummaryglobalStart == dtEzmaxinvoicingsummaryglobalStart &&
+    other.dtEzmaxinvoicingsummaryglobalEnd == dtEzmaxinvoicingsummaryglobalEnd &&
+    other.iEzmaxinvoicingsummaryglobalDays == iEzmaxinvoicingsummaryglobalDays &&
+    other.dEzmaxinvoicingsummaryglobalCountreal == dEzmaxinvoicingsummaryglobalCountreal &&
+    other.dEzmaxinvoicingsummaryglobalCountbilled == dEzmaxinvoicingsummaryglobalCountbilled &&
+    other.dEzmaxinvoicingsummaryglobalSubtotal == dEzmaxinvoicingsummaryglobalSubtotal &&
+    other.dEzmaxinvoicingsummaryglobalRebateamount == dEzmaxinvoicingsummaryglobalRebateamount &&
+    other.dEzmaxinvoicingsummaryglobalRebatepercent == dEzmaxinvoicingsummaryglobalRebatepercent &&
+    other.dEzmaxinvoicingsummaryglobalRebatetotal == dEzmaxinvoicingsummaryglobalRebatetotal &&
+    other.dEzmaxinvoicingsummaryglobalTotal == dEzmaxinvoicingsummaryglobalTotal &&
+    other.dEzmaxinvoicingsummaryglobalRepresentative == dEzmaxinvoicingsummaryglobalRepresentative &&
+    other.dEzmaxinvoicingsummaryglobalPartner == dEzmaxinvoicingsummaryglobalPartner &&
+    other.dEzmaxinvoicingsummaryglobalNet == dEzmaxinvoicingsummaryglobalNet &&
+    other.bEzmaxinvoicingsummaryglobalAdjustment == bEzmaxinvoicingsummaryglobalAdjustment &&
+    other.tEzmaxproductHelpX == tEzmaxproductHelpX &&
+    _deepEquality.equals(other.aObjEzmaxinvoicingcommission, aObjEzmaxinvoicingcommission);
 
   @override
   int get hashCode =>

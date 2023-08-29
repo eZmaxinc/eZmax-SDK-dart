@@ -20,7 +20,7 @@ class SignatureGetObjectV2ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is SignatureGetObjectV2ResponseMPayload &&
-     other.objSignature == objSignature;
+    other.objSignature == objSignature;
 
   @override
   int get hashCode =>

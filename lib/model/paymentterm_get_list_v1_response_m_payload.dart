@@ -13,12 +13,10 @@ part of openapi.api;
 class PaymenttermGetListV1ResponseMPayload {
   /// Returns a new [PaymenttermGetListV1ResponseMPayload] instance.
   PaymenttermGetListV1ResponseMPayload({
-    this.aObjPaymentterm = const [],
     required this.iRowReturned,
     required this.iRowFiltered,
+    this.aObjPaymentterm = const [],
   });
-
-  List<PaymenttermListElement> aObjPaymentterm;
 
   /// The number of rows returned
   int iRowReturned;
@@ -26,27 +24,29 @@ class PaymenttermGetListV1ResponseMPayload {
   /// The number of rows matching your filters (if any) or the total number of rows
   int iRowFiltered;
 
+  List<PaymenttermListElement> aObjPaymentterm;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is PaymenttermGetListV1ResponseMPayload &&
-     other.aObjPaymentterm == aObjPaymentterm &&
-     other.iRowReturned == iRowReturned &&
-     other.iRowFiltered == iRowFiltered;
+    other.iRowReturned == iRowReturned &&
+    other.iRowFiltered == iRowFiltered &&
+    _deepEquality.equals(other.aObjPaymentterm, aObjPaymentterm);
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (aObjPaymentterm.hashCode) +
     (iRowReturned.hashCode) +
-    (iRowFiltered.hashCode);
+    (iRowFiltered.hashCode) +
+    (aObjPaymentterm.hashCode);
 
   @override
-  String toString() => 'PaymenttermGetListV1ResponseMPayload[aObjPaymentterm=$aObjPaymentterm, iRowReturned=$iRowReturned, iRowFiltered=$iRowFiltered]';
+  String toString() => 'PaymenttermGetListV1ResponseMPayload[iRowReturned=$iRowReturned, iRowFiltered=$iRowFiltered, aObjPaymentterm=$aObjPaymentterm]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'a_objPaymentterm'] = this.aObjPaymentterm;
       json[r'iRowReturned'] = this.iRowReturned;
       json[r'iRowFiltered'] = this.iRowFiltered;
+      json[r'a_objPaymentterm'] = this.aObjPaymentterm;
     return json;
   }
 
@@ -69,9 +69,9 @@ class PaymenttermGetListV1ResponseMPayload {
       }());
 
       return PaymenttermGetListV1ResponseMPayload(
-        aObjPaymentterm: PaymenttermListElement.listFromJson(json[r'a_objPaymentterm']),
         iRowReturned: mapValueOfType<int>(json, r'iRowReturned')!,
         iRowFiltered: mapValueOfType<int>(json, r'iRowFiltered')!,
+        aObjPaymentterm: PaymenttermListElement.listFromJson(json[r'a_objPaymentterm']),
       );
     }
     return null;
@@ -119,9 +119,9 @@ class PaymenttermGetListV1ResponseMPayload {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'a_objPaymentterm',
     'iRowReturned',
     'iRowFiltered',
+    'a_objPaymentterm',
   };
 }
 

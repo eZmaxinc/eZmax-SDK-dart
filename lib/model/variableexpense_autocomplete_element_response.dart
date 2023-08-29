@@ -32,9 +32,9 @@ class VariableexpenseAutocompleteElementResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is VariableexpenseAutocompleteElementResponse &&
-     other.sVariableexpenseDescriptionX == sVariableexpenseDescriptionX &&
-     other.pkiVariableexpenseID == pkiVariableexpenseID &&
-     other.bVariableexpenseIsactive == bVariableexpenseIsactive;
+    other.sVariableexpenseDescriptionX == sVariableexpenseDescriptionX &&
+    other.pkiVariableexpenseID == pkiVariableexpenseID &&
+    other.bVariableexpenseIsactive == bVariableexpenseIsactive;
 
   @override
   int get hashCode =>

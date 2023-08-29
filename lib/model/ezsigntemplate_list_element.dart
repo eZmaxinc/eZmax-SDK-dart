@@ -80,15 +80,15 @@ class EzsigntemplateListElement {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplateListElement &&
-     other.pkiEzsigntemplateID == pkiEzsigntemplateID &&
-     other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
-     other.fkiLanguageID == fkiLanguageID &&
-     other.sEzsigntemplateDescription == sEzsigntemplateDescription &&
-     other.iEzsigntemplatedocumentPagetotal == iEzsigntemplatedocumentPagetotal &&
-     other.iEzsigntemplateSignaturetotal == iEzsigntemplateSignaturetotal &&
-     other.iEzsigntemplateFormfieldtotal == iEzsigntemplateFormfieldtotal &&
-     other.bEzsigntemplateIncomplete == bEzsigntemplateIncomplete &&
-     other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX;
+    other.pkiEzsigntemplateID == pkiEzsigntemplateID &&
+    other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
+    other.fkiLanguageID == fkiLanguageID &&
+    other.sEzsigntemplateDescription == sEzsigntemplateDescription &&
+    other.iEzsigntemplatedocumentPagetotal == iEzsigntemplatedocumentPagetotal &&
+    other.iEzsigntemplateSignaturetotal == iEzsigntemplateSignaturetotal &&
+    other.iEzsigntemplateFormfieldtotal == iEzsigntemplateFormfieldtotal &&
+    other.bEzsigntemplateIncomplete == bEzsigntemplateIncomplete &&
+    other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX;
 
   @override
   int get hashCode =>

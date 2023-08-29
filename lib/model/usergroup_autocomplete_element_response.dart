@@ -32,9 +32,9 @@ class UsergroupAutocompleteElementResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is UsergroupAutocompleteElementResponse &&
-     other.sUsergroupNameX == sUsergroupNameX &&
-     other.pkiUsergroupID == pkiUsergroupID &&
-     other.bUsergroupIsactive == bUsergroupIsactive;
+    other.sUsergroupNameX == sUsergroupNameX &&
+    other.pkiUsergroupID == pkiUsergroupID &&
+    other.bUsergroupIsactive == bUsergroupIsactive;
 
   @override
   int get hashCode =>

@@ -37,8 +37,8 @@ class MultilingualNotificationsubsectionName {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is MultilingualNotificationsubsectionName &&
-     other.sNotificationsubsectionName1 == sNotificationsubsectionName1 &&
-     other.sNotificationsubsectionName2 == sNotificationsubsectionName2;
+    other.sNotificationsubsectionName1 == sNotificationsubsectionName1 &&
+    other.sNotificationsubsectionName2 == sNotificationsubsectionName2;
 
   @override
   int get hashCode =>

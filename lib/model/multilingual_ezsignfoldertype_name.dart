@@ -37,8 +37,8 @@ class MultilingualEzsignfoldertypeName {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is MultilingualEzsignfoldertypeName &&
-     other.sEzsignfoldertypeName1 == sEzsignfoldertypeName1 &&
-     other.sEzsignfoldertypeName2 == sEzsignfoldertypeName2;
+    other.sEzsignfoldertypeName1 == sEzsignfoldertypeName1 &&
+    other.sEzsignfoldertypeName2 == sEzsignfoldertypeName2;
 
   @override
   int get hashCode =>

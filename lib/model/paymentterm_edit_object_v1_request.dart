@@ -20,7 +20,7 @@ class PaymenttermEditObjectV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is PaymenttermEditObjectV1Request &&
-     other.objPaymentterm == objPaymentterm;
+    other.objPaymentterm == objPaymentterm;
 
   @override
   int get hashCode =>

@@ -33,10 +33,10 @@ class ContactinformationsRequest {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ContactinformationsRequest &&
-     other.iAddressDefault == iAddressDefault &&
-     other.iPhoneDefault == iPhoneDefault &&
-     other.iEmailDefault == iEmailDefault &&
-     other.iWebsiteDefault == iWebsiteDefault;
+    other.iAddressDefault == iAddressDefault &&
+    other.iPhoneDefault == iPhoneDefault &&
+    other.iEmailDefault == iEmailDefault &&
+    other.iWebsiteDefault == iWebsiteDefault;
 
   @override
   int get hashCode =>

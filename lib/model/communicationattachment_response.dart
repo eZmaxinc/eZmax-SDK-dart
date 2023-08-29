@@ -71,12 +71,12 @@ class CommunicationattachmentResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommunicationattachmentResponse &&
-     other.pkiCommunicationattachmentID == pkiCommunicationattachmentID &&
-     other.fkiAttachmentID == fkiAttachmentID &&
-     other.fkiInvoiceID == fkiInvoiceID &&
-     other.fkiSalarypreparationID == fkiSalarypreparationID &&
-     other.sCommunicationattachmentName == sCommunicationattachmentName &&
-     other.sDownloadUrl == sDownloadUrl;
+    other.pkiCommunicationattachmentID == pkiCommunicationattachmentID &&
+    other.fkiAttachmentID == fkiAttachmentID &&
+    other.fkiInvoiceID == fkiInvoiceID &&
+    other.fkiSalarypreparationID == fkiSalarypreparationID &&
+    other.sCommunicationattachmentName == sCommunicationattachmentName &&
+    other.sDownloadUrl == sDownloadUrl;
 
   @override
   int get hashCode =>

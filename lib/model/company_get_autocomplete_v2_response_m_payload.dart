@@ -21,7 +21,7 @@ class CompanyGetAutocompleteV2ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CompanyGetAutocompleteV2ResponseMPayload &&
-     other.aObjCompany == aObjCompany;
+    _deepEquality.equals(other.aObjCompany, aObjCompany);
 
   @override
   int get hashCode =>

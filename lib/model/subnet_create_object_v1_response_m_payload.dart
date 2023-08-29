@@ -21,7 +21,7 @@ class SubnetCreateObjectV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is SubnetCreateObjectV1ResponseMPayload &&
-     other.aPkiSubnetID == aPkiSubnetID;
+    _deepEquality.equals(other.aPkiSubnetID, aPkiSubnetID);
 
   @override
   int get hashCode =>
@@ -56,8 +56,8 @@ class SubnetCreateObjectV1ResponseMPayload {
       }());
 
       return SubnetCreateObjectV1ResponseMPayload(
-        aPkiSubnetID: json[r'a_pkiSubnetID'] is List
-            ? (json[r'a_pkiSubnetID'] as List).cast<int>()
+        aPkiSubnetID: json[r'a_pkiSubnetID'] is Iterable
+            ? (json[r'a_pkiSubnetID'] as Iterable).cast<int>().toList(growable: false)
             : const [],
       );
     }

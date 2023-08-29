@@ -43,9 +43,9 @@ class CustomEzsignformfieldgroupRequest {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomEzsignformfieldgroupRequest &&
-     other.pkiEzsignformfieldgroupID == pkiEzsignformfieldgroupID &&
-     other.sEzsignformfieldgroupLabel == sEzsignformfieldgroupLabel &&
-     other.aObjEzsignformfield == aObjEzsignformfield;
+    other.pkiEzsignformfieldgroupID == pkiEzsignformfieldgroupID &&
+    other.sEzsignformfieldgroupLabel == sEzsignformfieldgroupLabel &&
+    _deepEquality.equals(other.aObjEzsignformfield, aObjEzsignformfield);
 
   @override
   int get hashCode =>

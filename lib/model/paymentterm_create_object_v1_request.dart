@@ -20,7 +20,7 @@ class PaymenttermCreateObjectV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is PaymenttermCreateObjectV1Request &&
-     other.aObjPaymentterm == aObjPaymentterm;
+    _deepEquality.equals(other.aObjPaymentterm, aObjPaymentterm);
 
   @override
   int get hashCode =>

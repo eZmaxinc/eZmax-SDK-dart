@@ -34,8 +34,8 @@ class SignatureRequest {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is SignatureRequest &&
-     other.pkiSignatureID == pkiSignatureID &&
-     other.tSignatureSvg == tSignatureSvg;
+    other.pkiSignatureID == pkiSignatureID &&
+    other.tSignatureSvg == tSignatureSvg;
 
   @override
   int get hashCode =>

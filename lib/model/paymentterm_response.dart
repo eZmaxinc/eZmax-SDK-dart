@@ -45,13 +45,13 @@ class PaymenttermResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is PaymenttermResponse &&
-     other.pkiPaymenttermID == pkiPaymenttermID &&
-     other.sPaymenttermCode == sPaymenttermCode &&
-     other.ePaymenttermType == ePaymenttermType &&
-     other.iPaymenttermDay == iPaymenttermDay &&
-     other.objPaymenttermDescription == objPaymenttermDescription &&
-     other.bPaymenttermIsactive == bPaymenttermIsactive &&
-     other.objAudit == objAudit;
+    other.pkiPaymenttermID == pkiPaymenttermID &&
+    other.sPaymenttermCode == sPaymenttermCode &&
+    other.ePaymenttermType == ePaymenttermType &&
+    other.iPaymenttermDay == iPaymenttermDay &&
+    other.objPaymenttermDescription == objPaymenttermDescription &&
+    other.bPaymenttermIsactive == bPaymenttermIsactive &&
+    other.objAudit == objAudit;
 
   @override
   int get hashCode =>

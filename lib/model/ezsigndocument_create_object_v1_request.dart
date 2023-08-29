@@ -35,8 +35,8 @@ class EzsigndocumentCreateObjectV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigndocumentCreateObjectV1Request &&
-     other.objEzsigndocument == objEzsigndocument &&
-     other.objEzsigndocumentCompound == objEzsigndocumentCompound;
+    other.objEzsigndocument == objEzsigndocument &&
+    other.objEzsigndocumentCompound == objEzsigndocumentCompound;
 
   @override
   int get hashCode =>

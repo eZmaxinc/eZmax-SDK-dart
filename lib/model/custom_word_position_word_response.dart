@@ -25,8 +25,8 @@ class CustomWordPositionWordResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomWordPositionWordResponse &&
-     other.sWord == sWord &&
-     other.aObjWordPositionOccurence == aObjWordPositionOccurence;
+    other.sWord == sWord &&
+    _deepEquality.equals(other.aObjWordPositionOccurence, aObjWordPositionOccurence);
 
   @override
   int get hashCode =>

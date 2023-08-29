@@ -58,12 +58,12 @@ class EzsignsignatureSignV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignsignatureSignV1Request &&
-     other.sValue == sValue &&
-     other.eAttachmentsConfirmationDecision == eAttachmentsConfirmationDecision &&
-     other.sAttachmentsRefusalReason == sAttachmentsRefusalReason &&
-     other.sSvg == sSvg &&
-     other.aObjFile == aObjFile &&
-     other.bIsAutomatic == bIsAutomatic;
+    other.sValue == sValue &&
+    other.eAttachmentsConfirmationDecision == eAttachmentsConfirmationDecision &&
+    other.sAttachmentsRefusalReason == sAttachmentsRefusalReason &&
+    other.sSvg == sSvg &&
+    _deepEquality.equals(other.aObjFile, aObjFile) &&
+    other.bIsAutomatic == bIsAutomatic;
 
   @override
   int get hashCode =>

@@ -43,11 +43,11 @@ class CustomAutocompleteElementResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomAutocompleteElementResponse &&
-     other.sCategory == sCategory &&
-     other.sLabel == sLabel &&
-     other.sValue == sValue &&
-     other.mValue == mValue &&
-     other.bActive == bActive;
+    other.sCategory == sCategory &&
+    other.sLabel == sLabel &&
+    other.sValue == sValue &&
+    other.mValue == mValue &&
+    other.bActive == bActive;
 
   @override
   int get hashCode =>

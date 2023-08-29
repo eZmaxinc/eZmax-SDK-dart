@@ -59,11 +59,11 @@ class EzsignbulksenddocumentmappingResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignbulksenddocumentmappingResponse &&
-     other.pkiEzsignbulksenddocumentmappingID == pkiEzsignbulksenddocumentmappingID &&
-     other.fkiEzsignbulksendID == fkiEzsignbulksendID &&
-     other.fkiEzsigntemplatepackageID == fkiEzsigntemplatepackageID &&
-     other.fkiEzsigntemplateID == fkiEzsigntemplateID &&
-     other.iEzsignbulksenddocumentmappingOrder == iEzsignbulksenddocumentmappingOrder;
+    other.pkiEzsignbulksenddocumentmappingID == pkiEzsignbulksenddocumentmappingID &&
+    other.fkiEzsignbulksendID == fkiEzsignbulksendID &&
+    other.fkiEzsigntemplatepackageID == fkiEzsigntemplatepackageID &&
+    other.fkiEzsigntemplateID == fkiEzsigntemplateID &&
+    other.iEzsignbulksenddocumentmappingOrder == iEzsignbulksenddocumentmappingOrder;
 
   @override
   int get hashCode =>

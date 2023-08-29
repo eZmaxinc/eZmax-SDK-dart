@@ -72,19 +72,19 @@ class EzsignbulksendResponseCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignbulksendResponseCompound &&
-     other.pkiEzsignbulksendID == pkiEzsignbulksendID &&
-     other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
-     other.fkiLanguageID == fkiLanguageID &&
-     other.sLanguageNameX == sLanguageNameX &&
-     other.eEzsignfoldertypePrivacylevel == eEzsignfoldertypePrivacylevel &&
-     other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
-     other.sEzsignbulksendDescription == sEzsignbulksendDescription &&
-     other.tEzsignbulksendNote == tEzsignbulksendNote &&
-     other.bEzsignbulksendNeedvalidation == bEzsignbulksendNeedvalidation &&
-     other.bEzsignbulksendIsactive == bEzsignbulksendIsactive &&
-     other.objAudit == objAudit &&
-     other.aObjEzsignbulksenddocumentmapping == aObjEzsignbulksenddocumentmapping &&
-     other.aObjEzsignbulksendsignermapping == aObjEzsignbulksendsignermapping;
+    other.pkiEzsignbulksendID == pkiEzsignbulksendID &&
+    other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
+    other.fkiLanguageID == fkiLanguageID &&
+    other.sLanguageNameX == sLanguageNameX &&
+    other.eEzsignfoldertypePrivacylevel == eEzsignfoldertypePrivacylevel &&
+    other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
+    other.sEzsignbulksendDescription == sEzsignbulksendDescription &&
+    other.tEzsignbulksendNote == tEzsignbulksendNote &&
+    other.bEzsignbulksendNeedvalidation == bEzsignbulksendNeedvalidation &&
+    other.bEzsignbulksendIsactive == bEzsignbulksendIsactive &&
+    other.objAudit == objAudit &&
+    _deepEquality.equals(other.aObjEzsignbulksenddocumentmapping, aObjEzsignbulksenddocumentmapping) &&
+    _deepEquality.equals(other.aObjEzsignbulksendsignermapping, aObjEzsignbulksendsignermapping);
 
   @override
   int get hashCode =>

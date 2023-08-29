@@ -43,14 +43,14 @@ class ScimServiceProviderConfig {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ScimServiceProviderConfig &&
-     other.authenticationSchemes == authenticationSchemes &&
-     other.bulk == bulk &&
-     other.changePassword == changePassword &&
-     other.documentationUri == documentationUri &&
-     other.etag == etag &&
-     other.filter == filter &&
-     other.patch_ == patch_ &&
-     other.sort == sort;
+    _deepEquality.equals(other.authenticationSchemes, authenticationSchemes) &&
+    other.bulk == bulk &&
+    other.changePassword == changePassword &&
+    other.documentationUri == documentationUri &&
+    other.etag == etag &&
+    other.filter == filter &&
+    other.patch_ == patch_ &&
+    other.sort == sort;
 
   @override
   int get hashCode =>

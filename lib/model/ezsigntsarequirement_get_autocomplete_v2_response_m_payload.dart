@@ -21,7 +21,7 @@ class EzsigntsarequirementGetAutocompleteV2ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntsarequirementGetAutocompleteV2ResponseMPayload &&
-     other.aObjEzsigntsarequirement == aObjEzsigntsarequirement;
+    _deepEquality.equals(other.aObjEzsigntsarequirement, aObjEzsigntsarequirement);
 
   @override
   int get hashCode =>

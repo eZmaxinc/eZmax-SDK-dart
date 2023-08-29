@@ -88,16 +88,16 @@ class SessionhistoryListElement {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is SessionhistoryListElement &&
-     other.pkiSessionhistoryID == pkiSessionhistoryID &&
-     other.fkiComputerID == fkiComputerID &&
-     other.fkiUserID == fkiUserID &&
-     other.dtSessionhistoryFirsthit == dtSessionhistoryFirsthit &&
-     other.dtSessionhistoryLasthit == dtSessionhistoryLasthit &&
-     other.eSessionhistoryEndby == eSessionhistoryEndby &&
-     other.sComputerDescription == sComputerDescription &&
-     other.sSessionhistoryDuration == sSessionhistoryDuration &&
-     other.sSessionhistoryIP == sSessionhistoryIP &&
-     other.sUserLoginname == sUserLoginname;
+    other.pkiSessionhistoryID == pkiSessionhistoryID &&
+    other.fkiComputerID == fkiComputerID &&
+    other.fkiUserID == fkiUserID &&
+    other.dtSessionhistoryFirsthit == dtSessionhistoryFirsthit &&
+    other.dtSessionhistoryLasthit == dtSessionhistoryLasthit &&
+    other.eSessionhistoryEndby == eSessionhistoryEndby &&
+    other.sComputerDescription == sComputerDescription &&
+    other.sSessionhistoryDuration == sSessionhistoryDuration &&
+    other.sSessionhistoryIP == sSessionhistoryIP &&
+    other.sUserLoginname == sUserLoginname;
 
   @override
   int get hashCode =>

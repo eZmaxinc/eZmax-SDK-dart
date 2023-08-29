@@ -37,11 +37,11 @@ class CommonResponseObjDebug {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonResponseObjDebug &&
-     other.sMemoryUsage == sMemoryUsage &&
-     other.sRunTime == sRunTime &&
-     other.iSQLSelects == iSQLSelects &&
-     other.iSQLQueries == iSQLQueries &&
-     other.aObjSQLQuery == aObjSQLQuery;
+    other.sMemoryUsage == sMemoryUsage &&
+    other.sRunTime == sRunTime &&
+    other.iSQLSelects == iSQLSelects &&
+    other.iSQLQueries == iSQLQueries &&
+    _deepEquality.equals(other.aObjSQLQuery, aObjSQLQuery);
 
   @override
   int get hashCode =>

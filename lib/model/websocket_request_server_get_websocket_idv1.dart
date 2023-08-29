@@ -21,7 +21,7 @@ class WebsocketRequestServerGetWebsocketIDV1 {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is WebsocketRequestServerGetWebsocketIDV1 &&
-     other.eWebsocketMessagetype == eWebsocketMessagetype;
+    other.eWebsocketMessagetype == eWebsocketMessagetype;
 
   @override
   int get hashCode =>

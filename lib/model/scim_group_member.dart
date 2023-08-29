@@ -53,10 +53,10 @@ class ScimGroupMember {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ScimGroupMember &&
-     other.value == value &&
-     other.display == display &&
-     other.type == type &&
-     other.dollarRef == dollarRef;
+    other.value == value &&
+    other.display == display &&
+    other.type == type &&
+    other.dollarRef == dollarRef;
 
   @override
   int get hashCode =>

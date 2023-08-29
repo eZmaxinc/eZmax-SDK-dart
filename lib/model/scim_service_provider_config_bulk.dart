@@ -29,9 +29,9 @@ class ScimServiceProviderConfigBulk {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ScimServiceProviderConfigBulk &&
-     other.supported == supported &&
-     other.maxOperations == maxOperations &&
-     other.maxPayloadSize == maxPayloadSize;
+    other.supported == supported &&
+    other.maxOperations == maxOperations &&
+    other.maxPayloadSize == maxPayloadSize;
 
   @override
   int get hashCode =>

@@ -20,7 +20,7 @@ class UserGetObjectV2ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is UserGetObjectV2ResponseMPayload &&
-     other.objUser == objUser;
+    other.objUser == objUser;
 
   @override
   int get hashCode =>

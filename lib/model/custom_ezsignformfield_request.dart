@@ -59,10 +59,10 @@ class CustomEzsignformfieldRequest {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomEzsignformfieldRequest &&
-     other.pkiEzsignformfieldID == pkiEzsignformfieldID &&
-     other.sEzsignformfieldLabel == sEzsignformfieldLabel &&
-     other.bEzsignformfieldSelected == bEzsignformfieldSelected &&
-     other.sEzsignformfieldEnteredvalue == sEzsignformfieldEnteredvalue;
+    other.pkiEzsignformfieldID == pkiEzsignformfieldID &&
+    other.sEzsignformfieldLabel == sEzsignformfieldLabel &&
+    other.bEzsignformfieldSelected == bEzsignformfieldSelected &&
+    other.sEzsignformfieldEnteredvalue == sEzsignformfieldEnteredvalue;
 
   @override
   int get hashCode =>

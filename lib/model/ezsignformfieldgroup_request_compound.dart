@@ -81,6 +81,7 @@ class EzsignformfieldgroupRequestCompound {
   /// The maximum length for the value in the Ezsignformfieldgroup  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**
   ///
   /// Minimum value: 0
+  /// Maximum value: 65535
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -140,25 +141,25 @@ class EzsignformfieldgroupRequestCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignformfieldgroupRequestCompound &&
-     other.pkiEzsignformfieldgroupID == pkiEzsignformfieldgroupID &&
-     other.fkiEzsigndocumentID == fkiEzsigndocumentID &&
-     other.eEzsignformfieldgroupType == eEzsignformfieldgroupType &&
-     other.eEzsignformfieldgroupSignerrequirement == eEzsignformfieldgroupSignerrequirement &&
-     other.sEzsignformfieldgroupLabel == sEzsignformfieldgroupLabel &&
-     other.iEzsignformfieldgroupStep == iEzsignformfieldgroupStep &&
-     other.sEzsignformfieldgroupDefaultvalue == sEzsignformfieldgroupDefaultvalue &&
-     other.iEzsignformfieldgroupFilledmin == iEzsignformfieldgroupFilledmin &&
-     other.iEzsignformfieldgroupFilledmax == iEzsignformfieldgroupFilledmax &&
-     other.bEzsignformfieldgroupReadonly == bEzsignformfieldgroupReadonly &&
-     other.iEzsignformfieldgroupMaxlength == iEzsignformfieldgroupMaxlength &&
-     other.bEzsignformfieldgroupEncrypted == bEzsignformfieldgroupEncrypted &&
-     other.sEzsignformfieldgroupRegexp == sEzsignformfieldgroupRegexp &&
-     other.tEzsignformfieldgroupTooltip == tEzsignformfieldgroupTooltip &&
-     other.eEzsignformfieldgroupTooltipposition == eEzsignformfieldgroupTooltipposition &&
-     other.eEzsignformfieldgroupTextvalidation == eEzsignformfieldgroupTextvalidation &&
-     other.aObjEzsignformfieldgroupsigner == aObjEzsignformfieldgroupsigner &&
-     other.aObjDropdownElement == aObjDropdownElement &&
-     other.aObjEzsignformfield == aObjEzsignformfield;
+    other.pkiEzsignformfieldgroupID == pkiEzsignformfieldgroupID &&
+    other.fkiEzsigndocumentID == fkiEzsigndocumentID &&
+    other.eEzsignformfieldgroupType == eEzsignformfieldgroupType &&
+    other.eEzsignformfieldgroupSignerrequirement == eEzsignformfieldgroupSignerrequirement &&
+    other.sEzsignformfieldgroupLabel == sEzsignformfieldgroupLabel &&
+    other.iEzsignformfieldgroupStep == iEzsignformfieldgroupStep &&
+    other.sEzsignformfieldgroupDefaultvalue == sEzsignformfieldgroupDefaultvalue &&
+    other.iEzsignformfieldgroupFilledmin == iEzsignformfieldgroupFilledmin &&
+    other.iEzsignformfieldgroupFilledmax == iEzsignformfieldgroupFilledmax &&
+    other.bEzsignformfieldgroupReadonly == bEzsignformfieldgroupReadonly &&
+    other.iEzsignformfieldgroupMaxlength == iEzsignformfieldgroupMaxlength &&
+    other.bEzsignformfieldgroupEncrypted == bEzsignformfieldgroupEncrypted &&
+    other.sEzsignformfieldgroupRegexp == sEzsignformfieldgroupRegexp &&
+    other.tEzsignformfieldgroupTooltip == tEzsignformfieldgroupTooltip &&
+    other.eEzsignformfieldgroupTooltipposition == eEzsignformfieldgroupTooltipposition &&
+    other.eEzsignformfieldgroupTextvalidation == eEzsignformfieldgroupTextvalidation &&
+    _deepEquality.equals(other.aObjEzsignformfieldgroupsigner, aObjEzsignformfieldgroupsigner) &&
+    _deepEquality.equals(other.aObjDropdownElement, aObjDropdownElement) &&
+    _deepEquality.equals(other.aObjEzsignformfield, aObjEzsignformfield);
 
   @override
   int get hashCode =>

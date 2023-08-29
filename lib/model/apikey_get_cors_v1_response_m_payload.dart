@@ -20,7 +20,7 @@ class ApikeyGetCorsV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ApikeyGetCorsV1ResponseMPayload &&
-     other.aObjCors == aObjCors;
+    _deepEquality.equals(other.aObjCors, aObjCors);
 
   @override
   int get hashCode =>

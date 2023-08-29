@@ -20,7 +20,7 @@ class VariableexpenseEditObjectV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is VariableexpenseEditObjectV1Request &&
-     other.objVariableexpense == objVariableexpense;
+    other.objVariableexpense == objVariableexpense;
 
   @override
   int get hashCode =>

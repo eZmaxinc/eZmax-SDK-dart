@@ -20,7 +20,7 @@ class EzsignfoldersignerassociationPatchObjectV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfoldersignerassociationPatchObjectV1Request &&
-     other.objEzsignfoldersignerassociation == objEzsignfoldersignerassociation;
+    other.objEzsignfoldersignerassociation == objEzsignfoldersignerassociation;
 
   @override
   int get hashCode =>

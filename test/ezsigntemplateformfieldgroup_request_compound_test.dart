@@ -92,6 +92,11 @@ void main() {
       // TODO
     });
 
+    // EnumTextvalidation eEzsigntemplateformfieldgroupTextvalidation
+    test('to test the property `eEzsigntemplateformfieldgroupTextvalidation`', () async {
+      // TODO
+    });
+
     // A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplateformfieldgroup
     // String tEzsigntemplateformfieldgroupTooltip
     test('to test the property `tEzsigntemplateformfieldgroupTooltip`', () async {

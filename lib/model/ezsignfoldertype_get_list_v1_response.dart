@@ -13,20 +13,12 @@ part of openapi.api;
 class EzsignfoldertypeGetListV1Response {
   /// Returns a new [EzsignfoldertypeGetListV1Response] instance.
   EzsignfoldertypeGetListV1Response({
-    required this.mPayload,
-    this.objDebugPayload,
+    required this.objDebugPayload,
     this.objDebug,
+    required this.mPayload,
   });
 
-  EzsignfoldertypeGetListV1ResponseMPayload mPayload;
-
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  CommonResponseObjDebugPayloadGetList? objDebugPayload;
+  CommonResponseObjDebugPayloadGetList objDebugPayload;
 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -36,35 +28,33 @@ class EzsignfoldertypeGetListV1Response {
   ///
   CommonResponseObjDebug? objDebug;
 
+  EzsignfoldertypeGetListV1ResponseMPayload mPayload;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfoldertypeGetListV1Response &&
-     other.mPayload == mPayload &&
-     other.objDebugPayload == objDebugPayload &&
-     other.objDebug == objDebug;
+    other.objDebugPayload == objDebugPayload &&
+    other.objDebug == objDebug &&
+    other.mPayload == mPayload;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (mPayload.hashCode) +
-    (objDebugPayload == null ? 0 : objDebugPayload!.hashCode) +
-    (objDebug == null ? 0 : objDebug!.hashCode);
+    (objDebugPayload.hashCode) +
+    (objDebug == null ? 0 : objDebug!.hashCode) +
+    (mPayload.hashCode);
 
   @override
-  String toString() => 'EzsignfoldertypeGetListV1Response[mPayload=$mPayload, objDebugPayload=$objDebugPayload, objDebug=$objDebug]';
+  String toString() => 'EzsignfoldertypeGetListV1Response[objDebugPayload=$objDebugPayload, objDebug=$objDebug, mPayload=$mPayload]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'mPayload'] = this.mPayload;
-    if (this.objDebugPayload != null) {
       json[r'objDebugPayload'] = this.objDebugPayload;
-    } else {
-      json[r'objDebugPayload'] = null;
-    }
     if (this.objDebug != null) {
       json[r'objDebug'] = this.objDebug;
     } else {
       json[r'objDebug'] = null;
     }
+      json[r'mPayload'] = this.mPayload;
     return json;
   }
 
@@ -87,9 +77,9 @@ class EzsignfoldertypeGetListV1Response {
       }());
 
       return EzsignfoldertypeGetListV1Response(
-        mPayload: EzsignfoldertypeGetListV1ResponseMPayload.fromJson(json[r'mPayload'])!,
-        objDebugPayload: CommonResponseObjDebugPayloadGetList.fromJson(json[r'objDebugPayload']),
+        objDebugPayload: CommonResponseObjDebugPayloadGetList.fromJson(json[r'objDebugPayload'])!,
         objDebug: CommonResponseObjDebug.fromJson(json[r'objDebug']),
+        mPayload: EzsignfoldertypeGetListV1ResponseMPayload.fromJson(json[r'mPayload'])!,
       );
     }
     return null;
@@ -137,6 +127,7 @@ class EzsignfoldertypeGetListV1Response {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
+    'objDebugPayload',
     'mPayload',
   };
 }

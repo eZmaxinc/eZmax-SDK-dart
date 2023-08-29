@@ -118,28 +118,28 @@ class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzmaxinvoicingGetProvisionalV1ResponseMPayload &&
-     other.pkiEzmaxinvoicingID == pkiEzmaxinvoicingID &&
-     other.fkiEzmaxinvoicingcontractID == fkiEzmaxinvoicingcontractID &&
-     other.fkiEzmaxpricingID == fkiEzmaxpricingID &&
-     other.fkiSystemconfigurationtypeID == fkiSystemconfigurationtypeID &&
-     other.sSystemconfigurationtypeDescriptionX == sSystemconfigurationtypeDescriptionX &&
-     other.yyyymmEzmaxinvoicing == yyyymmEzmaxinvoicing &&
-     other.iEzmaxinvoicingDays == iEzmaxinvoicingDays &&
-     other.eEzmaxinvoicingPaymenttype == eEzmaxinvoicingPaymenttype &&
-     other.dEzmaxinvoicingRebatepaymenttype == dEzmaxinvoicingRebatepaymenttype &&
-     other.iEzmaxinvoicingContractlength == iEzmaxinvoicingContractlength &&
-     other.dEzmaxinvoicingRebatecontractlength == dEzmaxinvoicingRebatecontractlength &&
-     other.bEzmaxinvoicingRebateEzsignallagents == bEzmaxinvoicingRebateEzsignallagents &&
-     other.objAudit == objAudit &&
-     other.objEzmaxinvoicingcontract == objEzmaxinvoicingcontract &&
-     other.objEzmaxpricing == objEzmaxpricing &&
-     other.aObjEzmaxinvoicingsummaryglobal == aObjEzmaxinvoicingsummaryglobal &&
-     other.aObjEzmaxinvoicingsummaryexternal == aObjEzmaxinvoicingsummaryexternal &&
-     other.aObjEzmaxinvoicingsummaryinternal == aObjEzmaxinvoicingsummaryinternal &&
-     other.aObjEzmaxinvoicingagent == aObjEzmaxinvoicingagent &&
-     other.aObjEzmaxinvoicinguser == aObjEzmaxinvoicinguser &&
-     other.aObjEzmaxinvoicingezsignfolder == aObjEzmaxinvoicingezsignfolder &&
-     other.aObjEzmaxinvoicingezsigndocument == aObjEzmaxinvoicingezsigndocument;
+    other.pkiEzmaxinvoicingID == pkiEzmaxinvoicingID &&
+    other.fkiEzmaxinvoicingcontractID == fkiEzmaxinvoicingcontractID &&
+    other.fkiEzmaxpricingID == fkiEzmaxpricingID &&
+    other.fkiSystemconfigurationtypeID == fkiSystemconfigurationtypeID &&
+    other.sSystemconfigurationtypeDescriptionX == sSystemconfigurationtypeDescriptionX &&
+    other.yyyymmEzmaxinvoicing == yyyymmEzmaxinvoicing &&
+    other.iEzmaxinvoicingDays == iEzmaxinvoicingDays &&
+    other.eEzmaxinvoicingPaymenttype == eEzmaxinvoicingPaymenttype &&
+    other.dEzmaxinvoicingRebatepaymenttype == dEzmaxinvoicingRebatepaymenttype &&
+    other.iEzmaxinvoicingContractlength == iEzmaxinvoicingContractlength &&
+    other.dEzmaxinvoicingRebatecontractlength == dEzmaxinvoicingRebatecontractlength &&
+    other.bEzmaxinvoicingRebateEzsignallagents == bEzmaxinvoicingRebateEzsignallagents &&
+    other.objAudit == objAudit &&
+    other.objEzmaxinvoicingcontract == objEzmaxinvoicingcontract &&
+    other.objEzmaxpricing == objEzmaxpricing &&
+    _deepEquality.equals(other.aObjEzmaxinvoicingsummaryglobal, aObjEzmaxinvoicingsummaryglobal) &&
+    _deepEquality.equals(other.aObjEzmaxinvoicingsummaryexternal, aObjEzmaxinvoicingsummaryexternal) &&
+    _deepEquality.equals(other.aObjEzmaxinvoicingsummaryinternal, aObjEzmaxinvoicingsummaryinternal) &&
+    _deepEquality.equals(other.aObjEzmaxinvoicingagent, aObjEzmaxinvoicingagent) &&
+    _deepEquality.equals(other.aObjEzmaxinvoicinguser, aObjEzmaxinvoicinguser) &&
+    _deepEquality.equals(other.aObjEzmaxinvoicingezsignfolder, aObjEzmaxinvoicingezsignfolder) &&
+    _deepEquality.equals(other.aObjEzmaxinvoicingezsigndocument, aObjEzmaxinvoicingezsigndocument);
 
   @override
   int get hashCode =>

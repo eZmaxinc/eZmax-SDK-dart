@@ -31,9 +31,9 @@ class EmailtypeAutocompleteElementResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EmailtypeAutocompleteElementResponse &&
-     other.pkiEmailtypeID == pkiEmailtypeID &&
-     other.sEmailtypeNameX == sEmailtypeNameX &&
-     other.bEmailtypeIsactive == bEmailtypeIsactive;
+    other.pkiEmailtypeID == pkiEmailtypeID &&
+    other.sEmailtypeNameX == sEmailtypeNameX &&
+    other.bEmailtypeIsactive == bEmailtypeIsactive;
 
   @override
   int get hashCode =>

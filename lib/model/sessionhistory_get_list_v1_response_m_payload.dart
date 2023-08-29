@@ -13,12 +13,10 @@ part of openapi.api;
 class SessionhistoryGetListV1ResponseMPayload {
   /// Returns a new [SessionhistoryGetListV1ResponseMPayload] instance.
   SessionhistoryGetListV1ResponseMPayload({
-    this.aObjSessionhistory = const [],
     required this.iRowReturned,
     required this.iRowFiltered,
+    this.aObjSessionhistory = const [],
   });
-
-  List<SessionhistoryListElement> aObjSessionhistory;
 
   /// The number of rows returned
   int iRowReturned;
@@ -26,27 +24,29 @@ class SessionhistoryGetListV1ResponseMPayload {
   /// The number of rows matching your filters (if any) or the total number of rows
   int iRowFiltered;
 
+  List<SessionhistoryListElement> aObjSessionhistory;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is SessionhistoryGetListV1ResponseMPayload &&
-     other.aObjSessionhistory == aObjSessionhistory &&
-     other.iRowReturned == iRowReturned &&
-     other.iRowFiltered == iRowFiltered;
+    other.iRowReturned == iRowReturned &&
+    other.iRowFiltered == iRowFiltered &&
+    _deepEquality.equals(other.aObjSessionhistory, aObjSessionhistory);
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (aObjSessionhistory.hashCode) +
     (iRowReturned.hashCode) +
-    (iRowFiltered.hashCode);
+    (iRowFiltered.hashCode) +
+    (aObjSessionhistory.hashCode);
 
   @override
-  String toString() => 'SessionhistoryGetListV1ResponseMPayload[aObjSessionhistory=$aObjSessionhistory, iRowReturned=$iRowReturned, iRowFiltered=$iRowFiltered]';
+  String toString() => 'SessionhistoryGetListV1ResponseMPayload[iRowReturned=$iRowReturned, iRowFiltered=$iRowFiltered, aObjSessionhistory=$aObjSessionhistory]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'a_objSessionhistory'] = this.aObjSessionhistory;
       json[r'iRowReturned'] = this.iRowReturned;
       json[r'iRowFiltered'] = this.iRowFiltered;
+      json[r'a_objSessionhistory'] = this.aObjSessionhistory;
     return json;
   }
 
@@ -69,9 +69,9 @@ class SessionhistoryGetListV1ResponseMPayload {
       }());
 
       return SessionhistoryGetListV1ResponseMPayload(
-        aObjSessionhistory: SessionhistoryListElement.listFromJson(json[r'a_objSessionhistory']),
         iRowReturned: mapValueOfType<int>(json, r'iRowReturned')!,
         iRowFiltered: mapValueOfType<int>(json, r'iRowFiltered')!,
+        aObjSessionhistory: SessionhistoryListElement.listFromJson(json[r'a_objSessionhistory']),
       );
     }
     return null;
@@ -119,9 +119,9 @@ class SessionhistoryGetListV1ResponseMPayload {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'a_objSessionhistory',
     'iRowReturned',
     'iRowFiltered',
+    'a_objSessionhistory',
   };
 }
 

@@ -27,8 +27,8 @@ class DescriptionstaticResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is DescriptionstaticResponse &&
-     other.pkiDescriptionstaticID == pkiDescriptionstaticID &&
-     other.sDescriptionstaticDescription == sDescriptionstaticDescription;
+    other.pkiDescriptionstaticID == pkiDescriptionstaticID &&
+    other.sDescriptionstaticDescription == sDescriptionstaticDescription;
 
   @override
   int get hashCode =>

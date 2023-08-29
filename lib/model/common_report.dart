@@ -20,7 +20,7 @@ class CommonReport {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonReport &&
-     other.aObjReportsection == aObjReportsection;
+    _deepEquality.equals(other.aObjReportsection, aObjReportsection);
 
   @override
   int get hashCode =>

@@ -21,7 +21,7 @@ class EzsignfoldersignerassociationCreateObjectV2ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfoldersignerassociationCreateObjectV2ResponseMPayload &&
-     other.aPkiEzsignfoldersignerassociationID == aPkiEzsignfoldersignerassociationID;
+    _deepEquality.equals(other.aPkiEzsignfoldersignerassociationID, aPkiEzsignfoldersignerassociationID);
 
   @override
   int get hashCode =>
@@ -56,8 +56,8 @@ class EzsignfoldersignerassociationCreateObjectV2ResponseMPayload {
       }());
 
       return EzsignfoldersignerassociationCreateObjectV2ResponseMPayload(
-        aPkiEzsignfoldersignerassociationID: json[r'a_pkiEzsignfoldersignerassociationID'] is List
-            ? (json[r'a_pkiEzsignfoldersignerassociationID'] as List).cast<int>()
+        aPkiEzsignfoldersignerassociationID: json[r'a_pkiEzsignfoldersignerassociationID'] is Iterable
+            ? (json[r'a_pkiEzsignfoldersignerassociationID'] as Iterable).cast<int>().toList(growable: false)
             : const [],
       );
     }

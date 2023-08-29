@@ -13,12 +13,10 @@ part of openapi.api;
 class UserGetListV1ResponseMPayload {
   /// Returns a new [UserGetListV1ResponseMPayload] instance.
   UserGetListV1ResponseMPayload({
-    this.aObjUser = const [],
     required this.iRowReturned,
     required this.iRowFiltered,
+    this.aObjUser = const [],
   });
-
-  List<UserListElement> aObjUser;
 
   /// The number of rows returned
   int iRowReturned;
@@ -26,27 +24,29 @@ class UserGetListV1ResponseMPayload {
   /// The number of rows matching your filters (if any) or the total number of rows
   int iRowFiltered;
 
+  List<UserListElement> aObjUser;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is UserGetListV1ResponseMPayload &&
-     other.aObjUser == aObjUser &&
-     other.iRowReturned == iRowReturned &&
-     other.iRowFiltered == iRowFiltered;
+    other.iRowReturned == iRowReturned &&
+    other.iRowFiltered == iRowFiltered &&
+    _deepEquality.equals(other.aObjUser, aObjUser);
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (aObjUser.hashCode) +
     (iRowReturned.hashCode) +
-    (iRowFiltered.hashCode);
+    (iRowFiltered.hashCode) +
+    (aObjUser.hashCode);
 
   @override
-  String toString() => 'UserGetListV1ResponseMPayload[aObjUser=$aObjUser, iRowReturned=$iRowReturned, iRowFiltered=$iRowFiltered]';
+  String toString() => 'UserGetListV1ResponseMPayload[iRowReturned=$iRowReturned, iRowFiltered=$iRowFiltered, aObjUser=$aObjUser]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'a_objUser'] = this.aObjUser;
       json[r'iRowReturned'] = this.iRowReturned;
       json[r'iRowFiltered'] = this.iRowFiltered;
+      json[r'a_objUser'] = this.aObjUser;
     return json;
   }
 
@@ -69,9 +69,9 @@ class UserGetListV1ResponseMPayload {
       }());
 
       return UserGetListV1ResponseMPayload(
-        aObjUser: UserListElement.listFromJson(json[r'a_objUser']),
         iRowReturned: mapValueOfType<int>(json, r'iRowReturned')!,
         iRowFiltered: mapValueOfType<int>(json, r'iRowFiltered')!,
+        aObjUser: UserListElement.listFromJson(json[r'a_objUser']),
       );
     }
     return null;
@@ -119,9 +119,9 @@ class UserGetListV1ResponseMPayload {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'a_objUser',
     'iRowReturned',
     'iRowFiltered',
+    'a_objUser',
   };
 }
 

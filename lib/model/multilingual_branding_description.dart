@@ -37,8 +37,8 @@ class MultilingualBrandingDescription {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is MultilingualBrandingDescription &&
-     other.sBrandingDescription1 == sBrandingDescription1 &&
-     other.sBrandingDescription2 == sBrandingDescription2;
+    other.sBrandingDescription1 == sBrandingDescription1 &&
+    other.sBrandingDescription2 == sBrandingDescription2;
 
   @override
   int get hashCode =>

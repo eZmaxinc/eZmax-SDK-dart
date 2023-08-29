@@ -20,7 +20,7 @@ class BillingentityinternalCreateObjectV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is BillingentityinternalCreateObjectV1Request &&
-     other.aObjBillingentityinternal == aObjBillingentityinternal;
+    _deepEquality.equals(other.aObjBillingentityinternal, aObjBillingentityinternal);
 
   @override
   int get hashCode =>

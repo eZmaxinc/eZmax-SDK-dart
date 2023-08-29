@@ -69,13 +69,13 @@ class EzsignfolderRequest {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfolderRequest &&
-     other.pkiEzsignfolderID == pkiEzsignfolderID &&
-     other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
-     other.fkiEzsigntsarequirementID == fkiEzsigntsarequirementID &&
-     other.sEzsignfolderDescription == sEzsignfolderDescription &&
-     other.tEzsignfolderNote == tEzsignfolderNote &&
-     other.eEzsignfolderSendreminderfrequency == eEzsignfolderSendreminderfrequency &&
-     other.sEzsignfolderExternalid == sEzsignfolderExternalid;
+    other.pkiEzsignfolderID == pkiEzsignfolderID &&
+    other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
+    other.fkiEzsigntsarequirementID == fkiEzsigntsarequirementID &&
+    other.sEzsignfolderDescription == sEzsignfolderDescription &&
+    other.tEzsignfolderNote == tEzsignfolderNote &&
+    other.eEzsignfolderSendreminderfrequency == eEzsignfolderSendreminderfrequency &&
+    other.sEzsignfolderExternalid == sEzsignfolderExternalid;
 
   @override
   int get hashCode =>

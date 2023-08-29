@@ -23,8 +23,8 @@ class EzsigndocumentGetCompletedElementsV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigndocumentGetCompletedElementsV1ResponseMPayload &&
-     other.aObjEzsignsignature == aObjEzsignsignature &&
-     other.aObjEzsignformfieldgroup == aObjEzsignformfieldgroup;
+    _deepEquality.equals(other.aObjEzsignsignature, aObjEzsignsignature) &&
+    _deepEquality.equals(other.aObjEzsignformfieldgroup, aObjEzsignformfieldgroup);
 
   @override
   int get hashCode =>

@@ -20,7 +20,7 @@ class EzsignfolderReorderV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfolderReorderV1Request &&
-     other.aPkiEzsigndocumentID == aPkiEzsigndocumentID;
+    _deepEquality.equals(other.aPkiEzsigndocumentID, aPkiEzsigndocumentID);
 
   @override
   int get hashCode =>
@@ -55,8 +55,8 @@ class EzsignfolderReorderV1Request {
       }());
 
       return EzsignfolderReorderV1Request(
-        aPkiEzsigndocumentID: json[r'a_pkiEzsigndocumentID'] is List
-            ? (json[r'a_pkiEzsigndocumentID'] as List).cast<int>()
+        aPkiEzsigndocumentID: json[r'a_pkiEzsigndocumentID'] is Iterable
+            ? (json[r'a_pkiEzsigndocumentID'] as Iterable).cast<int>().toList(growable: false)
             : const [],
       );
     }

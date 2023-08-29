@@ -13,12 +13,10 @@ part of openapi.api;
 class ActivesessionGetListV1ResponseMPayload {
   /// Returns a new [ActivesessionGetListV1ResponseMPayload] instance.
   ActivesessionGetListV1ResponseMPayload({
-    this.aObjActivesession = const [],
     required this.iRowReturned,
     required this.iRowFiltered,
+    this.aObjActivesession = const [],
   });
-
-  List<ActivesessionListElement> aObjActivesession;
 
   /// The number of rows returned
   int iRowReturned;
@@ -26,27 +24,29 @@ class ActivesessionGetListV1ResponseMPayload {
   /// The number of rows matching your filters (if any) or the total number of rows
   int iRowFiltered;
 
+  List<ActivesessionListElement> aObjActivesession;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is ActivesessionGetListV1ResponseMPayload &&
-     other.aObjActivesession == aObjActivesession &&
-     other.iRowReturned == iRowReturned &&
-     other.iRowFiltered == iRowFiltered;
+    other.iRowReturned == iRowReturned &&
+    other.iRowFiltered == iRowFiltered &&
+    _deepEquality.equals(other.aObjActivesession, aObjActivesession);
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (aObjActivesession.hashCode) +
     (iRowReturned.hashCode) +
-    (iRowFiltered.hashCode);
+    (iRowFiltered.hashCode) +
+    (aObjActivesession.hashCode);
 
   @override
-  String toString() => 'ActivesessionGetListV1ResponseMPayload[aObjActivesession=$aObjActivesession, iRowReturned=$iRowReturned, iRowFiltered=$iRowFiltered]';
+  String toString() => 'ActivesessionGetListV1ResponseMPayload[iRowReturned=$iRowReturned, iRowFiltered=$iRowFiltered, aObjActivesession=$aObjActivesession]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'a_objActivesession'] = this.aObjActivesession;
       json[r'iRowReturned'] = this.iRowReturned;
       json[r'iRowFiltered'] = this.iRowFiltered;
+      json[r'a_objActivesession'] = this.aObjActivesession;
     return json;
   }
 
@@ -69,9 +69,9 @@ class ActivesessionGetListV1ResponseMPayload {
       }());
 
       return ActivesessionGetListV1ResponseMPayload(
-        aObjActivesession: ActivesessionListElement.listFromJson(json[r'a_objActivesession']),
         iRowReturned: mapValueOfType<int>(json, r'iRowReturned')!,
         iRowFiltered: mapValueOfType<int>(json, r'iRowFiltered')!,
+        aObjActivesession: ActivesessionListElement.listFromJson(json[r'a_objActivesession']),
       );
     }
     return null;
@@ -119,9 +119,9 @@ class ActivesessionGetListV1ResponseMPayload {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'a_objActivesession',
     'iRowReturned',
     'iRowFiltered',
+    'a_objActivesession',
   };
 }
 

@@ -27,9 +27,9 @@ class EzsignfolderSendV2Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfolderSendV2Request &&
-     other.tEzsignfolderMessage == tEzsignfolderMessage &&
-     other.aFkiEzsignfoldersignerassociationID == aFkiEzsignfoldersignerassociationID &&
-     other.aObjEzsignfoldersignerassociationmessage == aObjEzsignfoldersignerassociationmessage;
+    other.tEzsignfolderMessage == tEzsignfolderMessage &&
+    _deepEquality.equals(other.aFkiEzsignfoldersignerassociationID, aFkiEzsignfoldersignerassociationID) &&
+    _deepEquality.equals(other.aObjEzsignfoldersignerassociationmessage, aObjEzsignfoldersignerassociationmessage);
 
   @override
   int get hashCode =>
@@ -69,8 +69,8 @@ class EzsignfolderSendV2Request {
 
       return EzsignfolderSendV2Request(
         tEzsignfolderMessage: mapValueOfType<String>(json, r'tEzsignfolderMessage')!,
-        aFkiEzsignfoldersignerassociationID: json[r'a_fkiEzsignfoldersignerassociationID'] is List
-            ? (json[r'a_fkiEzsignfoldersignerassociationID'] as List).cast<int>()
+        aFkiEzsignfoldersignerassociationID: json[r'a_fkiEzsignfoldersignerassociationID'] is Iterable
+            ? (json[r'a_fkiEzsignfoldersignerassociationID'] as Iterable).cast<int>().toList(growable: false)
             : const [],
         aObjEzsignfoldersignerassociationmessage: CustomEzsignfoldersignerassociationmessageRequest.listFromJson(json[r'a_objEzsignfoldersignerassociationmessage']),
       );

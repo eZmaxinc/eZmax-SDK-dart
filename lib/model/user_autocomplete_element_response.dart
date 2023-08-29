@@ -34,10 +34,10 @@ class UserAutocompleteElementResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is UserAutocompleteElementResponse &&
-     other.eUserType == eUserType &&
-     other.sUserName == sUserName &&
-     other.pkiUserID == pkiUserID &&
-     other.bUserIsactive == bUserIsactive;
+    other.eUserType == eUserType &&
+    other.sUserName == sUserName &&
+    other.pkiUserID == pkiUserID &&
+    other.bUserIsactive == bUserIsactive;
 
   @override
   int get hashCode =>

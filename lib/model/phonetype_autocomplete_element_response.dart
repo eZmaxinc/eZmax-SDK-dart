@@ -31,9 +31,9 @@ class PhonetypeAutocompleteElementResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is PhonetypeAutocompleteElementResponse &&
-     other.pkiPhonetypeID == pkiPhonetypeID &&
-     other.sPhonetypeNameX == sPhonetypeNameX &&
-     other.bPhonetypeIsactive == bPhonetypeIsactive;
+    other.pkiPhonetypeID == pkiPhonetypeID &&
+    other.sPhonetypeNameX == sPhonetypeNameX &&
+    other.bPhonetypeIsactive == bPhonetypeIsactive;
 
   @override
   int get hashCode =>

@@ -8,9 +8,9 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjSessionhistory** | [**List<SessionhistoryListElement>**](SessionhistoryListElement.md) |  | [default to const []]
 **iRowReturned** | **int** | The number of rows returned | 
 **iRowFiltered** | **int** | The number of rows matching your filters (if any) or the total number of rows | 
+**aObjSessionhistory** | [**List<SessionhistoryListElement>**](SessionhistoryListElement.md) |  | [default to const []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

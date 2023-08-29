@@ -35,9 +35,9 @@ class BillingentityinternalRequestCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is BillingentityinternalRequestCompound &&
-     other.pkiBillingentityinternalID == pkiBillingentityinternalID &&
-     other.objBillingentityinternalDescription == objBillingentityinternalDescription &&
-     other.aObjBillingentityinternalproduct == aObjBillingentityinternalproduct;
+    other.pkiBillingentityinternalID == pkiBillingentityinternalID &&
+    other.objBillingentityinternalDescription == objBillingentityinternalDescription &&
+    _deepEquality.equals(other.aObjBillingentityinternalproduct, aObjBillingentityinternalproduct);
 
   @override
   int get hashCode =>

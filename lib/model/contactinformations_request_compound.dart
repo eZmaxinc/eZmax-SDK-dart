@@ -45,14 +45,14 @@ class ContactinformationsRequestCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ContactinformationsRequestCompound &&
-     other.iAddressDefault == iAddressDefault &&
-     other.iPhoneDefault == iPhoneDefault &&
-     other.iEmailDefault == iEmailDefault &&
-     other.iWebsiteDefault == iWebsiteDefault &&
-     other.aObjAddress == aObjAddress &&
-     other.aObjPhone == aObjPhone &&
-     other.aObjEmail == aObjEmail &&
-     other.aObjWebsite == aObjWebsite;
+    other.iAddressDefault == iAddressDefault &&
+    other.iPhoneDefault == iPhoneDefault &&
+    other.iEmailDefault == iEmailDefault &&
+    other.iWebsiteDefault == iWebsiteDefault &&
+    _deepEquality.equals(other.aObjAddress, aObjAddress) &&
+    _deepEquality.equals(other.aObjPhone, aObjPhone) &&
+    _deepEquality.equals(other.aObjEmail, aObjEmail) &&
+    _deepEquality.equals(other.aObjWebsite, aObjWebsite);
 
   @override
   int get hashCode =>

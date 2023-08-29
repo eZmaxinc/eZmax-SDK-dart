@@ -20,7 +20,7 @@ class EzsignsignatureCreateObjectV2Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignsignatureCreateObjectV2Request &&
-     other.aObjEzsignsignature == aObjEzsignsignature;
+    _deepEquality.equals(other.aObjEzsignsignature, aObjEzsignsignature);
 
   @override
   int get hashCode =>

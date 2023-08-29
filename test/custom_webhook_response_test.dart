@@ -16,18 +16,6 @@ void main() {
   // final instance = CustomWebhookResponse();
 
   group('test CustomWebhookResponse', () {
-    // The customer code assigned to your account
-    // String pksCustomerCode
-    test('to test the property `pksCustomerCode`', () async {
-      // TODO
-    });
-
-    // Wheter the webhook received is a manual test or a real event
-    // bool bWebhookTest
-    test('to test the property `bWebhookTest`', () async {
-      // TODO
-    });
-
     // The unique ID of the Webhook
     // int pkiWebhookID
     test('to test the property `pkiWebhookID`', () async {
@@ -88,6 +76,18 @@ void main() {
     // Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use
     // bool bWebhookSkipsslvalidation
     test('to test the property `bWebhookSkipsslvalidation`', () async {
+      // TODO
+    });
+
+    // The customer code assigned to your account
+    // String pksCustomerCode
+    test('to test the property `pksCustomerCode`', () async {
+      // TODO
+    });
+
+    // Wheter the webhook received is a manual test or a real event
+    // bool bWebhookTest
+    test('to test the property `bWebhookTest`', () async {
       // TODO
     });
 

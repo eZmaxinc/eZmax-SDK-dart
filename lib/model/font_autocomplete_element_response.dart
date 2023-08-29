@@ -31,9 +31,9 @@ class FontAutocompleteElementResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is FontAutocompleteElementResponse &&
-     other.sFontName == sFontName &&
-     other.pkiFontID == pkiFontID &&
-     other.bFontIsactive == bFontIsactive;
+    other.sFontName == sFontName &&
+    other.pkiFontID == pkiFontID &&
+    other.bFontIsactive == bFontIsactive;
 
   @override
   int get hashCode =>

@@ -20,7 +20,7 @@ class BrandingEditObjectV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is BrandingEditObjectV1Request &&
-     other.objBranding == objBranding;
+    other.objBranding == objBranding;
 
   @override
   int get hashCode =>

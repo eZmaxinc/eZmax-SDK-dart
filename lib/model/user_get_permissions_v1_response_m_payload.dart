@@ -20,7 +20,7 @@ class UserGetPermissionsV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is UserGetPermissionsV1ResponseMPayload &&
-     other.aObjModulegroup == aObjModulegroup;
+    _deepEquality.equals(other.aObjModulegroup, aObjModulegroup);
 
   @override
   int get hashCode =>

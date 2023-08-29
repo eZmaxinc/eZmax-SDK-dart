@@ -58,11 +58,11 @@ class ApikeyRequestCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ApikeyRequestCompound &&
-     other.pkiApikeyID == pkiApikeyID &&
-     other.fkiUserID == fkiUserID &&
-     other.objApikeyDescription == objApikeyDescription &&
-     other.bApikeyIsactive == bApikeyIsactive &&
-     other.bApikeyIssigned == bApikeyIssigned;
+    other.pkiApikeyID == pkiApikeyID &&
+    other.fkiUserID == fkiUserID &&
+    other.objApikeyDescription == objApikeyDescription &&
+    other.bApikeyIsactive == bApikeyIsactive &&
+    other.bApikeyIssigned == bApikeyIssigned;
 
   @override
   int get hashCode =>

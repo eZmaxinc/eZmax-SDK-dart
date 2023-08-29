@@ -25,8 +25,8 @@ class CommonGetListV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonGetListV1ResponseMPayload &&
-     other.iRowReturned == iRowReturned &&
-     other.iRowFiltered == iRowFiltered;
+    other.iRowReturned == iRowReturned &&
+    other.iRowFiltered == iRowFiltered;
 
   @override
   int get hashCode =>

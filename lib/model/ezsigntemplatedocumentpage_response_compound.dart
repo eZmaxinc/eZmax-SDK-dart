@@ -57,13 +57,13 @@ class EzsigntemplatedocumentpageResponseCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplatedocumentpageResponseCompound &&
-     other.pkiEzsigntemplatedocumentpageID == pkiEzsigntemplatedocumentpageID &&
-     other.iEzsigntemplatedocumentpageWidthimage == iEzsigntemplatedocumentpageWidthimage &&
-     other.iEzsigntemplatedocumentpageHeightimage == iEzsigntemplatedocumentpageHeightimage &&
-     other.iEzsigntemplatedocumentpageWidthpdf == iEzsigntemplatedocumentpageWidthpdf &&
-     other.iEzsigntemplatedocumentpageHeightpdf == iEzsigntemplatedocumentpageHeightpdf &&
-     other.iEzsigntemplatedocumentpagePagenumber == iEzsigntemplatedocumentpagePagenumber &&
-     other.sComputedImageurl == sComputedImageurl;
+    other.pkiEzsigntemplatedocumentpageID == pkiEzsigntemplatedocumentpageID &&
+    other.iEzsigntemplatedocumentpageWidthimage == iEzsigntemplatedocumentpageWidthimage &&
+    other.iEzsigntemplatedocumentpageHeightimage == iEzsigntemplatedocumentpageHeightimage &&
+    other.iEzsigntemplatedocumentpageWidthpdf == iEzsigntemplatedocumentpageWidthpdf &&
+    other.iEzsigntemplatedocumentpageHeightpdf == iEzsigntemplatedocumentpageHeightpdf &&
+    other.iEzsigntemplatedocumentpagePagenumber == iEzsigntemplatedocumentpagePagenumber &&
+    other.sComputedImageurl == sComputedImageurl;
 
   @override
   int get hashCode =>

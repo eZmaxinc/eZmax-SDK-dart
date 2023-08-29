@@ -20,7 +20,7 @@ class CommunicationGetObjectV2ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommunicationGetObjectV2ResponseMPayload &&
-     other.objCommunication == objCommunication;
+    other.objCommunication == objCommunication;
 
   @override
   int get hashCode =>

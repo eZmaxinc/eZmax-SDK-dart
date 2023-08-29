@@ -58,6 +58,9 @@ String parameterToString(dynamic value) {
   if (value is ComputedECommunicationDirection) {
     return ComputedECommunicationDirectionTypeTransformer().encode(value).toString();
   }
+  if (value is ComputedEEzsigndocumentSteptype) {
+    return ComputedEEzsigndocumentSteptypeTypeTransformer().encode(value).toString();
+  }
   if (value is EnumFontunderline) {
     return EnumFontunderlineTypeTransformer().encode(value).toString();
   }
@@ -282,7 +285,7 @@ DateTime? mapDateTime(dynamic map, String key, [String? pattern]) {
     if (value is int) {
       millis = value;
     } else if (value is String) {
-      if (pattern == _dateEpochMarker) {
+      if (_isEpochMarker(pattern)) {
         millis = int.tryParse(value);
       } else {
         return DateTime.tryParse(value);

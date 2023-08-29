@@ -109,18 +109,18 @@ class EzsignannotationResponseCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignannotationResponseCompound &&
-     other.pkiEzsignannotationID == pkiEzsignannotationID &&
-     other.fkiEzsigndocumentID == fkiEzsigndocumentID &&
-     other.eEzsignannotationHorizontalalignment == eEzsignannotationHorizontalalignment &&
-     other.eEzsignannotationVerticalalignment == eEzsignannotationVerticalalignment &&
-     other.eEzsignannotationType == eEzsignannotationType &&
-     other.iEzsignannotationX == iEzsignannotationX &&
-     other.iEzsignannotationY == iEzsignannotationY &&
-     other.iEzsignannotationWidth == iEzsignannotationWidth &&
-     other.iEzsignannotationHeight == iEzsignannotationHeight &&
-     other.sEzsignannotationText == sEzsignannotationText &&
-     other.iEzsignpagePagenumber == iEzsignpagePagenumber &&
-     other.objTextstylestatic == objTextstylestatic;
+    other.pkiEzsignannotationID == pkiEzsignannotationID &&
+    other.fkiEzsigndocumentID == fkiEzsigndocumentID &&
+    other.eEzsignannotationHorizontalalignment == eEzsignannotationHorizontalalignment &&
+    other.eEzsignannotationVerticalalignment == eEzsignannotationVerticalalignment &&
+    other.eEzsignannotationType == eEzsignannotationType &&
+    other.iEzsignannotationX == iEzsignannotationX &&
+    other.iEzsignannotationY == iEzsignannotationY &&
+    other.iEzsignannotationWidth == iEzsignannotationWidth &&
+    other.iEzsignannotationHeight == iEzsignannotationHeight &&
+    other.sEzsignannotationText == sEzsignannotationText &&
+    other.iEzsignpagePagenumber == iEzsignpagePagenumber &&
+    other.objTextstylestatic == objTextstylestatic;
 
   @override
   int get hashCode =>

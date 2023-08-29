@@ -60,15 +60,15 @@ class EzsigntemplatepackageResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplatepackageResponse &&
-     other.pkiEzsigntemplatepackageID == pkiEzsigntemplatepackageID &&
-     other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
-     other.fkiLanguageID == fkiLanguageID &&
-     other.sLanguageNameX == sLanguageNameX &&
-     other.sEzsigntemplatepackageDescription == sEzsigntemplatepackageDescription &&
-     other.bEzsigntemplatepackageAdminonly == bEzsigntemplatepackageAdminonly &&
-     other.bEzsigntemplatepackageNeedvalidation == bEzsigntemplatepackageNeedvalidation &&
-     other.bEzsigntemplatepackageIsactive == bEzsigntemplatepackageIsactive &&
-     other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX;
+    other.pkiEzsigntemplatepackageID == pkiEzsigntemplatepackageID &&
+    other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
+    other.fkiLanguageID == fkiLanguageID &&
+    other.sLanguageNameX == sLanguageNameX &&
+    other.sEzsigntemplatepackageDescription == sEzsigntemplatepackageDescription &&
+    other.bEzsigntemplatepackageAdminonly == bEzsigntemplatepackageAdminonly &&
+    other.bEzsigntemplatepackageNeedvalidation == bEzsigntemplatepackageNeedvalidation &&
+    other.bEzsigntemplatepackageIsactive == bEzsigntemplatepackageIsactive &&
+    other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX;
 
   @override
   int get hashCode =>

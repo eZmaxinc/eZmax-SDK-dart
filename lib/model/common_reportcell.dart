@@ -25,8 +25,8 @@ class CommonReportcell {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonReportcell &&
-     other.iReportcellColumnspan == iReportcellColumnspan &&
-     other.iReportcellRowspan == iReportcellRowspan;
+    other.iReportcellColumnspan == iReportcellColumnspan &&
+    other.iReportcellRowspan == iReportcellRowspan;
 
   @override
   int get hashCode =>

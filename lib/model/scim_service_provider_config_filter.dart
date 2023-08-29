@@ -25,8 +25,8 @@ class ScimServiceProviderConfigFilter {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ScimServiceProviderConfigFilter &&
-     other.supported == supported &&
-     other.maxResults == maxResults;
+    other.supported == supported &&
+    other.maxResults == maxResults;
 
   @override
   int get hashCode =>

@@ -42,10 +42,10 @@ class ScimUser {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ScimUser &&
-     other.id == id &&
-     other.userName == userName &&
-     other.displayName == displayName &&
-     other.emails == emails;
+    other.id == id &&
+    other.userName == userName &&
+    other.displayName == displayName &&
+    _deepEquality.equals(other.emails, emails);
 
   @override
   int get hashCode =>

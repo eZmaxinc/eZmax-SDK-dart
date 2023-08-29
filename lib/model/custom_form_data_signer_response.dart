@@ -46,11 +46,11 @@ class CustomFormDataSignerResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomFormDataSignerResponse &&
-     other.fkiEzsignfoldersignerassociationID == fkiEzsignfoldersignerassociationID &&
-     other.fkiUserID == fkiUserID &&
-     other.sContactFirstname == sContactFirstname &&
-     other.sContactLastname == sContactLastname &&
-     other.aObjEzsignformfieldgroup == aObjEzsignformfieldgroup;
+    other.fkiEzsignfoldersignerassociationID == fkiEzsignfoldersignerassociationID &&
+    other.fkiUserID == fkiUserID &&
+    other.sContactFirstname == sContactFirstname &&
+    other.sContactLastname == sContactLastname &&
+    _deepEquality.equals(other.aObjEzsignformfieldgroup, aObjEzsignformfieldgroup);
 
   @override
   int get hashCode =>

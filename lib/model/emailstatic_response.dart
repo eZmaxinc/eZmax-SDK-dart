@@ -27,8 +27,8 @@ class EmailstaticResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EmailstaticResponse &&
-     other.pkiEmailstaticID == pkiEmailstaticID &&
-     other.sEmailstaticAddress == sEmailstaticAddress;
+    other.pkiEmailstaticID == pkiEmailstaticID &&
+    other.sEmailstaticAddress == sEmailstaticAddress;
 
   @override
   int get hashCode =>

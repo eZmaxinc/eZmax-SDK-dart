@@ -43,12 +43,12 @@ class ApikeyListElement {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ApikeyListElement &&
-     other.pkiApikeyID == pkiApikeyID &&
-     other.sApikeyDescriptionX == sApikeyDescriptionX &&
-     other.sUserFirstname == sUserFirstname &&
-     other.sUserLastname == sUserLastname &&
-     other.bApikeyIsactive == bApikeyIsactive &&
-     other.bApikeyIssigned == bApikeyIssigned;
+    other.pkiApikeyID == pkiApikeyID &&
+    other.sApikeyDescriptionX == sApikeyDescriptionX &&
+    other.sUserFirstname == sUserFirstname &&
+    other.sUserLastname == sUserLastname &&
+    other.bApikeyIsactive == bApikeyIsactive &&
+    other.bApikeyIssigned == bApikeyIssigned;
 
   @override
   int get hashCode =>

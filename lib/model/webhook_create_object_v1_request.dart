@@ -20,7 +20,7 @@ class WebhookCreateObjectV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is WebhookCreateObjectV1Request &&
-     other.aObjWebhook == aObjWebhook;
+    _deepEquality.equals(other.aObjWebhook, aObjWebhook);
 
   @override
   int get hashCode =>

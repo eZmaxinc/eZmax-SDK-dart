@@ -13,11 +13,16 @@ part of openapi.api;
 class WebhookEzsignEzsignsignerConnect {
   /// Returns a new [WebhookEzsignEzsignsignerConnect] instance.
   WebhookEzsignEzsignsignerConnect({
-    this.objEzsignfolder,
-    required this.objEzsignfoldersignerassociation,
     required this.objWebhook,
     this.aObjAttempt = const [],
+    this.objEzsignfolder,
+    required this.objEzsignfoldersignerassociation,
   });
+
+  CustomWebhookResponse objWebhook;
+
+  /// An array containing details of previous attempts that were made to deliver the message. The array is empty if it's the first attempt.
+  List<AttemptResponseCompound> aObjAttempt;
 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -29,39 +34,34 @@ class WebhookEzsignEzsignsignerConnect {
 
   EzsignfoldersignerassociationResponseCompound objEzsignfoldersignerassociation;
 
-  CustomWebhookResponse objWebhook;
-
-  /// An array containing details of previous attempts that were made to deliver the message. The array is empty if it's the first attempt.
-  List<AttemptResponseCompound> aObjAttempt;
-
   @override
   bool operator ==(Object other) => identical(this, other) || other is WebhookEzsignEzsignsignerConnect &&
-     other.objEzsignfolder == objEzsignfolder &&
-     other.objEzsignfoldersignerassociation == objEzsignfoldersignerassociation &&
-     other.objWebhook == objWebhook &&
-     other.aObjAttempt == aObjAttempt;
+    other.objWebhook == objWebhook &&
+    _deepEquality.equals(other.aObjAttempt, aObjAttempt) &&
+    other.objEzsignfolder == objEzsignfolder &&
+    other.objEzsignfoldersignerassociation == objEzsignfoldersignerassociation;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (objEzsignfolder == null ? 0 : objEzsignfolder!.hashCode) +
-    (objEzsignfoldersignerassociation.hashCode) +
     (objWebhook.hashCode) +
-    (aObjAttempt.hashCode);
+    (aObjAttempt.hashCode) +
+    (objEzsignfolder == null ? 0 : objEzsignfolder!.hashCode) +
+    (objEzsignfoldersignerassociation.hashCode);
 
   @override
-  String toString() => 'WebhookEzsignEzsignsignerConnect[objEzsignfolder=$objEzsignfolder, objEzsignfoldersignerassociation=$objEzsignfoldersignerassociation, objWebhook=$objWebhook, aObjAttempt=$aObjAttempt]';
+  String toString() => 'WebhookEzsignEzsignsignerConnect[objWebhook=$objWebhook, aObjAttempt=$aObjAttempt, objEzsignfolder=$objEzsignfolder, objEzsignfoldersignerassociation=$objEzsignfoldersignerassociation]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
+      json[r'objWebhook'] = this.objWebhook;
+      json[r'a_objAttempt'] = this.aObjAttempt;
     if (this.objEzsignfolder != null) {
       json[r'objEzsignfolder'] = this.objEzsignfolder;
     } else {
       json[r'objEzsignfolder'] = null;
     }
       json[r'objEzsignfoldersignerassociation'] = this.objEzsignfoldersignerassociation;
-      json[r'objWebhook'] = this.objWebhook;
-      json[r'a_objAttempt'] = this.aObjAttempt;
     return json;
   }
 
@@ -84,10 +84,10 @@ class WebhookEzsignEzsignsignerConnect {
       }());
 
       return WebhookEzsignEzsignsignerConnect(
-        objEzsignfolder: EzsignfolderResponse.fromJson(json[r'objEzsignfolder']),
-        objEzsignfoldersignerassociation: EzsignfoldersignerassociationResponseCompound.fromJson(json[r'objEzsignfoldersignerassociation'])!,
         objWebhook: CustomWebhookResponse.fromJson(json[r'objWebhook'])!,
         aObjAttempt: AttemptResponseCompound.listFromJson(json[r'a_objAttempt']),
+        objEzsignfolder: EzsignfolderResponse.fromJson(json[r'objEzsignfolder']),
+        objEzsignfoldersignerassociation: EzsignfoldersignerassociationResponseCompound.fromJson(json[r'objEzsignfoldersignerassociation'])!,
       );
     }
     return null;
@@ -135,9 +135,9 @@ class WebhookEzsignEzsignsignerConnect {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'objEzsignfoldersignerassociation',
     'objWebhook',
     'a_objAttempt',
+    'objEzsignfoldersignerassociation',
   };
 }
 

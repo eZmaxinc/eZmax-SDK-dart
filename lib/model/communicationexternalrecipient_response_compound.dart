@@ -45,11 +45,11 @@ class CommunicationexternalrecipientResponseCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommunicationexternalrecipientResponseCompound &&
-     other.pkiCommunicationexternalrecipientID == pkiCommunicationexternalrecipientID &&
-     other.eCommunicationexternalrecipientType == eCommunicationexternalrecipientType &&
-     other.objDescriptionstatic == objDescriptionstatic &&
-     other.objEmailstatic == objEmailstatic &&
-     other.objPhonestatic == objPhonestatic;
+    other.pkiCommunicationexternalrecipientID == pkiCommunicationexternalrecipientID &&
+    other.eCommunicationexternalrecipientType == eCommunicationexternalrecipientType &&
+    other.objDescriptionstatic == objDescriptionstatic &&
+    other.objEmailstatic == objEmailstatic &&
+    other.objPhonestatic == objPhonestatic;
 
   @override
   int get hashCode =>

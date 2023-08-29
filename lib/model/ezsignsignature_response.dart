@@ -34,6 +34,7 @@ class EzsignsignatureResponse {
     this.dtEzsignsignatureDate,
     this.iEzsignsignatureattachmentCount,
     this.sEzsignsignatureDescription,
+    this.iEzsignsignatureMaxlength,
     this.eEzsignsignatureTextvalidation,
     this.sEzsignsignatureRegexp,
     required this.objContactName,
@@ -195,6 +196,18 @@ class EzsignsignatureResponse {
   ///
   String? sEzsignsignatureDescription;
 
+  /// The maximum length for the value in the Ezsignsignature  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea**
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 65535
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? iEzsignsignatureMaxlength;
+
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -224,31 +237,32 @@ class EzsignsignatureResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignsignatureResponse &&
-     other.pkiEzsignsignatureID == pkiEzsignsignatureID &&
-     other.fkiEzsigndocumentID == fkiEzsigndocumentID &&
-     other.fkiEzsignfoldersignerassociationID == fkiEzsignfoldersignerassociationID &&
-     other.iEzsignpagePagenumber == iEzsignpagePagenumber &&
-     other.iEzsignsignatureX == iEzsignsignatureX &&
-     other.iEzsignsignatureY == iEzsignsignatureY &&
-     other.iEzsignsignatureHeight == iEzsignsignatureHeight &&
-     other.iEzsignsignatureWidth == iEzsignsignatureWidth &&
-     other.iEzsignsignatureStep == iEzsignsignatureStep &&
-     other.eEzsignsignatureType == eEzsignsignatureType &&
-     other.tEzsignsignatureTooltip == tEzsignsignatureTooltip &&
-     other.eEzsignsignatureTooltipposition == eEzsignsignatureTooltipposition &&
-     other.eEzsignsignatureFont == eEzsignsignatureFont &&
-     other.iEzsignsignatureValidationstep == iEzsignsignatureValidationstep &&
-     other.sEzsignsignatureAttachmentdescription == sEzsignsignatureAttachmentdescription &&
-     other.eEzsignsignatureAttachmentnamesource == eEzsignsignatureAttachmentnamesource &&
-     other.bEzsignsignatureRequired == bEzsignsignatureRequired &&
-     other.fkiEzsignfoldersignerassociationIDValidation == fkiEzsignfoldersignerassociationIDValidation &&
-     other.dtEzsignsignatureDate == dtEzsignsignatureDate &&
-     other.iEzsignsignatureattachmentCount == iEzsignsignatureattachmentCount &&
-     other.sEzsignsignatureDescription == sEzsignsignatureDescription &&
-     other.eEzsignsignatureTextvalidation == eEzsignsignatureTextvalidation &&
-     other.sEzsignsignatureRegexp == sEzsignsignatureRegexp &&
-     other.objContactName == objContactName &&
-     other.objSignature == objSignature;
+    other.pkiEzsignsignatureID == pkiEzsignsignatureID &&
+    other.fkiEzsigndocumentID == fkiEzsigndocumentID &&
+    other.fkiEzsignfoldersignerassociationID == fkiEzsignfoldersignerassociationID &&
+    other.iEzsignpagePagenumber == iEzsignpagePagenumber &&
+    other.iEzsignsignatureX == iEzsignsignatureX &&
+    other.iEzsignsignatureY == iEzsignsignatureY &&
+    other.iEzsignsignatureHeight == iEzsignsignatureHeight &&
+    other.iEzsignsignatureWidth == iEzsignsignatureWidth &&
+    other.iEzsignsignatureStep == iEzsignsignatureStep &&
+    other.eEzsignsignatureType == eEzsignsignatureType &&
+    other.tEzsignsignatureTooltip == tEzsignsignatureTooltip &&
+    other.eEzsignsignatureTooltipposition == eEzsignsignatureTooltipposition &&
+    other.eEzsignsignatureFont == eEzsignsignatureFont &&
+    other.iEzsignsignatureValidationstep == iEzsignsignatureValidationstep &&
+    other.sEzsignsignatureAttachmentdescription == sEzsignsignatureAttachmentdescription &&
+    other.eEzsignsignatureAttachmentnamesource == eEzsignsignatureAttachmentnamesource &&
+    other.bEzsignsignatureRequired == bEzsignsignatureRequired &&
+    other.fkiEzsignfoldersignerassociationIDValidation == fkiEzsignfoldersignerassociationIDValidation &&
+    other.dtEzsignsignatureDate == dtEzsignsignatureDate &&
+    other.iEzsignsignatureattachmentCount == iEzsignsignatureattachmentCount &&
+    other.sEzsignsignatureDescription == sEzsignsignatureDescription &&
+    other.iEzsignsignatureMaxlength == iEzsignsignatureMaxlength &&
+    other.eEzsignsignatureTextvalidation == eEzsignsignatureTextvalidation &&
+    other.sEzsignsignatureRegexp == sEzsignsignatureRegexp &&
+    other.objContactName == objContactName &&
+    other.objSignature == objSignature;
 
   @override
   int get hashCode =>
@@ -274,13 +288,14 @@ class EzsignsignatureResponse {
     (dtEzsignsignatureDate == null ? 0 : dtEzsignsignatureDate!.hashCode) +
     (iEzsignsignatureattachmentCount == null ? 0 : iEzsignsignatureattachmentCount!.hashCode) +
     (sEzsignsignatureDescription == null ? 0 : sEzsignsignatureDescription!.hashCode) +
+    (iEzsignsignatureMaxlength == null ? 0 : iEzsignsignatureMaxlength!.hashCode) +
     (eEzsignsignatureTextvalidation == null ? 0 : eEzsignsignatureTextvalidation!.hashCode) +
     (sEzsignsignatureRegexp == null ? 0 : sEzsignsignatureRegexp!.hashCode) +
     (objContactName.hashCode) +
     (objSignature == null ? 0 : objSignature!.hashCode);
 
   @override
-  String toString() => 'EzsignsignatureResponse[pkiEzsignsignatureID=$pkiEzsignsignatureID, fkiEzsigndocumentID=$fkiEzsigndocumentID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureHeight=$iEzsignsignatureHeight, iEzsignsignatureWidth=$iEzsignsignatureWidth, iEzsignsignatureStep=$iEzsignsignatureStep, eEzsignsignatureType=$eEzsignsignatureType, tEzsignsignatureTooltip=$tEzsignsignatureTooltip, eEzsignsignatureTooltipposition=$eEzsignsignatureTooltipposition, eEzsignsignatureFont=$eEzsignsignatureFont, iEzsignsignatureValidationstep=$iEzsignsignatureValidationstep, sEzsignsignatureAttachmentdescription=$sEzsignsignatureAttachmentdescription, eEzsignsignatureAttachmentnamesource=$eEzsignsignatureAttachmentnamesource, bEzsignsignatureRequired=$bEzsignsignatureRequired, fkiEzsignfoldersignerassociationIDValidation=$fkiEzsignfoldersignerassociationIDValidation, dtEzsignsignatureDate=$dtEzsignsignatureDate, iEzsignsignatureattachmentCount=$iEzsignsignatureattachmentCount, sEzsignsignatureDescription=$sEzsignsignatureDescription, eEzsignsignatureTextvalidation=$eEzsignsignatureTextvalidation, sEzsignsignatureRegexp=$sEzsignsignatureRegexp, objContactName=$objContactName, objSignature=$objSignature]';
+  String toString() => 'EzsignsignatureResponse[pkiEzsignsignatureID=$pkiEzsignsignatureID, fkiEzsigndocumentID=$fkiEzsigndocumentID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureHeight=$iEzsignsignatureHeight, iEzsignsignatureWidth=$iEzsignsignatureWidth, iEzsignsignatureStep=$iEzsignsignatureStep, eEzsignsignatureType=$eEzsignsignatureType, tEzsignsignatureTooltip=$tEzsignsignatureTooltip, eEzsignsignatureTooltipposition=$eEzsignsignatureTooltipposition, eEzsignsignatureFont=$eEzsignsignatureFont, iEzsignsignatureValidationstep=$iEzsignsignatureValidationstep, sEzsignsignatureAttachmentdescription=$sEzsignsignatureAttachmentdescription, eEzsignsignatureAttachmentnamesource=$eEzsignsignatureAttachmentnamesource, bEzsignsignatureRequired=$bEzsignsignatureRequired, fkiEzsignfoldersignerassociationIDValidation=$fkiEzsignfoldersignerassociationIDValidation, dtEzsignsignatureDate=$dtEzsignsignatureDate, iEzsignsignatureattachmentCount=$iEzsignsignatureattachmentCount, sEzsignsignatureDescription=$sEzsignsignatureDescription, iEzsignsignatureMaxlength=$iEzsignsignatureMaxlength, eEzsignsignatureTextvalidation=$eEzsignsignatureTextvalidation, sEzsignsignatureRegexp=$sEzsignsignatureRegexp, objContactName=$objContactName, objSignature=$objSignature]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -357,6 +372,11 @@ class EzsignsignatureResponse {
     } else {
       json[r'sEzsignsignatureDescription'] = null;
     }
+    if (this.iEzsignsignatureMaxlength != null) {
+      json[r'iEzsignsignatureMaxlength'] = this.iEzsignsignatureMaxlength;
+    } else {
+      json[r'iEzsignsignatureMaxlength'] = null;
+    }
     if (this.eEzsignsignatureTextvalidation != null) {
       json[r'eEzsignsignatureTextvalidation'] = this.eEzsignsignatureTextvalidation;
     } else {
@@ -416,6 +436,7 @@ class EzsignsignatureResponse {
         dtEzsignsignatureDate: mapValueOfType<String>(json, r'dtEzsignsignatureDate'),
         iEzsignsignatureattachmentCount: mapValueOfType<int>(json, r'iEzsignsignatureattachmentCount'),
         sEzsignsignatureDescription: mapValueOfType<String>(json, r'sEzsignsignatureDescription'),
+        iEzsignsignatureMaxlength: mapValueOfType<int>(json, r'iEzsignsignatureMaxlength'),
         eEzsignsignatureTextvalidation: EnumTextvalidation.fromJson(json[r'eEzsignsignatureTextvalidation']),
         sEzsignsignatureRegexp: mapValueOfType<String>(json, r'sEzsignsignatureRegexp'),
         objContactName: CustomContactNameResponse.fromJson(json[r'objContactName'])!,

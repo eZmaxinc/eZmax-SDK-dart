@@ -20,7 +20,7 @@ class EzsignbulksenddocumentmappingCreateObjectV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignbulksenddocumentmappingCreateObjectV1Request &&
-     other.aObjEzsignbulksenddocumentmapping == aObjEzsignbulksenddocumentmapping;
+    _deepEquality.equals(other.aObjEzsignbulksenddocumentmapping, aObjEzsignbulksenddocumentmapping);
 
   @override
   int get hashCode =>

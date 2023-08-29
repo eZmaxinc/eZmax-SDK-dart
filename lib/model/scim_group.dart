@@ -33,9 +33,9 @@ class ScimGroup {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ScimGroup &&
-     other.id == id &&
-     other.displayName == displayName &&
-     other.members == members;
+    other.id == id &&
+    other.displayName == displayName &&
+    _deepEquality.equals(other.members, members);
 
   @override
   int get hashCode =>

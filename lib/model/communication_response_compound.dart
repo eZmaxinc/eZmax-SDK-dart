@@ -93,21 +93,21 @@ class CommunicationResponseCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommunicationResponseCompound &&
-     other.pkiCommunicationID == pkiCommunicationID &&
-     other.eCommunicationImportance == eCommunicationImportance &&
-     other.eCommunicationType == eCommunicationType &&
-     other.sCommunicationSubject == sCommunicationSubject &&
-     other.sCommunicationBodyurl == sCommunicationBodyurl &&
-     other.eCommunicationDirection == eCommunicationDirection &&
-     other.iCommunicationrecipientCount == iCommunicationrecipientCount &&
-     other.bCommunicationPrivate == bCommunicationPrivate &&
-     other.objDescriptionstaticSender == objDescriptionstaticSender &&
-     other.objEmailstaticSender == objEmailstaticSender &&
-     other.objPhonestaticSender == objPhonestaticSender &&
-     other.objAudit == objAudit &&
-     other.aObjCommunicationattachment == aObjCommunicationattachment &&
-     other.aObjCommunicationrecipient == aObjCommunicationrecipient &&
-     other.aObjCommunicationexternalrecipient == aObjCommunicationexternalrecipient;
+    other.pkiCommunicationID == pkiCommunicationID &&
+    other.eCommunicationImportance == eCommunicationImportance &&
+    other.eCommunicationType == eCommunicationType &&
+    other.sCommunicationSubject == sCommunicationSubject &&
+    other.sCommunicationBodyurl == sCommunicationBodyurl &&
+    other.eCommunicationDirection == eCommunicationDirection &&
+    other.iCommunicationrecipientCount == iCommunicationrecipientCount &&
+    other.bCommunicationPrivate == bCommunicationPrivate &&
+    other.objDescriptionstaticSender == objDescriptionstaticSender &&
+    other.objEmailstaticSender == objEmailstaticSender &&
+    other.objPhonestaticSender == objPhonestaticSender &&
+    other.objAudit == objAudit &&
+    _deepEquality.equals(other.aObjCommunicationattachment, aObjCommunicationattachment) &&
+    _deepEquality.equals(other.aObjCommunicationrecipient, aObjCommunicationrecipient) &&
+    _deepEquality.equals(other.aObjCommunicationexternalrecipient, aObjCommunicationexternalrecipient);
 
   @override
   int get hashCode =>

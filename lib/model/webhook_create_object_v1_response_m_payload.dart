@@ -21,7 +21,7 @@ class WebhookCreateObjectV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is WebhookCreateObjectV1ResponseMPayload &&
-     other.aPkiWebhookID == aPkiWebhookID;
+    _deepEquality.equals(other.aPkiWebhookID, aPkiWebhookID);
 
   @override
   int get hashCode =>
@@ -56,8 +56,8 @@ class WebhookCreateObjectV1ResponseMPayload {
       }());
 
       return WebhookCreateObjectV1ResponseMPayload(
-        aPkiWebhookID: json[r'a_pkiWebhookID'] is List
-            ? (json[r'a_pkiWebhookID'] as List).cast<int>()
+        aPkiWebhookID: json[r'a_pkiWebhookID'] is Iterable
+            ? (json[r'a_pkiWebhookID'] as Iterable).cast<int>().toList(growable: false)
             : const [],
       );
     }

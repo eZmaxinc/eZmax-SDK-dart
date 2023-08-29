@@ -20,7 +20,7 @@ class UsergroupGetUsergroupmembershipsV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is UsergroupGetUsergroupmembershipsV1ResponseMPayload &&
-     other.aObjUsergroupmembership == aObjUsergroupmembership;
+    _deepEquality.equals(other.aObjUsergroupmembership, aObjUsergroupmembership);
 
   @override
   int get hashCode =>

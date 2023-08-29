@@ -20,7 +20,7 @@ class FranchisereferalincomeCreateObjectV2Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is FranchisereferalincomeCreateObjectV2Request &&
-     other.aObjFranchisereferalincome == aObjFranchisereferalincome;
+    _deepEquality.equals(other.aObjFranchisereferalincome, aObjFranchisereferalincome);
 
   @override
   int get hashCode =>

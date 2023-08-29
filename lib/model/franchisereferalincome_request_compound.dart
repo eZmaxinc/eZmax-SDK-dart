@@ -87,20 +87,20 @@ class FranchisereferalincomeRequestCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is FranchisereferalincomeRequestCompound &&
-     other.pkiFranchisereferalincomeID == pkiFranchisereferalincomeID &&
-     other.fkiFranchisebrokerID == fkiFranchisebrokerID &&
-     other.fkiFranchisereferalincomeprogramID == fkiFranchisereferalincomeprogramID &&
-     other.fkiPeriodID == fkiPeriodID &&
-     other.dFranchisereferalincomeLoan == dFranchisereferalincomeLoan &&
-     other.dFranchisereferalincomeFranchiseamount == dFranchisereferalincomeFranchiseamount &&
-     other.dFranchisereferalincomeFranchisoramount == dFranchisereferalincomeFranchisoramount &&
-     other.dFranchisereferalincomeAgentamount == dFranchisereferalincomeAgentamount &&
-     other.dtFranchisereferalincomeDisbursed == dtFranchisereferalincomeDisbursed &&
-     other.tFranchisereferalincomeComment == tFranchisereferalincomeComment &&
-     other.fkiFranchiseofficeID == fkiFranchiseofficeID &&
-     other.sFranchisereferalincomeRemoteid == sFranchisereferalincomeRemoteid &&
-     other.objAddress == objAddress &&
-     other.aObjContact == aObjContact;
+    other.pkiFranchisereferalincomeID == pkiFranchisereferalincomeID &&
+    other.fkiFranchisebrokerID == fkiFranchisebrokerID &&
+    other.fkiFranchisereferalincomeprogramID == fkiFranchisereferalincomeprogramID &&
+    other.fkiPeriodID == fkiPeriodID &&
+    other.dFranchisereferalincomeLoan == dFranchisereferalincomeLoan &&
+    other.dFranchisereferalincomeFranchiseamount == dFranchisereferalincomeFranchiseamount &&
+    other.dFranchisereferalincomeFranchisoramount == dFranchisereferalincomeFranchisoramount &&
+    other.dFranchisereferalincomeAgentamount == dFranchisereferalincomeAgentamount &&
+    other.dtFranchisereferalincomeDisbursed == dtFranchisereferalincomeDisbursed &&
+    other.tFranchisereferalincomeComment == tFranchisereferalincomeComment &&
+    other.fkiFranchiseofficeID == fkiFranchiseofficeID &&
+    other.sFranchisereferalincomeRemoteid == sFranchisereferalincomeRemoteid &&
+    other.objAddress == objAddress &&
+    _deepEquality.equals(other.aObjContact, aObjContact);
 
   @override
   int get hashCode =>

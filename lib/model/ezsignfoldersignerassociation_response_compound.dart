@@ -68,14 +68,14 @@ class EzsignfoldersignerassociationResponseCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfoldersignerassociationResponseCompound &&
-     other.pkiEzsignfoldersignerassociationID == pkiEzsignfoldersignerassociationID &&
-     other.fkiEzsignfolderID == fkiEzsignfolderID &&
-     other.bEzsignfoldersignerassociationDelayedsend == bEzsignfoldersignerassociationDelayedsend &&
-     other.bEzsignfoldersignerassociationReceivecopy == bEzsignfoldersignerassociationReceivecopy &&
-     other.tEzsignfoldersignerassociationMessage == tEzsignfoldersignerassociationMessage &&
-     other.objEzsignsignergroup == objEzsignsignergroup &&
-     other.objUser == objUser &&
-     other.objEzsignsigner == objEzsignsigner;
+    other.pkiEzsignfoldersignerassociationID == pkiEzsignfoldersignerassociationID &&
+    other.fkiEzsignfolderID == fkiEzsignfolderID &&
+    other.bEzsignfoldersignerassociationDelayedsend == bEzsignfoldersignerassociationDelayedsend &&
+    other.bEzsignfoldersignerassociationReceivecopy == bEzsignfoldersignerassociationReceivecopy &&
+    other.tEzsignfoldersignerassociationMessage == tEzsignfoldersignerassociationMessage &&
+    other.objEzsignsignergroup == objEzsignsignergroup &&
+    other.objUser == objUser &&
+    other.objEzsignsigner == objEzsignsigner;
 
   @override
   int get hashCode =>

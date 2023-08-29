@@ -20,7 +20,7 @@ class EzsignfoldertypeEditObjectV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfoldertypeEditObjectV1Request &&
-     other.objEzsignfoldertype == objEzsignfoldertype;
+    other.objEzsignfoldertype == objEzsignfoldertype;
 
   @override
   int get hashCode =>

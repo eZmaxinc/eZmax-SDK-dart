@@ -33,9 +33,9 @@ class EzsigntemplatepackagesignerResponseCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplatepackagesignerResponseCompound &&
-     other.pkiEzsigntemplatepackagesignerID == pkiEzsigntemplatepackagesignerID &&
-     other.fkiEzsigntemplatepackageID == fkiEzsigntemplatepackageID &&
-     other.sEzsigntemplatepackagesignerDescription == sEzsigntemplatepackagesignerDescription;
+    other.pkiEzsigntemplatepackagesignerID == pkiEzsigntemplatepackagesignerID &&
+    other.fkiEzsigntemplatepackageID == fkiEzsigntemplatepackageID &&
+    other.sEzsigntemplatepackagesignerDescription == sEzsigntemplatepackagesignerDescription;
 
   @override
   int get hashCode =>

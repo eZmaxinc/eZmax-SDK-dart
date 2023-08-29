@@ -236,27 +236,27 @@ class CommunicationrecipientResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommunicationrecipientResponse &&
-     other.pkiCommunicationrecipientID == pkiCommunicationrecipientID &&
-     other.eCommunicationrecipientObjecttype == eCommunicationrecipientObjecttype &&
-     other.fkiAgentID == fkiAgentID &&
-     other.fkiBrokerID == fkiBrokerID &&
-     other.fkiContactID == fkiContactID &&
-     other.fkiCustomerID == fkiCustomerID &&
-     other.fkiEmployeeID == fkiEmployeeID &&
-     other.fkiEzsignsignerID == fkiEzsignsignerID &&
-     other.fkiFranchiseofficeID == fkiFranchiseofficeID &&
-     other.fkiUserID == fkiUserID &&
-     other.fkiAgentincorporationID == fkiAgentincorporationID &&
-     other.fkiAssistantID == fkiAssistantID &&
-     other.fkiExternalbrokerID == fkiExternalbrokerID &&
-     other.fkiEzcomagentID == fkiEzcomagentID &&
-     other.fkiNotaryID == fkiNotaryID &&
-     other.fkiRewardmemberID == fkiRewardmemberID &&
-     other.fkiSupplierID == fkiSupplierID &&
-     other.eCommunicationrecipientType == eCommunicationrecipientType &&
-     other.objDescriptionstatic == objDescriptionstatic &&
-     other.objEmailstatic == objEmailstatic &&
-     other.objPhonestatic == objPhonestatic;
+    other.pkiCommunicationrecipientID == pkiCommunicationrecipientID &&
+    other.eCommunicationrecipientObjecttype == eCommunicationrecipientObjecttype &&
+    other.fkiAgentID == fkiAgentID &&
+    other.fkiBrokerID == fkiBrokerID &&
+    other.fkiContactID == fkiContactID &&
+    other.fkiCustomerID == fkiCustomerID &&
+    other.fkiEmployeeID == fkiEmployeeID &&
+    other.fkiEzsignsignerID == fkiEzsignsignerID &&
+    other.fkiFranchiseofficeID == fkiFranchiseofficeID &&
+    other.fkiUserID == fkiUserID &&
+    other.fkiAgentincorporationID == fkiAgentincorporationID &&
+    other.fkiAssistantID == fkiAssistantID &&
+    other.fkiExternalbrokerID == fkiExternalbrokerID &&
+    other.fkiEzcomagentID == fkiEzcomagentID &&
+    other.fkiNotaryID == fkiNotaryID &&
+    other.fkiRewardmemberID == fkiRewardmemberID &&
+    other.fkiSupplierID == fkiSupplierID &&
+    other.eCommunicationrecipientType == eCommunicationrecipientType &&
+    other.objDescriptionstatic == objDescriptionstatic &&
+    other.objEmailstatic == objEmailstatic &&
+    other.objPhonestatic == objPhonestatic;
 
   @override
   int get hashCode =>

@@ -21,7 +21,7 @@ class VariableexpenseGetAutocompleteV2ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is VariableexpenseGetAutocompleteV2ResponseMPayload &&
-     other.aObjVariableexpense == aObjVariableexpense;
+    _deepEquality.equals(other.aObjVariableexpense, aObjVariableexpense);
 
   @override
   int get hashCode =>

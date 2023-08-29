@@ -66,17 +66,17 @@ class EzsignbulksendResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignbulksendResponse &&
-     other.pkiEzsignbulksendID == pkiEzsignbulksendID &&
-     other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
-     other.fkiLanguageID == fkiLanguageID &&
-     other.sLanguageNameX == sLanguageNameX &&
-     other.eEzsignfoldertypePrivacylevel == eEzsignfoldertypePrivacylevel &&
-     other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
-     other.sEzsignbulksendDescription == sEzsignbulksendDescription &&
-     other.tEzsignbulksendNote == tEzsignbulksendNote &&
-     other.bEzsignbulksendNeedvalidation == bEzsignbulksendNeedvalidation &&
-     other.bEzsignbulksendIsactive == bEzsignbulksendIsactive &&
-     other.objAudit == objAudit;
+    other.pkiEzsignbulksendID == pkiEzsignbulksendID &&
+    other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
+    other.fkiLanguageID == fkiLanguageID &&
+    other.sLanguageNameX == sLanguageNameX &&
+    other.eEzsignfoldertypePrivacylevel == eEzsignfoldertypePrivacylevel &&
+    other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
+    other.sEzsignbulksendDescription == sEzsignbulksendDescription &&
+    other.tEzsignbulksendNote == tEzsignbulksendNote &&
+    other.bEzsignbulksendNeedvalidation == bEzsignbulksendNeedvalidation &&
+    other.bEzsignbulksendIsactive == bEzsignbulksendIsactive &&
+    other.objAudit == objAudit;
 
   @override
   int get hashCode =>

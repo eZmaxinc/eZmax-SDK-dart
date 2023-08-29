@@ -24,8 +24,8 @@ class CommonResponseErrorTooManyRequests {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonResponseErrorTooManyRequests &&
-     other.sErrorMessage == sErrorMessage &&
-     other.eErrorCode == eErrorCode;
+    other.sErrorMessage == sErrorMessage &&
+    other.eErrorCode == eErrorCode;
 
   @override
   int get hashCode =>

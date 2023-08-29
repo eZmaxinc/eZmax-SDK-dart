@@ -34,9 +34,9 @@ class EzsignfolderSendV3Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfolderSendV3Request &&
-     other.tEzsignfolderMessage == tEzsignfolderMessage &&
-     other.dtEzsignfolderDelayedsenddate == dtEzsignfolderDelayedsenddate &&
-     other.aFkiEzsignfoldersignerassociationID == aFkiEzsignfoldersignerassociationID;
+    other.tEzsignfolderMessage == tEzsignfolderMessage &&
+    other.dtEzsignfolderDelayedsenddate == dtEzsignfolderDelayedsenddate &&
+    _deepEquality.equals(other.aFkiEzsignfoldersignerassociationID, aFkiEzsignfoldersignerassociationID);
 
   @override
   int get hashCode =>
@@ -81,8 +81,8 @@ class EzsignfolderSendV3Request {
       return EzsignfolderSendV3Request(
         tEzsignfolderMessage: mapValueOfType<String>(json, r'tEzsignfolderMessage')!,
         dtEzsignfolderDelayedsenddate: mapValueOfType<String>(json, r'dtEzsignfolderDelayedsenddate'),
-        aFkiEzsignfoldersignerassociationID: json[r'a_fkiEzsignfoldersignerassociationID'] is List
-            ? (json[r'a_fkiEzsignfoldersignerassociationID'] as List).cast<int>()
+        aFkiEzsignfoldersignerassociationID: json[r'a_fkiEzsignfoldersignerassociationID'] is Iterable
+            ? (json[r'a_fkiEzsignfoldersignerassociationID'] as Iterable).cast<int>().toList(growable: false)
             : const [],
       );
     }

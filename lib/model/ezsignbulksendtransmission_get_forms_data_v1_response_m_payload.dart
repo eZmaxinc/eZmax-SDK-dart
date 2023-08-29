@@ -20,7 +20,7 @@ class EzsignbulksendtransmissionGetFormsDataV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignbulksendtransmissionGetFormsDataV1ResponseMPayload &&
-     other.aObjFormsDataFolder == aObjFormsDataFolder;
+    _deepEquality.equals(other.aObjFormsDataFolder, aObjFormsDataFolder);
 
   @override
   int get hashCode =>

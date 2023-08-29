@@ -13,12 +13,10 @@ part of openapi.api;
 class ApikeyGetListV1ResponseMPayload {
   /// Returns a new [ApikeyGetListV1ResponseMPayload] instance.
   ApikeyGetListV1ResponseMPayload({
-    this.aObjApikey = const [],
     required this.iRowReturned,
     required this.iRowFiltered,
+    this.aObjApikey = const [],
   });
-
-  List<ApikeyListElement> aObjApikey;
 
   /// The number of rows returned
   int iRowReturned;
@@ -26,27 +24,29 @@ class ApikeyGetListV1ResponseMPayload {
   /// The number of rows matching your filters (if any) or the total number of rows
   int iRowFiltered;
 
+  List<ApikeyListElement> aObjApikey;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is ApikeyGetListV1ResponseMPayload &&
-     other.aObjApikey == aObjApikey &&
-     other.iRowReturned == iRowReturned &&
-     other.iRowFiltered == iRowFiltered;
+    other.iRowReturned == iRowReturned &&
+    other.iRowFiltered == iRowFiltered &&
+    _deepEquality.equals(other.aObjApikey, aObjApikey);
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (aObjApikey.hashCode) +
     (iRowReturned.hashCode) +
-    (iRowFiltered.hashCode);
+    (iRowFiltered.hashCode) +
+    (aObjApikey.hashCode);
 
   @override
-  String toString() => 'ApikeyGetListV1ResponseMPayload[aObjApikey=$aObjApikey, iRowReturned=$iRowReturned, iRowFiltered=$iRowFiltered]';
+  String toString() => 'ApikeyGetListV1ResponseMPayload[iRowReturned=$iRowReturned, iRowFiltered=$iRowFiltered, aObjApikey=$aObjApikey]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'a_objApikey'] = this.aObjApikey;
       json[r'iRowReturned'] = this.iRowReturned;
       json[r'iRowFiltered'] = this.iRowFiltered;
+      json[r'a_objApikey'] = this.aObjApikey;
     return json;
   }
 
@@ -69,9 +69,9 @@ class ApikeyGetListV1ResponseMPayload {
       }());
 
       return ApikeyGetListV1ResponseMPayload(
-        aObjApikey: ApikeyListElement.listFromJson(json[r'a_objApikey']),
         iRowReturned: mapValueOfType<int>(json, r'iRowReturned')!,
         iRowFiltered: mapValueOfType<int>(json, r'iRowFiltered')!,
+        aObjApikey: ApikeyListElement.listFromJson(json[r'a_objApikey']),
       );
     }
     return null;
@@ -119,9 +119,9 @@ class ApikeyGetListV1ResponseMPayload {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'a_objApikey',
     'iRowReturned',
     'iRowFiltered',
+    'a_objApikey',
   };
 }
 

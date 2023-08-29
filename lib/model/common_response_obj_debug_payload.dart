@@ -16,6 +16,7 @@ class CommonResponseObjDebugPayload {
     required this.iVersionMin,
     required this.iVersionMax,
     this.aRequiredPermission = const [],
+    required this.bVersionDeprecated,
   });
 
   /// The minimum version of the function that can be called
@@ -27,27 +28,33 @@ class CommonResponseObjDebugPayload {
   /// An array of permissions required to access this function.  If the value \"0\" is present in the array, anyone can call this function.  You must have one of the permission to access the function. You don't need to have all of them.
   List<int> aRequiredPermission;
 
+  /// Wheter the current route is deprecated or not
+  bool bVersionDeprecated;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonResponseObjDebugPayload &&
-     other.iVersionMin == iVersionMin &&
-     other.iVersionMax == iVersionMax &&
-     other.aRequiredPermission == aRequiredPermission;
+    other.iVersionMin == iVersionMin &&
+    other.iVersionMax == iVersionMax &&
+    _deepEquality.equals(other.aRequiredPermission, aRequiredPermission) &&
+    other.bVersionDeprecated == bVersionDeprecated;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (iVersionMin.hashCode) +
     (iVersionMax.hashCode) +
-    (aRequiredPermission.hashCode);
+    (aRequiredPermission.hashCode) +
+    (bVersionDeprecated.hashCode);
 
   @override
-  String toString() => 'CommonResponseObjDebugPayload[iVersionMin=$iVersionMin, iVersionMax=$iVersionMax, aRequiredPermission=$aRequiredPermission]';
+  String toString() => 'CommonResponseObjDebugPayload[iVersionMin=$iVersionMin, iVersionMax=$iVersionMax, aRequiredPermission=$aRequiredPermission, bVersionDeprecated=$bVersionDeprecated]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'iVersionMin'] = this.iVersionMin;
       json[r'iVersionMax'] = this.iVersionMax;
       json[r'a_RequiredPermission'] = this.aRequiredPermission;
+      json[r'bVersionDeprecated'] = this.bVersionDeprecated;
     return json;
   }
 
@@ -72,9 +79,10 @@ class CommonResponseObjDebugPayload {
       return CommonResponseObjDebugPayload(
         iVersionMin: mapValueOfType<int>(json, r'iVersionMin')!,
         iVersionMax: mapValueOfType<int>(json, r'iVersionMax')!,
-        aRequiredPermission: json[r'a_RequiredPermission'] is List
-            ? (json[r'a_RequiredPermission'] as List).cast<int>()
+        aRequiredPermission: json[r'a_RequiredPermission'] is Iterable
+            ? (json[r'a_RequiredPermission'] as Iterable).cast<int>().toList(growable: false)
             : const [],
+        bVersionDeprecated: mapValueOfType<bool>(json, r'bVersionDeprecated')!,
       );
     }
     return null;
@@ -125,6 +133,7 @@ class CommonResponseObjDebugPayload {
     'iVersionMin',
     'iVersionMax',
     'a_RequiredPermission',
+    'bVersionDeprecated',
   };
 }
 

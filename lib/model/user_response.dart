@@ -273,43 +273,43 @@ class UserResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is UserResponse &&
-     other.pkiUserID == pkiUserID &&
-     other.fkiAgentID == fkiAgentID &&
-     other.fkiBrokerID == fkiBrokerID &&
-     other.fkiAssistantID == fkiAssistantID &&
-     other.fkiEmployeeID == fkiEmployeeID &&
-     other.fkiCompanyIDDefault == fkiCompanyIDDefault &&
-     other.sCompanyNameX == sCompanyNameX &&
-     other.fkiDepartmentIDDefault == fkiDepartmentIDDefault &&
-     other.sDepartmentNameX == sDepartmentNameX &&
-     other.fkiTimezoneID == fkiTimezoneID &&
-     other.sTimezoneName == sTimezoneName &&
-     other.fkiLanguageID == fkiLanguageID &&
-     other.sLanguageNameX == sLanguageNameX &&
-     other.objEmail == objEmail &&
-     other.fkiBillingentityinternalID == fkiBillingentityinternalID &&
-     other.sBillingentityinternalDescriptionX == sBillingentityinternalDescriptionX &&
-     other.objPhoneHome == objPhoneHome &&
-     other.objPhoneSMS == objPhoneSMS &&
-     other.fkiSecretquestionID == fkiSecretquestionID &&
-     other.fkiModuleIDForm == fkiModuleIDForm &&
-     other.sModuleNameX == sModuleNameX &&
-     other.eUserOrigin == eUserOrigin &&
-     other.eUserType == eUserType &&
-     other.eUserLogintype == eUserLogintype &&
-     other.sUserFirstname == sUserFirstname &&
-     other.sUserLastname == sUserLastname &&
-     other.sUserLoginname == sUserLoginname &&
-     other.eUserEzsignaccess == eUserEzsignaccess &&
-     other.dtUserLastlogondate == dtUserLastlogondate &&
-     other.dtUserPasswordchanged == dtUserPasswordchanged &&
-     other.dtUserEzsignprepaidexpiration == dtUserEzsignprepaidexpiration &&
-     other.bUserIsactive == bUserIsactive &&
-     other.bUserValidatebyadministration == bUserValidatebyadministration &&
-     other.bUserValidatebydirector == bUserValidatebydirector &&
-     other.bUserAttachmentautoverified == bUserAttachmentautoverified &&
-     other.bUserChangepassword == bUserChangepassword &&
-     other.objAudit == objAudit;
+    other.pkiUserID == pkiUserID &&
+    other.fkiAgentID == fkiAgentID &&
+    other.fkiBrokerID == fkiBrokerID &&
+    other.fkiAssistantID == fkiAssistantID &&
+    other.fkiEmployeeID == fkiEmployeeID &&
+    other.fkiCompanyIDDefault == fkiCompanyIDDefault &&
+    other.sCompanyNameX == sCompanyNameX &&
+    other.fkiDepartmentIDDefault == fkiDepartmentIDDefault &&
+    other.sDepartmentNameX == sDepartmentNameX &&
+    other.fkiTimezoneID == fkiTimezoneID &&
+    other.sTimezoneName == sTimezoneName &&
+    other.fkiLanguageID == fkiLanguageID &&
+    other.sLanguageNameX == sLanguageNameX &&
+    other.objEmail == objEmail &&
+    other.fkiBillingentityinternalID == fkiBillingentityinternalID &&
+    other.sBillingentityinternalDescriptionX == sBillingentityinternalDescriptionX &&
+    other.objPhoneHome == objPhoneHome &&
+    other.objPhoneSMS == objPhoneSMS &&
+    other.fkiSecretquestionID == fkiSecretquestionID &&
+    other.fkiModuleIDForm == fkiModuleIDForm &&
+    other.sModuleNameX == sModuleNameX &&
+    other.eUserOrigin == eUserOrigin &&
+    other.eUserType == eUserType &&
+    other.eUserLogintype == eUserLogintype &&
+    other.sUserFirstname == sUserFirstname &&
+    other.sUserLastname == sUserLastname &&
+    other.sUserLoginname == sUserLoginname &&
+    other.eUserEzsignaccess == eUserEzsignaccess &&
+    other.dtUserLastlogondate == dtUserLastlogondate &&
+    other.dtUserPasswordchanged == dtUserPasswordchanged &&
+    other.dtUserEzsignprepaidexpiration == dtUserEzsignprepaidexpiration &&
+    other.bUserIsactive == bUserIsactive &&
+    other.bUserValidatebyadministration == bUserValidatebyadministration &&
+    other.bUserValidatebydirector == bUserValidatebydirector &&
+    other.bUserAttachmentautoverified == bUserAttachmentautoverified &&
+    other.bUserChangepassword == bUserChangepassword &&
+    other.objAudit == objAudit;
 
   @override
   int get hashCode =>

@@ -20,7 +20,7 @@ class EzsigntemplatepackageEditObjectV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplatepackageEditObjectV1Request &&
-     other.objEzsigntemplatepackage == objEzsigntemplatepackage;
+    other.objEzsigntemplatepackage == objEzsigntemplatepackage;
 
   @override
   int get hashCode =>

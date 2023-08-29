@@ -21,7 +21,7 @@ class WebsocketResponseGetWebsocketIDV1MPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is WebsocketResponseGetWebsocketIDV1MPayload &&
-     other.sWebsocketID == sWebsocketID;
+    other.sWebsocketID == sWebsocketID;
 
   @override
   int get hashCode =>

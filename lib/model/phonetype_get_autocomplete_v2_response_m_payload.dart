@@ -21,7 +21,7 @@ class PhonetypeGetAutocompleteV2ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is PhonetypeGetAutocompleteV2ResponseMPayload &&
-     other.aObjPhonetype == aObjPhonetype;
+    _deepEquality.equals(other.aObjPhonetype, aObjPhonetype);
 
   @override
   int get hashCode =>

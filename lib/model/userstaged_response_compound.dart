@@ -47,12 +47,12 @@ class UserstagedResponseCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is UserstagedResponseCompound &&
-     other.pkiUserstagedID == pkiUserstagedID &&
-     other.fkiEmailID == fkiEmailID &&
-     other.sEmailAddress == sEmailAddress &&
-     other.sUserstagedFirstname == sUserstagedFirstname &&
-     other.sUserstagedLastname == sUserstagedLastname &&
-     other.sUserstagedExternalid == sUserstagedExternalid;
+    other.pkiUserstagedID == pkiUserstagedID &&
+    other.fkiEmailID == fkiEmailID &&
+    other.sEmailAddress == sEmailAddress &&
+    other.sUserstagedFirstname == sUserstagedFirstname &&
+    other.sUserstagedLastname == sUserstagedLastname &&
+    other.sUserstagedExternalid == sUserstagedExternalid;
 
   @override
   int get hashCode =>

@@ -20,7 +20,7 @@ class CorsCreateObjectV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CorsCreateObjectV1Request &&
-     other.aObjCors == aObjCors;
+    _deepEquality.equals(other.aObjCors, aObjCors);
 
   @override
   int get hashCode =>

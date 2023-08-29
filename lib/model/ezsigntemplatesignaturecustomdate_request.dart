@@ -45,10 +45,10 @@ class EzsigntemplatesignaturecustomdateRequest {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplatesignaturecustomdateRequest &&
-     other.pkiEzsigntemplatesignaturecustomdateID == pkiEzsigntemplatesignaturecustomdateID &&
-     other.iEzsigntemplatesignaturecustomdateX == iEzsigntemplatesignaturecustomdateX &&
-     other.iEzsigntemplatesignaturecustomdateY == iEzsigntemplatesignaturecustomdateY &&
-     other.sEzsigntemplatesignaturecustomdateFormat == sEzsigntemplatesignaturecustomdateFormat;
+    other.pkiEzsigntemplatesignaturecustomdateID == pkiEzsigntemplatesignaturecustomdateID &&
+    other.iEzsigntemplatesignaturecustomdateX == iEzsigntemplatesignaturecustomdateX &&
+    other.iEzsigntemplatesignaturecustomdateY == iEzsigntemplatesignaturecustomdateY &&
+    other.sEzsigntemplatesignaturecustomdateFormat == sEzsigntemplatesignaturecustomdateFormat;
 
   @override
   int get hashCode =>

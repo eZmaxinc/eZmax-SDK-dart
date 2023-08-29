@@ -25,8 +25,8 @@ class CommonResponseFilter {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonResponseFilter &&
-     other.aAutoType == aAutoType &&
-     other.aEnum == aEnum;
+    _deepEquality.equals(other.aAutoType, aAutoType) &&
+    _deepEquality.equals(other.aEnum, aEnum);
 
   @override
   int get hashCode =>

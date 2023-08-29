@@ -21,7 +21,7 @@ class EzsignfolderCreateObjectV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfolderCreateObjectV1ResponseMPayload &&
-     other.aPkiEzsignfolderID == aPkiEzsignfolderID;
+    _deepEquality.equals(other.aPkiEzsignfolderID, aPkiEzsignfolderID);
 
   @override
   int get hashCode =>
@@ -56,8 +56,8 @@ class EzsignfolderCreateObjectV1ResponseMPayload {
       }());
 
       return EzsignfolderCreateObjectV1ResponseMPayload(
-        aPkiEzsignfolderID: json[r'a_pkiEzsignfolderID'] is List
-            ? (json[r'a_pkiEzsignfolderID'] as List).cast<int>()
+        aPkiEzsignfolderID: json[r'a_pkiEzsignfolderID'] is Iterable
+            ? (json[r'a_pkiEzsignfolderID'] as Iterable).cast<int>().toList(growable: false)
             : const [],
       );
     }

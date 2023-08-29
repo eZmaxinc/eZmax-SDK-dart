@@ -20,7 +20,7 @@ class EzsignsignergroupmembershipCreateObjectV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignsignergroupmembershipCreateObjectV1Request &&
-     other.aObjEzsignsignergroupmembership == aObjEzsignsignergroupmembership;
+    _deepEquality.equals(other.aObjEzsignsignergroupmembership, aObjEzsignsignergroupmembership);
 
   @override
   int get hashCode =>

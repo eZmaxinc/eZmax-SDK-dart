@@ -38,11 +38,11 @@ class EzsigntemplatepackageAutocompleteElementResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplatepackageAutocompleteElementResponse &&
-     other.eEzsignfoldertypePrivacylevel == eEzsignfoldertypePrivacylevel &&
-     other.sEzsigntemplatepackageDescription == sEzsigntemplatepackageDescription &&
-     other.pkiEzsigntemplatepackageID == pkiEzsigntemplatepackageID &&
-     other.bEzsigntemplatepackageIsactive == bEzsigntemplatepackageIsactive &&
-     other.bDisabled == bDisabled;
+    other.eEzsignfoldertypePrivacylevel == eEzsignfoldertypePrivacylevel &&
+    other.sEzsigntemplatepackageDescription == sEzsigntemplatepackageDescription &&
+    other.pkiEzsigntemplatepackageID == pkiEzsigntemplatepackageID &&
+    other.bEzsigntemplatepackageIsactive == bEzsigntemplatepackageIsactive &&
+    other.bDisabled == bDisabled;
 
   @override
   int get hashCode =>

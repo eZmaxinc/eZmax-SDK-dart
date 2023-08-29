@@ -80,16 +80,16 @@ class WebhookRequestCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is WebhookRequestCompound &&
-     other.pkiWebhookID == pkiWebhookID &&
-     other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
-     other.sWebhookDescription == sWebhookDescription &&
-     other.eWebhookModule == eWebhookModule &&
-     other.eWebhookEzsignevent == eWebhookEzsignevent &&
-     other.eWebhookManagementevent == eWebhookManagementevent &&
-     other.sWebhookUrl == sWebhookUrl &&
-     other.sWebhookEmailfailed == sWebhookEmailfailed &&
-     other.bWebhookIsactive == bWebhookIsactive &&
-     other.bWebhookSkipsslvalidation == bWebhookSkipsslvalidation;
+    other.pkiWebhookID == pkiWebhookID &&
+    other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
+    other.sWebhookDescription == sWebhookDescription &&
+    other.eWebhookModule == eWebhookModule &&
+    other.eWebhookEzsignevent == eWebhookEzsignevent &&
+    other.eWebhookManagementevent == eWebhookManagementevent &&
+    other.sWebhookUrl == sWebhookUrl &&
+    other.sWebhookEmailfailed == sWebhookEmailfailed &&
+    other.bWebhookIsactive == bWebhookIsactive &&
+    other.bWebhookSkipsslvalidation == bWebhookSkipsslvalidation;
 
   @override
   int get hashCode =>

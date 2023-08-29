@@ -16,8 +16,8 @@ void main() {
   // final instance = EzsignsignergroupEditObjectV1Request();
 
   group('test EzsignsignergroupEditObjectV1Request', () {
-    // EzsignsignergroupRequestCompound objBranding
-    test('to test the property `objBranding`', () async {
+    // EzsignsignergroupRequestCompound objEzsignsignergroup
+    test('to test the property `objEzsignsignergroup`', () async {
       // TODO
     });
 

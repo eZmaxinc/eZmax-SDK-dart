@@ -25,8 +25,8 @@ class CustomWebhooklogResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomWebhooklogResponse &&
-     other.dtWebhooklogDate == dtWebhooklogDate &&
-     other.tWebhooklogJson == tWebhooklogJson;
+    other.dtWebhooklogDate == dtWebhooklogDate &&
+    other.tWebhooklogJson == tWebhooklogJson;
 
   @override
   int get hashCode =>

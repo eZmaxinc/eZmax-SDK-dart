@@ -20,7 +20,7 @@ class EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload &&
-     other.aObjEzsignformfieldgroup == aObjEzsignformfieldgroup;
+    _deepEquality.equals(other.aObjEzsignformfieldgroup, aObjEzsignformfieldgroup);
 
   @override
   int get hashCode =>

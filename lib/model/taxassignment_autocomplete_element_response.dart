@@ -32,9 +32,9 @@ class TaxassignmentAutocompleteElementResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is TaxassignmentAutocompleteElementResponse &&
-     other.sTaxassignmentDescriptionX == sTaxassignmentDescriptionX &&
-     other.pkiTaxassignmentID == pkiTaxassignmentID &&
-     other.bTaxassignmentIsactive == bTaxassignmentIsactive;
+    other.sTaxassignmentDescriptionX == sTaxassignmentDescriptionX &&
+    other.pkiTaxassignmentID == pkiTaxassignmentID &&
+    other.bTaxassignmentIsactive == bTaxassignmentIsactive;
 
   @override
   int get hashCode =>

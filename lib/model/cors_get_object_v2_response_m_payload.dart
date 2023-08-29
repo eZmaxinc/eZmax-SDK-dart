@@ -20,7 +20,7 @@ class CorsGetObjectV2ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CorsGetObjectV2ResponseMPayload &&
-     other.objCors == objCors;
+    other.objCors == objCors;
 
   @override
   int get hashCode =>

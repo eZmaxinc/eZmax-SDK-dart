@@ -20,7 +20,7 @@ class CorsEditObjectV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CorsEditObjectV1Request &&
-     other.objCors == objCors;
+    other.objCors == objCors;
 
   @override
   int get hashCode =>

@@ -62,15 +62,15 @@ class WebhookListElement {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is WebhookListElement &&
-     other.pkiWebhookID == pkiWebhookID &&
-     other.sWebhookDescription == sWebhookDescription &&
-     other.sWebhookUrl == sWebhookUrl &&
-     other.sWebhookEvent == sWebhookEvent &&
-     other.sWebhookEmailfailed == sWebhookEmailfailed &&
-     other.eWebhookModule == eWebhookModule &&
-     other.eWebhookEzsignevent == eWebhookEzsignevent &&
-     other.eWebhookManagementevent == eWebhookManagementevent &&
-     other.bWebhookIsactive == bWebhookIsactive;
+    other.pkiWebhookID == pkiWebhookID &&
+    other.sWebhookDescription == sWebhookDescription &&
+    other.sWebhookUrl == sWebhookUrl &&
+    other.sWebhookEvent == sWebhookEvent &&
+    other.sWebhookEmailfailed == sWebhookEmailfailed &&
+    other.eWebhookModule == eWebhookModule &&
+    other.eWebhookEzsignevent == eWebhookEzsignevent &&
+    other.eWebhookManagementevent == eWebhookManagementevent &&
+    other.bWebhookIsactive == bWebhookIsactive;
 
   @override
   int get hashCode =>

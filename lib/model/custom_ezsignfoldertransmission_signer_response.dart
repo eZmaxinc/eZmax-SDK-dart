@@ -37,9 +37,9 @@ class CustomEzsignfoldertransmissionSignerResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomEzsignfoldertransmissionSignerResponse &&
-     other.fkiUserID == fkiUserID &&
-     other.sContactFirstname == sContactFirstname &&
-     other.sContactLastname == sContactLastname;
+    other.fkiUserID == fkiUserID &&
+    other.sContactFirstname == sContactFirstname &&
+    other.sContactLastname == sContactLastname;
 
   @override
   int get hashCode =>

@@ -21,7 +21,7 @@ class EzsignfolderGetCommunicationCountV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfolderGetCommunicationCountV1ResponseMPayload &&
-     other.iCommunicationCount == iCommunicationCount;
+    other.iCommunicationCount == iCommunicationCount;
 
   @override
   int get hashCode =>

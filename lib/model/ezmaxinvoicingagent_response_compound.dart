@@ -150,27 +150,27 @@ class EzmaxinvoicingagentResponseCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzmaxinvoicingagentResponseCompound &&
-     other.pkiEzmaxinvoicingagentID == pkiEzmaxinvoicingagentID &&
-     other.fkiEzmaxinvoicingID == fkiEzmaxinvoicingID &&
-     other.fkiBillingentityinternalID == fkiBillingentityinternalID &&
-     other.sBillingentityinternalDescriptionX == sBillingentityinternalDescriptionX &&
-     other.fkiAgentID == fkiAgentID &&
-     other.fkiBrokerID == fkiBrokerID &&
-     other.iEzmaxinvoicingagentSession == iEzmaxinvoicingagentSession &&
-     other.iEzmaxinvoicingagentCloned == iEzmaxinvoicingagentCloned &&
-     other.iEzmaxinvoicingagentInvoice == iEzmaxinvoicingagentInvoice &&
-     other.iEzmaxinvoicingagentInscription == iEzmaxinvoicingagentInscription &&
-     other.iEzmaxinvoicingagentInscriptionactive == iEzmaxinvoicingagentInscriptionactive &&
-     other.iEzmaxinvoicingagentSale == iEzmaxinvoicingagentSale &&
-     other.iEzmaxinvoicingagentOtherincome == iEzmaxinvoicingagentOtherincome &&
-     other.iEzmaxinvoicingagentCommissioncalculation == iEzmaxinvoicingagentCommissioncalculation &&
-     other.iEzmaxinvoicingagentEzsigndocument == iEzmaxinvoicingagentEzsigndocument &&
-     other.bEzmaxinvoicingagentEzsignaccount == bEzmaxinvoicingagentEzsignaccount &&
-     other.bEzmaxinvoicingagentBillableezmax == bEzmaxinvoicingagentBillableezmax &&
-     other.eEzmaxinvoicingagentVariationezmax == eEzmaxinvoicingagentVariationezmax &&
-     other.bEzmaxinvoicingagentBillableezsign == bEzmaxinvoicingagentBillableezsign &&
-     other.eEzmaxinvoicingagentVariationezsign == eEzmaxinvoicingagentVariationezsign &&
-     other.objContactName == objContactName;
+    other.pkiEzmaxinvoicingagentID == pkiEzmaxinvoicingagentID &&
+    other.fkiEzmaxinvoicingID == fkiEzmaxinvoicingID &&
+    other.fkiBillingentityinternalID == fkiBillingentityinternalID &&
+    other.sBillingentityinternalDescriptionX == sBillingentityinternalDescriptionX &&
+    other.fkiAgentID == fkiAgentID &&
+    other.fkiBrokerID == fkiBrokerID &&
+    other.iEzmaxinvoicingagentSession == iEzmaxinvoicingagentSession &&
+    other.iEzmaxinvoicingagentCloned == iEzmaxinvoicingagentCloned &&
+    other.iEzmaxinvoicingagentInvoice == iEzmaxinvoicingagentInvoice &&
+    other.iEzmaxinvoicingagentInscription == iEzmaxinvoicingagentInscription &&
+    other.iEzmaxinvoicingagentInscriptionactive == iEzmaxinvoicingagentInscriptionactive &&
+    other.iEzmaxinvoicingagentSale == iEzmaxinvoicingagentSale &&
+    other.iEzmaxinvoicingagentOtherincome == iEzmaxinvoicingagentOtherincome &&
+    other.iEzmaxinvoicingagentCommissioncalculation == iEzmaxinvoicingagentCommissioncalculation &&
+    other.iEzmaxinvoicingagentEzsigndocument == iEzmaxinvoicingagentEzsigndocument &&
+    other.bEzmaxinvoicingagentEzsignaccount == bEzmaxinvoicingagentEzsignaccount &&
+    other.bEzmaxinvoicingagentBillableezmax == bEzmaxinvoicingagentBillableezmax &&
+    other.eEzmaxinvoicingagentVariationezmax == eEzmaxinvoicingagentVariationezmax &&
+    other.bEzmaxinvoicingagentBillableezsign == bEzmaxinvoicingagentBillableezsign &&
+    other.eEzmaxinvoicingagentVariationezsign == eEzmaxinvoicingagentVariationezsign &&
+    other.objContactName == objContactName;
 
   @override
   int get hashCode =>

@@ -58,6 +58,18 @@ void main() {
       // TODO
     });
 
+    // The width of the Ezsigntemplatesignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsigntemplatesignature to have a width of 2 inches, you would use \"200\" for the iEzsigntemplatesignatureWidth.
+    // int iEzsigntemplatesignatureWidth
+    test('to test the property `iEzsigntemplatesignatureWidth`', () async {
+      // TODO
+    });
+
+    // The height of the Ezsigntemplatesignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsigntemplatesignature to have an height of 2 inches, you would use \"200\" for the iEzsigntemplatesignatureHeight.
+    // int iEzsigntemplatesignatureHeight
+    test('to test the property `iEzsigntemplatesignatureHeight`', () async {
+      // TODO
+    });
+
     // The step when the Ezsigntemplatesigner will be invited to sign
     // int iEzsigntemplatesignatureStep
     test('to test the property `iEzsigntemplatesignatureStep`', () async {
@@ -105,6 +117,23 @@ void main() {
     // The step when the Ezsigntemplatesigner will be invited to validate the Ezsigntemplatesignature of eEzsigntemplatesignatureType Attachments
     // int iEzsigntemplatesignatureValidationstep
     test('to test the property `iEzsigntemplatesignatureValidationstep`', () async {
+      // TODO
+    });
+
+    // The maximum length for the value in the Ezsigntemplatesignature  This can only be set if eEzsigntemplatesignatureType is **FieldText** or **FieldTextarea**
+    // int iEzsigntemplatesignatureMaxlength
+    test('to test the property `iEzsigntemplatesignatureMaxlength`', () async {
+      // TODO
+    });
+
+    // A regular expression to indicate what values are acceptable for the Ezsigntemplatesignature.  This can only be set if eEzsigntemplatesignatureType is **Text** or **Textarea**
+    // String sEzsigntemplatesignatureRegexp
+    test('to test the property `sEzsigntemplatesignatureRegexp`', () async {
+      // TODO
+    });
+
+    // EnumTextvalidation eEzsigntemplatesignatureTextvalidation
+    test('to test the property `eEzsigntemplatesignatureTextvalidation`', () async {
       // TODO
     });
 

@@ -21,7 +21,7 @@ class EzsigntemplatepackageGetAutocompleteV2ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplatepackageGetAutocompleteV2ResponseMPayload &&
-     other.aObjEzsigntemplatepackage == aObjEzsigntemplatepackage;
+    _deepEquality.equals(other.aObjEzsigntemplatepackage, aObjEzsigntemplatepackage);
 
   @override
   int get hashCode =>

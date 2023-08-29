@@ -20,7 +20,7 @@ class BrandingCreateObjectV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is BrandingCreateObjectV1Request &&
-     other.aObjBranding == aObjBranding;
+    _deepEquality.equals(other.aObjBranding, aObjBranding);
 
   @override
   int get hashCode =>

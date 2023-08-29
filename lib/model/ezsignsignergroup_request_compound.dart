@@ -39,9 +39,9 @@ class EzsignsignergroupRequestCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignsignergroupRequestCompound &&
-     other.pkiEzsignsignergroupID == pkiEzsignsignergroupID &&
-     other.fkiEzsignfolderID == fkiEzsignfolderID &&
-     other.objEzsignsignergroupDescription == objEzsignsignergroupDescription;
+    other.pkiEzsignsignergroupID == pkiEzsignsignergroupID &&
+    other.fkiEzsignfolderID == fkiEzsignfolderID &&
+    other.objEzsignsignergroupDescription == objEzsignsignergroupDescription;
 
   @override
   int get hashCode =>

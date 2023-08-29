@@ -13,12 +13,10 @@ part of openapi.api;
 class ClonehistoryGetListV1ResponseMPayload {
   /// Returns a new [ClonehistoryGetListV1ResponseMPayload] instance.
   ClonehistoryGetListV1ResponseMPayload({
-    this.aObjClonehistory = const [],
     required this.iRowReturned,
     required this.iRowFiltered,
+    this.aObjClonehistory = const [],
   });
-
-  List<ClonehistoryListElement> aObjClonehistory;
 
   /// The number of rows returned
   int iRowReturned;
@@ -26,27 +24,29 @@ class ClonehistoryGetListV1ResponseMPayload {
   /// The number of rows matching your filters (if any) or the total number of rows
   int iRowFiltered;
 
+  List<ClonehistoryListElement> aObjClonehistory;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is ClonehistoryGetListV1ResponseMPayload &&
-     other.aObjClonehistory == aObjClonehistory &&
-     other.iRowReturned == iRowReturned &&
-     other.iRowFiltered == iRowFiltered;
+    other.iRowReturned == iRowReturned &&
+    other.iRowFiltered == iRowFiltered &&
+    _deepEquality.equals(other.aObjClonehistory, aObjClonehistory);
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (aObjClonehistory.hashCode) +
     (iRowReturned.hashCode) +
-    (iRowFiltered.hashCode);
+    (iRowFiltered.hashCode) +
+    (aObjClonehistory.hashCode);
 
   @override
-  String toString() => 'ClonehistoryGetListV1ResponseMPayload[aObjClonehistory=$aObjClonehistory, iRowReturned=$iRowReturned, iRowFiltered=$iRowFiltered]';
+  String toString() => 'ClonehistoryGetListV1ResponseMPayload[iRowReturned=$iRowReturned, iRowFiltered=$iRowFiltered, aObjClonehistory=$aObjClonehistory]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'a_objClonehistory'] = this.aObjClonehistory;
       json[r'iRowReturned'] = this.iRowReturned;
       json[r'iRowFiltered'] = this.iRowFiltered;
+      json[r'a_objClonehistory'] = this.aObjClonehistory;
     return json;
   }
 
@@ -69,9 +69,9 @@ class ClonehistoryGetListV1ResponseMPayload {
       }());
 
       return ClonehistoryGetListV1ResponseMPayload(
-        aObjClonehistory: ClonehistoryListElement.listFromJson(json[r'a_objClonehistory']),
         iRowReturned: mapValueOfType<int>(json, r'iRowReturned')!,
         iRowFiltered: mapValueOfType<int>(json, r'iRowFiltered')!,
+        aObjClonehistory: ClonehistoryListElement.listFromJson(json[r'a_objClonehistory']),
       );
     }
     return null;
@@ -119,9 +119,9 @@ class ClonehistoryGetListV1ResponseMPayload {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'a_objClonehistory',
     'iRowReturned',
     'iRowFiltered',
+    'a_objClonehistory',
   };
 }
 

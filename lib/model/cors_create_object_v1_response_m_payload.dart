@@ -21,7 +21,7 @@ class CorsCreateObjectV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CorsCreateObjectV1ResponseMPayload &&
-     other.aPkiCorsID == aPkiCorsID;
+    _deepEquality.equals(other.aPkiCorsID, aPkiCorsID);
 
   @override
   int get hashCode =>
@@ -56,8 +56,8 @@ class CorsCreateObjectV1ResponseMPayload {
       }());
 
       return CorsCreateObjectV1ResponseMPayload(
-        aPkiCorsID: json[r'a_pkiCorsID'] is List
-            ? (json[r'a_pkiCorsID'] as List).cast<int>()
+        aPkiCorsID: json[r'a_pkiCorsID'] is Iterable
+            ? (json[r'a_pkiCorsID'] as Iterable).cast<int>().toList(growable: false)
             : const [],
       );
     }

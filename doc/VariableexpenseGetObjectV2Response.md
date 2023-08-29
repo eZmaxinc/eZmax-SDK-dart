@@ -8,9 +8,9 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**VariableexpenseGetObjectV2ResponseMPayload**](VariableexpenseGetObjectV2ResponseMPayload.md) |  | 
-**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | [optional] 
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
 **objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  | [optional] 
+**mPayload** | [**VariableexpenseGetObjectV2ResponseMPayload**](VariableexpenseGetObjectV2ResponseMPayload.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

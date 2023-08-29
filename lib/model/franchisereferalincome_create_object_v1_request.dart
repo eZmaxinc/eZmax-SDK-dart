@@ -35,8 +35,8 @@ class FranchisereferalincomeCreateObjectV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is FranchisereferalincomeCreateObjectV1Request &&
-     other.objFranchisereferalincome == objFranchisereferalincome &&
-     other.objFranchisereferalincomeCompound == objFranchisereferalincomeCompound;
+    other.objFranchisereferalincome == objFranchisereferalincome &&
+    other.objFranchisereferalincomeCompound == objFranchisereferalincomeCompound;
 
   @override
   int get hashCode =>

@@ -37,8 +37,8 @@ class MultilingualEzmaxinvoicingsummaryinternalDescription {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is MultilingualEzmaxinvoicingsummaryinternalDescription &&
-     other.sEzmaxinvoicingsummaryinternalDescription1 == sEzmaxinvoicingsummaryinternalDescription1 &&
-     other.sEzmaxinvoicingsummaryinternalDescription2 == sEzmaxinvoicingsummaryinternalDescription2;
+    other.sEzmaxinvoicingsummaryinternalDescription1 == sEzmaxinvoicingsummaryinternalDescription1 &&
+    other.sEzmaxinvoicingsummaryinternalDescription2 == sEzmaxinvoicingsummaryinternalDescription2;
 
   @override
   int get hashCode =>

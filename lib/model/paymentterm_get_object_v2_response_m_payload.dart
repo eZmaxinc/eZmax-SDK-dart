@@ -20,7 +20,7 @@ class PaymenttermGetObjectV2ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is PaymenttermGetObjectV2ResponseMPayload &&
-     other.objPaymentterm == objPaymentterm;
+    other.objPaymentterm == objPaymentterm;
 
   @override
   int get hashCode =>

@@ -30,9 +30,9 @@ class EzsignfolderImportEzsigntemplatepackageV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfolderImportEzsigntemplatepackageV1Request &&
-     other.fkiEzsigntemplatepackageID == fkiEzsigntemplatepackageID &&
-     other.dtEzsigndocumentDuedate == dtEzsigndocumentDuedate &&
-     other.aObjImportEzsigntemplatepackageRelation == aObjImportEzsigntemplatepackageRelation;
+    other.fkiEzsigntemplatepackageID == fkiEzsigntemplatepackageID &&
+    other.dtEzsigndocumentDuedate == dtEzsigndocumentDuedate &&
+    _deepEquality.equals(other.aObjImportEzsigntemplatepackageRelation, aObjImportEzsigntemplatepackageRelation);
 
   @override
   int get hashCode =>

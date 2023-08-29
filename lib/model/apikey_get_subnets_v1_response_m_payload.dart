@@ -20,7 +20,7 @@ class ApikeyGetSubnetsV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ApikeyGetSubnetsV1ResponseMPayload &&
-     other.aObjSubnet == aObjSubnet;
+    _deepEquality.equals(other.aObjSubnet, aObjSubnet);
 
   @override
   int get hashCode =>

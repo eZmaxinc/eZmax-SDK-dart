@@ -78,14 +78,14 @@ class EzsignsignerResponseCompoundContact {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignsignerResponseCompoundContact &&
-     other.pkiContactID == pkiContactID &&
-     other.sContactFirstname == sContactFirstname &&
-     other.sContactLastname == sContactLastname &&
-     other.fkiLanguageID == fkiLanguageID &&
-     other.sEmailAddress == sEmailAddress &&
-     other.sPhoneE164 == sPhoneE164 &&
-     other.sPhoneExtension == sPhoneExtension &&
-     other.sPhoneE164Cell == sPhoneE164Cell;
+    other.pkiContactID == pkiContactID &&
+    other.sContactFirstname == sContactFirstname &&
+    other.sContactLastname == sContactLastname &&
+    other.fkiLanguageID == fkiLanguageID &&
+    other.sEmailAddress == sEmailAddress &&
+    other.sPhoneE164 == sPhoneE164 &&
+    other.sPhoneExtension == sPhoneExtension &&
+    other.sPhoneE164Cell == sPhoneE164Cell;
 
   @override
   int get hashCode =>

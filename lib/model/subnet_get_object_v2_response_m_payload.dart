@@ -20,7 +20,7 @@ class SubnetGetObjectV2ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is SubnetGetObjectV2ResponseMPayload &&
-     other.objSubnet == objSubnet;
+    other.objSubnet == objSubnet;
 
   @override
   int get hashCode =>

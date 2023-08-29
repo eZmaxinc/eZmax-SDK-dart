@@ -109,18 +109,18 @@ class EzsigntemplatedocumentRequest {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplatedocumentRequest &&
-     other.pkiEzsigntemplatedocumentID == pkiEzsigntemplatedocumentID &&
-     other.fkiEzsigntemplateID == fkiEzsigntemplateID &&
-     other.fkiEzsigndocumentID == fkiEzsigndocumentID &&
-     other.fkiEzsigntemplatesignerID == fkiEzsigntemplatesignerID &&
-     other.sEzsigntemplatedocumentName == sEzsigntemplatedocumentName &&
-     other.eEzsigntemplatedocumentSource == eEzsigntemplatedocumentSource &&
-     other.eEzsigntemplatedocumentFormat == eEzsigntemplatedocumentFormat &&
-     other.sEzsigntemplatedocumentBase64 == sEzsigntemplatedocumentBase64 &&
-     other.sEzsigntemplatedocumentUrl == sEzsigntemplatedocumentUrl &&
-     other.bEzsigntemplatedocumentForcerepair == bEzsigntemplatedocumentForcerepair &&
-     other.eEzsigntemplatedocumentForm == eEzsigntemplatedocumentForm &&
-     other.sEzsigntemplatedocumentPassword == sEzsigntemplatedocumentPassword;
+    other.pkiEzsigntemplatedocumentID == pkiEzsigntemplatedocumentID &&
+    other.fkiEzsigntemplateID == fkiEzsigntemplateID &&
+    other.fkiEzsigndocumentID == fkiEzsigndocumentID &&
+    other.fkiEzsigntemplatesignerID == fkiEzsigntemplatesignerID &&
+    other.sEzsigntemplatedocumentName == sEzsigntemplatedocumentName &&
+    other.eEzsigntemplatedocumentSource == eEzsigntemplatedocumentSource &&
+    other.eEzsigntemplatedocumentFormat == eEzsigntemplatedocumentFormat &&
+    other.sEzsigntemplatedocumentBase64 == sEzsigntemplatedocumentBase64 &&
+    other.sEzsigntemplatedocumentUrl == sEzsigntemplatedocumentUrl &&
+    other.bEzsigntemplatedocumentForcerepair == bEzsigntemplatedocumentForcerepair &&
+    other.eEzsigntemplatedocumentForm == eEzsigntemplatedocumentForm &&
+    other.sEzsigntemplatedocumentPassword == sEzsigntemplatedocumentPassword;
 
   @override
   int get hashCode =>

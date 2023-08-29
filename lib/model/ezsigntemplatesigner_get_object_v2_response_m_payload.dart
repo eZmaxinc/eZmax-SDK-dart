@@ -20,7 +20,7 @@ class EzsigntemplatesignerGetObjectV2ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplatesignerGetObjectV2ResponseMPayload &&
-     other.objEzsigntemplatesigner == objEzsigntemplatesigner;
+    other.objEzsigntemplatesigner == objEzsigntemplatesigner;
 
   @override
   int get hashCode =>

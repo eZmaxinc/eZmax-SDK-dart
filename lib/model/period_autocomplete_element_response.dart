@@ -31,9 +31,9 @@ class PeriodAutocompleteElementResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is PeriodAutocompleteElementResponse &&
-     other.sPeriodYYYYMM == sPeriodYYYYMM &&
-     other.pkiPeriodID == pkiPeriodID &&
-     other.bPeriodIsactive == bPeriodIsactive;
+    other.sPeriodYYYYMM == sPeriodYYYYMM &&
+    other.pkiPeriodID == pkiPeriodID &&
+    other.bPeriodIsactive == bPeriodIsactive;
 
   @override
   int get hashCode =>

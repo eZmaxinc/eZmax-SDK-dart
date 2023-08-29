@@ -21,7 +21,7 @@ class TaxassignmentGetAutocompleteV2ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is TaxassignmentGetAutocompleteV2ResponseMPayload &&
-     other.aObjTaxassignment == aObjTaxassignment;
+    _deepEquality.equals(other.aObjTaxassignment, aObjTaxassignment);
 
   @override
   int get hashCode =>

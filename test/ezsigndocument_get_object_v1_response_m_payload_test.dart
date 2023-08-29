@@ -140,6 +140,11 @@ void main() {
       // TODO
     });
 
+    // ComputedEEzsigndocumentSteptype eEzsigndocumentSteptype
+    test('to test the property `eEzsigndocumentSteptype`', () async {
+      // TODO
+    });
+
     // The total number of steps in the form filling phase
     // int iEzsigndocumentStepformtotal
     test('to test the property `iEzsigndocumentStepformtotal`', () async {

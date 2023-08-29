@@ -13,12 +13,10 @@ part of openapi.api;
 class BrandingGetListV1ResponseMPayload {
   /// Returns a new [BrandingGetListV1ResponseMPayload] instance.
   BrandingGetListV1ResponseMPayload({
-    this.aObjBranding = const [],
     required this.iRowReturned,
     required this.iRowFiltered,
+    this.aObjBranding = const [],
   });
-
-  List<BrandingListElement> aObjBranding;
 
   /// The number of rows returned
   int iRowReturned;
@@ -26,27 +24,29 @@ class BrandingGetListV1ResponseMPayload {
   /// The number of rows matching your filters (if any) or the total number of rows
   int iRowFiltered;
 
+  List<BrandingListElement> aObjBranding;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is BrandingGetListV1ResponseMPayload &&
-     other.aObjBranding == aObjBranding &&
-     other.iRowReturned == iRowReturned &&
-     other.iRowFiltered == iRowFiltered;
+    other.iRowReturned == iRowReturned &&
+    other.iRowFiltered == iRowFiltered &&
+    _deepEquality.equals(other.aObjBranding, aObjBranding);
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (aObjBranding.hashCode) +
     (iRowReturned.hashCode) +
-    (iRowFiltered.hashCode);
+    (iRowFiltered.hashCode) +
+    (aObjBranding.hashCode);
 
   @override
-  String toString() => 'BrandingGetListV1ResponseMPayload[aObjBranding=$aObjBranding, iRowReturned=$iRowReturned, iRowFiltered=$iRowFiltered]';
+  String toString() => 'BrandingGetListV1ResponseMPayload[iRowReturned=$iRowReturned, iRowFiltered=$iRowFiltered, aObjBranding=$aObjBranding]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'a_objBranding'] = this.aObjBranding;
       json[r'iRowReturned'] = this.iRowReturned;
       json[r'iRowFiltered'] = this.iRowFiltered;
+      json[r'a_objBranding'] = this.aObjBranding;
     return json;
   }
 
@@ -69,9 +69,9 @@ class BrandingGetListV1ResponseMPayload {
       }());
 
       return BrandingGetListV1ResponseMPayload(
-        aObjBranding: BrandingListElement.listFromJson(json[r'a_objBranding']),
         iRowReturned: mapValueOfType<int>(json, r'iRowReturned')!,
         iRowFiltered: mapValueOfType<int>(json, r'iRowFiltered')!,
+        aObjBranding: BrandingListElement.listFromJson(json[r'a_objBranding']),
       );
     }
     return null;
@@ -119,9 +119,9 @@ class BrandingGetListV1ResponseMPayload {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'a_objBranding',
     'iRowReturned',
     'iRowFiltered',
+    'a_objBranding',
   };
 }
 

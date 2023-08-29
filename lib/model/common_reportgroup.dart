@@ -23,8 +23,8 @@ class CommonReportgroup {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonReportgroup &&
-     other.aObjReport == aObjReport &&
-     other.aObjReportcellstyleCustom == aObjReportcellstyleCustom;
+    _deepEquality.equals(other.aObjReport, aObjReport) &&
+    _deepEquality.equals(other.aObjReportcellstyleCustom, aObjReportcellstyleCustom);
 
   @override
   int get hashCode =>

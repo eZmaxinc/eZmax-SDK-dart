@@ -13,12 +13,10 @@ part of openapi.api;
 class BillingentityinternalGetListV1ResponseMPayload {
   /// Returns a new [BillingentityinternalGetListV1ResponseMPayload] instance.
   BillingentityinternalGetListV1ResponseMPayload({
-    this.aObjBillingentityinternal = const [],
     required this.iRowReturned,
     required this.iRowFiltered,
+    this.aObjBillingentityinternal = const [],
   });
-
-  List<BillingentityinternalListElement> aObjBillingentityinternal;
 
   /// The number of rows returned
   int iRowReturned;
@@ -26,27 +24,29 @@ class BillingentityinternalGetListV1ResponseMPayload {
   /// The number of rows matching your filters (if any) or the total number of rows
   int iRowFiltered;
 
+  List<BillingentityinternalListElement> aObjBillingentityinternal;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is BillingentityinternalGetListV1ResponseMPayload &&
-     other.aObjBillingentityinternal == aObjBillingentityinternal &&
-     other.iRowReturned == iRowReturned &&
-     other.iRowFiltered == iRowFiltered;
+    other.iRowReturned == iRowReturned &&
+    other.iRowFiltered == iRowFiltered &&
+    _deepEquality.equals(other.aObjBillingentityinternal, aObjBillingentityinternal);
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (aObjBillingentityinternal.hashCode) +
     (iRowReturned.hashCode) +
-    (iRowFiltered.hashCode);
+    (iRowFiltered.hashCode) +
+    (aObjBillingentityinternal.hashCode);
 
   @override
-  String toString() => 'BillingentityinternalGetListV1ResponseMPayload[aObjBillingentityinternal=$aObjBillingentityinternal, iRowReturned=$iRowReturned, iRowFiltered=$iRowFiltered]';
+  String toString() => 'BillingentityinternalGetListV1ResponseMPayload[iRowReturned=$iRowReturned, iRowFiltered=$iRowFiltered, aObjBillingentityinternal=$aObjBillingentityinternal]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'a_objBillingentityinternal'] = this.aObjBillingentityinternal;
       json[r'iRowReturned'] = this.iRowReturned;
       json[r'iRowFiltered'] = this.iRowFiltered;
+      json[r'a_objBillingentityinternal'] = this.aObjBillingentityinternal;
     return json;
   }
 
@@ -69,9 +69,9 @@ class BillingentityinternalGetListV1ResponseMPayload {
       }());
 
       return BillingentityinternalGetListV1ResponseMPayload(
-        aObjBillingentityinternal: BillingentityinternalListElement.listFromJson(json[r'a_objBillingentityinternal']),
         iRowReturned: mapValueOfType<int>(json, r'iRowReturned')!,
         iRowFiltered: mapValueOfType<int>(json, r'iRowFiltered')!,
+        aObjBillingentityinternal: BillingentityinternalListElement.listFromJson(json[r'a_objBillingentityinternal']),
       );
     }
     return null;
@@ -119,9 +119,9 @@ class BillingentityinternalGetListV1ResponseMPayload {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'a_objBillingentityinternal',
     'iRowReturned',
     'iRowFiltered',
+    'a_objBillingentityinternal',
   };
 }
 

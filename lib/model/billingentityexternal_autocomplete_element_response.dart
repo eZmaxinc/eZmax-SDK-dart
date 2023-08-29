@@ -31,9 +31,9 @@ class BillingentityexternalAutocompleteElementResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is BillingentityexternalAutocompleteElementResponse &&
-     other.pkiBillingentityexternalID == pkiBillingentityexternalID &&
-     other.sBillingentityexternalDescription == sBillingentityexternalDescription &&
-     other.bBillingentityexternalIsactive == bBillingentityexternalIsactive;
+    other.pkiBillingentityexternalID == pkiBillingentityexternalID &&
+    other.sBillingentityexternalDescription == sBillingentityexternalDescription &&
+    other.bBillingentityexternalIsactive == bBillingentityexternalIsactive;
 
   @override
   int get hashCode =>

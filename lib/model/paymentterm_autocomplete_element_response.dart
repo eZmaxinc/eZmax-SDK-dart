@@ -29,9 +29,9 @@ class PaymenttermAutocompleteElementResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is PaymenttermAutocompleteElementResponse &&
-     other.pkiPaymenttermID == pkiPaymenttermID &&
-     other.sPaymenttermDescriptionX == sPaymenttermDescriptionX &&
-     other.bPaymenttermIsactive == bPaymenttermIsactive;
+    other.pkiPaymenttermID == pkiPaymenttermID &&
+    other.sPaymenttermDescriptionX == sPaymenttermDescriptionX &&
+    other.bPaymenttermIsactive == bPaymenttermIsactive;
 
   @override
   int get hashCode =>

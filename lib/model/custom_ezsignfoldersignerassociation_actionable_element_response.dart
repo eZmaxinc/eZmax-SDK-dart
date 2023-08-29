@@ -82,16 +82,16 @@ class CustomEzsignfoldersignerassociationActionableElementResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomEzsignfoldersignerassociationActionableElementResponse &&
-     other.pkiEzsignfoldersignerassociationID == pkiEzsignfoldersignerassociationID &&
-     other.fkiEzsignfolderID == fkiEzsignfolderID &&
-     other.bEzsignfoldersignerassociationDelayedsend == bEzsignfoldersignerassociationDelayedsend &&
-     other.bEzsignfoldersignerassociationReceivecopy == bEzsignfoldersignerassociationReceivecopy &&
-     other.tEzsignfoldersignerassociationMessage == tEzsignfoldersignerassociationMessage &&
-     other.objEzsignsignergroup == objEzsignsignergroup &&
-     other.objUser == objUser &&
-     other.objEzsignsigner == objEzsignsigner &&
-     other.bEzsignfoldersignerassociationHasactionableelementsCurrent == bEzsignfoldersignerassociationHasactionableelementsCurrent &&
-     other.bEzsignfoldersignerassociationHasactionableelementsFuture == bEzsignfoldersignerassociationHasactionableelementsFuture;
+    other.pkiEzsignfoldersignerassociationID == pkiEzsignfoldersignerassociationID &&
+    other.fkiEzsignfolderID == fkiEzsignfolderID &&
+    other.bEzsignfoldersignerassociationDelayedsend == bEzsignfoldersignerassociationDelayedsend &&
+    other.bEzsignfoldersignerassociationReceivecopy == bEzsignfoldersignerassociationReceivecopy &&
+    other.tEzsignfoldersignerassociationMessage == tEzsignfoldersignerassociationMessage &&
+    other.objEzsignsignergroup == objEzsignsignergroup &&
+    other.objUser == objUser &&
+    other.objEzsignsigner == objEzsignsigner &&
+    other.bEzsignfoldersignerassociationHasactionableelementsCurrent == bEzsignfoldersignerassociationHasactionableelementsCurrent &&
+    other.bEzsignfoldersignerassociationHasactionableelementsFuture == bEzsignfoldersignerassociationHasactionableelementsFuture;
 
   @override
   int get hashCode =>

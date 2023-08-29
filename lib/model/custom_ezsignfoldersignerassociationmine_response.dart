@@ -29,8 +29,8 @@ class CustomEzsignfoldersignerassociationmineResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomEzsignfoldersignerassociationmineResponse &&
-     other.pkiEzsignfoldersignerassociationID == pkiEzsignfoldersignerassociationID &&
-     other.fkiEzsignfolderID == fkiEzsignfolderID;
+    other.pkiEzsignfoldersignerassociationID == pkiEzsignfoldersignerassociationID &&
+    other.fkiEzsignfolderID == fkiEzsignfolderID;
 
   @override
   int get hashCode =>

@@ -27,8 +27,8 @@ class UsergroupResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is UsergroupResponse &&
-     other.pkiUsergroupID == pkiUsergroupID &&
-     other.objUsergroupName == objUsergroupName;
+    other.pkiUsergroupID == pkiUsergroupID &&
+    other.objUsergroupName == objUsergroupName;
 
   @override
   int get hashCode =>

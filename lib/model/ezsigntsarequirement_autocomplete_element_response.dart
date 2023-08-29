@@ -36,10 +36,10 @@ class EzsigntsarequirementAutocompleteElementResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntsarequirementAutocompleteElementResponse &&
-     other.sEzsigntsarequirementDescriptionX == sEzsigntsarequirementDescriptionX &&
-     other.pkiEzsigntsarequirementID == pkiEzsigntsarequirementID &&
-     other.bEzsigntsarequirementIsactive == bEzsigntsarequirementIsactive &&
-     other.bDisabled == bDisabled;
+    other.sEzsigntsarequirementDescriptionX == sEzsigntsarequirementDescriptionX &&
+    other.pkiEzsigntsarequirementID == pkiEzsigntsarequirementID &&
+    other.bEzsigntsarequirementIsactive == bEzsigntsarequirementIsactive &&
+    other.bDisabled == bDisabled;
 
   @override
   int get hashCode =>

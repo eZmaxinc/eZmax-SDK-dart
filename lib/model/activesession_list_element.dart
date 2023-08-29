@@ -75,18 +75,18 @@ class ActivesessionListElement {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ActivesessionListElement &&
-     other.pkiActivesessionID == pkiActivesessionID &&
-     other.fkiUserID == fkiUserID &&
-     other.fkiComputerID == fkiComputerID &&
-     other.fkiCompanyID == fkiCompanyID &&
-     other.fkiDepartmentID == fkiDepartmentID &&
-     other.sCompanyNameX == sCompanyNameX &&
-     other.sDepartmentNameX == sDepartmentNameX &&
-     other.sActivesessionLoginname == sActivesessionLoginname &&
-     other.sComputerDescription == sComputerDescription &&
-     other.dtActivesessionFirsthit == dtActivesessionFirsthit &&
-     other.dtActivesessionLasthit == dtActivesessionLasthit &&
-     other.sActivesessionIP == sActivesessionIP;
+    other.pkiActivesessionID == pkiActivesessionID &&
+    other.fkiUserID == fkiUserID &&
+    other.fkiComputerID == fkiComputerID &&
+    other.fkiCompanyID == fkiCompanyID &&
+    other.fkiDepartmentID == fkiDepartmentID &&
+    other.sCompanyNameX == sCompanyNameX &&
+    other.sDepartmentNameX == sDepartmentNameX &&
+    other.sActivesessionLoginname == sActivesessionLoginname &&
+    other.sComputerDescription == sComputerDescription &&
+    other.dtActivesessionFirsthit == dtActivesessionFirsthit &&
+    other.dtActivesessionLasthit == dtActivesessionLasthit &&
+    other.sActivesessionIP == sActivesessionIP;
 
   @override
   int get hashCode =>

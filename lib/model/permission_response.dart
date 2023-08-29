@@ -90,13 +90,13 @@ class PermissionResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is PermissionResponse &&
-     other.pkiPermissionID == pkiPermissionID &&
-     other.fkiUserID == fkiUserID &&
-     other.fkiApikeyID == fkiApikeyID &&
-     other.fkiUsergroupID == fkiUsergroupID &&
-     other.fkiCompanyID == fkiCompanyID &&
-     other.fkiModulesectionID == fkiModulesectionID &&
-     other.sCompanyNameX == sCompanyNameX;
+    other.pkiPermissionID == pkiPermissionID &&
+    other.fkiUserID == fkiUserID &&
+    other.fkiApikeyID == fkiApikeyID &&
+    other.fkiUsergroupID == fkiUsergroupID &&
+    other.fkiCompanyID == fkiCompanyID &&
+    other.fkiModulesectionID == fkiModulesectionID &&
+    other.sCompanyNameX == sCompanyNameX;
 
   @override
   int get hashCode =>

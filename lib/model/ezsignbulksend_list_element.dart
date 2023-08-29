@@ -65,17 +65,17 @@ class EzsignbulksendListElement {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignbulksendListElement &&
-     other.pkiEzsignbulksendID == pkiEzsignbulksendID &&
-     other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
-     other.sEzsignbulksendDescription == sEzsignbulksendDescription &&
-     other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
-     other.bEzsignbulksendNeedvalidation == bEzsignbulksendNeedvalidation &&
-     other.iEzsignbulksendtransmission == iEzsignbulksendtransmission &&
-     other.iEzsignfolder == iEzsignfolder &&
-     other.iEzsigndocument == iEzsigndocument &&
-     other.iEzsignsignature == iEzsignsignature &&
-     other.iEzsignsignatureSigned == iEzsignsignatureSigned &&
-     other.bEzsignbulksendIsactive == bEzsignbulksendIsactive;
+    other.pkiEzsignbulksendID == pkiEzsignbulksendID &&
+    other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
+    other.sEzsignbulksendDescription == sEzsignbulksendDescription &&
+    other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
+    other.bEzsignbulksendNeedvalidation == bEzsignbulksendNeedvalidation &&
+    other.iEzsignbulksendtransmission == iEzsignbulksendtransmission &&
+    other.iEzsignfolder == iEzsignfolder &&
+    other.iEzsigndocument == iEzsigndocument &&
+    other.iEzsignsignature == iEzsignsignature &&
+    other.iEzsignsignatureSigned == iEzsignsignatureSigned &&
+    other.bEzsignbulksendIsactive == bEzsignbulksendIsactive;
 
   @override
   int get hashCode =>

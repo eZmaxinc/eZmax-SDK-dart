@@ -20,7 +20,7 @@ class VariableexpenseCreateObjectV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is VariableexpenseCreateObjectV1Request &&
-     other.aObjVariableexpense == aObjVariableexpense;
+    _deepEquality.equals(other.aObjVariableexpense, aObjVariableexpense);
 
   @override
   int get hashCode =>

@@ -13,8 +13,6 @@ part of openapi.api;
 class CustomWebhookResponse {
   /// Returns a new [CustomWebhookResponse] instance.
   CustomWebhookResponse({
-    required this.pksCustomerCode,
-    required this.bWebhookTest,
     required this.pkiWebhookID,
     required this.sWebhookDescription,
     this.fkiEzsignfoldertypeID,
@@ -26,13 +24,9 @@ class CustomWebhookResponse {
     required this.sWebhookEmailfailed,
     this.bWebhookIsactive,
     required this.bWebhookSkipsslvalidation,
+    required this.pksCustomerCode,
+    required this.bWebhookTest,
   });
-
-  /// The customer code assigned to your account
-  String pksCustomerCode;
-
-  /// Wheter the webhook received is a manual test or a real event
-  bool bWebhookTest;
 
   /// The unique ID of the Webhook
   int pkiWebhookID;
@@ -96,27 +90,31 @@ class CustomWebhookResponse {
   /// Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use
   bool bWebhookSkipsslvalidation;
 
+  /// The customer code assigned to your account
+  String pksCustomerCode;
+
+  /// Wheter the webhook received is a manual test or a real event
+  bool bWebhookTest;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomWebhookResponse &&
-     other.pksCustomerCode == pksCustomerCode &&
-     other.bWebhookTest == bWebhookTest &&
-     other.pkiWebhookID == pkiWebhookID &&
-     other.sWebhookDescription == sWebhookDescription &&
-     other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
-     other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
-     other.eWebhookModule == eWebhookModule &&
-     other.eWebhookEzsignevent == eWebhookEzsignevent &&
-     other.eWebhookManagementevent == eWebhookManagementevent &&
-     other.sWebhookUrl == sWebhookUrl &&
-     other.sWebhookEmailfailed == sWebhookEmailfailed &&
-     other.bWebhookIsactive == bWebhookIsactive &&
-     other.bWebhookSkipsslvalidation == bWebhookSkipsslvalidation;
+    other.pkiWebhookID == pkiWebhookID &&
+    other.sWebhookDescription == sWebhookDescription &&
+    other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
+    other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
+    other.eWebhookModule == eWebhookModule &&
+    other.eWebhookEzsignevent == eWebhookEzsignevent &&
+    other.eWebhookManagementevent == eWebhookManagementevent &&
+    other.sWebhookUrl == sWebhookUrl &&
+    other.sWebhookEmailfailed == sWebhookEmailfailed &&
+    other.bWebhookIsactive == bWebhookIsactive &&
+    other.bWebhookSkipsslvalidation == bWebhookSkipsslvalidation &&
+    other.pksCustomerCode == pksCustomerCode &&
+    other.bWebhookTest == bWebhookTest;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (pksCustomerCode.hashCode) +
-    (bWebhookTest.hashCode) +
     (pkiWebhookID.hashCode) +
     (sWebhookDescription.hashCode) +
     (fkiEzsignfoldertypeID == null ? 0 : fkiEzsignfoldertypeID!.hashCode) +
@@ -127,15 +125,15 @@ class CustomWebhookResponse {
     (sWebhookUrl.hashCode) +
     (sWebhookEmailfailed.hashCode) +
     (bWebhookIsactive == null ? 0 : bWebhookIsactive!.hashCode) +
-    (bWebhookSkipsslvalidation.hashCode);
+    (bWebhookSkipsslvalidation.hashCode) +
+    (pksCustomerCode.hashCode) +
+    (bWebhookTest.hashCode);
 
   @override
-  String toString() => 'CustomWebhookResponse[pksCustomerCode=$pksCustomerCode, bWebhookTest=$bWebhookTest, pkiWebhookID=$pkiWebhookID, sWebhookDescription=$sWebhookDescription, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, sWebhookUrl=$sWebhookUrl, sWebhookEmailfailed=$sWebhookEmailfailed, bWebhookIsactive=$bWebhookIsactive, bWebhookSkipsslvalidation=$bWebhookSkipsslvalidation]';
+  String toString() => 'CustomWebhookResponse[pkiWebhookID=$pkiWebhookID, sWebhookDescription=$sWebhookDescription, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, sWebhookUrl=$sWebhookUrl, sWebhookEmailfailed=$sWebhookEmailfailed, bWebhookIsactive=$bWebhookIsactive, bWebhookSkipsslvalidation=$bWebhookSkipsslvalidation, pksCustomerCode=$pksCustomerCode, bWebhookTest=$bWebhookTest]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'pksCustomerCode'] = this.pksCustomerCode;
-      json[r'bWebhookTest'] = this.bWebhookTest;
       json[r'pkiWebhookID'] = this.pkiWebhookID;
       json[r'sWebhookDescription'] = this.sWebhookDescription;
     if (this.fkiEzsignfoldertypeID != null) {
@@ -167,6 +165,8 @@ class CustomWebhookResponse {
       json[r'bWebhookIsactive'] = null;
     }
       json[r'bWebhookSkipsslvalidation'] = this.bWebhookSkipsslvalidation;
+      json[r'pksCustomerCode'] = this.pksCustomerCode;
+      json[r'bWebhookTest'] = this.bWebhookTest;
     return json;
   }
 
@@ -189,8 +189,6 @@ class CustomWebhookResponse {
       }());
 
       return CustomWebhookResponse(
-        pksCustomerCode: mapValueOfType<String>(json, r'pksCustomerCode')!,
-        bWebhookTest: mapValueOfType<bool>(json, r'bWebhookTest')!,
         pkiWebhookID: mapValueOfType<int>(json, r'pkiWebhookID')!,
         sWebhookDescription: mapValueOfType<String>(json, r'sWebhookDescription')!,
         fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID'),
@@ -202,6 +200,8 @@ class CustomWebhookResponse {
         sWebhookEmailfailed: mapValueOfType<String>(json, r'sWebhookEmailfailed')!,
         bWebhookIsactive: mapValueOfType<bool>(json, r'bWebhookIsactive'),
         bWebhookSkipsslvalidation: mapValueOfType<bool>(json, r'bWebhookSkipsslvalidation')!,
+        pksCustomerCode: mapValueOfType<String>(json, r'pksCustomerCode')!,
+        bWebhookTest: mapValueOfType<bool>(json, r'bWebhookTest')!,
       );
     }
     return null;
@@ -249,14 +249,14 @@ class CustomWebhookResponse {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'pksCustomerCode',
-    'bWebhookTest',
     'pkiWebhookID',
     'sWebhookDescription',
     'eWebhookModule',
     'sWebhookUrl',
     'sWebhookEmailfailed',
     'bWebhookSkipsslvalidation',
+    'pksCustomerCode',
+    'bWebhookTest',
   };
 }
 

@@ -45,14 +45,14 @@ class CommonReportcellstyle {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonReportcellstyle &&
-     other.bReportcellstyleBordertop == bReportcellstyleBordertop &&
-     other.bReportcellstyleBorderbottom == bReportcellstyleBorderbottom &&
-     other.bReportcellstyleBorderleft == bReportcellstyleBorderleft &&
-     other.bReportcellstyleBorderright == bReportcellstyleBorderright &&
-     other.eReportcellHorizontalalignment == eReportcellHorizontalalignment &&
-     other.eReportcellVerticalalignment == eReportcellVerticalalignment &&
-     other.eReportcellFontweight == eReportcellFontweight &&
-     other.eReportcellFontunderline == eReportcellFontunderline;
+    other.bReportcellstyleBordertop == bReportcellstyleBordertop &&
+    other.bReportcellstyleBorderbottom == bReportcellstyleBorderbottom &&
+    other.bReportcellstyleBorderleft == bReportcellstyleBorderleft &&
+    other.bReportcellstyleBorderright == bReportcellstyleBorderright &&
+    other.eReportcellHorizontalalignment == eReportcellHorizontalalignment &&
+    other.eReportcellVerticalalignment == eReportcellVerticalalignment &&
+    other.eReportcellFontweight == eReportcellFontweight &&
+    other.eReportcellFontunderline == eReportcellFontunderline;
 
   @override
   int get hashCode =>

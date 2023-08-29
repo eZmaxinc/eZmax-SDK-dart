@@ -35,10 +35,10 @@ class CustomUserResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomUserResponse &&
-     other.pkiUserID == pkiUserID &&
-     other.sUserLastname == sUserLastname &&
-     other.sUserFirstname == sUserFirstname &&
-     other.sEmailAddress == sEmailAddress;
+    other.pkiUserID == pkiUserID &&
+    other.sUserLastname == sUserLastname &&
+    other.sUserFirstname == sUserFirstname &&
+    other.sEmailAddress == sEmailAddress;
 
   @override
   int get hashCode =>

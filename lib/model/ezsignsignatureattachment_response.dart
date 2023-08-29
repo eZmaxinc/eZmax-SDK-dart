@@ -42,11 +42,11 @@ class EzsignsignatureattachmentResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignsignatureattachmentResponse &&
-     other.pkiEzsignsignatureattachmentID == pkiEzsignsignatureattachmentID &&
-     other.fkiEzsignsignatureID == fkiEzsignsignatureID &&
-     other.binEzsignsignatureattachmentMD5 == binEzsignsignatureattachmentMD5 &&
-     other.sEzsignsignatureattachmentName == sEzsignsignatureattachmentName &&
-     other.sDownloadUrl == sDownloadUrl;
+    other.pkiEzsignsignatureattachmentID == pkiEzsignsignatureattachmentID &&
+    other.fkiEzsignsignatureID == fkiEzsignsignatureID &&
+    other.binEzsignsignatureattachmentMD5 == binEzsignsignatureattachmentMD5 &&
+    other.sEzsignsignatureattachmentName == sEzsignsignatureattachmentName &&
+    other.sDownloadUrl == sDownloadUrl;
 
   @override
   int get hashCode =>

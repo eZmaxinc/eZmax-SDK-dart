@@ -20,7 +20,7 @@ class UsergroupmembershipEditObjectV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is UsergroupmembershipEditObjectV1Request &&
-     other.objUsergroupmembership == objUsergroupmembership;
+    other.objUsergroupmembership == objUsergroupmembership;
 
   @override
   int get hashCode =>

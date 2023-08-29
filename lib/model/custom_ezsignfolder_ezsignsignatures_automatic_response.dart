@@ -30,9 +30,9 @@ class CustomEzsignfolderEzsignsignaturesAutomaticResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomEzsignfolderEzsignsignaturesAutomaticResponse &&
-     other.pkiEzsignfolderID == pkiEzsignfolderID &&
-     other.sEzsignfolderDescription == sEzsignfolderDescription &&
-     other.aObjEzsigndocument == aObjEzsigndocument;
+    other.pkiEzsignfolderID == pkiEzsignfolderID &&
+    other.sEzsignfolderDescription == sEzsignfolderDescription &&
+    _deepEquality.equals(other.aObjEzsigndocument, aObjEzsigndocument);
 
   @override
   int get hashCode =>

@@ -20,7 +20,7 @@ class EzsigndocumentGetEzsignpagesV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigndocumentGetEzsignpagesV1ResponseMPayload &&
-     other.aObjEzsignpage == aObjEzsignpage;
+    _deepEquality.equals(other.aObjEzsignpage, aObjEzsignpage);
 
   @override
   int get hashCode =>

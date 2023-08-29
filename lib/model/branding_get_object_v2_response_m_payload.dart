@@ -20,7 +20,7 @@ class BrandingGetObjectV2ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is BrandingGetObjectV2ResponseMPayload &&
-     other.objBranding == objBranding;
+    other.objBranding == objBranding;
 
   @override
   int get hashCode =>

@@ -16,12 +16,6 @@ void main() {
   // final instance = EzsigndocumentGetWordsPositionsV1Response();
 
   group('test EzsigndocumentGetWordsPositionsV1Response', () {
-    // Payload for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
-    // List<CustomWordPositionWordResponse> mPayload (default value: const [])
-    test('to test the property `mPayload`', () async {
-      // TODO
-    });
-
     // CommonResponseObjDebugPayload objDebugPayload
     test('to test the property `objDebugPayload`', () async {
       // TODO
@@ -29,6 +23,12 @@ void main() {
 
     // CommonResponseObjDebug objDebug
     test('to test the property `objDebug`', () async {
+      // TODO
+    });
+
+    // Payload for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
+    // List<CustomWordPositionWordResponse> mPayload (default value: const [])
+    test('to test the property `mPayload`', () async {
       // TODO
     });
 

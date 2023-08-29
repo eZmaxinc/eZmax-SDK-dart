@@ -27,8 +27,8 @@ class WebsiteRequestCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is WebsiteRequestCompound &&
-     other.fkiWebsitetypeID == fkiWebsitetypeID &&
-     other.sWebsiteAddress == sWebsiteAddress;
+    other.fkiWebsitetypeID == fkiWebsitetypeID &&
+    other.sWebsiteAddress == sWebsiteAddress;
 
   @override
   int get hashCode =>

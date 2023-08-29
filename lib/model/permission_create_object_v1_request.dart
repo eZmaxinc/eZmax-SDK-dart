@@ -20,7 +20,7 @@ class PermissionCreateObjectV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is PermissionCreateObjectV1Request &&
-     other.aObjPermission == aObjPermission;
+    _deepEquality.equals(other.aObjPermission, aObjPermission);
 
   @override
   int get hashCode =>

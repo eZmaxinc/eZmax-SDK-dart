@@ -40,9 +40,9 @@ class CorsRequest {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CorsRequest &&
-     other.pkiCorsID == pkiCorsID &&
-     other.fkiApikeyID == fkiApikeyID &&
-     other.sCorsEntryurl == sCorsEntryurl;
+    other.pkiCorsID == pkiCorsID &&
+    other.fkiApikeyID == fkiApikeyID &&
+    other.sCorsEntryurl == sCorsEntryurl;
 
   @override
   int get hashCode =>

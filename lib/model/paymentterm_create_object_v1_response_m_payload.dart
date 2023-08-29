@@ -21,7 +21,7 @@ class PaymenttermCreateObjectV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is PaymenttermCreateObjectV1ResponseMPayload &&
-     other.aPkiPaymenttermID == aPkiPaymenttermID;
+    _deepEquality.equals(other.aPkiPaymenttermID, aPkiPaymenttermID);
 
   @override
   int get hashCode =>
@@ -56,8 +56,8 @@ class PaymenttermCreateObjectV1ResponseMPayload {
       }());
 
       return PaymenttermCreateObjectV1ResponseMPayload(
-        aPkiPaymenttermID: json[r'a_pkiPaymenttermID'] is List
-            ? (json[r'a_pkiPaymenttermID'] as List).cast<int>()
+        aPkiPaymenttermID: json[r'a_pkiPaymenttermID'] is Iterable
+            ? (json[r'a_pkiPaymenttermID'] as Iterable).cast<int>().toList(growable: false)
             : const [],
       );
     }

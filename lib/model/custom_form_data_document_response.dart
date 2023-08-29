@@ -40,11 +40,11 @@ class CustomFormDataDocumentResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomFormDataDocumentResponse &&
-     other.pkiEzsigndocumentID == pkiEzsigndocumentID &&
-     other.fkiEzsignfolderID == fkiEzsignfolderID &&
-     other.sEzsigndocumentName == sEzsigndocumentName &&
-     other.dtModifiedDate == dtModifiedDate &&
-     other.aObjFormDataSigner == aObjFormDataSigner;
+    other.pkiEzsigndocumentID == pkiEzsigndocumentID &&
+    other.fkiEzsignfolderID == fkiEzsignfolderID &&
+    other.sEzsigndocumentName == sEzsigndocumentName &&
+    other.dtModifiedDate == dtModifiedDate &&
+    _deepEquality.equals(other.aObjFormDataSigner, aObjFormDataSigner);
 
   @override
   int get hashCode =>

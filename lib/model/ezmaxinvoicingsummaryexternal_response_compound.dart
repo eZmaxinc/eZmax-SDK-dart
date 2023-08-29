@@ -58,12 +58,12 @@ class EzmaxinvoicingsummaryexternalResponseCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzmaxinvoicingsummaryexternalResponseCompound &&
-     other.pkiEzmaxinvoicingsummaryexternalID == pkiEzmaxinvoicingsummaryexternalID &&
-     other.fkiEzmaxinvoicingID == fkiEzmaxinvoicingID &&
-     other.fkiBillingentityexternalID == fkiBillingentityexternalID &&
-     other.sBillingentityexternalDescription == sBillingentityexternalDescription &&
-     other.sEzmaxinvoicingsummaryexternalDescription == sEzmaxinvoicingsummaryexternalDescription &&
-     other.aObjEzmaxinvoicingsummaryexternaldetail == aObjEzmaxinvoicingsummaryexternaldetail;
+    other.pkiEzmaxinvoicingsummaryexternalID == pkiEzmaxinvoicingsummaryexternalID &&
+    other.fkiEzmaxinvoicingID == fkiEzmaxinvoicingID &&
+    other.fkiBillingentityexternalID == fkiBillingentityexternalID &&
+    other.sBillingentityexternalDescription == sBillingentityexternalDescription &&
+    other.sEzmaxinvoicingsummaryexternalDescription == sEzmaxinvoicingsummaryexternalDescription &&
+    _deepEquality.equals(other.aObjEzmaxinvoicingsummaryexternaldetail, aObjEzmaxinvoicingsummaryexternaldetail);
 
   @override
   int get hashCode =>

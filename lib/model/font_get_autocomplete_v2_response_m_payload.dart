@@ -21,7 +21,7 @@ class FontGetAutocompleteV2ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is FontGetAutocompleteV2ResponseMPayload &&
-     other.aObjFont == aObjFont;
+    _deepEquality.equals(other.aObjFont, aObjFont);
 
   @override
   int get hashCode =>

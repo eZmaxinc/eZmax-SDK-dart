@@ -229,33 +229,33 @@ class UserRequestCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is UserRequestCompound &&
-     other.pkiUserID == pkiUserID &&
-     other.fkiAgentID == fkiAgentID &&
-     other.fkiBrokerID == fkiBrokerID &&
-     other.fkiAssistantID == fkiAssistantID &&
-     other.fkiEmployeeID == fkiEmployeeID &&
-     other.fkiCompanyIDDefault == fkiCompanyIDDefault &&
-     other.fkiDepartmentIDDefault == fkiDepartmentIDDefault &&
-     other.fkiTimezoneID == fkiTimezoneID &&
-     other.fkiLanguageID == fkiLanguageID &&
-     other.objEmail == objEmail &&
-     other.fkiBillingentityinternalID == fkiBillingentityinternalID &&
-     other.objPhoneHome == objPhoneHome &&
-     other.objPhoneSMS == objPhoneSMS &&
-     other.fkiSecretquestionID == fkiSecretquestionID &&
-     other.sUserSecretresponse == sUserSecretresponse &&
-     other.fkiModuleIDForm == fkiModuleIDForm &&
-     other.eUserType == eUserType &&
-     other.eUserLogintype == eUserLogintype &&
-     other.sUserFirstname == sUserFirstname &&
-     other.sUserLastname == sUserLastname &&
-     other.sUserLoginname == sUserLoginname &&
-     other.eUserEzsignaccess == eUserEzsignaccess &&
-     other.bUserIsactive == bUserIsactive &&
-     other.bUserValidatebyadministration == bUserValidatebyadministration &&
-     other.bUserValidatebydirector == bUserValidatebydirector &&
-     other.bUserAttachmentautoverified == bUserAttachmentautoverified &&
-     other.bUserChangepassword == bUserChangepassword;
+    other.pkiUserID == pkiUserID &&
+    other.fkiAgentID == fkiAgentID &&
+    other.fkiBrokerID == fkiBrokerID &&
+    other.fkiAssistantID == fkiAssistantID &&
+    other.fkiEmployeeID == fkiEmployeeID &&
+    other.fkiCompanyIDDefault == fkiCompanyIDDefault &&
+    other.fkiDepartmentIDDefault == fkiDepartmentIDDefault &&
+    other.fkiTimezoneID == fkiTimezoneID &&
+    other.fkiLanguageID == fkiLanguageID &&
+    other.objEmail == objEmail &&
+    other.fkiBillingentityinternalID == fkiBillingentityinternalID &&
+    other.objPhoneHome == objPhoneHome &&
+    other.objPhoneSMS == objPhoneSMS &&
+    other.fkiSecretquestionID == fkiSecretquestionID &&
+    other.sUserSecretresponse == sUserSecretresponse &&
+    other.fkiModuleIDForm == fkiModuleIDForm &&
+    other.eUserType == eUserType &&
+    other.eUserLogintype == eUserLogintype &&
+    other.sUserFirstname == sUserFirstname &&
+    other.sUserLastname == sUserLastname &&
+    other.sUserLoginname == sUserLoginname &&
+    other.eUserEzsignaccess == eUserEzsignaccess &&
+    other.bUserIsactive == bUserIsactive &&
+    other.bUserValidatebyadministration == bUserValidatebyadministration &&
+    other.bUserValidatebydirector == bUserValidatebydirector &&
+    other.bUserAttachmentautoverified == bUserAttachmentautoverified &&
+    other.bUserChangepassword == bUserChangepassword;
 
   @override
   int get hashCode =>

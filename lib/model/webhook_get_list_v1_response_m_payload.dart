@@ -13,12 +13,10 @@ part of openapi.api;
 class WebhookGetListV1ResponseMPayload {
   /// Returns a new [WebhookGetListV1ResponseMPayload] instance.
   WebhookGetListV1ResponseMPayload({
-    this.aObjWebhook = const [],
     required this.iRowReturned,
     required this.iRowFiltered,
+    this.aObjWebhook = const [],
   });
-
-  List<WebhookListElement> aObjWebhook;
 
   /// The number of rows returned
   int iRowReturned;
@@ -26,27 +24,29 @@ class WebhookGetListV1ResponseMPayload {
   /// The number of rows matching your filters (if any) or the total number of rows
   int iRowFiltered;
 
+  List<WebhookListElement> aObjWebhook;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is WebhookGetListV1ResponseMPayload &&
-     other.aObjWebhook == aObjWebhook &&
-     other.iRowReturned == iRowReturned &&
-     other.iRowFiltered == iRowFiltered;
+    other.iRowReturned == iRowReturned &&
+    other.iRowFiltered == iRowFiltered &&
+    _deepEquality.equals(other.aObjWebhook, aObjWebhook);
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (aObjWebhook.hashCode) +
     (iRowReturned.hashCode) +
-    (iRowFiltered.hashCode);
+    (iRowFiltered.hashCode) +
+    (aObjWebhook.hashCode);
 
   @override
-  String toString() => 'WebhookGetListV1ResponseMPayload[aObjWebhook=$aObjWebhook, iRowReturned=$iRowReturned, iRowFiltered=$iRowFiltered]';
+  String toString() => 'WebhookGetListV1ResponseMPayload[iRowReturned=$iRowReturned, iRowFiltered=$iRowFiltered, aObjWebhook=$aObjWebhook]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'a_objWebhook'] = this.aObjWebhook;
       json[r'iRowReturned'] = this.iRowReturned;
       json[r'iRowFiltered'] = this.iRowFiltered;
+      json[r'a_objWebhook'] = this.aObjWebhook;
     return json;
   }
 
@@ -69,9 +69,9 @@ class WebhookGetListV1ResponseMPayload {
       }());
 
       return WebhookGetListV1ResponseMPayload(
-        aObjWebhook: WebhookListElement.listFromJson(json[r'a_objWebhook']),
         iRowReturned: mapValueOfType<int>(json, r'iRowReturned')!,
         iRowFiltered: mapValueOfType<int>(json, r'iRowFiltered')!,
+        aObjWebhook: WebhookListElement.listFromJson(json[r'a_objWebhook']),
       );
     }
     return null;
@@ -119,9 +119,9 @@ class WebhookGetListV1ResponseMPayload {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'a_objWebhook',
     'iRowReturned',
     'iRowFiltered',
+    'a_objWebhook',
   };
 }
 

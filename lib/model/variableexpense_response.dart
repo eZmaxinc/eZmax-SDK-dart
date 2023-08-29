@@ -56,11 +56,11 @@ class VariableexpenseResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is VariableexpenseResponse &&
-     other.pkiVariableexpenseID == pkiVariableexpenseID &&
-     other.sVariableexpenseCode == sVariableexpenseCode &&
-     other.objVariableexpenseDescription == objVariableexpenseDescription &&
-     other.eVariableexpenseTaxable == eVariableexpenseTaxable &&
-     other.bVariableexpenseIsactive == bVariableexpenseIsactive;
+    other.pkiVariableexpenseID == pkiVariableexpenseID &&
+    other.sVariableexpenseCode == sVariableexpenseCode &&
+    other.objVariableexpenseDescription == objVariableexpenseDescription &&
+    other.eVariableexpenseTaxable == eVariableexpenseTaxable &&
+    other.bVariableexpenseIsactive == bVariableexpenseIsactive;
 
   @override
   int get hashCode =>

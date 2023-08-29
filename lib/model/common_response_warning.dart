@@ -25,8 +25,8 @@ class CommonResponseWarning {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonResponseWarning &&
-     other.sWarningMessage == sWarningMessage &&
-     other.eWarningCode == eWarningCode;
+    other.sWarningMessage == sWarningMessage &&
+    other.eWarningCode == eWarningCode;
 
   @override
   int get hashCode =>

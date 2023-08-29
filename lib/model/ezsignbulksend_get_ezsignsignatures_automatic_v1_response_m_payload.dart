@@ -24,8 +24,8 @@ class EzsignbulksendGetEzsignsignaturesAutomaticV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignbulksendGetEzsignsignaturesAutomaticV1ResponseMPayload &&
-     other.aEEzsignsignatureType == aEEzsignsignatureType &&
-     other.aObjEzsignfolder == aObjEzsignfolder;
+    _deepEquality.equals(other.aEEzsignsignatureType, aEEzsignsignatureType) &&
+    _deepEquality.equals(other.aObjEzsignfolder, aObjEzsignfolder);
 
   @override
   int get hashCode =>
@@ -38,7 +38,7 @@ class EzsignbulksendGetEzsignsignaturesAutomaticV1ResponseMPayload {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'a_eEzsignsignatureType'] = this.aEEzsignsignatureType;
+      json[r'a_eEzsignsignatureType'] = this.aEEzsignsignatureType.toList(growable: false);
       json[r'a_objEzsignfolder'] = this.aObjEzsignfolder;
     return json;
   }

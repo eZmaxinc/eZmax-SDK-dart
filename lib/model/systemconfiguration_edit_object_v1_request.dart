@@ -20,7 +20,7 @@ class SystemconfigurationEditObjectV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is SystemconfigurationEditObjectV1Request &&
-     other.objSystemconfiguration == objSystemconfiguration;
+    other.objSystemconfiguration == objSystemconfiguration;
 
   @override
   int get hashCode =>

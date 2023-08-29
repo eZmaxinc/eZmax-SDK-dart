@@ -52,11 +52,11 @@ class EzsignsignerResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignsignerResponse &&
-     other.pkiEzsignsignerID == pkiEzsignsignerID &&
-     other.fkiTaxassignmentID == fkiTaxassignmentID &&
-     other.fkiSecretquestionID == fkiSecretquestionID &&
-     other.fkiUserlogintypeID == fkiUserlogintypeID &&
-     other.sUserlogintypeDescriptionX == sUserlogintypeDescriptionX;
+    other.pkiEzsignsignerID == pkiEzsignsignerID &&
+    other.fkiTaxassignmentID == fkiTaxassignmentID &&
+    other.fkiSecretquestionID == fkiSecretquestionID &&
+    other.fkiUserlogintypeID == fkiUserlogintypeID &&
+    other.sUserlogintypeDescriptionX == sUserlogintypeDescriptionX;
 
   @override
   int get hashCode =>

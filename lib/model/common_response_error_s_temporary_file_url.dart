@@ -13,10 +13,15 @@ part of openapi.api;
 class CommonResponseErrorSTemporaryFileUrl {
   /// Returns a new [CommonResponseErrorSTemporaryFileUrl] instance.
   CommonResponseErrorSTemporaryFileUrl({
-    this.sTemporaryFileUrl,
     required this.sErrorMessage,
     required this.eErrorCode,
+    this.sTemporaryFileUrl,
   });
+
+  /// The message giving details about the error
+  String sErrorMessage;
+
+  FieldEErrorCode eErrorCode;
 
   /// The Temporary File Url of the document that was uploaded. That url can be reused instead of uploading the file again.
   ///
@@ -27,36 +32,31 @@ class CommonResponseErrorSTemporaryFileUrl {
   ///
   String? sTemporaryFileUrl;
 
-  /// The message giving details about the error
-  String sErrorMessage;
-
-  FieldEErrorCode eErrorCode;
-
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonResponseErrorSTemporaryFileUrl &&
-     other.sTemporaryFileUrl == sTemporaryFileUrl &&
-     other.sErrorMessage == sErrorMessage &&
-     other.eErrorCode == eErrorCode;
+    other.sErrorMessage == sErrorMessage &&
+    other.eErrorCode == eErrorCode &&
+    other.sTemporaryFileUrl == sTemporaryFileUrl;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (sTemporaryFileUrl == null ? 0 : sTemporaryFileUrl!.hashCode) +
     (sErrorMessage.hashCode) +
-    (eErrorCode.hashCode);
+    (eErrorCode.hashCode) +
+    (sTemporaryFileUrl == null ? 0 : sTemporaryFileUrl!.hashCode);
 
   @override
-  String toString() => 'CommonResponseErrorSTemporaryFileUrl[sTemporaryFileUrl=$sTemporaryFileUrl, sErrorMessage=$sErrorMessage, eErrorCode=$eErrorCode]';
+  String toString() => 'CommonResponseErrorSTemporaryFileUrl[sErrorMessage=$sErrorMessage, eErrorCode=$eErrorCode, sTemporaryFileUrl=$sTemporaryFileUrl]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
+      json[r'sErrorMessage'] = this.sErrorMessage;
+      json[r'eErrorCode'] = this.eErrorCode;
     if (this.sTemporaryFileUrl != null) {
       json[r'sTemporaryFileUrl'] = this.sTemporaryFileUrl;
     } else {
       json[r'sTemporaryFileUrl'] = null;
     }
-      json[r'sErrorMessage'] = this.sErrorMessage;
-      json[r'eErrorCode'] = this.eErrorCode;
     return json;
   }
 
@@ -79,9 +79,9 @@ class CommonResponseErrorSTemporaryFileUrl {
       }());
 
       return CommonResponseErrorSTemporaryFileUrl(
-        sTemporaryFileUrl: mapValueOfType<String>(json, r'sTemporaryFileUrl'),
         sErrorMessage: mapValueOfType<String>(json, r'sErrorMessage')!,
         eErrorCode: FieldEErrorCode.fromJson(json[r'eErrorCode'])!,
+        sTemporaryFileUrl: mapValueOfType<String>(json, r'sTemporaryFileUrl'),
       );
     }
     return null;

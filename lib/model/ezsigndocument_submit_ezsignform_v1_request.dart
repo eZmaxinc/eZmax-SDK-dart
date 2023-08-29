@@ -24,8 +24,8 @@ class EzsigndocumentSubmitEzsignformV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigndocumentSubmitEzsignformV1Request &&
-     other.bEzsignformIsdraft == bEzsignformIsdraft &&
-     other.aObjEzsignformfieldgroup == aObjEzsignformfieldgroup;
+    other.bEzsignformIsdraft == bEzsignformIsdraft &&
+    _deepEquality.equals(other.aObjEzsignformfieldgroup, aObjEzsignformfieldgroup);
 
   @override
   int get hashCode =>

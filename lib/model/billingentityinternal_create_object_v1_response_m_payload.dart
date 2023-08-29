@@ -21,7 +21,7 @@ class BillingentityinternalCreateObjectV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is BillingentityinternalCreateObjectV1ResponseMPayload &&
-     other.aPkiBillingentityinternalID == aPkiBillingentityinternalID;
+    _deepEquality.equals(other.aPkiBillingentityinternalID, aPkiBillingentityinternalID);
 
   @override
   int get hashCode =>
@@ -56,8 +56,8 @@ class BillingentityinternalCreateObjectV1ResponseMPayload {
       }());
 
       return BillingentityinternalCreateObjectV1ResponseMPayload(
-        aPkiBillingentityinternalID: json[r'a_pkiBillingentityinternalID'] is List
-            ? (json[r'a_pkiBillingentityinternalID'] as List).cast<int>()
+        aPkiBillingentityinternalID: json[r'a_pkiBillingentityinternalID'] is Iterable
+            ? (json[r'a_pkiBillingentityinternalID'] as Iterable).cast<int>().toList(growable: false)
             : const [],
       );
     }

@@ -21,7 +21,7 @@ class EzsignbulksendCreateObjectV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignbulksendCreateObjectV1ResponseMPayload &&
-     other.aPkiEzsignbulksendID == aPkiEzsignbulksendID;
+    _deepEquality.equals(other.aPkiEzsignbulksendID, aPkiEzsignbulksendID);
 
   @override
   int get hashCode =>
@@ -56,8 +56,8 @@ class EzsignbulksendCreateObjectV1ResponseMPayload {
       }());
 
       return EzsignbulksendCreateObjectV1ResponseMPayload(
-        aPkiEzsignbulksendID: json[r'a_pkiEzsignbulksendID'] is List
-            ? (json[r'a_pkiEzsignbulksendID'] as List).cast<int>()
+        aPkiEzsignbulksendID: json[r'a_pkiEzsignbulksendID'] is Iterable
+            ? (json[r'a_pkiEzsignbulksendID'] as Iterable).cast<int>().toList(growable: false)
             : const [],
       );
     }

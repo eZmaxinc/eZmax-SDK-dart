@@ -112,20 +112,20 @@ class BrandingResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is BrandingResponse &&
-     other.pkiBrandingID == pkiBrandingID &&
-     other.fkiEmailID == fkiEmailID &&
-     other.objBrandingDescription == objBrandingDescription &&
-     other.sBrandingDescriptionX == sBrandingDescriptionX &&
-     other.sBrandingName == sBrandingName &&
-     other.sEmailAddress == sEmailAddress &&
-     other.eBrandingLogo == eBrandingLogo &&
-     other.iBrandingColortext == iBrandingColortext &&
-     other.iBrandingColortextlinkbox == iBrandingColortextlinkbox &&
-     other.iBrandingColortextbutton == iBrandingColortextbutton &&
-     other.iBrandingColorbackground == iBrandingColorbackground &&
-     other.iBrandingColorbackgroundbutton == iBrandingColorbackgroundbutton &&
-     other.iBrandingColorbackgroundsmallbox == iBrandingColorbackgroundsmallbox &&
-     other.bBrandingIsactive == bBrandingIsactive;
+    other.pkiBrandingID == pkiBrandingID &&
+    other.fkiEmailID == fkiEmailID &&
+    other.objBrandingDescription == objBrandingDescription &&
+    other.sBrandingDescriptionX == sBrandingDescriptionX &&
+    other.sBrandingName == sBrandingName &&
+    other.sEmailAddress == sEmailAddress &&
+    other.eBrandingLogo == eBrandingLogo &&
+    other.iBrandingColortext == iBrandingColortext &&
+    other.iBrandingColortextlinkbox == iBrandingColortextlinkbox &&
+    other.iBrandingColortextbutton == iBrandingColortextbutton &&
+    other.iBrandingColorbackground == iBrandingColorbackground &&
+    other.iBrandingColorbackgroundbutton == iBrandingColorbackgroundbutton &&
+    other.iBrandingColorbackgroundsmallbox == iBrandingColorbackgroundsmallbox &&
+    other.bBrandingIsactive == bBrandingIsactive;
 
   @override
   int get hashCode =>

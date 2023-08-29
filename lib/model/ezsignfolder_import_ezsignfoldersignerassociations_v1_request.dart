@@ -20,7 +20,7 @@ class EzsignfolderImportEzsignfoldersignerassociationsV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfolderImportEzsignfoldersignerassociationsV1Request &&
-     other.aFkiEzsignfoldersignerassociationID == aFkiEzsignfoldersignerassociationID;
+    _deepEquality.equals(other.aFkiEzsignfoldersignerassociationID, aFkiEzsignfoldersignerassociationID);
 
   @override
   int get hashCode =>
@@ -32,7 +32,7 @@ class EzsignfolderImportEzsignfoldersignerassociationsV1Request {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'a_fkiEzsignfoldersignerassociationID'] = this.aFkiEzsignfoldersignerassociationID;
+      json[r'a_fkiEzsignfoldersignerassociationID'] = this.aFkiEzsignfoldersignerassociationID.toList(growable: false);
     return json;
   }
 
@@ -55,8 +55,8 @@ class EzsignfolderImportEzsignfoldersignerassociationsV1Request {
       }());
 
       return EzsignfolderImportEzsignfoldersignerassociationsV1Request(
-        aFkiEzsignfoldersignerassociationID: json[r'a_fkiEzsignfoldersignerassociationID'] is Set
-            ? (json[r'a_fkiEzsignfoldersignerassociationID'] as Set).cast<int>()
+        aFkiEzsignfoldersignerassociationID: json[r'a_fkiEzsignfoldersignerassociationID'] is Iterable
+            ? (json[r'a_fkiEzsignfoldersignerassociationID'] as Iterable).cast<int>().toSet()
             : const {},
       );
     }

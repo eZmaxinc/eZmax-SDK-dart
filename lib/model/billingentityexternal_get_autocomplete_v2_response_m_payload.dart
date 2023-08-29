@@ -21,7 +21,7 @@ class BillingentityexternalGetAutocompleteV2ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is BillingentityexternalGetAutocompleteV2ResponseMPayload &&
-     other.aObjBillingentityexternal == aObjBillingentityexternal;
+    _deepEquality.equals(other.aObjBillingentityexternal, aObjBillingentityexternal);
 
   @override
   int get hashCode =>

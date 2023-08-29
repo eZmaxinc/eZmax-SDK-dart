@@ -107,22 +107,22 @@ class ActivesessionGetCurrentV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ActivesessionGetCurrentV1ResponseMPayload &&
-     other.eActivesessionUsertype == eActivesessionUsertype &&
-     other.eActivesessionOrigin == eActivesessionOrigin &&
-     other.eActivesessionWeekdaystart == eActivesessionWeekdaystart &&
-     other.fkiLanguageID == fkiLanguageID &&
-     other.sCompanyNameX == sCompanyNameX &&
-     other.sDepartmentNameX == sDepartmentNameX &&
-     other.bActivesessionDebug == bActivesessionDebug &&
-     other.bActivesessionIssuperadmin == bActivesessionIssuperadmin &&
-     other.pksCustomerCode == pksCustomerCode &&
-     other.fkiSystemconfigurationtypeID == fkiSystemconfigurationtypeID &&
-     other.fkiSignatureID == fkiSignatureID &&
-     other.aPkiPermissionID == aPkiPermissionID &&
-     other.objUserReal == objUserReal &&
-     other.objUserCloned == objUserCloned &&
-     other.objApikey == objApikey &&
-     other.aEModuleInternalname == aEModuleInternalname;
+    other.eActivesessionUsertype == eActivesessionUsertype &&
+    other.eActivesessionOrigin == eActivesessionOrigin &&
+    other.eActivesessionWeekdaystart == eActivesessionWeekdaystart &&
+    other.fkiLanguageID == fkiLanguageID &&
+    other.sCompanyNameX == sCompanyNameX &&
+    other.sDepartmentNameX == sDepartmentNameX &&
+    other.bActivesessionDebug == bActivesessionDebug &&
+    other.bActivesessionIssuperadmin == bActivesessionIssuperadmin &&
+    other.pksCustomerCode == pksCustomerCode &&
+    other.fkiSystemconfigurationtypeID == fkiSystemconfigurationtypeID &&
+    other.fkiSignatureID == fkiSignatureID &&
+    _deepEquality.equals(other.aPkiPermissionID, aPkiPermissionID) &&
+    other.objUserReal == objUserReal &&
+    other.objUserCloned == objUserCloned &&
+    other.objApikey == objApikey &&
+    _deepEquality.equals(other.aEModuleInternalname, aEModuleInternalname);
 
   @override
   int get hashCode =>
@@ -214,14 +214,14 @@ class ActivesessionGetCurrentV1ResponseMPayload {
         pksCustomerCode: mapValueOfType<String>(json, r'pksCustomerCode')!,
         fkiSystemconfigurationtypeID: mapValueOfType<int>(json, r'fkiSystemconfigurationtypeID'),
         fkiSignatureID: mapValueOfType<int>(json, r'fkiSignatureID'),
-        aPkiPermissionID: json[r'a_pkiPermissionID'] is List
-            ? (json[r'a_pkiPermissionID'] as List).cast<int>()
+        aPkiPermissionID: json[r'a_pkiPermissionID'] is Iterable
+            ? (json[r'a_pkiPermissionID'] as Iterable).cast<int>().toList(growable: false)
             : const [],
         objUserReal: ActivesessionResponseCompoundUser.fromJson(json[r'objUserReal'])!,
         objUserCloned: ActivesessionResponseCompoundUser.fromJson(json[r'objUserCloned']),
         objApikey: ActivesessionResponseCompoundApikey.fromJson(json[r'objApikey']),
-        aEModuleInternalname: json[r'a_eModuleInternalname'] is List
-            ? (json[r'a_eModuleInternalname'] as List).cast<String>()
+        aEModuleInternalname: json[r'a_eModuleInternalname'] is Iterable
+            ? (json[r'a_eModuleInternalname'] as Iterable).cast<String>().toList(growable: false)
             : const [],
       );
     }

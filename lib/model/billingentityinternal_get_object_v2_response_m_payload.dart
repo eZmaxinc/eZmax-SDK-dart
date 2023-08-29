@@ -20,7 +20,7 @@ class BillingentityinternalGetObjectV2ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is BillingentityinternalGetObjectV2ResponseMPayload &&
-     other.objBillingentityinternal == objBillingentityinternal;
+    other.objBillingentityinternal == objBillingentityinternal;
 
   @override
   int get hashCode =>

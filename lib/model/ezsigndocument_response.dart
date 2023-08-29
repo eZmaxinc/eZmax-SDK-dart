@@ -188,27 +188,27 @@ class EzsigndocumentResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigndocumentResponse &&
-     other.pkiEzsigndocumentID == pkiEzsigndocumentID &&
-     other.fkiEzsignfolderID == fkiEzsignfolderID &&
-     other.fkiEzsignfoldersignerassociationIDDeclinedtosign == fkiEzsignfoldersignerassociationIDDeclinedtosign &&
-     other.dtEzsigndocumentDuedate == dtEzsigndocumentDuedate &&
-     other.dtEzsignformCompleted == dtEzsignformCompleted &&
-     other.fkiLanguageID == fkiLanguageID &&
-     other.sEzsigndocumentName == sEzsigndocumentName &&
-     other.eEzsigndocumentStep == eEzsigndocumentStep &&
-     other.dtEzsigndocumentFirstsend == dtEzsigndocumentFirstsend &&
-     other.dtEzsigndocumentLastsend == dtEzsigndocumentLastsend &&
-     other.iEzsigndocumentOrder == iEzsigndocumentOrder &&
-     other.iEzsigndocumentPagetotal == iEzsigndocumentPagetotal &&
-     other.iEzsigndocumentSignaturesigned == iEzsigndocumentSignaturesigned &&
-     other.iEzsigndocumentSignaturetotal == iEzsigndocumentSignaturetotal &&
-     other.sEzsigndocumentMD5initial == sEzsigndocumentMD5initial &&
-     other.tEzsigndocumentDeclinedtosignreason == tEzsigndocumentDeclinedtosignreason &&
-     other.sEzsigndocumentMD5signed == sEzsigndocumentMD5signed &&
-     other.bEzsigndocumentEzsignform == bEzsigndocumentEzsignform &&
-     other.bEzsigndocumentHassignedsignatures == bEzsigndocumentHassignedsignatures &&
-     other.objAudit == objAudit &&
-     other.sEzsigndocumentExternalid == sEzsigndocumentExternalid;
+    other.pkiEzsigndocumentID == pkiEzsigndocumentID &&
+    other.fkiEzsignfolderID == fkiEzsignfolderID &&
+    other.fkiEzsignfoldersignerassociationIDDeclinedtosign == fkiEzsignfoldersignerassociationIDDeclinedtosign &&
+    other.dtEzsigndocumentDuedate == dtEzsigndocumentDuedate &&
+    other.dtEzsignformCompleted == dtEzsignformCompleted &&
+    other.fkiLanguageID == fkiLanguageID &&
+    other.sEzsigndocumentName == sEzsigndocumentName &&
+    other.eEzsigndocumentStep == eEzsigndocumentStep &&
+    other.dtEzsigndocumentFirstsend == dtEzsigndocumentFirstsend &&
+    other.dtEzsigndocumentLastsend == dtEzsigndocumentLastsend &&
+    other.iEzsigndocumentOrder == iEzsigndocumentOrder &&
+    other.iEzsigndocumentPagetotal == iEzsigndocumentPagetotal &&
+    other.iEzsigndocumentSignaturesigned == iEzsigndocumentSignaturesigned &&
+    other.iEzsigndocumentSignaturetotal == iEzsigndocumentSignaturetotal &&
+    other.sEzsigndocumentMD5initial == sEzsigndocumentMD5initial &&
+    other.tEzsigndocumentDeclinedtosignreason == tEzsigndocumentDeclinedtosignreason &&
+    other.sEzsigndocumentMD5signed == sEzsigndocumentMD5signed &&
+    other.bEzsigndocumentEzsignform == bEzsigndocumentEzsignform &&
+    other.bEzsigndocumentHassignedsignatures == bEzsigndocumentHassignedsignatures &&
+    other.objAudit == objAudit &&
+    other.sEzsigndocumentExternalid == sEzsigndocumentExternalid;
 
   @override
   int get hashCode =>

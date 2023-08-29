@@ -13,12 +13,10 @@ part of openapi.api;
 class VariableexpenseGetListV1ResponseMPayload {
   /// Returns a new [VariableexpenseGetListV1ResponseMPayload] instance.
   VariableexpenseGetListV1ResponseMPayload({
-    this.aObjVariableexpense = const [],
     required this.iRowReturned,
     required this.iRowFiltered,
+    this.aObjVariableexpense = const [],
   });
-
-  List<VariableexpenseListElement> aObjVariableexpense;
 
   /// The number of rows returned
   int iRowReturned;
@@ -26,27 +24,29 @@ class VariableexpenseGetListV1ResponseMPayload {
   /// The number of rows matching your filters (if any) or the total number of rows
   int iRowFiltered;
 
+  List<VariableexpenseListElement> aObjVariableexpense;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is VariableexpenseGetListV1ResponseMPayload &&
-     other.aObjVariableexpense == aObjVariableexpense &&
-     other.iRowReturned == iRowReturned &&
-     other.iRowFiltered == iRowFiltered;
+    other.iRowReturned == iRowReturned &&
+    other.iRowFiltered == iRowFiltered &&
+    _deepEquality.equals(other.aObjVariableexpense, aObjVariableexpense);
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (aObjVariableexpense.hashCode) +
     (iRowReturned.hashCode) +
-    (iRowFiltered.hashCode);
+    (iRowFiltered.hashCode) +
+    (aObjVariableexpense.hashCode);
 
   @override
-  String toString() => 'VariableexpenseGetListV1ResponseMPayload[aObjVariableexpense=$aObjVariableexpense, iRowReturned=$iRowReturned, iRowFiltered=$iRowFiltered]';
+  String toString() => 'VariableexpenseGetListV1ResponseMPayload[iRowReturned=$iRowReturned, iRowFiltered=$iRowFiltered, aObjVariableexpense=$aObjVariableexpense]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'a_objVariableexpense'] = this.aObjVariableexpense;
       json[r'iRowReturned'] = this.iRowReturned;
       json[r'iRowFiltered'] = this.iRowFiltered;
+      json[r'a_objVariableexpense'] = this.aObjVariableexpense;
     return json;
   }
 
@@ -69,9 +69,9 @@ class VariableexpenseGetListV1ResponseMPayload {
       }());
 
       return VariableexpenseGetListV1ResponseMPayload(
-        aObjVariableexpense: VariableexpenseListElement.listFromJson(json[r'a_objVariableexpense']),
         iRowReturned: mapValueOfType<int>(json, r'iRowReturned')!,
         iRowFiltered: mapValueOfType<int>(json, r'iRowFiltered')!,
+        aObjVariableexpense: VariableexpenseListElement.listFromJson(json[r'a_objVariableexpense']),
       );
     }
     return null;
@@ -119,9 +119,9 @@ class VariableexpenseGetListV1ResponseMPayload {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'a_objVariableexpense',
     'iRowReturned',
     'iRowFiltered',
+    'a_objVariableexpense',
   };
 }
 

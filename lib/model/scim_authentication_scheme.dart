@@ -29,9 +29,9 @@ class ScimAuthenticationScheme {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ScimAuthenticationScheme &&
-     other.description == description &&
-     other.name == name &&
-     other.type == type;
+    other.description == description &&
+    other.name == name &&
+    other.type == type;
 
   @override
   int get hashCode =>

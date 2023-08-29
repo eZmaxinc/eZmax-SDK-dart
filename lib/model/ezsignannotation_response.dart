@@ -100,17 +100,17 @@ class EzsignannotationResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignannotationResponse &&
-     other.pkiEzsignannotationID == pkiEzsignannotationID &&
-     other.fkiEzsigndocumentID == fkiEzsigndocumentID &&
-     other.eEzsignannotationHorizontalalignment == eEzsignannotationHorizontalalignment &&
-     other.eEzsignannotationVerticalalignment == eEzsignannotationVerticalalignment &&
-     other.eEzsignannotationType == eEzsignannotationType &&
-     other.iEzsignannotationX == iEzsignannotationX &&
-     other.iEzsignannotationY == iEzsignannotationY &&
-     other.iEzsignannotationWidth == iEzsignannotationWidth &&
-     other.iEzsignannotationHeight == iEzsignannotationHeight &&
-     other.sEzsignannotationText == sEzsignannotationText &&
-     other.iEzsignpagePagenumber == iEzsignpagePagenumber;
+    other.pkiEzsignannotationID == pkiEzsignannotationID &&
+    other.fkiEzsigndocumentID == fkiEzsigndocumentID &&
+    other.eEzsignannotationHorizontalalignment == eEzsignannotationHorizontalalignment &&
+    other.eEzsignannotationVerticalalignment == eEzsignannotationVerticalalignment &&
+    other.eEzsignannotationType == eEzsignannotationType &&
+    other.iEzsignannotationX == iEzsignannotationX &&
+    other.iEzsignannotationY == iEzsignannotationY &&
+    other.iEzsignannotationWidth == iEzsignannotationWidth &&
+    other.iEzsignannotationHeight == iEzsignannotationHeight &&
+    other.sEzsignannotationText == sEzsignannotationText &&
+    other.iEzsignpagePagenumber == iEzsignpagePagenumber;
 
   @override
   int get hashCode =>

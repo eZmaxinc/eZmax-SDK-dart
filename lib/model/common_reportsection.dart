@@ -34,11 +34,11 @@ class CommonReportsection {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonReportsection &&
-     other.aObjReportsubsection == aObjReportsubsection &&
-     other.aObjReportcolumn == aObjReportcolumn &&
-     other.eReportsectionHorizontalalignment == eReportsectionHorizontalalignment &&
-     other.iReportsectionColumncount == iReportsectionColumncount &&
-     other.iReportsectionWidth == iReportsectionWidth;
+    _deepEquality.equals(other.aObjReportsubsection, aObjReportsubsection) &&
+    _deepEquality.equals(other.aObjReportcolumn, aObjReportcolumn) &&
+    other.eReportsectionHorizontalalignment == eReportsectionHorizontalalignment &&
+    other.iReportsectionColumncount == iReportsectionColumncount &&
+    other.iReportsectionWidth == iReportsectionWidth;
 
   @override
   int get hashCode =>

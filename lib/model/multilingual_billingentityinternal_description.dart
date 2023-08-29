@@ -37,8 +37,8 @@ class MultilingualBillingentityinternalDescription {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is MultilingualBillingentityinternalDescription &&
-     other.sBillingentityinternalDescription1 == sBillingentityinternalDescription1 &&
-     other.sBillingentityinternalDescription2 == sBillingentityinternalDescription2;
+    other.sBillingentityinternalDescription1 == sBillingentityinternalDescription1 &&
+    other.sBillingentityinternalDescription2 == sBillingentityinternalDescription2;
 
   @override
   int get hashCode =>

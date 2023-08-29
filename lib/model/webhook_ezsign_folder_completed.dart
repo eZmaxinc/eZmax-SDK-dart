@@ -13,39 +13,39 @@ part of openapi.api;
 class WebhookEzsignFolderCompleted {
   /// Returns a new [WebhookEzsignFolderCompleted] instance.
   WebhookEzsignFolderCompleted({
-    required this.objEzsignfolder,
     required this.objWebhook,
     this.aObjAttempt = const [],
+    required this.objEzsignfolder,
   });
-
-  EzsignfolderResponse objEzsignfolder;
 
   CustomWebhookResponse objWebhook;
 
   /// An array containing details of previous attempts that were made to deliver the message. The array is empty if it's the first attempt.
   List<AttemptResponseCompound> aObjAttempt;
 
+  EzsignfolderResponse objEzsignfolder;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is WebhookEzsignFolderCompleted &&
-     other.objEzsignfolder == objEzsignfolder &&
-     other.objWebhook == objWebhook &&
-     other.aObjAttempt == aObjAttempt;
+    other.objWebhook == objWebhook &&
+    _deepEquality.equals(other.aObjAttempt, aObjAttempt) &&
+    other.objEzsignfolder == objEzsignfolder;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (objEzsignfolder.hashCode) +
     (objWebhook.hashCode) +
-    (aObjAttempt.hashCode);
+    (aObjAttempt.hashCode) +
+    (objEzsignfolder.hashCode);
 
   @override
-  String toString() => 'WebhookEzsignFolderCompleted[objEzsignfolder=$objEzsignfolder, objWebhook=$objWebhook, aObjAttempt=$aObjAttempt]';
+  String toString() => 'WebhookEzsignFolderCompleted[objWebhook=$objWebhook, aObjAttempt=$aObjAttempt, objEzsignfolder=$objEzsignfolder]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'objEzsignfolder'] = this.objEzsignfolder;
       json[r'objWebhook'] = this.objWebhook;
       json[r'a_objAttempt'] = this.aObjAttempt;
+      json[r'objEzsignfolder'] = this.objEzsignfolder;
     return json;
   }
 
@@ -68,9 +68,9 @@ class WebhookEzsignFolderCompleted {
       }());
 
       return WebhookEzsignFolderCompleted(
-        objEzsignfolder: EzsignfolderResponse.fromJson(json[r'objEzsignfolder'])!,
         objWebhook: CustomWebhookResponse.fromJson(json[r'objWebhook'])!,
         aObjAttempt: AttemptResponseCompound.listFromJson(json[r'a_objAttempt']),
+        objEzsignfolder: EzsignfolderResponse.fromJson(json[r'objEzsignfolder'])!,
       );
     }
     return null;
@@ -118,9 +118,9 @@ class WebhookEzsignFolderCompleted {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'objEzsignfolder',
     'objWebhook',
     'a_objAttempt',
+    'objEzsignfolder',
   };
 }
 

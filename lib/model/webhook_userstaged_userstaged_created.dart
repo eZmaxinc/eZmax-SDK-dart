@@ -13,39 +13,39 @@ part of openapi.api;
 class WebhookUserstagedUserstagedCreated {
   /// Returns a new [WebhookUserstagedUserstagedCreated] instance.
   WebhookUserstagedUserstagedCreated({
-    required this.objUserstaged,
     required this.objWebhook,
     this.aObjAttempt = const [],
+    required this.objUserstaged,
   });
-
-  UserstagedResponseCompound objUserstaged;
 
   CustomWebhookResponse objWebhook;
 
   /// An array containing details of previous attempts that were made to deliver the message. The array is empty if it's the first attempt.
   List<AttemptResponseCompound> aObjAttempt;
 
+  UserstagedResponseCompound objUserstaged;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is WebhookUserstagedUserstagedCreated &&
-     other.objUserstaged == objUserstaged &&
-     other.objWebhook == objWebhook &&
-     other.aObjAttempt == aObjAttempt;
+    other.objWebhook == objWebhook &&
+    _deepEquality.equals(other.aObjAttempt, aObjAttempt) &&
+    other.objUserstaged == objUserstaged;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (objUserstaged.hashCode) +
     (objWebhook.hashCode) +
-    (aObjAttempt.hashCode);
+    (aObjAttempt.hashCode) +
+    (objUserstaged.hashCode);
 
   @override
-  String toString() => 'WebhookUserstagedUserstagedCreated[objUserstaged=$objUserstaged, objWebhook=$objWebhook, aObjAttempt=$aObjAttempt]';
+  String toString() => 'WebhookUserstagedUserstagedCreated[objWebhook=$objWebhook, aObjAttempt=$aObjAttempt, objUserstaged=$objUserstaged]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'objUserstaged'] = this.objUserstaged;
       json[r'objWebhook'] = this.objWebhook;
       json[r'a_objAttempt'] = this.aObjAttempt;
+      json[r'objUserstaged'] = this.objUserstaged;
     return json;
   }
 
@@ -68,9 +68,9 @@ class WebhookUserstagedUserstagedCreated {
       }());
 
       return WebhookUserstagedUserstagedCreated(
-        objUserstaged: UserstagedResponseCompound.fromJson(json[r'objUserstaged'])!,
         objWebhook: CustomWebhookResponse.fromJson(json[r'objWebhook'])!,
         aObjAttempt: AttemptResponseCompound.listFromJson(json[r'a_objAttempt']),
+        objUserstaged: UserstagedResponseCompound.fromJson(json[r'objUserstaged'])!,
       );
     }
     return null;
@@ -118,9 +118,9 @@ class WebhookUserstagedUserstagedCreated {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'objUserstaged',
     'objWebhook',
     'a_objAttempt',
+    'objUserstaged',
   };
 }
 

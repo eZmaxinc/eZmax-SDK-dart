@@ -20,7 +20,7 @@ class EzsignfolderGetCommunicationListV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfolderGetCommunicationListV1ResponseMPayload &&
-     other.aObjCommunication == aObjCommunication;
+    _deepEquality.equals(other.aObjCommunication, aObjCommunication);
 
   @override
   int get hashCode =>

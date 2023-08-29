@@ -29,9 +29,9 @@ class EzsigntemplatesignerCreateObjectV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplatesignerCreateObjectV1ResponseMPayload &&
-     other.aPkiEzsigntemplatesignerID == aPkiEzsigntemplatesignerID &&
-     other.bEzsigntemplatepackageNeedvalidation == bEzsigntemplatepackageNeedvalidation &&
-     other.bEzsignbulksendNeedvalidation == bEzsignbulksendNeedvalidation;
+    _deepEquality.equals(other.aPkiEzsigntemplatesignerID, aPkiEzsigntemplatesignerID) &&
+    other.bEzsigntemplatepackageNeedvalidation == bEzsigntemplatepackageNeedvalidation &&
+    other.bEzsignbulksendNeedvalidation == bEzsignbulksendNeedvalidation;
 
   @override
   int get hashCode =>
@@ -70,8 +70,8 @@ class EzsigntemplatesignerCreateObjectV1ResponseMPayload {
       }());
 
       return EzsigntemplatesignerCreateObjectV1ResponseMPayload(
-        aPkiEzsigntemplatesignerID: json[r'a_pkiEzsigntemplatesignerID'] is List
-            ? (json[r'a_pkiEzsigntemplatesignerID'] as List).cast<int>()
+        aPkiEzsigntemplatesignerID: json[r'a_pkiEzsigntemplatesignerID'] is Iterable
+            ? (json[r'a_pkiEzsigntemplatesignerID'] as Iterable).cast<int>().toList(growable: false)
             : const [],
         bEzsigntemplatepackageNeedvalidation: mapValueOfType<bool>(json, r'bEzsigntemplatepackageNeedvalidation')!,
         bEzsignbulksendNeedvalidation: mapValueOfType<bool>(json, r'bEzsignbulksendNeedvalidation')!,

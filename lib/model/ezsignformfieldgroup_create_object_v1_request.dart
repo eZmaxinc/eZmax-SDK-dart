@@ -20,7 +20,7 @@ class EzsignformfieldgroupCreateObjectV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignformfieldgroupCreateObjectV1Request &&
-     other.aObjEzsignformfieldgroup == aObjEzsignformfieldgroup;
+    _deepEquality.equals(other.aObjEzsignformfieldgroup, aObjEzsignformfieldgroup);
 
   @override
   int get hashCode =>

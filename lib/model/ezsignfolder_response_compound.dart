@@ -221,27 +221,27 @@ class EzsignfolderResponseCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfolderResponseCompound &&
-     other.pkiEzsignfolderID == pkiEzsignfolderID &&
-     other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
-     other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
-     other.fkiBillingentityinternalID == fkiBillingentityinternalID &&
-     other.sBillingentityinternalDescriptionX == sBillingentityinternalDescriptionX &&
-     other.fkiEzsigntsarequirementID == fkiEzsigntsarequirementID &&
-     other.sEzsigntsarequirementDescriptionX == sEzsigntsarequirementDescriptionX &&
-     other.sEzsignfolderDescription == sEzsignfolderDescription &&
-     other.tEzsignfolderNote == tEzsignfolderNote &&
-     other.bEzsignfolderIsdisposable == bEzsignfolderIsdisposable &&
-     other.eEzsignfolderSendreminderfrequency == eEzsignfolderSendreminderfrequency &&
-     other.dtEzsignfolderDelayedsenddate == dtEzsignfolderDelayedsenddate &&
-     other.dtEzsignfolderDuedate == dtEzsignfolderDuedate &&
-     other.dtEzsignfolderSentdate == dtEzsignfolderSentdate &&
-     other.dtEzsignfolderScheduledarchive == dtEzsignfolderScheduledarchive &&
-     other.dtEzsignfolderScheduleddispose == dtEzsignfolderScheduleddispose &&
-     other.eEzsignfolderStep == eEzsignfolderStep &&
-     other.dtEzsignfolderClose == dtEzsignfolderClose &&
-     other.tEzsignfolderMessage == tEzsignfolderMessage &&
-     other.objAudit == objAudit &&
-     other.sEzsignfolderExternalid == sEzsignfolderExternalid;
+    other.pkiEzsignfolderID == pkiEzsignfolderID &&
+    other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
+    other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
+    other.fkiBillingentityinternalID == fkiBillingentityinternalID &&
+    other.sBillingentityinternalDescriptionX == sBillingentityinternalDescriptionX &&
+    other.fkiEzsigntsarequirementID == fkiEzsigntsarequirementID &&
+    other.sEzsigntsarequirementDescriptionX == sEzsigntsarequirementDescriptionX &&
+    other.sEzsignfolderDescription == sEzsignfolderDescription &&
+    other.tEzsignfolderNote == tEzsignfolderNote &&
+    other.bEzsignfolderIsdisposable == bEzsignfolderIsdisposable &&
+    other.eEzsignfolderSendreminderfrequency == eEzsignfolderSendreminderfrequency &&
+    other.dtEzsignfolderDelayedsenddate == dtEzsignfolderDelayedsenddate &&
+    other.dtEzsignfolderDuedate == dtEzsignfolderDuedate &&
+    other.dtEzsignfolderSentdate == dtEzsignfolderSentdate &&
+    other.dtEzsignfolderScheduledarchive == dtEzsignfolderScheduledarchive &&
+    other.dtEzsignfolderScheduleddispose == dtEzsignfolderScheduleddispose &&
+    other.eEzsignfolderStep == eEzsignfolderStep &&
+    other.dtEzsignfolderClose == dtEzsignfolderClose &&
+    other.tEzsignfolderMessage == tEzsignfolderMessage &&
+    other.objAudit == objAudit &&
+    other.sEzsignfolderExternalid == sEzsignfolderExternalid;
 
   @override
   int get hashCode =>

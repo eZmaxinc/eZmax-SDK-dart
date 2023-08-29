@@ -65,12 +65,12 @@ class SubnetResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is SubnetResponse &&
-     other.pkiSubnetID == pkiSubnetID &&
-     other.fkiUserID == fkiUserID &&
-     other.fkiApikeyID == fkiApikeyID &&
-     other.objSubnetDescription == objSubnetDescription &&
-     other.iSubnetNetwork == iSubnetNetwork &&
-     other.iSubnetMask == iSubnetMask;
+    other.pkiSubnetID == pkiSubnetID &&
+    other.fkiUserID == fkiUserID &&
+    other.fkiApikeyID == fkiApikeyID &&
+    other.objSubnetDescription == objSubnetDescription &&
+    other.iSubnetNetwork == iSubnetNetwork &&
+    other.iSubnetMask == iSubnetMask;
 
   @override
   int get hashCode =>

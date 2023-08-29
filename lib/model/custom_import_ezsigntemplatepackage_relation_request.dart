@@ -45,9 +45,9 @@ class CustomImportEzsigntemplatepackageRelationRequest {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomImportEzsigntemplatepackageRelationRequest &&
-     other.fkiEzsigntemplatepackagesignerID == fkiEzsigntemplatepackagesignerID &&
-     other.fkiEzsignfoldersignerassociationID == fkiEzsignfoldersignerassociationID &&
-     other.sEzsigntemplatepackagesignerDescription == sEzsigntemplatepackagesignerDescription;
+    other.fkiEzsigntemplatepackagesignerID == fkiEzsigntemplatepackagesignerID &&
+    other.fkiEzsignfoldersignerassociationID == fkiEzsignfoldersignerassociationID &&
+    other.sEzsigntemplatepackagesignerDescription == sEzsigntemplatepackagesignerDescription;
 
   @override
   int get hashCode =>

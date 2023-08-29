@@ -16,11 +16,6 @@ void main() {
   // final instance = EzsigndocumentGetEzsignannotationsV1Response();
 
   group('test EzsigndocumentGetEzsignannotationsV1Response', () {
-    // EzsigndocumentGetEzsignannotationsV1ResponseMPayload mPayload
-    test('to test the property `mPayload`', () async {
-      // TODO
-    });
-
     // CommonResponseObjDebugPayload objDebugPayload
     test('to test the property `objDebugPayload`', () async {
       // TODO
@@ -28,6 +23,11 @@ void main() {
 
     // CommonResponseObjDebug objDebug
     test('to test the property `objDebug`', () async {
+      // TODO
+    });
+
+    // EzsigndocumentGetEzsignannotationsV1ResponseMPayload mPayload
+    test('to test the property `mPayload`', () async {
       // TODO
     });
 

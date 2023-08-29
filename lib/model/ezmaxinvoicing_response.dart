@@ -91,19 +91,19 @@ class EzmaxinvoicingResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzmaxinvoicingResponse &&
-     other.pkiEzmaxinvoicingID == pkiEzmaxinvoicingID &&
-     other.fkiEzmaxinvoicingcontractID == fkiEzmaxinvoicingcontractID &&
-     other.fkiEzmaxpricingID == fkiEzmaxpricingID &&
-     other.fkiSystemconfigurationtypeID == fkiSystemconfigurationtypeID &&
-     other.sSystemconfigurationtypeDescriptionX == sSystemconfigurationtypeDescriptionX &&
-     other.yyyymmEzmaxinvoicing == yyyymmEzmaxinvoicing &&
-     other.iEzmaxinvoicingDays == iEzmaxinvoicingDays &&
-     other.eEzmaxinvoicingPaymenttype == eEzmaxinvoicingPaymenttype &&
-     other.dEzmaxinvoicingRebatepaymenttype == dEzmaxinvoicingRebatepaymenttype &&
-     other.iEzmaxinvoicingContractlength == iEzmaxinvoicingContractlength &&
-     other.dEzmaxinvoicingRebatecontractlength == dEzmaxinvoicingRebatecontractlength &&
-     other.bEzmaxinvoicingRebateEzsignallagents == bEzmaxinvoicingRebateEzsignallagents &&
-     other.objAudit == objAudit;
+    other.pkiEzmaxinvoicingID == pkiEzmaxinvoicingID &&
+    other.fkiEzmaxinvoicingcontractID == fkiEzmaxinvoicingcontractID &&
+    other.fkiEzmaxpricingID == fkiEzmaxpricingID &&
+    other.fkiSystemconfigurationtypeID == fkiSystemconfigurationtypeID &&
+    other.sSystemconfigurationtypeDescriptionX == sSystemconfigurationtypeDescriptionX &&
+    other.yyyymmEzmaxinvoicing == yyyymmEzmaxinvoicing &&
+    other.iEzmaxinvoicingDays == iEzmaxinvoicingDays &&
+    other.eEzmaxinvoicingPaymenttype == eEzmaxinvoicingPaymenttype &&
+    other.dEzmaxinvoicingRebatepaymenttype == dEzmaxinvoicingRebatepaymenttype &&
+    other.iEzmaxinvoicingContractlength == iEzmaxinvoicingContractlength &&
+    other.dEzmaxinvoicingRebatecontractlength == dEzmaxinvoicingRebatecontractlength &&
+    other.bEzmaxinvoicingRebateEzsignallagents == bEzmaxinvoicingRebateEzsignallagents &&
+    other.objAudit == objAudit;
 
   @override
   int get hashCode =>

@@ -37,8 +37,8 @@ class MultilingualEzsignsignergroupDescription {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is MultilingualEzsignsignergroupDescription &&
-     other.sEzsignsignergroupDescription1 == sEzsignsignergroupDescription1 &&
-     other.sEzsignsignergroupDescription2 == sEzsignsignergroupDescription2;
+    other.sEzsignsignergroupDescription1 == sEzsignsignergroupDescription1 &&
+    other.sEzsignsignergroupDescription2 == sEzsignsignergroupDescription2;
 
   @override
   int get hashCode =>

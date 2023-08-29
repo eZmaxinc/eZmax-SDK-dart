@@ -130,21 +130,21 @@ class EzsigndocumentRequestCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigndocumentRequestCompound &&
-     other.pkiEzsigndocumentID == pkiEzsigndocumentID &&
-     other.fkiEzsignfolderID == fkiEzsignfolderID &&
-     other.fkiEzsigntemplateID == fkiEzsigntemplateID &&
-     other.fkiEzsignfoldersignerassociationID == fkiEzsignfoldersignerassociationID &&
-     other.fkiLanguageID == fkiLanguageID &&
-     other.eEzsigndocumentSource == eEzsigndocumentSource &&
-     other.eEzsigndocumentFormat == eEzsigndocumentFormat &&
-     other.sEzsigndocumentBase64 == sEzsigndocumentBase64 &&
-     other.sEzsigndocumentUrl == sEzsigndocumentUrl &&
-     other.bEzsigndocumentForcerepair == bEzsigndocumentForcerepair &&
-     other.sEzsigndocumentPassword == sEzsigndocumentPassword &&
-     other.eEzsigndocumentForm == eEzsigndocumentForm &&
-     other.dtEzsigndocumentDuedate == dtEzsigndocumentDuedate &&
-     other.sEzsigndocumentName == sEzsigndocumentName &&
-     other.sEzsigndocumentExternalid == sEzsigndocumentExternalid;
+    other.pkiEzsigndocumentID == pkiEzsigndocumentID &&
+    other.fkiEzsignfolderID == fkiEzsignfolderID &&
+    other.fkiEzsigntemplateID == fkiEzsigntemplateID &&
+    other.fkiEzsignfoldersignerassociationID == fkiEzsignfoldersignerassociationID &&
+    other.fkiLanguageID == fkiLanguageID &&
+    other.eEzsigndocumentSource == eEzsigndocumentSource &&
+    other.eEzsigndocumentFormat == eEzsigndocumentFormat &&
+    other.sEzsigndocumentBase64 == sEzsigndocumentBase64 &&
+    other.sEzsigndocumentUrl == sEzsigndocumentUrl &&
+    other.bEzsigndocumentForcerepair == bEzsigndocumentForcerepair &&
+    other.sEzsigndocumentPassword == sEzsigndocumentPassword &&
+    other.eEzsigndocumentForm == eEzsigndocumentForm &&
+    other.dtEzsigndocumentDuedate == dtEzsigndocumentDuedate &&
+    other.sEzsigndocumentName == sEzsigndocumentName &&
+    other.sEzsigndocumentExternalid == sEzsigndocumentExternalid;
 
   @override
   int get hashCode =>

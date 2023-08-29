@@ -35,8 +35,8 @@ class EzsignfolderCreateObjectV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfolderCreateObjectV1Request &&
-     other.objEzsignfolder == objEzsignfolder &&
-     other.objEzsignfolderCompound == objEzsignfolderCompound;
+    other.objEzsignfolder == objEzsignfolder &&
+    other.objEzsignfolderCompound == objEzsignfolderCompound;
 
   @override
   int get hashCode =>

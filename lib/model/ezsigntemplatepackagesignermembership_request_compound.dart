@@ -59,11 +59,11 @@ class EzsigntemplatepackagesignermembershipRequestCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplatepackagesignermembershipRequestCompound &&
-     other.pkiEzsigntemplatepackagesignermembershipID == pkiEzsigntemplatepackagesignermembershipID &&
-     other.fkiEzsigntemplatepackagemembershipID == fkiEzsigntemplatepackagemembershipID &&
-     other.fkiEzsigntemplatepackagesignerID == fkiEzsigntemplatepackagesignerID &&
-     other.fkiEzsigntemplatesignerID == fkiEzsigntemplatesignerID &&
-     other.iEzsigntemplatepackagesignermembershipCopy == iEzsigntemplatepackagesignermembershipCopy;
+    other.pkiEzsigntemplatepackagesignermembershipID == pkiEzsigntemplatepackagesignermembershipID &&
+    other.fkiEzsigntemplatepackagemembershipID == fkiEzsigntemplatepackagemembershipID &&
+    other.fkiEzsigntemplatepackagesignerID == fkiEzsigntemplatepackagesignerID &&
+    other.fkiEzsigntemplatesignerID == fkiEzsigntemplatesignerID &&
+    other.iEzsigntemplatepackagesignermembershipCopy == iEzsigntemplatepackagesignermembershipCopy;
 
   @override
   int get hashCode =>

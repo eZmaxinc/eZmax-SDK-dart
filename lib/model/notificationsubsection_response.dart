@@ -52,11 +52,11 @@ class NotificationsubsectionResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is NotificationsubsectionResponse &&
-     other.pkiNotificationsubsectionID == pkiNotificationsubsectionID &&
-     other.fkiNotificationsectionID == fkiNotificationsectionID &&
-     other.objNotificationsubsectionName == objNotificationsubsectionName &&
-     other.sNotificationsectionNameX == sNotificationsectionNameX &&
-     other.sNotificationsubsectionNameX == sNotificationsubsectionNameX;
+    other.pkiNotificationsubsectionID == pkiNotificationsubsectionID &&
+    other.fkiNotificationsectionID == fkiNotificationsectionID &&
+    other.objNotificationsubsectionName == objNotificationsubsectionName &&
+    other.sNotificationsectionNameX == sNotificationsectionNameX &&
+    other.sNotificationsubsectionNameX == sNotificationsubsectionNameX;
 
   @override
   int get hashCode =>

@@ -21,7 +21,7 @@ class EzsignfoldertypeGetAutocompleteV2ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfoldertypeGetAutocompleteV2ResponseMPayload &&
-     other.aObjEzsignfoldertype == aObjEzsignfoldertype;
+    _deepEquality.equals(other.aObjEzsignfoldertype, aObjEzsignfoldertype);
 
   @override
   int get hashCode =>

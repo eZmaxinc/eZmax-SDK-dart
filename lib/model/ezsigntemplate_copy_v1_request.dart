@@ -20,7 +20,7 @@ class EzsigntemplateCopyV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplateCopyV1Request &&
-     other.aFkiEzsignfoldertypeID == aFkiEzsignfoldertypeID;
+    _deepEquality.equals(other.aFkiEzsignfoldertypeID, aFkiEzsignfoldertypeID);
 
   @override
   int get hashCode =>
@@ -55,8 +55,8 @@ class EzsigntemplateCopyV1Request {
       }());
 
       return EzsigntemplateCopyV1Request(
-        aFkiEzsignfoldertypeID: json[r'a_fkiEzsignfoldertypeID'] is List
-            ? (json[r'a_fkiEzsignfoldertypeID'] as List).cast<int>()
+        aFkiEzsignfoldertypeID: json[r'a_fkiEzsignfoldertypeID'] is Iterable
+            ? (json[r'a_fkiEzsignfoldertypeID'] as Iterable).cast<int>().toList(growable: false)
             : const [],
       );
     }

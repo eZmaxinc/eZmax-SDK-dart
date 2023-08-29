@@ -44,6 +44,13 @@ void main() {
       // TODO
     });
 
+    // Retrieve an existing User's Apikeys
+    //
+    //Future<UserGetApikeysV1Response> userGetApikeysV1(int pkiUserID) async
+    test('test userGetApikeysV1', () async {
+      // TODO
+    });
+
     // Retrieve Users and IDs
     //
     // Get the list of User to be used in a dropdown or autocomplete control.
@@ -91,6 +98,15 @@ void main() {
     //
     //Future<UserGetSubnetsV1Response> userGetSubnetsV1(int pkiUserID) async
     test('test userGetSubnetsV1', () async {
+      // TODO
+    });
+
+    // Send password reset
+    //
+    // Send the password reset email
+    //
+    //Future<UserSendPasswordResetV1Response> userSendPasswordResetV1(int pkiUserID, Object body) async
+    test('test userSendPasswordResetV1', () async {
       // TODO
     });
 

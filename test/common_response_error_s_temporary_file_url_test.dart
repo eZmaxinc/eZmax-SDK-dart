@@ -16,12 +16,6 @@ void main() {
   // final instance = CommonResponseErrorSTemporaryFileUrl();
 
   group('test CommonResponseErrorSTemporaryFileUrl', () {
-    // The Temporary File Url of the document that was uploaded. That url can be reused instead of uploading the file again.
-    // String sTemporaryFileUrl
-    test('to test the property `sTemporaryFileUrl`', () async {
-      // TODO
-    });
-
     // The message giving details about the error
     // String sErrorMessage
     test('to test the property `sErrorMessage`', () async {
@@ -30,6 +24,12 @@ void main() {
 
     // FieldEErrorCode eErrorCode
     test('to test the property `eErrorCode`', () async {
+      // TODO
+    });
+
+    // The Temporary File Url of the document that was uploaded. That url can be reused instead of uploading the file again.
+    // String sTemporaryFileUrl
+    test('to test the property `sTemporaryFileUrl`', () async {
       // TODO
     });
 

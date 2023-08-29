@@ -29,9 +29,9 @@ class AttemptResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is AttemptResponse &&
-     other.dtAttemptStart == dtAttemptStart &&
-     other.sAttemptResult == sAttemptResult &&
-     other.iAttemptDuration == iAttemptDuration;
+    other.dtAttemptStart == dtAttemptStart &&
+    other.sAttemptResult == sAttemptResult &&
+    other.iAttemptDuration == iAttemptDuration;
 
   @override
   int get hashCode =>

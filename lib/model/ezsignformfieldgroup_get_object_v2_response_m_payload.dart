@@ -20,7 +20,7 @@ class EzsignformfieldgroupGetObjectV2ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignformfieldgroupGetObjectV2ResponseMPayload &&
-     other.objEzsignformfieldgroup == objEzsignformfieldgroup;
+    other.objEzsignformfieldgroup == objEzsignformfieldgroup;
 
   @override
   int get hashCode =>

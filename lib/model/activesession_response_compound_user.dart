@@ -65,16 +65,16 @@ class ActivesessionResponseCompoundUser {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ActivesessionResponseCompoundUser &&
-     other.pkiUserID == pkiUserID &&
-     other.fkiTimezoneID == fkiTimezoneID &&
-     other.sAvatarUrl == sAvatarUrl &&
-     other.sUserFirstname == sUserFirstname &&
-     other.sUserLastname == sUserLastname &&
-     other.sEmailAddress == sEmailAddress &&
-     other.eUserEzsignsendreminderfrequency == eUserEzsignsendreminderfrequency &&
-     other.iUserInterfacecolor == iUserInterfacecolor &&
-     other.bUserInterfacedark == bUserInterfacedark &&
-     other.iUserListresult == iUserListresult;
+    other.pkiUserID == pkiUserID &&
+    other.fkiTimezoneID == fkiTimezoneID &&
+    other.sAvatarUrl == sAvatarUrl &&
+    other.sUserFirstname == sUserFirstname &&
+    other.sUserLastname == sUserLastname &&
+    other.sEmailAddress == sEmailAddress &&
+    other.eUserEzsignsendreminderfrequency == eUserEzsignsendreminderfrequency &&
+    other.iUserInterfacecolor == iUserInterfacecolor &&
+    other.bUserInterfacedark == bUserInterfacedark &&
+    other.iUserListresult == iUserListresult;
 
   @override
   int get hashCode =>

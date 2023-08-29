@@ -13,13 +13,10 @@ part of openapi.api;
 class EzsignfoldertypeGetListV1ResponseMPayload {
   /// Returns a new [EzsignfoldertypeGetListV1ResponseMPayload] instance.
   EzsignfoldertypeGetListV1ResponseMPayload({
-    this.aObjEzsignfoldertype = const [],
     required this.iRowReturned,
     required this.iRowFiltered,
+    this.aObjEzsignfoldertype = const [],
   });
-
-  /// 
-  List<EzsignfoldertypeListElement> aObjEzsignfoldertype;
 
   /// The number of rows returned
   int iRowReturned;
@@ -27,27 +24,30 @@ class EzsignfoldertypeGetListV1ResponseMPayload {
   /// The number of rows matching your filters (if any) or the total number of rows
   int iRowFiltered;
 
+  /// 
+  List<EzsignfoldertypeListElement> aObjEzsignfoldertype;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfoldertypeGetListV1ResponseMPayload &&
-     other.aObjEzsignfoldertype == aObjEzsignfoldertype &&
-     other.iRowReturned == iRowReturned &&
-     other.iRowFiltered == iRowFiltered;
+    other.iRowReturned == iRowReturned &&
+    other.iRowFiltered == iRowFiltered &&
+    _deepEquality.equals(other.aObjEzsignfoldertype, aObjEzsignfoldertype);
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (aObjEzsignfoldertype.hashCode) +
     (iRowReturned.hashCode) +
-    (iRowFiltered.hashCode);
+    (iRowFiltered.hashCode) +
+    (aObjEzsignfoldertype.hashCode);
 
   @override
-  String toString() => 'EzsignfoldertypeGetListV1ResponseMPayload[aObjEzsignfoldertype=$aObjEzsignfoldertype, iRowReturned=$iRowReturned, iRowFiltered=$iRowFiltered]';
+  String toString() => 'EzsignfoldertypeGetListV1ResponseMPayload[iRowReturned=$iRowReturned, iRowFiltered=$iRowFiltered, aObjEzsignfoldertype=$aObjEzsignfoldertype]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'a_objEzsignfoldertype'] = this.aObjEzsignfoldertype;
       json[r'iRowReturned'] = this.iRowReturned;
       json[r'iRowFiltered'] = this.iRowFiltered;
+      json[r'a_objEzsignfoldertype'] = this.aObjEzsignfoldertype;
     return json;
   }
 
@@ -70,9 +70,9 @@ class EzsignfoldertypeGetListV1ResponseMPayload {
       }());
 
       return EzsignfoldertypeGetListV1ResponseMPayload(
-        aObjEzsignfoldertype: EzsignfoldertypeListElement.listFromJson(json[r'a_objEzsignfoldertype']),
         iRowReturned: mapValueOfType<int>(json, r'iRowReturned')!,
         iRowFiltered: mapValueOfType<int>(json, r'iRowFiltered')!,
+        aObjEzsignfoldertype: EzsignfoldertypeListElement.listFromJson(json[r'a_objEzsignfoldertype']),
       );
     }
     return null;
@@ -120,9 +120,9 @@ class EzsignfoldertypeGetListV1ResponseMPayload {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'a_objEzsignfoldertype',
     'iRowReturned',
     'iRowFiltered',
+    'a_objEzsignfoldertype',
   };
 }
 

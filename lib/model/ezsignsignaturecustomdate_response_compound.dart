@@ -39,10 +39,10 @@ class EzsignsignaturecustomdateResponseCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignsignaturecustomdateResponseCompound &&
-     other.pkiEzsignsignaturecustomdateID == pkiEzsignsignaturecustomdateID &&
-     other.iEzsignsignaturecustomdateX == iEzsignsignaturecustomdateX &&
-     other.iEzsignsignaturecustomdateY == iEzsignsignaturecustomdateY &&
-     other.sEzsignsignaturecustomdateFormat == sEzsignsignaturecustomdateFormat;
+    other.pkiEzsignsignaturecustomdateID == pkiEzsignsignaturecustomdateID &&
+    other.iEzsignsignaturecustomdateX == iEzsignsignaturecustomdateX &&
+    other.iEzsignsignaturecustomdateY == iEzsignsignaturecustomdateY &&
+    other.sEzsignsignaturecustomdateFormat == sEzsignsignaturecustomdateFormat;
 
   @override
   int get hashCode =>

@@ -34,10 +34,10 @@ class EzsignfoldertypeAutocompleteElementResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfoldertypeAutocompleteElementResponse &&
-     other.eEzsignfoldertypePrivacylevel == eEzsignfoldertypePrivacylevel &&
-     other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
-     other.pkiEzsignfoldertypeID == pkiEzsignfoldertypeID &&
-     other.bEzsignfoldertypeIsactive == bEzsignfoldertypeIsactive;
+    other.eEzsignfoldertypePrivacylevel == eEzsignfoldertypePrivacylevel &&
+    other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
+    other.pkiEzsignfoldertypeID == pkiEzsignfoldertypeID &&
+    other.bEzsignfoldertypeIsactive == bEzsignfoldertypeIsactive;
 
   @override
   int get hashCode =>

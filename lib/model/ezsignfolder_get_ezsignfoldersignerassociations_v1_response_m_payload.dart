@@ -20,7 +20,7 @@ class EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload &&
-     other.aObjEzsignfoldersignerassociation == aObjEzsignfoldersignerassociation;
+    _deepEquality.equals(other.aObjEzsignfoldersignerassociation, aObjEzsignfoldersignerassociation);
 
   @override
   int get hashCode =>

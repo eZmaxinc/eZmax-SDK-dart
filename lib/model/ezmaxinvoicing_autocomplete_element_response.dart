@@ -31,9 +31,9 @@ class EzmaxinvoicingAutocompleteElementResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzmaxinvoicingAutocompleteElementResponse &&
-     other.yyyymmEzmaxinvoicing == yyyymmEzmaxinvoicing &&
-     other.pkiEzmaxinvoicingID == pkiEzmaxinvoicingID &&
-     other.bEzmaxinvoicingIsactive == bEzmaxinvoicingIsactive;
+    other.yyyymmEzmaxinvoicing == yyyymmEzmaxinvoicing &&
+    other.pkiEzmaxinvoicingID == pkiEzmaxinvoicingID &&
+    other.bEzmaxinvoicingIsactive == bEzmaxinvoicingIsactive;
 
   @override
   int get hashCode =>

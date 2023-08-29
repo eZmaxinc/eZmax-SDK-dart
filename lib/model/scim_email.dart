@@ -36,8 +36,8 @@ class ScimEmail {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ScimEmail &&
-     other.value == value &&
-     other.primary == primary;
+    other.value == value &&
+    other.primary == primary;
 
   @override
   int get hashCode =>

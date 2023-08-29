@@ -20,7 +20,7 @@ class EzsignfolderGetFormsDataV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfolderGetFormsDataV1ResponseMPayload &&
-     other.objFormsDataFolder == objFormsDataFolder;
+    other.objFormsDataFolder == objFormsDataFolder;
 
   @override
   int get hashCode =>

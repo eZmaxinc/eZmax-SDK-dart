@@ -38,11 +38,11 @@ class CustomEzmaxinvoicingEzsigndocumentResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomEzmaxinvoicingEzsigndocumentResponse &&
-     other.fkiEzsignfolderID == fkiEzsignfolderID &&
-     other.sName == sName &&
-     other.sEzsignfolderDescription == sEzsignfolderDescription &&
-     other.sEzsigndocumentName == sEzsigndocumentName &&
-     other.bEzsignfolderAllowed == bEzsignfolderAllowed;
+    other.fkiEzsignfolderID == fkiEzsignfolderID &&
+    other.sName == sName &&
+    other.sEzsignfolderDescription == sEzsignfolderDescription &&
+    other.sEzsigndocumentName == sEzsigndocumentName &&
+    other.bEzsignfolderAllowed == bEzsignfolderAllowed;
 
   @override
   int get hashCode =>

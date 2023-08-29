@@ -20,7 +20,7 @@ class PermissionGetObjectV2ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is PermissionGetObjectV2ResponseMPayload &&
-     other.objPermission == objPermission;
+    other.objPermission == objPermission;
 
   @override
   int get hashCode =>

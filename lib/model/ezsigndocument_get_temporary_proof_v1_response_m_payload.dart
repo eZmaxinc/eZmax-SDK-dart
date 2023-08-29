@@ -20,7 +20,7 @@ class EzsigndocumentGetTemporaryProofV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigndocumentGetTemporaryProofV1ResponseMPayload &&
-     other.aObjEzsigndocumentlog == aObjEzsigndocumentlog;
+    _deepEquality.equals(other.aObjEzsigndocumentlog, aObjEzsigndocumentlog);
 
   @override
   int get hashCode =>

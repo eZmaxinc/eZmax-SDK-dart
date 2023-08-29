@@ -21,7 +21,7 @@ class EzmaxproductGetAutocompleteV2ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzmaxproductGetAutocompleteV2ResponseMPayload &&
-     other.aObjEzmaxproduct == aObjEzmaxproduct;
+    _deepEquality.equals(other.aObjEzmaxproduct, aObjEzmaxproduct);
 
   @override
   int get hashCode =>

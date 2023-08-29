@@ -20,7 +20,7 @@ class EzsignbulksendReorderV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignbulksendReorderV1Request &&
-     other.aPkiEzsignbulksenddocumentmappingID == aPkiEzsignbulksenddocumentmappingID;
+    _deepEquality.equals(other.aPkiEzsignbulksenddocumentmappingID, aPkiEzsignbulksenddocumentmappingID);
 
   @override
   int get hashCode =>
@@ -55,8 +55,8 @@ class EzsignbulksendReorderV1Request {
       }());
 
       return EzsignbulksendReorderV1Request(
-        aPkiEzsignbulksenddocumentmappingID: json[r'a_pkiEzsignbulksenddocumentmappingID'] is List
-            ? (json[r'a_pkiEzsignbulksenddocumentmappingID'] as List).cast<int>()
+        aPkiEzsignbulksenddocumentmappingID: json[r'a_pkiEzsignbulksenddocumentmappingID'] is Iterable
+            ? (json[r'a_pkiEzsignbulksenddocumentmappingID'] as Iterable).cast<int>().toList(growable: false)
             : const [],
       );
     }

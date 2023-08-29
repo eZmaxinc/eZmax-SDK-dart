@@ -16,6 +16,7 @@ class CommonResponseObjDebugPayloadGetList {
     required this.iVersionMin,
     required this.iVersionMax,
     this.aRequiredPermission = const [],
+    required this.bVersionDeprecated,
     required this.aFilter,
     this.aOrderBy = const {},
   });
@@ -29,6 +30,9 @@ class CommonResponseObjDebugPayloadGetList {
   /// An array of permissions required to access this function.  If the value \"0\" is present in the array, anyone can call this function.  You must have one of the permission to access the function. You don't need to have all of them.
   List<int> aRequiredPermission;
 
+  /// Wheter the current route is deprecated or not
+  bool bVersionDeprecated;
+
   CommonResponseFilter aFilter;
 
   /// List of available values for *eOrderBy*
@@ -36,11 +40,12 @@ class CommonResponseObjDebugPayloadGetList {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonResponseObjDebugPayloadGetList &&
-     other.iVersionMin == iVersionMin &&
-     other.iVersionMax == iVersionMax &&
-     other.aRequiredPermission == aRequiredPermission &&
-     other.aFilter == aFilter &&
-     other.aOrderBy == aOrderBy;
+    other.iVersionMin == iVersionMin &&
+    other.iVersionMax == iVersionMax &&
+    _deepEquality.equals(other.aRequiredPermission, aRequiredPermission) &&
+    other.bVersionDeprecated == bVersionDeprecated &&
+    other.aFilter == aFilter &&
+    _deepEquality.equals(other.aOrderBy, aOrderBy);
 
   @override
   int get hashCode =>
@@ -48,17 +53,19 @@ class CommonResponseObjDebugPayloadGetList {
     (iVersionMin.hashCode) +
     (iVersionMax.hashCode) +
     (aRequiredPermission.hashCode) +
+    (bVersionDeprecated.hashCode) +
     (aFilter.hashCode) +
     (aOrderBy.hashCode);
 
   @override
-  String toString() => 'CommonResponseObjDebugPayloadGetList[iVersionMin=$iVersionMin, iVersionMax=$iVersionMax, aRequiredPermission=$aRequiredPermission, aFilter=$aFilter, aOrderBy=$aOrderBy]';
+  String toString() => 'CommonResponseObjDebugPayloadGetList[iVersionMin=$iVersionMin, iVersionMax=$iVersionMax, aRequiredPermission=$aRequiredPermission, bVersionDeprecated=$bVersionDeprecated, aFilter=$aFilter, aOrderBy=$aOrderBy]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'iVersionMin'] = this.iVersionMin;
       json[r'iVersionMax'] = this.iVersionMax;
       json[r'a_RequiredPermission'] = this.aRequiredPermission;
+      json[r'bVersionDeprecated'] = this.bVersionDeprecated;
       json[r'a_Filter'] = this.aFilter;
       json[r'a_OrderBy'] = this.aOrderBy;
     return json;
@@ -85,9 +92,10 @@ class CommonResponseObjDebugPayloadGetList {
       return CommonResponseObjDebugPayloadGetList(
         iVersionMin: mapValueOfType<int>(json, r'iVersionMin')!,
         iVersionMax: mapValueOfType<int>(json, r'iVersionMax')!,
-        aRequiredPermission: json[r'a_RequiredPermission'] is List
-            ? (json[r'a_RequiredPermission'] as List).cast<int>()
+        aRequiredPermission: json[r'a_RequiredPermission'] is Iterable
+            ? (json[r'a_RequiredPermission'] as Iterable).cast<int>().toList(growable: false)
             : const [],
+        bVersionDeprecated: mapValueOfType<bool>(json, r'bVersionDeprecated')!,
         aFilter: CommonResponseFilter.fromJson(json[r'a_Filter'])!,
         aOrderBy: mapCastOfType<String, String>(json, r'a_OrderBy')!,
       );
@@ -140,6 +148,7 @@ class CommonResponseObjDebugPayloadGetList {
     'iVersionMin',
     'iVersionMax',
     'a_RequiredPermission',
+    'bVersionDeprecated',
     'a_Filter',
     'a_OrderBy',
   };

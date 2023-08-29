@@ -38,10 +38,10 @@ class CustomCreditcardtransactionResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomCreditcardtransactionResponse &&
-     other.eCreditcardtypeCodename == eCreditcardtypeCodename &&
-     other.dCreditcardtransactionAmount == dCreditcardtransactionAmount &&
-     other.sCreditcardtransactionPartiallydecryptednumber == sCreditcardtransactionPartiallydecryptednumber &&
-     other.sCreditcardtransactionReferencenumber == sCreditcardtransactionReferencenumber;
+    other.eCreditcardtypeCodename == eCreditcardtypeCodename &&
+    other.dCreditcardtransactionAmount == dCreditcardtransactionAmount &&
+    other.sCreditcardtransactionPartiallydecryptednumber == sCreditcardtransactionPartiallydecryptednumber &&
+    other.sCreditcardtransactionReferencenumber == sCreditcardtransactionReferencenumber;
 
   @override
   int get hashCode =>

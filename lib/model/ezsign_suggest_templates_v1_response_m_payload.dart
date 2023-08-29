@@ -23,8 +23,8 @@ class EzsignSuggestTemplatesV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignSuggestTemplatesV1ResponseMPayload &&
-     other.aObjEzsigntemplate == aObjEzsigntemplate &&
-     other.aObjEzsigntemplatepackage == aObjEzsigntemplatepackage;
+    _deepEquality.equals(other.aObjEzsigntemplate, aObjEzsigntemplate) &&
+    _deepEquality.equals(other.aObjEzsigntemplatepackage, aObjEzsigntemplatepackage);
 
   @override
   int get hashCode =>

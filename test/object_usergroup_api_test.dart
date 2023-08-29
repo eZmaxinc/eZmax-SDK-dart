@@ -44,6 +44,15 @@ void main() {
       // TODO
     });
 
+    // Edit multiple Usergroupdelegations
+    //
+    // Edit multiple Usergroupdelegations
+    //
+    //Future<UsergroupEditUsergroupdelegationsV1Response> usergroupEditUsergroupdelegationsV1(int pkiUsergroupID, UsergroupEditUsergroupdelegationsV1Request usergroupEditUsergroupdelegationsV1Request) async
+    test('test usergroupEditUsergroupdelegationsV1', () async {
+      // TODO
+    });
+
     // Edit multiple Usergroupmemberships
     //
     // Using this endpoint, you can edit multiple Usergroupmemberships at the same time.
@@ -84,6 +93,13 @@ void main() {
     //
     //Future<UsergroupGetPermissionsV1Response> usergroupGetPermissionsV1(int pkiUsergroupID) async
     test('test usergroupGetPermissionsV1', () async {
+      // TODO
+    });
+
+    // Retrieve an existing Usergroup's Usergroupdelegations
+    //
+    //Future<UsergroupGetUsergroupdelegationsV1Response> usergroupGetUsergroupdelegationsV1(int pkiUsergroupID) async
+    test('test usergroupGetUsergroupdelegationsV1', () async {
       // TODO
     });
 

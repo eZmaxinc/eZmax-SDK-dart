@@ -43,12 +43,12 @@ class PaymenttermListElement {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is PaymenttermListElement &&
-     other.pkiPaymenttermID == pkiPaymenttermID &&
-     other.sPaymenttermCode == sPaymenttermCode &&
-     other.ePaymenttermType == ePaymenttermType &&
-     other.iPaymenttermDay == iPaymenttermDay &&
-     other.sPaymenttermDescriptionX == sPaymenttermDescriptionX &&
-     other.bPaymenttermIsactive == bPaymenttermIsactive;
+    other.pkiPaymenttermID == pkiPaymenttermID &&
+    other.sPaymenttermCode == sPaymenttermCode &&
+    other.ePaymenttermType == ePaymenttermType &&
+    other.iPaymenttermDay == iPaymenttermDay &&
+    other.sPaymenttermDescriptionX == sPaymenttermDescriptionX &&
+    other.bPaymenttermIsactive == bPaymenttermIsactive;
 
   @override
   int get hashCode =>

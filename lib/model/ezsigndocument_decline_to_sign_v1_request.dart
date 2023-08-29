@@ -21,7 +21,7 @@ class EzsigndocumentDeclineToSignV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigndocumentDeclineToSignV1Request &&
-     other.sReason == sReason;
+    other.sReason == sReason;
 
   @override
   int get hashCode =>

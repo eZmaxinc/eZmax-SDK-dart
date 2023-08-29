@@ -13,12 +13,10 @@ part of openapi.api;
 class EzsignbulksendGetListV1ResponseMPayload {
   /// Returns a new [EzsignbulksendGetListV1ResponseMPayload] instance.
   EzsignbulksendGetListV1ResponseMPayload({
-    this.aObjEzsignbulksend = const [],
     required this.iRowReturned,
     required this.iRowFiltered,
+    this.aObjEzsignbulksend = const [],
   });
-
-  List<EzsignbulksendListElement> aObjEzsignbulksend;
 
   /// The number of rows returned
   int iRowReturned;
@@ -26,27 +24,29 @@ class EzsignbulksendGetListV1ResponseMPayload {
   /// The number of rows matching your filters (if any) or the total number of rows
   int iRowFiltered;
 
+  List<EzsignbulksendListElement> aObjEzsignbulksend;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignbulksendGetListV1ResponseMPayload &&
-     other.aObjEzsignbulksend == aObjEzsignbulksend &&
-     other.iRowReturned == iRowReturned &&
-     other.iRowFiltered == iRowFiltered;
+    other.iRowReturned == iRowReturned &&
+    other.iRowFiltered == iRowFiltered &&
+    _deepEquality.equals(other.aObjEzsignbulksend, aObjEzsignbulksend);
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (aObjEzsignbulksend.hashCode) +
     (iRowReturned.hashCode) +
-    (iRowFiltered.hashCode);
+    (iRowFiltered.hashCode) +
+    (aObjEzsignbulksend.hashCode);
 
   @override
-  String toString() => 'EzsignbulksendGetListV1ResponseMPayload[aObjEzsignbulksend=$aObjEzsignbulksend, iRowReturned=$iRowReturned, iRowFiltered=$iRowFiltered]';
+  String toString() => 'EzsignbulksendGetListV1ResponseMPayload[iRowReturned=$iRowReturned, iRowFiltered=$iRowFiltered, aObjEzsignbulksend=$aObjEzsignbulksend]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'a_objEzsignbulksend'] = this.aObjEzsignbulksend;
       json[r'iRowReturned'] = this.iRowReturned;
       json[r'iRowFiltered'] = this.iRowFiltered;
+      json[r'a_objEzsignbulksend'] = this.aObjEzsignbulksend;
     return json;
   }
 
@@ -69,9 +69,9 @@ class EzsignbulksendGetListV1ResponseMPayload {
       }());
 
       return EzsignbulksendGetListV1ResponseMPayload(
-        aObjEzsignbulksend: EzsignbulksendListElement.listFromJson(json[r'a_objEzsignbulksend']),
         iRowReturned: mapValueOfType<int>(json, r'iRowReturned')!,
         iRowFiltered: mapValueOfType<int>(json, r'iRowFiltered')!,
+        aObjEzsignbulksend: EzsignbulksendListElement.listFromJson(json[r'a_objEzsignbulksend']),
       );
     }
     return null;
@@ -119,9 +119,9 @@ class EzsignbulksendGetListV1ResponseMPayload {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'a_objEzsignbulksend',
     'iRowReturned',
     'iRowFiltered',
+    'a_objEzsignbulksend',
   };
 }
 

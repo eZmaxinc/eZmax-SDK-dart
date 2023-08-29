@@ -54,13 +54,13 @@ class BillingentityinternalproductResponseCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is BillingentityinternalproductResponseCompound &&
-     other.pkiBillingentityinternalproductID == pkiBillingentityinternalproductID &&
-     other.fkiBillingentityinternalID == fkiBillingentityinternalID &&
-     other.sBillingentityinternalDescriptionX == sBillingentityinternalDescriptionX &&
-     other.fkiEzmaxproductID == fkiEzmaxproductID &&
-     other.sEzmaxproductDescriptionX == sEzmaxproductDescriptionX &&
-     other.fkiBillingentityexternalID == fkiBillingentityexternalID &&
-     other.sBillingentityexternalDescription == sBillingentityexternalDescription;
+    other.pkiBillingentityinternalproductID == pkiBillingentityinternalproductID &&
+    other.fkiBillingentityinternalID == fkiBillingentityinternalID &&
+    other.sBillingentityinternalDescriptionX == sBillingentityinternalDescriptionX &&
+    other.fkiEzmaxproductID == fkiEzmaxproductID &&
+    other.sEzmaxproductDescriptionX == sEzmaxproductDescriptionX &&
+    other.fkiBillingentityexternalID == fkiBillingentityexternalID &&
+    other.sBillingentityexternalDescription == sBillingentityexternalDescription;
 
   @override
   int get hashCode =>

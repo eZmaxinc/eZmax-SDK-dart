@@ -20,7 +20,7 @@ class VersionhistoryGetObjectV2ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is VersionhistoryGetObjectV2ResponseMPayload &&
-     other.objVersionhistory == objVersionhistory;
+    other.objVersionhistory == objVersionhistory;
 
   @override
   int get hashCode =>

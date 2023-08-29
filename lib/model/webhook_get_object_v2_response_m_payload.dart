@@ -20,7 +20,7 @@ class WebhookGetObjectV2ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is WebhookGetObjectV2ResponseMPayload &&
-     other.objWebhook == objWebhook;
+    other.objWebhook == objWebhook;
 
   @override
   int get hashCode =>

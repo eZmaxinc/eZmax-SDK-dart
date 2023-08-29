@@ -37,8 +37,8 @@ class EzsigndocumentRequestPatch {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigndocumentRequestPatch &&
-     other.dtEzsigndocumentDuedate == dtEzsigndocumentDuedate &&
-     other.sEzsigndocumentName == sEzsigndocumentName;
+    other.dtEzsigndocumentDuedate == dtEzsigndocumentDuedate &&
+    other.sEzsigndocumentName == sEzsigndocumentName;
 
   @override
   int get hashCode =>

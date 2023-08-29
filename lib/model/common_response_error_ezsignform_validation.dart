@@ -28,9 +28,9 @@ class CommonResponseErrorEzsignformValidation {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonResponseErrorEzsignformValidation &&
-     other.aObjEzsignformfielderror == aObjEzsignformfielderror &&
-     other.sErrorMessage == sErrorMessage &&
-     other.eErrorCode == eErrorCode;
+    _deepEquality.equals(other.aObjEzsignformfielderror, aObjEzsignformfielderror) &&
+    other.sErrorMessage == sErrorMessage &&
+    other.eErrorCode == eErrorCode;
 
   @override
   int get hashCode =>

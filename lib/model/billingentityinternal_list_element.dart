@@ -27,8 +27,8 @@ class BillingentityinternalListElement {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is BillingentityinternalListElement &&
-     other.pkiBillingentityinternalID == pkiBillingentityinternalID &&
-     other.sBillingentityinternalDescriptionX == sBillingentityinternalDescriptionX;
+    other.pkiBillingentityinternalID == pkiBillingentityinternalID &&
+    other.sBillingentityinternalDescriptionX == sBillingentityinternalDescriptionX;
 
   @override
   int get hashCode =>

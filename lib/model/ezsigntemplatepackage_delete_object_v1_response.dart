@@ -13,17 +13,11 @@ part of openapi.api;
 class EzsigntemplatepackageDeleteObjectV1Response {
   /// Returns a new [EzsigntemplatepackageDeleteObjectV1Response] instance.
   EzsigntemplatepackageDeleteObjectV1Response({
-    this.objDebugPayload,
+    required this.objDebugPayload,
     this.objDebug,
   });
 
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  CommonResponseObjDebugPayload? objDebugPayload;
+  CommonResponseObjDebugPayload objDebugPayload;
 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -35,13 +29,13 @@ class EzsigntemplatepackageDeleteObjectV1Response {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplatepackageDeleteObjectV1Response &&
-     other.objDebugPayload == objDebugPayload &&
-     other.objDebug == objDebug;
+    other.objDebugPayload == objDebugPayload &&
+    other.objDebug == objDebug;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (objDebugPayload == null ? 0 : objDebugPayload!.hashCode) +
+    (objDebugPayload.hashCode) +
     (objDebug == null ? 0 : objDebug!.hashCode);
 
   @override
@@ -49,11 +43,7 @@ class EzsigntemplatepackageDeleteObjectV1Response {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (this.objDebugPayload != null) {
       json[r'objDebugPayload'] = this.objDebugPayload;
-    } else {
-      json[r'objDebugPayload'] = null;
-    }
     if (this.objDebug != null) {
       json[r'objDebug'] = this.objDebug;
     } else {
@@ -81,7 +71,7 @@ class EzsigntemplatepackageDeleteObjectV1Response {
       }());
 
       return EzsigntemplatepackageDeleteObjectV1Response(
-        objDebugPayload: CommonResponseObjDebugPayload.fromJson(json[r'objDebugPayload']),
+        objDebugPayload: CommonResponseObjDebugPayload.fromJson(json[r'objDebugPayload'])!,
         objDebug: CommonResponseObjDebug.fromJson(json[r'objDebug']),
       );
     }
@@ -130,6 +120,7 @@ class EzsigntemplatepackageDeleteObjectV1Response {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
+    'objDebugPayload',
   };
 }
 

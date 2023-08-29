@@ -21,7 +21,7 @@ class FranchisebrokerGetAutocompleteV2ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is FranchisebrokerGetAutocompleteV2ResponseMPayload &&
-     other.aObjFranchisebroker == aObjFranchisebroker;
+    _deepEquality.equals(other.aObjFranchisebroker, aObjFranchisebroker);
 
   @override
   int get hashCode =>

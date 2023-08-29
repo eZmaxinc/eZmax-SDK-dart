@@ -21,7 +21,7 @@ class EzsigndocumentGetDownloadUrlV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigndocumentGetDownloadUrlV1ResponseMPayload &&
-     other.sDownloadUrl == sDownloadUrl;
+    other.sDownloadUrl == sDownloadUrl;
 
   @override
   int get hashCode =>

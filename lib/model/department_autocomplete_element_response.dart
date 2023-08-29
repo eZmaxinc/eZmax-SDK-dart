@@ -35,10 +35,10 @@ class DepartmentAutocompleteElementResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is DepartmentAutocompleteElementResponse &&
-     other.sCompanyNameX == sCompanyNameX &&
-     other.sDepartmentNameX == sDepartmentNameX &&
-     other.pkiDepartmentID == pkiDepartmentID &&
-     other.bDepartmentIsactive == bDepartmentIsactive;
+    other.sCompanyNameX == sCompanyNameX &&
+    other.sDepartmentNameX == sDepartmentNameX &&
+    other.pkiDepartmentID == pkiDepartmentID &&
+    other.bDepartmentIsactive == bDepartmentIsactive;
 
   @override
   int get hashCode =>

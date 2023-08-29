@@ -31,9 +31,9 @@ class SecretquestionAutocompleteElementResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is SecretquestionAutocompleteElementResponse &&
-     other.sSecretquestionTextX == sSecretquestionTextX &&
-     other.pkiSecretquestionID == pkiSecretquestionID &&
-     other.bSecretquestionIsactive == bSecretquestionIsactive;
+    other.sSecretquestionTextX == sSecretquestionTextX &&
+    other.pkiSecretquestionID == pkiSecretquestionID &&
+    other.bSecretquestionIsactive == bSecretquestionIsactive;
 
   @override
   int get hashCode =>

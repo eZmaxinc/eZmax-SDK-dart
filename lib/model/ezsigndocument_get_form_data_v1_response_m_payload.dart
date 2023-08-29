@@ -20,7 +20,7 @@ class EzsigndocumentGetFormDataV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigndocumentGetFormDataV1ResponseMPayload &&
-     other.objFormDataDocument == objFormDataDocument;
+    other.objFormDataDocument == objFormDataDocument;
 
   @override
   int get hashCode =>

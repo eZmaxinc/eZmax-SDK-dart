@@ -43,9 +43,9 @@ class UsergroupmembershipRequestCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is UsergroupmembershipRequestCompound &&
-     other.pkiUsergroupmembershipID == pkiUsergroupmembershipID &&
-     other.fkiUsergroupID == fkiUsergroupID &&
-     other.fkiUserID == fkiUserID;
+    other.pkiUsergroupmembershipID == pkiUsergroupmembershipID &&
+    other.fkiUsergroupID == fkiUsergroupID &&
+    other.fkiUserID == fkiUserID;
 
   @override
   int get hashCode =>

@@ -100,17 +100,17 @@ class VersionhistoryResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is VersionhistoryResponse &&
-     other.pkiVersionhistoryID == pkiVersionhistoryID &&
-     other.fkiModuleID == fkiModuleID &&
-     other.fkiModulesectionID == fkiModulesectionID &&
-     other.sModuleNameX == sModuleNameX &&
-     other.sModulesectionNameX == sModulesectionNameX &&
-     other.eVersionhistoryUsertype == eVersionhistoryUsertype &&
-     other.objVersionhistoryDetail == objVersionhistoryDetail &&
-     other.dtVersionhistoryDate == dtVersionhistoryDate &&
-     other.dtVersionhistoryDateend == dtVersionhistoryDateend &&
-     other.eVersionhistoryType == eVersionhistoryType &&
-     other.bVersionhistoryDraft == bVersionhistoryDraft;
+    other.pkiVersionhistoryID == pkiVersionhistoryID &&
+    other.fkiModuleID == fkiModuleID &&
+    other.fkiModulesectionID == fkiModulesectionID &&
+    other.sModuleNameX == sModuleNameX &&
+    other.sModulesectionNameX == sModulesectionNameX &&
+    other.eVersionhistoryUsertype == eVersionhistoryUsertype &&
+    other.objVersionhistoryDetail == objVersionhistoryDetail &&
+    other.dtVersionhistoryDate == dtVersionhistoryDate &&
+    other.dtVersionhistoryDateend == dtVersionhistoryDateend &&
+    other.eVersionhistoryType == eVersionhistoryType &&
+    other.bVersionhistoryDraft == bVersionhistoryDraft;
 
   @override
   int get hashCode =>

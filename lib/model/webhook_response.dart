@@ -90,17 +90,17 @@ class WebhookResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is WebhookResponse &&
-     other.pkiWebhookID == pkiWebhookID &&
-     other.sWebhookDescription == sWebhookDescription &&
-     other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
-     other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
-     other.eWebhookModule == eWebhookModule &&
-     other.eWebhookEzsignevent == eWebhookEzsignevent &&
-     other.eWebhookManagementevent == eWebhookManagementevent &&
-     other.sWebhookUrl == sWebhookUrl &&
-     other.sWebhookEmailfailed == sWebhookEmailfailed &&
-     other.bWebhookIsactive == bWebhookIsactive &&
-     other.bWebhookSkipsslvalidation == bWebhookSkipsslvalidation;
+    other.pkiWebhookID == pkiWebhookID &&
+    other.sWebhookDescription == sWebhookDescription &&
+    other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
+    other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
+    other.eWebhookModule == eWebhookModule &&
+    other.eWebhookEzsignevent == eWebhookEzsignevent &&
+    other.eWebhookManagementevent == eWebhookManagementevent &&
+    other.sWebhookUrl == sWebhookUrl &&
+    other.sWebhookEmailfailed == sWebhookEmailfailed &&
+    other.bWebhookIsactive == bWebhookIsactive &&
+    other.bWebhookSkipsslvalidation == bWebhookSkipsslvalidation;
 
   @override
   int get hashCode =>

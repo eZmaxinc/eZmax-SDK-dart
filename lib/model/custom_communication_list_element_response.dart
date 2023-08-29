@@ -52,15 +52,15 @@ class CustomCommunicationListElementResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomCommunicationListElementResponse &&
-     other.pkiCommunicationID == pkiCommunicationID &&
-     other.dtCreatedDate == dtCreatedDate &&
-     other.eCommunicationDirection == eCommunicationDirection &&
-     other.eCommunicationImportance == eCommunicationImportance &&
-     other.eCommunicationType == eCommunicationType &&
-     other.iCommunicationrecipientCount == iCommunicationrecipientCount &&
-     other.sCommunicationSubject == sCommunicationSubject &&
-     other.sCommunicationSender == sCommunicationSender &&
-     other.sCommunicationRecipient == sCommunicationRecipient;
+    other.pkiCommunicationID == pkiCommunicationID &&
+    other.dtCreatedDate == dtCreatedDate &&
+    other.eCommunicationDirection == eCommunicationDirection &&
+    other.eCommunicationImportance == eCommunicationImportance &&
+    other.eCommunicationType == eCommunicationType &&
+    other.iCommunicationrecipientCount == iCommunicationrecipientCount &&
+    other.sCommunicationSubject == sCommunicationSubject &&
+    other.sCommunicationSender == sCommunicationSender &&
+    other.sCommunicationRecipient == sCommunicationRecipient;
 
   @override
   int get hashCode =>

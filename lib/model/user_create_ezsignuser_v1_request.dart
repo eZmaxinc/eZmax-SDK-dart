@@ -58,14 +58,14 @@ class UserCreateEzsignuserV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is UserCreateEzsignuserV1Request &&
-     other.fkiLanguageID == fkiLanguageID &&
-     other.sUserFirstname == sUserFirstname &&
-     other.sUserLastname == sUserLastname &&
-     other.sEmailAddress == sEmailAddress &&
-     other.sPhoneRegion == sPhoneRegion &&
-     other.sPhoneExchange == sPhoneExchange &&
-     other.sPhoneNumber == sPhoneNumber &&
-     other.sPhoneExtension == sPhoneExtension;
+    other.fkiLanguageID == fkiLanguageID &&
+    other.sUserFirstname == sUserFirstname &&
+    other.sUserLastname == sUserLastname &&
+    other.sEmailAddress == sEmailAddress &&
+    other.sPhoneRegion == sPhoneRegion &&
+    other.sPhoneExchange == sPhoneExchange &&
+    other.sPhoneNumber == sPhoneNumber &&
+    other.sPhoneExtension == sPhoneExtension;
 
   @override
   int get hashCode =>

@@ -20,7 +20,7 @@ class PermissionEditObjectV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is PermissionEditObjectV1Request &&
-     other.objPermission == objPermission;
+    other.objPermission == objPermission;
 
   @override
   int get hashCode =>

@@ -24,8 +24,8 @@ class CommonReportrow {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonReportrow &&
-     other.aObjReportcell == aObjReportcell &&
-     other.iReportrowHeight == iReportrowHeight;
+    _deepEquality.equals(other.aObjReportcell, aObjReportcell) &&
+    other.iReportrowHeight == iReportrowHeight;
 
   @override
   int get hashCode =>

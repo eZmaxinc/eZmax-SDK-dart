@@ -41,10 +41,10 @@ class CustomEzmaxpricingResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomEzmaxpricingResponse &&
-     other.pkiEzmaxpricingID == pkiEzmaxpricingID &&
-     other.dEzmaxpricingRebateezsignallagents == dEzmaxpricingRebateezsignallagents &&
-     other.dtEzmaxpricingStart == dtEzmaxpricingStart &&
-     other.dtEzmaxpricingEnd == dtEzmaxpricingEnd;
+    other.pkiEzmaxpricingID == pkiEzmaxpricingID &&
+    other.dEzmaxpricingRebateezsignallagents == dEzmaxpricingRebateezsignallagents &&
+    other.dtEzmaxpricingStart == dtEzmaxpricingStart &&
+    other.dtEzmaxpricingEnd == dtEzmaxpricingEnd;
 
   @override
   int get hashCode =>

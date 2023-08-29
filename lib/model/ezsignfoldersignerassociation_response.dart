@@ -41,11 +41,11 @@ class EzsignfoldersignerassociationResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfoldersignerassociationResponse &&
-     other.pkiEzsignfoldersignerassociationID == pkiEzsignfoldersignerassociationID &&
-     other.fkiEzsignfolderID == fkiEzsignfolderID &&
-     other.bEzsignfoldersignerassociationDelayedsend == bEzsignfoldersignerassociationDelayedsend &&
-     other.bEzsignfoldersignerassociationReceivecopy == bEzsignfoldersignerassociationReceivecopy &&
-     other.tEzsignfoldersignerassociationMessage == tEzsignfoldersignerassociationMessage;
+    other.pkiEzsignfoldersignerassociationID == pkiEzsignfoldersignerassociationID &&
+    other.fkiEzsignfolderID == fkiEzsignfolderID &&
+    other.bEzsignfoldersignerassociationDelayedsend == bEzsignfoldersignerassociationDelayedsend &&
+    other.bEzsignfoldersignerassociationReceivecopy == bEzsignfoldersignerassociationReceivecopy &&
+    other.tEzsignfoldersignerassociationMessage == tEzsignfoldersignerassociationMessage;
 
   @override
   int get hashCode =>

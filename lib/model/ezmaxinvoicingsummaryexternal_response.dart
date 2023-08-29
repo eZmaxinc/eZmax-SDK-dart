@@ -55,11 +55,11 @@ class EzmaxinvoicingsummaryexternalResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzmaxinvoicingsummaryexternalResponse &&
-     other.pkiEzmaxinvoicingsummaryexternalID == pkiEzmaxinvoicingsummaryexternalID &&
-     other.fkiEzmaxinvoicingID == fkiEzmaxinvoicingID &&
-     other.fkiBillingentityexternalID == fkiBillingentityexternalID &&
-     other.sBillingentityexternalDescription == sBillingentityexternalDescription &&
-     other.sEzmaxinvoicingsummaryexternalDescription == sEzmaxinvoicingsummaryexternalDescription;
+    other.pkiEzmaxinvoicingsummaryexternalID == pkiEzmaxinvoicingsummaryexternalID &&
+    other.fkiEzmaxinvoicingID == fkiEzmaxinvoicingID &&
+    other.fkiBillingentityexternalID == fkiBillingentityexternalID &&
+    other.sBillingentityexternalDescription == sBillingentityexternalDescription &&
+    other.sEzmaxinvoicingsummaryexternalDescription == sEzmaxinvoicingsummaryexternalDescription;
 
   @override
   int get hashCode =>

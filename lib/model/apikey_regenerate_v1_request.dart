@@ -27,7 +27,7 @@ class ApikeyRegenerateV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ApikeyRegenerateV1Request &&
-     other.bApikeyIssigned == bApikeyIssigned;
+    other.bApikeyIssigned == bApikeyIssigned;
 
   @override
   int get hashCode =>

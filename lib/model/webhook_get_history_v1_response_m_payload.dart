@@ -20,7 +20,7 @@ class WebhookGetHistoryV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is WebhookGetHistoryV1ResponseMPayload &&
-     other.aObjWebhooklog == aObjWebhooklog;
+    _deepEquality.equals(other.aObjWebhooklog, aObjWebhooklog);
 
   @override
   int get hashCode =>

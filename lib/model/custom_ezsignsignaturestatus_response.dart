@@ -33,10 +33,10 @@ class CustomEzsignsignaturestatusResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomEzsignsignaturestatusResponse &&
-     other.eEzsignsignaturestatusSteptype == eEzsignsignaturestatusSteptype &&
-     other.iEzsignsignaturestatusStep == iEzsignsignaturestatusStep &&
-     other.iEzsignsignaturestatusTotal == iEzsignsignaturestatusTotal &&
-     other.iEzsignsignaturestatusSigned == iEzsignsignaturestatusSigned;
+    other.eEzsignsignaturestatusSteptype == eEzsignsignaturestatusSteptype &&
+    other.iEzsignsignaturestatusStep == iEzsignsignaturestatusStep &&
+    other.iEzsignsignaturestatusTotal == iEzsignsignaturestatusTotal &&
+    other.iEzsignsignaturestatusSigned == iEzsignsignaturestatusSigned;
 
   @override
   int get hashCode =>

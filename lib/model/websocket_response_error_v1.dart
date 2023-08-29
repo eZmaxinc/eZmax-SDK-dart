@@ -24,8 +24,8 @@ class WebsocketResponseErrorV1 {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is WebsocketResponseErrorV1 &&
-     other.eWebsocketMessagetype == eWebsocketMessagetype &&
-     other.mPayload == mPayload;
+    other.eWebsocketMessagetype == eWebsocketMessagetype &&
+    other.mPayload == mPayload;
 
   @override
   int get hashCode =>

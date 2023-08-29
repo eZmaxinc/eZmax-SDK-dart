@@ -76,15 +76,15 @@ class SystemconfigurationRequestCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is SystemconfigurationRequestCompound &&
-     other.pkiSystemconfigurationID == pkiSystemconfigurationID &&
-     other.eSystemconfigurationNewexternaluseraction == eSystemconfigurationNewexternaluseraction &&
-     other.eSystemconfigurationLanguage1 == eSystemconfigurationLanguage1 &&
-     other.eSystemconfigurationLanguage2 == eSystemconfigurationLanguage2 &&
-     other.eSystemconfigurationEzsign == eSystemconfigurationEzsign &&
-     other.bSystemconfigurationEzsignpersonnal == bSystemconfigurationEzsignpersonnal &&
-     other.bSystemconfigurationSspr == bSystemconfigurationSspr &&
-     other.dtSystemconfigurationReadonlyexpirationstart == dtSystemconfigurationReadonlyexpirationstart &&
-     other.dtSystemconfigurationReadonlyexpirationend == dtSystemconfigurationReadonlyexpirationend;
+    other.pkiSystemconfigurationID == pkiSystemconfigurationID &&
+    other.eSystemconfigurationNewexternaluseraction == eSystemconfigurationNewexternaluseraction &&
+    other.eSystemconfigurationLanguage1 == eSystemconfigurationLanguage1 &&
+    other.eSystemconfigurationLanguage2 == eSystemconfigurationLanguage2 &&
+    other.eSystemconfigurationEzsign == eSystemconfigurationEzsign &&
+    other.bSystemconfigurationEzsignpersonnal == bSystemconfigurationEzsignpersonnal &&
+    other.bSystemconfigurationSspr == bSystemconfigurationSspr &&
+    other.dtSystemconfigurationReadonlyexpirationstart == dtSystemconfigurationReadonlyexpirationstart &&
+    other.dtSystemconfigurationReadonlyexpirationend == dtSystemconfigurationReadonlyexpirationend;
 
   @override
   int get hashCode =>

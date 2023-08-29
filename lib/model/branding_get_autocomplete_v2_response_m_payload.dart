@@ -21,7 +21,7 @@ class BrandingGetAutocompleteV2ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is BrandingGetAutocompleteV2ResponseMPayload &&
-     other.aObjBranding == aObjBranding;
+    _deepEquality.equals(other.aObjBranding, aObjBranding);
 
   @override
   int get hashCode =>

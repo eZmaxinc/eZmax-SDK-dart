@@ -29,8 +29,8 @@ class CommonAudit {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonAudit &&
-     other.objAuditdetailCreated == objAuditdetailCreated &&
-     other.objAuditdetailModified == objAuditdetailModified;
+    other.objAuditdetailCreated == objAuditdetailCreated &&
+    other.objAuditdetailModified == objAuditdetailModified;
 
   @override
   int get hashCode =>

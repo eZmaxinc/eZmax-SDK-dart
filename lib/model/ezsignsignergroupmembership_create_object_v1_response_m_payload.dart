@@ -21,7 +21,7 @@ class EzsignsignergroupmembershipCreateObjectV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignsignergroupmembershipCreateObjectV1ResponseMPayload &&
-     other.aPkiEzsignsignergroupmembershipID == aPkiEzsignsignergroupmembershipID;
+    _deepEquality.equals(other.aPkiEzsignsignergroupmembershipID, aPkiEzsignsignergroupmembershipID);
 
   @override
   int get hashCode =>
@@ -56,8 +56,8 @@ class EzsignsignergroupmembershipCreateObjectV1ResponseMPayload {
       }());
 
       return EzsignsignergroupmembershipCreateObjectV1ResponseMPayload(
-        aPkiEzsignsignergroupmembershipID: json[r'a_pkiEzsignsignergroupmembershipID'] is List
-            ? (json[r'a_pkiEzsignsignergroupmembershipID'] as List).cast<int>()
+        aPkiEzsignsignergroupmembershipID: json[r'a_pkiEzsignsignergroupmembershipID'] is Iterable
+            ? (json[r'a_pkiEzsignsignergroupmembershipID'] as Iterable).cast<int>().toList(growable: false)
             : const [],
       );
     }

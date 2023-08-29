@@ -34,10 +34,10 @@ class EzsigntemplateAutocompleteElementResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplateAutocompleteElementResponse &&
-     other.eEzsignfoldertypePrivacylevel == eEzsignfoldertypePrivacylevel &&
-     other.sEzsigntemplateDescription == sEzsigntemplateDescription &&
-     other.pkiEzsigntemplateID == pkiEzsigntemplateID &&
-     other.bEzsigntemplateIsactive == bEzsigntemplateIsactive;
+    other.eEzsignfoldertypePrivacylevel == eEzsignfoldertypePrivacylevel &&
+    other.sEzsigntemplateDescription == sEzsigntemplateDescription &&
+    other.pkiEzsigntemplateID == pkiEzsigntemplateID &&
+    other.bEzsigntemplateIsactive == bEzsigntemplateIsactive;
 
   @override
   int get hashCode =>

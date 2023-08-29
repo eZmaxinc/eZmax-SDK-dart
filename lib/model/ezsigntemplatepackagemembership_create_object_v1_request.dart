@@ -20,7 +20,7 @@ class EzsigntemplatepackagemembershipCreateObjectV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplatepackagemembershipCreateObjectV1Request &&
-     other.aObjEzsigntemplatepackagemembership == aObjEzsigntemplatepackagemembership;
+    _deepEquality.equals(other.aObjEzsigntemplatepackagemembership, aObjEzsigntemplatepackagemembership);
 
   @override
   int get hashCode =>

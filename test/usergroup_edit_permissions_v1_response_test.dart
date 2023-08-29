@@ -16,11 +16,6 @@ void main() {
   // final instance = UsergroupEditPermissionsV1Response();
 
   group('test UsergroupEditPermissionsV1Response', () {
-    // UsergroupEditPermissionsV1ResponseMPayload mPayload
-    test('to test the property `mPayload`', () async {
-      // TODO
-    });
-
     // CommonResponseObjDebugPayload objDebugPayload
     test('to test the property `objDebugPayload`', () async {
       // TODO
@@ -28,6 +23,11 @@ void main() {
 
     // CommonResponseObjDebug objDebug
     test('to test the property `objDebug`', () async {
+      // TODO
+    });
+
+    // UsergroupEditPermissionsV1ResponseMPayload mPayload
+    test('to test the property `mPayload`', () async {
       // TODO
     });
 

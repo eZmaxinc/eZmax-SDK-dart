@@ -21,7 +21,7 @@ class EmailtypeGetAutocompleteV2ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EmailtypeGetAutocompleteV2ResponseMPayload &&
-     other.aObjEmailtype == aObjEmailtype;
+    _deepEquality.equals(other.aObjEmailtype, aObjEmailtype);
 
   @override
   int get hashCode =>

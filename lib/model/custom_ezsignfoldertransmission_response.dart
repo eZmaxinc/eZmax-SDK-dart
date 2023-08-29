@@ -41,12 +41,12 @@ class CustomEzsignfoldertransmissionResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomEzsignfoldertransmissionResponse &&
-     other.pkiEzsignfolderID == pkiEzsignfolderID &&
-     other.sEzsignfolderDescription == sEzsignfolderDescription &&
-     other.eEzsignfolderStep == eEzsignfolderStep &&
-     other.iEzsignfolderSignaturetotal == iEzsignfolderSignaturetotal &&
-     other.iEzsignfolderSignaturesigned == iEzsignfolderSignaturesigned &&
-     other.aObjEzsignfoldertransmissionSigner == aObjEzsignfoldertransmissionSigner;
+    other.pkiEzsignfolderID == pkiEzsignfolderID &&
+    other.sEzsignfolderDescription == sEzsignfolderDescription &&
+    other.eEzsignfolderStep == eEzsignfolderStep &&
+    other.iEzsignfolderSignaturetotal == iEzsignfolderSignaturetotal &&
+    other.iEzsignfolderSignaturesigned == iEzsignfolderSignaturesigned &&
+    _deepEquality.equals(other.aObjEzsignfoldertransmissionSigner, aObjEzsignfoldertransmissionSigner);
 
   @override
   int get hashCode =>

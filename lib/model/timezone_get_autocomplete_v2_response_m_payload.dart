@@ -21,7 +21,7 @@ class TimezoneGetAutocompleteV2ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is TimezoneGetAutocompleteV2ResponseMPayload &&
-     other.aObjTimezone == aObjTimezone;
+    _deepEquality.equals(other.aObjTimezone, aObjTimezone);
 
   @override
   int get hashCode =>

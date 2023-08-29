@@ -56,11 +56,11 @@ class CustomEzsignfoldersignerassociationstatusResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomEzsignfoldersignerassociationstatusResponse &&
-     other.fkiEzsignfoldersignerassociationID == fkiEzsignfoldersignerassociationID &&
-     other.sEzsignfoldersignerassociationstatusLastname == sEzsignfoldersignerassociationstatusLastname &&
-     other.sEzsignfoldersignerassociationstatusFirstname == sEzsignfoldersignerassociationstatusFirstname &&
-     other.sEzsignfoldersignerassociationstatusDescriptionX == sEzsignfoldersignerassociationstatusDescriptionX &&
-     other.aObjEzsignsignaturestatus == aObjEzsignsignaturestatus;
+    other.fkiEzsignfoldersignerassociationID == fkiEzsignfoldersignerassociationID &&
+    other.sEzsignfoldersignerassociationstatusLastname == sEzsignfoldersignerassociationstatusLastname &&
+    other.sEzsignfoldersignerassociationstatusFirstname == sEzsignfoldersignerassociationstatusFirstname &&
+    other.sEzsignfoldersignerassociationstatusDescriptionX == sEzsignfoldersignerassociationstatusDescriptionX &&
+    _deepEquality.equals(other.aObjEzsignsignaturestatus, aObjEzsignsignaturestatus);
 
   @override
   int get hashCode =>

@@ -40,11 +40,11 @@ class ModulesectionResponseCompound {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ModulesectionResponseCompound &&
-     other.pkiModulesectionID == pkiModulesectionID &&
-     other.fkiModuleID == fkiModuleID &&
-     other.sModulesectionInternalname == sModulesectionInternalname &&
-     other.sModulesectionNameX == sModulesectionNameX &&
-     other.aObjPermission == aObjPermission;
+    other.pkiModulesectionID == pkiModulesectionID &&
+    other.fkiModuleID == fkiModuleID &&
+    other.sModulesectionInternalname == sModulesectionInternalname &&
+    other.sModulesectionNameX == sModulesectionNameX &&
+    _deepEquality.equals(other.aObjPermission, aObjPermission);
 
   @override
   int get hashCode =>

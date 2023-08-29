@@ -23,7 +23,7 @@ class UserstagedCreateUserV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is UserstagedCreateUserV1ResponseMPayload &&
-     other.pkiUserID == pkiUserID;
+    other.pkiUserID == pkiUserID;
 
   @override
   int get hashCode =>

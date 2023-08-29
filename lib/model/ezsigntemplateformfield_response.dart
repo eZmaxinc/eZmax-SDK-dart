@@ -77,15 +77,15 @@ class EzsigntemplateformfieldResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplateformfieldResponse &&
-     other.pkiEzsigntemplateformfieldID == pkiEzsigntemplateformfieldID &&
-     other.iEzsigntemplatedocumentpagePagenumber == iEzsigntemplatedocumentpagePagenumber &&
-     other.sEzsigntemplateformfieldLabel == sEzsigntemplateformfieldLabel &&
-     other.sEzsigntemplateformfieldValue == sEzsigntemplateformfieldValue &&
-     other.iEzsigntemplateformfieldX == iEzsigntemplateformfieldX &&
-     other.iEzsigntemplateformfieldY == iEzsigntemplateformfieldY &&
-     other.iEzsigntemplateformfieldWidth == iEzsigntemplateformfieldWidth &&
-     other.iEzsigntemplateformfieldHeight == iEzsigntemplateformfieldHeight &&
-     other.bEzsigntemplateformfieldSelected == bEzsigntemplateformfieldSelected;
+    other.pkiEzsigntemplateformfieldID == pkiEzsigntemplateformfieldID &&
+    other.iEzsigntemplatedocumentpagePagenumber == iEzsigntemplatedocumentpagePagenumber &&
+    other.sEzsigntemplateformfieldLabel == sEzsigntemplateformfieldLabel &&
+    other.sEzsigntemplateformfieldValue == sEzsigntemplateformfieldValue &&
+    other.iEzsigntemplateformfieldX == iEzsigntemplateformfieldX &&
+    other.iEzsigntemplateformfieldY == iEzsigntemplateformfieldY &&
+    other.iEzsigntemplateformfieldWidth == iEzsigntemplateformfieldWidth &&
+    other.iEzsigntemplateformfieldHeight == iEzsigntemplateformfieldHeight &&
+    other.bEzsigntemplateformfieldSelected == bEzsigntemplateformfieldSelected;
 
   @override
   int get hashCode =>

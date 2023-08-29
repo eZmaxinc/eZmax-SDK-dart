@@ -40,9 +40,9 @@ class EmailRequest {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EmailRequest &&
-     other.pkiEmailID == pkiEmailID &&
-     other.fkiEmailtypeID == fkiEmailtypeID &&
-     other.sEmailAddress == sEmailAddress;
+    other.pkiEmailID == pkiEmailID &&
+    other.fkiEmailtypeID == fkiEmailtypeID &&
+    other.sEmailAddress == sEmailAddress;
 
   @override
   int get hashCode =>

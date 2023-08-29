@@ -65,14 +65,14 @@ class TextstylestaticResponse {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is TextstylestaticResponse &&
-     other.pkiTextstylestaticID == pkiTextstylestaticID &&
-     other.fkiFontID == fkiFontID &&
-     other.bTextstylestaticBold == bTextstylestaticBold &&
-     other.bTextstylestaticUnderline == bTextstylestaticUnderline &&
-     other.bTextstylestaticItalic == bTextstylestaticItalic &&
-     other.bTextstylestaticStrikethrough == bTextstylestaticStrikethrough &&
-     other.iTextstylestaticFontcolor == iTextstylestaticFontcolor &&
-     other.iTextstylestaticSize == iTextstylestaticSize;
+    other.pkiTextstylestaticID == pkiTextstylestaticID &&
+    other.fkiFontID == fkiFontID &&
+    other.bTextstylestaticBold == bTextstylestaticBold &&
+    other.bTextstylestaticUnderline == bTextstylestaticUnderline &&
+    other.bTextstylestaticItalic == bTextstylestaticItalic &&
+    other.bTextstylestaticStrikethrough == bTextstylestaticStrikethrough &&
+    other.iTextstylestaticFontcolor == iTextstylestaticFontcolor &&
+    other.iTextstylestaticSize == iTextstylestaticSize;
 
   @override
   int get hashCode =>

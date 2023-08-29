@@ -37,8 +37,8 @@ class MultilingualApikeyDescription {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is MultilingualApikeyDescription &&
-     other.sApikeyDescription1 == sApikeyDescription1 &&
-     other.sApikeyDescription2 == sApikeyDescription2;
+    other.sApikeyDescription1 == sApikeyDescription1 &&
+    other.sApikeyDescription2 == sApikeyDescription2;
 
   @override
   int get hashCode =>

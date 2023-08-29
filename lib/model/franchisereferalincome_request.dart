@@ -81,18 +81,18 @@ class FranchisereferalincomeRequest {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is FranchisereferalincomeRequest &&
-     other.pkiFranchisereferalincomeID == pkiFranchisereferalincomeID &&
-     other.fkiFranchisebrokerID == fkiFranchisebrokerID &&
-     other.fkiFranchisereferalincomeprogramID == fkiFranchisereferalincomeprogramID &&
-     other.fkiPeriodID == fkiPeriodID &&
-     other.dFranchisereferalincomeLoan == dFranchisereferalincomeLoan &&
-     other.dFranchisereferalincomeFranchiseamount == dFranchisereferalincomeFranchiseamount &&
-     other.dFranchisereferalincomeFranchisoramount == dFranchisereferalincomeFranchisoramount &&
-     other.dFranchisereferalincomeAgentamount == dFranchisereferalincomeAgentamount &&
-     other.dtFranchisereferalincomeDisbursed == dtFranchisereferalincomeDisbursed &&
-     other.tFranchisereferalincomeComment == tFranchisereferalincomeComment &&
-     other.fkiFranchiseofficeID == fkiFranchiseofficeID &&
-     other.sFranchisereferalincomeRemoteid == sFranchisereferalincomeRemoteid;
+    other.pkiFranchisereferalincomeID == pkiFranchisereferalincomeID &&
+    other.fkiFranchisebrokerID == fkiFranchisebrokerID &&
+    other.fkiFranchisereferalincomeprogramID == fkiFranchisereferalincomeprogramID &&
+    other.fkiPeriodID == fkiPeriodID &&
+    other.dFranchisereferalincomeLoan == dFranchisereferalincomeLoan &&
+    other.dFranchisereferalincomeFranchiseamount == dFranchisereferalincomeFranchiseamount &&
+    other.dFranchisereferalincomeFranchisoramount == dFranchisereferalincomeFranchisoramount &&
+    other.dFranchisereferalincomeAgentamount == dFranchisereferalincomeAgentamount &&
+    other.dtFranchisereferalincomeDisbursed == dtFranchisereferalincomeDisbursed &&
+    other.tFranchisereferalincomeComment == tFranchisereferalincomeComment &&
+    other.fkiFranchiseofficeID == fkiFranchiseofficeID &&
+    other.sFranchisereferalincomeRemoteid == sFranchisereferalincomeRemoteid;
 
   @override
   int get hashCode =>

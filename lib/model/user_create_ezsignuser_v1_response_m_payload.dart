@@ -25,8 +25,8 @@ class UserCreateEzsignuserV1ResponseMPayload {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is UserCreateEzsignuserV1ResponseMPayload &&
-     other.aSEmailAddressSuccess == aSEmailAddressSuccess &&
-     other.aSEmailAddressFailure == aSEmailAddressFailure;
+    _deepEquality.equals(other.aSEmailAddressSuccess, aSEmailAddressSuccess) &&
+    _deepEquality.equals(other.aSEmailAddressFailure, aSEmailAddressFailure);
 
   @override
   int get hashCode =>
@@ -63,11 +63,11 @@ class UserCreateEzsignuserV1ResponseMPayload {
       }());
 
       return UserCreateEzsignuserV1ResponseMPayload(
-        aSEmailAddressSuccess: json[r'a_sEmailAddressSuccess'] is List
-            ? (json[r'a_sEmailAddressSuccess'] as List).cast<String>()
+        aSEmailAddressSuccess: json[r'a_sEmailAddressSuccess'] is Iterable
+            ? (json[r'a_sEmailAddressSuccess'] as Iterable).cast<String>().toList(growable: false)
             : const [],
-        aSEmailAddressFailure: json[r'a_sEmailAddressFailure'] is List
-            ? (json[r'a_sEmailAddressFailure'] as List).cast<String>()
+        aSEmailAddressFailure: json[r'a_sEmailAddressFailure'] is Iterable
+            ? (json[r'a_sEmailAddressFailure'] as Iterable).cast<String>().toList(growable: false)
             : const [],
       );
     }

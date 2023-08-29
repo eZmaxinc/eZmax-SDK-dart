@@ -83,19 +83,19 @@ class EzsignfolderListElement {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfolderListElement &&
-     other.pkiEzsignfolderID == pkiEzsignfolderID &&
-     other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
-     other.eEzsignfoldertypePrivacylevel == eEzsignfoldertypePrivacylevel &&
-     other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
-     other.sEzsignfolderDescription == sEzsignfolderDescription &&
-     other.eEzsignfolderStep == eEzsignfolderStep &&
-     other.dtCreatedDate == dtCreatedDate &&
-     other.dtEzsignfolderSentdate == dtEzsignfolderSentdate &&
-     other.dtEzsignfolderDuedate == dtEzsignfolderDuedate &&
-     other.iEzsigndocument == iEzsigndocument &&
-     other.iEzsigndocumentEdm == iEzsigndocumentEdm &&
-     other.iEzsignsignature == iEzsignsignature &&
-     other.iEzsignsignatureSigned == iEzsignsignatureSigned;
+    other.pkiEzsignfolderID == pkiEzsignfolderID &&
+    other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
+    other.eEzsignfoldertypePrivacylevel == eEzsignfoldertypePrivacylevel &&
+    other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
+    other.sEzsignfolderDescription == sEzsignfolderDescription &&
+    other.eEzsignfolderStep == eEzsignfolderStep &&
+    other.dtCreatedDate == dtCreatedDate &&
+    other.dtEzsignfolderSentdate == dtEzsignfolderSentdate &&
+    other.dtEzsignfolderDuedate == dtEzsignfolderDuedate &&
+    other.iEzsigndocument == iEzsigndocument &&
+    other.iEzsigndocumentEdm == iEzsigndocumentEdm &&
+    other.iEzsignsignature == iEzsignsignature &&
+    other.iEzsignsignatureSigned == iEzsignsignatureSigned;
 
   @override
   int get hashCode =>

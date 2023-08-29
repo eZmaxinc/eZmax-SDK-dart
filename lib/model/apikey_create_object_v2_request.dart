@@ -20,7 +20,7 @@ class ApikeyCreateObjectV2Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ApikeyCreateObjectV2Request &&
-     other.aObjApikey == aObjApikey;
+    _deepEquality.equals(other.aObjApikey, aObjApikey);
 
   @override
   int get hashCode =>
