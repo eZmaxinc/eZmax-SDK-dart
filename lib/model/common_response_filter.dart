@@ -14,11 +14,15 @@ class CommonResponseFilter {
   /// Returns a new [CommonResponseFilter] instance.
   CommonResponseFilter({
     this.aAutoType = const {},
+    this.aAutoTypeHaving = const {},
     this.aEnum = const {},
   });
 
   /// List of filters that can be used in *sFilter* (Automatic types)
   Map<String, String> aAutoType;
+
+  /// List of computed filters that can be used in *sFilter* (Automatic types)
+  Map<String, String> aAutoTypeHaving;
 
   /// List of filters that can be used in *sFilter* (Enum types)
   Map<String, Map<String, String>> aEnum;
@@ -26,20 +30,23 @@ class CommonResponseFilter {
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonResponseFilter &&
     _deepEquality.equals(other.aAutoType, aAutoType) &&
+    _deepEquality.equals(other.aAutoTypeHaving, aAutoTypeHaving) &&
     _deepEquality.equals(other.aEnum, aEnum);
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (aAutoType.hashCode) +
+    (aAutoTypeHaving.hashCode) +
     (aEnum.hashCode);
 
   @override
-  String toString() => 'CommonResponseFilter[aAutoType=$aAutoType, aEnum=$aEnum]';
+  String toString() => 'CommonResponseFilter[aAutoType=$aAutoType, aAutoTypeHaving=$aAutoTypeHaving, aEnum=$aEnum]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'a_AutoType'] = this.aAutoType;
+      json[r'a_AutoTypeHaving'] = this.aAutoTypeHaving;
       json[r'a_Enum'] = this.aEnum;
     return json;
   }
@@ -64,6 +71,7 @@ class CommonResponseFilter {
 
       return CommonResponseFilter(
         aAutoType: mapCastOfType<String, String>(json, r'a_AutoType') ?? const {},
+        aAutoTypeHaving: mapCastOfType<String, String>(json, r'a_AutoTypeHaving') ?? const {},
         aEnum: mapCastOfType<String, dynamic>(json, r'a_Enum') ?? const {},
       );
     }

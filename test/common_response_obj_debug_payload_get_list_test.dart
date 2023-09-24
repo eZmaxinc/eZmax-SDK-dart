@@ -51,6 +51,18 @@ void main() {
       // TODO
     });
 
+    // The maximum numbers of results to be returned
+    // int iRowMax (default value: 10000)
+    test('to test the property `iRowMax`', () async {
+      // TODO
+    });
+
+    // The starting element from where to start retrieving the results. For example if you started at iRowOffset=0 and asked for iRowMax=100, to get the next 100 results, you could specify iRowOffset=100&iRowMax=100,
+    // int iRowOffset (default value: 0)
+    test('to test the property `iRowOffset`', () async {
+      // TODO
+    });
+
 
   });
 

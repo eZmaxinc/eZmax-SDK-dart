@@ -132,6 +132,18 @@ void main() {
       // TODO
     });
 
+    // Wheter if delegation of signature is allowed to another user or not
+    // bool bEzsignfoldertypeDelegate
+    test('to test the property `bEzsignfoldertypeDelegate`', () async {
+      // TODO
+    });
+
+    // Wheter if Reassignment of signature is allowed to another signatory or not
+    // bool bEzsignfoldertypeReassign
+    test('to test the property `bEzsignfoldertypeReassign`', () async {
+      // TODO
+    });
+
     // Whether we send the Ezsigndocument and the proof as attachment in the email
     // bool bEzsignfoldertypeSendattatchmentsigner
     test('to test the property `bEzsignfoldertypeSendattatchmentsigner`', () async {

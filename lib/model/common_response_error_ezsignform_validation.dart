@@ -13,40 +13,40 @@ part of openapi.api;
 class CommonResponseErrorEzsignformValidation {
   /// Returns a new [CommonResponseErrorEzsignformValidation] instance.
   CommonResponseErrorEzsignformValidation({
-    this.aObjEzsignformfielderror = const [],
     required this.sErrorMessage,
     required this.eErrorCode,
+    this.aObjEzsignformfielderror = const [],
   });
-
-  /// 
-  List<CustomEzsignformfielderrorResponse> aObjEzsignformfielderror;
 
   /// The message giving details about the error
   String sErrorMessage;
 
   FieldEErrorCode eErrorCode;
 
+  /// 
+  List<CustomEzsignformfielderrorResponse> aObjEzsignformfielderror;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonResponseErrorEzsignformValidation &&
-    _deepEquality.equals(other.aObjEzsignformfielderror, aObjEzsignformfielderror) &&
     other.sErrorMessage == sErrorMessage &&
-    other.eErrorCode == eErrorCode;
+    other.eErrorCode == eErrorCode &&
+    _deepEquality.equals(other.aObjEzsignformfielderror, aObjEzsignformfielderror);
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (aObjEzsignformfielderror.hashCode) +
     (sErrorMessage.hashCode) +
-    (eErrorCode.hashCode);
+    (eErrorCode.hashCode) +
+    (aObjEzsignformfielderror.hashCode);
 
   @override
-  String toString() => 'CommonResponseErrorEzsignformValidation[aObjEzsignformfielderror=$aObjEzsignformfielderror, sErrorMessage=$sErrorMessage, eErrorCode=$eErrorCode]';
+  String toString() => 'CommonResponseErrorEzsignformValidation[sErrorMessage=$sErrorMessage, eErrorCode=$eErrorCode, aObjEzsignformfielderror=$aObjEzsignformfielderror]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'a_objEzsignformfielderror'] = this.aObjEzsignformfielderror;
       json[r'sErrorMessage'] = this.sErrorMessage;
       json[r'eErrorCode'] = this.eErrorCode;
+      json[r'a_objEzsignformfielderror'] = this.aObjEzsignformfielderror;
     return json;
   }
 
@@ -69,9 +69,9 @@ class CommonResponseErrorEzsignformValidation {
       }());
 
       return CommonResponseErrorEzsignformValidation(
-        aObjEzsignformfielderror: CustomEzsignformfielderrorResponse.listFromJson(json[r'a_objEzsignformfielderror']),
         sErrorMessage: mapValueOfType<String>(json, r'sErrorMessage')!,
         eErrorCode: FieldEErrorCode.fromJson(json[r'eErrorCode'])!,
+        aObjEzsignformfielderror: CustomEzsignformfielderrorResponse.listFromJson(json[r'a_objEzsignformfielderror']),
       );
     }
     return null;
@@ -119,9 +119,9 @@ class CommonResponseErrorEzsignformValidation {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'a_objEzsignformfielderror',
     'sErrorMessage',
     'eErrorCode',
+    'a_objEzsignformfielderror',
   };
 }
 

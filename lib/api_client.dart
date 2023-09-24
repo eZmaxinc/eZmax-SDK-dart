@@ -508,6 +508,8 @@ class ApiClient {
           return CustomEzsignfoldertransmissionResponse.fromJson(value);
         case 'CustomEzsignfoldertransmissionSignerResponse':
           return CustomEzsignfoldertransmissionSignerResponse.fromJson(value);
+        case 'CustomEzsignfoldertypeResponse':
+          return CustomEzsignfoldertypeResponse.fromJson(value);
         case 'CustomEzsignformfieldRequest':
           return CustomEzsignformfieldRequest.fromJson(value);
         case 'CustomEzsignformfielderrorResponse':

@@ -166,6 +166,7 @@ doc/CustomEzsignfoldersignerassociationmineResponse.md
 doc/CustomEzsignfoldersignerassociationstatusResponse.md
 doc/CustomEzsignfoldertransmissionResponse.md
 doc/CustomEzsignfoldertransmissionSignerResponse.md
+doc/CustomEzsignfoldertypeResponse.md
 doc/CustomEzsignformfieldRequest.md
 doc/CustomEzsignformfielderrorResponse.md
 doc/CustomEzsignformfielderrortestResponse.md
@@ -1367,6 +1368,7 @@ lib/model/custom_ezsignfoldersignerassociationmine_response.dart
 lib/model/custom_ezsignfoldersignerassociationstatus_response.dart
 lib/model/custom_ezsignfoldertransmission_response.dart
 lib/model/custom_ezsignfoldertransmission_signer_response.dart
+lib/model/custom_ezsignfoldertype_response.dart
 lib/model/custom_ezsignformfield_request.dart
 lib/model/custom_ezsignformfielderror_response.dart
 lib/model/custom_ezsignformfielderrortest_response.dart
@@ -2417,6 +2419,7 @@ test/custom_ezsignfoldersignerassociationmine_response_test.dart
 test/custom_ezsignfoldersignerassociationstatus_response_test.dart
 test/custom_ezsignfoldertransmission_response_test.dart
 test/custom_ezsignfoldertransmission_signer_response_test.dart
+test/custom_ezsignfoldertype_response_test.dart
 test/custom_ezsignformfield_request_test.dart
 test/custom_ezsignformfielderror_response_test.dart
 test/custom_ezsignformfielderrortest_response_test.dart

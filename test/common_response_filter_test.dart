@@ -22,6 +22,12 @@ void main() {
       // TODO
     });
 
+    // List of computed filters that can be used in *sFilter* (Automatic types)
+    // Map<String, String> aAutoTypeHaving (default value: const {})
+    test('to test the property `aAutoTypeHaving`', () async {
+      // TODO
+    });
+
     // List of filters that can be used in *sFilter* (Enum types)
     // Map<String, Map<String, String>> aEnum (default value: const {})
     test('to test the property `aEnum`', () async {

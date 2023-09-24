@@ -15,6 +15,7 @@ class EzsignfolderResponse {
   EzsignfolderResponse({
     required this.pkiEzsignfolderID,
     this.fkiEzsignfoldertypeID,
+    this.objEzsignfoldertype,
     this.sEzsignfoldertypeNameX,
     this.fkiBillingentityinternalID,
     this.sBillingentityinternalDescriptionX,
@@ -52,7 +53,14 @@ class EzsignfolderResponse {
   ///
   int? fkiEzsignfoldertypeID;
 
-  /// The name of the Ezsignfoldertype in the language of the requester
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  CustomEzsignfoldertypeResponse? objEzsignfoldertype;
+
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -223,6 +231,7 @@ class EzsignfolderResponse {
   bool operator ==(Object other) => identical(this, other) || other is EzsignfolderResponse &&
     other.pkiEzsignfolderID == pkiEzsignfolderID &&
     other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
+    other.objEzsignfoldertype == objEzsignfoldertype &&
     other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
     other.fkiBillingentityinternalID == fkiBillingentityinternalID &&
     other.sBillingentityinternalDescriptionX == sBillingentityinternalDescriptionX &&
@@ -248,6 +257,7 @@ class EzsignfolderResponse {
     // ignore: unnecessary_parenthesis
     (pkiEzsignfolderID.hashCode) +
     (fkiEzsignfoldertypeID == null ? 0 : fkiEzsignfoldertypeID!.hashCode) +
+    (objEzsignfoldertype == null ? 0 : objEzsignfoldertype!.hashCode) +
     (sEzsignfoldertypeNameX == null ? 0 : sEzsignfoldertypeNameX!.hashCode) +
     (fkiBillingentityinternalID == null ? 0 : fkiBillingentityinternalID!.hashCode) +
     (sBillingentityinternalDescriptionX == null ? 0 : sBillingentityinternalDescriptionX!.hashCode) +
@@ -269,7 +279,7 @@ class EzsignfolderResponse {
     (sEzsignfolderExternalid == null ? 0 : sEzsignfolderExternalid!.hashCode);
 
   @override
-  String toString() => 'EzsignfolderResponse[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, fkiBillingentityinternalID=$fkiBillingentityinternalID, sBillingentityinternalDescriptionX=$sBillingentityinternalDescriptionX, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sEzsigntsarequirementDescriptionX=$sEzsigntsarequirementDescriptionX, sEzsignfolderDescription=$sEzsignfolderDescription, tEzsignfolderNote=$tEzsignfolderNote, bEzsignfolderIsdisposable=$bEzsignfolderIsdisposable, eEzsignfolderSendreminderfrequency=$eEzsignfolderSendreminderfrequency, dtEzsignfolderDelayedsenddate=$dtEzsignfolderDelayedsenddate, dtEzsignfolderDuedate=$dtEzsignfolderDuedate, dtEzsignfolderSentdate=$dtEzsignfolderSentdate, dtEzsignfolderScheduledarchive=$dtEzsignfolderScheduledarchive, dtEzsignfolderScheduleddispose=$dtEzsignfolderScheduleddispose, eEzsignfolderStep=$eEzsignfolderStep, dtEzsignfolderClose=$dtEzsignfolderClose, tEzsignfolderMessage=$tEzsignfolderMessage, objAudit=$objAudit, sEzsignfolderExternalid=$sEzsignfolderExternalid]';
+  String toString() => 'EzsignfolderResponse[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, objEzsignfoldertype=$objEzsignfoldertype, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, fkiBillingentityinternalID=$fkiBillingentityinternalID, sBillingentityinternalDescriptionX=$sBillingentityinternalDescriptionX, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sEzsigntsarequirementDescriptionX=$sEzsigntsarequirementDescriptionX, sEzsignfolderDescription=$sEzsignfolderDescription, tEzsignfolderNote=$tEzsignfolderNote, bEzsignfolderIsdisposable=$bEzsignfolderIsdisposable, eEzsignfolderSendreminderfrequency=$eEzsignfolderSendreminderfrequency, dtEzsignfolderDelayedsenddate=$dtEzsignfolderDelayedsenddate, dtEzsignfolderDuedate=$dtEzsignfolderDuedate, dtEzsignfolderSentdate=$dtEzsignfolderSentdate, dtEzsignfolderScheduledarchive=$dtEzsignfolderScheduledarchive, dtEzsignfolderScheduleddispose=$dtEzsignfolderScheduleddispose, eEzsignfolderStep=$eEzsignfolderStep, dtEzsignfolderClose=$dtEzsignfolderClose, tEzsignfolderMessage=$tEzsignfolderMessage, objAudit=$objAudit, sEzsignfolderExternalid=$sEzsignfolderExternalid]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -278,6 +288,11 @@ class EzsignfolderResponse {
       json[r'fkiEzsignfoldertypeID'] = this.fkiEzsignfoldertypeID;
     } else {
       json[r'fkiEzsignfoldertypeID'] = null;
+    }
+    if (this.objEzsignfoldertype != null) {
+      json[r'objEzsignfoldertype'] = this.objEzsignfoldertype;
+    } else {
+      json[r'objEzsignfoldertype'] = null;
     }
     if (this.sEzsignfoldertypeNameX != null) {
       json[r'sEzsignfoldertypeNameX'] = this.sEzsignfoldertypeNameX;
@@ -394,6 +409,7 @@ class EzsignfolderResponse {
       return EzsignfolderResponse(
         pkiEzsignfolderID: mapValueOfType<int>(json, r'pkiEzsignfolderID')!,
         fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID'),
+        objEzsignfoldertype: CustomEzsignfoldertypeResponse.fromJson(json[r'objEzsignfoldertype']),
         sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX'),
         fkiBillingentityinternalID: mapValueOfType<int>(json, r'fkiBillingentityinternalID'),
         sBillingentityinternalDescriptionX: mapValueOfType<String>(json, r'sBillingentityinternalDescriptionX'),

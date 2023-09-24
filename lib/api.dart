@@ -263,6 +263,7 @@ part 'model/custom_ezsignfoldersignerassociationmine_response.dart';
 part 'model/custom_ezsignfoldersignerassociationstatus_response.dart';
 part 'model/custom_ezsignfoldertransmission_response.dart';
 part 'model/custom_ezsignfoldertransmission_signer_response.dart';
+part 'model/custom_ezsignfoldertype_response.dart';
 part 'model/custom_ezsignformfield_request.dart';
 part 'model/custom_ezsignformfielderror_response.dart';
 part 'model/custom_ezsignformfielderrortest_response.dart';

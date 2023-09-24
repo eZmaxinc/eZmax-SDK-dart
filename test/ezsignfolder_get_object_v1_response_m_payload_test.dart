@@ -28,7 +28,11 @@ void main() {
       // TODO
     });
 
-    // The name of the Ezsignfoldertype in the language of the requester
+    // CustomEzsignfoldertypeResponse objEzsignfoldertype
+    test('to test the property `objEzsignfoldertype`', () async {
+      // TODO
+    });
+
     // String sEzsignfoldertypeNameX
     test('to test the property `sEzsignfoldertypeNameX`', () async {
       // TODO

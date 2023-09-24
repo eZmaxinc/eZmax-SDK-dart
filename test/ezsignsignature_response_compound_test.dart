@@ -160,6 +160,11 @@ void main() {
       // TODO
     });
 
+    // CustomContactNameResponse objContactNameDelegation
+    test('to test the property `objContactNameDelegation`', () async {
+      // TODO
+    });
+
     // SignatureResponseCompound objSignature
     test('to test the property `objSignature`', () async {
       // TODO

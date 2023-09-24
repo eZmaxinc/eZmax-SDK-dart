@@ -19,6 +19,8 @@ class CommonResponseObjDebugPayloadGetList {
     required this.bVersionDeprecated,
     required this.aFilter,
     this.aOrderBy = const {},
+    this.iRowMax = 10000,
+    this.iRowOffset = 0,
   });
 
   /// The minimum version of the function that can be called
@@ -38,6 +40,17 @@ class CommonResponseObjDebugPayloadGetList {
   /// List of available values for *eOrderBy*
   Map<String, String> aOrderBy;
 
+  /// The maximum numbers of results to be returned
+  ///
+  /// Minimum value: 1
+  /// Maximum value: 10000
+  int iRowMax;
+
+  /// The starting element from where to start retrieving the results. For example if you started at iRowOffset=0 and asked for iRowMax=100, to get the next 100 results, you could specify iRowOffset=100&iRowMax=100,
+  ///
+  /// Minimum value: 0
+  int iRowOffset;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonResponseObjDebugPayloadGetList &&
     other.iVersionMin == iVersionMin &&
@@ -45,7 +58,9 @@ class CommonResponseObjDebugPayloadGetList {
     _deepEquality.equals(other.aRequiredPermission, aRequiredPermission) &&
     other.bVersionDeprecated == bVersionDeprecated &&
     other.aFilter == aFilter &&
-    _deepEquality.equals(other.aOrderBy, aOrderBy);
+    _deepEquality.equals(other.aOrderBy, aOrderBy) &&
+    other.iRowMax == iRowMax &&
+    other.iRowOffset == iRowOffset;
 
   @override
   int get hashCode =>
@@ -55,10 +70,12 @@ class CommonResponseObjDebugPayloadGetList {
     (aRequiredPermission.hashCode) +
     (bVersionDeprecated.hashCode) +
     (aFilter.hashCode) +
-    (aOrderBy.hashCode);
+    (aOrderBy.hashCode) +
+    (iRowMax.hashCode) +
+    (iRowOffset.hashCode);
 
   @override
-  String toString() => 'CommonResponseObjDebugPayloadGetList[iVersionMin=$iVersionMin, iVersionMax=$iVersionMax, aRequiredPermission=$aRequiredPermission, bVersionDeprecated=$bVersionDeprecated, aFilter=$aFilter, aOrderBy=$aOrderBy]';
+  String toString() => 'CommonResponseObjDebugPayloadGetList[iVersionMin=$iVersionMin, iVersionMax=$iVersionMax, aRequiredPermission=$aRequiredPermission, bVersionDeprecated=$bVersionDeprecated, aFilter=$aFilter, aOrderBy=$aOrderBy, iRowMax=$iRowMax, iRowOffset=$iRowOffset]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -68,6 +85,8 @@ class CommonResponseObjDebugPayloadGetList {
       json[r'bVersionDeprecated'] = this.bVersionDeprecated;
       json[r'a_Filter'] = this.aFilter;
       json[r'a_OrderBy'] = this.aOrderBy;
+      json[r'iRowMax'] = this.iRowMax;
+      json[r'iRowOffset'] = this.iRowOffset;
     return json;
   }
 
@@ -98,6 +117,8 @@ class CommonResponseObjDebugPayloadGetList {
         bVersionDeprecated: mapValueOfType<bool>(json, r'bVersionDeprecated')!,
         aFilter: CommonResponseFilter.fromJson(json[r'a_Filter'])!,
         aOrderBy: mapCastOfType<String, String>(json, r'a_OrderBy')!,
+        iRowMax: mapValueOfType<int>(json, r'iRowMax')!,
+        iRowOffset: mapValueOfType<int>(json, r'iRowOffset')!,
       );
     }
     return null;
@@ -151,6 +172,8 @@ class CommonResponseObjDebugPayloadGetList {
     'bVersionDeprecated',
     'a_Filter',
     'a_OrderBy',
+    'iRowMax',
+    'iRowOffset',
   };
 }
 

@@ -33,6 +33,8 @@ class EzsignfoldertypeResponseCompound {
     required this.eEzsignfoldertypeDisposal,
     this.iEzsignfoldertypeDisposaldays,
     required this.iEzsignfoldertypeDeadlinedays,
+    this.bEzsignfoldertypeDelegate,
+    this.bEzsignfoldertypeReassign,
     required this.bEzsignfoldertypeSendattatchmentsigner,
     required this.bEzsignfoldertypeSendsignedtodocumentowner,
     required this.bEzsignfoldertypeSendsignedtofolderowner,
@@ -203,6 +205,24 @@ class EzsignfoldertypeResponseCompound {
   /// Maximum value: 60
   int iEzsignfoldertypeDeadlinedays;
 
+  /// Wheter if delegation of signature is allowed to another user or not
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bEzsignfoldertypeDelegate;
+
+  /// Wheter if Reassignment of signature is allowed to another signatory or not
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bEzsignfoldertypeReassign;
+
   /// Whether we send the Ezsigndocument and the proof as attachment in the email
   bool bEzsignfoldertypeSendattatchmentsigner;
 
@@ -295,6 +315,8 @@ class EzsignfoldertypeResponseCompound {
     other.eEzsignfoldertypeDisposal == eEzsignfoldertypeDisposal &&
     other.iEzsignfoldertypeDisposaldays == iEzsignfoldertypeDisposaldays &&
     other.iEzsignfoldertypeDeadlinedays == iEzsignfoldertypeDeadlinedays &&
+    other.bEzsignfoldertypeDelegate == bEzsignfoldertypeDelegate &&
+    other.bEzsignfoldertypeReassign == bEzsignfoldertypeReassign &&
     other.bEzsignfoldertypeSendattatchmentsigner == bEzsignfoldertypeSendattatchmentsigner &&
     other.bEzsignfoldertypeSendsignedtodocumentowner == bEzsignfoldertypeSendsignedtodocumentowner &&
     other.bEzsignfoldertypeSendsignedtofolderowner == bEzsignfoldertypeSendsignedtofolderowner &&
@@ -335,6 +357,8 @@ class EzsignfoldertypeResponseCompound {
     (eEzsignfoldertypeDisposal.hashCode) +
     (iEzsignfoldertypeDisposaldays == null ? 0 : iEzsignfoldertypeDisposaldays!.hashCode) +
     (iEzsignfoldertypeDeadlinedays.hashCode) +
+    (bEzsignfoldertypeDelegate == null ? 0 : bEzsignfoldertypeDelegate!.hashCode) +
+    (bEzsignfoldertypeReassign == null ? 0 : bEzsignfoldertypeReassign!.hashCode) +
     (bEzsignfoldertypeSendattatchmentsigner.hashCode) +
     (bEzsignfoldertypeSendsignedtodocumentowner.hashCode) +
     (bEzsignfoldertypeSendsignedtofolderowner.hashCode) +
@@ -353,7 +377,7 @@ class EzsignfoldertypeResponseCompound {
     (aFkiUserIDSummary.hashCode);
 
   @override
-  String toString() => 'EzsignfoldertypeResponseCompound[pkiEzsignfoldertypeID=$pkiEzsignfoldertypeID, objEzsignfoldertypeName=$objEzsignfoldertypeName, fkiBrandingID=$fkiBrandingID, fkiBillingentityinternalID=$fkiBillingentityinternalID, fkiUsergroupID=$fkiUsergroupID, fkiUsergroupIDRestricted=$fkiUsergroupIDRestricted, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sBrandingDescriptionX=$sBrandingDescriptionX, sBillingentityinternalDescriptionX=$sBillingentityinternalDescriptionX, sEzsigntsarequirementDescriptionX=$sEzsigntsarequirementDescriptionX, sEmailAddressSigned=$sEmailAddressSigned, sEmailAddressSummary=$sEmailAddressSummary, sUsergroupNameX=$sUsergroupNameX, sUsergroupNameXRestricted=$sUsergroupNameXRestricted, eEzsignfoldertypePrivacylevel=$eEzsignfoldertypePrivacylevel, eEzsignfoldertypeSendreminderfrequency=$eEzsignfoldertypeSendreminderfrequency, iEzsignfoldertypeArchivaldays=$iEzsignfoldertypeArchivaldays, eEzsignfoldertypeDisposal=$eEzsignfoldertypeDisposal, iEzsignfoldertypeDisposaldays=$iEzsignfoldertypeDisposaldays, iEzsignfoldertypeDeadlinedays=$iEzsignfoldertypeDeadlinedays, bEzsignfoldertypeSendattatchmentsigner=$bEzsignfoldertypeSendattatchmentsigner, bEzsignfoldertypeSendsignedtodocumentowner=$bEzsignfoldertypeSendsignedtodocumentowner, bEzsignfoldertypeSendsignedtofolderowner=$bEzsignfoldertypeSendsignedtofolderowner, bEzsignfoldertypeSendsignedtofullgroup=$bEzsignfoldertypeSendsignedtofullgroup, bEzsignfoldertypeSendsignedtolimitedgroup=$bEzsignfoldertypeSendsignedtolimitedgroup, bEzsignfoldertypeSendsignedtocolleague=$bEzsignfoldertypeSendsignedtocolleague, bEzsignfoldertypeSendsummarytodocumentowner=$bEzsignfoldertypeSendsummarytodocumentowner, bEzsignfoldertypeSendsummarytofolderowner=$bEzsignfoldertypeSendsummarytofolderowner, bEzsignfoldertypeSendsummarytofullgroup=$bEzsignfoldertypeSendsummarytofullgroup, bEzsignfoldertypeSendsummarytolimitedgroup=$bEzsignfoldertypeSendsummarytolimitedgroup, bEzsignfoldertypeSendsummarytocolleague=$bEzsignfoldertypeSendsummarytocolleague, bEzsignfoldertypeIncludeproofsigner=$bEzsignfoldertypeIncludeproofsigner, bEzsignfoldertypeIncludeproofuser=$bEzsignfoldertypeIncludeproofuser, bEzsignfoldertypeIsactive=$bEzsignfoldertypeIsactive, aFkiUserIDSigned=$aFkiUserIDSigned, aFkiUserIDSummary=$aFkiUserIDSummary]';
+  String toString() => 'EzsignfoldertypeResponseCompound[pkiEzsignfoldertypeID=$pkiEzsignfoldertypeID, objEzsignfoldertypeName=$objEzsignfoldertypeName, fkiBrandingID=$fkiBrandingID, fkiBillingentityinternalID=$fkiBillingentityinternalID, fkiUsergroupID=$fkiUsergroupID, fkiUsergroupIDRestricted=$fkiUsergroupIDRestricted, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sBrandingDescriptionX=$sBrandingDescriptionX, sBillingentityinternalDescriptionX=$sBillingentityinternalDescriptionX, sEzsigntsarequirementDescriptionX=$sEzsigntsarequirementDescriptionX, sEmailAddressSigned=$sEmailAddressSigned, sEmailAddressSummary=$sEmailAddressSummary, sUsergroupNameX=$sUsergroupNameX, sUsergroupNameXRestricted=$sUsergroupNameXRestricted, eEzsignfoldertypePrivacylevel=$eEzsignfoldertypePrivacylevel, eEzsignfoldertypeSendreminderfrequency=$eEzsignfoldertypeSendreminderfrequency, iEzsignfoldertypeArchivaldays=$iEzsignfoldertypeArchivaldays, eEzsignfoldertypeDisposal=$eEzsignfoldertypeDisposal, iEzsignfoldertypeDisposaldays=$iEzsignfoldertypeDisposaldays, iEzsignfoldertypeDeadlinedays=$iEzsignfoldertypeDeadlinedays, bEzsignfoldertypeDelegate=$bEzsignfoldertypeDelegate, bEzsignfoldertypeReassign=$bEzsignfoldertypeReassign, bEzsignfoldertypeSendattatchmentsigner=$bEzsignfoldertypeSendattatchmentsigner, bEzsignfoldertypeSendsignedtodocumentowner=$bEzsignfoldertypeSendsignedtodocumentowner, bEzsignfoldertypeSendsignedtofolderowner=$bEzsignfoldertypeSendsignedtofolderowner, bEzsignfoldertypeSendsignedtofullgroup=$bEzsignfoldertypeSendsignedtofullgroup, bEzsignfoldertypeSendsignedtolimitedgroup=$bEzsignfoldertypeSendsignedtolimitedgroup, bEzsignfoldertypeSendsignedtocolleague=$bEzsignfoldertypeSendsignedtocolleague, bEzsignfoldertypeSendsummarytodocumentowner=$bEzsignfoldertypeSendsummarytodocumentowner, bEzsignfoldertypeSendsummarytofolderowner=$bEzsignfoldertypeSendsummarytofolderowner, bEzsignfoldertypeSendsummarytofullgroup=$bEzsignfoldertypeSendsummarytofullgroup, bEzsignfoldertypeSendsummarytolimitedgroup=$bEzsignfoldertypeSendsummarytolimitedgroup, bEzsignfoldertypeSendsummarytocolleague=$bEzsignfoldertypeSendsummarytocolleague, bEzsignfoldertypeIncludeproofsigner=$bEzsignfoldertypeIncludeproofsigner, bEzsignfoldertypeIncludeproofuser=$bEzsignfoldertypeIncludeproofuser, bEzsignfoldertypeIsactive=$bEzsignfoldertypeIsactive, aFkiUserIDSigned=$aFkiUserIDSigned, aFkiUserIDSummary=$aFkiUserIDSummary]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -425,6 +449,16 @@ class EzsignfoldertypeResponseCompound {
       json[r'iEzsignfoldertypeDisposaldays'] = null;
     }
       json[r'iEzsignfoldertypeDeadlinedays'] = this.iEzsignfoldertypeDeadlinedays;
+    if (this.bEzsignfoldertypeDelegate != null) {
+      json[r'bEzsignfoldertypeDelegate'] = this.bEzsignfoldertypeDelegate;
+    } else {
+      json[r'bEzsignfoldertypeDelegate'] = null;
+    }
+    if (this.bEzsignfoldertypeReassign != null) {
+      json[r'bEzsignfoldertypeReassign'] = this.bEzsignfoldertypeReassign;
+    } else {
+      json[r'bEzsignfoldertypeReassign'] = null;
+    }
       json[r'bEzsignfoldertypeSendattatchmentsigner'] = this.bEzsignfoldertypeSendattatchmentsigner;
       json[r'bEzsignfoldertypeSendsignedtodocumentowner'] = this.bEzsignfoldertypeSendsignedtodocumentowner;
       json[r'bEzsignfoldertypeSendsignedtofolderowner'] = this.bEzsignfoldertypeSendsignedtofolderowner;
@@ -499,6 +533,8 @@ class EzsignfoldertypeResponseCompound {
         eEzsignfoldertypeDisposal: FieldEEzsignfoldertypeDisposal.fromJson(json[r'eEzsignfoldertypeDisposal'])!,
         iEzsignfoldertypeDisposaldays: mapValueOfType<int>(json, r'iEzsignfoldertypeDisposaldays'),
         iEzsignfoldertypeDeadlinedays: mapValueOfType<int>(json, r'iEzsignfoldertypeDeadlinedays')!,
+        bEzsignfoldertypeDelegate: mapValueOfType<bool>(json, r'bEzsignfoldertypeDelegate'),
+        bEzsignfoldertypeReassign: mapValueOfType<bool>(json, r'bEzsignfoldertypeReassign'),
         bEzsignfoldertypeSendattatchmentsigner: mapValueOfType<bool>(json, r'bEzsignfoldertypeSendattatchmentsigner')!,
         bEzsignfoldertypeSendsignedtodocumentowner: mapValueOfType<bool>(json, r'bEzsignfoldertypeSendsignedtodocumentowner')!,
         bEzsignfoldertypeSendsignedtofolderowner: mapValueOfType<bool>(json, r'bEzsignfoldertypeSendsignedtofolderowner')!,

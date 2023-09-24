@@ -47,6 +47,8 @@ class FieldEEzsigndocumentlogType {
   static const signatureAttachmentDeleted = FieldEEzsigndocumentlogType._(r'SignatureAttachmentDeleted');
   static const declinedToSign = FieldEEzsigndocumentlogType._(r'DeclinedToSign');
   static const delayedSendEmail = FieldEEzsigndocumentlogType._(r'DelayedSendEmail');
+  static const regeneratePage = FieldEEzsigndocumentlogType._(r'RegeneratePage');
+  static const regeneratePageForm = FieldEEzsigndocumentlogType._(r'RegeneratePageForm');
 
   /// List of all possible values in this [enum][FieldEEzsigndocumentlogType].
   static const values = <FieldEEzsigndocumentlogType>[
@@ -74,6 +76,8 @@ class FieldEEzsigndocumentlogType {
     signatureAttachmentDeleted,
     declinedToSign,
     delayedSendEmail,
+    regeneratePage,
+    regeneratePageForm,
   ];
 
   static FieldEEzsigndocumentlogType? fromJson(dynamic value) => FieldEEzsigndocumentlogTypeTypeTransformer().decode(value);
@@ -136,6 +140,8 @@ class FieldEEzsigndocumentlogTypeTypeTransformer {
         case r'SignatureAttachmentDeleted': return FieldEEzsigndocumentlogType.signatureAttachmentDeleted;
         case r'DeclinedToSign': return FieldEEzsigndocumentlogType.declinedToSign;
         case r'DelayedSendEmail': return FieldEEzsigndocumentlogType.delayedSendEmail;
+        case r'RegeneratePage': return FieldEEzsigndocumentlogType.regeneratePage;
+        case r'RegeneratePageForm': return FieldEEzsigndocumentlogType.regeneratePageForm;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');

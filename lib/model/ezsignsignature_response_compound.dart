@@ -38,6 +38,7 @@ class EzsignsignatureResponseCompound {
     this.eEzsignsignatureTextvalidation,
     this.sEzsignsignatureRegexp,
     required this.objContactName,
+    this.objContactNameDelegation,
     this.objSignature,
     this.bEzsignsignatureCustomdate,
     this.aObjEzsignsignaturecustomdate = const [],
@@ -236,6 +237,14 @@ class EzsignsignatureResponseCompound {
   /// source code must fall back to having a nullable type.
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
+  CustomContactNameResponse? objContactNameDelegation;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
   SignatureResponseCompound? objSignature;
 
   /// Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)
@@ -285,6 +294,7 @@ class EzsignsignatureResponseCompound {
     other.eEzsignsignatureTextvalidation == eEzsignsignatureTextvalidation &&
     other.sEzsignsignatureRegexp == sEzsignsignatureRegexp &&
     other.objContactName == objContactName &&
+    other.objContactNameDelegation == objContactNameDelegation &&
     other.objSignature == objSignature &&
     other.bEzsignsignatureCustomdate == bEzsignsignatureCustomdate &&
     _deepEquality.equals(other.aObjEzsignsignaturecustomdate, aObjEzsignsignaturecustomdate) &&
@@ -318,13 +328,14 @@ class EzsignsignatureResponseCompound {
     (eEzsignsignatureTextvalidation == null ? 0 : eEzsignsignatureTextvalidation!.hashCode) +
     (sEzsignsignatureRegexp == null ? 0 : sEzsignsignatureRegexp!.hashCode) +
     (objContactName.hashCode) +
+    (objContactNameDelegation == null ? 0 : objContactNameDelegation!.hashCode) +
     (objSignature == null ? 0 : objSignature!.hashCode) +
     (bEzsignsignatureCustomdate == null ? 0 : bEzsignsignatureCustomdate!.hashCode) +
     (aObjEzsignsignaturecustomdate.hashCode) +
     (objCreditcardtransaction == null ? 0 : objCreditcardtransaction!.hashCode);
 
   @override
-  String toString() => 'EzsignsignatureResponseCompound[pkiEzsignsignatureID=$pkiEzsignsignatureID, fkiEzsigndocumentID=$fkiEzsigndocumentID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureHeight=$iEzsignsignatureHeight, iEzsignsignatureWidth=$iEzsignsignatureWidth, iEzsignsignatureStep=$iEzsignsignatureStep, eEzsignsignatureType=$eEzsignsignatureType, tEzsignsignatureTooltip=$tEzsignsignatureTooltip, eEzsignsignatureTooltipposition=$eEzsignsignatureTooltipposition, eEzsignsignatureFont=$eEzsignsignatureFont, iEzsignsignatureValidationstep=$iEzsignsignatureValidationstep, sEzsignsignatureAttachmentdescription=$sEzsignsignatureAttachmentdescription, eEzsignsignatureAttachmentnamesource=$eEzsignsignatureAttachmentnamesource, bEzsignsignatureRequired=$bEzsignsignatureRequired, fkiEzsignfoldersignerassociationIDValidation=$fkiEzsignfoldersignerassociationIDValidation, dtEzsignsignatureDate=$dtEzsignsignatureDate, iEzsignsignatureattachmentCount=$iEzsignsignatureattachmentCount, sEzsignsignatureDescription=$sEzsignsignatureDescription, iEzsignsignatureMaxlength=$iEzsignsignatureMaxlength, eEzsignsignatureTextvalidation=$eEzsignsignatureTextvalidation, sEzsignsignatureRegexp=$sEzsignsignatureRegexp, objContactName=$objContactName, objSignature=$objSignature, bEzsignsignatureCustomdate=$bEzsignsignatureCustomdate, aObjEzsignsignaturecustomdate=$aObjEzsignsignaturecustomdate, objCreditcardtransaction=$objCreditcardtransaction]';
+  String toString() => 'EzsignsignatureResponseCompound[pkiEzsignsignatureID=$pkiEzsignsignatureID, fkiEzsigndocumentID=$fkiEzsigndocumentID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureHeight=$iEzsignsignatureHeight, iEzsignsignatureWidth=$iEzsignsignatureWidth, iEzsignsignatureStep=$iEzsignsignatureStep, eEzsignsignatureType=$eEzsignsignatureType, tEzsignsignatureTooltip=$tEzsignsignatureTooltip, eEzsignsignatureTooltipposition=$eEzsignsignatureTooltipposition, eEzsignsignatureFont=$eEzsignsignatureFont, iEzsignsignatureValidationstep=$iEzsignsignatureValidationstep, sEzsignsignatureAttachmentdescription=$sEzsignsignatureAttachmentdescription, eEzsignsignatureAttachmentnamesource=$eEzsignsignatureAttachmentnamesource, bEzsignsignatureRequired=$bEzsignsignatureRequired, fkiEzsignfoldersignerassociationIDValidation=$fkiEzsignfoldersignerassociationIDValidation, dtEzsignsignatureDate=$dtEzsignsignatureDate, iEzsignsignatureattachmentCount=$iEzsignsignatureattachmentCount, sEzsignsignatureDescription=$sEzsignsignatureDescription, iEzsignsignatureMaxlength=$iEzsignsignatureMaxlength, eEzsignsignatureTextvalidation=$eEzsignsignatureTextvalidation, sEzsignsignatureRegexp=$sEzsignsignatureRegexp, objContactName=$objContactName, objContactNameDelegation=$objContactNameDelegation, objSignature=$objSignature, bEzsignsignatureCustomdate=$bEzsignsignatureCustomdate, aObjEzsignsignaturecustomdate=$aObjEzsignsignaturecustomdate, objCreditcardtransaction=$objCreditcardtransaction]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -417,6 +428,11 @@ class EzsignsignatureResponseCompound {
       json[r'sEzsignsignatureRegexp'] = null;
     }
       json[r'objContactName'] = this.objContactName;
+    if (this.objContactNameDelegation != null) {
+      json[r'objContactNameDelegation'] = this.objContactNameDelegation;
+    } else {
+      json[r'objContactNameDelegation'] = null;
+    }
     if (this.objSignature != null) {
       json[r'objSignature'] = this.objSignature;
     } else {
@@ -480,6 +496,7 @@ class EzsignsignatureResponseCompound {
         eEzsignsignatureTextvalidation: EnumTextvalidation.fromJson(json[r'eEzsignsignatureTextvalidation']),
         sEzsignsignatureRegexp: mapValueOfType<String>(json, r'sEzsignsignatureRegexp'),
         objContactName: CustomContactNameResponse.fromJson(json[r'objContactName'])!,
+        objContactNameDelegation: CustomContactNameResponse.fromJson(json[r'objContactNameDelegation']),
         objSignature: SignatureResponseCompound.fromJson(json[r'objSignature']),
         bEzsignsignatureCustomdate: mapValueOfType<bool>(json, r'bEzsignsignatureCustomdate'),
         aObjEzsignsignaturecustomdate: EzsignsignaturecustomdateResponseCompound.listFromJson(json[r'a_objEzsignsignaturecustomdate']),

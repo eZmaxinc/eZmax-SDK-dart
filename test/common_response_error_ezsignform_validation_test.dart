@@ -16,12 +16,6 @@ void main() {
   // final instance = CommonResponseErrorEzsignformValidation();
 
   group('test CommonResponseErrorEzsignformValidation', () {
-    // 
-    // List<CustomEzsignformfielderrorResponse> aObjEzsignformfielderror (default value: const [])
-    test('to test the property `aObjEzsignformfielderror`', () async {
-      // TODO
-    });
-
     // The message giving details about the error
     // String sErrorMessage
     test('to test the property `sErrorMessage`', () async {
@@ -30,6 +24,12 @@ void main() {
 
     // FieldEErrorCode eErrorCode
     test('to test the property `eErrorCode`', () async {
+      // TODO
+    });
+
+    // 
+    // List<CustomEzsignformfielderrorResponse> aObjEzsignformfielderror (default value: const [])
+    test('to test the property `aObjEzsignformfielderror`', () async {
       // TODO
     });
 
