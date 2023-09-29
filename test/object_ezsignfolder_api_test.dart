@@ -130,15 +130,6 @@ void main() {
       // TODO
     });
 
-    // Retrieve your own Ezsignfoldersignerassociations from an existing Ezsignfolder
-    //
-    // 
-    //
-    //Future<EzsignfolderGetEzsignfoldersignerassociationsmineV1Response> ezsignfolderGetEzsignfoldersignerassociationsmineV1(int pkiEzsignfolderID) async
-    test('test ezsignfolderGetEzsignfoldersignerassociationsmineV1', () async {
-      // TODO
-    });
-
     // Retrieve an existing Ezsignfolder's automatic Ezsignsignatures
     //
     // Return the Ezsignsignatures that can be signed by the current user at the current step in the process

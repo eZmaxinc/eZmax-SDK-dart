@@ -500,8 +500,6 @@ class ApiClient {
           return CustomEzsignfoldersignerassociationActionableElementResponse.fromJson(value);
         case 'CustomEzsignfoldersignerassociationmessageRequest':
           return CustomEzsignfoldersignerassociationmessageRequest.fromJson(value);
-        case 'CustomEzsignfoldersignerassociationmineResponse':
-          return CustomEzsignfoldersignerassociationmineResponse.fromJson(value);
         case 'CustomEzsignfoldersignerassociationstatusResponse':
           return CustomEzsignfoldersignerassociationstatusResponse.fromJson(value);
         case 'CustomEzsignfoldertransmissionResponse':
@@ -932,10 +930,6 @@ class ApiClient {
           return EzsignfolderGetEzsignfoldersignerassociationsV1Response.fromJson(value);
         case 'EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload':
           return EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload.fromJson(value);
-        case 'EzsignfolderGetEzsignfoldersignerassociationsmineV1Response':
-          return EzsignfolderGetEzsignfoldersignerassociationsmineV1Response.fromJson(value);
-        case 'EzsignfolderGetEzsignfoldersignerassociationsmineV1ResponseMPayload':
-          return EzsignfolderGetEzsignfoldersignerassociationsmineV1ResponseMPayload.fromJson(value);
         case 'EzsignfolderGetEzsignsignaturesAutomaticV1Response':
           return EzsignfolderGetEzsignsignaturesAutomaticV1Response.fromJson(value);
         case 'EzsignfolderGetEzsignsignaturesAutomaticV1ResponseMPayload':

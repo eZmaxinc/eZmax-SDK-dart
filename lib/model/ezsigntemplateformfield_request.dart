@@ -21,6 +21,7 @@ class EzsigntemplateformfieldRequest {
     required this.iEzsigntemplateformfieldY,
     required this.iEzsigntemplateformfieldWidth,
     required this.iEzsigntemplateformfieldHeight,
+    this.bEzsigntemplateformfieldAutocomplete,
     this.bEzsigntemplateformfieldSelected,
   });
 
@@ -72,6 +73,15 @@ class EzsigntemplateformfieldRequest {
   /// Minimum value: 0
   int iEzsigntemplateformfieldHeight;
 
+  /// Whether the Ezsigntemplateformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsigntemplateformfieldgroupType is **Text**
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bEzsigntemplateformfieldAutocomplete;
+
   /// Whether the Ezsigntemplateformfield is selected or not by default.  This can only be set if eEzsigntemplateformfieldgroupType is **Checkbox** or **Radio**
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -91,6 +101,7 @@ class EzsigntemplateformfieldRequest {
     other.iEzsigntemplateformfieldY == iEzsigntemplateformfieldY &&
     other.iEzsigntemplateformfieldWidth == iEzsigntemplateformfieldWidth &&
     other.iEzsigntemplateformfieldHeight == iEzsigntemplateformfieldHeight &&
+    other.bEzsigntemplateformfieldAutocomplete == bEzsigntemplateformfieldAutocomplete &&
     other.bEzsigntemplateformfieldSelected == bEzsigntemplateformfieldSelected;
 
   @override
@@ -104,10 +115,11 @@ class EzsigntemplateformfieldRequest {
     (iEzsigntemplateformfieldY.hashCode) +
     (iEzsigntemplateformfieldWidth.hashCode) +
     (iEzsigntemplateformfieldHeight.hashCode) +
+    (bEzsigntemplateformfieldAutocomplete == null ? 0 : bEzsigntemplateformfieldAutocomplete!.hashCode) +
     (bEzsigntemplateformfieldSelected == null ? 0 : bEzsigntemplateformfieldSelected!.hashCode);
 
   @override
-  String toString() => 'EzsigntemplateformfieldRequest[pkiEzsigntemplateformfieldID=$pkiEzsigntemplateformfieldID, iEzsigntemplatedocumentpagePagenumber=$iEzsigntemplatedocumentpagePagenumber, sEzsigntemplateformfieldLabel=$sEzsigntemplateformfieldLabel, sEzsigntemplateformfieldValue=$sEzsigntemplateformfieldValue, iEzsigntemplateformfieldX=$iEzsigntemplateformfieldX, iEzsigntemplateformfieldY=$iEzsigntemplateformfieldY, iEzsigntemplateformfieldWidth=$iEzsigntemplateformfieldWidth, iEzsigntemplateformfieldHeight=$iEzsigntemplateformfieldHeight, bEzsigntemplateformfieldSelected=$bEzsigntemplateformfieldSelected]';
+  String toString() => 'EzsigntemplateformfieldRequest[pkiEzsigntemplateformfieldID=$pkiEzsigntemplateformfieldID, iEzsigntemplatedocumentpagePagenumber=$iEzsigntemplatedocumentpagePagenumber, sEzsigntemplateformfieldLabel=$sEzsigntemplateformfieldLabel, sEzsigntemplateformfieldValue=$sEzsigntemplateformfieldValue, iEzsigntemplateformfieldX=$iEzsigntemplateformfieldX, iEzsigntemplateformfieldY=$iEzsigntemplateformfieldY, iEzsigntemplateformfieldWidth=$iEzsigntemplateformfieldWidth, iEzsigntemplateformfieldHeight=$iEzsigntemplateformfieldHeight, bEzsigntemplateformfieldAutocomplete=$bEzsigntemplateformfieldAutocomplete, bEzsigntemplateformfieldSelected=$bEzsigntemplateformfieldSelected]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -127,6 +139,11 @@ class EzsigntemplateformfieldRequest {
       json[r'iEzsigntemplateformfieldY'] = this.iEzsigntemplateformfieldY;
       json[r'iEzsigntemplateformfieldWidth'] = this.iEzsigntemplateformfieldWidth;
       json[r'iEzsigntemplateformfieldHeight'] = this.iEzsigntemplateformfieldHeight;
+    if (this.bEzsigntemplateformfieldAutocomplete != null) {
+      json[r'bEzsigntemplateformfieldAutocomplete'] = this.bEzsigntemplateformfieldAutocomplete;
+    } else {
+      json[r'bEzsigntemplateformfieldAutocomplete'] = null;
+    }
     if (this.bEzsigntemplateformfieldSelected != null) {
       json[r'bEzsigntemplateformfieldSelected'] = this.bEzsigntemplateformfieldSelected;
     } else {
@@ -162,6 +179,7 @@ class EzsigntemplateformfieldRequest {
         iEzsigntemplateformfieldY: mapValueOfType<int>(json, r'iEzsigntemplateformfieldY')!,
         iEzsigntemplateformfieldWidth: mapValueOfType<int>(json, r'iEzsigntemplateformfieldWidth')!,
         iEzsigntemplateformfieldHeight: mapValueOfType<int>(json, r'iEzsigntemplateformfieldHeight')!,
+        bEzsigntemplateformfieldAutocomplete: mapValueOfType<bool>(json, r'bEzsigntemplateformfieldAutocomplete'),
         bEzsigntemplateformfieldSelected: mapValueOfType<bool>(json, r'bEzsigntemplateformfieldSelected'),
       );
     }

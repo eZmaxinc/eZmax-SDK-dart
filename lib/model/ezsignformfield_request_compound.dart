@@ -21,6 +21,7 @@ class EzsignformfieldRequestCompound {
     required this.iEzsignformfieldY,
     required this.iEzsignformfieldWidth,
     required this.iEzsignformfieldHeight,
+    this.bEzsignformfieldAutocomplete,
     this.bEzsignformfieldSelected,
     this.sEzsignformfieldEnteredvalue,
   });
@@ -73,6 +74,15 @@ class EzsignformfieldRequestCompound {
   /// Minimum value: 0
   int iEzsignformfieldHeight;
 
+  /// Whether the Ezsignformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsignformfieldgroupType is **Text**
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bEzsignformfieldAutocomplete;
+
   /// Whether the Ezsignformfield is selected or not by default.  This can only be set if eEzsignformfieldgroupType is **Checkbox** or **Radio**
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -101,6 +111,7 @@ class EzsignformfieldRequestCompound {
     other.iEzsignformfieldY == iEzsignformfieldY &&
     other.iEzsignformfieldWidth == iEzsignformfieldWidth &&
     other.iEzsignformfieldHeight == iEzsignformfieldHeight &&
+    other.bEzsignformfieldAutocomplete == bEzsignformfieldAutocomplete &&
     other.bEzsignformfieldSelected == bEzsignformfieldSelected &&
     other.sEzsignformfieldEnteredvalue == sEzsignformfieldEnteredvalue;
 
@@ -115,11 +126,12 @@ class EzsignformfieldRequestCompound {
     (iEzsignformfieldY.hashCode) +
     (iEzsignformfieldWidth.hashCode) +
     (iEzsignformfieldHeight.hashCode) +
+    (bEzsignformfieldAutocomplete == null ? 0 : bEzsignformfieldAutocomplete!.hashCode) +
     (bEzsignformfieldSelected == null ? 0 : bEzsignformfieldSelected!.hashCode) +
     (sEzsignformfieldEnteredvalue == null ? 0 : sEzsignformfieldEnteredvalue!.hashCode);
 
   @override
-  String toString() => 'EzsignformfieldRequestCompound[pkiEzsignformfieldID=$pkiEzsignformfieldID, iEzsignpagePagenumber=$iEzsignpagePagenumber, sEzsignformfieldLabel=$sEzsignformfieldLabel, sEzsignformfieldValue=$sEzsignformfieldValue, iEzsignformfieldX=$iEzsignformfieldX, iEzsignformfieldY=$iEzsignformfieldY, iEzsignformfieldWidth=$iEzsignformfieldWidth, iEzsignformfieldHeight=$iEzsignformfieldHeight, bEzsignformfieldSelected=$bEzsignformfieldSelected, sEzsignformfieldEnteredvalue=$sEzsignformfieldEnteredvalue]';
+  String toString() => 'EzsignformfieldRequestCompound[pkiEzsignformfieldID=$pkiEzsignformfieldID, iEzsignpagePagenumber=$iEzsignpagePagenumber, sEzsignformfieldLabel=$sEzsignformfieldLabel, sEzsignformfieldValue=$sEzsignformfieldValue, iEzsignformfieldX=$iEzsignformfieldX, iEzsignformfieldY=$iEzsignformfieldY, iEzsignformfieldWidth=$iEzsignformfieldWidth, iEzsignformfieldHeight=$iEzsignformfieldHeight, bEzsignformfieldAutocomplete=$bEzsignformfieldAutocomplete, bEzsignformfieldSelected=$bEzsignformfieldSelected, sEzsignformfieldEnteredvalue=$sEzsignformfieldEnteredvalue]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -139,6 +151,11 @@ class EzsignformfieldRequestCompound {
       json[r'iEzsignformfieldY'] = this.iEzsignformfieldY;
       json[r'iEzsignformfieldWidth'] = this.iEzsignformfieldWidth;
       json[r'iEzsignformfieldHeight'] = this.iEzsignformfieldHeight;
+    if (this.bEzsignformfieldAutocomplete != null) {
+      json[r'bEzsignformfieldAutocomplete'] = this.bEzsignformfieldAutocomplete;
+    } else {
+      json[r'bEzsignformfieldAutocomplete'] = null;
+    }
     if (this.bEzsignformfieldSelected != null) {
       json[r'bEzsignformfieldSelected'] = this.bEzsignformfieldSelected;
     } else {
@@ -179,6 +196,7 @@ class EzsignformfieldRequestCompound {
         iEzsignformfieldY: mapValueOfType<int>(json, r'iEzsignformfieldY')!,
         iEzsignformfieldWidth: mapValueOfType<int>(json, r'iEzsignformfieldWidth')!,
         iEzsignformfieldHeight: mapValueOfType<int>(json, r'iEzsignformfieldHeight')!,
+        bEzsignformfieldAutocomplete: mapValueOfType<bool>(json, r'bEzsignformfieldAutocomplete'),
         bEzsignformfieldSelected: mapValueOfType<bool>(json, r'bEzsignformfieldSelected'),
         sEzsignformfieldEnteredvalue: mapValueOfType<String>(json, r'sEzsignformfieldEnteredvalue'),
       );

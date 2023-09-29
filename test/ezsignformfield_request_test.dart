@@ -64,6 +64,12 @@ void main() {
       // TODO
     });
 
+    // Whether the Ezsignformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsignformfieldgroupType is **Text**
+    // bool bEzsignformfieldAutocomplete
+    test('to test the property `bEzsignformfieldAutocomplete`', () async {
+      // TODO
+    });
+
     // Whether the Ezsignformfield is selected or not by default.  This can only be set if eEzsignformfieldgroupType is **Checkbox** or **Radio**
     // bool bEzsignformfieldSelected
     test('to test the property `bEzsignformfieldSelected`', () async {

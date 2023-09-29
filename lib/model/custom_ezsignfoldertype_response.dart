@@ -14,9 +14,9 @@ class CustomEzsignfoldertypeResponse {
   /// Returns a new [CustomEzsignfoldertypeResponse] instance.
   CustomEzsignfoldertypeResponse({
     required this.pkiEzsignfoldertypeID,
-    required this.sEzsignfoldertypeNameX,
-    required this.bEzsignfoldertypeIncludeproofsigner,
-    required this.bEzsignfoldertypeIncludeproofuser,
+    this.sEzsignfoldertypeNameX,
+    this.bEzsignfoldertypeIncludeproofsigner,
+    this.bEzsignfoldertypeIncludeproofuser,
     this.bEzsignfoldertypeDelegate,
     this.bEzsignfoldertypeReassign,
   });
@@ -27,13 +27,31 @@ class CustomEzsignfoldertypeResponse {
   int pkiEzsignfoldertypeID;
 
   /// The name of the Ezsignfoldertype in the language of the requester
-  String sEzsignfoldertypeNameX;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEzsignfoldertypeNameX;
 
   /// Whether we include the proof with the signed Ezsigndocument for Ezsignsigners
-  bool bEzsignfoldertypeIncludeproofsigner;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bEzsignfoldertypeIncludeproofsigner;
 
   /// Whether we include the proof with the signed Ezsigndocument for users
-  bool bEzsignfoldertypeIncludeproofuser;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bEzsignfoldertypeIncludeproofuser;
 
   /// Wheter if delegation of signature is allowed to another user or not
   ///
@@ -66,9 +84,9 @@ class CustomEzsignfoldertypeResponse {
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiEzsignfoldertypeID.hashCode) +
-    (sEzsignfoldertypeNameX.hashCode) +
-    (bEzsignfoldertypeIncludeproofsigner.hashCode) +
-    (bEzsignfoldertypeIncludeproofuser.hashCode) +
+    (sEzsignfoldertypeNameX == null ? 0 : sEzsignfoldertypeNameX!.hashCode) +
+    (bEzsignfoldertypeIncludeproofsigner == null ? 0 : bEzsignfoldertypeIncludeproofsigner!.hashCode) +
+    (bEzsignfoldertypeIncludeproofuser == null ? 0 : bEzsignfoldertypeIncludeproofuser!.hashCode) +
     (bEzsignfoldertypeDelegate == null ? 0 : bEzsignfoldertypeDelegate!.hashCode) +
     (bEzsignfoldertypeReassign == null ? 0 : bEzsignfoldertypeReassign!.hashCode);
 
@@ -78,9 +96,21 @@ class CustomEzsignfoldertypeResponse {
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiEzsignfoldertypeID'] = this.pkiEzsignfoldertypeID;
+    if (this.sEzsignfoldertypeNameX != null) {
       json[r'sEzsignfoldertypeNameX'] = this.sEzsignfoldertypeNameX;
+    } else {
+      json[r'sEzsignfoldertypeNameX'] = null;
+    }
+    if (this.bEzsignfoldertypeIncludeproofsigner != null) {
       json[r'bEzsignfoldertypeIncludeproofsigner'] = this.bEzsignfoldertypeIncludeproofsigner;
+    } else {
+      json[r'bEzsignfoldertypeIncludeproofsigner'] = null;
+    }
+    if (this.bEzsignfoldertypeIncludeproofuser != null) {
       json[r'bEzsignfoldertypeIncludeproofuser'] = this.bEzsignfoldertypeIncludeproofuser;
+    } else {
+      json[r'bEzsignfoldertypeIncludeproofuser'] = null;
+    }
     if (this.bEzsignfoldertypeDelegate != null) {
       json[r'bEzsignfoldertypeDelegate'] = this.bEzsignfoldertypeDelegate;
     } else {
@@ -114,9 +144,9 @@ class CustomEzsignfoldertypeResponse {
 
       return CustomEzsignfoldertypeResponse(
         pkiEzsignfoldertypeID: mapValueOfType<int>(json, r'pkiEzsignfoldertypeID')!,
-        sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX')!,
-        bEzsignfoldertypeIncludeproofsigner: mapValueOfType<bool>(json, r'bEzsignfoldertypeIncludeproofsigner')!,
-        bEzsignfoldertypeIncludeproofuser: mapValueOfType<bool>(json, r'bEzsignfoldertypeIncludeproofuser')!,
+        sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX'),
+        bEzsignfoldertypeIncludeproofsigner: mapValueOfType<bool>(json, r'bEzsignfoldertypeIncludeproofsigner'),
+        bEzsignfoldertypeIncludeproofuser: mapValueOfType<bool>(json, r'bEzsignfoldertypeIncludeproofuser'),
         bEzsignfoldertypeDelegate: mapValueOfType<bool>(json, r'bEzsignfoldertypeDelegate'),
         bEzsignfoldertypeReassign: mapValueOfType<bool>(json, r'bEzsignfoldertypeReassign'),
       );
@@ -167,9 +197,6 @@ class CustomEzsignfoldertypeResponse {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'pkiEzsignfoldertypeID',
-    'sEzsignfoldertypeNameX',
-    'bEzsignfoldertypeIncludeproofsigner',
-    'bEzsignfoldertypeIncludeproofuser',
   };
 }
 
