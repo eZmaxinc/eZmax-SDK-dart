@@ -143,7 +143,6 @@ class ModulesectionResponseCompound {
     'fkiModuleID',
     'sModulesectionInternalname',
     'sModulesectionNameX',
-    'a_objPermission',
   };
 }
 

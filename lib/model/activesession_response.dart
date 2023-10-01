@@ -22,7 +22,7 @@ class ActivesessionResponse {
     required this.bActivesessionDebug,
     required this.bActivesessionIssuperadmin,
     required this.pksCustomerCode,
-    this.fkiSystemconfigurationtypeID,
+    required this.fkiSystemconfigurationtypeID,
     this.fkiSignatureID,
   });
 
@@ -56,13 +56,7 @@ class ActivesessionResponse {
   /// The unique ID of the Systemconfigurationtype
   ///
   /// Minimum value: 1
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  int? fkiSystemconfigurationtypeID;
+  int fkiSystemconfigurationtypeID;
 
   /// The unique ID of the Signature
   ///
@@ -102,7 +96,7 @@ class ActivesessionResponse {
     (bActivesessionDebug.hashCode) +
     (bActivesessionIssuperadmin.hashCode) +
     (pksCustomerCode.hashCode) +
-    (fkiSystemconfigurationtypeID == null ? 0 : fkiSystemconfigurationtypeID!.hashCode) +
+    (fkiSystemconfigurationtypeID.hashCode) +
     (fkiSignatureID == null ? 0 : fkiSignatureID!.hashCode);
 
   @override
@@ -119,11 +113,7 @@ class ActivesessionResponse {
       json[r'bActivesessionDebug'] = this.bActivesessionDebug;
       json[r'bActivesessionIssuperadmin'] = this.bActivesessionIssuperadmin;
       json[r'pksCustomerCode'] = this.pksCustomerCode;
-    if (this.fkiSystemconfigurationtypeID != null) {
       json[r'fkiSystemconfigurationtypeID'] = this.fkiSystemconfigurationtypeID;
-    } else {
-      json[r'fkiSystemconfigurationtypeID'] = null;
-    }
     if (this.fkiSignatureID != null) {
       json[r'fkiSignatureID'] = this.fkiSignatureID;
     } else {
@@ -160,7 +150,7 @@ class ActivesessionResponse {
         bActivesessionDebug: mapValueOfType<bool>(json, r'bActivesessionDebug')!,
         bActivesessionIssuperadmin: mapValueOfType<bool>(json, r'bActivesessionIssuperadmin')!,
         pksCustomerCode: mapValueOfType<String>(json, r'pksCustomerCode')!,
-        fkiSystemconfigurationtypeID: mapValueOfType<int>(json, r'fkiSystemconfigurationtypeID'),
+        fkiSystemconfigurationtypeID: mapValueOfType<int>(json, r'fkiSystemconfigurationtypeID')!,
         fkiSignatureID: mapValueOfType<int>(json, r'fkiSignatureID'),
       );
     }
@@ -218,6 +208,7 @@ class ActivesessionResponse {
     'bActivesessionDebug',
     'bActivesessionIssuperadmin',
     'pksCustomerCode',
+    'fkiSystemconfigurationtypeID',
   };
 }
 

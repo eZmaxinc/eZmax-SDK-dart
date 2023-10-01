@@ -25,7 +25,7 @@ class FranchisereferalincomeRequestCompound {
     required this.tFranchisereferalincomeComment,
     required this.fkiFranchiseofficeID,
     required this.sFranchisereferalincomeRemoteid,
-    required this.objAddress,
+    this.objAddress,
     this.aObjContact = const [],
   });
 
@@ -81,7 +81,13 @@ class FranchisereferalincomeRequestCompound {
   /// 
   String sFranchisereferalincomeRemoteid;
 
-  AddressRequest objAddress;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  AddressRequest? objAddress;
 
   List<ContactRequestCompound> aObjContact;
 
@@ -117,7 +123,7 @@ class FranchisereferalincomeRequestCompound {
     (tFranchisereferalincomeComment.hashCode) +
     (fkiFranchiseofficeID.hashCode) +
     (sFranchisereferalincomeRemoteid.hashCode) +
-    (objAddress.hashCode) +
+    (objAddress == null ? 0 : objAddress!.hashCode) +
     (aObjContact.hashCode);
 
   @override
@@ -141,7 +147,11 @@ class FranchisereferalincomeRequestCompound {
       json[r'tFranchisereferalincomeComment'] = this.tFranchisereferalincomeComment;
       json[r'fkiFranchiseofficeID'] = this.fkiFranchiseofficeID;
       json[r'sFranchisereferalincomeRemoteid'] = this.sFranchisereferalincomeRemoteid;
+    if (this.objAddress != null) {
       json[r'objAddress'] = this.objAddress;
+    } else {
+      json[r'objAddress'] = null;
+    }
       json[r'a_objContact'] = this.aObjContact;
     return json;
   }
@@ -177,7 +187,7 @@ class FranchisereferalincomeRequestCompound {
         tFranchisereferalincomeComment: mapValueOfType<String>(json, r'tFranchisereferalincomeComment')!,
         fkiFranchiseofficeID: mapValueOfType<int>(json, r'fkiFranchiseofficeID')!,
         sFranchisereferalincomeRemoteid: mapValueOfType<String>(json, r'sFranchisereferalincomeRemoteid')!,
-        objAddress: AddressRequest.fromJson(json[r'objAddress'])!,
+        objAddress: AddressRequest.fromJson(json[r'objAddress']),
         aObjContact: ContactRequestCompound.listFromJson(json[r'a_objContact']),
       );
     }
@@ -237,7 +247,6 @@ class FranchisereferalincomeRequestCompound {
     'tFranchisereferalincomeComment',
     'fkiFranchiseofficeID',
     'sFranchisereferalincomeRemoteid',
-    'objAddress',
     'a_objContact',
   };
 }

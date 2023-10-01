@@ -24,7 +24,7 @@ class WebhookResponseCompound {
     required this.sWebhookEmailfailed,
     this.bWebhookIsactive,
     required this.bWebhookSkipsslvalidation,
-    required this.sWebhookEvent,
+    this.sWebhookEvent,
   });
 
   /// The unique ID of the Webhook
@@ -90,7 +90,13 @@ class WebhookResponseCompound {
   bool bWebhookSkipsslvalidation;
 
   /// The concatenated string to describe the Webhook event
-  String sWebhookEvent;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sWebhookEvent;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is WebhookResponseCompound &&
@@ -121,7 +127,7 @@ class WebhookResponseCompound {
     (sWebhookEmailfailed.hashCode) +
     (bWebhookIsactive == null ? 0 : bWebhookIsactive!.hashCode) +
     (bWebhookSkipsslvalidation.hashCode) +
-    (sWebhookEvent.hashCode);
+    (sWebhookEvent == null ? 0 : sWebhookEvent!.hashCode);
 
   @override
   String toString() => 'WebhookResponseCompound[pkiWebhookID=$pkiWebhookID, sWebhookDescription=$sWebhookDescription, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, sWebhookUrl=$sWebhookUrl, sWebhookEmailfailed=$sWebhookEmailfailed, bWebhookIsactive=$bWebhookIsactive, bWebhookSkipsslvalidation=$bWebhookSkipsslvalidation, sWebhookEvent=$sWebhookEvent]';
@@ -159,7 +165,11 @@ class WebhookResponseCompound {
       json[r'bWebhookIsactive'] = null;
     }
       json[r'bWebhookSkipsslvalidation'] = this.bWebhookSkipsslvalidation;
+    if (this.sWebhookEvent != null) {
       json[r'sWebhookEvent'] = this.sWebhookEvent;
+    } else {
+      json[r'sWebhookEvent'] = null;
+    }
     return json;
   }
 
@@ -193,7 +203,7 @@ class WebhookResponseCompound {
         sWebhookEmailfailed: mapValueOfType<String>(json, r'sWebhookEmailfailed')!,
         bWebhookIsactive: mapValueOfType<bool>(json, r'bWebhookIsactive'),
         bWebhookSkipsslvalidation: mapValueOfType<bool>(json, r'bWebhookSkipsslvalidation')!,
-        sWebhookEvent: mapValueOfType<String>(json, r'sWebhookEvent')!,
+        sWebhookEvent: mapValueOfType<String>(json, r'sWebhookEvent'),
       );
     }
     return null;
@@ -247,7 +257,6 @@ class WebhookResponseCompound {
     'sWebhookUrl',
     'sWebhookEmailfailed',
     'bWebhookSkipsslvalidation',
-    'sWebhookEvent',
   };
 }
 

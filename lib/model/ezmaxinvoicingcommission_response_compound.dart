@@ -21,7 +21,7 @@ class EzmaxinvoicingcommissionResponseCompound {
     required this.dtEzmaxinvoicingcommissionEnd,
     required this.iEzmaxinvoicingcommissionDays,
     required this.dEzmaxinvoicingcommissionAmount,
-    required this.objContactName,
+    this.objContactName,
   });
 
   /// The unique ID of the Ezmaxinvoicingcommission
@@ -80,7 +80,13 @@ class EzmaxinvoicingcommissionResponseCompound {
   /// The amount of Ezmaxinvoicingcommission
   String dEzmaxinvoicingcommissionAmount;
 
-  CustomContactNameResponse objContactName;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  CustomContactNameResponse? objContactName;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzmaxinvoicingcommissionResponseCompound &&
@@ -105,7 +111,7 @@ class EzmaxinvoicingcommissionResponseCompound {
     (dtEzmaxinvoicingcommissionEnd.hashCode) +
     (iEzmaxinvoicingcommissionDays.hashCode) +
     (dEzmaxinvoicingcommissionAmount.hashCode) +
-    (objContactName.hashCode);
+    (objContactName == null ? 0 : objContactName!.hashCode);
 
   @override
   String toString() => 'EzmaxinvoicingcommissionResponseCompound[pkiEzmaxinvoicingcommissionID=$pkiEzmaxinvoicingcommissionID, fkiEzmaxinvoicingsummaryglobalID=$fkiEzmaxinvoicingsummaryglobalID, fkiEzmaxpartnerID=$fkiEzmaxpartnerID, fkiEzmaxrepresentativeID=$fkiEzmaxrepresentativeID, dtEzmaxinvoicingcommissionStart=$dtEzmaxinvoicingcommissionStart, dtEzmaxinvoicingcommissionEnd=$dtEzmaxinvoicingcommissionEnd, iEzmaxinvoicingcommissionDays=$iEzmaxinvoicingcommissionDays, dEzmaxinvoicingcommissionAmount=$dEzmaxinvoicingcommissionAmount, objContactName=$objContactName]';
@@ -136,7 +142,11 @@ class EzmaxinvoicingcommissionResponseCompound {
       json[r'dtEzmaxinvoicingcommissionEnd'] = this.dtEzmaxinvoicingcommissionEnd;
       json[r'iEzmaxinvoicingcommissionDays'] = this.iEzmaxinvoicingcommissionDays;
       json[r'dEzmaxinvoicingcommissionAmount'] = this.dEzmaxinvoicingcommissionAmount;
+    if (this.objContactName != null) {
       json[r'objContactName'] = this.objContactName;
+    } else {
+      json[r'objContactName'] = null;
+    }
     return json;
   }
 
@@ -167,7 +177,7 @@ class EzmaxinvoicingcommissionResponseCompound {
         dtEzmaxinvoicingcommissionEnd: mapValueOfType<String>(json, r'dtEzmaxinvoicingcommissionEnd')!,
         iEzmaxinvoicingcommissionDays: mapValueOfType<int>(json, r'iEzmaxinvoicingcommissionDays')!,
         dEzmaxinvoicingcommissionAmount: mapValueOfType<String>(json, r'dEzmaxinvoicingcommissionAmount')!,
-        objContactName: CustomContactNameResponse.fromJson(json[r'objContactName'])!,
+        objContactName: CustomContactNameResponse.fromJson(json[r'objContactName']),
       );
     }
     return null;
@@ -219,7 +229,6 @@ class EzmaxinvoicingcommissionResponseCompound {
     'dtEzmaxinvoicingcommissionEnd',
     'iEzmaxinvoicingcommissionDays',
     'dEzmaxinvoicingcommissionAmount',
-    'objContactName',
   };
 }
 

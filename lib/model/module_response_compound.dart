@@ -162,7 +162,6 @@ class ModuleResponseCompound {
     'sModuleNameX',
     'bModuleRegistered',
     'bModuleRegisteredapi',
-    'a_objModulesection',
   };
 }
 

@@ -132,6 +132,7 @@ class NotificationtestGetElementsV1ResponseMPayload {
   static const requiredKeys = <String>{
     'pkiNotificationtestID',
     'sNotificationtestFunction',
+    'a_sVariableobjectProperty',
     'a_objVariableobject',
   };
 }

@@ -13,19 +13,13 @@ part of openapi.api;
 class CustomCreditcardtransactionResponse {
   /// Returns a new [CustomCreditcardtransactionResponse] instance.
   CustomCreditcardtransactionResponse({
-    this.eCreditcardtypeCodename,
+    required this.eCreditcardtypeCodename,
     required this.dCreditcardtransactionAmount,
     required this.sCreditcardtransactionPartiallydecryptednumber,
     required this.sCreditcardtransactionReferencenumber,
   });
 
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  FieldECreditcardtypeCodename? eCreditcardtypeCodename;
+  FieldECreditcardtypeCodename eCreditcardtypeCodename;
 
   /// The amount of the Creditcardtransaction
   String dCreditcardtransactionAmount;
@@ -46,7 +40,7 @@ class CustomCreditcardtransactionResponse {
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (eCreditcardtypeCodename == null ? 0 : eCreditcardtypeCodename!.hashCode) +
+    (eCreditcardtypeCodename.hashCode) +
     (dCreditcardtransactionAmount.hashCode) +
     (sCreditcardtransactionPartiallydecryptednumber.hashCode) +
     (sCreditcardtransactionReferencenumber.hashCode);
@@ -56,11 +50,7 @@ class CustomCreditcardtransactionResponse {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (this.eCreditcardtypeCodename != null) {
       json[r'eCreditcardtypeCodename'] = this.eCreditcardtypeCodename;
-    } else {
-      json[r'eCreditcardtypeCodename'] = null;
-    }
       json[r'dCreditcardtransactionAmount'] = this.dCreditcardtransactionAmount;
       json[r'sCreditcardtransactionPartiallydecryptednumber'] = this.sCreditcardtransactionPartiallydecryptednumber;
       json[r'sCreditcardtransactionReferencenumber'] = this.sCreditcardtransactionReferencenumber;
@@ -86,7 +76,7 @@ class CustomCreditcardtransactionResponse {
       }());
 
       return CustomCreditcardtransactionResponse(
-        eCreditcardtypeCodename: FieldECreditcardtypeCodename.fromJson(json[r'eCreditcardtypeCodename']),
+        eCreditcardtypeCodename: FieldECreditcardtypeCodename.fromJson(json[r'eCreditcardtypeCodename'])!,
         dCreditcardtransactionAmount: mapValueOfType<String>(json, r'dCreditcardtransactionAmount')!,
         sCreditcardtransactionPartiallydecryptednumber: mapValueOfType<String>(json, r'sCreditcardtransactionPartiallydecryptednumber')!,
         sCreditcardtransactionReferencenumber: mapValueOfType<String>(json, r'sCreditcardtransactionReferencenumber')!,
@@ -137,6 +127,7 @@ class CustomCreditcardtransactionResponse {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
+    'eCreditcardtypeCodename',
     'dCreditcardtransactionAmount',
     'sCreditcardtransactionPartiallydecryptednumber',
     'sCreditcardtransactionReferencenumber',

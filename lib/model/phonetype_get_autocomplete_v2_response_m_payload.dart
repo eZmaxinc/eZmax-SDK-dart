@@ -104,6 +104,7 @@ class PhonetypeGetAutocompleteV2ResponseMPayload {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
+    'a_objPhonetype',
   };
 }
 

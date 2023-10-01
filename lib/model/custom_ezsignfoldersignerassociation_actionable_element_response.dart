@@ -22,7 +22,7 @@ class CustomEzsignfoldersignerassociationActionableElementResponse {
     this.objUser,
     this.objEzsignsigner,
     required this.bEzsignfoldersignerassociationHasactionableelementsCurrent,
-    this.bEzsignfoldersignerassociationHasactionableelementsFuture,
+    required this.bEzsignfoldersignerassociationHasactionableelementsFuture,
   });
 
   /// The unique ID of the Ezsignfoldersignerassociation
@@ -72,13 +72,7 @@ class CustomEzsignfoldersignerassociationActionableElementResponse {
   bool bEzsignfoldersignerassociationHasactionableelementsCurrent;
 
   /// Indicates if the Ezsignfoldersignerassociation has actionable elements in a future step
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  bool? bEzsignfoldersignerassociationHasactionableelementsFuture;
+  bool bEzsignfoldersignerassociationHasactionableelementsFuture;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomEzsignfoldersignerassociationActionableElementResponse &&
@@ -105,7 +99,7 @@ class CustomEzsignfoldersignerassociationActionableElementResponse {
     (objUser == null ? 0 : objUser!.hashCode) +
     (objEzsignsigner == null ? 0 : objEzsignsigner!.hashCode) +
     (bEzsignfoldersignerassociationHasactionableelementsCurrent.hashCode) +
-    (bEzsignfoldersignerassociationHasactionableelementsFuture == null ? 0 : bEzsignfoldersignerassociationHasactionableelementsFuture!.hashCode);
+    (bEzsignfoldersignerassociationHasactionableelementsFuture.hashCode);
 
   @override
   String toString() => 'CustomEzsignfoldersignerassociationActionableElementResponse[pkiEzsignfoldersignerassociationID=$pkiEzsignfoldersignerassociationID, fkiEzsignfolderID=$fkiEzsignfolderID, bEzsignfoldersignerassociationDelayedsend=$bEzsignfoldersignerassociationDelayedsend, bEzsignfoldersignerassociationReceivecopy=$bEzsignfoldersignerassociationReceivecopy, tEzsignfoldersignerassociationMessage=$tEzsignfoldersignerassociationMessage, objEzsignsignergroup=$objEzsignsignergroup, objUser=$objUser, objEzsignsigner=$objEzsignsigner, bEzsignfoldersignerassociationHasactionableelementsCurrent=$bEzsignfoldersignerassociationHasactionableelementsCurrent, bEzsignfoldersignerassociationHasactionableelementsFuture=$bEzsignfoldersignerassociationHasactionableelementsFuture]';
@@ -133,11 +127,7 @@ class CustomEzsignfoldersignerassociationActionableElementResponse {
       json[r'objEzsignsigner'] = null;
     }
       json[r'bEzsignfoldersignerassociationHasactionableelementsCurrent'] = this.bEzsignfoldersignerassociationHasactionableelementsCurrent;
-    if (this.bEzsignfoldersignerassociationHasactionableelementsFuture != null) {
       json[r'bEzsignfoldersignerassociationHasactionableelementsFuture'] = this.bEzsignfoldersignerassociationHasactionableelementsFuture;
-    } else {
-      json[r'bEzsignfoldersignerassociationHasactionableelementsFuture'] = null;
-    }
     return json;
   }
 
@@ -169,7 +159,7 @@ class CustomEzsignfoldersignerassociationActionableElementResponse {
         objUser: EzsignfoldersignerassociationResponseCompoundUser.fromJson(json[r'objUser']),
         objEzsignsigner: EzsignsignerResponseCompound.fromJson(json[r'objEzsignsigner']),
         bEzsignfoldersignerassociationHasactionableelementsCurrent: mapValueOfType<bool>(json, r'bEzsignfoldersignerassociationHasactionableelementsCurrent')!,
-        bEzsignfoldersignerassociationHasactionableelementsFuture: mapValueOfType<bool>(json, r'bEzsignfoldersignerassociationHasactionableelementsFuture'),
+        bEzsignfoldersignerassociationHasactionableelementsFuture: mapValueOfType<bool>(json, r'bEzsignfoldersignerassociationHasactionableelementsFuture')!,
       );
     }
     return null;
@@ -223,6 +213,7 @@ class CustomEzsignfoldersignerassociationActionableElementResponse {
     'bEzsignfoldersignerassociationReceivecopy',
     'tEzsignfoldersignerassociationMessage',
     'bEzsignfoldersignerassociationHasactionableelementsCurrent',
+    'bEzsignfoldersignerassociationHasactionableelementsFuture',
   };
 }
 

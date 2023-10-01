@@ -124,7 +124,6 @@ class ModulegroupResponseCompound {
   static const requiredKeys = <String>{
     'pkiModulegroupID',
     'sModulegroupNameX',
-    'a_objModule',
   };
 }
 

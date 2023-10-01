@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **tFranchisereferalincomeComment** | **String** | Comment about the transaction | 
 **fkiFranchiseofficeID** | **int** | The unique ID of the Franchisereoffice | 
 **sFranchisereferalincomeRemoteid** | **String** |  | 
-**objAddress** | [**AddressRequest**](AddressRequest.md) |  | 
+**objAddress** | [**AddressRequest**](AddressRequest.md) |  | [optional] 
 **aObjContact** | [**List<ContactRequestCompound>**](ContactRequestCompound.md) |  | [default to const []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

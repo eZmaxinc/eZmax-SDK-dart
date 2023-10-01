@@ -22,7 +22,7 @@ class ActivesessionGetCurrentV1ResponseMPayload {
     required this.bActivesessionDebug,
     required this.bActivesessionIssuperadmin,
     required this.pksCustomerCode,
-    this.fkiSystemconfigurationtypeID,
+    required this.fkiSystemconfigurationtypeID,
     this.fkiSignatureID,
     this.aPkiPermissionID = const [],
     required this.objUserReal,
@@ -61,13 +61,7 @@ class ActivesessionGetCurrentV1ResponseMPayload {
   /// The unique ID of the Systemconfigurationtype
   ///
   /// Minimum value: 1
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  int? fkiSystemconfigurationtypeID;
+  int fkiSystemconfigurationtypeID;
 
   /// The unique ID of the Signature
   ///
@@ -136,7 +130,7 @@ class ActivesessionGetCurrentV1ResponseMPayload {
     (bActivesessionDebug.hashCode) +
     (bActivesessionIssuperadmin.hashCode) +
     (pksCustomerCode.hashCode) +
-    (fkiSystemconfigurationtypeID == null ? 0 : fkiSystemconfigurationtypeID!.hashCode) +
+    (fkiSystemconfigurationtypeID.hashCode) +
     (fkiSignatureID == null ? 0 : fkiSignatureID!.hashCode) +
     (aPkiPermissionID.hashCode) +
     (objUserReal.hashCode) +
@@ -158,11 +152,7 @@ class ActivesessionGetCurrentV1ResponseMPayload {
       json[r'bActivesessionDebug'] = this.bActivesessionDebug;
       json[r'bActivesessionIssuperadmin'] = this.bActivesessionIssuperadmin;
       json[r'pksCustomerCode'] = this.pksCustomerCode;
-    if (this.fkiSystemconfigurationtypeID != null) {
       json[r'fkiSystemconfigurationtypeID'] = this.fkiSystemconfigurationtypeID;
-    } else {
-      json[r'fkiSystemconfigurationtypeID'] = null;
-    }
     if (this.fkiSignatureID != null) {
       json[r'fkiSignatureID'] = this.fkiSignatureID;
     } else {
@@ -212,7 +202,7 @@ class ActivesessionGetCurrentV1ResponseMPayload {
         bActivesessionDebug: mapValueOfType<bool>(json, r'bActivesessionDebug')!,
         bActivesessionIssuperadmin: mapValueOfType<bool>(json, r'bActivesessionIssuperadmin')!,
         pksCustomerCode: mapValueOfType<String>(json, r'pksCustomerCode')!,
-        fkiSystemconfigurationtypeID: mapValueOfType<int>(json, r'fkiSystemconfigurationtypeID'),
+        fkiSystemconfigurationtypeID: mapValueOfType<int>(json, r'fkiSystemconfigurationtypeID')!,
         fkiSignatureID: mapValueOfType<int>(json, r'fkiSignatureID'),
         aPkiPermissionID: json[r'a_pkiPermissionID'] is Iterable
             ? (json[r'a_pkiPermissionID'] as Iterable).cast<int>().toList(growable: false)
@@ -279,6 +269,7 @@ class ActivesessionGetCurrentV1ResponseMPayload {
     'bActivesessionDebug',
     'bActivesessionIssuperadmin',
     'pksCustomerCode',
+    'fkiSystemconfigurationtypeID',
     'a_pkiPermissionID',
     'objUserReal',
     'a_eModuleInternalname',
