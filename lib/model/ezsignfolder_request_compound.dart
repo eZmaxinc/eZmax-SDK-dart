@@ -17,7 +17,7 @@ class EzsignfolderRequestCompound {
     required this.fkiEzsignfoldertypeID,
     this.fkiEzsigntsarequirementID,
     required this.sEzsignfolderDescription,
-    required this.tEzsignfolderNote,
+    this.tEzsignfolderNote,
     required this.eEzsignfolderSendreminderfrequency,
     this.sEzsignfolderExternalid,
   });
@@ -54,7 +54,13 @@ class EzsignfolderRequestCompound {
   String sEzsignfolderDescription;
 
   /// Note about the Ezsignfolder
-  String tEzsignfolderNote;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? tEzsignfolderNote;
 
   FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency;
 
@@ -84,7 +90,7 @@ class EzsignfolderRequestCompound {
     (fkiEzsignfoldertypeID.hashCode) +
     (fkiEzsigntsarequirementID == null ? 0 : fkiEzsigntsarequirementID!.hashCode) +
     (sEzsignfolderDescription.hashCode) +
-    (tEzsignfolderNote.hashCode) +
+    (tEzsignfolderNote == null ? 0 : tEzsignfolderNote!.hashCode) +
     (eEzsignfolderSendreminderfrequency.hashCode) +
     (sEzsignfolderExternalid == null ? 0 : sEzsignfolderExternalid!.hashCode);
 
@@ -105,7 +111,11 @@ class EzsignfolderRequestCompound {
       json[r'fkiEzsigntsarequirementID'] = null;
     }
       json[r'sEzsignfolderDescription'] = this.sEzsignfolderDescription;
+    if (this.tEzsignfolderNote != null) {
       json[r'tEzsignfolderNote'] = this.tEzsignfolderNote;
+    } else {
+      json[r'tEzsignfolderNote'] = null;
+    }
       json[r'eEzsignfolderSendreminderfrequency'] = this.eEzsignfolderSendreminderfrequency;
     if (this.sEzsignfolderExternalid != null) {
       json[r'sEzsignfolderExternalid'] = this.sEzsignfolderExternalid;
@@ -138,7 +148,7 @@ class EzsignfolderRequestCompound {
         fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID')!,
         fkiEzsigntsarequirementID: mapValueOfType<int>(json, r'fkiEzsigntsarequirementID'),
         sEzsignfolderDescription: mapValueOfType<String>(json, r'sEzsignfolderDescription')!,
-        tEzsignfolderNote: mapValueOfType<String>(json, r'tEzsignfolderNote')!,
+        tEzsignfolderNote: mapValueOfType<String>(json, r'tEzsignfolderNote'),
         eEzsignfolderSendreminderfrequency: FieldEEzsignfolderSendreminderfrequency.fromJson(json[r'eEzsignfolderSendreminderfrequency'])!,
         sEzsignfolderExternalid: mapValueOfType<String>(json, r'sEzsignfolderExternalid'),
       );
@@ -190,7 +200,6 @@ class EzsignfolderRequestCompound {
   static const requiredKeys = <String>{
     'fkiEzsignfoldertypeID',
     'sEzsignfolderDescription',
-    'tEzsignfolderNote',
     'eEzsignfolderSendreminderfrequency',
   };
 }

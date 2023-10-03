@@ -13,13 +13,19 @@ part of openapi.api;
 class EzsignfolderSendV3Request {
   /// Returns a new [EzsignfolderSendV3Request] instance.
   EzsignfolderSendV3Request({
-    required this.tEzsignfolderMessage,
+    this.tEzsignfolderMessage,
     this.dtEzsignfolderDelayedsenddate,
     this.aFkiEzsignfoldersignerassociationID = const [],
   });
 
   /// A custom text message that will be added to the email sent.
-  String tEzsignfolderMessage;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? tEzsignfolderMessage;
 
   /// The date and time at which the Ezsignfolder will be sent in the future.
   ///
@@ -41,7 +47,7 @@ class EzsignfolderSendV3Request {
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (tEzsignfolderMessage.hashCode) +
+    (tEzsignfolderMessage == null ? 0 : tEzsignfolderMessage!.hashCode) +
     (dtEzsignfolderDelayedsenddate == null ? 0 : dtEzsignfolderDelayedsenddate!.hashCode) +
     (aFkiEzsignfoldersignerassociationID.hashCode);
 
@@ -50,7 +56,11 @@ class EzsignfolderSendV3Request {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
+    if (this.tEzsignfolderMessage != null) {
       json[r'tEzsignfolderMessage'] = this.tEzsignfolderMessage;
+    } else {
+      json[r'tEzsignfolderMessage'] = null;
+    }
     if (this.dtEzsignfolderDelayedsenddate != null) {
       json[r'dtEzsignfolderDelayedsenddate'] = this.dtEzsignfolderDelayedsenddate;
     } else {
@@ -79,7 +89,7 @@ class EzsignfolderSendV3Request {
       }());
 
       return EzsignfolderSendV3Request(
-        tEzsignfolderMessage: mapValueOfType<String>(json, r'tEzsignfolderMessage')!,
+        tEzsignfolderMessage: mapValueOfType<String>(json, r'tEzsignfolderMessage'),
         dtEzsignfolderDelayedsenddate: mapValueOfType<String>(json, r'dtEzsignfolderDelayedsenddate'),
         aFkiEzsignfoldersignerassociationID: json[r'a_fkiEzsignfoldersignerassociationID'] is Iterable
             ? (json[r'a_fkiEzsignfoldersignerassociationID'] as Iterable).cast<int>().toList(growable: false)
@@ -131,7 +141,6 @@ class EzsignfolderSendV3Request {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'tEzsignfolderMessage',
     'a_fkiEzsignfoldersignerassociationID',
   };
 }
