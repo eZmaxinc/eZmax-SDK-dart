@@ -788,6 +788,9 @@ doc/GlobalEzmaxclientVersionV1Response.md
 doc/GlobalEzmaxcustomerApi.md
 doc/GlobalEzmaxcustomerGetConfigurationV1Response.md
 doc/HeaderAcceptLanguage.md
+doc/LanguageAutocompleteElementResponse.md
+doc/LanguageGetAutocompleteV2Response.md
+doc/LanguageGetAutocompleteV2ResponseMPayload.md
 doc/ModuleEzsignApi.md
 doc/ModuleReportApi.md
 doc/ModuleResponse.md
@@ -858,6 +861,7 @@ doc/ObjectFontApi.md
 doc/ObjectFranchisebrokerApi.md
 doc/ObjectFranchiseofficeApi.md
 doc/ObjectFranchisereferalincomeApi.md
+doc/ObjectLanguageApi.md
 doc/ObjectModulegroupApi.md
 doc/ObjectNotificationsectionApi.md
 doc/ObjectNotificationtestApi.md
@@ -1185,6 +1189,7 @@ lib/api/object_font_api.dart
 lib/api/object_franchisebroker_api.dart
 lib/api/object_franchiseoffice_api.dart
 lib/api/object_franchisereferalincome_api.dart
+lib/api/object_language_api.dart
 lib/api/object_modulegroup_api.dart
 lib/api/object_notificationsection_api.dart
 lib/api/object_notificationtest_api.dart
@@ -2000,6 +2005,9 @@ lib/model/global_customer_get_endpoint_v1_response.dart
 lib/model/global_ezmaxclient_version_v1_response.dart
 lib/model/global_ezmaxcustomer_get_configuration_v1_response.dart
 lib/model/header_accept_language.dart
+lib/model/language_autocomplete_element_response.dart
+lib/model/language_get_autocomplete_v2_response.dart
+lib/model/language_get_autocomplete_v2_response_m_payload.dart
 lib/model/module_response.dart
 lib/model/module_response_compound.dart
 lib/model/modulegroup_get_all_v1_response.dart
@@ -3067,6 +3075,9 @@ test/global_ezmaxclient_version_v1_response_test.dart
 test/global_ezmaxcustomer_api_test.dart
 test/global_ezmaxcustomer_get_configuration_v1_response_test.dart
 test/header_accept_language_test.dart
+test/language_autocomplete_element_response_test.dart
+test/language_get_autocomplete_v2_response_m_payload_test.dart
+test/language_get_autocomplete_v2_response_test.dart
 test/module_ezsign_api_test.dart
 test/module_report_api_test.dart
 test/module_response_compound_test.dart
@@ -3137,6 +3148,7 @@ test/object_font_api_test.dart
 test/object_franchisebroker_api_test.dart
 test/object_franchiseoffice_api_test.dart
 test/object_franchisereferalincome_api_test.dart
+test/object_language_api_test.dart
 test/object_modulegroup_api_test.dart
 test/object_notificationsection_api_test.dart
 test/object_notificationtest_api_test.dart

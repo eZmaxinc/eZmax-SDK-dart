@@ -267,6 +267,7 @@ Class | Method | HTTP request | Description
 *ObjectFranchiseofficeApi* | [**franchiseofficeGetAutocompleteV2**](doc//ObjectFranchiseofficeApi.md#franchiseofficegetautocompletev2) | **GET** /2/object/franchiseoffice/getAutocomplete/{sSelector} | Retrieve Franchiseoffices and IDs
 *ObjectFranchisereferalincomeApi* | [**franchisereferalincomeCreateObjectV1**](doc//ObjectFranchisereferalincomeApi.md#franchisereferalincomecreateobjectv1) | **POST** /1/object/franchisereferalincome | Create a new Franchisereferalincome
 *ObjectFranchisereferalincomeApi* | [**franchisereferalincomeCreateObjectV2**](doc//ObjectFranchisereferalincomeApi.md#franchisereferalincomecreateobjectv2) | **POST** /2/object/franchisereferalincome | Create a new Franchisereferalincome
+*ObjectLanguageApi* | [**languageGetAutocompleteV2**](doc//ObjectLanguageApi.md#languagegetautocompletev2) | **GET** /2/object/language/getAutocomplete/{sSelector} | Retrieve Languages and IDs
 *ObjectModulegroupApi* | [**modulegroupGetAllV1**](doc//ObjectModulegroupApi.md#modulegroupgetallv1) | **GET** /1/object/modulegroup/getAll/{eContext} | Retrieve all Modulegroups
 *ObjectNotificationsectionApi* | [**notificationsectionGetNotificationtestsV1**](doc//ObjectNotificationsectionApi.md#notificationsectiongetnotificationtestsv1) | **GET** /1/object/notificationsection/{pkiNotificationsectionID}/getNotificationtests | Retrieve an existing Notificationsection's Notificationtests
 *ObjectNotificationtestApi* | [**notificationtestGetElementsV1**](doc//ObjectNotificationtestApi.md#notificationtestgetelementsv1) | **GET** /1/object/notificationtest/{pkiNotificationtestID}/getElements | Retrieve an existing Notificationtest's Elements
@@ -1141,6 +1142,9 @@ Class | Method | HTTP request | Description
  - [GlobalEzmaxclientVersionV1Response](doc//GlobalEzmaxclientVersionV1Response.md)
  - [GlobalEzmaxcustomerGetConfigurationV1Response](doc//GlobalEzmaxcustomerGetConfigurationV1Response.md)
  - [HeaderAcceptLanguage](doc//HeaderAcceptLanguage.md)
+ - [LanguageAutocompleteElementResponse](doc//LanguageAutocompleteElementResponse.md)
+ - [LanguageGetAutocompleteV2Response](doc//LanguageGetAutocompleteV2Response.md)
+ - [LanguageGetAutocompleteV2ResponseMPayload](doc//LanguageGetAutocompleteV2ResponseMPayload.md)
  - [ModuleResponse](doc//ModuleResponse.md)
  - [ModuleResponseCompound](doc//ModuleResponseCompound.md)
  - [ModulegroupGetAllV1Response](doc//ModulegroupGetAllV1Response.md)

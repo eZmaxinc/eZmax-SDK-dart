@@ -1746,6 +1746,12 @@ class ApiClient {
           return GlobalEzmaxcustomerGetConfigurationV1Response.fromJson(value);
         case 'HeaderAcceptLanguage':
           return HeaderAcceptLanguageTypeTransformer().decode(value);
+        case 'LanguageAutocompleteElementResponse':
+          return LanguageAutocompleteElementResponse.fromJson(value);
+        case 'LanguageGetAutocompleteV2Response':
+          return LanguageGetAutocompleteV2Response.fromJson(value);
+        case 'LanguageGetAutocompleteV2ResponseMPayload':
+          return LanguageGetAutocompleteV2ResponseMPayload.fromJson(value);
         case 'ModuleResponse':
           return ModuleResponse.fromJson(value);
         case 'ModuleResponseCompound':
