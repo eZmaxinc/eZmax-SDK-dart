@@ -137,6 +137,11 @@ void main() {
       // TODO
     });
 
+    // FieldEEzsigntemplatesignatureDependencyrequirement eEzsigntemplatesignatureDependencyrequirement
+    test('to test the property `eEzsigntemplatesignatureDependencyrequirement`', () async {
+      // TODO
+    });
+
     // Whether the Ezsigntemplatesignature has a custom date format or not. (Only possible when eEzsigntemplatesignatureType is **Name** or **Handwritten**)
     // bool bEzsigntemplatesignatureCustomdate
     test('to test the property `bEzsigntemplatesignatureCustomdate`', () async {
@@ -146,6 +151,11 @@ void main() {
     // An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsigntemplatesignatureCustomdate is true.  Use an empty array if you don't want to have a date at all.
     // List<EzsigntemplatesignaturecustomdateResponseCompound> aObjEzsigntemplatesignaturecustomdate (default value: const [])
     test('to test the property `aObjEzsigntemplatesignaturecustomdate`', () async {
+      // TODO
+    });
+
+    // List<EzsigntemplateelementdependencyResponseCompound> aObjEzsigntemplateelementdependency (default value: const [])
+    test('to test the property `aObjEzsigntemplateelementdependency`', () async {
       // TODO
     });
 

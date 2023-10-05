@@ -882,6 +882,14 @@ class ApiClient {
           return EzsigndocumentlogResponse.fromJson(value);
         case 'EzsigndocumentlogResponseCompound':
           return EzsigndocumentlogResponseCompound.fromJson(value);
+        case 'EzsignelementdependencyRequest':
+          return EzsignelementdependencyRequest.fromJson(value);
+        case 'EzsignelementdependencyRequestCompound':
+          return EzsignelementdependencyRequestCompound.fromJson(value);
+        case 'EzsignelementdependencyResponse':
+          return EzsignelementdependencyResponse.fromJson(value);
+        case 'EzsignelementdependencyResponseCompound':
+          return EzsignelementdependencyResponseCompound.fromJson(value);
         case 'EzsignfolderArchiveV1Response':
           return EzsignfolderArchiveV1Response.fromJson(value);
         case 'EzsignfolderBatchDownloadV1Request':
@@ -1344,6 +1352,14 @@ class ApiClient {
           return EzsigntemplatedocumentpageResponse.fromJson(value);
         case 'EzsigntemplatedocumentpageResponseCompound':
           return EzsigntemplatedocumentpageResponseCompound.fromJson(value);
+        case 'EzsigntemplateelementdependencyRequest':
+          return EzsigntemplateelementdependencyRequest.fromJson(value);
+        case 'EzsigntemplateelementdependencyRequestCompound':
+          return EzsigntemplateelementdependencyRequestCompound.fromJson(value);
+        case 'EzsigntemplateelementdependencyResponse':
+          return EzsigntemplateelementdependencyResponse.fromJson(value);
+        case 'EzsigntemplateelementdependencyResponseCompound':
+          return EzsigntemplateelementdependencyResponseCompound.fromJson(value);
         case 'EzsigntemplateformfieldRequest':
           return EzsigntemplateformfieldRequest.fromJson(value);
         case 'EzsigntemplateformfieldRequestCompound':
@@ -1594,6 +1610,10 @@ class ApiClient {
           return FieldEEzsigndocumentStepTypeTransformer().decode(value);
         case 'FieldEEzsigndocumentlogType':
           return FieldEEzsigndocumentlogTypeTypeTransformer().decode(value);
+        case 'FieldEEzsignelementdependencyOperator':
+          return FieldEEzsignelementdependencyOperatorTypeTransformer().decode(value);
+        case 'FieldEEzsignelementdependencyValidation':
+          return FieldEEzsignelementdependencyValidationTypeTransformer().decode(value);
         case 'FieldEEzsignfolderSendreminderfrequency':
           return FieldEEzsignfolderSendreminderfrequencyTypeTransformer().decode(value);
         case 'FieldEEzsignfolderStep':
@@ -1604,6 +1624,8 @@ class ApiClient {
           return FieldEEzsignfoldertypePrivacylevelTypeTransformer().decode(value);
         case 'FieldEEzsignfoldertypeSendreminderfrequency':
           return FieldEEzsignfoldertypeSendreminderfrequencyTypeTransformer().decode(value);
+        case 'FieldEEzsignformfieldDependencyrequirement':
+          return FieldEEzsignformfieldDependencyrequirementTypeTransformer().decode(value);
         case 'FieldEEzsignformfieldgroupSignerrequirement':
           return FieldEEzsignformfieldgroupSignerrequirementTypeTransformer().decode(value);
         case 'FieldEEzsignformfieldgroupTooltipposition':
@@ -1612,12 +1634,20 @@ class ApiClient {
           return FieldEEzsignformfieldgroupTypeTypeTransformer().decode(value);
         case 'FieldEEzsignsignatureAttachmentnamesource':
           return FieldEEzsignsignatureAttachmentnamesourceTypeTransformer().decode(value);
+        case 'FieldEEzsignsignatureDependencyrequirement':
+          return FieldEEzsignsignatureDependencyrequirementTypeTransformer().decode(value);
         case 'FieldEEzsignsignatureFont':
           return FieldEEzsignsignatureFontTypeTransformer().decode(value);
         case 'FieldEEzsignsignatureTooltipposition':
           return FieldEEzsignsignatureTooltippositionTypeTransformer().decode(value);
         case 'FieldEEzsignsignatureType':
           return FieldEEzsignsignatureTypeTypeTransformer().decode(value);
+        case 'FieldEEzsigntemplateelementdependencyOperator':
+          return FieldEEzsigntemplateelementdependencyOperatorTypeTransformer().decode(value);
+        case 'FieldEEzsigntemplateelementdependencyValidation':
+          return FieldEEzsigntemplateelementdependencyValidationTypeTransformer().decode(value);
+        case 'FieldEEzsigntemplateformfieldDependencyrequirement':
+          return FieldEEzsigntemplateformfieldDependencyrequirementTypeTransformer().decode(value);
         case 'FieldEEzsigntemplateformfieldgroupSignerrequirement':
           return FieldEEzsigntemplateformfieldgroupSignerrequirementTypeTransformer().decode(value);
         case 'FieldEEzsigntemplateformfieldgroupTooltipposition':
@@ -1626,6 +1656,8 @@ class ApiClient {
           return FieldEEzsigntemplateformfieldgroupTypeTypeTransformer().decode(value);
         case 'FieldEEzsigntemplatesignatureAttachmentnamesource':
           return FieldEEzsigntemplatesignatureAttachmentnamesourceTypeTransformer().decode(value);
+        case 'FieldEEzsigntemplatesignatureDependencyrequirement':
+          return FieldEEzsigntemplatesignatureDependencyrequirementTypeTransformer().decode(value);
         case 'FieldEEzsigntemplatesignatureFont':
           return FieldEEzsigntemplatesignatureFontTypeTransformer().decode(value);
         case 'FieldEEzsigntemplatesignatureTooltipposition':

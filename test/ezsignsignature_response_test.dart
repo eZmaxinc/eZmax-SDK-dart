@@ -149,6 +149,11 @@ void main() {
       // TODO
     });
 
+    // FieldEEzsignsignatureDependencyrequirement eEzsignsignatureDependencyrequirement
+    test('to test the property `eEzsignsignatureDependencyrequirement`', () async {
+      // TODO
+    });
+
     // A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom**
     // String sEzsignsignatureRegexp
     test('to test the property `sEzsignsignatureRegexp`', () async {

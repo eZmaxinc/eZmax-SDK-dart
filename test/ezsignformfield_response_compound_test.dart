@@ -82,6 +82,16 @@ void main() {
       // TODO
     });
 
+    // FieldEEzsignformfieldDependencyrequirement eEzsignformfieldDependencyrequirement
+    test('to test the property `eEzsignformfieldDependencyrequirement`', () async {
+      // TODO
+    });
+
+    // List<EzsignelementdependencyResponseCompound> aObjEzsignelementdependency (default value: const [])
+    test('to test the property `aObjEzsignelementdependency`', () async {
+      // TODO
+    });
+
 
   });
 

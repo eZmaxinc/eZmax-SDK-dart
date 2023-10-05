@@ -23,6 +23,8 @@ class EzsigntemplateformfieldRequestCompound {
     required this.iEzsigntemplateformfieldHeight,
     this.bEzsigntemplateformfieldAutocomplete,
     this.bEzsigntemplateformfieldSelected,
+    this.eEzsigntemplateformfieldDependencyrequirement,
+    this.aObjEzsigntemplateelementdependency = const [],
   });
 
   /// The unique ID of the Ezsigntemplateformfield
@@ -91,6 +93,16 @@ class EzsigntemplateformfieldRequestCompound {
   ///
   bool? bEzsigntemplateformfieldSelected;
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEEzsigntemplateformfieldDependencyrequirement? eEzsigntemplateformfieldDependencyrequirement;
+
+  List<EzsigntemplateelementdependencyRequestCompound> aObjEzsigntemplateelementdependency;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplateformfieldRequestCompound &&
     other.pkiEzsigntemplateformfieldID == pkiEzsigntemplateformfieldID &&
@@ -102,7 +114,9 @@ class EzsigntemplateformfieldRequestCompound {
     other.iEzsigntemplateformfieldWidth == iEzsigntemplateformfieldWidth &&
     other.iEzsigntemplateformfieldHeight == iEzsigntemplateformfieldHeight &&
     other.bEzsigntemplateformfieldAutocomplete == bEzsigntemplateformfieldAutocomplete &&
-    other.bEzsigntemplateformfieldSelected == bEzsigntemplateformfieldSelected;
+    other.bEzsigntemplateformfieldSelected == bEzsigntemplateformfieldSelected &&
+    other.eEzsigntemplateformfieldDependencyrequirement == eEzsigntemplateformfieldDependencyrequirement &&
+    _deepEquality.equals(other.aObjEzsigntemplateelementdependency, aObjEzsigntemplateelementdependency);
 
   @override
   int get hashCode =>
@@ -116,10 +130,12 @@ class EzsigntemplateformfieldRequestCompound {
     (iEzsigntemplateformfieldWidth.hashCode) +
     (iEzsigntemplateformfieldHeight.hashCode) +
     (bEzsigntemplateformfieldAutocomplete == null ? 0 : bEzsigntemplateformfieldAutocomplete!.hashCode) +
-    (bEzsigntemplateformfieldSelected == null ? 0 : bEzsigntemplateformfieldSelected!.hashCode);
+    (bEzsigntemplateformfieldSelected == null ? 0 : bEzsigntemplateformfieldSelected!.hashCode) +
+    (eEzsigntemplateformfieldDependencyrequirement == null ? 0 : eEzsigntemplateformfieldDependencyrequirement!.hashCode) +
+    (aObjEzsigntemplateelementdependency.hashCode);
 
   @override
-  String toString() => 'EzsigntemplateformfieldRequestCompound[pkiEzsigntemplateformfieldID=$pkiEzsigntemplateformfieldID, iEzsigntemplatedocumentpagePagenumber=$iEzsigntemplatedocumentpagePagenumber, sEzsigntemplateformfieldLabel=$sEzsigntemplateformfieldLabel, sEzsigntemplateformfieldValue=$sEzsigntemplateformfieldValue, iEzsigntemplateformfieldX=$iEzsigntemplateformfieldX, iEzsigntemplateformfieldY=$iEzsigntemplateformfieldY, iEzsigntemplateformfieldWidth=$iEzsigntemplateformfieldWidth, iEzsigntemplateformfieldHeight=$iEzsigntemplateformfieldHeight, bEzsigntemplateformfieldAutocomplete=$bEzsigntemplateformfieldAutocomplete, bEzsigntemplateformfieldSelected=$bEzsigntemplateformfieldSelected]';
+  String toString() => 'EzsigntemplateformfieldRequestCompound[pkiEzsigntemplateformfieldID=$pkiEzsigntemplateformfieldID, iEzsigntemplatedocumentpagePagenumber=$iEzsigntemplatedocumentpagePagenumber, sEzsigntemplateformfieldLabel=$sEzsigntemplateformfieldLabel, sEzsigntemplateformfieldValue=$sEzsigntemplateformfieldValue, iEzsigntemplateformfieldX=$iEzsigntemplateformfieldX, iEzsigntemplateformfieldY=$iEzsigntemplateformfieldY, iEzsigntemplateformfieldWidth=$iEzsigntemplateformfieldWidth, iEzsigntemplateformfieldHeight=$iEzsigntemplateformfieldHeight, bEzsigntemplateformfieldAutocomplete=$bEzsigntemplateformfieldAutocomplete, bEzsigntemplateformfieldSelected=$bEzsigntemplateformfieldSelected, eEzsigntemplateformfieldDependencyrequirement=$eEzsigntemplateformfieldDependencyrequirement, aObjEzsigntemplateelementdependency=$aObjEzsigntemplateelementdependency]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -149,6 +165,12 @@ class EzsigntemplateformfieldRequestCompound {
     } else {
       json[r'bEzsigntemplateformfieldSelected'] = null;
     }
+    if (this.eEzsigntemplateformfieldDependencyrequirement != null) {
+      json[r'eEzsigntemplateformfieldDependencyrequirement'] = this.eEzsigntemplateformfieldDependencyrequirement;
+    } else {
+      json[r'eEzsigntemplateformfieldDependencyrequirement'] = null;
+    }
+      json[r'a_objEzsigntemplateelementdependency'] = this.aObjEzsigntemplateelementdependency;
     return json;
   }
 
@@ -181,6 +203,8 @@ class EzsigntemplateformfieldRequestCompound {
         iEzsigntemplateformfieldHeight: mapValueOfType<int>(json, r'iEzsigntemplateformfieldHeight')!,
         bEzsigntemplateformfieldAutocomplete: mapValueOfType<bool>(json, r'bEzsigntemplateformfieldAutocomplete'),
         bEzsigntemplateformfieldSelected: mapValueOfType<bool>(json, r'bEzsigntemplateformfieldSelected'),
+        eEzsigntemplateformfieldDependencyrequirement: FieldEEzsigntemplateformfieldDependencyrequirement.fromJson(json[r'eEzsigntemplateformfieldDependencyrequirement']),
+        aObjEzsigntemplateelementdependency: EzsigntemplateelementdependencyRequestCompound.listFromJson(json[r'a_objEzsigntemplateelementdependency']),
       );
     }
     return null;

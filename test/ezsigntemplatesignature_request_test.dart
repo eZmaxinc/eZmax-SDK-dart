@@ -137,6 +137,11 @@ void main() {
       // TODO
     });
 
+    // FieldEEzsigntemplatesignatureDependencyrequirement eEzsigntemplatesignatureDependencyrequirement
+    test('to test the property `eEzsigntemplatesignatureDependencyrequirement`', () async {
+      // TODO
+    });
+
 
   });
 

@@ -34,8 +34,10 @@ class EzsigntemplatesignatureRequestCompound {
     this.iEzsigntemplatesignatureMaxlength,
     this.sEzsigntemplatesignatureRegexp,
     this.eEzsigntemplatesignatureTextvalidation,
+    this.eEzsigntemplatesignatureDependencyrequirement,
     this.bEzsigntemplatesignatureCustomdate,
     this.aObjEzsigntemplatesignaturecustomdate = const [],
+    this.aObjEzsigntemplateelementdependency = const [],
   });
 
   /// The unique ID of the Ezsigntemplatesignature
@@ -203,6 +205,14 @@ class EzsigntemplatesignatureRequestCompound {
   ///
   EnumTextvalidation? eEzsigntemplatesignatureTextvalidation;
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEEzsigntemplatesignatureDependencyrequirement? eEzsigntemplatesignatureDependencyrequirement;
+
   /// Whether the Ezsigntemplatesignature has a custom date format or not. (Only possible when eEzsigntemplatesignatureType is **Name** or **Handwritten**)
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -214,6 +224,8 @@ class EzsigntemplatesignatureRequestCompound {
 
   /// An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsigntemplatesignatureCustomdate is true.  Use an empty array if you don't want to have a date at all.
   List<EzsigntemplatesignaturecustomdateRequestCompound> aObjEzsigntemplatesignaturecustomdate;
+
+  List<EzsigntemplateelementdependencyRequestCompound> aObjEzsigntemplateelementdependency;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplatesignatureRequestCompound &&
@@ -238,8 +250,10 @@ class EzsigntemplatesignatureRequestCompound {
     other.iEzsigntemplatesignatureMaxlength == iEzsigntemplatesignatureMaxlength &&
     other.sEzsigntemplatesignatureRegexp == sEzsigntemplatesignatureRegexp &&
     other.eEzsigntemplatesignatureTextvalidation == eEzsigntemplatesignatureTextvalidation &&
+    other.eEzsigntemplatesignatureDependencyrequirement == eEzsigntemplatesignatureDependencyrequirement &&
     other.bEzsigntemplatesignatureCustomdate == bEzsigntemplatesignatureCustomdate &&
-    _deepEquality.equals(other.aObjEzsigntemplatesignaturecustomdate, aObjEzsigntemplatesignaturecustomdate);
+    _deepEquality.equals(other.aObjEzsigntemplatesignaturecustomdate, aObjEzsigntemplatesignaturecustomdate) &&
+    _deepEquality.equals(other.aObjEzsigntemplateelementdependency, aObjEzsigntemplateelementdependency);
 
   @override
   int get hashCode =>
@@ -265,11 +279,13 @@ class EzsigntemplatesignatureRequestCompound {
     (iEzsigntemplatesignatureMaxlength == null ? 0 : iEzsigntemplatesignatureMaxlength!.hashCode) +
     (sEzsigntemplatesignatureRegexp == null ? 0 : sEzsigntemplatesignatureRegexp!.hashCode) +
     (eEzsigntemplatesignatureTextvalidation == null ? 0 : eEzsigntemplatesignatureTextvalidation!.hashCode) +
+    (eEzsigntemplatesignatureDependencyrequirement == null ? 0 : eEzsigntemplatesignatureDependencyrequirement!.hashCode) +
     (bEzsigntemplatesignatureCustomdate == null ? 0 : bEzsigntemplatesignatureCustomdate!.hashCode) +
-    (aObjEzsigntemplatesignaturecustomdate.hashCode);
+    (aObjEzsigntemplatesignaturecustomdate.hashCode) +
+    (aObjEzsigntemplateelementdependency.hashCode);
 
   @override
-  String toString() => 'EzsigntemplatesignatureRequestCompound[pkiEzsigntemplatesignatureID=$pkiEzsigntemplatesignatureID, fkiEzsigntemplatedocumentID=$fkiEzsigntemplatedocumentID, fkiEzsigntemplatesignerID=$fkiEzsigntemplatesignerID, fkiEzsigntemplatesignerIDValidation=$fkiEzsigntemplatesignerIDValidation, iEzsigntemplatedocumentpagePagenumber=$iEzsigntemplatedocumentpagePagenumber, iEzsigntemplatesignatureX=$iEzsigntemplatesignatureX, iEzsigntemplatesignatureY=$iEzsigntemplatesignatureY, iEzsigntemplatesignatureWidth=$iEzsigntemplatesignatureWidth, iEzsigntemplatesignatureHeight=$iEzsigntemplatesignatureHeight, iEzsigntemplatesignatureStep=$iEzsigntemplatesignatureStep, eEzsigntemplatesignatureType=$eEzsigntemplatesignatureType, tEzsigntemplatesignatureTooltip=$tEzsigntemplatesignatureTooltip, eEzsigntemplatesignatureTooltipposition=$eEzsigntemplatesignatureTooltipposition, eEzsigntemplatesignatureFont=$eEzsigntemplatesignatureFont, bEzsigntemplatesignatureRequired=$bEzsigntemplatesignatureRequired, eEzsigntemplatesignatureAttachmentnamesource=$eEzsigntemplatesignatureAttachmentnamesource, sEzsigntemplatesignatureAttachmentdescription=$sEzsigntemplatesignatureAttachmentdescription, iEzsigntemplatesignatureValidationstep=$iEzsigntemplatesignatureValidationstep, iEzsigntemplatesignatureMaxlength=$iEzsigntemplatesignatureMaxlength, sEzsigntemplatesignatureRegexp=$sEzsigntemplatesignatureRegexp, eEzsigntemplatesignatureTextvalidation=$eEzsigntemplatesignatureTextvalidation, bEzsigntemplatesignatureCustomdate=$bEzsigntemplatesignatureCustomdate, aObjEzsigntemplatesignaturecustomdate=$aObjEzsigntemplatesignaturecustomdate]';
+  String toString() => 'EzsigntemplatesignatureRequestCompound[pkiEzsigntemplatesignatureID=$pkiEzsigntemplatesignatureID, fkiEzsigntemplatedocumentID=$fkiEzsigntemplatedocumentID, fkiEzsigntemplatesignerID=$fkiEzsigntemplatesignerID, fkiEzsigntemplatesignerIDValidation=$fkiEzsigntemplatesignerIDValidation, iEzsigntemplatedocumentpagePagenumber=$iEzsigntemplatedocumentpagePagenumber, iEzsigntemplatesignatureX=$iEzsigntemplatesignatureX, iEzsigntemplatesignatureY=$iEzsigntemplatesignatureY, iEzsigntemplatesignatureWidth=$iEzsigntemplatesignatureWidth, iEzsigntemplatesignatureHeight=$iEzsigntemplatesignatureHeight, iEzsigntemplatesignatureStep=$iEzsigntemplatesignatureStep, eEzsigntemplatesignatureType=$eEzsigntemplatesignatureType, tEzsigntemplatesignatureTooltip=$tEzsigntemplatesignatureTooltip, eEzsigntemplatesignatureTooltipposition=$eEzsigntemplatesignatureTooltipposition, eEzsigntemplatesignatureFont=$eEzsigntemplatesignatureFont, bEzsigntemplatesignatureRequired=$bEzsigntemplatesignatureRequired, eEzsigntemplatesignatureAttachmentnamesource=$eEzsigntemplatesignatureAttachmentnamesource, sEzsigntemplatesignatureAttachmentdescription=$sEzsigntemplatesignatureAttachmentdescription, iEzsigntemplatesignatureValidationstep=$iEzsigntemplatesignatureValidationstep, iEzsigntemplatesignatureMaxlength=$iEzsigntemplatesignatureMaxlength, sEzsigntemplatesignatureRegexp=$sEzsigntemplatesignatureRegexp, eEzsigntemplatesignatureTextvalidation=$eEzsigntemplatesignatureTextvalidation, eEzsigntemplatesignatureDependencyrequirement=$eEzsigntemplatesignatureDependencyrequirement, bEzsigntemplatesignatureCustomdate=$bEzsigntemplatesignatureCustomdate, aObjEzsigntemplatesignaturecustomdate=$aObjEzsigntemplatesignaturecustomdate, aObjEzsigntemplateelementdependency=$aObjEzsigntemplateelementdependency]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -350,12 +366,18 @@ class EzsigntemplatesignatureRequestCompound {
     } else {
       json[r'eEzsigntemplatesignatureTextvalidation'] = null;
     }
+    if (this.eEzsigntemplatesignatureDependencyrequirement != null) {
+      json[r'eEzsigntemplatesignatureDependencyrequirement'] = this.eEzsigntemplatesignatureDependencyrequirement;
+    } else {
+      json[r'eEzsigntemplatesignatureDependencyrequirement'] = null;
+    }
     if (this.bEzsigntemplatesignatureCustomdate != null) {
       json[r'bEzsigntemplatesignatureCustomdate'] = this.bEzsigntemplatesignatureCustomdate;
     } else {
       json[r'bEzsigntemplatesignatureCustomdate'] = null;
     }
       json[r'a_objEzsigntemplatesignaturecustomdate'] = this.aObjEzsigntemplatesignaturecustomdate;
+      json[r'a_objEzsigntemplateelementdependency'] = this.aObjEzsigntemplateelementdependency;
     return json;
   }
 
@@ -399,8 +421,10 @@ class EzsigntemplatesignatureRequestCompound {
         iEzsigntemplatesignatureMaxlength: mapValueOfType<int>(json, r'iEzsigntemplatesignatureMaxlength'),
         sEzsigntemplatesignatureRegexp: mapValueOfType<String>(json, r'sEzsigntemplatesignatureRegexp'),
         eEzsigntemplatesignatureTextvalidation: EnumTextvalidation.fromJson(json[r'eEzsigntemplatesignatureTextvalidation']),
+        eEzsigntemplatesignatureDependencyrequirement: FieldEEzsigntemplatesignatureDependencyrequirement.fromJson(json[r'eEzsigntemplatesignatureDependencyrequirement']),
         bEzsigntemplatesignatureCustomdate: mapValueOfType<bool>(json, r'bEzsigntemplatesignatureCustomdate'),
         aObjEzsigntemplatesignaturecustomdate: EzsigntemplatesignaturecustomdateRequestCompound.listFromJson(json[r'a_objEzsigntemplatesignaturecustomdate']),
+        aObjEzsigntemplateelementdependency: EzsigntemplateelementdependencyRequestCompound.listFromJson(json[r'a_objEzsigntemplateelementdependency']),
       );
     }
     return null;

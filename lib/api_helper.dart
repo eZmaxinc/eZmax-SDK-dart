@@ -133,6 +133,12 @@ String parameterToString(dynamic value) {
   if (value is FieldEEzsigndocumentlogType) {
     return FieldEEzsigndocumentlogTypeTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEEzsignelementdependencyOperator) {
+    return FieldEEzsignelementdependencyOperatorTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsignelementdependencyValidation) {
+    return FieldEEzsignelementdependencyValidationTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEEzsignfolderSendreminderfrequency) {
     return FieldEEzsignfolderSendreminderfrequencyTypeTransformer().encode(value).toString();
   }
@@ -148,6 +154,9 @@ String parameterToString(dynamic value) {
   if (value is FieldEEzsignfoldertypeSendreminderfrequency) {
     return FieldEEzsignfoldertypeSendreminderfrequencyTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEEzsignformfieldDependencyrequirement) {
+    return FieldEEzsignformfieldDependencyrequirementTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEEzsignformfieldgroupSignerrequirement) {
     return FieldEEzsignformfieldgroupSignerrequirementTypeTransformer().encode(value).toString();
   }
@@ -160,6 +169,9 @@ String parameterToString(dynamic value) {
   if (value is FieldEEzsignsignatureAttachmentnamesource) {
     return FieldEEzsignsignatureAttachmentnamesourceTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEEzsignsignatureDependencyrequirement) {
+    return FieldEEzsignsignatureDependencyrequirementTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEEzsignsignatureFont) {
     return FieldEEzsignsignatureFontTypeTransformer().encode(value).toString();
   }
@@ -168,6 +180,15 @@ String parameterToString(dynamic value) {
   }
   if (value is FieldEEzsignsignatureType) {
     return FieldEEzsignsignatureTypeTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsigntemplateelementdependencyOperator) {
+    return FieldEEzsigntemplateelementdependencyOperatorTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsigntemplateelementdependencyValidation) {
+    return FieldEEzsigntemplateelementdependencyValidationTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsigntemplateformfieldDependencyrequirement) {
+    return FieldEEzsigntemplateformfieldDependencyrequirementTypeTransformer().encode(value).toString();
   }
   if (value is FieldEEzsigntemplateformfieldgroupSignerrequirement) {
     return FieldEEzsigntemplateformfieldgroupSignerrequirementTypeTransformer().encode(value).toString();
@@ -180,6 +201,9 @@ String parameterToString(dynamic value) {
   }
   if (value is FieldEEzsigntemplatesignatureAttachmentnamesource) {
     return FieldEEzsigntemplatesignatureAttachmentnamesourceTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsigntemplatesignatureDependencyrequirement) {
+    return FieldEEzsigntemplatesignatureDependencyrequirementTypeTransformer().encode(value).toString();
   }
   if (value is FieldEEzsigntemplatesignatureFont) {
     return FieldEEzsigntemplatesignatureFontTypeTransformer().encode(value).toString();

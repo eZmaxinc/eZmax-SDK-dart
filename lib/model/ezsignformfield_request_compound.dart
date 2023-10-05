@@ -24,6 +24,8 @@ class EzsignformfieldRequestCompound {
     this.bEzsignformfieldAutocomplete,
     this.bEzsignformfieldSelected,
     this.sEzsignformfieldEnteredvalue,
+    this.eEzsignformfieldDependencyrequirement,
+    this.aObjEzsignelementdependency = const [],
   });
 
   /// The unique ID of the Ezsignformfield
@@ -101,6 +103,16 @@ class EzsignformfieldRequestCompound {
   ///
   String? sEzsignformfieldEnteredvalue;
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEEzsignformfieldDependencyrequirement? eEzsignformfieldDependencyrequirement;
+
+  List<EzsignelementdependencyRequestCompound> aObjEzsignelementdependency;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignformfieldRequestCompound &&
     other.pkiEzsignformfieldID == pkiEzsignformfieldID &&
@@ -113,7 +125,9 @@ class EzsignformfieldRequestCompound {
     other.iEzsignformfieldHeight == iEzsignformfieldHeight &&
     other.bEzsignformfieldAutocomplete == bEzsignformfieldAutocomplete &&
     other.bEzsignformfieldSelected == bEzsignformfieldSelected &&
-    other.sEzsignformfieldEnteredvalue == sEzsignformfieldEnteredvalue;
+    other.sEzsignformfieldEnteredvalue == sEzsignformfieldEnteredvalue &&
+    other.eEzsignformfieldDependencyrequirement == eEzsignformfieldDependencyrequirement &&
+    _deepEquality.equals(other.aObjEzsignelementdependency, aObjEzsignelementdependency);
 
   @override
   int get hashCode =>
@@ -128,10 +142,12 @@ class EzsignformfieldRequestCompound {
     (iEzsignformfieldHeight.hashCode) +
     (bEzsignformfieldAutocomplete == null ? 0 : bEzsignformfieldAutocomplete!.hashCode) +
     (bEzsignformfieldSelected == null ? 0 : bEzsignformfieldSelected!.hashCode) +
-    (sEzsignformfieldEnteredvalue == null ? 0 : sEzsignformfieldEnteredvalue!.hashCode);
+    (sEzsignformfieldEnteredvalue == null ? 0 : sEzsignformfieldEnteredvalue!.hashCode) +
+    (eEzsignformfieldDependencyrequirement == null ? 0 : eEzsignformfieldDependencyrequirement!.hashCode) +
+    (aObjEzsignelementdependency.hashCode);
 
   @override
-  String toString() => 'EzsignformfieldRequestCompound[pkiEzsignformfieldID=$pkiEzsignformfieldID, iEzsignpagePagenumber=$iEzsignpagePagenumber, sEzsignformfieldLabel=$sEzsignformfieldLabel, sEzsignformfieldValue=$sEzsignformfieldValue, iEzsignformfieldX=$iEzsignformfieldX, iEzsignformfieldY=$iEzsignformfieldY, iEzsignformfieldWidth=$iEzsignformfieldWidth, iEzsignformfieldHeight=$iEzsignformfieldHeight, bEzsignformfieldAutocomplete=$bEzsignformfieldAutocomplete, bEzsignformfieldSelected=$bEzsignformfieldSelected, sEzsignformfieldEnteredvalue=$sEzsignformfieldEnteredvalue]';
+  String toString() => 'EzsignformfieldRequestCompound[pkiEzsignformfieldID=$pkiEzsignformfieldID, iEzsignpagePagenumber=$iEzsignpagePagenumber, sEzsignformfieldLabel=$sEzsignformfieldLabel, sEzsignformfieldValue=$sEzsignformfieldValue, iEzsignformfieldX=$iEzsignformfieldX, iEzsignformfieldY=$iEzsignformfieldY, iEzsignformfieldWidth=$iEzsignformfieldWidth, iEzsignformfieldHeight=$iEzsignformfieldHeight, bEzsignformfieldAutocomplete=$bEzsignformfieldAutocomplete, bEzsignformfieldSelected=$bEzsignformfieldSelected, sEzsignformfieldEnteredvalue=$sEzsignformfieldEnteredvalue, eEzsignformfieldDependencyrequirement=$eEzsignformfieldDependencyrequirement, aObjEzsignelementdependency=$aObjEzsignelementdependency]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -166,6 +182,12 @@ class EzsignformfieldRequestCompound {
     } else {
       json[r'sEzsignformfieldEnteredvalue'] = null;
     }
+    if (this.eEzsignformfieldDependencyrequirement != null) {
+      json[r'eEzsignformfieldDependencyrequirement'] = this.eEzsignformfieldDependencyrequirement;
+    } else {
+      json[r'eEzsignformfieldDependencyrequirement'] = null;
+    }
+      json[r'a_objEzsignelementdependency'] = this.aObjEzsignelementdependency;
     return json;
   }
 
@@ -199,6 +221,8 @@ class EzsignformfieldRequestCompound {
         bEzsignformfieldAutocomplete: mapValueOfType<bool>(json, r'bEzsignformfieldAutocomplete'),
         bEzsignformfieldSelected: mapValueOfType<bool>(json, r'bEzsignformfieldSelected'),
         sEzsignformfieldEnteredvalue: mapValueOfType<String>(json, r'sEzsignformfieldEnteredvalue'),
+        eEzsignformfieldDependencyrequirement: FieldEEzsignformfieldDependencyrequirement.fromJson(json[r'eEzsignformfieldDependencyrequirement']),
+        aObjEzsignelementdependency: EzsignelementdependencyRequestCompound.listFromJson(json[r'a_objEzsignelementdependency']),
       );
     }
     return null;
