@@ -2182,6 +2182,12 @@ class ApiClient {
           return UsergroupmembershipResponse.fromJson(value);
         case 'UsergroupmembershipResponseCompound':
           return UsergroupmembershipResponseCompound.fromJson(value);
+        case 'UserlogintypeAutocompleteElementResponse':
+          return UserlogintypeAutocompleteElementResponse.fromJson(value);
+        case 'UserlogintypeGetAutocompleteV2Response':
+          return UserlogintypeGetAutocompleteV2Response.fromJson(value);
+        case 'UserlogintypeGetAutocompleteV2ResponseMPayload':
+          return UserlogintypeGetAutocompleteV2ResponseMPayload.fromJson(value);
         case 'UserstagedCreateUserV1Response':
           return UserstagedCreateUserV1Response.fromJson(value);
         case 'UserstagedCreateUserV1ResponseMPayload':

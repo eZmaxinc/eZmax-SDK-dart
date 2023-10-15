@@ -28,6 +28,8 @@ class FieldEEzsigndocumentlogType {
   static const sendcode = FieldEEzsigndocumentlogType._(r'Sendcode');
   static const badcode = FieldEEzsigndocumentlogType._(r'Badcode');
   static const goodcode = FieldEEzsigndocumentlogType._(r'Goodcode');
+  static const badresponse = FieldEEzsigndocumentlogType._(r'Badresponse');
+  static const goodresponse = FieldEEzsigndocumentlogType._(r'Goodresponse');
   static const authentication = FieldEEzsigndocumentlogType._(r'Authentication');
   static const createpage = FieldEEzsigndocumentlogType._(r'Createpage');
   static const download = FieldEEzsigndocumentlogType._(r'Download');
@@ -47,6 +49,8 @@ class FieldEEzsigndocumentlogType {
   static const signatureAttachmentDeleted = FieldEEzsigndocumentlogType._(r'SignatureAttachmentDeleted');
   static const declinedToSign = FieldEEzsigndocumentlogType._(r'DeclinedToSign');
   static const delayedSendEmail = FieldEEzsigndocumentlogType._(r'DelayedSendEmail');
+  static const annotationAdded = FieldEEzsigndocumentlogType._(r'AnnotationAdded');
+  static const flatten = FieldEEzsigndocumentlogType._(r'Flatten');
   static const regeneratePage = FieldEEzsigndocumentlogType._(r'RegeneratePage');
   static const regeneratePageForm = FieldEEzsigndocumentlogType._(r'RegeneratePageForm');
   static const reassign = FieldEEzsigndocumentlogType._(r'Reassign');
@@ -58,6 +62,8 @@ class FieldEEzsigndocumentlogType {
     sendcode,
     badcode,
     goodcode,
+    badresponse,
+    goodresponse,
     authentication,
     createpage,
     download,
@@ -77,6 +83,8 @@ class FieldEEzsigndocumentlogType {
     signatureAttachmentDeleted,
     declinedToSign,
     delayedSendEmail,
+    annotationAdded,
+    flatten,
     regeneratePage,
     regeneratePageForm,
     reassign,
@@ -123,6 +131,8 @@ class FieldEEzsigndocumentlogTypeTypeTransformer {
         case r'Sendcode': return FieldEEzsigndocumentlogType.sendcode;
         case r'Badcode': return FieldEEzsigndocumentlogType.badcode;
         case r'Goodcode': return FieldEEzsigndocumentlogType.goodcode;
+        case r'Badresponse': return FieldEEzsigndocumentlogType.badresponse;
+        case r'Goodresponse': return FieldEEzsigndocumentlogType.goodresponse;
         case r'Authentication': return FieldEEzsigndocumentlogType.authentication;
         case r'Createpage': return FieldEEzsigndocumentlogType.createpage;
         case r'Download': return FieldEEzsigndocumentlogType.download;
@@ -142,6 +152,8 @@ class FieldEEzsigndocumentlogTypeTypeTransformer {
         case r'SignatureAttachmentDeleted': return FieldEEzsigndocumentlogType.signatureAttachmentDeleted;
         case r'DeclinedToSign': return FieldEEzsigndocumentlogType.declinedToSign;
         case r'DelayedSendEmail': return FieldEEzsigndocumentlogType.delayedSendEmail;
+        case r'AnnotationAdded': return FieldEEzsigndocumentlogType.annotationAdded;
+        case r'Flatten': return FieldEEzsigndocumentlogType.flatten;
         case r'RegeneratePage': return FieldEEzsigndocumentlogType.regeneratePage;
         case r'RegeneratePageForm': return FieldEEzsigndocumentlogType.regeneratePageForm;
         case r'Reassign': return FieldEEzsigndocumentlogType.reassign;

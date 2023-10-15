@@ -880,6 +880,7 @@ doc/ObjectUserApi.md
 doc/ObjectUsergroupApi.md
 doc/ObjectUsergroupdelegationApi.md
 doc/ObjectUsergroupmembershipApi.md
+doc/ObjectUserlogintypeApi.md
 doc/ObjectUserstagedApi.md
 doc/ObjectVariableexpenseApi.md
 doc/ObjectVersionhistoryApi.md
@@ -1075,6 +1076,9 @@ doc/UsergroupmembershipRequest.md
 doc/UsergroupmembershipRequestCompound.md
 doc/UsergroupmembershipResponse.md
 doc/UsergroupmembershipResponseCompound.md
+doc/UserlogintypeAutocompleteElementResponse.md
+doc/UserlogintypeGetAutocompleteV2Response.md
+doc/UserlogintypeGetAutocompleteV2ResponseMPayload.md
 doc/UserstagedCreateUserV1Response.md
 doc/UserstagedCreateUserV1ResponseMPayload.md
 doc/UserstagedDeleteObjectV1Response.md
@@ -1208,6 +1212,7 @@ lib/api/object_user_api.dart
 lib/api/object_usergroup_api.dart
 lib/api/object_usergroupdelegation_api.dart
 lib/api/object_usergroupmembership_api.dart
+lib/api/object_userlogintype_api.dart
 lib/api/object_userstaged_api.dart
 lib/api/object_variableexpense_api.dart
 lib/api/object_versionhistory_api.dart
@@ -2223,6 +2228,9 @@ lib/model/usergroupmembership_request.dart
 lib/model/usergroupmembership_request_compound.dart
 lib/model/usergroupmembership_response.dart
 lib/model/usergroupmembership_response_compound.dart
+lib/model/userlogintype_autocomplete_element_response.dart
+lib/model/userlogintype_get_autocomplete_v2_response.dart
+lib/model/userlogintype_get_autocomplete_v2_response_m_payload.dart
 lib/model/userstaged_create_user_v1_response.dart
 lib/model/userstaged_create_user_v1_response_m_payload.dart
 lib/model/userstaged_delete_object_v1_response.dart
@@ -3167,6 +3175,7 @@ test/object_user_api_test.dart
 test/object_usergroup_api_test.dart
 test/object_usergroupdelegation_api_test.dart
 test/object_usergroupmembership_api_test.dart
+test/object_userlogintype_api_test.dart
 test/object_userstaged_api_test.dart
 test/object_variableexpense_api_test.dart
 test/object_versionhistory_api_test.dart
@@ -3362,6 +3371,9 @@ test/usergroupmembership_request_compound_test.dart
 test/usergroupmembership_request_test.dart
 test/usergroupmembership_response_compound_test.dart
 test/usergroupmembership_response_test.dart
+test/userlogintype_autocomplete_element_response_test.dart
+test/userlogintype_get_autocomplete_v2_response_m_payload_test.dart
+test/userlogintype_get_autocomplete_v2_response_test.dart
 test/userstaged_create_user_v1_response_m_payload_test.dart
 test/userstaged_create_user_v1_response_test.dart
 test/userstaged_delete_object_v1_response_test.dart

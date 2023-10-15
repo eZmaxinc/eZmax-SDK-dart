@@ -327,6 +327,7 @@ Class | Method | HTTP request | Description
 *ObjectUsergroupmembershipApi* | [**usergroupmembershipDeleteObjectV1**](doc//ObjectUsergroupmembershipApi.md#usergroupmembershipdeleteobjectv1) | **DELETE** /1/object/usergroupmembership/{pkiUsergroupmembershipID} | Delete an existing Usergroupmembership
 *ObjectUsergroupmembershipApi* | [**usergroupmembershipEditObjectV1**](doc//ObjectUsergroupmembershipApi.md#usergroupmembershipeditobjectv1) | **PUT** /1/object/usergroupmembership/{pkiUsergroupmembershipID} | Edit an existing Usergroupmembership
 *ObjectUsergroupmembershipApi* | [**usergroupmembershipGetObjectV2**](doc//ObjectUsergroupmembershipApi.md#usergroupmembershipgetobjectv2) | **GET** /2/object/usergroupmembership/{pkiUsergroupmembershipID} | Retrieve an existing Usergroupmembership
+*ObjectUserlogintypeApi* | [**userlogintypeGetAutocompleteV2**](doc//ObjectUserlogintypeApi.md#userlogintypegetautocompletev2) | **GET** /2/object/userlogintype/getAutocomplete/{sSelector} | Retrieve Userlogintypes and IDs
 *ObjectUserstagedApi* | [**userstagedCreateUserV1**](doc//ObjectUserstagedApi.md#userstagedcreateuserv1) | **POST** /1/object/userstaged/{pkiUserstagedID}/createUser | Create a User from a Userstaged and then map it
 *ObjectUserstagedApi* | [**userstagedDeleteObjectV1**](doc//ObjectUserstagedApi.md#userstageddeleteobjectv1) | **DELETE** /1/object/userstaged/{pkiUserstagedID} | Delete an existing Userstaged
 *ObjectUserstagedApi* | [**userstagedGetListV1**](doc//ObjectUserstagedApi.md#userstagedgetlistv1) | **GET** /1/object/userstaged/getList | Retrieve Userstaged list
@@ -1360,6 +1361,9 @@ Class | Method | HTTP request | Description
  - [UsergroupmembershipRequestCompound](doc//UsergroupmembershipRequestCompound.md)
  - [UsergroupmembershipResponse](doc//UsergroupmembershipResponse.md)
  - [UsergroupmembershipResponseCompound](doc//UsergroupmembershipResponseCompound.md)
+ - [UserlogintypeAutocompleteElementResponse](doc//UserlogintypeAutocompleteElementResponse.md)
+ - [UserlogintypeGetAutocompleteV2Response](doc//UserlogintypeGetAutocompleteV2Response.md)
+ - [UserlogintypeGetAutocompleteV2ResponseMPayload](doc//UserlogintypeGetAutocompleteV2ResponseMPayload.md)
  - [UserstagedCreateUserV1Response](doc//UserstagedCreateUserV1Response.md)
  - [UserstagedCreateUserV1ResponseMPayload](doc//UserstagedCreateUserV1ResponseMPayload.md)
  - [UserstagedDeleteObjectV1Response](doc//UserstagedDeleteObjectV1Response.md)
