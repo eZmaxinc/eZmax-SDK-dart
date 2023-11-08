@@ -648,6 +648,120 @@ class ObjectEzsignfolderApi {
     return null;
   }
 
+  /// Retrieve Ezsignfolder's Communicationrecipient
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfolderID (required):
+  Future<Response> ezsignfolderGetCommunicationrecipientsV1WithHttpInfo(int pkiEzsignfolderID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationrecipients'
+      .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve Ezsignfolder's Communicationrecipient
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfolderID (required):
+  Future<EzsignfolderGetCommunicationrecipientsV1Response?> ezsignfolderGetCommunicationrecipientsV1(int pkiEzsignfolderID,) async {
+    final response = await ezsignfolderGetCommunicationrecipientsV1WithHttpInfo(pkiEzsignfolderID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderGetCommunicationrecipientsV1Response',) as EzsignfolderGetCommunicationrecipientsV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve Ezsignfolder's Communicationsender
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfolderID (required):
+  Future<Response> ezsignfolderGetCommunicationsendersV1WithHttpInfo(int pkiEzsignfolderID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationsenders'
+      .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve Ezsignfolder's Communicationsender
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfolderID (required):
+  Future<EzsignfolderGetCommunicationsendersV1Response?> ezsignfolderGetCommunicationsendersV1(int pkiEzsignfolderID,) async {
+    final response = await ezsignfolderGetCommunicationsendersV1WithHttpInfo(pkiEzsignfolderID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderGetCommunicationsendersV1Response',) as EzsignfolderGetCommunicationsendersV1Response;
+    
+    }
+    return null;
+  }
+
   /// Retrieve an existing Ezsignfolder's Ezsigndocuments
   ///
   /// 
@@ -878,7 +992,7 @@ class ObjectEzsignfolderApi {
 
   /// Retrieve Ezsignfolder list
   ///
-  /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived<br>Disposed| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
+  /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived<br>Disposed| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | fkiUserID | | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -938,7 +1052,7 @@ class ObjectEzsignfolderApi {
 
   /// Retrieve Ezsignfolder list
   ///
-  /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived<br>Disposed| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
+  /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived<br>Disposed| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | fkiUserID | | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
   ///
   /// Parameters:
   ///

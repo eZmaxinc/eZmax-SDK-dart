@@ -97,9 +97,6 @@ String parameterToString(dynamic value) {
   if (value is FieldECommunicationexternalrecipientType) {
     return FieldECommunicationexternalrecipientTypeTypeTransformer().encode(value).toString();
   }
-  if (value is FieldECommunicationrecipientObjecttype) {
-    return FieldECommunicationrecipientObjecttypeTypeTransformer().encode(value).toString();
-  }
   if (value is FieldECommunicationrecipientType) {
     return FieldECommunicationrecipientTypeTypeTransformer().encode(value).toString();
   }

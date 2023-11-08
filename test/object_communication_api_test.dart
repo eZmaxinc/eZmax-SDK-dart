@@ -17,12 +17,12 @@ void main() {
   // final instance = ObjectCommunicationApi();
 
   group('tests for ObjectCommunicationApi', () {
-    // Retrieve an existing Communication
+    // Send a new Communication
     //
-    // 
+    // The endpoint allows to send one or many elements at once.
     //
-    //Future<CommunicationGetObjectV2Response> communicationGetObjectV2(int pkiCommunicationID) async
-    test('test communicationGetObjectV2', () async {
+    //Future<CommunicationSendV1Response> communicationSendV1(CommunicationSendV1Request communicationSendV1Request) async
+    test('test communicationSendV1', () async {
       // TODO
     });
 

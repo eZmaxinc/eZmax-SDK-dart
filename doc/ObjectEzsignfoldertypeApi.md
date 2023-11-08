@@ -254,7 +254,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] 
- **iRowMax** | **int**|  | [optional] [default to 10000]
+ **iRowMax** | **int**|  | [optional] 
  **iRowOffset** | **int**|  | [optional] [default to 0]
  **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] 
  **sFilter** | **String**|  | [optional] 

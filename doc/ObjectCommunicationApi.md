@@ -9,15 +9,15 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**communicationGetObjectV2**](ObjectCommunicationApi.md#communicationgetobjectv2) | **GET** /2/object/communication/{pkiCommunicationID} | Retrieve an existing Communication
+[**communicationSendV1**](ObjectCommunicationApi.md#communicationsendv1) | **POST** /1/object/communication/send | Send a new Communication
 
 
-# **communicationGetObjectV2**
-> CommunicationGetObjectV2Response communicationGetObjectV2(pkiCommunicationID)
+# **communicationSendV1**
+> CommunicationSendV1Response communicationSendV1(communicationSendV1Request)
 
-Retrieve an existing Communication
+Send a new Communication
 
-
+The endpoint allows to send one or many elements at once.
 
 ### Example
 ```dart
@@ -28,13 +28,13 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
 
 final api_instance = ObjectCommunicationApi();
-final pkiCommunicationID = 56; // int | 
+final communicationSendV1Request = CommunicationSendV1Request(); // CommunicationSendV1Request | 
 
 try {
-    final result = api_instance.communicationGetObjectV2(pkiCommunicationID);
+    final result = api_instance.communicationSendV1(communicationSendV1Request);
     print(result);
 } catch (e) {
-    print('Exception when calling ObjectCommunicationApi->communicationGetObjectV2: $e\n');
+    print('Exception when calling ObjectCommunicationApi->communicationSendV1: $e\n');
 }
 ```
 
@@ -42,11 +42,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiCommunicationID** | **int**|  | 
+ **communicationSendV1Request** | [**CommunicationSendV1Request**](CommunicationSendV1Request.md)|  | 
 
 ### Return type
 
-[**CommunicationGetObjectV2Response**](CommunicationGetObjectV2Response.md)
+[**CommunicationSendV1Response**](CommunicationSendV1Response.md)
 
 ### Authorization
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

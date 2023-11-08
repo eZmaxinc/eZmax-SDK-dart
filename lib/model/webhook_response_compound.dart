@@ -22,7 +22,7 @@ class WebhookResponseCompound {
     this.eWebhookManagementevent,
     required this.sWebhookUrl,
     required this.sWebhookEmailfailed,
-    this.bWebhookIsactive,
+    required this.bWebhookIsactive,
     required this.bWebhookSkipsslvalidation,
     this.sWebhookEvent,
   });
@@ -78,13 +78,7 @@ class WebhookResponseCompound {
   String sWebhookEmailfailed;
 
   /// Whether the Webhook is active or not
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  bool? bWebhookIsactive;
+  bool bWebhookIsactive;
 
   /// Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use
   bool bWebhookSkipsslvalidation;
@@ -125,7 +119,7 @@ class WebhookResponseCompound {
     (eWebhookManagementevent == null ? 0 : eWebhookManagementevent!.hashCode) +
     (sWebhookUrl.hashCode) +
     (sWebhookEmailfailed.hashCode) +
-    (bWebhookIsactive == null ? 0 : bWebhookIsactive!.hashCode) +
+    (bWebhookIsactive.hashCode) +
     (bWebhookSkipsslvalidation.hashCode) +
     (sWebhookEvent == null ? 0 : sWebhookEvent!.hashCode);
 
@@ -159,11 +153,7 @@ class WebhookResponseCompound {
     }
       json[r'sWebhookUrl'] = this.sWebhookUrl;
       json[r'sWebhookEmailfailed'] = this.sWebhookEmailfailed;
-    if (this.bWebhookIsactive != null) {
       json[r'bWebhookIsactive'] = this.bWebhookIsactive;
-    } else {
-      json[r'bWebhookIsactive'] = null;
-    }
       json[r'bWebhookSkipsslvalidation'] = this.bWebhookSkipsslvalidation;
     if (this.sWebhookEvent != null) {
       json[r'sWebhookEvent'] = this.sWebhookEvent;
@@ -201,7 +191,7 @@ class WebhookResponseCompound {
         eWebhookManagementevent: FieldEWebhookManagementevent.fromJson(json[r'eWebhookManagementevent']),
         sWebhookUrl: mapValueOfType<String>(json, r'sWebhookUrl')!,
         sWebhookEmailfailed: mapValueOfType<String>(json, r'sWebhookEmailfailed')!,
-        bWebhookIsactive: mapValueOfType<bool>(json, r'bWebhookIsactive'),
+        bWebhookIsactive: mapValueOfType<bool>(json, r'bWebhookIsactive')!,
         bWebhookSkipsslvalidation: mapValueOfType<bool>(json, r'bWebhookSkipsslvalidation')!,
         sWebhookEvent: mapValueOfType<String>(json, r'sWebhookEvent'),
       );
@@ -256,6 +246,7 @@ class WebhookResponseCompound {
     'eWebhookModule',
     'sWebhookUrl',
     'sWebhookEmailfailed',
+    'bWebhookIsactive',
     'bWebhookSkipsslvalidation',
   };
 }

@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **eWebhookManagementevent** | [**FieldEWebhookManagementevent**](FieldEWebhookManagementevent.md) |  | [optional] 
 **sWebhookUrl** | **String** | The URL of the Webhook callback | 
 **sWebhookEmailfailed** | **String** | The email that will receive the Webhook in case all attempts fail | 
-**bWebhookIsactive** | **bool** | Whether the Webhook is active or not | [optional] 
+**bWebhookIsactive** | **bool** | Whether the Webhook is active or not | 
 **bWebhookSkipsslvalidation** | **bool** | Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use | 
 **pksCustomerCode** | **String** | The customer code assigned to your account | 
 **bWebhookTest** | **bool** | Wheter the webhook received is a manual test or a real event | 

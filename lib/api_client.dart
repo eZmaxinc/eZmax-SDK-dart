@@ -256,6 +256,8 @@ class ApiClient {
           return ApikeyResponse.fromJson(value);
         case 'ApikeyResponseCompound':
           return ApikeyResponseCompound.fromJson(value);
+        case 'AttachmentDownloadV1Response':
+          return AttachmentDownloadV1Response.fromJson(value);
         case 'AttemptResponse':
           return AttemptResponse.fromJson(value);
         case 'AttemptResponseCompound':
@@ -342,6 +344,10 @@ class ApiClient {
           return BrandingResponse.fromJson(value);
         case 'BrandingResponseCompound':
           return BrandingResponseCompound.fromJson(value);
+        case 'BuyercontractGetCommunicationListV1Response':
+          return BuyercontractGetCommunicationListV1Response.fromJson(value);
+        case 'BuyercontractGetCommunicationListV1ResponseMPayload':
+          return BuyercontractGetCommunicationListV1ResponseMPayload.fromJson(value);
         case 'ClonehistoryGetListV1Response':
           return ClonehistoryGetListV1Response.fromJson(value);
         case 'ClonehistoryGetListV1ResponseMPayload':
@@ -408,26 +414,32 @@ class ApiClient {
           return CommonResponseWarning.fromJson(value);
         case 'CommonWebhook':
           return CommonWebhook.fromJson(value);
-        case 'CommunicationGetObjectV2Response':
-          return CommunicationGetObjectV2Response.fromJson(value);
-        case 'CommunicationGetObjectV2ResponseMPayload':
-          return CommunicationGetObjectV2ResponseMPayload.fromJson(value);
-        case 'CommunicationResponse':
-          return CommunicationResponse.fromJson(value);
-        case 'CommunicationResponseCompound':
-          return CommunicationResponseCompound.fromJson(value);
-        case 'CommunicationattachmentResponse':
-          return CommunicationattachmentResponse.fromJson(value);
-        case 'CommunicationattachmentResponseCompound':
-          return CommunicationattachmentResponseCompound.fromJson(value);
-        case 'CommunicationexternalrecipientResponse':
-          return CommunicationexternalrecipientResponse.fromJson(value);
-        case 'CommunicationexternalrecipientResponseCompound':
-          return CommunicationexternalrecipientResponseCompound.fromJson(value);
-        case 'CommunicationrecipientResponse':
-          return CommunicationrecipientResponse.fromJson(value);
-        case 'CommunicationrecipientResponseCompound':
-          return CommunicationrecipientResponseCompound.fromJson(value);
+        case 'CommunicationCreateObjectV1ResponseMPayload':
+          return CommunicationCreateObjectV1ResponseMPayload.fromJson(value);
+        case 'CommunicationRequest':
+          return CommunicationRequest.fromJson(value);
+        case 'CommunicationRequestCompound':
+          return CommunicationRequestCompound.fromJson(value);
+        case 'CommunicationSendV1Request':
+          return CommunicationSendV1Request.fromJson(value);
+        case 'CommunicationSendV1Response':
+          return CommunicationSendV1Response.fromJson(value);
+        case 'CommunicationattachmentRequest':
+          return CommunicationattachmentRequest.fromJson(value);
+        case 'CommunicationattachmentRequestCompound':
+          return CommunicationattachmentRequestCompound.fromJson(value);
+        case 'CommunicationexternalrecipientRequest':
+          return CommunicationexternalrecipientRequest.fromJson(value);
+        case 'CommunicationexternalrecipientRequestCompound':
+          return CommunicationexternalrecipientRequestCompound.fromJson(value);
+        case 'CommunicationrecipientRequest':
+          return CommunicationrecipientRequest.fromJson(value);
+        case 'CommunicationrecipientRequestCompound':
+          return CommunicationrecipientRequestCompound.fromJson(value);
+        case 'CommunicationreferenceRequest':
+          return CommunicationreferenceRequest.fromJson(value);
+        case 'CommunicationreferenceRequestCompound':
+          return CommunicationreferenceRequestCompound.fromJson(value);
         case 'CompanyAutocompleteElementResponse':
           return CompanyAutocompleteElementResponse.fromJson(value);
         case 'CompanyGetAutocompleteV2Response':
@@ -474,6 +486,16 @@ class ApiClient {
           return CustomAutocompleteElementResponse.fromJson(value);
         case 'CustomCommunicationListElementResponse':
           return CustomCommunicationListElementResponse.fromJson(value);
+        case 'CustomCommunicationattachmentRequest':
+          return CustomCommunicationattachmentRequest.fromJson(value);
+        case 'CustomCommunicationrecipientsgroupResponse':
+          return CustomCommunicationrecipientsgroupResponse.fromJson(value);
+        case 'CustomCommunicationrecipientsrecipientResponse':
+          return CustomCommunicationrecipientsrecipientResponse.fromJson(value);
+        case 'CustomCommunicationsenderRequest':
+          return CustomCommunicationsenderRequest.fromJson(value);
+        case 'CustomCommunicationsenderResponse':
+          return CustomCommunicationsenderResponse.fromJson(value);
         case 'CustomContactNameResponse':
           return CustomContactNameResponse.fromJson(value);
         case 'CustomCreditcardtransactionResponse':
@@ -552,10 +574,10 @@ class ApiClient {
           return DepartmentGetAutocompleteV2Response.fromJson(value);
         case 'DepartmentGetAutocompleteV2ResponseMPayload':
           return DepartmentGetAutocompleteV2ResponseMPayload.fromJson(value);
-        case 'DescriptionstaticResponse':
-          return DescriptionstaticResponse.fromJson(value);
-        case 'DescriptionstaticResponseCompound':
-          return DescriptionstaticResponseCompound.fromJson(value);
+        case 'ElectronicfundstransferGetCommunicationListV1Response':
+          return ElectronicfundstransferGetCommunicationListV1Response.fromJson(value);
+        case 'ElectronicfundstransferGetCommunicationListV1ResponseMPayload':
+          return ElectronicfundstransferGetCommunicationListV1ResponseMPayload.fromJson(value);
         case 'EmailRequest':
           return EmailRequest.fromJson(value);
         case 'EmailRequestCompound':
@@ -564,10 +586,6 @@ class ApiClient {
           return EmailResponse.fromJson(value);
         case 'EmailResponseCompound':
           return EmailResponseCompound.fromJson(value);
-        case 'EmailstaticResponse':
-          return EmailstaticResponse.fromJson(value);
-        case 'EmailstaticResponseCompound':
-          return EmailstaticResponseCompound.fromJson(value);
         case 'EmailtypeAutocompleteElementResponse':
           return EmailtypeAutocompleteElementResponse.fromJson(value);
         case 'EmailtypeGetAutocompleteV2Response':
@@ -930,6 +948,14 @@ class ApiClient {
           return EzsignfolderGetCommunicationListV1Response.fromJson(value);
         case 'EzsignfolderGetCommunicationListV1ResponseMPayload':
           return EzsignfolderGetCommunicationListV1ResponseMPayload.fromJson(value);
+        case 'EzsignfolderGetCommunicationrecipientsV1Response':
+          return EzsignfolderGetCommunicationrecipientsV1Response.fromJson(value);
+        case 'EzsignfolderGetCommunicationrecipientsV1ResponseMPayload':
+          return EzsignfolderGetCommunicationrecipientsV1ResponseMPayload.fromJson(value);
+        case 'EzsignfolderGetCommunicationsendersV1Response':
+          return EzsignfolderGetCommunicationsendersV1Response.fromJson(value);
+        case 'EzsignfolderGetCommunicationsendersV1ResponseMPayload':
+          return EzsignfolderGetCommunicationsendersV1ResponseMPayload.fromJson(value);
         case 'EzsignfolderGetEzsigndocumentsV1Response':
           return EzsignfolderGetEzsigndocumentsV1Response.fromJson(value);
         case 'EzsignfolderGetEzsigndocumentsV1ResponseMPayload':
@@ -1586,8 +1612,6 @@ class ApiClient {
           return FieldECommunicationTypeTypeTransformer().decode(value);
         case 'FieldECommunicationexternalrecipientType':
           return FieldECommunicationexternalrecipientTypeTypeTransformer().decode(value);
-        case 'FieldECommunicationrecipientObjecttype':
-          return FieldECommunicationrecipientObjecttypeTypeTransformer().decode(value);
         case 'FieldECommunicationrecipientType':
           return FieldECommunicationrecipientTypeTypeTransformer().decode(value);
         case 'FieldECreditcardtypeCodename':
@@ -1746,6 +1770,22 @@ class ApiClient {
           return GlobalEzmaxcustomerGetConfigurationV1Response.fromJson(value);
         case 'HeaderAcceptLanguage':
           return HeaderAcceptLanguageTypeTransformer().decode(value);
+        case 'InscriptionGetCommunicationListV1Response':
+          return InscriptionGetCommunicationListV1Response.fromJson(value);
+        case 'InscriptionGetCommunicationListV1ResponseMPayload':
+          return InscriptionGetCommunicationListV1ResponseMPayload.fromJson(value);
+        case 'InscriptionnotauthenticatedGetCommunicationListV1Response':
+          return InscriptionnotauthenticatedGetCommunicationListV1Response.fromJson(value);
+        case 'InscriptionnotauthenticatedGetCommunicationListV1ResponseMPayload':
+          return InscriptionnotauthenticatedGetCommunicationListV1ResponseMPayload.fromJson(value);
+        case 'InscriptiontempGetCommunicationListV1Response':
+          return InscriptiontempGetCommunicationListV1Response.fromJson(value);
+        case 'InscriptiontempGetCommunicationListV1ResponseMPayload':
+          return InscriptiontempGetCommunicationListV1ResponseMPayload.fromJson(value);
+        case 'InvoiceGetCommunicationListV1Response':
+          return InvoiceGetCommunicationListV1Response.fromJson(value);
+        case 'InvoiceGetCommunicationListV1ResponseMPayload':
+          return InvoiceGetCommunicationListV1ResponseMPayload.fromJson(value);
         case 'LanguageAutocompleteElementResponse':
           return LanguageAutocompleteElementResponse.fromJson(value);
         case 'LanguageGetAutocompleteV2Response':
@@ -1806,6 +1846,10 @@ class ApiClient {
           return NotificationtestGetElementsV1ResponseMPayload.fromJson(value);
         case 'NotificationtestResponse':
           return NotificationtestResponse.fromJson(value);
+        case 'OtherincomeGetCommunicationListV1Response':
+          return OtherincomeGetCommunicationListV1Response.fromJson(value);
+        case 'OtherincomeGetCommunicationListV1ResponseMPayload':
+          return OtherincomeGetCommunicationListV1ResponseMPayload.fromJson(value);
         case 'PaymenttermAutocompleteElementResponse':
           return PaymenttermAutocompleteElementResponse.fromJson(value);
         case 'PaymenttermCreateObjectV1Request':
@@ -1878,16 +1922,16 @@ class ApiClient {
           return PhoneResponse.fromJson(value);
         case 'PhoneResponseCompound':
           return PhoneResponseCompound.fromJson(value);
-        case 'PhonestaticResponse':
-          return PhonestaticResponse.fromJson(value);
-        case 'PhonestaticResponseCompound':
-          return PhonestaticResponseCompound.fromJson(value);
         case 'PhonetypeAutocompleteElementResponse':
           return PhonetypeAutocompleteElementResponse.fromJson(value);
         case 'PhonetypeGetAutocompleteV2Response':
           return PhonetypeGetAutocompleteV2Response.fromJson(value);
         case 'PhonetypeGetAutocompleteV2ResponseMPayload':
           return PhonetypeGetAutocompleteV2ResponseMPayload.fromJson(value);
+        case 'RejectedoffertopurchaseGetCommunicationListV1Response':
+          return RejectedoffertopurchaseGetCommunicationListV1Response.fromJson(value);
+        case 'RejectedoffertopurchaseGetCommunicationListV1ResponseMPayload':
+          return RejectedoffertopurchaseGetCommunicationListV1ResponseMPayload.fromJson(value);
         case 'ScimAuthenticationScheme':
           return ScimAuthenticationScheme.fromJson(value);
         case 'ScimEmail':

@@ -112,6 +112,24 @@ void main() {
       // TODO
     });
 
+    // Retrieve Ezsignfolder's Communicationrecipient
+    //
+    // 
+    //
+    //Future<EzsignfolderGetCommunicationrecipientsV1Response> ezsignfolderGetCommunicationrecipientsV1(int pkiEzsignfolderID) async
+    test('test ezsignfolderGetCommunicationrecipientsV1', () async {
+      // TODO
+    });
+
+    // Retrieve Ezsignfolder's Communicationsender
+    //
+    // 
+    //
+    //Future<EzsignfolderGetCommunicationsendersV1Response> ezsignfolderGetCommunicationsendersV1(int pkiEzsignfolderID) async
+    test('test ezsignfolderGetCommunicationsendersV1', () async {
+      // TODO
+    });
+
     // Retrieve an existing Ezsignfolder's Ezsigndocuments
     //
     // 
@@ -150,7 +168,7 @@ void main() {
 
     // Retrieve Ezsignfolder list
     //
-    // Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived<br>Disposed| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
+    // Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived<br>Disposed| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | fkiUserID | | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
     //
     //Future<EzsignfolderGetListV1Response> ezsignfolderGetListV1({ String eOrderBy, int iRowMax, int iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter }) async
     test('test ezsignfolderGetListV1', () async {

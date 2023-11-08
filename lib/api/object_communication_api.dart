@@ -16,33 +16,32 @@ class ObjectCommunicationApi {
 
   final ApiClient apiClient;
 
-  /// Retrieve an existing Communication
+  /// Send a new Communication
   ///
-  /// 
+  /// The endpoint allows to send one or many elements at once.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
   /// Parameters:
   ///
-  /// * [int] pkiCommunicationID (required):
-  Future<Response> communicationGetObjectV2WithHttpInfo(int pkiCommunicationID,) async {
+  /// * [CommunicationSendV1Request] communicationSendV1Request (required):
+  Future<Response> communicationSendV1WithHttpInfo(CommunicationSendV1Request communicationSendV1Request,) async {
     // ignore: prefer_const_declarations
-    final path = r'/2/object/communication/{pkiCommunicationID}'
-      .replaceAll('{pkiCommunicationID}', pkiCommunicationID.toString());
+    final path = r'/1/object/communication/send';
 
     // ignore: prefer_final_locals
-    Object? postBody;
+    Object? postBody = communicationSendV1Request;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const contentTypes = <String>[];
+    const contentTypes = <String>['application/json'];
 
 
     return apiClient.invokeAPI(
       path,
-      'GET',
+      'POST',
       queryParams,
       postBody,
       headerParams,
@@ -51,15 +50,15 @@ class ObjectCommunicationApi {
     );
   }
 
-  /// Retrieve an existing Communication
+  /// Send a new Communication
   ///
-  /// 
+  /// The endpoint allows to send one or many elements at once.
   ///
   /// Parameters:
   ///
-  /// * [int] pkiCommunicationID (required):
-  Future<CommunicationGetObjectV2Response?> communicationGetObjectV2(int pkiCommunicationID,) async {
-    final response = await communicationGetObjectV2WithHttpInfo(pkiCommunicationID,);
+  /// * [CommunicationSendV1Request] communicationSendV1Request (required):
+  Future<CommunicationSendV1Response?> communicationSendV1(CommunicationSendV1Request communicationSendV1Request,) async {
+    final response = await communicationSendV1WithHttpInfo(communicationSendV1Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -67,7 +66,7 @@ class ObjectCommunicationApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommunicationGetObjectV2Response',) as CommunicationGetObjectV2Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommunicationSendV1Response',) as CommunicationSendV1Response;
     
     }
     return null;
