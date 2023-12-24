@@ -26,6 +26,15 @@ void main() {
       // TODO
     });
 
+    // Create a new Webhook
+    //
+    // The endpoint allows to create one or many elements at once.
+    //
+    //Future<WebhookCreateObjectV2Response> webhookCreateObjectV2(WebhookCreateObjectV2Request webhookCreateObjectV2Request) async
+    test('test webhookCreateObjectV2', () async {
+      // TODO
+    });
+
     // Delete an existing Webhook
     //
     // 
@@ -68,6 +77,15 @@ void main() {
     //
     //Future<WebhookGetObjectV2Response> webhookGetObjectV2(int pkiWebhookID) async
     test('test webhookGetObjectV2', () async {
+      // TODO
+    });
+
+    // Regenerate the Apikey
+    //
+    // 
+    //
+    //Future<WebhookRegenerateApikeyV1Response> webhookRegenerateApikeyV1(int pkiWebhookID, WebhookRegenerateApikeyV1Request webhookRegenerateApikeyV1Request) async
+    test('test webhookRegenerateApikeyV1', () async {
       // TODO
     });
 

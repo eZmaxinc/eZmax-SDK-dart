@@ -10,8 +10,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiCommunicationrecipientID** | **int** | The unique ID of the Communicationrecipient. | [optional] 
 **fkiAgentID** | **int** | The unique ID of the Agent. | [optional] 
-**fkiAgentincorporationID** | **int** | The unique ID of the Agentincorporation. | [optional] 
 **fkiBrokerID** | **int** | The unique ID of the Broker. | [optional] 
+**fkiContactID** | **int** | The unique ID of the Contact | [optional] 
 **fkiCustomerID** | **int** | The unique ID of the Customer. | [optional] 
 **fkiEmployeeID** | **int** | The unique ID of the Employee. | [optional] 
 **fkiAssistantID** | **int** | The unique ID of the Assistant. | [optional] 
@@ -20,6 +20,8 @@ Name | Type | Description | Notes
 **fkiNotaryID** | **int** | The unique ID of the Notary. | [optional] 
 **fkiSupplierID** | **int** | The unique ID of the Supplier. | [optional] 
 **fkiUserID** | **int** | The unique ID of the User | [optional] 
+**fkiMailboxsharedID** | **int** | The unique ID of the Mailboxshared | [optional] 
+**fkiPhonelinesharedID** | **int** | The unique ID of the Phonelineshared | [optional] 
 **eCommunicationrecipientType** | [**FieldECommunicationrecipientType**](FieldECommunicationrecipientType.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

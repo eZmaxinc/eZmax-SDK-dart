@@ -17,7 +17,10 @@ Name | Type | Description | Notes
 **eWebhookManagementevent** | [**FieldEWebhookManagementevent**](FieldEWebhookManagementevent.md) |  | [optional] 
 **sWebhookUrl** | **String** | The URL of the Webhook callback | 
 **sWebhookEmailfailed** | **String** | The email that will receive the Webhook in case all attempts fail | 
+**sWebhookApikey** | **String** | The Apikey for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey. | [optional] 
+**sWebhookSecret** | **String** | The Secret for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey. | [optional] 
 **bWebhookIsactive** | **bool** | Whether the Webhook is active or not | 
+**bWebhookIssigned** | **bool** | Whether the requests will be signed or not | 
 **bWebhookSkipsslvalidation** | **bool** | Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use | 
 **sWebhookEvent** | **String** | The concatenated string to describe the Webhook event | [optional] 
 

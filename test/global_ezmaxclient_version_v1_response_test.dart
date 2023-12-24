@@ -22,6 +22,12 @@ void main() {
       // TODO
     });
 
+    // The latest OS version of the system running the application at the time of release
+    // String sEzmaxclientOslatestversion (default value: '11')
+    test('to test the property `sEzmaxclientOslatestversion`', () async {
+      // TODO
+    });
+
 
   });
 

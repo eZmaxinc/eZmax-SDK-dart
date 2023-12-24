@@ -85,6 +85,21 @@ String parameterToString(dynamic value) {
   if (value is FieldEActivesessionWeekdaystart) {
     return FieldEActivesessionWeekdaystartTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEAttachmentDocumenttype) {
+    return FieldEAttachmentDocumenttypeTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEAttachmentPrivacy) {
+    return FieldEAttachmentPrivacyTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEAttachmentType) {
+    return FieldEAttachmentTypeTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEAttachmentVerified) {
+    return FieldEAttachmentVerifiedTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEAttachmentlogType) {
+    return FieldEAttachmentlogTypeTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEBrandingLogo) {
     return FieldEBrandingLogoTypeTransformer().encode(value).toString();
   }
@@ -237,6 +252,9 @@ String parameterToString(dynamic value) {
   }
   if (value is FieldEUserEzsignaccess) {
     return FieldEUserEzsignaccessTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEUserEzsignprepaid) {
+    return FieldEUserEzsignprepaidTypeTransformer().encode(value).toString();
   }
   if (value is FieldEUserEzsignsendreminderfrequency) {
     return FieldEUserEzsignsendreminderfrequencyTypeTransformer().encode(value).toString();

@@ -67,6 +67,12 @@ void main() {
       // TODO
     });
 
+    // Whether the requests will be signed or not
+    // bool bWebhookIssigned
+    test('to test the property `bWebhookIssigned`', () async {
+      // TODO
+    });
+
 
   });
 

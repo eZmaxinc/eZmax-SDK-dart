@@ -16,6 +16,12 @@ void main() {
   // final instance = EzsignsignatureSignV1Request();
 
   group('test EzsignsignatureSignV1Request', () {
+    // The unique ID of the Ezsignsigningreason
+    // int fkiEzsignsigningreasonID
+    test('to test the property `fkiEzsignsigningreasonID`', () async {
+      // TODO
+    });
+
     // The value required for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **City**, **FieldText** or **FieldTextarea**
     // String sValue
     test('to test the property `sValue`', () async {

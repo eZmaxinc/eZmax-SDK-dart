@@ -17,6 +17,15 @@ void main() {
   // final instance = ObjectInvoiceApi();
 
   group('tests for ObjectInvoiceApi', () {
+    // Retrieve Invoice's Attachments
+    //
+    // 
+    //
+    //Future<InvoiceGetAttachmentsV1Response> invoiceGetAttachmentsV1(int pkiInvoiceID) async
+    test('test invoiceGetAttachmentsV1', () async {
+      // TODO
+    });
+
     // Retrieve Communication list
     //
     // 

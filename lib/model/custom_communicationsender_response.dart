@@ -17,10 +17,12 @@ class CustomCommunicationsenderResponse {
     this.fkiBrokerID,
     this.fkiUserID,
     this.fkiMailboxsharedID,
+    this.fkiPhonelinesharedID,
     required this.eCommunicationsenderObjecttype,
     required this.objContactName,
-    this.sEmailAddress,
-    this.sPhoneE164,
+    this.objEmail,
+    this.objPhoneFax,
+    this.objPhoneSMS,
   });
 
   /// The unique ID of the Agent.
@@ -68,27 +70,45 @@ class CustomCommunicationsenderResponse {
   ///
   int? fkiMailboxsharedID;
 
+  /// The unique ID of the Phonelineshared
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 255
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiPhonelinesharedID;
+
   CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnum eCommunicationsenderObjecttype;
 
   CustomContactNameResponse objContactName;
 
-  /// The email address.
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
   /// source code must fall back to having a nullable type.
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
-  String? sEmailAddress;
+  EmailResponseCompound? objEmail;
 
-  /// A phone number in E.164 Format
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
   /// source code must fall back to having a nullable type.
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
-  String? sPhoneE164;
+  PhoneResponseCompound? objPhoneFax;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  PhoneResponseCompound? objPhoneSMS;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomCommunicationsenderResponse &&
@@ -96,10 +116,12 @@ class CustomCommunicationsenderResponse {
     other.fkiBrokerID == fkiBrokerID &&
     other.fkiUserID == fkiUserID &&
     other.fkiMailboxsharedID == fkiMailboxsharedID &&
+    other.fkiPhonelinesharedID == fkiPhonelinesharedID &&
     other.eCommunicationsenderObjecttype == eCommunicationsenderObjecttype &&
     other.objContactName == objContactName &&
-    other.sEmailAddress == sEmailAddress &&
-    other.sPhoneE164 == sPhoneE164;
+    other.objEmail == objEmail &&
+    other.objPhoneFax == objPhoneFax &&
+    other.objPhoneSMS == objPhoneSMS;
 
   @override
   int get hashCode =>
@@ -108,13 +130,15 @@ class CustomCommunicationsenderResponse {
     (fkiBrokerID == null ? 0 : fkiBrokerID!.hashCode) +
     (fkiUserID == null ? 0 : fkiUserID!.hashCode) +
     (fkiMailboxsharedID == null ? 0 : fkiMailboxsharedID!.hashCode) +
+    (fkiPhonelinesharedID == null ? 0 : fkiPhonelinesharedID!.hashCode) +
     (eCommunicationsenderObjecttype.hashCode) +
     (objContactName.hashCode) +
-    (sEmailAddress == null ? 0 : sEmailAddress!.hashCode) +
-    (sPhoneE164 == null ? 0 : sPhoneE164!.hashCode);
+    (objEmail == null ? 0 : objEmail!.hashCode) +
+    (objPhoneFax == null ? 0 : objPhoneFax!.hashCode) +
+    (objPhoneSMS == null ? 0 : objPhoneSMS!.hashCode);
 
   @override
-  String toString() => 'CustomCommunicationsenderResponse[fkiAgentID=$fkiAgentID, fkiBrokerID=$fkiBrokerID, fkiUserID=$fkiUserID, fkiMailboxsharedID=$fkiMailboxsharedID, eCommunicationsenderObjecttype=$eCommunicationsenderObjecttype, objContactName=$objContactName, sEmailAddress=$sEmailAddress, sPhoneE164=$sPhoneE164]';
+  String toString() => 'CustomCommunicationsenderResponse[fkiAgentID=$fkiAgentID, fkiBrokerID=$fkiBrokerID, fkiUserID=$fkiUserID, fkiMailboxsharedID=$fkiMailboxsharedID, fkiPhonelinesharedID=$fkiPhonelinesharedID, eCommunicationsenderObjecttype=$eCommunicationsenderObjecttype, objContactName=$objContactName, objEmail=$objEmail, objPhoneFax=$objPhoneFax, objPhoneSMS=$objPhoneSMS]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -138,17 +162,27 @@ class CustomCommunicationsenderResponse {
     } else {
       json[r'fkiMailboxsharedID'] = null;
     }
+    if (this.fkiPhonelinesharedID != null) {
+      json[r'fkiPhonelinesharedID'] = this.fkiPhonelinesharedID;
+    } else {
+      json[r'fkiPhonelinesharedID'] = null;
+    }
       json[r'eCommunicationsenderObjecttype'] = this.eCommunicationsenderObjecttype;
       json[r'objContactName'] = this.objContactName;
-    if (this.sEmailAddress != null) {
-      json[r'sEmailAddress'] = this.sEmailAddress;
+    if (this.objEmail != null) {
+      json[r'objEmail'] = this.objEmail;
     } else {
-      json[r'sEmailAddress'] = null;
+      json[r'objEmail'] = null;
     }
-    if (this.sPhoneE164 != null) {
-      json[r'sPhoneE164'] = this.sPhoneE164;
+    if (this.objPhoneFax != null) {
+      json[r'objPhoneFax'] = this.objPhoneFax;
     } else {
-      json[r'sPhoneE164'] = null;
+      json[r'objPhoneFax'] = null;
+    }
+    if (this.objPhoneSMS != null) {
+      json[r'objPhoneSMS'] = this.objPhoneSMS;
+    } else {
+      json[r'objPhoneSMS'] = null;
     }
     return json;
   }
@@ -176,10 +210,12 @@ class CustomCommunicationsenderResponse {
         fkiBrokerID: mapValueOfType<int>(json, r'fkiBrokerID'),
         fkiUserID: mapValueOfType<int>(json, r'fkiUserID'),
         fkiMailboxsharedID: mapValueOfType<int>(json, r'fkiMailboxsharedID'),
+        fkiPhonelinesharedID: mapValueOfType<int>(json, r'fkiPhonelinesharedID'),
         eCommunicationsenderObjecttype: CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnum.fromJson(json[r'eCommunicationsenderObjecttype'])!,
         objContactName: CustomContactNameResponse.fromJson(json[r'objContactName'])!,
-        sEmailAddress: mapValueOfType<String>(json, r'sEmailAddress'),
-        sPhoneE164: mapValueOfType<String>(json, r'sPhoneE164'),
+        objEmail: EmailResponseCompound.fromJson(json[r'objEmail']),
+        objPhoneFax: PhoneResponseCompound.fromJson(json[r'objPhoneFax']),
+        objPhoneSMS: PhoneResponseCompound.fromJson(json[r'objPhoneSMS']),
       );
     }
     return null;
@@ -249,6 +285,7 @@ class CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnum {
   static const broker = CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnum._(r'Broker');
   static const user = CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnum._(r'User');
   static const mailboxshared = CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnum._(r'Mailboxshared');
+  static const phonelineshared = CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnum._(r'Phonelineshared');
 
   /// List of all possible values in this [enum][CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnum].
   static const values = <CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnum>[
@@ -256,6 +293,7 @@ class CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnum {
     broker,
     user,
     mailboxshared,
+    phonelineshared,
   ];
 
   static CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnum? fromJson(dynamic value) => CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnumTypeTransformer().decode(value);
@@ -298,6 +336,7 @@ class CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnumTypeTra
         case r'Broker': return CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnum.broker;
         case r'User': return CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnum.user;
         case r'Mailboxshared': return CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnum.mailboxshared;
+        case r'Phonelineshared': return CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnum.phonelineshared;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');

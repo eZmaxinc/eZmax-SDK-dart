@@ -18,6 +18,7 @@ class PhoneResponseCompound {
     this.ePhoneType,
     this.sPhoneE164,
     this.sPhoneExtension,
+    this.bPhoneInternational,
   });
 
   /// The unique ID of the Phone.
@@ -56,13 +57,23 @@ class PhoneResponseCompound {
   ///
   String? sPhoneExtension;
 
+  /// Indicate the phone number is an international phone number.
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bPhoneInternational;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is PhoneResponseCompound &&
     other.pkiPhoneID == pkiPhoneID &&
     other.fkiPhonetypeID == fkiPhonetypeID &&
     other.ePhoneType == ePhoneType &&
     other.sPhoneE164 == sPhoneE164 &&
-    other.sPhoneExtension == sPhoneExtension;
+    other.sPhoneExtension == sPhoneExtension &&
+    other.bPhoneInternational == bPhoneInternational;
 
   @override
   int get hashCode =>
@@ -71,10 +82,11 @@ class PhoneResponseCompound {
     (fkiPhonetypeID.hashCode) +
     (ePhoneType == null ? 0 : ePhoneType!.hashCode) +
     (sPhoneE164 == null ? 0 : sPhoneE164!.hashCode) +
-    (sPhoneExtension == null ? 0 : sPhoneExtension!.hashCode);
+    (sPhoneExtension == null ? 0 : sPhoneExtension!.hashCode) +
+    (bPhoneInternational == null ? 0 : bPhoneInternational!.hashCode);
 
   @override
-  String toString() => 'PhoneResponseCompound[pkiPhoneID=$pkiPhoneID, fkiPhonetypeID=$fkiPhonetypeID, ePhoneType=$ePhoneType, sPhoneE164=$sPhoneE164, sPhoneExtension=$sPhoneExtension]';
+  String toString() => 'PhoneResponseCompound[pkiPhoneID=$pkiPhoneID, fkiPhonetypeID=$fkiPhonetypeID, ePhoneType=$ePhoneType, sPhoneE164=$sPhoneE164, sPhoneExtension=$sPhoneExtension, bPhoneInternational=$bPhoneInternational]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -94,6 +106,11 @@ class PhoneResponseCompound {
       json[r'sPhoneExtension'] = this.sPhoneExtension;
     } else {
       json[r'sPhoneExtension'] = null;
+    }
+    if (this.bPhoneInternational != null) {
+      json[r'bPhoneInternational'] = this.bPhoneInternational;
+    } else {
+      json[r'bPhoneInternational'] = null;
     }
     return json;
   }
@@ -122,6 +139,7 @@ class PhoneResponseCompound {
         ePhoneType: FieldEPhoneType.fromJson(json[r'ePhoneType']),
         sPhoneE164: mapValueOfType<String>(json, r'sPhoneE164'),
         sPhoneExtension: mapValueOfType<String>(json, r'sPhoneExtension'),
+        bPhoneInternational: mapValueOfType<bool>(json, r'bPhoneInternational'),
       );
     }
     return null;

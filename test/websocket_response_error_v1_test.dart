@@ -22,6 +22,12 @@ void main() {
       // TODO
     });
 
+    // The Channel on which to route the websocket message
+    // String sWebsocketChannel
+    test('to test the property `sWebsocketChannel`', () async {
+      // TODO
+    });
+
     // WebsocketResponseErrorV1MPayload mPayload
     test('to test the property `mPayload`', () async {
       // TODO

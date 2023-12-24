@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **sWebhookUrl** | **String** | The URL of the Webhook callback | 
 **sWebhookEmailfailed** | **String** | The email that will receive the Webhook in case all attempts fail | 
 **bWebhookIsactive** | **bool** | Whether the Webhook is active or not | 
+**bWebhookIssigned** | **bool** | Whether the requests will be signed or not | [optional] 
 **bWebhookSkipsslvalidation** | **bool** | Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

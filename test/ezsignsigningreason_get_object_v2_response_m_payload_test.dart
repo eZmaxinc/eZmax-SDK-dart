@@ -11,18 +11,13 @@
 import 'package:openapi/api.dart';
 import 'package:test/test.dart';
 
-// tests for AttachmentDownloadV1Response
+// tests for EzsignsigningreasonGetObjectV2ResponseMPayload
 void main() {
-  // final instance = AttachmentDownloadV1Response();
+  // final instance = EzsignsigningreasonGetObjectV2ResponseMPayload();
 
-  group('test AttachmentDownloadV1Response', () {
-    // CommonResponseObjDebugPayload objDebugPayload
-    test('to test the property `objDebugPayload`', () async {
-      // TODO
-    });
-
-    // CommonResponseObjDebug objDebug
-    test('to test the property `objDebug`', () async {
+  group('test EzsignsigningreasonGetObjectV2ResponseMPayload', () {
+    // EzsignsigningreasonResponseCompound objEzsignsigningreason
+    test('to test the property `objEzsignsigningreason`', () async {
       // TODO
     });
 

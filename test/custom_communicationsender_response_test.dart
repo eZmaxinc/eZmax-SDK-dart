@@ -40,6 +40,12 @@ void main() {
       // TODO
     });
 
+    // The unique ID of the Phonelineshared
+    // int fkiPhonelinesharedID
+    test('to test the property `fkiPhonelinesharedID`', () async {
+      // TODO
+    });
+
     // String eCommunicationsenderObjecttype
     test('to test the property `eCommunicationsenderObjecttype`', () async {
       // TODO
@@ -50,15 +56,18 @@ void main() {
       // TODO
     });
 
-    // The email address.
-    // String sEmailAddress
-    test('to test the property `sEmailAddress`', () async {
+    // EmailResponseCompound objEmail
+    test('to test the property `objEmail`', () async {
       // TODO
     });
 
-    // A phone number in E.164 Format
-    // String sPhoneE164
-    test('to test the property `sPhoneE164`', () async {
+    // PhoneResponseCompound objPhoneFax
+    test('to test the property `objPhoneFax`', () async {
+      // TODO
+    });
+
+    // PhoneResponseCompound objPhoneSMS
+    test('to test the property `objPhoneSMS`', () async {
       // TODO
     });
 

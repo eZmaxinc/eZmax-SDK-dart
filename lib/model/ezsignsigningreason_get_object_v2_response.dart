@@ -10,11 +10,12 @@
 
 part of openapi.api;
 
-class AttachmentDownloadV1Response {
-  /// Returns a new [AttachmentDownloadV1Response] instance.
-  AttachmentDownloadV1Response({
+class EzsignsigningreasonGetObjectV2Response {
+  /// Returns a new [EzsignsigningreasonGetObjectV2Response] instance.
+  EzsignsigningreasonGetObjectV2Response({
     required this.objDebugPayload,
     this.objDebug,
+    required this.mPayload,
   });
 
   CommonResponseObjDebugPayload objDebugPayload;
@@ -27,19 +28,23 @@ class AttachmentDownloadV1Response {
   ///
   CommonResponseObjDebug? objDebug;
 
+  EzsignsigningreasonGetObjectV2ResponseMPayload mPayload;
+
   @override
-  bool operator ==(Object other) => identical(this, other) || other is AttachmentDownloadV1Response &&
+  bool operator ==(Object other) => identical(this, other) || other is EzsignsigningreasonGetObjectV2Response &&
     other.objDebugPayload == objDebugPayload &&
-    other.objDebug == objDebug;
+    other.objDebug == objDebug &&
+    other.mPayload == mPayload;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (objDebugPayload.hashCode) +
-    (objDebug == null ? 0 : objDebug!.hashCode);
+    (objDebug == null ? 0 : objDebug!.hashCode) +
+    (mPayload.hashCode);
 
   @override
-  String toString() => 'AttachmentDownloadV1Response[objDebugPayload=$objDebugPayload, objDebug=$objDebug]';
+  String toString() => 'EzsignsigningreasonGetObjectV2Response[objDebugPayload=$objDebugPayload, objDebug=$objDebug, mPayload=$mPayload]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -49,13 +54,14 @@ class AttachmentDownloadV1Response {
     } else {
       json[r'objDebug'] = null;
     }
+      json[r'mPayload'] = this.mPayload;
     return json;
   }
 
-  /// Returns a new [AttachmentDownloadV1Response] instance and imports its values from
+  /// Returns a new [EzsignsigningreasonGetObjectV2Response] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static AttachmentDownloadV1Response? fromJson(dynamic value) {
+  static EzsignsigningreasonGetObjectV2Response? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
 
@@ -64,25 +70,26 @@ class AttachmentDownloadV1Response {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "AttachmentDownloadV1Response[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "AttachmentDownloadV1Response[$key]" has a null value in JSON.');
+          assert(json.containsKey(key), 'Required key "EzsignsigningreasonGetObjectV2Response[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "EzsignsigningreasonGetObjectV2Response[$key]" has a null value in JSON.');
         });
         return true;
       }());
 
-      return AttachmentDownloadV1Response(
+      return EzsignsigningreasonGetObjectV2Response(
         objDebugPayload: CommonResponseObjDebugPayload.fromJson(json[r'objDebugPayload'])!,
         objDebug: CommonResponseObjDebug.fromJson(json[r'objDebug']),
+        mPayload: EzsignsigningreasonGetObjectV2ResponseMPayload.fromJson(json[r'mPayload'])!,
       );
     }
     return null;
   }
 
-  static List<AttachmentDownloadV1Response> listFromJson(dynamic json, {bool growable = false,}) {
-    final result = <AttachmentDownloadV1Response>[];
+  static List<EzsignsigningreasonGetObjectV2Response> listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <EzsignsigningreasonGetObjectV2Response>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
-        final value = AttachmentDownloadV1Response.fromJson(row);
+        final value = EzsignsigningreasonGetObjectV2Response.fromJson(row);
         if (value != null) {
           result.add(value);
         }
@@ -91,12 +98,12 @@ class AttachmentDownloadV1Response {
     return result.toList(growable: growable);
   }
 
-  static Map<String, AttachmentDownloadV1Response> mapFromJson(dynamic json) {
-    final map = <String, AttachmentDownloadV1Response>{};
+  static Map<String, EzsignsigningreasonGetObjectV2Response> mapFromJson(dynamic json) {
+    final map = <String, EzsignsigningreasonGetObjectV2Response>{};
     if (json is Map && json.isNotEmpty) {
       json = json.cast<String, dynamic>(); // ignore: parameter_assignments
       for (final entry in json.entries) {
-        final value = AttachmentDownloadV1Response.fromJson(entry.value);
+        final value = EzsignsigningreasonGetObjectV2Response.fromJson(entry.value);
         if (value != null) {
           map[entry.key] = value;
         }
@@ -105,14 +112,14 @@ class AttachmentDownloadV1Response {
     return map;
   }
 
-  // maps a json object with a list of AttachmentDownloadV1Response-objects as value to a dart map
-  static Map<String, List<AttachmentDownloadV1Response>> mapListFromJson(dynamic json, {bool growable = false,}) {
-    final map = <String, List<AttachmentDownloadV1Response>>{};
+  // maps a json object with a list of EzsignsigningreasonGetObjectV2Response-objects as value to a dart map
+  static Map<String, List<EzsignsigningreasonGetObjectV2Response>> mapListFromJson(dynamic json, {bool growable = false,}) {
+    final map = <String, List<EzsignsigningreasonGetObjectV2Response>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = AttachmentDownloadV1Response.listFromJson(entry.value, growable: growable,);
+        map[entry.key] = EzsignsigningreasonGetObjectV2Response.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;
@@ -121,6 +128,7 @@ class AttachmentDownloadV1Response {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'objDebugPayload',
+    'mPayload',
   };
 }
 

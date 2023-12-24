@@ -28,6 +28,8 @@ class FieldEEzsigntemplateformfieldgroupType {
   static const dropdown = FieldEEzsigntemplateformfieldgroupType._(r'Dropdown');
   static const radio = FieldEEzsigntemplateformfieldgroupType._(r'Radio');
   static const checkbox = FieldEEzsigntemplateformfieldgroupType._(r'Checkbox');
+  static const number = FieldEEzsigntemplateformfieldgroupType._(r'Number');
+  static const date = FieldEEzsigntemplateformfieldgroupType._(r'Date');
 
   /// List of all possible values in this [enum][FieldEEzsigntemplateformfieldgroupType].
   static const values = <FieldEEzsigntemplateformfieldgroupType>[
@@ -36,6 +38,8 @@ class FieldEEzsigntemplateformfieldgroupType {
     dropdown,
     radio,
     checkbox,
+    number,
+    date,
   ];
 
   static FieldEEzsigntemplateformfieldgroupType? fromJson(dynamic value) => FieldEEzsigntemplateformfieldgroupTypeTypeTransformer().decode(value);
@@ -79,6 +83,8 @@ class FieldEEzsigntemplateformfieldgroupTypeTypeTransformer {
         case r'Dropdown': return FieldEEzsigntemplateformfieldgroupType.dropdown;
         case r'Radio': return FieldEEzsigntemplateformfieldgroupType.radio;
         case r'Checkbox': return FieldEEzsigntemplateformfieldgroupType.checkbox;
+        case r'Number': return FieldEEzsigntemplateformfieldgroupType.number;
+        case r'Date': return FieldEEzsigntemplateformfieldgroupType.date;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');

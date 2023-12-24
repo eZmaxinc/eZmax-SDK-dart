@@ -140,6 +140,12 @@ void main() {
       // TODO
     });
 
+    // The number of Ezsigndocumentattachment total
+    // int iEzsigndocumentEzsignsignatureattachmenttotal
+    test('to test the property `iEzsigndocumentEzsignsignatureattachmenttotal`', () async {
+      // TODO
+    });
+
     // ComputedEEzsigndocumentSteptype eEzsigndocumentSteptype
     test('to test the property `eEzsigndocumentSteptype`', () async {
       // TODO

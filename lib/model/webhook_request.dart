@@ -22,6 +22,7 @@ class WebhookRequest {
     required this.sWebhookUrl,
     required this.sWebhookEmailfailed,
     required this.bWebhookIsactive,
+    this.bWebhookIssigned,
     required this.bWebhookSkipsslvalidation,
   });
 
@@ -75,6 +76,15 @@ class WebhookRequest {
   /// Whether the Webhook is active or not
   bool bWebhookIsactive;
 
+  /// Whether the requests will be signed or not
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bWebhookIssigned;
+
   /// Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use
   bool bWebhookSkipsslvalidation;
 
@@ -89,6 +99,7 @@ class WebhookRequest {
     other.sWebhookUrl == sWebhookUrl &&
     other.sWebhookEmailfailed == sWebhookEmailfailed &&
     other.bWebhookIsactive == bWebhookIsactive &&
+    other.bWebhookIssigned == bWebhookIssigned &&
     other.bWebhookSkipsslvalidation == bWebhookSkipsslvalidation;
 
   @override
@@ -103,10 +114,11 @@ class WebhookRequest {
     (sWebhookUrl.hashCode) +
     (sWebhookEmailfailed.hashCode) +
     (bWebhookIsactive.hashCode) +
+    (bWebhookIssigned == null ? 0 : bWebhookIssigned!.hashCode) +
     (bWebhookSkipsslvalidation.hashCode);
 
   @override
-  String toString() => 'WebhookRequest[pkiWebhookID=$pkiWebhookID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sWebhookDescription=$sWebhookDescription, eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, sWebhookUrl=$sWebhookUrl, sWebhookEmailfailed=$sWebhookEmailfailed, bWebhookIsactive=$bWebhookIsactive, bWebhookSkipsslvalidation=$bWebhookSkipsslvalidation]';
+  String toString() => 'WebhookRequest[pkiWebhookID=$pkiWebhookID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sWebhookDescription=$sWebhookDescription, eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, sWebhookUrl=$sWebhookUrl, sWebhookEmailfailed=$sWebhookEmailfailed, bWebhookIsactive=$bWebhookIsactive, bWebhookIssigned=$bWebhookIssigned, bWebhookSkipsslvalidation=$bWebhookSkipsslvalidation]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -135,6 +147,11 @@ class WebhookRequest {
       json[r'sWebhookUrl'] = this.sWebhookUrl;
       json[r'sWebhookEmailfailed'] = this.sWebhookEmailfailed;
       json[r'bWebhookIsactive'] = this.bWebhookIsactive;
+    if (this.bWebhookIssigned != null) {
+      json[r'bWebhookIssigned'] = this.bWebhookIssigned;
+    } else {
+      json[r'bWebhookIssigned'] = null;
+    }
       json[r'bWebhookSkipsslvalidation'] = this.bWebhookSkipsslvalidation;
     return json;
   }
@@ -167,6 +184,7 @@ class WebhookRequest {
         sWebhookUrl: mapValueOfType<String>(json, r'sWebhookUrl')!,
         sWebhookEmailfailed: mapValueOfType<String>(json, r'sWebhookEmailfailed')!,
         bWebhookIsactive: mapValueOfType<bool>(json, r'bWebhookIsactive')!,
+        bWebhookIssigned: mapValueOfType<bool>(json, r'bWebhookIssigned'),
         bWebhookSkipsslvalidation: mapValueOfType<bool>(json, r'bWebhookSkipsslvalidation')!,
       );
     }

@@ -116,6 +116,15 @@ void main() {
       // TODO
     });
 
+    // Retrieve Ezsigndocument's Attachments
+    //
+    // 
+    //
+    //Future<EzsigndocumentGetAttachmentsV1Response> ezsigndocumentGetAttachmentsV1(int pkiEzsigndocumentID) async
+    test('test ezsigndocumentGetAttachmentsV1', () async {
+      // TODO
+    });
+
     // Retrieve completed elements for the Ezsigndocument
     //
     // Return the completed Ezsignsignatures, Ezsignformfieldgroups and Ezsignannotations at the current step in the process

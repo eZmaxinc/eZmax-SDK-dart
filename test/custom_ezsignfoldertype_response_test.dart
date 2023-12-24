@@ -28,7 +28,13 @@ void main() {
       // TODO
     });
 
-    // Whether we include the proof with the signed Ezsigndocument for Ezsignsigners
+    // Whether we send the proof in the email to Ezsignsigner
+    // bool bEzsignfoldertypeSendproofezsignsigner
+    test('to test the property `bEzsignfoldertypeSendproofezsignsigner`', () async {
+      // TODO
+    });
+
+    // THIS FIELD WILL BE DELETED. Whether we include the proof with the signed Ezsigndocument for Ezsignsigners
     // bool bEzsignfoldertypeIncludeproofsigner
     test('to test the property `bEzsignfoldertypeIncludeproofsigner`', () async {
       // TODO
@@ -37,6 +43,18 @@ void main() {
     // Whether we include the proof with the signed Ezsigndocument for users
     // bool bEzsignfoldertypeIncludeproofuser
     test('to test the property `bEzsignfoldertypeIncludeproofuser`', () async {
+      // TODO
+    });
+
+    // Whether we allow the Ezsigndocument to be downloaded by an Ezsignsigner
+    // bool bEzsignfoldertypeAllowdownloadattachmentezsignsigner
+    test('to test the property `bEzsignfoldertypeAllowdownloadattachmentezsignsigner`', () async {
+      // TODO
+    });
+
+    // Whether we allow the proof to be downloaded by an Ezsignsigner
+    // bool bEzsignfoldertypeAllowdownloadproofezsignsigner
+    test('to test the property `bEzsignfoldertypeAllowdownloadproofezsignsigner`', () async {
       // TODO
     });
 

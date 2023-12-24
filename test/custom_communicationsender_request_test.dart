@@ -34,6 +34,12 @@ void main() {
       // TODO
     });
 
+    // The unique ID of the Phonelineshared
+    // int fkiPhonelinesharedID
+    test('to test the property `fkiPhonelinesharedID`', () async {
+      // TODO
+    });
+
     // The unique ID of the User
     // int fkiUserID
     test('to test the property `fkiUserID`', () async {

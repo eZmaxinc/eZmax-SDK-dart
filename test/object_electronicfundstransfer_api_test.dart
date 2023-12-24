@@ -21,8 +21,8 @@ void main() {
     //
     // 
     //
-    //Future<ElectronicfundstransferGetCommunicationListV1Response> eletronicfundstransferGetCommunicationListV1(int pkiElectronicfundstransferID) async
-    test('test eletronicfundstransferGetCommunicationListV1', () async {
+    //Future<ElectronicfundstransferGetCommunicationListV1Response> electronicfundstransferGetCommunicationListV1(int pkiElectronicfundstransferID) async
+    test('test electronicfundstransferGetCommunicationListV1', () async {
       // TODO
     });
 

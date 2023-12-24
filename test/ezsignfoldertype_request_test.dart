@@ -114,9 +114,69 @@ void main() {
       // TODO
     });
 
-    // Whether we send the Ezsigndocument and the proof as attachment in the email
+    // THIS FIELD WILL BE DELETED. Whether we send the Ezsigndocument and the proof as attachment in the email
     // bool bEzsignfoldertypeSendattatchmentsigner
     test('to test the property `bEzsignfoldertypeSendattatchmentsigner`', () async {
+      // TODO
+    });
+
+    // Whether we send an email to Ezsignsigner  when document is completed
+    // bool bEzsignfoldertypeSendsignedtoezsignsigner
+    test('to test the property `bEzsignfoldertypeSendsignedtoezsignsigner`', () async {
+      // TODO
+    });
+
+    // Whether we send an email to User who signed when document is completed
+    // bool bEzsignfoldertypeSendsignedtouser
+    test('to test the property `bEzsignfoldertypeSendsignedtouser`', () async {
+      // TODO
+    });
+
+    // Whether we send the Ezsigndocument in the email to Ezsignsigner
+    // bool bEzsignfoldertypeSendattachmentezsignsigner
+    test('to test the property `bEzsignfoldertypeSendattachmentezsignsigner`', () async {
+      // TODO
+    });
+
+    // Whether we send the proof in the email to Ezsignsigner
+    // bool bEzsignfoldertypeSendproofezsignsigner
+    test('to test the property `bEzsignfoldertypeSendproofezsignsigner`', () async {
+      // TODO
+    });
+
+    // Whether we send the Ezsigndocument in the email to User
+    // bool bEzsignfoldertypeSendattachmentuser
+    test('to test the property `bEzsignfoldertypeSendattachmentuser`', () async {
+      // TODO
+    });
+
+    // Whether we send the proof in the email to User
+    // bool bEzsignfoldertypeSendproofuser
+    test('to test the property `bEzsignfoldertypeSendproofuser`', () async {
+      // TODO
+    });
+
+    // Whether we send the proof in the email to external recipient
+    // bool bEzsignfoldertypeSendproofemail
+    test('to test the property `bEzsignfoldertypeSendproofemail`', () async {
+      // TODO
+    });
+
+    // Whether we allow the Ezsigndocument to be downloaded by an Ezsignsigner
+    // bool bEzsignfoldertypeAllowdownloadattachmentezsignsigner
+    test('to test the property `bEzsignfoldertypeAllowdownloadattachmentezsignsigner`', () async {
+      // TODO
+    });
+
+    // Whether we allow the proof to be downloaded by an Ezsignsigner
+    // bool bEzsignfoldertypeAllowdownloadproofezsignsigner
+    test('to test the property `bEzsignfoldertypeAllowdownloadproofezsignsigner`', () async {
+      // TODO
+    });
+
+    // Whether we send the proof to user and Ezsignsigner who receive all documents.
+    // bool bEzsignfoldertypeSendproofreceivealldocument
+    test('to test the property `bEzsignfoldertypeSendproofreceivealldocument`', () async {
       // TODO
     });
 
@@ -138,7 +198,7 @@ void main() {
       // TODO
     });
 
-    // Whether we send the signed Ezsigndocument to the Usergroup that has acces to only their own Ezsignfolders
+    // THIS FIELD WILL BE DELETED. Whether we send the signed Ezsigndocument to the Usergroup that has acces to only their own Ezsignfolders
     // bool bEzsignfoldertypeSendsignedtolimitedgroup
     test('to test the property `bEzsignfoldertypeSendsignedtolimitedgroup`', () async {
       // TODO
@@ -180,7 +240,7 @@ void main() {
       // TODO
     });
 
-    // Whether we include the proof with the signed Ezsigndocument for Ezsignsigners
+    // THIS FIELD WILL BE DELETED. Whether we include the proof with the signed Ezsigndocument for Ezsignsigners
     // bool bEzsignfoldertypeIncludeproofsigner
     test('to test the property `bEzsignfoldertypeIncludeproofsigner`', () async {
       // TODO

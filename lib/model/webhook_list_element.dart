@@ -22,6 +22,7 @@ class WebhookListElement {
     this.eWebhookEzsignevent,
     this.eWebhookManagementevent,
     required this.bWebhookIsactive,
+    required this.bWebhookIssigned,
   });
 
   /// The unique ID of the Webhook
@@ -60,6 +61,9 @@ class WebhookListElement {
   /// Whether the Webhook is active or not
   bool bWebhookIsactive;
 
+  /// Whether the requests will be signed or not
+  bool bWebhookIssigned;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is WebhookListElement &&
     other.pkiWebhookID == pkiWebhookID &&
@@ -70,7 +74,8 @@ class WebhookListElement {
     other.eWebhookModule == eWebhookModule &&
     other.eWebhookEzsignevent == eWebhookEzsignevent &&
     other.eWebhookManagementevent == eWebhookManagementevent &&
-    other.bWebhookIsactive == bWebhookIsactive;
+    other.bWebhookIsactive == bWebhookIsactive &&
+    other.bWebhookIssigned == bWebhookIssigned;
 
   @override
   int get hashCode =>
@@ -83,10 +88,11 @@ class WebhookListElement {
     (eWebhookModule.hashCode) +
     (eWebhookEzsignevent == null ? 0 : eWebhookEzsignevent!.hashCode) +
     (eWebhookManagementevent == null ? 0 : eWebhookManagementevent!.hashCode) +
-    (bWebhookIsactive.hashCode);
+    (bWebhookIsactive.hashCode) +
+    (bWebhookIssigned.hashCode);
 
   @override
-  String toString() => 'WebhookListElement[pkiWebhookID=$pkiWebhookID, sWebhookDescription=$sWebhookDescription, sWebhookUrl=$sWebhookUrl, sWebhookEvent=$sWebhookEvent, sWebhookEmailfailed=$sWebhookEmailfailed, eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, bWebhookIsactive=$bWebhookIsactive]';
+  String toString() => 'WebhookListElement[pkiWebhookID=$pkiWebhookID, sWebhookDescription=$sWebhookDescription, sWebhookUrl=$sWebhookUrl, sWebhookEvent=$sWebhookEvent, sWebhookEmailfailed=$sWebhookEmailfailed, eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, bWebhookIsactive=$bWebhookIsactive, bWebhookIssigned=$bWebhookIssigned]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -107,6 +113,7 @@ class WebhookListElement {
       json[r'eWebhookManagementevent'] = null;
     }
       json[r'bWebhookIsactive'] = this.bWebhookIsactive;
+      json[r'bWebhookIssigned'] = this.bWebhookIssigned;
     return json;
   }
 
@@ -138,6 +145,7 @@ class WebhookListElement {
         eWebhookEzsignevent: FieldEWebhookEzsignevent.fromJson(json[r'eWebhookEzsignevent']),
         eWebhookManagementevent: FieldEWebhookManagementevent.fromJson(json[r'eWebhookManagementevent']),
         bWebhookIsactive: mapValueOfType<bool>(json, r'bWebhookIsactive')!,
+        bWebhookIssigned: mapValueOfType<bool>(json, r'bWebhookIssigned')!,
       );
     }
     return null;
@@ -192,6 +200,7 @@ class WebhookListElement {
     'sWebhookEmailfailed',
     'eWebhookModule',
     'bWebhookIsactive',
+    'bWebhookIssigned',
   };
 }
 

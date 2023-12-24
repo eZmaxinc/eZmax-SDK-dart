@@ -14,26 +14,33 @@ class GlobalEzmaxclientVersionV1Response {
   /// Returns a new [GlobalEzmaxclientVersionV1Response] instance.
   GlobalEzmaxclientVersionV1Response({
     required this.sEzmaxclientVersion,
+    this.sEzmaxclientOslatestversion = '11',
   });
 
   /// The version on the store
   String sEzmaxclientVersion;
 
+  /// The latest OS version of the system running the application at the time of release
+  String sEzmaxclientOslatestversion;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is GlobalEzmaxclientVersionV1Response &&
-    other.sEzmaxclientVersion == sEzmaxclientVersion;
+    other.sEzmaxclientVersion == sEzmaxclientVersion &&
+    other.sEzmaxclientOslatestversion == sEzmaxclientOslatestversion;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (sEzmaxclientVersion.hashCode);
+    (sEzmaxclientVersion.hashCode) +
+    (sEzmaxclientOslatestversion.hashCode);
 
   @override
-  String toString() => 'GlobalEzmaxclientVersionV1Response[sEzmaxclientVersion=$sEzmaxclientVersion]';
+  String toString() => 'GlobalEzmaxclientVersionV1Response[sEzmaxclientVersion=$sEzmaxclientVersion, sEzmaxclientOslatestversion=$sEzmaxclientOslatestversion]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'sEzmaxclientVersion'] = this.sEzmaxclientVersion;
+      json[r'sEzmaxclientOslatestversion'] = this.sEzmaxclientOslatestversion;
     return json;
   }
 
@@ -57,6 +64,7 @@ class GlobalEzmaxclientVersionV1Response {
 
       return GlobalEzmaxclientVersionV1Response(
         sEzmaxclientVersion: mapValueOfType<String>(json, r'sEzmaxclientVersion')!,
+        sEzmaxclientOslatestversion: mapValueOfType<String>(json, r'sEzmaxclientOslatestversion')!,
       );
     }
     return null;
@@ -105,6 +113,7 @@ class GlobalEzmaxclientVersionV1Response {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'sEzmaxclientVersion',
+    'sEzmaxclientOslatestversion',
   };
 }
 

@@ -669,6 +669,63 @@ class ObjectEzsigndocumentApi {
     return null;
   }
 
+  /// Retrieve Ezsigndocument's Attachments
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  Future<Response> ezsigndocumentGetAttachmentsV1WithHttpInfo(int pkiEzsigndocumentID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsigndocument/{pkiEzsigndocumentID}/getAttachments'
+      .replaceAll('{pkiEzsigndocumentID}', pkiEzsigndocumentID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve Ezsigndocument's Attachments
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  Future<EzsigndocumentGetAttachmentsV1Response?> ezsigndocumentGetAttachmentsV1(int pkiEzsigndocumentID,) async {
+    final response = await ezsigndocumentGetAttachmentsV1WithHttpInfo(pkiEzsigndocumentID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentGetAttachmentsV1Response',) as EzsigndocumentGetAttachmentsV1Response;
+    
+    }
+    return null;
+  }
+
   /// Retrieve completed elements for the Ezsigndocument
   ///
   /// Return the completed Ezsignsignatures, Ezsignformfieldgroups and Ezsignannotations at the current step in the process

@@ -15,8 +15,11 @@ class CustomEzsignfoldertypeResponse {
   CustomEzsignfoldertypeResponse({
     required this.pkiEzsignfoldertypeID,
     this.sEzsignfoldertypeNameX,
+    this.bEzsignfoldertypeSendproofezsignsigner,
     this.bEzsignfoldertypeIncludeproofsigner,
     this.bEzsignfoldertypeIncludeproofuser,
+    this.bEzsignfoldertypeAllowdownloadattachmentezsignsigner,
+    this.bEzsignfoldertypeAllowdownloadproofezsignsigner,
     this.bEzsignfoldertypeDelegate,
     this.bEzsignfoldertypeReassign,
   });
@@ -35,7 +38,16 @@ class CustomEzsignfoldertypeResponse {
   ///
   String? sEzsignfoldertypeNameX;
 
-  /// Whether we include the proof with the signed Ezsigndocument for Ezsignsigners
+  /// Whether we send the proof in the email to Ezsignsigner
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bEzsignfoldertypeSendproofezsignsigner;
+
+  /// THIS FIELD WILL BE DELETED. Whether we include the proof with the signed Ezsigndocument for Ezsignsigners
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -52,6 +64,24 @@ class CustomEzsignfoldertypeResponse {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   bool? bEzsignfoldertypeIncludeproofuser;
+
+  /// Whether we allow the Ezsigndocument to be downloaded by an Ezsignsigner
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bEzsignfoldertypeAllowdownloadattachmentezsignsigner;
+
+  /// Whether we allow the proof to be downloaded by an Ezsignsigner
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bEzsignfoldertypeAllowdownloadproofezsignsigner;
 
   /// Wheter if delegation of signature is allowed to another user or not
   ///
@@ -75,8 +105,11 @@ class CustomEzsignfoldertypeResponse {
   bool operator ==(Object other) => identical(this, other) || other is CustomEzsignfoldertypeResponse &&
     other.pkiEzsignfoldertypeID == pkiEzsignfoldertypeID &&
     other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
+    other.bEzsignfoldertypeSendproofezsignsigner == bEzsignfoldertypeSendproofezsignsigner &&
     other.bEzsignfoldertypeIncludeproofsigner == bEzsignfoldertypeIncludeproofsigner &&
     other.bEzsignfoldertypeIncludeproofuser == bEzsignfoldertypeIncludeproofuser &&
+    other.bEzsignfoldertypeAllowdownloadattachmentezsignsigner == bEzsignfoldertypeAllowdownloadattachmentezsignsigner &&
+    other.bEzsignfoldertypeAllowdownloadproofezsignsigner == bEzsignfoldertypeAllowdownloadproofezsignsigner &&
     other.bEzsignfoldertypeDelegate == bEzsignfoldertypeDelegate &&
     other.bEzsignfoldertypeReassign == bEzsignfoldertypeReassign;
 
@@ -85,13 +118,16 @@ class CustomEzsignfoldertypeResponse {
     // ignore: unnecessary_parenthesis
     (pkiEzsignfoldertypeID.hashCode) +
     (sEzsignfoldertypeNameX == null ? 0 : sEzsignfoldertypeNameX!.hashCode) +
+    (bEzsignfoldertypeSendproofezsignsigner == null ? 0 : bEzsignfoldertypeSendproofezsignsigner!.hashCode) +
     (bEzsignfoldertypeIncludeproofsigner == null ? 0 : bEzsignfoldertypeIncludeproofsigner!.hashCode) +
     (bEzsignfoldertypeIncludeproofuser == null ? 0 : bEzsignfoldertypeIncludeproofuser!.hashCode) +
+    (bEzsignfoldertypeAllowdownloadattachmentezsignsigner == null ? 0 : bEzsignfoldertypeAllowdownloadattachmentezsignsigner!.hashCode) +
+    (bEzsignfoldertypeAllowdownloadproofezsignsigner == null ? 0 : bEzsignfoldertypeAllowdownloadproofezsignsigner!.hashCode) +
     (bEzsignfoldertypeDelegate == null ? 0 : bEzsignfoldertypeDelegate!.hashCode) +
     (bEzsignfoldertypeReassign == null ? 0 : bEzsignfoldertypeReassign!.hashCode);
 
   @override
-  String toString() => 'CustomEzsignfoldertypeResponse[pkiEzsignfoldertypeID=$pkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, bEzsignfoldertypeIncludeproofsigner=$bEzsignfoldertypeIncludeproofsigner, bEzsignfoldertypeIncludeproofuser=$bEzsignfoldertypeIncludeproofuser, bEzsignfoldertypeDelegate=$bEzsignfoldertypeDelegate, bEzsignfoldertypeReassign=$bEzsignfoldertypeReassign]';
+  String toString() => 'CustomEzsignfoldertypeResponse[pkiEzsignfoldertypeID=$pkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, bEzsignfoldertypeSendproofezsignsigner=$bEzsignfoldertypeSendproofezsignsigner, bEzsignfoldertypeIncludeproofsigner=$bEzsignfoldertypeIncludeproofsigner, bEzsignfoldertypeIncludeproofuser=$bEzsignfoldertypeIncludeproofuser, bEzsignfoldertypeAllowdownloadattachmentezsignsigner=$bEzsignfoldertypeAllowdownloadattachmentezsignsigner, bEzsignfoldertypeAllowdownloadproofezsignsigner=$bEzsignfoldertypeAllowdownloadproofezsignsigner, bEzsignfoldertypeDelegate=$bEzsignfoldertypeDelegate, bEzsignfoldertypeReassign=$bEzsignfoldertypeReassign]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -100,6 +136,11 @@ class CustomEzsignfoldertypeResponse {
       json[r'sEzsignfoldertypeNameX'] = this.sEzsignfoldertypeNameX;
     } else {
       json[r'sEzsignfoldertypeNameX'] = null;
+    }
+    if (this.bEzsignfoldertypeSendproofezsignsigner != null) {
+      json[r'bEzsignfoldertypeSendproofezsignsigner'] = this.bEzsignfoldertypeSendproofezsignsigner;
+    } else {
+      json[r'bEzsignfoldertypeSendproofezsignsigner'] = null;
     }
     if (this.bEzsignfoldertypeIncludeproofsigner != null) {
       json[r'bEzsignfoldertypeIncludeproofsigner'] = this.bEzsignfoldertypeIncludeproofsigner;
@@ -110,6 +151,16 @@ class CustomEzsignfoldertypeResponse {
       json[r'bEzsignfoldertypeIncludeproofuser'] = this.bEzsignfoldertypeIncludeproofuser;
     } else {
       json[r'bEzsignfoldertypeIncludeproofuser'] = null;
+    }
+    if (this.bEzsignfoldertypeAllowdownloadattachmentezsignsigner != null) {
+      json[r'bEzsignfoldertypeAllowdownloadattachmentezsignsigner'] = this.bEzsignfoldertypeAllowdownloadattachmentezsignsigner;
+    } else {
+      json[r'bEzsignfoldertypeAllowdownloadattachmentezsignsigner'] = null;
+    }
+    if (this.bEzsignfoldertypeAllowdownloadproofezsignsigner != null) {
+      json[r'bEzsignfoldertypeAllowdownloadproofezsignsigner'] = this.bEzsignfoldertypeAllowdownloadproofezsignsigner;
+    } else {
+      json[r'bEzsignfoldertypeAllowdownloadproofezsignsigner'] = null;
     }
     if (this.bEzsignfoldertypeDelegate != null) {
       json[r'bEzsignfoldertypeDelegate'] = this.bEzsignfoldertypeDelegate;
@@ -145,8 +196,11 @@ class CustomEzsignfoldertypeResponse {
       return CustomEzsignfoldertypeResponse(
         pkiEzsignfoldertypeID: mapValueOfType<int>(json, r'pkiEzsignfoldertypeID')!,
         sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX'),
+        bEzsignfoldertypeSendproofezsignsigner: mapValueOfType<bool>(json, r'bEzsignfoldertypeSendproofezsignsigner'),
         bEzsignfoldertypeIncludeproofsigner: mapValueOfType<bool>(json, r'bEzsignfoldertypeIncludeproofsigner'),
         bEzsignfoldertypeIncludeproofuser: mapValueOfType<bool>(json, r'bEzsignfoldertypeIncludeproofuser'),
+        bEzsignfoldertypeAllowdownloadattachmentezsignsigner: mapValueOfType<bool>(json, r'bEzsignfoldertypeAllowdownloadattachmentezsignsigner'),
+        bEzsignfoldertypeAllowdownloadproofezsignsigner: mapValueOfType<bool>(json, r'bEzsignfoldertypeAllowdownloadproofezsignsigner'),
         bEzsignfoldertypeDelegate: mapValueOfType<bool>(json, r'bEzsignfoldertypeDelegate'),
         bEzsignfoldertypeReassign: mapValueOfType<bool>(json, r'bEzsignfoldertypeReassign'),
       );

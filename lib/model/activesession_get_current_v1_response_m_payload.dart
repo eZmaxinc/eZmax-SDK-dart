@@ -24,6 +24,9 @@ class ActivesessionGetCurrentV1ResponseMPayload {
     required this.pksCustomerCode,
     required this.fkiSystemconfigurationtypeID,
     this.fkiSignatureID,
+    required this.eUserEzsignaccess,
+    this.eUserEzsignprepaid,
+    this.dtUserEzsignprepaidexpiration,
     this.aPkiPermissionID = const [],
     required this.objUserReal,
     this.objUserCloned,
@@ -75,6 +78,25 @@ class ActivesessionGetCurrentV1ResponseMPayload {
   ///
   int? fkiSignatureID;
 
+  FieldEUserEzsignaccess eUserEzsignaccess;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEUserEzsignprepaid? eUserEzsignprepaid;
+
+  /// The eZsign prepaid expiration date
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? dtUserEzsignprepaidexpiration;
+
   /// An array of permissions granted to the user or api key
   List<int> aPkiPermissionID;
 
@@ -112,6 +134,9 @@ class ActivesessionGetCurrentV1ResponseMPayload {
     other.pksCustomerCode == pksCustomerCode &&
     other.fkiSystemconfigurationtypeID == fkiSystemconfigurationtypeID &&
     other.fkiSignatureID == fkiSignatureID &&
+    other.eUserEzsignaccess == eUserEzsignaccess &&
+    other.eUserEzsignprepaid == eUserEzsignprepaid &&
+    other.dtUserEzsignprepaidexpiration == dtUserEzsignprepaidexpiration &&
     _deepEquality.equals(other.aPkiPermissionID, aPkiPermissionID) &&
     other.objUserReal == objUserReal &&
     other.objUserCloned == objUserCloned &&
@@ -132,6 +157,9 @@ class ActivesessionGetCurrentV1ResponseMPayload {
     (pksCustomerCode.hashCode) +
     (fkiSystemconfigurationtypeID.hashCode) +
     (fkiSignatureID == null ? 0 : fkiSignatureID!.hashCode) +
+    (eUserEzsignaccess.hashCode) +
+    (eUserEzsignprepaid == null ? 0 : eUserEzsignprepaid!.hashCode) +
+    (dtUserEzsignprepaidexpiration == null ? 0 : dtUserEzsignprepaidexpiration!.hashCode) +
     (aPkiPermissionID.hashCode) +
     (objUserReal.hashCode) +
     (objUserCloned == null ? 0 : objUserCloned!.hashCode) +
@@ -139,7 +167,7 @@ class ActivesessionGetCurrentV1ResponseMPayload {
     (aEModuleInternalname.hashCode);
 
   @override
-  String toString() => 'ActivesessionGetCurrentV1ResponseMPayload[eActivesessionUsertype=$eActivesessionUsertype, eActivesessionOrigin=$eActivesessionOrigin, eActivesessionWeekdaystart=$eActivesessionWeekdaystart, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, bActivesessionDebug=$bActivesessionDebug, bActivesessionIssuperadmin=$bActivesessionIssuperadmin, pksCustomerCode=$pksCustomerCode, fkiSystemconfigurationtypeID=$fkiSystemconfigurationtypeID, fkiSignatureID=$fkiSignatureID, aPkiPermissionID=$aPkiPermissionID, objUserReal=$objUserReal, objUserCloned=$objUserCloned, objApikey=$objApikey, aEModuleInternalname=$aEModuleInternalname]';
+  String toString() => 'ActivesessionGetCurrentV1ResponseMPayload[eActivesessionUsertype=$eActivesessionUsertype, eActivesessionOrigin=$eActivesessionOrigin, eActivesessionWeekdaystart=$eActivesessionWeekdaystart, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, bActivesessionDebug=$bActivesessionDebug, bActivesessionIssuperadmin=$bActivesessionIssuperadmin, pksCustomerCode=$pksCustomerCode, fkiSystemconfigurationtypeID=$fkiSystemconfigurationtypeID, fkiSignatureID=$fkiSignatureID, eUserEzsignaccess=$eUserEzsignaccess, eUserEzsignprepaid=$eUserEzsignprepaid, dtUserEzsignprepaidexpiration=$dtUserEzsignprepaidexpiration, aPkiPermissionID=$aPkiPermissionID, objUserReal=$objUserReal, objUserCloned=$objUserCloned, objApikey=$objApikey, aEModuleInternalname=$aEModuleInternalname]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -157,6 +185,17 @@ class ActivesessionGetCurrentV1ResponseMPayload {
       json[r'fkiSignatureID'] = this.fkiSignatureID;
     } else {
       json[r'fkiSignatureID'] = null;
+    }
+      json[r'eUserEzsignaccess'] = this.eUserEzsignaccess;
+    if (this.eUserEzsignprepaid != null) {
+      json[r'eUserEzsignprepaid'] = this.eUserEzsignprepaid;
+    } else {
+      json[r'eUserEzsignprepaid'] = null;
+    }
+    if (this.dtUserEzsignprepaidexpiration != null) {
+      json[r'dtUserEzsignprepaidexpiration'] = this.dtUserEzsignprepaidexpiration;
+    } else {
+      json[r'dtUserEzsignprepaidexpiration'] = null;
     }
       json[r'a_pkiPermissionID'] = this.aPkiPermissionID;
       json[r'objUserReal'] = this.objUserReal;
@@ -204,6 +243,9 @@ class ActivesessionGetCurrentV1ResponseMPayload {
         pksCustomerCode: mapValueOfType<String>(json, r'pksCustomerCode')!,
         fkiSystemconfigurationtypeID: mapValueOfType<int>(json, r'fkiSystemconfigurationtypeID')!,
         fkiSignatureID: mapValueOfType<int>(json, r'fkiSignatureID'),
+        eUserEzsignaccess: FieldEUserEzsignaccess.fromJson(json[r'eUserEzsignaccess'])!,
+        eUserEzsignprepaid: FieldEUserEzsignprepaid.fromJson(json[r'eUserEzsignprepaid']),
+        dtUserEzsignprepaidexpiration: mapValueOfType<String>(json, r'dtUserEzsignprepaidexpiration'),
         aPkiPermissionID: json[r'a_pkiPermissionID'] is Iterable
             ? (json[r'a_pkiPermissionID'] as Iterable).cast<int>().toList(growable: false)
             : const [],
@@ -270,6 +312,7 @@ class ActivesessionGetCurrentV1ResponseMPayload {
     'bActivesessionIssuperadmin',
     'pksCustomerCode',
     'fkiSystemconfigurationtypeID',
+    'eUserEzsignaccess',
     'a_pkiPermissionID',
     'objUserReal',
     'a_eModuleInternalname',

@@ -16,6 +16,7 @@ class CustomCommunicationsenderRequest {
     this.fkiAgentID,
     this.fkiBrokerID,
     this.fkiMailboxsharedID,
+    this.fkiPhonelinesharedID,
     this.fkiUserID,
   });
 
@@ -53,6 +54,18 @@ class CustomCommunicationsenderRequest {
   ///
   int? fkiMailboxsharedID;
 
+  /// The unique ID of the Phonelineshared
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 255
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiPhonelinesharedID;
+
   /// The unique ID of the User
   ///
   /// Minimum value: 0
@@ -69,6 +82,7 @@ class CustomCommunicationsenderRequest {
     other.fkiAgentID == fkiAgentID &&
     other.fkiBrokerID == fkiBrokerID &&
     other.fkiMailboxsharedID == fkiMailboxsharedID &&
+    other.fkiPhonelinesharedID == fkiPhonelinesharedID &&
     other.fkiUserID == fkiUserID;
 
   @override
@@ -77,10 +91,11 @@ class CustomCommunicationsenderRequest {
     (fkiAgentID == null ? 0 : fkiAgentID!.hashCode) +
     (fkiBrokerID == null ? 0 : fkiBrokerID!.hashCode) +
     (fkiMailboxsharedID == null ? 0 : fkiMailboxsharedID!.hashCode) +
+    (fkiPhonelinesharedID == null ? 0 : fkiPhonelinesharedID!.hashCode) +
     (fkiUserID == null ? 0 : fkiUserID!.hashCode);
 
   @override
-  String toString() => 'CustomCommunicationsenderRequest[fkiAgentID=$fkiAgentID, fkiBrokerID=$fkiBrokerID, fkiMailboxsharedID=$fkiMailboxsharedID, fkiUserID=$fkiUserID]';
+  String toString() => 'CustomCommunicationsenderRequest[fkiAgentID=$fkiAgentID, fkiBrokerID=$fkiBrokerID, fkiMailboxsharedID=$fkiMailboxsharedID, fkiPhonelinesharedID=$fkiPhonelinesharedID, fkiUserID=$fkiUserID]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -98,6 +113,11 @@ class CustomCommunicationsenderRequest {
       json[r'fkiMailboxsharedID'] = this.fkiMailboxsharedID;
     } else {
       json[r'fkiMailboxsharedID'] = null;
+    }
+    if (this.fkiPhonelinesharedID != null) {
+      json[r'fkiPhonelinesharedID'] = this.fkiPhonelinesharedID;
+    } else {
+      json[r'fkiPhonelinesharedID'] = null;
     }
     if (this.fkiUserID != null) {
       json[r'fkiUserID'] = this.fkiUserID;
@@ -129,6 +149,7 @@ class CustomCommunicationsenderRequest {
         fkiAgentID: mapValueOfType<int>(json, r'fkiAgentID'),
         fkiBrokerID: mapValueOfType<int>(json, r'fkiBrokerID'),
         fkiMailboxsharedID: mapValueOfType<int>(json, r'fkiMailboxsharedID'),
+        fkiPhonelinesharedID: mapValueOfType<int>(json, r'fkiPhonelinesharedID'),
         fkiUserID: mapValueOfType<int>(json, r'fkiUserID'),
       );
     }

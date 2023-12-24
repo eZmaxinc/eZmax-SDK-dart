@@ -72,6 +72,62 @@ class ObjectWebhookApi {
     return null;
   }
 
+  /// Create a new Webhook
+  ///
+  /// The endpoint allows to create one or many elements at once.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [WebhookCreateObjectV2Request] webhookCreateObjectV2Request (required):
+  Future<Response> webhookCreateObjectV2WithHttpInfo(WebhookCreateObjectV2Request webhookCreateObjectV2Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/2/object/webhook';
+
+    // ignore: prefer_final_locals
+    Object? postBody = webhookCreateObjectV2Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Create a new Webhook
+  ///
+  /// The endpoint allows to create one or many elements at once.
+  ///
+  /// Parameters:
+  ///
+  /// * [WebhookCreateObjectV2Request] webhookCreateObjectV2Request (required):
+  Future<WebhookCreateObjectV2Response?> webhookCreateObjectV2(WebhookCreateObjectV2Request webhookCreateObjectV2Request,) async {
+    final response = await webhookCreateObjectV2WithHttpInfo(webhookCreateObjectV2Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'WebhookCreateObjectV2Response',) as WebhookCreateObjectV2Response;
+    
+    }
+    return null;
+  }
+
   /// Delete an existing Webhook
   ///
   /// 
@@ -398,6 +454,67 @@ class ObjectWebhookApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'WebhookGetObjectV2Response',) as WebhookGetObjectV2Response;
+    
+    }
+    return null;
+  }
+
+  /// Regenerate the Apikey
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiWebhookID (required):
+  ///
+  /// * [WebhookRegenerateApikeyV1Request] webhookRegenerateApikeyV1Request (required):
+  Future<Response> webhookRegenerateApikeyV1WithHttpInfo(int pkiWebhookID, WebhookRegenerateApikeyV1Request webhookRegenerateApikeyV1Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/webhook/{pkiWebhookID}/regenerateApikey'
+      .replaceAll('{pkiWebhookID}', pkiWebhookID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = webhookRegenerateApikeyV1Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Regenerate the Apikey
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiWebhookID (required):
+  ///
+  /// * [WebhookRegenerateApikeyV1Request] webhookRegenerateApikeyV1Request (required):
+  Future<WebhookRegenerateApikeyV1Response?> webhookRegenerateApikeyV1(int pkiWebhookID, WebhookRegenerateApikeyV1Request webhookRegenerateApikeyV1Request,) async {
+    final response = await webhookRegenerateApikeyV1WithHttpInfo(pkiWebhookID, webhookRegenerateApikeyV1Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'WebhookRegenerateApikeyV1Response',) as WebhookRegenerateApikeyV1Response;
     
     }
     return null;

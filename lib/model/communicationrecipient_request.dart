@@ -15,8 +15,8 @@ class CommunicationrecipientRequest {
   CommunicationrecipientRequest({
     this.pkiCommunicationrecipientID,
     this.fkiAgentID,
-    this.fkiAgentincorporationID,
     this.fkiBrokerID,
+    this.fkiContactID,
     this.fkiCustomerID,
     this.fkiEmployeeID,
     this.fkiAssistantID,
@@ -25,6 +25,8 @@ class CommunicationrecipientRequest {
     this.fkiNotaryID,
     this.fkiSupplierID,
     this.fkiUserID,
+    this.fkiMailboxsharedID,
+    this.fkiPhonelinesharedID,
     this.eCommunicationrecipientType,
   });
 
@@ -50,17 +52,6 @@ class CommunicationrecipientRequest {
   ///
   int? fkiAgentID;
 
-  /// The unique ID of the Agentincorporation.
-  ///
-  /// Minimum value: 0
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  int? fkiAgentincorporationID;
-
   /// The unique ID of the Broker.
   ///
   /// Minimum value: 0
@@ -71,6 +62,17 @@ class CommunicationrecipientRequest {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   int? fkiBrokerID;
+
+  /// The unique ID of the Contact
+  ///
+  /// Minimum value: 0
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiContactID;
 
   /// The unique ID of the Customer.
   ///
@@ -160,6 +162,30 @@ class CommunicationrecipientRequest {
   ///
   int? fkiUserID;
 
+  /// The unique ID of the Mailboxshared
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 255
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiMailboxsharedID;
+
+  /// The unique ID of the Phonelineshared
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 255
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiPhonelinesharedID;
+
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -172,8 +198,8 @@ class CommunicationrecipientRequest {
   bool operator ==(Object other) => identical(this, other) || other is CommunicationrecipientRequest &&
     other.pkiCommunicationrecipientID == pkiCommunicationrecipientID &&
     other.fkiAgentID == fkiAgentID &&
-    other.fkiAgentincorporationID == fkiAgentincorporationID &&
     other.fkiBrokerID == fkiBrokerID &&
+    other.fkiContactID == fkiContactID &&
     other.fkiCustomerID == fkiCustomerID &&
     other.fkiEmployeeID == fkiEmployeeID &&
     other.fkiAssistantID == fkiAssistantID &&
@@ -182,6 +208,8 @@ class CommunicationrecipientRequest {
     other.fkiNotaryID == fkiNotaryID &&
     other.fkiSupplierID == fkiSupplierID &&
     other.fkiUserID == fkiUserID &&
+    other.fkiMailboxsharedID == fkiMailboxsharedID &&
+    other.fkiPhonelinesharedID == fkiPhonelinesharedID &&
     other.eCommunicationrecipientType == eCommunicationrecipientType;
 
   @override
@@ -189,8 +217,8 @@ class CommunicationrecipientRequest {
     // ignore: unnecessary_parenthesis
     (pkiCommunicationrecipientID == null ? 0 : pkiCommunicationrecipientID!.hashCode) +
     (fkiAgentID == null ? 0 : fkiAgentID!.hashCode) +
-    (fkiAgentincorporationID == null ? 0 : fkiAgentincorporationID!.hashCode) +
     (fkiBrokerID == null ? 0 : fkiBrokerID!.hashCode) +
+    (fkiContactID == null ? 0 : fkiContactID!.hashCode) +
     (fkiCustomerID == null ? 0 : fkiCustomerID!.hashCode) +
     (fkiEmployeeID == null ? 0 : fkiEmployeeID!.hashCode) +
     (fkiAssistantID == null ? 0 : fkiAssistantID!.hashCode) +
@@ -199,10 +227,12 @@ class CommunicationrecipientRequest {
     (fkiNotaryID == null ? 0 : fkiNotaryID!.hashCode) +
     (fkiSupplierID == null ? 0 : fkiSupplierID!.hashCode) +
     (fkiUserID == null ? 0 : fkiUserID!.hashCode) +
+    (fkiMailboxsharedID == null ? 0 : fkiMailboxsharedID!.hashCode) +
+    (fkiPhonelinesharedID == null ? 0 : fkiPhonelinesharedID!.hashCode) +
     (eCommunicationrecipientType == null ? 0 : eCommunicationrecipientType!.hashCode);
 
   @override
-  String toString() => 'CommunicationrecipientRequest[pkiCommunicationrecipientID=$pkiCommunicationrecipientID, fkiAgentID=$fkiAgentID, fkiAgentincorporationID=$fkiAgentincorporationID, fkiBrokerID=$fkiBrokerID, fkiCustomerID=$fkiCustomerID, fkiEmployeeID=$fkiEmployeeID, fkiAssistantID=$fkiAssistantID, fkiExternalbrokerID=$fkiExternalbrokerID, fkiEzsignsignerID=$fkiEzsignsignerID, fkiNotaryID=$fkiNotaryID, fkiSupplierID=$fkiSupplierID, fkiUserID=$fkiUserID, eCommunicationrecipientType=$eCommunicationrecipientType]';
+  String toString() => 'CommunicationrecipientRequest[pkiCommunicationrecipientID=$pkiCommunicationrecipientID, fkiAgentID=$fkiAgentID, fkiBrokerID=$fkiBrokerID, fkiContactID=$fkiContactID, fkiCustomerID=$fkiCustomerID, fkiEmployeeID=$fkiEmployeeID, fkiAssistantID=$fkiAssistantID, fkiExternalbrokerID=$fkiExternalbrokerID, fkiEzsignsignerID=$fkiEzsignsignerID, fkiNotaryID=$fkiNotaryID, fkiSupplierID=$fkiSupplierID, fkiUserID=$fkiUserID, fkiMailboxsharedID=$fkiMailboxsharedID, fkiPhonelinesharedID=$fkiPhonelinesharedID, eCommunicationrecipientType=$eCommunicationrecipientType]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -216,15 +246,15 @@ class CommunicationrecipientRequest {
     } else {
       json[r'fkiAgentID'] = null;
     }
-    if (this.fkiAgentincorporationID != null) {
-      json[r'fkiAgentincorporationID'] = this.fkiAgentincorporationID;
-    } else {
-      json[r'fkiAgentincorporationID'] = null;
-    }
     if (this.fkiBrokerID != null) {
       json[r'fkiBrokerID'] = this.fkiBrokerID;
     } else {
       json[r'fkiBrokerID'] = null;
+    }
+    if (this.fkiContactID != null) {
+      json[r'fkiContactID'] = this.fkiContactID;
+    } else {
+      json[r'fkiContactID'] = null;
     }
     if (this.fkiCustomerID != null) {
       json[r'fkiCustomerID'] = this.fkiCustomerID;
@@ -266,6 +296,16 @@ class CommunicationrecipientRequest {
     } else {
       json[r'fkiUserID'] = null;
     }
+    if (this.fkiMailboxsharedID != null) {
+      json[r'fkiMailboxsharedID'] = this.fkiMailboxsharedID;
+    } else {
+      json[r'fkiMailboxsharedID'] = null;
+    }
+    if (this.fkiPhonelinesharedID != null) {
+      json[r'fkiPhonelinesharedID'] = this.fkiPhonelinesharedID;
+    } else {
+      json[r'fkiPhonelinesharedID'] = null;
+    }
     if (this.eCommunicationrecipientType != null) {
       json[r'eCommunicationrecipientType'] = this.eCommunicationrecipientType;
     } else {
@@ -295,8 +335,8 @@ class CommunicationrecipientRequest {
       return CommunicationrecipientRequest(
         pkiCommunicationrecipientID: mapValueOfType<int>(json, r'pkiCommunicationrecipientID'),
         fkiAgentID: mapValueOfType<int>(json, r'fkiAgentID'),
-        fkiAgentincorporationID: mapValueOfType<int>(json, r'fkiAgentincorporationID'),
         fkiBrokerID: mapValueOfType<int>(json, r'fkiBrokerID'),
+        fkiContactID: mapValueOfType<int>(json, r'fkiContactID'),
         fkiCustomerID: mapValueOfType<int>(json, r'fkiCustomerID'),
         fkiEmployeeID: mapValueOfType<int>(json, r'fkiEmployeeID'),
         fkiAssistantID: mapValueOfType<int>(json, r'fkiAssistantID'),
@@ -305,6 +345,8 @@ class CommunicationrecipientRequest {
         fkiNotaryID: mapValueOfType<int>(json, r'fkiNotaryID'),
         fkiSupplierID: mapValueOfType<int>(json, r'fkiSupplierID'),
         fkiUserID: mapValueOfType<int>(json, r'fkiUserID'),
+        fkiMailboxsharedID: mapValueOfType<int>(json, r'fkiMailboxsharedID'),
+        fkiPhonelinesharedID: mapValueOfType<int>(json, r'fkiPhonelinesharedID'),
         eCommunicationrecipientType: FieldECommunicationrecipientType.fromJson(json[r'eCommunicationrecipientType']),
       );
     }

@@ -10,7 +10,7 @@
 
 part of openapi.api;
 
-/// The type of signature.  1. **Acknowledgement** is for an acknowledgment of receipt. 2. **City** is to request the city where the document is signed. 3. **Handwritten** is for a handwritten kind of signature where users needs to \"draw\" their signature on screen. 4. **Initials** is a simple \"click to add initials\" block. 5. **Name** is a simple \"Click to sign\" block. This is the most common block of signature. 6. **Attachments** is to ask for files as attachment that may be validate in another step.    
+/// The type of signature.  1. **Acknowledgement** is for an acknowledgment of receipt. 2. **City** is to request the city where the document is signed. 3. **Handwritten** is for a handwritten kind of signature where users needs to \"draw\" their signature on screen. 4. **Initials** is a simple \"click to add initials\" block. 5. **Name** is a simple \"Click to sign\" block. This is the most common block of signature. 6. **NameReason** is to ask for a signing reason.  7. **Attachments** is to ask for files as attachment that may be validate in another step.    
 class FieldEEzsigntemplatesignatureType {
   /// Instantiate a new enum with the provided [value].
   const FieldEEzsigntemplatesignatureType._(this.value);
@@ -28,6 +28,7 @@ class FieldEEzsigntemplatesignatureType {
   static const handwritten = FieldEEzsigntemplatesignatureType._(r'Handwritten');
   static const initials = FieldEEzsigntemplatesignatureType._(r'Initials');
   static const name = FieldEEzsigntemplatesignatureType._(r'Name');
+  static const nameReason = FieldEEzsigntemplatesignatureType._(r'NameReason');
   static const attachments = FieldEEzsigntemplatesignatureType._(r'Attachments');
   static const fieldText = FieldEEzsigntemplatesignatureType._(r'FieldText');
   static const fieldTextarea = FieldEEzsigntemplatesignatureType._(r'FieldTextarea');
@@ -39,6 +40,7 @@ class FieldEEzsigntemplatesignatureType {
     handwritten,
     initials,
     name,
+    nameReason,
     attachments,
     fieldText,
     fieldTextarea,
@@ -85,6 +87,7 @@ class FieldEEzsigntemplatesignatureTypeTypeTransformer {
         case r'Handwritten': return FieldEEzsigntemplatesignatureType.handwritten;
         case r'Initials': return FieldEEzsigntemplatesignatureType.initials;
         case r'Name': return FieldEEzsigntemplatesignatureType.name;
+        case r'NameReason': return FieldEEzsigntemplatesignatureType.nameReason;
         case r'Attachments': return FieldEEzsigntemplatesignatureType.attachments;
         case r'FieldText': return FieldEEzsigntemplatesignatureType.fieldText;
         case r'FieldTextarea': return FieldEEzsigntemplatesignatureType.fieldTextarea;

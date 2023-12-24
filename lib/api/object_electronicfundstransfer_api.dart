@@ -25,7 +25,7 @@ class ObjectElectronicfundstransferApi {
   /// Parameters:
   ///
   /// * [int] pkiElectronicfundstransferID (required):
-  Future<Response> eletronicfundstransferGetCommunicationListV1WithHttpInfo(int pkiElectronicfundstransferID,) async {
+  Future<Response> electronicfundstransferGetCommunicationListV1WithHttpInfo(int pkiElectronicfundstransferID,) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationList'
       .replaceAll('{pkiElectronicfundstransferID}', pkiElectronicfundstransferID.toString());
@@ -58,8 +58,8 @@ class ObjectElectronicfundstransferApi {
   /// Parameters:
   ///
   /// * [int] pkiElectronicfundstransferID (required):
-  Future<ElectronicfundstransferGetCommunicationListV1Response?> eletronicfundstransferGetCommunicationListV1(int pkiElectronicfundstransferID,) async {
-    final response = await eletronicfundstransferGetCommunicationListV1WithHttpInfo(pkiElectronicfundstransferID,);
+  Future<ElectronicfundstransferGetCommunicationListV1Response?> electronicfundstransferGetCommunicationListV1(int pkiElectronicfundstransferID,) async {
+    final response = await electronicfundstransferGetCommunicationListV1WithHttpInfo(pkiElectronicfundstransferID,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

@@ -10,7 +10,7 @@
 
 part of openapi.api;
 
-/// The type of signature.  1. **Acknowledgement** is for an acknowledgment of receipt. 2. **City** is to request the city where the document is signed. 3. **Handwritten** is for a handwritten kind of signature where users needs to \"draw\" their signature on screen. 4. **Initials** is a simple \"click to add initials\" block. 5. **Name** is a simple \"Click to sign\" block. This is the most common block of signature. 6. **Attachments** is to ask for files as attachment that may be validate in another step.  7. **FieldText** is to ask for a short text. 8. **Fieldtextarea** is to ask for a text
+/// The type of signature.  1. **Acknowledgement** is for an acknowledgment of receipt. 2. **City** is to request the city where the document is signed. 3. **Handwritten** is for a handwritten kind of signature where users needs to \"draw\" their signature on screen. 4. **Initials** is a simple \"click to add initials\" block. 5. **Name** is a simple \"Click to sign\" block. This is the most common block of signature. 6. **NameReason** is to ask for a signing reason.  7. **Attachments** is to ask for files as attachment that may be validate in another step.  8. **FieldText** is to ask for a short text. 9. **Fieldtextarea** is to ask for a text
 class FieldEEzsignsignatureType {
   /// Instantiate a new enum with the provided [value].
   const FieldEEzsignsignatureType._(this.value);
@@ -28,6 +28,7 @@ class FieldEEzsignsignatureType {
   static const handwritten = FieldEEzsignsignatureType._(r'Handwritten');
   static const initials = FieldEEzsignsignatureType._(r'Initials');
   static const name = FieldEEzsignsignatureType._(r'Name');
+  static const nameReason = FieldEEzsignsignatureType._(r'NameReason');
   static const attachments = FieldEEzsignsignatureType._(r'Attachments');
   static const attachmentsConfirmation = FieldEEzsignsignatureType._(r'AttachmentsConfirmation');
   static const fieldText = FieldEEzsignsignatureType._(r'FieldText');
@@ -40,6 +41,7 @@ class FieldEEzsignsignatureType {
     handwritten,
     initials,
     name,
+    nameReason,
     attachments,
     attachmentsConfirmation,
     fieldText,
@@ -87,6 +89,7 @@ class FieldEEzsignsignatureTypeTypeTransformer {
         case r'Handwritten': return FieldEEzsignsignatureType.handwritten;
         case r'Initials': return FieldEEzsignsignatureType.initials;
         case r'Name': return FieldEEzsignsignatureType.name;
+        case r'NameReason': return FieldEEzsignsignatureType.nameReason;
         case r'Attachments': return FieldEEzsignsignatureType.attachments;
         case r'AttachmentsConfirmation': return FieldEEzsignsignatureType.attachmentsConfirmation;
         case r'FieldText': return FieldEEzsignsignatureType.fieldText;

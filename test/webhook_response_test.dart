@@ -67,9 +67,27 @@ void main() {
       // TODO
     });
 
+    // The Apikey for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey.
+    // String sWebhookApikey
+    test('to test the property `sWebhookApikey`', () async {
+      // TODO
+    });
+
+    // The Secret for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey.
+    // String sWebhookSecret
+    test('to test the property `sWebhookSecret`', () async {
+      // TODO
+    });
+
     // Whether the Webhook is active or not
     // bool bWebhookIsactive
     test('to test the property `bWebhookIsactive`', () async {
+      // TODO
+    });
+
+    // Whether the requests will be signed or not
+    // bool bWebhookIssigned
+    test('to test the property `bWebhookIssigned`', () async {
       // TODO
     });
 

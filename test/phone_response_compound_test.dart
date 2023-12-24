@@ -45,6 +45,12 @@ void main() {
       // TODO
     });
 
+    // Indicate the phone number is an international phone number.
+    // bool bPhoneInternational
+    test('to test the property `bPhoneInternational`', () async {
+      // TODO
+    });
+
 
   });
 

@@ -17,7 +17,7 @@ class CommunicationexternalrecipientRequestCompound {
     this.sEmailAddress,
     this.sPhoneE164,
     this.eCommunicationexternalrecipientType,
-    required this.sCommunicationexternalrecipientName,
+    this.sCommunicationexternalrecipientName,
   });
 
   /// The unique ID of the Communicationexternalrecipient
@@ -56,7 +56,13 @@ class CommunicationexternalrecipientRequestCompound {
   FieldECommunicationexternalrecipientType? eCommunicationexternalrecipientType;
 
   /// The name of the Communicationexternalrecipient
-  String sCommunicationexternalrecipientName;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sCommunicationexternalrecipientName;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommunicationexternalrecipientRequestCompound &&
@@ -73,7 +79,7 @@ class CommunicationexternalrecipientRequestCompound {
     (sEmailAddress == null ? 0 : sEmailAddress!.hashCode) +
     (sPhoneE164 == null ? 0 : sPhoneE164!.hashCode) +
     (eCommunicationexternalrecipientType == null ? 0 : eCommunicationexternalrecipientType!.hashCode) +
-    (sCommunicationexternalrecipientName.hashCode);
+    (sCommunicationexternalrecipientName == null ? 0 : sCommunicationexternalrecipientName!.hashCode);
 
   @override
   String toString() => 'CommunicationexternalrecipientRequestCompound[pkiCommunicationexternalrecipientID=$pkiCommunicationexternalrecipientID, sEmailAddress=$sEmailAddress, sPhoneE164=$sPhoneE164, eCommunicationexternalrecipientType=$eCommunicationexternalrecipientType, sCommunicationexternalrecipientName=$sCommunicationexternalrecipientName]';
@@ -100,7 +106,11 @@ class CommunicationexternalrecipientRequestCompound {
     } else {
       json[r'eCommunicationexternalrecipientType'] = null;
     }
+    if (this.sCommunicationexternalrecipientName != null) {
       json[r'sCommunicationexternalrecipientName'] = this.sCommunicationexternalrecipientName;
+    } else {
+      json[r'sCommunicationexternalrecipientName'] = null;
+    }
     return json;
   }
 
@@ -127,7 +137,7 @@ class CommunicationexternalrecipientRequestCompound {
         sEmailAddress: mapValueOfType<String>(json, r'sEmailAddress'),
         sPhoneE164: mapValueOfType<String>(json, r'sPhoneE164'),
         eCommunicationexternalrecipientType: FieldECommunicationexternalrecipientType.fromJson(json[r'eCommunicationexternalrecipientType']),
-        sCommunicationexternalrecipientName: mapValueOfType<String>(json, r'sCommunicationexternalrecipientName')!,
+        sCommunicationexternalrecipientName: mapValueOfType<String>(json, r'sCommunicationexternalrecipientName'),
       );
     }
     return null;
@@ -175,7 +185,6 @@ class CommunicationexternalrecipientRequestCompound {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'sCommunicationexternalrecipientName',
   };
 }
 

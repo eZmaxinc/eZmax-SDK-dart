@@ -24,12 +24,14 @@ class FieldPksEzmaxclientOs {
   String toJson() => value;
 
   static const iOS = FieldPksEzmaxclientOs._(r'iOS');
+  static const iPadOS = FieldPksEzmaxclientOs._(r'iPadOS');
   static const macOS = FieldPksEzmaxclientOs._(r'macOS');
   static const windows = FieldPksEzmaxclientOs._(r'Windows');
 
   /// List of all possible values in this [enum][FieldPksEzmaxclientOs].
   static const values = <FieldPksEzmaxclientOs>[
     iOS,
+    iPadOS,
     macOS,
     windows,
   ];
@@ -71,6 +73,7 @@ class FieldPksEzmaxclientOsTypeTransformer {
     if (data != null) {
       switch (data) {
         case r'iOS': return FieldPksEzmaxclientOs.iOS;
+        case r'iPadOS': return FieldPksEzmaxclientOs.iPadOS;
         case r'macOS': return FieldPksEzmaxclientOs.macOS;
         case r'Windows': return FieldPksEzmaxclientOs.windows;
         default:

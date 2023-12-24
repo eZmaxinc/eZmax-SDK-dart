@@ -34,6 +34,18 @@ void main() {
       // TODO
     });
 
+    // The unique ID of the Ezsignsigningreason
+    // int fkiEzsignsigningreasonID
+    test('to test the property `fkiEzsignsigningreasonID`', () async {
+      // TODO
+    });
+
+    // The description of the Ezsignsigningreason in the language of the requester
+    // String sEzsignsigningreasonDescriptionX
+    test('to test the property `sEzsignsigningreasonDescriptionX`', () async {
+      // TODO
+    });
+
     // The page number in the Ezsigndocument
     // int iEzsignpagePagenumber
     test('to test the property `iEzsignpagePagenumber`', () async {

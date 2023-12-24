@@ -94,6 +94,24 @@ void main() {
       // TODO
     });
 
+    // Retrieve Attachment count
+    //
+    // 
+    //
+    //Future<EzsignfolderGetAttachmentCountV1Response> ezsignfolderGetAttachmentCountV1(int pkiEzsignfolderID) async
+    test('test ezsignfolderGetAttachmentCountV1', () async {
+      // TODO
+    });
+
+    // Retrieve Ezsignfolder's Attachments
+    //
+    // 
+    //
+    //Future<EzsignfolderGetAttachmentsV1Response> ezsignfolderGetAttachmentsV1(int pkiEzsignfolderID) async
+    test('test ezsignfolderGetAttachmentsV1', () async {
+      // TODO
+    });
+
     // Retrieve Communication count
     //
     // 

@@ -22,7 +22,10 @@ class WebhookResponse {
     this.eWebhookManagementevent,
     required this.sWebhookUrl,
     required this.sWebhookEmailfailed,
+    this.sWebhookApikey,
+    this.sWebhookSecret,
     required this.bWebhookIsactive,
+    required this.bWebhookIssigned,
     required this.bWebhookSkipsslvalidation,
   });
 
@@ -76,8 +79,29 @@ class WebhookResponse {
   /// The email that will receive the Webhook in case all attempts fail
   String sWebhookEmailfailed;
 
+  /// The Apikey for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey.
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sWebhookApikey;
+
+  /// The Secret for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey.
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sWebhookSecret;
+
   /// Whether the Webhook is active or not
   bool bWebhookIsactive;
+
+  /// Whether the requests will be signed or not
+  bool bWebhookIssigned;
 
   /// Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use
   bool bWebhookSkipsslvalidation;
@@ -93,7 +117,10 @@ class WebhookResponse {
     other.eWebhookManagementevent == eWebhookManagementevent &&
     other.sWebhookUrl == sWebhookUrl &&
     other.sWebhookEmailfailed == sWebhookEmailfailed &&
+    other.sWebhookApikey == sWebhookApikey &&
+    other.sWebhookSecret == sWebhookSecret &&
     other.bWebhookIsactive == bWebhookIsactive &&
+    other.bWebhookIssigned == bWebhookIssigned &&
     other.bWebhookSkipsslvalidation == bWebhookSkipsslvalidation;
 
   @override
@@ -108,11 +135,14 @@ class WebhookResponse {
     (eWebhookManagementevent == null ? 0 : eWebhookManagementevent!.hashCode) +
     (sWebhookUrl.hashCode) +
     (sWebhookEmailfailed.hashCode) +
+    (sWebhookApikey == null ? 0 : sWebhookApikey!.hashCode) +
+    (sWebhookSecret == null ? 0 : sWebhookSecret!.hashCode) +
     (bWebhookIsactive.hashCode) +
+    (bWebhookIssigned.hashCode) +
     (bWebhookSkipsslvalidation.hashCode);
 
   @override
-  String toString() => 'WebhookResponse[pkiWebhookID=$pkiWebhookID, sWebhookDescription=$sWebhookDescription, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, sWebhookUrl=$sWebhookUrl, sWebhookEmailfailed=$sWebhookEmailfailed, bWebhookIsactive=$bWebhookIsactive, bWebhookSkipsslvalidation=$bWebhookSkipsslvalidation]';
+  String toString() => 'WebhookResponse[pkiWebhookID=$pkiWebhookID, sWebhookDescription=$sWebhookDescription, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, sWebhookUrl=$sWebhookUrl, sWebhookEmailfailed=$sWebhookEmailfailed, sWebhookApikey=$sWebhookApikey, sWebhookSecret=$sWebhookSecret, bWebhookIsactive=$bWebhookIsactive, bWebhookIssigned=$bWebhookIssigned, bWebhookSkipsslvalidation=$bWebhookSkipsslvalidation]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -141,7 +171,18 @@ class WebhookResponse {
     }
       json[r'sWebhookUrl'] = this.sWebhookUrl;
       json[r'sWebhookEmailfailed'] = this.sWebhookEmailfailed;
+    if (this.sWebhookApikey != null) {
+      json[r'sWebhookApikey'] = this.sWebhookApikey;
+    } else {
+      json[r'sWebhookApikey'] = null;
+    }
+    if (this.sWebhookSecret != null) {
+      json[r'sWebhookSecret'] = this.sWebhookSecret;
+    } else {
+      json[r'sWebhookSecret'] = null;
+    }
       json[r'bWebhookIsactive'] = this.bWebhookIsactive;
+      json[r'bWebhookIssigned'] = this.bWebhookIssigned;
       json[r'bWebhookSkipsslvalidation'] = this.bWebhookSkipsslvalidation;
     return json;
   }
@@ -174,7 +215,10 @@ class WebhookResponse {
         eWebhookManagementevent: FieldEWebhookManagementevent.fromJson(json[r'eWebhookManagementevent']),
         sWebhookUrl: mapValueOfType<String>(json, r'sWebhookUrl')!,
         sWebhookEmailfailed: mapValueOfType<String>(json, r'sWebhookEmailfailed')!,
+        sWebhookApikey: mapValueOfType<String>(json, r'sWebhookApikey'),
+        sWebhookSecret: mapValueOfType<String>(json, r'sWebhookSecret'),
         bWebhookIsactive: mapValueOfType<bool>(json, r'bWebhookIsactive')!,
+        bWebhookIssigned: mapValueOfType<bool>(json, r'bWebhookIssigned')!,
         bWebhookSkipsslvalidation: mapValueOfType<bool>(json, r'bWebhookSkipsslvalidation')!,
       );
     }
@@ -229,6 +273,7 @@ class WebhookResponse {
     'sWebhookUrl',
     'sWebhookEmailfailed',
     'bWebhookIsactive',
+    'bWebhookIssigned',
     'bWebhookSkipsslvalidation',
   };
 }

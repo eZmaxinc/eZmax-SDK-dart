@@ -17,12 +17,30 @@ void main() {
   // final instance = ObjectInscriptionApi();
 
   group('tests for ObjectInscriptionApi', () {
+    // Retrieve Inscription's Attachments
+    //
+    // 
+    //
+    //Future<InscriptionGetAttachmentsV1Response> inscriptionGetAttachmentsV1(int pkiInscriptionID) async
+    test('test inscriptionGetAttachmentsV1', () async {
+      // TODO
+    });
+
     // Retrieve Communication list
     //
     // 
     //
     //Future<InscriptionGetCommunicationListV1Response> inscriptionGetCommunicationListV1(int pkiInscriptionID) async
     test('test inscriptionGetCommunicationListV1', () async {
+      // TODO
+    });
+
+    // Retrieve Inscription's Communicationsender
+    //
+    // 
+    //
+    //Future<InscriptionGetCommunicationsendersV1Response> inscriptionGetCommunicationsendersV1(int pkiInscriptionID) async
+    test('test inscriptionGetCommunicationsendersV1', () async {
       // TODO
     });
 

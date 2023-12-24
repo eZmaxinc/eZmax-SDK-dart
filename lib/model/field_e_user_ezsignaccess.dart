@@ -10,7 +10,7 @@
 
 part of openapi.api;
 
-/// The type or eZsign access the User has
+/// The type of eZsign access the User has
 class FieldEUserEzsignaccess {
   /// Instantiate a new enum with the provided [value].
   const FieldEUserEzsignaccess._(this.value);

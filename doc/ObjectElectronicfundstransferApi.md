@@ -9,11 +9,11 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**eletronicfundstransferGetCommunicationListV1**](ObjectElectronicfundstransferApi.md#eletronicfundstransfergetcommunicationlistv1) | **GET** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationList | Retrieve Communication list
+[**electronicfundstransferGetCommunicationListV1**](ObjectElectronicfundstransferApi.md#electronicfundstransfergetcommunicationlistv1) | **GET** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationList | Retrieve Communication list
 
 
-# **eletronicfundstransferGetCommunicationListV1**
-> ElectronicfundstransferGetCommunicationListV1Response eletronicfundstransferGetCommunicationListV1(pkiElectronicfundstransferID)
+# **electronicfundstransferGetCommunicationListV1**
+> ElectronicfundstransferGetCommunicationListV1Response electronicfundstransferGetCommunicationListV1(pkiElectronicfundstransferID)
 
 Retrieve Communication list
 
@@ -31,10 +31,10 @@ final api_instance = ObjectElectronicfundstransferApi();
 final pkiElectronicfundstransferID = 56; // int | 
 
 try {
-    final result = api_instance.eletronicfundstransferGetCommunicationListV1(pkiElectronicfundstransferID);
+    final result = api_instance.electronicfundstransferGetCommunicationListV1(pkiElectronicfundstransferID);
     print(result);
 } catch (e) {
-    print('Exception when calling ObjectElectronicfundstransferApi->eletronicfundstransferGetCommunicationListV1: $e\n');
+    print('Exception when calling ObjectElectronicfundstransferApi->electronicfundstransferGetCommunicationListV1: $e\n');
 }
 ```
 

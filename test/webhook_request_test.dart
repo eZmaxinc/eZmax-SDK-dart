@@ -67,6 +67,12 @@ void main() {
       // TODO
     });
 
+    // Whether the requests will be signed or not
+    // bool bWebhookIssigned
+    test('to test the property `bWebhookIssigned`', () async {
+      // TODO
+    });
+
     // Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use
     // bool bWebhookSkipsslvalidation
     test('to test the property `bWebhookSkipsslvalidation`', () async {

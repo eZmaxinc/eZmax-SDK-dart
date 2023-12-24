@@ -79,6 +79,22 @@ void main() {
       // TODO
     });
 
+    // FieldEUserEzsignaccess eUserEzsignaccess
+    test('to test the property `eUserEzsignaccess`', () async {
+      // TODO
+    });
+
+    // FieldEUserEzsignprepaid eUserEzsignprepaid
+    test('to test the property `eUserEzsignprepaid`', () async {
+      // TODO
+    });
+
+    // The eZsign prepaid expiration date
+    // String dtUserEzsignprepaidexpiration
+    test('to test the property `dtUserEzsignprepaidexpiration`', () async {
+      // TODO
+    });
+
     // An array of permissions granted to the user or api key
     // List<int> aPkiPermissionID (default value: const [])
     test('to test the property `aPkiPermissionID`', () async {

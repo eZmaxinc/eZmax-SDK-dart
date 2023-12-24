@@ -28,15 +28,15 @@ void main() {
       // TODO
     });
 
-    // The unique ID of the Agentincorporation.
-    // int fkiAgentincorporationID
-    test('to test the property `fkiAgentincorporationID`', () async {
-      // TODO
-    });
-
     // The unique ID of the Broker.
     // int fkiBrokerID
     test('to test the property `fkiBrokerID`', () async {
+      // TODO
+    });
+
+    // The unique ID of the Contact
+    // int fkiContactID
+    test('to test the property `fkiContactID`', () async {
       // TODO
     });
 
@@ -85,6 +85,18 @@ void main() {
     // The unique ID of the User
     // int fkiUserID
     test('to test the property `fkiUserID`', () async {
+      // TODO
+    });
+
+    // The unique ID of the Mailboxshared
+    // int fkiMailboxsharedID
+    test('to test the property `fkiMailboxsharedID`', () async {
+      // TODO
+    });
+
+    // The unique ID of the Phonelineshared
+    // int fkiPhonelinesharedID
+    test('to test the property `fkiPhonelinesharedID`', () async {
       // TODO
     });
 

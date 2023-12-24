@@ -13,6 +13,7 @@ part of openapi.api;
 class EzsignsignatureSignV1Request {
   /// Returns a new [EzsignsignatureSignV1Request] instance.
   EzsignsignatureSignV1Request({
+    this.fkiEzsignsigningreasonID,
     this.sValue,
     this.eAttachmentsConfirmationDecision,
     this.sAttachmentsRefusalReason,
@@ -20,6 +21,18 @@ class EzsignsignatureSignV1Request {
     this.aObjFile = const [],
     required this.bIsAutomatic,
   });
+
+  /// The unique ID of the Ezsignsigningreason
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 255
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiEzsignsigningreasonID;
 
   /// The value required for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **City**, **FieldText** or **FieldTextarea**
   ///
@@ -58,6 +71,7 @@ class EzsignsignatureSignV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignsignatureSignV1Request &&
+    other.fkiEzsignsigningreasonID == fkiEzsignsigningreasonID &&
     other.sValue == sValue &&
     other.eAttachmentsConfirmationDecision == eAttachmentsConfirmationDecision &&
     other.sAttachmentsRefusalReason == sAttachmentsRefusalReason &&
@@ -68,6 +82,7 @@ class EzsignsignatureSignV1Request {
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
+    (fkiEzsignsigningreasonID == null ? 0 : fkiEzsignsigningreasonID!.hashCode) +
     (sValue == null ? 0 : sValue!.hashCode) +
     (eAttachmentsConfirmationDecision == null ? 0 : eAttachmentsConfirmationDecision!.hashCode) +
     (sAttachmentsRefusalReason == null ? 0 : sAttachmentsRefusalReason!.hashCode) +
@@ -76,10 +91,15 @@ class EzsignsignatureSignV1Request {
     (bIsAutomatic.hashCode);
 
   @override
-  String toString() => 'EzsignsignatureSignV1Request[sValue=$sValue, eAttachmentsConfirmationDecision=$eAttachmentsConfirmationDecision, sAttachmentsRefusalReason=$sAttachmentsRefusalReason, sSvg=$sSvg, aObjFile=$aObjFile, bIsAutomatic=$bIsAutomatic]';
+  String toString() => 'EzsignsignatureSignV1Request[fkiEzsignsigningreasonID=$fkiEzsignsigningreasonID, sValue=$sValue, eAttachmentsConfirmationDecision=$eAttachmentsConfirmationDecision, sAttachmentsRefusalReason=$sAttachmentsRefusalReason, sSvg=$sSvg, aObjFile=$aObjFile, bIsAutomatic=$bIsAutomatic]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
+    if (this.fkiEzsignsigningreasonID != null) {
+      json[r'fkiEzsignsigningreasonID'] = this.fkiEzsignsigningreasonID;
+    } else {
+      json[r'fkiEzsignsigningreasonID'] = null;
+    }
     if (this.sValue != null) {
       json[r'sValue'] = this.sValue;
     } else {
@@ -124,6 +144,7 @@ class EzsignsignatureSignV1Request {
       }());
 
       return EzsignsignatureSignV1Request(
+        fkiEzsignsigningreasonID: mapValueOfType<int>(json, r'fkiEzsignsigningreasonID'),
         sValue: mapValueOfType<String>(json, r'sValue'),
         eAttachmentsConfirmationDecision: EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum.fromJson(json[r'eAttachmentsConfirmationDecision']),
         sAttachmentsRefusalReason: mapValueOfType<String>(json, r'sAttachmentsRefusalReason'),

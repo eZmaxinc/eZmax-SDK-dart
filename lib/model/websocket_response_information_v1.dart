@@ -14,31 +14,38 @@ class WebsocketResponseInformationV1 {
   /// Returns a new [WebsocketResponseInformationV1] instance.
   WebsocketResponseInformationV1({
     required this.eWebsocketMessagetype,
+    required this.sWebsocketChannel,
     required this.mPayload,
   });
 
   /// The Type of message
   WebsocketResponseInformationV1EWebsocketMessagetypeEnum eWebsocketMessagetype;
 
+  /// The Channel on which to route the websocket message
+  String sWebsocketChannel;
+
   WebsocketResponseInformationV1MPayload mPayload;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is WebsocketResponseInformationV1 &&
     other.eWebsocketMessagetype == eWebsocketMessagetype &&
+    other.sWebsocketChannel == sWebsocketChannel &&
     other.mPayload == mPayload;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (eWebsocketMessagetype.hashCode) +
+    (sWebsocketChannel.hashCode) +
     (mPayload.hashCode);
 
   @override
-  String toString() => 'WebsocketResponseInformationV1[eWebsocketMessagetype=$eWebsocketMessagetype, mPayload=$mPayload]';
+  String toString() => 'WebsocketResponseInformationV1[eWebsocketMessagetype=$eWebsocketMessagetype, sWebsocketChannel=$sWebsocketChannel, mPayload=$mPayload]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'eWebsocketMessagetype'] = this.eWebsocketMessagetype;
+      json[r'sWebsocketChannel'] = this.sWebsocketChannel;
       json[r'mPayload'] = this.mPayload;
     return json;
   }
@@ -63,6 +70,7 @@ class WebsocketResponseInformationV1 {
 
       return WebsocketResponseInformationV1(
         eWebsocketMessagetype: WebsocketResponseInformationV1EWebsocketMessagetypeEnum.fromJson(json[r'eWebsocketMessagetype'])!,
+        sWebsocketChannel: mapValueOfType<String>(json, r'sWebsocketChannel')!,
         mPayload: WebsocketResponseInformationV1MPayload.fromJson(json[r'mPayload'])!,
       );
     }
@@ -112,6 +120,7 @@ class WebsocketResponseInformationV1 {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'eWebsocketMessagetype',
+    'sWebsocketChannel',
     'mPayload',
   };
 }
