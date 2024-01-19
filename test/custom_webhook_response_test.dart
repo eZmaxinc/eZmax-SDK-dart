@@ -97,6 +97,11 @@ void main() {
       // TODO
     });
 
+    // CommonAudit objAudit
+    test('to test the property `objAudit`', () async {
+      // TODO
+    });
+
     // The customer code assigned to your account
     // String pksCustomerCode
     test('to test the property `pksCustomerCode`', () async {

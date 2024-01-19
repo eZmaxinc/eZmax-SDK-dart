@@ -14,6 +14,7 @@ class CustomEzmaxinvoicingEzsigndocumentResponse {
   /// Returns a new [CustomEzmaxinvoicingEzsigndocumentResponse] instance.
   CustomEzmaxinvoicingEzsigndocumentResponse({
     required this.fkiEzsignfolderID,
+    this.fkiBillingentityinternalID,
     required this.sName,
     required this.sEzsignfolderDescription,
     required this.sEzsigndocumentName,
@@ -24,6 +25,17 @@ class CustomEzmaxinvoicingEzsigndocumentResponse {
   ///
   /// Minimum value: 0
   int fkiEzsignfolderID;
+
+  /// The unique ID of the Billingentityinternal.
+  ///
+  /// Minimum value: 0
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiBillingentityinternalID;
 
   String sName;
 
@@ -39,6 +51,7 @@ class CustomEzmaxinvoicingEzsigndocumentResponse {
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomEzmaxinvoicingEzsigndocumentResponse &&
     other.fkiEzsignfolderID == fkiEzsignfolderID &&
+    other.fkiBillingentityinternalID == fkiBillingentityinternalID &&
     other.sName == sName &&
     other.sEzsignfolderDescription == sEzsignfolderDescription &&
     other.sEzsigndocumentName == sEzsigndocumentName &&
@@ -48,17 +61,23 @@ class CustomEzmaxinvoicingEzsigndocumentResponse {
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (fkiEzsignfolderID.hashCode) +
+    (fkiBillingentityinternalID == null ? 0 : fkiBillingentityinternalID!.hashCode) +
     (sName.hashCode) +
     (sEzsignfolderDescription.hashCode) +
     (sEzsigndocumentName.hashCode) +
     (bEzsignfolderAllowed.hashCode);
 
   @override
-  String toString() => 'CustomEzmaxinvoicingEzsigndocumentResponse[fkiEzsignfolderID=$fkiEzsignfolderID, sName=$sName, sEzsignfolderDescription=$sEzsignfolderDescription, sEzsigndocumentName=$sEzsigndocumentName, bEzsignfolderAllowed=$bEzsignfolderAllowed]';
+  String toString() => 'CustomEzmaxinvoicingEzsigndocumentResponse[fkiEzsignfolderID=$fkiEzsignfolderID, fkiBillingentityinternalID=$fkiBillingentityinternalID, sName=$sName, sEzsignfolderDescription=$sEzsignfolderDescription, sEzsigndocumentName=$sEzsigndocumentName, bEzsignfolderAllowed=$bEzsignfolderAllowed]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'fkiEzsignfolderID'] = this.fkiEzsignfolderID;
+    if (this.fkiBillingentityinternalID != null) {
+      json[r'fkiBillingentityinternalID'] = this.fkiBillingentityinternalID;
+    } else {
+      json[r'fkiBillingentityinternalID'] = null;
+    }
       json[r'sName'] = this.sName;
       json[r'sEzsignfolderDescription'] = this.sEzsignfolderDescription;
       json[r'sEzsigndocumentName'] = this.sEzsigndocumentName;
@@ -86,6 +105,7 @@ class CustomEzmaxinvoicingEzsigndocumentResponse {
 
       return CustomEzmaxinvoicingEzsigndocumentResponse(
         fkiEzsignfolderID: mapValueOfType<int>(json, r'fkiEzsignfolderID')!,
+        fkiBillingentityinternalID: mapValueOfType<int>(json, r'fkiBillingentityinternalID'),
         sName: mapValueOfType<String>(json, r'sName')!,
         sEzsignfolderDescription: mapValueOfType<String>(json, r'sEzsignfolderDescription')!,
         sEzsigndocumentName: mapValueOfType<String>(json, r'sEzsigndocumentName')!,

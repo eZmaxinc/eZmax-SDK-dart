@@ -56,6 +56,12 @@ void main() {
       // TODO
     });
 
+    // The date and time at which the Ezsignfolder will be sent in the future.
+    // String dtEzsignfolderDelayedsenddate
+    test('to test the property `dtEzsignfolderDelayedsenddate`', () async {
+      // TODO
+    });
+
     // The date and time at which the Ezsignfolder was sent the last time.
     // String dtEzsignfolderSentdate
     test('to test the property `dtEzsignfolderSentdate`', () async {

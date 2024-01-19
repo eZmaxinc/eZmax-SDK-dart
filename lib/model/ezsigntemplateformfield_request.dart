@@ -14,16 +14,21 @@ class EzsigntemplateformfieldRequest {
   /// Returns a new [EzsigntemplateformfieldRequest] instance.
   EzsigntemplateformfieldRequest({
     this.pkiEzsigntemplateformfieldID,
+    this.eEzsigntemplateformfieldPositioning,
     required this.iEzsigntemplatedocumentpagePagenumber,
     required this.sEzsigntemplateformfieldLabel,
     this.sEzsigntemplateformfieldValue,
-    required this.iEzsigntemplateformfieldX,
-    required this.iEzsigntemplateformfieldY,
+    this.iEzsigntemplateformfieldX,
+    this.iEzsigntemplateformfieldY,
     required this.iEzsigntemplateformfieldWidth,
     required this.iEzsigntemplateformfieldHeight,
     this.bEzsigntemplateformfieldAutocomplete,
     this.bEzsigntemplateformfieldSelected,
     this.eEzsigntemplateformfieldDependencyrequirement,
+    this.sEzsigntemplateformfieldPositioningpattern,
+    this.iEzsigntemplateformfieldPositioningoffsetx,
+    this.iEzsigntemplateformfieldPositioningoffsety,
+    this.eEzsigntemplateformfieldPositioningoccurence,
   });
 
   /// The unique ID of the Ezsigntemplateformfield
@@ -36,6 +41,14 @@ class EzsigntemplateformfieldRequest {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   int? pkiEzsigntemplateformfieldID;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEEzsigntemplateformfieldPositioning? eEzsigntemplateformfieldPositioning;
 
   /// The page number in the Ezsigntemplatedocument
   ///
@@ -57,12 +70,24 @@ class EzsigntemplateformfieldRequest {
   /// The X coordinate (Horizontal) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 2 inches from the left border of the page, you would use \"200\" for the X coordinate.
   ///
   /// Minimum value: 0
-  int iEzsigntemplateformfieldX;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? iEzsigntemplateformfieldX;
 
   /// The Y coordinate (Vertical) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.
   ///
   /// Minimum value: 0
-  int iEzsigntemplateformfieldY;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? iEzsigntemplateformfieldY;
 
   /// The Width of the Ezsigntemplateformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsigntemplateformfieldgroupType.  | eEzsigntemplateformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22-65535     | | Radio                     | 22           | | Text                      | 22-65535     | | Textarea                  | 22-65535     |
   ///
@@ -100,9 +125,45 @@ class EzsigntemplateformfieldRequest {
   ///
   FieldEEzsigntemplateformfieldDependencyrequirement? eEzsigntemplateformfieldDependencyrequirement;
 
+  /// The string pattern to search for the positioning. **This is not a regexp**  This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates**
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEzsigntemplateformfieldPositioningpattern;
+
+  /// The offset X  This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates**
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? iEzsigntemplateformfieldPositioningoffsetx;
+
+  /// The offset Y  This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates**
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? iEzsigntemplateformfieldPositioningoffsety;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEEzsigntemplateformfieldPositioningoccurence? eEzsigntemplateformfieldPositioningoccurence;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplateformfieldRequest &&
     other.pkiEzsigntemplateformfieldID == pkiEzsigntemplateformfieldID &&
+    other.eEzsigntemplateformfieldPositioning == eEzsigntemplateformfieldPositioning &&
     other.iEzsigntemplatedocumentpagePagenumber == iEzsigntemplatedocumentpagePagenumber &&
     other.sEzsigntemplateformfieldLabel == sEzsigntemplateformfieldLabel &&
     other.sEzsigntemplateformfieldValue == sEzsigntemplateformfieldValue &&
@@ -112,25 +173,34 @@ class EzsigntemplateformfieldRequest {
     other.iEzsigntemplateformfieldHeight == iEzsigntemplateformfieldHeight &&
     other.bEzsigntemplateformfieldAutocomplete == bEzsigntemplateformfieldAutocomplete &&
     other.bEzsigntemplateformfieldSelected == bEzsigntemplateformfieldSelected &&
-    other.eEzsigntemplateformfieldDependencyrequirement == eEzsigntemplateformfieldDependencyrequirement;
+    other.eEzsigntemplateformfieldDependencyrequirement == eEzsigntemplateformfieldDependencyrequirement &&
+    other.sEzsigntemplateformfieldPositioningpattern == sEzsigntemplateformfieldPositioningpattern &&
+    other.iEzsigntemplateformfieldPositioningoffsetx == iEzsigntemplateformfieldPositioningoffsetx &&
+    other.iEzsigntemplateformfieldPositioningoffsety == iEzsigntemplateformfieldPositioningoffsety &&
+    other.eEzsigntemplateformfieldPositioningoccurence == eEzsigntemplateformfieldPositioningoccurence;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiEzsigntemplateformfieldID == null ? 0 : pkiEzsigntemplateformfieldID!.hashCode) +
+    (eEzsigntemplateformfieldPositioning == null ? 0 : eEzsigntemplateformfieldPositioning!.hashCode) +
     (iEzsigntemplatedocumentpagePagenumber.hashCode) +
     (sEzsigntemplateformfieldLabel.hashCode) +
     (sEzsigntemplateformfieldValue == null ? 0 : sEzsigntemplateformfieldValue!.hashCode) +
-    (iEzsigntemplateformfieldX.hashCode) +
-    (iEzsigntemplateformfieldY.hashCode) +
+    (iEzsigntemplateformfieldX == null ? 0 : iEzsigntemplateformfieldX!.hashCode) +
+    (iEzsigntemplateformfieldY == null ? 0 : iEzsigntemplateformfieldY!.hashCode) +
     (iEzsigntemplateformfieldWidth.hashCode) +
     (iEzsigntemplateformfieldHeight.hashCode) +
     (bEzsigntemplateformfieldAutocomplete == null ? 0 : bEzsigntemplateformfieldAutocomplete!.hashCode) +
     (bEzsigntemplateformfieldSelected == null ? 0 : bEzsigntemplateformfieldSelected!.hashCode) +
-    (eEzsigntemplateformfieldDependencyrequirement == null ? 0 : eEzsigntemplateformfieldDependencyrequirement!.hashCode);
+    (eEzsigntemplateformfieldDependencyrequirement == null ? 0 : eEzsigntemplateformfieldDependencyrequirement!.hashCode) +
+    (sEzsigntemplateformfieldPositioningpattern == null ? 0 : sEzsigntemplateformfieldPositioningpattern!.hashCode) +
+    (iEzsigntemplateformfieldPositioningoffsetx == null ? 0 : iEzsigntemplateformfieldPositioningoffsetx!.hashCode) +
+    (iEzsigntemplateformfieldPositioningoffsety == null ? 0 : iEzsigntemplateformfieldPositioningoffsety!.hashCode) +
+    (eEzsigntemplateformfieldPositioningoccurence == null ? 0 : eEzsigntemplateformfieldPositioningoccurence!.hashCode);
 
   @override
-  String toString() => 'EzsigntemplateformfieldRequest[pkiEzsigntemplateformfieldID=$pkiEzsigntemplateformfieldID, iEzsigntemplatedocumentpagePagenumber=$iEzsigntemplatedocumentpagePagenumber, sEzsigntemplateformfieldLabel=$sEzsigntemplateformfieldLabel, sEzsigntemplateformfieldValue=$sEzsigntemplateformfieldValue, iEzsigntemplateformfieldX=$iEzsigntemplateformfieldX, iEzsigntemplateformfieldY=$iEzsigntemplateformfieldY, iEzsigntemplateformfieldWidth=$iEzsigntemplateformfieldWidth, iEzsigntemplateformfieldHeight=$iEzsigntemplateformfieldHeight, bEzsigntemplateformfieldAutocomplete=$bEzsigntemplateformfieldAutocomplete, bEzsigntemplateformfieldSelected=$bEzsigntemplateformfieldSelected, eEzsigntemplateformfieldDependencyrequirement=$eEzsigntemplateformfieldDependencyrequirement]';
+  String toString() => 'EzsigntemplateformfieldRequest[pkiEzsigntemplateformfieldID=$pkiEzsigntemplateformfieldID, eEzsigntemplateformfieldPositioning=$eEzsigntemplateformfieldPositioning, iEzsigntemplatedocumentpagePagenumber=$iEzsigntemplatedocumentpagePagenumber, sEzsigntemplateformfieldLabel=$sEzsigntemplateformfieldLabel, sEzsigntemplateformfieldValue=$sEzsigntemplateformfieldValue, iEzsigntemplateformfieldX=$iEzsigntemplateformfieldX, iEzsigntemplateformfieldY=$iEzsigntemplateformfieldY, iEzsigntemplateformfieldWidth=$iEzsigntemplateformfieldWidth, iEzsigntemplateformfieldHeight=$iEzsigntemplateformfieldHeight, bEzsigntemplateformfieldAutocomplete=$bEzsigntemplateformfieldAutocomplete, bEzsigntemplateformfieldSelected=$bEzsigntemplateformfieldSelected, eEzsigntemplateformfieldDependencyrequirement=$eEzsigntemplateformfieldDependencyrequirement, sEzsigntemplateformfieldPositioningpattern=$sEzsigntemplateformfieldPositioningpattern, iEzsigntemplateformfieldPositioningoffsetx=$iEzsigntemplateformfieldPositioningoffsetx, iEzsigntemplateformfieldPositioningoffsety=$iEzsigntemplateformfieldPositioningoffsety, eEzsigntemplateformfieldPositioningoccurence=$eEzsigntemplateformfieldPositioningoccurence]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -139,6 +209,11 @@ class EzsigntemplateformfieldRequest {
     } else {
       json[r'pkiEzsigntemplateformfieldID'] = null;
     }
+    if (this.eEzsigntemplateformfieldPositioning != null) {
+      json[r'eEzsigntemplateformfieldPositioning'] = this.eEzsigntemplateformfieldPositioning;
+    } else {
+      json[r'eEzsigntemplateformfieldPositioning'] = null;
+    }
       json[r'iEzsigntemplatedocumentpagePagenumber'] = this.iEzsigntemplatedocumentpagePagenumber;
       json[r'sEzsigntemplateformfieldLabel'] = this.sEzsigntemplateformfieldLabel;
     if (this.sEzsigntemplateformfieldValue != null) {
@@ -146,8 +221,16 @@ class EzsigntemplateformfieldRequest {
     } else {
       json[r'sEzsigntemplateformfieldValue'] = null;
     }
+    if (this.iEzsigntemplateformfieldX != null) {
       json[r'iEzsigntemplateformfieldX'] = this.iEzsigntemplateformfieldX;
+    } else {
+      json[r'iEzsigntemplateformfieldX'] = null;
+    }
+    if (this.iEzsigntemplateformfieldY != null) {
       json[r'iEzsigntemplateformfieldY'] = this.iEzsigntemplateformfieldY;
+    } else {
+      json[r'iEzsigntemplateformfieldY'] = null;
+    }
       json[r'iEzsigntemplateformfieldWidth'] = this.iEzsigntemplateformfieldWidth;
       json[r'iEzsigntemplateformfieldHeight'] = this.iEzsigntemplateformfieldHeight;
     if (this.bEzsigntemplateformfieldAutocomplete != null) {
@@ -164,6 +247,26 @@ class EzsigntemplateformfieldRequest {
       json[r'eEzsigntemplateformfieldDependencyrequirement'] = this.eEzsigntemplateformfieldDependencyrequirement;
     } else {
       json[r'eEzsigntemplateformfieldDependencyrequirement'] = null;
+    }
+    if (this.sEzsigntemplateformfieldPositioningpattern != null) {
+      json[r'sEzsigntemplateformfieldPositioningpattern'] = this.sEzsigntemplateformfieldPositioningpattern;
+    } else {
+      json[r'sEzsigntemplateformfieldPositioningpattern'] = null;
+    }
+    if (this.iEzsigntemplateformfieldPositioningoffsetx != null) {
+      json[r'iEzsigntemplateformfieldPositioningoffsetx'] = this.iEzsigntemplateformfieldPositioningoffsetx;
+    } else {
+      json[r'iEzsigntemplateformfieldPositioningoffsetx'] = null;
+    }
+    if (this.iEzsigntemplateformfieldPositioningoffsety != null) {
+      json[r'iEzsigntemplateformfieldPositioningoffsety'] = this.iEzsigntemplateformfieldPositioningoffsety;
+    } else {
+      json[r'iEzsigntemplateformfieldPositioningoffsety'] = null;
+    }
+    if (this.eEzsigntemplateformfieldPositioningoccurence != null) {
+      json[r'eEzsigntemplateformfieldPositioningoccurence'] = this.eEzsigntemplateformfieldPositioningoccurence;
+    } else {
+      json[r'eEzsigntemplateformfieldPositioningoccurence'] = null;
     }
     return json;
   }
@@ -188,16 +291,21 @@ class EzsigntemplateformfieldRequest {
 
       return EzsigntemplateformfieldRequest(
         pkiEzsigntemplateformfieldID: mapValueOfType<int>(json, r'pkiEzsigntemplateformfieldID'),
+        eEzsigntemplateformfieldPositioning: FieldEEzsigntemplateformfieldPositioning.fromJson(json[r'eEzsigntemplateformfieldPositioning']),
         iEzsigntemplatedocumentpagePagenumber: mapValueOfType<int>(json, r'iEzsigntemplatedocumentpagePagenumber')!,
         sEzsigntemplateformfieldLabel: mapValueOfType<String>(json, r'sEzsigntemplateformfieldLabel')!,
         sEzsigntemplateformfieldValue: mapValueOfType<String>(json, r'sEzsigntemplateformfieldValue'),
-        iEzsigntemplateformfieldX: mapValueOfType<int>(json, r'iEzsigntemplateformfieldX')!,
-        iEzsigntemplateformfieldY: mapValueOfType<int>(json, r'iEzsigntemplateformfieldY')!,
+        iEzsigntemplateformfieldX: mapValueOfType<int>(json, r'iEzsigntemplateformfieldX'),
+        iEzsigntemplateformfieldY: mapValueOfType<int>(json, r'iEzsigntemplateformfieldY'),
         iEzsigntemplateformfieldWidth: mapValueOfType<int>(json, r'iEzsigntemplateformfieldWidth')!,
         iEzsigntemplateformfieldHeight: mapValueOfType<int>(json, r'iEzsigntemplateformfieldHeight')!,
         bEzsigntemplateformfieldAutocomplete: mapValueOfType<bool>(json, r'bEzsigntemplateformfieldAutocomplete'),
         bEzsigntemplateformfieldSelected: mapValueOfType<bool>(json, r'bEzsigntemplateformfieldSelected'),
         eEzsigntemplateformfieldDependencyrequirement: FieldEEzsigntemplateformfieldDependencyrequirement.fromJson(json[r'eEzsigntemplateformfieldDependencyrequirement']),
+        sEzsigntemplateformfieldPositioningpattern: mapValueOfType<String>(json, r'sEzsigntemplateformfieldPositioningpattern'),
+        iEzsigntemplateformfieldPositioningoffsetx: mapValueOfType<int>(json, r'iEzsigntemplateformfieldPositioningoffsetx'),
+        iEzsigntemplateformfieldPositioningoffsety: mapValueOfType<int>(json, r'iEzsigntemplateformfieldPositioningoffsety'),
+        eEzsigntemplateformfieldPositioningoccurence: FieldEEzsigntemplateformfieldPositioningoccurence.fromJson(json[r'eEzsigntemplateformfieldPositioningoccurence']),
       );
     }
     return null;
@@ -247,8 +355,6 @@ class EzsigntemplateformfieldRequest {
   static const requiredKeys = <String>{
     'iEzsigntemplatedocumentpagePagenumber',
     'sEzsigntemplateformfieldLabel',
-    'iEzsigntemplateformfieldX',
-    'iEzsigntemplateformfieldY',
     'iEzsigntemplateformfieldWidth',
     'iEzsigntemplateformfieldHeight',
   };

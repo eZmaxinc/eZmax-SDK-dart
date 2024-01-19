@@ -120,6 +120,11 @@ void main() {
       // TODO
     });
 
+    // FieldEEzsignfoldertypeCompletion eEzsignfoldertypeCompletion
+    test('to test the property `eEzsignfoldertypeCompletion`', () async {
+      // TODO
+    });
+
     // The number of days after the archival before the disposal of the Ezsignfolder
     // int iEzsignfoldertypeDisposaldays
     test('to test the property `iEzsignfoldertypeDisposaldays`', () async {
@@ -141,6 +146,18 @@ void main() {
     // Wheter if Reassignment of signature is allowed to another signatory or not
     // bool bEzsignfoldertypeReassign
     test('to test the property `bEzsignfoldertypeReassign`', () async {
+      // TODO
+    });
+
+    // Wheter if Reassignment of signature is allowed by a signatory to another signatory or not
+    // bool bEzsignfoldertypeReassignezsignsigner
+    test('to test the property `bEzsignfoldertypeReassignezsignsigner`', () async {
+      // TODO
+    });
+
+    // Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not
+    // bool bEzsignfoldertypeReassignuser
+    test('to test the property `bEzsignfoldertypeReassignuser`', () async {
       // TODO
     });
 

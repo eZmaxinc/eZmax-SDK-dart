@@ -23,6 +23,7 @@ class UserListElement {
     required this.eUserEzsignaccess,
     this.dtUserEzsignprepaidexpiration,
     required this.sEmailAddress,
+    this.sUserJobtitle,
   });
 
   /// The unique ID of the User
@@ -60,6 +61,15 @@ class UserListElement {
   /// The email address.
   String sEmailAddress;
 
+  /// The job title of the user
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sUserJobtitle;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is UserListElement &&
     other.pkiUserID == pkiUserID &&
@@ -71,7 +81,8 @@ class UserListElement {
     other.eUserOrigin == eUserOrigin &&
     other.eUserEzsignaccess == eUserEzsignaccess &&
     other.dtUserEzsignprepaidexpiration == dtUserEzsignprepaidexpiration &&
-    other.sEmailAddress == sEmailAddress;
+    other.sEmailAddress == sEmailAddress &&
+    other.sUserJobtitle == sUserJobtitle;
 
   @override
   int get hashCode =>
@@ -85,10 +96,11 @@ class UserListElement {
     (eUserOrigin.hashCode) +
     (eUserEzsignaccess.hashCode) +
     (dtUserEzsignprepaidexpiration == null ? 0 : dtUserEzsignprepaidexpiration!.hashCode) +
-    (sEmailAddress.hashCode);
+    (sEmailAddress.hashCode) +
+    (sUserJobtitle == null ? 0 : sUserJobtitle!.hashCode);
 
   @override
-  String toString() => 'UserListElement[pkiUserID=$pkiUserID, sUserFirstname=$sUserFirstname, sUserLastname=$sUserLastname, sUserLoginname=$sUserLoginname, bUserIsactive=$bUserIsactive, eUserType=$eUserType, eUserOrigin=$eUserOrigin, eUserEzsignaccess=$eUserEzsignaccess, dtUserEzsignprepaidexpiration=$dtUserEzsignprepaidexpiration, sEmailAddress=$sEmailAddress]';
+  String toString() => 'UserListElement[pkiUserID=$pkiUserID, sUserFirstname=$sUserFirstname, sUserLastname=$sUserLastname, sUserLoginname=$sUserLoginname, bUserIsactive=$bUserIsactive, eUserType=$eUserType, eUserOrigin=$eUserOrigin, eUserEzsignaccess=$eUserEzsignaccess, dtUserEzsignprepaidexpiration=$dtUserEzsignprepaidexpiration, sEmailAddress=$sEmailAddress, sUserJobtitle=$sUserJobtitle]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -106,6 +118,11 @@ class UserListElement {
       json[r'dtUserEzsignprepaidexpiration'] = null;
     }
       json[r'sEmailAddress'] = this.sEmailAddress;
+    if (this.sUserJobtitle != null) {
+      json[r'sUserJobtitle'] = this.sUserJobtitle;
+    } else {
+      json[r'sUserJobtitle'] = null;
+    }
     return json;
   }
 
@@ -138,6 +155,7 @@ class UserListElement {
         eUserEzsignaccess: FieldEUserEzsignaccess.fromJson(json[r'eUserEzsignaccess'])!,
         dtUserEzsignprepaidexpiration: mapValueOfType<String>(json, r'dtUserEzsignprepaidexpiration'),
         sEmailAddress: mapValueOfType<String>(json, r'sEmailAddress')!,
+        sUserJobtitle: mapValueOfType<String>(json, r'sUserJobtitle'),
       );
     }
     return null;

@@ -26,6 +26,11 @@ void main() {
       // TODO
     });
 
+    // List<CommonResponseWarning> aObjWarning (default value: const [])
+    test('to test the property `aObjWarning`', () async {
+      // TODO
+    });
+
 
   });
 

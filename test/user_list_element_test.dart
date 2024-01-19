@@ -73,6 +73,12 @@ void main() {
       // TODO
     });
 
+    // The job title of the user
+    // String sUserJobtitle
+    test('to test the property `sUserJobtitle`', () async {
+      // TODO
+    });
+
 
   });
 

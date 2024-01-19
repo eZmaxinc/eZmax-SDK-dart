@@ -22,6 +22,12 @@ void main() {
       // TODO
     });
 
+    // The unique ID of the Billingentityinternal.
+    // int fkiBillingentityinternalID
+    test('to test the property `fkiBillingentityinternalID`', () async {
+      // TODO
+    });
+
     // String sName
     test('to test the property `sName`', () async {
       // TODO

@@ -24,6 +24,7 @@ class EzsignsignatureResponse {
     this.iEzsignsignatureHeight,
     this.iEzsignsignatureWidth,
     required this.iEzsignsignatureStep,
+    this.iEzsignsignatureStepadjusted,
     required this.eEzsignsignatureType,
     this.tEzsignsignatureTooltip,
     this.eEzsignsignatureTooltipposition,
@@ -120,6 +121,15 @@ class EzsignsignatureResponse {
 
   /// The step when the Ezsignsigner will be invited to sign
   int iEzsignsignatureStep;
+
+  /// The step when the Ezsignsigner will be invited to sign
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? iEzsignsignatureStepadjusted;
 
   FieldEEzsignsignatureType eEzsignsignatureType;
 
@@ -289,6 +299,7 @@ class EzsignsignatureResponse {
     other.iEzsignsignatureHeight == iEzsignsignatureHeight &&
     other.iEzsignsignatureWidth == iEzsignsignatureWidth &&
     other.iEzsignsignatureStep == iEzsignsignatureStep &&
+    other.iEzsignsignatureStepadjusted == iEzsignsignatureStepadjusted &&
     other.eEzsignsignatureType == eEzsignsignatureType &&
     other.tEzsignsignatureTooltip == tEzsignsignatureTooltip &&
     other.eEzsignsignatureTooltipposition == eEzsignsignatureTooltipposition &&
@@ -323,6 +334,7 @@ class EzsignsignatureResponse {
     (iEzsignsignatureHeight == null ? 0 : iEzsignsignatureHeight!.hashCode) +
     (iEzsignsignatureWidth == null ? 0 : iEzsignsignatureWidth!.hashCode) +
     (iEzsignsignatureStep.hashCode) +
+    (iEzsignsignatureStepadjusted == null ? 0 : iEzsignsignatureStepadjusted!.hashCode) +
     (eEzsignsignatureType.hashCode) +
     (tEzsignsignatureTooltip == null ? 0 : tEzsignsignatureTooltip!.hashCode) +
     (eEzsignsignatureTooltipposition == null ? 0 : eEzsignsignatureTooltipposition!.hashCode) +
@@ -344,7 +356,7 @@ class EzsignsignatureResponse {
     (objSignature == null ? 0 : objSignature!.hashCode);
 
   @override
-  String toString() => 'EzsignsignatureResponse[pkiEzsignsignatureID=$pkiEzsignsignatureID, fkiEzsigndocumentID=$fkiEzsigndocumentID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, fkiEzsignsigningreasonID=$fkiEzsignsigningreasonID, sEzsignsigningreasonDescriptionX=$sEzsignsigningreasonDescriptionX, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureHeight=$iEzsignsignatureHeight, iEzsignsignatureWidth=$iEzsignsignatureWidth, iEzsignsignatureStep=$iEzsignsignatureStep, eEzsignsignatureType=$eEzsignsignatureType, tEzsignsignatureTooltip=$tEzsignsignatureTooltip, eEzsignsignatureTooltipposition=$eEzsignsignatureTooltipposition, eEzsignsignatureFont=$eEzsignsignatureFont, iEzsignsignatureValidationstep=$iEzsignsignatureValidationstep, sEzsignsignatureAttachmentdescription=$sEzsignsignatureAttachmentdescription, eEzsignsignatureAttachmentnamesource=$eEzsignsignatureAttachmentnamesource, bEzsignsignatureRequired=$bEzsignsignatureRequired, fkiEzsignfoldersignerassociationIDValidation=$fkiEzsignfoldersignerassociationIDValidation, dtEzsignsignatureDate=$dtEzsignsignatureDate, iEzsignsignatureattachmentCount=$iEzsignsignatureattachmentCount, sEzsignsignatureDescription=$sEzsignsignatureDescription, iEzsignsignatureMaxlength=$iEzsignsignatureMaxlength, eEzsignsignatureTextvalidation=$eEzsignsignatureTextvalidation, eEzsignsignatureDependencyrequirement=$eEzsignsignatureDependencyrequirement, sEzsignsignatureRegexp=$sEzsignsignatureRegexp, objContactName=$objContactName, objContactNameDelegation=$objContactNameDelegation, objSignature=$objSignature]';
+  String toString() => 'EzsignsignatureResponse[pkiEzsignsignatureID=$pkiEzsignsignatureID, fkiEzsigndocumentID=$fkiEzsigndocumentID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, fkiEzsignsigningreasonID=$fkiEzsignsigningreasonID, sEzsignsigningreasonDescriptionX=$sEzsignsigningreasonDescriptionX, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureHeight=$iEzsignsignatureHeight, iEzsignsignatureWidth=$iEzsignsignatureWidth, iEzsignsignatureStep=$iEzsignsignatureStep, iEzsignsignatureStepadjusted=$iEzsignsignatureStepadjusted, eEzsignsignatureType=$eEzsignsignatureType, tEzsignsignatureTooltip=$tEzsignsignatureTooltip, eEzsignsignatureTooltipposition=$eEzsignsignatureTooltipposition, eEzsignsignatureFont=$eEzsignsignatureFont, iEzsignsignatureValidationstep=$iEzsignsignatureValidationstep, sEzsignsignatureAttachmentdescription=$sEzsignsignatureAttachmentdescription, eEzsignsignatureAttachmentnamesource=$eEzsignsignatureAttachmentnamesource, bEzsignsignatureRequired=$bEzsignsignatureRequired, fkiEzsignfoldersignerassociationIDValidation=$fkiEzsignfoldersignerassociationIDValidation, dtEzsignsignatureDate=$dtEzsignsignatureDate, iEzsignsignatureattachmentCount=$iEzsignsignatureattachmentCount, sEzsignsignatureDescription=$sEzsignsignatureDescription, iEzsignsignatureMaxlength=$iEzsignsignatureMaxlength, eEzsignsignatureTextvalidation=$eEzsignsignatureTextvalidation, eEzsignsignatureDependencyrequirement=$eEzsignsignatureDependencyrequirement, sEzsignsignatureRegexp=$sEzsignsignatureRegexp, objContactName=$objContactName, objContactNameDelegation=$objContactNameDelegation, objSignature=$objSignature]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -375,6 +387,11 @@ class EzsignsignatureResponse {
       json[r'iEzsignsignatureWidth'] = null;
     }
       json[r'iEzsignsignatureStep'] = this.iEzsignsignatureStep;
+    if (this.iEzsignsignatureStepadjusted != null) {
+      json[r'iEzsignsignatureStepadjusted'] = this.iEzsignsignatureStepadjusted;
+    } else {
+      json[r'iEzsignsignatureStepadjusted'] = null;
+    }
       json[r'eEzsignsignatureType'] = this.eEzsignsignatureType;
     if (this.tEzsignsignatureTooltip != null) {
       json[r'tEzsignsignatureTooltip'] = this.tEzsignsignatureTooltip;
@@ -495,6 +512,7 @@ class EzsignsignatureResponse {
         iEzsignsignatureHeight: mapValueOfType<int>(json, r'iEzsignsignatureHeight'),
         iEzsignsignatureWidth: mapValueOfType<int>(json, r'iEzsignsignatureWidth'),
         iEzsignsignatureStep: mapValueOfType<int>(json, r'iEzsignsignatureStep')!,
+        iEzsignsignatureStepadjusted: mapValueOfType<int>(json, r'iEzsignsignatureStepadjusted'),
         eEzsignsignatureType: FieldEEzsignsignatureType.fromJson(json[r'eEzsignsignatureType'])!,
         tEzsignsignatureTooltip: mapValueOfType<String>(json, r'tEzsignsignatureTooltip'),
         eEzsignsignatureTooltipposition: FieldEEzsignsignatureTooltipposition.fromJson(json[r'eEzsignsignatureTooltipposition']),

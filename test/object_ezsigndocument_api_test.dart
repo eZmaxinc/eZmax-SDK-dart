@@ -35,6 +35,15 @@ void main() {
       // TODO
     });
 
+    // Create multiple Ezsignsignatures/Ezsignformfieldgroups
+    //
+    // Using this endpoint, you can create multiple Ezsignsignatures/Ezsignformfieldgroups positioned by word at the same time.
+    //
+    //Future<EzsigndocumentCreateEzsignelementsPositionedByWordV1Response> ezsigndocumentCreateEzsignelementsPositionedByWordV1(int pkiEzsigndocumentID, EzsigndocumentCreateEzsignelementsPositionedByWordV1Request ezsigndocumentCreateEzsignelementsPositionedByWordV1Request) async
+    test('test ezsigndocumentCreateEzsignelementsPositionedByWordV1', () async {
+      // TODO
+    });
+
     // Create a new Ezsigndocument
     //
     // The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
@@ -149,6 +158,15 @@ void main() {
     //
     //Future<EzsigndocumentGetEzsignannotationsV1Response> ezsigndocumentGetEzsignannotationsV1(int pkiEzsigndocumentID) async
     test('test ezsigndocumentGetEzsignannotationsV1', () async {
+      // TODO
+    });
+
+    // Retrieve an existing Ezsigndocument's Ezsigndiscussions
+    //
+    // 
+    //
+    //Future<EzsigndocumentGetEzsigndiscussionsV1Response> ezsigndocumentGetEzsigndiscussionsV1(int pkiEzsigndocumentID) async
+    test('test ezsigndocumentGetEzsigndiscussionsV1', () async {
       // TODO
     });
 

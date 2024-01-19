@@ -82,6 +82,12 @@ void main() {
       // TODO
     });
 
+    // The step when the Ezsignsigner will be invited to sign
+    // int iEzsignsignatureStepadjusted
+    test('to test the property `iEzsignsignatureStepadjusted`', () async {
+      // TODO
+    });
+
     // FieldEEzsignsignatureType eEzsignsignatureType
     test('to test the property `eEzsignsignatureType`', () async {
       // TODO

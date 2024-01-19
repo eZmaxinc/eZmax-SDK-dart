@@ -16,6 +16,7 @@ class EzsignfolderResponseCompound {
     required this.pkiEzsignfolderID,
     this.fkiEzsignfoldertypeID,
     this.objEzsignfoldertype,
+    this.eEzsignfolderCompletion,
     this.sEzsignfoldertypeNameX,
     this.fkiBillingentityinternalID,
     this.sBillingentityinternalDescriptionX,
@@ -60,6 +61,14 @@ class EzsignfolderResponseCompound {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   CustomEzsignfoldertypeResponse? objEzsignfoldertype;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEEzsignfolderCompletion? eEzsignfolderCompletion;
 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -232,6 +241,7 @@ class EzsignfolderResponseCompound {
     other.pkiEzsignfolderID == pkiEzsignfolderID &&
     other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
     other.objEzsignfoldertype == objEzsignfoldertype &&
+    other.eEzsignfolderCompletion == eEzsignfolderCompletion &&
     other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
     other.fkiBillingentityinternalID == fkiBillingentityinternalID &&
     other.sBillingentityinternalDescriptionX == sBillingentityinternalDescriptionX &&
@@ -258,6 +268,7 @@ class EzsignfolderResponseCompound {
     (pkiEzsignfolderID.hashCode) +
     (fkiEzsignfoldertypeID == null ? 0 : fkiEzsignfoldertypeID!.hashCode) +
     (objEzsignfoldertype == null ? 0 : objEzsignfoldertype!.hashCode) +
+    (eEzsignfolderCompletion == null ? 0 : eEzsignfolderCompletion!.hashCode) +
     (sEzsignfoldertypeNameX == null ? 0 : sEzsignfoldertypeNameX!.hashCode) +
     (fkiBillingentityinternalID == null ? 0 : fkiBillingentityinternalID!.hashCode) +
     (sBillingentityinternalDescriptionX == null ? 0 : sBillingentityinternalDescriptionX!.hashCode) +
@@ -279,7 +290,7 @@ class EzsignfolderResponseCompound {
     (sEzsignfolderExternalid == null ? 0 : sEzsignfolderExternalid!.hashCode);
 
   @override
-  String toString() => 'EzsignfolderResponseCompound[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, objEzsignfoldertype=$objEzsignfoldertype, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, fkiBillingentityinternalID=$fkiBillingentityinternalID, sBillingentityinternalDescriptionX=$sBillingentityinternalDescriptionX, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sEzsigntsarequirementDescriptionX=$sEzsigntsarequirementDescriptionX, sEzsignfolderDescription=$sEzsignfolderDescription, tEzsignfolderNote=$tEzsignfolderNote, bEzsignfolderIsdisposable=$bEzsignfolderIsdisposable, eEzsignfolderSendreminderfrequency=$eEzsignfolderSendreminderfrequency, dtEzsignfolderDelayedsenddate=$dtEzsignfolderDelayedsenddate, dtEzsignfolderDuedate=$dtEzsignfolderDuedate, dtEzsignfolderSentdate=$dtEzsignfolderSentdate, dtEzsignfolderScheduledarchive=$dtEzsignfolderScheduledarchive, dtEzsignfolderScheduleddispose=$dtEzsignfolderScheduleddispose, eEzsignfolderStep=$eEzsignfolderStep, dtEzsignfolderClose=$dtEzsignfolderClose, tEzsignfolderMessage=$tEzsignfolderMessage, objAudit=$objAudit, sEzsignfolderExternalid=$sEzsignfolderExternalid]';
+  String toString() => 'EzsignfolderResponseCompound[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, objEzsignfoldertype=$objEzsignfoldertype, eEzsignfolderCompletion=$eEzsignfolderCompletion, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, fkiBillingentityinternalID=$fkiBillingentityinternalID, sBillingentityinternalDescriptionX=$sBillingentityinternalDescriptionX, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sEzsigntsarequirementDescriptionX=$sEzsigntsarequirementDescriptionX, sEzsignfolderDescription=$sEzsignfolderDescription, tEzsignfolderNote=$tEzsignfolderNote, bEzsignfolderIsdisposable=$bEzsignfolderIsdisposable, eEzsignfolderSendreminderfrequency=$eEzsignfolderSendreminderfrequency, dtEzsignfolderDelayedsenddate=$dtEzsignfolderDelayedsenddate, dtEzsignfolderDuedate=$dtEzsignfolderDuedate, dtEzsignfolderSentdate=$dtEzsignfolderSentdate, dtEzsignfolderScheduledarchive=$dtEzsignfolderScheduledarchive, dtEzsignfolderScheduleddispose=$dtEzsignfolderScheduleddispose, eEzsignfolderStep=$eEzsignfolderStep, dtEzsignfolderClose=$dtEzsignfolderClose, tEzsignfolderMessage=$tEzsignfolderMessage, objAudit=$objAudit, sEzsignfolderExternalid=$sEzsignfolderExternalid]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -293,6 +304,11 @@ class EzsignfolderResponseCompound {
       json[r'objEzsignfoldertype'] = this.objEzsignfoldertype;
     } else {
       json[r'objEzsignfoldertype'] = null;
+    }
+    if (this.eEzsignfolderCompletion != null) {
+      json[r'eEzsignfolderCompletion'] = this.eEzsignfolderCompletion;
+    } else {
+      json[r'eEzsignfolderCompletion'] = null;
     }
     if (this.sEzsignfoldertypeNameX != null) {
       json[r'sEzsignfoldertypeNameX'] = this.sEzsignfoldertypeNameX;
@@ -410,6 +426,7 @@ class EzsignfolderResponseCompound {
         pkiEzsignfolderID: mapValueOfType<int>(json, r'pkiEzsignfolderID')!,
         fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID'),
         objEzsignfoldertype: CustomEzsignfoldertypeResponse.fromJson(json[r'objEzsignfoldertype']),
+        eEzsignfolderCompletion: FieldEEzsignfolderCompletion.fromJson(json[r'eEzsignfolderCompletion']),
         sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX'),
         fkiBillingentityinternalID: mapValueOfType<int>(json, r'fkiBillingentityinternalID'),
         sBillingentityinternalDescriptionX: mapValueOfType<String>(json, r'sBillingentityinternalDescriptionX'),

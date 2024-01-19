@@ -101,6 +101,16 @@ Class | Method | HTTP request | Description
 *ObjectCorsApi* | [**corsEditObjectV1**](doc//ObjectCorsApi.md#corseditobjectv1) | **PUT** /1/object/cors/{pkiCorsID} | Edit an existing Cors
 *ObjectCorsApi* | [**corsGetObjectV2**](doc//ObjectCorsApi.md#corsgetobjectv2) | **GET** /2/object/cors/{pkiCorsID} | Retrieve an existing Cors
 *ObjectDepartmentApi* | [**departmentGetAutocompleteV2**](doc//ObjectDepartmentApi.md#departmentgetautocompletev2) | **GET** /2/object/department/getAutocomplete/{sSelector} | Retrieve Departments and IDs
+*ObjectDiscussionApi* | [**discussionCreateObjectV1**](doc//ObjectDiscussionApi.md#discussioncreateobjectv1) | **POST** /1/object/discussion | Create a new Discussion
+*ObjectDiscussionApi* | [**discussionDeleteObjectV1**](doc//ObjectDiscussionApi.md#discussiondeleteobjectv1) | **DELETE** /1/object/discussion/{pkiDiscussionID} | Delete an existing Discussion
+*ObjectDiscussionApi* | [**discussionGetObjectV2**](doc//ObjectDiscussionApi.md#discussiongetobjectv2) | **GET** /2/object/discussion/{pkiDiscussionID} | Retrieve an existing Discussion
+*ObjectDiscussionApi* | [**discussionPatchObjectV1**](doc//ObjectDiscussionApi.md#discussionpatchobjectv1) | **PATCH** /1/object/discussion/{pkiDiscussionID} | Patch an existing Discussion
+*ObjectDiscussionApi* | [**discussionUpdateDiscussionreadstatusV1**](doc//ObjectDiscussionApi.md#discussionupdatediscussionreadstatusv1) | **POST** /1/object/discussion/{pkiDiscussionID}/updateDiscussionreadstatus | Update the read status of the discussion
+*ObjectDiscussionmembershipApi* | [**discussionmembershipCreateObjectV1**](doc//ObjectDiscussionmembershipApi.md#discussionmembershipcreateobjectv1) | **POST** /1/object/discussionmembership | Create a new Discussionmembership
+*ObjectDiscussionmembershipApi* | [**discussionmembershipDeleteObjectV1**](doc//ObjectDiscussionmembershipApi.md#discussionmembershipdeleteobjectv1) | **DELETE** /1/object/discussionmembership/{pkiDiscussionmembershipID} | Delete an existing Discussionmembership
+*ObjectDiscussionmessageApi* | [**discussionmessageCreateObjectV1**](doc//ObjectDiscussionmessageApi.md#discussionmessagecreateobjectv1) | **POST** /1/object/discussionmessage | Create a new Discussionmessage
+*ObjectDiscussionmessageApi* | [**discussionmessageDeleteObjectV1**](doc//ObjectDiscussionmessageApi.md#discussionmessagedeleteobjectv1) | **DELETE** /1/object/discussionmessage/{pkiDiscussionmessageID} | Delete an existing Discussionmessage
+*ObjectDiscussionmessageApi* | [**discussionmessagePatchObjectV1**](doc//ObjectDiscussionmessageApi.md#discussionmessagepatchobjectv1) | **PATCH** /1/object/discussionmessage/{pkiDiscussionmessageID} | Patch an existing Discussionmessage
 *ObjectElectronicfundstransferApi* | [**electronicfundstransferGetCommunicationListV1**](doc//ObjectElectronicfundstransferApi.md#electronicfundstransfergetcommunicationlistv1) | **GET** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationList | Retrieve Communication list
 *ObjectEmailtypeApi* | [**emailtypeGetAutocompleteV2**](doc//ObjectEmailtypeApi.md#emailtypegetautocompletev2) | **GET** /2/object/emailtype/getAutocomplete/{sSelector} | Retrieve Emailtypes and IDs
 *ObjectEzmaxinvoicingApi* | [**ezmaxinvoicingGetAutocompleteV1**](doc//ObjectEzmaxinvoicingApi.md#ezmaxinvoicinggetautocompletev1) | **GET** /1/object/ezmaxinvoicing/getAutocomplete/{sSelector} | Retrieve Ezmaxinvoicings and IDs
@@ -129,8 +139,12 @@ Class | Method | HTTP request | Description
 *ObjectEzsignbulksendtransmissionApi* | [**ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1**](doc//ObjectEzsignbulksendtransmissionApi.md#ezsignbulksendtransmissiongetezsignsignaturesautomaticv1) | **GET** /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getEzsignsignaturesAutomatic | Retrieve an existing Ezsignbulksendtransmission's automatic Ezsignsignatures
 *ObjectEzsignbulksendtransmissionApi* | [**ezsignbulksendtransmissionGetFormsDataV1**](doc//ObjectEzsignbulksendtransmissionApi.md#ezsignbulksendtransmissiongetformsdatav1) | **GET** /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getFormsData | Retrieve an existing Ezsignbulksendtransmission's forms data
 *ObjectEzsignbulksendtransmissionApi* | [**ezsignbulksendtransmissionGetObjectV2**](doc//ObjectEzsignbulksendtransmissionApi.md#ezsignbulksendtransmissiongetobjectv2) | **GET** /2/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID} | Retrieve an existing Ezsignbulksendtransmission
+*ObjectEzsigndiscussionApi* | [**ezsigndiscussionCreateObjectV1**](doc//ObjectEzsigndiscussionApi.md#ezsigndiscussioncreateobjectv1) | **POST** /1/object/ezsigndiscussion | Create a new Ezsigndiscussion
+*ObjectEzsigndiscussionApi* | [**ezsigndiscussionDeleteObjectV1**](doc//ObjectEzsigndiscussionApi.md#ezsigndiscussiondeleteobjectv1) | **DELETE** /1/object/ezsigndiscussion/{pkiEzsigndiscussionID} | Delete an existing Ezsigndiscussion
+*ObjectEzsigndiscussionApi* | [**ezsigndiscussionGetObjectV2**](doc//ObjectEzsigndiscussionApi.md#ezsigndiscussiongetobjectv2) | **GET** /2/object/ezsigndiscussion/{pkiEzsigndiscussionID} | Retrieve an existing Ezsigndiscussion
 *ObjectEzsigndocumentApi* | [**ezsigndocumentApplyEzsigntemplateV1**](doc//ObjectEzsigndocumentApi.md#ezsigndocumentapplyezsigntemplatev1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate | Apply an Ezsigntemplate to the Ezsigndocument.
 *ObjectEzsigndocumentApi* | [**ezsigndocumentApplyEzsigntemplateV2**](doc//ObjectEzsigndocumentApi.md#ezsigndocumentapplyezsigntemplatev2) | **POST** /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate | Apply an Ezsigntemplate to the Ezsigndocument.
+*ObjectEzsigndocumentApi* | [**ezsigndocumentCreateEzsignelementsPositionedByWordV1**](doc//ObjectEzsigndocumentApi.md#ezsigndocumentcreateezsignelementspositionedbywordv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/createEzsignelementsPositionedByWord | Create multiple Ezsignsignatures/Ezsignformfieldgroups
 *ObjectEzsigndocumentApi* | [**ezsigndocumentCreateObjectV1**](doc//ObjectEzsigndocumentApi.md#ezsigndocumentcreateobjectv1) | **POST** /1/object/ezsigndocument | Create a new Ezsigndocument
 *ObjectEzsigndocumentApi* | [**ezsigndocumentCreateObjectV2**](doc//ObjectEzsigndocumentApi.md#ezsigndocumentcreateobjectv2) | **POST** /2/object/ezsigndocument | Create a new Ezsigndocument
 *ObjectEzsigndocumentApi* | [**ezsigndocumentDeclineToSignV1**](doc//ObjectEzsigndocumentApi.md#ezsigndocumentdeclinetosignv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/declineToSign | Decline to sign
@@ -144,6 +158,7 @@ Class | Method | HTTP request | Description
 *ObjectEzsigndocumentApi* | [**ezsigndocumentGetCompletedElementsV1**](doc//ObjectEzsigndocumentApi.md#ezsigndocumentgetcompletedelementsv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getCompletedElements | Retrieve completed elements for the Ezsigndocument
 *ObjectEzsigndocumentApi* | [**ezsigndocumentGetDownloadUrlV1**](doc//ObjectEzsigndocumentApi.md#ezsigndocumentgetdownloadurlv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getDownloadUrl/{eDocumentType} | Retrieve a URL to download documents.
 *ObjectEzsigndocumentApi* | [**ezsigndocumentGetEzsignannotationsV1**](doc//ObjectEzsigndocumentApi.md#ezsigndocumentgetezsignannotationsv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignannotations | Retrieve an existing Ezsigndocument's Ezsignannotations
+*ObjectEzsigndocumentApi* | [**ezsigndocumentGetEzsigndiscussionsV1**](doc//ObjectEzsigndocumentApi.md#ezsigndocumentgetezsigndiscussionsv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsigndiscussions | Retrieve an existing Ezsigndocument's Ezsigndiscussions
 *ObjectEzsigndocumentApi* | [**ezsigndocumentGetEzsignformfieldgroupsV1**](doc//ObjectEzsigndocumentApi.md#ezsigndocumentgetezsignformfieldgroupsv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignformfieldgroups | Retrieve an existing Ezsigndocument's Ezsignformfieldgroups
 *ObjectEzsigndocumentApi* | [**ezsigndocumentGetEzsignpagesV1**](doc//ObjectEzsigndocumentApi.md#ezsigndocumentgetezsignpagesv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignpages | Retrieve an existing Ezsigndocument's Ezsignpages
 *ObjectEzsigndocumentApi* | [**ezsigndocumentGetEzsignsignaturesAutomaticV1**](doc//ObjectEzsigndocumentApi.md#ezsigndocumentgetezsignsignaturesautomaticv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignsignaturesAutomatic | Retrieve an existing Ezsigndocument's automatic Ezsignsignatures
@@ -554,7 +569,9 @@ Class | Method | HTTP request | Description
  - [CustomCommunicationsenderRequest](doc//CustomCommunicationsenderRequest.md)
  - [CustomCommunicationsenderResponse](doc//CustomCommunicationsenderResponse.md)
  - [CustomContactNameResponse](doc//CustomContactNameResponse.md)
+ - [CustomCreateEzsignelementsPositionedByWordRequest](doc//CustomCreateEzsignelementsPositionedByWordRequest.md)
  - [CustomCreditcardtransactionResponse](doc//CustomCreditcardtransactionResponse.md)
+ - [CustomDiscussionconfigurationResponse](doc//CustomDiscussionconfigurationResponse.md)
  - [CustomDropdownElementRequest](doc//CustomDropdownElementRequest.md)
  - [CustomDropdownElementRequestCompound](doc//CustomDropdownElementRequestCompound.md)
  - [CustomDropdownElementResponse](doc//CustomDropdownElementResponse.md)
@@ -573,7 +590,9 @@ Class | Method | HTTP request | Description
  - [CustomEzsignformfieldRequest](doc//CustomEzsignformfieldRequest.md)
  - [CustomEzsignformfielderrorResponse](doc//CustomEzsignformfielderrorResponse.md)
  - [CustomEzsignformfielderrortestResponse](doc//CustomEzsignformfielderrortestResponse.md)
+ - [CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest](doc//CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest.md)
  - [CustomEzsignformfieldgroupRequest](doc//CustomEzsignformfieldgroupRequest.md)
+ - [CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest](doc//CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest.md)
  - [CustomEzsignsignatureEzsignsignaturesAutomaticResponse](doc//CustomEzsignsignatureEzsignsignaturesAutomaticResponse.md)
  - [CustomEzsignsignaturestatusResponse](doc//CustomEzsignsignaturestatusResponse.md)
  - [CustomFormDataDocumentResponse](doc//CustomFormDataDocumentResponse.md)
@@ -592,6 +611,40 @@ Class | Method | HTTP request | Description
  - [DepartmentAutocompleteElementResponse](doc//DepartmentAutocompleteElementResponse.md)
  - [DepartmentGetAutocompleteV2Response](doc//DepartmentGetAutocompleteV2Response.md)
  - [DepartmentGetAutocompleteV2ResponseMPayload](doc//DepartmentGetAutocompleteV2ResponseMPayload.md)
+ - [DiscussionCreateObjectV1Request](doc//DiscussionCreateObjectV1Request.md)
+ - [DiscussionCreateObjectV1Response](doc//DiscussionCreateObjectV1Response.md)
+ - [DiscussionCreateObjectV1ResponseMPayload](doc//DiscussionCreateObjectV1ResponseMPayload.md)
+ - [DiscussionDeleteObjectV1Response](doc//DiscussionDeleteObjectV1Response.md)
+ - [DiscussionGetObjectV2Response](doc//DiscussionGetObjectV2Response.md)
+ - [DiscussionGetObjectV2ResponseMPayload](doc//DiscussionGetObjectV2ResponseMPayload.md)
+ - [DiscussionPatchObjectV1Request](doc//DiscussionPatchObjectV1Request.md)
+ - [DiscussionPatchObjectV1Response](doc//DiscussionPatchObjectV1Response.md)
+ - [DiscussionRequest](doc//DiscussionRequest.md)
+ - [DiscussionRequestCompound](doc//DiscussionRequestCompound.md)
+ - [DiscussionRequestPatch](doc//DiscussionRequestPatch.md)
+ - [DiscussionResponse](doc//DiscussionResponse.md)
+ - [DiscussionResponseCompound](doc//DiscussionResponseCompound.md)
+ - [DiscussionUpdateDiscussionreadstatusV1Request](doc//DiscussionUpdateDiscussionreadstatusV1Request.md)
+ - [DiscussionUpdateDiscussionreadstatusV1Response](doc//DiscussionUpdateDiscussionreadstatusV1Response.md)
+ - [DiscussionmembershipCreateObjectV1Request](doc//DiscussionmembershipCreateObjectV1Request.md)
+ - [DiscussionmembershipCreateObjectV1Response](doc//DiscussionmembershipCreateObjectV1Response.md)
+ - [DiscussionmembershipCreateObjectV1ResponseMPayload](doc//DiscussionmembershipCreateObjectV1ResponseMPayload.md)
+ - [DiscussionmembershipDeleteObjectV1Response](doc//DiscussionmembershipDeleteObjectV1Response.md)
+ - [DiscussionmembershipRequest](doc//DiscussionmembershipRequest.md)
+ - [DiscussionmembershipRequestCompound](doc//DiscussionmembershipRequestCompound.md)
+ - [DiscussionmembershipResponse](doc//DiscussionmembershipResponse.md)
+ - [DiscussionmembershipResponseCompound](doc//DiscussionmembershipResponseCompound.md)
+ - [DiscussionmessageCreateObjectV1Request](doc//DiscussionmessageCreateObjectV1Request.md)
+ - [DiscussionmessageCreateObjectV1Response](doc//DiscussionmessageCreateObjectV1Response.md)
+ - [DiscussionmessageCreateObjectV1ResponseMPayload](doc//DiscussionmessageCreateObjectV1ResponseMPayload.md)
+ - [DiscussionmessageDeleteObjectV1Response](doc//DiscussionmessageDeleteObjectV1Response.md)
+ - [DiscussionmessagePatchObjectV1Request](doc//DiscussionmessagePatchObjectV1Request.md)
+ - [DiscussionmessagePatchObjectV1Response](doc//DiscussionmessagePatchObjectV1Response.md)
+ - [DiscussionmessageRequest](doc//DiscussionmessageRequest.md)
+ - [DiscussionmessageRequestCompound](doc//DiscussionmessageRequestCompound.md)
+ - [DiscussionmessageRequestPatch](doc//DiscussionmessageRequestPatch.md)
+ - [DiscussionmessageResponse](doc//DiscussionmessageResponse.md)
+ - [DiscussionmessageResponseCompound](doc//DiscussionmessageResponseCompound.md)
  - [ElectronicfundstransferGetCommunicationListV1Response](doc//ElectronicfundstransferGetCommunicationListV1Response.md)
  - [ElectronicfundstransferGetCommunicationListV1ResponseMPayload](doc//ElectronicfundstransferGetCommunicationListV1ResponseMPayload.md)
  - [EmailRequest](doc//EmailRequest.md)
@@ -696,10 +749,23 @@ Class | Method | HTTP request | Description
  - [EzsignbulksendtransmissionGetObjectV2ResponseMPayload](doc//EzsignbulksendtransmissionGetObjectV2ResponseMPayload.md)
  - [EzsignbulksendtransmissionResponse](doc//EzsignbulksendtransmissionResponse.md)
  - [EzsignbulksendtransmissionResponseCompound](doc//EzsignbulksendtransmissionResponseCompound.md)
+ - [EzsigndiscussionCreateObjectV1Request](doc//EzsigndiscussionCreateObjectV1Request.md)
+ - [EzsigndiscussionCreateObjectV1Response](doc//EzsigndiscussionCreateObjectV1Response.md)
+ - [EzsigndiscussionCreateObjectV1ResponseMPayload](doc//EzsigndiscussionCreateObjectV1ResponseMPayload.md)
+ - [EzsigndiscussionDeleteObjectV1Response](doc//EzsigndiscussionDeleteObjectV1Response.md)
+ - [EzsigndiscussionGetObjectV2Response](doc//EzsigndiscussionGetObjectV2Response.md)
+ - [EzsigndiscussionGetObjectV2ResponseMPayload](doc//EzsigndiscussionGetObjectV2ResponseMPayload.md)
+ - [EzsigndiscussionRequest](doc//EzsigndiscussionRequest.md)
+ - [EzsigndiscussionRequestCompound](doc//EzsigndiscussionRequestCompound.md)
+ - [EzsigndiscussionResponse](doc//EzsigndiscussionResponse.md)
+ - [EzsigndiscussionResponseCompound](doc//EzsigndiscussionResponseCompound.md)
  - [EzsigndocumentApplyEzsigntemplateV1Request](doc//EzsigndocumentApplyEzsigntemplateV1Request.md)
  - [EzsigndocumentApplyEzsigntemplateV1Response](doc//EzsigndocumentApplyEzsigntemplateV1Response.md)
  - [EzsigndocumentApplyEzsigntemplateV2Request](doc//EzsigndocumentApplyEzsigntemplateV2Request.md)
  - [EzsigndocumentApplyEzsigntemplateV2Response](doc//EzsigndocumentApplyEzsigntemplateV2Response.md)
+ - [EzsigndocumentCreateEzsignelementsPositionedByWordV1Request](doc//EzsigndocumentCreateEzsignelementsPositionedByWordV1Request.md)
+ - [EzsigndocumentCreateEzsignelementsPositionedByWordV1Response](doc//EzsigndocumentCreateEzsignelementsPositionedByWordV1Response.md)
+ - [EzsigndocumentCreateEzsignelementsPositionedByWordV1ResponseMPayload](doc//EzsigndocumentCreateEzsignelementsPositionedByWordV1ResponseMPayload.md)
  - [EzsigndocumentCreateObjectV1Request](doc//EzsigndocumentCreateObjectV1Request.md)
  - [EzsigndocumentCreateObjectV1Response](doc//EzsigndocumentCreateObjectV1Response.md)
  - [EzsigndocumentCreateObjectV1ResponseMPayload](doc//EzsigndocumentCreateObjectV1ResponseMPayload.md)
@@ -727,6 +793,8 @@ Class | Method | HTTP request | Description
  - [EzsigndocumentGetDownloadUrlV1ResponseMPayload](doc//EzsigndocumentGetDownloadUrlV1ResponseMPayload.md)
  - [EzsigndocumentGetEzsignannotationsV1Response](doc//EzsigndocumentGetEzsignannotationsV1Response.md)
  - [EzsigndocumentGetEzsignannotationsV1ResponseMPayload](doc//EzsigndocumentGetEzsignannotationsV1ResponseMPayload.md)
+ - [EzsigndocumentGetEzsigndiscussionsV1Response](doc//EzsigndocumentGetEzsigndiscussionsV1Response.md)
+ - [EzsigndocumentGetEzsigndiscussionsV1ResponseMPayload](doc//EzsigndocumentGetEzsigndiscussionsV1ResponseMPayload.md)
  - [EzsigndocumentGetEzsignformfieldgroupsV1Response](doc//EzsigndocumentGetEzsignformfieldgroupsV1Response.md)
  - [EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload](doc//EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload.md)
  - [EzsigndocumentGetEzsignpagesV1Response](doc//EzsigndocumentGetEzsignpagesV1Response.md)
@@ -1141,6 +1209,7 @@ Class | Method | HTTP request | Description
  - [FieldECommunicationexternalrecipientType](doc//FieldECommunicationexternalrecipientType.md)
  - [FieldECommunicationrecipientType](doc//FieldECommunicationrecipientType.md)
  - [FieldECreditcardtypeCodename](doc//FieldECreditcardtypeCodename.md)
+ - [FieldEDiscussionmessageStatus](doc//FieldEDiscussionmessageStatus.md)
  - [FieldEErrorCode](doc//FieldEErrorCode.md)
  - [FieldEEzmaxinvoicingPaymenttype](doc//FieldEEzmaxinvoicingPaymenttype.md)
  - [FieldEEzmaxinvoicingagentVariationezmax](doc//FieldEEzmaxinvoicingagentVariationezmax.md)
@@ -1152,8 +1221,10 @@ Class | Method | HTTP request | Description
  - [FieldEEzsigndocumentlogType](doc//FieldEEzsigndocumentlogType.md)
  - [FieldEEzsignelementdependencyOperator](doc//FieldEEzsignelementdependencyOperator.md)
  - [FieldEEzsignelementdependencyValidation](doc//FieldEEzsignelementdependencyValidation.md)
+ - [FieldEEzsignfolderCompletion](doc//FieldEEzsignfolderCompletion.md)
  - [FieldEEzsignfolderSendreminderfrequency](doc//FieldEEzsignfolderSendreminderfrequency.md)
  - [FieldEEzsignfolderStep](doc//FieldEEzsignfolderStep.md)
+ - [FieldEEzsignfoldertypeCompletion](doc//FieldEEzsignfoldertypeCompletion.md)
  - [FieldEEzsignfoldertypeDisposal](doc//FieldEEzsignfoldertypeDisposal.md)
  - [FieldEEzsignfoldertypePrivacylevel](doc//FieldEEzsignfoldertypePrivacylevel.md)
  - [FieldEEzsignfoldertypeSendreminderfrequency](doc//FieldEEzsignfoldertypeSendreminderfrequency.md)
@@ -1169,12 +1240,16 @@ Class | Method | HTTP request | Description
  - [FieldEEzsigntemplateelementdependencyOperator](doc//FieldEEzsigntemplateelementdependencyOperator.md)
  - [FieldEEzsigntemplateelementdependencyValidation](doc//FieldEEzsigntemplateelementdependencyValidation.md)
  - [FieldEEzsigntemplateformfieldDependencyrequirement](doc//FieldEEzsigntemplateformfieldDependencyrequirement.md)
+ - [FieldEEzsigntemplateformfieldPositioning](doc//FieldEEzsigntemplateformfieldPositioning.md)
+ - [FieldEEzsigntemplateformfieldPositioningoccurence](doc//FieldEEzsigntemplateformfieldPositioningoccurence.md)
  - [FieldEEzsigntemplateformfieldgroupSignerrequirement](doc//FieldEEzsigntemplateformfieldgroupSignerrequirement.md)
  - [FieldEEzsigntemplateformfieldgroupTooltipposition](doc//FieldEEzsigntemplateformfieldgroupTooltipposition.md)
  - [FieldEEzsigntemplateformfieldgroupType](doc//FieldEEzsigntemplateformfieldgroupType.md)
  - [FieldEEzsigntemplatesignatureAttachmentnamesource](doc//FieldEEzsigntemplatesignatureAttachmentnamesource.md)
  - [FieldEEzsigntemplatesignatureDependencyrequirement](doc//FieldEEzsigntemplatesignatureDependencyrequirement.md)
  - [FieldEEzsigntemplatesignatureFont](doc//FieldEEzsigntemplatesignatureFont.md)
+ - [FieldEEzsigntemplatesignaturePositioning](doc//FieldEEzsigntemplatesignaturePositioning.md)
+ - [FieldEEzsigntemplatesignaturePositioningoccurence](doc//FieldEEzsigntemplatesignaturePositioningoccurence.md)
  - [FieldEEzsigntemplatesignatureTooltipposition](doc//FieldEEzsigntemplatesignatureTooltipposition.md)
  - [FieldEEzsigntemplatesignatureType](doc//FieldEEzsigntemplatesignatureType.md)
  - [FieldENotificationpreferenceStatus](doc//FieldENotificationpreferenceStatus.md)

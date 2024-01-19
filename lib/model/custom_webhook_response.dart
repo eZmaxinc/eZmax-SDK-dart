@@ -27,6 +27,7 @@ class CustomWebhookResponse {
     required this.bWebhookIsactive,
     required this.bWebhookIssigned,
     required this.bWebhookSkipsslvalidation,
+    required this.objAudit,
     required this.pksCustomerCode,
     required this.bWebhookTest,
   });
@@ -108,6 +109,8 @@ class CustomWebhookResponse {
   /// Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use
   bool bWebhookSkipsslvalidation;
 
+  CommonAudit objAudit;
+
   /// The customer code assigned to your account
   String pksCustomerCode;
 
@@ -130,6 +133,7 @@ class CustomWebhookResponse {
     other.bWebhookIsactive == bWebhookIsactive &&
     other.bWebhookIssigned == bWebhookIssigned &&
     other.bWebhookSkipsslvalidation == bWebhookSkipsslvalidation &&
+    other.objAudit == objAudit &&
     other.pksCustomerCode == pksCustomerCode &&
     other.bWebhookTest == bWebhookTest;
 
@@ -150,11 +154,12 @@ class CustomWebhookResponse {
     (bWebhookIsactive.hashCode) +
     (bWebhookIssigned.hashCode) +
     (bWebhookSkipsslvalidation.hashCode) +
+    (objAudit.hashCode) +
     (pksCustomerCode.hashCode) +
     (bWebhookTest.hashCode);
 
   @override
-  String toString() => 'CustomWebhookResponse[pkiWebhookID=$pkiWebhookID, sWebhookDescription=$sWebhookDescription, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, sWebhookUrl=$sWebhookUrl, sWebhookEmailfailed=$sWebhookEmailfailed, sWebhookApikey=$sWebhookApikey, sWebhookSecret=$sWebhookSecret, bWebhookIsactive=$bWebhookIsactive, bWebhookIssigned=$bWebhookIssigned, bWebhookSkipsslvalidation=$bWebhookSkipsslvalidation, pksCustomerCode=$pksCustomerCode, bWebhookTest=$bWebhookTest]';
+  String toString() => 'CustomWebhookResponse[pkiWebhookID=$pkiWebhookID, sWebhookDescription=$sWebhookDescription, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, sWebhookUrl=$sWebhookUrl, sWebhookEmailfailed=$sWebhookEmailfailed, sWebhookApikey=$sWebhookApikey, sWebhookSecret=$sWebhookSecret, bWebhookIsactive=$bWebhookIsactive, bWebhookIssigned=$bWebhookIssigned, bWebhookSkipsslvalidation=$bWebhookSkipsslvalidation, objAudit=$objAudit, pksCustomerCode=$pksCustomerCode, bWebhookTest=$bWebhookTest]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -196,6 +201,7 @@ class CustomWebhookResponse {
       json[r'bWebhookIsactive'] = this.bWebhookIsactive;
       json[r'bWebhookIssigned'] = this.bWebhookIssigned;
       json[r'bWebhookSkipsslvalidation'] = this.bWebhookSkipsslvalidation;
+      json[r'objAudit'] = this.objAudit;
       json[r'pksCustomerCode'] = this.pksCustomerCode;
       json[r'bWebhookTest'] = this.bWebhookTest;
     return json;
@@ -234,6 +240,7 @@ class CustomWebhookResponse {
         bWebhookIsactive: mapValueOfType<bool>(json, r'bWebhookIsactive')!,
         bWebhookIssigned: mapValueOfType<bool>(json, r'bWebhookIssigned')!,
         bWebhookSkipsslvalidation: mapValueOfType<bool>(json, r'bWebhookSkipsslvalidation')!,
+        objAudit: CommonAudit.fromJson(json[r'objAudit'])!,
         pksCustomerCode: mapValueOfType<String>(json, r'pksCustomerCode')!,
         bWebhookTest: mapValueOfType<bool>(json, r'bWebhookTest')!,
       );
@@ -291,6 +298,7 @@ class CustomWebhookResponse {
     'bWebhookIsactive',
     'bWebhookIssigned',
     'bWebhookSkipsslvalidation',
+    'objAudit',
     'pksCustomerCode',
     'bWebhookTest',
   };

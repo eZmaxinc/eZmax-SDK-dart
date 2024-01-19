@@ -33,6 +33,11 @@ void main() {
       // TODO
     });
 
+    // FieldEEzsignfolderCompletion eEzsignfolderCompletion
+    test('to test the property `eEzsignfolderCompletion`', () async {
+      // TODO
+    });
+
     // String sEzsignfoldertypeNameX
     test('to test the property `sEzsignfoldertypeNameX`', () async {
       // TODO

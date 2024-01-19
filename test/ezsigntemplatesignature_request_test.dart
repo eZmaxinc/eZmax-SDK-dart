@@ -40,6 +40,11 @@ void main() {
       // TODO
     });
 
+    // FieldEEzsigntemplatesignaturePositioning eEzsigntemplatesignaturePositioning
+    test('to test the property `eEzsigntemplatesignaturePositioning`', () async {
+      // TODO
+    });
+
     // The page number in the Ezsigntemplatedocument
     // int iEzsigntemplatedocumentpagePagenumber
     test('to test the property `iEzsigntemplatedocumentpagePagenumber`', () async {
@@ -139,6 +144,29 @@ void main() {
 
     // FieldEEzsigntemplatesignatureDependencyrequirement eEzsigntemplatesignatureDependencyrequirement
     test('to test the property `eEzsigntemplatesignatureDependencyrequirement`', () async {
+      // TODO
+    });
+
+    // The string pattern to search for the positioning. **This is not a regexp**  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**
+    // String sEzsigntemplatesignaturePositioningpattern
+    test('to test the property `sEzsigntemplatesignaturePositioningpattern`', () async {
+      // TODO
+    });
+
+    // The offset X  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**
+    // int iEzsigntemplatesignaturePositioningoffsetx
+    test('to test the property `iEzsigntemplatesignaturePositioningoffsetx`', () async {
+      // TODO
+    });
+
+    // The offset Y  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**
+    // int iEzsigntemplatesignaturePositioningoffsety
+    test('to test the property `iEzsigntemplatesignaturePositioningoffsety`', () async {
+      // TODO
+    });
+
+    // FieldEEzsigntemplatesignaturePositioningoccurence eEzsigntemplatesignaturePositioningoccurence
+    test('to test the property `eEzsigntemplatesignaturePositioningoccurence`', () async {
       // TODO
     });
 

@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **bWebhookIsactive** | **bool** | Whether the Webhook is active or not | 
 **bWebhookIssigned** | **bool** | Whether the requests will be signed or not | 
 **bWebhookSkipsslvalidation** | **bool** | Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use | 
+**objAudit** | [**CommonAudit**](CommonAudit.md) |  | 
 **sWebhookEvent** | **String** | The concatenated string to describe the Webhook event | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

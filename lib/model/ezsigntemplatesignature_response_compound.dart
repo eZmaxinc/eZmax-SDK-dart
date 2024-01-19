@@ -17,9 +17,10 @@ class EzsigntemplatesignatureResponseCompound {
     required this.fkiEzsigntemplatedocumentID,
     required this.fkiEzsigntemplatesignerID,
     this.fkiEzsigntemplatesignerIDValidation,
+    this.eEzsigntemplatesignaturePositioning,
     required this.iEzsigntemplatedocumentpagePagenumber,
-    required this.iEzsigntemplatesignatureX,
-    required this.iEzsigntemplatesignatureY,
+    this.iEzsigntemplatesignatureX,
+    this.iEzsigntemplatesignatureY,
     this.iEzsigntemplatesignatureWidth,
     this.iEzsigntemplatesignatureHeight,
     required this.iEzsigntemplatesignatureStep,
@@ -35,6 +36,10 @@ class EzsigntemplatesignatureResponseCompound {
     this.sEzsigntemplatesignatureRegexp,
     this.eEzsigntemplatesignatureTextvalidation,
     this.eEzsigntemplatesignatureDependencyrequirement,
+    this.sEzsigntemplatesignaturePositioningpattern,
+    this.iEzsigntemplatesignaturePositioningoffsetx,
+    this.iEzsigntemplatesignaturePositioningoffsety,
+    this.eEzsigntemplatesignaturePositioningoccurence,
     this.bEzsigntemplatesignatureCustomdate,
     this.aObjEzsigntemplatesignaturecustomdate = const [],
     this.aObjEzsigntemplateelementdependency = const [],
@@ -66,6 +71,14 @@ class EzsigntemplatesignatureResponseCompound {
   ///
   int? fkiEzsigntemplatesignerIDValidation;
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEEzsigntemplatesignaturePositioning? eEzsigntemplatesignaturePositioning;
+
   /// The page number in the Ezsigntemplatedocument
   ///
   /// Minimum value: 1
@@ -74,12 +87,24 @@ class EzsigntemplatesignatureResponseCompound {
   /// The X coordinate (Horizontal) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 2 inches from the left border of the page, you would use \"200\" for the X coordinate.
   ///
   /// Minimum value: 0
-  int iEzsigntemplatesignatureX;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? iEzsigntemplatesignatureX;
 
   /// The Y coordinate (Vertical) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.
   ///
   /// Minimum value: 0
-  int iEzsigntemplatesignatureY;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? iEzsigntemplatesignatureY;
 
   /// The width of the Ezsigntemplatesignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsigntemplatesignature to have a width of 2 inches, you would use \"200\" for the iEzsigntemplatesignatureWidth.
   ///
@@ -207,6 +232,41 @@ class EzsigntemplatesignatureResponseCompound {
   ///
   FieldEEzsigntemplatesignatureDependencyrequirement? eEzsigntemplatesignatureDependencyrequirement;
 
+  /// The string pattern to search for the positioning. **This is not a regexp**  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEzsigntemplatesignaturePositioningpattern;
+
+  /// The offset X  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? iEzsigntemplatesignaturePositioningoffsetx;
+
+  /// The offset Y  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? iEzsigntemplatesignaturePositioningoffsety;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEEzsigntemplatesignaturePositioningoccurence? eEzsigntemplatesignaturePositioningoccurence;
+
   /// Whether the Ezsigntemplatesignature has a custom date format or not. (Only possible when eEzsigntemplatesignatureType is **Name** or **Handwritten**)
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -227,6 +287,7 @@ class EzsigntemplatesignatureResponseCompound {
     other.fkiEzsigntemplatedocumentID == fkiEzsigntemplatedocumentID &&
     other.fkiEzsigntemplatesignerID == fkiEzsigntemplatesignerID &&
     other.fkiEzsigntemplatesignerIDValidation == fkiEzsigntemplatesignerIDValidation &&
+    other.eEzsigntemplatesignaturePositioning == eEzsigntemplatesignaturePositioning &&
     other.iEzsigntemplatedocumentpagePagenumber == iEzsigntemplatedocumentpagePagenumber &&
     other.iEzsigntemplatesignatureX == iEzsigntemplatesignatureX &&
     other.iEzsigntemplatesignatureY == iEzsigntemplatesignatureY &&
@@ -245,6 +306,10 @@ class EzsigntemplatesignatureResponseCompound {
     other.sEzsigntemplatesignatureRegexp == sEzsigntemplatesignatureRegexp &&
     other.eEzsigntemplatesignatureTextvalidation == eEzsigntemplatesignatureTextvalidation &&
     other.eEzsigntemplatesignatureDependencyrequirement == eEzsigntemplatesignatureDependencyrequirement &&
+    other.sEzsigntemplatesignaturePositioningpattern == sEzsigntemplatesignaturePositioningpattern &&
+    other.iEzsigntemplatesignaturePositioningoffsetx == iEzsigntemplatesignaturePositioningoffsetx &&
+    other.iEzsigntemplatesignaturePositioningoffsety == iEzsigntemplatesignaturePositioningoffsety &&
+    other.eEzsigntemplatesignaturePositioningoccurence == eEzsigntemplatesignaturePositioningoccurence &&
     other.bEzsigntemplatesignatureCustomdate == bEzsigntemplatesignatureCustomdate &&
     _deepEquality.equals(other.aObjEzsigntemplatesignaturecustomdate, aObjEzsigntemplatesignaturecustomdate) &&
     _deepEquality.equals(other.aObjEzsigntemplateelementdependency, aObjEzsigntemplateelementdependency);
@@ -256,9 +321,10 @@ class EzsigntemplatesignatureResponseCompound {
     (fkiEzsigntemplatedocumentID.hashCode) +
     (fkiEzsigntemplatesignerID.hashCode) +
     (fkiEzsigntemplatesignerIDValidation == null ? 0 : fkiEzsigntemplatesignerIDValidation!.hashCode) +
+    (eEzsigntemplatesignaturePositioning == null ? 0 : eEzsigntemplatesignaturePositioning!.hashCode) +
     (iEzsigntemplatedocumentpagePagenumber.hashCode) +
-    (iEzsigntemplatesignatureX.hashCode) +
-    (iEzsigntemplatesignatureY.hashCode) +
+    (iEzsigntemplatesignatureX == null ? 0 : iEzsigntemplatesignatureX!.hashCode) +
+    (iEzsigntemplatesignatureY == null ? 0 : iEzsigntemplatesignatureY!.hashCode) +
     (iEzsigntemplatesignatureWidth == null ? 0 : iEzsigntemplatesignatureWidth!.hashCode) +
     (iEzsigntemplatesignatureHeight == null ? 0 : iEzsigntemplatesignatureHeight!.hashCode) +
     (iEzsigntemplatesignatureStep.hashCode) +
@@ -274,12 +340,16 @@ class EzsigntemplatesignatureResponseCompound {
     (sEzsigntemplatesignatureRegexp == null ? 0 : sEzsigntemplatesignatureRegexp!.hashCode) +
     (eEzsigntemplatesignatureTextvalidation == null ? 0 : eEzsigntemplatesignatureTextvalidation!.hashCode) +
     (eEzsigntemplatesignatureDependencyrequirement == null ? 0 : eEzsigntemplatesignatureDependencyrequirement!.hashCode) +
+    (sEzsigntemplatesignaturePositioningpattern == null ? 0 : sEzsigntemplatesignaturePositioningpattern!.hashCode) +
+    (iEzsigntemplatesignaturePositioningoffsetx == null ? 0 : iEzsigntemplatesignaturePositioningoffsetx!.hashCode) +
+    (iEzsigntemplatesignaturePositioningoffsety == null ? 0 : iEzsigntemplatesignaturePositioningoffsety!.hashCode) +
+    (eEzsigntemplatesignaturePositioningoccurence == null ? 0 : eEzsigntemplatesignaturePositioningoccurence!.hashCode) +
     (bEzsigntemplatesignatureCustomdate == null ? 0 : bEzsigntemplatesignatureCustomdate!.hashCode) +
     (aObjEzsigntemplatesignaturecustomdate.hashCode) +
     (aObjEzsigntemplateelementdependency.hashCode);
 
   @override
-  String toString() => 'EzsigntemplatesignatureResponseCompound[pkiEzsigntemplatesignatureID=$pkiEzsigntemplatesignatureID, fkiEzsigntemplatedocumentID=$fkiEzsigntemplatedocumentID, fkiEzsigntemplatesignerID=$fkiEzsigntemplatesignerID, fkiEzsigntemplatesignerIDValidation=$fkiEzsigntemplatesignerIDValidation, iEzsigntemplatedocumentpagePagenumber=$iEzsigntemplatedocumentpagePagenumber, iEzsigntemplatesignatureX=$iEzsigntemplatesignatureX, iEzsigntemplatesignatureY=$iEzsigntemplatesignatureY, iEzsigntemplatesignatureWidth=$iEzsigntemplatesignatureWidth, iEzsigntemplatesignatureHeight=$iEzsigntemplatesignatureHeight, iEzsigntemplatesignatureStep=$iEzsigntemplatesignatureStep, eEzsigntemplatesignatureType=$eEzsigntemplatesignatureType, tEzsigntemplatesignatureTooltip=$tEzsigntemplatesignatureTooltip, eEzsigntemplatesignatureTooltipposition=$eEzsigntemplatesignatureTooltipposition, eEzsigntemplatesignatureFont=$eEzsigntemplatesignatureFont, iEzsigntemplatesignatureValidationstep=$iEzsigntemplatesignatureValidationstep, sEzsigntemplatesignatureAttachmentdescription=$sEzsigntemplatesignatureAttachmentdescription, eEzsigntemplatesignatureAttachmentnamesource=$eEzsigntemplatesignatureAttachmentnamesource, bEzsigntemplatesignatureRequired=$bEzsigntemplatesignatureRequired, iEzsigntemplatesignatureMaxlength=$iEzsigntemplatesignatureMaxlength, sEzsigntemplatesignatureRegexp=$sEzsigntemplatesignatureRegexp, eEzsigntemplatesignatureTextvalidation=$eEzsigntemplatesignatureTextvalidation, eEzsigntemplatesignatureDependencyrequirement=$eEzsigntemplatesignatureDependencyrequirement, bEzsigntemplatesignatureCustomdate=$bEzsigntemplatesignatureCustomdate, aObjEzsigntemplatesignaturecustomdate=$aObjEzsigntemplatesignaturecustomdate, aObjEzsigntemplateelementdependency=$aObjEzsigntemplateelementdependency]';
+  String toString() => 'EzsigntemplatesignatureResponseCompound[pkiEzsigntemplatesignatureID=$pkiEzsigntemplatesignatureID, fkiEzsigntemplatedocumentID=$fkiEzsigntemplatedocumentID, fkiEzsigntemplatesignerID=$fkiEzsigntemplatesignerID, fkiEzsigntemplatesignerIDValidation=$fkiEzsigntemplatesignerIDValidation, eEzsigntemplatesignaturePositioning=$eEzsigntemplatesignaturePositioning, iEzsigntemplatedocumentpagePagenumber=$iEzsigntemplatedocumentpagePagenumber, iEzsigntemplatesignatureX=$iEzsigntemplatesignatureX, iEzsigntemplatesignatureY=$iEzsigntemplatesignatureY, iEzsigntemplatesignatureWidth=$iEzsigntemplatesignatureWidth, iEzsigntemplatesignatureHeight=$iEzsigntemplatesignatureHeight, iEzsigntemplatesignatureStep=$iEzsigntemplatesignatureStep, eEzsigntemplatesignatureType=$eEzsigntemplatesignatureType, tEzsigntemplatesignatureTooltip=$tEzsigntemplatesignatureTooltip, eEzsigntemplatesignatureTooltipposition=$eEzsigntemplatesignatureTooltipposition, eEzsigntemplatesignatureFont=$eEzsigntemplatesignatureFont, iEzsigntemplatesignatureValidationstep=$iEzsigntemplatesignatureValidationstep, sEzsigntemplatesignatureAttachmentdescription=$sEzsigntemplatesignatureAttachmentdescription, eEzsigntemplatesignatureAttachmentnamesource=$eEzsigntemplatesignatureAttachmentnamesource, bEzsigntemplatesignatureRequired=$bEzsigntemplatesignatureRequired, iEzsigntemplatesignatureMaxlength=$iEzsigntemplatesignatureMaxlength, sEzsigntemplatesignatureRegexp=$sEzsigntemplatesignatureRegexp, eEzsigntemplatesignatureTextvalidation=$eEzsigntemplatesignatureTextvalidation, eEzsigntemplatesignatureDependencyrequirement=$eEzsigntemplatesignatureDependencyrequirement, sEzsigntemplatesignaturePositioningpattern=$sEzsigntemplatesignaturePositioningpattern, iEzsigntemplatesignaturePositioningoffsetx=$iEzsigntemplatesignaturePositioningoffsetx, iEzsigntemplatesignaturePositioningoffsety=$iEzsigntemplatesignaturePositioningoffsety, eEzsigntemplatesignaturePositioningoccurence=$eEzsigntemplatesignaturePositioningoccurence, bEzsigntemplatesignatureCustomdate=$bEzsigntemplatesignatureCustomdate, aObjEzsigntemplatesignaturecustomdate=$aObjEzsigntemplatesignaturecustomdate, aObjEzsigntemplateelementdependency=$aObjEzsigntemplateelementdependency]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -291,9 +361,22 @@ class EzsigntemplatesignatureResponseCompound {
     } else {
       json[r'fkiEzsigntemplatesignerIDValidation'] = null;
     }
+    if (this.eEzsigntemplatesignaturePositioning != null) {
+      json[r'eEzsigntemplatesignaturePositioning'] = this.eEzsigntemplatesignaturePositioning;
+    } else {
+      json[r'eEzsigntemplatesignaturePositioning'] = null;
+    }
       json[r'iEzsigntemplatedocumentpagePagenumber'] = this.iEzsigntemplatedocumentpagePagenumber;
+    if (this.iEzsigntemplatesignatureX != null) {
       json[r'iEzsigntemplatesignatureX'] = this.iEzsigntemplatesignatureX;
+    } else {
+      json[r'iEzsigntemplatesignatureX'] = null;
+    }
+    if (this.iEzsigntemplatesignatureY != null) {
       json[r'iEzsigntemplatesignatureY'] = this.iEzsigntemplatesignatureY;
+    } else {
+      json[r'iEzsigntemplatesignatureY'] = null;
+    }
     if (this.iEzsigntemplatesignatureWidth != null) {
       json[r'iEzsigntemplatesignatureWidth'] = this.iEzsigntemplatesignatureWidth;
     } else {
@@ -361,6 +444,26 @@ class EzsigntemplatesignatureResponseCompound {
     } else {
       json[r'eEzsigntemplatesignatureDependencyrequirement'] = null;
     }
+    if (this.sEzsigntemplatesignaturePositioningpattern != null) {
+      json[r'sEzsigntemplatesignaturePositioningpattern'] = this.sEzsigntemplatesignaturePositioningpattern;
+    } else {
+      json[r'sEzsigntemplatesignaturePositioningpattern'] = null;
+    }
+    if (this.iEzsigntemplatesignaturePositioningoffsetx != null) {
+      json[r'iEzsigntemplatesignaturePositioningoffsetx'] = this.iEzsigntemplatesignaturePositioningoffsetx;
+    } else {
+      json[r'iEzsigntemplatesignaturePositioningoffsetx'] = null;
+    }
+    if (this.iEzsigntemplatesignaturePositioningoffsety != null) {
+      json[r'iEzsigntemplatesignaturePositioningoffsety'] = this.iEzsigntemplatesignaturePositioningoffsety;
+    } else {
+      json[r'iEzsigntemplatesignaturePositioningoffsety'] = null;
+    }
+    if (this.eEzsigntemplatesignaturePositioningoccurence != null) {
+      json[r'eEzsigntemplatesignaturePositioningoccurence'] = this.eEzsigntemplatesignaturePositioningoccurence;
+    } else {
+      json[r'eEzsigntemplatesignaturePositioningoccurence'] = null;
+    }
     if (this.bEzsigntemplatesignatureCustomdate != null) {
       json[r'bEzsigntemplatesignatureCustomdate'] = this.bEzsigntemplatesignatureCustomdate;
     } else {
@@ -394,9 +497,10 @@ class EzsigntemplatesignatureResponseCompound {
         fkiEzsigntemplatedocumentID: mapValueOfType<int>(json, r'fkiEzsigntemplatedocumentID')!,
         fkiEzsigntemplatesignerID: mapValueOfType<int>(json, r'fkiEzsigntemplatesignerID')!,
         fkiEzsigntemplatesignerIDValidation: mapValueOfType<int>(json, r'fkiEzsigntemplatesignerIDValidation'),
+        eEzsigntemplatesignaturePositioning: FieldEEzsigntemplatesignaturePositioning.fromJson(json[r'eEzsigntemplatesignaturePositioning']),
         iEzsigntemplatedocumentpagePagenumber: mapValueOfType<int>(json, r'iEzsigntemplatedocumentpagePagenumber')!,
-        iEzsigntemplatesignatureX: mapValueOfType<int>(json, r'iEzsigntemplatesignatureX')!,
-        iEzsigntemplatesignatureY: mapValueOfType<int>(json, r'iEzsigntemplatesignatureY')!,
+        iEzsigntemplatesignatureX: mapValueOfType<int>(json, r'iEzsigntemplatesignatureX'),
+        iEzsigntemplatesignatureY: mapValueOfType<int>(json, r'iEzsigntemplatesignatureY'),
         iEzsigntemplatesignatureWidth: mapValueOfType<int>(json, r'iEzsigntemplatesignatureWidth'),
         iEzsigntemplatesignatureHeight: mapValueOfType<int>(json, r'iEzsigntemplatesignatureHeight'),
         iEzsigntemplatesignatureStep: mapValueOfType<int>(json, r'iEzsigntemplatesignatureStep')!,
@@ -412,6 +516,10 @@ class EzsigntemplatesignatureResponseCompound {
         sEzsigntemplatesignatureRegexp: mapValueOfType<String>(json, r'sEzsigntemplatesignatureRegexp'),
         eEzsigntemplatesignatureTextvalidation: EnumTextvalidation.fromJson(json[r'eEzsigntemplatesignatureTextvalidation']),
         eEzsigntemplatesignatureDependencyrequirement: FieldEEzsigntemplatesignatureDependencyrequirement.fromJson(json[r'eEzsigntemplatesignatureDependencyrequirement']),
+        sEzsigntemplatesignaturePositioningpattern: mapValueOfType<String>(json, r'sEzsigntemplatesignaturePositioningpattern'),
+        iEzsigntemplatesignaturePositioningoffsetx: mapValueOfType<int>(json, r'iEzsigntemplatesignaturePositioningoffsetx'),
+        iEzsigntemplatesignaturePositioningoffsety: mapValueOfType<int>(json, r'iEzsigntemplatesignaturePositioningoffsety'),
+        eEzsigntemplatesignaturePositioningoccurence: FieldEEzsigntemplatesignaturePositioningoccurence.fromJson(json[r'eEzsigntemplatesignaturePositioningoccurence']),
         bEzsigntemplatesignatureCustomdate: mapValueOfType<bool>(json, r'bEzsigntemplatesignatureCustomdate'),
         aObjEzsigntemplatesignaturecustomdate: EzsigntemplatesignaturecustomdateResponseCompound.listFromJson(json[r'a_objEzsigntemplatesignaturecustomdate']),
         aObjEzsigntemplateelementdependency: EzsigntemplateelementdependencyResponseCompound.listFromJson(json[r'a_objEzsigntemplateelementdependency']),
@@ -466,8 +574,6 @@ class EzsigntemplatesignatureResponseCompound {
     'fkiEzsigntemplatedocumentID',
     'fkiEzsigntemplatesignerID',
     'iEzsigntemplatedocumentpagePagenumber',
-    'iEzsigntemplatesignatureX',
-    'iEzsigntemplatesignatureY',
     'iEzsigntemplatesignatureStep',
     'eEzsigntemplatesignatureType',
   };

@@ -118,6 +118,9 @@ String parameterToString(dynamic value) {
   if (value is FieldECreditcardtypeCodename) {
     return FieldECreditcardtypeCodenameTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEDiscussionmessageStatus) {
+    return FieldEDiscussionmessageStatusTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEErrorCode) {
     return FieldEErrorCodeTypeTransformer().encode(value).toString();
   }
@@ -151,11 +154,17 @@ String parameterToString(dynamic value) {
   if (value is FieldEEzsignelementdependencyValidation) {
     return FieldEEzsignelementdependencyValidationTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEEzsignfolderCompletion) {
+    return FieldEEzsignfolderCompletionTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEEzsignfolderSendreminderfrequency) {
     return FieldEEzsignfolderSendreminderfrequencyTypeTransformer().encode(value).toString();
   }
   if (value is FieldEEzsignfolderStep) {
     return FieldEEzsignfolderStepTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsignfoldertypeCompletion) {
+    return FieldEEzsignfoldertypeCompletionTypeTransformer().encode(value).toString();
   }
   if (value is FieldEEzsignfoldertypeDisposal) {
     return FieldEEzsignfoldertypeDisposalTypeTransformer().encode(value).toString();
@@ -202,6 +211,12 @@ String parameterToString(dynamic value) {
   if (value is FieldEEzsigntemplateformfieldDependencyrequirement) {
     return FieldEEzsigntemplateformfieldDependencyrequirementTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEEzsigntemplateformfieldPositioning) {
+    return FieldEEzsigntemplateformfieldPositioningTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsigntemplateformfieldPositioningoccurence) {
+    return FieldEEzsigntemplateformfieldPositioningoccurenceTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEEzsigntemplateformfieldgroupSignerrequirement) {
     return FieldEEzsigntemplateformfieldgroupSignerrequirementTypeTransformer().encode(value).toString();
   }
@@ -219,6 +234,12 @@ String parameterToString(dynamic value) {
   }
   if (value is FieldEEzsigntemplatesignatureFont) {
     return FieldEEzsigntemplatesignatureFontTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsigntemplatesignaturePositioning) {
+    return FieldEEzsigntemplatesignaturePositioningTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsigntemplatesignaturePositioningoccurence) {
+    return FieldEEzsigntemplatesignaturePositioningoccurenceTypeTransformer().encode(value).toString();
   }
   if (value is FieldEEzsigntemplatesignatureTooltipposition) {
     return FieldEEzsigntemplatesignatureTooltippositionTypeTransformer().encode(value).toString();

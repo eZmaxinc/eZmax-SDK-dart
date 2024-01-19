@@ -34,6 +34,7 @@ class UserRequestCompound {
     required this.sUserFirstname,
     required this.sUserLastname,
     required this.sUserLoginname,
+    this.sUserJobtitle,
     required this.eUserEzsignaccess,
     required this.bUserIsactive,
     this.bUserValidatebyadministration,
@@ -186,6 +187,15 @@ class UserRequestCompound {
   /// The login name of the User.
   String sUserLoginname;
 
+  /// The job title of the user
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sUserJobtitle;
+
   FieldEUserEzsignaccess eUserEzsignaccess;
 
   /// Whether the User is active or not
@@ -250,6 +260,7 @@ class UserRequestCompound {
     other.sUserFirstname == sUserFirstname &&
     other.sUserLastname == sUserLastname &&
     other.sUserLoginname == sUserLoginname &&
+    other.sUserJobtitle == sUserJobtitle &&
     other.eUserEzsignaccess == eUserEzsignaccess &&
     other.bUserIsactive == bUserIsactive &&
     other.bUserValidatebyadministration == bUserValidatebyadministration &&
@@ -281,6 +292,7 @@ class UserRequestCompound {
     (sUserFirstname.hashCode) +
     (sUserLastname.hashCode) +
     (sUserLoginname.hashCode) +
+    (sUserJobtitle == null ? 0 : sUserJobtitle!.hashCode) +
     (eUserEzsignaccess.hashCode) +
     (bUserIsactive.hashCode) +
     (bUserValidatebyadministration == null ? 0 : bUserValidatebyadministration!.hashCode) +
@@ -289,7 +301,7 @@ class UserRequestCompound {
     (bUserChangepassword == null ? 0 : bUserChangepassword!.hashCode);
 
   @override
-  String toString() => 'UserRequestCompound[pkiUserID=$pkiUserID, fkiAgentID=$fkiAgentID, fkiBrokerID=$fkiBrokerID, fkiAssistantID=$fkiAssistantID, fkiEmployeeID=$fkiEmployeeID, fkiCompanyIDDefault=$fkiCompanyIDDefault, fkiDepartmentIDDefault=$fkiDepartmentIDDefault, fkiTimezoneID=$fkiTimezoneID, fkiLanguageID=$fkiLanguageID, objEmail=$objEmail, fkiBillingentityinternalID=$fkiBillingentityinternalID, objPhoneHome=$objPhoneHome, objPhoneSMS=$objPhoneSMS, fkiSecretquestionID=$fkiSecretquestionID, sUserSecretresponse=$sUserSecretresponse, fkiModuleIDForm=$fkiModuleIDForm, eUserType=$eUserType, eUserLogintype=$eUserLogintype, sUserFirstname=$sUserFirstname, sUserLastname=$sUserLastname, sUserLoginname=$sUserLoginname, eUserEzsignaccess=$eUserEzsignaccess, bUserIsactive=$bUserIsactive, bUserValidatebyadministration=$bUserValidatebyadministration, bUserValidatebydirector=$bUserValidatebydirector, bUserAttachmentautoverified=$bUserAttachmentautoverified, bUserChangepassword=$bUserChangepassword]';
+  String toString() => 'UserRequestCompound[pkiUserID=$pkiUserID, fkiAgentID=$fkiAgentID, fkiBrokerID=$fkiBrokerID, fkiAssistantID=$fkiAssistantID, fkiEmployeeID=$fkiEmployeeID, fkiCompanyIDDefault=$fkiCompanyIDDefault, fkiDepartmentIDDefault=$fkiDepartmentIDDefault, fkiTimezoneID=$fkiTimezoneID, fkiLanguageID=$fkiLanguageID, objEmail=$objEmail, fkiBillingentityinternalID=$fkiBillingentityinternalID, objPhoneHome=$objPhoneHome, objPhoneSMS=$objPhoneSMS, fkiSecretquestionID=$fkiSecretquestionID, sUserSecretresponse=$sUserSecretresponse, fkiModuleIDForm=$fkiModuleIDForm, eUserType=$eUserType, eUserLogintype=$eUserLogintype, sUserFirstname=$sUserFirstname, sUserLastname=$sUserLastname, sUserLoginname=$sUserLoginname, sUserJobtitle=$sUserJobtitle, eUserEzsignaccess=$eUserEzsignaccess, bUserIsactive=$bUserIsactive, bUserValidatebyadministration=$bUserValidatebyadministration, bUserValidatebydirector=$bUserValidatebydirector, bUserAttachmentautoverified=$bUserAttachmentautoverified, bUserChangepassword=$bUserChangepassword]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -354,6 +366,11 @@ class UserRequestCompound {
       json[r'sUserFirstname'] = this.sUserFirstname;
       json[r'sUserLastname'] = this.sUserLastname;
       json[r'sUserLoginname'] = this.sUserLoginname;
+    if (this.sUserJobtitle != null) {
+      json[r'sUserJobtitle'] = this.sUserJobtitle;
+    } else {
+      json[r'sUserJobtitle'] = null;
+    }
       json[r'eUserEzsignaccess'] = this.eUserEzsignaccess;
       json[r'bUserIsactive'] = this.bUserIsactive;
     if (this.bUserValidatebyadministration != null) {
@@ -419,6 +436,7 @@ class UserRequestCompound {
         sUserFirstname: mapValueOfType<String>(json, r'sUserFirstname')!,
         sUserLastname: mapValueOfType<String>(json, r'sUserLastname')!,
         sUserLoginname: mapValueOfType<String>(json, r'sUserLoginname')!,
+        sUserJobtitle: mapValueOfType<String>(json, r'sUserJobtitle'),
         eUserEzsignaccess: FieldEUserEzsignaccess.fromJson(json[r'eUserEzsignaccess'])!,
         bUserIsactive: mapValueOfType<bool>(json, r'bUserIsactive')!,
         bUserValidatebyadministration: mapValueOfType<bool>(json, r'bUserValidatebyadministration'),

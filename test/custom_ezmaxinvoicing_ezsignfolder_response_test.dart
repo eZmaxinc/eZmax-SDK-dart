@@ -22,6 +22,12 @@ void main() {
       // TODO
     });
 
+    // The unique ID of the Billingentityinternal.
+    // int fkiBillingentityinternalID
+    test('to test the property `fkiBillingentityinternalID`', () async {
+      // TODO
+    });
+
     // The description of the Ezsignfolder
     // String sEzsignfolderDescription
     test('to test the property `sEzsignfolderDescription`', () async {

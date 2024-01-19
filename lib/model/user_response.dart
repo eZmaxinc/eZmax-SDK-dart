@@ -40,6 +40,7 @@ class UserResponse {
     required this.sUserFirstname,
     required this.sUserLastname,
     required this.sUserLoginname,
+    this.sUserJobtitle,
     required this.eUserEzsignaccess,
     this.dtUserLastlogondate,
     this.dtUserPasswordchanged,
@@ -207,6 +208,15 @@ class UserResponse {
   /// The login name of the User.
   String sUserLoginname;
 
+  /// The job title of the user
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sUserJobtitle;
+
   FieldEUserEzsignaccess eUserEzsignaccess;
 
   /// The last logon date of the User
@@ -300,6 +310,7 @@ class UserResponse {
     other.sUserFirstname == sUserFirstname &&
     other.sUserLastname == sUserLastname &&
     other.sUserLoginname == sUserLoginname &&
+    other.sUserJobtitle == sUserJobtitle &&
     other.eUserEzsignaccess == eUserEzsignaccess &&
     other.dtUserLastlogondate == dtUserLastlogondate &&
     other.dtUserPasswordchanged == dtUserPasswordchanged &&
@@ -341,6 +352,7 @@ class UserResponse {
     (sUserFirstname.hashCode) +
     (sUserLastname.hashCode) +
     (sUserLoginname.hashCode) +
+    (sUserJobtitle == null ? 0 : sUserJobtitle!.hashCode) +
     (eUserEzsignaccess.hashCode) +
     (dtUserLastlogondate == null ? 0 : dtUserLastlogondate!.hashCode) +
     (dtUserPasswordchanged == null ? 0 : dtUserPasswordchanged!.hashCode) +
@@ -353,7 +365,7 @@ class UserResponse {
     (objAudit.hashCode);
 
   @override
-  String toString() => 'UserResponse[pkiUserID=$pkiUserID, fkiAgentID=$fkiAgentID, fkiBrokerID=$fkiBrokerID, fkiAssistantID=$fkiAssistantID, fkiEmployeeID=$fkiEmployeeID, fkiCompanyIDDefault=$fkiCompanyIDDefault, sCompanyNameX=$sCompanyNameX, fkiDepartmentIDDefault=$fkiDepartmentIDDefault, sDepartmentNameX=$sDepartmentNameX, fkiTimezoneID=$fkiTimezoneID, sTimezoneName=$sTimezoneName, fkiLanguageID=$fkiLanguageID, sLanguageNameX=$sLanguageNameX, objEmail=$objEmail, fkiBillingentityinternalID=$fkiBillingentityinternalID, sBillingentityinternalDescriptionX=$sBillingentityinternalDescriptionX, objPhoneHome=$objPhoneHome, objPhoneSMS=$objPhoneSMS, fkiSecretquestionID=$fkiSecretquestionID, fkiModuleIDForm=$fkiModuleIDForm, sModuleNameX=$sModuleNameX, eUserOrigin=$eUserOrigin, eUserType=$eUserType, eUserLogintype=$eUserLogintype, sUserFirstname=$sUserFirstname, sUserLastname=$sUserLastname, sUserLoginname=$sUserLoginname, eUserEzsignaccess=$eUserEzsignaccess, dtUserLastlogondate=$dtUserLastlogondate, dtUserPasswordchanged=$dtUserPasswordchanged, dtUserEzsignprepaidexpiration=$dtUserEzsignprepaidexpiration, bUserIsactive=$bUserIsactive, bUserValidatebyadministration=$bUserValidatebyadministration, bUserValidatebydirector=$bUserValidatebydirector, bUserAttachmentautoverified=$bUserAttachmentautoverified, bUserChangepassword=$bUserChangepassword, objAudit=$objAudit]';
+  String toString() => 'UserResponse[pkiUserID=$pkiUserID, fkiAgentID=$fkiAgentID, fkiBrokerID=$fkiBrokerID, fkiAssistantID=$fkiAssistantID, fkiEmployeeID=$fkiEmployeeID, fkiCompanyIDDefault=$fkiCompanyIDDefault, sCompanyNameX=$sCompanyNameX, fkiDepartmentIDDefault=$fkiDepartmentIDDefault, sDepartmentNameX=$sDepartmentNameX, fkiTimezoneID=$fkiTimezoneID, sTimezoneName=$sTimezoneName, fkiLanguageID=$fkiLanguageID, sLanguageNameX=$sLanguageNameX, objEmail=$objEmail, fkiBillingentityinternalID=$fkiBillingentityinternalID, sBillingentityinternalDescriptionX=$sBillingentityinternalDescriptionX, objPhoneHome=$objPhoneHome, objPhoneSMS=$objPhoneSMS, fkiSecretquestionID=$fkiSecretquestionID, fkiModuleIDForm=$fkiModuleIDForm, sModuleNameX=$sModuleNameX, eUserOrigin=$eUserOrigin, eUserType=$eUserType, eUserLogintype=$eUserLogintype, sUserFirstname=$sUserFirstname, sUserLastname=$sUserLastname, sUserLoginname=$sUserLoginname, sUserJobtitle=$sUserJobtitle, eUserEzsignaccess=$eUserEzsignaccess, dtUserLastlogondate=$dtUserLastlogondate, dtUserPasswordchanged=$dtUserPasswordchanged, dtUserEzsignprepaidexpiration=$dtUserEzsignprepaidexpiration, bUserIsactive=$bUserIsactive, bUserValidatebyadministration=$bUserValidatebyadministration, bUserValidatebydirector=$bUserValidatebydirector, bUserAttachmentautoverified=$bUserAttachmentautoverified, bUserChangepassword=$bUserChangepassword, objAudit=$objAudit]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -420,6 +432,11 @@ class UserResponse {
       json[r'sUserFirstname'] = this.sUserFirstname;
       json[r'sUserLastname'] = this.sUserLastname;
       json[r'sUserLoginname'] = this.sUserLoginname;
+    if (this.sUserJobtitle != null) {
+      json[r'sUserJobtitle'] = this.sUserJobtitle;
+    } else {
+      json[r'sUserJobtitle'] = null;
+    }
       json[r'eUserEzsignaccess'] = this.eUserEzsignaccess;
     if (this.dtUserLastlogondate != null) {
       json[r'dtUserLastlogondate'] = this.dtUserLastlogondate;
@@ -503,6 +520,7 @@ class UserResponse {
         sUserFirstname: mapValueOfType<String>(json, r'sUserFirstname')!,
         sUserLastname: mapValueOfType<String>(json, r'sUserLastname')!,
         sUserLoginname: mapValueOfType<String>(json, r'sUserLoginname')!,
+        sUserJobtitle: mapValueOfType<String>(json, r'sUserJobtitle'),
         eUserEzsignaccess: FieldEUserEzsignaccess.fromJson(json[r'eUserEzsignaccess'])!,
         dtUserLastlogondate: mapValueOfType<String>(json, r'dtUserLastlogondate'),
         dtUserPasswordchanged: mapValueOfType<String>(json, r'dtUserPasswordchanged'),

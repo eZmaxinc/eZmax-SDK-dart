@@ -516,8 +516,12 @@ class ApiClient {
           return CustomCommunicationsenderResponse.fromJson(value);
         case 'CustomContactNameResponse':
           return CustomContactNameResponse.fromJson(value);
+        case 'CustomCreateEzsignelementsPositionedByWordRequest':
+          return CustomCreateEzsignelementsPositionedByWordRequest.fromJson(value);
         case 'CustomCreditcardtransactionResponse':
           return CustomCreditcardtransactionResponse.fromJson(value);
+        case 'CustomDiscussionconfigurationResponse':
+          return CustomDiscussionconfigurationResponse.fromJson(value);
         case 'CustomDropdownElementRequest':
           return CustomDropdownElementRequest.fromJson(value);
         case 'CustomDropdownElementRequestCompound':
@@ -554,8 +558,12 @@ class ApiClient {
           return CustomEzsignformfielderrorResponse.fromJson(value);
         case 'CustomEzsignformfielderrortestResponse':
           return CustomEzsignformfielderrortestResponse.fromJson(value);
+        case 'CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest':
+          return CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest.fromJson(value);
         case 'CustomEzsignformfieldgroupRequest':
           return CustomEzsignformfieldgroupRequest.fromJson(value);
+        case 'CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest':
+          return CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest.fromJson(value);
         case 'CustomEzsignsignatureEzsignsignaturesAutomaticResponse':
           return CustomEzsignsignatureEzsignsignaturesAutomaticResponse.fromJson(value);
         case 'CustomEzsignsignaturestatusResponse':
@@ -592,6 +600,74 @@ class ApiClient {
           return DepartmentGetAutocompleteV2Response.fromJson(value);
         case 'DepartmentGetAutocompleteV2ResponseMPayload':
           return DepartmentGetAutocompleteV2ResponseMPayload.fromJson(value);
+        case 'DiscussionCreateObjectV1Request':
+          return DiscussionCreateObjectV1Request.fromJson(value);
+        case 'DiscussionCreateObjectV1Response':
+          return DiscussionCreateObjectV1Response.fromJson(value);
+        case 'DiscussionCreateObjectV1ResponseMPayload':
+          return DiscussionCreateObjectV1ResponseMPayload.fromJson(value);
+        case 'DiscussionDeleteObjectV1Response':
+          return DiscussionDeleteObjectV1Response.fromJson(value);
+        case 'DiscussionGetObjectV2Response':
+          return DiscussionGetObjectV2Response.fromJson(value);
+        case 'DiscussionGetObjectV2ResponseMPayload':
+          return DiscussionGetObjectV2ResponseMPayload.fromJson(value);
+        case 'DiscussionPatchObjectV1Request':
+          return DiscussionPatchObjectV1Request.fromJson(value);
+        case 'DiscussionPatchObjectV1Response':
+          return DiscussionPatchObjectV1Response.fromJson(value);
+        case 'DiscussionRequest':
+          return DiscussionRequest.fromJson(value);
+        case 'DiscussionRequestCompound':
+          return DiscussionRequestCompound.fromJson(value);
+        case 'DiscussionRequestPatch':
+          return DiscussionRequestPatch.fromJson(value);
+        case 'DiscussionResponse':
+          return DiscussionResponse.fromJson(value);
+        case 'DiscussionResponseCompound':
+          return DiscussionResponseCompound.fromJson(value);
+        case 'DiscussionUpdateDiscussionreadstatusV1Request':
+          return DiscussionUpdateDiscussionreadstatusV1Request.fromJson(value);
+        case 'DiscussionUpdateDiscussionreadstatusV1Response':
+          return DiscussionUpdateDiscussionreadstatusV1Response.fromJson(value);
+        case 'DiscussionmembershipCreateObjectV1Request':
+          return DiscussionmembershipCreateObjectV1Request.fromJson(value);
+        case 'DiscussionmembershipCreateObjectV1Response':
+          return DiscussionmembershipCreateObjectV1Response.fromJson(value);
+        case 'DiscussionmembershipCreateObjectV1ResponseMPayload':
+          return DiscussionmembershipCreateObjectV1ResponseMPayload.fromJson(value);
+        case 'DiscussionmembershipDeleteObjectV1Response':
+          return DiscussionmembershipDeleteObjectV1Response.fromJson(value);
+        case 'DiscussionmembershipRequest':
+          return DiscussionmembershipRequest.fromJson(value);
+        case 'DiscussionmembershipRequestCompound':
+          return DiscussionmembershipRequestCompound.fromJson(value);
+        case 'DiscussionmembershipResponse':
+          return DiscussionmembershipResponse.fromJson(value);
+        case 'DiscussionmembershipResponseCompound':
+          return DiscussionmembershipResponseCompound.fromJson(value);
+        case 'DiscussionmessageCreateObjectV1Request':
+          return DiscussionmessageCreateObjectV1Request.fromJson(value);
+        case 'DiscussionmessageCreateObjectV1Response':
+          return DiscussionmessageCreateObjectV1Response.fromJson(value);
+        case 'DiscussionmessageCreateObjectV1ResponseMPayload':
+          return DiscussionmessageCreateObjectV1ResponseMPayload.fromJson(value);
+        case 'DiscussionmessageDeleteObjectV1Response':
+          return DiscussionmessageDeleteObjectV1Response.fromJson(value);
+        case 'DiscussionmessagePatchObjectV1Request':
+          return DiscussionmessagePatchObjectV1Request.fromJson(value);
+        case 'DiscussionmessagePatchObjectV1Response':
+          return DiscussionmessagePatchObjectV1Response.fromJson(value);
+        case 'DiscussionmessageRequest':
+          return DiscussionmessageRequest.fromJson(value);
+        case 'DiscussionmessageRequestCompound':
+          return DiscussionmessageRequestCompound.fromJson(value);
+        case 'DiscussionmessageRequestPatch':
+          return DiscussionmessageRequestPatch.fromJson(value);
+        case 'DiscussionmessageResponse':
+          return DiscussionmessageResponse.fromJson(value);
+        case 'DiscussionmessageResponseCompound':
+          return DiscussionmessageResponseCompound.fromJson(value);
         case 'ElectronicfundstransferGetCommunicationListV1Response':
           return ElectronicfundstransferGetCommunicationListV1Response.fromJson(value);
         case 'ElectronicfundstransferGetCommunicationListV1ResponseMPayload':
@@ -800,6 +876,26 @@ class ApiClient {
           return EzsignbulksendtransmissionResponse.fromJson(value);
         case 'EzsignbulksendtransmissionResponseCompound':
           return EzsignbulksendtransmissionResponseCompound.fromJson(value);
+        case 'EzsigndiscussionCreateObjectV1Request':
+          return EzsigndiscussionCreateObjectV1Request.fromJson(value);
+        case 'EzsigndiscussionCreateObjectV1Response':
+          return EzsigndiscussionCreateObjectV1Response.fromJson(value);
+        case 'EzsigndiscussionCreateObjectV1ResponseMPayload':
+          return EzsigndiscussionCreateObjectV1ResponseMPayload.fromJson(value);
+        case 'EzsigndiscussionDeleteObjectV1Response':
+          return EzsigndiscussionDeleteObjectV1Response.fromJson(value);
+        case 'EzsigndiscussionGetObjectV2Response':
+          return EzsigndiscussionGetObjectV2Response.fromJson(value);
+        case 'EzsigndiscussionGetObjectV2ResponseMPayload':
+          return EzsigndiscussionGetObjectV2ResponseMPayload.fromJson(value);
+        case 'EzsigndiscussionRequest':
+          return EzsigndiscussionRequest.fromJson(value);
+        case 'EzsigndiscussionRequestCompound':
+          return EzsigndiscussionRequestCompound.fromJson(value);
+        case 'EzsigndiscussionResponse':
+          return EzsigndiscussionResponse.fromJson(value);
+        case 'EzsigndiscussionResponseCompound':
+          return EzsigndiscussionResponseCompound.fromJson(value);
         case 'EzsigndocumentApplyEzsigntemplateV1Request':
           return EzsigndocumentApplyEzsigntemplateV1Request.fromJson(value);
         case 'EzsigndocumentApplyEzsigntemplateV1Response':
@@ -808,6 +904,12 @@ class ApiClient {
           return EzsigndocumentApplyEzsigntemplateV2Request.fromJson(value);
         case 'EzsigndocumentApplyEzsigntemplateV2Response':
           return EzsigndocumentApplyEzsigntemplateV2Response.fromJson(value);
+        case 'EzsigndocumentCreateEzsignelementsPositionedByWordV1Request':
+          return EzsigndocumentCreateEzsignelementsPositionedByWordV1Request.fromJson(value);
+        case 'EzsigndocumentCreateEzsignelementsPositionedByWordV1Response':
+          return EzsigndocumentCreateEzsignelementsPositionedByWordV1Response.fromJson(value);
+        case 'EzsigndocumentCreateEzsignelementsPositionedByWordV1ResponseMPayload':
+          return EzsigndocumentCreateEzsignelementsPositionedByWordV1ResponseMPayload.fromJson(value);
         case 'EzsigndocumentCreateObjectV1Request':
           return EzsigndocumentCreateObjectV1Request.fromJson(value);
         case 'EzsigndocumentCreateObjectV1Response':
@@ -862,6 +964,10 @@ class ApiClient {
           return EzsigndocumentGetEzsignannotationsV1Response.fromJson(value);
         case 'EzsigndocumentGetEzsignannotationsV1ResponseMPayload':
           return EzsigndocumentGetEzsignannotationsV1ResponseMPayload.fromJson(value);
+        case 'EzsigndocumentGetEzsigndiscussionsV1Response':
+          return EzsigndocumentGetEzsigndiscussionsV1Response.fromJson(value);
+        case 'EzsigndocumentGetEzsigndiscussionsV1ResponseMPayload':
+          return EzsigndocumentGetEzsigndiscussionsV1ResponseMPayload.fromJson(value);
         case 'EzsigndocumentGetEzsignformfieldgroupsV1Response':
           return EzsigndocumentGetEzsignformfieldgroupsV1Response.fromJson(value);
         case 'EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload':
@@ -1690,6 +1796,8 @@ class ApiClient {
           return FieldECommunicationrecipientTypeTypeTransformer().decode(value);
         case 'FieldECreditcardtypeCodename':
           return FieldECreditcardtypeCodenameTypeTransformer().decode(value);
+        case 'FieldEDiscussionmessageStatus':
+          return FieldEDiscussionmessageStatusTypeTransformer().decode(value);
         case 'FieldEErrorCode':
           return FieldEErrorCodeTypeTransformer().decode(value);
         case 'FieldEEzmaxinvoicingPaymenttype':
@@ -1712,10 +1820,14 @@ class ApiClient {
           return FieldEEzsignelementdependencyOperatorTypeTransformer().decode(value);
         case 'FieldEEzsignelementdependencyValidation':
           return FieldEEzsignelementdependencyValidationTypeTransformer().decode(value);
+        case 'FieldEEzsignfolderCompletion':
+          return FieldEEzsignfolderCompletionTypeTransformer().decode(value);
         case 'FieldEEzsignfolderSendreminderfrequency':
           return FieldEEzsignfolderSendreminderfrequencyTypeTransformer().decode(value);
         case 'FieldEEzsignfolderStep':
           return FieldEEzsignfolderStepTypeTransformer().decode(value);
+        case 'FieldEEzsignfoldertypeCompletion':
+          return FieldEEzsignfoldertypeCompletionTypeTransformer().decode(value);
         case 'FieldEEzsignfoldertypeDisposal':
           return FieldEEzsignfoldertypeDisposalTypeTransformer().decode(value);
         case 'FieldEEzsignfoldertypePrivacylevel':
@@ -1746,6 +1858,10 @@ class ApiClient {
           return FieldEEzsigntemplateelementdependencyValidationTypeTransformer().decode(value);
         case 'FieldEEzsigntemplateformfieldDependencyrequirement':
           return FieldEEzsigntemplateformfieldDependencyrequirementTypeTransformer().decode(value);
+        case 'FieldEEzsigntemplateformfieldPositioning':
+          return FieldEEzsigntemplateformfieldPositioningTypeTransformer().decode(value);
+        case 'FieldEEzsigntemplateformfieldPositioningoccurence':
+          return FieldEEzsigntemplateformfieldPositioningoccurenceTypeTransformer().decode(value);
         case 'FieldEEzsigntemplateformfieldgroupSignerrequirement':
           return FieldEEzsigntemplateformfieldgroupSignerrequirementTypeTransformer().decode(value);
         case 'FieldEEzsigntemplateformfieldgroupTooltipposition':
@@ -1758,6 +1874,10 @@ class ApiClient {
           return FieldEEzsigntemplatesignatureDependencyrequirementTypeTransformer().decode(value);
         case 'FieldEEzsigntemplatesignatureFont':
           return FieldEEzsigntemplatesignatureFontTypeTransformer().decode(value);
+        case 'FieldEEzsigntemplatesignaturePositioning':
+          return FieldEEzsigntemplatesignaturePositioningTypeTransformer().decode(value);
+        case 'FieldEEzsigntemplatesignaturePositioningoccurence':
+          return FieldEEzsigntemplatesignaturePositioningoccurenceTypeTransformer().decode(value);
         case 'FieldEEzsigntemplatesignatureTooltipposition':
           return FieldEEzsigntemplatesignatureTooltippositionTypeTransformer().decode(value);
         case 'FieldEEzsigntemplatesignatureType':

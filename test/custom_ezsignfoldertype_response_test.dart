@@ -70,6 +70,18 @@ void main() {
       // TODO
     });
 
+    // Wheter if Reassignment of signature is allowed by a signatory to another signatory or not
+    // bool bEzsignfoldertypeReassignezsignsigner
+    test('to test the property `bEzsignfoldertypeReassignezsignsigner`', () async {
+      // TODO
+    });
+
+    // Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not
+    // bool bEzsignfoldertypeReassignuser
+    test('to test the property `bEzsignfoldertypeReassignuser`', () async {
+      // TODO
+    });
+
 
   });
 
