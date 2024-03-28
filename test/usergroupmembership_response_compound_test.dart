@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -34,6 +34,12 @@ void main() {
       // TODO
     });
 
+    // The unique ID of the Usergroupexternal
+    // int fkiUsergroupexternalID
+    test('to test the property `fkiUsergroupexternalID`', () async {
+      // TODO
+    });
+
     // The first name of the user
     // String sUserFirstname
     test('to test the property `sUserFirstname`', () async {
@@ -61,6 +67,12 @@ void main() {
     // The Name of the Usergroup in the language of the requester
     // String sUsergroupNameX
     test('to test the property `sUsergroupNameX`', () async {
+      // TODO
+    });
+
+    // The name of the Usergroupexternal
+    // String sUsergroupexternalName
+    test('to test the property `sUsergroupexternalName`', () async {
       // TODO
     });
 

@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -15,7 +15,8 @@ class UsergroupmembershipRequestCompound {
   UsergroupmembershipRequestCompound({
     this.pkiUsergroupmembershipID,
     required this.fkiUsergroupID,
-    required this.fkiUserID,
+    this.fkiUserID,
+    this.fkiUsergroupexternalID,
   });
 
   /// The unique ID of the Usergroupmembership
@@ -39,23 +40,43 @@ class UsergroupmembershipRequestCompound {
   /// The unique ID of the User
   ///
   /// Minimum value: 0
-  int fkiUserID;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiUserID;
+
+  /// The unique ID of the Usergroupexternal
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 255
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiUsergroupexternalID;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is UsergroupmembershipRequestCompound &&
     other.pkiUsergroupmembershipID == pkiUsergroupmembershipID &&
     other.fkiUsergroupID == fkiUsergroupID &&
-    other.fkiUserID == fkiUserID;
+    other.fkiUserID == fkiUserID &&
+    other.fkiUsergroupexternalID == fkiUsergroupexternalID;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiUsergroupmembershipID == null ? 0 : pkiUsergroupmembershipID!.hashCode) +
     (fkiUsergroupID.hashCode) +
-    (fkiUserID.hashCode);
+    (fkiUserID == null ? 0 : fkiUserID!.hashCode) +
+    (fkiUsergroupexternalID == null ? 0 : fkiUsergroupexternalID!.hashCode);
 
   @override
-  String toString() => 'UsergroupmembershipRequestCompound[pkiUsergroupmembershipID=$pkiUsergroupmembershipID, fkiUsergroupID=$fkiUsergroupID, fkiUserID=$fkiUserID]';
+  String toString() => 'UsergroupmembershipRequestCompound[pkiUsergroupmembershipID=$pkiUsergroupmembershipID, fkiUsergroupID=$fkiUsergroupID, fkiUserID=$fkiUserID, fkiUsergroupexternalID=$fkiUsergroupexternalID]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -65,7 +86,16 @@ class UsergroupmembershipRequestCompound {
       json[r'pkiUsergroupmembershipID'] = null;
     }
       json[r'fkiUsergroupID'] = this.fkiUsergroupID;
+    if (this.fkiUserID != null) {
       json[r'fkiUserID'] = this.fkiUserID;
+    } else {
+      json[r'fkiUserID'] = null;
+    }
+    if (this.fkiUsergroupexternalID != null) {
+      json[r'fkiUsergroupexternalID'] = this.fkiUsergroupexternalID;
+    } else {
+      json[r'fkiUsergroupexternalID'] = null;
+    }
     return json;
   }
 
@@ -90,7 +120,8 @@ class UsergroupmembershipRequestCompound {
       return UsergroupmembershipRequestCompound(
         pkiUsergroupmembershipID: mapValueOfType<int>(json, r'pkiUsergroupmembershipID'),
         fkiUsergroupID: mapValueOfType<int>(json, r'fkiUsergroupID')!,
-        fkiUserID: mapValueOfType<int>(json, r'fkiUserID')!,
+        fkiUserID: mapValueOfType<int>(json, r'fkiUserID'),
+        fkiUsergroupexternalID: mapValueOfType<int>(json, r'fkiUsergroupexternalID'),
       );
     }
     return null;
@@ -139,7 +170,6 @@ class UsergroupmembershipRequestCompound {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'fkiUsergroupID',
-    'fkiUserID',
   };
 }
 

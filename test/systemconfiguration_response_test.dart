@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -54,9 +54,26 @@ void main() {
       // TODO
     });
 
+    // FieldESystemconfigurationEzsignofficeplan eSystemconfigurationEzsignofficeplan
+    test('to test the property `eSystemconfigurationEzsignofficeplan`', () async {
+      // TODO
+    });
+
+    // Whether if Ezsign is paid by the company or not
+    // bool bSystemconfigurationEzsignpaidbyoffice
+    test('to test the property `bSystemconfigurationEzsignpaidbyoffice`', () async {
+      // TODO
+    });
+
     // Whether if we allow the creation of personal files in eZsign
     // bool bSystemconfigurationEzsignpersonnal
     test('to test the property `bSystemconfigurationEzsignpersonnal`', () async {
+      // TODO
+    });
+
+    // Whether is Disposal processus is active or not
+    // bool bSystemconfigurationIsdisposalactive
+    test('to test the property `bSystemconfigurationIsdisposalactive`', () async {
       // TODO
     });
 

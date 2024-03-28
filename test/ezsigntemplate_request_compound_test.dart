@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -37,6 +37,12 @@ void main() {
     // The description of the Ezsigntemplate
     // String sEzsigntemplateDescription
     test('to test the property `sEzsigntemplateDescription`', () async {
+      // TODO
+    });
+
+    // The filename pattern of the Ezsigntemplate
+    // String sEzsigntemplateFilenamepattern
+    test('to test the property `sEzsigntemplateFilenamepattern`', () async {
       // TODO
     });
 

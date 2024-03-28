@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -76,6 +76,17 @@ void main() {
     // The unique ID of the Signature
     // int fkiSignatureID
     test('to test the property `fkiSignatureID`', () async {
+      // TODO
+    });
+
+    // Whether if Ezsign is paid by the company or not
+    // bool bSystemconfigurationEzsignpaidbyoffice
+    test('to test the property `bSystemconfigurationEzsignpaidbyoffice`', () async {
+      // TODO
+    });
+
+    // FieldESystemconfigurationEzsignofficeplan eSystemconfigurationEzsignofficeplan
+    test('to test the property `eSystemconfigurationEzsignofficeplan`', () async {
       // TODO
     });
 

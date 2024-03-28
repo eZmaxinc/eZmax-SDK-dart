@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -61,6 +61,18 @@ void main() {
     // The Postal/Zip Code  The value must be entered without spaces
     // String sAddressZip
     test('to test the property `sAddressZip`', () async {
+      // TODO
+    });
+
+    // The Longitude of the Address
+    // String fAddressLongitude
+    test('to test the property `fAddressLongitude`', () async {
+      // TODO
+    });
+
+    // The Latitude of the Address
+    // String fAddressLatitude
+    test('to test the property `fAddressLatitude`', () async {
       // TODO
     });
 

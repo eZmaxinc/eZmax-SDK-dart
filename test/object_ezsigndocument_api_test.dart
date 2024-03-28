@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -32,6 +32,15 @@ void main() {
     //
     //Future<EzsigndocumentApplyEzsigntemplateV2Response> ezsigndocumentApplyEzsigntemplateV2(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV2Request ezsigndocumentApplyEzsigntemplateV2Request) async
     test('test ezsigndocumentApplyEzsigntemplateV2', () async {
+      // TODO
+    });
+
+    // Apply an Ezsigntemplateglobal to the Ezsigndocument.
+    //
+    // This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+    //
+    //Future<EzsigndocumentApplyEzsigntemplateglobalV1Response> ezsigndocumentApplyEzsigntemplateglobalV1(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateglobalV1Request ezsigndocumentApplyEzsigntemplateglobalV1Request) async
+    test('test ezsigndocumentApplyEzsigntemplateglobalV1', () async {
       // TODO
     });
 

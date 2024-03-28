@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -99,6 +99,17 @@ void main() {
 
     // CommonAudit objAudit
     test('to test the property `objAudit`', () async {
+      // TODO
+    });
+
+    // The concatenated string to describe the Webhook event
+    // String sWebhookEvent
+    test('to test the property `sWebhookEvent`', () async {
+      // TODO
+    });
+
+    // List<WebhookheaderResponseCompound> aObjWebhookheader (default value: const [])
+    test('to test the property `aObjWebhookheader`', () async {
       // TODO
     });
 

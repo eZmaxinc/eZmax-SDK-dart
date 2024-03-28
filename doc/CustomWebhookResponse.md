@@ -23,6 +23,8 @@ Name | Type | Description | Notes
 **bWebhookIssigned** | **bool** | Whether the requests will be signed or not | 
 **bWebhookSkipsslvalidation** | **bool** | Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use | 
 **objAudit** | [**CommonAudit**](CommonAudit.md) |  | 
+**sWebhookEvent** | **String** | The concatenated string to describe the Webhook event | [optional] 
+**aObjWebhookheader** | [**List<WebhookheaderResponseCompound>**](WebhookheaderResponseCompound.md) |  | [optional] [default to const []]
 **pksCustomerCode** | **String** | The customer code assigned to your account | 
 **bWebhookTest** | **bool** | Wheter the webhook received is a manual test or a real event | 
 

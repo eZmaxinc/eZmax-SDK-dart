@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -103,6 +103,9 @@ String parameterToString(dynamic value) {
   if (value is FieldEBrandingLogo) {
     return FieldEBrandingLogoTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEBrandingLogointerface) {
+    return FieldEBrandingLogointerfaceTypeTransformer().encode(value).toString();
+  }
   if (value is FieldECommunicationImportance) {
     return FieldECommunicationImportanceTypeTransformer().encode(value).toString();
   }
@@ -202,6 +205,9 @@ String parameterToString(dynamic value) {
   if (value is FieldEEzsignsignatureType) {
     return FieldEEzsignsignatureTypeTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEEzsigntemplateType) {
+    return FieldEEzsigntemplateTypeTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEEzsigntemplateelementdependencyOperator) {
     return FieldEEzsigntemplateelementdependencyOperatorTypeTransformer().encode(value).toString();
   }
@@ -225,6 +231,12 @@ String parameterToString(dynamic value) {
   }
   if (value is FieldEEzsigntemplateformfieldgroupType) {
     return FieldEEzsigntemplateformfieldgroupTypeTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsigntemplateglobalModule) {
+    return FieldEEzsigntemplateglobalModuleTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsigntemplateglobalSupplier) {
+    return FieldEEzsigntemplateglobalSupplierTypeTransformer().encode(value).toString();
   }
   if (value is FieldEEzsigntemplatesignatureAttachmentnamesource) {
     return FieldEEzsigntemplatesignatureAttachmentnamesourceTypeTransformer().encode(value).toString();
@@ -261,6 +273,9 @@ String parameterToString(dynamic value) {
   }
   if (value is FieldESystemconfigurationEzsign) {
     return FieldESystemconfigurationEzsignTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldESystemconfigurationEzsignofficeplan) {
+    return FieldESystemconfigurationEzsignofficeplanTypeTransformer().encode(value).toString();
   }
   if (value is FieldESystemconfigurationLanguage1) {
     return FieldESystemconfigurationLanguage1TypeTransformer().encode(value).toString();

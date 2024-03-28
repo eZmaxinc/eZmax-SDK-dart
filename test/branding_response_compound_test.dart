@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -56,6 +56,11 @@ void main() {
       // TODO
     });
 
+    // FieldEBrandingLogointerface eBrandingLogointerface
+    test('to test the property `eBrandingLogointerface`', () async {
+      // TODO
+    });
+
     // The color of the text. This is a RGB color converted into integer
     // int iBrandingColortext
     test('to test the property `iBrandingColortext`', () async {
@@ -92,6 +97,12 @@ void main() {
       // TODO
     });
 
+    // The color of the interface. This is a RGB color converted into integer
+    // int iBrandingInterfacecolor
+    test('to test the property `iBrandingInterfacecolor`', () async {
+      // TODO
+    });
+
     // Whether the Branding is active or not
     // bool bBrandingIsactive
     test('to test the property `bBrandingIsactive`', () async {
@@ -101,6 +112,12 @@ void main() {
     // The url of the picture used as logo in the Branding
     // String sBrandingLogourl
     test('to test the property `sBrandingLogourl`', () async {
+      // TODO
+    });
+
+    // The url of the picture used as logo in the Branding
+    // String sBrandingLogointerfaceurl
+    test('to test the property `sBrandingLogointerfaceurl`', () async {
       // TODO
     });
 

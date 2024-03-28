@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -16,7 +16,7 @@ class CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest {
     this.pkiEzsignformfieldgroupID,
     required this.fkiEzsigndocumentID,
     required this.eEzsignformfieldgroupType,
-    required this.eEzsignformfieldgroupSignerrequirement,
+    this.eEzsignformfieldgroupSignerrequirement,
     required this.sEzsignformfieldgroupLabel,
     required this.iEzsignformfieldgroupStep,
     this.sEzsignformfieldgroupDefaultvalue,
@@ -53,7 +53,13 @@ class CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest {
 
   FieldEEzsignformfieldgroupType eEzsignformfieldgroupType;
 
-  FieldEEzsignformfieldgroupSignerrequirement eEzsignformfieldgroupSignerrequirement;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEEzsignformfieldgroupSignerrequirement? eEzsignformfieldgroupSignerrequirement;
 
   /// The Label for the Ezsignformfieldgroup
   String sEzsignformfieldgroupLabel;
@@ -63,7 +69,7 @@ class CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest {
   /// Minimum value: 1
   int iEzsignformfieldgroupStep;
 
-  /// The default value for the Ezsignformfieldgroup
+  /// The default value for the Ezsignformfieldgroup  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -177,7 +183,7 @@ class CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest {
     (pkiEzsignformfieldgroupID == null ? 0 : pkiEzsignformfieldgroupID!.hashCode) +
     (fkiEzsigndocumentID.hashCode) +
     (eEzsignformfieldgroupType.hashCode) +
-    (eEzsignformfieldgroupSignerrequirement.hashCode) +
+    (eEzsignformfieldgroupSignerrequirement == null ? 0 : eEzsignformfieldgroupSignerrequirement!.hashCode) +
     (sEzsignformfieldgroupLabel.hashCode) +
     (iEzsignformfieldgroupStep.hashCode) +
     (sEzsignformfieldgroupDefaultvalue == null ? 0 : sEzsignformfieldgroupDefaultvalue!.hashCode) +
@@ -207,7 +213,11 @@ class CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest {
     }
       json[r'fkiEzsigndocumentID'] = this.fkiEzsigndocumentID;
       json[r'eEzsignformfieldgroupType'] = this.eEzsignformfieldgroupType;
+    if (this.eEzsignformfieldgroupSignerrequirement != null) {
       json[r'eEzsignformfieldgroupSignerrequirement'] = this.eEzsignformfieldgroupSignerrequirement;
+    } else {
+      json[r'eEzsignformfieldgroupSignerrequirement'] = null;
+    }
       json[r'sEzsignformfieldgroupLabel'] = this.sEzsignformfieldgroupLabel;
       json[r'iEzsignformfieldgroupStep'] = this.iEzsignformfieldgroupStep;
     if (this.sEzsignformfieldgroupDefaultvalue != null) {
@@ -277,7 +287,7 @@ class CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest {
         pkiEzsignformfieldgroupID: mapValueOfType<int>(json, r'pkiEzsignformfieldgroupID'),
         fkiEzsigndocumentID: mapValueOfType<int>(json, r'fkiEzsigndocumentID')!,
         eEzsignformfieldgroupType: FieldEEzsignformfieldgroupType.fromJson(json[r'eEzsignformfieldgroupType'])!,
-        eEzsignformfieldgroupSignerrequirement: FieldEEzsignformfieldgroupSignerrequirement.fromJson(json[r'eEzsignformfieldgroupSignerrequirement'])!,
+        eEzsignformfieldgroupSignerrequirement: FieldEEzsignformfieldgroupSignerrequirement.fromJson(json[r'eEzsignformfieldgroupSignerrequirement']),
         sEzsignformfieldgroupLabel: mapValueOfType<String>(json, r'sEzsignformfieldgroupLabel')!,
         iEzsignformfieldgroupStep: mapValueOfType<int>(json, r'iEzsignformfieldgroupStep')!,
         sEzsignformfieldgroupDefaultvalue: mapValueOfType<String>(json, r'sEzsignformfieldgroupDefaultvalue'),
@@ -343,7 +353,6 @@ class CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest {
   static const requiredKeys = <String>{
     'fkiEzsigndocumentID',
     'eEzsignformfieldgroupType',
-    'eEzsignformfieldgroupSignerrequirement',
     'sEzsignformfieldgroupLabel',
     'iEzsignformfieldgroupStep',
     'iEzsignformfieldgroupFilledmin',

@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -35,6 +35,7 @@ class EzsigndocumentResponse {
     this.objAudit,
     this.sEzsigndocumentExternalid,
     required this.iEzsigndocumentEzsignsignatureattachmenttotal,
+    required this.iEzsigndocumentEzsigndiscussiontotal,
   });
 
   /// The unique ID of the Ezsigndocument
@@ -192,6 +193,9 @@ class EzsigndocumentResponse {
   /// Minimum value: 0
   int iEzsigndocumentEzsignsignatureattachmenttotal;
 
+  /// The total number of Ezsigndiscussions
+  int iEzsigndocumentEzsigndiscussiontotal;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigndocumentResponse &&
     other.pkiEzsigndocumentID == pkiEzsigndocumentID &&
@@ -215,7 +219,8 @@ class EzsigndocumentResponse {
     other.bEzsigndocumentHassignedsignatures == bEzsigndocumentHassignedsignatures &&
     other.objAudit == objAudit &&
     other.sEzsigndocumentExternalid == sEzsigndocumentExternalid &&
-    other.iEzsigndocumentEzsignsignatureattachmenttotal == iEzsigndocumentEzsignsignatureattachmenttotal;
+    other.iEzsigndocumentEzsignsignatureattachmenttotal == iEzsigndocumentEzsignsignatureattachmenttotal &&
+    other.iEzsigndocumentEzsigndiscussiontotal == iEzsigndocumentEzsigndiscussiontotal;
 
   @override
   int get hashCode =>
@@ -241,10 +246,11 @@ class EzsigndocumentResponse {
     (bEzsigndocumentHassignedsignatures == null ? 0 : bEzsigndocumentHassignedsignatures!.hashCode) +
     (objAudit == null ? 0 : objAudit!.hashCode) +
     (sEzsigndocumentExternalid == null ? 0 : sEzsigndocumentExternalid!.hashCode) +
-    (iEzsigndocumentEzsignsignatureattachmenttotal.hashCode);
+    (iEzsigndocumentEzsignsignatureattachmenttotal.hashCode) +
+    (iEzsigndocumentEzsigndiscussiontotal.hashCode);
 
   @override
-  String toString() => 'EzsigndocumentResponse[pkiEzsigndocumentID=$pkiEzsigndocumentID, fkiEzsignfolderID=$fkiEzsignfolderID, fkiEzsignfoldersignerassociationIDDeclinedtosign=$fkiEzsignfoldersignerassociationIDDeclinedtosign, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, dtEzsignformCompleted=$dtEzsignformCompleted, fkiLanguageID=$fkiLanguageID, sEzsigndocumentName=$sEzsigndocumentName, eEzsigndocumentStep=$eEzsigndocumentStep, dtEzsigndocumentFirstsend=$dtEzsigndocumentFirstsend, dtEzsigndocumentLastsend=$dtEzsigndocumentLastsend, iEzsigndocumentOrder=$iEzsigndocumentOrder, iEzsigndocumentPagetotal=$iEzsigndocumentPagetotal, iEzsigndocumentSignaturesigned=$iEzsigndocumentSignaturesigned, iEzsigndocumentSignaturetotal=$iEzsigndocumentSignaturetotal, sEzsigndocumentMD5initial=$sEzsigndocumentMD5initial, tEzsigndocumentDeclinedtosignreason=$tEzsigndocumentDeclinedtosignreason, sEzsigndocumentMD5signed=$sEzsigndocumentMD5signed, bEzsigndocumentEzsignform=$bEzsigndocumentEzsignform, bEzsigndocumentHassignedsignatures=$bEzsigndocumentHassignedsignatures, objAudit=$objAudit, sEzsigndocumentExternalid=$sEzsigndocumentExternalid, iEzsigndocumentEzsignsignatureattachmenttotal=$iEzsigndocumentEzsignsignatureattachmenttotal]';
+  String toString() => 'EzsigndocumentResponse[pkiEzsigndocumentID=$pkiEzsigndocumentID, fkiEzsignfolderID=$fkiEzsignfolderID, fkiEzsignfoldersignerassociationIDDeclinedtosign=$fkiEzsignfoldersignerassociationIDDeclinedtosign, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, dtEzsignformCompleted=$dtEzsignformCompleted, fkiLanguageID=$fkiLanguageID, sEzsigndocumentName=$sEzsigndocumentName, eEzsigndocumentStep=$eEzsigndocumentStep, dtEzsigndocumentFirstsend=$dtEzsigndocumentFirstsend, dtEzsigndocumentLastsend=$dtEzsigndocumentLastsend, iEzsigndocumentOrder=$iEzsigndocumentOrder, iEzsigndocumentPagetotal=$iEzsigndocumentPagetotal, iEzsigndocumentSignaturesigned=$iEzsigndocumentSignaturesigned, iEzsigndocumentSignaturetotal=$iEzsigndocumentSignaturetotal, sEzsigndocumentMD5initial=$sEzsigndocumentMD5initial, tEzsigndocumentDeclinedtosignreason=$tEzsigndocumentDeclinedtosignreason, sEzsigndocumentMD5signed=$sEzsigndocumentMD5signed, bEzsigndocumentEzsignform=$bEzsigndocumentEzsignform, bEzsigndocumentHassignedsignatures=$bEzsigndocumentHassignedsignatures, objAudit=$objAudit, sEzsigndocumentExternalid=$sEzsigndocumentExternalid, iEzsigndocumentEzsignsignatureattachmenttotal=$iEzsigndocumentEzsignsignatureattachmenttotal, iEzsigndocumentEzsigndiscussiontotal=$iEzsigndocumentEzsigndiscussiontotal]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -318,6 +324,7 @@ class EzsigndocumentResponse {
       json[r'sEzsigndocumentExternalid'] = null;
     }
       json[r'iEzsigndocumentEzsignsignatureattachmenttotal'] = this.iEzsigndocumentEzsignsignatureattachmenttotal;
+      json[r'iEzsigndocumentEzsigndiscussiontotal'] = this.iEzsigndocumentEzsigndiscussiontotal;
     return json;
   }
 
@@ -362,6 +369,7 @@ class EzsigndocumentResponse {
         objAudit: CommonAudit.fromJson(json[r'objAudit']),
         sEzsigndocumentExternalid: mapValueOfType<String>(json, r'sEzsigndocumentExternalid'),
         iEzsigndocumentEzsignsignatureattachmenttotal: mapValueOfType<int>(json, r'iEzsigndocumentEzsignsignatureattachmenttotal')!,
+        iEzsigndocumentEzsigndiscussiontotal: mapValueOfType<int>(json, r'iEzsigndocumentEzsigndiscussiontotal')!,
       );
     }
     return null;
@@ -419,6 +427,7 @@ class EzsigndocumentResponse {
     'iEzsigndocumentSignaturesigned',
     'iEzsigndocumentSignaturetotal',
     'iEzsigndocumentEzsignsignatureattachmenttotal',
+    'iEzsigndocumentEzsigndiscussiontotal',
   };
 }
 

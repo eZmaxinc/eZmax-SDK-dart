@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -133,6 +133,62 @@ class ObjectEzsigntemplateApi {
     return null;
   }
 
+  /// Create a new Ezsigntemplate
+  ///
+  /// The endpoint allows to create one or many elements at once.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [EzsigntemplateCreateObjectV2Request] ezsigntemplateCreateObjectV2Request (required):
+  Future<Response> ezsigntemplateCreateObjectV2WithHttpInfo(EzsigntemplateCreateObjectV2Request ezsigntemplateCreateObjectV2Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/2/object/ezsigntemplate';
+
+    // ignore: prefer_final_locals
+    Object? postBody = ezsigntemplateCreateObjectV2Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Create a new Ezsigntemplate
+  ///
+  /// The endpoint allows to create one or many elements at once.
+  ///
+  /// Parameters:
+  ///
+  /// * [EzsigntemplateCreateObjectV2Request] ezsigntemplateCreateObjectV2Request (required):
+  Future<EzsigntemplateCreateObjectV2Response?> ezsigntemplateCreateObjectV2(EzsigntemplateCreateObjectV2Request ezsigntemplateCreateObjectV2Request,) async {
+    final response = await ezsigntemplateCreateObjectV2WithHttpInfo(ezsigntemplateCreateObjectV2Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigntemplateCreateObjectV2Response',) as EzsigntemplateCreateObjectV2Response;
+    
+    }
+    return null;
+  }
+
   /// Delete an existing Ezsigntemplate
   ///
   /// 
@@ -246,6 +302,67 @@ class ObjectEzsigntemplateApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigntemplateEditObjectV1Response',) as EzsigntemplateEditObjectV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Edit an existing Ezsigntemplate
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigntemplateID (required):
+  ///
+  /// * [EzsigntemplateEditObjectV2Request] ezsigntemplateEditObjectV2Request (required):
+  Future<Response> ezsigntemplateEditObjectV2WithHttpInfo(int pkiEzsigntemplateID, EzsigntemplateEditObjectV2Request ezsigntemplateEditObjectV2Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/2/object/ezsigntemplate/{pkiEzsigntemplateID}'
+      .replaceAll('{pkiEzsigntemplateID}', pkiEzsigntemplateID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = ezsigntemplateEditObjectV2Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'PUT',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Edit an existing Ezsigntemplate
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigntemplateID (required):
+  ///
+  /// * [EzsigntemplateEditObjectV2Request] ezsigntemplateEditObjectV2Request (required):
+  Future<EzsigntemplateEditObjectV2Response?> ezsigntemplateEditObjectV2(int pkiEzsigntemplateID, EzsigntemplateEditObjectV2Request ezsigntemplateEditObjectV2Request,) async {
+    final response = await ezsigntemplateEditObjectV2WithHttpInfo(pkiEzsigntemplateID, ezsigntemplateEditObjectV2Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigntemplateEditObjectV2Response',) as EzsigntemplateEditObjectV2Response;
     
     }
     return null;

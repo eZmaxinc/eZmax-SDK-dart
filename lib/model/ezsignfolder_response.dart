@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -16,7 +16,7 @@ class EzsignfolderResponse {
     required this.pkiEzsignfolderID,
     this.fkiEzsignfoldertypeID,
     this.objEzsignfoldertype,
-    this.eEzsignfolderCompletion,
+    required this.eEzsignfolderCompletion,
     this.sEzsignfoldertypeNameX,
     this.fkiBillingentityinternalID,
     this.sBillingentityinternalDescriptionX,
@@ -46,6 +46,7 @@ class EzsignfolderResponse {
   /// The unique ID of the Ezsignfoldertype.
   ///
   /// Minimum value: 0
+  /// Maximum value: 65535
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -62,13 +63,7 @@ class EzsignfolderResponse {
   ///
   CustomEzsignfoldertypeResponse? objEzsignfoldertype;
 
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  FieldEEzsignfolderCompletion? eEzsignfolderCompletion;
+  FieldEEzsignfolderCompletion eEzsignfolderCompletion;
 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -268,7 +263,7 @@ class EzsignfolderResponse {
     (pkiEzsignfolderID.hashCode) +
     (fkiEzsignfoldertypeID == null ? 0 : fkiEzsignfoldertypeID!.hashCode) +
     (objEzsignfoldertype == null ? 0 : objEzsignfoldertype!.hashCode) +
-    (eEzsignfolderCompletion == null ? 0 : eEzsignfolderCompletion!.hashCode) +
+    (eEzsignfolderCompletion.hashCode) +
     (sEzsignfoldertypeNameX == null ? 0 : sEzsignfoldertypeNameX!.hashCode) +
     (fkiBillingentityinternalID == null ? 0 : fkiBillingentityinternalID!.hashCode) +
     (sBillingentityinternalDescriptionX == null ? 0 : sBillingentityinternalDescriptionX!.hashCode) +
@@ -305,11 +300,7 @@ class EzsignfolderResponse {
     } else {
       json[r'objEzsignfoldertype'] = null;
     }
-    if (this.eEzsignfolderCompletion != null) {
       json[r'eEzsignfolderCompletion'] = this.eEzsignfolderCompletion;
-    } else {
-      json[r'eEzsignfolderCompletion'] = null;
-    }
     if (this.sEzsignfoldertypeNameX != null) {
       json[r'sEzsignfoldertypeNameX'] = this.sEzsignfoldertypeNameX;
     } else {
@@ -426,7 +417,7 @@ class EzsignfolderResponse {
         pkiEzsignfolderID: mapValueOfType<int>(json, r'pkiEzsignfolderID')!,
         fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID'),
         objEzsignfoldertype: CustomEzsignfoldertypeResponse.fromJson(json[r'objEzsignfoldertype']),
-        eEzsignfolderCompletion: FieldEEzsignfolderCompletion.fromJson(json[r'eEzsignfolderCompletion']),
+        eEzsignfolderCompletion: FieldEEzsignfolderCompletion.fromJson(json[r'eEzsignfolderCompletion'])!,
         sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX'),
         fkiBillingentityinternalID: mapValueOfType<int>(json, r'fkiBillingentityinternalID'),
         sBillingentityinternalDescriptionX: mapValueOfType<String>(json, r'sBillingentityinternalDescriptionX'),
@@ -494,6 +485,7 @@ class EzsignfolderResponse {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'pkiEzsignfolderID',
+    'eEzsignfolderCompletion',
     'sEzsignfolderDescription',
   };
 }

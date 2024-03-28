@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **userlogintypeGetAutocompleteV2**
-> UserlogintypeGetAutocompleteV2Response userlogintypeGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+> UserlogintypeGetAutocompleteV2Response userlogintypeGetAutocompleteV2(sSelector, fkiEzsignfoldertypeID, eFilterActive, sQuery, acceptLanguage)
 
 Retrieve Userlogintypes and IDs
 
@@ -29,12 +29,13 @@ import 'package:openapi/api.dart';
 
 final api_instance = ObjectUserlogintypeApi();
 final sSelector = sSelector_example; // String | The type of Userlogintypes to return
+final fkiEzsignfoldertypeID = 56; // int | 
 final eFilterActive = eFilterActive_example; // String | Specify which results we want to display.
 final sQuery = sQuery_example; // String | Allow to filter the returned results
 final acceptLanguage = ; // HeaderAcceptLanguage | 
 
 try {
-    final result = api_instance.userlogintypeGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
+    final result = api_instance.userlogintypeGetAutocompleteV2(sSelector, fkiEzsignfoldertypeID, eFilterActive, sQuery, acceptLanguage);
     print(result);
 } catch (e) {
     print('Exception when calling ObjectUserlogintypeApi->userlogintypeGetAutocompleteV2: $e\n');
@@ -46,6 +47,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **String**| The type of Userlogintypes to return | 
+ **fkiEzsignfoldertypeID** | **int**|  | [optional] 
  **eFilterActive** | **String**| Specify which results we want to display. | [optional] [default to 'Active']
  **sQuery** | **String**| Allow to filter the returned results | [optional] 
  **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] 

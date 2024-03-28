@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -19,8 +19,11 @@ class SystemconfigurationResponseCompound {
     required this.eSystemconfigurationNewexternaluseraction,
     required this.eSystemconfigurationLanguage1,
     required this.eSystemconfigurationLanguage2,
-    required this.eSystemconfigurationEzsign,
+    this.eSystemconfigurationEzsign,
+    this.eSystemconfigurationEzsignofficeplan,
+    this.bSystemconfigurationEzsignpaidbyoffice,
     required this.bSystemconfigurationEzsignpersonnal,
+    this.bSystemconfigurationIsdisposalactive,
     required this.bSystemconfigurationSspr,
     this.dtSystemconfigurationReadonlyexpirationstart,
     this.dtSystemconfigurationReadonlyexpirationend,
@@ -46,10 +49,42 @@ class SystemconfigurationResponseCompound {
 
   FieldESystemconfigurationLanguage2 eSystemconfigurationLanguage2;
 
-  FieldESystemconfigurationEzsign eSystemconfigurationEzsign;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldESystemconfigurationEzsign? eSystemconfigurationEzsign;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldESystemconfigurationEzsignofficeplan? eSystemconfigurationEzsignofficeplan;
+
+  /// Whether if Ezsign is paid by the company or not
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bSystemconfigurationEzsignpaidbyoffice;
 
   /// Whether if we allow the creation of personal files in eZsign
   bool bSystemconfigurationEzsignpersonnal;
+
+  /// Whether is Disposal processus is active or not
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bSystemconfigurationIsdisposalactive;
 
   /// Whether if we allow SSPR
   bool bSystemconfigurationSspr;
@@ -81,7 +116,10 @@ class SystemconfigurationResponseCompound {
     other.eSystemconfigurationLanguage1 == eSystemconfigurationLanguage1 &&
     other.eSystemconfigurationLanguage2 == eSystemconfigurationLanguage2 &&
     other.eSystemconfigurationEzsign == eSystemconfigurationEzsign &&
+    other.eSystemconfigurationEzsignofficeplan == eSystemconfigurationEzsignofficeplan &&
+    other.bSystemconfigurationEzsignpaidbyoffice == bSystemconfigurationEzsignpaidbyoffice &&
     other.bSystemconfigurationEzsignpersonnal == bSystemconfigurationEzsignpersonnal &&
+    other.bSystemconfigurationIsdisposalactive == bSystemconfigurationIsdisposalactive &&
     other.bSystemconfigurationSspr == bSystemconfigurationSspr &&
     other.dtSystemconfigurationReadonlyexpirationstart == dtSystemconfigurationReadonlyexpirationstart &&
     other.dtSystemconfigurationReadonlyexpirationend == dtSystemconfigurationReadonlyexpirationend;
@@ -95,14 +133,17 @@ class SystemconfigurationResponseCompound {
     (eSystemconfigurationNewexternaluseraction.hashCode) +
     (eSystemconfigurationLanguage1.hashCode) +
     (eSystemconfigurationLanguage2.hashCode) +
-    (eSystemconfigurationEzsign.hashCode) +
+    (eSystemconfigurationEzsign == null ? 0 : eSystemconfigurationEzsign!.hashCode) +
+    (eSystemconfigurationEzsignofficeplan == null ? 0 : eSystemconfigurationEzsignofficeplan!.hashCode) +
+    (bSystemconfigurationEzsignpaidbyoffice == null ? 0 : bSystemconfigurationEzsignpaidbyoffice!.hashCode) +
     (bSystemconfigurationEzsignpersonnal.hashCode) +
+    (bSystemconfigurationIsdisposalactive == null ? 0 : bSystemconfigurationIsdisposalactive!.hashCode) +
     (bSystemconfigurationSspr.hashCode) +
     (dtSystemconfigurationReadonlyexpirationstart == null ? 0 : dtSystemconfigurationReadonlyexpirationstart!.hashCode) +
     (dtSystemconfigurationReadonlyexpirationend == null ? 0 : dtSystemconfigurationReadonlyexpirationend!.hashCode);
 
   @override
-  String toString() => 'SystemconfigurationResponseCompound[pkiSystemconfigurationID=$pkiSystemconfigurationID, fkiSystemconfigurationtypeID=$fkiSystemconfigurationtypeID, sSystemconfigurationtypeDescriptionX=$sSystemconfigurationtypeDescriptionX, eSystemconfigurationNewexternaluseraction=$eSystemconfigurationNewexternaluseraction, eSystemconfigurationLanguage1=$eSystemconfigurationLanguage1, eSystemconfigurationLanguage2=$eSystemconfigurationLanguage2, eSystemconfigurationEzsign=$eSystemconfigurationEzsign, bSystemconfigurationEzsignpersonnal=$bSystemconfigurationEzsignpersonnal, bSystemconfigurationSspr=$bSystemconfigurationSspr, dtSystemconfigurationReadonlyexpirationstart=$dtSystemconfigurationReadonlyexpirationstart, dtSystemconfigurationReadonlyexpirationend=$dtSystemconfigurationReadonlyexpirationend]';
+  String toString() => 'SystemconfigurationResponseCompound[pkiSystemconfigurationID=$pkiSystemconfigurationID, fkiSystemconfigurationtypeID=$fkiSystemconfigurationtypeID, sSystemconfigurationtypeDescriptionX=$sSystemconfigurationtypeDescriptionX, eSystemconfigurationNewexternaluseraction=$eSystemconfigurationNewexternaluseraction, eSystemconfigurationLanguage1=$eSystemconfigurationLanguage1, eSystemconfigurationLanguage2=$eSystemconfigurationLanguage2, eSystemconfigurationEzsign=$eSystemconfigurationEzsign, eSystemconfigurationEzsignofficeplan=$eSystemconfigurationEzsignofficeplan, bSystemconfigurationEzsignpaidbyoffice=$bSystemconfigurationEzsignpaidbyoffice, bSystemconfigurationEzsignpersonnal=$bSystemconfigurationEzsignpersonnal, bSystemconfigurationIsdisposalactive=$bSystemconfigurationIsdisposalactive, bSystemconfigurationSspr=$bSystemconfigurationSspr, dtSystemconfigurationReadonlyexpirationstart=$dtSystemconfigurationReadonlyexpirationstart, dtSystemconfigurationReadonlyexpirationend=$dtSystemconfigurationReadonlyexpirationend]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -112,8 +153,27 @@ class SystemconfigurationResponseCompound {
       json[r'eSystemconfigurationNewexternaluseraction'] = this.eSystemconfigurationNewexternaluseraction;
       json[r'eSystemconfigurationLanguage1'] = this.eSystemconfigurationLanguage1;
       json[r'eSystemconfigurationLanguage2'] = this.eSystemconfigurationLanguage2;
+    if (this.eSystemconfigurationEzsign != null) {
       json[r'eSystemconfigurationEzsign'] = this.eSystemconfigurationEzsign;
+    } else {
+      json[r'eSystemconfigurationEzsign'] = null;
+    }
+    if (this.eSystemconfigurationEzsignofficeplan != null) {
+      json[r'eSystemconfigurationEzsignofficeplan'] = this.eSystemconfigurationEzsignofficeplan;
+    } else {
+      json[r'eSystemconfigurationEzsignofficeplan'] = null;
+    }
+    if (this.bSystemconfigurationEzsignpaidbyoffice != null) {
+      json[r'bSystemconfigurationEzsignpaidbyoffice'] = this.bSystemconfigurationEzsignpaidbyoffice;
+    } else {
+      json[r'bSystemconfigurationEzsignpaidbyoffice'] = null;
+    }
       json[r'bSystemconfigurationEzsignpersonnal'] = this.bSystemconfigurationEzsignpersonnal;
+    if (this.bSystemconfigurationIsdisposalactive != null) {
+      json[r'bSystemconfigurationIsdisposalactive'] = this.bSystemconfigurationIsdisposalactive;
+    } else {
+      json[r'bSystemconfigurationIsdisposalactive'] = null;
+    }
       json[r'bSystemconfigurationSspr'] = this.bSystemconfigurationSspr;
     if (this.dtSystemconfigurationReadonlyexpirationstart != null) {
       json[r'dtSystemconfigurationReadonlyexpirationstart'] = this.dtSystemconfigurationReadonlyexpirationstart;
@@ -153,8 +213,11 @@ class SystemconfigurationResponseCompound {
         eSystemconfigurationNewexternaluseraction: FieldESystemconfigurationNewexternaluseraction.fromJson(json[r'eSystemconfigurationNewexternaluseraction'])!,
         eSystemconfigurationLanguage1: FieldESystemconfigurationLanguage1.fromJson(json[r'eSystemconfigurationLanguage1'])!,
         eSystemconfigurationLanguage2: FieldESystemconfigurationLanguage2.fromJson(json[r'eSystemconfigurationLanguage2'])!,
-        eSystemconfigurationEzsign: FieldESystemconfigurationEzsign.fromJson(json[r'eSystemconfigurationEzsign'])!,
+        eSystemconfigurationEzsign: FieldESystemconfigurationEzsign.fromJson(json[r'eSystemconfigurationEzsign']),
+        eSystemconfigurationEzsignofficeplan: FieldESystemconfigurationEzsignofficeplan.fromJson(json[r'eSystemconfigurationEzsignofficeplan']),
+        bSystemconfigurationEzsignpaidbyoffice: mapValueOfType<bool>(json, r'bSystemconfigurationEzsignpaidbyoffice'),
         bSystemconfigurationEzsignpersonnal: mapValueOfType<bool>(json, r'bSystemconfigurationEzsignpersonnal')!,
+        bSystemconfigurationIsdisposalactive: mapValueOfType<bool>(json, r'bSystemconfigurationIsdisposalactive'),
         bSystemconfigurationSspr: mapValueOfType<bool>(json, r'bSystemconfigurationSspr')!,
         dtSystemconfigurationReadonlyexpirationstart: mapValueOfType<String>(json, r'dtSystemconfigurationReadonlyexpirationstart'),
         dtSystemconfigurationReadonlyexpirationend: mapValueOfType<String>(json, r'dtSystemconfigurationReadonlyexpirationend'),
@@ -211,7 +274,6 @@ class SystemconfigurationResponseCompound {
     'eSystemconfigurationNewexternaluseraction',
     'eSystemconfigurationLanguage1',
     'eSystemconfigurationLanguage2',
-    'eSystemconfigurationEzsign',
     'bSystemconfigurationEzsignpersonnal',
     'bSystemconfigurationSspr',
   };

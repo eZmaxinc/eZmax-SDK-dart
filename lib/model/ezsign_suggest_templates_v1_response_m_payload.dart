@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -15,30 +15,36 @@ class EzsignSuggestTemplatesV1ResponseMPayload {
   EzsignSuggestTemplatesV1ResponseMPayload({
     this.aObjEzsigntemplate = const [],
     this.aObjEzsigntemplatepackage = const [],
+    this.aObjEzsigntemplateglobal = const [],
   });
 
   List<EzsigntemplateResponseCompound> aObjEzsigntemplate;
 
   List<EzsigntemplatepackageResponseCompound> aObjEzsigntemplatepackage;
 
+  List<EzsigntemplateglobalResponseCompound> aObjEzsigntemplateglobal;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignSuggestTemplatesV1ResponseMPayload &&
     _deepEquality.equals(other.aObjEzsigntemplate, aObjEzsigntemplate) &&
-    _deepEquality.equals(other.aObjEzsigntemplatepackage, aObjEzsigntemplatepackage);
+    _deepEquality.equals(other.aObjEzsigntemplatepackage, aObjEzsigntemplatepackage) &&
+    _deepEquality.equals(other.aObjEzsigntemplateglobal, aObjEzsigntemplateglobal);
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (aObjEzsigntemplate.hashCode) +
-    (aObjEzsigntemplatepackage.hashCode);
+    (aObjEzsigntemplatepackage.hashCode) +
+    (aObjEzsigntemplateglobal.hashCode);
 
   @override
-  String toString() => 'EzsignSuggestTemplatesV1ResponseMPayload[aObjEzsigntemplate=$aObjEzsigntemplate, aObjEzsigntemplatepackage=$aObjEzsigntemplatepackage]';
+  String toString() => 'EzsignSuggestTemplatesV1ResponseMPayload[aObjEzsigntemplate=$aObjEzsigntemplate, aObjEzsigntemplatepackage=$aObjEzsigntemplatepackage, aObjEzsigntemplateglobal=$aObjEzsigntemplateglobal]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'a_objEzsigntemplate'] = this.aObjEzsigntemplate;
       json[r'a_objEzsigntemplatepackage'] = this.aObjEzsigntemplatepackage;
+      json[r'a_objEzsigntemplateglobal'] = this.aObjEzsigntemplateglobal;
     return json;
   }
 
@@ -63,6 +69,7 @@ class EzsignSuggestTemplatesV1ResponseMPayload {
       return EzsignSuggestTemplatesV1ResponseMPayload(
         aObjEzsigntemplate: EzsigntemplateResponseCompound.listFromJson(json[r'a_objEzsigntemplate']),
         aObjEzsigntemplatepackage: EzsigntemplatepackageResponseCompound.listFromJson(json[r'a_objEzsigntemplatepackage']),
+        aObjEzsigntemplateglobal: EzsigntemplateglobalResponseCompound.listFromJson(json[r'a_objEzsigntemplateglobal']),
       );
     }
     return null;
@@ -112,6 +119,7 @@ class EzsignSuggestTemplatesV1ResponseMPayload {
   static const requiredKeys = <String>{
     'a_objEzsigntemplate',
     'a_objEzsigntemplatepackage',
+    'a_objEzsigntemplateglobal',
   };
 }
 

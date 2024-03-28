@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -20,14 +20,17 @@ class BrandingResponseCompound {
     this.sBrandingName,
     this.sEmailAddress,
     required this.eBrandingLogo,
+    this.eBrandingLogointerface,
     required this.iBrandingColortext,
     required this.iBrandingColortextlinkbox,
     required this.iBrandingColortextbutton,
     required this.iBrandingColorbackground,
     required this.iBrandingColorbackgroundbutton,
     required this.iBrandingColorbackgroundsmallbox,
+    this.iBrandingInterfacecolor,
     required this.bBrandingIsactive,
     this.sBrandingLogourl,
+    this.sBrandingLogointerfaceurl,
   });
 
   /// The unique ID of the Branding
@@ -72,6 +75,14 @@ class BrandingResponseCompound {
 
   FieldEBrandingLogo eBrandingLogo;
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEBrandingLogointerface? eBrandingLogointerface;
+
   /// The color of the text. This is a RGB color converted into integer
   ///
   /// Minimum value: 0
@@ -108,6 +119,18 @@ class BrandingResponseCompound {
   /// Maximum value: 16777215
   int iBrandingColorbackgroundsmallbox;
 
+  /// The color of the interface. This is a RGB color converted into integer
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 16777215
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? iBrandingInterfacecolor;
+
   /// Whether the Branding is active or not
   bool bBrandingIsactive;
 
@@ -120,6 +143,15 @@ class BrandingResponseCompound {
   ///
   String? sBrandingLogourl;
 
+  /// The url of the picture used as logo in the Branding
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sBrandingLogointerfaceurl;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is BrandingResponseCompound &&
     other.pkiBrandingID == pkiBrandingID &&
@@ -129,14 +161,17 @@ class BrandingResponseCompound {
     other.sBrandingName == sBrandingName &&
     other.sEmailAddress == sEmailAddress &&
     other.eBrandingLogo == eBrandingLogo &&
+    other.eBrandingLogointerface == eBrandingLogointerface &&
     other.iBrandingColortext == iBrandingColortext &&
     other.iBrandingColortextlinkbox == iBrandingColortextlinkbox &&
     other.iBrandingColortextbutton == iBrandingColortextbutton &&
     other.iBrandingColorbackground == iBrandingColorbackground &&
     other.iBrandingColorbackgroundbutton == iBrandingColorbackgroundbutton &&
     other.iBrandingColorbackgroundsmallbox == iBrandingColorbackgroundsmallbox &&
+    other.iBrandingInterfacecolor == iBrandingInterfacecolor &&
     other.bBrandingIsactive == bBrandingIsactive &&
-    other.sBrandingLogourl == sBrandingLogourl;
+    other.sBrandingLogourl == sBrandingLogourl &&
+    other.sBrandingLogointerfaceurl == sBrandingLogointerfaceurl;
 
   @override
   int get hashCode =>
@@ -148,17 +183,20 @@ class BrandingResponseCompound {
     (sBrandingName == null ? 0 : sBrandingName!.hashCode) +
     (sEmailAddress == null ? 0 : sEmailAddress!.hashCode) +
     (eBrandingLogo.hashCode) +
+    (eBrandingLogointerface == null ? 0 : eBrandingLogointerface!.hashCode) +
     (iBrandingColortext.hashCode) +
     (iBrandingColortextlinkbox.hashCode) +
     (iBrandingColortextbutton.hashCode) +
     (iBrandingColorbackground.hashCode) +
     (iBrandingColorbackgroundbutton.hashCode) +
     (iBrandingColorbackgroundsmallbox.hashCode) +
+    (iBrandingInterfacecolor == null ? 0 : iBrandingInterfacecolor!.hashCode) +
     (bBrandingIsactive.hashCode) +
-    (sBrandingLogourl == null ? 0 : sBrandingLogourl!.hashCode);
+    (sBrandingLogourl == null ? 0 : sBrandingLogourl!.hashCode) +
+    (sBrandingLogointerfaceurl == null ? 0 : sBrandingLogointerfaceurl!.hashCode);
 
   @override
-  String toString() => 'BrandingResponseCompound[pkiBrandingID=$pkiBrandingID, fkiEmailID=$fkiEmailID, objBrandingDescription=$objBrandingDescription, sBrandingDescriptionX=$sBrandingDescriptionX, sBrandingName=$sBrandingName, sEmailAddress=$sEmailAddress, eBrandingLogo=$eBrandingLogo, iBrandingColortext=$iBrandingColortext, iBrandingColortextlinkbox=$iBrandingColortextlinkbox, iBrandingColortextbutton=$iBrandingColortextbutton, iBrandingColorbackground=$iBrandingColorbackground, iBrandingColorbackgroundbutton=$iBrandingColorbackgroundbutton, iBrandingColorbackgroundsmallbox=$iBrandingColorbackgroundsmallbox, bBrandingIsactive=$bBrandingIsactive, sBrandingLogourl=$sBrandingLogourl]';
+  String toString() => 'BrandingResponseCompound[pkiBrandingID=$pkiBrandingID, fkiEmailID=$fkiEmailID, objBrandingDescription=$objBrandingDescription, sBrandingDescriptionX=$sBrandingDescriptionX, sBrandingName=$sBrandingName, sEmailAddress=$sEmailAddress, eBrandingLogo=$eBrandingLogo, eBrandingLogointerface=$eBrandingLogointerface, iBrandingColortext=$iBrandingColortext, iBrandingColortextlinkbox=$iBrandingColortextlinkbox, iBrandingColortextbutton=$iBrandingColortextbutton, iBrandingColorbackground=$iBrandingColorbackground, iBrandingColorbackgroundbutton=$iBrandingColorbackgroundbutton, iBrandingColorbackgroundsmallbox=$iBrandingColorbackgroundsmallbox, iBrandingInterfacecolor=$iBrandingInterfacecolor, bBrandingIsactive=$bBrandingIsactive, sBrandingLogourl=$sBrandingLogourl, sBrandingLogointerfaceurl=$sBrandingLogointerfaceurl]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -181,17 +219,32 @@ class BrandingResponseCompound {
       json[r'sEmailAddress'] = null;
     }
       json[r'eBrandingLogo'] = this.eBrandingLogo;
+    if (this.eBrandingLogointerface != null) {
+      json[r'eBrandingLogointerface'] = this.eBrandingLogointerface;
+    } else {
+      json[r'eBrandingLogointerface'] = null;
+    }
       json[r'iBrandingColortext'] = this.iBrandingColortext;
       json[r'iBrandingColortextlinkbox'] = this.iBrandingColortextlinkbox;
       json[r'iBrandingColortextbutton'] = this.iBrandingColortextbutton;
       json[r'iBrandingColorbackground'] = this.iBrandingColorbackground;
       json[r'iBrandingColorbackgroundbutton'] = this.iBrandingColorbackgroundbutton;
       json[r'iBrandingColorbackgroundsmallbox'] = this.iBrandingColorbackgroundsmallbox;
+    if (this.iBrandingInterfacecolor != null) {
+      json[r'iBrandingInterfacecolor'] = this.iBrandingInterfacecolor;
+    } else {
+      json[r'iBrandingInterfacecolor'] = null;
+    }
       json[r'bBrandingIsactive'] = this.bBrandingIsactive;
     if (this.sBrandingLogourl != null) {
       json[r'sBrandingLogourl'] = this.sBrandingLogourl;
     } else {
       json[r'sBrandingLogourl'] = null;
+    }
+    if (this.sBrandingLogointerfaceurl != null) {
+      json[r'sBrandingLogointerfaceurl'] = this.sBrandingLogointerfaceurl;
+    } else {
+      json[r'sBrandingLogointerfaceurl'] = null;
     }
     return json;
   }
@@ -222,14 +275,17 @@ class BrandingResponseCompound {
         sBrandingName: mapValueOfType<String>(json, r'sBrandingName'),
         sEmailAddress: mapValueOfType<String>(json, r'sEmailAddress'),
         eBrandingLogo: FieldEBrandingLogo.fromJson(json[r'eBrandingLogo'])!,
+        eBrandingLogointerface: FieldEBrandingLogointerface.fromJson(json[r'eBrandingLogointerface']),
         iBrandingColortext: mapValueOfType<int>(json, r'iBrandingColortext')!,
         iBrandingColortextlinkbox: mapValueOfType<int>(json, r'iBrandingColortextlinkbox')!,
         iBrandingColortextbutton: mapValueOfType<int>(json, r'iBrandingColortextbutton')!,
         iBrandingColorbackground: mapValueOfType<int>(json, r'iBrandingColorbackground')!,
         iBrandingColorbackgroundbutton: mapValueOfType<int>(json, r'iBrandingColorbackgroundbutton')!,
         iBrandingColorbackgroundsmallbox: mapValueOfType<int>(json, r'iBrandingColorbackgroundsmallbox')!,
+        iBrandingInterfacecolor: mapValueOfType<int>(json, r'iBrandingInterfacecolor'),
         bBrandingIsactive: mapValueOfType<bool>(json, r'bBrandingIsactive')!,
         sBrandingLogourl: mapValueOfType<String>(json, r'sBrandingLogourl'),
+        sBrandingLogointerfaceurl: mapValueOfType<String>(json, r'sBrandingLogointerfaceurl'),
       );
     }
     return null;

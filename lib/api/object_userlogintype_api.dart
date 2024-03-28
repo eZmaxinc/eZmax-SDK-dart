@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -27,6 +27,8 @@ class ObjectUserlogintypeApi {
   /// * [String] sSelector (required):
   ///   The type of Userlogintypes to return
   ///
+  /// * [int] fkiEzsignfoldertypeID:
+  ///
   /// * [String] eFilterActive:
   ///   Specify which results we want to display.
   ///
@@ -34,7 +36,7 @@ class ObjectUserlogintypeApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<Response> userlogintypeGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
+  Future<Response> userlogintypeGetAutocompleteV2WithHttpInfo(String sSelector, { int? fkiEzsignfoldertypeID, String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/userlogintype/getAutocomplete/{sSelector}'
       .replaceAll('{sSelector}', sSelector);
@@ -46,6 +48,9 @@ class ObjectUserlogintypeApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
+    if (fkiEzsignfoldertypeID != null) {
+      queryParams.addAll(_queryParams('', 'fkiEzsignfoldertypeID', fkiEzsignfoldertypeID));
+    }
     if (eFilterActive != null) {
       queryParams.addAll(_queryParams('', 'eFilterActive', eFilterActive));
     }
@@ -80,6 +85,8 @@ class ObjectUserlogintypeApi {
   /// * [String] sSelector (required):
   ///   The type of Userlogintypes to return
   ///
+  /// * [int] fkiEzsignfoldertypeID:
+  ///
   /// * [String] eFilterActive:
   ///   Specify which results we want to display.
   ///
@@ -87,8 +94,8 @@ class ObjectUserlogintypeApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<UserlogintypeGetAutocompleteV2Response?> userlogintypeGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
-    final response = await userlogintypeGetAutocompleteV2WithHttpInfo(sSelector,  eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, );
+  Future<UserlogintypeGetAutocompleteV2Response?> userlogintypeGetAutocompleteV2(String sSelector, { int? fkiEzsignfoldertypeID, String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
+    final response = await userlogintypeGetAutocompleteV2WithHttpInfo(sSelector,  fkiEzsignfoldertypeID: fkiEzsignfoldertypeID, eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

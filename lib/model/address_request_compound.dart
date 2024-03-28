@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -21,6 +21,8 @@ class AddressRequestCompound {
     required this.fkiProvinceID,
     required this.fkiCountryID,
     required this.sAddressZip,
+    this.fAddressLongitude,
+    this.fAddressLatitude,
   });
 
   /// The unique ID of the Addresstype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| |3|Real Estate Invoice| |4|Invoicing| |5|Shipping|
@@ -53,6 +55,24 @@ class AddressRequestCompound {
   /// The Postal/Zip Code  The value must be entered without spaces
   String sAddressZip;
 
+  /// The Longitude of the Address
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? fAddressLongitude;
+
+  /// The Latitude of the Address
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? fAddressLatitude;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is AddressRequestCompound &&
     other.fkiAddresstypeID == fkiAddresstypeID &&
@@ -62,7 +82,9 @@ class AddressRequestCompound {
     other.sAddressCity == sAddressCity &&
     other.fkiProvinceID == fkiProvinceID &&
     other.fkiCountryID == fkiCountryID &&
-    other.sAddressZip == sAddressZip;
+    other.sAddressZip == sAddressZip &&
+    other.fAddressLongitude == fAddressLongitude &&
+    other.fAddressLatitude == fAddressLatitude;
 
   @override
   int get hashCode =>
@@ -74,10 +96,12 @@ class AddressRequestCompound {
     (sAddressCity.hashCode) +
     (fkiProvinceID.hashCode) +
     (fkiCountryID.hashCode) +
-    (sAddressZip.hashCode);
+    (sAddressZip.hashCode) +
+    (fAddressLongitude == null ? 0 : fAddressLongitude!.hashCode) +
+    (fAddressLatitude == null ? 0 : fAddressLatitude!.hashCode);
 
   @override
-  String toString() => 'AddressRequestCompound[fkiAddresstypeID=$fkiAddresstypeID, sAddressCivic=$sAddressCivic, sAddressStreet=$sAddressStreet, sAddressSuite=$sAddressSuite, sAddressCity=$sAddressCity, fkiProvinceID=$fkiProvinceID, fkiCountryID=$fkiCountryID, sAddressZip=$sAddressZip]';
+  String toString() => 'AddressRequestCompound[fkiAddresstypeID=$fkiAddresstypeID, sAddressCivic=$sAddressCivic, sAddressStreet=$sAddressStreet, sAddressSuite=$sAddressSuite, sAddressCity=$sAddressCity, fkiProvinceID=$fkiProvinceID, fkiCountryID=$fkiCountryID, sAddressZip=$sAddressZip, fAddressLongitude=$fAddressLongitude, fAddressLatitude=$fAddressLatitude]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -89,6 +113,16 @@ class AddressRequestCompound {
       json[r'fkiProvinceID'] = this.fkiProvinceID;
       json[r'fkiCountryID'] = this.fkiCountryID;
       json[r'sAddressZip'] = this.sAddressZip;
+    if (this.fAddressLongitude != null) {
+      json[r'fAddressLongitude'] = this.fAddressLongitude;
+    } else {
+      json[r'fAddressLongitude'] = null;
+    }
+    if (this.fAddressLatitude != null) {
+      json[r'fAddressLatitude'] = this.fAddressLatitude;
+    } else {
+      json[r'fAddressLatitude'] = null;
+    }
     return json;
   }
 
@@ -119,6 +153,8 @@ class AddressRequestCompound {
         fkiProvinceID: mapValueOfType<int>(json, r'fkiProvinceID')!,
         fkiCountryID: mapValueOfType<int>(json, r'fkiCountryID')!,
         sAddressZip: mapValueOfType<String>(json, r'sAddressZip')!,
+        fAddressLongitude: mapValueOfType<String>(json, r'fAddressLongitude'),
+        fAddressLatitude: mapValueOfType<String>(json, r'fAddressLatitude'),
       );
     }
     return null;

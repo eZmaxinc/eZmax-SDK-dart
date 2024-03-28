@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -15,13 +15,16 @@ class EzsigntemplateResponse {
   EzsigntemplateResponse({
     required this.pkiEzsigntemplateID,
     this.fkiEzsigntemplatedocumentID,
-    required this.fkiEzsignfoldertypeID,
+    this.fkiEzsignfoldertypeID,
     required this.fkiLanguageID,
     required this.sLanguageNameX,
     required this.sEzsigntemplateDescription,
+    this.sEzsigntemplateFilenamepattern,
     required this.bEzsigntemplateAdminonly,
-    required this.sEzsignfoldertypeNameX,
+    this.sEzsignfoldertypeNameX,
     required this.objAudit,
+    required this.bEzsigntemplateEditallowed,
+    this.eEzsigntemplateType,
   });
 
   /// The unique ID of the Ezsigntemplate
@@ -43,7 +46,14 @@ class EzsigntemplateResponse {
   /// The unique ID of the Ezsignfoldertype.
   ///
   /// Minimum value: 0
-  int fkiEzsignfoldertypeID;
+  /// Maximum value: 65535
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiEzsignfoldertypeID;
 
   /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
   ///
@@ -57,13 +67,39 @@ class EzsigntemplateResponse {
   /// The description of the Ezsigntemplate
   String sEzsigntemplateDescription;
 
+  /// The filename pattern of the Ezsigntemplate
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEzsigntemplateFilenamepattern;
+
   /// Whether the Ezsigntemplate can be accessed by admin users only (eUserType=Normal)
   bool bEzsigntemplateAdminonly;
 
   /// The name of the Ezsignfoldertype in the language of the requester
-  String sEzsignfoldertypeNameX;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEzsignfoldertypeNameX;
 
   CommonAudit objAudit;
+
+  /// Whether the Ezsigntemplate if allowed to edit or not
+  bool bEzsigntemplateEditallowed;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEEzsigntemplateType? eEzsigntemplateType;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplateResponse &&
@@ -73,25 +109,31 @@ class EzsigntemplateResponse {
     other.fkiLanguageID == fkiLanguageID &&
     other.sLanguageNameX == sLanguageNameX &&
     other.sEzsigntemplateDescription == sEzsigntemplateDescription &&
+    other.sEzsigntemplateFilenamepattern == sEzsigntemplateFilenamepattern &&
     other.bEzsigntemplateAdminonly == bEzsigntemplateAdminonly &&
     other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
-    other.objAudit == objAudit;
+    other.objAudit == objAudit &&
+    other.bEzsigntemplateEditallowed == bEzsigntemplateEditallowed &&
+    other.eEzsigntemplateType == eEzsigntemplateType;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiEzsigntemplateID.hashCode) +
     (fkiEzsigntemplatedocumentID == null ? 0 : fkiEzsigntemplatedocumentID!.hashCode) +
-    (fkiEzsignfoldertypeID.hashCode) +
+    (fkiEzsignfoldertypeID == null ? 0 : fkiEzsignfoldertypeID!.hashCode) +
     (fkiLanguageID.hashCode) +
     (sLanguageNameX.hashCode) +
     (sEzsigntemplateDescription.hashCode) +
+    (sEzsigntemplateFilenamepattern == null ? 0 : sEzsigntemplateFilenamepattern!.hashCode) +
     (bEzsigntemplateAdminonly.hashCode) +
-    (sEzsignfoldertypeNameX.hashCode) +
-    (objAudit.hashCode);
+    (sEzsignfoldertypeNameX == null ? 0 : sEzsignfoldertypeNameX!.hashCode) +
+    (objAudit.hashCode) +
+    (bEzsigntemplateEditallowed.hashCode) +
+    (eEzsigntemplateType == null ? 0 : eEzsigntemplateType!.hashCode);
 
   @override
-  String toString() => 'EzsigntemplateResponse[pkiEzsigntemplateID=$pkiEzsigntemplateID, fkiEzsigntemplatedocumentID=$fkiEzsigntemplatedocumentID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiLanguageID=$fkiLanguageID, sLanguageNameX=$sLanguageNameX, sEzsigntemplateDescription=$sEzsigntemplateDescription, bEzsigntemplateAdminonly=$bEzsigntemplateAdminonly, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, objAudit=$objAudit]';
+  String toString() => 'EzsigntemplateResponse[pkiEzsigntemplateID=$pkiEzsigntemplateID, fkiEzsigntemplatedocumentID=$fkiEzsigntemplatedocumentID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiLanguageID=$fkiLanguageID, sLanguageNameX=$sLanguageNameX, sEzsigntemplateDescription=$sEzsigntemplateDescription, sEzsigntemplateFilenamepattern=$sEzsigntemplateFilenamepattern, bEzsigntemplateAdminonly=$bEzsigntemplateAdminonly, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, objAudit=$objAudit, bEzsigntemplateEditallowed=$bEzsigntemplateEditallowed, eEzsigntemplateType=$eEzsigntemplateType]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -101,13 +143,32 @@ class EzsigntemplateResponse {
     } else {
       json[r'fkiEzsigntemplatedocumentID'] = null;
     }
+    if (this.fkiEzsignfoldertypeID != null) {
       json[r'fkiEzsignfoldertypeID'] = this.fkiEzsignfoldertypeID;
+    } else {
+      json[r'fkiEzsignfoldertypeID'] = null;
+    }
       json[r'fkiLanguageID'] = this.fkiLanguageID;
       json[r'sLanguageNameX'] = this.sLanguageNameX;
       json[r'sEzsigntemplateDescription'] = this.sEzsigntemplateDescription;
+    if (this.sEzsigntemplateFilenamepattern != null) {
+      json[r'sEzsigntemplateFilenamepattern'] = this.sEzsigntemplateFilenamepattern;
+    } else {
+      json[r'sEzsigntemplateFilenamepattern'] = null;
+    }
       json[r'bEzsigntemplateAdminonly'] = this.bEzsigntemplateAdminonly;
+    if (this.sEzsignfoldertypeNameX != null) {
       json[r'sEzsignfoldertypeNameX'] = this.sEzsignfoldertypeNameX;
+    } else {
+      json[r'sEzsignfoldertypeNameX'] = null;
+    }
       json[r'objAudit'] = this.objAudit;
+      json[r'bEzsigntemplateEditallowed'] = this.bEzsigntemplateEditallowed;
+    if (this.eEzsigntemplateType != null) {
+      json[r'eEzsigntemplateType'] = this.eEzsigntemplateType;
+    } else {
+      json[r'eEzsigntemplateType'] = null;
+    }
     return json;
   }
 
@@ -132,13 +193,16 @@ class EzsigntemplateResponse {
       return EzsigntemplateResponse(
         pkiEzsigntemplateID: mapValueOfType<int>(json, r'pkiEzsigntemplateID')!,
         fkiEzsigntemplatedocumentID: mapValueOfType<int>(json, r'fkiEzsigntemplatedocumentID'),
-        fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID')!,
+        fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID'),
         fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID')!,
         sLanguageNameX: mapValueOfType<String>(json, r'sLanguageNameX')!,
         sEzsigntemplateDescription: mapValueOfType<String>(json, r'sEzsigntemplateDescription')!,
+        sEzsigntemplateFilenamepattern: mapValueOfType<String>(json, r'sEzsigntemplateFilenamepattern'),
         bEzsigntemplateAdminonly: mapValueOfType<bool>(json, r'bEzsigntemplateAdminonly')!,
-        sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX')!,
+        sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX'),
         objAudit: CommonAudit.fromJson(json[r'objAudit'])!,
+        bEzsigntemplateEditallowed: mapValueOfType<bool>(json, r'bEzsigntemplateEditallowed')!,
+        eEzsigntemplateType: FieldEEzsigntemplateType.fromJson(json[r'eEzsigntemplateType']),
       );
     }
     return null;
@@ -187,13 +251,12 @@ class EzsigntemplateResponse {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'pkiEzsigntemplateID',
-    'fkiEzsignfoldertypeID',
     'fkiLanguageID',
     'sLanguageNameX',
     'sEzsigntemplateDescription',
     'bEzsigntemplateAdminonly',
-    'sEzsignfoldertypeNameX',
     'objAudit',
+    'bEzsigntemplateEditallowed',
   };
 }
 

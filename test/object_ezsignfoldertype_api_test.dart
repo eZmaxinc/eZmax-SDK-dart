@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -21,8 +21,8 @@ void main() {
     //
     // The endpoint allows to create one or many elements at once.
     //
-    //Future<EzsignfoldertypeCreateObjectV1Response> ezsignfoldertypeCreateObjectV1(EzsignfoldertypeCreateObjectV1Request ezsignfoldertypeCreateObjectV1Request) async
-    test('test ezsignfoldertypeCreateObjectV1', () async {
+    //Future<EzsignfoldertypeCreateObjectV2Response> ezsignfoldertypeCreateObjectV2(EzsignfoldertypeCreateObjectV2Request ezsignfoldertypeCreateObjectV2Request) async
+    test('test ezsignfoldertypeCreateObjectV2', () async {
       // TODO
     });
 
@@ -35,12 +35,12 @@ void main() {
       // TODO
     });
 
-    // Retrieve Ezsignfoldertypes and IDs
+    // Edit an existing Ezsignfoldertype
     //
-    // Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete control.
+    // 
     //
-    //Future<CommonGetAutocompleteV1Response> ezsignfoldertypeGetAutocompleteV1(String sSelector, { String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage }) async
-    test('test ezsignfoldertypeGetAutocompleteV1', () async {
+    //Future<EzsignfoldertypeEditObjectV2Response> ezsignfoldertypeEditObjectV2(int pkiEzsignfoldertypeID, EzsignfoldertypeEditObjectV2Request ezsignfoldertypeEditObjectV2Request) async
+    test('test ezsignfoldertypeEditObjectV2', () async {
       // TODO
     });
 
@@ -68,6 +68,15 @@ void main() {
     //
     //Future<EzsignfoldertypeGetObjectV2Response> ezsignfoldertypeGetObjectV2(int pkiEzsignfoldertypeID) async
     test('test ezsignfoldertypeGetObjectV2', () async {
+      // TODO
+    });
+
+    // Retrieve an existing Ezsignfoldertype
+    //
+    // 
+    //
+    //Future<EzsignfoldertypeGetObjectV3Response> ezsignfoldertypeGetObjectV3(int pkiEzsignfoldertypeID) async
+    test('test ezsignfoldertypeGetObjectV3', () async {
       // TODO
     });
 

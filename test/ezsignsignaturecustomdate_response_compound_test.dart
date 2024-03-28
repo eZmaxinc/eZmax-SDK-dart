@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -31,6 +31,18 @@ void main() {
     // The Y coordinate (Vertical) where to put the Ezsignsignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignaturecustomdate block 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.
     // int iEzsignsignaturecustomdateY
     test('to test the property `iEzsignsignaturecustomdateY`', () async {
+      // TODO
+    });
+
+    // The X coordinate (Horizontal) where to put the Ezsignsignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignaturecustomdate block 2 inches from the left of the signature, you would use \"200\" for the X coordinate.
+    // int iEzsignsignaturecustomdateOffsetx
+    test('to test the property `iEzsignsignaturecustomdateOffsetx`', () async {
+      // TODO
+    });
+
+    // The Y coordinate (Vertical) where to put the Ezsignsignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignaturecustomdate block 3 inches from the top of the signature, you would use \"300\" for the Y coordinate.
+    // int iEzsignsignaturecustomdateOffsety
+    test('to test the property `iEzsignsignaturecustomdateOffsety`', () async {
       // TODO
     });
 

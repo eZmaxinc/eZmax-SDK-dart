@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -15,10 +15,10 @@ class ActivesessionResponseCompoundUser {
   ActivesessionResponseCompoundUser({
     required this.pkiUserID,
     required this.fkiTimezoneID,
-    required this.sAvatarUrl,
+    this.sAvatarUrl,
     required this.sUserFirstname,
     required this.sUserLastname,
-    required this.sEmailAddress,
+    this.sEmailAddress,
     required this.eUserEzsignsendreminderfrequency,
     required this.iUserInterfacecolor,
     required this.bUserInterfacedark,
@@ -36,7 +36,13 @@ class ActivesessionResponseCompoundUser {
   int fkiTimezoneID;
 
   /// The url of the picture used as avatar
-  String sAvatarUrl;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sAvatarUrl;
 
   /// The first name of the user
   String sUserFirstname;
@@ -45,7 +51,13 @@ class ActivesessionResponseCompoundUser {
   String sUserLastname;
 
   /// The email address.
-  String sEmailAddress;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEmailAddress;
 
   FieldEUserEzsignsendreminderfrequency eUserEzsignsendreminderfrequency;
 
@@ -81,10 +93,10 @@ class ActivesessionResponseCompoundUser {
     // ignore: unnecessary_parenthesis
     (pkiUserID.hashCode) +
     (fkiTimezoneID.hashCode) +
-    (sAvatarUrl.hashCode) +
+    (sAvatarUrl == null ? 0 : sAvatarUrl!.hashCode) +
     (sUserFirstname.hashCode) +
     (sUserLastname.hashCode) +
-    (sEmailAddress.hashCode) +
+    (sEmailAddress == null ? 0 : sEmailAddress!.hashCode) +
     (eUserEzsignsendreminderfrequency.hashCode) +
     (iUserInterfacecolor.hashCode) +
     (bUserInterfacedark.hashCode) +
@@ -97,10 +109,18 @@ class ActivesessionResponseCompoundUser {
     final json = <String, dynamic>{};
       json[r'pkiUserID'] = this.pkiUserID;
       json[r'fkiTimezoneID'] = this.fkiTimezoneID;
+    if (this.sAvatarUrl != null) {
       json[r'sAvatarUrl'] = this.sAvatarUrl;
+    } else {
+      json[r'sAvatarUrl'] = null;
+    }
       json[r'sUserFirstname'] = this.sUserFirstname;
       json[r'sUserLastname'] = this.sUserLastname;
+    if (this.sEmailAddress != null) {
       json[r'sEmailAddress'] = this.sEmailAddress;
+    } else {
+      json[r'sEmailAddress'] = null;
+    }
       json[r'eUserEzsignsendreminderfrequency'] = this.eUserEzsignsendreminderfrequency;
       json[r'iUserInterfacecolor'] = this.iUserInterfacecolor;
       json[r'bUserInterfacedark'] = this.bUserInterfacedark;
@@ -129,10 +149,10 @@ class ActivesessionResponseCompoundUser {
       return ActivesessionResponseCompoundUser(
         pkiUserID: mapValueOfType<int>(json, r'pkiUserID')!,
         fkiTimezoneID: mapValueOfType<int>(json, r'fkiTimezoneID')!,
-        sAvatarUrl: mapValueOfType<String>(json, r'sAvatarUrl')!,
+        sAvatarUrl: mapValueOfType<String>(json, r'sAvatarUrl'),
         sUserFirstname: mapValueOfType<String>(json, r'sUserFirstname')!,
         sUserLastname: mapValueOfType<String>(json, r'sUserLastname')!,
-        sEmailAddress: mapValueOfType<String>(json, r'sEmailAddress')!,
+        sEmailAddress: mapValueOfType<String>(json, r'sEmailAddress'),
         eUserEzsignsendreminderfrequency: FieldEUserEzsignsendreminderfrequency.fromJson(json[r'eUserEzsignsendreminderfrequency'])!,
         iUserInterfacecolor: mapValueOfType<int>(json, r'iUserInterfacecolor')!,
         bUserInterfacedark: mapValueOfType<bool>(json, r'bUserInterfacedark')!,
@@ -186,10 +206,8 @@ class ActivesessionResponseCompoundUser {
   static const requiredKeys = <String>{
     'pkiUserID',
     'fkiTimezoneID',
-    'sAvatarUrl',
     'sUserFirstname',
     'sUserLastname',
-    'sEmailAddress',
     'eUserEzsignsendreminderfrequency',
     'iUserInterfacecolor',
     'bUserInterfacedark',

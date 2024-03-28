@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -22,6 +22,7 @@ class EzsigntemplatepackageResponseCompound {
     required this.bEzsigntemplatepackageNeedvalidation,
     required this.bEzsigntemplatepackageIsactive,
     required this.sEzsignfoldertypeNameX,
+    required this.bEzsigntemplatepackageEditallowed,
     this.aObjEzsigntemplatepackagesigner = const [],
     this.aObjEzsigntemplatepackagemembership = const [],
   });
@@ -34,6 +35,7 @@ class EzsigntemplatepackageResponseCompound {
   /// The unique ID of the Ezsignfoldertype.
   ///
   /// Minimum value: 0
+  /// Maximum value: 65535
   int fkiEzsignfoldertypeID;
 
   /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
@@ -60,6 +62,9 @@ class EzsigntemplatepackageResponseCompound {
   /// The name of the Ezsignfoldertype in the language of the requester
   String sEzsignfoldertypeNameX;
 
+  /// Whether the Ezsigntemplatepackage if allowed to edit or not
+  bool bEzsigntemplatepackageEditallowed;
+
   List<EzsigntemplatepackagesignerResponseCompound> aObjEzsigntemplatepackagesigner;
 
   List<EzsigntemplatepackagemembershipResponseCompound> aObjEzsigntemplatepackagemembership;
@@ -75,6 +80,7 @@ class EzsigntemplatepackageResponseCompound {
     other.bEzsigntemplatepackageNeedvalidation == bEzsigntemplatepackageNeedvalidation &&
     other.bEzsigntemplatepackageIsactive == bEzsigntemplatepackageIsactive &&
     other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
+    other.bEzsigntemplatepackageEditallowed == bEzsigntemplatepackageEditallowed &&
     _deepEquality.equals(other.aObjEzsigntemplatepackagesigner, aObjEzsigntemplatepackagesigner) &&
     _deepEquality.equals(other.aObjEzsigntemplatepackagemembership, aObjEzsigntemplatepackagemembership);
 
@@ -90,11 +96,12 @@ class EzsigntemplatepackageResponseCompound {
     (bEzsigntemplatepackageNeedvalidation.hashCode) +
     (bEzsigntemplatepackageIsactive.hashCode) +
     (sEzsignfoldertypeNameX.hashCode) +
+    (bEzsigntemplatepackageEditallowed.hashCode) +
     (aObjEzsigntemplatepackagesigner.hashCode) +
     (aObjEzsigntemplatepackagemembership.hashCode);
 
   @override
-  String toString() => 'EzsigntemplatepackageResponseCompound[pkiEzsigntemplatepackageID=$pkiEzsigntemplatepackageID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiLanguageID=$fkiLanguageID, sLanguageNameX=$sLanguageNameX, sEzsigntemplatepackageDescription=$sEzsigntemplatepackageDescription, bEzsigntemplatepackageAdminonly=$bEzsigntemplatepackageAdminonly, bEzsigntemplatepackageNeedvalidation=$bEzsigntemplatepackageNeedvalidation, bEzsigntemplatepackageIsactive=$bEzsigntemplatepackageIsactive, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, aObjEzsigntemplatepackagesigner=$aObjEzsigntemplatepackagesigner, aObjEzsigntemplatepackagemembership=$aObjEzsigntemplatepackagemembership]';
+  String toString() => 'EzsigntemplatepackageResponseCompound[pkiEzsigntemplatepackageID=$pkiEzsigntemplatepackageID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiLanguageID=$fkiLanguageID, sLanguageNameX=$sLanguageNameX, sEzsigntemplatepackageDescription=$sEzsigntemplatepackageDescription, bEzsigntemplatepackageAdminonly=$bEzsigntemplatepackageAdminonly, bEzsigntemplatepackageNeedvalidation=$bEzsigntemplatepackageNeedvalidation, bEzsigntemplatepackageIsactive=$bEzsigntemplatepackageIsactive, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, bEzsigntemplatepackageEditallowed=$bEzsigntemplatepackageEditallowed, aObjEzsigntemplatepackagesigner=$aObjEzsigntemplatepackagesigner, aObjEzsigntemplatepackagemembership=$aObjEzsigntemplatepackagemembership]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -107,6 +114,7 @@ class EzsigntemplatepackageResponseCompound {
       json[r'bEzsigntemplatepackageNeedvalidation'] = this.bEzsigntemplatepackageNeedvalidation;
       json[r'bEzsigntemplatepackageIsactive'] = this.bEzsigntemplatepackageIsactive;
       json[r'sEzsignfoldertypeNameX'] = this.sEzsignfoldertypeNameX;
+      json[r'bEzsigntemplatepackageEditallowed'] = this.bEzsigntemplatepackageEditallowed;
       json[r'a_objEzsigntemplatepackagesigner'] = this.aObjEzsigntemplatepackagesigner;
       json[r'a_objEzsigntemplatepackagemembership'] = this.aObjEzsigntemplatepackagemembership;
     return json;
@@ -140,6 +148,7 @@ class EzsigntemplatepackageResponseCompound {
         bEzsigntemplatepackageNeedvalidation: mapValueOfType<bool>(json, r'bEzsigntemplatepackageNeedvalidation')!,
         bEzsigntemplatepackageIsactive: mapValueOfType<bool>(json, r'bEzsigntemplatepackageIsactive')!,
         sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX')!,
+        bEzsigntemplatepackageEditallowed: mapValueOfType<bool>(json, r'bEzsigntemplatepackageEditallowed')!,
         aObjEzsigntemplatepackagesigner: EzsigntemplatepackagesignerResponseCompound.listFromJson(json[r'a_objEzsigntemplatepackagesigner']),
         aObjEzsigntemplatepackagemembership: EzsigntemplatepackagemembershipResponseCompound.listFromJson(json[r'a_objEzsigntemplatepackagemembership']),
       );
@@ -198,6 +207,7 @@ class EzsigntemplatepackageResponseCompound {
     'bEzsigntemplatepackageNeedvalidation',
     'bEzsigntemplatepackageIsactive',
     'sEzsignfoldertypeNameX',
+    'bEzsigntemplatepackageEditallowed',
     'a_objEzsigntemplatepackagesigner',
     'a_objEzsigntemplatepackagemembership',
   };

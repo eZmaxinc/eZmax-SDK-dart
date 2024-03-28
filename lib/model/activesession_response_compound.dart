@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -24,6 +24,8 @@ class ActivesessionResponseCompound {
     required this.pksCustomerCode,
     required this.fkiSystemconfigurationtypeID,
     this.fkiSignatureID,
+    this.bSystemconfigurationEzsignpaidbyoffice,
+    this.eSystemconfigurationEzsignofficeplan,
     required this.eUserEzsignaccess,
     this.eUserEzsignprepaid,
     this.dtUserEzsignprepaidexpiration,
@@ -77,6 +79,23 @@ class ActivesessionResponseCompound {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   int? fkiSignatureID;
+
+  /// Whether if Ezsign is paid by the company or not
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bSystemconfigurationEzsignpaidbyoffice;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldESystemconfigurationEzsignofficeplan? eSystemconfigurationEzsignofficeplan;
 
   FieldEUserEzsignaccess eUserEzsignaccess;
 
@@ -134,6 +153,8 @@ class ActivesessionResponseCompound {
     other.pksCustomerCode == pksCustomerCode &&
     other.fkiSystemconfigurationtypeID == fkiSystemconfigurationtypeID &&
     other.fkiSignatureID == fkiSignatureID &&
+    other.bSystemconfigurationEzsignpaidbyoffice == bSystemconfigurationEzsignpaidbyoffice &&
+    other.eSystemconfigurationEzsignofficeplan == eSystemconfigurationEzsignofficeplan &&
     other.eUserEzsignaccess == eUserEzsignaccess &&
     other.eUserEzsignprepaid == eUserEzsignprepaid &&
     other.dtUserEzsignprepaidexpiration == dtUserEzsignprepaidexpiration &&
@@ -157,6 +178,8 @@ class ActivesessionResponseCompound {
     (pksCustomerCode.hashCode) +
     (fkiSystemconfigurationtypeID.hashCode) +
     (fkiSignatureID == null ? 0 : fkiSignatureID!.hashCode) +
+    (bSystemconfigurationEzsignpaidbyoffice == null ? 0 : bSystemconfigurationEzsignpaidbyoffice!.hashCode) +
+    (eSystemconfigurationEzsignofficeplan == null ? 0 : eSystemconfigurationEzsignofficeplan!.hashCode) +
     (eUserEzsignaccess.hashCode) +
     (eUserEzsignprepaid == null ? 0 : eUserEzsignprepaid!.hashCode) +
     (dtUserEzsignprepaidexpiration == null ? 0 : dtUserEzsignprepaidexpiration!.hashCode) +
@@ -167,7 +190,7 @@ class ActivesessionResponseCompound {
     (aEModuleInternalname.hashCode);
 
   @override
-  String toString() => 'ActivesessionResponseCompound[eActivesessionUsertype=$eActivesessionUsertype, eActivesessionOrigin=$eActivesessionOrigin, eActivesessionWeekdaystart=$eActivesessionWeekdaystart, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, bActivesessionDebug=$bActivesessionDebug, bActivesessionIssuperadmin=$bActivesessionIssuperadmin, pksCustomerCode=$pksCustomerCode, fkiSystemconfigurationtypeID=$fkiSystemconfigurationtypeID, fkiSignatureID=$fkiSignatureID, eUserEzsignaccess=$eUserEzsignaccess, eUserEzsignprepaid=$eUserEzsignprepaid, dtUserEzsignprepaidexpiration=$dtUserEzsignprepaidexpiration, aPkiPermissionID=$aPkiPermissionID, objUserReal=$objUserReal, objUserCloned=$objUserCloned, objApikey=$objApikey, aEModuleInternalname=$aEModuleInternalname]';
+  String toString() => 'ActivesessionResponseCompound[eActivesessionUsertype=$eActivesessionUsertype, eActivesessionOrigin=$eActivesessionOrigin, eActivesessionWeekdaystart=$eActivesessionWeekdaystart, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, bActivesessionDebug=$bActivesessionDebug, bActivesessionIssuperadmin=$bActivesessionIssuperadmin, pksCustomerCode=$pksCustomerCode, fkiSystemconfigurationtypeID=$fkiSystemconfigurationtypeID, fkiSignatureID=$fkiSignatureID, bSystemconfigurationEzsignpaidbyoffice=$bSystemconfigurationEzsignpaidbyoffice, eSystemconfigurationEzsignofficeplan=$eSystemconfigurationEzsignofficeplan, eUserEzsignaccess=$eUserEzsignaccess, eUserEzsignprepaid=$eUserEzsignprepaid, dtUserEzsignprepaidexpiration=$dtUserEzsignprepaidexpiration, aPkiPermissionID=$aPkiPermissionID, objUserReal=$objUserReal, objUserCloned=$objUserCloned, objApikey=$objApikey, aEModuleInternalname=$aEModuleInternalname]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -185,6 +208,16 @@ class ActivesessionResponseCompound {
       json[r'fkiSignatureID'] = this.fkiSignatureID;
     } else {
       json[r'fkiSignatureID'] = null;
+    }
+    if (this.bSystemconfigurationEzsignpaidbyoffice != null) {
+      json[r'bSystemconfigurationEzsignpaidbyoffice'] = this.bSystemconfigurationEzsignpaidbyoffice;
+    } else {
+      json[r'bSystemconfigurationEzsignpaidbyoffice'] = null;
+    }
+    if (this.eSystemconfigurationEzsignofficeplan != null) {
+      json[r'eSystemconfigurationEzsignofficeplan'] = this.eSystemconfigurationEzsignofficeplan;
+    } else {
+      json[r'eSystemconfigurationEzsignofficeplan'] = null;
     }
       json[r'eUserEzsignaccess'] = this.eUserEzsignaccess;
     if (this.eUserEzsignprepaid != null) {
@@ -243,6 +276,8 @@ class ActivesessionResponseCompound {
         pksCustomerCode: mapValueOfType<String>(json, r'pksCustomerCode')!,
         fkiSystemconfigurationtypeID: mapValueOfType<int>(json, r'fkiSystemconfigurationtypeID')!,
         fkiSignatureID: mapValueOfType<int>(json, r'fkiSignatureID'),
+        bSystemconfigurationEzsignpaidbyoffice: mapValueOfType<bool>(json, r'bSystemconfigurationEzsignpaidbyoffice'),
+        eSystemconfigurationEzsignofficeplan: FieldESystemconfigurationEzsignofficeplan.fromJson(json[r'eSystemconfigurationEzsignofficeplan']),
         eUserEzsignaccess: FieldEUserEzsignaccess.fromJson(json[r'eUserEzsignaccess'])!,
         eUserEzsignprepaid: FieldEUserEzsignprepaid.fromJson(json[r'eUserEzsignprepaid']),
         dtUserEzsignprepaidexpiration: mapValueOfType<String>(json, r'dtUserEzsignprepaidexpiration'),

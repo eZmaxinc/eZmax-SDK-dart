@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -16,12 +16,10 @@ class CustomEzsignfoldertypeResponse {
     required this.pkiEzsignfoldertypeID,
     this.sEzsignfoldertypeNameX,
     this.bEzsignfoldertypeSendproofezsignsigner,
-    this.bEzsignfoldertypeIncludeproofsigner,
-    this.bEzsignfoldertypeIncludeproofuser,
     this.bEzsignfoldertypeAllowdownloadattachmentezsignsigner,
     this.bEzsignfoldertypeAllowdownloadproofezsignsigner,
     this.bEzsignfoldertypeDelegate,
-    this.bEzsignfoldertypeReassign,
+    this.bEzsignfoldertypeDiscussion,
     this.bEzsignfoldertypeReassignezsignsigner,
     this.bEzsignfoldertypeReassignuser,
   });
@@ -29,6 +27,7 @@ class CustomEzsignfoldertypeResponse {
   /// The unique ID of the Ezsignfoldertype.
   ///
   /// Minimum value: 0
+  /// Maximum value: 65535
   int pkiEzsignfoldertypeID;
 
   /// The name of the Ezsignfoldertype in the language of the requester
@@ -48,24 +47,6 @@ class CustomEzsignfoldertypeResponse {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   bool? bEzsignfoldertypeSendproofezsignsigner;
-
-  /// THIS FIELD WILL BE DELETED. Whether we include the proof with the signed Ezsigndocument for Ezsignsigners
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  bool? bEzsignfoldertypeIncludeproofsigner;
-
-  /// Whether we include the proof with the signed Ezsigndocument for users
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  bool? bEzsignfoldertypeIncludeproofuser;
 
   /// Whether we allow the Ezsigndocument to be downloaded by an Ezsignsigner
   ///
@@ -94,14 +75,14 @@ class CustomEzsignfoldertypeResponse {
   ///
   bool? bEzsignfoldertypeDelegate;
 
-  /// Wheter if Reassignment of signature is allowed to another signatory or not
+  /// Wheter if creating a new Discussion is allowed or not
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
   /// source code must fall back to having a nullable type.
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
-  bool? bEzsignfoldertypeReassign;
+  bool? bEzsignfoldertypeDiscussion;
 
   /// Wheter if Reassignment of signature is allowed by a signatory to another signatory or not
   ///
@@ -126,12 +107,10 @@ class CustomEzsignfoldertypeResponse {
     other.pkiEzsignfoldertypeID == pkiEzsignfoldertypeID &&
     other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
     other.bEzsignfoldertypeSendproofezsignsigner == bEzsignfoldertypeSendproofezsignsigner &&
-    other.bEzsignfoldertypeIncludeproofsigner == bEzsignfoldertypeIncludeproofsigner &&
-    other.bEzsignfoldertypeIncludeproofuser == bEzsignfoldertypeIncludeproofuser &&
     other.bEzsignfoldertypeAllowdownloadattachmentezsignsigner == bEzsignfoldertypeAllowdownloadattachmentezsignsigner &&
     other.bEzsignfoldertypeAllowdownloadproofezsignsigner == bEzsignfoldertypeAllowdownloadproofezsignsigner &&
     other.bEzsignfoldertypeDelegate == bEzsignfoldertypeDelegate &&
-    other.bEzsignfoldertypeReassign == bEzsignfoldertypeReassign &&
+    other.bEzsignfoldertypeDiscussion == bEzsignfoldertypeDiscussion &&
     other.bEzsignfoldertypeReassignezsignsigner == bEzsignfoldertypeReassignezsignsigner &&
     other.bEzsignfoldertypeReassignuser == bEzsignfoldertypeReassignuser;
 
@@ -141,17 +120,15 @@ class CustomEzsignfoldertypeResponse {
     (pkiEzsignfoldertypeID.hashCode) +
     (sEzsignfoldertypeNameX == null ? 0 : sEzsignfoldertypeNameX!.hashCode) +
     (bEzsignfoldertypeSendproofezsignsigner == null ? 0 : bEzsignfoldertypeSendproofezsignsigner!.hashCode) +
-    (bEzsignfoldertypeIncludeproofsigner == null ? 0 : bEzsignfoldertypeIncludeproofsigner!.hashCode) +
-    (bEzsignfoldertypeIncludeproofuser == null ? 0 : bEzsignfoldertypeIncludeproofuser!.hashCode) +
     (bEzsignfoldertypeAllowdownloadattachmentezsignsigner == null ? 0 : bEzsignfoldertypeAllowdownloadattachmentezsignsigner!.hashCode) +
     (bEzsignfoldertypeAllowdownloadproofezsignsigner == null ? 0 : bEzsignfoldertypeAllowdownloadproofezsignsigner!.hashCode) +
     (bEzsignfoldertypeDelegate == null ? 0 : bEzsignfoldertypeDelegate!.hashCode) +
-    (bEzsignfoldertypeReassign == null ? 0 : bEzsignfoldertypeReassign!.hashCode) +
+    (bEzsignfoldertypeDiscussion == null ? 0 : bEzsignfoldertypeDiscussion!.hashCode) +
     (bEzsignfoldertypeReassignezsignsigner == null ? 0 : bEzsignfoldertypeReassignezsignsigner!.hashCode) +
     (bEzsignfoldertypeReassignuser == null ? 0 : bEzsignfoldertypeReassignuser!.hashCode);
 
   @override
-  String toString() => 'CustomEzsignfoldertypeResponse[pkiEzsignfoldertypeID=$pkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, bEzsignfoldertypeSendproofezsignsigner=$bEzsignfoldertypeSendproofezsignsigner, bEzsignfoldertypeIncludeproofsigner=$bEzsignfoldertypeIncludeproofsigner, bEzsignfoldertypeIncludeproofuser=$bEzsignfoldertypeIncludeproofuser, bEzsignfoldertypeAllowdownloadattachmentezsignsigner=$bEzsignfoldertypeAllowdownloadattachmentezsignsigner, bEzsignfoldertypeAllowdownloadproofezsignsigner=$bEzsignfoldertypeAllowdownloadproofezsignsigner, bEzsignfoldertypeDelegate=$bEzsignfoldertypeDelegate, bEzsignfoldertypeReassign=$bEzsignfoldertypeReassign, bEzsignfoldertypeReassignezsignsigner=$bEzsignfoldertypeReassignezsignsigner, bEzsignfoldertypeReassignuser=$bEzsignfoldertypeReassignuser]';
+  String toString() => 'CustomEzsignfoldertypeResponse[pkiEzsignfoldertypeID=$pkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, bEzsignfoldertypeSendproofezsignsigner=$bEzsignfoldertypeSendproofezsignsigner, bEzsignfoldertypeAllowdownloadattachmentezsignsigner=$bEzsignfoldertypeAllowdownloadattachmentezsignsigner, bEzsignfoldertypeAllowdownloadproofezsignsigner=$bEzsignfoldertypeAllowdownloadproofezsignsigner, bEzsignfoldertypeDelegate=$bEzsignfoldertypeDelegate, bEzsignfoldertypeDiscussion=$bEzsignfoldertypeDiscussion, bEzsignfoldertypeReassignezsignsigner=$bEzsignfoldertypeReassignezsignsigner, bEzsignfoldertypeReassignuser=$bEzsignfoldertypeReassignuser]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -165,16 +142,6 @@ class CustomEzsignfoldertypeResponse {
       json[r'bEzsignfoldertypeSendproofezsignsigner'] = this.bEzsignfoldertypeSendproofezsignsigner;
     } else {
       json[r'bEzsignfoldertypeSendproofezsignsigner'] = null;
-    }
-    if (this.bEzsignfoldertypeIncludeproofsigner != null) {
-      json[r'bEzsignfoldertypeIncludeproofsigner'] = this.bEzsignfoldertypeIncludeproofsigner;
-    } else {
-      json[r'bEzsignfoldertypeIncludeproofsigner'] = null;
-    }
-    if (this.bEzsignfoldertypeIncludeproofuser != null) {
-      json[r'bEzsignfoldertypeIncludeproofuser'] = this.bEzsignfoldertypeIncludeproofuser;
-    } else {
-      json[r'bEzsignfoldertypeIncludeproofuser'] = null;
     }
     if (this.bEzsignfoldertypeAllowdownloadattachmentezsignsigner != null) {
       json[r'bEzsignfoldertypeAllowdownloadattachmentezsignsigner'] = this.bEzsignfoldertypeAllowdownloadattachmentezsignsigner;
@@ -191,10 +158,10 @@ class CustomEzsignfoldertypeResponse {
     } else {
       json[r'bEzsignfoldertypeDelegate'] = null;
     }
-    if (this.bEzsignfoldertypeReassign != null) {
-      json[r'bEzsignfoldertypeReassign'] = this.bEzsignfoldertypeReassign;
+    if (this.bEzsignfoldertypeDiscussion != null) {
+      json[r'bEzsignfoldertypeDiscussion'] = this.bEzsignfoldertypeDiscussion;
     } else {
-      json[r'bEzsignfoldertypeReassign'] = null;
+      json[r'bEzsignfoldertypeDiscussion'] = null;
     }
     if (this.bEzsignfoldertypeReassignezsignsigner != null) {
       json[r'bEzsignfoldertypeReassignezsignsigner'] = this.bEzsignfoldertypeReassignezsignsigner;
@@ -231,12 +198,10 @@ class CustomEzsignfoldertypeResponse {
         pkiEzsignfoldertypeID: mapValueOfType<int>(json, r'pkiEzsignfoldertypeID')!,
         sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX'),
         bEzsignfoldertypeSendproofezsignsigner: mapValueOfType<bool>(json, r'bEzsignfoldertypeSendproofezsignsigner'),
-        bEzsignfoldertypeIncludeproofsigner: mapValueOfType<bool>(json, r'bEzsignfoldertypeIncludeproofsigner'),
-        bEzsignfoldertypeIncludeproofuser: mapValueOfType<bool>(json, r'bEzsignfoldertypeIncludeproofuser'),
         bEzsignfoldertypeAllowdownloadattachmentezsignsigner: mapValueOfType<bool>(json, r'bEzsignfoldertypeAllowdownloadattachmentezsignsigner'),
         bEzsignfoldertypeAllowdownloadproofezsignsigner: mapValueOfType<bool>(json, r'bEzsignfoldertypeAllowdownloadproofezsignsigner'),
         bEzsignfoldertypeDelegate: mapValueOfType<bool>(json, r'bEzsignfoldertypeDelegate'),
-        bEzsignfoldertypeReassign: mapValueOfType<bool>(json, r'bEzsignfoldertypeReassign'),
+        bEzsignfoldertypeDiscussion: mapValueOfType<bool>(json, r'bEzsignfoldertypeDiscussion'),
         bEzsignfoldertypeReassignezsignsigner: mapValueOfType<bool>(json, r'bEzsignfoldertypeReassignezsignsigner'),
         bEzsignfoldertypeReassignuser: mapValueOfType<bool>(json, r'bEzsignfoldertypeReassignuser'),
       );

@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -34,18 +34,6 @@ void main() {
       // TODO
     });
 
-    // THIS FIELD WILL BE DELETED. Whether we include the proof with the signed Ezsigndocument for Ezsignsigners
-    // bool bEzsignfoldertypeIncludeproofsigner
-    test('to test the property `bEzsignfoldertypeIncludeproofsigner`', () async {
-      // TODO
-    });
-
-    // Whether we include the proof with the signed Ezsigndocument for users
-    // bool bEzsignfoldertypeIncludeproofuser
-    test('to test the property `bEzsignfoldertypeIncludeproofuser`', () async {
-      // TODO
-    });
-
     // Whether we allow the Ezsigndocument to be downloaded by an Ezsignsigner
     // bool bEzsignfoldertypeAllowdownloadattachmentezsignsigner
     test('to test the property `bEzsignfoldertypeAllowdownloadattachmentezsignsigner`', () async {
@@ -64,9 +52,9 @@ void main() {
       // TODO
     });
 
-    // Wheter if Reassignment of signature is allowed to another signatory or not
-    // bool bEzsignfoldertypeReassign
-    test('to test the property `bEzsignfoldertypeReassign`', () async {
+    // Wheter if creating a new Discussion is allowed or not
+    // bool bEzsignfoldertypeDiscussion
+    test('to test the property `bEzsignfoldertypeDiscussion`', () async {
       // TODO
     });
 

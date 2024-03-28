@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -52,6 +52,12 @@ void main() {
       // TODO
     });
 
+    // The filename pattern of the Ezsigntemplate
+    // String sEzsigntemplateFilenamepattern
+    test('to test the property `sEzsigntemplateFilenamepattern`', () async {
+      // TODO
+    });
+
     // Whether the Ezsigntemplate can be accessed by admin users only (eUserType=Normal)
     // bool bEzsigntemplateAdminonly
     test('to test the property `bEzsigntemplateAdminonly`', () async {
@@ -66,6 +72,17 @@ void main() {
 
     // CommonAudit objAudit
     test('to test the property `objAudit`', () async {
+      // TODO
+    });
+
+    // Whether the Ezsigntemplate if allowed to edit or not
+    // bool bEzsigntemplateEditallowed
+    test('to test the property `bEzsigntemplateEditallowed`', () async {
+      // TODO
+    });
+
+    // FieldEEzsigntemplateType eEzsigntemplateType
+    test('to test the property `eEzsigntemplateType`', () async {
       // TODO
     });
 

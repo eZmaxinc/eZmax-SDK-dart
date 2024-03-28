@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **aObjEzsigntemplate** | [**List<EzsigntemplateResponseCompound>**](EzsigntemplateResponseCompound.md) |  | [default to const []]
 **aObjEzsigntemplatepackage** | [**List<EzsigntemplatepackageResponseCompound>**](EzsigntemplatepackageResponseCompound.md) |  | [default to const []]
+**aObjEzsigntemplateglobal** | [**List<EzsigntemplateglobalResponseCompound>**](EzsigntemplateglobalResponseCompound.md) |  | [default to const []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

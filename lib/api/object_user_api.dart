@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -67,6 +67,62 @@ class ObjectUserApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'UserCreateObjectV1Response',) as UserCreateObjectV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Create a new User
+  ///
+  /// The endpoint allows to create one or many elements at once.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [UserCreateObjectV2Request] userCreateObjectV2Request (required):
+  Future<Response> userCreateObjectV2WithHttpInfo(UserCreateObjectV2Request userCreateObjectV2Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/2/object/user';
+
+    // ignore: prefer_final_locals
+    Object? postBody = userCreateObjectV2Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Create a new User
+  ///
+  /// The endpoint allows to create one or many elements at once.
+  ///
+  /// Parameters:
+  ///
+  /// * [UserCreateObjectV2Request] userCreateObjectV2Request (required):
+  Future<UserCreateObjectV2Response?> userCreateObjectV2(UserCreateObjectV2Request userCreateObjectV2Request,) async {
+    final response = await userCreateObjectV2WithHttpInfo(userCreateObjectV2Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'UserCreateObjectV2Response',) as UserCreateObjectV2Response;
     
     }
     return null;
@@ -643,6 +699,112 @@ class ObjectUserApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'UserGetSubnetsV1Response',) as UserGetSubnetsV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Get User's Usergroupexternals
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiUserID (required):
+  Future<Response> userGetUsergroupexternalsV1WithHttpInfo(int pkiUserID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/user/{pkiUserID}/getUsergroupexternals'
+      .replaceAll('{pkiUserID}', pkiUserID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Get User's Usergroupexternals
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiUserID (required):
+  Future<UserGetUsergroupexternalsV1Response?> userGetUsergroupexternalsV1(int pkiUserID,) async {
+    final response = await userGetUsergroupexternalsV1WithHttpInfo(pkiUserID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'UserGetUsergroupexternalsV1Response',) as UserGetUsergroupexternalsV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Get User's Usergroups
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiUserID (required):
+  Future<Response> userGetUsergroupsV1WithHttpInfo(int pkiUserID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/user/{pkiUserID}/getUsergroups'
+      .replaceAll('{pkiUserID}', pkiUserID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Get User's Usergroups
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiUserID (required):
+  Future<UserGetUsergroupsV1Response?> userGetUsergroupsV1(int pkiUserID,) async {
+    final response = await userGetUsergroupsV1WithHttpInfo(pkiUserID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'UserGetUsergroupsV1Response',) as UserGetUsergroupsV1Response;
     
     }
     return null;

@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -29,6 +29,7 @@ class WebhookResponseCompound {
     required this.bWebhookSkipsslvalidation,
     required this.objAudit,
     this.sWebhookEvent,
+    this.aObjWebhookheader = const [],
   });
 
   /// The unique ID of the Webhook
@@ -40,6 +41,7 @@ class WebhookResponseCompound {
   /// The unique ID of the Ezsignfoldertype.
   ///
   /// Minimum value: 0
+  /// Maximum value: 65535
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -119,6 +121,8 @@ class WebhookResponseCompound {
   ///
   String? sWebhookEvent;
 
+  List<WebhookheaderResponseCompound> aObjWebhookheader;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is WebhookResponseCompound &&
     other.pkiWebhookID == pkiWebhookID &&
@@ -136,7 +140,8 @@ class WebhookResponseCompound {
     other.bWebhookIssigned == bWebhookIssigned &&
     other.bWebhookSkipsslvalidation == bWebhookSkipsslvalidation &&
     other.objAudit == objAudit &&
-    other.sWebhookEvent == sWebhookEvent;
+    other.sWebhookEvent == sWebhookEvent &&
+    _deepEquality.equals(other.aObjWebhookheader, aObjWebhookheader);
 
   @override
   int get hashCode =>
@@ -156,10 +161,11 @@ class WebhookResponseCompound {
     (bWebhookIssigned.hashCode) +
     (bWebhookSkipsslvalidation.hashCode) +
     (objAudit.hashCode) +
-    (sWebhookEvent == null ? 0 : sWebhookEvent!.hashCode);
+    (sWebhookEvent == null ? 0 : sWebhookEvent!.hashCode) +
+    (aObjWebhookheader.hashCode);
 
   @override
-  String toString() => 'WebhookResponseCompound[pkiWebhookID=$pkiWebhookID, sWebhookDescription=$sWebhookDescription, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, sWebhookUrl=$sWebhookUrl, sWebhookEmailfailed=$sWebhookEmailfailed, sWebhookApikey=$sWebhookApikey, sWebhookSecret=$sWebhookSecret, bWebhookIsactive=$bWebhookIsactive, bWebhookIssigned=$bWebhookIssigned, bWebhookSkipsslvalidation=$bWebhookSkipsslvalidation, objAudit=$objAudit, sWebhookEvent=$sWebhookEvent]';
+  String toString() => 'WebhookResponseCompound[pkiWebhookID=$pkiWebhookID, sWebhookDescription=$sWebhookDescription, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, sWebhookUrl=$sWebhookUrl, sWebhookEmailfailed=$sWebhookEmailfailed, sWebhookApikey=$sWebhookApikey, sWebhookSecret=$sWebhookSecret, bWebhookIsactive=$bWebhookIsactive, bWebhookIssigned=$bWebhookIssigned, bWebhookSkipsslvalidation=$bWebhookSkipsslvalidation, objAudit=$objAudit, sWebhookEvent=$sWebhookEvent, aObjWebhookheader=$aObjWebhookheader]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -207,6 +213,7 @@ class WebhookResponseCompound {
     } else {
       json[r'sWebhookEvent'] = null;
     }
+      json[r'a_objWebhookheader'] = this.aObjWebhookheader;
     return json;
   }
 
@@ -245,6 +252,7 @@ class WebhookResponseCompound {
         bWebhookSkipsslvalidation: mapValueOfType<bool>(json, r'bWebhookSkipsslvalidation')!,
         objAudit: CommonAudit.fromJson(json[r'objAudit'])!,
         sWebhookEvent: mapValueOfType<String>(json, r'sWebhookEvent'),
+        aObjWebhookheader: WebhookheaderResponseCompound.listFromJson(json[r'a_objWebhookheader']),
       );
     }
     return null;

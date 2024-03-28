@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -15,12 +15,14 @@ class UsergroupmembershipResponseCompound {
   UsergroupmembershipResponseCompound({
     required this.pkiUsergroupmembershipID,
     required this.fkiUsergroupID,
-    required this.fkiUserID,
-    required this.sUserFirstname,
-    required this.sUserLastname,
-    required this.sUserLoginname,
+    this.fkiUserID,
+    this.fkiUsergroupexternalID,
+    this.sUserFirstname,
+    this.sUserLastname,
+    this.sUserLoginname,
     this.sEmailAddress,
     required this.sUsergroupNameX,
+    this.sUsergroupexternalName,
   });
 
   /// The unique ID of the Usergroupmembership
@@ -38,16 +40,52 @@ class UsergroupmembershipResponseCompound {
   /// The unique ID of the User
   ///
   /// Minimum value: 0
-  int fkiUserID;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiUserID;
+
+  /// The unique ID of the Usergroupexternal
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 255
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiUsergroupexternalID;
 
   /// The first name of the user
-  String sUserFirstname;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sUserFirstname;
 
   /// The last name of the user
-  String sUserLastname;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sUserLastname;
 
   /// The login name of the User.
-  String sUserLoginname;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sUserLoginname;
 
   /// The email address.
   ///
@@ -61,46 +99,85 @@ class UsergroupmembershipResponseCompound {
   /// The Name of the Usergroup in the language of the requester
   String sUsergroupNameX;
 
+  /// The name of the Usergroupexternal
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sUsergroupexternalName;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is UsergroupmembershipResponseCompound &&
     other.pkiUsergroupmembershipID == pkiUsergroupmembershipID &&
     other.fkiUsergroupID == fkiUsergroupID &&
     other.fkiUserID == fkiUserID &&
+    other.fkiUsergroupexternalID == fkiUsergroupexternalID &&
     other.sUserFirstname == sUserFirstname &&
     other.sUserLastname == sUserLastname &&
     other.sUserLoginname == sUserLoginname &&
     other.sEmailAddress == sEmailAddress &&
-    other.sUsergroupNameX == sUsergroupNameX;
+    other.sUsergroupNameX == sUsergroupNameX &&
+    other.sUsergroupexternalName == sUsergroupexternalName;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiUsergroupmembershipID.hashCode) +
     (fkiUsergroupID.hashCode) +
-    (fkiUserID.hashCode) +
-    (sUserFirstname.hashCode) +
-    (sUserLastname.hashCode) +
-    (sUserLoginname.hashCode) +
+    (fkiUserID == null ? 0 : fkiUserID!.hashCode) +
+    (fkiUsergroupexternalID == null ? 0 : fkiUsergroupexternalID!.hashCode) +
+    (sUserFirstname == null ? 0 : sUserFirstname!.hashCode) +
+    (sUserLastname == null ? 0 : sUserLastname!.hashCode) +
+    (sUserLoginname == null ? 0 : sUserLoginname!.hashCode) +
     (sEmailAddress == null ? 0 : sEmailAddress!.hashCode) +
-    (sUsergroupNameX.hashCode);
+    (sUsergroupNameX.hashCode) +
+    (sUsergroupexternalName == null ? 0 : sUsergroupexternalName!.hashCode);
 
   @override
-  String toString() => 'UsergroupmembershipResponseCompound[pkiUsergroupmembershipID=$pkiUsergroupmembershipID, fkiUsergroupID=$fkiUsergroupID, fkiUserID=$fkiUserID, sUserFirstname=$sUserFirstname, sUserLastname=$sUserLastname, sUserLoginname=$sUserLoginname, sEmailAddress=$sEmailAddress, sUsergroupNameX=$sUsergroupNameX]';
+  String toString() => 'UsergroupmembershipResponseCompound[pkiUsergroupmembershipID=$pkiUsergroupmembershipID, fkiUsergroupID=$fkiUsergroupID, fkiUserID=$fkiUserID, fkiUsergroupexternalID=$fkiUsergroupexternalID, sUserFirstname=$sUserFirstname, sUserLastname=$sUserLastname, sUserLoginname=$sUserLoginname, sEmailAddress=$sEmailAddress, sUsergroupNameX=$sUsergroupNameX, sUsergroupexternalName=$sUsergroupexternalName]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiUsergroupmembershipID'] = this.pkiUsergroupmembershipID;
       json[r'fkiUsergroupID'] = this.fkiUsergroupID;
+    if (this.fkiUserID != null) {
       json[r'fkiUserID'] = this.fkiUserID;
+    } else {
+      json[r'fkiUserID'] = null;
+    }
+    if (this.fkiUsergroupexternalID != null) {
+      json[r'fkiUsergroupexternalID'] = this.fkiUsergroupexternalID;
+    } else {
+      json[r'fkiUsergroupexternalID'] = null;
+    }
+    if (this.sUserFirstname != null) {
       json[r'sUserFirstname'] = this.sUserFirstname;
+    } else {
+      json[r'sUserFirstname'] = null;
+    }
+    if (this.sUserLastname != null) {
       json[r'sUserLastname'] = this.sUserLastname;
+    } else {
+      json[r'sUserLastname'] = null;
+    }
+    if (this.sUserLoginname != null) {
       json[r'sUserLoginname'] = this.sUserLoginname;
+    } else {
+      json[r'sUserLoginname'] = null;
+    }
     if (this.sEmailAddress != null) {
       json[r'sEmailAddress'] = this.sEmailAddress;
     } else {
       json[r'sEmailAddress'] = null;
     }
       json[r'sUsergroupNameX'] = this.sUsergroupNameX;
+    if (this.sUsergroupexternalName != null) {
+      json[r'sUsergroupexternalName'] = this.sUsergroupexternalName;
+    } else {
+      json[r'sUsergroupexternalName'] = null;
+    }
     return json;
   }
 
@@ -125,12 +202,14 @@ class UsergroupmembershipResponseCompound {
       return UsergroupmembershipResponseCompound(
         pkiUsergroupmembershipID: mapValueOfType<int>(json, r'pkiUsergroupmembershipID')!,
         fkiUsergroupID: mapValueOfType<int>(json, r'fkiUsergroupID')!,
-        fkiUserID: mapValueOfType<int>(json, r'fkiUserID')!,
-        sUserFirstname: mapValueOfType<String>(json, r'sUserFirstname')!,
-        sUserLastname: mapValueOfType<String>(json, r'sUserLastname')!,
-        sUserLoginname: mapValueOfType<String>(json, r'sUserLoginname')!,
+        fkiUserID: mapValueOfType<int>(json, r'fkiUserID'),
+        fkiUsergroupexternalID: mapValueOfType<int>(json, r'fkiUsergroupexternalID'),
+        sUserFirstname: mapValueOfType<String>(json, r'sUserFirstname'),
+        sUserLastname: mapValueOfType<String>(json, r'sUserLastname'),
+        sUserLoginname: mapValueOfType<String>(json, r'sUserLoginname'),
         sEmailAddress: mapValueOfType<String>(json, r'sEmailAddress'),
         sUsergroupNameX: mapValueOfType<String>(json, r'sUsergroupNameX')!,
+        sUsergroupexternalName: mapValueOfType<String>(json, r'sUsergroupexternalName'),
       );
     }
     return null;
@@ -180,10 +259,6 @@ class UsergroupmembershipResponseCompound {
   static const requiredKeys = <String>{
     'pkiUsergroupmembershipID',
     'fkiUsergroupID',
-    'fkiUserID',
-    'sUserFirstname',
-    'sUserLastname',
-    'sUserLoginname',
     'sUsergroupNameX',
   };
 }

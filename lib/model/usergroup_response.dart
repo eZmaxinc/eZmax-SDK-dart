@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -15,6 +15,7 @@ class UsergroupResponse {
   UsergroupResponse({
     required this.pkiUsergroupID,
     required this.objUsergroupName,
+    this.sUsergroupNameX,
   });
 
   /// The unique ID of the Usergroup
@@ -25,24 +26,40 @@ class UsergroupResponse {
 
   MultilingualUsergroupName objUsergroupName;
 
+  /// The Name of the Usergroup in the language of the requester
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sUsergroupNameX;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is UsergroupResponse &&
     other.pkiUsergroupID == pkiUsergroupID &&
-    other.objUsergroupName == objUsergroupName;
+    other.objUsergroupName == objUsergroupName &&
+    other.sUsergroupNameX == sUsergroupNameX;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiUsergroupID.hashCode) +
-    (objUsergroupName.hashCode);
+    (objUsergroupName.hashCode) +
+    (sUsergroupNameX == null ? 0 : sUsergroupNameX!.hashCode);
 
   @override
-  String toString() => 'UsergroupResponse[pkiUsergroupID=$pkiUsergroupID, objUsergroupName=$objUsergroupName]';
+  String toString() => 'UsergroupResponse[pkiUsergroupID=$pkiUsergroupID, objUsergroupName=$objUsergroupName, sUsergroupNameX=$sUsergroupNameX]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiUsergroupID'] = this.pkiUsergroupID;
       json[r'objUsergroupName'] = this.objUsergroupName;
+    if (this.sUsergroupNameX != null) {
+      json[r'sUsergroupNameX'] = this.sUsergroupNameX;
+    } else {
+      json[r'sUsergroupNameX'] = null;
+    }
     return json;
   }
 
@@ -67,6 +84,7 @@ class UsergroupResponse {
       return UsergroupResponse(
         pkiUsergroupID: mapValueOfType<int>(json, r'pkiUsergroupID')!,
         objUsergroupName: MultilingualUsergroupName.fromJson(json[r'objUsergroupName'])!,
+        sUsergroupNameX: mapValueOfType<String>(json, r'sUsergroupNameX'),
       );
     }
     return null;

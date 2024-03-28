@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -95,6 +95,30 @@ void main() {
     // The total number of already signed signature blocks in all Ezsigndocuments in the folder
     // int iEzsignsignatureSigned
     test('to test the property `iEzsignsignatureSigned`', () async {
+      // TODO
+    });
+
+    // The total number of Ezsignformfieldgroup in all Ezsigndocuments in the folder
+    // int iEzsignformfieldgroup
+    test('to test the property `iEzsignformfieldgroup`', () async {
+      // TODO
+    });
+
+    // The total number of completed Ezsignformfieldgroup in all Ezsigndocuments in the folder
+    // int iEzsignformfieldgroupCompleted
+    test('to test the property `iEzsignformfieldgroupCompleted`', () async {
+      // TODO
+    });
+
+    // Whether the Ezsignform/Ezsignsignatures has dependencies or not
+    // bool bEzsignformHasdependencies
+    test('to test the property `bEzsignformHasdependencies`', () async {
+      // TODO
+    });
+
+    // Whether the Ezsignform/Ezsignsignatures has dependencies or not
+    // String dEzsignfolderCompletedpercentage
+    test('to test the property `dEzsignfolderCompletedpercentage`', () async {
       // TODO
     });
 

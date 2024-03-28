@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -23,14 +23,16 @@ class FieldEUserEzsignprepaid {
 
   String toJson() => value;
 
+  static const no = FieldEUserEzsignprepaid._(r'No');
   static const basic = FieldEUserEzsignprepaid._(r'Basic');
-  static const unlimited = FieldEUserEzsignprepaid._(r'Unlimited');
+  static const standard = FieldEUserEzsignprepaid._(r'Standard');
   static const pro = FieldEUserEzsignprepaid._(r'Pro');
 
   /// List of all possible values in this [enum][FieldEUserEzsignprepaid].
   static const values = <FieldEUserEzsignprepaid>[
+    no,
     basic,
-    unlimited,
+    standard,
     pro,
   ];
 
@@ -70,8 +72,9 @@ class FieldEUserEzsignprepaidTypeTransformer {
   FieldEUserEzsignprepaid? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data) {
+        case r'No': return FieldEUserEzsignprepaid.no;
         case r'Basic': return FieldEUserEzsignprepaid.basic;
-        case r'Unlimited': return FieldEUserEzsignprepaid.unlimited;
+        case r'Standard': return FieldEUserEzsignprepaid.standard;
         case r'Pro': return FieldEUserEzsignprepaid.pro;
         default:
           if (!allowNull) {

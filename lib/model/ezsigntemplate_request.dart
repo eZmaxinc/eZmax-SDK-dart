@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -17,6 +17,7 @@ class EzsigntemplateRequest {
     required this.fkiEzsignfoldertypeID,
     required this.fkiLanguageID,
     required this.sEzsigntemplateDescription,
+    this.sEzsigntemplateFilenamepattern,
     required this.bEzsigntemplateAdminonly,
   });
 
@@ -34,6 +35,7 @@ class EzsigntemplateRequest {
   /// The unique ID of the Ezsignfoldertype.
   ///
   /// Minimum value: 0
+  /// Maximum value: 65535
   int fkiEzsignfoldertypeID;
 
   /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
@@ -45,6 +47,15 @@ class EzsigntemplateRequest {
   /// The description of the Ezsigntemplate
   String sEzsigntemplateDescription;
 
+  /// The filename pattern of the Ezsigntemplate
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEzsigntemplateFilenamepattern;
+
   /// Whether the Ezsigntemplate can be accessed by admin users only (eUserType=Normal)
   bool bEzsigntemplateAdminonly;
 
@@ -54,6 +65,7 @@ class EzsigntemplateRequest {
     other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
     other.fkiLanguageID == fkiLanguageID &&
     other.sEzsigntemplateDescription == sEzsigntemplateDescription &&
+    other.sEzsigntemplateFilenamepattern == sEzsigntemplateFilenamepattern &&
     other.bEzsigntemplateAdminonly == bEzsigntemplateAdminonly;
 
   @override
@@ -63,10 +75,11 @@ class EzsigntemplateRequest {
     (fkiEzsignfoldertypeID.hashCode) +
     (fkiLanguageID.hashCode) +
     (sEzsigntemplateDescription.hashCode) +
+    (sEzsigntemplateFilenamepattern == null ? 0 : sEzsigntemplateFilenamepattern!.hashCode) +
     (bEzsigntemplateAdminonly.hashCode);
 
   @override
-  String toString() => 'EzsigntemplateRequest[pkiEzsigntemplateID=$pkiEzsigntemplateID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiLanguageID=$fkiLanguageID, sEzsigntemplateDescription=$sEzsigntemplateDescription, bEzsigntemplateAdminonly=$bEzsigntemplateAdminonly]';
+  String toString() => 'EzsigntemplateRequest[pkiEzsigntemplateID=$pkiEzsigntemplateID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiLanguageID=$fkiLanguageID, sEzsigntemplateDescription=$sEzsigntemplateDescription, sEzsigntemplateFilenamepattern=$sEzsigntemplateFilenamepattern, bEzsigntemplateAdminonly=$bEzsigntemplateAdminonly]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -78,6 +91,11 @@ class EzsigntemplateRequest {
       json[r'fkiEzsignfoldertypeID'] = this.fkiEzsignfoldertypeID;
       json[r'fkiLanguageID'] = this.fkiLanguageID;
       json[r'sEzsigntemplateDescription'] = this.sEzsigntemplateDescription;
+    if (this.sEzsigntemplateFilenamepattern != null) {
+      json[r'sEzsigntemplateFilenamepattern'] = this.sEzsigntemplateFilenamepattern;
+    } else {
+      json[r'sEzsigntemplateFilenamepattern'] = null;
+    }
       json[r'bEzsigntemplateAdminonly'] = this.bEzsigntemplateAdminonly;
     return json;
   }
@@ -105,6 +123,7 @@ class EzsigntemplateRequest {
         fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID')!,
         fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID')!,
         sEzsigntemplateDescription: mapValueOfType<String>(json, r'sEzsigntemplateDescription')!,
+        sEzsigntemplateFilenamepattern: mapValueOfType<String>(json, r'sEzsigntemplateFilenamepattern'),
         bEzsigntemplateAdminonly: mapValueOfType<bool>(json, r'bEzsigntemplateAdminonly')!,
       );
     }

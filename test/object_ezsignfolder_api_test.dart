@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -82,6 +82,15 @@ void main() {
     //
     //Future<EzsignfolderEditObjectV1Response> ezsignfolderEditObjectV1(int pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request) async
     test('test ezsignfolderEditObjectV1', () async {
+      // TODO
+    });
+
+    // End prematurely
+    //
+    // End prematurely all Ezsigndocument of Ezsignfolder when some signatures are still required
+    //
+    //Future<EzsignfolderEndPrematurelyV1Response> ezsignfolderEndPrematurelyV1(int pkiEzsignfolderID, Object body) async
+    test('test ezsignfolderEndPrematurelyV1', () async {
       // TODO
     });
 
@@ -240,15 +249,6 @@ void main() {
     //
     //Future<EzsignfolderSendV1Response> ezsignfolderSendV1(int pkiEzsignfolderID, EzsignfolderSendV1Request ezsignfolderSendV1Request) async
     test('test ezsignfolderSendV1', () async {
-      // TODO
-    });
-
-    // Send the Ezsignfolder to the signatories for signature
-    //
-    // 
-    //
-    //Future<EzsignfolderSendV2Response> ezsignfolderSendV2(int pkiEzsignfolderID, EzsignfolderSendV2Request ezsignfolderSendV2Request) async
-    test('test ezsignfolderSendV2', () async {
       // TODO
     });
 

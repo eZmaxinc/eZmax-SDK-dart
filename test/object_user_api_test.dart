@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -23,6 +23,15 @@ void main() {
     //
     //Future<UserCreateObjectV1Response> userCreateObjectV1(UserCreateObjectV1Request userCreateObjectV1Request) async
     test('test userCreateObjectV1', () async {
+      // TODO
+    });
+
+    // Create a new User
+    //
+    // The endpoint allows to create one or many elements at once.
+    //
+    //Future<UserCreateObjectV2Response> userCreateObjectV2(UserCreateObjectV2Request userCreateObjectV2Request) async
+    test('test userCreateObjectV2', () async {
       // TODO
     });
 
@@ -98,6 +107,20 @@ void main() {
     //
     //Future<UserGetSubnetsV1Response> userGetSubnetsV1(int pkiUserID) async
     test('test userGetSubnetsV1', () async {
+      // TODO
+    });
+
+    // Get User's Usergroupexternals
+    //
+    //Future<UserGetUsergroupexternalsV1Response> userGetUsergroupexternalsV1(int pkiUserID) async
+    test('test userGetUsergroupexternalsV1', () async {
+      // TODO
+    });
+
+    // Get User's Usergroups
+    //
+    //Future<UserGetUsergroupsV1Response> userGetUsergroupsV1(int pkiUserID) async
+    test('test userGetUsergroupsV1', () async {
       // TODO
     });
 

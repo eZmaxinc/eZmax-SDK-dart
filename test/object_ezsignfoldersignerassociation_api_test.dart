@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -17,6 +17,15 @@ void main() {
   // final instance = ObjectEzsignfoldersignerassociationApi();
 
   group('tests for ObjectEzsignfoldersignerassociationApi', () {
+    // Creates an Url to allow embedded signing
+    //
+    // This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
+    //
+    //Future<EzsignfoldersignerassociationCreateEmbeddedUrlV1Response> ezsignfoldersignerassociationCreateEmbeddedUrlV1(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationCreateEmbeddedUrlV1Request ezsignfoldersignerassociationCreateEmbeddedUrlV1Request) async
+    test('test ezsignfoldersignerassociationCreateEmbeddedUrlV1', () async {
+      // TODO
+    });
+
     // Create a new Ezsignfoldersignerassociation
     //
     // The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.

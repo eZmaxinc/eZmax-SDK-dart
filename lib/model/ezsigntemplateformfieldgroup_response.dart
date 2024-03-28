@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -16,7 +16,7 @@ class EzsigntemplateformfieldgroupResponse {
     required this.pkiEzsigntemplateformfieldgroupID,
     required this.fkiEzsigntemplatedocumentID,
     required this.eEzsigntemplateformfieldgroupType,
-    required this.eEzsigntemplateformfieldgroupSignerrequirement,
+    this.eEzsigntemplateformfieldgroupSignerrequirement,
     required this.sEzsigntemplateformfieldgroupLabel,
     required this.iEzsigntemplateformfieldgroupStep,
     this.sEzsigntemplateformfieldgroupDefaultvalue,
@@ -43,7 +43,13 @@ class EzsigntemplateformfieldgroupResponse {
 
   FieldEEzsigntemplateformfieldgroupType eEzsigntemplateformfieldgroupType;
 
-  FieldEEzsigntemplateformfieldgroupSignerrequirement eEzsigntemplateformfieldgroupSignerrequirement;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEEzsigntemplateformfieldgroupSignerrequirement? eEzsigntemplateformfieldgroupSignerrequirement;
 
   /// The Label for the Ezsigntemplateformfieldgroup
   String sEzsigntemplateformfieldgroupLabel;
@@ -53,7 +59,7 @@ class EzsigntemplateformfieldgroupResponse {
   /// Minimum value: 1
   int iEzsigntemplateformfieldgroupStep;
 
-  /// The default value for the Ezsigntemplateformfieldgroup
+  /// The default value for the Ezsigntemplateformfieldgroup  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -155,7 +161,7 @@ class EzsigntemplateformfieldgroupResponse {
     (pkiEzsigntemplateformfieldgroupID.hashCode) +
     (fkiEzsigntemplatedocumentID.hashCode) +
     (eEzsigntemplateformfieldgroupType.hashCode) +
-    (eEzsigntemplateformfieldgroupSignerrequirement.hashCode) +
+    (eEzsigntemplateformfieldgroupSignerrequirement == null ? 0 : eEzsigntemplateformfieldgroupSignerrequirement!.hashCode) +
     (sEzsigntemplateformfieldgroupLabel.hashCode) +
     (iEzsigntemplateformfieldgroupStep.hashCode) +
     (sEzsigntemplateformfieldgroupDefaultvalue == null ? 0 : sEzsigntemplateformfieldgroupDefaultvalue!.hashCode) +
@@ -177,7 +183,11 @@ class EzsigntemplateformfieldgroupResponse {
       json[r'pkiEzsigntemplateformfieldgroupID'] = this.pkiEzsigntemplateformfieldgroupID;
       json[r'fkiEzsigntemplatedocumentID'] = this.fkiEzsigntemplatedocumentID;
       json[r'eEzsigntemplateformfieldgroupType'] = this.eEzsigntemplateformfieldgroupType;
+    if (this.eEzsigntemplateformfieldgroupSignerrequirement != null) {
       json[r'eEzsigntemplateformfieldgroupSignerrequirement'] = this.eEzsigntemplateformfieldgroupSignerrequirement;
+    } else {
+      json[r'eEzsigntemplateformfieldgroupSignerrequirement'] = null;
+    }
       json[r'sEzsigntemplateformfieldgroupLabel'] = this.sEzsigntemplateformfieldgroupLabel;
       json[r'iEzsigntemplateformfieldgroupStep'] = this.iEzsigntemplateformfieldgroupStep;
     if (this.sEzsigntemplateformfieldgroupDefaultvalue != null) {
@@ -243,7 +253,7 @@ class EzsigntemplateformfieldgroupResponse {
         pkiEzsigntemplateformfieldgroupID: mapValueOfType<int>(json, r'pkiEzsigntemplateformfieldgroupID')!,
         fkiEzsigntemplatedocumentID: mapValueOfType<int>(json, r'fkiEzsigntemplatedocumentID')!,
         eEzsigntemplateformfieldgroupType: FieldEEzsigntemplateformfieldgroupType.fromJson(json[r'eEzsigntemplateformfieldgroupType'])!,
-        eEzsigntemplateformfieldgroupSignerrequirement: FieldEEzsigntemplateformfieldgroupSignerrequirement.fromJson(json[r'eEzsigntemplateformfieldgroupSignerrequirement'])!,
+        eEzsigntemplateformfieldgroupSignerrequirement: FieldEEzsigntemplateformfieldgroupSignerrequirement.fromJson(json[r'eEzsigntemplateformfieldgroupSignerrequirement']),
         sEzsigntemplateformfieldgroupLabel: mapValueOfType<String>(json, r'sEzsigntemplateformfieldgroupLabel')!,
         iEzsigntemplateformfieldgroupStep: mapValueOfType<int>(json, r'iEzsigntemplateformfieldgroupStep')!,
         sEzsigntemplateformfieldgroupDefaultvalue: mapValueOfType<String>(json, r'sEzsigntemplateformfieldgroupDefaultvalue'),
@@ -306,7 +316,6 @@ class EzsigntemplateformfieldgroupResponse {
     'pkiEzsigntemplateformfieldgroupID',
     'fkiEzsigntemplatedocumentID',
     'eEzsigntemplateformfieldgroupType',
-    'eEzsigntemplateformfieldgroupSignerrequirement',
     'sEzsigntemplateformfieldgroupLabel',
     'iEzsigntemplateformfieldgroupStep',
     'iEzsigntemplateformfieldgroupFilledmin',

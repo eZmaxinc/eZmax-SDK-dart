@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -24,16 +24,28 @@ class FieldEWebhookEzsignevent {
   String toJson() => value;
 
   static const documentCompleted = FieldEWebhookEzsignevent._(r'DocumentCompleted');
+  static const documentFormCompleted = FieldEWebhookEzsignevent._(r'DocumentFormCompleted');
+  static const documentUnsent = FieldEWebhookEzsignevent._(r'DocumentUnsent');
   static const ezsignsignerAcceptclause = FieldEWebhookEzsignevent._(r'EzsignsignerAcceptclause');
   static const ezsignsignerConnect = FieldEWebhookEzsignevent._(r'EzsignsignerConnect');
   static const folderCompleted = FieldEWebhookEzsignevent._(r'FolderCompleted');
+  static const folderDisposed = FieldEWebhookEzsignevent._(r'FolderDisposed');
+  static const folderSent = FieldEWebhookEzsignevent._(r'FolderSent');
+  static const folderUnsent = FieldEWebhookEzsignevent._(r'FolderUnsent');
+  static const signatureSigned = FieldEWebhookEzsignevent._(r'SignatureSigned');
 
   /// List of all possible values in this [enum][FieldEWebhookEzsignevent].
   static const values = <FieldEWebhookEzsignevent>[
     documentCompleted,
+    documentFormCompleted,
+    documentUnsent,
     ezsignsignerAcceptclause,
     ezsignsignerConnect,
     folderCompleted,
+    folderDisposed,
+    folderSent,
+    folderUnsent,
+    signatureSigned,
   ];
 
   static FieldEWebhookEzsignevent? fromJson(dynamic value) => FieldEWebhookEzsigneventTypeTransformer().decode(value);
@@ -73,9 +85,15 @@ class FieldEWebhookEzsigneventTypeTransformer {
     if (data != null) {
       switch (data) {
         case r'DocumentCompleted': return FieldEWebhookEzsignevent.documentCompleted;
+        case r'DocumentFormCompleted': return FieldEWebhookEzsignevent.documentFormCompleted;
+        case r'DocumentUnsent': return FieldEWebhookEzsignevent.documentUnsent;
         case r'EzsignsignerAcceptclause': return FieldEWebhookEzsignevent.ezsignsignerAcceptclause;
         case r'EzsignsignerConnect': return FieldEWebhookEzsignevent.ezsignsignerConnect;
         case r'FolderCompleted': return FieldEWebhookEzsignevent.folderCompleted;
+        case r'FolderDisposed': return FieldEWebhookEzsignevent.folderDisposed;
+        case r'FolderSent': return FieldEWebhookEzsignevent.folderSent;
+        case r'FolderUnsent': return FieldEWebhookEzsignevent.folderUnsent;
+        case r'SignatureSigned': return FieldEWebhookEzsignevent.signatureSigned;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');

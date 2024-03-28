@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -38,6 +38,17 @@ void main() {
       // TODO
     });
 
+    // FieldEBrandingLogointerface eBrandingLogointerface
+    test('to test the property `eBrandingLogointerface`', () async {
+      // TODO
+    });
+
+    // The Base64 encoded binary content of the branding logo. This need to match image type selected in eBrandingLogointerface if you supply an image. If you select 'Default', the logo will be deleted and the default one will be used.
+    // String sBrandingLogointerfaceBase64
+    test('to test the property `sBrandingLogointerfaceBase64`', () async {
+      // TODO
+    });
+
     // The color of the text. This is a RGB color converted into integer
     // int iBrandingColortext
     test('to test the property `iBrandingColortext`', () async {
@@ -71,6 +82,12 @@ void main() {
     // The color of the background of the small box. This is a RGB color converted into integer
     // int iBrandingColorbackgroundsmallbox
     test('to test the property `iBrandingColorbackgroundsmallbox`', () async {
+      // TODO
+    });
+
+    // The color of the interface. This is a RGB color converted into integer
+    // int iBrandingInterfacecolor
+    test('to test the property `iBrandingInterfacecolor`', () async {
       // TODO
     });
 

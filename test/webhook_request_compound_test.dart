@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -76,6 +76,11 @@ void main() {
     // Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use
     // bool bWebhookSkipsslvalidation
     test('to test the property `bWebhookSkipsslvalidation`', () async {
+      // TODO
+    });
+
+    // List<WebhookheaderRequestCompound> aObjWebhookheader (default value: const [])
+    test('to test the property `aObjWebhookheader`', () async {
       // TODO
     });
 

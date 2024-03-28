@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.12
+// @dart=2.18
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -35,6 +35,15 @@ void main() {
       // TODO
     });
 
+    // Create a new Ezsigntemplate
+    //
+    // The endpoint allows to create one or many elements at once.
+    //
+    //Future<EzsigntemplateCreateObjectV2Response> ezsigntemplateCreateObjectV2(EzsigntemplateCreateObjectV2Request ezsigntemplateCreateObjectV2Request) async
+    test('test ezsigntemplateCreateObjectV2', () async {
+      // TODO
+    });
+
     // Delete an existing Ezsigntemplate
     //
     // 
@@ -50,6 +59,15 @@ void main() {
     //
     //Future<EzsigntemplateEditObjectV1Response> ezsigntemplateEditObjectV1(int pkiEzsigntemplateID, EzsigntemplateEditObjectV1Request ezsigntemplateEditObjectV1Request) async
     test('test ezsigntemplateEditObjectV1', () async {
+      // TODO
+    });
+
+    // Edit an existing Ezsigntemplate
+    //
+    // 
+    //
+    //Future<EzsigntemplateEditObjectV2Response> ezsigntemplateEditObjectV2(int pkiEzsigntemplateID, EzsigntemplateEditObjectV2Request ezsigntemplateEditObjectV2Request) async
+    test('test ezsigntemplateEditObjectV2', () async {
       // TODO
     });
 
