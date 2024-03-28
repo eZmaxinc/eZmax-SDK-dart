@@ -15,7 +15,7 @@ class EzsignfoldersignerassociationCreateEmbeddedUrlV1Request {
   EzsignfoldersignerassociationCreateEmbeddedUrlV1Request({
     this.sReturnUrl,
     this.sIframedomain,
-    this.bIsiframe,
+    this.bIsIframe,
   });
 
   /// The return Url to redirect after the signing is completed
@@ -43,23 +43,23 @@ class EzsignfoldersignerassociationCreateEmbeddedUrlV1Request {
   /// source code must fall back to having a nullable type.
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
-  bool? bIsiframe;
+  bool? bIsIframe;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfoldersignerassociationCreateEmbeddedUrlV1Request &&
     other.sReturnUrl == sReturnUrl &&
     other.sIframedomain == sIframedomain &&
-    other.bIsiframe == bIsiframe;
+    other.bIsIframe == bIsIframe;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (sReturnUrl == null ? 0 : sReturnUrl!.hashCode) +
     (sIframedomain == null ? 0 : sIframedomain!.hashCode) +
-    (bIsiframe == null ? 0 : bIsiframe!.hashCode);
+    (bIsIframe == null ? 0 : bIsIframe!.hashCode);
 
   @override
-  String toString() => 'EzsignfoldersignerassociationCreateEmbeddedUrlV1Request[sReturnUrl=$sReturnUrl, sIframedomain=$sIframedomain, bIsiframe=$bIsiframe]';
+  String toString() => 'EzsignfoldersignerassociationCreateEmbeddedUrlV1Request[sReturnUrl=$sReturnUrl, sIframedomain=$sIframedomain, bIsIframe=$bIsIframe]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -73,10 +73,10 @@ class EzsignfoldersignerassociationCreateEmbeddedUrlV1Request {
     } else {
       json[r'sIframedomain'] = null;
     }
-    if (this.bIsiframe != null) {
-      json[r'bIsiframe'] = this.bIsiframe;
+    if (this.bIsIframe != null) {
+      json[r'bIsIframe'] = this.bIsIframe;
     } else {
-      json[r'bIsiframe'] = null;
+      json[r'bIsIframe'] = null;
     }
     return json;
   }
@@ -102,7 +102,7 @@ class EzsignfoldersignerassociationCreateEmbeddedUrlV1Request {
       return EzsignfoldersignerassociationCreateEmbeddedUrlV1Request(
         sReturnUrl: mapValueOfType<String>(json, r'sReturnUrl'),
         sIframedomain: mapValueOfType<String>(json, r'sIframedomain'),
-        bIsiframe: mapValueOfType<bool>(json, r'bIsiframe'),
+        bIsIframe: mapValueOfType<bool>(json, r'bIsIframe'),
       );
     }
     return null;

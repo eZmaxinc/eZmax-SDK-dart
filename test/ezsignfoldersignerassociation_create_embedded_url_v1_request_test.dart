@@ -29,8 +29,8 @@ void main() {
     });
 
     // Whether the url would be in an iFrame or not
-    // bool bIsiframe
-    test('to test the property `bIsiframe`', () async {
+    // bool bIsIframe
+    test('to test the property `bIsIframe`', () async {
       // TODO
     });
 
