@@ -18,6 +18,7 @@ class EzsignfoldersignerassociationResponse {
     required this.bEzsignfoldersignerassociationDelayedsend,
     required this.bEzsignfoldersignerassociationReceivecopy,
     required this.tEzsignfoldersignerassociationMessage,
+    required this.bEzsignfoldersignerassociationAllowsigninginperson,
   });
 
   /// The unique ID of the Ezsignfoldersignerassociation
@@ -39,13 +40,17 @@ class EzsignfoldersignerassociationResponse {
   /// A custom text message that will be added to the email sent.
   String tEzsignfoldersignerassociationMessage;
 
+  /// If the Ezsignfoldersignerassociation is allowed to sign in person or not
+  bool bEzsignfoldersignerassociationAllowsigninginperson;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfoldersignerassociationResponse &&
     other.pkiEzsignfoldersignerassociationID == pkiEzsignfoldersignerassociationID &&
     other.fkiEzsignfolderID == fkiEzsignfolderID &&
     other.bEzsignfoldersignerassociationDelayedsend == bEzsignfoldersignerassociationDelayedsend &&
     other.bEzsignfoldersignerassociationReceivecopy == bEzsignfoldersignerassociationReceivecopy &&
-    other.tEzsignfoldersignerassociationMessage == tEzsignfoldersignerassociationMessage;
+    other.tEzsignfoldersignerassociationMessage == tEzsignfoldersignerassociationMessage &&
+    other.bEzsignfoldersignerassociationAllowsigninginperson == bEzsignfoldersignerassociationAllowsigninginperson;
 
   @override
   int get hashCode =>
@@ -54,10 +59,11 @@ class EzsignfoldersignerassociationResponse {
     (fkiEzsignfolderID.hashCode) +
     (bEzsignfoldersignerassociationDelayedsend.hashCode) +
     (bEzsignfoldersignerassociationReceivecopy.hashCode) +
-    (tEzsignfoldersignerassociationMessage.hashCode);
+    (tEzsignfoldersignerassociationMessage.hashCode) +
+    (bEzsignfoldersignerassociationAllowsigninginperson.hashCode);
 
   @override
-  String toString() => 'EzsignfoldersignerassociationResponse[pkiEzsignfoldersignerassociationID=$pkiEzsignfoldersignerassociationID, fkiEzsignfolderID=$fkiEzsignfolderID, bEzsignfoldersignerassociationDelayedsend=$bEzsignfoldersignerassociationDelayedsend, bEzsignfoldersignerassociationReceivecopy=$bEzsignfoldersignerassociationReceivecopy, tEzsignfoldersignerassociationMessage=$tEzsignfoldersignerassociationMessage]';
+  String toString() => 'EzsignfoldersignerassociationResponse[pkiEzsignfoldersignerassociationID=$pkiEzsignfoldersignerassociationID, fkiEzsignfolderID=$fkiEzsignfolderID, bEzsignfoldersignerassociationDelayedsend=$bEzsignfoldersignerassociationDelayedsend, bEzsignfoldersignerassociationReceivecopy=$bEzsignfoldersignerassociationReceivecopy, tEzsignfoldersignerassociationMessage=$tEzsignfoldersignerassociationMessage, bEzsignfoldersignerassociationAllowsigninginperson=$bEzsignfoldersignerassociationAllowsigninginperson]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -66,6 +72,7 @@ class EzsignfoldersignerassociationResponse {
       json[r'bEzsignfoldersignerassociationDelayedsend'] = this.bEzsignfoldersignerassociationDelayedsend;
       json[r'bEzsignfoldersignerassociationReceivecopy'] = this.bEzsignfoldersignerassociationReceivecopy;
       json[r'tEzsignfoldersignerassociationMessage'] = this.tEzsignfoldersignerassociationMessage;
+      json[r'bEzsignfoldersignerassociationAllowsigninginperson'] = this.bEzsignfoldersignerassociationAllowsigninginperson;
     return json;
   }
 
@@ -93,6 +100,7 @@ class EzsignfoldersignerassociationResponse {
         bEzsignfoldersignerassociationDelayedsend: mapValueOfType<bool>(json, r'bEzsignfoldersignerassociationDelayedsend')!,
         bEzsignfoldersignerassociationReceivecopy: mapValueOfType<bool>(json, r'bEzsignfoldersignerassociationReceivecopy')!,
         tEzsignfoldersignerassociationMessage: mapValueOfType<String>(json, r'tEzsignfoldersignerassociationMessage')!,
+        bEzsignfoldersignerassociationAllowsigninginperson: mapValueOfType<bool>(json, r'bEzsignfoldersignerassociationAllowsigninginperson')!,
       );
     }
     return null;
@@ -145,6 +153,7 @@ class EzsignfoldersignerassociationResponse {
     'bEzsignfoldersignerassociationDelayedsend',
     'bEzsignfoldersignerassociationReceivecopy',
     'tEzsignfoldersignerassociationMessage',
+    'bEzsignfoldersignerassociationAllowsigninginperson',
   };
 }
 

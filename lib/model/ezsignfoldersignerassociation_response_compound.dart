@@ -18,6 +18,7 @@ class EzsignfoldersignerassociationResponseCompound {
     required this.bEzsignfoldersignerassociationDelayedsend,
     required this.bEzsignfoldersignerassociationReceivecopy,
     required this.tEzsignfoldersignerassociationMessage,
+    required this.bEzsignfoldersignerassociationAllowsigninginperson,
     this.objEzsignsignergroup,
     this.objUser,
     this.objEzsignsigner,
@@ -41,6 +42,9 @@ class EzsignfoldersignerassociationResponseCompound {
 
   /// A custom text message that will be added to the email sent.
   String tEzsignfoldersignerassociationMessage;
+
+  /// If the Ezsignfoldersignerassociation is allowed to sign in person or not
+  bool bEzsignfoldersignerassociationAllowsigninginperson;
 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -73,6 +77,7 @@ class EzsignfoldersignerassociationResponseCompound {
     other.bEzsignfoldersignerassociationDelayedsend == bEzsignfoldersignerassociationDelayedsend &&
     other.bEzsignfoldersignerassociationReceivecopy == bEzsignfoldersignerassociationReceivecopy &&
     other.tEzsignfoldersignerassociationMessage == tEzsignfoldersignerassociationMessage &&
+    other.bEzsignfoldersignerassociationAllowsigninginperson == bEzsignfoldersignerassociationAllowsigninginperson &&
     other.objEzsignsignergroup == objEzsignsignergroup &&
     other.objUser == objUser &&
     other.objEzsignsigner == objEzsignsigner;
@@ -85,12 +90,13 @@ class EzsignfoldersignerassociationResponseCompound {
     (bEzsignfoldersignerassociationDelayedsend.hashCode) +
     (bEzsignfoldersignerassociationReceivecopy.hashCode) +
     (tEzsignfoldersignerassociationMessage.hashCode) +
+    (bEzsignfoldersignerassociationAllowsigninginperson.hashCode) +
     (objEzsignsignergroup == null ? 0 : objEzsignsignergroup!.hashCode) +
     (objUser == null ? 0 : objUser!.hashCode) +
     (objEzsignsigner == null ? 0 : objEzsignsigner!.hashCode);
 
   @override
-  String toString() => 'EzsignfoldersignerassociationResponseCompound[pkiEzsignfoldersignerassociationID=$pkiEzsignfoldersignerassociationID, fkiEzsignfolderID=$fkiEzsignfolderID, bEzsignfoldersignerassociationDelayedsend=$bEzsignfoldersignerassociationDelayedsend, bEzsignfoldersignerassociationReceivecopy=$bEzsignfoldersignerassociationReceivecopy, tEzsignfoldersignerassociationMessage=$tEzsignfoldersignerassociationMessage, objEzsignsignergroup=$objEzsignsignergroup, objUser=$objUser, objEzsignsigner=$objEzsignsigner]';
+  String toString() => 'EzsignfoldersignerassociationResponseCompound[pkiEzsignfoldersignerassociationID=$pkiEzsignfoldersignerassociationID, fkiEzsignfolderID=$fkiEzsignfolderID, bEzsignfoldersignerassociationDelayedsend=$bEzsignfoldersignerassociationDelayedsend, bEzsignfoldersignerassociationReceivecopy=$bEzsignfoldersignerassociationReceivecopy, tEzsignfoldersignerassociationMessage=$tEzsignfoldersignerassociationMessage, bEzsignfoldersignerassociationAllowsigninginperson=$bEzsignfoldersignerassociationAllowsigninginperson, objEzsignsignergroup=$objEzsignsignergroup, objUser=$objUser, objEzsignsigner=$objEzsignsigner]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -99,6 +105,7 @@ class EzsignfoldersignerassociationResponseCompound {
       json[r'bEzsignfoldersignerassociationDelayedsend'] = this.bEzsignfoldersignerassociationDelayedsend;
       json[r'bEzsignfoldersignerassociationReceivecopy'] = this.bEzsignfoldersignerassociationReceivecopy;
       json[r'tEzsignfoldersignerassociationMessage'] = this.tEzsignfoldersignerassociationMessage;
+      json[r'bEzsignfoldersignerassociationAllowsigninginperson'] = this.bEzsignfoldersignerassociationAllowsigninginperson;
     if (this.objEzsignsignergroup != null) {
       json[r'objEzsignsignergroup'] = this.objEzsignsignergroup;
     } else {
@@ -141,6 +148,7 @@ class EzsignfoldersignerassociationResponseCompound {
         bEzsignfoldersignerassociationDelayedsend: mapValueOfType<bool>(json, r'bEzsignfoldersignerassociationDelayedsend')!,
         bEzsignfoldersignerassociationReceivecopy: mapValueOfType<bool>(json, r'bEzsignfoldersignerassociationReceivecopy')!,
         tEzsignfoldersignerassociationMessage: mapValueOfType<String>(json, r'tEzsignfoldersignerassociationMessage')!,
+        bEzsignfoldersignerassociationAllowsigninginperson: mapValueOfType<bool>(json, r'bEzsignfoldersignerassociationAllowsigninginperson')!,
         objEzsignsignergroup: EzsignsignergroupResponseCompound.fromJson(json[r'objEzsignsignergroup']),
         objUser: EzsignfoldersignerassociationResponseCompoundUser.fromJson(json[r'objUser']),
         objEzsignsigner: EzsignsignerResponseCompound.fromJson(json[r'objEzsignsigner']),
@@ -196,6 +204,7 @@ class EzsignfoldersignerassociationResponseCompound {
     'bEzsignfoldersignerassociationDelayedsend',
     'bEzsignfoldersignerassociationReceivecopy',
     'tEzsignfoldersignerassociationMessage',
+    'bEzsignfoldersignerassociationAllowsigninginperson',
   };
 }
 

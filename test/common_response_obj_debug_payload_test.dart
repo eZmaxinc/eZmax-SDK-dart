@@ -40,6 +40,12 @@ void main() {
       // TODO
     });
 
+    // Represent a Date Time. The timezone is the one configured in the User's profile.
+    // String dtResponseDate
+    test('to test the property `dtResponseDate`', () async {
+      // TODO
+    });
+
 
   });
 

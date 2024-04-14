@@ -18,6 +18,7 @@ class CustomEzsignfoldersignerassociationActionableElementResponse {
     required this.bEzsignfoldersignerassociationDelayedsend,
     required this.bEzsignfoldersignerassociationReceivecopy,
     required this.tEzsignfoldersignerassociationMessage,
+    required this.bEzsignfoldersignerassociationAllowsigninginperson,
     this.objEzsignsignergroup,
     this.objUser,
     this.objEzsignsigner,
@@ -43,6 +44,9 @@ class CustomEzsignfoldersignerassociationActionableElementResponse {
 
   /// A custom text message that will be added to the email sent.
   String tEzsignfoldersignerassociationMessage;
+
+  /// If the Ezsignfoldersignerassociation is allowed to sign in person or not
+  bool bEzsignfoldersignerassociationAllowsigninginperson;
 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -81,6 +85,7 @@ class CustomEzsignfoldersignerassociationActionableElementResponse {
     other.bEzsignfoldersignerassociationDelayedsend == bEzsignfoldersignerassociationDelayedsend &&
     other.bEzsignfoldersignerassociationReceivecopy == bEzsignfoldersignerassociationReceivecopy &&
     other.tEzsignfoldersignerassociationMessage == tEzsignfoldersignerassociationMessage &&
+    other.bEzsignfoldersignerassociationAllowsigninginperson == bEzsignfoldersignerassociationAllowsigninginperson &&
     other.objEzsignsignergroup == objEzsignsignergroup &&
     other.objUser == objUser &&
     other.objEzsignsigner == objEzsignsigner &&
@@ -95,6 +100,7 @@ class CustomEzsignfoldersignerassociationActionableElementResponse {
     (bEzsignfoldersignerassociationDelayedsend.hashCode) +
     (bEzsignfoldersignerassociationReceivecopy.hashCode) +
     (tEzsignfoldersignerassociationMessage.hashCode) +
+    (bEzsignfoldersignerassociationAllowsigninginperson.hashCode) +
     (objEzsignsignergroup == null ? 0 : objEzsignsignergroup!.hashCode) +
     (objUser == null ? 0 : objUser!.hashCode) +
     (objEzsignsigner == null ? 0 : objEzsignsigner!.hashCode) +
@@ -102,7 +108,7 @@ class CustomEzsignfoldersignerassociationActionableElementResponse {
     (bEzsignfoldersignerassociationHasactionableelementsFuture.hashCode);
 
   @override
-  String toString() => 'CustomEzsignfoldersignerassociationActionableElementResponse[pkiEzsignfoldersignerassociationID=$pkiEzsignfoldersignerassociationID, fkiEzsignfolderID=$fkiEzsignfolderID, bEzsignfoldersignerassociationDelayedsend=$bEzsignfoldersignerassociationDelayedsend, bEzsignfoldersignerassociationReceivecopy=$bEzsignfoldersignerassociationReceivecopy, tEzsignfoldersignerassociationMessage=$tEzsignfoldersignerassociationMessage, objEzsignsignergroup=$objEzsignsignergroup, objUser=$objUser, objEzsignsigner=$objEzsignsigner, bEzsignfoldersignerassociationHasactionableelementsCurrent=$bEzsignfoldersignerassociationHasactionableelementsCurrent, bEzsignfoldersignerassociationHasactionableelementsFuture=$bEzsignfoldersignerassociationHasactionableelementsFuture]';
+  String toString() => 'CustomEzsignfoldersignerassociationActionableElementResponse[pkiEzsignfoldersignerassociationID=$pkiEzsignfoldersignerassociationID, fkiEzsignfolderID=$fkiEzsignfolderID, bEzsignfoldersignerassociationDelayedsend=$bEzsignfoldersignerassociationDelayedsend, bEzsignfoldersignerassociationReceivecopy=$bEzsignfoldersignerassociationReceivecopy, tEzsignfoldersignerassociationMessage=$tEzsignfoldersignerassociationMessage, bEzsignfoldersignerassociationAllowsigninginperson=$bEzsignfoldersignerassociationAllowsigninginperson, objEzsignsignergroup=$objEzsignsignergroup, objUser=$objUser, objEzsignsigner=$objEzsignsigner, bEzsignfoldersignerassociationHasactionableelementsCurrent=$bEzsignfoldersignerassociationHasactionableelementsCurrent, bEzsignfoldersignerassociationHasactionableelementsFuture=$bEzsignfoldersignerassociationHasactionableelementsFuture]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -111,6 +117,7 @@ class CustomEzsignfoldersignerassociationActionableElementResponse {
       json[r'bEzsignfoldersignerassociationDelayedsend'] = this.bEzsignfoldersignerassociationDelayedsend;
       json[r'bEzsignfoldersignerassociationReceivecopy'] = this.bEzsignfoldersignerassociationReceivecopy;
       json[r'tEzsignfoldersignerassociationMessage'] = this.tEzsignfoldersignerassociationMessage;
+      json[r'bEzsignfoldersignerassociationAllowsigninginperson'] = this.bEzsignfoldersignerassociationAllowsigninginperson;
     if (this.objEzsignsignergroup != null) {
       json[r'objEzsignsignergroup'] = this.objEzsignsignergroup;
     } else {
@@ -155,6 +162,7 @@ class CustomEzsignfoldersignerassociationActionableElementResponse {
         bEzsignfoldersignerassociationDelayedsend: mapValueOfType<bool>(json, r'bEzsignfoldersignerassociationDelayedsend')!,
         bEzsignfoldersignerassociationReceivecopy: mapValueOfType<bool>(json, r'bEzsignfoldersignerassociationReceivecopy')!,
         tEzsignfoldersignerassociationMessage: mapValueOfType<String>(json, r'tEzsignfoldersignerassociationMessage')!,
+        bEzsignfoldersignerassociationAllowsigninginperson: mapValueOfType<bool>(json, r'bEzsignfoldersignerassociationAllowsigninginperson')!,
         objEzsignsignergroup: EzsignsignergroupResponseCompound.fromJson(json[r'objEzsignsignergroup']),
         objUser: EzsignfoldersignerassociationResponseCompoundUser.fromJson(json[r'objUser']),
         objEzsignsigner: EzsignsignerResponseCompound.fromJson(json[r'objEzsignsigner']),
@@ -212,6 +220,7 @@ class CustomEzsignfoldersignerassociationActionableElementResponse {
     'bEzsignfoldersignerassociationDelayedsend',
     'bEzsignfoldersignerassociationReceivecopy',
     'tEzsignfoldersignerassociationMessage',
+    'bEzsignfoldersignerassociationAllowsigninginperson',
     'bEzsignfoldersignerassociationHasactionableelementsCurrent',
     'bEzsignfoldersignerassociationHasactionableelementsFuture',
   };

@@ -17,6 +17,7 @@ class CommonResponseObjDebugPayloadGetList {
     required this.iVersionMax,
     this.aRequiredPermission = const [],
     required this.bVersionDeprecated,
+    required this.dtResponseDate,
     required this.aFilter,
     this.aOrderBy = const {},
     required this.iRowMax,
@@ -34,6 +35,9 @@ class CommonResponseObjDebugPayloadGetList {
 
   /// Wheter the current route is deprecated or not
   bool bVersionDeprecated;
+
+  /// Represent a Date Time. The timezone is the one configured in the User's profile.
+  String dtResponseDate;
 
   CommonResponseFilter aFilter;
 
@@ -57,6 +61,7 @@ class CommonResponseObjDebugPayloadGetList {
     other.iVersionMax == iVersionMax &&
     _deepEquality.equals(other.aRequiredPermission, aRequiredPermission) &&
     other.bVersionDeprecated == bVersionDeprecated &&
+    other.dtResponseDate == dtResponseDate &&
     other.aFilter == aFilter &&
     _deepEquality.equals(other.aOrderBy, aOrderBy) &&
     other.iRowMax == iRowMax &&
@@ -69,13 +74,14 @@ class CommonResponseObjDebugPayloadGetList {
     (iVersionMax.hashCode) +
     (aRequiredPermission.hashCode) +
     (bVersionDeprecated.hashCode) +
+    (dtResponseDate.hashCode) +
     (aFilter.hashCode) +
     (aOrderBy.hashCode) +
     (iRowMax.hashCode) +
     (iRowOffset.hashCode);
 
   @override
-  String toString() => 'CommonResponseObjDebugPayloadGetList[iVersionMin=$iVersionMin, iVersionMax=$iVersionMax, aRequiredPermission=$aRequiredPermission, bVersionDeprecated=$bVersionDeprecated, aFilter=$aFilter, aOrderBy=$aOrderBy, iRowMax=$iRowMax, iRowOffset=$iRowOffset]';
+  String toString() => 'CommonResponseObjDebugPayloadGetList[iVersionMin=$iVersionMin, iVersionMax=$iVersionMax, aRequiredPermission=$aRequiredPermission, bVersionDeprecated=$bVersionDeprecated, dtResponseDate=$dtResponseDate, aFilter=$aFilter, aOrderBy=$aOrderBy, iRowMax=$iRowMax, iRowOffset=$iRowOffset]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -83,6 +89,7 @@ class CommonResponseObjDebugPayloadGetList {
       json[r'iVersionMax'] = this.iVersionMax;
       json[r'a_RequiredPermission'] = this.aRequiredPermission;
       json[r'bVersionDeprecated'] = this.bVersionDeprecated;
+      json[r'dtResponseDate'] = this.dtResponseDate;
       json[r'a_Filter'] = this.aFilter;
       json[r'a_OrderBy'] = this.aOrderBy;
       json[r'iRowMax'] = this.iRowMax;
@@ -115,6 +122,7 @@ class CommonResponseObjDebugPayloadGetList {
             ? (json[r'a_RequiredPermission'] as Iterable).cast<int>().toList(growable: false)
             : const [],
         bVersionDeprecated: mapValueOfType<bool>(json, r'bVersionDeprecated')!,
+        dtResponseDate: mapValueOfType<String>(json, r'dtResponseDate')!,
         aFilter: CommonResponseFilter.fromJson(json[r'a_Filter'])!,
         aOrderBy: mapCastOfType<String, String>(json, r'a_OrderBy')!,
         iRowMax: mapValueOfType<int>(json, r'iRowMax')!,
@@ -170,6 +178,7 @@ class CommonResponseObjDebugPayloadGetList {
     'iVersionMax',
     'a_RequiredPermission',
     'bVersionDeprecated',
+    'dtResponseDate',
     'a_Filter',
     'a_OrderBy',
     'iRowMax',

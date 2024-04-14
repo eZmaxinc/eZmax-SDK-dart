@@ -46,6 +46,12 @@ void main() {
       // TODO
     });
 
+    // If the Ezsignfoldersignerassociation is allowed to sign in person or not
+    // bool bEzsignfoldersignerassociationAllowsigninginperson
+    test('to test the property `bEzsignfoldersignerassociationAllowsigninginperson`', () async {
+      // TODO
+    });
+
     // EzsignsignergroupResponseCompound objEzsignsignergroup
     test('to test the property `objEzsignsignergroup`', () async {
       // TODO

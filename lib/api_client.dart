@@ -500,6 +500,54 @@ class ApiClient {
           return CountryGetAutocompleteV2Response.fromJson(value);
         case 'CountryGetAutocompleteV2ResponseMPayload':
           return CountryGetAutocompleteV2ResponseMPayload.fromJson(value);
+        case 'CreditcardclientAutocompleteElementResponse':
+          return CreditcardclientAutocompleteElementResponse.fromJson(value);
+        case 'CreditcardclientCreateObjectV1Request':
+          return CreditcardclientCreateObjectV1Request.fromJson(value);
+        case 'CreditcardclientCreateObjectV1Response':
+          return CreditcardclientCreateObjectV1Response.fromJson(value);
+        case 'CreditcardclientCreateObjectV1ResponseMPayload':
+          return CreditcardclientCreateObjectV1ResponseMPayload.fromJson(value);
+        case 'CreditcardclientDeleteObjectV1Response':
+          return CreditcardclientDeleteObjectV1Response.fromJson(value);
+        case 'CreditcardclientEditObjectV1Request':
+          return CreditcardclientEditObjectV1Request.fromJson(value);
+        case 'CreditcardclientEditObjectV1Response':
+          return CreditcardclientEditObjectV1Response.fromJson(value);
+        case 'CreditcardclientGetAutocompleteV2Response':
+          return CreditcardclientGetAutocompleteV2Response.fromJson(value);
+        case 'CreditcardclientGetAutocompleteV2ResponseMPayload':
+          return CreditcardclientGetAutocompleteV2ResponseMPayload.fromJson(value);
+        case 'CreditcardclientGetListV1Response':
+          return CreditcardclientGetListV1Response.fromJson(value);
+        case 'CreditcardclientGetListV1ResponseMPayload':
+          return CreditcardclientGetListV1ResponseMPayload.fromJson(value);
+        case 'CreditcardclientGetObjectV2Response':
+          return CreditcardclientGetObjectV2Response.fromJson(value);
+        case 'CreditcardclientGetObjectV2ResponseMPayload':
+          return CreditcardclientGetObjectV2ResponseMPayload.fromJson(value);
+        case 'CreditcardclientListElement':
+          return CreditcardclientListElement.fromJson(value);
+        case 'CreditcardclientRequest':
+          return CreditcardclientRequest.fromJson(value);
+        case 'CreditcardclientRequestCompound':
+          return CreditcardclientRequestCompound.fromJson(value);
+        case 'CreditcardclientResponse':
+          return CreditcardclientResponse.fromJson(value);
+        case 'CreditcardclientResponseCompound':
+          return CreditcardclientResponseCompound.fromJson(value);
+        case 'CreditcarddetailRequest':
+          return CreditcarddetailRequest.fromJson(value);
+        case 'CreditcarddetailResponse':
+          return CreditcarddetailResponse.fromJson(value);
+        case 'CreditcarddetailResponseCompound':
+          return CreditcarddetailResponseCompound.fromJson(value);
+        case 'CreditcardtypeAutocompleteElementResponse':
+          return CreditcardtypeAutocompleteElementResponse.fromJson(value);
+        case 'CreditcardtypeGetAutocompleteV2Response':
+          return CreditcardtypeGetAutocompleteV2Response.fromJson(value);
+        case 'CreditcardtypeGetAutocompleteV2ResponseMPayload':
+          return CreditcardtypeGetAutocompleteV2ResponseMPayload.fromJson(value);
         case 'CustomAttachmentResponse':
           return CustomAttachmentResponse.fromJson(value);
         case 'CustomAttachmentdocumenttypeResponse':

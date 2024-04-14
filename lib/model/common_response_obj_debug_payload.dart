@@ -17,6 +17,7 @@ class CommonResponseObjDebugPayload {
     required this.iVersionMax,
     this.aRequiredPermission = const [],
     required this.bVersionDeprecated,
+    required this.dtResponseDate,
   });
 
   /// The minimum version of the function that can be called
@@ -31,12 +32,16 @@ class CommonResponseObjDebugPayload {
   /// Wheter the current route is deprecated or not
   bool bVersionDeprecated;
 
+  /// Represent a Date Time. The timezone is the one configured in the User's profile.
+  String dtResponseDate;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonResponseObjDebugPayload &&
     other.iVersionMin == iVersionMin &&
     other.iVersionMax == iVersionMax &&
     _deepEquality.equals(other.aRequiredPermission, aRequiredPermission) &&
-    other.bVersionDeprecated == bVersionDeprecated;
+    other.bVersionDeprecated == bVersionDeprecated &&
+    other.dtResponseDate == dtResponseDate;
 
   @override
   int get hashCode =>
@@ -44,10 +49,11 @@ class CommonResponseObjDebugPayload {
     (iVersionMin.hashCode) +
     (iVersionMax.hashCode) +
     (aRequiredPermission.hashCode) +
-    (bVersionDeprecated.hashCode);
+    (bVersionDeprecated.hashCode) +
+    (dtResponseDate.hashCode);
 
   @override
-  String toString() => 'CommonResponseObjDebugPayload[iVersionMin=$iVersionMin, iVersionMax=$iVersionMax, aRequiredPermission=$aRequiredPermission, bVersionDeprecated=$bVersionDeprecated]';
+  String toString() => 'CommonResponseObjDebugPayload[iVersionMin=$iVersionMin, iVersionMax=$iVersionMax, aRequiredPermission=$aRequiredPermission, bVersionDeprecated=$bVersionDeprecated, dtResponseDate=$dtResponseDate]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -55,6 +61,7 @@ class CommonResponseObjDebugPayload {
       json[r'iVersionMax'] = this.iVersionMax;
       json[r'a_RequiredPermission'] = this.aRequiredPermission;
       json[r'bVersionDeprecated'] = this.bVersionDeprecated;
+      json[r'dtResponseDate'] = this.dtResponseDate;
     return json;
   }
 
@@ -83,6 +90,7 @@ class CommonResponseObjDebugPayload {
             ? (json[r'a_RequiredPermission'] as Iterable).cast<int>().toList(growable: false)
             : const [],
         bVersionDeprecated: mapValueOfType<bool>(json, r'bVersionDeprecated')!,
+        dtResponseDate: mapValueOfType<String>(json, r'dtResponseDate')!,
       );
     }
     return null;
@@ -134,6 +142,7 @@ class CommonResponseObjDebugPayload {
     'iVersionMax',
     'a_RequiredPermission',
     'bVersionDeprecated',
+    'dtResponseDate',
   };
 }
 
