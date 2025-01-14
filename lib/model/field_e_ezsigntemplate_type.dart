@@ -10,7 +10,7 @@
 
 part of openapi.api;
 
-/// The Type of Ezsigntemplate
+/// The Type of Ezsigntemplate  **Usergroup** is now deprecated and replace with **Ezsignfoldertype**
 class FieldEEzsigntemplateType {
   /// Instantiate a new enum with the provided [value].
   const FieldEEzsigntemplateType._(this.value);
@@ -26,12 +26,14 @@ class FieldEEzsigntemplateType {
   static const user = FieldEEzsigntemplateType._(r'User');
   static const usergroup = FieldEEzsigntemplateType._(r'Usergroup');
   static const company = FieldEEzsigntemplateType._(r'Company');
+  static const ezsignfoldertype = FieldEEzsigntemplateType._(r'Ezsignfoldertype');
 
   /// List of all possible values in this [enum][FieldEEzsigntemplateType].
   static const values = <FieldEEzsigntemplateType>[
     user,
     usergroup,
     company,
+    ezsignfoldertype,
   ];
 
   static FieldEEzsigntemplateType? fromJson(dynamic value) => FieldEEzsigntemplateTypeTypeTransformer().decode(value);
@@ -73,6 +75,7 @@ class FieldEEzsigntemplateTypeTypeTransformer {
         case r'User': return FieldEEzsigntemplateType.user;
         case r'Usergroup': return FieldEEzsigntemplateType.usergroup;
         case r'Company': return FieldEEzsigntemplateType.company;
+        case r'Ezsignfoldertype': return FieldEEzsigntemplateType.ezsignfoldertype;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');

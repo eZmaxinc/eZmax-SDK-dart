@@ -52,13 +52,13 @@ void main() {
       // TODO
     });
 
-    // The Width of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22-65535     | | Radio                     | 22           | | Text                      | 22-65535     | | Textarea                  | 22-65535     |
+    // The Width of the Ezsignformfield in pixels calculated at 100 DPI
     // int iEzsignformfieldWidth
     test('to test the property `iEzsignformfieldWidth`', () async {
       // TODO
     });
 
-    // The Height of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     | 
+    // The Height of the Ezsignformfield in pixels calculated at 100 DPI 
     // int iEzsignformfieldHeight
     test('to test the property `iEzsignformfieldHeight`', () async {
       // TODO
@@ -84,6 +84,16 @@ void main() {
 
     // FieldEEzsignformfieldDependencyrequirement eEzsignformfieldDependencyrequirement
     test('to test the property `eEzsignformfieldDependencyrequirement`', () async {
+      // TODO
+    });
+
+    // EnumHorizontalalignment eEzsignformfieldHorizontalalignment
+    test('to test the property `eEzsignformfieldHorizontalalignment`', () async {
+      // TODO
+    });
+
+    // TextstylestaticRequestCompound objTextstylestatic
+    test('to test the property `objTextstylestatic`', () async {
       // TODO
     });
 

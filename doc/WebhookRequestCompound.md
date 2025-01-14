@@ -9,6 +9,7 @@ import 'package:openapi/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiWebhookID** | **int** | The unique ID of the Webhook | [optional] 
+**fkiAuthenticationexternalID** | **int** | The unique ID of the Authenticationexternal | [optional] 
 **fkiEzsignfoldertypeID** | **int** | The unique ID of the Ezsignfoldertype. | [optional] 
 **sWebhookDescription** | **String** | The description of the Webhook | 
 **eWebhookModule** | [**FieldEWebhookModule**](FieldEWebhookModule.md) |  | 

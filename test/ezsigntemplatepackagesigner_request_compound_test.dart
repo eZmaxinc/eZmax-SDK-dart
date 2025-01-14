@@ -28,6 +28,35 @@ void main() {
       // TODO
     });
 
+    // The unique ID of the Ezdoctemplatedocument
+    // int fkiEzdoctemplatedocumentID
+    test('to test the property `fkiEzdoctemplatedocumentID`', () async {
+      // TODO
+    });
+
+    // The unique ID of the User
+    // int fkiUserID
+    test('to test the property `fkiUserID`', () async {
+      // TODO
+    });
+
+    // The unique ID of the Usergroup
+    // int fkiUsergroupID
+    test('to test the property `fkiUsergroupID`', () async {
+      // TODO
+    });
+
+    // If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document.
+    // bool bEzsigntemplatepackagesignerReceivecopy
+    test('to test the property `bEzsigntemplatepackagesignerReceivecopy`', () async {
+      // TODO
+    });
+
+    // FieldEEzsigntemplatepackagesignerMapping eEzsigntemplatepackagesignerMapping
+    test('to test the property `eEzsigntemplatepackagesignerMapping`', () async {
+      // TODO
+    });
+
     // The description of the Ezsigntemplatepackagesigner
     // String sEzsigntemplatepackagesignerDescription
     test('to test the property `sEzsigntemplatepackagesignerDescription`', () async {

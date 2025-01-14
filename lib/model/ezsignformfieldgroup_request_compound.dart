@@ -26,6 +26,7 @@ class EzsignformfieldgroupRequestCompound {
     this.iEzsignformfieldgroupMaxlength,
     this.bEzsignformfieldgroupEncrypted,
     this.sEzsignformfieldgroupRegexp,
+    this.sEzsignformfieldgroupTextvalidationcustommessage,
     this.tEzsignformfieldgroupTooltip,
     this.eEzsignformfieldgroupTooltipposition,
     this.eEzsignformfieldgroupTextvalidation,
@@ -68,7 +69,7 @@ class EzsignformfieldgroupRequestCompound {
   /// Minimum value: 1
   int iEzsignformfieldgroupStep;
 
-  /// The default value for the Ezsignformfieldgroup  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |
+  /// The default value for the Ezsignformfieldgroup  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sCompany} | Company name | eZmax Solutions Inc. | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -120,6 +121,15 @@ class EzsignformfieldgroupRequestCompound {
   ///
   String? sEzsignformfieldgroupRegexp;
 
+  /// Description of validation rule. Show by signatory.
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEzsignformfieldgroupTextvalidationcustommessage;
+
   /// A tooltip that will be presented to Ezsignsigner about the Ezsignformfieldgroup
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -166,6 +176,7 @@ class EzsignformfieldgroupRequestCompound {
     other.iEzsignformfieldgroupMaxlength == iEzsignformfieldgroupMaxlength &&
     other.bEzsignformfieldgroupEncrypted == bEzsignformfieldgroupEncrypted &&
     other.sEzsignformfieldgroupRegexp == sEzsignformfieldgroupRegexp &&
+    other.sEzsignformfieldgroupTextvalidationcustommessage == sEzsignformfieldgroupTextvalidationcustommessage &&
     other.tEzsignformfieldgroupTooltip == tEzsignformfieldgroupTooltip &&
     other.eEzsignformfieldgroupTooltipposition == eEzsignformfieldgroupTooltipposition &&
     other.eEzsignformfieldgroupTextvalidation == eEzsignformfieldgroupTextvalidation &&
@@ -189,6 +200,7 @@ class EzsignformfieldgroupRequestCompound {
     (iEzsignformfieldgroupMaxlength == null ? 0 : iEzsignformfieldgroupMaxlength!.hashCode) +
     (bEzsignformfieldgroupEncrypted == null ? 0 : bEzsignformfieldgroupEncrypted!.hashCode) +
     (sEzsignformfieldgroupRegexp == null ? 0 : sEzsignformfieldgroupRegexp!.hashCode) +
+    (sEzsignformfieldgroupTextvalidationcustommessage == null ? 0 : sEzsignformfieldgroupTextvalidationcustommessage!.hashCode) +
     (tEzsignformfieldgroupTooltip == null ? 0 : tEzsignformfieldgroupTooltip!.hashCode) +
     (eEzsignformfieldgroupTooltipposition == null ? 0 : eEzsignformfieldgroupTooltipposition!.hashCode) +
     (eEzsignformfieldgroupTextvalidation == null ? 0 : eEzsignformfieldgroupTextvalidation!.hashCode) +
@@ -197,7 +209,7 @@ class EzsignformfieldgroupRequestCompound {
     (aObjEzsignformfield.hashCode);
 
   @override
-  String toString() => 'EzsignformfieldgroupRequestCompound[pkiEzsignformfieldgroupID=$pkiEzsignformfieldgroupID, fkiEzsigndocumentID=$fkiEzsigndocumentID, eEzsignformfieldgroupType=$eEzsignformfieldgroupType, eEzsignformfieldgroupSignerrequirement=$eEzsignformfieldgroupSignerrequirement, sEzsignformfieldgroupLabel=$sEzsignformfieldgroupLabel, iEzsignformfieldgroupStep=$iEzsignformfieldgroupStep, sEzsignformfieldgroupDefaultvalue=$sEzsignformfieldgroupDefaultvalue, iEzsignformfieldgroupFilledmin=$iEzsignformfieldgroupFilledmin, iEzsignformfieldgroupFilledmax=$iEzsignformfieldgroupFilledmax, bEzsignformfieldgroupReadonly=$bEzsignformfieldgroupReadonly, iEzsignformfieldgroupMaxlength=$iEzsignformfieldgroupMaxlength, bEzsignformfieldgroupEncrypted=$bEzsignformfieldgroupEncrypted, sEzsignformfieldgroupRegexp=$sEzsignformfieldgroupRegexp, tEzsignformfieldgroupTooltip=$tEzsignformfieldgroupTooltip, eEzsignformfieldgroupTooltipposition=$eEzsignformfieldgroupTooltipposition, eEzsignformfieldgroupTextvalidation=$eEzsignformfieldgroupTextvalidation, aObjEzsignformfieldgroupsigner=$aObjEzsignformfieldgroupsigner, aObjDropdownElement=$aObjDropdownElement, aObjEzsignformfield=$aObjEzsignformfield]';
+  String toString() => 'EzsignformfieldgroupRequestCompound[pkiEzsignformfieldgroupID=$pkiEzsignformfieldgroupID, fkiEzsigndocumentID=$fkiEzsigndocumentID, eEzsignformfieldgroupType=$eEzsignformfieldgroupType, eEzsignformfieldgroupSignerrequirement=$eEzsignformfieldgroupSignerrequirement, sEzsignformfieldgroupLabel=$sEzsignformfieldgroupLabel, iEzsignformfieldgroupStep=$iEzsignformfieldgroupStep, sEzsignformfieldgroupDefaultvalue=$sEzsignformfieldgroupDefaultvalue, iEzsignformfieldgroupFilledmin=$iEzsignformfieldgroupFilledmin, iEzsignformfieldgroupFilledmax=$iEzsignformfieldgroupFilledmax, bEzsignformfieldgroupReadonly=$bEzsignformfieldgroupReadonly, iEzsignformfieldgroupMaxlength=$iEzsignformfieldgroupMaxlength, bEzsignformfieldgroupEncrypted=$bEzsignformfieldgroupEncrypted, sEzsignformfieldgroupRegexp=$sEzsignformfieldgroupRegexp, sEzsignformfieldgroupTextvalidationcustommessage=$sEzsignformfieldgroupTextvalidationcustommessage, tEzsignformfieldgroupTooltip=$tEzsignformfieldgroupTooltip, eEzsignformfieldgroupTooltipposition=$eEzsignformfieldgroupTooltipposition, eEzsignformfieldgroupTextvalidation=$eEzsignformfieldgroupTextvalidation, aObjEzsignformfieldgroupsigner=$aObjEzsignformfieldgroupsigner, aObjDropdownElement=$aObjDropdownElement, aObjEzsignformfield=$aObjEzsignformfield]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -237,6 +249,11 @@ class EzsignformfieldgroupRequestCompound {
       json[r'sEzsignformfieldgroupRegexp'] = this.sEzsignformfieldgroupRegexp;
     } else {
       json[r'sEzsignformfieldgroupRegexp'] = null;
+    }
+    if (this.sEzsignformfieldgroupTextvalidationcustommessage != null) {
+      json[r'sEzsignformfieldgroupTextvalidationcustommessage'] = this.sEzsignformfieldgroupTextvalidationcustommessage;
+    } else {
+      json[r'sEzsignformfieldgroupTextvalidationcustommessage'] = null;
     }
     if (this.tEzsignformfieldgroupTooltip != null) {
       json[r'tEzsignformfieldgroupTooltip'] = this.tEzsignformfieldgroupTooltip;
@@ -291,6 +308,7 @@ class EzsignformfieldgroupRequestCompound {
         iEzsignformfieldgroupMaxlength: mapValueOfType<int>(json, r'iEzsignformfieldgroupMaxlength'),
         bEzsignformfieldgroupEncrypted: mapValueOfType<bool>(json, r'bEzsignformfieldgroupEncrypted'),
         sEzsignformfieldgroupRegexp: mapValueOfType<String>(json, r'sEzsignformfieldgroupRegexp'),
+        sEzsignformfieldgroupTextvalidationcustommessage: mapValueOfType<String>(json, r'sEzsignformfieldgroupTextvalidationcustommessage'),
         tEzsignformfieldgroupTooltip: mapValueOfType<String>(json, r'tEzsignformfieldgroupTooltip'),
         eEzsignformfieldgroupTooltipposition: FieldEEzsignformfieldgroupTooltipposition.fromJson(json[r'eEzsignformfieldgroupTooltipposition']),
         eEzsignformfieldgroupTextvalidation: EnumTextvalidation.fromJson(json[r'eEzsignformfieldgroupTextvalidation']),

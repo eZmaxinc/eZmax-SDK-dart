@@ -71,5 +71,14 @@ void main() {
       // TODO
     });
 
+    // Patch an existing Creditcardclient
+    //
+    // 
+    //
+    //Future<CreditcardclientPatchObjectV1Response> creditcardclientPatchObjectV1(int pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request) async
+    test('test creditcardclientPatchObjectV1', () async {
+      // TODO
+    });
+
   });
 }

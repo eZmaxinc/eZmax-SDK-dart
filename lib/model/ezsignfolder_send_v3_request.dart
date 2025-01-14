@@ -14,6 +14,7 @@ class EzsignfolderSendV3Request {
   /// Returns a new [EzsignfolderSendV3Request] instance.
   EzsignfolderSendV3Request({
     this.tEzsignfolderMessage,
+    this.eEzsignfolderMessageorder,
     this.dtEzsignfolderDelayedsenddate,
     this.aFkiEzsignfoldersignerassociationID = const [],
   });
@@ -26,6 +27,14 @@ class EzsignfolderSendV3Request {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   String? tEzsignfolderMessage;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEEzsignfolderMessageorder? eEzsignfolderMessageorder;
 
   /// The date and time at which the Ezsignfolder will be sent in the future.
   ///
@@ -41,6 +50,7 @@ class EzsignfolderSendV3Request {
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfolderSendV3Request &&
     other.tEzsignfolderMessage == tEzsignfolderMessage &&
+    other.eEzsignfolderMessageorder == eEzsignfolderMessageorder &&
     other.dtEzsignfolderDelayedsenddate == dtEzsignfolderDelayedsenddate &&
     _deepEquality.equals(other.aFkiEzsignfoldersignerassociationID, aFkiEzsignfoldersignerassociationID);
 
@@ -48,11 +58,12 @@ class EzsignfolderSendV3Request {
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (tEzsignfolderMessage == null ? 0 : tEzsignfolderMessage!.hashCode) +
+    (eEzsignfolderMessageorder == null ? 0 : eEzsignfolderMessageorder!.hashCode) +
     (dtEzsignfolderDelayedsenddate == null ? 0 : dtEzsignfolderDelayedsenddate!.hashCode) +
     (aFkiEzsignfoldersignerassociationID.hashCode);
 
   @override
-  String toString() => 'EzsignfolderSendV3Request[tEzsignfolderMessage=$tEzsignfolderMessage, dtEzsignfolderDelayedsenddate=$dtEzsignfolderDelayedsenddate, aFkiEzsignfoldersignerassociationID=$aFkiEzsignfoldersignerassociationID]';
+  String toString() => 'EzsignfolderSendV3Request[tEzsignfolderMessage=$tEzsignfolderMessage, eEzsignfolderMessageorder=$eEzsignfolderMessageorder, dtEzsignfolderDelayedsenddate=$dtEzsignfolderDelayedsenddate, aFkiEzsignfoldersignerassociationID=$aFkiEzsignfoldersignerassociationID]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -60,6 +71,11 @@ class EzsignfolderSendV3Request {
       json[r'tEzsignfolderMessage'] = this.tEzsignfolderMessage;
     } else {
       json[r'tEzsignfolderMessage'] = null;
+    }
+    if (this.eEzsignfolderMessageorder != null) {
+      json[r'eEzsignfolderMessageorder'] = this.eEzsignfolderMessageorder;
+    } else {
+      json[r'eEzsignfolderMessageorder'] = null;
     }
     if (this.dtEzsignfolderDelayedsenddate != null) {
       json[r'dtEzsignfolderDelayedsenddate'] = this.dtEzsignfolderDelayedsenddate;
@@ -90,6 +106,7 @@ class EzsignfolderSendV3Request {
 
       return EzsignfolderSendV3Request(
         tEzsignfolderMessage: mapValueOfType<String>(json, r'tEzsignfolderMessage'),
+        eEzsignfolderMessageorder: FieldEEzsignfolderMessageorder.fromJson(json[r'eEzsignfolderMessageorder']),
         dtEzsignfolderDelayedsenddate: mapValueOfType<String>(json, r'dtEzsignfolderDelayedsenddate'),
         aFkiEzsignfoldersignerassociationID: json[r'a_fkiEzsignfoldersignerassociationID'] is Iterable
             ? (json[r'a_fkiEzsignfoldersignerassociationID'] as Iterable).cast<int>().toList(growable: false)

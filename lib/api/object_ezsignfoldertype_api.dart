@@ -24,13 +24,13 @@ class ObjectEzsignfoldertypeApi {
   ///
   /// Parameters:
   ///
-  /// * [EzsignfoldertypeCreateObjectV2Request] ezsignfoldertypeCreateObjectV2Request (required):
-  Future<Response> ezsignfoldertypeCreateObjectV2WithHttpInfo(EzsignfoldertypeCreateObjectV2Request ezsignfoldertypeCreateObjectV2Request,) async {
+  /// * [EzsignfoldertypeCreateObjectV3Request] ezsignfoldertypeCreateObjectV3Request (required):
+  Future<Response> ezsignfoldertypeCreateObjectV3WithHttpInfo(EzsignfoldertypeCreateObjectV3Request ezsignfoldertypeCreateObjectV3Request,) async {
     // ignore: prefer_const_declarations
-    final path = r'/2/object/ezsignfoldertype';
+    final path = r'/3/object/ezsignfoldertype';
 
     // ignore: prefer_final_locals
-    Object? postBody = ezsignfoldertypeCreateObjectV2Request;
+    Object? postBody = ezsignfoldertypeCreateObjectV3Request;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
@@ -56,9 +56,9 @@ class ObjectEzsignfoldertypeApi {
   ///
   /// Parameters:
   ///
-  /// * [EzsignfoldertypeCreateObjectV2Request] ezsignfoldertypeCreateObjectV2Request (required):
-  Future<EzsignfoldertypeCreateObjectV2Response?> ezsignfoldertypeCreateObjectV2(EzsignfoldertypeCreateObjectV2Request ezsignfoldertypeCreateObjectV2Request,) async {
-    final response = await ezsignfoldertypeCreateObjectV2WithHttpInfo(ezsignfoldertypeCreateObjectV2Request,);
+  /// * [EzsignfoldertypeCreateObjectV3Request] ezsignfoldertypeCreateObjectV3Request (required):
+  Future<EzsignfoldertypeCreateObjectV3Response?> ezsignfoldertypeCreateObjectV3(EzsignfoldertypeCreateObjectV3Request ezsignfoldertypeCreateObjectV3Request,) async {
+    final response = await ezsignfoldertypeCreateObjectV3WithHttpInfo(ezsignfoldertypeCreateObjectV3Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -66,7 +66,7 @@ class ObjectEzsignfoldertypeApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfoldertypeCreateObjectV2Response',) as EzsignfoldertypeCreateObjectV2Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfoldertypeCreateObjectV3Response',) as EzsignfoldertypeCreateObjectV3Response;
     
     }
     return null;
@@ -82,14 +82,14 @@ class ObjectEzsignfoldertypeApi {
   ///
   /// * [int] pkiEzsignfoldertypeID (required):
   ///
-  /// * [EzsignfoldertypeEditObjectV1Request] ezsignfoldertypeEditObjectV1Request (required):
-  Future<Response> ezsignfoldertypeEditObjectV1WithHttpInfo(int pkiEzsignfoldertypeID, EzsignfoldertypeEditObjectV1Request ezsignfoldertypeEditObjectV1Request,) async {
+  /// * [EzsignfoldertypeEditObjectV3Request] ezsignfoldertypeEditObjectV3Request (required):
+  Future<Response> ezsignfoldertypeEditObjectV3WithHttpInfo(int pkiEzsignfoldertypeID, EzsignfoldertypeEditObjectV3Request ezsignfoldertypeEditObjectV3Request,) async {
     // ignore: prefer_const_declarations
-    final path = r'/1/object/ezsignfoldertype/{pkiEzsignfoldertypeID}'
+    final path = r'/3/object/ezsignfoldertype/{pkiEzsignfoldertypeID}'
       .replaceAll('{pkiEzsignfoldertypeID}', pkiEzsignfoldertypeID.toString());
 
     // ignore: prefer_final_locals
-    Object? postBody = ezsignfoldertypeEditObjectV1Request;
+    Object? postBody = ezsignfoldertypeEditObjectV3Request;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
@@ -117,9 +117,9 @@ class ObjectEzsignfoldertypeApi {
   ///
   /// * [int] pkiEzsignfoldertypeID (required):
   ///
-  /// * [EzsignfoldertypeEditObjectV1Request] ezsignfoldertypeEditObjectV1Request (required):
-  Future<EzsignfoldertypeEditObjectV1Response?> ezsignfoldertypeEditObjectV1(int pkiEzsignfoldertypeID, EzsignfoldertypeEditObjectV1Request ezsignfoldertypeEditObjectV1Request,) async {
-    final response = await ezsignfoldertypeEditObjectV1WithHttpInfo(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV1Request,);
+  /// * [EzsignfoldertypeEditObjectV3Request] ezsignfoldertypeEditObjectV3Request (required):
+  Future<EzsignfoldertypeEditObjectV3Response?> ezsignfoldertypeEditObjectV3(int pkiEzsignfoldertypeID, EzsignfoldertypeEditObjectV3Request ezsignfoldertypeEditObjectV3Request,) async {
+    final response = await ezsignfoldertypeEditObjectV3WithHttpInfo(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV3Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -127,68 +127,7 @@ class ObjectEzsignfoldertypeApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfoldertypeEditObjectV1Response',) as EzsignfoldertypeEditObjectV1Response;
-    
-    }
-    return null;
-  }
-
-  /// Edit an existing Ezsignfoldertype
-  ///
-  /// 
-  ///
-  /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiEzsignfoldertypeID (required):
-  ///
-  /// * [EzsignfoldertypeEditObjectV2Request] ezsignfoldertypeEditObjectV2Request (required):
-  Future<Response> ezsignfoldertypeEditObjectV2WithHttpInfo(int pkiEzsignfoldertypeID, EzsignfoldertypeEditObjectV2Request ezsignfoldertypeEditObjectV2Request,) async {
-    // ignore: prefer_const_declarations
-    final path = r'/2/object/ezsignfoldertype/{pkiEzsignfoldertypeID}'
-      .replaceAll('{pkiEzsignfoldertypeID}', pkiEzsignfoldertypeID.toString());
-
-    // ignore: prefer_final_locals
-    Object? postBody = ezsignfoldertypeEditObjectV2Request;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>['application/json'];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'PUT',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-    );
-  }
-
-  /// Edit an existing Ezsignfoldertype
-  ///
-  /// 
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiEzsignfoldertypeID (required):
-  ///
-  /// * [EzsignfoldertypeEditObjectV2Request] ezsignfoldertypeEditObjectV2Request (required):
-  Future<EzsignfoldertypeEditObjectV2Response?> ezsignfoldertypeEditObjectV2(int pkiEzsignfoldertypeID, EzsignfoldertypeEditObjectV2Request ezsignfoldertypeEditObjectV2Request,) async {
-    final response = await ezsignfoldertypeEditObjectV2WithHttpInfo(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV2Request,);
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfoldertypeEditObjectV2Response',) as EzsignfoldertypeEditObjectV2Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfoldertypeEditObjectV3Response',) as EzsignfoldertypeEditObjectV3Response;
     
     }
     return null;
@@ -437,9 +376,9 @@ class ObjectEzsignfoldertypeApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfoldertypeID (required):
-  Future<Response> ezsignfoldertypeGetObjectV3WithHttpInfo(int pkiEzsignfoldertypeID,) async {
+  Future<Response> ezsignfoldertypeGetObjectV4WithHttpInfo(int pkiEzsignfoldertypeID,) async {
     // ignore: prefer_const_declarations
-    final path = r'/3/object/ezsignfoldertype/{pkiEzsignfoldertypeID}'
+    final path = r'/4/object/ezsignfoldertype/{pkiEzsignfoldertypeID}'
       .replaceAll('{pkiEzsignfoldertypeID}', pkiEzsignfoldertypeID.toString());
 
     // ignore: prefer_final_locals
@@ -470,8 +409,8 @@ class ObjectEzsignfoldertypeApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfoldertypeID (required):
-  Future<EzsignfoldertypeGetObjectV3Response?> ezsignfoldertypeGetObjectV3(int pkiEzsignfoldertypeID,) async {
-    final response = await ezsignfoldertypeGetObjectV3WithHttpInfo(pkiEzsignfoldertypeID,);
+  Future<EzsignfoldertypeGetObjectV4Response?> ezsignfoldertypeGetObjectV4(int pkiEzsignfoldertypeID,) async {
+    final response = await ezsignfoldertypeGetObjectV4WithHttpInfo(pkiEzsignfoldertypeID,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -479,7 +418,7 @@ class ObjectEzsignfoldertypeApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfoldertypeGetObjectV3Response',) as EzsignfoldertypeGetObjectV3Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfoldertypeGetObjectV4Response',) as EzsignfoldertypeGetObjectV4Response;
     
     }
     return null;

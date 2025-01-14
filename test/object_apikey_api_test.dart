@@ -44,6 +44,15 @@ void main() {
       // TODO
     });
 
+    // Generate a delegated credentials
+    //
+    // 
+    //
+    //Future<ApikeyGenerateDelegatedCredentialsV1Response> apikeyGenerateDelegatedCredentialsV1(ApikeyGenerateDelegatedCredentialsV1Request apikeyGenerateDelegatedCredentialsV1Request) async
+    test('test apikeyGenerateDelegatedCredentialsV1', () async {
+      // TODO
+    });
+
     // Retrieve an existing Apikey's cors
     //
     //Future<ApikeyGetCorsV1Response> apikeyGetCorsV1(int pkiApikeyID) async

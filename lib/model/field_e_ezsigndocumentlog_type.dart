@@ -41,8 +41,10 @@ class FieldEEzsigndocumentlogType {
   static const changelimitdate = FieldEEzsigndocumentlogType._(r'Changelimitdate');
   static const unsign = FieldEEzsigndocumentlogType._(r'Unsign');
   static const importFromInstanet = FieldEEzsigndocumentlogType._(r'ImportFromInstanet');
+  static const createdFromEzsigntemplatepublic = FieldEEzsigndocumentlogType._(r'CreatedFromEzsigntemplatepublic');
   static const sendEmail = FieldEEzsigndocumentlogType._(r'SendEmail');
   static const formCompletion = FieldEEzsigndocumentlogType._(r'FormCompletion');
+  static const formSaveAsDraft = FieldEEzsigndocumentlogType._(r'FormSaveAsDraft');
   static const signatureAttachmentAdd = FieldEEzsigndocumentlogType._(r'SignatureAttachmentAdd');
   static const signatureAttachmentValidation = FieldEEzsigndocumentlogType._(r'SignatureAttachmentValidation');
   static const signatureAttachmentRefused = FieldEEzsigndocumentlogType._(r'SignatureAttachmentRefused');
@@ -54,6 +56,7 @@ class FieldEEzsigndocumentlogType {
   static const regeneratePage = FieldEEzsigndocumentlogType._(r'RegeneratePage');
   static const regeneratePageForm = FieldEEzsigndocumentlogType._(r'RegeneratePageForm');
   static const reassign = FieldEEzsigndocumentlogType._(r'Reassign');
+  static const documentCompletion = FieldEEzsigndocumentlogType._(r'DocumentCompletion');
 
   /// List of all possible values in this [enum][FieldEEzsigndocumentlogType].
   static const values = <FieldEEzsigndocumentlogType>[
@@ -75,8 +78,10 @@ class FieldEEzsigndocumentlogType {
     changelimitdate,
     unsign,
     importFromInstanet,
+    createdFromEzsigntemplatepublic,
     sendEmail,
     formCompletion,
+    formSaveAsDraft,
     signatureAttachmentAdd,
     signatureAttachmentValidation,
     signatureAttachmentRefused,
@@ -88,6 +93,7 @@ class FieldEEzsigndocumentlogType {
     regeneratePage,
     regeneratePageForm,
     reassign,
+    documentCompletion,
   ];
 
   static FieldEEzsigndocumentlogType? fromJson(dynamic value) => FieldEEzsigndocumentlogTypeTypeTransformer().decode(value);
@@ -144,8 +150,10 @@ class FieldEEzsigndocumentlogTypeTypeTransformer {
         case r'Changelimitdate': return FieldEEzsigndocumentlogType.changelimitdate;
         case r'Unsign': return FieldEEzsigndocumentlogType.unsign;
         case r'ImportFromInstanet': return FieldEEzsigndocumentlogType.importFromInstanet;
+        case r'CreatedFromEzsigntemplatepublic': return FieldEEzsigndocumentlogType.createdFromEzsigntemplatepublic;
         case r'SendEmail': return FieldEEzsigndocumentlogType.sendEmail;
         case r'FormCompletion': return FieldEEzsigndocumentlogType.formCompletion;
+        case r'FormSaveAsDraft': return FieldEEzsigndocumentlogType.formSaveAsDraft;
         case r'SignatureAttachmentAdd': return FieldEEzsigndocumentlogType.signatureAttachmentAdd;
         case r'SignatureAttachmentValidation': return FieldEEzsigndocumentlogType.signatureAttachmentValidation;
         case r'SignatureAttachmentRefused': return FieldEEzsigndocumentlogType.signatureAttachmentRefused;
@@ -157,6 +165,7 @@ class FieldEEzsigndocumentlogTypeTypeTransformer {
         case r'RegeneratePage': return FieldEEzsigndocumentlogType.regeneratePage;
         case r'RegeneratePageForm': return FieldEEzsigndocumentlogType.regeneratePageForm;
         case r'Reassign': return FieldEEzsigndocumentlogType.reassign;
+        case r'DocumentCompletion': return FieldEEzsigndocumentlogType.documentCompletion;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');

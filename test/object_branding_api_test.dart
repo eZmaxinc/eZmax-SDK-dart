@@ -21,8 +21,8 @@ void main() {
     //
     // The endpoint allows to create one or many elements at once.
     //
-    //Future<BrandingCreateObjectV1Response> brandingCreateObjectV1(BrandingCreateObjectV1Request brandingCreateObjectV1Request) async
-    test('test brandingCreateObjectV1', () async {
+    //Future<BrandingCreateObjectV2Response> brandingCreateObjectV2(BrandingCreateObjectV2Request brandingCreateObjectV2Request) async
+    test('test brandingCreateObjectV2', () async {
       // TODO
     });
 
@@ -30,8 +30,8 @@ void main() {
     //
     // 
     //
-    //Future<BrandingEditObjectV1Response> brandingEditObjectV1(int pkiBrandingID, BrandingEditObjectV1Request brandingEditObjectV1Request) async
-    test('test brandingEditObjectV1', () async {
+    //Future<BrandingEditObjectV2Response> brandingEditObjectV2(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request) async
+    test('test brandingEditObjectV2', () async {
       // TODO
     });
 
@@ -57,8 +57,8 @@ void main() {
     //
     // 
     //
-    //Future<BrandingGetObjectV2Response> brandingGetObjectV2(int pkiBrandingID) async
-    test('test brandingGetObjectV2', () async {
+    //Future<BrandingGetObjectV3Response> brandingGetObjectV3(int pkiBrandingID) async
+    test('test brandingGetObjectV3', () async {
       // TODO
     });
 

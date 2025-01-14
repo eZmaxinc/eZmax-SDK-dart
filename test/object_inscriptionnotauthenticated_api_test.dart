@@ -17,12 +17,39 @@ void main() {
   // final instance = ObjectInscriptionnotauthenticatedApi();
 
   group('tests for ObjectInscriptionnotauthenticatedApi', () {
+    // Retrieve Communication count
+    //
+    // 
+    //
+    //Future<InscriptionnotauthenticatedGetCommunicationCountV1Response> inscriptionnotauthenticatedGetCommunicationCountV1(int pkiInscriptionnotauthenticatedID) async
+    test('test inscriptionnotauthenticatedGetCommunicationCountV1', () async {
+      // TODO
+    });
+
     // Retrieve Communication list
     //
     // 
     //
     //Future<InscriptionnotauthenticatedGetCommunicationListV1Response> inscriptionnotauthenticatedGetCommunicationListV1(int pkiInscriptionnotauthenticatedID) async
     test('test inscriptionnotauthenticatedGetCommunicationListV1', () async {
+      // TODO
+    });
+
+    // Retrieve Inscriptionnotauthenticated's Communicationrecipient
+    //
+    // 
+    //
+    //Future<InscriptionnotauthenticatedGetCommunicationrecipientsV1Response> inscriptionnotauthenticatedGetCommunicationrecipientsV1(int pkiInscriptionnotauthenticatedID) async
+    test('test inscriptionnotauthenticatedGetCommunicationrecipientsV1', () async {
+      // TODO
+    });
+
+    // Retrieve Inscriptionnotauthenticated's Communicationsender
+    //
+    // 
+    //
+    //Future<InscriptionnotauthenticatedGetCommunicationsendersV1Response> inscriptionnotauthenticatedGetCommunicationsendersV1(int pkiInscriptionnotauthenticatedID) async
+    test('test inscriptionnotauthenticatedGetCommunicationsendersV1', () async {
       // TODO
     });
 

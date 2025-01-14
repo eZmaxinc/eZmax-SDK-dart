@@ -72,6 +72,67 @@ class ObjectEzsigntemplatedocumentApi {
     return null;
   }
 
+  /// Edit multiple Ezsigntemplatedocumentpagerecognitions
+  ///
+  /// Edit multiple Ezsigntemplatedocumentpagerecognitions
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigntemplatedocumentID (required):
+  ///
+  /// * [EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request] ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request (required):
+  Future<Response> ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1WithHttpInfo(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplatedocumentpagerecognitions'
+      .replaceAll('{pkiEzsigntemplatedocumentID}', pkiEzsigntemplatedocumentID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'PUT',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Edit multiple Ezsigntemplatedocumentpagerecognitions
+  ///
+  /// Edit multiple Ezsigntemplatedocumentpagerecognitions
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigntemplatedocumentID (required):
+  ///
+  /// * [EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request] ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request (required):
+  Future<EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Response?> ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request,) async {
+    final response = await ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1WithHttpInfo(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Response',) as EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Response;
+    
+    }
+    return null;
+  }
+
   /// Edit multiple Ezsigntemplateformfieldgroups
   ///
   /// Using this endpoint, you can edit multiple Ezsigntemplateformfieldgroups at the same time.
@@ -255,6 +316,67 @@ class ObjectEzsigntemplatedocumentApi {
     return null;
   }
 
+  /// Extract text from Ezsigntemplatedocument area
+  ///
+  /// Extract text from Ezsigntemplatedocument area
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigntemplatedocumentID (required):
+  ///
+  /// * [EzsigntemplatedocumentExtractTextV1Request] ezsigntemplatedocumentExtractTextV1Request (required):
+  Future<Response> ezsigntemplatedocumentExtractTextV1WithHttpInfo(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentExtractTextV1Request ezsigntemplatedocumentExtractTextV1Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/extractText'
+      .replaceAll('{pkiEzsigntemplatedocumentID}', pkiEzsigntemplatedocumentID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = ezsigntemplatedocumentExtractTextV1Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Extract text from Ezsigntemplatedocument area
+  ///
+  /// Extract text from Ezsigntemplatedocument area
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigntemplatedocumentID (required):
+  ///
+  /// * [EzsigntemplatedocumentExtractTextV1Request] ezsigntemplatedocumentExtractTextV1Request (required):
+  Future<EzsigntemplatedocumentExtractTextV1Response?> ezsigntemplatedocumentExtractTextV1(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentExtractTextV1Request ezsigntemplatedocumentExtractTextV1Request,) async {
+    final response = await ezsigntemplatedocumentExtractTextV1WithHttpInfo(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentExtractTextV1Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigntemplatedocumentExtractTextV1Response',) as EzsigntemplatedocumentExtractTextV1Response;
+    
+    }
+    return null;
+  }
+
   /// Flatten
   ///
   /// Flatten an Ezsigntemplatedocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
@@ -311,6 +433,63 @@ class ObjectEzsigntemplatedocumentApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigntemplatedocumentFlattenV1Response',) as EzsigntemplatedocumentFlattenV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve an existing Ezsigntemplatedocument's Ezsigntemplatedocumentpagerecognitions
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigntemplatedocumentID (required):
+  Future<Response> ezsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1WithHttpInfo(int pkiEzsigntemplatedocumentID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatedocumentpagerecognitions'
+      .replaceAll('{pkiEzsigntemplatedocumentID}', pkiEzsigntemplatedocumentID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve an existing Ezsigntemplatedocument's Ezsigntemplatedocumentpagerecognitions
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigntemplatedocumentID (required):
+  Future<EzsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1Response?> ezsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1(int pkiEzsigntemplatedocumentID,) async {
+    final response = await ezsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1WithHttpInfo(pkiEzsigntemplatedocumentID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1Response',) as EzsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1Response;
     
     }
     return null;

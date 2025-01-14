@@ -464,6 +464,58 @@ class ObjectWebhookApi {
     return null;
   }
 
+  /// Emit a Webhook event
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [WebhookSendWebhookV1Request] webhookSendWebhookV1Request (required):
+  Future<Response> webhookSendWebhookV1WithHttpInfo(WebhookSendWebhookV1Request webhookSendWebhookV1Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/webhook/sendWebhook';
+
+    // ignore: prefer_final_locals
+    Object? postBody = webhookSendWebhookV1Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Emit a Webhook event
+  ///
+  /// Parameters:
+  ///
+  /// * [WebhookSendWebhookV1Request] webhookSendWebhookV1Request (required):
+  Future<WebhookSendWebhookV1Response?> webhookSendWebhookV1(WebhookSendWebhookV1Request webhookSendWebhookV1Request,) async {
+    final response = await webhookSendWebhookV1WithHttpInfo(webhookSendWebhookV1Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'WebhookSendWebhookV1Response',) as WebhookSendWebhookV1Response;
+    
+    }
+    return null;
+  }
+
   /// Test the Webhook by calling the Url
   ///
   /// 

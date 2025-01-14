@@ -18,7 +18,7 @@ class ObjectEzsignfoldersignerassociationApi {
 
   /// Creates an Url to allow embedded signing
   ///
-  /// This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.  There will be a list to retrieve informations after the signing happens in the embedded version. To do so, there is a list of parameter to add to your sReturnUrl.  In example: https://www.example.com/sReturl?sParameter1&sParameter2. The sParameter1 et sParameter2 will be replace when we will redirect on the url.
+  /// This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -55,7 +55,7 @@ class ObjectEzsignfoldersignerassociationApi {
 
   /// Creates an Url to allow embedded signing
   ///
-  /// This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.  There will be a list to retrieve informations after the signing happens in the embedded version. To do so, there is a list of parameter to add to your sReturnUrl.  In example: https://www.example.com/sReturl?sParameter1&sParameter2. The sParameter1 et sParameter2 will be replace when we will redirect on the url.
+  /// This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
   ///
   /// Parameters:
   ///
@@ -591,6 +591,67 @@ class ObjectEzsignfoldersignerassociationApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfoldersignerassociationPatchObjectV1Response',) as EzsignfoldersignerassociationPatchObjectV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Reassign remaining unsigned signatures and forms
+  ///
+  /// Reassign remaining unsigned signatures and forms
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfoldersignerassociationID (required):
+  ///
+  /// * [EzsignfoldersignerassociationReassignV1Request] ezsignfoldersignerassociationReassignV1Request (required):
+  Future<Response> ezsignfoldersignerassociationReassignV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/reassign'
+      .replaceAll('{pkiEzsignfoldersignerassociationID}', pkiEzsignfoldersignerassociationID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = ezsignfoldersignerassociationReassignV1Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Reassign remaining unsigned signatures and forms
+  ///
+  /// Reassign remaining unsigned signatures and forms
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfoldersignerassociationID (required):
+  ///
+  /// * [EzsignfoldersignerassociationReassignV1Request] ezsignfoldersignerassociationReassignV1Request (required):
+  Future<EzsignfoldersignerassociationReassignV1Response?> ezsignfoldersignerassociationReassignV1(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request,) async {
+    final response = await ezsignfoldersignerassociationReassignV1WithHttpInfo(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationReassignV1Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfoldersignerassociationReassignV1Response',) as EzsignfoldersignerassociationReassignV1Response;
     
     }
     return null;

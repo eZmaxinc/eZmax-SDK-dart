@@ -57,13 +57,13 @@ void main() {
       // TODO
     });
 
-    // The Width of the Ezsigntemplateformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsigntemplateformfieldgroupType.  | eEzsigntemplateformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22-65535     | | Radio                     | 22           | | Text                      | 22-65535     | | Textarea                  | 22-65535     |
+    // The Width of the Ezsigntemplateformfield in pixels calculated at 100 DPI
     // int iEzsigntemplateformfieldWidth
     test('to test the property `iEzsigntemplateformfieldWidth`', () async {
       // TODO
     });
 
-    // The Height of the Ezsigntemplateformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsigntemplateformfieldgroupType.  | eEzsigntemplateformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     | 
+    // The Height of the Ezsigntemplateformfield in pixels calculated at 100 DPI 
     // int iEzsigntemplateformfieldHeight
     test('to test the property `iEzsigntemplateformfieldHeight`', () async {
       // TODO
@@ -106,6 +106,16 @@ void main() {
 
     // FieldEEzsigntemplateformfieldPositioningoccurence eEzsigntemplateformfieldPositioningoccurence
     test('to test the property `eEzsigntemplateformfieldPositioningoccurence`', () async {
+      // TODO
+    });
+
+    // EnumHorizontalalignment eEzsigntemplateformfieldHorizontalalignment
+    test('to test the property `eEzsigntemplateformfieldHorizontalalignment`', () async {
+      // TODO
+    });
+
+    // TextstylestaticResponseCompound objTextstylestatic
+    test('to test the property `objTextstylestatic`', () async {
       // TODO
     });
 

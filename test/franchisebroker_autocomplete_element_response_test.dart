@@ -16,7 +16,7 @@ void main() {
   // final instance = FranchisebrokerAutocompleteElementResponse();
 
   group('test FranchisebrokerAutocompleteElementResponse', () {
-    // The name of the Franchisebroker in the language of the requester
+    // The name of the Franchisebroker
     // String sFranchisebrokerName
     test('to test the property `sFranchisebrokerName`', () async {
       // TODO

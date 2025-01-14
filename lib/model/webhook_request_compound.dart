@@ -14,6 +14,7 @@ class WebhookRequestCompound {
   /// Returns a new [WebhookRequestCompound] instance.
   WebhookRequestCompound({
     this.pkiWebhookID,
+    this.fkiAuthenticationexternalID,
     this.fkiEzsignfoldertypeID,
     required this.sWebhookDescription,
     required this.eWebhookModule,
@@ -35,6 +36,18 @@ class WebhookRequestCompound {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   int? pkiWebhookID;
+
+  /// The unique ID of the Authenticationexternal
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 255
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiAuthenticationexternalID;
 
   /// The unique ID of the Ezsignfoldertype.
   ///
@@ -95,6 +108,7 @@ class WebhookRequestCompound {
   @override
   bool operator ==(Object other) => identical(this, other) || other is WebhookRequestCompound &&
     other.pkiWebhookID == pkiWebhookID &&
+    other.fkiAuthenticationexternalID == fkiAuthenticationexternalID &&
     other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
     other.sWebhookDescription == sWebhookDescription &&
     other.eWebhookModule == eWebhookModule &&
@@ -111,6 +125,7 @@ class WebhookRequestCompound {
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiWebhookID == null ? 0 : pkiWebhookID!.hashCode) +
+    (fkiAuthenticationexternalID == null ? 0 : fkiAuthenticationexternalID!.hashCode) +
     (fkiEzsignfoldertypeID == null ? 0 : fkiEzsignfoldertypeID!.hashCode) +
     (sWebhookDescription.hashCode) +
     (eWebhookModule.hashCode) +
@@ -124,7 +139,7 @@ class WebhookRequestCompound {
     (aObjWebhookheader.hashCode);
 
   @override
-  String toString() => 'WebhookRequestCompound[pkiWebhookID=$pkiWebhookID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sWebhookDescription=$sWebhookDescription, eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, sWebhookUrl=$sWebhookUrl, sWebhookEmailfailed=$sWebhookEmailfailed, bWebhookIsactive=$bWebhookIsactive, bWebhookIssigned=$bWebhookIssigned, bWebhookSkipsslvalidation=$bWebhookSkipsslvalidation, aObjWebhookheader=$aObjWebhookheader]';
+  String toString() => 'WebhookRequestCompound[pkiWebhookID=$pkiWebhookID, fkiAuthenticationexternalID=$fkiAuthenticationexternalID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sWebhookDescription=$sWebhookDescription, eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, sWebhookUrl=$sWebhookUrl, sWebhookEmailfailed=$sWebhookEmailfailed, bWebhookIsactive=$bWebhookIsactive, bWebhookIssigned=$bWebhookIssigned, bWebhookSkipsslvalidation=$bWebhookSkipsslvalidation, aObjWebhookheader=$aObjWebhookheader]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -132,6 +147,11 @@ class WebhookRequestCompound {
       json[r'pkiWebhookID'] = this.pkiWebhookID;
     } else {
       json[r'pkiWebhookID'] = null;
+    }
+    if (this.fkiAuthenticationexternalID != null) {
+      json[r'fkiAuthenticationexternalID'] = this.fkiAuthenticationexternalID;
+    } else {
+      json[r'fkiAuthenticationexternalID'] = null;
     }
     if (this.fkiEzsignfoldertypeID != null) {
       json[r'fkiEzsignfoldertypeID'] = this.fkiEzsignfoldertypeID;
@@ -183,6 +203,7 @@ class WebhookRequestCompound {
 
       return WebhookRequestCompound(
         pkiWebhookID: mapValueOfType<int>(json, r'pkiWebhookID'),
+        fkiAuthenticationexternalID: mapValueOfType<int>(json, r'fkiAuthenticationexternalID'),
         fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID'),
         sWebhookDescription: mapValueOfType<String>(json, r'sWebhookDescription')!,
         eWebhookModule: FieldEWebhookModule.fromJson(json[r'eWebhookModule'])!,

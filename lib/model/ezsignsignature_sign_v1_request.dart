@@ -14,6 +14,7 @@ class EzsignsignatureSignV1Request {
   /// Returns a new [EzsignsignatureSignV1Request] instance.
   EzsignsignatureSignV1Request({
     this.fkiEzsignsigningreasonID,
+    this.fkiFontID,
     this.sValue,
     this.eAttachmentsConfirmationDecision,
     this.sAttachmentsRefusalReason,
@@ -33,6 +34,17 @@ class EzsignsignatureSignV1Request {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   int? fkiEzsignsigningreasonID;
+
+  /// The unique ID of the Font
+  ///
+  /// Minimum value: 0
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiFontID;
 
   /// The value required for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **City**, **FieldText** or **FieldTextarea**
   ///
@@ -55,7 +67,7 @@ class EzsignsignatureSignV1Request {
   ///
   String? sAttachmentsRefusalReason;
 
-  /// The SVG of the handwritten signature.  This can only be set if eEzsignsignatureType is **Handwritten** and **bIsAutomatic** is false
+  /// The SVG of the signature.  This can only be set if eEzsignsignatureType is **Signature**_/_**Initials** and **bIsAutomatic** is false
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -66,12 +78,13 @@ class EzsignsignatureSignV1Request {
 
   List<CommonFile> aObjFile;
 
-  /// Indicates if the Ezsignsignature was part of an automatic process or not.  This can only be true if eEzsignsignatureType is **Acknowledgement**, **City**, **Handwritten**, **Initials**, **Name** or **Stamp**. 
+  /// Indicates if the Ezsignsignature was part of an automatic process or not.  This can only be true if eEzsignsignatureType is **Acknowledgement**, **City**, **Signature**, **Initials** or **Stamp**. 
   bool bIsAutomatic;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignsignatureSignV1Request &&
     other.fkiEzsignsigningreasonID == fkiEzsignsigningreasonID &&
+    other.fkiFontID == fkiFontID &&
     other.sValue == sValue &&
     other.eAttachmentsConfirmationDecision == eAttachmentsConfirmationDecision &&
     other.sAttachmentsRefusalReason == sAttachmentsRefusalReason &&
@@ -83,6 +96,7 @@ class EzsignsignatureSignV1Request {
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (fkiEzsignsigningreasonID == null ? 0 : fkiEzsignsigningreasonID!.hashCode) +
+    (fkiFontID == null ? 0 : fkiFontID!.hashCode) +
     (sValue == null ? 0 : sValue!.hashCode) +
     (eAttachmentsConfirmationDecision == null ? 0 : eAttachmentsConfirmationDecision!.hashCode) +
     (sAttachmentsRefusalReason == null ? 0 : sAttachmentsRefusalReason!.hashCode) +
@@ -91,7 +105,7 @@ class EzsignsignatureSignV1Request {
     (bIsAutomatic.hashCode);
 
   @override
-  String toString() => 'EzsignsignatureSignV1Request[fkiEzsignsigningreasonID=$fkiEzsignsigningreasonID, sValue=$sValue, eAttachmentsConfirmationDecision=$eAttachmentsConfirmationDecision, sAttachmentsRefusalReason=$sAttachmentsRefusalReason, sSvg=$sSvg, aObjFile=$aObjFile, bIsAutomatic=$bIsAutomatic]';
+  String toString() => 'EzsignsignatureSignV1Request[fkiEzsignsigningreasonID=$fkiEzsignsigningreasonID, fkiFontID=$fkiFontID, sValue=$sValue, eAttachmentsConfirmationDecision=$eAttachmentsConfirmationDecision, sAttachmentsRefusalReason=$sAttachmentsRefusalReason, sSvg=$sSvg, aObjFile=$aObjFile, bIsAutomatic=$bIsAutomatic]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -99,6 +113,11 @@ class EzsignsignatureSignV1Request {
       json[r'fkiEzsignsigningreasonID'] = this.fkiEzsignsigningreasonID;
     } else {
       json[r'fkiEzsignsigningreasonID'] = null;
+    }
+    if (this.fkiFontID != null) {
+      json[r'fkiFontID'] = this.fkiFontID;
+    } else {
+      json[r'fkiFontID'] = null;
     }
     if (this.sValue != null) {
       json[r'sValue'] = this.sValue;
@@ -145,6 +164,7 @@ class EzsignsignatureSignV1Request {
 
       return EzsignsignatureSignV1Request(
         fkiEzsignsigningreasonID: mapValueOfType<int>(json, r'fkiEzsignsigningreasonID'),
+        fkiFontID: mapValueOfType<int>(json, r'fkiFontID'),
         sValue: mapValueOfType<String>(json, r'sValue'),
         eAttachmentsConfirmationDecision: EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum.fromJson(json[r'eAttachmentsConfirmationDecision']),
         sAttachmentsRefusalReason: mapValueOfType<String>(json, r'sAttachmentsRefusalReason'),

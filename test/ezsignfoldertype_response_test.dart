@@ -137,6 +137,12 @@ void main() {
       // TODO
     });
 
+    // Whether we allow the automatic signature by an User
+    // bool bEzsignfoldertypeAutomaticsignature
+    test('to test the property `bEzsignfoldertypeAutomaticsignature`', () async {
+      // TODO
+    });
+
     // Wheter if delegation of signature is allowed to another user or not
     // bool bEzsignfoldertypeDelegate
     test('to test the property `bEzsignfoldertypeDelegate`', () async {
@@ -158,6 +164,12 @@ void main() {
     // Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not
     // bool bEzsignfoldertypeReassignuser
     test('to test the property `bEzsignfoldertypeReassignuser`', () async {
+      // TODO
+    });
+
+    // Wheter if Reassignment of signatures of the groups to which the user belongs is authorized by a user to himself
+    // bool bEzsignfoldertypeReassigngroup
+    test('to test the property `bEzsignfoldertypeReassigngroup`', () async {
       // TODO
     });
 

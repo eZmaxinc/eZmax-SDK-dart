@@ -9,7 +9,10 @@ import 'package:openapi/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiSignatureID** | **int** | The unique ID of the Signature | [optional] 
-**tSignatureSvg** | **String** | The svg of the Signature | 
+**fkiFontID** | **int** | The unique ID of the Font | 
+**eSignaturePreference** | [**FieldESignaturePreference**](FieldESignaturePreference.md) |  | 
+**tSignatureSvg** | **String** | The svg of the Signature | [optional] 
+**tSignatureSvginitials** | **String** | The svg of the Initials | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -14,6 +14,7 @@ class WebhookResponseCompound {
   /// Returns a new [WebhookResponseCompound] instance.
   WebhookResponseCompound({
     required this.pkiWebhookID,
+    this.fkiAuthenticationexternalID,
     required this.sWebhookDescription,
     this.fkiEzsignfoldertypeID,
     this.sEzsignfoldertypeNameX,
@@ -27,6 +28,7 @@ class WebhookResponseCompound {
     required this.bWebhookIsactive,
     required this.bWebhookIssigned,
     required this.bWebhookSkipsslvalidation,
+    this.sAuthenticationexternalDescription,
     required this.objAudit,
     this.sWebhookEvent,
     this.aObjWebhookheader = const [],
@@ -34,6 +36,18 @@ class WebhookResponseCompound {
 
   /// The unique ID of the Webhook
   int pkiWebhookID;
+
+  /// The unique ID of the Authenticationexternal
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 255
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiAuthenticationexternalID;
 
   /// The description of the Webhook
   String sWebhookDescription;
@@ -110,6 +124,15 @@ class WebhookResponseCompound {
   /// Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use
   bool bWebhookSkipsslvalidation;
 
+  /// The description of the Authenticationexternal
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sAuthenticationexternalDescription;
+
   CommonAudit objAudit;
 
   /// The concatenated string to describe the Webhook event
@@ -126,6 +149,7 @@ class WebhookResponseCompound {
   @override
   bool operator ==(Object other) => identical(this, other) || other is WebhookResponseCompound &&
     other.pkiWebhookID == pkiWebhookID &&
+    other.fkiAuthenticationexternalID == fkiAuthenticationexternalID &&
     other.sWebhookDescription == sWebhookDescription &&
     other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
     other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
@@ -139,6 +163,7 @@ class WebhookResponseCompound {
     other.bWebhookIsactive == bWebhookIsactive &&
     other.bWebhookIssigned == bWebhookIssigned &&
     other.bWebhookSkipsslvalidation == bWebhookSkipsslvalidation &&
+    other.sAuthenticationexternalDescription == sAuthenticationexternalDescription &&
     other.objAudit == objAudit &&
     other.sWebhookEvent == sWebhookEvent &&
     _deepEquality.equals(other.aObjWebhookheader, aObjWebhookheader);
@@ -147,6 +172,7 @@ class WebhookResponseCompound {
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiWebhookID.hashCode) +
+    (fkiAuthenticationexternalID == null ? 0 : fkiAuthenticationexternalID!.hashCode) +
     (sWebhookDescription.hashCode) +
     (fkiEzsignfoldertypeID == null ? 0 : fkiEzsignfoldertypeID!.hashCode) +
     (sEzsignfoldertypeNameX == null ? 0 : sEzsignfoldertypeNameX!.hashCode) +
@@ -160,16 +186,22 @@ class WebhookResponseCompound {
     (bWebhookIsactive.hashCode) +
     (bWebhookIssigned.hashCode) +
     (bWebhookSkipsslvalidation.hashCode) +
+    (sAuthenticationexternalDescription == null ? 0 : sAuthenticationexternalDescription!.hashCode) +
     (objAudit.hashCode) +
     (sWebhookEvent == null ? 0 : sWebhookEvent!.hashCode) +
     (aObjWebhookheader.hashCode);
 
   @override
-  String toString() => 'WebhookResponseCompound[pkiWebhookID=$pkiWebhookID, sWebhookDescription=$sWebhookDescription, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, sWebhookUrl=$sWebhookUrl, sWebhookEmailfailed=$sWebhookEmailfailed, sWebhookApikey=$sWebhookApikey, sWebhookSecret=$sWebhookSecret, bWebhookIsactive=$bWebhookIsactive, bWebhookIssigned=$bWebhookIssigned, bWebhookSkipsslvalidation=$bWebhookSkipsslvalidation, objAudit=$objAudit, sWebhookEvent=$sWebhookEvent, aObjWebhookheader=$aObjWebhookheader]';
+  String toString() => 'WebhookResponseCompound[pkiWebhookID=$pkiWebhookID, fkiAuthenticationexternalID=$fkiAuthenticationexternalID, sWebhookDescription=$sWebhookDescription, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, sWebhookUrl=$sWebhookUrl, sWebhookEmailfailed=$sWebhookEmailfailed, sWebhookApikey=$sWebhookApikey, sWebhookSecret=$sWebhookSecret, bWebhookIsactive=$bWebhookIsactive, bWebhookIssigned=$bWebhookIssigned, bWebhookSkipsslvalidation=$bWebhookSkipsslvalidation, sAuthenticationexternalDescription=$sAuthenticationexternalDescription, objAudit=$objAudit, sWebhookEvent=$sWebhookEvent, aObjWebhookheader=$aObjWebhookheader]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiWebhookID'] = this.pkiWebhookID;
+    if (this.fkiAuthenticationexternalID != null) {
+      json[r'fkiAuthenticationexternalID'] = this.fkiAuthenticationexternalID;
+    } else {
+      json[r'fkiAuthenticationexternalID'] = null;
+    }
       json[r'sWebhookDescription'] = this.sWebhookDescription;
     if (this.fkiEzsignfoldertypeID != null) {
       json[r'fkiEzsignfoldertypeID'] = this.fkiEzsignfoldertypeID;
@@ -207,6 +239,11 @@ class WebhookResponseCompound {
       json[r'bWebhookIsactive'] = this.bWebhookIsactive;
       json[r'bWebhookIssigned'] = this.bWebhookIssigned;
       json[r'bWebhookSkipsslvalidation'] = this.bWebhookSkipsslvalidation;
+    if (this.sAuthenticationexternalDescription != null) {
+      json[r'sAuthenticationexternalDescription'] = this.sAuthenticationexternalDescription;
+    } else {
+      json[r'sAuthenticationexternalDescription'] = null;
+    }
       json[r'objAudit'] = this.objAudit;
     if (this.sWebhookEvent != null) {
       json[r'sWebhookEvent'] = this.sWebhookEvent;
@@ -237,6 +274,7 @@ class WebhookResponseCompound {
 
       return WebhookResponseCompound(
         pkiWebhookID: mapValueOfType<int>(json, r'pkiWebhookID')!,
+        fkiAuthenticationexternalID: mapValueOfType<int>(json, r'fkiAuthenticationexternalID'),
         sWebhookDescription: mapValueOfType<String>(json, r'sWebhookDescription')!,
         fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID'),
         sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX'),
@@ -250,6 +288,7 @@ class WebhookResponseCompound {
         bWebhookIsactive: mapValueOfType<bool>(json, r'bWebhookIsactive')!,
         bWebhookIssigned: mapValueOfType<bool>(json, r'bWebhookIssigned')!,
         bWebhookSkipsslvalidation: mapValueOfType<bool>(json, r'bWebhookSkipsslvalidation')!,
+        sAuthenticationexternalDescription: mapValueOfType<String>(json, r'sAuthenticationexternalDescription'),
         objAudit: CommonAudit.fromJson(json[r'objAudit'])!,
         sWebhookEvent: mapValueOfType<String>(json, r'sWebhookEvent'),
         aObjWebhookheader: WebhookheaderResponseCompound.listFromJson(json[r'a_objWebhookheader']),

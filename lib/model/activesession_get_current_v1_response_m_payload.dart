@@ -21,13 +21,23 @@ class ActivesessionGetCurrentV1ResponseMPayload {
     required this.sDepartmentNameX,
     required this.bActivesessionDebug,
     required this.bActivesessionIssuperadmin,
+    this.bActivesessionAttachment,
+    this.bActivesessionCanafe,
+    this.bActivesessionFinancial,
+    this.bActivesessionRealestatecompleted,
+    this.eActivesessionEzsign,
+    required this.eActivesessionEzsignaccess,
+    this.eActivesessionEzsignprepaid,
+    this.eActivesessionRealestateinprogress,
     required this.pksCustomerCode,
     required this.fkiSystemconfigurationtypeID,
     this.fkiSignatureID,
+    this.fkiEzsignuserID,
     this.bSystemconfigurationEzsignpaidbyoffice,
     this.eSystemconfigurationEzsignofficeplan,
     required this.eUserEzsignaccess,
     this.eUserEzsignprepaid,
+    this.bUserEzsigntrial,
     this.dtUserEzsignprepaidexpiration,
     this.aPkiPermissionID = const [],
     required this.objUserReal,
@@ -60,6 +70,68 @@ class ActivesessionGetCurrentV1ResponseMPayload {
   /// Whether the active session is superadmin or not
   bool bActivesessionIssuperadmin;
 
+  /// Can access attachment when we clone a user
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bActivesessionAttachment;
+
+  /// Can access canafe when we clone a user
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bActivesessionCanafe;
+
+  /// Can access financial element when we clone a user
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bActivesessionFinancial;
+
+  /// Can access closed realestate folders when we clone a user
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bActivesessionRealestatecompleted;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEActivesessionEzsign? eActivesessionEzsign;
+
+  FieldEActivesessionEzsignaccess eActivesessionEzsignaccess;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEActivesessionEzsignprepaid? eActivesessionEzsignprepaid;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEActivesessionRealestateinprogress? eActivesessionRealestateinprogress;
+
   /// The customer code assigned to your account
   String pksCustomerCode;
 
@@ -79,6 +151,18 @@ class ActivesessionGetCurrentV1ResponseMPayload {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   int? fkiSignatureID;
+
+  /// The unique ID of the Ezsignuser
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 65535
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiEzsignuserID;
 
   /// Whether if Ezsign is paid by the company or not
   ///
@@ -106,6 +190,15 @@ class ActivesessionGetCurrentV1ResponseMPayload {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   FieldEUserEzsignprepaid? eUserEzsignprepaid;
+
+  /// Whether the User's eZsign subscription is a trial
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bUserEzsigntrial;
 
   /// The eZsign prepaid expiration date
   ///
@@ -150,13 +243,23 @@ class ActivesessionGetCurrentV1ResponseMPayload {
     other.sDepartmentNameX == sDepartmentNameX &&
     other.bActivesessionDebug == bActivesessionDebug &&
     other.bActivesessionIssuperadmin == bActivesessionIssuperadmin &&
+    other.bActivesessionAttachment == bActivesessionAttachment &&
+    other.bActivesessionCanafe == bActivesessionCanafe &&
+    other.bActivesessionFinancial == bActivesessionFinancial &&
+    other.bActivesessionRealestatecompleted == bActivesessionRealestatecompleted &&
+    other.eActivesessionEzsign == eActivesessionEzsign &&
+    other.eActivesessionEzsignaccess == eActivesessionEzsignaccess &&
+    other.eActivesessionEzsignprepaid == eActivesessionEzsignprepaid &&
+    other.eActivesessionRealestateinprogress == eActivesessionRealestateinprogress &&
     other.pksCustomerCode == pksCustomerCode &&
     other.fkiSystemconfigurationtypeID == fkiSystemconfigurationtypeID &&
     other.fkiSignatureID == fkiSignatureID &&
+    other.fkiEzsignuserID == fkiEzsignuserID &&
     other.bSystemconfigurationEzsignpaidbyoffice == bSystemconfigurationEzsignpaidbyoffice &&
     other.eSystemconfigurationEzsignofficeplan == eSystemconfigurationEzsignofficeplan &&
     other.eUserEzsignaccess == eUserEzsignaccess &&
     other.eUserEzsignprepaid == eUserEzsignprepaid &&
+    other.bUserEzsigntrial == bUserEzsigntrial &&
     other.dtUserEzsignprepaidexpiration == dtUserEzsignprepaidexpiration &&
     _deepEquality.equals(other.aPkiPermissionID, aPkiPermissionID) &&
     other.objUserReal == objUserReal &&
@@ -175,13 +278,23 @@ class ActivesessionGetCurrentV1ResponseMPayload {
     (sDepartmentNameX.hashCode) +
     (bActivesessionDebug.hashCode) +
     (bActivesessionIssuperadmin.hashCode) +
+    (bActivesessionAttachment == null ? 0 : bActivesessionAttachment!.hashCode) +
+    (bActivesessionCanafe == null ? 0 : bActivesessionCanafe!.hashCode) +
+    (bActivesessionFinancial == null ? 0 : bActivesessionFinancial!.hashCode) +
+    (bActivesessionRealestatecompleted == null ? 0 : bActivesessionRealestatecompleted!.hashCode) +
+    (eActivesessionEzsign == null ? 0 : eActivesessionEzsign!.hashCode) +
+    (eActivesessionEzsignaccess.hashCode) +
+    (eActivesessionEzsignprepaid == null ? 0 : eActivesessionEzsignprepaid!.hashCode) +
+    (eActivesessionRealestateinprogress == null ? 0 : eActivesessionRealestateinprogress!.hashCode) +
     (pksCustomerCode.hashCode) +
     (fkiSystemconfigurationtypeID.hashCode) +
     (fkiSignatureID == null ? 0 : fkiSignatureID!.hashCode) +
+    (fkiEzsignuserID == null ? 0 : fkiEzsignuserID!.hashCode) +
     (bSystemconfigurationEzsignpaidbyoffice == null ? 0 : bSystemconfigurationEzsignpaidbyoffice!.hashCode) +
     (eSystemconfigurationEzsignofficeplan == null ? 0 : eSystemconfigurationEzsignofficeplan!.hashCode) +
     (eUserEzsignaccess.hashCode) +
     (eUserEzsignprepaid == null ? 0 : eUserEzsignprepaid!.hashCode) +
+    (bUserEzsigntrial == null ? 0 : bUserEzsigntrial!.hashCode) +
     (dtUserEzsignprepaidexpiration == null ? 0 : dtUserEzsignprepaidexpiration!.hashCode) +
     (aPkiPermissionID.hashCode) +
     (objUserReal.hashCode) +
@@ -190,7 +303,7 @@ class ActivesessionGetCurrentV1ResponseMPayload {
     (aEModuleInternalname.hashCode);
 
   @override
-  String toString() => 'ActivesessionGetCurrentV1ResponseMPayload[eActivesessionUsertype=$eActivesessionUsertype, eActivesessionOrigin=$eActivesessionOrigin, eActivesessionWeekdaystart=$eActivesessionWeekdaystart, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, bActivesessionDebug=$bActivesessionDebug, bActivesessionIssuperadmin=$bActivesessionIssuperadmin, pksCustomerCode=$pksCustomerCode, fkiSystemconfigurationtypeID=$fkiSystemconfigurationtypeID, fkiSignatureID=$fkiSignatureID, bSystemconfigurationEzsignpaidbyoffice=$bSystemconfigurationEzsignpaidbyoffice, eSystemconfigurationEzsignofficeplan=$eSystemconfigurationEzsignofficeplan, eUserEzsignaccess=$eUserEzsignaccess, eUserEzsignprepaid=$eUserEzsignprepaid, dtUserEzsignprepaidexpiration=$dtUserEzsignprepaidexpiration, aPkiPermissionID=$aPkiPermissionID, objUserReal=$objUserReal, objUserCloned=$objUserCloned, objApikey=$objApikey, aEModuleInternalname=$aEModuleInternalname]';
+  String toString() => 'ActivesessionGetCurrentV1ResponseMPayload[eActivesessionUsertype=$eActivesessionUsertype, eActivesessionOrigin=$eActivesessionOrigin, eActivesessionWeekdaystart=$eActivesessionWeekdaystart, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, bActivesessionDebug=$bActivesessionDebug, bActivesessionIssuperadmin=$bActivesessionIssuperadmin, bActivesessionAttachment=$bActivesessionAttachment, bActivesessionCanafe=$bActivesessionCanafe, bActivesessionFinancial=$bActivesessionFinancial, bActivesessionRealestatecompleted=$bActivesessionRealestatecompleted, eActivesessionEzsign=$eActivesessionEzsign, eActivesessionEzsignaccess=$eActivesessionEzsignaccess, eActivesessionEzsignprepaid=$eActivesessionEzsignprepaid, eActivesessionRealestateinprogress=$eActivesessionRealestateinprogress, pksCustomerCode=$pksCustomerCode, fkiSystemconfigurationtypeID=$fkiSystemconfigurationtypeID, fkiSignatureID=$fkiSignatureID, fkiEzsignuserID=$fkiEzsignuserID, bSystemconfigurationEzsignpaidbyoffice=$bSystemconfigurationEzsignpaidbyoffice, eSystemconfigurationEzsignofficeplan=$eSystemconfigurationEzsignofficeplan, eUserEzsignaccess=$eUserEzsignaccess, eUserEzsignprepaid=$eUserEzsignprepaid, bUserEzsigntrial=$bUserEzsigntrial, dtUserEzsignprepaidexpiration=$dtUserEzsignprepaidexpiration, aPkiPermissionID=$aPkiPermissionID, objUserReal=$objUserReal, objUserCloned=$objUserCloned, objApikey=$objApikey, aEModuleInternalname=$aEModuleInternalname]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -202,12 +315,53 @@ class ActivesessionGetCurrentV1ResponseMPayload {
       json[r'sDepartmentNameX'] = this.sDepartmentNameX;
       json[r'bActivesessionDebug'] = this.bActivesessionDebug;
       json[r'bActivesessionIssuperadmin'] = this.bActivesessionIssuperadmin;
+    if (this.bActivesessionAttachment != null) {
+      json[r'bActivesessionAttachment'] = this.bActivesessionAttachment;
+    } else {
+      json[r'bActivesessionAttachment'] = null;
+    }
+    if (this.bActivesessionCanafe != null) {
+      json[r'bActivesessionCanafe'] = this.bActivesessionCanafe;
+    } else {
+      json[r'bActivesessionCanafe'] = null;
+    }
+    if (this.bActivesessionFinancial != null) {
+      json[r'bActivesessionFinancial'] = this.bActivesessionFinancial;
+    } else {
+      json[r'bActivesessionFinancial'] = null;
+    }
+    if (this.bActivesessionRealestatecompleted != null) {
+      json[r'bActivesessionRealestatecompleted'] = this.bActivesessionRealestatecompleted;
+    } else {
+      json[r'bActivesessionRealestatecompleted'] = null;
+    }
+    if (this.eActivesessionEzsign != null) {
+      json[r'eActivesessionEzsign'] = this.eActivesessionEzsign;
+    } else {
+      json[r'eActivesessionEzsign'] = null;
+    }
+      json[r'eActivesessionEzsignaccess'] = this.eActivesessionEzsignaccess;
+    if (this.eActivesessionEzsignprepaid != null) {
+      json[r'eActivesessionEzsignprepaid'] = this.eActivesessionEzsignprepaid;
+    } else {
+      json[r'eActivesessionEzsignprepaid'] = null;
+    }
+    if (this.eActivesessionRealestateinprogress != null) {
+      json[r'eActivesessionRealestateinprogress'] = this.eActivesessionRealestateinprogress;
+    } else {
+      json[r'eActivesessionRealestateinprogress'] = null;
+    }
       json[r'pksCustomerCode'] = this.pksCustomerCode;
       json[r'fkiSystemconfigurationtypeID'] = this.fkiSystemconfigurationtypeID;
     if (this.fkiSignatureID != null) {
       json[r'fkiSignatureID'] = this.fkiSignatureID;
     } else {
       json[r'fkiSignatureID'] = null;
+    }
+    if (this.fkiEzsignuserID != null) {
+      json[r'fkiEzsignuserID'] = this.fkiEzsignuserID;
+    } else {
+      json[r'fkiEzsignuserID'] = null;
     }
     if (this.bSystemconfigurationEzsignpaidbyoffice != null) {
       json[r'bSystemconfigurationEzsignpaidbyoffice'] = this.bSystemconfigurationEzsignpaidbyoffice;
@@ -224,6 +378,11 @@ class ActivesessionGetCurrentV1ResponseMPayload {
       json[r'eUserEzsignprepaid'] = this.eUserEzsignprepaid;
     } else {
       json[r'eUserEzsignprepaid'] = null;
+    }
+    if (this.bUserEzsigntrial != null) {
+      json[r'bUserEzsigntrial'] = this.bUserEzsigntrial;
+    } else {
+      json[r'bUserEzsigntrial'] = null;
     }
     if (this.dtUserEzsignprepaidexpiration != null) {
       json[r'dtUserEzsignprepaidexpiration'] = this.dtUserEzsignprepaidexpiration;
@@ -273,13 +432,23 @@ class ActivesessionGetCurrentV1ResponseMPayload {
         sDepartmentNameX: mapValueOfType<String>(json, r'sDepartmentNameX')!,
         bActivesessionDebug: mapValueOfType<bool>(json, r'bActivesessionDebug')!,
         bActivesessionIssuperadmin: mapValueOfType<bool>(json, r'bActivesessionIssuperadmin')!,
+        bActivesessionAttachment: mapValueOfType<bool>(json, r'bActivesessionAttachment'),
+        bActivesessionCanafe: mapValueOfType<bool>(json, r'bActivesessionCanafe'),
+        bActivesessionFinancial: mapValueOfType<bool>(json, r'bActivesessionFinancial'),
+        bActivesessionRealestatecompleted: mapValueOfType<bool>(json, r'bActivesessionRealestatecompleted'),
+        eActivesessionEzsign: FieldEActivesessionEzsign.fromJson(json[r'eActivesessionEzsign']),
+        eActivesessionEzsignaccess: FieldEActivesessionEzsignaccess.fromJson(json[r'eActivesessionEzsignaccess'])!,
+        eActivesessionEzsignprepaid: FieldEActivesessionEzsignprepaid.fromJson(json[r'eActivesessionEzsignprepaid']),
+        eActivesessionRealestateinprogress: FieldEActivesessionRealestateinprogress.fromJson(json[r'eActivesessionRealestateinprogress']),
         pksCustomerCode: mapValueOfType<String>(json, r'pksCustomerCode')!,
         fkiSystemconfigurationtypeID: mapValueOfType<int>(json, r'fkiSystemconfigurationtypeID')!,
         fkiSignatureID: mapValueOfType<int>(json, r'fkiSignatureID'),
+        fkiEzsignuserID: mapValueOfType<int>(json, r'fkiEzsignuserID'),
         bSystemconfigurationEzsignpaidbyoffice: mapValueOfType<bool>(json, r'bSystemconfigurationEzsignpaidbyoffice'),
         eSystemconfigurationEzsignofficeplan: FieldESystemconfigurationEzsignofficeplan.fromJson(json[r'eSystemconfigurationEzsignofficeplan']),
         eUserEzsignaccess: FieldEUserEzsignaccess.fromJson(json[r'eUserEzsignaccess'])!,
         eUserEzsignprepaid: FieldEUserEzsignprepaid.fromJson(json[r'eUserEzsignprepaid']),
+        bUserEzsigntrial: mapValueOfType<bool>(json, r'bUserEzsigntrial'),
         dtUserEzsignprepaidexpiration: mapValueOfType<String>(json, r'dtUserEzsignprepaidexpiration'),
         aPkiPermissionID: json[r'a_pkiPermissionID'] is Iterable
             ? (json[r'a_pkiPermissionID'] as Iterable).cast<int>().toList(growable: false)
@@ -345,6 +514,7 @@ class ActivesessionGetCurrentV1ResponseMPayload {
     'sDepartmentNameX',
     'bActivesessionDebug',
     'bActivesessionIssuperadmin',
+    'eActivesessionEzsignaccess',
     'pksCustomerCode',
     'fkiSystemconfigurationtypeID',
     'eUserEzsignaccess',

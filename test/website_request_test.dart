@@ -16,6 +16,12 @@ void main() {
   // final instance = WebsiteRequest();
 
   group('test WebsiteRequest', () {
+    // The unique ID of the Website Default
+    // int pkiWebsiteID
+    test('to test the property `pkiWebsiteID`', () async {
+      // TODO
+    });
+
     // The unique ID of the Websitetype.  Valid values:  |Value|Description| |-|-| |1|Website| |2|Twitter| |3|Facebook| |4|Survey|
     // int fkiWebsitetypeID
     test('to test the property `fkiWebsitetypeID`', () async {

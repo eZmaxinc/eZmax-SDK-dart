@@ -29,6 +29,8 @@ class EzsigntemplateformfieldRequestCompound {
     this.iEzsigntemplateformfieldPositioningoffsetx,
     this.iEzsigntemplateformfieldPositioningoffsety,
     this.eEzsigntemplateformfieldPositioningoccurence,
+    this.eEzsigntemplateformfieldHorizontalalignment,
+    this.objTextstylestatic,
     this.aObjEzsigntemplateelementdependency = const [],
   });
 
@@ -90,12 +92,12 @@ class EzsigntemplateformfieldRequestCompound {
   ///
   int? iEzsigntemplateformfieldY;
 
-  /// The Width of the Ezsigntemplateformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsigntemplateformfieldgroupType.  | eEzsigntemplateformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22-65535     | | Radio                     | 22           | | Text                      | 22-65535     | | Textarea                  | 22-65535     |
+  /// The Width of the Ezsigntemplateformfield in pixels calculated at 100 DPI
   ///
   /// Minimum value: 0
   int iEzsigntemplateformfieldWidth;
 
-  /// The Height of the Ezsigntemplateformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsigntemplateformfieldgroupType.  | eEzsigntemplateformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     | 
+  /// The Height of the Ezsigntemplateformfield in pixels calculated at 100 DPI 
   ///
   /// Minimum value: 0
   int iEzsigntemplateformfieldHeight;
@@ -161,6 +163,22 @@ class EzsigntemplateformfieldRequestCompound {
   ///
   FieldEEzsigntemplateformfieldPositioningoccurence? eEzsigntemplateformfieldPositioningoccurence;
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  EnumHorizontalalignment? eEzsigntemplateformfieldHorizontalalignment;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  TextstylestaticRequestCompound? objTextstylestatic;
+
   List<EzsigntemplateelementdependencyRequestCompound> aObjEzsigntemplateelementdependency;
 
   @override
@@ -181,6 +199,8 @@ class EzsigntemplateformfieldRequestCompound {
     other.iEzsigntemplateformfieldPositioningoffsetx == iEzsigntemplateformfieldPositioningoffsetx &&
     other.iEzsigntemplateformfieldPositioningoffsety == iEzsigntemplateformfieldPositioningoffsety &&
     other.eEzsigntemplateformfieldPositioningoccurence == eEzsigntemplateformfieldPositioningoccurence &&
+    other.eEzsigntemplateformfieldHorizontalalignment == eEzsigntemplateformfieldHorizontalalignment &&
+    other.objTextstylestatic == objTextstylestatic &&
     _deepEquality.equals(other.aObjEzsigntemplateelementdependency, aObjEzsigntemplateelementdependency);
 
   @override
@@ -202,10 +222,12 @@ class EzsigntemplateformfieldRequestCompound {
     (iEzsigntemplateformfieldPositioningoffsetx == null ? 0 : iEzsigntemplateformfieldPositioningoffsetx!.hashCode) +
     (iEzsigntemplateformfieldPositioningoffsety == null ? 0 : iEzsigntemplateformfieldPositioningoffsety!.hashCode) +
     (eEzsigntemplateformfieldPositioningoccurence == null ? 0 : eEzsigntemplateformfieldPositioningoccurence!.hashCode) +
+    (eEzsigntemplateformfieldHorizontalalignment == null ? 0 : eEzsigntemplateformfieldHorizontalalignment!.hashCode) +
+    (objTextstylestatic == null ? 0 : objTextstylestatic!.hashCode) +
     (aObjEzsigntemplateelementdependency.hashCode);
 
   @override
-  String toString() => 'EzsigntemplateformfieldRequestCompound[pkiEzsigntemplateformfieldID=$pkiEzsigntemplateformfieldID, eEzsigntemplateformfieldPositioning=$eEzsigntemplateformfieldPositioning, iEzsigntemplatedocumentpagePagenumber=$iEzsigntemplatedocumentpagePagenumber, sEzsigntemplateformfieldLabel=$sEzsigntemplateformfieldLabel, sEzsigntemplateformfieldValue=$sEzsigntemplateformfieldValue, iEzsigntemplateformfieldX=$iEzsigntemplateformfieldX, iEzsigntemplateformfieldY=$iEzsigntemplateformfieldY, iEzsigntemplateformfieldWidth=$iEzsigntemplateformfieldWidth, iEzsigntemplateformfieldHeight=$iEzsigntemplateformfieldHeight, bEzsigntemplateformfieldAutocomplete=$bEzsigntemplateformfieldAutocomplete, bEzsigntemplateformfieldSelected=$bEzsigntemplateformfieldSelected, eEzsigntemplateformfieldDependencyrequirement=$eEzsigntemplateformfieldDependencyrequirement, sEzsigntemplateformfieldPositioningpattern=$sEzsigntemplateformfieldPositioningpattern, iEzsigntemplateformfieldPositioningoffsetx=$iEzsigntemplateformfieldPositioningoffsetx, iEzsigntemplateformfieldPositioningoffsety=$iEzsigntemplateformfieldPositioningoffsety, eEzsigntemplateformfieldPositioningoccurence=$eEzsigntemplateformfieldPositioningoccurence, aObjEzsigntemplateelementdependency=$aObjEzsigntemplateelementdependency]';
+  String toString() => 'EzsigntemplateformfieldRequestCompound[pkiEzsigntemplateformfieldID=$pkiEzsigntemplateformfieldID, eEzsigntemplateformfieldPositioning=$eEzsigntemplateformfieldPositioning, iEzsigntemplatedocumentpagePagenumber=$iEzsigntemplatedocumentpagePagenumber, sEzsigntemplateformfieldLabel=$sEzsigntemplateformfieldLabel, sEzsigntemplateformfieldValue=$sEzsigntemplateformfieldValue, iEzsigntemplateformfieldX=$iEzsigntemplateformfieldX, iEzsigntemplateformfieldY=$iEzsigntemplateformfieldY, iEzsigntemplateformfieldWidth=$iEzsigntemplateformfieldWidth, iEzsigntemplateformfieldHeight=$iEzsigntemplateformfieldHeight, bEzsigntemplateformfieldAutocomplete=$bEzsigntemplateformfieldAutocomplete, bEzsigntemplateformfieldSelected=$bEzsigntemplateformfieldSelected, eEzsigntemplateformfieldDependencyrequirement=$eEzsigntemplateformfieldDependencyrequirement, sEzsigntemplateformfieldPositioningpattern=$sEzsigntemplateformfieldPositioningpattern, iEzsigntemplateformfieldPositioningoffsetx=$iEzsigntemplateformfieldPositioningoffsetx, iEzsigntemplateformfieldPositioningoffsety=$iEzsigntemplateformfieldPositioningoffsety, eEzsigntemplateformfieldPositioningoccurence=$eEzsigntemplateformfieldPositioningoccurence, eEzsigntemplateformfieldHorizontalalignment=$eEzsigntemplateformfieldHorizontalalignment, objTextstylestatic=$objTextstylestatic, aObjEzsigntemplateelementdependency=$aObjEzsigntemplateelementdependency]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -273,6 +295,16 @@ class EzsigntemplateformfieldRequestCompound {
     } else {
       json[r'eEzsigntemplateformfieldPositioningoccurence'] = null;
     }
+    if (this.eEzsigntemplateformfieldHorizontalalignment != null) {
+      json[r'eEzsigntemplateformfieldHorizontalalignment'] = this.eEzsigntemplateformfieldHorizontalalignment;
+    } else {
+      json[r'eEzsigntemplateformfieldHorizontalalignment'] = null;
+    }
+    if (this.objTextstylestatic != null) {
+      json[r'objTextstylestatic'] = this.objTextstylestatic;
+    } else {
+      json[r'objTextstylestatic'] = null;
+    }
       json[r'a_objEzsigntemplateelementdependency'] = this.aObjEzsigntemplateelementdependency;
     return json;
   }
@@ -312,6 +344,8 @@ class EzsigntemplateformfieldRequestCompound {
         iEzsigntemplateformfieldPositioningoffsetx: mapValueOfType<int>(json, r'iEzsigntemplateformfieldPositioningoffsetx'),
         iEzsigntemplateformfieldPositioningoffsety: mapValueOfType<int>(json, r'iEzsigntemplateformfieldPositioningoffsety'),
         eEzsigntemplateformfieldPositioningoccurence: FieldEEzsigntemplateformfieldPositioningoccurence.fromJson(json[r'eEzsigntemplateformfieldPositioningoccurence']),
+        eEzsigntemplateformfieldHorizontalalignment: EnumHorizontalalignment.fromJson(json[r'eEzsigntemplateformfieldHorizontalalignment']),
+        objTextstylestatic: TextstylestaticRequestCompound.fromJson(json[r'objTextstylestatic']),
         aObjEzsigntemplateelementdependency: EzsigntemplateelementdependencyRequestCompound.listFromJson(json[r'a_objEzsigntemplateelementdependency']),
       );
     }

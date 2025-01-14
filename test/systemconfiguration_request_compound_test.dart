@@ -22,6 +22,12 @@ void main() {
       // TODO
     });
 
+    // The unique ID of the Branding
+    // int fkiBrandingID
+    test('to test the property `fkiBrandingID`', () async {
+      // TODO
+    });
+
     // FieldESystemconfigurationNewexternaluseraction eSystemconfigurationNewexternaluseraction
     test('to test the property `eSystemconfigurationNewexternaluseraction`', () async {
       // TODO

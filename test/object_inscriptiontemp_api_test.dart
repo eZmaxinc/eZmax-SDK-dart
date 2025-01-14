@@ -17,12 +17,39 @@ void main() {
   // final instance = ObjectInscriptiontempApi();
 
   group('tests for ObjectInscriptiontempApi', () {
+    // Retrieve Communication count
+    //
+    // 
+    //
+    //Future<InscriptiontempGetCommunicationCountV1Response> inscriptiontempGetCommunicationCountV1(int pkiInscriptiontempID) async
+    test('test inscriptiontempGetCommunicationCountV1', () async {
+      // TODO
+    });
+
     // Retrieve Communication list
     //
     // 
     //
     //Future<InscriptiontempGetCommunicationListV1Response> inscriptiontempGetCommunicationListV1(int pkiInscriptiontempID) async
     test('test inscriptiontempGetCommunicationListV1', () async {
+      // TODO
+    });
+
+    // Retrieve Inscriptiontemp's Communicationrecipient
+    //
+    // 
+    //
+    //Future<InscriptiontempGetCommunicationrecipientsV1Response> inscriptiontempGetCommunicationrecipientsV1(int pkiInscriptiontempID) async
+    test('test inscriptiontempGetCommunicationrecipientsV1', () async {
+      // TODO
+    });
+
+    // Retrieve Inscriptiontemp's Communicationsender
+    //
+    // 
+    //
+    //Future<InscriptiontempGetCommunicationsendersV1Response> inscriptiontempGetCommunicationsendersV1(int pkiInscriptiontempID) async
+    test('test inscriptiontempGetCommunicationsendersV1', () async {
       // TODO
     });
 

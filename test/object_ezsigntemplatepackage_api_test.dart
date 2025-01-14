@@ -57,7 +57,7 @@ void main() {
     //
     // Get the list of Ezsigntemplatepackage to be used in a dropdown or autocomplete control.
     //
-    //Future<EzsigntemplatepackageGetAutocompleteV2Response> ezsigntemplatepackageGetAutocompleteV2(String sSelector, { String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage }) async
+    //Future<EzsigntemplatepackageGetAutocompleteV2Response> ezsigntemplatepackageGetAutocompleteV2(String sSelector, { String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage, int fkiEzsignfoldertypeID }) async
     test('test ezsigntemplatepackageGetAutocompleteV2', () async {
       // TODO
     });

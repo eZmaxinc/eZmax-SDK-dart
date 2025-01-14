@@ -61,6 +61,12 @@ String parameterToString(dynamic value) {
   if (value is ComputedEEzsigndocumentSteptype) {
     return ComputedEEzsigndocumentSteptypeTypeTransformer().encode(value).toString();
   }
+  if (value is ComputedEEzsignfolderAccess) {
+    return ComputedEEzsignfolderAccessTypeTransformer().encode(value).toString();
+  }
+  if (value is CustomEWebhookEzsignevent) {
+    return CustomEWebhookEzsigneventTypeTransformer().encode(value).toString();
+  }
   if (value is EnumFontunderline) {
     return EnumFontunderlineTypeTransformer().encode(value).toString();
   }
@@ -76,8 +82,20 @@ String parameterToString(dynamic value) {
   if (value is EnumVerticalalignment) {
     return EnumVerticalalignmentTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEActivesessionEzsign) {
+    return FieldEActivesessionEzsignTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEActivesessionEzsignaccess) {
+    return FieldEActivesessionEzsignaccessTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEActivesessionEzsignprepaid) {
+    return FieldEActivesessionEzsignprepaidTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEActivesessionOrigin) {
     return FieldEActivesessionOriginTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEActivesessionRealestateinprogress) {
+    return FieldEActivesessionRealestateinprogressTypeTransformer().encode(value).toString();
   }
   if (value is FieldEActivesessionUsertype) {
     return FieldEActivesessionUsertypeTypeTransformer().encode(value).toString();
@@ -100,11 +118,20 @@ String parameterToString(dynamic value) {
   if (value is FieldEAttachmentlogType) {
     return FieldEAttachmentlogTypeTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEAuthenticationexternalType) {
+    return FieldEAuthenticationexternalTypeTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEBrandingAlignlogo) {
+    return FieldEBrandingAlignlogoTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEBrandingLogo) {
     return FieldEBrandingLogoTypeTransformer().encode(value).toString();
   }
-  if (value is FieldEBrandingLogointerface) {
-    return FieldEBrandingLogointerfaceTypeTransformer().encode(value).toString();
+  if (value is FieldEColleagueEzsign) {
+    return FieldEColleagueEzsignTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEColleagueRealestateinprogess) {
+    return FieldEColleagueRealestateinprogessTypeTransformer().encode(value).toString();
   }
   if (value is FieldECommunicationImportance) {
     return FieldECommunicationImportanceTypeTransformer().encode(value).toString();
@@ -118,14 +145,35 @@ String parameterToString(dynamic value) {
   if (value is FieldECommunicationrecipientType) {
     return FieldECommunicationrecipientTypeTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEContactType) {
+    return FieldEContactTypeTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEContactinformationsType) {
+    return FieldEContactinformationsTypeTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldECreditcardtransactionAvsresult) {
+    return FieldECreditcardtransactionAvsresultTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldECreditcardtransactionCvdresult) {
+    return FieldECreditcardtransactionCvdresultTypeTransformer().encode(value).toString();
+  }
   if (value is FieldECreditcardtypeCodename) {
     return FieldECreditcardtypeCodenameTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldECustomerMarketingcorrespondence) {
+    return FieldECustomerMarketingcorrespondenceTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldECustomerType) {
+    return FieldECustomerTypeTypeTransformer().encode(value).toString();
   }
   if (value is FieldEDiscussionmessageStatus) {
     return FieldEDiscussionmessageStatusTypeTransformer().encode(value).toString();
   }
   if (value is FieldEErrorCode) {
     return FieldEErrorCodeTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzdoctemplatedocumentPrivacylevel) {
+    return FieldEEzdoctemplatedocumentPrivacylevelTypeTransformer().encode(value).toString();
   }
   if (value is FieldEEzmaxinvoicingPaymenttype) {
     return FieldEEzmaxinvoicingPaymenttypeTypeTransformer().encode(value).toString();
@@ -160,6 +208,12 @@ String parameterToString(dynamic value) {
   if (value is FieldEEzsignfolderCompletion) {
     return FieldEEzsignfolderCompletionTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEEzsignfolderDocumentdependency) {
+    return FieldEEzsignfolderDocumentdependencyTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsignfolderMessageorder) {
+    return FieldEEzsignfolderMessageorderTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEEzsignfolderSendreminderfrequency) {
     return FieldEEzsignfolderSendreminderfrequencyTypeTransformer().encode(value).toString();
   }
@@ -172,11 +226,23 @@ String parameterToString(dynamic value) {
   if (value is FieldEEzsignfoldertypeDisposal) {
     return FieldEEzsignfoldertypeDisposalTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEEzsignfoldertypeDocumentdependency) {
+    return FieldEEzsignfoldertypeDocumentdependencyTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsignfoldertypePdfanoncompliantaction) {
+    return FieldEEzsignfoldertypePdfanoncompliantactionTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsignfoldertypePdfarequirement) {
+    return FieldEEzsignfoldertypePdfarequirementTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEEzsignfoldertypePrivacylevel) {
     return FieldEEzsignfoldertypePrivacylevelTypeTransformer().encode(value).toString();
   }
   if (value is FieldEEzsignfoldertypeSendreminderfrequency) {
     return FieldEEzsignfoldertypeSendreminderfrequencyTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsignfoldertypeSigneraccess) {
+    return FieldEEzsignfoldertypeSigneraccessTypeTransformer().encode(value).toString();
   }
   if (value is FieldEEzsignformfieldDependencyrequirement) {
     return FieldEEzsignformfieldDependencyrequirementTypeTransformer().encode(value).toString();
@@ -193,6 +259,9 @@ String parameterToString(dynamic value) {
   if (value is FieldEEzsignsignatureAttachmentnamesource) {
     return FieldEEzsignsignatureAttachmentnamesourceTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEEzsignsignatureConsultationtrigger) {
+    return FieldEEzsignsignatureConsultationtriggerTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEEzsignsignatureDependencyrequirement) {
     return FieldEEzsignsignatureDependencyrequirementTypeTransformer().encode(value).toString();
   }
@@ -205,8 +274,17 @@ String parameterToString(dynamic value) {
   if (value is FieldEEzsignsignatureType) {
     return FieldEEzsignsignatureTypeTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEEzsigntemplateRecognition) {
+    return FieldEEzsigntemplateRecognitionTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEEzsigntemplateType) {
     return FieldEEzsigntemplateTypeTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsigntemplatedocumentpagerecognitionOperator) {
+    return FieldEEzsigntemplatedocumentpagerecognitionOperatorTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsigntemplatedocumentpagerecognitionSection) {
+    return FieldEEzsigntemplatedocumentpagerecognitionSectionTypeTransformer().encode(value).toString();
   }
   if (value is FieldEEzsigntemplateelementdependencyOperator) {
     return FieldEEzsigntemplateelementdependencyOperatorTypeTransformer().encode(value).toString();
@@ -238,8 +316,17 @@ String parameterToString(dynamic value) {
   if (value is FieldEEzsigntemplateglobalSupplier) {
     return FieldEEzsigntemplateglobalSupplierTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEEzsigntemplatepackagesignerMapping) {
+    return FieldEEzsigntemplatepackagesignerMappingTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsigntemplatepublicLimittype) {
+    return FieldEEzsigntemplatepublicLimittypeTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEEzsigntemplatesignatureAttachmentnamesource) {
     return FieldEEzsigntemplatesignatureAttachmentnamesourceTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsigntemplatesignatureConsultationtrigger) {
+    return FieldEEzsigntemplatesignatureConsultationtriggerTypeTransformer().encode(value).toString();
   }
   if (value is FieldEEzsigntemplatesignatureDependencyrequirement) {
     return FieldEEzsigntemplatesignatureDependencyrequirementTypeTransformer().encode(value).toString();
@@ -259,6 +346,9 @@ String parameterToString(dynamic value) {
   if (value is FieldEEzsigntemplatesignatureType) {
     return FieldEEzsigntemplatesignatureTypeTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEEzsigntemplatesignerMapping) {
+    return FieldEEzsigntemplatesignerMappingTypeTransformer().encode(value).toString();
+  }
   if (value is FieldENotificationpreferenceStatus) {
     return FieldENotificationpreferenceStatusTypeTransformer().encode(value).toString();
   }
@@ -270,6 +360,9 @@ String parameterToString(dynamic value) {
   }
   if (value is FieldESessionhistoryEndby) {
     return FieldESessionhistoryEndbyTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldESignaturePreference) {
+    return FieldESignaturePreferenceTypeTransformer().encode(value).toString();
   }
   if (value is FieldESystemconfigurationEzsign) {
     return FieldESystemconfigurationEzsignTypeTransformer().encode(value).toString();

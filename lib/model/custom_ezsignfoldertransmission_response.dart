@@ -17,6 +17,7 @@ class CustomEzsignfoldertransmissionResponse {
     required this.sEzsignfolderDescription,
     required this.eEzsignfolderStep,
     required this.iEzsignfolderSignaturetotal,
+    required this.iEzsignfolderFormfieldtotal,
     required this.iEzsignfolderSignaturesigned,
     this.aObjEzsignfoldertransmissionSigner = const [],
   });
@@ -34,6 +35,9 @@ class CustomEzsignfoldertransmissionResponse {
   /// The number of total signatures that were requested in the Ezsignfolder
   int iEzsignfolderSignaturetotal;
 
+  /// The number of total form fields that were requested in the Ezsignfolder
+  int iEzsignfolderFormfieldtotal;
+
   /// The number of signatures that were signed in the Ezsignfolder.
   int iEzsignfolderSignaturesigned;
 
@@ -45,6 +49,7 @@ class CustomEzsignfoldertransmissionResponse {
     other.sEzsignfolderDescription == sEzsignfolderDescription &&
     other.eEzsignfolderStep == eEzsignfolderStep &&
     other.iEzsignfolderSignaturetotal == iEzsignfolderSignaturetotal &&
+    other.iEzsignfolderFormfieldtotal == iEzsignfolderFormfieldtotal &&
     other.iEzsignfolderSignaturesigned == iEzsignfolderSignaturesigned &&
     _deepEquality.equals(other.aObjEzsignfoldertransmissionSigner, aObjEzsignfoldertransmissionSigner);
 
@@ -55,11 +60,12 @@ class CustomEzsignfoldertransmissionResponse {
     (sEzsignfolderDescription.hashCode) +
     (eEzsignfolderStep.hashCode) +
     (iEzsignfolderSignaturetotal.hashCode) +
+    (iEzsignfolderFormfieldtotal.hashCode) +
     (iEzsignfolderSignaturesigned.hashCode) +
     (aObjEzsignfoldertransmissionSigner.hashCode);
 
   @override
-  String toString() => 'CustomEzsignfoldertransmissionResponse[pkiEzsignfolderID=$pkiEzsignfolderID, sEzsignfolderDescription=$sEzsignfolderDescription, eEzsignfolderStep=$eEzsignfolderStep, iEzsignfolderSignaturetotal=$iEzsignfolderSignaturetotal, iEzsignfolderSignaturesigned=$iEzsignfolderSignaturesigned, aObjEzsignfoldertransmissionSigner=$aObjEzsignfoldertransmissionSigner]';
+  String toString() => 'CustomEzsignfoldertransmissionResponse[pkiEzsignfolderID=$pkiEzsignfolderID, sEzsignfolderDescription=$sEzsignfolderDescription, eEzsignfolderStep=$eEzsignfolderStep, iEzsignfolderSignaturetotal=$iEzsignfolderSignaturetotal, iEzsignfolderFormfieldtotal=$iEzsignfolderFormfieldtotal, iEzsignfolderSignaturesigned=$iEzsignfolderSignaturesigned, aObjEzsignfoldertransmissionSigner=$aObjEzsignfoldertransmissionSigner]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -67,6 +73,7 @@ class CustomEzsignfoldertransmissionResponse {
       json[r'sEzsignfolderDescription'] = this.sEzsignfolderDescription;
       json[r'eEzsignfolderStep'] = this.eEzsignfolderStep;
       json[r'iEzsignfolderSignaturetotal'] = this.iEzsignfolderSignaturetotal;
+      json[r'iEzsignfolderFormfieldtotal'] = this.iEzsignfolderFormfieldtotal;
       json[r'iEzsignfolderSignaturesigned'] = this.iEzsignfolderSignaturesigned;
       json[r'a_objEzsignfoldertransmissionSigner'] = this.aObjEzsignfoldertransmissionSigner;
     return json;
@@ -95,6 +102,7 @@ class CustomEzsignfoldertransmissionResponse {
         sEzsignfolderDescription: mapValueOfType<String>(json, r'sEzsignfolderDescription')!,
         eEzsignfolderStep: FieldEEzsignfolderStep.fromJson(json[r'eEzsignfolderStep'])!,
         iEzsignfolderSignaturetotal: mapValueOfType<int>(json, r'iEzsignfolderSignaturetotal')!,
+        iEzsignfolderFormfieldtotal: mapValueOfType<int>(json, r'iEzsignfolderFormfieldtotal')!,
         iEzsignfolderSignaturesigned: mapValueOfType<int>(json, r'iEzsignfolderSignaturesigned')!,
         aObjEzsignfoldertransmissionSigner: CustomEzsignfoldertransmissionSignerResponse.listFromJson(json[r'a_objEzsignfoldertransmissionSigner']),
       );
@@ -148,6 +156,7 @@ class CustomEzsignfoldertransmissionResponse {
     'sEzsignfolderDescription',
     'eEzsignfolderStep',
     'iEzsignfolderSignaturetotal',
+    'iEzsignfolderFormfieldtotal',
     'iEzsignfolderSignaturesigned',
     'a_objEzsignfoldertransmissionSigner',
   };

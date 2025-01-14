@@ -13,10 +13,11 @@ part of openapi.api;
 class AddressRequest {
   /// Returns a new [AddressRequest] instance.
   AddressRequest({
+    this.pkiAddressID,
     required this.fkiAddresstypeID,
     required this.sAddressCivic,
     required this.sAddressStreet,
-    required this.sAddressSuite,
+    this.sAddressSuite,
     required this.sAddressCity,
     required this.fkiProvinceID,
     required this.fkiCountryID,
@@ -24,6 +25,17 @@ class AddressRequest {
     this.fAddressLongitude,
     this.fAddressLatitude,
   });
+
+  /// The unique ID of the Address
+  ///
+  /// Minimum value: 0
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? pkiAddressID;
 
   /// The unique ID of the Addresstype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| |3|Real Estate Invoice| |4|Invoicing| |5|Shipping|
   ///
@@ -37,7 +49,13 @@ class AddressRequest {
   String sAddressStreet;
 
   /// The Suite or appartment number
-  String sAddressSuite;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sAddressSuite;
 
   /// The City name
   String sAddressCity;
@@ -75,6 +93,7 @@ class AddressRequest {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is AddressRequest &&
+    other.pkiAddressID == pkiAddressID &&
     other.fkiAddresstypeID == fkiAddresstypeID &&
     other.sAddressCivic == sAddressCivic &&
     other.sAddressStreet == sAddressStreet &&
@@ -89,10 +108,11 @@ class AddressRequest {
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
+    (pkiAddressID == null ? 0 : pkiAddressID!.hashCode) +
     (fkiAddresstypeID.hashCode) +
     (sAddressCivic.hashCode) +
     (sAddressStreet.hashCode) +
-    (sAddressSuite.hashCode) +
+    (sAddressSuite == null ? 0 : sAddressSuite!.hashCode) +
     (sAddressCity.hashCode) +
     (fkiProvinceID.hashCode) +
     (fkiCountryID.hashCode) +
@@ -101,14 +121,23 @@ class AddressRequest {
     (fAddressLatitude == null ? 0 : fAddressLatitude!.hashCode);
 
   @override
-  String toString() => 'AddressRequest[fkiAddresstypeID=$fkiAddresstypeID, sAddressCivic=$sAddressCivic, sAddressStreet=$sAddressStreet, sAddressSuite=$sAddressSuite, sAddressCity=$sAddressCity, fkiProvinceID=$fkiProvinceID, fkiCountryID=$fkiCountryID, sAddressZip=$sAddressZip, fAddressLongitude=$fAddressLongitude, fAddressLatitude=$fAddressLatitude]';
+  String toString() => 'AddressRequest[pkiAddressID=$pkiAddressID, fkiAddresstypeID=$fkiAddresstypeID, sAddressCivic=$sAddressCivic, sAddressStreet=$sAddressStreet, sAddressSuite=$sAddressSuite, sAddressCity=$sAddressCity, fkiProvinceID=$fkiProvinceID, fkiCountryID=$fkiCountryID, sAddressZip=$sAddressZip, fAddressLongitude=$fAddressLongitude, fAddressLatitude=$fAddressLatitude]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
+    if (this.pkiAddressID != null) {
+      json[r'pkiAddressID'] = this.pkiAddressID;
+    } else {
+      json[r'pkiAddressID'] = null;
+    }
       json[r'fkiAddresstypeID'] = this.fkiAddresstypeID;
       json[r'sAddressCivic'] = this.sAddressCivic;
       json[r'sAddressStreet'] = this.sAddressStreet;
+    if (this.sAddressSuite != null) {
       json[r'sAddressSuite'] = this.sAddressSuite;
+    } else {
+      json[r'sAddressSuite'] = null;
+    }
       json[r'sAddressCity'] = this.sAddressCity;
       json[r'fkiProvinceID'] = this.fkiProvinceID;
       json[r'fkiCountryID'] = this.fkiCountryID;
@@ -145,10 +174,11 @@ class AddressRequest {
       }());
 
       return AddressRequest(
+        pkiAddressID: mapValueOfType<int>(json, r'pkiAddressID'),
         fkiAddresstypeID: mapValueOfType<int>(json, r'fkiAddresstypeID')!,
         sAddressCivic: mapValueOfType<String>(json, r'sAddressCivic')!,
         sAddressStreet: mapValueOfType<String>(json, r'sAddressStreet')!,
-        sAddressSuite: mapValueOfType<String>(json, r'sAddressSuite')!,
+        sAddressSuite: mapValueOfType<String>(json, r'sAddressSuite'),
         sAddressCity: mapValueOfType<String>(json, r'sAddressCity')!,
         fkiProvinceID: mapValueOfType<int>(json, r'fkiProvinceID')!,
         fkiCountryID: mapValueOfType<int>(json, r'fkiCountryID')!,
@@ -205,7 +235,6 @@ class AddressRequest {
     'fkiAddresstypeID',
     'sAddressCivic',
     'sAddressStreet',
-    'sAddressSuite',
     'sAddressCity',
     'fkiProvinceID',
     'fkiCountryID',

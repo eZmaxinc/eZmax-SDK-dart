@@ -22,6 +22,11 @@ void main() {
       // TODO
     });
 
+    // EmailRequest objEmail
+    test('to test the property `objEmail`', () async {
+      // TODO
+    });
+
     // MultilingualUsergroupName objUsergroupName
     test('to test the property `objUsergroupName`', () async {
       // TODO

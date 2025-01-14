@@ -24,13 +24,13 @@ class ObjectBrandingApi {
   ///
   /// Parameters:
   ///
-  /// * [BrandingCreateObjectV1Request] brandingCreateObjectV1Request (required):
-  Future<Response> brandingCreateObjectV1WithHttpInfo(BrandingCreateObjectV1Request brandingCreateObjectV1Request,) async {
+  /// * [BrandingCreateObjectV2Request] brandingCreateObjectV2Request (required):
+  Future<Response> brandingCreateObjectV2WithHttpInfo(BrandingCreateObjectV2Request brandingCreateObjectV2Request,) async {
     // ignore: prefer_const_declarations
-    final path = r'/1/object/branding';
+    final path = r'/2/object/branding';
 
     // ignore: prefer_final_locals
-    Object? postBody = brandingCreateObjectV1Request;
+    Object? postBody = brandingCreateObjectV2Request;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
@@ -56,9 +56,9 @@ class ObjectBrandingApi {
   ///
   /// Parameters:
   ///
-  /// * [BrandingCreateObjectV1Request] brandingCreateObjectV1Request (required):
-  Future<BrandingCreateObjectV1Response?> brandingCreateObjectV1(BrandingCreateObjectV1Request brandingCreateObjectV1Request,) async {
-    final response = await brandingCreateObjectV1WithHttpInfo(brandingCreateObjectV1Request,);
+  /// * [BrandingCreateObjectV2Request] brandingCreateObjectV2Request (required):
+  Future<BrandingCreateObjectV2Response?> brandingCreateObjectV2(BrandingCreateObjectV2Request brandingCreateObjectV2Request,) async {
+    final response = await brandingCreateObjectV2WithHttpInfo(brandingCreateObjectV2Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -66,7 +66,7 @@ class ObjectBrandingApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'BrandingCreateObjectV1Response',) as BrandingCreateObjectV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'BrandingCreateObjectV2Response',) as BrandingCreateObjectV2Response;
     
     }
     return null;
@@ -82,14 +82,14 @@ class ObjectBrandingApi {
   ///
   /// * [int] pkiBrandingID (required):
   ///
-  /// * [BrandingEditObjectV1Request] brandingEditObjectV1Request (required):
-  Future<Response> brandingEditObjectV1WithHttpInfo(int pkiBrandingID, BrandingEditObjectV1Request brandingEditObjectV1Request,) async {
+  /// * [BrandingEditObjectV2Request] brandingEditObjectV2Request (required):
+  Future<Response> brandingEditObjectV2WithHttpInfo(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request,) async {
     // ignore: prefer_const_declarations
-    final path = r'/1/object/branding/{pkiBrandingID}'
+    final path = r'/2/object/branding/{pkiBrandingID}'
       .replaceAll('{pkiBrandingID}', pkiBrandingID.toString());
 
     // ignore: prefer_final_locals
-    Object? postBody = brandingEditObjectV1Request;
+    Object? postBody = brandingEditObjectV2Request;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
@@ -117,9 +117,9 @@ class ObjectBrandingApi {
   ///
   /// * [int] pkiBrandingID (required):
   ///
-  /// * [BrandingEditObjectV1Request] brandingEditObjectV1Request (required):
-  Future<BrandingEditObjectV1Response?> brandingEditObjectV1(int pkiBrandingID, BrandingEditObjectV1Request brandingEditObjectV1Request,) async {
-    final response = await brandingEditObjectV1WithHttpInfo(pkiBrandingID, brandingEditObjectV1Request,);
+  /// * [BrandingEditObjectV2Request] brandingEditObjectV2Request (required):
+  Future<BrandingEditObjectV2Response?> brandingEditObjectV2(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request,) async {
+    final response = await brandingEditObjectV2WithHttpInfo(pkiBrandingID, brandingEditObjectV2Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -127,7 +127,7 @@ class ObjectBrandingApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'BrandingEditObjectV1Response',) as BrandingEditObjectV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'BrandingEditObjectV2Response',) as BrandingEditObjectV2Response;
     
     }
     return null;
@@ -319,9 +319,9 @@ class ObjectBrandingApi {
   /// Parameters:
   ///
   /// * [int] pkiBrandingID (required):
-  Future<Response> brandingGetObjectV2WithHttpInfo(int pkiBrandingID,) async {
+  Future<Response> brandingGetObjectV3WithHttpInfo(int pkiBrandingID,) async {
     // ignore: prefer_const_declarations
-    final path = r'/2/object/branding/{pkiBrandingID}'
+    final path = r'/3/object/branding/{pkiBrandingID}'
       .replaceAll('{pkiBrandingID}', pkiBrandingID.toString());
 
     // ignore: prefer_final_locals
@@ -352,8 +352,8 @@ class ObjectBrandingApi {
   /// Parameters:
   ///
   /// * [int] pkiBrandingID (required):
-  Future<BrandingGetObjectV2Response?> brandingGetObjectV2(int pkiBrandingID,) async {
-    final response = await brandingGetObjectV2WithHttpInfo(pkiBrandingID,);
+  Future<BrandingGetObjectV3Response?> brandingGetObjectV3(int pkiBrandingID,) async {
+    final response = await brandingGetObjectV3WithHttpInfo(pkiBrandingID,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -361,7 +361,7 @@ class ObjectBrandingApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'BrandingGetObjectV2Response',) as BrandingGetObjectV2Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'BrandingGetObjectV3Response',) as BrandingGetObjectV3Response;
     
     }
     return null;

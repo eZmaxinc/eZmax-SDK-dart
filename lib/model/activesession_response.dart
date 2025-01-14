@@ -21,6 +21,14 @@ class ActivesessionResponse {
     required this.sDepartmentNameX,
     required this.bActivesessionDebug,
     required this.bActivesessionIssuperadmin,
+    this.bActivesessionAttachment,
+    this.bActivesessionCanafe,
+    this.bActivesessionFinancial,
+    this.bActivesessionRealestatecompleted,
+    this.eActivesessionEzsign,
+    required this.eActivesessionEzsignaccess,
+    this.eActivesessionEzsignprepaid,
+    this.eActivesessionRealestateinprogress,
     required this.pksCustomerCode,
     required this.fkiSystemconfigurationtypeID,
     this.fkiSignatureID,
@@ -49,6 +57,68 @@ class ActivesessionResponse {
 
   /// Whether the active session is superadmin or not
   bool bActivesessionIssuperadmin;
+
+  /// Can access attachment when we clone a user
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bActivesessionAttachment;
+
+  /// Can access canafe when we clone a user
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bActivesessionCanafe;
+
+  /// Can access financial element when we clone a user
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bActivesessionFinancial;
+
+  /// Can access closed realestate folders when we clone a user
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bActivesessionRealestatecompleted;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEActivesessionEzsign? eActivesessionEzsign;
+
+  FieldEActivesessionEzsignaccess eActivesessionEzsignaccess;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEActivesessionEzsignprepaid? eActivesessionEzsignprepaid;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEActivesessionRealestateinprogress? eActivesessionRealestateinprogress;
 
   /// The customer code assigned to your account
   String pksCustomerCode;
@@ -80,6 +150,14 @@ class ActivesessionResponse {
     other.sDepartmentNameX == sDepartmentNameX &&
     other.bActivesessionDebug == bActivesessionDebug &&
     other.bActivesessionIssuperadmin == bActivesessionIssuperadmin &&
+    other.bActivesessionAttachment == bActivesessionAttachment &&
+    other.bActivesessionCanafe == bActivesessionCanafe &&
+    other.bActivesessionFinancial == bActivesessionFinancial &&
+    other.bActivesessionRealestatecompleted == bActivesessionRealestatecompleted &&
+    other.eActivesessionEzsign == eActivesessionEzsign &&
+    other.eActivesessionEzsignaccess == eActivesessionEzsignaccess &&
+    other.eActivesessionEzsignprepaid == eActivesessionEzsignprepaid &&
+    other.eActivesessionRealestateinprogress == eActivesessionRealestateinprogress &&
     other.pksCustomerCode == pksCustomerCode &&
     other.fkiSystemconfigurationtypeID == fkiSystemconfigurationtypeID &&
     other.fkiSignatureID == fkiSignatureID;
@@ -95,12 +173,20 @@ class ActivesessionResponse {
     (sDepartmentNameX.hashCode) +
     (bActivesessionDebug.hashCode) +
     (bActivesessionIssuperadmin.hashCode) +
+    (bActivesessionAttachment == null ? 0 : bActivesessionAttachment!.hashCode) +
+    (bActivesessionCanafe == null ? 0 : bActivesessionCanafe!.hashCode) +
+    (bActivesessionFinancial == null ? 0 : bActivesessionFinancial!.hashCode) +
+    (bActivesessionRealestatecompleted == null ? 0 : bActivesessionRealestatecompleted!.hashCode) +
+    (eActivesessionEzsign == null ? 0 : eActivesessionEzsign!.hashCode) +
+    (eActivesessionEzsignaccess.hashCode) +
+    (eActivesessionEzsignprepaid == null ? 0 : eActivesessionEzsignprepaid!.hashCode) +
+    (eActivesessionRealestateinprogress == null ? 0 : eActivesessionRealestateinprogress!.hashCode) +
     (pksCustomerCode.hashCode) +
     (fkiSystemconfigurationtypeID.hashCode) +
     (fkiSignatureID == null ? 0 : fkiSignatureID!.hashCode);
 
   @override
-  String toString() => 'ActivesessionResponse[eActivesessionUsertype=$eActivesessionUsertype, eActivesessionOrigin=$eActivesessionOrigin, eActivesessionWeekdaystart=$eActivesessionWeekdaystart, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, bActivesessionDebug=$bActivesessionDebug, bActivesessionIssuperadmin=$bActivesessionIssuperadmin, pksCustomerCode=$pksCustomerCode, fkiSystemconfigurationtypeID=$fkiSystemconfigurationtypeID, fkiSignatureID=$fkiSignatureID]';
+  String toString() => 'ActivesessionResponse[eActivesessionUsertype=$eActivesessionUsertype, eActivesessionOrigin=$eActivesessionOrigin, eActivesessionWeekdaystart=$eActivesessionWeekdaystart, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, bActivesessionDebug=$bActivesessionDebug, bActivesessionIssuperadmin=$bActivesessionIssuperadmin, bActivesessionAttachment=$bActivesessionAttachment, bActivesessionCanafe=$bActivesessionCanafe, bActivesessionFinancial=$bActivesessionFinancial, bActivesessionRealestatecompleted=$bActivesessionRealestatecompleted, eActivesessionEzsign=$eActivesessionEzsign, eActivesessionEzsignaccess=$eActivesessionEzsignaccess, eActivesessionEzsignprepaid=$eActivesessionEzsignprepaid, eActivesessionRealestateinprogress=$eActivesessionRealestateinprogress, pksCustomerCode=$pksCustomerCode, fkiSystemconfigurationtypeID=$fkiSystemconfigurationtypeID, fkiSignatureID=$fkiSignatureID]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -112,6 +198,42 @@ class ActivesessionResponse {
       json[r'sDepartmentNameX'] = this.sDepartmentNameX;
       json[r'bActivesessionDebug'] = this.bActivesessionDebug;
       json[r'bActivesessionIssuperadmin'] = this.bActivesessionIssuperadmin;
+    if (this.bActivesessionAttachment != null) {
+      json[r'bActivesessionAttachment'] = this.bActivesessionAttachment;
+    } else {
+      json[r'bActivesessionAttachment'] = null;
+    }
+    if (this.bActivesessionCanafe != null) {
+      json[r'bActivesessionCanafe'] = this.bActivesessionCanafe;
+    } else {
+      json[r'bActivesessionCanafe'] = null;
+    }
+    if (this.bActivesessionFinancial != null) {
+      json[r'bActivesessionFinancial'] = this.bActivesessionFinancial;
+    } else {
+      json[r'bActivesessionFinancial'] = null;
+    }
+    if (this.bActivesessionRealestatecompleted != null) {
+      json[r'bActivesessionRealestatecompleted'] = this.bActivesessionRealestatecompleted;
+    } else {
+      json[r'bActivesessionRealestatecompleted'] = null;
+    }
+    if (this.eActivesessionEzsign != null) {
+      json[r'eActivesessionEzsign'] = this.eActivesessionEzsign;
+    } else {
+      json[r'eActivesessionEzsign'] = null;
+    }
+      json[r'eActivesessionEzsignaccess'] = this.eActivesessionEzsignaccess;
+    if (this.eActivesessionEzsignprepaid != null) {
+      json[r'eActivesessionEzsignprepaid'] = this.eActivesessionEzsignprepaid;
+    } else {
+      json[r'eActivesessionEzsignprepaid'] = null;
+    }
+    if (this.eActivesessionRealestateinprogress != null) {
+      json[r'eActivesessionRealestateinprogress'] = this.eActivesessionRealestateinprogress;
+    } else {
+      json[r'eActivesessionRealestateinprogress'] = null;
+    }
       json[r'pksCustomerCode'] = this.pksCustomerCode;
       json[r'fkiSystemconfigurationtypeID'] = this.fkiSystemconfigurationtypeID;
     if (this.fkiSignatureID != null) {
@@ -149,6 +271,14 @@ class ActivesessionResponse {
         sDepartmentNameX: mapValueOfType<String>(json, r'sDepartmentNameX')!,
         bActivesessionDebug: mapValueOfType<bool>(json, r'bActivesessionDebug')!,
         bActivesessionIssuperadmin: mapValueOfType<bool>(json, r'bActivesessionIssuperadmin')!,
+        bActivesessionAttachment: mapValueOfType<bool>(json, r'bActivesessionAttachment'),
+        bActivesessionCanafe: mapValueOfType<bool>(json, r'bActivesessionCanafe'),
+        bActivesessionFinancial: mapValueOfType<bool>(json, r'bActivesessionFinancial'),
+        bActivesessionRealestatecompleted: mapValueOfType<bool>(json, r'bActivesessionRealestatecompleted'),
+        eActivesessionEzsign: FieldEActivesessionEzsign.fromJson(json[r'eActivesessionEzsign']),
+        eActivesessionEzsignaccess: FieldEActivesessionEzsignaccess.fromJson(json[r'eActivesessionEzsignaccess'])!,
+        eActivesessionEzsignprepaid: FieldEActivesessionEzsignprepaid.fromJson(json[r'eActivesessionEzsignprepaid']),
+        eActivesessionRealestateinprogress: FieldEActivesessionRealestateinprogress.fromJson(json[r'eActivesessionRealestateinprogress']),
         pksCustomerCode: mapValueOfType<String>(json, r'pksCustomerCode')!,
         fkiSystemconfigurationtypeID: mapValueOfType<int>(json, r'fkiSystemconfigurationtypeID')!,
         fkiSignatureID: mapValueOfType<int>(json, r'fkiSignatureID'),
@@ -207,6 +337,7 @@ class ActivesessionResponse {
     'sDepartmentNameX',
     'bActivesessionDebug',
     'bActivesessionIssuperadmin',
+    'eActivesessionEzsignaccess',
     'pksCustomerCode',
     'fkiSystemconfigurationtypeID',
   };

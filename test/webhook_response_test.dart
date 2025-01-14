@@ -22,6 +22,12 @@ void main() {
       // TODO
     });
 
+    // The unique ID of the Authenticationexternal
+    // int fkiAuthenticationexternalID
+    test('to test the property `fkiAuthenticationexternalID`', () async {
+      // TODO
+    });
+
     // The description of the Webhook
     // String sWebhookDescription
     test('to test the property `sWebhookDescription`', () async {
@@ -94,6 +100,12 @@ void main() {
     // Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use
     // bool bWebhookSkipsslvalidation
     test('to test the property `bWebhookSkipsslvalidation`', () async {
+      // TODO
+    });
+
+    // The description of the Authenticationexternal
+    // String sAuthenticationexternalDescription
+    test('to test the property `sAuthenticationexternalDescription`', () async {
       // TODO
     });
 

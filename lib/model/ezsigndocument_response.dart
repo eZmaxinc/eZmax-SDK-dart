@@ -27,6 +27,7 @@ class EzsigndocumentResponse {
     required this.iEzsigndocumentPagetotal,
     required this.iEzsigndocumentSignaturesigned,
     required this.iEzsigndocumentSignaturetotal,
+    required this.iEzsigndocumentFormfieldtotal,
     this.sEzsigndocumentMD5initial,
     this.tEzsigndocumentDeclinedtosignreason,
     this.sEzsigndocumentMD5signed,
@@ -126,6 +127,11 @@ class EzsigndocumentResponse {
   /// Minimum value: 0
   int iEzsigndocumentSignaturetotal;
 
+  /// The number of total Ezsignformfield that were requested in the Ezsigndocument.
+  ///
+  /// Minimum value: 0
+  int iEzsigndocumentFormfieldtotal;
+
   /// MD5 Hash of the initial PDF Document before signatures were applied to it.
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -212,6 +218,7 @@ class EzsigndocumentResponse {
     other.iEzsigndocumentPagetotal == iEzsigndocumentPagetotal &&
     other.iEzsigndocumentSignaturesigned == iEzsigndocumentSignaturesigned &&
     other.iEzsigndocumentSignaturetotal == iEzsigndocumentSignaturetotal &&
+    other.iEzsigndocumentFormfieldtotal == iEzsigndocumentFormfieldtotal &&
     other.sEzsigndocumentMD5initial == sEzsigndocumentMD5initial &&
     other.tEzsigndocumentDeclinedtosignreason == tEzsigndocumentDeclinedtosignreason &&
     other.sEzsigndocumentMD5signed == sEzsigndocumentMD5signed &&
@@ -239,6 +246,7 @@ class EzsigndocumentResponse {
     (iEzsigndocumentPagetotal.hashCode) +
     (iEzsigndocumentSignaturesigned.hashCode) +
     (iEzsigndocumentSignaturetotal.hashCode) +
+    (iEzsigndocumentFormfieldtotal.hashCode) +
     (sEzsigndocumentMD5initial == null ? 0 : sEzsigndocumentMD5initial!.hashCode) +
     (tEzsigndocumentDeclinedtosignreason == null ? 0 : tEzsigndocumentDeclinedtosignreason!.hashCode) +
     (sEzsigndocumentMD5signed == null ? 0 : sEzsigndocumentMD5signed!.hashCode) +
@@ -250,7 +258,7 @@ class EzsigndocumentResponse {
     (iEzsigndocumentEzsigndiscussiontotal.hashCode);
 
   @override
-  String toString() => 'EzsigndocumentResponse[pkiEzsigndocumentID=$pkiEzsigndocumentID, fkiEzsignfolderID=$fkiEzsignfolderID, fkiEzsignfoldersignerassociationIDDeclinedtosign=$fkiEzsignfoldersignerassociationIDDeclinedtosign, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, dtEzsignformCompleted=$dtEzsignformCompleted, fkiLanguageID=$fkiLanguageID, sEzsigndocumentName=$sEzsigndocumentName, eEzsigndocumentStep=$eEzsigndocumentStep, dtEzsigndocumentFirstsend=$dtEzsigndocumentFirstsend, dtEzsigndocumentLastsend=$dtEzsigndocumentLastsend, iEzsigndocumentOrder=$iEzsigndocumentOrder, iEzsigndocumentPagetotal=$iEzsigndocumentPagetotal, iEzsigndocumentSignaturesigned=$iEzsigndocumentSignaturesigned, iEzsigndocumentSignaturetotal=$iEzsigndocumentSignaturetotal, sEzsigndocumentMD5initial=$sEzsigndocumentMD5initial, tEzsigndocumentDeclinedtosignreason=$tEzsigndocumentDeclinedtosignreason, sEzsigndocumentMD5signed=$sEzsigndocumentMD5signed, bEzsigndocumentEzsignform=$bEzsigndocumentEzsignform, bEzsigndocumentHassignedsignatures=$bEzsigndocumentHassignedsignatures, objAudit=$objAudit, sEzsigndocumentExternalid=$sEzsigndocumentExternalid, iEzsigndocumentEzsignsignatureattachmenttotal=$iEzsigndocumentEzsignsignatureattachmenttotal, iEzsigndocumentEzsigndiscussiontotal=$iEzsigndocumentEzsigndiscussiontotal]';
+  String toString() => 'EzsigndocumentResponse[pkiEzsigndocumentID=$pkiEzsigndocumentID, fkiEzsignfolderID=$fkiEzsignfolderID, fkiEzsignfoldersignerassociationIDDeclinedtosign=$fkiEzsignfoldersignerassociationIDDeclinedtosign, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, dtEzsignformCompleted=$dtEzsignformCompleted, fkiLanguageID=$fkiLanguageID, sEzsigndocumentName=$sEzsigndocumentName, eEzsigndocumentStep=$eEzsigndocumentStep, dtEzsigndocumentFirstsend=$dtEzsigndocumentFirstsend, dtEzsigndocumentLastsend=$dtEzsigndocumentLastsend, iEzsigndocumentOrder=$iEzsigndocumentOrder, iEzsigndocumentPagetotal=$iEzsigndocumentPagetotal, iEzsigndocumentSignaturesigned=$iEzsigndocumentSignaturesigned, iEzsigndocumentSignaturetotal=$iEzsigndocumentSignaturetotal, iEzsigndocumentFormfieldtotal=$iEzsigndocumentFormfieldtotal, sEzsigndocumentMD5initial=$sEzsigndocumentMD5initial, tEzsigndocumentDeclinedtosignreason=$tEzsigndocumentDeclinedtosignreason, sEzsigndocumentMD5signed=$sEzsigndocumentMD5signed, bEzsigndocumentEzsignform=$bEzsigndocumentEzsignform, bEzsigndocumentHassignedsignatures=$bEzsigndocumentHassignedsignatures, objAudit=$objAudit, sEzsigndocumentExternalid=$sEzsigndocumentExternalid, iEzsigndocumentEzsignsignatureattachmenttotal=$iEzsigndocumentEzsignsignatureattachmenttotal, iEzsigndocumentEzsigndiscussiontotal=$iEzsigndocumentEzsigndiscussiontotal]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -288,6 +296,7 @@ class EzsigndocumentResponse {
       json[r'iEzsigndocumentPagetotal'] = this.iEzsigndocumentPagetotal;
       json[r'iEzsigndocumentSignaturesigned'] = this.iEzsigndocumentSignaturesigned;
       json[r'iEzsigndocumentSignaturetotal'] = this.iEzsigndocumentSignaturetotal;
+      json[r'iEzsigndocumentFormfieldtotal'] = this.iEzsigndocumentFormfieldtotal;
     if (this.sEzsigndocumentMD5initial != null) {
       json[r'sEzsigndocumentMD5initial'] = this.sEzsigndocumentMD5initial;
     } else {
@@ -361,6 +370,7 @@ class EzsigndocumentResponse {
         iEzsigndocumentPagetotal: mapValueOfType<int>(json, r'iEzsigndocumentPagetotal')!,
         iEzsigndocumentSignaturesigned: mapValueOfType<int>(json, r'iEzsigndocumentSignaturesigned')!,
         iEzsigndocumentSignaturetotal: mapValueOfType<int>(json, r'iEzsigndocumentSignaturetotal')!,
+        iEzsigndocumentFormfieldtotal: mapValueOfType<int>(json, r'iEzsigndocumentFormfieldtotal')!,
         sEzsigndocumentMD5initial: mapValueOfType<String>(json, r'sEzsigndocumentMD5initial'),
         tEzsigndocumentDeclinedtosignreason: mapValueOfType<String>(json, r'tEzsigndocumentDeclinedtosignreason'),
         sEzsigndocumentMD5signed: mapValueOfType<String>(json, r'sEzsigndocumentMD5signed'),
@@ -426,6 +436,7 @@ class EzsigndocumentResponse {
     'iEzsigndocumentPagetotal',
     'iEzsigndocumentSignaturesigned',
     'iEzsigndocumentSignaturetotal',
+    'iEzsigndocumentFormfieldtotal',
     'iEzsigndocumentEzsignsignatureattachmenttotal',
     'iEzsigndocumentEzsigndiscussiontotal',
   };

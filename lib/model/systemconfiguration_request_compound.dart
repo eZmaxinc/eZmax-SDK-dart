@@ -14,6 +14,7 @@ class SystemconfigurationRequestCompound {
   /// Returns a new [SystemconfigurationRequestCompound] instance.
   SystemconfigurationRequestCompound({
     this.pkiSystemconfigurationID,
+    this.fkiBrandingID,
     required this.eSystemconfigurationNewexternaluseraction,
     required this.eSystemconfigurationLanguage1,
     required this.eSystemconfigurationLanguage2,
@@ -37,6 +38,17 @@ class SystemconfigurationRequestCompound {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   int? pkiSystemconfigurationID;
+
+  /// The unique ID of the Branding
+  ///
+  /// Minimum value: 0
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiBrandingID;
 
   FieldESystemconfigurationNewexternaluseraction eSystemconfigurationNewexternaluseraction;
 
@@ -96,6 +108,7 @@ class SystemconfigurationRequestCompound {
   @override
   bool operator ==(Object other) => identical(this, other) || other is SystemconfigurationRequestCompound &&
     other.pkiSystemconfigurationID == pkiSystemconfigurationID &&
+    other.fkiBrandingID == fkiBrandingID &&
     other.eSystemconfigurationNewexternaluseraction == eSystemconfigurationNewexternaluseraction &&
     other.eSystemconfigurationLanguage1 == eSystemconfigurationLanguage1 &&
     other.eSystemconfigurationLanguage2 == eSystemconfigurationLanguage2 &&
@@ -111,6 +124,7 @@ class SystemconfigurationRequestCompound {
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiSystemconfigurationID == null ? 0 : pkiSystemconfigurationID!.hashCode) +
+    (fkiBrandingID == null ? 0 : fkiBrandingID!.hashCode) +
     (eSystemconfigurationNewexternaluseraction.hashCode) +
     (eSystemconfigurationLanguage1.hashCode) +
     (eSystemconfigurationLanguage2.hashCode) +
@@ -123,7 +137,7 @@ class SystemconfigurationRequestCompound {
     (dtSystemconfigurationReadonlyexpirationend == null ? 0 : dtSystemconfigurationReadonlyexpirationend!.hashCode);
 
   @override
-  String toString() => 'SystemconfigurationRequestCompound[pkiSystemconfigurationID=$pkiSystemconfigurationID, eSystemconfigurationNewexternaluseraction=$eSystemconfigurationNewexternaluseraction, eSystemconfigurationLanguage1=$eSystemconfigurationLanguage1, eSystemconfigurationLanguage2=$eSystemconfigurationLanguage2, eSystemconfigurationEzsign=$eSystemconfigurationEzsign, eSystemconfigurationEzsignofficeplan=$eSystemconfigurationEzsignofficeplan, bSystemconfigurationEzsignpaidbyoffice=$bSystemconfigurationEzsignpaidbyoffice, bSystemconfigurationEzsignpersonnal=$bSystemconfigurationEzsignpersonnal, bSystemconfigurationSspr=$bSystemconfigurationSspr, dtSystemconfigurationReadonlyexpirationstart=$dtSystemconfigurationReadonlyexpirationstart, dtSystemconfigurationReadonlyexpirationend=$dtSystemconfigurationReadonlyexpirationend]';
+  String toString() => 'SystemconfigurationRequestCompound[pkiSystemconfigurationID=$pkiSystemconfigurationID, fkiBrandingID=$fkiBrandingID, eSystemconfigurationNewexternaluseraction=$eSystemconfigurationNewexternaluseraction, eSystemconfigurationLanguage1=$eSystemconfigurationLanguage1, eSystemconfigurationLanguage2=$eSystemconfigurationLanguage2, eSystemconfigurationEzsign=$eSystemconfigurationEzsign, eSystemconfigurationEzsignofficeplan=$eSystemconfigurationEzsignofficeplan, bSystemconfigurationEzsignpaidbyoffice=$bSystemconfigurationEzsignpaidbyoffice, bSystemconfigurationEzsignpersonnal=$bSystemconfigurationEzsignpersonnal, bSystemconfigurationSspr=$bSystemconfigurationSspr, dtSystemconfigurationReadonlyexpirationstart=$dtSystemconfigurationReadonlyexpirationstart, dtSystemconfigurationReadonlyexpirationend=$dtSystemconfigurationReadonlyexpirationend]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -131,6 +145,11 @@ class SystemconfigurationRequestCompound {
       json[r'pkiSystemconfigurationID'] = this.pkiSystemconfigurationID;
     } else {
       json[r'pkiSystemconfigurationID'] = null;
+    }
+    if (this.fkiBrandingID != null) {
+      json[r'fkiBrandingID'] = this.fkiBrandingID;
+    } else {
+      json[r'fkiBrandingID'] = null;
     }
       json[r'eSystemconfigurationNewexternaluseraction'] = this.eSystemconfigurationNewexternaluseraction;
       json[r'eSystemconfigurationLanguage1'] = this.eSystemconfigurationLanguage1;
@@ -185,6 +204,7 @@ class SystemconfigurationRequestCompound {
 
       return SystemconfigurationRequestCompound(
         pkiSystemconfigurationID: mapValueOfType<int>(json, r'pkiSystemconfigurationID'),
+        fkiBrandingID: mapValueOfType<int>(json, r'fkiBrandingID'),
         eSystemconfigurationNewexternaluseraction: FieldESystemconfigurationNewexternaluseraction.fromJson(json[r'eSystemconfigurationNewexternaluseraction'])!,
         eSystemconfigurationLanguage1: FieldESystemconfigurationLanguage1.fromJson(json[r'eSystemconfigurationLanguage1'])!,
         eSystemconfigurationLanguage2: FieldESystemconfigurationLanguage2.fromJson(json[r'eSystemconfigurationLanguage2'])!,

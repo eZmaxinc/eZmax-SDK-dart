@@ -26,6 +26,15 @@ void main() {
       // TODO
     });
 
+    // Edit multiple Ezsigntemplatedocumentpagerecognitions
+    //
+    // Edit multiple Ezsigntemplatedocumentpagerecognitions
+    //
+    //Future<EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Response> ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request) async
+    test('test ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1', () async {
+      // TODO
+    });
+
     // Edit multiple Ezsigntemplateformfieldgroups
     //
     // Using this endpoint, you can edit multiple Ezsigntemplateformfieldgroups at the same time.
@@ -53,12 +62,30 @@ void main() {
       // TODO
     });
 
+    // Extract text from Ezsigntemplatedocument area
+    //
+    // Extract text from Ezsigntemplatedocument area
+    //
+    //Future<EzsigntemplatedocumentExtractTextV1Response> ezsigntemplatedocumentExtractTextV1(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentExtractTextV1Request ezsigntemplatedocumentExtractTextV1Request) async
+    test('test ezsigntemplatedocumentExtractTextV1', () async {
+      // TODO
+    });
+
     // Flatten
     //
     // Flatten an Ezsigntemplatedocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
     //
     //Future<EzsigntemplatedocumentFlattenV1Response> ezsigntemplatedocumentFlattenV1(int pkiEzsigntemplatedocumentID, Object body) async
     test('test ezsigntemplatedocumentFlattenV1', () async {
+      // TODO
+    });
+
+    // Retrieve an existing Ezsigntemplatedocument's Ezsigntemplatedocumentpagerecognitions
+    //
+    // 
+    //
+    //Future<EzsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1Response> ezsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1(int pkiEzsigntemplatedocumentID) async
+    test('test ezsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1', () async {
       // TODO
     });
 

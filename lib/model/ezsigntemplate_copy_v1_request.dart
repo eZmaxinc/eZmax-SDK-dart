@@ -14,25 +14,59 @@ class EzsigntemplateCopyV1Request {
   /// Returns a new [EzsigntemplateCopyV1Request] instance.
   EzsigntemplateCopyV1Request({
     this.aFkiEzsignfoldertypeID = const [],
+    this.bCopyCompany,
+    this.bCopyUser,
   });
 
   List<int> aFkiEzsignfoldertypeID;
 
+  /// Whether we shall copy the Ezsigntemplate as a company Ezsigntemplate
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bCopyCompany;
+
+  /// Whether we shall copy the Ezsigntemplate as a user Ezsigntemplate
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bCopyUser;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplateCopyV1Request &&
-    _deepEquality.equals(other.aFkiEzsignfoldertypeID, aFkiEzsignfoldertypeID);
+    _deepEquality.equals(other.aFkiEzsignfoldertypeID, aFkiEzsignfoldertypeID) &&
+    other.bCopyCompany == bCopyCompany &&
+    other.bCopyUser == bCopyUser;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (aFkiEzsignfoldertypeID.hashCode);
+    (aFkiEzsignfoldertypeID.hashCode) +
+    (bCopyCompany == null ? 0 : bCopyCompany!.hashCode) +
+    (bCopyUser == null ? 0 : bCopyUser!.hashCode);
 
   @override
-  String toString() => 'EzsigntemplateCopyV1Request[aFkiEzsignfoldertypeID=$aFkiEzsignfoldertypeID]';
+  String toString() => 'EzsigntemplateCopyV1Request[aFkiEzsignfoldertypeID=$aFkiEzsignfoldertypeID, bCopyCompany=$bCopyCompany, bCopyUser=$bCopyUser]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'a_fkiEzsignfoldertypeID'] = this.aFkiEzsignfoldertypeID;
+    if (this.bCopyCompany != null) {
+      json[r'bCopyCompany'] = this.bCopyCompany;
+    } else {
+      json[r'bCopyCompany'] = null;
+    }
+    if (this.bCopyUser != null) {
+      json[r'bCopyUser'] = this.bCopyUser;
+    } else {
+      json[r'bCopyUser'] = null;
+    }
     return json;
   }
 
@@ -58,6 +92,8 @@ class EzsigntemplateCopyV1Request {
         aFkiEzsignfoldertypeID: json[r'a_fkiEzsignfoldertypeID'] is Iterable
             ? (json[r'a_fkiEzsignfoldertypeID'] as Iterable).cast<int>().toList(growable: false)
             : const [],
+        bCopyCompany: mapValueOfType<bool>(json, r'bCopyCompany'),
+        bCopyUser: mapValueOfType<bool>(json, r'bCopyUser'),
       );
     }
     return null;
@@ -105,7 +141,6 @@ class EzsigntemplateCopyV1Request {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'a_fkiEzsignfoldertypeID',
   };
 }
 

@@ -22,6 +22,12 @@ void main() {
       // TODO
     });
 
+    // The unique ID of the Authenticationexternal
+    // int fkiAuthenticationexternalID
+    test('to test the property `fkiAuthenticationexternalID`', () async {
+      // TODO
+    });
+
     // The unique ID of the Ezsignfoldertype.
     // int fkiEzsignfoldertypeID
     test('to test the property `fkiEzsignfoldertypeID`', () async {

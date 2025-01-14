@@ -28,9 +28,21 @@ void main() {
       // TODO
     });
 
+    // The unique ID of the Ezdoctemplatedocument
+    // int fkiEzdoctemplatedocumentID
+    test('to test the property `fkiEzdoctemplatedocumentID`', () async {
+      // TODO
+    });
+
     // The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
     // int fkiLanguageID
     test('to test the property `fkiLanguageID`', () async {
+      // TODO
+    });
+
+    // The name of the Ezdoctemplatedocument in the language of the requester
+    // String sEzdoctemplatedocumentNameX
+    test('to test the property `sEzdoctemplatedocumentNameX`', () async {
       // TODO
     });
 

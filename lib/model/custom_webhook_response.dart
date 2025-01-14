@@ -14,6 +14,7 @@ class CustomWebhookResponse {
   /// Returns a new [CustomWebhookResponse] instance.
   CustomWebhookResponse({
     required this.pkiWebhookID,
+    this.fkiAuthenticationexternalID,
     required this.sWebhookDescription,
     this.fkiEzsignfoldertypeID,
     this.sEzsignfoldertypeNameX,
@@ -27,15 +28,29 @@ class CustomWebhookResponse {
     required this.bWebhookIsactive,
     required this.bWebhookIssigned,
     required this.bWebhookSkipsslvalidation,
+    this.sAuthenticationexternalDescription,
     required this.objAudit,
     this.sWebhookEvent,
     this.aObjWebhookheader = const [],
     required this.pksCustomerCode,
     required this.bWebhookTest,
+    this.eWebhookEmittype,
   });
 
   /// The unique ID of the Webhook
   int pkiWebhookID;
+
+  /// The unique ID of the Authenticationexternal
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 255
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiAuthenticationexternalID;
 
   /// The description of the Webhook
   String sWebhookDescription;
@@ -112,6 +127,15 @@ class CustomWebhookResponse {
   /// Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use
   bool bWebhookSkipsslvalidation;
 
+  /// The description of the Authenticationexternal
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sAuthenticationexternalDescription;
+
   CommonAudit objAudit;
 
   /// The concatenated string to describe the Webhook event
@@ -131,9 +155,13 @@ class CustomWebhookResponse {
   /// Wheter the webhook received is a manual test or a real event
   bool bWebhookTest;
 
+  /// Wheter the webhook received is a manual test or a real event
+  CustomWebhookResponseEWebhookEmittypeEnum? eWebhookEmittype;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomWebhookResponse &&
     other.pkiWebhookID == pkiWebhookID &&
+    other.fkiAuthenticationexternalID == fkiAuthenticationexternalID &&
     other.sWebhookDescription == sWebhookDescription &&
     other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
     other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
@@ -147,16 +175,19 @@ class CustomWebhookResponse {
     other.bWebhookIsactive == bWebhookIsactive &&
     other.bWebhookIssigned == bWebhookIssigned &&
     other.bWebhookSkipsslvalidation == bWebhookSkipsslvalidation &&
+    other.sAuthenticationexternalDescription == sAuthenticationexternalDescription &&
     other.objAudit == objAudit &&
     other.sWebhookEvent == sWebhookEvent &&
     _deepEquality.equals(other.aObjWebhookheader, aObjWebhookheader) &&
     other.pksCustomerCode == pksCustomerCode &&
-    other.bWebhookTest == bWebhookTest;
+    other.bWebhookTest == bWebhookTest &&
+    other.eWebhookEmittype == eWebhookEmittype;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiWebhookID.hashCode) +
+    (fkiAuthenticationexternalID == null ? 0 : fkiAuthenticationexternalID!.hashCode) +
     (sWebhookDescription.hashCode) +
     (fkiEzsignfoldertypeID == null ? 0 : fkiEzsignfoldertypeID!.hashCode) +
     (sEzsignfoldertypeNameX == null ? 0 : sEzsignfoldertypeNameX!.hashCode) +
@@ -170,18 +201,25 @@ class CustomWebhookResponse {
     (bWebhookIsactive.hashCode) +
     (bWebhookIssigned.hashCode) +
     (bWebhookSkipsslvalidation.hashCode) +
+    (sAuthenticationexternalDescription == null ? 0 : sAuthenticationexternalDescription!.hashCode) +
     (objAudit.hashCode) +
     (sWebhookEvent == null ? 0 : sWebhookEvent!.hashCode) +
     (aObjWebhookheader.hashCode) +
     (pksCustomerCode.hashCode) +
-    (bWebhookTest.hashCode);
+    (bWebhookTest.hashCode) +
+    (eWebhookEmittype == null ? 0 : eWebhookEmittype!.hashCode);
 
   @override
-  String toString() => 'CustomWebhookResponse[pkiWebhookID=$pkiWebhookID, sWebhookDescription=$sWebhookDescription, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, sWebhookUrl=$sWebhookUrl, sWebhookEmailfailed=$sWebhookEmailfailed, sWebhookApikey=$sWebhookApikey, sWebhookSecret=$sWebhookSecret, bWebhookIsactive=$bWebhookIsactive, bWebhookIssigned=$bWebhookIssigned, bWebhookSkipsslvalidation=$bWebhookSkipsslvalidation, objAudit=$objAudit, sWebhookEvent=$sWebhookEvent, aObjWebhookheader=$aObjWebhookheader, pksCustomerCode=$pksCustomerCode, bWebhookTest=$bWebhookTest]';
+  String toString() => 'CustomWebhookResponse[pkiWebhookID=$pkiWebhookID, fkiAuthenticationexternalID=$fkiAuthenticationexternalID, sWebhookDescription=$sWebhookDescription, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, sWebhookUrl=$sWebhookUrl, sWebhookEmailfailed=$sWebhookEmailfailed, sWebhookApikey=$sWebhookApikey, sWebhookSecret=$sWebhookSecret, bWebhookIsactive=$bWebhookIsactive, bWebhookIssigned=$bWebhookIssigned, bWebhookSkipsslvalidation=$bWebhookSkipsslvalidation, sAuthenticationexternalDescription=$sAuthenticationexternalDescription, objAudit=$objAudit, sWebhookEvent=$sWebhookEvent, aObjWebhookheader=$aObjWebhookheader, pksCustomerCode=$pksCustomerCode, bWebhookTest=$bWebhookTest, eWebhookEmittype=$eWebhookEmittype]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiWebhookID'] = this.pkiWebhookID;
+    if (this.fkiAuthenticationexternalID != null) {
+      json[r'fkiAuthenticationexternalID'] = this.fkiAuthenticationexternalID;
+    } else {
+      json[r'fkiAuthenticationexternalID'] = null;
+    }
       json[r'sWebhookDescription'] = this.sWebhookDescription;
     if (this.fkiEzsignfoldertypeID != null) {
       json[r'fkiEzsignfoldertypeID'] = this.fkiEzsignfoldertypeID;
@@ -219,6 +257,11 @@ class CustomWebhookResponse {
       json[r'bWebhookIsactive'] = this.bWebhookIsactive;
       json[r'bWebhookIssigned'] = this.bWebhookIssigned;
       json[r'bWebhookSkipsslvalidation'] = this.bWebhookSkipsslvalidation;
+    if (this.sAuthenticationexternalDescription != null) {
+      json[r'sAuthenticationexternalDescription'] = this.sAuthenticationexternalDescription;
+    } else {
+      json[r'sAuthenticationexternalDescription'] = null;
+    }
       json[r'objAudit'] = this.objAudit;
     if (this.sWebhookEvent != null) {
       json[r'sWebhookEvent'] = this.sWebhookEvent;
@@ -228,6 +271,11 @@ class CustomWebhookResponse {
       json[r'a_objWebhookheader'] = this.aObjWebhookheader;
       json[r'pksCustomerCode'] = this.pksCustomerCode;
       json[r'bWebhookTest'] = this.bWebhookTest;
+    if (this.eWebhookEmittype != null) {
+      json[r'eWebhookEmittype'] = this.eWebhookEmittype;
+    } else {
+      json[r'eWebhookEmittype'] = null;
+    }
     return json;
   }
 
@@ -251,6 +299,7 @@ class CustomWebhookResponse {
 
       return CustomWebhookResponse(
         pkiWebhookID: mapValueOfType<int>(json, r'pkiWebhookID')!,
+        fkiAuthenticationexternalID: mapValueOfType<int>(json, r'fkiAuthenticationexternalID'),
         sWebhookDescription: mapValueOfType<String>(json, r'sWebhookDescription')!,
         fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID'),
         sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX'),
@@ -264,11 +313,13 @@ class CustomWebhookResponse {
         bWebhookIsactive: mapValueOfType<bool>(json, r'bWebhookIsactive')!,
         bWebhookIssigned: mapValueOfType<bool>(json, r'bWebhookIssigned')!,
         bWebhookSkipsslvalidation: mapValueOfType<bool>(json, r'bWebhookSkipsslvalidation')!,
+        sAuthenticationexternalDescription: mapValueOfType<String>(json, r'sAuthenticationexternalDescription'),
         objAudit: CommonAudit.fromJson(json[r'objAudit'])!,
         sWebhookEvent: mapValueOfType<String>(json, r'sWebhookEvent'),
         aObjWebhookheader: WebhookheaderResponseCompound.listFromJson(json[r'a_objWebhookheader']),
         pksCustomerCode: mapValueOfType<String>(json, r'pksCustomerCode')!,
         bWebhookTest: mapValueOfType<bool>(json, r'bWebhookTest')!,
+        eWebhookEmittype: CustomWebhookResponseEWebhookEmittypeEnum.fromJson(json[r'eWebhookEmittype']),
       );
     }
     return null;
@@ -329,4 +380,81 @@ class CustomWebhookResponse {
     'bWebhookTest',
   };
 }
+
+/// Wheter the webhook received is a manual test or a real event
+class CustomWebhookResponseEWebhookEmittypeEnum {
+  /// Instantiate a new enum with the provided [value].
+  const CustomWebhookResponseEWebhookEmittypeEnum._(this.value);
+
+  /// The underlying value of this enum member.
+  final String value;
+
+  @override
+  String toString() => value;
+
+  String toJson() => value;
+
+  static const automatic = CustomWebhookResponseEWebhookEmittypeEnum._(r'Automatic');
+  static const manual = CustomWebhookResponseEWebhookEmittypeEnum._(r'Manual');
+  static const test = CustomWebhookResponseEWebhookEmittypeEnum._(r'Test');
+
+  /// List of all possible values in this [enum][CustomWebhookResponseEWebhookEmittypeEnum].
+  static const values = <CustomWebhookResponseEWebhookEmittypeEnum>[
+    automatic,
+    manual,
+    test,
+  ];
+
+  static CustomWebhookResponseEWebhookEmittypeEnum? fromJson(dynamic value) => CustomWebhookResponseEWebhookEmittypeEnumTypeTransformer().decode(value);
+
+  static List<CustomWebhookResponseEWebhookEmittypeEnum> listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <CustomWebhookResponseEWebhookEmittypeEnum>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = CustomWebhookResponseEWebhookEmittypeEnum.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
+}
+
+/// Transformation class that can [encode] an instance of [CustomWebhookResponseEWebhookEmittypeEnum] to String,
+/// and [decode] dynamic data back to [CustomWebhookResponseEWebhookEmittypeEnum].
+class CustomWebhookResponseEWebhookEmittypeEnumTypeTransformer {
+  factory CustomWebhookResponseEWebhookEmittypeEnumTypeTransformer() => _instance ??= const CustomWebhookResponseEWebhookEmittypeEnumTypeTransformer._();
+
+  const CustomWebhookResponseEWebhookEmittypeEnumTypeTransformer._();
+
+  String encode(CustomWebhookResponseEWebhookEmittypeEnum data) => data.value;
+
+  /// Decodes a [dynamic value][data] to a CustomWebhookResponseEWebhookEmittypeEnum.
+  ///
+  /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
+  /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
+  /// cannot be decoded successfully, then an [UnimplementedError] is thrown.
+  ///
+  /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
+  /// and users are still using an old app with the old code.
+  CustomWebhookResponseEWebhookEmittypeEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data != null) {
+      switch (data) {
+        case r'Automatic': return CustomWebhookResponseEWebhookEmittypeEnum.automatic;
+        case r'Manual': return CustomWebhookResponseEWebhookEmittypeEnum.manual;
+        case r'Test': return CustomWebhookResponseEWebhookEmittypeEnum.test;
+        default:
+          if (!allowNull) {
+            throw ArgumentError('Unknown enum value to decode: $data');
+          }
+      }
+    }
+    return null;
+  }
+
+  /// Singleton [CustomWebhookResponseEWebhookEmittypeEnumTypeTransformer] instance.
+  static CustomWebhookResponseEWebhookEmittypeEnumTypeTransformer? _instance;
+}
+
 

@@ -35,6 +35,15 @@ void main() {
       // TODO
     });
 
+    // Create a new Ezsignsignature
+    //
+    // The endpoint allows to create one or many elements at once.
+    //
+    //Future<EzsignsignatureCreateObjectV3Response> ezsignsignatureCreateObjectV3(EzsignsignatureCreateObjectV3Request ezsignsignatureCreateObjectV3Request) async
+    test('test ezsignsignatureCreateObjectV3', () async {
+      // TODO
+    });
+
     // Delete an existing Ezsignsignature
     //
     // 
@@ -48,8 +57,8 @@ void main() {
     //
     // 
     //
-    //Future<EzsignsignatureEditObjectV1Response> ezsignsignatureEditObjectV1(int pkiEzsignsignatureID, EzsignsignatureEditObjectV1Request ezsignsignatureEditObjectV1Request) async
-    test('test ezsignsignatureEditObjectV1', () async {
+    //Future<EzsignsignatureEditObjectV2Response> ezsignsignatureEditObjectV2(int pkiEzsignsignatureID, EzsignsignatureEditObjectV2Request ezsignsignatureEditObjectV2Request) async
+    test('test ezsignsignatureEditObjectV2', () async {
       // TODO
     });
 
@@ -73,8 +82,8 @@ void main() {
     //
     // 
     //
-    //Future<EzsignsignatureGetObjectV2Response> ezsignsignatureGetObjectV2(int pkiEzsignsignatureID) async
-    test('test ezsignsignatureGetObjectV2', () async {
+    //Future<EzsignsignatureGetObjectV3Response> ezsignsignatureGetObjectV3(int pkiEzsignsignatureID) async
+    test('test ezsignsignatureGetObjectV3', () async {
       // TODO
     });
 

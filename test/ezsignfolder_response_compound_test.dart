@@ -33,6 +33,12 @@ void main() {
       // TODO
     });
 
+    // The unique ID of the Timezone
+    // int fkiTimezoneID
+    test('to test the property `fkiTimezoneID`', () async {
+      // TODO
+    });
+
     // FieldEEzsignfolderCompletion eEzsignfolderCompletion
     test('to test the property `eEzsignfolderCompletion`', () async {
       // TODO
@@ -87,6 +93,18 @@ void main() {
 
     // FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency
     test('to test the property `eEzsignfolderSendreminderfrequency`', () async {
+      // TODO
+    });
+
+    // The number of days before the the first reminder sending
+    // int iEzsignfolderSendreminderfirstdays
+    test('to test the property `iEzsignfolderSendreminderfirstdays`', () async {
+      // TODO
+    });
+
+    // The number of days after the first reminder sending
+    // int iEzsignfolderSendreminderotherdays
+    test('to test the property `iEzsignfolderSendreminderotherdays`', () async {
       // TODO
     });
 
@@ -145,6 +163,11 @@ void main() {
     // This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
     // String sEzsignfolderExternalid
     test('to test the property `sEzsignfolderExternalid`', () async {
+      // TODO
+    });
+
+    // CustomTimezoneWithCodeResponse objTimezone
+    test('to test the property `objTimezone`', () async {
       // TODO
     });
 

@@ -9,6 +9,7 @@ import 'package:openapi/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiWebhookID** | **int** | The unique ID of the Webhook | 
+**fkiAuthenticationexternalID** | **int** | The unique ID of the Authenticationexternal | [optional] 
 **sWebhookDescription** | **String** | The description of the Webhook | 
 **fkiEzsignfoldertypeID** | **int** | The unique ID of the Ezsignfoldertype. | [optional] 
 **sEzsignfoldertypeNameX** | **String** | The name of the Ezsignfoldertype in the language of the requester | [optional] 
@@ -22,11 +23,13 @@ Name | Type | Description | Notes
 **bWebhookIsactive** | **bool** | Whether the Webhook is active or not | 
 **bWebhookIssigned** | **bool** | Whether the requests will be signed or not | 
 **bWebhookSkipsslvalidation** | **bool** | Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use | 
+**sAuthenticationexternalDescription** | **String** | The description of the Authenticationexternal | [optional] 
 **objAudit** | [**CommonAudit**](CommonAudit.md) |  | 
 **sWebhookEvent** | **String** | The concatenated string to describe the Webhook event | [optional] 
 **aObjWebhookheader** | [**List<WebhookheaderResponseCompound>**](WebhookheaderResponseCompound.md) |  | [optional] [default to const []]
 **pksCustomerCode** | **String** | The customer code assigned to your account | 
 **bWebhookTest** | **bool** | Wheter the webhook received is a manual test or a real event | 
+**eWebhookEmittype** | **String** | Wheter the webhook received is a manual test or a real event | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

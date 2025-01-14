@@ -17,6 +17,15 @@ void main() {
   // final instance = ObjectBillingentityexternalApi();
 
   group('tests for ObjectBillingentityexternalApi', () {
+    // Generate a federation token
+    //
+    // 
+    //
+    //Future<BillingentityexternalGenerateFederationTokenV1Response> billingentityexternalGenerateFederationTokenV1(int pkiBillingentityexternalID, BillingentityexternalGenerateFederationTokenV1Request billingentityexternalGenerateFederationTokenV1Request) async
+    test('test billingentityexternalGenerateFederationTokenV1', () async {
+      // TODO
+    });
+
     // Retrieve Billingentityexternals and IDs
     //
     // Get the list of Billingentityexternal to be used in a dropdown or autocomplete control.

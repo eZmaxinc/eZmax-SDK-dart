@@ -15,6 +15,7 @@ class TextstylestaticResponseCompound {
   TextstylestaticResponseCompound({
     this.pkiTextstylestaticID,
     required this.fkiFontID,
+    required this.sFontName,
     required this.bTextstylestaticBold,
     required this.bTextstylestaticUnderline,
     required this.bTextstylestaticItalic,
@@ -38,6 +39,9 @@ class TextstylestaticResponseCompound {
   ///
   /// Minimum value: 0
   int fkiFontID;
+
+  /// The name of the Font
+  String sFontName;
 
   /// Whether the Textstylestatic is Bold or not
   bool bTextstylestaticBold;
@@ -67,6 +71,7 @@ class TextstylestaticResponseCompound {
   bool operator ==(Object other) => identical(this, other) || other is TextstylestaticResponseCompound &&
     other.pkiTextstylestaticID == pkiTextstylestaticID &&
     other.fkiFontID == fkiFontID &&
+    other.sFontName == sFontName &&
     other.bTextstylestaticBold == bTextstylestaticBold &&
     other.bTextstylestaticUnderline == bTextstylestaticUnderline &&
     other.bTextstylestaticItalic == bTextstylestaticItalic &&
@@ -79,6 +84,7 @@ class TextstylestaticResponseCompound {
     // ignore: unnecessary_parenthesis
     (pkiTextstylestaticID == null ? 0 : pkiTextstylestaticID!.hashCode) +
     (fkiFontID.hashCode) +
+    (sFontName.hashCode) +
     (bTextstylestaticBold.hashCode) +
     (bTextstylestaticUnderline.hashCode) +
     (bTextstylestaticItalic.hashCode) +
@@ -87,7 +93,7 @@ class TextstylestaticResponseCompound {
     (iTextstylestaticSize.hashCode);
 
   @override
-  String toString() => 'TextstylestaticResponseCompound[pkiTextstylestaticID=$pkiTextstylestaticID, fkiFontID=$fkiFontID, bTextstylestaticBold=$bTextstylestaticBold, bTextstylestaticUnderline=$bTextstylestaticUnderline, bTextstylestaticItalic=$bTextstylestaticItalic, bTextstylestaticStrikethrough=$bTextstylestaticStrikethrough, iTextstylestaticFontcolor=$iTextstylestaticFontcolor, iTextstylestaticSize=$iTextstylestaticSize]';
+  String toString() => 'TextstylestaticResponseCompound[pkiTextstylestaticID=$pkiTextstylestaticID, fkiFontID=$fkiFontID, sFontName=$sFontName, bTextstylestaticBold=$bTextstylestaticBold, bTextstylestaticUnderline=$bTextstylestaticUnderline, bTextstylestaticItalic=$bTextstylestaticItalic, bTextstylestaticStrikethrough=$bTextstylestaticStrikethrough, iTextstylestaticFontcolor=$iTextstylestaticFontcolor, iTextstylestaticSize=$iTextstylestaticSize]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -97,6 +103,7 @@ class TextstylestaticResponseCompound {
       json[r'pkiTextstylestaticID'] = null;
     }
       json[r'fkiFontID'] = this.fkiFontID;
+      json[r'sFontName'] = this.sFontName;
       json[r'bTextstylestaticBold'] = this.bTextstylestaticBold;
       json[r'bTextstylestaticUnderline'] = this.bTextstylestaticUnderline;
       json[r'bTextstylestaticItalic'] = this.bTextstylestaticItalic;
@@ -127,6 +134,7 @@ class TextstylestaticResponseCompound {
       return TextstylestaticResponseCompound(
         pkiTextstylestaticID: mapValueOfType<int>(json, r'pkiTextstylestaticID'),
         fkiFontID: mapValueOfType<int>(json, r'fkiFontID')!,
+        sFontName: mapValueOfType<String>(json, r'sFontName')!,
         bTextstylestaticBold: mapValueOfType<bool>(json, r'bTextstylestaticBold')!,
         bTextstylestaticUnderline: mapValueOfType<bool>(json, r'bTextstylestaticUnderline')!,
         bTextstylestaticItalic: mapValueOfType<bool>(json, r'bTextstylestaticItalic')!,
@@ -181,6 +189,7 @@ class TextstylestaticResponseCompound {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'fkiFontID',
+    'sFontName',
     'bTextstylestaticBold',
     'bTextstylestaticUnderline',
     'bTextstylestaticItalic',

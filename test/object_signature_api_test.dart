@@ -53,5 +53,32 @@ void main() {
       // TODO
     });
 
+    // Retrieve an existing Signature
+    //
+    // 
+    //
+    //Future<SignatureGetObjectV3Response> signatureGetObjectV3(int pkiSignatureID) async
+    test('test signatureGetObjectV3', () async {
+      // TODO
+    });
+
+    // Retrieve an existing Signature initial SVG
+    //
+    // 
+    //
+    //Future signatureGetSVGInitialsV1(int pkiSignatureID) async
+    test('test signatureGetSVGInitialsV1', () async {
+      // TODO
+    });
+
+    // Retrieve an existing Signature SVG
+    //
+    // 
+    //
+    //Future signatureGetSVGSignatureV1(int pkiSignatureID) async
+    test('test signatureGetSVGSignatureV1', () async {
+      // TODO
+    });
+
   });
 }

@@ -15,7 +15,7 @@ class CreditcarddetailResponse {
   CreditcarddetailResponse({
     required this.pkiCreditcarddetailID,
     required this.fkiCreditcardtypeID,
-    required this.sCreditcarddetailNumbermasked,
+    required this.iCreditcarddetailLastdigits,
     required this.iCreditcarddetailExpirationmonth,
     required this.iCreditcarddetailExpirationyear,
     required this.sCreditcarddetailCivic,
@@ -35,8 +35,11 @@ class CreditcarddetailResponse {
   /// Maximum value: 255
   int fkiCreditcardtypeID;
 
-  /// The numbermasked of the Creditcarddetail
-  String sCreditcarddetailNumbermasked;
+  /// The last digits of the Creditcarddetail
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 9999
+  int iCreditcarddetailLastdigits;
 
   /// The expirationmonth of the Creditcarddetail
   ///
@@ -63,7 +66,7 @@ class CreditcarddetailResponse {
   bool operator ==(Object other) => identical(this, other) || other is CreditcarddetailResponse &&
     other.pkiCreditcarddetailID == pkiCreditcarddetailID &&
     other.fkiCreditcardtypeID == fkiCreditcardtypeID &&
-    other.sCreditcarddetailNumbermasked == sCreditcarddetailNumbermasked &&
+    other.iCreditcarddetailLastdigits == iCreditcarddetailLastdigits &&
     other.iCreditcarddetailExpirationmonth == iCreditcarddetailExpirationmonth &&
     other.iCreditcarddetailExpirationyear == iCreditcarddetailExpirationyear &&
     other.sCreditcarddetailCivic == sCreditcarddetailCivic &&
@@ -75,7 +78,7 @@ class CreditcarddetailResponse {
     // ignore: unnecessary_parenthesis
     (pkiCreditcarddetailID.hashCode) +
     (fkiCreditcardtypeID.hashCode) +
-    (sCreditcarddetailNumbermasked.hashCode) +
+    (iCreditcarddetailLastdigits.hashCode) +
     (iCreditcarddetailExpirationmonth.hashCode) +
     (iCreditcarddetailExpirationyear.hashCode) +
     (sCreditcarddetailCivic.hashCode) +
@@ -83,13 +86,13 @@ class CreditcarddetailResponse {
     (sCreditcarddetailZip.hashCode);
 
   @override
-  String toString() => 'CreditcarddetailResponse[pkiCreditcarddetailID=$pkiCreditcarddetailID, fkiCreditcardtypeID=$fkiCreditcardtypeID, sCreditcarddetailNumbermasked=$sCreditcarddetailNumbermasked, iCreditcarddetailExpirationmonth=$iCreditcarddetailExpirationmonth, iCreditcarddetailExpirationyear=$iCreditcarddetailExpirationyear, sCreditcarddetailCivic=$sCreditcarddetailCivic, sCreditcarddetailStreet=$sCreditcarddetailStreet, sCreditcarddetailZip=$sCreditcarddetailZip]';
+  String toString() => 'CreditcarddetailResponse[pkiCreditcarddetailID=$pkiCreditcarddetailID, fkiCreditcardtypeID=$fkiCreditcardtypeID, iCreditcarddetailLastdigits=$iCreditcarddetailLastdigits, iCreditcarddetailExpirationmonth=$iCreditcarddetailExpirationmonth, iCreditcarddetailExpirationyear=$iCreditcarddetailExpirationyear, sCreditcarddetailCivic=$sCreditcarddetailCivic, sCreditcarddetailStreet=$sCreditcarddetailStreet, sCreditcarddetailZip=$sCreditcarddetailZip]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiCreditcarddetailID'] = this.pkiCreditcarddetailID;
       json[r'fkiCreditcardtypeID'] = this.fkiCreditcardtypeID;
-      json[r'sCreditcarddetailNumbermasked'] = this.sCreditcarddetailNumbermasked;
+      json[r'iCreditcarddetailLastdigits'] = this.iCreditcarddetailLastdigits;
       json[r'iCreditcarddetailExpirationmonth'] = this.iCreditcarddetailExpirationmonth;
       json[r'iCreditcarddetailExpirationyear'] = this.iCreditcarddetailExpirationyear;
       json[r'sCreditcarddetailCivic'] = this.sCreditcarddetailCivic;
@@ -119,7 +122,7 @@ class CreditcarddetailResponse {
       return CreditcarddetailResponse(
         pkiCreditcarddetailID: mapValueOfType<int>(json, r'pkiCreditcarddetailID')!,
         fkiCreditcardtypeID: mapValueOfType<int>(json, r'fkiCreditcardtypeID')!,
-        sCreditcarddetailNumbermasked: mapValueOfType<String>(json, r'sCreditcarddetailNumbermasked')!,
+        iCreditcarddetailLastdigits: mapValueOfType<int>(json, r'iCreditcarddetailLastdigits')!,
         iCreditcarddetailExpirationmonth: mapValueOfType<int>(json, r'iCreditcarddetailExpirationmonth')!,
         iCreditcarddetailExpirationyear: mapValueOfType<int>(json, r'iCreditcarddetailExpirationyear')!,
         sCreditcarddetailCivic: mapValueOfType<String>(json, r'sCreditcarddetailCivic')!,
@@ -174,7 +177,7 @@ class CreditcarddetailResponse {
   static const requiredKeys = <String>{
     'pkiCreditcarddetailID',
     'fkiCreditcardtypeID',
-    'sCreditcarddetailNumbermasked',
+    'iCreditcarddetailLastdigits',
     'iCreditcarddetailExpirationmonth',
     'iCreditcarddetailExpirationyear',
     'sCreditcarddetailCivic',

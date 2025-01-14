@@ -26,7 +26,7 @@ void main() {
       // TODO
     });
 
-    // CommunicationCreateObjectV1ResponseMPayload mPayload
+    // CommunicationSendV1ResponseMPayload mPayload
     test('to test the property `mPayload`', () async {
       // TODO
     });

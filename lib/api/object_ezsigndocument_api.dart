@@ -372,6 +372,62 @@ class ObjectEzsigndocumentApi {
     return null;
   }
 
+  /// Create a new Ezsigndocument
+  ///
+  /// The endpoint allows to create one or many elements at once.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [EzsigndocumentCreateObjectV3Request] ezsigndocumentCreateObjectV3Request (required):
+  Future<Response> ezsigndocumentCreateObjectV3WithHttpInfo(EzsigndocumentCreateObjectV3Request ezsigndocumentCreateObjectV3Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/3/object/ezsigndocument';
+
+    // ignore: prefer_final_locals
+    Object? postBody = ezsigndocumentCreateObjectV3Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Create a new Ezsigndocument
+  ///
+  /// The endpoint allows to create one or many elements at once.
+  ///
+  /// Parameters:
+  ///
+  /// * [EzsigndocumentCreateObjectV3Request] ezsigndocumentCreateObjectV3Request (required):
+  Future<EzsigndocumentCreateObjectV3Response?> ezsigndocumentCreateObjectV3(EzsigndocumentCreateObjectV3Request ezsigndocumentCreateObjectV3Request,) async {
+    final response = await ezsigndocumentCreateObjectV3WithHttpInfo(ezsigndocumentCreateObjectV3Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentCreateObjectV3Response',) as EzsigndocumentCreateObjectV3Response;
+    
+    }
+    return null;
+  }
+
   /// Decline to sign
   ///
   /// Decline to sign
@@ -485,6 +541,67 @@ class ObjectEzsigndocumentApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentDeleteObjectV1Response',) as EzsigndocumentDeleteObjectV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Edit multiple Ezsignannotations
+  ///
+  /// Using this endpoint, you can edit multiple Ezsignannotations at the same time.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  ///
+  /// * [EzsigndocumentEditEzsignannotationsV1Request] ezsigndocumentEditEzsignannotationsV1Request (required):
+  Future<Response> ezsigndocumentEditEzsignannotationsV1WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentEditEzsignannotationsV1Request ezsigndocumentEditEzsignannotationsV1Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignannotations'
+      .replaceAll('{pkiEzsigndocumentID}', pkiEzsigndocumentID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = ezsigndocumentEditEzsignannotationsV1Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'PUT',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Edit multiple Ezsignannotations
+  ///
+  /// Using this endpoint, you can edit multiple Ezsignannotations at the same time.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  ///
+  /// * [EzsigndocumentEditEzsignannotationsV1Request] ezsigndocumentEditEzsignannotationsV1Request (required):
+  Future<EzsigndocumentEditEzsignannotationsV1Response?> ezsigndocumentEditEzsignannotationsV1(int pkiEzsigndocumentID, EzsigndocumentEditEzsignannotationsV1Request ezsigndocumentEditEzsignannotationsV1Request,) async {
+    final response = await ezsigndocumentEditEzsignannotationsV1WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentEditEzsignannotationsV1Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentEditEzsignannotationsV1Response',) as EzsigndocumentEditEzsignannotationsV1Response;
     
     }
     return null;
@@ -612,6 +729,67 @@ class ObjectEzsigndocumentApi {
     return null;
   }
 
+  /// Edit an existing Ezsigndocument
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  ///
+  /// * [EzsigndocumentEditObjectV1Request] ezsigndocumentEditObjectV1Request (required):
+  Future<Response> ezsigndocumentEditObjectV1WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentEditObjectV1Request ezsigndocumentEditObjectV1Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsigndocument/{pkiEzsigndocumentID}'
+      .replaceAll('{pkiEzsigndocumentID}', pkiEzsigndocumentID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = ezsigndocumentEditObjectV1Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'PUT',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Edit an existing Ezsigndocument
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  ///
+  /// * [EzsigndocumentEditObjectV1Request] ezsigndocumentEditObjectV1Request (required):
+  Future<EzsigndocumentEditObjectV1Response?> ezsigndocumentEditObjectV1(int pkiEzsigndocumentID, EzsigndocumentEditObjectV1Request ezsigndocumentEditObjectV1Request,) async {
+    final response = await ezsigndocumentEditObjectV1WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentEditObjectV1Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentEditObjectV1Response',) as EzsigndocumentEditObjectV1Response;
+    
+    }
+    return null;
+  }
+
   /// End prematurely
   ///
   /// End prematurely an Ezsigndocument when some signatures are still required
@@ -668,6 +846,67 @@ class ObjectEzsigndocumentApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentEndPrematurelyV1Response',) as EzsigndocumentEndPrematurelyV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Extract text from Ezsigndocument area
+  ///
+  /// Extract text from Ezsigndocument area
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  ///
+  /// * [EzsigndocumentExtractTextV1Request] ezsigndocumentExtractTextV1Request (required):
+  Future<Response> ezsigndocumentExtractTextV1WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentExtractTextV1Request ezsigndocumentExtractTextV1Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsigndocument/{pkiEzsigndocumentID}/extractText'
+      .replaceAll('{pkiEzsigndocumentID}', pkiEzsigndocumentID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = ezsigndocumentExtractTextV1Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Extract text from Ezsigndocument area
+  ///
+  /// Extract text from Ezsigndocument area
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  ///
+  /// * [EzsigndocumentExtractTextV1Request] ezsigndocumentExtractTextV1Request (required):
+  Future<EzsigndocumentExtractTextV1Response?> ezsigndocumentExtractTextV1(int pkiEzsigndocumentID, EzsigndocumentExtractTextV1Request ezsigndocumentExtractTextV1Request,) async {
+    final response = await ezsigndocumentExtractTextV1WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentExtractTextV1Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentExtractTextV1Response',) as EzsigndocumentExtractTextV1Response;
     
     }
     return null;

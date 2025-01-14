@@ -21,8 +21,8 @@ void main() {
     //
     // The endpoint allows to create one or many elements at once.
     //
-    //Future<EzsignfoldertypeCreateObjectV2Response> ezsignfoldertypeCreateObjectV2(EzsignfoldertypeCreateObjectV2Request ezsignfoldertypeCreateObjectV2Request) async
-    test('test ezsignfoldertypeCreateObjectV2', () async {
+    //Future<EzsignfoldertypeCreateObjectV3Response> ezsignfoldertypeCreateObjectV3(EzsignfoldertypeCreateObjectV3Request ezsignfoldertypeCreateObjectV3Request) async
+    test('test ezsignfoldertypeCreateObjectV3', () async {
       // TODO
     });
 
@@ -30,17 +30,8 @@ void main() {
     //
     // 
     //
-    //Future<EzsignfoldertypeEditObjectV1Response> ezsignfoldertypeEditObjectV1(int pkiEzsignfoldertypeID, EzsignfoldertypeEditObjectV1Request ezsignfoldertypeEditObjectV1Request) async
-    test('test ezsignfoldertypeEditObjectV1', () async {
-      // TODO
-    });
-
-    // Edit an existing Ezsignfoldertype
-    //
-    // 
-    //
-    //Future<EzsignfoldertypeEditObjectV2Response> ezsignfoldertypeEditObjectV2(int pkiEzsignfoldertypeID, EzsignfoldertypeEditObjectV2Request ezsignfoldertypeEditObjectV2Request) async
-    test('test ezsignfoldertypeEditObjectV2', () async {
+    //Future<EzsignfoldertypeEditObjectV3Response> ezsignfoldertypeEditObjectV3(int pkiEzsignfoldertypeID, EzsignfoldertypeEditObjectV3Request ezsignfoldertypeEditObjectV3Request) async
+    test('test ezsignfoldertypeEditObjectV3', () async {
       // TODO
     });
 
@@ -75,8 +66,8 @@ void main() {
     //
     // 
     //
-    //Future<EzsignfoldertypeGetObjectV3Response> ezsignfoldertypeGetObjectV3(int pkiEzsignfoldertypeID) async
-    test('test ezsignfoldertypeGetObjectV3', () async {
+    //Future<EzsignfoldertypeGetObjectV4Response> ezsignfoldertypeGetObjectV4(int pkiEzsignfoldertypeID) async
+    test('test ezsignfoldertypeGetObjectV4', () async {
       // TODO
     });
 

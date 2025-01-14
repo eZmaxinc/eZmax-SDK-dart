@@ -26,6 +26,11 @@ void main() {
       // TODO
     });
 
+    // EzsignsignatureSignV1ResponseMPayload mPayload
+    test('to test the property `mPayload`', () async {
+      // TODO
+    });
+
 
   });
 

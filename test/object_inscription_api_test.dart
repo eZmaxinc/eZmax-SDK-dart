@@ -26,12 +26,30 @@ void main() {
       // TODO
     });
 
+    // Retrieve Communication count
+    //
+    // 
+    //
+    //Future<InscriptionGetCommunicationCountV1Response> inscriptionGetCommunicationCountV1(int pkiInscriptionID) async
+    test('test inscriptionGetCommunicationCountV1', () async {
+      // TODO
+    });
+
     // Retrieve Communication list
     //
     // 
     //
     //Future<InscriptionGetCommunicationListV1Response> inscriptionGetCommunicationListV1(int pkiInscriptionID) async
     test('test inscriptionGetCommunicationListV1', () async {
+      // TODO
+    });
+
+    // Retrieve Inscription's Communicationrecipient
+    //
+    // 
+    //
+    //Future<InscriptionGetCommunicationrecipientsV1Response> inscriptionGetCommunicationrecipientsV1(int pkiInscriptionID) async
+    test('test inscriptionGetCommunicationrecipientsV1', () async {
       // TODO
     });
 

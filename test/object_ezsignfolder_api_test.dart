@@ -51,6 +51,15 @@ void main() {
       // TODO
     });
 
+    // Create a new Ezsignfolder
+    //
+    // The endpoint allows to create one or many elements at once.
+    //
+    //Future<EzsignfolderCreateObjectV3Response> ezsignfolderCreateObjectV3(EzsignfolderCreateObjectV3Request ezsignfolderCreateObjectV3Request) async
+    test('test ezsignfolderCreateObjectV3', () async {
+      // TODO
+    });
+
     // Delete an existing Ezsignfolder
     //
     //Future<EzsignfolderDeleteObjectV1Response> ezsignfolderDeleteObjectV1(int pkiEzsignfolderID) async
@@ -80,8 +89,8 @@ void main() {
     //
     // 
     //
-    //Future<EzsignfolderEditObjectV1Response> ezsignfolderEditObjectV1(int pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request) async
-    test('test ezsignfolderEditObjectV1', () async {
+    //Future<EzsignfolderEditObjectV3Response> ezsignfolderEditObjectV3(int pkiEzsignfolderID, EzsignfolderEditObjectV3Request ezsignfolderEditObjectV3Request) async
+    test('test ezsignfolderEditObjectV3', () async {
       // TODO
     });
 
@@ -195,7 +204,7 @@ void main() {
 
     // Retrieve Ezsignfolder list
     //
-    // Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived<br>Disposed| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | fkiUserID | | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
+    // Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived<br>Disposed| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | fkiUserID | | sContactFirstname | | sContactLastname | | sUserFirstname | | sUserLastname | | sEzsigndocumentName |
     //
     //Future<EzsignfolderGetListV1Response> ezsignfolderGetListV1({ String eOrderBy, int iRowMax, int iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter }) async
     test('test ezsignfolderGetListV1', () async {
@@ -215,6 +224,15 @@ void main() {
     //
     //Future<EzsignfolderGetObjectV2Response> ezsignfolderGetObjectV2(int pkiEzsignfolderID) async
     test('test ezsignfolderGetObjectV2', () async {
+      // TODO
+    });
+
+    // Retrieve an existing Ezsignfolder
+    //
+    // 
+    //
+    //Future<EzsignfolderGetObjectV3Response> ezsignfolderGetObjectV3(int pkiEzsignfolderID) async
+    test('test ezsignfolderGetObjectV3', () async {
       // TODO
     });
 
@@ -240,6 +258,13 @@ void main() {
     //
     //Future<EzsignfolderReorderV1Response> ezsignfolderReorderV1(int pkiEzsignfolderID, EzsignfolderReorderV1Request ezsignfolderReorderV1Request) async
     test('test ezsignfolderReorderV1', () async {
+      // TODO
+    });
+
+    // Reorder Ezsigndocuments in the Ezsignfolder
+    //
+    //Future<EzsignfolderReorderV2Response> ezsignfolderReorderV2(int pkiEzsignfolderID, EzsignfolderReorderV2Request ezsignfolderReorderV2Request) async
+    test('test ezsignfolderReorderV2', () async {
       // TODO
     });
 

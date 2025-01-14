@@ -128,6 +128,67 @@ class ObjectUserApi {
     return null;
   }
 
+  /// Edit multiple Colleagues
+  ///
+  /// Using this endpoint, you can edit multiple Colleagues at the same time.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiUserID (required):
+  ///
+  /// * [UserEditColleaguesV2Request] userEditColleaguesV2Request (required):
+  Future<Response> userEditColleaguesV2WithHttpInfo(int pkiUserID, UserEditColleaguesV2Request userEditColleaguesV2Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/2/object/user/{pkiUserID}/editColleagues'
+      .replaceAll('{pkiUserID}', pkiUserID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = userEditColleaguesV2Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'PUT',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Edit multiple Colleagues
+  ///
+  /// Using this endpoint, you can edit multiple Colleagues at the same time.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiUserID (required):
+  ///
+  /// * [UserEditColleaguesV2Request] userEditColleaguesV2Request (required):
+  Future<UserEditColleaguesV2Response?> userEditColleaguesV2(int pkiUserID, UserEditColleaguesV2Request userEditColleaguesV2Request,) async {
+    final response = await userEditColleaguesV2WithHttpInfo(pkiUserID, userEditColleaguesV2Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'UserEditColleaguesV2Response',) as UserEditColleaguesV2Response;
+    
+    }
+    return null;
+  }
+
   /// Edit an existing User
   ///
   /// 
@@ -386,6 +447,59 @@ class ObjectUserApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'UserGetAutocompleteV2Response',) as UserGetAutocompleteV2Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve an existing User's Colleagues
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiUserID (required):
+  Future<Response> userGetColleaguesV2WithHttpInfo(int pkiUserID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/2/object/user/{pkiUserID}/getColleagues'
+      .replaceAll('{pkiUserID}', pkiUserID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve an existing User's Colleagues
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiUserID (required):
+  Future<UserGetColleaguesV2Response?> userGetColleaguesV2(int pkiUserID,) async {
+    final response = await userGetColleaguesV2WithHttpInfo(pkiUserID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'UserGetColleaguesV2Response',) as UserGetColleaguesV2Response;
     
     }
     return null;

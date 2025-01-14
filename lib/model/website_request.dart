@@ -13,9 +13,22 @@ part of openapi.api;
 class WebsiteRequest {
   /// Returns a new [WebsiteRequest] instance.
   WebsiteRequest({
+    this.pkiWebsiteID,
     required this.fkiWebsitetypeID,
     required this.sWebsiteAddress,
   });
+
+  /// The unique ID of the Website Default
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 16777215
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? pkiWebsiteID;
 
   /// The unique ID of the Websitetype.  Valid values:  |Value|Description| |-|-| |1|Website| |2|Twitter| |3|Facebook| |4|Survey|
   ///
@@ -27,20 +40,27 @@ class WebsiteRequest {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is WebsiteRequest &&
+    other.pkiWebsiteID == pkiWebsiteID &&
     other.fkiWebsitetypeID == fkiWebsitetypeID &&
     other.sWebsiteAddress == sWebsiteAddress;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
+    (pkiWebsiteID == null ? 0 : pkiWebsiteID!.hashCode) +
     (fkiWebsitetypeID.hashCode) +
     (sWebsiteAddress.hashCode);
 
   @override
-  String toString() => 'WebsiteRequest[fkiWebsitetypeID=$fkiWebsitetypeID, sWebsiteAddress=$sWebsiteAddress]';
+  String toString() => 'WebsiteRequest[pkiWebsiteID=$pkiWebsiteID, fkiWebsitetypeID=$fkiWebsitetypeID, sWebsiteAddress=$sWebsiteAddress]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
+    if (this.pkiWebsiteID != null) {
+      json[r'pkiWebsiteID'] = this.pkiWebsiteID;
+    } else {
+      json[r'pkiWebsiteID'] = null;
+    }
       json[r'fkiWebsitetypeID'] = this.fkiWebsitetypeID;
       json[r'sWebsiteAddress'] = this.sWebsiteAddress;
     return json;
@@ -65,6 +85,7 @@ class WebsiteRequest {
       }());
 
       return WebsiteRequest(
+        pkiWebsiteID: mapValueOfType<int>(json, r'pkiWebsiteID'),
         fkiWebsitetypeID: mapValueOfType<int>(json, r'fkiWebsitetypeID')!,
         sWebsiteAddress: mapValueOfType<String>(json, r'sWebsiteAddress')!,
       );

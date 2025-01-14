@@ -73,6 +73,63 @@ class ObjectInscriptionApi {
     return null;
   }
 
+  /// Retrieve Communication count
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiInscriptionID (required):
+  Future<Response> inscriptionGetCommunicationCountV1WithHttpInfo(int pkiInscriptionID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/inscription/{pkiInscriptionID}/getCommunicationCount'
+      .replaceAll('{pkiInscriptionID}', pkiInscriptionID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve Communication count
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiInscriptionID (required):
+  Future<InscriptionGetCommunicationCountV1Response?> inscriptionGetCommunicationCountV1(int pkiInscriptionID,) async {
+    final response = await inscriptionGetCommunicationCountV1WithHttpInfo(pkiInscriptionID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'InscriptionGetCommunicationCountV1Response',) as InscriptionGetCommunicationCountV1Response;
+    
+    }
+    return null;
+  }
+
   /// Retrieve Communication list
   ///
   /// 
@@ -125,6 +182,63 @@ class ObjectInscriptionApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'InscriptionGetCommunicationListV1Response',) as InscriptionGetCommunicationListV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve Inscription's Communicationrecipient
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiInscriptionID (required):
+  Future<Response> inscriptionGetCommunicationrecipientsV1WithHttpInfo(int pkiInscriptionID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/inscription/{pkiInscriptionID}/getCommunicationrecipients'
+      .replaceAll('{pkiInscriptionID}', pkiInscriptionID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve Inscription's Communicationrecipient
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiInscriptionID (required):
+  Future<InscriptionGetCommunicationrecipientsV1Response?> inscriptionGetCommunicationrecipientsV1(int pkiInscriptionID,) async {
+    final response = await inscriptionGetCommunicationrecipientsV1WithHttpInfo(pkiInscriptionID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'InscriptionGetCommunicationrecipientsV1Response',) as InscriptionGetCommunicationrecipientsV1Response;
     
     }
     return null;

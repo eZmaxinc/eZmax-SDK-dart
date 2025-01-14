@@ -269,7 +269,10 @@ class ObjectEzsigntemplatepackageApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<Response> ezsigntemplatepackageGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
+  ///
+  /// * [int] fkiEzsignfoldertypeID:
+  ///   The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic
+  Future<Response> ezsigntemplatepackageGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, int? fkiEzsignfoldertypeID, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezsigntemplatepackage/getAutocomplete/{sSelector}'
       .replaceAll('{sSelector}', sSelector);
@@ -286,6 +289,9 @@ class ObjectEzsigntemplatepackageApi {
     }
     if (sQuery != null) {
       queryParams.addAll(_queryParams('', 'sQuery', sQuery));
+    }
+    if (fkiEzsignfoldertypeID != null) {
+      queryParams.addAll(_queryParams('', 'fkiEzsignfoldertypeID', fkiEzsignfoldertypeID));
     }
 
     if (acceptLanguage != null) {
@@ -322,8 +328,11 @@ class ObjectEzsigntemplatepackageApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<EzsigntemplatepackageGetAutocompleteV2Response?> ezsigntemplatepackageGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
-    final response = await ezsigntemplatepackageGetAutocompleteV2WithHttpInfo(sSelector,  eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, );
+  ///
+  /// * [int] fkiEzsignfoldertypeID:
+  ///   The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic
+  Future<EzsigntemplatepackageGetAutocompleteV2Response?> ezsigntemplatepackageGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, int? fkiEzsignfoldertypeID, }) async {
+    final response = await ezsigntemplatepackageGetAutocompleteV2WithHttpInfo(sSelector,  eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, fkiEzsignfoldertypeID: fkiEzsignfoldertypeID, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

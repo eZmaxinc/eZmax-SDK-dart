@@ -28,6 +28,12 @@ void main() {
       // TODO
     });
 
+    // The unique ID of the Branding
+    // int fkiBrandingID
+    test('to test the property `fkiBrandingID`', () async {
+      // TODO
+    });
+
     // The description of the Systemconfigurationtype in the language of the requester
     // String sSystemconfigurationtypeDescriptionX
     test('to test the property `sSystemconfigurationtypeDescriptionX`', () async {
@@ -71,6 +77,12 @@ void main() {
       // TODO
     });
 
+    // Whether there is a creditcard merchant configured or not
+    // bool bSystemconfigurationHascreditcardmerchant
+    test('to test the property `bSystemconfigurationHascreditcardmerchant`', () async {
+      // TODO
+    });
+
     // Whether is Disposal processus is active or not
     // bool bSystemconfigurationIsdisposalactive
     test('to test the property `bSystemconfigurationIsdisposalactive`', () async {
@@ -92,6 +104,11 @@ void main() {
     // The end date where the system will be in read only
     // String dtSystemconfigurationReadonlyexpirationend
     test('to test the property `dtSystemconfigurationReadonlyexpirationend`', () async {
+      // TODO
+    });
+
+    // CustomBrandingResponse objBranding
+    test('to test the property `objBranding`', () async {
       // TODO
     });
 

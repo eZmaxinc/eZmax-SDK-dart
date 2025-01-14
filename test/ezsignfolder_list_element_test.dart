@@ -116,9 +116,27 @@ void main() {
       // TODO
     });
 
-    // Whether the Ezsignform/Ezsignsignatures has dependencies or not
+    // Percentage of Ezsignform/Ezsignsignatures has completed
     // String dEzsignfolderCompletedpercentage
     test('to test the property `dEzsignfolderCompletedpercentage`', () async {
+      // TODO
+    });
+
+    // Percentage of Ezsignform has completed
+    // String dEzsignfolderFormcompletedpercentage
+    test('to test the property `dEzsignfolderFormcompletedpercentage`', () async {
+      // TODO
+    });
+
+    // Percentage of Ezsignsignatures has signed
+    // String dEzsignfolderSignaturecompletedpercentage
+    test('to test the property `dEzsignfolderSignaturecompletedpercentage`', () async {
+      // TODO
+    });
+
+    // Whether the Ezsignfolder has an Ezsignsignatures that need to be signed or an Ezsignformfieldgroups that need to be filled by the current user
+    // bool bEzsignfolderSigner
+    test('to test the property `bEzsignfolderSigner`', () async {
       // TODO
     });
 

@@ -252,4 +252,165 @@ class ObjectSignatureApi {
     }
     return null;
   }
+
+  /// Retrieve an existing Signature
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiSignatureID (required):
+  ///   The unique ID of the Signature
+  Future<Response> signatureGetObjectV3WithHttpInfo(int pkiSignatureID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/3/object/signature/{pkiSignatureID}'
+      .replaceAll('{pkiSignatureID}', pkiSignatureID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve an existing Signature
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiSignatureID (required):
+  ///   The unique ID of the Signature
+  Future<SignatureGetObjectV3Response?> signatureGetObjectV3(int pkiSignatureID,) async {
+    final response = await signatureGetObjectV3WithHttpInfo(pkiSignatureID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'SignatureGetObjectV3Response',) as SignatureGetObjectV3Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve an existing Signature initial SVG
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiSignatureID (required):
+  ///   The unique ID of the Signature
+  Future<Response> signatureGetSVGInitialsV1WithHttpInfo(int pkiSignatureID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/signature/{pkiSignatureID}/getSVGInitials'
+      .replaceAll('{pkiSignatureID}', pkiSignatureID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve an existing Signature initial SVG
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiSignatureID (required):
+  ///   The unique ID of the Signature
+  Future<void> signatureGetSVGInitialsV1(int pkiSignatureID,) async {
+    final response = await signatureGetSVGInitialsV1WithHttpInfo(pkiSignatureID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+  }
+
+  /// Retrieve an existing Signature SVG
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiSignatureID (required):
+  ///   The unique ID of the Signature
+  Future<Response> signatureGetSVGSignatureV1WithHttpInfo(int pkiSignatureID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/signature/{pkiSignatureID}/getSVGSignature'
+      .replaceAll('{pkiSignatureID}', pkiSignatureID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve an existing Signature SVG
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiSignatureID (required):
+  ///   The unique ID of the Signature
+  Future<void> signatureGetSVGSignatureV1(int pkiSignatureID,) async {
+    final response = await signatureGetSVGSignatureV1WithHttpInfo(pkiSignatureID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+  }
 }

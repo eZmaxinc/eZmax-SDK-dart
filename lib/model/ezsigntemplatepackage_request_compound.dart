@@ -15,6 +15,7 @@ class EzsigntemplatepackageRequestCompound {
   EzsigntemplatepackageRequestCompound({
     this.pkiEzsigntemplatepackageID,
     required this.fkiEzsignfoldertypeID,
+    this.fkiEzdoctemplatedocumentID,
     required this.fkiLanguageID,
     required this.sEzsigntemplatepackageDescription,
     required this.bEzsigntemplatepackageAdminonly,
@@ -38,6 +39,18 @@ class EzsigntemplatepackageRequestCompound {
   /// Maximum value: 65535
   int fkiEzsignfoldertypeID;
 
+  /// The unique ID of the Ezdoctemplatedocument
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 65535
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiEzdoctemplatedocumentID;
+
   /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
   ///
   /// Minimum value: 1
@@ -57,6 +70,7 @@ class EzsigntemplatepackageRequestCompound {
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplatepackageRequestCompound &&
     other.pkiEzsigntemplatepackageID == pkiEzsigntemplatepackageID &&
     other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
+    other.fkiEzdoctemplatedocumentID == fkiEzdoctemplatedocumentID &&
     other.fkiLanguageID == fkiLanguageID &&
     other.sEzsigntemplatepackageDescription == sEzsigntemplatepackageDescription &&
     other.bEzsigntemplatepackageAdminonly == bEzsigntemplatepackageAdminonly &&
@@ -67,13 +81,14 @@ class EzsigntemplatepackageRequestCompound {
     // ignore: unnecessary_parenthesis
     (pkiEzsigntemplatepackageID == null ? 0 : pkiEzsigntemplatepackageID!.hashCode) +
     (fkiEzsignfoldertypeID.hashCode) +
+    (fkiEzdoctemplatedocumentID == null ? 0 : fkiEzdoctemplatedocumentID!.hashCode) +
     (fkiLanguageID.hashCode) +
     (sEzsigntemplatepackageDescription.hashCode) +
     (bEzsigntemplatepackageAdminonly.hashCode) +
     (bEzsigntemplatepackageIsactive.hashCode);
 
   @override
-  String toString() => 'EzsigntemplatepackageRequestCompound[pkiEzsigntemplatepackageID=$pkiEzsigntemplatepackageID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiLanguageID=$fkiLanguageID, sEzsigntemplatepackageDescription=$sEzsigntemplatepackageDescription, bEzsigntemplatepackageAdminonly=$bEzsigntemplatepackageAdminonly, bEzsigntemplatepackageIsactive=$bEzsigntemplatepackageIsactive]';
+  String toString() => 'EzsigntemplatepackageRequestCompound[pkiEzsigntemplatepackageID=$pkiEzsigntemplatepackageID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiEzdoctemplatedocumentID=$fkiEzdoctemplatedocumentID, fkiLanguageID=$fkiLanguageID, sEzsigntemplatepackageDescription=$sEzsigntemplatepackageDescription, bEzsigntemplatepackageAdminonly=$bEzsigntemplatepackageAdminonly, bEzsigntemplatepackageIsactive=$bEzsigntemplatepackageIsactive]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -83,6 +98,11 @@ class EzsigntemplatepackageRequestCompound {
       json[r'pkiEzsigntemplatepackageID'] = null;
     }
       json[r'fkiEzsignfoldertypeID'] = this.fkiEzsignfoldertypeID;
+    if (this.fkiEzdoctemplatedocumentID != null) {
+      json[r'fkiEzdoctemplatedocumentID'] = this.fkiEzdoctemplatedocumentID;
+    } else {
+      json[r'fkiEzdoctemplatedocumentID'] = null;
+    }
       json[r'fkiLanguageID'] = this.fkiLanguageID;
       json[r'sEzsigntemplatepackageDescription'] = this.sEzsigntemplatepackageDescription;
       json[r'bEzsigntemplatepackageAdminonly'] = this.bEzsigntemplatepackageAdminonly;
@@ -111,6 +131,7 @@ class EzsigntemplatepackageRequestCompound {
       return EzsigntemplatepackageRequestCompound(
         pkiEzsigntemplatepackageID: mapValueOfType<int>(json, r'pkiEzsigntemplatepackageID'),
         fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID')!,
+        fkiEzdoctemplatedocumentID: mapValueOfType<int>(json, r'fkiEzdoctemplatedocumentID'),
         fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID')!,
         sEzsigntemplatepackageDescription: mapValueOfType<String>(json, r'sEzsigntemplatepackageDescription')!,
         bEzsigntemplatepackageAdminonly: mapValueOfType<bool>(json, r'bEzsigntemplatepackageAdminonly')!,

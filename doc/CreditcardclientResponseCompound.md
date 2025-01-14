@@ -10,11 +10,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiCreditcardclientID** | **int** | The unique ID of the Creditcardclient | 
 **fkiCreditcarddetailID** | **int** | The unique ID of the Creditcarddetail | 
-**bCreditcardclientrelationIsdefault** | **bool** | Whether if it's an relationisdefault | 
+**bCreditcardclientrelationIsdefault** | **bool** | Whether if it's the creditcardclient is the default one | 
 **sCreditcardclientDescription** | **String** | The description of the Creditcardclient | 
-**bCreditcardclientIsactive** | **bool** | Whether the creditcardclient is active or not | 
-**bCreditcardclientAllowedagencypayment** | **bool** | Whether if it's an allowedagencypayment | 
-**bCreditcardclientAllowedroyallepageprotection** | **bool** | Whether if it's an allowedroyallepageprotection | 
+**bCreditcardclientAllowedcompanypayment** | **bool** | Whether if it's an allowedagencypayment | 
 **bCreditcardclientAllowedtranquillit** | **bool** | Whether if it's an allowedtranquillit | 
 **objCreditcarddetail** | [**CreditcarddetailResponseCompound**](CreditcarddetailResponseCompound.md) |  | 
 

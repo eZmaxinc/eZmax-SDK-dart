@@ -17,6 +17,15 @@ void main() {
   // final instance = ObjectCommunicationApi();
 
   group('tests for ObjectCommunicationApi', () {
+    // Retrieve the communication body.
+    //
+    // This endpoint returns the communication body.
+    //
+    //Future communicationGetCommunicationBodyV1(int pkiCommunicationID) async
+    test('test communicationGetCommunicationBodyV1', () async {
+      // TODO
+    });
+
     // Send a new Communication
     //
     // The endpoint allows to send one or many elements at once.

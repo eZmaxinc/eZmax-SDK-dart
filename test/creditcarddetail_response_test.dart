@@ -28,9 +28,9 @@ void main() {
       // TODO
     });
 
-    // The numbermasked of the Creditcarddetail
-    // String sCreditcarddetailNumbermasked
-    test('to test the property `sCreditcarddetailNumbermasked`', () async {
+    // The last digits of the Creditcarddetail
+    // int iCreditcarddetailLastdigits
+    test('to test the property `iCreditcarddetailLastdigits`', () async {
       // TODO
     });
 

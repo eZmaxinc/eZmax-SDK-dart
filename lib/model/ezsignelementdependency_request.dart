@@ -27,7 +27,7 @@ class EzsignelementdependencyRequest {
   /// The unique ID of the Ezsignelementdependency
   ///
   /// Minimum value: 0
-  /// Maximum value: 65535
+  /// Maximum value: 16777215
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated

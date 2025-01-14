@@ -39,6 +39,12 @@ void main() {
       // TODO
     });
 
+    // The number of total form fields that were requested in the Ezsignfolder
+    // int iEzsignfolderFormfieldtotal
+    test('to test the property `iEzsignfolderFormfieldtotal`', () async {
+      // TODO
+    });
+
     // The number of signatures that were signed in the Ezsignfolder.
     // int iEzsignfolderSignaturesigned
     test('to test the property `iEzsignfolderSignaturesigned`', () async {

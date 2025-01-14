@@ -15,6 +15,7 @@ class EzsignfolderRequestCompound {
   EzsignfolderRequestCompound({
     this.pkiEzsignfolderID,
     required this.fkiEzsignfoldertypeID,
+    this.fkiTimezoneID,
     this.fkiEzsigntsarequirementID,
     required this.sEzsignfolderDescription,
     this.tEzsignfolderNote,
@@ -38,6 +39,17 @@ class EzsignfolderRequestCompound {
   /// Minimum value: 0
   /// Maximum value: 65535
   int fkiEzsignfoldertypeID;
+
+  /// The unique ID of the Timezone
+  ///
+  /// Minimum value: 0
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiTimezoneID;
 
   /// The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server's time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server's time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|
   ///
@@ -78,6 +90,7 @@ class EzsignfolderRequestCompound {
   bool operator ==(Object other) => identical(this, other) || other is EzsignfolderRequestCompound &&
     other.pkiEzsignfolderID == pkiEzsignfolderID &&
     other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
+    other.fkiTimezoneID == fkiTimezoneID &&
     other.fkiEzsigntsarequirementID == fkiEzsigntsarequirementID &&
     other.sEzsignfolderDescription == sEzsignfolderDescription &&
     other.tEzsignfolderNote == tEzsignfolderNote &&
@@ -89,6 +102,7 @@ class EzsignfolderRequestCompound {
     // ignore: unnecessary_parenthesis
     (pkiEzsignfolderID == null ? 0 : pkiEzsignfolderID!.hashCode) +
     (fkiEzsignfoldertypeID.hashCode) +
+    (fkiTimezoneID == null ? 0 : fkiTimezoneID!.hashCode) +
     (fkiEzsigntsarequirementID == null ? 0 : fkiEzsigntsarequirementID!.hashCode) +
     (sEzsignfolderDescription.hashCode) +
     (tEzsignfolderNote == null ? 0 : tEzsignfolderNote!.hashCode) +
@@ -96,7 +110,7 @@ class EzsignfolderRequestCompound {
     (sEzsignfolderExternalid == null ? 0 : sEzsignfolderExternalid!.hashCode);
 
   @override
-  String toString() => 'EzsignfolderRequestCompound[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sEzsignfolderDescription=$sEzsignfolderDescription, tEzsignfolderNote=$tEzsignfolderNote, eEzsignfolderSendreminderfrequency=$eEzsignfolderSendreminderfrequency, sEzsignfolderExternalid=$sEzsignfolderExternalid]';
+  String toString() => 'EzsignfolderRequestCompound[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiTimezoneID=$fkiTimezoneID, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sEzsignfolderDescription=$sEzsignfolderDescription, tEzsignfolderNote=$tEzsignfolderNote, eEzsignfolderSendreminderfrequency=$eEzsignfolderSendreminderfrequency, sEzsignfolderExternalid=$sEzsignfolderExternalid]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -106,6 +120,11 @@ class EzsignfolderRequestCompound {
       json[r'pkiEzsignfolderID'] = null;
     }
       json[r'fkiEzsignfoldertypeID'] = this.fkiEzsignfoldertypeID;
+    if (this.fkiTimezoneID != null) {
+      json[r'fkiTimezoneID'] = this.fkiTimezoneID;
+    } else {
+      json[r'fkiTimezoneID'] = null;
+    }
     if (this.fkiEzsigntsarequirementID != null) {
       json[r'fkiEzsigntsarequirementID'] = this.fkiEzsigntsarequirementID;
     } else {
@@ -147,6 +166,7 @@ class EzsignfolderRequestCompound {
       return EzsignfolderRequestCompound(
         pkiEzsignfolderID: mapValueOfType<int>(json, r'pkiEzsignfolderID'),
         fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID')!,
+        fkiTimezoneID: mapValueOfType<int>(json, r'fkiTimezoneID'),
         fkiEzsigntsarequirementID: mapValueOfType<int>(json, r'fkiEzsigntsarequirementID'),
         sEzsignfolderDescription: mapValueOfType<String>(json, r'sEzsignfolderDescription')!,
         tEzsignfolderNote: mapValueOfType<String>(json, r'tEzsignfolderNote'),

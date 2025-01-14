@@ -46,6 +46,12 @@ void main() {
       // TODO
     });
 
+    // The number of total form fields in the Ezsigntemplate.
+    // int iEzsigntemplatedocumentFormfieldtotal
+    test('to test the property `iEzsigntemplatedocumentFormfieldtotal`', () async {
+      // TODO
+    });
+
     // If the Ezsigntemplatedocument contains signed signatures (From internal or external sources)
     // bool bEzsigntemplatedocumentHassignedsignatures
     test('to test the property `bEzsigntemplatedocumentHassignedsignatures`', () async {

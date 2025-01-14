@@ -16,6 +16,12 @@ void main() {
   // final instance = AddressRequest();
 
   group('test AddressRequest', () {
+    // The unique ID of the Address
+    // int pkiAddressID
+    test('to test the property `pkiAddressID`', () async {
+      // TODO
+    });
+
     // The unique ID of the Addresstype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| |3|Real Estate Invoice| |4|Invoicing| |5|Shipping|
     // int fkiAddresstypeID
     test('to test the property `fkiAddresstypeID`', () async {

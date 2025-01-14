@@ -16,6 +16,62 @@ class ObjectActivesessionApi {
 
   final ApiClient apiClient;
 
+  /// Generate a federation token
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [ActivesessionGenerateFederationTokenV1Request] activesessionGenerateFederationTokenV1Request (required):
+  Future<Response> activesessionGenerateFederationTokenV1WithHttpInfo(ActivesessionGenerateFederationTokenV1Request activesessionGenerateFederationTokenV1Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/activesession/generateFederationToken';
+
+    // ignore: prefer_final_locals
+    Object? postBody = activesessionGenerateFederationTokenV1Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Generate a federation token
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [ActivesessionGenerateFederationTokenV1Request] activesessionGenerateFederationTokenV1Request (required):
+  Future<ActivesessionGenerateFederationTokenV1Response?> activesessionGenerateFederationTokenV1(ActivesessionGenerateFederationTokenV1Request activesessionGenerateFederationTokenV1Request,) async {
+    final response = await activesessionGenerateFederationTokenV1WithHttpInfo(activesessionGenerateFederationTokenV1Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'ActivesessionGenerateFederationTokenV1Response',) as ActivesessionGenerateFederationTokenV1Response;
+    
+    }
+    return null;
+  }
+
   /// Get Current Activesession
   ///
   /// Retrieve the details about the current activesession

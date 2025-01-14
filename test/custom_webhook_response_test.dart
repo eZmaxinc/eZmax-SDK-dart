@@ -22,6 +22,12 @@ void main() {
       // TODO
     });
 
+    // The unique ID of the Authenticationexternal
+    // int fkiAuthenticationexternalID
+    test('to test the property `fkiAuthenticationexternalID`', () async {
+      // TODO
+    });
+
     // The description of the Webhook
     // String sWebhookDescription
     test('to test the property `sWebhookDescription`', () async {
@@ -97,6 +103,12 @@ void main() {
       // TODO
     });
 
+    // The description of the Authenticationexternal
+    // String sAuthenticationexternalDescription
+    test('to test the property `sAuthenticationexternalDescription`', () async {
+      // TODO
+    });
+
     // CommonAudit objAudit
     test('to test the property `objAudit`', () async {
       // TODO
@@ -122,6 +134,12 @@ void main() {
     // Wheter the webhook received is a manual test or a real event
     // bool bWebhookTest
     test('to test the property `bWebhookTest`', () async {
+      // TODO
+    });
+
+    // Wheter the webhook received is a manual test or a real event
+    // String eWebhookEmittype
+    test('to test the property `eWebhookEmittype`', () async {
       // TODO
     });
 

@@ -17,12 +17,39 @@ void main() {
   // final instance = ObjectOtherincomeApi();
 
   group('tests for ObjectOtherincomeApi', () {
+    // Retrieve Communication count
+    //
+    // 
+    //
+    //Future<OtherincomeGetCommunicationCountV1Response> otherincomeGetCommunicationCountV1(int pkiOtherincomeID) async
+    test('test otherincomeGetCommunicationCountV1', () async {
+      // TODO
+    });
+
     // Retrieve Communication list
     //
     // 
     //
     //Future<OtherincomeGetCommunicationListV1Response> otherincomeGetCommunicationListV1(int pkiOtherincomeID) async
     test('test otherincomeGetCommunicationListV1', () async {
+      // TODO
+    });
+
+    // Retrieve Otherincome's Communicationrecipient
+    //
+    // 
+    //
+    //Future<OtherincomeGetCommunicationrecipientsV1Response> otherincomeGetCommunicationrecipientsV1(int pkiOtherincomeID) async
+    test('test otherincomeGetCommunicationrecipientsV1', () async {
+      // TODO
+    });
+
+    // Retrieve Otherincome's Communicationsender
+    //
+    // 
+    //
+    //Future<OtherincomeGetCommunicationsendersV1Response> otherincomeGetCommunicationsendersV1(int pkiOtherincomeID) async
+    test('test otherincomeGetCommunicationsendersV1', () async {
       // TODO
     });
 

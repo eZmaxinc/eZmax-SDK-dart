@@ -15,6 +15,7 @@ class CommonResponseError {
   CommonResponseError({
     required this.sErrorMessage,
     required this.eErrorCode,
+    this.aSErrorMessagedetail = const [],
   });
 
   /// The message giving details about the error
@@ -22,24 +23,30 @@ class CommonResponseError {
 
   FieldEErrorCode eErrorCode;
 
+  /// More error message detail
+  List<String> aSErrorMessagedetail;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonResponseError &&
     other.sErrorMessage == sErrorMessage &&
-    other.eErrorCode == eErrorCode;
+    other.eErrorCode == eErrorCode &&
+    _deepEquality.equals(other.aSErrorMessagedetail, aSErrorMessagedetail);
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (sErrorMessage.hashCode) +
-    (eErrorCode.hashCode);
+    (eErrorCode.hashCode) +
+    (aSErrorMessagedetail.hashCode);
 
   @override
-  String toString() => 'CommonResponseError[sErrorMessage=$sErrorMessage, eErrorCode=$eErrorCode]';
+  String toString() => 'CommonResponseError[sErrorMessage=$sErrorMessage, eErrorCode=$eErrorCode, aSErrorMessagedetail=$aSErrorMessagedetail]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'sErrorMessage'] = this.sErrorMessage;
       json[r'eErrorCode'] = this.eErrorCode;
+      json[r'a_sErrorMessagedetail'] = this.aSErrorMessagedetail;
     return json;
   }
 
@@ -64,6 +71,9 @@ class CommonResponseError {
       return CommonResponseError(
         sErrorMessage: mapValueOfType<String>(json, r'sErrorMessage')!,
         eErrorCode: FieldEErrorCode.fromJson(json[r'eErrorCode'])!,
+        aSErrorMessagedetail: json[r'a_sErrorMessagedetail'] is Iterable
+            ? (json[r'a_sErrorMessagedetail'] as Iterable).cast<String>().toList(growable: false)
+            : const [],
       );
     }
     return null;

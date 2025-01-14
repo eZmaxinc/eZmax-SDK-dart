@@ -22,9 +22,21 @@ void main() {
       // TODO
     });
 
+    // The unique ID of the Font
+    // int fkiFontID
+    test('to test the property `fkiFontID`', () async {
+      // TODO
+    });
+
     // The URL of the SVG file for the Signature
     // String sSignatureUrl
     test('to test the property `sSignatureUrl`', () async {
+      // TODO
+    });
+
+    // The URL of the SVG file for the Initials
+    // String sSignatureUrlinitials
+    test('to test the property `sSignatureUrlinitials`', () async {
       // TODO
     });
 

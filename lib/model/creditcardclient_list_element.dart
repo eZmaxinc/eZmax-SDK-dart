@@ -15,15 +15,14 @@ class CreditcardclientListElement {
   CreditcardclientListElement({
     required this.pkiCreditcardclientID,
     required this.fkiCreditcarddetailID,
+    required this.fkiCreditcardtypeID,
     required this.bCreditcardclientrelationIsdefault,
     required this.sCreditcardclientDescription,
-    required this.bCreditcardclientIsactive,
-    required this.bCreditcardclientAllowedagencypayment,
-    required this.bCreditcardclientAllowedroyallepageprotection,
+    required this.bCreditcardclientAllowedcompanypayment,
     required this.bCreditcardclientAllowedtranquillit,
     required this.iCreditcarddetailExpirationmonth,
     required this.iCreditcarddetailExpirationyear,
-    required this.sCreditcarddetailNumbermasked,
+    required this.iCreditcarddetailLastdigits,
   });
 
   /// The unique ID of the Creditcardclient
@@ -38,20 +37,20 @@ class CreditcardclientListElement {
   /// Maximum value: 65535
   int fkiCreditcarddetailID;
 
-  /// Whether if it's an relationisdefault
+  /// The unique ID of the Creditcardtype
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 255
+  int fkiCreditcardtypeID;
+
+  /// Whether if it's the creditcardclient is the default one
   bool bCreditcardclientrelationIsdefault;
 
   /// The description of the Creditcardclient
   String sCreditcardclientDescription;
 
-  /// Whether the creditcardclient is active or not
-  bool bCreditcardclientIsactive;
-
   /// Whether if it's an allowedagencypayment
-  bool bCreditcardclientAllowedagencypayment;
-
-  /// Whether if it's an allowedroyallepageprotection
-  bool bCreditcardclientAllowedroyallepageprotection;
+  bool bCreditcardclientAllowedcompanypayment;
 
   /// Whether if it's an allowedtranquillit
   bool bCreditcardclientAllowedtranquillit;
@@ -68,54 +67,54 @@ class CreditcardclientListElement {
   /// Maximum value: 2200
   int iCreditcarddetailExpirationyear;
 
-  /// The numbermasked of the Creditcarddetail
-  String sCreditcarddetailNumbermasked;
+  /// The last digits of the Creditcarddetail
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 9999
+  int iCreditcarddetailLastdigits;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CreditcardclientListElement &&
     other.pkiCreditcardclientID == pkiCreditcardclientID &&
     other.fkiCreditcarddetailID == fkiCreditcarddetailID &&
+    other.fkiCreditcardtypeID == fkiCreditcardtypeID &&
     other.bCreditcardclientrelationIsdefault == bCreditcardclientrelationIsdefault &&
     other.sCreditcardclientDescription == sCreditcardclientDescription &&
-    other.bCreditcardclientIsactive == bCreditcardclientIsactive &&
-    other.bCreditcardclientAllowedagencypayment == bCreditcardclientAllowedagencypayment &&
-    other.bCreditcardclientAllowedroyallepageprotection == bCreditcardclientAllowedroyallepageprotection &&
+    other.bCreditcardclientAllowedcompanypayment == bCreditcardclientAllowedcompanypayment &&
     other.bCreditcardclientAllowedtranquillit == bCreditcardclientAllowedtranquillit &&
     other.iCreditcarddetailExpirationmonth == iCreditcarddetailExpirationmonth &&
     other.iCreditcarddetailExpirationyear == iCreditcarddetailExpirationyear &&
-    other.sCreditcarddetailNumbermasked == sCreditcarddetailNumbermasked;
+    other.iCreditcarddetailLastdigits == iCreditcarddetailLastdigits;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiCreditcardclientID.hashCode) +
     (fkiCreditcarddetailID.hashCode) +
+    (fkiCreditcardtypeID.hashCode) +
     (bCreditcardclientrelationIsdefault.hashCode) +
     (sCreditcardclientDescription.hashCode) +
-    (bCreditcardclientIsactive.hashCode) +
-    (bCreditcardclientAllowedagencypayment.hashCode) +
-    (bCreditcardclientAllowedroyallepageprotection.hashCode) +
+    (bCreditcardclientAllowedcompanypayment.hashCode) +
     (bCreditcardclientAllowedtranquillit.hashCode) +
     (iCreditcarddetailExpirationmonth.hashCode) +
     (iCreditcarddetailExpirationyear.hashCode) +
-    (sCreditcarddetailNumbermasked.hashCode);
+    (iCreditcarddetailLastdigits.hashCode);
 
   @override
-  String toString() => 'CreditcardclientListElement[pkiCreditcardclientID=$pkiCreditcardclientID, fkiCreditcarddetailID=$fkiCreditcarddetailID, bCreditcardclientrelationIsdefault=$bCreditcardclientrelationIsdefault, sCreditcardclientDescription=$sCreditcardclientDescription, bCreditcardclientIsactive=$bCreditcardclientIsactive, bCreditcardclientAllowedagencypayment=$bCreditcardclientAllowedagencypayment, bCreditcardclientAllowedroyallepageprotection=$bCreditcardclientAllowedroyallepageprotection, bCreditcardclientAllowedtranquillit=$bCreditcardclientAllowedtranquillit, iCreditcarddetailExpirationmonth=$iCreditcarddetailExpirationmonth, iCreditcarddetailExpirationyear=$iCreditcarddetailExpirationyear, sCreditcarddetailNumbermasked=$sCreditcarddetailNumbermasked]';
+  String toString() => 'CreditcardclientListElement[pkiCreditcardclientID=$pkiCreditcardclientID, fkiCreditcarddetailID=$fkiCreditcarddetailID, fkiCreditcardtypeID=$fkiCreditcardtypeID, bCreditcardclientrelationIsdefault=$bCreditcardclientrelationIsdefault, sCreditcardclientDescription=$sCreditcardclientDescription, bCreditcardclientAllowedcompanypayment=$bCreditcardclientAllowedcompanypayment, bCreditcardclientAllowedtranquillit=$bCreditcardclientAllowedtranquillit, iCreditcarddetailExpirationmonth=$iCreditcarddetailExpirationmonth, iCreditcarddetailExpirationyear=$iCreditcarddetailExpirationyear, iCreditcarddetailLastdigits=$iCreditcarddetailLastdigits]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiCreditcardclientID'] = this.pkiCreditcardclientID;
       json[r'fkiCreditcarddetailID'] = this.fkiCreditcarddetailID;
+      json[r'fkiCreditcardtypeID'] = this.fkiCreditcardtypeID;
       json[r'bCreditcardclientrelationIsdefault'] = this.bCreditcardclientrelationIsdefault;
       json[r'sCreditcardclientDescription'] = this.sCreditcardclientDescription;
-      json[r'bCreditcardclientIsactive'] = this.bCreditcardclientIsactive;
-      json[r'bCreditcardclientAllowedagencypayment'] = this.bCreditcardclientAllowedagencypayment;
-      json[r'bCreditcardclientAllowedroyallepageprotection'] = this.bCreditcardclientAllowedroyallepageprotection;
+      json[r'bCreditcardclientAllowedcompanypayment'] = this.bCreditcardclientAllowedcompanypayment;
       json[r'bCreditcardclientAllowedtranquillit'] = this.bCreditcardclientAllowedtranquillit;
       json[r'iCreditcarddetailExpirationmonth'] = this.iCreditcarddetailExpirationmonth;
       json[r'iCreditcarddetailExpirationyear'] = this.iCreditcarddetailExpirationyear;
-      json[r'sCreditcarddetailNumbermasked'] = this.sCreditcarddetailNumbermasked;
+      json[r'iCreditcarddetailLastdigits'] = this.iCreditcarddetailLastdigits;
     return json;
   }
 
@@ -140,15 +139,14 @@ class CreditcardclientListElement {
       return CreditcardclientListElement(
         pkiCreditcardclientID: mapValueOfType<int>(json, r'pkiCreditcardclientID')!,
         fkiCreditcarddetailID: mapValueOfType<int>(json, r'fkiCreditcarddetailID')!,
+        fkiCreditcardtypeID: mapValueOfType<int>(json, r'fkiCreditcardtypeID')!,
         bCreditcardclientrelationIsdefault: mapValueOfType<bool>(json, r'bCreditcardclientrelationIsdefault')!,
         sCreditcardclientDescription: mapValueOfType<String>(json, r'sCreditcardclientDescription')!,
-        bCreditcardclientIsactive: mapValueOfType<bool>(json, r'bCreditcardclientIsactive')!,
-        bCreditcardclientAllowedagencypayment: mapValueOfType<bool>(json, r'bCreditcardclientAllowedagencypayment')!,
-        bCreditcardclientAllowedroyallepageprotection: mapValueOfType<bool>(json, r'bCreditcardclientAllowedroyallepageprotection')!,
+        bCreditcardclientAllowedcompanypayment: mapValueOfType<bool>(json, r'bCreditcardclientAllowedcompanypayment')!,
         bCreditcardclientAllowedtranquillit: mapValueOfType<bool>(json, r'bCreditcardclientAllowedtranquillit')!,
         iCreditcarddetailExpirationmonth: mapValueOfType<int>(json, r'iCreditcarddetailExpirationmonth')!,
         iCreditcarddetailExpirationyear: mapValueOfType<int>(json, r'iCreditcarddetailExpirationyear')!,
-        sCreditcarddetailNumbermasked: mapValueOfType<String>(json, r'sCreditcarddetailNumbermasked')!,
+        iCreditcarddetailLastdigits: mapValueOfType<int>(json, r'iCreditcarddetailLastdigits')!,
       );
     }
     return null;
@@ -198,15 +196,14 @@ class CreditcardclientListElement {
   static const requiredKeys = <String>{
     'pkiCreditcardclientID',
     'fkiCreditcarddetailID',
+    'fkiCreditcardtypeID',
     'bCreditcardclientrelationIsdefault',
     'sCreditcardclientDescription',
-    'bCreditcardclientIsactive',
-    'bCreditcardclientAllowedagencypayment',
-    'bCreditcardclientAllowedroyallepageprotection',
+    'bCreditcardclientAllowedcompanypayment',
     'bCreditcardclientAllowedtranquillit',
     'iCreditcarddetailExpirationmonth',
     'iCreditcarddetailExpirationyear',
-    'sCreditcarddetailNumbermasked',
+    'iCreditcarddetailLastdigits',
   };
 }
 

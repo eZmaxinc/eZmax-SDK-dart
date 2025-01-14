@@ -99,6 +99,12 @@ void main() {
       // TODO
     });
 
+    // The number of total Ezsignformfield that were requested in the Ezsigndocument.
+    // int iEzsigndocumentFormfieldtotal
+    test('to test the property `iEzsigndocumentFormfieldtotal`', () async {
+      // TODO
+    });
+
     // MD5 Hash of the initial PDF Document before signatures were applied to it.
     // String sEzsigndocumentMD5initial
     test('to test the property `sEzsigndocumentMD5initial`', () async {
@@ -183,6 +189,11 @@ void main() {
 
     // List<CustomEzsignfoldersignerassociationstatusResponse> aObjEzsignfoldersignerassociationstatus (default value: const [])
     test('to test the property `aObjEzsignfoldersignerassociationstatus`', () async {
+      // TODO
+    });
+
+    // List<EzsigndocumentdependencyResponse> aObjEzsigndocumentdependency (default value: const [])
+    test('to test the property `aObjEzsigndocumentdependency`', () async {
       // TODO
     });
 

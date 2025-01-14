@@ -21,6 +21,18 @@ void main() {
       // TODO
     });
 
+    // Whether we shall copy the Ezsigntemplate as a company Ezsigntemplate
+    // bool bCopyCompany
+    test('to test the property `bCopyCompany`', () async {
+      // TODO
+    });
+
+    // Whether we shall copy the Ezsigntemplate as a user Ezsigntemplate
+    // bool bCopyUser
+    test('to test the property `bCopyUser`', () async {
+      // TODO
+    });
+
 
   });
 

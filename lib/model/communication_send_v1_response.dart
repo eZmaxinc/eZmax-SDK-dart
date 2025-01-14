@@ -28,7 +28,7 @@ class CommunicationSendV1Response {
   ///
   CommonResponseObjDebug? objDebug;
 
-  CommunicationCreateObjectV1ResponseMPayload mPayload;
+  CommunicationSendV1ResponseMPayload mPayload;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommunicationSendV1Response &&
@@ -79,7 +79,7 @@ class CommunicationSendV1Response {
       return CommunicationSendV1Response(
         objDebugPayload: CommonResponseObjDebugPayload.fromJson(json[r'objDebugPayload'])!,
         objDebug: CommonResponseObjDebug.fromJson(json[r'objDebug']),
-        mPayload: CommunicationCreateObjectV1ResponseMPayload.fromJson(json[r'mPayload'])!,
+        mPayload: CommunicationSendV1ResponseMPayload.fromJson(json[r'mPayload'])!,
       );
     }
     return null;

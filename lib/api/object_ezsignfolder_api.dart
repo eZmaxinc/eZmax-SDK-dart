@@ -246,6 +246,62 @@ class ObjectEzsignfolderApi {
     return null;
   }
 
+  /// Create a new Ezsignfolder
+  ///
+  /// The endpoint allows to create one or many elements at once.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [EzsignfolderCreateObjectV3Request] ezsignfolderCreateObjectV3Request (required):
+  Future<Response> ezsignfolderCreateObjectV3WithHttpInfo(EzsignfolderCreateObjectV3Request ezsignfolderCreateObjectV3Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/3/object/ezsignfolder';
+
+    // ignore: prefer_final_locals
+    Object? postBody = ezsignfolderCreateObjectV3Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Create a new Ezsignfolder
+  ///
+  /// The endpoint allows to create one or many elements at once.
+  ///
+  /// Parameters:
+  ///
+  /// * [EzsignfolderCreateObjectV3Request] ezsignfolderCreateObjectV3Request (required):
+  Future<EzsignfolderCreateObjectV3Response?> ezsignfolderCreateObjectV3(EzsignfolderCreateObjectV3Request ezsignfolderCreateObjectV3Request,) async {
+    final response = await ezsignfolderCreateObjectV3WithHttpInfo(ezsignfolderCreateObjectV3Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderCreateObjectV3Response',) as EzsignfolderCreateObjectV3Response;
+    
+    }
+    return null;
+  }
+
   /// Delete an existing Ezsignfolder
   ///
   /// Note: This method returns the HTTP [Response].
@@ -426,14 +482,14 @@ class ObjectEzsignfolderApi {
   ///
   /// * [int] pkiEzsignfolderID (required):
   ///
-  /// * [EzsignfolderEditObjectV1Request] ezsignfolderEditObjectV1Request (required):
-  Future<Response> ezsignfolderEditObjectV1WithHttpInfo(int pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request,) async {
+  /// * [EzsignfolderEditObjectV3Request] ezsignfolderEditObjectV3Request (required):
+  Future<Response> ezsignfolderEditObjectV3WithHttpInfo(int pkiEzsignfolderID, EzsignfolderEditObjectV3Request ezsignfolderEditObjectV3Request,) async {
     // ignore: prefer_const_declarations
-    final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}'
+    final path = r'/3/object/ezsignfolder/{pkiEzsignfolderID}'
       .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
 
     // ignore: prefer_final_locals
-    Object? postBody = ezsignfolderEditObjectV1Request;
+    Object? postBody = ezsignfolderEditObjectV3Request;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
@@ -461,9 +517,9 @@ class ObjectEzsignfolderApi {
   ///
   /// * [int] pkiEzsignfolderID (required):
   ///
-  /// * [EzsignfolderEditObjectV1Request] ezsignfolderEditObjectV1Request (required):
-  Future<EzsignfolderEditObjectV1Response?> ezsignfolderEditObjectV1(int pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request,) async {
-    final response = await ezsignfolderEditObjectV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderEditObjectV1Request,);
+  /// * [EzsignfolderEditObjectV3Request] ezsignfolderEditObjectV3Request (required):
+  Future<EzsignfolderEditObjectV3Response?> ezsignfolderEditObjectV3(int pkiEzsignfolderID, EzsignfolderEditObjectV3Request ezsignfolderEditObjectV3Request,) async {
+    final response = await ezsignfolderEditObjectV3WithHttpInfo(pkiEzsignfolderID, ezsignfolderEditObjectV3Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -471,7 +527,7 @@ class ObjectEzsignfolderApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderEditObjectV1Response',) as EzsignfolderEditObjectV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderEditObjectV3Response',) as EzsignfolderEditObjectV3Response;
     
     }
     return null;
@@ -1167,7 +1223,7 @@ class ObjectEzsignfolderApi {
 
   /// Retrieve Ezsignfolder list
   ///
-  /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived<br>Disposed| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | fkiUserID | | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
+  /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived<br>Disposed| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | fkiUserID | | sContactFirstname | | sContactLastname | | sUserFirstname | | sUserLastname | | sEzsigndocumentName |
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -1227,7 +1283,7 @@ class ObjectEzsignfolderApi {
 
   /// Retrieve Ezsignfolder list
   ///
-  /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived<br>Disposed| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | fkiUserID | | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
+  /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived<br>Disposed| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | fkiUserID | | sContactFirstname | | sContactLastname | | sUserFirstname | | sUserLastname | | sEzsigndocumentName |
   ///
   /// Parameters:
   ///
@@ -1361,6 +1417,63 @@ class ObjectEzsignfolderApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderGetObjectV2Response',) as EzsignfolderGetObjectV2Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve an existing Ezsignfolder
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfolderID (required):
+  Future<Response> ezsignfolderGetObjectV3WithHttpInfo(int pkiEzsignfolderID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/3/object/ezsignfolder/{pkiEzsignfolderID}'
+      .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve an existing Ezsignfolder
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfolderID (required):
+  Future<EzsignfolderGetObjectV3Response?> ezsignfolderGetObjectV3(int pkiEzsignfolderID,) async {
+    final response = await ezsignfolderGetObjectV3WithHttpInfo(pkiEzsignfolderID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderGetObjectV3Response',) as EzsignfolderGetObjectV3Response;
     
     }
     return null;
@@ -1540,6 +1653,63 @@ class ObjectEzsignfolderApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderReorderV1Response',) as EzsignfolderReorderV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Reorder Ezsigndocuments in the Ezsignfolder
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfolderID (required):
+  ///
+  /// * [EzsignfolderReorderV2Request] ezsignfolderReorderV2Request (required):
+  Future<Response> ezsignfolderReorderV2WithHttpInfo(int pkiEzsignfolderID, EzsignfolderReorderV2Request ezsignfolderReorderV2Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/2/object/ezsignfolder/{pkiEzsignfolderID}/reorder'
+      .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = ezsignfolderReorderV2Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Reorder Ezsigndocuments in the Ezsignfolder
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfolderID (required):
+  ///
+  /// * [EzsignfolderReorderV2Request] ezsignfolderReorderV2Request (required):
+  Future<EzsignfolderReorderV2Response?> ezsignfolderReorderV2(int pkiEzsignfolderID, EzsignfolderReorderV2Request ezsignfolderReorderV2Request,) async {
+    final response = await ezsignfolderReorderV2WithHttpInfo(pkiEzsignfolderID, ezsignfolderReorderV2Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderReorderV2Response',) as EzsignfolderReorderV2Response;
     
     }
     return null;

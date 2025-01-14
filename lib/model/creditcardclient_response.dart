@@ -17,9 +17,7 @@ class CreditcardclientResponse {
     required this.fkiCreditcarddetailID,
     required this.bCreditcardclientrelationIsdefault,
     required this.sCreditcardclientDescription,
-    required this.bCreditcardclientIsactive,
-    required this.bCreditcardclientAllowedagencypayment,
-    required this.bCreditcardclientAllowedroyallepageprotection,
+    required this.bCreditcardclientAllowedcompanypayment,
     required this.bCreditcardclientAllowedtranquillit,
     required this.objCreditcarddetail,
   });
@@ -36,20 +34,14 @@ class CreditcardclientResponse {
   /// Maximum value: 65535
   int fkiCreditcarddetailID;
 
-  /// Whether if it's an relationisdefault
+  /// Whether if it's the creditcardclient is the default one
   bool bCreditcardclientrelationIsdefault;
 
   /// The description of the Creditcardclient
   String sCreditcardclientDescription;
 
-  /// Whether the creditcardclient is active or not
-  bool bCreditcardclientIsactive;
-
   /// Whether if it's an allowedagencypayment
-  bool bCreditcardclientAllowedagencypayment;
-
-  /// Whether if it's an allowedroyallepageprotection
-  bool bCreditcardclientAllowedroyallepageprotection;
+  bool bCreditcardclientAllowedcompanypayment;
 
   /// Whether if it's an allowedtranquillit
   bool bCreditcardclientAllowedtranquillit;
@@ -62,9 +54,7 @@ class CreditcardclientResponse {
     other.fkiCreditcarddetailID == fkiCreditcarddetailID &&
     other.bCreditcardclientrelationIsdefault == bCreditcardclientrelationIsdefault &&
     other.sCreditcardclientDescription == sCreditcardclientDescription &&
-    other.bCreditcardclientIsactive == bCreditcardclientIsactive &&
-    other.bCreditcardclientAllowedagencypayment == bCreditcardclientAllowedagencypayment &&
-    other.bCreditcardclientAllowedroyallepageprotection == bCreditcardclientAllowedroyallepageprotection &&
+    other.bCreditcardclientAllowedcompanypayment == bCreditcardclientAllowedcompanypayment &&
     other.bCreditcardclientAllowedtranquillit == bCreditcardclientAllowedtranquillit &&
     other.objCreditcarddetail == objCreditcarddetail;
 
@@ -75,14 +65,12 @@ class CreditcardclientResponse {
     (fkiCreditcarddetailID.hashCode) +
     (bCreditcardclientrelationIsdefault.hashCode) +
     (sCreditcardclientDescription.hashCode) +
-    (bCreditcardclientIsactive.hashCode) +
-    (bCreditcardclientAllowedagencypayment.hashCode) +
-    (bCreditcardclientAllowedroyallepageprotection.hashCode) +
+    (bCreditcardclientAllowedcompanypayment.hashCode) +
     (bCreditcardclientAllowedtranquillit.hashCode) +
     (objCreditcarddetail.hashCode);
 
   @override
-  String toString() => 'CreditcardclientResponse[pkiCreditcardclientID=$pkiCreditcardclientID, fkiCreditcarddetailID=$fkiCreditcarddetailID, bCreditcardclientrelationIsdefault=$bCreditcardclientrelationIsdefault, sCreditcardclientDescription=$sCreditcardclientDescription, bCreditcardclientIsactive=$bCreditcardclientIsactive, bCreditcardclientAllowedagencypayment=$bCreditcardclientAllowedagencypayment, bCreditcardclientAllowedroyallepageprotection=$bCreditcardclientAllowedroyallepageprotection, bCreditcardclientAllowedtranquillit=$bCreditcardclientAllowedtranquillit, objCreditcarddetail=$objCreditcarddetail]';
+  String toString() => 'CreditcardclientResponse[pkiCreditcardclientID=$pkiCreditcardclientID, fkiCreditcarddetailID=$fkiCreditcarddetailID, bCreditcardclientrelationIsdefault=$bCreditcardclientrelationIsdefault, sCreditcardclientDescription=$sCreditcardclientDescription, bCreditcardclientAllowedcompanypayment=$bCreditcardclientAllowedcompanypayment, bCreditcardclientAllowedtranquillit=$bCreditcardclientAllowedtranquillit, objCreditcarddetail=$objCreditcarddetail]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -90,9 +78,7 @@ class CreditcardclientResponse {
       json[r'fkiCreditcarddetailID'] = this.fkiCreditcarddetailID;
       json[r'bCreditcardclientrelationIsdefault'] = this.bCreditcardclientrelationIsdefault;
       json[r'sCreditcardclientDescription'] = this.sCreditcardclientDescription;
-      json[r'bCreditcardclientIsactive'] = this.bCreditcardclientIsactive;
-      json[r'bCreditcardclientAllowedagencypayment'] = this.bCreditcardclientAllowedagencypayment;
-      json[r'bCreditcardclientAllowedroyallepageprotection'] = this.bCreditcardclientAllowedroyallepageprotection;
+      json[r'bCreditcardclientAllowedcompanypayment'] = this.bCreditcardclientAllowedcompanypayment;
       json[r'bCreditcardclientAllowedtranquillit'] = this.bCreditcardclientAllowedtranquillit;
       json[r'objCreditcarddetail'] = this.objCreditcarddetail;
     return json;
@@ -121,9 +107,7 @@ class CreditcardclientResponse {
         fkiCreditcarddetailID: mapValueOfType<int>(json, r'fkiCreditcarddetailID')!,
         bCreditcardclientrelationIsdefault: mapValueOfType<bool>(json, r'bCreditcardclientrelationIsdefault')!,
         sCreditcardclientDescription: mapValueOfType<String>(json, r'sCreditcardclientDescription')!,
-        bCreditcardclientIsactive: mapValueOfType<bool>(json, r'bCreditcardclientIsactive')!,
-        bCreditcardclientAllowedagencypayment: mapValueOfType<bool>(json, r'bCreditcardclientAllowedagencypayment')!,
-        bCreditcardclientAllowedroyallepageprotection: mapValueOfType<bool>(json, r'bCreditcardclientAllowedroyallepageprotection')!,
+        bCreditcardclientAllowedcompanypayment: mapValueOfType<bool>(json, r'bCreditcardclientAllowedcompanypayment')!,
         bCreditcardclientAllowedtranquillit: mapValueOfType<bool>(json, r'bCreditcardclientAllowedtranquillit')!,
         objCreditcarddetail: CreditcarddetailResponseCompound.fromJson(json[r'objCreditcarddetail'])!,
       );
@@ -177,9 +161,7 @@ class CreditcardclientResponse {
     'fkiCreditcarddetailID',
     'bCreditcardclientrelationIsdefault',
     'sCreditcardclientDescription',
-    'bCreditcardclientIsactive',
-    'bCreditcardclientAllowedagencypayment',
-    'bCreditcardclientAllowedroyallepageprotection',
+    'bCreditcardclientAllowedcompanypayment',
     'bCreditcardclientAllowedtranquillit',
     'objCreditcarddetail',
   };

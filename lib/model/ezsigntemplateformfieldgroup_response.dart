@@ -26,6 +26,7 @@ class EzsigntemplateformfieldgroupResponse {
     this.iEzsigntemplateformfieldgroupMaxlength,
     this.bEzsigntemplateformfieldgroupEncrypted,
     this.sEzsigntemplateformfieldgroupRegexp,
+    this.sEzsigntemplateformfieldgroupTextvalidationcustommessage,
     this.eEzsigntemplateformfieldgroupTextvalidation,
     this.tEzsigntemplateformfieldgroupTooltip,
     this.eEzsigntemplateformfieldgroupTooltipposition,
@@ -111,6 +112,15 @@ class EzsigntemplateformfieldgroupResponse {
   ///
   String? sEzsigntemplateformfieldgroupRegexp;
 
+  /// Description of validation rule. Show by signatory.
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEzsigntemplateformfieldgroupTextvalidationcustommessage;
+
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -151,6 +161,7 @@ class EzsigntemplateformfieldgroupResponse {
     other.iEzsigntemplateformfieldgroupMaxlength == iEzsigntemplateformfieldgroupMaxlength &&
     other.bEzsigntemplateformfieldgroupEncrypted == bEzsigntemplateformfieldgroupEncrypted &&
     other.sEzsigntemplateformfieldgroupRegexp == sEzsigntemplateformfieldgroupRegexp &&
+    other.sEzsigntemplateformfieldgroupTextvalidationcustommessage == sEzsigntemplateformfieldgroupTextvalidationcustommessage &&
     other.eEzsigntemplateformfieldgroupTextvalidation == eEzsigntemplateformfieldgroupTextvalidation &&
     other.tEzsigntemplateformfieldgroupTooltip == tEzsigntemplateformfieldgroupTooltip &&
     other.eEzsigntemplateformfieldgroupTooltipposition == eEzsigntemplateformfieldgroupTooltipposition;
@@ -171,12 +182,13 @@ class EzsigntemplateformfieldgroupResponse {
     (iEzsigntemplateformfieldgroupMaxlength == null ? 0 : iEzsigntemplateformfieldgroupMaxlength!.hashCode) +
     (bEzsigntemplateformfieldgroupEncrypted == null ? 0 : bEzsigntemplateformfieldgroupEncrypted!.hashCode) +
     (sEzsigntemplateformfieldgroupRegexp == null ? 0 : sEzsigntemplateformfieldgroupRegexp!.hashCode) +
+    (sEzsigntemplateformfieldgroupTextvalidationcustommessage == null ? 0 : sEzsigntemplateformfieldgroupTextvalidationcustommessage!.hashCode) +
     (eEzsigntemplateformfieldgroupTextvalidation == null ? 0 : eEzsigntemplateformfieldgroupTextvalidation!.hashCode) +
     (tEzsigntemplateformfieldgroupTooltip == null ? 0 : tEzsigntemplateformfieldgroupTooltip!.hashCode) +
     (eEzsigntemplateformfieldgroupTooltipposition == null ? 0 : eEzsigntemplateformfieldgroupTooltipposition!.hashCode);
 
   @override
-  String toString() => 'EzsigntemplateformfieldgroupResponse[pkiEzsigntemplateformfieldgroupID=$pkiEzsigntemplateformfieldgroupID, fkiEzsigntemplatedocumentID=$fkiEzsigntemplatedocumentID, eEzsigntemplateformfieldgroupType=$eEzsigntemplateformfieldgroupType, eEzsigntemplateformfieldgroupSignerrequirement=$eEzsigntemplateformfieldgroupSignerrequirement, sEzsigntemplateformfieldgroupLabel=$sEzsigntemplateformfieldgroupLabel, iEzsigntemplateformfieldgroupStep=$iEzsigntemplateformfieldgroupStep, sEzsigntemplateformfieldgroupDefaultvalue=$sEzsigntemplateformfieldgroupDefaultvalue, iEzsigntemplateformfieldgroupFilledmin=$iEzsigntemplateformfieldgroupFilledmin, iEzsigntemplateformfieldgroupFilledmax=$iEzsigntemplateformfieldgroupFilledmax, bEzsigntemplateformfieldgroupReadonly=$bEzsigntemplateformfieldgroupReadonly, iEzsigntemplateformfieldgroupMaxlength=$iEzsigntemplateformfieldgroupMaxlength, bEzsigntemplateformfieldgroupEncrypted=$bEzsigntemplateformfieldgroupEncrypted, sEzsigntemplateformfieldgroupRegexp=$sEzsigntemplateformfieldgroupRegexp, eEzsigntemplateformfieldgroupTextvalidation=$eEzsigntemplateformfieldgroupTextvalidation, tEzsigntemplateformfieldgroupTooltip=$tEzsigntemplateformfieldgroupTooltip, eEzsigntemplateformfieldgroupTooltipposition=$eEzsigntemplateformfieldgroupTooltipposition]';
+  String toString() => 'EzsigntemplateformfieldgroupResponse[pkiEzsigntemplateformfieldgroupID=$pkiEzsigntemplateformfieldgroupID, fkiEzsigntemplatedocumentID=$fkiEzsigntemplatedocumentID, eEzsigntemplateformfieldgroupType=$eEzsigntemplateformfieldgroupType, eEzsigntemplateformfieldgroupSignerrequirement=$eEzsigntemplateformfieldgroupSignerrequirement, sEzsigntemplateformfieldgroupLabel=$sEzsigntemplateformfieldgroupLabel, iEzsigntemplateformfieldgroupStep=$iEzsigntemplateformfieldgroupStep, sEzsigntemplateformfieldgroupDefaultvalue=$sEzsigntemplateformfieldgroupDefaultvalue, iEzsigntemplateformfieldgroupFilledmin=$iEzsigntemplateformfieldgroupFilledmin, iEzsigntemplateformfieldgroupFilledmax=$iEzsigntemplateformfieldgroupFilledmax, bEzsigntemplateformfieldgroupReadonly=$bEzsigntemplateformfieldgroupReadonly, iEzsigntemplateformfieldgroupMaxlength=$iEzsigntemplateformfieldgroupMaxlength, bEzsigntemplateformfieldgroupEncrypted=$bEzsigntemplateformfieldgroupEncrypted, sEzsigntemplateformfieldgroupRegexp=$sEzsigntemplateformfieldgroupRegexp, sEzsigntemplateformfieldgroupTextvalidationcustommessage=$sEzsigntemplateformfieldgroupTextvalidationcustommessage, eEzsigntemplateformfieldgroupTextvalidation=$eEzsigntemplateformfieldgroupTextvalidation, tEzsigntemplateformfieldgroupTooltip=$tEzsigntemplateformfieldgroupTooltip, eEzsigntemplateformfieldgroupTooltipposition=$eEzsigntemplateformfieldgroupTooltipposition]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -212,6 +224,11 @@ class EzsigntemplateformfieldgroupResponse {
       json[r'sEzsigntemplateformfieldgroupRegexp'] = this.sEzsigntemplateformfieldgroupRegexp;
     } else {
       json[r'sEzsigntemplateformfieldgroupRegexp'] = null;
+    }
+    if (this.sEzsigntemplateformfieldgroupTextvalidationcustommessage != null) {
+      json[r'sEzsigntemplateformfieldgroupTextvalidationcustommessage'] = this.sEzsigntemplateformfieldgroupTextvalidationcustommessage;
+    } else {
+      json[r'sEzsigntemplateformfieldgroupTextvalidationcustommessage'] = null;
     }
     if (this.eEzsigntemplateformfieldgroupTextvalidation != null) {
       json[r'eEzsigntemplateformfieldgroupTextvalidation'] = this.eEzsigntemplateformfieldgroupTextvalidation;
@@ -263,6 +280,7 @@ class EzsigntemplateformfieldgroupResponse {
         iEzsigntemplateformfieldgroupMaxlength: mapValueOfType<int>(json, r'iEzsigntemplateformfieldgroupMaxlength'),
         bEzsigntemplateformfieldgroupEncrypted: mapValueOfType<bool>(json, r'bEzsigntemplateformfieldgroupEncrypted'),
         sEzsigntemplateformfieldgroupRegexp: mapValueOfType<String>(json, r'sEzsigntemplateformfieldgroupRegexp'),
+        sEzsigntemplateformfieldgroupTextvalidationcustommessage: mapValueOfType<String>(json, r'sEzsigntemplateformfieldgroupTextvalidationcustommessage'),
         eEzsigntemplateformfieldgroupTextvalidation: EnumTextvalidation.fromJson(json[r'eEzsigntemplateformfieldgroupTextvalidation']),
         tEzsigntemplateformfieldgroupTooltip: mapValueOfType<String>(json, r'tEzsigntemplateformfieldgroupTooltip'),
         eEzsigntemplateformfieldgroupTooltipposition: FieldEEzsigntemplateformfieldgroupTooltipposition.fromJson(json[r'eEzsigntemplateformfieldgroupTooltipposition']),

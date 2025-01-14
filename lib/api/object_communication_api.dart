@@ -16,6 +16,55 @@ class ObjectCommunicationApi {
 
   final ApiClient apiClient;
 
+  /// Retrieve the communication body.
+  ///
+  /// This endpoint returns the communication body.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiCommunicationID (required):
+  Future<Response> communicationGetCommunicationBodyV1WithHttpInfo(int pkiCommunicationID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/communication/{pkiCommunicationID}/getCommunicationBody'
+      .replaceAll('{pkiCommunicationID}', pkiCommunicationID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve the communication body.
+  ///
+  /// This endpoint returns the communication body.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiCommunicationID (required):
+  Future<void> communicationGetCommunicationBodyV1(int pkiCommunicationID,) async {
+    final response = await communicationGetCommunicationBodyV1WithHttpInfo(pkiCommunicationID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+  }
+
   /// Send a new Communication
   ///
   /// The endpoint allows to send one or many elements at once.

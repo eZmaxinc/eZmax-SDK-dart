@@ -33,6 +33,12 @@ void main() {
       // TODO
     });
 
+    // The unique ID of the Timezone
+    // int fkiTimezoneID
+    test('to test the property `fkiTimezoneID`', () async {
+      // TODO
+    });
+
     // FieldEEzsignfolderCompletion eEzsignfolderCompletion
     test('to test the property `eEzsignfolderCompletion`', () async {
       // TODO
@@ -87,6 +93,18 @@ void main() {
 
     // FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency
     test('to test the property `eEzsignfolderSendreminderfrequency`', () async {
+      // TODO
+    });
+
+    // The number of days before the the first reminder sending
+    // int iEzsignfolderSendreminderfirstdays
+    test('to test the property `iEzsignfolderSendreminderfirstdays`', () async {
+      // TODO
+    });
+
+    // The number of days after the first reminder sending
+    // int iEzsignfolderSendreminderotherdays
+    test('to test the property `iEzsignfolderSendreminderotherdays`', () async {
       // TODO
     });
 

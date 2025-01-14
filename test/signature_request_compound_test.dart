@@ -22,9 +22,26 @@ void main() {
       // TODO
     });
 
+    // The unique ID of the Font
+    // int fkiFontID
+    test('to test the property `fkiFontID`', () async {
+      // TODO
+    });
+
+    // FieldESignaturePreference eSignaturePreference
+    test('to test the property `eSignaturePreference`', () async {
+      // TODO
+    });
+
     // The svg of the Signature
     // String tSignatureSvg
     test('to test the property `tSignatureSvg`', () async {
+      // TODO
+    });
+
+    // The svg of the Initials
+    // String tSignatureSvginitials
+    test('to test the property `tSignatureSvginitials`', () async {
       // TODO
     });
 

@@ -15,6 +15,7 @@ class EzsignsignatureSignV1Response {
   EzsignsignatureSignV1Response({
     required this.objDebugPayload,
     this.objDebug,
+    required this.mPayload,
   });
 
   CommonResponseObjDebugPayload objDebugPayload;
@@ -27,19 +28,23 @@ class EzsignsignatureSignV1Response {
   ///
   CommonResponseObjDebug? objDebug;
 
+  EzsignsignatureSignV1ResponseMPayload mPayload;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignsignatureSignV1Response &&
     other.objDebugPayload == objDebugPayload &&
-    other.objDebug == objDebug;
+    other.objDebug == objDebug &&
+    other.mPayload == mPayload;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (objDebugPayload.hashCode) +
-    (objDebug == null ? 0 : objDebug!.hashCode);
+    (objDebug == null ? 0 : objDebug!.hashCode) +
+    (mPayload.hashCode);
 
   @override
-  String toString() => 'EzsignsignatureSignV1Response[objDebugPayload=$objDebugPayload, objDebug=$objDebug]';
+  String toString() => 'EzsignsignatureSignV1Response[objDebugPayload=$objDebugPayload, objDebug=$objDebug, mPayload=$mPayload]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -49,6 +54,7 @@ class EzsignsignatureSignV1Response {
     } else {
       json[r'objDebug'] = null;
     }
+      json[r'mPayload'] = this.mPayload;
     return json;
   }
 
@@ -73,6 +79,7 @@ class EzsignsignatureSignV1Response {
       return EzsignsignatureSignV1Response(
         objDebugPayload: CommonResponseObjDebugPayload.fromJson(json[r'objDebugPayload'])!,
         objDebug: CommonResponseObjDebug.fromJson(json[r'objDebug']),
+        mPayload: EzsignsignatureSignV1ResponseMPayload.fromJson(json[r'mPayload'])!,
       );
     }
     return null;
@@ -121,6 +128,7 @@ class EzsignsignatureSignV1Response {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'objDebugPayload',
+    'mPayload',
   };
 }
 

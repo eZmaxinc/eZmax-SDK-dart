@@ -40,6 +40,18 @@ void main() {
       // TODO
     });
 
+    // Whether the Ezsigntemplatesignature must be handwritten or not when eEzsigntemplatesignatureType = Signature.
+    // bool bEzsigntemplatesignatureHandwritten
+    test('to test the property `bEzsigntemplatesignatureHandwritten`', () async {
+      // TODO
+    });
+
+    // Whether the Ezsigntemplatesignature must include a reason or not when eEzsigntemplatesignatureType = Signature.
+    // bool bEzsigntemplatesignatureReason
+    test('to test the property `bEzsigntemplatesignatureReason`', () async {
+      // TODO
+    });
+
     // FieldEEzsigntemplatesignaturePositioning eEzsigntemplatesignaturePositioning
     test('to test the property `eEzsigntemplatesignaturePositioning`', () async {
       // TODO
@@ -83,6 +95,11 @@ void main() {
 
     // FieldEEzsigntemplatesignatureType eEzsigntemplatesignatureType
     test('to test the property `eEzsigntemplatesignatureType`', () async {
+      // TODO
+    });
+
+    // FieldEEzsigntemplatesignatureConsultationtrigger eEzsigntemplatesignatureConsultationtrigger
+    test('to test the property `eEzsigntemplatesignatureConsultationtrigger`', () async {
       // TODO
     });
 
@@ -131,6 +148,12 @@ void main() {
       // TODO
     });
 
+    // The default value for the Ezsigntemplatesignature  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sCompany} | Company name | eZmax Solutions Inc. | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |
+    // String sEzsigntemplatesignatureDefaultvalue
+    test('to test the property `sEzsigntemplatesignatureDefaultvalue`', () async {
+      // TODO
+    });
+
     // A regular expression to indicate what values are acceptable for the Ezsigntemplatesignature.  This can only be set if eEzsigntemplatesignatureType is **Text** or **Textarea**
     // String sEzsigntemplatesignatureRegexp
     test('to test the property `sEzsigntemplatesignatureRegexp`', () async {
@@ -139,6 +162,12 @@ void main() {
 
     // EnumTextvalidation eEzsigntemplatesignatureTextvalidation
     test('to test the property `eEzsigntemplatesignatureTextvalidation`', () async {
+      // TODO
+    });
+
+    // Description of validation rule. Show by signatory.
+    // String sEzsigntemplatesignatureTextvalidationcustommessage
+    test('to test the property `sEzsigntemplatesignatureTextvalidationcustommessage`', () async {
       // TODO
     });
 

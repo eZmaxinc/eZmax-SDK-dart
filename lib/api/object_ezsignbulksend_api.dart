@@ -24,14 +24,14 @@ class ObjectEzsignbulksendApi {
   ///
   /// * [int] pkiEzsignbulksendID (required):
   ///
-  /// * [EzsignbulksendCreateEzsignbulksendtransmissionV1Request] ezsignbulksendCreateEzsignbulksendtransmissionV1Request (required):
-  Future<Response> ezsignbulksendCreateEzsignbulksendtransmissionV1WithHttpInfo(int pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV1Request ezsignbulksendCreateEzsignbulksendtransmissionV1Request,) async {
+  /// * [EzsignbulksendCreateEzsignbulksendtransmissionV2Request] ezsignbulksendCreateEzsignbulksendtransmissionV2Request (required):
+  Future<Response> ezsignbulksendCreateEzsignbulksendtransmissionV2WithHttpInfo(int pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV2Request ezsignbulksendCreateEzsignbulksendtransmissionV2Request,) async {
     // ignore: prefer_const_declarations
-    final path = r'/1/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission'
+    final path = r'/2/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission'
       .replaceAll('{pkiEzsignbulksendID}', pkiEzsignbulksendID.toString());
 
     // ignore: prefer_final_locals
-    Object? postBody = ezsignbulksendCreateEzsignbulksendtransmissionV1Request;
+    Object? postBody = ezsignbulksendCreateEzsignbulksendtransmissionV2Request;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
@@ -57,9 +57,9 @@ class ObjectEzsignbulksendApi {
   ///
   /// * [int] pkiEzsignbulksendID (required):
   ///
-  /// * [EzsignbulksendCreateEzsignbulksendtransmissionV1Request] ezsignbulksendCreateEzsignbulksendtransmissionV1Request (required):
-  Future<EzsignbulksendCreateEzsignbulksendtransmissionV1Response?> ezsignbulksendCreateEzsignbulksendtransmissionV1(int pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV1Request ezsignbulksendCreateEzsignbulksendtransmissionV1Request,) async {
-    final response = await ezsignbulksendCreateEzsignbulksendtransmissionV1WithHttpInfo(pkiEzsignbulksendID, ezsignbulksendCreateEzsignbulksendtransmissionV1Request,);
+  /// * [EzsignbulksendCreateEzsignbulksendtransmissionV2Request] ezsignbulksendCreateEzsignbulksendtransmissionV2Request (required):
+  Future<EzsignbulksendCreateEzsignbulksendtransmissionV2Response?> ezsignbulksendCreateEzsignbulksendtransmissionV2(int pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV2Request ezsignbulksendCreateEzsignbulksendtransmissionV2Request,) async {
+    final response = await ezsignbulksendCreateEzsignbulksendtransmissionV2WithHttpInfo(pkiEzsignbulksendID, ezsignbulksendCreateEzsignbulksendtransmissionV2Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -67,7 +67,7 @@ class ObjectEzsignbulksendApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignbulksendCreateEzsignbulksendtransmissionV1Response',) as EzsignbulksendCreateEzsignbulksendtransmissionV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignbulksendCreateEzsignbulksendtransmissionV2Response',) as EzsignbulksendCreateEzsignbulksendtransmissionV2Response;
     
     }
     return null;

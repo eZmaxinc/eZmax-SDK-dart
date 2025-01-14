@@ -17,6 +17,7 @@ class CustomEzsignsignaturestatusResponse {
     required this.iEzsignsignaturestatusStep,
     required this.iEzsignsignaturestatusTotal,
     required this.iEzsignsignaturestatusSigned,
+    required this.iEzsignsignaturestatusConditional,
   });
 
   /// Type of step
@@ -31,12 +32,16 @@ class CustomEzsignsignaturestatusResponse {
   /// The number of signature or form fields the Ezsignsigner has already processed at the current step
   int iEzsignsignaturestatusSigned;
 
+  /// The number of signature or form fields the Ezsignsigner need to sign or fill under current conditions.
+  int iEzsignsignaturestatusConditional;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomEzsignsignaturestatusResponse &&
     other.eEzsignsignaturestatusSteptype == eEzsignsignaturestatusSteptype &&
     other.iEzsignsignaturestatusStep == iEzsignsignaturestatusStep &&
     other.iEzsignsignaturestatusTotal == iEzsignsignaturestatusTotal &&
-    other.iEzsignsignaturestatusSigned == iEzsignsignaturestatusSigned;
+    other.iEzsignsignaturestatusSigned == iEzsignsignaturestatusSigned &&
+    other.iEzsignsignaturestatusConditional == iEzsignsignaturestatusConditional;
 
   @override
   int get hashCode =>
@@ -44,10 +49,11 @@ class CustomEzsignsignaturestatusResponse {
     (eEzsignsignaturestatusSteptype.hashCode) +
     (iEzsignsignaturestatusStep.hashCode) +
     (iEzsignsignaturestatusTotal.hashCode) +
-    (iEzsignsignaturestatusSigned.hashCode);
+    (iEzsignsignaturestatusSigned.hashCode) +
+    (iEzsignsignaturestatusConditional.hashCode);
 
   @override
-  String toString() => 'CustomEzsignsignaturestatusResponse[eEzsignsignaturestatusSteptype=$eEzsignsignaturestatusSteptype, iEzsignsignaturestatusStep=$iEzsignsignaturestatusStep, iEzsignsignaturestatusTotal=$iEzsignsignaturestatusTotal, iEzsignsignaturestatusSigned=$iEzsignsignaturestatusSigned]';
+  String toString() => 'CustomEzsignsignaturestatusResponse[eEzsignsignaturestatusSteptype=$eEzsignsignaturestatusSteptype, iEzsignsignaturestatusStep=$iEzsignsignaturestatusStep, iEzsignsignaturestatusTotal=$iEzsignsignaturestatusTotal, iEzsignsignaturestatusSigned=$iEzsignsignaturestatusSigned, iEzsignsignaturestatusConditional=$iEzsignsignaturestatusConditional]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -55,6 +61,7 @@ class CustomEzsignsignaturestatusResponse {
       json[r'iEzsignsignaturestatusStep'] = this.iEzsignsignaturestatusStep;
       json[r'iEzsignsignaturestatusTotal'] = this.iEzsignsignaturestatusTotal;
       json[r'iEzsignsignaturestatusSigned'] = this.iEzsignsignaturestatusSigned;
+      json[r'iEzsignsignaturestatusConditional'] = this.iEzsignsignaturestatusConditional;
     return json;
   }
 
@@ -81,6 +88,7 @@ class CustomEzsignsignaturestatusResponse {
         iEzsignsignaturestatusStep: mapValueOfType<int>(json, r'iEzsignsignaturestatusStep')!,
         iEzsignsignaturestatusTotal: mapValueOfType<int>(json, r'iEzsignsignaturestatusTotal')!,
         iEzsignsignaturestatusSigned: mapValueOfType<int>(json, r'iEzsignsignaturestatusSigned')!,
+        iEzsignsignaturestatusConditional: mapValueOfType<int>(json, r'iEzsignsignaturestatusConditional')!,
       );
     }
     return null;
@@ -132,6 +140,7 @@ class CustomEzsignsignaturestatusResponse {
     'iEzsignsignaturestatusStep',
     'iEzsignsignaturestatusTotal',
     'iEzsignsignaturestatusSigned',
+    'iEzsignsignaturestatusConditional',
   };
 }
 

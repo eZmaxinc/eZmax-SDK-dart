@@ -16,6 +16,7 @@ class EzsignfolderGetObjectV1ResponseMPayload {
     required this.pkiEzsignfolderID,
     this.fkiEzsignfoldertypeID,
     this.objEzsignfoldertype,
+    this.fkiTimezoneID,
     required this.eEzsignfolderCompletion,
     this.sEzsignfoldertypeNameX,
     this.fkiBillingentityinternalID,
@@ -26,6 +27,8 @@ class EzsignfolderGetObjectV1ResponseMPayload {
     this.tEzsignfolderNote,
     this.bEzsignfolderIsdisposable,
     this.eEzsignfolderSendreminderfrequency,
+    this.iEzsignfolderSendreminderfirstdays,
+    this.iEzsignfolderSendreminderotherdays,
     this.dtEzsignfolderDelayedsenddate,
     this.dtEzsignfolderDuedate,
     this.dtEzsignfolderSentdate,
@@ -36,6 +39,7 @@ class EzsignfolderGetObjectV1ResponseMPayload {
     this.tEzsignfolderMessage,
     this.objAudit,
     this.sEzsignfolderExternalid,
+    this.objTimezone,
   });
 
   /// The unique ID of the Ezsignfolder
@@ -62,6 +66,17 @@ class EzsignfolderGetObjectV1ResponseMPayload {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   CustomEzsignfoldertypeResponse? objEzsignfoldertype;
+
+  /// The unique ID of the Timezone
+  ///
+  /// Minimum value: 0
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiTimezoneID;
 
   FieldEEzsignfolderCompletion eEzsignfolderCompletion;
 
@@ -142,6 +157,30 @@ class EzsignfolderGetObjectV1ResponseMPayload {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   FieldEEzsignfolderSendreminderfrequency? eEzsignfolderSendreminderfrequency;
+
+  /// The number of days before the the first reminder sending
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 255
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? iEzsignfolderSendreminderfirstdays;
+
+  /// The number of days after the first reminder sending
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 255
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? iEzsignfolderSendreminderotherdays;
 
   /// The date and time at which the Ezsignfolder will be sent in the future.
   ///
@@ -231,11 +270,20 @@ class EzsignfolderGetObjectV1ResponseMPayload {
   ///
   String? sEzsignfolderExternalid;
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  CustomTimezoneWithCodeResponse? objTimezone;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfolderGetObjectV1ResponseMPayload &&
     other.pkiEzsignfolderID == pkiEzsignfolderID &&
     other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
     other.objEzsignfoldertype == objEzsignfoldertype &&
+    other.fkiTimezoneID == fkiTimezoneID &&
     other.eEzsignfolderCompletion == eEzsignfolderCompletion &&
     other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
     other.fkiBillingentityinternalID == fkiBillingentityinternalID &&
@@ -246,6 +294,8 @@ class EzsignfolderGetObjectV1ResponseMPayload {
     other.tEzsignfolderNote == tEzsignfolderNote &&
     other.bEzsignfolderIsdisposable == bEzsignfolderIsdisposable &&
     other.eEzsignfolderSendreminderfrequency == eEzsignfolderSendreminderfrequency &&
+    other.iEzsignfolderSendreminderfirstdays == iEzsignfolderSendreminderfirstdays &&
+    other.iEzsignfolderSendreminderotherdays == iEzsignfolderSendreminderotherdays &&
     other.dtEzsignfolderDelayedsenddate == dtEzsignfolderDelayedsenddate &&
     other.dtEzsignfolderDuedate == dtEzsignfolderDuedate &&
     other.dtEzsignfolderSentdate == dtEzsignfolderSentdate &&
@@ -255,7 +305,8 @@ class EzsignfolderGetObjectV1ResponseMPayload {
     other.dtEzsignfolderClose == dtEzsignfolderClose &&
     other.tEzsignfolderMessage == tEzsignfolderMessage &&
     other.objAudit == objAudit &&
-    other.sEzsignfolderExternalid == sEzsignfolderExternalid;
+    other.sEzsignfolderExternalid == sEzsignfolderExternalid &&
+    other.objTimezone == objTimezone;
 
   @override
   int get hashCode =>
@@ -263,6 +314,7 @@ class EzsignfolderGetObjectV1ResponseMPayload {
     (pkiEzsignfolderID.hashCode) +
     (fkiEzsignfoldertypeID == null ? 0 : fkiEzsignfoldertypeID!.hashCode) +
     (objEzsignfoldertype == null ? 0 : objEzsignfoldertype!.hashCode) +
+    (fkiTimezoneID == null ? 0 : fkiTimezoneID!.hashCode) +
     (eEzsignfolderCompletion.hashCode) +
     (sEzsignfoldertypeNameX == null ? 0 : sEzsignfoldertypeNameX!.hashCode) +
     (fkiBillingentityinternalID == null ? 0 : fkiBillingentityinternalID!.hashCode) +
@@ -273,6 +325,8 @@ class EzsignfolderGetObjectV1ResponseMPayload {
     (tEzsignfolderNote == null ? 0 : tEzsignfolderNote!.hashCode) +
     (bEzsignfolderIsdisposable == null ? 0 : bEzsignfolderIsdisposable!.hashCode) +
     (eEzsignfolderSendreminderfrequency == null ? 0 : eEzsignfolderSendreminderfrequency!.hashCode) +
+    (iEzsignfolderSendreminderfirstdays == null ? 0 : iEzsignfolderSendreminderfirstdays!.hashCode) +
+    (iEzsignfolderSendreminderotherdays == null ? 0 : iEzsignfolderSendreminderotherdays!.hashCode) +
     (dtEzsignfolderDelayedsenddate == null ? 0 : dtEzsignfolderDelayedsenddate!.hashCode) +
     (dtEzsignfolderDuedate == null ? 0 : dtEzsignfolderDuedate!.hashCode) +
     (dtEzsignfolderSentdate == null ? 0 : dtEzsignfolderSentdate!.hashCode) +
@@ -282,10 +336,11 @@ class EzsignfolderGetObjectV1ResponseMPayload {
     (dtEzsignfolderClose == null ? 0 : dtEzsignfolderClose!.hashCode) +
     (tEzsignfolderMessage == null ? 0 : tEzsignfolderMessage!.hashCode) +
     (objAudit == null ? 0 : objAudit!.hashCode) +
-    (sEzsignfolderExternalid == null ? 0 : sEzsignfolderExternalid!.hashCode);
+    (sEzsignfolderExternalid == null ? 0 : sEzsignfolderExternalid!.hashCode) +
+    (objTimezone == null ? 0 : objTimezone!.hashCode);
 
   @override
-  String toString() => 'EzsignfolderGetObjectV1ResponseMPayload[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, objEzsignfoldertype=$objEzsignfoldertype, eEzsignfolderCompletion=$eEzsignfolderCompletion, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, fkiBillingentityinternalID=$fkiBillingentityinternalID, sBillingentityinternalDescriptionX=$sBillingentityinternalDescriptionX, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sEzsigntsarequirementDescriptionX=$sEzsigntsarequirementDescriptionX, sEzsignfolderDescription=$sEzsignfolderDescription, tEzsignfolderNote=$tEzsignfolderNote, bEzsignfolderIsdisposable=$bEzsignfolderIsdisposable, eEzsignfolderSendreminderfrequency=$eEzsignfolderSendreminderfrequency, dtEzsignfolderDelayedsenddate=$dtEzsignfolderDelayedsenddate, dtEzsignfolderDuedate=$dtEzsignfolderDuedate, dtEzsignfolderSentdate=$dtEzsignfolderSentdate, dtEzsignfolderScheduledarchive=$dtEzsignfolderScheduledarchive, dtEzsignfolderScheduleddispose=$dtEzsignfolderScheduleddispose, eEzsignfolderStep=$eEzsignfolderStep, dtEzsignfolderClose=$dtEzsignfolderClose, tEzsignfolderMessage=$tEzsignfolderMessage, objAudit=$objAudit, sEzsignfolderExternalid=$sEzsignfolderExternalid]';
+  String toString() => 'EzsignfolderGetObjectV1ResponseMPayload[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, objEzsignfoldertype=$objEzsignfoldertype, fkiTimezoneID=$fkiTimezoneID, eEzsignfolderCompletion=$eEzsignfolderCompletion, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, fkiBillingentityinternalID=$fkiBillingentityinternalID, sBillingentityinternalDescriptionX=$sBillingentityinternalDescriptionX, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sEzsigntsarequirementDescriptionX=$sEzsigntsarequirementDescriptionX, sEzsignfolderDescription=$sEzsignfolderDescription, tEzsignfolderNote=$tEzsignfolderNote, bEzsignfolderIsdisposable=$bEzsignfolderIsdisposable, eEzsignfolderSendreminderfrequency=$eEzsignfolderSendreminderfrequency, iEzsignfolderSendreminderfirstdays=$iEzsignfolderSendreminderfirstdays, iEzsignfolderSendreminderotherdays=$iEzsignfolderSendreminderotherdays, dtEzsignfolderDelayedsenddate=$dtEzsignfolderDelayedsenddate, dtEzsignfolderDuedate=$dtEzsignfolderDuedate, dtEzsignfolderSentdate=$dtEzsignfolderSentdate, dtEzsignfolderScheduledarchive=$dtEzsignfolderScheduledarchive, dtEzsignfolderScheduleddispose=$dtEzsignfolderScheduleddispose, eEzsignfolderStep=$eEzsignfolderStep, dtEzsignfolderClose=$dtEzsignfolderClose, tEzsignfolderMessage=$tEzsignfolderMessage, objAudit=$objAudit, sEzsignfolderExternalid=$sEzsignfolderExternalid, objTimezone=$objTimezone]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -299,6 +354,11 @@ class EzsignfolderGetObjectV1ResponseMPayload {
       json[r'objEzsignfoldertype'] = this.objEzsignfoldertype;
     } else {
       json[r'objEzsignfoldertype'] = null;
+    }
+    if (this.fkiTimezoneID != null) {
+      json[r'fkiTimezoneID'] = this.fkiTimezoneID;
+    } else {
+      json[r'fkiTimezoneID'] = null;
     }
       json[r'eEzsignfolderCompletion'] = this.eEzsignfolderCompletion;
     if (this.sEzsignfoldertypeNameX != null) {
@@ -341,6 +401,16 @@ class EzsignfolderGetObjectV1ResponseMPayload {
       json[r'eEzsignfolderSendreminderfrequency'] = this.eEzsignfolderSendreminderfrequency;
     } else {
       json[r'eEzsignfolderSendreminderfrequency'] = null;
+    }
+    if (this.iEzsignfolderSendreminderfirstdays != null) {
+      json[r'iEzsignfolderSendreminderfirstdays'] = this.iEzsignfolderSendreminderfirstdays;
+    } else {
+      json[r'iEzsignfolderSendreminderfirstdays'] = null;
+    }
+    if (this.iEzsignfolderSendreminderotherdays != null) {
+      json[r'iEzsignfolderSendreminderotherdays'] = this.iEzsignfolderSendreminderotherdays;
+    } else {
+      json[r'iEzsignfolderSendreminderotherdays'] = null;
     }
     if (this.dtEzsignfolderDelayedsenddate != null) {
       json[r'dtEzsignfolderDelayedsenddate'] = this.dtEzsignfolderDelayedsenddate;
@@ -392,6 +462,11 @@ class EzsignfolderGetObjectV1ResponseMPayload {
     } else {
       json[r'sEzsignfolderExternalid'] = null;
     }
+    if (this.objTimezone != null) {
+      json[r'objTimezone'] = this.objTimezone;
+    } else {
+      json[r'objTimezone'] = null;
+    }
     return json;
   }
 
@@ -417,6 +492,7 @@ class EzsignfolderGetObjectV1ResponseMPayload {
         pkiEzsignfolderID: mapValueOfType<int>(json, r'pkiEzsignfolderID')!,
         fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID'),
         objEzsignfoldertype: CustomEzsignfoldertypeResponse.fromJson(json[r'objEzsignfoldertype']),
+        fkiTimezoneID: mapValueOfType<int>(json, r'fkiTimezoneID'),
         eEzsignfolderCompletion: FieldEEzsignfolderCompletion.fromJson(json[r'eEzsignfolderCompletion'])!,
         sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX'),
         fkiBillingentityinternalID: mapValueOfType<int>(json, r'fkiBillingentityinternalID'),
@@ -427,6 +503,8 @@ class EzsignfolderGetObjectV1ResponseMPayload {
         tEzsignfolderNote: mapValueOfType<String>(json, r'tEzsignfolderNote'),
         bEzsignfolderIsdisposable: mapValueOfType<bool>(json, r'bEzsignfolderIsdisposable'),
         eEzsignfolderSendreminderfrequency: FieldEEzsignfolderSendreminderfrequency.fromJson(json[r'eEzsignfolderSendreminderfrequency']),
+        iEzsignfolderSendreminderfirstdays: mapValueOfType<int>(json, r'iEzsignfolderSendreminderfirstdays'),
+        iEzsignfolderSendreminderotherdays: mapValueOfType<int>(json, r'iEzsignfolderSendreminderotherdays'),
         dtEzsignfolderDelayedsenddate: mapValueOfType<String>(json, r'dtEzsignfolderDelayedsenddate'),
         dtEzsignfolderDuedate: mapValueOfType<String>(json, r'dtEzsignfolderDuedate'),
         dtEzsignfolderSentdate: mapValueOfType<String>(json, r'dtEzsignfolderSentdate'),
@@ -437,6 +515,7 @@ class EzsignfolderGetObjectV1ResponseMPayload {
         tEzsignfolderMessage: mapValueOfType<String>(json, r'tEzsignfolderMessage'),
         objAudit: CommonAudit.fromJson(json[r'objAudit']),
         sEzsignfolderExternalid: mapValueOfType<String>(json, r'sEzsignfolderExternalid'),
+        objTimezone: CustomTimezoneWithCodeResponse.fromJson(json[r'objTimezone']),
       );
     }
     return null;

@@ -25,6 +25,8 @@ class EzsignformfieldRequestCompound {
     this.bEzsignformfieldSelected,
     this.sEzsignformfieldEnteredvalue,
     this.eEzsignformfieldDependencyrequirement,
+    this.eEzsignformfieldHorizontalalignment,
+    this.objTextstylestatic,
     this.aObjEzsignelementdependency = const [],
   });
 
@@ -66,12 +68,12 @@ class EzsignformfieldRequestCompound {
   /// Minimum value: 0
   int iEzsignformfieldY;
 
-  /// The Width of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22-65535     | | Radio                     | 22           | | Text                      | 22-65535     | | Textarea                  | 22-65535     |
+  /// The Width of the Ezsignformfield in pixels calculated at 100 DPI
   ///
   /// Minimum value: 0
   int iEzsignformfieldWidth;
 
-  /// The Height of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     | 
+  /// The Height of the Ezsignformfield in pixels calculated at 100 DPI 
   ///
   /// Minimum value: 0
   int iEzsignformfieldHeight;
@@ -111,6 +113,22 @@ class EzsignformfieldRequestCompound {
   ///
   FieldEEzsignformfieldDependencyrequirement? eEzsignformfieldDependencyrequirement;
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  EnumHorizontalalignment? eEzsignformfieldHorizontalalignment;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  TextstylestaticRequestCompound? objTextstylestatic;
+
   List<EzsignelementdependencyRequestCompound> aObjEzsignelementdependency;
 
   @override
@@ -127,6 +145,8 @@ class EzsignformfieldRequestCompound {
     other.bEzsignformfieldSelected == bEzsignformfieldSelected &&
     other.sEzsignformfieldEnteredvalue == sEzsignformfieldEnteredvalue &&
     other.eEzsignformfieldDependencyrequirement == eEzsignformfieldDependencyrequirement &&
+    other.eEzsignformfieldHorizontalalignment == eEzsignformfieldHorizontalalignment &&
+    other.objTextstylestatic == objTextstylestatic &&
     _deepEquality.equals(other.aObjEzsignelementdependency, aObjEzsignelementdependency);
 
   @override
@@ -144,10 +164,12 @@ class EzsignformfieldRequestCompound {
     (bEzsignformfieldSelected == null ? 0 : bEzsignformfieldSelected!.hashCode) +
     (sEzsignformfieldEnteredvalue == null ? 0 : sEzsignformfieldEnteredvalue!.hashCode) +
     (eEzsignformfieldDependencyrequirement == null ? 0 : eEzsignformfieldDependencyrequirement!.hashCode) +
+    (eEzsignformfieldHorizontalalignment == null ? 0 : eEzsignformfieldHorizontalalignment!.hashCode) +
+    (objTextstylestatic == null ? 0 : objTextstylestatic!.hashCode) +
     (aObjEzsignelementdependency.hashCode);
 
   @override
-  String toString() => 'EzsignformfieldRequestCompound[pkiEzsignformfieldID=$pkiEzsignformfieldID, iEzsignpagePagenumber=$iEzsignpagePagenumber, sEzsignformfieldLabel=$sEzsignformfieldLabel, sEzsignformfieldValue=$sEzsignformfieldValue, iEzsignformfieldX=$iEzsignformfieldX, iEzsignformfieldY=$iEzsignformfieldY, iEzsignformfieldWidth=$iEzsignformfieldWidth, iEzsignformfieldHeight=$iEzsignformfieldHeight, bEzsignformfieldAutocomplete=$bEzsignformfieldAutocomplete, bEzsignformfieldSelected=$bEzsignformfieldSelected, sEzsignformfieldEnteredvalue=$sEzsignformfieldEnteredvalue, eEzsignformfieldDependencyrequirement=$eEzsignformfieldDependencyrequirement, aObjEzsignelementdependency=$aObjEzsignelementdependency]';
+  String toString() => 'EzsignformfieldRequestCompound[pkiEzsignformfieldID=$pkiEzsignformfieldID, iEzsignpagePagenumber=$iEzsignpagePagenumber, sEzsignformfieldLabel=$sEzsignformfieldLabel, sEzsignformfieldValue=$sEzsignformfieldValue, iEzsignformfieldX=$iEzsignformfieldX, iEzsignformfieldY=$iEzsignformfieldY, iEzsignformfieldWidth=$iEzsignformfieldWidth, iEzsignformfieldHeight=$iEzsignformfieldHeight, bEzsignformfieldAutocomplete=$bEzsignformfieldAutocomplete, bEzsignformfieldSelected=$bEzsignformfieldSelected, sEzsignformfieldEnteredvalue=$sEzsignformfieldEnteredvalue, eEzsignformfieldDependencyrequirement=$eEzsignformfieldDependencyrequirement, eEzsignformfieldHorizontalalignment=$eEzsignformfieldHorizontalalignment, objTextstylestatic=$objTextstylestatic, aObjEzsignelementdependency=$aObjEzsignelementdependency]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -187,6 +209,16 @@ class EzsignformfieldRequestCompound {
     } else {
       json[r'eEzsignformfieldDependencyrequirement'] = null;
     }
+    if (this.eEzsignformfieldHorizontalalignment != null) {
+      json[r'eEzsignformfieldHorizontalalignment'] = this.eEzsignformfieldHorizontalalignment;
+    } else {
+      json[r'eEzsignformfieldHorizontalalignment'] = null;
+    }
+    if (this.objTextstylestatic != null) {
+      json[r'objTextstylestatic'] = this.objTextstylestatic;
+    } else {
+      json[r'objTextstylestatic'] = null;
+    }
       json[r'a_objEzsignelementdependency'] = this.aObjEzsignelementdependency;
     return json;
   }
@@ -222,6 +254,8 @@ class EzsignformfieldRequestCompound {
         bEzsignformfieldSelected: mapValueOfType<bool>(json, r'bEzsignformfieldSelected'),
         sEzsignformfieldEnteredvalue: mapValueOfType<String>(json, r'sEzsignformfieldEnteredvalue'),
         eEzsignformfieldDependencyrequirement: FieldEEzsignformfieldDependencyrequirement.fromJson(json[r'eEzsignformfieldDependencyrequirement']),
+        eEzsignformfieldHorizontalalignment: EnumHorizontalalignment.fromJson(json[r'eEzsignformfieldHorizontalalignment']),
+        objTextstylestatic: TextstylestaticRequestCompound.fromJson(json[r'objTextstylestatic']),
         aObjEzsignelementdependency: EzsignelementdependencyRequestCompound.listFromJson(json[r'a_objEzsignelementdependency']),
       );
     }

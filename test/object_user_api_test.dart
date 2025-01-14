@@ -35,6 +35,15 @@ void main() {
       // TODO
     });
 
+    // Edit multiple Colleagues
+    //
+    // Using this endpoint, you can edit multiple Colleagues at the same time.
+    //
+    //Future<UserEditColleaguesV2Response> userEditColleaguesV2(int pkiUserID, UserEditColleaguesV2Request userEditColleaguesV2Request) async
+    test('test userEditColleaguesV2', () async {
+      // TODO
+    });
+
     // Edit an existing User
     //
     // 
@@ -66,6 +75,13 @@ void main() {
     //
     //Future<UserGetAutocompleteV2Response> userGetAutocompleteV2(String sSelector, { String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage }) async
     test('test userGetAutocompleteV2', () async {
+      // TODO
+    });
+
+    // Retrieve an existing User's Colleagues
+    //
+    //Future<UserGetColleaguesV2Response> userGetColleaguesV2(int pkiUserID) async
+    test('test userGetColleaguesV2', () async {
       // TODO
     });
 

@@ -50,7 +50,7 @@ void main() {
       // TODO
     });
 
-    // The default value for the Ezsignformfieldgroup  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |
+    // The default value for the Ezsignformfieldgroup  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sCompany} | Company name | eZmax Solutions Inc. | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |
     // String sEzsignformfieldgroupDefaultvalue
     test('to test the property `sEzsignformfieldgroupDefaultvalue`', () async {
       // TODO
@@ -89,6 +89,12 @@ void main() {
     // A regular expression to indicate what values are acceptable for the Ezsignformfieldgroup.  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**
     // String sEzsignformfieldgroupRegexp
     test('to test the property `sEzsignformfieldgroupRegexp`', () async {
+      // TODO
+    });
+
+    // Description of validation rule. Show by signatory.
+    // String sEzsignformfieldgroupTextvalidationcustommessage
+    test('to test the property `sEzsignformfieldgroupTextvalidationcustommessage`', () async {
       // TODO
     });
 

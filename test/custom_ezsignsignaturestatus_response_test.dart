@@ -40,6 +40,12 @@ void main() {
       // TODO
     });
 
+    // The number of signature or form fields the Ezsignsigner need to sign or fill under current conditions.
+    // int iEzsignsignaturestatusConditional
+    test('to test the property `iEzsignsignaturestatusConditional`', () async {
+      // TODO
+    });
+
 
   });
 

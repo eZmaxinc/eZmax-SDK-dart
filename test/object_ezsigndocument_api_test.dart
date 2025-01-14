@@ -71,6 +71,15 @@ void main() {
       // TODO
     });
 
+    // Create a new Ezsigndocument
+    //
+    // The endpoint allows to create one or many elements at once.
+    //
+    //Future<EzsigndocumentCreateObjectV3Response> ezsigndocumentCreateObjectV3(EzsigndocumentCreateObjectV3Request ezsigndocumentCreateObjectV3Request) async
+    test('test ezsigndocumentCreateObjectV3', () async {
+      // TODO
+    });
+
     // Decline to sign
     //
     // Decline to sign
@@ -86,6 +95,15 @@ void main() {
     //
     //Future<EzsigndocumentDeleteObjectV1Response> ezsigndocumentDeleteObjectV1(int pkiEzsigndocumentID) async
     test('test ezsigndocumentDeleteObjectV1', () async {
+      // TODO
+    });
+
+    // Edit multiple Ezsignannotations
+    //
+    // Using this endpoint, you can edit multiple Ezsignannotations at the same time.
+    //
+    //Future<EzsigndocumentEditEzsignannotationsV1Response> ezsigndocumentEditEzsignannotationsV1(int pkiEzsigndocumentID, EzsigndocumentEditEzsignannotationsV1Request ezsigndocumentEditEzsignannotationsV1Request) async
+    test('test ezsigndocumentEditEzsignannotationsV1', () async {
       // TODO
     });
 
@@ -107,12 +125,30 @@ void main() {
       // TODO
     });
 
+    // Edit an existing Ezsigndocument
+    //
+    // 
+    //
+    //Future<EzsigndocumentEditObjectV1Response> ezsigndocumentEditObjectV1(int pkiEzsigndocumentID, EzsigndocumentEditObjectV1Request ezsigndocumentEditObjectV1Request) async
+    test('test ezsigndocumentEditObjectV1', () async {
+      // TODO
+    });
+
     // End prematurely
     //
     // End prematurely an Ezsigndocument when some signatures are still required
     //
     //Future<EzsigndocumentEndPrematurelyV1Response> ezsigndocumentEndPrematurelyV1(int pkiEzsigndocumentID, Object body) async
     test('test ezsigndocumentEndPrematurelyV1', () async {
+      // TODO
+    });
+
+    // Extract text from Ezsigndocument area
+    //
+    // Extract text from Ezsigndocument area
+    //
+    //Future<EzsigndocumentExtractTextV1Response> ezsigndocumentExtractTextV1(int pkiEzsigndocumentID, EzsigndocumentExtractTextV1Request ezsigndocumentExtractTextV1Request) async
+    test('test ezsigndocumentExtractTextV1', () async {
       // TODO
     });
 

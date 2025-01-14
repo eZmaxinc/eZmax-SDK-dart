@@ -16,6 +16,67 @@ class ObjectBillingentityexternalApi {
 
   final ApiClient apiClient;
 
+  /// Generate a federation token
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiBillingentityexternalID (required):
+  ///
+  /// * [BillingentityexternalGenerateFederationTokenV1Request] billingentityexternalGenerateFederationTokenV1Request (required):
+  Future<Response> billingentityexternalGenerateFederationTokenV1WithHttpInfo(int pkiBillingentityexternalID, BillingentityexternalGenerateFederationTokenV1Request billingentityexternalGenerateFederationTokenV1Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/billingentityexternal/{pkiBillingentityexternalID}/generateFederationToken'
+      .replaceAll('{pkiBillingentityexternalID}', pkiBillingentityexternalID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = billingentityexternalGenerateFederationTokenV1Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Generate a federation token
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiBillingentityexternalID (required):
+  ///
+  /// * [BillingentityexternalGenerateFederationTokenV1Request] billingentityexternalGenerateFederationTokenV1Request (required):
+  Future<BillingentityexternalGenerateFederationTokenV1Response?> billingentityexternalGenerateFederationTokenV1(int pkiBillingentityexternalID, BillingentityexternalGenerateFederationTokenV1Request billingentityexternalGenerateFederationTokenV1Request,) async {
+    final response = await billingentityexternalGenerateFederationTokenV1WithHttpInfo(pkiBillingentityexternalID, billingentityexternalGenerateFederationTokenV1Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'BillingentityexternalGenerateFederationTokenV1Response',) as BillingentityexternalGenerateFederationTokenV1Response;
+    
+    }
+    return null;
+  }
+
   /// Retrieve Billingentityexternals and IDs
   ///
   /// Get the list of Billingentityexternal to be used in a dropdown or autocomplete control.

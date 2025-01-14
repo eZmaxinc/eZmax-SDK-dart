@@ -19,8 +19,8 @@ void main() {
   group('tests for ObjectEzsignbulksendApi', () {
     // Create a new Ezsignbulksendtransmission in the Ezsignbulksend
     //
-    //Future<EzsignbulksendCreateEzsignbulksendtransmissionV1Response> ezsignbulksendCreateEzsignbulksendtransmissionV1(int pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV1Request ezsignbulksendCreateEzsignbulksendtransmissionV1Request) async
-    test('test ezsignbulksendCreateEzsignbulksendtransmissionV1', () async {
+    //Future<EzsignbulksendCreateEzsignbulksendtransmissionV2Response> ezsignbulksendCreateEzsignbulksendtransmissionV2(int pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV2Request ezsignbulksendCreateEzsignbulksendtransmissionV2Request) async
+    test('test ezsignbulksendCreateEzsignbulksendtransmissionV2', () async {
       // TODO
     });
 

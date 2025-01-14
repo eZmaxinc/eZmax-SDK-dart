@@ -15,6 +15,7 @@ class CommonResponseErrorSTemporaryFileUrl {
   CommonResponseErrorSTemporaryFileUrl({
     required this.sErrorMessage,
     required this.eErrorCode,
+    this.aSErrorMessagedetail = const [],
     this.sTemporaryFileUrl,
   });
 
@@ -22,6 +23,9 @@ class CommonResponseErrorSTemporaryFileUrl {
   String sErrorMessage;
 
   FieldEErrorCode eErrorCode;
+
+  /// More error message detail
+  List<String> aSErrorMessagedetail;
 
   /// The Temporary File Url of the document that was uploaded. That url can be reused instead of uploading the file again.
   ///
@@ -36,6 +40,7 @@ class CommonResponseErrorSTemporaryFileUrl {
   bool operator ==(Object other) => identical(this, other) || other is CommonResponseErrorSTemporaryFileUrl &&
     other.sErrorMessage == sErrorMessage &&
     other.eErrorCode == eErrorCode &&
+    _deepEquality.equals(other.aSErrorMessagedetail, aSErrorMessagedetail) &&
     other.sTemporaryFileUrl == sTemporaryFileUrl;
 
   @override
@@ -43,15 +48,17 @@ class CommonResponseErrorSTemporaryFileUrl {
     // ignore: unnecessary_parenthesis
     (sErrorMessage.hashCode) +
     (eErrorCode.hashCode) +
+    (aSErrorMessagedetail.hashCode) +
     (sTemporaryFileUrl == null ? 0 : sTemporaryFileUrl!.hashCode);
 
   @override
-  String toString() => 'CommonResponseErrorSTemporaryFileUrl[sErrorMessage=$sErrorMessage, eErrorCode=$eErrorCode, sTemporaryFileUrl=$sTemporaryFileUrl]';
+  String toString() => 'CommonResponseErrorSTemporaryFileUrl[sErrorMessage=$sErrorMessage, eErrorCode=$eErrorCode, aSErrorMessagedetail=$aSErrorMessagedetail, sTemporaryFileUrl=$sTemporaryFileUrl]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'sErrorMessage'] = this.sErrorMessage;
       json[r'eErrorCode'] = this.eErrorCode;
+      json[r'a_sErrorMessagedetail'] = this.aSErrorMessagedetail;
     if (this.sTemporaryFileUrl != null) {
       json[r'sTemporaryFileUrl'] = this.sTemporaryFileUrl;
     } else {
@@ -81,6 +88,9 @@ class CommonResponseErrorSTemporaryFileUrl {
       return CommonResponseErrorSTemporaryFileUrl(
         sErrorMessage: mapValueOfType<String>(json, r'sErrorMessage')!,
         eErrorCode: FieldEErrorCode.fromJson(json[r'eErrorCode'])!,
+        aSErrorMessagedetail: json[r'a_sErrorMessagedetail'] is Iterable
+            ? (json[r'a_sErrorMessagedetail'] as Iterable).cast<String>().toList(growable: false)
+            : const [],
         sTemporaryFileUrl: mapValueOfType<String>(json, r'sTemporaryFileUrl'),
       );
     }

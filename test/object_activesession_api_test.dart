@@ -17,6 +17,15 @@ void main() {
   // final instance = ObjectActivesessionApi();
 
   group('tests for ObjectActivesessionApi', () {
+    // Generate a federation token
+    //
+    // 
+    //
+    //Future<ActivesessionGenerateFederationTokenV1Response> activesessionGenerateFederationTokenV1(ActivesessionGenerateFederationTokenV1Request activesessionGenerateFederationTokenV1Request) async
+    test('test activesessionGenerateFederationTokenV1', () async {
+      // TODO
+    });
+
     // Get Current Activesession
     //
     // Retrieve the details about the current activesession

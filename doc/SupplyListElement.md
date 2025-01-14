@@ -1,0 +1,26 @@
+# openapi.model.SupplyListElement
+
+## Load the model package
+```dart
+import 'package:openapi/api.dart';
+```
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**pkiSupplyID** | **int** | The unique ID of the Supply | 
+**fkiGlaccountID** | **int** | The unique ID of the Glaccount | [optional] 
+**fkiGlaccountcontainerID** | **int** | The unique ID of the Glaccountcontainer | [optional] 
+**fkiVariableexpenseID** | **int** | The unique ID of the Variableexpense | 
+**sSupplyCode** | **String** | The code of the Supply | 
+**sSupplyDescriptionX** | **String** | The description of the Supply in the language of the requester | 
+**dSupplyUnitprice** | **String** | The unit price of the Supply | 
+**bSupplyIsactive** | **bool** | Whether the supply is active or not | 
+**bSupplyVariableprice** | **bool** | Whether if the price is variable | 
+**sGlaccountDescriptionX** | **String** | The Description for the Glaccount in the language of the requester | [optional] 
+**sGlaccountcontainerLongdescriptionX** | **String** | The Description for the Glaccountcontainer in the language of the requester | [optional] 
+**sVariableexpenseDescriptionX** | **String** | The description of the Variableexpense in the language of the requester | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

@@ -14,6 +14,7 @@ class UsergroupRequest {
   /// Returns a new [UsergroupRequest] instance.
   UsergroupRequest({
     this.pkiUsergroupID,
+    this.objEmail,
     required this.objUsergroupName,
   });
 
@@ -29,21 +30,31 @@ class UsergroupRequest {
   ///
   int? pkiUsergroupID;
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  EmailRequest? objEmail;
+
   MultilingualUsergroupName objUsergroupName;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is UsergroupRequest &&
     other.pkiUsergroupID == pkiUsergroupID &&
+    other.objEmail == objEmail &&
     other.objUsergroupName == objUsergroupName;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiUsergroupID == null ? 0 : pkiUsergroupID!.hashCode) +
+    (objEmail == null ? 0 : objEmail!.hashCode) +
     (objUsergroupName.hashCode);
 
   @override
-  String toString() => 'UsergroupRequest[pkiUsergroupID=$pkiUsergroupID, objUsergroupName=$objUsergroupName]';
+  String toString() => 'UsergroupRequest[pkiUsergroupID=$pkiUsergroupID, objEmail=$objEmail, objUsergroupName=$objUsergroupName]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -51,6 +62,11 @@ class UsergroupRequest {
       json[r'pkiUsergroupID'] = this.pkiUsergroupID;
     } else {
       json[r'pkiUsergroupID'] = null;
+    }
+    if (this.objEmail != null) {
+      json[r'objEmail'] = this.objEmail;
+    } else {
+      json[r'objEmail'] = null;
     }
       json[r'objUsergroupName'] = this.objUsergroupName;
     return json;
@@ -76,6 +92,7 @@ class UsergroupRequest {
 
       return UsergroupRequest(
         pkiUsergroupID: mapValueOfType<int>(json, r'pkiUsergroupID'),
+        objEmail: EmailRequest.fromJson(json[r'objEmail']),
         objUsergroupName: MultilingualUsergroupName.fromJson(json[r'objUsergroupName'])!,
       );
     }

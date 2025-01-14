@@ -22,6 +22,11 @@ void main() {
       // TODO
     });
 
+    // FieldEEzsignfolderMessageorder eEzsignfolderMessageorder
+    test('to test the property `eEzsignfolderMessageorder`', () async {
+      // TODO
+    });
+
     // The date and time at which the Ezsignfolder will be sent in the future.
     // String dtEzsignfolderDelayedsenddate
     test('to test the property `dtEzsignfolderDelayedsenddate`', () async {

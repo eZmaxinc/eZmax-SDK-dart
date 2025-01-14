@@ -97,7 +97,19 @@ void main() {
       // TODO
     });
 
-    // Whether the Ezsignsignature is required or not. This field is relevant only with Ezsignsignature with eEzsignsignatureType = Attachments.
+    // Whether the Ezsignsignature must be handwritten or not when eEzsignsignatureType = Signature.
+    // bool bEzsignsignatureHandwritten
+    test('to test the property `bEzsignsignatureHandwritten`', () async {
+      // TODO
+    });
+
+    // Whether the Ezsignsignature must include a reason or not when eEzsignsignatureType = Signature.
+    // bool bEzsignsignatureReason
+    test('to test the property `bEzsignsignatureReason`', () async {
+      // TODO
+    });
+
+    // Whether the Ezsignsignature is required or not. This field is relevant only with Ezsignsignature with eEzsignsignatureType = Attachments, Text or Textarea.
     // bool bEzsignsignatureRequired
     test('to test the property `bEzsignsignatureRequired`', () async {
       // TODO
@@ -114,6 +126,11 @@ void main() {
       // TODO
     });
 
+    // FieldEEzsignsignatureConsultationtrigger eEzsignsignatureConsultationtrigger
+    test('to test the property `eEzsignsignatureConsultationtrigger`', () async {
+      // TODO
+    });
+
     // The step when the Ezsignsigner will be invited to validate the Ezsignsignature of eEzsignsignatureType Attachments
     // int iEzsignsignatureValidationstep
     test('to test the property `iEzsignsignatureValidationstep`', () async {
@@ -126,8 +143,20 @@ void main() {
       // TODO
     });
 
+    // The default value for the Ezsignsignature  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sCompany} | Company name | eZmax Solutions Inc. | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |
+    // String sEzsignsignatureDefaultvalue
+    test('to test the property `sEzsignsignatureDefaultvalue`', () async {
+      // TODO
+    });
+
     // EnumTextvalidation eEzsignsignatureTextvalidation
     test('to test the property `eEzsignsignatureTextvalidation`', () async {
+      // TODO
+    });
+
+    // Description of validation rule. Show by signatory.
+    // String sEzsignsignatureTextvalidationcustommessage
+    test('to test the property `sEzsignsignatureTextvalidationcustommessage`', () async {
       // TODO
     });
 

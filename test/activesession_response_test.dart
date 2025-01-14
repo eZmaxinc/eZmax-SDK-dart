@@ -61,6 +61,50 @@ void main() {
       // TODO
     });
 
+    // Can access attachment when we clone a user
+    // bool bActivesessionAttachment
+    test('to test the property `bActivesessionAttachment`', () async {
+      // TODO
+    });
+
+    // Can access canafe when we clone a user
+    // bool bActivesessionCanafe
+    test('to test the property `bActivesessionCanafe`', () async {
+      // TODO
+    });
+
+    // Can access financial element when we clone a user
+    // bool bActivesessionFinancial
+    test('to test the property `bActivesessionFinancial`', () async {
+      // TODO
+    });
+
+    // Can access closed realestate folders when we clone a user
+    // bool bActivesessionRealestatecompleted
+    test('to test the property `bActivesessionRealestatecompleted`', () async {
+      // TODO
+    });
+
+    // FieldEActivesessionEzsign eActivesessionEzsign
+    test('to test the property `eActivesessionEzsign`', () async {
+      // TODO
+    });
+
+    // FieldEActivesessionEzsignaccess eActivesessionEzsignaccess
+    test('to test the property `eActivesessionEzsignaccess`', () async {
+      // TODO
+    });
+
+    // FieldEActivesessionEzsignprepaid eActivesessionEzsignprepaid
+    test('to test the property `eActivesessionEzsignprepaid`', () async {
+      // TODO
+    });
+
+    // FieldEActivesessionRealestateinprogress eActivesessionRealestateinprogress
+    test('to test the property `eActivesessionRealestateinprogress`', () async {
+      // TODO
+    });
+
     // The customer code assigned to your account
     // String pksCustomerCode
     test('to test the property `pksCustomerCode`', () async {

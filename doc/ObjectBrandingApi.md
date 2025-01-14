@@ -9,15 +9,15 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**brandingCreateObjectV1**](ObjectBrandingApi.md#brandingcreateobjectv1) | **POST** /1/object/branding | Create a new Branding
-[**brandingEditObjectV1**](ObjectBrandingApi.md#brandingeditobjectv1) | **PUT** /1/object/branding/{pkiBrandingID} | Edit an existing Branding
+[**brandingCreateObjectV2**](ObjectBrandingApi.md#brandingcreateobjectv2) | **POST** /2/object/branding | Create a new Branding
+[**brandingEditObjectV2**](ObjectBrandingApi.md#brandingeditobjectv2) | **PUT** /2/object/branding/{pkiBrandingID} | Edit an existing Branding
 [**brandingGetAutocompleteV2**](ObjectBrandingApi.md#brandinggetautocompletev2) | **GET** /2/object/branding/getAutocomplete/{sSelector} | Retrieve Brandings and IDs
 [**brandingGetListV1**](ObjectBrandingApi.md#brandinggetlistv1) | **GET** /1/object/branding/getList | Retrieve Branding list
-[**brandingGetObjectV2**](ObjectBrandingApi.md#brandinggetobjectv2) | **GET** /2/object/branding/{pkiBrandingID} | Retrieve an existing Branding
+[**brandingGetObjectV3**](ObjectBrandingApi.md#brandinggetobjectv3) | **GET** /3/object/branding/{pkiBrandingID} | Retrieve an existing Branding
 
 
-# **brandingCreateObjectV1**
-> BrandingCreateObjectV1Response brandingCreateObjectV1(brandingCreateObjectV1Request)
+# **brandingCreateObjectV2**
+> BrandingCreateObjectV2Response brandingCreateObjectV2(brandingCreateObjectV2Request)
 
 Create a new Branding
 
@@ -32,13 +32,13 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
 
 final api_instance = ObjectBrandingApi();
-final brandingCreateObjectV1Request = BrandingCreateObjectV1Request(); // BrandingCreateObjectV1Request | 
+final brandingCreateObjectV2Request = BrandingCreateObjectV2Request(); // BrandingCreateObjectV2Request | 
 
 try {
-    final result = api_instance.brandingCreateObjectV1(brandingCreateObjectV1Request);
+    final result = api_instance.brandingCreateObjectV2(brandingCreateObjectV2Request);
     print(result);
 } catch (e) {
-    print('Exception when calling ObjectBrandingApi->brandingCreateObjectV1: $e\n');
+    print('Exception when calling ObjectBrandingApi->brandingCreateObjectV2: $e\n');
 }
 ```
 
@@ -46,11 +46,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **brandingCreateObjectV1Request** | [**BrandingCreateObjectV1Request**](BrandingCreateObjectV1Request.md)|  | 
+ **brandingCreateObjectV2Request** | [**BrandingCreateObjectV2Request**](BrandingCreateObjectV2Request.md)|  | 
 
 ### Return type
 
-[**BrandingCreateObjectV1Response**](BrandingCreateObjectV1Response.md)
+[**BrandingCreateObjectV2Response**](BrandingCreateObjectV2Response.md)
 
 ### Authorization
 
@@ -63,8 +63,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **brandingEditObjectV1**
-> BrandingEditObjectV1Response brandingEditObjectV1(pkiBrandingID, brandingEditObjectV1Request)
+# **brandingEditObjectV2**
+> BrandingEditObjectV2Response brandingEditObjectV2(pkiBrandingID, brandingEditObjectV2Request)
 
 Edit an existing Branding
 
@@ -80,13 +80,13 @@ import 'package:openapi/api.dart';
 
 final api_instance = ObjectBrandingApi();
 final pkiBrandingID = 56; // int | 
-final brandingEditObjectV1Request = BrandingEditObjectV1Request(); // BrandingEditObjectV1Request | 
+final brandingEditObjectV2Request = BrandingEditObjectV2Request(); // BrandingEditObjectV2Request | 
 
 try {
-    final result = api_instance.brandingEditObjectV1(pkiBrandingID, brandingEditObjectV1Request);
+    final result = api_instance.brandingEditObjectV2(pkiBrandingID, brandingEditObjectV2Request);
     print(result);
 } catch (e) {
-    print('Exception when calling ObjectBrandingApi->brandingEditObjectV1: $e\n');
+    print('Exception when calling ObjectBrandingApi->brandingEditObjectV2: $e\n');
 }
 ```
 
@@ -95,11 +95,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiBrandingID** | **int**|  | 
- **brandingEditObjectV1Request** | [**BrandingEditObjectV1Request**](BrandingEditObjectV1Request.md)|  | 
+ **brandingEditObjectV2Request** | [**BrandingEditObjectV2Request**](BrandingEditObjectV2Request.md)|  | 
 
 ### Return type
 
-[**BrandingEditObjectV1Response**](BrandingEditObjectV1Response.md)
+[**BrandingEditObjectV2Response**](BrandingEditObjectV2Response.md)
 
 ### Authorization
 
@@ -220,8 +220,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **brandingGetObjectV2**
-> BrandingGetObjectV2Response brandingGetObjectV2(pkiBrandingID)
+# **brandingGetObjectV3**
+> BrandingGetObjectV3Response brandingGetObjectV3(pkiBrandingID)
 
 Retrieve an existing Branding
 
@@ -239,10 +239,10 @@ final api_instance = ObjectBrandingApi();
 final pkiBrandingID = 56; // int | 
 
 try {
-    final result = api_instance.brandingGetObjectV2(pkiBrandingID);
+    final result = api_instance.brandingGetObjectV3(pkiBrandingID);
     print(result);
 } catch (e) {
-    print('Exception when calling ObjectBrandingApi->brandingGetObjectV2: $e\n');
+    print('Exception when calling ObjectBrandingApi->brandingGetObjectV3: $e\n');
 }
 ```
 
@@ -254,7 +254,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BrandingGetObjectV2Response**](BrandingGetObjectV2Response.md)
+[**BrandingGetObjectV3Response**](BrandingGetObjectV3Response.md)
 
 ### Authorization
 

@@ -18,6 +18,7 @@ class EzsigntemplatedocumentResponseCompound {
     required this.sEzsigntemplatedocumentName,
     required this.iEzsigntemplatedocumentPagetotal,
     required this.iEzsigntemplatedocumentSignaturetotal,
+    required this.iEzsigntemplatedocumentFormfieldtotal,
     required this.bEzsigntemplatedocumentHassignedsignatures,
   });
 
@@ -42,6 +43,9 @@ class EzsigntemplatedocumentResponseCompound {
   /// The number of total signatures in the Ezsigntemplate.
   int iEzsigntemplatedocumentSignaturetotal;
 
+  /// The number of total form fields in the Ezsigntemplate.
+  int iEzsigntemplatedocumentFormfieldtotal;
+
   /// If the Ezsigntemplatedocument contains signed signatures (From internal or external sources)
   bool bEzsigntemplatedocumentHassignedsignatures;
 
@@ -52,6 +56,7 @@ class EzsigntemplatedocumentResponseCompound {
     other.sEzsigntemplatedocumentName == sEzsigntemplatedocumentName &&
     other.iEzsigntemplatedocumentPagetotal == iEzsigntemplatedocumentPagetotal &&
     other.iEzsigntemplatedocumentSignaturetotal == iEzsigntemplatedocumentSignaturetotal &&
+    other.iEzsigntemplatedocumentFormfieldtotal == iEzsigntemplatedocumentFormfieldtotal &&
     other.bEzsigntemplatedocumentHassignedsignatures == bEzsigntemplatedocumentHassignedsignatures;
 
   @override
@@ -62,10 +67,11 @@ class EzsigntemplatedocumentResponseCompound {
     (sEzsigntemplatedocumentName.hashCode) +
     (iEzsigntemplatedocumentPagetotal.hashCode) +
     (iEzsigntemplatedocumentSignaturetotal.hashCode) +
+    (iEzsigntemplatedocumentFormfieldtotal.hashCode) +
     (bEzsigntemplatedocumentHassignedsignatures.hashCode);
 
   @override
-  String toString() => 'EzsigntemplatedocumentResponseCompound[pkiEzsigntemplatedocumentID=$pkiEzsigntemplatedocumentID, fkiEzsigntemplateID=$fkiEzsigntemplateID, sEzsigntemplatedocumentName=$sEzsigntemplatedocumentName, iEzsigntemplatedocumentPagetotal=$iEzsigntemplatedocumentPagetotal, iEzsigntemplatedocumentSignaturetotal=$iEzsigntemplatedocumentSignaturetotal, bEzsigntemplatedocumentHassignedsignatures=$bEzsigntemplatedocumentHassignedsignatures]';
+  String toString() => 'EzsigntemplatedocumentResponseCompound[pkiEzsigntemplatedocumentID=$pkiEzsigntemplatedocumentID, fkiEzsigntemplateID=$fkiEzsigntemplateID, sEzsigntemplatedocumentName=$sEzsigntemplatedocumentName, iEzsigntemplatedocumentPagetotal=$iEzsigntemplatedocumentPagetotal, iEzsigntemplatedocumentSignaturetotal=$iEzsigntemplatedocumentSignaturetotal, iEzsigntemplatedocumentFormfieldtotal=$iEzsigntemplatedocumentFormfieldtotal, bEzsigntemplatedocumentHassignedsignatures=$bEzsigntemplatedocumentHassignedsignatures]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -74,6 +80,7 @@ class EzsigntemplatedocumentResponseCompound {
       json[r'sEzsigntemplatedocumentName'] = this.sEzsigntemplatedocumentName;
       json[r'iEzsigntemplatedocumentPagetotal'] = this.iEzsigntemplatedocumentPagetotal;
       json[r'iEzsigntemplatedocumentSignaturetotal'] = this.iEzsigntemplatedocumentSignaturetotal;
+      json[r'iEzsigntemplatedocumentFormfieldtotal'] = this.iEzsigntemplatedocumentFormfieldtotal;
       json[r'bEzsigntemplatedocumentHassignedsignatures'] = this.bEzsigntemplatedocumentHassignedsignatures;
     return json;
   }
@@ -102,6 +109,7 @@ class EzsigntemplatedocumentResponseCompound {
         sEzsigntemplatedocumentName: mapValueOfType<String>(json, r'sEzsigntemplatedocumentName')!,
         iEzsigntemplatedocumentPagetotal: mapValueOfType<int>(json, r'iEzsigntemplatedocumentPagetotal')!,
         iEzsigntemplatedocumentSignaturetotal: mapValueOfType<int>(json, r'iEzsigntemplatedocumentSignaturetotal')!,
+        iEzsigntemplatedocumentFormfieldtotal: mapValueOfType<int>(json, r'iEzsigntemplatedocumentFormfieldtotal')!,
         bEzsigntemplatedocumentHassignedsignatures: mapValueOfType<bool>(json, r'bEzsigntemplatedocumentHassignedsignatures')!,
       );
     }
@@ -155,6 +163,7 @@ class EzsigntemplatedocumentResponseCompound {
     'sEzsigntemplatedocumentName',
     'iEzsigntemplatedocumentPagetotal',
     'iEzsigntemplatedocumentSignaturetotal',
+    'iEzsigntemplatedocumentFormfieldtotal',
     'bEzsigntemplatedocumentHassignedsignatures',
   };
 }

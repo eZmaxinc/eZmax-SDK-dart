@@ -26,12 +26,39 @@ void main() {
       // TODO
     });
 
+    // Retrieve Communication count
+    //
+    // 
+    //
+    //Future<InvoiceGetCommunicationCountV1Response> invoiceGetCommunicationCountV1(int pkiInvoiceID) async
+    test('test invoiceGetCommunicationCountV1', () async {
+      // TODO
+    });
+
     // Retrieve Communication list
     //
     // 
     //
     //Future<InvoiceGetCommunicationListV1Response> invoiceGetCommunicationListV1(int pkiInvoiceID) async
     test('test invoiceGetCommunicationListV1', () async {
+      // TODO
+    });
+
+    // Retrieve Invoice's Communicationrecipient
+    //
+    // 
+    //
+    //Future<InvoiceGetCommunicationrecipientsV1Response> invoiceGetCommunicationrecipientsV1(int pkiInvoiceID) async
+    test('test invoiceGetCommunicationrecipientsV1', () async {
+      // TODO
+    });
+
+    // Retrieve Invoice's Communicationsender
+    //
+    // 
+    //
+    //Future<InvoiceGetCommunicationsendersV1Response> invoiceGetCommunicationsendersV1(int pkiInvoiceID) async
+    test('test invoiceGetCommunicationsendersV1', () async {
       // TODO
     });
 

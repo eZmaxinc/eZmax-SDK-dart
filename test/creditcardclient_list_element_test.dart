@@ -28,7 +28,13 @@ void main() {
       // TODO
     });
 
-    // Whether if it's an relationisdefault
+    // The unique ID of the Creditcardtype
+    // int fkiCreditcardtypeID
+    test('to test the property `fkiCreditcardtypeID`', () async {
+      // TODO
+    });
+
+    // Whether if it's the creditcardclient is the default one
     // bool bCreditcardclientrelationIsdefault
     test('to test the property `bCreditcardclientrelationIsdefault`', () async {
       // TODO
@@ -40,21 +46,9 @@ void main() {
       // TODO
     });
 
-    // Whether the creditcardclient is active or not
-    // bool bCreditcardclientIsactive
-    test('to test the property `bCreditcardclientIsactive`', () async {
-      // TODO
-    });
-
     // Whether if it's an allowedagencypayment
-    // bool bCreditcardclientAllowedagencypayment
-    test('to test the property `bCreditcardclientAllowedagencypayment`', () async {
-      // TODO
-    });
-
-    // Whether if it's an allowedroyallepageprotection
-    // bool bCreditcardclientAllowedroyallepageprotection
-    test('to test the property `bCreditcardclientAllowedroyallepageprotection`', () async {
+    // bool bCreditcardclientAllowedcompanypayment
+    test('to test the property `bCreditcardclientAllowedcompanypayment`', () async {
       // TODO
     });
 
@@ -76,9 +70,9 @@ void main() {
       // TODO
     });
 
-    // The numbermasked of the Creditcarddetail
-    // String sCreditcarddetailNumbermasked
-    test('to test the property `sCreditcarddetailNumbermasked`', () async {
+    // The last digits of the Creditcarddetail
+    // int iCreditcarddetailLastdigits
+    test('to test the property `iCreditcarddetailLastdigits`', () async {
       // TODO
     });
 

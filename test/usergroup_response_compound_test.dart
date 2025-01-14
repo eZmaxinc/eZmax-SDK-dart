@@ -33,6 +33,11 @@ void main() {
       // TODO
     });
 
+    // EmailRequest objEmail
+    test('to test the property `objEmail`', () async {
+      // TODO
+    });
+
 
   });
 

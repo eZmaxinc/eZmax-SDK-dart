@@ -17,12 +17,39 @@ void main() {
   // final instance = ObjectElectronicfundstransferApi();
 
   group('tests for ObjectElectronicfundstransferApi', () {
+    // Retrieve Communication count
+    //
+    // 
+    //
+    //Future<ElectronicfundstransferGetCommunicationCountV1Response> electronicfundstransferGetCommunicationCountV1(int pkiElectronicfundstransferID) async
+    test('test electronicfundstransferGetCommunicationCountV1', () async {
+      // TODO
+    });
+
     // Retrieve Communication list
     //
     // 
     //
     //Future<ElectronicfundstransferGetCommunicationListV1Response> electronicfundstransferGetCommunicationListV1(int pkiElectronicfundstransferID) async
     test('test electronicfundstransferGetCommunicationListV1', () async {
+      // TODO
+    });
+
+    // Retrieve Electronicfundstransfer's Communicationrecipient
+    //
+    // 
+    //
+    //Future<ElectronicfundstransferGetCommunicationrecipientsV1Response> electronicfundstransferGetCommunicationrecipientsV1(int pkiElectronicfundstransferID) async
+    test('test electronicfundstransferGetCommunicationrecipientsV1', () async {
+      // TODO
+    });
+
+    // Retrieve Electronicfundstransfer's Communicationsender
+    //
+    // 
+    //
+    //Future<ElectronicfundstransferGetCommunicationsendersV1Response> electronicfundstransferGetCommunicationsendersV1(int pkiElectronicfundstransferID) async
+    test('test electronicfundstransferGetCommunicationsendersV1', () async {
       // TODO
     });
 

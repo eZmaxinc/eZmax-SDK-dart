@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **ezsigntemplatepackageGetAutocompleteV2**
-> EzsigntemplatepackageGetAutocompleteV2Response ezsigntemplatepackageGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+> EzsigntemplatepackageGetAutocompleteV2Response ezsigntemplatepackageGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage, fkiEzsignfoldertypeID)
 
 Retrieve Ezsigntemplatepackages and IDs
 
@@ -230,9 +230,10 @@ final sSelector = sSelector_example; // String | The type of Ezsigntemplatepacka
 final eFilterActive = eFilterActive_example; // String | Specify which results we want to display.
 final sQuery = sQuery_example; // String | Allow to filter the returned results
 final acceptLanguage = ; // HeaderAcceptLanguage | 
+final fkiEzsignfoldertypeID = 56; // int | The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic
 
 try {
-    final result = api_instance.ezsigntemplatepackageGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
+    final result = api_instance.ezsigntemplatepackageGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage, fkiEzsignfoldertypeID);
     print(result);
 } catch (e) {
     print('Exception when calling ObjectEzsigntemplatepackageApi->ezsigntemplatepackageGetAutocompleteV2: $e\n');
@@ -247,6 +248,7 @@ Name | Type | Description  | Notes
  **eFilterActive** | **String**| Specify which results we want to display. | [optional] [default to 'Active']
  **sQuery** | **String**| Allow to filter the returned results | [optional] 
  **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] 
+ **fkiEzsignfoldertypeID** | **int**| The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic | [optional] 
 
 ### Return type
 

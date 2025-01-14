@@ -14,7 +14,10 @@ class SignatureRequest {
   /// Returns a new [SignatureRequest] instance.
   SignatureRequest({
     this.pkiSignatureID,
-    required this.tSignatureSvg,
+    required this.fkiFontID,
+    required this.eSignaturePreference,
+    this.tSignatureSvg,
+    this.tSignatureSvginitials,
   });
 
   /// The unique ID of the Signature
@@ -29,22 +32,50 @@ class SignatureRequest {
   ///
   int? pkiSignatureID;
 
+  /// The unique ID of the Font
+  ///
+  /// Minimum value: 0
+  int fkiFontID;
+
+  FieldESignaturePreference eSignaturePreference;
+
   /// The svg of the Signature
-  String tSignatureSvg;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? tSignatureSvg;
+
+  /// The svg of the Initials
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? tSignatureSvginitials;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is SignatureRequest &&
     other.pkiSignatureID == pkiSignatureID &&
-    other.tSignatureSvg == tSignatureSvg;
+    other.fkiFontID == fkiFontID &&
+    other.eSignaturePreference == eSignaturePreference &&
+    other.tSignatureSvg == tSignatureSvg &&
+    other.tSignatureSvginitials == tSignatureSvginitials;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiSignatureID == null ? 0 : pkiSignatureID!.hashCode) +
-    (tSignatureSvg.hashCode);
+    (fkiFontID.hashCode) +
+    (eSignaturePreference.hashCode) +
+    (tSignatureSvg == null ? 0 : tSignatureSvg!.hashCode) +
+    (tSignatureSvginitials == null ? 0 : tSignatureSvginitials!.hashCode);
 
   @override
-  String toString() => 'SignatureRequest[pkiSignatureID=$pkiSignatureID, tSignatureSvg=$tSignatureSvg]';
+  String toString() => 'SignatureRequest[pkiSignatureID=$pkiSignatureID, fkiFontID=$fkiFontID, eSignaturePreference=$eSignaturePreference, tSignatureSvg=$tSignatureSvg, tSignatureSvginitials=$tSignatureSvginitials]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -53,7 +84,18 @@ class SignatureRequest {
     } else {
       json[r'pkiSignatureID'] = null;
     }
+      json[r'fkiFontID'] = this.fkiFontID;
+      json[r'eSignaturePreference'] = this.eSignaturePreference;
+    if (this.tSignatureSvg != null) {
       json[r'tSignatureSvg'] = this.tSignatureSvg;
+    } else {
+      json[r'tSignatureSvg'] = null;
+    }
+    if (this.tSignatureSvginitials != null) {
+      json[r'tSignatureSvginitials'] = this.tSignatureSvginitials;
+    } else {
+      json[r'tSignatureSvginitials'] = null;
+    }
     return json;
   }
 
@@ -77,7 +119,10 @@ class SignatureRequest {
 
       return SignatureRequest(
         pkiSignatureID: mapValueOfType<int>(json, r'pkiSignatureID'),
-        tSignatureSvg: mapValueOfType<String>(json, r'tSignatureSvg')!,
+        fkiFontID: mapValueOfType<int>(json, r'fkiFontID')!,
+        eSignaturePreference: FieldESignaturePreference.fromJson(json[r'eSignaturePreference'])!,
+        tSignatureSvg: mapValueOfType<String>(json, r'tSignatureSvg'),
+        tSignatureSvginitials: mapValueOfType<String>(json, r'tSignatureSvginitials'),
       );
     }
     return null;
@@ -125,7 +170,8 @@ class SignatureRequest {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'tSignatureSvg',
+    'fkiFontID',
+    'eSignaturePreference',
   };
 }
 

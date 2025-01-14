@@ -15,6 +15,7 @@ class CommonResponseErrorEzsignformValidation {
   CommonResponseErrorEzsignformValidation({
     required this.sErrorMessage,
     required this.eErrorCode,
+    this.aSErrorMessagedetail = const [],
     this.aObjEzsignformfielderror = const [],
   });
 
@@ -23,6 +24,9 @@ class CommonResponseErrorEzsignformValidation {
 
   FieldEErrorCode eErrorCode;
 
+  /// More error message detail
+  List<String> aSErrorMessagedetail;
+
   /// 
   List<CustomEzsignformfielderrorResponse> aObjEzsignformfielderror;
 
@@ -30,6 +34,7 @@ class CommonResponseErrorEzsignformValidation {
   bool operator ==(Object other) => identical(this, other) || other is CommonResponseErrorEzsignformValidation &&
     other.sErrorMessage == sErrorMessage &&
     other.eErrorCode == eErrorCode &&
+    _deepEquality.equals(other.aSErrorMessagedetail, aSErrorMessagedetail) &&
     _deepEquality.equals(other.aObjEzsignformfielderror, aObjEzsignformfielderror);
 
   @override
@@ -37,15 +42,17 @@ class CommonResponseErrorEzsignformValidation {
     // ignore: unnecessary_parenthesis
     (sErrorMessage.hashCode) +
     (eErrorCode.hashCode) +
+    (aSErrorMessagedetail.hashCode) +
     (aObjEzsignformfielderror.hashCode);
 
   @override
-  String toString() => 'CommonResponseErrorEzsignformValidation[sErrorMessage=$sErrorMessage, eErrorCode=$eErrorCode, aObjEzsignformfielderror=$aObjEzsignformfielderror]';
+  String toString() => 'CommonResponseErrorEzsignformValidation[sErrorMessage=$sErrorMessage, eErrorCode=$eErrorCode, aSErrorMessagedetail=$aSErrorMessagedetail, aObjEzsignformfielderror=$aObjEzsignformfielderror]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'sErrorMessage'] = this.sErrorMessage;
       json[r'eErrorCode'] = this.eErrorCode;
+      json[r'a_sErrorMessagedetail'] = this.aSErrorMessagedetail;
       json[r'a_objEzsignformfielderror'] = this.aObjEzsignformfielderror;
     return json;
   }
@@ -71,6 +78,9 @@ class CommonResponseErrorEzsignformValidation {
       return CommonResponseErrorEzsignformValidation(
         sErrorMessage: mapValueOfType<String>(json, r'sErrorMessage')!,
         eErrorCode: FieldEErrorCode.fromJson(json[r'eErrorCode'])!,
+        aSErrorMessagedetail: json[r'a_sErrorMessagedetail'] is Iterable
+            ? (json[r'a_sErrorMessagedetail'] as Iterable).cast<String>().toList(growable: false)
+            : const [],
         aObjEzsignformfielderror: CustomEzsignformfielderrorResponse.listFromJson(json[r'a_objEzsignformfielderror']),
       );
     }

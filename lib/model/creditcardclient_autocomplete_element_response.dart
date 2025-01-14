@@ -15,7 +15,6 @@ class CreditcardclientAutocompleteElementResponse {
   CreditcardclientAutocompleteElementResponse({
     required this.pkiCreditcardclientID,
     required this.sCreditcardclientDescription,
-    required this.bCreditcardclientIsactive,
   });
 
   /// The unique ID of the Creditcardclient
@@ -27,30 +26,24 @@ class CreditcardclientAutocompleteElementResponse {
   /// The description of the Creditcardclient
   String sCreditcardclientDescription;
 
-  /// Whether the creditcardclient is active or not
-  bool bCreditcardclientIsactive;
-
   @override
   bool operator ==(Object other) => identical(this, other) || other is CreditcardclientAutocompleteElementResponse &&
     other.pkiCreditcardclientID == pkiCreditcardclientID &&
-    other.sCreditcardclientDescription == sCreditcardclientDescription &&
-    other.bCreditcardclientIsactive == bCreditcardclientIsactive;
+    other.sCreditcardclientDescription == sCreditcardclientDescription;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiCreditcardclientID.hashCode) +
-    (sCreditcardclientDescription.hashCode) +
-    (bCreditcardclientIsactive.hashCode);
+    (sCreditcardclientDescription.hashCode);
 
   @override
-  String toString() => 'CreditcardclientAutocompleteElementResponse[pkiCreditcardclientID=$pkiCreditcardclientID, sCreditcardclientDescription=$sCreditcardclientDescription, bCreditcardclientIsactive=$bCreditcardclientIsactive]';
+  String toString() => 'CreditcardclientAutocompleteElementResponse[pkiCreditcardclientID=$pkiCreditcardclientID, sCreditcardclientDescription=$sCreditcardclientDescription]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiCreditcardclientID'] = this.pkiCreditcardclientID;
       json[r'sCreditcardclientDescription'] = this.sCreditcardclientDescription;
-      json[r'bCreditcardclientIsactive'] = this.bCreditcardclientIsactive;
     return json;
   }
 
@@ -75,7 +68,6 @@ class CreditcardclientAutocompleteElementResponse {
       return CreditcardclientAutocompleteElementResponse(
         pkiCreditcardclientID: mapValueOfType<int>(json, r'pkiCreditcardclientID')!,
         sCreditcardclientDescription: mapValueOfType<String>(json, r'sCreditcardclientDescription')!,
-        bCreditcardclientIsactive: mapValueOfType<bool>(json, r'bCreditcardclientIsactive')!,
       );
     }
     return null;
@@ -125,7 +117,6 @@ class CreditcardclientAutocompleteElementResponse {
   static const requiredKeys = <String>{
     'pkiCreditcardclientID',
     'sCreditcardclientDescription',
-    'bCreditcardclientIsactive',
   };
 }
 

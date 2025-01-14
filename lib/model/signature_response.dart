@@ -14,7 +14,9 @@ class SignatureResponse {
   /// Returns a new [SignatureResponse] instance.
   SignatureResponse({
     required this.pkiSignatureID,
-    required this.sSignatureUrl,
+    this.fkiFontID,
+    this.sSignatureUrl,
+    this.sSignatureUrlinitials,
   });
 
   /// The unique ID of the Signature
@@ -23,27 +25,71 @@ class SignatureResponse {
   /// Maximum value: 16777215
   int pkiSignatureID;
 
+  /// The unique ID of the Font
+  ///
+  /// Minimum value: 0
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiFontID;
+
   /// The URL of the SVG file for the Signature
-  String sSignatureUrl;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sSignatureUrl;
+
+  /// The URL of the SVG file for the Initials
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sSignatureUrlinitials;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is SignatureResponse &&
     other.pkiSignatureID == pkiSignatureID &&
-    other.sSignatureUrl == sSignatureUrl;
+    other.fkiFontID == fkiFontID &&
+    other.sSignatureUrl == sSignatureUrl &&
+    other.sSignatureUrlinitials == sSignatureUrlinitials;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiSignatureID.hashCode) +
-    (sSignatureUrl.hashCode);
+    (fkiFontID == null ? 0 : fkiFontID!.hashCode) +
+    (sSignatureUrl == null ? 0 : sSignatureUrl!.hashCode) +
+    (sSignatureUrlinitials == null ? 0 : sSignatureUrlinitials!.hashCode);
 
   @override
-  String toString() => 'SignatureResponse[pkiSignatureID=$pkiSignatureID, sSignatureUrl=$sSignatureUrl]';
+  String toString() => 'SignatureResponse[pkiSignatureID=$pkiSignatureID, fkiFontID=$fkiFontID, sSignatureUrl=$sSignatureUrl, sSignatureUrlinitials=$sSignatureUrlinitials]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiSignatureID'] = this.pkiSignatureID;
+    if (this.fkiFontID != null) {
+      json[r'fkiFontID'] = this.fkiFontID;
+    } else {
+      json[r'fkiFontID'] = null;
+    }
+    if (this.sSignatureUrl != null) {
       json[r'sSignatureUrl'] = this.sSignatureUrl;
+    } else {
+      json[r'sSignatureUrl'] = null;
+    }
+    if (this.sSignatureUrlinitials != null) {
+      json[r'sSignatureUrlinitials'] = this.sSignatureUrlinitials;
+    } else {
+      json[r'sSignatureUrlinitials'] = null;
+    }
     return json;
   }
 
@@ -67,7 +113,9 @@ class SignatureResponse {
 
       return SignatureResponse(
         pkiSignatureID: mapValueOfType<int>(json, r'pkiSignatureID')!,
-        sSignatureUrl: mapValueOfType<String>(json, r'sSignatureUrl')!,
+        fkiFontID: mapValueOfType<int>(json, r'fkiFontID'),
+        sSignatureUrl: mapValueOfType<String>(json, r'sSignatureUrl'),
+        sSignatureUrlinitials: mapValueOfType<String>(json, r'sSignatureUrlinitials'),
       );
     }
     return null;
@@ -116,7 +164,6 @@ class SignatureResponse {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'pkiSignatureID',
-    'sSignatureUrl',
   };
 }
 

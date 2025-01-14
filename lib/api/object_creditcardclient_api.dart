@@ -429,4 +429,67 @@ class ObjectCreditcardclientApi {
     }
     return null;
   }
+
+  /// Patch an existing Creditcardclient
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiCreditcardclientID (required):
+  ///   The unique ID of the Creditcardclient
+  ///
+  /// * [CreditcardclientPatchObjectV1Request] creditcardclientPatchObjectV1Request (required):
+  Future<Response> creditcardclientPatchObjectV1WithHttpInfo(int pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/creditcardclient/{pkiCreditcardclientID}'
+      .replaceAll('{pkiCreditcardclientID}', pkiCreditcardclientID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = creditcardclientPatchObjectV1Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'PATCH',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Patch an existing Creditcardclient
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiCreditcardclientID (required):
+  ///   The unique ID of the Creditcardclient
+  ///
+  /// * [CreditcardclientPatchObjectV1Request] creditcardclientPatchObjectV1Request (required):
+  Future<CreditcardclientPatchObjectV1Response?> creditcardclientPatchObjectV1(int pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request,) async {
+    final response = await creditcardclientPatchObjectV1WithHttpInfo(pkiCreditcardclientID, creditcardclientPatchObjectV1Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CreditcardclientPatchObjectV1Response',) as CreditcardclientPatchObjectV1Response;
+    
+    }
+    return null;
+  }
 }

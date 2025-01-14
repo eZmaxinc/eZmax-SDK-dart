@@ -17,12 +17,39 @@ void main() {
   // final instance = ObjectBuyercontractApi();
 
   group('tests for ObjectBuyercontractApi', () {
+    // Retrieve Communication count
+    //
+    // 
+    //
+    //Future<BuyercontractGetCommunicationCountV1Response> buyercontractGetCommunicationCountV1(int pkiBuyercontractID) async
+    test('test buyercontractGetCommunicationCountV1', () async {
+      // TODO
+    });
+
     // Retrieve Communication list
     //
     // 
     //
     //Future<BuyercontractGetCommunicationListV1Response> buyercontractGetCommunicationListV1(int pkiBuyercontractID) async
     test('test buyercontractGetCommunicationListV1', () async {
+      // TODO
+    });
+
+    // Retrieve Buyercontract's Communicationrecipient
+    //
+    // 
+    //
+    //Future<BuyercontractGetCommunicationrecipientsV1Response> buyercontractGetCommunicationrecipientsV1(int pkiBuyercontractID) async
+    test('test buyercontractGetCommunicationrecipientsV1', () async {
+      // TODO
+    });
+
+    // Retrieve Buyercontract's Communicationsender
+    //
+    // 
+    //
+    //Future<BuyercontractGetCommunicationsendersV1Response> buyercontractGetCommunicationsendersV1(int pkiBuyercontractID) async
+    test('test buyercontractGetCommunicationsendersV1', () async {
       // TODO
     });
 

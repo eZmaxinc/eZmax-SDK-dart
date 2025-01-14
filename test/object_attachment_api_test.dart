@@ -35,14 +35,5 @@ void main() {
       // TODO
     });
 
-    // Retrieve a URL to download attachments.
-    //
-    // This endpoint returns an URL to download the attachment.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
-    //
-    //Future<AttachmentGetDownloadUrlV1Response> attachmentGetDownloadUrlV1(int pkiAttachmentID) async
-    test('test attachmentGetDownloadUrlV1', () async {
-      // TODO
-    });
-
   });
 }

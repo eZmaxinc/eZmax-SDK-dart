@@ -31,6 +31,9 @@ class EzsignfolderListElement {
     required this.iEzsignformfieldgroupCompleted,
     this.bEzsignformHasdependencies,
     required this.dEzsignfolderCompletedpercentage,
+    required this.dEzsignfolderFormcompletedpercentage,
+    required this.dEzsignfolderSignaturecompletedpercentage,
+    this.bEzsignfolderSigner,
   });
 
   /// The unique ID of the Ezsignfolder
@@ -111,8 +114,23 @@ class EzsignfolderListElement {
   ///
   bool? bEzsignformHasdependencies;
 
-  /// Whether the Ezsignform/Ezsignsignatures has dependencies or not
+  /// Percentage of Ezsignform/Ezsignsignatures has completed
   String dEzsignfolderCompletedpercentage;
+
+  /// Percentage of Ezsignform has completed
+  String dEzsignfolderFormcompletedpercentage;
+
+  /// Percentage of Ezsignsignatures has signed
+  String dEzsignfolderSignaturecompletedpercentage;
+
+  /// Whether the Ezsignfolder has an Ezsignsignatures that need to be signed or an Ezsignformfieldgroups that need to be filled by the current user
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bEzsignfolderSigner;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfolderListElement &&
@@ -133,7 +151,10 @@ class EzsignfolderListElement {
     other.iEzsignformfieldgroup == iEzsignformfieldgroup &&
     other.iEzsignformfieldgroupCompleted == iEzsignformfieldgroupCompleted &&
     other.bEzsignformHasdependencies == bEzsignformHasdependencies &&
-    other.dEzsignfolderCompletedpercentage == dEzsignfolderCompletedpercentage;
+    other.dEzsignfolderCompletedpercentage == dEzsignfolderCompletedpercentage &&
+    other.dEzsignfolderFormcompletedpercentage == dEzsignfolderFormcompletedpercentage &&
+    other.dEzsignfolderSignaturecompletedpercentage == dEzsignfolderSignaturecompletedpercentage &&
+    other.bEzsignfolderSigner == bEzsignfolderSigner;
 
   @override
   int get hashCode =>
@@ -155,10 +176,13 @@ class EzsignfolderListElement {
     (iEzsignformfieldgroup.hashCode) +
     (iEzsignformfieldgroupCompleted.hashCode) +
     (bEzsignformHasdependencies == null ? 0 : bEzsignformHasdependencies!.hashCode) +
-    (dEzsignfolderCompletedpercentage.hashCode);
+    (dEzsignfolderCompletedpercentage.hashCode) +
+    (dEzsignfolderFormcompletedpercentage.hashCode) +
+    (dEzsignfolderSignaturecompletedpercentage.hashCode) +
+    (bEzsignfolderSigner == null ? 0 : bEzsignfolderSigner!.hashCode);
 
   @override
-  String toString() => 'EzsignfolderListElement[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, eEzsignfoldertypePrivacylevel=$eEzsignfoldertypePrivacylevel, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, sEzsignfolderDescription=$sEzsignfolderDescription, eEzsignfolderStep=$eEzsignfolderStep, dtCreatedDate=$dtCreatedDate, dtEzsignfolderDelayedsenddate=$dtEzsignfolderDelayedsenddate, dtEzsignfolderSentdate=$dtEzsignfolderSentdate, dtEzsignfolderDuedate=$dtEzsignfolderDuedate, iEzsigndocument=$iEzsigndocument, iEzsigndocumentEdm=$iEzsigndocumentEdm, iEzsignsignature=$iEzsignsignature, iEzsignsignatureSigned=$iEzsignsignatureSigned, iEzsignformfieldgroup=$iEzsignformfieldgroup, iEzsignformfieldgroupCompleted=$iEzsignformfieldgroupCompleted, bEzsignformHasdependencies=$bEzsignformHasdependencies, dEzsignfolderCompletedpercentage=$dEzsignfolderCompletedpercentage]';
+  String toString() => 'EzsignfolderListElement[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, eEzsignfoldertypePrivacylevel=$eEzsignfoldertypePrivacylevel, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, sEzsignfolderDescription=$sEzsignfolderDescription, eEzsignfolderStep=$eEzsignfolderStep, dtCreatedDate=$dtCreatedDate, dtEzsignfolderDelayedsenddate=$dtEzsignfolderDelayedsenddate, dtEzsignfolderSentdate=$dtEzsignfolderSentdate, dtEzsignfolderDuedate=$dtEzsignfolderDuedate, iEzsigndocument=$iEzsigndocument, iEzsigndocumentEdm=$iEzsigndocumentEdm, iEzsignsignature=$iEzsignsignature, iEzsignsignatureSigned=$iEzsignsignatureSigned, iEzsignformfieldgroup=$iEzsignformfieldgroup, iEzsignformfieldgroupCompleted=$iEzsignformfieldgroupCompleted, bEzsignformHasdependencies=$bEzsignformHasdependencies, dEzsignfolderCompletedpercentage=$dEzsignfolderCompletedpercentage, dEzsignfolderFormcompletedpercentage=$dEzsignfolderFormcompletedpercentage, dEzsignfolderSignaturecompletedpercentage=$dEzsignfolderSignaturecompletedpercentage, bEzsignfolderSigner=$bEzsignfolderSigner]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -196,6 +220,13 @@ class EzsignfolderListElement {
       json[r'bEzsignformHasdependencies'] = null;
     }
       json[r'dEzsignfolderCompletedpercentage'] = this.dEzsignfolderCompletedpercentage;
+      json[r'dEzsignfolderFormcompletedpercentage'] = this.dEzsignfolderFormcompletedpercentage;
+      json[r'dEzsignfolderSignaturecompletedpercentage'] = this.dEzsignfolderSignaturecompletedpercentage;
+    if (this.bEzsignfolderSigner != null) {
+      json[r'bEzsignfolderSigner'] = this.bEzsignfolderSigner;
+    } else {
+      json[r'bEzsignfolderSigner'] = null;
+    }
     return json;
   }
 
@@ -236,6 +267,9 @@ class EzsignfolderListElement {
         iEzsignformfieldgroupCompleted: mapValueOfType<int>(json, r'iEzsignformfieldgroupCompleted')!,
         bEzsignformHasdependencies: mapValueOfType<bool>(json, r'bEzsignformHasdependencies'),
         dEzsignfolderCompletedpercentage: mapValueOfType<String>(json, r'dEzsignfolderCompletedpercentage')!,
+        dEzsignfolderFormcompletedpercentage: mapValueOfType<String>(json, r'dEzsignfolderFormcompletedpercentage')!,
+        dEzsignfolderSignaturecompletedpercentage: mapValueOfType<String>(json, r'dEzsignfolderSignaturecompletedpercentage')!,
+        bEzsignfolderSigner: mapValueOfType<bool>(json, r'bEzsignfolderSigner'),
       );
     }
     return null;
@@ -297,6 +331,8 @@ class EzsignfolderListElement {
     'iEzsignformfieldgroup',
     'iEzsignformfieldgroupCompleted',
     'dEzsignfolderCompletedpercentage',
+    'dEzsignfolderFormcompletedpercentage',
+    'dEzsignfolderSignaturecompletedpercentage',
   };
 }
 

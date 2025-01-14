@@ -40,6 +40,12 @@ void main() {
       // TODO
     });
 
+    // The unique ID of the Ezdoctemplatedocument
+    // int fkiEzdoctemplatedocumentID
+    test('to test the property `fkiEzdoctemplatedocumentID`', () async {
+      // TODO
+    });
+
     // The Name of the Language in the language of the requester
     // String sLanguageNameX
     test('to test the property `sLanguageNameX`', () async {
@@ -49,6 +55,18 @@ void main() {
     // The description of the Ezsigntemplate
     // String sEzsigntemplateDescription
     test('to test the property `sEzsigntemplateDescription`', () async {
+      // TODO
+    });
+
+    // The external description of the Ezsigntemplate
+    // String sEzsigntemplateExternaldescription
+    test('to test the property `sEzsigntemplateExternaldescription`', () async {
+      // TODO
+    });
+
+    // The comment of the Ezsigntemplate
+    // String tEzsigntemplateComment
+    test('to test the property `tEzsigntemplateComment`', () async {
       // TODO
     });
 

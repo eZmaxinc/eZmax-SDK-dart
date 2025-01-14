@@ -16,6 +16,7 @@ class UsergroupResponseCompound {
     required this.pkiUsergroupID,
     required this.objUsergroupName,
     this.sUsergroupNameX,
+    this.objEmail,
   });
 
   /// The unique ID of the Usergroup
@@ -35,21 +36,31 @@ class UsergroupResponseCompound {
   ///
   String? sUsergroupNameX;
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  EmailRequest? objEmail;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is UsergroupResponseCompound &&
     other.pkiUsergroupID == pkiUsergroupID &&
     other.objUsergroupName == objUsergroupName &&
-    other.sUsergroupNameX == sUsergroupNameX;
+    other.sUsergroupNameX == sUsergroupNameX &&
+    other.objEmail == objEmail;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiUsergroupID.hashCode) +
     (objUsergroupName.hashCode) +
-    (sUsergroupNameX == null ? 0 : sUsergroupNameX!.hashCode);
+    (sUsergroupNameX == null ? 0 : sUsergroupNameX!.hashCode) +
+    (objEmail == null ? 0 : objEmail!.hashCode);
 
   @override
-  String toString() => 'UsergroupResponseCompound[pkiUsergroupID=$pkiUsergroupID, objUsergroupName=$objUsergroupName, sUsergroupNameX=$sUsergroupNameX]';
+  String toString() => 'UsergroupResponseCompound[pkiUsergroupID=$pkiUsergroupID, objUsergroupName=$objUsergroupName, sUsergroupNameX=$sUsergroupNameX, objEmail=$objEmail]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -59,6 +70,11 @@ class UsergroupResponseCompound {
       json[r'sUsergroupNameX'] = this.sUsergroupNameX;
     } else {
       json[r'sUsergroupNameX'] = null;
+    }
+    if (this.objEmail != null) {
+      json[r'objEmail'] = this.objEmail;
+    } else {
+      json[r'objEmail'] = null;
     }
     return json;
   }
@@ -85,6 +101,7 @@ class UsergroupResponseCompound {
         pkiUsergroupID: mapValueOfType<int>(json, r'pkiUsergroupID')!,
         objUsergroupName: MultilingualUsergroupName.fromJson(json[r'objUsergroupName'])!,
         sUsergroupNameX: mapValueOfType<String>(json, r'sUsergroupNameX'),
+        objEmail: EmailRequest.fromJson(json[r'objEmail']),
       );
     }
     return null;

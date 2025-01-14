@@ -110,7 +110,7 @@ class EzsigndocumentRequest {
   ///
   String? sEzsigndocumentPassword;
 
-  /// If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**  **Discard** removes the form from the document.
+  /// If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**  **Discard** removes the form from the document.  **Flatten** prints the form values in the document.
   EzsigndocumentRequestEEzsigndocumentFormEnum? eEzsigndocumentForm;
 
   /// The maximum date and time at which the Ezsigndocument can be signed.
@@ -479,7 +479,7 @@ class EzsigndocumentRequestEEzsigndocumentFormatEnumTypeTransformer {
 }
 
 
-/// If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**  **Discard** removes the form from the document.
+/// If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**  **Discard** removes the form from the document.  **Flatten** prints the form values in the document.
 class EzsigndocumentRequestEEzsigndocumentFormEnum {
   /// Instantiate a new enum with the provided [value].
   const EzsigndocumentRequestEEzsigndocumentFormEnum._(this.value);
@@ -495,12 +495,14 @@ class EzsigndocumentRequestEEzsigndocumentFormEnum {
   static const keep = EzsigndocumentRequestEEzsigndocumentFormEnum._(r'Keep');
   static const convert = EzsigndocumentRequestEEzsigndocumentFormEnum._(r'Convert');
   static const discard = EzsigndocumentRequestEEzsigndocumentFormEnum._(r'Discard');
+  static const flatten = EzsigndocumentRequestEEzsigndocumentFormEnum._(r'Flatten');
 
   /// List of all possible values in this [enum][EzsigndocumentRequestEEzsigndocumentFormEnum].
   static const values = <EzsigndocumentRequestEEzsigndocumentFormEnum>[
     keep,
     convert,
     discard,
+    flatten,
   ];
 
   static EzsigndocumentRequestEEzsigndocumentFormEnum? fromJson(dynamic value) => EzsigndocumentRequestEEzsigndocumentFormEnumTypeTransformer().decode(value);
@@ -542,6 +544,7 @@ class EzsigndocumentRequestEEzsigndocumentFormEnumTypeTransformer {
         case r'Keep': return EzsigndocumentRequestEEzsigndocumentFormEnum.keep;
         case r'Convert': return EzsigndocumentRequestEEzsigndocumentFormEnum.convert;
         case r'Discard': return EzsigndocumentRequestEEzsigndocumentFormEnum.discard;
+        case r'Flatten': return EzsigndocumentRequestEEzsigndocumentFormEnum.flatten;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');

@@ -17,9 +17,8 @@ class CreditcardclientRequestCompound {
     this.fksCreditcardtokenID,
     required this.bCreditcardclientrelationIsdefault,
     required this.sCreditcardclientDescription,
-    required this.bCreditcardclientIsactive,
-    required this.bCreditcardclientAllowedagencypayment,
-    required this.bCreditcardclientAllowedroyallepageprotection,
+    required this.bCreditcardclientAllowedcompanypayment,
+    required this.bCreditcardclientAllowedezsign,
     required this.bCreditcardclientAllowedtranquillit,
     required this.objCreditcarddetail,
     required this.sCreditcardclientCVV,
@@ -46,20 +45,17 @@ class CreditcardclientRequestCompound {
   ///
   String? fksCreditcardtokenID;
 
-  /// Whether if it's an relationisdefault
+  /// Whether if it's the creditcardclient is the default one
   bool bCreditcardclientrelationIsdefault;
 
   /// The description of the Creditcardclient
   String sCreditcardclientDescription;
 
-  /// Whether the creditcardclient is active or not
-  bool bCreditcardclientIsactive;
-
   /// Whether if it's an allowedagencypayment
-  bool bCreditcardclientAllowedagencypayment;
+  bool bCreditcardclientAllowedcompanypayment;
 
   /// Whether if it's an allowedroyallepageprotection
-  bool bCreditcardclientAllowedroyallepageprotection;
+  bool bCreditcardclientAllowedezsign;
 
   /// Whether if it's an allowedtranquillit
   bool bCreditcardclientAllowedtranquillit;
@@ -75,9 +71,8 @@ class CreditcardclientRequestCompound {
     other.fksCreditcardtokenID == fksCreditcardtokenID &&
     other.bCreditcardclientrelationIsdefault == bCreditcardclientrelationIsdefault &&
     other.sCreditcardclientDescription == sCreditcardclientDescription &&
-    other.bCreditcardclientIsactive == bCreditcardclientIsactive &&
-    other.bCreditcardclientAllowedagencypayment == bCreditcardclientAllowedagencypayment &&
-    other.bCreditcardclientAllowedroyallepageprotection == bCreditcardclientAllowedroyallepageprotection &&
+    other.bCreditcardclientAllowedcompanypayment == bCreditcardclientAllowedcompanypayment &&
+    other.bCreditcardclientAllowedezsign == bCreditcardclientAllowedezsign &&
     other.bCreditcardclientAllowedtranquillit == bCreditcardclientAllowedtranquillit &&
     other.objCreditcarddetail == objCreditcarddetail &&
     other.sCreditcardclientCVV == sCreditcardclientCVV;
@@ -89,15 +84,14 @@ class CreditcardclientRequestCompound {
     (fksCreditcardtokenID == null ? 0 : fksCreditcardtokenID!.hashCode) +
     (bCreditcardclientrelationIsdefault.hashCode) +
     (sCreditcardclientDescription.hashCode) +
-    (bCreditcardclientIsactive.hashCode) +
-    (bCreditcardclientAllowedagencypayment.hashCode) +
-    (bCreditcardclientAllowedroyallepageprotection.hashCode) +
+    (bCreditcardclientAllowedcompanypayment.hashCode) +
+    (bCreditcardclientAllowedezsign.hashCode) +
     (bCreditcardclientAllowedtranquillit.hashCode) +
     (objCreditcarddetail.hashCode) +
     (sCreditcardclientCVV.hashCode);
 
   @override
-  String toString() => 'CreditcardclientRequestCompound[pkiCreditcardclientID=$pkiCreditcardclientID, fksCreditcardtokenID=$fksCreditcardtokenID, bCreditcardclientrelationIsdefault=$bCreditcardclientrelationIsdefault, sCreditcardclientDescription=$sCreditcardclientDescription, bCreditcardclientIsactive=$bCreditcardclientIsactive, bCreditcardclientAllowedagencypayment=$bCreditcardclientAllowedagencypayment, bCreditcardclientAllowedroyallepageprotection=$bCreditcardclientAllowedroyallepageprotection, bCreditcardclientAllowedtranquillit=$bCreditcardclientAllowedtranquillit, objCreditcarddetail=$objCreditcarddetail, sCreditcardclientCVV=$sCreditcardclientCVV]';
+  String toString() => 'CreditcardclientRequestCompound[pkiCreditcardclientID=$pkiCreditcardclientID, fksCreditcardtokenID=$fksCreditcardtokenID, bCreditcardclientrelationIsdefault=$bCreditcardclientrelationIsdefault, sCreditcardclientDescription=$sCreditcardclientDescription, bCreditcardclientAllowedcompanypayment=$bCreditcardclientAllowedcompanypayment, bCreditcardclientAllowedezsign=$bCreditcardclientAllowedezsign, bCreditcardclientAllowedtranquillit=$bCreditcardclientAllowedtranquillit, objCreditcarddetail=$objCreditcarddetail, sCreditcardclientCVV=$sCreditcardclientCVV]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -113,9 +107,8 @@ class CreditcardclientRequestCompound {
     }
       json[r'bCreditcardclientrelationIsdefault'] = this.bCreditcardclientrelationIsdefault;
       json[r'sCreditcardclientDescription'] = this.sCreditcardclientDescription;
-      json[r'bCreditcardclientIsactive'] = this.bCreditcardclientIsactive;
-      json[r'bCreditcardclientAllowedagencypayment'] = this.bCreditcardclientAllowedagencypayment;
-      json[r'bCreditcardclientAllowedroyallepageprotection'] = this.bCreditcardclientAllowedroyallepageprotection;
+      json[r'bCreditcardclientAllowedcompanypayment'] = this.bCreditcardclientAllowedcompanypayment;
+      json[r'bCreditcardclientAllowedezsign'] = this.bCreditcardclientAllowedezsign;
       json[r'bCreditcardclientAllowedtranquillit'] = this.bCreditcardclientAllowedtranquillit;
       json[r'objCreditcarddetail'] = this.objCreditcarddetail;
       json[r'sCreditcardclientCVV'] = this.sCreditcardclientCVV;
@@ -145,9 +138,8 @@ class CreditcardclientRequestCompound {
         fksCreditcardtokenID: mapValueOfType<String>(json, r'fksCreditcardtokenID'),
         bCreditcardclientrelationIsdefault: mapValueOfType<bool>(json, r'bCreditcardclientrelationIsdefault')!,
         sCreditcardclientDescription: mapValueOfType<String>(json, r'sCreditcardclientDescription')!,
-        bCreditcardclientIsactive: mapValueOfType<bool>(json, r'bCreditcardclientIsactive')!,
-        bCreditcardclientAllowedagencypayment: mapValueOfType<bool>(json, r'bCreditcardclientAllowedagencypayment')!,
-        bCreditcardclientAllowedroyallepageprotection: mapValueOfType<bool>(json, r'bCreditcardclientAllowedroyallepageprotection')!,
+        bCreditcardclientAllowedcompanypayment: mapValueOfType<bool>(json, r'bCreditcardclientAllowedcompanypayment')!,
+        bCreditcardclientAllowedezsign: mapValueOfType<bool>(json, r'bCreditcardclientAllowedezsign')!,
         bCreditcardclientAllowedtranquillit: mapValueOfType<bool>(json, r'bCreditcardclientAllowedtranquillit')!,
         objCreditcarddetail: CreditcarddetailRequest.fromJson(json[r'objCreditcarddetail'])!,
         sCreditcardclientCVV: mapValueOfType<String>(json, r'sCreditcardclientCVV')!,
@@ -200,9 +192,8 @@ class CreditcardclientRequestCompound {
   static const requiredKeys = <String>{
     'bCreditcardclientrelationIsdefault',
     'sCreditcardclientDescription',
-    'bCreditcardclientIsactive',
-    'bCreditcardclientAllowedagencypayment',
-    'bCreditcardclientAllowedroyallepageprotection',
+    'bCreditcardclientAllowedcompanypayment',
+    'bCreditcardclientAllowedezsign',
     'bCreditcardclientAllowedtranquillit',
     'objCreditcarddetail',
     'sCreditcardclientCVV',

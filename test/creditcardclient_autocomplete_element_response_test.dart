@@ -28,12 +28,6 @@ void main() {
       // TODO
     });
 
-    // Whether the creditcardclient is active or not
-    // bool bCreditcardclientIsactive
-    test('to test the property `bCreditcardclientIsactive`', () async {
-      // TODO
-    });
-
 
   });
 

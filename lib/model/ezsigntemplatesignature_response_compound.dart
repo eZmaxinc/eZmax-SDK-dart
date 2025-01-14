@@ -17,6 +17,8 @@ class EzsigntemplatesignatureResponseCompound {
     required this.fkiEzsigntemplatedocumentID,
     required this.fkiEzsigntemplatesignerID,
     this.fkiEzsigntemplatesignerIDValidation,
+    this.bEzsigntemplatesignatureHandwritten,
+    this.bEzsigntemplatesignatureReason,
     this.eEzsigntemplatesignaturePositioning,
     required this.iEzsigntemplatedocumentpagePagenumber,
     this.iEzsigntemplatesignatureX,
@@ -25,6 +27,7 @@ class EzsigntemplatesignatureResponseCompound {
     this.iEzsigntemplatesignatureHeight,
     required this.iEzsigntemplatesignatureStep,
     required this.eEzsigntemplatesignatureType,
+    this.eEzsigntemplatesignatureConsultationtrigger,
     this.tEzsigntemplatesignatureTooltip,
     this.eEzsigntemplatesignatureTooltipposition,
     this.eEzsigntemplatesignatureFont,
@@ -33,8 +36,10 @@ class EzsigntemplatesignatureResponseCompound {
     this.eEzsigntemplatesignatureAttachmentnamesource,
     this.bEzsigntemplatesignatureRequired,
     this.iEzsigntemplatesignatureMaxlength,
+    this.sEzsigntemplatesignatureDefaultvalue,
     this.sEzsigntemplatesignatureRegexp,
     this.eEzsigntemplatesignatureTextvalidation,
+    this.sEzsigntemplatesignatureTextvalidationcustommessage,
     this.eEzsigntemplatesignatureDependencyrequirement,
     this.sEzsigntemplatesignaturePositioningpattern,
     this.iEzsigntemplatesignaturePositioningoffsetx,
@@ -70,6 +75,24 @@ class EzsigntemplatesignatureResponseCompound {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   int? fkiEzsigntemplatesignerIDValidation;
+
+  /// Whether the Ezsigntemplatesignature must be handwritten or not when eEzsigntemplatesignatureType = Signature.
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bEzsigntemplatesignatureHandwritten;
+
+  /// Whether the Ezsigntemplatesignature must include a reason or not when eEzsigntemplatesignatureType = Signature.
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bEzsigntemplatesignatureReason;
 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -134,6 +157,14 @@ class EzsigntemplatesignatureResponseCompound {
   int iEzsigntemplatesignatureStep;
 
   FieldEEzsigntemplatesignatureType eEzsigntemplatesignatureType;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEEzsigntemplatesignatureConsultationtrigger? eEzsigntemplatesignatureConsultationtrigger;
 
   /// A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplatesignature
   ///
@@ -207,6 +238,15 @@ class EzsigntemplatesignatureResponseCompound {
   ///
   int? iEzsigntemplatesignatureMaxlength;
 
+  /// The default value for the Ezsigntemplatesignature  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sCompany} | Company name | eZmax Solutions Inc. | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEzsigntemplatesignatureDefaultvalue;
+
   /// A regular expression to indicate what values are acceptable for the Ezsigntemplatesignature.  This can only be set if eEzsigntemplatesignatureType is **Text** or **Textarea**
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -223,6 +263,15 @@ class EzsigntemplatesignatureResponseCompound {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   EnumTextvalidation? eEzsigntemplatesignatureTextvalidation;
+
+  /// Description of validation rule. Show by signatory.
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEzsigntemplatesignatureTextvalidationcustommessage;
 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -287,6 +336,8 @@ class EzsigntemplatesignatureResponseCompound {
     other.fkiEzsigntemplatedocumentID == fkiEzsigntemplatedocumentID &&
     other.fkiEzsigntemplatesignerID == fkiEzsigntemplatesignerID &&
     other.fkiEzsigntemplatesignerIDValidation == fkiEzsigntemplatesignerIDValidation &&
+    other.bEzsigntemplatesignatureHandwritten == bEzsigntemplatesignatureHandwritten &&
+    other.bEzsigntemplatesignatureReason == bEzsigntemplatesignatureReason &&
     other.eEzsigntemplatesignaturePositioning == eEzsigntemplatesignaturePositioning &&
     other.iEzsigntemplatedocumentpagePagenumber == iEzsigntemplatedocumentpagePagenumber &&
     other.iEzsigntemplatesignatureX == iEzsigntemplatesignatureX &&
@@ -295,6 +346,7 @@ class EzsigntemplatesignatureResponseCompound {
     other.iEzsigntemplatesignatureHeight == iEzsigntemplatesignatureHeight &&
     other.iEzsigntemplatesignatureStep == iEzsigntemplatesignatureStep &&
     other.eEzsigntemplatesignatureType == eEzsigntemplatesignatureType &&
+    other.eEzsigntemplatesignatureConsultationtrigger == eEzsigntemplatesignatureConsultationtrigger &&
     other.tEzsigntemplatesignatureTooltip == tEzsigntemplatesignatureTooltip &&
     other.eEzsigntemplatesignatureTooltipposition == eEzsigntemplatesignatureTooltipposition &&
     other.eEzsigntemplatesignatureFont == eEzsigntemplatesignatureFont &&
@@ -303,8 +355,10 @@ class EzsigntemplatesignatureResponseCompound {
     other.eEzsigntemplatesignatureAttachmentnamesource == eEzsigntemplatesignatureAttachmentnamesource &&
     other.bEzsigntemplatesignatureRequired == bEzsigntemplatesignatureRequired &&
     other.iEzsigntemplatesignatureMaxlength == iEzsigntemplatesignatureMaxlength &&
+    other.sEzsigntemplatesignatureDefaultvalue == sEzsigntemplatesignatureDefaultvalue &&
     other.sEzsigntemplatesignatureRegexp == sEzsigntemplatesignatureRegexp &&
     other.eEzsigntemplatesignatureTextvalidation == eEzsigntemplatesignatureTextvalidation &&
+    other.sEzsigntemplatesignatureTextvalidationcustommessage == sEzsigntemplatesignatureTextvalidationcustommessage &&
     other.eEzsigntemplatesignatureDependencyrequirement == eEzsigntemplatesignatureDependencyrequirement &&
     other.sEzsigntemplatesignaturePositioningpattern == sEzsigntemplatesignaturePositioningpattern &&
     other.iEzsigntemplatesignaturePositioningoffsetx == iEzsigntemplatesignaturePositioningoffsetx &&
@@ -321,6 +375,8 @@ class EzsigntemplatesignatureResponseCompound {
     (fkiEzsigntemplatedocumentID.hashCode) +
     (fkiEzsigntemplatesignerID.hashCode) +
     (fkiEzsigntemplatesignerIDValidation == null ? 0 : fkiEzsigntemplatesignerIDValidation!.hashCode) +
+    (bEzsigntemplatesignatureHandwritten == null ? 0 : bEzsigntemplatesignatureHandwritten!.hashCode) +
+    (bEzsigntemplatesignatureReason == null ? 0 : bEzsigntemplatesignatureReason!.hashCode) +
     (eEzsigntemplatesignaturePositioning == null ? 0 : eEzsigntemplatesignaturePositioning!.hashCode) +
     (iEzsigntemplatedocumentpagePagenumber.hashCode) +
     (iEzsigntemplatesignatureX == null ? 0 : iEzsigntemplatesignatureX!.hashCode) +
@@ -329,6 +385,7 @@ class EzsigntemplatesignatureResponseCompound {
     (iEzsigntemplatesignatureHeight == null ? 0 : iEzsigntemplatesignatureHeight!.hashCode) +
     (iEzsigntemplatesignatureStep.hashCode) +
     (eEzsigntemplatesignatureType.hashCode) +
+    (eEzsigntemplatesignatureConsultationtrigger == null ? 0 : eEzsigntemplatesignatureConsultationtrigger!.hashCode) +
     (tEzsigntemplatesignatureTooltip == null ? 0 : tEzsigntemplatesignatureTooltip!.hashCode) +
     (eEzsigntemplatesignatureTooltipposition == null ? 0 : eEzsigntemplatesignatureTooltipposition!.hashCode) +
     (eEzsigntemplatesignatureFont == null ? 0 : eEzsigntemplatesignatureFont!.hashCode) +
@@ -337,8 +394,10 @@ class EzsigntemplatesignatureResponseCompound {
     (eEzsigntemplatesignatureAttachmentnamesource == null ? 0 : eEzsigntemplatesignatureAttachmentnamesource!.hashCode) +
     (bEzsigntemplatesignatureRequired == null ? 0 : bEzsigntemplatesignatureRequired!.hashCode) +
     (iEzsigntemplatesignatureMaxlength == null ? 0 : iEzsigntemplatesignatureMaxlength!.hashCode) +
+    (sEzsigntemplatesignatureDefaultvalue == null ? 0 : sEzsigntemplatesignatureDefaultvalue!.hashCode) +
     (sEzsigntemplatesignatureRegexp == null ? 0 : sEzsigntemplatesignatureRegexp!.hashCode) +
     (eEzsigntemplatesignatureTextvalidation == null ? 0 : eEzsigntemplatesignatureTextvalidation!.hashCode) +
+    (sEzsigntemplatesignatureTextvalidationcustommessage == null ? 0 : sEzsigntemplatesignatureTextvalidationcustommessage!.hashCode) +
     (eEzsigntemplatesignatureDependencyrequirement == null ? 0 : eEzsigntemplatesignatureDependencyrequirement!.hashCode) +
     (sEzsigntemplatesignaturePositioningpattern == null ? 0 : sEzsigntemplatesignaturePositioningpattern!.hashCode) +
     (iEzsigntemplatesignaturePositioningoffsetx == null ? 0 : iEzsigntemplatesignaturePositioningoffsetx!.hashCode) +
@@ -349,7 +408,7 @@ class EzsigntemplatesignatureResponseCompound {
     (aObjEzsigntemplateelementdependency.hashCode);
 
   @override
-  String toString() => 'EzsigntemplatesignatureResponseCompound[pkiEzsigntemplatesignatureID=$pkiEzsigntemplatesignatureID, fkiEzsigntemplatedocumentID=$fkiEzsigntemplatedocumentID, fkiEzsigntemplatesignerID=$fkiEzsigntemplatesignerID, fkiEzsigntemplatesignerIDValidation=$fkiEzsigntemplatesignerIDValidation, eEzsigntemplatesignaturePositioning=$eEzsigntemplatesignaturePositioning, iEzsigntemplatedocumentpagePagenumber=$iEzsigntemplatedocumentpagePagenumber, iEzsigntemplatesignatureX=$iEzsigntemplatesignatureX, iEzsigntemplatesignatureY=$iEzsigntemplatesignatureY, iEzsigntemplatesignatureWidth=$iEzsigntemplatesignatureWidth, iEzsigntemplatesignatureHeight=$iEzsigntemplatesignatureHeight, iEzsigntemplatesignatureStep=$iEzsigntemplatesignatureStep, eEzsigntemplatesignatureType=$eEzsigntemplatesignatureType, tEzsigntemplatesignatureTooltip=$tEzsigntemplatesignatureTooltip, eEzsigntemplatesignatureTooltipposition=$eEzsigntemplatesignatureTooltipposition, eEzsigntemplatesignatureFont=$eEzsigntemplatesignatureFont, iEzsigntemplatesignatureValidationstep=$iEzsigntemplatesignatureValidationstep, sEzsigntemplatesignatureAttachmentdescription=$sEzsigntemplatesignatureAttachmentdescription, eEzsigntemplatesignatureAttachmentnamesource=$eEzsigntemplatesignatureAttachmentnamesource, bEzsigntemplatesignatureRequired=$bEzsigntemplatesignatureRequired, iEzsigntemplatesignatureMaxlength=$iEzsigntemplatesignatureMaxlength, sEzsigntemplatesignatureRegexp=$sEzsigntemplatesignatureRegexp, eEzsigntemplatesignatureTextvalidation=$eEzsigntemplatesignatureTextvalidation, eEzsigntemplatesignatureDependencyrequirement=$eEzsigntemplatesignatureDependencyrequirement, sEzsigntemplatesignaturePositioningpattern=$sEzsigntemplatesignaturePositioningpattern, iEzsigntemplatesignaturePositioningoffsetx=$iEzsigntemplatesignaturePositioningoffsetx, iEzsigntemplatesignaturePositioningoffsety=$iEzsigntemplatesignaturePositioningoffsety, eEzsigntemplatesignaturePositioningoccurence=$eEzsigntemplatesignaturePositioningoccurence, bEzsigntemplatesignatureCustomdate=$bEzsigntemplatesignatureCustomdate, aObjEzsigntemplatesignaturecustomdate=$aObjEzsigntemplatesignaturecustomdate, aObjEzsigntemplateelementdependency=$aObjEzsigntemplateelementdependency]';
+  String toString() => 'EzsigntemplatesignatureResponseCompound[pkiEzsigntemplatesignatureID=$pkiEzsigntemplatesignatureID, fkiEzsigntemplatedocumentID=$fkiEzsigntemplatedocumentID, fkiEzsigntemplatesignerID=$fkiEzsigntemplatesignerID, fkiEzsigntemplatesignerIDValidation=$fkiEzsigntemplatesignerIDValidation, bEzsigntemplatesignatureHandwritten=$bEzsigntemplatesignatureHandwritten, bEzsigntemplatesignatureReason=$bEzsigntemplatesignatureReason, eEzsigntemplatesignaturePositioning=$eEzsigntemplatesignaturePositioning, iEzsigntemplatedocumentpagePagenumber=$iEzsigntemplatedocumentpagePagenumber, iEzsigntemplatesignatureX=$iEzsigntemplatesignatureX, iEzsigntemplatesignatureY=$iEzsigntemplatesignatureY, iEzsigntemplatesignatureWidth=$iEzsigntemplatesignatureWidth, iEzsigntemplatesignatureHeight=$iEzsigntemplatesignatureHeight, iEzsigntemplatesignatureStep=$iEzsigntemplatesignatureStep, eEzsigntemplatesignatureType=$eEzsigntemplatesignatureType, eEzsigntemplatesignatureConsultationtrigger=$eEzsigntemplatesignatureConsultationtrigger, tEzsigntemplatesignatureTooltip=$tEzsigntemplatesignatureTooltip, eEzsigntemplatesignatureTooltipposition=$eEzsigntemplatesignatureTooltipposition, eEzsigntemplatesignatureFont=$eEzsigntemplatesignatureFont, iEzsigntemplatesignatureValidationstep=$iEzsigntemplatesignatureValidationstep, sEzsigntemplatesignatureAttachmentdescription=$sEzsigntemplatesignatureAttachmentdescription, eEzsigntemplatesignatureAttachmentnamesource=$eEzsigntemplatesignatureAttachmentnamesource, bEzsigntemplatesignatureRequired=$bEzsigntemplatesignatureRequired, iEzsigntemplatesignatureMaxlength=$iEzsigntemplatesignatureMaxlength, sEzsigntemplatesignatureDefaultvalue=$sEzsigntemplatesignatureDefaultvalue, sEzsigntemplatesignatureRegexp=$sEzsigntemplatesignatureRegexp, eEzsigntemplatesignatureTextvalidation=$eEzsigntemplatesignatureTextvalidation, sEzsigntemplatesignatureTextvalidationcustommessage=$sEzsigntemplatesignatureTextvalidationcustommessage, eEzsigntemplatesignatureDependencyrequirement=$eEzsigntemplatesignatureDependencyrequirement, sEzsigntemplatesignaturePositioningpattern=$sEzsigntemplatesignaturePositioningpattern, iEzsigntemplatesignaturePositioningoffsetx=$iEzsigntemplatesignaturePositioningoffsetx, iEzsigntemplatesignaturePositioningoffsety=$iEzsigntemplatesignaturePositioningoffsety, eEzsigntemplatesignaturePositioningoccurence=$eEzsigntemplatesignaturePositioningoccurence, bEzsigntemplatesignatureCustomdate=$bEzsigntemplatesignatureCustomdate, aObjEzsigntemplatesignaturecustomdate=$aObjEzsigntemplatesignaturecustomdate, aObjEzsigntemplateelementdependency=$aObjEzsigntemplateelementdependency]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -360,6 +419,16 @@ class EzsigntemplatesignatureResponseCompound {
       json[r'fkiEzsigntemplatesignerIDValidation'] = this.fkiEzsigntemplatesignerIDValidation;
     } else {
       json[r'fkiEzsigntemplatesignerIDValidation'] = null;
+    }
+    if (this.bEzsigntemplatesignatureHandwritten != null) {
+      json[r'bEzsigntemplatesignatureHandwritten'] = this.bEzsigntemplatesignatureHandwritten;
+    } else {
+      json[r'bEzsigntemplatesignatureHandwritten'] = null;
+    }
+    if (this.bEzsigntemplatesignatureReason != null) {
+      json[r'bEzsigntemplatesignatureReason'] = this.bEzsigntemplatesignatureReason;
+    } else {
+      json[r'bEzsigntemplatesignatureReason'] = null;
     }
     if (this.eEzsigntemplatesignaturePositioning != null) {
       json[r'eEzsigntemplatesignaturePositioning'] = this.eEzsigntemplatesignaturePositioning;
@@ -389,6 +458,11 @@ class EzsigntemplatesignatureResponseCompound {
     }
       json[r'iEzsigntemplatesignatureStep'] = this.iEzsigntemplatesignatureStep;
       json[r'eEzsigntemplatesignatureType'] = this.eEzsigntemplatesignatureType;
+    if (this.eEzsigntemplatesignatureConsultationtrigger != null) {
+      json[r'eEzsigntemplatesignatureConsultationtrigger'] = this.eEzsigntemplatesignatureConsultationtrigger;
+    } else {
+      json[r'eEzsigntemplatesignatureConsultationtrigger'] = null;
+    }
     if (this.tEzsigntemplatesignatureTooltip != null) {
       json[r'tEzsigntemplatesignatureTooltip'] = this.tEzsigntemplatesignatureTooltip;
     } else {
@@ -429,6 +503,11 @@ class EzsigntemplatesignatureResponseCompound {
     } else {
       json[r'iEzsigntemplatesignatureMaxlength'] = null;
     }
+    if (this.sEzsigntemplatesignatureDefaultvalue != null) {
+      json[r'sEzsigntemplatesignatureDefaultvalue'] = this.sEzsigntemplatesignatureDefaultvalue;
+    } else {
+      json[r'sEzsigntemplatesignatureDefaultvalue'] = null;
+    }
     if (this.sEzsigntemplatesignatureRegexp != null) {
       json[r'sEzsigntemplatesignatureRegexp'] = this.sEzsigntemplatesignatureRegexp;
     } else {
@@ -438,6 +517,11 @@ class EzsigntemplatesignatureResponseCompound {
       json[r'eEzsigntemplatesignatureTextvalidation'] = this.eEzsigntemplatesignatureTextvalidation;
     } else {
       json[r'eEzsigntemplatesignatureTextvalidation'] = null;
+    }
+    if (this.sEzsigntemplatesignatureTextvalidationcustommessage != null) {
+      json[r'sEzsigntemplatesignatureTextvalidationcustommessage'] = this.sEzsigntemplatesignatureTextvalidationcustommessage;
+    } else {
+      json[r'sEzsigntemplatesignatureTextvalidationcustommessage'] = null;
     }
     if (this.eEzsigntemplatesignatureDependencyrequirement != null) {
       json[r'eEzsigntemplatesignatureDependencyrequirement'] = this.eEzsigntemplatesignatureDependencyrequirement;
@@ -497,6 +581,8 @@ class EzsigntemplatesignatureResponseCompound {
         fkiEzsigntemplatedocumentID: mapValueOfType<int>(json, r'fkiEzsigntemplatedocumentID')!,
         fkiEzsigntemplatesignerID: mapValueOfType<int>(json, r'fkiEzsigntemplatesignerID')!,
         fkiEzsigntemplatesignerIDValidation: mapValueOfType<int>(json, r'fkiEzsigntemplatesignerIDValidation'),
+        bEzsigntemplatesignatureHandwritten: mapValueOfType<bool>(json, r'bEzsigntemplatesignatureHandwritten'),
+        bEzsigntemplatesignatureReason: mapValueOfType<bool>(json, r'bEzsigntemplatesignatureReason'),
         eEzsigntemplatesignaturePositioning: FieldEEzsigntemplatesignaturePositioning.fromJson(json[r'eEzsigntemplatesignaturePositioning']),
         iEzsigntemplatedocumentpagePagenumber: mapValueOfType<int>(json, r'iEzsigntemplatedocumentpagePagenumber')!,
         iEzsigntemplatesignatureX: mapValueOfType<int>(json, r'iEzsigntemplatesignatureX'),
@@ -505,6 +591,7 @@ class EzsigntemplatesignatureResponseCompound {
         iEzsigntemplatesignatureHeight: mapValueOfType<int>(json, r'iEzsigntemplatesignatureHeight'),
         iEzsigntemplatesignatureStep: mapValueOfType<int>(json, r'iEzsigntemplatesignatureStep')!,
         eEzsigntemplatesignatureType: FieldEEzsigntemplatesignatureType.fromJson(json[r'eEzsigntemplatesignatureType'])!,
+        eEzsigntemplatesignatureConsultationtrigger: FieldEEzsigntemplatesignatureConsultationtrigger.fromJson(json[r'eEzsigntemplatesignatureConsultationtrigger']),
         tEzsigntemplatesignatureTooltip: mapValueOfType<String>(json, r'tEzsigntemplatesignatureTooltip'),
         eEzsigntemplatesignatureTooltipposition: FieldEEzsigntemplatesignatureTooltipposition.fromJson(json[r'eEzsigntemplatesignatureTooltipposition']),
         eEzsigntemplatesignatureFont: FieldEEzsigntemplatesignatureFont.fromJson(json[r'eEzsigntemplatesignatureFont']),
@@ -513,8 +600,10 @@ class EzsigntemplatesignatureResponseCompound {
         eEzsigntemplatesignatureAttachmentnamesource: FieldEEzsigntemplatesignatureAttachmentnamesource.fromJson(json[r'eEzsigntemplatesignatureAttachmentnamesource']),
         bEzsigntemplatesignatureRequired: mapValueOfType<bool>(json, r'bEzsigntemplatesignatureRequired'),
         iEzsigntemplatesignatureMaxlength: mapValueOfType<int>(json, r'iEzsigntemplatesignatureMaxlength'),
+        sEzsigntemplatesignatureDefaultvalue: mapValueOfType<String>(json, r'sEzsigntemplatesignatureDefaultvalue'),
         sEzsigntemplatesignatureRegexp: mapValueOfType<String>(json, r'sEzsigntemplatesignatureRegexp'),
         eEzsigntemplatesignatureTextvalidation: EnumTextvalidation.fromJson(json[r'eEzsigntemplatesignatureTextvalidation']),
+        sEzsigntemplatesignatureTextvalidationcustommessage: mapValueOfType<String>(json, r'sEzsigntemplatesignatureTextvalidationcustommessage'),
         eEzsigntemplatesignatureDependencyrequirement: FieldEEzsigntemplatesignatureDependencyrequirement.fromJson(json[r'eEzsigntemplatesignatureDependencyrequirement']),
         sEzsigntemplatesignaturePositioningpattern: mapValueOfType<String>(json, r'sEzsigntemplatesignaturePositioningpattern'),
         iEzsigntemplatesignaturePositioningoffsetx: mapValueOfType<int>(json, r'iEzsigntemplatesignaturePositioningoffsetx'),

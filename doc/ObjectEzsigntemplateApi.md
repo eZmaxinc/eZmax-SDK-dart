@@ -10,15 +10,12 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ezsigntemplateCopyV1**](ObjectEzsigntemplateApi.md#ezsigntemplatecopyv1) | **POST** /1/object/ezsigntemplate/{pkiEzsigntemplateID}/copy | Copy the Ezsigntemplate
-[**ezsigntemplateCreateObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplatecreateobjectv1) | **POST** /1/object/ezsigntemplate | Create a new Ezsigntemplate
-[**ezsigntemplateCreateObjectV2**](ObjectEzsigntemplateApi.md#ezsigntemplatecreateobjectv2) | **POST** /2/object/ezsigntemplate | Create a new Ezsigntemplate
+[**ezsigntemplateCreateObjectV3**](ObjectEzsigntemplateApi.md#ezsigntemplatecreateobjectv3) | **POST** /3/object/ezsigntemplate | Create a new Ezsigntemplate
 [**ezsigntemplateDeleteObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplatedeleteobjectv1) | **DELETE** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Delete an existing Ezsigntemplate
-[**ezsigntemplateEditObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplateeditobjectv1) | **PUT** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Edit an existing Ezsigntemplate
-[**ezsigntemplateEditObjectV2**](ObjectEzsigntemplateApi.md#ezsigntemplateeditobjectv2) | **PUT** /2/object/ezsigntemplate/{pkiEzsigntemplateID} | Edit an existing Ezsigntemplate
+[**ezsigntemplateEditObjectV3**](ObjectEzsigntemplateApi.md#ezsigntemplateeditobjectv3) | **PUT** /3/object/ezsigntemplate/{pkiEzsigntemplateID} | Edit an existing Ezsigntemplate
 [**ezsigntemplateGetAutocompleteV2**](ObjectEzsigntemplateApi.md#ezsigntemplategetautocompletev2) | **GET** /2/object/ezsigntemplate/getAutocomplete/{sSelector} | Retrieve Ezsigntemplates and IDs
 [**ezsigntemplateGetListV1**](ObjectEzsigntemplateApi.md#ezsigntemplategetlistv1) | **GET** /1/object/ezsigntemplate/getList | Retrieve Ezsigntemplate list
-[**ezsigntemplateGetObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplategetobjectv1) | **GET** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate
-[**ezsigntemplateGetObjectV2**](ObjectEzsigntemplateApi.md#ezsigntemplategetobjectv2) | **GET** /2/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate
+[**ezsigntemplateGetObjectV3**](ObjectEzsigntemplateApi.md#ezsigntemplategetobjectv3) | **GET** /3/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate
 
 
 # **ezsigntemplateCopyV1**
@@ -70,8 +67,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **ezsigntemplateCreateObjectV1**
-> EzsigntemplateCreateObjectV1Response ezsigntemplateCreateObjectV1(ezsigntemplateCreateObjectV1Request)
+# **ezsigntemplateCreateObjectV3**
+> EzsigntemplateCreateObjectV3Response ezsigntemplateCreateObjectV3(ezsigntemplateCreateObjectV3Request)
 
 Create a new Ezsigntemplate
 
@@ -86,13 +83,13 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
 
 final api_instance = ObjectEzsigntemplateApi();
-final ezsigntemplateCreateObjectV1Request = EzsigntemplateCreateObjectV1Request(); // EzsigntemplateCreateObjectV1Request | 
+final ezsigntemplateCreateObjectV3Request = EzsigntemplateCreateObjectV3Request(); // EzsigntemplateCreateObjectV3Request | 
 
 try {
-    final result = api_instance.ezsigntemplateCreateObjectV1(ezsigntemplateCreateObjectV1Request);
+    final result = api_instance.ezsigntemplateCreateObjectV3(ezsigntemplateCreateObjectV3Request);
     print(result);
 } catch (e) {
-    print('Exception when calling ObjectEzsigntemplateApi->ezsigntemplateCreateObjectV1: $e\n');
+    print('Exception when calling ObjectEzsigntemplateApi->ezsigntemplateCreateObjectV3: $e\n');
 }
 ```
 
@@ -100,58 +97,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ezsigntemplateCreateObjectV1Request** | [**EzsigntemplateCreateObjectV1Request**](EzsigntemplateCreateObjectV1Request.md)|  | 
+ **ezsigntemplateCreateObjectV3Request** | [**EzsigntemplateCreateObjectV3Request**](EzsigntemplateCreateObjectV3Request.md)|  | 
 
 ### Return type
 
-[**EzsigntemplateCreateObjectV1Response**](EzsigntemplateCreateObjectV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **ezsigntemplateCreateObjectV2**
-> EzsigntemplateCreateObjectV2Response ezsigntemplateCreateObjectV2(ezsigntemplateCreateObjectV2Request)
-
-Create a new Ezsigntemplate
-
-The endpoint allows to create one or many elements at once.
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectEzsigntemplateApi();
-final ezsigntemplateCreateObjectV2Request = EzsigntemplateCreateObjectV2Request(); // EzsigntemplateCreateObjectV2Request | 
-
-try {
-    final result = api_instance.ezsigntemplateCreateObjectV2(ezsigntemplateCreateObjectV2Request);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectEzsigntemplateApi->ezsigntemplateCreateObjectV2: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ezsigntemplateCreateObjectV2Request** | [**EzsigntemplateCreateObjectV2Request**](EzsigntemplateCreateObjectV2Request.md)|  | 
-
-### Return type
-
-[**EzsigntemplateCreateObjectV2Response**](EzsigntemplateCreateObjectV2Response.md)
+[**EzsigntemplateCreateObjectV3Response**](EzsigntemplateCreateObjectV3Response.md)
 
 ### Authorization
 
@@ -211,8 +161,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **ezsigntemplateEditObjectV1**
-> EzsigntemplateEditObjectV1Response ezsigntemplateEditObjectV1(pkiEzsigntemplateID, ezsigntemplateEditObjectV1Request)
+# **ezsigntemplateEditObjectV3**
+> EzsigntemplateEditObjectV3Response ezsigntemplateEditObjectV3(pkiEzsigntemplateID, ezsigntemplateEditObjectV3Request)
 
 Edit an existing Ezsigntemplate
 
@@ -228,13 +178,13 @@ import 'package:openapi/api.dart';
 
 final api_instance = ObjectEzsigntemplateApi();
 final pkiEzsigntemplateID = 56; // int | 
-final ezsigntemplateEditObjectV1Request = EzsigntemplateEditObjectV1Request(); // EzsigntemplateEditObjectV1Request | 
+final ezsigntemplateEditObjectV3Request = EzsigntemplateEditObjectV3Request(); // EzsigntemplateEditObjectV3Request | 
 
 try {
-    final result = api_instance.ezsigntemplateEditObjectV1(pkiEzsigntemplateID, ezsigntemplateEditObjectV1Request);
+    final result = api_instance.ezsigntemplateEditObjectV3(pkiEzsigntemplateID, ezsigntemplateEditObjectV3Request);
     print(result);
 } catch (e) {
-    print('Exception when calling ObjectEzsigntemplateApi->ezsigntemplateEditObjectV1: $e\n');
+    print('Exception when calling ObjectEzsigntemplateApi->ezsigntemplateEditObjectV3: $e\n');
 }
 ```
 
@@ -243,60 +193,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsigntemplateID** | **int**|  | 
- **ezsigntemplateEditObjectV1Request** | [**EzsigntemplateEditObjectV1Request**](EzsigntemplateEditObjectV1Request.md)|  | 
+ **ezsigntemplateEditObjectV3Request** | [**EzsigntemplateEditObjectV3Request**](EzsigntemplateEditObjectV3Request.md)|  | 
 
 ### Return type
 
-[**EzsigntemplateEditObjectV1Response**](EzsigntemplateEditObjectV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **ezsigntemplateEditObjectV2**
-> EzsigntemplateEditObjectV2Response ezsigntemplateEditObjectV2(pkiEzsigntemplateID, ezsigntemplateEditObjectV2Request)
-
-Edit an existing Ezsigntemplate
-
-
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectEzsigntemplateApi();
-final pkiEzsigntemplateID = 56; // int | 
-final ezsigntemplateEditObjectV2Request = EzsigntemplateEditObjectV2Request(); // EzsigntemplateEditObjectV2Request | 
-
-try {
-    final result = api_instance.ezsigntemplateEditObjectV2(pkiEzsigntemplateID, ezsigntemplateEditObjectV2Request);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectEzsigntemplateApi->ezsigntemplateEditObjectV2: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsigntemplateID** | **int**|  | 
- **ezsigntemplateEditObjectV2Request** | [**EzsigntemplateEditObjectV2Request**](EzsigntemplateEditObjectV2Request.md)|  | 
-
-### Return type
-
-[**EzsigntemplateEditObjectV2Response**](EzsigntemplateEditObjectV2Response.md)
+[**EzsigntemplateEditObjectV3Response**](EzsigntemplateEditObjectV3Response.md)
 
 ### Authorization
 
@@ -310,7 +211,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **ezsigntemplateGetAutocompleteV2**
-> EzsigntemplateGetAutocompleteV2Response ezsigntemplateGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+> EzsigntemplateGetAutocompleteV2Response ezsigntemplateGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage, fkiEzsignfoldertypeID)
 
 Retrieve Ezsigntemplates and IDs
 
@@ -329,9 +230,10 @@ final sSelector = sSelector_example; // String | The type of Ezsigntemplates to 
 final eFilterActive = eFilterActive_example; // String | Specify which results we want to display.
 final sQuery = sQuery_example; // String | Allow to filter the returned results
 final acceptLanguage = ; // HeaderAcceptLanguage | 
+final fkiEzsignfoldertypeID = 56; // int | The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic
 
 try {
-    final result = api_instance.ezsigntemplateGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
+    final result = api_instance.ezsigntemplateGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage, fkiEzsignfoldertypeID);
     print(result);
 } catch (e) {
     print('Exception when calling ObjectEzsigntemplateApi->ezsigntemplateGetAutocompleteV2: $e\n');
@@ -346,6 +248,7 @@ Name | Type | Description  | Notes
  **eFilterActive** | **String**| Specify which results we want to display. | [optional] [default to 'Active']
  **sQuery** | **String**| Allow to filter the returned results | [optional] 
  **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] 
+ **fkiEzsignfoldertypeID** | **int**| The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic | [optional] 
 
 ### Return type
 
@@ -417,8 +320,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **ezsigntemplateGetObjectV1**
-> EzsigntemplateGetObjectV1Response ezsigntemplateGetObjectV1(pkiEzsigntemplateID)
+# **ezsigntemplateGetObjectV3**
+> EzsigntemplateGetObjectV3Response ezsigntemplateGetObjectV3(pkiEzsigntemplateID)
 
 Retrieve an existing Ezsigntemplate
 
@@ -436,10 +339,10 @@ final api_instance = ObjectEzsigntemplateApi();
 final pkiEzsigntemplateID = 56; // int | 
 
 try {
-    final result = api_instance.ezsigntemplateGetObjectV1(pkiEzsigntemplateID);
+    final result = api_instance.ezsigntemplateGetObjectV3(pkiEzsigntemplateID);
     print(result);
 } catch (e) {
-    print('Exception when calling ObjectEzsigntemplateApi->ezsigntemplateGetObjectV1: $e\n');
+    print('Exception when calling ObjectEzsigntemplateApi->ezsigntemplateGetObjectV3: $e\n');
 }
 ```
 
@@ -451,54 +354,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsigntemplateGetObjectV1Response**](EzsigntemplateGetObjectV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **ezsigntemplateGetObjectV2**
-> EzsigntemplateGetObjectV2Response ezsigntemplateGetObjectV2(pkiEzsigntemplateID)
-
-Retrieve an existing Ezsigntemplate
-
-
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectEzsigntemplateApi();
-final pkiEzsigntemplateID = 56; // int | 
-
-try {
-    final result = api_instance.ezsigntemplateGetObjectV2(pkiEzsigntemplateID);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectEzsigntemplateApi->ezsigntemplateGetObjectV2: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsigntemplateID** | **int**|  | 
-
-### Return type
-
-[**EzsigntemplateGetObjectV2Response**](EzsigntemplateGetObjectV2Response.md)
+[**EzsigntemplateGetObjectV3Response**](EzsigntemplateGetObjectV3Response.md)
 
 ### Authorization
 

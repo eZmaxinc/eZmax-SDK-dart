@@ -1,0 +1,24 @@
+# openapi.model.BrandingResponseV3
+
+## Load the model package
+```dart
+import 'package:openapi/api.dart';
+```
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**pkiBrandingID** | **int** | The unique ID of the Branding | 
+**fkiEmailID** | **int** | The unique ID of the Email | [optional] 
+**objBrandingDescription** | [**MultilingualBrandingDescription**](MultilingualBrandingDescription.md) |  | 
+**sBrandingDescriptionX** | **String** | The Description of the Branding in the language of the requester | 
+**sBrandingName** | **String** | The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty | [optional] 
+**sEmailAddress** | **String** | The email address. | [optional] 
+**eBrandingLogo** | [**FieldEBrandingLogo**](FieldEBrandingLogo.md) |  | 
+**eBrandingAlignlogo** | [**FieldEBrandingAlignlogo**](FieldEBrandingAlignlogo.md) |  | 
+**iBrandingColor** | **int** | The primary color. This is a RGB color converted into integer | 
+**bBrandingIsactive** | **bool** | Whether the Branding is active or not | 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

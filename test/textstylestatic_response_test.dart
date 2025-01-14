@@ -28,6 +28,12 @@ void main() {
       // TODO
     });
 
+    // The name of the Font
+    // String sFontName
+    test('to test the property `sFontName`', () async {
+      // TODO
+    });
+
     // Whether the Textstylestatic is Bold or not
     // bool bTextstylestaticBold
     test('to test the property `bTextstylestaticBold`', () async {

@@ -17,8 +17,11 @@ class EzsigntemplateResponseCompound {
     this.fkiEzsigntemplatedocumentID,
     this.fkiEzsignfoldertypeID,
     required this.fkiLanguageID,
+    this.fkiEzdoctemplatedocumentID,
     required this.sLanguageNameX,
     required this.sEzsigntemplateDescription,
+    this.sEzsigntemplateExternaldescription,
+    this.tEzsigntemplateComment,
     this.sEzsigntemplateFilenamepattern,
     required this.bEzsigntemplateAdminonly,
     this.sEzsignfoldertypeNameX,
@@ -63,11 +66,41 @@ class EzsigntemplateResponseCompound {
   /// Maximum value: 2
   int fkiLanguageID;
 
+  /// The unique ID of the Ezdoctemplatedocument
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 65535
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiEzdoctemplatedocumentID;
+
   /// The Name of the Language in the language of the requester
   String sLanguageNameX;
 
   /// The description of the Ezsigntemplate
   String sEzsigntemplateDescription;
+
+  /// The external description of the Ezsigntemplate
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEzsigntemplateExternaldescription;
+
+  /// The comment of the Ezsigntemplate
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? tEzsigntemplateComment;
 
   /// The filename pattern of the Ezsigntemplate
   ///
@@ -119,8 +152,11 @@ class EzsigntemplateResponseCompound {
     other.fkiEzsigntemplatedocumentID == fkiEzsigntemplatedocumentID &&
     other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
     other.fkiLanguageID == fkiLanguageID &&
+    other.fkiEzdoctemplatedocumentID == fkiEzdoctemplatedocumentID &&
     other.sLanguageNameX == sLanguageNameX &&
     other.sEzsigntemplateDescription == sEzsigntemplateDescription &&
+    other.sEzsigntemplateExternaldescription == sEzsigntemplateExternaldescription &&
+    other.tEzsigntemplateComment == tEzsigntemplateComment &&
     other.sEzsigntemplateFilenamepattern == sEzsigntemplateFilenamepattern &&
     other.bEzsigntemplateAdminonly == bEzsigntemplateAdminonly &&
     other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
@@ -137,8 +173,11 @@ class EzsigntemplateResponseCompound {
     (fkiEzsigntemplatedocumentID == null ? 0 : fkiEzsigntemplatedocumentID!.hashCode) +
     (fkiEzsignfoldertypeID == null ? 0 : fkiEzsignfoldertypeID!.hashCode) +
     (fkiLanguageID.hashCode) +
+    (fkiEzdoctemplatedocumentID == null ? 0 : fkiEzdoctemplatedocumentID!.hashCode) +
     (sLanguageNameX.hashCode) +
     (sEzsigntemplateDescription.hashCode) +
+    (sEzsigntemplateExternaldescription == null ? 0 : sEzsigntemplateExternaldescription!.hashCode) +
+    (tEzsigntemplateComment == null ? 0 : tEzsigntemplateComment!.hashCode) +
     (sEzsigntemplateFilenamepattern == null ? 0 : sEzsigntemplateFilenamepattern!.hashCode) +
     (bEzsigntemplateAdminonly.hashCode) +
     (sEzsignfoldertypeNameX == null ? 0 : sEzsignfoldertypeNameX!.hashCode) +
@@ -149,7 +188,7 @@ class EzsigntemplateResponseCompound {
     (aObjEzsigntemplatesigner.hashCode);
 
   @override
-  String toString() => 'EzsigntemplateResponseCompound[pkiEzsigntemplateID=$pkiEzsigntemplateID, fkiEzsigntemplatedocumentID=$fkiEzsigntemplatedocumentID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiLanguageID=$fkiLanguageID, sLanguageNameX=$sLanguageNameX, sEzsigntemplateDescription=$sEzsigntemplateDescription, sEzsigntemplateFilenamepattern=$sEzsigntemplateFilenamepattern, bEzsigntemplateAdminonly=$bEzsigntemplateAdminonly, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, objAudit=$objAudit, bEzsigntemplateEditallowed=$bEzsigntemplateEditallowed, eEzsigntemplateType=$eEzsigntemplateType, objEzsigntemplatedocument=$objEzsigntemplatedocument, aObjEzsigntemplatesigner=$aObjEzsigntemplatesigner]';
+  String toString() => 'EzsigntemplateResponseCompound[pkiEzsigntemplateID=$pkiEzsigntemplateID, fkiEzsigntemplatedocumentID=$fkiEzsigntemplatedocumentID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiLanguageID=$fkiLanguageID, fkiEzdoctemplatedocumentID=$fkiEzdoctemplatedocumentID, sLanguageNameX=$sLanguageNameX, sEzsigntemplateDescription=$sEzsigntemplateDescription, sEzsigntemplateExternaldescription=$sEzsigntemplateExternaldescription, tEzsigntemplateComment=$tEzsigntemplateComment, sEzsigntemplateFilenamepattern=$sEzsigntemplateFilenamepattern, bEzsigntemplateAdminonly=$bEzsigntemplateAdminonly, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, objAudit=$objAudit, bEzsigntemplateEditallowed=$bEzsigntemplateEditallowed, eEzsigntemplateType=$eEzsigntemplateType, objEzsigntemplatedocument=$objEzsigntemplatedocument, aObjEzsigntemplatesigner=$aObjEzsigntemplatesigner]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -165,8 +204,23 @@ class EzsigntemplateResponseCompound {
       json[r'fkiEzsignfoldertypeID'] = null;
     }
       json[r'fkiLanguageID'] = this.fkiLanguageID;
+    if (this.fkiEzdoctemplatedocumentID != null) {
+      json[r'fkiEzdoctemplatedocumentID'] = this.fkiEzdoctemplatedocumentID;
+    } else {
+      json[r'fkiEzdoctemplatedocumentID'] = null;
+    }
       json[r'sLanguageNameX'] = this.sLanguageNameX;
       json[r'sEzsigntemplateDescription'] = this.sEzsigntemplateDescription;
+    if (this.sEzsigntemplateExternaldescription != null) {
+      json[r'sEzsigntemplateExternaldescription'] = this.sEzsigntemplateExternaldescription;
+    } else {
+      json[r'sEzsigntemplateExternaldescription'] = null;
+    }
+    if (this.tEzsigntemplateComment != null) {
+      json[r'tEzsigntemplateComment'] = this.tEzsigntemplateComment;
+    } else {
+      json[r'tEzsigntemplateComment'] = null;
+    }
     if (this.sEzsigntemplateFilenamepattern != null) {
       json[r'sEzsigntemplateFilenamepattern'] = this.sEzsigntemplateFilenamepattern;
     } else {
@@ -217,8 +271,11 @@ class EzsigntemplateResponseCompound {
         fkiEzsigntemplatedocumentID: mapValueOfType<int>(json, r'fkiEzsigntemplatedocumentID'),
         fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID'),
         fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID')!,
+        fkiEzdoctemplatedocumentID: mapValueOfType<int>(json, r'fkiEzdoctemplatedocumentID'),
         sLanguageNameX: mapValueOfType<String>(json, r'sLanguageNameX')!,
         sEzsigntemplateDescription: mapValueOfType<String>(json, r'sEzsigntemplateDescription')!,
+        sEzsigntemplateExternaldescription: mapValueOfType<String>(json, r'sEzsigntemplateExternaldescription'),
+        tEzsigntemplateComment: mapValueOfType<String>(json, r'tEzsigntemplateComment'),
         sEzsigntemplateFilenamepattern: mapValueOfType<String>(json, r'sEzsigntemplateFilenamepattern'),
         bEzsigntemplateAdminonly: mapValueOfType<bool>(json, r'bEzsigntemplateAdminonly')!,
         sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX'),

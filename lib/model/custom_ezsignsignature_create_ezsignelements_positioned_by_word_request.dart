@@ -27,12 +27,17 @@ class CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest {
     this.eEzsignsignatureTooltipposition,
     this.eEzsignsignatureFont,
     this.fkiEzsignfoldersignerassociationIDValidation,
+    this.bEzsignsignatureHandwritten,
+    this.bEzsignsignatureReason,
     this.bEzsignsignatureRequired,
     this.eEzsignsignatureAttachmentnamesource,
     this.sEzsignsignatureAttachmentdescription,
+    this.eEzsignsignatureConsultationtrigger,
     this.iEzsignsignatureValidationstep,
     this.iEzsignsignatureMaxlength,
+    this.sEzsignsignatureDefaultvalue,
     this.eEzsignsignatureTextvalidation,
+    this.sEzsignsignatureTextvalidationcustommessage,
     this.sEzsignsignatureRegexp,
     this.eEzsignsignatureDependencyrequirement,
     this.bEzsignsignatureCustomdate,
@@ -140,7 +145,25 @@ class CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest {
   ///
   int? fkiEzsignfoldersignerassociationIDValidation;
 
-  /// Whether the Ezsignsignature is required or not. This field is relevant only with Ezsignsignature with eEzsignsignatureType = Attachments.
+  /// Whether the Ezsignsignature must be handwritten or not when eEzsignsignatureType = Signature.
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bEzsignsignatureHandwritten;
+
+  /// Whether the Ezsignsignature must include a reason or not when eEzsignsignatureType = Signature.
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bEzsignsignatureReason;
+
+  /// Whether the Ezsignsignature is required or not. This field is relevant only with Ezsignsignature with eEzsignsignatureType = Attachments, Text or Textarea.
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -166,6 +189,14 @@ class CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest {
   ///
   String? sEzsignsignatureAttachmentdescription;
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEEzsignsignatureConsultationtrigger? eEzsignsignatureConsultationtrigger;
+
   /// The step when the Ezsignsigner will be invited to validate the Ezsignsignature of eEzsignsignatureType Attachments
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -187,6 +218,15 @@ class CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest {
   ///
   int? iEzsignsignatureMaxlength;
 
+  /// The default value for the Ezsignsignature  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sCompany} | Company name | eZmax Solutions Inc. | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEzsignsignatureDefaultvalue;
+
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -194,6 +234,15 @@ class CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   EnumTextvalidation? eEzsignsignatureTextvalidation;
+
+  /// Description of validation rule. Show by signatory.
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEzsignsignatureTextvalidationcustommessage;
 
   /// A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom**
   ///
@@ -244,12 +293,17 @@ class CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest {
     other.eEzsignsignatureTooltipposition == eEzsignsignatureTooltipposition &&
     other.eEzsignsignatureFont == eEzsignsignatureFont &&
     other.fkiEzsignfoldersignerassociationIDValidation == fkiEzsignfoldersignerassociationIDValidation &&
+    other.bEzsignsignatureHandwritten == bEzsignsignatureHandwritten &&
+    other.bEzsignsignatureReason == bEzsignsignatureReason &&
     other.bEzsignsignatureRequired == bEzsignsignatureRequired &&
     other.eEzsignsignatureAttachmentnamesource == eEzsignsignatureAttachmentnamesource &&
     other.sEzsignsignatureAttachmentdescription == sEzsignsignatureAttachmentdescription &&
+    other.eEzsignsignatureConsultationtrigger == eEzsignsignatureConsultationtrigger &&
     other.iEzsignsignatureValidationstep == iEzsignsignatureValidationstep &&
     other.iEzsignsignatureMaxlength == iEzsignsignatureMaxlength &&
+    other.sEzsignsignatureDefaultvalue == sEzsignsignatureDefaultvalue &&
     other.eEzsignsignatureTextvalidation == eEzsignsignatureTextvalidation &&
+    other.sEzsignsignatureTextvalidationcustommessage == sEzsignsignatureTextvalidationcustommessage &&
     other.sEzsignsignatureRegexp == sEzsignsignatureRegexp &&
     other.eEzsignsignatureDependencyrequirement == eEzsignsignatureDependencyrequirement &&
     other.bEzsignsignatureCustomdate == bEzsignsignatureCustomdate &&
@@ -274,12 +328,17 @@ class CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest {
     (eEzsignsignatureTooltipposition == null ? 0 : eEzsignsignatureTooltipposition!.hashCode) +
     (eEzsignsignatureFont == null ? 0 : eEzsignsignatureFont!.hashCode) +
     (fkiEzsignfoldersignerassociationIDValidation == null ? 0 : fkiEzsignfoldersignerassociationIDValidation!.hashCode) +
+    (bEzsignsignatureHandwritten == null ? 0 : bEzsignsignatureHandwritten!.hashCode) +
+    (bEzsignsignatureReason == null ? 0 : bEzsignsignatureReason!.hashCode) +
     (bEzsignsignatureRequired == null ? 0 : bEzsignsignatureRequired!.hashCode) +
     (eEzsignsignatureAttachmentnamesource == null ? 0 : eEzsignsignatureAttachmentnamesource!.hashCode) +
     (sEzsignsignatureAttachmentdescription == null ? 0 : sEzsignsignatureAttachmentdescription!.hashCode) +
+    (eEzsignsignatureConsultationtrigger == null ? 0 : eEzsignsignatureConsultationtrigger!.hashCode) +
     (iEzsignsignatureValidationstep == null ? 0 : iEzsignsignatureValidationstep!.hashCode) +
     (iEzsignsignatureMaxlength == null ? 0 : iEzsignsignatureMaxlength!.hashCode) +
+    (sEzsignsignatureDefaultvalue == null ? 0 : sEzsignsignatureDefaultvalue!.hashCode) +
     (eEzsignsignatureTextvalidation == null ? 0 : eEzsignsignatureTextvalidation!.hashCode) +
+    (sEzsignsignatureTextvalidationcustommessage == null ? 0 : sEzsignsignatureTextvalidationcustommessage!.hashCode) +
     (sEzsignsignatureRegexp == null ? 0 : sEzsignsignatureRegexp!.hashCode) +
     (eEzsignsignatureDependencyrequirement == null ? 0 : eEzsignsignatureDependencyrequirement!.hashCode) +
     (bEzsignsignatureCustomdate == null ? 0 : bEzsignsignatureCustomdate!.hashCode) +
@@ -288,7 +347,7 @@ class CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest {
     (objCreateezsignelementspositionedbyword.hashCode);
 
   @override
-  String toString() => 'CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest[pkiEzsignsignatureID=$pkiEzsignsignatureID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureWidth=$iEzsignsignatureWidth, iEzsignsignatureHeight=$iEzsignsignatureHeight, iEzsignsignatureStep=$iEzsignsignatureStep, eEzsignsignatureType=$eEzsignsignatureType, fkiEzsigndocumentID=$fkiEzsigndocumentID, tEzsignsignatureTooltip=$tEzsignsignatureTooltip, eEzsignsignatureTooltipposition=$eEzsignsignatureTooltipposition, eEzsignsignatureFont=$eEzsignsignatureFont, fkiEzsignfoldersignerassociationIDValidation=$fkiEzsignfoldersignerassociationIDValidation, bEzsignsignatureRequired=$bEzsignsignatureRequired, eEzsignsignatureAttachmentnamesource=$eEzsignsignatureAttachmentnamesource, sEzsignsignatureAttachmentdescription=$sEzsignsignatureAttachmentdescription, iEzsignsignatureValidationstep=$iEzsignsignatureValidationstep, iEzsignsignatureMaxlength=$iEzsignsignatureMaxlength, eEzsignsignatureTextvalidation=$eEzsignsignatureTextvalidation, sEzsignsignatureRegexp=$sEzsignsignatureRegexp, eEzsignsignatureDependencyrequirement=$eEzsignsignatureDependencyrequirement, bEzsignsignatureCustomdate=$bEzsignsignatureCustomdate, aObjEzsignsignaturecustomdate=$aObjEzsignsignaturecustomdate, aObjEzsignelementdependency=$aObjEzsignelementdependency, objCreateezsignelementspositionedbyword=$objCreateezsignelementspositionedbyword]';
+  String toString() => 'CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest[pkiEzsignsignatureID=$pkiEzsignsignatureID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureWidth=$iEzsignsignatureWidth, iEzsignsignatureHeight=$iEzsignsignatureHeight, iEzsignsignatureStep=$iEzsignsignatureStep, eEzsignsignatureType=$eEzsignsignatureType, fkiEzsigndocumentID=$fkiEzsigndocumentID, tEzsignsignatureTooltip=$tEzsignsignatureTooltip, eEzsignsignatureTooltipposition=$eEzsignsignatureTooltipposition, eEzsignsignatureFont=$eEzsignsignatureFont, fkiEzsignfoldersignerassociationIDValidation=$fkiEzsignfoldersignerassociationIDValidation, bEzsignsignatureHandwritten=$bEzsignsignatureHandwritten, bEzsignsignatureReason=$bEzsignsignatureReason, bEzsignsignatureRequired=$bEzsignsignatureRequired, eEzsignsignatureAttachmentnamesource=$eEzsignsignatureAttachmentnamesource, sEzsignsignatureAttachmentdescription=$sEzsignsignatureAttachmentdescription, eEzsignsignatureConsultationtrigger=$eEzsignsignatureConsultationtrigger, iEzsignsignatureValidationstep=$iEzsignsignatureValidationstep, iEzsignsignatureMaxlength=$iEzsignsignatureMaxlength, sEzsignsignatureDefaultvalue=$sEzsignsignatureDefaultvalue, eEzsignsignatureTextvalidation=$eEzsignsignatureTextvalidation, sEzsignsignatureTextvalidationcustommessage=$sEzsignsignatureTextvalidationcustommessage, sEzsignsignatureRegexp=$sEzsignsignatureRegexp, eEzsignsignatureDependencyrequirement=$eEzsignsignatureDependencyrequirement, bEzsignsignatureCustomdate=$bEzsignsignatureCustomdate, aObjEzsignsignaturecustomdate=$aObjEzsignsignaturecustomdate, aObjEzsignelementdependency=$aObjEzsignelementdependency, objCreateezsignelementspositionedbyword=$objCreateezsignelementspositionedbyword]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -334,6 +393,16 @@ class CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest {
     } else {
       json[r'fkiEzsignfoldersignerassociationIDValidation'] = null;
     }
+    if (this.bEzsignsignatureHandwritten != null) {
+      json[r'bEzsignsignatureHandwritten'] = this.bEzsignsignatureHandwritten;
+    } else {
+      json[r'bEzsignsignatureHandwritten'] = null;
+    }
+    if (this.bEzsignsignatureReason != null) {
+      json[r'bEzsignsignatureReason'] = this.bEzsignsignatureReason;
+    } else {
+      json[r'bEzsignsignatureReason'] = null;
+    }
     if (this.bEzsignsignatureRequired != null) {
       json[r'bEzsignsignatureRequired'] = this.bEzsignsignatureRequired;
     } else {
@@ -349,6 +418,11 @@ class CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest {
     } else {
       json[r'sEzsignsignatureAttachmentdescription'] = null;
     }
+    if (this.eEzsignsignatureConsultationtrigger != null) {
+      json[r'eEzsignsignatureConsultationtrigger'] = this.eEzsignsignatureConsultationtrigger;
+    } else {
+      json[r'eEzsignsignatureConsultationtrigger'] = null;
+    }
     if (this.iEzsignsignatureValidationstep != null) {
       json[r'iEzsignsignatureValidationstep'] = this.iEzsignsignatureValidationstep;
     } else {
@@ -359,10 +433,20 @@ class CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest {
     } else {
       json[r'iEzsignsignatureMaxlength'] = null;
     }
+    if (this.sEzsignsignatureDefaultvalue != null) {
+      json[r'sEzsignsignatureDefaultvalue'] = this.sEzsignsignatureDefaultvalue;
+    } else {
+      json[r'sEzsignsignatureDefaultvalue'] = null;
+    }
     if (this.eEzsignsignatureTextvalidation != null) {
       json[r'eEzsignsignatureTextvalidation'] = this.eEzsignsignatureTextvalidation;
     } else {
       json[r'eEzsignsignatureTextvalidation'] = null;
+    }
+    if (this.sEzsignsignatureTextvalidationcustommessage != null) {
+      json[r'sEzsignsignatureTextvalidationcustommessage'] = this.sEzsignsignatureTextvalidationcustommessage;
+    } else {
+      json[r'sEzsignsignatureTextvalidationcustommessage'] = null;
     }
     if (this.sEzsignsignatureRegexp != null) {
       json[r'sEzsignsignatureRegexp'] = this.sEzsignsignatureRegexp;
@@ -418,12 +502,17 @@ class CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest {
         eEzsignsignatureTooltipposition: FieldEEzsignsignatureTooltipposition.fromJson(json[r'eEzsignsignatureTooltipposition']),
         eEzsignsignatureFont: FieldEEzsignsignatureFont.fromJson(json[r'eEzsignsignatureFont']),
         fkiEzsignfoldersignerassociationIDValidation: mapValueOfType<int>(json, r'fkiEzsignfoldersignerassociationIDValidation'),
+        bEzsignsignatureHandwritten: mapValueOfType<bool>(json, r'bEzsignsignatureHandwritten'),
+        bEzsignsignatureReason: mapValueOfType<bool>(json, r'bEzsignsignatureReason'),
         bEzsignsignatureRequired: mapValueOfType<bool>(json, r'bEzsignsignatureRequired'),
         eEzsignsignatureAttachmentnamesource: FieldEEzsignsignatureAttachmentnamesource.fromJson(json[r'eEzsignsignatureAttachmentnamesource']),
         sEzsignsignatureAttachmentdescription: mapValueOfType<String>(json, r'sEzsignsignatureAttachmentdescription'),
+        eEzsignsignatureConsultationtrigger: FieldEEzsignsignatureConsultationtrigger.fromJson(json[r'eEzsignsignatureConsultationtrigger']),
         iEzsignsignatureValidationstep: mapValueOfType<int>(json, r'iEzsignsignatureValidationstep'),
         iEzsignsignatureMaxlength: mapValueOfType<int>(json, r'iEzsignsignatureMaxlength'),
+        sEzsignsignatureDefaultvalue: mapValueOfType<String>(json, r'sEzsignsignatureDefaultvalue'),
         eEzsignsignatureTextvalidation: EnumTextvalidation.fromJson(json[r'eEzsignsignatureTextvalidation']),
+        sEzsignsignatureTextvalidationcustommessage: mapValueOfType<String>(json, r'sEzsignsignatureTextvalidationcustommessage'),
         sEzsignsignatureRegexp: mapValueOfType<String>(json, r'sEzsignsignatureRegexp'),
         eEzsignsignatureDependencyrequirement: FieldEEzsignsignatureDependencyrequirement.fromJson(json[r'eEzsignsignatureDependencyrequirement']),
         bEzsignsignatureCustomdate: mapValueOfType<bool>(json, r'bEzsignsignatureCustomdate'),

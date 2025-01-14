@@ -92,6 +92,12 @@ void main() {
       // TODO
     });
 
+    // Description of validation rule. Show by signatory.
+    // String sEzsigntemplateformfieldgroupTextvalidationcustommessage
+    test('to test the property `sEzsigntemplateformfieldgroupTextvalidationcustommessage`', () async {
+      // TODO
+    });
+
     // EnumTextvalidation eEzsigntemplateformfieldgroupTextvalidation
     test('to test the property `eEzsigntemplateformfieldgroupTextvalidation`', () async {
       // TODO

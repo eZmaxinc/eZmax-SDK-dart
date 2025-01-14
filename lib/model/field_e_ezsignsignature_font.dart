@@ -10,7 +10,7 @@
 
 part of openapi.api;
 
-/// The font of the signature. This can only be set if eEzsignsignatureType is **Name** or **Initials**
+/// The font of the signature. This can only be set if eEzsignsignatureType is **Name** or **Initials** **Deprecated**
 class FieldEEzsignsignatureFont {
   /// Instantiate a new enum with the provided [value].
   const FieldEEzsignsignatureFont._(this.value);

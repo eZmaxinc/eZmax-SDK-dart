@@ -128,6 +128,62 @@ class ObjectEzsignsignatureApi {
     return null;
   }
 
+  /// Create a new Ezsignsignature
+  ///
+  /// The endpoint allows to create one or many elements at once.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [EzsignsignatureCreateObjectV3Request] ezsignsignatureCreateObjectV3Request (required):
+  Future<Response> ezsignsignatureCreateObjectV3WithHttpInfo(EzsignsignatureCreateObjectV3Request ezsignsignatureCreateObjectV3Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/3/object/ezsignsignature';
+
+    // ignore: prefer_final_locals
+    Object? postBody = ezsignsignatureCreateObjectV3Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Create a new Ezsignsignature
+  ///
+  /// The endpoint allows to create one or many elements at once.
+  ///
+  /// Parameters:
+  ///
+  /// * [EzsignsignatureCreateObjectV3Request] ezsignsignatureCreateObjectV3Request (required):
+  Future<EzsignsignatureCreateObjectV3Response?> ezsignsignatureCreateObjectV3(EzsignsignatureCreateObjectV3Request ezsignsignatureCreateObjectV3Request,) async {
+    final response = await ezsignsignatureCreateObjectV3WithHttpInfo(ezsignsignatureCreateObjectV3Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignsignatureCreateObjectV3Response',) as EzsignsignatureCreateObjectV3Response;
+    
+    }
+    return null;
+  }
+
   /// Delete an existing Ezsignsignature
   ///
   /// 
@@ -195,14 +251,14 @@ class ObjectEzsignsignatureApi {
   ///
   /// * [int] pkiEzsignsignatureID (required):
   ///
-  /// * [EzsignsignatureEditObjectV1Request] ezsignsignatureEditObjectV1Request (required):
-  Future<Response> ezsignsignatureEditObjectV1WithHttpInfo(int pkiEzsignsignatureID, EzsignsignatureEditObjectV1Request ezsignsignatureEditObjectV1Request,) async {
+  /// * [EzsignsignatureEditObjectV2Request] ezsignsignatureEditObjectV2Request (required):
+  Future<Response> ezsignsignatureEditObjectV2WithHttpInfo(int pkiEzsignsignatureID, EzsignsignatureEditObjectV2Request ezsignsignatureEditObjectV2Request,) async {
     // ignore: prefer_const_declarations
-    final path = r'/1/object/ezsignsignature/{pkiEzsignsignatureID}'
+    final path = r'/2/object/ezsignsignature/{pkiEzsignsignatureID}'
       .replaceAll('{pkiEzsignsignatureID}', pkiEzsignsignatureID.toString());
 
     // ignore: prefer_final_locals
-    Object? postBody = ezsignsignatureEditObjectV1Request;
+    Object? postBody = ezsignsignatureEditObjectV2Request;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
@@ -230,9 +286,9 @@ class ObjectEzsignsignatureApi {
   ///
   /// * [int] pkiEzsignsignatureID (required):
   ///
-  /// * [EzsignsignatureEditObjectV1Request] ezsignsignatureEditObjectV1Request (required):
-  Future<EzsignsignatureEditObjectV1Response?> ezsignsignatureEditObjectV1(int pkiEzsignsignatureID, EzsignsignatureEditObjectV1Request ezsignsignatureEditObjectV1Request,) async {
-    final response = await ezsignsignatureEditObjectV1WithHttpInfo(pkiEzsignsignatureID, ezsignsignatureEditObjectV1Request,);
+  /// * [EzsignsignatureEditObjectV2Request] ezsignsignatureEditObjectV2Request (required):
+  Future<EzsignsignatureEditObjectV2Response?> ezsignsignatureEditObjectV2(int pkiEzsignsignatureID, EzsignsignatureEditObjectV2Request ezsignsignatureEditObjectV2Request,) async {
+    final response = await ezsignsignatureEditObjectV2WithHttpInfo(pkiEzsignsignatureID, ezsignsignatureEditObjectV2Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -240,7 +296,7 @@ class ObjectEzsignsignatureApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignsignatureEditObjectV1Response',) as EzsignsignatureEditObjectV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignsignatureEditObjectV2Response',) as EzsignsignatureEditObjectV2Response;
     
     }
     return null;
@@ -356,9 +412,9 @@ class ObjectEzsignsignatureApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignsignatureID (required):
-  Future<Response> ezsignsignatureGetObjectV2WithHttpInfo(int pkiEzsignsignatureID,) async {
+  Future<Response> ezsignsignatureGetObjectV3WithHttpInfo(int pkiEzsignsignatureID,) async {
     // ignore: prefer_const_declarations
-    final path = r'/2/object/ezsignsignature/{pkiEzsignsignatureID}'
+    final path = r'/3/object/ezsignsignature/{pkiEzsignsignatureID}'
       .replaceAll('{pkiEzsignsignatureID}', pkiEzsignsignatureID.toString());
 
     // ignore: prefer_final_locals
@@ -389,8 +445,8 @@ class ObjectEzsignsignatureApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignsignatureID (required):
-  Future<EzsignsignatureGetObjectV2Response?> ezsignsignatureGetObjectV2(int pkiEzsignsignatureID,) async {
-    final response = await ezsignsignatureGetObjectV2WithHttpInfo(pkiEzsignsignatureID,);
+  Future<EzsignsignatureGetObjectV3Response?> ezsignsignatureGetObjectV3(int pkiEzsignsignatureID,) async {
+    final response = await ezsignsignatureGetObjectV3WithHttpInfo(pkiEzsignsignatureID,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -398,7 +454,7 @@ class ObjectEzsignsignatureApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignsignatureGetObjectV2Response',) as EzsignsignatureGetObjectV2Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignsignatureGetObjectV3Response',) as EzsignsignatureGetObjectV3Response;
     
     }
     return null;

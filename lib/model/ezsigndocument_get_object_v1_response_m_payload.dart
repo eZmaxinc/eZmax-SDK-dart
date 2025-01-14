@@ -27,6 +27,7 @@ class EzsigndocumentGetObjectV1ResponseMPayload {
     required this.iEzsigndocumentPagetotal,
     required this.iEzsigndocumentSignaturesigned,
     required this.iEzsigndocumentSignaturetotal,
+    required this.iEzsigndocumentFormfieldtotal,
     this.sEzsigndocumentMD5initial,
     this.tEzsigndocumentDeclinedtosignreason,
     this.sEzsigndocumentMD5signed,
@@ -42,6 +43,7 @@ class EzsigndocumentGetObjectV1ResponseMPayload {
     required this.iEzsigndocumentStepsignaturetotal,
     required this.iEzsigndocumentStepsignatureCurrent,
     this.aObjEzsignfoldersignerassociationstatus = const [],
+    this.aObjEzsigndocumentdependency = const [],
   });
 
   /// The unique ID of the Ezsigndocument
@@ -132,6 +134,11 @@ class EzsigndocumentGetObjectV1ResponseMPayload {
   /// Minimum value: 0
   int iEzsigndocumentSignaturetotal;
 
+  /// The number of total Ezsignformfield that were requested in the Ezsigndocument.
+  ///
+  /// Minimum value: 0
+  int iEzsigndocumentFormfieldtotal;
+
   /// MD5 Hash of the initial PDF Document before signatures were applied to it.
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -218,6 +225,8 @@ class EzsigndocumentGetObjectV1ResponseMPayload {
 
   List<CustomEzsignfoldersignerassociationstatusResponse> aObjEzsignfoldersignerassociationstatus;
 
+  List<EzsigndocumentdependencyResponse> aObjEzsigndocumentdependency;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigndocumentGetObjectV1ResponseMPayload &&
     other.pkiEzsigndocumentID == pkiEzsigndocumentID &&
@@ -234,6 +243,7 @@ class EzsigndocumentGetObjectV1ResponseMPayload {
     other.iEzsigndocumentPagetotal == iEzsigndocumentPagetotal &&
     other.iEzsigndocumentSignaturesigned == iEzsigndocumentSignaturesigned &&
     other.iEzsigndocumentSignaturetotal == iEzsigndocumentSignaturetotal &&
+    other.iEzsigndocumentFormfieldtotal == iEzsigndocumentFormfieldtotal &&
     other.sEzsigndocumentMD5initial == sEzsigndocumentMD5initial &&
     other.tEzsigndocumentDeclinedtosignreason == tEzsigndocumentDeclinedtosignreason &&
     other.sEzsigndocumentMD5signed == sEzsigndocumentMD5signed &&
@@ -248,7 +258,8 @@ class EzsigndocumentGetObjectV1ResponseMPayload {
     other.iEzsigndocumentStepformcurrent == iEzsigndocumentStepformcurrent &&
     other.iEzsigndocumentStepsignaturetotal == iEzsigndocumentStepsignaturetotal &&
     other.iEzsigndocumentStepsignatureCurrent == iEzsigndocumentStepsignatureCurrent &&
-    _deepEquality.equals(other.aObjEzsignfoldersignerassociationstatus, aObjEzsignfoldersignerassociationstatus);
+    _deepEquality.equals(other.aObjEzsignfoldersignerassociationstatus, aObjEzsignfoldersignerassociationstatus) &&
+    _deepEquality.equals(other.aObjEzsigndocumentdependency, aObjEzsigndocumentdependency);
 
   @override
   int get hashCode =>
@@ -267,6 +278,7 @@ class EzsigndocumentGetObjectV1ResponseMPayload {
     (iEzsigndocumentPagetotal.hashCode) +
     (iEzsigndocumentSignaturesigned.hashCode) +
     (iEzsigndocumentSignaturetotal.hashCode) +
+    (iEzsigndocumentFormfieldtotal.hashCode) +
     (sEzsigndocumentMD5initial == null ? 0 : sEzsigndocumentMD5initial!.hashCode) +
     (tEzsigndocumentDeclinedtosignreason == null ? 0 : tEzsigndocumentDeclinedtosignreason!.hashCode) +
     (sEzsigndocumentMD5signed == null ? 0 : sEzsigndocumentMD5signed!.hashCode) +
@@ -281,10 +293,11 @@ class EzsigndocumentGetObjectV1ResponseMPayload {
     (iEzsigndocumentStepformcurrent.hashCode) +
     (iEzsigndocumentStepsignaturetotal.hashCode) +
     (iEzsigndocumentStepsignatureCurrent.hashCode) +
-    (aObjEzsignfoldersignerassociationstatus.hashCode);
+    (aObjEzsignfoldersignerassociationstatus.hashCode) +
+    (aObjEzsigndocumentdependency.hashCode);
 
   @override
-  String toString() => 'EzsigndocumentGetObjectV1ResponseMPayload[pkiEzsigndocumentID=$pkiEzsigndocumentID, fkiEzsignfolderID=$fkiEzsignfolderID, fkiEzsignfoldersignerassociationIDDeclinedtosign=$fkiEzsignfoldersignerassociationIDDeclinedtosign, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, dtEzsignformCompleted=$dtEzsignformCompleted, fkiLanguageID=$fkiLanguageID, sEzsigndocumentName=$sEzsigndocumentName, eEzsigndocumentStep=$eEzsigndocumentStep, dtEzsigndocumentFirstsend=$dtEzsigndocumentFirstsend, dtEzsigndocumentLastsend=$dtEzsigndocumentLastsend, iEzsigndocumentOrder=$iEzsigndocumentOrder, iEzsigndocumentPagetotal=$iEzsigndocumentPagetotal, iEzsigndocumentSignaturesigned=$iEzsigndocumentSignaturesigned, iEzsigndocumentSignaturetotal=$iEzsigndocumentSignaturetotal, sEzsigndocumentMD5initial=$sEzsigndocumentMD5initial, tEzsigndocumentDeclinedtosignreason=$tEzsigndocumentDeclinedtosignreason, sEzsigndocumentMD5signed=$sEzsigndocumentMD5signed, bEzsigndocumentEzsignform=$bEzsigndocumentEzsignform, bEzsigndocumentHassignedsignatures=$bEzsigndocumentHassignedsignatures, objAudit=$objAudit, sEzsigndocumentExternalid=$sEzsigndocumentExternalid, iEzsigndocumentEzsignsignatureattachmenttotal=$iEzsigndocumentEzsignsignatureattachmenttotal, iEzsigndocumentEzsigndiscussiontotal=$iEzsigndocumentEzsigndiscussiontotal, eEzsigndocumentSteptype=$eEzsigndocumentSteptype, iEzsigndocumentStepformtotal=$iEzsigndocumentStepformtotal, iEzsigndocumentStepformcurrent=$iEzsigndocumentStepformcurrent, iEzsigndocumentStepsignaturetotal=$iEzsigndocumentStepsignaturetotal, iEzsigndocumentStepsignatureCurrent=$iEzsigndocumentStepsignatureCurrent, aObjEzsignfoldersignerassociationstatus=$aObjEzsignfoldersignerassociationstatus]';
+  String toString() => 'EzsigndocumentGetObjectV1ResponseMPayload[pkiEzsigndocumentID=$pkiEzsigndocumentID, fkiEzsignfolderID=$fkiEzsignfolderID, fkiEzsignfoldersignerassociationIDDeclinedtosign=$fkiEzsignfoldersignerassociationIDDeclinedtosign, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, dtEzsignformCompleted=$dtEzsignformCompleted, fkiLanguageID=$fkiLanguageID, sEzsigndocumentName=$sEzsigndocumentName, eEzsigndocumentStep=$eEzsigndocumentStep, dtEzsigndocumentFirstsend=$dtEzsigndocumentFirstsend, dtEzsigndocumentLastsend=$dtEzsigndocumentLastsend, iEzsigndocumentOrder=$iEzsigndocumentOrder, iEzsigndocumentPagetotal=$iEzsigndocumentPagetotal, iEzsigndocumentSignaturesigned=$iEzsigndocumentSignaturesigned, iEzsigndocumentSignaturetotal=$iEzsigndocumentSignaturetotal, iEzsigndocumentFormfieldtotal=$iEzsigndocumentFormfieldtotal, sEzsigndocumentMD5initial=$sEzsigndocumentMD5initial, tEzsigndocumentDeclinedtosignreason=$tEzsigndocumentDeclinedtosignreason, sEzsigndocumentMD5signed=$sEzsigndocumentMD5signed, bEzsigndocumentEzsignform=$bEzsigndocumentEzsignform, bEzsigndocumentHassignedsignatures=$bEzsigndocumentHassignedsignatures, objAudit=$objAudit, sEzsigndocumentExternalid=$sEzsigndocumentExternalid, iEzsigndocumentEzsignsignatureattachmenttotal=$iEzsigndocumentEzsignsignatureattachmenttotal, iEzsigndocumentEzsigndiscussiontotal=$iEzsigndocumentEzsigndiscussiontotal, eEzsigndocumentSteptype=$eEzsigndocumentSteptype, iEzsigndocumentStepformtotal=$iEzsigndocumentStepformtotal, iEzsigndocumentStepformcurrent=$iEzsigndocumentStepformcurrent, iEzsigndocumentStepsignaturetotal=$iEzsigndocumentStepsignaturetotal, iEzsigndocumentStepsignatureCurrent=$iEzsigndocumentStepsignatureCurrent, aObjEzsignfoldersignerassociationstatus=$aObjEzsignfoldersignerassociationstatus, aObjEzsigndocumentdependency=$aObjEzsigndocumentdependency]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -322,6 +335,7 @@ class EzsigndocumentGetObjectV1ResponseMPayload {
       json[r'iEzsigndocumentPagetotal'] = this.iEzsigndocumentPagetotal;
       json[r'iEzsigndocumentSignaturesigned'] = this.iEzsigndocumentSignaturesigned;
       json[r'iEzsigndocumentSignaturetotal'] = this.iEzsigndocumentSignaturetotal;
+      json[r'iEzsigndocumentFormfieldtotal'] = this.iEzsigndocumentFormfieldtotal;
     if (this.sEzsigndocumentMD5initial != null) {
       json[r'sEzsigndocumentMD5initial'] = this.sEzsigndocumentMD5initial;
     } else {
@@ -365,6 +379,7 @@ class EzsigndocumentGetObjectV1ResponseMPayload {
       json[r'iEzsigndocumentStepsignaturetotal'] = this.iEzsigndocumentStepsignaturetotal;
       json[r'iEzsigndocumentStepsignatureCurrent'] = this.iEzsigndocumentStepsignatureCurrent;
       json[r'a_objEzsignfoldersignerassociationstatus'] = this.aObjEzsignfoldersignerassociationstatus;
+      json[r'a_objEzsigndocumentdependency'] = this.aObjEzsigndocumentdependency;
     return json;
   }
 
@@ -401,6 +416,7 @@ class EzsigndocumentGetObjectV1ResponseMPayload {
         iEzsigndocumentPagetotal: mapValueOfType<int>(json, r'iEzsigndocumentPagetotal')!,
         iEzsigndocumentSignaturesigned: mapValueOfType<int>(json, r'iEzsigndocumentSignaturesigned')!,
         iEzsigndocumentSignaturetotal: mapValueOfType<int>(json, r'iEzsigndocumentSignaturetotal')!,
+        iEzsigndocumentFormfieldtotal: mapValueOfType<int>(json, r'iEzsigndocumentFormfieldtotal')!,
         sEzsigndocumentMD5initial: mapValueOfType<String>(json, r'sEzsigndocumentMD5initial'),
         tEzsigndocumentDeclinedtosignreason: mapValueOfType<String>(json, r'tEzsigndocumentDeclinedtosignreason'),
         sEzsigndocumentMD5signed: mapValueOfType<String>(json, r'sEzsigndocumentMD5signed'),
@@ -416,6 +432,7 @@ class EzsigndocumentGetObjectV1ResponseMPayload {
         iEzsigndocumentStepsignaturetotal: mapValueOfType<int>(json, r'iEzsigndocumentStepsignaturetotal')!,
         iEzsigndocumentStepsignatureCurrent: mapValueOfType<int>(json, r'iEzsigndocumentStepsignatureCurrent')!,
         aObjEzsignfoldersignerassociationstatus: CustomEzsignfoldersignerassociationstatusResponse.listFromJson(json[r'a_objEzsignfoldersignerassociationstatus']),
+        aObjEzsigndocumentdependency: EzsigndocumentdependencyResponse.listFromJson(json[r'a_objEzsigndocumentdependency']),
       );
     }
     return null;
@@ -472,6 +489,7 @@ class EzsigndocumentGetObjectV1ResponseMPayload {
     'iEzsigndocumentPagetotal',
     'iEzsigndocumentSignaturesigned',
     'iEzsigndocumentSignaturetotal',
+    'iEzsigndocumentFormfieldtotal',
     'iEzsigndocumentEzsignsignatureattachmenttotal',
     'iEzsigndocumentEzsigndiscussiontotal',
     'eEzsigndocumentSteptype',

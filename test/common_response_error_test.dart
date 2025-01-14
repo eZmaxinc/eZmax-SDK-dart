@@ -27,6 +27,12 @@ void main() {
       // TODO
     });
 
+    // More error message detail
+    // List<String> aSErrorMessagedetail (default value: const [])
+    test('to test the property `aSErrorMessagedetail`', () async {
+      // TODO
+    });
+
 
   });
 

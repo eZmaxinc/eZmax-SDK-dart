@@ -24,13 +24,13 @@ class ObjectEzsigntemplatesignatureApi {
   ///
   /// Parameters:
   ///
-  /// * [EzsigntemplatesignatureCreateObjectV1Request] ezsigntemplatesignatureCreateObjectV1Request (required):
-  Future<Response> ezsigntemplatesignatureCreateObjectV1WithHttpInfo(EzsigntemplatesignatureCreateObjectV1Request ezsigntemplatesignatureCreateObjectV1Request,) async {
+  /// * [EzsigntemplatesignatureCreateObjectV2Request] ezsigntemplatesignatureCreateObjectV2Request (required):
+  Future<Response> ezsigntemplatesignatureCreateObjectV2WithHttpInfo(EzsigntemplatesignatureCreateObjectV2Request ezsigntemplatesignatureCreateObjectV2Request,) async {
     // ignore: prefer_const_declarations
-    final path = r'/1/object/ezsigntemplatesignature';
+    final path = r'/2/object/ezsigntemplatesignature';
 
     // ignore: prefer_final_locals
-    Object? postBody = ezsigntemplatesignatureCreateObjectV1Request;
+    Object? postBody = ezsigntemplatesignatureCreateObjectV2Request;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
@@ -56,9 +56,9 @@ class ObjectEzsigntemplatesignatureApi {
   ///
   /// Parameters:
   ///
-  /// * [EzsigntemplatesignatureCreateObjectV1Request] ezsigntemplatesignatureCreateObjectV1Request (required):
-  Future<EzsigntemplatesignatureCreateObjectV1Response?> ezsigntemplatesignatureCreateObjectV1(EzsigntemplatesignatureCreateObjectV1Request ezsigntemplatesignatureCreateObjectV1Request,) async {
-    final response = await ezsigntemplatesignatureCreateObjectV1WithHttpInfo(ezsigntemplatesignatureCreateObjectV1Request,);
+  /// * [EzsigntemplatesignatureCreateObjectV2Request] ezsigntemplatesignatureCreateObjectV2Request (required):
+  Future<EzsigntemplatesignatureCreateObjectV2Response?> ezsigntemplatesignatureCreateObjectV2(EzsigntemplatesignatureCreateObjectV2Request ezsigntemplatesignatureCreateObjectV2Request,) async {
+    final response = await ezsigntemplatesignatureCreateObjectV2WithHttpInfo(ezsigntemplatesignatureCreateObjectV2Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -66,7 +66,7 @@ class ObjectEzsigntemplatesignatureApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigntemplatesignatureCreateObjectV1Response',) as EzsigntemplatesignatureCreateObjectV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigntemplatesignatureCreateObjectV2Response',) as EzsigntemplatesignatureCreateObjectV2Response;
     
     }
     return null;
@@ -139,14 +139,14 @@ class ObjectEzsigntemplatesignatureApi {
   ///
   /// * [int] pkiEzsigntemplatesignatureID (required):
   ///
-  /// * [EzsigntemplatesignatureEditObjectV1Request] ezsigntemplatesignatureEditObjectV1Request (required):
-  Future<Response> ezsigntemplatesignatureEditObjectV1WithHttpInfo(int pkiEzsigntemplatesignatureID, EzsigntemplatesignatureEditObjectV1Request ezsigntemplatesignatureEditObjectV1Request,) async {
+  /// * [EzsigntemplatesignatureEditObjectV2Request] ezsigntemplatesignatureEditObjectV2Request (required):
+  Future<Response> ezsigntemplatesignatureEditObjectV2WithHttpInfo(int pkiEzsigntemplatesignatureID, EzsigntemplatesignatureEditObjectV2Request ezsigntemplatesignatureEditObjectV2Request,) async {
     // ignore: prefer_const_declarations
-    final path = r'/1/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}'
+    final path = r'/2/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}'
       .replaceAll('{pkiEzsigntemplatesignatureID}', pkiEzsigntemplatesignatureID.toString());
 
     // ignore: prefer_final_locals
-    Object? postBody = ezsigntemplatesignatureEditObjectV1Request;
+    Object? postBody = ezsigntemplatesignatureEditObjectV2Request;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
@@ -174,9 +174,9 @@ class ObjectEzsigntemplatesignatureApi {
   ///
   /// * [int] pkiEzsigntemplatesignatureID (required):
   ///
-  /// * [EzsigntemplatesignatureEditObjectV1Request] ezsigntemplatesignatureEditObjectV1Request (required):
-  Future<EzsigntemplatesignatureEditObjectV1Response?> ezsigntemplatesignatureEditObjectV1(int pkiEzsigntemplatesignatureID, EzsigntemplatesignatureEditObjectV1Request ezsigntemplatesignatureEditObjectV1Request,) async {
-    final response = await ezsigntemplatesignatureEditObjectV1WithHttpInfo(pkiEzsigntemplatesignatureID, ezsigntemplatesignatureEditObjectV1Request,);
+  /// * [EzsigntemplatesignatureEditObjectV2Request] ezsigntemplatesignatureEditObjectV2Request (required):
+  Future<EzsigntemplatesignatureEditObjectV2Response?> ezsigntemplatesignatureEditObjectV2(int pkiEzsigntemplatesignatureID, EzsigntemplatesignatureEditObjectV2Request ezsigntemplatesignatureEditObjectV2Request,) async {
+    final response = await ezsigntemplatesignatureEditObjectV2WithHttpInfo(pkiEzsigntemplatesignatureID, ezsigntemplatesignatureEditObjectV2Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -184,7 +184,7 @@ class ObjectEzsigntemplatesignatureApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigntemplatesignatureEditObjectV1Response',) as EzsigntemplatesignatureEditObjectV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigntemplatesignatureEditObjectV2Response',) as EzsigntemplatesignatureEditObjectV2Response;
     
     }
     return null;
@@ -199,9 +199,9 @@ class ObjectEzsigntemplatesignatureApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigntemplatesignatureID (required):
-  Future<Response> ezsigntemplatesignatureGetObjectV2WithHttpInfo(int pkiEzsigntemplatesignatureID,) async {
+  Future<Response> ezsigntemplatesignatureGetObjectV3WithHttpInfo(int pkiEzsigntemplatesignatureID,) async {
     // ignore: prefer_const_declarations
-    final path = r'/2/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}'
+    final path = r'/3/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}'
       .replaceAll('{pkiEzsigntemplatesignatureID}', pkiEzsigntemplatesignatureID.toString());
 
     // ignore: prefer_final_locals
@@ -232,8 +232,8 @@ class ObjectEzsigntemplatesignatureApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigntemplatesignatureID (required):
-  Future<EzsigntemplatesignatureGetObjectV2Response?> ezsigntemplatesignatureGetObjectV2(int pkiEzsigntemplatesignatureID,) async {
-    final response = await ezsigntemplatesignatureGetObjectV2WithHttpInfo(pkiEzsigntemplatesignatureID,);
+  Future<EzsigntemplatesignatureGetObjectV3Response?> ezsigntemplatesignatureGetObjectV3(int pkiEzsigntemplatesignatureID,) async {
+    final response = await ezsigntemplatesignatureGetObjectV3WithHttpInfo(pkiEzsigntemplatesignatureID,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -241,7 +241,7 @@ class ObjectEzsigntemplatesignatureApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigntemplatesignatureGetObjectV2Response',) as EzsigntemplatesignatureGetObjectV2Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigntemplatesignatureGetObjectV3Response',) as EzsigntemplatesignatureGetObjectV3Response;
     
     }
     return null;

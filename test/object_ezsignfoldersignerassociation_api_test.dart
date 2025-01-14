@@ -19,7 +19,7 @@ void main() {
   group('tests for ObjectEzsignfoldersignerassociationApi', () {
     // Creates an Url to allow embedded signing
     //
-    // This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.  There will be a list to retrieve informations after the signing happens in the embedded version. To do so, there is a list of parameter to add to your sReturnUrl.  In example: https://www.example.com/sReturl?sParameter1&sParameter2. The sParameter1 et sParameter2 will be replace when we will redirect on the url.
+    // This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
     //
     //Future<EzsignfoldersignerassociationCreateEmbeddedUrlV1Response> ezsignfoldersignerassociationCreateEmbeddedUrlV1(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationCreateEmbeddedUrlV1Request ezsignfoldersignerassociationCreateEmbeddedUrlV1Request) async
     test('test ezsignfoldersignerassociationCreateEmbeddedUrlV1', () async {
@@ -102,6 +102,15 @@ void main() {
     //
     //Future<EzsignfoldersignerassociationPatchObjectV1Response> ezsignfoldersignerassociationPatchObjectV1(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request) async
     test('test ezsignfoldersignerassociationPatchObjectV1', () async {
+      // TODO
+    });
+
+    // Reassign remaining unsigned signatures and forms
+    //
+    // Reassign remaining unsigned signatures and forms
+    //
+    //Future<EzsignfoldersignerassociationReassignV1Response> ezsignfoldersignerassociationReassignV1(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request) async
+    test('test ezsignfoldersignerassociationReassignV1', () async {
       // TODO
     });
 

@@ -15,9 +15,9 @@ class CreditcarddetailRequest {
   CreditcarddetailRequest({
     required this.iCreditcarddetailExpirationmonth,
     required this.iCreditcarddetailExpirationyear,
-    this.sCreditcarddetailCivic,
-    this.sCreditcarddetailStreet,
-    this.sCreditcarddetailZip,
+    required this.sCreditcarddetailCivic,
+    required this.sCreditcarddetailStreet,
+    required this.sCreditcarddetailZip,
   });
 
   /// The expirationmonth of the Creditcarddetail
@@ -33,31 +33,13 @@ class CreditcarddetailRequest {
   int iCreditcarddetailExpirationyear;
 
   /// The civic of the Creditcarddetail
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  String? sCreditcarddetailCivic;
+  String sCreditcarddetailCivic;
 
   /// The street of the Creditcarddetail
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  String? sCreditcarddetailStreet;
+  String sCreditcarddetailStreet;
 
   /// The zip of the Creditcarddetail
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  String? sCreditcarddetailZip;
+  String sCreditcarddetailZip;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CreditcarddetailRequest &&
@@ -72,9 +54,9 @@ class CreditcarddetailRequest {
     // ignore: unnecessary_parenthesis
     (iCreditcarddetailExpirationmonth.hashCode) +
     (iCreditcarddetailExpirationyear.hashCode) +
-    (sCreditcarddetailCivic == null ? 0 : sCreditcarddetailCivic!.hashCode) +
-    (sCreditcarddetailStreet == null ? 0 : sCreditcarddetailStreet!.hashCode) +
-    (sCreditcarddetailZip == null ? 0 : sCreditcarddetailZip!.hashCode);
+    (sCreditcarddetailCivic.hashCode) +
+    (sCreditcarddetailStreet.hashCode) +
+    (sCreditcarddetailZip.hashCode);
 
   @override
   String toString() => 'CreditcarddetailRequest[iCreditcarddetailExpirationmonth=$iCreditcarddetailExpirationmonth, iCreditcarddetailExpirationyear=$iCreditcarddetailExpirationyear, sCreditcarddetailCivic=$sCreditcarddetailCivic, sCreditcarddetailStreet=$sCreditcarddetailStreet, sCreditcarddetailZip=$sCreditcarddetailZip]';
@@ -83,21 +65,9 @@ class CreditcarddetailRequest {
     final json = <String, dynamic>{};
       json[r'iCreditcarddetailExpirationmonth'] = this.iCreditcarddetailExpirationmonth;
       json[r'iCreditcarddetailExpirationyear'] = this.iCreditcarddetailExpirationyear;
-    if (this.sCreditcarddetailCivic != null) {
       json[r'sCreditcarddetailCivic'] = this.sCreditcarddetailCivic;
-    } else {
-      json[r'sCreditcarddetailCivic'] = null;
-    }
-    if (this.sCreditcarddetailStreet != null) {
       json[r'sCreditcarddetailStreet'] = this.sCreditcarddetailStreet;
-    } else {
-      json[r'sCreditcarddetailStreet'] = null;
-    }
-    if (this.sCreditcarddetailZip != null) {
       json[r'sCreditcarddetailZip'] = this.sCreditcarddetailZip;
-    } else {
-      json[r'sCreditcarddetailZip'] = null;
-    }
     return json;
   }
 
@@ -122,9 +92,9 @@ class CreditcarddetailRequest {
       return CreditcarddetailRequest(
         iCreditcarddetailExpirationmonth: mapValueOfType<int>(json, r'iCreditcarddetailExpirationmonth')!,
         iCreditcarddetailExpirationyear: mapValueOfType<int>(json, r'iCreditcarddetailExpirationyear')!,
-        sCreditcarddetailCivic: mapValueOfType<String>(json, r'sCreditcarddetailCivic'),
-        sCreditcarddetailStreet: mapValueOfType<String>(json, r'sCreditcarddetailStreet'),
-        sCreditcarddetailZip: mapValueOfType<String>(json, r'sCreditcarddetailZip'),
+        sCreditcarddetailCivic: mapValueOfType<String>(json, r'sCreditcarddetailCivic')!,
+        sCreditcarddetailStreet: mapValueOfType<String>(json, r'sCreditcarddetailStreet')!,
+        sCreditcarddetailZip: mapValueOfType<String>(json, r'sCreditcarddetailZip')!,
       );
     }
     return null;
@@ -174,6 +144,9 @@ class CreditcarddetailRequest {
   static const requiredKeys = <String>{
     'iCreditcarddetailExpirationmonth',
     'iCreditcarddetailExpirationyear',
+    'sCreditcarddetailCivic',
+    'sCreditcarddetailStreet',
+    'sCreditcarddetailZip',
   };
 }
 

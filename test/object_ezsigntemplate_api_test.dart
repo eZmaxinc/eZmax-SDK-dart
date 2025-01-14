@@ -30,17 +30,8 @@ void main() {
     //
     // The endpoint allows to create one or many elements at once.
     //
-    //Future<EzsigntemplateCreateObjectV1Response> ezsigntemplateCreateObjectV1(EzsigntemplateCreateObjectV1Request ezsigntemplateCreateObjectV1Request) async
-    test('test ezsigntemplateCreateObjectV1', () async {
-      // TODO
-    });
-
-    // Create a new Ezsigntemplate
-    //
-    // The endpoint allows to create one or many elements at once.
-    //
-    //Future<EzsigntemplateCreateObjectV2Response> ezsigntemplateCreateObjectV2(EzsigntemplateCreateObjectV2Request ezsigntemplateCreateObjectV2Request) async
-    test('test ezsigntemplateCreateObjectV2', () async {
+    //Future<EzsigntemplateCreateObjectV3Response> ezsigntemplateCreateObjectV3(EzsigntemplateCreateObjectV3Request ezsigntemplateCreateObjectV3Request) async
+    test('test ezsigntemplateCreateObjectV3', () async {
       // TODO
     });
 
@@ -57,17 +48,8 @@ void main() {
     //
     // 
     //
-    //Future<EzsigntemplateEditObjectV1Response> ezsigntemplateEditObjectV1(int pkiEzsigntemplateID, EzsigntemplateEditObjectV1Request ezsigntemplateEditObjectV1Request) async
-    test('test ezsigntemplateEditObjectV1', () async {
-      // TODO
-    });
-
-    // Edit an existing Ezsigntemplate
-    //
-    // 
-    //
-    //Future<EzsigntemplateEditObjectV2Response> ezsigntemplateEditObjectV2(int pkiEzsigntemplateID, EzsigntemplateEditObjectV2Request ezsigntemplateEditObjectV2Request) async
-    test('test ezsigntemplateEditObjectV2', () async {
+    //Future<EzsigntemplateEditObjectV3Response> ezsigntemplateEditObjectV3(int pkiEzsigntemplateID, EzsigntemplateEditObjectV3Request ezsigntemplateEditObjectV3Request) async
+    test('test ezsigntemplateEditObjectV3', () async {
       // TODO
     });
 
@@ -75,7 +57,7 @@ void main() {
     //
     // Get the list of Ezsigntemplate to be used in a dropdown or autocomplete control.
     //
-    //Future<EzsigntemplateGetAutocompleteV2Response> ezsigntemplateGetAutocompleteV2(String sSelector, { String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage }) async
+    //Future<EzsigntemplateGetAutocompleteV2Response> ezsigntemplateGetAutocompleteV2(String sSelector, { String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage, int fkiEzsignfoldertypeID }) async
     test('test ezsigntemplateGetAutocompleteV2', () async {
       // TODO
     });
@@ -93,17 +75,8 @@ void main() {
     //
     // 
     //
-    //Future<EzsigntemplateGetObjectV1Response> ezsigntemplateGetObjectV1(int pkiEzsigntemplateID) async
-    test('test ezsigntemplateGetObjectV1', () async {
-      // TODO
-    });
-
-    // Retrieve an existing Ezsigntemplate
-    //
-    // 
-    //
-    //Future<EzsigntemplateGetObjectV2Response> ezsigntemplateGetObjectV2(int pkiEzsigntemplateID) async
-    test('test ezsigntemplateGetObjectV2', () async {
+    //Future<EzsigntemplateGetObjectV3Response> ezsigntemplateGetObjectV3(int pkiEzsigntemplateID) async
+    test('test ezsigntemplateGetObjectV3', () async {
       // TODO
     });
 
