@@ -192,6 +192,10 @@ class ApiClient {
           return ActivesessionGetCurrentV1Response.fromJson(value);
         case 'ActivesessionGetCurrentV1ResponseMPayload':
           return ActivesessionGetCurrentV1ResponseMPayload.fromJson(value);
+        case 'ActivesessionGetCurrentV2Response':
+          return ActivesessionGetCurrentV2Response.fromJson(value);
+        case 'ActivesessionGetCurrentV2ResponseMPayload':
+          return ActivesessionGetCurrentV2ResponseMPayload.fromJson(value);
         case 'ActivesessionGetListV1Response':
           return ActivesessionGetListV1Response.fromJson(value);
         case 'ActivesessionGetListV1ResponseMPayload':

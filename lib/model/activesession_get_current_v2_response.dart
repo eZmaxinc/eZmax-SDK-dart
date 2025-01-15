@@ -10,9 +10,9 @@
 
 part of openapi.api;
 
-class WebhookGetHistoryV1Response {
-  /// Returns a new [WebhookGetHistoryV1Response] instance.
-  WebhookGetHistoryV1Response({
+class ActivesessionGetCurrentV2Response {
+  /// Returns a new [ActivesessionGetCurrentV2Response] instance.
+  ActivesessionGetCurrentV2Response({
     required this.objDebugPayload,
     this.objDebug,
     required this.mPayload,
@@ -28,10 +28,10 @@ class WebhookGetHistoryV1Response {
   ///
   CommonResponseObjDebug? objDebug;
 
-  WebhookGetHistoryV1ResponseMPayload mPayload;
+  ActivesessionGetCurrentV2ResponseMPayload mPayload;
 
   @override
-  bool operator ==(Object other) => identical(this, other) || other is WebhookGetHistoryV1Response &&
+  bool operator ==(Object other) => identical(this, other) || other is ActivesessionGetCurrentV2Response &&
     other.objDebugPayload == objDebugPayload &&
     other.objDebug == objDebug &&
     other.mPayload == mPayload;
@@ -44,7 +44,7 @@ class WebhookGetHistoryV1Response {
     (mPayload.hashCode);
 
   @override
-  String toString() => 'WebhookGetHistoryV1Response[objDebugPayload=$objDebugPayload, objDebug=$objDebug, mPayload=$mPayload]';
+  String toString() => 'ActivesessionGetCurrentV2Response[objDebugPayload=$objDebugPayload, objDebug=$objDebug, mPayload=$mPayload]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -58,10 +58,10 @@ class WebhookGetHistoryV1Response {
     return json;
   }
 
-  /// Returns a new [WebhookGetHistoryV1Response] instance and imports its values from
+  /// Returns a new [ActivesessionGetCurrentV2Response] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static WebhookGetHistoryV1Response? fromJson(dynamic value) {
+  static ActivesessionGetCurrentV2Response? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
 
@@ -70,26 +70,26 @@ class WebhookGetHistoryV1Response {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "WebhookGetHistoryV1Response[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "WebhookGetHistoryV1Response[$key]" has a null value in JSON.');
+          assert(json.containsKey(key), 'Required key "ActivesessionGetCurrentV2Response[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "ActivesessionGetCurrentV2Response[$key]" has a null value in JSON.');
         });
         return true;
       }());
 
-      return WebhookGetHistoryV1Response(
+      return ActivesessionGetCurrentV2Response(
         objDebugPayload: CommonResponseObjDebugPayload.fromJson(json[r'objDebugPayload'])!,
         objDebug: CommonResponseObjDebug.fromJson(json[r'objDebug']),
-        mPayload: WebhookGetHistoryV1ResponseMPayload.fromJson(json[r'mPayload'])!,
+        mPayload: ActivesessionGetCurrentV2ResponseMPayload.fromJson(json[r'mPayload'])!,
       );
     }
     return null;
   }
 
-  static List<WebhookGetHistoryV1Response> listFromJson(dynamic json, {bool growable = false,}) {
-    final result = <WebhookGetHistoryV1Response>[];
+  static List<ActivesessionGetCurrentV2Response> listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <ActivesessionGetCurrentV2Response>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
-        final value = WebhookGetHistoryV1Response.fromJson(row);
+        final value = ActivesessionGetCurrentV2Response.fromJson(row);
         if (value != null) {
           result.add(value);
         }
@@ -98,12 +98,12 @@ class WebhookGetHistoryV1Response {
     return result.toList(growable: growable);
   }
 
-  static Map<String, WebhookGetHistoryV1Response> mapFromJson(dynamic json) {
-    final map = <String, WebhookGetHistoryV1Response>{};
+  static Map<String, ActivesessionGetCurrentV2Response> mapFromJson(dynamic json) {
+    final map = <String, ActivesessionGetCurrentV2Response>{};
     if (json is Map && json.isNotEmpty) {
       json = json.cast<String, dynamic>(); // ignore: parameter_assignments
       for (final entry in json.entries) {
-        final value = WebhookGetHistoryV1Response.fromJson(entry.value);
+        final value = ActivesessionGetCurrentV2Response.fromJson(entry.value);
         if (value != null) {
           map[entry.key] = value;
         }
@@ -112,14 +112,14 @@ class WebhookGetHistoryV1Response {
     return map;
   }
 
-  // maps a json object with a list of WebhookGetHistoryV1Response-objects as value to a dart map
-  static Map<String, List<WebhookGetHistoryV1Response>> mapListFromJson(dynamic json, {bool growable = false,}) {
-    final map = <String, List<WebhookGetHistoryV1Response>>{};
+  // maps a json object with a list of ActivesessionGetCurrentV2Response-objects as value to a dart map
+  static Map<String, List<ActivesessionGetCurrentV2Response>> mapListFromJson(dynamic json, {bool growable = false,}) {
+    final map = <String, List<ActivesessionGetCurrentV2Response>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = WebhookGetHistoryV1Response.listFromJson(entry.value, growable: growable,);
+        map[entry.key] = ActivesessionGetCurrentV2Response.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

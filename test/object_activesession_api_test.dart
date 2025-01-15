@@ -35,6 +35,15 @@ void main() {
       // TODO
     });
 
+    // Get Current Activesession
+    //
+    // Retrieve the details about the current activesession
+    //
+    //Future<ActivesessionGetCurrentV2Response> activesessionGetCurrentV2() async
+    test('test activesessionGetCurrentV2', () async {
+      // TODO
+    });
+
     // Retrieve Activesession list
     //
     //Future<ActivesessionGetListV1Response> activesessionGetListV1({ String eOrderBy, int iRowMax, int iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter }) async

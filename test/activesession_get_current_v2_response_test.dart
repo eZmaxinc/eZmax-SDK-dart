@@ -11,11 +11,11 @@
 import 'package:openapi/api.dart';
 import 'package:test/test.dart';
 
-// tests for WebhookGetHistoryV1Response
+// tests for ActivesessionGetCurrentV2Response
 void main() {
-  // final instance = WebhookGetHistoryV1Response();
+  // final instance = ActivesessionGetCurrentV2Response();
 
-  group('test WebhookGetHistoryV1Response', () {
+  group('test ActivesessionGetCurrentV2Response', () {
     // CommonResponseObjDebugPayload objDebugPayload
     test('to test the property `objDebugPayload`', () async {
       // TODO
@@ -26,7 +26,7 @@ void main() {
       // TODO
     });
 
-    // WebhookGetHistoryV1ResponseMPayload mPayload
+    // ActivesessionGetCurrentV2ResponseMPayload mPayload
     test('to test the property `mPayload`', () async {
       // TODO
     });

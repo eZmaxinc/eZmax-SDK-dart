@@ -143,6 +143,8 @@ part 'model/activesession_generate_federation_token_v1_response.dart';
 part 'model/activesession_generate_federation_token_v1_response_m_payload.dart';
 part 'model/activesession_get_current_v1_response.dart';
 part 'model/activesession_get_current_v1_response_m_payload.dart';
+part 'model/activesession_get_current_v2_response.dart';
+part 'model/activesession_get_current_v2_response_m_payload.dart';
 part 'model/activesession_get_list_v1_response.dart';
 part 'model/activesession_get_list_v1_response_m_payload.dart';
 part 'model/activesession_list_element.dart';
