@@ -16,7 +16,8 @@ void main() {
   // final instance = EzsignfolderEditObjectV3Request();
 
   group('test EzsignfolderEditObjectV3Request', () {
-    // EzsignfolderRequestCompoundV3 objEzsignfolder
+    // An Ezsignfolder Object and children to create a complete structure
+    // EzsignfolderRequestV3 objEzsignfolder
     test('to test the property `objEzsignfolder`', () async {
       // TODO
     });

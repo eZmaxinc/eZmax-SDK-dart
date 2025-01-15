@@ -722,9 +722,9 @@ class EzsignsignatureResponseCompound {
         objSignature: SignatureResponseCompound.fromJson(json[r'objSignature']),
         dtEzsignsignatureDateInFolderTimezone: mapValueOfType<String>(json, r'dtEzsignsignatureDateInFolderTimezone'),
         bEzsignsignatureCustomdate: mapValueOfType<bool>(json, r'bEzsignsignatureCustomdate'),
-        aObjEzsignsignaturecustomdate: EzsignsignaturecustomdateResponseCompound.listFromJson(json[r'a_objEzsignsignaturecustomdate']),
+        aObjEzsignsignaturecustomdate: EzsignsignaturecustomdateResponse.listFromJson(json[r'a_objEzsignsignaturecustomdate']),
         objCreditcardtransaction: CustomCreditcardtransactionResponse.fromJson(json[r'objCreditcardtransaction']),
-        aObjEzsignelementdependency: EzsignelementdependencyResponseCompound.listFromJson(json[r'a_objEzsignelementdependency']),
+        aObjEzsignelementdependency: EzsignelementdependencyResponse.listFromJson(json[r'a_objEzsignelementdependency']),
         objTimezone: CustomTimezoneWithCodeResponse.fromJson(json[r'objTimezone']),
       );
     }

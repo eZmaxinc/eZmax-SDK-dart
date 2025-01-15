@@ -130,13 +130,14 @@ class SystemconfigurationResponseCompound {
   ///
   String? dtSystemconfigurationReadonlyexpirationend;
 
+  /// A Custom Branding Object
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
   /// source code must fall back to having a nullable type.
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
-  CustomBrandingResponse? objBranding;
+  Object? objBranding;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is SystemconfigurationResponseCompound &&
@@ -275,7 +276,7 @@ class SystemconfigurationResponseCompound {
         bSystemconfigurationSspr: mapValueOfType<bool>(json, r'bSystemconfigurationSspr')!,
         dtSystemconfigurationReadonlyexpirationstart: mapValueOfType<String>(json, r'dtSystemconfigurationReadonlyexpirationstart'),
         dtSystemconfigurationReadonlyexpirationend: mapValueOfType<String>(json, r'dtSystemconfigurationReadonlyexpirationend'),
-        objBranding: CustomBrandingResponse.fromJson(json[r'objBranding']),
+        objBranding: Object.fromJson(json[r'objBranding']),
       );
     }
     return null;

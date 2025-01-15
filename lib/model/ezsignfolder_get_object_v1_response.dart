@@ -28,7 +28,8 @@ class EzsignfolderGetObjectV1Response {
   ///
   CommonResponseObjDebug? objDebug;
 
-  EzsignfolderGetObjectV1ResponseMPayload mPayload;
+  /// Payload for GET /1/object/ezsignfolder/{pkiEzsignfolderID}
+  EzsignfolderResponseCompound mPayload;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfolderGetObjectV1Response &&
@@ -79,7 +80,7 @@ class EzsignfolderGetObjectV1Response {
       return EzsignfolderGetObjectV1Response(
         objDebugPayload: CommonResponseObjDebugPayload.fromJson(json[r'objDebugPayload'])!,
         objDebug: CommonResponseObjDebug.fromJson(json[r'objDebug']),
-        mPayload: EzsignfolderGetObjectV1ResponseMPayload.fromJson(json[r'mPayload'])!,
+        mPayload: EzsignfolderResponseCompound.fromJson(json[r'mPayload'])!,
       );
     }
     return null;

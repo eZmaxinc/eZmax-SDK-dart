@@ -318,8 +318,8 @@ class CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest {
         tEzsignformfieldgroupTooltip: mapValueOfType<String>(json, r'tEzsignformfieldgroupTooltip'),
         eEzsignformfieldgroupTooltipposition: FieldEEzsignformfieldgroupTooltipposition.fromJson(json[r'eEzsignformfieldgroupTooltipposition']),
         eEzsignformfieldgroupTextvalidation: EnumTextvalidation.fromJson(json[r'eEzsignformfieldgroupTextvalidation']),
-        aObjEzsignformfieldgroupsigner: EzsignformfieldgroupsignerRequestCompound.listFromJson(json[r'a_objEzsignformfieldgroupsigner']),
-        aObjDropdownElement: CustomDropdownElementRequestCompound.listFromJson(json[r'a_objDropdownElement']),
+        aObjEzsignformfieldgroupsigner: EzsignformfieldgroupsignerRequest.listFromJson(json[r'a_objEzsignformfieldgroupsigner']),
+        aObjDropdownElement: CustomDropdownElementRequest.listFromJson(json[r'a_objDropdownElement']),
         aObjEzsignformfield: EzsignformfieldRequestCompound.listFromJson(json[r'a_objEzsignformfield']),
         objCreateezsignelementspositionedbyword: CustomCreateEzsignelementsPositionedByWordRequest.fromJson(json[r'objCreateezsignelementspositionedbyword'])!,
       );

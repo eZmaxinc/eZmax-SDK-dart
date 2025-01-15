@@ -244,8 +244,8 @@ class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
         aObjEzmaxinvoicingsummaryinternal: EzmaxinvoicingsummaryinternalResponseCompound.listFromJson(json[r'a_objEzmaxinvoicingsummaryinternal']),
         aObjEzmaxinvoicingagent: EzmaxinvoicingagentResponseCompound.listFromJson(json[r'a_objEzmaxinvoicingagent']),
         aObjEzmaxinvoicinguser: EzmaxinvoicinguserResponseCompound.listFromJson(json[r'a_objEzmaxinvoicinguser']),
-        aObjEzmaxinvoicingezsignfolder: CustomEzmaxinvoicingEzsignfolderResponse.listFromJson(json[r'a_objEzmaxinvoicingezsignfolder']),
-        aObjEzmaxinvoicingezsigndocument: CustomEzmaxinvoicingEzsigndocumentResponse.listFromJson(json[r'a_objEzmaxinvoicingezsigndocument']),
+        aObjEzmaxinvoicingezsignfolder: Object.listFromJson(json[r'a_objEzmaxinvoicingezsignfolder']),
+        aObjEzmaxinvoicingezsigndocument: Object.listFromJson(json[r'a_objEzmaxinvoicingezsigndocument']),
       );
     }
     return null;

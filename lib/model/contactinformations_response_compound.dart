@@ -93,13 +93,14 @@ class ContactinformationsResponseCompound {
   ///
   String? sContactinformationsUrl;
 
+  /// An Address Object and children to create a complete structure
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
   /// source code must fall back to having a nullable type.
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
-  AddressResponseCompound? objAddressDefault;
+  AddressResponse? objAddressDefault;
 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -109,21 +110,23 @@ class ContactinformationsResponseCompound {
   ///
   PhoneResponseCompound? objPhoneDefault;
 
+  /// An Email Object and children to create a complete structure
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
   /// source code must fall back to having a nullable type.
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
-  EmailResponseCompound? objEmailDefault;
+  EmailResponse? objEmailDefault;
 
+  /// A Website Object and children to create a complete structure
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
   /// source code must fall back to having a nullable type.
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
-  WebsiteResponseCompound? objWebsiteDefault;
+  WebsiteResponse? objWebsiteDefault;
 
   List<AddressResponseCompound> aObjAddress;
 
@@ -255,14 +258,14 @@ class ContactinformationsResponseCompound {
         fkiWebsiteIDDefault: mapValueOfType<int>(json, r'fkiWebsiteIDDefault'),
         eContactinformationsType: FieldEContactinformationsType.fromJson(json[r'eContactinformationsType'])!,
         sContactinformationsUrl: mapValueOfType<String>(json, r'sContactinformationsUrl'),
-        objAddressDefault: AddressResponseCompound.fromJson(json[r'objAddressDefault']),
+        objAddressDefault: AddressResponse.fromJson(json[r'objAddressDefault']),
         objPhoneDefault: PhoneResponseCompound.fromJson(json[r'objPhoneDefault']),
-        objEmailDefault: EmailResponseCompound.fromJson(json[r'objEmailDefault']),
-        objWebsiteDefault: WebsiteResponseCompound.fromJson(json[r'objWebsiteDefault']),
-        aObjAddress: AddressResponseCompound.listFromJson(json[r'a_objAddress']),
+        objEmailDefault: EmailResponse.fromJson(json[r'objEmailDefault']),
+        objWebsiteDefault: WebsiteResponse.fromJson(json[r'objWebsiteDefault']),
+        aObjAddress: AddressResponse.listFromJson(json[r'a_objAddress']),
         aObjPhone: PhoneResponseCompound.listFromJson(json[r'a_objPhone']),
-        aObjEmail: EmailResponseCompound.listFromJson(json[r'a_objEmail']),
-        aObjWebsite: WebsiteResponseCompound.listFromJson(json[r'a_objWebsite']),
+        aObjEmail: EmailResponse.listFromJson(json[r'a_objEmail']),
+        aObjWebsite: WebsiteResponse.listFromJson(json[r'a_objWebsite']),
       );
     }
     return null;

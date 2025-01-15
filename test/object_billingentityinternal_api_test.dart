@@ -30,7 +30,7 @@ void main() {
     //
     // 
     //
-    //Future<BillingentityinternalEditObjectV1Response> billingentityinternalEditObjectV1(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request) async
+    //Future<CommonResponse> billingentityinternalEditObjectV1(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request) async
     test('test billingentityinternalEditObjectV1', () async {
       // TODO
     });

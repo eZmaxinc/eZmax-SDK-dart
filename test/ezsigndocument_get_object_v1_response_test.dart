@@ -26,7 +26,8 @@ void main() {
       // TODO
     });
 
-    // EzsigndocumentGetObjectV1ResponseMPayload mPayload
+    // Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}
+    // EzsigndocumentResponseCompound mPayload
     test('to test the property `mPayload`', () async {
       // TODO
     });

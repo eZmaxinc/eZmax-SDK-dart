@@ -28,7 +28,8 @@ class EzsignfoldersignerassociationGetObjectV1Response {
   ///
   CommonResponseObjDebug? objDebug;
 
-  EzsignfoldersignerassociationGetObjectV1ResponseMPayload mPayload;
+  /// Payload for GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}
+  EzsignfoldersignerassociationResponseCompound mPayload;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfoldersignerassociationGetObjectV1Response &&
@@ -79,7 +80,7 @@ class EzsignfoldersignerassociationGetObjectV1Response {
       return EzsignfoldersignerassociationGetObjectV1Response(
         objDebugPayload: CommonResponseObjDebugPayload.fromJson(json[r'objDebugPayload'])!,
         objDebug: CommonResponseObjDebug.fromJson(json[r'objDebug']),
-        mPayload: EzsignfoldersignerassociationGetObjectV1ResponseMPayload.fromJson(json[r'mPayload'])!,
+        mPayload: EzsignfoldersignerassociationResponseCompound.fromJson(json[r'mPayload'])!,
       );
     }
     return null;

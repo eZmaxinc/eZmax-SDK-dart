@@ -16,7 +16,8 @@ class ApikeyEditObjectV1Request {
     required this.objApikey,
   });
 
-  ApikeyRequestCompound objApikey;
+  /// An Apikey Object and children to create a complete structure
+  ApikeyRequest objApikey;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ApikeyEditObjectV1Request &&
@@ -55,7 +56,7 @@ class ApikeyEditObjectV1Request {
       }());
 
       return ApikeyEditObjectV1Request(
-        objApikey: ApikeyRequestCompound.fromJson(json[r'objApikey'])!,
+        objApikey: ApikeyRequest.fromJson(json[r'objApikey'])!,
       );
     }
     return null;

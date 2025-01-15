@@ -30,7 +30,7 @@ void main() {
     //
     // 
     //
-    //Future<EzsigntemplateformfieldgroupDeleteObjectV1Response> ezsigntemplateformfieldgroupDeleteObjectV1(int pkiEzsigntemplateformfieldgroupID) async
+    //Future<CommonResponse> ezsigntemplateformfieldgroupDeleteObjectV1(int pkiEzsigntemplateformfieldgroupID) async
     test('test ezsigntemplateformfieldgroupDeleteObjectV1', () async {
       // TODO
     });
@@ -39,7 +39,7 @@ void main() {
     //
     // 
     //
-    //Future<EzsigntemplateformfieldgroupEditObjectV1Response> ezsigntemplateformfieldgroupEditObjectV1(int pkiEzsigntemplateformfieldgroupID, EzsigntemplateformfieldgroupEditObjectV1Request ezsigntemplateformfieldgroupEditObjectV1Request) async
+    //Future<CommonResponse> ezsigntemplateformfieldgroupEditObjectV1(int pkiEzsigntemplateformfieldgroupID, EzsigntemplateformfieldgroupEditObjectV1Request ezsigntemplateformfieldgroupEditObjectV1Request) async
     test('test ezsigntemplateformfieldgroupEditObjectV1', () async {
       // TODO
     });

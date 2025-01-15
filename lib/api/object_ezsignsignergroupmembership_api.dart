@@ -116,7 +116,7 @@ class ObjectEzsignsignergroupmembershipApi {
   ///
   /// * [int] pkiEzsignsignergroupmembershipID (required):
   ///   The unique ID of the Ezsignsignergroupmembership
-  Future<EzsignsignergroupmembershipDeleteObjectV1Response?> ezsignsignergroupmembershipDeleteObjectV1(int pkiEzsignsignergroupmembershipID,) async {
+  Future<CommonResponse?> ezsignsignergroupmembershipDeleteObjectV1(int pkiEzsignsignergroupmembershipID,) async {
     final response = await ezsignsignergroupmembershipDeleteObjectV1WithHttpInfo(pkiEzsignsignergroupmembershipID,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -125,7 +125,7 @@ class ObjectEzsignsignergroupmembershipApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignsignergroupmembershipDeleteObjectV1Response',) as EzsignsignergroupmembershipDeleteObjectV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
     
     }
     return null;

@@ -688,9 +688,9 @@ class EzsignsignatureResponseCompoundV3 {
         objContactNameDelegation: CustomContactNameResponse.fromJson(json[r'objContactNameDelegation']),
         objSignature: SignatureResponseCompound.fromJson(json[r'objSignature']),
         bEzsignsignatureCustomdate: mapValueOfType<bool>(json, r'bEzsignsignatureCustomdate'),
-        aObjEzsignsignaturecustomdate: EzsignsignaturecustomdateResponseCompoundV2.listFromJson(json[r'a_objEzsignsignaturecustomdate']),
+        aObjEzsignsignaturecustomdate: EzsignsignaturecustomdateResponseV2.listFromJson(json[r'a_objEzsignsignaturecustomdate']),
         objCreditcardtransaction: CustomCreditcardtransactionResponse.fromJson(json[r'objCreditcardtransaction']),
-        aObjEzsignelementdependency: EzsignelementdependencyResponseCompound.listFromJson(json[r'a_objEzsignelementdependency']),
+        aObjEzsignelementdependency: EzsignelementdependencyResponse.listFromJson(json[r'a_objEzsignelementdependency']),
       );
     }
     return null;

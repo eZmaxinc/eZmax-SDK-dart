@@ -116,7 +116,7 @@ class ObjectPermissionApi {
   ///
   /// * [int] pkiPermissionID (required):
   ///   The unique ID of the Permission
-  Future<PermissionDeleteObjectV1Response?> permissionDeleteObjectV1(int pkiPermissionID,) async {
+  Future<CommonResponse?> permissionDeleteObjectV1(int pkiPermissionID,) async {
     final response = await permissionDeleteObjectV1WithHttpInfo(pkiPermissionID,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -125,7 +125,7 @@ class ObjectPermissionApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'PermissionDeleteObjectV1Response',) as PermissionDeleteObjectV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
     
     }
     return null;
@@ -179,7 +179,7 @@ class ObjectPermissionApi {
   ///   The unique ID of the Permission
   ///
   /// * [PermissionEditObjectV1Request] permissionEditObjectV1Request (required):
-  Future<PermissionEditObjectV1Response?> permissionEditObjectV1(int pkiPermissionID, PermissionEditObjectV1Request permissionEditObjectV1Request,) async {
+  Future<CommonResponse?> permissionEditObjectV1(int pkiPermissionID, PermissionEditObjectV1Request permissionEditObjectV1Request,) async {
     final response = await permissionEditObjectV1WithHttpInfo(pkiPermissionID, permissionEditObjectV1Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -188,7 +188,7 @@ class ObjectPermissionApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'PermissionEditObjectV1Response',) as PermissionEditObjectV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
     
     }
     return null;

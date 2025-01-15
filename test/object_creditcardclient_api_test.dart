@@ -30,7 +30,7 @@ void main() {
     //
     // 
     //
-    //Future<CreditcardclientDeleteObjectV1Response> creditcardclientDeleteObjectV1(int pkiCreditcardclientID) async
+    //Future<CommonResponse> creditcardclientDeleteObjectV1(int pkiCreditcardclientID) async
     test('test creditcardclientDeleteObjectV1', () async {
       // TODO
     });
@@ -39,7 +39,7 @@ void main() {
     //
     // 
     //
-    //Future<CreditcardclientEditObjectV1Response> creditcardclientEditObjectV1(int pkiCreditcardclientID, CreditcardclientEditObjectV1Request creditcardclientEditObjectV1Request) async
+    //Future<CommonResponse> creditcardclientEditObjectV1(int pkiCreditcardclientID, CreditcardclientEditObjectV1Request creditcardclientEditObjectV1Request) async
     test('test creditcardclientEditObjectV1', () async {
       // TODO
     });
@@ -75,7 +75,7 @@ void main() {
     //
     // 
     //
-    //Future<CreditcardclientPatchObjectV1Response> creditcardclientPatchObjectV1(int pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request) async
+    //Future<CommonResponse> creditcardclientPatchObjectV1(int pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request) async
     test('test creditcardclientPatchObjectV1', () async {
       // TODO
     });

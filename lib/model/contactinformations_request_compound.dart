@@ -105,10 +105,10 @@ class ContactinformationsRequestCompound {
         iPhoneDefault: mapValueOfType<int>(json, r'iPhoneDefault')!,
         iEmailDefault: mapValueOfType<int>(json, r'iEmailDefault')!,
         iWebsiteDefault: mapValueOfType<int>(json, r'iWebsiteDefault')!,
-        aObjAddress: AddressRequestCompound.listFromJson(json[r'a_objAddress']),
-        aObjPhone: PhoneRequestCompound.listFromJson(json[r'a_objPhone']),
-        aObjEmail: EmailRequestCompound.listFromJson(json[r'a_objEmail']),
-        aObjWebsite: WebsiteRequestCompound.listFromJson(json[r'a_objWebsite']),
+        aObjAddress: AddressRequest.listFromJson(json[r'a_objAddress']),
+        aObjPhone: PhoneRequest.listFromJson(json[r'a_objPhone']),
+        aObjEmail: EmailRequest.listFromJson(json[r'a_objEmail']),
+        aObjWebsite: WebsiteRequest.listFromJson(json[r'a_objWebsite']),
       );
     }
     return null;

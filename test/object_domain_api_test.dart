@@ -30,7 +30,7 @@ void main() {
     //
     // 
     //
-    //Future<DomainDeleteObjectV1Response> domainDeleteObjectV1(int pkiDomainID) async
+    //Future<CommonResponse> domainDeleteObjectV1(int pkiDomainID) async
     test('test domainDeleteObjectV1', () async {
       // TODO
     });

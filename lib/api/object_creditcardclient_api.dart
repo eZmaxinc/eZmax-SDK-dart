@@ -116,7 +116,7 @@ class ObjectCreditcardclientApi {
   ///
   /// * [int] pkiCreditcardclientID (required):
   ///   The unique ID of the Creditcardclient
-  Future<CreditcardclientDeleteObjectV1Response?> creditcardclientDeleteObjectV1(int pkiCreditcardclientID,) async {
+  Future<CommonResponse?> creditcardclientDeleteObjectV1(int pkiCreditcardclientID,) async {
     final response = await creditcardclientDeleteObjectV1WithHttpInfo(pkiCreditcardclientID,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -125,7 +125,7 @@ class ObjectCreditcardclientApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CreditcardclientDeleteObjectV1Response',) as CreditcardclientDeleteObjectV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
     
     }
     return null;
@@ -179,7 +179,7 @@ class ObjectCreditcardclientApi {
   ///   The unique ID of the Creditcardclient
   ///
   /// * [CreditcardclientEditObjectV1Request] creditcardclientEditObjectV1Request (required):
-  Future<CreditcardclientEditObjectV1Response?> creditcardclientEditObjectV1(int pkiCreditcardclientID, CreditcardclientEditObjectV1Request creditcardclientEditObjectV1Request,) async {
+  Future<CommonResponse?> creditcardclientEditObjectV1(int pkiCreditcardclientID, CreditcardclientEditObjectV1Request creditcardclientEditObjectV1Request,) async {
     final response = await creditcardclientEditObjectV1WithHttpInfo(pkiCreditcardclientID, creditcardclientEditObjectV1Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -188,7 +188,7 @@ class ObjectCreditcardclientApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CreditcardclientEditObjectV1Response',) as CreditcardclientEditObjectV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
     
     }
     return null;
@@ -478,7 +478,7 @@ class ObjectCreditcardclientApi {
   ///   The unique ID of the Creditcardclient
   ///
   /// * [CreditcardclientPatchObjectV1Request] creditcardclientPatchObjectV1Request (required):
-  Future<CreditcardclientPatchObjectV1Response?> creditcardclientPatchObjectV1(int pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request,) async {
+  Future<CommonResponse?> creditcardclientPatchObjectV1(int pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request,) async {
     final response = await creditcardclientPatchObjectV1WithHttpInfo(pkiCreditcardclientID, creditcardclientPatchObjectV1Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -487,7 +487,7 @@ class ObjectCreditcardclientApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CreditcardclientPatchObjectV1Response',) as CreditcardclientPatchObjectV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
     
     }
     return null;

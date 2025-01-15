@@ -30,7 +30,7 @@ void main() {
     //
     // 
     //
-    //Future<SupplyDeleteObjectV1Response> supplyDeleteObjectV1(int pkiSupplyID) async
+    //Future<CommonResponse> supplyDeleteObjectV1(int pkiSupplyID) async
     test('test supplyDeleteObjectV1', () async {
       // TODO
     });
@@ -39,7 +39,7 @@ void main() {
     //
     // 
     //
-    //Future<SupplyEditObjectV1Response> supplyEditObjectV1(int pkiSupplyID, SupplyEditObjectV1Request supplyEditObjectV1Request) async
+    //Future<CommonResponse> supplyEditObjectV1(int pkiSupplyID, SupplyEditObjectV1Request supplyEditObjectV1Request) async
     test('test supplyEditObjectV1', () async {
       // TODO
     });

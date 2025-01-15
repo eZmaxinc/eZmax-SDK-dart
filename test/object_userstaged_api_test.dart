@@ -30,7 +30,7 @@ void main() {
     //
     // 
     //
-    //Future<UserstagedDeleteObjectV1Response> userstagedDeleteObjectV1(int pkiUserstagedID) async
+    //Future<CommonResponse> userstagedDeleteObjectV1(int pkiUserstagedID) async
     test('test userstagedDeleteObjectV1', () async {
       // TODO
     });
@@ -57,7 +57,7 @@ void main() {
     //
     // 
     //
-    //Future<UserstagedMapV1Response> userstagedMapV1(int pkiUserstagedID, UserstagedMapV1Request userstagedMapV1Request) async
+    //Future<CommonResponse> userstagedMapV1(int pkiUserstagedID, UserstagedMapV1Request userstagedMapV1Request) async
     test('test userstagedMapV1', () async {
       // TODO
     });

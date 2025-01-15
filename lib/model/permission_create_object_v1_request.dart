@@ -55,7 +55,7 @@ class PermissionCreateObjectV1Request {
       }());
 
       return PermissionCreateObjectV1Request(
-        aObjPermission: PermissionRequestCompound.listFromJson(json[r'a_objPermission']),
+        aObjPermission: PermissionRequest.listFromJson(json[r'a_objPermission']),
       );
     }
     return null;

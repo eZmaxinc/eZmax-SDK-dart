@@ -256,7 +256,7 @@ class EzsignformfieldRequestCompound {
         eEzsignformfieldDependencyrequirement: FieldEEzsignformfieldDependencyrequirement.fromJson(json[r'eEzsignformfieldDependencyrequirement']),
         eEzsignformfieldHorizontalalignment: EnumHorizontalalignment.fromJson(json[r'eEzsignformfieldHorizontalalignment']),
         objTextstylestatic: TextstylestaticRequestCompound.fromJson(json[r'objTextstylestatic']),
-        aObjEzsignelementdependency: EzsignelementdependencyRequestCompound.listFromJson(json[r'a_objEzsignelementdependency']),
+        aObjEzsignelementdependency: EzsignelementdependencyRequest.listFromJson(json[r'a_objEzsignelementdependency']),
       );
     }
     return null;

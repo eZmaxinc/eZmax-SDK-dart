@@ -26,7 +26,8 @@ void main() {
       // TODO
     });
 
-    // WebhookGetHistoryV1ResponseMPayload mPayload
+    // Payload for GET /1/object/webhook/{pkiWebhookID}/getHistory
+    // Object mPayload
     test('to test the property `mPayload`', () async {
       // TODO
     });

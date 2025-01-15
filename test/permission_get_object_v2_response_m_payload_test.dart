@@ -16,7 +16,8 @@ void main() {
   // final instance = PermissionGetObjectV2ResponseMPayload();
 
   group('test PermissionGetObjectV2ResponseMPayload', () {
-    // PermissionResponseCompound objPermission
+    // A Permission Object and children to create a complete structure
+    // PermissionResponse objPermission
     test('to test the property `objPermission`', () async {
       // TODO
     });

@@ -28,7 +28,8 @@ void main() {
       // TODO
     });
 
-    // CustomEzsignfoldertypeResponse objEzsignfoldertype
+    // A Custom Ezsignfoldertype Object
+    // Object objEzsignfoldertype
     test('to test the property `objEzsignfoldertype`', () async {
       // TODO
     });

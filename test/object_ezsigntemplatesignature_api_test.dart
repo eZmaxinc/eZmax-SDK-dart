@@ -30,7 +30,7 @@ void main() {
     //
     // 
     //
-    //Future<EzsigntemplatesignatureDeleteObjectV1Response> ezsigntemplatesignatureDeleteObjectV1(int pkiEzsigntemplatesignatureID) async
+    //Future<CommonResponse> ezsigntemplatesignatureDeleteObjectV1(int pkiEzsigntemplatesignatureID) async
     test('test ezsigntemplatesignatureDeleteObjectV1', () async {
       // TODO
     });
@@ -39,7 +39,7 @@ void main() {
     //
     // 
     //
-    //Future<EzsigntemplatesignatureEditObjectV2Response> ezsigntemplatesignatureEditObjectV2(int pkiEzsigntemplatesignatureID, EzsigntemplatesignatureEditObjectV2Request ezsigntemplatesignatureEditObjectV2Request) async
+    //Future<CommonResponse> ezsigntemplatesignatureEditObjectV2(int pkiEzsigntemplatesignatureID, EzsigntemplatesignatureEditObjectV2Request ezsigntemplatesignatureEditObjectV2Request) async
     test('test ezsigntemplatesignatureEditObjectV2', () async {
       // TODO
     });

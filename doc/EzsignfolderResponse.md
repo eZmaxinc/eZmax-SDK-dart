@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiEzsignfolderID** | **int** | The unique ID of the Ezsignfolder | 
 **fkiEzsignfoldertypeID** | **int** | The unique ID of the Ezsignfoldertype. | [optional] 
-**objEzsignfoldertype** | [**CustomEzsignfoldertypeResponse**](CustomEzsignfoldertypeResponse.md) |  | [optional] 
+**objEzsignfoldertype** | [**Object**](Object.md) | A Custom Ezsignfoldertype Object | [optional] 
 **fkiTimezoneID** | **int** | The unique ID of the Timezone | [optional] 
 **eEzsignfolderCompletion** | [**FieldEEzsignfolderCompletion**](FieldEEzsignfolderCompletion.md) |  | 
 **sEzsignfoldertypeNameX** | **String** |  | [optional] 

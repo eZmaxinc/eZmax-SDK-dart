@@ -16,7 +16,8 @@ class PermissionEditObjectV1Request {
     required this.objPermission,
   });
 
-  PermissionRequestCompound objPermission;
+  /// A Permission Object and children to create a complete structure
+  PermissionRequest objPermission;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is PermissionEditObjectV1Request &&
@@ -55,7 +56,7 @@ class PermissionEditObjectV1Request {
       }());
 
       return PermissionEditObjectV1Request(
-        objPermission: PermissionRequestCompound.fromJson(json[r'objPermission'])!,
+        objPermission: PermissionRequest.fromJson(json[r'objPermission'])!,
       );
     }
     return null;

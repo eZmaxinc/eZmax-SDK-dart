@@ -28,7 +28,8 @@ class WebhookGetHistoryV1Response {
   ///
   CommonResponseObjDebug? objDebug;
 
-  WebhookGetHistoryV1ResponseMPayload mPayload;
+  /// Payload for GET /1/object/webhook/{pkiWebhookID}/getHistory
+  Object mPayload;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is WebhookGetHistoryV1Response &&
@@ -79,7 +80,7 @@ class WebhookGetHistoryV1Response {
       return WebhookGetHistoryV1Response(
         objDebugPayload: CommonResponseObjDebugPayload.fromJson(json[r'objDebugPayload'])!,
         objDebug: CommonResponseObjDebug.fromJson(json[r'objDebug']),
-        mPayload: WebhookGetHistoryV1ResponseMPayload.fromJson(json[r'mPayload'])!,
+        mPayload: Object.fromJson(json[r'mPayload'])!,
       );
     }
     return null;

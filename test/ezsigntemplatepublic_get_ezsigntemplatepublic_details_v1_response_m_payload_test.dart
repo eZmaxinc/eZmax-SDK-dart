@@ -16,7 +16,8 @@ void main() {
   // final instance = EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1ResponseMPayload();
 
   group('test EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1ResponseMPayload', () {
-    // CustomBrandingResponse objBranding
+    // A Custom Branding Object
+    // Object objBranding
     test('to test the property `objBranding`', () async {
       // TODO
     });

@@ -52,7 +52,8 @@ void main() {
       // TODO
     });
 
-    // CustomDiscussionconfigurationResponse objDiscussionconfiguration
+    // A Custom Discussionconfiguration Object
+    // Object objDiscussionconfiguration
     test('to test the property `objDiscussionconfiguration`', () async {
       // TODO
     });
