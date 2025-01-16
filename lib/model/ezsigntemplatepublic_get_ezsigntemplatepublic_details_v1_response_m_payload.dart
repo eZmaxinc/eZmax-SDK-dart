@@ -18,14 +18,13 @@ class EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1ResponseMPayload {
     this.aSEzsigntemplatesignerDescription = const [],
   });
 
-  /// A Custom Branding Object
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
   /// source code must fall back to having a nullable type.
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
-  Object? objBranding;
+  CustomBrandingResponse? objBranding;
 
   /// The unique ID of the Userlogintype  Valid values:  |Value|Description|Detail| |-|-|-| |1|**Email Only**|The Ezsignsigner will receive a secure link by email| |2|**Email and phone or SMS**|The Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**| |3|**Email and secret question**|The Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer| |4|**In person only**|The Ezsignsigner will only be able to sign \"In-Person\" and there won't be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type| |5|**In person with phone or SMS**|The Ezsignsigner will only be able to sign \"In-Person\" and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**| |6|**Embedded**|The Ezsignsigner will only be able to sign in the embedded solution. No email will be sent for invitation to sign. **Additional fee applies**|   |7|**Embedded with phone or SMS**|The Ezsignsigner will only be able to sign in the embedded solution and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**|   |8|**No validation**|The Ezsignsigner will not receive an email and won't have to validate his connection using 2 factor. **Additional fee applies**|      |9|**Sms only**|The Ezsignsigner will not receive an email but will will need to authenticate using SMS. **Additional fee applies**|     
   ///
@@ -81,7 +80,7 @@ class EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1ResponseMPayload {
       }());
 
       return EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1ResponseMPayload(
-        objBranding: Object.fromJson(json[r'objBranding']),
+        objBranding: CustomBrandingResponse.fromJson(json[r'objBranding']),
         fkiUserlogintypeID: mapValueOfType<int>(json, r'fkiUserlogintypeID')!,
         aSEzsigntemplatesignerDescription: json[r'a_sEzsigntemplatesignerDescription'] is Iterable
             ? (json[r'a_sEzsigntemplatesignerDescription'] as Iterable).cast<String>().toList(growable: false)

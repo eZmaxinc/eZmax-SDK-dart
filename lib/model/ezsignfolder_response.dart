@@ -58,14 +58,13 @@ class EzsignfolderResponse {
   ///
   int? fkiEzsignfoldertypeID;
 
-  /// A Custom Ezsignfoldertype Object
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
   /// source code must fall back to having a nullable type.
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
-  Object? objEzsignfoldertype;
+  CustomEzsignfoldertypeResponse? objEzsignfoldertype;
 
   /// The unique ID of the Timezone
   ///
@@ -476,7 +475,7 @@ class EzsignfolderResponse {
       return EzsignfolderResponse(
         pkiEzsignfolderID: mapValueOfType<int>(json, r'pkiEzsignfolderID')!,
         fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID'),
-        objEzsignfoldertype: Object.fromJson(json[r'objEzsignfoldertype']),
+        objEzsignfoldertype: CustomEzsignfoldertypeResponse.fromJson(json[r'objEzsignfoldertype']),
         fkiTimezoneID: mapValueOfType<int>(json, r'fkiTimezoneID'),
         eEzsignfolderCompletion: FieldEEzsignfolderCompletion.fromJson(json[r'eEzsignfolderCompletion'])!,
         sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX'),

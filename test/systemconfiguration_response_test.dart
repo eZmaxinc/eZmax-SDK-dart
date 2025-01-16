@@ -107,8 +107,7 @@ void main() {
       // TODO
     });
 
-    // A Custom Branding Object
-    // Object objBranding
+    // CustomBrandingResponse objBranding
     test('to test the property `objBranding`', () async {
       // TODO
     });
