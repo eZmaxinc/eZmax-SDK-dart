@@ -30,7 +30,7 @@ void main() {
     //
     // 
     //
-    //Future<CommonResponse> ezsignbulksendsignermappingDeleteObjectV1(int pkiEzsignbulksendsignermappingID) async
+    //Future<EzsignbulksendsignermappingDeleteObjectV1Response> ezsignbulksendsignermappingDeleteObjectV1(int pkiEzsignbulksendsignermappingID) async
     test('test ezsignbulksendsignermappingDeleteObjectV1', () async {
       // TODO
     });

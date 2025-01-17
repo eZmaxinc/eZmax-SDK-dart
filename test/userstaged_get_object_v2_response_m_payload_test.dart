@@ -16,8 +16,7 @@ void main() {
   // final instance = UserstagedGetObjectV2ResponseMPayload();
 
   group('test UserstagedGetObjectV2ResponseMPayload', () {
-    // A Userstaged Object
-    // UserstagedResponse objUserstaged
+    // UserstagedResponseCompound objUserstaged
     test('to test the property `objUserstaged`', () async {
       // TODO
     });

@@ -116,7 +116,7 @@ class ObjectSignatureApi {
   ///
   /// * [int] pkiSignatureID (required):
   ///   The unique ID of the Signature
-  Future<CommonResponse?> signatureDeleteObjectV1(int pkiSignatureID,) async {
+  Future<SignatureDeleteObjectV1Response?> signatureDeleteObjectV1(int pkiSignatureID,) async {
     final response = await signatureDeleteObjectV1WithHttpInfo(pkiSignatureID,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -125,7 +125,7 @@ class ObjectSignatureApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'SignatureDeleteObjectV1Response',) as SignatureDeleteObjectV1Response;
     
     }
     return null;
@@ -179,7 +179,7 @@ class ObjectSignatureApi {
   ///   The unique ID of the Signature
   ///
   /// * [SignatureEditObjectV1Request] signatureEditObjectV1Request (required):
-  Future<CommonResponse?> signatureEditObjectV1(int pkiSignatureID, SignatureEditObjectV1Request signatureEditObjectV1Request,) async {
+  Future<SignatureEditObjectV1Response?> signatureEditObjectV1(int pkiSignatureID, SignatureEditObjectV1Request signatureEditObjectV1Request,) async {
     final response = await signatureEditObjectV1WithHttpInfo(pkiSignatureID, signatureEditObjectV1Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -188,7 +188,7 @@ class ObjectSignatureApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'SignatureEditObjectV1Response',) as SignatureEditObjectV1Response;
     
     }
     return null;

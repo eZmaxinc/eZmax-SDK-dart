@@ -510,8 +510,8 @@ class EzsignsignatureRequestCompoundV2 {
         sEzsignsignatureRegexp: mapValueOfType<String>(json, r'sEzsignsignatureRegexp'),
         eEzsignsignatureDependencyrequirement: FieldEEzsignsignatureDependencyrequirement.fromJson(json[r'eEzsignsignatureDependencyrequirement']),
         bEzsignsignatureCustomdate: mapValueOfType<bool>(json, r'bEzsignsignatureCustomdate'),
-        aObjEzsignsignaturecustomdate: EzsignsignaturecustomdateRequestV2.listFromJson(json[r'a_objEzsignsignaturecustomdate']),
-        aObjEzsignelementdependency: EzsignelementdependencyRequest.listFromJson(json[r'a_objEzsignelementdependency']),
+        aObjEzsignsignaturecustomdate: EzsignsignaturecustomdateRequestCompoundV2.listFromJson(json[r'a_objEzsignsignaturecustomdate']),
+        aObjEzsignelementdependency: EzsignelementdependencyRequestCompound.listFromJson(json[r'a_objEzsignelementdependency']),
       );
     }
     return null;

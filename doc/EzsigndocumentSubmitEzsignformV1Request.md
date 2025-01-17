@@ -9,7 +9,7 @@ import 'package:openapi/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **bEzsignformIsdraft** | **bool** | Whether the Ezsignform submitted is a draft or not. | 
-**aObjEzsignformfieldgroup** | [**List<CustomEzsignformfieldgroupRequest>**](Object.md) |  | [default to const []]
+**aObjEzsignformfieldgroup** | [**List<CustomEzsignformfieldgroupRequest>**](CustomEzsignformfieldgroupRequest.md) |  | [default to const []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

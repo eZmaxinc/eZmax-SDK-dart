@@ -69,7 +69,7 @@ class WebhookEzsignDocumentCompleted {
 
       return WebhookEzsignDocumentCompleted(
         objWebhook: CustomWebhookResponse.fromJson(json[r'objWebhook'])!,
-        aObjAttempt: AttemptResponse.listFromJson(json[r'a_objAttempt']),
+        aObjAttempt: AttemptResponseCompound.listFromJson(json[r'a_objAttempt']),
         objEzsigndocument: EzsigndocumentResponse.fromJson(json[r'objEzsigndocument'])!,
       );
     }

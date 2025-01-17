@@ -30,7 +30,7 @@ void main() {
     //
     // 
     //
-    //Future<CommonResponse> discussionmembershipDeleteObjectV1(int pkiDiscussionmembershipID) async
+    //Future<DiscussionmembershipDeleteObjectV1Response> discussionmembershipDeleteObjectV1(int pkiDiscussionmembershipID) async
     test('test discussionmembershipDeleteObjectV1', () async {
       // TODO
     });

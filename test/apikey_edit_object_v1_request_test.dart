@@ -16,8 +16,7 @@ void main() {
   // final instance = ApikeyEditObjectV1Request();
 
   group('test ApikeyEditObjectV1Request', () {
-    // An Apikey Object and children to create a complete structure
-    // ApikeyRequest objApikey
+    // ApikeyRequestCompound objApikey
     test('to test the property `objApikey`', () async {
       // TODO
     });

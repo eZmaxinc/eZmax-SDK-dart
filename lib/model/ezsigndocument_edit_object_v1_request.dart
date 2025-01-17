@@ -16,8 +16,7 @@ class EzsigndocumentEditObjectV1Request {
     required this.objEzsigndocument,
   });
 
-  /// An Ezsigndocument Object and children to create a complete structure
-  EzsigndocumentRequest objEzsigndocument;
+  EzsigndocumentRequestCompound objEzsigndocument;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigndocumentEditObjectV1Request &&
@@ -56,7 +55,7 @@ class EzsigndocumentEditObjectV1Request {
       }());
 
       return EzsigndocumentEditObjectV1Request(
-        objEzsigndocument: EzsigndocumentRequest.fromJson(json[r'objEzsigndocument'])!,
+        objEzsigndocument: EzsigndocumentRequestCompound.fromJson(json[r'objEzsigndocument'])!,
       );
     }
     return null;

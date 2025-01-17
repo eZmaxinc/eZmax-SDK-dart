@@ -21,8 +21,7 @@ void main() {
       // TODO
     });
 
-    // An Ezsigndocument Object and children to create a complete structure
-    // EzsigndocumentRequest objEzsigndocumentCompound
+    // EzsigndocumentRequestCompound objEzsigndocumentCompound
     test('to test the property `objEzsigndocumentCompound`', () async {
       // TODO
     });

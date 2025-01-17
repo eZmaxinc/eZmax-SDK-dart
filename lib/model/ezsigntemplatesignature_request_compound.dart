@@ -620,8 +620,8 @@ class EzsigntemplatesignatureRequestCompound {
         iEzsigntemplatesignaturePositioningoffsety: mapValueOfType<int>(json, r'iEzsigntemplatesignaturePositioningoffsety'),
         eEzsigntemplatesignaturePositioningoccurence: FieldEEzsigntemplatesignaturePositioningoccurence.fromJson(json[r'eEzsigntemplatesignaturePositioningoccurence']),
         bEzsigntemplatesignatureCustomdate: mapValueOfType<bool>(json, r'bEzsigntemplatesignatureCustomdate'),
-        aObjEzsigntemplatesignaturecustomdate: EzsigntemplatesignaturecustomdateRequest.listFromJson(json[r'a_objEzsigntemplatesignaturecustomdate']),
-        aObjEzsigntemplateelementdependency: EzsigntemplateelementdependencyRequest.listFromJson(json[r'a_objEzsigntemplateelementdependency']),
+        aObjEzsigntemplatesignaturecustomdate: EzsigntemplatesignaturecustomdateRequestCompound.listFromJson(json[r'a_objEzsigntemplatesignaturecustomdate']),
+        aObjEzsigntemplateelementdependency: EzsigntemplateelementdependencyRequestCompound.listFromJson(json[r'a_objEzsigntemplateelementdependency']),
       );
     }
     return null;

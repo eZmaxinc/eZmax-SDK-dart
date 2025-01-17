@@ -30,7 +30,7 @@ void main() {
     //
     // 
     //
-    //Future<CommonResponse> usergroupmembershipDeleteObjectV1(int pkiUsergroupmembershipID) async
+    //Future<UsergroupmembershipDeleteObjectV1Response> usergroupmembershipDeleteObjectV1(int pkiUsergroupmembershipID) async
     test('test usergroupmembershipDeleteObjectV1', () async {
       // TODO
     });
@@ -39,7 +39,7 @@ void main() {
     //
     // 
     //
-    //Future<CommonResponse> usergroupmembershipEditObjectV1(int pkiUsergroupmembershipID, UsergroupmembershipEditObjectV1Request usergroupmembershipEditObjectV1Request) async
+    //Future<UsergroupmembershipEditObjectV1Response> usergroupmembershipEditObjectV1(int pkiUsergroupmembershipID, UsergroupmembershipEditObjectV1Request usergroupmembershipEditObjectV1Request) async
     test('test usergroupmembershipEditObjectV1', () async {
       // TODO
     });

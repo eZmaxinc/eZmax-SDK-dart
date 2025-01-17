@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **paymenttermEditObjectV1**
-> CommonResponse paymenttermEditObjectV1(pkiPaymenttermID, paymenttermEditObjectV1Request)
+> PaymenttermEditObjectV1Response paymenttermEditObjectV1(pkiPaymenttermID, paymenttermEditObjectV1Request)
 
 Edit an existing Paymentterm
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**PaymenttermEditObjectV1Response**](PaymenttermEditObjectV1Response.md)
 
 ### Authorization
 

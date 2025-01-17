@@ -25,14 +25,13 @@ class EzsigndocumentCreateObjectV1Request {
   ///
   EzsigndocumentRequest? objEzsigndocument;
 
-  /// An Ezsigndocument Object and children to create a complete structure
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
   /// source code must fall back to having a nullable type.
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
-  EzsigndocumentRequest? objEzsigndocumentCompound;
+  EzsigndocumentRequestCompound? objEzsigndocumentCompound;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigndocumentCreateObjectV1Request &&
@@ -83,7 +82,7 @@ class EzsigndocumentCreateObjectV1Request {
 
       return EzsigndocumentCreateObjectV1Request(
         objEzsigndocument: EzsigndocumentRequest.fromJson(json[r'objEzsigndocument']),
-        objEzsigndocumentCompound: EzsigndocumentRequest.fromJson(json[r'objEzsigndocumentCompound']),
+        objEzsigndocumentCompound: EzsigndocumentRequestCompound.fromJson(json[r'objEzsigndocumentCompound']),
       );
     }
     return null;

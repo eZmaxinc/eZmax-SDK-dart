@@ -55,7 +55,7 @@ class EzsigndocumentCreateObjectV3Request {
       }());
 
       return EzsigndocumentCreateObjectV3Request(
-        aObjEzsigndocument: EzsigndocumentRequest.listFromJson(json[r'a_objEzsigndocument']),
+        aObjEzsigndocument: EzsigndocumentRequestCompound.listFromJson(json[r'a_objEzsigndocument']),
       );
     }
     return null;

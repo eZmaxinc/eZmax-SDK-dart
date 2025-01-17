@@ -30,7 +30,7 @@ void main() {
     //
     // 
     //
-    //Future<CommonResponse> paymenttermEditObjectV1(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request) async
+    //Future<PaymenttermEditObjectV1Response> paymenttermEditObjectV1(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request) async
     test('test paymenttermEditObjectV1', () async {
       // TODO
     });

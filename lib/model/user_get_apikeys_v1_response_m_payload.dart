@@ -55,7 +55,7 @@ class UserGetApikeysV1ResponseMPayload {
       }());
 
       return UserGetApikeysV1ResponseMPayload(
-        aObjApikey: ApikeyResponse.listFromJson(json[r'a_objApikey']),
+        aObjApikey: ApikeyResponseCompound.listFromJson(json[r'a_objApikey']),
       );
     }
     return null;

@@ -114,7 +114,7 @@ class ObjectWebhookApi {
   /// Parameters:
   ///
   /// * [int] pkiWebhookID (required):
-  Future<CommonResponse?> webhookDeleteObjectV1(int pkiWebhookID,) async {
+  Future<WebhookDeleteObjectV1Response?> webhookDeleteObjectV1(int pkiWebhookID,) async {
     final response = await webhookDeleteObjectV1WithHttpInfo(pkiWebhookID,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -123,7 +123,7 @@ class ObjectWebhookApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'WebhookDeleteObjectV1Response',) as WebhookDeleteObjectV1Response;
     
     }
     return null;
@@ -175,7 +175,7 @@ class ObjectWebhookApi {
   /// * [int] pkiWebhookID (required):
   ///
   /// * [WebhookEditObjectV1Request] webhookEditObjectV1Request (required):
-  Future<CommonResponse?> webhookEditObjectV1(int pkiWebhookID, WebhookEditObjectV1Request webhookEditObjectV1Request,) async {
+  Future<WebhookEditObjectV1Response?> webhookEditObjectV1(int pkiWebhookID, WebhookEditObjectV1Request webhookEditObjectV1Request,) async {
     final response = await webhookEditObjectV1WithHttpInfo(pkiWebhookID, webhookEditObjectV1Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -184,7 +184,7 @@ class ObjectWebhookApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'WebhookEditObjectV1Response',) as WebhookEditObjectV1Response;
     
     }
     return null;
@@ -501,7 +501,7 @@ class ObjectWebhookApi {
   /// Parameters:
   ///
   /// * [WebhookSendWebhookV1Request] webhookSendWebhookV1Request (required):
-  Future<CommonResponse?> webhookSendWebhookV1(WebhookSendWebhookV1Request webhookSendWebhookV1Request,) async {
+  Future<WebhookSendWebhookV1Response?> webhookSendWebhookV1(WebhookSendWebhookV1Request webhookSendWebhookV1Request,) async {
     final response = await webhookSendWebhookV1WithHttpInfo(webhookSendWebhookV1Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -510,7 +510,7 @@ class ObjectWebhookApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'WebhookSendWebhookV1Response',) as WebhookSendWebhookV1Response;
     
     }
     return null;
@@ -562,7 +562,7 @@ class ObjectWebhookApi {
   /// * [int] pkiWebhookID (required):
   ///
   /// * [Object] body (required):
-  Future<CommonResponse?> webhookTestV1(int pkiWebhookID, Object body,) async {
+  Future<WebhookTestV1Response?> webhookTestV1(int pkiWebhookID, Object body,) async {
     final response = await webhookTestV1WithHttpInfo(pkiWebhookID, body,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -571,7 +571,7 @@ class ObjectWebhookApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'WebhookTestV1Response',) as WebhookTestV1Response;
     
     }
     return null;

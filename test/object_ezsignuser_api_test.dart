@@ -21,7 +21,7 @@ void main() {
     //
     // 
     //
-    //Future<CommonResponse> ezsignuserEditObjectV1(int pkiEzsignuserID, EzsignuserEditObjectV1Request ezsignuserEditObjectV1Request) async
+    //Future<EzsignuserEditObjectV1Response> ezsignuserEditObjectV1(int pkiEzsignuserID, EzsignuserEditObjectV1Request ezsignuserEditObjectV1Request) async
     test('test ezsignuserEditObjectV1', () async {
       // TODO
     });

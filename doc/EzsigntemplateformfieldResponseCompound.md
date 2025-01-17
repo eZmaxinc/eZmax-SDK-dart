@@ -26,7 +26,7 @@ Name | Type | Description | Notes
 **eEzsigntemplateformfieldPositioningoccurence** | [**FieldEEzsigntemplateformfieldPositioningoccurence**](FieldEEzsigntemplateformfieldPositioningoccurence.md) |  | [optional] 
 **eEzsigntemplateformfieldHorizontalalignment** | [**EnumHorizontalalignment**](EnumHorizontalalignment.md) |  | [optional] 
 **objTextstylestatic** | [**TextstylestaticResponseCompound**](TextstylestaticResponseCompound.md) |  | [optional] 
-**aObjEzsigntemplateelementdependency** | [**List<EzsigntemplateelementdependencyResponseCompound>**](EzsigntemplateelementdependencyResponse.md) |  | [optional] [default to const []]
+**aObjEzsigntemplateelementdependency** | [**List<EzsigntemplateelementdependencyResponseCompound>**](EzsigntemplateelementdependencyResponseCompound.md) |  | [optional] [default to const []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

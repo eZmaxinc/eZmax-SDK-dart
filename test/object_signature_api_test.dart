@@ -30,7 +30,7 @@ void main() {
     //
     // 
     //
-    //Future<CommonResponse> signatureDeleteObjectV1(int pkiSignatureID) async
+    //Future<SignatureDeleteObjectV1Response> signatureDeleteObjectV1(int pkiSignatureID) async
     test('test signatureDeleteObjectV1', () async {
       // TODO
     });
@@ -39,7 +39,7 @@ void main() {
     //
     // 
     //
-    //Future<CommonResponse> signatureEditObjectV1(int pkiSignatureID, SignatureEditObjectV1Request signatureEditObjectV1Request) async
+    //Future<SignatureEditObjectV1Response> signatureEditObjectV1(int pkiSignatureID, SignatureEditObjectV1Request signatureEditObjectV1Request) async
     test('test signatureEditObjectV1', () async {
       // TODO
     });

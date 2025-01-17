@@ -16,8 +16,7 @@ class UserstagedGetObjectV2ResponseMPayload {
     required this.objUserstaged,
   });
 
-  /// A Userstaged Object
-  UserstagedResponse objUserstaged;
+  UserstagedResponseCompound objUserstaged;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is UserstagedGetObjectV2ResponseMPayload &&
@@ -56,7 +55,7 @@ class UserstagedGetObjectV2ResponseMPayload {
       }());
 
       return UserstagedGetObjectV2ResponseMPayload(
-        objUserstaged: UserstagedResponse.fromJson(json[r'objUserstaged'])!,
+        objUserstaged: UserstagedResponseCompound.fromJson(json[r'objUserstaged'])!,
       );
     }
     return null;
