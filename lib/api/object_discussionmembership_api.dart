@@ -116,7 +116,7 @@ class ObjectDiscussionmembershipApi {
   ///
   /// * [int] pkiDiscussionmembershipID (required):
   ///   The unique ID of the Discussionmembership
-  Future<DiscussionmembershipDeleteObjectV1Response?> discussionmembershipDeleteObjectV1(int pkiDiscussionmembershipID,) async {
+  Future<CommonResponse?> discussionmembershipDeleteObjectV1(int pkiDiscussionmembershipID,) async {
     final response = await discussionmembershipDeleteObjectV1WithHttpInfo(pkiDiscussionmembershipID,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -125,7 +125,7 @@ class ObjectDiscussionmembershipApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'DiscussionmembershipDeleteObjectV1Response',) as DiscussionmembershipDeleteObjectV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
     
     }
     return null;

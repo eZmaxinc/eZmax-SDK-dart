@@ -116,7 +116,7 @@ class ObjectSupplyApi {
   ///
   /// * [int] pkiSupplyID (required):
   ///   The unique ID of the Supply
-  Future<SupplyDeleteObjectV1Response?> supplyDeleteObjectV1(int pkiSupplyID,) async {
+  Future<CommonResponse?> supplyDeleteObjectV1(int pkiSupplyID,) async {
     final response = await supplyDeleteObjectV1WithHttpInfo(pkiSupplyID,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -125,7 +125,7 @@ class ObjectSupplyApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'SupplyDeleteObjectV1Response',) as SupplyDeleteObjectV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
     
     }
     return null;
@@ -179,7 +179,7 @@ class ObjectSupplyApi {
   ///   The unique ID of the Supply
   ///
   /// * [SupplyEditObjectV1Request] supplyEditObjectV1Request (required):
-  Future<SupplyEditObjectV1Response?> supplyEditObjectV1(int pkiSupplyID, SupplyEditObjectV1Request supplyEditObjectV1Request,) async {
+  Future<CommonResponse?> supplyEditObjectV1(int pkiSupplyID, SupplyEditObjectV1Request supplyEditObjectV1Request,) async {
     final response = await supplyEditObjectV1WithHttpInfo(pkiSupplyID, supplyEditObjectV1Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -188,7 +188,7 @@ class ObjectSupplyApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'SupplyEditObjectV1Response',) as SupplyEditObjectV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
     
     }
     return null;

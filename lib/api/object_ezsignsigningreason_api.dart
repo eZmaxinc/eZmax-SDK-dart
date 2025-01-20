@@ -120,7 +120,7 @@ class ObjectEzsignsigningreasonApi {
   ///   The unique ID of the Ezsignsigningreason
   ///
   /// * [EzsignsigningreasonEditObjectV1Request] ezsignsigningreasonEditObjectV1Request (required):
-  Future<EzsignsigningreasonEditObjectV1Response?> ezsignsigningreasonEditObjectV1(int pkiEzsignsigningreasonID, EzsignsigningreasonEditObjectV1Request ezsignsigningreasonEditObjectV1Request,) async {
+  Future<CommonResponse?> ezsignsigningreasonEditObjectV1(int pkiEzsignsigningreasonID, EzsignsigningreasonEditObjectV1Request ezsignsigningreasonEditObjectV1Request,) async {
     final response = await ezsignsigningreasonEditObjectV1WithHttpInfo(pkiEzsignsigningreasonID, ezsignsigningreasonEditObjectV1Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -129,7 +129,7 @@ class ObjectEzsignsigningreasonApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignsigningreasonEditObjectV1Response',) as EzsignsigningreasonEditObjectV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
     
     }
     return null;

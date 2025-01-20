@@ -16,7 +16,8 @@ class EzsignfolderEditObjectV3Request {
     required this.objEzsignfolder,
   });
 
-  EzsignfolderRequestCompoundV3 objEzsignfolder;
+  /// An Ezsignfolder Object and children to create a complete structure
+  EzsignfolderRequestV3 objEzsignfolder;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfolderEditObjectV3Request &&
@@ -55,7 +56,7 @@ class EzsignfolderEditObjectV3Request {
       }());
 
       return EzsignfolderEditObjectV3Request(
-        objEzsignfolder: EzsignfolderRequestCompoundV3.fromJson(json[r'objEzsignfolder'])!,
+        objEzsignfolder: EzsignfolderRequestV3.fromJson(json[r'objEzsignfolder'])!,
       );
     }
     return null;

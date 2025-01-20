@@ -48,7 +48,7 @@ void main() {
     //
     // 
     //
-    //Future<EzsignsignatureDeleteObjectV1Response> ezsignsignatureDeleteObjectV1(int pkiEzsignsignatureID) async
+    //Future<CommonResponse> ezsignsignatureDeleteObjectV1(int pkiEzsignsignatureID) async
     test('test ezsignsignatureDeleteObjectV1', () async {
       // TODO
     });
@@ -57,7 +57,7 @@ void main() {
     //
     // 
     //
-    //Future<EzsignsignatureEditObjectV2Response> ezsignsignatureEditObjectV2(int pkiEzsignsignatureID, EzsignsignatureEditObjectV2Request ezsignsignatureEditObjectV2Request) async
+    //Future<CommonResponse> ezsignsignatureEditObjectV2(int pkiEzsignsignatureID, EzsignsignatureEditObjectV2Request ezsignsignatureEditObjectV2Request) async
     test('test ezsignsignatureEditObjectV2', () async {
       // TODO
     });

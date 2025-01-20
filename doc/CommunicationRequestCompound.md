@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **bCommunicationReadreceipt** | **bool** | Whether we ask for a read receipt or not. | [optional] 
 **aObjCommunicationattachment** | [**List<CustomCommunicationattachmentRequest>**](CustomCommunicationattachmentRequest.md) |  | [default to const []]
 **aObjCommunicationrecipient** | [**List<CommunicationrecipientRequestCompound>**](CommunicationrecipientRequestCompound.md) |  | [default to const []]
-**aObjCommunicationreference** | [**List<CommunicationreferenceRequestCompound>**](CommunicationreferenceRequestCompound.md) |  | [default to const []]
+**aObjCommunicationreference** | [**List<CommunicationreferenceRequestCompound>**](CommunicationreferenceRequest.md) |  | [default to const []]
 **aObjCommunicationexternalrecipient** | [**List<CommunicationexternalrecipientRequestCompound>**](CommunicationexternalrecipientRequestCompound.md) |  | [default to const []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -221,7 +221,7 @@ class CommunicationRequestCompound {
         bCommunicationReadreceipt: mapValueOfType<bool>(json, r'bCommunicationReadreceipt'),
         aObjCommunicationattachment: CustomCommunicationattachmentRequest.listFromJson(json[r'a_objCommunicationattachment']),
         aObjCommunicationrecipient: CommunicationrecipientRequestCompound.listFromJson(json[r'a_objCommunicationrecipient']),
-        aObjCommunicationreference: CommunicationreferenceRequestCompound.listFromJson(json[r'a_objCommunicationreference']),
+        aObjCommunicationreference: CommunicationreferenceRequest.listFromJson(json[r'a_objCommunicationreference']),
         aObjCommunicationexternalrecipient: CommunicationexternalrecipientRequestCompound.listFromJson(json[r'a_objCommunicationexternalrecipient']),
       );
     }

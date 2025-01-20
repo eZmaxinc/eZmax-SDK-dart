@@ -116,7 +116,7 @@ class ObjectDiscussionApi {
   ///
   /// * [int] pkiDiscussionID (required):
   ///   The unique ID of the Discussion
-  Future<DiscussionDeleteObjectV1Response?> discussionDeleteObjectV1(int pkiDiscussionID,) async {
+  Future<CommonResponse?> discussionDeleteObjectV1(int pkiDiscussionID,) async {
     final response = await discussionDeleteObjectV1WithHttpInfo(pkiDiscussionID,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -125,7 +125,7 @@ class ObjectDiscussionApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'DiscussionDeleteObjectV1Response',) as DiscussionDeleteObjectV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
     
     }
     return null;
@@ -238,7 +238,7 @@ class ObjectDiscussionApi {
   ///   The unique ID of the Discussion
   ///
   /// * [DiscussionPatchObjectV1Request] discussionPatchObjectV1Request (required):
-  Future<DiscussionPatchObjectV1Response?> discussionPatchObjectV1(int pkiDiscussionID, DiscussionPatchObjectV1Request discussionPatchObjectV1Request,) async {
+  Future<CommonResponse?> discussionPatchObjectV1(int pkiDiscussionID, DiscussionPatchObjectV1Request discussionPatchObjectV1Request,) async {
     final response = await discussionPatchObjectV1WithHttpInfo(pkiDiscussionID, discussionPatchObjectV1Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -247,7 +247,7 @@ class ObjectDiscussionApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'DiscussionPatchObjectV1Response',) as DiscussionPatchObjectV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
     
     }
     return null;
@@ -295,7 +295,7 @@ class ObjectDiscussionApi {
   /// * [int] pkiDiscussionID (required):
   ///
   /// * [DiscussionUpdateDiscussionreadstatusV1Request] discussionUpdateDiscussionreadstatusV1Request (required):
-  Future<DiscussionUpdateDiscussionreadstatusV1Response?> discussionUpdateDiscussionreadstatusV1(int pkiDiscussionID, DiscussionUpdateDiscussionreadstatusV1Request discussionUpdateDiscussionreadstatusV1Request,) async {
+  Future<CommonResponse?> discussionUpdateDiscussionreadstatusV1(int pkiDiscussionID, DiscussionUpdateDiscussionreadstatusV1Request discussionUpdateDiscussionreadstatusV1Request,) async {
     final response = await discussionUpdateDiscussionreadstatusV1WithHttpInfo(pkiDiscussionID, discussionUpdateDiscussionreadstatusV1Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -304,7 +304,7 @@ class ObjectDiscussionApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'DiscussionUpdateDiscussionreadstatusV1Response',) as DiscussionUpdateDiscussionreadstatusV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
     
     }
     return null;

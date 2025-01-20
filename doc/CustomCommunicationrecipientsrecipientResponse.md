@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 **fkiSupplierID** | **int** | The unique ID of the Supplier. | [optional] 
 **eCommunicationrecipientsrecipientObjecttype** | **String** |  | 
 **objContactName** | [**CustomContactNameResponse**](CustomContactNameResponse.md) |  | 
-**objEmail** | [**EmailResponseCompound**](EmailResponseCompound.md) |  | [optional] 
+**objEmail** | [**EmailResponse**](EmailResponse.md) | An Email Object and children to create a complete structure | [optional] 
 **objPhoneFax** | [**PhoneResponseCompound**](PhoneResponseCompound.md) |  | [optional] 
 **objPhoneSMS** | [**PhoneResponseCompound**](PhoneResponseCompound.md) |  | [optional] 
 

@@ -204,13 +204,14 @@ class CustomCommunicationrecipientsrecipientResponse {
 
   CustomContactNameResponse objContactName;
 
+  /// An Email Object and children to create a complete structure
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
   /// source code must fall back to having a nullable type.
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
-  EmailResponseCompound? objEmail;
+  EmailResponse? objEmail;
 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -411,7 +412,7 @@ class CustomCommunicationrecipientsrecipientResponse {
         fkiSupplierID: mapValueOfType<int>(json, r'fkiSupplierID'),
         eCommunicationrecipientsrecipientObjecttype: CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsrecipientObjecttypeEnum.fromJson(json[r'eCommunicationrecipientsrecipientObjecttype'])!,
         objContactName: CustomContactNameResponse.fromJson(json[r'objContactName'])!,
-        objEmail: EmailResponseCompound.fromJson(json[r'objEmail']),
+        objEmail: EmailResponse.fromJson(json[r'objEmail']),
         objPhoneFax: PhoneResponseCompound.fromJson(json[r'objPhoneFax']),
         objPhoneSMS: PhoneResponseCompound.fromJson(json[r'objPhoneSMS']),
       );

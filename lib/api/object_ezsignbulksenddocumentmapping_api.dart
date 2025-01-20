@@ -114,7 +114,7 @@ class ObjectEzsignbulksenddocumentmappingApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignbulksenddocumentmappingID (required):
-  Future<EzsignbulksenddocumentmappingDeleteObjectV1Response?> ezsignbulksenddocumentmappingDeleteObjectV1(int pkiEzsignbulksenddocumentmappingID,) async {
+  Future<CommonResponse?> ezsignbulksenddocumentmappingDeleteObjectV1(int pkiEzsignbulksenddocumentmappingID,) async {
     final response = await ezsignbulksenddocumentmappingDeleteObjectV1WithHttpInfo(pkiEzsignbulksenddocumentmappingID,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -123,7 +123,7 @@ class ObjectEzsignbulksenddocumentmappingApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignbulksenddocumentmappingDeleteObjectV1Response',) as EzsignbulksenddocumentmappingDeleteObjectV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
     
     }
     return null;

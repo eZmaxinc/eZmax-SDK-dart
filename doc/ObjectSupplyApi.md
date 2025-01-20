@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **supplyDeleteObjectV1**
-> SupplyDeleteObjectV1Response supplyDeleteObjectV1(pkiSupplyID)
+> CommonResponse supplyDeleteObjectV1(pkiSupplyID)
 
 Delete an existing Supply
 
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SupplyDeleteObjectV1Response**](SupplyDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **supplyEditObjectV1**
-> SupplyEditObjectV1Response supplyEditObjectV1(pkiSupplyID, supplyEditObjectV1Request)
+> CommonResponse supplyEditObjectV1(pkiSupplyID, supplyEditObjectV1Request)
 
 Edit an existing Supply
 
@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SupplyEditObjectV1Response**](SupplyEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

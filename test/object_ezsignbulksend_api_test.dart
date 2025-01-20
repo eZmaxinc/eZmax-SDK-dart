@@ -37,7 +37,7 @@ void main() {
     //
     // 
     //
-    //Future<EzsignbulksendDeleteObjectV1Response> ezsignbulksendDeleteObjectV1(int pkiEzsignbulksendID) async
+    //Future<CommonResponse> ezsignbulksendDeleteObjectV1(int pkiEzsignbulksendID) async
     test('test ezsignbulksendDeleteObjectV1', () async {
       // TODO
     });
@@ -46,7 +46,7 @@ void main() {
     //
     // 
     //
-    //Future<EzsignbulksendEditObjectV1Response> ezsignbulksendEditObjectV1(int pkiEzsignbulksendID, EzsignbulksendEditObjectV1Request ezsignbulksendEditObjectV1Request) async
+    //Future<CommonResponse> ezsignbulksendEditObjectV1(int pkiEzsignbulksendID, EzsignbulksendEditObjectV1Request ezsignbulksendEditObjectV1Request) async
     test('test ezsignbulksendEditObjectV1', () async {
       // TODO
     });
@@ -107,7 +107,7 @@ void main() {
 
     // Reorder Ezsignbulksenddocumentmappings in the Ezsignbulksend
     //
-    //Future<EzsignbulksendReorderV1Response> ezsignbulksendReorderV1(int pkiEzsignbulksendID, EzsignbulksendReorderV1Request ezsignbulksendReorderV1Request) async
+    //Future<CommonResponse> ezsignbulksendReorderV1(int pkiEzsignbulksendID, EzsignbulksendReorderV1Request ezsignbulksendReorderV1Request) async
     test('test ezsignbulksendReorderV1', () async {
       // TODO
     });

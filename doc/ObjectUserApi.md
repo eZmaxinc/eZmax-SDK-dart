@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **userEditObjectV1**
-> UserEditObjectV1Response userEditObjectV1(pkiUserID, userEditObjectV1Request)
+> CommonResponse userEditObjectV1(pkiUserID, userEditObjectV1Request)
 
 Edit an existing User
 
@@ -206,7 +206,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UserEditObjectV1Response**](UserEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -741,7 +741,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **userSendPasswordResetV1**
-> UserSendPasswordResetV1Response userSendPasswordResetV1(pkiUserID, body)
+> CommonResponse userSendPasswordResetV1(pkiUserID, body)
 
 Send password reset
 
@@ -776,7 +776,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UserSendPasswordResetV1Response**](UserSendPasswordResetV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

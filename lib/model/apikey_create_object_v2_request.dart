@@ -55,7 +55,7 @@ class ApikeyCreateObjectV2Request {
       }());
 
       return ApikeyCreateObjectV2Request(
-        aObjApikey: ApikeyRequestCompound.listFromJson(json[r'a_objApikey']),
+        aObjApikey: ApikeyRequest.listFromJson(json[r'a_objApikey']),
       );
     }
     return null;

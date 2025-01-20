@@ -27,7 +27,8 @@ void main() {
       // TODO
     });
 
-    // UserstagedResponseCompound objUserstaged
+    // A Userstaged Object
+    // UserstagedResponse objUserstaged
     test('to test the property `objUserstaged`', () async {
       // TODO
     });

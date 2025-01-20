@@ -21,7 +21,7 @@ void main() {
     //
     // 
     //
-    //Future<SystemconfigurationEditObjectV1Response> systemconfigurationEditObjectV1(int pkiSystemconfigurationID, SystemconfigurationEditObjectV1Request systemconfigurationEditObjectV1Request) async
+    //Future<CommonResponse> systemconfigurationEditObjectV1(int pkiSystemconfigurationID, SystemconfigurationEditObjectV1Request systemconfigurationEditObjectV1Request) async
     test('test systemconfigurationEditObjectV1', () async {
       // TODO
     });

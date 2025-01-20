@@ -94,7 +94,7 @@ class CustomEzsignformfieldgroupRequest {
       return CustomEzsignformfieldgroupRequest(
         pkiEzsignformfieldgroupID: mapValueOfType<int>(json, r'pkiEzsignformfieldgroupID'),
         sEzsignformfieldgroupLabel: mapValueOfType<String>(json, r'sEzsignformfieldgroupLabel'),
-        aObjEzsignformfield: CustomEzsignformfieldRequest.listFromJson(json[r'a_objEzsignformfield']),
+        aObjEzsignformfield: Object.listFromJson(json[r'a_objEzsignformfield']),
       );
     }
     return null;

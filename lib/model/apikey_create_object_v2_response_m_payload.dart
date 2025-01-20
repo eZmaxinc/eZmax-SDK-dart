@@ -55,7 +55,7 @@ class ApikeyCreateObjectV2ResponseMPayload {
       }());
 
       return ApikeyCreateObjectV2ResponseMPayload(
-        aObjApikey: ApikeyResponseCompound.listFromJson(json[r'a_objApikey']),
+        aObjApikey: ApikeyResponse.listFromJson(json[r'a_objApikey']),
       );
     }
     return null;

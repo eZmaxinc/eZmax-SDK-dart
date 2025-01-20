@@ -30,7 +30,7 @@ void main() {
     //
     // 
     //
-    //Future<AuthenticationexternalDeleteObjectV1Response> authenticationexternalDeleteObjectV1(int pkiAuthenticationexternalID) async
+    //Future<CommonResponse> authenticationexternalDeleteObjectV1(int pkiAuthenticationexternalID) async
     test('test authenticationexternalDeleteObjectV1', () async {
       // TODO
     });
@@ -39,7 +39,7 @@ void main() {
     //
     // 
     //
-    //Future<AuthenticationexternalEditObjectV1Response> authenticationexternalEditObjectV1(int pkiAuthenticationexternalID, AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request) async
+    //Future<CommonResponse> authenticationexternalEditObjectV1(int pkiAuthenticationexternalID, AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request) async
     test('test authenticationexternalEditObjectV1', () async {
       // TODO
     });
@@ -75,7 +75,7 @@ void main() {
     //
     // 
     //
-    //Future<AuthenticationexternalResetAuthorizationV1Response> authenticationexternalResetAuthorizationV1(int pkiAuthenticationexternalID, Object body) async
+    //Future<CommonResponse> authenticationexternalResetAuthorizationV1(int pkiAuthenticationexternalID, Object body) async
     test('test authenticationexternalResetAuthorizationV1', () async {
       // TODO
     });

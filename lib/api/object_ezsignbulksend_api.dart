@@ -171,7 +171,7 @@ class ObjectEzsignbulksendApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignbulksendID (required):
-  Future<EzsignbulksendDeleteObjectV1Response?> ezsignbulksendDeleteObjectV1(int pkiEzsignbulksendID,) async {
+  Future<CommonResponse?> ezsignbulksendDeleteObjectV1(int pkiEzsignbulksendID,) async {
     final response = await ezsignbulksendDeleteObjectV1WithHttpInfo(pkiEzsignbulksendID,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -180,7 +180,7 @@ class ObjectEzsignbulksendApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignbulksendDeleteObjectV1Response',) as EzsignbulksendDeleteObjectV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
     
     }
     return null;
@@ -232,7 +232,7 @@ class ObjectEzsignbulksendApi {
   /// * [int] pkiEzsignbulksendID (required):
   ///
   /// * [EzsignbulksendEditObjectV1Request] ezsignbulksendEditObjectV1Request (required):
-  Future<EzsignbulksendEditObjectV1Response?> ezsignbulksendEditObjectV1(int pkiEzsignbulksendID, EzsignbulksendEditObjectV1Request ezsignbulksendEditObjectV1Request,) async {
+  Future<CommonResponse?> ezsignbulksendEditObjectV1(int pkiEzsignbulksendID, EzsignbulksendEditObjectV1Request ezsignbulksendEditObjectV1Request,) async {
     final response = await ezsignbulksendEditObjectV1WithHttpInfo(pkiEzsignbulksendID, ezsignbulksendEditObjectV1Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -241,7 +241,7 @@ class ObjectEzsignbulksendApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignbulksendEditObjectV1Response',) as EzsignbulksendEditObjectV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
     
     }
     return null;
@@ -673,7 +673,7 @@ class ObjectEzsignbulksendApi {
   /// * [int] pkiEzsignbulksendID (required):
   ///
   /// * [EzsignbulksendReorderV1Request] ezsignbulksendReorderV1Request (required):
-  Future<EzsignbulksendReorderV1Response?> ezsignbulksendReorderV1(int pkiEzsignbulksendID, EzsignbulksendReorderV1Request ezsignbulksendReorderV1Request,) async {
+  Future<CommonResponse?> ezsignbulksendReorderV1(int pkiEzsignbulksendID, EzsignbulksendReorderV1Request ezsignbulksendReorderV1Request,) async {
     final response = await ezsignbulksendReorderV1WithHttpInfo(pkiEzsignbulksendID, ezsignbulksendReorderV1Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -682,7 +682,7 @@ class ObjectEzsignbulksendApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignbulksendReorderV1Response',) as EzsignbulksendReorderV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
     
     }
     return null;

@@ -55,7 +55,7 @@ class EzsigndocumentGetEzsignpagesV1ResponseMPayload {
       }());
 
       return EzsigndocumentGetEzsignpagesV1ResponseMPayload(
-        aObjEzsignpage: EzsignpageResponseCompound.listFromJson(json[r'a_objEzsignpage']),
+        aObjEzsignpage: EzsignpageResponse.listFromJson(json[r'a_objEzsignpage']),
       );
     }
     return null;

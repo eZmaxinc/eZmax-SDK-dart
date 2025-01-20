@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **permissionDeleteObjectV1**
-> PermissionDeleteObjectV1Response permissionDeleteObjectV1(pkiPermissionID)
+> CommonResponse permissionDeleteObjectV1(pkiPermissionID)
 
 Delete an existing Permission
 
@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PermissionDeleteObjectV1Response**](PermissionDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -110,7 +110,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **permissionEditObjectV1**
-> PermissionEditObjectV1Response permissionEditObjectV1(pkiPermissionID, permissionEditObjectV1Request)
+> CommonResponse permissionEditObjectV1(pkiPermissionID, permissionEditObjectV1Request)
 
 Edit an existing Permission
 
@@ -145,7 +145,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PermissionEditObjectV1Response**](PermissionEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

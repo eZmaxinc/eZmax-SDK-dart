@@ -119,7 +119,7 @@ class ObjectUserstagedApi {
   /// Parameters:
   ///
   /// * [int] pkiUserstagedID (required):
-  Future<UserstagedDeleteObjectV1Response?> userstagedDeleteObjectV1(int pkiUserstagedID,) async {
+  Future<CommonResponse?> userstagedDeleteObjectV1(int pkiUserstagedID,) async {
     final response = await userstagedDeleteObjectV1WithHttpInfo(pkiUserstagedID,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -128,7 +128,7 @@ class ObjectUserstagedApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'UserstagedDeleteObjectV1Response',) as UserstagedDeleteObjectV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
     
     }
     return null;
@@ -328,7 +328,7 @@ class ObjectUserstagedApi {
   /// * [int] pkiUserstagedID (required):
   ///
   /// * [UserstagedMapV1Request] userstagedMapV1Request (required):
-  Future<UserstagedMapV1Response?> userstagedMapV1(int pkiUserstagedID, UserstagedMapV1Request userstagedMapV1Request,) async {
+  Future<CommonResponse?> userstagedMapV1(int pkiUserstagedID, UserstagedMapV1Request userstagedMapV1Request,) async {
     final response = await userstagedMapV1WithHttpInfo(pkiUserstagedID, userstagedMapV1Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -337,7 +337,7 @@ class ObjectUserstagedApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'UserstagedMapV1Response',) as UserstagedMapV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
     
     }
     return null;

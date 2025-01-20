@@ -303,8 +303,8 @@ class EzsignformfieldgroupResponseCompound {
         tEzsignformfieldgroupTooltip: mapValueOfType<String>(json, r'tEzsignformfieldgroupTooltip'),
         eEzsignformfieldgroupTooltipposition: FieldEEzsignformfieldgroupTooltipposition.fromJson(json[r'eEzsignformfieldgroupTooltipposition']),
         aObjEzsignformfield: EzsignformfieldResponseCompound.listFromJson(json[r'a_objEzsignformfield']),
-        aObjDropdownElement: CustomDropdownElementResponseCompound.listFromJson(json[r'a_objDropdownElement']),
-        aObjEzsignformfieldgroupsigner: EzsignformfieldgroupsignerResponseCompound.listFromJson(json[r'a_objEzsignformfieldgroupsigner']),
+        aObjDropdownElement: CustomDropdownElementResponse.listFromJson(json[r'a_objDropdownElement']),
+        aObjEzsignformfieldgroupsigner: EzsignformfieldgroupsignerResponse.listFromJson(json[r'a_objEzsignformfieldgroupsigner']),
       );
     }
     return null;

@@ -30,7 +30,7 @@ void main() {
     //
     // 
     //
-    //Future<WebhookDeleteObjectV1Response> webhookDeleteObjectV1(int pkiWebhookID) async
+    //Future<CommonResponse> webhookDeleteObjectV1(int pkiWebhookID) async
     test('test webhookDeleteObjectV1', () async {
       // TODO
     });
@@ -39,7 +39,7 @@ void main() {
     //
     // 
     //
-    //Future<WebhookEditObjectV1Response> webhookEditObjectV1(int pkiWebhookID, WebhookEditObjectV1Request webhookEditObjectV1Request) async
+    //Future<CommonResponse> webhookEditObjectV1(int pkiWebhookID, WebhookEditObjectV1Request webhookEditObjectV1Request) async
     test('test webhookEditObjectV1', () async {
       // TODO
     });
@@ -82,7 +82,7 @@ void main() {
 
     // Emit a Webhook event
     //
-    //Future<WebhookSendWebhookV1Response> webhookSendWebhookV1(WebhookSendWebhookV1Request webhookSendWebhookV1Request) async
+    //Future<CommonResponse> webhookSendWebhookV1(WebhookSendWebhookV1Request webhookSendWebhookV1Request) async
     test('test webhookSendWebhookV1', () async {
       // TODO
     });
@@ -91,7 +91,7 @@ void main() {
     //
     // 
     //
-    //Future<WebhookTestV1Response> webhookTestV1(int pkiWebhookID, Object body) async
+    //Future<CommonResponse> webhookTestV1(int pkiWebhookID, Object body) async
     test('test webhookTestV1', () async {
       // TODO
     });

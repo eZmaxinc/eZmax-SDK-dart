@@ -106,7 +106,7 @@ class DomainResponseCompound {
         bDomainValidmailfrom: mapValueOfType<bool>(json, r'bDomainValidmailfrom')!,
         bDomainValidcustomer: mapValueOfType<bool>(json, r'bDomainValidcustomer')!,
         objAudit: CommonAudit.fromJson(json[r'objAudit'])!,
-        aObjDnsrecord: CustomDnsrecordResponse.listFromJson(json[r'a_objDnsrecord']),
+        aObjDnsrecord: Object.listFromJson(json[r'a_objDnsrecord']),
       );
     }
     return null;

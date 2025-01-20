@@ -116,7 +116,7 @@ class ObjectDiscussionmessageApi {
   ///
   /// * [int] pkiDiscussionmessageID (required):
   ///   The unique ID of the Discussionmessage
-  Future<DiscussionmessageDeleteObjectV1Response?> discussionmessageDeleteObjectV1(int pkiDiscussionmessageID,) async {
+  Future<CommonResponse?> discussionmessageDeleteObjectV1(int pkiDiscussionmessageID,) async {
     final response = await discussionmessageDeleteObjectV1WithHttpInfo(pkiDiscussionmessageID,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -125,7 +125,7 @@ class ObjectDiscussionmessageApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'DiscussionmessageDeleteObjectV1Response',) as DiscussionmessageDeleteObjectV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
     
     }
     return null;
@@ -179,7 +179,7 @@ class ObjectDiscussionmessageApi {
   ///   The unique ID of the Discussionmessage
   ///
   /// * [DiscussionmessagePatchObjectV1Request] discussionmessagePatchObjectV1Request (required):
-  Future<DiscussionmessagePatchObjectV1Response?> discussionmessagePatchObjectV1(int pkiDiscussionmessageID, DiscussionmessagePatchObjectV1Request discussionmessagePatchObjectV1Request,) async {
+  Future<CommonResponse?> discussionmessagePatchObjectV1(int pkiDiscussionmessageID, DiscussionmessagePatchObjectV1Request discussionmessagePatchObjectV1Request,) async {
     final response = await discussionmessagePatchObjectV1WithHttpInfo(pkiDiscussionmessageID, discussionmessagePatchObjectV1Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -188,7 +188,7 @@ class ObjectDiscussionmessageApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'DiscussionmessagePatchObjectV1Response',) as DiscussionmessagePatchObjectV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
     
     }
     return null;

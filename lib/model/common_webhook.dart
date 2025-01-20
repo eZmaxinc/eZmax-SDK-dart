@@ -63,7 +63,7 @@ class CommonWebhook {
 
       return CommonWebhook(
         objWebhook: CustomWebhookResponse.fromJson(json[r'objWebhook'])!,
-        aObjAttempt: AttemptResponseCompound.listFromJson(json[r'a_objAttempt']),
+        aObjAttempt: AttemptResponse.listFromJson(json[r'a_objAttempt']),
       );
     }
     return null;

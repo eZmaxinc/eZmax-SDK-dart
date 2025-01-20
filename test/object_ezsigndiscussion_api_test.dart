@@ -30,7 +30,7 @@ void main() {
     //
     // 
     //
-    //Future<EzsigndiscussionDeleteObjectV1Response> ezsigndiscussionDeleteObjectV1(int pkiEzsigndiscussionID) async
+    //Future<CommonResponse> ezsigndiscussionDeleteObjectV1(int pkiEzsigndiscussionID) async
     test('test ezsigndiscussionDeleteObjectV1', () async {
       // TODO
     });

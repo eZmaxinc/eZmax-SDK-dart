@@ -15,14 +15,14 @@ Name | Type | Description | Notes
 **fkiWebsiteIDDefault** | **int** | The unique ID of the Website Default | [optional] 
 **eContactinformationsType** | [**FieldEContactinformationsType**](FieldEContactinformationsType.md) |  | 
 **sContactinformationsUrl** | **String** | The url of the Contactinformations | [optional] 
-**objAddressDefault** | [**AddressResponseCompound**](AddressResponseCompound.md) |  | [optional] 
+**objAddressDefault** | [**AddressResponse**](AddressResponse.md) | An Address Object and children to create a complete structure | [optional] 
 **objPhoneDefault** | [**PhoneResponseCompound**](PhoneResponseCompound.md) |  | [optional] 
-**objEmailDefault** | [**EmailResponseCompound**](EmailResponseCompound.md) |  | [optional] 
-**objWebsiteDefault** | [**WebsiteResponseCompound**](WebsiteResponseCompound.md) |  | [optional] 
-**aObjAddress** | [**List<AddressResponseCompound>**](AddressResponseCompound.md) |  | [default to const []]
+**objEmailDefault** | [**EmailResponse**](EmailResponse.md) | An Email Object and children to create a complete structure | [optional] 
+**objWebsiteDefault** | [**WebsiteResponse**](WebsiteResponse.md) | A Website Object and children to create a complete structure | [optional] 
+**aObjAddress** | [**List<AddressResponseCompound>**](AddressResponse.md) |  | [default to const []]
 **aObjPhone** | [**List<PhoneResponseCompound>**](PhoneResponseCompound.md) |  | [default to const []]
-**aObjEmail** | [**List<EmailResponseCompound>**](EmailResponseCompound.md) |  | [default to const []]
-**aObjWebsite** | [**List<WebsiteResponseCompound>**](WebsiteResponseCompound.md) |  | [default to const []]
+**aObjEmail** | [**List<EmailResponseCompound>**](EmailResponse.md) |  | [default to const []]
+**aObjWebsite** | [**List<WebsiteResponseCompound>**](WebsiteResponse.md) |  | [default to const []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
