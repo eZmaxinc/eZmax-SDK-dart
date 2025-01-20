@@ -120,7 +120,7 @@ class ObjectApikeyApi {
   ///   The unique ID of the Apikey
   ///
   /// * [ApikeyEditObjectV1Request] apikeyEditObjectV1Request (required):
-  Future<CommonResponse?> apikeyEditObjectV1(int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request,) async {
+  Future<ApikeyEditObjectV1Response?> apikeyEditObjectV1(int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request,) async {
     final response = await apikeyEditObjectV1WithHttpInfo(pkiApikeyID, apikeyEditObjectV1Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -129,7 +129,7 @@ class ObjectApikeyApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'ApikeyEditObjectV1Response',) as ApikeyEditObjectV1Response;
     
     }
     return null;

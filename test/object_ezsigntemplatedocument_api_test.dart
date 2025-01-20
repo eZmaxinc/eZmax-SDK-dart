@@ -75,7 +75,7 @@ void main() {
     //
     // Flatten an Ezsigntemplatedocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
     //
-    //Future<CommonResponse> ezsigntemplatedocumentFlattenV1(int pkiEzsigntemplatedocumentID, Object body) async
+    //Future<EzsigntemplatedocumentFlattenV1Response> ezsigntemplatedocumentFlattenV1(int pkiEzsigntemplatedocumentID, Object body) async
     test('test ezsigntemplatedocumentFlattenV1', () async {
       // TODO
     });
@@ -138,7 +138,7 @@ void main() {
     //
     // 
     //
-    //Future<CommonResponse> ezsigntemplatedocumentPatchObjectV1(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentPatchObjectV1Request ezsigntemplatedocumentPatchObjectV1Request) async
+    //Future<EzsigntemplatedocumentPatchObjectV1Response> ezsigntemplatedocumentPatchObjectV1(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentPatchObjectV1Request ezsigntemplatedocumentPatchObjectV1Request) async
     test('test ezsigntemplatedocumentPatchObjectV1', () async {
       // TODO
     });

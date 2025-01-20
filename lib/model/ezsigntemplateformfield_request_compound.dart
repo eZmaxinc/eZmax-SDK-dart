@@ -346,7 +346,7 @@ class EzsigntemplateformfieldRequestCompound {
         eEzsigntemplateformfieldPositioningoccurence: FieldEEzsigntemplateformfieldPositioningoccurence.fromJson(json[r'eEzsigntemplateformfieldPositioningoccurence']),
         eEzsigntemplateformfieldHorizontalalignment: EnumHorizontalalignment.fromJson(json[r'eEzsigntemplateformfieldHorizontalalignment']),
         objTextstylestatic: TextstylestaticRequestCompound.fromJson(json[r'objTextstylestatic']),
-        aObjEzsigntemplateelementdependency: EzsigntemplateelementdependencyRequest.listFromJson(json[r'a_objEzsigntemplateelementdependency']),
+        aObjEzsigntemplateelementdependency: EzsigntemplateelementdependencyRequestCompound.listFromJson(json[r'a_objEzsigntemplateelementdependency']),
       );
     }
     return null;

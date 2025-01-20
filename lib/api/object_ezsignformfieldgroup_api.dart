@@ -114,7 +114,7 @@ class ObjectEzsignformfieldgroupApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignformfieldgroupID (required):
-  Future<CommonResponse?> ezsignformfieldgroupDeleteObjectV1(int pkiEzsignformfieldgroupID,) async {
+  Future<EzsignformfieldgroupDeleteObjectV1Response?> ezsignformfieldgroupDeleteObjectV1(int pkiEzsignformfieldgroupID,) async {
     final response = await ezsignformfieldgroupDeleteObjectV1WithHttpInfo(pkiEzsignformfieldgroupID,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -123,7 +123,7 @@ class ObjectEzsignformfieldgroupApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignformfieldgroupDeleteObjectV1Response',) as EzsignformfieldgroupDeleteObjectV1Response;
     
     }
     return null;
@@ -175,7 +175,7 @@ class ObjectEzsignformfieldgroupApi {
   /// * [int] pkiEzsignformfieldgroupID (required):
   ///
   /// * [EzsignformfieldgroupEditObjectV1Request] ezsignformfieldgroupEditObjectV1Request (required):
-  Future<CommonResponse?> ezsignformfieldgroupEditObjectV1(int pkiEzsignformfieldgroupID, EzsignformfieldgroupEditObjectV1Request ezsignformfieldgroupEditObjectV1Request,) async {
+  Future<EzsignformfieldgroupEditObjectV1Response?> ezsignformfieldgroupEditObjectV1(int pkiEzsignformfieldgroupID, EzsignformfieldgroupEditObjectV1Request ezsignformfieldgroupEditObjectV1Request,) async {
     final response = await ezsignformfieldgroupEditObjectV1WithHttpInfo(pkiEzsignformfieldgroupID, ezsignformfieldgroupEditObjectV1Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -184,7 +184,7 @@ class ObjectEzsignformfieldgroupApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignformfieldgroupEditObjectV1Response',) as EzsignformfieldgroupEditObjectV1Response;
     
     }
     return null;

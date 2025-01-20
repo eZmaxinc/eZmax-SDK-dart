@@ -69,7 +69,7 @@ class WebhookEzsignSignatureSigned {
 
       return WebhookEzsignSignatureSigned(
         objWebhook: CustomWebhookResponse.fromJson(json[r'objWebhook'])!,
-        aObjAttempt: AttemptResponse.listFromJson(json[r'a_objAttempt']),
+        aObjAttempt: AttemptResponseCompound.listFromJson(json[r'a_objAttempt']),
         objEzsignsignature: EzsignsignatureResponse.fromJson(json[r'objEzsignsignature'])!,
       );
     }

@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **brandingEditObjectV2**
-> CommonResponse brandingEditObjectV2(pkiBrandingID, brandingEditObjectV2Request)
+> BrandingEditObjectV2Response brandingEditObjectV2(pkiBrandingID, brandingEditObjectV2Request)
 
 Edit an existing Branding
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**BrandingEditObjectV2Response**](BrandingEditObjectV2Response.md)
 
 ### Authorization
 

@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **variableexpenseEditObjectV1**
-> CommonResponse variableexpenseEditObjectV1(pkiVariableexpenseID, variableexpenseEditObjectV1Request)
+> VariableexpenseEditObjectV1Response variableexpenseEditObjectV1(pkiVariableexpenseID, variableexpenseEditObjectV1Request)
 
 Edit an existing Variableexpense
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**VariableexpenseEditObjectV1Response**](VariableexpenseEditObjectV1Response.md)
 
 ### Authorization
 

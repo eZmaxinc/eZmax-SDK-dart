@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **corsDeleteObjectV1**
-> CommonResponse corsDeleteObjectV1(pkiCorsID)
+> CorsDeleteObjectV1Response corsDeleteObjectV1(pkiCorsID)
 
 Delete an existing Cors
 
@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**CorsDeleteObjectV1Response**](CorsDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -110,7 +110,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **corsEditObjectV1**
-> CommonResponse corsEditObjectV1(pkiCorsID, corsEditObjectV1Request)
+> CorsEditObjectV1Response corsEditObjectV1(pkiCorsID, corsEditObjectV1Request)
 
 Edit an existing Cors
 
@@ -145,7 +145,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**CorsEditObjectV1Response**](CorsEditObjectV1Response.md)
 
 ### Authorization
 

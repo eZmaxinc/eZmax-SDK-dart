@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **ezsignsignergroupmembershipDeleteObjectV1**
-> CommonResponse ezsignsignergroupmembershipDeleteObjectV1(pkiEzsignsignergroupmembershipID)
+> EzsignsignergroupmembershipDeleteObjectV1Response ezsignsignergroupmembershipDeleteObjectV1(pkiEzsignsignergroupmembershipID)
 
 Delete an existing Ezsignsignergroupmembership
 
@@ -95,7 +95,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsignsignergroupmembershipDeleteObjectV1Response**](EzsignsignergroupmembershipDeleteObjectV1Response.md)
 
 ### Authorization
 

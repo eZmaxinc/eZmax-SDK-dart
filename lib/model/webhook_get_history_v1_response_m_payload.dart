@@ -55,7 +55,7 @@ class WebhookGetHistoryV1ResponseMPayload {
       }());
 
       return WebhookGetHistoryV1ResponseMPayload(
-        aObjWebhooklog: Object.listFromJson(json[r'a_objWebhooklog']),
+        aObjWebhooklog: CustomWebhooklogResponse.listFromJson(json[r'a_objWebhooklog']),
       );
     }
     return null;

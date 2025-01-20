@@ -116,7 +116,7 @@ class ObjectSubnetApi {
   ///
   /// * [int] pkiSubnetID (required):
   ///   The unique ID of the Subnet
-  Future<CommonResponse?> subnetDeleteObjectV1(int pkiSubnetID,) async {
+  Future<SubnetDeleteObjectV1Response?> subnetDeleteObjectV1(int pkiSubnetID,) async {
     final response = await subnetDeleteObjectV1WithHttpInfo(pkiSubnetID,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -125,7 +125,7 @@ class ObjectSubnetApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'SubnetDeleteObjectV1Response',) as SubnetDeleteObjectV1Response;
     
     }
     return null;
@@ -179,7 +179,7 @@ class ObjectSubnetApi {
   ///   The unique ID of the Subnet
   ///
   /// * [SubnetEditObjectV1Request] subnetEditObjectV1Request (required):
-  Future<CommonResponse?> subnetEditObjectV1(int pkiSubnetID, SubnetEditObjectV1Request subnetEditObjectV1Request,) async {
+  Future<SubnetEditObjectV1Response?> subnetEditObjectV1(int pkiSubnetID, SubnetEditObjectV1Request subnetEditObjectV1Request,) async {
     final response = await subnetEditObjectV1WithHttpInfo(pkiSubnetID, subnetEditObjectV1Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -188,7 +188,7 @@ class ObjectSubnetApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'SubnetEditObjectV1Response',) as SubnetEditObjectV1Response;
     
     }
     return null;

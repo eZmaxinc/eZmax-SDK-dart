@@ -85,7 +85,7 @@ class WebhookEzsignEzsignsignerConnect {
 
       return WebhookEzsignEzsignsignerConnect(
         objWebhook: CustomWebhookResponse.fromJson(json[r'objWebhook'])!,
-        aObjAttempt: AttemptResponse.listFromJson(json[r'a_objAttempt']),
+        aObjAttempt: AttemptResponseCompound.listFromJson(json[r'a_objAttempt']),
         objEzsignfolder: EzsignfolderResponse.fromJson(json[r'objEzsignfolder']),
         objEzsignfoldersignerassociation: EzsignfoldersignerassociationResponseCompound.fromJson(json[r'objEzsignfoldersignerassociation'])!,
       );

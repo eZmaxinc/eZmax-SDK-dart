@@ -118,7 +118,7 @@ class ObjectEzsignfoldertypeApi {
   /// * [int] pkiEzsignfoldertypeID (required):
   ///
   /// * [EzsignfoldertypeEditObjectV3Request] ezsignfoldertypeEditObjectV3Request (required):
-  Future<CommonResponse?> ezsignfoldertypeEditObjectV3(int pkiEzsignfoldertypeID, EzsignfoldertypeEditObjectV3Request ezsignfoldertypeEditObjectV3Request,) async {
+  Future<EzsignfoldertypeEditObjectV3Response?> ezsignfoldertypeEditObjectV3(int pkiEzsignfoldertypeID, EzsignfoldertypeEditObjectV3Request ezsignfoldertypeEditObjectV3Request,) async {
     final response = await ezsignfoldertypeEditObjectV3WithHttpInfo(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV3Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -127,7 +127,7 @@ class ObjectEzsignfoldertypeApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfoldertypeEditObjectV3Response',) as EzsignfoldertypeEditObjectV3Response;
     
     }
     return null;

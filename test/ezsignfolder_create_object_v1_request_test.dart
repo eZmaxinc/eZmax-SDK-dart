@@ -21,8 +21,7 @@ void main() {
       // TODO
     });
 
-    // An Ezsignfolder Object and children to create a complete structure
-    // EzsignfolderRequest objEzsignfolderCompound
+    // EzsignfolderRequestCompound objEzsignfolderCompound
     test('to test the property `objEzsignfolderCompound`', () async {
       // TODO
     });

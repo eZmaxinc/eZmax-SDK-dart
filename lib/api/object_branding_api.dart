@@ -118,7 +118,7 @@ class ObjectBrandingApi {
   /// * [int] pkiBrandingID (required):
   ///
   /// * [BrandingEditObjectV2Request] brandingEditObjectV2Request (required):
-  Future<CommonResponse?> brandingEditObjectV2(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request,) async {
+  Future<BrandingEditObjectV2Response?> brandingEditObjectV2(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request,) async {
     final response = await brandingEditObjectV2WithHttpInfo(pkiBrandingID, brandingEditObjectV2Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -127,7 +127,7 @@ class ObjectBrandingApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'BrandingEditObjectV2Response',) as BrandingEditObjectV2Response;
     
     }
     return null;

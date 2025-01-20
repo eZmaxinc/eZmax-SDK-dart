@@ -30,7 +30,7 @@ void main() {
     //
     // 
     //
-    //Future<CommonResponse> usergroupexternalDeleteObjectV1(int pkiUsergroupexternalID) async
+    //Future<UsergroupexternalDeleteObjectV1Response> usergroupexternalDeleteObjectV1(int pkiUsergroupexternalID) async
     test('test usergroupexternalDeleteObjectV1', () async {
       // TODO
     });
@@ -39,7 +39,7 @@ void main() {
     //
     // 
     //
-    //Future<CommonResponse> usergroupexternalEditObjectV1(int pkiUsergroupexternalID, UsergroupexternalEditObjectV1Request usergroupexternalEditObjectV1Request) async
+    //Future<UsergroupexternalEditObjectV1Response> usergroupexternalEditObjectV1(int pkiUsergroupexternalID, UsergroupexternalEditObjectV1Request usergroupexternalEditObjectV1Request) async
     test('test usergroupexternalEditObjectV1', () async {
       // TODO
     });

@@ -237,7 +237,7 @@ class ObjectUserApi {
   ///   The unique ID of the User
   ///
   /// * [UserEditObjectV1Request] userEditObjectV1Request (required):
-  Future<CommonResponse?> userEditObjectV1(int pkiUserID, UserEditObjectV1Request userEditObjectV1Request,) async {
+  Future<UserEditObjectV1Response?> userEditObjectV1(int pkiUserID, UserEditObjectV1Request userEditObjectV1Request,) async {
     final response = await userEditObjectV1WithHttpInfo(pkiUserID, userEditObjectV1Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -246,7 +246,7 @@ class ObjectUserApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'UserEditObjectV1Response',) as UserEditObjectV1Response;
     
     }
     return null;
@@ -970,7 +970,7 @@ class ObjectUserApi {
   /// * [int] pkiUserID (required):
   ///
   /// * [Object] body (required):
-  Future<CommonResponse?> userSendPasswordResetV1(int pkiUserID, Object body,) async {
+  Future<UserSendPasswordResetV1Response?> userSendPasswordResetV1(int pkiUserID, Object body,) async {
     final response = await userSendPasswordResetV1WithHttpInfo(pkiUserID, body,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -979,7 +979,7 @@ class ObjectUserApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'UserSendPasswordResetV1Response',) as UserSendPasswordResetV1Response;
     
     }
     return null;

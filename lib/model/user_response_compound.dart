@@ -136,8 +136,7 @@ class UserResponseCompound {
   /// The Name of the Language in the language of the requester
   String sLanguageNameX;
 
-  /// An Email Object and children to create a complete structure
-  EmailResponse objEmail;
+  EmailResponseCompound objEmail;
 
   /// The unique ID of the Billingentityinternal.
   ///
@@ -507,7 +506,7 @@ class UserResponseCompound {
         sTimezoneName: mapValueOfType<String>(json, r'sTimezoneName')!,
         fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID')!,
         sLanguageNameX: mapValueOfType<String>(json, r'sLanguageNameX')!,
-        objEmail: EmailResponse.fromJson(json[r'objEmail'])!,
+        objEmail: EmailResponseCompound.fromJson(json[r'objEmail'])!,
         fkiBillingentityinternalID: mapValueOfType<int>(json, r'fkiBillingentityinternalID')!,
         sBillingentityinternalDescriptionX: mapValueOfType<String>(json, r'sBillingentityinternalDescriptionX')!,
         objPhoneHome: PhoneResponseCompound.fromJson(json[r'objPhoneHome']),

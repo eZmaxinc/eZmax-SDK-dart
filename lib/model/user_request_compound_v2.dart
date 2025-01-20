@@ -120,31 +120,28 @@ class UserRequestCompoundV2 {
   /// Maximum value: 2
   int fkiLanguageID;
 
-  /// An Email Object and children to create a complete structure
-  EmailRequest objEmail;
+  EmailRequestCompound objEmail;
 
   /// The unique ID of the Billingentityinternal.
   ///
   /// Minimum value: 0
   int fkiBillingentityinternalID;
 
-  /// A Phone Object and children to create a complete structure
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
   /// source code must fall back to having a nullable type.
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
-  PhoneRequestV2? objPhoneHome;
+  PhoneRequestCompoundV2? objPhoneHome;
 
-  /// A Phone Object and children to create a complete structure
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
   /// source code must fall back to having a nullable type.
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
-  PhoneRequestV2? objPhoneSMS;
+  PhoneRequestCompoundV2? objPhoneSMS;
 
   /// The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father's middle name| |15|Your mother's maiden name| |16|Name of your eldest child| |17|Your spouse's middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat's name| |22|Date of Birth (YYYY-MM-DD)| |22|Secret Code| |22|Your reference code|
   ///
@@ -427,10 +424,10 @@ class UserRequestCompoundV2 {
         fkiDepartmentIDDefault: mapValueOfType<int>(json, r'fkiDepartmentIDDefault')!,
         fkiTimezoneID: mapValueOfType<int>(json, r'fkiTimezoneID')!,
         fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID')!,
-        objEmail: EmailRequest.fromJson(json[r'objEmail'])!,
+        objEmail: EmailRequestCompound.fromJson(json[r'objEmail'])!,
         fkiBillingentityinternalID: mapValueOfType<int>(json, r'fkiBillingentityinternalID')!,
-        objPhoneHome: PhoneRequestV2.fromJson(json[r'objPhoneHome']),
-        objPhoneSMS: PhoneRequestV2.fromJson(json[r'objPhoneSMS']),
+        objPhoneHome: PhoneRequestCompoundV2.fromJson(json[r'objPhoneHome']),
+        objPhoneSMS: PhoneRequestCompoundV2.fromJson(json[r'objPhoneSMS']),
         fkiSecretquestionID: mapValueOfType<int>(json, r'fkiSecretquestionID'),
         sUserSecretresponse: mapValueOfType<String>(json, r'sUserSecretresponse'),
         fkiModuleIDForm: mapValueOfType<int>(json, r'fkiModuleIDForm'),

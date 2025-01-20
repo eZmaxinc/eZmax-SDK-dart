@@ -175,7 +175,7 @@ class ObjectEzsigntemplateApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigntemplateID (required):
-  Future<CommonResponse?> ezsigntemplateDeleteObjectV1(int pkiEzsigntemplateID,) async {
+  Future<EzsigntemplateDeleteObjectV1Response?> ezsigntemplateDeleteObjectV1(int pkiEzsigntemplateID,) async {
     final response = await ezsigntemplateDeleteObjectV1WithHttpInfo(pkiEzsigntemplateID,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -184,7 +184,7 @@ class ObjectEzsigntemplateApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigntemplateDeleteObjectV1Response',) as EzsigntemplateDeleteObjectV1Response;
     
     }
     return null;
@@ -236,7 +236,7 @@ class ObjectEzsigntemplateApi {
   /// * [int] pkiEzsigntemplateID (required):
   ///
   /// * [EzsigntemplateEditObjectV3Request] ezsigntemplateEditObjectV3Request (required):
-  Future<CommonResponse?> ezsigntemplateEditObjectV3(int pkiEzsigntemplateID, EzsigntemplateEditObjectV3Request ezsigntemplateEditObjectV3Request,) async {
+  Future<EzsigntemplateEditObjectV3Response?> ezsigntemplateEditObjectV3(int pkiEzsigntemplateID, EzsigntemplateEditObjectV3Request ezsigntemplateEditObjectV3Request,) async {
     final response = await ezsigntemplateEditObjectV3WithHttpInfo(pkiEzsigntemplateID, ezsigntemplateEditObjectV3Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -245,7 +245,7 @@ class ObjectEzsigntemplateApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigntemplateEditObjectV3Response',) as EzsigntemplateEditObjectV3Response;
     
     }
     return null;

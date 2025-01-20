@@ -28,8 +28,7 @@ class ActivesessionGetCurrentV1Response {
   ///
   CommonResponseObjDebug? objDebug;
 
-  /// Payload for GET /1/object/activesession/getCurrent
-  ActivesessionResponseCompound mPayload;
+  ActivesessionGetCurrentV1ResponseMPayload mPayload;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ActivesessionGetCurrentV1Response &&
@@ -80,7 +79,7 @@ class ActivesessionGetCurrentV1Response {
       return ActivesessionGetCurrentV1Response(
         objDebugPayload: CommonResponseObjDebugPayload.fromJson(json[r'objDebugPayload'])!,
         objDebug: CommonResponseObjDebug.fromJson(json[r'objDebug']),
-        mPayload: ActivesessionResponseCompound.fromJson(json[r'mPayload'])!,
+        mPayload: ActivesessionGetCurrentV1ResponseMPayload.fromJson(json[r'mPayload'])!,
       );
     }
     return null;

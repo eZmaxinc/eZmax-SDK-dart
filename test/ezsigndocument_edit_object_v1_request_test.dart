@@ -16,8 +16,7 @@ void main() {
   // final instance = EzsigndocumentEditObjectV1Request();
 
   group('test EzsigndocumentEditObjectV1Request', () {
-    // An Ezsigndocument Object and children to create a complete structure
-    // EzsigndocumentRequest objEzsigndocument
+    // EzsigndocumentRequestCompound objEzsigndocument
     test('to test the property `objEzsigndocument`', () async {
       // TODO
     });

@@ -30,7 +30,7 @@ void main() {
     //
     // 
     //
-    //Future<CommonResponse> variableexpenseEditObjectV1(int pkiVariableexpenseID, VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request) async
+    //Future<VariableexpenseEditObjectV1Response> variableexpenseEditObjectV1(int pkiVariableexpenseID, VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request) async
     test('test variableexpenseEditObjectV1', () async {
       // TODO
     });

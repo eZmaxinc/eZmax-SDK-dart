@@ -70,8 +70,7 @@ void main() {
       // TODO
     });
 
-    // An Email Object and children to create a complete structure
-    // EmailRequest objEmail
+    // EmailRequestCompound objEmail
     test('to test the property `objEmail`', () async {
       // TODO
     });
@@ -82,14 +81,12 @@ void main() {
       // TODO
     });
 
-    // A Phone Object and children to create a complete structure
-    // PhoneRequest objPhoneHome
+    // PhoneRequestCompound objPhoneHome
     test('to test the property `objPhoneHome`', () async {
       // TODO
     });
 
-    // A Phone Object and children to create a complete structure
-    // PhoneRequest objPhoneSMS
+    // PhoneRequestCompound objPhoneSMS
     test('to test the property `objPhoneSMS`', () async {
       // TODO
     });

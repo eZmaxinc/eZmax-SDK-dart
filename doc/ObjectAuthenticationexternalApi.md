@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **authenticationexternalDeleteObjectV1**
-> CommonResponse authenticationexternalDeleteObjectV1(pkiAuthenticationexternalID)
+> AuthenticationexternalDeleteObjectV1Response authenticationexternalDeleteObjectV1(pkiAuthenticationexternalID)
 
 Delete an existing Authenticationexternal
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**AuthenticationexternalDeleteObjectV1Response**](AuthenticationexternalDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **authenticationexternalEditObjectV1**
-> CommonResponse authenticationexternalEditObjectV1(pkiAuthenticationexternalID, authenticationexternalEditObjectV1Request)
+> AuthenticationexternalEditObjectV1Response authenticationexternalEditObjectV1(pkiAuthenticationexternalID, authenticationexternalEditObjectV1Request)
 
 Edit an existing Authenticationexternal
 
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**AuthenticationexternalEditObjectV1Response**](AuthenticationexternalEditObjectV1Response.md)
 
 ### Authorization
 
@@ -317,7 +317,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **authenticationexternalResetAuthorizationV1**
-> CommonResponse authenticationexternalResetAuthorizationV1(pkiAuthenticationexternalID, body)
+> AuthenticationexternalResetAuthorizationV1Response authenticationexternalResetAuthorizationV1(pkiAuthenticationexternalID, body)
 
 Reset the Authenticationexternal authorization
 
@@ -352,7 +352,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**AuthenticationexternalResetAuthorizationV1Response**](AuthenticationexternalResetAuthorizationV1Response.md)
 
 ### Authorization
 
