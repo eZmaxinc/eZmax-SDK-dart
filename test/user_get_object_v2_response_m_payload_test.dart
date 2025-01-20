@@ -16,7 +16,8 @@ void main() {
   // final instance = UserGetObjectV2ResponseMPayload();
 
   group('test UserGetObjectV2ResponseMPayload', () {
-    // UserResponseCompound objUser
+    // A User Object and children to create a complete structure
+    // UserResponse objUser
     test('to test the property `objUser`', () async {
       // TODO
     });

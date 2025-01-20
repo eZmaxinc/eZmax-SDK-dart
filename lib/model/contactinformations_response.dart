@@ -89,13 +89,14 @@ class ContactinformationsResponse {
   ///
   String? sContactinformationsUrl;
 
+  /// An Address Object and children to create a complete structure
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
   /// source code must fall back to having a nullable type.
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
-  AddressResponseCompound? objAddressDefault;
+  AddressResponse? objAddressDefault;
 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -105,21 +106,23 @@ class ContactinformationsResponse {
   ///
   PhoneResponseCompound? objPhoneDefault;
 
+  /// An Email Object and children to create a complete structure
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
   /// source code must fall back to having a nullable type.
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
-  EmailResponseCompound? objEmailDefault;
+  EmailResponse? objEmailDefault;
 
+  /// A Website Object and children to create a complete structure
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
   /// source code must fall back to having a nullable type.
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
-  WebsiteResponseCompound? objWebsiteDefault;
+  WebsiteResponse? objWebsiteDefault;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ContactinformationsResponse &&
@@ -231,10 +234,10 @@ class ContactinformationsResponse {
         fkiWebsiteIDDefault: mapValueOfType<int>(json, r'fkiWebsiteIDDefault'),
         eContactinformationsType: FieldEContactinformationsType.fromJson(json[r'eContactinformationsType'])!,
         sContactinformationsUrl: mapValueOfType<String>(json, r'sContactinformationsUrl'),
-        objAddressDefault: AddressResponseCompound.fromJson(json[r'objAddressDefault']),
+        objAddressDefault: AddressResponse.fromJson(json[r'objAddressDefault']),
         objPhoneDefault: PhoneResponseCompound.fromJson(json[r'objPhoneDefault']),
-        objEmailDefault: EmailResponseCompound.fromJson(json[r'objEmailDefault']),
-        objWebsiteDefault: WebsiteResponseCompound.fromJson(json[r'objWebsiteDefault']),
+        objEmailDefault: EmailResponse.fromJson(json[r'objEmailDefault']),
+        objWebsiteDefault: WebsiteResponse.fromJson(json[r'objWebsiteDefault']),
       );
     }
     return null;

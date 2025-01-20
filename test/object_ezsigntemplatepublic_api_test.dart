@@ -39,7 +39,7 @@ void main() {
     //
     // 
     //
-    //Future<EzsigntemplatepublicEditObjectV1Response> ezsigntemplatepublicEditObjectV1(int pkiEzsigntemplatepublicID, EzsigntemplatepublicEditObjectV1Request ezsigntemplatepublicEditObjectV1Request) async
+    //Future<CommonResponse> ezsigntemplatepublicEditObjectV1(int pkiEzsigntemplatepublicID, EzsigntemplatepublicEditObjectV1Request ezsigntemplatepublicEditObjectV1Request) async
     test('test ezsigntemplatepublicEditObjectV1', () async {
       // TODO
     });

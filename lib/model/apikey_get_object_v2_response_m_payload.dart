@@ -16,7 +16,8 @@ class ApikeyGetObjectV2ResponseMPayload {
     required this.objApikey,
   });
 
-  ApikeyResponseCompound objApikey;
+  /// An Apikey Object and children to create a complete structure
+  ApikeyResponse objApikey;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ApikeyGetObjectV2ResponseMPayload &&
@@ -55,7 +56,7 @@ class ApikeyGetObjectV2ResponseMPayload {
       }());
 
       return ApikeyGetObjectV2ResponseMPayload(
-        objApikey: ApikeyResponseCompound.fromJson(json[r'objApikey'])!,
+        objApikey: ApikeyResponse.fromJson(json[r'objApikey'])!,
       );
     }
     return null;

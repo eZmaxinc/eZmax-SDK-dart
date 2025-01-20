@@ -26,7 +26,8 @@ void main() {
       // TODO
     });
 
-    // EzsignfoldersignerassociationGetObjectV1ResponseMPayload mPayload
+    // Payload for GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}
+    // EzsignfoldersignerassociationResponseCompound mPayload
     test('to test the property `mPayload`', () async {
       // TODO
     });

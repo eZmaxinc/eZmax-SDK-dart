@@ -64,7 +64,7 @@ class CustomEzsignformfielderrorResponse {
 
       return CustomEzsignformfielderrorResponse(
         sEzsignformfieldLabel: mapValueOfType<String>(json, r'sEzsignformfieldLabel')!,
-        aObjEzsignformfielderrortest: CustomEzsignformfielderrortestResponse.listFromJson(json[r'a_objEzsignformfielderrortest']),
+        aObjEzsignformfielderrortest: Object.listFromJson(json[r'a_objEzsignformfielderrortest']),
       );
     }
     return null;

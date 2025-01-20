@@ -25,13 +25,14 @@ class EzsignfolderCreateObjectV1Request {
   ///
   EzsignfolderRequest? objEzsignfolder;
 
+  /// An Ezsignfolder Object and children to create a complete structure
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
   /// source code must fall back to having a nullable type.
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
-  EzsignfolderRequestCompound? objEzsignfolderCompound;
+  EzsignfolderRequest? objEzsignfolderCompound;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfolderCreateObjectV1Request &&
@@ -82,7 +83,7 @@ class EzsignfolderCreateObjectV1Request {
 
       return EzsignfolderCreateObjectV1Request(
         objEzsignfolder: EzsignfolderRequest.fromJson(json[r'objEzsignfolder']),
-        objEzsignfolderCompound: EzsignfolderRequestCompound.fromJson(json[r'objEzsignfolderCompound']),
+        objEzsignfolderCompound: EzsignfolderRequest.fromJson(json[r'objEzsignfolderCompound']),
       );
     }
     return null;

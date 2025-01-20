@@ -26,7 +26,8 @@ void main() {
       // TODO
     });
 
-    // ActivesessionGetCurrentV1ResponseMPayload mPayload
+    // Payload for GET /1/object/activesession/getCurrent
+    // ActivesessionResponseCompound mPayload
     test('to test the property `mPayload`', () async {
       // TODO
     });

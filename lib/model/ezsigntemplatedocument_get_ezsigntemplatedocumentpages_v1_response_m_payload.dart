@@ -55,7 +55,7 @@ class EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseMPayload {
       }());
 
       return EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseMPayload(
-        aObjEzsigntemplatedocumentpage: EzsigntemplatedocumentpageResponseCompound.listFromJson(json[r'a_objEzsigntemplatedocumentpage']),
+        aObjEzsigntemplatedocumentpage: EzsigntemplatedocumentpageResponse.listFromJson(json[r'a_objEzsigntemplatedocumentpage']),
       );
     }
     return null;

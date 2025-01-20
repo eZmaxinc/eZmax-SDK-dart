@@ -69,7 +69,7 @@ class WebhookEzsignFolderCompleted {
 
       return WebhookEzsignFolderCompleted(
         objWebhook: CustomWebhookResponse.fromJson(json[r'objWebhook'])!,
-        aObjAttempt: AttemptResponseCompound.listFromJson(json[r'a_objAttempt']),
+        aObjAttempt: AttemptResponse.listFromJson(json[r'a_objAttempt']),
         objEzsignfolder: EzsignfolderResponse.fromJson(json[r'objEzsignfolder'])!,
       );
     }

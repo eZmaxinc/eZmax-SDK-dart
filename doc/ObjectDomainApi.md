@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **domainDeleteObjectV1**
-> DomainDeleteObjectV1Response domainDeleteObjectV1(pkiDomainID)
+> CommonResponse domainDeleteObjectV1(pkiDomainID)
 
 Delete an existing Domain
 
@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DomainDeleteObjectV1Response**](DomainDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

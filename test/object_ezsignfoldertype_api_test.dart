@@ -30,7 +30,7 @@ void main() {
     //
     // 
     //
-    //Future<EzsignfoldertypeEditObjectV3Response> ezsignfoldertypeEditObjectV3(int pkiEzsignfoldertypeID, EzsignfoldertypeEditObjectV3Request ezsignfoldertypeEditObjectV3Request) async
+    //Future<CommonResponse> ezsignfoldertypeEditObjectV3(int pkiEzsignfoldertypeID, EzsignfoldertypeEditObjectV3Request ezsignfoldertypeEditObjectV3Request) async
     test('test ezsignfoldertypeEditObjectV3', () async {
       // TODO
     });

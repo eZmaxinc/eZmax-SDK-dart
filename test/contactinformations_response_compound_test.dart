@@ -57,7 +57,8 @@ void main() {
       // TODO
     });
 
-    // AddressResponseCompound objAddressDefault
+    // An Address Object and children to create a complete structure
+    // AddressResponse objAddressDefault
     test('to test the property `objAddressDefault`', () async {
       // TODO
     });
@@ -67,12 +68,14 @@ void main() {
       // TODO
     });
 
-    // EmailResponseCompound objEmailDefault
+    // An Email Object and children to create a complete structure
+    // EmailResponse objEmailDefault
     test('to test the property `objEmailDefault`', () async {
       // TODO
     });
 
-    // WebsiteResponseCompound objWebsiteDefault
+    // A Website Object and children to create a complete structure
+    // WebsiteResponse objWebsiteDefault
     test('to test the property `objWebsiteDefault`', () async {
       // TODO
     });

@@ -30,7 +30,7 @@ void main() {
     //
     // 
     //
-    //Future<EzsigntemplatepackagemembershipDeleteObjectV1Response> ezsigntemplatepackagemembershipDeleteObjectV1(int pkiEzsigntemplatepackagemembershipID) async
+    //Future<CommonResponse> ezsigntemplatepackagemembershipDeleteObjectV1(int pkiEzsigntemplatepackagemembershipID) async
     test('test ezsigntemplatepackagemembershipDeleteObjectV1', () async {
       // TODO
     });

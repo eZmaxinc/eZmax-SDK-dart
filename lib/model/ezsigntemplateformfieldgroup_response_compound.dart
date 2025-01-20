@@ -302,8 +302,8 @@ class EzsigntemplateformfieldgroupResponseCompound {
         eEzsigntemplateformfieldgroupTextvalidation: EnumTextvalidation.fromJson(json[r'eEzsigntemplateformfieldgroupTextvalidation']),
         tEzsigntemplateformfieldgroupTooltip: mapValueOfType<String>(json, r'tEzsigntemplateformfieldgroupTooltip'),
         eEzsigntemplateformfieldgroupTooltipposition: FieldEEzsigntemplateformfieldgroupTooltipposition.fromJson(json[r'eEzsigntemplateformfieldgroupTooltipposition']),
-        aObjEzsigntemplateformfieldgroupsigner: EzsigntemplateformfieldgroupsignerResponseCompound.listFromJson(json[r'a_objEzsigntemplateformfieldgroupsigner']),
-        aObjDropdownElement: CustomDropdownElementResponseCompound.listFromJson(json[r'a_objDropdownElement']),
+        aObjEzsigntemplateformfieldgroupsigner: EzsigntemplateformfieldgroupsignerResponse.listFromJson(json[r'a_objEzsigntemplateformfieldgroupsigner']),
+        aObjDropdownElement: CustomDropdownElementResponse.listFromJson(json[r'a_objDropdownElement']),
         aObjEzsigntemplateformfield: EzsigntemplateformfieldResponseCompound.listFromJson(json[r'a_objEzsigntemplateformfield']),
       );
     }

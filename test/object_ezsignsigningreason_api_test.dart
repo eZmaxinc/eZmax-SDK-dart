@@ -30,7 +30,7 @@ void main() {
     //
     // 
     //
-    //Future<EzsignsigningreasonEditObjectV1Response> ezsignsigningreasonEditObjectV1(int pkiEzsignsigningreasonID, EzsignsigningreasonEditObjectV1Request ezsignsigningreasonEditObjectV1Request) async
+    //Future<CommonResponse> ezsignsigningreasonEditObjectV1(int pkiEzsignsigningreasonID, EzsignsigningreasonEditObjectV1Request ezsignsigningreasonEditObjectV1Request) async
     test('test ezsignsigningreasonEditObjectV1', () async {
       // TODO
     });

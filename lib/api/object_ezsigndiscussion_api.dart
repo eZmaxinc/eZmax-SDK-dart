@@ -116,7 +116,7 @@ class ObjectEzsigndiscussionApi {
   ///
   /// * [int] pkiEzsigndiscussionID (required):
   ///   The unique ID of the Ezsigndiscussion
-  Future<EzsigndiscussionDeleteObjectV1Response?> ezsigndiscussionDeleteObjectV1(int pkiEzsigndiscussionID,) async {
+  Future<CommonResponse?> ezsigndiscussionDeleteObjectV1(int pkiEzsigndiscussionID,) async {
     final response = await ezsigndiscussionDeleteObjectV1WithHttpInfo(pkiEzsigndiscussionID,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -125,7 +125,7 @@ class ObjectEzsigndiscussionApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndiscussionDeleteObjectV1Response',) as EzsigndiscussionDeleteObjectV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
     
     }
     return null;

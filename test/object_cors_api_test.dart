@@ -30,7 +30,7 @@ void main() {
     //
     // 
     //
-    //Future<CorsDeleteObjectV1Response> corsDeleteObjectV1(int pkiCorsID) async
+    //Future<CommonResponse> corsDeleteObjectV1(int pkiCorsID) async
     test('test corsDeleteObjectV1', () async {
       // TODO
     });
@@ -39,7 +39,7 @@ void main() {
     //
     // 
     //
-    //Future<CorsEditObjectV1Response> corsEditObjectV1(int pkiCorsID, CorsEditObjectV1Request corsEditObjectV1Request) async
+    //Future<CommonResponse> corsEditObjectV1(int pkiCorsID, CorsEditObjectV1Request corsEditObjectV1Request) async
     test('test corsEditObjectV1', () async {
       // TODO
     });

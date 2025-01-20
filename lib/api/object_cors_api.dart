@@ -116,7 +116,7 @@ class ObjectCorsApi {
   ///
   /// * [int] pkiCorsID (required):
   ///   The unique ID of the Cors
-  Future<CorsDeleteObjectV1Response?> corsDeleteObjectV1(int pkiCorsID,) async {
+  Future<CommonResponse?> corsDeleteObjectV1(int pkiCorsID,) async {
     final response = await corsDeleteObjectV1WithHttpInfo(pkiCorsID,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -125,7 +125,7 @@ class ObjectCorsApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CorsDeleteObjectV1Response',) as CorsDeleteObjectV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
     
     }
     return null;
@@ -179,7 +179,7 @@ class ObjectCorsApi {
   ///   The unique ID of the Cors
   ///
   /// * [CorsEditObjectV1Request] corsEditObjectV1Request (required):
-  Future<CorsEditObjectV1Response?> corsEditObjectV1(int pkiCorsID, CorsEditObjectV1Request corsEditObjectV1Request,) async {
+  Future<CommonResponse?> corsEditObjectV1(int pkiCorsID, CorsEditObjectV1Request corsEditObjectV1Request,) async {
     final response = await corsEditObjectV1WithHttpInfo(pkiCorsID, corsEditObjectV1Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -188,7 +188,7 @@ class ObjectCorsApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CorsEditObjectV1Response',) as CorsEditObjectV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
     
     }
     return null;

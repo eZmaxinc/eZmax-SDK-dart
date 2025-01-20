@@ -23,7 +23,8 @@ class WebhookUserstagedUserstagedCreated {
   /// An array containing details of previous attempts that were made to deliver the message. The array is empty if it's the first attempt.
   List<AttemptResponseCompound> aObjAttempt;
 
-  UserstagedResponseCompound objUserstaged;
+  /// A Userstaged Object
+  UserstagedResponse objUserstaged;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is WebhookUserstagedUserstagedCreated &&
@@ -69,8 +70,8 @@ class WebhookUserstagedUserstagedCreated {
 
       return WebhookUserstagedUserstagedCreated(
         objWebhook: CustomWebhookResponse.fromJson(json[r'objWebhook'])!,
-        aObjAttempt: AttemptResponseCompound.listFromJson(json[r'a_objAttempt']),
-        objUserstaged: UserstagedResponseCompound.fromJson(json[r'objUserstaged'])!,
+        aObjAttempt: AttemptResponse.listFromJson(json[r'a_objAttempt']),
+        objUserstaged: UserstagedResponse.fromJson(json[r'objUserstaged'])!,
       );
     }
     return null;

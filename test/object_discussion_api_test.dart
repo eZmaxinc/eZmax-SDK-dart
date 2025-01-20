@@ -30,7 +30,7 @@ void main() {
     //
     // 
     //
-    //Future<DiscussionDeleteObjectV1Response> discussionDeleteObjectV1(int pkiDiscussionID) async
+    //Future<CommonResponse> discussionDeleteObjectV1(int pkiDiscussionID) async
     test('test discussionDeleteObjectV1', () async {
       // TODO
     });
@@ -48,14 +48,14 @@ void main() {
     //
     // 
     //
-    //Future<DiscussionPatchObjectV1Response> discussionPatchObjectV1(int pkiDiscussionID, DiscussionPatchObjectV1Request discussionPatchObjectV1Request) async
+    //Future<CommonResponse> discussionPatchObjectV1(int pkiDiscussionID, DiscussionPatchObjectV1Request discussionPatchObjectV1Request) async
     test('test discussionPatchObjectV1', () async {
       // TODO
     });
 
     // Update the read status of the discussion
     //
-    //Future<DiscussionUpdateDiscussionreadstatusV1Response> discussionUpdateDiscussionreadstatusV1(int pkiDiscussionID, DiscussionUpdateDiscussionreadstatusV1Request discussionUpdateDiscussionreadstatusV1Request) async
+    //Future<CommonResponse> discussionUpdateDiscussionreadstatusV1(int pkiDiscussionID, DiscussionUpdateDiscussionreadstatusV1Request discussionUpdateDiscussionreadstatusV1Request) async
     test('test discussionUpdateDiscussionreadstatusV1', () async {
       // TODO
     });

@@ -65,7 +65,7 @@ class CustomEzsigndocumentRequest {
 
       return CustomEzsigndocumentRequest(
         pkiEzsigndocumentID: mapValueOfType<int>(json, r'pkiEzsigndocumentID')!,
-        aObjEzsigndocumentdependency: EzsigndocumentdependencyRequestCompound.listFromJson(json[r'a_objEzsigndocumentdependency']),
+        aObjEzsigndocumentdependency: EzsigndocumentdependencyRequest.listFromJson(json[r'a_objEzsigndocumentdependency']),
       );
     }
     return null;

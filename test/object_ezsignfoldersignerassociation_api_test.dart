@@ -48,7 +48,7 @@ void main() {
     //
     // 
     //
-    //Future<EzsignfoldersignerassociationDeleteObjectV1Response> ezsignfoldersignerassociationDeleteObjectV1(int pkiEzsignfoldersignerassociationID) async
+    //Future<CommonResponse> ezsignfoldersignerassociationDeleteObjectV1(int pkiEzsignfoldersignerassociationID) async
     test('test ezsignfoldersignerassociationDeleteObjectV1', () async {
       // TODO
     });
@@ -57,7 +57,7 @@ void main() {
     //
     // 
     //
-    //Future<EzsignfoldersignerassociationEditObjectV1Response> ezsignfoldersignerassociationEditObjectV1(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request) async
+    //Future<CommonResponse> ezsignfoldersignerassociationEditObjectV1(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request) async
     test('test ezsignfoldersignerassociationEditObjectV1', () async {
       // TODO
     });
@@ -66,7 +66,7 @@ void main() {
     //
     // 
     //
-    //Future<EzsignfoldersignerassociationForceDisconnectV1Response> ezsignfoldersignerassociationForceDisconnectV1(int pkiEzsignfoldersignerassociationID, Object body) async
+    //Future<CommonResponse> ezsignfoldersignerassociationForceDisconnectV1(int pkiEzsignfoldersignerassociationID, Object body) async
     test('test ezsignfoldersignerassociationForceDisconnectV1', () async {
       // TODO
     });
@@ -100,7 +100,7 @@ void main() {
 
     // Patch an existing Ezsignfoldersignerassociation
     //
-    //Future<EzsignfoldersignerassociationPatchObjectV1Response> ezsignfoldersignerassociationPatchObjectV1(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request) async
+    //Future<CommonResponse> ezsignfoldersignerassociationPatchObjectV1(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request) async
     test('test ezsignfoldersignerassociationPatchObjectV1', () async {
       // TODO
     });
@@ -109,7 +109,7 @@ void main() {
     //
     // Reassign remaining unsigned signatures and forms
     //
-    //Future<EzsignfoldersignerassociationReassignV1Response> ezsignfoldersignerassociationReassignV1(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request) async
+    //Future<CommonResponse> ezsignfoldersignerassociationReassignV1(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request) async
     test('test ezsignfoldersignerassociationReassignV1', () async {
       // TODO
     });

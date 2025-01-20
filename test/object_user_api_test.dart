@@ -48,7 +48,7 @@ void main() {
     //
     // 
     //
-    //Future<UserEditObjectV1Response> userEditObjectV1(int pkiUserID, UserEditObjectV1Request userEditObjectV1Request) async
+    //Future<CommonResponse> userEditObjectV1(int pkiUserID, UserEditObjectV1Request userEditObjectV1Request) async
     test('test userEditObjectV1', () async {
       // TODO
     });
@@ -144,7 +144,7 @@ void main() {
     //
     // Send the password reset email
     //
-    //Future<UserSendPasswordResetV1Response> userSendPasswordResetV1(int pkiUserID, Object body) async
+    //Future<CommonResponse> userSendPasswordResetV1(int pkiUserID, Object body) async
     test('test userSendPasswordResetV1', () async {
       // TODO
     });

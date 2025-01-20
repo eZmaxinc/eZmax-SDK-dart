@@ -30,7 +30,7 @@ void main() {
     //
     // 
     //
-    //Future<SubnetDeleteObjectV1Response> subnetDeleteObjectV1(int pkiSubnetID) async
+    //Future<CommonResponse> subnetDeleteObjectV1(int pkiSubnetID) async
     test('test subnetDeleteObjectV1', () async {
       // TODO
     });
@@ -39,7 +39,7 @@ void main() {
     //
     // 
     //
-    //Future<SubnetEditObjectV1Response> subnetEditObjectV1(int pkiSubnetID, SubnetEditObjectV1Request subnetEditObjectV1Request) async
+    //Future<CommonResponse> subnetEditObjectV1(int pkiSubnetID, SubnetEditObjectV1Request subnetEditObjectV1Request) async
     test('test subnetEditObjectV1', () async {
       // TODO
     });

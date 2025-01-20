@@ -116,7 +116,7 @@ class ObjectEzsigntemplatedocumentpagerecognitionApi {
   ///
   /// * [int] pkiEzsigntemplatedocumentpagerecognitionID (required):
   ///   The unique ID of the Ezsigntemplatedocumentpagerecognition
-  Future<EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response?> ezsigntemplatedocumentpagerecognitionDeleteObjectV1(int pkiEzsigntemplatedocumentpagerecognitionID,) async {
+  Future<CommonResponse?> ezsigntemplatedocumentpagerecognitionDeleteObjectV1(int pkiEzsigntemplatedocumentpagerecognitionID,) async {
     final response = await ezsigntemplatedocumentpagerecognitionDeleteObjectV1WithHttpInfo(pkiEzsigntemplatedocumentpagerecognitionID,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -125,7 +125,7 @@ class ObjectEzsigntemplatedocumentpagerecognitionApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response',) as EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
     
     }
     return null;
@@ -179,7 +179,7 @@ class ObjectEzsigntemplatedocumentpagerecognitionApi {
   ///   The unique ID of the Ezsigntemplatedocumentpagerecognition
   ///
   /// * [EzsigntemplatedocumentpagerecognitionEditObjectV1Request] ezsigntemplatedocumentpagerecognitionEditObjectV1Request (required):
-  Future<EzsigntemplatedocumentpagerecognitionEditObjectV1Response?> ezsigntemplatedocumentpagerecognitionEditObjectV1(int pkiEzsigntemplatedocumentpagerecognitionID, EzsigntemplatedocumentpagerecognitionEditObjectV1Request ezsigntemplatedocumentpagerecognitionEditObjectV1Request,) async {
+  Future<CommonResponse?> ezsigntemplatedocumentpagerecognitionEditObjectV1(int pkiEzsigntemplatedocumentpagerecognitionID, EzsigntemplatedocumentpagerecognitionEditObjectV1Request ezsigntemplatedocumentpagerecognitionEditObjectV1Request,) async {
     final response = await ezsigntemplatedocumentpagerecognitionEditObjectV1WithHttpInfo(pkiEzsigntemplatedocumentpagerecognitionID, ezsigntemplatedocumentpagerecognitionEditObjectV1Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -188,7 +188,7 @@ class ObjectEzsigntemplatedocumentpagerecognitionApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigntemplatedocumentpagerecognitionEditObjectV1Response',) as EzsigntemplatedocumentpagerecognitionEditObjectV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
     
     }
     return null;

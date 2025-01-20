@@ -30,7 +30,7 @@ void main() {
     //
     // 
     //
-    //Future<PermissionDeleteObjectV1Response> permissionDeleteObjectV1(int pkiPermissionID) async
+    //Future<CommonResponse> permissionDeleteObjectV1(int pkiPermissionID) async
     test('test permissionDeleteObjectV1', () async {
       // TODO
     });
@@ -39,7 +39,7 @@ void main() {
     //
     // 
     //
-    //Future<PermissionEditObjectV1Response> permissionEditObjectV1(int pkiPermissionID, PermissionEditObjectV1Request permissionEditObjectV1Request) async
+    //Future<CommonResponse> permissionEditObjectV1(int pkiPermissionID, PermissionEditObjectV1Request permissionEditObjectV1Request) async
     test('test permissionEditObjectV1', () async {
       // TODO
     });

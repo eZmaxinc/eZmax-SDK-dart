@@ -55,7 +55,7 @@ class EzsignfolderCreateObjectV3Request {
       }());
 
       return EzsignfolderCreateObjectV3Request(
-        aObjEzsignfolder: EzsignfolderRequestCompoundV3.listFromJson(json[r'a_objEzsignfolder']),
+        aObjEzsignfolder: EzsignfolderRequestV3.listFromJson(json[r'a_objEzsignfolder']),
       );
     }
     return null;

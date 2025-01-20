@@ -28,7 +28,8 @@ class EzmaxinvoicingGetProvisionalV1Response {
   ///
   CommonResponseObjDebug? objDebug;
 
-  EzmaxinvoicingGetProvisionalV1ResponseMPayload mPayload;
+  /// Payload for GET /1/object/ezmaxinvoicing/getProvisional
+  EzmaxinvoicingResponseCompound mPayload;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzmaxinvoicingGetProvisionalV1Response &&
@@ -79,7 +80,7 @@ class EzmaxinvoicingGetProvisionalV1Response {
       return EzmaxinvoicingGetProvisionalV1Response(
         objDebugPayload: CommonResponseObjDebugPayload.fromJson(json[r'objDebugPayload'])!,
         objDebug: CommonResponseObjDebug.fromJson(json[r'objDebug']),
-        mPayload: EzmaxinvoicingGetProvisionalV1ResponseMPayload.fromJson(json[r'mPayload'])!,
+        mPayload: EzmaxinvoicingResponseCompound.fromJson(json[r'mPayload'])!,
       );
     }
     return null;

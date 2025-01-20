@@ -118,7 +118,7 @@ class ObjectPaymenttermApi {
   /// * [int] pkiPaymenttermID (required):
   ///
   /// * [PaymenttermEditObjectV1Request] paymenttermEditObjectV1Request (required):
-  Future<PaymenttermEditObjectV1Response?> paymenttermEditObjectV1(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request,) async {
+  Future<CommonResponse?> paymenttermEditObjectV1(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request,) async {
     final response = await paymenttermEditObjectV1WithHttpInfo(pkiPaymenttermID, paymenttermEditObjectV1Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -127,7 +127,7 @@ class ObjectPaymenttermApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'PaymenttermEditObjectV1Response',) as PaymenttermEditObjectV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
     
     }
     return null;

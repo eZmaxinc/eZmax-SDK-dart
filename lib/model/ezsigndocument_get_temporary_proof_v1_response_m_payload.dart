@@ -55,7 +55,7 @@ class EzsigndocumentGetTemporaryProofV1ResponseMPayload {
       }());
 
       return EzsigndocumentGetTemporaryProofV1ResponseMPayload(
-        aObjEzsigndocumentlog: EzsigndocumentlogResponseCompound.listFromJson(json[r'a_objEzsigndocumentlog']),
+        aObjEzsigndocumentlog: EzsigndocumentlogResponse.listFromJson(json[r'a_objEzsigndocumentlog']),
       );
     }
     return null;

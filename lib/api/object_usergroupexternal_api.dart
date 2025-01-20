@@ -116,7 +116,7 @@ class ObjectUsergroupexternalApi {
   ///
   /// * [int] pkiUsergroupexternalID (required):
   ///   The unique ID of the Usergroupexternal
-  Future<UsergroupexternalDeleteObjectV1Response?> usergroupexternalDeleteObjectV1(int pkiUsergroupexternalID,) async {
+  Future<CommonResponse?> usergroupexternalDeleteObjectV1(int pkiUsergroupexternalID,) async {
     final response = await usergroupexternalDeleteObjectV1WithHttpInfo(pkiUsergroupexternalID,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -125,7 +125,7 @@ class ObjectUsergroupexternalApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'UsergroupexternalDeleteObjectV1Response',) as UsergroupexternalDeleteObjectV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
     
     }
     return null;
@@ -179,7 +179,7 @@ class ObjectUsergroupexternalApi {
   ///   The unique ID of the Usergroupexternal
   ///
   /// * [UsergroupexternalEditObjectV1Request] usergroupexternalEditObjectV1Request (required):
-  Future<UsergroupexternalEditObjectV1Response?> usergroupexternalEditObjectV1(int pkiUsergroupexternalID, UsergroupexternalEditObjectV1Request usergroupexternalEditObjectV1Request,) async {
+  Future<CommonResponse?> usergroupexternalEditObjectV1(int pkiUsergroupexternalID, UsergroupexternalEditObjectV1Request usergroupexternalEditObjectV1Request,) async {
     final response = await usergroupexternalEditObjectV1WithHttpInfo(pkiUsergroupexternalID, usergroupexternalEditObjectV1Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -188,7 +188,7 @@ class ObjectUsergroupexternalApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'UsergroupexternalEditObjectV1Response',) as UsergroupexternalEditObjectV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
     
     }
     return null;

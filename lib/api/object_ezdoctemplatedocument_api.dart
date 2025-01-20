@@ -169,7 +169,7 @@ class ObjectEzdoctemplatedocumentApi {
   ///   The unique ID of the Ezdoctemplatedocument
   ///
   /// * [EzdoctemplatedocumentEditObjectV1Request] ezdoctemplatedocumentEditObjectV1Request (required):
-  Future<EzdoctemplatedocumentEditObjectV1Response?> ezdoctemplatedocumentEditObjectV1(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentEditObjectV1Request ezdoctemplatedocumentEditObjectV1Request,) async {
+  Future<CommonResponse?> ezdoctemplatedocumentEditObjectV1(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentEditObjectV1Request ezdoctemplatedocumentEditObjectV1Request,) async {
     final response = await ezdoctemplatedocumentEditObjectV1WithHttpInfo(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentEditObjectV1Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -178,7 +178,7 @@ class ObjectEzdoctemplatedocumentApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzdoctemplatedocumentEditObjectV1Response',) as EzdoctemplatedocumentEditObjectV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
     
     }
     return null;
@@ -484,7 +484,7 @@ class ObjectEzdoctemplatedocumentApi {
   ///   The unique ID of the Ezdoctemplatedocument
   ///
   /// * [EzdoctemplatedocumentPatchObjectV1Request] ezdoctemplatedocumentPatchObjectV1Request (required):
-  Future<EzdoctemplatedocumentPatchObjectV1Response?> ezdoctemplatedocumentPatchObjectV1(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentPatchObjectV1Request ezdoctemplatedocumentPatchObjectV1Request,) async {
+  Future<CommonResponse?> ezdoctemplatedocumentPatchObjectV1(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentPatchObjectV1Request ezdoctemplatedocumentPatchObjectV1Request,) async {
     final response = await ezdoctemplatedocumentPatchObjectV1WithHttpInfo(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentPatchObjectV1Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -493,7 +493,7 @@ class ObjectEzdoctemplatedocumentApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzdoctemplatedocumentPatchObjectV1Response',) as EzdoctemplatedocumentPatchObjectV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
     
     }
     return null;

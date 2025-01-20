@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **creditcardclientDeleteObjectV1**
-> CreditcardclientDeleteObjectV1Response creditcardclientDeleteObjectV1(pkiCreditcardclientID)
+> CommonResponse creditcardclientDeleteObjectV1(pkiCreditcardclientID)
 
 Delete an existing Creditcardclient
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreditcardclientDeleteObjectV1Response**](CreditcardclientDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **creditcardclientEditObjectV1**
-> CreditcardclientEditObjectV1Response creditcardclientEditObjectV1(pkiCreditcardclientID, creditcardclientEditObjectV1Request)
+> CommonResponse creditcardclientEditObjectV1(pkiCreditcardclientID, creditcardclientEditObjectV1Request)
 
 Edit an existing Creditcardclient
 
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreditcardclientEditObjectV1Response**](CreditcardclientEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -317,7 +317,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **creditcardclientPatchObjectV1**
-> CreditcardclientPatchObjectV1Response creditcardclientPatchObjectV1(pkiCreditcardclientID, creditcardclientPatchObjectV1Request)
+> CommonResponse creditcardclientPatchObjectV1(pkiCreditcardclientID, creditcardclientPatchObjectV1Request)
 
 Patch an existing Creditcardclient
 
@@ -352,7 +352,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreditcardclientPatchObjectV1Response**](CreditcardclientPatchObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
