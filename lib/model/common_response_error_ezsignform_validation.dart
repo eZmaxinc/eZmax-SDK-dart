@@ -81,7 +81,7 @@ class CommonResponseErrorEzsignformValidation {
         aSErrorMessagedetail: json[r'a_sErrorMessagedetail'] is Iterable
             ? (json[r'a_sErrorMessagedetail'] as Iterable).cast<String>().toList(growable: false)
             : const [],
-        aObjEzsignformfielderror: Object.listFromJson(json[r'a_objEzsignformfielderror']),
+        aObjEzsignformfielderror: CustomEzsignformfielderrorResponse.listFromJson(json[r'a_objEzsignformfielderror']),
       );
     }
     return null;

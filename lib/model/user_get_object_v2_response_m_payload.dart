@@ -16,8 +16,7 @@ class UserGetObjectV2ResponseMPayload {
     required this.objUser,
   });
 
-  /// A User Object and children to create a complete structure
-  UserResponse objUser;
+  UserResponseCompound objUser;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is UserGetObjectV2ResponseMPayload &&
@@ -56,7 +55,7 @@ class UserGetObjectV2ResponseMPayload {
       }());
 
       return UserGetObjectV2ResponseMPayload(
-        objUser: UserResponse.fromJson(json[r'objUser'])!,
+        objUser: UserResponseCompound.fromJson(json[r'objUser'])!,
       );
     }
     return null;

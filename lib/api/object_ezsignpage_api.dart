@@ -58,7 +58,7 @@ class ObjectEzsignpageApi {
   /// * [int] pkiEzsignpageID (required):
   ///
   /// * [Object] body (required):
-  Future<CommonResponse?> ezsignpageConsultV1(int pkiEzsignpageID, Object body,) async {
+  Future<EzsignpageConsultV1Response?> ezsignpageConsultV1(int pkiEzsignpageID, Object body,) async {
     final response = await ezsignpageConsultV1WithHttpInfo(pkiEzsignpageID, body,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -67,7 +67,7 @@ class ObjectEzsignpageApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignpageConsultV1Response',) as EzsignpageConsultV1Response;
     
     }
     return null;

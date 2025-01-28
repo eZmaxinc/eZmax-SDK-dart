@@ -64,7 +64,7 @@ class ObjectSystemconfigurationApi {
   ///   The unique ID of the Systemconfiguration
   ///
   /// * [SystemconfigurationEditObjectV1Request] systemconfigurationEditObjectV1Request (required):
-  Future<CommonResponse?> systemconfigurationEditObjectV1(int pkiSystemconfigurationID, SystemconfigurationEditObjectV1Request systemconfigurationEditObjectV1Request,) async {
+  Future<SystemconfigurationEditObjectV1Response?> systemconfigurationEditObjectV1(int pkiSystemconfigurationID, SystemconfigurationEditObjectV1Request systemconfigurationEditObjectV1Request,) async {
     final response = await systemconfigurationEditObjectV1WithHttpInfo(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -73,7 +73,7 @@ class ObjectSystemconfigurationApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'SystemconfigurationEditObjectV1Response',) as SystemconfigurationEditObjectV1Response;
     
     }
     return null;

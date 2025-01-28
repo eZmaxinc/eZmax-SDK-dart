@@ -64,7 +64,7 @@ class ObjectEzsignuserApi {
   ///   The unique ID of the Ezsignuser
   ///
   /// * [EzsignuserEditObjectV1Request] ezsignuserEditObjectV1Request (required):
-  Future<CommonResponse?> ezsignuserEditObjectV1(int pkiEzsignuserID, EzsignuserEditObjectV1Request ezsignuserEditObjectV1Request,) async {
+  Future<EzsignuserEditObjectV1Response?> ezsignuserEditObjectV1(int pkiEzsignuserID, EzsignuserEditObjectV1Request ezsignuserEditObjectV1Request,) async {
     final response = await ezsignuserEditObjectV1WithHttpInfo(pkiEzsignuserID, ezsignuserEditObjectV1Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -73,7 +73,7 @@ class ObjectEzsignuserApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignuserEditObjectV1Response',) as EzsignuserEditObjectV1Response;
     
     }
     return null;

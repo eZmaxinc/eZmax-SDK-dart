@@ -330,6 +330,12 @@ class ApiClient {
           return AuthenticationexternalResponse.fromJson(value);
         case 'AuthenticationexternalResponseCompound':
           return AuthenticationexternalResponseCompound.fromJson(value);
+        case 'BankaccountAutocompleteElementResponse':
+          return BankaccountAutocompleteElementResponse.fromJson(value);
+        case 'BankaccountGetAutocompleteV2Response':
+          return BankaccountGetAutocompleteV2Response.fromJson(value);
+        case 'BankaccountGetAutocompleteV2ResponseMPayload':
+          return BankaccountGetAutocompleteV2ResponseMPayload.fromJson(value);
         case 'BillingentityexternalAutocompleteElementResponse':
           return BillingentityexternalAutocompleteElementResponse.fromJson(value);
         case 'BillingentityexternalGenerateFederationTokenV1Request':
@@ -656,6 +662,42 @@ class ApiClient {
           return CreditcarddetailResponse.fromJson(value);
         case 'CreditcarddetailResponseCompound':
           return CreditcarddetailResponseCompound.fromJson(value);
+        case 'CreditcardmerchantAutocompleteElementResponse':
+          return CreditcardmerchantAutocompleteElementResponse.fromJson(value);
+        case 'CreditcardmerchantCreateObjectV1Request':
+          return CreditcardmerchantCreateObjectV1Request.fromJson(value);
+        case 'CreditcardmerchantCreateObjectV1Response':
+          return CreditcardmerchantCreateObjectV1Response.fromJson(value);
+        case 'CreditcardmerchantCreateObjectV1ResponseMPayload':
+          return CreditcardmerchantCreateObjectV1ResponseMPayload.fromJson(value);
+        case 'CreditcardmerchantDeleteObjectV1Response':
+          return CreditcardmerchantDeleteObjectV1Response.fromJson(value);
+        case 'CreditcardmerchantEditObjectV1Request':
+          return CreditcardmerchantEditObjectV1Request.fromJson(value);
+        case 'CreditcardmerchantEditObjectV1Response':
+          return CreditcardmerchantEditObjectV1Response.fromJson(value);
+        case 'CreditcardmerchantGetAutocompleteV2Response':
+          return CreditcardmerchantGetAutocompleteV2Response.fromJson(value);
+        case 'CreditcardmerchantGetAutocompleteV2ResponseMPayload':
+          return CreditcardmerchantGetAutocompleteV2ResponseMPayload.fromJson(value);
+        case 'CreditcardmerchantGetListV1Response':
+          return CreditcardmerchantGetListV1Response.fromJson(value);
+        case 'CreditcardmerchantGetListV1ResponseMPayload':
+          return CreditcardmerchantGetListV1ResponseMPayload.fromJson(value);
+        case 'CreditcardmerchantGetObjectV2Response':
+          return CreditcardmerchantGetObjectV2Response.fromJson(value);
+        case 'CreditcardmerchantGetObjectV2ResponseMPayload':
+          return CreditcardmerchantGetObjectV2ResponseMPayload.fromJson(value);
+        case 'CreditcardmerchantListElement':
+          return CreditcardmerchantListElement.fromJson(value);
+        case 'CreditcardmerchantRequest':
+          return CreditcardmerchantRequest.fromJson(value);
+        case 'CreditcardmerchantRequestCompound':
+          return CreditcardmerchantRequestCompound.fromJson(value);
+        case 'CreditcardmerchantResponse':
+          return CreditcardmerchantResponse.fromJson(value);
+        case 'CreditcardmerchantResponseCompound':
+          return CreditcardmerchantResponseCompound.fromJson(value);
         case 'CreditcardtypeAutocompleteElementResponse':
           return CreditcardtypeAutocompleteElementResponse.fromJson(value);
         case 'CreditcardtypeGetAutocompleteV2Response':

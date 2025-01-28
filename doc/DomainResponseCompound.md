@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **bDomainValidmailfrom** | **bool** | Whether the mail from is valid or not | 
 **bDomainValidcustomer** | **bool** | Whether the customer has access to it or not | 
 **objAudit** | [**CommonAudit**](CommonAudit.md) |  | 
-**aObjDnsrecord** | [**List<CustomDnsrecordResponse>**](Object.md) |  | [default to const []]
+**aObjDnsrecord** | [**List<CustomDnsrecordResponse>**](CustomDnsrecordResponse.md) |  | [default to const []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

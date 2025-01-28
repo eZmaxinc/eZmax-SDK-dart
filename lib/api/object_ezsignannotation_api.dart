@@ -114,7 +114,7 @@ class ObjectEzsignannotationApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignannotationID (required):
-  Future<CommonResponse?> ezsignannotationDeleteObjectV1(int pkiEzsignannotationID,) async {
+  Future<EzsignannotationDeleteObjectV1Response?> ezsignannotationDeleteObjectV1(int pkiEzsignannotationID,) async {
     final response = await ezsignannotationDeleteObjectV1WithHttpInfo(pkiEzsignannotationID,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -123,7 +123,7 @@ class ObjectEzsignannotationApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignannotationDeleteObjectV1Response',) as EzsignannotationDeleteObjectV1Response;
     
     }
     return null;
@@ -175,7 +175,7 @@ class ObjectEzsignannotationApi {
   /// * [int] pkiEzsignannotationID (required):
   ///
   /// * [EzsignannotationEditObjectV1Request] ezsignannotationEditObjectV1Request (required):
-  Future<CommonResponse?> ezsignannotationEditObjectV1(int pkiEzsignannotationID, EzsignannotationEditObjectV1Request ezsignannotationEditObjectV1Request,) async {
+  Future<EzsignannotationEditObjectV1Response?> ezsignannotationEditObjectV1(int pkiEzsignannotationID, EzsignannotationEditObjectV1Request ezsignannotationEditObjectV1Request,) async {
     final response = await ezsignannotationEditObjectV1WithHttpInfo(pkiEzsignannotationID, ezsignannotationEditObjectV1Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -184,7 +184,7 @@ class ObjectEzsignannotationApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignannotationEditObjectV1Response',) as EzsignannotationEditObjectV1Response;
     
     }
     return null;

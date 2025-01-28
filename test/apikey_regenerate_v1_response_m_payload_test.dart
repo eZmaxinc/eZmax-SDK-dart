@@ -16,8 +16,7 @@ void main() {
   // final instance = ApikeyRegenerateV1ResponseMPayload();
 
   group('test ApikeyRegenerateV1ResponseMPayload', () {
-    // An Apikey Object and children to create a complete structure
-    // ApikeyResponse objApikey
+    // ApikeyResponseCompound objApikey
     test('to test the property `objApikey`', () async {
       // TODO
     });

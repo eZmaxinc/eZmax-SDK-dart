@@ -16,8 +16,7 @@ void main() {
   // final instance = PermissionEditObjectV1Request();
 
   group('test PermissionEditObjectV1Request', () {
-    // A Permission Object and children to create a complete structure
-    // PermissionRequest objPermission
+    // PermissionRequestCompound objPermission
     test('to test the property `objPermission`', () async {
       // TODO
     });

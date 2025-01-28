@@ -19,7 +19,7 @@ void main() {
   group('tests for ObjectEzsignpageApi', () {
     // Consult an Ezsignpage
     //
-    //Future<CommonResponse> ezsignpageConsultV1(int pkiEzsignpageID, Object body) async
+    //Future<EzsignpageConsultV1Response> ezsignpageConsultV1(int pkiEzsignpageID, Object body) async
     test('test ezsignpageConsultV1', () async {
       // TODO
     });

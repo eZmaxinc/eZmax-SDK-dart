@@ -26,8 +26,7 @@ void main() {
       // TODO
     });
 
-    // Payload for GET /1/object/ezmaxinvoicing/getProvisional
-    // EzmaxinvoicingResponseCompound mPayload
+    // EzmaxinvoicingGetProvisionalV1ResponseMPayload mPayload
     test('to test the property `mPayload`', () async {
       // TODO
     });

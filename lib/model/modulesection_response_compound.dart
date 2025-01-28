@@ -91,7 +91,7 @@ class ModulesectionResponseCompound {
         fkiModuleID: mapValueOfType<int>(json, r'fkiModuleID')!,
         sModulesectionInternalname: mapValueOfType<String>(json, r'sModulesectionInternalname')!,
         sModulesectionNameX: mapValueOfType<String>(json, r'sModulesectionNameX')!,
-        aObjPermission: PermissionResponse.listFromJson(json[r'a_objPermission']),
+        aObjPermission: PermissionResponseCompound.listFromJson(json[r'a_objPermission']),
       );
     }
     return null;

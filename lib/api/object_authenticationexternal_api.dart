@@ -116,7 +116,7 @@ class ObjectAuthenticationexternalApi {
   ///
   /// * [int] pkiAuthenticationexternalID (required):
   ///   The unique ID of the Authenticationexternal
-  Future<CommonResponse?> authenticationexternalDeleteObjectV1(int pkiAuthenticationexternalID,) async {
+  Future<AuthenticationexternalDeleteObjectV1Response?> authenticationexternalDeleteObjectV1(int pkiAuthenticationexternalID,) async {
     final response = await authenticationexternalDeleteObjectV1WithHttpInfo(pkiAuthenticationexternalID,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -125,7 +125,7 @@ class ObjectAuthenticationexternalApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthenticationexternalDeleteObjectV1Response',) as AuthenticationexternalDeleteObjectV1Response;
     
     }
     return null;
@@ -179,7 +179,7 @@ class ObjectAuthenticationexternalApi {
   ///   The unique ID of the Authenticationexternal
   ///
   /// * [AuthenticationexternalEditObjectV1Request] authenticationexternalEditObjectV1Request (required):
-  Future<CommonResponse?> authenticationexternalEditObjectV1(int pkiAuthenticationexternalID, AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request,) async {
+  Future<AuthenticationexternalEditObjectV1Response?> authenticationexternalEditObjectV1(int pkiAuthenticationexternalID, AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request,) async {
     final response = await authenticationexternalEditObjectV1WithHttpInfo(pkiAuthenticationexternalID, authenticationexternalEditObjectV1Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -188,7 +188,7 @@ class ObjectAuthenticationexternalApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthenticationexternalEditObjectV1Response',) as AuthenticationexternalEditObjectV1Response;
     
     }
     return null;
@@ -476,7 +476,7 @@ class ObjectAuthenticationexternalApi {
   /// * [int] pkiAuthenticationexternalID (required):
   ///
   /// * [Object] body (required):
-  Future<CommonResponse?> authenticationexternalResetAuthorizationV1(int pkiAuthenticationexternalID, Object body,) async {
+  Future<AuthenticationexternalResetAuthorizationV1Response?> authenticationexternalResetAuthorizationV1(int pkiAuthenticationexternalID, Object body,) async {
     final response = await authenticationexternalResetAuthorizationV1WithHttpInfo(pkiAuthenticationexternalID, body,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -485,7 +485,7 @@ class ObjectAuthenticationexternalApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AuthenticationexternalResetAuthorizationV1Response',) as AuthenticationexternalResetAuthorizationV1Response;
     
     }
     return null;

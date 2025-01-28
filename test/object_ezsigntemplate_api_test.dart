@@ -39,7 +39,7 @@ void main() {
     //
     // 
     //
-    //Future<CommonResponse> ezsigntemplateDeleteObjectV1(int pkiEzsigntemplateID) async
+    //Future<EzsigntemplateDeleteObjectV1Response> ezsigntemplateDeleteObjectV1(int pkiEzsigntemplateID) async
     test('test ezsigntemplateDeleteObjectV1', () async {
       // TODO
     });
@@ -48,7 +48,7 @@ void main() {
     //
     // 
     //
-    //Future<CommonResponse> ezsigntemplateEditObjectV3(int pkiEzsigntemplateID, EzsigntemplateEditObjectV3Request ezsigntemplateEditObjectV3Request) async
+    //Future<EzsigntemplateEditObjectV3Response> ezsigntemplateEditObjectV3(int pkiEzsigntemplateID, EzsigntemplateEditObjectV3Request ezsigntemplateEditObjectV3Request) async
     test('test ezsigntemplateEditObjectV3', () async {
       // TODO
     });

@@ -30,7 +30,7 @@ void main() {
     //
     // 
     //
-    //Future<CommonResponse> discussionmessageDeleteObjectV1(int pkiDiscussionmessageID) async
+    //Future<DiscussionmessageDeleteObjectV1Response> discussionmessageDeleteObjectV1(int pkiDiscussionmessageID) async
     test('test discussionmessageDeleteObjectV1', () async {
       // TODO
     });
@@ -39,7 +39,7 @@ void main() {
     //
     // 
     //
-    //Future<CommonResponse> discussionmessagePatchObjectV1(int pkiDiscussionmessageID, DiscussionmessagePatchObjectV1Request discussionmessagePatchObjectV1Request) async
+    //Future<DiscussionmessagePatchObjectV1Response> discussionmessagePatchObjectV1(int pkiDiscussionmessageID, DiscussionmessagePatchObjectV1Request discussionmessagePatchObjectV1Request) async
     test('test discussionmessagePatchObjectV1', () async {
       // TODO
     });

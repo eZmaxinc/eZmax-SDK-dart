@@ -27,8 +27,7 @@ void main() {
       // TODO
     });
 
-    // A User Object and children to create a complete structure
-    // UserResponse objUser
+    // UserResponseCompound objUser
     test('to test the property `objUser`', () async {
       // TODO
     });

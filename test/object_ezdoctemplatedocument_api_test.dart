@@ -39,7 +39,7 @@ void main() {
     //
     // 
     //
-    //Future<CommonResponse> ezdoctemplatedocumentEditObjectV1(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentEditObjectV1Request ezdoctemplatedocumentEditObjectV1Request) async
+    //Future<EzdoctemplatedocumentEditObjectV1Response> ezdoctemplatedocumentEditObjectV1(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentEditObjectV1Request ezdoctemplatedocumentEditObjectV1Request) async
     test('test ezdoctemplatedocumentEditObjectV1', () async {
       // TODO
     });
@@ -75,7 +75,7 @@ void main() {
     //
     // 
     //
-    //Future<CommonResponse> ezdoctemplatedocumentPatchObjectV1(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentPatchObjectV1Request ezdoctemplatedocumentPatchObjectV1Request) async
+    //Future<EzdoctemplatedocumentPatchObjectV1Response> ezdoctemplatedocumentPatchObjectV1(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentPatchObjectV1Request ezdoctemplatedocumentPatchObjectV1Request) async
     test('test ezdoctemplatedocumentPatchObjectV1', () async {
       // TODO
     });

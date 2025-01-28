@@ -116,7 +116,7 @@ class ObjectDomainApi {
   ///
   /// * [int] pkiDomainID (required):
   ///   The unique ID of the Domain
-  Future<CommonResponse?> domainDeleteObjectV1(int pkiDomainID,) async {
+  Future<DomainDeleteObjectV1Response?> domainDeleteObjectV1(int pkiDomainID,) async {
     final response = await domainDeleteObjectV1WithHttpInfo(pkiDomainID,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -125,7 +125,7 @@ class ObjectDomainApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'DomainDeleteObjectV1Response',) as DomainDeleteObjectV1Response;
     
     }
     return null;

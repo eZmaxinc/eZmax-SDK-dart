@@ -118,7 +118,7 @@ class ObjectVariableexpenseApi {
   /// * [int] pkiVariableexpenseID (required):
   ///
   /// * [VariableexpenseEditObjectV1Request] variableexpenseEditObjectV1Request (required):
-  Future<CommonResponse?> variableexpenseEditObjectV1(int pkiVariableexpenseID, VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request,) async {
+  Future<VariableexpenseEditObjectV1Response?> variableexpenseEditObjectV1(int pkiVariableexpenseID, VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request,) async {
     final response = await variableexpenseEditObjectV1WithHttpInfo(pkiVariableexpenseID, variableexpenseEditObjectV1Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -127,7 +127,7 @@ class ObjectVariableexpenseApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommonResponse',) as CommonResponse;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'VariableexpenseEditObjectV1Response',) as VariableexpenseEditObjectV1Response;
     
     }
     return null;

@@ -23,15 +23,15 @@ class FieldESystemconfigurationLanguage2 {
 
   String toJson() => value;
 
-  static const CA = FieldESystemconfigurationLanguage2._(r'en_CA');
-  static const QC = FieldESystemconfigurationLanguage2._(r'en_QC');
-  static const US = FieldESystemconfigurationLanguage2._(r'en_US');
+  static const enCA = FieldESystemconfigurationLanguage2._(r'en_CA');
+  static const enQC = FieldESystemconfigurationLanguage2._(r'en_QC');
+  static const enUS = FieldESystemconfigurationLanguage2._(r'en_US');
 
   /// List of all possible values in this [enum][FieldESystemconfigurationLanguage2].
   static const values = <FieldESystemconfigurationLanguage2>[
-    CA,
-    QC,
-    US,
+    enCA,
+    enQC,
+    enUS,
   ];
 
   static FieldESystemconfigurationLanguage2? fromJson(dynamic value) => FieldESystemconfigurationLanguage2TypeTransformer().decode(value);
@@ -70,9 +70,9 @@ class FieldESystemconfigurationLanguage2TypeTransformer {
   FieldESystemconfigurationLanguage2? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data) {
-        case r'en_CA': return FieldESystemconfigurationLanguage2.CA;
-        case r'en_QC': return FieldESystemconfigurationLanguage2.QC;
-        case r'en_US': return FieldESystemconfigurationLanguage2.US;
+        case r'en_CA': return FieldESystemconfigurationLanguage2.enCA;
+        case r'en_QC': return FieldESystemconfigurationLanguage2.enQC;
+        case r'en_US': return FieldESystemconfigurationLanguage2.enUS;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');

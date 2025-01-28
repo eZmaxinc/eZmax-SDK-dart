@@ -16,8 +16,7 @@ class PermissionGetObjectV2ResponseMPayload {
     required this.objPermission,
   });
 
-  /// A Permission Object and children to create a complete structure
-  PermissionResponse objPermission;
+  PermissionResponseCompound objPermission;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is PermissionGetObjectV2ResponseMPayload &&
@@ -56,7 +55,7 @@ class PermissionGetObjectV2ResponseMPayload {
       }());
 
       return PermissionGetObjectV2ResponseMPayload(
-        objPermission: PermissionResponse.fromJson(json[r'objPermission'])!,
+        objPermission: PermissionResponseCompound.fromJson(json[r'objPermission'])!,
       );
     }
     return null;

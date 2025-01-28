@@ -63,7 +63,7 @@ class EzsigndocumentSubmitEzsignformV1Request {
 
       return EzsigndocumentSubmitEzsignformV1Request(
         bEzsignformIsdraft: mapValueOfType<bool>(json, r'bEzsignformIsdraft')!,
-        aObjEzsignformfieldgroup: Object.listFromJson(json[r'a_objEzsignformfieldgroup']),
+        aObjEzsignformfieldgroup: CustomEzsignformfieldgroupRequest.listFromJson(json[r'a_objEzsignformfieldgroup']),
       );
     }
     return null;

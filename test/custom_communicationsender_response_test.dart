@@ -56,8 +56,7 @@ void main() {
       // TODO
     });
 
-    // An Email Object and children to create a complete structure
-    // EmailResponse objEmail
+    // EmailResponseCompound objEmail
     test('to test the property `objEmail`', () async {
       // TODO
     });

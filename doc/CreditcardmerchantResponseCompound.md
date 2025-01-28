@@ -1,0 +1,25 @@
+# openapi.model.CreditcardmerchantResponseCompound
+
+## Load the model package
+```dart
+import 'package:openapi/api.dart';
+```
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**pkiCreditcardmerchantID** | **int** | The unique ID of the Creditcardmerchant | 
+**fkiBankaccountID** | **int** | The unique ID of the Bankaccount | 
+**sBankaccountBankname** | **String** | The name of the bank | [optional] 
+**fkiLanguageID** | **int** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | [optional] 
+**sLanguageNameX** | **String** | The Name of the Language in the language of the requester | [optional] 
+**bCreditcardmerchantDenyvisa** | **bool** | Whether if visa are denied | 
+**bCreditcardmerchantDenymastercard** | **bool** | Whether if mastercard are denied | 
+**bCreditcardmerchantDenyamex** | **bool** | Whether if amex are denied | 
+**bCreditcardmerchantIsactive** | **bool** | Whether the creditcardmerchant is active or not | 
+**sCreditcardmerchantDescription** | **String** | The description of the Creditcardmerchant | 
+**sCreditcardmerchantStoreid** | **String** | The storeid of the Creditcardmerchant | 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
