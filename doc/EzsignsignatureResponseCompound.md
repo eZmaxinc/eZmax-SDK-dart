@@ -46,6 +46,7 @@ Name | Type | Description | Notes
 **objContactNameDelegation** | [**CustomContactNameResponse**](CustomContactNameResponse.md) |  | [optional] 
 **objSignature** | [**SignatureResponseCompound**](SignatureResponseCompound.md) |  | [optional] 
 **dtEzsignsignatureDateInFolderTimezone** | **String** | The date the Ezsignsignature was signed in folder's timezone | [optional] 
+**sEzsignsignergroupDescriptionX** | **String** | The Description of the Ezsignsignergroup in the language of the requester | [optional] 
 **bEzsignsignatureCustomdate** | **bool** | Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**) | [optional] 
 **aObjEzsignsignaturecustomdate** | [**List<EzsignsignaturecustomdateResponseCompound>**](EzsignsignaturecustomdateResponseCompound.md) | An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all. | [optional] [default to const []]
 **objCreditcardtransaction** | [**CustomCreditcardtransactionResponse**](CustomCreditcardtransactionResponse.md) |  | [optional] 
