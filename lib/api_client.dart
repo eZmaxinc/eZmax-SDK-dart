@@ -2216,6 +2216,8 @@ class ApiClient {
           return EzsigntemplatepublicCreateObjectV1Response.fromJson(value);
         case 'EzsigntemplatepublicCreateObjectV1ResponseMPayload':
           return EzsigntemplatepublicCreateObjectV1ResponseMPayload.fromJson(value);
+        case 'EzsigntemplatepublicDeleteObjectV1Response':
+          return EzsigntemplatepublicDeleteObjectV1Response.fromJson(value);
         case 'EzsigntemplatepublicEditObjectV1Request':
           return EzsigntemplatepublicEditObjectV1Request.fromJson(value);
         case 'EzsigntemplatepublicEditObjectV1Response':

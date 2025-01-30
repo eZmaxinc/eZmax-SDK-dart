@@ -1157,6 +1157,7 @@ part 'model/ezsigntemplatepublic_create_ezsignfolder_v1_response_m_payload.dart'
 part 'model/ezsigntemplatepublic_create_object_v1_request.dart';
 part 'model/ezsigntemplatepublic_create_object_v1_response.dart';
 part 'model/ezsigntemplatepublic_create_object_v1_response_m_payload.dart';
+part 'model/ezsigntemplatepublic_delete_object_v1_response.dart';
 part 'model/ezsigntemplatepublic_edit_object_v1_request.dart';
 part 'model/ezsigntemplatepublic_edit_object_v1_response.dart';
 part 'model/ezsigntemplatepublic_get_ezsigntemplatepublic_details_v1_request.dart';

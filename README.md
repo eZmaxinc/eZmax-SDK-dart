@@ -354,6 +354,7 @@ Class | Method | HTTP request | Description
 *ObjectEzsigntemplatepackagesignermembershipApi* | [**ezsigntemplatepackagesignermembershipGetObjectV2**](doc//ObjectEzsigntemplatepackagesignermembershipApi.md#ezsigntemplatepackagesignermembershipgetobjectv2) | **GET** /2/object/ezsigntemplatepackagesignermembership/{pkiEzsigntemplatepackagesignermembershipID} | Retrieve an existing Ezsigntemplatepackagesignermembership
 *ObjectEzsigntemplatepublicApi* | [**ezsigntemplatepublicCreateEzsignfolderV1**](doc//ObjectEzsigntemplatepublicApi.md#ezsigntemplatepubliccreateezsignfolderv1) | **POST** /1/object/ezsigntemplatepublic/createEzsignfolder | Create an Ezsignfolder
 *ObjectEzsigntemplatepublicApi* | [**ezsigntemplatepublicCreateObjectV1**](doc//ObjectEzsigntemplatepublicApi.md#ezsigntemplatepubliccreateobjectv1) | **POST** /1/object/ezsigntemplatepublic | Create a new Ezsigntemplatepublic
+*ObjectEzsigntemplatepublicApi* | [**ezsigntemplatepublicDeleteObjectV1**](doc//ObjectEzsigntemplatepublicApi.md#ezsigntemplatepublicdeleteobjectv1) | **DELETE** /1/object/ezsigntemplatepublic/{pkiEzsigntemplatepublicID} | Delete an existing Ezsigntemplatepublic
 *ObjectEzsigntemplatepublicApi* | [**ezsigntemplatepublicEditObjectV1**](doc//ObjectEzsigntemplatepublicApi.md#ezsigntemplatepubliceditobjectv1) | **PUT** /1/object/ezsigntemplatepublic/{pkiEzsigntemplatepublicID} | Edit an existing Ezsigntemplatepublic
 *ObjectEzsigntemplatepublicApi* | [**ezsigntemplatepublicGetEzsigntemplatepublicDetailsV1**](doc//ObjectEzsigntemplatepublicApi.md#ezsigntemplatepublicgetezsigntemplatepublicdetailsv1) | **POST** /1/object/ezsigntemplatepublic/getEzsigntemplatepublicDetails | Retrieve the Ezsigntemplatepublic details
 *ObjectEzsigntemplatepublicApi* | [**ezsigntemplatepublicGetFormsDataV1**](doc//ObjectEzsigntemplatepublicApi.md#ezsigntemplatepublicgetformsdatav1) | **GET** /1/object/ezsigntemplatepublic/{pkiEzsigntemplatepublicID}/getFormsData | Retrieve an existing Ezsigntemplatepublic's forms data
@@ -1545,6 +1546,7 @@ Class | Method | HTTP request | Description
  - [EzsigntemplatepublicCreateObjectV1Request](doc//EzsigntemplatepublicCreateObjectV1Request.md)
  - [EzsigntemplatepublicCreateObjectV1Response](doc//EzsigntemplatepublicCreateObjectV1Response.md)
  - [EzsigntemplatepublicCreateObjectV1ResponseMPayload](doc//EzsigntemplatepublicCreateObjectV1ResponseMPayload.md)
+ - [EzsigntemplatepublicDeleteObjectV1Response](doc//EzsigntemplatepublicDeleteObjectV1Response.md)
  - [EzsigntemplatepublicEditObjectV1Request](doc//EzsigntemplatepublicEditObjectV1Request.md)
  - [EzsigntemplatepublicEditObjectV1Response](doc//EzsigntemplatepublicEditObjectV1Response.md)
  - [EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request](doc//EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request.md)

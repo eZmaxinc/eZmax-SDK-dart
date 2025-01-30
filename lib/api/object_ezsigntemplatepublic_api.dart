@@ -128,6 +128,65 @@ class ObjectEzsigntemplatepublicApi {
     return null;
   }
 
+  /// Delete an existing Ezsigntemplatepublic
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigntemplatepublicID (required):
+  ///   The unique ID of the Ezsigntemplatepublic
+  Future<Response> ezsigntemplatepublicDeleteObjectV1WithHttpInfo(int pkiEzsigntemplatepublicID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsigntemplatepublic/{pkiEzsigntemplatepublicID}'
+      .replaceAll('{pkiEzsigntemplatepublicID}', pkiEzsigntemplatepublicID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'DELETE',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Delete an existing Ezsigntemplatepublic
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigntemplatepublicID (required):
+  ///   The unique ID of the Ezsigntemplatepublic
+  Future<EzsigntemplatepublicDeleteObjectV1Response?> ezsigntemplatepublicDeleteObjectV1(int pkiEzsigntemplatepublicID,) async {
+    final response = await ezsigntemplatepublicDeleteObjectV1WithHttpInfo(pkiEzsigntemplatepublicID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigntemplatepublicDeleteObjectV1Response',) as EzsigntemplatepublicDeleteObjectV1Response;
+    
+    }
+    return null;
+  }
+
   /// Edit an existing Ezsigntemplatepublic
   ///
   /// 
