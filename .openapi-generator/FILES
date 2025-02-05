@@ -264,6 +264,9 @@ doc/CreditcardmerchantResponseCompound.md
 doc/CreditcardtypeAutocompleteElementResponse.md
 doc/CreditcardtypeGetAutocompleteV2Response.md
 doc/CreditcardtypeGetAutocompleteV2ResponseMPayload.md
+doc/CurrencyAutocompleteElementResponse.md
+doc/CurrencyGetAutocompleteV2Response.md
+doc/CurrencyGetAutocompleteV2ResponseMPayload.md
 doc/CustomApikey.md
 doc/CustomApikeyfederation.md
 doc/CustomAttachmentResponse.md
@@ -1318,6 +1321,7 @@ doc/ObjectCountryApi.md
 doc/ObjectCreditcardclientApi.md
 doc/ObjectCreditcardmerchantApi.md
 doc/ObjectCreditcardtypeApi.md
+doc/ObjectCurrencyApi.md
 doc/ObjectCustomerApi.md
 doc/ObjectDepartmentApi.md
 doc/ObjectDiscussionApi.md
@@ -1798,6 +1802,7 @@ lib/api/object_country_api.dart
 lib/api/object_creditcardclient_api.dart
 lib/api/object_creditcardmerchant_api.dart
 lib/api/object_creditcardtype_api.dart
+lib/api/object_currency_api.dart
 lib/api/object_customer_api.dart
 lib/api/object_department_api.dart
 lib/api/object_discussion_api.dart
@@ -2155,6 +2160,9 @@ lib/model/creditcardmerchant_response_compound.dart
 lib/model/creditcardtype_autocomplete_element_response.dart
 lib/model/creditcardtype_get_autocomplete_v2_response.dart
 lib/model/creditcardtype_get_autocomplete_v2_response_m_payload.dart
+lib/model/currency_autocomplete_element_response.dart
+lib/model/currency_get_autocomplete_v2_response.dart
+lib/model/currency_get_autocomplete_v2_response_m_payload.dart
 lib/model/custom_apikey.dart
 lib/model/custom_apikeyfederation.dart
 lib/model/custom_attachment_response.dart

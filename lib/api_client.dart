@@ -704,6 +704,12 @@ class ApiClient {
           return CreditcardtypeGetAutocompleteV2Response.fromJson(value);
         case 'CreditcardtypeGetAutocompleteV2ResponseMPayload':
           return CreditcardtypeGetAutocompleteV2ResponseMPayload.fromJson(value);
+        case 'CurrencyAutocompleteElementResponse':
+          return CurrencyAutocompleteElementResponse.fromJson(value);
+        case 'CurrencyGetAutocompleteV2Response':
+          return CurrencyGetAutocompleteV2Response.fromJson(value);
+        case 'CurrencyGetAutocompleteV2ResponseMPayload':
+          return CurrencyGetAutocompleteV2ResponseMPayload.fromJson(value);
         case 'CustomApikey':
           return CustomApikey.fromJson(value);
         case 'CustomApikeyfederation':
