@@ -63,7 +63,6 @@ part 'api/object_emailtype_api.dart';
 part 'api/object_ezdoctemplatedocument_api.dart';
 part 'api/object_ezdoctemplatefieldtypecategory_api.dart';
 part 'api/object_ezdoctemplatetype_api.dart';
-part 'api/object_ezmaxcase_api.dart';
 part 'api/object_ezmaxinvoicing_api.dart';
 part 'api/object_ezmaxproduct_api.dart';
 part 'api/object_ezsignannotation_api.dart';
@@ -575,9 +574,6 @@ part 'model/ezdoctemplatefieldtypecategory_get_autocomplete_v2_response_m_payloa
 part 'model/ezdoctemplatetype_autocomplete_element_response.dart';
 part 'model/ezdoctemplatetype_get_autocomplete_v2_response.dart';
 part 'model/ezdoctemplatetype_get_autocomplete_v2_response_m_payload.dart';
-part 'model/ezmaxcase_patch_object_v1_request.dart';
-part 'model/ezmaxcase_patch_object_v1_response.dart';
-part 'model/ezmaxcase_request_patch.dart';
 part 'model/ezmaxinvoicing_autocomplete_element_response.dart';
 part 'model/ezmaxinvoicing_get_autocomplete_v2_response.dart';
 part 'model/ezmaxinvoicing_get_autocomplete_v2_response_m_payload.dart';

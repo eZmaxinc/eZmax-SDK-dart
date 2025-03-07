@@ -433,9 +433,6 @@ doc/EzdoctemplatefieldtypecategoryGetAutocompleteV2ResponseMPayload.md
 doc/EzdoctemplatetypeAutocompleteElementResponse.md
 doc/EzdoctemplatetypeGetAutocompleteV2Response.md
 doc/EzdoctemplatetypeGetAutocompleteV2ResponseMPayload.md
-doc/EzmaxcasePatchObjectV1Request.md
-doc/EzmaxcasePatchObjectV1Response.md
-doc/EzmaxcaseRequestPatch.md
 doc/EzmaxinvoicingAutocompleteElementResponse.md
 doc/EzmaxinvoicingGetAutocompleteV2Response.md
 doc/EzmaxinvoicingGetAutocompleteV2ResponseMPayload.md
@@ -1358,7 +1355,6 @@ doc/ObjectEmailtypeApi.md
 doc/ObjectEzdoctemplatedocumentApi.md
 doc/ObjectEzdoctemplatefieldtypecategoryApi.md
 doc/ObjectEzdoctemplatetypeApi.md
-doc/ObjectEzmaxcaseApi.md
 doc/ObjectEzmaxinvoicingApi.md
 doc/ObjectEzmaxproductApi.md
 doc/ObjectEzsignannotationApi.md
@@ -1860,7 +1856,6 @@ lib/api/object_emailtype_api.dart
 lib/api/object_ezdoctemplatedocument_api.dart
 lib/api/object_ezdoctemplatefieldtypecategory_api.dart
 lib/api/object_ezdoctemplatetype_api.dart
-lib/api/object_ezmaxcase_api.dart
 lib/api/object_ezmaxinvoicing_api.dart
 lib/api/object_ezmaxproduct_api.dart
 lib/api/object_ezsignannotation_api.dart
@@ -2379,9 +2374,6 @@ lib/model/ezdoctemplatefieldtypecategory_get_autocomplete_v2_response_m_payload.
 lib/model/ezdoctemplatetype_autocomplete_element_response.dart
 lib/model/ezdoctemplatetype_get_autocomplete_v2_response.dart
 lib/model/ezdoctemplatetype_get_autocomplete_v2_response_m_payload.dart
-lib/model/ezmaxcase_patch_object_v1_request.dart
-lib/model/ezmaxcase_patch_object_v1_response.dart
-lib/model/ezmaxcase_request_patch.dart
 lib/model/ezmaxinvoicing_autocomplete_element_response.dart
 lib/model/ezmaxinvoicing_get_autocomplete_v2_response.dart
 lib/model/ezmaxinvoicing_get_autocomplete_v2_response_m_payload.dart

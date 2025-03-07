@@ -1042,12 +1042,6 @@ class ApiClient {
           return EzdoctemplatetypeGetAutocompleteV2Response.fromJson(value);
         case 'EzdoctemplatetypeGetAutocompleteV2ResponseMPayload':
           return EzdoctemplatetypeGetAutocompleteV2ResponseMPayload.fromJson(value);
-        case 'EzmaxcasePatchObjectV1Request':
-          return EzmaxcasePatchObjectV1Request.fromJson(value);
-        case 'EzmaxcasePatchObjectV1Response':
-          return EzmaxcasePatchObjectV1Response.fromJson(value);
-        case 'EzmaxcaseRequestPatch':
-          return EzmaxcaseRequestPatch.fromJson(value);
         case 'EzmaxinvoicingAutocompleteElementResponse':
           return EzmaxinvoicingAutocompleteElementResponse.fromJson(value);
         case 'EzmaxinvoicingGetAutocompleteV2Response':
