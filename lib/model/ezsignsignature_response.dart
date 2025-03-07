@@ -18,6 +18,7 @@ class EzsignsignatureResponse {
     required this.fkiEzsignfoldersignerassociationID,
     this.fkiEzsignsigningreasonID,
     this.fkiFontID,
+    this.sCurrencyDescriptionX,
     this.sEzsignsigningreasonDescriptionX,
     required this.iEzsignpagePagenumber,
     required this.iEzsignsignatureX,
@@ -89,6 +90,15 @@ class EzsignsignatureResponse {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   int? fkiFontID;
+
+  /// The description of the Currency in the language of the requester
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sCurrencyDescriptionX;
 
   /// The description of the Ezsignsigningreason in the language of the requester
   ///
@@ -354,6 +364,7 @@ class EzsignsignatureResponse {
     other.fkiEzsignfoldersignerassociationID == fkiEzsignfoldersignerassociationID &&
     other.fkiEzsignsigningreasonID == fkiEzsignsigningreasonID &&
     other.fkiFontID == fkiFontID &&
+    other.sCurrencyDescriptionX == sCurrencyDescriptionX &&
     other.sEzsignsigningreasonDescriptionX == sEzsignsigningreasonDescriptionX &&
     other.iEzsignpagePagenumber == iEzsignpagePagenumber &&
     other.iEzsignsignatureX == iEzsignsignatureX &&
@@ -395,6 +406,7 @@ class EzsignsignatureResponse {
     (fkiEzsignfoldersignerassociationID.hashCode) +
     (fkiEzsignsigningreasonID == null ? 0 : fkiEzsignsigningreasonID!.hashCode) +
     (fkiFontID == null ? 0 : fkiFontID!.hashCode) +
+    (sCurrencyDescriptionX == null ? 0 : sCurrencyDescriptionX!.hashCode) +
     (sEzsignsigningreasonDescriptionX == null ? 0 : sEzsignsigningreasonDescriptionX!.hashCode) +
     (iEzsignpagePagenumber.hashCode) +
     (iEzsignsignatureX.hashCode) +
@@ -429,7 +441,7 @@ class EzsignsignatureResponse {
     (objSignature == null ? 0 : objSignature!.hashCode);
 
   @override
-  String toString() => 'EzsignsignatureResponse[pkiEzsignsignatureID=$pkiEzsignsignatureID, fkiEzsigndocumentID=$fkiEzsigndocumentID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, fkiEzsignsigningreasonID=$fkiEzsignsigningreasonID, fkiFontID=$fkiFontID, sEzsignsigningreasonDescriptionX=$sEzsignsigningreasonDescriptionX, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureHeight=$iEzsignsignatureHeight, iEzsignsignatureWidth=$iEzsignsignatureWidth, iEzsignsignatureStep=$iEzsignsignatureStep, iEzsignsignatureStepadjusted=$iEzsignsignatureStepadjusted, eEzsignsignatureType=$eEzsignsignatureType, tEzsignsignatureTooltip=$tEzsignsignatureTooltip, eEzsignsignatureTooltipposition=$eEzsignsignatureTooltipposition, eEzsignsignatureFont=$eEzsignsignatureFont, iEzsignsignatureValidationstep=$iEzsignsignatureValidationstep, sEzsignsignatureAttachmentdescription=$sEzsignsignatureAttachmentdescription, eEzsignsignatureAttachmentnamesource=$eEzsignsignatureAttachmentnamesource, eEzsignsignatureConsultationtrigger=$eEzsignsignatureConsultationtrigger, bEzsignsignatureHandwritten=$bEzsignsignatureHandwritten, bEzsignsignatureReason=$bEzsignsignatureReason, bEzsignsignatureRequired=$bEzsignsignatureRequired, fkiEzsignfoldersignerassociationIDValidation=$fkiEzsignfoldersignerassociationIDValidation, dtEzsignsignatureDate=$dtEzsignsignatureDate, iEzsignsignatureattachmentCount=$iEzsignsignatureattachmentCount, sEzsignsignatureDescription=$sEzsignsignatureDescription, iEzsignsignatureMaxlength=$iEzsignsignatureMaxlength, eEzsignsignatureTextvalidation=$eEzsignsignatureTextvalidation, sEzsignsignatureTextvalidationcustommessage=$sEzsignsignatureTextvalidationcustommessage, eEzsignsignatureDependencyrequirement=$eEzsignsignatureDependencyrequirement, sEzsignsignatureDefaultvalue=$sEzsignsignatureDefaultvalue, sEzsignsignatureRegexp=$sEzsignsignatureRegexp, objContactName=$objContactName, objContactNameDelegation=$objContactNameDelegation, objSignature=$objSignature]';
+  String toString() => 'EzsignsignatureResponse[pkiEzsignsignatureID=$pkiEzsignsignatureID, fkiEzsigndocumentID=$fkiEzsigndocumentID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, fkiEzsignsigningreasonID=$fkiEzsignsigningreasonID, fkiFontID=$fkiFontID, sCurrencyDescriptionX=$sCurrencyDescriptionX, sEzsignsigningreasonDescriptionX=$sEzsignsigningreasonDescriptionX, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureHeight=$iEzsignsignatureHeight, iEzsignsignatureWidth=$iEzsignsignatureWidth, iEzsignsignatureStep=$iEzsignsignatureStep, iEzsignsignatureStepadjusted=$iEzsignsignatureStepadjusted, eEzsignsignatureType=$eEzsignsignatureType, tEzsignsignatureTooltip=$tEzsignsignatureTooltip, eEzsignsignatureTooltipposition=$eEzsignsignatureTooltipposition, eEzsignsignatureFont=$eEzsignsignatureFont, iEzsignsignatureValidationstep=$iEzsignsignatureValidationstep, sEzsignsignatureAttachmentdescription=$sEzsignsignatureAttachmentdescription, eEzsignsignatureAttachmentnamesource=$eEzsignsignatureAttachmentnamesource, eEzsignsignatureConsultationtrigger=$eEzsignsignatureConsultationtrigger, bEzsignsignatureHandwritten=$bEzsignsignatureHandwritten, bEzsignsignatureReason=$bEzsignsignatureReason, bEzsignsignatureRequired=$bEzsignsignatureRequired, fkiEzsignfoldersignerassociationIDValidation=$fkiEzsignfoldersignerassociationIDValidation, dtEzsignsignatureDate=$dtEzsignsignatureDate, iEzsignsignatureattachmentCount=$iEzsignsignatureattachmentCount, sEzsignsignatureDescription=$sEzsignsignatureDescription, iEzsignsignatureMaxlength=$iEzsignsignatureMaxlength, eEzsignsignatureTextvalidation=$eEzsignsignatureTextvalidation, sEzsignsignatureTextvalidationcustommessage=$sEzsignsignatureTextvalidationcustommessage, eEzsignsignatureDependencyrequirement=$eEzsignsignatureDependencyrequirement, sEzsignsignatureDefaultvalue=$sEzsignsignatureDefaultvalue, sEzsignsignatureRegexp=$sEzsignsignatureRegexp, objContactName=$objContactName, objContactNameDelegation=$objContactNameDelegation, objSignature=$objSignature]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -445,6 +457,11 @@ class EzsignsignatureResponse {
       json[r'fkiFontID'] = this.fkiFontID;
     } else {
       json[r'fkiFontID'] = null;
+    }
+    if (this.sCurrencyDescriptionX != null) {
+      json[r'sCurrencyDescriptionX'] = this.sCurrencyDescriptionX;
+    } else {
+      json[r'sCurrencyDescriptionX'] = null;
     }
     if (this.sEzsignsigningreasonDescriptionX != null) {
       json[r'sEzsignsigningreasonDescriptionX'] = this.sEzsignsigningreasonDescriptionX;
@@ -609,6 +626,7 @@ class EzsignsignatureResponse {
         fkiEzsignfoldersignerassociationID: mapValueOfType<int>(json, r'fkiEzsignfoldersignerassociationID')!,
         fkiEzsignsigningreasonID: mapValueOfType<int>(json, r'fkiEzsignsigningreasonID'),
         fkiFontID: mapValueOfType<int>(json, r'fkiFontID'),
+        sCurrencyDescriptionX: mapValueOfType<String>(json, r'sCurrencyDescriptionX'),
         sEzsignsigningreasonDescriptionX: mapValueOfType<String>(json, r'sEzsignsigningreasonDescriptionX'),
         iEzsignpagePagenumber: mapValueOfType<int>(json, r'iEzsignpagePagenumber')!,
         iEzsignsignatureX: mapValueOfType<int>(json, r'iEzsignsignatureX')!,

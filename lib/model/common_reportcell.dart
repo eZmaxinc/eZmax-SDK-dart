@@ -15,6 +15,8 @@ class CommonReportcell {
   CommonReportcell({
     required this.iReportcellColumnspan,
     required this.iReportcellRowspan,
+    required this.sReportcellContent,
+    required this.iReportcellColumn,
   });
 
   /// The number of Reportcolumns the Reportcell spans
@@ -23,24 +25,36 @@ class CommonReportcell {
   /// The number of Reportrows the Reportcell spans
   int iReportcellRowspan;
 
+  /// The content of this Reportcell
+  String sReportcellContent;
+
+  /// Position of the column where it is placed
+  int iReportcellColumn;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonReportcell &&
     other.iReportcellColumnspan == iReportcellColumnspan &&
-    other.iReportcellRowspan == iReportcellRowspan;
+    other.iReportcellRowspan == iReportcellRowspan &&
+    other.sReportcellContent == sReportcellContent &&
+    other.iReportcellColumn == iReportcellColumn;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (iReportcellColumnspan.hashCode) +
-    (iReportcellRowspan.hashCode);
+    (iReportcellRowspan.hashCode) +
+    (sReportcellContent.hashCode) +
+    (iReportcellColumn.hashCode);
 
   @override
-  String toString() => 'CommonReportcell[iReportcellColumnspan=$iReportcellColumnspan, iReportcellRowspan=$iReportcellRowspan]';
+  String toString() => 'CommonReportcell[iReportcellColumnspan=$iReportcellColumnspan, iReportcellRowspan=$iReportcellRowspan, sReportcellContent=$sReportcellContent, iReportcellColumn=$iReportcellColumn]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'iReportcellColumnspan'] = this.iReportcellColumnspan;
       json[r'iReportcellRowspan'] = this.iReportcellRowspan;
+      json[r'sReportcellContent'] = this.sReportcellContent;
+      json[r'iReportcellColumn'] = this.iReportcellColumn;
     return json;
   }
 
@@ -65,6 +79,8 @@ class CommonReportcell {
       return CommonReportcell(
         iReportcellColumnspan: mapValueOfType<int>(json, r'iReportcellColumnspan')!,
         iReportcellRowspan: mapValueOfType<int>(json, r'iReportcellRowspan')!,
+        sReportcellContent: mapValueOfType<String>(json, r'sReportcellContent')!,
+        iReportcellColumn: mapValueOfType<int>(json, r'iReportcellColumn')!,
       );
     }
     return null;
@@ -114,6 +130,8 @@ class CommonReportcell {
   static const requiredKeys = <String>{
     'iReportcellColumnspan',
     'iReportcellRowspan',
+    'sReportcellContent',
+    'iReportcellColumn',
   };
 }
 

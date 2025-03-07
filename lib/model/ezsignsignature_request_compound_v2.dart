@@ -15,6 +15,7 @@ class EzsignsignatureRequestCompoundV2 {
   EzsignsignatureRequestCompoundV2({
     this.pkiEzsignsignatureID,
     required this.fkiEzsignfoldersignerassociationID,
+    this.fkiPaymentgatewayID,
     required this.iEzsignpagePagenumber,
     required this.iEzsignsignatureX,
     required this.iEzsignsignatureY,
@@ -43,6 +44,7 @@ class EzsignsignatureRequestCompoundV2 {
     this.bEzsignsignatureCustomdate,
     this.aObjEzsignsignaturecustomdate = const [],
     this.aObjEzsignelementdependency = const [],
+    this.aObjEzsignsignaturepaymentdetail = const [],
   });
 
   /// The unique ID of the Ezsignsignature
@@ -60,6 +62,18 @@ class EzsignsignatureRequestCompoundV2 {
   ///
   /// Minimum value: 0
   int fkiEzsignfoldersignerassociationID;
+
+  /// The unique ID of the Paymentgateway
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 255
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiPaymentgatewayID;
 
   /// The page number in the Ezsigndocument
   ///
@@ -274,10 +288,13 @@ class EzsignsignatureRequestCompoundV2 {
 
   List<EzsignelementdependencyRequestCompound> aObjEzsignelementdependency;
 
+  List<EzsignsignaturepaymentdetailRequestCompound> aObjEzsignsignaturepaymentdetail;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignsignatureRequestCompoundV2 &&
     other.pkiEzsignsignatureID == pkiEzsignsignatureID &&
     other.fkiEzsignfoldersignerassociationID == fkiEzsignfoldersignerassociationID &&
+    other.fkiPaymentgatewayID == fkiPaymentgatewayID &&
     other.iEzsignpagePagenumber == iEzsignpagePagenumber &&
     other.iEzsignsignatureX == iEzsignsignatureX &&
     other.iEzsignsignatureY == iEzsignsignatureY &&
@@ -305,13 +322,15 @@ class EzsignsignatureRequestCompoundV2 {
     other.eEzsignsignatureDependencyrequirement == eEzsignsignatureDependencyrequirement &&
     other.bEzsignsignatureCustomdate == bEzsignsignatureCustomdate &&
     _deepEquality.equals(other.aObjEzsignsignaturecustomdate, aObjEzsignsignaturecustomdate) &&
-    _deepEquality.equals(other.aObjEzsignelementdependency, aObjEzsignelementdependency);
+    _deepEquality.equals(other.aObjEzsignelementdependency, aObjEzsignelementdependency) &&
+    _deepEquality.equals(other.aObjEzsignsignaturepaymentdetail, aObjEzsignsignaturepaymentdetail);
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiEzsignsignatureID == null ? 0 : pkiEzsignsignatureID!.hashCode) +
     (fkiEzsignfoldersignerassociationID.hashCode) +
+    (fkiPaymentgatewayID == null ? 0 : fkiPaymentgatewayID!.hashCode) +
     (iEzsignpagePagenumber.hashCode) +
     (iEzsignsignatureX.hashCode) +
     (iEzsignsignatureY.hashCode) +
@@ -339,10 +358,11 @@ class EzsignsignatureRequestCompoundV2 {
     (eEzsignsignatureDependencyrequirement == null ? 0 : eEzsignsignatureDependencyrequirement!.hashCode) +
     (bEzsignsignatureCustomdate == null ? 0 : bEzsignsignatureCustomdate!.hashCode) +
     (aObjEzsignsignaturecustomdate.hashCode) +
-    (aObjEzsignelementdependency.hashCode);
+    (aObjEzsignelementdependency.hashCode) +
+    (aObjEzsignsignaturepaymentdetail.hashCode);
 
   @override
-  String toString() => 'EzsignsignatureRequestCompoundV2[pkiEzsignsignatureID=$pkiEzsignsignatureID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureWidth=$iEzsignsignatureWidth, iEzsignsignatureHeight=$iEzsignsignatureHeight, iEzsignsignatureStep=$iEzsignsignatureStep, eEzsignsignatureType=$eEzsignsignatureType, fkiEzsigndocumentID=$fkiEzsigndocumentID, tEzsignsignatureTooltip=$tEzsignsignatureTooltip, eEzsignsignatureTooltipposition=$eEzsignsignatureTooltipposition, eEzsignsignatureFont=$eEzsignsignatureFont, fkiEzsignfoldersignerassociationIDValidation=$fkiEzsignfoldersignerassociationIDValidation, bEzsignsignatureHandwritten=$bEzsignsignatureHandwritten, bEzsignsignatureReason=$bEzsignsignatureReason, bEzsignsignatureRequired=$bEzsignsignatureRequired, eEzsignsignatureAttachmentnamesource=$eEzsignsignatureAttachmentnamesource, sEzsignsignatureAttachmentdescription=$sEzsignsignatureAttachmentdescription, eEzsignsignatureConsultationtrigger=$eEzsignsignatureConsultationtrigger, iEzsignsignatureValidationstep=$iEzsignsignatureValidationstep, iEzsignsignatureMaxlength=$iEzsignsignatureMaxlength, sEzsignsignatureDefaultvalue=$sEzsignsignatureDefaultvalue, eEzsignsignatureTextvalidation=$eEzsignsignatureTextvalidation, sEzsignsignatureTextvalidationcustommessage=$sEzsignsignatureTextvalidationcustommessage, sEzsignsignatureRegexp=$sEzsignsignatureRegexp, eEzsignsignatureDependencyrequirement=$eEzsignsignatureDependencyrequirement, bEzsignsignatureCustomdate=$bEzsignsignatureCustomdate, aObjEzsignsignaturecustomdate=$aObjEzsignsignaturecustomdate, aObjEzsignelementdependency=$aObjEzsignelementdependency]';
+  String toString() => 'EzsignsignatureRequestCompoundV2[pkiEzsignsignatureID=$pkiEzsignsignatureID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, fkiPaymentgatewayID=$fkiPaymentgatewayID, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureWidth=$iEzsignsignatureWidth, iEzsignsignatureHeight=$iEzsignsignatureHeight, iEzsignsignatureStep=$iEzsignsignatureStep, eEzsignsignatureType=$eEzsignsignatureType, fkiEzsigndocumentID=$fkiEzsigndocumentID, tEzsignsignatureTooltip=$tEzsignsignatureTooltip, eEzsignsignatureTooltipposition=$eEzsignsignatureTooltipposition, eEzsignsignatureFont=$eEzsignsignatureFont, fkiEzsignfoldersignerassociationIDValidation=$fkiEzsignfoldersignerassociationIDValidation, bEzsignsignatureHandwritten=$bEzsignsignatureHandwritten, bEzsignsignatureReason=$bEzsignsignatureReason, bEzsignsignatureRequired=$bEzsignsignatureRequired, eEzsignsignatureAttachmentnamesource=$eEzsignsignatureAttachmentnamesource, sEzsignsignatureAttachmentdescription=$sEzsignsignatureAttachmentdescription, eEzsignsignatureConsultationtrigger=$eEzsignsignatureConsultationtrigger, iEzsignsignatureValidationstep=$iEzsignsignatureValidationstep, iEzsignsignatureMaxlength=$iEzsignsignatureMaxlength, sEzsignsignatureDefaultvalue=$sEzsignsignatureDefaultvalue, eEzsignsignatureTextvalidation=$eEzsignsignatureTextvalidation, sEzsignsignatureTextvalidationcustommessage=$sEzsignsignatureTextvalidationcustommessage, sEzsignsignatureRegexp=$sEzsignsignatureRegexp, eEzsignsignatureDependencyrequirement=$eEzsignsignatureDependencyrequirement, bEzsignsignatureCustomdate=$bEzsignsignatureCustomdate, aObjEzsignsignaturecustomdate=$aObjEzsignsignaturecustomdate, aObjEzsignelementdependency=$aObjEzsignelementdependency, aObjEzsignsignaturepaymentdetail=$aObjEzsignsignaturepaymentdetail]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -352,6 +372,11 @@ class EzsignsignatureRequestCompoundV2 {
       json[r'pkiEzsignsignatureID'] = null;
     }
       json[r'fkiEzsignfoldersignerassociationID'] = this.fkiEzsignfoldersignerassociationID;
+    if (this.fkiPaymentgatewayID != null) {
+      json[r'fkiPaymentgatewayID'] = this.fkiPaymentgatewayID;
+    } else {
+      json[r'fkiPaymentgatewayID'] = null;
+    }
       json[r'iEzsignpagePagenumber'] = this.iEzsignpagePagenumber;
       json[r'iEzsignsignatureX'] = this.iEzsignsignatureX;
       json[r'iEzsignsignatureY'] = this.iEzsignsignatureY;
@@ -460,6 +485,7 @@ class EzsignsignatureRequestCompoundV2 {
     }
       json[r'a_objEzsignsignaturecustomdate'] = this.aObjEzsignsignaturecustomdate;
       json[r'a_objEzsignelementdependency'] = this.aObjEzsignelementdependency;
+      json[r'a_objEzsignsignaturepaymentdetail'] = this.aObjEzsignsignaturepaymentdetail;
     return json;
   }
 
@@ -484,6 +510,7 @@ class EzsignsignatureRequestCompoundV2 {
       return EzsignsignatureRequestCompoundV2(
         pkiEzsignsignatureID: mapValueOfType<int>(json, r'pkiEzsignsignatureID'),
         fkiEzsignfoldersignerassociationID: mapValueOfType<int>(json, r'fkiEzsignfoldersignerassociationID')!,
+        fkiPaymentgatewayID: mapValueOfType<int>(json, r'fkiPaymentgatewayID'),
         iEzsignpagePagenumber: mapValueOfType<int>(json, r'iEzsignpagePagenumber')!,
         iEzsignsignatureX: mapValueOfType<int>(json, r'iEzsignsignatureX')!,
         iEzsignsignatureY: mapValueOfType<int>(json, r'iEzsignsignatureY')!,
@@ -512,6 +539,7 @@ class EzsignsignatureRequestCompoundV2 {
         bEzsignsignatureCustomdate: mapValueOfType<bool>(json, r'bEzsignsignatureCustomdate'),
         aObjEzsignsignaturecustomdate: EzsignsignaturecustomdateRequestCompoundV2.listFromJson(json[r'a_objEzsignsignaturecustomdate']),
         aObjEzsignelementdependency: EzsignelementdependencyRequestCompound.listFromJson(json[r'a_objEzsignelementdependency']),
+        aObjEzsignsignaturepaymentdetail: EzsignsignaturepaymentdetailRequestCompound.listFromJson(json[r'a_objEzsignsignaturepaymentdetail']),
       );
     }
     return null;

@@ -10,7 +10,7 @@
 
 part of openapi.api;
 
-/// The type of signature.  1. **Acknowledgement** is for an acknowledgment of receipt. 2. **City** is to request the city where the document is signed. 3. **Handwritten** is for a handwritten kind of signature where users needs to \"draw\" their signature on screen. **DEPRECATED** 4. **Initials** is a simple \"click to add initials\" block. 5. **Name** is a simple \"Click to sign\" block. This is the most common block of signature. **DEPRECATED** 6. **NameReason** is to ask for a signing reason. **DEPRECATED** 7. **Attachments** is to ask for files as attachment that may be validate in another step.  8. **FieldText** is to ask for a short text. 9. **Fieldtextarea** is to ask for a text 10. **Signature** is the type replacing **Name** and **Handwritten** and will support a font or svg
+/// The type of signature.  1. **Acknowledgement** is for an acknowledgment of receipt. 2. **Attachments** is to ask for files as attachment that may be validate in another step.  3. **City** is to request the city where the document is signed. 4. **Consultation** is to trigger the webhook Signaturesigned when the user consult the document 5. **Creditcard** is to ask for a payment using a creditcard 6. **FieldText** is to ask for a short text. 7. **Fieldtextarea** is to ask for a text     8. **Handwritten** is for a handwritten kind of signature where users needs to \"draw\" their signature on screen. **DEPRECATED** 9. **Initials** is a simple \"click to add initials\" block. 10. **Name** is a simple \"Click to sign\" block. This is the most common block of signature. **DEPRECATED** 11. **NameReason** is to ask for a signing reason. **DEPRECATED** 12. **Signature** is the type replacing **Name** and **Handwritten** and will support a font or svg
 class FieldEEzsignsignatureType {
   /// Instantiate a new enum with the provided [value].
   const FieldEEzsignsignatureType._(this.value);
@@ -24,31 +24,33 @@ class FieldEEzsignsignatureType {
   String toJson() => value;
 
   static const acknowledgement = FieldEEzsignsignatureType._(r'Acknowledgement');
+  static const attachments = FieldEEzsignsignatureType._(r'Attachments');
+  static const attachmentsConfirmation = FieldEEzsignsignatureType._(r'AttachmentsConfirmation');
   static const city = FieldEEzsignsignatureType._(r'City');
+  static const consultation = FieldEEzsignsignatureType._(r'Consultation');
+  static const creditcard = FieldEEzsignsignatureType._(r'Creditcard');
+  static const fieldText = FieldEEzsignsignatureType._(r'FieldText');
+  static const fieldTextarea = FieldEEzsignsignatureType._(r'FieldTextarea');
   static const handwritten = FieldEEzsignsignatureType._(r'Handwritten');
   static const initials = FieldEEzsignsignatureType._(r'Initials');
   static const name = FieldEEzsignsignatureType._(r'Name');
   static const nameReason = FieldEEzsignsignatureType._(r'NameReason');
-  static const attachments = FieldEEzsignsignatureType._(r'Attachments');
-  static const attachmentsConfirmation = FieldEEzsignsignatureType._(r'AttachmentsConfirmation');
-  static const fieldText = FieldEEzsignsignatureType._(r'FieldText');
-  static const fieldTextarea = FieldEEzsignsignatureType._(r'FieldTextarea');
-  static const consultation = FieldEEzsignsignatureType._(r'Consultation');
   static const signature = FieldEEzsignsignatureType._(r'Signature');
 
   /// List of all possible values in this [enum][FieldEEzsignsignatureType].
   static const values = <FieldEEzsignsignatureType>[
     acknowledgement,
+    attachments,
+    attachmentsConfirmation,
     city,
+    consultation,
+    creditcard,
+    fieldText,
+    fieldTextarea,
     handwritten,
     initials,
     name,
     nameReason,
-    attachments,
-    attachmentsConfirmation,
-    fieldText,
-    fieldTextarea,
-    consultation,
     signature,
   ];
 
@@ -89,16 +91,17 @@ class FieldEEzsignsignatureTypeTypeTransformer {
     if (data != null) {
       switch (data) {
         case r'Acknowledgement': return FieldEEzsignsignatureType.acknowledgement;
+        case r'Attachments': return FieldEEzsignsignatureType.attachments;
+        case r'AttachmentsConfirmation': return FieldEEzsignsignatureType.attachmentsConfirmation;
         case r'City': return FieldEEzsignsignatureType.city;
+        case r'Consultation': return FieldEEzsignsignatureType.consultation;
+        case r'Creditcard': return FieldEEzsignsignatureType.creditcard;
+        case r'FieldText': return FieldEEzsignsignatureType.fieldText;
+        case r'FieldTextarea': return FieldEEzsignsignatureType.fieldTextarea;
         case r'Handwritten': return FieldEEzsignsignatureType.handwritten;
         case r'Initials': return FieldEEzsignsignatureType.initials;
         case r'Name': return FieldEEzsignsignatureType.name;
         case r'NameReason': return FieldEEzsignsignatureType.nameReason;
-        case r'Attachments': return FieldEEzsignsignatureType.attachments;
-        case r'AttachmentsConfirmation': return FieldEEzsignsignatureType.attachmentsConfirmation;
-        case r'FieldText': return FieldEEzsignsignatureType.fieldText;
-        case r'FieldTextarea': return FieldEEzsignsignatureType.fieldTextarea;
-        case r'Consultation': return FieldEEzsignsignatureType.consultation;
         case r'Signature': return FieldEEzsignsignatureType.signature;
         default:
           if (!allowNull) {

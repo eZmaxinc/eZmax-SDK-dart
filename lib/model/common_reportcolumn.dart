@@ -15,6 +15,7 @@ class CommonReportcolumn {
   CommonReportcolumn({
     required this.objReportcellstyleDefault,
     required this.iReportcolumnWidth,
+    required this.eReportcolumnType,
   });
 
   CommonReportcellstyle objReportcellstyleDefault;
@@ -22,24 +23,29 @@ class CommonReportcolumn {
   /// The Reportcolumn width in pixels
   int iReportcolumnWidth;
 
+  EnumReportdataType eReportcolumnType;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonReportcolumn &&
     other.objReportcellstyleDefault == objReportcellstyleDefault &&
-    other.iReportcolumnWidth == iReportcolumnWidth;
+    other.iReportcolumnWidth == iReportcolumnWidth &&
+    other.eReportcolumnType == eReportcolumnType;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (objReportcellstyleDefault.hashCode) +
-    (iReportcolumnWidth.hashCode);
+    (iReportcolumnWidth.hashCode) +
+    (eReportcolumnType.hashCode);
 
   @override
-  String toString() => 'CommonReportcolumn[objReportcellstyleDefault=$objReportcellstyleDefault, iReportcolumnWidth=$iReportcolumnWidth]';
+  String toString() => 'CommonReportcolumn[objReportcellstyleDefault=$objReportcellstyleDefault, iReportcolumnWidth=$iReportcolumnWidth, eReportcolumnType=$eReportcolumnType]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'objReportcellstyleDefault'] = this.objReportcellstyleDefault;
       json[r'iReportcolumnWidth'] = this.iReportcolumnWidth;
+      json[r'eReportcolumnType'] = this.eReportcolumnType;
     return json;
   }
 
@@ -64,6 +70,7 @@ class CommonReportcolumn {
       return CommonReportcolumn(
         objReportcellstyleDefault: CommonReportcellstyle.fromJson(json[r'objReportcellstyleDefault'])!,
         iReportcolumnWidth: mapValueOfType<int>(json, r'iReportcolumnWidth')!,
+        eReportcolumnType: EnumReportdataType.fromJson(json[r'eReportcolumnType'])!,
       );
     }
     return null;
@@ -113,6 +120,7 @@ class CommonReportcolumn {
   static const requiredKeys = <String>{
     'objReportcellstyleDefault',
     'iReportcolumnWidth',
+    'eReportcolumnType',
   };
 }
 

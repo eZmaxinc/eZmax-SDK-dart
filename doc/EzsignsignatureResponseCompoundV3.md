@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **fkiEzsignfoldersignerassociationID** | **int** | The unique ID of the Ezsignfoldersignerassociation | 
 **fkiEzsignsigningreasonID** | **int** | The unique ID of the Ezsignsigningreason | [optional] 
 **fkiFontID** | **int** | The unique ID of the Font | [optional] 
+**sCurrencyDescriptionX** | **String** | The description of the Currency in the language of the requester | [optional] 
 **sEzsignsigningreasonDescriptionX** | **String** | The description of the Ezsignsigningreason in the language of the requester | [optional] 
 **iEzsignpagePagenumber** | **int** | The page number in the Ezsigndocument | 
 **iEzsignsignatureX** | **int** | The X coordinate (Horizontal) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 2 inches from the left border of the page, you would use \"200\" for the X coordinate. | 
@@ -50,6 +51,7 @@ Name | Type | Description | Notes
 **aObjEzsignsignaturecustomdate** | [**List<EzsignsignaturecustomdateResponseCompoundV2>**](EzsignsignaturecustomdateResponseCompoundV2.md) | An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all. | [optional] [default to const []]
 **objCreditcardtransaction** | [**CustomCreditcardtransactionResponse**](CustomCreditcardtransactionResponse.md) |  | [optional] 
 **aObjEzsignelementdependency** | [**List<EzsignelementdependencyResponseCompound>**](EzsignelementdependencyResponseCompound.md) |  | [optional] [default to const []]
+**aObjEzsignsignaturepaymentdetail** | [**List<EzsignsignaturepaymentdetailResponseCompound>**](EzsignsignaturepaymentdetailResponseCompound.md) |  | [optional] [default to const []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

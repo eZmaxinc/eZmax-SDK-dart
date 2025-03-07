@@ -20,6 +20,7 @@ class EzsignsignatureSignV1Request {
     this.sAttachmentsRefusalReason,
     this.sSvg,
     this.aObjFile = const [],
+    this.objCreditcard,
     required this.bIsAutomatic,
   });
 
@@ -78,6 +79,14 @@ class EzsignsignatureSignV1Request {
 
   List<CommonFile> aObjFile;
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  CustomCreditcardRequest? objCreditcard;
+
   /// Indicates if the Ezsignsignature was part of an automatic process or not.  This can only be true if eEzsignsignatureType is **Acknowledgement**, **City**, **Signature**, **Initials** or **Stamp**. 
   bool bIsAutomatic;
 
@@ -90,6 +99,7 @@ class EzsignsignatureSignV1Request {
     other.sAttachmentsRefusalReason == sAttachmentsRefusalReason &&
     other.sSvg == sSvg &&
     _deepEquality.equals(other.aObjFile, aObjFile) &&
+    other.objCreditcard == objCreditcard &&
     other.bIsAutomatic == bIsAutomatic;
 
   @override
@@ -102,10 +112,11 @@ class EzsignsignatureSignV1Request {
     (sAttachmentsRefusalReason == null ? 0 : sAttachmentsRefusalReason!.hashCode) +
     (sSvg == null ? 0 : sSvg!.hashCode) +
     (aObjFile.hashCode) +
+    (objCreditcard == null ? 0 : objCreditcard!.hashCode) +
     (bIsAutomatic.hashCode);
 
   @override
-  String toString() => 'EzsignsignatureSignV1Request[fkiEzsignsigningreasonID=$fkiEzsignsigningreasonID, fkiFontID=$fkiFontID, sValue=$sValue, eAttachmentsConfirmationDecision=$eAttachmentsConfirmationDecision, sAttachmentsRefusalReason=$sAttachmentsRefusalReason, sSvg=$sSvg, aObjFile=$aObjFile, bIsAutomatic=$bIsAutomatic]';
+  String toString() => 'EzsignsignatureSignV1Request[fkiEzsignsigningreasonID=$fkiEzsignsigningreasonID, fkiFontID=$fkiFontID, sValue=$sValue, eAttachmentsConfirmationDecision=$eAttachmentsConfirmationDecision, sAttachmentsRefusalReason=$sAttachmentsRefusalReason, sSvg=$sSvg, aObjFile=$aObjFile, objCreditcard=$objCreditcard, bIsAutomatic=$bIsAutomatic]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -140,6 +151,11 @@ class EzsignsignatureSignV1Request {
       json[r'sSvg'] = null;
     }
       json[r'a_objFile'] = this.aObjFile;
+    if (this.objCreditcard != null) {
+      json[r'objCreditcard'] = this.objCreditcard;
+    } else {
+      json[r'objCreditcard'] = null;
+    }
       json[r'bIsAutomatic'] = this.bIsAutomatic;
     return json;
   }
@@ -170,6 +186,7 @@ class EzsignsignatureSignV1Request {
         sAttachmentsRefusalReason: mapValueOfType<String>(json, r'sAttachmentsRefusalReason'),
         sSvg: mapValueOfType<String>(json, r'sSvg'),
         aObjFile: CommonFile.listFromJson(json[r'a_objFile']),
+        objCreditcard: CustomCreditcardRequest.fromJson(json[r'objCreditcard']),
         bIsAutomatic: mapValueOfType<bool>(json, r'bIsAutomatic')!,
       );
     }

@@ -41,6 +41,7 @@ Method | HTTP request | Description
 [**ezsigndocumentGetTemporaryProofV1**](ObjectEzsigndocumentApi.md#ezsigndocumentgettemporaryproofv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof | Retrieve the temporary proof
 [**ezsigndocumentGetWordsPositionsV1**](ObjectEzsigndocumentApi.md#ezsigndocumentgetwordspositionsv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions | Retrieve positions X,Y of given words from a Ezsigndocument
 [**ezsigndocumentPatchObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentpatchobjectv1) | **PATCH** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Patch an existing Ezsigndocument
+[**ezsigndocumentPrefillEzsignformV1**](ObjectEzsigndocumentApi.md#ezsigndocumentprefillezsignformv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/prefillEzsignform | Prefill an Ezsignform
 [**ezsigndocumentSubmitEzsignformV1**](ObjectEzsigndocumentApi.md#ezsigndocumentsubmitezsignformv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/submitEzsignform | Submit the Ezsignform
 [**ezsigndocumentUnsendV1**](ObjectEzsigndocumentApi.md#ezsigndocumentunsendv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/unsend | Unsend the Ezsigndocument
 
@@ -1565,6 +1566,55 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsigndocumentPatchObjectV1Response**](EzsigndocumentPatchObjectV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsigndocumentPrefillEzsignformV1**
+> EzsigndocumentPrefillEzsignformV1Response ezsigndocumentPrefillEzsignformV1(pkiEzsigndocumentID, ezsigndocumentPrefillEzsignformV1Request)
+
+Prefill an Ezsignform
+
+Using this endpoint, you can prefill an Ezsignform.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectEzsigndocumentApi();
+final pkiEzsigndocumentID = 56; // int | 
+final ezsigndocumentPrefillEzsignformV1Request = EzsigndocumentPrefillEzsignformV1Request(); // EzsigndocumentPrefillEzsignformV1Request | 
+
+try {
+    final result = api_instance.ezsigndocumentPrefillEzsignformV1(pkiEzsigndocumentID, ezsigndocumentPrefillEzsignformV1Request);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectEzsigndocumentApi->ezsigndocumentPrefillEzsignformV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigndocumentID** | **int**|  | 
+ **ezsigndocumentPrefillEzsignformV1Request** | [**EzsigndocumentPrefillEzsignformV1Request**](EzsigndocumentPrefillEzsignformV1Request.md)|  | 
+
+### Return type
+
+[**EzsigndocumentPrefillEzsignformV1Response**](EzsigndocumentPrefillEzsignformV1Response.md)
 
 ### Authorization
 

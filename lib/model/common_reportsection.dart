@@ -18,6 +18,7 @@ class CommonReportsection {
     required this.eReportsectionHorizontalalignment,
     required this.iReportsectionColumncount,
     required this.iReportsectionWidth,
+    this.sReportsectionTitle,
   });
 
   List<CommonReportsubsection> aObjReportsubsection;
@@ -32,13 +33,23 @@ class CommonReportsection {
   /// The combined width of all the Reportcolumns in the Reportsection
   int iReportsectionWidth;
 
+  /// The title of this Reportsection
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sReportsectionTitle;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonReportsection &&
     _deepEquality.equals(other.aObjReportsubsection, aObjReportsubsection) &&
     _deepEquality.equals(other.aObjReportcolumn, aObjReportcolumn) &&
     other.eReportsectionHorizontalalignment == eReportsectionHorizontalalignment &&
     other.iReportsectionColumncount == iReportsectionColumncount &&
-    other.iReportsectionWidth == iReportsectionWidth;
+    other.iReportsectionWidth == iReportsectionWidth &&
+    other.sReportsectionTitle == sReportsectionTitle;
 
   @override
   int get hashCode =>
@@ -47,10 +58,11 @@ class CommonReportsection {
     (aObjReportcolumn.hashCode) +
     (eReportsectionHorizontalalignment.hashCode) +
     (iReportsectionColumncount.hashCode) +
-    (iReportsectionWidth.hashCode);
+    (iReportsectionWidth.hashCode) +
+    (sReportsectionTitle == null ? 0 : sReportsectionTitle!.hashCode);
 
   @override
-  String toString() => 'CommonReportsection[aObjReportsubsection=$aObjReportsubsection, aObjReportcolumn=$aObjReportcolumn, eReportsectionHorizontalalignment=$eReportsectionHorizontalalignment, iReportsectionColumncount=$iReportsectionColumncount, iReportsectionWidth=$iReportsectionWidth]';
+  String toString() => 'CommonReportsection[aObjReportsubsection=$aObjReportsubsection, aObjReportcolumn=$aObjReportcolumn, eReportsectionHorizontalalignment=$eReportsectionHorizontalalignment, iReportsectionColumncount=$iReportsectionColumncount, iReportsectionWidth=$iReportsectionWidth, sReportsectionTitle=$sReportsectionTitle]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -59,6 +71,11 @@ class CommonReportsection {
       json[r'eReportsectionHorizontalalignment'] = this.eReportsectionHorizontalalignment;
       json[r'iReportsectionColumncount'] = this.iReportsectionColumncount;
       json[r'iReportsectionWidth'] = this.iReportsectionWidth;
+    if (this.sReportsectionTitle != null) {
+      json[r'sReportsectionTitle'] = this.sReportsectionTitle;
+    } else {
+      json[r'sReportsectionTitle'] = null;
+    }
     return json;
   }
 
@@ -86,6 +103,7 @@ class CommonReportsection {
         eReportsectionHorizontalalignment: EnumHorizontalalignment.fromJson(json[r'eReportsectionHorizontalalignment'])!,
         iReportsectionColumncount: mapValueOfType<int>(json, r'iReportsectionColumncount')!,
         iReportsectionWidth: mapValueOfType<int>(json, r'iReportsectionWidth')!,
+        sReportsectionTitle: mapValueOfType<String>(json, r'sReportsectionTitle'),
       );
     }
     return null;

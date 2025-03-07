@@ -15,6 +15,7 @@ class EzsignsignatureRequest {
   EzsignsignatureRequest({
     this.pkiEzsignsignatureID,
     required this.fkiEzsignfoldersignerassociationID,
+    this.fkiPaymentgatewayID,
     required this.iEzsignpagePagenumber,
     required this.iEzsignsignatureX,
     required this.iEzsignsignatureY,
@@ -57,6 +58,18 @@ class EzsignsignatureRequest {
   ///
   /// Minimum value: 0
   int fkiEzsignfoldersignerassociationID;
+
+  /// The unique ID of the Paymentgateway
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 255
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiPaymentgatewayID;
 
   /// The page number in the Ezsigndocument
   ///
@@ -261,6 +274,7 @@ class EzsignsignatureRequest {
   bool operator ==(Object other) => identical(this, other) || other is EzsignsignatureRequest &&
     other.pkiEzsignsignatureID == pkiEzsignsignatureID &&
     other.fkiEzsignfoldersignerassociationID == fkiEzsignfoldersignerassociationID &&
+    other.fkiPaymentgatewayID == fkiPaymentgatewayID &&
     other.iEzsignpagePagenumber == iEzsignpagePagenumber &&
     other.iEzsignsignatureX == iEzsignsignatureX &&
     other.iEzsignsignatureY == iEzsignsignatureY &&
@@ -292,6 +306,7 @@ class EzsignsignatureRequest {
     // ignore: unnecessary_parenthesis
     (pkiEzsignsignatureID == null ? 0 : pkiEzsignsignatureID!.hashCode) +
     (fkiEzsignfoldersignerassociationID.hashCode) +
+    (fkiPaymentgatewayID == null ? 0 : fkiPaymentgatewayID!.hashCode) +
     (iEzsignpagePagenumber.hashCode) +
     (iEzsignsignatureX.hashCode) +
     (iEzsignsignatureY.hashCode) +
@@ -319,7 +334,7 @@ class EzsignsignatureRequest {
     (eEzsignsignatureDependencyrequirement == null ? 0 : eEzsignsignatureDependencyrequirement!.hashCode);
 
   @override
-  String toString() => 'EzsignsignatureRequest[pkiEzsignsignatureID=$pkiEzsignsignatureID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureWidth=$iEzsignsignatureWidth, iEzsignsignatureHeight=$iEzsignsignatureHeight, iEzsignsignatureStep=$iEzsignsignatureStep, eEzsignsignatureType=$eEzsignsignatureType, fkiEzsigndocumentID=$fkiEzsigndocumentID, tEzsignsignatureTooltip=$tEzsignsignatureTooltip, eEzsignsignatureTooltipposition=$eEzsignsignatureTooltipposition, eEzsignsignatureFont=$eEzsignsignatureFont, fkiEzsignfoldersignerassociationIDValidation=$fkiEzsignfoldersignerassociationIDValidation, bEzsignsignatureHandwritten=$bEzsignsignatureHandwritten, bEzsignsignatureReason=$bEzsignsignatureReason, bEzsignsignatureRequired=$bEzsignsignatureRequired, eEzsignsignatureAttachmentnamesource=$eEzsignsignatureAttachmentnamesource, sEzsignsignatureAttachmentdescription=$sEzsignsignatureAttachmentdescription, eEzsignsignatureConsultationtrigger=$eEzsignsignatureConsultationtrigger, iEzsignsignatureValidationstep=$iEzsignsignatureValidationstep, iEzsignsignatureMaxlength=$iEzsignsignatureMaxlength, sEzsignsignatureDefaultvalue=$sEzsignsignatureDefaultvalue, eEzsignsignatureTextvalidation=$eEzsignsignatureTextvalidation, sEzsignsignatureTextvalidationcustommessage=$sEzsignsignatureTextvalidationcustommessage, sEzsignsignatureRegexp=$sEzsignsignatureRegexp, eEzsignsignatureDependencyrequirement=$eEzsignsignatureDependencyrequirement]';
+  String toString() => 'EzsignsignatureRequest[pkiEzsignsignatureID=$pkiEzsignsignatureID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, fkiPaymentgatewayID=$fkiPaymentgatewayID, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureWidth=$iEzsignsignatureWidth, iEzsignsignatureHeight=$iEzsignsignatureHeight, iEzsignsignatureStep=$iEzsignsignatureStep, eEzsignsignatureType=$eEzsignsignatureType, fkiEzsigndocumentID=$fkiEzsigndocumentID, tEzsignsignatureTooltip=$tEzsignsignatureTooltip, eEzsignsignatureTooltipposition=$eEzsignsignatureTooltipposition, eEzsignsignatureFont=$eEzsignsignatureFont, fkiEzsignfoldersignerassociationIDValidation=$fkiEzsignfoldersignerassociationIDValidation, bEzsignsignatureHandwritten=$bEzsignsignatureHandwritten, bEzsignsignatureReason=$bEzsignsignatureReason, bEzsignsignatureRequired=$bEzsignsignatureRequired, eEzsignsignatureAttachmentnamesource=$eEzsignsignatureAttachmentnamesource, sEzsignsignatureAttachmentdescription=$sEzsignsignatureAttachmentdescription, eEzsignsignatureConsultationtrigger=$eEzsignsignatureConsultationtrigger, iEzsignsignatureValidationstep=$iEzsignsignatureValidationstep, iEzsignsignatureMaxlength=$iEzsignsignatureMaxlength, sEzsignsignatureDefaultvalue=$sEzsignsignatureDefaultvalue, eEzsignsignatureTextvalidation=$eEzsignsignatureTextvalidation, sEzsignsignatureTextvalidationcustommessage=$sEzsignsignatureTextvalidationcustommessage, sEzsignsignatureRegexp=$sEzsignsignatureRegexp, eEzsignsignatureDependencyrequirement=$eEzsignsignatureDependencyrequirement]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -329,6 +344,11 @@ class EzsignsignatureRequest {
       json[r'pkiEzsignsignatureID'] = null;
     }
       json[r'fkiEzsignfoldersignerassociationID'] = this.fkiEzsignfoldersignerassociationID;
+    if (this.fkiPaymentgatewayID != null) {
+      json[r'fkiPaymentgatewayID'] = this.fkiPaymentgatewayID;
+    } else {
+      json[r'fkiPaymentgatewayID'] = null;
+    }
       json[r'iEzsignpagePagenumber'] = this.iEzsignpagePagenumber;
       json[r'iEzsignsignatureX'] = this.iEzsignsignatureX;
       json[r'iEzsignsignatureY'] = this.iEzsignsignatureY;
@@ -454,6 +474,7 @@ class EzsignsignatureRequest {
       return EzsignsignatureRequest(
         pkiEzsignsignatureID: mapValueOfType<int>(json, r'pkiEzsignsignatureID'),
         fkiEzsignfoldersignerassociationID: mapValueOfType<int>(json, r'fkiEzsignfoldersignerassociationID')!,
+        fkiPaymentgatewayID: mapValueOfType<int>(json, r'fkiPaymentgatewayID'),
         iEzsignpagePagenumber: mapValueOfType<int>(json, r'iEzsignpagePagenumber')!,
         iEzsignsignatureX: mapValueOfType<int>(json, r'iEzsignsignatureX')!,
         iEzsignsignatureY: mapValueOfType<int>(json, r'iEzsignsignatureY')!,

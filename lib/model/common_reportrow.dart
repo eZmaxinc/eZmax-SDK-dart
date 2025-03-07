@@ -14,10 +14,14 @@ class CommonReportrow {
   /// Returns a new [CommonReportrow] instance.
   CommonReportrow({
     this.aObjReportcell = const [],
+    this.objVariableobject = const {},
     required this.iReportrowHeight,
   });
 
   List<CommonReportcell> aObjReportcell;
+
+  /// A Variable object without predefined property names
+  Map<String, Object> objVariableobject;
 
   /// The reportrow height in pixels
   int iReportrowHeight;
@@ -25,20 +29,23 @@ class CommonReportrow {
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonReportrow &&
     _deepEquality.equals(other.aObjReportcell, aObjReportcell) &&
+    _deepEquality.equals(other.objVariableobject, objVariableobject) &&
     other.iReportrowHeight == iReportrowHeight;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (aObjReportcell.hashCode) +
+    (objVariableobject.hashCode) +
     (iReportrowHeight.hashCode);
 
   @override
-  String toString() => 'CommonReportrow[aObjReportcell=$aObjReportcell, iReportrowHeight=$iReportrowHeight]';
+  String toString() => 'CommonReportrow[aObjReportcell=$aObjReportcell, objVariableobject=$objVariableobject, iReportrowHeight=$iReportrowHeight]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'a_objReportcell'] = this.aObjReportcell;
+      json[r'objVariableobject'] = this.objVariableobject;
       json[r'iReportrowHeight'] = this.iReportrowHeight;
     return json;
   }
@@ -63,6 +70,7 @@ class CommonReportrow {
 
       return CommonReportrow(
         aObjReportcell: CommonReportcell.listFromJson(json[r'a_objReportcell']),
+        objVariableobject: mapCastOfType<String, Object>(json, r'objVariableobject')!,
         iReportrowHeight: mapValueOfType<int>(json, r'iReportrowHeight')!,
       );
     }
@@ -112,6 +120,7 @@ class CommonReportrow {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'a_objReportcell',
+    'objVariableobject',
     'iReportrowHeight',
   };
 }

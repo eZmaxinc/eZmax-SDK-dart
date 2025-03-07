@@ -17,6 +17,7 @@ class EzsigndocumentRequestCompound {
     required this.fkiEzsignfolderID,
     this.fkiEzsigntemplateID,
     this.fkiEzsignfoldersignerassociationID,
+    this.fkiEzsignimportdocumentID,
     required this.fkiLanguageID,
     required this.eEzsigndocumentSource,
     this.eEzsigndocumentFormat,
@@ -67,6 +68,18 @@ class EzsigndocumentRequestCompound {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   int? fkiEzsignfoldersignerassociationID;
+
+  /// The unique ID of the Ezsignimportdocument
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 16777215
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiEzsignimportdocumentID;
 
   /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
   ///
@@ -134,6 +147,7 @@ class EzsigndocumentRequestCompound {
     other.fkiEzsignfolderID == fkiEzsignfolderID &&
     other.fkiEzsigntemplateID == fkiEzsigntemplateID &&
     other.fkiEzsignfoldersignerassociationID == fkiEzsignfoldersignerassociationID &&
+    other.fkiEzsignimportdocumentID == fkiEzsignimportdocumentID &&
     other.fkiLanguageID == fkiLanguageID &&
     other.eEzsigndocumentSource == eEzsigndocumentSource &&
     other.eEzsigndocumentFormat == eEzsigndocumentFormat &&
@@ -153,6 +167,7 @@ class EzsigndocumentRequestCompound {
     (fkiEzsignfolderID.hashCode) +
     (fkiEzsigntemplateID == null ? 0 : fkiEzsigntemplateID!.hashCode) +
     (fkiEzsignfoldersignerassociationID == null ? 0 : fkiEzsignfoldersignerassociationID!.hashCode) +
+    (fkiEzsignimportdocumentID == null ? 0 : fkiEzsignimportdocumentID!.hashCode) +
     (fkiLanguageID.hashCode) +
     (eEzsigndocumentSource.hashCode) +
     (eEzsigndocumentFormat == null ? 0 : eEzsigndocumentFormat!.hashCode) +
@@ -166,7 +181,7 @@ class EzsigndocumentRequestCompound {
     (sEzsigndocumentExternalid == null ? 0 : sEzsigndocumentExternalid!.hashCode);
 
   @override
-  String toString() => 'EzsigndocumentRequestCompound[pkiEzsigndocumentID=$pkiEzsigndocumentID, fkiEzsignfolderID=$fkiEzsignfolderID, fkiEzsigntemplateID=$fkiEzsigntemplateID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, fkiLanguageID=$fkiLanguageID, eEzsigndocumentSource=$eEzsigndocumentSource, eEzsigndocumentFormat=$eEzsigndocumentFormat, sEzsigndocumentBase64=$sEzsigndocumentBase64, sEzsigndocumentUrl=$sEzsigndocumentUrl, bEzsigndocumentForcerepair=$bEzsigndocumentForcerepair, sEzsigndocumentPassword=$sEzsigndocumentPassword, eEzsigndocumentForm=$eEzsigndocumentForm, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, sEzsigndocumentName=$sEzsigndocumentName, sEzsigndocumentExternalid=$sEzsigndocumentExternalid]';
+  String toString() => 'EzsigndocumentRequestCompound[pkiEzsigndocumentID=$pkiEzsigndocumentID, fkiEzsignfolderID=$fkiEzsignfolderID, fkiEzsigntemplateID=$fkiEzsigntemplateID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, fkiEzsignimportdocumentID=$fkiEzsignimportdocumentID, fkiLanguageID=$fkiLanguageID, eEzsigndocumentSource=$eEzsigndocumentSource, eEzsigndocumentFormat=$eEzsigndocumentFormat, sEzsigndocumentBase64=$sEzsigndocumentBase64, sEzsigndocumentUrl=$sEzsigndocumentUrl, bEzsigndocumentForcerepair=$bEzsigndocumentForcerepair, sEzsigndocumentPassword=$sEzsigndocumentPassword, eEzsigndocumentForm=$eEzsigndocumentForm, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, sEzsigndocumentName=$sEzsigndocumentName, sEzsigndocumentExternalid=$sEzsigndocumentExternalid]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -185,6 +200,11 @@ class EzsigndocumentRequestCompound {
       json[r'fkiEzsignfoldersignerassociationID'] = this.fkiEzsignfoldersignerassociationID;
     } else {
       json[r'fkiEzsignfoldersignerassociationID'] = null;
+    }
+    if (this.fkiEzsignimportdocumentID != null) {
+      json[r'fkiEzsignimportdocumentID'] = this.fkiEzsignimportdocumentID;
+    } else {
+      json[r'fkiEzsignimportdocumentID'] = null;
     }
       json[r'fkiLanguageID'] = this.fkiLanguageID;
       json[r'eEzsigndocumentSource'] = this.eEzsigndocumentSource;
@@ -247,6 +267,7 @@ class EzsigndocumentRequestCompound {
         fkiEzsignfolderID: mapValueOfType<int>(json, r'fkiEzsignfolderID')!,
         fkiEzsigntemplateID: mapValueOfType<int>(json, r'fkiEzsigntemplateID'),
         fkiEzsignfoldersignerassociationID: mapValueOfType<int>(json, r'fkiEzsignfoldersignerassociationID'),
+        fkiEzsignimportdocumentID: mapValueOfType<int>(json, r'fkiEzsignimportdocumentID'),
         fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID')!,
         eEzsigndocumentSource: EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum.fromJson(json[r'eEzsigndocumentSource'])!,
         eEzsigndocumentFormat: EzsigndocumentRequestCompoundEEzsigndocumentFormatEnum.fromJson(json[r'eEzsigndocumentFormat']),
@@ -327,12 +348,14 @@ class EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum {
   String toJson() => value;
 
   static const base64 = EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum._(r'Base64');
+  static const ezsignimportdocument = EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum._(r'Ezsignimportdocument');
   static const ezsigntemplate = EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum._(r'Ezsigntemplate');
   static const url = EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum._(r'Url');
 
   /// List of all possible values in this [enum][EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum].
   static const values = <EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum>[
     base64,
+    ezsignimportdocument,
     ezsigntemplate,
     url,
   ];
@@ -374,6 +397,7 @@ class EzsigndocumentRequestCompoundEEzsigndocumentSourceEnumTypeTransformer {
     if (data != null) {
       switch (data) {
         case r'Base64': return EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum.base64;
+        case r'Ezsignimportdocument': return EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum.ezsignimportdocument;
         case r'Ezsigntemplate': return EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum.ezsigntemplate;
         case r'Url': return EzsigndocumentRequestCompoundEEzsigndocumentSourceEnum.url;
         default:

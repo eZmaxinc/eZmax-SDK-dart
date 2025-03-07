@@ -16,6 +16,7 @@ class CommonReportsubsection {
     required this.objReportsubsectionpartHeader,
     required this.objReportsubsectionpartBody,
     required this.objReportsubsectionpartFooter,
+    this.sReportsubsectionTitle,
   });
 
   CommonReportsubsectionpart objReportsubsectionpartHeader;
@@ -24,27 +25,43 @@ class CommonReportsubsection {
 
   CommonReportsubsectionpart objReportsubsectionpartFooter;
 
+  /// The title of this Reportsubsection
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sReportsubsectionTitle;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonReportsubsection &&
     other.objReportsubsectionpartHeader == objReportsubsectionpartHeader &&
     other.objReportsubsectionpartBody == objReportsubsectionpartBody &&
-    other.objReportsubsectionpartFooter == objReportsubsectionpartFooter;
+    other.objReportsubsectionpartFooter == objReportsubsectionpartFooter &&
+    other.sReportsubsectionTitle == sReportsubsectionTitle;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (objReportsubsectionpartHeader.hashCode) +
     (objReportsubsectionpartBody.hashCode) +
-    (objReportsubsectionpartFooter.hashCode);
+    (objReportsubsectionpartFooter.hashCode) +
+    (sReportsubsectionTitle == null ? 0 : sReportsubsectionTitle!.hashCode);
 
   @override
-  String toString() => 'CommonReportsubsection[objReportsubsectionpartHeader=$objReportsubsectionpartHeader, objReportsubsectionpartBody=$objReportsubsectionpartBody, objReportsubsectionpartFooter=$objReportsubsectionpartFooter]';
+  String toString() => 'CommonReportsubsection[objReportsubsectionpartHeader=$objReportsubsectionpartHeader, objReportsubsectionpartBody=$objReportsubsectionpartBody, objReportsubsectionpartFooter=$objReportsubsectionpartFooter, sReportsubsectionTitle=$sReportsubsectionTitle]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'objReportsubsectionpartHeader'] = this.objReportsubsectionpartHeader;
       json[r'objReportsubsectionpartBody'] = this.objReportsubsectionpartBody;
       json[r'objReportsubsectionpartFooter'] = this.objReportsubsectionpartFooter;
+    if (this.sReportsubsectionTitle != null) {
+      json[r'sReportsubsectionTitle'] = this.sReportsubsectionTitle;
+    } else {
+      json[r'sReportsubsectionTitle'] = null;
+    }
     return json;
   }
 
@@ -70,6 +87,7 @@ class CommonReportsubsection {
         objReportsubsectionpartHeader: CommonReportsubsectionpart.fromJson(json[r'objReportsubsectionpartHeader'])!,
         objReportsubsectionpartBody: CommonReportsubsectionpart.fromJson(json[r'objReportsubsectionpartBody'])!,
         objReportsubsectionpartFooter: CommonReportsubsectionpart.fromJson(json[r'objReportsubsectionpartFooter'])!,
+        sReportsubsectionTitle: mapValueOfType<String>(json, r'sReportsubsectionTitle'),
       );
     }
     return null;

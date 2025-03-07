@@ -64,6 +64,9 @@ String parameterToString(dynamic value) {
   if (value is ComputedEEzsignfolderAccess) {
     return ComputedEEzsignfolderAccessTypeTransformer().encode(value).toString();
   }
+  if (value is ComputedEEzsignimportfolderStatus) {
+    return ComputedEEzsignimportfolderStatusTypeTransformer().encode(value).toString();
+  }
   if (value is CustomEWebhookEzsignevent) {
     return CustomEWebhookEzsigneventTypeTransformer().encode(value).toString();
   }
@@ -75,6 +78,9 @@ String parameterToString(dynamic value) {
   }
   if (value is EnumHorizontalalignment) {
     return EnumHorizontalalignmentTypeTransformer().encode(value).toString();
+  }
+  if (value is EnumReportdataType) {
+    return EnumReportdataTypeTypeTransformer().encode(value).toString();
   }
   if (value is EnumTextvalidation) {
     return EnumTextvalidationTypeTransformer().encode(value).toString();
@@ -274,6 +280,9 @@ String parameterToString(dynamic value) {
   if (value is FieldEEzsignsignatureType) {
     return FieldEEzsignsignatureTypeTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEEzsignsignaturepaymentdetailTaxable) {
+    return FieldEEzsignsignaturepaymentdetailTaxableTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEEzsigntemplateRecognition) {
     return FieldEEzsigntemplateRecognitionTypeTransformer().encode(value).toString();
   }
@@ -351,6 +360,9 @@ String parameterToString(dynamic value) {
   }
   if (value is FieldENotificationpreferenceStatus) {
     return FieldENotificationpreferenceStatusTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEPaymentgatewayProcessor) {
+    return FieldEPaymentgatewayProcessorTypeTransformer().encode(value).toString();
   }
   if (value is FieldEPaymenttermType) {
     return FieldEPaymenttermTypeTypeTransformer().encode(value).toString();

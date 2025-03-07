@@ -15,30 +15,43 @@ class CommonReportgroup {
   CommonReportgroup({
     this.aObjReport = const [],
     this.aObjReportcellstyleCustom = const [],
+    this.aObjReportgroupParameter = const [],
+    required this.sReportgroupFilename,
   });
 
   List<CommonReport> aObjReport;
 
   List<CommonReportcellstyle> aObjReportcellstyleCustom;
 
+  List<CommonReportgroupParameter> aObjReportgroupParameter;
+
+  /// The name of the file
+  String sReportgroupFilename;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonReportgroup &&
     _deepEquality.equals(other.aObjReport, aObjReport) &&
-    _deepEquality.equals(other.aObjReportcellstyleCustom, aObjReportcellstyleCustom);
+    _deepEquality.equals(other.aObjReportcellstyleCustom, aObjReportcellstyleCustom) &&
+    _deepEquality.equals(other.aObjReportgroupParameter, aObjReportgroupParameter) &&
+    other.sReportgroupFilename == sReportgroupFilename;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (aObjReport.hashCode) +
-    (aObjReportcellstyleCustom.hashCode);
+    (aObjReportcellstyleCustom.hashCode) +
+    (aObjReportgroupParameter.hashCode) +
+    (sReportgroupFilename.hashCode);
 
   @override
-  String toString() => 'CommonReportgroup[aObjReport=$aObjReport, aObjReportcellstyleCustom=$aObjReportcellstyleCustom]';
+  String toString() => 'CommonReportgroup[aObjReport=$aObjReport, aObjReportcellstyleCustom=$aObjReportcellstyleCustom, aObjReportgroupParameter=$aObjReportgroupParameter, sReportgroupFilename=$sReportgroupFilename]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'a_objReport'] = this.aObjReport;
       json[r'a_objReportcellstyleCustom'] = this.aObjReportcellstyleCustom;
+      json[r'a_objReportgroupParameter'] = this.aObjReportgroupParameter;
+      json[r'sReportgroupFilename'] = this.sReportgroupFilename;
     return json;
   }
 
@@ -63,6 +76,8 @@ class CommonReportgroup {
       return CommonReportgroup(
         aObjReport: CommonReport.listFromJson(json[r'a_objReport']),
         aObjReportcellstyleCustom: CommonReportcellstyle.listFromJson(json[r'a_objReportcellstyleCustom']),
+        aObjReportgroupParameter: CommonReportgroupParameter.listFromJson(json[r'a_objReportgroupParameter']),
+        sReportgroupFilename: mapValueOfType<String>(json, r'sReportgroupFilename')!,
       );
     }
     return null;
@@ -112,6 +127,8 @@ class CommonReportgroup {
   static const requiredKeys = <String>{
     'a_objReport',
     'a_objReportcellstyleCustom',
+    'a_objReportgroupParameter',
+    'sReportgroupFilename',
   };
 }
 

@@ -14,25 +14,59 @@ class CommonReport {
   /// Returns a new [CommonReport] instance.
   CommonReport({
     this.aObjReportsection = const [],
+    this.bReportPaginate,
+    this.sReportTitle,
   });
 
   List<CommonReportsection> aObjReportsection;
 
+  /// Whether we display pagination in the report
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bReportPaginate;
+
+  /// The title of this Report
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sReportTitle;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonReport &&
-    _deepEquality.equals(other.aObjReportsection, aObjReportsection);
+    _deepEquality.equals(other.aObjReportsection, aObjReportsection) &&
+    other.bReportPaginate == bReportPaginate &&
+    other.sReportTitle == sReportTitle;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (aObjReportsection.hashCode);
+    (aObjReportsection.hashCode) +
+    (bReportPaginate == null ? 0 : bReportPaginate!.hashCode) +
+    (sReportTitle == null ? 0 : sReportTitle!.hashCode);
 
   @override
-  String toString() => 'CommonReport[aObjReportsection=$aObjReportsection]';
+  String toString() => 'CommonReport[aObjReportsection=$aObjReportsection, bReportPaginate=$bReportPaginate, sReportTitle=$sReportTitle]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'a_objReportsection'] = this.aObjReportsection;
+    if (this.bReportPaginate != null) {
+      json[r'bReportPaginate'] = this.bReportPaginate;
+    } else {
+      json[r'bReportPaginate'] = null;
+    }
+    if (this.sReportTitle != null) {
+      json[r'sReportTitle'] = this.sReportTitle;
+    } else {
+      json[r'sReportTitle'] = null;
+    }
     return json;
   }
 
@@ -56,6 +90,8 @@ class CommonReport {
 
       return CommonReport(
         aObjReportsection: CommonReportsection.listFromJson(json[r'a_objReportsection']),
+        bReportPaginate: mapValueOfType<bool>(json, r'bReportPaginate'),
+        sReportTitle: mapValueOfType<String>(json, r'sReportTitle'),
       );
     }
     return null;

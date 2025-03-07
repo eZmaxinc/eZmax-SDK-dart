@@ -15,6 +15,7 @@ class CommonReportsubsectionpart {
   CommonReportsubsectionpart({
     required this.eReportsubsectionpartType,
     this.aObjReportrow = const [],
+    this.aSVariableobjectProperty = const [],
   });
 
   /// The type of the Reportsubsectionpart
@@ -22,24 +23,29 @@ class CommonReportsubsectionpart {
 
   List<CommonReportrow> aObjReportrow;
 
+  List<String> aSVariableobjectProperty;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonReportsubsectionpart &&
     other.eReportsubsectionpartType == eReportsubsectionpartType &&
-    _deepEquality.equals(other.aObjReportrow, aObjReportrow);
+    _deepEquality.equals(other.aObjReportrow, aObjReportrow) &&
+    _deepEquality.equals(other.aSVariableobjectProperty, aSVariableobjectProperty);
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (eReportsubsectionpartType.hashCode) +
-    (aObjReportrow.hashCode);
+    (aObjReportrow.hashCode) +
+    (aSVariableobjectProperty.hashCode);
 
   @override
-  String toString() => 'CommonReportsubsectionpart[eReportsubsectionpartType=$eReportsubsectionpartType, aObjReportrow=$aObjReportrow]';
+  String toString() => 'CommonReportsubsectionpart[eReportsubsectionpartType=$eReportsubsectionpartType, aObjReportrow=$aObjReportrow, aSVariableobjectProperty=$aSVariableobjectProperty]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'eReportsubsectionpartType'] = this.eReportsubsectionpartType;
       json[r'a_objReportrow'] = this.aObjReportrow;
+      json[r'a_sVariableobjectProperty'] = this.aSVariableobjectProperty;
     return json;
   }
 
@@ -64,6 +70,9 @@ class CommonReportsubsectionpart {
       return CommonReportsubsectionpart(
         eReportsubsectionpartType: CommonReportsubsectionpartEReportsubsectionpartTypeEnum.fromJson(json[r'eReportsubsectionpartType'])!,
         aObjReportrow: CommonReportrow.listFromJson(json[r'a_objReportrow']),
+        aSVariableobjectProperty: json[r'a_sVariableobjectProperty'] is Iterable
+            ? (json[r'a_sVariableobjectProperty'] as Iterable).cast<String>().toList(growable: false)
+            : const [],
       );
     }
     return null;
@@ -113,6 +122,7 @@ class CommonReportsubsectionpart {
   static const requiredKeys = <String>{
     'eReportsubsectionpartType',
     'a_objReportrow',
+    'a_sVariableobjectProperty',
   };
 }
 

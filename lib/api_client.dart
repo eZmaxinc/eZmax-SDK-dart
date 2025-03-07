@@ -476,6 +476,8 @@ class ApiClient {
           return CommonReportcolumn.fromJson(value);
         case 'CommonReportgroup':
           return CommonReportgroup.fromJson(value);
+        case 'CommonReportgroupParameter':
+          return CommonReportgroupParameter.fromJson(value);
         case 'CommonReportrow':
           return CommonReportrow.fromJson(value);
         case 'CommonReportsection':
@@ -554,6 +556,8 @@ class ApiClient {
           return ComputedEEzsigndocumentSteptypeTypeTransformer().decode(value);
         case 'ComputedEEzsignfolderAccess':
           return ComputedEEzsignfolderAccessTypeTransformer().decode(value);
+        case 'ComputedEEzsignimportfolderStatus':
+          return ComputedEEzsignimportfolderStatusTypeTransformer().decode(value);
         case 'ContactRequest':
           return ContactRequest.fromJson(value);
         case 'ContactRequestCompound':
@@ -664,18 +668,6 @@ class ApiClient {
           return CreditcarddetailResponseCompound.fromJson(value);
         case 'CreditcardmerchantAutocompleteElementResponse':
           return CreditcardmerchantAutocompleteElementResponse.fromJson(value);
-        case 'CreditcardmerchantCreateObjectV1Request':
-          return CreditcardmerchantCreateObjectV1Request.fromJson(value);
-        case 'CreditcardmerchantCreateObjectV1Response':
-          return CreditcardmerchantCreateObjectV1Response.fromJson(value);
-        case 'CreditcardmerchantCreateObjectV1ResponseMPayload':
-          return CreditcardmerchantCreateObjectV1ResponseMPayload.fromJson(value);
-        case 'CreditcardmerchantDeleteObjectV1Response':
-          return CreditcardmerchantDeleteObjectV1Response.fromJson(value);
-        case 'CreditcardmerchantEditObjectV1Request':
-          return CreditcardmerchantEditObjectV1Request.fromJson(value);
-        case 'CreditcardmerchantEditObjectV1Response':
-          return CreditcardmerchantEditObjectV1Response.fromJson(value);
         case 'CreditcardmerchantGetAutocompleteV2Response':
           return CreditcardmerchantGetAutocompleteV2Response.fromJson(value);
         case 'CreditcardmerchantGetAutocompleteV2ResponseMPayload':
@@ -736,6 +728,8 @@ class ApiClient {
           return CustomContactNameResponse.fromJson(value);
         case 'CustomCreateEzsignelementsPositionedByWordRequest':
           return CustomCreateEzsignelementsPositionedByWordRequest.fromJson(value);
+        case 'CustomCreditcardRequest':
+          return CustomCreditcardRequest.fromJson(value);
         case 'CustomCreditcardtransactionResponse':
           return CustomCreditcardtransactionResponse.fromJson(value);
         case 'CustomCreditcardtransactionresponseResponse':
@@ -780,6 +774,8 @@ class ApiClient {
           return CustomEzsignfoldertransmissionSignerResponse.fromJson(value);
         case 'CustomEzsignfoldertypeResponse':
           return CustomEzsignfoldertypeResponse.fromJson(value);
+        case 'CustomEzsignfoldertypeTemplateResponse':
+          return CustomEzsignfoldertypeTemplateResponse.fromJson(value);
         case 'CustomEzsignformfieldRequest':
           return CustomEzsignformfieldRequest.fromJson(value);
         case 'CustomEzsignformfielderrorResponse':
@@ -790,6 +786,8 @@ class ApiClient {
           return CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest.fromJson(value);
         case 'CustomEzsignformfieldgroupRequest':
           return CustomEzsignformfieldgroupRequest.fromJson(value);
+        case 'CustomEzsignimportdocumentResponse':
+          return CustomEzsignimportdocumentResponse.fromJson(value);
         case 'CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest':
           return CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest.fromJson(value);
         case 'CustomEzsignsignatureEzsignsignaturesAutomaticResponse':
@@ -812,6 +810,8 @@ class ApiClient {
           return CustomNotificationsubsectiongetnotificationtestsResponse.fromJson(value);
         case 'CustomNotificationtestgetnotificationtestsResponse':
           return CustomNotificationtestgetnotificationtestsResponse.fromJson(value);
+        case 'CustomPrefillEzsignformValueRequest':
+          return CustomPrefillEzsignformValueRequest.fromJson(value);
         case 'CustomTimezoneWithCodeResponse':
           return CustomTimezoneWithCodeResponse.fromJson(value);
         case 'CustomUserNameResponse':
@@ -824,12 +824,18 @@ class ApiClient {
           return CustomWordPositionOccurenceResponse.fromJson(value);
         case 'CustomWordPositionWordResponse':
           return CustomWordPositionWordResponse.fromJson(value);
+        case 'CustomerAutocompleteElementResponse':
+          return CustomerAutocompleteElementResponse.fromJson(value);
         case 'CustomerCreateObjectV1Request':
           return CustomerCreateObjectV1Request.fromJson(value);
         case 'CustomerCreateObjectV1Response':
           return CustomerCreateObjectV1Response.fromJson(value);
         case 'CustomerCreateObjectV1ResponseMPayload':
           return CustomerCreateObjectV1ResponseMPayload.fromJson(value);
+        case 'CustomerGetAutocompleteV2Response':
+          return CustomerGetAutocompleteV2Response.fromJson(value);
+        case 'CustomerGetAutocompleteV2ResponseMPayload':
+          return CustomerGetAutocompleteV2ResponseMPayload.fromJson(value);
         case 'CustomerGetObjectV2Response':
           return CustomerGetObjectV2Response.fromJson(value);
         case 'CustomerGetObjectV2ResponseMPayload':
@@ -978,6 +984,8 @@ class ApiClient {
           return EnumFontweightTypeTransformer().decode(value);
         case 'EnumHorizontalalignment':
           return EnumHorizontalalignmentTypeTransformer().decode(value);
+        case 'EnumReportdataType':
+          return EnumReportdataTypeTypeTransformer().decode(value);
         case 'EnumTextvalidation':
           return EnumTextvalidationTypeTransformer().decode(value);
         case 'EnumVerticalalignment':
@@ -1034,6 +1042,12 @@ class ApiClient {
           return EzdoctemplatetypeGetAutocompleteV2Response.fromJson(value);
         case 'EzdoctemplatetypeGetAutocompleteV2ResponseMPayload':
           return EzdoctemplatetypeGetAutocompleteV2ResponseMPayload.fromJson(value);
+        case 'EzmaxcasePatchObjectV1Request':
+          return EzmaxcasePatchObjectV1Request.fromJson(value);
+        case 'EzmaxcasePatchObjectV1Response':
+          return EzmaxcasePatchObjectV1Response.fromJson(value);
+        case 'EzmaxcaseRequestPatch':
+          return EzmaxcaseRequestPatch.fromJson(value);
         case 'EzmaxinvoicingAutocompleteElementResponse':
           return EzmaxinvoicingAutocompleteElementResponse.fromJson(value);
         case 'EzmaxinvoicingGetAutocompleteV2Response':
@@ -1388,6 +1402,10 @@ class ApiClient {
           return EzsigndocumentPatchObjectV1Request.fromJson(value);
         case 'EzsigndocumentPatchObjectV1Response':
           return EzsigndocumentPatchObjectV1Response.fromJson(value);
+        case 'EzsigndocumentPrefillEzsignformV1Request':
+          return EzsigndocumentPrefillEzsignformV1Request.fromJson(value);
+        case 'EzsigndocumentPrefillEzsignformV1Response':
+          return EzsigndocumentPrefillEzsignformV1Response.fromJson(value);
         case 'EzsigndocumentRequest':
           return EzsigndocumentRequest.fromJson(value);
         case 'EzsigndocumentRequestCompound':
@@ -1706,6 +1724,24 @@ class ApiClient {
           return EzsignformfieldgroupsignerResponse.fromJson(value);
         case 'EzsignformfieldgroupsignerResponseCompound':
           return EzsignformfieldgroupsignerResponseCompound.fromJson(value);
+        case 'EzsignimportdocumentDownloadV1Response':
+          return EzsignimportdocumentDownloadV1Response.fromJson(value);
+        case 'EzsignimportfolderDeleteObjectV1Response':
+          return EzsignimportfolderDeleteObjectV1Response.fromJson(value);
+        case 'EzsignimportfolderGetListV1Response':
+          return EzsignimportfolderGetListV1Response.fromJson(value);
+        case 'EzsignimportfolderGetListV1ResponseMPayload':
+          return EzsignimportfolderGetListV1ResponseMPayload.fromJson(value);
+        case 'EzsignimportfolderGetObjectV2Response':
+          return EzsignimportfolderGetObjectV2Response.fromJson(value);
+        case 'EzsignimportfolderGetObjectV2ResponseMPayload':
+          return EzsignimportfolderGetObjectV2ResponseMPayload.fromJson(value);
+        case 'EzsignimportfolderListElement':
+          return EzsignimportfolderListElement.fromJson(value);
+        case 'EzsignimportfolderResponse':
+          return EzsignimportfolderResponse.fromJson(value);
+        case 'EzsignimportfolderResponseCompound':
+          return EzsignimportfolderResponseCompound.fromJson(value);
         case 'EzsignpageConsultV1Response':
           return EzsignpageConsultV1Response.fromJson(value);
         case 'EzsignpageResponse':
@@ -1784,6 +1820,14 @@ class ApiClient {
           return EzsignsignaturecustomdateResponseCompoundV2.fromJson(value);
         case 'EzsignsignaturecustomdateResponseV2':
           return EzsignsignaturecustomdateResponseV2.fromJson(value);
+        case 'EzsignsignaturepaymentdetailRequest':
+          return EzsignsignaturepaymentdetailRequest.fromJson(value);
+        case 'EzsignsignaturepaymentdetailRequestCompound':
+          return EzsignsignaturepaymentdetailRequestCompound.fromJson(value);
+        case 'EzsignsignaturepaymentdetailResponse':
+          return EzsignsignaturepaymentdetailResponse.fromJson(value);
+        case 'EzsignsignaturepaymentdetailResponseCompound':
+          return EzsignsignaturepaymentdetailResponseCompound.fromJson(value);
         case 'EzsignsignerRequest':
           return EzsignsignerRequest.fromJson(value);
         case 'EzsignsignerRequestCompound':
@@ -2482,6 +2526,8 @@ class ApiClient {
           return FieldEEzsignsignatureTooltippositionTypeTransformer().decode(value);
         case 'FieldEEzsignsignatureType':
           return FieldEEzsignsignatureTypeTypeTransformer().decode(value);
+        case 'FieldEEzsignsignaturepaymentdetailTaxable':
+          return FieldEEzsignsignaturepaymentdetailTaxableTypeTransformer().decode(value);
         case 'FieldEEzsigntemplateRecognition':
           return FieldEEzsigntemplateRecognitionTypeTransformer().decode(value);
         case 'FieldEEzsigntemplateType':
@@ -2534,6 +2580,8 @@ class ApiClient {
           return FieldEEzsigntemplatesignerMappingTypeTransformer().decode(value);
         case 'FieldENotificationpreferenceStatus':
           return FieldENotificationpreferenceStatusTypeTransformer().decode(value);
+        case 'FieldEPaymentgatewayProcessor':
+          return FieldEPaymentgatewayProcessorTypeTransformer().decode(value);
         case 'FieldEPaymenttermType':
           return FieldEPaymenttermTypeTypeTransformer().decode(value);
         case 'FieldEPhoneType':
@@ -2746,6 +2794,8 @@ class ApiClient {
           return MultilingualNotificationsubsectionName.fromJson(value);
         case 'MultilingualNotificationtestName':
           return MultilingualNotificationtestName.fromJson(value);
+        case 'MultilingualPaymentgatewayDescription':
+          return MultilingualPaymentgatewayDescription.fromJson(value);
         case 'MultilingualPaymenttermDescription':
           return MultilingualPaymenttermDescription.fromJson(value);
         case 'MultilingualSubnetDescription':
@@ -2788,6 +2838,40 @@ class ApiClient {
           return OtherincomeGetCommunicationsendersV1Response.fromJson(value);
         case 'OtherincomeGetCommunicationsendersV1ResponseMPayload':
           return OtherincomeGetCommunicationsendersV1ResponseMPayload.fromJson(value);
+        case 'PaymentgatewayAutocompleteElementResponse':
+          return PaymentgatewayAutocompleteElementResponse.fromJson(value);
+        case 'PaymentgatewayCreateObjectV1Request':
+          return PaymentgatewayCreateObjectV1Request.fromJson(value);
+        case 'PaymentgatewayCreateObjectV1Response':
+          return PaymentgatewayCreateObjectV1Response.fromJson(value);
+        case 'PaymentgatewayCreateObjectV1ResponseMPayload':
+          return PaymentgatewayCreateObjectV1ResponseMPayload.fromJson(value);
+        case 'PaymentgatewayEditObjectV1Request':
+          return PaymentgatewayEditObjectV1Request.fromJson(value);
+        case 'PaymentgatewayEditObjectV1Response':
+          return PaymentgatewayEditObjectV1Response.fromJson(value);
+        case 'PaymentgatewayGetAutocompleteV2Response':
+          return PaymentgatewayGetAutocompleteV2Response.fromJson(value);
+        case 'PaymentgatewayGetAutocompleteV2ResponseMPayload':
+          return PaymentgatewayGetAutocompleteV2ResponseMPayload.fromJson(value);
+        case 'PaymentgatewayGetListV1Response':
+          return PaymentgatewayGetListV1Response.fromJson(value);
+        case 'PaymentgatewayGetListV1ResponseMPayload':
+          return PaymentgatewayGetListV1ResponseMPayload.fromJson(value);
+        case 'PaymentgatewayGetObjectV2Response':
+          return PaymentgatewayGetObjectV2Response.fromJson(value);
+        case 'PaymentgatewayGetObjectV2ResponseMPayload':
+          return PaymentgatewayGetObjectV2ResponseMPayload.fromJson(value);
+        case 'PaymentgatewayListElement':
+          return PaymentgatewayListElement.fromJson(value);
+        case 'PaymentgatewayRequest':
+          return PaymentgatewayRequest.fromJson(value);
+        case 'PaymentgatewayRequestCompound':
+          return PaymentgatewayRequestCompound.fromJson(value);
+        case 'PaymentgatewayResponse':
+          return PaymentgatewayResponse.fromJson(value);
+        case 'PaymentgatewayResponseCompound':
+          return PaymentgatewayResponseCompound.fromJson(value);
         case 'PaymenttermAutocompleteElementResponse':
           return PaymenttermAutocompleteElementResponse.fromJson(value);
         case 'PaymenttermCreateObjectV1Request':
