@@ -81,10 +81,10 @@ class VersionhistoryResponse {
 
   MultilingualVersionhistoryDetail objVersionhistoryDetail;
 
-  /// The date  at which the Versionhistory was published or should be published
+  /// The date at which the Versionhistory was published or should be published
   String dtVersionhistoryDate;
 
-  /// The date  at which the Versionhistory will no longer be visible
+  /// The date at which the Versionhistory will no longer be visible
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated

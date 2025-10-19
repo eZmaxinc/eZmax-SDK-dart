@@ -9,6 +9,7 @@ import 'package:openapi/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiCustomerID** | **int** | The unique ID of the Customer. | 
+**fkiDepartmentID** | **int** | The unique ID of the Department | 
 **sCustomerName** | **String** | The name of the Customer | 
 **bCustomerIsactive** | **bool** | Whether the customer is active or not | 
 

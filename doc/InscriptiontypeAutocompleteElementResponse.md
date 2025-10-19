@@ -1,0 +1,16 @@
+# openapi.model.InscriptiontypeAutocompleteElementResponse
+
+## Load the model package
+```dart
+import 'package:openapi/api.dart';
+```
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**pkiInscriptiontypeID** | **int** | The unique ID of the Inscriptiontype | 
+**sInscriptiontypeNameX** | **String** | The name of the Inscriptiontype in the language of the requester | 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

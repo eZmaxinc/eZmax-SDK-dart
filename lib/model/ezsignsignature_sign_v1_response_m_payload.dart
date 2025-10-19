@@ -15,6 +15,7 @@ class EzsignsignatureSignV1ResponseMPayload {
   EzsignsignatureSignV1ResponseMPayload({
     required this.dtEzsignsignatureDateInFolderTimezone,
     this.objTimezone,
+    this.objCreditcardtransaction,
   });
 
   /// The date the Ezsignsignature was signed in folder's timezone
@@ -28,19 +29,29 @@ class EzsignsignatureSignV1ResponseMPayload {
   ///
   CustomTimezoneWithCodeResponse? objTimezone;
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  CustomCreditcardtransactionResponse? objCreditcardtransaction;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignsignatureSignV1ResponseMPayload &&
     other.dtEzsignsignatureDateInFolderTimezone == dtEzsignsignatureDateInFolderTimezone &&
-    other.objTimezone == objTimezone;
+    other.objTimezone == objTimezone &&
+    other.objCreditcardtransaction == objCreditcardtransaction;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (dtEzsignsignatureDateInFolderTimezone.hashCode) +
-    (objTimezone == null ? 0 : objTimezone!.hashCode);
+    (objTimezone == null ? 0 : objTimezone!.hashCode) +
+    (objCreditcardtransaction == null ? 0 : objCreditcardtransaction!.hashCode);
 
   @override
-  String toString() => 'EzsignsignatureSignV1ResponseMPayload[dtEzsignsignatureDateInFolderTimezone=$dtEzsignsignatureDateInFolderTimezone, objTimezone=$objTimezone]';
+  String toString() => 'EzsignsignatureSignV1ResponseMPayload[dtEzsignsignatureDateInFolderTimezone=$dtEzsignsignatureDateInFolderTimezone, objTimezone=$objTimezone, objCreditcardtransaction=$objCreditcardtransaction]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -49,6 +60,11 @@ class EzsignsignatureSignV1ResponseMPayload {
       json[r'objTimezone'] = this.objTimezone;
     } else {
       json[r'objTimezone'] = null;
+    }
+    if (this.objCreditcardtransaction != null) {
+      json[r'objCreditcardtransaction'] = this.objCreditcardtransaction;
+    } else {
+      json[r'objCreditcardtransaction'] = null;
     }
     return json;
   }
@@ -74,6 +90,7 @@ class EzsignsignatureSignV1ResponseMPayload {
       return EzsignsignatureSignV1ResponseMPayload(
         dtEzsignsignatureDateInFolderTimezone: mapValueOfType<String>(json, r'dtEzsignsignatureDateInFolderTimezone')!,
         objTimezone: CustomTimezoneWithCodeResponse.fromJson(json[r'objTimezone']),
+        objCreditcardtransaction: CustomCreditcardtransactionResponse.fromJson(json[r'objCreditcardtransaction']),
       );
     }
     return null;

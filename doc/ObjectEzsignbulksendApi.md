@@ -11,14 +11,18 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ezsignbulksendCreateEzsignbulksendtransmissionV2**](ObjectEzsignbulksendApi.md#ezsignbulksendcreateezsignbulksendtransmissionv2) | **POST** /2/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission | Create a new Ezsignbulksendtransmission in the Ezsignbulksend
 [**ezsignbulksendCreateObjectV1**](ObjectEzsignbulksendApi.md#ezsignbulksendcreateobjectv1) | **POST** /1/object/ezsignbulksend | Create a new Ezsignbulksend
+[**ezsignbulksendCreateObjectV2**](ObjectEzsignbulksendApi.md#ezsignbulksendcreateobjectv2) | **POST** /2/object/ezsignbulksend | Create a new Ezsignbulksend
 [**ezsignbulksendDeleteObjectV1**](ObjectEzsignbulksendApi.md#ezsignbulksenddeleteobjectv1) | **DELETE** /1/object/ezsignbulksend/{pkiEzsignbulksendID} | Delete an existing Ezsignbulksend
 [**ezsignbulksendEditObjectV1**](ObjectEzsignbulksendApi.md#ezsignbulksendeditobjectv1) | **PUT** /1/object/ezsignbulksend/{pkiEzsignbulksendID} | Edit an existing Ezsignbulksend
+[**ezsignbulksendEditObjectV2**](ObjectEzsignbulksendApi.md#ezsignbulksendeditobjectv2) | **PUT** /2/object/ezsignbulksend/{pkiEzsignbulksendID} | Edit an existing Ezsignbulksend
+[**ezsignbulksendGetBatchFileV1**](ObjectEzsignbulksendApi.md#ezsignbulksendgetbatchfilev1) | **GET** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getBatchFile | Retrieve file to download documents in batch
 [**ezsignbulksendGetCsvTemplateV1**](ObjectEzsignbulksendApi.md#ezsignbulksendgetcsvtemplatev1) | **GET** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getCsvTemplate | Retrieve an existing Ezsignbulksend's empty Csv template
 [**ezsignbulksendGetEzsignbulksendtransmissionsV1**](ObjectEzsignbulksendApi.md#ezsignbulksendgetezsignbulksendtransmissionsv1) | **GET** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignbulksendtransmissions | Retrieve an existing Ezsignbulksend's Ezsignbulksendtransmissions
 [**ezsignbulksendGetEzsignsignaturesAutomaticV1**](ObjectEzsignbulksendApi.md#ezsignbulksendgetezsignsignaturesautomaticv1) | **GET** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignsignaturesAutomatic | Retrieve an existing Ezsignbulksend's automatic Ezsignsignatures
 [**ezsignbulksendGetFormsDataV1**](ObjectEzsignbulksendApi.md#ezsignbulksendgetformsdatav1) | **GET** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getFormsData | Retrieve an existing Ezsignbulksend's forms data
 [**ezsignbulksendGetListV1**](ObjectEzsignbulksendApi.md#ezsignbulksendgetlistv1) | **GET** /1/object/ezsignbulksend/getList | Retrieve Ezsignbulksend list
 [**ezsignbulksendGetObjectV2**](ObjectEzsignbulksendApi.md#ezsignbulksendgetobjectv2) | **GET** /2/object/ezsignbulksend/{pkiEzsignbulksendID} | Retrieve an existing Ezsignbulksend
+[**ezsignbulksendGetObjectV3**](ObjectEzsignbulksendApi.md#ezsignbulksendgetobjectv3) | **GET** /3/object/ezsignbulksend/{pkiEzsignbulksendID} | Retrieve an existing Ezsignbulksend
 [**ezsignbulksendReorderV1**](ObjectEzsignbulksendApi.md#ezsignbulksendreorderv1) | **POST** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/reorder | Reorder Ezsignbulksenddocumentmappings in the Ezsignbulksend
 
 
@@ -104,6 +108,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignbulksendCreateObjectV1Response**](EzsignbulksendCreateObjectV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsignbulksendCreateObjectV2**
+> EzsignbulksendCreateObjectV2Response ezsignbulksendCreateObjectV2(ezsignbulksendCreateObjectV2Request)
+
+Create a new Ezsignbulksend
+
+The endpoint allows to create one or many elements at once.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectEzsignbulksendApi();
+final ezsignbulksendCreateObjectV2Request = EzsignbulksendCreateObjectV2Request(); // EzsignbulksendCreateObjectV2Request | 
+
+try {
+    final result = api_instance.ezsignbulksendCreateObjectV2(ezsignbulksendCreateObjectV2Request);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectEzsignbulksendApi->ezsignbulksendCreateObjectV2: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ezsignbulksendCreateObjectV2Request** | [**EzsignbulksendCreateObjectV2Request**](EzsignbulksendCreateObjectV2Request.md)|  | 
+
+### Return type
+
+[**EzsignbulksendCreateObjectV2Response**](EzsignbulksendCreateObjectV2Response.md)
 
 ### Authorization
 
@@ -209,6 +260,108 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: application/json
  - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsignbulksendEditObjectV2**
+> EzsignbulksendEditObjectV2Response ezsignbulksendEditObjectV2(pkiEzsignbulksendID, ezsignbulksendEditObjectV2Request)
+
+Edit an existing Ezsignbulksend
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectEzsignbulksendApi();
+final pkiEzsignbulksendID = 56; // int | 
+final ezsignbulksendEditObjectV2Request = EzsignbulksendEditObjectV2Request(); // EzsignbulksendEditObjectV2Request | 
+
+try {
+    final result = api_instance.ezsignbulksendEditObjectV2(pkiEzsignbulksendID, ezsignbulksendEditObjectV2Request);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectEzsignbulksendApi->ezsignbulksendEditObjectV2: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignbulksendID** | **int**|  | 
+ **ezsignbulksendEditObjectV2Request** | [**EzsignbulksendEditObjectV2Request**](EzsignbulksendEditObjectV2Request.md)|  | 
+
+### Return type
+
+[**EzsignbulksendEditObjectV2Response**](EzsignbulksendEditObjectV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsignbulksendGetBatchFileV1**
+> MultipartFile ezsignbulksendGetBatchFileV1(pkiEzsignbulksendID, bIncludeSigned, bIncludeAttachment, bIncludeProofdocument, bIncludeProof)
+
+Retrieve file to download documents in batch
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectEzsignbulksendApi();
+final pkiEzsignbulksendID = 56; // int | 
+final bIncludeSigned = true; // bool | Include final document once all signatures were applied
+final bIncludeAttachment = true; // bool | Include attached files in signatures
+final bIncludeProofdocument = true; // bool | Include the evidence report
+final bIncludeProof = true; // bool | include the complete evidence archive including all of the above and more
+
+try {
+    final result = api_instance.ezsignbulksendGetBatchFileV1(pkiEzsignbulksendID, bIncludeSigned, bIncludeAttachment, bIncludeProofdocument, bIncludeProof);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectEzsignbulksendApi->ezsignbulksendGetBatchFileV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignbulksendID** | **int**|  | 
+ **bIncludeSigned** | **bool**| Include final document once all signatures were applied | [optional] 
+ **bIncludeAttachment** | **bool**| Include attached files in signatures | [optional] 
+ **bIncludeProofdocument** | **bool**| Include the evidence report | [optional] 
+ **bIncludeProof** | **bool**| include the complete evidence archive including all of the above and more | [optional] 
+
+### Return type
+
+[**MultipartFile**](MultipartFile.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/xml, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -492,6 +645,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignbulksendGetObjectV2Response**](EzsignbulksendGetObjectV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsignbulksendGetObjectV3**
+> EzsignbulksendGetObjectV3Response ezsignbulksendGetObjectV3(pkiEzsignbulksendID)
+
+Retrieve an existing Ezsignbulksend
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectEzsignbulksendApi();
+final pkiEzsignbulksendID = 56; // int | 
+
+try {
+    final result = api_instance.ezsignbulksendGetObjectV3(pkiEzsignbulksendID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectEzsignbulksendApi->ezsignbulksendGetObjectV3: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignbulksendID** | **int**|  | 
+
+### Return type
+
+[**EzsignbulksendGetObjectV3Response**](EzsignbulksendGetObjectV3Response.md)
 
 ### Authorization
 

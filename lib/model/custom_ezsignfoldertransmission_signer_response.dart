@@ -14,8 +14,9 @@ class CustomEzsignfoldertransmissionSignerResponse {
   /// Returns a new [CustomEzsignfoldertransmissionSignerResponse] instance.
   CustomEzsignfoldertransmissionSignerResponse({
     this.fkiUserID,
-    required this.sContactFirstname,
-    required this.sContactLastname,
+    this.sContactFirstname,
+    this.sContactLastname,
+    this.sEzsignsignergroupDescriptionX,
   });
 
   /// The unique ID of the User
@@ -30,26 +31,49 @@ class CustomEzsignfoldertransmissionSignerResponse {
   int? fkiUserID;
 
   /// The First name of the contact
-  String sContactFirstname;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sContactFirstname;
 
   /// The Last name of the contact
-  String sContactLastname;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sContactLastname;
+
+  /// The Description of the Ezsignsignergroup in the language of the requester
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEzsignsignergroupDescriptionX;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomEzsignfoldertransmissionSignerResponse &&
     other.fkiUserID == fkiUserID &&
     other.sContactFirstname == sContactFirstname &&
-    other.sContactLastname == sContactLastname;
+    other.sContactLastname == sContactLastname &&
+    other.sEzsignsignergroupDescriptionX == sEzsignsignergroupDescriptionX;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (fkiUserID == null ? 0 : fkiUserID!.hashCode) +
-    (sContactFirstname.hashCode) +
-    (sContactLastname.hashCode);
+    (sContactFirstname == null ? 0 : sContactFirstname!.hashCode) +
+    (sContactLastname == null ? 0 : sContactLastname!.hashCode) +
+    (sEzsignsignergroupDescriptionX == null ? 0 : sEzsignsignergroupDescriptionX!.hashCode);
 
   @override
-  String toString() => 'CustomEzsignfoldertransmissionSignerResponse[fkiUserID=$fkiUserID, sContactFirstname=$sContactFirstname, sContactLastname=$sContactLastname]';
+  String toString() => 'CustomEzsignfoldertransmissionSignerResponse[fkiUserID=$fkiUserID, sContactFirstname=$sContactFirstname, sContactLastname=$sContactLastname, sEzsignsignergroupDescriptionX=$sEzsignsignergroupDescriptionX]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -58,8 +82,21 @@ class CustomEzsignfoldertransmissionSignerResponse {
     } else {
       json[r'fkiUserID'] = null;
     }
+    if (this.sContactFirstname != null) {
       json[r'sContactFirstname'] = this.sContactFirstname;
+    } else {
+      json[r'sContactFirstname'] = null;
+    }
+    if (this.sContactLastname != null) {
       json[r'sContactLastname'] = this.sContactLastname;
+    } else {
+      json[r'sContactLastname'] = null;
+    }
+    if (this.sEzsignsignergroupDescriptionX != null) {
+      json[r'sEzsignsignergroupDescriptionX'] = this.sEzsignsignergroupDescriptionX;
+    } else {
+      json[r'sEzsignsignergroupDescriptionX'] = null;
+    }
     return json;
   }
 
@@ -83,8 +120,9 @@ class CustomEzsignfoldertransmissionSignerResponse {
 
       return CustomEzsignfoldertransmissionSignerResponse(
         fkiUserID: mapValueOfType<int>(json, r'fkiUserID'),
-        sContactFirstname: mapValueOfType<String>(json, r'sContactFirstname')!,
-        sContactLastname: mapValueOfType<String>(json, r'sContactLastname')!,
+        sContactFirstname: mapValueOfType<String>(json, r'sContactFirstname'),
+        sContactLastname: mapValueOfType<String>(json, r'sContactLastname'),
+        sEzsignsignergroupDescriptionX: mapValueOfType<String>(json, r'sEzsignsignergroupDescriptionX'),
       );
     }
     return null;
@@ -132,8 +170,6 @@ class CustomEzsignfoldertransmissionSignerResponse {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'sContactFirstname',
-    'sContactLastname',
   };
 }
 

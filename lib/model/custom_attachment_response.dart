@@ -657,7 +657,7 @@ class CustomAttachmentResponse {
   ///
   int? iAttachmentEDMmoduleflag;
 
-  /// The md5 of the Attachment
+  /// The MD5 of the Attachment
   String sAttachmentMD5;
 
   /// Whether if it's deleted

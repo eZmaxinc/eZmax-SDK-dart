@@ -243,4 +243,156 @@ class ObjectBuyercontractApi {
     }
     return null;
   }
+
+  /// Retrieve Buyercontract list
+  ///
+  /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eBuyercontractStep | Imported<br>Active<br>Modified<br>ContractEnded<br>ExpiredContract<br>Bought | | eBuyercontractType | Rent<br>Sale<br>RentOrSale |
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [String] eOrderBy:
+  ///   Specify how you want the results to be sorted
+  ///
+  /// * [int] iRowMax:
+  ///
+  /// * [int] iRowOffset:
+  ///
+  /// * [HeaderAcceptLanguage] acceptLanguage:
+  ///
+  /// * [String] sFilter:
+  Future<Response> buyercontractGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/buyercontract/getList';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (eOrderBy != null) {
+      queryParams.addAll(_queryParams('', 'eOrderBy', eOrderBy));
+    }
+    if (iRowMax != null) {
+      queryParams.addAll(_queryParams('', 'iRowMax', iRowMax));
+    }
+    if (iRowOffset != null) {
+      queryParams.addAll(_queryParams('', 'iRowOffset', iRowOffset));
+    }
+    if (sFilter != null) {
+      queryParams.addAll(_queryParams('', 'sFilter', sFilter));
+    }
+
+    if (acceptLanguage != null) {
+      headerParams[r'Accept-Language'] = parameterToString(acceptLanguage);
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve Buyercontract list
+  ///
+  /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eBuyercontractStep | Imported<br>Active<br>Modified<br>ContractEnded<br>ExpiredContract<br>Bought | | eBuyercontractType | Rent<br>Sale<br>RentOrSale |
+  ///
+  /// Parameters:
+  ///
+  /// * [String] eOrderBy:
+  ///   Specify how you want the results to be sorted
+  ///
+  /// * [int] iRowMax:
+  ///
+  /// * [int] iRowOffset:
+  ///
+  /// * [HeaderAcceptLanguage] acceptLanguage:
+  ///
+  /// * [String] sFilter:
+  Future<BuyercontractGetListV1Response?> buyercontractGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
+    final response = await buyercontractGetListV1WithHttpInfo( eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'BuyercontractGetListV1Response',) as BuyercontractGetListV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Import attachments into the Buyercontract
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiBuyercontractID (required):
+  ///
+  /// * [BuyercontractImportIntoEDMV1Request] buyercontractImportIntoEDMV1Request (required):
+  Future<Response> buyercontractImportIntoEDMV1WithHttpInfo(int pkiBuyercontractID, BuyercontractImportIntoEDMV1Request buyercontractImportIntoEDMV1Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/buyercontract/{pkiBuyercontractID}/importIntoEDM'
+      .replaceAll('{pkiBuyercontractID}', pkiBuyercontractID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = buyercontractImportIntoEDMV1Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Import attachments into the Buyercontract
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiBuyercontractID (required):
+  ///
+  /// * [BuyercontractImportIntoEDMV1Request] buyercontractImportIntoEDMV1Request (required):
+  Future<BuyercontractImportIntoEDMV1Response?> buyercontractImportIntoEDMV1(int pkiBuyercontractID, BuyercontractImportIntoEDMV1Request buyercontractImportIntoEDMV1Request,) async {
+    final response = await buyercontractImportIntoEDMV1WithHttpInfo(pkiBuyercontractID, buyercontractImportIntoEDMV1Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'BuyercontractImportIntoEDMV1Response',) as BuyercontractImportIntoEDMV1Response;
+    
+    }
+    return null;
+  }
 }

@@ -33,6 +33,7 @@ class EzsigndocumentResponse {
     this.sEzsigndocumentMD5signed,
     this.bEzsigndocumentEzsignform,
     this.bEzsigndocumentHassignedsignatures,
+    this.bEzsigndocumentSendtoged,
     this.objAudit,
     this.sEzsigndocumentExternalid,
     required this.iEzsigndocumentEzsignsignatureattachmenttotal,
@@ -177,6 +178,15 @@ class EzsigndocumentResponse {
   ///
   bool? bEzsigndocumentHassignedsignatures;
 
+  /// Whether the Ezsigndocument was copied to EDM
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bEzsigndocumentSendtoged;
+
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -224,6 +234,7 @@ class EzsigndocumentResponse {
     other.sEzsigndocumentMD5signed == sEzsigndocumentMD5signed &&
     other.bEzsigndocumentEzsignform == bEzsigndocumentEzsignform &&
     other.bEzsigndocumentHassignedsignatures == bEzsigndocumentHassignedsignatures &&
+    other.bEzsigndocumentSendtoged == bEzsigndocumentSendtoged &&
     other.objAudit == objAudit &&
     other.sEzsigndocumentExternalid == sEzsigndocumentExternalid &&
     other.iEzsigndocumentEzsignsignatureattachmenttotal == iEzsigndocumentEzsignsignatureattachmenttotal &&
@@ -252,13 +263,14 @@ class EzsigndocumentResponse {
     (sEzsigndocumentMD5signed == null ? 0 : sEzsigndocumentMD5signed!.hashCode) +
     (bEzsigndocumentEzsignform == null ? 0 : bEzsigndocumentEzsignform!.hashCode) +
     (bEzsigndocumentHassignedsignatures == null ? 0 : bEzsigndocumentHassignedsignatures!.hashCode) +
+    (bEzsigndocumentSendtoged == null ? 0 : bEzsigndocumentSendtoged!.hashCode) +
     (objAudit == null ? 0 : objAudit!.hashCode) +
     (sEzsigndocumentExternalid == null ? 0 : sEzsigndocumentExternalid!.hashCode) +
     (iEzsigndocumentEzsignsignatureattachmenttotal.hashCode) +
     (iEzsigndocumentEzsigndiscussiontotal.hashCode);
 
   @override
-  String toString() => 'EzsigndocumentResponse[pkiEzsigndocumentID=$pkiEzsigndocumentID, fkiEzsignfolderID=$fkiEzsignfolderID, fkiEzsignfoldersignerassociationIDDeclinedtosign=$fkiEzsignfoldersignerassociationIDDeclinedtosign, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, dtEzsignformCompleted=$dtEzsignformCompleted, fkiLanguageID=$fkiLanguageID, sEzsigndocumentName=$sEzsigndocumentName, eEzsigndocumentStep=$eEzsigndocumentStep, dtEzsigndocumentFirstsend=$dtEzsigndocumentFirstsend, dtEzsigndocumentLastsend=$dtEzsigndocumentLastsend, iEzsigndocumentOrder=$iEzsigndocumentOrder, iEzsigndocumentPagetotal=$iEzsigndocumentPagetotal, iEzsigndocumentSignaturesigned=$iEzsigndocumentSignaturesigned, iEzsigndocumentSignaturetotal=$iEzsigndocumentSignaturetotal, iEzsigndocumentFormfieldtotal=$iEzsigndocumentFormfieldtotal, sEzsigndocumentMD5initial=$sEzsigndocumentMD5initial, tEzsigndocumentDeclinedtosignreason=$tEzsigndocumentDeclinedtosignreason, sEzsigndocumentMD5signed=$sEzsigndocumentMD5signed, bEzsigndocumentEzsignform=$bEzsigndocumentEzsignform, bEzsigndocumentHassignedsignatures=$bEzsigndocumentHassignedsignatures, objAudit=$objAudit, sEzsigndocumentExternalid=$sEzsigndocumentExternalid, iEzsigndocumentEzsignsignatureattachmenttotal=$iEzsigndocumentEzsignsignatureattachmenttotal, iEzsigndocumentEzsigndiscussiontotal=$iEzsigndocumentEzsigndiscussiontotal]';
+  String toString() => 'EzsigndocumentResponse[pkiEzsigndocumentID=$pkiEzsigndocumentID, fkiEzsignfolderID=$fkiEzsignfolderID, fkiEzsignfoldersignerassociationIDDeclinedtosign=$fkiEzsignfoldersignerassociationIDDeclinedtosign, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, dtEzsignformCompleted=$dtEzsignformCompleted, fkiLanguageID=$fkiLanguageID, sEzsigndocumentName=$sEzsigndocumentName, eEzsigndocumentStep=$eEzsigndocumentStep, dtEzsigndocumentFirstsend=$dtEzsigndocumentFirstsend, dtEzsigndocumentLastsend=$dtEzsigndocumentLastsend, iEzsigndocumentOrder=$iEzsigndocumentOrder, iEzsigndocumentPagetotal=$iEzsigndocumentPagetotal, iEzsigndocumentSignaturesigned=$iEzsigndocumentSignaturesigned, iEzsigndocumentSignaturetotal=$iEzsigndocumentSignaturetotal, iEzsigndocumentFormfieldtotal=$iEzsigndocumentFormfieldtotal, sEzsigndocumentMD5initial=$sEzsigndocumentMD5initial, tEzsigndocumentDeclinedtosignreason=$tEzsigndocumentDeclinedtosignreason, sEzsigndocumentMD5signed=$sEzsigndocumentMD5signed, bEzsigndocumentEzsignform=$bEzsigndocumentEzsignform, bEzsigndocumentHassignedsignatures=$bEzsigndocumentHassignedsignatures, bEzsigndocumentSendtoged=$bEzsigndocumentSendtoged, objAudit=$objAudit, sEzsigndocumentExternalid=$sEzsigndocumentExternalid, iEzsigndocumentEzsignsignatureattachmenttotal=$iEzsigndocumentEzsignsignatureattachmenttotal, iEzsigndocumentEzsigndiscussiontotal=$iEzsigndocumentEzsigndiscussiontotal]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -322,6 +334,11 @@ class EzsigndocumentResponse {
     } else {
       json[r'bEzsigndocumentHassignedsignatures'] = null;
     }
+    if (this.bEzsigndocumentSendtoged != null) {
+      json[r'bEzsigndocumentSendtoged'] = this.bEzsigndocumentSendtoged;
+    } else {
+      json[r'bEzsigndocumentSendtoged'] = null;
+    }
     if (this.objAudit != null) {
       json[r'objAudit'] = this.objAudit;
     } else {
@@ -376,6 +393,7 @@ class EzsigndocumentResponse {
         sEzsigndocumentMD5signed: mapValueOfType<String>(json, r'sEzsigndocumentMD5signed'),
         bEzsigndocumentEzsignform: mapValueOfType<bool>(json, r'bEzsigndocumentEzsignform'),
         bEzsigndocumentHassignedsignatures: mapValueOfType<bool>(json, r'bEzsigndocumentHassignedsignatures'),
+        bEzsigndocumentSendtoged: mapValueOfType<bool>(json, r'bEzsigndocumentSendtoged'),
         objAudit: CommonAudit.fromJson(json[r'objAudit']),
         sEzsigndocumentExternalid: mapValueOfType<String>(json, r'sEzsigndocumentExternalid'),
         iEzsigndocumentEzsignsignatureattachmenttotal: mapValueOfType<int>(json, r'iEzsigndocumentEzsignsignatureattachmenttotal')!,

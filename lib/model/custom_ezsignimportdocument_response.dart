@@ -15,6 +15,8 @@ class CustomEzsignimportdocumentResponse {
   CustomEzsignimportdocumentResponse({
     required this.pkiEzsignimportdocumentID,
     required this.sEzsignimportdocumentName,
+    this.fkiEzsigntemplateglobalID,
+    this.sEzsigntemplateglobalDescription,
     this.fkiEzsignfolderID,
     this.sEzsignfolderDescription,
   });
@@ -27,6 +29,26 @@ class CustomEzsignimportdocumentResponse {
 
   /// The name of the Ezsignimportdocument
   String sEzsignimportdocumentName;
+
+  /// The unique ID of the Ezsigntemplateglobal
+  ///
+  /// Minimum value: 0
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiEzsigntemplateglobalID;
+
+  /// The description of the Ezsigntemplate
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEzsigntemplateglobalDescription;
 
   /// The unique ID of the Ezsignfolder
   ///
@@ -52,6 +74,8 @@ class CustomEzsignimportdocumentResponse {
   bool operator ==(Object other) => identical(this, other) || other is CustomEzsignimportdocumentResponse &&
     other.pkiEzsignimportdocumentID == pkiEzsignimportdocumentID &&
     other.sEzsignimportdocumentName == sEzsignimportdocumentName &&
+    other.fkiEzsigntemplateglobalID == fkiEzsigntemplateglobalID &&
+    other.sEzsigntemplateglobalDescription == sEzsigntemplateglobalDescription &&
     other.fkiEzsignfolderID == fkiEzsignfolderID &&
     other.sEzsignfolderDescription == sEzsignfolderDescription;
 
@@ -60,16 +84,28 @@ class CustomEzsignimportdocumentResponse {
     // ignore: unnecessary_parenthesis
     (pkiEzsignimportdocumentID.hashCode) +
     (sEzsignimportdocumentName.hashCode) +
+    (fkiEzsigntemplateglobalID == null ? 0 : fkiEzsigntemplateglobalID!.hashCode) +
+    (sEzsigntemplateglobalDescription == null ? 0 : sEzsigntemplateglobalDescription!.hashCode) +
     (fkiEzsignfolderID == null ? 0 : fkiEzsignfolderID!.hashCode) +
     (sEzsignfolderDescription == null ? 0 : sEzsignfolderDescription!.hashCode);
 
   @override
-  String toString() => 'CustomEzsignimportdocumentResponse[pkiEzsignimportdocumentID=$pkiEzsignimportdocumentID, sEzsignimportdocumentName=$sEzsignimportdocumentName, fkiEzsignfolderID=$fkiEzsignfolderID, sEzsignfolderDescription=$sEzsignfolderDescription]';
+  String toString() => 'CustomEzsignimportdocumentResponse[pkiEzsignimportdocumentID=$pkiEzsignimportdocumentID, sEzsignimportdocumentName=$sEzsignimportdocumentName, fkiEzsigntemplateglobalID=$fkiEzsigntemplateglobalID, sEzsigntemplateglobalDescription=$sEzsigntemplateglobalDescription, fkiEzsignfolderID=$fkiEzsignfolderID, sEzsignfolderDescription=$sEzsignfolderDescription]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiEzsignimportdocumentID'] = this.pkiEzsignimportdocumentID;
       json[r'sEzsignimportdocumentName'] = this.sEzsignimportdocumentName;
+    if (this.fkiEzsigntemplateglobalID != null) {
+      json[r'fkiEzsigntemplateglobalID'] = this.fkiEzsigntemplateglobalID;
+    } else {
+      json[r'fkiEzsigntemplateglobalID'] = null;
+    }
+    if (this.sEzsigntemplateglobalDescription != null) {
+      json[r'sEzsigntemplateglobalDescription'] = this.sEzsigntemplateglobalDescription;
+    } else {
+      json[r'sEzsigntemplateglobalDescription'] = null;
+    }
     if (this.fkiEzsignfolderID != null) {
       json[r'fkiEzsignfolderID'] = this.fkiEzsignfolderID;
     } else {
@@ -104,6 +140,8 @@ class CustomEzsignimportdocumentResponse {
       return CustomEzsignimportdocumentResponse(
         pkiEzsignimportdocumentID: mapValueOfType<int>(json, r'pkiEzsignimportdocumentID')!,
         sEzsignimportdocumentName: mapValueOfType<String>(json, r'sEzsignimportdocumentName')!,
+        fkiEzsigntemplateglobalID: mapValueOfType<int>(json, r'fkiEzsigntemplateglobalID'),
+        sEzsigntemplateglobalDescription: mapValueOfType<String>(json, r'sEzsigntemplateglobalDescription'),
         fkiEzsignfolderID: mapValueOfType<int>(json, r'fkiEzsignfolderID'),
         sEzsignfolderDescription: mapValueOfType<String>(json, r'sEzsignfolderDescription'),
       );

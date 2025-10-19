@@ -300,4 +300,65 @@ class ObjectInvoiceApi {
     }
     return null;
   }
+
+  /// Import attachments into the Invoice
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiInvoiceID (required):
+  ///
+  /// * [InvoiceImportIntoEDMV1Request] invoiceImportIntoEDMV1Request (required):
+  Future<Response> invoiceImportIntoEDMV1WithHttpInfo(int pkiInvoiceID, InvoiceImportIntoEDMV1Request invoiceImportIntoEDMV1Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/invoice/{pkiInvoiceID}/importIntoEDM'
+      .replaceAll('{pkiInvoiceID}', pkiInvoiceID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = invoiceImportIntoEDMV1Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Import attachments into the Invoice
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiInvoiceID (required):
+  ///
+  /// * [InvoiceImportIntoEDMV1Request] invoiceImportIntoEDMV1Request (required):
+  Future<InvoiceImportIntoEDMV1Response?> invoiceImportIntoEDMV1(int pkiInvoiceID, InvoiceImportIntoEDMV1Request invoiceImportIntoEDMV1Request,) async {
+    final response = await invoiceImportIntoEDMV1WithHttpInfo(pkiInvoiceID, invoiceImportIntoEDMV1Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'InvoiceImportIntoEDMV1Response',) as InvoiceImportIntoEDMV1Response;
+    
+    }
+    return null;
+  }
 }

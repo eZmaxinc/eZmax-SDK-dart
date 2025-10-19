@@ -14,6 +14,7 @@ class CustomerAutocompleteElementResponse {
   /// Returns a new [CustomerAutocompleteElementResponse] instance.
   CustomerAutocompleteElementResponse({
     required this.pkiCustomerID,
+    required this.fkiDepartmentID,
     required this.sCustomerName,
     required this.bCustomerIsactive,
   });
@@ -22,6 +23,11 @@ class CustomerAutocompleteElementResponse {
   ///
   /// Minimum value: 0
   int pkiCustomerID;
+
+  /// The unique ID of the Department
+  ///
+  /// Minimum value: 0
+  int fkiDepartmentID;
 
   /// The name of the Customer
   String sCustomerName;
@@ -32,6 +38,7 @@ class CustomerAutocompleteElementResponse {
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomerAutocompleteElementResponse &&
     other.pkiCustomerID == pkiCustomerID &&
+    other.fkiDepartmentID == fkiDepartmentID &&
     other.sCustomerName == sCustomerName &&
     other.bCustomerIsactive == bCustomerIsactive;
 
@@ -39,15 +46,17 @@ class CustomerAutocompleteElementResponse {
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiCustomerID.hashCode) +
+    (fkiDepartmentID.hashCode) +
     (sCustomerName.hashCode) +
     (bCustomerIsactive.hashCode);
 
   @override
-  String toString() => 'CustomerAutocompleteElementResponse[pkiCustomerID=$pkiCustomerID, sCustomerName=$sCustomerName, bCustomerIsactive=$bCustomerIsactive]';
+  String toString() => 'CustomerAutocompleteElementResponse[pkiCustomerID=$pkiCustomerID, fkiDepartmentID=$fkiDepartmentID, sCustomerName=$sCustomerName, bCustomerIsactive=$bCustomerIsactive]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiCustomerID'] = this.pkiCustomerID;
+      json[r'fkiDepartmentID'] = this.fkiDepartmentID;
       json[r'sCustomerName'] = this.sCustomerName;
       json[r'bCustomerIsactive'] = this.bCustomerIsactive;
     return json;
@@ -73,6 +82,7 @@ class CustomerAutocompleteElementResponse {
 
       return CustomerAutocompleteElementResponse(
         pkiCustomerID: mapValueOfType<int>(json, r'pkiCustomerID')!,
+        fkiDepartmentID: mapValueOfType<int>(json, r'fkiDepartmentID')!,
         sCustomerName: mapValueOfType<String>(json, r'sCustomerName')!,
         bCustomerIsactive: mapValueOfType<bool>(json, r'bCustomerIsactive')!,
       );
@@ -123,6 +133,7 @@ class CustomerAutocompleteElementResponse {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'pkiCustomerID',
+    'fkiDepartmentID',
     'sCustomerName',
     'bCustomerIsactive',
   };

@@ -129,6 +129,62 @@ class ObjectEzsignbulksendApi {
     return null;
   }
 
+  /// Create a new Ezsignbulksend
+  ///
+  /// The endpoint allows to create one or many elements at once.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [EzsignbulksendCreateObjectV2Request] ezsignbulksendCreateObjectV2Request (required):
+  Future<Response> ezsignbulksendCreateObjectV2WithHttpInfo(EzsignbulksendCreateObjectV2Request ezsignbulksendCreateObjectV2Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/2/object/ezsignbulksend';
+
+    // ignore: prefer_final_locals
+    Object? postBody = ezsignbulksendCreateObjectV2Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Create a new Ezsignbulksend
+  ///
+  /// The endpoint allows to create one or many elements at once.
+  ///
+  /// Parameters:
+  ///
+  /// * [EzsignbulksendCreateObjectV2Request] ezsignbulksendCreateObjectV2Request (required):
+  Future<EzsignbulksendCreateObjectV2Response?> ezsignbulksendCreateObjectV2(EzsignbulksendCreateObjectV2Request ezsignbulksendCreateObjectV2Request,) async {
+    final response = await ezsignbulksendCreateObjectV2WithHttpInfo(ezsignbulksendCreateObjectV2Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignbulksendCreateObjectV2Response',) as EzsignbulksendCreateObjectV2Response;
+    
+    }
+    return null;
+  }
+
   /// Delete an existing Ezsignbulksend
   ///
   /// 
@@ -242,6 +298,157 @@ class ObjectEzsignbulksendApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignbulksendEditObjectV1Response',) as EzsignbulksendEditObjectV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Edit an existing Ezsignbulksend
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignbulksendID (required):
+  ///
+  /// * [EzsignbulksendEditObjectV2Request] ezsignbulksendEditObjectV2Request (required):
+  Future<Response> ezsignbulksendEditObjectV2WithHttpInfo(int pkiEzsignbulksendID, EzsignbulksendEditObjectV2Request ezsignbulksendEditObjectV2Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/2/object/ezsignbulksend/{pkiEzsignbulksendID}'
+      .replaceAll('{pkiEzsignbulksendID}', pkiEzsignbulksendID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = ezsignbulksendEditObjectV2Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'PUT',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Edit an existing Ezsignbulksend
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignbulksendID (required):
+  ///
+  /// * [EzsignbulksendEditObjectV2Request] ezsignbulksendEditObjectV2Request (required):
+  Future<EzsignbulksendEditObjectV2Response?> ezsignbulksendEditObjectV2(int pkiEzsignbulksendID, EzsignbulksendEditObjectV2Request ezsignbulksendEditObjectV2Request,) async {
+    final response = await ezsignbulksendEditObjectV2WithHttpInfo(pkiEzsignbulksendID, ezsignbulksendEditObjectV2Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignbulksendEditObjectV2Response',) as EzsignbulksendEditObjectV2Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve file to download documents in batch
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignbulksendID (required):
+  ///
+  /// * [bool] bIncludeSigned:
+  ///   Include final document once all signatures were applied
+  ///
+  /// * [bool] bIncludeAttachment:
+  ///   Include attached files in signatures
+  ///
+  /// * [bool] bIncludeProofdocument:
+  ///   Include the evidence report
+  ///
+  /// * [bool] bIncludeProof:
+  ///   include the complete evidence archive including all of the above and more
+  Future<Response> ezsignbulksendGetBatchFileV1WithHttpInfo(int pkiEzsignbulksendID, { bool? bIncludeSigned, bool? bIncludeAttachment, bool? bIncludeProofdocument, bool? bIncludeProof, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsignbulksend/{pkiEzsignbulksendID}/getBatchFile'
+      .replaceAll('{pkiEzsignbulksendID}', pkiEzsignbulksendID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (bIncludeSigned != null) {
+      queryParams.addAll(_queryParams('', 'bIncludeSigned', bIncludeSigned));
+    }
+    if (bIncludeAttachment != null) {
+      queryParams.addAll(_queryParams('', 'bIncludeAttachment', bIncludeAttachment));
+    }
+    if (bIncludeProofdocument != null) {
+      queryParams.addAll(_queryParams('', 'bIncludeProofdocument', bIncludeProofdocument));
+    }
+    if (bIncludeProof != null) {
+      queryParams.addAll(_queryParams('', 'bIncludeProof', bIncludeProof));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve file to download documents in batch
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignbulksendID (required):
+  ///
+  /// * [bool] bIncludeSigned:
+  ///   Include final document once all signatures were applied
+  ///
+  /// * [bool] bIncludeAttachment:
+  ///   Include attached files in signatures
+  ///
+  /// * [bool] bIncludeProofdocument:
+  ///   Include the evidence report
+  ///
+  /// * [bool] bIncludeProof:
+  ///   include the complete evidence archive including all of the above and more
+  Future<MultipartFile?> ezsignbulksendGetBatchFileV1(int pkiEzsignbulksendID, { bool? bIncludeSigned, bool? bIncludeAttachment, bool? bIncludeProofdocument, bool? bIncludeProof, }) async {
+    final response = await ezsignbulksendGetBatchFileV1WithHttpInfo(pkiEzsignbulksendID,  bIncludeSigned: bIncludeSigned, bIncludeAttachment: bIncludeAttachment, bIncludeProofdocument: bIncludeProofdocument, bIncludeProof: bIncludeProof, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'MultipartFile',) as MultipartFile;
     
     }
     return null;
@@ -626,6 +833,63 @@ class ObjectEzsignbulksendApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignbulksendGetObjectV2Response',) as EzsignbulksendGetObjectV2Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve an existing Ezsignbulksend
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignbulksendID (required):
+  Future<Response> ezsignbulksendGetObjectV3WithHttpInfo(int pkiEzsignbulksendID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/3/object/ezsignbulksend/{pkiEzsignbulksendID}'
+      .replaceAll('{pkiEzsignbulksendID}', pkiEzsignbulksendID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve an existing Ezsignbulksend
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignbulksendID (required):
+  Future<EzsignbulksendGetObjectV3Response?> ezsignbulksendGetObjectV3(int pkiEzsignbulksendID,) async {
+    final response = await ezsignbulksendGetObjectV3WithHttpInfo(pkiEzsignbulksendID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignbulksendGetObjectV3Response',) as EzsignbulksendGetObjectV3Response;
     
     }
     return null;

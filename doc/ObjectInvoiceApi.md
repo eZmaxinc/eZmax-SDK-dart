@@ -14,6 +14,7 @@ Method | HTTP request | Description
 [**invoiceGetCommunicationListV1**](ObjectInvoiceApi.md#invoicegetcommunicationlistv1) | **GET** /1/object/invoice/{pkiInvoiceID}/getCommunicationList | Retrieve Communication list
 [**invoiceGetCommunicationrecipientsV1**](ObjectInvoiceApi.md#invoicegetcommunicationrecipientsv1) | **GET** /1/object/invoice/{pkiInvoiceID}/getCommunicationrecipients | Retrieve Invoice's Communicationrecipient
 [**invoiceGetCommunicationsendersV1**](ObjectInvoiceApi.md#invoicegetcommunicationsendersv1) | **GET** /1/object/invoice/{pkiInvoiceID}/getCommunicationsenders | Retrieve Invoice's Communicationsender
+[**invoiceImportIntoEDMV1**](ObjectInvoiceApi.md#invoiceimportintoedmv1) | **POST** /1/object/invoice/{pkiInvoiceID}/importIntoEDM | Import attachments into the Invoice
 
 
 # **invoiceGetAttachmentsV1**
@@ -247,6 +248,55 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **invoiceImportIntoEDMV1**
+> InvoiceImportIntoEDMV1Response invoiceImportIntoEDMV1(pkiInvoiceID, invoiceImportIntoEDMV1Request)
+
+Import attachments into the Invoice
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectInvoiceApi();
+final pkiInvoiceID = 56; // int | 
+final invoiceImportIntoEDMV1Request = InvoiceImportIntoEDMV1Request(); // InvoiceImportIntoEDMV1Request | 
+
+try {
+    final result = api_instance.invoiceImportIntoEDMV1(pkiInvoiceID, invoiceImportIntoEDMV1Request);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectInvoiceApi->invoiceImportIntoEDMV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiInvoiceID** | **int**|  | 
+ **invoiceImportIntoEDMV1Request** | [**InvoiceImportIntoEDMV1Request**](InvoiceImportIntoEDMV1Request.md)|  | 
+
+### Return type
+
+[**InvoiceImportIntoEDMV1Response**](InvoiceImportIntoEDMV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

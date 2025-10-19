@@ -14,7 +14,7 @@ class EzsignsignaturepaymentdetailRequestCompound {
   /// Returns a new [EzsignsignaturepaymentdetailRequestCompound] instance.
   EzsignsignaturepaymentdetailRequestCompound({
     this.pkiEzsignsignaturepaymentdetailID,
-    this.fkiGlaccountcontainerID,
+    required this.fkiGlaccountcontainerID,
     required this.tEzsignsignaturepaymentdetailDescription,
     required this.dEzsignsignaturepaymentdetailAmount,
     required this.eEzsignsignaturepaymentdetailTaxable,
@@ -35,13 +35,7 @@ class EzsignsignaturepaymentdetailRequestCompound {
   /// The unique ID of the Glaccountcontainer
   ///
   /// Minimum value: 0
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  int? fkiGlaccountcontainerID;
+  int fkiGlaccountcontainerID;
 
   /// A description for the Ezsignsignaturepaymentdetail.
   String tEzsignsignaturepaymentdetailDescription;
@@ -63,7 +57,7 @@ class EzsignsignaturepaymentdetailRequestCompound {
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiEzsignsignaturepaymentdetailID == null ? 0 : pkiEzsignsignaturepaymentdetailID!.hashCode) +
-    (fkiGlaccountcontainerID == null ? 0 : fkiGlaccountcontainerID!.hashCode) +
+    (fkiGlaccountcontainerID.hashCode) +
     (tEzsignsignaturepaymentdetailDescription.hashCode) +
     (dEzsignsignaturepaymentdetailAmount.hashCode) +
     (eEzsignsignaturepaymentdetailTaxable.hashCode);
@@ -78,11 +72,7 @@ class EzsignsignaturepaymentdetailRequestCompound {
     } else {
       json[r'pkiEzsignsignaturepaymentdetailID'] = null;
     }
-    if (this.fkiGlaccountcontainerID != null) {
       json[r'fkiGlaccountcontainerID'] = this.fkiGlaccountcontainerID;
-    } else {
-      json[r'fkiGlaccountcontainerID'] = null;
-    }
       json[r'tEzsignsignaturepaymentdetailDescription'] = this.tEzsignsignaturepaymentdetailDescription;
       json[r'dEzsignsignaturepaymentdetailAmount'] = this.dEzsignsignaturepaymentdetailAmount;
       json[r'eEzsignsignaturepaymentdetailTaxable'] = this.eEzsignsignaturepaymentdetailTaxable;
@@ -109,7 +99,7 @@ class EzsignsignaturepaymentdetailRequestCompound {
 
       return EzsignsignaturepaymentdetailRequestCompound(
         pkiEzsignsignaturepaymentdetailID: mapValueOfType<int>(json, r'pkiEzsignsignaturepaymentdetailID'),
-        fkiGlaccountcontainerID: mapValueOfType<int>(json, r'fkiGlaccountcontainerID'),
+        fkiGlaccountcontainerID: mapValueOfType<int>(json, r'fkiGlaccountcontainerID')!,
         tEzsignsignaturepaymentdetailDescription: mapValueOfType<String>(json, r'tEzsignsignaturepaymentdetailDescription')!,
         dEzsignsignaturepaymentdetailAmount: mapValueOfType<String>(json, r'dEzsignsignaturepaymentdetailAmount')!,
         eEzsignsignaturepaymentdetailTaxable: FieldEEzsignsignaturepaymentdetailTaxable.fromJson(json[r'eEzsignsignaturepaymentdetailTaxable'])!,
@@ -160,6 +150,7 @@ class EzsignsignaturepaymentdetailRequestCompound {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
+    'fkiGlaccountcontainerID',
     'tEzsignsignaturepaymentdetailDescription',
     'dEzsignsignaturepaymentdetailAmount',
     'eEzsignsignaturepaymentdetailTaxable',

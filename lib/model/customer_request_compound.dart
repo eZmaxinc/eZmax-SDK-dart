@@ -17,6 +17,7 @@ class CustomerRequestCompound {
     required this.fkiCompanyID,
     required this.fkiCustomergroupID,
     required this.sCustomerName,
+    this.sCustomerNote,
     required this.fkiContactinformationsID,
     required this.fkiContactcontainerID,
     required this.fkiImageID,
@@ -91,6 +92,15 @@ class CustomerRequestCompound {
 
   /// The name of the Customer
   String sCustomerName;
+
+  /// A note for the Customer
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sCustomerNote;
 
   /// The unique ID of the Contactinformations
   ///
@@ -321,6 +331,7 @@ class CustomerRequestCompound {
     other.fkiCompanyID == fkiCompanyID &&
     other.fkiCustomergroupID == fkiCustomergroupID &&
     other.sCustomerName == sCustomerName &&
+    other.sCustomerNote == sCustomerNote &&
     other.fkiContactinformationsID == fkiContactinformationsID &&
     other.fkiContactcontainerID == fkiContactcontainerID &&
     other.fkiImageID == fkiImageID &&
@@ -376,6 +387,7 @@ class CustomerRequestCompound {
     (fkiCompanyID.hashCode) +
     (fkiCustomergroupID.hashCode) +
     (sCustomerName.hashCode) +
+    (sCustomerNote == null ? 0 : sCustomerNote!.hashCode) +
     (fkiContactinformationsID.hashCode) +
     (fkiContactcontainerID.hashCode) +
     (fkiImageID.hashCode) +
@@ -425,7 +437,7 @@ class CustomerRequestCompound {
     (IMPORTID == null ? 0 : IMPORTID!.hashCode);
 
   @override
-  String toString() => 'CustomerRequestCompound[pkiCustomerID=$pkiCustomerID, fkiCompanyID=$fkiCompanyID, fkiCustomergroupID=$fkiCustomergroupID, sCustomerName=$sCustomerName, fkiContactinformationsID=$fkiContactinformationsID, fkiContactcontainerID=$fkiContactcontainerID, fkiImageID=$fkiImageID, fkiGlaccountcontainerID=$fkiGlaccountcontainerID, fkiLanguageID=$fkiLanguageID, fkiDepartmentID=$fkiDepartmentID, fkiPaymentmethodID=$fkiPaymentmethodID, fkiElectronicfundstransferbankaccountID=$fkiElectronicfundstransferbankaccountID, fkiElectronicfundstransferbankaccountIDDirectdebit=$fkiElectronicfundstransferbankaccountIDDirectdebit, fkiSendingmethodID=$fkiSendingmethodID, fkiTaxassignmentID=$fkiTaxassignmentID, fkiAttendancestatusID=$fkiAttendancestatusID, fkiAgentIDVariableexpensechargeto=$fkiAgentIDVariableexpensechargeto, fkiBrokerIDVariableexpensechargeto=$fkiBrokerIDVariableexpensechargeto, fkiCustomerIDVariableexpensechargeto=$fkiCustomerIDVariableexpensechargeto, fkiGlaccountcontainerIDVariableexpensechargeto=$fkiGlaccountcontainerIDVariableexpensechargeto, fkiAgentIDSupplychargechargeto=$fkiAgentIDSupplychargechargeto, fkiBrokerIDSupplychargechargeto=$fkiBrokerIDSupplychargechargeto, fkiCustomerIDSupplychargechargeto=$fkiCustomerIDSupplychargechargeto, fkiGlaccountcontainerIDSupplychargechargeto=$fkiGlaccountcontainerIDSupplychargechargeto, fkiInvoicealternatelogoID=$fkiInvoicealternatelogoID, fkiSynchronizationlinkserverID=$fkiSynchronizationlinkserverID, efkiUserID=$efkiUserID, efksCustomerCode=$efksCustomerCode, sCustomerCode=$sCustomerCode, dCustomerFulltimeequivalent=$dCustomerFulltimeequivalent, iCustomerPhotocopiercode=$iCustomerPhotocopiercode, iCustomerLongdistancecode=$iCustomerLongdistancecode, iCustomerTimewindowstart=$iCustomerTimewindowstart, iCustomerTimewindowend=$iCustomerTimewindowend, dCustomerMinimumchargeableinterests=$dCustomerMinimumchargeableinterests, dtCustomerBirthdate=$dtCustomerBirthdate, dtCustomerTransfer=$dtCustomerTransfer, dtCustomerTransferappointment=$dtCustomerTransferappointment, dtCustomerTransfersurvey=$dtCustomerTransfersurvey, bCustomerIsactive=$bCustomerIsactive, bCustomerVariableexpensefinanced=$bCustomerVariableexpensefinanced, bCustomerVariableexpensefinancedtaxes=$bCustomerVariableexpensefinancedtaxes, bCustomerSupplychargefinanced=$bCustomerSupplychargefinanced, bCustomerSupplychargefinancedtaxes=$bCustomerSupplychargefinancedtaxes, bCustomerAttendance=$bCustomerAttendance, eCustomerType=$eCustomerType, eCustomerMarketingcorrespondence=$eCustomerMarketingcorrespondence, bCustomerBlackcopycarbon=$bCustomerBlackcopycarbon, bCustomerUnsubscribeinfo=$bCustomerUnsubscribeinfo, tCustomerComment=$tCustomerComment, IMPORTID=$IMPORTID]';
+  String toString() => 'CustomerRequestCompound[pkiCustomerID=$pkiCustomerID, fkiCompanyID=$fkiCompanyID, fkiCustomergroupID=$fkiCustomergroupID, sCustomerName=$sCustomerName, sCustomerNote=$sCustomerNote, fkiContactinformationsID=$fkiContactinformationsID, fkiContactcontainerID=$fkiContactcontainerID, fkiImageID=$fkiImageID, fkiGlaccountcontainerID=$fkiGlaccountcontainerID, fkiLanguageID=$fkiLanguageID, fkiDepartmentID=$fkiDepartmentID, fkiPaymentmethodID=$fkiPaymentmethodID, fkiElectronicfundstransferbankaccountID=$fkiElectronicfundstransferbankaccountID, fkiElectronicfundstransferbankaccountIDDirectdebit=$fkiElectronicfundstransferbankaccountIDDirectdebit, fkiSendingmethodID=$fkiSendingmethodID, fkiTaxassignmentID=$fkiTaxassignmentID, fkiAttendancestatusID=$fkiAttendancestatusID, fkiAgentIDVariableexpensechargeto=$fkiAgentIDVariableexpensechargeto, fkiBrokerIDVariableexpensechargeto=$fkiBrokerIDVariableexpensechargeto, fkiCustomerIDVariableexpensechargeto=$fkiCustomerIDVariableexpensechargeto, fkiGlaccountcontainerIDVariableexpensechargeto=$fkiGlaccountcontainerIDVariableexpensechargeto, fkiAgentIDSupplychargechargeto=$fkiAgentIDSupplychargechargeto, fkiBrokerIDSupplychargechargeto=$fkiBrokerIDSupplychargechargeto, fkiCustomerIDSupplychargechargeto=$fkiCustomerIDSupplychargechargeto, fkiGlaccountcontainerIDSupplychargechargeto=$fkiGlaccountcontainerIDSupplychargechargeto, fkiInvoicealternatelogoID=$fkiInvoicealternatelogoID, fkiSynchronizationlinkserverID=$fkiSynchronizationlinkserverID, efkiUserID=$efkiUserID, efksCustomerCode=$efksCustomerCode, sCustomerCode=$sCustomerCode, dCustomerFulltimeequivalent=$dCustomerFulltimeequivalent, iCustomerPhotocopiercode=$iCustomerPhotocopiercode, iCustomerLongdistancecode=$iCustomerLongdistancecode, iCustomerTimewindowstart=$iCustomerTimewindowstart, iCustomerTimewindowend=$iCustomerTimewindowend, dCustomerMinimumchargeableinterests=$dCustomerMinimumchargeableinterests, dtCustomerBirthdate=$dtCustomerBirthdate, dtCustomerTransfer=$dtCustomerTransfer, dtCustomerTransferappointment=$dtCustomerTransferappointment, dtCustomerTransfersurvey=$dtCustomerTransfersurvey, bCustomerIsactive=$bCustomerIsactive, bCustomerVariableexpensefinanced=$bCustomerVariableexpensefinanced, bCustomerVariableexpensefinancedtaxes=$bCustomerVariableexpensefinancedtaxes, bCustomerSupplychargefinanced=$bCustomerSupplychargefinanced, bCustomerSupplychargefinancedtaxes=$bCustomerSupplychargefinancedtaxes, bCustomerAttendance=$bCustomerAttendance, eCustomerType=$eCustomerType, eCustomerMarketingcorrespondence=$eCustomerMarketingcorrespondence, bCustomerBlackcopycarbon=$bCustomerBlackcopycarbon, bCustomerUnsubscribeinfo=$bCustomerUnsubscribeinfo, tCustomerComment=$tCustomerComment, IMPORTID=$IMPORTID]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -437,6 +449,11 @@ class CustomerRequestCompound {
       json[r'fkiCompanyID'] = this.fkiCompanyID;
       json[r'fkiCustomergroupID'] = this.fkiCustomergroupID;
       json[r'sCustomerName'] = this.sCustomerName;
+    if (this.sCustomerNote != null) {
+      json[r'sCustomerNote'] = this.sCustomerNote;
+    } else {
+      json[r'sCustomerNote'] = null;
+    }
       json[r'fkiContactinformationsID'] = this.fkiContactinformationsID;
       json[r'fkiContactcontainerID'] = this.fkiContactcontainerID;
       json[r'fkiImageID'] = this.fkiImageID;
@@ -522,6 +539,7 @@ class CustomerRequestCompound {
         fkiCompanyID: mapValueOfType<int>(json, r'fkiCompanyID')!,
         fkiCustomergroupID: mapValueOfType<int>(json, r'fkiCustomergroupID')!,
         sCustomerName: mapValueOfType<String>(json, r'sCustomerName')!,
+        sCustomerNote: mapValueOfType<String>(json, r'sCustomerNote'),
         fkiContactinformationsID: mapValueOfType<int>(json, r'fkiContactinformationsID')!,
         fkiContactcontainerID: mapValueOfType<int>(json, r'fkiContactcontainerID')!,
         fkiImageID: mapValueOfType<int>(json, r'fkiImageID')!,

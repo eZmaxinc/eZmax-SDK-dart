@@ -27,6 +27,7 @@ class FieldEEzsigndocumentStep {
   static const unsigned = FieldEEzsigndocumentStep._(r'Unsigned');
   static const partiallySigned = FieldEEzsigndocumentStep._(r'PartiallySigned');
   static const declinedToSign = FieldEEzsigndocumentStep._(r'DeclinedToSign');
+  static const pendingPrematurelyEnded = FieldEEzsigndocumentStep._(r'PendingPrematurelyEnded');
   static const prematurelyEnded = FieldEEzsigndocumentStep._(r'PrematurelyEnded');
   static const pendingCompletion = FieldEEzsigndocumentStep._(r'PendingCompletion');
   static const completed = FieldEEzsigndocumentStep._(r'Completed');
@@ -38,6 +39,7 @@ class FieldEEzsigndocumentStep {
     unsigned,
     partiallySigned,
     declinedToSign,
+    pendingPrematurelyEnded,
     prematurelyEnded,
     pendingCompletion,
     completed,
@@ -84,6 +86,7 @@ class FieldEEzsigndocumentStepTypeTransformer {
         case r'Unsigned': return FieldEEzsigndocumentStep.unsigned;
         case r'PartiallySigned': return FieldEEzsigndocumentStep.partiallySigned;
         case r'DeclinedToSign': return FieldEEzsigndocumentStep.declinedToSign;
+        case r'PendingPrematurelyEnded': return FieldEEzsigndocumentStep.pendingPrematurelyEnded;
         case r'PrematurelyEnded': return FieldEEzsigndocumentStep.prematurelyEnded;
         case r'PendingCompletion': return FieldEEzsigndocumentStep.pendingCompletion;
         case r'Completed': return FieldEEzsigndocumentStep.completed;

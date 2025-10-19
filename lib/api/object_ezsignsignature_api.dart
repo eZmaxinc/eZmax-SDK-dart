@@ -18,7 +18,7 @@ class ObjectEzsignsignatureApi {
 
   /// Create a new Ezsignsignature
   ///
-  /// The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
+  /// The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.  Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -52,7 +52,7 @@ class ObjectEzsignsignatureApi {
 
   /// Create a new Ezsignsignature
   ///
-  /// The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
+  /// The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.  Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
   ///
   /// Parameters:
   ///
@@ -74,7 +74,7 @@ class ObjectEzsignsignatureApi {
 
   /// Create a new Ezsignsignature
   ///
-  /// The endpoint allows to create one or many elements at once.
+  /// The endpoint allows to create one or many elements at once.  Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -108,7 +108,7 @@ class ObjectEzsignsignatureApi {
 
   /// Create a new Ezsignsignature
   ///
-  /// The endpoint allows to create one or many elements at once.
+  /// The endpoint allows to create one or many elements at once.  Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
   ///
   /// Parameters:
   ///
@@ -130,7 +130,7 @@ class ObjectEzsignsignatureApi {
 
   /// Create a new Ezsignsignature
   ///
-  /// The endpoint allows to create one or many elements at once.
+  /// The endpoint allows to create one or many elements at once.  Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -164,7 +164,7 @@ class ObjectEzsignsignatureApi {
 
   /// Create a new Ezsignsignature
   ///
-  /// The endpoint allows to create one or many elements at once.
+  /// The endpoint allows to create one or many elements at once.  Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
   ///
   /// Parameters:
   ///
@@ -179,6 +179,62 @@ class ObjectEzsignsignatureApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignsignatureCreateObjectV3Response',) as EzsignsignatureCreateObjectV3Response;
+    
+    }
+    return null;
+  }
+
+  /// Create a new Ezsignsignature
+  ///
+  /// The endpoint allows to create one or many elements at once.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [EzsignsignatureCreateObjectV4Request] ezsignsignatureCreateObjectV4Request (required):
+  Future<Response> ezsignsignatureCreateObjectV4WithHttpInfo(EzsignsignatureCreateObjectV4Request ezsignsignatureCreateObjectV4Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/4/object/ezsignsignature';
+
+    // ignore: prefer_final_locals
+    Object? postBody = ezsignsignatureCreateObjectV4Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Create a new Ezsignsignature
+  ///
+  /// The endpoint allows to create one or many elements at once.
+  ///
+  /// Parameters:
+  ///
+  /// * [EzsignsignatureCreateObjectV4Request] ezsignsignatureCreateObjectV4Request (required):
+  Future<EzsignsignatureCreateObjectV4Response?> ezsignsignatureCreateObjectV4(EzsignsignatureCreateObjectV4Request ezsignsignatureCreateObjectV4Request,) async {
+    final response = await ezsignsignatureCreateObjectV4WithHttpInfo(ezsignsignatureCreateObjectV4Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignsignatureCreateObjectV4Response',) as EzsignsignatureCreateObjectV4Response;
     
     }
     return null;
@@ -243,7 +299,7 @@ class ObjectEzsignsignatureApi {
 
   /// Edit an existing Ezsignsignature
   ///
-  /// 
+  /// Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -280,7 +336,7 @@ class ObjectEzsignsignatureApi {
 
   /// Edit an existing Ezsignsignature
   ///
-  /// 
+  /// Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
   ///
   /// Parameters:
   ///
@@ -297,6 +353,67 @@ class ObjectEzsignsignatureApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignsignatureEditObjectV2Response',) as EzsignsignatureEditObjectV2Response;
+    
+    }
+    return null;
+  }
+
+  /// Edit an existing Ezsignsignature
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignsignatureID (required):
+  ///
+  /// * [EzsignsignatureEditObjectV3Request] ezsignsignatureEditObjectV3Request (required):
+  Future<Response> ezsignsignatureEditObjectV3WithHttpInfo(int pkiEzsignsignatureID, EzsignsignatureEditObjectV3Request ezsignsignatureEditObjectV3Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/3/object/ezsignsignature/{pkiEzsignsignatureID}'
+      .replaceAll('{pkiEzsignsignatureID}', pkiEzsignsignatureID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = ezsignsignatureEditObjectV3Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'PUT',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Edit an existing Ezsignsignature
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignsignatureID (required):
+  ///
+  /// * [EzsignsignatureEditObjectV3Request] ezsignsignatureEditObjectV3Request (required):
+  Future<EzsignsignatureEditObjectV3Response?> ezsignsignatureEditObjectV3(int pkiEzsignsignatureID, EzsignsignatureEditObjectV3Request ezsignsignatureEditObjectV3Request,) async {
+    final response = await ezsignsignatureEditObjectV3WithHttpInfo(pkiEzsignsignatureID, ezsignsignatureEditObjectV3Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignsignatureEditObjectV3Response',) as EzsignsignatureEditObjectV3Response;
     
     }
     return null;
@@ -405,7 +522,7 @@ class ObjectEzsignsignatureApi {
 
   /// Retrieve an existing Ezsignsignature
   ///
-  /// 
+  /// Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -440,7 +557,7 @@ class ObjectEzsignsignatureApi {
 
   /// Retrieve an existing Ezsignsignature
   ///
-  /// 
+  /// Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
   ///
   /// Parameters:
   ///
@@ -455,6 +572,63 @@ class ObjectEzsignsignatureApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignsignatureGetObjectV3Response',) as EzsignsignatureGetObjectV3Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve an existing Ezsignsignature
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignsignatureID (required):
+  Future<Response> ezsignsignatureGetObjectV4WithHttpInfo(int pkiEzsignsignatureID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/4/object/ezsignsignature/{pkiEzsignsignatureID}'
+      .replaceAll('{pkiEzsignsignatureID}', pkiEzsignsignatureID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve an existing Ezsignsignature
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignsignatureID (required):
+  Future<EzsignsignatureGetObjectV4Response?> ezsignsignatureGetObjectV4(int pkiEzsignsignatureID,) async {
+    final response = await ezsignsignatureGetObjectV4WithHttpInfo(pkiEzsignsignatureID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignsignatureGetObjectV4Response',) as EzsignsignatureGetObjectV4Response;
     
     }
     return null;

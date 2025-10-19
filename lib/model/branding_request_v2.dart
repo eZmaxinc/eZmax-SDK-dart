@@ -14,6 +14,7 @@ class BrandingRequestV2 {
   /// Returns a new [BrandingRequestV2] instance.
   BrandingRequestV2({
     this.pkiBrandingID,
+    this.fkiDomainID,
     required this.objBrandingDescription,
     required this.eBrandingLogo,
     this.eBrandingAlignlogo,
@@ -34,6 +35,18 @@ class BrandingRequestV2 {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   int? pkiBrandingID;
+
+  /// The unique ID of the Domain
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 255
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiDomainID;
 
   MultilingualBrandingDescription objBrandingDescription;
 
@@ -86,6 +99,7 @@ class BrandingRequestV2 {
   @override
   bool operator ==(Object other) => identical(this, other) || other is BrandingRequestV2 &&
     other.pkiBrandingID == pkiBrandingID &&
+    other.fkiDomainID == fkiDomainID &&
     other.objBrandingDescription == objBrandingDescription &&
     other.eBrandingLogo == eBrandingLogo &&
     other.eBrandingAlignlogo == eBrandingAlignlogo &&
@@ -99,6 +113,7 @@ class BrandingRequestV2 {
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiBrandingID == null ? 0 : pkiBrandingID!.hashCode) +
+    (fkiDomainID == null ? 0 : fkiDomainID!.hashCode) +
     (objBrandingDescription.hashCode) +
     (eBrandingLogo.hashCode) +
     (eBrandingAlignlogo == null ? 0 : eBrandingAlignlogo!.hashCode) +
@@ -109,7 +124,7 @@ class BrandingRequestV2 {
     (bBrandingIsactive.hashCode);
 
   @override
-  String toString() => 'BrandingRequestV2[pkiBrandingID=$pkiBrandingID, objBrandingDescription=$objBrandingDescription, eBrandingLogo=$eBrandingLogo, eBrandingAlignlogo=$eBrandingAlignlogo, sBrandingBase64=$sBrandingBase64, iBrandingColor=$iBrandingColor, sBrandingName=$sBrandingName, sEmailAddress=$sEmailAddress, bBrandingIsactive=$bBrandingIsactive]';
+  String toString() => 'BrandingRequestV2[pkiBrandingID=$pkiBrandingID, fkiDomainID=$fkiDomainID, objBrandingDescription=$objBrandingDescription, eBrandingLogo=$eBrandingLogo, eBrandingAlignlogo=$eBrandingAlignlogo, sBrandingBase64=$sBrandingBase64, iBrandingColor=$iBrandingColor, sBrandingName=$sBrandingName, sEmailAddress=$sEmailAddress, bBrandingIsactive=$bBrandingIsactive]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -117,6 +132,11 @@ class BrandingRequestV2 {
       json[r'pkiBrandingID'] = this.pkiBrandingID;
     } else {
       json[r'pkiBrandingID'] = null;
+    }
+    if (this.fkiDomainID != null) {
+      json[r'fkiDomainID'] = this.fkiDomainID;
+    } else {
+      json[r'fkiDomainID'] = null;
     }
       json[r'objBrandingDescription'] = this.objBrandingDescription;
       json[r'eBrandingLogo'] = this.eBrandingLogo;
@@ -165,6 +185,7 @@ class BrandingRequestV2 {
 
       return BrandingRequestV2(
         pkiBrandingID: mapValueOfType<int>(json, r'pkiBrandingID'),
+        fkiDomainID: mapValueOfType<int>(json, r'fkiDomainID'),
         objBrandingDescription: MultilingualBrandingDescription.fromJson(json[r'objBrandingDescription'])!,
         eBrandingLogo: FieldEBrandingLogo.fromJson(json[r'eBrandingLogo'])!,
         eBrandingAlignlogo: FieldEBrandingAlignlogo.fromJson(json[r'eBrandingAlignlogo']),

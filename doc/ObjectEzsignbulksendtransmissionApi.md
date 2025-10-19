@@ -9,11 +9,65 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**ezsignbulksendtransmissionGetBatchFileV1**](ObjectEzsignbulksendtransmissionApi.md#ezsignbulksendtransmissiongetbatchfilev1) | **GET** /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getBatchFile | Retrieve file to download documents in batch
 [**ezsignbulksendtransmissionGetCsvErrorsV1**](ObjectEzsignbulksendtransmissionApi.md#ezsignbulksendtransmissiongetcsverrorsv1) | **GET** /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getCsvErrors | Retrieve an existing Ezsignbulksendtransmission's Csv containing errors
 [**ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1**](ObjectEzsignbulksendtransmissionApi.md#ezsignbulksendtransmissiongetezsignsignaturesautomaticv1) | **GET** /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getEzsignsignaturesAutomatic | Retrieve an existing Ezsignbulksendtransmission's automatic Ezsignsignatures
 [**ezsignbulksendtransmissionGetFormsDataV1**](ObjectEzsignbulksendtransmissionApi.md#ezsignbulksendtransmissiongetformsdatav1) | **GET** /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getFormsData | Retrieve an existing Ezsignbulksendtransmission's forms data
 [**ezsignbulksendtransmissionGetObjectV2**](ObjectEzsignbulksendtransmissionApi.md#ezsignbulksendtransmissiongetobjectv2) | **GET** /2/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID} | Retrieve an existing Ezsignbulksendtransmission
 
+
+# **ezsignbulksendtransmissionGetBatchFileV1**
+> MultipartFile ezsignbulksendtransmissionGetBatchFileV1(pkiEzsignbulksendtransmissionID, bIncludeSigned, bIncludeAttachment, bIncludeProofdocument, bIncludeProof)
+
+Retrieve file to download documents in batch
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectEzsignbulksendtransmissionApi();
+final pkiEzsignbulksendtransmissionID = 56; // int | 
+final bIncludeSigned = true; // bool | Include final document once all signatures were applied
+final bIncludeAttachment = true; // bool | Include attached files in signatures
+final bIncludeProofdocument = true; // bool | Include the evidence report
+final bIncludeProof = true; // bool | include the complete evidence archive including all of the above and more
+
+try {
+    final result = api_instance.ezsignbulksendtransmissionGetBatchFileV1(pkiEzsignbulksendtransmissionID, bIncludeSigned, bIncludeAttachment, bIncludeProofdocument, bIncludeProof);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectEzsignbulksendtransmissionApi->ezsignbulksendtransmissionGetBatchFileV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignbulksendtransmissionID** | **int**|  | 
+ **bIncludeSigned** | **bool**| Include final document once all signatures were applied | [optional] 
+ **bIncludeAttachment** | **bool**| Include attached files in signatures | [optional] 
+ **bIncludeProofdocument** | **bool**| Include the evidence report | [optional] 
+ **bIncludeProof** | **bool**| include the complete evidence archive including all of the above and more | [optional] 
+
+### Return type
+
+[**MultipartFile**](MultipartFile.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/xml, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **ezsignbulksendtransmissionGetCsvErrorsV1**
 > String ezsignbulksendtransmissionGetCsvErrorsV1(pkiEzsignbulksendtransmissionID)

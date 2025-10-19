@@ -18,6 +18,7 @@ class EzsignfoldersignerassociationResponseCompoundUser {
     required this.sUserFirstname,
     required this.sUserLastname,
     required this.sEmailAddress,
+    required this.eUserType,
   });
 
   /// The unique ID of the User
@@ -40,13 +41,16 @@ class EzsignfoldersignerassociationResponseCompoundUser {
   /// The email address.
   String sEmailAddress;
 
+  FieldEUserType eUserType;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfoldersignerassociationResponseCompoundUser &&
     other.pkiUserID == pkiUserID &&
     other.fkiLanguageID == fkiLanguageID &&
     other.sUserFirstname == sUserFirstname &&
     other.sUserLastname == sUserLastname &&
-    other.sEmailAddress == sEmailAddress;
+    other.sEmailAddress == sEmailAddress &&
+    other.eUserType == eUserType;
 
   @override
   int get hashCode =>
@@ -55,10 +59,11 @@ class EzsignfoldersignerassociationResponseCompoundUser {
     (fkiLanguageID.hashCode) +
     (sUserFirstname.hashCode) +
     (sUserLastname.hashCode) +
-    (sEmailAddress.hashCode);
+    (sEmailAddress.hashCode) +
+    (eUserType.hashCode);
 
   @override
-  String toString() => 'EzsignfoldersignerassociationResponseCompoundUser[pkiUserID=$pkiUserID, fkiLanguageID=$fkiLanguageID, sUserFirstname=$sUserFirstname, sUserLastname=$sUserLastname, sEmailAddress=$sEmailAddress]';
+  String toString() => 'EzsignfoldersignerassociationResponseCompoundUser[pkiUserID=$pkiUserID, fkiLanguageID=$fkiLanguageID, sUserFirstname=$sUserFirstname, sUserLastname=$sUserLastname, sEmailAddress=$sEmailAddress, eUserType=$eUserType]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -67,6 +72,7 @@ class EzsignfoldersignerassociationResponseCompoundUser {
       json[r'sUserFirstname'] = this.sUserFirstname;
       json[r'sUserLastname'] = this.sUserLastname;
       json[r'sEmailAddress'] = this.sEmailAddress;
+      json[r'eUserType'] = this.eUserType;
     return json;
   }
 
@@ -94,6 +100,7 @@ class EzsignfoldersignerassociationResponseCompoundUser {
         sUserFirstname: mapValueOfType<String>(json, r'sUserFirstname')!,
         sUserLastname: mapValueOfType<String>(json, r'sUserLastname')!,
         sEmailAddress: mapValueOfType<String>(json, r'sEmailAddress')!,
+        eUserType: FieldEUserType.fromJson(json[r'eUserType'])!,
       );
     }
     return null;
@@ -146,6 +153,7 @@ class EzsignfoldersignerassociationResponseCompoundUser {
     'sUserFirstname',
     'sUserLastname',
     'sEmailAddress',
+    'eUserType',
   };
 }
 

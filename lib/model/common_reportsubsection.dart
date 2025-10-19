@@ -13,11 +13,22 @@ part of openapi.api;
 class CommonReportsubsection {
   /// Returns a new [CommonReportsubsection] instance.
   CommonReportsubsection({
+    this.aObjReportcolumn = const [],
+    required this.iReportsubsectionColumncount,
+    required this.iReportsubsectionWidth,
     required this.objReportsubsectionpartHeader,
     required this.objReportsubsectionpartBody,
     required this.objReportsubsectionpartFooter,
     this.sReportsubsectionTitle,
   });
+
+  List<CommonReportcolumn> aObjReportcolumn;
+
+  /// The number of Reportcolumns in the Reportsection
+  int iReportsubsectionColumncount;
+
+  /// The combined width of all the Reportcolumns in the Reportsection
+  int iReportsubsectionWidth;
 
   CommonReportsubsectionpart objReportsubsectionpartHeader;
 
@@ -36,6 +47,9 @@ class CommonReportsubsection {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonReportsubsection &&
+    _deepEquality.equals(other.aObjReportcolumn, aObjReportcolumn) &&
+    other.iReportsubsectionColumncount == iReportsubsectionColumncount &&
+    other.iReportsubsectionWidth == iReportsubsectionWidth &&
     other.objReportsubsectionpartHeader == objReportsubsectionpartHeader &&
     other.objReportsubsectionpartBody == objReportsubsectionpartBody &&
     other.objReportsubsectionpartFooter == objReportsubsectionpartFooter &&
@@ -44,16 +58,22 @@ class CommonReportsubsection {
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
+    (aObjReportcolumn.hashCode) +
+    (iReportsubsectionColumncount.hashCode) +
+    (iReportsubsectionWidth.hashCode) +
     (objReportsubsectionpartHeader.hashCode) +
     (objReportsubsectionpartBody.hashCode) +
     (objReportsubsectionpartFooter.hashCode) +
     (sReportsubsectionTitle == null ? 0 : sReportsubsectionTitle!.hashCode);
 
   @override
-  String toString() => 'CommonReportsubsection[objReportsubsectionpartHeader=$objReportsubsectionpartHeader, objReportsubsectionpartBody=$objReportsubsectionpartBody, objReportsubsectionpartFooter=$objReportsubsectionpartFooter, sReportsubsectionTitle=$sReportsubsectionTitle]';
+  String toString() => 'CommonReportsubsection[aObjReportcolumn=$aObjReportcolumn, iReportsubsectionColumncount=$iReportsubsectionColumncount, iReportsubsectionWidth=$iReportsubsectionWidth, objReportsubsectionpartHeader=$objReportsubsectionpartHeader, objReportsubsectionpartBody=$objReportsubsectionpartBody, objReportsubsectionpartFooter=$objReportsubsectionpartFooter, sReportsubsectionTitle=$sReportsubsectionTitle]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
+      json[r'a_objReportcolumn'] = this.aObjReportcolumn;
+      json[r'iReportsubsectionColumncount'] = this.iReportsubsectionColumncount;
+      json[r'iReportsubsectionWidth'] = this.iReportsubsectionWidth;
       json[r'objReportsubsectionpartHeader'] = this.objReportsubsectionpartHeader;
       json[r'objReportsubsectionpartBody'] = this.objReportsubsectionpartBody;
       json[r'objReportsubsectionpartFooter'] = this.objReportsubsectionpartFooter;
@@ -84,6 +104,9 @@ class CommonReportsubsection {
       }());
 
       return CommonReportsubsection(
+        aObjReportcolumn: CommonReportcolumn.listFromJson(json[r'a_objReportcolumn']),
+        iReportsubsectionColumncount: mapValueOfType<int>(json, r'iReportsubsectionColumncount')!,
+        iReportsubsectionWidth: mapValueOfType<int>(json, r'iReportsubsectionWidth')!,
         objReportsubsectionpartHeader: CommonReportsubsectionpart.fromJson(json[r'objReportsubsectionpartHeader'])!,
         objReportsubsectionpartBody: CommonReportsubsectionpart.fromJson(json[r'objReportsubsectionpartBody'])!,
         objReportsubsectionpartFooter: CommonReportsubsectionpart.fromJson(json[r'objReportsubsectionpartFooter'])!,
@@ -135,6 +158,9 @@ class CommonReportsubsection {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
+    'a_objReportcolumn',
+    'iReportsubsectionColumncount',
+    'iReportsubsectionWidth',
     'objReportsubsectionpartHeader',
     'objReportsubsectionpartBody',
     'objReportsubsectionpartFooter',

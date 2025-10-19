@@ -8,6 +8,9 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**aObjReportcolumn** | [**List<CommonReportcolumn>**](CommonReportcolumn.md) |  | [default to const []]
+**iReportsubsectionColumncount** | **int** | The number of Reportcolumns in the Reportsection | 
+**iReportsubsectionWidth** | **int** | The combined width of all the Reportcolumns in the Reportsection | 
 **objReportsubsectionpartHeader** | [**CommonReportsubsectionpart**](CommonReportsubsectionpart.md) |  | 
 **objReportsubsectionpartBody** | [**CommonReportsubsectionpart**](CommonReportsubsectionpart.md) |  | 
 **objReportsubsectionpartFooter** | [**CommonReportsubsectionpart**](CommonReportsubsectionpart.md) |  | 

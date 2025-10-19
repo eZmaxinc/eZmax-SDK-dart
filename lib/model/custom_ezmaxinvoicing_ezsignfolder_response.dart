@@ -18,7 +18,6 @@ class CustomEzmaxinvoicingEzsignfolderResponse {
     required this.sEzsignfolderDescription,
     required this.bEzsigntsarequirementBillable,
     required this.bEzsignfolderMfaused,
-    required this.bEzsignfolderPaymentused,
     required this.bEzsignfolderAllowed,
   });
 
@@ -47,9 +46,6 @@ class CustomEzmaxinvoicingEzsignfolderResponse {
   /// Whether the MFA was used or not for the Ezsignfolder
   bool bEzsignfolderMfaused;
 
-  /// Whether there was a signature is of type payment
-  bool bEzsignfolderPaymentused;
-
   /// Whether you have access to the Ezsignfolder or not
   bool bEzsignfolderAllowed;
 
@@ -60,7 +56,6 @@ class CustomEzmaxinvoicingEzsignfolderResponse {
     other.sEzsignfolderDescription == sEzsignfolderDescription &&
     other.bEzsigntsarequirementBillable == bEzsigntsarequirementBillable &&
     other.bEzsignfolderMfaused == bEzsignfolderMfaused &&
-    other.bEzsignfolderPaymentused == bEzsignfolderPaymentused &&
     other.bEzsignfolderAllowed == bEzsignfolderAllowed;
 
   @override
@@ -71,11 +66,10 @@ class CustomEzmaxinvoicingEzsignfolderResponse {
     (sEzsignfolderDescription.hashCode) +
     (bEzsigntsarequirementBillable.hashCode) +
     (bEzsignfolderMfaused.hashCode) +
-    (bEzsignfolderPaymentused.hashCode) +
     (bEzsignfolderAllowed.hashCode);
 
   @override
-  String toString() => 'CustomEzmaxinvoicingEzsignfolderResponse[fkiEzsignfolderID=$fkiEzsignfolderID, fkiBillingentityinternalID=$fkiBillingentityinternalID, sEzsignfolderDescription=$sEzsignfolderDescription, bEzsigntsarequirementBillable=$bEzsigntsarequirementBillable, bEzsignfolderMfaused=$bEzsignfolderMfaused, bEzsignfolderPaymentused=$bEzsignfolderPaymentused, bEzsignfolderAllowed=$bEzsignfolderAllowed]';
+  String toString() => 'CustomEzmaxinvoicingEzsignfolderResponse[fkiEzsignfolderID=$fkiEzsignfolderID, fkiBillingentityinternalID=$fkiBillingentityinternalID, sEzsignfolderDescription=$sEzsignfolderDescription, bEzsigntsarequirementBillable=$bEzsigntsarequirementBillable, bEzsignfolderMfaused=$bEzsignfolderMfaused, bEzsignfolderAllowed=$bEzsignfolderAllowed]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -88,7 +82,6 @@ class CustomEzmaxinvoicingEzsignfolderResponse {
       json[r'sEzsignfolderDescription'] = this.sEzsignfolderDescription;
       json[r'bEzsigntsarequirementBillable'] = this.bEzsigntsarequirementBillable;
       json[r'bEzsignfolderMfaused'] = this.bEzsignfolderMfaused;
-      json[r'bEzsignfolderPaymentused'] = this.bEzsignfolderPaymentused;
       json[r'bEzsignfolderAllowed'] = this.bEzsignfolderAllowed;
     return json;
   }
@@ -117,7 +110,6 @@ class CustomEzmaxinvoicingEzsignfolderResponse {
         sEzsignfolderDescription: mapValueOfType<String>(json, r'sEzsignfolderDescription')!,
         bEzsigntsarequirementBillable: mapValueOfType<bool>(json, r'bEzsigntsarequirementBillable')!,
         bEzsignfolderMfaused: mapValueOfType<bool>(json, r'bEzsignfolderMfaused')!,
-        bEzsignfolderPaymentused: mapValueOfType<bool>(json, r'bEzsignfolderPaymentused')!,
         bEzsignfolderAllowed: mapValueOfType<bool>(json, r'bEzsignfolderAllowed')!,
       );
     }
@@ -170,7 +162,6 @@ class CustomEzmaxinvoicingEzsignfolderResponse {
     'sEzsignfolderDescription',
     'bEzsigntsarequirementBillable',
     'bEzsignfolderMfaused',
-    'bEzsignfolderPaymentused',
     'bEzsignfolderAllowed',
   };
 }

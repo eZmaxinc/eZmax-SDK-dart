@@ -16,6 +16,62 @@ class ObjectDiscussionApi {
 
   final ApiClient apiClient;
 
+  /// Have a Discussion with the AI Chatbot
+  ///
+  /// The endpoint allows to create one or many elements at once.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [DiscussionChatV1Request] discussionChatV1Request (required):
+  Future<Response> discussionChatV1WithHttpInfo(DiscussionChatV1Request discussionChatV1Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/discussion/chat';
+
+    // ignore: prefer_final_locals
+    Object? postBody = discussionChatV1Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Have a Discussion with the AI Chatbot
+  ///
+  /// The endpoint allows to create one or many elements at once.
+  ///
+  /// Parameters:
+  ///
+  /// * [DiscussionChatV1Request] discussionChatV1Request (required):
+  Future<DiscussionChatV1200Response?> discussionChatV1(DiscussionChatV1Request discussionChatV1Request,) async {
+    final response = await discussionChatV1WithHttpInfo(discussionChatV1Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'DiscussionChatV1200Response',) as DiscussionChatV1200Response;
+    
+    }
+    return null;
+  }
+
   /// Create a new Discussion
   ///
   /// The endpoint allows to create one or many elements at once.

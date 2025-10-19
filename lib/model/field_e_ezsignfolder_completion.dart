@@ -10,7 +10,7 @@
 
 part of openapi.api;
 
-/// Indicates if the Ezsigndocument is completed when all signatures of this Ezsigndocument were applied or when all signatures of all Ezsigndocument  were applied
+/// Indicates if the Ezsigndocument is completed when all signatures of this Ezsigndocument were applied or when all signatures of all Ezsigndocument were applied. When eEzsignfolderCompletion equals PerEzsignfolderStepSync, the document steps are synchronized. All documents move to a new step when all forms or signatures from the previous step have been completed for all documents.
 class FieldEEzsignfolderCompletion {
   /// Instantiate a new enum with the provided [value].
   const FieldEEzsignfolderCompletion._(this.value);
@@ -25,11 +25,13 @@ class FieldEEzsignfolderCompletion {
 
   static const perEzsigndocument = FieldEEzsignfolderCompletion._(r'PerEzsigndocument');
   static const perEzsignfolder = FieldEEzsignfolderCompletion._(r'PerEzsignfolder');
+  static const perEzsignfolderStepSync = FieldEEzsignfolderCompletion._(r'PerEzsignfolderStepSync');
 
   /// List of all possible values in this [enum][FieldEEzsignfolderCompletion].
   static const values = <FieldEEzsignfolderCompletion>[
     perEzsigndocument,
     perEzsignfolder,
+    perEzsignfolderStepSync,
   ];
 
   static FieldEEzsignfolderCompletion? fromJson(dynamic value) => FieldEEzsignfolderCompletionTypeTransformer().decode(value);
@@ -70,6 +72,7 @@ class FieldEEzsignfolderCompletionTypeTransformer {
       switch (data) {
         case r'PerEzsigndocument': return FieldEEzsignfolderCompletion.perEzsigndocument;
         case r'PerEzsignfolder': return FieldEEzsignfolderCompletion.perEzsignfolder;
+        case r'PerEzsignfolderStepSync': return FieldEEzsignfolderCompletion.perEzsignfolderStepSync;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');

@@ -14,8 +14,9 @@ class CreditcardmerchantRequest {
   /// Returns a new [CreditcardmerchantRequest] instance.
   CreditcardmerchantRequest({
     this.pkiCreditcardmerchantID,
-    required this.fkiBankaccountID,
-    this.fkiLanguageID,
+    this.fkiBankaccountID,
+    required this.fkiLanguageID,
+    required this.fkiCurrencyID,
     required this.bCreditcardmerchantDenyvisa,
     required this.bCreditcardmerchantDenymastercard,
     required this.bCreditcardmerchantDenyamex,
@@ -41,19 +42,24 @@ class CreditcardmerchantRequest {
   ///
   /// Minimum value: 0
   /// Maximum value: 255
-  int fkiBankaccountID;
-
-  /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
-  ///
-  /// Minimum value: 1
-  /// Maximum value: 2
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
   /// source code must fall back to having a nullable type.
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
-  int? fkiLanguageID;
+  int? fkiBankaccountID;
+
+  /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
+  ///
+  /// Minimum value: 1
+  /// Maximum value: 2
+  int fkiLanguageID;
+
+  /// The unique ID of the Currency.
+  ///
+  /// Minimum value: 0
+  int fkiCurrencyID;
 
   /// Whether if visa are denied
   bool bCreditcardmerchantDenyvisa;
@@ -87,6 +93,7 @@ class CreditcardmerchantRequest {
     other.pkiCreditcardmerchantID == pkiCreditcardmerchantID &&
     other.fkiBankaccountID == fkiBankaccountID &&
     other.fkiLanguageID == fkiLanguageID &&
+    other.fkiCurrencyID == fkiCurrencyID &&
     other.bCreditcardmerchantDenyvisa == bCreditcardmerchantDenyvisa &&
     other.bCreditcardmerchantDenymastercard == bCreditcardmerchantDenymastercard &&
     other.bCreditcardmerchantDenyamex == bCreditcardmerchantDenyamex &&
@@ -99,8 +106,9 @@ class CreditcardmerchantRequest {
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiCreditcardmerchantID == null ? 0 : pkiCreditcardmerchantID!.hashCode) +
-    (fkiBankaccountID.hashCode) +
-    (fkiLanguageID == null ? 0 : fkiLanguageID!.hashCode) +
+    (fkiBankaccountID == null ? 0 : fkiBankaccountID!.hashCode) +
+    (fkiLanguageID.hashCode) +
+    (fkiCurrencyID.hashCode) +
     (bCreditcardmerchantDenyvisa.hashCode) +
     (bCreditcardmerchantDenymastercard.hashCode) +
     (bCreditcardmerchantDenyamex.hashCode) +
@@ -110,7 +118,7 @@ class CreditcardmerchantRequest {
     (sCreditcardmerchantStoreid.hashCode);
 
   @override
-  String toString() => 'CreditcardmerchantRequest[pkiCreditcardmerchantID=$pkiCreditcardmerchantID, fkiBankaccountID=$fkiBankaccountID, fkiLanguageID=$fkiLanguageID, bCreditcardmerchantDenyvisa=$bCreditcardmerchantDenyvisa, bCreditcardmerchantDenymastercard=$bCreditcardmerchantDenymastercard, bCreditcardmerchantDenyamex=$bCreditcardmerchantDenyamex, bCreditcardmerchantIsactive=$bCreditcardmerchantIsactive, sCreditcardmerchantApitoken=$sCreditcardmerchantApitoken, sCreditcardmerchantDescription=$sCreditcardmerchantDescription, sCreditcardmerchantStoreid=$sCreditcardmerchantStoreid]';
+  String toString() => 'CreditcardmerchantRequest[pkiCreditcardmerchantID=$pkiCreditcardmerchantID, fkiBankaccountID=$fkiBankaccountID, fkiLanguageID=$fkiLanguageID, fkiCurrencyID=$fkiCurrencyID, bCreditcardmerchantDenyvisa=$bCreditcardmerchantDenyvisa, bCreditcardmerchantDenymastercard=$bCreditcardmerchantDenymastercard, bCreditcardmerchantDenyamex=$bCreditcardmerchantDenyamex, bCreditcardmerchantIsactive=$bCreditcardmerchantIsactive, sCreditcardmerchantApitoken=$sCreditcardmerchantApitoken, sCreditcardmerchantDescription=$sCreditcardmerchantDescription, sCreditcardmerchantStoreid=$sCreditcardmerchantStoreid]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -119,12 +127,13 @@ class CreditcardmerchantRequest {
     } else {
       json[r'pkiCreditcardmerchantID'] = null;
     }
+    if (this.fkiBankaccountID != null) {
       json[r'fkiBankaccountID'] = this.fkiBankaccountID;
-    if (this.fkiLanguageID != null) {
-      json[r'fkiLanguageID'] = this.fkiLanguageID;
     } else {
-      json[r'fkiLanguageID'] = null;
+      json[r'fkiBankaccountID'] = null;
     }
+      json[r'fkiLanguageID'] = this.fkiLanguageID;
+      json[r'fkiCurrencyID'] = this.fkiCurrencyID;
       json[r'bCreditcardmerchantDenyvisa'] = this.bCreditcardmerchantDenyvisa;
       json[r'bCreditcardmerchantDenymastercard'] = this.bCreditcardmerchantDenymastercard;
       json[r'bCreditcardmerchantDenyamex'] = this.bCreditcardmerchantDenyamex;
@@ -159,8 +168,9 @@ class CreditcardmerchantRequest {
 
       return CreditcardmerchantRequest(
         pkiCreditcardmerchantID: mapValueOfType<int>(json, r'pkiCreditcardmerchantID'),
-        fkiBankaccountID: mapValueOfType<int>(json, r'fkiBankaccountID')!,
-        fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID'),
+        fkiBankaccountID: mapValueOfType<int>(json, r'fkiBankaccountID'),
+        fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID')!,
+        fkiCurrencyID: mapValueOfType<int>(json, r'fkiCurrencyID')!,
         bCreditcardmerchantDenyvisa: mapValueOfType<bool>(json, r'bCreditcardmerchantDenyvisa')!,
         bCreditcardmerchantDenymastercard: mapValueOfType<bool>(json, r'bCreditcardmerchantDenymastercard')!,
         bCreditcardmerchantDenyamex: mapValueOfType<bool>(json, r'bCreditcardmerchantDenyamex')!,
@@ -215,7 +225,8 @@ class CreditcardmerchantRequest {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'fkiBankaccountID',
+    'fkiLanguageID',
+    'fkiCurrencyID',
     'bCreditcardmerchantDenyvisa',
     'bCreditcardmerchantDenymastercard',
     'bCreditcardmerchantDenyamex',

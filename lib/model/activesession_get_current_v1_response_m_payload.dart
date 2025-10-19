@@ -39,6 +39,7 @@ class ActivesessionGetCurrentV1ResponseMPayload {
     this.eUserEzsignprepaid,
     this.bUserEzsigntrial,
     this.dtUserEzsignprepaidexpiration,
+    this.dtUserNpsrequest,
     this.aPkiPermissionID = const [],
     required this.objUserReal,
     this.objUserCloned,
@@ -209,6 +210,15 @@ class ActivesessionGetCurrentV1ResponseMPayload {
   ///
   String? dtUserEzsignprepaidexpiration;
 
+  /// The date at which the NPS questionnaire will be show
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? dtUserNpsrequest;
+
   /// An array of permissions granted to the user or api key
   List<int> aPkiPermissionID;
 
@@ -261,6 +271,7 @@ class ActivesessionGetCurrentV1ResponseMPayload {
     other.eUserEzsignprepaid == eUserEzsignprepaid &&
     other.bUserEzsigntrial == bUserEzsigntrial &&
     other.dtUserEzsignprepaidexpiration == dtUserEzsignprepaidexpiration &&
+    other.dtUserNpsrequest == dtUserNpsrequest &&
     _deepEquality.equals(other.aPkiPermissionID, aPkiPermissionID) &&
     other.objUserReal == objUserReal &&
     other.objUserCloned == objUserCloned &&
@@ -296,6 +307,7 @@ class ActivesessionGetCurrentV1ResponseMPayload {
     (eUserEzsignprepaid == null ? 0 : eUserEzsignprepaid!.hashCode) +
     (bUserEzsigntrial == null ? 0 : bUserEzsigntrial!.hashCode) +
     (dtUserEzsignprepaidexpiration == null ? 0 : dtUserEzsignprepaidexpiration!.hashCode) +
+    (dtUserNpsrequest == null ? 0 : dtUserNpsrequest!.hashCode) +
     (aPkiPermissionID.hashCode) +
     (objUserReal.hashCode) +
     (objUserCloned == null ? 0 : objUserCloned!.hashCode) +
@@ -303,7 +315,7 @@ class ActivesessionGetCurrentV1ResponseMPayload {
     (aEModuleInternalname.hashCode);
 
   @override
-  String toString() => 'ActivesessionGetCurrentV1ResponseMPayload[eActivesessionUsertype=$eActivesessionUsertype, eActivesessionOrigin=$eActivesessionOrigin, eActivesessionWeekdaystart=$eActivesessionWeekdaystart, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, bActivesessionDebug=$bActivesessionDebug, bActivesessionIssuperadmin=$bActivesessionIssuperadmin, bActivesessionAttachment=$bActivesessionAttachment, bActivesessionCanafe=$bActivesessionCanafe, bActivesessionFinancial=$bActivesessionFinancial, bActivesessionRealestatecompleted=$bActivesessionRealestatecompleted, eActivesessionEzsign=$eActivesessionEzsign, eActivesessionEzsignaccess=$eActivesessionEzsignaccess, eActivesessionEzsignprepaid=$eActivesessionEzsignprepaid, eActivesessionRealestateinprogress=$eActivesessionRealestateinprogress, pksCustomerCode=$pksCustomerCode, fkiSystemconfigurationtypeID=$fkiSystemconfigurationtypeID, fkiSignatureID=$fkiSignatureID, fkiEzsignuserID=$fkiEzsignuserID, bSystemconfigurationEzsignpaidbyoffice=$bSystemconfigurationEzsignpaidbyoffice, eSystemconfigurationEzsignofficeplan=$eSystemconfigurationEzsignofficeplan, eUserEzsignaccess=$eUserEzsignaccess, eUserEzsignprepaid=$eUserEzsignprepaid, bUserEzsigntrial=$bUserEzsigntrial, dtUserEzsignprepaidexpiration=$dtUserEzsignprepaidexpiration, aPkiPermissionID=$aPkiPermissionID, objUserReal=$objUserReal, objUserCloned=$objUserCloned, objApikey=$objApikey, aEModuleInternalname=$aEModuleInternalname]';
+  String toString() => 'ActivesessionGetCurrentV1ResponseMPayload[eActivesessionUsertype=$eActivesessionUsertype, eActivesessionOrigin=$eActivesessionOrigin, eActivesessionWeekdaystart=$eActivesessionWeekdaystart, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, bActivesessionDebug=$bActivesessionDebug, bActivesessionIssuperadmin=$bActivesessionIssuperadmin, bActivesessionAttachment=$bActivesessionAttachment, bActivesessionCanafe=$bActivesessionCanafe, bActivesessionFinancial=$bActivesessionFinancial, bActivesessionRealestatecompleted=$bActivesessionRealestatecompleted, eActivesessionEzsign=$eActivesessionEzsign, eActivesessionEzsignaccess=$eActivesessionEzsignaccess, eActivesessionEzsignprepaid=$eActivesessionEzsignprepaid, eActivesessionRealestateinprogress=$eActivesessionRealestateinprogress, pksCustomerCode=$pksCustomerCode, fkiSystemconfigurationtypeID=$fkiSystemconfigurationtypeID, fkiSignatureID=$fkiSignatureID, fkiEzsignuserID=$fkiEzsignuserID, bSystemconfigurationEzsignpaidbyoffice=$bSystemconfigurationEzsignpaidbyoffice, eSystemconfigurationEzsignofficeplan=$eSystemconfigurationEzsignofficeplan, eUserEzsignaccess=$eUserEzsignaccess, eUserEzsignprepaid=$eUserEzsignprepaid, bUserEzsigntrial=$bUserEzsigntrial, dtUserEzsignprepaidexpiration=$dtUserEzsignprepaidexpiration, dtUserNpsrequest=$dtUserNpsrequest, aPkiPermissionID=$aPkiPermissionID, objUserReal=$objUserReal, objUserCloned=$objUserCloned, objApikey=$objApikey, aEModuleInternalname=$aEModuleInternalname]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -389,6 +401,11 @@ class ActivesessionGetCurrentV1ResponseMPayload {
     } else {
       json[r'dtUserEzsignprepaidexpiration'] = null;
     }
+    if (this.dtUserNpsrequest != null) {
+      json[r'dtUserNpsrequest'] = this.dtUserNpsrequest;
+    } else {
+      json[r'dtUserNpsrequest'] = null;
+    }
       json[r'a_pkiPermissionID'] = this.aPkiPermissionID;
       json[r'objUserReal'] = this.objUserReal;
     if (this.objUserCloned != null) {
@@ -450,6 +467,7 @@ class ActivesessionGetCurrentV1ResponseMPayload {
         eUserEzsignprepaid: FieldEUserEzsignprepaid.fromJson(json[r'eUserEzsignprepaid']),
         bUserEzsigntrial: mapValueOfType<bool>(json, r'bUserEzsigntrial'),
         dtUserEzsignprepaidexpiration: mapValueOfType<String>(json, r'dtUserEzsignprepaidexpiration'),
+        dtUserNpsrequest: mapValueOfType<String>(json, r'dtUserNpsrequest'),
         aPkiPermissionID: json[r'a_pkiPermissionID'] is Iterable
             ? (json[r'a_pkiPermissionID'] as Iterable).cast<int>().toList(growable: false)
             : const [],

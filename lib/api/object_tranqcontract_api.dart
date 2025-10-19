@@ -243,4 +243,65 @@ class ObjectTranqcontractApi {
     }
     return null;
   }
+
+  /// Import attachments into the Tranqcontract
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiTranqcontractID (required):
+  ///
+  /// * [TranqcontractImportIntoEDMV1Request] tranqcontractImportIntoEDMV1Request (required):
+  Future<Response> tranqcontractImportIntoEDMV1WithHttpInfo(int pkiTranqcontractID, TranqcontractImportIntoEDMV1Request tranqcontractImportIntoEDMV1Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/tranqcontract/{pkiTranqcontractID}/importIntoEDM'
+      .replaceAll('{pkiTranqcontractID}', pkiTranqcontractID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = tranqcontractImportIntoEDMV1Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Import attachments into the Tranqcontract
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiTranqcontractID (required):
+  ///
+  /// * [TranqcontractImportIntoEDMV1Request] tranqcontractImportIntoEDMV1Request (required):
+  Future<TranqcontractImportIntoEDMV1Response?> tranqcontractImportIntoEDMV1(int pkiTranqcontractID, TranqcontractImportIntoEDMV1Request tranqcontractImportIntoEDMV1Request,) async {
+    final response = await tranqcontractImportIntoEDMV1WithHttpInfo(pkiTranqcontractID, tranqcontractImportIntoEDMV1Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'TranqcontractImportIntoEDMV1Response',) as TranqcontractImportIntoEDMV1Response;
+    
+    }
+    return null;
+  }
 }

@@ -596,7 +596,7 @@ class ObjectEzsignfolderApi {
 
   /// Retrieve actionable elements for the Ezsignfolder
   ///
-  /// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+  /// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process.    Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -631,7 +631,7 @@ class ObjectEzsignfolderApi {
 
   /// Retrieve actionable elements for the Ezsignfolder
   ///
-  /// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+  /// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process.    Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
   ///
   /// Parameters:
   ///
@@ -646,6 +646,63 @@ class ObjectEzsignfolderApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderGetActionableElementsV1Response',) as EzsignfolderGetActionableElementsV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve actionable elements for the Ezsignfolder
+  ///
+  /// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfolderID (required):
+  Future<Response> ezsignfolderGetActionableElementsV2WithHttpInfo(int pkiEzsignfolderID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/2/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements'
+      .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve actionable elements for the Ezsignfolder
+  ///
+  /// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfolderID (required):
+  Future<EzsignfolderGetActionableElementsV2Response?> ezsignfolderGetActionableElementsV2(int pkiEzsignfolderID,) async {
+    final response = await ezsignfolderGetActionableElementsV2WithHttpInfo(pkiEzsignfolderID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderGetActionableElementsV2Response',) as EzsignfolderGetActionableElementsV2Response;
     
     }
     return null;
@@ -995,7 +1052,7 @@ class ObjectEzsignfolderApi {
 
   /// Retrieve an existing Ezsignfolder's Ezsigndocuments
   ///
-  /// 
+  /// Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -1030,7 +1087,7 @@ class ObjectEzsignfolderApi {
 
   /// Retrieve an existing Ezsignfolder's Ezsigndocuments
   ///
-  /// 
+  /// Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
   ///
   /// Parameters:
   ///
@@ -1045,6 +1102,63 @@ class ObjectEzsignfolderApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderGetEzsigndocumentsV1Response',) as EzsignfolderGetEzsigndocumentsV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve an existing Ezsignfolder's Ezsigndocuments
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfolderID (required):
+  Future<Response> ezsignfolderGetEzsigndocumentsV2WithHttpInfo(int pkiEzsignfolderID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/2/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments'
+      .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve an existing Ezsignfolder's Ezsigndocuments
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfolderID (required):
+  Future<EzsignfolderGetEzsigndocumentsV2Response?> ezsignfolderGetEzsigndocumentsV2(int pkiEzsignfolderID,) async {
+    final response = await ezsignfolderGetEzsigndocumentsV2WithHttpInfo(pkiEzsignfolderID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderGetEzsigndocumentsV2Response',) as EzsignfolderGetEzsigndocumentsV2Response;
     
     }
     return null;
@@ -1540,9 +1654,9 @@ class ObjectEzsignfolderApi {
     return null;
   }
 
-  /// Import an Ezsigntemplatepackage in the Ezsignfolder.
+  /// Import an Ezsigntemplatepackage in the Ezsignfolder
   ///
-  /// This endpoint imports all of the Ezsigntemplates from the Ezsigntemplatepackage into the Ezsignfolder as Ezsigndocuments.  This allows to automatically apply all the Ezsigntemplateformfieldgroups and Ezsigntemplatesignatures on the newly created Ezsigndocuments in a single step.
+  /// This endpoint imports all of the Ezsigntemplates from the Ezsigntemplatepackage into the Ezsignfolder as Ezsigndocuments.  This allows to automatically apply all the Ezsigntemplateformfieldgroups and Ezsigntemplatesignatures on the newly created Ezsigndocuments in a single step.  Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -1577,9 +1691,9 @@ class ObjectEzsignfolderApi {
     );
   }
 
-  /// Import an Ezsigntemplatepackage in the Ezsignfolder.
+  /// Import an Ezsigntemplatepackage in the Ezsignfolder
   ///
-  /// This endpoint imports all of the Ezsigntemplates from the Ezsigntemplatepackage into the Ezsignfolder as Ezsigndocuments.  This allows to automatically apply all the Ezsigntemplateformfieldgroups and Ezsigntemplatesignatures on the newly created Ezsigndocuments in a single step.
+  /// This endpoint imports all of the Ezsigntemplates from the Ezsigntemplatepackage into the Ezsignfolder as Ezsigndocuments.  This allows to automatically apply all the Ezsigntemplateformfieldgroups and Ezsigntemplatesignatures on the newly created Ezsigndocuments in a single step.  Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
   ///
   /// Parameters:
   ///
@@ -1596,6 +1710,67 @@ class ObjectEzsignfolderApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderImportEzsigntemplatepackageV1Response',) as EzsignfolderImportEzsigntemplatepackageV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Import an Ezsigntemplatepackage in the Ezsignfolder
+  ///
+  /// This endpoint imports all of the Ezsigntemplates from the Ezsigntemplatepackage into the Ezsignfolder as Ezsigndocuments.  This allows to automatically apply all the Ezsigntemplateformfieldgroups and Ezsigntemplatesignatures on the newly created Ezsigndocuments in a single step.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfolderID (required):
+  ///
+  /// * [EzsignfolderImportEzsigntemplatepackageV2Request] ezsignfolderImportEzsigntemplatepackageV2Request (required):
+  Future<Response> ezsignfolderImportEzsigntemplatepackageV2WithHttpInfo(int pkiEzsignfolderID, EzsignfolderImportEzsigntemplatepackageV2Request ezsignfolderImportEzsigntemplatepackageV2Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/2/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage'
+      .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = ezsignfolderImportEzsigntemplatepackageV2Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Import an Ezsigntemplatepackage in the Ezsignfolder
+  ///
+  /// This endpoint imports all of the Ezsigntemplates from the Ezsigntemplatepackage into the Ezsignfolder as Ezsigndocuments.  This allows to automatically apply all the Ezsigntemplateformfieldgroups and Ezsigntemplatesignatures on the newly created Ezsigndocuments in a single step.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfolderID (required):
+  ///
+  /// * [EzsignfolderImportEzsigntemplatepackageV2Request] ezsignfolderImportEzsigntemplatepackageV2Request (required):
+  Future<EzsignfolderImportEzsigntemplatepackageV2Response?> ezsignfolderImportEzsigntemplatepackageV2(int pkiEzsignfolderID, EzsignfolderImportEzsigntemplatepackageV2Request ezsignfolderImportEzsigntemplatepackageV2Request,) async {
+    final response = await ezsignfolderImportEzsigntemplatepackageV2WithHttpInfo(pkiEzsignfolderID, ezsignfolderImportEzsigntemplatepackageV2Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderImportEzsigntemplatepackageV2Response',) as EzsignfolderImportEzsigntemplatepackageV2Response;
     
     }
     return null;

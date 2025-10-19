@@ -14,24 +14,13 @@ class CommonReportsection {
   /// Returns a new [CommonReportsection] instance.
   CommonReportsection({
     this.aObjReportsubsection = const [],
-    this.aObjReportcolumn = const [],
     required this.eReportsectionHorizontalalignment,
-    required this.iReportsectionColumncount,
-    required this.iReportsectionWidth,
     this.sReportsectionTitle,
   });
 
   List<CommonReportsubsection> aObjReportsubsection;
 
-  List<CommonReportcolumn> aObjReportcolumn;
-
   EnumHorizontalalignment eReportsectionHorizontalalignment;
-
-  /// The number of Reportcolumns in the Reportsection
-  int iReportsectionColumncount;
-
-  /// The combined width of all the Reportcolumns in the Reportsection
-  int iReportsectionWidth;
 
   /// The title of this Reportsection
   ///
@@ -45,32 +34,23 @@ class CommonReportsection {
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonReportsection &&
     _deepEquality.equals(other.aObjReportsubsection, aObjReportsubsection) &&
-    _deepEquality.equals(other.aObjReportcolumn, aObjReportcolumn) &&
     other.eReportsectionHorizontalalignment == eReportsectionHorizontalalignment &&
-    other.iReportsectionColumncount == iReportsectionColumncount &&
-    other.iReportsectionWidth == iReportsectionWidth &&
     other.sReportsectionTitle == sReportsectionTitle;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (aObjReportsubsection.hashCode) +
-    (aObjReportcolumn.hashCode) +
     (eReportsectionHorizontalalignment.hashCode) +
-    (iReportsectionColumncount.hashCode) +
-    (iReportsectionWidth.hashCode) +
     (sReportsectionTitle == null ? 0 : sReportsectionTitle!.hashCode);
 
   @override
-  String toString() => 'CommonReportsection[aObjReportsubsection=$aObjReportsubsection, aObjReportcolumn=$aObjReportcolumn, eReportsectionHorizontalalignment=$eReportsectionHorizontalalignment, iReportsectionColumncount=$iReportsectionColumncount, iReportsectionWidth=$iReportsectionWidth, sReportsectionTitle=$sReportsectionTitle]';
+  String toString() => 'CommonReportsection[aObjReportsubsection=$aObjReportsubsection, eReportsectionHorizontalalignment=$eReportsectionHorizontalalignment, sReportsectionTitle=$sReportsectionTitle]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'a_objReportsubsection'] = this.aObjReportsubsection;
-      json[r'a_objReportcolumn'] = this.aObjReportcolumn;
       json[r'eReportsectionHorizontalalignment'] = this.eReportsectionHorizontalalignment;
-      json[r'iReportsectionColumncount'] = this.iReportsectionColumncount;
-      json[r'iReportsectionWidth'] = this.iReportsectionWidth;
     if (this.sReportsectionTitle != null) {
       json[r'sReportsectionTitle'] = this.sReportsectionTitle;
     } else {
@@ -99,10 +79,7 @@ class CommonReportsection {
 
       return CommonReportsection(
         aObjReportsubsection: CommonReportsubsection.listFromJson(json[r'a_objReportsubsection']),
-        aObjReportcolumn: CommonReportcolumn.listFromJson(json[r'a_objReportcolumn']),
         eReportsectionHorizontalalignment: EnumHorizontalalignment.fromJson(json[r'eReportsectionHorizontalalignment'])!,
-        iReportsectionColumncount: mapValueOfType<int>(json, r'iReportsectionColumncount')!,
-        iReportsectionWidth: mapValueOfType<int>(json, r'iReportsectionWidth')!,
         sReportsectionTitle: mapValueOfType<String>(json, r'sReportsectionTitle'),
       );
     }
@@ -152,10 +129,7 @@ class CommonReportsection {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'a_objReportsubsection',
-    'a_objReportcolumn',
     'eReportsectionHorizontalalignment',
-    'iReportsectionColumncount',
-    'iReportsectionWidth',
   };
 }
 

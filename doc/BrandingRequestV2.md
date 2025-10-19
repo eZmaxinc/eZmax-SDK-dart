@@ -9,6 +9,7 @@ import 'package:openapi/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiBrandingID** | **int** | The unique ID of the Branding | [optional] 
+**fkiDomainID** | **int** | The unique ID of the Domain | [optional] 
 **objBrandingDescription** | [**MultilingualBrandingDescription**](MultilingualBrandingDescription.md) |  | 
 **eBrandingLogo** | [**FieldEBrandingLogo**](FieldEBrandingLogo.md) |  | 
 **eBrandingAlignlogo** | [**FieldEBrandingAlignlogo**](FieldEBrandingAlignlogo.md) |  | [optional] 

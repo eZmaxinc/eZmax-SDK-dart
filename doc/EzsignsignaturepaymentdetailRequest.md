@@ -9,7 +9,7 @@ import 'package:openapi/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiEzsignsignaturepaymentdetailID** | **int** | The unique ID of the Ezsignsignaturepaymentdetail | [optional] 
-**fkiGlaccountcontainerID** | **int** | The unique ID of the Glaccountcontainer | [optional] 
+**fkiGlaccountcontainerID** | **int** | The unique ID of the Glaccountcontainer | 
 **tEzsignsignaturepaymentdetailDescription** | **String** | A description for the Ezsignsignaturepaymentdetail. | 
 **dEzsignsignaturepaymentdetailAmount** | **String** | The amount of the for the Ezsignsignaturepaymentdetail | 
 **eEzsignsignaturepaymentdetailTaxable** | [**FieldEEzsignsignaturepaymentdetailTaxable**](FieldEEzsignsignaturepaymentdetailTaxable.md) |  | 

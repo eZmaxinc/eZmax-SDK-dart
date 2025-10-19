@@ -14,6 +14,8 @@ class BrandingResponseCompoundV3 {
   /// Returns a new [BrandingResponseCompoundV3] instance.
   BrandingResponseCompoundV3({
     required this.pkiBrandingID,
+    this.fkiDomainID,
+    this.sDomainName,
     this.fkiEmailID,
     required this.objBrandingDescription,
     required this.sBrandingDescriptionX,
@@ -32,6 +34,27 @@ class BrandingResponseCompoundV3 {
   ///
   /// Minimum value: 0
   int pkiBrandingID;
+
+  /// The unique ID of the Domain
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 255
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiDomainID;
+
+  /// The name of the Domain
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sDomainName;
 
   /// The unique ID of the Email
   ///
@@ -111,6 +134,8 @@ class BrandingResponseCompoundV3 {
   @override
   bool operator ==(Object other) => identical(this, other) || other is BrandingResponseCompoundV3 &&
     other.pkiBrandingID == pkiBrandingID &&
+    other.fkiDomainID == fkiDomainID &&
+    other.sDomainName == sDomainName &&
     other.fkiEmailID == fkiEmailID &&
     other.objBrandingDescription == objBrandingDescription &&
     other.sBrandingDescriptionX == sBrandingDescriptionX &&
@@ -128,6 +153,8 @@ class BrandingResponseCompoundV3 {
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiBrandingID.hashCode) +
+    (fkiDomainID == null ? 0 : fkiDomainID!.hashCode) +
+    (sDomainName == null ? 0 : sDomainName!.hashCode) +
     (fkiEmailID == null ? 0 : fkiEmailID!.hashCode) +
     (objBrandingDescription.hashCode) +
     (sBrandingDescriptionX.hashCode) +
@@ -142,11 +169,21 @@ class BrandingResponseCompoundV3 {
     (sBrandingLogointerfaceurl == null ? 0 : sBrandingLogointerfaceurl!.hashCode);
 
   @override
-  String toString() => 'BrandingResponseCompoundV3[pkiBrandingID=$pkiBrandingID, fkiEmailID=$fkiEmailID, objBrandingDescription=$objBrandingDescription, sBrandingDescriptionX=$sBrandingDescriptionX, sBrandingName=$sBrandingName, sEmailAddress=$sEmailAddress, eBrandingLogo=$eBrandingLogo, eBrandingAlignlogo=$eBrandingAlignlogo, iBrandingColor=$iBrandingColor, bBrandingIsactive=$bBrandingIsactive, sBrandingLogourl=$sBrandingLogourl, sBrandingLogoemailurl=$sBrandingLogoemailurl, sBrandingLogointerfaceurl=$sBrandingLogointerfaceurl]';
+  String toString() => 'BrandingResponseCompoundV3[pkiBrandingID=$pkiBrandingID, fkiDomainID=$fkiDomainID, sDomainName=$sDomainName, fkiEmailID=$fkiEmailID, objBrandingDescription=$objBrandingDescription, sBrandingDescriptionX=$sBrandingDescriptionX, sBrandingName=$sBrandingName, sEmailAddress=$sEmailAddress, eBrandingLogo=$eBrandingLogo, eBrandingAlignlogo=$eBrandingAlignlogo, iBrandingColor=$iBrandingColor, bBrandingIsactive=$bBrandingIsactive, sBrandingLogourl=$sBrandingLogourl, sBrandingLogoemailurl=$sBrandingLogoemailurl, sBrandingLogointerfaceurl=$sBrandingLogointerfaceurl]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiBrandingID'] = this.pkiBrandingID;
+    if (this.fkiDomainID != null) {
+      json[r'fkiDomainID'] = this.fkiDomainID;
+    } else {
+      json[r'fkiDomainID'] = null;
+    }
+    if (this.sDomainName != null) {
+      json[r'sDomainName'] = this.sDomainName;
+    } else {
+      json[r'sDomainName'] = null;
+    }
     if (this.fkiEmailID != null) {
       json[r'fkiEmailID'] = this.fkiEmailID;
     } else {
@@ -206,6 +243,8 @@ class BrandingResponseCompoundV3 {
 
       return BrandingResponseCompoundV3(
         pkiBrandingID: mapValueOfType<int>(json, r'pkiBrandingID')!,
+        fkiDomainID: mapValueOfType<int>(json, r'fkiDomainID'),
+        sDomainName: mapValueOfType<String>(json, r'sDomainName'),
         fkiEmailID: mapValueOfType<int>(json, r'fkiEmailID'),
         objBrandingDescription: MultilingualBrandingDescription.fromJson(json[r'objBrandingDescription'])!,
         sBrandingDescriptionX: mapValueOfType<String>(json, r'sBrandingDescriptionX')!,

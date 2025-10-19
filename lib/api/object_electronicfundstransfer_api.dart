@@ -243,4 +243,65 @@ class ObjectElectronicfundstransferApi {
     }
     return null;
   }
+
+  /// Import attachments into the Electronicfundstransfer
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiElectronicfundstransferID (required):
+  ///
+  /// * [ElectronicfundstransferImportIntoEDMV1Request] electronicfundstransferImportIntoEDMV1Request (required):
+  Future<Response> electronicfundstransferImportIntoEDMV1WithHttpInfo(int pkiElectronicfundstransferID, ElectronicfundstransferImportIntoEDMV1Request electronicfundstransferImportIntoEDMV1Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/importIntoEDM'
+      .replaceAll('{pkiElectronicfundstransferID}', pkiElectronicfundstransferID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = electronicfundstransferImportIntoEDMV1Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Import attachments into the Electronicfundstransfer
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiElectronicfundstransferID (required):
+  ///
+  /// * [ElectronicfundstransferImportIntoEDMV1Request] electronicfundstransferImportIntoEDMV1Request (required):
+  Future<ElectronicfundstransferImportIntoEDMV1Response?> electronicfundstransferImportIntoEDMV1(int pkiElectronicfundstransferID, ElectronicfundstransferImportIntoEDMV1Request electronicfundstransferImportIntoEDMV1Request,) async {
+    final response = await electronicfundstransferImportIntoEDMV1WithHttpInfo(pkiElectronicfundstransferID, electronicfundstransferImportIntoEDMV1Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'ElectronicfundstransferImportIntoEDMV1Response',) as ElectronicfundstransferImportIntoEDMV1Response;
+    
+    }
+    return null;
+  }
 }

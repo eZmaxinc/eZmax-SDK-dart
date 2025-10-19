@@ -19,6 +19,7 @@ class EzsignfolderListElement {
     required this.sEzsignfoldertypeNameX,
     required this.sEzsignfolderDescription,
     required this.eEzsignfolderStep,
+    required this.eEzsignfolderCompletion,
     required this.dtCreatedDate,
     this.dtEzsignfolderDelayedsenddate,
     this.dtEzsignfolderSentdate,
@@ -59,6 +60,8 @@ class EzsignfolderListElement {
   String sEzsignfolderDescription;
 
   FieldEEzsignfolderStep eEzsignfolderStep;
+
+  FieldEEzsignfolderCompletion eEzsignfolderCompletion;
 
   /// The date and time at which the object was created
   String dtCreatedDate;
@@ -170,6 +173,7 @@ class EzsignfolderListElement {
     other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
     other.sEzsignfolderDescription == sEzsignfolderDescription &&
     other.eEzsignfolderStep == eEzsignfolderStep &&
+    other.eEzsignfolderCompletion == eEzsignfolderCompletion &&
     other.dtCreatedDate == dtCreatedDate &&
     other.dtEzsignfolderDelayedsenddate == dtEzsignfolderDelayedsenddate &&
     other.dtEzsignfolderSentdate == dtEzsignfolderSentdate &&
@@ -198,6 +202,7 @@ class EzsignfolderListElement {
     (sEzsignfoldertypeNameX.hashCode) +
     (sEzsignfolderDescription.hashCode) +
     (eEzsignfolderStep.hashCode) +
+    (eEzsignfolderCompletion.hashCode) +
     (dtCreatedDate.hashCode) +
     (dtEzsignfolderDelayedsenddate == null ? 0 : dtEzsignfolderDelayedsenddate!.hashCode) +
     (dtEzsignfolderSentdate == null ? 0 : dtEzsignfolderSentdate!.hashCode) +
@@ -218,7 +223,7 @@ class EzsignfolderListElement {
     (bEzsignfolderSigner == null ? 0 : bEzsignfolderSigner!.hashCode);
 
   @override
-  String toString() => 'EzsignfolderListElement[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, eEzsignfoldertypePrivacylevel=$eEzsignfoldertypePrivacylevel, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, sEzsignfolderDescription=$sEzsignfolderDescription, eEzsignfolderStep=$eEzsignfolderStep, dtCreatedDate=$dtCreatedDate, dtEzsignfolderDelayedsenddate=$dtEzsignfolderDelayedsenddate, dtEzsignfolderSentdate=$dtEzsignfolderSentdate, dtEzsignfolderDuedate=$dtEzsignfolderDuedate, iEzsigndocument=$iEzsigndocument, iEzsigndocumentEdm=$iEzsigndocumentEdm, iEzsignsignature=$iEzsignsignature, iEzsignsignatureSigned=$iEzsignsignatureSigned, iEzsignformfieldgroup=$iEzsignformfieldgroup, iEzsignformfieldgroupCompleted=$iEzsignformfieldgroupCompleted, bEzsignformHasdependencies=$bEzsignformHasdependencies, dEzsignfolderCompletedpercentage=$dEzsignfolderCompletedpercentage, dEzsignfolderFormcompletedpercentage=$dEzsignfolderFormcompletedpercentage, dEzsignfolderSignaturecompletedpercentage=$dEzsignfolderSignaturecompletedpercentage, dtEzsignfolderClose=$dtEzsignfolderClose, dtEzsignfolderArchive=$dtEzsignfolderArchive, dtEzsignfolderDispose=$dtEzsignfolderDispose, bEzsignfolderSigner=$bEzsignfolderSigner]';
+  String toString() => 'EzsignfolderListElement[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, eEzsignfoldertypePrivacylevel=$eEzsignfoldertypePrivacylevel, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, sEzsignfolderDescription=$sEzsignfolderDescription, eEzsignfolderStep=$eEzsignfolderStep, eEzsignfolderCompletion=$eEzsignfolderCompletion, dtCreatedDate=$dtCreatedDate, dtEzsignfolderDelayedsenddate=$dtEzsignfolderDelayedsenddate, dtEzsignfolderSentdate=$dtEzsignfolderSentdate, dtEzsignfolderDuedate=$dtEzsignfolderDuedate, iEzsigndocument=$iEzsigndocument, iEzsigndocumentEdm=$iEzsigndocumentEdm, iEzsignsignature=$iEzsignsignature, iEzsignsignatureSigned=$iEzsignsignatureSigned, iEzsignformfieldgroup=$iEzsignformfieldgroup, iEzsignformfieldgroupCompleted=$iEzsignformfieldgroupCompleted, bEzsignformHasdependencies=$bEzsignformHasdependencies, dEzsignfolderCompletedpercentage=$dEzsignfolderCompletedpercentage, dEzsignfolderFormcompletedpercentage=$dEzsignfolderFormcompletedpercentage, dEzsignfolderSignaturecompletedpercentage=$dEzsignfolderSignaturecompletedpercentage, dtEzsignfolderClose=$dtEzsignfolderClose, dtEzsignfolderArchive=$dtEzsignfolderArchive, dtEzsignfolderDispose=$dtEzsignfolderDispose, bEzsignfolderSigner=$bEzsignfolderSigner]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -228,6 +233,7 @@ class EzsignfolderListElement {
       json[r'sEzsignfoldertypeNameX'] = this.sEzsignfoldertypeNameX;
       json[r'sEzsignfolderDescription'] = this.sEzsignfolderDescription;
       json[r'eEzsignfolderStep'] = this.eEzsignfolderStep;
+      json[r'eEzsignfolderCompletion'] = this.eEzsignfolderCompletion;
       json[r'dtCreatedDate'] = this.dtCreatedDate;
     if (this.dtEzsignfolderDelayedsenddate != null) {
       json[r'dtEzsignfolderDelayedsenddate'] = this.dtEzsignfolderDelayedsenddate;
@@ -306,6 +312,7 @@ class EzsignfolderListElement {
         sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX')!,
         sEzsignfolderDescription: mapValueOfType<String>(json, r'sEzsignfolderDescription')!,
         eEzsignfolderStep: FieldEEzsignfolderStep.fromJson(json[r'eEzsignfolderStep'])!,
+        eEzsignfolderCompletion: FieldEEzsignfolderCompletion.fromJson(json[r'eEzsignfolderCompletion'])!,
         dtCreatedDate: mapValueOfType<String>(json, r'dtCreatedDate')!,
         dtEzsignfolderDelayedsenddate: mapValueOfType<String>(json, r'dtEzsignfolderDelayedsenddate'),
         dtEzsignfolderSentdate: mapValueOfType<String>(json, r'dtEzsignfolderSentdate'),
@@ -377,6 +384,7 @@ class EzsignfolderListElement {
     'sEzsignfoldertypeNameX',
     'sEzsignfolderDescription',
     'eEzsignfolderStep',
+    'eEzsignfolderCompletion',
     'dtCreatedDate',
     'iEzsigndocument',
     'iEzsigndocumentEdm',

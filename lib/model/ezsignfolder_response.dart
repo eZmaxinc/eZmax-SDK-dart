@@ -35,6 +35,7 @@ class EzsignfolderResponse {
     this.dtEzsignfolderScheduledarchive,
     this.dtEzsignfolderScheduleddispose,
     this.eEzsignfolderStep,
+    this.eEzsignfolderMessageorder,
     this.dtEzsignfolderClose,
     this.tEzsignfolderMessage,
     this.objAudit,
@@ -234,6 +235,14 @@ class EzsignfolderResponse {
   ///
   FieldEEzsignfolderStep? eEzsignfolderStep;
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEEzsignfolderMessageorder? eEzsignfolderMessageorder;
+
   /// The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely.
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -293,6 +302,7 @@ class EzsignfolderResponse {
     other.dtEzsignfolderScheduledarchive == dtEzsignfolderScheduledarchive &&
     other.dtEzsignfolderScheduleddispose == dtEzsignfolderScheduleddispose &&
     other.eEzsignfolderStep == eEzsignfolderStep &&
+    other.eEzsignfolderMessageorder == eEzsignfolderMessageorder &&
     other.dtEzsignfolderClose == dtEzsignfolderClose &&
     other.tEzsignfolderMessage == tEzsignfolderMessage &&
     other.objAudit == objAudit &&
@@ -323,13 +333,14 @@ class EzsignfolderResponse {
     (dtEzsignfolderScheduledarchive == null ? 0 : dtEzsignfolderScheduledarchive!.hashCode) +
     (dtEzsignfolderScheduleddispose == null ? 0 : dtEzsignfolderScheduleddispose!.hashCode) +
     (eEzsignfolderStep == null ? 0 : eEzsignfolderStep!.hashCode) +
+    (eEzsignfolderMessageorder == null ? 0 : eEzsignfolderMessageorder!.hashCode) +
     (dtEzsignfolderClose == null ? 0 : dtEzsignfolderClose!.hashCode) +
     (tEzsignfolderMessage == null ? 0 : tEzsignfolderMessage!.hashCode) +
     (objAudit == null ? 0 : objAudit!.hashCode) +
     (sEzsignfolderExternalid == null ? 0 : sEzsignfolderExternalid!.hashCode);
 
   @override
-  String toString() => 'EzsignfolderResponse[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, objEzsignfoldertype=$objEzsignfoldertype, fkiTimezoneID=$fkiTimezoneID, eEzsignfolderCompletion=$eEzsignfolderCompletion, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, fkiBillingentityinternalID=$fkiBillingentityinternalID, sBillingentityinternalDescriptionX=$sBillingentityinternalDescriptionX, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sEzsigntsarequirementDescriptionX=$sEzsigntsarequirementDescriptionX, sEzsignfolderDescription=$sEzsignfolderDescription, tEzsignfolderNote=$tEzsignfolderNote, bEzsignfolderIsdisposable=$bEzsignfolderIsdisposable, eEzsignfolderSendreminderfrequency=$eEzsignfolderSendreminderfrequency, iEzsignfolderSendreminderfirstdays=$iEzsignfolderSendreminderfirstdays, iEzsignfolderSendreminderotherdays=$iEzsignfolderSendreminderotherdays, dtEzsignfolderDelayedsenddate=$dtEzsignfolderDelayedsenddate, dtEzsignfolderDuedate=$dtEzsignfolderDuedate, dtEzsignfolderSentdate=$dtEzsignfolderSentdate, dtEzsignfolderScheduledarchive=$dtEzsignfolderScheduledarchive, dtEzsignfolderScheduleddispose=$dtEzsignfolderScheduleddispose, eEzsignfolderStep=$eEzsignfolderStep, dtEzsignfolderClose=$dtEzsignfolderClose, tEzsignfolderMessage=$tEzsignfolderMessage, objAudit=$objAudit, sEzsignfolderExternalid=$sEzsignfolderExternalid]';
+  String toString() => 'EzsignfolderResponse[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, objEzsignfoldertype=$objEzsignfoldertype, fkiTimezoneID=$fkiTimezoneID, eEzsignfolderCompletion=$eEzsignfolderCompletion, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, fkiBillingentityinternalID=$fkiBillingentityinternalID, sBillingentityinternalDescriptionX=$sBillingentityinternalDescriptionX, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sEzsigntsarequirementDescriptionX=$sEzsigntsarequirementDescriptionX, sEzsignfolderDescription=$sEzsignfolderDescription, tEzsignfolderNote=$tEzsignfolderNote, bEzsignfolderIsdisposable=$bEzsignfolderIsdisposable, eEzsignfolderSendreminderfrequency=$eEzsignfolderSendreminderfrequency, iEzsignfolderSendreminderfirstdays=$iEzsignfolderSendreminderfirstdays, iEzsignfolderSendreminderotherdays=$iEzsignfolderSendreminderotherdays, dtEzsignfolderDelayedsenddate=$dtEzsignfolderDelayedsenddate, dtEzsignfolderDuedate=$dtEzsignfolderDuedate, dtEzsignfolderSentdate=$dtEzsignfolderSentdate, dtEzsignfolderScheduledarchive=$dtEzsignfolderScheduledarchive, dtEzsignfolderScheduleddispose=$dtEzsignfolderScheduleddispose, eEzsignfolderStep=$eEzsignfolderStep, eEzsignfolderMessageorder=$eEzsignfolderMessageorder, dtEzsignfolderClose=$dtEzsignfolderClose, tEzsignfolderMessage=$tEzsignfolderMessage, objAudit=$objAudit, sEzsignfolderExternalid=$sEzsignfolderExternalid]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -431,6 +442,11 @@ class EzsignfolderResponse {
     } else {
       json[r'eEzsignfolderStep'] = null;
     }
+    if (this.eEzsignfolderMessageorder != null) {
+      json[r'eEzsignfolderMessageorder'] = this.eEzsignfolderMessageorder;
+    } else {
+      json[r'eEzsignfolderMessageorder'] = null;
+    }
     if (this.dtEzsignfolderClose != null) {
       json[r'dtEzsignfolderClose'] = this.dtEzsignfolderClose;
     } else {
@@ -495,6 +511,7 @@ class EzsignfolderResponse {
         dtEzsignfolderScheduledarchive: mapValueOfType<String>(json, r'dtEzsignfolderScheduledarchive'),
         dtEzsignfolderScheduleddispose: mapValueOfType<String>(json, r'dtEzsignfolderScheduleddispose'),
         eEzsignfolderStep: FieldEEzsignfolderStep.fromJson(json[r'eEzsignfolderStep']),
+        eEzsignfolderMessageorder: FieldEEzsignfolderMessageorder.fromJson(json[r'eEzsignfolderMessageorder']),
         dtEzsignfolderClose: mapValueOfType<String>(json, r'dtEzsignfolderClose'),
         tEzsignfolderMessage: mapValueOfType<String>(json, r'tEzsignfolderMessage'),
         objAudit: CommonAudit.fromJson(json[r'objAudit']),

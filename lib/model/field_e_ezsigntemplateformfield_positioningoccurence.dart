@@ -23,13 +23,11 @@ class FieldEEzsigntemplateformfieldPositioningoccurence {
 
   String toJson() => value;
 
-  static const all = FieldEEzsigntemplateformfieldPositioningoccurence._(r'All');
   static const first = FieldEEzsigntemplateformfieldPositioningoccurence._(r'First');
   static const last = FieldEEzsigntemplateformfieldPositioningoccurence._(r'Last');
 
   /// List of all possible values in this [enum][FieldEEzsigntemplateformfieldPositioningoccurence].
   static const values = <FieldEEzsigntemplateformfieldPositioningoccurence>[
-    all,
     first,
     last,
   ];
@@ -70,7 +68,6 @@ class FieldEEzsigntemplateformfieldPositioningoccurenceTypeTransformer {
   FieldEEzsigntemplateformfieldPositioningoccurence? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data) {
-        case r'All': return FieldEEzsigntemplateformfieldPositioningoccurence.all;
         case r'First': return FieldEEzsigntemplateformfieldPositioningoccurence.first;
         case r'Last': return FieldEEzsigntemplateformfieldPositioningoccurence.last;
         default:

@@ -26,6 +26,7 @@ Name | Type | Description | Notes
 **sAuthenticationexternalDescription** | **String** | The description of the Authenticationexternal | [optional] 
 **objAudit** | [**CommonAudit**](CommonAudit.md) |  | 
 **sWebhookEvent** | **String** | The concatenated string to describe the Webhook event | [optional] 
+**sWebhookAuthentificationexternalerror** | **String** | Error message when token renewal failed or is not configured. Only if an Authenticationexternal is set. | [optional] 
 **aObjWebhookheader** | [**List<WebhookheaderResponseCompound>**](WebhookheaderResponseCompound.md) |  | [optional] [default to const []]
 **pksCustomerCode** | **String** | The customer code assigned to your account | 
 **bWebhookTest** | **bool** | Wheter the webhook received is a manual test or a real event | 

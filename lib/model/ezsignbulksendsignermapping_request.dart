@@ -16,6 +16,7 @@ class EzsignbulksendsignermappingRequest {
     this.pkiEzsignbulksendsignermappingID,
     required this.fkiEzsignbulksendID,
     this.fkiUserID,
+    this.bEzsignbulksendsignermappingReceivecopy,
     required this.sEzsignbulksendsignermappingDescription,
   });
 
@@ -46,6 +47,15 @@ class EzsignbulksendsignermappingRequest {
   ///
   int? fkiUserID;
 
+  /// Whether the Ezsignbulksendsigner will receive a copy or not
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bEzsignbulksendsignermappingReceivecopy;
+
   /// The description of the Ezsignbulksendsignermapping
   String sEzsignbulksendsignermappingDescription;
 
@@ -54,6 +64,7 @@ class EzsignbulksendsignermappingRequest {
     other.pkiEzsignbulksendsignermappingID == pkiEzsignbulksendsignermappingID &&
     other.fkiEzsignbulksendID == fkiEzsignbulksendID &&
     other.fkiUserID == fkiUserID &&
+    other.bEzsignbulksendsignermappingReceivecopy == bEzsignbulksendsignermappingReceivecopy &&
     other.sEzsignbulksendsignermappingDescription == sEzsignbulksendsignermappingDescription;
 
   @override
@@ -62,10 +73,11 @@ class EzsignbulksendsignermappingRequest {
     (pkiEzsignbulksendsignermappingID == null ? 0 : pkiEzsignbulksendsignermappingID!.hashCode) +
     (fkiEzsignbulksendID.hashCode) +
     (fkiUserID == null ? 0 : fkiUserID!.hashCode) +
+    (bEzsignbulksendsignermappingReceivecopy == null ? 0 : bEzsignbulksendsignermappingReceivecopy!.hashCode) +
     (sEzsignbulksendsignermappingDescription.hashCode);
 
   @override
-  String toString() => 'EzsignbulksendsignermappingRequest[pkiEzsignbulksendsignermappingID=$pkiEzsignbulksendsignermappingID, fkiEzsignbulksendID=$fkiEzsignbulksendID, fkiUserID=$fkiUserID, sEzsignbulksendsignermappingDescription=$sEzsignbulksendsignermappingDescription]';
+  String toString() => 'EzsignbulksendsignermappingRequest[pkiEzsignbulksendsignermappingID=$pkiEzsignbulksendsignermappingID, fkiEzsignbulksendID=$fkiEzsignbulksendID, fkiUserID=$fkiUserID, bEzsignbulksendsignermappingReceivecopy=$bEzsignbulksendsignermappingReceivecopy, sEzsignbulksendsignermappingDescription=$sEzsignbulksendsignermappingDescription]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -79,6 +91,11 @@ class EzsignbulksendsignermappingRequest {
       json[r'fkiUserID'] = this.fkiUserID;
     } else {
       json[r'fkiUserID'] = null;
+    }
+    if (this.bEzsignbulksendsignermappingReceivecopy != null) {
+      json[r'bEzsignbulksendsignermappingReceivecopy'] = this.bEzsignbulksendsignermappingReceivecopy;
+    } else {
+      json[r'bEzsignbulksendsignermappingReceivecopy'] = null;
     }
       json[r'sEzsignbulksendsignermappingDescription'] = this.sEzsignbulksendsignermappingDescription;
     return json;
@@ -106,6 +123,7 @@ class EzsignbulksendsignermappingRequest {
         pkiEzsignbulksendsignermappingID: mapValueOfType<int>(json, r'pkiEzsignbulksendsignermappingID'),
         fkiEzsignbulksendID: mapValueOfType<int>(json, r'fkiEzsignbulksendID')!,
         fkiUserID: mapValueOfType<int>(json, r'fkiUserID'),
+        bEzsignbulksendsignermappingReceivecopy: mapValueOfType<bool>(json, r'bEzsignbulksendsignermappingReceivecopy'),
         sEzsignbulksendsignermappingDescription: mapValueOfType<String>(json, r'sEzsignbulksendsignermappingDescription')!,
       );
     }

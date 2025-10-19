@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1**](ObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumenteditezsigntemplatedocumentpagerecognitionsv1) | **PUT** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplatedocumentpagerecognitions | Edit multiple Ezsigntemplatedocumentpagerecognitions
 [**ezsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1**](ObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumenteditezsigntemplateformfieldgroupsv1) | **PUT** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplateformfieldgroups | Edit multiple Ezsigntemplateformfieldgroups
 [**ezsigntemplatedocumentEditEzsigntemplatesignaturesV1**](ObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumenteditezsigntemplatesignaturesv1) | **PUT** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplatesignatures | Edit multiple Ezsigntemplatesignatures
+[**ezsigntemplatedocumentEditEzsigntemplatesignaturesV2**](ObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumenteditezsigntemplatesignaturesv2) | **PUT** /2/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplatesignatures | Edit multiple Ezsigntemplatesignatures
 [**ezsigntemplatedocumentEditObjectV1**](ObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumenteditobjectv1) | **PUT** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID} | Edit an existing Ezsigntemplatedocument
 [**ezsigntemplatedocumentExtractTextV1**](ObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentextracttextv1) | **POST** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/extractText | Extract text from Ezsigntemplatedocument area
 [**ezsigntemplatedocumentFlattenV1**](ObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentflattenv1) | **POST** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/flatten | Flatten
@@ -20,6 +21,7 @@ Method | HTTP request | Description
 [**ezsigntemplatedocumentGetEzsigntemplatedocumentpagesV1**](ObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentgetezsigntemplatedocumentpagesv1) | **GET** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatedocumentpages | Retrieve an existing Ezsigntemplatedocument's Ezsigntemplatedocumentpages
 [**ezsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1**](ObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentgetezsigntemplateformfieldgroupsv1) | **GET** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplateformfieldgroups | Retrieve an existing Ezsigntemplatedocument's Ezsigntemplateformfieldgroups
 [**ezsigntemplatedocumentGetEzsigntemplatesignaturesV1**](ObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentgetezsigntemplatesignaturesv1) | **GET** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatesignatures | Retrieve an existing Ezsigntemplatedocument's Ezsigntemplatesignatures
+[**ezsigntemplatedocumentGetEzsigntemplatesignaturesV2**](ObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentgetezsigntemplatesignaturesv2) | **GET** /2/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatesignatures | Retrieve an existing Ezsigntemplatedocument's Ezsigntemplatesignatures
 [**ezsigntemplatedocumentGetObjectV2**](ObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentgetobjectv2) | **GET** /2/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID} | Retrieve an existing Ezsigntemplatedocument
 [**ezsigntemplatedocumentGetWordsPositionsV1**](ObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentgetwordspositionsv1) | **POST** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getWordsPositions | Retrieve positions X,Y of given words from a Ezsigntemplatedocument
 [**ezsigntemplatedocumentPatchObjectV1**](ObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentpatchobjectv1) | **PATCH** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID} | Patch an existing Ezsigntemplatedocument
@@ -175,7 +177,7 @@ Name | Type | Description  | Notes
 
 Edit multiple Ezsigntemplatesignatures
 
-Using this endpoint, you can edit multiple Ezsigntemplatesignatures at the same time.
+Using this endpoint, you can edit multiple Ezsigntemplatesignatures at the same time.  Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
 
 ### Example
 ```dart
@@ -207,6 +209,55 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsigntemplatedocumentEditEzsigntemplatesignaturesV1Response**](EzsigntemplatedocumentEditEzsigntemplatesignaturesV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsigntemplatedocumentEditEzsigntemplatesignaturesV2**
+> EzsigntemplatedocumentEditEzsigntemplatesignaturesV2Response ezsigntemplatedocumentEditEzsigntemplatesignaturesV2(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentEditEzsigntemplatesignaturesV2Request)
+
+Edit multiple Ezsigntemplatesignatures
+
+Using this endpoint, you can edit multiple Ezsigntemplatesignatures at the same time.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectEzsigntemplatedocumentApi();
+final pkiEzsigntemplatedocumentID = 56; // int | 
+final ezsigntemplatedocumentEditEzsigntemplatesignaturesV2Request = EzsigntemplatedocumentEditEzsigntemplatesignaturesV2Request(); // EzsigntemplatedocumentEditEzsigntemplatesignaturesV2Request | 
+
+try {
+    final result = api_instance.ezsigntemplatedocumentEditEzsigntemplatesignaturesV2(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentEditEzsigntemplatesignaturesV2Request);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectEzsigntemplatedocumentApi->ezsigntemplatedocumentEditEzsigntemplatesignaturesV2: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigntemplatedocumentID** | **int**|  | 
+ **ezsigntemplatedocumentEditEzsigntemplatesignaturesV2Request** | [**EzsigntemplatedocumentEditEzsigntemplatesignaturesV2Request**](EzsigntemplatedocumentEditEzsigntemplatesignaturesV2Request.md)|  | 
+
+### Return type
+
+[**EzsigntemplatedocumentEditEzsigntemplatesignaturesV2Response**](EzsigntemplatedocumentEditEzsigntemplatesignaturesV2Response.md)
 
 ### Authorization
 
@@ -512,7 +563,7 @@ Name | Type | Description  | Notes
 
 Retrieve an existing Ezsigntemplatedocument's Ezsigntemplatesignatures
 
-
+Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
 
 ### Example
 ```dart
@@ -542,6 +593,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response**](EzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsigntemplatedocumentGetEzsigntemplatesignaturesV2**
+> EzsigntemplatedocumentGetEzsigntemplatesignaturesV2Response ezsigntemplatedocumentGetEzsigntemplatesignaturesV2(pkiEzsigntemplatedocumentID)
+
+Retrieve an existing Ezsigntemplatedocument's Ezsigntemplatesignatures
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectEzsigntemplatedocumentApi();
+final pkiEzsigntemplatedocumentID = 56; // int | 
+
+try {
+    final result = api_instance.ezsigntemplatedocumentGetEzsigntemplatesignaturesV2(pkiEzsigntemplatedocumentID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectEzsigntemplatedocumentApi->ezsigntemplatedocumentGetEzsigntemplatesignaturesV2: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigntemplatedocumentID** | **int**|  | 
+
+### Return type
+
+[**EzsigntemplatedocumentGetEzsigntemplatesignaturesV2Response**](EzsigntemplatedocumentGetEzsigntemplatesignaturesV2Response.md)
 
 ### Authorization
 

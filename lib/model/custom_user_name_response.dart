@@ -13,9 +13,20 @@ part of openapi.api;
 class CustomUserNameResponse {
   /// Returns a new [CustomUserNameResponse] instance.
   CustomUserNameResponse({
+    this.sContacttitleNameX,
     required this.sUserLastname,
     required this.sUserFirstname,
+    this.sUserJobtitle,
   });
+
+  /// The name of the Contacttitle in the language of the requester
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sContacttitleNameX;
 
   /// The last name of the user
   String sUserLastname;
@@ -23,24 +34,47 @@ class CustomUserNameResponse {
   /// The first name of the user
   String sUserFirstname;
 
+  /// The job title of the user
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sUserJobtitle;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomUserNameResponse &&
+    other.sContacttitleNameX == sContacttitleNameX &&
     other.sUserLastname == sUserLastname &&
-    other.sUserFirstname == sUserFirstname;
+    other.sUserFirstname == sUserFirstname &&
+    other.sUserJobtitle == sUserJobtitle;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
+    (sContacttitleNameX == null ? 0 : sContacttitleNameX!.hashCode) +
     (sUserLastname.hashCode) +
-    (sUserFirstname.hashCode);
+    (sUserFirstname.hashCode) +
+    (sUserJobtitle == null ? 0 : sUserJobtitle!.hashCode);
 
   @override
-  String toString() => 'CustomUserNameResponse[sUserLastname=$sUserLastname, sUserFirstname=$sUserFirstname]';
+  String toString() => 'CustomUserNameResponse[sContacttitleNameX=$sContacttitleNameX, sUserLastname=$sUserLastname, sUserFirstname=$sUserFirstname, sUserJobtitle=$sUserJobtitle]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
+    if (this.sContacttitleNameX != null) {
+      json[r'sContacttitleNameX'] = this.sContacttitleNameX;
+    } else {
+      json[r'sContacttitleNameX'] = null;
+    }
       json[r'sUserLastname'] = this.sUserLastname;
       json[r'sUserFirstname'] = this.sUserFirstname;
+    if (this.sUserJobtitle != null) {
+      json[r'sUserJobtitle'] = this.sUserJobtitle;
+    } else {
+      json[r'sUserJobtitle'] = null;
+    }
     return json;
   }
 
@@ -63,8 +97,10 @@ class CustomUserNameResponse {
       }());
 
       return CustomUserNameResponse(
+        sContacttitleNameX: mapValueOfType<String>(json, r'sContacttitleNameX'),
         sUserLastname: mapValueOfType<String>(json, r'sUserLastname')!,
         sUserFirstname: mapValueOfType<String>(json, r'sUserFirstname')!,
+        sUserJobtitle: mapValueOfType<String>(json, r'sUserJobtitle'),
       );
     }
     return null;

@@ -1,0 +1,22 @@
+# openapi.model.CommonReportcellstylecustom
+
+## Load the model package
+```dart
+import 'package:openapi/api.dart';
+```
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**bReportcellstyleBordertop** | **bool** | Whether there is a border at the top of the Reportcell | [optional] 
+**bReportcellstyleBorderbottom** | **bool** | Whether there is a border at the bottom of the Reportcell | [optional] 
+**bReportcellstyleBorderleft** | **bool** | Whether there is a border at the left of the Reportcell | [optional] 
+**bReportcellstyleBorderright** | **bool** | Whether there is a border at the right of the Reportcell | [optional] 
+**eReportcellHorizontalalignment** | [**EnumHorizontalalignment**](EnumHorizontalalignment.md) |  | [optional] 
+**eReportcellVerticalalignment** | [**EnumVerticalalignment**](EnumVerticalalignment.md) |  | [optional] 
+**eReportcellFontweight** | [**EnumFontweight**](EnumFontweight.md) |  | [optional] 
+**eReportcellFontunderline** | [**EnumFontunderline**](EnumFontunderline.md) |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

@@ -1,0 +1,16 @@
+# openapi.model.MultilingualEzmaxcustomerNote
+
+## Load the model package
+```dart
+import 'package:openapi/api.dart';
+```
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**tEzmaxcustomerNote1** | **String** | A note added to an Ezmaxcaseactivity. | [optional] 
+**tEzmaxcustomerNote2** | **String** | A note added to an Ezmaxcaseactivity. | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

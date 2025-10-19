@@ -14,10 +14,12 @@ class CreditcardmerchantResponseCompound {
   /// Returns a new [CreditcardmerchantResponseCompound] instance.
   CreditcardmerchantResponseCompound({
     required this.pkiCreditcardmerchantID,
-    required this.fkiBankaccountID,
+    this.fkiBankaccountID,
+    required this.fkiLanguageID,
+    required this.sLanguageNameX,
+    required this.fkiCurrencyID,
+    required this.sCurrencyDescriptionX,
     this.sBankaccountBankname,
-    this.fkiLanguageID,
-    this.sLanguageNameX,
     required this.bCreditcardmerchantDenyvisa,
     required this.bCreditcardmerchantDenymastercard,
     required this.bCreditcardmerchantDenyamex,
@@ -36,7 +38,30 @@ class CreditcardmerchantResponseCompound {
   ///
   /// Minimum value: 0
   /// Maximum value: 255
-  int fkiBankaccountID;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiBankaccountID;
+
+  /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
+  ///
+  /// Minimum value: 1
+  /// Maximum value: 2
+  int fkiLanguageID;
+
+  /// The Name of the Language in the language of the requester
+  String sLanguageNameX;
+
+  /// The unique ID of the Currency.
+  ///
+  /// Minimum value: 0
+  int fkiCurrencyID;
+
+  /// The description of the Currency in the language of the requester
+  String sCurrencyDescriptionX;
 
   /// The name of the bank
   ///
@@ -46,27 +71,6 @@ class CreditcardmerchantResponseCompound {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   String? sBankaccountBankname;
-
-  /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
-  ///
-  /// Minimum value: 1
-  /// Maximum value: 2
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  int? fkiLanguageID;
-
-  /// The Name of the Language in the language of the requester
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  String? sLanguageNameX;
 
   /// Whether if visa are denied
   bool bCreditcardmerchantDenyvisa;
@@ -90,9 +94,11 @@ class CreditcardmerchantResponseCompound {
   bool operator ==(Object other) => identical(this, other) || other is CreditcardmerchantResponseCompound &&
     other.pkiCreditcardmerchantID == pkiCreditcardmerchantID &&
     other.fkiBankaccountID == fkiBankaccountID &&
-    other.sBankaccountBankname == sBankaccountBankname &&
     other.fkiLanguageID == fkiLanguageID &&
     other.sLanguageNameX == sLanguageNameX &&
+    other.fkiCurrencyID == fkiCurrencyID &&
+    other.sCurrencyDescriptionX == sCurrencyDescriptionX &&
+    other.sBankaccountBankname == sBankaccountBankname &&
     other.bCreditcardmerchantDenyvisa == bCreditcardmerchantDenyvisa &&
     other.bCreditcardmerchantDenymastercard == bCreditcardmerchantDenymastercard &&
     other.bCreditcardmerchantDenyamex == bCreditcardmerchantDenyamex &&
@@ -104,10 +110,12 @@ class CreditcardmerchantResponseCompound {
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiCreditcardmerchantID.hashCode) +
-    (fkiBankaccountID.hashCode) +
+    (fkiBankaccountID == null ? 0 : fkiBankaccountID!.hashCode) +
+    (fkiLanguageID.hashCode) +
+    (sLanguageNameX.hashCode) +
+    (fkiCurrencyID.hashCode) +
+    (sCurrencyDescriptionX.hashCode) +
     (sBankaccountBankname == null ? 0 : sBankaccountBankname!.hashCode) +
-    (fkiLanguageID == null ? 0 : fkiLanguageID!.hashCode) +
-    (sLanguageNameX == null ? 0 : sLanguageNameX!.hashCode) +
     (bCreditcardmerchantDenyvisa.hashCode) +
     (bCreditcardmerchantDenymastercard.hashCode) +
     (bCreditcardmerchantDenyamex.hashCode) +
@@ -116,26 +124,24 @@ class CreditcardmerchantResponseCompound {
     (sCreditcardmerchantStoreid.hashCode);
 
   @override
-  String toString() => 'CreditcardmerchantResponseCompound[pkiCreditcardmerchantID=$pkiCreditcardmerchantID, fkiBankaccountID=$fkiBankaccountID, sBankaccountBankname=$sBankaccountBankname, fkiLanguageID=$fkiLanguageID, sLanguageNameX=$sLanguageNameX, bCreditcardmerchantDenyvisa=$bCreditcardmerchantDenyvisa, bCreditcardmerchantDenymastercard=$bCreditcardmerchantDenymastercard, bCreditcardmerchantDenyamex=$bCreditcardmerchantDenyamex, bCreditcardmerchantIsactive=$bCreditcardmerchantIsactive, sCreditcardmerchantDescription=$sCreditcardmerchantDescription, sCreditcardmerchantStoreid=$sCreditcardmerchantStoreid]';
+  String toString() => 'CreditcardmerchantResponseCompound[pkiCreditcardmerchantID=$pkiCreditcardmerchantID, fkiBankaccountID=$fkiBankaccountID, fkiLanguageID=$fkiLanguageID, sLanguageNameX=$sLanguageNameX, fkiCurrencyID=$fkiCurrencyID, sCurrencyDescriptionX=$sCurrencyDescriptionX, sBankaccountBankname=$sBankaccountBankname, bCreditcardmerchantDenyvisa=$bCreditcardmerchantDenyvisa, bCreditcardmerchantDenymastercard=$bCreditcardmerchantDenymastercard, bCreditcardmerchantDenyamex=$bCreditcardmerchantDenyamex, bCreditcardmerchantIsactive=$bCreditcardmerchantIsactive, sCreditcardmerchantDescription=$sCreditcardmerchantDescription, sCreditcardmerchantStoreid=$sCreditcardmerchantStoreid]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiCreditcardmerchantID'] = this.pkiCreditcardmerchantID;
+    if (this.fkiBankaccountID != null) {
       json[r'fkiBankaccountID'] = this.fkiBankaccountID;
+    } else {
+      json[r'fkiBankaccountID'] = null;
+    }
+      json[r'fkiLanguageID'] = this.fkiLanguageID;
+      json[r'sLanguageNameX'] = this.sLanguageNameX;
+      json[r'fkiCurrencyID'] = this.fkiCurrencyID;
+      json[r'sCurrencyDescriptionX'] = this.sCurrencyDescriptionX;
     if (this.sBankaccountBankname != null) {
       json[r'sBankaccountBankname'] = this.sBankaccountBankname;
     } else {
       json[r'sBankaccountBankname'] = null;
-    }
-    if (this.fkiLanguageID != null) {
-      json[r'fkiLanguageID'] = this.fkiLanguageID;
-    } else {
-      json[r'fkiLanguageID'] = null;
-    }
-    if (this.sLanguageNameX != null) {
-      json[r'sLanguageNameX'] = this.sLanguageNameX;
-    } else {
-      json[r'sLanguageNameX'] = null;
     }
       json[r'bCreditcardmerchantDenyvisa'] = this.bCreditcardmerchantDenyvisa;
       json[r'bCreditcardmerchantDenymastercard'] = this.bCreditcardmerchantDenymastercard;
@@ -166,10 +172,12 @@ class CreditcardmerchantResponseCompound {
 
       return CreditcardmerchantResponseCompound(
         pkiCreditcardmerchantID: mapValueOfType<int>(json, r'pkiCreditcardmerchantID')!,
-        fkiBankaccountID: mapValueOfType<int>(json, r'fkiBankaccountID')!,
+        fkiBankaccountID: mapValueOfType<int>(json, r'fkiBankaccountID'),
+        fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID')!,
+        sLanguageNameX: mapValueOfType<String>(json, r'sLanguageNameX')!,
+        fkiCurrencyID: mapValueOfType<int>(json, r'fkiCurrencyID')!,
+        sCurrencyDescriptionX: mapValueOfType<String>(json, r'sCurrencyDescriptionX')!,
         sBankaccountBankname: mapValueOfType<String>(json, r'sBankaccountBankname'),
-        fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID'),
-        sLanguageNameX: mapValueOfType<String>(json, r'sLanguageNameX'),
         bCreditcardmerchantDenyvisa: mapValueOfType<bool>(json, r'bCreditcardmerchantDenyvisa')!,
         bCreditcardmerchantDenymastercard: mapValueOfType<bool>(json, r'bCreditcardmerchantDenymastercard')!,
         bCreditcardmerchantDenyamex: mapValueOfType<bool>(json, r'bCreditcardmerchantDenyamex')!,
@@ -224,7 +232,10 @@ class CreditcardmerchantResponseCompound {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'pkiCreditcardmerchantID',
-    'fkiBankaccountID',
+    'fkiLanguageID',
+    'sLanguageNameX',
+    'fkiCurrencyID',
+    'sCurrencyDescriptionX',
     'bCreditcardmerchantDenyvisa',
     'bCreditcardmerchantDenymastercard',
     'bCreditcardmerchantDenyamex',

@@ -17,6 +17,7 @@ class PaymentgatewayListElement {
     required this.fkiCreditcardmerchantID,
     required this.ePaymentgatewayProcessor,
     required this.sPaymentgatewayDescriptionX,
+    required this.bPaymentgatewayIsactive,
   });
 
   /// The unique ID of the Paymentgateway
@@ -36,12 +37,16 @@ class PaymentgatewayListElement {
   /// The description of the Paymentgateway in the language of the requester
   String sPaymentgatewayDescriptionX;
 
+  /// Whether the Paymentgateway is active or not
+  bool bPaymentgatewayIsactive;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is PaymentgatewayListElement &&
     other.pkiPaymentgatewayID == pkiPaymentgatewayID &&
     other.fkiCreditcardmerchantID == fkiCreditcardmerchantID &&
     other.ePaymentgatewayProcessor == ePaymentgatewayProcessor &&
-    other.sPaymentgatewayDescriptionX == sPaymentgatewayDescriptionX;
+    other.sPaymentgatewayDescriptionX == sPaymentgatewayDescriptionX &&
+    other.bPaymentgatewayIsactive == bPaymentgatewayIsactive;
 
   @override
   int get hashCode =>
@@ -49,10 +54,11 @@ class PaymentgatewayListElement {
     (pkiPaymentgatewayID.hashCode) +
     (fkiCreditcardmerchantID.hashCode) +
     (ePaymentgatewayProcessor.hashCode) +
-    (sPaymentgatewayDescriptionX.hashCode);
+    (sPaymentgatewayDescriptionX.hashCode) +
+    (bPaymentgatewayIsactive.hashCode);
 
   @override
-  String toString() => 'PaymentgatewayListElement[pkiPaymentgatewayID=$pkiPaymentgatewayID, fkiCreditcardmerchantID=$fkiCreditcardmerchantID, ePaymentgatewayProcessor=$ePaymentgatewayProcessor, sPaymentgatewayDescriptionX=$sPaymentgatewayDescriptionX]';
+  String toString() => 'PaymentgatewayListElement[pkiPaymentgatewayID=$pkiPaymentgatewayID, fkiCreditcardmerchantID=$fkiCreditcardmerchantID, ePaymentgatewayProcessor=$ePaymentgatewayProcessor, sPaymentgatewayDescriptionX=$sPaymentgatewayDescriptionX, bPaymentgatewayIsactive=$bPaymentgatewayIsactive]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -60,6 +66,7 @@ class PaymentgatewayListElement {
       json[r'fkiCreditcardmerchantID'] = this.fkiCreditcardmerchantID;
       json[r'ePaymentgatewayProcessor'] = this.ePaymentgatewayProcessor;
       json[r'sPaymentgatewayDescriptionX'] = this.sPaymentgatewayDescriptionX;
+      json[r'bPaymentgatewayIsactive'] = this.bPaymentgatewayIsactive;
     return json;
   }
 
@@ -86,6 +93,7 @@ class PaymentgatewayListElement {
         fkiCreditcardmerchantID: mapValueOfType<int>(json, r'fkiCreditcardmerchantID')!,
         ePaymentgatewayProcessor: FieldEPaymentgatewayProcessor.fromJson(json[r'ePaymentgatewayProcessor'])!,
         sPaymentgatewayDescriptionX: mapValueOfType<String>(json, r'sPaymentgatewayDescriptionX')!,
+        bPaymentgatewayIsactive: mapValueOfType<bool>(json, r'bPaymentgatewayIsactive')!,
       );
     }
     return null;
@@ -137,6 +145,7 @@ class PaymentgatewayListElement {
     'fkiCreditcardmerchantID',
     'ePaymentgatewayProcessor',
     'sPaymentgatewayDescriptionX',
+    'bPaymentgatewayIsactive',
   };
 }
 

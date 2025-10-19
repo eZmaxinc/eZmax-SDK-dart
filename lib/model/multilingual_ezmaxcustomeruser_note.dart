@@ -1,0 +1,137 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.18
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+part of openapi.api;
+
+class MultilingualEzmaxcustomeruserNote {
+  /// Returns a new [MultilingualEzmaxcustomeruserNote] instance.
+  MultilingualEzmaxcustomeruserNote({
+    this.tEzmaxcustomeruserNote1,
+    this.tEzmaxcustomeruserNote2,
+  });
+
+  /// A note added to an Ezmaxcaseactivity.
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? tEzmaxcustomeruserNote1;
+
+  /// A note added to an Ezmaxcaseactivity.
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? tEzmaxcustomeruserNote2;
+
+  @override
+  bool operator ==(Object other) => identical(this, other) || other is MultilingualEzmaxcustomeruserNote &&
+    other.tEzmaxcustomeruserNote1 == tEzmaxcustomeruserNote1 &&
+    other.tEzmaxcustomeruserNote2 == tEzmaxcustomeruserNote2;
+
+  @override
+  int get hashCode =>
+    // ignore: unnecessary_parenthesis
+    (tEzmaxcustomeruserNote1 == null ? 0 : tEzmaxcustomeruserNote1!.hashCode) +
+    (tEzmaxcustomeruserNote2 == null ? 0 : tEzmaxcustomeruserNote2!.hashCode);
+
+  @override
+  String toString() => 'MultilingualEzmaxcustomeruserNote[tEzmaxcustomeruserNote1=$tEzmaxcustomeruserNote1, tEzmaxcustomeruserNote2=$tEzmaxcustomeruserNote2]';
+
+  Map<String, dynamic> toJson() {
+    final json = <String, dynamic>{};
+    if (this.tEzmaxcustomeruserNote1 != null) {
+      json[r'tEzmaxcustomeruserNote1'] = this.tEzmaxcustomeruserNote1;
+    } else {
+      json[r'tEzmaxcustomeruserNote1'] = null;
+    }
+    if (this.tEzmaxcustomeruserNote2 != null) {
+      json[r'tEzmaxcustomeruserNote2'] = this.tEzmaxcustomeruserNote2;
+    } else {
+      json[r'tEzmaxcustomeruserNote2'] = null;
+    }
+    return json;
+  }
+
+  /// Returns a new [MultilingualEzmaxcustomeruserNote] instance and imports its values from
+  /// [value] if it's a [Map], null otherwise.
+  // ignore: prefer_constructors_over_static_methods
+  static MultilingualEzmaxcustomeruserNote? fromJson(dynamic value) {
+    if (value is Map) {
+      final json = value.cast<String, dynamic>();
+
+      // Ensure that the map contains the required keys.
+      // Note 1: the values aren't checked for validity beyond being non-null.
+      // Note 2: this code is stripped in release mode!
+      assert(() {
+        requiredKeys.forEach((key) {
+          assert(json.containsKey(key), 'Required key "MultilingualEzmaxcustomeruserNote[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "MultilingualEzmaxcustomeruserNote[$key]" has a null value in JSON.');
+        });
+        return true;
+      }());
+
+      return MultilingualEzmaxcustomeruserNote(
+        tEzmaxcustomeruserNote1: mapValueOfType<String>(json, r'tEzmaxcustomeruserNote1'),
+        tEzmaxcustomeruserNote2: mapValueOfType<String>(json, r'tEzmaxcustomeruserNote2'),
+      );
+    }
+    return null;
+  }
+
+  static List<MultilingualEzmaxcustomeruserNote> listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <MultilingualEzmaxcustomeruserNote>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = MultilingualEzmaxcustomeruserNote.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
+
+  static Map<String, MultilingualEzmaxcustomeruserNote> mapFromJson(dynamic json) {
+    final map = <String, MultilingualEzmaxcustomeruserNote>{};
+    if (json is Map && json.isNotEmpty) {
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = MultilingualEzmaxcustomeruserNote.fromJson(entry.value);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
+    }
+    return map;
+  }
+
+  // maps a json object with a list of MultilingualEzmaxcustomeruserNote-objects as value to a dart map
+  static Map<String, List<MultilingualEzmaxcustomeruserNote>> mapListFromJson(dynamic json, {bool growable = false,}) {
+    final map = <String, List<MultilingualEzmaxcustomeruserNote>>{};
+    if (json is Map && json.isNotEmpty) {
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
+      for (final entry in json.entries) {
+        map[entry.key] = MultilingualEzmaxcustomeruserNote.listFromJson(entry.value, growable: growable,);
+      }
+    }
+    return map;
+  }
+
+  /// The list of required keys that must be present in a JSON.
+  static const requiredKeys = <String>{
+  };
+}
+

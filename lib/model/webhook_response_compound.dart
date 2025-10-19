@@ -31,6 +31,7 @@ class WebhookResponseCompound {
     this.sAuthenticationexternalDescription,
     required this.objAudit,
     this.sWebhookEvent,
+    this.sWebhookAuthentificationexternalerror,
     this.aObjWebhookheader = const [],
   });
 
@@ -144,6 +145,15 @@ class WebhookResponseCompound {
   ///
   String? sWebhookEvent;
 
+  /// Error message when token renewal failed or is not configured. Only if an Authenticationexternal is set.
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sWebhookAuthentificationexternalerror;
+
   List<WebhookheaderResponseCompound> aObjWebhookheader;
 
   @override
@@ -166,6 +176,7 @@ class WebhookResponseCompound {
     other.sAuthenticationexternalDescription == sAuthenticationexternalDescription &&
     other.objAudit == objAudit &&
     other.sWebhookEvent == sWebhookEvent &&
+    other.sWebhookAuthentificationexternalerror == sWebhookAuthentificationexternalerror &&
     _deepEquality.equals(other.aObjWebhookheader, aObjWebhookheader);
 
   @override
@@ -189,10 +200,11 @@ class WebhookResponseCompound {
     (sAuthenticationexternalDescription == null ? 0 : sAuthenticationexternalDescription!.hashCode) +
     (objAudit.hashCode) +
     (sWebhookEvent == null ? 0 : sWebhookEvent!.hashCode) +
+    (sWebhookAuthentificationexternalerror == null ? 0 : sWebhookAuthentificationexternalerror!.hashCode) +
     (aObjWebhookheader.hashCode);
 
   @override
-  String toString() => 'WebhookResponseCompound[pkiWebhookID=$pkiWebhookID, fkiAuthenticationexternalID=$fkiAuthenticationexternalID, sWebhookDescription=$sWebhookDescription, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, sWebhookUrl=$sWebhookUrl, sWebhookEmailfailed=$sWebhookEmailfailed, sWebhookApikey=$sWebhookApikey, sWebhookSecret=$sWebhookSecret, bWebhookIsactive=$bWebhookIsactive, bWebhookIssigned=$bWebhookIssigned, bWebhookSkipsslvalidation=$bWebhookSkipsslvalidation, sAuthenticationexternalDescription=$sAuthenticationexternalDescription, objAudit=$objAudit, sWebhookEvent=$sWebhookEvent, aObjWebhookheader=$aObjWebhookheader]';
+  String toString() => 'WebhookResponseCompound[pkiWebhookID=$pkiWebhookID, fkiAuthenticationexternalID=$fkiAuthenticationexternalID, sWebhookDescription=$sWebhookDescription, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, sWebhookUrl=$sWebhookUrl, sWebhookEmailfailed=$sWebhookEmailfailed, sWebhookApikey=$sWebhookApikey, sWebhookSecret=$sWebhookSecret, bWebhookIsactive=$bWebhookIsactive, bWebhookIssigned=$bWebhookIssigned, bWebhookSkipsslvalidation=$bWebhookSkipsslvalidation, sAuthenticationexternalDescription=$sAuthenticationexternalDescription, objAudit=$objAudit, sWebhookEvent=$sWebhookEvent, sWebhookAuthentificationexternalerror=$sWebhookAuthentificationexternalerror, aObjWebhookheader=$aObjWebhookheader]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -250,6 +262,11 @@ class WebhookResponseCompound {
     } else {
       json[r'sWebhookEvent'] = null;
     }
+    if (this.sWebhookAuthentificationexternalerror != null) {
+      json[r'sWebhookAuthentificationexternalerror'] = this.sWebhookAuthentificationexternalerror;
+    } else {
+      json[r'sWebhookAuthentificationexternalerror'] = null;
+    }
       json[r'a_objWebhookheader'] = this.aObjWebhookheader;
     return json;
   }
@@ -291,6 +308,7 @@ class WebhookResponseCompound {
         sAuthenticationexternalDescription: mapValueOfType<String>(json, r'sAuthenticationexternalDescription'),
         objAudit: CommonAudit.fromJson(json[r'objAudit'])!,
         sWebhookEvent: mapValueOfType<String>(json, r'sWebhookEvent'),
+        sWebhookAuthentificationexternalerror: mapValueOfType<String>(json, r'sWebhookAuthentificationexternalerror'),
         aObjWebhookheader: WebhookheaderResponseCompound.listFromJson(json[r'a_objWebhookheader']),
       );
     }

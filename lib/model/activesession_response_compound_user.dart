@@ -19,10 +19,12 @@ class ActivesessionResponseCompoundUser {
     required this.sUserFirstname,
     required this.sUserLastname,
     this.sEmailAddress,
+    required this.bUserAddmeinezsignfolder,
     required this.eUserEzsignsendreminderfrequency,
     required this.iUserInterfacecolor,
     required this.bUserInterfacedark,
     required this.iUserListresult,
+    required this.iUserFrontendgoal,
   });
 
   /// The unique ID of the User
@@ -59,6 +61,9 @@ class ActivesessionResponseCompoundUser {
   ///
   String? sEmailAddress;
 
+  /// Whether if I want to automatically add myself during the creation of Ezsignfolder of which I am the owner
+  bool bUserAddmeinezsignfolder;
+
   FieldEUserEzsignsendreminderfrequency eUserEzsignsendreminderfrequency;
 
   /// The int32 representation of the interface color. For example, RGB color #39435B would be 3752795
@@ -75,6 +80,11 @@ class ActivesessionResponseCompoundUser {
   /// Maximum value: 500
   int iUserListresult;
 
+  /// Goals save as bit wise (one bit per goal)
+  ///
+  /// Minimum value: 0
+  int iUserFrontendgoal;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is ActivesessionResponseCompoundUser &&
     other.pkiUserID == pkiUserID &&
@@ -83,10 +93,12 @@ class ActivesessionResponseCompoundUser {
     other.sUserFirstname == sUserFirstname &&
     other.sUserLastname == sUserLastname &&
     other.sEmailAddress == sEmailAddress &&
+    other.bUserAddmeinezsignfolder == bUserAddmeinezsignfolder &&
     other.eUserEzsignsendreminderfrequency == eUserEzsignsendreminderfrequency &&
     other.iUserInterfacecolor == iUserInterfacecolor &&
     other.bUserInterfacedark == bUserInterfacedark &&
-    other.iUserListresult == iUserListresult;
+    other.iUserListresult == iUserListresult &&
+    other.iUserFrontendgoal == iUserFrontendgoal;
 
   @override
   int get hashCode =>
@@ -97,13 +109,15 @@ class ActivesessionResponseCompoundUser {
     (sUserFirstname.hashCode) +
     (sUserLastname.hashCode) +
     (sEmailAddress == null ? 0 : sEmailAddress!.hashCode) +
+    (bUserAddmeinezsignfolder.hashCode) +
     (eUserEzsignsendreminderfrequency.hashCode) +
     (iUserInterfacecolor.hashCode) +
     (bUserInterfacedark.hashCode) +
-    (iUserListresult.hashCode);
+    (iUserListresult.hashCode) +
+    (iUserFrontendgoal.hashCode);
 
   @override
-  String toString() => 'ActivesessionResponseCompoundUser[pkiUserID=$pkiUserID, fkiTimezoneID=$fkiTimezoneID, sAvatarUrl=$sAvatarUrl, sUserFirstname=$sUserFirstname, sUserLastname=$sUserLastname, sEmailAddress=$sEmailAddress, eUserEzsignsendreminderfrequency=$eUserEzsignsendreminderfrequency, iUserInterfacecolor=$iUserInterfacecolor, bUserInterfacedark=$bUserInterfacedark, iUserListresult=$iUserListresult]';
+  String toString() => 'ActivesessionResponseCompoundUser[pkiUserID=$pkiUserID, fkiTimezoneID=$fkiTimezoneID, sAvatarUrl=$sAvatarUrl, sUserFirstname=$sUserFirstname, sUserLastname=$sUserLastname, sEmailAddress=$sEmailAddress, bUserAddmeinezsignfolder=$bUserAddmeinezsignfolder, eUserEzsignsendreminderfrequency=$eUserEzsignsendreminderfrequency, iUserInterfacecolor=$iUserInterfacecolor, bUserInterfacedark=$bUserInterfacedark, iUserListresult=$iUserListresult, iUserFrontendgoal=$iUserFrontendgoal]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -121,10 +135,12 @@ class ActivesessionResponseCompoundUser {
     } else {
       json[r'sEmailAddress'] = null;
     }
+      json[r'bUserAddmeinezsignfolder'] = this.bUserAddmeinezsignfolder;
       json[r'eUserEzsignsendreminderfrequency'] = this.eUserEzsignsendreminderfrequency;
       json[r'iUserInterfacecolor'] = this.iUserInterfacecolor;
       json[r'bUserInterfacedark'] = this.bUserInterfacedark;
       json[r'iUserListresult'] = this.iUserListresult;
+      json[r'iUserFrontendgoal'] = this.iUserFrontendgoal;
     return json;
   }
 
@@ -153,10 +169,12 @@ class ActivesessionResponseCompoundUser {
         sUserFirstname: mapValueOfType<String>(json, r'sUserFirstname')!,
         sUserLastname: mapValueOfType<String>(json, r'sUserLastname')!,
         sEmailAddress: mapValueOfType<String>(json, r'sEmailAddress'),
+        bUserAddmeinezsignfolder: mapValueOfType<bool>(json, r'bUserAddmeinezsignfolder')!,
         eUserEzsignsendreminderfrequency: FieldEUserEzsignsendreminderfrequency.fromJson(json[r'eUserEzsignsendreminderfrequency'])!,
         iUserInterfacecolor: mapValueOfType<int>(json, r'iUserInterfacecolor')!,
         bUserInterfacedark: mapValueOfType<bool>(json, r'bUserInterfacedark')!,
         iUserListresult: mapValueOfType<int>(json, r'iUserListresult')!,
+        iUserFrontendgoal: mapValueOfType<int>(json, r'iUserFrontendgoal')!,
       );
     }
     return null;
@@ -208,10 +226,12 @@ class ActivesessionResponseCompoundUser {
     'fkiTimezoneID',
     'sUserFirstname',
     'sUserLastname',
+    'bUserAddmeinezsignfolder',
     'eUserEzsignsendreminderfrequency',
     'iUserInterfacecolor',
     'bUserInterfacedark',
     'iUserListresult',
+    'iUserFrontendgoal',
   };
 }
 

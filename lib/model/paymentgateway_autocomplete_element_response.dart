@@ -27,7 +27,7 @@ class PaymentgatewayAutocompleteElementResponse {
   /// The description of the Paymentgateway in the language of the requester
   String sPaymentgatewayDescriptionX;
 
-  /// Whether the Currency is active or not
+  /// Whether the Paymentgateway is active or not
   bool bPaymentgatewayIsactive;
 
   @override

@@ -14,6 +14,7 @@ class EzsignbulksendCreateEzsignbulksendtransmissionV2Request {
   /// Returns a new [EzsignbulksendCreateEzsignbulksendtransmissionV2Request] instance.
   EzsignbulksendCreateEzsignbulksendtransmissionV2Request({
     required this.fkiUserlogintypeID,
+    this.fkiSecretquestionID,
     this.fkiEzsigntsarequirementID,
     required this.sEzsignbulksendtransmissionDescription,
     required this.dtEzsigndocumentDuedate,
@@ -27,6 +28,17 @@ class EzsignbulksendCreateEzsignbulksendtransmissionV2Request {
   ///
   /// Minimum value: 0
   int fkiUserlogintypeID;
+
+  /// The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father's middle name| |15|Your mother's maiden name| |16|Name of your eldest child| |17|Your spouse's middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat's name| |22|Date of Birth (YYYY-MM-DD)| |22|Secret Code| |22|Your reference code|
+  ///
+  /// Minimum value: 0
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiSecretquestionID;
 
   /// The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server's time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server's time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|
   ///
@@ -67,6 +79,7 @@ class EzsignbulksendCreateEzsignbulksendtransmissionV2Request {
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignbulksendCreateEzsignbulksendtransmissionV2Request &&
     other.fkiUserlogintypeID == fkiUserlogintypeID &&
+    other.fkiSecretquestionID == fkiSecretquestionID &&
     other.fkiEzsigntsarequirementID == fkiEzsigntsarequirementID &&
     other.sEzsignbulksendtransmissionDescription == sEzsignbulksendtransmissionDescription &&
     other.dtEzsigndocumentDuedate == dtEzsigndocumentDuedate &&
@@ -79,6 +92,7 @@ class EzsignbulksendCreateEzsignbulksendtransmissionV2Request {
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (fkiUserlogintypeID.hashCode) +
+    (fkiSecretquestionID == null ? 0 : fkiSecretquestionID!.hashCode) +
     (fkiEzsigntsarequirementID == null ? 0 : fkiEzsigntsarequirementID!.hashCode) +
     (sEzsignbulksendtransmissionDescription.hashCode) +
     (dtEzsigndocumentDuedate.hashCode) +
@@ -88,11 +102,16 @@ class EzsignbulksendCreateEzsignbulksendtransmissionV2Request {
     (sCsvBase64.hashCode);
 
   @override
-  String toString() => 'EzsignbulksendCreateEzsignbulksendtransmissionV2Request[fkiUserlogintypeID=$fkiUserlogintypeID, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sEzsignbulksendtransmissionDescription=$sEzsignbulksendtransmissionDescription, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, iEzsignfolderSendreminderfirstdays=$iEzsignfolderSendreminderfirstdays, iEzsignfolderSendreminderotherdays=$iEzsignfolderSendreminderotherdays, tExtraMessage=$tExtraMessage, sCsvBase64=$sCsvBase64]';
+  String toString() => 'EzsignbulksendCreateEzsignbulksendtransmissionV2Request[fkiUserlogintypeID=$fkiUserlogintypeID, fkiSecretquestionID=$fkiSecretquestionID, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sEzsignbulksendtransmissionDescription=$sEzsignbulksendtransmissionDescription, dtEzsigndocumentDuedate=$dtEzsigndocumentDuedate, iEzsignfolderSendreminderfirstdays=$iEzsignfolderSendreminderfirstdays, iEzsignfolderSendreminderotherdays=$iEzsignfolderSendreminderotherdays, tExtraMessage=$tExtraMessage, sCsvBase64=$sCsvBase64]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'fkiUserlogintypeID'] = this.fkiUserlogintypeID;
+    if (this.fkiSecretquestionID != null) {
+      json[r'fkiSecretquestionID'] = this.fkiSecretquestionID;
+    } else {
+      json[r'fkiSecretquestionID'] = null;
+    }
     if (this.fkiEzsigntsarequirementID != null) {
       json[r'fkiEzsigntsarequirementID'] = this.fkiEzsigntsarequirementID;
     } else {
@@ -127,6 +146,7 @@ class EzsignbulksendCreateEzsignbulksendtransmissionV2Request {
 
       return EzsignbulksendCreateEzsignbulksendtransmissionV2Request(
         fkiUserlogintypeID: mapValueOfType<int>(json, r'fkiUserlogintypeID')!,
+        fkiSecretquestionID: mapValueOfType<int>(json, r'fkiSecretquestionID'),
         fkiEzsigntsarequirementID: mapValueOfType<int>(json, r'fkiEzsigntsarequirementID'),
         sEzsignbulksendtransmissionDescription: mapValueOfType<String>(json, r'sEzsignbulksendtransmissionDescription')!,
         dtEzsigndocumentDuedate: mapValueOfType<String>(json, r'dtEzsigndocumentDuedate')!,

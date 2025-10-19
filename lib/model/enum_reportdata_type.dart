@@ -24,18 +24,24 @@ class EnumReportdataType {
   String toJson() => value;
 
   static const date = EnumReportdataType._(r'Date');
+  static const fileSize = EnumReportdataType._(r'FileSize');
+  static const integer = EnumReportdataType._(r'Integer');
   static const money = EnumReportdataType._(r'Money');
   static const number = EnumReportdataType._(r'Number');
   static const percentage = EnumReportdataType._(r'Percentage');
+  static const percentageInt = EnumReportdataType._(r'PercentageInt');
   static const period = EnumReportdataType._(r'Period');
   static const string = EnumReportdataType._(r'String');
 
   /// List of all possible values in this [enum][EnumReportdataType].
   static const values = <EnumReportdataType>[
     date,
+    fileSize,
+    integer,
     money,
     number,
     percentage,
+    percentageInt,
     period,
     string,
   ];
@@ -77,9 +83,12 @@ class EnumReportdataTypeTypeTransformer {
     if (data != null) {
       switch (data) {
         case r'Date': return EnumReportdataType.date;
+        case r'FileSize': return EnumReportdataType.fileSize;
+        case r'Integer': return EnumReportdataType.integer;
         case r'Money': return EnumReportdataType.money;
         case r'Number': return EnumReportdataType.number;
         case r'Percentage': return EnumReportdataType.percentage;
+        case r'PercentageInt': return EnumReportdataType.percentageInt;
         case r'Period': return EnumReportdataType.period;
         case r'String': return EnumReportdataType.string;
         default:

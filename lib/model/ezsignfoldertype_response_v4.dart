@@ -31,6 +31,7 @@ class EzsignfoldertypeResponseV4 {
     this.eEzsignfoldertypePdfarequirement,
     this.eEzsignfoldertypePdfanoncompliantaction,
     required this.eEzsignfoldertypePrivacylevel,
+    this.eEzsignfoldertypeDocumentmerge,
     this.iEzsignfoldertypeFontsizeannotation,
     this.iEzsignfoldertypeFontsizeformfield,
     this.iEzsignfoldertypeSendreminderfirstdays,
@@ -52,13 +53,18 @@ class EzsignfoldertypeResponseV4 {
     this.bEzsignfoldertypeSendsignedtoezsignsigner,
     this.bEzsignfoldertypeSendsignedtouser,
     this.bEzsignfoldertypeSendattachmentezsignsigner,
+    this.bEzsignfoldertypeSendsignatureattachmentezsignsigner,
+    this.bEzsignfoldertypeSendsignatureattachment,
     this.bEzsignfoldertypeSendproofezsignsigner,
     this.bEzsignfoldertypeSendattachmentuser,
+    this.bEzsignfoldertypeSendsignatureattachmentuser,
     this.bEzsignfoldertypeSendproofuser,
     this.bEzsignfoldertypeSendproofemail,
     this.bEzsignfoldertypeAllowdownloadattachmentezsignsigner,
+    this.bEzsignfoldertypeAllowdownloadsignatureattachmentezsignsigner,
     this.bEzsignfoldertypeAllowdownloadproofezsignsigner,
     this.bEzsignfoldertypeSendproofreceivealldocument,
+    this.bEzsignfoldertypeSendsignatureattachmentreceivealldocument,
     required this.bEzsignfoldertypeSendsignedtodocumentowner,
     required this.bEzsignfoldertypeSendsignedtofolderowner,
     this.bEzsignfoldertypeSendsignedtofullgroup,
@@ -224,6 +230,14 @@ class EzsignfoldertypeResponseV4 {
   FieldEEzsignfoldertypePdfanoncompliantaction? eEzsignfoldertypePdfanoncompliantaction;
 
   FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEEzsignfoldertypeDocumentmerge? eEzsignfoldertypeDocumentmerge;
 
   /// Font size for annotations
   ///
@@ -412,6 +426,24 @@ class EzsignfoldertypeResponseV4 {
   ///
   bool? bEzsignfoldertypeSendattachmentezsignsigner;
 
+  /// Whether we send the attachments contained in the Ezsignsignatures in the email to Ezsignsigner
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bEzsignfoldertypeSendsignatureattachmentezsignsigner;
+
+  /// Whether we send the attachments contained in the Ezsignsignatures in the email to external recipient
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bEzsignfoldertypeSendsignatureattachment;
+
   /// Whether we send the proof in the email to Ezsignsigner
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -429,6 +461,15 @@ class EzsignfoldertypeResponseV4 {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   bool? bEzsignfoldertypeSendattachmentuser;
+
+  /// Whether we send the attachments contained in the Ezsignsignatures in the email to User
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bEzsignfoldertypeSendsignatureattachmentuser;
 
   /// Whether we send the proof in the email to User
   ///
@@ -457,6 +498,15 @@ class EzsignfoldertypeResponseV4 {
   ///
   bool? bEzsignfoldertypeAllowdownloadattachmentezsignsigner;
 
+  /// Whether we allow the attachments in the Ezsignsignatures to be downloaded by an Ezsignsigner
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bEzsignfoldertypeAllowdownloadsignatureattachmentezsignsigner;
+
   /// Whether we allow the proof to be downloaded by an Ezsignsigner
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -474,6 +524,15 @@ class EzsignfoldertypeResponseV4 {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   bool? bEzsignfoldertypeSendproofreceivealldocument;
+
+  /// Whether we send the attachments contained in the Ezsignsignatures to user and Ezsignsigner who receive all documents.
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bEzsignfoldertypeSendsignatureattachmentreceivealldocument;
 
   /// Whether we send the signed Ezsigndocument to the Ezsigndocument's owner
   bool bEzsignfoldertypeSendsignedtodocumentowner;
@@ -572,6 +631,7 @@ class EzsignfoldertypeResponseV4 {
     other.eEzsignfoldertypePdfarequirement == eEzsignfoldertypePdfarequirement &&
     other.eEzsignfoldertypePdfanoncompliantaction == eEzsignfoldertypePdfanoncompliantaction &&
     other.eEzsignfoldertypePrivacylevel == eEzsignfoldertypePrivacylevel &&
+    other.eEzsignfoldertypeDocumentmerge == eEzsignfoldertypeDocumentmerge &&
     other.iEzsignfoldertypeFontsizeannotation == iEzsignfoldertypeFontsizeannotation &&
     other.iEzsignfoldertypeFontsizeformfield == iEzsignfoldertypeFontsizeformfield &&
     other.iEzsignfoldertypeSendreminderfirstdays == iEzsignfoldertypeSendreminderfirstdays &&
@@ -593,13 +653,18 @@ class EzsignfoldertypeResponseV4 {
     other.bEzsignfoldertypeSendsignedtoezsignsigner == bEzsignfoldertypeSendsignedtoezsignsigner &&
     other.bEzsignfoldertypeSendsignedtouser == bEzsignfoldertypeSendsignedtouser &&
     other.bEzsignfoldertypeSendattachmentezsignsigner == bEzsignfoldertypeSendattachmentezsignsigner &&
+    other.bEzsignfoldertypeSendsignatureattachmentezsignsigner == bEzsignfoldertypeSendsignatureattachmentezsignsigner &&
+    other.bEzsignfoldertypeSendsignatureattachment == bEzsignfoldertypeSendsignatureattachment &&
     other.bEzsignfoldertypeSendproofezsignsigner == bEzsignfoldertypeSendproofezsignsigner &&
     other.bEzsignfoldertypeSendattachmentuser == bEzsignfoldertypeSendattachmentuser &&
+    other.bEzsignfoldertypeSendsignatureattachmentuser == bEzsignfoldertypeSendsignatureattachmentuser &&
     other.bEzsignfoldertypeSendproofuser == bEzsignfoldertypeSendproofuser &&
     other.bEzsignfoldertypeSendproofemail == bEzsignfoldertypeSendproofemail &&
     other.bEzsignfoldertypeAllowdownloadattachmentezsignsigner == bEzsignfoldertypeAllowdownloadattachmentezsignsigner &&
+    other.bEzsignfoldertypeAllowdownloadsignatureattachmentezsignsigner == bEzsignfoldertypeAllowdownloadsignatureattachmentezsignsigner &&
     other.bEzsignfoldertypeAllowdownloadproofezsignsigner == bEzsignfoldertypeAllowdownloadproofezsignsigner &&
     other.bEzsignfoldertypeSendproofreceivealldocument == bEzsignfoldertypeSendproofreceivealldocument &&
+    other.bEzsignfoldertypeSendsignatureattachmentreceivealldocument == bEzsignfoldertypeSendsignatureattachmentreceivealldocument &&
     other.bEzsignfoldertypeSendsignedtodocumentowner == bEzsignfoldertypeSendsignedtodocumentowner &&
     other.bEzsignfoldertypeSendsignedtofolderowner == bEzsignfoldertypeSendsignedtofolderowner &&
     other.bEzsignfoldertypeSendsignedtofullgroup == bEzsignfoldertypeSendsignedtofullgroup &&
@@ -640,6 +705,7 @@ class EzsignfoldertypeResponseV4 {
     (eEzsignfoldertypePdfarequirement == null ? 0 : eEzsignfoldertypePdfarequirement!.hashCode) +
     (eEzsignfoldertypePdfanoncompliantaction == null ? 0 : eEzsignfoldertypePdfanoncompliantaction!.hashCode) +
     (eEzsignfoldertypePrivacylevel.hashCode) +
+    (eEzsignfoldertypeDocumentmerge == null ? 0 : eEzsignfoldertypeDocumentmerge!.hashCode) +
     (iEzsignfoldertypeFontsizeannotation == null ? 0 : iEzsignfoldertypeFontsizeannotation!.hashCode) +
     (iEzsignfoldertypeFontsizeformfield == null ? 0 : iEzsignfoldertypeFontsizeformfield!.hashCode) +
     (iEzsignfoldertypeSendreminderfirstdays == null ? 0 : iEzsignfoldertypeSendreminderfirstdays!.hashCode) +
@@ -661,13 +727,18 @@ class EzsignfoldertypeResponseV4 {
     (bEzsignfoldertypeSendsignedtoezsignsigner == null ? 0 : bEzsignfoldertypeSendsignedtoezsignsigner!.hashCode) +
     (bEzsignfoldertypeSendsignedtouser == null ? 0 : bEzsignfoldertypeSendsignedtouser!.hashCode) +
     (bEzsignfoldertypeSendattachmentezsignsigner == null ? 0 : bEzsignfoldertypeSendattachmentezsignsigner!.hashCode) +
+    (bEzsignfoldertypeSendsignatureattachmentezsignsigner == null ? 0 : bEzsignfoldertypeSendsignatureattachmentezsignsigner!.hashCode) +
+    (bEzsignfoldertypeSendsignatureattachment == null ? 0 : bEzsignfoldertypeSendsignatureattachment!.hashCode) +
     (bEzsignfoldertypeSendproofezsignsigner == null ? 0 : bEzsignfoldertypeSendproofezsignsigner!.hashCode) +
     (bEzsignfoldertypeSendattachmentuser == null ? 0 : bEzsignfoldertypeSendattachmentuser!.hashCode) +
+    (bEzsignfoldertypeSendsignatureattachmentuser == null ? 0 : bEzsignfoldertypeSendsignatureattachmentuser!.hashCode) +
     (bEzsignfoldertypeSendproofuser == null ? 0 : bEzsignfoldertypeSendproofuser!.hashCode) +
     (bEzsignfoldertypeSendproofemail == null ? 0 : bEzsignfoldertypeSendproofemail!.hashCode) +
     (bEzsignfoldertypeAllowdownloadattachmentezsignsigner == null ? 0 : bEzsignfoldertypeAllowdownloadattachmentezsignsigner!.hashCode) +
+    (bEzsignfoldertypeAllowdownloadsignatureattachmentezsignsigner == null ? 0 : bEzsignfoldertypeAllowdownloadsignatureattachmentezsignsigner!.hashCode) +
     (bEzsignfoldertypeAllowdownloadproofezsignsigner == null ? 0 : bEzsignfoldertypeAllowdownloadproofezsignsigner!.hashCode) +
     (bEzsignfoldertypeSendproofreceivealldocument == null ? 0 : bEzsignfoldertypeSendproofreceivealldocument!.hashCode) +
+    (bEzsignfoldertypeSendsignatureattachmentreceivealldocument == null ? 0 : bEzsignfoldertypeSendsignatureattachmentreceivealldocument!.hashCode) +
     (bEzsignfoldertypeSendsignedtodocumentowner.hashCode) +
     (bEzsignfoldertypeSendsignedtofolderowner.hashCode) +
     (bEzsignfoldertypeSendsignedtofullgroup == null ? 0 : bEzsignfoldertypeSendsignedtofullgroup!.hashCode) +
@@ -688,7 +759,7 @@ class EzsignfoldertypeResponseV4 {
     (objAudit.hashCode);
 
   @override
-  String toString() => 'EzsignfoldertypeResponseV4[pkiEzsignfoldertypeID=$pkiEzsignfoldertypeID, objEzsignfoldertypeName=$objEzsignfoldertypeName, fkiBrandingID=$fkiBrandingID, fkiBillingentityinternalID=$fkiBillingentityinternalID, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, fkiFontIDAnnotation=$fkiFontIDAnnotation, fkiFontIDFormfield=$fkiFontIDFormfield, fkiFontIDSignature=$fkiFontIDSignature, fkiPdfalevelIDConvert=$fkiPdfalevelIDConvert, eEzsignfoldertypeDocumentdependency=$eEzsignfoldertypeDocumentdependency, sBrandingDescriptionX=$sBrandingDescriptionX, sBillingentityinternalDescriptionX=$sBillingentityinternalDescriptionX, sEzsigntsarequirementDescriptionX=$sEzsigntsarequirementDescriptionX, sEmailAddressSigned=$sEmailAddressSigned, sEmailAddressSummary=$sEmailAddressSummary, eEzsignfoldertypePdfarequirement=$eEzsignfoldertypePdfarequirement, eEzsignfoldertypePdfanoncompliantaction=$eEzsignfoldertypePdfanoncompliantaction, eEzsignfoldertypePrivacylevel=$eEzsignfoldertypePrivacylevel, iEzsignfoldertypeFontsizeannotation=$iEzsignfoldertypeFontsizeannotation, iEzsignfoldertypeFontsizeformfield=$iEzsignfoldertypeFontsizeformfield, iEzsignfoldertypeSendreminderfirstdays=$iEzsignfoldertypeSendreminderfirstdays, iEzsignfoldertypeSendreminderotherdays=$iEzsignfoldertypeSendreminderotherdays, iEzsignfoldertypeArchivaldays=$iEzsignfoldertypeArchivaldays, eEzsignfoldertypeDisposal=$eEzsignfoldertypeDisposal, eEzsignfoldertypeCompletion=$eEzsignfoldertypeCompletion, iEzsignfoldertypeDisposaldays=$iEzsignfoldertypeDisposaldays, iEzsignfoldertypeDeadlinedays=$iEzsignfoldertypeDeadlinedays, bEzsignfoldertypePrematurelyendautomatically=$bEzsignfoldertypePrematurelyendautomatically, iEzsignfoldertypePrematurelyendautomaticallydays=$iEzsignfoldertypePrematurelyendautomaticallydays, bEzsignfoldertypeAutomaticsignature=$bEzsignfoldertypeAutomaticsignature, bEzsignfoldertypeDelegate=$bEzsignfoldertypeDelegate, bEzsignfoldertypeDiscussion=$bEzsignfoldertypeDiscussion, bEzsignfoldertypeLogrecipientinproof=$bEzsignfoldertypeLogrecipientinproof, bEzsignfoldertypeReassignezsignsigner=$bEzsignfoldertypeReassignezsignsigner, bEzsignfoldertypeReassignuser=$bEzsignfoldertypeReassignuser, bEzsignfoldertypeReassigngroup=$bEzsignfoldertypeReassigngroup, bEzsignfoldertypeSendsignedtoezsignsigner=$bEzsignfoldertypeSendsignedtoezsignsigner, bEzsignfoldertypeSendsignedtouser=$bEzsignfoldertypeSendsignedtouser, bEzsignfoldertypeSendattachmentezsignsigner=$bEzsignfoldertypeSendattachmentezsignsigner, bEzsignfoldertypeSendproofezsignsigner=$bEzsignfoldertypeSendproofezsignsigner, bEzsignfoldertypeSendattachmentuser=$bEzsignfoldertypeSendattachmentuser, bEzsignfoldertypeSendproofuser=$bEzsignfoldertypeSendproofuser, bEzsignfoldertypeSendproofemail=$bEzsignfoldertypeSendproofemail, bEzsignfoldertypeAllowdownloadattachmentezsignsigner=$bEzsignfoldertypeAllowdownloadattachmentezsignsigner, bEzsignfoldertypeAllowdownloadproofezsignsigner=$bEzsignfoldertypeAllowdownloadproofezsignsigner, bEzsignfoldertypeSendproofreceivealldocument=$bEzsignfoldertypeSendproofreceivealldocument, bEzsignfoldertypeSendsignedtodocumentowner=$bEzsignfoldertypeSendsignedtodocumentowner, bEzsignfoldertypeSendsignedtofolderowner=$bEzsignfoldertypeSendsignedtofolderowner, bEzsignfoldertypeSendsignedtofullgroup=$bEzsignfoldertypeSendsignedtofullgroup, bEzsignfoldertypeSendsignedtolimitedgroup=$bEzsignfoldertypeSendsignedtolimitedgroup, bEzsignfoldertypeSendsignedtocolleague=$bEzsignfoldertypeSendsignedtocolleague, bEzsignfoldertypeSendsummarytodocumentowner=$bEzsignfoldertypeSendsummarytodocumentowner, bEzsignfoldertypeSendsummarytofolderowner=$bEzsignfoldertypeSendsummarytofolderowner, bEzsignfoldertypeSendsummarytofullgroup=$bEzsignfoldertypeSendsummarytofullgroup, bEzsignfoldertypeSendsummarytolimitedgroup=$bEzsignfoldertypeSendsummarytolimitedgroup, bEzsignfoldertypeSendsummarytocolleague=$bEzsignfoldertypeSendsummarytocolleague, eEzsignfoldertypeSigneraccess=$eEzsignfoldertypeSigneraccess, bEzsignfoldertypeIsactive=$bEzsignfoldertypeIsactive, aFkiPdfalevelID=$aFkiPdfalevelID, aObjUserlogintype=$aObjUserlogintype, aObjUsergroupAll=$aObjUsergroupAll, aObjUsergroupRestricted=$aObjUsergroupRestricted, aObjUsergroupTemplate=$aObjUsergroupTemplate, objAudit=$objAudit]';
+  String toString() => 'EzsignfoldertypeResponseV4[pkiEzsignfoldertypeID=$pkiEzsignfoldertypeID, objEzsignfoldertypeName=$objEzsignfoldertypeName, fkiBrandingID=$fkiBrandingID, fkiBillingentityinternalID=$fkiBillingentityinternalID, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, fkiFontIDAnnotation=$fkiFontIDAnnotation, fkiFontIDFormfield=$fkiFontIDFormfield, fkiFontIDSignature=$fkiFontIDSignature, fkiPdfalevelIDConvert=$fkiPdfalevelIDConvert, eEzsignfoldertypeDocumentdependency=$eEzsignfoldertypeDocumentdependency, sBrandingDescriptionX=$sBrandingDescriptionX, sBillingentityinternalDescriptionX=$sBillingentityinternalDescriptionX, sEzsigntsarequirementDescriptionX=$sEzsigntsarequirementDescriptionX, sEmailAddressSigned=$sEmailAddressSigned, sEmailAddressSummary=$sEmailAddressSummary, eEzsignfoldertypePdfarequirement=$eEzsignfoldertypePdfarequirement, eEzsignfoldertypePdfanoncompliantaction=$eEzsignfoldertypePdfanoncompliantaction, eEzsignfoldertypePrivacylevel=$eEzsignfoldertypePrivacylevel, eEzsignfoldertypeDocumentmerge=$eEzsignfoldertypeDocumentmerge, iEzsignfoldertypeFontsizeannotation=$iEzsignfoldertypeFontsizeannotation, iEzsignfoldertypeFontsizeformfield=$iEzsignfoldertypeFontsizeformfield, iEzsignfoldertypeSendreminderfirstdays=$iEzsignfoldertypeSendreminderfirstdays, iEzsignfoldertypeSendreminderotherdays=$iEzsignfoldertypeSendreminderotherdays, iEzsignfoldertypeArchivaldays=$iEzsignfoldertypeArchivaldays, eEzsignfoldertypeDisposal=$eEzsignfoldertypeDisposal, eEzsignfoldertypeCompletion=$eEzsignfoldertypeCompletion, iEzsignfoldertypeDisposaldays=$iEzsignfoldertypeDisposaldays, iEzsignfoldertypeDeadlinedays=$iEzsignfoldertypeDeadlinedays, bEzsignfoldertypePrematurelyendautomatically=$bEzsignfoldertypePrematurelyendautomatically, iEzsignfoldertypePrematurelyendautomaticallydays=$iEzsignfoldertypePrematurelyendautomaticallydays, bEzsignfoldertypeAutomaticsignature=$bEzsignfoldertypeAutomaticsignature, bEzsignfoldertypeDelegate=$bEzsignfoldertypeDelegate, bEzsignfoldertypeDiscussion=$bEzsignfoldertypeDiscussion, bEzsignfoldertypeLogrecipientinproof=$bEzsignfoldertypeLogrecipientinproof, bEzsignfoldertypeReassignezsignsigner=$bEzsignfoldertypeReassignezsignsigner, bEzsignfoldertypeReassignuser=$bEzsignfoldertypeReassignuser, bEzsignfoldertypeReassigngroup=$bEzsignfoldertypeReassigngroup, bEzsignfoldertypeSendsignedtoezsignsigner=$bEzsignfoldertypeSendsignedtoezsignsigner, bEzsignfoldertypeSendsignedtouser=$bEzsignfoldertypeSendsignedtouser, bEzsignfoldertypeSendattachmentezsignsigner=$bEzsignfoldertypeSendattachmentezsignsigner, bEzsignfoldertypeSendsignatureattachmentezsignsigner=$bEzsignfoldertypeSendsignatureattachmentezsignsigner, bEzsignfoldertypeSendsignatureattachment=$bEzsignfoldertypeSendsignatureattachment, bEzsignfoldertypeSendproofezsignsigner=$bEzsignfoldertypeSendproofezsignsigner, bEzsignfoldertypeSendattachmentuser=$bEzsignfoldertypeSendattachmentuser, bEzsignfoldertypeSendsignatureattachmentuser=$bEzsignfoldertypeSendsignatureattachmentuser, bEzsignfoldertypeSendproofuser=$bEzsignfoldertypeSendproofuser, bEzsignfoldertypeSendproofemail=$bEzsignfoldertypeSendproofemail, bEzsignfoldertypeAllowdownloadattachmentezsignsigner=$bEzsignfoldertypeAllowdownloadattachmentezsignsigner, bEzsignfoldertypeAllowdownloadsignatureattachmentezsignsigner=$bEzsignfoldertypeAllowdownloadsignatureattachmentezsignsigner, bEzsignfoldertypeAllowdownloadproofezsignsigner=$bEzsignfoldertypeAllowdownloadproofezsignsigner, bEzsignfoldertypeSendproofreceivealldocument=$bEzsignfoldertypeSendproofreceivealldocument, bEzsignfoldertypeSendsignatureattachmentreceivealldocument=$bEzsignfoldertypeSendsignatureattachmentreceivealldocument, bEzsignfoldertypeSendsignedtodocumentowner=$bEzsignfoldertypeSendsignedtodocumentowner, bEzsignfoldertypeSendsignedtofolderowner=$bEzsignfoldertypeSendsignedtofolderowner, bEzsignfoldertypeSendsignedtofullgroup=$bEzsignfoldertypeSendsignedtofullgroup, bEzsignfoldertypeSendsignedtolimitedgroup=$bEzsignfoldertypeSendsignedtolimitedgroup, bEzsignfoldertypeSendsignedtocolleague=$bEzsignfoldertypeSendsignedtocolleague, bEzsignfoldertypeSendsummarytodocumentowner=$bEzsignfoldertypeSendsummarytodocumentowner, bEzsignfoldertypeSendsummarytofolderowner=$bEzsignfoldertypeSendsummarytofolderowner, bEzsignfoldertypeSendsummarytofullgroup=$bEzsignfoldertypeSendsummarytofullgroup, bEzsignfoldertypeSendsummarytolimitedgroup=$bEzsignfoldertypeSendsummarytolimitedgroup, bEzsignfoldertypeSendsummarytocolleague=$bEzsignfoldertypeSendsummarytocolleague, eEzsignfoldertypeSigneraccess=$eEzsignfoldertypeSigneraccess, bEzsignfoldertypeIsactive=$bEzsignfoldertypeIsactive, aFkiPdfalevelID=$aFkiPdfalevelID, aObjUserlogintype=$aObjUserlogintype, aObjUsergroupAll=$aObjUsergroupAll, aObjUsergroupRestricted=$aObjUsergroupRestricted, aObjUsergroupTemplate=$aObjUsergroupTemplate, objAudit=$objAudit]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -762,6 +833,11 @@ class EzsignfoldertypeResponseV4 {
       json[r'eEzsignfoldertypePdfanoncompliantaction'] = null;
     }
       json[r'eEzsignfoldertypePrivacylevel'] = this.eEzsignfoldertypePrivacylevel;
+    if (this.eEzsignfoldertypeDocumentmerge != null) {
+      json[r'eEzsignfoldertypeDocumentmerge'] = this.eEzsignfoldertypeDocumentmerge;
+    } else {
+      json[r'eEzsignfoldertypeDocumentmerge'] = null;
+    }
     if (this.iEzsignfoldertypeFontsizeannotation != null) {
       json[r'iEzsignfoldertypeFontsizeannotation'] = this.iEzsignfoldertypeFontsizeannotation;
     } else {
@@ -851,6 +927,16 @@ class EzsignfoldertypeResponseV4 {
     } else {
       json[r'bEzsignfoldertypeSendattachmentezsignsigner'] = null;
     }
+    if (this.bEzsignfoldertypeSendsignatureattachmentezsignsigner != null) {
+      json[r'bEzsignfoldertypeSendsignatureattachmentezsignsigner'] = this.bEzsignfoldertypeSendsignatureattachmentezsignsigner;
+    } else {
+      json[r'bEzsignfoldertypeSendsignatureattachmentezsignsigner'] = null;
+    }
+    if (this.bEzsignfoldertypeSendsignatureattachment != null) {
+      json[r'bEzsignfoldertypeSendsignatureattachment'] = this.bEzsignfoldertypeSendsignatureattachment;
+    } else {
+      json[r'bEzsignfoldertypeSendsignatureattachment'] = null;
+    }
     if (this.bEzsignfoldertypeSendproofezsignsigner != null) {
       json[r'bEzsignfoldertypeSendproofezsignsigner'] = this.bEzsignfoldertypeSendproofezsignsigner;
     } else {
@@ -860,6 +946,11 @@ class EzsignfoldertypeResponseV4 {
       json[r'bEzsignfoldertypeSendattachmentuser'] = this.bEzsignfoldertypeSendattachmentuser;
     } else {
       json[r'bEzsignfoldertypeSendattachmentuser'] = null;
+    }
+    if (this.bEzsignfoldertypeSendsignatureattachmentuser != null) {
+      json[r'bEzsignfoldertypeSendsignatureattachmentuser'] = this.bEzsignfoldertypeSendsignatureattachmentuser;
+    } else {
+      json[r'bEzsignfoldertypeSendsignatureattachmentuser'] = null;
     }
     if (this.bEzsignfoldertypeSendproofuser != null) {
       json[r'bEzsignfoldertypeSendproofuser'] = this.bEzsignfoldertypeSendproofuser;
@@ -876,6 +967,11 @@ class EzsignfoldertypeResponseV4 {
     } else {
       json[r'bEzsignfoldertypeAllowdownloadattachmentezsignsigner'] = null;
     }
+    if (this.bEzsignfoldertypeAllowdownloadsignatureattachmentezsignsigner != null) {
+      json[r'bEzsignfoldertypeAllowdownloadsignatureattachmentezsignsigner'] = this.bEzsignfoldertypeAllowdownloadsignatureattachmentezsignsigner;
+    } else {
+      json[r'bEzsignfoldertypeAllowdownloadsignatureattachmentezsignsigner'] = null;
+    }
     if (this.bEzsignfoldertypeAllowdownloadproofezsignsigner != null) {
       json[r'bEzsignfoldertypeAllowdownloadproofezsignsigner'] = this.bEzsignfoldertypeAllowdownloadproofezsignsigner;
     } else {
@@ -885,6 +981,11 @@ class EzsignfoldertypeResponseV4 {
       json[r'bEzsignfoldertypeSendproofreceivealldocument'] = this.bEzsignfoldertypeSendproofreceivealldocument;
     } else {
       json[r'bEzsignfoldertypeSendproofreceivealldocument'] = null;
+    }
+    if (this.bEzsignfoldertypeSendsignatureattachmentreceivealldocument != null) {
+      json[r'bEzsignfoldertypeSendsignatureattachmentreceivealldocument'] = this.bEzsignfoldertypeSendsignatureattachmentreceivealldocument;
+    } else {
+      json[r'bEzsignfoldertypeSendsignatureattachmentreceivealldocument'] = null;
     }
       json[r'bEzsignfoldertypeSendsignedtodocumentowner'] = this.bEzsignfoldertypeSendsignedtodocumentowner;
       json[r'bEzsignfoldertypeSendsignedtofolderowner'] = this.bEzsignfoldertypeSendsignedtofolderowner;
@@ -964,6 +1065,7 @@ class EzsignfoldertypeResponseV4 {
         eEzsignfoldertypePdfarequirement: FieldEEzsignfoldertypePdfarequirement.fromJson(json[r'eEzsignfoldertypePdfarequirement']),
         eEzsignfoldertypePdfanoncompliantaction: FieldEEzsignfoldertypePdfanoncompliantaction.fromJson(json[r'eEzsignfoldertypePdfanoncompliantaction']),
         eEzsignfoldertypePrivacylevel: FieldEEzsignfoldertypePrivacylevel.fromJson(json[r'eEzsignfoldertypePrivacylevel'])!,
+        eEzsignfoldertypeDocumentmerge: FieldEEzsignfoldertypeDocumentmerge.fromJson(json[r'eEzsignfoldertypeDocumentmerge']),
         iEzsignfoldertypeFontsizeannotation: mapValueOfType<int>(json, r'iEzsignfoldertypeFontsizeannotation'),
         iEzsignfoldertypeFontsizeformfield: mapValueOfType<int>(json, r'iEzsignfoldertypeFontsizeformfield'),
         iEzsignfoldertypeSendreminderfirstdays: mapValueOfType<int>(json, r'iEzsignfoldertypeSendreminderfirstdays'),
@@ -985,13 +1087,18 @@ class EzsignfoldertypeResponseV4 {
         bEzsignfoldertypeSendsignedtoezsignsigner: mapValueOfType<bool>(json, r'bEzsignfoldertypeSendsignedtoezsignsigner'),
         bEzsignfoldertypeSendsignedtouser: mapValueOfType<bool>(json, r'bEzsignfoldertypeSendsignedtouser'),
         bEzsignfoldertypeSendattachmentezsignsigner: mapValueOfType<bool>(json, r'bEzsignfoldertypeSendattachmentezsignsigner'),
+        bEzsignfoldertypeSendsignatureattachmentezsignsigner: mapValueOfType<bool>(json, r'bEzsignfoldertypeSendsignatureattachmentezsignsigner'),
+        bEzsignfoldertypeSendsignatureattachment: mapValueOfType<bool>(json, r'bEzsignfoldertypeSendsignatureattachment'),
         bEzsignfoldertypeSendproofezsignsigner: mapValueOfType<bool>(json, r'bEzsignfoldertypeSendproofezsignsigner'),
         bEzsignfoldertypeSendattachmentuser: mapValueOfType<bool>(json, r'bEzsignfoldertypeSendattachmentuser'),
+        bEzsignfoldertypeSendsignatureattachmentuser: mapValueOfType<bool>(json, r'bEzsignfoldertypeSendsignatureattachmentuser'),
         bEzsignfoldertypeSendproofuser: mapValueOfType<bool>(json, r'bEzsignfoldertypeSendproofuser'),
         bEzsignfoldertypeSendproofemail: mapValueOfType<bool>(json, r'bEzsignfoldertypeSendproofemail'),
         bEzsignfoldertypeAllowdownloadattachmentezsignsigner: mapValueOfType<bool>(json, r'bEzsignfoldertypeAllowdownloadattachmentezsignsigner'),
+        bEzsignfoldertypeAllowdownloadsignatureattachmentezsignsigner: mapValueOfType<bool>(json, r'bEzsignfoldertypeAllowdownloadsignatureattachmentezsignsigner'),
         bEzsignfoldertypeAllowdownloadproofezsignsigner: mapValueOfType<bool>(json, r'bEzsignfoldertypeAllowdownloadproofezsignsigner'),
         bEzsignfoldertypeSendproofreceivealldocument: mapValueOfType<bool>(json, r'bEzsignfoldertypeSendproofreceivealldocument'),
+        bEzsignfoldertypeSendsignatureattachmentreceivealldocument: mapValueOfType<bool>(json, r'bEzsignfoldertypeSendsignatureattachmentreceivealldocument'),
         bEzsignfoldertypeSendsignedtodocumentowner: mapValueOfType<bool>(json, r'bEzsignfoldertypeSendsignedtodocumentowner')!,
         bEzsignfoldertypeSendsignedtofolderowner: mapValueOfType<bool>(json, r'bEzsignfoldertypeSendsignedtofolderowner')!,
         bEzsignfoldertypeSendsignedtofullgroup: mapValueOfType<bool>(json, r'bEzsignfoldertypeSendsignedtofullgroup'),

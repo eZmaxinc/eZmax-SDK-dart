@@ -133,6 +133,12 @@ String parameterToString(dynamic value) {
   if (value is FieldEBrandingLogo) {
     return FieldEBrandingLogoTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEBuyercontractStep) {
+    return FieldEBuyercontractStepTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEBuyercontractType) {
+    return FieldEBuyercontractTypeTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEColleagueEzsign) {
     return FieldEColleagueEzsignTypeTransformer().encode(value).toString();
   }
@@ -172,6 +178,9 @@ String parameterToString(dynamic value) {
   if (value is FieldECustomerType) {
     return FieldECustomerTypeTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEDiscussionRobot) {
+    return FieldEDiscussionRobotTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEDiscussionmessageStatus) {
     return FieldEDiscussionmessageStatusTypeTransformer().encode(value).toString();
   }
@@ -198,6 +207,9 @@ String parameterToString(dynamic value) {
   }
   if (value is FieldEEzsignannotationType) {
     return FieldEEzsignannotationTypeTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsignbulksendEzsignformfieldorder) {
+    return FieldEEzsignbulksendEzsignformfieldorderTypeTransformer().encode(value).toString();
   }
   if (value is FieldEEzsigndocumentStep) {
     return FieldEEzsigndocumentStepTypeTransformer().encode(value).toString();
@@ -234,6 +246,9 @@ String parameterToString(dynamic value) {
   }
   if (value is FieldEEzsignfoldertypeDocumentdependency) {
     return FieldEEzsignfoldertypeDocumentdependencyTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsignfoldertypeDocumentmerge) {
+    return FieldEEzsignfoldertypeDocumentmergeTypeTransformer().encode(value).toString();
   }
   if (value is FieldEEzsignfoldertypePdfanoncompliantaction) {
     return FieldEEzsignfoldertypePdfanoncompliantactionTypeTransformer().encode(value).toString();
@@ -355,11 +370,26 @@ String parameterToString(dynamic value) {
   if (value is FieldEEzsigntemplatesignatureType) {
     return FieldEEzsigntemplatesignatureTypeTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEEzsigntemplatesignaturepaymentdetailTaxable) {
+    return FieldEEzsigntemplatesignaturepaymentdetailTaxableTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEEzsigntemplatesignerMapping) {
     return FieldEEzsigntemplatesignerMappingTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEInscriptionStep) {
+    return FieldEInscriptionStepTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEInscriptiontempStatus) {
+    return FieldEInscriptiontempStatusTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldELeadStatus) {
+    return FieldELeadStatusTypeTransformer().encode(value).toString();
+  }
   if (value is FieldENotificationpreferenceStatus) {
     return FieldENotificationpreferenceStatusTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEOtherincomeRemunerationtype) {
+    return FieldEOtherincomeRemunerationtypeTypeTransformer().encode(value).toString();
   }
   if (value is FieldEPaymentgatewayProcessor) {
     return FieldEPaymentgatewayProcessorTypeTransformer().encode(value).toString();

@@ -16,7 +16,7 @@ class ObjectEzsigndocumentApi {
 
   final ApiClient apiClient;
 
-  /// Apply an Ezsigntemplate to the Ezsigndocument.
+  /// Apply an Ezsigntemplate to the Ezsigndocument
   ///
   /// This function is deprecated. Please use *applyEzsigntemplate* instead which is doing the same thing but with a capital \"E\" to normalize the nomenclature.  This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
   ///
@@ -53,7 +53,7 @@ class ObjectEzsigndocumentApi {
     );
   }
 
-  /// Apply an Ezsigntemplate to the Ezsigndocument.
+  /// Apply an Ezsigntemplate to the Ezsigndocument
   ///
   /// This function is deprecated. Please use *applyEzsigntemplate* instead which is doing the same thing but with a capital \"E\" to normalize the nomenclature.  This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
   ///
@@ -77,7 +77,7 @@ class ObjectEzsigndocumentApi {
     return null;
   }
 
-  /// Apply an Ezsigntemplate to the Ezsigndocument.
+  /// Apply an Ezsigntemplate to the Ezsigndocument
   ///
   /// This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
   ///
@@ -114,7 +114,7 @@ class ObjectEzsigndocumentApi {
     );
   }
 
-  /// Apply an Ezsigntemplate to the Ezsigndocument.
+  /// Apply an Ezsigntemplate to the Ezsigndocument
   ///
   /// This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
   ///
@@ -138,7 +138,7 @@ class ObjectEzsigndocumentApi {
     return null;
   }
 
-  /// Apply an Ezsigntemplateglobal to the Ezsigndocument.
+  /// Apply an Ezsigntemplateglobal to the Ezsigndocument
   ///
   /// This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
   ///
@@ -175,7 +175,7 @@ class ObjectEzsigndocumentApi {
     );
   }
 
-  /// Apply an Ezsigntemplateglobal to the Ezsigndocument.
+  /// Apply an Ezsigntemplateglobal to the Ezsigndocument
   ///
   /// This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
   ///
@@ -201,7 +201,7 @@ class ObjectEzsigndocumentApi {
 
   /// Create multiple Ezsignsignatures/Ezsignformfieldgroups
   ///
-  /// Using this endpoint, you can create multiple Ezsignsignatures/Ezsignformfieldgroups positioned by word at the same time.
+  /// Using this endpoint, you can create multiple Ezsignsignatures/Ezsignformfieldgroups positioned by word at the same time.  Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -238,7 +238,7 @@ class ObjectEzsigndocumentApi {
 
   /// Create multiple Ezsignsignatures/Ezsignformfieldgroups
   ///
-  /// Using this endpoint, you can create multiple Ezsignsignatures/Ezsignformfieldgroups positioned by word at the same time.
+  /// Using this endpoint, you can create multiple Ezsignsignatures/Ezsignformfieldgroups positioned by word at the same time.  Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
   ///
   /// Parameters:
   ///
@@ -255,6 +255,67 @@ class ObjectEzsigndocumentApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentCreateEzsignelementsPositionedByWordV1Response',) as EzsigndocumentCreateEzsignelementsPositionedByWordV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Create multiple Ezsignsignatures/Ezsignformfieldgroups
+  ///
+  /// Using this endpoint, you can create multiple Ezsignsignatures/Ezsignformfieldgroups positioned by word at the same time.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  ///
+  /// * [EzsigndocumentCreateEzsignelementsPositionedByWordV2Request] ezsigndocumentCreateEzsignelementsPositionedByWordV2Request (required):
+  Future<Response> ezsigndocumentCreateEzsignelementsPositionedByWordV2WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentCreateEzsignelementsPositionedByWordV2Request ezsigndocumentCreateEzsignelementsPositionedByWordV2Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/2/object/ezsigndocument/{pkiEzsigndocumentID}/createEzsignelementsPositionedByWord'
+      .replaceAll('{pkiEzsigndocumentID}', pkiEzsigndocumentID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = ezsigndocumentCreateEzsignelementsPositionedByWordV2Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Create multiple Ezsignsignatures/Ezsignformfieldgroups
+  ///
+  /// Using this endpoint, you can create multiple Ezsignsignatures/Ezsignformfieldgroups positioned by word at the same time.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  ///
+  /// * [EzsigndocumentCreateEzsignelementsPositionedByWordV2Request] ezsigndocumentCreateEzsignelementsPositionedByWordV2Request (required):
+  Future<EzsigndocumentCreateEzsignelementsPositionedByWordV2Response?> ezsigndocumentCreateEzsignelementsPositionedByWordV2(int pkiEzsigndocumentID, EzsigndocumentCreateEzsignelementsPositionedByWordV2Request ezsigndocumentCreateEzsignelementsPositionedByWordV2Request,) async {
+    final response = await ezsigndocumentCreateEzsignelementsPositionedByWordV2WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentCreateEzsignelementsPositionedByWordV2Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentCreateEzsignelementsPositionedByWordV2Response',) as EzsigndocumentCreateEzsignelementsPositionedByWordV2Response;
     
     }
     return null;
@@ -670,7 +731,7 @@ class ObjectEzsigndocumentApi {
 
   /// Edit multiple Ezsignsignatures
   ///
-  /// Using this endpoint, you can edit multiple Ezsignsignatures at the same time.
+  /// Using this endpoint, you can edit multiple Ezsignsignatures at the same time.  Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -707,7 +768,7 @@ class ObjectEzsigndocumentApi {
 
   /// Edit multiple Ezsignsignatures
   ///
-  /// Using this endpoint, you can edit multiple Ezsignsignatures at the same time.
+  /// Using this endpoint, you can edit multiple Ezsignsignatures at the same time.  Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
   ///
   /// Parameters:
   ///
@@ -724,6 +785,67 @@ class ObjectEzsigndocumentApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentEditEzsignsignaturesV1Response',) as EzsigndocumentEditEzsignsignaturesV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Edit multiple Ezsignsignatures
+  ///
+  /// Using this endpoint, you can edit multiple Ezsignsignatures at the same time.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  ///
+  /// * [EzsigndocumentEditEzsignsignaturesV2Request] ezsigndocumentEditEzsignsignaturesV2Request (required):
+  Future<Response> ezsigndocumentEditEzsignsignaturesV2WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentEditEzsignsignaturesV2Request ezsigndocumentEditEzsignsignaturesV2Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/2/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures'
+      .replaceAll('{pkiEzsigndocumentID}', pkiEzsigndocumentID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = ezsigndocumentEditEzsignsignaturesV2Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'PUT',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Edit multiple Ezsignsignatures
+  ///
+  /// Using this endpoint, you can edit multiple Ezsignsignatures at the same time.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  ///
+  /// * [EzsigndocumentEditEzsignsignaturesV2Request] ezsigndocumentEditEzsignsignaturesV2Request (required):
+  Future<EzsigndocumentEditEzsignsignaturesV2Response?> ezsigndocumentEditEzsignsignaturesV2(int pkiEzsigndocumentID, EzsigndocumentEditEzsignsignaturesV2Request ezsigndocumentEditEzsignsignaturesV2Request,) async {
+    final response = await ezsigndocumentEditEzsignsignaturesV2WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentEditEzsignsignaturesV2Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentEditEzsignsignaturesV2Response',) as EzsigndocumentEditEzsignsignaturesV2Response;
     
     }
     return null;
@@ -975,7 +1097,7 @@ class ObjectEzsigndocumentApi {
 
   /// Retrieve actionable elements for the Ezsigndocument
   ///
-  /// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+  /// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process.  Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3. 
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -1010,7 +1132,7 @@ class ObjectEzsigndocumentApi {
 
   /// Retrieve actionable elements for the Ezsigndocument
   ///
-  /// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+  /// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process.  Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3. 
   ///
   /// Parameters:
   ///
@@ -1025,6 +1147,63 @@ class ObjectEzsigndocumentApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentGetActionableElementsV1Response',) as EzsigndocumentGetActionableElementsV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve actionable elements for the Ezsigndocument
+  ///
+  /// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  Future<Response> ezsigndocumentGetActionableElementsV2WithHttpInfo(int pkiEzsigndocumentID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/2/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements'
+      .replaceAll('{pkiEzsigndocumentID}', pkiEzsigndocumentID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve actionable elements for the Ezsigndocument
+  ///
+  /// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  Future<EzsigndocumentGetActionableElementsV2Response?> ezsigndocumentGetActionableElementsV2(int pkiEzsigndocumentID,) async {
+    final response = await ezsigndocumentGetActionableElementsV2WithHttpInfo(pkiEzsigndocumentID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentGetActionableElementsV2Response',) as EzsigndocumentGetActionableElementsV2Response;
     
     }
     return null;
@@ -1089,7 +1268,7 @@ class ObjectEzsigndocumentApi {
 
   /// Retrieve completed elements for the Ezsigndocument
   ///
-  /// Return the completed Ezsignsignatures, Ezsignformfieldgroups and Ezsignannotations at the current step in the process
+  /// Return the completed Ezsignsignatures, Ezsignformfieldgroups and Ezsignannotations at the current step in the process  Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -1124,7 +1303,7 @@ class ObjectEzsigndocumentApi {
 
   /// Retrieve completed elements for the Ezsigndocument
   ///
-  /// Return the completed Ezsignsignatures, Ezsignformfieldgroups and Ezsignannotations at the current step in the process
+  /// Return the completed Ezsignsignatures, Ezsignformfieldgroups and Ezsignannotations at the current step in the process  Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
   ///
   /// Parameters:
   ///
@@ -1144,7 +1323,64 @@ class ObjectEzsigndocumentApi {
     return null;
   }
 
-  /// Retrieve a URL to download documents.
+  /// Retrieve completed elements for the Ezsigndocument
+  ///
+  /// Return the completed Ezsignsignatures, Ezsignformfieldgroups and Ezsignannotations at the current step in the process
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  Future<Response> ezsigndocumentGetCompletedElementsV2WithHttpInfo(int pkiEzsigndocumentID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/2/object/ezsigndocument/{pkiEzsigndocumentID}/getCompletedElements'
+      .replaceAll('{pkiEzsigndocumentID}', pkiEzsigndocumentID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve completed elements for the Ezsigndocument
+  ///
+  /// Return the completed Ezsignsignatures, Ezsignformfieldgroups and Ezsignannotations at the current step in the process
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  Future<EzsigndocumentGetCompletedElementsV2Response?> ezsigndocumentGetCompletedElementsV2(int pkiEzsigndocumentID,) async {
+    final response = await ezsigndocumentGetCompletedElementsV2WithHttpInfo(pkiEzsigndocumentID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentGetCompletedElementsV2Response',) as EzsigndocumentGetCompletedElementsV2Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve a URL to download documents
   ///
   /// This endpoint returns URLs to different files that can be downloaded during the signing process.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
   ///
@@ -1155,7 +1391,7 @@ class ObjectEzsigndocumentApi {
   /// * [int] pkiEzsigndocumentID (required):
   ///
   /// * [String] eDocumentType (required):
-  ///   The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **SignatureReady** Is the version containing the annotations/form to show the signer. 3. **Signed** Is the final document once all signatures were applied in current document if eEzsignfolderCompletion is PerEzsigndocument.<br>     Is the final document once all signatures were applied in all documents if eEzsignfolderCompletion is PerEzsignfolder. 4. **Proofdocument** Is the evidence report. 5. **Proof** Is the complete evidence archive including all of the above and more. 
+  ///   The type of document to retrieve.  1. **original** Is the original document before any repair or conversion were applied. **Initial** Is the initial document after initial signature were applied. 2. **SignatureReady** Is the version containing the annotations/form to show the signer. 3. **Signed** Is the final document once all signatures were applied in current document if eEzsignfolderCompletion is PerEzsigndocument.<br>     Is the final document once all signatures were applied in all documents if eEzsignfolderCompletion is PerEzsignfolder. 4. **Proofdocument** Is the evidence report. 5. **Proof** Is the complete evidence archive including all of the above and more. 
   Future<Response> ezsigndocumentGetDownloadUrlV1WithHttpInfo(int pkiEzsigndocumentID, String eDocumentType,) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsigndocument/{pkiEzsigndocumentID}/getDownloadUrl/{eDocumentType}'
@@ -1183,7 +1419,7 @@ class ObjectEzsigndocumentApi {
     );
   }
 
-  /// Retrieve a URL to download documents.
+  /// Retrieve a URL to download documents
   ///
   /// This endpoint returns URLs to different files that can be downloaded during the signing process.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
   ///
@@ -1192,7 +1428,7 @@ class ObjectEzsigndocumentApi {
   /// * [int] pkiEzsigndocumentID (required):
   ///
   /// * [String] eDocumentType (required):
-  ///   The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **SignatureReady** Is the version containing the annotations/form to show the signer. 3. **Signed** Is the final document once all signatures were applied in current document if eEzsignfolderCompletion is PerEzsigndocument.<br>     Is the final document once all signatures were applied in all documents if eEzsignfolderCompletion is PerEzsignfolder. 4. **Proofdocument** Is the evidence report. 5. **Proof** Is the complete evidence archive including all of the above and more. 
+  ///   The type of document to retrieve.  1. **original** Is the original document before any repair or conversion were applied. **Initial** Is the initial document after initial signature were applied. 2. **SignatureReady** Is the version containing the annotations/form to show the signer. 3. **Signed** Is the final document once all signatures were applied in current document if eEzsignfolderCompletion is PerEzsigndocument.<br>     Is the final document once all signatures were applied in all documents if eEzsignfolderCompletion is PerEzsignfolder. 4. **Proofdocument** Is the evidence report. 5. **Proof** Is the complete evidence archive including all of the above and more. 
   Future<EzsigndocumentGetDownloadUrlV1Response?> ezsigndocumentGetDownloadUrlV1(int pkiEzsigndocumentID, String eDocumentType,) async {
     final response = await ezsigndocumentGetDownloadUrlV1WithHttpInfo(pkiEzsigndocumentID, eDocumentType,);
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -1495,7 +1731,7 @@ class ObjectEzsigndocumentApi {
 
   /// Retrieve an existing Ezsigndocument's Ezsignsignatures
   ///
-  /// 
+  /// Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -1530,7 +1766,7 @@ class ObjectEzsigndocumentApi {
 
   /// Retrieve an existing Ezsigndocument's Ezsignsignatures
   ///
-  /// 
+  /// Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
   ///
   /// Parameters:
   ///
@@ -1545,6 +1781,63 @@ class ObjectEzsigndocumentApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentGetEzsignsignaturesV1Response',) as EzsigndocumentGetEzsignsignaturesV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve an existing Ezsigndocument's Ezsignsignatures
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  Future<Response> ezsigndocumentGetEzsignsignaturesV2WithHttpInfo(int pkiEzsigndocumentID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/2/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignsignatures'
+      .replaceAll('{pkiEzsigndocumentID}', pkiEzsigndocumentID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve an existing Ezsigndocument's Ezsignsignatures
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  Future<EzsigndocumentGetEzsignsignaturesV2Response?> ezsigndocumentGetEzsignsignaturesV2(int pkiEzsigndocumentID,) async {
+    final response = await ezsigndocumentGetEzsignsignaturesV2WithHttpInfo(pkiEzsigndocumentID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentGetEzsignsignaturesV2Response',) as EzsigndocumentGetEzsignsignaturesV2Response;
     
     }
     return null;
@@ -1609,6 +1902,8 @@ class ObjectEzsigndocumentApi {
 
   /// Retrieve an existing Ezsigndocument
   ///
+  /// Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
+  ///
   /// Note: This method returns the HTTP [Response].
   ///
   /// Parameters:
@@ -1642,6 +1937,8 @@ class ObjectEzsigndocumentApi {
 
   /// Retrieve an existing Ezsigndocument
   ///
+  /// Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
+  ///
   /// Parameters:
   ///
   /// * [int] pkiEzsigndocumentID (required):
@@ -1662,7 +1959,7 @@ class ObjectEzsigndocumentApi {
 
   /// Retrieve an existing Ezsigndocument
   ///
-  /// 
+  /// Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -1697,7 +1994,7 @@ class ObjectEzsigndocumentApi {
 
   /// Retrieve an existing Ezsigndocument
   ///
-  /// 
+  /// Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
   ///
   /// Parameters:
   ///
@@ -1712,6 +2009,63 @@ class ObjectEzsigndocumentApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentGetObjectV2Response',) as EzsigndocumentGetObjectV2Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve an existing Ezsigndocument
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  Future<Response> ezsigndocumentGetObjectV3WithHttpInfo(int pkiEzsigndocumentID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/3/object/ezsigndocument/{pkiEzsigndocumentID}'
+      .replaceAll('{pkiEzsigndocumentID}', pkiEzsigndocumentID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve an existing Ezsigndocument
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  Future<EzsigndocumentGetObjectV3Response?> ezsigndocumentGetObjectV3(int pkiEzsigndocumentID,) async {
+    final response = await ezsigndocumentGetObjectV3WithHttpInfo(pkiEzsigndocumentID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentGetObjectV3Response',) as EzsigndocumentGetObjectV3Response;
     
     }
     return null;
@@ -1898,7 +2252,7 @@ class ObjectEzsigndocumentApi {
 
   /// Prefill an Ezsignform
   ///
-  /// Using this endpoint, you can prefill an Ezsignform.
+  /// Using this endpoint, you can prefill an Ezsignform.  To fill Ezsignformfield with type **Dropdown**, **Text**, **Textarea**, **Checkbox**, **Date**, **Number**, you must provide properties sEzsignformfieldgroupLabel and sEzsignformfieldLabel.  To fill Ezsignformfield with type **Radio**, you must provide only the property sEzsignformfieldgroupLabel.  In **PowerAutomate** if you need to add a line feed in sEzsignformfieldEnteredvalue, you should do it like this: concat('string1',decodeUriComponent('%0A'),'string2',decodeUriComponent('%0A'),'string3')
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -1935,7 +2289,7 @@ class ObjectEzsigndocumentApi {
 
   /// Prefill an Ezsignform
   ///
-  /// Using this endpoint, you can prefill an Ezsignform.
+  /// Using this endpoint, you can prefill an Ezsignform.  To fill Ezsignformfield with type **Dropdown**, **Text**, **Textarea**, **Checkbox**, **Date**, **Number**, you must provide properties sEzsignformfieldgroupLabel and sEzsignformfieldLabel.  To fill Ezsignformfield with type **Radio**, you must provide only the property sEzsignformfieldgroupLabel.  In **PowerAutomate** if you need to add a line feed in sEzsignformfieldEnteredvalue, you should do it like this: concat('string1',decodeUriComponent('%0A'),'string2',decodeUriComponent('%0A'),'string3')
   ///
   /// Parameters:
   ///

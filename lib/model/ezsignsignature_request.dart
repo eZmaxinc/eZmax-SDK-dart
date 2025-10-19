@@ -41,6 +41,8 @@ class EzsignsignatureRequest {
     this.sEzsignsignatureTextvalidationcustommessage,
     this.sEzsignsignatureRegexp,
     this.eEzsignsignatureDependencyrequirement,
+    this.sEzsignsignatureCreditcardamountdescription,
+    this.dEzsignsignatureCreditcardamount,
   });
 
   /// The unique ID of the Ezsignsignature
@@ -270,6 +272,24 @@ class EzsignsignatureRequest {
   ///
   FieldEEzsignsignatureDependencyrequirement? eEzsignsignatureDependencyrequirement;
 
+  /// The description of the Creditcard signature
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEzsignsignatureCreditcardamountdescription;
+
+  /// The amount of the Creditcard signature
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? dEzsignsignatureCreditcardamount;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignsignatureRequest &&
     other.pkiEzsignsignatureID == pkiEzsignsignatureID &&
@@ -299,7 +319,9 @@ class EzsignsignatureRequest {
     other.eEzsignsignatureTextvalidation == eEzsignsignatureTextvalidation &&
     other.sEzsignsignatureTextvalidationcustommessage == sEzsignsignatureTextvalidationcustommessage &&
     other.sEzsignsignatureRegexp == sEzsignsignatureRegexp &&
-    other.eEzsignsignatureDependencyrequirement == eEzsignsignatureDependencyrequirement;
+    other.eEzsignsignatureDependencyrequirement == eEzsignsignatureDependencyrequirement &&
+    other.sEzsignsignatureCreditcardamountdescription == sEzsignsignatureCreditcardamountdescription &&
+    other.dEzsignsignatureCreditcardamount == dEzsignsignatureCreditcardamount;
 
   @override
   int get hashCode =>
@@ -331,10 +353,12 @@ class EzsignsignatureRequest {
     (eEzsignsignatureTextvalidation == null ? 0 : eEzsignsignatureTextvalidation!.hashCode) +
     (sEzsignsignatureTextvalidationcustommessage == null ? 0 : sEzsignsignatureTextvalidationcustommessage!.hashCode) +
     (sEzsignsignatureRegexp == null ? 0 : sEzsignsignatureRegexp!.hashCode) +
-    (eEzsignsignatureDependencyrequirement == null ? 0 : eEzsignsignatureDependencyrequirement!.hashCode);
+    (eEzsignsignatureDependencyrequirement == null ? 0 : eEzsignsignatureDependencyrequirement!.hashCode) +
+    (sEzsignsignatureCreditcardamountdescription == null ? 0 : sEzsignsignatureCreditcardamountdescription!.hashCode) +
+    (dEzsignsignatureCreditcardamount == null ? 0 : dEzsignsignatureCreditcardamount!.hashCode);
 
   @override
-  String toString() => 'EzsignsignatureRequest[pkiEzsignsignatureID=$pkiEzsignsignatureID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, fkiPaymentgatewayID=$fkiPaymentgatewayID, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureWidth=$iEzsignsignatureWidth, iEzsignsignatureHeight=$iEzsignsignatureHeight, iEzsignsignatureStep=$iEzsignsignatureStep, eEzsignsignatureType=$eEzsignsignatureType, fkiEzsigndocumentID=$fkiEzsigndocumentID, tEzsignsignatureTooltip=$tEzsignsignatureTooltip, eEzsignsignatureTooltipposition=$eEzsignsignatureTooltipposition, eEzsignsignatureFont=$eEzsignsignatureFont, fkiEzsignfoldersignerassociationIDValidation=$fkiEzsignfoldersignerassociationIDValidation, bEzsignsignatureHandwritten=$bEzsignsignatureHandwritten, bEzsignsignatureReason=$bEzsignsignatureReason, bEzsignsignatureRequired=$bEzsignsignatureRequired, eEzsignsignatureAttachmentnamesource=$eEzsignsignatureAttachmentnamesource, sEzsignsignatureAttachmentdescription=$sEzsignsignatureAttachmentdescription, eEzsignsignatureConsultationtrigger=$eEzsignsignatureConsultationtrigger, iEzsignsignatureValidationstep=$iEzsignsignatureValidationstep, iEzsignsignatureMaxlength=$iEzsignsignatureMaxlength, sEzsignsignatureDefaultvalue=$sEzsignsignatureDefaultvalue, eEzsignsignatureTextvalidation=$eEzsignsignatureTextvalidation, sEzsignsignatureTextvalidationcustommessage=$sEzsignsignatureTextvalidationcustommessage, sEzsignsignatureRegexp=$sEzsignsignatureRegexp, eEzsignsignatureDependencyrequirement=$eEzsignsignatureDependencyrequirement]';
+  String toString() => 'EzsignsignatureRequest[pkiEzsignsignatureID=$pkiEzsignsignatureID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, fkiPaymentgatewayID=$fkiPaymentgatewayID, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureWidth=$iEzsignsignatureWidth, iEzsignsignatureHeight=$iEzsignsignatureHeight, iEzsignsignatureStep=$iEzsignsignatureStep, eEzsignsignatureType=$eEzsignsignatureType, fkiEzsigndocumentID=$fkiEzsigndocumentID, tEzsignsignatureTooltip=$tEzsignsignatureTooltip, eEzsignsignatureTooltipposition=$eEzsignsignatureTooltipposition, eEzsignsignatureFont=$eEzsignsignatureFont, fkiEzsignfoldersignerassociationIDValidation=$fkiEzsignfoldersignerassociationIDValidation, bEzsignsignatureHandwritten=$bEzsignsignatureHandwritten, bEzsignsignatureReason=$bEzsignsignatureReason, bEzsignsignatureRequired=$bEzsignsignatureRequired, eEzsignsignatureAttachmentnamesource=$eEzsignsignatureAttachmentnamesource, sEzsignsignatureAttachmentdescription=$sEzsignsignatureAttachmentdescription, eEzsignsignatureConsultationtrigger=$eEzsignsignatureConsultationtrigger, iEzsignsignatureValidationstep=$iEzsignsignatureValidationstep, iEzsignsignatureMaxlength=$iEzsignsignatureMaxlength, sEzsignsignatureDefaultvalue=$sEzsignsignatureDefaultvalue, eEzsignsignatureTextvalidation=$eEzsignsignatureTextvalidation, sEzsignsignatureTextvalidationcustommessage=$sEzsignsignatureTextvalidationcustommessage, sEzsignsignatureRegexp=$sEzsignsignatureRegexp, eEzsignsignatureDependencyrequirement=$eEzsignsignatureDependencyrequirement, sEzsignsignatureCreditcardamountdescription=$sEzsignsignatureCreditcardamountdescription, dEzsignsignatureCreditcardamount=$dEzsignsignatureCreditcardamount]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -450,6 +474,16 @@ class EzsignsignatureRequest {
     } else {
       json[r'eEzsignsignatureDependencyrequirement'] = null;
     }
+    if (this.sEzsignsignatureCreditcardamountdescription != null) {
+      json[r'sEzsignsignatureCreditcardamountdescription'] = this.sEzsignsignatureCreditcardamountdescription;
+    } else {
+      json[r'sEzsignsignatureCreditcardamountdescription'] = null;
+    }
+    if (this.dEzsignsignatureCreditcardamount != null) {
+      json[r'dEzsignsignatureCreditcardamount'] = this.dEzsignsignatureCreditcardamount;
+    } else {
+      json[r'dEzsignsignatureCreditcardamount'] = null;
+    }
     return json;
   }
 
@@ -500,6 +534,8 @@ class EzsignsignatureRequest {
         sEzsignsignatureTextvalidationcustommessage: mapValueOfType<String>(json, r'sEzsignsignatureTextvalidationcustommessage'),
         sEzsignsignatureRegexp: mapValueOfType<String>(json, r'sEzsignsignatureRegexp'),
         eEzsignsignatureDependencyrequirement: FieldEEzsignsignatureDependencyrequirement.fromJson(json[r'eEzsignsignatureDependencyrequirement']),
+        sEzsignsignatureCreditcardamountdescription: mapValueOfType<String>(json, r'sEzsignsignatureCreditcardamountdescription'),
+        dEzsignsignatureCreditcardamount: mapValueOfType<String>(json, r'dEzsignsignatureCreditcardamount'),
       );
     }
     return null;

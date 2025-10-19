@@ -16,6 +16,96 @@ class ObjectEzsignbulksendtransmissionApi {
 
   final ApiClient apiClient;
 
+  /// Retrieve file to download documents in batch
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignbulksendtransmissionID (required):
+  ///
+  /// * [bool] bIncludeSigned:
+  ///   Include final document once all signatures were applied
+  ///
+  /// * [bool] bIncludeAttachment:
+  ///   Include attached files in signatures
+  ///
+  /// * [bool] bIncludeProofdocument:
+  ///   Include the evidence report
+  ///
+  /// * [bool] bIncludeProof:
+  ///   include the complete evidence archive including all of the above and more
+  Future<Response> ezsignbulksendtransmissionGetBatchFileV1WithHttpInfo(int pkiEzsignbulksendtransmissionID, { bool? bIncludeSigned, bool? bIncludeAttachment, bool? bIncludeProofdocument, bool? bIncludeProof, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getBatchFile'
+      .replaceAll('{pkiEzsignbulksendtransmissionID}', pkiEzsignbulksendtransmissionID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (bIncludeSigned != null) {
+      queryParams.addAll(_queryParams('', 'bIncludeSigned', bIncludeSigned));
+    }
+    if (bIncludeAttachment != null) {
+      queryParams.addAll(_queryParams('', 'bIncludeAttachment', bIncludeAttachment));
+    }
+    if (bIncludeProofdocument != null) {
+      queryParams.addAll(_queryParams('', 'bIncludeProofdocument', bIncludeProofdocument));
+    }
+    if (bIncludeProof != null) {
+      queryParams.addAll(_queryParams('', 'bIncludeProof', bIncludeProof));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve file to download documents in batch
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignbulksendtransmissionID (required):
+  ///
+  /// * [bool] bIncludeSigned:
+  ///   Include final document once all signatures were applied
+  ///
+  /// * [bool] bIncludeAttachment:
+  ///   Include attached files in signatures
+  ///
+  /// * [bool] bIncludeProofdocument:
+  ///   Include the evidence report
+  ///
+  /// * [bool] bIncludeProof:
+  ///   include the complete evidence archive including all of the above and more
+  Future<MultipartFile?> ezsignbulksendtransmissionGetBatchFileV1(int pkiEzsignbulksendtransmissionID, { bool? bIncludeSigned, bool? bIncludeAttachment, bool? bIncludeProofdocument, bool? bIncludeProof, }) async {
+    final response = await ezsignbulksendtransmissionGetBatchFileV1WithHttpInfo(pkiEzsignbulksendtransmissionID,  bIncludeSigned: bIncludeSigned, bIncludeAttachment: bIncludeAttachment, bIncludeProofdocument: bIncludeProofdocument, bIncludeProof: bIncludeProof, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'MultipartFile',) as MultipartFile;
+    
+    }
+    return null;
+  }
+
   /// Retrieve an existing Ezsignbulksendtransmission's Csv containing errors
   ///
   /// 

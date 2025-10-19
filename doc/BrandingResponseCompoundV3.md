@@ -9,6 +9,8 @@ import 'package:openapi/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiBrandingID** | **int** | The unique ID of the Branding | 
+**fkiDomainID** | **int** | The unique ID of the Domain | [optional] 
+**sDomainName** | **String** | The name of the Domain | [optional] 
 **fkiEmailID** | **int** | The unique ID of the Email | [optional] 
 **objBrandingDescription** | [**MultilingualBrandingDescription**](MultilingualBrandingDescription.md) |  | 
 **sBrandingDescriptionX** | **String** | The Description of the Branding in the language of the requester | 

@@ -13,7 +13,10 @@ Name | Type | Description | Notes
 **fkiEzsignfoldersignerassociationID** | **int** | The unique ID of the Ezsignfoldersignerassociation | 
 **fkiEzsignsigningreasonID** | **int** | The unique ID of the Ezsignsigningreason | [optional] 
 **fkiFontID** | **int** | The unique ID of the Font | [optional] 
+**fkiPaymentgatewayID** | **int** | The unique ID of the Paymentgateway | [optional] 
 **sCurrencyDescriptionX** | **String** | The description of the Currency in the language of the requester | [optional] 
+**dEzsignsignatureCreditcardamount** | **String** | The amount of the Creditcard signature | [optional] 
+**sEzsignsignatureCreditcardamountdescription** | **String** | The description of the Creditcard signature | [optional] 
 **sEzsignsigningreasonDescriptionX** | **String** | The description of the Ezsignsigningreason in the language of the requester | [optional] 
 **iEzsignpagePagenumber** | **int** | The page number in the Ezsigndocument | 
 **iEzsignsignatureX** | **int** | The X coordinate (Horizontal) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 2 inches from the left border of the page, you would use \"200\" for the X coordinate. | 

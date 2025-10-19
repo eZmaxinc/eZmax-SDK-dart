@@ -16,6 +16,7 @@ class CommonReportrow {
     this.aObjReportcell = const [],
     this.objVariableobject = const {},
     required this.iReportrowHeight,
+    this.objReportcellstyleCustom,
   });
 
   List<CommonReportcell> aObjReportcell;
@@ -26,27 +27,42 @@ class CommonReportrow {
   /// The reportrow height in pixels
   int iReportrowHeight;
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  CommonReportcellstylecustom? objReportcellstyleCustom;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonReportrow &&
     _deepEquality.equals(other.aObjReportcell, aObjReportcell) &&
     _deepEquality.equals(other.objVariableobject, objVariableobject) &&
-    other.iReportrowHeight == iReportrowHeight;
+    other.iReportrowHeight == iReportrowHeight &&
+    other.objReportcellstyleCustom == objReportcellstyleCustom;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (aObjReportcell.hashCode) +
     (objVariableobject.hashCode) +
-    (iReportrowHeight.hashCode);
+    (iReportrowHeight.hashCode) +
+    (objReportcellstyleCustom == null ? 0 : objReportcellstyleCustom!.hashCode);
 
   @override
-  String toString() => 'CommonReportrow[aObjReportcell=$aObjReportcell, objVariableobject=$objVariableobject, iReportrowHeight=$iReportrowHeight]';
+  String toString() => 'CommonReportrow[aObjReportcell=$aObjReportcell, objVariableobject=$objVariableobject, iReportrowHeight=$iReportrowHeight, objReportcellstyleCustom=$objReportcellstyleCustom]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'a_objReportcell'] = this.aObjReportcell;
       json[r'objVariableobject'] = this.objVariableobject;
       json[r'iReportrowHeight'] = this.iReportrowHeight;
+    if (this.objReportcellstyleCustom != null) {
+      json[r'objReportcellstyleCustom'] = this.objReportcellstyleCustom;
+    } else {
+      json[r'objReportcellstyleCustom'] = null;
+    }
     return json;
   }
 
@@ -72,6 +88,7 @@ class CommonReportrow {
         aObjReportcell: CommonReportcell.listFromJson(json[r'a_objReportcell']),
         objVariableobject: mapCastOfType<String, Object>(json, r'objVariableobject')!,
         iReportrowHeight: mapValueOfType<int>(json, r'iReportrowHeight')!,
+        objReportcellstyleCustom: CommonReportcellstylecustom.fromJson(json[r'objReportcellstyleCustom']),
       );
     }
     return null;

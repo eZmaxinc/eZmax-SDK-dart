@@ -16,7 +16,7 @@ class ObjectCommunicationApi {
 
   final ApiClient apiClient;
 
-  /// Retrieve the communication body.
+  /// Retrieve the communication body
   ///
   /// This endpoint returns the communication body.
   ///
@@ -51,7 +51,7 @@ class ObjectCommunicationApi {
     );
   }
 
-  /// Retrieve the communication body.
+  /// Retrieve the communication body
   ///
   /// This endpoint returns the communication body.
   ///

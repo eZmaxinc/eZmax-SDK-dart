@@ -131,6 +131,92 @@ class ObjectDomainApi {
     return null;
   }
 
+  /// Retrieve Domain and IDs
+  ///
+  /// Get the list of Domains to be used in a dropdown or autocomplete control.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [String] sSelector (required):
+  ///   The type of Domain to return
+  ///
+  /// * [String] eFilterActive:
+  ///   Specify which results we want to display.
+  ///
+  /// * [String] sQuery:
+  ///   Allow to filter the returned results
+  ///
+  /// * [HeaderAcceptLanguage] acceptLanguage:
+  Future<Response> domainGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/2/object/domain/getAutocomplete/{sSelector}'
+      .replaceAll('{sSelector}', sSelector);
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (eFilterActive != null) {
+      queryParams.addAll(_queryParams('', 'eFilterActive', eFilterActive));
+    }
+    if (sQuery != null) {
+      queryParams.addAll(_queryParams('', 'sQuery', sQuery));
+    }
+
+    if (acceptLanguage != null) {
+      headerParams[r'Accept-Language'] = parameterToString(acceptLanguage);
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve Domain and IDs
+  ///
+  /// Get the list of Domains to be used in a dropdown or autocomplete control.
+  ///
+  /// Parameters:
+  ///
+  /// * [String] sSelector (required):
+  ///   The type of Domain to return
+  ///
+  /// * [String] eFilterActive:
+  ///   Specify which results we want to display.
+  ///
+  /// * [String] sQuery:
+  ///   Allow to filter the returned results
+  ///
+  /// * [HeaderAcceptLanguage] acceptLanguage:
+  Future<DomainGetAutocompleteV2Response?> domainGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
+    final response = await domainGetAutocompleteV2WithHttpInfo(sSelector,  eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'DomainGetAutocompleteV2Response',) as DomainGetAutocompleteV2Response;
+    
+    }
+    return null;
+  }
+
   /// Retrieve Domain list
   ///
   /// 

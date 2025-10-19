@@ -77,6 +77,67 @@ class ObjectEzsignfoldersignerassociationApi {
     return null;
   }
 
+  /// Creates an Url to allow embedded signing
+  ///
+  /// This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfoldersignerassociationID (required):
+  ///
+  /// * [EzsignfoldersignerassociationCreateEmbeddedUrlV2Request] ezsignfoldersignerassociationCreateEmbeddedUrlV2Request (required):
+  Future<Response> ezsignfoldersignerassociationCreateEmbeddedUrlV2WithHttpInfo(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationCreateEmbeddedUrlV2Request ezsignfoldersignerassociationCreateEmbeddedUrlV2Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/2/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/createEmbeddedUrl'
+      .replaceAll('{pkiEzsignfoldersignerassociationID}', pkiEzsignfoldersignerassociationID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = ezsignfoldersignerassociationCreateEmbeddedUrlV2Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Creates an Url to allow embedded signing
+  ///
+  /// This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfoldersignerassociationID (required):
+  ///
+  /// * [EzsignfoldersignerassociationCreateEmbeddedUrlV2Request] ezsignfoldersignerassociationCreateEmbeddedUrlV2Request (required):
+  Future<EzsignfoldersignerassociationCreateEmbeddedUrlV2Response?> ezsignfoldersignerassociationCreateEmbeddedUrlV2(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationCreateEmbeddedUrlV2Request ezsignfoldersignerassociationCreateEmbeddedUrlV2Request,) async {
+    final response = await ezsignfoldersignerassociationCreateEmbeddedUrlV2WithHttpInfo(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationCreateEmbeddedUrlV2Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfoldersignerassociationCreateEmbeddedUrlV2Response',) as EzsignfoldersignerassociationCreateEmbeddedUrlV2Response;
+    
+    }
+    return null;
+  }
+
   /// Create a new Ezsignfoldersignerassociation
   ///
   /// The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.

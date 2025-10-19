@@ -30,6 +30,7 @@ class CustomEzsignfoldertypeResponse {
     this.iEzsignfoldertypeDeadlinedays,
     this.iEzsignfoldertypeFontsizeannotation,
     this.iEzsignfoldertypeFontsizeformfield,
+    this.eEzsignfoldertypeDocumentmerge,
   });
 
   /// The unique ID of the Ezsignfoldertype.
@@ -197,6 +198,14 @@ class CustomEzsignfoldertypeResponse {
   ///
   int? iEzsignfoldertypeFontsizeformfield;
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEEzsignfoldertypeDocumentmerge? eEzsignfoldertypeDocumentmerge;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomEzsignfoldertypeResponse &&
     other.pkiEzsignfoldertypeID == pkiEzsignfoldertypeID &&
@@ -215,7 +224,8 @@ class CustomEzsignfoldertypeResponse {
     other.bEzsignfoldertypeReassigngroup == bEzsignfoldertypeReassigngroup &&
     other.iEzsignfoldertypeDeadlinedays == iEzsignfoldertypeDeadlinedays &&
     other.iEzsignfoldertypeFontsizeannotation == iEzsignfoldertypeFontsizeannotation &&
-    other.iEzsignfoldertypeFontsizeformfield == iEzsignfoldertypeFontsizeformfield;
+    other.iEzsignfoldertypeFontsizeformfield == iEzsignfoldertypeFontsizeformfield &&
+    other.eEzsignfoldertypeDocumentmerge == eEzsignfoldertypeDocumentmerge;
 
   @override
   int get hashCode =>
@@ -236,10 +246,11 @@ class CustomEzsignfoldertypeResponse {
     (bEzsignfoldertypeReassigngroup == null ? 0 : bEzsignfoldertypeReassigngroup!.hashCode) +
     (iEzsignfoldertypeDeadlinedays == null ? 0 : iEzsignfoldertypeDeadlinedays!.hashCode) +
     (iEzsignfoldertypeFontsizeannotation == null ? 0 : iEzsignfoldertypeFontsizeannotation!.hashCode) +
-    (iEzsignfoldertypeFontsizeformfield == null ? 0 : iEzsignfoldertypeFontsizeformfield!.hashCode);
+    (iEzsignfoldertypeFontsizeformfield == null ? 0 : iEzsignfoldertypeFontsizeformfield!.hashCode) +
+    (eEzsignfoldertypeDocumentmerge == null ? 0 : eEzsignfoldertypeDocumentmerge!.hashCode);
 
   @override
-  String toString() => 'CustomEzsignfoldertypeResponse[pkiEzsignfoldertypeID=$pkiEzsignfoldertypeID, fkiFontIDAnnotation=$fkiFontIDAnnotation, fkiFontIDFormfield=$fkiFontIDFormfield, fkiFontIDSignature=$fkiFontIDSignature, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, bEzsignfoldertypeSendproofezsignsigner=$bEzsignfoldertypeSendproofezsignsigner, bEzsignfoldertypeAllowdownloadattachmentezsignsigner=$bEzsignfoldertypeAllowdownloadattachmentezsignsigner, bEzsignfoldertypeAllowdownloadproofezsignsigner=$bEzsignfoldertypeAllowdownloadproofezsignsigner, bEzsignfoldertypeAutomaticsignature=$bEzsignfoldertypeAutomaticsignature, bEzsignfoldertypeDelegate=$bEzsignfoldertypeDelegate, bEzsignfoldertypeDiscussion=$bEzsignfoldertypeDiscussion, bEzsignfoldertypeReassignezsignsigner=$bEzsignfoldertypeReassignezsignsigner, bEzsignfoldertypeReassignuser=$bEzsignfoldertypeReassignuser, bEzsignfoldertypeReassigngroup=$bEzsignfoldertypeReassigngroup, iEzsignfoldertypeDeadlinedays=$iEzsignfoldertypeDeadlinedays, iEzsignfoldertypeFontsizeannotation=$iEzsignfoldertypeFontsizeannotation, iEzsignfoldertypeFontsizeformfield=$iEzsignfoldertypeFontsizeformfield]';
+  String toString() => 'CustomEzsignfoldertypeResponse[pkiEzsignfoldertypeID=$pkiEzsignfoldertypeID, fkiFontIDAnnotation=$fkiFontIDAnnotation, fkiFontIDFormfield=$fkiFontIDFormfield, fkiFontIDSignature=$fkiFontIDSignature, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, bEzsignfoldertypeSendproofezsignsigner=$bEzsignfoldertypeSendproofezsignsigner, bEzsignfoldertypeAllowdownloadattachmentezsignsigner=$bEzsignfoldertypeAllowdownloadattachmentezsignsigner, bEzsignfoldertypeAllowdownloadproofezsignsigner=$bEzsignfoldertypeAllowdownloadproofezsignsigner, bEzsignfoldertypeAutomaticsignature=$bEzsignfoldertypeAutomaticsignature, bEzsignfoldertypeDelegate=$bEzsignfoldertypeDelegate, bEzsignfoldertypeDiscussion=$bEzsignfoldertypeDiscussion, bEzsignfoldertypeReassignezsignsigner=$bEzsignfoldertypeReassignezsignsigner, bEzsignfoldertypeReassignuser=$bEzsignfoldertypeReassignuser, bEzsignfoldertypeReassigngroup=$bEzsignfoldertypeReassigngroup, iEzsignfoldertypeDeadlinedays=$iEzsignfoldertypeDeadlinedays, iEzsignfoldertypeFontsizeannotation=$iEzsignfoldertypeFontsizeannotation, iEzsignfoldertypeFontsizeformfield=$iEzsignfoldertypeFontsizeformfield, eEzsignfoldertypeDocumentmerge=$eEzsignfoldertypeDocumentmerge]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -324,6 +335,11 @@ class CustomEzsignfoldertypeResponse {
     } else {
       json[r'iEzsignfoldertypeFontsizeformfield'] = null;
     }
+    if (this.eEzsignfoldertypeDocumentmerge != null) {
+      json[r'eEzsignfoldertypeDocumentmerge'] = this.eEzsignfoldertypeDocumentmerge;
+    } else {
+      json[r'eEzsignfoldertypeDocumentmerge'] = null;
+    }
     return json;
   }
 
@@ -363,6 +379,7 @@ class CustomEzsignfoldertypeResponse {
         iEzsignfoldertypeDeadlinedays: mapValueOfType<int>(json, r'iEzsignfoldertypeDeadlinedays'),
         iEzsignfoldertypeFontsizeannotation: mapValueOfType<int>(json, r'iEzsignfoldertypeFontsizeannotation'),
         iEzsignfoldertypeFontsizeformfield: mapValueOfType<int>(json, r'iEzsignfoldertypeFontsizeformfield'),
+        eEzsignfoldertypeDocumentmerge: FieldEEzsignfoldertypeDocumentmerge.fromJson(json[r'eEzsignfoldertypeDocumentmerge']),
       );
     }
     return null;

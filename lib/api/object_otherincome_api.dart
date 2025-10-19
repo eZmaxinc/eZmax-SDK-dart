@@ -243,4 +243,156 @@ class ObjectOtherincomeApi {
     }
     return null;
   }
+
+  /// Retrieve Otherincome list
+  ///
+  /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eOtherincomeRemunerationtype | Dollars<br>DollarsTaxesIncluded |
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [String] eOrderBy:
+  ///   Specify how you want the results to be sorted
+  ///
+  /// * [int] iRowMax:
+  ///
+  /// * [int] iRowOffset:
+  ///
+  /// * [HeaderAcceptLanguage] acceptLanguage:
+  ///
+  /// * [String] sFilter:
+  Future<Response> otherincomeGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/otherincome/getList';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (eOrderBy != null) {
+      queryParams.addAll(_queryParams('', 'eOrderBy', eOrderBy));
+    }
+    if (iRowMax != null) {
+      queryParams.addAll(_queryParams('', 'iRowMax', iRowMax));
+    }
+    if (iRowOffset != null) {
+      queryParams.addAll(_queryParams('', 'iRowOffset', iRowOffset));
+    }
+    if (sFilter != null) {
+      queryParams.addAll(_queryParams('', 'sFilter', sFilter));
+    }
+
+    if (acceptLanguage != null) {
+      headerParams[r'Accept-Language'] = parameterToString(acceptLanguage);
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve Otherincome list
+  ///
+  /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eOtherincomeRemunerationtype | Dollars<br>DollarsTaxesIncluded |
+  ///
+  /// Parameters:
+  ///
+  /// * [String] eOrderBy:
+  ///   Specify how you want the results to be sorted
+  ///
+  /// * [int] iRowMax:
+  ///
+  /// * [int] iRowOffset:
+  ///
+  /// * [HeaderAcceptLanguage] acceptLanguage:
+  ///
+  /// * [String] sFilter:
+  Future<OtherincomeGetListV1Response?> otherincomeGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
+    final response = await otherincomeGetListV1WithHttpInfo( eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'OtherincomeGetListV1Response',) as OtherincomeGetListV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Import attachments into the Otherincome
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiOtherincomeID (required):
+  ///
+  /// * [OtherincomeImportIntoEDMV1Request] otherincomeImportIntoEDMV1Request (required):
+  Future<Response> otherincomeImportIntoEDMV1WithHttpInfo(int pkiOtherincomeID, OtherincomeImportIntoEDMV1Request otherincomeImportIntoEDMV1Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/otherincome/{pkiOtherincomeID}/importIntoEDM'
+      .replaceAll('{pkiOtherincomeID}', pkiOtherincomeID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = otherincomeImportIntoEDMV1Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Import attachments into the Otherincome
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiOtherincomeID (required):
+  ///
+  /// * [OtherincomeImportIntoEDMV1Request] otherincomeImportIntoEDMV1Request (required):
+  Future<OtherincomeImportIntoEDMV1Response?> otherincomeImportIntoEDMV1(int pkiOtherincomeID, OtherincomeImportIntoEDMV1Request otherincomeImportIntoEDMV1Request,) async {
+    final response = await otherincomeImportIntoEDMV1WithHttpInfo(pkiOtherincomeID, otherincomeImportIntoEDMV1Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'OtherincomeImportIntoEDMV1Response',) as OtherincomeImportIntoEDMV1Response;
+    
+    }
+    return null;
+  }
 }
