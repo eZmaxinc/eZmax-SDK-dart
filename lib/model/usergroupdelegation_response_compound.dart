@@ -20,6 +20,7 @@ class UsergroupdelegationResponseCompound {
     required this.sUserLastname,
     required this.sUserLoginname,
     this.sEmailAddress,
+    required this.bUserIsactive,
     required this.sUsergroupNameX,
   });
 
@@ -58,6 +59,9 @@ class UsergroupdelegationResponseCompound {
   ///
   String? sEmailAddress;
 
+  /// Whether the User is active or not
+  bool bUserIsactive;
+
   /// The Name of the Usergroup in the language of the requester
   String sUsergroupNameX;
 
@@ -70,6 +74,7 @@ class UsergroupdelegationResponseCompound {
     other.sUserLastname == sUserLastname &&
     other.sUserLoginname == sUserLoginname &&
     other.sEmailAddress == sEmailAddress &&
+    other.bUserIsactive == bUserIsactive &&
     other.sUsergroupNameX == sUsergroupNameX;
 
   @override
@@ -82,10 +87,11 @@ class UsergroupdelegationResponseCompound {
     (sUserLastname.hashCode) +
     (sUserLoginname.hashCode) +
     (sEmailAddress == null ? 0 : sEmailAddress!.hashCode) +
+    (bUserIsactive.hashCode) +
     (sUsergroupNameX.hashCode);
 
   @override
-  String toString() => 'UsergroupdelegationResponseCompound[pkiUsergroupdelegationID=$pkiUsergroupdelegationID, fkiUsergroupID=$fkiUsergroupID, fkiUserID=$fkiUserID, sUserFirstname=$sUserFirstname, sUserLastname=$sUserLastname, sUserLoginname=$sUserLoginname, sEmailAddress=$sEmailAddress, sUsergroupNameX=$sUsergroupNameX]';
+  String toString() => 'UsergroupdelegationResponseCompound[pkiUsergroupdelegationID=$pkiUsergroupdelegationID, fkiUsergroupID=$fkiUsergroupID, fkiUserID=$fkiUserID, sUserFirstname=$sUserFirstname, sUserLastname=$sUserLastname, sUserLoginname=$sUserLoginname, sEmailAddress=$sEmailAddress, bUserIsactive=$bUserIsactive, sUsergroupNameX=$sUsergroupNameX]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -100,6 +106,7 @@ class UsergroupdelegationResponseCompound {
     } else {
       json[r'sEmailAddress'] = null;
     }
+      json[r'bUserIsactive'] = this.bUserIsactive;
       json[r'sUsergroupNameX'] = this.sUsergroupNameX;
     return json;
   }
@@ -130,6 +137,7 @@ class UsergroupdelegationResponseCompound {
         sUserLastname: mapValueOfType<String>(json, r'sUserLastname')!,
         sUserLoginname: mapValueOfType<String>(json, r'sUserLoginname')!,
         sEmailAddress: mapValueOfType<String>(json, r'sEmailAddress'),
+        bUserIsactive: mapValueOfType<bool>(json, r'bUserIsactive')!,
         sUsergroupNameX: mapValueOfType<String>(json, r'sUsergroupNameX')!,
       );
     }
@@ -184,6 +192,7 @@ class UsergroupdelegationResponseCompound {
     'sUserFirstname',
     'sUserLastname',
     'sUserLoginname',
+    'bUserIsactive',
     'sUsergroupNameX',
   };
 }

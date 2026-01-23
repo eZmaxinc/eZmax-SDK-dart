@@ -15,13 +15,13 @@ class ActivesessionListElement {
   ActivesessionListElement({
     required this.pkiActivesessionID,
     required this.fkiUserID,
-    required this.fkiComputerID,
+    this.fkiComputerID,
     required this.fkiCompanyID,
     required this.fkiDepartmentID,
     required this.sCompanyNameX,
     required this.sDepartmentNameX,
     required this.sActivesessionLoginname,
-    required this.sComputerDescription,
+    this.sComputerDescription,
     required this.dtActivesessionFirsthit,
     required this.dtActivesessionLasthit,
     required this.sActivesessionIP,
@@ -39,7 +39,13 @@ class ActivesessionListElement {
   ///
   /// Minimum value: 1
   /// Maximum value: 65535
-  int fkiComputerID;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiComputerID;
 
   /// The unique ID of the Company
   ///
@@ -62,7 +68,13 @@ class ActivesessionListElement {
   String sActivesessionLoginname;
 
   /// The description of the Computer
-  String sComputerDescription;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sComputerDescription;
 
   /// The first hit of the Activesession
   String dtActivesessionFirsthit;
@@ -93,13 +105,13 @@ class ActivesessionListElement {
     // ignore: unnecessary_parenthesis
     (pkiActivesessionID.hashCode) +
     (fkiUserID.hashCode) +
-    (fkiComputerID.hashCode) +
+    (fkiComputerID == null ? 0 : fkiComputerID!.hashCode) +
     (fkiCompanyID.hashCode) +
     (fkiDepartmentID.hashCode) +
     (sCompanyNameX.hashCode) +
     (sDepartmentNameX.hashCode) +
     (sActivesessionLoginname.hashCode) +
-    (sComputerDescription.hashCode) +
+    (sComputerDescription == null ? 0 : sComputerDescription!.hashCode) +
     (dtActivesessionFirsthit.hashCode) +
     (dtActivesessionLasthit.hashCode) +
     (sActivesessionIP.hashCode);
@@ -111,13 +123,21 @@ class ActivesessionListElement {
     final json = <String, dynamic>{};
       json[r'pkiActivesessionID'] = this.pkiActivesessionID;
       json[r'fkiUserID'] = this.fkiUserID;
+    if (this.fkiComputerID != null) {
       json[r'fkiComputerID'] = this.fkiComputerID;
+    } else {
+      json[r'fkiComputerID'] = null;
+    }
       json[r'fkiCompanyID'] = this.fkiCompanyID;
       json[r'fkiDepartmentID'] = this.fkiDepartmentID;
       json[r'sCompanyNameX'] = this.sCompanyNameX;
       json[r'sDepartmentNameX'] = this.sDepartmentNameX;
       json[r'sActivesessionLoginname'] = this.sActivesessionLoginname;
+    if (this.sComputerDescription != null) {
       json[r'sComputerDescription'] = this.sComputerDescription;
+    } else {
+      json[r'sComputerDescription'] = null;
+    }
       json[r'dtActivesessionFirsthit'] = this.dtActivesessionFirsthit;
       json[r'dtActivesessionLasthit'] = this.dtActivesessionLasthit;
       json[r'sActivesessionIP'] = this.sActivesessionIP;
@@ -145,13 +165,13 @@ class ActivesessionListElement {
       return ActivesessionListElement(
         pkiActivesessionID: mapValueOfType<int>(json, r'pkiActivesessionID')!,
         fkiUserID: mapValueOfType<int>(json, r'fkiUserID')!,
-        fkiComputerID: mapValueOfType<int>(json, r'fkiComputerID')!,
+        fkiComputerID: mapValueOfType<int>(json, r'fkiComputerID'),
         fkiCompanyID: mapValueOfType<int>(json, r'fkiCompanyID')!,
         fkiDepartmentID: mapValueOfType<int>(json, r'fkiDepartmentID')!,
         sCompanyNameX: mapValueOfType<String>(json, r'sCompanyNameX')!,
         sDepartmentNameX: mapValueOfType<String>(json, r'sDepartmentNameX')!,
         sActivesessionLoginname: mapValueOfType<String>(json, r'sActivesessionLoginname')!,
-        sComputerDescription: mapValueOfType<String>(json, r'sComputerDescription')!,
+        sComputerDescription: mapValueOfType<String>(json, r'sComputerDescription'),
         dtActivesessionFirsthit: mapValueOfType<String>(json, r'dtActivesessionFirsthit')!,
         dtActivesessionLasthit: mapValueOfType<String>(json, r'dtActivesessionLasthit')!,
         sActivesessionIP: mapValueOfType<String>(json, r'sActivesessionIP')!,
@@ -204,13 +224,11 @@ class ActivesessionListElement {
   static const requiredKeys = <String>{
     'pkiActivesessionID',
     'fkiUserID',
-    'fkiComputerID',
     'fkiCompanyID',
     'fkiDepartmentID',
     'sCompanyNameX',
     'sDepartmentNameX',
     'sActivesessionLoginname',
-    'sComputerDescription',
     'dtActivesessionFirsthit',
     'dtActivesessionLasthit',
     'sActivesessionIP',

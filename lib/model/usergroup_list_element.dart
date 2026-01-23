@@ -16,6 +16,7 @@ class UsergroupListElement {
     required this.pkiUsergroupID,
     required this.sUsergroupNameX,
     required this.iCountUser,
+    required this.iCountInactiveuser,
   });
 
   /// The unique ID of the Usergroup
@@ -33,27 +34,36 @@ class UsergroupListElement {
   /// Maximum value: 16777215
   int iCountUser;
 
+  /// Number of inactive users in group
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 16777215
+  int iCountInactiveuser;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is UsergroupListElement &&
     other.pkiUsergroupID == pkiUsergroupID &&
     other.sUsergroupNameX == sUsergroupNameX &&
-    other.iCountUser == iCountUser;
+    other.iCountUser == iCountUser &&
+    other.iCountInactiveuser == iCountInactiveuser;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiUsergroupID.hashCode) +
     (sUsergroupNameX.hashCode) +
-    (iCountUser.hashCode);
+    (iCountUser.hashCode) +
+    (iCountInactiveuser.hashCode);
 
   @override
-  String toString() => 'UsergroupListElement[pkiUsergroupID=$pkiUsergroupID, sUsergroupNameX=$sUsergroupNameX, iCountUser=$iCountUser]';
+  String toString() => 'UsergroupListElement[pkiUsergroupID=$pkiUsergroupID, sUsergroupNameX=$sUsergroupNameX, iCountUser=$iCountUser, iCountInactiveuser=$iCountInactiveuser]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiUsergroupID'] = this.pkiUsergroupID;
       json[r'sUsergroupNameX'] = this.sUsergroupNameX;
       json[r'iCountUser'] = this.iCountUser;
+      json[r'iCountInactiveuser'] = this.iCountInactiveuser;
     return json;
   }
 
@@ -79,6 +89,7 @@ class UsergroupListElement {
         pkiUsergroupID: mapValueOfType<int>(json, r'pkiUsergroupID')!,
         sUsergroupNameX: mapValueOfType<String>(json, r'sUsergroupNameX')!,
         iCountUser: mapValueOfType<int>(json, r'iCountUser')!,
+        iCountInactiveuser: mapValueOfType<int>(json, r'iCountInactiveuser')!,
       );
     }
     return null;
@@ -129,6 +140,7 @@ class UsergroupListElement {
     'pkiUsergroupID',
     'sUsergroupNameX',
     'iCountUser',
+    'iCountInactiveuser',
   };
 }
 

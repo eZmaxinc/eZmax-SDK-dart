@@ -9,66 +9,8 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**inscriptionchecklistGetAutocompleteV2**](ObjectInscriptionchecklistApi.md#inscriptionchecklistgetautocompletev2) | **GET** /2/object/inscriptionchecklist/getAutocomplete/{sSelector} | Retrieve Inscriptionchecklists and IDs
 [**inscriptionchecklistGetAutocompleteV3**](ObjectInscriptionchecklistApi.md#inscriptionchecklistgetautocompletev3) | **GET** /3/object/inscriptionchecklist/getAutocomplete/{sSelector} | Retrieve Inscriptionchecklists and IDs
 
-
-# **inscriptionchecklistGetAutocompleteV2**
-> InscriptionchecklistGetAutocompleteV2Response inscriptionchecklistGetAutocompleteV2(sSelector, fkiID, eType, eFilterActive, sQuery, acceptLanguage)
-
-Retrieve Inscriptionchecklists and IDs
-
-Get the list of Inscriptionchecklist to be used in a dropdown or autocomplete control.
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectInscriptionchecklistApi();
-final sSelector = sSelector_example; // String | The type of Inscriptionchecklist to return
-final fkiID = fkiID_example; // String | Specify which fkiID we want to display.
-final eType = eType_example; // String | The type of Inscriptionchecklist
-final eFilterActive = eFilterActive_example; // String | Specify which results we want to display.
-final sQuery = sQuery_example; // String | Allow to filter the returned results
-final acceptLanguage = ; // HeaderAcceptLanguage | 
-
-try {
-    final result = api_instance.inscriptionchecklistGetAutocompleteV2(sSelector, fkiID, eType, eFilterActive, sQuery, acceptLanguage);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectInscriptionchecklistApi->inscriptionchecklistGetAutocompleteV2: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sSelector** | **String**| The type of Inscriptionchecklist to return | 
- **fkiID** | **String**| Specify which fkiID we want to display. | [optional] 
- **eType** | **String**| The type of Inscriptionchecklist | [optional] 
- **eFilterActive** | **String**| Specify which results we want to display. | [optional] [default to 'Active']
- **sQuery** | **String**| Allow to filter the returned results | [optional] 
- **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] 
-
-### Return type
-
-[**InscriptionchecklistGetAutocompleteV2Response**](InscriptionchecklistGetAutocompleteV2Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **inscriptionchecklistGetAutocompleteV3**
 > InscriptionchecklistGetAutocompleteV3Response inscriptionchecklistGetAutocompleteV3(sSelector, fkiBuyercontractID, fkiInscriptionID, fkiInscriptionnotauthenticatedID, fkiInscriptiontempID, fkiAgentID, fkiBrokerID, fkiOtherincomeID, fkiRejectedoffertopurchaseID, eFilterActive, sQuery, acceptLanguage)

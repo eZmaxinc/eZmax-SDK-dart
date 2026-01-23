@@ -16,6 +16,7 @@ class CustomerAutocompleteElementResponse {
     required this.pkiCustomerID,
     required this.fkiDepartmentID,
     required this.sCustomerName,
+    required this.sCustomerCode,
     required this.bCustomerIsactive,
   });
 
@@ -32,6 +33,9 @@ class CustomerAutocompleteElementResponse {
   /// The name of the Customer
   String sCustomerName;
 
+  /// The code of the Customer
+  String sCustomerCode;
+
   /// Whether the customer is active or not
   bool bCustomerIsactive;
 
@@ -40,6 +44,7 @@ class CustomerAutocompleteElementResponse {
     other.pkiCustomerID == pkiCustomerID &&
     other.fkiDepartmentID == fkiDepartmentID &&
     other.sCustomerName == sCustomerName &&
+    other.sCustomerCode == sCustomerCode &&
     other.bCustomerIsactive == bCustomerIsactive;
 
   @override
@@ -48,16 +53,18 @@ class CustomerAutocompleteElementResponse {
     (pkiCustomerID.hashCode) +
     (fkiDepartmentID.hashCode) +
     (sCustomerName.hashCode) +
+    (sCustomerCode.hashCode) +
     (bCustomerIsactive.hashCode);
 
   @override
-  String toString() => 'CustomerAutocompleteElementResponse[pkiCustomerID=$pkiCustomerID, fkiDepartmentID=$fkiDepartmentID, sCustomerName=$sCustomerName, bCustomerIsactive=$bCustomerIsactive]';
+  String toString() => 'CustomerAutocompleteElementResponse[pkiCustomerID=$pkiCustomerID, fkiDepartmentID=$fkiDepartmentID, sCustomerName=$sCustomerName, sCustomerCode=$sCustomerCode, bCustomerIsactive=$bCustomerIsactive]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiCustomerID'] = this.pkiCustomerID;
       json[r'fkiDepartmentID'] = this.fkiDepartmentID;
       json[r'sCustomerName'] = this.sCustomerName;
+      json[r'sCustomerCode'] = this.sCustomerCode;
       json[r'bCustomerIsactive'] = this.bCustomerIsactive;
     return json;
   }
@@ -84,6 +91,7 @@ class CustomerAutocompleteElementResponse {
         pkiCustomerID: mapValueOfType<int>(json, r'pkiCustomerID')!,
         fkiDepartmentID: mapValueOfType<int>(json, r'fkiDepartmentID')!,
         sCustomerName: mapValueOfType<String>(json, r'sCustomerName')!,
+        sCustomerCode: mapValueOfType<String>(json, r'sCustomerCode')!,
         bCustomerIsactive: mapValueOfType<bool>(json, r'bCustomerIsactive')!,
       );
     }
@@ -135,6 +143,7 @@ class CustomerAutocompleteElementResponse {
     'pkiCustomerID',
     'fkiDepartmentID',
     'sCustomerName',
+    'sCustomerCode',
     'bCustomerIsactive',
   };
 }

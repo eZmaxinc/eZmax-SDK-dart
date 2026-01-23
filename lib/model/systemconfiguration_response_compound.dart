@@ -16,6 +16,8 @@ class SystemconfigurationResponseCompound {
     required this.pkiSystemconfigurationID,
     required this.fkiSystemconfigurationtypeID,
     this.fkiBrandingID,
+    required this.fkiTimezoneIDDefault,
+    required this.sTimezoneNameDefault,
     required this.sSystemconfigurationtypeDescriptionX,
     required this.eSystemconfigurationNewexternaluseraction,
     required this.eSystemconfigurationLanguage1,
@@ -30,6 +32,7 @@ class SystemconfigurationResponseCompound {
     this.dtSystemconfigurationReadonlyexpirationstart,
     this.dtSystemconfigurationReadonlyexpirationend,
     this.objBranding,
+    this.iSystemconfigurationEzsignreminderhoursend,
   });
 
   /// The unique ID of the Systemconfiguration
@@ -53,6 +56,14 @@ class SystemconfigurationResponseCompound {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   int? fkiBrandingID;
+
+  /// The unique ID of the Timezone
+  ///
+  /// Minimum value: 0
+  int fkiTimezoneIDDefault;
+
+  /// The description of the Timezone
+  String sTimezoneNameDefault;
 
   /// The description of the Systemconfigurationtype in the language of the requester
   String sSystemconfigurationtypeDescriptionX;
@@ -138,11 +149,25 @@ class SystemconfigurationResponseCompound {
   ///
   CustomBrandingResponse? objBranding;
 
+  /// The hour we will send the eZsign reminders
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 23
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? iSystemconfigurationEzsignreminderhoursend;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is SystemconfigurationResponseCompound &&
     other.pkiSystemconfigurationID == pkiSystemconfigurationID &&
     other.fkiSystemconfigurationtypeID == fkiSystemconfigurationtypeID &&
     other.fkiBrandingID == fkiBrandingID &&
+    other.fkiTimezoneIDDefault == fkiTimezoneIDDefault &&
+    other.sTimezoneNameDefault == sTimezoneNameDefault &&
     other.sSystemconfigurationtypeDescriptionX == sSystemconfigurationtypeDescriptionX &&
     other.eSystemconfigurationNewexternaluseraction == eSystemconfigurationNewexternaluseraction &&
     other.eSystemconfigurationLanguage1 == eSystemconfigurationLanguage1 &&
@@ -156,7 +181,8 @@ class SystemconfigurationResponseCompound {
     other.bSystemconfigurationSspr == bSystemconfigurationSspr &&
     other.dtSystemconfigurationReadonlyexpirationstart == dtSystemconfigurationReadonlyexpirationstart &&
     other.dtSystemconfigurationReadonlyexpirationend == dtSystemconfigurationReadonlyexpirationend &&
-    other.objBranding == objBranding;
+    other.objBranding == objBranding &&
+    other.iSystemconfigurationEzsignreminderhoursend == iSystemconfigurationEzsignreminderhoursend;
 
   @override
   int get hashCode =>
@@ -164,6 +190,8 @@ class SystemconfigurationResponseCompound {
     (pkiSystemconfigurationID.hashCode) +
     (fkiSystemconfigurationtypeID.hashCode) +
     (fkiBrandingID == null ? 0 : fkiBrandingID!.hashCode) +
+    (fkiTimezoneIDDefault.hashCode) +
+    (sTimezoneNameDefault.hashCode) +
     (sSystemconfigurationtypeDescriptionX.hashCode) +
     (eSystemconfigurationNewexternaluseraction.hashCode) +
     (eSystemconfigurationLanguage1.hashCode) +
@@ -177,10 +205,11 @@ class SystemconfigurationResponseCompound {
     (bSystemconfigurationSspr.hashCode) +
     (dtSystemconfigurationReadonlyexpirationstart == null ? 0 : dtSystemconfigurationReadonlyexpirationstart!.hashCode) +
     (dtSystemconfigurationReadonlyexpirationend == null ? 0 : dtSystemconfigurationReadonlyexpirationend!.hashCode) +
-    (objBranding == null ? 0 : objBranding!.hashCode);
+    (objBranding == null ? 0 : objBranding!.hashCode) +
+    (iSystemconfigurationEzsignreminderhoursend == null ? 0 : iSystemconfigurationEzsignreminderhoursend!.hashCode);
 
   @override
-  String toString() => 'SystemconfigurationResponseCompound[pkiSystemconfigurationID=$pkiSystemconfigurationID, fkiSystemconfigurationtypeID=$fkiSystemconfigurationtypeID, fkiBrandingID=$fkiBrandingID, sSystemconfigurationtypeDescriptionX=$sSystemconfigurationtypeDescriptionX, eSystemconfigurationNewexternaluseraction=$eSystemconfigurationNewexternaluseraction, eSystemconfigurationLanguage1=$eSystemconfigurationLanguage1, eSystemconfigurationLanguage2=$eSystemconfigurationLanguage2, eSystemconfigurationEzsign=$eSystemconfigurationEzsign, eSystemconfigurationEzsignofficeplan=$eSystemconfigurationEzsignofficeplan, bSystemconfigurationEzsignpaidbyoffice=$bSystemconfigurationEzsignpaidbyoffice, bSystemconfigurationEzsignpersonnal=$bSystemconfigurationEzsignpersonnal, bSystemconfigurationHascreditcardmerchant=$bSystemconfigurationHascreditcardmerchant, bSystemconfigurationIsdisposalactive=$bSystemconfigurationIsdisposalactive, bSystemconfigurationSspr=$bSystemconfigurationSspr, dtSystemconfigurationReadonlyexpirationstart=$dtSystemconfigurationReadonlyexpirationstart, dtSystemconfigurationReadonlyexpirationend=$dtSystemconfigurationReadonlyexpirationend, objBranding=$objBranding]';
+  String toString() => 'SystemconfigurationResponseCompound[pkiSystemconfigurationID=$pkiSystemconfigurationID, fkiSystemconfigurationtypeID=$fkiSystemconfigurationtypeID, fkiBrandingID=$fkiBrandingID, fkiTimezoneIDDefault=$fkiTimezoneIDDefault, sTimezoneNameDefault=$sTimezoneNameDefault, sSystemconfigurationtypeDescriptionX=$sSystemconfigurationtypeDescriptionX, eSystemconfigurationNewexternaluseraction=$eSystemconfigurationNewexternaluseraction, eSystemconfigurationLanguage1=$eSystemconfigurationLanguage1, eSystemconfigurationLanguage2=$eSystemconfigurationLanguage2, eSystemconfigurationEzsign=$eSystemconfigurationEzsign, eSystemconfigurationEzsignofficeplan=$eSystemconfigurationEzsignofficeplan, bSystemconfigurationEzsignpaidbyoffice=$bSystemconfigurationEzsignpaidbyoffice, bSystemconfigurationEzsignpersonnal=$bSystemconfigurationEzsignpersonnal, bSystemconfigurationHascreditcardmerchant=$bSystemconfigurationHascreditcardmerchant, bSystemconfigurationIsdisposalactive=$bSystemconfigurationIsdisposalactive, bSystemconfigurationSspr=$bSystemconfigurationSspr, dtSystemconfigurationReadonlyexpirationstart=$dtSystemconfigurationReadonlyexpirationstart, dtSystemconfigurationReadonlyexpirationend=$dtSystemconfigurationReadonlyexpirationend, objBranding=$objBranding, iSystemconfigurationEzsignreminderhoursend=$iSystemconfigurationEzsignreminderhoursend]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -191,6 +220,8 @@ class SystemconfigurationResponseCompound {
     } else {
       json[r'fkiBrandingID'] = null;
     }
+      json[r'fkiTimezoneIDDefault'] = this.fkiTimezoneIDDefault;
+      json[r'sTimezoneNameDefault'] = this.sTimezoneNameDefault;
       json[r'sSystemconfigurationtypeDescriptionX'] = this.sSystemconfigurationtypeDescriptionX;
       json[r'eSystemconfigurationNewexternaluseraction'] = this.eSystemconfigurationNewexternaluseraction;
       json[r'eSystemconfigurationLanguage1'] = this.eSystemconfigurationLanguage1;
@@ -237,6 +268,11 @@ class SystemconfigurationResponseCompound {
     } else {
       json[r'objBranding'] = null;
     }
+    if (this.iSystemconfigurationEzsignreminderhoursend != null) {
+      json[r'iSystemconfigurationEzsignreminderhoursend'] = this.iSystemconfigurationEzsignreminderhoursend;
+    } else {
+      json[r'iSystemconfigurationEzsignreminderhoursend'] = null;
+    }
     return json;
   }
 
@@ -262,6 +298,8 @@ class SystemconfigurationResponseCompound {
         pkiSystemconfigurationID: mapValueOfType<int>(json, r'pkiSystemconfigurationID')!,
         fkiSystemconfigurationtypeID: mapValueOfType<int>(json, r'fkiSystemconfigurationtypeID')!,
         fkiBrandingID: mapValueOfType<int>(json, r'fkiBrandingID'),
+        fkiTimezoneIDDefault: mapValueOfType<int>(json, r'fkiTimezoneIDDefault')!,
+        sTimezoneNameDefault: mapValueOfType<String>(json, r'sTimezoneNameDefault')!,
         sSystemconfigurationtypeDescriptionX: mapValueOfType<String>(json, r'sSystemconfigurationtypeDescriptionX')!,
         eSystemconfigurationNewexternaluseraction: FieldESystemconfigurationNewexternaluseraction.fromJson(json[r'eSystemconfigurationNewexternaluseraction'])!,
         eSystemconfigurationLanguage1: FieldESystemconfigurationLanguage1.fromJson(json[r'eSystemconfigurationLanguage1'])!,
@@ -276,6 +314,7 @@ class SystemconfigurationResponseCompound {
         dtSystemconfigurationReadonlyexpirationstart: mapValueOfType<String>(json, r'dtSystemconfigurationReadonlyexpirationstart'),
         dtSystemconfigurationReadonlyexpirationend: mapValueOfType<String>(json, r'dtSystemconfigurationReadonlyexpirationend'),
         objBranding: CustomBrandingResponse.fromJson(json[r'objBranding']),
+        iSystemconfigurationEzsignreminderhoursend: mapValueOfType<int>(json, r'iSystemconfigurationEzsignreminderhoursend'),
       );
     }
     return null;
@@ -325,6 +364,8 @@ class SystemconfigurationResponseCompound {
   static const requiredKeys = <String>{
     'pkiSystemconfigurationID',
     'fkiSystemconfigurationtypeID',
+    'fkiTimezoneIDDefault',
+    'sTimezoneNameDefault',
     'sSystemconfigurationtypeDescriptionX',
     'eSystemconfigurationNewexternaluseraction',
     'eSystemconfigurationLanguage1',

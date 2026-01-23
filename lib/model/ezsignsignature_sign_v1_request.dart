@@ -15,6 +15,7 @@ class EzsignsignatureSignV1Request {
   EzsignsignatureSignV1Request({
     this.fkiEzsignsigningreasonID,
     this.fkiFontID,
+    this.dEzsignsignatureCreditcardamount,
     this.sValue,
     this.eAttachmentsConfirmationDecision,
     this.sAttachmentsRefusalReason,
@@ -46,6 +47,15 @@ class EzsignsignatureSignV1Request {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   int? fkiFontID;
+
+  /// The amount of the Creditcard signature
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? dEzsignsignatureCreditcardamount;
 
   /// The value required for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **City**, **FieldText** or **FieldTextarea**
   ///
@@ -94,6 +104,7 @@ class EzsignsignatureSignV1Request {
   bool operator ==(Object other) => identical(this, other) || other is EzsignsignatureSignV1Request &&
     other.fkiEzsignsigningreasonID == fkiEzsignsigningreasonID &&
     other.fkiFontID == fkiFontID &&
+    other.dEzsignsignatureCreditcardamount == dEzsignsignatureCreditcardamount &&
     other.sValue == sValue &&
     other.eAttachmentsConfirmationDecision == eAttachmentsConfirmationDecision &&
     other.sAttachmentsRefusalReason == sAttachmentsRefusalReason &&
@@ -107,6 +118,7 @@ class EzsignsignatureSignV1Request {
     // ignore: unnecessary_parenthesis
     (fkiEzsignsigningreasonID == null ? 0 : fkiEzsignsigningreasonID!.hashCode) +
     (fkiFontID == null ? 0 : fkiFontID!.hashCode) +
+    (dEzsignsignatureCreditcardamount == null ? 0 : dEzsignsignatureCreditcardamount!.hashCode) +
     (sValue == null ? 0 : sValue!.hashCode) +
     (eAttachmentsConfirmationDecision == null ? 0 : eAttachmentsConfirmationDecision!.hashCode) +
     (sAttachmentsRefusalReason == null ? 0 : sAttachmentsRefusalReason!.hashCode) +
@@ -116,7 +128,7 @@ class EzsignsignatureSignV1Request {
     (bIsAutomatic.hashCode);
 
   @override
-  String toString() => 'EzsignsignatureSignV1Request[fkiEzsignsigningreasonID=$fkiEzsignsigningreasonID, fkiFontID=$fkiFontID, sValue=$sValue, eAttachmentsConfirmationDecision=$eAttachmentsConfirmationDecision, sAttachmentsRefusalReason=$sAttachmentsRefusalReason, sSvg=$sSvg, aObjFile=$aObjFile, objCreditcard=$objCreditcard, bIsAutomatic=$bIsAutomatic]';
+  String toString() => 'EzsignsignatureSignV1Request[fkiEzsignsigningreasonID=$fkiEzsignsigningreasonID, fkiFontID=$fkiFontID, dEzsignsignatureCreditcardamount=$dEzsignsignatureCreditcardamount, sValue=$sValue, eAttachmentsConfirmationDecision=$eAttachmentsConfirmationDecision, sAttachmentsRefusalReason=$sAttachmentsRefusalReason, sSvg=$sSvg, aObjFile=$aObjFile, objCreditcard=$objCreditcard, bIsAutomatic=$bIsAutomatic]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -129,6 +141,11 @@ class EzsignsignatureSignV1Request {
       json[r'fkiFontID'] = this.fkiFontID;
     } else {
       json[r'fkiFontID'] = null;
+    }
+    if (this.dEzsignsignatureCreditcardamount != null) {
+      json[r'dEzsignsignatureCreditcardamount'] = this.dEzsignsignatureCreditcardamount;
+    } else {
+      json[r'dEzsignsignatureCreditcardamount'] = null;
     }
     if (this.sValue != null) {
       json[r'sValue'] = this.sValue;
@@ -181,6 +198,7 @@ class EzsignsignatureSignV1Request {
       return EzsignsignatureSignV1Request(
         fkiEzsignsigningreasonID: mapValueOfType<int>(json, r'fkiEzsignsigningreasonID'),
         fkiFontID: mapValueOfType<int>(json, r'fkiFontID'),
+        dEzsignsignatureCreditcardamount: mapValueOfType<String>(json, r'dEzsignsignatureCreditcardamount'),
         sValue: mapValueOfType<String>(json, r'sValue'),
         eAttachmentsConfirmationDecision: EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum.fromJson(json[r'eAttachmentsConfirmationDecision']),
         sAttachmentsRefusalReason: mapValueOfType<String>(json, r'sAttachmentsRefusalReason'),

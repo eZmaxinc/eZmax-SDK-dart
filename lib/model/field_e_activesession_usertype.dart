@@ -25,6 +25,7 @@ class FieldEActivesessionUsertype {
 
   static const agentBroker = FieldEActivesessionUsertype._(r'AgentBroker');
   static const assistant = FieldEActivesessionUsertype._(r'Assistant');
+  static const employee = FieldEActivesessionUsertype._(r'Employee');
   static const ezsignSigner = FieldEActivesessionUsertype._(r'EzsignSigner');
   static const ezsignUser = FieldEActivesessionUsertype._(r'EzsignUser');
   static const normal = FieldEActivesessionUsertype._(r'Normal');
@@ -33,6 +34,7 @@ class FieldEActivesessionUsertype {
   static const values = <FieldEActivesessionUsertype>[
     agentBroker,
     assistant,
+    employee,
     ezsignSigner,
     ezsignUser,
     normal,
@@ -76,6 +78,7 @@ class FieldEActivesessionUsertypeTypeTransformer {
       switch (data) {
         case r'AgentBroker': return FieldEActivesessionUsertype.agentBroker;
         case r'Assistant': return FieldEActivesessionUsertype.assistant;
+        case r'Employee': return FieldEActivesessionUsertype.employee;
         case r'EzsignSigner': return FieldEActivesessionUsertype.ezsignSigner;
         case r'EzsignUser': return FieldEActivesessionUsertype.ezsignUser;
         case r'Normal': return FieldEActivesessionUsertype.normal;

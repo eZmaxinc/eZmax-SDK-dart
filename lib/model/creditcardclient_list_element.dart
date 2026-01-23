@@ -17,6 +17,7 @@ class CreditcardclientListElement {
     required this.fkiCreditcarddetailID,
     required this.fkiCreditcardtypeID,
     required this.bCreditcardclientrelationIsdefault,
+    required this.bCreditcardclientLegacy,
     required this.sCreditcardclientDescription,
     required this.bCreditcardclientAllowedcompanypayment,
     required this.bCreditcardclientAllowedtranquillit,
@@ -45,6 +46,9 @@ class CreditcardclientListElement {
 
   /// Whether if it's the creditcardclient is the default one
   bool bCreditcardclientrelationIsdefault;
+
+  /// Whether the Creditcardclient is legacy or not
+  bool bCreditcardclientLegacy;
 
   /// The description of the Creditcardclient
   String sCreditcardclientDescription;
@@ -79,6 +83,7 @@ class CreditcardclientListElement {
     other.fkiCreditcarddetailID == fkiCreditcarddetailID &&
     other.fkiCreditcardtypeID == fkiCreditcardtypeID &&
     other.bCreditcardclientrelationIsdefault == bCreditcardclientrelationIsdefault &&
+    other.bCreditcardclientLegacy == bCreditcardclientLegacy &&
     other.sCreditcardclientDescription == sCreditcardclientDescription &&
     other.bCreditcardclientAllowedcompanypayment == bCreditcardclientAllowedcompanypayment &&
     other.bCreditcardclientAllowedtranquillit == bCreditcardclientAllowedtranquillit &&
@@ -93,6 +98,7 @@ class CreditcardclientListElement {
     (fkiCreditcarddetailID.hashCode) +
     (fkiCreditcardtypeID.hashCode) +
     (bCreditcardclientrelationIsdefault.hashCode) +
+    (bCreditcardclientLegacy.hashCode) +
     (sCreditcardclientDescription.hashCode) +
     (bCreditcardclientAllowedcompanypayment.hashCode) +
     (bCreditcardclientAllowedtranquillit.hashCode) +
@@ -101,7 +107,7 @@ class CreditcardclientListElement {
     (iCreditcarddetailLastdigits.hashCode);
 
   @override
-  String toString() => 'CreditcardclientListElement[pkiCreditcardclientID=$pkiCreditcardclientID, fkiCreditcarddetailID=$fkiCreditcarddetailID, fkiCreditcardtypeID=$fkiCreditcardtypeID, bCreditcardclientrelationIsdefault=$bCreditcardclientrelationIsdefault, sCreditcardclientDescription=$sCreditcardclientDescription, bCreditcardclientAllowedcompanypayment=$bCreditcardclientAllowedcompanypayment, bCreditcardclientAllowedtranquillit=$bCreditcardclientAllowedtranquillit, iCreditcarddetailExpirationmonth=$iCreditcarddetailExpirationmonth, iCreditcarddetailExpirationyear=$iCreditcarddetailExpirationyear, iCreditcarddetailLastdigits=$iCreditcarddetailLastdigits]';
+  String toString() => 'CreditcardclientListElement[pkiCreditcardclientID=$pkiCreditcardclientID, fkiCreditcarddetailID=$fkiCreditcarddetailID, fkiCreditcardtypeID=$fkiCreditcardtypeID, bCreditcardclientrelationIsdefault=$bCreditcardclientrelationIsdefault, bCreditcardclientLegacy=$bCreditcardclientLegacy, sCreditcardclientDescription=$sCreditcardclientDescription, bCreditcardclientAllowedcompanypayment=$bCreditcardclientAllowedcompanypayment, bCreditcardclientAllowedtranquillit=$bCreditcardclientAllowedtranquillit, iCreditcarddetailExpirationmonth=$iCreditcarddetailExpirationmonth, iCreditcarddetailExpirationyear=$iCreditcarddetailExpirationyear, iCreditcarddetailLastdigits=$iCreditcarddetailLastdigits]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -109,6 +115,7 @@ class CreditcardclientListElement {
       json[r'fkiCreditcarddetailID'] = this.fkiCreditcarddetailID;
       json[r'fkiCreditcardtypeID'] = this.fkiCreditcardtypeID;
       json[r'bCreditcardclientrelationIsdefault'] = this.bCreditcardclientrelationIsdefault;
+      json[r'bCreditcardclientLegacy'] = this.bCreditcardclientLegacy;
       json[r'sCreditcardclientDescription'] = this.sCreditcardclientDescription;
       json[r'bCreditcardclientAllowedcompanypayment'] = this.bCreditcardclientAllowedcompanypayment;
       json[r'bCreditcardclientAllowedtranquillit'] = this.bCreditcardclientAllowedtranquillit;
@@ -141,6 +148,7 @@ class CreditcardclientListElement {
         fkiCreditcarddetailID: mapValueOfType<int>(json, r'fkiCreditcarddetailID')!,
         fkiCreditcardtypeID: mapValueOfType<int>(json, r'fkiCreditcardtypeID')!,
         bCreditcardclientrelationIsdefault: mapValueOfType<bool>(json, r'bCreditcardclientrelationIsdefault')!,
+        bCreditcardclientLegacy: mapValueOfType<bool>(json, r'bCreditcardclientLegacy')!,
         sCreditcardclientDescription: mapValueOfType<String>(json, r'sCreditcardclientDescription')!,
         bCreditcardclientAllowedcompanypayment: mapValueOfType<bool>(json, r'bCreditcardclientAllowedcompanypayment')!,
         bCreditcardclientAllowedtranquillit: mapValueOfType<bool>(json, r'bCreditcardclientAllowedtranquillit')!,
@@ -198,6 +206,7 @@ class CreditcardclientListElement {
     'fkiCreditcarddetailID',
     'fkiCreditcardtypeID',
     'bCreditcardclientrelationIsdefault',
+    'bCreditcardclientLegacy',
     'sCreditcardclientDescription',
     'bCreditcardclientAllowedcompanypayment',
     'bCreditcardclientAllowedtranquillit',

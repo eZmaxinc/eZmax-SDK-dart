@@ -708,6 +708,63 @@ class ObjectEzsignfolderApi {
     return null;
   }
 
+  /// Retrieve actionable elements for the Ezsignfolder
+  ///
+  /// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfolderID (required):
+  Future<Response> ezsignfolderGetActionableElementsV3WithHttpInfo(int pkiEzsignfolderID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/3/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements'
+      .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve actionable elements for the Ezsignfolder
+  ///
+  /// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfolderID (required):
+  Future<EzsignfolderGetActionableElementsV3Response?> ezsignfolderGetActionableElementsV3(int pkiEzsignfolderID,) async {
+    final response = await ezsignfolderGetActionableElementsV3WithHttpInfo(pkiEzsignfolderID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderGetActionableElementsV3Response',) as EzsignfolderGetActionableElementsV3Response;
+    
+    }
+    return null;
+  }
+
   /// Retrieve Attachment count
   ///
   /// 
@@ -1771,63 +1828,6 @@ class ObjectEzsignfolderApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderImportEzsigntemplatepackageV2Response',) as EzsignfolderImportEzsigntemplatepackageV2Response;
-    
-    }
-    return null;
-  }
-
-  /// Reorder Ezsigndocuments in the Ezsignfolder
-  ///
-  /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiEzsignfolderID (required):
-  ///
-  /// * [EzsignfolderReorderV1Request] ezsignfolderReorderV1Request (required):
-  Future<Response> ezsignfolderReorderV1WithHttpInfo(int pkiEzsignfolderID, EzsignfolderReorderV1Request ezsignfolderReorderV1Request,) async {
-    // ignore: prefer_const_declarations
-    final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/reorder'
-      .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
-
-    // ignore: prefer_final_locals
-    Object? postBody = ezsignfolderReorderV1Request;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>['application/json'];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'POST',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-    );
-  }
-
-  /// Reorder Ezsigndocuments in the Ezsignfolder
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiEzsignfolderID (required):
-  ///
-  /// * [EzsignfolderReorderV1Request] ezsignfolderReorderV1Request (required):
-  Future<EzsignfolderReorderV1Response?> ezsignfolderReorderV1(int pkiEzsignfolderID, EzsignfolderReorderV1Request ezsignfolderReorderV1Request,) async {
-    final response = await ezsignfolderReorderV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderReorderV1Request,);
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfolderReorderV1Response',) as EzsignfolderReorderV1Response;
     
     }
     return null;

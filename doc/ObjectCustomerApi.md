@@ -9,59 +9,10 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**customerCreateObjectV1**](ObjectCustomerApi.md#customercreateobjectv1) | **POST** /1/object/customer | Create a new Customer
 [**customerGetAutocompleteV2**](ObjectCustomerApi.md#customergetautocompletev2) | **GET** /2/object/customer/getAutocomplete/{sSelector} | Retrieve Customers and IDs
-[**customerGetListV1**](ObjectCustomerApi.md#customergetlistv1) | **GET** /1/object/customer/getList | Retrieve Customer list
 [**customerGetObjectV2**](ObjectCustomerApi.md#customergetobjectv2) | **GET** /2/object/customer/{pkiCustomerID} | Retrieve an existing Customer
-[**customerImportIntoEDMV1**](ObjectCustomerApi.md#customerimportintoedmv1) | **POST** /1/object/customer/{pkiCustomerID}/importIntoEDM | Import attachments into the Buyercontract
+[**customerImportIntoEDMV1**](ObjectCustomerApi.md#customerimportintoedmv1) | **POST** /1/object/customer/{pkiCustomerID}/importIntoEDM | Import attachments into the Customer
 
-
-# **customerCreateObjectV1**
-> CustomerCreateObjectV1Response customerCreateObjectV1(customerCreateObjectV1Request)
-
-Create a new Customer
-
-The endpoint allows to create one or many elements at once.
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectCustomerApi();
-final customerCreateObjectV1Request = CustomerCreateObjectV1Request(); // CustomerCreateObjectV1Request | 
-
-try {
-    final result = api_instance.customerCreateObjectV1(customerCreateObjectV1Request);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectCustomerApi->customerCreateObjectV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **customerCreateObjectV1Request** | [**CustomerCreateObjectV1Request**](CustomerCreateObjectV1Request.md)|  | 
-
-### Return type
-
-[**CustomerCreateObjectV1Response**](CustomerCreateObjectV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **customerGetAutocompleteV2**
 > CustomerGetAutocompleteV2Response customerGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
@@ -116,61 +67,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **customerGetListV1**
-> CustomerGetListV1Response customerGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
-
-Retrieve Customer list
-
-
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectCustomerApi();
-final eOrderBy = eOrderBy_example; // String | Specify how you want the results to be sorted
-final iRowMax = 56; // int | 
-final iRowOffset = 56; // int | 
-final acceptLanguage = ; // HeaderAcceptLanguage | 
-final sFilter = sFilter_example; // String | 
-
-try {
-    final result = api_instance.customerGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectCustomerApi->customerGetListV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] 
- **iRowMax** | **int**|  | [optional] 
- **iRowOffset** | **int**|  | [optional] [default to 0]
- **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] 
- **sFilter** | **String**|  | [optional] 
-
-### Return type
-
-[**CustomerGetListV1Response**](CustomerGetListV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **customerGetObjectV2**
 > CustomerGetObjectV2Response customerGetObjectV2(pkiCustomerID)
 
@@ -221,7 +117,7 @@ Name | Type | Description  | Notes
 # **customerImportIntoEDMV1**
 > CustomerImportIntoEDMV1Response customerImportIntoEDMV1(pkiCustomerID, customerImportIntoEDMV1Request)
 
-Import attachments into the Buyercontract
+Import attachments into the Customer
 
 
 

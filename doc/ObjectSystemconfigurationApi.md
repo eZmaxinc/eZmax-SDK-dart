@@ -9,12 +9,12 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**systemconfigurationEditObjectV1**](ObjectSystemconfigurationApi.md#systemconfigurationeditobjectv1) | **PUT** /1/object/systemconfiguration/{pkiSystemconfigurationID} | Edit an existing Systemconfiguration
+[**systemconfigurationEditObjectV2**](ObjectSystemconfigurationApi.md#systemconfigurationeditobjectv2) | **PUT** /2/object/systemconfiguration/{pkiSystemconfigurationID} | Edit an existing Systemconfiguration
 [**systemconfigurationGetObjectV2**](ObjectSystemconfigurationApi.md#systemconfigurationgetobjectv2) | **GET** /2/object/systemconfiguration/{pkiSystemconfigurationID} | Retrieve an existing Systemconfiguration
 
 
-# **systemconfigurationEditObjectV1**
-> SystemconfigurationEditObjectV1Response systemconfigurationEditObjectV1(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request)
+# **systemconfigurationEditObjectV2**
+> SystemconfigurationEditObjectV2Response systemconfigurationEditObjectV2(pkiSystemconfigurationID, systemconfigurationEditObjectV2Request)
 
 Edit an existing Systemconfiguration
 
@@ -30,13 +30,13 @@ import 'package:openapi/api.dart';
 
 final api_instance = ObjectSystemconfigurationApi();
 final pkiSystemconfigurationID = 56; // int | The unique ID of the Systemconfiguration
-final systemconfigurationEditObjectV1Request = SystemconfigurationEditObjectV1Request(); // SystemconfigurationEditObjectV1Request | 
+final systemconfigurationEditObjectV2Request = SystemconfigurationEditObjectV2Request(); // SystemconfigurationEditObjectV2Request | 
 
 try {
-    final result = api_instance.systemconfigurationEditObjectV1(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request);
+    final result = api_instance.systemconfigurationEditObjectV2(pkiSystemconfigurationID, systemconfigurationEditObjectV2Request);
     print(result);
 } catch (e) {
-    print('Exception when calling ObjectSystemconfigurationApi->systemconfigurationEditObjectV1: $e\n');
+    print('Exception when calling ObjectSystemconfigurationApi->systemconfigurationEditObjectV2: $e\n');
 }
 ```
 
@@ -45,11 +45,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiSystemconfigurationID** | **int**| The unique ID of the Systemconfiguration | 
- **systemconfigurationEditObjectV1Request** | [**SystemconfigurationEditObjectV1Request**](SystemconfigurationEditObjectV1Request.md)|  | 
+ **systemconfigurationEditObjectV2Request** | [**SystemconfigurationEditObjectV2Request**](SystemconfigurationEditObjectV2Request.md)|  | 
 
 ### Return type
 
-[**SystemconfigurationEditObjectV1Response**](SystemconfigurationEditObjectV1Response.md)
+[**SystemconfigurationEditObjectV2Response**](SystemconfigurationEditObjectV2Response.md)
 
 ### Authorization
 

@@ -16,6 +16,7 @@ class CommonReportsection {
     this.aObjReportsubsection = const [],
     required this.eReportsectionHorizontalalignment,
     this.sReportsectionTitle,
+    this.sReportsectionTabname,
   });
 
   List<CommonReportsubsection> aObjReportsubsection;
@@ -31,21 +32,32 @@ class CommonReportsection {
   ///
   String? sReportsectionTitle;
 
+  /// The name of tab in excel version
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sReportsectionTabname;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is CommonReportsection &&
     _deepEquality.equals(other.aObjReportsubsection, aObjReportsubsection) &&
     other.eReportsectionHorizontalalignment == eReportsectionHorizontalalignment &&
-    other.sReportsectionTitle == sReportsectionTitle;
+    other.sReportsectionTitle == sReportsectionTitle &&
+    other.sReportsectionTabname == sReportsectionTabname;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (aObjReportsubsection.hashCode) +
     (eReportsectionHorizontalalignment.hashCode) +
-    (sReportsectionTitle == null ? 0 : sReportsectionTitle!.hashCode);
+    (sReportsectionTitle == null ? 0 : sReportsectionTitle!.hashCode) +
+    (sReportsectionTabname == null ? 0 : sReportsectionTabname!.hashCode);
 
   @override
-  String toString() => 'CommonReportsection[aObjReportsubsection=$aObjReportsubsection, eReportsectionHorizontalalignment=$eReportsectionHorizontalalignment, sReportsectionTitle=$sReportsectionTitle]';
+  String toString() => 'CommonReportsection[aObjReportsubsection=$aObjReportsubsection, eReportsectionHorizontalalignment=$eReportsectionHorizontalalignment, sReportsectionTitle=$sReportsectionTitle, sReportsectionTabname=$sReportsectionTabname]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -55,6 +67,11 @@ class CommonReportsection {
       json[r'sReportsectionTitle'] = this.sReportsectionTitle;
     } else {
       json[r'sReportsectionTitle'] = null;
+    }
+    if (this.sReportsectionTabname != null) {
+      json[r'sReportsectionTabname'] = this.sReportsectionTabname;
+    } else {
+      json[r'sReportsectionTabname'] = null;
     }
     return json;
   }
@@ -81,6 +98,7 @@ class CommonReportsection {
         aObjReportsubsection: CommonReportsubsection.listFromJson(json[r'a_objReportsubsection']),
         eReportsectionHorizontalalignment: EnumHorizontalalignment.fromJson(json[r'eReportsectionHorizontalalignment'])!,
         sReportsectionTitle: mapValueOfType<String>(json, r'sReportsectionTitle'),
+        sReportsectionTabname: mapValueOfType<String>(json, r'sReportsectionTabname'),
       );
     }
     return null;

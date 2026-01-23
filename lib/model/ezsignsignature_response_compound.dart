@@ -22,6 +22,7 @@ class EzsignsignatureResponseCompound {
     this.sCurrencyDescriptionX,
     this.dEzsignsignatureCreditcardamount,
     this.sEzsignsignatureCreditcardamountdescription,
+    this.bEzsignsignatureCreditcardcustomamount,
     this.sEzsignsigningreasonDescriptionX,
     required this.iEzsignpagePagenumber,
     required this.iEzsignsignatureX,
@@ -31,6 +32,8 @@ class EzsignsignatureResponseCompound {
     required this.iEzsignsignatureStep,
     this.iEzsignsignatureStepadjusted,
     required this.eEzsignsignatureType,
+    this.eEzsignsignatureSignaturepad,
+    this.eEzsignsignatureSignaturepadrequired,
     this.tEzsignsignatureTooltip,
     this.eEzsignsignatureTooltipposition,
     this.eEzsignsignatureFont,
@@ -141,6 +144,15 @@ class EzsignsignatureResponseCompound {
   ///
   String? sEzsignsignatureCreditcardamountdescription;
 
+  /// Whether we can enter a custom amount while signing an Ezsignsignature 'Creditcard' or not
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bEzsignsignatureCreditcardcustomamount;
+
   /// The description of the Ezsignsigningreason in the language of the requester
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -200,6 +212,22 @@ class EzsignsignatureResponseCompound {
   int? iEzsignsignatureStepadjusted;
 
   FieldEEzsignsignatureType eEzsignsignatureType;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEEzsignsignatureSignaturepad? eEzsignsignatureSignaturepad;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEEzsignsignatureSignaturepadrequired? eEzsignsignatureSignaturepadrequired;
 
   /// A tooltip that will be presented to Ezsignsigner about the Ezsignsignature
   ///
@@ -459,6 +487,7 @@ class EzsignsignatureResponseCompound {
     other.sCurrencyDescriptionX == sCurrencyDescriptionX &&
     other.dEzsignsignatureCreditcardamount == dEzsignsignatureCreditcardamount &&
     other.sEzsignsignatureCreditcardamountdescription == sEzsignsignatureCreditcardamountdescription &&
+    other.bEzsignsignatureCreditcardcustomamount == bEzsignsignatureCreditcardcustomamount &&
     other.sEzsignsigningreasonDescriptionX == sEzsignsigningreasonDescriptionX &&
     other.iEzsignpagePagenumber == iEzsignpagePagenumber &&
     other.iEzsignsignatureX == iEzsignsignatureX &&
@@ -468,6 +497,8 @@ class EzsignsignatureResponseCompound {
     other.iEzsignsignatureStep == iEzsignsignatureStep &&
     other.iEzsignsignatureStepadjusted == iEzsignsignatureStepadjusted &&
     other.eEzsignsignatureType == eEzsignsignatureType &&
+    other.eEzsignsignatureSignaturepad == eEzsignsignatureSignaturepad &&
+    other.eEzsignsignatureSignaturepadrequired == eEzsignsignatureSignaturepadrequired &&
     other.tEzsignsignatureTooltip == tEzsignsignatureTooltip &&
     other.eEzsignsignatureTooltipposition == eEzsignsignatureTooltipposition &&
     other.eEzsignsignatureFont == eEzsignsignatureFont &&
@@ -512,6 +543,7 @@ class EzsignsignatureResponseCompound {
     (sCurrencyDescriptionX == null ? 0 : sCurrencyDescriptionX!.hashCode) +
     (dEzsignsignatureCreditcardamount == null ? 0 : dEzsignsignatureCreditcardamount!.hashCode) +
     (sEzsignsignatureCreditcardamountdescription == null ? 0 : sEzsignsignatureCreditcardamountdescription!.hashCode) +
+    (bEzsignsignatureCreditcardcustomamount == null ? 0 : bEzsignsignatureCreditcardcustomamount!.hashCode) +
     (sEzsignsigningreasonDescriptionX == null ? 0 : sEzsignsigningreasonDescriptionX!.hashCode) +
     (iEzsignpagePagenumber.hashCode) +
     (iEzsignsignatureX.hashCode) +
@@ -521,6 +553,8 @@ class EzsignsignatureResponseCompound {
     (iEzsignsignatureStep.hashCode) +
     (iEzsignsignatureStepadjusted == null ? 0 : iEzsignsignatureStepadjusted!.hashCode) +
     (eEzsignsignatureType.hashCode) +
+    (eEzsignsignatureSignaturepad == null ? 0 : eEzsignsignatureSignaturepad!.hashCode) +
+    (eEzsignsignatureSignaturepadrequired == null ? 0 : eEzsignsignatureSignaturepadrequired!.hashCode) +
     (tEzsignsignatureTooltip == null ? 0 : tEzsignsignatureTooltip!.hashCode) +
     (eEzsignsignatureTooltipposition == null ? 0 : eEzsignsignatureTooltipposition!.hashCode) +
     (eEzsignsignatureFont == null ? 0 : eEzsignsignatureFont!.hashCode) +
@@ -554,7 +588,7 @@ class EzsignsignatureResponseCompound {
     (aObjEzsignsignaturepaymentdetail.hashCode);
 
   @override
-  String toString() => 'EzsignsignatureResponseCompound[pkiEzsignsignatureID=$pkiEzsignsignatureID, fkiEzsigndocumentID=$fkiEzsigndocumentID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, fkiEzsignsigningreasonID=$fkiEzsignsigningreasonID, fkiFontID=$fkiFontID, fkiPaymentgatewayID=$fkiPaymentgatewayID, sCurrencyDescriptionX=$sCurrencyDescriptionX, dEzsignsignatureCreditcardamount=$dEzsignsignatureCreditcardamount, sEzsignsignatureCreditcardamountdescription=$sEzsignsignatureCreditcardamountdescription, sEzsignsigningreasonDescriptionX=$sEzsignsigningreasonDescriptionX, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureHeight=$iEzsignsignatureHeight, iEzsignsignatureWidth=$iEzsignsignatureWidth, iEzsignsignatureStep=$iEzsignsignatureStep, iEzsignsignatureStepadjusted=$iEzsignsignatureStepadjusted, eEzsignsignatureType=$eEzsignsignatureType, tEzsignsignatureTooltip=$tEzsignsignatureTooltip, eEzsignsignatureTooltipposition=$eEzsignsignatureTooltipposition, eEzsignsignatureFont=$eEzsignsignatureFont, iEzsignsignatureValidationstep=$iEzsignsignatureValidationstep, sEzsignsignatureAttachmentdescription=$sEzsignsignatureAttachmentdescription, eEzsignsignatureAttachmentnamesource=$eEzsignsignatureAttachmentnamesource, eEzsignsignatureConsultationtrigger=$eEzsignsignatureConsultationtrigger, bEzsignsignatureHandwritten=$bEzsignsignatureHandwritten, bEzsignsignatureReason=$bEzsignsignatureReason, bEzsignsignatureRequired=$bEzsignsignatureRequired, fkiEzsignfoldersignerassociationIDValidation=$fkiEzsignfoldersignerassociationIDValidation, dtEzsignsignatureDate=$dtEzsignsignatureDate, iEzsignsignatureattachmentCount=$iEzsignsignatureattachmentCount, sEzsignsignatureDescription=$sEzsignsignatureDescription, iEzsignsignatureMaxlength=$iEzsignsignatureMaxlength, eEzsignsignatureTextvalidation=$eEzsignsignatureTextvalidation, sEzsignsignatureTextvalidationcustommessage=$sEzsignsignatureTextvalidationcustommessage, eEzsignsignatureDependencyrequirement=$eEzsignsignatureDependencyrequirement, sEzsignsignatureDefaultvalue=$sEzsignsignatureDefaultvalue, sEzsignsignatureRegexp=$sEzsignsignatureRegexp, objContactName=$objContactName, objContactNameDelegation=$objContactNameDelegation, objSignature=$objSignature, dtEzsignsignatureDateInFolderTimezone=$dtEzsignsignatureDateInFolderTimezone, sEzsignsignergroupDescriptionX=$sEzsignsignergroupDescriptionX, bEzsignsignatureCustomdate=$bEzsignsignatureCustomdate, aObjEzsignsignaturecustomdate=$aObjEzsignsignaturecustomdate, objCreditcardtransaction=$objCreditcardtransaction, aObjEzsignelementdependency=$aObjEzsignelementdependency, objTimezone=$objTimezone, aObjEzsignsignaturepaymentdetail=$aObjEzsignsignaturepaymentdetail]';
+  String toString() => 'EzsignsignatureResponseCompound[pkiEzsignsignatureID=$pkiEzsignsignatureID, fkiEzsigndocumentID=$fkiEzsigndocumentID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, fkiEzsignsigningreasonID=$fkiEzsignsigningreasonID, fkiFontID=$fkiFontID, fkiPaymentgatewayID=$fkiPaymentgatewayID, sCurrencyDescriptionX=$sCurrencyDescriptionX, dEzsignsignatureCreditcardamount=$dEzsignsignatureCreditcardamount, sEzsignsignatureCreditcardamountdescription=$sEzsignsignatureCreditcardamountdescription, bEzsignsignatureCreditcardcustomamount=$bEzsignsignatureCreditcardcustomamount, sEzsignsigningreasonDescriptionX=$sEzsignsigningreasonDescriptionX, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureHeight=$iEzsignsignatureHeight, iEzsignsignatureWidth=$iEzsignsignatureWidth, iEzsignsignatureStep=$iEzsignsignatureStep, iEzsignsignatureStepadjusted=$iEzsignsignatureStepadjusted, eEzsignsignatureType=$eEzsignsignatureType, eEzsignsignatureSignaturepad=$eEzsignsignatureSignaturepad, eEzsignsignatureSignaturepadrequired=$eEzsignsignatureSignaturepadrequired, tEzsignsignatureTooltip=$tEzsignsignatureTooltip, eEzsignsignatureTooltipposition=$eEzsignsignatureTooltipposition, eEzsignsignatureFont=$eEzsignsignatureFont, iEzsignsignatureValidationstep=$iEzsignsignatureValidationstep, sEzsignsignatureAttachmentdescription=$sEzsignsignatureAttachmentdescription, eEzsignsignatureAttachmentnamesource=$eEzsignsignatureAttachmentnamesource, eEzsignsignatureConsultationtrigger=$eEzsignsignatureConsultationtrigger, bEzsignsignatureHandwritten=$bEzsignsignatureHandwritten, bEzsignsignatureReason=$bEzsignsignatureReason, bEzsignsignatureRequired=$bEzsignsignatureRequired, fkiEzsignfoldersignerassociationIDValidation=$fkiEzsignfoldersignerassociationIDValidation, dtEzsignsignatureDate=$dtEzsignsignatureDate, iEzsignsignatureattachmentCount=$iEzsignsignatureattachmentCount, sEzsignsignatureDescription=$sEzsignsignatureDescription, iEzsignsignatureMaxlength=$iEzsignsignatureMaxlength, eEzsignsignatureTextvalidation=$eEzsignsignatureTextvalidation, sEzsignsignatureTextvalidationcustommessage=$sEzsignsignatureTextvalidationcustommessage, eEzsignsignatureDependencyrequirement=$eEzsignsignatureDependencyrequirement, sEzsignsignatureDefaultvalue=$sEzsignsignatureDefaultvalue, sEzsignsignatureRegexp=$sEzsignsignatureRegexp, objContactName=$objContactName, objContactNameDelegation=$objContactNameDelegation, objSignature=$objSignature, dtEzsignsignatureDateInFolderTimezone=$dtEzsignsignatureDateInFolderTimezone, sEzsignsignergroupDescriptionX=$sEzsignsignergroupDescriptionX, bEzsignsignatureCustomdate=$bEzsignsignatureCustomdate, aObjEzsignsignaturecustomdate=$aObjEzsignsignaturecustomdate, objCreditcardtransaction=$objCreditcardtransaction, aObjEzsignelementdependency=$aObjEzsignelementdependency, objTimezone=$objTimezone, aObjEzsignsignaturepaymentdetail=$aObjEzsignsignaturepaymentdetail]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -591,6 +625,11 @@ class EzsignsignatureResponseCompound {
     } else {
       json[r'sEzsignsignatureCreditcardamountdescription'] = null;
     }
+    if (this.bEzsignsignatureCreditcardcustomamount != null) {
+      json[r'bEzsignsignatureCreditcardcustomamount'] = this.bEzsignsignatureCreditcardcustomamount;
+    } else {
+      json[r'bEzsignsignatureCreditcardcustomamount'] = null;
+    }
     if (this.sEzsignsigningreasonDescriptionX != null) {
       json[r'sEzsignsigningreasonDescriptionX'] = this.sEzsignsigningreasonDescriptionX;
     } else {
@@ -616,6 +655,16 @@ class EzsignsignatureResponseCompound {
       json[r'iEzsignsignatureStepadjusted'] = null;
     }
       json[r'eEzsignsignatureType'] = this.eEzsignsignatureType;
+    if (this.eEzsignsignatureSignaturepad != null) {
+      json[r'eEzsignsignatureSignaturepad'] = this.eEzsignsignatureSignaturepad;
+    } else {
+      json[r'eEzsignsignatureSignaturepad'] = null;
+    }
+    if (this.eEzsignsignatureSignaturepadrequired != null) {
+      json[r'eEzsignsignatureSignaturepadrequired'] = this.eEzsignsignatureSignaturepadrequired;
+    } else {
+      json[r'eEzsignsignatureSignaturepadrequired'] = null;
+    }
     if (this.tEzsignsignatureTooltip != null) {
       json[r'tEzsignsignatureTooltip'] = this.tEzsignsignatureTooltip;
     } else {
@@ -786,6 +835,7 @@ class EzsignsignatureResponseCompound {
         sCurrencyDescriptionX: mapValueOfType<String>(json, r'sCurrencyDescriptionX'),
         dEzsignsignatureCreditcardamount: mapValueOfType<String>(json, r'dEzsignsignatureCreditcardamount'),
         sEzsignsignatureCreditcardamountdescription: mapValueOfType<String>(json, r'sEzsignsignatureCreditcardamountdescription'),
+        bEzsignsignatureCreditcardcustomamount: mapValueOfType<bool>(json, r'bEzsignsignatureCreditcardcustomamount'),
         sEzsignsigningreasonDescriptionX: mapValueOfType<String>(json, r'sEzsignsigningreasonDescriptionX'),
         iEzsignpagePagenumber: mapValueOfType<int>(json, r'iEzsignpagePagenumber')!,
         iEzsignsignatureX: mapValueOfType<int>(json, r'iEzsignsignatureX')!,
@@ -795,6 +845,8 @@ class EzsignsignatureResponseCompound {
         iEzsignsignatureStep: mapValueOfType<int>(json, r'iEzsignsignatureStep')!,
         iEzsignsignatureStepadjusted: mapValueOfType<int>(json, r'iEzsignsignatureStepadjusted'),
         eEzsignsignatureType: FieldEEzsignsignatureType.fromJson(json[r'eEzsignsignatureType'])!,
+        eEzsignsignatureSignaturepad: FieldEEzsignsignatureSignaturepad.fromJson(json[r'eEzsignsignatureSignaturepad']),
+        eEzsignsignatureSignaturepadrequired: FieldEEzsignsignatureSignaturepadrequired.fromJson(json[r'eEzsignsignatureSignaturepadrequired']),
         tEzsignsignatureTooltip: mapValueOfType<String>(json, r'tEzsignsignatureTooltip'),
         eEzsignsignatureTooltipposition: FieldEEzsignsignatureTooltipposition.fromJson(json[r'eEzsignsignatureTooltipposition']),
         eEzsignsignatureFont: FieldEEzsignsignatureFont.fromJson(json[r'eEzsignsignatureFont']),

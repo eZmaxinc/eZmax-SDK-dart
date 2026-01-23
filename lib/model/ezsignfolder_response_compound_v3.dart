@@ -39,6 +39,7 @@ class EzsignfolderResponseCompoundV3 {
     this.dtEzsignfolderArchive,
     this.dtEzsignfolderDispose,
     this.tEzsignfolderMessage,
+    this.eEzsignfolderMessageorder,
     this.objAudit,
     this.sEzsignfolderExternalid,
     this.eEzsignfolderAccess,
@@ -280,6 +281,14 @@ class EzsignfolderResponseCompoundV3 {
   /// source code must fall back to having a nullable type.
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
+  FieldEEzsignfolderMessageorder? eEzsignfolderMessageorder;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
   CommonAudit? objAudit;
 
   /// This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
@@ -335,6 +344,7 @@ class EzsignfolderResponseCompoundV3 {
     other.dtEzsignfolderArchive == dtEzsignfolderArchive &&
     other.dtEzsignfolderDispose == dtEzsignfolderDispose &&
     other.tEzsignfolderMessage == tEzsignfolderMessage &&
+    other.eEzsignfolderMessageorder == eEzsignfolderMessageorder &&
     other.objAudit == objAudit &&
     other.sEzsignfolderExternalid == sEzsignfolderExternalid &&
     other.eEzsignfolderAccess == eEzsignfolderAccess &&
@@ -369,13 +379,14 @@ class EzsignfolderResponseCompoundV3 {
     (dtEzsignfolderArchive == null ? 0 : dtEzsignfolderArchive!.hashCode) +
     (dtEzsignfolderDispose == null ? 0 : dtEzsignfolderDispose!.hashCode) +
     (tEzsignfolderMessage == null ? 0 : tEzsignfolderMessage!.hashCode) +
+    (eEzsignfolderMessageorder == null ? 0 : eEzsignfolderMessageorder!.hashCode) +
     (objAudit == null ? 0 : objAudit!.hashCode) +
     (sEzsignfolderExternalid == null ? 0 : sEzsignfolderExternalid!.hashCode) +
     (eEzsignfolderAccess == null ? 0 : eEzsignfolderAccess!.hashCode) +
     (objTimezone == null ? 0 : objTimezone!.hashCode);
 
   @override
-  String toString() => 'EzsignfolderResponseCompoundV3[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, objEzsignfoldertype=$objEzsignfoldertype, fkiTimezoneID=$fkiTimezoneID, eEzsignfolderCompletion=$eEzsignfolderCompletion, eEzsignfolderDocumentdependency=$eEzsignfolderDocumentdependency, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, fkiBillingentityinternalID=$fkiBillingentityinternalID, sBillingentityinternalDescriptionX=$sBillingentityinternalDescriptionX, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sEzsigntsarequirementDescriptionX=$sEzsigntsarequirementDescriptionX, sEzsignfolderDescription=$sEzsignfolderDescription, tEzsignfolderNote=$tEzsignfolderNote, bEzsignfolderIsdisposable=$bEzsignfolderIsdisposable, iEzsignfolderSendreminderfirstdays=$iEzsignfolderSendreminderfirstdays, iEzsignfolderSendreminderotherdays=$iEzsignfolderSendreminderotherdays, dtEzsignfolderDelayedsenddate=$dtEzsignfolderDelayedsenddate, dtEzsignfolderDuedate=$dtEzsignfolderDuedate, dtEzsignfolderSentdate=$dtEzsignfolderSentdate, dtEzsignfolderScheduledarchive=$dtEzsignfolderScheduledarchive, dtEzsignfolderScheduleddispose=$dtEzsignfolderScheduleddispose, eEzsignfolderStep=$eEzsignfolderStep, dtEzsignfolderClose=$dtEzsignfolderClose, dtEzsignfolderArchive=$dtEzsignfolderArchive, dtEzsignfolderDispose=$dtEzsignfolderDispose, tEzsignfolderMessage=$tEzsignfolderMessage, objAudit=$objAudit, sEzsignfolderExternalid=$sEzsignfolderExternalid, eEzsignfolderAccess=$eEzsignfolderAccess, objTimezone=$objTimezone]';
+  String toString() => 'EzsignfolderResponseCompoundV3[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, objEzsignfoldertype=$objEzsignfoldertype, fkiTimezoneID=$fkiTimezoneID, eEzsignfolderCompletion=$eEzsignfolderCompletion, eEzsignfolderDocumentdependency=$eEzsignfolderDocumentdependency, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, fkiBillingentityinternalID=$fkiBillingentityinternalID, sBillingentityinternalDescriptionX=$sBillingentityinternalDescriptionX, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sEzsigntsarequirementDescriptionX=$sEzsigntsarequirementDescriptionX, sEzsignfolderDescription=$sEzsignfolderDescription, tEzsignfolderNote=$tEzsignfolderNote, bEzsignfolderIsdisposable=$bEzsignfolderIsdisposable, iEzsignfolderSendreminderfirstdays=$iEzsignfolderSendreminderfirstdays, iEzsignfolderSendreminderotherdays=$iEzsignfolderSendreminderotherdays, dtEzsignfolderDelayedsenddate=$dtEzsignfolderDelayedsenddate, dtEzsignfolderDuedate=$dtEzsignfolderDuedate, dtEzsignfolderSentdate=$dtEzsignfolderSentdate, dtEzsignfolderScheduledarchive=$dtEzsignfolderScheduledarchive, dtEzsignfolderScheduleddispose=$dtEzsignfolderScheduleddispose, eEzsignfolderStep=$eEzsignfolderStep, dtEzsignfolderClose=$dtEzsignfolderClose, dtEzsignfolderArchive=$dtEzsignfolderArchive, dtEzsignfolderDispose=$dtEzsignfolderDispose, tEzsignfolderMessage=$tEzsignfolderMessage, eEzsignfolderMessageorder=$eEzsignfolderMessageorder, objAudit=$objAudit, sEzsignfolderExternalid=$sEzsignfolderExternalid, eEzsignfolderAccess=$eEzsignfolderAccess, objTimezone=$objTimezone]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -497,6 +508,11 @@ class EzsignfolderResponseCompoundV3 {
     } else {
       json[r'tEzsignfolderMessage'] = null;
     }
+    if (this.eEzsignfolderMessageorder != null) {
+      json[r'eEzsignfolderMessageorder'] = this.eEzsignfolderMessageorder;
+    } else {
+      json[r'eEzsignfolderMessageorder'] = null;
+    }
     if (this.objAudit != null) {
       json[r'objAudit'] = this.objAudit;
     } else {
@@ -565,6 +581,7 @@ class EzsignfolderResponseCompoundV3 {
         dtEzsignfolderArchive: mapValueOfType<String>(json, r'dtEzsignfolderArchive'),
         dtEzsignfolderDispose: mapValueOfType<String>(json, r'dtEzsignfolderDispose'),
         tEzsignfolderMessage: mapValueOfType<String>(json, r'tEzsignfolderMessage'),
+        eEzsignfolderMessageorder: FieldEEzsignfolderMessageorder.fromJson(json[r'eEzsignfolderMessageorder']),
         objAudit: CommonAudit.fromJson(json[r'objAudit']),
         sEzsignfolderExternalid: mapValueOfType<String>(json, r'sEzsignfolderExternalid'),
         eEzsignfolderAccess: ComputedEEzsignfolderAccess.fromJson(json[r'eEzsignfolderAccess']),

@@ -729,6 +729,67 @@ class ObjectEzsigndocumentApi {
     return null;
   }
 
+  /// Edit multiple Ezsignformfieldgroups
+  ///
+  /// Using this endpoint, you can edit multiple Ezsignformfieldgroups at the same time.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  ///
+  /// * [EzsigndocumentEditEzsignformfieldgroupsV2Request] ezsigndocumentEditEzsignformfieldgroupsV2Request (required):
+  Future<Response> ezsigndocumentEditEzsignformfieldgroupsV2WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentEditEzsignformfieldgroupsV2Request ezsigndocumentEditEzsignformfieldgroupsV2Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/2/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignformfieldgroups'
+      .replaceAll('{pkiEzsigndocumentID}', pkiEzsigndocumentID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = ezsigndocumentEditEzsignformfieldgroupsV2Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'PUT',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Edit multiple Ezsignformfieldgroups
+  ///
+  /// Using this endpoint, you can edit multiple Ezsignformfieldgroups at the same time.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  ///
+  /// * [EzsigndocumentEditEzsignformfieldgroupsV2Request] ezsigndocumentEditEzsignformfieldgroupsV2Request (required):
+  Future<EzsigndocumentEditEzsignformfieldgroupsV2Response?> ezsigndocumentEditEzsignformfieldgroupsV2(int pkiEzsigndocumentID, EzsigndocumentEditEzsignformfieldgroupsV2Request ezsigndocumentEditEzsignformfieldgroupsV2Request,) async {
+    final response = await ezsigndocumentEditEzsignformfieldgroupsV2WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentEditEzsignformfieldgroupsV2Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentEditEzsignformfieldgroupsV2Response',) as EzsigndocumentEditEzsignformfieldgroupsV2Response;
+    
+    }
+    return null;
+  }
+
   /// Edit multiple Ezsignsignatures
   ///
   /// Using this endpoint, you can edit multiple Ezsignsignatures at the same time.  Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
@@ -1204,6 +1265,63 @@ class ObjectEzsigndocumentApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentGetActionableElementsV2Response',) as EzsigndocumentGetActionableElementsV2Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve actionable elements for the Ezsigndocument
+  ///
+  /// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  Future<Response> ezsigndocumentGetActionableElementsV3WithHttpInfo(int pkiEzsigndocumentID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/3/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements'
+      .replaceAll('{pkiEzsigndocumentID}', pkiEzsigndocumentID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve actionable elements for the Ezsigndocument
+  ///
+  /// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  Future<EzsigndocumentGetActionableElementsV3Response?> ezsigndocumentGetActionableElementsV3(int pkiEzsigndocumentID,) async {
+    final response = await ezsigndocumentGetActionableElementsV3WithHttpInfo(pkiEzsigndocumentID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentGetActionableElementsV3Response',) as EzsigndocumentGetActionableElementsV3Response;
     
     }
     return null;

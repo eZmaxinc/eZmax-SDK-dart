@@ -72,6 +72,55 @@ class ObjectEzsigntemplatedocumentApi {
     return null;
   }
 
+  /// Retrieve an existing Ezsigntemplatedocument's original file
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigntemplatedocumentID (required):
+  Future<Response> ezsigntemplatedocumentDownloadV1WithHttpInfo(int pkiEzsigntemplatedocumentID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/download'
+      .replaceAll('{pkiEzsigntemplatedocumentID}', pkiEzsigntemplatedocumentID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve an existing Ezsigntemplatedocument's original file
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigntemplatedocumentID (required):
+  Future<void> ezsigntemplatedocumentDownloadV1(int pkiEzsigntemplatedocumentID,) async {
+    final response = await ezsigntemplatedocumentDownloadV1WithHttpInfo(pkiEzsigntemplatedocumentID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+  }
+
   /// Edit multiple Ezsigntemplatedocumentpagerecognitions
   ///
   /// Edit multiple Ezsigntemplatedocumentpagerecognitions
@@ -665,63 +714,6 @@ class ObjectEzsigntemplatedocumentApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response',) as EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response;
-    
-    }
-    return null;
-  }
-
-  /// Retrieve an existing Ezsigntemplatedocument's Ezsigntemplatesignatures
-  ///
-  /// Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
-  ///
-  /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiEzsigntemplatedocumentID (required):
-  Future<Response> ezsigntemplatedocumentGetEzsigntemplatesignaturesV1WithHttpInfo(int pkiEzsigntemplatedocumentID,) async {
-    // ignore: prefer_const_declarations
-    final path = r'/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatesignatures'
-      .replaceAll('{pkiEzsigntemplatedocumentID}', pkiEzsigntemplatedocumentID.toString());
-
-    // ignore: prefer_final_locals
-    Object? postBody;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>[];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'GET',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-    );
-  }
-
-  /// Retrieve an existing Ezsigntemplatedocument's Ezsigntemplatesignatures
-  ///
-  /// Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiEzsigntemplatedocumentID (required):
-  Future<EzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response?> ezsigntemplatedocumentGetEzsigntemplatesignaturesV1(int pkiEzsigntemplatedocumentID,) async {
-    final response = await ezsigntemplatedocumentGetEzsigntemplatesignaturesV1WithHttpInfo(pkiEzsigntemplatedocumentID,);
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response',) as EzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response;
     
     }
     return null;

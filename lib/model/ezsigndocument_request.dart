@@ -26,7 +26,7 @@ class EzsigndocumentRequest {
     this.bEzsigndocumentForcerepair = true,
     this.sEzsigndocumentPassword,
     this.eEzsigndocumentForm,
-    required this.dtEzsigndocumentDuedate,
+    this.dtEzsigndocumentDuedate,
     required this.sEzsigndocumentName,
     this.sEzsigndocumentExternalid,
   });
@@ -127,7 +127,13 @@ class EzsigndocumentRequest {
   EzsigndocumentRequestEEzsigndocumentFormEnum? eEzsigndocumentForm;
 
   /// The maximum date and time at which the Ezsigndocument can be signed.
-  String dtEzsigndocumentDuedate;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? dtEzsigndocumentDuedate;
 
   /// The name of the document that will be presented to Ezsignfoldersignerassociations
   String sEzsigndocumentName;
@@ -176,7 +182,7 @@ class EzsigndocumentRequest {
     (bEzsigndocumentForcerepair.hashCode) +
     (sEzsigndocumentPassword == null ? 0 : sEzsigndocumentPassword!.hashCode) +
     (eEzsigndocumentForm == null ? 0 : eEzsigndocumentForm!.hashCode) +
-    (dtEzsigndocumentDuedate.hashCode) +
+    (dtEzsigndocumentDuedate == null ? 0 : dtEzsigndocumentDuedate!.hashCode) +
     (sEzsigndocumentName.hashCode) +
     (sEzsigndocumentExternalid == null ? 0 : sEzsigndocumentExternalid!.hashCode);
 
@@ -234,7 +240,11 @@ class EzsigndocumentRequest {
     } else {
       json[r'eEzsigndocumentForm'] = null;
     }
+    if (this.dtEzsigndocumentDuedate != null) {
       json[r'dtEzsigndocumentDuedate'] = this.dtEzsigndocumentDuedate;
+    } else {
+      json[r'dtEzsigndocumentDuedate'] = null;
+    }
       json[r'sEzsigndocumentName'] = this.sEzsigndocumentName;
     if (this.sEzsigndocumentExternalid != null) {
       json[r'sEzsigndocumentExternalid'] = this.sEzsigndocumentExternalid;
@@ -276,7 +286,7 @@ class EzsigndocumentRequest {
         bEzsigndocumentForcerepair: mapValueOfType<bool>(json, r'bEzsigndocumentForcerepair') ?? true,
         sEzsigndocumentPassword: mapValueOfType<String>(json, r'sEzsigndocumentPassword'),
         eEzsigndocumentForm: EzsigndocumentRequestEEzsigndocumentFormEnum.fromJson(json[r'eEzsigndocumentForm']),
-        dtEzsigndocumentDuedate: mapValueOfType<String>(json, r'dtEzsigndocumentDuedate')!,
+        dtEzsigndocumentDuedate: mapValueOfType<String>(json, r'dtEzsigndocumentDuedate'),
         sEzsigndocumentName: mapValueOfType<String>(json, r'sEzsigndocumentName')!,
         sEzsigndocumentExternalid: mapValueOfType<String>(json, r'sEzsigndocumentExternalid'),
       );
@@ -329,7 +339,6 @@ class EzsigndocumentRequest {
     'fkiEzsignfolderID',
     'fkiLanguageID',
     'eEzsigndocumentSource',
-    'dtEzsigndocumentDuedate',
     'sEzsigndocumentName',
   };
 }

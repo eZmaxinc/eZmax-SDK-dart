@@ -22,6 +22,7 @@ class UsergroupmembershipResponse {
     this.sUserLoginname,
     this.sEmailAddress,
     required this.sUsergroupNameX,
+    this.bUserIsactive,
     this.sUsergroupexternalName,
   });
 
@@ -99,6 +100,15 @@ class UsergroupmembershipResponse {
   /// The Name of the Usergroup in the language of the requester
   String sUsergroupNameX;
 
+  /// Whether the User is active or not
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bUserIsactive;
+
   /// The name of the Usergroupexternal
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -119,6 +129,7 @@ class UsergroupmembershipResponse {
     other.sUserLoginname == sUserLoginname &&
     other.sEmailAddress == sEmailAddress &&
     other.sUsergroupNameX == sUsergroupNameX &&
+    other.bUserIsactive == bUserIsactive &&
     other.sUsergroupexternalName == sUsergroupexternalName;
 
   @override
@@ -133,10 +144,11 @@ class UsergroupmembershipResponse {
     (sUserLoginname == null ? 0 : sUserLoginname!.hashCode) +
     (sEmailAddress == null ? 0 : sEmailAddress!.hashCode) +
     (sUsergroupNameX.hashCode) +
+    (bUserIsactive == null ? 0 : bUserIsactive!.hashCode) +
     (sUsergroupexternalName == null ? 0 : sUsergroupexternalName!.hashCode);
 
   @override
-  String toString() => 'UsergroupmembershipResponse[pkiUsergroupmembershipID=$pkiUsergroupmembershipID, fkiUsergroupID=$fkiUsergroupID, fkiUserID=$fkiUserID, fkiUsergroupexternalID=$fkiUsergroupexternalID, sUserFirstname=$sUserFirstname, sUserLastname=$sUserLastname, sUserLoginname=$sUserLoginname, sEmailAddress=$sEmailAddress, sUsergroupNameX=$sUsergroupNameX, sUsergroupexternalName=$sUsergroupexternalName]';
+  String toString() => 'UsergroupmembershipResponse[pkiUsergroupmembershipID=$pkiUsergroupmembershipID, fkiUsergroupID=$fkiUsergroupID, fkiUserID=$fkiUserID, fkiUsergroupexternalID=$fkiUsergroupexternalID, sUserFirstname=$sUserFirstname, sUserLastname=$sUserLastname, sUserLoginname=$sUserLoginname, sEmailAddress=$sEmailAddress, sUsergroupNameX=$sUsergroupNameX, bUserIsactive=$bUserIsactive, sUsergroupexternalName=$sUsergroupexternalName]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -173,6 +185,11 @@ class UsergroupmembershipResponse {
       json[r'sEmailAddress'] = null;
     }
       json[r'sUsergroupNameX'] = this.sUsergroupNameX;
+    if (this.bUserIsactive != null) {
+      json[r'bUserIsactive'] = this.bUserIsactive;
+    } else {
+      json[r'bUserIsactive'] = null;
+    }
     if (this.sUsergroupexternalName != null) {
       json[r'sUsergroupexternalName'] = this.sUsergroupexternalName;
     } else {
@@ -209,6 +226,7 @@ class UsergroupmembershipResponse {
         sUserLoginname: mapValueOfType<String>(json, r'sUserLoginname'),
         sEmailAddress: mapValueOfType<String>(json, r'sEmailAddress'),
         sUsergroupNameX: mapValueOfType<String>(json, r'sUsergroupNameX')!,
+        bUserIsactive: mapValueOfType<bool>(json, r'bUserIsactive'),
         sUsergroupexternalName: mapValueOfType<String>(json, r'sUsergroupexternalName'),
       );
     }

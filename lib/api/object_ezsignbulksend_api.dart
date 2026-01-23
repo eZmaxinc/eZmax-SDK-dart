@@ -252,67 +252,6 @@ class ObjectEzsignbulksendApi {
   ///
   /// * [int] pkiEzsignbulksendID (required):
   ///
-  /// * [EzsignbulksendEditObjectV1Request] ezsignbulksendEditObjectV1Request (required):
-  Future<Response> ezsignbulksendEditObjectV1WithHttpInfo(int pkiEzsignbulksendID, EzsignbulksendEditObjectV1Request ezsignbulksendEditObjectV1Request,) async {
-    // ignore: prefer_const_declarations
-    final path = r'/1/object/ezsignbulksend/{pkiEzsignbulksendID}'
-      .replaceAll('{pkiEzsignbulksendID}', pkiEzsignbulksendID.toString());
-
-    // ignore: prefer_final_locals
-    Object? postBody = ezsignbulksendEditObjectV1Request;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>['application/json'];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'PUT',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-    );
-  }
-
-  /// Edit an existing Ezsignbulksend
-  ///
-  /// 
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiEzsignbulksendID (required):
-  ///
-  /// * [EzsignbulksendEditObjectV1Request] ezsignbulksendEditObjectV1Request (required):
-  Future<EzsignbulksendEditObjectV1Response?> ezsignbulksendEditObjectV1(int pkiEzsignbulksendID, EzsignbulksendEditObjectV1Request ezsignbulksendEditObjectV1Request,) async {
-    final response = await ezsignbulksendEditObjectV1WithHttpInfo(pkiEzsignbulksendID, ezsignbulksendEditObjectV1Request,);
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignbulksendEditObjectV1Response',) as EzsignbulksendEditObjectV1Response;
-    
-    }
-    return null;
-  }
-
-  /// Edit an existing Ezsignbulksend
-  ///
-  /// 
-  ///
-  /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiEzsignbulksendID (required):
-  ///
   /// * [EzsignbulksendEditObjectV2Request] ezsignbulksendEditObjectV2Request (required):
   Future<Response> ezsignbulksendEditObjectV2WithHttpInfo(int pkiEzsignbulksendID, EzsignbulksendEditObjectV2Request ezsignbulksendEditObjectV2Request,) async {
     // ignore: prefer_const_declarations

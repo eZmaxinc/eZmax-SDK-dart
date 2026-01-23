@@ -20,6 +20,7 @@ class LeadListElement {
     required this.dtLeadExpiration,
     required this.bLeadIsactive,
     required this.sLeadCode,
+    this.sLeadContacts,
   });
 
   /// The unique ID of the Lead
@@ -48,6 +49,15 @@ class LeadListElement {
   /// The code of the Lead
   String sLeadCode;
 
+  /// The contacts' name of the Lead
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sLeadContacts;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is LeadListElement &&
     other.pkiLeadID == pkiLeadID &&
@@ -56,7 +66,8 @@ class LeadListElement {
     other.eLeadStatus == eLeadStatus &&
     other.dtLeadExpiration == dtLeadExpiration &&
     other.bLeadIsactive == bLeadIsactive &&
-    other.sLeadCode == sLeadCode;
+    other.sLeadCode == sLeadCode &&
+    other.sLeadContacts == sLeadContacts;
 
   @override
   int get hashCode =>
@@ -67,10 +78,11 @@ class LeadListElement {
     (eLeadStatus.hashCode) +
     (dtLeadExpiration.hashCode) +
     (bLeadIsactive.hashCode) +
-    (sLeadCode.hashCode);
+    (sLeadCode.hashCode) +
+    (sLeadContacts == null ? 0 : sLeadContacts!.hashCode);
 
   @override
-  String toString() => 'LeadListElement[pkiLeadID=$pkiLeadID, fkiLeadsourceID=$fkiLeadsourceID, sLeadsourceNameX=$sLeadsourceNameX, eLeadStatus=$eLeadStatus, dtLeadExpiration=$dtLeadExpiration, bLeadIsactive=$bLeadIsactive, sLeadCode=$sLeadCode]';
+  String toString() => 'LeadListElement[pkiLeadID=$pkiLeadID, fkiLeadsourceID=$fkiLeadsourceID, sLeadsourceNameX=$sLeadsourceNameX, eLeadStatus=$eLeadStatus, dtLeadExpiration=$dtLeadExpiration, bLeadIsactive=$bLeadIsactive, sLeadCode=$sLeadCode, sLeadContacts=$sLeadContacts]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -81,6 +93,11 @@ class LeadListElement {
       json[r'dtLeadExpiration'] = this.dtLeadExpiration;
       json[r'bLeadIsactive'] = this.bLeadIsactive;
       json[r'sLeadCode'] = this.sLeadCode;
+    if (this.sLeadContacts != null) {
+      json[r'sLeadContacts'] = this.sLeadContacts;
+    } else {
+      json[r'sLeadContacts'] = null;
+    }
     return json;
   }
 
@@ -110,6 +127,7 @@ class LeadListElement {
         dtLeadExpiration: mapValueOfType<String>(json, r'dtLeadExpiration')!,
         bLeadIsactive: mapValueOfType<bool>(json, r'bLeadIsactive')!,
         sLeadCode: mapValueOfType<String>(json, r'sLeadCode')!,
+        sLeadContacts: mapValueOfType<String>(json, r'sLeadContacts'),
       );
     }
     return null;

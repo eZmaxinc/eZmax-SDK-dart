@@ -289,6 +289,12 @@ String parameterToString(dynamic value) {
   if (value is FieldEEzsignsignatureFont) {
     return FieldEEzsignsignatureFontTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEEzsignsignatureSignaturepad) {
+    return FieldEEzsignsignatureSignaturepadTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsignsignatureSignaturepadrequired) {
+    return FieldEEzsignsignatureSignaturepadrequiredTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEEzsignsignatureTooltipposition) {
     return FieldEEzsignsignatureTooltippositionTypeTransformer().encode(value).toString();
   }
@@ -363,6 +369,12 @@ String parameterToString(dynamic value) {
   }
   if (value is FieldEEzsigntemplatesignaturePositioningoccurence) {
     return FieldEEzsigntemplatesignaturePositioningoccurenceTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsigntemplatesignatureSignaturepad) {
+    return FieldEEzsigntemplatesignatureSignaturepadTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsigntemplatesignatureSignaturepadrequired) {
+    return FieldEEzsigntemplatesignatureSignaturepadrequiredTypeTransformer().encode(value).toString();
   }
   if (value is FieldEEzsigntemplatesignatureTooltipposition) {
     return FieldEEzsigntemplatesignatureTooltippositionTypeTransformer().encode(value).toString();
