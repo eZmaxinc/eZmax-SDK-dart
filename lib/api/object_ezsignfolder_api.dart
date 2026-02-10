@@ -86,10 +86,7 @@ class ObjectEzsignfolderApi {
   /// * [int] pkiEzsignfolderID (required):
   ///
   /// * [EzsignfolderBatchDownloadV1Request] ezsignfolderBatchDownloadV1Request (required):
-  ///
-  /// * [String] accept:
-  ///   Test csharp
-  Future<Response> ezsignfolderBatchDownloadV1WithHttpInfo(int pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request, { String? accept, }) async {
+  Future<Response> ezsignfolderBatchDownloadV1WithHttpInfo(int pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request,) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/batchDownload'
       .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
@@ -100,10 +97,6 @@ class ObjectEzsignfolderApi {
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
-
-    if (accept != null) {
-      headerParams[r'Accept'] = parameterToString(accept);
-    }
 
     const contentTypes = <String>['application/json'];
 
@@ -126,11 +119,8 @@ class ObjectEzsignfolderApi {
   /// * [int] pkiEzsignfolderID (required):
   ///
   /// * [EzsignfolderBatchDownloadV1Request] ezsignfolderBatchDownloadV1Request (required):
-  ///
-  /// * [String] accept:
-  ///   Test csharp
-  Future<MultipartFile?> ezsignfolderBatchDownloadV1(int pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request, { String? accept, }) async {
-    final response = await ezsignfolderBatchDownloadV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request,  accept: accept, );
+  Future<MultipartFile?> ezsignfolderBatchDownloadV1(int pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request,) async {
+    final response = await ezsignfolderBatchDownloadV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
