@@ -310,6 +310,15 @@ String parameterToString(dynamic value) {
   if (value is FieldEEzsigntemplateType) {
     return FieldEEzsigntemplateTypeTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEEzsigntemplateannotationHorizontalalignment) {
+    return FieldEEzsigntemplateannotationHorizontalalignmentTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsigntemplateannotationType) {
+    return FieldEEzsigntemplateannotationTypeTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsigntemplateannotationVerticalalignment) {
+    return FieldEEzsigntemplateannotationVerticalalignmentTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEEzsigntemplatedocumentpagerecognitionOperator) {
     return FieldEEzsigntemplatedocumentpagerecognitionOperatorTypeTransformer().encode(value).toString();
   }
@@ -345,6 +354,15 @@ String parameterToString(dynamic value) {
   }
   if (value is FieldEEzsigntemplateglobalSupplier) {
     return FieldEEzsigntemplateglobalSupplierTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsigntemplateglobalannotationHorizontalalignment) {
+    return FieldEEzsigntemplateglobalannotationHorizontalalignmentTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsigntemplateglobalannotationType) {
+    return FieldEEzsigntemplateglobalannotationTypeTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsigntemplateglobalannotationVerticalalignment) {
+    return FieldEEzsigntemplateglobalannotationVerticalalignmentTypeTransformer().encode(value).toString();
   }
   if (value is FieldEEzsigntemplatepackagesignerMapping) {
     return FieldEEzsigntemplatepackagesignerMappingTypeTransformer().encode(value).toString();

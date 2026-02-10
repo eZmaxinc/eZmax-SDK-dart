@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **ezsignfolderBatchDownloadV1**
-> MultipartFile ezsignfolderBatchDownloadV1(pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request)
+> MultipartFile ezsignfolderBatchDownloadV1(pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request, accept)
 
 Download multiples files from an Ezsignfolder
 
@@ -111,9 +111,10 @@ import 'package:openapi/api.dart';
 final api_instance = ObjectEzsignfolderApi();
 final pkiEzsignfolderID = 56; // int | 
 final ezsignfolderBatchDownloadV1Request = EzsignfolderBatchDownloadV1Request(); // EzsignfolderBatchDownloadV1Request | 
+final accept = accept_example; // String | Test csharp
 
 try {
-    final result = api_instance.ezsignfolderBatchDownloadV1(pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request);
+    final result = api_instance.ezsignfolderBatchDownloadV1(pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request, accept);
     print(result);
 } catch (e) {
     print('Exception when calling ObjectEzsignfolderApi->ezsignfolderBatchDownloadV1: $e\n');
@@ -126,6 +127,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsignfolderID** | **int**|  | 
  **ezsignfolderBatchDownloadV1Request** | [**EzsignfolderBatchDownloadV1Request**](EzsignfolderBatchDownloadV1Request.md)|  | 
+ **accept** | **String**| Test csharp | [optional] 
 
 ### Return type
 

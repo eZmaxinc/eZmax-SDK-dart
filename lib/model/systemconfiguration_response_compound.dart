@@ -28,6 +28,7 @@ class SystemconfigurationResponseCompound {
     required this.bSystemconfigurationEzsignpersonnal,
     this.bSystemconfigurationHascreditcardmerchant,
     this.bSystemconfigurationIsdisposalactive,
+    this.bSystemconfigurationAllowcomplexcreditcardsignature,
     required this.bSystemconfigurationSspr,
     this.dtSystemconfigurationReadonlyexpirationstart,
     this.dtSystemconfigurationReadonlyexpirationend,
@@ -120,6 +121,15 @@ class SystemconfigurationResponseCompound {
   ///
   bool? bSystemconfigurationIsdisposalactive;
 
+  /// Whether is the system allows to have a complex creditcard signature
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bSystemconfigurationAllowcomplexcreditcardsignature;
+
   /// Whether if we allow SSPR
   bool bSystemconfigurationSspr;
 
@@ -178,6 +188,7 @@ class SystemconfigurationResponseCompound {
     other.bSystemconfigurationEzsignpersonnal == bSystemconfigurationEzsignpersonnal &&
     other.bSystemconfigurationHascreditcardmerchant == bSystemconfigurationHascreditcardmerchant &&
     other.bSystemconfigurationIsdisposalactive == bSystemconfigurationIsdisposalactive &&
+    other.bSystemconfigurationAllowcomplexcreditcardsignature == bSystemconfigurationAllowcomplexcreditcardsignature &&
     other.bSystemconfigurationSspr == bSystemconfigurationSspr &&
     other.dtSystemconfigurationReadonlyexpirationstart == dtSystemconfigurationReadonlyexpirationstart &&
     other.dtSystemconfigurationReadonlyexpirationend == dtSystemconfigurationReadonlyexpirationend &&
@@ -202,6 +213,7 @@ class SystemconfigurationResponseCompound {
     (bSystemconfigurationEzsignpersonnal.hashCode) +
     (bSystemconfigurationHascreditcardmerchant == null ? 0 : bSystemconfigurationHascreditcardmerchant!.hashCode) +
     (bSystemconfigurationIsdisposalactive == null ? 0 : bSystemconfigurationIsdisposalactive!.hashCode) +
+    (bSystemconfigurationAllowcomplexcreditcardsignature == null ? 0 : bSystemconfigurationAllowcomplexcreditcardsignature!.hashCode) +
     (bSystemconfigurationSspr.hashCode) +
     (dtSystemconfigurationReadonlyexpirationstart == null ? 0 : dtSystemconfigurationReadonlyexpirationstart!.hashCode) +
     (dtSystemconfigurationReadonlyexpirationend == null ? 0 : dtSystemconfigurationReadonlyexpirationend!.hashCode) +
@@ -209,7 +221,7 @@ class SystemconfigurationResponseCompound {
     (iSystemconfigurationEzsignreminderhoursend == null ? 0 : iSystemconfigurationEzsignreminderhoursend!.hashCode);
 
   @override
-  String toString() => 'SystemconfigurationResponseCompound[pkiSystemconfigurationID=$pkiSystemconfigurationID, fkiSystemconfigurationtypeID=$fkiSystemconfigurationtypeID, fkiBrandingID=$fkiBrandingID, fkiTimezoneIDDefault=$fkiTimezoneIDDefault, sTimezoneNameDefault=$sTimezoneNameDefault, sSystemconfigurationtypeDescriptionX=$sSystemconfigurationtypeDescriptionX, eSystemconfigurationNewexternaluseraction=$eSystemconfigurationNewexternaluseraction, eSystemconfigurationLanguage1=$eSystemconfigurationLanguage1, eSystemconfigurationLanguage2=$eSystemconfigurationLanguage2, eSystemconfigurationEzsign=$eSystemconfigurationEzsign, eSystemconfigurationEzsignofficeplan=$eSystemconfigurationEzsignofficeplan, bSystemconfigurationEzsignpaidbyoffice=$bSystemconfigurationEzsignpaidbyoffice, bSystemconfigurationEzsignpersonnal=$bSystemconfigurationEzsignpersonnal, bSystemconfigurationHascreditcardmerchant=$bSystemconfigurationHascreditcardmerchant, bSystemconfigurationIsdisposalactive=$bSystemconfigurationIsdisposalactive, bSystemconfigurationSspr=$bSystemconfigurationSspr, dtSystemconfigurationReadonlyexpirationstart=$dtSystemconfigurationReadonlyexpirationstart, dtSystemconfigurationReadonlyexpirationend=$dtSystemconfigurationReadonlyexpirationend, objBranding=$objBranding, iSystemconfigurationEzsignreminderhoursend=$iSystemconfigurationEzsignreminderhoursend]';
+  String toString() => 'SystemconfigurationResponseCompound[pkiSystemconfigurationID=$pkiSystemconfigurationID, fkiSystemconfigurationtypeID=$fkiSystemconfigurationtypeID, fkiBrandingID=$fkiBrandingID, fkiTimezoneIDDefault=$fkiTimezoneIDDefault, sTimezoneNameDefault=$sTimezoneNameDefault, sSystemconfigurationtypeDescriptionX=$sSystemconfigurationtypeDescriptionX, eSystemconfigurationNewexternaluseraction=$eSystemconfigurationNewexternaluseraction, eSystemconfigurationLanguage1=$eSystemconfigurationLanguage1, eSystemconfigurationLanguage2=$eSystemconfigurationLanguage2, eSystemconfigurationEzsign=$eSystemconfigurationEzsign, eSystemconfigurationEzsignofficeplan=$eSystemconfigurationEzsignofficeplan, bSystemconfigurationEzsignpaidbyoffice=$bSystemconfigurationEzsignpaidbyoffice, bSystemconfigurationEzsignpersonnal=$bSystemconfigurationEzsignpersonnal, bSystemconfigurationHascreditcardmerchant=$bSystemconfigurationHascreditcardmerchant, bSystemconfigurationIsdisposalactive=$bSystemconfigurationIsdisposalactive, bSystemconfigurationAllowcomplexcreditcardsignature=$bSystemconfigurationAllowcomplexcreditcardsignature, bSystemconfigurationSspr=$bSystemconfigurationSspr, dtSystemconfigurationReadonlyexpirationstart=$dtSystemconfigurationReadonlyexpirationstart, dtSystemconfigurationReadonlyexpirationend=$dtSystemconfigurationReadonlyexpirationend, objBranding=$objBranding, iSystemconfigurationEzsignreminderhoursend=$iSystemconfigurationEzsignreminderhoursend]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -251,6 +263,11 @@ class SystemconfigurationResponseCompound {
       json[r'bSystemconfigurationIsdisposalactive'] = this.bSystemconfigurationIsdisposalactive;
     } else {
       json[r'bSystemconfigurationIsdisposalactive'] = null;
+    }
+    if (this.bSystemconfigurationAllowcomplexcreditcardsignature != null) {
+      json[r'bSystemconfigurationAllowcomplexcreditcardsignature'] = this.bSystemconfigurationAllowcomplexcreditcardsignature;
+    } else {
+      json[r'bSystemconfigurationAllowcomplexcreditcardsignature'] = null;
     }
       json[r'bSystemconfigurationSspr'] = this.bSystemconfigurationSspr;
     if (this.dtSystemconfigurationReadonlyexpirationstart != null) {
@@ -310,6 +327,7 @@ class SystemconfigurationResponseCompound {
         bSystemconfigurationEzsignpersonnal: mapValueOfType<bool>(json, r'bSystemconfigurationEzsignpersonnal')!,
         bSystemconfigurationHascreditcardmerchant: mapValueOfType<bool>(json, r'bSystemconfigurationHascreditcardmerchant'),
         bSystemconfigurationIsdisposalactive: mapValueOfType<bool>(json, r'bSystemconfigurationIsdisposalactive'),
+        bSystemconfigurationAllowcomplexcreditcardsignature: mapValueOfType<bool>(json, r'bSystemconfigurationAllowcomplexcreditcardsignature'),
         bSystemconfigurationSspr: mapValueOfType<bool>(json, r'bSystemconfigurationSspr')!,
         dtSystemconfigurationReadonlyexpirationstart: mapValueOfType<String>(json, r'dtSystemconfigurationReadonlyexpirationstart'),
         dtSystemconfigurationReadonlyexpirationend: mapValueOfType<String>(json, r'dtSystemconfigurationReadonlyexpirationend'),

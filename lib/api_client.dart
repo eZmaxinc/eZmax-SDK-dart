@@ -1766,6 +1766,12 @@ class ApiClient {
           return EzsignfolderSendV3Response.fromJson(value);
         case 'EzsignfolderUnsendV1Response':
           return EzsignfolderUnsendV1Response.fromJson(value);
+        case 'EzsignfoldersignerassociationCreateEmbeddedUrlV1Request':
+          return EzsignfoldersignerassociationCreateEmbeddedUrlV1Request.fromJson(value);
+        case 'EzsignfoldersignerassociationCreateEmbeddedUrlV1Response':
+          return EzsignfoldersignerassociationCreateEmbeddedUrlV1Response.fromJson(value);
+        case 'EzsignfoldersignerassociationCreateEmbeddedUrlV1ResponseMPayload':
+          return EzsignfoldersignerassociationCreateEmbeddedUrlV1ResponseMPayload.fromJson(value);
         case 'EzsignfoldersignerassociationCreateEmbeddedUrlV2Request':
           return EzsignfoldersignerassociationCreateEmbeddedUrlV2Request.fromJson(value);
         case 'EzsignfoldersignerassociationCreateEmbeddedUrlV2Response':
@@ -2162,6 +2168,30 @@ class ApiClient {
           return EzsigntemplateResponseCompoundV3.fromJson(value);
         case 'EzsigntemplateResponseV3':
           return EzsigntemplateResponseV3.fromJson(value);
+        case 'EzsigntemplateannotationCreateObjectV1Request':
+          return EzsigntemplateannotationCreateObjectV1Request.fromJson(value);
+        case 'EzsigntemplateannotationCreateObjectV1Response':
+          return EzsigntemplateannotationCreateObjectV1Response.fromJson(value);
+        case 'EzsigntemplateannotationCreateObjectV1ResponseMPayload':
+          return EzsigntemplateannotationCreateObjectV1ResponseMPayload.fromJson(value);
+        case 'EzsigntemplateannotationDeleteObjectV1Response':
+          return EzsigntemplateannotationDeleteObjectV1Response.fromJson(value);
+        case 'EzsigntemplateannotationEditObjectV1Request':
+          return EzsigntemplateannotationEditObjectV1Request.fromJson(value);
+        case 'EzsigntemplateannotationEditObjectV1Response':
+          return EzsigntemplateannotationEditObjectV1Response.fromJson(value);
+        case 'EzsigntemplateannotationGetObjectV2Response':
+          return EzsigntemplateannotationGetObjectV2Response.fromJson(value);
+        case 'EzsigntemplateannotationGetObjectV2ResponseMPayload':
+          return EzsigntemplateannotationGetObjectV2ResponseMPayload.fromJson(value);
+        case 'EzsigntemplateannotationRequest':
+          return EzsigntemplateannotationRequest.fromJson(value);
+        case 'EzsigntemplateannotationRequestCompound':
+          return EzsigntemplateannotationRequestCompound.fromJson(value);
+        case 'EzsigntemplateannotationResponse':
+          return EzsigntemplateannotationResponse.fromJson(value);
+        case 'EzsigntemplateannotationResponseCompound':
+          return EzsigntemplateannotationResponseCompound.fromJson(value);
         case 'EzsigntemplatedocumentCreateObjectV1Request':
           return EzsigntemplatedocumentCreateObjectV1Request.fromJson(value);
         case 'EzsigntemplatedocumentCreateObjectV1Response':
@@ -2332,6 +2362,14 @@ class ApiClient {
           return EzsigntemplateglobalResponse.fromJson(value);
         case 'EzsigntemplateglobalResponseCompound':
           return EzsigntemplateglobalResponseCompound.fromJson(value);
+        case 'EzsigntemplateglobalannotationGetObjectV2Response':
+          return EzsigntemplateglobalannotationGetObjectV2Response.fromJson(value);
+        case 'EzsigntemplateglobalannotationGetObjectV2ResponseMPayload':
+          return EzsigntemplateglobalannotationGetObjectV2ResponseMPayload.fromJson(value);
+        case 'EzsigntemplateglobalannotationResponse':
+          return EzsigntemplateglobalannotationResponse.fromJson(value);
+        case 'EzsigntemplateglobalannotationResponseCompound':
+          return EzsigntemplateglobalannotationResponseCompound.fromJson(value);
         case 'EzsigntemplateglobaldocumentResponse':
           return EzsigntemplateglobaldocumentResponse.fromJson(value);
         case 'EzsigntemplateglobalsignerResponse':
@@ -2754,6 +2792,12 @@ class ApiClient {
           return FieldEEzsigntemplateRecognitionTypeTransformer().decode(value);
         case 'FieldEEzsigntemplateType':
           return FieldEEzsigntemplateTypeTypeTransformer().decode(value);
+        case 'FieldEEzsigntemplateannotationHorizontalalignment':
+          return FieldEEzsigntemplateannotationHorizontalalignmentTypeTransformer().decode(value);
+        case 'FieldEEzsigntemplateannotationType':
+          return FieldEEzsigntemplateannotationTypeTypeTransformer().decode(value);
+        case 'FieldEEzsigntemplateannotationVerticalalignment':
+          return FieldEEzsigntemplateannotationVerticalalignmentTypeTransformer().decode(value);
         case 'FieldEEzsigntemplatedocumentpagerecognitionOperator':
           return FieldEEzsigntemplatedocumentpagerecognitionOperatorTypeTransformer().decode(value);
         case 'FieldEEzsigntemplatedocumentpagerecognitionSection':
@@ -2778,6 +2822,12 @@ class ApiClient {
           return FieldEEzsigntemplateglobalModuleTypeTransformer().decode(value);
         case 'FieldEEzsigntemplateglobalSupplier':
           return FieldEEzsigntemplateglobalSupplierTypeTransformer().decode(value);
+        case 'FieldEEzsigntemplateglobalannotationHorizontalalignment':
+          return FieldEEzsigntemplateglobalannotationHorizontalalignmentTypeTransformer().decode(value);
+        case 'FieldEEzsigntemplateglobalannotationType':
+          return FieldEEzsigntemplateglobalannotationTypeTypeTransformer().decode(value);
+        case 'FieldEEzsigntemplateglobalannotationVerticalalignment':
+          return FieldEEzsigntemplateglobalannotationVerticalalignmentTypeTransformer().decode(value);
         case 'FieldEEzsigntemplatepackagesignerMapping':
           return FieldEEzsigntemplatepackagesignerMappingTypeTransformer().decode(value);
         case 'FieldEEzsigntemplatepublicLimittype':
