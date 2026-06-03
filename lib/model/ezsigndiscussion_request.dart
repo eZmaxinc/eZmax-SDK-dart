@@ -103,10 +103,16 @@ class EzsigndiscussionRequest {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigndiscussionRequest[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigndiscussionRequest[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiEzsigndocumentID'), 'Required key "EzsigndiscussionRequest[fkiEzsigndocumentID]" is missing from JSON.');
+        assert(json[r'fkiEzsigndocumentID'] != null, 'Required key "EzsigndiscussionRequest[fkiEzsigndocumentID]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigndiscussionPagenumber'), 'Required key "EzsigndiscussionRequest[iEzsigndiscussionPagenumber]" is missing from JSON.');
+        assert(json[r'iEzsigndiscussionPagenumber'] != null, 'Required key "EzsigndiscussionRequest[iEzsigndiscussionPagenumber]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigndiscussionX'), 'Required key "EzsigndiscussionRequest[iEzsigndiscussionX]" is missing from JSON.');
+        assert(json[r'iEzsigndiscussionX'] != null, 'Required key "EzsigndiscussionRequest[iEzsigndiscussionX]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigndiscussionY'), 'Required key "EzsigndiscussionRequest[iEzsigndiscussionY]" is missing from JSON.');
+        assert(json[r'iEzsigndiscussionY'] != null, 'Required key "EzsigndiscussionRequest[iEzsigndiscussionY]" has a null value in JSON.');
+        assert(json.containsKey(r'objDiscussion'), 'Required key "EzsigndiscussionRequest[objDiscussion]" is missing from JSON.');
+        assert(json[r'objDiscussion'] != null, 'Required key "EzsigndiscussionRequest[objDiscussion]" has a null value in JSON.');
         return true;
       }());
 

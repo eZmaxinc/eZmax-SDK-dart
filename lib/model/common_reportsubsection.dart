@@ -96,10 +96,18 @@ class CommonReportsubsection {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CommonReportsubsection[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CommonReportsubsection[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_objReportcolumn'), 'Required key "CommonReportsubsection[a_objReportcolumn]" is missing from JSON.');
+        assert(json[r'a_objReportcolumn'] != null, 'Required key "CommonReportsubsection[a_objReportcolumn]" has a null value in JSON.');
+        assert(json.containsKey(r'iReportsubsectionColumncount'), 'Required key "CommonReportsubsection[iReportsubsectionColumncount]" is missing from JSON.');
+        assert(json[r'iReportsubsectionColumncount'] != null, 'Required key "CommonReportsubsection[iReportsubsectionColumncount]" has a null value in JSON.');
+        assert(json.containsKey(r'iReportsubsectionWidth'), 'Required key "CommonReportsubsection[iReportsubsectionWidth]" is missing from JSON.');
+        assert(json[r'iReportsubsectionWidth'] != null, 'Required key "CommonReportsubsection[iReportsubsectionWidth]" has a null value in JSON.');
+        assert(json.containsKey(r'objReportsubsectionpartHeader'), 'Required key "CommonReportsubsection[objReportsubsectionpartHeader]" is missing from JSON.');
+        assert(json[r'objReportsubsectionpartHeader'] != null, 'Required key "CommonReportsubsection[objReportsubsectionpartHeader]" has a null value in JSON.');
+        assert(json.containsKey(r'objReportsubsectionpartBody'), 'Required key "CommonReportsubsection[objReportsubsectionpartBody]" is missing from JSON.');
+        assert(json[r'objReportsubsectionpartBody'] != null, 'Required key "CommonReportsubsection[objReportsubsectionpartBody]" has a null value in JSON.');
+        assert(json.containsKey(r'objReportsubsectionpartFooter'), 'Required key "CommonReportsubsection[objReportsubsectionpartFooter]" is missing from JSON.');
+        assert(json[r'objReportsubsectionpartFooter'] != null, 'Required key "CommonReportsubsection[objReportsubsectionpartFooter]" has a null value in JSON.');
         return true;
       }());
 

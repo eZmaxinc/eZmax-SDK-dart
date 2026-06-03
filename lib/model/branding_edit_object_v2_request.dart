@@ -47,10 +47,8 @@ class BrandingEditObjectV2Request {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "BrandingEditObjectV2Request[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "BrandingEditObjectV2Request[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'objBranding'), 'Required key "BrandingEditObjectV2Request[objBranding]" is missing from JSON.');
+        assert(json[r'objBranding'] != null, 'Required key "BrandingEditObjectV2Request[objBranding]" has a null value in JSON.');
         return true;
       }());
 

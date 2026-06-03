@@ -108,10 +108,18 @@ class EzsignbulksendRequestCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignbulksendRequestCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignbulksendRequestCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiEzsignfoldertypeID'), 'Required key "EzsignbulksendRequestCompound[fkiEzsignfoldertypeID]" is missing from JSON.');
+        assert(json[r'fkiEzsignfoldertypeID'] != null, 'Required key "EzsignbulksendRequestCompound[fkiEzsignfoldertypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiLanguageID'), 'Required key "EzsignbulksendRequestCompound[fkiLanguageID]" is missing from JSON.');
+        assert(json[r'fkiLanguageID'] != null, 'Required key "EzsignbulksendRequestCompound[fkiLanguageID]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsignbulksendDescription'), 'Required key "EzsignbulksendRequestCompound[sEzsignbulksendDescription]" is missing from JSON.');
+        assert(json[r'sEzsignbulksendDescription'] != null, 'Required key "EzsignbulksendRequestCompound[sEzsignbulksendDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'tEzsignbulksendNote'), 'Required key "EzsignbulksendRequestCompound[tEzsignbulksendNote]" is missing from JSON.');
+        assert(json[r'tEzsignbulksendNote'] != null, 'Required key "EzsignbulksendRequestCompound[tEzsignbulksendNote]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignbulksendNeedvalidation'), 'Required key "EzsignbulksendRequestCompound[bEzsignbulksendNeedvalidation]" is missing from JSON.');
+        assert(json[r'bEzsignbulksendNeedvalidation'] != null, 'Required key "EzsignbulksendRequestCompound[bEzsignbulksendNeedvalidation]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignbulksendIsactive'), 'Required key "EzsignbulksendRequestCompound[bEzsignbulksendIsactive]" is missing from JSON.');
+        assert(json[r'bEzsignbulksendIsactive'] != null, 'Required key "EzsignbulksendRequestCompound[bEzsignbulksendIsactive]" has a null value in JSON.');
         return true;
       }());
 

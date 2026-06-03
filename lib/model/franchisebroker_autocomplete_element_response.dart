@@ -64,10 +64,12 @@ class FranchisebrokerAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "FranchisebrokerAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "FranchisebrokerAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sFranchisebrokerName'), 'Required key "FranchisebrokerAutocompleteElementResponse[sFranchisebrokerName]" is missing from JSON.');
+        assert(json[r'sFranchisebrokerName'] != null, 'Required key "FranchisebrokerAutocompleteElementResponse[sFranchisebrokerName]" has a null value in JSON.');
+        assert(json.containsKey(r'pkiFranchisebrokerID'), 'Required key "FranchisebrokerAutocompleteElementResponse[pkiFranchisebrokerID]" is missing from JSON.');
+        assert(json[r'pkiFranchisebrokerID'] != null, 'Required key "FranchisebrokerAutocompleteElementResponse[pkiFranchisebrokerID]" has a null value in JSON.');
+        assert(json.containsKey(r'bFranchisebrokerIsactive'), 'Required key "FranchisebrokerAutocompleteElementResponse[bFranchisebrokerIsactive]" is missing from JSON.');
+        assert(json[r'bFranchisebrokerIsactive'] != null, 'Required key "FranchisebrokerAutocompleteElementResponse[bFranchisebrokerIsactive]" has a null value in JSON.');
         return true;
       }());
 

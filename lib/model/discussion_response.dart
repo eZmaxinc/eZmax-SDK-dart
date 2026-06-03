@@ -112,10 +112,16 @@ class DiscussionResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "DiscussionResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "DiscussionResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiDiscussionID'), 'Required key "DiscussionResponse[pkiDiscussionID]" is missing from JSON.');
+        assert(json[r'pkiDiscussionID'] != null, 'Required key "DiscussionResponse[pkiDiscussionID]" has a null value in JSON.');
+        assert(json.containsKey(r'sDiscussionDescription'), 'Required key "DiscussionResponse[sDiscussionDescription]" is missing from JSON.');
+        assert(json[r'sDiscussionDescription'] != null, 'Required key "DiscussionResponse[sDiscussionDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'bDiscussionClosed'), 'Required key "DiscussionResponse[bDiscussionClosed]" is missing from JSON.');
+        assert(json[r'bDiscussionClosed'] != null, 'Required key "DiscussionResponse[bDiscussionClosed]" has a null value in JSON.');
+        assert(json.containsKey(r'iDiscussionmessageCount'), 'Required key "DiscussionResponse[iDiscussionmessageCount]" is missing from JSON.');
+        assert(json[r'iDiscussionmessageCount'] != null, 'Required key "DiscussionResponse[iDiscussionmessageCount]" has a null value in JSON.');
+        assert(json.containsKey(r'iDiscussionmessageCountunread'), 'Required key "DiscussionResponse[iDiscussionmessageCountunread]" is missing from JSON.');
+        assert(json[r'iDiscussionmessageCountunread'] != null, 'Required key "DiscussionResponse[iDiscussionmessageCountunread]" has a null value in JSON.');
         return true;
       }());
 

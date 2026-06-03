@@ -102,10 +102,12 @@ class EzsignbulksendsignermappingResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignbulksendsignermappingResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignbulksendsignermappingResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsignbulksendsignermappingID'), 'Required key "EzsignbulksendsignermappingResponseCompound[pkiEzsignbulksendsignermappingID]" is missing from JSON.');
+        assert(json[r'pkiEzsignbulksendsignermappingID'] != null, 'Required key "EzsignbulksendsignermappingResponseCompound[pkiEzsignbulksendsignermappingID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiEzsignbulksendID'), 'Required key "EzsignbulksendsignermappingResponseCompound[fkiEzsignbulksendID]" is missing from JSON.');
+        assert(json[r'fkiEzsignbulksendID'] != null, 'Required key "EzsignbulksendsignermappingResponseCompound[fkiEzsignbulksendID]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsignbulksendsignermappingDescription'), 'Required key "EzsignbulksendsignermappingResponseCompound[sEzsignbulksendsignermappingDescription]" is missing from JSON.');
+        assert(json[r'sEzsignbulksendsignermappingDescription'] != null, 'Required key "EzsignbulksendsignermappingResponseCompound[sEzsignbulksendsignermappingDescription]" has a null value in JSON.');
         return true;
       }());
 

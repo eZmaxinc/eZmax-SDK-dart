@@ -194,10 +194,18 @@ class WebhookRequestCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "WebhookRequestCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "WebhookRequestCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sWebhookDescription'), 'Required key "WebhookRequestCompound[sWebhookDescription]" is missing from JSON.');
+        assert(json[r'sWebhookDescription'] != null, 'Required key "WebhookRequestCompound[sWebhookDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'eWebhookModule'), 'Required key "WebhookRequestCompound[eWebhookModule]" is missing from JSON.');
+        assert(json[r'eWebhookModule'] != null, 'Required key "WebhookRequestCompound[eWebhookModule]" has a null value in JSON.');
+        assert(json.containsKey(r'sWebhookUrl'), 'Required key "WebhookRequestCompound[sWebhookUrl]" is missing from JSON.');
+        assert(json[r'sWebhookUrl'] != null, 'Required key "WebhookRequestCompound[sWebhookUrl]" has a null value in JSON.');
+        assert(json.containsKey(r'sWebhookEmailfailed'), 'Required key "WebhookRequestCompound[sWebhookEmailfailed]" is missing from JSON.');
+        assert(json[r'sWebhookEmailfailed'] != null, 'Required key "WebhookRequestCompound[sWebhookEmailfailed]" has a null value in JSON.');
+        assert(json.containsKey(r'bWebhookIsactive'), 'Required key "WebhookRequestCompound[bWebhookIsactive]" is missing from JSON.');
+        assert(json[r'bWebhookIsactive'] != null, 'Required key "WebhookRequestCompound[bWebhookIsactive]" has a null value in JSON.');
+        assert(json.containsKey(r'bWebhookSkipsslvalidation'), 'Required key "WebhookRequestCompound[bWebhookSkipsslvalidation]" is missing from JSON.');
+        assert(json[r'bWebhookSkipsslvalidation'] != null, 'Required key "WebhookRequestCompound[bWebhookSkipsslvalidation]" has a null value in JSON.');
         return true;
       }());
 

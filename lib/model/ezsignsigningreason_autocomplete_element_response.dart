@@ -65,10 +65,12 @@ class EzsignsigningreasonAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignsigningreasonAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignsigningreasonAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsignsigningreasonID'), 'Required key "EzsignsigningreasonAutocompleteElementResponse[pkiEzsignsigningreasonID]" is missing from JSON.');
+        assert(json[r'pkiEzsignsigningreasonID'] != null, 'Required key "EzsignsigningreasonAutocompleteElementResponse[pkiEzsignsigningreasonID]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsignsigningreasonDescriptionX'), 'Required key "EzsignsigningreasonAutocompleteElementResponse[sEzsignsigningreasonDescriptionX]" is missing from JSON.');
+        assert(json[r'sEzsignsigningreasonDescriptionX'] != null, 'Required key "EzsignsigningreasonAutocompleteElementResponse[sEzsignsigningreasonDescriptionX]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignsigningreasonIsactive'), 'Required key "EzsignsigningreasonAutocompleteElementResponse[bEzsignsigningreasonIsactive]" is missing from JSON.');
+        assert(json[r'bEzsignsigningreasonIsactive'] != null, 'Required key "EzsignsigningreasonAutocompleteElementResponse[bEzsignsigningreasonIsactive]" has a null value in JSON.');
         return true;
       }());
 

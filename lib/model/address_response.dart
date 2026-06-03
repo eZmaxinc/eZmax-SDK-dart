@@ -170,10 +170,26 @@ class AddressResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "AddressResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "AddressResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiAddressID'), 'Required key "AddressResponse[pkiAddressID]" is missing from JSON.');
+        assert(json[r'pkiAddressID'] != null, 'Required key "AddressResponse[pkiAddressID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiAddresstypeID'), 'Required key "AddressResponse[fkiAddresstypeID]" is missing from JSON.');
+        assert(json[r'fkiAddresstypeID'] != null, 'Required key "AddressResponse[fkiAddresstypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'sAddressCivic'), 'Required key "AddressResponse[sAddressCivic]" is missing from JSON.');
+        assert(json[r'sAddressCivic'] != null, 'Required key "AddressResponse[sAddressCivic]" has a null value in JSON.');
+        assert(json.containsKey(r'sAddressStreet'), 'Required key "AddressResponse[sAddressStreet]" is missing from JSON.');
+        assert(json[r'sAddressStreet'] != null, 'Required key "AddressResponse[sAddressStreet]" has a null value in JSON.');
+        assert(json.containsKey(r'sAddressCity'), 'Required key "AddressResponse[sAddressCity]" is missing from JSON.');
+        assert(json[r'sAddressCity'] != null, 'Required key "AddressResponse[sAddressCity]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiProvinceID'), 'Required key "AddressResponse[fkiProvinceID]" is missing from JSON.');
+        assert(json[r'fkiProvinceID'] != null, 'Required key "AddressResponse[fkiProvinceID]" has a null value in JSON.');
+        assert(json.containsKey(r'sProvinceNameX'), 'Required key "AddressResponse[sProvinceNameX]" is missing from JSON.');
+        assert(json[r'sProvinceNameX'] != null, 'Required key "AddressResponse[sProvinceNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiCountryID'), 'Required key "AddressResponse[fkiCountryID]" is missing from JSON.');
+        assert(json[r'fkiCountryID'] != null, 'Required key "AddressResponse[fkiCountryID]" has a null value in JSON.');
+        assert(json.containsKey(r'sCountryNameX'), 'Required key "AddressResponse[sCountryNameX]" is missing from JSON.');
+        assert(json[r'sCountryNameX'] != null, 'Required key "AddressResponse[sCountryNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'sAddressZip'), 'Required key "AddressResponse[sAddressZip]" is missing from JSON.');
+        assert(json[r'sAddressZip'] != null, 'Required key "AddressResponse[sAddressZip]" has a null value in JSON.');
         return true;
       }());
 

@@ -64,10 +64,12 @@ class ModuleAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "ModuleAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "ModuleAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiModuleID'), 'Required key "ModuleAutocompleteElementResponse[pkiModuleID]" is missing from JSON.');
+        assert(json[r'pkiModuleID'] != null, 'Required key "ModuleAutocompleteElementResponse[pkiModuleID]" has a null value in JSON.');
+        assert(json.containsKey(r'sModuleNameX'), 'Required key "ModuleAutocompleteElementResponse[sModuleNameX]" is missing from JSON.');
+        assert(json[r'sModuleNameX'] != null, 'Required key "ModuleAutocompleteElementResponse[sModuleNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'bModuleIsactive'), 'Required key "ModuleAutocompleteElementResponse[bModuleIsactive]" is missing from JSON.');
+        assert(json[r'bModuleIsactive'] != null, 'Required key "ModuleAutocompleteElementResponse[bModuleIsactive]" has a null value in JSON.');
         return true;
       }());
 

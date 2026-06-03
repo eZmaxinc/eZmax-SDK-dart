@@ -47,10 +47,8 @@ class UserstagedGetObjectV2ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "UserstagedGetObjectV2ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "UserstagedGetObjectV2ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'objUserstaged'), 'Required key "UserstagedGetObjectV2ResponseMPayload[objUserstaged]" is missing from JSON.');
+        assert(json[r'objUserstaged'] != null, 'Required key "UserstagedGetObjectV2ResponseMPayload[objUserstaged]" has a null value in JSON.');
         return true;
       }());
 

@@ -47,10 +47,8 @@ class EzsigntemplatepackagemembershipGetObjectV2ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplatepackagemembershipGetObjectV2ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplatepackagemembershipGetObjectV2ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'objEzsigntemplatepackagemembership'), 'Required key "EzsigntemplatepackagemembershipGetObjectV2ResponseMPayload[objEzsigntemplatepackagemembership]" is missing from JSON.');
+        assert(json[r'objEzsigntemplatepackagemembership'] != null, 'Required key "EzsigntemplatepackagemembershipGetObjectV2ResponseMPayload[objEzsigntemplatepackagemembership]" has a null value in JSON.');
         return true;
       }());
 

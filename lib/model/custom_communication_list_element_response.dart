@@ -103,10 +103,24 @@ class CustomCommunicationListElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CustomCommunicationListElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CustomCommunicationListElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiCommunicationID'), 'Required key "CustomCommunicationListElementResponse[pkiCommunicationID]" is missing from JSON.');
+        assert(json[r'pkiCommunicationID'] != null, 'Required key "CustomCommunicationListElementResponse[pkiCommunicationID]" has a null value in JSON.');
+        assert(json.containsKey(r'dtCreatedDate'), 'Required key "CustomCommunicationListElementResponse[dtCreatedDate]" is missing from JSON.');
+        assert(json[r'dtCreatedDate'] != null, 'Required key "CustomCommunicationListElementResponse[dtCreatedDate]" has a null value in JSON.');
+        assert(json.containsKey(r'eCommunicationDirection'), 'Required key "CustomCommunicationListElementResponse[eCommunicationDirection]" is missing from JSON.');
+        assert(json[r'eCommunicationDirection'] != null, 'Required key "CustomCommunicationListElementResponse[eCommunicationDirection]" has a null value in JSON.');
+        assert(json.containsKey(r'eCommunicationImportance'), 'Required key "CustomCommunicationListElementResponse[eCommunicationImportance]" is missing from JSON.');
+        assert(json[r'eCommunicationImportance'] != null, 'Required key "CustomCommunicationListElementResponse[eCommunicationImportance]" has a null value in JSON.');
+        assert(json.containsKey(r'eCommunicationType'), 'Required key "CustomCommunicationListElementResponse[eCommunicationType]" is missing from JSON.');
+        assert(json[r'eCommunicationType'] != null, 'Required key "CustomCommunicationListElementResponse[eCommunicationType]" has a null value in JSON.');
+        assert(json.containsKey(r'iCommunicationrecipientCount'), 'Required key "CustomCommunicationListElementResponse[iCommunicationrecipientCount]" is missing from JSON.');
+        assert(json[r'iCommunicationrecipientCount'] != null, 'Required key "CustomCommunicationListElementResponse[iCommunicationrecipientCount]" has a null value in JSON.');
+        assert(json.containsKey(r'sCommunicationSubject'), 'Required key "CustomCommunicationListElementResponse[sCommunicationSubject]" is missing from JSON.');
+        assert(json[r'sCommunicationSubject'] != null, 'Required key "CustomCommunicationListElementResponse[sCommunicationSubject]" has a null value in JSON.');
+        assert(json.containsKey(r'sCommunicationSender'), 'Required key "CustomCommunicationListElementResponse[sCommunicationSender]" is missing from JSON.');
+        assert(json[r'sCommunicationSender'] != null, 'Required key "CustomCommunicationListElementResponse[sCommunicationSender]" has a null value in JSON.');
+        assert(json.containsKey(r'sCommunicationRecipient'), 'Required key "CustomCommunicationListElementResponse[sCommunicationRecipient]" is missing from JSON.');
+        assert(json[r'sCommunicationRecipient'] != null, 'Required key "CustomCommunicationListElementResponse[sCommunicationRecipient]" has a null value in JSON.');
         return true;
       }());
 

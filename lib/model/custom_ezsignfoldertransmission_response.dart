@@ -90,10 +90,20 @@ class CustomEzsignfoldertransmissionResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CustomEzsignfoldertransmissionResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CustomEzsignfoldertransmissionResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsignfolderID'), 'Required key "CustomEzsignfoldertransmissionResponse[pkiEzsignfolderID]" is missing from JSON.');
+        assert(json[r'pkiEzsignfolderID'] != null, 'Required key "CustomEzsignfoldertransmissionResponse[pkiEzsignfolderID]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsignfolderDescription'), 'Required key "CustomEzsignfoldertransmissionResponse[sEzsignfolderDescription]" is missing from JSON.');
+        assert(json[r'sEzsignfolderDescription'] != null, 'Required key "CustomEzsignfoldertransmissionResponse[sEzsignfolderDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsignfolderStep'), 'Required key "CustomEzsignfoldertransmissionResponse[eEzsignfolderStep]" is missing from JSON.');
+        assert(json[r'eEzsignfolderStep'] != null, 'Required key "CustomEzsignfoldertransmissionResponse[eEzsignfolderStep]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignfolderSignaturetotal'), 'Required key "CustomEzsignfoldertransmissionResponse[iEzsignfolderSignaturetotal]" is missing from JSON.');
+        assert(json[r'iEzsignfolderSignaturetotal'] != null, 'Required key "CustomEzsignfoldertransmissionResponse[iEzsignfolderSignaturetotal]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignfolderFormfieldtotal'), 'Required key "CustomEzsignfoldertransmissionResponse[iEzsignfolderFormfieldtotal]" is missing from JSON.');
+        assert(json[r'iEzsignfolderFormfieldtotal'] != null, 'Required key "CustomEzsignfoldertransmissionResponse[iEzsignfolderFormfieldtotal]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignfolderSignaturesigned'), 'Required key "CustomEzsignfoldertransmissionResponse[iEzsignfolderSignaturesigned]" is missing from JSON.');
+        assert(json[r'iEzsignfolderSignaturesigned'] != null, 'Required key "CustomEzsignfoldertransmissionResponse[iEzsignfolderSignaturesigned]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objEzsignfoldertransmissionSigner'), 'Required key "CustomEzsignfoldertransmissionResponse[a_objEzsignfoldertransmissionSigner]" is missing from JSON.');
+        assert(json[r'a_objEzsignfoldertransmissionSigner'] != null, 'Required key "CustomEzsignfoldertransmissionResponse[a_objEzsignfoldertransmissionSigner]" has a null value in JSON.');
         return true;
       }());
 

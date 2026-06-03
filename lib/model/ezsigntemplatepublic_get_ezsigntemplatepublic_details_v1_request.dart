@@ -55,10 +55,10 @@ class EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pksEzmaxcustomerCode'), 'Required key "EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request[pksEzmaxcustomerCode]" is missing from JSON.');
+        assert(json[r'pksEzmaxcustomerCode'] != null, 'Required key "EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request[pksEzmaxcustomerCode]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsigntemplatepublicReferenceid'), 'Required key "EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request[sEzsigntemplatepublicReferenceid]" is missing from JSON.');
+        assert(json[r'sEzsigntemplatepublicReferenceid'] != null, 'Required key "EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request[sEzsigntemplatepublicReferenceid]" has a null value in JSON.');
         return true;
       }());
 

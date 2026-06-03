@@ -47,10 +47,8 @@ class EzsignsignatureCreateObjectV4Request {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignsignatureCreateObjectV4Request[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignsignatureCreateObjectV4Request[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_objEzsignsignature'), 'Required key "EzsignsignatureCreateObjectV4Request[a_objEzsignsignature]" is missing from JSON.');
+        assert(json[r'a_objEzsignsignature'] != null, 'Required key "EzsignsignatureCreateObjectV4Request[a_objEzsignsignature]" has a null value in JSON.');
         return true;
       }());
 

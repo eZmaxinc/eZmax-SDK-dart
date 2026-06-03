@@ -64,10 +64,12 @@ class PhonetypeAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "PhonetypeAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "PhonetypeAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiPhonetypeID'), 'Required key "PhonetypeAutocompleteElementResponse[pkiPhonetypeID]" is missing from JSON.');
+        assert(json[r'pkiPhonetypeID'] != null, 'Required key "PhonetypeAutocompleteElementResponse[pkiPhonetypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'sPhonetypeNameX'), 'Required key "PhonetypeAutocompleteElementResponse[sPhonetypeNameX]" is missing from JSON.');
+        assert(json[r'sPhonetypeNameX'] != null, 'Required key "PhonetypeAutocompleteElementResponse[sPhonetypeNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'bPhonetypeIsactive'), 'Required key "PhonetypeAutocompleteElementResponse[bPhonetypeIsactive]" is missing from JSON.');
+        assert(json[r'bPhonetypeIsactive'] != null, 'Required key "PhonetypeAutocompleteElementResponse[bPhonetypeIsactive]" has a null value in JSON.');
         return true;
       }());
 

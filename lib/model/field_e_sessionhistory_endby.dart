@@ -37,6 +37,7 @@ class FieldESessionhistoryEndby {
   static const badUserType = FieldESessionhistoryEndby._(r'BadUserType');
   static const badIP = FieldESessionhistoryEndby._(r'BadIP');
   static const forcedLogoff = FieldESessionhistoryEndby._(r'ForcedLogoff');
+  static const suspended = FieldESessionhistoryEndby._(r'Suspended');
 
   /// List of all possible values in this [enum][FieldESessionhistoryEndby].
   static const values = <FieldESessionhistoryEndby>[
@@ -54,6 +55,7 @@ class FieldESessionhistoryEndby {
     badUserType,
     badIP,
     forcedLogoff,
+    suspended,
   ];
 
   static FieldESessionhistoryEndby? fromJson(dynamic value) => FieldESessionhistoryEndbyTypeTransformer().decode(value);
@@ -106,6 +108,7 @@ class FieldESessionhistoryEndbyTypeTransformer {
         case r'BadUserType': return FieldESessionhistoryEndby.badUserType;
         case r'BadIP': return FieldESessionhistoryEndby.badIP;
         case r'ForcedLogoff': return FieldESessionhistoryEndby.forcedLogoff;
+        case r'Suspended': return FieldESessionhistoryEndby.suspended;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');

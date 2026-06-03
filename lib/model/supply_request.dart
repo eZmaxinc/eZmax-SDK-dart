@@ -143,10 +143,18 @@ class SupplyRequest {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "SupplyRequest[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "SupplyRequest[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiVariableexpenseID'), 'Required key "SupplyRequest[fkiVariableexpenseID]" is missing from JSON.');
+        assert(json[r'fkiVariableexpenseID'] != null, 'Required key "SupplyRequest[fkiVariableexpenseID]" has a null value in JSON.');
+        assert(json.containsKey(r'sSupplyCode'), 'Required key "SupplyRequest[sSupplyCode]" is missing from JSON.');
+        assert(json[r'sSupplyCode'] != null, 'Required key "SupplyRequest[sSupplyCode]" has a null value in JSON.');
+        assert(json.containsKey(r'objSupplyDescription'), 'Required key "SupplyRequest[objSupplyDescription]" is missing from JSON.');
+        assert(json[r'objSupplyDescription'] != null, 'Required key "SupplyRequest[objSupplyDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'dSupplyUnitprice'), 'Required key "SupplyRequest[dSupplyUnitprice]" is missing from JSON.');
+        assert(json[r'dSupplyUnitprice'] != null, 'Required key "SupplyRequest[dSupplyUnitprice]" has a null value in JSON.');
+        assert(json.containsKey(r'bSupplyIsactive'), 'Required key "SupplyRequest[bSupplyIsactive]" is missing from JSON.');
+        assert(json[r'bSupplyIsactive'] != null, 'Required key "SupplyRequest[bSupplyIsactive]" has a null value in JSON.');
+        assert(json.containsKey(r'bSupplyVariableprice'), 'Required key "SupplyRequest[bSupplyVariableprice]" is missing from JSON.');
+        assert(json[r'bSupplyVariableprice'] != null, 'Required key "SupplyRequest[bSupplyVariableprice]" has a null value in JSON.');
         return true;
       }());
 

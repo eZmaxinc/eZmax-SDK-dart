@@ -170,10 +170,16 @@ class EzsigntemplateListElement {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplateListElement[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplateListElement[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsigntemplateID'), 'Required key "EzsigntemplateListElement[pkiEzsigntemplateID]" is missing from JSON.');
+        assert(json[r'pkiEzsigntemplateID'] != null, 'Required key "EzsigntemplateListElement[pkiEzsigntemplateID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiLanguageID'), 'Required key "EzsigntemplateListElement[fkiLanguageID]" is missing from JSON.');
+        assert(json[r'fkiLanguageID'] != null, 'Required key "EzsigntemplateListElement[fkiLanguageID]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsigntemplateDescription'), 'Required key "EzsigntemplateListElement[sEzsigntemplateDescription]" is missing from JSON.');
+        assert(json[r'sEzsigntemplateDescription'] != null, 'Required key "EzsigntemplateListElement[sEzsigntemplateDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsigntemplateIncomplete'), 'Required key "EzsigntemplateListElement[bEzsigntemplateIncomplete]" is missing from JSON.');
+        assert(json[r'bEzsigntemplateIncomplete'] != null, 'Required key "EzsigntemplateListElement[bEzsigntemplateIncomplete]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsigntemplateType'), 'Required key "EzsigntemplateListElement[eEzsigntemplateType]" is missing from JSON.');
+        assert(json[r'eEzsigntemplateType'] != null, 'Required key "EzsigntemplateListElement[eEzsigntemplateType]" has a null value in JSON.');
         return true;
       }());
 

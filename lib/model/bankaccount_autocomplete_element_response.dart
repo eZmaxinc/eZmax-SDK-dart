@@ -65,10 +65,12 @@ class BankaccountAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "BankaccountAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "BankaccountAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiBankaccountID'), 'Required key "BankaccountAutocompleteElementResponse[pkiBankaccountID]" is missing from JSON.');
+        assert(json[r'pkiBankaccountID'] != null, 'Required key "BankaccountAutocompleteElementResponse[pkiBankaccountID]" has a null value in JSON.');
+        assert(json.containsKey(r'sBankaccountBankname'), 'Required key "BankaccountAutocompleteElementResponse[sBankaccountBankname]" is missing from JSON.');
+        assert(json[r'sBankaccountBankname'] != null, 'Required key "BankaccountAutocompleteElementResponse[sBankaccountBankname]" has a null value in JSON.');
+        assert(json.containsKey(r'bBankaccountIsactive'), 'Required key "BankaccountAutocompleteElementResponse[bBankaccountIsactive]" is missing from JSON.');
+        assert(json[r'bBankaccountIsactive'] != null, 'Required key "BankaccountAutocompleteElementResponse[bBankaccountIsactive]" has a null value in JSON.');
         return true;
       }());
 

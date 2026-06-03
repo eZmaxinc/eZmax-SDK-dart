@@ -13,7 +13,7 @@ part of openapi.api;
 class WebhookResponseCompound {
   /// Returns a new [WebhookResponseCompound] instance.
   WebhookResponseCompound({
-    required this.pkiWebhookID,
+    this.pkiWebhookID,
     this.fkiAuthenticationexternalID,
     required this.sWebhookDescription,
     this.fkiEzsignfoldertypeID,
@@ -29,14 +29,20 @@ class WebhookResponseCompound {
     required this.bWebhookIssigned,
     required this.bWebhookSkipsslvalidation,
     this.sAuthenticationexternalDescription,
-    required this.objAudit,
+    this.objAudit,
     this.sWebhookEvent,
     this.sWebhookAuthentificationexternalerror,
     this.aObjWebhookheader = const [],
   });
 
   /// The unique ID of the Webhook
-  int pkiWebhookID;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? pkiWebhookID;
 
   /// The unique ID of the Authenticationexternal
   ///
@@ -134,7 +140,13 @@ class WebhookResponseCompound {
   ///
   String? sAuthenticationexternalDescription;
 
-  CommonAudit objAudit;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  CommonAudit? objAudit;
 
   /// The concatenated string to describe the Webhook event
   ///
@@ -182,7 +194,7 @@ class WebhookResponseCompound {
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (pkiWebhookID.hashCode) +
+    (pkiWebhookID == null ? 0 : pkiWebhookID!.hashCode) +
     (fkiAuthenticationexternalID == null ? 0 : fkiAuthenticationexternalID!.hashCode) +
     (sWebhookDescription.hashCode) +
     (fkiEzsignfoldertypeID == null ? 0 : fkiEzsignfoldertypeID!.hashCode) +
@@ -198,7 +210,7 @@ class WebhookResponseCompound {
     (bWebhookIssigned.hashCode) +
     (bWebhookSkipsslvalidation.hashCode) +
     (sAuthenticationexternalDescription == null ? 0 : sAuthenticationexternalDescription!.hashCode) +
-    (objAudit.hashCode) +
+    (objAudit == null ? 0 : objAudit!.hashCode) +
     (sWebhookEvent == null ? 0 : sWebhookEvent!.hashCode) +
     (sWebhookAuthentificationexternalerror == null ? 0 : sWebhookAuthentificationexternalerror!.hashCode) +
     (aObjWebhookheader.hashCode);
@@ -208,7 +220,11 @@ class WebhookResponseCompound {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
+    if (this.pkiWebhookID != null) {
       json[r'pkiWebhookID'] = this.pkiWebhookID;
+    } else {
+      json[r'pkiWebhookID'] = null;
+    }
     if (this.fkiAuthenticationexternalID != null) {
       json[r'fkiAuthenticationexternalID'] = this.fkiAuthenticationexternalID;
     } else {
@@ -256,7 +272,11 @@ class WebhookResponseCompound {
     } else {
       json[r'sAuthenticationexternalDescription'] = null;
     }
+    if (this.objAudit != null) {
       json[r'objAudit'] = this.objAudit;
+    } else {
+      json[r'objAudit'] = null;
+    }
     if (this.sWebhookEvent != null) {
       json[r'sWebhookEvent'] = this.sWebhookEvent;
     } else {
@@ -282,15 +302,25 @@ class WebhookResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "WebhookResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "WebhookResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sWebhookDescription'), 'Required key "WebhookResponseCompound[sWebhookDescription]" is missing from JSON.');
+        assert(json[r'sWebhookDescription'] != null, 'Required key "WebhookResponseCompound[sWebhookDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'eWebhookModule'), 'Required key "WebhookResponseCompound[eWebhookModule]" is missing from JSON.');
+        assert(json[r'eWebhookModule'] != null, 'Required key "WebhookResponseCompound[eWebhookModule]" has a null value in JSON.');
+        assert(json.containsKey(r'sWebhookUrl'), 'Required key "WebhookResponseCompound[sWebhookUrl]" is missing from JSON.');
+        assert(json[r'sWebhookUrl'] != null, 'Required key "WebhookResponseCompound[sWebhookUrl]" has a null value in JSON.');
+        assert(json.containsKey(r'sWebhookEmailfailed'), 'Required key "WebhookResponseCompound[sWebhookEmailfailed]" is missing from JSON.');
+        assert(json[r'sWebhookEmailfailed'] != null, 'Required key "WebhookResponseCompound[sWebhookEmailfailed]" has a null value in JSON.');
+        assert(json.containsKey(r'bWebhookIsactive'), 'Required key "WebhookResponseCompound[bWebhookIsactive]" is missing from JSON.');
+        assert(json[r'bWebhookIsactive'] != null, 'Required key "WebhookResponseCompound[bWebhookIsactive]" has a null value in JSON.');
+        assert(json.containsKey(r'bWebhookIssigned'), 'Required key "WebhookResponseCompound[bWebhookIssigned]" is missing from JSON.');
+        assert(json[r'bWebhookIssigned'] != null, 'Required key "WebhookResponseCompound[bWebhookIssigned]" has a null value in JSON.');
+        assert(json.containsKey(r'bWebhookSkipsslvalidation'), 'Required key "WebhookResponseCompound[bWebhookSkipsslvalidation]" is missing from JSON.');
+        assert(json[r'bWebhookSkipsslvalidation'] != null, 'Required key "WebhookResponseCompound[bWebhookSkipsslvalidation]" has a null value in JSON.');
         return true;
       }());
 
       return WebhookResponseCompound(
-        pkiWebhookID: mapValueOfType<int>(json, r'pkiWebhookID')!,
+        pkiWebhookID: mapValueOfType<int>(json, r'pkiWebhookID'),
         fkiAuthenticationexternalID: mapValueOfType<int>(json, r'fkiAuthenticationexternalID'),
         sWebhookDescription: mapValueOfType<String>(json, r'sWebhookDescription')!,
         fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID'),
@@ -306,7 +336,7 @@ class WebhookResponseCompound {
         bWebhookIssigned: mapValueOfType<bool>(json, r'bWebhookIssigned')!,
         bWebhookSkipsslvalidation: mapValueOfType<bool>(json, r'bWebhookSkipsslvalidation')!,
         sAuthenticationexternalDescription: mapValueOfType<String>(json, r'sAuthenticationexternalDescription'),
-        objAudit: CommonAudit.fromJson(json[r'objAudit'])!,
+        objAudit: CommonAudit.fromJson(json[r'objAudit']),
         sWebhookEvent: mapValueOfType<String>(json, r'sWebhookEvent'),
         sWebhookAuthentificationexternalerror: mapValueOfType<String>(json, r'sWebhookAuthentificationexternalerror'),
         aObjWebhookheader: WebhookheaderResponseCompound.listFromJson(json[r'a_objWebhookheader']),
@@ -357,7 +387,6 @@ class WebhookResponseCompound {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'pkiWebhookID',
     'sWebhookDescription',
     'eWebhookModule',
     'sWebhookUrl',
@@ -365,7 +394,6 @@ class WebhookResponseCompound {
     'bWebhookIsactive',
     'bWebhookIssigned',
     'bWebhookSkipsslvalidation',
-    'objAudit',
   };
 }
 

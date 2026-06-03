@@ -55,10 +55,10 @@ class CustomApikey {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CustomApikey[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CustomApikey[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sApikeyKey'), 'Required key "CustomApikey[sApikeyKey]" is missing from JSON.');
+        assert(json[r'sApikeyKey'] != null, 'Required key "CustomApikey[sApikeyKey]" has a null value in JSON.');
+        assert(json.containsKey(r'sApikeySecret'), 'Required key "CustomApikey[sApikeySecret]" is missing from JSON.');
+        assert(json[r'sApikeySecret'] != null, 'Required key "CustomApikey[sApikeySecret]" has a null value in JSON.');
         return true;
       }());
 

@@ -77,10 +77,10 @@ class EmailRequest {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EmailRequest[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EmailRequest[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiEmailtypeID'), 'Required key "EmailRequest[fkiEmailtypeID]" is missing from JSON.');
+        assert(json[r'fkiEmailtypeID'] != null, 'Required key "EmailRequest[fkiEmailtypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'sEmailAddress'), 'Required key "EmailRequest[sEmailAddress]" is missing from JSON.');
+        assert(json[r'sEmailAddress'] != null, 'Required key "EmailRequest[sEmailAddress]" has a null value in JSON.');
         return true;
       }());
 

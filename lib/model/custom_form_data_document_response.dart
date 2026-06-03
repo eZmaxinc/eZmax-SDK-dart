@@ -79,10 +79,16 @@ class CustomFormDataDocumentResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CustomFormDataDocumentResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CustomFormDataDocumentResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsigndocumentID'), 'Required key "CustomFormDataDocumentResponse[pkiEzsigndocumentID]" is missing from JSON.');
+        assert(json[r'pkiEzsigndocumentID'] != null, 'Required key "CustomFormDataDocumentResponse[pkiEzsigndocumentID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiEzsignfolderID'), 'Required key "CustomFormDataDocumentResponse[fkiEzsignfolderID]" is missing from JSON.');
+        assert(json[r'fkiEzsignfolderID'] != null, 'Required key "CustomFormDataDocumentResponse[fkiEzsignfolderID]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsigndocumentName'), 'Required key "CustomFormDataDocumentResponse[sEzsigndocumentName]" is missing from JSON.');
+        assert(json[r'sEzsigndocumentName'] != null, 'Required key "CustomFormDataDocumentResponse[sEzsigndocumentName]" has a null value in JSON.');
+        assert(json.containsKey(r'dtModifiedDate'), 'Required key "CustomFormDataDocumentResponse[dtModifiedDate]" is missing from JSON.');
+        assert(json[r'dtModifiedDate'] != null, 'Required key "CustomFormDataDocumentResponse[dtModifiedDate]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objFormDataSigner'), 'Required key "CustomFormDataDocumentResponse[a_objFormDataSigner]" is missing from JSON.');
+        assert(json[r'a_objFormDataSigner'] != null, 'Required key "CustomFormDataDocumentResponse[a_objFormDataSigner]" has a null value in JSON.');
         return true;
       }());
 

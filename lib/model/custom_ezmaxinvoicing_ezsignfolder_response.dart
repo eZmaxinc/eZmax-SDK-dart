@@ -97,10 +97,16 @@ class CustomEzmaxinvoicingEzsignfolderResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CustomEzmaxinvoicingEzsignfolderResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CustomEzmaxinvoicingEzsignfolderResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiEzsignfolderID'), 'Required key "CustomEzmaxinvoicingEzsignfolderResponse[fkiEzsignfolderID]" is missing from JSON.');
+        assert(json[r'fkiEzsignfolderID'] != null, 'Required key "CustomEzmaxinvoicingEzsignfolderResponse[fkiEzsignfolderID]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsignfolderDescription'), 'Required key "CustomEzmaxinvoicingEzsignfolderResponse[sEzsignfolderDescription]" is missing from JSON.');
+        assert(json[r'sEzsignfolderDescription'] != null, 'Required key "CustomEzmaxinvoicingEzsignfolderResponse[sEzsignfolderDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsigntsarequirementBillable'), 'Required key "CustomEzmaxinvoicingEzsignfolderResponse[bEzsigntsarequirementBillable]" is missing from JSON.');
+        assert(json[r'bEzsigntsarequirementBillable'] != null, 'Required key "CustomEzmaxinvoicingEzsignfolderResponse[bEzsigntsarequirementBillable]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignfolderMfaused'), 'Required key "CustomEzmaxinvoicingEzsignfolderResponse[bEzsignfolderMfaused]" is missing from JSON.');
+        assert(json[r'bEzsignfolderMfaused'] != null, 'Required key "CustomEzmaxinvoicingEzsignfolderResponse[bEzsignfolderMfaused]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignfolderAllowed'), 'Required key "CustomEzmaxinvoicingEzsignfolderResponse[bEzsignfolderAllowed]" is missing from JSON.');
+        assert(json[r'bEzsignfolderAllowed'] != null, 'Required key "CustomEzmaxinvoicingEzsignfolderResponse[bEzsignfolderAllowed]" has a null value in JSON.');
         return true;
       }());
 

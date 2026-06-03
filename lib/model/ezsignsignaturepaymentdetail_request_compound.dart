@@ -90,10 +90,14 @@ class EzsignsignaturepaymentdetailRequestCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignsignaturepaymentdetailRequestCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignsignaturepaymentdetailRequestCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiGlaccountcontainerID'), 'Required key "EzsignsignaturepaymentdetailRequestCompound[fkiGlaccountcontainerID]" is missing from JSON.');
+        assert(json[r'fkiGlaccountcontainerID'] != null, 'Required key "EzsignsignaturepaymentdetailRequestCompound[fkiGlaccountcontainerID]" has a null value in JSON.');
+        assert(json.containsKey(r'tEzsignsignaturepaymentdetailDescription'), 'Required key "EzsignsignaturepaymentdetailRequestCompound[tEzsignsignaturepaymentdetailDescription]" is missing from JSON.');
+        assert(json[r'tEzsignsignaturepaymentdetailDescription'] != null, 'Required key "EzsignsignaturepaymentdetailRequestCompound[tEzsignsignaturepaymentdetailDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'dEzsignsignaturepaymentdetailAmount'), 'Required key "EzsignsignaturepaymentdetailRequestCompound[dEzsignsignaturepaymentdetailAmount]" is missing from JSON.');
+        assert(json[r'dEzsignsignaturepaymentdetailAmount'] != null, 'Required key "EzsignsignaturepaymentdetailRequestCompound[dEzsignsignaturepaymentdetailAmount]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsignsignaturepaymentdetailTaxable'), 'Required key "EzsignsignaturepaymentdetailRequestCompound[eEzsignsignaturepaymentdetailTaxable]" is missing from JSON.');
+        assert(json[r'eEzsignsignaturepaymentdetailTaxable'] != null, 'Required key "EzsignsignaturepaymentdetailRequestCompound[eEzsignsignaturepaymentdetailTaxable]" has a null value in JSON.');
         return true;
       }());
 

@@ -61,10 +61,12 @@ class CustomCreditcardRequest {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CustomCreditcardRequest[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CustomCreditcardRequest[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fksCreditcardtokenID'), 'Required key "CustomCreditcardRequest[fksCreditcardtokenID]" is missing from JSON.');
+        assert(json[r'fksCreditcardtokenID'] != null, 'Required key "CustomCreditcardRequest[fksCreditcardtokenID]" has a null value in JSON.');
+        assert(json.containsKey(r'sCreditcardCVV'), 'Required key "CustomCreditcardRequest[sCreditcardCVV]" is missing from JSON.');
+        assert(json[r'sCreditcardCVV'] != null, 'Required key "CustomCreditcardRequest[sCreditcardCVV]" has a null value in JSON.');
+        assert(json.containsKey(r'objCreditcarddetail'), 'Required key "CustomCreditcardRequest[objCreditcarddetail]" is missing from JSON.');
+        assert(json[r'objCreditcarddetail'] != null, 'Required key "CustomCreditcardRequest[objCreditcarddetail]" has a null value in JSON.');
         return true;
       }());
 

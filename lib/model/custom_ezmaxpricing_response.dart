@@ -81,10 +81,12 @@ class CustomEzmaxpricingResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CustomEzmaxpricingResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CustomEzmaxpricingResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzmaxpricingID'), 'Required key "CustomEzmaxpricingResponse[pkiEzmaxpricingID]" is missing from JSON.');
+        assert(json[r'pkiEzmaxpricingID'] != null, 'Required key "CustomEzmaxpricingResponse[pkiEzmaxpricingID]" has a null value in JSON.');
+        assert(json.containsKey(r'dEzmaxpricingRebateezsignallagents'), 'Required key "CustomEzmaxpricingResponse[dEzmaxpricingRebateezsignallagents]" is missing from JSON.');
+        assert(json[r'dEzmaxpricingRebateezsignallagents'] != null, 'Required key "CustomEzmaxpricingResponse[dEzmaxpricingRebateezsignallagents]" has a null value in JSON.');
+        assert(json.containsKey(r'dtEzmaxpricingStart'), 'Required key "CustomEzmaxpricingResponse[dtEzmaxpricingStart]" is missing from JSON.');
+        assert(json[r'dtEzmaxpricingStart'] != null, 'Required key "CustomEzmaxpricingResponse[dtEzmaxpricingStart]" has a null value in JSON.');
         return true;
       }());
 

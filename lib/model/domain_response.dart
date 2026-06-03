@@ -85,10 +85,18 @@ class DomainResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "DomainResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "DomainResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiDomainID'), 'Required key "DomainResponse[pkiDomainID]" is missing from JSON.');
+        assert(json[r'pkiDomainID'] != null, 'Required key "DomainResponse[pkiDomainID]" has a null value in JSON.');
+        assert(json.containsKey(r'sDomainName'), 'Required key "DomainResponse[sDomainName]" is missing from JSON.');
+        assert(json[r'sDomainName'] != null, 'Required key "DomainResponse[sDomainName]" has a null value in JSON.');
+        assert(json.containsKey(r'bDomainValiddkim'), 'Required key "DomainResponse[bDomainValiddkim]" is missing from JSON.');
+        assert(json[r'bDomainValiddkim'] != null, 'Required key "DomainResponse[bDomainValiddkim]" has a null value in JSON.');
+        assert(json.containsKey(r'bDomainValidmailfrom'), 'Required key "DomainResponse[bDomainValidmailfrom]" is missing from JSON.');
+        assert(json[r'bDomainValidmailfrom'] != null, 'Required key "DomainResponse[bDomainValidmailfrom]" has a null value in JSON.');
+        assert(json.containsKey(r'bDomainValidcustomer'), 'Required key "DomainResponse[bDomainValidcustomer]" is missing from JSON.');
+        assert(json[r'bDomainValidcustomer'] != null, 'Required key "DomainResponse[bDomainValidcustomer]" has a null value in JSON.');
+        assert(json.containsKey(r'objAudit'), 'Required key "DomainResponse[objAudit]" is missing from JSON.');
+        assert(json[r'objAudit'] != null, 'Required key "DomainResponse[objAudit]" has a null value in JSON.');
         return true;
       }());
 

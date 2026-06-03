@@ -48,10 +48,8 @@ class EzsigntemplateannotationCreateObjectV1ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplateannotationCreateObjectV1ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplateannotationCreateObjectV1ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_pkiEzsigntemplateannotationID'), 'Required key "EzsigntemplateannotationCreateObjectV1ResponseMPayload[a_pkiEzsigntemplateannotationID]" is missing from JSON.');
+        assert(json[r'a_pkiEzsigntemplateannotationID'] != null, 'Required key "EzsigntemplateannotationCreateObjectV1ResponseMPayload[a_pkiEzsigntemplateannotationID]" has a null value in JSON.');
         return true;
       }());
 

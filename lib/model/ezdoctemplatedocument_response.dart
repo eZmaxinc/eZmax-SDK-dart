@@ -17,13 +17,13 @@ class EzdoctemplatedocumentResponse {
     required this.fkiLanguageID,
     this.fkiEzsignfoldertypeID,
     required this.fkiEzdoctemplatetypeID,
-    required this.fkiEzdoctemplatefieldtypecategoryID,
+    this.fkiEzdoctemplatefieldtypecategoryID,
     this.eEzdoctemplatedocumentPrivacylevel,
     required this.bEzdoctemplatedocumentIsactive,
     required this.objEzdoctemplatedocumentName,
     this.sEzdoctemplatedocumentNameX,
     this.sEzsignfoldertypeNameX,
-    required this.sEzdoctemplatefieldtypecategoryDescriptionX,
+    this.sEzdoctemplatefieldtypecategoryDescriptionX,
     required this.sEzdoctemplatetypeDescriptionX,
   });
 
@@ -61,7 +61,13 @@ class EzdoctemplatedocumentResponse {
   ///
   /// Minimum value: 0
   /// Maximum value: 255
-  int fkiEzdoctemplatefieldtypecategoryID;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiEzdoctemplatefieldtypecategoryID;
 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -95,7 +101,13 @@ class EzdoctemplatedocumentResponse {
   String? sEzsignfoldertypeNameX;
 
   /// The description of the Ezdoctemplatefieldtypecategory in the language of the requester
-  String sEzdoctemplatefieldtypecategoryDescriptionX;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEzdoctemplatefieldtypecategoryDescriptionX;
 
   /// The description of the Ezdoctemplatetype in the language of the requester
   String sEzdoctemplatetypeDescriptionX;
@@ -122,13 +134,13 @@ class EzdoctemplatedocumentResponse {
     (fkiLanguageID.hashCode) +
     (fkiEzsignfoldertypeID == null ? 0 : fkiEzsignfoldertypeID!.hashCode) +
     (fkiEzdoctemplatetypeID.hashCode) +
-    (fkiEzdoctemplatefieldtypecategoryID.hashCode) +
+    (fkiEzdoctemplatefieldtypecategoryID == null ? 0 : fkiEzdoctemplatefieldtypecategoryID!.hashCode) +
     (eEzdoctemplatedocumentPrivacylevel == null ? 0 : eEzdoctemplatedocumentPrivacylevel!.hashCode) +
     (bEzdoctemplatedocumentIsactive.hashCode) +
     (objEzdoctemplatedocumentName.hashCode) +
     (sEzdoctemplatedocumentNameX == null ? 0 : sEzdoctemplatedocumentNameX!.hashCode) +
     (sEzsignfoldertypeNameX == null ? 0 : sEzsignfoldertypeNameX!.hashCode) +
-    (sEzdoctemplatefieldtypecategoryDescriptionX.hashCode) +
+    (sEzdoctemplatefieldtypecategoryDescriptionX == null ? 0 : sEzdoctemplatefieldtypecategoryDescriptionX!.hashCode) +
     (sEzdoctemplatetypeDescriptionX.hashCode);
 
   @override
@@ -144,7 +156,11 @@ class EzdoctemplatedocumentResponse {
       json[r'fkiEzsignfoldertypeID'] = null;
     }
       json[r'fkiEzdoctemplatetypeID'] = this.fkiEzdoctemplatetypeID;
+    if (this.fkiEzdoctemplatefieldtypecategoryID != null) {
       json[r'fkiEzdoctemplatefieldtypecategoryID'] = this.fkiEzdoctemplatefieldtypecategoryID;
+    } else {
+      json[r'fkiEzdoctemplatefieldtypecategoryID'] = null;
+    }
     if (this.eEzdoctemplatedocumentPrivacylevel != null) {
       json[r'eEzdoctemplatedocumentPrivacylevel'] = this.eEzdoctemplatedocumentPrivacylevel;
     } else {
@@ -162,7 +178,11 @@ class EzdoctemplatedocumentResponse {
     } else {
       json[r'sEzsignfoldertypeNameX'] = null;
     }
+    if (this.sEzdoctemplatefieldtypecategoryDescriptionX != null) {
       json[r'sEzdoctemplatefieldtypecategoryDescriptionX'] = this.sEzdoctemplatefieldtypecategoryDescriptionX;
+    } else {
+      json[r'sEzdoctemplatefieldtypecategoryDescriptionX'] = null;
+    }
       json[r'sEzdoctemplatetypeDescriptionX'] = this.sEzdoctemplatetypeDescriptionX;
     return json;
   }
@@ -178,10 +198,18 @@ class EzdoctemplatedocumentResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzdoctemplatedocumentResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzdoctemplatedocumentResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzdoctemplatedocumentID'), 'Required key "EzdoctemplatedocumentResponse[pkiEzdoctemplatedocumentID]" is missing from JSON.');
+        assert(json[r'pkiEzdoctemplatedocumentID'] != null, 'Required key "EzdoctemplatedocumentResponse[pkiEzdoctemplatedocumentID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiLanguageID'), 'Required key "EzdoctemplatedocumentResponse[fkiLanguageID]" is missing from JSON.');
+        assert(json[r'fkiLanguageID'] != null, 'Required key "EzdoctemplatedocumentResponse[fkiLanguageID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiEzdoctemplatetypeID'), 'Required key "EzdoctemplatedocumentResponse[fkiEzdoctemplatetypeID]" is missing from JSON.');
+        assert(json[r'fkiEzdoctemplatetypeID'] != null, 'Required key "EzdoctemplatedocumentResponse[fkiEzdoctemplatetypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzdoctemplatedocumentIsactive'), 'Required key "EzdoctemplatedocumentResponse[bEzdoctemplatedocumentIsactive]" is missing from JSON.');
+        assert(json[r'bEzdoctemplatedocumentIsactive'] != null, 'Required key "EzdoctemplatedocumentResponse[bEzdoctemplatedocumentIsactive]" has a null value in JSON.');
+        assert(json.containsKey(r'objEzdoctemplatedocumentName'), 'Required key "EzdoctemplatedocumentResponse[objEzdoctemplatedocumentName]" is missing from JSON.');
+        assert(json[r'objEzdoctemplatedocumentName'] != null, 'Required key "EzdoctemplatedocumentResponse[objEzdoctemplatedocumentName]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzdoctemplatetypeDescriptionX'), 'Required key "EzdoctemplatedocumentResponse[sEzdoctemplatetypeDescriptionX]" is missing from JSON.');
+        assert(json[r'sEzdoctemplatetypeDescriptionX'] != null, 'Required key "EzdoctemplatedocumentResponse[sEzdoctemplatetypeDescriptionX]" has a null value in JSON.');
         return true;
       }());
 
@@ -190,13 +218,13 @@ class EzdoctemplatedocumentResponse {
         fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID')!,
         fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID'),
         fkiEzdoctemplatetypeID: mapValueOfType<int>(json, r'fkiEzdoctemplatetypeID')!,
-        fkiEzdoctemplatefieldtypecategoryID: mapValueOfType<int>(json, r'fkiEzdoctemplatefieldtypecategoryID')!,
+        fkiEzdoctemplatefieldtypecategoryID: mapValueOfType<int>(json, r'fkiEzdoctemplatefieldtypecategoryID'),
         eEzdoctemplatedocumentPrivacylevel: FieldEEzdoctemplatedocumentPrivacylevel.fromJson(json[r'eEzdoctemplatedocumentPrivacylevel']),
         bEzdoctemplatedocumentIsactive: mapValueOfType<bool>(json, r'bEzdoctemplatedocumentIsactive')!,
         objEzdoctemplatedocumentName: MultilingualEzdoctemplatedocumentName.fromJson(json[r'objEzdoctemplatedocumentName'])!,
         sEzdoctemplatedocumentNameX: mapValueOfType<String>(json, r'sEzdoctemplatedocumentNameX'),
         sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX'),
-        sEzdoctemplatefieldtypecategoryDescriptionX: mapValueOfType<String>(json, r'sEzdoctemplatefieldtypecategoryDescriptionX')!,
+        sEzdoctemplatefieldtypecategoryDescriptionX: mapValueOfType<String>(json, r'sEzdoctemplatefieldtypecategoryDescriptionX'),
         sEzdoctemplatetypeDescriptionX: mapValueOfType<String>(json, r'sEzdoctemplatetypeDescriptionX')!,
       );
     }
@@ -248,10 +276,8 @@ class EzdoctemplatedocumentResponse {
     'pkiEzdoctemplatedocumentID',
     'fkiLanguageID',
     'fkiEzdoctemplatetypeID',
-    'fkiEzdoctemplatefieldtypecategoryID',
     'bEzdoctemplatedocumentIsactive',
     'objEzdoctemplatedocumentName',
-    'sEzdoctemplatefieldtypecategoryDescriptionX',
     'sEzdoctemplatetypeDescriptionX',
   };
 }

@@ -55,10 +55,10 @@ class CustomApikeyfederation {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CustomApikeyfederation[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CustomApikeyfederation[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sApikeyfederationKey'), 'Required key "CustomApikeyfederation[sApikeyfederationKey]" is missing from JSON.');
+        assert(json[r'sApikeyfederationKey'] != null, 'Required key "CustomApikeyfederation[sApikeyfederationKey]" has a null value in JSON.');
+        assert(json.containsKey(r'sApikeyfederationSecret'), 'Required key "CustomApikeyfederation[sApikeyfederationSecret]" is missing from JSON.');
+        assert(json[r'sApikeyfederationSecret'] != null, 'Required key "CustomApikeyfederation[sApikeyfederationSecret]" has a null value in JSON.');
         return true;
       }());
 

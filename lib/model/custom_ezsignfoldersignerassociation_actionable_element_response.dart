@@ -149,10 +149,22 @@ class CustomEzsignfoldersignerassociationActionableElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CustomEzsignfoldersignerassociationActionableElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CustomEzsignfoldersignerassociationActionableElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsignfoldersignerassociationID'), 'Required key "CustomEzsignfoldersignerassociationActionableElementResponse[pkiEzsignfoldersignerassociationID]" is missing from JSON.');
+        assert(json[r'pkiEzsignfoldersignerassociationID'] != null, 'Required key "CustomEzsignfoldersignerassociationActionableElementResponse[pkiEzsignfoldersignerassociationID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiEzsignfolderID'), 'Required key "CustomEzsignfoldersignerassociationActionableElementResponse[fkiEzsignfolderID]" is missing from JSON.');
+        assert(json[r'fkiEzsignfolderID'] != null, 'Required key "CustomEzsignfoldersignerassociationActionableElementResponse[fkiEzsignfolderID]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignfoldersignerassociationDelayedsend'), 'Required key "CustomEzsignfoldersignerassociationActionableElementResponse[bEzsignfoldersignerassociationDelayedsend]" is missing from JSON.');
+        assert(json[r'bEzsignfoldersignerassociationDelayedsend'] != null, 'Required key "CustomEzsignfoldersignerassociationActionableElementResponse[bEzsignfoldersignerassociationDelayedsend]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignfoldersignerassociationReceivecopy'), 'Required key "CustomEzsignfoldersignerassociationActionableElementResponse[bEzsignfoldersignerassociationReceivecopy]" is missing from JSON.');
+        assert(json[r'bEzsignfoldersignerassociationReceivecopy'] != null, 'Required key "CustomEzsignfoldersignerassociationActionableElementResponse[bEzsignfoldersignerassociationReceivecopy]" has a null value in JSON.');
+        assert(json.containsKey(r'tEzsignfoldersignerassociationMessage'), 'Required key "CustomEzsignfoldersignerassociationActionableElementResponse[tEzsignfoldersignerassociationMessage]" is missing from JSON.');
+        assert(json[r'tEzsignfoldersignerassociationMessage'] != null, 'Required key "CustomEzsignfoldersignerassociationActionableElementResponse[tEzsignfoldersignerassociationMessage]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignfoldersignerassociationAllowsigninginperson'), 'Required key "CustomEzsignfoldersignerassociationActionableElementResponse[bEzsignfoldersignerassociationAllowsigninginperson]" is missing from JSON.');
+        assert(json[r'bEzsignfoldersignerassociationAllowsigninginperson'] != null, 'Required key "CustomEzsignfoldersignerassociationActionableElementResponse[bEzsignfoldersignerassociationAllowsigninginperson]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignfoldersignerassociationHasactionableelementsCurrent'), 'Required key "CustomEzsignfoldersignerassociationActionableElementResponse[bEzsignfoldersignerassociationHasactionableelementsCurrent]" is missing from JSON.');
+        assert(json[r'bEzsignfoldersignerassociationHasactionableelementsCurrent'] != null, 'Required key "CustomEzsignfoldersignerassociationActionableElementResponse[bEzsignfoldersignerassociationHasactionableelementsCurrent]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignfoldersignerassociationHasactionableelementsFuture'), 'Required key "CustomEzsignfoldersignerassociationActionableElementResponse[bEzsignfoldersignerassociationHasactionableelementsFuture]" is missing from JSON.');
+        assert(json[r'bEzsignfoldersignerassociationHasactionableelementsFuture'] != null, 'Required key "CustomEzsignfoldersignerassociationActionableElementResponse[bEzsignfoldersignerassociationHasactionableelementsFuture]" has a null value in JSON.');
         return true;
       }());
 

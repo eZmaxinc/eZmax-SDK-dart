@@ -85,10 +85,18 @@ class PaymenttermListElement {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "PaymenttermListElement[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "PaymenttermListElement[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiPaymenttermID'), 'Required key "PaymenttermListElement[pkiPaymenttermID]" is missing from JSON.');
+        assert(json[r'pkiPaymenttermID'] != null, 'Required key "PaymenttermListElement[pkiPaymenttermID]" has a null value in JSON.');
+        assert(json.containsKey(r'sPaymenttermCode'), 'Required key "PaymenttermListElement[sPaymenttermCode]" is missing from JSON.');
+        assert(json[r'sPaymenttermCode'] != null, 'Required key "PaymenttermListElement[sPaymenttermCode]" has a null value in JSON.');
+        assert(json.containsKey(r'ePaymenttermType'), 'Required key "PaymenttermListElement[ePaymenttermType]" is missing from JSON.');
+        assert(json[r'ePaymenttermType'] != null, 'Required key "PaymenttermListElement[ePaymenttermType]" has a null value in JSON.');
+        assert(json.containsKey(r'iPaymenttermDay'), 'Required key "PaymenttermListElement[iPaymenttermDay]" is missing from JSON.');
+        assert(json[r'iPaymenttermDay'] != null, 'Required key "PaymenttermListElement[iPaymenttermDay]" has a null value in JSON.');
+        assert(json.containsKey(r'sPaymenttermDescriptionX'), 'Required key "PaymenttermListElement[sPaymenttermDescriptionX]" is missing from JSON.');
+        assert(json[r'sPaymenttermDescriptionX'] != null, 'Required key "PaymenttermListElement[sPaymenttermDescriptionX]" has a null value in JSON.');
+        assert(json.containsKey(r'bPaymenttermIsactive'), 'Required key "PaymenttermListElement[bPaymenttermIsactive]" is missing from JSON.');
+        assert(json[r'bPaymenttermIsactive'] != null, 'Required key "PaymenttermListElement[bPaymenttermIsactive]" has a null value in JSON.');
         return true;
       }());
 

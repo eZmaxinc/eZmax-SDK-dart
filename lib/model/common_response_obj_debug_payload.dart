@@ -76,10 +76,16 @@ class CommonResponseObjDebugPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CommonResponseObjDebugPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CommonResponseObjDebugPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'iVersionMin'), 'Required key "CommonResponseObjDebugPayload[iVersionMin]" is missing from JSON.');
+        assert(json[r'iVersionMin'] != null, 'Required key "CommonResponseObjDebugPayload[iVersionMin]" has a null value in JSON.');
+        assert(json.containsKey(r'iVersionMax'), 'Required key "CommonResponseObjDebugPayload[iVersionMax]" is missing from JSON.');
+        assert(json[r'iVersionMax'] != null, 'Required key "CommonResponseObjDebugPayload[iVersionMax]" has a null value in JSON.');
+        assert(json.containsKey(r'a_RequiredPermission'), 'Required key "CommonResponseObjDebugPayload[a_RequiredPermission]" is missing from JSON.');
+        assert(json[r'a_RequiredPermission'] != null, 'Required key "CommonResponseObjDebugPayload[a_RequiredPermission]" has a null value in JSON.');
+        assert(json.containsKey(r'bVersionDeprecated'), 'Required key "CommonResponseObjDebugPayload[bVersionDeprecated]" is missing from JSON.');
+        assert(json[r'bVersionDeprecated'] != null, 'Required key "CommonResponseObjDebugPayload[bVersionDeprecated]" has a null value in JSON.');
+        assert(json.containsKey(r'dtResponseDate'), 'Required key "CommonResponseObjDebugPayload[dtResponseDate]" is missing from JSON.');
+        assert(json[r'dtResponseDate'] != null, 'Required key "CommonResponseObjDebugPayload[dtResponseDate]" has a null value in JSON.');
         return true;
       }());
 

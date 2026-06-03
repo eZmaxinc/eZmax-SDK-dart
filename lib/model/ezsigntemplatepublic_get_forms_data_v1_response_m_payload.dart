@@ -47,10 +47,8 @@ class EzsigntemplatepublicGetFormsDataV1ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplatepublicGetFormsDataV1ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplatepublicGetFormsDataV1ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_objFormsDataFolder'), 'Required key "EzsigntemplatepublicGetFormsDataV1ResponseMPayload[a_objFormsDataFolder]" is missing from JSON.');
+        assert(json[r'a_objFormsDataFolder'] != null, 'Required key "EzsigntemplatepublicGetFormsDataV1ResponseMPayload[a_objFormsDataFolder]" has a null value in JSON.');
         return true;
       }());
 

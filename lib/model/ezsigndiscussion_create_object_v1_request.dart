@@ -47,10 +47,8 @@ class EzsigndiscussionCreateObjectV1Request {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigndiscussionCreateObjectV1Request[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigndiscussionCreateObjectV1Request[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_objEzsigndiscussion'), 'Required key "EzsigndiscussionCreateObjectV1Request[a_objEzsigndiscussion]" is missing from JSON.');
+        assert(json[r'a_objEzsigndiscussion'] != null, 'Required key "EzsigndiscussionCreateObjectV1Request[a_objEzsigndiscussion]" has a null value in JSON.');
         return true;
       }());
 

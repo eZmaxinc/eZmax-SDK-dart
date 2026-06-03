@@ -135,10 +135,26 @@ class ClonehistoryListElement {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "ClonehistoryListElement[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "ClonehistoryListElement[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiClonehistoryID'), 'Required key "ClonehistoryListElement[pkiClonehistoryID]" is missing from JSON.');
+        assert(json[r'pkiClonehistoryID'] != null, 'Required key "ClonehistoryListElement[pkiClonehistoryID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiUserIDCloning'), 'Required key "ClonehistoryListElement[fkiUserIDCloning]" is missing from JSON.');
+        assert(json[r'fkiUserIDCloning'] != null, 'Required key "ClonehistoryListElement[fkiUserIDCloning]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiUserIDCloned'), 'Required key "ClonehistoryListElement[fkiUserIDCloned]" is missing from JSON.');
+        assert(json[r'fkiUserIDCloned'] != null, 'Required key "ClonehistoryListElement[fkiUserIDCloned]" has a null value in JSON.');
+        assert(json.containsKey(r'dtClonehistoryFirsthit'), 'Required key "ClonehistoryListElement[dtClonehistoryFirsthit]" is missing from JSON.');
+        assert(json[r'dtClonehistoryFirsthit'] != null, 'Required key "ClonehistoryListElement[dtClonehistoryFirsthit]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserLoginnameCloning'), 'Required key "ClonehistoryListElement[sUserLoginnameCloning]" is missing from JSON.');
+        assert(json[r'sUserLoginnameCloning'] != null, 'Required key "ClonehistoryListElement[sUserLoginnameCloning]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserFirstnameCloning'), 'Required key "ClonehistoryListElement[sUserFirstnameCloning]" is missing from JSON.');
+        assert(json[r'sUserFirstnameCloning'] != null, 'Required key "ClonehistoryListElement[sUserFirstnameCloning]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserLastnameCloning'), 'Required key "ClonehistoryListElement[sUserLastnameCloning]" is missing from JSON.');
+        assert(json[r'sUserLastnameCloning'] != null, 'Required key "ClonehistoryListElement[sUserLastnameCloning]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserLoginnameCloned'), 'Required key "ClonehistoryListElement[sUserLoginnameCloned]" is missing from JSON.');
+        assert(json[r'sUserLoginnameCloned'] != null, 'Required key "ClonehistoryListElement[sUserLoginnameCloned]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserFirstnameCloned'), 'Required key "ClonehistoryListElement[sUserFirstnameCloned]" is missing from JSON.');
+        assert(json[r'sUserFirstnameCloned'] != null, 'Required key "ClonehistoryListElement[sUserFirstnameCloned]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserLastnameCloned'), 'Required key "ClonehistoryListElement[sUserLastnameCloned]" is missing from JSON.');
+        assert(json[r'sUserLastnameCloned'] != null, 'Required key "ClonehistoryListElement[sUserLastnameCloned]" has a null value in JSON.');
         return true;
       }());
 

@@ -62,10 +62,10 @@ class EzsigntemplatedocumentGetWordsPositionsV1Request {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplatedocumentGetWordsPositionsV1Request[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplatedocumentGetWordsPositionsV1Request[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'eGet'), 'Required key "EzsigntemplatedocumentGetWordsPositionsV1Request[eGet]" is missing from JSON.');
+        assert(json[r'eGet'] != null, 'Required key "EzsigntemplatedocumentGetWordsPositionsV1Request[eGet]" has a null value in JSON.');
+        assert(json.containsKey(r'bWordCaseSensitive'), 'Required key "EzsigntemplatedocumentGetWordsPositionsV1Request[bWordCaseSensitive]" is missing from JSON.');
+        assert(json[r'bWordCaseSensitive'] != null, 'Required key "EzsigntemplatedocumentGetWordsPositionsV1Request[bWordCaseSensitive]" has a null value in JSON.');
         return true;
       }());
 

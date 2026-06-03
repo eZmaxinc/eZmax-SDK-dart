@@ -120,10 +120,18 @@ class EzsigndocumentlogResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigndocumentlogResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigndocumentlogResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'dtEzsigndocumentlogDatetime'), 'Required key "EzsigndocumentlogResponseCompound[dtEzsigndocumentlogDatetime]" is missing from JSON.');
+        assert(json[r'dtEzsigndocumentlogDatetime'] != null, 'Required key "EzsigndocumentlogResponseCompound[dtEzsigndocumentlogDatetime]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsigndocumentlogType'), 'Required key "EzsigndocumentlogResponseCompound[eEzsigndocumentlogType]" is missing from JSON.');
+        assert(json[r'eEzsigndocumentlogType'] != null, 'Required key "EzsigndocumentlogResponseCompound[eEzsigndocumentlogType]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsigndocumentlogDetail'), 'Required key "EzsigndocumentlogResponseCompound[sEzsigndocumentlogDetail]" is missing from JSON.');
+        assert(json[r'sEzsigndocumentlogDetail'] != null, 'Required key "EzsigndocumentlogResponseCompound[sEzsigndocumentlogDetail]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsigndocumentlogLastname'), 'Required key "EzsigndocumentlogResponseCompound[sEzsigndocumentlogLastname]" is missing from JSON.');
+        assert(json[r'sEzsigndocumentlogLastname'] != null, 'Required key "EzsigndocumentlogResponseCompound[sEzsigndocumentlogLastname]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsigndocumentlogFirstname'), 'Required key "EzsigndocumentlogResponseCompound[sEzsigndocumentlogFirstname]" is missing from JSON.');
+        assert(json[r'sEzsigndocumentlogFirstname'] != null, 'Required key "EzsigndocumentlogResponseCompound[sEzsigndocumentlogFirstname]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsigndocumentlogIP'), 'Required key "EzsigndocumentlogResponseCompound[sEzsigndocumentlogIP]" is missing from JSON.');
+        assert(json[r'sEzsigndocumentlogIP'] != null, 'Required key "EzsigndocumentlogResponseCompound[sEzsigndocumentlogIP]" has a null value in JSON.');
         return true;
       }());
 

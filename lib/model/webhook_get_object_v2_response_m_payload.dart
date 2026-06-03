@@ -47,10 +47,8 @@ class WebhookGetObjectV2ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "WebhookGetObjectV2ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "WebhookGetObjectV2ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'objWebhook'), 'Required key "WebhookGetObjectV2ResponseMPayload[objWebhook]" is missing from JSON.');
+        assert(json[r'objWebhook'] != null, 'Required key "WebhookGetObjectV2ResponseMPayload[objWebhook]" has a null value in JSON.');
         return true;
       }());
 

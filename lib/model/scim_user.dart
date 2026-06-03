@@ -86,10 +86,8 @@ class ScimUser {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "ScimUser[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "ScimUser[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'userName'), 'Required key "ScimUser[userName]" is missing from JSON.');
+        assert(json[r'userName'] != null, 'Required key "ScimUser[userName]" has a null value in JSON.');
         return true;
       }());
 

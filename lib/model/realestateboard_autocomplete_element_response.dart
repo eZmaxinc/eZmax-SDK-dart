@@ -19,7 +19,7 @@ class RealestateboardAutocompleteElementResponse {
     required this.bRealestateboardIsactive,
   });
 
-  /// The unique ID of the Activesession
+  /// The unique ID of the Realestateboard
   int pkiRealestateboardID;
 
   /// The name of the Province in the language of the requester
@@ -69,10 +69,14 @@ class RealestateboardAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "RealestateboardAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "RealestateboardAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiRealestateboardID'), 'Required key "RealestateboardAutocompleteElementResponse[pkiRealestateboardID]" is missing from JSON.');
+        assert(json[r'pkiRealestateboardID'] != null, 'Required key "RealestateboardAutocompleteElementResponse[pkiRealestateboardID]" has a null value in JSON.');
+        assert(json.containsKey(r'sProvinceNameX'), 'Required key "RealestateboardAutocompleteElementResponse[sProvinceNameX]" is missing from JSON.');
+        assert(json[r'sProvinceNameX'] != null, 'Required key "RealestateboardAutocompleteElementResponse[sProvinceNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'sRealestateboardNameX'), 'Required key "RealestateboardAutocompleteElementResponse[sRealestateboardNameX]" is missing from JSON.');
+        assert(json[r'sRealestateboardNameX'] != null, 'Required key "RealestateboardAutocompleteElementResponse[sRealestateboardNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'bRealestateboardIsactive'), 'Required key "RealestateboardAutocompleteElementResponse[bRealestateboardIsactive]" is missing from JSON.');
+        assert(json[r'bRealestateboardIsactive'] != null, 'Required key "RealestateboardAutocompleteElementResponse[bRealestateboardIsactive]" has a null value in JSON.');
         return true;
       }());
 

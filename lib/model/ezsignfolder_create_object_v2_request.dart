@@ -47,10 +47,8 @@ class EzsignfolderCreateObjectV2Request {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignfolderCreateObjectV2Request[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignfolderCreateObjectV2Request[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_objEzsignfolder'), 'Required key "EzsignfolderCreateObjectV2Request[a_objEzsignfolder]" is missing from JSON.');
+        assert(json[r'a_objEzsignfolder'] != null, 'Required key "EzsignfolderCreateObjectV2Request[a_objEzsignfolder]" has a null value in JSON.');
         return true;
       }());
 

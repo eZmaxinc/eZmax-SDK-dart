@@ -54,10 +54,10 @@ class CustomCommunicationrecipientsgroupResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CustomCommunicationrecipientsgroupResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CustomCommunicationrecipientsgroupResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sCommunicationrecipientsgroupLabel'), 'Required key "CustomCommunicationrecipientsgroupResponse[sCommunicationrecipientsgroupLabel]" is missing from JSON.');
+        assert(json[r'sCommunicationrecipientsgroupLabel'] != null, 'Required key "CustomCommunicationrecipientsgroupResponse[sCommunicationrecipientsgroupLabel]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objCommunicationrecipientsrecipient'), 'Required key "CustomCommunicationrecipientsgroupResponse[a_objCommunicationrecipientsrecipient]" is missing from JSON.');
+        assert(json[r'a_objCommunicationrecipientsrecipient'] != null, 'Required key "CustomCommunicationrecipientsgroupResponse[a_objCommunicationrecipientsrecipient]" has a null value in JSON.');
         return true;
       }());
 

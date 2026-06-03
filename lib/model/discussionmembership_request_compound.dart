@@ -136,10 +136,10 @@ class DiscussionmembershipRequestCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "DiscussionmembershipRequestCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "DiscussionmembershipRequestCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiDiscussionID'), 'Required key "DiscussionmembershipRequestCompound[fkiDiscussionID]" is missing from JSON.');
+        assert(json[r'fkiDiscussionID'] != null, 'Required key "DiscussionmembershipRequestCompound[fkiDiscussionID]" has a null value in JSON.');
+        assert(json.containsKey(r'dtDiscussionmembershipJoined'), 'Required key "DiscussionmembershipRequestCompound[dtDiscussionmembershipJoined]" is missing from JSON.');
+        assert(json[r'dtDiscussionmembershipJoined'] != null, 'Required key "DiscussionmembershipRequestCompound[dtDiscussionmembershipJoined]" has a null value in JSON.');
         return true;
       }());
 

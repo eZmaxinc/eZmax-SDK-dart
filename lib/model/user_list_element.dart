@@ -18,6 +18,7 @@ class UserListElement {
     required this.sUserLastname,
     required this.sUserLoginname,
     required this.bUserIsactive,
+    this.bUserSuspended,
     required this.eUserType,
     required this.eUserOrigin,
     required this.eUserEzsignaccess,
@@ -42,6 +43,15 @@ class UserListElement {
 
   /// Whether the User is active or not
   bool bUserIsactive;
+
+  /// Whether the User is suspended or not
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bUserSuspended;
 
   FieldEUserType eUserType;
 
@@ -77,6 +87,7 @@ class UserListElement {
     other.sUserLastname == sUserLastname &&
     other.sUserLoginname == sUserLoginname &&
     other.bUserIsactive == bUserIsactive &&
+    other.bUserSuspended == bUserSuspended &&
     other.eUserType == eUserType &&
     other.eUserOrigin == eUserOrigin &&
     other.eUserEzsignaccess == eUserEzsignaccess &&
@@ -92,6 +103,7 @@ class UserListElement {
     (sUserLastname.hashCode) +
     (sUserLoginname.hashCode) +
     (bUserIsactive.hashCode) +
+    (bUserSuspended == null ? 0 : bUserSuspended!.hashCode) +
     (eUserType.hashCode) +
     (eUserOrigin.hashCode) +
     (eUserEzsignaccess.hashCode) +
@@ -100,7 +112,7 @@ class UserListElement {
     (sUserJobtitle == null ? 0 : sUserJobtitle!.hashCode);
 
   @override
-  String toString() => 'UserListElement[pkiUserID=$pkiUserID, sUserFirstname=$sUserFirstname, sUserLastname=$sUserLastname, sUserLoginname=$sUserLoginname, bUserIsactive=$bUserIsactive, eUserType=$eUserType, eUserOrigin=$eUserOrigin, eUserEzsignaccess=$eUserEzsignaccess, dtUserEzsignprepaidexpiration=$dtUserEzsignprepaidexpiration, sEmailAddress=$sEmailAddress, sUserJobtitle=$sUserJobtitle]';
+  String toString() => 'UserListElement[pkiUserID=$pkiUserID, sUserFirstname=$sUserFirstname, sUserLastname=$sUserLastname, sUserLoginname=$sUserLoginname, bUserIsactive=$bUserIsactive, bUserSuspended=$bUserSuspended, eUserType=$eUserType, eUserOrigin=$eUserOrigin, eUserEzsignaccess=$eUserEzsignaccess, dtUserEzsignprepaidexpiration=$dtUserEzsignprepaidexpiration, sEmailAddress=$sEmailAddress, sUserJobtitle=$sUserJobtitle]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -109,6 +121,11 @@ class UserListElement {
       json[r'sUserLastname'] = this.sUserLastname;
       json[r'sUserLoginname'] = this.sUserLoginname;
       json[r'bUserIsactive'] = this.bUserIsactive;
+    if (this.bUserSuspended != null) {
+      json[r'bUserSuspended'] = this.bUserSuspended;
+    } else {
+      json[r'bUserSuspended'] = null;
+    }
       json[r'eUserType'] = this.eUserType;
       json[r'eUserOrigin'] = this.eUserOrigin;
       json[r'eUserEzsignaccess'] = this.eUserEzsignaccess;
@@ -137,10 +154,24 @@ class UserListElement {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "UserListElement[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "UserListElement[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiUserID'), 'Required key "UserListElement[pkiUserID]" is missing from JSON.');
+        assert(json[r'pkiUserID'] != null, 'Required key "UserListElement[pkiUserID]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserFirstname'), 'Required key "UserListElement[sUserFirstname]" is missing from JSON.');
+        assert(json[r'sUserFirstname'] != null, 'Required key "UserListElement[sUserFirstname]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserLastname'), 'Required key "UserListElement[sUserLastname]" is missing from JSON.');
+        assert(json[r'sUserLastname'] != null, 'Required key "UserListElement[sUserLastname]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserLoginname'), 'Required key "UserListElement[sUserLoginname]" is missing from JSON.');
+        assert(json[r'sUserLoginname'] != null, 'Required key "UserListElement[sUserLoginname]" has a null value in JSON.');
+        assert(json.containsKey(r'bUserIsactive'), 'Required key "UserListElement[bUserIsactive]" is missing from JSON.');
+        assert(json[r'bUserIsactive'] != null, 'Required key "UserListElement[bUserIsactive]" has a null value in JSON.');
+        assert(json.containsKey(r'eUserType'), 'Required key "UserListElement[eUserType]" is missing from JSON.');
+        assert(json[r'eUserType'] != null, 'Required key "UserListElement[eUserType]" has a null value in JSON.');
+        assert(json.containsKey(r'eUserOrigin'), 'Required key "UserListElement[eUserOrigin]" is missing from JSON.');
+        assert(json[r'eUserOrigin'] != null, 'Required key "UserListElement[eUserOrigin]" has a null value in JSON.');
+        assert(json.containsKey(r'eUserEzsignaccess'), 'Required key "UserListElement[eUserEzsignaccess]" is missing from JSON.');
+        assert(json[r'eUserEzsignaccess'] != null, 'Required key "UserListElement[eUserEzsignaccess]" has a null value in JSON.');
+        assert(json.containsKey(r'sEmailAddress'), 'Required key "UserListElement[sEmailAddress]" is missing from JSON.');
+        assert(json[r'sEmailAddress'] != null, 'Required key "UserListElement[sEmailAddress]" has a null value in JSON.');
         return true;
       }());
 
@@ -150,6 +181,7 @@ class UserListElement {
         sUserLastname: mapValueOfType<String>(json, r'sUserLastname')!,
         sUserLoginname: mapValueOfType<String>(json, r'sUserLoginname')!,
         bUserIsactive: mapValueOfType<bool>(json, r'bUserIsactive')!,
+        bUserSuspended: mapValueOfType<bool>(json, r'bUserSuspended'),
         eUserType: FieldEUserType.fromJson(json[r'eUserType'])!,
         eUserOrigin: FieldEUserOrigin.fromJson(json[r'eUserOrigin'])!,
         eUserEzsignaccess: FieldEUserEzsignaccess.fromJson(json[r'eUserEzsignaccess'])!,

@@ -93,10 +93,22 @@ class CommonReportcellstyle {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CommonReportcellstyle[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CommonReportcellstyle[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'bReportcellstyleBordertop'), 'Required key "CommonReportcellstyle[bReportcellstyleBordertop]" is missing from JSON.');
+        assert(json[r'bReportcellstyleBordertop'] != null, 'Required key "CommonReportcellstyle[bReportcellstyleBordertop]" has a null value in JSON.');
+        assert(json.containsKey(r'bReportcellstyleBorderbottom'), 'Required key "CommonReportcellstyle[bReportcellstyleBorderbottom]" is missing from JSON.');
+        assert(json[r'bReportcellstyleBorderbottom'] != null, 'Required key "CommonReportcellstyle[bReportcellstyleBorderbottom]" has a null value in JSON.');
+        assert(json.containsKey(r'bReportcellstyleBorderleft'), 'Required key "CommonReportcellstyle[bReportcellstyleBorderleft]" is missing from JSON.');
+        assert(json[r'bReportcellstyleBorderleft'] != null, 'Required key "CommonReportcellstyle[bReportcellstyleBorderleft]" has a null value in JSON.');
+        assert(json.containsKey(r'bReportcellstyleBorderright'), 'Required key "CommonReportcellstyle[bReportcellstyleBorderright]" is missing from JSON.');
+        assert(json[r'bReportcellstyleBorderright'] != null, 'Required key "CommonReportcellstyle[bReportcellstyleBorderright]" has a null value in JSON.');
+        assert(json.containsKey(r'eReportcellHorizontalalignment'), 'Required key "CommonReportcellstyle[eReportcellHorizontalalignment]" is missing from JSON.');
+        assert(json[r'eReportcellHorizontalalignment'] != null, 'Required key "CommonReportcellstyle[eReportcellHorizontalalignment]" has a null value in JSON.');
+        assert(json.containsKey(r'eReportcellVerticalalignment'), 'Required key "CommonReportcellstyle[eReportcellVerticalalignment]" is missing from JSON.');
+        assert(json[r'eReportcellVerticalalignment'] != null, 'Required key "CommonReportcellstyle[eReportcellVerticalalignment]" has a null value in JSON.');
+        assert(json.containsKey(r'eReportcellFontweight'), 'Required key "CommonReportcellstyle[eReportcellFontweight]" is missing from JSON.');
+        assert(json[r'eReportcellFontweight'] != null, 'Required key "CommonReportcellstyle[eReportcellFontweight]" has a null value in JSON.');
+        assert(json.containsKey(r'eReportcellFontunderline'), 'Required key "CommonReportcellstyle[eReportcellFontunderline]" is missing from JSON.');
+        assert(json[r'eReportcellFontunderline'] != null, 'Required key "CommonReportcellstyle[eReportcellFontunderline]" has a null value in JSON.');
         return true;
       }());
 

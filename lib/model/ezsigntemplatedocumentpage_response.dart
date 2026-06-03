@@ -102,10 +102,20 @@ class EzsigntemplatedocumentpageResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplatedocumentpageResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplatedocumentpageResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsigntemplatedocumentpageID'), 'Required key "EzsigntemplatedocumentpageResponse[pkiEzsigntemplatedocumentpageID]" is missing from JSON.');
+        assert(json[r'pkiEzsigntemplatedocumentpageID'] != null, 'Required key "EzsigntemplatedocumentpageResponse[pkiEzsigntemplatedocumentpageID]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigntemplatedocumentpageWidthimage'), 'Required key "EzsigntemplatedocumentpageResponse[iEzsigntemplatedocumentpageWidthimage]" is missing from JSON.');
+        assert(json[r'iEzsigntemplatedocumentpageWidthimage'] != null, 'Required key "EzsigntemplatedocumentpageResponse[iEzsigntemplatedocumentpageWidthimage]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigntemplatedocumentpageHeightimage'), 'Required key "EzsigntemplatedocumentpageResponse[iEzsigntemplatedocumentpageHeightimage]" is missing from JSON.');
+        assert(json[r'iEzsigntemplatedocumentpageHeightimage'] != null, 'Required key "EzsigntemplatedocumentpageResponse[iEzsigntemplatedocumentpageHeightimage]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigntemplatedocumentpageWidthpdf'), 'Required key "EzsigntemplatedocumentpageResponse[iEzsigntemplatedocumentpageWidthpdf]" is missing from JSON.');
+        assert(json[r'iEzsigntemplatedocumentpageWidthpdf'] != null, 'Required key "EzsigntemplatedocumentpageResponse[iEzsigntemplatedocumentpageWidthpdf]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigntemplatedocumentpageHeightpdf'), 'Required key "EzsigntemplatedocumentpageResponse[iEzsigntemplatedocumentpageHeightpdf]" is missing from JSON.');
+        assert(json[r'iEzsigntemplatedocumentpageHeightpdf'] != null, 'Required key "EzsigntemplatedocumentpageResponse[iEzsigntemplatedocumentpageHeightpdf]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigntemplatedocumentpagePagenumber'), 'Required key "EzsigntemplatedocumentpageResponse[iEzsigntemplatedocumentpagePagenumber]" is missing from JSON.');
+        assert(json[r'iEzsigntemplatedocumentpagePagenumber'] != null, 'Required key "EzsigntemplatedocumentpageResponse[iEzsigntemplatedocumentpagePagenumber]" has a null value in JSON.');
+        assert(json.containsKey(r'sComputedImageurl'), 'Required key "EzsigntemplatedocumentpageResponse[sComputedImageurl]" is missing from JSON.');
+        assert(json[r'sComputedImageurl'] != null, 'Required key "EzsigntemplatedocumentpageResponse[sComputedImageurl]" has a null value in JSON.');
         return true;
       }());
 

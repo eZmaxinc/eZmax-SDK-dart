@@ -77,10 +77,16 @@ class EzsigntemplatepackageAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplatepackageAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplatepackageAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'eEzsignfoldertypePrivacylevel'), 'Required key "EzsigntemplatepackageAutocompleteElementResponse[eEzsignfoldertypePrivacylevel]" is missing from JSON.');
+        assert(json[r'eEzsignfoldertypePrivacylevel'] != null, 'Required key "EzsigntemplatepackageAutocompleteElementResponse[eEzsignfoldertypePrivacylevel]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsigntemplatepackageDescription'), 'Required key "EzsigntemplatepackageAutocompleteElementResponse[sEzsigntemplatepackageDescription]" is missing from JSON.');
+        assert(json[r'sEzsigntemplatepackageDescription'] != null, 'Required key "EzsigntemplatepackageAutocompleteElementResponse[sEzsigntemplatepackageDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'pkiEzsigntemplatepackageID'), 'Required key "EzsigntemplatepackageAutocompleteElementResponse[pkiEzsigntemplatepackageID]" is missing from JSON.');
+        assert(json[r'pkiEzsigntemplatepackageID'] != null, 'Required key "EzsigntemplatepackageAutocompleteElementResponse[pkiEzsigntemplatepackageID]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsigntemplatepackageIsactive'), 'Required key "EzsigntemplatepackageAutocompleteElementResponse[bEzsigntemplatepackageIsactive]" is missing from JSON.');
+        assert(json[r'bEzsigntemplatepackageIsactive'] != null, 'Required key "EzsigntemplatepackageAutocompleteElementResponse[bEzsigntemplatepackageIsactive]" has a null value in JSON.');
+        assert(json.containsKey(r'bDisabled'), 'Required key "EzsigntemplatepackageAutocompleteElementResponse[bDisabled]" is missing from JSON.');
+        assert(json[r'bDisabled'] != null, 'Required key "EzsigntemplatepackageAutocompleteElementResponse[bDisabled]" has a null value in JSON.');
         return true;
       }());
 

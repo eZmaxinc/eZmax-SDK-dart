@@ -47,10 +47,8 @@ class EzsignfolderEditObjectV3Request {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignfolderEditObjectV3Request[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignfolderEditObjectV3Request[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'objEzsignfolder'), 'Required key "EzsignfolderEditObjectV3Request[objEzsignfolder]" is missing from JSON.');
+        assert(json[r'objEzsignfolder'] != null, 'Required key "EzsignfolderEditObjectV3Request[objEzsignfolder]" has a null value in JSON.');
         return true;
       }());
 

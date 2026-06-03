@@ -71,10 +71,8 @@ class CommonReportgroupParameter {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CommonReportgroupParameter[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CommonReportgroupParameter[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sReportgroupParameterName'), 'Required key "CommonReportgroupParameter[sReportgroupParameterName]" is missing from JSON.');
+        assert(json[r'sReportgroupParameterName'] != null, 'Required key "CommonReportgroupParameter[sReportgroupParameterName]" has a null value in JSON.');
         return true;
       }());
 

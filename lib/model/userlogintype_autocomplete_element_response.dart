@@ -64,10 +64,12 @@ class UserlogintypeAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "UserlogintypeAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "UserlogintypeAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiUserlogintypeID'), 'Required key "UserlogintypeAutocompleteElementResponse[pkiUserlogintypeID]" is missing from JSON.');
+        assert(json[r'pkiUserlogintypeID'] != null, 'Required key "UserlogintypeAutocompleteElementResponse[pkiUserlogintypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserlogintypeDescriptionX'), 'Required key "UserlogintypeAutocompleteElementResponse[sUserlogintypeDescriptionX]" is missing from JSON.');
+        assert(json[r'sUserlogintypeDescriptionX'] != null, 'Required key "UserlogintypeAutocompleteElementResponse[sUserlogintypeDescriptionX]" has a null value in JSON.');
+        assert(json.containsKey(r'bUserlogintypeIsactive'), 'Required key "UserlogintypeAutocompleteElementResponse[bUserlogintypeIsactive]" is missing from JSON.');
+        assert(json[r'bUserlogintypeIsactive'] != null, 'Required key "UserlogintypeAutocompleteElementResponse[bUserlogintypeIsactive]" has a null value in JSON.');
         return true;
       }());
 

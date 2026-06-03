@@ -110,10 +110,20 @@ class UserCreateEzsignuserV1Request {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "UserCreateEzsignuserV1Request[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "UserCreateEzsignuserV1Request[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiLanguageID'), 'Required key "UserCreateEzsignuserV1Request[fkiLanguageID]" is missing from JSON.');
+        assert(json[r'fkiLanguageID'] != null, 'Required key "UserCreateEzsignuserV1Request[fkiLanguageID]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserFirstname'), 'Required key "UserCreateEzsignuserV1Request[sUserFirstname]" is missing from JSON.');
+        assert(json[r'sUserFirstname'] != null, 'Required key "UserCreateEzsignuserV1Request[sUserFirstname]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserLastname'), 'Required key "UserCreateEzsignuserV1Request[sUserLastname]" is missing from JSON.');
+        assert(json[r'sUserLastname'] != null, 'Required key "UserCreateEzsignuserV1Request[sUserLastname]" has a null value in JSON.');
+        assert(json.containsKey(r'sEmailAddress'), 'Required key "UserCreateEzsignuserV1Request[sEmailAddress]" is missing from JSON.');
+        assert(json[r'sEmailAddress'] != null, 'Required key "UserCreateEzsignuserV1Request[sEmailAddress]" has a null value in JSON.');
+        assert(json.containsKey(r'sPhoneRegion'), 'Required key "UserCreateEzsignuserV1Request[sPhoneRegion]" is missing from JSON.');
+        assert(json[r'sPhoneRegion'] != null, 'Required key "UserCreateEzsignuserV1Request[sPhoneRegion]" has a null value in JSON.');
+        assert(json.containsKey(r'sPhoneExchange'), 'Required key "UserCreateEzsignuserV1Request[sPhoneExchange]" is missing from JSON.');
+        assert(json[r'sPhoneExchange'] != null, 'Required key "UserCreateEzsignuserV1Request[sPhoneExchange]" has a null value in JSON.');
+        assert(json.containsKey(r'sPhoneNumber'), 'Required key "UserCreateEzsignuserV1Request[sPhoneNumber]" is missing from JSON.');
+        assert(json[r'sPhoneNumber'] != null, 'Required key "UserCreateEzsignuserV1Request[sPhoneNumber]" has a null value in JSON.');
         return true;
       }());
 

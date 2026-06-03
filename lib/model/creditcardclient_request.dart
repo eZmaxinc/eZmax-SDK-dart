@@ -126,10 +126,20 @@ class CreditcardclientRequest {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CreditcardclientRequest[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CreditcardclientRequest[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'bCreditcardclientrelationIsdefault'), 'Required key "CreditcardclientRequest[bCreditcardclientrelationIsdefault]" is missing from JSON.');
+        assert(json[r'bCreditcardclientrelationIsdefault'] != null, 'Required key "CreditcardclientRequest[bCreditcardclientrelationIsdefault]" has a null value in JSON.');
+        assert(json.containsKey(r'sCreditcardclientDescription'), 'Required key "CreditcardclientRequest[sCreditcardclientDescription]" is missing from JSON.');
+        assert(json[r'sCreditcardclientDescription'] != null, 'Required key "CreditcardclientRequest[sCreditcardclientDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'bCreditcardclientAllowedcompanypayment'), 'Required key "CreditcardclientRequest[bCreditcardclientAllowedcompanypayment]" is missing from JSON.');
+        assert(json[r'bCreditcardclientAllowedcompanypayment'] != null, 'Required key "CreditcardclientRequest[bCreditcardclientAllowedcompanypayment]" has a null value in JSON.');
+        assert(json.containsKey(r'bCreditcardclientAllowedezsign'), 'Required key "CreditcardclientRequest[bCreditcardclientAllowedezsign]" is missing from JSON.');
+        assert(json[r'bCreditcardclientAllowedezsign'] != null, 'Required key "CreditcardclientRequest[bCreditcardclientAllowedezsign]" has a null value in JSON.');
+        assert(json.containsKey(r'bCreditcardclientAllowedtranquillit'), 'Required key "CreditcardclientRequest[bCreditcardclientAllowedtranquillit]" is missing from JSON.');
+        assert(json[r'bCreditcardclientAllowedtranquillit'] != null, 'Required key "CreditcardclientRequest[bCreditcardclientAllowedtranquillit]" has a null value in JSON.');
+        assert(json.containsKey(r'objCreditcarddetail'), 'Required key "CreditcardclientRequest[objCreditcarddetail]" is missing from JSON.');
+        assert(json[r'objCreditcarddetail'] != null, 'Required key "CreditcardclientRequest[objCreditcarddetail]" has a null value in JSON.');
+        assert(json.containsKey(r'sCreditcardclientCVV'), 'Required key "CreditcardclientRequest[sCreditcardclientCVV]" is missing from JSON.');
+        assert(json[r'sCreditcardclientCVV'] != null, 'Required key "CreditcardclientRequest[sCreditcardclientCVV]" has a null value in JSON.');
         return true;
       }());
 

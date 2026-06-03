@@ -47,10 +47,8 @@ class EzsignsignergroupGetObjectV2ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignsignergroupGetObjectV2ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignsignergroupGetObjectV2ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'objEzsignsignergroup'), 'Required key "EzsignsignergroupGetObjectV2ResponseMPayload[objEzsignsignergroup]" is missing from JSON.');
+        assert(json[r'objEzsignsignergroup'] != null, 'Required key "EzsignsignergroupGetObjectV2ResponseMPayload[objEzsignsignergroup]" has a null value in JSON.');
         return true;
       }());
 

@@ -183,10 +183,10 @@ class EzsignelementdependencyResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignelementdependencyResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignelementdependencyResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsignelementdependencyID'), 'Required key "EzsignelementdependencyResponseCompound[pkiEzsignelementdependencyID]" is missing from JSON.');
+        assert(json[r'pkiEzsignelementdependencyID'] != null, 'Required key "EzsignelementdependencyResponseCompound[pkiEzsignelementdependencyID]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsignelementdependencyValidation'), 'Required key "EzsignelementdependencyResponseCompound[eEzsignelementdependencyValidation]" is missing from JSON.');
+        assert(json[r'eEzsignelementdependencyValidation'] != null, 'Required key "EzsignelementdependencyResponseCompound[eEzsignelementdependencyValidation]" has a null value in JSON.');
         return true;
       }());
 

@@ -69,10 +69,10 @@ class ElectronicfundstransferGetCommunicationrecipientsV1Response {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "ElectronicfundstransferGetCommunicationrecipientsV1Response[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "ElectronicfundstransferGetCommunicationrecipientsV1Response[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'objDebugPayload'), 'Required key "ElectronicfundstransferGetCommunicationrecipientsV1Response[objDebugPayload]" is missing from JSON.');
+        assert(json[r'objDebugPayload'] != null, 'Required key "ElectronicfundstransferGetCommunicationrecipientsV1Response[objDebugPayload]" has a null value in JSON.');
+        assert(json.containsKey(r'mPayload'), 'Required key "ElectronicfundstransferGetCommunicationrecipientsV1Response[mPayload]" is missing from JSON.');
+        assert(json[r'mPayload'] != null, 'Required key "ElectronicfundstransferGetCommunicationrecipientsV1Response[mPayload]" has a null value in JSON.');
         return true;
       }());
 

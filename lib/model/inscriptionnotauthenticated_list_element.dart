@@ -38,7 +38,9 @@ class InscriptionnotauthenticatedListElement {
     this.sAddressSuite,
     this.sAddressCity,
     this.sAddressZip,
+    this.fkiProvinceID,
     this.sProvinceNameX,
+    this.fkiCountryID,
     this.sCountryNameX,
     required this.sInscriptionnotauthenticatedOffertopurchasenumber,
   });
@@ -220,6 +222,17 @@ class InscriptionnotauthenticatedListElement {
   ///
   String? sAddressZip;
 
+  /// The unique ID of the Province.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|(Canada) Alberta |2|(Canada) British Columbia| |3|(Canada) Manitoba| |3|(Canada) Manitoba| |4|(Canada) New Brunswick| |5|(Canada) Newfoundland| |6|(Canada) Northwest Territories| |7|(Canada) Nova Scotia| |8|(Canada) Nunavut| |9|(Canada) Ontario| |10|(Canada) Prince Edward Island| |11|(Canada) Quebec| |12|(Canada) Saskatchewan| |13|(Canada) Yukon| |14|(United-States) Alabama| |15|(United-States) Alaska| |16|(United-States) Arizona| |17|(United-States) Arkansas| |18|(United-States) California| |19|(United-States) Colorado| |20|(United-States) Connecticut| |21|(United-States) Delaware| |22|(United-States) District of Columbia| |23|(United-States) Florida| |24|(United-States) Georgia| |25|(United-States) Hawaii| |26|(United-States) Idaho| |27|(United-States) Illinois| |28|(United-States) Indiana| |29|(United-States) Iowa| |30|(United-States) Kansas| |31|(United-States) Kentucky| |32|(United-States) Louisiane| |33|(United-States) Maine| |34|(United-States) Maryland| |35|(United-States) Massachusetts| |36|(United-States) Michigan| |37|(United-States) Minnesota| |38|(United-States) Mississippi| |39|(United-States) Missouri| |40|(United-States) Montana| |41|(United-States) Nebraska| |42|(United-States) Nevada| |43|(United-States) New Hampshire| |44|(United-States) New Jersey| |45|(United-States) New Mexico| |46|(United-States) New York| |47|(United-States) North Carolina| |48|(United-States) North Dakota| |49|(United-States) Ohio| |50|(United-States) Oklahoma| |51|(United-States) Oregon| |52|(United-States) Pennsylvania| |53|(United-States) Rhode Island| |54|(United-States) South Carolina| |55|(United-States) South Dakota| |56|(United-States) Tennessee| |57|(United-States) Texas| |58|(United-States) Utah| |60|(United-States) Vermont| |59|(United-States) Virginia| |61|(United-States) Washington| |62|(United-States) West Virginia| |63|(United-States) Wisconsin| |64|(United-States) Wyoming|
+  ///
+  /// Minimum value: 0
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiProvinceID;
+
   /// The name of the Province in the language of the requester
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -228,6 +241,17 @@ class InscriptionnotauthenticatedListElement {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   String? sProvinceNameX;
+
+  /// The unique ID of the Country.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|Canada| |2|United-States|
+  ///
+  /// Minimum value: 0
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiCountryID;
 
   /// The name of the Country in the language of the requester
   ///
@@ -268,7 +292,9 @@ class InscriptionnotauthenticatedListElement {
     other.sAddressSuite == sAddressSuite &&
     other.sAddressCity == sAddressCity &&
     other.sAddressZip == sAddressZip &&
+    other.fkiProvinceID == fkiProvinceID &&
     other.sProvinceNameX == sProvinceNameX &&
+    other.fkiCountryID == fkiCountryID &&
     other.sCountryNameX == sCountryNameX &&
     other.sInscriptionnotauthenticatedOffertopurchasenumber == sInscriptionnotauthenticatedOffertopurchasenumber;
 
@@ -300,12 +326,14 @@ class InscriptionnotauthenticatedListElement {
     (sAddressSuite == null ? 0 : sAddressSuite!.hashCode) +
     (sAddressCity == null ? 0 : sAddressCity!.hashCode) +
     (sAddressZip == null ? 0 : sAddressZip!.hashCode) +
+    (fkiProvinceID == null ? 0 : fkiProvinceID!.hashCode) +
     (sProvinceNameX == null ? 0 : sProvinceNameX!.hashCode) +
+    (fkiCountryID == null ? 0 : fkiCountryID!.hashCode) +
     (sCountryNameX == null ? 0 : sCountryNameX!.hashCode) +
     (sInscriptionnotauthenticatedOffertopurchasenumber.hashCode);
 
   @override
-  String toString() => 'InscriptionnotauthenticatedListElement[pkiInscriptionID=$pkiInscriptionID, pkiInscriptionnotauthenticatedID=$pkiInscriptionnotauthenticatedID, fkiInscriptiontypeID=$fkiInscriptiontypeID, sInscriptiontypeNameX=$sInscriptiontypeNameX, eInscriptionStep=$eInscriptionStep, sInscriptionCivicend=$sInscriptionCivicend, sInscriptionMLS=$sInscriptionMLS, dInscriptionSaleprice=$dInscriptionSaleprice, dInscriptionRentprice=$dInscriptionRentprice, dtInscriptionDate=$dtInscriptionDate, dtInscriptionExpirationdate=$dtInscriptionExpirationdate, dtInscriptionNotarydate=$dtInscriptionNotarydate, bInscriptionInspection=$bInscriptionInspection, bInscriptionIsactive=$bInscriptionIsactive, bInscriptionArchived=$bInscriptionArchived, dtInscriptionnotauthenticatedNotaryscheduledate=$dtInscriptionnotauthenticatedNotaryscheduledate, dtInscriptionnotauthenticatedTransactiondate=$dtInscriptionnotauthenticatedTransactiondate, dtInscriptionnotauthenticatedTransactiondateReal=$dtInscriptionnotauthenticatedTransactiondateReal, bInscriptionnotauthenticatedConditional=$bInscriptionnotauthenticatedConditional, bInscriptionnotauthenticatedIsactive=$bInscriptionnotauthenticatedIsactive, sAddressCivic=$sAddressCivic, sAddressStreet=$sAddressStreet, sAddressSuite=$sAddressSuite, sAddressCity=$sAddressCity, sAddressZip=$sAddressZip, sProvinceNameX=$sProvinceNameX, sCountryNameX=$sCountryNameX, sInscriptionnotauthenticatedOffertopurchasenumber=$sInscriptionnotauthenticatedOffertopurchasenumber]';
+  String toString() => 'InscriptionnotauthenticatedListElement[pkiInscriptionID=$pkiInscriptionID, pkiInscriptionnotauthenticatedID=$pkiInscriptionnotauthenticatedID, fkiInscriptiontypeID=$fkiInscriptiontypeID, sInscriptiontypeNameX=$sInscriptiontypeNameX, eInscriptionStep=$eInscriptionStep, sInscriptionCivicend=$sInscriptionCivicend, sInscriptionMLS=$sInscriptionMLS, dInscriptionSaleprice=$dInscriptionSaleprice, dInscriptionRentprice=$dInscriptionRentprice, dtInscriptionDate=$dtInscriptionDate, dtInscriptionExpirationdate=$dtInscriptionExpirationdate, dtInscriptionNotarydate=$dtInscriptionNotarydate, bInscriptionInspection=$bInscriptionInspection, bInscriptionIsactive=$bInscriptionIsactive, bInscriptionArchived=$bInscriptionArchived, dtInscriptionnotauthenticatedNotaryscheduledate=$dtInscriptionnotauthenticatedNotaryscheduledate, dtInscriptionnotauthenticatedTransactiondate=$dtInscriptionnotauthenticatedTransactiondate, dtInscriptionnotauthenticatedTransactiondateReal=$dtInscriptionnotauthenticatedTransactiondateReal, bInscriptionnotauthenticatedConditional=$bInscriptionnotauthenticatedConditional, bInscriptionnotauthenticatedIsactive=$bInscriptionnotauthenticatedIsactive, sAddressCivic=$sAddressCivic, sAddressStreet=$sAddressStreet, sAddressSuite=$sAddressSuite, sAddressCity=$sAddressCity, sAddressZip=$sAddressZip, fkiProvinceID=$fkiProvinceID, sProvinceNameX=$sProvinceNameX, fkiCountryID=$fkiCountryID, sCountryNameX=$sCountryNameX, sInscriptionnotauthenticatedOffertopurchasenumber=$sInscriptionnotauthenticatedOffertopurchasenumber]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -398,10 +426,20 @@ class InscriptionnotauthenticatedListElement {
     } else {
       json[r'sAddressZip'] = null;
     }
+    if (this.fkiProvinceID != null) {
+      json[r'fkiProvinceID'] = this.fkiProvinceID;
+    } else {
+      json[r'fkiProvinceID'] = null;
+    }
     if (this.sProvinceNameX != null) {
       json[r'sProvinceNameX'] = this.sProvinceNameX;
     } else {
       json[r'sProvinceNameX'] = null;
+    }
+    if (this.fkiCountryID != null) {
+      json[r'fkiCountryID'] = this.fkiCountryID;
+    } else {
+      json[r'fkiCountryID'] = null;
     }
     if (this.sCountryNameX != null) {
       json[r'sCountryNameX'] = this.sCountryNameX;
@@ -423,10 +461,26 @@ class InscriptionnotauthenticatedListElement {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "InscriptionnotauthenticatedListElement[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "InscriptionnotauthenticatedListElement[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiInscriptionID'), 'Required key "InscriptionnotauthenticatedListElement[pkiInscriptionID]" is missing from JSON.');
+        assert(json[r'pkiInscriptionID'] != null, 'Required key "InscriptionnotauthenticatedListElement[pkiInscriptionID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiInscriptiontypeID'), 'Required key "InscriptionnotauthenticatedListElement[fkiInscriptiontypeID]" is missing from JSON.');
+        assert(json[r'fkiInscriptiontypeID'] != null, 'Required key "InscriptionnotauthenticatedListElement[fkiInscriptiontypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'sInscriptiontypeNameX'), 'Required key "InscriptionnotauthenticatedListElement[sInscriptiontypeNameX]" is missing from JSON.');
+        assert(json[r'sInscriptiontypeNameX'] != null, 'Required key "InscriptionnotauthenticatedListElement[sInscriptiontypeNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'eInscriptionStep'), 'Required key "InscriptionnotauthenticatedListElement[eInscriptionStep]" is missing from JSON.');
+        assert(json[r'eInscriptionStep'] != null, 'Required key "InscriptionnotauthenticatedListElement[eInscriptionStep]" has a null value in JSON.');
+        assert(json.containsKey(r'sInscriptionCivicend'), 'Required key "InscriptionnotauthenticatedListElement[sInscriptionCivicend]" is missing from JSON.');
+        assert(json[r'sInscriptionCivicend'] != null, 'Required key "InscriptionnotauthenticatedListElement[sInscriptionCivicend]" has a null value in JSON.');
+        assert(json.containsKey(r'dInscriptionSaleprice'), 'Required key "InscriptionnotauthenticatedListElement[dInscriptionSaleprice]" is missing from JSON.');
+        assert(json[r'dInscriptionSaleprice'] != null, 'Required key "InscriptionnotauthenticatedListElement[dInscriptionSaleprice]" has a null value in JSON.');
+        assert(json.containsKey(r'dInscriptionRentprice'), 'Required key "InscriptionnotauthenticatedListElement[dInscriptionRentprice]" is missing from JSON.');
+        assert(json[r'dInscriptionRentprice'] != null, 'Required key "InscriptionnotauthenticatedListElement[dInscriptionRentprice]" has a null value in JSON.');
+        assert(json.containsKey(r'bInscriptionIsactive'), 'Required key "InscriptionnotauthenticatedListElement[bInscriptionIsactive]" is missing from JSON.');
+        assert(json[r'bInscriptionIsactive'] != null, 'Required key "InscriptionnotauthenticatedListElement[bInscriptionIsactive]" has a null value in JSON.');
+        assert(json.containsKey(r'bInscriptionArchived'), 'Required key "InscriptionnotauthenticatedListElement[bInscriptionArchived]" is missing from JSON.');
+        assert(json[r'bInscriptionArchived'] != null, 'Required key "InscriptionnotauthenticatedListElement[bInscriptionArchived]" has a null value in JSON.');
+        assert(json.containsKey(r'sInscriptionnotauthenticatedOffertopurchasenumber'), 'Required key "InscriptionnotauthenticatedListElement[sInscriptionnotauthenticatedOffertopurchasenumber]" is missing from JSON.');
+        assert(json[r'sInscriptionnotauthenticatedOffertopurchasenumber'] != null, 'Required key "InscriptionnotauthenticatedListElement[sInscriptionnotauthenticatedOffertopurchasenumber]" has a null value in JSON.');
         return true;
       }());
 
@@ -456,7 +510,9 @@ class InscriptionnotauthenticatedListElement {
         sAddressSuite: mapValueOfType<String>(json, r'sAddressSuite'),
         sAddressCity: mapValueOfType<String>(json, r'sAddressCity'),
         sAddressZip: mapValueOfType<String>(json, r'sAddressZip'),
+        fkiProvinceID: mapValueOfType<int>(json, r'fkiProvinceID'),
         sProvinceNameX: mapValueOfType<String>(json, r'sProvinceNameX'),
+        fkiCountryID: mapValueOfType<int>(json, r'fkiCountryID'),
         sCountryNameX: mapValueOfType<String>(json, r'sCountryNameX'),
         sInscriptionnotauthenticatedOffertopurchasenumber: mapValueOfType<String>(json, r'sInscriptionnotauthenticatedOffertopurchasenumber')!,
       );

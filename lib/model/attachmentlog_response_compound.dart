@@ -89,10 +89,14 @@ class AttachmentlogResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "AttachmentlogResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "AttachmentlogResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiAttachmentID'), 'Required key "AttachmentlogResponseCompound[fkiAttachmentID]" is missing from JSON.');
+        assert(json[r'fkiAttachmentID'] != null, 'Required key "AttachmentlogResponseCompound[fkiAttachmentID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiUserID'), 'Required key "AttachmentlogResponseCompound[fkiUserID]" is missing from JSON.');
+        assert(json[r'fkiUserID'] != null, 'Required key "AttachmentlogResponseCompound[fkiUserID]" has a null value in JSON.');
+        assert(json.containsKey(r'dtAttachmentlogDatetime'), 'Required key "AttachmentlogResponseCompound[dtAttachmentlogDatetime]" is missing from JSON.');
+        assert(json[r'dtAttachmentlogDatetime'] != null, 'Required key "AttachmentlogResponseCompound[dtAttachmentlogDatetime]" has a null value in JSON.');
+        assert(json.containsKey(r'eAttachmentlogType'), 'Required key "AttachmentlogResponseCompound[eAttachmentlogType]" is missing from JSON.');
+        assert(json[r'eAttachmentlogType'] != null, 'Required key "AttachmentlogResponseCompound[eAttachmentlogType]" has a null value in JSON.');
         return true;
       }());
 

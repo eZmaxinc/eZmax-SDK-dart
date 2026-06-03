@@ -136,10 +136,28 @@ class CreditcardclientListElement {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CreditcardclientListElement[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CreditcardclientListElement[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiCreditcardclientID'), 'Required key "CreditcardclientListElement[pkiCreditcardclientID]" is missing from JSON.');
+        assert(json[r'pkiCreditcardclientID'] != null, 'Required key "CreditcardclientListElement[pkiCreditcardclientID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiCreditcarddetailID'), 'Required key "CreditcardclientListElement[fkiCreditcarddetailID]" is missing from JSON.');
+        assert(json[r'fkiCreditcarddetailID'] != null, 'Required key "CreditcardclientListElement[fkiCreditcarddetailID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiCreditcardtypeID'), 'Required key "CreditcardclientListElement[fkiCreditcardtypeID]" is missing from JSON.');
+        assert(json[r'fkiCreditcardtypeID'] != null, 'Required key "CreditcardclientListElement[fkiCreditcardtypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'bCreditcardclientrelationIsdefault'), 'Required key "CreditcardclientListElement[bCreditcardclientrelationIsdefault]" is missing from JSON.');
+        assert(json[r'bCreditcardclientrelationIsdefault'] != null, 'Required key "CreditcardclientListElement[bCreditcardclientrelationIsdefault]" has a null value in JSON.');
+        assert(json.containsKey(r'bCreditcardclientLegacy'), 'Required key "CreditcardclientListElement[bCreditcardclientLegacy]" is missing from JSON.');
+        assert(json[r'bCreditcardclientLegacy'] != null, 'Required key "CreditcardclientListElement[bCreditcardclientLegacy]" has a null value in JSON.');
+        assert(json.containsKey(r'sCreditcardclientDescription'), 'Required key "CreditcardclientListElement[sCreditcardclientDescription]" is missing from JSON.');
+        assert(json[r'sCreditcardclientDescription'] != null, 'Required key "CreditcardclientListElement[sCreditcardclientDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'bCreditcardclientAllowedcompanypayment'), 'Required key "CreditcardclientListElement[bCreditcardclientAllowedcompanypayment]" is missing from JSON.');
+        assert(json[r'bCreditcardclientAllowedcompanypayment'] != null, 'Required key "CreditcardclientListElement[bCreditcardclientAllowedcompanypayment]" has a null value in JSON.');
+        assert(json.containsKey(r'bCreditcardclientAllowedtranquillit'), 'Required key "CreditcardclientListElement[bCreditcardclientAllowedtranquillit]" is missing from JSON.');
+        assert(json[r'bCreditcardclientAllowedtranquillit'] != null, 'Required key "CreditcardclientListElement[bCreditcardclientAllowedtranquillit]" has a null value in JSON.');
+        assert(json.containsKey(r'iCreditcarddetailExpirationmonth'), 'Required key "CreditcardclientListElement[iCreditcarddetailExpirationmonth]" is missing from JSON.');
+        assert(json[r'iCreditcarddetailExpirationmonth'] != null, 'Required key "CreditcardclientListElement[iCreditcarddetailExpirationmonth]" has a null value in JSON.');
+        assert(json.containsKey(r'iCreditcarddetailExpirationyear'), 'Required key "CreditcardclientListElement[iCreditcarddetailExpirationyear]" is missing from JSON.');
+        assert(json[r'iCreditcarddetailExpirationyear'] != null, 'Required key "CreditcardclientListElement[iCreditcarddetailExpirationyear]" has a null value in JSON.');
+        assert(json.containsKey(r'iCreditcarddetailLastdigits'), 'Required key "CreditcardclientListElement[iCreditcarddetailLastdigits]" is missing from JSON.');
+        assert(json[r'iCreditcarddetailLastdigits'] != null, 'Required key "CreditcardclientListElement[iCreditcarddetailLastdigits]" has a null value in JSON.');
         return true;
       }());
 

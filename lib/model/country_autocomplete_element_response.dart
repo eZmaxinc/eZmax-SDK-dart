@@ -71,10 +71,14 @@ class CountryAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CountryAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CountryAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiCountryID'), 'Required key "CountryAutocompleteElementResponse[pkiCountryID]" is missing from JSON.');
+        assert(json[r'pkiCountryID'] != null, 'Required key "CountryAutocompleteElementResponse[pkiCountryID]" has a null value in JSON.');
+        assert(json.containsKey(r'sCountryNameX'), 'Required key "CountryAutocompleteElementResponse[sCountryNameX]" is missing from JSON.');
+        assert(json[r'sCountryNameX'] != null, 'Required key "CountryAutocompleteElementResponse[sCountryNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'sCountryShortname'), 'Required key "CountryAutocompleteElementResponse[sCountryShortname]" is missing from JSON.');
+        assert(json[r'sCountryShortname'] != null, 'Required key "CountryAutocompleteElementResponse[sCountryShortname]" has a null value in JSON.');
+        assert(json.containsKey(r'bCountryIsactive'), 'Required key "CountryAutocompleteElementResponse[bCountryIsactive]" is missing from JSON.');
+        assert(json[r'bCountryIsactive'] != null, 'Required key "CountryAutocompleteElementResponse[bCountryIsactive]" has a null value in JSON.');
         return true;
       }());
 

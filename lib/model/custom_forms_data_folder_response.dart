@@ -63,10 +63,12 @@ class CustomFormsDataFolderResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CustomFormsDataFolderResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CustomFormsDataFolderResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsignfolderID'), 'Required key "CustomFormsDataFolderResponse[pkiEzsignfolderID]" is missing from JSON.');
+        assert(json[r'pkiEzsignfolderID'] != null, 'Required key "CustomFormsDataFolderResponse[pkiEzsignfolderID]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsignfolderDescription'), 'Required key "CustomFormsDataFolderResponse[sEzsignfolderDescription]" is missing from JSON.');
+        assert(json[r'sEzsignfolderDescription'] != null, 'Required key "CustomFormsDataFolderResponse[sEzsignfolderDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objFormDataDocument'), 'Required key "CustomFormsDataFolderResponse[a_objFormDataDocument]" is missing from JSON.');
+        assert(json[r'a_objFormDataDocument'] != null, 'Required key "CustomFormsDataFolderResponse[a_objFormDataDocument]" has a null value in JSON.');
         return true;
       }());
 

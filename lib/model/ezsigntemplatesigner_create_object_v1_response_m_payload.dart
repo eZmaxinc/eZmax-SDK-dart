@@ -62,10 +62,12 @@ class EzsigntemplatesignerCreateObjectV1ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplatesignerCreateObjectV1ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplatesignerCreateObjectV1ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_pkiEzsigntemplatesignerID'), 'Required key "EzsigntemplatesignerCreateObjectV1ResponseMPayload[a_pkiEzsigntemplatesignerID]" is missing from JSON.');
+        assert(json[r'a_pkiEzsigntemplatesignerID'] != null, 'Required key "EzsigntemplatesignerCreateObjectV1ResponseMPayload[a_pkiEzsigntemplatesignerID]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsigntemplatepackageNeedvalidation'), 'Required key "EzsigntemplatesignerCreateObjectV1ResponseMPayload[bEzsigntemplatepackageNeedvalidation]" is missing from JSON.');
+        assert(json[r'bEzsigntemplatepackageNeedvalidation'] != null, 'Required key "EzsigntemplatesignerCreateObjectV1ResponseMPayload[bEzsigntemplatepackageNeedvalidation]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignbulksendNeedvalidation'), 'Required key "EzsigntemplatesignerCreateObjectV1ResponseMPayload[bEzsignbulksendNeedvalidation]" is missing from JSON.');
+        assert(json[r'bEzsignbulksendNeedvalidation'] != null, 'Required key "EzsigntemplatesignerCreateObjectV1ResponseMPayload[bEzsignbulksendNeedvalidation]" has a null value in JSON.');
         return true;
       }());
 

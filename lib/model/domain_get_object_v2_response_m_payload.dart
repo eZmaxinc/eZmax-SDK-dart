@@ -47,10 +47,8 @@ class DomainGetObjectV2ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "DomainGetObjectV2ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "DomainGetObjectV2ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'objDomain'), 'Required key "DomainGetObjectV2ResponseMPayload[objDomain]" is missing from JSON.');
+        assert(json[r'objDomain'] != null, 'Required key "DomainGetObjectV2ResponseMPayload[objDomain]" has a null value in JSON.');
         return true;
       }());
 

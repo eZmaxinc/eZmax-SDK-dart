@@ -47,10 +47,8 @@ class EzsignfolderGetCommunicationListV1ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignfolderGetCommunicationListV1ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignfolderGetCommunicationListV1ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_objCommunication'), 'Required key "EzsignfolderGetCommunicationListV1ResponseMPayload[a_objCommunication]" is missing from JSON.');
+        assert(json[r'a_objCommunication'] != null, 'Required key "EzsignfolderGetCommunicationListV1ResponseMPayload[a_objCommunication]" has a null value in JSON.');
         return true;
       }());
 

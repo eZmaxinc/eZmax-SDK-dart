@@ -166,10 +166,20 @@ class AddressRequest {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "AddressRequest[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "AddressRequest[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiAddresstypeID'), 'Required key "AddressRequest[fkiAddresstypeID]" is missing from JSON.');
+        assert(json[r'fkiAddresstypeID'] != null, 'Required key "AddressRequest[fkiAddresstypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'sAddressCivic'), 'Required key "AddressRequest[sAddressCivic]" is missing from JSON.');
+        assert(json[r'sAddressCivic'] != null, 'Required key "AddressRequest[sAddressCivic]" has a null value in JSON.');
+        assert(json.containsKey(r'sAddressStreet'), 'Required key "AddressRequest[sAddressStreet]" is missing from JSON.');
+        assert(json[r'sAddressStreet'] != null, 'Required key "AddressRequest[sAddressStreet]" has a null value in JSON.');
+        assert(json.containsKey(r'sAddressCity'), 'Required key "AddressRequest[sAddressCity]" is missing from JSON.');
+        assert(json[r'sAddressCity'] != null, 'Required key "AddressRequest[sAddressCity]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiProvinceID'), 'Required key "AddressRequest[fkiProvinceID]" is missing from JSON.');
+        assert(json[r'fkiProvinceID'] != null, 'Required key "AddressRequest[fkiProvinceID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiCountryID'), 'Required key "AddressRequest[fkiCountryID]" is missing from JSON.');
+        assert(json[r'fkiCountryID'] != null, 'Required key "AddressRequest[fkiCountryID]" has a null value in JSON.');
+        assert(json.containsKey(r'sAddressZip'), 'Required key "AddressRequest[sAddressZip]" is missing from JSON.');
+        assert(json[r'sAddressZip'] != null, 'Required key "AddressRequest[sAddressZip]" has a null value in JSON.');
         return true;
       }());
 

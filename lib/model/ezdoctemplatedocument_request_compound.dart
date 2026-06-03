@@ -17,7 +17,7 @@ class EzdoctemplatedocumentRequestCompound {
     required this.fkiLanguageID,
     this.fkiEzsignfoldertypeID,
     required this.fkiEzdoctemplatetypeID,
-    required this.fkiEzdoctemplatefieldtypecategoryID,
+    this.fkiEzdoctemplatefieldtypecategoryID,
     this.eEzdoctemplatedocumentPrivacylevel,
     required this.bEzdoctemplatedocumentIsactive,
     required this.objEzdoctemplatedocumentName,
@@ -63,7 +63,13 @@ class EzdoctemplatedocumentRequestCompound {
   ///
   /// Minimum value: 0
   /// Maximum value: 255
-  int fkiEzdoctemplatefieldtypecategoryID;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiEzdoctemplatefieldtypecategoryID;
 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -96,7 +102,7 @@ class EzdoctemplatedocumentRequestCompound {
     (fkiLanguageID.hashCode) +
     (fkiEzsignfoldertypeID == null ? 0 : fkiEzsignfoldertypeID!.hashCode) +
     (fkiEzdoctemplatetypeID.hashCode) +
-    (fkiEzdoctemplatefieldtypecategoryID.hashCode) +
+    (fkiEzdoctemplatefieldtypecategoryID == null ? 0 : fkiEzdoctemplatefieldtypecategoryID!.hashCode) +
     (eEzdoctemplatedocumentPrivacylevel == null ? 0 : eEzdoctemplatedocumentPrivacylevel!.hashCode) +
     (bEzdoctemplatedocumentIsactive.hashCode) +
     (objEzdoctemplatedocumentName.hashCode);
@@ -118,7 +124,11 @@ class EzdoctemplatedocumentRequestCompound {
       json[r'fkiEzsignfoldertypeID'] = null;
     }
       json[r'fkiEzdoctemplatetypeID'] = this.fkiEzdoctemplatetypeID;
+    if (this.fkiEzdoctemplatefieldtypecategoryID != null) {
       json[r'fkiEzdoctemplatefieldtypecategoryID'] = this.fkiEzdoctemplatefieldtypecategoryID;
+    } else {
+      json[r'fkiEzdoctemplatefieldtypecategoryID'] = null;
+    }
     if (this.eEzdoctemplatedocumentPrivacylevel != null) {
       json[r'eEzdoctemplatedocumentPrivacylevel'] = this.eEzdoctemplatedocumentPrivacylevel;
     } else {
@@ -140,10 +150,14 @@ class EzdoctemplatedocumentRequestCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzdoctemplatedocumentRequestCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzdoctemplatedocumentRequestCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiLanguageID'), 'Required key "EzdoctemplatedocumentRequestCompound[fkiLanguageID]" is missing from JSON.');
+        assert(json[r'fkiLanguageID'] != null, 'Required key "EzdoctemplatedocumentRequestCompound[fkiLanguageID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiEzdoctemplatetypeID'), 'Required key "EzdoctemplatedocumentRequestCompound[fkiEzdoctemplatetypeID]" is missing from JSON.');
+        assert(json[r'fkiEzdoctemplatetypeID'] != null, 'Required key "EzdoctemplatedocumentRequestCompound[fkiEzdoctemplatetypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzdoctemplatedocumentIsactive'), 'Required key "EzdoctemplatedocumentRequestCompound[bEzdoctemplatedocumentIsactive]" is missing from JSON.');
+        assert(json[r'bEzdoctemplatedocumentIsactive'] != null, 'Required key "EzdoctemplatedocumentRequestCompound[bEzdoctemplatedocumentIsactive]" has a null value in JSON.');
+        assert(json.containsKey(r'objEzdoctemplatedocumentName'), 'Required key "EzdoctemplatedocumentRequestCompound[objEzdoctemplatedocumentName]" is missing from JSON.');
+        assert(json[r'objEzdoctemplatedocumentName'] != null, 'Required key "EzdoctemplatedocumentRequestCompound[objEzdoctemplatedocumentName]" has a null value in JSON.');
         return true;
       }());
 
@@ -152,7 +166,7 @@ class EzdoctemplatedocumentRequestCompound {
         fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID')!,
         fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID'),
         fkiEzdoctemplatetypeID: mapValueOfType<int>(json, r'fkiEzdoctemplatetypeID')!,
-        fkiEzdoctemplatefieldtypecategoryID: mapValueOfType<int>(json, r'fkiEzdoctemplatefieldtypecategoryID')!,
+        fkiEzdoctemplatefieldtypecategoryID: mapValueOfType<int>(json, r'fkiEzdoctemplatefieldtypecategoryID'),
         eEzdoctemplatedocumentPrivacylevel: FieldEEzdoctemplatedocumentPrivacylevel.fromJson(json[r'eEzdoctemplatedocumentPrivacylevel']),
         bEzdoctemplatedocumentIsactive: mapValueOfType<bool>(json, r'bEzdoctemplatedocumentIsactive')!,
         objEzdoctemplatedocumentName: MultilingualEzdoctemplatedocumentName.fromJson(json[r'objEzdoctemplatedocumentName'])!,
@@ -205,7 +219,6 @@ class EzdoctemplatedocumentRequestCompound {
   static const requiredKeys = <String>{
     'fkiLanguageID',
     'fkiEzdoctemplatetypeID',
-    'fkiEzdoctemplatefieldtypecategoryID',
     'bEzdoctemplatedocumentIsactive',
     'objEzdoctemplatedocumentName',
   };

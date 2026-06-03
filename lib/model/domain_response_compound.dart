@@ -92,10 +92,20 @@ class DomainResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "DomainResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "DomainResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiDomainID'), 'Required key "DomainResponseCompound[pkiDomainID]" is missing from JSON.');
+        assert(json[r'pkiDomainID'] != null, 'Required key "DomainResponseCompound[pkiDomainID]" has a null value in JSON.');
+        assert(json.containsKey(r'sDomainName'), 'Required key "DomainResponseCompound[sDomainName]" is missing from JSON.');
+        assert(json[r'sDomainName'] != null, 'Required key "DomainResponseCompound[sDomainName]" has a null value in JSON.');
+        assert(json.containsKey(r'bDomainValiddkim'), 'Required key "DomainResponseCompound[bDomainValiddkim]" is missing from JSON.');
+        assert(json[r'bDomainValiddkim'] != null, 'Required key "DomainResponseCompound[bDomainValiddkim]" has a null value in JSON.');
+        assert(json.containsKey(r'bDomainValidmailfrom'), 'Required key "DomainResponseCompound[bDomainValidmailfrom]" is missing from JSON.');
+        assert(json[r'bDomainValidmailfrom'] != null, 'Required key "DomainResponseCompound[bDomainValidmailfrom]" has a null value in JSON.');
+        assert(json.containsKey(r'bDomainValidcustomer'), 'Required key "DomainResponseCompound[bDomainValidcustomer]" is missing from JSON.');
+        assert(json[r'bDomainValidcustomer'] != null, 'Required key "DomainResponseCompound[bDomainValidcustomer]" has a null value in JSON.');
+        assert(json.containsKey(r'objAudit'), 'Required key "DomainResponseCompound[objAudit]" is missing from JSON.');
+        assert(json[r'objAudit'] != null, 'Required key "DomainResponseCompound[objAudit]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objDnsrecord'), 'Required key "DomainResponseCompound[a_objDnsrecord]" is missing from JSON.');
+        assert(json[r'a_objDnsrecord'] != null, 'Required key "DomainResponseCompound[a_objDnsrecord]" has a null value in JSON.');
         return true;
       }());
 

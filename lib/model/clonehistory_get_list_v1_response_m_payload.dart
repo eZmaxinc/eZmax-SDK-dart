@@ -61,10 +61,12 @@ class ClonehistoryGetListV1ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "ClonehistoryGetListV1ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "ClonehistoryGetListV1ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'iRowReturned'), 'Required key "ClonehistoryGetListV1ResponseMPayload[iRowReturned]" is missing from JSON.');
+        assert(json[r'iRowReturned'] != null, 'Required key "ClonehistoryGetListV1ResponseMPayload[iRowReturned]" has a null value in JSON.');
+        assert(json.containsKey(r'iRowFiltered'), 'Required key "ClonehistoryGetListV1ResponseMPayload[iRowFiltered]" is missing from JSON.');
+        assert(json[r'iRowFiltered'] != null, 'Required key "ClonehistoryGetListV1ResponseMPayload[iRowFiltered]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objClonehistory'), 'Required key "ClonehistoryGetListV1ResponseMPayload[a_objClonehistory]" is missing from JSON.');
+        assert(json[r'a_objClonehistory'] != null, 'Required key "ClonehistoryGetListV1ResponseMPayload[a_objClonehistory]" has a null value in JSON.');
         return true;
       }());
 

@@ -47,10 +47,8 @@ class ActivesessionGetCurrentV2ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "ActivesessionGetCurrentV2ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "ActivesessionGetCurrentV2ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'objActivesession'), 'Required key "ActivesessionGetCurrentV2ResponseMPayload[objActivesession]" is missing from JSON.');
+        assert(json[r'objActivesession'] != null, 'Required key "ActivesessionGetCurrentV2ResponseMPayload[objActivesession]" has a null value in JSON.');
         return true;
       }());
 

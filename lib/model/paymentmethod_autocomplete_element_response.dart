@@ -65,10 +65,12 @@ class PaymentmethodAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "PaymentmethodAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "PaymentmethodAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiPaymentmethodID'), 'Required key "PaymentmethodAutocompleteElementResponse[pkiPaymentmethodID]" is missing from JSON.');
+        assert(json[r'pkiPaymentmethodID'] != null, 'Required key "PaymentmethodAutocompleteElementResponse[pkiPaymentmethodID]" has a null value in JSON.');
+        assert(json.containsKey(r'sPaymentmethodDescriptionX'), 'Required key "PaymentmethodAutocompleteElementResponse[sPaymentmethodDescriptionX]" is missing from JSON.');
+        assert(json[r'sPaymentmethodDescriptionX'] != null, 'Required key "PaymentmethodAutocompleteElementResponse[sPaymentmethodDescriptionX]" has a null value in JSON.');
+        assert(json.containsKey(r'bPaymentmethodIsactive'), 'Required key "PaymentmethodAutocompleteElementResponse[bPaymentmethodIsactive]" is missing from JSON.');
+        assert(json[r'bPaymentmethodIsactive'] != null, 'Required key "PaymentmethodAutocompleteElementResponse[bPaymentmethodIsactive]" has a null value in JSON.');
         return true;
       }());
 

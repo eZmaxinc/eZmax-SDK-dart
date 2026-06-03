@@ -589,10 +589,22 @@ class CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiEzsignfoldersignerassociationID'), 'Required key "CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest[fkiEzsignfoldersignerassociationID]" is missing from JSON.');
+        assert(json[r'fkiEzsignfoldersignerassociationID'] != null, 'Required key "CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest[fkiEzsignfoldersignerassociationID]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignpagePagenumber'), 'Required key "CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest[iEzsignpagePagenumber]" is missing from JSON.');
+        assert(json[r'iEzsignpagePagenumber'] != null, 'Required key "CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest[iEzsignpagePagenumber]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignsignatureX'), 'Required key "CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest[iEzsignsignatureX]" is missing from JSON.');
+        assert(json[r'iEzsignsignatureX'] != null, 'Required key "CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest[iEzsignsignatureX]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignsignatureY'), 'Required key "CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest[iEzsignsignatureY]" is missing from JSON.');
+        assert(json[r'iEzsignsignatureY'] != null, 'Required key "CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest[iEzsignsignatureY]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignsignatureStep'), 'Required key "CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest[iEzsignsignatureStep]" is missing from JSON.');
+        assert(json[r'iEzsignsignatureStep'] != null, 'Required key "CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest[iEzsignsignatureStep]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsignsignatureType'), 'Required key "CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest[eEzsignsignatureType]" is missing from JSON.');
+        assert(json[r'eEzsignsignatureType'] != null, 'Required key "CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest[eEzsignsignatureType]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiEzsigndocumentID'), 'Required key "CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest[fkiEzsigndocumentID]" is missing from JSON.');
+        assert(json[r'fkiEzsigndocumentID'] != null, 'Required key "CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest[fkiEzsigndocumentID]" has a null value in JSON.');
+        assert(json.containsKey(r'objCreateezsignelementspositionedbyword'), 'Required key "CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest[objCreateezsignelementspositionedbyword]" is missing from JSON.');
+        assert(json[r'objCreateezsignelementspositionedbyword'] != null, 'Required key "CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest[objCreateezsignelementspositionedbyword]" has a null value in JSON.');
         return true;
       }());
 

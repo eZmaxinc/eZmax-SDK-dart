@@ -60,10 +60,12 @@ class CommonReportcolumn {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CommonReportcolumn[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CommonReportcolumn[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'objReportcellstyleDefault'), 'Required key "CommonReportcolumn[objReportcellstyleDefault]" is missing from JSON.');
+        assert(json[r'objReportcellstyleDefault'] != null, 'Required key "CommonReportcolumn[objReportcellstyleDefault]" has a null value in JSON.');
+        assert(json.containsKey(r'iReportcolumnWidth'), 'Required key "CommonReportcolumn[iReportcolumnWidth]" is missing from JSON.');
+        assert(json[r'iReportcolumnWidth'] != null, 'Required key "CommonReportcolumn[iReportcolumnWidth]" has a null value in JSON.');
+        assert(json.containsKey(r'eReportcolumnType'), 'Required key "CommonReportcolumn[eReportcolumnType]" is missing from JSON.');
+        assert(json[r'eReportcolumnType'] != null, 'Required key "CommonReportcolumn[eReportcolumnType]" has a null value in JSON.');
         return true;
       }());
 

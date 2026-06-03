@@ -163,10 +163,28 @@ class CreditcardmerchantResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CreditcardmerchantResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CreditcardmerchantResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiCreditcardmerchantID'), 'Required key "CreditcardmerchantResponseCompound[pkiCreditcardmerchantID]" is missing from JSON.');
+        assert(json[r'pkiCreditcardmerchantID'] != null, 'Required key "CreditcardmerchantResponseCompound[pkiCreditcardmerchantID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiLanguageID'), 'Required key "CreditcardmerchantResponseCompound[fkiLanguageID]" is missing from JSON.');
+        assert(json[r'fkiLanguageID'] != null, 'Required key "CreditcardmerchantResponseCompound[fkiLanguageID]" has a null value in JSON.');
+        assert(json.containsKey(r'sLanguageNameX'), 'Required key "CreditcardmerchantResponseCompound[sLanguageNameX]" is missing from JSON.');
+        assert(json[r'sLanguageNameX'] != null, 'Required key "CreditcardmerchantResponseCompound[sLanguageNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiCurrencyID'), 'Required key "CreditcardmerchantResponseCompound[fkiCurrencyID]" is missing from JSON.');
+        assert(json[r'fkiCurrencyID'] != null, 'Required key "CreditcardmerchantResponseCompound[fkiCurrencyID]" has a null value in JSON.');
+        assert(json.containsKey(r'sCurrencyDescriptionX'), 'Required key "CreditcardmerchantResponseCompound[sCurrencyDescriptionX]" is missing from JSON.');
+        assert(json[r'sCurrencyDescriptionX'] != null, 'Required key "CreditcardmerchantResponseCompound[sCurrencyDescriptionX]" has a null value in JSON.');
+        assert(json.containsKey(r'bCreditcardmerchantDenyvisa'), 'Required key "CreditcardmerchantResponseCompound[bCreditcardmerchantDenyvisa]" is missing from JSON.');
+        assert(json[r'bCreditcardmerchantDenyvisa'] != null, 'Required key "CreditcardmerchantResponseCompound[bCreditcardmerchantDenyvisa]" has a null value in JSON.');
+        assert(json.containsKey(r'bCreditcardmerchantDenymastercard'), 'Required key "CreditcardmerchantResponseCompound[bCreditcardmerchantDenymastercard]" is missing from JSON.');
+        assert(json[r'bCreditcardmerchantDenymastercard'] != null, 'Required key "CreditcardmerchantResponseCompound[bCreditcardmerchantDenymastercard]" has a null value in JSON.');
+        assert(json.containsKey(r'bCreditcardmerchantDenyamex'), 'Required key "CreditcardmerchantResponseCompound[bCreditcardmerchantDenyamex]" is missing from JSON.');
+        assert(json[r'bCreditcardmerchantDenyamex'] != null, 'Required key "CreditcardmerchantResponseCompound[bCreditcardmerchantDenyamex]" has a null value in JSON.');
+        assert(json.containsKey(r'bCreditcardmerchantIsactive'), 'Required key "CreditcardmerchantResponseCompound[bCreditcardmerchantIsactive]" is missing from JSON.');
+        assert(json[r'bCreditcardmerchantIsactive'] != null, 'Required key "CreditcardmerchantResponseCompound[bCreditcardmerchantIsactive]" has a null value in JSON.');
+        assert(json.containsKey(r'sCreditcardmerchantDescription'), 'Required key "CreditcardmerchantResponseCompound[sCreditcardmerchantDescription]" is missing from JSON.');
+        assert(json[r'sCreditcardmerchantDescription'] != null, 'Required key "CreditcardmerchantResponseCompound[sCreditcardmerchantDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'sCreditcardmerchantStoreid'), 'Required key "CreditcardmerchantResponseCompound[sCreditcardmerchantStoreid]" is missing from JSON.');
+        assert(json[r'sCreditcardmerchantStoreid'] != null, 'Required key "CreditcardmerchantResponseCompound[sCreditcardmerchantStoreid]" has a null value in JSON.');
         return true;
       }());
 

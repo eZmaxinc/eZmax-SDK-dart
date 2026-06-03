@@ -61,10 +61,12 @@ class EzsignsigningreasonGetListV1ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignsigningreasonGetListV1ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignsigningreasonGetListV1ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'iRowReturned'), 'Required key "EzsignsigningreasonGetListV1ResponseMPayload[iRowReturned]" is missing from JSON.');
+        assert(json[r'iRowReturned'] != null, 'Required key "EzsignsigningreasonGetListV1ResponseMPayload[iRowReturned]" has a null value in JSON.');
+        assert(json.containsKey(r'iRowFiltered'), 'Required key "EzsignsigningreasonGetListV1ResponseMPayload[iRowFiltered]" is missing from JSON.');
+        assert(json[r'iRowFiltered'] != null, 'Required key "EzsignsigningreasonGetListV1ResponseMPayload[iRowFiltered]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objEzsignsigningreason'), 'Required key "EzsignsigningreasonGetListV1ResponseMPayload[a_objEzsignsigningreason]" is missing from JSON.');
+        assert(json[r'a_objEzsignsigningreason'] != null, 'Required key "EzsignsigningreasonGetListV1ResponseMPayload[a_objEzsignsigningreason]" has a null value in JSON.');
         return true;
       }());
 

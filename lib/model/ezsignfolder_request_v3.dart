@@ -95,7 +95,7 @@ class EzsignfolderRequestV3 {
   ///
   String? tEzsignfolderMessage;
 
-  /// The number of days before the the first reminder sending
+  /// The number of days before the first reminder sending
   ///
   /// Minimum value: 0
   /// Maximum value: 255
@@ -203,10 +203,14 @@ class EzsignfolderRequestV3 {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignfolderRequestV3[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignfolderRequestV3[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiEzsignfoldertypeID'), 'Required key "EzsignfolderRequestV3[fkiEzsignfoldertypeID]" is missing from JSON.');
+        assert(json[r'fkiEzsignfoldertypeID'] != null, 'Required key "EzsignfolderRequestV3[fkiEzsignfoldertypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsignfolderDescription'), 'Required key "EzsignfolderRequestV3[sEzsignfolderDescription]" is missing from JSON.');
+        assert(json[r'sEzsignfolderDescription'] != null, 'Required key "EzsignfolderRequestV3[sEzsignfolderDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignfolderSendreminderfirstdays'), 'Required key "EzsignfolderRequestV3[iEzsignfolderSendreminderfirstdays]" is missing from JSON.');
+        assert(json[r'iEzsignfolderSendreminderfirstdays'] != null, 'Required key "EzsignfolderRequestV3[iEzsignfolderSendreminderfirstdays]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignfolderSendreminderotherdays'), 'Required key "EzsignfolderRequestV3[iEzsignfolderSendreminderotherdays]" is missing from JSON.');
+        assert(json[r'iEzsignfolderSendreminderotherdays'] != null, 'Required key "EzsignfolderRequestV3[iEzsignfolderSendreminderotherdays]" has a null value in JSON.');
         return true;
       }());
 

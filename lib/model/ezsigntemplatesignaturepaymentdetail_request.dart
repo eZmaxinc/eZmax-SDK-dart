@@ -90,10 +90,14 @@ class EzsigntemplatesignaturepaymentdetailRequest {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplatesignaturepaymentdetailRequest[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplatesignaturepaymentdetailRequest[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiGlaccountcontainerID'), 'Required key "EzsigntemplatesignaturepaymentdetailRequest[fkiGlaccountcontainerID]" is missing from JSON.');
+        assert(json[r'fkiGlaccountcontainerID'] != null, 'Required key "EzsigntemplatesignaturepaymentdetailRequest[fkiGlaccountcontainerID]" has a null value in JSON.');
+        assert(json.containsKey(r'tEzsigntemplatesignaturepaymentdetailDescription'), 'Required key "EzsigntemplatesignaturepaymentdetailRequest[tEzsigntemplatesignaturepaymentdetailDescription]" is missing from JSON.');
+        assert(json[r'tEzsigntemplatesignaturepaymentdetailDescription'] != null, 'Required key "EzsigntemplatesignaturepaymentdetailRequest[tEzsigntemplatesignaturepaymentdetailDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'dEzsigntemplatesignaturepaymentdetailAmount'), 'Required key "EzsigntemplatesignaturepaymentdetailRequest[dEzsigntemplatesignaturepaymentdetailAmount]" is missing from JSON.');
+        assert(json[r'dEzsigntemplatesignaturepaymentdetailAmount'] != null, 'Required key "EzsigntemplatesignaturepaymentdetailRequest[dEzsigntemplatesignaturepaymentdetailAmount]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsigntemplatesignaturepaymentdetailTaxable'), 'Required key "EzsigntemplatesignaturepaymentdetailRequest[eEzsigntemplatesignaturepaymentdetailTaxable]" is missing from JSON.');
+        assert(json[r'eEzsigntemplatesignaturepaymentdetailTaxable'] != null, 'Required key "EzsigntemplatesignaturepaymentdetailRequest[eEzsigntemplatesignaturepaymentdetailTaxable]" has a null value in JSON.');
         return true;
       }());
 

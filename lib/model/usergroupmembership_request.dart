@@ -110,10 +110,8 @@ class UsergroupmembershipRequest {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "UsergroupmembershipRequest[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "UsergroupmembershipRequest[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiUsergroupID'), 'Required key "UsergroupmembershipRequest[fkiUsergroupID]" is missing from JSON.');
+        assert(json[r'fkiUsergroupID'] != null, 'Required key "UsergroupmembershipRequest[fkiUsergroupID]" has a null value in JSON.');
         return true;
       }());
 

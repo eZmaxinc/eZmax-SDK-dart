@@ -54,10 +54,10 @@ class WebsocketResponseErrorV1MPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "WebsocketResponseErrorV1MPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "WebsocketResponseErrorV1MPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sErrorMessage'), 'Required key "WebsocketResponseErrorV1MPayload[sErrorMessage]" is missing from JSON.');
+        assert(json[r'sErrorMessage'] != null, 'Required key "WebsocketResponseErrorV1MPayload[sErrorMessage]" has a null value in JSON.');
+        assert(json.containsKey(r'eErrorCode'), 'Required key "WebsocketResponseErrorV1MPayload[eErrorCode]" is missing from JSON.');
+        assert(json[r'eErrorCode'] != null, 'Required key "WebsocketResponseErrorV1MPayload[eErrorCode]" has a null value in JSON.');
         return true;
       }());
 

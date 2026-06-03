@@ -205,6 +205,9 @@ String parameterToString(dynamic value) {
   if (value is FieldEEzmaxinvoicinguserVariationezsign) {
     return FieldEEzmaxinvoicinguserVariationezsignTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEEzmaxpartnerCustomdevelopment) {
+    return FieldEEzmaxpartnerCustomdevelopmentTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEEzsignannotationType) {
     return FieldEEzsignannotationTypeTypeTransformer().encode(value).toString();
   }
@@ -235,6 +238,9 @@ String parameterToString(dynamic value) {
   if (value is FieldEEzsignfolderSendreminderfrequency) {
     return FieldEEzsignfolderSendreminderfrequencyTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEEzsignfolderSource) {
+    return FieldEEzsignfolderSourceTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEEzsignfolderStep) {
     return FieldEEzsignfolderStepTypeTransformer().encode(value).toString();
   }
@@ -261,6 +267,9 @@ String parameterToString(dynamic value) {
   }
   if (value is FieldEEzsignfoldertypeSendreminderfrequency) {
     return FieldEEzsignfoldertypeSendreminderfrequencyTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsignfoldertypeSignaturedatedisplay) {
+    return FieldEEzsignfoldertypeSignaturedatedisplayTypeTransformer().encode(value).toString();
   }
   if (value is FieldEEzsignfoldertypeSigneraccess) {
     return FieldEEzsignfoldertypeSigneraccessTypeTransformer().encode(value).toString();
@@ -363,6 +372,9 @@ String parameterToString(dynamic value) {
   }
   if (value is FieldEEzsigntemplateglobalannotationVerticalalignment) {
     return FieldEEzsigntemplateglobalannotationVerticalalignmentTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsigntemplateglobaldocumentAcceptationtype) {
+    return FieldEEzsigntemplateglobaldocumentAcceptationtypeTypeTransformer().encode(value).toString();
   }
   if (value is FieldEEzsigntemplatepackagesignerMapping) {
     return FieldEEzsigntemplatepackagesignerMappingTypeTransformer().encode(value).toString();

@@ -69,10 +69,14 @@ class CustomNotificationtestgetelementsResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CustomNotificationtestgetelementsResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CustomNotificationtestgetelementsResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiNotificationtestID'), 'Required key "CustomNotificationtestgetelementsResponse[pkiNotificationtestID]" is missing from JSON.');
+        assert(json[r'pkiNotificationtestID'] != null, 'Required key "CustomNotificationtestgetelementsResponse[pkiNotificationtestID]" has a null value in JSON.');
+        assert(json.containsKey(r'sNotificationtestFunction'), 'Required key "CustomNotificationtestgetelementsResponse[sNotificationtestFunction]" is missing from JSON.');
+        assert(json[r'sNotificationtestFunction'] != null, 'Required key "CustomNotificationtestgetelementsResponse[sNotificationtestFunction]" has a null value in JSON.');
+        assert(json.containsKey(r'a_sVariableobjectProperty'), 'Required key "CustomNotificationtestgetelementsResponse[a_sVariableobjectProperty]" is missing from JSON.');
+        assert(json[r'a_sVariableobjectProperty'] != null, 'Required key "CustomNotificationtestgetelementsResponse[a_sVariableobjectProperty]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objVariableobject'), 'Required key "CustomNotificationtestgetelementsResponse[a_objVariableobject]" is missing from JSON.');
+        assert(json[r'a_objVariableobject'] != null, 'Required key "CustomNotificationtestgetelementsResponse[a_objVariableobject]" has a null value in JSON.');
         return true;
       }());
 

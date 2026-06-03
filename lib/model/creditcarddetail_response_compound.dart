@@ -112,10 +112,22 @@ class CreditcarddetailResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CreditcarddetailResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CreditcarddetailResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiCreditcarddetailID'), 'Required key "CreditcarddetailResponseCompound[pkiCreditcarddetailID]" is missing from JSON.');
+        assert(json[r'pkiCreditcarddetailID'] != null, 'Required key "CreditcarddetailResponseCompound[pkiCreditcarddetailID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiCreditcardtypeID'), 'Required key "CreditcarddetailResponseCompound[fkiCreditcardtypeID]" is missing from JSON.');
+        assert(json[r'fkiCreditcardtypeID'] != null, 'Required key "CreditcarddetailResponseCompound[fkiCreditcardtypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'iCreditcarddetailLastdigits'), 'Required key "CreditcarddetailResponseCompound[iCreditcarddetailLastdigits]" is missing from JSON.');
+        assert(json[r'iCreditcarddetailLastdigits'] != null, 'Required key "CreditcarddetailResponseCompound[iCreditcarddetailLastdigits]" has a null value in JSON.');
+        assert(json.containsKey(r'iCreditcarddetailExpirationmonth'), 'Required key "CreditcarddetailResponseCompound[iCreditcarddetailExpirationmonth]" is missing from JSON.');
+        assert(json[r'iCreditcarddetailExpirationmonth'] != null, 'Required key "CreditcarddetailResponseCompound[iCreditcarddetailExpirationmonth]" has a null value in JSON.');
+        assert(json.containsKey(r'iCreditcarddetailExpirationyear'), 'Required key "CreditcarddetailResponseCompound[iCreditcarddetailExpirationyear]" is missing from JSON.');
+        assert(json[r'iCreditcarddetailExpirationyear'] != null, 'Required key "CreditcarddetailResponseCompound[iCreditcarddetailExpirationyear]" has a null value in JSON.');
+        assert(json.containsKey(r'sCreditcarddetailCivic'), 'Required key "CreditcarddetailResponseCompound[sCreditcarddetailCivic]" is missing from JSON.');
+        assert(json[r'sCreditcarddetailCivic'] != null, 'Required key "CreditcarddetailResponseCompound[sCreditcarddetailCivic]" has a null value in JSON.');
+        assert(json.containsKey(r'sCreditcarddetailStreet'), 'Required key "CreditcarddetailResponseCompound[sCreditcarddetailStreet]" is missing from JSON.');
+        assert(json[r'sCreditcarddetailStreet'] != null, 'Required key "CreditcarddetailResponseCompound[sCreditcarddetailStreet]" has a null value in JSON.');
+        assert(json.containsKey(r'sCreditcarddetailZip'), 'Required key "CreditcarddetailResponseCompound[sCreditcarddetailZip]" is missing from JSON.');
+        assert(json[r'sCreditcarddetailZip'] != null, 'Required key "CreditcarddetailResponseCompound[sCreditcarddetailZip]" has a null value in JSON.');
         return true;
       }());
 

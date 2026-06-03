@@ -197,10 +197,14 @@ class EzsigntemplateRequestV3 {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplateRequestV3[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplateRequestV3[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiLanguageID'), 'Required key "EzsigntemplateRequestV3[fkiLanguageID]" is missing from JSON.');
+        assert(json[r'fkiLanguageID'] != null, 'Required key "EzsigntemplateRequestV3[fkiLanguageID]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsigntemplateDescription'), 'Required key "EzsigntemplateRequestV3[sEzsigntemplateDescription]" is missing from JSON.');
+        assert(json[r'sEzsigntemplateDescription'] != null, 'Required key "EzsigntemplateRequestV3[sEzsigntemplateDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsigntemplateAdminonly'), 'Required key "EzsigntemplateRequestV3[bEzsigntemplateAdminonly]" is missing from JSON.');
+        assert(json[r'bEzsigntemplateAdminonly'] != null, 'Required key "EzsigntemplateRequestV3[bEzsigntemplateAdminonly]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsigntemplateType'), 'Required key "EzsigntemplateRequestV3[eEzsigntemplateType]" is missing from JSON.');
+        assert(json[r'eEzsigntemplateType'] != null, 'Required key "EzsigntemplateRequestV3[eEzsigntemplateType]" has a null value in JSON.');
         return true;
       }());
 

@@ -72,10 +72,14 @@ class EzsigntsarequirementAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntsarequirementAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntsarequirementAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sEzsigntsarequirementDescriptionX'), 'Required key "EzsigntsarequirementAutocompleteElementResponse[sEzsigntsarequirementDescriptionX]" is missing from JSON.');
+        assert(json[r'sEzsigntsarequirementDescriptionX'] != null, 'Required key "EzsigntsarequirementAutocompleteElementResponse[sEzsigntsarequirementDescriptionX]" has a null value in JSON.');
+        assert(json.containsKey(r'pkiEzsigntsarequirementID'), 'Required key "EzsigntsarequirementAutocompleteElementResponse[pkiEzsigntsarequirementID]" is missing from JSON.');
+        assert(json[r'pkiEzsigntsarequirementID'] != null, 'Required key "EzsigntsarequirementAutocompleteElementResponse[pkiEzsigntsarequirementID]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsigntsarequirementIsactive'), 'Required key "EzsigntsarequirementAutocompleteElementResponse[bEzsigntsarequirementIsactive]" is missing from JSON.');
+        assert(json[r'bEzsigntsarequirementIsactive'] != null, 'Required key "EzsigntsarequirementAutocompleteElementResponse[bEzsigntsarequirementIsactive]" has a null value in JSON.');
+        assert(json.containsKey(r'bDisabled'), 'Required key "EzsigntsarequirementAutocompleteElementResponse[bDisabled]" is missing from JSON.');
+        assert(json[r'bDisabled'] != null, 'Required key "EzsigntsarequirementAutocompleteElementResponse[bDisabled]" has a null value in JSON.');
         return true;
       }());
 

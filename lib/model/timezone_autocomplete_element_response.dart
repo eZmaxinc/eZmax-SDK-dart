@@ -64,10 +64,12 @@ class TimezoneAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "TimezoneAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "TimezoneAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sTimezoneName'), 'Required key "TimezoneAutocompleteElementResponse[sTimezoneName]" is missing from JSON.');
+        assert(json[r'sTimezoneName'] != null, 'Required key "TimezoneAutocompleteElementResponse[sTimezoneName]" has a null value in JSON.');
+        assert(json.containsKey(r'pkiTimezoneID'), 'Required key "TimezoneAutocompleteElementResponse[pkiTimezoneID]" is missing from JSON.');
+        assert(json[r'pkiTimezoneID'] != null, 'Required key "TimezoneAutocompleteElementResponse[pkiTimezoneID]" has a null value in JSON.');
+        assert(json.containsKey(r'bTimezoneIsactive'), 'Required key "TimezoneAutocompleteElementResponse[bTimezoneIsactive]" is missing from JSON.');
+        assert(json[r'bTimezoneIsactive'] != null, 'Required key "TimezoneAutocompleteElementResponse[bTimezoneIsactive]" has a null value in JSON.');
         return true;
       }());
 

@@ -144,10 +144,18 @@ class DiscussionmessageResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "DiscussionmessageResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "DiscussionmessageResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiDiscussionmessageID'), 'Required key "DiscussionmessageResponse[pkiDiscussionmessageID]" is missing from JSON.');
+        assert(json[r'pkiDiscussionmessageID'] != null, 'Required key "DiscussionmessageResponse[pkiDiscussionmessageID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiDiscussionID'), 'Required key "DiscussionmessageResponse[fkiDiscussionID]" is missing from JSON.');
+        assert(json[r'fkiDiscussionID'] != null, 'Required key "DiscussionmessageResponse[fkiDiscussionID]" has a null value in JSON.');
+        assert(json.containsKey(r'eDiscussionmessageStatus'), 'Required key "DiscussionmessageResponse[eDiscussionmessageStatus]" is missing from JSON.');
+        assert(json[r'eDiscussionmessageStatus'] != null, 'Required key "DiscussionmessageResponse[eDiscussionmessageStatus]" has a null value in JSON.');
+        assert(json.containsKey(r'tDiscussionmessageContent'), 'Required key "DiscussionmessageResponse[tDiscussionmessageContent]" is missing from JSON.');
+        assert(json[r'tDiscussionmessageContent'] != null, 'Required key "DiscussionmessageResponse[tDiscussionmessageContent]" has a null value in JSON.');
+        assert(json.containsKey(r'sDiscussionmessageCreatorname'), 'Required key "DiscussionmessageResponse[sDiscussionmessageCreatorname]" is missing from JSON.');
+        assert(json[r'sDiscussionmessageCreatorname'] != null, 'Required key "DiscussionmessageResponse[sDiscussionmessageCreatorname]" has a null value in JSON.');
+        assert(json.containsKey(r'objAudit'), 'Required key "DiscussionmessageResponse[objAudit]" is missing from JSON.');
+        assert(json[r'objAudit'] != null, 'Required key "DiscussionmessageResponse[objAudit]" has a null value in JSON.');
         return true;
       }());
 

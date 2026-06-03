@@ -185,10 +185,20 @@ class SupplyListElement {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "SupplyListElement[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "SupplyListElement[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiSupplyID'), 'Required key "SupplyListElement[pkiSupplyID]" is missing from JSON.');
+        assert(json[r'pkiSupplyID'] != null, 'Required key "SupplyListElement[pkiSupplyID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiVariableexpenseID'), 'Required key "SupplyListElement[fkiVariableexpenseID]" is missing from JSON.');
+        assert(json[r'fkiVariableexpenseID'] != null, 'Required key "SupplyListElement[fkiVariableexpenseID]" has a null value in JSON.');
+        assert(json.containsKey(r'sSupplyCode'), 'Required key "SupplyListElement[sSupplyCode]" is missing from JSON.');
+        assert(json[r'sSupplyCode'] != null, 'Required key "SupplyListElement[sSupplyCode]" has a null value in JSON.');
+        assert(json.containsKey(r'sSupplyDescriptionX'), 'Required key "SupplyListElement[sSupplyDescriptionX]" is missing from JSON.');
+        assert(json[r'sSupplyDescriptionX'] != null, 'Required key "SupplyListElement[sSupplyDescriptionX]" has a null value in JSON.');
+        assert(json.containsKey(r'dSupplyUnitprice'), 'Required key "SupplyListElement[dSupplyUnitprice]" is missing from JSON.');
+        assert(json[r'dSupplyUnitprice'] != null, 'Required key "SupplyListElement[dSupplyUnitprice]" has a null value in JSON.');
+        assert(json.containsKey(r'bSupplyIsactive'), 'Required key "SupplyListElement[bSupplyIsactive]" is missing from JSON.');
+        assert(json[r'bSupplyIsactive'] != null, 'Required key "SupplyListElement[bSupplyIsactive]" has a null value in JSON.');
+        assert(json.containsKey(r'bSupplyVariableprice'), 'Required key "SupplyListElement[bSupplyVariableprice]" is missing from JSON.');
+        assert(json[r'bSupplyVariableprice'] != null, 'Required key "SupplyListElement[bSupplyVariableprice]" has a null value in JSON.');
         return true;
       }());
 

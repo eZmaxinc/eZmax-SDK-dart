@@ -48,10 +48,8 @@ class CorsCreateObjectV1ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CorsCreateObjectV1ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CorsCreateObjectV1ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_pkiCorsID'), 'Required key "CorsCreateObjectV1ResponseMPayload[a_pkiCorsID]" is missing from JSON.');
+        assert(json[r'a_pkiCorsID'] != null, 'Required key "CorsCreateObjectV1ResponseMPayload[a_pkiCorsID]" has a null value in JSON.');
         return true;
       }());
 

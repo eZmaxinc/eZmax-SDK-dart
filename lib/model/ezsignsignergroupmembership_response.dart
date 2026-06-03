@@ -119,10 +119,10 @@ class EzsignsignergroupmembershipResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignsignergroupmembershipResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignsignergroupmembershipResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsignsignergroupmembershipID'), 'Required key "EzsignsignergroupmembershipResponse[pkiEzsignsignergroupmembershipID]" is missing from JSON.');
+        assert(json[r'pkiEzsignsignergroupmembershipID'] != null, 'Required key "EzsignsignergroupmembershipResponse[pkiEzsignsignergroupmembershipID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiEzsignsignergroupID'), 'Required key "EzsignsignergroupmembershipResponse[fkiEzsignsignergroupID]" is missing from JSON.');
+        assert(json[r'fkiEzsignsignergroupID'] != null, 'Required key "EzsignsignergroupmembershipResponse[fkiEzsignsignergroupID]" has a null value in JSON.');
         return true;
       }());
 

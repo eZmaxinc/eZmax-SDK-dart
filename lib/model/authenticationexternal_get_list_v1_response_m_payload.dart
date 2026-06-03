@@ -61,10 +61,12 @@ class AuthenticationexternalGetListV1ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "AuthenticationexternalGetListV1ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "AuthenticationexternalGetListV1ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'iRowReturned'), 'Required key "AuthenticationexternalGetListV1ResponseMPayload[iRowReturned]" is missing from JSON.');
+        assert(json[r'iRowReturned'] != null, 'Required key "AuthenticationexternalGetListV1ResponseMPayload[iRowReturned]" has a null value in JSON.');
+        assert(json.containsKey(r'iRowFiltered'), 'Required key "AuthenticationexternalGetListV1ResponseMPayload[iRowFiltered]" is missing from JSON.');
+        assert(json[r'iRowFiltered'] != null, 'Required key "AuthenticationexternalGetListV1ResponseMPayload[iRowFiltered]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objAuthenticationexternal'), 'Required key "AuthenticationexternalGetListV1ResponseMPayload[a_objAuthenticationexternal]" is missing from JSON.');
+        assert(json[r'a_objAuthenticationexternal'] != null, 'Required key "AuthenticationexternalGetListV1ResponseMPayload[a_objAuthenticationexternal]" has a null value in JSON.');
         return true;
       }());
 

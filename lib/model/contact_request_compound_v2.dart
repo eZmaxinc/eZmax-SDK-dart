@@ -171,10 +171,18 @@ class ContactRequestCompoundV2 {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "ContactRequestCompoundV2[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "ContactRequestCompoundV2[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiContacttitleID'), 'Required key "ContactRequestCompoundV2[fkiContacttitleID]" is missing from JSON.');
+        assert(json[r'fkiContacttitleID'] != null, 'Required key "ContactRequestCompoundV2[fkiContacttitleID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiLanguageID'), 'Required key "ContactRequestCompoundV2[fkiLanguageID]" is missing from JSON.');
+        assert(json[r'fkiLanguageID'] != null, 'Required key "ContactRequestCompoundV2[fkiLanguageID]" has a null value in JSON.');
+        assert(json.containsKey(r'eContactType'), 'Required key "ContactRequestCompoundV2[eContactType]" is missing from JSON.');
+        assert(json[r'eContactType'] != null, 'Required key "ContactRequestCompoundV2[eContactType]" has a null value in JSON.');
+        assert(json.containsKey(r'sContactFirstname'), 'Required key "ContactRequestCompoundV2[sContactFirstname]" is missing from JSON.');
+        assert(json[r'sContactFirstname'] != null, 'Required key "ContactRequestCompoundV2[sContactFirstname]" has a null value in JSON.');
+        assert(json.containsKey(r'sContactLastname'), 'Required key "ContactRequestCompoundV2[sContactLastname]" is missing from JSON.');
+        assert(json[r'sContactLastname'] != null, 'Required key "ContactRequestCompoundV2[sContactLastname]" has a null value in JSON.');
+        assert(json.containsKey(r'objContactinformations'), 'Required key "ContactRequestCompoundV2[objContactinformations]" is missing from JSON.');
+        assert(json[r'objContactinformations'] != null, 'Required key "ContactRequestCompoundV2[objContactinformations]" has a null value in JSON.');
         return true;
       }());
 

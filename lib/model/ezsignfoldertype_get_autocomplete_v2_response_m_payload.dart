@@ -48,10 +48,8 @@ class EzsignfoldertypeGetAutocompleteV2ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignfoldertypeGetAutocompleteV2ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignfoldertypeGetAutocompleteV2ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_objEzsignfoldertype'), 'Required key "EzsignfoldertypeGetAutocompleteV2ResponseMPayload[a_objEzsignfoldertype]" is missing from JSON.');
+        assert(json[r'a_objEzsignfoldertype'] != null, 'Required key "EzsignfoldertypeGetAutocompleteV2ResponseMPayload[a_objEzsignfoldertype]" has a null value in JSON.');
         return true;
       }());
 

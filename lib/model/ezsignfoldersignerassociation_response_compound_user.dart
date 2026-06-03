@@ -87,10 +87,18 @@ class EzsignfoldersignerassociationResponseCompoundUser {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignfoldersignerassociationResponseCompoundUser[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignfoldersignerassociationResponseCompoundUser[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiUserID'), 'Required key "EzsignfoldersignerassociationResponseCompoundUser[pkiUserID]" is missing from JSON.');
+        assert(json[r'pkiUserID'] != null, 'Required key "EzsignfoldersignerassociationResponseCompoundUser[pkiUserID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiLanguageID'), 'Required key "EzsignfoldersignerassociationResponseCompoundUser[fkiLanguageID]" is missing from JSON.');
+        assert(json[r'fkiLanguageID'] != null, 'Required key "EzsignfoldersignerassociationResponseCompoundUser[fkiLanguageID]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserFirstname'), 'Required key "EzsignfoldersignerassociationResponseCompoundUser[sUserFirstname]" is missing from JSON.');
+        assert(json[r'sUserFirstname'] != null, 'Required key "EzsignfoldersignerassociationResponseCompoundUser[sUserFirstname]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserLastname'), 'Required key "EzsignfoldersignerassociationResponseCompoundUser[sUserLastname]" is missing from JSON.');
+        assert(json[r'sUserLastname'] != null, 'Required key "EzsignfoldersignerassociationResponseCompoundUser[sUserLastname]" has a null value in JSON.');
+        assert(json.containsKey(r'sEmailAddress'), 'Required key "EzsignfoldersignerassociationResponseCompoundUser[sEmailAddress]" is missing from JSON.');
+        assert(json[r'sEmailAddress'] != null, 'Required key "EzsignfoldersignerassociationResponseCompoundUser[sEmailAddress]" has a null value in JSON.');
+        assert(json.containsKey(r'eUserType'), 'Required key "EzsignfoldersignerassociationResponseCompoundUser[eUserType]" is missing from JSON.');
+        assert(json[r'eUserType'] != null, 'Required key "EzsignfoldersignerassociationResponseCompoundUser[eUserType]" has a null value in JSON.');
         return true;
       }());
 

@@ -55,10 +55,10 @@ class CustomWebhooklogResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CustomWebhooklogResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CustomWebhooklogResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'dtWebhooklogDate'), 'Required key "CustomWebhooklogResponse[dtWebhooklogDate]" is missing from JSON.');
+        assert(json[r'dtWebhooklogDate'] != null, 'Required key "CustomWebhooklogResponse[dtWebhooklogDate]" has a null value in JSON.');
+        assert(json.containsKey(r'tWebhooklogJson'), 'Required key "CustomWebhooklogResponse[tWebhooklogJson]" is missing from JSON.');
+        assert(json[r'tWebhooklogJson'] != null, 'Required key "CustomWebhooklogResponse[tWebhooklogJson]" has a null value in JSON.');
         return true;
       }());
 

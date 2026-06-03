@@ -138,6 +138,67 @@ class ObjectEzsigndocumentApi {
     return null;
   }
 
+  /// Apply an Ezsigntemplate to the Ezsigndocument
+  ///
+  /// This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  ///
+  /// * [EzsigndocumentApplyEzsigntemplateV3Request] ezsigndocumentApplyEzsigntemplateV3Request (required):
+  Future<Response> ezsigndocumentApplyEzsigntemplateV3WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV3Request ezsigndocumentApplyEzsigntemplateV3Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/3/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate'
+      .replaceAll('{pkiEzsigndocumentID}', pkiEzsigndocumentID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = ezsigndocumentApplyEzsigntemplateV3Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Apply an Ezsigntemplate to the Ezsigndocument
+  ///
+  /// This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  ///
+  /// * [EzsigndocumentApplyEzsigntemplateV3Request] ezsigndocumentApplyEzsigntemplateV3Request (required):
+  Future<EzsigndocumentApplyEzsigntemplateV3Response?> ezsigndocumentApplyEzsigntemplateV3(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV3Request ezsigndocumentApplyEzsigntemplateV3Request,) async {
+    final response = await ezsigndocumentApplyEzsigntemplateV3WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV3Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentApplyEzsigntemplateV3Response',) as EzsigndocumentApplyEzsigntemplateV3Response;
+    
+    }
+    return null;
+  }
+
   /// Apply an Ezsigntemplateglobal to the Ezsigndocument
   ///
   /// This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
@@ -194,6 +255,67 @@ class ObjectEzsigndocumentApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentApplyEzsigntemplateglobalV1Response',) as EzsigndocumentApplyEzsigntemplateglobalV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Apply an Ezsigntemplateglobal to the Ezsigndocument
+  ///
+  /// This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  ///
+  /// * [EzsigndocumentApplyEzsigntemplateglobalV2Request] ezsigndocumentApplyEzsigntemplateglobalV2Request (required):
+  Future<Response> ezsigndocumentApplyEzsigntemplateglobalV2WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateglobalV2Request ezsigndocumentApplyEzsigntemplateglobalV2Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplateglobal'
+      .replaceAll('{pkiEzsigndocumentID}', pkiEzsigndocumentID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = ezsigndocumentApplyEzsigntemplateglobalV2Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Apply an Ezsigntemplateglobal to the Ezsigndocument
+  ///
+  /// This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  ///
+  /// * [EzsigndocumentApplyEzsigntemplateglobalV2Request] ezsigndocumentApplyEzsigntemplateglobalV2Request (required):
+  Future<EzsigndocumentApplyEzsigntemplateglobalV2Response?> ezsigndocumentApplyEzsigntemplateglobalV2(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateglobalV2Request ezsigndocumentApplyEzsigntemplateglobalV2Request,) async {
+    final response = await ezsigndocumentApplyEzsigntemplateglobalV2WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateglobalV2Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentApplyEzsigntemplateglobalV2Response',) as EzsigndocumentApplyEzsigntemplateglobalV2Response;
     
     }
     return null;

@@ -48,10 +48,8 @@ class CreditcardclientGetAutocompleteV2ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CreditcardclientGetAutocompleteV2ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CreditcardclientGetAutocompleteV2ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_objCreditcardclient'), 'Required key "CreditcardclientGetAutocompleteV2ResponseMPayload[a_objCreditcardclient]" is missing from JSON.');
+        assert(json[r'a_objCreditcardclient'] != null, 'Required key "CreditcardclientGetAutocompleteV2ResponseMPayload[a_objCreditcardclient]" has a null value in JSON.');
         return true;
       }());
 

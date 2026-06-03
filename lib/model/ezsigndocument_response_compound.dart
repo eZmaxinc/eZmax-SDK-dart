@@ -411,10 +411,42 @@ class EzsigndocumentResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigndocumentResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigndocumentResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsigndocumentID'), 'Required key "EzsigndocumentResponseCompound[pkiEzsigndocumentID]" is missing from JSON.');
+        assert(json[r'pkiEzsigndocumentID'] != null, 'Required key "EzsigndocumentResponseCompound[pkiEzsigndocumentID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiEzsignfolderID'), 'Required key "EzsigndocumentResponseCompound[fkiEzsignfolderID]" is missing from JSON.');
+        assert(json[r'fkiEzsignfolderID'] != null, 'Required key "EzsigndocumentResponseCompound[fkiEzsignfolderID]" has a null value in JSON.');
+        assert(json.containsKey(r'dtEzsigndocumentDuedate'), 'Required key "EzsigndocumentResponseCompound[dtEzsigndocumentDuedate]" is missing from JSON.');
+        assert(json[r'dtEzsigndocumentDuedate'] != null, 'Required key "EzsigndocumentResponseCompound[dtEzsigndocumentDuedate]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsigndocumentName'), 'Required key "EzsigndocumentResponseCompound[sEzsigndocumentName]" is missing from JSON.');
+        assert(json[r'sEzsigndocumentName'] != null, 'Required key "EzsigndocumentResponseCompound[sEzsigndocumentName]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsigndocumentStep'), 'Required key "EzsigndocumentResponseCompound[eEzsigndocumentStep]" is missing from JSON.');
+        assert(json[r'eEzsigndocumentStep'] != null, 'Required key "EzsigndocumentResponseCompound[eEzsigndocumentStep]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigndocumentOrder'), 'Required key "EzsigndocumentResponseCompound[iEzsigndocumentOrder]" is missing from JSON.');
+        assert(json[r'iEzsigndocumentOrder'] != null, 'Required key "EzsigndocumentResponseCompound[iEzsigndocumentOrder]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigndocumentPagetotal'), 'Required key "EzsigndocumentResponseCompound[iEzsigndocumentPagetotal]" is missing from JSON.');
+        assert(json[r'iEzsigndocumentPagetotal'] != null, 'Required key "EzsigndocumentResponseCompound[iEzsigndocumentPagetotal]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigndocumentSignaturesigned'), 'Required key "EzsigndocumentResponseCompound[iEzsigndocumentSignaturesigned]" is missing from JSON.');
+        assert(json[r'iEzsigndocumentSignaturesigned'] != null, 'Required key "EzsigndocumentResponseCompound[iEzsigndocumentSignaturesigned]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigndocumentSignaturetotal'), 'Required key "EzsigndocumentResponseCompound[iEzsigndocumentSignaturetotal]" is missing from JSON.');
+        assert(json[r'iEzsigndocumentSignaturetotal'] != null, 'Required key "EzsigndocumentResponseCompound[iEzsigndocumentSignaturetotal]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigndocumentFormfieldtotal'), 'Required key "EzsigndocumentResponseCompound[iEzsigndocumentFormfieldtotal]" is missing from JSON.');
+        assert(json[r'iEzsigndocumentFormfieldtotal'] != null, 'Required key "EzsigndocumentResponseCompound[iEzsigndocumentFormfieldtotal]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigndocumentEzsignsignatureattachmenttotal'), 'Required key "EzsigndocumentResponseCompound[iEzsigndocumentEzsignsignatureattachmenttotal]" is missing from JSON.');
+        assert(json[r'iEzsigndocumentEzsignsignatureattachmenttotal'] != null, 'Required key "EzsigndocumentResponseCompound[iEzsigndocumentEzsignsignatureattachmenttotal]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigndocumentEzsigndiscussiontotal'), 'Required key "EzsigndocumentResponseCompound[iEzsigndocumentEzsigndiscussiontotal]" is missing from JSON.');
+        assert(json[r'iEzsigndocumentEzsigndiscussiontotal'] != null, 'Required key "EzsigndocumentResponseCompound[iEzsigndocumentEzsigndiscussiontotal]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsigndocumentSteptype'), 'Required key "EzsigndocumentResponseCompound[eEzsigndocumentSteptype]" is missing from JSON.');
+        assert(json[r'eEzsigndocumentSteptype'] != null, 'Required key "EzsigndocumentResponseCompound[eEzsigndocumentSteptype]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigndocumentStepformtotal'), 'Required key "EzsigndocumentResponseCompound[iEzsigndocumentStepformtotal]" is missing from JSON.');
+        assert(json[r'iEzsigndocumentStepformtotal'] != null, 'Required key "EzsigndocumentResponseCompound[iEzsigndocumentStepformtotal]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigndocumentStepformcurrent'), 'Required key "EzsigndocumentResponseCompound[iEzsigndocumentStepformcurrent]" is missing from JSON.');
+        assert(json[r'iEzsigndocumentStepformcurrent'] != null, 'Required key "EzsigndocumentResponseCompound[iEzsigndocumentStepformcurrent]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigndocumentStepsignaturetotal'), 'Required key "EzsigndocumentResponseCompound[iEzsigndocumentStepsignaturetotal]" is missing from JSON.');
+        assert(json[r'iEzsigndocumentStepsignaturetotal'] != null, 'Required key "EzsigndocumentResponseCompound[iEzsigndocumentStepsignaturetotal]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigndocumentStepsignatureCurrent'), 'Required key "EzsigndocumentResponseCompound[iEzsigndocumentStepsignatureCurrent]" is missing from JSON.');
+        assert(json[r'iEzsigndocumentStepsignatureCurrent'] != null, 'Required key "EzsigndocumentResponseCompound[iEzsigndocumentStepsignatureCurrent]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objEzsignfoldersignerassociationstatus'), 'Required key "EzsigndocumentResponseCompound[a_objEzsignfoldersignerassociationstatus]" is missing from JSON.');
+        assert(json[r'a_objEzsignfoldersignerassociationstatus'] != null, 'Required key "EzsigndocumentResponseCompound[a_objEzsignfoldersignerassociationstatus]" has a null value in JSON.');
         return true;
       }());
 

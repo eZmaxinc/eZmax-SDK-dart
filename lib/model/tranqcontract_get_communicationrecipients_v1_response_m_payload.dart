@@ -47,10 +47,8 @@ class TranqcontractGetCommunicationrecipientsV1ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "TranqcontractGetCommunicationrecipientsV1ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "TranqcontractGetCommunicationrecipientsV1ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_objCommunicationrecipientsgroup'), 'Required key "TranqcontractGetCommunicationrecipientsV1ResponseMPayload[a_objCommunicationrecipientsgroup]" is missing from JSON.');
+        assert(json[r'a_objCommunicationrecipientsgroup'] != null, 'Required key "TranqcontractGetCommunicationrecipientsV1ResponseMPayload[a_objCommunicationrecipientsgroup]" has a null value in JSON.');
         return true;
       }());
 

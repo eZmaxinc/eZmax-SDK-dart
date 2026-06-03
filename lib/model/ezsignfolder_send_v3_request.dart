@@ -97,10 +97,8 @@ class EzsignfolderSendV3Request {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignfolderSendV3Request[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignfolderSendV3Request[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_fkiEzsignfoldersignerassociationID'), 'Required key "EzsignfolderSendV3Request[a_fkiEzsignfoldersignerassociationID]" is missing from JSON.');
+        assert(json[r'a_fkiEzsignfoldersignerassociationID'] != null, 'Required key "EzsignfolderSendV3Request[a_fkiEzsignfoldersignerassociationID]" has a null value in JSON.');
         return true;
       }());
 

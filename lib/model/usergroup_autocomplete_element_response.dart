@@ -65,10 +65,12 @@ class UsergroupAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "UsergroupAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "UsergroupAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sUsergroupNameX'), 'Required key "UsergroupAutocompleteElementResponse[sUsergroupNameX]" is missing from JSON.');
+        assert(json[r'sUsergroupNameX'] != null, 'Required key "UsergroupAutocompleteElementResponse[sUsergroupNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'pkiUsergroupID'), 'Required key "UsergroupAutocompleteElementResponse[pkiUsergroupID]" is missing from JSON.');
+        assert(json[r'pkiUsergroupID'] != null, 'Required key "UsergroupAutocompleteElementResponse[pkiUsergroupID]" has a null value in JSON.');
+        assert(json.containsKey(r'bUsergroupIsactive'), 'Required key "UsergroupAutocompleteElementResponse[bUsergroupIsactive]" is missing from JSON.');
+        assert(json[r'bUsergroupIsactive'] != null, 'Required key "UsergroupAutocompleteElementResponse[bUsergroupIsactive]" has a null value in JSON.');
         return true;
       }());
 

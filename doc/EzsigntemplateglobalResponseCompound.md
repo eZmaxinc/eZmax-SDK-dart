@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **sEzsigntemplateglobalDescription** | **String** | The description of the Ezsigntemplate | 
 **objEzsigntemplateglobaldocument** | [**EzsigntemplateglobaldocumentResponse**](EzsigntemplateglobaldocumentResponse.md) |  | [optional] 
 **aObjEzsigntemplateglobalsigner** | [**List<EzsigntemplateglobalsignerResponseCompound>**](EzsigntemplateglobalsignerResponseCompound.md) |  | [default to const []]
+**aObjEzsigntemplateglobalannotation** | [**List<EzsigntemplateglobalannotationResponseCompound>**](EzsigntemplateglobalannotationResponseCompound.md) |  | [optional] [default to const []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

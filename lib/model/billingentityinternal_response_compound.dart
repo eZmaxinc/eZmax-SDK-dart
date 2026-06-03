@@ -62,10 +62,12 @@ class BillingentityinternalResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "BillingentityinternalResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "BillingentityinternalResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiBillingentityinternalID'), 'Required key "BillingentityinternalResponseCompound[pkiBillingentityinternalID]" is missing from JSON.');
+        assert(json[r'pkiBillingentityinternalID'] != null, 'Required key "BillingentityinternalResponseCompound[pkiBillingentityinternalID]" has a null value in JSON.');
+        assert(json.containsKey(r'objBillingentityinternalDescription'), 'Required key "BillingentityinternalResponseCompound[objBillingentityinternalDescription]" is missing from JSON.');
+        assert(json[r'objBillingentityinternalDescription'] != null, 'Required key "BillingentityinternalResponseCompound[objBillingentityinternalDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objBillingentityinternalproduct'), 'Required key "BillingentityinternalResponseCompound[a_objBillingentityinternalproduct]" is missing from JSON.');
+        assert(json[r'a_objBillingentityinternalproduct'] != null, 'Required key "BillingentityinternalResponseCompound[a_objBillingentityinternalproduct]" has a null value in JSON.');
         return true;
       }());
 

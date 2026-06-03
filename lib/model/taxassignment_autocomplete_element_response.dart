@@ -65,10 +65,12 @@ class TaxassignmentAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "TaxassignmentAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "TaxassignmentAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sTaxassignmentDescriptionX'), 'Required key "TaxassignmentAutocompleteElementResponse[sTaxassignmentDescriptionX]" is missing from JSON.');
+        assert(json[r'sTaxassignmentDescriptionX'] != null, 'Required key "TaxassignmentAutocompleteElementResponse[sTaxassignmentDescriptionX]" has a null value in JSON.');
+        assert(json.containsKey(r'pkiTaxassignmentID'), 'Required key "TaxassignmentAutocompleteElementResponse[pkiTaxassignmentID]" is missing from JSON.');
+        assert(json[r'pkiTaxassignmentID'] != null, 'Required key "TaxassignmentAutocompleteElementResponse[pkiTaxassignmentID]" has a null value in JSON.');
+        assert(json.containsKey(r'bTaxassignmentIsactive'), 'Required key "TaxassignmentAutocompleteElementResponse[bTaxassignmentIsactive]" is missing from JSON.');
+        assert(json[r'bTaxassignmentIsactive'] != null, 'Required key "TaxassignmentAutocompleteElementResponse[bTaxassignmentIsactive]" has a null value in JSON.');
         return true;
       }());
 

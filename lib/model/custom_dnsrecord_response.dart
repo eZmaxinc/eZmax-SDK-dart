@@ -103,10 +103,14 @@ class CustomDnsrecordResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CustomDnsrecordResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CustomDnsrecordResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'eDnsrecordType'), 'Required key "CustomDnsrecordResponse[eDnsrecordType]" is missing from JSON.');
+        assert(json[r'eDnsrecordType'] != null, 'Required key "CustomDnsrecordResponse[eDnsrecordType]" has a null value in JSON.');
+        assert(json.containsKey(r'eDnsrecordValidation'), 'Required key "CustomDnsrecordResponse[eDnsrecordValidation]" is missing from JSON.');
+        assert(json[r'eDnsrecordValidation'] != null, 'Required key "CustomDnsrecordResponse[eDnsrecordValidation]" has a null value in JSON.');
+        assert(json.containsKey(r'sDnsrecordName'), 'Required key "CustomDnsrecordResponse[sDnsrecordName]" is missing from JSON.');
+        assert(json[r'sDnsrecordName'] != null, 'Required key "CustomDnsrecordResponse[sDnsrecordName]" has a null value in JSON.');
+        assert(json.containsKey(r'bDnsrecordMustMatch'), 'Required key "CustomDnsrecordResponse[bDnsrecordMustMatch]" is missing from JSON.');
+        assert(json[r'bDnsrecordMustMatch'] != null, 'Required key "CustomDnsrecordResponse[bDnsrecordMustMatch]" has a null value in JSON.');
         return true;
       }());
 

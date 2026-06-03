@@ -35,6 +35,7 @@ class EzsignfolderResponseV3 {
     this.dtEzsignfolderScheduledarchive,
     this.dtEzsignfolderScheduleddispose,
     this.eEzsignfolderStep,
+    this.iEzsignfolderStepcurrent,
     this.dtEzsignfolderClose,
     this.dtEzsignfolderArchive,
     this.dtEzsignfolderDispose,
@@ -161,7 +162,7 @@ class EzsignfolderResponseV3 {
   ///
   bool? bEzsignfolderIsdisposable;
 
-  /// The number of days before the the first reminder sending
+  /// The number of days before the first reminder sending
   ///
   /// Minimum value: 0
   /// Maximum value: 255
@@ -237,6 +238,18 @@ class EzsignfolderResponseV3 {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   FieldEEzsignfolderStep? eEzsignfolderStep;
+
+  /// The current step of the ezsignfolder when eEzsignfolderCompletion = 'PerEzsignfolderStepSync'
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 255
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? iEzsignfolderStepcurrent;
 
   /// The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely.
   ///
@@ -331,6 +344,7 @@ class EzsignfolderResponseV3 {
     other.dtEzsignfolderScheduledarchive == dtEzsignfolderScheduledarchive &&
     other.dtEzsignfolderScheduleddispose == dtEzsignfolderScheduleddispose &&
     other.eEzsignfolderStep == eEzsignfolderStep &&
+    other.iEzsignfolderStepcurrent == iEzsignfolderStepcurrent &&
     other.dtEzsignfolderClose == dtEzsignfolderClose &&
     other.dtEzsignfolderArchive == dtEzsignfolderArchive &&
     other.dtEzsignfolderDispose == dtEzsignfolderDispose &&
@@ -365,6 +379,7 @@ class EzsignfolderResponseV3 {
     (dtEzsignfolderScheduledarchive == null ? 0 : dtEzsignfolderScheduledarchive!.hashCode) +
     (dtEzsignfolderScheduleddispose == null ? 0 : dtEzsignfolderScheduleddispose!.hashCode) +
     (eEzsignfolderStep == null ? 0 : eEzsignfolderStep!.hashCode) +
+    (iEzsignfolderStepcurrent == null ? 0 : iEzsignfolderStepcurrent!.hashCode) +
     (dtEzsignfolderClose == null ? 0 : dtEzsignfolderClose!.hashCode) +
     (dtEzsignfolderArchive == null ? 0 : dtEzsignfolderArchive!.hashCode) +
     (dtEzsignfolderDispose == null ? 0 : dtEzsignfolderDispose!.hashCode) +
@@ -375,7 +390,7 @@ class EzsignfolderResponseV3 {
     (eEzsignfolderAccess == null ? 0 : eEzsignfolderAccess!.hashCode);
 
   @override
-  String toString() => 'EzsignfolderResponseV3[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, objEzsignfoldertype=$objEzsignfoldertype, fkiTimezoneID=$fkiTimezoneID, eEzsignfolderCompletion=$eEzsignfolderCompletion, eEzsignfolderDocumentdependency=$eEzsignfolderDocumentdependency, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, fkiBillingentityinternalID=$fkiBillingentityinternalID, sBillingentityinternalDescriptionX=$sBillingentityinternalDescriptionX, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sEzsigntsarequirementDescriptionX=$sEzsigntsarequirementDescriptionX, sEzsignfolderDescription=$sEzsignfolderDescription, tEzsignfolderNote=$tEzsignfolderNote, bEzsignfolderIsdisposable=$bEzsignfolderIsdisposable, iEzsignfolderSendreminderfirstdays=$iEzsignfolderSendreminderfirstdays, iEzsignfolderSendreminderotherdays=$iEzsignfolderSendreminderotherdays, dtEzsignfolderDelayedsenddate=$dtEzsignfolderDelayedsenddate, dtEzsignfolderDuedate=$dtEzsignfolderDuedate, dtEzsignfolderSentdate=$dtEzsignfolderSentdate, dtEzsignfolderScheduledarchive=$dtEzsignfolderScheduledarchive, dtEzsignfolderScheduleddispose=$dtEzsignfolderScheduleddispose, eEzsignfolderStep=$eEzsignfolderStep, dtEzsignfolderClose=$dtEzsignfolderClose, dtEzsignfolderArchive=$dtEzsignfolderArchive, dtEzsignfolderDispose=$dtEzsignfolderDispose, tEzsignfolderMessage=$tEzsignfolderMessage, eEzsignfolderMessageorder=$eEzsignfolderMessageorder, objAudit=$objAudit, sEzsignfolderExternalid=$sEzsignfolderExternalid, eEzsignfolderAccess=$eEzsignfolderAccess]';
+  String toString() => 'EzsignfolderResponseV3[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, objEzsignfoldertype=$objEzsignfoldertype, fkiTimezoneID=$fkiTimezoneID, eEzsignfolderCompletion=$eEzsignfolderCompletion, eEzsignfolderDocumentdependency=$eEzsignfolderDocumentdependency, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, fkiBillingentityinternalID=$fkiBillingentityinternalID, sBillingentityinternalDescriptionX=$sBillingentityinternalDescriptionX, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, sEzsigntsarequirementDescriptionX=$sEzsigntsarequirementDescriptionX, sEzsignfolderDescription=$sEzsignfolderDescription, tEzsignfolderNote=$tEzsignfolderNote, bEzsignfolderIsdisposable=$bEzsignfolderIsdisposable, iEzsignfolderSendreminderfirstdays=$iEzsignfolderSendreminderfirstdays, iEzsignfolderSendreminderotherdays=$iEzsignfolderSendreminderotherdays, dtEzsignfolderDelayedsenddate=$dtEzsignfolderDelayedsenddate, dtEzsignfolderDuedate=$dtEzsignfolderDuedate, dtEzsignfolderSentdate=$dtEzsignfolderSentdate, dtEzsignfolderScheduledarchive=$dtEzsignfolderScheduledarchive, dtEzsignfolderScheduleddispose=$dtEzsignfolderScheduleddispose, eEzsignfolderStep=$eEzsignfolderStep, iEzsignfolderStepcurrent=$iEzsignfolderStepcurrent, dtEzsignfolderClose=$dtEzsignfolderClose, dtEzsignfolderArchive=$dtEzsignfolderArchive, dtEzsignfolderDispose=$dtEzsignfolderDispose, tEzsignfolderMessage=$tEzsignfolderMessage, eEzsignfolderMessageorder=$eEzsignfolderMessageorder, objAudit=$objAudit, sEzsignfolderExternalid=$sEzsignfolderExternalid, eEzsignfolderAccess=$eEzsignfolderAccess]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -477,6 +492,11 @@ class EzsignfolderResponseV3 {
     } else {
       json[r'eEzsignfolderStep'] = null;
     }
+    if (this.iEzsignfolderStepcurrent != null) {
+      json[r'iEzsignfolderStepcurrent'] = this.iEzsignfolderStepcurrent;
+    } else {
+      json[r'iEzsignfolderStepcurrent'] = null;
+    }
     if (this.dtEzsignfolderClose != null) {
       json[r'dtEzsignfolderClose'] = this.dtEzsignfolderClose;
     } else {
@@ -531,10 +551,12 @@ class EzsignfolderResponseV3 {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignfolderResponseV3[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignfolderResponseV3[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsignfolderID'), 'Required key "EzsignfolderResponseV3[pkiEzsignfolderID]" is missing from JSON.');
+        assert(json[r'pkiEzsignfolderID'] != null, 'Required key "EzsignfolderResponseV3[pkiEzsignfolderID]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsignfolderCompletion'), 'Required key "EzsignfolderResponseV3[eEzsignfolderCompletion]" is missing from JSON.');
+        assert(json[r'eEzsignfolderCompletion'] != null, 'Required key "EzsignfolderResponseV3[eEzsignfolderCompletion]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsignfolderDescription'), 'Required key "EzsignfolderResponseV3[sEzsignfolderDescription]" is missing from JSON.');
+        assert(json[r'sEzsignfolderDescription'] != null, 'Required key "EzsignfolderResponseV3[sEzsignfolderDescription]" has a null value in JSON.');
         return true;
       }());
 
@@ -561,6 +583,7 @@ class EzsignfolderResponseV3 {
         dtEzsignfolderScheduledarchive: mapValueOfType<String>(json, r'dtEzsignfolderScheduledarchive'),
         dtEzsignfolderScheduleddispose: mapValueOfType<String>(json, r'dtEzsignfolderScheduleddispose'),
         eEzsignfolderStep: FieldEEzsignfolderStep.fromJson(json[r'eEzsignfolderStep']),
+        iEzsignfolderStepcurrent: mapValueOfType<int>(json, r'iEzsignfolderStepcurrent'),
         dtEzsignfolderClose: mapValueOfType<String>(json, r'dtEzsignfolderClose'),
         dtEzsignfolderArchive: mapValueOfType<String>(json, r'dtEzsignfolderArchive'),
         dtEzsignfolderDispose: mapValueOfType<String>(json, r'dtEzsignfolderDispose'),

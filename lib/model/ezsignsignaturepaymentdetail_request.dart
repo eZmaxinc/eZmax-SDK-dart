@@ -90,10 +90,14 @@ class EzsignsignaturepaymentdetailRequest {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignsignaturepaymentdetailRequest[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignsignaturepaymentdetailRequest[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiGlaccountcontainerID'), 'Required key "EzsignsignaturepaymentdetailRequest[fkiGlaccountcontainerID]" is missing from JSON.');
+        assert(json[r'fkiGlaccountcontainerID'] != null, 'Required key "EzsignsignaturepaymentdetailRequest[fkiGlaccountcontainerID]" has a null value in JSON.');
+        assert(json.containsKey(r'tEzsignsignaturepaymentdetailDescription'), 'Required key "EzsignsignaturepaymentdetailRequest[tEzsignsignaturepaymentdetailDescription]" is missing from JSON.');
+        assert(json[r'tEzsignsignaturepaymentdetailDescription'] != null, 'Required key "EzsignsignaturepaymentdetailRequest[tEzsignsignaturepaymentdetailDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'dEzsignsignaturepaymentdetailAmount'), 'Required key "EzsignsignaturepaymentdetailRequest[dEzsignsignaturepaymentdetailAmount]" is missing from JSON.');
+        assert(json[r'dEzsignsignaturepaymentdetailAmount'] != null, 'Required key "EzsignsignaturepaymentdetailRequest[dEzsignsignaturepaymentdetailAmount]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsignsignaturepaymentdetailTaxable'), 'Required key "EzsignsignaturepaymentdetailRequest[eEzsignsignaturepaymentdetailTaxable]" is missing from JSON.');
+        assert(json[r'eEzsignsignaturepaymentdetailTaxable'] != null, 'Required key "EzsignsignaturepaymentdetailRequest[eEzsignsignaturepaymentdetailTaxable]" has a null value in JSON.');
         return true;
       }());
 

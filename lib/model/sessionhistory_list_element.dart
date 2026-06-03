@@ -158,10 +158,18 @@ class SessionhistoryListElement {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "SessionhistoryListElement[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "SessionhistoryListElement[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiSessionhistoryID'), 'Required key "SessionhistoryListElement[pkiSessionhistoryID]" is missing from JSON.');
+        assert(json[r'pkiSessionhistoryID'] != null, 'Required key "SessionhistoryListElement[pkiSessionhistoryID]" has a null value in JSON.');
+        assert(json.containsKey(r'dtSessionhistoryFirsthit'), 'Required key "SessionhistoryListElement[dtSessionhistoryFirsthit]" is missing from JSON.');
+        assert(json[r'dtSessionhistoryFirsthit'] != null, 'Required key "SessionhistoryListElement[dtSessionhistoryFirsthit]" has a null value in JSON.');
+        assert(json.containsKey(r'dtSessionhistoryLasthit'), 'Required key "SessionhistoryListElement[dtSessionhistoryLasthit]" is missing from JSON.');
+        assert(json[r'dtSessionhistoryLasthit'] != null, 'Required key "SessionhistoryListElement[dtSessionhistoryLasthit]" has a null value in JSON.');
+        assert(json.containsKey(r'eSessionhistoryEndby'), 'Required key "SessionhistoryListElement[eSessionhistoryEndby]" is missing from JSON.');
+        assert(json[r'eSessionhistoryEndby'] != null, 'Required key "SessionhistoryListElement[eSessionhistoryEndby]" has a null value in JSON.');
+        assert(json.containsKey(r'sSessionhistoryDuration'), 'Required key "SessionhistoryListElement[sSessionhistoryDuration]" is missing from JSON.');
+        assert(json[r'sSessionhistoryDuration'] != null, 'Required key "SessionhistoryListElement[sSessionhistoryDuration]" has a null value in JSON.');
+        assert(json.containsKey(r'sSessionhistoryIP'), 'Required key "SessionhistoryListElement[sSessionhistoryIP]" is missing from JSON.');
+        assert(json[r'sSessionhistoryIP'] != null, 'Required key "SessionhistoryListElement[sSessionhistoryIP]" has a null value in JSON.');
         return true;
       }());
 

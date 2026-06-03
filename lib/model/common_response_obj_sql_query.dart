@@ -55,10 +55,10 @@ class CommonResponseObjSQLQuery {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CommonResponseObjSQLQuery[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CommonResponseObjSQLQuery[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sQuery'), 'Required key "CommonResponseObjSQLQuery[sQuery]" is missing from JSON.');
+        assert(json[r'sQuery'] != null, 'Required key "CommonResponseObjSQLQuery[sQuery]" has a null value in JSON.');
+        assert(json.containsKey(r'fDuration'), 'Required key "CommonResponseObjSQLQuery[fDuration]" is missing from JSON.');
+        assert(json[r'fDuration'] != null, 'Required key "CommonResponseObjSQLQuery[fDuration]" has a null value in JSON.');
         return true;
       }());
 

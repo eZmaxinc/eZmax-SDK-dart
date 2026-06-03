@@ -65,10 +65,12 @@ class InscriptionchecklistAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "InscriptionchecklistAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "InscriptionchecklistAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiInscriptionchecklistID'), 'Required key "InscriptionchecklistAutocompleteElementResponse[pkiInscriptionchecklistID]" is missing from JSON.');
+        assert(json[r'pkiInscriptionchecklistID'] != null, 'Required key "InscriptionchecklistAutocompleteElementResponse[pkiInscriptionchecklistID]" has a null value in JSON.');
+        assert(json.containsKey(r'sInscriptionchecklistelementNameX'), 'Required key "InscriptionchecklistAutocompleteElementResponse[sInscriptionchecklistelementNameX]" is missing from JSON.');
+        assert(json[r'sInscriptionchecklistelementNameX'] != null, 'Required key "InscriptionchecklistAutocompleteElementResponse[sInscriptionchecklistelementNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'bInscriptionchecklistIsactive'), 'Required key "InscriptionchecklistAutocompleteElementResponse[bInscriptionchecklistIsactive]" is missing from JSON.');
+        assert(json[r'bInscriptionchecklistIsactive'] != null, 'Required key "InscriptionchecklistAutocompleteElementResponse[bInscriptionchecklistIsactive]" has a null value in JSON.');
         return true;
       }());
 

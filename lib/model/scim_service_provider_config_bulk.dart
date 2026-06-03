@@ -62,10 +62,12 @@ class ScimServiceProviderConfigBulk {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "ScimServiceProviderConfigBulk[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "ScimServiceProviderConfigBulk[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'supported'), 'Required key "ScimServiceProviderConfigBulk[supported]" is missing from JSON.');
+        assert(json[r'supported'] != null, 'Required key "ScimServiceProviderConfigBulk[supported]" has a null value in JSON.');
+        assert(json.containsKey(r'maxOperations'), 'Required key "ScimServiceProviderConfigBulk[maxOperations]" is missing from JSON.');
+        assert(json[r'maxOperations'] != null, 'Required key "ScimServiceProviderConfigBulk[maxOperations]" has a null value in JSON.');
+        assert(json.containsKey(r'maxPayloadSize'), 'Required key "ScimServiceProviderConfigBulk[maxPayloadSize]" is missing from JSON.');
+        assert(json[r'maxPayloadSize'] != null, 'Required key "ScimServiceProviderConfigBulk[maxPayloadSize]" has a null value in JSON.');
         return true;
       }());
 

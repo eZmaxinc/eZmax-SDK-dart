@@ -47,10 +47,8 @@ class EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Response
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_pkiEzsigntemplatedocumentpagerecognitionID'), 'Required key "EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1ResponseMPayload[a_pkiEzsigntemplatedocumentpagerecognitionID]" is missing from JSON.');
+        assert(json[r'a_pkiEzsigntemplatedocumentpagerecognitionID'] != null, 'Required key "EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1ResponseMPayload[a_pkiEzsigntemplatedocumentpagerecognitionID]" has a null value in JSON.');
         return true;
       }());
 

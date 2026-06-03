@@ -65,10 +65,12 @@ class LeadsourceAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "LeadsourceAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "LeadsourceAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiLeadsourceID'), 'Required key "LeadsourceAutocompleteElementResponse[pkiLeadsourceID]" is missing from JSON.');
+        assert(json[r'pkiLeadsourceID'] != null, 'Required key "LeadsourceAutocompleteElementResponse[pkiLeadsourceID]" has a null value in JSON.');
+        assert(json.containsKey(r'sLeadsourceNameX'), 'Required key "LeadsourceAutocompleteElementResponse[sLeadsourceNameX]" is missing from JSON.');
+        assert(json[r'sLeadsourceNameX'] != null, 'Required key "LeadsourceAutocompleteElementResponse[sLeadsourceNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'bLeadsourceIsactive'), 'Required key "LeadsourceAutocompleteElementResponse[bLeadsourceIsactive]" is missing from JSON.');
+        assert(json[r'bLeadsourceIsactive'] != null, 'Required key "LeadsourceAutocompleteElementResponse[bLeadsourceIsactive]" has a null value in JSON.');
         return true;
       }());
 

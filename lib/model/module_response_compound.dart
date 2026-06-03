@@ -94,10 +94,18 @@ class ModuleResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "ModuleResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "ModuleResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiModuleID'), 'Required key "ModuleResponseCompound[pkiModuleID]" is missing from JSON.');
+        assert(json[r'pkiModuleID'] != null, 'Required key "ModuleResponseCompound[pkiModuleID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiModulegroupID'), 'Required key "ModuleResponseCompound[fkiModulegroupID]" is missing from JSON.');
+        assert(json[r'fkiModulegroupID'] != null, 'Required key "ModuleResponseCompound[fkiModulegroupID]" has a null value in JSON.');
+        assert(json.containsKey(r'eModuleInternalname'), 'Required key "ModuleResponseCompound[eModuleInternalname]" is missing from JSON.');
+        assert(json[r'eModuleInternalname'] != null, 'Required key "ModuleResponseCompound[eModuleInternalname]" has a null value in JSON.');
+        assert(json.containsKey(r'sModuleNameX'), 'Required key "ModuleResponseCompound[sModuleNameX]" is missing from JSON.');
+        assert(json[r'sModuleNameX'] != null, 'Required key "ModuleResponseCompound[sModuleNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'bModuleRegistered'), 'Required key "ModuleResponseCompound[bModuleRegistered]" is missing from JSON.');
+        assert(json[r'bModuleRegistered'] != null, 'Required key "ModuleResponseCompound[bModuleRegistered]" has a null value in JSON.');
+        assert(json.containsKey(r'bModuleRegisteredapi'), 'Required key "ModuleResponseCompound[bModuleRegisteredapi]" is missing from JSON.');
+        assert(json[r'bModuleRegisteredapi'] != null, 'Required key "ModuleResponseCompound[bModuleRegisteredapi]" has a null value in JSON.');
         return true;
       }());
 

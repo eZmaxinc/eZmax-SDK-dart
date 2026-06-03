@@ -180,10 +180,24 @@ class ContactResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "ContactResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "ContactResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiContactID'), 'Required key "ContactResponseCompound[pkiContactID]" is missing from JSON.');
+        assert(json[r'pkiContactID'] != null, 'Required key "ContactResponseCompound[pkiContactID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiLanguageID'), 'Required key "ContactResponseCompound[fkiLanguageID]" is missing from JSON.');
+        assert(json[r'fkiLanguageID'] != null, 'Required key "ContactResponseCompound[fkiLanguageID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiContacttitleID'), 'Required key "ContactResponseCompound[fkiContacttitleID]" is missing from JSON.');
+        assert(json[r'fkiContacttitleID'] != null, 'Required key "ContactResponseCompound[fkiContacttitleID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiContactinformationsID'), 'Required key "ContactResponseCompound[fkiContactinformationsID]" is missing from JSON.');
+        assert(json[r'fkiContactinformationsID'] != null, 'Required key "ContactResponseCompound[fkiContactinformationsID]" has a null value in JSON.');
+        assert(json.containsKey(r'eContactType'), 'Required key "ContactResponseCompound[eContactType]" is missing from JSON.');
+        assert(json[r'eContactType'] != null, 'Required key "ContactResponseCompound[eContactType]" has a null value in JSON.');
+        assert(json.containsKey(r'sContactFirstname'), 'Required key "ContactResponseCompound[sContactFirstname]" is missing from JSON.');
+        assert(json[r'sContactFirstname'] != null, 'Required key "ContactResponseCompound[sContactFirstname]" has a null value in JSON.');
+        assert(json.containsKey(r'sContactLastname'), 'Required key "ContactResponseCompound[sContactLastname]" is missing from JSON.');
+        assert(json[r'sContactLastname'] != null, 'Required key "ContactResponseCompound[sContactLastname]" has a null value in JSON.');
+        assert(json.containsKey(r'bContactIsactive'), 'Required key "ContactResponseCompound[bContactIsactive]" is missing from JSON.');
+        assert(json[r'bContactIsactive'] != null, 'Required key "ContactResponseCompound[bContactIsactive]" has a null value in JSON.');
+        assert(json.containsKey(r'objContactinformations'), 'Required key "ContactResponseCompound[objContactinformations]" is missing from JSON.');
+        assert(json[r'objContactinformations'] != null, 'Required key "ContactResponseCompound[objContactinformations]" has a null value in JSON.');
         return true;
       }());
 

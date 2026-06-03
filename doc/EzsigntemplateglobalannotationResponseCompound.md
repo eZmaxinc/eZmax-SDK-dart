@@ -9,8 +9,8 @@ import 'package:openapi/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiEzsigntemplateglobalannotationID** | **int** | The unique ID of the Ezsigntemplateglobalannotation | 
-**fkiEzsigntemplateglobaldocumentpageID** | **int** | The unique ID of the Ezsigntemplateglobaldocumentpage | 
-**fkiTextstylestaticID** | **int** | The unique ID of the Textstylestatic | 
+**fkiTextstylestaticID** | **int** | The unique ID of the Textstylestatic | [optional] 
+**objTextstylestatic** | [**TextstylestaticRequestCompound**](TextstylestaticRequestCompound.md) |  | [optional] 
 **eEzsigntemplateglobalannotationHorizontalalignment** | [**FieldEEzsigntemplateglobalannotationHorizontalalignment**](FieldEEzsigntemplateglobalannotationHorizontalalignment.md) |  | 
 **eEzsigntemplateglobalannotationVerticalalignment** | [**FieldEEzsigntemplateglobalannotationVerticalalignment**](FieldEEzsigntemplateglobalannotationVerticalalignment.md) |  | 
 **eEzsigntemplateglobalannotationType** | [**FieldEEzsigntemplateglobalannotationType**](FieldEEzsigntemplateglobalannotationType.md) |  | 
@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **iEzsigntemplateglobalannotationY** | **int** | The y of the Ezsigntemplateglobalannotation | 
 **iEzsigntemplateglobalannotationWidth** | **int** | The width of the Ezsigntemplateglobalannotation | 
 **iEzsigntemplateglobalannotationHeight** | **int** | The height of the Ezsigntemplateglobalannotation | 
+**iEzsigntemplateglobaldocumentpagePagenumber** | **int** | The page number in the Ezsigntemplateglobaldocument | 
 **sEzsigntemplateglobalannotationDescription** | **String** | The description of the Ezsigntemplateglobalannotation | 
 **sEzsigntemplateglobalannotationDefaulttext** | **String** | The defaulttext of the Ezsigntemplateglobalannotation | 
 **sEzsigntemplateglobalannotationDropdownvalues** | **String** | The dropdownvalues of the Ezsigntemplateglobalannotation | 

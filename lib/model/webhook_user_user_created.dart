@@ -60,10 +60,12 @@ class WebhookUserUserCreated {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "WebhookUserUserCreated[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "WebhookUserUserCreated[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'objWebhook'), 'Required key "WebhookUserUserCreated[objWebhook]" is missing from JSON.');
+        assert(json[r'objWebhook'] != null, 'Required key "WebhookUserUserCreated[objWebhook]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objAttempt'), 'Required key "WebhookUserUserCreated[a_objAttempt]" is missing from JSON.');
+        assert(json[r'a_objAttempt'] != null, 'Required key "WebhookUserUserCreated[a_objAttempt]" has a null value in JSON.');
+        assert(json.containsKey(r'objUser'), 'Required key "WebhookUserUserCreated[objUser]" is missing from JSON.');
+        assert(json[r'objUser'] != null, 'Required key "WebhookUserUserCreated[objUser]" has a null value in JSON.');
         return true;
       }());
 

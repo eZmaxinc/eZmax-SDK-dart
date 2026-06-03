@@ -23,16 +23,16 @@ class CustomDiscussionconfigurationResponse {
   /// If the added Discussionmembership will have access to the entire history or not
   bool bDiscussionconfigurationCompletehistorywhenadded;
 
-  /// If the the creation of the Discussion is allowed or not
+  /// If the creation of the Discussion is allowed or not
   bool bDiscussionconfigurationCreateallowed;
 
-  /// If the the destruction of the Discussion is allowed or not
+  /// If the destruction of the Discussion is allowed or not
   bool bDiscussionconfigurationDeleteallowed;
 
-  /// If the the destruction of the Discussionmessage is allowed or not
+  /// If the destruction of the Discussionmessage is allowed or not
   bool bDiscussionconfigurationDeletediscussionmessageallowed;
 
-  /// If the the creation of the Discussionmessage is allowed or not
+  /// If the creation of the Discussionmessage is allowed or not
   bool bDiscussionconfigurationEditdiscussionmessageallowed;
 
   @override
@@ -76,10 +76,16 @@ class CustomDiscussionconfigurationResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CustomDiscussionconfigurationResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CustomDiscussionconfigurationResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'bDiscussionconfigurationCompletehistorywhenadded'), 'Required key "CustomDiscussionconfigurationResponse[bDiscussionconfigurationCompletehistorywhenadded]" is missing from JSON.');
+        assert(json[r'bDiscussionconfigurationCompletehistorywhenadded'] != null, 'Required key "CustomDiscussionconfigurationResponse[bDiscussionconfigurationCompletehistorywhenadded]" has a null value in JSON.');
+        assert(json.containsKey(r'bDiscussionconfigurationCreateallowed'), 'Required key "CustomDiscussionconfigurationResponse[bDiscussionconfigurationCreateallowed]" is missing from JSON.');
+        assert(json[r'bDiscussionconfigurationCreateallowed'] != null, 'Required key "CustomDiscussionconfigurationResponse[bDiscussionconfigurationCreateallowed]" has a null value in JSON.');
+        assert(json.containsKey(r'bDiscussionconfigurationDeleteallowed'), 'Required key "CustomDiscussionconfigurationResponse[bDiscussionconfigurationDeleteallowed]" is missing from JSON.');
+        assert(json[r'bDiscussionconfigurationDeleteallowed'] != null, 'Required key "CustomDiscussionconfigurationResponse[bDiscussionconfigurationDeleteallowed]" has a null value in JSON.');
+        assert(json.containsKey(r'bDiscussionconfigurationDeletediscussionmessageallowed'), 'Required key "CustomDiscussionconfigurationResponse[bDiscussionconfigurationDeletediscussionmessageallowed]" is missing from JSON.');
+        assert(json[r'bDiscussionconfigurationDeletediscussionmessageallowed'] != null, 'Required key "CustomDiscussionconfigurationResponse[bDiscussionconfigurationDeletediscussionmessageallowed]" has a null value in JSON.');
+        assert(json.containsKey(r'bDiscussionconfigurationEditdiscussionmessageallowed'), 'Required key "CustomDiscussionconfigurationResponse[bDiscussionconfigurationEditdiscussionmessageallowed]" is missing from JSON.');
+        assert(json[r'bDiscussionconfigurationEditdiscussionmessageallowed'] != null, 'Required key "CustomDiscussionconfigurationResponse[bDiscussionconfigurationEditdiscussionmessageallowed]" has a null value in JSON.');
         return true;
       }());
 

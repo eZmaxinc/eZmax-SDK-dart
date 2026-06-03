@@ -102,10 +102,20 @@ class EzsignpageResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignpageResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignpageResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsignpageID'), 'Required key "EzsignpageResponseCompound[pkiEzsignpageID]" is missing from JSON.');
+        assert(json[r'pkiEzsignpageID'] != null, 'Required key "EzsignpageResponseCompound[pkiEzsignpageID]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignpageWidthimage'), 'Required key "EzsignpageResponseCompound[iEzsignpageWidthimage]" is missing from JSON.');
+        assert(json[r'iEzsignpageWidthimage'] != null, 'Required key "EzsignpageResponseCompound[iEzsignpageWidthimage]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignpageHeightimage'), 'Required key "EzsignpageResponseCompound[iEzsignpageHeightimage]" is missing from JSON.');
+        assert(json[r'iEzsignpageHeightimage'] != null, 'Required key "EzsignpageResponseCompound[iEzsignpageHeightimage]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignpageWidthpdf'), 'Required key "EzsignpageResponseCompound[iEzsignpageWidthpdf]" is missing from JSON.');
+        assert(json[r'iEzsignpageWidthpdf'] != null, 'Required key "EzsignpageResponseCompound[iEzsignpageWidthpdf]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignpageHeightpdf'), 'Required key "EzsignpageResponseCompound[iEzsignpageHeightpdf]" is missing from JSON.');
+        assert(json[r'iEzsignpageHeightpdf'] != null, 'Required key "EzsignpageResponseCompound[iEzsignpageHeightpdf]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignpagePagenumber'), 'Required key "EzsignpageResponseCompound[iEzsignpagePagenumber]" is missing from JSON.');
+        assert(json[r'iEzsignpagePagenumber'] != null, 'Required key "EzsignpageResponseCompound[iEzsignpagePagenumber]" has a null value in JSON.');
+        assert(json.containsKey(r'sComputedImageurl'), 'Required key "EzsignpageResponseCompound[sComputedImageurl]" is missing from JSON.');
+        assert(json[r'sComputedImageurl'] != null, 'Required key "EzsignpageResponseCompound[sComputedImageurl]" has a null value in JSON.');
         return true;
       }());
 

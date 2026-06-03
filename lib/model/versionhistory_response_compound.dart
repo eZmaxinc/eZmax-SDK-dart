@@ -181,10 +181,16 @@ class VersionhistoryResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "VersionhistoryResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "VersionhistoryResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiVersionhistoryID'), 'Required key "VersionhistoryResponseCompound[pkiVersionhistoryID]" is missing from JSON.');
+        assert(json[r'pkiVersionhistoryID'] != null, 'Required key "VersionhistoryResponseCompound[pkiVersionhistoryID]" has a null value in JSON.');
+        assert(json.containsKey(r'objVersionhistoryDetail'), 'Required key "VersionhistoryResponseCompound[objVersionhistoryDetail]" is missing from JSON.');
+        assert(json[r'objVersionhistoryDetail'] != null, 'Required key "VersionhistoryResponseCompound[objVersionhistoryDetail]" has a null value in JSON.');
+        assert(json.containsKey(r'dtVersionhistoryDate'), 'Required key "VersionhistoryResponseCompound[dtVersionhistoryDate]" is missing from JSON.');
+        assert(json[r'dtVersionhistoryDate'] != null, 'Required key "VersionhistoryResponseCompound[dtVersionhistoryDate]" has a null value in JSON.');
+        assert(json.containsKey(r'eVersionhistoryType'), 'Required key "VersionhistoryResponseCompound[eVersionhistoryType]" is missing from JSON.');
+        assert(json[r'eVersionhistoryType'] != null, 'Required key "VersionhistoryResponseCompound[eVersionhistoryType]" has a null value in JSON.');
+        assert(json.containsKey(r'bVersionhistoryDraft'), 'Required key "VersionhistoryResponseCompound[bVersionhistoryDraft]" is missing from JSON.');
+        assert(json[r'bVersionhistoryDraft'] != null, 'Required key "VersionhistoryResponseCompound[bVersionhistoryDraft]" has a null value in JSON.');
         return true;
       }());
 

@@ -74,10 +74,10 @@ class AuthenticationexternalRequest {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "AuthenticationexternalRequest[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "AuthenticationexternalRequest[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sAuthenticationexternalDescription'), 'Required key "AuthenticationexternalRequest[sAuthenticationexternalDescription]" is missing from JSON.');
+        assert(json[r'sAuthenticationexternalDescription'] != null, 'Required key "AuthenticationexternalRequest[sAuthenticationexternalDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'eAuthenticationexternalType'), 'Required key "AuthenticationexternalRequest[eAuthenticationexternalType]" is missing from JSON.');
+        assert(json[r'eAuthenticationexternalType'] != null, 'Required key "AuthenticationexternalRequest[eAuthenticationexternalType]" has a null value in JSON.');
         return true;
       }());
 

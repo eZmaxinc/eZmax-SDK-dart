@@ -80,10 +80,16 @@ class ProvinceAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "ProvinceAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "ProvinceAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiProvinceID'), 'Required key "ProvinceAutocompleteElementResponse[pkiProvinceID]" is missing from JSON.');
+        assert(json[r'pkiProvinceID'] != null, 'Required key "ProvinceAutocompleteElementResponse[pkiProvinceID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiCountryID'), 'Required key "ProvinceAutocompleteElementResponse[fkiCountryID]" is missing from JSON.');
+        assert(json[r'fkiCountryID'] != null, 'Required key "ProvinceAutocompleteElementResponse[fkiCountryID]" has a null value in JSON.');
+        assert(json.containsKey(r'sProvinceNameX'), 'Required key "ProvinceAutocompleteElementResponse[sProvinceNameX]" is missing from JSON.');
+        assert(json[r'sProvinceNameX'] != null, 'Required key "ProvinceAutocompleteElementResponse[sProvinceNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'sProvinceShortname'), 'Required key "ProvinceAutocompleteElementResponse[sProvinceShortname]" is missing from JSON.');
+        assert(json[r'sProvinceShortname'] != null, 'Required key "ProvinceAutocompleteElementResponse[sProvinceShortname]" has a null value in JSON.');
+        assert(json.containsKey(r'bProvinceIsactive'), 'Required key "ProvinceAutocompleteElementResponse[bProvinceIsactive]" is missing from JSON.');
+        assert(json[r'bProvinceIsactive'] != null, 'Required key "ProvinceAutocompleteElementResponse[bProvinceIsactive]" has a null value in JSON.');
         return true;
       }());
 

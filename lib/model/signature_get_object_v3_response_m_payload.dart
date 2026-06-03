@@ -47,10 +47,8 @@ class SignatureGetObjectV3ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "SignatureGetObjectV3ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "SignatureGetObjectV3ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'objSignature'), 'Required key "SignatureGetObjectV3ResponseMPayload[objSignature]" is missing from JSON.');
+        assert(json[r'objSignature'] != null, 'Required key "SignatureGetObjectV3ResponseMPayload[objSignature]" has a null value in JSON.');
         return true;
       }());
 

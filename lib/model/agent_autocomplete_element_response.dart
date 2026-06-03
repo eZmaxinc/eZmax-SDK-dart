@@ -80,10 +80,16 @@ class AgentAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "AgentAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "AgentAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiAgentID'), 'Required key "AgentAutocompleteElementResponse[pkiAgentID]" is missing from JSON.');
+        assert(json[r'pkiAgentID'] != null, 'Required key "AgentAutocompleteElementResponse[pkiAgentID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiDepartmentID'), 'Required key "AgentAutocompleteElementResponse[fkiDepartmentID]" is missing from JSON.');
+        assert(json[r'fkiDepartmentID'] != null, 'Required key "AgentAutocompleteElementResponse[fkiDepartmentID]" has a null value in JSON.');
+        assert(json.containsKey(r'sContactFirstname'), 'Required key "AgentAutocompleteElementResponse[sContactFirstname]" is missing from JSON.');
+        assert(json[r'sContactFirstname'] != null, 'Required key "AgentAutocompleteElementResponse[sContactFirstname]" has a null value in JSON.');
+        assert(json.containsKey(r'sContactLastname'), 'Required key "AgentAutocompleteElementResponse[sContactLastname]" is missing from JSON.');
+        assert(json[r'sContactLastname'] != null, 'Required key "AgentAutocompleteElementResponse[sContactLastname]" has a null value in JSON.');
+        assert(json.containsKey(r'bAgentIsactive'), 'Required key "AgentAutocompleteElementResponse[bAgentIsactive]" is missing from JSON.');
+        assert(json[r'bAgentIsactive'] != null, 'Required key "AgentAutocompleteElementResponse[bAgentIsactive]" has a null value in JSON.');
         return true;
       }());
 

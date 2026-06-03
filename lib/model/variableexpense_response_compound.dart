@@ -107,10 +107,10 @@ class VariableexpenseResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "VariableexpenseResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "VariableexpenseResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiVariableexpenseID'), 'Required key "VariableexpenseResponseCompound[pkiVariableexpenseID]" is missing from JSON.');
+        assert(json[r'pkiVariableexpenseID'] != null, 'Required key "VariableexpenseResponseCompound[pkiVariableexpenseID]" has a null value in JSON.');
+        assert(json.containsKey(r'objVariableexpenseDescription'), 'Required key "VariableexpenseResponseCompound[objVariableexpenseDescription]" is missing from JSON.');
+        assert(json[r'objVariableexpenseDescription'] != null, 'Required key "VariableexpenseResponseCompound[objVariableexpenseDescription]" has a null value in JSON.');
         return true;
       }());
 

@@ -89,10 +89,14 @@ class CustomFormDataSignerResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CustomFormDataSignerResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CustomFormDataSignerResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiEzsignfoldersignerassociationID'), 'Required key "CustomFormDataSignerResponse[fkiEzsignfoldersignerassociationID]" is missing from JSON.');
+        assert(json[r'fkiEzsignfoldersignerassociationID'] != null, 'Required key "CustomFormDataSignerResponse[fkiEzsignfoldersignerassociationID]" has a null value in JSON.');
+        assert(json.containsKey(r'sContactFirstname'), 'Required key "CustomFormDataSignerResponse[sContactFirstname]" is missing from JSON.');
+        assert(json[r'sContactFirstname'] != null, 'Required key "CustomFormDataSignerResponse[sContactFirstname]" has a null value in JSON.');
+        assert(json.containsKey(r'sContactLastname'), 'Required key "CustomFormDataSignerResponse[sContactLastname]" is missing from JSON.');
+        assert(json[r'sContactLastname'] != null, 'Required key "CustomFormDataSignerResponse[sContactLastname]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objEzsignformfieldgroup'), 'Required key "CustomFormDataSignerResponse[a_objEzsignformfieldgroup]" is missing from JSON.');
+        assert(json[r'a_objEzsignformfieldgroup'] != null, 'Required key "CustomFormDataSignerResponse[a_objEzsignformfieldgroup]" has a null value in JSON.');
         return true;
       }());
 

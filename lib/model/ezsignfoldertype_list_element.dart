@@ -71,10 +71,14 @@ class EzsignfoldertypeListElement {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignfoldertypeListElement[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignfoldertypeListElement[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsignfoldertypeID'), 'Required key "EzsignfoldertypeListElement[pkiEzsignfoldertypeID]" is missing from JSON.');
+        assert(json[r'pkiEzsignfoldertypeID'] != null, 'Required key "EzsignfoldertypeListElement[pkiEzsignfoldertypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsignfoldertypePrivacylevel'), 'Required key "EzsignfoldertypeListElement[eEzsignfoldertypePrivacylevel]" is missing from JSON.');
+        assert(json[r'eEzsignfoldertypePrivacylevel'] != null, 'Required key "EzsignfoldertypeListElement[eEzsignfoldertypePrivacylevel]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsignfoldertypeNameX'), 'Required key "EzsignfoldertypeListElement[sEzsignfoldertypeNameX]" is missing from JSON.');
+        assert(json[r'sEzsignfoldertypeNameX'] != null, 'Required key "EzsignfoldertypeListElement[sEzsignfoldertypeNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignfoldertypeIsactive'), 'Required key "EzsignfoldertypeListElement[bEzsignfoldertypeIsactive]" is missing from JSON.');
+        assert(json[r'bEzsignfoldertypeIsactive'] != null, 'Required key "EzsignfoldertypeListElement[bEzsignfoldertypeIsactive]" has a null value in JSON.');
         return true;
       }());
 

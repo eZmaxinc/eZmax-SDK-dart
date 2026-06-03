@@ -124,10 +124,20 @@ class DiscussionResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "DiscussionResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "DiscussionResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiDiscussionID'), 'Required key "DiscussionResponseCompound[pkiDiscussionID]" is missing from JSON.');
+        assert(json[r'pkiDiscussionID'] != null, 'Required key "DiscussionResponseCompound[pkiDiscussionID]" has a null value in JSON.');
+        assert(json.containsKey(r'sDiscussionDescription'), 'Required key "DiscussionResponseCompound[sDiscussionDescription]" is missing from JSON.');
+        assert(json[r'sDiscussionDescription'] != null, 'Required key "DiscussionResponseCompound[sDiscussionDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'bDiscussionClosed'), 'Required key "DiscussionResponseCompound[bDiscussionClosed]" is missing from JSON.');
+        assert(json[r'bDiscussionClosed'] != null, 'Required key "DiscussionResponseCompound[bDiscussionClosed]" has a null value in JSON.');
+        assert(json.containsKey(r'iDiscussionmessageCount'), 'Required key "DiscussionResponseCompound[iDiscussionmessageCount]" is missing from JSON.');
+        assert(json[r'iDiscussionmessageCount'] != null, 'Required key "DiscussionResponseCompound[iDiscussionmessageCount]" has a null value in JSON.');
+        assert(json.containsKey(r'iDiscussionmessageCountunread'), 'Required key "DiscussionResponseCompound[iDiscussionmessageCountunread]" is missing from JSON.');
+        assert(json[r'iDiscussionmessageCountunread'] != null, 'Required key "DiscussionResponseCompound[iDiscussionmessageCountunread]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objDiscussionmembership'), 'Required key "DiscussionResponseCompound[a_objDiscussionmembership]" is missing from JSON.');
+        assert(json[r'a_objDiscussionmembership'] != null, 'Required key "DiscussionResponseCompound[a_objDiscussionmembership]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objDiscussionmessage'), 'Required key "DiscussionResponseCompound[a_objDiscussionmessage]" is missing from JSON.');
+        assert(json[r'a_objDiscussionmessage'] != null, 'Required key "DiscussionResponseCompound[a_objDiscussionmessage]" has a null value in JSON.');
         return true;
       }());
 

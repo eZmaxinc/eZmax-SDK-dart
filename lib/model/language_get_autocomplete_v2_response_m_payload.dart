@@ -48,10 +48,8 @@ class LanguageGetAutocompleteV2ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "LanguageGetAutocompleteV2ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "LanguageGetAutocompleteV2ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_objLanguage'), 'Required key "LanguageGetAutocompleteV2ResponseMPayload[a_objLanguage]" is missing from JSON.');
+        assert(json[r'a_objLanguage'] != null, 'Required key "LanguageGetAutocompleteV2ResponseMPayload[a_objLanguage]" has a null value in JSON.');
         return true;
       }());
 

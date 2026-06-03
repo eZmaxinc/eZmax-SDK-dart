@@ -47,10 +47,8 @@ class EzsigntemplatesignerGetObjectV2ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplatesignerGetObjectV2ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplatesignerGetObjectV2ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'objEzsigntemplatesigner'), 'Required key "EzsigntemplatesignerGetObjectV2ResponseMPayload[objEzsigntemplatesigner]" is missing from JSON.');
+        assert(json[r'objEzsigntemplatesigner'] != null, 'Required key "EzsigntemplatesignerGetObjectV2ResponseMPayload[objEzsigntemplatesigner]" has a null value in JSON.');
         return true;
       }());
 

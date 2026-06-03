@@ -76,10 +76,16 @@ class CommonResponseObjDebug {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CommonResponseObjDebug[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CommonResponseObjDebug[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sMemoryUsage'), 'Required key "CommonResponseObjDebug[sMemoryUsage]" is missing from JSON.');
+        assert(json[r'sMemoryUsage'] != null, 'Required key "CommonResponseObjDebug[sMemoryUsage]" has a null value in JSON.');
+        assert(json.containsKey(r'sRunTime'), 'Required key "CommonResponseObjDebug[sRunTime]" is missing from JSON.');
+        assert(json[r'sRunTime'] != null, 'Required key "CommonResponseObjDebug[sRunTime]" has a null value in JSON.');
+        assert(json.containsKey(r'iSQLSelects'), 'Required key "CommonResponseObjDebug[iSQLSelects]" is missing from JSON.');
+        assert(json[r'iSQLSelects'] != null, 'Required key "CommonResponseObjDebug[iSQLSelects]" has a null value in JSON.');
+        assert(json.containsKey(r'iSQLQueries'), 'Required key "CommonResponseObjDebug[iSQLQueries]" is missing from JSON.');
+        assert(json[r'iSQLQueries'] != null, 'Required key "CommonResponseObjDebug[iSQLQueries]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objSQLQuery'), 'Required key "CommonResponseObjDebug[a_objSQLQuery]" is missing from JSON.');
+        assert(json[r'a_objSQLQuery'] != null, 'Required key "CommonResponseObjDebug[a_objSQLQuery]" has a null value in JSON.');
         return true;
       }());
 

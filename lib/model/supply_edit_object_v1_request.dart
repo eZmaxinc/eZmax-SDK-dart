@@ -47,10 +47,8 @@ class SupplyEditObjectV1Request {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "SupplyEditObjectV1Request[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "SupplyEditObjectV1Request[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'objSupply'), 'Required key "SupplyEditObjectV1Request[objSupply]" is missing from JSON.');
+        assert(json[r'objSupply'] != null, 'Required key "SupplyEditObjectV1Request[objSupply]" has a null value in JSON.');
         return true;
       }());
 

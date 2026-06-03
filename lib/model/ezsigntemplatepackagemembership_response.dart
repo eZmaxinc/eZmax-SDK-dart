@@ -77,10 +77,14 @@ class EzsigntemplatepackagemembershipResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplatepackagemembershipResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplatepackagemembershipResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsigntemplatepackagemembershipID'), 'Required key "EzsigntemplatepackagemembershipResponse[pkiEzsigntemplatepackagemembershipID]" is missing from JSON.');
+        assert(json[r'pkiEzsigntemplatepackagemembershipID'] != null, 'Required key "EzsigntemplatepackagemembershipResponse[pkiEzsigntemplatepackagemembershipID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiEzsigntemplatepackageID'), 'Required key "EzsigntemplatepackagemembershipResponse[fkiEzsigntemplatepackageID]" is missing from JSON.');
+        assert(json[r'fkiEzsigntemplatepackageID'] != null, 'Required key "EzsigntemplatepackagemembershipResponse[fkiEzsigntemplatepackageID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiEzsigntemplateID'), 'Required key "EzsigntemplatepackagemembershipResponse[fkiEzsigntemplateID]" is missing from JSON.');
+        assert(json[r'fkiEzsigntemplateID'] != null, 'Required key "EzsigntemplatepackagemembershipResponse[fkiEzsigntemplateID]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigntemplatepackagemembershipOrder'), 'Required key "EzsigntemplatepackagemembershipResponse[iEzsigntemplatepackagemembershipOrder]" is missing from JSON.');
+        assert(json[r'iEzsigntemplatepackagemembershipOrder'] != null, 'Required key "EzsigntemplatepackagemembershipResponse[iEzsigntemplatepackagemembershipOrder]" has a null value in JSON.');
         return true;
       }());
 

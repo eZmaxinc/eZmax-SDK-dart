@@ -55,10 +55,10 @@ class CustomDropdownElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CustomDropdownElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CustomDropdownElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sLabel'), 'Required key "CustomDropdownElementResponse[sLabel]" is missing from JSON.');
+        assert(json[r'sLabel'] != null, 'Required key "CustomDropdownElementResponse[sLabel]" has a null value in JSON.');
+        assert(json.containsKey(r'sValue'), 'Required key "CustomDropdownElementResponse[sValue]" is missing from JSON.');
+        assert(json[r'sValue'] != null, 'Required key "CustomDropdownElementResponse[sValue]" has a null value in JSON.');
         return true;
       }());
 

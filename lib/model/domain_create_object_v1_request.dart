@@ -47,10 +47,8 @@ class DomainCreateObjectV1Request {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "DomainCreateObjectV1Request[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "DomainCreateObjectV1Request[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_objDomain'), 'Required key "DomainCreateObjectV1Request[a_objDomain]" is missing from JSON.');
+        assert(json[r'a_objDomain'] != null, 'Required key "DomainCreateObjectV1Request[a_objDomain]" has a null value in JSON.');
         return true;
       }());
 

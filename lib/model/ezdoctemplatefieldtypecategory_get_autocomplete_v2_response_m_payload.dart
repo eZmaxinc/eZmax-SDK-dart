@@ -48,10 +48,8 @@ class EzdoctemplatefieldtypecategoryGetAutocompleteV2ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzdoctemplatefieldtypecategoryGetAutocompleteV2ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzdoctemplatefieldtypecategoryGetAutocompleteV2ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_objEzdoctemplatefieldtypecategory'), 'Required key "EzdoctemplatefieldtypecategoryGetAutocompleteV2ResponseMPayload[a_objEzdoctemplatefieldtypecategory]" is missing from JSON.');
+        assert(json[r'a_objEzdoctemplatefieldtypecategory'] != null, 'Required key "EzdoctemplatefieldtypecategoryGetAutocompleteV2ResponseMPayload[a_objEzdoctemplatefieldtypecategory]" has a null value in JSON.');
         return true;
       }());
 

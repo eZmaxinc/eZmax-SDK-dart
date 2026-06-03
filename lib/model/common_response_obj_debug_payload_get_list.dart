@@ -108,10 +108,24 @@ class CommonResponseObjDebugPayloadGetList {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CommonResponseObjDebugPayloadGetList[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CommonResponseObjDebugPayloadGetList[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'iVersionMin'), 'Required key "CommonResponseObjDebugPayloadGetList[iVersionMin]" is missing from JSON.');
+        assert(json[r'iVersionMin'] != null, 'Required key "CommonResponseObjDebugPayloadGetList[iVersionMin]" has a null value in JSON.');
+        assert(json.containsKey(r'iVersionMax'), 'Required key "CommonResponseObjDebugPayloadGetList[iVersionMax]" is missing from JSON.');
+        assert(json[r'iVersionMax'] != null, 'Required key "CommonResponseObjDebugPayloadGetList[iVersionMax]" has a null value in JSON.');
+        assert(json.containsKey(r'a_RequiredPermission'), 'Required key "CommonResponseObjDebugPayloadGetList[a_RequiredPermission]" is missing from JSON.');
+        assert(json[r'a_RequiredPermission'] != null, 'Required key "CommonResponseObjDebugPayloadGetList[a_RequiredPermission]" has a null value in JSON.');
+        assert(json.containsKey(r'bVersionDeprecated'), 'Required key "CommonResponseObjDebugPayloadGetList[bVersionDeprecated]" is missing from JSON.');
+        assert(json[r'bVersionDeprecated'] != null, 'Required key "CommonResponseObjDebugPayloadGetList[bVersionDeprecated]" has a null value in JSON.');
+        assert(json.containsKey(r'dtResponseDate'), 'Required key "CommonResponseObjDebugPayloadGetList[dtResponseDate]" is missing from JSON.');
+        assert(json[r'dtResponseDate'] != null, 'Required key "CommonResponseObjDebugPayloadGetList[dtResponseDate]" has a null value in JSON.');
+        assert(json.containsKey(r'a_Filter'), 'Required key "CommonResponseObjDebugPayloadGetList[a_Filter]" is missing from JSON.');
+        assert(json[r'a_Filter'] != null, 'Required key "CommonResponseObjDebugPayloadGetList[a_Filter]" has a null value in JSON.');
+        assert(json.containsKey(r'a_OrderBy'), 'Required key "CommonResponseObjDebugPayloadGetList[a_OrderBy]" is missing from JSON.');
+        assert(json[r'a_OrderBy'] != null, 'Required key "CommonResponseObjDebugPayloadGetList[a_OrderBy]" has a null value in JSON.');
+        assert(json.containsKey(r'iRowMax'), 'Required key "CommonResponseObjDebugPayloadGetList[iRowMax]" is missing from JSON.');
+        assert(json[r'iRowMax'] != null, 'Required key "CommonResponseObjDebugPayloadGetList[iRowMax]" has a null value in JSON.');
+        assert(json.containsKey(r'iRowOffset'), 'Required key "CommonResponseObjDebugPayloadGetList[iRowOffset]" is missing from JSON.');
+        assert(json[r'iRowOffset'] != null, 'Required key "CommonResponseObjDebugPayloadGetList[iRowOffset]" has a null value in JSON.');
         return true;
       }());
 

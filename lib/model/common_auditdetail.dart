@@ -114,10 +114,16 @@ class CommonAuditdetail {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CommonAuditdetail[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CommonAuditdetail[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiUserID'), 'Required key "CommonAuditdetail[fkiUserID]" is missing from JSON.');
+        assert(json[r'fkiUserID'] != null, 'Required key "CommonAuditdetail[fkiUserID]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserLoginname'), 'Required key "CommonAuditdetail[sUserLoginname]" is missing from JSON.');
+        assert(json[r'sUserLoginname'] != null, 'Required key "CommonAuditdetail[sUserLoginname]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserLastname'), 'Required key "CommonAuditdetail[sUserLastname]" is missing from JSON.');
+        assert(json[r'sUserLastname'] != null, 'Required key "CommonAuditdetail[sUserLastname]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserFirstname'), 'Required key "CommonAuditdetail[sUserFirstname]" is missing from JSON.');
+        assert(json[r'sUserFirstname'] != null, 'Required key "CommonAuditdetail[sUserFirstname]" has a null value in JSON.');
+        assert(json.containsKey(r'dtAuditdetailDate'), 'Required key "CommonAuditdetail[dtAuditdetailDate]" is missing from JSON.');
+        assert(json[r'dtAuditdetailDate'] != null, 'Required key "CommonAuditdetail[dtAuditdetailDate]" has a null value in JSON.');
         return true;
       }());
 

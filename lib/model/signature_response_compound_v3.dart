@@ -80,10 +80,16 @@ class SignatureResponseCompoundV3 {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "SignatureResponseCompoundV3[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "SignatureResponseCompoundV3[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiSignatureID'), 'Required key "SignatureResponseCompoundV3[pkiSignatureID]" is missing from JSON.');
+        assert(json[r'pkiSignatureID'] != null, 'Required key "SignatureResponseCompoundV3[pkiSignatureID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiFontID'), 'Required key "SignatureResponseCompoundV3[fkiFontID]" is missing from JSON.');
+        assert(json[r'fkiFontID'] != null, 'Required key "SignatureResponseCompoundV3[fkiFontID]" has a null value in JSON.');
+        assert(json.containsKey(r'eSignaturePreference'), 'Required key "SignatureResponseCompoundV3[eSignaturePreference]" is missing from JSON.');
+        assert(json[r'eSignaturePreference'] != null, 'Required key "SignatureResponseCompoundV3[eSignaturePreference]" has a null value in JSON.');
+        assert(json.containsKey(r'bSignatureSvg'), 'Required key "SignatureResponseCompoundV3[bSignatureSvg]" is missing from JSON.');
+        assert(json[r'bSignatureSvg'] != null, 'Required key "SignatureResponseCompoundV3[bSignatureSvg]" has a null value in JSON.');
+        assert(json.containsKey(r'bSignatureSvginitials'), 'Required key "SignatureResponseCompoundV3[bSignatureSvginitials]" is missing from JSON.');
+        assert(json[r'bSignatureSvginitials'] != null, 'Required key "SignatureResponseCompoundV3[bSignatureSvginitials]" has a null value in JSON.');
         return true;
       }());
 

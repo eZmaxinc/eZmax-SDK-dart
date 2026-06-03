@@ -72,10 +72,14 @@ class RealestateassociationAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "RealestateassociationAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "RealestateassociationAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiRealestateassociationID'), 'Required key "RealestateassociationAutocompleteElementResponse[pkiRealestateassociationID]" is missing from JSON.');
+        assert(json[r'pkiRealestateassociationID'] != null, 'Required key "RealestateassociationAutocompleteElementResponse[pkiRealestateassociationID]" has a null value in JSON.');
+        assert(json.containsKey(r'sRealestateassociationNameX'), 'Required key "RealestateassociationAutocompleteElementResponse[sRealestateassociationNameX]" is missing from JSON.');
+        assert(json[r'sRealestateassociationNameX'] != null, 'Required key "RealestateassociationAutocompleteElementResponse[sRealestateassociationNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'sRealestateassociationAcronymX'), 'Required key "RealestateassociationAutocompleteElementResponse[sRealestateassociationAcronymX]" is missing from JSON.');
+        assert(json[r'sRealestateassociationAcronymX'] != null, 'Required key "RealestateassociationAutocompleteElementResponse[sRealestateassociationAcronymX]" has a null value in JSON.');
+        assert(json.containsKey(r'bRealestateassociationIsactive'), 'Required key "RealestateassociationAutocompleteElementResponse[bRealestateassociationIsactive]" is missing from JSON.');
+        assert(json[r'bRealestateassociationIsactive'] != null, 'Required key "RealestateassociationAutocompleteElementResponse[bRealestateassociationIsactive]" has a null value in JSON.');
         return true;
       }());
 

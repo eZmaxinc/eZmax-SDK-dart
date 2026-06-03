@@ -14,8 +14,8 @@ class EzsigntemplateannotationResponseCompound {
   /// Returns a new [EzsigntemplateannotationResponseCompound] instance.
   EzsigntemplateannotationResponseCompound({
     required this.pkiEzsigntemplateannotationID,
-    required this.fkiEzsigntemplatedocumentpageID,
-    required this.fkiTextstylestaticID,
+    this.fkiTextstylestaticID,
+    this.objTextstylestatic,
     required this.eEzsigntemplateannotationHorizontalalignment,
     required this.eEzsigntemplateannotationVerticalalignment,
     required this.eEzsigntemplateannotationType,
@@ -23,9 +23,10 @@ class EzsigntemplateannotationResponseCompound {
     required this.iEzsigntemplateannotationY,
     required this.iEzsigntemplateannotationWidth,
     required this.iEzsigntemplateannotationHeight,
+    required this.iEzsigntemplatedocumentpagePagenumber,
     required this.sEzsigntemplateannotationDescription,
     required this.sEzsigntemplateannotationDefaulttext,
-    required this.sEzsigntemplateannotationnDropdownvalues,
+    required this.sEzsigntemplateannotationDropdownvalues,
   });
 
   /// The unique ID of the Ezsigntemplateannotation
@@ -34,15 +35,24 @@ class EzsigntemplateannotationResponseCompound {
   /// Maximum value: 16777215
   int pkiEzsigntemplateannotationID;
 
-  /// The unique ID of the Ezsigntemplatedocumentpage
-  ///
-  /// Minimum value: 0
-  int fkiEzsigntemplatedocumentpageID;
-
   /// The unique ID of the Textstylestatic
   ///
   /// Minimum value: 0
-  int fkiTextstylestaticID;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiTextstylestaticID;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  TextstylestaticRequestCompound? objTextstylestatic;
 
   FieldEEzsigntemplateannotationHorizontalalignment eEzsigntemplateannotationHorizontalalignment;
 
@@ -74,6 +84,11 @@ class EzsigntemplateannotationResponseCompound {
   /// Maximum value: 65535
   int iEzsigntemplateannotationHeight;
 
+  /// The page number in the Ezsigntemplatedocument
+  ///
+  /// Minimum value: 1
+  int iEzsigntemplatedocumentpagePagenumber;
+
   /// The description of the Ezsigntemplateannotation
   String sEzsigntemplateannotationDescription;
 
@@ -81,13 +96,13 @@ class EzsigntemplateannotationResponseCompound {
   String sEzsigntemplateannotationDefaulttext;
 
   /// The ndropdownvalues of the Ezsigntemplateannotation
-  String sEzsigntemplateannotationnDropdownvalues;
+  String sEzsigntemplateannotationDropdownvalues;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplateannotationResponseCompound &&
     other.pkiEzsigntemplateannotationID == pkiEzsigntemplateannotationID &&
-    other.fkiEzsigntemplatedocumentpageID == fkiEzsigntemplatedocumentpageID &&
     other.fkiTextstylestaticID == fkiTextstylestaticID &&
+    other.objTextstylestatic == objTextstylestatic &&
     other.eEzsigntemplateannotationHorizontalalignment == eEzsigntemplateannotationHorizontalalignment &&
     other.eEzsigntemplateannotationVerticalalignment == eEzsigntemplateannotationVerticalalignment &&
     other.eEzsigntemplateannotationType == eEzsigntemplateannotationType &&
@@ -95,16 +110,17 @@ class EzsigntemplateannotationResponseCompound {
     other.iEzsigntemplateannotationY == iEzsigntemplateannotationY &&
     other.iEzsigntemplateannotationWidth == iEzsigntemplateannotationWidth &&
     other.iEzsigntemplateannotationHeight == iEzsigntemplateannotationHeight &&
+    other.iEzsigntemplatedocumentpagePagenumber == iEzsigntemplatedocumentpagePagenumber &&
     other.sEzsigntemplateannotationDescription == sEzsigntemplateannotationDescription &&
     other.sEzsigntemplateannotationDefaulttext == sEzsigntemplateannotationDefaulttext &&
-    other.sEzsigntemplateannotationnDropdownvalues == sEzsigntemplateannotationnDropdownvalues;
+    other.sEzsigntemplateannotationDropdownvalues == sEzsigntemplateannotationDropdownvalues;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiEzsigntemplateannotationID.hashCode) +
-    (fkiEzsigntemplatedocumentpageID.hashCode) +
-    (fkiTextstylestaticID.hashCode) +
+    (fkiTextstylestaticID == null ? 0 : fkiTextstylestaticID!.hashCode) +
+    (objTextstylestatic == null ? 0 : objTextstylestatic!.hashCode) +
     (eEzsigntemplateannotationHorizontalalignment.hashCode) +
     (eEzsigntemplateannotationVerticalalignment.hashCode) +
     (eEzsigntemplateannotationType.hashCode) +
@@ -112,18 +128,27 @@ class EzsigntemplateannotationResponseCompound {
     (iEzsigntemplateannotationY.hashCode) +
     (iEzsigntemplateannotationWidth.hashCode) +
     (iEzsigntemplateannotationHeight.hashCode) +
+    (iEzsigntemplatedocumentpagePagenumber.hashCode) +
     (sEzsigntemplateannotationDescription.hashCode) +
     (sEzsigntemplateannotationDefaulttext.hashCode) +
-    (sEzsigntemplateannotationnDropdownvalues.hashCode);
+    (sEzsigntemplateannotationDropdownvalues.hashCode);
 
   @override
-  String toString() => 'EzsigntemplateannotationResponseCompound[pkiEzsigntemplateannotationID=$pkiEzsigntemplateannotationID, fkiEzsigntemplatedocumentpageID=$fkiEzsigntemplatedocumentpageID, fkiTextstylestaticID=$fkiTextstylestaticID, eEzsigntemplateannotationHorizontalalignment=$eEzsigntemplateannotationHorizontalalignment, eEzsigntemplateannotationVerticalalignment=$eEzsigntemplateannotationVerticalalignment, eEzsigntemplateannotationType=$eEzsigntemplateannotationType, iEzsigntemplateannotationX=$iEzsigntemplateannotationX, iEzsigntemplateannotationY=$iEzsigntemplateannotationY, iEzsigntemplateannotationWidth=$iEzsigntemplateannotationWidth, iEzsigntemplateannotationHeight=$iEzsigntemplateannotationHeight, sEzsigntemplateannotationDescription=$sEzsigntemplateannotationDescription, sEzsigntemplateannotationDefaulttext=$sEzsigntemplateannotationDefaulttext, sEzsigntemplateannotationnDropdownvalues=$sEzsigntemplateannotationnDropdownvalues]';
+  String toString() => 'EzsigntemplateannotationResponseCompound[pkiEzsigntemplateannotationID=$pkiEzsigntemplateannotationID, fkiTextstylestaticID=$fkiTextstylestaticID, objTextstylestatic=$objTextstylestatic, eEzsigntemplateannotationHorizontalalignment=$eEzsigntemplateannotationHorizontalalignment, eEzsigntemplateannotationVerticalalignment=$eEzsigntemplateannotationVerticalalignment, eEzsigntemplateannotationType=$eEzsigntemplateannotationType, iEzsigntemplateannotationX=$iEzsigntemplateannotationX, iEzsigntemplateannotationY=$iEzsigntemplateannotationY, iEzsigntemplateannotationWidth=$iEzsigntemplateannotationWidth, iEzsigntemplateannotationHeight=$iEzsigntemplateannotationHeight, iEzsigntemplatedocumentpagePagenumber=$iEzsigntemplatedocumentpagePagenumber, sEzsigntemplateannotationDescription=$sEzsigntemplateannotationDescription, sEzsigntemplateannotationDefaulttext=$sEzsigntemplateannotationDefaulttext, sEzsigntemplateannotationDropdownvalues=$sEzsigntemplateannotationDropdownvalues]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiEzsigntemplateannotationID'] = this.pkiEzsigntemplateannotationID;
-      json[r'fkiEzsigntemplatedocumentpageID'] = this.fkiEzsigntemplatedocumentpageID;
+    if (this.fkiTextstylestaticID != null) {
       json[r'fkiTextstylestaticID'] = this.fkiTextstylestaticID;
+    } else {
+      json[r'fkiTextstylestaticID'] = null;
+    }
+    if (this.objTextstylestatic != null) {
+      json[r'objTextstylestatic'] = this.objTextstylestatic;
+    } else {
+      json[r'objTextstylestatic'] = null;
+    }
       json[r'eEzsigntemplateannotationHorizontalalignment'] = this.eEzsigntemplateannotationHorizontalalignment;
       json[r'eEzsigntemplateannotationVerticalalignment'] = this.eEzsigntemplateannotationVerticalalignment;
       json[r'eEzsigntemplateannotationType'] = this.eEzsigntemplateannotationType;
@@ -131,9 +156,10 @@ class EzsigntemplateannotationResponseCompound {
       json[r'iEzsigntemplateannotationY'] = this.iEzsigntemplateannotationY;
       json[r'iEzsigntemplateannotationWidth'] = this.iEzsigntemplateannotationWidth;
       json[r'iEzsigntemplateannotationHeight'] = this.iEzsigntemplateannotationHeight;
+      json[r'iEzsigntemplatedocumentpagePagenumber'] = this.iEzsigntemplatedocumentpagePagenumber;
       json[r'sEzsigntemplateannotationDescription'] = this.sEzsigntemplateannotationDescription;
       json[r'sEzsigntemplateannotationDefaulttext'] = this.sEzsigntemplateannotationDefaulttext;
-      json[r'sEzsigntemplateannotationnDropdownvalues'] = this.sEzsigntemplateannotationnDropdownvalues;
+      json[r'sEzsigntemplateannotationDropdownvalues'] = this.sEzsigntemplateannotationDropdownvalues;
     return json;
   }
 
@@ -148,17 +174,37 @@ class EzsigntemplateannotationResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplateannotationResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplateannotationResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsigntemplateannotationID'), 'Required key "EzsigntemplateannotationResponseCompound[pkiEzsigntemplateannotationID]" is missing from JSON.');
+        assert(json[r'pkiEzsigntemplateannotationID'] != null, 'Required key "EzsigntemplateannotationResponseCompound[pkiEzsigntemplateannotationID]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsigntemplateannotationHorizontalalignment'), 'Required key "EzsigntemplateannotationResponseCompound[eEzsigntemplateannotationHorizontalalignment]" is missing from JSON.');
+        assert(json[r'eEzsigntemplateannotationHorizontalalignment'] != null, 'Required key "EzsigntemplateannotationResponseCompound[eEzsigntemplateannotationHorizontalalignment]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsigntemplateannotationVerticalalignment'), 'Required key "EzsigntemplateannotationResponseCompound[eEzsigntemplateannotationVerticalalignment]" is missing from JSON.');
+        assert(json[r'eEzsigntemplateannotationVerticalalignment'] != null, 'Required key "EzsigntemplateannotationResponseCompound[eEzsigntemplateannotationVerticalalignment]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsigntemplateannotationType'), 'Required key "EzsigntemplateannotationResponseCompound[eEzsigntemplateannotationType]" is missing from JSON.');
+        assert(json[r'eEzsigntemplateannotationType'] != null, 'Required key "EzsigntemplateannotationResponseCompound[eEzsigntemplateannotationType]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigntemplateannotationX'), 'Required key "EzsigntemplateannotationResponseCompound[iEzsigntemplateannotationX]" is missing from JSON.');
+        assert(json[r'iEzsigntemplateannotationX'] != null, 'Required key "EzsigntemplateannotationResponseCompound[iEzsigntemplateannotationX]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigntemplateannotationY'), 'Required key "EzsigntemplateannotationResponseCompound[iEzsigntemplateannotationY]" is missing from JSON.');
+        assert(json[r'iEzsigntemplateannotationY'] != null, 'Required key "EzsigntemplateannotationResponseCompound[iEzsigntemplateannotationY]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigntemplateannotationWidth'), 'Required key "EzsigntemplateannotationResponseCompound[iEzsigntemplateannotationWidth]" is missing from JSON.');
+        assert(json[r'iEzsigntemplateannotationWidth'] != null, 'Required key "EzsigntemplateannotationResponseCompound[iEzsigntemplateannotationWidth]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigntemplateannotationHeight'), 'Required key "EzsigntemplateannotationResponseCompound[iEzsigntemplateannotationHeight]" is missing from JSON.');
+        assert(json[r'iEzsigntemplateannotationHeight'] != null, 'Required key "EzsigntemplateannotationResponseCompound[iEzsigntemplateannotationHeight]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigntemplatedocumentpagePagenumber'), 'Required key "EzsigntemplateannotationResponseCompound[iEzsigntemplatedocumentpagePagenumber]" is missing from JSON.');
+        assert(json[r'iEzsigntemplatedocumentpagePagenumber'] != null, 'Required key "EzsigntemplateannotationResponseCompound[iEzsigntemplatedocumentpagePagenumber]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsigntemplateannotationDescription'), 'Required key "EzsigntemplateannotationResponseCompound[sEzsigntemplateannotationDescription]" is missing from JSON.');
+        assert(json[r'sEzsigntemplateannotationDescription'] != null, 'Required key "EzsigntemplateannotationResponseCompound[sEzsigntemplateannotationDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsigntemplateannotationDefaulttext'), 'Required key "EzsigntemplateannotationResponseCompound[sEzsigntemplateannotationDefaulttext]" is missing from JSON.');
+        assert(json[r'sEzsigntemplateannotationDefaulttext'] != null, 'Required key "EzsigntemplateannotationResponseCompound[sEzsigntemplateannotationDefaulttext]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsigntemplateannotationDropdownvalues'), 'Required key "EzsigntemplateannotationResponseCompound[sEzsigntemplateannotationDropdownvalues]" is missing from JSON.');
+        assert(json[r'sEzsigntemplateannotationDropdownvalues'] != null, 'Required key "EzsigntemplateannotationResponseCompound[sEzsigntemplateannotationDropdownvalues]" has a null value in JSON.');
         return true;
       }());
 
       return EzsigntemplateannotationResponseCompound(
         pkiEzsigntemplateannotationID: mapValueOfType<int>(json, r'pkiEzsigntemplateannotationID')!,
-        fkiEzsigntemplatedocumentpageID: mapValueOfType<int>(json, r'fkiEzsigntemplatedocumentpageID')!,
-        fkiTextstylestaticID: mapValueOfType<int>(json, r'fkiTextstylestaticID')!,
+        fkiTextstylestaticID: mapValueOfType<int>(json, r'fkiTextstylestaticID'),
+        objTextstylestatic: TextstylestaticRequestCompound.fromJson(json[r'objTextstylestatic']),
         eEzsigntemplateannotationHorizontalalignment: FieldEEzsigntemplateannotationHorizontalalignment.fromJson(json[r'eEzsigntemplateannotationHorizontalalignment'])!,
         eEzsigntemplateannotationVerticalalignment: FieldEEzsigntemplateannotationVerticalalignment.fromJson(json[r'eEzsigntemplateannotationVerticalalignment'])!,
         eEzsigntemplateannotationType: FieldEEzsigntemplateannotationType.fromJson(json[r'eEzsigntemplateannotationType'])!,
@@ -166,9 +212,10 @@ class EzsigntemplateannotationResponseCompound {
         iEzsigntemplateannotationY: mapValueOfType<int>(json, r'iEzsigntemplateannotationY')!,
         iEzsigntemplateannotationWidth: mapValueOfType<int>(json, r'iEzsigntemplateannotationWidth')!,
         iEzsigntemplateannotationHeight: mapValueOfType<int>(json, r'iEzsigntemplateannotationHeight')!,
+        iEzsigntemplatedocumentpagePagenumber: mapValueOfType<int>(json, r'iEzsigntemplatedocumentpagePagenumber')!,
         sEzsigntemplateannotationDescription: mapValueOfType<String>(json, r'sEzsigntemplateannotationDescription')!,
         sEzsigntemplateannotationDefaulttext: mapValueOfType<String>(json, r'sEzsigntemplateannotationDefaulttext')!,
-        sEzsigntemplateannotationnDropdownvalues: mapValueOfType<String>(json, r'sEzsigntemplateannotationnDropdownvalues')!,
+        sEzsigntemplateannotationDropdownvalues: mapValueOfType<String>(json, r'sEzsigntemplateannotationDropdownvalues')!,
       );
     }
     return null;
@@ -217,8 +264,6 @@ class EzsigntemplateannotationResponseCompound {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'pkiEzsigntemplateannotationID',
-    'fkiEzsigntemplatedocumentpageID',
-    'fkiTextstylestaticID',
     'eEzsigntemplateannotationHorizontalalignment',
     'eEzsigntemplateannotationVerticalalignment',
     'eEzsigntemplateannotationType',
@@ -226,9 +271,10 @@ class EzsigntemplateannotationResponseCompound {
     'iEzsigntemplateannotationY',
     'iEzsigntemplateannotationWidth',
     'iEzsigntemplateannotationHeight',
+    'iEzsigntemplatedocumentpagePagenumber',
     'sEzsigntemplateannotationDescription',
     'sEzsigntemplateannotationDefaulttext',
-    'sEzsigntemplateannotationnDropdownvalues',
+    'sEzsigntemplateannotationDropdownvalues',
   };
 }
 

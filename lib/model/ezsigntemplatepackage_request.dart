@@ -121,10 +121,16 @@ class EzsigntemplatepackageRequest {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplatepackageRequest[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplatepackageRequest[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiEzsignfoldertypeID'), 'Required key "EzsigntemplatepackageRequest[fkiEzsignfoldertypeID]" is missing from JSON.');
+        assert(json[r'fkiEzsignfoldertypeID'] != null, 'Required key "EzsigntemplatepackageRequest[fkiEzsignfoldertypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiLanguageID'), 'Required key "EzsigntemplatepackageRequest[fkiLanguageID]" is missing from JSON.');
+        assert(json[r'fkiLanguageID'] != null, 'Required key "EzsigntemplatepackageRequest[fkiLanguageID]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsigntemplatepackageDescription'), 'Required key "EzsigntemplatepackageRequest[sEzsigntemplatepackageDescription]" is missing from JSON.');
+        assert(json[r'sEzsigntemplatepackageDescription'] != null, 'Required key "EzsigntemplatepackageRequest[sEzsigntemplatepackageDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsigntemplatepackageAdminonly'), 'Required key "EzsigntemplatepackageRequest[bEzsigntemplatepackageAdminonly]" is missing from JSON.');
+        assert(json[r'bEzsigntemplatepackageAdminonly'] != null, 'Required key "EzsigntemplatepackageRequest[bEzsigntemplatepackageAdminonly]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsigntemplatepackageIsactive'), 'Required key "EzsigntemplatepackageRequest[bEzsigntemplatepackageIsactive]" is missing from JSON.');
+        assert(json[r'bEzsigntemplatepackageIsactive'] != null, 'Required key "EzsigntemplatepackageRequest[bEzsigntemplatepackageIsactive]" has a null value in JSON.');
         return true;
       }());
 

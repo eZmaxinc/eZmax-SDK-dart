@@ -79,10 +79,10 @@ class BillingentityinternalproductRequestCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "BillingentityinternalproductRequestCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "BillingentityinternalproductRequestCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiEzmaxproductID'), 'Required key "BillingentityinternalproductRequestCompound[fkiEzmaxproductID]" is missing from JSON.');
+        assert(json[r'fkiEzmaxproductID'] != null, 'Required key "BillingentityinternalproductRequestCompound[fkiEzmaxproductID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiBillingentityexternalID'), 'Required key "BillingentityinternalproductRequestCompound[fkiBillingentityexternalID]" is missing from JSON.');
+        assert(json[r'fkiBillingentityexternalID'] != null, 'Required key "BillingentityinternalproductRequestCompound[fkiBillingentityexternalID]" has a null value in JSON.');
         return true;
       }());
 

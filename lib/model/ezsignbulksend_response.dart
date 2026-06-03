@@ -124,10 +124,28 @@ class EzsignbulksendResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignbulksendResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignbulksendResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsignbulksendID'), 'Required key "EzsignbulksendResponse[pkiEzsignbulksendID]" is missing from JSON.');
+        assert(json[r'pkiEzsignbulksendID'] != null, 'Required key "EzsignbulksendResponse[pkiEzsignbulksendID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiEzsignfoldertypeID'), 'Required key "EzsignbulksendResponse[fkiEzsignfoldertypeID]" is missing from JSON.');
+        assert(json[r'fkiEzsignfoldertypeID'] != null, 'Required key "EzsignbulksendResponse[fkiEzsignfoldertypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiLanguageID'), 'Required key "EzsignbulksendResponse[fkiLanguageID]" is missing from JSON.');
+        assert(json[r'fkiLanguageID'] != null, 'Required key "EzsignbulksendResponse[fkiLanguageID]" has a null value in JSON.');
+        assert(json.containsKey(r'sLanguageNameX'), 'Required key "EzsignbulksendResponse[sLanguageNameX]" is missing from JSON.');
+        assert(json[r'sLanguageNameX'] != null, 'Required key "EzsignbulksendResponse[sLanguageNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsignfoldertypePrivacylevel'), 'Required key "EzsignbulksendResponse[eEzsignfoldertypePrivacylevel]" is missing from JSON.');
+        assert(json[r'eEzsignfoldertypePrivacylevel'] != null, 'Required key "EzsignbulksendResponse[eEzsignfoldertypePrivacylevel]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsignfoldertypeNameX'), 'Required key "EzsignbulksendResponse[sEzsignfoldertypeNameX]" is missing from JSON.');
+        assert(json[r'sEzsignfoldertypeNameX'] != null, 'Required key "EzsignbulksendResponse[sEzsignfoldertypeNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsignbulksendDescription'), 'Required key "EzsignbulksendResponse[sEzsignbulksendDescription]" is missing from JSON.');
+        assert(json[r'sEzsignbulksendDescription'] != null, 'Required key "EzsignbulksendResponse[sEzsignbulksendDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'tEzsignbulksendNote'), 'Required key "EzsignbulksendResponse[tEzsignbulksendNote]" is missing from JSON.');
+        assert(json[r'tEzsignbulksendNote'] != null, 'Required key "EzsignbulksendResponse[tEzsignbulksendNote]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignbulksendNeedvalidation'), 'Required key "EzsignbulksendResponse[bEzsignbulksendNeedvalidation]" is missing from JSON.');
+        assert(json[r'bEzsignbulksendNeedvalidation'] != null, 'Required key "EzsignbulksendResponse[bEzsignbulksendNeedvalidation]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignbulksendIsactive'), 'Required key "EzsignbulksendResponse[bEzsignbulksendIsactive]" is missing from JSON.');
+        assert(json[r'bEzsignbulksendIsactive'] != null, 'Required key "EzsignbulksendResponse[bEzsignbulksendIsactive]" has a null value in JSON.');
+        assert(json.containsKey(r'objAudit'), 'Required key "EzsignbulksendResponse[objAudit]" is missing from JSON.');
+        assert(json[r'objAudit'] != null, 'Required key "EzsignbulksendResponse[objAudit]" has a null value in JSON.');
         return true;
       }());
 

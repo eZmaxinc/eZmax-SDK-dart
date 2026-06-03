@@ -69,10 +69,14 @@ class CustomCreateEzsignelementsPositionedByWordRequest {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CustomCreateEzsignelementsPositionedByWordRequest[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CustomCreateEzsignelementsPositionedByWordRequest[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sCreateezsignelementspositionedbywordPattern'), 'Required key "CustomCreateEzsignelementsPositionedByWordRequest[sCreateezsignelementspositionedbywordPattern]" is missing from JSON.');
+        assert(json[r'sCreateezsignelementspositionedbywordPattern'] != null, 'Required key "CustomCreateEzsignelementsPositionedByWordRequest[sCreateezsignelementspositionedbywordPattern]" has a null value in JSON.');
+        assert(json.containsKey(r'iCreateezsignelementspositionedbywordOffsetx'), 'Required key "CustomCreateEzsignelementsPositionedByWordRequest[iCreateezsignelementspositionedbywordOffsetx]" is missing from JSON.');
+        assert(json[r'iCreateezsignelementspositionedbywordOffsetx'] != null, 'Required key "CustomCreateEzsignelementsPositionedByWordRequest[iCreateezsignelementspositionedbywordOffsetx]" has a null value in JSON.');
+        assert(json.containsKey(r'iCreateezsignelementspositionedbywordOffsety'), 'Required key "CustomCreateEzsignelementsPositionedByWordRequest[iCreateezsignelementspositionedbywordOffsety]" is missing from JSON.');
+        assert(json[r'iCreateezsignelementspositionedbywordOffsety'] != null, 'Required key "CustomCreateEzsignelementsPositionedByWordRequest[iCreateezsignelementspositionedbywordOffsety]" has a null value in JSON.');
+        assert(json.containsKey(r'eCreateezsignelementspositionedbywordOccurance'), 'Required key "CustomCreateEzsignelementsPositionedByWordRequest[eCreateezsignelementspositionedbywordOccurance]" is missing from JSON.');
+        assert(json[r'eCreateezsignelementspositionedbywordOccurance'] != null, 'Required key "CustomCreateEzsignelementsPositionedByWordRequest[eCreateezsignelementspositionedbywordOccurance]" has a null value in JSON.');
         return true;
       }());
 

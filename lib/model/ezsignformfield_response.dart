@@ -218,10 +218,20 @@ class EzsignformfieldResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignformfieldResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignformfieldResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsignformfieldID'), 'Required key "EzsignformfieldResponse[pkiEzsignformfieldID]" is missing from JSON.');
+        assert(json[r'pkiEzsignformfieldID'] != null, 'Required key "EzsignformfieldResponse[pkiEzsignformfieldID]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignpagePagenumber'), 'Required key "EzsignformfieldResponse[iEzsignpagePagenumber]" is missing from JSON.');
+        assert(json[r'iEzsignpagePagenumber'] != null, 'Required key "EzsignformfieldResponse[iEzsignpagePagenumber]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsignformfieldLabel'), 'Required key "EzsignformfieldResponse[sEzsignformfieldLabel]" is missing from JSON.');
+        assert(json[r'sEzsignformfieldLabel'] != null, 'Required key "EzsignformfieldResponse[sEzsignformfieldLabel]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignformfieldX'), 'Required key "EzsignformfieldResponse[iEzsignformfieldX]" is missing from JSON.');
+        assert(json[r'iEzsignformfieldX'] != null, 'Required key "EzsignformfieldResponse[iEzsignformfieldX]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignformfieldY'), 'Required key "EzsignformfieldResponse[iEzsignformfieldY]" is missing from JSON.');
+        assert(json[r'iEzsignformfieldY'] != null, 'Required key "EzsignformfieldResponse[iEzsignformfieldY]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignformfieldWidth'), 'Required key "EzsignformfieldResponse[iEzsignformfieldWidth]" is missing from JSON.');
+        assert(json[r'iEzsignformfieldWidth'] != null, 'Required key "EzsignformfieldResponse[iEzsignformfieldWidth]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignformfieldHeight'), 'Required key "EzsignformfieldResponse[iEzsignformfieldHeight]" is missing from JSON.');
+        assert(json[r'iEzsignformfieldHeight'] != null, 'Required key "EzsignformfieldResponse[iEzsignformfieldHeight]" has a null value in JSON.');
         return true;
       }());
 

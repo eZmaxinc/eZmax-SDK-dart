@@ -105,10 +105,22 @@ class UsergroupexternalmembershipResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "UsergroupexternalmembershipResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "UsergroupexternalmembershipResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiUsergroupexternalmembershipID'), 'Required key "UsergroupexternalmembershipResponseCompound[pkiUsergroupexternalmembershipID]" is missing from JSON.');
+        assert(json[r'pkiUsergroupexternalmembershipID'] != null, 'Required key "UsergroupexternalmembershipResponseCompound[pkiUsergroupexternalmembershipID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiUsergroupexternalID'), 'Required key "UsergroupexternalmembershipResponseCompound[fkiUsergroupexternalID]" is missing from JSON.');
+        assert(json[r'fkiUsergroupexternalID'] != null, 'Required key "UsergroupexternalmembershipResponseCompound[fkiUsergroupexternalID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiUserID'), 'Required key "UsergroupexternalmembershipResponseCompound[fkiUserID]" is missing from JSON.');
+        assert(json[r'fkiUserID'] != null, 'Required key "UsergroupexternalmembershipResponseCompound[fkiUserID]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserFirstname'), 'Required key "UsergroupexternalmembershipResponseCompound[sUserFirstname]" is missing from JSON.');
+        assert(json[r'sUserFirstname'] != null, 'Required key "UsergroupexternalmembershipResponseCompound[sUserFirstname]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserLastname'), 'Required key "UsergroupexternalmembershipResponseCompound[sUserLastname]" is missing from JSON.');
+        assert(json[r'sUserLastname'] != null, 'Required key "UsergroupexternalmembershipResponseCompound[sUserLastname]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserLoginname'), 'Required key "UsergroupexternalmembershipResponseCompound[sUserLoginname]" is missing from JSON.');
+        assert(json[r'sUserLoginname'] != null, 'Required key "UsergroupexternalmembershipResponseCompound[sUserLoginname]" has a null value in JSON.');
+        assert(json.containsKey(r'sEmailAddress'), 'Required key "UsergroupexternalmembershipResponseCompound[sEmailAddress]" is missing from JSON.');
+        assert(json[r'sEmailAddress'] != null, 'Required key "UsergroupexternalmembershipResponseCompound[sEmailAddress]" has a null value in JSON.');
+        assert(json.containsKey(r'sUsergroupexternalName'), 'Required key "UsergroupexternalmembershipResponseCompound[sUsergroupexternalName]" is missing from JSON.');
+        assert(json[r'sUsergroupexternalName'] != null, 'Required key "UsergroupexternalmembershipResponseCompound[sUsergroupexternalName]" has a null value in JSON.');
         return true;
       }());
 

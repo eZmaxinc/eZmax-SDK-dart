@@ -60,10 +60,12 @@ class WebhookEzsignDocumentCompleted {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "WebhookEzsignDocumentCompleted[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "WebhookEzsignDocumentCompleted[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'objWebhook'), 'Required key "WebhookEzsignDocumentCompleted[objWebhook]" is missing from JSON.');
+        assert(json[r'objWebhook'] != null, 'Required key "WebhookEzsignDocumentCompleted[objWebhook]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objAttempt'), 'Required key "WebhookEzsignDocumentCompleted[a_objAttempt]" is missing from JSON.');
+        assert(json[r'a_objAttempt'] != null, 'Required key "WebhookEzsignDocumentCompleted[a_objAttempt]" has a null value in JSON.');
+        assert(json.containsKey(r'objEzsigndocument'), 'Required key "WebhookEzsignDocumentCompleted[objEzsigndocument]" is missing from JSON.');
+        assert(json[r'objEzsigndocument'] != null, 'Required key "WebhookEzsignDocumentCompleted[objEzsigndocument]" has a null value in JSON.');
         return true;
       }());
 

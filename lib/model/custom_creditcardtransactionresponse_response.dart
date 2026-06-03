@@ -94,10 +94,12 @@ class CustomCreditcardtransactionresponseResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CustomCreditcardtransactionresponseResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CustomCreditcardtransactionresponseResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sCreditcardtransactionISOcode'), 'Required key "CustomCreditcardtransactionresponseResponse[sCreditcardtransactionISOcode]" is missing from JSON.');
+        assert(json[r'sCreditcardtransactionISOcode'] != null, 'Required key "CustomCreditcardtransactionresponseResponse[sCreditcardtransactionISOcode]" has a null value in JSON.');
+        assert(json.containsKey(r'sCreditcardtransactionResponsecode'), 'Required key "CustomCreditcardtransactionresponseResponse[sCreditcardtransactionResponsecode]" is missing from JSON.');
+        assert(json[r'sCreditcardtransactionResponsecode'] != null, 'Required key "CustomCreditcardtransactionresponseResponse[sCreditcardtransactionResponsecode]" has a null value in JSON.');
+        assert(json.containsKey(r'sCreditcardtransactionResponseterminalmessage'), 'Required key "CustomCreditcardtransactionresponseResponse[sCreditcardtransactionResponseterminalmessage]" is missing from JSON.');
+        assert(json[r'sCreditcardtransactionResponseterminalmessage'] != null, 'Required key "CustomCreditcardtransactionresponseResponse[sCreditcardtransactionResponseterminalmessage]" has a null value in JSON.');
         return true;
       }());
 

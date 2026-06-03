@@ -177,10 +177,12 @@ class CommunicationRequest {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CommunicationRequest[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CommunicationRequest[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'eCommunicationType'), 'Required key "CommunicationRequest[eCommunicationType]" is missing from JSON.');
+        assert(json[r'eCommunicationType'] != null, 'Required key "CommunicationRequest[eCommunicationType]" has a null value in JSON.');
+        assert(json.containsKey(r'tCommunicationBody'), 'Required key "CommunicationRequest[tCommunicationBody]" is missing from JSON.');
+        assert(json[r'tCommunicationBody'] != null, 'Required key "CommunicationRequest[tCommunicationBody]" has a null value in JSON.');
+        assert(json.containsKey(r'bCommunicationPrivate'), 'Required key "CommunicationRequest[bCommunicationPrivate]" is missing from JSON.');
+        assert(json[r'bCommunicationPrivate'] != null, 'Required key "CommunicationRequest[bCommunicationPrivate]" has a null value in JSON.');
         return true;
       }());
 

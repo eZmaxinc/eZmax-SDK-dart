@@ -64,10 +64,12 @@ class BillingentityexternalAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "BillingentityexternalAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "BillingentityexternalAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiBillingentityexternalID'), 'Required key "BillingentityexternalAutocompleteElementResponse[pkiBillingentityexternalID]" is missing from JSON.');
+        assert(json[r'pkiBillingentityexternalID'] != null, 'Required key "BillingentityexternalAutocompleteElementResponse[pkiBillingentityexternalID]" has a null value in JSON.');
+        assert(json.containsKey(r'sBillingentityexternalDescription'), 'Required key "BillingentityexternalAutocompleteElementResponse[sBillingentityexternalDescription]" is missing from JSON.');
+        assert(json[r'sBillingentityexternalDescription'] != null, 'Required key "BillingentityexternalAutocompleteElementResponse[sBillingentityexternalDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'bBillingentityexternalIsactive'), 'Required key "BillingentityexternalAutocompleteElementResponse[bBillingentityexternalIsactive]" is missing from JSON.');
+        assert(json[r'bBillingentityexternalIsactive'] != null, 'Required key "BillingentityexternalAutocompleteElementResponse[bBillingentityexternalIsactive]" has a null value in JSON.');
         return true;
       }());
 

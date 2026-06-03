@@ -189,10 +189,14 @@ class EzsigntemplatedocumentpagerecognitionRequestCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplatedocumentpagerecognitionRequestCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplatedocumentpagerecognitionRequestCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiEzsigntemplatedocumentpageID'), 'Required key "EzsigntemplatedocumentpagerecognitionRequestCompound[fkiEzsigntemplatedocumentpageID]" is missing from JSON.');
+        assert(json[r'fkiEzsigntemplatedocumentpageID'] != null, 'Required key "EzsigntemplatedocumentpagerecognitionRequestCompound[fkiEzsigntemplatedocumentpageID]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsigntemplatedocumentpagerecognitionOperator'), 'Required key "EzsigntemplatedocumentpagerecognitionRequestCompound[eEzsigntemplatedocumentpagerecognitionOperator]" is missing from JSON.');
+        assert(json[r'eEzsigntemplatedocumentpagerecognitionOperator'] != null, 'Required key "EzsigntemplatedocumentpagerecognitionRequestCompound[eEzsigntemplatedocumentpagerecognitionOperator]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsigntemplatedocumentpagerecognitionSection'), 'Required key "EzsigntemplatedocumentpagerecognitionRequestCompound[eEzsigntemplatedocumentpagerecognitionSection]" is missing from JSON.');
+        assert(json[r'eEzsigntemplatedocumentpagerecognitionSection'] != null, 'Required key "EzsigntemplatedocumentpagerecognitionRequestCompound[eEzsigntemplatedocumentpagerecognitionSection]" has a null value in JSON.');
+        assert(json.containsKey(r'tEzsigntemplatedocumentpagerecognitionText'), 'Required key "EzsigntemplatedocumentpagerecognitionRequestCompound[tEzsigntemplatedocumentpagerecognitionText]" is missing from JSON.');
+        assert(json[r'tEzsigntemplatedocumentpagerecognitionText'] != null, 'Required key "EzsigntemplatedocumentpagerecognitionRequestCompound[tEzsigntemplatedocumentpagerecognitionText]" has a null value in JSON.');
         return true;
       }());
 

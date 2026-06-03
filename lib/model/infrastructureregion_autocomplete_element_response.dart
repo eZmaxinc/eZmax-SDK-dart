@@ -72,10 +72,14 @@ class InfrastructureregionAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "InfrastructureregionAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "InfrastructureregionAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiInfrastructureregionID'), 'Required key "InfrastructureregionAutocompleteElementResponse[pkiInfrastructureregionID]" is missing from JSON.');
+        assert(json[r'pkiInfrastructureregionID'] != null, 'Required key "InfrastructureregionAutocompleteElementResponse[pkiInfrastructureregionID]" has a null value in JSON.');
+        assert(json.containsKey(r'sInfrastructureregionCode'), 'Required key "InfrastructureregionAutocompleteElementResponse[sInfrastructureregionCode]" is missing from JSON.');
+        assert(json[r'sInfrastructureregionCode'] != null, 'Required key "InfrastructureregionAutocompleteElementResponse[sInfrastructureregionCode]" has a null value in JSON.');
+        assert(json.containsKey(r'bInfrastructureregionProgrammer'), 'Required key "InfrastructureregionAutocompleteElementResponse[bInfrastructureregionProgrammer]" is missing from JSON.');
+        assert(json[r'bInfrastructureregionProgrammer'] != null, 'Required key "InfrastructureregionAutocompleteElementResponse[bInfrastructureregionProgrammer]" has a null value in JSON.');
+        assert(json.containsKey(r'bInfrastructureregionIsactive'), 'Required key "InfrastructureregionAutocompleteElementResponse[bInfrastructureregionIsactive]" is missing from JSON.');
+        assert(json[r'bInfrastructureregionIsactive'] != null, 'Required key "InfrastructureregionAutocompleteElementResponse[bInfrastructureregionIsactive]" has a null value in JSON.');
         return true;
       }());
 

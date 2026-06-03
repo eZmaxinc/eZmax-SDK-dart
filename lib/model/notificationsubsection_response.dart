@@ -99,10 +99,12 @@ class NotificationsubsectionResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "NotificationsubsectionResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "NotificationsubsectionResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiNotificationsubsectionID'), 'Required key "NotificationsubsectionResponse[pkiNotificationsubsectionID]" is missing from JSON.');
+        assert(json[r'pkiNotificationsubsectionID'] != null, 'Required key "NotificationsubsectionResponse[pkiNotificationsubsectionID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiNotificationsectionID'), 'Required key "NotificationsubsectionResponse[fkiNotificationsectionID]" is missing from JSON.');
+        assert(json[r'fkiNotificationsectionID'] != null, 'Required key "NotificationsubsectionResponse[fkiNotificationsectionID]" has a null value in JSON.');
+        assert(json.containsKey(r'sNotificationsubsectionNameX'), 'Required key "NotificationsubsectionResponse[sNotificationsubsectionNameX]" is missing from JSON.');
+        assert(json[r'sNotificationsubsectionNameX'] != null, 'Required key "NotificationsubsectionResponse[sNotificationsubsectionNameX]" has a null value in JSON.');
         return true;
       }());
 

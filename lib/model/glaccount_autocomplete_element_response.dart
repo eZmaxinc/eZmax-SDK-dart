@@ -73,10 +73,14 @@ class GlaccountAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "GlaccountAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "GlaccountAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiGlaccountID'), 'Required key "GlaccountAutocompleteElementResponse[pkiGlaccountID]" is missing from JSON.');
+        assert(json[r'pkiGlaccountID'] != null, 'Required key "GlaccountAutocompleteElementResponse[pkiGlaccountID]" has a null value in JSON.');
+        assert(json.containsKey(r'iGlaccountCode'), 'Required key "GlaccountAutocompleteElementResponse[iGlaccountCode]" is missing from JSON.');
+        assert(json[r'iGlaccountCode'] != null, 'Required key "GlaccountAutocompleteElementResponse[iGlaccountCode]" has a null value in JSON.');
+        assert(json.containsKey(r'sGlaccountDescriptionX'), 'Required key "GlaccountAutocompleteElementResponse[sGlaccountDescriptionX]" is missing from JSON.');
+        assert(json[r'sGlaccountDescriptionX'] != null, 'Required key "GlaccountAutocompleteElementResponse[sGlaccountDescriptionX]" has a null value in JSON.');
+        assert(json.containsKey(r'bGlaccountIsactive'), 'Required key "GlaccountAutocompleteElementResponse[bGlaccountIsactive]" is missing from JSON.');
+        assert(json[r'bGlaccountIsactive'] != null, 'Required key "GlaccountAutocompleteElementResponse[bGlaccountIsactive]" has a null value in JSON.');
         return true;
       }());
 

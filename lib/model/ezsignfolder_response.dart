@@ -158,7 +158,7 @@ class EzsignfolderResponse {
   ///
   FieldEEzsignfolderSendreminderfrequency? eEzsignfolderSendreminderfrequency;
 
-  /// The number of days before the the first reminder sending
+  /// The number of days before the first reminder sending
   ///
   /// Minimum value: 0
   /// Maximum value: 255
@@ -481,10 +481,12 @@ class EzsignfolderResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignfolderResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignfolderResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsignfolderID'), 'Required key "EzsignfolderResponse[pkiEzsignfolderID]" is missing from JSON.');
+        assert(json[r'pkiEzsignfolderID'] != null, 'Required key "EzsignfolderResponse[pkiEzsignfolderID]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsignfolderCompletion'), 'Required key "EzsignfolderResponse[eEzsignfolderCompletion]" is missing from JSON.');
+        assert(json[r'eEzsignfolderCompletion'] != null, 'Required key "EzsignfolderResponse[eEzsignfolderCompletion]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsignfolderDescription'), 'Required key "EzsignfolderResponse[sEzsignfolderDescription]" is missing from JSON.');
+        assert(json[r'sEzsignfolderDescription'] != null, 'Required key "EzsignfolderResponse[sEzsignfolderDescription]" has a null value in JSON.');
         return true;
       }());
 

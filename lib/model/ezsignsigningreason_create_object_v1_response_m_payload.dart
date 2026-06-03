@@ -48,10 +48,8 @@ class EzsignsigningreasonCreateObjectV1ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignsigningreasonCreateObjectV1ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignsigningreasonCreateObjectV1ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_pkiEzsignsigningreasonID'), 'Required key "EzsignsigningreasonCreateObjectV1ResponseMPayload[a_pkiEzsignsigningreasonID]" is missing from JSON.');
+        assert(json[r'a_pkiEzsignsigningreasonID'] != null, 'Required key "EzsignsigningreasonCreateObjectV1ResponseMPayload[a_pkiEzsignsigningreasonID]" has a null value in JSON.');
         return true;
       }());
 

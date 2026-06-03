@@ -209,10 +209,12 @@ class UsergroupmembershipResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "UsergroupmembershipResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "UsergroupmembershipResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiUsergroupmembershipID'), 'Required key "UsergroupmembershipResponseCompound[pkiUsergroupmembershipID]" is missing from JSON.');
+        assert(json[r'pkiUsergroupmembershipID'] != null, 'Required key "UsergroupmembershipResponseCompound[pkiUsergroupmembershipID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiUsergroupID'), 'Required key "UsergroupmembershipResponseCompound[fkiUsergroupID]" is missing from JSON.');
+        assert(json[r'fkiUsergroupID'] != null, 'Required key "UsergroupmembershipResponseCompound[fkiUsergroupID]" has a null value in JSON.');
+        assert(json.containsKey(r'sUsergroupNameX'), 'Required key "UsergroupmembershipResponseCompound[sUsergroupNameX]" is missing from JSON.');
+        assert(json[r'sUsergroupNameX'] != null, 'Required key "UsergroupmembershipResponseCompound[sUsergroupNameX]" has a null value in JSON.');
         return true;
       }());
 

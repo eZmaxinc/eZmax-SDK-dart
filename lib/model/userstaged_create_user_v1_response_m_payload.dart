@@ -50,10 +50,8 @@ class UserstagedCreateUserV1ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "UserstagedCreateUserV1ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "UserstagedCreateUserV1ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiUserID'), 'Required key "UserstagedCreateUserV1ResponseMPayload[pkiUserID]" is missing from JSON.');
+        assert(json[r'pkiUserID'] != null, 'Required key "UserstagedCreateUserV1ResponseMPayload[pkiUserID]" has a null value in JSON.');
         return true;
       }());
 

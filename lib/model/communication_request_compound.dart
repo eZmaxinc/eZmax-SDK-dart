@@ -201,10 +201,20 @@ class CommunicationRequestCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CommunicationRequestCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CommunicationRequestCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'eCommunicationType'), 'Required key "CommunicationRequestCompound[eCommunicationType]" is missing from JSON.');
+        assert(json[r'eCommunicationType'] != null, 'Required key "CommunicationRequestCompound[eCommunicationType]" has a null value in JSON.');
+        assert(json.containsKey(r'tCommunicationBody'), 'Required key "CommunicationRequestCompound[tCommunicationBody]" is missing from JSON.');
+        assert(json[r'tCommunicationBody'] != null, 'Required key "CommunicationRequestCompound[tCommunicationBody]" has a null value in JSON.');
+        assert(json.containsKey(r'bCommunicationPrivate'), 'Required key "CommunicationRequestCompound[bCommunicationPrivate]" is missing from JSON.');
+        assert(json[r'bCommunicationPrivate'] != null, 'Required key "CommunicationRequestCompound[bCommunicationPrivate]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objCommunicationattachment'), 'Required key "CommunicationRequestCompound[a_objCommunicationattachment]" is missing from JSON.');
+        assert(json[r'a_objCommunicationattachment'] != null, 'Required key "CommunicationRequestCompound[a_objCommunicationattachment]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objCommunicationrecipient'), 'Required key "CommunicationRequestCompound[a_objCommunicationrecipient]" is missing from JSON.');
+        assert(json[r'a_objCommunicationrecipient'] != null, 'Required key "CommunicationRequestCompound[a_objCommunicationrecipient]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objCommunicationreference'), 'Required key "CommunicationRequestCompound[a_objCommunicationreference]" is missing from JSON.');
+        assert(json[r'a_objCommunicationreference'] != null, 'Required key "CommunicationRequestCompound[a_objCommunicationreference]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objCommunicationexternalrecipient'), 'Required key "CommunicationRequestCompound[a_objCommunicationexternalrecipient]" is missing from JSON.');
+        assert(json[r'a_objCommunicationexternalrecipient'] != null, 'Required key "CommunicationRequestCompound[a_objCommunicationexternalrecipient]" has a null value in JSON.');
         return true;
       }());
 

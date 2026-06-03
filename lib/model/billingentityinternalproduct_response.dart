@@ -99,10 +99,20 @@ class BillingentityinternalproductResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "BillingentityinternalproductResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "BillingentityinternalproductResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiBillingentityinternalproductID'), 'Required key "BillingentityinternalproductResponse[pkiBillingentityinternalproductID]" is missing from JSON.');
+        assert(json[r'pkiBillingentityinternalproductID'] != null, 'Required key "BillingentityinternalproductResponse[pkiBillingentityinternalproductID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiBillingentityinternalID'), 'Required key "BillingentityinternalproductResponse[fkiBillingentityinternalID]" is missing from JSON.');
+        assert(json[r'fkiBillingentityinternalID'] != null, 'Required key "BillingentityinternalproductResponse[fkiBillingentityinternalID]" has a null value in JSON.');
+        assert(json.containsKey(r'sBillingentityinternalDescriptionX'), 'Required key "BillingentityinternalproductResponse[sBillingentityinternalDescriptionX]" is missing from JSON.');
+        assert(json[r'sBillingentityinternalDescriptionX'] != null, 'Required key "BillingentityinternalproductResponse[sBillingentityinternalDescriptionX]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiEzmaxproductID'), 'Required key "BillingentityinternalproductResponse[fkiEzmaxproductID]" is missing from JSON.');
+        assert(json[r'fkiEzmaxproductID'] != null, 'Required key "BillingentityinternalproductResponse[fkiEzmaxproductID]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzmaxproductDescriptionX'), 'Required key "BillingentityinternalproductResponse[sEzmaxproductDescriptionX]" is missing from JSON.');
+        assert(json[r'sEzmaxproductDescriptionX'] != null, 'Required key "BillingentityinternalproductResponse[sEzmaxproductDescriptionX]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiBillingentityexternalID'), 'Required key "BillingentityinternalproductResponse[fkiBillingentityexternalID]" is missing from JSON.');
+        assert(json[r'fkiBillingentityexternalID'] != null, 'Required key "BillingentityinternalproductResponse[fkiBillingentityexternalID]" has a null value in JSON.');
+        assert(json.containsKey(r'sBillingentityexternalDescription'), 'Required key "BillingentityinternalproductResponse[sBillingentityexternalDescription]" is missing from JSON.');
+        assert(json[r'sBillingentityexternalDescription'] != null, 'Required key "BillingentityinternalproductResponse[sBillingentityexternalDescription]" has a null value in JSON.');
         return true;
       }());
 

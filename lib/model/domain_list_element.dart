@@ -58,10 +58,10 @@ class DomainListElement {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "DomainListElement[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "DomainListElement[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiDomainID'), 'Required key "DomainListElement[pkiDomainID]" is missing from JSON.');
+        assert(json[r'pkiDomainID'] != null, 'Required key "DomainListElement[pkiDomainID]" has a null value in JSON.');
+        assert(json.containsKey(r'sDomainName'), 'Required key "DomainListElement[sDomainName]" is missing from JSON.');
+        assert(json[r'sDomainName'] != null, 'Required key "DomainListElement[sDomainName]" has a null value in JSON.');
         return true;
       }());
 

@@ -155,10 +155,26 @@ class ActivesessionResponseCompoundUser {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "ActivesessionResponseCompoundUser[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "ActivesessionResponseCompoundUser[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiUserID'), 'Required key "ActivesessionResponseCompoundUser[pkiUserID]" is missing from JSON.');
+        assert(json[r'pkiUserID'] != null, 'Required key "ActivesessionResponseCompoundUser[pkiUserID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiTimezoneID'), 'Required key "ActivesessionResponseCompoundUser[fkiTimezoneID]" is missing from JSON.');
+        assert(json[r'fkiTimezoneID'] != null, 'Required key "ActivesessionResponseCompoundUser[fkiTimezoneID]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserFirstname'), 'Required key "ActivesessionResponseCompoundUser[sUserFirstname]" is missing from JSON.');
+        assert(json[r'sUserFirstname'] != null, 'Required key "ActivesessionResponseCompoundUser[sUserFirstname]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserLastname'), 'Required key "ActivesessionResponseCompoundUser[sUserLastname]" is missing from JSON.');
+        assert(json[r'sUserLastname'] != null, 'Required key "ActivesessionResponseCompoundUser[sUserLastname]" has a null value in JSON.');
+        assert(json.containsKey(r'bUserAddmeinezsignfolder'), 'Required key "ActivesessionResponseCompoundUser[bUserAddmeinezsignfolder]" is missing from JSON.');
+        assert(json[r'bUserAddmeinezsignfolder'] != null, 'Required key "ActivesessionResponseCompoundUser[bUserAddmeinezsignfolder]" has a null value in JSON.');
+        assert(json.containsKey(r'eUserEzsignsendreminderfrequency'), 'Required key "ActivesessionResponseCompoundUser[eUserEzsignsendreminderfrequency]" is missing from JSON.');
+        assert(json[r'eUserEzsignsendreminderfrequency'] != null, 'Required key "ActivesessionResponseCompoundUser[eUserEzsignsendreminderfrequency]" has a null value in JSON.');
+        assert(json.containsKey(r'iUserInterfacecolor'), 'Required key "ActivesessionResponseCompoundUser[iUserInterfacecolor]" is missing from JSON.');
+        assert(json[r'iUserInterfacecolor'] != null, 'Required key "ActivesessionResponseCompoundUser[iUserInterfacecolor]" has a null value in JSON.');
+        assert(json.containsKey(r'bUserInterfacedark'), 'Required key "ActivesessionResponseCompoundUser[bUserInterfacedark]" is missing from JSON.');
+        assert(json[r'bUserInterfacedark'] != null, 'Required key "ActivesessionResponseCompoundUser[bUserInterfacedark]" has a null value in JSON.');
+        assert(json.containsKey(r'iUserListresult'), 'Required key "ActivesessionResponseCompoundUser[iUserListresult]" is missing from JSON.');
+        assert(json[r'iUserListresult'] != null, 'Required key "ActivesessionResponseCompoundUser[iUserListresult]" has a null value in JSON.');
+        assert(json.containsKey(r'iUserFrontendgoal'), 'Required key "ActivesessionResponseCompoundUser[iUserFrontendgoal]" is missing from JSON.');
+        assert(json[r'iUserFrontendgoal'] != null, 'Required key "ActivesessionResponseCompoundUser[iUserFrontendgoal]" has a null value in JSON.');
         return true;
       }());
 

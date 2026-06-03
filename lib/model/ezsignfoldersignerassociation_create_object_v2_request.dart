@@ -47,10 +47,8 @@ class EzsignfoldersignerassociationCreateObjectV2Request {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignfoldersignerassociationCreateObjectV2Request[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignfoldersignerassociationCreateObjectV2Request[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_objEzsignfoldersignerassociation'), 'Required key "EzsignfoldersignerassociationCreateObjectV2Request[a_objEzsignfoldersignerassociation]" is missing from JSON.');
+        assert(json[r'a_objEzsignfoldersignerassociation'] != null, 'Required key "EzsignfoldersignerassociationCreateObjectV2Request[a_objEzsignfoldersignerassociation]" has a null value in JSON.');
         return true;
       }());
 

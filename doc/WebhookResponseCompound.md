@@ -8,7 +8,7 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**pkiWebhookID** | **int** | The unique ID of the Webhook | 
+**pkiWebhookID** | **int** | The unique ID of the Webhook | [optional] 
 **fkiAuthenticationexternalID** | **int** | The unique ID of the Authenticationexternal | [optional] 
 **sWebhookDescription** | **String** | The description of the Webhook | 
 **fkiEzsignfoldertypeID** | **int** | The unique ID of the Ezsignfoldertype. | [optional] 
@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 **bWebhookIssigned** | **bool** | Whether the requests will be signed or not | 
 **bWebhookSkipsslvalidation** | **bool** | Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use | 
 **sAuthenticationexternalDescription** | **String** | The description of the Authenticationexternal | [optional] 
-**objAudit** | [**CommonAudit**](CommonAudit.md) |  | 
+**objAudit** | [**CommonAudit**](CommonAudit.md) |  | [optional] 
 **sWebhookEvent** | **String** | The concatenated string to describe the Webhook event | [optional] 
 **sWebhookAuthentificationexternalerror** | **String** | Error message when token renewal failed or is not configured. Only if an Authenticationexternal is set. | [optional] 
 **aObjWebhookheader** | [**List<WebhookheaderResponseCompound>**](WebhookheaderResponseCompound.md) |  | [optional] [default to const []]

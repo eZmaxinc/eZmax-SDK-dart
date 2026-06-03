@@ -121,10 +121,16 @@ class EzsigntemplatepackageRequestCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplatepackageRequestCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplatepackageRequestCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiEzsignfoldertypeID'), 'Required key "EzsigntemplatepackageRequestCompound[fkiEzsignfoldertypeID]" is missing from JSON.');
+        assert(json[r'fkiEzsignfoldertypeID'] != null, 'Required key "EzsigntemplatepackageRequestCompound[fkiEzsignfoldertypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiLanguageID'), 'Required key "EzsigntemplatepackageRequestCompound[fkiLanguageID]" is missing from JSON.');
+        assert(json[r'fkiLanguageID'] != null, 'Required key "EzsigntemplatepackageRequestCompound[fkiLanguageID]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsigntemplatepackageDescription'), 'Required key "EzsigntemplatepackageRequestCompound[sEzsigntemplatepackageDescription]" is missing from JSON.');
+        assert(json[r'sEzsigntemplatepackageDescription'] != null, 'Required key "EzsigntemplatepackageRequestCompound[sEzsigntemplatepackageDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsigntemplatepackageAdminonly'), 'Required key "EzsigntemplatepackageRequestCompound[bEzsigntemplatepackageAdminonly]" is missing from JSON.');
+        assert(json[r'bEzsigntemplatepackageAdminonly'] != null, 'Required key "EzsigntemplatepackageRequestCompound[bEzsigntemplatepackageAdminonly]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsigntemplatepackageIsactive'), 'Required key "EzsigntemplatepackageRequestCompound[bEzsigntemplatepackageIsactive]" is missing from JSON.');
+        assert(json[r'bEzsigntemplatepackageIsactive'] != null, 'Required key "EzsigntemplatepackageRequestCompound[bEzsigntemplatepackageIsactive]" has a null value in JSON.');
         return true;
       }());
 

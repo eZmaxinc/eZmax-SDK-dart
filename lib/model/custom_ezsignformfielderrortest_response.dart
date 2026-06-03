@@ -55,10 +55,10 @@ class CustomEzsignformfielderrortestResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CustomEzsignformfielderrortestResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CustomEzsignformfielderrortestResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sEzsignformfielderrortestName'), 'Required key "CustomEzsignformfielderrortestResponse[sEzsignformfielderrortestName]" is missing from JSON.');
+        assert(json[r'sEzsignformfielderrortestName'] != null, 'Required key "CustomEzsignformfielderrortestResponse[sEzsignformfielderrortestName]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsignformfielderrortestDetail'), 'Required key "CustomEzsignformfielderrortestResponse[sEzsignformfielderrortestDetail]" is missing from JSON.');
+        assert(json[r'sEzsignformfielderrortestDetail'] != null, 'Required key "CustomEzsignformfielderrortestResponse[sEzsignformfielderrortestDetail]" has a null value in JSON.');
         return true;
       }());
 

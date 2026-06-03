@@ -155,10 +155,10 @@ class PermissionResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "PermissionResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "PermissionResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiPermissionID'), 'Required key "PermissionResponse[pkiPermissionID]" is missing from JSON.');
+        assert(json[r'pkiPermissionID'] != null, 'Required key "PermissionResponse[pkiPermissionID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiModulesectionID'), 'Required key "PermissionResponse[fkiModulesectionID]" is missing from JSON.');
+        assert(json[r'fkiModulesectionID'] != null, 'Required key "PermissionResponse[fkiModulesectionID]" has a null value in JSON.');
         return true;
       }());
 

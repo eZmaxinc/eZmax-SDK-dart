@@ -286,10 +286,20 @@ class EzsigntemplateResponseV3 {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplateResponseV3[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplateResponseV3[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsigntemplateID'), 'Required key "EzsigntemplateResponseV3[pkiEzsigntemplateID]" is missing from JSON.');
+        assert(json[r'pkiEzsigntemplateID'] != null, 'Required key "EzsigntemplateResponseV3[pkiEzsigntemplateID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiLanguageID'), 'Required key "EzsigntemplateResponseV3[fkiLanguageID]" is missing from JSON.');
+        assert(json[r'fkiLanguageID'] != null, 'Required key "EzsigntemplateResponseV3[fkiLanguageID]" has a null value in JSON.');
+        assert(json.containsKey(r'sLanguageNameX'), 'Required key "EzsigntemplateResponseV3[sLanguageNameX]" is missing from JSON.');
+        assert(json[r'sLanguageNameX'] != null, 'Required key "EzsigntemplateResponseV3[sLanguageNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsigntemplateDescription'), 'Required key "EzsigntemplateResponseV3[sEzsigntemplateDescription]" is missing from JSON.');
+        assert(json[r'sEzsigntemplateDescription'] != null, 'Required key "EzsigntemplateResponseV3[sEzsigntemplateDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsigntemplateAdminonly'), 'Required key "EzsigntemplateResponseV3[bEzsigntemplateAdminonly]" is missing from JSON.');
+        assert(json[r'bEzsigntemplateAdminonly'] != null, 'Required key "EzsigntemplateResponseV3[bEzsigntemplateAdminonly]" has a null value in JSON.');
+        assert(json.containsKey(r'objAudit'), 'Required key "EzsigntemplateResponseV3[objAudit]" is missing from JSON.');
+        assert(json[r'objAudit'] != null, 'Required key "EzsigntemplateResponseV3[objAudit]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsigntemplateEditallowed'), 'Required key "EzsigntemplateResponseV3[bEzsigntemplateEditallowed]" is missing from JSON.');
+        assert(json[r'bEzsigntemplateEditallowed'] != null, 'Required key "EzsigntemplateResponseV3[bEzsigntemplateEditallowed]" has a null value in JSON.');
         return true;
       }());
 

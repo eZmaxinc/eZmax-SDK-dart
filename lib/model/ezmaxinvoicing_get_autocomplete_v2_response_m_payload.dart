@@ -48,10 +48,8 @@ class EzmaxinvoicingGetAutocompleteV2ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzmaxinvoicingGetAutocompleteV2ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzmaxinvoicingGetAutocompleteV2ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_objEzmaxinvoicing'), 'Required key "EzmaxinvoicingGetAutocompleteV2ResponseMPayload[a_objEzmaxinvoicing]" is missing from JSON.');
+        assert(json[r'a_objEzmaxinvoicing'] != null, 'Required key "EzmaxinvoicingGetAutocompleteV2ResponseMPayload[a_objEzmaxinvoicing]" has a null value in JSON.');
         return true;
       }());
 

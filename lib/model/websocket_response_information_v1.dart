@@ -61,10 +61,12 @@ class WebsocketResponseInformationV1 {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "WebsocketResponseInformationV1[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "WebsocketResponseInformationV1[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'eWebsocketMessagetype'), 'Required key "WebsocketResponseInformationV1[eWebsocketMessagetype]" is missing from JSON.');
+        assert(json[r'eWebsocketMessagetype'] != null, 'Required key "WebsocketResponseInformationV1[eWebsocketMessagetype]" has a null value in JSON.');
+        assert(json.containsKey(r'sWebsocketChannel'), 'Required key "WebsocketResponseInformationV1[sWebsocketChannel]" is missing from JSON.');
+        assert(json[r'sWebsocketChannel'] != null, 'Required key "WebsocketResponseInformationV1[sWebsocketChannel]" has a null value in JSON.');
+        assert(json.containsKey(r'mPayload'), 'Required key "WebsocketResponseInformationV1[mPayload]" is missing from JSON.');
+        assert(json[r'mPayload'] != null, 'Required key "WebsocketResponseInformationV1[mPayload]" has a null value in JSON.');
         return true;
       }());
 

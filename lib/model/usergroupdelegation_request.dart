@@ -80,10 +80,10 @@ class UsergroupdelegationRequest {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "UsergroupdelegationRequest[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "UsergroupdelegationRequest[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiUsergroupID'), 'Required key "UsergroupdelegationRequest[fkiUsergroupID]" is missing from JSON.');
+        assert(json[r'fkiUsergroupID'] != null, 'Required key "UsergroupdelegationRequest[fkiUsergroupID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiUserID'), 'Required key "UsergroupdelegationRequest[fkiUserID]" is missing from JSON.');
+        assert(json[r'fkiUserID'] != null, 'Required key "UsergroupdelegationRequest[fkiUserID]" has a null value in JSON.');
         return true;
       }());
 

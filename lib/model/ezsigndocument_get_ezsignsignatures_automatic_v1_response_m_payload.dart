@@ -54,10 +54,10 @@ class EzsigndocumentGetEzsignsignaturesAutomaticV1ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigndocumentGetEzsignsignaturesAutomaticV1ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigndocumentGetEzsignsignaturesAutomaticV1ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_eEzsignsignatureType'), 'Required key "EzsigndocumentGetEzsignsignaturesAutomaticV1ResponseMPayload[a_eEzsignsignatureType]" is missing from JSON.');
+        assert(json[r'a_eEzsignsignatureType'] != null, 'Required key "EzsigndocumentGetEzsignsignaturesAutomaticV1ResponseMPayload[a_eEzsignsignatureType]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objEzsignfolder'), 'Required key "EzsigndocumentGetEzsignsignaturesAutomaticV1ResponseMPayload[a_objEzsignfolder]" is missing from JSON.');
+        assert(json[r'a_objEzsignfolder'] != null, 'Required key "EzsigndocumentGetEzsignsignaturesAutomaticV1ResponseMPayload[a_objEzsignfolder]" has a null value in JSON.');
         return true;
       }());
 

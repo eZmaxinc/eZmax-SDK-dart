@@ -92,10 +92,20 @@ class CustomNotificationtestgetnotificationtestsResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CustomNotificationtestgetnotificationtestsResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CustomNotificationtestgetnotificationtestsResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiNotificationtestID'), 'Required key "CustomNotificationtestgetnotificationtestsResponse[pkiNotificationtestID]" is missing from JSON.');
+        assert(json[r'pkiNotificationtestID'] != null, 'Required key "CustomNotificationtestgetnotificationtestsResponse[pkiNotificationtestID]" has a null value in JSON.');
+        assert(json.containsKey(r'objNotificationtestName'), 'Required key "CustomNotificationtestgetnotificationtestsResponse[objNotificationtestName]" is missing from JSON.');
+        assert(json[r'objNotificationtestName'] != null, 'Required key "CustomNotificationtestgetnotificationtestsResponse[objNotificationtestName]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiNotificationsubsectionID'), 'Required key "CustomNotificationtestgetnotificationtestsResponse[fkiNotificationsubsectionID]" is missing from JSON.');
+        assert(json[r'fkiNotificationsubsectionID'] != null, 'Required key "CustomNotificationtestgetnotificationtestsResponse[fkiNotificationsubsectionID]" has a null value in JSON.');
+        assert(json.containsKey(r'sNotificationtestFunction'), 'Required key "CustomNotificationtestgetnotificationtestsResponse[sNotificationtestFunction]" is missing from JSON.');
+        assert(json[r'sNotificationtestFunction'] != null, 'Required key "CustomNotificationtestgetnotificationtestsResponse[sNotificationtestFunction]" has a null value in JSON.');
+        assert(json.containsKey(r'sNotificationtestNameX'), 'Required key "CustomNotificationtestgetnotificationtestsResponse[sNotificationtestNameX]" is missing from JSON.');
+        assert(json[r'sNotificationtestNameX'] != null, 'Required key "CustomNotificationtestgetnotificationtestsResponse[sNotificationtestNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'eNotificationpreferenceStatus'), 'Required key "CustomNotificationtestgetnotificationtestsResponse[eNotificationpreferenceStatus]" is missing from JSON.');
+        assert(json[r'eNotificationpreferenceStatus'] != null, 'Required key "CustomNotificationtestgetnotificationtestsResponse[eNotificationpreferenceStatus]" has a null value in JSON.');
+        assert(json.containsKey(r'iNotificationtest'), 'Required key "CustomNotificationtestgetnotificationtestsResponse[iNotificationtest]" is missing from JSON.');
+        assert(json[r'iNotificationtest'] != null, 'Required key "CustomNotificationtestgetnotificationtestsResponse[iNotificationtest]" has a null value in JSON.');
         return true;
       }());
 

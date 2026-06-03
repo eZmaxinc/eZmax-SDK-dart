@@ -145,10 +145,14 @@ class EzmaxinvoicingcommissionResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzmaxinvoicingcommissionResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzmaxinvoicingcommissionResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'dtEzmaxinvoicingcommissionStart'), 'Required key "EzmaxinvoicingcommissionResponse[dtEzmaxinvoicingcommissionStart]" is missing from JSON.');
+        assert(json[r'dtEzmaxinvoicingcommissionStart'] != null, 'Required key "EzmaxinvoicingcommissionResponse[dtEzmaxinvoicingcommissionStart]" has a null value in JSON.');
+        assert(json.containsKey(r'dtEzmaxinvoicingcommissionEnd'), 'Required key "EzmaxinvoicingcommissionResponse[dtEzmaxinvoicingcommissionEnd]" is missing from JSON.');
+        assert(json[r'dtEzmaxinvoicingcommissionEnd'] != null, 'Required key "EzmaxinvoicingcommissionResponse[dtEzmaxinvoicingcommissionEnd]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzmaxinvoicingcommissionDays'), 'Required key "EzmaxinvoicingcommissionResponse[iEzmaxinvoicingcommissionDays]" is missing from JSON.');
+        assert(json[r'iEzmaxinvoicingcommissionDays'] != null, 'Required key "EzmaxinvoicingcommissionResponse[iEzmaxinvoicingcommissionDays]" has a null value in JSON.');
+        assert(json.containsKey(r'dEzmaxinvoicingcommissionAmount'), 'Required key "EzmaxinvoicingcommissionResponse[dEzmaxinvoicingcommissionAmount]" is missing from JSON.');
+        assert(json[r'dEzmaxinvoicingcommissionAmount'] != null, 'Required key "EzmaxinvoicingcommissionResponse[dEzmaxinvoicingcommissionAmount]" has a null value in JSON.');
         return true;
       }());
 

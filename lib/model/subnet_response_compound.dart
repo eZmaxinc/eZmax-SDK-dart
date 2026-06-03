@@ -115,10 +115,14 @@ class SubnetResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "SubnetResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "SubnetResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiSubnetID'), 'Required key "SubnetResponseCompound[pkiSubnetID]" is missing from JSON.');
+        assert(json[r'pkiSubnetID'] != null, 'Required key "SubnetResponseCompound[pkiSubnetID]" has a null value in JSON.');
+        assert(json.containsKey(r'objSubnetDescription'), 'Required key "SubnetResponseCompound[objSubnetDescription]" is missing from JSON.');
+        assert(json[r'objSubnetDescription'] != null, 'Required key "SubnetResponseCompound[objSubnetDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'iSubnetNetwork'), 'Required key "SubnetResponseCompound[iSubnetNetwork]" is missing from JSON.');
+        assert(json[r'iSubnetNetwork'] != null, 'Required key "SubnetResponseCompound[iSubnetNetwork]" has a null value in JSON.');
+        assert(json.containsKey(r'iSubnetMask'), 'Required key "SubnetResponseCompound[iSubnetMask]" is missing from JSON.');
+        assert(json[r'iSubnetMask'] != null, 'Required key "SubnetResponseCompound[iSubnetMask]" has a null value in JSON.');
         return true;
       }());
 

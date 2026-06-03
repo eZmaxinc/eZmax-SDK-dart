@@ -47,10 +47,8 @@ class EzsignfolderGetObjectV2ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignfolderGetObjectV2ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignfolderGetObjectV2ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'objEzsignfolder'), 'Required key "EzsignfolderGetObjectV2ResponseMPayload[objEzsignfolder]" is missing from JSON.');
+        assert(json[r'objEzsignfolder'] != null, 'Required key "EzsignfolderGetObjectV2ResponseMPayload[objEzsignfolder]" has a null value in JSON.');
         return true;
       }());
 

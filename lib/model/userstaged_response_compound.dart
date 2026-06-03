@@ -89,10 +89,18 @@ class UserstagedResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "UserstagedResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "UserstagedResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiUserstagedID'), 'Required key "UserstagedResponseCompound[pkiUserstagedID]" is missing from JSON.');
+        assert(json[r'pkiUserstagedID'] != null, 'Required key "UserstagedResponseCompound[pkiUserstagedID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiEmailID'), 'Required key "UserstagedResponseCompound[fkiEmailID]" is missing from JSON.');
+        assert(json[r'fkiEmailID'] != null, 'Required key "UserstagedResponseCompound[fkiEmailID]" has a null value in JSON.');
+        assert(json.containsKey(r'sEmailAddress'), 'Required key "UserstagedResponseCompound[sEmailAddress]" is missing from JSON.');
+        assert(json[r'sEmailAddress'] != null, 'Required key "UserstagedResponseCompound[sEmailAddress]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserstagedFirstname'), 'Required key "UserstagedResponseCompound[sUserstagedFirstname]" is missing from JSON.');
+        assert(json[r'sUserstagedFirstname'] != null, 'Required key "UserstagedResponseCompound[sUserstagedFirstname]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserstagedLastname'), 'Required key "UserstagedResponseCompound[sUserstagedLastname]" is missing from JSON.');
+        assert(json[r'sUserstagedLastname'] != null, 'Required key "UserstagedResponseCompound[sUserstagedLastname]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserstagedExternalid'), 'Required key "UserstagedResponseCompound[sUserstagedExternalid]" is missing from JSON.');
+        assert(json[r'sUserstagedExternalid'] != null, 'Required key "UserstagedResponseCompound[sUserstagedExternalid]" has a null value in JSON.');
         return true;
       }());
 

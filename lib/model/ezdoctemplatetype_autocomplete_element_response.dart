@@ -65,10 +65,12 @@ class EzdoctemplatetypeAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzdoctemplatetypeAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzdoctemplatetypeAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzdoctemplatetypeID'), 'Required key "EzdoctemplatetypeAutocompleteElementResponse[pkiEzdoctemplatetypeID]" is missing from JSON.');
+        assert(json[r'pkiEzdoctemplatetypeID'] != null, 'Required key "EzdoctemplatetypeAutocompleteElementResponse[pkiEzdoctemplatetypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzdoctemplatetypeDescriptionX'), 'Required key "EzdoctemplatetypeAutocompleteElementResponse[sEzdoctemplatetypeDescriptionX]" is missing from JSON.');
+        assert(json[r'sEzdoctemplatetypeDescriptionX'] != null, 'Required key "EzdoctemplatetypeAutocompleteElementResponse[sEzdoctemplatetypeDescriptionX]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzdoctemplatetypeIsactive'), 'Required key "EzdoctemplatetypeAutocompleteElementResponse[bEzdoctemplatetypeIsactive]" is missing from JSON.');
+        assert(json[r'bEzdoctemplatetypeIsactive'] != null, 'Required key "EzdoctemplatetypeAutocompleteElementResponse[bEzdoctemplatetypeIsactive]" has a null value in JSON.');
         return true;
       }());
 

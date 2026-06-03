@@ -48,10 +48,8 @@ class DepartmentGetAutocompleteV2ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "DepartmentGetAutocompleteV2ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "DepartmentGetAutocompleteV2ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_objDepartment'), 'Required key "DepartmentGetAutocompleteV2ResponseMPayload[a_objDepartment]" is missing from JSON.');
+        assert(json[r'a_objDepartment'] != null, 'Required key "DepartmentGetAutocompleteV2ResponseMPayload[a_objDepartment]" has a null value in JSON.');
         return true;
       }());
 

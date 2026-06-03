@@ -143,10 +143,18 @@ class SupplyRequestCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "SupplyRequestCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "SupplyRequestCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiVariableexpenseID'), 'Required key "SupplyRequestCompound[fkiVariableexpenseID]" is missing from JSON.');
+        assert(json[r'fkiVariableexpenseID'] != null, 'Required key "SupplyRequestCompound[fkiVariableexpenseID]" has a null value in JSON.');
+        assert(json.containsKey(r'sSupplyCode'), 'Required key "SupplyRequestCompound[sSupplyCode]" is missing from JSON.');
+        assert(json[r'sSupplyCode'] != null, 'Required key "SupplyRequestCompound[sSupplyCode]" has a null value in JSON.');
+        assert(json.containsKey(r'objSupplyDescription'), 'Required key "SupplyRequestCompound[objSupplyDescription]" is missing from JSON.');
+        assert(json[r'objSupplyDescription'] != null, 'Required key "SupplyRequestCompound[objSupplyDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'dSupplyUnitprice'), 'Required key "SupplyRequestCompound[dSupplyUnitprice]" is missing from JSON.');
+        assert(json[r'dSupplyUnitprice'] != null, 'Required key "SupplyRequestCompound[dSupplyUnitprice]" has a null value in JSON.');
+        assert(json.containsKey(r'bSupplyIsactive'), 'Required key "SupplyRequestCompound[bSupplyIsactive]" is missing from JSON.');
+        assert(json[r'bSupplyIsactive'] != null, 'Required key "SupplyRequestCompound[bSupplyIsactive]" has a null value in JSON.');
+        assert(json.containsKey(r'bSupplyVariableprice'), 'Required key "SupplyRequestCompound[bSupplyVariableprice]" is missing from JSON.');
+        assert(json[r'bSupplyVariableprice'] != null, 'Required key "SupplyRequestCompound[bSupplyVariableprice]" has a null value in JSON.');
         return true;
       }());
 

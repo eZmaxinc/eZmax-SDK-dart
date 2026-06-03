@@ -64,10 +64,12 @@ class SystemconfigurationtypeAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "SystemconfigurationtypeAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "SystemconfigurationtypeAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiSystemconfigurationtypeID'), 'Required key "SystemconfigurationtypeAutocompleteElementResponse[pkiSystemconfigurationtypeID]" is missing from JSON.');
+        assert(json[r'pkiSystemconfigurationtypeID'] != null, 'Required key "SystemconfigurationtypeAutocompleteElementResponse[pkiSystemconfigurationtypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'sSystemconfigurationtypeDescriptionX'), 'Required key "SystemconfigurationtypeAutocompleteElementResponse[sSystemconfigurationtypeDescriptionX]" is missing from JSON.');
+        assert(json[r'sSystemconfigurationtypeDescriptionX'] != null, 'Required key "SystemconfigurationtypeAutocompleteElementResponse[sSystemconfigurationtypeDescriptionX]" has a null value in JSON.');
+        assert(json.containsKey(r'bSystemconfigurationtypeIsactive'), 'Required key "SystemconfigurationtypeAutocompleteElementResponse[bSystemconfigurationtypeIsactive]" is missing from JSON.');
+        assert(json[r'bSystemconfigurationtypeIsactive'] != null, 'Required key "SystemconfigurationtypeAutocompleteElementResponse[bSystemconfigurationtypeIsactive]" has a null value in JSON.');
         return true;
       }());
 

@@ -9,7 +9,7 @@ import 'package:openapi/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **aObjReportcell** | [**List<CommonReportcell>**](CommonReportcell.md) |  | [default to const []]
-**objVariableobject** | [**Map<String, Object>**](Object.md) | A Variable object without predefined property names | [default to const {}]
+**objVariableobject** | **Map<String, Object>** | A Variable object without predefined property names | [default to const {}]
 **iReportrowHeight** | **int** | The reportrow height in pixels | 
 **objReportcellstyleCustom** | [**CommonReportcellstylecustom**](CommonReportcellstylecustom.md) |  | [optional] 
 

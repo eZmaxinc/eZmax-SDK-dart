@@ -48,10 +48,8 @@ class EzsigntemplateglobalGetAutocompleteV2ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplateglobalGetAutocompleteV2ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplateglobalGetAutocompleteV2ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_objEzsigntemplateglobal'), 'Required key "EzsigntemplateglobalGetAutocompleteV2ResponseMPayload[a_objEzsigntemplateglobal]" is missing from JSON.');
+        assert(json[r'a_objEzsigntemplateglobal'] != null, 'Required key "EzsigntemplateglobalGetAutocompleteV2ResponseMPayload[a_objEzsigntemplateglobal]" has a null value in JSON.');
         return true;
       }());
 

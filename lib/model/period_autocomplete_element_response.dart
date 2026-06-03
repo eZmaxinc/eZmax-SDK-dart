@@ -64,10 +64,12 @@ class PeriodAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "PeriodAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "PeriodAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sPeriodYYYYMM'), 'Required key "PeriodAutocompleteElementResponse[sPeriodYYYYMM]" is missing from JSON.');
+        assert(json[r'sPeriodYYYYMM'] != null, 'Required key "PeriodAutocompleteElementResponse[sPeriodYYYYMM]" has a null value in JSON.');
+        assert(json.containsKey(r'pkiPeriodID'), 'Required key "PeriodAutocompleteElementResponse[pkiPeriodID]" is missing from JSON.');
+        assert(json[r'pkiPeriodID'] != null, 'Required key "PeriodAutocompleteElementResponse[pkiPeriodID]" has a null value in JSON.');
+        assert(json.containsKey(r'bPeriodIsactive'), 'Required key "PeriodAutocompleteElementResponse[bPeriodIsactive]" is missing from JSON.');
+        assert(json[r'bPeriodIsactive'] != null, 'Required key "PeriodAutocompleteElementResponse[bPeriodIsactive]" has a null value in JSON.');
         return true;
       }());
 

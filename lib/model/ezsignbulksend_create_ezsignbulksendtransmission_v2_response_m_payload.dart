@@ -47,10 +47,8 @@ class EzsignbulksendCreateEzsignbulksendtransmissionV2ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignbulksendCreateEzsignbulksendtransmissionV2ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignbulksendCreateEzsignbulksendtransmissionV2ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'objEzsignbulksendtransmission'), 'Required key "EzsignbulksendCreateEzsignbulksendtransmissionV2ResponseMPayload[objEzsignbulksendtransmission]" is missing from JSON.');
+        assert(json[r'objEzsignbulksendtransmission'] != null, 'Required key "EzsignbulksendCreateEzsignbulksendtransmissionV2ResponseMPayload[objEzsignbulksendtransmission]" has a null value in JSON.');
         return true;
       }());
 

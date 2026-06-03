@@ -203,10 +203,16 @@ class EzsignannotationRequestCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignannotationRequestCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignannotationRequestCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiEzsigndocumentID'), 'Required key "EzsignannotationRequestCompound[fkiEzsigndocumentID]" is missing from JSON.');
+        assert(json[r'fkiEzsigndocumentID'] != null, 'Required key "EzsignannotationRequestCompound[fkiEzsigndocumentID]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsignannotationType'), 'Required key "EzsignannotationRequestCompound[eEzsignannotationType]" is missing from JSON.');
+        assert(json[r'eEzsignannotationType'] != null, 'Required key "EzsignannotationRequestCompound[eEzsignannotationType]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignannotationX'), 'Required key "EzsignannotationRequestCompound[iEzsignannotationX]" is missing from JSON.');
+        assert(json[r'iEzsignannotationX'] != null, 'Required key "EzsignannotationRequestCompound[iEzsignannotationX]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignannotationY'), 'Required key "EzsignannotationRequestCompound[iEzsignannotationY]" is missing from JSON.');
+        assert(json[r'iEzsignannotationY'] != null, 'Required key "EzsignannotationRequestCompound[iEzsignannotationY]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignpagePagenumber'), 'Required key "EzsignannotationRequestCompound[iEzsignpagePagenumber]" is missing from JSON.');
+        assert(json[r'iEzsignpagePagenumber'] != null, 'Required key "EzsignannotationRequestCompound[iEzsignpagePagenumber]" has a null value in JSON.');
         return true;
       }());
 

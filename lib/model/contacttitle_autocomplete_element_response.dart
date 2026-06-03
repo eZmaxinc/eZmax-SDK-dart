@@ -57,10 +57,10 @@ class ContacttitleAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "ContacttitleAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "ContacttitleAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiContacttitleID'), 'Required key "ContacttitleAutocompleteElementResponse[pkiContacttitleID]" is missing from JSON.');
+        assert(json[r'pkiContacttitleID'] != null, 'Required key "ContacttitleAutocompleteElementResponse[pkiContacttitleID]" has a null value in JSON.');
+        assert(json.containsKey(r'sContacttitleNameX'), 'Required key "ContacttitleAutocompleteElementResponse[sContacttitleNameX]" is missing from JSON.');
+        assert(json[r'sContacttitleNameX'] != null, 'Required key "ContacttitleAutocompleteElementResponse[sContacttitleNameX]" has a null value in JSON.');
         return true;
       }());
 

@@ -47,10 +47,8 @@ class PaymentgatewayEditObjectV1Request {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "PaymentgatewayEditObjectV1Request[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "PaymentgatewayEditObjectV1Request[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'objPaymentgateway'), 'Required key "PaymentgatewayEditObjectV1Request[objPaymentgateway]" is missing from JSON.');
+        assert(json[r'objPaymentgateway'] != null, 'Required key "PaymentgatewayEditObjectV1Request[objPaymentgateway]" has a null value in JSON.');
         return true;
       }());
 

@@ -736,10 +736,40 @@ class EzsignfoldertypeResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignfoldertypeResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignfoldertypeResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsignfoldertypeID'), 'Required key "EzsignfoldertypeResponseCompound[pkiEzsignfoldertypeID]" is missing from JSON.');
+        assert(json[r'pkiEzsignfoldertypeID'] != null, 'Required key "EzsignfoldertypeResponseCompound[pkiEzsignfoldertypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'objEzsignfoldertypeName'), 'Required key "EzsignfoldertypeResponseCompound[objEzsignfoldertypeName]" is missing from JSON.');
+        assert(json[r'objEzsignfoldertypeName'] != null, 'Required key "EzsignfoldertypeResponseCompound[objEzsignfoldertypeName]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiBrandingID'), 'Required key "EzsignfoldertypeResponseCompound[fkiBrandingID]" is missing from JSON.');
+        assert(json[r'fkiBrandingID'] != null, 'Required key "EzsignfoldertypeResponseCompound[fkiBrandingID]" has a null value in JSON.');
+        assert(json.containsKey(r'sBrandingDescriptionX'), 'Required key "EzsignfoldertypeResponseCompound[sBrandingDescriptionX]" is missing from JSON.');
+        assert(json[r'sBrandingDescriptionX'] != null, 'Required key "EzsignfoldertypeResponseCompound[sBrandingDescriptionX]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsignfoldertypePrivacylevel'), 'Required key "EzsignfoldertypeResponseCompound[eEzsignfoldertypePrivacylevel]" is missing from JSON.');
+        assert(json[r'eEzsignfoldertypePrivacylevel'] != null, 'Required key "EzsignfoldertypeResponseCompound[eEzsignfoldertypePrivacylevel]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignfoldertypeArchivaldays'), 'Required key "EzsignfoldertypeResponseCompound[iEzsignfoldertypeArchivaldays]" is missing from JSON.');
+        assert(json[r'iEzsignfoldertypeArchivaldays'] != null, 'Required key "EzsignfoldertypeResponseCompound[iEzsignfoldertypeArchivaldays]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsignfoldertypeDisposal'), 'Required key "EzsignfoldertypeResponseCompound[eEzsignfoldertypeDisposal]" is missing from JSON.');
+        assert(json[r'eEzsignfoldertypeDisposal'] != null, 'Required key "EzsignfoldertypeResponseCompound[eEzsignfoldertypeDisposal]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsignfoldertypeCompletion'), 'Required key "EzsignfoldertypeResponseCompound[eEzsignfoldertypeCompletion]" is missing from JSON.');
+        assert(json[r'eEzsignfoldertypeCompletion'] != null, 'Required key "EzsignfoldertypeResponseCompound[eEzsignfoldertypeCompletion]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignfoldertypeDeadlinedays'), 'Required key "EzsignfoldertypeResponseCompound[iEzsignfoldertypeDeadlinedays]" is missing from JSON.');
+        assert(json[r'iEzsignfoldertypeDeadlinedays'] != null, 'Required key "EzsignfoldertypeResponseCompound[iEzsignfoldertypeDeadlinedays]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignfoldertypeSendsignedtodocumentowner'), 'Required key "EzsignfoldertypeResponseCompound[bEzsignfoldertypeSendsignedtodocumentowner]" is missing from JSON.');
+        assert(json[r'bEzsignfoldertypeSendsignedtodocumentowner'] != null, 'Required key "EzsignfoldertypeResponseCompound[bEzsignfoldertypeSendsignedtodocumentowner]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignfoldertypeSendsignedtofolderowner'), 'Required key "EzsignfoldertypeResponseCompound[bEzsignfoldertypeSendsignedtofolderowner]" is missing from JSON.');
+        assert(json[r'bEzsignfoldertypeSendsignedtofolderowner'] != null, 'Required key "EzsignfoldertypeResponseCompound[bEzsignfoldertypeSendsignedtofolderowner]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignfoldertypeSendsignedtocolleague'), 'Required key "EzsignfoldertypeResponseCompound[bEzsignfoldertypeSendsignedtocolleague]" is missing from JSON.');
+        assert(json[r'bEzsignfoldertypeSendsignedtocolleague'] != null, 'Required key "EzsignfoldertypeResponseCompound[bEzsignfoldertypeSendsignedtocolleague]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignfoldertypeSendsummarytodocumentowner'), 'Required key "EzsignfoldertypeResponseCompound[bEzsignfoldertypeSendsummarytodocumentowner]" is missing from JSON.');
+        assert(json[r'bEzsignfoldertypeSendsummarytodocumentowner'] != null, 'Required key "EzsignfoldertypeResponseCompound[bEzsignfoldertypeSendsummarytodocumentowner]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignfoldertypeSendsummarytofolderowner'), 'Required key "EzsignfoldertypeResponseCompound[bEzsignfoldertypeSendsummarytofolderowner]" is missing from JSON.');
+        assert(json[r'bEzsignfoldertypeSendsummarytofolderowner'] != null, 'Required key "EzsignfoldertypeResponseCompound[bEzsignfoldertypeSendsummarytofolderowner]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignfoldertypeSendsummarytocolleague'), 'Required key "EzsignfoldertypeResponseCompound[bEzsignfoldertypeSendsummarytocolleague]" is missing from JSON.');
+        assert(json[r'bEzsignfoldertypeSendsummarytocolleague'] != null, 'Required key "EzsignfoldertypeResponseCompound[bEzsignfoldertypeSendsummarytocolleague]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignfoldertypeIsactive'), 'Required key "EzsignfoldertypeResponseCompound[bEzsignfoldertypeIsactive]" is missing from JSON.');
+        assert(json[r'bEzsignfoldertypeIsactive'] != null, 'Required key "EzsignfoldertypeResponseCompound[bEzsignfoldertypeIsactive]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objUserlogintype'), 'Required key "EzsignfoldertypeResponseCompound[a_objUserlogintype]" is missing from JSON.');
+        assert(json[r'a_objUserlogintype'] != null, 'Required key "EzsignfoldertypeResponseCompound[a_objUserlogintype]" has a null value in JSON.');
         return true;
       }());
 

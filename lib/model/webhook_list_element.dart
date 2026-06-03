@@ -128,10 +128,22 @@ class WebhookListElement {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "WebhookListElement[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "WebhookListElement[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiWebhookID'), 'Required key "WebhookListElement[pkiWebhookID]" is missing from JSON.');
+        assert(json[r'pkiWebhookID'] != null, 'Required key "WebhookListElement[pkiWebhookID]" has a null value in JSON.');
+        assert(json.containsKey(r'sWebhookDescription'), 'Required key "WebhookListElement[sWebhookDescription]" is missing from JSON.');
+        assert(json[r'sWebhookDescription'] != null, 'Required key "WebhookListElement[sWebhookDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'sWebhookUrl'), 'Required key "WebhookListElement[sWebhookUrl]" is missing from JSON.');
+        assert(json[r'sWebhookUrl'] != null, 'Required key "WebhookListElement[sWebhookUrl]" has a null value in JSON.');
+        assert(json.containsKey(r'sWebhookEvent'), 'Required key "WebhookListElement[sWebhookEvent]" is missing from JSON.');
+        assert(json[r'sWebhookEvent'] != null, 'Required key "WebhookListElement[sWebhookEvent]" has a null value in JSON.');
+        assert(json.containsKey(r'sWebhookEmailfailed'), 'Required key "WebhookListElement[sWebhookEmailfailed]" is missing from JSON.');
+        assert(json[r'sWebhookEmailfailed'] != null, 'Required key "WebhookListElement[sWebhookEmailfailed]" has a null value in JSON.');
+        assert(json.containsKey(r'eWebhookModule'), 'Required key "WebhookListElement[eWebhookModule]" is missing from JSON.');
+        assert(json[r'eWebhookModule'] != null, 'Required key "WebhookListElement[eWebhookModule]" has a null value in JSON.');
+        assert(json.containsKey(r'bWebhookIsactive'), 'Required key "WebhookListElement[bWebhookIsactive]" is missing from JSON.');
+        assert(json[r'bWebhookIsactive'] != null, 'Required key "WebhookListElement[bWebhookIsactive]" has a null value in JSON.');
+        assert(json.containsKey(r'bWebhookIssigned'), 'Required key "WebhookListElement[bWebhookIssigned]" is missing from JSON.');
+        assert(json[r'bWebhookIssigned'] != null, 'Required key "WebhookListElement[bWebhookIssigned]" has a null value in JSON.');
         return true;
       }());
 

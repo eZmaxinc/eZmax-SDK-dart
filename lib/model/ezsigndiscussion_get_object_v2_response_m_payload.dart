@@ -47,10 +47,8 @@ class EzsigndiscussionGetObjectV2ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigndiscussionGetObjectV2ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigndiscussionGetObjectV2ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'objEzsigndiscussion'), 'Required key "EzsigndiscussionGetObjectV2ResponseMPayload[objEzsigndiscussion]" is missing from JSON.');
+        assert(json[r'objEzsigndiscussion'] != null, 'Required key "EzsigndiscussionGetObjectV2ResponseMPayload[objEzsigndiscussion]" has a null value in JSON.');
         return true;
       }());
 

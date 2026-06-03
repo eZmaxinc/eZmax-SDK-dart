@@ -69,10 +69,10 @@ class SupplyGetAutocompleteV2Response {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "SupplyGetAutocompleteV2Response[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "SupplyGetAutocompleteV2Response[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'objDebugPayload'), 'Required key "SupplyGetAutocompleteV2Response[objDebugPayload]" is missing from JSON.');
+        assert(json[r'objDebugPayload'] != null, 'Required key "SupplyGetAutocompleteV2Response[objDebugPayload]" has a null value in JSON.');
+        assert(json.containsKey(r'mPayload'), 'Required key "SupplyGetAutocompleteV2Response[mPayload]" is missing from JSON.');
+        assert(json[r'mPayload'] != null, 'Required key "SupplyGetAutocompleteV2Response[mPayload]" has a null value in JSON.');
         return true;
       }());
 

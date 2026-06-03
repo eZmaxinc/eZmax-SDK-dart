@@ -124,10 +124,24 @@ class BrandingListElement {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "BrandingListElement[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "BrandingListElement[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiBrandingID'), 'Required key "BrandingListElement[pkiBrandingID]" is missing from JSON.');
+        assert(json[r'pkiBrandingID'] != null, 'Required key "BrandingListElement[pkiBrandingID]" has a null value in JSON.');
+        assert(json.containsKey(r'sBrandingDescriptionX'), 'Required key "BrandingListElement[sBrandingDescriptionX]" is missing from JSON.');
+        assert(json[r'sBrandingDescriptionX'] != null, 'Required key "BrandingListElement[sBrandingDescriptionX]" has a null value in JSON.');
+        assert(json.containsKey(r'iBrandingColortext'), 'Required key "BrandingListElement[iBrandingColortext]" is missing from JSON.');
+        assert(json[r'iBrandingColortext'] != null, 'Required key "BrandingListElement[iBrandingColortext]" has a null value in JSON.');
+        assert(json.containsKey(r'iBrandingColortextlinkbox'), 'Required key "BrandingListElement[iBrandingColortextlinkbox]" is missing from JSON.');
+        assert(json[r'iBrandingColortextlinkbox'] != null, 'Required key "BrandingListElement[iBrandingColortextlinkbox]" has a null value in JSON.');
+        assert(json.containsKey(r'iBrandingColortextbutton'), 'Required key "BrandingListElement[iBrandingColortextbutton]" is missing from JSON.');
+        assert(json[r'iBrandingColortextbutton'] != null, 'Required key "BrandingListElement[iBrandingColortextbutton]" has a null value in JSON.');
+        assert(json.containsKey(r'iBrandingColorbackground'), 'Required key "BrandingListElement[iBrandingColorbackground]" is missing from JSON.');
+        assert(json[r'iBrandingColorbackground'] != null, 'Required key "BrandingListElement[iBrandingColorbackground]" has a null value in JSON.');
+        assert(json.containsKey(r'iBrandingColorbackgroundbutton'), 'Required key "BrandingListElement[iBrandingColorbackgroundbutton]" is missing from JSON.');
+        assert(json[r'iBrandingColorbackgroundbutton'] != null, 'Required key "BrandingListElement[iBrandingColorbackgroundbutton]" has a null value in JSON.');
+        assert(json.containsKey(r'iBrandingColorbackgroundsmallbox'), 'Required key "BrandingListElement[iBrandingColorbackgroundsmallbox]" is missing from JSON.');
+        assert(json[r'iBrandingColorbackgroundsmallbox'] != null, 'Required key "BrandingListElement[iBrandingColorbackgroundsmallbox]" has a null value in JSON.');
+        assert(json.containsKey(r'bBrandingIsactive'), 'Required key "BrandingListElement[bBrandingIsactive]" is missing from JSON.');
+        assert(json[r'bBrandingIsactive'] != null, 'Required key "BrandingListElement[bBrandingIsactive]" has a null value in JSON.');
         return true;
       }());
 

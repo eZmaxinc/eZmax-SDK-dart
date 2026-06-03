@@ -69,10 +69,10 @@ class EzsignformfieldgroupCreateObjectV1Response {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignformfieldgroupCreateObjectV1Response[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignformfieldgroupCreateObjectV1Response[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'objDebugPayload'), 'Required key "EzsignformfieldgroupCreateObjectV1Response[objDebugPayload]" is missing from JSON.');
+        assert(json[r'objDebugPayload'] != null, 'Required key "EzsignformfieldgroupCreateObjectV1Response[objDebugPayload]" has a null value in JSON.');
+        assert(json.containsKey(r'mPayload'), 'Required key "EzsignformfieldgroupCreateObjectV1Response[mPayload]" is missing from JSON.');
+        assert(json[r'mPayload'] != null, 'Required key "EzsignformfieldgroupCreateObjectV1Response[mPayload]" has a null value in JSON.');
         return true;
       }());
 

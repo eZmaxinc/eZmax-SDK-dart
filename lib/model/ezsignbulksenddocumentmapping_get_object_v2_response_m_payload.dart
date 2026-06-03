@@ -47,10 +47,8 @@ class EzsignbulksenddocumentmappingGetObjectV2ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignbulksenddocumentmappingGetObjectV2ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignbulksenddocumentmappingGetObjectV2ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'objEzsignbulksenddocumentmapping'), 'Required key "EzsignbulksenddocumentmappingGetObjectV2ResponseMPayload[objEzsignbulksenddocumentmapping]" is missing from JSON.');
+        assert(json[r'objEzsignbulksenddocumentmapping'] != null, 'Required key "EzsignbulksenddocumentmappingGetObjectV2ResponseMPayload[objEzsignbulksenddocumentmapping]" has a null value in JSON.');
         return true;
       }());
 

@@ -108,10 +108,14 @@ class EzmaxinvoicingsummaryexternalResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzmaxinvoicingsummaryexternalResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzmaxinvoicingsummaryexternalResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiBillingentityexternalID'), 'Required key "EzmaxinvoicingsummaryexternalResponseCompound[fkiBillingentityexternalID]" is missing from JSON.');
+        assert(json[r'fkiBillingentityexternalID'] != null, 'Required key "EzmaxinvoicingsummaryexternalResponseCompound[fkiBillingentityexternalID]" has a null value in JSON.');
+        assert(json.containsKey(r'sBillingentityexternalDescription'), 'Required key "EzmaxinvoicingsummaryexternalResponseCompound[sBillingentityexternalDescription]" is missing from JSON.');
+        assert(json[r'sBillingentityexternalDescription'] != null, 'Required key "EzmaxinvoicingsummaryexternalResponseCompound[sBillingentityexternalDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzmaxinvoicingsummaryexternalDescription'), 'Required key "EzmaxinvoicingsummaryexternalResponseCompound[sEzmaxinvoicingsummaryexternalDescription]" is missing from JSON.');
+        assert(json[r'sEzmaxinvoicingsummaryexternalDescription'] != null, 'Required key "EzmaxinvoicingsummaryexternalResponseCompound[sEzmaxinvoicingsummaryexternalDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objEzmaxinvoicingsummaryexternaldetail'), 'Required key "EzmaxinvoicingsummaryexternalResponseCompound[a_objEzmaxinvoicingsummaryexternaldetail]" is missing from JSON.');
+        assert(json[r'a_objEzmaxinvoicingsummaryexternaldetail'] != null, 'Required key "EzmaxinvoicingsummaryexternalResponseCompound[a_objEzmaxinvoicingsummaryexternaldetail]" has a null value in JSON.');
         return true;
       }());
 

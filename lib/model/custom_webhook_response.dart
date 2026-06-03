@@ -13,7 +13,7 @@ part of openapi.api;
 class CustomWebhookResponse {
   /// Returns a new [CustomWebhookResponse] instance.
   CustomWebhookResponse({
-    required this.pkiWebhookID,
+    this.pkiWebhookID,
     this.fkiAuthenticationexternalID,
     required this.sWebhookDescription,
     this.fkiEzsignfoldertypeID,
@@ -29,17 +29,24 @@ class CustomWebhookResponse {
     required this.bWebhookIssigned,
     required this.bWebhookSkipsslvalidation,
     this.sAuthenticationexternalDescription,
-    required this.objAudit,
+    this.objAudit,
     this.sWebhookEvent,
     this.sWebhookAuthentificationexternalerror,
     this.aObjWebhookheader = const [],
     required this.pksCustomerCode,
     required this.bWebhookTest,
     this.eWebhookEmittype,
+    this.fkiEzmaxpartnerproductstagewebhookID,
   });
 
   /// The unique ID of the Webhook
-  int pkiWebhookID;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? pkiWebhookID;
 
   /// The unique ID of the Authenticationexternal
   ///
@@ -137,7 +144,13 @@ class CustomWebhookResponse {
   ///
   String? sAuthenticationexternalDescription;
 
-  CommonAudit objAudit;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  CommonAudit? objAudit;
 
   /// The concatenated string to describe the Webhook event
   ///
@@ -168,6 +181,18 @@ class CustomWebhookResponse {
   /// Wheter the webhook received is a manual test or a real event
   CustomWebhookResponseEWebhookEmittypeEnum? eWebhookEmittype;
 
+  /// The unique ID of the Ezmaxpartnerproductstagewebhook
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 65535
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiEzmaxpartnerproductstagewebhookID;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomWebhookResponse &&
     other.pkiWebhookID == pkiWebhookID &&
@@ -192,12 +217,13 @@ class CustomWebhookResponse {
     _deepEquality.equals(other.aObjWebhookheader, aObjWebhookheader) &&
     other.pksCustomerCode == pksCustomerCode &&
     other.bWebhookTest == bWebhookTest &&
-    other.eWebhookEmittype == eWebhookEmittype;
+    other.eWebhookEmittype == eWebhookEmittype &&
+    other.fkiEzmaxpartnerproductstagewebhookID == fkiEzmaxpartnerproductstagewebhookID;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (pkiWebhookID.hashCode) +
+    (pkiWebhookID == null ? 0 : pkiWebhookID!.hashCode) +
     (fkiAuthenticationexternalID == null ? 0 : fkiAuthenticationexternalID!.hashCode) +
     (sWebhookDescription.hashCode) +
     (fkiEzsignfoldertypeID == null ? 0 : fkiEzsignfoldertypeID!.hashCode) +
@@ -213,20 +239,25 @@ class CustomWebhookResponse {
     (bWebhookIssigned.hashCode) +
     (bWebhookSkipsslvalidation.hashCode) +
     (sAuthenticationexternalDescription == null ? 0 : sAuthenticationexternalDescription!.hashCode) +
-    (objAudit.hashCode) +
+    (objAudit == null ? 0 : objAudit!.hashCode) +
     (sWebhookEvent == null ? 0 : sWebhookEvent!.hashCode) +
     (sWebhookAuthentificationexternalerror == null ? 0 : sWebhookAuthentificationexternalerror!.hashCode) +
     (aObjWebhookheader.hashCode) +
     (pksCustomerCode.hashCode) +
     (bWebhookTest.hashCode) +
-    (eWebhookEmittype == null ? 0 : eWebhookEmittype!.hashCode);
+    (eWebhookEmittype == null ? 0 : eWebhookEmittype!.hashCode) +
+    (fkiEzmaxpartnerproductstagewebhookID == null ? 0 : fkiEzmaxpartnerproductstagewebhookID!.hashCode);
 
   @override
-  String toString() => 'CustomWebhookResponse[pkiWebhookID=$pkiWebhookID, fkiAuthenticationexternalID=$fkiAuthenticationexternalID, sWebhookDescription=$sWebhookDescription, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, sWebhookUrl=$sWebhookUrl, sWebhookEmailfailed=$sWebhookEmailfailed, sWebhookApikey=$sWebhookApikey, sWebhookSecret=$sWebhookSecret, bWebhookIsactive=$bWebhookIsactive, bWebhookIssigned=$bWebhookIssigned, bWebhookSkipsslvalidation=$bWebhookSkipsslvalidation, sAuthenticationexternalDescription=$sAuthenticationexternalDescription, objAudit=$objAudit, sWebhookEvent=$sWebhookEvent, sWebhookAuthentificationexternalerror=$sWebhookAuthentificationexternalerror, aObjWebhookheader=$aObjWebhookheader, pksCustomerCode=$pksCustomerCode, bWebhookTest=$bWebhookTest, eWebhookEmittype=$eWebhookEmittype]';
+  String toString() => 'CustomWebhookResponse[pkiWebhookID=$pkiWebhookID, fkiAuthenticationexternalID=$fkiAuthenticationexternalID, sWebhookDescription=$sWebhookDescription, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, sWebhookUrl=$sWebhookUrl, sWebhookEmailfailed=$sWebhookEmailfailed, sWebhookApikey=$sWebhookApikey, sWebhookSecret=$sWebhookSecret, bWebhookIsactive=$bWebhookIsactive, bWebhookIssigned=$bWebhookIssigned, bWebhookSkipsslvalidation=$bWebhookSkipsslvalidation, sAuthenticationexternalDescription=$sAuthenticationexternalDescription, objAudit=$objAudit, sWebhookEvent=$sWebhookEvent, sWebhookAuthentificationexternalerror=$sWebhookAuthentificationexternalerror, aObjWebhookheader=$aObjWebhookheader, pksCustomerCode=$pksCustomerCode, bWebhookTest=$bWebhookTest, eWebhookEmittype=$eWebhookEmittype, fkiEzmaxpartnerproductstagewebhookID=$fkiEzmaxpartnerproductstagewebhookID]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
+    if (this.pkiWebhookID != null) {
       json[r'pkiWebhookID'] = this.pkiWebhookID;
+    } else {
+      json[r'pkiWebhookID'] = null;
+    }
     if (this.fkiAuthenticationexternalID != null) {
       json[r'fkiAuthenticationexternalID'] = this.fkiAuthenticationexternalID;
     } else {
@@ -274,7 +305,11 @@ class CustomWebhookResponse {
     } else {
       json[r'sAuthenticationexternalDescription'] = null;
     }
+    if (this.objAudit != null) {
       json[r'objAudit'] = this.objAudit;
+    } else {
+      json[r'objAudit'] = null;
+    }
     if (this.sWebhookEvent != null) {
       json[r'sWebhookEvent'] = this.sWebhookEvent;
     } else {
@@ -293,6 +328,11 @@ class CustomWebhookResponse {
     } else {
       json[r'eWebhookEmittype'] = null;
     }
+    if (this.fkiEzmaxpartnerproductstagewebhookID != null) {
+      json[r'fkiEzmaxpartnerproductstagewebhookID'] = this.fkiEzmaxpartnerproductstagewebhookID;
+    } else {
+      json[r'fkiEzmaxpartnerproductstagewebhookID'] = null;
+    }
     return json;
   }
 
@@ -307,15 +347,29 @@ class CustomWebhookResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CustomWebhookResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CustomWebhookResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sWebhookDescription'), 'Required key "CustomWebhookResponse[sWebhookDescription]" is missing from JSON.');
+        assert(json[r'sWebhookDescription'] != null, 'Required key "CustomWebhookResponse[sWebhookDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'eWebhookModule'), 'Required key "CustomWebhookResponse[eWebhookModule]" is missing from JSON.');
+        assert(json[r'eWebhookModule'] != null, 'Required key "CustomWebhookResponse[eWebhookModule]" has a null value in JSON.');
+        assert(json.containsKey(r'sWebhookUrl'), 'Required key "CustomWebhookResponse[sWebhookUrl]" is missing from JSON.');
+        assert(json[r'sWebhookUrl'] != null, 'Required key "CustomWebhookResponse[sWebhookUrl]" has a null value in JSON.');
+        assert(json.containsKey(r'sWebhookEmailfailed'), 'Required key "CustomWebhookResponse[sWebhookEmailfailed]" is missing from JSON.');
+        assert(json[r'sWebhookEmailfailed'] != null, 'Required key "CustomWebhookResponse[sWebhookEmailfailed]" has a null value in JSON.');
+        assert(json.containsKey(r'bWebhookIsactive'), 'Required key "CustomWebhookResponse[bWebhookIsactive]" is missing from JSON.');
+        assert(json[r'bWebhookIsactive'] != null, 'Required key "CustomWebhookResponse[bWebhookIsactive]" has a null value in JSON.');
+        assert(json.containsKey(r'bWebhookIssigned'), 'Required key "CustomWebhookResponse[bWebhookIssigned]" is missing from JSON.');
+        assert(json[r'bWebhookIssigned'] != null, 'Required key "CustomWebhookResponse[bWebhookIssigned]" has a null value in JSON.');
+        assert(json.containsKey(r'bWebhookSkipsslvalidation'), 'Required key "CustomWebhookResponse[bWebhookSkipsslvalidation]" is missing from JSON.');
+        assert(json[r'bWebhookSkipsslvalidation'] != null, 'Required key "CustomWebhookResponse[bWebhookSkipsslvalidation]" has a null value in JSON.');
+        assert(json.containsKey(r'pksCustomerCode'), 'Required key "CustomWebhookResponse[pksCustomerCode]" is missing from JSON.');
+        assert(json[r'pksCustomerCode'] != null, 'Required key "CustomWebhookResponse[pksCustomerCode]" has a null value in JSON.');
+        assert(json.containsKey(r'bWebhookTest'), 'Required key "CustomWebhookResponse[bWebhookTest]" is missing from JSON.');
+        assert(json[r'bWebhookTest'] != null, 'Required key "CustomWebhookResponse[bWebhookTest]" has a null value in JSON.');
         return true;
       }());
 
       return CustomWebhookResponse(
-        pkiWebhookID: mapValueOfType<int>(json, r'pkiWebhookID')!,
+        pkiWebhookID: mapValueOfType<int>(json, r'pkiWebhookID'),
         fkiAuthenticationexternalID: mapValueOfType<int>(json, r'fkiAuthenticationexternalID'),
         sWebhookDescription: mapValueOfType<String>(json, r'sWebhookDescription')!,
         fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID'),
@@ -331,13 +385,14 @@ class CustomWebhookResponse {
         bWebhookIssigned: mapValueOfType<bool>(json, r'bWebhookIssigned')!,
         bWebhookSkipsslvalidation: mapValueOfType<bool>(json, r'bWebhookSkipsslvalidation')!,
         sAuthenticationexternalDescription: mapValueOfType<String>(json, r'sAuthenticationexternalDescription'),
-        objAudit: CommonAudit.fromJson(json[r'objAudit'])!,
+        objAudit: CommonAudit.fromJson(json[r'objAudit']),
         sWebhookEvent: mapValueOfType<String>(json, r'sWebhookEvent'),
         sWebhookAuthentificationexternalerror: mapValueOfType<String>(json, r'sWebhookAuthentificationexternalerror'),
         aObjWebhookheader: WebhookheaderResponseCompound.listFromJson(json[r'a_objWebhookheader']),
         pksCustomerCode: mapValueOfType<String>(json, r'pksCustomerCode')!,
         bWebhookTest: mapValueOfType<bool>(json, r'bWebhookTest')!,
         eWebhookEmittype: CustomWebhookResponseEWebhookEmittypeEnum.fromJson(json[r'eWebhookEmittype']),
+        fkiEzmaxpartnerproductstagewebhookID: mapValueOfType<int>(json, r'fkiEzmaxpartnerproductstagewebhookID'),
       );
     }
     return null;
@@ -385,7 +440,6 @@ class CustomWebhookResponse {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'pkiWebhookID',
     'sWebhookDescription',
     'eWebhookModule',
     'sWebhookUrl',
@@ -393,7 +447,6 @@ class CustomWebhookResponse {
     'bWebhookIsactive',
     'bWebhookIssigned',
     'bWebhookSkipsslvalidation',
-    'objAudit',
     'pksCustomerCode',
     'bWebhookTest',
   };

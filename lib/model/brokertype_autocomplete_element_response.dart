@@ -65,10 +65,12 @@ class BrokertypeAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "BrokertypeAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "BrokertypeAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiBrokertypeID'), 'Required key "BrokertypeAutocompleteElementResponse[pkiBrokertypeID]" is missing from JSON.');
+        assert(json[r'pkiBrokertypeID'] != null, 'Required key "BrokertypeAutocompleteElementResponse[pkiBrokertypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'sBrokertypeNameX'), 'Required key "BrokertypeAutocompleteElementResponse[sBrokertypeNameX]" is missing from JSON.');
+        assert(json[r'sBrokertypeNameX'] != null, 'Required key "BrokertypeAutocompleteElementResponse[sBrokertypeNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'bBrokertypeIsactive'), 'Required key "BrokertypeAutocompleteElementResponse[bBrokertypeIsactive]" is missing from JSON.');
+        assert(json[r'bBrokertypeIsactive'] != null, 'Required key "BrokertypeAutocompleteElementResponse[bBrokertypeIsactive]" has a null value in JSON.');
         return true;
       }());
 

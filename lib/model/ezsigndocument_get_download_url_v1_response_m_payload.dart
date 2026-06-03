@@ -48,10 +48,8 @@ class EzsigndocumentGetDownloadUrlV1ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigndocumentGetDownloadUrlV1ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigndocumentGetDownloadUrlV1ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sDownloadUrl'), 'Required key "EzsigndocumentGetDownloadUrlV1ResponseMPayload[sDownloadUrl]" is missing from JSON.');
+        assert(json[r'sDownloadUrl'] != null, 'Required key "EzsigndocumentGetDownloadUrlV1ResponseMPayload[sDownloadUrl]" has a null value in JSON.');
         return true;
       }());
 

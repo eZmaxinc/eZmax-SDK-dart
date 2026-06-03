@@ -76,10 +76,16 @@ class CustomEzsignsignaturestatusResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CustomEzsignsignaturestatusResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CustomEzsignsignaturestatusResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'eEzsignsignaturestatusSteptype'), 'Required key "CustomEzsignsignaturestatusResponse[eEzsignsignaturestatusSteptype]" is missing from JSON.');
+        assert(json[r'eEzsignsignaturestatusSteptype'] != null, 'Required key "CustomEzsignsignaturestatusResponse[eEzsignsignaturestatusSteptype]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignsignaturestatusStep'), 'Required key "CustomEzsignsignaturestatusResponse[iEzsignsignaturestatusStep]" is missing from JSON.');
+        assert(json[r'iEzsignsignaturestatusStep'] != null, 'Required key "CustomEzsignsignaturestatusResponse[iEzsignsignaturestatusStep]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignsignaturestatusTotal'), 'Required key "CustomEzsignsignaturestatusResponse[iEzsignsignaturestatusTotal]" is missing from JSON.');
+        assert(json[r'iEzsignsignaturestatusTotal'] != null, 'Required key "CustomEzsignsignaturestatusResponse[iEzsignsignaturestatusTotal]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignsignaturestatusSigned'), 'Required key "CustomEzsignsignaturestatusResponse[iEzsignsignaturestatusSigned]" is missing from JSON.');
+        assert(json[r'iEzsignsignaturestatusSigned'] != null, 'Required key "CustomEzsignsignaturestatusResponse[iEzsignsignaturestatusSigned]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignsignaturestatusConditional'), 'Required key "CustomEzsignsignaturestatusResponse[iEzsignsignaturestatusConditional]" is missing from JSON.');
+        assert(json[r'iEzsignsignaturestatusConditional'] != null, 'Required key "CustomEzsignsignaturestatusResponse[iEzsignsignaturestatusConditional]" has a null value in JSON.');
         return true;
       }());
 

@@ -21,7 +21,7 @@ class SecretquestionAutocompleteElementResponse {
   /// The text of the Secretquestion in the language of the requester
   String sSecretquestionTextX;
 
-  /// The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father's middle name| |15|Your mother's maiden name| |16|Name of your eldest child| |17|Your spouse's middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat's name| |22|Date of Birth (YYYY-MM-DD)| |22|Secret Code| |22|Your reference code|
+  /// The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father's middle name| |15|Your mother's maiden name| |16|Name of your eldest child| |17|Your spouse's middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat's name| |22|Date of Birth (YYYY-MM-DD)| |23|Secret Code| |24|Your reference code| |25|What are the last 4 digits of your SIN| |26|What is your postal code| |27|What is your employee number| |28|What is your manager’s first name| |29|What is your file number| |30|What is your client/member number| |31|What is your license number| |32|What are the last 4 digits of your phone number| |33|What is your student number|
   ///
   /// Minimum value: 0
   int pkiSecretquestionID;
@@ -64,10 +64,12 @@ class SecretquestionAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "SecretquestionAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "SecretquestionAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sSecretquestionTextX'), 'Required key "SecretquestionAutocompleteElementResponse[sSecretquestionTextX]" is missing from JSON.');
+        assert(json[r'sSecretquestionTextX'] != null, 'Required key "SecretquestionAutocompleteElementResponse[sSecretquestionTextX]" has a null value in JSON.');
+        assert(json.containsKey(r'pkiSecretquestionID'), 'Required key "SecretquestionAutocompleteElementResponse[pkiSecretquestionID]" is missing from JSON.');
+        assert(json[r'pkiSecretquestionID'] != null, 'Required key "SecretquestionAutocompleteElementResponse[pkiSecretquestionID]" has a null value in JSON.');
+        assert(json.containsKey(r'bSecretquestionIsactive'), 'Required key "SecretquestionAutocompleteElementResponse[bSecretquestionIsactive]" is missing from JSON.');
+        assert(json[r'bSecretquestionIsactive'] != null, 'Required key "SecretquestionAutocompleteElementResponse[bSecretquestionIsactive]" has a null value in JSON.');
         return true;
       }());
 

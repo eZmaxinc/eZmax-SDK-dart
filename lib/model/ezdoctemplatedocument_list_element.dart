@@ -17,7 +17,7 @@ class EzdoctemplatedocumentListElement {
     required this.fkiLanguageID,
     this.fkiEzsignfoldertypeID,
     required this.fkiEzdoctemplatetypeID,
-    required this.fkiEzdoctemplatefieldtypecategoryID,
+    this.fkiEzdoctemplatefieldtypecategoryID,
     this.sEzsignfoldertypeNameX,
     this.sEzdoctemplatetypeDescriptionX,
     this.sEzdoctemplatefieldtypecategoryDescriptionX,
@@ -60,7 +60,13 @@ class EzdoctemplatedocumentListElement {
   ///
   /// Minimum value: 0
   /// Maximum value: 255
-  int fkiEzdoctemplatefieldtypecategoryID;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiEzdoctemplatefieldtypecategoryID;
 
   /// The name of the Ezsignfoldertype in the language of the requester
   ///
@@ -124,7 +130,7 @@ class EzdoctemplatedocumentListElement {
     (fkiLanguageID.hashCode) +
     (fkiEzsignfoldertypeID == null ? 0 : fkiEzsignfoldertypeID!.hashCode) +
     (fkiEzdoctemplatetypeID.hashCode) +
-    (fkiEzdoctemplatefieldtypecategoryID.hashCode) +
+    (fkiEzdoctemplatefieldtypecategoryID == null ? 0 : fkiEzdoctemplatefieldtypecategoryID!.hashCode) +
     (sEzsignfoldertypeNameX == null ? 0 : sEzsignfoldertypeNameX!.hashCode) +
     (sEzdoctemplatetypeDescriptionX == null ? 0 : sEzdoctemplatetypeDescriptionX!.hashCode) +
     (sEzdoctemplatefieldtypecategoryDescriptionX == null ? 0 : sEzdoctemplatefieldtypecategoryDescriptionX!.hashCode) +
@@ -145,7 +151,11 @@ class EzdoctemplatedocumentListElement {
       json[r'fkiEzsignfoldertypeID'] = null;
     }
       json[r'fkiEzdoctemplatetypeID'] = this.fkiEzdoctemplatetypeID;
+    if (this.fkiEzdoctemplatefieldtypecategoryID != null) {
       json[r'fkiEzdoctemplatefieldtypecategoryID'] = this.fkiEzdoctemplatefieldtypecategoryID;
+    } else {
+      json[r'fkiEzdoctemplatefieldtypecategoryID'] = null;
+    }
     if (this.sEzsignfoldertypeNameX != null) {
       json[r'sEzsignfoldertypeNameX'] = this.sEzsignfoldertypeNameX;
     } else {
@@ -182,10 +192,16 @@ class EzdoctemplatedocumentListElement {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzdoctemplatedocumentListElement[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzdoctemplatedocumentListElement[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzdoctemplatedocumentID'), 'Required key "EzdoctemplatedocumentListElement[pkiEzdoctemplatedocumentID]" is missing from JSON.');
+        assert(json[r'pkiEzdoctemplatedocumentID'] != null, 'Required key "EzdoctemplatedocumentListElement[pkiEzdoctemplatedocumentID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiLanguageID'), 'Required key "EzdoctemplatedocumentListElement[fkiLanguageID]" is missing from JSON.');
+        assert(json[r'fkiLanguageID'] != null, 'Required key "EzdoctemplatedocumentListElement[fkiLanguageID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiEzdoctemplatetypeID'), 'Required key "EzdoctemplatedocumentListElement[fkiEzdoctemplatetypeID]" is missing from JSON.');
+        assert(json[r'fkiEzdoctemplatetypeID'] != null, 'Required key "EzdoctemplatedocumentListElement[fkiEzdoctemplatetypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzdoctemplatedocumentIsactive'), 'Required key "EzdoctemplatedocumentListElement[bEzdoctemplatedocumentIsactive]" is missing from JSON.');
+        assert(json[r'bEzdoctemplatedocumentIsactive'] != null, 'Required key "EzdoctemplatedocumentListElement[bEzdoctemplatedocumentIsactive]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzdoctemplatedocumentNameX'), 'Required key "EzdoctemplatedocumentListElement[sEzdoctemplatedocumentNameX]" is missing from JSON.');
+        assert(json[r'sEzdoctemplatedocumentNameX'] != null, 'Required key "EzdoctemplatedocumentListElement[sEzdoctemplatedocumentNameX]" has a null value in JSON.');
         return true;
       }());
 
@@ -194,7 +210,7 @@ class EzdoctemplatedocumentListElement {
         fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID')!,
         fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID'),
         fkiEzdoctemplatetypeID: mapValueOfType<int>(json, r'fkiEzdoctemplatetypeID')!,
-        fkiEzdoctemplatefieldtypecategoryID: mapValueOfType<int>(json, r'fkiEzdoctemplatefieldtypecategoryID')!,
+        fkiEzdoctemplatefieldtypecategoryID: mapValueOfType<int>(json, r'fkiEzdoctemplatefieldtypecategoryID'),
         sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX'),
         sEzdoctemplatetypeDescriptionX: mapValueOfType<String>(json, r'sEzdoctemplatetypeDescriptionX'),
         sEzdoctemplatefieldtypecategoryDescriptionX: mapValueOfType<String>(json, r'sEzdoctemplatefieldtypecategoryDescriptionX'),
@@ -251,7 +267,6 @@ class EzdoctemplatedocumentListElement {
     'pkiEzdoctemplatedocumentID',
     'fkiLanguageID',
     'fkiEzdoctemplatetypeID',
-    'fkiEzdoctemplatefieldtypecategoryID',
     'bEzdoctemplatedocumentIsactive',
     'sEzdoctemplatedocumentNameX',
   };

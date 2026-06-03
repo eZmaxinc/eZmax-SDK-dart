@@ -82,10 +82,16 @@ class CreditcarddetailRequest {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CreditcarddetailRequest[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CreditcarddetailRequest[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'iCreditcarddetailExpirationmonth'), 'Required key "CreditcarddetailRequest[iCreditcarddetailExpirationmonth]" is missing from JSON.');
+        assert(json[r'iCreditcarddetailExpirationmonth'] != null, 'Required key "CreditcarddetailRequest[iCreditcarddetailExpirationmonth]" has a null value in JSON.');
+        assert(json.containsKey(r'iCreditcarddetailExpirationyear'), 'Required key "CreditcarddetailRequest[iCreditcarddetailExpirationyear]" is missing from JSON.');
+        assert(json[r'iCreditcarddetailExpirationyear'] != null, 'Required key "CreditcarddetailRequest[iCreditcarddetailExpirationyear]" has a null value in JSON.');
+        assert(json.containsKey(r'sCreditcarddetailCivic'), 'Required key "CreditcarddetailRequest[sCreditcarddetailCivic]" is missing from JSON.');
+        assert(json[r'sCreditcarddetailCivic'] != null, 'Required key "CreditcarddetailRequest[sCreditcarddetailCivic]" has a null value in JSON.');
+        assert(json.containsKey(r'sCreditcarddetailStreet'), 'Required key "CreditcarddetailRequest[sCreditcarddetailStreet]" is missing from JSON.');
+        assert(json[r'sCreditcarddetailStreet'] != null, 'Required key "CreditcarddetailRequest[sCreditcarddetailStreet]" has a null value in JSON.');
+        assert(json.containsKey(r'sCreditcarddetailZip'), 'Required key "CreditcarddetailRequest[sCreditcarddetailZip]" is missing from JSON.');
+        assert(json[r'sCreditcarddetailZip'] != null, 'Required key "CreditcarddetailRequest[sCreditcarddetailZip]" has a null value in JSON.');
         return true;
       }());
 

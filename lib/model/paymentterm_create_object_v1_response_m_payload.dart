@@ -48,10 +48,8 @@ class PaymenttermCreateObjectV1ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "PaymenttermCreateObjectV1ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "PaymenttermCreateObjectV1ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_pkiPaymenttermID'), 'Required key "PaymenttermCreateObjectV1ResponseMPayload[a_pkiPaymenttermID]" is missing from JSON.');
+        assert(json[r'a_pkiPaymenttermID'] != null, 'Required key "PaymenttermCreateObjectV1ResponseMPayload[a_pkiPaymenttermID]" has a null value in JSON.');
         return true;
       }());
 

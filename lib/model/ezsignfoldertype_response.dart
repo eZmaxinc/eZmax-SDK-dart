@@ -724,10 +724,40 @@ class EzsignfoldertypeResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignfoldertypeResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignfoldertypeResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsignfoldertypeID'), 'Required key "EzsignfoldertypeResponse[pkiEzsignfoldertypeID]" is missing from JSON.');
+        assert(json[r'pkiEzsignfoldertypeID'] != null, 'Required key "EzsignfoldertypeResponse[pkiEzsignfoldertypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'objEzsignfoldertypeName'), 'Required key "EzsignfoldertypeResponse[objEzsignfoldertypeName]" is missing from JSON.');
+        assert(json[r'objEzsignfoldertypeName'] != null, 'Required key "EzsignfoldertypeResponse[objEzsignfoldertypeName]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiBrandingID'), 'Required key "EzsignfoldertypeResponse[fkiBrandingID]" is missing from JSON.');
+        assert(json[r'fkiBrandingID'] != null, 'Required key "EzsignfoldertypeResponse[fkiBrandingID]" has a null value in JSON.');
+        assert(json.containsKey(r'sBrandingDescriptionX'), 'Required key "EzsignfoldertypeResponse[sBrandingDescriptionX]" is missing from JSON.');
+        assert(json[r'sBrandingDescriptionX'] != null, 'Required key "EzsignfoldertypeResponse[sBrandingDescriptionX]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsignfoldertypePrivacylevel'), 'Required key "EzsignfoldertypeResponse[eEzsignfoldertypePrivacylevel]" is missing from JSON.');
+        assert(json[r'eEzsignfoldertypePrivacylevel'] != null, 'Required key "EzsignfoldertypeResponse[eEzsignfoldertypePrivacylevel]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignfoldertypeArchivaldays'), 'Required key "EzsignfoldertypeResponse[iEzsignfoldertypeArchivaldays]" is missing from JSON.');
+        assert(json[r'iEzsignfoldertypeArchivaldays'] != null, 'Required key "EzsignfoldertypeResponse[iEzsignfoldertypeArchivaldays]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsignfoldertypeDisposal'), 'Required key "EzsignfoldertypeResponse[eEzsignfoldertypeDisposal]" is missing from JSON.');
+        assert(json[r'eEzsignfoldertypeDisposal'] != null, 'Required key "EzsignfoldertypeResponse[eEzsignfoldertypeDisposal]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsignfoldertypeCompletion'), 'Required key "EzsignfoldertypeResponse[eEzsignfoldertypeCompletion]" is missing from JSON.');
+        assert(json[r'eEzsignfoldertypeCompletion'] != null, 'Required key "EzsignfoldertypeResponse[eEzsignfoldertypeCompletion]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignfoldertypeDeadlinedays'), 'Required key "EzsignfoldertypeResponse[iEzsignfoldertypeDeadlinedays]" is missing from JSON.');
+        assert(json[r'iEzsignfoldertypeDeadlinedays'] != null, 'Required key "EzsignfoldertypeResponse[iEzsignfoldertypeDeadlinedays]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignfoldertypeSendsignedtodocumentowner'), 'Required key "EzsignfoldertypeResponse[bEzsignfoldertypeSendsignedtodocumentowner]" is missing from JSON.');
+        assert(json[r'bEzsignfoldertypeSendsignedtodocumentowner'] != null, 'Required key "EzsignfoldertypeResponse[bEzsignfoldertypeSendsignedtodocumentowner]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignfoldertypeSendsignedtofolderowner'), 'Required key "EzsignfoldertypeResponse[bEzsignfoldertypeSendsignedtofolderowner]" is missing from JSON.');
+        assert(json[r'bEzsignfoldertypeSendsignedtofolderowner'] != null, 'Required key "EzsignfoldertypeResponse[bEzsignfoldertypeSendsignedtofolderowner]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignfoldertypeSendsignedtocolleague'), 'Required key "EzsignfoldertypeResponse[bEzsignfoldertypeSendsignedtocolleague]" is missing from JSON.');
+        assert(json[r'bEzsignfoldertypeSendsignedtocolleague'] != null, 'Required key "EzsignfoldertypeResponse[bEzsignfoldertypeSendsignedtocolleague]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignfoldertypeSendsummarytodocumentowner'), 'Required key "EzsignfoldertypeResponse[bEzsignfoldertypeSendsummarytodocumentowner]" is missing from JSON.');
+        assert(json[r'bEzsignfoldertypeSendsummarytodocumentowner'] != null, 'Required key "EzsignfoldertypeResponse[bEzsignfoldertypeSendsummarytodocumentowner]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignfoldertypeSendsummarytofolderowner'), 'Required key "EzsignfoldertypeResponse[bEzsignfoldertypeSendsummarytofolderowner]" is missing from JSON.');
+        assert(json[r'bEzsignfoldertypeSendsummarytofolderowner'] != null, 'Required key "EzsignfoldertypeResponse[bEzsignfoldertypeSendsummarytofolderowner]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignfoldertypeSendsummarytocolleague'), 'Required key "EzsignfoldertypeResponse[bEzsignfoldertypeSendsummarytocolleague]" is missing from JSON.');
+        assert(json[r'bEzsignfoldertypeSendsummarytocolleague'] != null, 'Required key "EzsignfoldertypeResponse[bEzsignfoldertypeSendsummarytocolleague]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignfoldertypeIsactive'), 'Required key "EzsignfoldertypeResponse[bEzsignfoldertypeIsactive]" is missing from JSON.');
+        assert(json[r'bEzsignfoldertypeIsactive'] != null, 'Required key "EzsignfoldertypeResponse[bEzsignfoldertypeIsactive]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objUserlogintype'), 'Required key "EzsignfoldertypeResponse[a_objUserlogintype]" is missing from JSON.');
+        assert(json[r'a_objUserlogintype'] != null, 'Required key "EzsignfoldertypeResponse[a_objUserlogintype]" has a null value in JSON.');
         return true;
       }());
 

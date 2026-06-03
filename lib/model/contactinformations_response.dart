@@ -216,10 +216,10 @@ class ContactinformationsResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "ContactinformationsResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "ContactinformationsResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiContactinformationsID'), 'Required key "ContactinformationsResponse[pkiContactinformationsID]" is missing from JSON.');
+        assert(json[r'pkiContactinformationsID'] != null, 'Required key "ContactinformationsResponse[pkiContactinformationsID]" has a null value in JSON.');
+        assert(json.containsKey(r'eContactinformationsType'), 'Required key "ContactinformationsResponse[eContactinformationsType]" is missing from JSON.');
+        assert(json[r'eContactinformationsType'] != null, 'Required key "ContactinformationsResponse[eContactinformationsType]" has a null value in JSON.');
         return true;
       }());
 

@@ -58,10 +58,10 @@ class ModulegroupResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "ModulegroupResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "ModulegroupResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiModulegroupID'), 'Required key "ModulegroupResponse[pkiModulegroupID]" is missing from JSON.');
+        assert(json[r'pkiModulegroupID'] != null, 'Required key "ModulegroupResponse[pkiModulegroupID]" has a null value in JSON.');
+        assert(json.containsKey(r'sModulegroupNameX'), 'Required key "ModulegroupResponse[sModulegroupNameX]" is missing from JSON.');
+        assert(json[r'sModulegroupNameX'] != null, 'Required key "ModulegroupResponse[sModulegroupNameX]" has a null value in JSON.');
         return true;
       }());
 

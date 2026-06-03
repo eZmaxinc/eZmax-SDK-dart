@@ -47,10 +47,8 @@ class UserGetSubnetsV1ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "UserGetSubnetsV1ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "UserGetSubnetsV1ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_objSubnet'), 'Required key "UserGetSubnetsV1ResponseMPayload[a_objSubnet]" is missing from JSON.');
+        assert(json[r'a_objSubnet'] != null, 'Required key "UserGetSubnetsV1ResponseMPayload[a_objSubnet]" has a null value in JSON.');
         return true;
       }());
 

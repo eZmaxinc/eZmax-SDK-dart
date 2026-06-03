@@ -53,10 +53,10 @@ class EzsignfolderGetActionableElementsV1ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignfolderGetActionableElementsV1ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignfolderGetActionableElementsV1ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_objEzsignsignature'), 'Required key "EzsignfolderGetActionableElementsV1ResponseMPayload[a_objEzsignsignature]" is missing from JSON.');
+        assert(json[r'a_objEzsignsignature'] != null, 'Required key "EzsignfolderGetActionableElementsV1ResponseMPayload[a_objEzsignsignature]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objEzsignformfieldgroup'), 'Required key "EzsignfolderGetActionableElementsV1ResponseMPayload[a_objEzsignformfieldgroup]" is missing from JSON.');
+        assert(json[r'a_objEzsignformfieldgroup'] != null, 'Required key "EzsignfolderGetActionableElementsV1ResponseMPayload[a_objEzsignformfieldgroup]" has a null value in JSON.');
         return true;
       }());
 

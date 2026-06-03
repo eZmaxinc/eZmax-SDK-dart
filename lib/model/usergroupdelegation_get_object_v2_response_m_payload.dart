@@ -47,10 +47,8 @@ class UsergroupdelegationGetObjectV2ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "UsergroupdelegationGetObjectV2ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "UsergroupdelegationGetObjectV2ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'objUsergroupdelegation'), 'Required key "UsergroupdelegationGetObjectV2ResponseMPayload[objUsergroupdelegation]" is missing from JSON.');
+        assert(json[r'objUsergroupdelegation'] != null, 'Required key "UsergroupdelegationGetObjectV2ResponseMPayload[objUsergroupdelegation]" has a null value in JSON.');
         return true;
       }());
 

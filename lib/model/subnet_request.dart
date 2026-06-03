@@ -125,10 +125,12 @@ class SubnetRequest {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "SubnetRequest[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "SubnetRequest[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'objSubnetDescription'), 'Required key "SubnetRequest[objSubnetDescription]" is missing from JSON.');
+        assert(json[r'objSubnetDescription'] != null, 'Required key "SubnetRequest[objSubnetDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'iSubnetNetwork'), 'Required key "SubnetRequest[iSubnetNetwork]" is missing from JSON.');
+        assert(json[r'iSubnetNetwork'] != null, 'Required key "SubnetRequest[iSubnetNetwork]" has a null value in JSON.');
+        assert(json.containsKey(r'iSubnetMask'), 'Required key "SubnetRequest[iSubnetMask]" is missing from JSON.');
+        assert(json[r'iSubnetMask'] != null, 'Required key "SubnetRequest[iSubnetMask]" has a null value in JSON.');
         return true;
       }());
 

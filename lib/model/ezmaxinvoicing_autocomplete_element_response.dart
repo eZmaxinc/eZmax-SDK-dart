@@ -64,10 +64,12 @@ class EzmaxinvoicingAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzmaxinvoicingAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzmaxinvoicingAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'yyyymmEzmaxinvoicing'), 'Required key "EzmaxinvoicingAutocompleteElementResponse[yyyymmEzmaxinvoicing]" is missing from JSON.');
+        assert(json[r'yyyymmEzmaxinvoicing'] != null, 'Required key "EzmaxinvoicingAutocompleteElementResponse[yyyymmEzmaxinvoicing]" has a null value in JSON.');
+        assert(json.containsKey(r'pkiEzmaxinvoicingID'), 'Required key "EzmaxinvoicingAutocompleteElementResponse[pkiEzmaxinvoicingID]" is missing from JSON.');
+        assert(json[r'pkiEzmaxinvoicingID'] != null, 'Required key "EzmaxinvoicingAutocompleteElementResponse[pkiEzmaxinvoicingID]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzmaxinvoicingIsactive'), 'Required key "EzmaxinvoicingAutocompleteElementResponse[bEzmaxinvoicingIsactive]" is missing from JSON.');
+        assert(json[r'bEzmaxinvoicingIsactive'] != null, 'Required key "EzmaxinvoicingAutocompleteElementResponse[bEzmaxinvoicingIsactive]" has a null value in JSON.');
         return true;
       }());
 

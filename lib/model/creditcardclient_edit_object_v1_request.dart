@@ -47,10 +47,8 @@ class CreditcardclientEditObjectV1Request {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CreditcardclientEditObjectV1Request[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CreditcardclientEditObjectV1Request[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'objCreditcardclient'), 'Required key "CreditcardclientEditObjectV1Request[objCreditcardclient]" is missing from JSON.');
+        assert(json[r'objCreditcardclient'] != null, 'Required key "CreditcardclientEditObjectV1Request[objCreditcardclient]" has a null value in JSON.');
         return true;
       }());
 

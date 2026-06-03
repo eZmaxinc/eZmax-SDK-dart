@@ -54,10 +54,10 @@ class CustomFormDataEzsignformfieldgroupResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CustomFormDataEzsignformfieldgroupResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CustomFormDataEzsignformfieldgroupResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sEzsignformfieldgroupLabel'), 'Required key "CustomFormDataEzsignformfieldgroupResponse[sEzsignformfieldgroupLabel]" is missing from JSON.');
+        assert(json[r'sEzsignformfieldgroupLabel'] != null, 'Required key "CustomFormDataEzsignformfieldgroupResponse[sEzsignformfieldgroupLabel]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objEzsignformfield'), 'Required key "CustomFormDataEzsignformfieldgroupResponse[a_objEzsignformfield]" is missing from JSON.');
+        assert(json[r'a_objEzsignformfield'] != null, 'Required key "CustomFormDataEzsignformfieldgroupResponse[a_objEzsignformfield]" has a null value in JSON.');
         return true;
       }());
 

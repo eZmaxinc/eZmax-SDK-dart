@@ -176,10 +176,14 @@ class BrandingRequestV2 {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "BrandingRequestV2[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "BrandingRequestV2[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'objBrandingDescription'), 'Required key "BrandingRequestV2[objBrandingDescription]" is missing from JSON.');
+        assert(json[r'objBrandingDescription'] != null, 'Required key "BrandingRequestV2[objBrandingDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'eBrandingLogo'), 'Required key "BrandingRequestV2[eBrandingLogo]" is missing from JSON.');
+        assert(json[r'eBrandingLogo'] != null, 'Required key "BrandingRequestV2[eBrandingLogo]" has a null value in JSON.');
+        assert(json.containsKey(r'iBrandingColor'), 'Required key "BrandingRequestV2[iBrandingColor]" is missing from JSON.');
+        assert(json[r'iBrandingColor'] != null, 'Required key "BrandingRequestV2[iBrandingColor]" has a null value in JSON.');
+        assert(json.containsKey(r'bBrandingIsactive'), 'Required key "BrandingRequestV2[bBrandingIsactive]" is missing from JSON.');
+        assert(json[r'bBrandingIsactive'] != null, 'Required key "BrandingRequestV2[bBrandingIsactive]" has a null value in JSON.');
         return true;
       }());
 

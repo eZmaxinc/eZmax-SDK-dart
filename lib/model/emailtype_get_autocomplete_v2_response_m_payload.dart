@@ -48,10 +48,8 @@ class EmailtypeGetAutocompleteV2ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EmailtypeGetAutocompleteV2ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EmailtypeGetAutocompleteV2ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_objEmailtype'), 'Required key "EmailtypeGetAutocompleteV2ResponseMPayload[a_objEmailtype]" is missing from JSON.');
+        assert(json[r'a_objEmailtype'] != null, 'Required key "EmailtypeGetAutocompleteV2ResponseMPayload[a_objEmailtype]" has a null value in JSON.');
         return true;
       }());
 

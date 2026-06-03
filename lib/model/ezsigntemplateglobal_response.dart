@@ -128,10 +128,24 @@ class EzsigntemplateglobalResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplateglobalResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplateglobalResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsigntemplateglobalID'), 'Required key "EzsigntemplateglobalResponse[pkiEzsigntemplateglobalID]" is missing from JSON.');
+        assert(json[r'pkiEzsigntemplateglobalID'] != null, 'Required key "EzsigntemplateglobalResponse[pkiEzsigntemplateglobalID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiEzsigntemplateglobaldocumentID'), 'Required key "EzsigntemplateglobalResponse[fkiEzsigntemplateglobaldocumentID]" is missing from JSON.');
+        assert(json[r'fkiEzsigntemplateglobaldocumentID'] != null, 'Required key "EzsigntemplateglobalResponse[fkiEzsigntemplateglobaldocumentID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiModuleID'), 'Required key "EzsigntemplateglobalResponse[fkiModuleID]" is missing from JSON.');
+        assert(json[r'fkiModuleID'] != null, 'Required key "EzsigntemplateglobalResponse[fkiModuleID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiLanguageID'), 'Required key "EzsigntemplateglobalResponse[fkiLanguageID]" is missing from JSON.');
+        assert(json[r'fkiLanguageID'] != null, 'Required key "EzsigntemplateglobalResponse[fkiLanguageID]" has a null value in JSON.');
+        assert(json.containsKey(r'sLanguageNameX'), 'Required key "EzsigntemplateglobalResponse[sLanguageNameX]" is missing from JSON.');
+        assert(json[r'sLanguageNameX'] != null, 'Required key "EzsigntemplateglobalResponse[sLanguageNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsigntemplateglobalModule'), 'Required key "EzsigntemplateglobalResponse[eEzsigntemplateglobalModule]" is missing from JSON.');
+        assert(json[r'eEzsigntemplateglobalModule'] != null, 'Required key "EzsigntemplateglobalResponse[eEzsigntemplateglobalModule]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsigntemplateglobalSupplier'), 'Required key "EzsigntemplateglobalResponse[eEzsigntemplateglobalSupplier]" is missing from JSON.');
+        assert(json[r'eEzsigntemplateglobalSupplier'] != null, 'Required key "EzsigntemplateglobalResponse[eEzsigntemplateglobalSupplier]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsigntemplateglobalCode'), 'Required key "EzsigntemplateglobalResponse[sEzsigntemplateglobalCode]" is missing from JSON.');
+        assert(json[r'sEzsigntemplateglobalCode'] != null, 'Required key "EzsigntemplateglobalResponse[sEzsigntemplateglobalCode]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsigntemplateglobalDescription'), 'Required key "EzsigntemplateglobalResponse[sEzsigntemplateglobalDescription]" is missing from JSON.');
+        assert(json[r'sEzsigntemplateglobalDescription'] != null, 'Required key "EzsigntemplateglobalResponse[sEzsigntemplateglobalDescription]" has a null value in JSON.');
         return true;
       }());
 

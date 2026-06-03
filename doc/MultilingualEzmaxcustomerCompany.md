@@ -1,0 +1,16 @@
+# openapi.model.MultilingualEzmaxcustomerCompany
+
+## Load the model package
+```dart
+import 'package:openapi/api.dart';
+```
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**sEzmaxcustomerCompany1** | **String** | The company of the Ezmaxcustomer in French | [optional] 
+**sEzmaxcustomerCompany2** | **String** | The company of the Ezmaxcustomer in English | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

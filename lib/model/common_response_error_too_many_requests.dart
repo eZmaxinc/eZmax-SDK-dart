@@ -61,10 +61,10 @@ class CommonResponseErrorTooManyRequests {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CommonResponseErrorTooManyRequests[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CommonResponseErrorTooManyRequests[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sErrorMessage'), 'Required key "CommonResponseErrorTooManyRequests[sErrorMessage]" is missing from JSON.');
+        assert(json[r'sErrorMessage'] != null, 'Required key "CommonResponseErrorTooManyRequests[sErrorMessage]" has a null value in JSON.');
+        assert(json.containsKey(r'eErrorCode'), 'Required key "CommonResponseErrorTooManyRequests[eErrorCode]" is missing from JSON.');
+        assert(json[r'eErrorCode'] != null, 'Required key "CommonResponseErrorTooManyRequests[eErrorCode]" has a null value in JSON.');
         return true;
       }());
 

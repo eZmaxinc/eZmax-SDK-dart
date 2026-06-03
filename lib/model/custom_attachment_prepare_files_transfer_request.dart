@@ -55,10 +55,10 @@ class CustomAttachmentPrepareFilesTransferRequest {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CustomAttachmentPrepareFilesTransferRequest[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CustomAttachmentPrepareFilesTransferRequest[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sAttachmentName'), 'Required key "CustomAttachmentPrepareFilesTransferRequest[sAttachmentName]" is missing from JSON.');
+        assert(json[r'sAttachmentName'] != null, 'Required key "CustomAttachmentPrepareFilesTransferRequest[sAttachmentName]" has a null value in JSON.');
+        assert(json.containsKey(r'sAttachmentMD5'), 'Required key "CustomAttachmentPrepareFilesTransferRequest[sAttachmentMD5]" is missing from JSON.');
+        assert(json[r'sAttachmentMD5'] != null, 'Required key "CustomAttachmentPrepareFilesTransferRequest[sAttachmentMD5]" has a null value in JSON.');
         return true;
       }());
 

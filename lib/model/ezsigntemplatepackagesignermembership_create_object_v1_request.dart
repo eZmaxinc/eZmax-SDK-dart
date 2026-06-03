@@ -47,10 +47,8 @@ class EzsigntemplatepackagesignermembershipCreateObjectV1Request {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplatepackagesignermembershipCreateObjectV1Request[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplatepackagesignermembershipCreateObjectV1Request[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_objEzsigntemplatepackagesignermembership'), 'Required key "EzsigntemplatepackagesignermembershipCreateObjectV1Request[a_objEzsigntemplatepackagesignermembership]" is missing from JSON.');
+        assert(json[r'a_objEzsigntemplatepackagesignermembership'] != null, 'Required key "EzsigntemplatepackagesignermembershipCreateObjectV1Request[a_objEzsigntemplatepackagesignermembership]" has a null value in JSON.');
         return true;
       }());
 

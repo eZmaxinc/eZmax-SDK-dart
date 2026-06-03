@@ -165,10 +165,12 @@ class EzsignsignerRequestCompoundContact {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignsignerRequestCompoundContact[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignsignerRequestCompoundContact[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sContactFirstname'), 'Required key "EzsignsignerRequestCompoundContact[sContactFirstname]" is missing from JSON.');
+        assert(json[r'sContactFirstname'] != null, 'Required key "EzsignsignerRequestCompoundContact[sContactFirstname]" has a null value in JSON.');
+        assert(json.containsKey(r'sContactLastname'), 'Required key "EzsignsignerRequestCompoundContact[sContactLastname]" is missing from JSON.');
+        assert(json[r'sContactLastname'] != null, 'Required key "EzsignsignerRequestCompoundContact[sContactLastname]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiLanguageID'), 'Required key "EzsignsignerRequestCompoundContact[fkiLanguageID]" is missing from JSON.');
+        assert(json[r'fkiLanguageID'] != null, 'Required key "EzsignsignerRequestCompoundContact[fkiLanguageID]" has a null value in JSON.');
         return true;
       }());
 

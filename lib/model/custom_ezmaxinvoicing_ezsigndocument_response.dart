@@ -96,10 +96,16 @@ class CustomEzmaxinvoicingEzsigndocumentResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CustomEzmaxinvoicingEzsigndocumentResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CustomEzmaxinvoicingEzsigndocumentResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiEzsignfolderID'), 'Required key "CustomEzmaxinvoicingEzsigndocumentResponse[fkiEzsignfolderID]" is missing from JSON.');
+        assert(json[r'fkiEzsignfolderID'] != null, 'Required key "CustomEzmaxinvoicingEzsigndocumentResponse[fkiEzsignfolderID]" has a null value in JSON.');
+        assert(json.containsKey(r'sName'), 'Required key "CustomEzmaxinvoicingEzsigndocumentResponse[sName]" is missing from JSON.');
+        assert(json[r'sName'] != null, 'Required key "CustomEzmaxinvoicingEzsigndocumentResponse[sName]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsignfolderDescription'), 'Required key "CustomEzmaxinvoicingEzsigndocumentResponse[sEzsignfolderDescription]" is missing from JSON.');
+        assert(json[r'sEzsignfolderDescription'] != null, 'Required key "CustomEzmaxinvoicingEzsigndocumentResponse[sEzsignfolderDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsigndocumentName'), 'Required key "CustomEzmaxinvoicingEzsigndocumentResponse[sEzsigndocumentName]" is missing from JSON.');
+        assert(json[r'sEzsigndocumentName'] != null, 'Required key "CustomEzmaxinvoicingEzsigndocumentResponse[sEzsigndocumentName]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignfolderAllowed'), 'Required key "CustomEzmaxinvoicingEzsigndocumentResponse[bEzsignfolderAllowed]" is missing from JSON.');
+        assert(json[r'bEzsignfolderAllowed'] != null, 'Required key "CustomEzmaxinvoicingEzsigndocumentResponse[bEzsignfolderAllowed]" has a null value in JSON.');
         return true;
       }());
 

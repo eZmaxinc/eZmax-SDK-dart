@@ -64,10 +64,12 @@ class CurrencyAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CurrencyAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CurrencyAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiCurrencyID'), 'Required key "CurrencyAutocompleteElementResponse[pkiCurrencyID]" is missing from JSON.');
+        assert(json[r'pkiCurrencyID'] != null, 'Required key "CurrencyAutocompleteElementResponse[pkiCurrencyID]" has a null value in JSON.');
+        assert(json.containsKey(r'sCurrencyDescriptionX'), 'Required key "CurrencyAutocompleteElementResponse[sCurrencyDescriptionX]" is missing from JSON.');
+        assert(json[r'sCurrencyDescriptionX'] != null, 'Required key "CurrencyAutocompleteElementResponse[sCurrencyDescriptionX]" has a null value in JSON.');
+        assert(json.containsKey(r'bCurrencyIsactive'), 'Required key "CurrencyAutocompleteElementResponse[bCurrencyIsactive]" is missing from JSON.');
+        assert(json[r'bCurrencyIsactive'] != null, 'Required key "CurrencyAutocompleteElementResponse[bCurrencyIsactive]" has a null value in JSON.');
         return true;
       }());
 

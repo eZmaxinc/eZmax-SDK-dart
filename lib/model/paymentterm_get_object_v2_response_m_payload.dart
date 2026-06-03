@@ -47,10 +47,8 @@ class PaymenttermGetObjectV2ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "PaymenttermGetObjectV2ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "PaymenttermGetObjectV2ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'objPaymentterm'), 'Required key "PaymenttermGetObjectV2ResponseMPayload[objPaymentterm]" is missing from JSON.');
+        assert(json[r'objPaymentterm'] != null, 'Required key "PaymenttermGetObjectV2ResponseMPayload[objPaymentterm]" has a null value in JSON.');
         return true;
       }());
 

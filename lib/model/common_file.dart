@@ -89,10 +89,10 @@ class CommonFile {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CommonFile[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CommonFile[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sFileName'), 'Required key "CommonFile[sFileName]" is missing from JSON.');
+        assert(json[r'sFileName'] != null, 'Required key "CommonFile[sFileName]" has a null value in JSON.');
+        assert(json.containsKey(r'eFileSource'), 'Required key "CommonFile[eFileSource]" is missing from JSON.');
+        assert(json[r'eFileSource'] != null, 'Required key "CommonFile[eFileSource]" has a null value in JSON.');
         return true;
       }());
 

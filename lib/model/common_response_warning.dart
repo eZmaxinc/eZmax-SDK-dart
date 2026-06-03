@@ -55,10 +55,10 @@ class CommonResponseWarning {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CommonResponseWarning[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CommonResponseWarning[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sWarningMessage'), 'Required key "CommonResponseWarning[sWarningMessage]" is missing from JSON.');
+        assert(json[r'sWarningMessage'] != null, 'Required key "CommonResponseWarning[sWarningMessage]" has a null value in JSON.');
+        assert(json.containsKey(r'eWarningCode'), 'Required key "CommonResponseWarning[eWarningCode]" is missing from JSON.');
+        assert(json[r'eWarningCode'] != null, 'Required key "CommonResponseWarning[eWarningCode]" has a null value in JSON.');
         return true;
       }());
 

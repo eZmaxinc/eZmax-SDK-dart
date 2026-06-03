@@ -48,10 +48,8 @@ class InfrastructureregionGetAutocompleteV2ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "InfrastructureregionGetAutocompleteV2ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "InfrastructureregionGetAutocompleteV2ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_objInfrastructureregion'), 'Required key "InfrastructureregionGetAutocompleteV2ResponseMPayload[a_objInfrastructureregion]" is missing from JSON.');
+        assert(json[r'a_objInfrastructureregion'] != null, 'Required key "InfrastructureregionGetAutocompleteV2ResponseMPayload[a_objInfrastructureregion]" has a null value in JSON.');
         return true;
       }());
 

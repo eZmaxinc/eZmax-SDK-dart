@@ -45,7 +45,9 @@ class BrokerListElement {
     this.sAddressSuite,
     this.sAddressCity,
     this.sAddressZip,
+    this.fkiProvinceID,
     this.sProvinceNameX,
+    this.fkiCountryID,
     this.sCountryNameX,
   });
 
@@ -263,6 +265,17 @@ class BrokerListElement {
   ///
   String? sAddressZip;
 
+  /// The unique ID of the Province.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|(Canada) Alberta |2|(Canada) British Columbia| |3|(Canada) Manitoba| |3|(Canada) Manitoba| |4|(Canada) New Brunswick| |5|(Canada) Newfoundland| |6|(Canada) Northwest Territories| |7|(Canada) Nova Scotia| |8|(Canada) Nunavut| |9|(Canada) Ontario| |10|(Canada) Prince Edward Island| |11|(Canada) Quebec| |12|(Canada) Saskatchewan| |13|(Canada) Yukon| |14|(United-States) Alabama| |15|(United-States) Alaska| |16|(United-States) Arizona| |17|(United-States) Arkansas| |18|(United-States) California| |19|(United-States) Colorado| |20|(United-States) Connecticut| |21|(United-States) Delaware| |22|(United-States) District of Columbia| |23|(United-States) Florida| |24|(United-States) Georgia| |25|(United-States) Hawaii| |26|(United-States) Idaho| |27|(United-States) Illinois| |28|(United-States) Indiana| |29|(United-States) Iowa| |30|(United-States) Kansas| |31|(United-States) Kentucky| |32|(United-States) Louisiane| |33|(United-States) Maine| |34|(United-States) Maryland| |35|(United-States) Massachusetts| |36|(United-States) Michigan| |37|(United-States) Minnesota| |38|(United-States) Mississippi| |39|(United-States) Missouri| |40|(United-States) Montana| |41|(United-States) Nebraska| |42|(United-States) Nevada| |43|(United-States) New Hampshire| |44|(United-States) New Jersey| |45|(United-States) New Mexico| |46|(United-States) New York| |47|(United-States) North Carolina| |48|(United-States) North Dakota| |49|(United-States) Ohio| |50|(United-States) Oklahoma| |51|(United-States) Oregon| |52|(United-States) Pennsylvania| |53|(United-States) Rhode Island| |54|(United-States) South Carolina| |55|(United-States) South Dakota| |56|(United-States) Tennessee| |57|(United-States) Texas| |58|(United-States) Utah| |60|(United-States) Vermont| |59|(United-States) Virginia| |61|(United-States) Washington| |62|(United-States) West Virginia| |63|(United-States) Wisconsin| |64|(United-States) Wyoming|
+  ///
+  /// Minimum value: 0
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiProvinceID;
+
   /// The name of the Province in the language of the requester
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -271,6 +284,17 @@ class BrokerListElement {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   String? sProvinceNameX;
+
+  /// The unique ID of the Country.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|Canada| |2|United-States|
+  ///
+  /// Minimum value: 0
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiCountryID;
 
   /// The name of the Country in the language of the requester
   ///
@@ -315,7 +339,9 @@ class BrokerListElement {
     other.sAddressSuite == sAddressSuite &&
     other.sAddressCity == sAddressCity &&
     other.sAddressZip == sAddressZip &&
+    other.fkiProvinceID == fkiProvinceID &&
     other.sProvinceNameX == sProvinceNameX &&
+    other.fkiCountryID == fkiCountryID &&
     other.sCountryNameX == sCountryNameX;
 
   @override
@@ -353,11 +379,13 @@ class BrokerListElement {
     (sAddressSuite == null ? 0 : sAddressSuite!.hashCode) +
     (sAddressCity == null ? 0 : sAddressCity!.hashCode) +
     (sAddressZip == null ? 0 : sAddressZip!.hashCode) +
+    (fkiProvinceID == null ? 0 : fkiProvinceID!.hashCode) +
     (sProvinceNameX == null ? 0 : sProvinceNameX!.hashCode) +
+    (fkiCountryID == null ? 0 : fkiCountryID!.hashCode) +
     (sCountryNameX == null ? 0 : sCountryNameX!.hashCode);
 
   @override
-  String toString() => 'BrokerListElement[pkiBrokerID=$pkiBrokerID, fkiDepartmentID=$fkiDepartmentID, sDepartmentNameX=$sDepartmentNameX, fkiBrokertypeID=$fkiBrokertypeID, sBrokertypeNameX=$sBrokertypeNameX, sBrokerCode=$sBrokerCode, sRealestateboardnumberNumber=$sRealestateboardnumberNumber, iAgentBannernumber=$iAgentBannernumber, sLanguageNameX=$sLanguageNameX, iBrokerPhotocopiercode=$iBrokerPhotocopiercode, iBrokerLongdistancecode=$iBrokerLongdistancecode, sBrokerName=$sBrokerName, sBrokerRealestateassociationlicense=$sBrokerRealestateassociationlicense, dtBrokerHiredate=$dtBrokerHiredate, dtBrokerLeavedate=$dtBrokerLeavedate, bBrokerTranquillit=$bBrokerTranquillit, bBrokerResidentiallicense=$bBrokerResidentiallicense, bBrokerCommerciallicense=$bBrokerCommerciallicense, bBrokerMortgagelicense=$bBrokerMortgagelicense, bBrokerPaidbyofficetranquillit=$bBrokerPaidbyofficetranquillit, dtBrokerFintraccertification=$dtBrokerFintraccertification, bBrokerIsactive=$bBrokerIsactive, sContactFirstname=$sContactFirstname, sContactLastname=$sContactLastname, dtContactBirthdate=$dtContactBirthdate, sEmailAddress=$sEmailAddress, sPhoneE164=$sPhoneE164, sAddressCivic=$sAddressCivic, sAddressStreet=$sAddressStreet, sAddressSuite=$sAddressSuite, sAddressCity=$sAddressCity, sAddressZip=$sAddressZip, sProvinceNameX=$sProvinceNameX, sCountryNameX=$sCountryNameX]';
+  String toString() => 'BrokerListElement[pkiBrokerID=$pkiBrokerID, fkiDepartmentID=$fkiDepartmentID, sDepartmentNameX=$sDepartmentNameX, fkiBrokertypeID=$fkiBrokertypeID, sBrokertypeNameX=$sBrokertypeNameX, sBrokerCode=$sBrokerCode, sRealestateboardnumberNumber=$sRealestateboardnumberNumber, iAgentBannernumber=$iAgentBannernumber, sLanguageNameX=$sLanguageNameX, iBrokerPhotocopiercode=$iBrokerPhotocopiercode, iBrokerLongdistancecode=$iBrokerLongdistancecode, sBrokerName=$sBrokerName, sBrokerRealestateassociationlicense=$sBrokerRealestateassociationlicense, dtBrokerHiredate=$dtBrokerHiredate, dtBrokerLeavedate=$dtBrokerLeavedate, bBrokerTranquillit=$bBrokerTranquillit, bBrokerResidentiallicense=$bBrokerResidentiallicense, bBrokerCommerciallicense=$bBrokerCommerciallicense, bBrokerMortgagelicense=$bBrokerMortgagelicense, bBrokerPaidbyofficetranquillit=$bBrokerPaidbyofficetranquillit, dtBrokerFintraccertification=$dtBrokerFintraccertification, bBrokerIsactive=$bBrokerIsactive, sContactFirstname=$sContactFirstname, sContactLastname=$sContactLastname, dtContactBirthdate=$dtContactBirthdate, sEmailAddress=$sEmailAddress, sPhoneE164=$sPhoneE164, sAddressCivic=$sAddressCivic, sAddressStreet=$sAddressStreet, sAddressSuite=$sAddressSuite, sAddressCity=$sAddressCity, sAddressZip=$sAddressZip, fkiProvinceID=$fkiProvinceID, sProvinceNameX=$sProvinceNameX, fkiCountryID=$fkiCountryID, sCountryNameX=$sCountryNameX]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -461,10 +489,20 @@ class BrokerListElement {
     } else {
       json[r'sAddressZip'] = null;
     }
+    if (this.fkiProvinceID != null) {
+      json[r'fkiProvinceID'] = this.fkiProvinceID;
+    } else {
+      json[r'fkiProvinceID'] = null;
+    }
     if (this.sProvinceNameX != null) {
       json[r'sProvinceNameX'] = this.sProvinceNameX;
     } else {
       json[r'sProvinceNameX'] = null;
+    }
+    if (this.fkiCountryID != null) {
+      json[r'fkiCountryID'] = this.fkiCountryID;
+    } else {
+      json[r'fkiCountryID'] = null;
     }
     if (this.sCountryNameX != null) {
       json[r'sCountryNameX'] = this.sCountryNameX;
@@ -485,10 +523,36 @@ class BrokerListElement {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "BrokerListElement[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "BrokerListElement[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiBrokerID'), 'Required key "BrokerListElement[pkiBrokerID]" is missing from JSON.');
+        assert(json[r'pkiBrokerID'] != null, 'Required key "BrokerListElement[pkiBrokerID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiDepartmentID'), 'Required key "BrokerListElement[fkiDepartmentID]" is missing from JSON.');
+        assert(json[r'fkiDepartmentID'] != null, 'Required key "BrokerListElement[fkiDepartmentID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiBrokertypeID'), 'Required key "BrokerListElement[fkiBrokertypeID]" is missing from JSON.');
+        assert(json[r'fkiBrokertypeID'] != null, 'Required key "BrokerListElement[fkiBrokertypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'sBrokertypeNameX'), 'Required key "BrokerListElement[sBrokertypeNameX]" is missing from JSON.');
+        assert(json[r'sBrokertypeNameX'] != null, 'Required key "BrokerListElement[sBrokertypeNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'sBrokerCode'), 'Required key "BrokerListElement[sBrokerCode]" is missing from JSON.');
+        assert(json[r'sBrokerCode'] != null, 'Required key "BrokerListElement[sBrokerCode]" has a null value in JSON.');
+        assert(json.containsKey(r'iBrokerPhotocopiercode'), 'Required key "BrokerListElement[iBrokerPhotocopiercode]" is missing from JSON.');
+        assert(json[r'iBrokerPhotocopiercode'] != null, 'Required key "BrokerListElement[iBrokerPhotocopiercode]" has a null value in JSON.');
+        assert(json.containsKey(r'iBrokerLongdistancecode'), 'Required key "BrokerListElement[iBrokerLongdistancecode]" is missing from JSON.');
+        assert(json[r'iBrokerLongdistancecode'] != null, 'Required key "BrokerListElement[iBrokerLongdistancecode]" has a null value in JSON.');
+        assert(json.containsKey(r'sBrokerName'), 'Required key "BrokerListElement[sBrokerName]" is missing from JSON.');
+        assert(json[r'sBrokerName'] != null, 'Required key "BrokerListElement[sBrokerName]" has a null value in JSON.');
+        assert(json.containsKey(r'sBrokerRealestateassociationlicense'), 'Required key "BrokerListElement[sBrokerRealestateassociationlicense]" is missing from JSON.');
+        assert(json[r'sBrokerRealestateassociationlicense'] != null, 'Required key "BrokerListElement[sBrokerRealestateassociationlicense]" has a null value in JSON.');
+        assert(json.containsKey(r'dtBrokerHiredate'), 'Required key "BrokerListElement[dtBrokerHiredate]" is missing from JSON.');
+        assert(json[r'dtBrokerHiredate'] != null, 'Required key "BrokerListElement[dtBrokerHiredate]" has a null value in JSON.');
+        assert(json.containsKey(r'bBrokerResidentiallicense'), 'Required key "BrokerListElement[bBrokerResidentiallicense]" is missing from JSON.');
+        assert(json[r'bBrokerResidentiallicense'] != null, 'Required key "BrokerListElement[bBrokerResidentiallicense]" has a null value in JSON.');
+        assert(json.containsKey(r'bBrokerCommerciallicense'), 'Required key "BrokerListElement[bBrokerCommerciallicense]" is missing from JSON.');
+        assert(json[r'bBrokerCommerciallicense'] != null, 'Required key "BrokerListElement[bBrokerCommerciallicense]" has a null value in JSON.');
+        assert(json.containsKey(r'bBrokerMortgagelicense'), 'Required key "BrokerListElement[bBrokerMortgagelicense]" is missing from JSON.');
+        assert(json[r'bBrokerMortgagelicense'] != null, 'Required key "BrokerListElement[bBrokerMortgagelicense]" has a null value in JSON.');
+        assert(json.containsKey(r'bBrokerPaidbyofficetranquillit'), 'Required key "BrokerListElement[bBrokerPaidbyofficetranquillit]" is missing from JSON.');
+        assert(json[r'bBrokerPaidbyofficetranquillit'] != null, 'Required key "BrokerListElement[bBrokerPaidbyofficetranquillit]" has a null value in JSON.');
+        assert(json.containsKey(r'bBrokerIsactive'), 'Required key "BrokerListElement[bBrokerIsactive]" is missing from JSON.');
+        assert(json[r'bBrokerIsactive'] != null, 'Required key "BrokerListElement[bBrokerIsactive]" has a null value in JSON.');
         return true;
       }());
 
@@ -525,7 +589,9 @@ class BrokerListElement {
         sAddressSuite: mapValueOfType<String>(json, r'sAddressSuite'),
         sAddressCity: mapValueOfType<String>(json, r'sAddressCity'),
         sAddressZip: mapValueOfType<String>(json, r'sAddressZip'),
+        fkiProvinceID: mapValueOfType<int>(json, r'fkiProvinceID'),
         sProvinceNameX: mapValueOfType<String>(json, r'sProvinceNameX'),
+        fkiCountryID: mapValueOfType<int>(json, r'fkiCountryID'),
         sCountryNameX: mapValueOfType<String>(json, r'sCountryNameX'),
       );
     }

@@ -219,10 +219,38 @@ class EzsigntemplatepublicResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplatepublicResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplatepublicResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsigntemplatepublicID'), 'Required key "EzsigntemplatepublicResponseCompound[pkiEzsigntemplatepublicID]" is missing from JSON.');
+        assert(json[r'pkiEzsigntemplatepublicID'] != null, 'Required key "EzsigntemplatepublicResponseCompound[pkiEzsigntemplatepublicID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiEzsignfoldertypeID'), 'Required key "EzsigntemplatepublicResponseCompound[fkiEzsignfoldertypeID]" is missing from JSON.');
+        assert(json[r'fkiEzsignfoldertypeID'] != null, 'Required key "EzsigntemplatepublicResponseCompound[fkiEzsignfoldertypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsignfoldertypeNameX'), 'Required key "EzsigntemplatepublicResponseCompound[sEzsignfoldertypeNameX]" is missing from JSON.');
+        assert(json[r'sEzsignfoldertypeNameX'] != null, 'Required key "EzsigntemplatepublicResponseCompound[sEzsignfoldertypeNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiUserlogintypeID'), 'Required key "EzsigntemplatepublicResponseCompound[fkiUserlogintypeID]" is missing from JSON.');
+        assert(json[r'fkiUserlogintypeID'] != null, 'Required key "EzsigntemplatepublicResponseCompound[fkiUserlogintypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserlogintypeDescriptionX'), 'Required key "EzsigntemplatepublicResponseCompound[sUserlogintypeDescriptionX]" is missing from JSON.');
+        assert(json[r'sUserlogintypeDescriptionX'] != null, 'Required key "EzsigntemplatepublicResponseCompound[sUserlogintypeDescriptionX]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsigntemplatepublicDescription'), 'Required key "EzsigntemplatepublicResponseCompound[sEzsigntemplatepublicDescription]" is missing from JSON.');
+        assert(json[r'sEzsigntemplatepublicDescription'] != null, 'Required key "EzsigntemplatepublicResponseCompound[sEzsigntemplatepublicDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsigntemplatepublicReferenceid'), 'Required key "EzsigntemplatepublicResponseCompound[sEzsigntemplatepublicReferenceid]" is missing from JSON.');
+        assert(json[r'sEzsigntemplatepublicReferenceid'] != null, 'Required key "EzsigntemplatepublicResponseCompound[sEzsigntemplatepublicReferenceid]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsigntemplatepublicIsactive'), 'Required key "EzsigntemplatepublicResponseCompound[bEzsigntemplatepublicIsactive]" is missing from JSON.');
+        assert(json[r'bEzsigntemplatepublicIsactive'] != null, 'Required key "EzsigntemplatepublicResponseCompound[bEzsigntemplatepublicIsactive]" has a null value in JSON.');
+        assert(json.containsKey(r'tEzsigntemplatepublicNote'), 'Required key "EzsigntemplatepublicResponseCompound[tEzsigntemplatepublicNote]" is missing from JSON.');
+        assert(json[r'tEzsigntemplatepublicNote'] != null, 'Required key "EzsigntemplatepublicResponseCompound[tEzsigntemplatepublicNote]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsigntemplatepublicLimittype'), 'Required key "EzsigntemplatepublicResponseCompound[eEzsigntemplatepublicLimittype]" is missing from JSON.');
+        assert(json[r'eEzsigntemplatepublicLimittype'] != null, 'Required key "EzsigntemplatepublicResponseCompound[eEzsigntemplatepublicLimittype]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigntemplatepublicLimit'), 'Required key "EzsigntemplatepublicResponseCompound[iEzsigntemplatepublicLimit]" is missing from JSON.');
+        assert(json[r'iEzsigntemplatepublicLimit'] != null, 'Required key "EzsigntemplatepublicResponseCompound[iEzsigntemplatepublicLimit]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigntemplatepublicLimitexceeded'), 'Required key "EzsigntemplatepublicResponseCompound[iEzsigntemplatepublicLimitexceeded]" is missing from JSON.');
+        assert(json[r'iEzsigntemplatepublicLimitexceeded'] != null, 'Required key "EzsigntemplatepublicResponseCompound[iEzsigntemplatepublicLimitexceeded]" has a null value in JSON.');
+        assert(json.containsKey(r'dtEzsigntemplatepublicLimitexceededsince'), 'Required key "EzsigntemplatepublicResponseCompound[dtEzsigntemplatepublicLimitexceededsince]" is missing from JSON.');
+        assert(json[r'dtEzsigntemplatepublicLimitexceededsince'] != null, 'Required key "EzsigntemplatepublicResponseCompound[dtEzsigntemplatepublicLimitexceededsince]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsigntemplatepublicUrl'), 'Required key "EzsigntemplatepublicResponseCompound[sEzsigntemplatepublicUrl]" is missing from JSON.');
+        assert(json[r'sEzsigntemplatepublicUrl'] != null, 'Required key "EzsigntemplatepublicResponseCompound[sEzsigntemplatepublicUrl]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsigntemplatepublicEzsigntemplatedescription'), 'Required key "EzsigntemplatepublicResponseCompound[sEzsigntemplatepublicEzsigntemplatedescription]" is missing from JSON.');
+        assert(json[r'sEzsigntemplatepublicEzsigntemplatedescription'] != null, 'Required key "EzsigntemplatepublicResponseCompound[sEzsigntemplatepublicEzsigntemplatedescription]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objEzsignfolderezsigntemplatepublic'), 'Required key "EzsigntemplatepublicResponseCompound[a_objEzsignfolderezsigntemplatepublic]" is missing from JSON.');
+        assert(json[r'a_objEzsignfolderezsigntemplatepublic'] != null, 'Required key "EzsigntemplatepublicResponseCompound[a_objEzsignfolderezsigntemplatepublic]" has a null value in JSON.');
         return true;
       }());
 

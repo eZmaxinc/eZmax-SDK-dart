@@ -65,10 +65,12 @@ class CompanyAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CompanyAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CompanyAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiCompanyID'), 'Required key "CompanyAutocompleteElementResponse[pkiCompanyID]" is missing from JSON.');
+        assert(json[r'pkiCompanyID'] != null, 'Required key "CompanyAutocompleteElementResponse[pkiCompanyID]" has a null value in JSON.');
+        assert(json.containsKey(r'sCompanyNameX'), 'Required key "CompanyAutocompleteElementResponse[sCompanyNameX]" is missing from JSON.');
+        assert(json[r'sCompanyNameX'] != null, 'Required key "CompanyAutocompleteElementResponse[sCompanyNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'bCompanyIsactive'), 'Required key "CompanyAutocompleteElementResponse[bCompanyIsactive]" is missing from JSON.');
+        assert(json[r'bCompanyIsactive'] != null, 'Required key "CompanyAutocompleteElementResponse[bCompanyIsactive]" has a null value in JSON.');
         return true;
       }());
 

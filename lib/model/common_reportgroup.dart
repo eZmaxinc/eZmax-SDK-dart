@@ -66,10 +66,14 @@ class CommonReportgroup {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CommonReportgroup[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CommonReportgroup[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_objReport'), 'Required key "CommonReportgroup[a_objReport]" is missing from JSON.');
+        assert(json[r'a_objReport'] != null, 'Required key "CommonReportgroup[a_objReport]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objReportcellstyleCustom'), 'Required key "CommonReportgroup[a_objReportcellstyleCustom]" is missing from JSON.');
+        assert(json[r'a_objReportcellstyleCustom'] != null, 'Required key "CommonReportgroup[a_objReportcellstyleCustom]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objReportgroupParameter'), 'Required key "CommonReportgroup[a_objReportgroupParameter]" is missing from JSON.');
+        assert(json[r'a_objReportgroupParameter'] != null, 'Required key "CommonReportgroup[a_objReportgroupParameter]" has a null value in JSON.');
+        assert(json.containsKey(r'sReportgroupFilename'), 'Required key "CommonReportgroup[sReportgroupFilename]" is missing from JSON.');
+        assert(json[r'sReportgroupFilename'] != null, 'Required key "CommonReportgroup[sReportgroupFilename]" has a null value in JSON.');
         return true;
       }());
 

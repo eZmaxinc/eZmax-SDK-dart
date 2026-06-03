@@ -64,10 +64,12 @@ class EmailtypeAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EmailtypeAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EmailtypeAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEmailtypeID'), 'Required key "EmailtypeAutocompleteElementResponse[pkiEmailtypeID]" is missing from JSON.');
+        assert(json[r'pkiEmailtypeID'] != null, 'Required key "EmailtypeAutocompleteElementResponse[pkiEmailtypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'sEmailtypeNameX'), 'Required key "EmailtypeAutocompleteElementResponse[sEmailtypeNameX]" is missing from JSON.');
+        assert(json[r'sEmailtypeNameX'] != null, 'Required key "EmailtypeAutocompleteElementResponse[sEmailtypeNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'bEmailtypeIsactive'), 'Required key "EmailtypeAutocompleteElementResponse[bEmailtypeIsactive]" is missing from JSON.');
+        assert(json[r'bEmailtypeIsactive'] != null, 'Required key "EmailtypeAutocompleteElementResponse[bEmailtypeIsactive]" has a null value in JSON.');
         return true;
       }());
 

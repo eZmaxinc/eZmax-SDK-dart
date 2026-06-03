@@ -90,10 +90,14 @@ class EzsignsignaturepaymentdetailResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignsignaturepaymentdetailResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignsignaturepaymentdetailResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsignsignaturepaymentdetailID'), 'Required key "EzsignsignaturepaymentdetailResponseCompound[pkiEzsignsignaturepaymentdetailID]" is missing from JSON.');
+        assert(json[r'pkiEzsignsignaturepaymentdetailID'] != null, 'Required key "EzsignsignaturepaymentdetailResponseCompound[pkiEzsignsignaturepaymentdetailID]" has a null value in JSON.');
+        assert(json.containsKey(r'tEzsignsignaturepaymentdetailDescription'), 'Required key "EzsignsignaturepaymentdetailResponseCompound[tEzsignsignaturepaymentdetailDescription]" is missing from JSON.');
+        assert(json[r'tEzsignsignaturepaymentdetailDescription'] != null, 'Required key "EzsignsignaturepaymentdetailResponseCompound[tEzsignsignaturepaymentdetailDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'dEzsignsignaturepaymentdetailAmount'), 'Required key "EzsignsignaturepaymentdetailResponseCompound[dEzsignsignaturepaymentdetailAmount]" is missing from JSON.');
+        assert(json[r'dEzsignsignaturepaymentdetailAmount'] != null, 'Required key "EzsignsignaturepaymentdetailResponseCompound[dEzsignsignaturepaymentdetailAmount]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsignsignaturepaymentdetailTaxable'), 'Required key "EzsignsignaturepaymentdetailResponseCompound[eEzsignsignaturepaymentdetailTaxable]" is missing from JSON.');
+        assert(json[r'eEzsignsignaturepaymentdetailTaxable'] != null, 'Required key "EzsignsignaturepaymentdetailResponseCompound[eEzsignsignaturepaymentdetailTaxable]" has a null value in JSON.');
         return true;
       }());
 

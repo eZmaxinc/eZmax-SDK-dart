@@ -58,10 +58,10 @@ class CustomBrandingResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CustomBrandingResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CustomBrandingResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'iBrandingColor'), 'Required key "CustomBrandingResponse[iBrandingColor]" is missing from JSON.');
+        assert(json[r'iBrandingColor'] != null, 'Required key "CustomBrandingResponse[iBrandingColor]" has a null value in JSON.');
+        assert(json.containsKey(r'sBrandingLogointerfaceurl'), 'Required key "CustomBrandingResponse[sBrandingLogointerfaceurl]" is missing from JSON.');
+        assert(json[r'sBrandingLogointerfaceurl'] != null, 'Required key "CustomBrandingResponse[sBrandingLogointerfaceurl]" has a null value in JSON.');
         return true;
       }());
 

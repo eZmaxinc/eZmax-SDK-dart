@@ -65,10 +65,12 @@ class SupplyAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "SupplyAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "SupplyAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiSupplyID'), 'Required key "SupplyAutocompleteElementResponse[pkiSupplyID]" is missing from JSON.');
+        assert(json[r'pkiSupplyID'] != null, 'Required key "SupplyAutocompleteElementResponse[pkiSupplyID]" has a null value in JSON.');
+        assert(json.containsKey(r'sSupplyDescriptionX'), 'Required key "SupplyAutocompleteElementResponse[sSupplyDescriptionX]" is missing from JSON.');
+        assert(json[r'sSupplyDescriptionX'] != null, 'Required key "SupplyAutocompleteElementResponse[sSupplyDescriptionX]" has a null value in JSON.');
+        assert(json.containsKey(r'bSupplyIsactive'), 'Required key "SupplyAutocompleteElementResponse[bSupplyIsactive]" is missing from JSON.');
+        assert(json[r'bSupplyIsactive'] != null, 'Required key "SupplyAutocompleteElementResponse[bSupplyIsactive]" has a null value in JSON.');
         return true;
       }());
 

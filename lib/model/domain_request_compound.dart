@@ -68,10 +68,8 @@ class DomainRequestCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "DomainRequestCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "DomainRequestCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sDomainName'), 'Required key "DomainRequestCompound[sDomainName]" is missing from JSON.');
+        assert(json[r'sDomainName'] != null, 'Required key "DomainRequestCompound[sDomainName]" has a null value in JSON.');
         return true;
       }());
 

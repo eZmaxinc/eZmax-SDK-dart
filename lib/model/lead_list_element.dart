@@ -112,10 +112,20 @@ class LeadListElement {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "LeadListElement[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "LeadListElement[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiLeadID'), 'Required key "LeadListElement[pkiLeadID]" is missing from JSON.');
+        assert(json[r'pkiLeadID'] != null, 'Required key "LeadListElement[pkiLeadID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiLeadsourceID'), 'Required key "LeadListElement[fkiLeadsourceID]" is missing from JSON.');
+        assert(json[r'fkiLeadsourceID'] != null, 'Required key "LeadListElement[fkiLeadsourceID]" has a null value in JSON.');
+        assert(json.containsKey(r'sLeadsourceNameX'), 'Required key "LeadListElement[sLeadsourceNameX]" is missing from JSON.');
+        assert(json[r'sLeadsourceNameX'] != null, 'Required key "LeadListElement[sLeadsourceNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'eLeadStatus'), 'Required key "LeadListElement[eLeadStatus]" is missing from JSON.');
+        assert(json[r'eLeadStatus'] != null, 'Required key "LeadListElement[eLeadStatus]" has a null value in JSON.');
+        assert(json.containsKey(r'dtLeadExpiration'), 'Required key "LeadListElement[dtLeadExpiration]" is missing from JSON.');
+        assert(json[r'dtLeadExpiration'] != null, 'Required key "LeadListElement[dtLeadExpiration]" has a null value in JSON.');
+        assert(json.containsKey(r'bLeadIsactive'), 'Required key "LeadListElement[bLeadIsactive]" is missing from JSON.');
+        assert(json[r'bLeadIsactive'] != null, 'Required key "LeadListElement[bLeadIsactive]" has a null value in JSON.');
+        assert(json.containsKey(r'sLeadCode'), 'Required key "LeadListElement[sLeadCode]" is missing from JSON.');
+        assert(json[r'sLeadCode'] != null, 'Required key "LeadListElement[sLeadCode]" has a null value in JSON.');
         return true;
       }());
 

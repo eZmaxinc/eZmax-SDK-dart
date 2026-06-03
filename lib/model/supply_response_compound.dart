@@ -184,10 +184,20 @@ class SupplyResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "SupplyResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "SupplyResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiSupplyID'), 'Required key "SupplyResponseCompound[pkiSupplyID]" is missing from JSON.');
+        assert(json[r'pkiSupplyID'] != null, 'Required key "SupplyResponseCompound[pkiSupplyID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiVariableexpenseID'), 'Required key "SupplyResponseCompound[fkiVariableexpenseID]" is missing from JSON.');
+        assert(json[r'fkiVariableexpenseID'] != null, 'Required key "SupplyResponseCompound[fkiVariableexpenseID]" has a null value in JSON.');
+        assert(json.containsKey(r'sSupplyCode'), 'Required key "SupplyResponseCompound[sSupplyCode]" is missing from JSON.');
+        assert(json[r'sSupplyCode'] != null, 'Required key "SupplyResponseCompound[sSupplyCode]" has a null value in JSON.');
+        assert(json.containsKey(r'objSupplyDescription'), 'Required key "SupplyResponseCompound[objSupplyDescription]" is missing from JSON.');
+        assert(json[r'objSupplyDescription'] != null, 'Required key "SupplyResponseCompound[objSupplyDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'dSupplyUnitprice'), 'Required key "SupplyResponseCompound[dSupplyUnitprice]" is missing from JSON.');
+        assert(json[r'dSupplyUnitprice'] != null, 'Required key "SupplyResponseCompound[dSupplyUnitprice]" has a null value in JSON.');
+        assert(json.containsKey(r'bSupplyIsactive'), 'Required key "SupplyResponseCompound[bSupplyIsactive]" is missing from JSON.');
+        assert(json[r'bSupplyIsactive'] != null, 'Required key "SupplyResponseCompound[bSupplyIsactive]" has a null value in JSON.');
+        assert(json.containsKey(r'bSupplyVariableprice'), 'Required key "SupplyResponseCompound[bSupplyVariableprice]" is missing from JSON.');
+        assert(json[r'bSupplyVariableprice'] != null, 'Required key "SupplyResponseCompound[bSupplyVariableprice]" has a null value in JSON.');
         return true;
       }());
 

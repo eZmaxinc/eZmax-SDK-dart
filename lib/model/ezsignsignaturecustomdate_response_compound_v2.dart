@@ -71,10 +71,14 @@ class EzsignsignaturecustomdateResponseCompoundV2 {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignsignaturecustomdateResponseCompoundV2[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignsignaturecustomdateResponseCompoundV2[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsignsignaturecustomdateID'), 'Required key "EzsignsignaturecustomdateResponseCompoundV2[pkiEzsignsignaturecustomdateID]" is missing from JSON.');
+        assert(json[r'pkiEzsignsignaturecustomdateID'] != null, 'Required key "EzsignsignaturecustomdateResponseCompoundV2[pkiEzsignsignaturecustomdateID]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignsignaturecustomdateOffsetx'), 'Required key "EzsignsignaturecustomdateResponseCompoundV2[iEzsignsignaturecustomdateOffsetx]" is missing from JSON.');
+        assert(json[r'iEzsignsignaturecustomdateOffsetx'] != null, 'Required key "EzsignsignaturecustomdateResponseCompoundV2[iEzsignsignaturecustomdateOffsetx]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignsignaturecustomdateOffsety'), 'Required key "EzsignsignaturecustomdateResponseCompoundV2[iEzsignsignaturecustomdateOffsety]" is missing from JSON.');
+        assert(json[r'iEzsignsignaturecustomdateOffsety'] != null, 'Required key "EzsignsignaturecustomdateResponseCompoundV2[iEzsignsignaturecustomdateOffsety]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsignsignaturecustomdateFormat'), 'Required key "EzsignsignaturecustomdateResponseCompoundV2[sEzsignsignaturecustomdateFormat]" is missing from JSON.');
+        assert(json[r'sEzsignsignaturecustomdateFormat'] != null, 'Required key "EzsignsignaturecustomdateResponseCompoundV2[sEzsignsignaturecustomdateFormat]" has a null value in JSON.');
         return true;
       }());
 

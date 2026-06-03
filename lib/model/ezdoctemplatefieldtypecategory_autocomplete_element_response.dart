@@ -75,10 +75,14 @@ class EzdoctemplatefieldtypecategoryAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzdoctemplatefieldtypecategoryAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzdoctemplatefieldtypecategoryAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzdoctemplatefieldtypecategoryID'), 'Required key "EzdoctemplatefieldtypecategoryAutocompleteElementResponse[pkiEzdoctemplatefieldtypecategoryID]" is missing from JSON.');
+        assert(json[r'pkiEzdoctemplatefieldtypecategoryID'] != null, 'Required key "EzdoctemplatefieldtypecategoryAutocompleteElementResponse[pkiEzdoctemplatefieldtypecategoryID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiEzdoctemplatetypeID'), 'Required key "EzdoctemplatefieldtypecategoryAutocompleteElementResponse[fkiEzdoctemplatetypeID]" is missing from JSON.');
+        assert(json[r'fkiEzdoctemplatetypeID'] != null, 'Required key "EzdoctemplatefieldtypecategoryAutocompleteElementResponse[fkiEzdoctemplatetypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzdoctemplatefieldtypecategoryDescriptionX'), 'Required key "EzdoctemplatefieldtypecategoryAutocompleteElementResponse[sEzdoctemplatefieldtypecategoryDescriptionX]" is missing from JSON.');
+        assert(json[r'sEzdoctemplatefieldtypecategoryDescriptionX'] != null, 'Required key "EzdoctemplatefieldtypecategoryAutocompleteElementResponse[sEzdoctemplatefieldtypecategoryDescriptionX]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzdoctemplatefieldtypecategoryIsactive'), 'Required key "EzdoctemplatefieldtypecategoryAutocompleteElementResponse[bEzdoctemplatefieldtypecategoryIsactive]" is missing from JSON.');
+        assert(json[r'bEzdoctemplatefieldtypecategoryIsactive'] != null, 'Required key "EzdoctemplatefieldtypecategoryAutocompleteElementResponse[bEzdoctemplatefieldtypecategoryIsactive]" has a null value in JSON.');
         return true;
       }());
 

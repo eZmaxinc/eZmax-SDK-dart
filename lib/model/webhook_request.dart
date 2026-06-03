@@ -188,10 +188,18 @@ class WebhookRequest {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "WebhookRequest[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "WebhookRequest[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sWebhookDescription'), 'Required key "WebhookRequest[sWebhookDescription]" is missing from JSON.');
+        assert(json[r'sWebhookDescription'] != null, 'Required key "WebhookRequest[sWebhookDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'eWebhookModule'), 'Required key "WebhookRequest[eWebhookModule]" is missing from JSON.');
+        assert(json[r'eWebhookModule'] != null, 'Required key "WebhookRequest[eWebhookModule]" has a null value in JSON.');
+        assert(json.containsKey(r'sWebhookUrl'), 'Required key "WebhookRequest[sWebhookUrl]" is missing from JSON.');
+        assert(json[r'sWebhookUrl'] != null, 'Required key "WebhookRequest[sWebhookUrl]" has a null value in JSON.');
+        assert(json.containsKey(r'sWebhookEmailfailed'), 'Required key "WebhookRequest[sWebhookEmailfailed]" is missing from JSON.');
+        assert(json[r'sWebhookEmailfailed'] != null, 'Required key "WebhookRequest[sWebhookEmailfailed]" has a null value in JSON.');
+        assert(json.containsKey(r'bWebhookIsactive'), 'Required key "WebhookRequest[bWebhookIsactive]" is missing from JSON.');
+        assert(json[r'bWebhookIsactive'] != null, 'Required key "WebhookRequest[bWebhookIsactive]" has a null value in JSON.');
+        assert(json.containsKey(r'bWebhookSkipsslvalidation'), 'Required key "WebhookRequest[bWebhookSkipsslvalidation]" is missing from JSON.');
+        assert(json[r'bWebhookSkipsslvalidation'] != null, 'Required key "WebhookRequest[bWebhookSkipsslvalidation]" has a null value in JSON.');
         return true;
       }());
 

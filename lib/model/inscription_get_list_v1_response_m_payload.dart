@@ -61,10 +61,12 @@ class InscriptionGetListV1ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "InscriptionGetListV1ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "InscriptionGetListV1ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'iRowReturned'), 'Required key "InscriptionGetListV1ResponseMPayload[iRowReturned]" is missing from JSON.');
+        assert(json[r'iRowReturned'] != null, 'Required key "InscriptionGetListV1ResponseMPayload[iRowReturned]" has a null value in JSON.');
+        assert(json.containsKey(r'iRowFiltered'), 'Required key "InscriptionGetListV1ResponseMPayload[iRowFiltered]" is missing from JSON.');
+        assert(json[r'iRowFiltered'] != null, 'Required key "InscriptionGetListV1ResponseMPayload[iRowFiltered]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objInscription'), 'Required key "InscriptionGetListV1ResponseMPayload[a_objInscription]" is missing from JSON.');
+        assert(json[r'a_objInscription'] != null, 'Required key "InscriptionGetListV1ResponseMPayload[a_objInscription]" has a null value in JSON.');
         return true;
       }());
 

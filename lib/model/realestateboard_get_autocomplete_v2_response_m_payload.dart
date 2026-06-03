@@ -48,10 +48,8 @@ class RealestateboardGetAutocompleteV2ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "RealestateboardGetAutocompleteV2ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "RealestateboardGetAutocompleteV2ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_objRealestateboard'), 'Required key "RealestateboardGetAutocompleteV2ResponseMPayload[a_objRealestateboard]" is missing from JSON.');
+        assert(json[r'a_objRealestateboard'] != null, 'Required key "RealestateboardGetAutocompleteV2ResponseMPayload[a_objRealestateboard]" has a null value in JSON.');
         return true;
       }());
 

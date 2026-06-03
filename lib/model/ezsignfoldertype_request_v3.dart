@@ -52,6 +52,10 @@ class EzsignfoldertypeRequestV3 {
     this.bEzsignfoldertypeReassignezsignsigner,
     this.bEzsignfoldertypeReassignuser,
     this.bEzsignfoldertypeReassigngroup,
+    this.bEzsignfoldertypeSenddocumentmergetoemail,
+    this.bEzsignfoldertypeSenddocumentmergetoezsignsigner,
+    this.bEzsignfoldertypeSenddocumentmergetoreceivealldocument,
+    this.bEzsignfoldertypeSenddocumentmergetouser,
     this.bEzsignfoldertypeSendsignedtoezsignsigner,
     this.bEzsignfoldertypeSendsignedtouser,
     this.bEzsignfoldertypeSendattachmentezsignsigner,
@@ -254,7 +258,7 @@ class EzsignfoldertypeRequestV3 {
   ///
   int? iEzsignfoldertypeFontsizeformfield;
 
-  /// The number of days before the the first reminder sending
+  /// The number of days before the first reminder sending
   ///
   /// Minimum value: 0
   /// Maximum value: 255
@@ -389,6 +393,42 @@ class EzsignfoldertypeRequestV3 {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   bool? bEzsignfoldertypeReassigngroup;
+
+  /// Whether we send the merged documents in the email to external recipient
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bEzsignfoldertypeSenddocumentmergetoemail;
+
+  /// Whether we send the merged documents in the email to Ezsignsigner
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bEzsignfoldertypeSenddocumentmergetoezsignsigner;
+
+  /// Whether we send the merged documents in the email to user and Ezsignsigner who receive all documents.
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bEzsignfoldertypeSenddocumentmergetoreceivealldocument;
+
+  /// Whether we send the merged documents in the email to User
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bEzsignfoldertypeSenddocumentmergetouser;
 
   /// Whether we send an email to Ezsignsigner  when document is completed
   ///
@@ -631,6 +671,10 @@ class EzsignfoldertypeRequestV3 {
     other.bEzsignfoldertypeReassignezsignsigner == bEzsignfoldertypeReassignezsignsigner &&
     other.bEzsignfoldertypeReassignuser == bEzsignfoldertypeReassignuser &&
     other.bEzsignfoldertypeReassigngroup == bEzsignfoldertypeReassigngroup &&
+    other.bEzsignfoldertypeSenddocumentmergetoemail == bEzsignfoldertypeSenddocumentmergetoemail &&
+    other.bEzsignfoldertypeSenddocumentmergetoezsignsigner == bEzsignfoldertypeSenddocumentmergetoezsignsigner &&
+    other.bEzsignfoldertypeSenddocumentmergetoreceivealldocument == bEzsignfoldertypeSenddocumentmergetoreceivealldocument &&
+    other.bEzsignfoldertypeSenddocumentmergetouser == bEzsignfoldertypeSenddocumentmergetouser &&
     other.bEzsignfoldertypeSendsignedtoezsignsigner == bEzsignfoldertypeSendsignedtoezsignsigner &&
     other.bEzsignfoldertypeSendsignedtouser == bEzsignfoldertypeSendsignedtouser &&
     other.bEzsignfoldertypeSendattachmentezsignsigner == bEzsignfoldertypeSendattachmentezsignsigner &&
@@ -701,6 +745,10 @@ class EzsignfoldertypeRequestV3 {
     (bEzsignfoldertypeReassignezsignsigner == null ? 0 : bEzsignfoldertypeReassignezsignsigner!.hashCode) +
     (bEzsignfoldertypeReassignuser == null ? 0 : bEzsignfoldertypeReassignuser!.hashCode) +
     (bEzsignfoldertypeReassigngroup == null ? 0 : bEzsignfoldertypeReassigngroup!.hashCode) +
+    (bEzsignfoldertypeSenddocumentmergetoemail == null ? 0 : bEzsignfoldertypeSenddocumentmergetoemail!.hashCode) +
+    (bEzsignfoldertypeSenddocumentmergetoezsignsigner == null ? 0 : bEzsignfoldertypeSenddocumentmergetoezsignsigner!.hashCode) +
+    (bEzsignfoldertypeSenddocumentmergetoreceivealldocument == null ? 0 : bEzsignfoldertypeSenddocumentmergetoreceivealldocument!.hashCode) +
+    (bEzsignfoldertypeSenddocumentmergetouser == null ? 0 : bEzsignfoldertypeSenddocumentmergetouser!.hashCode) +
     (bEzsignfoldertypeSendsignedtoezsignsigner == null ? 0 : bEzsignfoldertypeSendsignedtoezsignsigner!.hashCode) +
     (bEzsignfoldertypeSendsignedtouser == null ? 0 : bEzsignfoldertypeSendsignedtouser!.hashCode) +
     (bEzsignfoldertypeSendattachmentezsignsigner == null ? 0 : bEzsignfoldertypeSendattachmentezsignsigner!.hashCode) +
@@ -730,7 +778,7 @@ class EzsignfoldertypeRequestV3 {
     (bEzsignfoldertypeIsactive.hashCode);
 
   @override
-  String toString() => 'EzsignfoldertypeRequestV3[pkiEzsignfoldertypeID=$pkiEzsignfoldertypeID, objEzsignfoldertypeName=$objEzsignfoldertypeName, fkiBrandingID=$fkiBrandingID, fkiBillingentityinternalID=$fkiBillingentityinternalID, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, fkiFontIDAnnotation=$fkiFontIDAnnotation, fkiFontIDFormfield=$fkiFontIDFormfield, fkiFontIDSignature=$fkiFontIDSignature, fkiPdfalevelIDConvert=$fkiPdfalevelIDConvert, aFkiPdfalevelID=$aFkiPdfalevelID, aFkiUserlogintypeID=$aFkiUserlogintypeID, aFkiUsergroupIDAll=$aFkiUsergroupIDAll, aFkiUsergroupIDRestricted=$aFkiUsergroupIDRestricted, aFkiUsergroupIDTemplate=$aFkiUsergroupIDTemplate, eEzsignfoldertypeDocumentdependency=$eEzsignfoldertypeDocumentdependency, eEzsignfoldertypeDocumentmerge=$eEzsignfoldertypeDocumentmerge, sEmailAddressSigned=$sEmailAddressSigned, sEmailAddressSummary=$sEmailAddressSummary, eEzsignfoldertypePdfarequirement=$eEzsignfoldertypePdfarequirement, eEzsignfoldertypePdfanoncompliantaction=$eEzsignfoldertypePdfanoncompliantaction, eEzsignfoldertypePrivacylevel=$eEzsignfoldertypePrivacylevel, iEzsignfoldertypeFontsizeannotation=$iEzsignfoldertypeFontsizeannotation, iEzsignfoldertypeFontsizeformfield=$iEzsignfoldertypeFontsizeformfield, iEzsignfoldertypeSendreminderfirstdays=$iEzsignfoldertypeSendreminderfirstdays, iEzsignfoldertypeSendreminderotherdays=$iEzsignfoldertypeSendreminderotherdays, iEzsignfoldertypeArchivaldays=$iEzsignfoldertypeArchivaldays, eEzsignfoldertypeDisposal=$eEzsignfoldertypeDisposal, eEzsignfoldertypeCompletion=$eEzsignfoldertypeCompletion, iEzsignfoldertypeDisposaldays=$iEzsignfoldertypeDisposaldays, iEzsignfoldertypeDeadlinedays=$iEzsignfoldertypeDeadlinedays, bEzsignfoldertypePrematurelyendautomatically=$bEzsignfoldertypePrematurelyendautomatically, iEzsignfoldertypePrematurelyendautomaticallydays=$iEzsignfoldertypePrematurelyendautomaticallydays, bEzsignfoldertypeAutomaticsignature=$bEzsignfoldertypeAutomaticsignature, bEzsignfoldertypeDelegate=$bEzsignfoldertypeDelegate, bEzsignfoldertypeDiscussion=$bEzsignfoldertypeDiscussion, bEzsignfoldertypeLogrecipientinproof=$bEzsignfoldertypeLogrecipientinproof, bEzsignfoldertypeReassignezsignsigner=$bEzsignfoldertypeReassignezsignsigner, bEzsignfoldertypeReassignuser=$bEzsignfoldertypeReassignuser, bEzsignfoldertypeReassigngroup=$bEzsignfoldertypeReassigngroup, bEzsignfoldertypeSendsignedtoezsignsigner=$bEzsignfoldertypeSendsignedtoezsignsigner, bEzsignfoldertypeSendsignedtouser=$bEzsignfoldertypeSendsignedtouser, bEzsignfoldertypeSendattachmentezsignsigner=$bEzsignfoldertypeSendattachmentezsignsigner, bEzsignfoldertypeSendsignatureattachmentezsignsigner=$bEzsignfoldertypeSendsignatureattachmentezsignsigner, bEzsignfoldertypeSendsignatureattachment=$bEzsignfoldertypeSendsignatureattachment, bEzsignfoldertypeSendproofezsignsigner=$bEzsignfoldertypeSendproofezsignsigner, bEzsignfoldertypeSendattachmentuser=$bEzsignfoldertypeSendattachmentuser, bEzsignfoldertypeSendsignatureattachmentuser=$bEzsignfoldertypeSendsignatureattachmentuser, bEzsignfoldertypeSendproofuser=$bEzsignfoldertypeSendproofuser, bEzsignfoldertypeSendproofemail=$bEzsignfoldertypeSendproofemail, bEzsignfoldertypeAllowdownloadattachmentezsignsigner=$bEzsignfoldertypeAllowdownloadattachmentezsignsigner, bEzsignfoldertypeAllowdownloadsignatureattachmentezsignsigner=$bEzsignfoldertypeAllowdownloadsignatureattachmentezsignsigner, bEzsignfoldertypeAllowdownloadproofezsignsigner=$bEzsignfoldertypeAllowdownloadproofezsignsigner, bEzsignfoldertypeSendproofreceivealldocument=$bEzsignfoldertypeSendproofreceivealldocument, bEzsignfoldertypeSendsignatureattachmentreceivealldocument=$bEzsignfoldertypeSendsignatureattachmentreceivealldocument, bEzsignfoldertypeSendsignedtodocumentowner=$bEzsignfoldertypeSendsignedtodocumentowner, bEzsignfoldertypeSendsignedtofolderowner=$bEzsignfoldertypeSendsignedtofolderowner, bEzsignfoldertypeSendsignedtofullgroup=$bEzsignfoldertypeSendsignedtofullgroup, bEzsignfoldertypeSendsignedtolimitedgroup=$bEzsignfoldertypeSendsignedtolimitedgroup, bEzsignfoldertypeSendsignedtocolleague=$bEzsignfoldertypeSendsignedtocolleague, bEzsignfoldertypeSendsummarytodocumentowner=$bEzsignfoldertypeSendsummarytodocumentowner, bEzsignfoldertypeSendsummarytofolderowner=$bEzsignfoldertypeSendsummarytofolderowner, bEzsignfoldertypeSendsummarytofullgroup=$bEzsignfoldertypeSendsummarytofullgroup, bEzsignfoldertypeSendsummarytolimitedgroup=$bEzsignfoldertypeSendsummarytolimitedgroup, bEzsignfoldertypeSendsummarytocolleague=$bEzsignfoldertypeSendsummarytocolleague, eEzsignfoldertypeSigneraccess=$eEzsignfoldertypeSigneraccess, bEzsignfoldertypeIsactive=$bEzsignfoldertypeIsactive]';
+  String toString() => 'EzsignfoldertypeRequestV3[pkiEzsignfoldertypeID=$pkiEzsignfoldertypeID, objEzsignfoldertypeName=$objEzsignfoldertypeName, fkiBrandingID=$fkiBrandingID, fkiBillingentityinternalID=$fkiBillingentityinternalID, fkiEzsigntsarequirementID=$fkiEzsigntsarequirementID, fkiFontIDAnnotation=$fkiFontIDAnnotation, fkiFontIDFormfield=$fkiFontIDFormfield, fkiFontIDSignature=$fkiFontIDSignature, fkiPdfalevelIDConvert=$fkiPdfalevelIDConvert, aFkiPdfalevelID=$aFkiPdfalevelID, aFkiUserlogintypeID=$aFkiUserlogintypeID, aFkiUsergroupIDAll=$aFkiUsergroupIDAll, aFkiUsergroupIDRestricted=$aFkiUsergroupIDRestricted, aFkiUsergroupIDTemplate=$aFkiUsergroupIDTemplate, eEzsignfoldertypeDocumentdependency=$eEzsignfoldertypeDocumentdependency, eEzsignfoldertypeDocumentmerge=$eEzsignfoldertypeDocumentmerge, sEmailAddressSigned=$sEmailAddressSigned, sEmailAddressSummary=$sEmailAddressSummary, eEzsignfoldertypePdfarequirement=$eEzsignfoldertypePdfarequirement, eEzsignfoldertypePdfanoncompliantaction=$eEzsignfoldertypePdfanoncompliantaction, eEzsignfoldertypePrivacylevel=$eEzsignfoldertypePrivacylevel, iEzsignfoldertypeFontsizeannotation=$iEzsignfoldertypeFontsizeannotation, iEzsignfoldertypeFontsizeformfield=$iEzsignfoldertypeFontsizeformfield, iEzsignfoldertypeSendreminderfirstdays=$iEzsignfoldertypeSendreminderfirstdays, iEzsignfoldertypeSendreminderotherdays=$iEzsignfoldertypeSendreminderotherdays, iEzsignfoldertypeArchivaldays=$iEzsignfoldertypeArchivaldays, eEzsignfoldertypeDisposal=$eEzsignfoldertypeDisposal, eEzsignfoldertypeCompletion=$eEzsignfoldertypeCompletion, iEzsignfoldertypeDisposaldays=$iEzsignfoldertypeDisposaldays, iEzsignfoldertypeDeadlinedays=$iEzsignfoldertypeDeadlinedays, bEzsignfoldertypePrematurelyendautomatically=$bEzsignfoldertypePrematurelyendautomatically, iEzsignfoldertypePrematurelyendautomaticallydays=$iEzsignfoldertypePrematurelyendautomaticallydays, bEzsignfoldertypeAutomaticsignature=$bEzsignfoldertypeAutomaticsignature, bEzsignfoldertypeDelegate=$bEzsignfoldertypeDelegate, bEzsignfoldertypeDiscussion=$bEzsignfoldertypeDiscussion, bEzsignfoldertypeLogrecipientinproof=$bEzsignfoldertypeLogrecipientinproof, bEzsignfoldertypeReassignezsignsigner=$bEzsignfoldertypeReassignezsignsigner, bEzsignfoldertypeReassignuser=$bEzsignfoldertypeReassignuser, bEzsignfoldertypeReassigngroup=$bEzsignfoldertypeReassigngroup, bEzsignfoldertypeSenddocumentmergetoemail=$bEzsignfoldertypeSenddocumentmergetoemail, bEzsignfoldertypeSenddocumentmergetoezsignsigner=$bEzsignfoldertypeSenddocumentmergetoezsignsigner, bEzsignfoldertypeSenddocumentmergetoreceivealldocument=$bEzsignfoldertypeSenddocumentmergetoreceivealldocument, bEzsignfoldertypeSenddocumentmergetouser=$bEzsignfoldertypeSenddocumentmergetouser, bEzsignfoldertypeSendsignedtoezsignsigner=$bEzsignfoldertypeSendsignedtoezsignsigner, bEzsignfoldertypeSendsignedtouser=$bEzsignfoldertypeSendsignedtouser, bEzsignfoldertypeSendattachmentezsignsigner=$bEzsignfoldertypeSendattachmentezsignsigner, bEzsignfoldertypeSendsignatureattachmentezsignsigner=$bEzsignfoldertypeSendsignatureattachmentezsignsigner, bEzsignfoldertypeSendsignatureattachment=$bEzsignfoldertypeSendsignatureattachment, bEzsignfoldertypeSendproofezsignsigner=$bEzsignfoldertypeSendproofezsignsigner, bEzsignfoldertypeSendattachmentuser=$bEzsignfoldertypeSendattachmentuser, bEzsignfoldertypeSendsignatureattachmentuser=$bEzsignfoldertypeSendsignatureattachmentuser, bEzsignfoldertypeSendproofuser=$bEzsignfoldertypeSendproofuser, bEzsignfoldertypeSendproofemail=$bEzsignfoldertypeSendproofemail, bEzsignfoldertypeAllowdownloadattachmentezsignsigner=$bEzsignfoldertypeAllowdownloadattachmentezsignsigner, bEzsignfoldertypeAllowdownloadsignatureattachmentezsignsigner=$bEzsignfoldertypeAllowdownloadsignatureattachmentezsignsigner, bEzsignfoldertypeAllowdownloadproofezsignsigner=$bEzsignfoldertypeAllowdownloadproofezsignsigner, bEzsignfoldertypeSendproofreceivealldocument=$bEzsignfoldertypeSendproofreceivealldocument, bEzsignfoldertypeSendsignatureattachmentreceivealldocument=$bEzsignfoldertypeSendsignatureattachmentreceivealldocument, bEzsignfoldertypeSendsignedtodocumentowner=$bEzsignfoldertypeSendsignedtodocumentowner, bEzsignfoldertypeSendsignedtofolderowner=$bEzsignfoldertypeSendsignedtofolderowner, bEzsignfoldertypeSendsignedtofullgroup=$bEzsignfoldertypeSendsignedtofullgroup, bEzsignfoldertypeSendsignedtolimitedgroup=$bEzsignfoldertypeSendsignedtolimitedgroup, bEzsignfoldertypeSendsignedtocolleague=$bEzsignfoldertypeSendsignedtocolleague, bEzsignfoldertypeSendsummarytodocumentowner=$bEzsignfoldertypeSendsummarytodocumentowner, bEzsignfoldertypeSendsummarytofolderowner=$bEzsignfoldertypeSendsummarytofolderowner, bEzsignfoldertypeSendsummarytofullgroup=$bEzsignfoldertypeSendsummarytofullgroup, bEzsignfoldertypeSendsummarytolimitedgroup=$bEzsignfoldertypeSendsummarytolimitedgroup, bEzsignfoldertypeSendsummarytocolleague=$bEzsignfoldertypeSendsummarytocolleague, eEzsignfoldertypeSigneraccess=$eEzsignfoldertypeSigneraccess, bEzsignfoldertypeIsactive=$bEzsignfoldertypeIsactive]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -881,6 +929,26 @@ class EzsignfoldertypeRequestV3 {
     } else {
       json[r'bEzsignfoldertypeReassigngroup'] = null;
     }
+    if (this.bEzsignfoldertypeSenddocumentmergetoemail != null) {
+      json[r'bEzsignfoldertypeSenddocumentmergetoemail'] = this.bEzsignfoldertypeSenddocumentmergetoemail;
+    } else {
+      json[r'bEzsignfoldertypeSenddocumentmergetoemail'] = null;
+    }
+    if (this.bEzsignfoldertypeSenddocumentmergetoezsignsigner != null) {
+      json[r'bEzsignfoldertypeSenddocumentmergetoezsignsigner'] = this.bEzsignfoldertypeSenddocumentmergetoezsignsigner;
+    } else {
+      json[r'bEzsignfoldertypeSenddocumentmergetoezsignsigner'] = null;
+    }
+    if (this.bEzsignfoldertypeSenddocumentmergetoreceivealldocument != null) {
+      json[r'bEzsignfoldertypeSenddocumentmergetoreceivealldocument'] = this.bEzsignfoldertypeSenddocumentmergetoreceivealldocument;
+    } else {
+      json[r'bEzsignfoldertypeSenddocumentmergetoreceivealldocument'] = null;
+    }
+    if (this.bEzsignfoldertypeSenddocumentmergetouser != null) {
+      json[r'bEzsignfoldertypeSenddocumentmergetouser'] = this.bEzsignfoldertypeSenddocumentmergetouser;
+    } else {
+      json[r'bEzsignfoldertypeSenddocumentmergetouser'] = null;
+    }
     if (this.bEzsignfoldertypeSendsignedtoezsignsigner != null) {
       json[r'bEzsignfoldertypeSendsignedtoezsignsigner'] = this.bEzsignfoldertypeSendsignedtoezsignsigner;
     } else {
@@ -1002,10 +1070,36 @@ class EzsignfoldertypeRequestV3 {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignfoldertypeRequestV3[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignfoldertypeRequestV3[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'objEzsignfoldertypeName'), 'Required key "EzsignfoldertypeRequestV3[objEzsignfoldertypeName]" is missing from JSON.');
+        assert(json[r'objEzsignfoldertypeName'] != null, 'Required key "EzsignfoldertypeRequestV3[objEzsignfoldertypeName]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiBrandingID'), 'Required key "EzsignfoldertypeRequestV3[fkiBrandingID]" is missing from JSON.');
+        assert(json[r'fkiBrandingID'] != null, 'Required key "EzsignfoldertypeRequestV3[fkiBrandingID]" has a null value in JSON.');
+        assert(json.containsKey(r'a_fkiUserlogintypeID'), 'Required key "EzsignfoldertypeRequestV3[a_fkiUserlogintypeID]" is missing from JSON.');
+        assert(json[r'a_fkiUserlogintypeID'] != null, 'Required key "EzsignfoldertypeRequestV3[a_fkiUserlogintypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsignfoldertypePrivacylevel'), 'Required key "EzsignfoldertypeRequestV3[eEzsignfoldertypePrivacylevel]" is missing from JSON.');
+        assert(json[r'eEzsignfoldertypePrivacylevel'] != null, 'Required key "EzsignfoldertypeRequestV3[eEzsignfoldertypePrivacylevel]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignfoldertypeArchivaldays'), 'Required key "EzsignfoldertypeRequestV3[iEzsignfoldertypeArchivaldays]" is missing from JSON.');
+        assert(json[r'iEzsignfoldertypeArchivaldays'] != null, 'Required key "EzsignfoldertypeRequestV3[iEzsignfoldertypeArchivaldays]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsignfoldertypeDisposal'), 'Required key "EzsignfoldertypeRequestV3[eEzsignfoldertypeDisposal]" is missing from JSON.');
+        assert(json[r'eEzsignfoldertypeDisposal'] != null, 'Required key "EzsignfoldertypeRequestV3[eEzsignfoldertypeDisposal]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsignfoldertypeCompletion'), 'Required key "EzsignfoldertypeRequestV3[eEzsignfoldertypeCompletion]" is missing from JSON.');
+        assert(json[r'eEzsignfoldertypeCompletion'] != null, 'Required key "EzsignfoldertypeRequestV3[eEzsignfoldertypeCompletion]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignfoldertypeDeadlinedays'), 'Required key "EzsignfoldertypeRequestV3[iEzsignfoldertypeDeadlinedays]" is missing from JSON.');
+        assert(json[r'iEzsignfoldertypeDeadlinedays'] != null, 'Required key "EzsignfoldertypeRequestV3[iEzsignfoldertypeDeadlinedays]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignfoldertypeSendsignedtodocumentowner'), 'Required key "EzsignfoldertypeRequestV3[bEzsignfoldertypeSendsignedtodocumentowner]" is missing from JSON.');
+        assert(json[r'bEzsignfoldertypeSendsignedtodocumentowner'] != null, 'Required key "EzsignfoldertypeRequestV3[bEzsignfoldertypeSendsignedtodocumentowner]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignfoldertypeSendsignedtofolderowner'), 'Required key "EzsignfoldertypeRequestV3[bEzsignfoldertypeSendsignedtofolderowner]" is missing from JSON.');
+        assert(json[r'bEzsignfoldertypeSendsignedtofolderowner'] != null, 'Required key "EzsignfoldertypeRequestV3[bEzsignfoldertypeSendsignedtofolderowner]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignfoldertypeSendsignedtocolleague'), 'Required key "EzsignfoldertypeRequestV3[bEzsignfoldertypeSendsignedtocolleague]" is missing from JSON.');
+        assert(json[r'bEzsignfoldertypeSendsignedtocolleague'] != null, 'Required key "EzsignfoldertypeRequestV3[bEzsignfoldertypeSendsignedtocolleague]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignfoldertypeSendsummarytodocumentowner'), 'Required key "EzsignfoldertypeRequestV3[bEzsignfoldertypeSendsummarytodocumentowner]" is missing from JSON.');
+        assert(json[r'bEzsignfoldertypeSendsummarytodocumentowner'] != null, 'Required key "EzsignfoldertypeRequestV3[bEzsignfoldertypeSendsummarytodocumentowner]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignfoldertypeSendsummarytofolderowner'), 'Required key "EzsignfoldertypeRequestV3[bEzsignfoldertypeSendsummarytofolderowner]" is missing from JSON.');
+        assert(json[r'bEzsignfoldertypeSendsummarytofolderowner'] != null, 'Required key "EzsignfoldertypeRequestV3[bEzsignfoldertypeSendsummarytofolderowner]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignfoldertypeSendsummarytocolleague'), 'Required key "EzsignfoldertypeRequestV3[bEzsignfoldertypeSendsummarytocolleague]" is missing from JSON.');
+        assert(json[r'bEzsignfoldertypeSendsummarytocolleague'] != null, 'Required key "EzsignfoldertypeRequestV3[bEzsignfoldertypeSendsummarytocolleague]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignfoldertypeIsactive'), 'Required key "EzsignfoldertypeRequestV3[bEzsignfoldertypeIsactive]" is missing from JSON.');
+        assert(json[r'bEzsignfoldertypeIsactive'] != null, 'Required key "EzsignfoldertypeRequestV3[bEzsignfoldertypeIsactive]" has a null value in JSON.');
         return true;
       }());
 
@@ -1059,6 +1153,10 @@ class EzsignfoldertypeRequestV3 {
         bEzsignfoldertypeReassignezsignsigner: mapValueOfType<bool>(json, r'bEzsignfoldertypeReassignezsignsigner'),
         bEzsignfoldertypeReassignuser: mapValueOfType<bool>(json, r'bEzsignfoldertypeReassignuser'),
         bEzsignfoldertypeReassigngroup: mapValueOfType<bool>(json, r'bEzsignfoldertypeReassigngroup'),
+        bEzsignfoldertypeSenddocumentmergetoemail: mapValueOfType<bool>(json, r'bEzsignfoldertypeSenddocumentmergetoemail'),
+        bEzsignfoldertypeSenddocumentmergetoezsignsigner: mapValueOfType<bool>(json, r'bEzsignfoldertypeSenddocumentmergetoezsignsigner'),
+        bEzsignfoldertypeSenddocumentmergetoreceivealldocument: mapValueOfType<bool>(json, r'bEzsignfoldertypeSenddocumentmergetoreceivealldocument'),
+        bEzsignfoldertypeSenddocumentmergetouser: mapValueOfType<bool>(json, r'bEzsignfoldertypeSenddocumentmergetouser'),
         bEzsignfoldertypeSendsignedtoezsignsigner: mapValueOfType<bool>(json, r'bEzsignfoldertypeSendsignedtoezsignsigner'),
         bEzsignfoldertypeSendsignedtouser: mapValueOfType<bool>(json, r'bEzsignfoldertypeSendsignedtouser'),
         bEzsignfoldertypeSendattachmentezsignsigner: mapValueOfType<bool>(json, r'bEzsignfoldertypeSendattachmentezsignsigner'),

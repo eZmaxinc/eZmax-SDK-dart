@@ -16,6 +16,67 @@ class ObjectInscriptionnotauthenticatedApi {
 
   final ApiClient apiClient;
 
+  /// Fills the Inscriptionnotauthenticatedcondition in the Inscriptionnotauthenticated
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiInscriptionnotauthenticatedID (required):
+  ///
+  /// * [InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request] inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request (required):
+  Future<Response> inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1WithHttpInfo(int pkiInscriptionnotauthenticatedID, InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/fillInscriptionnotauthenticatedcondition'
+      .replaceAll('{pkiInscriptionnotauthenticatedID}', pkiInscriptionnotauthenticatedID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Fills the Inscriptionnotauthenticatedcondition in the Inscriptionnotauthenticated
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiInscriptionnotauthenticatedID (required):
+  ///
+  /// * [InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request] inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request (required):
+  Future<InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Response?> inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1(int pkiInscriptionnotauthenticatedID, InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request,) async {
+    final response = await inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1WithHttpInfo(pkiInscriptionnotauthenticatedID, inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Response',) as InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Response;
+    
+    }
+    return null;
+  }
+
   /// Retrieve Communication count
   ///
   /// 
@@ -239,6 +300,63 @@ class ObjectInscriptionnotauthenticatedApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'InscriptionnotauthenticatedGetCommunicationsendersV1Response',) as InscriptionnotauthenticatedGetCommunicationsendersV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve Inscriptionnotauthenticated conditions
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiInscriptionnotauthenticatedID (required):
+  Future<Response> inscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1WithHttpInfo(int pkiInscriptionnotauthenticatedID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getInscriptionnotauthenticatedconditions'
+      .replaceAll('{pkiInscriptionnotauthenticatedID}', pkiInscriptionnotauthenticatedID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Retrieve Inscriptionnotauthenticated conditions
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiInscriptionnotauthenticatedID (required):
+  Future<InscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1Response?> inscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1(int pkiInscriptionnotauthenticatedID,) async {
+    final response = await inscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1WithHttpInfo(pkiInscriptionnotauthenticatedID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'InscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1Response',) as InscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1Response;
     
     }
     return null;

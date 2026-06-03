@@ -71,10 +71,14 @@ class EzsigntemplatesignaturecustomdateResponseV2 {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplatesignaturecustomdateResponseV2[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplatesignaturecustomdateResponseV2[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsigntemplatesignaturecustomdateID'), 'Required key "EzsigntemplatesignaturecustomdateResponseV2[pkiEzsigntemplatesignaturecustomdateID]" is missing from JSON.');
+        assert(json[r'pkiEzsigntemplatesignaturecustomdateID'] != null, 'Required key "EzsigntemplatesignaturecustomdateResponseV2[pkiEzsigntemplatesignaturecustomdateID]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigntemplatesignaturecustomdateOffsetx'), 'Required key "EzsigntemplatesignaturecustomdateResponseV2[iEzsigntemplatesignaturecustomdateOffsetx]" is missing from JSON.');
+        assert(json[r'iEzsigntemplatesignaturecustomdateOffsetx'] != null, 'Required key "EzsigntemplatesignaturecustomdateResponseV2[iEzsigntemplatesignaturecustomdateOffsetx]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigntemplatesignaturecustomdateOffsety'), 'Required key "EzsigntemplatesignaturecustomdateResponseV2[iEzsigntemplatesignaturecustomdateOffsety]" is missing from JSON.');
+        assert(json[r'iEzsigntemplatesignaturecustomdateOffsety'] != null, 'Required key "EzsigntemplatesignaturecustomdateResponseV2[iEzsigntemplatesignaturecustomdateOffsety]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsigntemplatesignaturecustomdateFormat'), 'Required key "EzsigntemplatesignaturecustomdateResponseV2[sEzsigntemplatesignaturecustomdateFormat]" is missing from JSON.');
+        assert(json[r'sEzsigntemplatesignaturecustomdateFormat'] != null, 'Required key "EzsigntemplatesignaturecustomdateResponseV2[sEzsigntemplatesignaturecustomdateFormat]" has a null value in JSON.');
         return true;
       }());
 

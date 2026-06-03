@@ -64,10 +64,12 @@ class EzmaxproductAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzmaxproductAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzmaxproductAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzmaxproductID'), 'Required key "EzmaxproductAutocompleteElementResponse[pkiEzmaxproductID]" is missing from JSON.');
+        assert(json[r'pkiEzmaxproductID'] != null, 'Required key "EzmaxproductAutocompleteElementResponse[pkiEzmaxproductID]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzmaxproductDescriptionX'), 'Required key "EzmaxproductAutocompleteElementResponse[sEzmaxproductDescriptionX]" is missing from JSON.');
+        assert(json[r'sEzmaxproductDescriptionX'] != null, 'Required key "EzmaxproductAutocompleteElementResponse[sEzmaxproductDescriptionX]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzmaxproductIsactive'), 'Required key "EzmaxproductAutocompleteElementResponse[bEzmaxproductIsactive]" is missing from JSON.');
+        assert(json[r'bEzmaxproductIsactive'] != null, 'Required key "EzmaxproductAutocompleteElementResponse[bEzmaxproductIsactive]" has a null value in JSON.');
         return true;
       }());
 

@@ -96,10 +96,14 @@ class EzsigntemplatepackagesignermembershipResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplatepackagesignermembershipResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplatepackagesignermembershipResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsigntemplatepackagesignermembershipID'), 'Required key "EzsigntemplatepackagesignermembershipResponseCompound[pkiEzsigntemplatepackagesignermembershipID]" is missing from JSON.');
+        assert(json[r'pkiEzsigntemplatepackagesignermembershipID'] != null, 'Required key "EzsigntemplatepackagesignermembershipResponseCompound[pkiEzsigntemplatepackagesignermembershipID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiEzsigntemplatepackagemembershipID'), 'Required key "EzsigntemplatepackagesignermembershipResponseCompound[fkiEzsigntemplatepackagemembershipID]" is missing from JSON.');
+        assert(json[r'fkiEzsigntemplatepackagemembershipID'] != null, 'Required key "EzsigntemplatepackagesignermembershipResponseCompound[fkiEzsigntemplatepackagemembershipID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiEzsigntemplatepackagesignerID'), 'Required key "EzsigntemplatepackagesignermembershipResponseCompound[fkiEzsigntemplatepackagesignerID]" is missing from JSON.');
+        assert(json[r'fkiEzsigntemplatepackagesignerID'] != null, 'Required key "EzsigntemplatepackagesignermembershipResponseCompound[fkiEzsigntemplatepackagesignerID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiEzsigntemplatesignerID'), 'Required key "EzsigntemplatepackagesignermembershipResponseCompound[fkiEzsigntemplatesignerID]" is missing from JSON.');
+        assert(json[r'fkiEzsigntemplatesignerID'] != null, 'Required key "EzsigntemplatepackagesignermembershipResponseCompound[fkiEzsigntemplatesignerID]" has a null value in JSON.');
         return true;
       }());
 

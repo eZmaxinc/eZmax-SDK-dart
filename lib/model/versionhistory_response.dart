@@ -181,10 +181,16 @@ class VersionhistoryResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "VersionhistoryResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "VersionhistoryResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiVersionhistoryID'), 'Required key "VersionhistoryResponse[pkiVersionhistoryID]" is missing from JSON.');
+        assert(json[r'pkiVersionhistoryID'] != null, 'Required key "VersionhistoryResponse[pkiVersionhistoryID]" has a null value in JSON.');
+        assert(json.containsKey(r'objVersionhistoryDetail'), 'Required key "VersionhistoryResponse[objVersionhistoryDetail]" is missing from JSON.');
+        assert(json[r'objVersionhistoryDetail'] != null, 'Required key "VersionhistoryResponse[objVersionhistoryDetail]" has a null value in JSON.');
+        assert(json.containsKey(r'dtVersionhistoryDate'), 'Required key "VersionhistoryResponse[dtVersionhistoryDate]" is missing from JSON.');
+        assert(json[r'dtVersionhistoryDate'] != null, 'Required key "VersionhistoryResponse[dtVersionhistoryDate]" has a null value in JSON.');
+        assert(json.containsKey(r'eVersionhistoryType'), 'Required key "VersionhistoryResponse[eVersionhistoryType]" is missing from JSON.');
+        assert(json[r'eVersionhistoryType'] != null, 'Required key "VersionhistoryResponse[eVersionhistoryType]" has a null value in JSON.');
+        assert(json.containsKey(r'bVersionhistoryDraft'), 'Required key "VersionhistoryResponse[bVersionhistoryDraft]" is missing from JSON.');
+        assert(json[r'bVersionhistoryDraft'] != null, 'Required key "VersionhistoryResponse[bVersionhistoryDraft]" has a null value in JSON.');
         return true;
       }());
 

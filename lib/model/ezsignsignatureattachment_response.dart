@@ -81,10 +81,16 @@ class EzsignsignatureattachmentResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignsignatureattachmentResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignsignatureattachmentResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsignsignatureattachmentID'), 'Required key "EzsignsignatureattachmentResponse[pkiEzsignsignatureattachmentID]" is missing from JSON.');
+        assert(json[r'pkiEzsignsignatureattachmentID'] != null, 'Required key "EzsignsignatureattachmentResponse[pkiEzsignsignatureattachmentID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiEzsignsignatureID'), 'Required key "EzsignsignatureattachmentResponse[fkiEzsignsignatureID]" is missing from JSON.');
+        assert(json[r'fkiEzsignsignatureID'] != null, 'Required key "EzsignsignatureattachmentResponse[fkiEzsignsignatureID]" has a null value in JSON.');
+        assert(json.containsKey(r'binEzsignsignatureattachmentMD5'), 'Required key "EzsignsignatureattachmentResponse[binEzsignsignatureattachmentMD5]" is missing from JSON.');
+        assert(json[r'binEzsignsignatureattachmentMD5'] != null, 'Required key "EzsignsignatureattachmentResponse[binEzsignsignatureattachmentMD5]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsignsignatureattachmentName'), 'Required key "EzsignsignatureattachmentResponse[sEzsignsignatureattachmentName]" is missing from JSON.');
+        assert(json[r'sEzsignsignatureattachmentName'] != null, 'Required key "EzsignsignatureattachmentResponse[sEzsignsignatureattachmentName]" has a null value in JSON.');
+        assert(json.containsKey(r'sDownloadUrl'), 'Required key "EzsignsignatureattachmentResponse[sDownloadUrl]" is missing from JSON.');
+        assert(json[r'sDownloadUrl'] != null, 'Required key "EzsignsignatureattachmentResponse[sDownloadUrl]" has a null value in JSON.');
         return true;
       }());
 

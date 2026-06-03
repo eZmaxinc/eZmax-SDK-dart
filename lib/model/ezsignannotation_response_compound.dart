@@ -193,10 +193,18 @@ class EzsignannotationResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignannotationResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignannotationResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsignannotationID'), 'Required key "EzsignannotationResponseCompound[pkiEzsignannotationID]" is missing from JSON.');
+        assert(json[r'pkiEzsignannotationID'] != null, 'Required key "EzsignannotationResponseCompound[pkiEzsignannotationID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiEzsigndocumentID'), 'Required key "EzsignannotationResponseCompound[fkiEzsigndocumentID]" is missing from JSON.');
+        assert(json[r'fkiEzsigndocumentID'] != null, 'Required key "EzsignannotationResponseCompound[fkiEzsigndocumentID]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsignannotationType'), 'Required key "EzsignannotationResponseCompound[eEzsignannotationType]" is missing from JSON.');
+        assert(json[r'eEzsignannotationType'] != null, 'Required key "EzsignannotationResponseCompound[eEzsignannotationType]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignannotationX'), 'Required key "EzsignannotationResponseCompound[iEzsignannotationX]" is missing from JSON.');
+        assert(json[r'iEzsignannotationX'] != null, 'Required key "EzsignannotationResponseCompound[iEzsignannotationX]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignannotationY'), 'Required key "EzsignannotationResponseCompound[iEzsignannotationY]" is missing from JSON.');
+        assert(json[r'iEzsignannotationY'] != null, 'Required key "EzsignannotationResponseCompound[iEzsignannotationY]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignpagePagenumber'), 'Required key "EzsignannotationResponseCompound[iEzsignpagePagenumber]" is missing from JSON.');
+        assert(json[r'iEzsignpagePagenumber'] != null, 'Required key "EzsignannotationResponseCompound[iEzsignpagePagenumber]" has a null value in JSON.');
         return true;
       }());
 

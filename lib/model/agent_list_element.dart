@@ -30,6 +30,11 @@ class AgentListElement {
     required this.sAgentRealestateassociationlicense,
     this.dtAgentHiredate,
     this.dtAgentLeavedate,
+    this.dtAgentContractdate,
+    this.dtAgentTransferdate,
+    this.dtAgentSenioritydate,
+    this.dtAgentSickleavestart,
+    this.dtAgentSickleaveend,
     required this.bAgentTranquillit,
     required this.bAgentResidentiallicense,
     required this.bAgentCommerciallicense,
@@ -47,7 +52,9 @@ class AgentListElement {
     this.sAddressSuite,
     this.sAddressCity,
     this.sAddressZip,
+    this.fkiProvinceID,
     this.sProvinceNameX,
+    this.fkiCountryID,
     this.sCountryNameX,
   });
 
@@ -152,6 +159,51 @@ class AgentListElement {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   String? dtAgentLeavedate;
+
+  /// The contract date of the Agent
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? dtAgentContractdate;
+
+  /// The transfer date of the Agent
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? dtAgentTransferdate;
+
+  /// The seniority date of the Agent
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? dtAgentSenioritydate;
+
+  /// The sick leave start date of the Agent
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? dtAgentSickleavestart;
+
+  /// The sick leave end date of the Agent
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? dtAgentSickleaveend;
 
   /// Whether if it's an tranquillit
   bool bAgentTranquillit;
@@ -258,6 +310,17 @@ class AgentListElement {
   ///
   String? sAddressZip;
 
+  /// The unique ID of the Province.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|(Canada) Alberta |2|(Canada) British Columbia| |3|(Canada) Manitoba| |3|(Canada) Manitoba| |4|(Canada) New Brunswick| |5|(Canada) Newfoundland| |6|(Canada) Northwest Territories| |7|(Canada) Nova Scotia| |8|(Canada) Nunavut| |9|(Canada) Ontario| |10|(Canada) Prince Edward Island| |11|(Canada) Quebec| |12|(Canada) Saskatchewan| |13|(Canada) Yukon| |14|(United-States) Alabama| |15|(United-States) Alaska| |16|(United-States) Arizona| |17|(United-States) Arkansas| |18|(United-States) California| |19|(United-States) Colorado| |20|(United-States) Connecticut| |21|(United-States) Delaware| |22|(United-States) District of Columbia| |23|(United-States) Florida| |24|(United-States) Georgia| |25|(United-States) Hawaii| |26|(United-States) Idaho| |27|(United-States) Illinois| |28|(United-States) Indiana| |29|(United-States) Iowa| |30|(United-States) Kansas| |31|(United-States) Kentucky| |32|(United-States) Louisiane| |33|(United-States) Maine| |34|(United-States) Maryland| |35|(United-States) Massachusetts| |36|(United-States) Michigan| |37|(United-States) Minnesota| |38|(United-States) Mississippi| |39|(United-States) Missouri| |40|(United-States) Montana| |41|(United-States) Nebraska| |42|(United-States) Nevada| |43|(United-States) New Hampshire| |44|(United-States) New Jersey| |45|(United-States) New Mexico| |46|(United-States) New York| |47|(United-States) North Carolina| |48|(United-States) North Dakota| |49|(United-States) Ohio| |50|(United-States) Oklahoma| |51|(United-States) Oregon| |52|(United-States) Pennsylvania| |53|(United-States) Rhode Island| |54|(United-States) South Carolina| |55|(United-States) South Dakota| |56|(United-States) Tennessee| |57|(United-States) Texas| |58|(United-States) Utah| |60|(United-States) Vermont| |59|(United-States) Virginia| |61|(United-States) Washington| |62|(United-States) West Virginia| |63|(United-States) Wisconsin| |64|(United-States) Wyoming|
+  ///
+  /// Minimum value: 0
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiProvinceID;
+
   /// The name of the Province in the language of the requester
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -266,6 +329,17 @@ class AgentListElement {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   String? sProvinceNameX;
+
+  /// The unique ID of the Country.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|Canada| |2|United-States|
+  ///
+  /// Minimum value: 0
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiCountryID;
 
   /// The name of the Country in the language of the requester
   ///
@@ -295,6 +369,11 @@ class AgentListElement {
     other.sAgentRealestateassociationlicense == sAgentRealestateassociationlicense &&
     other.dtAgentHiredate == dtAgentHiredate &&
     other.dtAgentLeavedate == dtAgentLeavedate &&
+    other.dtAgentContractdate == dtAgentContractdate &&
+    other.dtAgentTransferdate == dtAgentTransferdate &&
+    other.dtAgentSenioritydate == dtAgentSenioritydate &&
+    other.dtAgentSickleavestart == dtAgentSickleavestart &&
+    other.dtAgentSickleaveend == dtAgentSickleaveend &&
     other.bAgentTranquillit == bAgentTranquillit &&
     other.bAgentResidentiallicense == bAgentResidentiallicense &&
     other.bAgentCommerciallicense == bAgentCommerciallicense &&
@@ -312,7 +391,9 @@ class AgentListElement {
     other.sAddressSuite == sAddressSuite &&
     other.sAddressCity == sAddressCity &&
     other.sAddressZip == sAddressZip &&
+    other.fkiProvinceID == fkiProvinceID &&
     other.sProvinceNameX == sProvinceNameX &&
+    other.fkiCountryID == fkiCountryID &&
     other.sCountryNameX == sCountryNameX;
 
   @override
@@ -335,6 +416,11 @@ class AgentListElement {
     (sAgentRealestateassociationlicense.hashCode) +
     (dtAgentHiredate == null ? 0 : dtAgentHiredate!.hashCode) +
     (dtAgentLeavedate == null ? 0 : dtAgentLeavedate!.hashCode) +
+    (dtAgentContractdate == null ? 0 : dtAgentContractdate!.hashCode) +
+    (dtAgentTransferdate == null ? 0 : dtAgentTransferdate!.hashCode) +
+    (dtAgentSenioritydate == null ? 0 : dtAgentSenioritydate!.hashCode) +
+    (dtAgentSickleavestart == null ? 0 : dtAgentSickleavestart!.hashCode) +
+    (dtAgentSickleaveend == null ? 0 : dtAgentSickleaveend!.hashCode) +
     (bAgentTranquillit.hashCode) +
     (bAgentResidentiallicense.hashCode) +
     (bAgentCommerciallicense.hashCode) +
@@ -352,11 +438,13 @@ class AgentListElement {
     (sAddressSuite == null ? 0 : sAddressSuite!.hashCode) +
     (sAddressCity == null ? 0 : sAddressCity!.hashCode) +
     (sAddressZip == null ? 0 : sAddressZip!.hashCode) +
+    (fkiProvinceID == null ? 0 : fkiProvinceID!.hashCode) +
     (sProvinceNameX == null ? 0 : sProvinceNameX!.hashCode) +
+    (fkiCountryID == null ? 0 : fkiCountryID!.hashCode) +
     (sCountryNameX == null ? 0 : sCountryNameX!.hashCode);
 
   @override
-  String toString() => 'AgentListElement[pkiAgentID=$pkiAgentID, fkiAgenttypeID=$fkiAgenttypeID, sAgenttypeNameX=$sAgenttypeNameX, fkiAgentincorporationID=$fkiAgentincorporationID, sAgentincorporationName=$sAgentincorporationName, fkiDepartmentID=$fkiDepartmentID, sDepartmentNameX=$sDepartmentNameX, fkiLanguageID=$fkiLanguageID, sLanguageNameX=$sLanguageNameX, sRealestateboardnumberNumber=$sRealestateboardnumberNumber, sAgentCode=$sAgentCode, iAgentPhotocopiercode=$iAgentPhotocopiercode, iAgentLongdistancecode=$iAgentLongdistancecode, iAgentBannernumber=$iAgentBannernumber, sAgentRealestateassociationlicense=$sAgentRealestateassociationlicense, dtAgentHiredate=$dtAgentHiredate, dtAgentLeavedate=$dtAgentLeavedate, bAgentTranquillit=$bAgentTranquillit, bAgentResidentiallicense=$bAgentResidentiallicense, bAgentCommerciallicense=$bAgentCommerciallicense, bAgentMortgagelicense=$bAgentMortgagelicense, bAgentPaidbyofficetranquillit=$bAgentPaidbyofficetranquillit, dtAgentFintraccertification=$dtAgentFintraccertification, bAgentIsactive=$bAgentIsactive, sContactFirstname=$sContactFirstname, sContactLastname=$sContactLastname, dtContactBirthdate=$dtContactBirthdate, sEmailAddress=$sEmailAddress, sPhoneE164=$sPhoneE164, sAddressCivic=$sAddressCivic, sAddressStreet=$sAddressStreet, sAddressSuite=$sAddressSuite, sAddressCity=$sAddressCity, sAddressZip=$sAddressZip, sProvinceNameX=$sProvinceNameX, sCountryNameX=$sCountryNameX]';
+  String toString() => 'AgentListElement[pkiAgentID=$pkiAgentID, fkiAgenttypeID=$fkiAgenttypeID, sAgenttypeNameX=$sAgenttypeNameX, fkiAgentincorporationID=$fkiAgentincorporationID, sAgentincorporationName=$sAgentincorporationName, fkiDepartmentID=$fkiDepartmentID, sDepartmentNameX=$sDepartmentNameX, fkiLanguageID=$fkiLanguageID, sLanguageNameX=$sLanguageNameX, sRealestateboardnumberNumber=$sRealestateboardnumberNumber, sAgentCode=$sAgentCode, iAgentPhotocopiercode=$iAgentPhotocopiercode, iAgentLongdistancecode=$iAgentLongdistancecode, iAgentBannernumber=$iAgentBannernumber, sAgentRealestateassociationlicense=$sAgentRealestateassociationlicense, dtAgentHiredate=$dtAgentHiredate, dtAgentLeavedate=$dtAgentLeavedate, dtAgentContractdate=$dtAgentContractdate, dtAgentTransferdate=$dtAgentTransferdate, dtAgentSenioritydate=$dtAgentSenioritydate, dtAgentSickleavestart=$dtAgentSickleavestart, dtAgentSickleaveend=$dtAgentSickleaveend, bAgentTranquillit=$bAgentTranquillit, bAgentResidentiallicense=$bAgentResidentiallicense, bAgentCommerciallicense=$bAgentCommerciallicense, bAgentMortgagelicense=$bAgentMortgagelicense, bAgentPaidbyofficetranquillit=$bAgentPaidbyofficetranquillit, dtAgentFintraccertification=$dtAgentFintraccertification, bAgentIsactive=$bAgentIsactive, sContactFirstname=$sContactFirstname, sContactLastname=$sContactLastname, dtContactBirthdate=$dtContactBirthdate, sEmailAddress=$sEmailAddress, sPhoneE164=$sPhoneE164, sAddressCivic=$sAddressCivic, sAddressStreet=$sAddressStreet, sAddressSuite=$sAddressSuite, sAddressCity=$sAddressCity, sAddressZip=$sAddressZip, fkiProvinceID=$fkiProvinceID, sProvinceNameX=$sProvinceNameX, fkiCountryID=$fkiCountryID, sCountryNameX=$sCountryNameX]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -396,6 +484,31 @@ class AgentListElement {
       json[r'dtAgentLeavedate'] = this.dtAgentLeavedate;
     } else {
       json[r'dtAgentLeavedate'] = null;
+    }
+    if (this.dtAgentContractdate != null) {
+      json[r'dtAgentContractdate'] = this.dtAgentContractdate;
+    } else {
+      json[r'dtAgentContractdate'] = null;
+    }
+    if (this.dtAgentTransferdate != null) {
+      json[r'dtAgentTransferdate'] = this.dtAgentTransferdate;
+    } else {
+      json[r'dtAgentTransferdate'] = null;
+    }
+    if (this.dtAgentSenioritydate != null) {
+      json[r'dtAgentSenioritydate'] = this.dtAgentSenioritydate;
+    } else {
+      json[r'dtAgentSenioritydate'] = null;
+    }
+    if (this.dtAgentSickleavestart != null) {
+      json[r'dtAgentSickleavestart'] = this.dtAgentSickleavestart;
+    } else {
+      json[r'dtAgentSickleavestart'] = null;
+    }
+    if (this.dtAgentSickleaveend != null) {
+      json[r'dtAgentSickleaveend'] = this.dtAgentSickleaveend;
+    } else {
+      json[r'dtAgentSickleaveend'] = null;
     }
       json[r'bAgentTranquillit'] = this.bAgentTranquillit;
       json[r'bAgentResidentiallicense'] = this.bAgentResidentiallicense;
@@ -450,10 +563,20 @@ class AgentListElement {
     } else {
       json[r'sAddressZip'] = null;
     }
+    if (this.fkiProvinceID != null) {
+      json[r'fkiProvinceID'] = this.fkiProvinceID;
+    } else {
+      json[r'fkiProvinceID'] = null;
+    }
     if (this.sProvinceNameX != null) {
       json[r'sProvinceNameX'] = this.sProvinceNameX;
     } else {
       json[r'sProvinceNameX'] = null;
+    }
+    if (this.fkiCountryID != null) {
+      json[r'fkiCountryID'] = this.fkiCountryID;
+    } else {
+      json[r'fkiCountryID'] = null;
     }
     if (this.sCountryNameX != null) {
       json[r'sCountryNameX'] = this.sCountryNameX;
@@ -474,10 +597,46 @@ class AgentListElement {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "AgentListElement[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "AgentListElement[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiAgentID'), 'Required key "AgentListElement[pkiAgentID]" is missing from JSON.');
+        assert(json[r'pkiAgentID'] != null, 'Required key "AgentListElement[pkiAgentID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiAgenttypeID'), 'Required key "AgentListElement[fkiAgenttypeID]" is missing from JSON.');
+        assert(json[r'fkiAgenttypeID'] != null, 'Required key "AgentListElement[fkiAgenttypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'sAgenttypeNameX'), 'Required key "AgentListElement[sAgenttypeNameX]" is missing from JSON.');
+        assert(json[r'sAgenttypeNameX'] != null, 'Required key "AgentListElement[sAgenttypeNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiDepartmentID'), 'Required key "AgentListElement[fkiDepartmentID]" is missing from JSON.');
+        assert(json[r'fkiDepartmentID'] != null, 'Required key "AgentListElement[fkiDepartmentID]" has a null value in JSON.');
+        assert(json.containsKey(r'sDepartmentNameX'), 'Required key "AgentListElement[sDepartmentNameX]" is missing from JSON.');
+        assert(json[r'sDepartmentNameX'] != null, 'Required key "AgentListElement[sDepartmentNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiLanguageID'), 'Required key "AgentListElement[fkiLanguageID]" is missing from JSON.');
+        assert(json[r'fkiLanguageID'] != null, 'Required key "AgentListElement[fkiLanguageID]" has a null value in JSON.');
+        assert(json.containsKey(r'sLanguageNameX'), 'Required key "AgentListElement[sLanguageNameX]" is missing from JSON.');
+        assert(json[r'sLanguageNameX'] != null, 'Required key "AgentListElement[sLanguageNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'sAgentCode'), 'Required key "AgentListElement[sAgentCode]" is missing from JSON.');
+        assert(json[r'sAgentCode'] != null, 'Required key "AgentListElement[sAgentCode]" has a null value in JSON.');
+        assert(json.containsKey(r'iAgentPhotocopiercode'), 'Required key "AgentListElement[iAgentPhotocopiercode]" is missing from JSON.');
+        assert(json[r'iAgentPhotocopiercode'] != null, 'Required key "AgentListElement[iAgentPhotocopiercode]" has a null value in JSON.');
+        assert(json.containsKey(r'iAgentLongdistancecode'), 'Required key "AgentListElement[iAgentLongdistancecode]" is missing from JSON.');
+        assert(json[r'iAgentLongdistancecode'] != null, 'Required key "AgentListElement[iAgentLongdistancecode]" has a null value in JSON.');
+        assert(json.containsKey(r'iAgentBannernumber'), 'Required key "AgentListElement[iAgentBannernumber]" is missing from JSON.');
+        assert(json[r'iAgentBannernumber'] != null, 'Required key "AgentListElement[iAgentBannernumber]" has a null value in JSON.');
+        assert(json.containsKey(r'sAgentRealestateassociationlicense'), 'Required key "AgentListElement[sAgentRealestateassociationlicense]" is missing from JSON.');
+        assert(json[r'sAgentRealestateassociationlicense'] != null, 'Required key "AgentListElement[sAgentRealestateassociationlicense]" has a null value in JSON.');
+        assert(json.containsKey(r'bAgentTranquillit'), 'Required key "AgentListElement[bAgentTranquillit]" is missing from JSON.');
+        assert(json[r'bAgentTranquillit'] != null, 'Required key "AgentListElement[bAgentTranquillit]" has a null value in JSON.');
+        assert(json.containsKey(r'bAgentResidentiallicense'), 'Required key "AgentListElement[bAgentResidentiallicense]" is missing from JSON.');
+        assert(json[r'bAgentResidentiallicense'] != null, 'Required key "AgentListElement[bAgentResidentiallicense]" has a null value in JSON.');
+        assert(json.containsKey(r'bAgentCommerciallicense'), 'Required key "AgentListElement[bAgentCommerciallicense]" is missing from JSON.');
+        assert(json[r'bAgentCommerciallicense'] != null, 'Required key "AgentListElement[bAgentCommerciallicense]" has a null value in JSON.');
+        assert(json.containsKey(r'bAgentMortgagelicense'), 'Required key "AgentListElement[bAgentMortgagelicense]" is missing from JSON.');
+        assert(json[r'bAgentMortgagelicense'] != null, 'Required key "AgentListElement[bAgentMortgagelicense]" has a null value in JSON.');
+        assert(json.containsKey(r'bAgentPaidbyofficetranquillit'), 'Required key "AgentListElement[bAgentPaidbyofficetranquillit]" is missing from JSON.');
+        assert(json[r'bAgentPaidbyofficetranquillit'] != null, 'Required key "AgentListElement[bAgentPaidbyofficetranquillit]" has a null value in JSON.');
+        assert(json.containsKey(r'bAgentIsactive'), 'Required key "AgentListElement[bAgentIsactive]" is missing from JSON.');
+        assert(json[r'bAgentIsactive'] != null, 'Required key "AgentListElement[bAgentIsactive]" has a null value in JSON.');
+        assert(json.containsKey(r'sContactFirstname'), 'Required key "AgentListElement[sContactFirstname]" is missing from JSON.');
+        assert(json[r'sContactFirstname'] != null, 'Required key "AgentListElement[sContactFirstname]" has a null value in JSON.');
+        assert(json.containsKey(r'sContactLastname'), 'Required key "AgentListElement[sContactLastname]" is missing from JSON.');
+        assert(json[r'sContactLastname'] != null, 'Required key "AgentListElement[sContactLastname]" has a null value in JSON.');
         return true;
       }());
 
@@ -499,6 +658,11 @@ class AgentListElement {
         sAgentRealestateassociationlicense: mapValueOfType<String>(json, r'sAgentRealestateassociationlicense')!,
         dtAgentHiredate: mapValueOfType<String>(json, r'dtAgentHiredate'),
         dtAgentLeavedate: mapValueOfType<String>(json, r'dtAgentLeavedate'),
+        dtAgentContractdate: mapValueOfType<String>(json, r'dtAgentContractdate'),
+        dtAgentTransferdate: mapValueOfType<String>(json, r'dtAgentTransferdate'),
+        dtAgentSenioritydate: mapValueOfType<String>(json, r'dtAgentSenioritydate'),
+        dtAgentSickleavestart: mapValueOfType<String>(json, r'dtAgentSickleavestart'),
+        dtAgentSickleaveend: mapValueOfType<String>(json, r'dtAgentSickleaveend'),
         bAgentTranquillit: mapValueOfType<bool>(json, r'bAgentTranquillit')!,
         bAgentResidentiallicense: mapValueOfType<bool>(json, r'bAgentResidentiallicense')!,
         bAgentCommerciallicense: mapValueOfType<bool>(json, r'bAgentCommerciallicense')!,
@@ -516,7 +680,9 @@ class AgentListElement {
         sAddressSuite: mapValueOfType<String>(json, r'sAddressSuite'),
         sAddressCity: mapValueOfType<String>(json, r'sAddressCity'),
         sAddressZip: mapValueOfType<String>(json, r'sAddressZip'),
+        fkiProvinceID: mapValueOfType<int>(json, r'fkiProvinceID'),
         sProvinceNameX: mapValueOfType<String>(json, r'sProvinceNameX'),
+        fkiCountryID: mapValueOfType<int>(json, r'fkiCountryID'),
         sCountryNameX: mapValueOfType<String>(json, r'sCountryNameX'),
       );
     }

@@ -183,10 +183,10 @@ class EzsigntemplateelementdependencyResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplateelementdependencyResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplateelementdependencyResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsigntemplateelementdependencyID'), 'Required key "EzsigntemplateelementdependencyResponse[pkiEzsigntemplateelementdependencyID]" is missing from JSON.');
+        assert(json[r'pkiEzsigntemplateelementdependencyID'] != null, 'Required key "EzsigntemplateelementdependencyResponse[pkiEzsigntemplateelementdependencyID]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsigntemplateelementdependencyValidation'), 'Required key "EzsigntemplateelementdependencyResponse[eEzsigntemplateelementdependencyValidation]" is missing from JSON.');
+        assert(json[r'eEzsigntemplateelementdependencyValidation'] != null, 'Required key "EzsigntemplateelementdependencyResponse[eEzsigntemplateelementdependencyValidation]" has a null value in JSON.');
         return true;
       }());
 

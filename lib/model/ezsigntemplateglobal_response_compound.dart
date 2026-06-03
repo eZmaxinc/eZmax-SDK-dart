@@ -25,6 +25,7 @@ class EzsigntemplateglobalResponseCompound {
     required this.sEzsigntemplateglobalDescription,
     this.objEzsigntemplateglobaldocument,
     this.aObjEzsigntemplateglobalsigner = const [],
+    this.aObjEzsigntemplateglobalannotation = const [],
   });
 
   /// The unique ID of the Ezsigntemplateglobal
@@ -80,6 +81,8 @@ class EzsigntemplateglobalResponseCompound {
 
   List<EzsigntemplateglobalsignerResponseCompound> aObjEzsigntemplateglobalsigner;
 
+  List<EzsigntemplateglobalannotationResponseCompound> aObjEzsigntemplateglobalannotation;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplateglobalResponseCompound &&
     other.pkiEzsigntemplateglobalID == pkiEzsigntemplateglobalID &&
@@ -93,7 +96,8 @@ class EzsigntemplateglobalResponseCompound {
     other.sEzsigntemplateglobalCode == sEzsigntemplateglobalCode &&
     other.sEzsigntemplateglobalDescription == sEzsigntemplateglobalDescription &&
     other.objEzsigntemplateglobaldocument == objEzsigntemplateglobaldocument &&
-    _deepEquality.equals(other.aObjEzsigntemplateglobalsigner, aObjEzsigntemplateglobalsigner);
+    _deepEquality.equals(other.aObjEzsigntemplateglobalsigner, aObjEzsigntemplateglobalsigner) &&
+    _deepEquality.equals(other.aObjEzsigntemplateglobalannotation, aObjEzsigntemplateglobalannotation);
 
   @override
   int get hashCode =>
@@ -109,10 +113,11 @@ class EzsigntemplateglobalResponseCompound {
     (sEzsigntemplateglobalCode.hashCode) +
     (sEzsigntemplateglobalDescription.hashCode) +
     (objEzsigntemplateglobaldocument == null ? 0 : objEzsigntemplateglobaldocument!.hashCode) +
-    (aObjEzsigntemplateglobalsigner.hashCode);
+    (aObjEzsigntemplateglobalsigner.hashCode) +
+    (aObjEzsigntemplateglobalannotation.hashCode);
 
   @override
-  String toString() => 'EzsigntemplateglobalResponseCompound[pkiEzsigntemplateglobalID=$pkiEzsigntemplateglobalID, fkiEzsigntemplateglobaldocumentID=$fkiEzsigntemplateglobaldocumentID, fkiModuleID=$fkiModuleID, sModuleNameX=$sModuleNameX, fkiLanguageID=$fkiLanguageID, sLanguageNameX=$sLanguageNameX, eEzsigntemplateglobalModule=$eEzsigntemplateglobalModule, eEzsigntemplateglobalSupplier=$eEzsigntemplateglobalSupplier, sEzsigntemplateglobalCode=$sEzsigntemplateglobalCode, sEzsigntemplateglobalDescription=$sEzsigntemplateglobalDescription, objEzsigntemplateglobaldocument=$objEzsigntemplateglobaldocument, aObjEzsigntemplateglobalsigner=$aObjEzsigntemplateglobalsigner]';
+  String toString() => 'EzsigntemplateglobalResponseCompound[pkiEzsigntemplateglobalID=$pkiEzsigntemplateglobalID, fkiEzsigntemplateglobaldocumentID=$fkiEzsigntemplateglobaldocumentID, fkiModuleID=$fkiModuleID, sModuleNameX=$sModuleNameX, fkiLanguageID=$fkiLanguageID, sLanguageNameX=$sLanguageNameX, eEzsigntemplateglobalModule=$eEzsigntemplateglobalModule, eEzsigntemplateglobalSupplier=$eEzsigntemplateglobalSupplier, sEzsigntemplateglobalCode=$sEzsigntemplateglobalCode, sEzsigntemplateglobalDescription=$sEzsigntemplateglobalDescription, objEzsigntemplateglobaldocument=$objEzsigntemplateglobaldocument, aObjEzsigntemplateglobalsigner=$aObjEzsigntemplateglobalsigner, aObjEzsigntemplateglobalannotation=$aObjEzsigntemplateglobalannotation]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -136,6 +141,7 @@ class EzsigntemplateglobalResponseCompound {
       json[r'objEzsigntemplateglobaldocument'] = null;
     }
       json[r'a_objEzsigntemplateglobalsigner'] = this.aObjEzsigntemplateglobalsigner;
+      json[r'a_objEzsigntemplateglobalannotation'] = this.aObjEzsigntemplateglobalannotation;
     return json;
   }
 
@@ -150,10 +156,26 @@ class EzsigntemplateglobalResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplateglobalResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplateglobalResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsigntemplateglobalID'), 'Required key "EzsigntemplateglobalResponseCompound[pkiEzsigntemplateglobalID]" is missing from JSON.');
+        assert(json[r'pkiEzsigntemplateglobalID'] != null, 'Required key "EzsigntemplateglobalResponseCompound[pkiEzsigntemplateglobalID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiEzsigntemplateglobaldocumentID'), 'Required key "EzsigntemplateglobalResponseCompound[fkiEzsigntemplateglobaldocumentID]" is missing from JSON.');
+        assert(json[r'fkiEzsigntemplateglobaldocumentID'] != null, 'Required key "EzsigntemplateglobalResponseCompound[fkiEzsigntemplateglobaldocumentID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiModuleID'), 'Required key "EzsigntemplateglobalResponseCompound[fkiModuleID]" is missing from JSON.');
+        assert(json[r'fkiModuleID'] != null, 'Required key "EzsigntemplateglobalResponseCompound[fkiModuleID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiLanguageID'), 'Required key "EzsigntemplateglobalResponseCompound[fkiLanguageID]" is missing from JSON.');
+        assert(json[r'fkiLanguageID'] != null, 'Required key "EzsigntemplateglobalResponseCompound[fkiLanguageID]" has a null value in JSON.');
+        assert(json.containsKey(r'sLanguageNameX'), 'Required key "EzsigntemplateglobalResponseCompound[sLanguageNameX]" is missing from JSON.');
+        assert(json[r'sLanguageNameX'] != null, 'Required key "EzsigntemplateglobalResponseCompound[sLanguageNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsigntemplateglobalModule'), 'Required key "EzsigntemplateglobalResponseCompound[eEzsigntemplateglobalModule]" is missing from JSON.');
+        assert(json[r'eEzsigntemplateglobalModule'] != null, 'Required key "EzsigntemplateglobalResponseCompound[eEzsigntemplateglobalModule]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsigntemplateglobalSupplier'), 'Required key "EzsigntemplateglobalResponseCompound[eEzsigntemplateglobalSupplier]" is missing from JSON.');
+        assert(json[r'eEzsigntemplateglobalSupplier'] != null, 'Required key "EzsigntemplateglobalResponseCompound[eEzsigntemplateglobalSupplier]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsigntemplateglobalCode'), 'Required key "EzsigntemplateglobalResponseCompound[sEzsigntemplateglobalCode]" is missing from JSON.');
+        assert(json[r'sEzsigntemplateglobalCode'] != null, 'Required key "EzsigntemplateglobalResponseCompound[sEzsigntemplateglobalCode]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsigntemplateglobalDescription'), 'Required key "EzsigntemplateglobalResponseCompound[sEzsigntemplateglobalDescription]" is missing from JSON.');
+        assert(json[r'sEzsigntemplateglobalDescription'] != null, 'Required key "EzsigntemplateglobalResponseCompound[sEzsigntemplateglobalDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objEzsigntemplateglobalsigner'), 'Required key "EzsigntemplateglobalResponseCompound[a_objEzsigntemplateglobalsigner]" is missing from JSON.');
+        assert(json[r'a_objEzsigntemplateglobalsigner'] != null, 'Required key "EzsigntemplateglobalResponseCompound[a_objEzsigntemplateglobalsigner]" has a null value in JSON.');
         return true;
       }());
 
@@ -170,6 +192,7 @@ class EzsigntemplateglobalResponseCompound {
         sEzsigntemplateglobalDescription: mapValueOfType<String>(json, r'sEzsigntemplateglobalDescription')!,
         objEzsigntemplateglobaldocument: EzsigntemplateglobaldocumentResponse.fromJson(json[r'objEzsigntemplateglobaldocument']),
         aObjEzsigntemplateglobalsigner: EzsigntemplateglobalsignerResponseCompound.listFromJson(json[r'a_objEzsigntemplateglobalsigner']),
+        aObjEzsigntemplateglobalannotation: EzsigntemplateglobalannotationResponseCompound.listFromJson(json[r'a_objEzsigntemplateglobalannotation']),
       );
     }
     return null;

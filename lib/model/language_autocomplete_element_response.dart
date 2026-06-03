@@ -65,10 +65,12 @@ class LanguageAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "LanguageAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "LanguageAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiLanguageID'), 'Required key "LanguageAutocompleteElementResponse[pkiLanguageID]" is missing from JSON.');
+        assert(json[r'pkiLanguageID'] != null, 'Required key "LanguageAutocompleteElementResponse[pkiLanguageID]" has a null value in JSON.');
+        assert(json.containsKey(r'sLanguageNameX'), 'Required key "LanguageAutocompleteElementResponse[sLanguageNameX]" is missing from JSON.');
+        assert(json[r'sLanguageNameX'] != null, 'Required key "LanguageAutocompleteElementResponse[sLanguageNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'bLanguageIsactive'), 'Required key "LanguageAutocompleteElementResponse[bLanguageIsactive]" is missing from JSON.');
+        assert(json[r'bLanguageIsactive'] != null, 'Required key "LanguageAutocompleteElementResponse[bLanguageIsactive]" has a null value in JSON.');
         return true;
       }());
 

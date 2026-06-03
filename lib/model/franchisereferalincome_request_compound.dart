@@ -167,10 +167,30 @@ class FranchisereferalincomeRequestCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "FranchisereferalincomeRequestCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "FranchisereferalincomeRequestCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiFranchisebrokerID'), 'Required key "FranchisereferalincomeRequestCompound[fkiFranchisebrokerID]" is missing from JSON.');
+        assert(json[r'fkiFranchisebrokerID'] != null, 'Required key "FranchisereferalincomeRequestCompound[fkiFranchisebrokerID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiFranchisereferalincomeprogramID'), 'Required key "FranchisereferalincomeRequestCompound[fkiFranchisereferalincomeprogramID]" is missing from JSON.');
+        assert(json[r'fkiFranchisereferalincomeprogramID'] != null, 'Required key "FranchisereferalincomeRequestCompound[fkiFranchisereferalincomeprogramID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiPeriodID'), 'Required key "FranchisereferalincomeRequestCompound[fkiPeriodID]" is missing from JSON.');
+        assert(json[r'fkiPeriodID'] != null, 'Required key "FranchisereferalincomeRequestCompound[fkiPeriodID]" has a null value in JSON.');
+        assert(json.containsKey(r'dFranchisereferalincomeLoan'), 'Required key "FranchisereferalincomeRequestCompound[dFranchisereferalincomeLoan]" is missing from JSON.');
+        assert(json[r'dFranchisereferalincomeLoan'] != null, 'Required key "FranchisereferalincomeRequestCompound[dFranchisereferalincomeLoan]" has a null value in JSON.');
+        assert(json.containsKey(r'dFranchisereferalincomeFranchiseamount'), 'Required key "FranchisereferalincomeRequestCompound[dFranchisereferalincomeFranchiseamount]" is missing from JSON.');
+        assert(json[r'dFranchisereferalincomeFranchiseamount'] != null, 'Required key "FranchisereferalincomeRequestCompound[dFranchisereferalincomeFranchiseamount]" has a null value in JSON.');
+        assert(json.containsKey(r'dFranchisereferalincomeFranchisoramount'), 'Required key "FranchisereferalincomeRequestCompound[dFranchisereferalincomeFranchisoramount]" is missing from JSON.');
+        assert(json[r'dFranchisereferalincomeFranchisoramount'] != null, 'Required key "FranchisereferalincomeRequestCompound[dFranchisereferalincomeFranchisoramount]" has a null value in JSON.');
+        assert(json.containsKey(r'dFranchisereferalincomeAgentamount'), 'Required key "FranchisereferalincomeRequestCompound[dFranchisereferalincomeAgentamount]" is missing from JSON.');
+        assert(json[r'dFranchisereferalincomeAgentamount'] != null, 'Required key "FranchisereferalincomeRequestCompound[dFranchisereferalincomeAgentamount]" has a null value in JSON.');
+        assert(json.containsKey(r'dtFranchisereferalincomeDisbursed'), 'Required key "FranchisereferalincomeRequestCompound[dtFranchisereferalincomeDisbursed]" is missing from JSON.');
+        assert(json[r'dtFranchisereferalincomeDisbursed'] != null, 'Required key "FranchisereferalincomeRequestCompound[dtFranchisereferalincomeDisbursed]" has a null value in JSON.');
+        assert(json.containsKey(r'tFranchisereferalincomeComment'), 'Required key "FranchisereferalincomeRequestCompound[tFranchisereferalincomeComment]" is missing from JSON.');
+        assert(json[r'tFranchisereferalincomeComment'] != null, 'Required key "FranchisereferalincomeRequestCompound[tFranchisereferalincomeComment]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiFranchiseofficeID'), 'Required key "FranchisereferalincomeRequestCompound[fkiFranchiseofficeID]" is missing from JSON.');
+        assert(json[r'fkiFranchiseofficeID'] != null, 'Required key "FranchisereferalincomeRequestCompound[fkiFranchiseofficeID]" has a null value in JSON.');
+        assert(json.containsKey(r'sFranchisereferalincomeRemoteid'), 'Required key "FranchisereferalincomeRequestCompound[sFranchisereferalincomeRemoteid]" is missing from JSON.');
+        assert(json[r'sFranchisereferalincomeRemoteid'] != null, 'Required key "FranchisereferalincomeRequestCompound[sFranchisereferalincomeRemoteid]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objContact'), 'Required key "FranchisereferalincomeRequestCompound[a_objContact]" is missing from JSON.');
+        assert(json[r'a_objContact'] != null, 'Required key "FranchisereferalincomeRequestCompound[a_objContact]" has a null value in JSON.');
         return true;
       }());
 

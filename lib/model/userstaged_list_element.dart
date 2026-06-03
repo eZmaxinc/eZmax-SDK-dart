@@ -79,10 +79,16 @@ class UserstagedListElement {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "UserstagedListElement[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "UserstagedListElement[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiUserstagedID'), 'Required key "UserstagedListElement[pkiUserstagedID]" is missing from JSON.');
+        assert(json[r'pkiUserstagedID'] != null, 'Required key "UserstagedListElement[pkiUserstagedID]" has a null value in JSON.');
+        assert(json.containsKey(r'sEmailAddress'), 'Required key "UserstagedListElement[sEmailAddress]" is missing from JSON.');
+        assert(json[r'sEmailAddress'] != null, 'Required key "UserstagedListElement[sEmailAddress]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserstagedFirstname'), 'Required key "UserstagedListElement[sUserstagedFirstname]" is missing from JSON.');
+        assert(json[r'sUserstagedFirstname'] != null, 'Required key "UserstagedListElement[sUserstagedFirstname]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserstagedLastname'), 'Required key "UserstagedListElement[sUserstagedLastname]" is missing from JSON.');
+        assert(json[r'sUserstagedLastname'] != null, 'Required key "UserstagedListElement[sUserstagedLastname]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserstagedExternalid'), 'Required key "UserstagedListElement[sUserstagedExternalid]" is missing from JSON.');
+        assert(json[r'sUserstagedExternalid'] != null, 'Required key "UserstagedListElement[sUserstagedExternalid]" has a null value in JSON.');
         return true;
       }());
 

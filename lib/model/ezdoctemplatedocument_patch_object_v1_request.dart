@@ -47,10 +47,8 @@ class EzdoctemplatedocumentPatchObjectV1Request {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzdoctemplatedocumentPatchObjectV1Request[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzdoctemplatedocumentPatchObjectV1Request[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'objEzdoctemplatedocument'), 'Required key "EzdoctemplatedocumentPatchObjectV1Request[objEzdoctemplatedocument]" is missing from JSON.');
+        assert(json[r'objEzdoctemplatedocument'] != null, 'Required key "EzdoctemplatedocumentPatchObjectV1Request[objEzdoctemplatedocument]" has a null value in JSON.');
         return true;
       }());
 

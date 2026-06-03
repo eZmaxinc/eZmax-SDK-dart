@@ -62,10 +62,12 @@ class EzsigndocumentApplyEzsigntemplateglobalV1Request {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigndocumentApplyEzsigntemplateglobalV1Request[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigndocumentApplyEzsigntemplateglobalV1Request[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiEzsigntemplateglobalID'), 'Required key "EzsigndocumentApplyEzsigntemplateglobalV1Request[fkiEzsigntemplateglobalID]" is missing from JSON.');
+        assert(json[r'fkiEzsigntemplateglobalID'] != null, 'Required key "EzsigndocumentApplyEzsigntemplateglobalV1Request[fkiEzsigntemplateglobalID]" has a null value in JSON.');
+        assert(json.containsKey(r'a_sEzsigntemplateglobalsigner'), 'Required key "EzsigndocumentApplyEzsigntemplateglobalV1Request[a_sEzsigntemplateglobalsigner]" is missing from JSON.');
+        assert(json[r'a_sEzsigntemplateglobalsigner'] != null, 'Required key "EzsigndocumentApplyEzsigntemplateglobalV1Request[a_sEzsigntemplateglobalsigner]" has a null value in JSON.');
+        assert(json.containsKey(r'a_pkiEzsignfoldersignerassociationID'), 'Required key "EzsigndocumentApplyEzsigntemplateglobalV1Request[a_pkiEzsignfoldersignerassociationID]" is missing from JSON.');
+        assert(json[r'a_pkiEzsignfoldersignerassociationID'] != null, 'Required key "EzsigndocumentApplyEzsigntemplateglobalV1Request[a_pkiEzsignfoldersignerassociationID]" has a null value in JSON.');
         return true;
       }());
 

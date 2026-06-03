@@ -74,10 +74,10 @@ class EzsignsigningreasonRequestCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignsigningreasonRequestCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignsigningreasonRequestCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'objEzsignsigningreasonDescription'), 'Required key "EzsignsigningreasonRequestCompound[objEzsignsigningreasonDescription]" is missing from JSON.');
+        assert(json[r'objEzsignsigningreasonDescription'] != null, 'Required key "EzsignsigningreasonRequestCompound[objEzsignsigningreasonDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignsigningreasonIsactive'), 'Required key "EzsignsigningreasonRequestCompound[bEzsignsigningreasonIsactive]" is missing from JSON.');
+        assert(json[r'bEzsignsigningreasonIsactive'] != null, 'Required key "EzsignsigningreasonRequestCompound[bEzsignsigningreasonIsactive]" has a null value in JSON.');
         return true;
       }());
 

@@ -59,10 +59,10 @@ class EzsignformfieldgroupsignerResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignformfieldgroupsignerResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignformfieldgroupsignerResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsignformfieldgroupsignerID'), 'Required key "EzsignformfieldgroupsignerResponseCompound[pkiEzsignformfieldgroupsignerID]" is missing from JSON.');
+        assert(json[r'pkiEzsignformfieldgroupsignerID'] != null, 'Required key "EzsignformfieldgroupsignerResponseCompound[pkiEzsignformfieldgroupsignerID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiEzsignfoldersignerassociationID'), 'Required key "EzsignformfieldgroupsignerResponseCompound[fkiEzsignfoldersignerassociationID]" is missing from JSON.');
+        assert(json[r'fkiEzsignfoldersignerassociationID'] != null, 'Required key "EzsignformfieldgroupsignerResponseCompound[fkiEzsignfoldersignerassociationID]" has a null value in JSON.');
         return true;
       }());
 

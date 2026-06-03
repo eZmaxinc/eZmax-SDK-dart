@@ -110,10 +110,10 @@ class SignatureRequestCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "SignatureRequestCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "SignatureRequestCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiFontID'), 'Required key "SignatureRequestCompound[fkiFontID]" is missing from JSON.');
+        assert(json[r'fkiFontID'] != null, 'Required key "SignatureRequestCompound[fkiFontID]" has a null value in JSON.');
+        assert(json.containsKey(r'eSignaturePreference'), 'Required key "SignatureRequestCompound[eSignaturePreference]" is missing from JSON.');
+        assert(json[r'eSignaturePreference'] != null, 'Required key "SignatureRequestCompound[eSignaturePreference]" has a null value in JSON.');
         return true;
       }());
 

@@ -62,10 +62,12 @@ class AttemptResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "AttemptResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "AttemptResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'dtAttemptStart'), 'Required key "AttemptResponse[dtAttemptStart]" is missing from JSON.');
+        assert(json[r'dtAttemptStart'] != null, 'Required key "AttemptResponse[dtAttemptStart]" has a null value in JSON.');
+        assert(json.containsKey(r'sAttemptResult'), 'Required key "AttemptResponse[sAttemptResult]" is missing from JSON.');
+        assert(json[r'sAttemptResult'] != null, 'Required key "AttemptResponse[sAttemptResult]" has a null value in JSON.');
+        assert(json.containsKey(r'iAttemptDuration'), 'Required key "AttemptResponse[iAttemptDuration]" is missing from JSON.');
+        assert(json[r'iAttemptDuration'] != null, 'Required key "AttemptResponse[iAttemptDuration]" has a null value in JSON.');
         return true;
       }());
 

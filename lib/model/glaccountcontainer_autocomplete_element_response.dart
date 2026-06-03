@@ -71,10 +71,14 @@ class GlaccountcontainerAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "GlaccountcontainerAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "GlaccountcontainerAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiGlaccountcontainerID'), 'Required key "GlaccountcontainerAutocompleteElementResponse[pkiGlaccountcontainerID]" is missing from JSON.');
+        assert(json[r'pkiGlaccountcontainerID'] != null, 'Required key "GlaccountcontainerAutocompleteElementResponse[pkiGlaccountcontainerID]" has a null value in JSON.');
+        assert(json.containsKey(r'sGlaccountcontainerLongcode'), 'Required key "GlaccountcontainerAutocompleteElementResponse[sGlaccountcontainerLongcode]" is missing from JSON.');
+        assert(json[r'sGlaccountcontainerLongcode'] != null, 'Required key "GlaccountcontainerAutocompleteElementResponse[sGlaccountcontainerLongcode]" has a null value in JSON.');
+        assert(json.containsKey(r'sGlaccountcontainerLongdescriptionX'), 'Required key "GlaccountcontainerAutocompleteElementResponse[sGlaccountcontainerLongdescriptionX]" is missing from JSON.');
+        assert(json[r'sGlaccountcontainerLongdescriptionX'] != null, 'Required key "GlaccountcontainerAutocompleteElementResponse[sGlaccountcontainerLongdescriptionX]" has a null value in JSON.');
+        assert(json.containsKey(r'bGlaccountcontainerIsactive'), 'Required key "GlaccountcontainerAutocompleteElementResponse[bGlaccountcontainerIsactive]" is missing from JSON.');
+        assert(json[r'bGlaccountcontainerIsactive'] != null, 'Required key "GlaccountcontainerAutocompleteElementResponse[bGlaccountcontainerIsactive]" has a null value in JSON.');
         return true;
       }());
 

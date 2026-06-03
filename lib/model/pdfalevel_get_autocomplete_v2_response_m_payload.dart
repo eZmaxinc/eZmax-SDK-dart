@@ -48,10 +48,8 @@ class PdfalevelGetAutocompleteV2ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "PdfalevelGetAutocompleteV2ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "PdfalevelGetAutocompleteV2ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_objPdfalevel'), 'Required key "PdfalevelGetAutocompleteV2ResponseMPayload[a_objPdfalevel]" is missing from JSON.');
+        assert(json[r'a_objPdfalevel'] != null, 'Required key "PdfalevelGetAutocompleteV2ResponseMPayload[a_objPdfalevel]" has a null value in JSON.');
         return true;
       }());
 

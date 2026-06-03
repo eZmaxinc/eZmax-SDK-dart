@@ -76,10 +76,10 @@ class EzsignsignergroupRequest {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignsignergroupRequest[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignsignergroupRequest[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiEzsignfolderID'), 'Required key "EzsignsignergroupRequest[fkiEzsignfolderID]" is missing from JSON.');
+        assert(json[r'fkiEzsignfolderID'] != null, 'Required key "EzsignsignergroupRequest[fkiEzsignfolderID]" has a null value in JSON.');
+        assert(json.containsKey(r'objEzsignsignergroupDescription'), 'Required key "EzsignsignergroupRequest[objEzsignsignergroupDescription]" is missing from JSON.');
+        assert(json[r'objEzsignsignergroupDescription'] != null, 'Required key "EzsignsignergroupRequest[objEzsignsignergroupDescription]" has a null value in JSON.');
         return true;
       }());
 

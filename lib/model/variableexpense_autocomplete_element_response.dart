@@ -65,10 +65,12 @@ class VariableexpenseAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "VariableexpenseAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "VariableexpenseAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sVariableexpenseDescriptionX'), 'Required key "VariableexpenseAutocompleteElementResponse[sVariableexpenseDescriptionX]" is missing from JSON.');
+        assert(json[r'sVariableexpenseDescriptionX'] != null, 'Required key "VariableexpenseAutocompleteElementResponse[sVariableexpenseDescriptionX]" has a null value in JSON.');
+        assert(json.containsKey(r'pkiVariableexpenseID'), 'Required key "VariableexpenseAutocompleteElementResponse[pkiVariableexpenseID]" is missing from JSON.');
+        assert(json[r'pkiVariableexpenseID'] != null, 'Required key "VariableexpenseAutocompleteElementResponse[pkiVariableexpenseID]" has a null value in JSON.');
+        assert(json.containsKey(r'bVariableexpenseIsactive'), 'Required key "VariableexpenseAutocompleteElementResponse[bVariableexpenseIsactive]" is missing from JSON.');
+        assert(json[r'bVariableexpenseIsactive'] != null, 'Required key "VariableexpenseAutocompleteElementResponse[bVariableexpenseIsactive]" has a null value in JSON.');
         return true;
       }());
 

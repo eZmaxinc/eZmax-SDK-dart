@@ -104,10 +104,14 @@ class AuthenticationexternalResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "AuthenticationexternalResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "AuthenticationexternalResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiAuthenticationexternalID'), 'Required key "AuthenticationexternalResponseCompound[pkiAuthenticationexternalID]" is missing from JSON.');
+        assert(json[r'pkiAuthenticationexternalID'] != null, 'Required key "AuthenticationexternalResponseCompound[pkiAuthenticationexternalID]" has a null value in JSON.');
+        assert(json.containsKey(r'sAuthenticationexternalDescription'), 'Required key "AuthenticationexternalResponseCompound[sAuthenticationexternalDescription]" is missing from JSON.');
+        assert(json[r'sAuthenticationexternalDescription'] != null, 'Required key "AuthenticationexternalResponseCompound[sAuthenticationexternalDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'eAuthenticationexternalType'), 'Required key "AuthenticationexternalResponseCompound[eAuthenticationexternalType]" is missing from JSON.');
+        assert(json[r'eAuthenticationexternalType'] != null, 'Required key "AuthenticationexternalResponseCompound[eAuthenticationexternalType]" has a null value in JSON.');
+        assert(json.containsKey(r'objAudit'), 'Required key "AuthenticationexternalResponseCompound[objAudit]" is missing from JSON.');
+        assert(json[r'objAudit'] != null, 'Required key "AuthenticationexternalResponseCompound[objAudit]" has a null value in JSON.');
         return true;
       }());
 

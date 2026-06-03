@@ -81,10 +81,16 @@ class PaymentgatewayListElement {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "PaymentgatewayListElement[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "PaymentgatewayListElement[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiPaymentgatewayID'), 'Required key "PaymentgatewayListElement[pkiPaymentgatewayID]" is missing from JSON.');
+        assert(json[r'pkiPaymentgatewayID'] != null, 'Required key "PaymentgatewayListElement[pkiPaymentgatewayID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiCreditcardmerchantID'), 'Required key "PaymentgatewayListElement[fkiCreditcardmerchantID]" is missing from JSON.');
+        assert(json[r'fkiCreditcardmerchantID'] != null, 'Required key "PaymentgatewayListElement[fkiCreditcardmerchantID]" has a null value in JSON.');
+        assert(json.containsKey(r'ePaymentgatewayProcessor'), 'Required key "PaymentgatewayListElement[ePaymentgatewayProcessor]" is missing from JSON.');
+        assert(json[r'ePaymentgatewayProcessor'] != null, 'Required key "PaymentgatewayListElement[ePaymentgatewayProcessor]" has a null value in JSON.');
+        assert(json.containsKey(r'sPaymentgatewayDescriptionX'), 'Required key "PaymentgatewayListElement[sPaymentgatewayDescriptionX]" is missing from JSON.');
+        assert(json[r'sPaymentgatewayDescriptionX'] != null, 'Required key "PaymentgatewayListElement[sPaymentgatewayDescriptionX]" has a null value in JSON.');
+        assert(json.containsKey(r'bPaymentgatewayIsactive'), 'Required key "PaymentgatewayListElement[bPaymentgatewayIsactive]" is missing from JSON.');
+        assert(json[r'bPaymentgatewayIsactive'] != null, 'Required key "PaymentgatewayListElement[bPaymentgatewayIsactive]" has a null value in JSON.');
         return true;
       }());
 

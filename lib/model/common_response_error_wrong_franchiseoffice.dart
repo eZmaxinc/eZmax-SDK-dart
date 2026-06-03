@@ -94,10 +94,18 @@ class CommonResponseErrorWrongFranchiseoffice {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CommonResponseErrorWrongFranchiseoffice[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CommonResponseErrorWrongFranchiseoffice[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sErrorMessage'), 'Required key "CommonResponseErrorWrongFranchiseoffice[sErrorMessage]" is missing from JSON.');
+        assert(json[r'sErrorMessage'] != null, 'Required key "CommonResponseErrorWrongFranchiseoffice[sErrorMessage]" has a null value in JSON.');
+        assert(json.containsKey(r'eErrorCode'), 'Required key "CommonResponseErrorWrongFranchiseoffice[eErrorCode]" is missing from JSON.');
+        assert(json[r'eErrorCode'] != null, 'Required key "CommonResponseErrorWrongFranchiseoffice[eErrorCode]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiFranchiseagenceID'), 'Required key "CommonResponseErrorWrongFranchiseoffice[fkiFranchiseagenceID]" is missing from JSON.');
+        assert(json[r'fkiFranchiseagenceID'] != null, 'Required key "CommonResponseErrorWrongFranchiseoffice[fkiFranchiseagenceID]" has a null value in JSON.');
+        assert(json.containsKey(r'sFranchiseagenceName'), 'Required key "CommonResponseErrorWrongFranchiseoffice[sFranchiseagenceName]" is missing from JSON.');
+        assert(json[r'sFranchiseagenceName'] != null, 'Required key "CommonResponseErrorWrongFranchiseoffice[sFranchiseagenceName]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiFranchiseofficeID'), 'Required key "CommonResponseErrorWrongFranchiseoffice[fkiFranchiseofficeID]" is missing from JSON.');
+        assert(json[r'fkiFranchiseofficeID'] != null, 'Required key "CommonResponseErrorWrongFranchiseoffice[fkiFranchiseofficeID]" has a null value in JSON.');
+        assert(json.containsKey(r'iFranchiseofficeCode'), 'Required key "CommonResponseErrorWrongFranchiseoffice[iFranchiseofficeCode]" is missing from JSON.');
+        assert(json[r'iFranchiseofficeCode'] != null, 'Required key "CommonResponseErrorWrongFranchiseoffice[iFranchiseofficeCode]" has a null value in JSON.');
         return true;
       }());
 

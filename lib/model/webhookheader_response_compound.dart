@@ -69,10 +69,14 @@ class WebhookheaderResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "WebhookheaderResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "WebhookheaderResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiWebhookheaderID'), 'Required key "WebhookheaderResponseCompound[pkiWebhookheaderID]" is missing from JSON.');
+        assert(json[r'pkiWebhookheaderID'] != null, 'Required key "WebhookheaderResponseCompound[pkiWebhookheaderID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiWebhookID'), 'Required key "WebhookheaderResponseCompound[fkiWebhookID]" is missing from JSON.');
+        assert(json[r'fkiWebhookID'] != null, 'Required key "WebhookheaderResponseCompound[fkiWebhookID]" has a null value in JSON.');
+        assert(json.containsKey(r'sWebhookheaderName'), 'Required key "WebhookheaderResponseCompound[sWebhookheaderName]" is missing from JSON.');
+        assert(json[r'sWebhookheaderName'] != null, 'Required key "WebhookheaderResponseCompound[sWebhookheaderName]" has a null value in JSON.');
+        assert(json.containsKey(r'sWebhookheaderValue'), 'Required key "WebhookheaderResponseCompound[sWebhookheaderValue]" is missing from JSON.');
+        assert(json[r'sWebhookheaderValue'] != null, 'Required key "WebhookheaderResponseCompound[sWebhookheaderValue]" has a null value in JSON.');
         return true;
       }());
 

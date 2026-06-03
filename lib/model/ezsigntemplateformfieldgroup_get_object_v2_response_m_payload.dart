@@ -47,10 +47,8 @@ class EzsigntemplateformfieldgroupGetObjectV2ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplateformfieldgroupGetObjectV2ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplateformfieldgroupGetObjectV2ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'objEzsigntemplateformfieldgroup'), 'Required key "EzsigntemplateformfieldgroupGetObjectV2ResponseMPayload[objEzsigntemplateformfieldgroup]" is missing from JSON.');
+        assert(json[r'objEzsigntemplateformfieldgroup'] != null, 'Required key "EzsigntemplateformfieldgroupGetObjectV2ResponseMPayload[objEzsigntemplateformfieldgroup]" has a null value in JSON.');
         return true;
       }());
 

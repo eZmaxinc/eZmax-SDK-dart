@@ -71,10 +71,14 @@ class EzsignfoldertypeAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignfoldertypeAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignfoldertypeAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'eEzsignfoldertypePrivacylevel'), 'Required key "EzsignfoldertypeAutocompleteElementResponse[eEzsignfoldertypePrivacylevel]" is missing from JSON.');
+        assert(json[r'eEzsignfoldertypePrivacylevel'] != null, 'Required key "EzsignfoldertypeAutocompleteElementResponse[eEzsignfoldertypePrivacylevel]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsignfoldertypeNameX'), 'Required key "EzsignfoldertypeAutocompleteElementResponse[sEzsignfoldertypeNameX]" is missing from JSON.');
+        assert(json[r'sEzsignfoldertypeNameX'] != null, 'Required key "EzsignfoldertypeAutocompleteElementResponse[sEzsignfoldertypeNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'pkiEzsignfoldertypeID'), 'Required key "EzsignfoldertypeAutocompleteElementResponse[pkiEzsignfoldertypeID]" is missing from JSON.');
+        assert(json[r'pkiEzsignfoldertypeID'] != null, 'Required key "EzsignfoldertypeAutocompleteElementResponse[pkiEzsignfoldertypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignfoldertypeIsactive'), 'Required key "EzsignfoldertypeAutocompleteElementResponse[bEzsignfoldertypeIsactive]" is missing from JSON.');
+        assert(json[r'bEzsignfoldertypeIsactive'] != null, 'Required key "EzsignfoldertypeAutocompleteElementResponse[bEzsignfoldertypeIsactive]" has a null value in JSON.');
         return true;
       }());
 

@@ -66,10 +66,12 @@ class EzsigntemplateglobalsignerResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplateglobalsignerResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplateglobalsignerResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsigntemplateglobalsignerID'), 'Required key "EzsigntemplateglobalsignerResponse[pkiEzsigntemplateglobalsignerID]" is missing from JSON.');
+        assert(json[r'pkiEzsigntemplateglobalsignerID'] != null, 'Required key "EzsigntemplateglobalsignerResponse[pkiEzsigntemplateglobalsignerID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiEzsigntemplateglobalID'), 'Required key "EzsigntemplateglobalsignerResponse[fkiEzsigntemplateglobalID]" is missing from JSON.');
+        assert(json[r'fkiEzsigntemplateglobalID'] != null, 'Required key "EzsigntemplateglobalsignerResponse[fkiEzsigntemplateglobalID]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsigntemplateglobalsignerDescription'), 'Required key "EzsigntemplateglobalsignerResponse[sEzsigntemplateglobalsignerDescription]" is missing from JSON.');
+        assert(json[r'sEzsigntemplateglobalsignerDescription'] != null, 'Required key "EzsigntemplateglobalsignerResponse[sEzsigntemplateglobalsignerDescription]" has a null value in JSON.');
         return true;
       }());
 

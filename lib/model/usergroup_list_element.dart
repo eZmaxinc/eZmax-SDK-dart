@@ -78,10 +78,14 @@ class UsergroupListElement {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "UsergroupListElement[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "UsergroupListElement[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiUsergroupID'), 'Required key "UsergroupListElement[pkiUsergroupID]" is missing from JSON.');
+        assert(json[r'pkiUsergroupID'] != null, 'Required key "UsergroupListElement[pkiUsergroupID]" has a null value in JSON.');
+        assert(json.containsKey(r'sUsergroupNameX'), 'Required key "UsergroupListElement[sUsergroupNameX]" is missing from JSON.');
+        assert(json[r'sUsergroupNameX'] != null, 'Required key "UsergroupListElement[sUsergroupNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'iCountUser'), 'Required key "UsergroupListElement[iCountUser]" is missing from JSON.');
+        assert(json[r'iCountUser'] != null, 'Required key "UsergroupListElement[iCountUser]" has a null value in JSON.');
+        assert(json.containsKey(r'iCountInactiveuser'), 'Required key "UsergroupListElement[iCountInactiveuser]" is missing from JSON.');
+        assert(json[r'iCountInactiveuser'] != null, 'Required key "UsergroupListElement[iCountInactiveuser]" has a null value in JSON.');
         return true;
       }());
 

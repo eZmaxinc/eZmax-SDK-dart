@@ -89,10 +89,10 @@ class CustomUserNameResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CustomUserNameResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CustomUserNameResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sUserLastname'), 'Required key "CustomUserNameResponse[sUserLastname]" is missing from JSON.');
+        assert(json[r'sUserLastname'] != null, 'Required key "CustomUserNameResponse[sUserLastname]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserFirstname'), 'Required key "CustomUserNameResponse[sUserFirstname]" is missing from JSON.');
+        assert(json[r'sUserFirstname'] != null, 'Required key "CustomUserNameResponse[sUserFirstname]" has a null value in JSON.');
         return true;
       }());
 

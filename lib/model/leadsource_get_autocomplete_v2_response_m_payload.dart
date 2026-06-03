@@ -48,10 +48,8 @@ class LeadsourceGetAutocompleteV2ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "LeadsourceGetAutocompleteV2ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "LeadsourceGetAutocompleteV2ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_objLeadsource'), 'Required key "LeadsourceGetAutocompleteV2ResponseMPayload[a_objLeadsource]" is missing from JSON.');
+        assert(json[r'a_objLeadsource'] != null, 'Required key "LeadsourceGetAutocompleteV2ResponseMPayload[a_objLeadsource]" has a null value in JSON.');
         return true;
       }());
 

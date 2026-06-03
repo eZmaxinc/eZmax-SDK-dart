@@ -14,7 +14,7 @@ class CreditcardmerchantListElement {
   /// Returns a new [CreditcardmerchantListElement] instance.
   CreditcardmerchantListElement({
     required this.pkiCreditcardmerchantID,
-    required this.fkiBankaccountID,
+    this.fkiBankaccountID,
     this.fkiLanguageID,
     required this.bCreditcardmerchantDenyvisa,
     required this.bCreditcardmerchantDenymastercard,
@@ -34,7 +34,13 @@ class CreditcardmerchantListElement {
   ///
   /// Minimum value: 0
   /// Maximum value: 255
-  int fkiBankaccountID;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiBankaccountID;
 
   /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
   ///
@@ -82,7 +88,7 @@ class CreditcardmerchantListElement {
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiCreditcardmerchantID.hashCode) +
-    (fkiBankaccountID.hashCode) +
+    (fkiBankaccountID == null ? 0 : fkiBankaccountID!.hashCode) +
     (fkiLanguageID == null ? 0 : fkiLanguageID!.hashCode) +
     (bCreditcardmerchantDenyvisa.hashCode) +
     (bCreditcardmerchantDenymastercard.hashCode) +
@@ -97,7 +103,11 @@ class CreditcardmerchantListElement {
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiCreditcardmerchantID'] = this.pkiCreditcardmerchantID;
+    if (this.fkiBankaccountID != null) {
       json[r'fkiBankaccountID'] = this.fkiBankaccountID;
+    } else {
+      json[r'fkiBankaccountID'] = null;
+    }
     if (this.fkiLanguageID != null) {
       json[r'fkiLanguageID'] = this.fkiLanguageID;
     } else {
@@ -123,16 +133,26 @@ class CreditcardmerchantListElement {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CreditcardmerchantListElement[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CreditcardmerchantListElement[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiCreditcardmerchantID'), 'Required key "CreditcardmerchantListElement[pkiCreditcardmerchantID]" is missing from JSON.');
+        assert(json[r'pkiCreditcardmerchantID'] != null, 'Required key "CreditcardmerchantListElement[pkiCreditcardmerchantID]" has a null value in JSON.');
+        assert(json.containsKey(r'bCreditcardmerchantDenyvisa'), 'Required key "CreditcardmerchantListElement[bCreditcardmerchantDenyvisa]" is missing from JSON.');
+        assert(json[r'bCreditcardmerchantDenyvisa'] != null, 'Required key "CreditcardmerchantListElement[bCreditcardmerchantDenyvisa]" has a null value in JSON.');
+        assert(json.containsKey(r'bCreditcardmerchantDenymastercard'), 'Required key "CreditcardmerchantListElement[bCreditcardmerchantDenymastercard]" is missing from JSON.');
+        assert(json[r'bCreditcardmerchantDenymastercard'] != null, 'Required key "CreditcardmerchantListElement[bCreditcardmerchantDenymastercard]" has a null value in JSON.');
+        assert(json.containsKey(r'bCreditcardmerchantDenyamex'), 'Required key "CreditcardmerchantListElement[bCreditcardmerchantDenyamex]" is missing from JSON.');
+        assert(json[r'bCreditcardmerchantDenyamex'] != null, 'Required key "CreditcardmerchantListElement[bCreditcardmerchantDenyamex]" has a null value in JSON.');
+        assert(json.containsKey(r'bCreditcardmerchantIsactive'), 'Required key "CreditcardmerchantListElement[bCreditcardmerchantIsactive]" is missing from JSON.');
+        assert(json[r'bCreditcardmerchantIsactive'] != null, 'Required key "CreditcardmerchantListElement[bCreditcardmerchantIsactive]" has a null value in JSON.');
+        assert(json.containsKey(r'sCreditcardmerchantDescription'), 'Required key "CreditcardmerchantListElement[sCreditcardmerchantDescription]" is missing from JSON.');
+        assert(json[r'sCreditcardmerchantDescription'] != null, 'Required key "CreditcardmerchantListElement[sCreditcardmerchantDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'sCreditcardmerchantStoreid'), 'Required key "CreditcardmerchantListElement[sCreditcardmerchantStoreid]" is missing from JSON.');
+        assert(json[r'sCreditcardmerchantStoreid'] != null, 'Required key "CreditcardmerchantListElement[sCreditcardmerchantStoreid]" has a null value in JSON.');
         return true;
       }());
 
       return CreditcardmerchantListElement(
         pkiCreditcardmerchantID: mapValueOfType<int>(json, r'pkiCreditcardmerchantID')!,
-        fkiBankaccountID: mapValueOfType<int>(json, r'fkiBankaccountID')!,
+        fkiBankaccountID: mapValueOfType<int>(json, r'fkiBankaccountID'),
         fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID'),
         bCreditcardmerchantDenyvisa: mapValueOfType<bool>(json, r'bCreditcardmerchantDenyvisa')!,
         bCreditcardmerchantDenymastercard: mapValueOfType<bool>(json, r'bCreditcardmerchantDenymastercard')!,
@@ -188,7 +208,6 @@ class CreditcardmerchantListElement {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'pkiCreditcardmerchantID',
-    'fkiBankaccountID',
     'bCreditcardmerchantDenyvisa',
     'bCreditcardmerchantDenymastercard',
     'bCreditcardmerchantDenyamex',

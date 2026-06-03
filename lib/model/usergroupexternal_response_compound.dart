@@ -65,10 +65,12 @@ class UsergroupexternalResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "UsergroupexternalResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "UsergroupexternalResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiUsergroupexternalID'), 'Required key "UsergroupexternalResponseCompound[pkiUsergroupexternalID]" is missing from JSON.');
+        assert(json[r'pkiUsergroupexternalID'] != null, 'Required key "UsergroupexternalResponseCompound[pkiUsergroupexternalID]" has a null value in JSON.');
+        assert(json.containsKey(r'sUsergroupexternalName'), 'Required key "UsergroupexternalResponseCompound[sUsergroupexternalName]" is missing from JSON.');
+        assert(json[r'sUsergroupexternalName'] != null, 'Required key "UsergroupexternalResponseCompound[sUsergroupexternalName]" has a null value in JSON.');
+        assert(json.containsKey(r'sUsergroupexternalID'), 'Required key "UsergroupexternalResponseCompound[sUsergroupexternalID]" is missing from JSON.');
+        assert(json[r'sUsergroupexternalID'] != null, 'Required key "UsergroupexternalResponseCompound[sUsergroupexternalID]" has a null value in JSON.');
         return true;
       }());
 

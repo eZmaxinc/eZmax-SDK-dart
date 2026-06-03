@@ -64,10 +64,12 @@ class BillingentityinternalAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "BillingentityinternalAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "BillingentityinternalAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiBillingentityinternalID'), 'Required key "BillingentityinternalAutocompleteElementResponse[pkiBillingentityinternalID]" is missing from JSON.');
+        assert(json[r'pkiBillingentityinternalID'] != null, 'Required key "BillingentityinternalAutocompleteElementResponse[pkiBillingentityinternalID]" has a null value in JSON.');
+        assert(json.containsKey(r'sBillingentityinternalDescriptionX'), 'Required key "BillingentityinternalAutocompleteElementResponse[sBillingentityinternalDescriptionX]" is missing from JSON.');
+        assert(json[r'sBillingentityinternalDescriptionX'] != null, 'Required key "BillingentityinternalAutocompleteElementResponse[sBillingentityinternalDescriptionX]" has a null value in JSON.');
+        assert(json.containsKey(r'bBillingentityinternalIsactive'), 'Required key "BillingentityinternalAutocompleteElementResponse[bBillingentityinternalIsactive]" is missing from JSON.');
+        assert(json[r'bBillingentityinternalIsactive'] != null, 'Required key "BillingentityinternalAutocompleteElementResponse[bBillingentityinternalIsactive]" has a null value in JSON.');
         return true;
       }());
 

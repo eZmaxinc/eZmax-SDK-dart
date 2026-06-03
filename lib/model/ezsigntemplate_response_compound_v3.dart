@@ -33,6 +33,7 @@ class EzsigntemplateResponseCompoundV3 {
     this.eEzsigntemplateType,
     this.objEzsigntemplatedocument,
     this.aObjEzsigntemplatesigner = const [],
+    this.aObjEzsigntemplateannotation = const [],
   });
 
   /// The unique ID of the Ezsigntemplate
@@ -174,6 +175,8 @@ class EzsigntemplateResponseCompoundV3 {
 
   List<EzsigntemplatesignerResponseCompound> aObjEzsigntemplatesigner;
 
+  List<EzsigntemplateannotationResponseCompound> aObjEzsigntemplateannotation;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplateResponseCompoundV3 &&
     other.pkiEzsigntemplateID == pkiEzsigntemplateID &&
@@ -195,7 +198,8 @@ class EzsigntemplateResponseCompoundV3 {
     other.bEzsigntemplateEditallowed == bEzsigntemplateEditallowed &&
     other.eEzsigntemplateType == eEzsigntemplateType &&
     other.objEzsigntemplatedocument == objEzsigntemplatedocument &&
-    _deepEquality.equals(other.aObjEzsigntemplatesigner, aObjEzsigntemplatesigner);
+    _deepEquality.equals(other.aObjEzsigntemplatesigner, aObjEzsigntemplatesigner) &&
+    _deepEquality.equals(other.aObjEzsigntemplateannotation, aObjEzsigntemplateannotation);
 
   @override
   int get hashCode =>
@@ -219,10 +223,11 @@ class EzsigntemplateResponseCompoundV3 {
     (bEzsigntemplateEditallowed.hashCode) +
     (eEzsigntemplateType == null ? 0 : eEzsigntemplateType!.hashCode) +
     (objEzsigntemplatedocument == null ? 0 : objEzsigntemplatedocument!.hashCode) +
-    (aObjEzsigntemplatesigner.hashCode);
+    (aObjEzsigntemplatesigner.hashCode) +
+    (aObjEzsigntemplateannotation.hashCode);
 
   @override
-  String toString() => 'EzsigntemplateResponseCompoundV3[pkiEzsigntemplateID=$pkiEzsigntemplateID, fkiEzsigntemplatedocumentID=$fkiEzsigntemplatedocumentID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, objEzsignfoldertype=$objEzsignfoldertype, fkiLanguageID=$fkiLanguageID, fkiEzdoctemplatedocumentID=$fkiEzdoctemplatedocumentID, sEzdoctemplatedocumentNameX=$sEzdoctemplatedocumentNameX, sLanguageNameX=$sLanguageNameX, sEzsigntemplateDescription=$sEzsigntemplateDescription, sEzsigntemplateExternaldescription=$sEzsigntemplateExternaldescription, tEzsigntemplateComment=$tEzsigntemplateComment, eEzsigntemplateRecognition=$eEzsigntemplateRecognition, sEzsigntemplateFilenameregexp=$sEzsigntemplateFilenameregexp, bEzsigntemplateAdminonly=$bEzsigntemplateAdminonly, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, objAudit=$objAudit, bEzsigntemplateEditallowed=$bEzsigntemplateEditallowed, eEzsigntemplateType=$eEzsigntemplateType, objEzsigntemplatedocument=$objEzsigntemplatedocument, aObjEzsigntemplatesigner=$aObjEzsigntemplatesigner]';
+  String toString() => 'EzsigntemplateResponseCompoundV3[pkiEzsigntemplateID=$pkiEzsigntemplateID, fkiEzsigntemplatedocumentID=$fkiEzsigntemplatedocumentID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, objEzsignfoldertype=$objEzsignfoldertype, fkiLanguageID=$fkiLanguageID, fkiEzdoctemplatedocumentID=$fkiEzdoctemplatedocumentID, sEzdoctemplatedocumentNameX=$sEzdoctemplatedocumentNameX, sLanguageNameX=$sLanguageNameX, sEzsigntemplateDescription=$sEzsigntemplateDescription, sEzsigntemplateExternaldescription=$sEzsigntemplateExternaldescription, tEzsigntemplateComment=$tEzsigntemplateComment, eEzsigntemplateRecognition=$eEzsigntemplateRecognition, sEzsigntemplateFilenameregexp=$sEzsigntemplateFilenameregexp, bEzsigntemplateAdminonly=$bEzsigntemplateAdminonly, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, objAudit=$objAudit, bEzsigntemplateEditallowed=$bEzsigntemplateEditallowed, eEzsigntemplateType=$eEzsigntemplateType, objEzsigntemplatedocument=$objEzsigntemplatedocument, aObjEzsigntemplatesigner=$aObjEzsigntemplatesigner, aObjEzsigntemplateannotation=$aObjEzsigntemplateannotation]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -294,6 +299,7 @@ class EzsigntemplateResponseCompoundV3 {
       json[r'objEzsigntemplatedocument'] = null;
     }
       json[r'a_objEzsigntemplatesigner'] = this.aObjEzsigntemplatesigner;
+      json[r'a_objEzsigntemplateannotation'] = this.aObjEzsigntemplateannotation;
     return json;
   }
 
@@ -308,10 +314,22 @@ class EzsigntemplateResponseCompoundV3 {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplateResponseCompoundV3[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplateResponseCompoundV3[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsigntemplateID'), 'Required key "EzsigntemplateResponseCompoundV3[pkiEzsigntemplateID]" is missing from JSON.');
+        assert(json[r'pkiEzsigntemplateID'] != null, 'Required key "EzsigntemplateResponseCompoundV3[pkiEzsigntemplateID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiLanguageID'), 'Required key "EzsigntemplateResponseCompoundV3[fkiLanguageID]" is missing from JSON.');
+        assert(json[r'fkiLanguageID'] != null, 'Required key "EzsigntemplateResponseCompoundV3[fkiLanguageID]" has a null value in JSON.');
+        assert(json.containsKey(r'sLanguageNameX'), 'Required key "EzsigntemplateResponseCompoundV3[sLanguageNameX]" is missing from JSON.');
+        assert(json[r'sLanguageNameX'] != null, 'Required key "EzsigntemplateResponseCompoundV3[sLanguageNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsigntemplateDescription'), 'Required key "EzsigntemplateResponseCompoundV3[sEzsigntemplateDescription]" is missing from JSON.');
+        assert(json[r'sEzsigntemplateDescription'] != null, 'Required key "EzsigntemplateResponseCompoundV3[sEzsigntemplateDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsigntemplateAdminonly'), 'Required key "EzsigntemplateResponseCompoundV3[bEzsigntemplateAdminonly]" is missing from JSON.');
+        assert(json[r'bEzsigntemplateAdminonly'] != null, 'Required key "EzsigntemplateResponseCompoundV3[bEzsigntemplateAdminonly]" has a null value in JSON.');
+        assert(json.containsKey(r'objAudit'), 'Required key "EzsigntemplateResponseCompoundV3[objAudit]" is missing from JSON.');
+        assert(json[r'objAudit'] != null, 'Required key "EzsigntemplateResponseCompoundV3[objAudit]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsigntemplateEditallowed'), 'Required key "EzsigntemplateResponseCompoundV3[bEzsigntemplateEditallowed]" is missing from JSON.');
+        assert(json[r'bEzsigntemplateEditallowed'] != null, 'Required key "EzsigntemplateResponseCompoundV3[bEzsigntemplateEditallowed]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objEzsigntemplatesigner'), 'Required key "EzsigntemplateResponseCompoundV3[a_objEzsigntemplatesigner]" is missing from JSON.');
+        assert(json[r'a_objEzsigntemplatesigner'] != null, 'Required key "EzsigntemplateResponseCompoundV3[a_objEzsigntemplatesigner]" has a null value in JSON.');
         return true;
       }());
 
@@ -336,6 +354,7 @@ class EzsigntemplateResponseCompoundV3 {
         eEzsigntemplateType: FieldEEzsigntemplateType.fromJson(json[r'eEzsigntemplateType']),
         objEzsigntemplatedocument: EzsigntemplatedocumentResponse.fromJson(json[r'objEzsigntemplatedocument']),
         aObjEzsigntemplatesigner: EzsigntemplatesignerResponseCompound.listFromJson(json[r'a_objEzsigntemplatesigner']),
+        aObjEzsigntemplateannotation: EzsigntemplateannotationResponseCompound.listFromJson(json[r'a_objEzsigntemplateannotation']),
       );
     }
     return null;

@@ -48,10 +48,8 @@ class BankaccountGetAutocompleteV2ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "BankaccountGetAutocompleteV2ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "BankaccountGetAutocompleteV2ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_objBankaccount'), 'Required key "BankaccountGetAutocompleteV2ResponseMPayload[a_objBankaccount]" is missing from JSON.');
+        assert(json[r'a_objBankaccount'] != null, 'Required key "BankaccountGetAutocompleteV2ResponseMPayload[a_objBankaccount]" has a null value in JSON.');
         return true;
       }());
 

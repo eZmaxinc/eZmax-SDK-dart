@@ -122,10 +122,22 @@ class UsergroupdelegationResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "UsergroupdelegationResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "UsergroupdelegationResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiUsergroupdelegationID'), 'Required key "UsergroupdelegationResponseCompound[pkiUsergroupdelegationID]" is missing from JSON.');
+        assert(json[r'pkiUsergroupdelegationID'] != null, 'Required key "UsergroupdelegationResponseCompound[pkiUsergroupdelegationID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiUsergroupID'), 'Required key "UsergroupdelegationResponseCompound[fkiUsergroupID]" is missing from JSON.');
+        assert(json[r'fkiUsergroupID'] != null, 'Required key "UsergroupdelegationResponseCompound[fkiUsergroupID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiUserID'), 'Required key "UsergroupdelegationResponseCompound[fkiUserID]" is missing from JSON.');
+        assert(json[r'fkiUserID'] != null, 'Required key "UsergroupdelegationResponseCompound[fkiUserID]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserFirstname'), 'Required key "UsergroupdelegationResponseCompound[sUserFirstname]" is missing from JSON.');
+        assert(json[r'sUserFirstname'] != null, 'Required key "UsergroupdelegationResponseCompound[sUserFirstname]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserLastname'), 'Required key "UsergroupdelegationResponseCompound[sUserLastname]" is missing from JSON.');
+        assert(json[r'sUserLastname'] != null, 'Required key "UsergroupdelegationResponseCompound[sUserLastname]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserLoginname'), 'Required key "UsergroupdelegationResponseCompound[sUserLoginname]" is missing from JSON.');
+        assert(json[r'sUserLoginname'] != null, 'Required key "UsergroupdelegationResponseCompound[sUserLoginname]" has a null value in JSON.');
+        assert(json.containsKey(r'bUserIsactive'), 'Required key "UsergroupdelegationResponseCompound[bUserIsactive]" is missing from JSON.');
+        assert(json[r'bUserIsactive'] != null, 'Required key "UsergroupdelegationResponseCompound[bUserIsactive]" has a null value in JSON.');
+        assert(json.containsKey(r'sUsergroupNameX'), 'Required key "UsergroupdelegationResponseCompound[sUsergroupNameX]" is missing from JSON.');
+        assert(json[r'sUsergroupNameX'] != null, 'Required key "UsergroupdelegationResponseCompound[sUsergroupNameX]" has a null value in JSON.');
         return true;
       }());
 

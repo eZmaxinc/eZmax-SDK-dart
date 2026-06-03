@@ -47,10 +47,8 @@ class UsergroupEditUsergroupmembershipsV1ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "UsergroupEditUsergroupmembershipsV1ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "UsergroupEditUsergroupmembershipsV1ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_pkiUsergroupmembershipID'), 'Required key "UsergroupEditUsergroupmembershipsV1ResponseMPayload[a_pkiUsergroupmembershipID]" is missing from JSON.');
+        assert(json[r'a_pkiUsergroupmembershipID'] != null, 'Required key "UsergroupEditUsergroupmembershipsV1ResponseMPayload[a_pkiUsergroupmembershipID]" has a null value in JSON.');
         return true;
       }());
 

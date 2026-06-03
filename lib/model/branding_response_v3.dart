@@ -183,10 +183,20 @@ class BrandingResponseV3 {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "BrandingResponseV3[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "BrandingResponseV3[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiBrandingID'), 'Required key "BrandingResponseV3[pkiBrandingID]" is missing from JSON.');
+        assert(json[r'pkiBrandingID'] != null, 'Required key "BrandingResponseV3[pkiBrandingID]" has a null value in JSON.');
+        assert(json.containsKey(r'objBrandingDescription'), 'Required key "BrandingResponseV3[objBrandingDescription]" is missing from JSON.');
+        assert(json[r'objBrandingDescription'] != null, 'Required key "BrandingResponseV3[objBrandingDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'sBrandingDescriptionX'), 'Required key "BrandingResponseV3[sBrandingDescriptionX]" is missing from JSON.');
+        assert(json[r'sBrandingDescriptionX'] != null, 'Required key "BrandingResponseV3[sBrandingDescriptionX]" has a null value in JSON.');
+        assert(json.containsKey(r'eBrandingLogo'), 'Required key "BrandingResponseV3[eBrandingLogo]" is missing from JSON.');
+        assert(json[r'eBrandingLogo'] != null, 'Required key "BrandingResponseV3[eBrandingLogo]" has a null value in JSON.');
+        assert(json.containsKey(r'eBrandingAlignlogo'), 'Required key "BrandingResponseV3[eBrandingAlignlogo]" is missing from JSON.');
+        assert(json[r'eBrandingAlignlogo'] != null, 'Required key "BrandingResponseV3[eBrandingAlignlogo]" has a null value in JSON.');
+        assert(json.containsKey(r'iBrandingColor'), 'Required key "BrandingResponseV3[iBrandingColor]" is missing from JSON.');
+        assert(json[r'iBrandingColor'] != null, 'Required key "BrandingResponseV3[iBrandingColor]" has a null value in JSON.');
+        assert(json.containsKey(r'bBrandingIsactive'), 'Required key "BrandingResponseV3[bBrandingIsactive]" is missing from JSON.');
+        assert(json[r'bBrandingIsactive'] != null, 'Required key "BrandingResponseV3[bBrandingIsactive]" has a null value in JSON.');
         return true;
       }());
 

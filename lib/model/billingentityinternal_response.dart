@@ -56,10 +56,10 @@ class BillingentityinternalResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "BillingentityinternalResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "BillingentityinternalResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiBillingentityinternalID'), 'Required key "BillingentityinternalResponse[pkiBillingentityinternalID]" is missing from JSON.');
+        assert(json[r'pkiBillingentityinternalID'] != null, 'Required key "BillingentityinternalResponse[pkiBillingentityinternalID]" has a null value in JSON.');
+        assert(json.containsKey(r'objBillingentityinternalDescription'), 'Required key "BillingentityinternalResponse[objBillingentityinternalDescription]" is missing from JSON.');
+        assert(json[r'objBillingentityinternalDescription'] != null, 'Required key "BillingentityinternalResponse[objBillingentityinternalDescription]" has a null value in JSON.');
         return true;
       }());
 

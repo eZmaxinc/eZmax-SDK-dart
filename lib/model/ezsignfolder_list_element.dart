@@ -15,6 +15,13 @@ class EzsignfolderListElement {
   EzsignfolderListElement({
     required this.pkiEzsignfolderID,
     required this.fkiEzsignfoldertypeID,
+    this.fkiEzsignbulksendID,
+    this.sEzsignbulksendDescription,
+    this.fkiEzsignbulksendtransmissionID,
+    this.sEzsignbulksendtransmissionDescription,
+    this.fkiEzsigntemplatepublicID,
+    this.sEzsigntemplatepublicDescription,
+    required this.eEzsignfolderSource,
     required this.eEzsignfoldertypePrivacylevel,
     required this.sEzsignfoldertypeNameX,
     required this.sEzsignfolderDescription,
@@ -38,6 +45,7 @@ class EzsignfolderListElement {
     this.dtEzsignfolderArchive,
     this.dtEzsignfolderDispose,
     this.bEzsignfolderSigner,
+    this.bEzsignfolderIsmyown,
   });
 
   /// The unique ID of the Ezsignfolder
@@ -50,6 +58,69 @@ class EzsignfolderListElement {
   /// Minimum value: 0
   /// Maximum value: 65535
   int fkiEzsignfoldertypeID;
+
+  /// The unique ID of the Ezsignbulksend
+  ///
+  /// Minimum value: 0
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiEzsignbulksendID;
+
+  /// The description of the Ezsignbulksend
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEzsignbulksendDescription;
+
+  /// The unique ID of the Ezsignbulksendtransmission
+  ///
+  /// Minimum value: 0
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiEzsignbulksendtransmissionID;
+
+  /// The description of the Ezsignbulksendtransmission
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEzsignbulksendtransmissionDescription;
+
+  /// The unique ID of the Ezsigntemplatepublic
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 65535
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiEzsigntemplatepublicID;
+
+  /// The description of the Ezsigntemplatepublic
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sEzsigntemplatepublicDescription;
+
+  FieldEEzsignfolderSource eEzsignfolderSource;
 
   FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel;
 
@@ -165,10 +236,26 @@ class EzsignfolderListElement {
   ///
   bool? bEzsignfolderSigner;
 
+  /// Whether the Ezsignfolder is my own or not
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bEzsignfolderIsmyown;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfolderListElement &&
     other.pkiEzsignfolderID == pkiEzsignfolderID &&
     other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
+    other.fkiEzsignbulksendID == fkiEzsignbulksendID &&
+    other.sEzsignbulksendDescription == sEzsignbulksendDescription &&
+    other.fkiEzsignbulksendtransmissionID == fkiEzsignbulksendtransmissionID &&
+    other.sEzsignbulksendtransmissionDescription == sEzsignbulksendtransmissionDescription &&
+    other.fkiEzsigntemplatepublicID == fkiEzsigntemplatepublicID &&
+    other.sEzsigntemplatepublicDescription == sEzsigntemplatepublicDescription &&
+    other.eEzsignfolderSource == eEzsignfolderSource &&
     other.eEzsignfoldertypePrivacylevel == eEzsignfoldertypePrivacylevel &&
     other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
     other.sEzsignfolderDescription == sEzsignfolderDescription &&
@@ -191,13 +278,21 @@ class EzsignfolderListElement {
     other.dtEzsignfolderClose == dtEzsignfolderClose &&
     other.dtEzsignfolderArchive == dtEzsignfolderArchive &&
     other.dtEzsignfolderDispose == dtEzsignfolderDispose &&
-    other.bEzsignfolderSigner == bEzsignfolderSigner;
+    other.bEzsignfolderSigner == bEzsignfolderSigner &&
+    other.bEzsignfolderIsmyown == bEzsignfolderIsmyown;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiEzsignfolderID.hashCode) +
     (fkiEzsignfoldertypeID.hashCode) +
+    (fkiEzsignbulksendID == null ? 0 : fkiEzsignbulksendID!.hashCode) +
+    (sEzsignbulksendDescription == null ? 0 : sEzsignbulksendDescription!.hashCode) +
+    (fkiEzsignbulksendtransmissionID == null ? 0 : fkiEzsignbulksendtransmissionID!.hashCode) +
+    (sEzsignbulksendtransmissionDescription == null ? 0 : sEzsignbulksendtransmissionDescription!.hashCode) +
+    (fkiEzsigntemplatepublicID == null ? 0 : fkiEzsigntemplatepublicID!.hashCode) +
+    (sEzsigntemplatepublicDescription == null ? 0 : sEzsigntemplatepublicDescription!.hashCode) +
+    (eEzsignfolderSource.hashCode) +
     (eEzsignfoldertypePrivacylevel.hashCode) +
     (sEzsignfoldertypeNameX.hashCode) +
     (sEzsignfolderDescription.hashCode) +
@@ -220,15 +315,47 @@ class EzsignfolderListElement {
     (dtEzsignfolderClose == null ? 0 : dtEzsignfolderClose!.hashCode) +
     (dtEzsignfolderArchive == null ? 0 : dtEzsignfolderArchive!.hashCode) +
     (dtEzsignfolderDispose == null ? 0 : dtEzsignfolderDispose!.hashCode) +
-    (bEzsignfolderSigner == null ? 0 : bEzsignfolderSigner!.hashCode);
+    (bEzsignfolderSigner == null ? 0 : bEzsignfolderSigner!.hashCode) +
+    (bEzsignfolderIsmyown == null ? 0 : bEzsignfolderIsmyown!.hashCode);
 
   @override
-  String toString() => 'EzsignfolderListElement[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, eEzsignfoldertypePrivacylevel=$eEzsignfoldertypePrivacylevel, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, sEzsignfolderDescription=$sEzsignfolderDescription, eEzsignfolderStep=$eEzsignfolderStep, eEzsignfolderCompletion=$eEzsignfolderCompletion, dtCreatedDate=$dtCreatedDate, dtEzsignfolderDelayedsenddate=$dtEzsignfolderDelayedsenddate, dtEzsignfolderSentdate=$dtEzsignfolderSentdate, dtEzsignfolderDuedate=$dtEzsignfolderDuedate, iEzsigndocument=$iEzsigndocument, iEzsigndocumentEdm=$iEzsigndocumentEdm, iEzsignsignature=$iEzsignsignature, iEzsignsignatureSigned=$iEzsignsignatureSigned, iEzsignformfieldgroup=$iEzsignformfieldgroup, iEzsignformfieldgroupCompleted=$iEzsignformfieldgroupCompleted, bEzsignformHasdependencies=$bEzsignformHasdependencies, dEzsignfolderCompletedpercentage=$dEzsignfolderCompletedpercentage, dEzsignfolderFormcompletedpercentage=$dEzsignfolderFormcompletedpercentage, dEzsignfolderSignaturecompletedpercentage=$dEzsignfolderSignaturecompletedpercentage, dtEzsignfolderClose=$dtEzsignfolderClose, dtEzsignfolderArchive=$dtEzsignfolderArchive, dtEzsignfolderDispose=$dtEzsignfolderDispose, bEzsignfolderSigner=$bEzsignfolderSigner]';
+  String toString() => 'EzsignfolderListElement[pkiEzsignfolderID=$pkiEzsignfolderID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, fkiEzsignbulksendID=$fkiEzsignbulksendID, sEzsignbulksendDescription=$sEzsignbulksendDescription, fkiEzsignbulksendtransmissionID=$fkiEzsignbulksendtransmissionID, sEzsignbulksendtransmissionDescription=$sEzsignbulksendtransmissionDescription, fkiEzsigntemplatepublicID=$fkiEzsigntemplatepublicID, sEzsigntemplatepublicDescription=$sEzsigntemplatepublicDescription, eEzsignfolderSource=$eEzsignfolderSource, eEzsignfoldertypePrivacylevel=$eEzsignfoldertypePrivacylevel, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, sEzsignfolderDescription=$sEzsignfolderDescription, eEzsignfolderStep=$eEzsignfolderStep, eEzsignfolderCompletion=$eEzsignfolderCompletion, dtCreatedDate=$dtCreatedDate, dtEzsignfolderDelayedsenddate=$dtEzsignfolderDelayedsenddate, dtEzsignfolderSentdate=$dtEzsignfolderSentdate, dtEzsignfolderDuedate=$dtEzsignfolderDuedate, iEzsigndocument=$iEzsigndocument, iEzsigndocumentEdm=$iEzsigndocumentEdm, iEzsignsignature=$iEzsignsignature, iEzsignsignatureSigned=$iEzsignsignatureSigned, iEzsignformfieldgroup=$iEzsignformfieldgroup, iEzsignformfieldgroupCompleted=$iEzsignformfieldgroupCompleted, bEzsignformHasdependencies=$bEzsignformHasdependencies, dEzsignfolderCompletedpercentage=$dEzsignfolderCompletedpercentage, dEzsignfolderFormcompletedpercentage=$dEzsignfolderFormcompletedpercentage, dEzsignfolderSignaturecompletedpercentage=$dEzsignfolderSignaturecompletedpercentage, dtEzsignfolderClose=$dtEzsignfolderClose, dtEzsignfolderArchive=$dtEzsignfolderArchive, dtEzsignfolderDispose=$dtEzsignfolderDispose, bEzsignfolderSigner=$bEzsignfolderSigner, bEzsignfolderIsmyown=$bEzsignfolderIsmyown]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiEzsignfolderID'] = this.pkiEzsignfolderID;
       json[r'fkiEzsignfoldertypeID'] = this.fkiEzsignfoldertypeID;
+    if (this.fkiEzsignbulksendID != null) {
+      json[r'fkiEzsignbulksendID'] = this.fkiEzsignbulksendID;
+    } else {
+      json[r'fkiEzsignbulksendID'] = null;
+    }
+    if (this.sEzsignbulksendDescription != null) {
+      json[r'sEzsignbulksendDescription'] = this.sEzsignbulksendDescription;
+    } else {
+      json[r'sEzsignbulksendDescription'] = null;
+    }
+    if (this.fkiEzsignbulksendtransmissionID != null) {
+      json[r'fkiEzsignbulksendtransmissionID'] = this.fkiEzsignbulksendtransmissionID;
+    } else {
+      json[r'fkiEzsignbulksendtransmissionID'] = null;
+    }
+    if (this.sEzsignbulksendtransmissionDescription != null) {
+      json[r'sEzsignbulksendtransmissionDescription'] = this.sEzsignbulksendtransmissionDescription;
+    } else {
+      json[r'sEzsignbulksendtransmissionDescription'] = null;
+    }
+    if (this.fkiEzsigntemplatepublicID != null) {
+      json[r'fkiEzsigntemplatepublicID'] = this.fkiEzsigntemplatepublicID;
+    } else {
+      json[r'fkiEzsigntemplatepublicID'] = null;
+    }
+    if (this.sEzsigntemplatepublicDescription != null) {
+      json[r'sEzsigntemplatepublicDescription'] = this.sEzsigntemplatepublicDescription;
+    } else {
+      json[r'sEzsigntemplatepublicDescription'] = null;
+    }
+      json[r'eEzsignfolderSource'] = this.eEzsignfolderSource;
       json[r'eEzsignfoldertypePrivacylevel'] = this.eEzsignfoldertypePrivacylevel;
       json[r'sEzsignfoldertypeNameX'] = this.sEzsignfoldertypeNameX;
       json[r'sEzsignfolderDescription'] = this.sEzsignfolderDescription;
@@ -284,6 +411,11 @@ class EzsignfolderListElement {
     } else {
       json[r'bEzsignfolderSigner'] = null;
     }
+    if (this.bEzsignfolderIsmyown != null) {
+      json[r'bEzsignfolderIsmyown'] = this.bEzsignfolderIsmyown;
+    } else {
+      json[r'bEzsignfolderIsmyown'] = null;
+    }
     return json;
   }
 
@@ -298,16 +430,55 @@ class EzsignfolderListElement {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignfolderListElement[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignfolderListElement[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsignfolderID'), 'Required key "EzsignfolderListElement[pkiEzsignfolderID]" is missing from JSON.');
+        assert(json[r'pkiEzsignfolderID'] != null, 'Required key "EzsignfolderListElement[pkiEzsignfolderID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiEzsignfoldertypeID'), 'Required key "EzsignfolderListElement[fkiEzsignfoldertypeID]" is missing from JSON.');
+        assert(json[r'fkiEzsignfoldertypeID'] != null, 'Required key "EzsignfolderListElement[fkiEzsignfoldertypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsignfolderSource'), 'Required key "EzsignfolderListElement[eEzsignfolderSource]" is missing from JSON.');
+        assert(json[r'eEzsignfolderSource'] != null, 'Required key "EzsignfolderListElement[eEzsignfolderSource]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsignfoldertypePrivacylevel'), 'Required key "EzsignfolderListElement[eEzsignfoldertypePrivacylevel]" is missing from JSON.');
+        assert(json[r'eEzsignfoldertypePrivacylevel'] != null, 'Required key "EzsignfolderListElement[eEzsignfoldertypePrivacylevel]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsignfoldertypeNameX'), 'Required key "EzsignfolderListElement[sEzsignfoldertypeNameX]" is missing from JSON.');
+        assert(json[r'sEzsignfoldertypeNameX'] != null, 'Required key "EzsignfolderListElement[sEzsignfoldertypeNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsignfolderDescription'), 'Required key "EzsignfolderListElement[sEzsignfolderDescription]" is missing from JSON.');
+        assert(json[r'sEzsignfolderDescription'] != null, 'Required key "EzsignfolderListElement[sEzsignfolderDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsignfolderStep'), 'Required key "EzsignfolderListElement[eEzsignfolderStep]" is missing from JSON.');
+        assert(json[r'eEzsignfolderStep'] != null, 'Required key "EzsignfolderListElement[eEzsignfolderStep]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsignfolderCompletion'), 'Required key "EzsignfolderListElement[eEzsignfolderCompletion]" is missing from JSON.');
+        assert(json[r'eEzsignfolderCompletion'] != null, 'Required key "EzsignfolderListElement[eEzsignfolderCompletion]" has a null value in JSON.');
+        assert(json.containsKey(r'dtCreatedDate'), 'Required key "EzsignfolderListElement[dtCreatedDate]" is missing from JSON.');
+        assert(json[r'dtCreatedDate'] != null, 'Required key "EzsignfolderListElement[dtCreatedDate]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigndocument'), 'Required key "EzsignfolderListElement[iEzsigndocument]" is missing from JSON.');
+        assert(json[r'iEzsigndocument'] != null, 'Required key "EzsignfolderListElement[iEzsigndocument]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigndocumentEdm'), 'Required key "EzsignfolderListElement[iEzsigndocumentEdm]" is missing from JSON.');
+        assert(json[r'iEzsigndocumentEdm'] != null, 'Required key "EzsignfolderListElement[iEzsigndocumentEdm]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignsignature'), 'Required key "EzsignfolderListElement[iEzsignsignature]" is missing from JSON.');
+        assert(json[r'iEzsignsignature'] != null, 'Required key "EzsignfolderListElement[iEzsignsignature]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignsignatureSigned'), 'Required key "EzsignfolderListElement[iEzsignsignatureSigned]" is missing from JSON.');
+        assert(json[r'iEzsignsignatureSigned'] != null, 'Required key "EzsignfolderListElement[iEzsignsignatureSigned]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignformfieldgroup'), 'Required key "EzsignfolderListElement[iEzsignformfieldgroup]" is missing from JSON.');
+        assert(json[r'iEzsignformfieldgroup'] != null, 'Required key "EzsignfolderListElement[iEzsignformfieldgroup]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignformfieldgroupCompleted'), 'Required key "EzsignfolderListElement[iEzsignformfieldgroupCompleted]" is missing from JSON.');
+        assert(json[r'iEzsignformfieldgroupCompleted'] != null, 'Required key "EzsignfolderListElement[iEzsignformfieldgroupCompleted]" has a null value in JSON.');
+        assert(json.containsKey(r'dEzsignfolderCompletedpercentage'), 'Required key "EzsignfolderListElement[dEzsignfolderCompletedpercentage]" is missing from JSON.');
+        assert(json[r'dEzsignfolderCompletedpercentage'] != null, 'Required key "EzsignfolderListElement[dEzsignfolderCompletedpercentage]" has a null value in JSON.');
+        assert(json.containsKey(r'dEzsignfolderFormcompletedpercentage'), 'Required key "EzsignfolderListElement[dEzsignfolderFormcompletedpercentage]" is missing from JSON.');
+        assert(json[r'dEzsignfolderFormcompletedpercentage'] != null, 'Required key "EzsignfolderListElement[dEzsignfolderFormcompletedpercentage]" has a null value in JSON.');
+        assert(json.containsKey(r'dEzsignfolderSignaturecompletedpercentage'), 'Required key "EzsignfolderListElement[dEzsignfolderSignaturecompletedpercentage]" is missing from JSON.');
+        assert(json[r'dEzsignfolderSignaturecompletedpercentage'] != null, 'Required key "EzsignfolderListElement[dEzsignfolderSignaturecompletedpercentage]" has a null value in JSON.');
         return true;
       }());
 
       return EzsignfolderListElement(
         pkiEzsignfolderID: mapValueOfType<int>(json, r'pkiEzsignfolderID')!,
         fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID')!,
+        fkiEzsignbulksendID: mapValueOfType<int>(json, r'fkiEzsignbulksendID'),
+        sEzsignbulksendDescription: mapValueOfType<String>(json, r'sEzsignbulksendDescription'),
+        fkiEzsignbulksendtransmissionID: mapValueOfType<int>(json, r'fkiEzsignbulksendtransmissionID'),
+        sEzsignbulksendtransmissionDescription: mapValueOfType<String>(json, r'sEzsignbulksendtransmissionDescription'),
+        fkiEzsigntemplatepublicID: mapValueOfType<int>(json, r'fkiEzsigntemplatepublicID'),
+        sEzsigntemplatepublicDescription: mapValueOfType<String>(json, r'sEzsigntemplatepublicDescription'),
+        eEzsignfolderSource: FieldEEzsignfolderSource.fromJson(json[r'eEzsignfolderSource'])!,
         eEzsignfoldertypePrivacylevel: FieldEEzsignfoldertypePrivacylevel.fromJson(json[r'eEzsignfoldertypePrivacylevel'])!,
         sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX')!,
         sEzsignfolderDescription: mapValueOfType<String>(json, r'sEzsignfolderDescription')!,
@@ -331,6 +502,7 @@ class EzsignfolderListElement {
         dtEzsignfolderArchive: mapValueOfType<String>(json, r'dtEzsignfolderArchive'),
         dtEzsignfolderDispose: mapValueOfType<String>(json, r'dtEzsignfolderDispose'),
         bEzsignfolderSigner: mapValueOfType<bool>(json, r'bEzsignfolderSigner'),
+        bEzsignfolderIsmyown: mapValueOfType<bool>(json, r'bEzsignfolderIsmyown'),
       );
     }
     return null;
@@ -380,6 +552,7 @@ class EzsignfolderListElement {
   static const requiredKeys = <String>{
     'pkiEzsignfolderID',
     'fkiEzsignfoldertypeID',
+    'eEzsignfolderSource',
     'eEzsignfoldertypePrivacylevel',
     'sEzsignfoldertypeNameX',
     'sEzsignfolderDescription',

@@ -277,10 +277,26 @@ class EzsignformfieldgroupResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignformfieldgroupResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignformfieldgroupResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsignformfieldgroupID'), 'Required key "EzsignformfieldgroupResponseCompound[pkiEzsignformfieldgroupID]" is missing from JSON.');
+        assert(json[r'pkiEzsignformfieldgroupID'] != null, 'Required key "EzsignformfieldgroupResponseCompound[pkiEzsignformfieldgroupID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiEzsigndocumentID'), 'Required key "EzsignformfieldgroupResponseCompound[fkiEzsigndocumentID]" is missing from JSON.');
+        assert(json[r'fkiEzsigndocumentID'] != null, 'Required key "EzsignformfieldgroupResponseCompound[fkiEzsigndocumentID]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsignformfieldgroupType'), 'Required key "EzsignformfieldgroupResponseCompound[eEzsignformfieldgroupType]" is missing from JSON.');
+        assert(json[r'eEzsignformfieldgroupType'] != null, 'Required key "EzsignformfieldgroupResponseCompound[eEzsignformfieldgroupType]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsignformfieldgroupLabel'), 'Required key "EzsignformfieldgroupResponseCompound[sEzsignformfieldgroupLabel]" is missing from JSON.');
+        assert(json[r'sEzsignformfieldgroupLabel'] != null, 'Required key "EzsignformfieldgroupResponseCompound[sEzsignformfieldgroupLabel]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignformfieldgroupStep'), 'Required key "EzsignformfieldgroupResponseCompound[iEzsignformfieldgroupStep]" is missing from JSON.');
+        assert(json[r'iEzsignformfieldgroupStep'] != null, 'Required key "EzsignformfieldgroupResponseCompound[iEzsignformfieldgroupStep]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignformfieldgroupFilledmin'), 'Required key "EzsignformfieldgroupResponseCompound[iEzsignformfieldgroupFilledmin]" is missing from JSON.');
+        assert(json[r'iEzsignformfieldgroupFilledmin'] != null, 'Required key "EzsignformfieldgroupResponseCompound[iEzsignformfieldgroupFilledmin]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignformfieldgroupFilledmax'), 'Required key "EzsignformfieldgroupResponseCompound[iEzsignformfieldgroupFilledmax]" is missing from JSON.');
+        assert(json[r'iEzsignformfieldgroupFilledmax'] != null, 'Required key "EzsignformfieldgroupResponseCompound[iEzsignformfieldgroupFilledmax]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignformfieldgroupReadonly'), 'Required key "EzsignformfieldgroupResponseCompound[bEzsignformfieldgroupReadonly]" is missing from JSON.');
+        assert(json[r'bEzsignformfieldgroupReadonly'] != null, 'Required key "EzsignformfieldgroupResponseCompound[bEzsignformfieldgroupReadonly]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objEzsignformfield'), 'Required key "EzsignformfieldgroupResponseCompound[a_objEzsignformfield]" is missing from JSON.');
+        assert(json[r'a_objEzsignformfield'] != null, 'Required key "EzsignformfieldgroupResponseCompound[a_objEzsignformfield]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objEzsignformfieldgroupsigner'), 'Required key "EzsignformfieldgroupResponseCompound[a_objEzsignformfieldgroupsigner]" is missing from JSON.');
+        assert(json[r'a_objEzsignformfieldgroupsigner'] != null, 'Required key "EzsignformfieldgroupResponseCompound[a_objEzsignformfieldgroupsigner]" has a null value in JSON.');
         return true;
       }());
 

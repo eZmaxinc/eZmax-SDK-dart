@@ -108,10 +108,14 @@ class EzmaxinvoicingsummaryinternalResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzmaxinvoicingsummaryinternalResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzmaxinvoicingsummaryinternalResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'objEzmaxinvoicingsummaryinternalDescription'), 'Required key "EzmaxinvoicingsummaryinternalResponse[objEzmaxinvoicingsummaryinternalDescription]" is missing from JSON.');
+        assert(json[r'objEzmaxinvoicingsummaryinternalDescription'] != null, 'Required key "EzmaxinvoicingsummaryinternalResponse[objEzmaxinvoicingsummaryinternalDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzmaxinvoicingsummaryinternalDescriptionX'), 'Required key "EzmaxinvoicingsummaryinternalResponse[sEzmaxinvoicingsummaryinternalDescriptionX]" is missing from JSON.');
+        assert(json[r'sEzmaxinvoicingsummaryinternalDescriptionX'] != null, 'Required key "EzmaxinvoicingsummaryinternalResponse[sEzmaxinvoicingsummaryinternalDescriptionX]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiBillingentityinternalID'), 'Required key "EzmaxinvoicingsummaryinternalResponse[fkiBillingentityinternalID]" is missing from JSON.');
+        assert(json[r'fkiBillingentityinternalID'] != null, 'Required key "EzmaxinvoicingsummaryinternalResponse[fkiBillingentityinternalID]" has a null value in JSON.');
+        assert(json.containsKey(r'sBillingentityinternalDescriptionX'), 'Required key "EzmaxinvoicingsummaryinternalResponse[sBillingentityinternalDescriptionX]" is missing from JSON.');
+        assert(json[r'sBillingentityinternalDescriptionX'] != null, 'Required key "EzmaxinvoicingsummaryinternalResponse[sBillingentityinternalDescriptionX]" has a null value in JSON.');
         return true;
       }());
 

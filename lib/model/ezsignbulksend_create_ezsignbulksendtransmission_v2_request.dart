@@ -29,7 +29,7 @@ class EzsignbulksendCreateEzsignbulksendtransmissionV2Request {
   /// Minimum value: 0
   int fkiUserlogintypeID;
 
-  /// The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father's middle name| |15|Your mother's maiden name| |16|Name of your eldest child| |17|Your spouse's middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat's name| |22|Date of Birth (YYYY-MM-DD)| |22|Secret Code| |22|Your reference code|
+  /// The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father's middle name| |15|Your mother's maiden name| |16|Name of your eldest child| |17|Your spouse's middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat's name| |22|Date of Birth (YYYY-MM-DD)| |23|Secret Code| |24|Your reference code| |25|What are the last 4 digits of your SIN| |26|What is your postal code| |27|What is your employee number| |28|What is your manager’s first name| |29|What is your file number| |30|What is your client/member number| |31|What is your license number| |32|What are the last 4 digits of your phone number| |33|What is your student number|
   ///
   /// Minimum value: 0
   ///
@@ -58,7 +58,7 @@ class EzsignbulksendCreateEzsignbulksendtransmissionV2Request {
   /// The maximum date and time at which the Ezsigndocument can be signed.
   String dtEzsigndocumentDuedate;
 
-  /// The number of days before the the first reminder sending
+  /// The number of days before the first reminder sending
   ///
   /// Minimum value: 0
   /// Maximum value: 255
@@ -137,10 +137,20 @@ class EzsignbulksendCreateEzsignbulksendtransmissionV2Request {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignbulksendCreateEzsignbulksendtransmissionV2Request[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignbulksendCreateEzsignbulksendtransmissionV2Request[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiUserlogintypeID'), 'Required key "EzsignbulksendCreateEzsignbulksendtransmissionV2Request[fkiUserlogintypeID]" is missing from JSON.');
+        assert(json[r'fkiUserlogintypeID'] != null, 'Required key "EzsignbulksendCreateEzsignbulksendtransmissionV2Request[fkiUserlogintypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsignbulksendtransmissionDescription'), 'Required key "EzsignbulksendCreateEzsignbulksendtransmissionV2Request[sEzsignbulksendtransmissionDescription]" is missing from JSON.');
+        assert(json[r'sEzsignbulksendtransmissionDescription'] != null, 'Required key "EzsignbulksendCreateEzsignbulksendtransmissionV2Request[sEzsignbulksendtransmissionDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'dtEzsigndocumentDuedate'), 'Required key "EzsignbulksendCreateEzsignbulksendtransmissionV2Request[dtEzsigndocumentDuedate]" is missing from JSON.');
+        assert(json[r'dtEzsigndocumentDuedate'] != null, 'Required key "EzsignbulksendCreateEzsignbulksendtransmissionV2Request[dtEzsigndocumentDuedate]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignfolderSendreminderfirstdays'), 'Required key "EzsignbulksendCreateEzsignbulksendtransmissionV2Request[iEzsignfolderSendreminderfirstdays]" is missing from JSON.');
+        assert(json[r'iEzsignfolderSendreminderfirstdays'] != null, 'Required key "EzsignbulksendCreateEzsignbulksendtransmissionV2Request[iEzsignfolderSendreminderfirstdays]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignfolderSendreminderotherdays'), 'Required key "EzsignbulksendCreateEzsignbulksendtransmissionV2Request[iEzsignfolderSendreminderotherdays]" is missing from JSON.');
+        assert(json[r'iEzsignfolderSendreminderotherdays'] != null, 'Required key "EzsignbulksendCreateEzsignbulksendtransmissionV2Request[iEzsignfolderSendreminderotherdays]" has a null value in JSON.');
+        assert(json.containsKey(r'tExtraMessage'), 'Required key "EzsignbulksendCreateEzsignbulksendtransmissionV2Request[tExtraMessage]" is missing from JSON.');
+        assert(json[r'tExtraMessage'] != null, 'Required key "EzsignbulksendCreateEzsignbulksendtransmissionV2Request[tExtraMessage]" has a null value in JSON.');
+        assert(json.containsKey(r'sCsvBase64'), 'Required key "EzsignbulksendCreateEzsignbulksendtransmissionV2Request[sCsvBase64]" is missing from JSON.');
+        assert(json[r'sCsvBase64'] != null, 'Required key "EzsignbulksendCreateEzsignbulksendtransmissionV2Request[sCsvBase64]" has a null value in JSON.');
         return true;
       }());
 

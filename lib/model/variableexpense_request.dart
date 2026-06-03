@@ -87,10 +87,14 @@ class VariableexpenseRequest {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "VariableexpenseRequest[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "VariableexpenseRequest[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sVariableexpenseCode'), 'Required key "VariableexpenseRequest[sVariableexpenseCode]" is missing from JSON.');
+        assert(json[r'sVariableexpenseCode'] != null, 'Required key "VariableexpenseRequest[sVariableexpenseCode]" has a null value in JSON.');
+        assert(json.containsKey(r'objVariableexpenseDescription'), 'Required key "VariableexpenseRequest[objVariableexpenseDescription]" is missing from JSON.');
+        assert(json[r'objVariableexpenseDescription'] != null, 'Required key "VariableexpenseRequest[objVariableexpenseDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'eVariableexpenseTaxable'), 'Required key "VariableexpenseRequest[eVariableexpenseTaxable]" is missing from JSON.');
+        assert(json[r'eVariableexpenseTaxable'] != null, 'Required key "VariableexpenseRequest[eVariableexpenseTaxable]" has a null value in JSON.');
+        assert(json.containsKey(r'bVariableexpenseIsactive'), 'Required key "VariableexpenseRequest[bVariableexpenseIsactive]" is missing from JSON.');
+        assert(json[r'bVariableexpenseIsactive'] != null, 'Required key "VariableexpenseRequest[bVariableexpenseIsactive]" has a null value in JSON.');
         return true;
       }());
 

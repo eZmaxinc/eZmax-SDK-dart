@@ -47,10 +47,8 @@ class UsergroupexternalGetObjectV2ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "UsergroupexternalGetObjectV2ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "UsergroupexternalGetObjectV2ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'objUsergroupexternal'), 'Required key "UsergroupexternalGetObjectV2ResponseMPayload[objUsergroupexternal]" is missing from JSON.');
+        assert(json[r'objUsergroupexternal'] != null, 'Required key "UsergroupexternalGetObjectV2ResponseMPayload[objUsergroupexternal]" has a null value in JSON.');
         return true;
       }());
 

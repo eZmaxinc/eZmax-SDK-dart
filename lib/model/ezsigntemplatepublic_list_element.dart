@@ -190,10 +190,34 @@ class EzsigntemplatepublicListElement {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplatepublicListElement[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplatepublicListElement[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsigntemplatepublicID'), 'Required key "EzsigntemplatepublicListElement[pkiEzsigntemplatepublicID]" is missing from JSON.');
+        assert(json[r'pkiEzsigntemplatepublicID'] != null, 'Required key "EzsigntemplatepublicListElement[pkiEzsigntemplatepublicID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiEzsignfoldertypeID'), 'Required key "EzsigntemplatepublicListElement[fkiEzsignfoldertypeID]" is missing from JSON.');
+        assert(json[r'fkiEzsignfoldertypeID'] != null, 'Required key "EzsigntemplatepublicListElement[fkiEzsignfoldertypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsignfoldertypeNameX'), 'Required key "EzsigntemplatepublicListElement[sEzsignfoldertypeNameX]" is missing from JSON.');
+        assert(json[r'sEzsignfoldertypeNameX'] != null, 'Required key "EzsigntemplatepublicListElement[sEzsignfoldertypeNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiUserlogintypeID'), 'Required key "EzsigntemplatepublicListElement[fkiUserlogintypeID]" is missing from JSON.');
+        assert(json[r'fkiUserlogintypeID'] != null, 'Required key "EzsigntemplatepublicListElement[fkiUserlogintypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsigntemplatepublicDescription'), 'Required key "EzsigntemplatepublicListElement[sEzsigntemplatepublicDescription]" is missing from JSON.');
+        assert(json[r'sEzsigntemplatepublicDescription'] != null, 'Required key "EzsigntemplatepublicListElement[sEzsigntemplatepublicDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsigntemplatepublicIsactive'), 'Required key "EzsigntemplatepublicListElement[bEzsigntemplatepublicIsactive]" is missing from JSON.');
+        assert(json[r'bEzsigntemplatepublicIsactive'] != null, 'Required key "EzsigntemplatepublicListElement[bEzsigntemplatepublicIsactive]" has a null value in JSON.');
+        assert(json.containsKey(r'tEzsigntemplatepublicNote'), 'Required key "EzsigntemplatepublicListElement[tEzsigntemplatepublicNote]" is missing from JSON.');
+        assert(json[r'tEzsigntemplatepublicNote'] != null, 'Required key "EzsigntemplatepublicListElement[tEzsigntemplatepublicNote]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsigntemplatepublicLimittype'), 'Required key "EzsigntemplatepublicListElement[eEzsigntemplatepublicLimittype]" is missing from JSON.');
+        assert(json[r'eEzsigntemplatepublicLimittype'] != null, 'Required key "EzsigntemplatepublicListElement[eEzsigntemplatepublicLimittype]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigntemplatepublicLimit'), 'Required key "EzsigntemplatepublicListElement[iEzsigntemplatepublicLimit]" is missing from JSON.');
+        assert(json[r'iEzsigntemplatepublicLimit'] != null, 'Required key "EzsigntemplatepublicListElement[iEzsigntemplatepublicLimit]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigntemplatepublicLimitexceeded'), 'Required key "EzsigntemplatepublicListElement[iEzsigntemplatepublicLimitexceeded]" is missing from JSON.');
+        assert(json[r'iEzsigntemplatepublicLimitexceeded'] != null, 'Required key "EzsigntemplatepublicListElement[iEzsigntemplatepublicLimitexceeded]" has a null value in JSON.');
+        assert(json.containsKey(r'dtEzsigntemplatepublicLimitexceededsince'), 'Required key "EzsigntemplatepublicListElement[dtEzsigntemplatepublicLimitexceededsince]" is missing from JSON.');
+        assert(json[r'dtEzsigntemplatepublicLimitexceededsince'] != null, 'Required key "EzsigntemplatepublicListElement[dtEzsigntemplatepublicLimitexceededsince]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignfolder'), 'Required key "EzsigntemplatepublicListElement[iEzsignfolder]" is missing from JSON.');
+        assert(json[r'iEzsignfolder'] != null, 'Required key "EzsigntemplatepublicListElement[iEzsignfolder]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigndocument'), 'Required key "EzsigntemplatepublicListElement[iEzsigndocument]" is missing from JSON.');
+        assert(json[r'iEzsigndocument'] != null, 'Required key "EzsigntemplatepublicListElement[iEzsigndocument]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsigntemplatepublicEzsigntemplatedescription'), 'Required key "EzsigntemplatepublicListElement[sEzsigntemplatepublicEzsigntemplatedescription]" is missing from JSON.');
+        assert(json[r'sEzsigntemplatepublicEzsigntemplatedescription'] != null, 'Required key "EzsigntemplatepublicListElement[sEzsigntemplatepublicEzsigntemplatedescription]" has a null value in JSON.');
         return true;
       }());
 

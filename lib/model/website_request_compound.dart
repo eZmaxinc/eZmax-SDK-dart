@@ -77,10 +77,10 @@ class WebsiteRequestCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "WebsiteRequestCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "WebsiteRequestCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiWebsitetypeID'), 'Required key "WebsiteRequestCompound[fkiWebsitetypeID]" is missing from JSON.');
+        assert(json[r'fkiWebsitetypeID'] != null, 'Required key "WebsiteRequestCompound[fkiWebsitetypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'sWebsiteAddress'), 'Required key "WebsiteRequestCompound[sWebsiteAddress]" is missing from JSON.');
+        assert(json[r'sWebsiteAddress'] != null, 'Required key "WebsiteRequestCompound[sWebsiteAddress]" has a null value in JSON.');
         return true;
       }());
 

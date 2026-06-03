@@ -124,10 +124,22 @@ class TextstylestaticResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "TextstylestaticResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "TextstylestaticResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiFontID'), 'Required key "TextstylestaticResponse[fkiFontID]" is missing from JSON.');
+        assert(json[r'fkiFontID'] != null, 'Required key "TextstylestaticResponse[fkiFontID]" has a null value in JSON.');
+        assert(json.containsKey(r'sFontName'), 'Required key "TextstylestaticResponse[sFontName]" is missing from JSON.');
+        assert(json[r'sFontName'] != null, 'Required key "TextstylestaticResponse[sFontName]" has a null value in JSON.');
+        assert(json.containsKey(r'bTextstylestaticBold'), 'Required key "TextstylestaticResponse[bTextstylestaticBold]" is missing from JSON.');
+        assert(json[r'bTextstylestaticBold'] != null, 'Required key "TextstylestaticResponse[bTextstylestaticBold]" has a null value in JSON.');
+        assert(json.containsKey(r'bTextstylestaticUnderline'), 'Required key "TextstylestaticResponse[bTextstylestaticUnderline]" is missing from JSON.');
+        assert(json[r'bTextstylestaticUnderline'] != null, 'Required key "TextstylestaticResponse[bTextstylestaticUnderline]" has a null value in JSON.');
+        assert(json.containsKey(r'bTextstylestaticItalic'), 'Required key "TextstylestaticResponse[bTextstylestaticItalic]" is missing from JSON.');
+        assert(json[r'bTextstylestaticItalic'] != null, 'Required key "TextstylestaticResponse[bTextstylestaticItalic]" has a null value in JSON.');
+        assert(json.containsKey(r'bTextstylestaticStrikethrough'), 'Required key "TextstylestaticResponse[bTextstylestaticStrikethrough]" is missing from JSON.');
+        assert(json[r'bTextstylestaticStrikethrough'] != null, 'Required key "TextstylestaticResponse[bTextstylestaticStrikethrough]" has a null value in JSON.');
+        assert(json.containsKey(r'iTextstylestaticFontcolor'), 'Required key "TextstylestaticResponse[iTextstylestaticFontcolor]" is missing from JSON.');
+        assert(json[r'iTextstylestaticFontcolor'] != null, 'Required key "TextstylestaticResponse[iTextstylestaticFontcolor]" has a null value in JSON.');
+        assert(json.containsKey(r'iTextstylestaticSize'), 'Required key "TextstylestaticResponse[iTextstylestaticSize]" is missing from JSON.');
+        assert(json[r'iTextstylestaticSize'] != null, 'Required key "TextstylestaticResponse[iTextstylestaticSize]" has a null value in JSON.');
         return true;
       }());
 

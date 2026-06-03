@@ -38,6 +38,7 @@ class ActivesessionResponseCompound {
     required this.eUserEzsignaccess,
     this.eUserEzsignprepaid,
     this.bUserEzsigntrial,
+    this.bUserEzsigntemplaterolegrouping,
     this.dtUserEzsignprepaidexpiration,
     this.dtUserNpsrequest,
     this.aPkiPermissionID = const [],
@@ -45,6 +46,7 @@ class ActivesessionResponseCompound {
     this.objUserCloned,
     this.objApikey,
     this.aEModuleInternalname = const [],
+    this.bActivesessionMaillinglistrequest,
   });
 
   FieldEActivesessionUsertype eActivesessionUsertype;
@@ -201,6 +203,15 @@ class ActivesessionResponseCompound {
   ///
   bool? bUserEzsigntrial;
 
+  /// Whether we group or not the Ezsigntemplate roles
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bUserEzsigntemplaterolegrouping;
+
   /// The eZsign prepaid expiration date
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -243,6 +254,15 @@ class ActivesessionResponseCompound {
   /// An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key.
   List<String> aEModuleInternalname;
 
+  /// If you need to ask which mailing lists this user wants to subscribe to
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bActivesessionMaillinglistrequest;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is ActivesessionResponseCompound &&
     other.eActivesessionUsertype == eActivesessionUsertype &&
@@ -270,13 +290,15 @@ class ActivesessionResponseCompound {
     other.eUserEzsignaccess == eUserEzsignaccess &&
     other.eUserEzsignprepaid == eUserEzsignprepaid &&
     other.bUserEzsigntrial == bUserEzsigntrial &&
+    other.bUserEzsigntemplaterolegrouping == bUserEzsigntemplaterolegrouping &&
     other.dtUserEzsignprepaidexpiration == dtUserEzsignprepaidexpiration &&
     other.dtUserNpsrequest == dtUserNpsrequest &&
     _deepEquality.equals(other.aPkiPermissionID, aPkiPermissionID) &&
     other.objUserReal == objUserReal &&
     other.objUserCloned == objUserCloned &&
     other.objApikey == objApikey &&
-    _deepEquality.equals(other.aEModuleInternalname, aEModuleInternalname);
+    _deepEquality.equals(other.aEModuleInternalname, aEModuleInternalname) &&
+    other.bActivesessionMaillinglistrequest == bActivesessionMaillinglistrequest;
 
   @override
   int get hashCode =>
@@ -306,16 +328,18 @@ class ActivesessionResponseCompound {
     (eUserEzsignaccess.hashCode) +
     (eUserEzsignprepaid == null ? 0 : eUserEzsignprepaid!.hashCode) +
     (bUserEzsigntrial == null ? 0 : bUserEzsigntrial!.hashCode) +
+    (bUserEzsigntemplaterolegrouping == null ? 0 : bUserEzsigntemplaterolegrouping!.hashCode) +
     (dtUserEzsignprepaidexpiration == null ? 0 : dtUserEzsignprepaidexpiration!.hashCode) +
     (dtUserNpsrequest == null ? 0 : dtUserNpsrequest!.hashCode) +
     (aPkiPermissionID.hashCode) +
     (objUserReal.hashCode) +
     (objUserCloned == null ? 0 : objUserCloned!.hashCode) +
     (objApikey == null ? 0 : objApikey!.hashCode) +
-    (aEModuleInternalname.hashCode);
+    (aEModuleInternalname.hashCode) +
+    (bActivesessionMaillinglistrequest == null ? 0 : bActivesessionMaillinglistrequest!.hashCode);
 
   @override
-  String toString() => 'ActivesessionResponseCompound[eActivesessionUsertype=$eActivesessionUsertype, eActivesessionOrigin=$eActivesessionOrigin, eActivesessionWeekdaystart=$eActivesessionWeekdaystart, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, bActivesessionDebug=$bActivesessionDebug, bActivesessionIssuperadmin=$bActivesessionIssuperadmin, bActivesessionAttachment=$bActivesessionAttachment, bActivesessionCanafe=$bActivesessionCanafe, bActivesessionFinancial=$bActivesessionFinancial, bActivesessionRealestatecompleted=$bActivesessionRealestatecompleted, eActivesessionEzsign=$eActivesessionEzsign, eActivesessionEzsignaccess=$eActivesessionEzsignaccess, eActivesessionEzsignprepaid=$eActivesessionEzsignprepaid, eActivesessionRealestateinprogress=$eActivesessionRealestateinprogress, pksCustomerCode=$pksCustomerCode, fkiSystemconfigurationtypeID=$fkiSystemconfigurationtypeID, fkiSignatureID=$fkiSignatureID, fkiEzsignuserID=$fkiEzsignuserID, bSystemconfigurationEzsignpaidbyoffice=$bSystemconfigurationEzsignpaidbyoffice, eSystemconfigurationEzsignofficeplan=$eSystemconfigurationEzsignofficeplan, eUserEzsignaccess=$eUserEzsignaccess, eUserEzsignprepaid=$eUserEzsignprepaid, bUserEzsigntrial=$bUserEzsigntrial, dtUserEzsignprepaidexpiration=$dtUserEzsignprepaidexpiration, dtUserNpsrequest=$dtUserNpsrequest, aPkiPermissionID=$aPkiPermissionID, objUserReal=$objUserReal, objUserCloned=$objUserCloned, objApikey=$objApikey, aEModuleInternalname=$aEModuleInternalname]';
+  String toString() => 'ActivesessionResponseCompound[eActivesessionUsertype=$eActivesessionUsertype, eActivesessionOrigin=$eActivesessionOrigin, eActivesessionWeekdaystart=$eActivesessionWeekdaystart, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, bActivesessionDebug=$bActivesessionDebug, bActivesessionIssuperadmin=$bActivesessionIssuperadmin, bActivesessionAttachment=$bActivesessionAttachment, bActivesessionCanafe=$bActivesessionCanafe, bActivesessionFinancial=$bActivesessionFinancial, bActivesessionRealestatecompleted=$bActivesessionRealestatecompleted, eActivesessionEzsign=$eActivesessionEzsign, eActivesessionEzsignaccess=$eActivesessionEzsignaccess, eActivesessionEzsignprepaid=$eActivesessionEzsignprepaid, eActivesessionRealestateinprogress=$eActivesessionRealestateinprogress, pksCustomerCode=$pksCustomerCode, fkiSystemconfigurationtypeID=$fkiSystemconfigurationtypeID, fkiSignatureID=$fkiSignatureID, fkiEzsignuserID=$fkiEzsignuserID, bSystemconfigurationEzsignpaidbyoffice=$bSystemconfigurationEzsignpaidbyoffice, eSystemconfigurationEzsignofficeplan=$eSystemconfigurationEzsignofficeplan, eUserEzsignaccess=$eUserEzsignaccess, eUserEzsignprepaid=$eUserEzsignprepaid, bUserEzsigntrial=$bUserEzsigntrial, bUserEzsigntemplaterolegrouping=$bUserEzsigntemplaterolegrouping, dtUserEzsignprepaidexpiration=$dtUserEzsignprepaidexpiration, dtUserNpsrequest=$dtUserNpsrequest, aPkiPermissionID=$aPkiPermissionID, objUserReal=$objUserReal, objUserCloned=$objUserCloned, objApikey=$objApikey, aEModuleInternalname=$aEModuleInternalname, bActivesessionMaillinglistrequest=$bActivesessionMaillinglistrequest]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -396,6 +420,11 @@ class ActivesessionResponseCompound {
     } else {
       json[r'bUserEzsigntrial'] = null;
     }
+    if (this.bUserEzsigntemplaterolegrouping != null) {
+      json[r'bUserEzsigntemplaterolegrouping'] = this.bUserEzsigntemplaterolegrouping;
+    } else {
+      json[r'bUserEzsigntemplaterolegrouping'] = null;
+    }
     if (this.dtUserEzsignprepaidexpiration != null) {
       json[r'dtUserEzsignprepaidexpiration'] = this.dtUserEzsignprepaidexpiration;
     } else {
@@ -419,6 +448,11 @@ class ActivesessionResponseCompound {
       json[r'objApikey'] = null;
     }
       json[r'a_eModuleInternalname'] = this.aEModuleInternalname;
+    if (this.bActivesessionMaillinglistrequest != null) {
+      json[r'bActivesessionMaillinglistrequest'] = this.bActivesessionMaillinglistrequest;
+    } else {
+      json[r'bActivesessionMaillinglistrequest'] = null;
+    }
     return json;
   }
 
@@ -433,10 +467,36 @@ class ActivesessionResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "ActivesessionResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "ActivesessionResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'eActivesessionUsertype'), 'Required key "ActivesessionResponseCompound[eActivesessionUsertype]" is missing from JSON.');
+        assert(json[r'eActivesessionUsertype'] != null, 'Required key "ActivesessionResponseCompound[eActivesessionUsertype]" has a null value in JSON.');
+        assert(json.containsKey(r'eActivesessionOrigin'), 'Required key "ActivesessionResponseCompound[eActivesessionOrigin]" is missing from JSON.');
+        assert(json[r'eActivesessionOrigin'] != null, 'Required key "ActivesessionResponseCompound[eActivesessionOrigin]" has a null value in JSON.');
+        assert(json.containsKey(r'eActivesessionWeekdaystart'), 'Required key "ActivesessionResponseCompound[eActivesessionWeekdaystart]" is missing from JSON.');
+        assert(json[r'eActivesessionWeekdaystart'] != null, 'Required key "ActivesessionResponseCompound[eActivesessionWeekdaystart]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiLanguageID'), 'Required key "ActivesessionResponseCompound[fkiLanguageID]" is missing from JSON.');
+        assert(json[r'fkiLanguageID'] != null, 'Required key "ActivesessionResponseCompound[fkiLanguageID]" has a null value in JSON.');
+        assert(json.containsKey(r'sCompanyNameX'), 'Required key "ActivesessionResponseCompound[sCompanyNameX]" is missing from JSON.');
+        assert(json[r'sCompanyNameX'] != null, 'Required key "ActivesessionResponseCompound[sCompanyNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'sDepartmentNameX'), 'Required key "ActivesessionResponseCompound[sDepartmentNameX]" is missing from JSON.');
+        assert(json[r'sDepartmentNameX'] != null, 'Required key "ActivesessionResponseCompound[sDepartmentNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'bActivesessionDebug'), 'Required key "ActivesessionResponseCompound[bActivesessionDebug]" is missing from JSON.');
+        assert(json[r'bActivesessionDebug'] != null, 'Required key "ActivesessionResponseCompound[bActivesessionDebug]" has a null value in JSON.');
+        assert(json.containsKey(r'bActivesessionIssuperadmin'), 'Required key "ActivesessionResponseCompound[bActivesessionIssuperadmin]" is missing from JSON.');
+        assert(json[r'bActivesessionIssuperadmin'] != null, 'Required key "ActivesessionResponseCompound[bActivesessionIssuperadmin]" has a null value in JSON.');
+        assert(json.containsKey(r'eActivesessionEzsignaccess'), 'Required key "ActivesessionResponseCompound[eActivesessionEzsignaccess]" is missing from JSON.');
+        assert(json[r'eActivesessionEzsignaccess'] != null, 'Required key "ActivesessionResponseCompound[eActivesessionEzsignaccess]" has a null value in JSON.');
+        assert(json.containsKey(r'pksCustomerCode'), 'Required key "ActivesessionResponseCompound[pksCustomerCode]" is missing from JSON.');
+        assert(json[r'pksCustomerCode'] != null, 'Required key "ActivesessionResponseCompound[pksCustomerCode]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiSystemconfigurationtypeID'), 'Required key "ActivesessionResponseCompound[fkiSystemconfigurationtypeID]" is missing from JSON.');
+        assert(json[r'fkiSystemconfigurationtypeID'] != null, 'Required key "ActivesessionResponseCompound[fkiSystemconfigurationtypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'eUserEzsignaccess'), 'Required key "ActivesessionResponseCompound[eUserEzsignaccess]" is missing from JSON.');
+        assert(json[r'eUserEzsignaccess'] != null, 'Required key "ActivesessionResponseCompound[eUserEzsignaccess]" has a null value in JSON.');
+        assert(json.containsKey(r'a_pkiPermissionID'), 'Required key "ActivesessionResponseCompound[a_pkiPermissionID]" is missing from JSON.');
+        assert(json[r'a_pkiPermissionID'] != null, 'Required key "ActivesessionResponseCompound[a_pkiPermissionID]" has a null value in JSON.');
+        assert(json.containsKey(r'objUserReal'), 'Required key "ActivesessionResponseCompound[objUserReal]" is missing from JSON.');
+        assert(json[r'objUserReal'] != null, 'Required key "ActivesessionResponseCompound[objUserReal]" has a null value in JSON.');
+        assert(json.containsKey(r'a_eModuleInternalname'), 'Required key "ActivesessionResponseCompound[a_eModuleInternalname]" is missing from JSON.');
+        assert(json[r'a_eModuleInternalname'] != null, 'Required key "ActivesessionResponseCompound[a_eModuleInternalname]" has a null value in JSON.');
         return true;
       }());
 
@@ -466,6 +526,7 @@ class ActivesessionResponseCompound {
         eUserEzsignaccess: FieldEUserEzsignaccess.fromJson(json[r'eUserEzsignaccess'])!,
         eUserEzsignprepaid: FieldEUserEzsignprepaid.fromJson(json[r'eUserEzsignprepaid']),
         bUserEzsigntrial: mapValueOfType<bool>(json, r'bUserEzsigntrial'),
+        bUserEzsigntemplaterolegrouping: mapValueOfType<bool>(json, r'bUserEzsigntemplaterolegrouping'),
         dtUserEzsignprepaidexpiration: mapValueOfType<String>(json, r'dtUserEzsignprepaidexpiration'),
         dtUserNpsrequest: mapValueOfType<String>(json, r'dtUserNpsrequest'),
         aPkiPermissionID: json[r'a_pkiPermissionID'] is Iterable
@@ -477,6 +538,7 @@ class ActivesessionResponseCompound {
         aEModuleInternalname: json[r'a_eModuleInternalname'] is Iterable
             ? (json[r'a_eModuleInternalname'] as Iterable).cast<String>().toList(growable: false)
             : const [],
+        bActivesessionMaillinglistrequest: mapValueOfType<bool>(json, r'bActivesessionMaillinglistrequest'),
       );
     }
     return null;

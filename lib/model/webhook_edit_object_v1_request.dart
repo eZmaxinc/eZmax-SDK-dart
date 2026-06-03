@@ -47,10 +47,8 @@ class WebhookEditObjectV1Request {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "WebhookEditObjectV1Request[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "WebhookEditObjectV1Request[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'objWebhook'), 'Required key "WebhookEditObjectV1Request[objWebhook]" is missing from JSON.');
+        assert(json[r'objWebhook'] != null, 'Required key "WebhookEditObjectV1Request[objWebhook]" has a null value in JSON.');
         return true;
       }());
 

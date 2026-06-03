@@ -168,10 +168,30 @@ class EzsigntemplatepackageResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplatepackageResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplatepackageResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsigntemplatepackageID'), 'Required key "EzsigntemplatepackageResponseCompound[pkiEzsigntemplatepackageID]" is missing from JSON.');
+        assert(json[r'pkiEzsigntemplatepackageID'] != null, 'Required key "EzsigntemplatepackageResponseCompound[pkiEzsigntemplatepackageID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiEzsignfoldertypeID'), 'Required key "EzsigntemplatepackageResponseCompound[fkiEzsignfoldertypeID]" is missing from JSON.');
+        assert(json[r'fkiEzsignfoldertypeID'] != null, 'Required key "EzsigntemplatepackageResponseCompound[fkiEzsignfoldertypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiLanguageID'), 'Required key "EzsigntemplatepackageResponseCompound[fkiLanguageID]" is missing from JSON.');
+        assert(json[r'fkiLanguageID'] != null, 'Required key "EzsigntemplatepackageResponseCompound[fkiLanguageID]" has a null value in JSON.');
+        assert(json.containsKey(r'sLanguageNameX'), 'Required key "EzsigntemplatepackageResponseCompound[sLanguageNameX]" is missing from JSON.');
+        assert(json[r'sLanguageNameX'] != null, 'Required key "EzsigntemplatepackageResponseCompound[sLanguageNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsigntemplatepackageDescription'), 'Required key "EzsigntemplatepackageResponseCompound[sEzsigntemplatepackageDescription]" is missing from JSON.');
+        assert(json[r'sEzsigntemplatepackageDescription'] != null, 'Required key "EzsigntemplatepackageResponseCompound[sEzsigntemplatepackageDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsigntemplatepackageAdminonly'), 'Required key "EzsigntemplatepackageResponseCompound[bEzsigntemplatepackageAdminonly]" is missing from JSON.');
+        assert(json[r'bEzsigntemplatepackageAdminonly'] != null, 'Required key "EzsigntemplatepackageResponseCompound[bEzsigntemplatepackageAdminonly]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsigntemplatepackageNeedvalidation'), 'Required key "EzsigntemplatepackageResponseCompound[bEzsigntemplatepackageNeedvalidation]" is missing from JSON.');
+        assert(json[r'bEzsigntemplatepackageNeedvalidation'] != null, 'Required key "EzsigntemplatepackageResponseCompound[bEzsigntemplatepackageNeedvalidation]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsigntemplatepackageIsactive'), 'Required key "EzsigntemplatepackageResponseCompound[bEzsigntemplatepackageIsactive]" is missing from JSON.');
+        assert(json[r'bEzsigntemplatepackageIsactive'] != null, 'Required key "EzsigntemplatepackageResponseCompound[bEzsigntemplatepackageIsactive]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsignfoldertypeNameX'), 'Required key "EzsigntemplatepackageResponseCompound[sEzsignfoldertypeNameX]" is missing from JSON.');
+        assert(json[r'sEzsignfoldertypeNameX'] != null, 'Required key "EzsigntemplatepackageResponseCompound[sEzsignfoldertypeNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsigntemplatepackageEditallowed'), 'Required key "EzsigntemplatepackageResponseCompound[bEzsigntemplatepackageEditallowed]" is missing from JSON.');
+        assert(json[r'bEzsigntemplatepackageEditallowed'] != null, 'Required key "EzsigntemplatepackageResponseCompound[bEzsigntemplatepackageEditallowed]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objEzsigntemplatepackagesigner'), 'Required key "EzsigntemplatepackageResponseCompound[a_objEzsigntemplatepackagesigner]" is missing from JSON.');
+        assert(json[r'a_objEzsigntemplatepackagesigner'] != null, 'Required key "EzsigntemplatepackageResponseCompound[a_objEzsigntemplatepackagesigner]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objEzsigntemplatepackagemembership'), 'Required key "EzsigntemplatepackageResponseCompound[a_objEzsigntemplatepackagemembership]" is missing from JSON.');
+        assert(json[r'a_objEzsigntemplatepackagemembership'] != null, 'Required key "EzsigntemplatepackageResponseCompound[a_objEzsigntemplatepackagemembership]" has a null value in JSON.');
         return true;
       }());
 

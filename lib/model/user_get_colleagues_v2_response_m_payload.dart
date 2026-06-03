@@ -53,10 +53,10 @@ class UserGetColleaguesV2ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "UserGetColleaguesV2ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "UserGetColleaguesV2ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_objColleague'), 'Required key "UserGetColleaguesV2ResponseMPayload[a_objColleague]" is missing from JSON.');
+        assert(json[r'a_objColleague'] != null, 'Required key "UserGetColleaguesV2ResponseMPayload[a_objColleague]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objColleagueClonable'), 'Required key "UserGetColleaguesV2ResponseMPayload[a_objColleagueClonable]" is missing from JSON.');
+        assert(json[r'a_objColleagueClonable'] != null, 'Required key "UserGetColleaguesV2ResponseMPayload[a_objColleagueClonable]" has a null value in JSON.');
         return true;
       }());
 

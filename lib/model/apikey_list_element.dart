@@ -85,10 +85,18 @@ class ApikeyListElement {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "ApikeyListElement[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "ApikeyListElement[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiApikeyID'), 'Required key "ApikeyListElement[pkiApikeyID]" is missing from JSON.');
+        assert(json[r'pkiApikeyID'] != null, 'Required key "ApikeyListElement[pkiApikeyID]" has a null value in JSON.');
+        assert(json.containsKey(r'sApikeyDescriptionX'), 'Required key "ApikeyListElement[sApikeyDescriptionX]" is missing from JSON.');
+        assert(json[r'sApikeyDescriptionX'] != null, 'Required key "ApikeyListElement[sApikeyDescriptionX]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserFirstname'), 'Required key "ApikeyListElement[sUserFirstname]" is missing from JSON.');
+        assert(json[r'sUserFirstname'] != null, 'Required key "ApikeyListElement[sUserFirstname]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserLastname'), 'Required key "ApikeyListElement[sUserLastname]" is missing from JSON.');
+        assert(json[r'sUserLastname'] != null, 'Required key "ApikeyListElement[sUserLastname]" has a null value in JSON.');
+        assert(json.containsKey(r'bApikeyIsactive'), 'Required key "ApikeyListElement[bApikeyIsactive]" is missing from JSON.');
+        assert(json[r'bApikeyIsactive'] != null, 'Required key "ApikeyListElement[bApikeyIsactive]" has a null value in JSON.');
+        assert(json.containsKey(r'bApikeyIssigned'), 'Required key "ApikeyListElement[bApikeyIssigned]" is missing from JSON.');
+        assert(json[r'bApikeyIssigned'] != null, 'Required key "ApikeyListElement[bApikeyIssigned]" has a null value in JSON.');
         return true;
       }());
 

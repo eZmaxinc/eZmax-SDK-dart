@@ -88,10 +88,18 @@ class ModuleResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "ModuleResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "ModuleResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiModuleID'), 'Required key "ModuleResponse[pkiModuleID]" is missing from JSON.');
+        assert(json[r'pkiModuleID'] != null, 'Required key "ModuleResponse[pkiModuleID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiModulegroupID'), 'Required key "ModuleResponse[fkiModulegroupID]" is missing from JSON.');
+        assert(json[r'fkiModulegroupID'] != null, 'Required key "ModuleResponse[fkiModulegroupID]" has a null value in JSON.');
+        assert(json.containsKey(r'eModuleInternalname'), 'Required key "ModuleResponse[eModuleInternalname]" is missing from JSON.');
+        assert(json[r'eModuleInternalname'] != null, 'Required key "ModuleResponse[eModuleInternalname]" has a null value in JSON.');
+        assert(json.containsKey(r'sModuleNameX'), 'Required key "ModuleResponse[sModuleNameX]" is missing from JSON.');
+        assert(json[r'sModuleNameX'] != null, 'Required key "ModuleResponse[sModuleNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'bModuleRegistered'), 'Required key "ModuleResponse[bModuleRegistered]" is missing from JSON.');
+        assert(json[r'bModuleRegistered'] != null, 'Required key "ModuleResponse[bModuleRegistered]" has a null value in JSON.');
+        assert(json.containsKey(r'bModuleRegisteredapi'), 'Required key "ModuleResponse[bModuleRegisteredapi]" is missing from JSON.');
+        assert(json[r'bModuleRegisteredapi'] != null, 'Required key "ModuleResponse[bModuleRegisteredapi]" has a null value in JSON.');
         return true;
       }());
 

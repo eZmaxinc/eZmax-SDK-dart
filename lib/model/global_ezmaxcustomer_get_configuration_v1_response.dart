@@ -86,10 +86,14 @@ class GlobalEzmaxcustomerGetConfigurationV1Response {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "GlobalEzmaxcustomerGetConfigurationV1Response[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "GlobalEzmaxcustomerGetConfigurationV1Response[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sInfrastructureregionCode'), 'Required key "GlobalEzmaxcustomerGetConfigurationV1Response[sInfrastructureregionCode]" is missing from JSON.');
+        assert(json[r'sInfrastructureregionCode'] != null, 'Required key "GlobalEzmaxcustomerGetConfigurationV1Response[sInfrastructureregionCode]" has a null value in JSON.');
+        assert(json.containsKey(r'sInfrastructureregionCodeWeb'), 'Required key "GlobalEzmaxcustomerGetConfigurationV1Response[sInfrastructureregionCodeWeb]" is missing from JSON.');
+        assert(json[r'sInfrastructureregionCodeWeb'] != null, 'Required key "GlobalEzmaxcustomerGetConfigurationV1Response[sInfrastructureregionCodeWeb]" has a null value in JSON.');
+        assert(json.containsKey(r'sInfrastructureenvironmenttypeDescription'), 'Required key "GlobalEzmaxcustomerGetConfigurationV1Response[sInfrastructureenvironmenttypeDescription]" is missing from JSON.');
+        assert(json[r'sInfrastructureenvironmenttypeDescription'] != null, 'Required key "GlobalEzmaxcustomerGetConfigurationV1Response[sInfrastructureenvironmenttypeDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'sCognitoClientIDEzmaxpublic'), 'Required key "GlobalEzmaxcustomerGetConfigurationV1Response[sCognitoClientIDEzmaxpublic]" is missing from JSON.');
+        assert(json[r'sCognitoClientIDEzmaxpublic'] != null, 'Required key "GlobalEzmaxcustomerGetConfigurationV1Response[sCognitoClientIDEzmaxpublic]" has a null value in JSON.');
         return true;
       }());
 

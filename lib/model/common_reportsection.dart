@@ -87,10 +87,10 @@ class CommonReportsection {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CommonReportsection[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CommonReportsection[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_objReportsubsection'), 'Required key "CommonReportsection[a_objReportsubsection]" is missing from JSON.');
+        assert(json[r'a_objReportsubsection'] != null, 'Required key "CommonReportsection[a_objReportsubsection]" has a null value in JSON.');
+        assert(json.containsKey(r'eReportsectionHorizontalalignment'), 'Required key "CommonReportsection[eReportsectionHorizontalalignment]" is missing from JSON.');
+        assert(json[r'eReportsectionHorizontalalignment'] != null, 'Required key "CommonReportsection[eReportsectionHorizontalalignment]" has a null value in JSON.');
         return true;
       }());
 

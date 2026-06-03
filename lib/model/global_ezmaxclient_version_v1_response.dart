@@ -55,10 +55,10 @@ class GlobalEzmaxclientVersionV1Response {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "GlobalEzmaxclientVersionV1Response[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "GlobalEzmaxclientVersionV1Response[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sEzmaxclientVersion'), 'Required key "GlobalEzmaxclientVersionV1Response[sEzmaxclientVersion]" is missing from JSON.');
+        assert(json[r'sEzmaxclientVersion'] != null, 'Required key "GlobalEzmaxclientVersionV1Response[sEzmaxclientVersion]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzmaxclientOslatestversion'), 'Required key "GlobalEzmaxclientVersionV1Response[sEzmaxclientOslatestversion]" is missing from JSON.');
+        assert(json[r'sEzmaxclientOslatestversion'] != null, 'Required key "GlobalEzmaxclientVersionV1Response[sEzmaxclientOslatestversion]" has a null value in JSON.');
         return true;
       }());
 

@@ -65,10 +65,12 @@ class AgenttypeAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "AgenttypeAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "AgenttypeAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiAgenttypeID'), 'Required key "AgenttypeAutocompleteElementResponse[pkiAgenttypeID]" is missing from JSON.');
+        assert(json[r'pkiAgenttypeID'] != null, 'Required key "AgenttypeAutocompleteElementResponse[pkiAgenttypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'sAgenttypeNameX'), 'Required key "AgenttypeAutocompleteElementResponse[sAgenttypeNameX]" is missing from JSON.');
+        assert(json[r'sAgenttypeNameX'] != null, 'Required key "AgenttypeAutocompleteElementResponse[sAgenttypeNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'bAgenttypeIsactive'), 'Required key "AgenttypeAutocompleteElementResponse[bAgenttypeIsactive]" is missing from JSON.');
+        assert(json[r'bAgenttypeIsactive'] != null, 'Required key "AgenttypeAutocompleteElementResponse[bAgenttypeIsactive]" has a null value in JSON.');
         return true;
       }());
 

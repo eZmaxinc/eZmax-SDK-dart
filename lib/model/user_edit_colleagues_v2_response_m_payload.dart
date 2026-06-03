@@ -47,10 +47,8 @@ class UserEditColleaguesV2ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "UserEditColleaguesV2ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "UserEditColleaguesV2ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_pkiColleagueID'), 'Required key "UserEditColleaguesV2ResponseMPayload[a_pkiColleagueID]" is missing from JSON.');
+        assert(json[r'a_pkiColleagueID'] != null, 'Required key "UserEditColleaguesV2ResponseMPayload[a_pkiColleagueID]" has a null value in JSON.');
         return true;
       }());
 

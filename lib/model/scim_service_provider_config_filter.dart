@@ -55,10 +55,10 @@ class ScimServiceProviderConfigFilter {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "ScimServiceProviderConfigFilter[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "ScimServiceProviderConfigFilter[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'supported'), 'Required key "ScimServiceProviderConfigFilter[supported]" is missing from JSON.');
+        assert(json[r'supported'] != null, 'Required key "ScimServiceProviderConfigFilter[supported]" has a null value in JSON.');
+        assert(json.containsKey(r'maxResults'), 'Required key "ScimServiceProviderConfigFilter[maxResults]" is missing from JSON.');
+        assert(json[r'maxResults'] != null, 'Required key "ScimServiceProviderConfigFilter[maxResults]" has a null value in JSON.');
         return true;
       }());
 

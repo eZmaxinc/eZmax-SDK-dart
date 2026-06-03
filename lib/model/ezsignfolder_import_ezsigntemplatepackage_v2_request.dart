@@ -63,10 +63,12 @@ class EzsignfolderImportEzsigntemplatepackageV2Request {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignfolderImportEzsigntemplatepackageV2Request[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignfolderImportEzsigntemplatepackageV2Request[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiEzsigntemplatepackageID'), 'Required key "EzsignfolderImportEzsigntemplatepackageV2Request[fkiEzsigntemplatepackageID]" is missing from JSON.');
+        assert(json[r'fkiEzsigntemplatepackageID'] != null, 'Required key "EzsignfolderImportEzsigntemplatepackageV2Request[fkiEzsigntemplatepackageID]" has a null value in JSON.');
+        assert(json.containsKey(r'dtEzsigndocumentDuedate'), 'Required key "EzsignfolderImportEzsigntemplatepackageV2Request[dtEzsigndocumentDuedate]" is missing from JSON.');
+        assert(json[r'dtEzsigndocumentDuedate'] != null, 'Required key "EzsignfolderImportEzsigntemplatepackageV2Request[dtEzsigndocumentDuedate]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objImportEzsigntemplatepackageRelation'), 'Required key "EzsignfolderImportEzsigntemplatepackageV2Request[a_objImportEzsigntemplatepackageRelation]" is missing from JSON.');
+        assert(json[r'a_objImportEzsigntemplatepackageRelation'] != null, 'Required key "EzsignfolderImportEzsigntemplatepackageV2Request[a_objImportEzsigntemplatepackageRelation]" has a null value in JSON.');
         return true;
       }());
 

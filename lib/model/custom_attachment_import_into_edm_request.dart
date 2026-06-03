@@ -211,10 +211,14 @@ class CustomAttachmentImportIntoEDMRequest {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CustomAttachmentImportIntoEDMRequest[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CustomAttachmentImportIntoEDMRequest[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'eAttachmentSource'), 'Required key "CustomAttachmentImportIntoEDMRequest[eAttachmentSource]" is missing from JSON.');
+        assert(json[r'eAttachmentSource'] != null, 'Required key "CustomAttachmentImportIntoEDMRequest[eAttachmentSource]" has a null value in JSON.');
+        assert(json.containsKey(r'sAttachmentName'), 'Required key "CustomAttachmentImportIntoEDMRequest[sAttachmentName]" is missing from JSON.');
+        assert(json[r'sAttachmentName'] != null, 'Required key "CustomAttachmentImportIntoEDMRequest[sAttachmentName]" has a null value in JSON.');
+        assert(json.containsKey(r'sAttachmentCategory'), 'Required key "CustomAttachmentImportIntoEDMRequest[sAttachmentCategory]" is missing from JSON.');
+        assert(json[r'sAttachmentCategory'] != null, 'Required key "CustomAttachmentImportIntoEDMRequest[sAttachmentCategory]" has a null value in JSON.');
+        assert(json.containsKey(r'eAttachmentPrivacy'), 'Required key "CustomAttachmentImportIntoEDMRequest[eAttachmentPrivacy]" is missing from JSON.');
+        assert(json[r'eAttachmentPrivacy'] != null, 'Required key "CustomAttachmentImportIntoEDMRequest[eAttachmentPrivacy]" has a null value in JSON.');
         return true;
       }());
 

@@ -255,10 +255,28 @@ class ActivesessionResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "ActivesessionResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "ActivesessionResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'eActivesessionUsertype'), 'Required key "ActivesessionResponse[eActivesessionUsertype]" is missing from JSON.');
+        assert(json[r'eActivesessionUsertype'] != null, 'Required key "ActivesessionResponse[eActivesessionUsertype]" has a null value in JSON.');
+        assert(json.containsKey(r'eActivesessionOrigin'), 'Required key "ActivesessionResponse[eActivesessionOrigin]" is missing from JSON.');
+        assert(json[r'eActivesessionOrigin'] != null, 'Required key "ActivesessionResponse[eActivesessionOrigin]" has a null value in JSON.');
+        assert(json.containsKey(r'eActivesessionWeekdaystart'), 'Required key "ActivesessionResponse[eActivesessionWeekdaystart]" is missing from JSON.');
+        assert(json[r'eActivesessionWeekdaystart'] != null, 'Required key "ActivesessionResponse[eActivesessionWeekdaystart]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiLanguageID'), 'Required key "ActivesessionResponse[fkiLanguageID]" is missing from JSON.');
+        assert(json[r'fkiLanguageID'] != null, 'Required key "ActivesessionResponse[fkiLanguageID]" has a null value in JSON.');
+        assert(json.containsKey(r'sCompanyNameX'), 'Required key "ActivesessionResponse[sCompanyNameX]" is missing from JSON.');
+        assert(json[r'sCompanyNameX'] != null, 'Required key "ActivesessionResponse[sCompanyNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'sDepartmentNameX'), 'Required key "ActivesessionResponse[sDepartmentNameX]" is missing from JSON.');
+        assert(json[r'sDepartmentNameX'] != null, 'Required key "ActivesessionResponse[sDepartmentNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'bActivesessionDebug'), 'Required key "ActivesessionResponse[bActivesessionDebug]" is missing from JSON.');
+        assert(json[r'bActivesessionDebug'] != null, 'Required key "ActivesessionResponse[bActivesessionDebug]" has a null value in JSON.');
+        assert(json.containsKey(r'bActivesessionIssuperadmin'), 'Required key "ActivesessionResponse[bActivesessionIssuperadmin]" is missing from JSON.');
+        assert(json[r'bActivesessionIssuperadmin'] != null, 'Required key "ActivesessionResponse[bActivesessionIssuperadmin]" has a null value in JSON.');
+        assert(json.containsKey(r'eActivesessionEzsignaccess'), 'Required key "ActivesessionResponse[eActivesessionEzsignaccess]" is missing from JSON.');
+        assert(json[r'eActivesessionEzsignaccess'] != null, 'Required key "ActivesessionResponse[eActivesessionEzsignaccess]" has a null value in JSON.');
+        assert(json.containsKey(r'pksCustomerCode'), 'Required key "ActivesessionResponse[pksCustomerCode]" is missing from JSON.');
+        assert(json[r'pksCustomerCode'] != null, 'Required key "ActivesessionResponse[pksCustomerCode]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiSystemconfigurationtypeID'), 'Required key "ActivesessionResponse[fkiSystemconfigurationtypeID]" is missing from JSON.');
+        assert(json[r'fkiSystemconfigurationtypeID'] != null, 'Required key "ActivesessionResponse[fkiSystemconfigurationtypeID]" has a null value in JSON.');
         return true;
       }());
 

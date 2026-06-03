@@ -63,10 +63,12 @@ class UserlogintypeResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "UserlogintypeResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "UserlogintypeResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiUserlogintypeID'), 'Required key "UserlogintypeResponse[pkiUserlogintypeID]" is missing from JSON.');
+        assert(json[r'pkiUserlogintypeID'] != null, 'Required key "UserlogintypeResponse[pkiUserlogintypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'objUserlogintypeDescription'), 'Required key "UserlogintypeResponse[objUserlogintypeDescription]" is missing from JSON.');
+        assert(json[r'objUserlogintypeDescription'] != null, 'Required key "UserlogintypeResponse[objUserlogintypeDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserlogintypeDescriptionX'), 'Required key "UserlogintypeResponse[sUserlogintypeDescriptionX]" is missing from JSON.');
+        assert(json[r'sUserlogintypeDescriptionX'] != null, 'Required key "UserlogintypeResponse[sUserlogintypeDescriptionX]" has a null value in JSON.');
         return true;
       }());
 

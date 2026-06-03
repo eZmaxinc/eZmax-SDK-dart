@@ -96,10 +96,14 @@ class EzsigntemplatepackagesignermembershipResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplatepackagesignermembershipResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplatepackagesignermembershipResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsigntemplatepackagesignermembershipID'), 'Required key "EzsigntemplatepackagesignermembershipResponse[pkiEzsigntemplatepackagesignermembershipID]" is missing from JSON.');
+        assert(json[r'pkiEzsigntemplatepackagesignermembershipID'] != null, 'Required key "EzsigntemplatepackagesignermembershipResponse[pkiEzsigntemplatepackagesignermembershipID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiEzsigntemplatepackagemembershipID'), 'Required key "EzsigntemplatepackagesignermembershipResponse[fkiEzsigntemplatepackagemembershipID]" is missing from JSON.');
+        assert(json[r'fkiEzsigntemplatepackagemembershipID'] != null, 'Required key "EzsigntemplatepackagesignermembershipResponse[fkiEzsigntemplatepackagemembershipID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiEzsigntemplatepackagesignerID'), 'Required key "EzsigntemplatepackagesignermembershipResponse[fkiEzsigntemplatepackagesignerID]" is missing from JSON.');
+        assert(json[r'fkiEzsigntemplatepackagesignerID'] != null, 'Required key "EzsigntemplatepackagesignermembershipResponse[fkiEzsigntemplatepackagesignerID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiEzsigntemplatesignerID'), 'Required key "EzsigntemplatepackagesignermembershipResponse[fkiEzsigntemplatesignerID]" is missing from JSON.');
+        assert(json[r'fkiEzsigntemplatesignerID'] != null, 'Required key "EzsigntemplatepackagesignermembershipResponse[fkiEzsigntemplatesignerID]" has a null value in JSON.');
         return true;
       }());
 

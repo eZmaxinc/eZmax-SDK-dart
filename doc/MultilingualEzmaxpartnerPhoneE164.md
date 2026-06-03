@@ -1,0 +1,16 @@
+# openapi.model.MultilingualEzmaxpartnerPhoneE164
+
+## Load the model package
+```dart
+import 'package:openapi/api.dart';
+```
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**sEzmaxpartnerPhoneE1641** | **String** | A phone number in E.164 Format | [optional] 
+**sEzmaxpartnerPhoneE1642** | **String** | A phone number in E.164 Format | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

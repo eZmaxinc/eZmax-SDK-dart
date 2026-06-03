@@ -1105,10 +1105,26 @@ class AttachmentResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "AttachmentResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "AttachmentResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiAttachmentID'), 'Required key "AttachmentResponse[pkiAttachmentID]" is missing from JSON.');
+        assert(json[r'pkiAttachmentID'] != null, 'Required key "AttachmentResponse[pkiAttachmentID]" has a null value in JSON.');
+        assert(json.containsKey(r'eAttachmentDocumenttype'), 'Required key "AttachmentResponse[eAttachmentDocumenttype]" is missing from JSON.');
+        assert(json[r'eAttachmentDocumenttype'] != null, 'Required key "AttachmentResponse[eAttachmentDocumenttype]" has a null value in JSON.');
+        assert(json.containsKey(r'sAttachmentName'), 'Required key "AttachmentResponse[sAttachmentName]" is missing from JSON.');
+        assert(json[r'sAttachmentName'] != null, 'Required key "AttachmentResponse[sAttachmentName]" has a null value in JSON.');
+        assert(json.containsKey(r'eAttachmentPrivacy'), 'Required key "AttachmentResponse[eAttachmentPrivacy]" is missing from JSON.');
+        assert(json[r'eAttachmentPrivacy'] != null, 'Required key "AttachmentResponse[eAttachmentPrivacy]" has a null value in JSON.');
+        assert(json.containsKey(r'eAttachmentType'), 'Required key "AttachmentResponse[eAttachmentType]" is missing from JSON.');
+        assert(json[r'eAttachmentType'] != null, 'Required key "AttachmentResponse[eAttachmentType]" has a null value in JSON.');
+        assert(json.containsKey(r'iAttachmentSize'), 'Required key "AttachmentResponse[iAttachmentSize]" is missing from JSON.');
+        assert(json[r'iAttachmentSize'] != null, 'Required key "AttachmentResponse[iAttachmentSize]" has a null value in JSON.');
+        assert(json.containsKey(r'sAttachmentMD5'), 'Required key "AttachmentResponse[sAttachmentMD5]" is missing from JSON.');
+        assert(json[r'sAttachmentMD5'] != null, 'Required key "AttachmentResponse[sAttachmentMD5]" has a null value in JSON.');
+        assert(json.containsKey(r'bAttachmentDeleted'), 'Required key "AttachmentResponse[bAttachmentDeleted]" is missing from JSON.');
+        assert(json[r'bAttachmentDeleted'] != null, 'Required key "AttachmentResponse[bAttachmentDeleted]" has a null value in JSON.');
+        assert(json.containsKey(r'bAttachmentValid'), 'Required key "AttachmentResponse[bAttachmentValid]" is missing from JSON.');
+        assert(json[r'bAttachmentValid'] != null, 'Required key "AttachmentResponse[bAttachmentValid]" has a null value in JSON.');
+        assert(json.containsKey(r'eAttachmentVerified'), 'Required key "AttachmentResponse[eAttachmentVerified]" is missing from JSON.');
+        assert(json[r'eAttachmentVerified'] != null, 'Required key "AttachmentResponse[eAttachmentVerified]" has a null value in JSON.');
         return true;
       }());
 

@@ -55,10 +55,10 @@ class UserCreateEzsignuserV1ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "UserCreateEzsignuserV1ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "UserCreateEzsignuserV1ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_sEmailAddressSuccess'), 'Required key "UserCreateEzsignuserV1ResponseMPayload[a_sEmailAddressSuccess]" is missing from JSON.');
+        assert(json[r'a_sEmailAddressSuccess'] != null, 'Required key "UserCreateEzsignuserV1ResponseMPayload[a_sEmailAddressSuccess]" has a null value in JSON.');
+        assert(json.containsKey(r'a_sEmailAddressFailure'), 'Required key "UserCreateEzsignuserV1ResponseMPayload[a_sEmailAddressFailure]" is missing from JSON.');
+        assert(json[r'a_sEmailAddressFailure'] != null, 'Required key "UserCreateEzsignuserV1ResponseMPayload[a_sEmailAddressFailure]" has a null value in JSON.');
         return true;
       }());
 

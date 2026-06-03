@@ -48,10 +48,8 @@ class EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sLoginUrl'), 'Required key "EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload[sLoginUrl]" is missing from JSON.');
+        assert(json[r'sLoginUrl'] != null, 'Required key "EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload[sLoginUrl]" has a null value in JSON.');
         return true;
       }());
 

@@ -83,10 +83,8 @@ class UsergroupRequestCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "UsergroupRequestCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "UsergroupRequestCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'objUsergroupName'), 'Required key "UsergroupRequestCompound[objUsergroupName]" is missing from JSON.');
+        assert(json[r'objUsergroupName'] != null, 'Required key "UsergroupRequestCompound[objUsergroupName]" has a null value in JSON.');
         return true;
       }());
 

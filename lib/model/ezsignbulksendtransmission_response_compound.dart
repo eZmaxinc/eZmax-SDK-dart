@@ -87,10 +87,18 @@ class EzsignbulksendtransmissionResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignbulksendtransmissionResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignbulksendtransmissionResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsignbulksendtransmissionID'), 'Required key "EzsignbulksendtransmissionResponseCompound[pkiEzsignbulksendtransmissionID]" is missing from JSON.');
+        assert(json[r'pkiEzsignbulksendtransmissionID'] != null, 'Required key "EzsignbulksendtransmissionResponseCompound[pkiEzsignbulksendtransmissionID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiEzsignbulksendID'), 'Required key "EzsignbulksendtransmissionResponseCompound[fkiEzsignbulksendID]" is missing from JSON.');
+        assert(json[r'fkiEzsignbulksendID'] != null, 'Required key "EzsignbulksendtransmissionResponseCompound[fkiEzsignbulksendID]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsignbulksendtransmissionDescription'), 'Required key "EzsignbulksendtransmissionResponseCompound[sEzsignbulksendtransmissionDescription]" is missing from JSON.');
+        assert(json[r'sEzsignbulksendtransmissionDescription'] != null, 'Required key "EzsignbulksendtransmissionResponseCompound[sEzsignbulksendtransmissionDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignbulksendtransmissionErrors'), 'Required key "EzsignbulksendtransmissionResponseCompound[iEzsignbulksendtransmissionErrors]" is missing from JSON.');
+        assert(json[r'iEzsignbulksendtransmissionErrors'] != null, 'Required key "EzsignbulksendtransmissionResponseCompound[iEzsignbulksendtransmissionErrors]" has a null value in JSON.');
+        assert(json.containsKey(r'objAudit'), 'Required key "EzsignbulksendtransmissionResponseCompound[objAudit]" is missing from JSON.');
+        assert(json[r'objAudit'] != null, 'Required key "EzsignbulksendtransmissionResponseCompound[objAudit]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objEzsignfoldertransmission'), 'Required key "EzsignbulksendtransmissionResponseCompound[a_objEzsignfoldertransmission]" is missing from JSON.');
+        assert(json[r'a_objEzsignfoldertransmission'] != null, 'Required key "EzsignbulksendtransmissionResponseCompound[a_objEzsignfoldertransmission]" has a null value in JSON.');
         return true;
       }());
 

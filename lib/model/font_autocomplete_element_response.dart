@@ -64,10 +64,12 @@ class FontAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "FontAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "FontAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sFontName'), 'Required key "FontAutocompleteElementResponse[sFontName]" is missing from JSON.');
+        assert(json[r'sFontName'] != null, 'Required key "FontAutocompleteElementResponse[sFontName]" has a null value in JSON.');
+        assert(json.containsKey(r'pkiFontID'), 'Required key "FontAutocompleteElementResponse[pkiFontID]" is missing from JSON.');
+        assert(json[r'pkiFontID'] != null, 'Required key "FontAutocompleteElementResponse[pkiFontID]" has a null value in JSON.');
+        assert(json.containsKey(r'bFontIsactive'), 'Required key "FontAutocompleteElementResponse[bFontIsactive]" is missing from JSON.');
+        assert(json[r'bFontIsactive'] != null, 'Required key "FontAutocompleteElementResponse[bFontIsactive]" has a null value in JSON.');
         return true;
       }());
 

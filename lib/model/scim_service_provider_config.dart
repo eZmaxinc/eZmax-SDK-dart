@@ -91,10 +91,22 @@ class ScimServiceProviderConfig {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "ScimServiceProviderConfig[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "ScimServiceProviderConfig[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'authenticationSchemes'), 'Required key "ScimServiceProviderConfig[authenticationSchemes]" is missing from JSON.');
+        assert(json[r'authenticationSchemes'] != null, 'Required key "ScimServiceProviderConfig[authenticationSchemes]" has a null value in JSON.');
+        assert(json.containsKey(r'bulk'), 'Required key "ScimServiceProviderConfig[bulk]" is missing from JSON.');
+        assert(json[r'bulk'] != null, 'Required key "ScimServiceProviderConfig[bulk]" has a null value in JSON.');
+        assert(json.containsKey(r'changePassword'), 'Required key "ScimServiceProviderConfig[changePassword]" is missing from JSON.');
+        assert(json[r'changePassword'] != null, 'Required key "ScimServiceProviderConfig[changePassword]" has a null value in JSON.');
+        assert(json.containsKey(r'documentationUri'), 'Required key "ScimServiceProviderConfig[documentationUri]" is missing from JSON.');
+        assert(json[r'documentationUri'] != null, 'Required key "ScimServiceProviderConfig[documentationUri]" has a null value in JSON.');
+        assert(json.containsKey(r'etag'), 'Required key "ScimServiceProviderConfig[etag]" is missing from JSON.');
+        assert(json[r'etag'] != null, 'Required key "ScimServiceProviderConfig[etag]" has a null value in JSON.');
+        assert(json.containsKey(r'filter'), 'Required key "ScimServiceProviderConfig[filter]" is missing from JSON.');
+        assert(json[r'filter'] != null, 'Required key "ScimServiceProviderConfig[filter]" has a null value in JSON.');
+        assert(json.containsKey(r'patch'), 'Required key "ScimServiceProviderConfig[patch]" is missing from JSON.');
+        assert(json[r'patch'] != null, 'Required key "ScimServiceProviderConfig[patch]" has a null value in JSON.');
+        assert(json.containsKey(r'sort'), 'Required key "ScimServiceProviderConfig[sort]" is missing from JSON.');
+        assert(json[r'sort'] != null, 'Required key "ScimServiceProviderConfig[sort]" has a null value in JSON.');
         return true;
       }());
 

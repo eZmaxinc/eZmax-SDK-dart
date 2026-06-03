@@ -188,10 +188,8 @@ class EzsignsignatureSignV1Request {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignsignatureSignV1Request[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignsignatureSignV1Request[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'bIsAutomatic'), 'Required key "EzsignsignatureSignV1Request[bIsAutomatic]" is missing from JSON.');
+        assert(json[r'bIsAutomatic'] != null, 'Required key "EzsignsignatureSignV1Request[bIsAutomatic]" has a null value in JSON.');
         return true;
       }());
 

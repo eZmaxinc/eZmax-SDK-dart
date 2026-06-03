@@ -94,10 +94,16 @@ class PaymenttermRequestCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "PaymenttermRequestCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "PaymenttermRequestCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sPaymenttermCode'), 'Required key "PaymenttermRequestCompound[sPaymenttermCode]" is missing from JSON.');
+        assert(json[r'sPaymenttermCode'] != null, 'Required key "PaymenttermRequestCompound[sPaymenttermCode]" has a null value in JSON.');
+        assert(json.containsKey(r'ePaymenttermType'), 'Required key "PaymenttermRequestCompound[ePaymenttermType]" is missing from JSON.');
+        assert(json[r'ePaymenttermType'] != null, 'Required key "PaymenttermRequestCompound[ePaymenttermType]" has a null value in JSON.');
+        assert(json.containsKey(r'iPaymenttermDay'), 'Required key "PaymenttermRequestCompound[iPaymenttermDay]" is missing from JSON.');
+        assert(json[r'iPaymenttermDay'] != null, 'Required key "PaymenttermRequestCompound[iPaymenttermDay]" has a null value in JSON.');
+        assert(json.containsKey(r'objPaymenttermDescription'), 'Required key "PaymenttermRequestCompound[objPaymenttermDescription]" is missing from JSON.');
+        assert(json[r'objPaymenttermDescription'] != null, 'Required key "PaymenttermRequestCompound[objPaymenttermDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'bPaymenttermIsactive'), 'Required key "PaymenttermRequestCompound[bPaymenttermIsactive]" is missing from JSON.');
+        assert(json[r'bPaymenttermIsactive'] != null, 'Required key "PaymenttermRequestCompound[bPaymenttermIsactive]" has a null value in JSON.');
         return true;
       }());
 

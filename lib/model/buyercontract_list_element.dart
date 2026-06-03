@@ -20,6 +20,7 @@ class BuyercontractListElement {
     required this.dBuyercontractMinimumprice,
     required this.dBuyercontractMaximumprice,
     required this.eBuyercontractType,
+    this.sBuyercontractContract,
     required this.dtBuyercontractDate,
     this.dtBuyercontractExpirationdate,
     required this.bBuyercontractIsactive,
@@ -52,6 +53,15 @@ class BuyercontractListElement {
 
   FieldEBuyercontractType eBuyercontractType;
 
+  /// The number of the Buyercontract
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sBuyercontractContract;
+
   /// The date of the Buyercontract
   String dtBuyercontractDate;
 
@@ -82,6 +92,7 @@ class BuyercontractListElement {
     other.dBuyercontractMinimumprice == dBuyercontractMinimumprice &&
     other.dBuyercontractMaximumprice == dBuyercontractMaximumprice &&
     other.eBuyercontractType == eBuyercontractType &&
+    other.sBuyercontractContract == sBuyercontractContract &&
     other.dtBuyercontractDate == dtBuyercontractDate &&
     other.dtBuyercontractExpirationdate == dtBuyercontractExpirationdate &&
     other.bBuyercontractIsactive == bBuyercontractIsactive &&
@@ -98,6 +109,7 @@ class BuyercontractListElement {
     (dBuyercontractMinimumprice.hashCode) +
     (dBuyercontractMaximumprice.hashCode) +
     (eBuyercontractType.hashCode) +
+    (sBuyercontractContract == null ? 0 : sBuyercontractContract!.hashCode) +
     (dtBuyercontractDate.hashCode) +
     (dtBuyercontractExpirationdate == null ? 0 : dtBuyercontractExpirationdate!.hashCode) +
     (bBuyercontractIsactive.hashCode) +
@@ -105,7 +117,7 @@ class BuyercontractListElement {
     (sBuyercontractBuyers.hashCode);
 
   @override
-  String toString() => 'BuyercontractListElement[pkiBuyercontractID=$pkiBuyercontractID, fkiInscriptiontypeID=$fkiInscriptiontypeID, sInscriptiontypeNameX=$sInscriptiontypeNameX, eBuyercontractStep=$eBuyercontractStep, dBuyercontractMinimumprice=$dBuyercontractMinimumprice, dBuyercontractMaximumprice=$dBuyercontractMaximumprice, eBuyercontractType=$eBuyercontractType, dtBuyercontractDate=$dtBuyercontractDate, dtBuyercontractExpirationdate=$dtBuyercontractExpirationdate, bBuyercontractIsactive=$bBuyercontractIsactive, sBuyercontractBrokers=$sBuyercontractBrokers, sBuyercontractBuyers=$sBuyercontractBuyers]';
+  String toString() => 'BuyercontractListElement[pkiBuyercontractID=$pkiBuyercontractID, fkiInscriptiontypeID=$fkiInscriptiontypeID, sInscriptiontypeNameX=$sInscriptiontypeNameX, eBuyercontractStep=$eBuyercontractStep, dBuyercontractMinimumprice=$dBuyercontractMinimumprice, dBuyercontractMaximumprice=$dBuyercontractMaximumprice, eBuyercontractType=$eBuyercontractType, sBuyercontractContract=$sBuyercontractContract, dtBuyercontractDate=$dtBuyercontractDate, dtBuyercontractExpirationdate=$dtBuyercontractExpirationdate, bBuyercontractIsactive=$bBuyercontractIsactive, sBuyercontractBrokers=$sBuyercontractBrokers, sBuyercontractBuyers=$sBuyercontractBuyers]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -116,6 +128,11 @@ class BuyercontractListElement {
       json[r'dBuyercontractMinimumprice'] = this.dBuyercontractMinimumprice;
       json[r'dBuyercontractMaximumprice'] = this.dBuyercontractMaximumprice;
       json[r'eBuyercontractType'] = this.eBuyercontractType;
+    if (this.sBuyercontractContract != null) {
+      json[r'sBuyercontractContract'] = this.sBuyercontractContract;
+    } else {
+      json[r'sBuyercontractContract'] = null;
+    }
       json[r'dtBuyercontractDate'] = this.dtBuyercontractDate;
     if (this.dtBuyercontractExpirationdate != null) {
       json[r'dtBuyercontractExpirationdate'] = this.dtBuyercontractExpirationdate;
@@ -139,10 +156,28 @@ class BuyercontractListElement {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "BuyercontractListElement[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "BuyercontractListElement[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiBuyercontractID'), 'Required key "BuyercontractListElement[pkiBuyercontractID]" is missing from JSON.');
+        assert(json[r'pkiBuyercontractID'] != null, 'Required key "BuyercontractListElement[pkiBuyercontractID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiInscriptiontypeID'), 'Required key "BuyercontractListElement[fkiInscriptiontypeID]" is missing from JSON.');
+        assert(json[r'fkiInscriptiontypeID'] != null, 'Required key "BuyercontractListElement[fkiInscriptiontypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'sInscriptiontypeNameX'), 'Required key "BuyercontractListElement[sInscriptiontypeNameX]" is missing from JSON.');
+        assert(json[r'sInscriptiontypeNameX'] != null, 'Required key "BuyercontractListElement[sInscriptiontypeNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'eBuyercontractStep'), 'Required key "BuyercontractListElement[eBuyercontractStep]" is missing from JSON.');
+        assert(json[r'eBuyercontractStep'] != null, 'Required key "BuyercontractListElement[eBuyercontractStep]" has a null value in JSON.');
+        assert(json.containsKey(r'dBuyercontractMinimumprice'), 'Required key "BuyercontractListElement[dBuyercontractMinimumprice]" is missing from JSON.');
+        assert(json[r'dBuyercontractMinimumprice'] != null, 'Required key "BuyercontractListElement[dBuyercontractMinimumprice]" has a null value in JSON.');
+        assert(json.containsKey(r'dBuyercontractMaximumprice'), 'Required key "BuyercontractListElement[dBuyercontractMaximumprice]" is missing from JSON.');
+        assert(json[r'dBuyercontractMaximumprice'] != null, 'Required key "BuyercontractListElement[dBuyercontractMaximumprice]" has a null value in JSON.');
+        assert(json.containsKey(r'eBuyercontractType'), 'Required key "BuyercontractListElement[eBuyercontractType]" is missing from JSON.');
+        assert(json[r'eBuyercontractType'] != null, 'Required key "BuyercontractListElement[eBuyercontractType]" has a null value in JSON.');
+        assert(json.containsKey(r'dtBuyercontractDate'), 'Required key "BuyercontractListElement[dtBuyercontractDate]" is missing from JSON.');
+        assert(json[r'dtBuyercontractDate'] != null, 'Required key "BuyercontractListElement[dtBuyercontractDate]" has a null value in JSON.');
+        assert(json.containsKey(r'bBuyercontractIsactive'), 'Required key "BuyercontractListElement[bBuyercontractIsactive]" is missing from JSON.');
+        assert(json[r'bBuyercontractIsactive'] != null, 'Required key "BuyercontractListElement[bBuyercontractIsactive]" has a null value in JSON.');
+        assert(json.containsKey(r'sBuyercontractBrokers'), 'Required key "BuyercontractListElement[sBuyercontractBrokers]" is missing from JSON.');
+        assert(json[r'sBuyercontractBrokers'] != null, 'Required key "BuyercontractListElement[sBuyercontractBrokers]" has a null value in JSON.');
+        assert(json.containsKey(r'sBuyercontractBuyers'), 'Required key "BuyercontractListElement[sBuyercontractBuyers]" is missing from JSON.');
+        assert(json[r'sBuyercontractBuyers'] != null, 'Required key "BuyercontractListElement[sBuyercontractBuyers]" has a null value in JSON.');
         return true;
       }());
 
@@ -154,6 +189,7 @@ class BuyercontractListElement {
         dBuyercontractMinimumprice: mapValueOfType<String>(json, r'dBuyercontractMinimumprice')!,
         dBuyercontractMaximumprice: mapValueOfType<String>(json, r'dBuyercontractMaximumprice')!,
         eBuyercontractType: FieldEBuyercontractType.fromJson(json[r'eBuyercontractType'])!,
+        sBuyercontractContract: mapValueOfType<String>(json, r'sBuyercontractContract'),
         dtBuyercontractDate: mapValueOfType<String>(json, r'dtBuyercontractDate')!,
         dtBuyercontractExpirationdate: mapValueOfType<String>(json, r'dtBuyercontractExpirationdate'),
         bBuyercontractIsactive: mapValueOfType<bool>(json, r'bBuyercontractIsactive')!,

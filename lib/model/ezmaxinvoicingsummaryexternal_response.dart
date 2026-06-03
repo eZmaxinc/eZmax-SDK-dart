@@ -102,10 +102,12 @@ class EzmaxinvoicingsummaryexternalResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzmaxinvoicingsummaryexternalResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzmaxinvoicingsummaryexternalResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiBillingentityexternalID'), 'Required key "EzmaxinvoicingsummaryexternalResponse[fkiBillingentityexternalID]" is missing from JSON.');
+        assert(json[r'fkiBillingentityexternalID'] != null, 'Required key "EzmaxinvoicingsummaryexternalResponse[fkiBillingentityexternalID]" has a null value in JSON.');
+        assert(json.containsKey(r'sBillingentityexternalDescription'), 'Required key "EzmaxinvoicingsummaryexternalResponse[sBillingentityexternalDescription]" is missing from JSON.');
+        assert(json[r'sBillingentityexternalDescription'] != null, 'Required key "EzmaxinvoicingsummaryexternalResponse[sBillingentityexternalDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzmaxinvoicingsummaryexternalDescription'), 'Required key "EzmaxinvoicingsummaryexternalResponse[sEzmaxinvoicingsummaryexternalDescription]" is missing from JSON.');
+        assert(json[r'sEzmaxinvoicingsummaryexternalDescription'] != null, 'Required key "EzmaxinvoicingsummaryexternalResponse[sEzmaxinvoicingsummaryexternalDescription]" has a null value in JSON.');
         return true;
       }());
 

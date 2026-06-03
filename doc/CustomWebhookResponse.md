@@ -8,7 +8,7 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**pkiWebhookID** | **int** | The unique ID of the Webhook | 
+**pkiWebhookID** | **int** | The unique ID of the Webhook | [optional] 
 **fkiAuthenticationexternalID** | **int** | The unique ID of the Authenticationexternal | [optional] 
 **sWebhookDescription** | **String** | The description of the Webhook | 
 **fkiEzsignfoldertypeID** | **int** | The unique ID of the Ezsignfoldertype. | [optional] 
@@ -24,13 +24,14 @@ Name | Type | Description | Notes
 **bWebhookIssigned** | **bool** | Whether the requests will be signed or not | 
 **bWebhookSkipsslvalidation** | **bool** | Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use | 
 **sAuthenticationexternalDescription** | **String** | The description of the Authenticationexternal | [optional] 
-**objAudit** | [**CommonAudit**](CommonAudit.md) |  | 
+**objAudit** | [**CommonAudit**](CommonAudit.md) |  | [optional] 
 **sWebhookEvent** | **String** | The concatenated string to describe the Webhook event | [optional] 
 **sWebhookAuthentificationexternalerror** | **String** | Error message when token renewal failed or is not configured. Only if an Authenticationexternal is set. | [optional] 
 **aObjWebhookheader** | [**List<WebhookheaderResponseCompound>**](WebhookheaderResponseCompound.md) |  | [optional] [default to const []]
 **pksCustomerCode** | **String** | The customer code assigned to your account | 
 **bWebhookTest** | **bool** | Wheter the webhook received is a manual test or a real event | 
 **eWebhookEmittype** | **String** | Wheter the webhook received is a manual test or a real event | [optional] 
+**fkiEzmaxpartnerproductstagewebhookID** | **int** | The unique ID of the Ezmaxpartnerproductstagewebhook | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

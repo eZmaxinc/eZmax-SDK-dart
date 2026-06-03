@@ -136,10 +136,22 @@ class OtherincomeListElement {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "OtherincomeListElement[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "OtherincomeListElement[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiOtherincomeID'), 'Required key "OtherincomeListElement[pkiOtherincomeID]" is missing from JSON.');
+        assert(json[r'pkiOtherincomeID'] != null, 'Required key "OtherincomeListElement[pkiOtherincomeID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiOtherincometypeID'), 'Required key "OtherincomeListElement[fkiOtherincometypeID]" is missing from JSON.');
+        assert(json[r'fkiOtherincometypeID'] != null, 'Required key "OtherincomeListElement[fkiOtherincometypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'sOtherincometypeDescriptionX'), 'Required key "OtherincomeListElement[sOtherincometypeDescriptionX]" is missing from JSON.');
+        assert(json[r'sOtherincometypeDescriptionX'] != null, 'Required key "OtherincomeListElement[sOtherincometypeDescriptionX]" has a null value in JSON.');
+        assert(json.containsKey(r'sOtherincomeDescription'), 'Required key "OtherincomeListElement[sOtherincomeDescription]" is missing from JSON.');
+        assert(json[r'sOtherincomeDescription'] != null, 'Required key "OtherincomeListElement[sOtherincomeDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'eOtherincomeRemunerationtype'), 'Required key "OtherincomeListElement[eOtherincomeRemunerationtype]" is missing from JSON.');
+        assert(json[r'eOtherincomeRemunerationtype'] != null, 'Required key "OtherincomeListElement[eOtherincomeRemunerationtype]" has a null value in JSON.');
+        assert(json.containsKey(r'dOtherincomeRemunerationsubtotal'), 'Required key "OtherincomeListElement[dOtherincomeRemunerationsubtotal]" is missing from JSON.');
+        assert(json[r'dOtherincomeRemunerationsubtotal'] != null, 'Required key "OtherincomeListElement[dOtherincomeRemunerationsubtotal]" has a null value in JSON.');
+        assert(json.containsKey(r'dtOtherincomePaid'), 'Required key "OtherincomeListElement[dtOtherincomePaid]" is missing from JSON.');
+        assert(json[r'dtOtherincomePaid'] != null, 'Required key "OtherincomeListElement[dtOtherincomePaid]" has a null value in JSON.');
+        assert(json.containsKey(r'bOtherincomeIsactive'), 'Required key "OtherincomeListElement[bOtherincomeIsactive]" is missing from JSON.');
+        assert(json[r'bOtherincomeIsactive'] != null, 'Required key "OtherincomeListElement[bOtherincomeIsactive]" has a null value in JSON.');
         return true;
       }());
 

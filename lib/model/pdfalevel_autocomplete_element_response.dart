@@ -65,10 +65,12 @@ class PdfalevelAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "PdfalevelAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "PdfalevelAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiPdfalevelID'), 'Required key "PdfalevelAutocompleteElementResponse[pkiPdfalevelID]" is missing from JSON.');
+        assert(json[r'pkiPdfalevelID'] != null, 'Required key "PdfalevelAutocompleteElementResponse[pkiPdfalevelID]" has a null value in JSON.');
+        assert(json.containsKey(r'sPdfalevelName'), 'Required key "PdfalevelAutocompleteElementResponse[sPdfalevelName]" is missing from JSON.');
+        assert(json[r'sPdfalevelName'] != null, 'Required key "PdfalevelAutocompleteElementResponse[sPdfalevelName]" has a null value in JSON.');
+        assert(json.containsKey(r'bPdfalevelIsactive'), 'Required key "PdfalevelAutocompleteElementResponse[bPdfalevelIsactive]" is missing from JSON.');
+        assert(json[r'bPdfalevelIsactive'] != null, 'Required key "PdfalevelAutocompleteElementResponse[bPdfalevelIsactive]" has a null value in JSON.');
         return true;
       }());
 

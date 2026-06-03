@@ -105,10 +105,14 @@ class CustomNotificationsubsectiongetnotificationtestsResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CustomNotificationsubsectiongetnotificationtestsResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CustomNotificationsubsectiongetnotificationtestsResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiNotificationsubsectionID'), 'Required key "CustomNotificationsubsectiongetnotificationtestsResponse[pkiNotificationsubsectionID]" is missing from JSON.');
+        assert(json[r'pkiNotificationsubsectionID'] != null, 'Required key "CustomNotificationsubsectiongetnotificationtestsResponse[pkiNotificationsubsectionID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiNotificationsectionID'), 'Required key "CustomNotificationsubsectiongetnotificationtestsResponse[fkiNotificationsectionID]" is missing from JSON.');
+        assert(json[r'fkiNotificationsectionID'] != null, 'Required key "CustomNotificationsubsectiongetnotificationtestsResponse[fkiNotificationsectionID]" has a null value in JSON.');
+        assert(json.containsKey(r'sNotificationsubsectionNameX'), 'Required key "CustomNotificationsubsectiongetnotificationtestsResponse[sNotificationsubsectionNameX]" is missing from JSON.');
+        assert(json[r'sNotificationsubsectionNameX'] != null, 'Required key "CustomNotificationsubsectiongetnotificationtestsResponse[sNotificationsubsectionNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objNotificationtest'), 'Required key "CustomNotificationsubsectiongetnotificationtestsResponse[a_objNotificationtest]" is missing from JSON.');
+        assert(json[r'a_objNotificationtest'] != null, 'Required key "CustomNotificationsubsectiongetnotificationtestsResponse[a_objNotificationtest]" has a null value in JSON.');
         return true;
       }());
 

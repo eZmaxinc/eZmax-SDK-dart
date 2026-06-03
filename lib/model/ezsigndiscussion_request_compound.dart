@@ -103,10 +103,16 @@ class EzsigndiscussionRequestCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigndiscussionRequestCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigndiscussionRequestCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiEzsigndocumentID'), 'Required key "EzsigndiscussionRequestCompound[fkiEzsigndocumentID]" is missing from JSON.');
+        assert(json[r'fkiEzsigndocumentID'] != null, 'Required key "EzsigndiscussionRequestCompound[fkiEzsigndocumentID]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigndiscussionPagenumber'), 'Required key "EzsigndiscussionRequestCompound[iEzsigndiscussionPagenumber]" is missing from JSON.');
+        assert(json[r'iEzsigndiscussionPagenumber'] != null, 'Required key "EzsigndiscussionRequestCompound[iEzsigndiscussionPagenumber]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigndiscussionX'), 'Required key "EzsigndiscussionRequestCompound[iEzsigndiscussionX]" is missing from JSON.');
+        assert(json[r'iEzsigndiscussionX'] != null, 'Required key "EzsigndiscussionRequestCompound[iEzsigndiscussionX]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigndiscussionY'), 'Required key "EzsigndiscussionRequestCompound[iEzsigndiscussionY]" is missing from JSON.');
+        assert(json[r'iEzsigndiscussionY'] != null, 'Required key "EzsigndiscussionRequestCompound[iEzsigndiscussionY]" has a null value in JSON.');
+        assert(json.containsKey(r'objDiscussion'), 'Required key "EzsigndiscussionRequestCompound[objDiscussion]" is missing from JSON.');
+        assert(json[r'objDiscussion'] != null, 'Required key "EzsigndiscussionRequestCompound[objDiscussion]" has a null value in JSON.');
         return true;
       }());
 

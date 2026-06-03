@@ -112,10 +112,10 @@ class EzsignbulksendsignermappingRequestCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignbulksendsignermappingRequestCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignbulksendsignermappingRequestCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiEzsignbulksendID'), 'Required key "EzsignbulksendsignermappingRequestCompound[fkiEzsignbulksendID]" is missing from JSON.');
+        assert(json[r'fkiEzsignbulksendID'] != null, 'Required key "EzsignbulksendsignermappingRequestCompound[fkiEzsignbulksendID]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsignbulksendsignermappingDescription'), 'Required key "EzsignbulksendsignermappingRequestCompound[sEzsignbulksendsignermappingDescription]" is missing from JSON.');
+        assert(json[r'sEzsignbulksendsignermappingDescription'] != null, 'Required key "EzsignbulksendsignermappingRequestCompound[sEzsignbulksendsignermappingDescription]" has a null value in JSON.');
         return true;
       }());
 

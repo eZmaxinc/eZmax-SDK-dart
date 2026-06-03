@@ -47,10 +47,8 @@ class EzmaxinvoicingGetObjectV2ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzmaxinvoicingGetObjectV2ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzmaxinvoicingGetObjectV2ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'objEzmaxinvoicing'), 'Required key "EzmaxinvoicingGetObjectV2ResponseMPayload[objEzmaxinvoicing]" is missing from JSON.');
+        assert(json[r'objEzmaxinvoicing'] != null, 'Required key "EzmaxinvoicingGetObjectV2ResponseMPayload[objEzmaxinvoicing]" has a null value in JSON.');
         return true;
       }());
 

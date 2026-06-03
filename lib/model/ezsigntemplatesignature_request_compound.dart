@@ -671,10 +671,16 @@ class EzsigntemplatesignatureRequestCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplatesignatureRequestCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplatesignatureRequestCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiEzsigntemplatedocumentID'), 'Required key "EzsigntemplatesignatureRequestCompound[fkiEzsigntemplatedocumentID]" is missing from JSON.');
+        assert(json[r'fkiEzsigntemplatedocumentID'] != null, 'Required key "EzsigntemplatesignatureRequestCompound[fkiEzsigntemplatedocumentID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiEzsigntemplatesignerID'), 'Required key "EzsigntemplatesignatureRequestCompound[fkiEzsigntemplatesignerID]" is missing from JSON.');
+        assert(json[r'fkiEzsigntemplatesignerID'] != null, 'Required key "EzsigntemplatesignatureRequestCompound[fkiEzsigntemplatesignerID]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigntemplatedocumentpagePagenumber'), 'Required key "EzsigntemplatesignatureRequestCompound[iEzsigntemplatedocumentpagePagenumber]" is missing from JSON.');
+        assert(json[r'iEzsigntemplatedocumentpagePagenumber'] != null, 'Required key "EzsigntemplatesignatureRequestCompound[iEzsigntemplatedocumentpagePagenumber]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigntemplatesignatureStep'), 'Required key "EzsigntemplatesignatureRequestCompound[iEzsigntemplatesignatureStep]" is missing from JSON.');
+        assert(json[r'iEzsigntemplatesignatureStep'] != null, 'Required key "EzsigntemplatesignatureRequestCompound[iEzsigntemplatesignatureStep]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsigntemplatesignatureType'), 'Required key "EzsigntemplatesignatureRequestCompound[eEzsigntemplatesignatureType]" is missing from JSON.');
+        assert(json[r'eEzsigntemplatesignatureType'] != null, 'Required key "EzsigntemplatesignatureRequestCompound[eEzsigntemplatesignatureType]" has a null value in JSON.');
         return true;
       }());
 

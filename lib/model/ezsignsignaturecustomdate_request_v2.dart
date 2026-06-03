@@ -81,10 +81,12 @@ class EzsignsignaturecustomdateRequestV2 {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignsignaturecustomdateRequestV2[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignsignaturecustomdateRequestV2[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'iEzsignsignaturecustomdateOffsetx'), 'Required key "EzsignsignaturecustomdateRequestV2[iEzsignsignaturecustomdateOffsetx]" is missing from JSON.');
+        assert(json[r'iEzsignsignaturecustomdateOffsetx'] != null, 'Required key "EzsignsignaturecustomdateRequestV2[iEzsignsignaturecustomdateOffsetx]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignsignaturecustomdateOffsety'), 'Required key "EzsignsignaturecustomdateRequestV2[iEzsignsignaturecustomdateOffsety]" is missing from JSON.');
+        assert(json[r'iEzsignsignaturecustomdateOffsety'] != null, 'Required key "EzsignsignaturecustomdateRequestV2[iEzsignsignaturecustomdateOffsety]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsignsignaturecustomdateFormat'), 'Required key "EzsignsignaturecustomdateRequestV2[sEzsignsignaturecustomdateFormat]" is missing from JSON.');
+        assert(json[r'sEzsignsignaturecustomdateFormat'] != null, 'Required key "EzsignsignaturecustomdateRequestV2[sEzsignsignaturecustomdateFormat]" has a null value in JSON.');
         return true;
       }());
 

@@ -79,10 +79,16 @@ class NotificationtestResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "NotificationtestResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "NotificationtestResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiNotificationtestID'), 'Required key "NotificationtestResponse[pkiNotificationtestID]" is missing from JSON.');
+        assert(json[r'pkiNotificationtestID'] != null, 'Required key "NotificationtestResponse[pkiNotificationtestID]" has a null value in JSON.');
+        assert(json.containsKey(r'objNotificationtestName'), 'Required key "NotificationtestResponse[objNotificationtestName]" is missing from JSON.');
+        assert(json[r'objNotificationtestName'] != null, 'Required key "NotificationtestResponse[objNotificationtestName]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiNotificationsubsectionID'), 'Required key "NotificationtestResponse[fkiNotificationsubsectionID]" is missing from JSON.');
+        assert(json[r'fkiNotificationsubsectionID'] != null, 'Required key "NotificationtestResponse[fkiNotificationsubsectionID]" has a null value in JSON.');
+        assert(json.containsKey(r'sNotificationtestFunction'), 'Required key "NotificationtestResponse[sNotificationtestFunction]" is missing from JSON.');
+        assert(json[r'sNotificationtestFunction'] != null, 'Required key "NotificationtestResponse[sNotificationtestFunction]" has a null value in JSON.');
+        assert(json.containsKey(r'sNotificationtestNameX'), 'Required key "NotificationtestResponse[sNotificationtestNameX]" is missing from JSON.');
+        assert(json[r'sNotificationtestNameX'] != null, 'Required key "NotificationtestResponse[sNotificationtestNameX]" has a null value in JSON.');
         return true;
       }());
 

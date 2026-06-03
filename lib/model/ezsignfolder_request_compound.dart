@@ -156,10 +156,12 @@ class EzsignfolderRequestCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignfolderRequestCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignfolderRequestCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiEzsignfoldertypeID'), 'Required key "EzsignfolderRequestCompound[fkiEzsignfoldertypeID]" is missing from JSON.');
+        assert(json[r'fkiEzsignfoldertypeID'] != null, 'Required key "EzsignfolderRequestCompound[fkiEzsignfoldertypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsignfolderDescription'), 'Required key "EzsignfolderRequestCompound[sEzsignfolderDescription]" is missing from JSON.');
+        assert(json[r'sEzsignfolderDescription'] != null, 'Required key "EzsignfolderRequestCompound[sEzsignfolderDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsignfolderSendreminderfrequency'), 'Required key "EzsignfolderRequestCompound[eEzsignfolderSendreminderfrequency]" is missing from JSON.');
+        assert(json[r'eEzsignfolderSendreminderfrequency'] != null, 'Required key "EzsignfolderRequestCompound[eEzsignfolderSendreminderfrequency]" has a null value in JSON.');
         return true;
       }());
 

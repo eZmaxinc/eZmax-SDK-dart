@@ -562,6 +562,63 @@ class ObjectUserApi {
     return null;
   }
 
+  /// Returns the Ezmaxcustomeruser for the User
+  ///
+  /// Returns the Ezmaxcustomeruser for the User
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiUserID (required):
+  Future<Response> userGetEzmaxcustomeruserV1WithHttpInfo(int pkiUserID,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/user/{pkiUserID}/getEzmaxcustomeruser'
+      .replaceAll('{pkiUserID}', pkiUserID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Returns the Ezmaxcustomeruser for the User
+  ///
+  /// Returns the Ezmaxcustomeruser for the User
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiUserID (required):
+  Future<UserGetEzmaxcustomeruserV1Response?> userGetEzmaxcustomeruserV1(int pkiUserID,) async {
+    final response = await userGetEzmaxcustomeruserV1WithHttpInfo(pkiUserID,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'UserGetEzmaxcustomeruserV1Response',) as UserGetEzmaxcustomeruserV1Response;
+    
+    }
+    return null;
+  }
+
   /// Retrieve User list
   ///
   /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eUserType | AgentBroker<br>Assistant<br>Employee<br>EzsignUser<br>Normal | | eUserOrigin | BuiltIn<br>External | | eUserEzsignaccess | No<br>PaidByOffice<br>PerDocument<br>Prepaid |
@@ -919,6 +976,67 @@ class ObjectUserApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'UserGetUsergroupsV1Response',) as UserGetUsergroupsV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Impersonate the user
+  ///
+  /// Using this endpoint, you can impersonate the user.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiUserID (required):
+  ///
+  /// * [UserImpersonateV1Request] userImpersonateV1Request (required):
+  Future<Response> userImpersonateV1WithHttpInfo(int pkiUserID, UserImpersonateV1Request userImpersonateV1Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/user/{pkiUserID}/impersonate'
+      .replaceAll('{pkiUserID}', pkiUserID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = userImpersonateV1Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Impersonate the user
+  ///
+  /// Using this endpoint, you can impersonate the user.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiUserID (required):
+  ///
+  /// * [UserImpersonateV1Request] userImpersonateV1Request (required):
+  Future<UserImpersonateV1Response?> userImpersonateV1(int pkiUserID, UserImpersonateV1Request userImpersonateV1Request,) async {
+    final response = await userImpersonateV1WithHttpInfo(pkiUserID, userImpersonateV1Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'UserImpersonateV1Response',) as UserImpersonateV1Response;
     
     }
     return null;

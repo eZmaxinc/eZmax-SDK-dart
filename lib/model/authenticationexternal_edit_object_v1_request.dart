@@ -47,10 +47,8 @@ class AuthenticationexternalEditObjectV1Request {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "AuthenticationexternalEditObjectV1Request[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "AuthenticationexternalEditObjectV1Request[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'objAuthenticationexternal'), 'Required key "AuthenticationexternalEditObjectV1Request[objAuthenticationexternal]" is missing from JSON.');
+        assert(json[r'objAuthenticationexternal'] != null, 'Required key "AuthenticationexternalEditObjectV1Request[objAuthenticationexternal]" has a null value in JSON.');
         return true;
       }());
 

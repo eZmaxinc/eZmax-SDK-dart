@@ -116,10 +116,12 @@ class PaymentgatewayResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "PaymentgatewayResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "PaymentgatewayResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiPaymentgatewayID'), 'Required key "PaymentgatewayResponseCompound[pkiPaymentgatewayID]" is missing from JSON.');
+        assert(json[r'pkiPaymentgatewayID'] != null, 'Required key "PaymentgatewayResponseCompound[pkiPaymentgatewayID]" has a null value in JSON.');
+        assert(json.containsKey(r'ePaymentgatewayProcessor'), 'Required key "PaymentgatewayResponseCompound[ePaymentgatewayProcessor]" is missing from JSON.');
+        assert(json[r'ePaymentgatewayProcessor'] != null, 'Required key "PaymentgatewayResponseCompound[ePaymentgatewayProcessor]" has a null value in JSON.');
+        assert(json.containsKey(r'objPaymentgatewayDescription'), 'Required key "PaymentgatewayResponseCompound[objPaymentgatewayDescription]" is missing from JSON.');
+        assert(json[r'objPaymentgatewayDescription'] != null, 'Required key "PaymentgatewayResponseCompound[objPaymentgatewayDescription]" has a null value in JSON.');
         return true;
       }());
 

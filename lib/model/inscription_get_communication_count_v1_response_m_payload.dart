@@ -48,10 +48,8 @@ class InscriptionGetCommunicationCountV1ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "InscriptionGetCommunicationCountV1ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "InscriptionGetCommunicationCountV1ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'iCommunicationCount'), 'Required key "InscriptionGetCommunicationCountV1ResponseMPayload[iCommunicationCount]" is missing from JSON.');
+        assert(json[r'iCommunicationCount'] != null, 'Required key "InscriptionGetCommunicationCountV1ResponseMPayload[iCommunicationCount]" has a null value in JSON.');
         return true;
       }());
 

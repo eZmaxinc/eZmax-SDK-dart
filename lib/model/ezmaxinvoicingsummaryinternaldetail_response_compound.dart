@@ -153,10 +153,26 @@ class EzmaxinvoicingsummaryinternaldetailResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzmaxinvoicingsummaryinternaldetailResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzmaxinvoicingsummaryinternaldetailResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiEzmaxproductID'), 'Required key "EzmaxinvoicingsummaryinternaldetailResponseCompound[fkiEzmaxproductID]" is missing from JSON.');
+        assert(json[r'fkiEzmaxproductID'] != null, 'Required key "EzmaxinvoicingsummaryinternaldetailResponseCompound[fkiEzmaxproductID]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzmaxproductDescriptionX'), 'Required key "EzmaxinvoicingsummaryinternaldetailResponseCompound[sEzmaxproductDescriptionX]" is missing from JSON.');
+        assert(json[r'sEzmaxproductDescriptionX'] != null, 'Required key "EzmaxinvoicingsummaryinternaldetailResponseCompound[sEzmaxproductDescriptionX]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiBillingentityexternalID'), 'Required key "EzmaxinvoicingsummaryinternaldetailResponseCompound[fkiBillingentityexternalID]" is missing from JSON.');
+        assert(json[r'fkiBillingentityexternalID'] != null, 'Required key "EzmaxinvoicingsummaryinternaldetailResponseCompound[fkiBillingentityexternalID]" has a null value in JSON.');
+        assert(json.containsKey(r'sBillingentityexternalDescription'), 'Required key "EzmaxinvoicingsummaryinternaldetailResponseCompound[sBillingentityexternalDescription]" is missing from JSON.');
+        assert(json[r'sBillingentityexternalDescription'] != null, 'Required key "EzmaxinvoicingsummaryinternaldetailResponseCompound[sBillingentityexternalDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'dEzmaxinvoicingsummaryinternaldetailCountreal'), 'Required key "EzmaxinvoicingsummaryinternaldetailResponseCompound[dEzmaxinvoicingsummaryinternaldetailCountreal]" is missing from JSON.');
+        assert(json[r'dEzmaxinvoicingsummaryinternaldetailCountreal'] != null, 'Required key "EzmaxinvoicingsummaryinternaldetailResponseCompound[dEzmaxinvoicingsummaryinternaldetailCountreal]" has a null value in JSON.');
+        assert(json.containsKey(r'dEzmaxinvoicingsummaryinternaldetailSubtotal'), 'Required key "EzmaxinvoicingsummaryinternaldetailResponseCompound[dEzmaxinvoicingsummaryinternaldetailSubtotal]" is missing from JSON.');
+        assert(json[r'dEzmaxinvoicingsummaryinternaldetailSubtotal'] != null, 'Required key "EzmaxinvoicingsummaryinternaldetailResponseCompound[dEzmaxinvoicingsummaryinternaldetailSubtotal]" has a null value in JSON.');
+        assert(json.containsKey(r'dEzmaxinvoicingsummaryinternaldetailRebate'), 'Required key "EzmaxinvoicingsummaryinternaldetailResponseCompound[dEzmaxinvoicingsummaryinternaldetailRebate]" is missing from JSON.');
+        assert(json[r'dEzmaxinvoicingsummaryinternaldetailRebate'] != null, 'Required key "EzmaxinvoicingsummaryinternaldetailResponseCompound[dEzmaxinvoicingsummaryinternaldetailRebate]" has a null value in JSON.');
+        assert(json.containsKey(r'dEzmaxinvoicingsummaryinternaldetailTotal'), 'Required key "EzmaxinvoicingsummaryinternaldetailResponseCompound[dEzmaxinvoicingsummaryinternaldetailTotal]" is missing from JSON.');
+        assert(json[r'dEzmaxinvoicingsummaryinternaldetailTotal'] != null, 'Required key "EzmaxinvoicingsummaryinternaldetailResponseCompound[dEzmaxinvoicingsummaryinternaldetailTotal]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzmaxinvoicingsummaryinternaldetailAdjustment'), 'Required key "EzmaxinvoicingsummaryinternaldetailResponseCompound[bEzmaxinvoicingsummaryinternaldetailAdjustment]" is missing from JSON.');
+        assert(json[r'bEzmaxinvoicingsummaryinternaldetailAdjustment'] != null, 'Required key "EzmaxinvoicingsummaryinternaldetailResponseCompound[bEzmaxinvoicingsummaryinternaldetailAdjustment]" has a null value in JSON.');
+        assert(json.containsKey(r'tEzmaxproductHelpX'), 'Required key "EzmaxinvoicingsummaryinternaldetailResponseCompound[tEzmaxproductHelpX]" is missing from JSON.');
+        assert(json[r'tEzmaxproductHelpX'] != null, 'Required key "EzmaxinvoicingsummaryinternaldetailResponseCompound[tEzmaxproductHelpX]" has a null value in JSON.');
         return true;
       }());
 

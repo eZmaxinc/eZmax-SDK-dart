@@ -198,10 +198,10 @@ class CustomCommunicationsenderResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CustomCommunicationsenderResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CustomCommunicationsenderResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'eCommunicationsenderObjecttype'), 'Required key "CustomCommunicationsenderResponse[eCommunicationsenderObjecttype]" is missing from JSON.');
+        assert(json[r'eCommunicationsenderObjecttype'] != null, 'Required key "CustomCommunicationsenderResponse[eCommunicationsenderObjecttype]" has a null value in JSON.');
+        assert(json.containsKey(r'objContactName'), 'Required key "CustomCommunicationsenderResponse[objContactName]" is missing from JSON.');
+        assert(json[r'objContactName'] != null, 'Required key "CustomCommunicationsenderResponse[objContactName]" has a null value in JSON.');
         return true;
       }());
 

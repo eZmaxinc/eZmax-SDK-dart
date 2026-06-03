@@ -48,10 +48,8 @@ class SystemconfigurationtypeGetAutocompleteV2ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "SystemconfigurationtypeGetAutocompleteV2ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "SystemconfigurationtypeGetAutocompleteV2ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_objSystemconfigurationtype'), 'Required key "SystemconfigurationtypeGetAutocompleteV2ResponseMPayload[a_objSystemconfigurationtype]" is missing from JSON.');
+        assert(json[r'a_objSystemconfigurationtype'] != null, 'Required key "SystemconfigurationtypeGetAutocompleteV2ResponseMPayload[a_objSystemconfigurationtype]" has a null value in JSON.');
         return true;
       }());
 

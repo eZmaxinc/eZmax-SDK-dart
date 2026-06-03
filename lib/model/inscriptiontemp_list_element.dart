@@ -102,10 +102,18 @@ class InscriptiontempListElement {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "InscriptiontempListElement[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "InscriptiontempListElement[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiInscriptiontempID'), 'Required key "InscriptiontempListElement[pkiInscriptiontempID]" is missing from JSON.');
+        assert(json[r'pkiInscriptiontempID'] != null, 'Required key "InscriptiontempListElement[pkiInscriptiontempID]" has a null value in JSON.');
+        assert(json.containsKey(r'eInscriptiontempStatus'), 'Required key "InscriptiontempListElement[eInscriptiontempStatus]" is missing from JSON.');
+        assert(json[r'eInscriptiontempStatus'] != null, 'Required key "InscriptiontempListElement[eInscriptiontempStatus]" has a null value in JSON.');
+        assert(json.containsKey(r'sInscriptiontempDescription'), 'Required key "InscriptiontempListElement[sInscriptiontempDescription]" is missing from JSON.');
+        assert(json[r'sInscriptiontempDescription'] != null, 'Required key "InscriptiontempListElement[sInscriptiontempDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'bInscriptiontempIsactive'), 'Required key "InscriptiontempListElement[bInscriptiontempIsactive]" is missing from JSON.');
+        assert(json[r'bInscriptiontempIsactive'] != null, 'Required key "InscriptiontempListElement[bInscriptiontempIsactive]" has a null value in JSON.');
+        assert(json.containsKey(r'dtCreatedDate'), 'Required key "InscriptiontempListElement[dtCreatedDate]" is missing from JSON.');
+        assert(json[r'dtCreatedDate'] != null, 'Required key "InscriptiontempListElement[dtCreatedDate]" has a null value in JSON.');
+        assert(json.containsKey(r'dtModifiedDate'), 'Required key "InscriptiontempListElement[dtModifiedDate]" is missing from JSON.');
+        assert(json[r'dtModifiedDate'] != null, 'Required key "InscriptiontempListElement[dtModifiedDate]" has a null value in JSON.');
         return true;
       }());
 

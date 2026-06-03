@@ -63,10 +63,8 @@ class EzsignfoldersignerassociationForceDisconnectV1Response {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignfoldersignerassociationForceDisconnectV1Response[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignfoldersignerassociationForceDisconnectV1Response[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'objDebugPayload'), 'Required key "EzsignfoldersignerassociationForceDisconnectV1Response[objDebugPayload]" is missing from JSON.');
+        assert(json[r'objDebugPayload'] != null, 'Required key "EzsignfoldersignerassociationForceDisconnectV1Response[objDebugPayload]" has a null value in JSON.');
         return true;
       }());
 

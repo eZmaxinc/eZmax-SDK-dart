@@ -15,6 +15,7 @@ class EzsigntemplateglobaldocumentResponse {
   EzsigntemplateglobaldocumentResponse({
     required this.pkiEzsigntemplateglobaldocumentID,
     required this.sEzsigntemplateglobaldocumentName,
+    required this.eEzsigntemplateglobaldocumentAcceptationtype,
     required this.iEzsigntemplateglobaldocumentPagetotal,
     required this.iEzsigntemplateglobaldocumentSignaturetotal,
   });
@@ -26,6 +27,8 @@ class EzsigntemplateglobaldocumentResponse {
 
   /// The name of the Ezsigntemplateglobaldocument.
   String sEzsigntemplateglobaldocumentName;
+
+  FieldEEzsigntemplateglobaldocumentAcceptationtype eEzsigntemplateglobaldocumentAcceptationtype;
 
   /// The number of pages in the Ezsigntemplateglobaldocument.
   ///
@@ -39,6 +42,7 @@ class EzsigntemplateglobaldocumentResponse {
   bool operator ==(Object other) => identical(this, other) || other is EzsigntemplateglobaldocumentResponse &&
     other.pkiEzsigntemplateglobaldocumentID == pkiEzsigntemplateglobaldocumentID &&
     other.sEzsigntemplateglobaldocumentName == sEzsigntemplateglobaldocumentName &&
+    other.eEzsigntemplateglobaldocumentAcceptationtype == eEzsigntemplateglobaldocumentAcceptationtype &&
     other.iEzsigntemplateglobaldocumentPagetotal == iEzsigntemplateglobaldocumentPagetotal &&
     other.iEzsigntemplateglobaldocumentSignaturetotal == iEzsigntemplateglobaldocumentSignaturetotal;
 
@@ -47,16 +51,18 @@ class EzsigntemplateglobaldocumentResponse {
     // ignore: unnecessary_parenthesis
     (pkiEzsigntemplateglobaldocumentID.hashCode) +
     (sEzsigntemplateglobaldocumentName.hashCode) +
+    (eEzsigntemplateglobaldocumentAcceptationtype.hashCode) +
     (iEzsigntemplateglobaldocumentPagetotal.hashCode) +
     (iEzsigntemplateglobaldocumentSignaturetotal.hashCode);
 
   @override
-  String toString() => 'EzsigntemplateglobaldocumentResponse[pkiEzsigntemplateglobaldocumentID=$pkiEzsigntemplateglobaldocumentID, sEzsigntemplateglobaldocumentName=$sEzsigntemplateglobaldocumentName, iEzsigntemplateglobaldocumentPagetotal=$iEzsigntemplateglobaldocumentPagetotal, iEzsigntemplateglobaldocumentSignaturetotal=$iEzsigntemplateglobaldocumentSignaturetotal]';
+  String toString() => 'EzsigntemplateglobaldocumentResponse[pkiEzsigntemplateglobaldocumentID=$pkiEzsigntemplateglobaldocumentID, sEzsigntemplateglobaldocumentName=$sEzsigntemplateglobaldocumentName, eEzsigntemplateglobaldocumentAcceptationtype=$eEzsigntemplateglobaldocumentAcceptationtype, iEzsigntemplateglobaldocumentPagetotal=$iEzsigntemplateglobaldocumentPagetotal, iEzsigntemplateglobaldocumentSignaturetotal=$iEzsigntemplateglobaldocumentSignaturetotal]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiEzsigntemplateglobaldocumentID'] = this.pkiEzsigntemplateglobaldocumentID;
       json[r'sEzsigntemplateglobaldocumentName'] = this.sEzsigntemplateglobaldocumentName;
+      json[r'eEzsigntemplateglobaldocumentAcceptationtype'] = this.eEzsigntemplateglobaldocumentAcceptationtype;
       json[r'iEzsigntemplateglobaldocumentPagetotal'] = this.iEzsigntemplateglobaldocumentPagetotal;
       json[r'iEzsigntemplateglobaldocumentSignaturetotal'] = this.iEzsigntemplateglobaldocumentSignaturetotal;
     return json;
@@ -73,16 +79,23 @@ class EzsigntemplateglobaldocumentResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplateglobaldocumentResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplateglobaldocumentResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsigntemplateglobaldocumentID'), 'Required key "EzsigntemplateglobaldocumentResponse[pkiEzsigntemplateglobaldocumentID]" is missing from JSON.');
+        assert(json[r'pkiEzsigntemplateglobaldocumentID'] != null, 'Required key "EzsigntemplateglobaldocumentResponse[pkiEzsigntemplateglobaldocumentID]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsigntemplateglobaldocumentName'), 'Required key "EzsigntemplateglobaldocumentResponse[sEzsigntemplateglobaldocumentName]" is missing from JSON.');
+        assert(json[r'sEzsigntemplateglobaldocumentName'] != null, 'Required key "EzsigntemplateglobaldocumentResponse[sEzsigntemplateglobaldocumentName]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsigntemplateglobaldocumentAcceptationtype'), 'Required key "EzsigntemplateglobaldocumentResponse[eEzsigntemplateglobaldocumentAcceptationtype]" is missing from JSON.');
+        assert(json[r'eEzsigntemplateglobaldocumentAcceptationtype'] != null, 'Required key "EzsigntemplateglobaldocumentResponse[eEzsigntemplateglobaldocumentAcceptationtype]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigntemplateglobaldocumentPagetotal'), 'Required key "EzsigntemplateglobaldocumentResponse[iEzsigntemplateglobaldocumentPagetotal]" is missing from JSON.');
+        assert(json[r'iEzsigntemplateglobaldocumentPagetotal'] != null, 'Required key "EzsigntemplateglobaldocumentResponse[iEzsigntemplateglobaldocumentPagetotal]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigntemplateglobaldocumentSignaturetotal'), 'Required key "EzsigntemplateglobaldocumentResponse[iEzsigntemplateglobaldocumentSignaturetotal]" is missing from JSON.');
+        assert(json[r'iEzsigntemplateglobaldocumentSignaturetotal'] != null, 'Required key "EzsigntemplateglobaldocumentResponse[iEzsigntemplateglobaldocumentSignaturetotal]" has a null value in JSON.');
         return true;
       }());
 
       return EzsigntemplateglobaldocumentResponse(
         pkiEzsigntemplateglobaldocumentID: mapValueOfType<int>(json, r'pkiEzsigntemplateglobaldocumentID')!,
         sEzsigntemplateglobaldocumentName: mapValueOfType<String>(json, r'sEzsigntemplateglobaldocumentName')!,
+        eEzsigntemplateglobaldocumentAcceptationtype: FieldEEzsigntemplateglobaldocumentAcceptationtype.fromJson(json[r'eEzsigntemplateglobaldocumentAcceptationtype'])!,
         iEzsigntemplateglobaldocumentPagetotal: mapValueOfType<int>(json, r'iEzsigntemplateglobaldocumentPagetotal')!,
         iEzsigntemplateglobaldocumentSignaturetotal: mapValueOfType<int>(json, r'iEzsigntemplateglobaldocumentSignaturetotal')!,
       );
@@ -134,6 +147,7 @@ class EzsigntemplateglobaldocumentResponse {
   static const requiredKeys = <String>{
     'pkiEzsigntemplateglobaldocumentID',
     'sEzsigntemplateglobaldocumentName',
+    'eEzsigntemplateglobaldocumentAcceptationtype',
     'iEzsigntemplateglobaldocumentPagetotal',
     'iEzsigntemplateglobaldocumentSignaturetotal',
   };

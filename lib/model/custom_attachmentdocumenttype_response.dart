@@ -53,10 +53,10 @@ class CustomAttachmentdocumenttypeResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CustomAttachmentdocumenttypeResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CustomAttachmentdocumenttypeResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'eAttachmentDocumenttype'), 'Required key "CustomAttachmentdocumenttypeResponse[eAttachmentDocumenttype]" is missing from JSON.');
+        assert(json[r'eAttachmentDocumenttype'] != null, 'Required key "CustomAttachmentdocumenttypeResponse[eAttachmentDocumenttype]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objAttachment'), 'Required key "CustomAttachmentdocumenttypeResponse[a_objAttachment]" is missing from JSON.');
+        assert(json[r'a_objAttachment'] != null, 'Required key "CustomAttachmentdocumenttypeResponse[a_objAttachment]" has a null value in JSON.');
         return true;
       }());
 

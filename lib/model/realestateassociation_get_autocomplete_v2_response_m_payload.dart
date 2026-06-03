@@ -48,10 +48,8 @@ class RealestateassociationGetAutocompleteV2ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "RealestateassociationGetAutocompleteV2ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "RealestateassociationGetAutocompleteV2ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_objRealestateassociation'), 'Required key "RealestateassociationGetAutocompleteV2ResponseMPayload[a_objRealestateassociation]" is missing from JSON.');
+        assert(json[r'a_objRealestateassociation'] != null, 'Required key "RealestateassociationGetAutocompleteV2ResponseMPayload[a_objRealestateassociation]" has a null value in JSON.');
         return true;
       }());
 

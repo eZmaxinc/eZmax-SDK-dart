@@ -18,6 +18,7 @@ class UserResponse {
     this.fkiBrokerID,
     this.fkiAssistantID,
     this.fkiEmployeeID,
+    this.fkiEzmaxpartnerID,
     required this.fkiCompanyIDDefault,
     required this.sCompanyNameX,
     required this.fkiDepartmentIDDefault,
@@ -46,10 +47,12 @@ class UserResponse {
     this.dtUserPasswordchanged,
     this.dtUserEzsignprepaidexpiration,
     required this.bUserIsactive,
+    this.bUserSuspended,
     this.bUserValidatebyadministration,
     this.bUserValidatebydirector,
     this.bUserAttachmentautoverified,
     required this.bUserChangepassword,
+    this.bUserEzsigntemplaterolegrouping,
     required this.objAudit,
   });
 
@@ -101,6 +104,17 @@ class UserResponse {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   int? fkiEmployeeID;
+
+  /// The unique ID of the Ezmaxpartner
+  ///
+  /// Minimum value: 1
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiEzmaxpartnerID;
 
   /// The unique ID of the Company
   ///
@@ -162,7 +176,7 @@ class UserResponse {
   ///
   PhoneResponseCompound? objPhoneSMS;
 
-  /// The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father's middle name| |15|Your mother's maiden name| |16|Name of your eldest child| |17|Your spouse's middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat's name| |22|Date of Birth (YYYY-MM-DD)| |22|Secret Code| |22|Your reference code|
+  /// The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father's middle name| |15|Your mother's maiden name| |16|Name of your eldest child| |17|Your spouse's middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat's name| |22|Date of Birth (YYYY-MM-DD)| |23|Secret Code| |24|Your reference code| |25|What are the last 4 digits of your SIN| |26|What is your postal code| |27|What is your employee number| |28|What is your manager’s first name| |29|What is your file number| |30|What is your client/member number| |31|What is your license number| |32|What are the last 4 digits of your phone number| |33|What is your student number|
   ///
   /// Minimum value: 0
   ///
@@ -249,6 +263,15 @@ class UserResponse {
   /// Whether the User is active or not
   bool bUserIsactive;
 
+  /// Whether the User is suspended or not
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bUserSuspended;
+
   /// Whether if the transactions in which the User is implicated must be validated by administrative personnel or not
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -279,6 +302,15 @@ class UserResponse {
   /// Whether if the User is forced to change its password
   bool bUserChangepassword;
 
+  /// Whether we group or not the Ezsigntemplate roles
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bUserEzsigntemplaterolegrouping;
+
   CommonAudit objAudit;
 
   @override
@@ -288,6 +320,7 @@ class UserResponse {
     other.fkiBrokerID == fkiBrokerID &&
     other.fkiAssistantID == fkiAssistantID &&
     other.fkiEmployeeID == fkiEmployeeID &&
+    other.fkiEzmaxpartnerID == fkiEzmaxpartnerID &&
     other.fkiCompanyIDDefault == fkiCompanyIDDefault &&
     other.sCompanyNameX == sCompanyNameX &&
     other.fkiDepartmentIDDefault == fkiDepartmentIDDefault &&
@@ -316,10 +349,12 @@ class UserResponse {
     other.dtUserPasswordchanged == dtUserPasswordchanged &&
     other.dtUserEzsignprepaidexpiration == dtUserEzsignprepaidexpiration &&
     other.bUserIsactive == bUserIsactive &&
+    other.bUserSuspended == bUserSuspended &&
     other.bUserValidatebyadministration == bUserValidatebyadministration &&
     other.bUserValidatebydirector == bUserValidatebydirector &&
     other.bUserAttachmentautoverified == bUserAttachmentautoverified &&
     other.bUserChangepassword == bUserChangepassword &&
+    other.bUserEzsigntemplaterolegrouping == bUserEzsigntemplaterolegrouping &&
     other.objAudit == objAudit;
 
   @override
@@ -330,6 +365,7 @@ class UserResponse {
     (fkiBrokerID == null ? 0 : fkiBrokerID!.hashCode) +
     (fkiAssistantID == null ? 0 : fkiAssistantID!.hashCode) +
     (fkiEmployeeID == null ? 0 : fkiEmployeeID!.hashCode) +
+    (fkiEzmaxpartnerID == null ? 0 : fkiEzmaxpartnerID!.hashCode) +
     (fkiCompanyIDDefault.hashCode) +
     (sCompanyNameX.hashCode) +
     (fkiDepartmentIDDefault.hashCode) +
@@ -358,14 +394,16 @@ class UserResponse {
     (dtUserPasswordchanged == null ? 0 : dtUserPasswordchanged!.hashCode) +
     (dtUserEzsignprepaidexpiration == null ? 0 : dtUserEzsignprepaidexpiration!.hashCode) +
     (bUserIsactive.hashCode) +
+    (bUserSuspended == null ? 0 : bUserSuspended!.hashCode) +
     (bUserValidatebyadministration == null ? 0 : bUserValidatebyadministration!.hashCode) +
     (bUserValidatebydirector == null ? 0 : bUserValidatebydirector!.hashCode) +
     (bUserAttachmentautoverified == null ? 0 : bUserAttachmentautoverified!.hashCode) +
     (bUserChangepassword.hashCode) +
+    (bUserEzsigntemplaterolegrouping == null ? 0 : bUserEzsigntemplaterolegrouping!.hashCode) +
     (objAudit.hashCode);
 
   @override
-  String toString() => 'UserResponse[pkiUserID=$pkiUserID, fkiAgentID=$fkiAgentID, fkiBrokerID=$fkiBrokerID, fkiAssistantID=$fkiAssistantID, fkiEmployeeID=$fkiEmployeeID, fkiCompanyIDDefault=$fkiCompanyIDDefault, sCompanyNameX=$sCompanyNameX, fkiDepartmentIDDefault=$fkiDepartmentIDDefault, sDepartmentNameX=$sDepartmentNameX, fkiTimezoneID=$fkiTimezoneID, sTimezoneName=$sTimezoneName, fkiLanguageID=$fkiLanguageID, sLanguageNameX=$sLanguageNameX, objEmail=$objEmail, fkiBillingentityinternalID=$fkiBillingentityinternalID, sBillingentityinternalDescriptionX=$sBillingentityinternalDescriptionX, objPhoneHome=$objPhoneHome, objPhoneSMS=$objPhoneSMS, fkiSecretquestionID=$fkiSecretquestionID, fkiModuleIDForm=$fkiModuleIDForm, sModuleNameX=$sModuleNameX, eUserOrigin=$eUserOrigin, eUserType=$eUserType, eUserLogintype=$eUserLogintype, sUserFirstname=$sUserFirstname, sUserLastname=$sUserLastname, sUserLoginname=$sUserLoginname, sUserJobtitle=$sUserJobtitle, eUserEzsignaccess=$eUserEzsignaccess, dtUserLastlogondate=$dtUserLastlogondate, dtUserPasswordchanged=$dtUserPasswordchanged, dtUserEzsignprepaidexpiration=$dtUserEzsignprepaidexpiration, bUserIsactive=$bUserIsactive, bUserValidatebyadministration=$bUserValidatebyadministration, bUserValidatebydirector=$bUserValidatebydirector, bUserAttachmentautoverified=$bUserAttachmentautoverified, bUserChangepassword=$bUserChangepassword, objAudit=$objAudit]';
+  String toString() => 'UserResponse[pkiUserID=$pkiUserID, fkiAgentID=$fkiAgentID, fkiBrokerID=$fkiBrokerID, fkiAssistantID=$fkiAssistantID, fkiEmployeeID=$fkiEmployeeID, fkiEzmaxpartnerID=$fkiEzmaxpartnerID, fkiCompanyIDDefault=$fkiCompanyIDDefault, sCompanyNameX=$sCompanyNameX, fkiDepartmentIDDefault=$fkiDepartmentIDDefault, sDepartmentNameX=$sDepartmentNameX, fkiTimezoneID=$fkiTimezoneID, sTimezoneName=$sTimezoneName, fkiLanguageID=$fkiLanguageID, sLanguageNameX=$sLanguageNameX, objEmail=$objEmail, fkiBillingentityinternalID=$fkiBillingentityinternalID, sBillingentityinternalDescriptionX=$sBillingentityinternalDescriptionX, objPhoneHome=$objPhoneHome, objPhoneSMS=$objPhoneSMS, fkiSecretquestionID=$fkiSecretquestionID, fkiModuleIDForm=$fkiModuleIDForm, sModuleNameX=$sModuleNameX, eUserOrigin=$eUserOrigin, eUserType=$eUserType, eUserLogintype=$eUserLogintype, sUserFirstname=$sUserFirstname, sUserLastname=$sUserLastname, sUserLoginname=$sUserLoginname, sUserJobtitle=$sUserJobtitle, eUserEzsignaccess=$eUserEzsignaccess, dtUserLastlogondate=$dtUserLastlogondate, dtUserPasswordchanged=$dtUserPasswordchanged, dtUserEzsignprepaidexpiration=$dtUserEzsignprepaidexpiration, bUserIsactive=$bUserIsactive, bUserSuspended=$bUserSuspended, bUserValidatebyadministration=$bUserValidatebyadministration, bUserValidatebydirector=$bUserValidatebydirector, bUserAttachmentautoverified=$bUserAttachmentautoverified, bUserChangepassword=$bUserChangepassword, bUserEzsigntemplaterolegrouping=$bUserEzsigntemplaterolegrouping, objAudit=$objAudit]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -389,6 +427,11 @@ class UserResponse {
       json[r'fkiEmployeeID'] = this.fkiEmployeeID;
     } else {
       json[r'fkiEmployeeID'] = null;
+    }
+    if (this.fkiEzmaxpartnerID != null) {
+      json[r'fkiEzmaxpartnerID'] = this.fkiEzmaxpartnerID;
+    } else {
+      json[r'fkiEzmaxpartnerID'] = null;
     }
       json[r'fkiCompanyIDDefault'] = this.fkiCompanyIDDefault;
       json[r'sCompanyNameX'] = this.sCompanyNameX;
@@ -454,6 +497,11 @@ class UserResponse {
       json[r'dtUserEzsignprepaidexpiration'] = null;
     }
       json[r'bUserIsactive'] = this.bUserIsactive;
+    if (this.bUserSuspended != null) {
+      json[r'bUserSuspended'] = this.bUserSuspended;
+    } else {
+      json[r'bUserSuspended'] = null;
+    }
     if (this.bUserValidatebyadministration != null) {
       json[r'bUserValidatebyadministration'] = this.bUserValidatebyadministration;
     } else {
@@ -470,6 +518,11 @@ class UserResponse {
       json[r'bUserAttachmentautoverified'] = null;
     }
       json[r'bUserChangepassword'] = this.bUserChangepassword;
+    if (this.bUserEzsigntemplaterolegrouping != null) {
+      json[r'bUserEzsigntemplaterolegrouping'] = this.bUserEzsigntemplaterolegrouping;
+    } else {
+      json[r'bUserEzsigntemplaterolegrouping'] = null;
+    }
       json[r'objAudit'] = this.objAudit;
     return json;
   }
@@ -485,10 +538,50 @@ class UserResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "UserResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "UserResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiUserID'), 'Required key "UserResponse[pkiUserID]" is missing from JSON.');
+        assert(json[r'pkiUserID'] != null, 'Required key "UserResponse[pkiUserID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiCompanyIDDefault'), 'Required key "UserResponse[fkiCompanyIDDefault]" is missing from JSON.');
+        assert(json[r'fkiCompanyIDDefault'] != null, 'Required key "UserResponse[fkiCompanyIDDefault]" has a null value in JSON.');
+        assert(json.containsKey(r'sCompanyNameX'), 'Required key "UserResponse[sCompanyNameX]" is missing from JSON.');
+        assert(json[r'sCompanyNameX'] != null, 'Required key "UserResponse[sCompanyNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiDepartmentIDDefault'), 'Required key "UserResponse[fkiDepartmentIDDefault]" is missing from JSON.');
+        assert(json[r'fkiDepartmentIDDefault'] != null, 'Required key "UserResponse[fkiDepartmentIDDefault]" has a null value in JSON.');
+        assert(json.containsKey(r'sDepartmentNameX'), 'Required key "UserResponse[sDepartmentNameX]" is missing from JSON.');
+        assert(json[r'sDepartmentNameX'] != null, 'Required key "UserResponse[sDepartmentNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiTimezoneID'), 'Required key "UserResponse[fkiTimezoneID]" is missing from JSON.');
+        assert(json[r'fkiTimezoneID'] != null, 'Required key "UserResponse[fkiTimezoneID]" has a null value in JSON.');
+        assert(json.containsKey(r'sTimezoneName'), 'Required key "UserResponse[sTimezoneName]" is missing from JSON.');
+        assert(json[r'sTimezoneName'] != null, 'Required key "UserResponse[sTimezoneName]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiLanguageID'), 'Required key "UserResponse[fkiLanguageID]" is missing from JSON.');
+        assert(json[r'fkiLanguageID'] != null, 'Required key "UserResponse[fkiLanguageID]" has a null value in JSON.');
+        assert(json.containsKey(r'sLanguageNameX'), 'Required key "UserResponse[sLanguageNameX]" is missing from JSON.');
+        assert(json[r'sLanguageNameX'] != null, 'Required key "UserResponse[sLanguageNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'objEmail'), 'Required key "UserResponse[objEmail]" is missing from JSON.');
+        assert(json[r'objEmail'] != null, 'Required key "UserResponse[objEmail]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiBillingentityinternalID'), 'Required key "UserResponse[fkiBillingentityinternalID]" is missing from JSON.');
+        assert(json[r'fkiBillingentityinternalID'] != null, 'Required key "UserResponse[fkiBillingentityinternalID]" has a null value in JSON.');
+        assert(json.containsKey(r'sBillingentityinternalDescriptionX'), 'Required key "UserResponse[sBillingentityinternalDescriptionX]" is missing from JSON.');
+        assert(json[r'sBillingentityinternalDescriptionX'] != null, 'Required key "UserResponse[sBillingentityinternalDescriptionX]" has a null value in JSON.');
+        assert(json.containsKey(r'eUserOrigin'), 'Required key "UserResponse[eUserOrigin]" is missing from JSON.');
+        assert(json[r'eUserOrigin'] != null, 'Required key "UserResponse[eUserOrigin]" has a null value in JSON.');
+        assert(json.containsKey(r'eUserType'), 'Required key "UserResponse[eUserType]" is missing from JSON.');
+        assert(json[r'eUserType'] != null, 'Required key "UserResponse[eUserType]" has a null value in JSON.');
+        assert(json.containsKey(r'eUserLogintype'), 'Required key "UserResponse[eUserLogintype]" is missing from JSON.');
+        assert(json[r'eUserLogintype'] != null, 'Required key "UserResponse[eUserLogintype]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserFirstname'), 'Required key "UserResponse[sUserFirstname]" is missing from JSON.');
+        assert(json[r'sUserFirstname'] != null, 'Required key "UserResponse[sUserFirstname]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserLastname'), 'Required key "UserResponse[sUserLastname]" is missing from JSON.');
+        assert(json[r'sUserLastname'] != null, 'Required key "UserResponse[sUserLastname]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserLoginname'), 'Required key "UserResponse[sUserLoginname]" is missing from JSON.');
+        assert(json[r'sUserLoginname'] != null, 'Required key "UserResponse[sUserLoginname]" has a null value in JSON.');
+        assert(json.containsKey(r'eUserEzsignaccess'), 'Required key "UserResponse[eUserEzsignaccess]" is missing from JSON.');
+        assert(json[r'eUserEzsignaccess'] != null, 'Required key "UserResponse[eUserEzsignaccess]" has a null value in JSON.');
+        assert(json.containsKey(r'bUserIsactive'), 'Required key "UserResponse[bUserIsactive]" is missing from JSON.');
+        assert(json[r'bUserIsactive'] != null, 'Required key "UserResponse[bUserIsactive]" has a null value in JSON.');
+        assert(json.containsKey(r'bUserChangepassword'), 'Required key "UserResponse[bUserChangepassword]" is missing from JSON.');
+        assert(json[r'bUserChangepassword'] != null, 'Required key "UserResponse[bUserChangepassword]" has a null value in JSON.');
+        assert(json.containsKey(r'objAudit'), 'Required key "UserResponse[objAudit]" is missing from JSON.');
+        assert(json[r'objAudit'] != null, 'Required key "UserResponse[objAudit]" has a null value in JSON.');
         return true;
       }());
 
@@ -498,6 +591,7 @@ class UserResponse {
         fkiBrokerID: mapValueOfType<int>(json, r'fkiBrokerID'),
         fkiAssistantID: mapValueOfType<int>(json, r'fkiAssistantID'),
         fkiEmployeeID: mapValueOfType<int>(json, r'fkiEmployeeID'),
+        fkiEzmaxpartnerID: mapValueOfType<int>(json, r'fkiEzmaxpartnerID'),
         fkiCompanyIDDefault: mapValueOfType<int>(json, r'fkiCompanyIDDefault')!,
         sCompanyNameX: mapValueOfType<String>(json, r'sCompanyNameX')!,
         fkiDepartmentIDDefault: mapValueOfType<int>(json, r'fkiDepartmentIDDefault')!,
@@ -526,10 +620,12 @@ class UserResponse {
         dtUserPasswordchanged: mapValueOfType<String>(json, r'dtUserPasswordchanged'),
         dtUserEzsignprepaidexpiration: mapValueOfType<String>(json, r'dtUserEzsignprepaidexpiration'),
         bUserIsactive: mapValueOfType<bool>(json, r'bUserIsactive')!,
+        bUserSuspended: mapValueOfType<bool>(json, r'bUserSuspended'),
         bUserValidatebyadministration: mapValueOfType<bool>(json, r'bUserValidatebyadministration'),
         bUserValidatebydirector: mapValueOfType<bool>(json, r'bUserValidatebydirector'),
         bUserAttachmentautoverified: mapValueOfType<bool>(json, r'bUserAttachmentautoverified'),
         bUserChangepassword: mapValueOfType<bool>(json, r'bUserChangepassword')!,
+        bUserEzsigntemplaterolegrouping: mapValueOfType<bool>(json, r'bUserEzsigntemplaterolegrouping'),
         objAudit: CommonAudit.fromJson(json[r'objAudit'])!,
       );
     }

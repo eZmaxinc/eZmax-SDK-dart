@@ -62,10 +62,12 @@ class EzsignfoldertypeGetListV1ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignfoldertypeGetListV1ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignfoldertypeGetListV1ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'iRowReturned'), 'Required key "EzsignfoldertypeGetListV1ResponseMPayload[iRowReturned]" is missing from JSON.');
+        assert(json[r'iRowReturned'] != null, 'Required key "EzsignfoldertypeGetListV1ResponseMPayload[iRowReturned]" has a null value in JSON.');
+        assert(json.containsKey(r'iRowFiltered'), 'Required key "EzsignfoldertypeGetListV1ResponseMPayload[iRowFiltered]" is missing from JSON.');
+        assert(json[r'iRowFiltered'] != null, 'Required key "EzsignfoldertypeGetListV1ResponseMPayload[iRowFiltered]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objEzsignfoldertype'), 'Required key "EzsignfoldertypeGetListV1ResponseMPayload[a_objEzsignfoldertype]" is missing from JSON.');
+        assert(json[r'a_objEzsignfoldertype'] != null, 'Required key "EzsignfoldertypeGetListV1ResponseMPayload[a_objEzsignfoldertype]" has a null value in JSON.');
         return true;
       }());
 

@@ -65,10 +65,12 @@ class CreditcardmerchantAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CreditcardmerchantAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CreditcardmerchantAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiCreditcardmerchantID'), 'Required key "CreditcardmerchantAutocompleteElementResponse[pkiCreditcardmerchantID]" is missing from JSON.');
+        assert(json[r'pkiCreditcardmerchantID'] != null, 'Required key "CreditcardmerchantAutocompleteElementResponse[pkiCreditcardmerchantID]" has a null value in JSON.');
+        assert(json.containsKey(r'sCreditcardmerchantDescription'), 'Required key "CreditcardmerchantAutocompleteElementResponse[sCreditcardmerchantDescription]" is missing from JSON.');
+        assert(json[r'sCreditcardmerchantDescription'] != null, 'Required key "CreditcardmerchantAutocompleteElementResponse[sCreditcardmerchantDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'bCreditcardmerchantIsactive'), 'Required key "CreditcardmerchantAutocompleteElementResponse[bCreditcardmerchantIsactive]" is missing from JSON.');
+        assert(json[r'bCreditcardmerchantIsactive'] != null, 'Required key "CreditcardmerchantAutocompleteElementResponse[bCreditcardmerchantIsactive]" has a null value in JSON.');
         return true;
       }());
 

@@ -63,10 +63,12 @@ class CustomEzsigndocumentEzsignsignaturesAutomaticResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CustomEzsigndocumentEzsignsignaturesAutomaticResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CustomEzsigndocumentEzsignsignaturesAutomaticResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsigndocumentID'), 'Required key "CustomEzsigndocumentEzsignsignaturesAutomaticResponse[pkiEzsigndocumentID]" is missing from JSON.');
+        assert(json[r'pkiEzsigndocumentID'] != null, 'Required key "CustomEzsigndocumentEzsignsignaturesAutomaticResponse[pkiEzsigndocumentID]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsigndocumentName'), 'Required key "CustomEzsigndocumentEzsignsignaturesAutomaticResponse[sEzsigndocumentName]" is missing from JSON.');
+        assert(json[r'sEzsigndocumentName'] != null, 'Required key "CustomEzsigndocumentEzsignsignaturesAutomaticResponse[sEzsigndocumentName]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objEzsignsignature'), 'Required key "CustomEzsigndocumentEzsignsignaturesAutomaticResponse[a_objEzsignsignature]" is missing from JSON.');
+        assert(json[r'a_objEzsignsignature'] != null, 'Required key "CustomEzsigndocumentEzsignsignaturesAutomaticResponse[a_objEzsignsignature]" has a null value in JSON.');
         return true;
       }());
 

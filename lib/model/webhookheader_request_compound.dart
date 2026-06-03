@@ -72,10 +72,10 @@ class WebhookheaderRequestCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "WebhookheaderRequestCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "WebhookheaderRequestCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sWebhookheaderName'), 'Required key "WebhookheaderRequestCompound[sWebhookheaderName]" is missing from JSON.');
+        assert(json[r'sWebhookheaderName'] != null, 'Required key "WebhookheaderRequestCompound[sWebhookheaderName]" has a null value in JSON.');
+        assert(json.containsKey(r'sWebhookheaderValue'), 'Required key "WebhookheaderRequestCompound[sWebhookheaderValue]" is missing from JSON.');
+        assert(json[r'sWebhookheaderValue'] != null, 'Required key "WebhookheaderRequestCompound[sWebhookheaderValue]" has a null value in JSON.');
         return true;
       }());
 

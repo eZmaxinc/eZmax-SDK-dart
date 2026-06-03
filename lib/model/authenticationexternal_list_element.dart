@@ -71,10 +71,14 @@ class AuthenticationexternalListElement {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "AuthenticationexternalListElement[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "AuthenticationexternalListElement[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiAuthenticationexternalID'), 'Required key "AuthenticationexternalListElement[pkiAuthenticationexternalID]" is missing from JSON.');
+        assert(json[r'pkiAuthenticationexternalID'] != null, 'Required key "AuthenticationexternalListElement[pkiAuthenticationexternalID]" has a null value in JSON.');
+        assert(json.containsKey(r'sAuthenticationexternalDescription'), 'Required key "AuthenticationexternalListElement[sAuthenticationexternalDescription]" is missing from JSON.');
+        assert(json[r'sAuthenticationexternalDescription'] != null, 'Required key "AuthenticationexternalListElement[sAuthenticationexternalDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'eAuthenticationexternalType'), 'Required key "AuthenticationexternalListElement[eAuthenticationexternalType]" is missing from JSON.');
+        assert(json[r'eAuthenticationexternalType'] != null, 'Required key "AuthenticationexternalListElement[eAuthenticationexternalType]" has a null value in JSON.');
+        assert(json.containsKey(r'bAuthenticationexternalConnected'), 'Required key "AuthenticationexternalListElement[bAuthenticationexternalConnected]" is missing from JSON.');
+        assert(json[r'bAuthenticationexternalConnected'] != null, 'Required key "AuthenticationexternalListElement[bAuthenticationexternalConnected]" has a null value in JSON.');
         return true;
       }());
 

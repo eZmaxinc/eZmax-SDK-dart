@@ -107,10 +107,10 @@ class CustomEzsignfoldersignerassociationstatusResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CustomEzsignfoldersignerassociationstatusResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CustomEzsignfoldersignerassociationstatusResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiEzsignfoldersignerassociationID'), 'Required key "CustomEzsignfoldersignerassociationstatusResponse[fkiEzsignfoldersignerassociationID]" is missing from JSON.');
+        assert(json[r'fkiEzsignfoldersignerassociationID'] != null, 'Required key "CustomEzsignfoldersignerassociationstatusResponse[fkiEzsignfoldersignerassociationID]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objEzsignsignaturestatus'), 'Required key "CustomEzsignfoldersignerassociationstatusResponse[a_objEzsignsignaturestatus]" is missing from JSON.');
+        assert(json[r'a_objEzsignsignaturestatus'] != null, 'Required key "CustomEzsignfoldersignerassociationstatusResponse[a_objEzsignsignaturestatus]" has a null value in JSON.');
         return true;
       }());
 

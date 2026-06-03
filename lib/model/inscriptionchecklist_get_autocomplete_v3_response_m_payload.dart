@@ -48,10 +48,8 @@ class InscriptionchecklistGetAutocompleteV3ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "InscriptionchecklistGetAutocompleteV3ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "InscriptionchecklistGetAutocompleteV3ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_objInscriptionchecklist'), 'Required key "InscriptionchecklistGetAutocompleteV3ResponseMPayload[a_objInscriptionchecklist]" is missing from JSON.');
+        assert(json[r'a_objInscriptionchecklist'] != null, 'Required key "InscriptionchecklistGetAutocompleteV3ResponseMPayload[a_objInscriptionchecklist]" has a null value in JSON.');
         return true;
       }());
 

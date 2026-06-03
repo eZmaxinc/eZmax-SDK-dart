@@ -189,10 +189,18 @@ class SystemconfigurationRequestCompoundV2 {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "SystemconfigurationRequestCompoundV2[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "SystemconfigurationRequestCompoundV2[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'eSystemconfigurationNewexternaluseraction'), 'Required key "SystemconfigurationRequestCompoundV2[eSystemconfigurationNewexternaluseraction]" is missing from JSON.');
+        assert(json[r'eSystemconfigurationNewexternaluseraction'] != null, 'Required key "SystemconfigurationRequestCompoundV2[eSystemconfigurationNewexternaluseraction]" has a null value in JSON.');
+        assert(json.containsKey(r'eSystemconfigurationLanguage1'), 'Required key "SystemconfigurationRequestCompoundV2[eSystemconfigurationLanguage1]" is missing from JSON.');
+        assert(json[r'eSystemconfigurationLanguage1'] != null, 'Required key "SystemconfigurationRequestCompoundV2[eSystemconfigurationLanguage1]" has a null value in JSON.');
+        assert(json.containsKey(r'eSystemconfigurationLanguage2'), 'Required key "SystemconfigurationRequestCompoundV2[eSystemconfigurationLanguage2]" is missing from JSON.');
+        assert(json[r'eSystemconfigurationLanguage2'] != null, 'Required key "SystemconfigurationRequestCompoundV2[eSystemconfigurationLanguage2]" has a null value in JSON.');
+        assert(json.containsKey(r'bSystemconfigurationEzsignpersonnal'), 'Required key "SystemconfigurationRequestCompoundV2[bSystemconfigurationEzsignpersonnal]" is missing from JSON.');
+        assert(json[r'bSystemconfigurationEzsignpersonnal'] != null, 'Required key "SystemconfigurationRequestCompoundV2[bSystemconfigurationEzsignpersonnal]" has a null value in JSON.');
+        assert(json.containsKey(r'bSystemconfigurationSspr'), 'Required key "SystemconfigurationRequestCompoundV2[bSystemconfigurationSspr]" is missing from JSON.');
+        assert(json[r'bSystemconfigurationSspr'] != null, 'Required key "SystemconfigurationRequestCompoundV2[bSystemconfigurationSspr]" has a null value in JSON.');
+        assert(json.containsKey(r'iSystemconfigurationEzsignreminderhoursend'), 'Required key "SystemconfigurationRequestCompoundV2[iSystemconfigurationEzsignreminderhoursend]" is missing from JSON.');
+        assert(json[r'iSystemconfigurationEzsignreminderhoursend'] != null, 'Required key "SystemconfigurationRequestCompoundV2[iSystemconfigurationEzsignreminderhoursend]" has a null value in JSON.');
         return true;
       }());
 

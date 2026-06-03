@@ -74,10 +74,10 @@ class DiscussionChatV1Request {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "DiscussionChatV1Request[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "DiscussionChatV1Request[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'eDiscussionRobot'), 'Required key "DiscussionChatV1Request[eDiscussionRobot]" is missing from JSON.');
+        assert(json[r'eDiscussionRobot'] != null, 'Required key "DiscussionChatV1Request[eDiscussionRobot]" has a null value in JSON.');
+        assert(json.containsKey(r'tDiscussionMessage'), 'Required key "DiscussionChatV1Request[tDiscussionMessage]" is missing from JSON.');
+        assert(json[r'tDiscussionMessage'] != null, 'Required key "DiscussionChatV1Request[tDiscussionMessage]" has a null value in JSON.');
         return true;
       }());
 

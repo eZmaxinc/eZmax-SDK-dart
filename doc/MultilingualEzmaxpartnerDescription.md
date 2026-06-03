@@ -1,0 +1,16 @@
+# openapi.model.MultilingualEzmaxpartnerDescription
+
+## Load the model package
+```dart
+import 'package:openapi/api.dart';
+```
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**sEzmaxpartnerDescription1** | **String** | The description of the Ezmaxpartner in french | [optional] 
+**sEzmaxpartnerDescription2** | **String** | The description of the Ezmaxpartner in english | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

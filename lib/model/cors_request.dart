@@ -77,10 +77,10 @@ class CorsRequest {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CorsRequest[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CorsRequest[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiApikeyID'), 'Required key "CorsRequest[fkiApikeyID]" is missing from JSON.');
+        assert(json[r'fkiApikeyID'] != null, 'Required key "CorsRequest[fkiApikeyID]" has a null value in JSON.');
+        assert(json.containsKey(r'sCorsEntryurl'), 'Required key "CorsRequest[sCorsEntryurl]" is missing from JSON.');
+        assert(json[r'sCorsEntryurl'] != null, 'Required key "CorsRequest[sCorsEntryurl]" has a null value in JSON.');
         return true;
       }());
 

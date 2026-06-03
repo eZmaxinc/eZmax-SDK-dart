@@ -240,10 +240,18 @@ class ContactinformationsResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "ContactinformationsResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "ContactinformationsResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiContactinformationsID'), 'Required key "ContactinformationsResponseCompound[pkiContactinformationsID]" is missing from JSON.');
+        assert(json[r'pkiContactinformationsID'] != null, 'Required key "ContactinformationsResponseCompound[pkiContactinformationsID]" has a null value in JSON.');
+        assert(json.containsKey(r'eContactinformationsType'), 'Required key "ContactinformationsResponseCompound[eContactinformationsType]" is missing from JSON.');
+        assert(json[r'eContactinformationsType'] != null, 'Required key "ContactinformationsResponseCompound[eContactinformationsType]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objAddress'), 'Required key "ContactinformationsResponseCompound[a_objAddress]" is missing from JSON.');
+        assert(json[r'a_objAddress'] != null, 'Required key "ContactinformationsResponseCompound[a_objAddress]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objPhone'), 'Required key "ContactinformationsResponseCompound[a_objPhone]" is missing from JSON.');
+        assert(json[r'a_objPhone'] != null, 'Required key "ContactinformationsResponseCompound[a_objPhone]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objEmail'), 'Required key "ContactinformationsResponseCompound[a_objEmail]" is missing from JSON.');
+        assert(json[r'a_objEmail'] != null, 'Required key "ContactinformationsResponseCompound[a_objEmail]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objWebsite'), 'Required key "ContactinformationsResponseCompound[a_objWebsite]" is missing from JSON.');
+        assert(json[r'a_objWebsite'] != null, 'Required key "ContactinformationsResponseCompound[a_objWebsite]" has a null value in JSON.');
         return true;
       }());
 

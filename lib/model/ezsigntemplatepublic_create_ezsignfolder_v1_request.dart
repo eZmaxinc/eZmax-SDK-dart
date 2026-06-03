@@ -68,10 +68,14 @@ class EzsigntemplatepublicCreateEzsignfolderV1Request {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplatepublicCreateEzsignfolderV1Request[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplatepublicCreateEzsignfolderV1Request[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pksEzmaxcustomerCode'), 'Required key "EzsigntemplatepublicCreateEzsignfolderV1Request[pksEzmaxcustomerCode]" is missing from JSON.');
+        assert(json[r'pksEzmaxcustomerCode'] != null, 'Required key "EzsigntemplatepublicCreateEzsignfolderV1Request[pksEzmaxcustomerCode]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsigntemplatepublicReferenceid'), 'Required key "EzsigntemplatepublicCreateEzsignfolderV1Request[sEzsigntemplatepublicReferenceid]" is missing from JSON.');
+        assert(json[r'sEzsigntemplatepublicReferenceid'] != null, 'Required key "EzsigntemplatepublicCreateEzsignfolderV1Request[sEzsigntemplatepublicReferenceid]" has a null value in JSON.');
+        assert(json.containsKey(r'a_sEzsigntemplatesignerDescription'), 'Required key "EzsigntemplatepublicCreateEzsignfolderV1Request[a_sEzsigntemplatesignerDescription]" is missing from JSON.');
+        assert(json[r'a_sEzsigntemplatesignerDescription'] != null, 'Required key "EzsigntemplatepublicCreateEzsignfolderV1Request[a_sEzsigntemplatesignerDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objEzsignsigner'), 'Required key "EzsigntemplatepublicCreateEzsignfolderV1Request[a_objEzsignsigner]" is missing from JSON.');
+        assert(json[r'a_objEzsignsigner'] != null, 'Required key "EzsigntemplatepublicCreateEzsignfolderV1Request[a_objEzsignsigner]" has a null value in JSON.');
         return true;
       }());
 

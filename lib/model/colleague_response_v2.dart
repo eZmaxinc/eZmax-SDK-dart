@@ -176,10 +176,34 @@ class ColleagueResponseV2 {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "ColleagueResponseV2[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "ColleagueResponseV2[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiColleagueID'), 'Required key "ColleagueResponseV2[pkiColleagueID]" is missing from JSON.');
+        assert(json[r'pkiColleagueID'] != null, 'Required key "ColleagueResponseV2[pkiColleagueID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiUserID'), 'Required key "ColleagueResponseV2[fkiUserID]" is missing from JSON.');
+        assert(json[r'fkiUserID'] != null, 'Required key "ColleagueResponseV2[fkiUserID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiUserIDColleague'), 'Required key "ColleagueResponseV2[fkiUserIDColleague]" is missing from JSON.');
+        assert(json[r'fkiUserIDColleague'] != null, 'Required key "ColleagueResponseV2[fkiUserIDColleague]" has a null value in JSON.');
+        assert(json.containsKey(r'bColleagueEzsignemail'), 'Required key "ColleagueResponseV2[bColleagueEzsignemail]" is missing from JSON.');
+        assert(json[r'bColleagueEzsignemail'] != null, 'Required key "ColleagueResponseV2[bColleagueEzsignemail]" has a null value in JSON.');
+        assert(json.containsKey(r'bColleagueFinancial'), 'Required key "ColleagueResponseV2[bColleagueFinancial]" is missing from JSON.');
+        assert(json[r'bColleagueFinancial'] != null, 'Required key "ColleagueResponseV2[bColleagueFinancial]" has a null value in JSON.');
+        assert(json.containsKey(r'bColleagueUsecloneemail'), 'Required key "ColleagueResponseV2[bColleagueUsecloneemail]" is missing from JSON.');
+        assert(json[r'bColleagueUsecloneemail'] != null, 'Required key "ColleagueResponseV2[bColleagueUsecloneemail]" has a null value in JSON.');
+        assert(json.containsKey(r'bColleagueAttachment'), 'Required key "ColleagueResponseV2[bColleagueAttachment]" is missing from JSON.');
+        assert(json[r'bColleagueAttachment'] != null, 'Required key "ColleagueResponseV2[bColleagueAttachment]" has a null value in JSON.');
+        assert(json.containsKey(r'bColleagueCanafe'), 'Required key "ColleagueResponseV2[bColleagueCanafe]" is missing from JSON.');
+        assert(json[r'bColleagueCanafe'] != null, 'Required key "ColleagueResponseV2[bColleagueCanafe]" has a null value in JSON.');
+        assert(json.containsKey(r'bColleaguePermission'), 'Required key "ColleagueResponseV2[bColleaguePermission]" is missing from JSON.');
+        assert(json[r'bColleaguePermission'] != null, 'Required key "ColleagueResponseV2[bColleaguePermission]" has a null value in JSON.');
+        assert(json.containsKey(r'bColleagueRealestatecompleted'), 'Required key "ColleagueResponseV2[bColleagueRealestatecompleted]" is missing from JSON.');
+        assert(json[r'bColleagueRealestatecompleted'] != null, 'Required key "ColleagueResponseV2[bColleagueRealestatecompleted]" has a null value in JSON.');
+        assert(json.containsKey(r'eColleagueEzsign'), 'Required key "ColleagueResponseV2[eColleagueEzsign]" is missing from JSON.');
+        assert(json[r'eColleagueEzsign'] != null, 'Required key "ColleagueResponseV2[eColleagueEzsign]" has a null value in JSON.');
+        assert(json.containsKey(r'eColleagueRealestateinprogress'), 'Required key "ColleagueResponseV2[eColleagueRealestateinprogress]" is missing from JSON.');
+        assert(json[r'eColleagueRealestateinprogress'] != null, 'Required key "ColleagueResponseV2[eColleagueRealestateinprogress]" has a null value in JSON.');
+        assert(json.containsKey(r'objUserName'), 'Required key "ColleagueResponseV2[objUserName]" is missing from JSON.');
+        assert(json[r'objUserName'] != null, 'Required key "ColleagueResponseV2[objUserName]" has a null value in JSON.');
+        assert(json.containsKey(r'objAudit'), 'Required key "ColleagueResponseV2[objAudit]" is missing from JSON.');
+        assert(json[r'objAudit'] != null, 'Required key "ColleagueResponseV2[objAudit]" has a null value in JSON.');
         return true;
       }());
 

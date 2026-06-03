@@ -72,6 +72,62 @@ class ObjectEzsignfoldertypeApi {
     return null;
   }
 
+  /// Create a new Ezsignfoldertype
+  ///
+  /// The endpoint allows to create one or many elements at once.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [EzsignfoldertypeCreateObjectV4Request] ezsignfoldertypeCreateObjectV4Request (required):
+  Future<Response> ezsignfoldertypeCreateObjectV4WithHttpInfo(EzsignfoldertypeCreateObjectV4Request ezsignfoldertypeCreateObjectV4Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/4/object/ezsignfoldertype';
+
+    // ignore: prefer_final_locals
+    Object? postBody = ezsignfoldertypeCreateObjectV4Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Create a new Ezsignfoldertype
+  ///
+  /// The endpoint allows to create one or many elements at once.
+  ///
+  /// Parameters:
+  ///
+  /// * [EzsignfoldertypeCreateObjectV4Request] ezsignfoldertypeCreateObjectV4Request (required):
+  Future<EzsignfoldertypeCreateObjectV4Response?> ezsignfoldertypeCreateObjectV4(EzsignfoldertypeCreateObjectV4Request ezsignfoldertypeCreateObjectV4Request,) async {
+    final response = await ezsignfoldertypeCreateObjectV4WithHttpInfo(ezsignfoldertypeCreateObjectV4Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfoldertypeCreateObjectV4Response',) as EzsignfoldertypeCreateObjectV4Response;
+    
+    }
+    return null;
+  }
+
   /// Edit an existing Ezsignfoldertype
   ///
   /// 
@@ -128,6 +184,67 @@ class ObjectEzsignfoldertypeApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfoldertypeEditObjectV3Response',) as EzsignfoldertypeEditObjectV3Response;
+    
+    }
+    return null;
+  }
+
+  /// Edit an existing Ezsignfoldertype
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfoldertypeID (required):
+  ///
+  /// * [EzsignfoldertypeEditObjectV4Request] ezsignfoldertypeEditObjectV4Request (required):
+  Future<Response> ezsignfoldertypeEditObjectV4WithHttpInfo(int pkiEzsignfoldertypeID, EzsignfoldertypeEditObjectV4Request ezsignfoldertypeEditObjectV4Request,) async {
+    // ignore: prefer_const_declarations
+    final path = r'/4/object/ezsignfoldertype/{pkiEzsignfoldertypeID}'
+      .replaceAll('{pkiEzsignfoldertypeID}', pkiEzsignfoldertypeID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = ezsignfoldertypeEditObjectV4Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'PUT',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Edit an existing Ezsignfoldertype
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfoldertypeID (required):
+  ///
+  /// * [EzsignfoldertypeEditObjectV4Request] ezsignfoldertypeEditObjectV4Request (required):
+  Future<EzsignfoldertypeEditObjectV4Response?> ezsignfoldertypeEditObjectV4(int pkiEzsignfoldertypeID, EzsignfoldertypeEditObjectV4Request ezsignfoldertypeEditObjectV4Request,) async {
+    final response = await ezsignfoldertypeEditObjectV4WithHttpInfo(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV4Request,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfoldertypeEditObjectV4Response',) as EzsignfoldertypeEditObjectV4Response;
     
     }
     return null;

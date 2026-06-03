@@ -48,10 +48,8 @@ class CompanyGetAutocompleteV2ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CompanyGetAutocompleteV2ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CompanyGetAutocompleteV2ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_objCompany'), 'Required key "CompanyGetAutocompleteV2ResponseMPayload[a_objCompany]" is missing from JSON.');
+        assert(json[r'a_objCompany'] != null, 'Required key "CompanyGetAutocompleteV2ResponseMPayload[a_objCompany]" has a null value in JSON.');
         return true;
       }());
 

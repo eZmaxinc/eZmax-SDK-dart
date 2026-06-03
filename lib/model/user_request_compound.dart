@@ -41,6 +41,7 @@ class UserRequestCompound {
     this.bUserValidatebydirector,
     this.bUserAttachmentautoverified,
     this.bUserChangepassword,
+    this.bUserEzsigntemplaterolegrouping,
   });
 
   /// The unique ID of the User
@@ -143,7 +144,7 @@ class UserRequestCompound {
   ///
   PhoneRequestCompound? objPhoneSMS;
 
-  /// The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father's middle name| |15|Your mother's maiden name| |16|Name of your eldest child| |17|Your spouse's middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat's name| |22|Date of Birth (YYYY-MM-DD)| |22|Secret Code| |22|Your reference code|
+  /// The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father's middle name| |15|Your mother's maiden name| |16|Name of your eldest child| |17|Your spouse's middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat's name| |22|Date of Birth (YYYY-MM-DD)| |23|Secret Code| |24|Your reference code| |25|What are the last 4 digits of your SIN| |26|What is your postal code| |27|What is your employee number| |28|What is your manager’s first name| |29|What is your file number| |30|What is your client/member number| |31|What is your license number| |32|What are the last 4 digits of your phone number| |33|What is your student number|
   ///
   /// Minimum value: 0
   ///
@@ -237,6 +238,15 @@ class UserRequestCompound {
   ///
   bool? bUserChangepassword;
 
+  /// Whether we group or not the Ezsigntemplate roles
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bUserEzsigntemplaterolegrouping;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is UserRequestCompound &&
     other.pkiUserID == pkiUserID &&
@@ -266,7 +276,8 @@ class UserRequestCompound {
     other.bUserValidatebyadministration == bUserValidatebyadministration &&
     other.bUserValidatebydirector == bUserValidatebydirector &&
     other.bUserAttachmentautoverified == bUserAttachmentautoverified &&
-    other.bUserChangepassword == bUserChangepassword;
+    other.bUserChangepassword == bUserChangepassword &&
+    other.bUserEzsigntemplaterolegrouping == bUserEzsigntemplaterolegrouping;
 
   @override
   int get hashCode =>
@@ -298,10 +309,11 @@ class UserRequestCompound {
     (bUserValidatebyadministration == null ? 0 : bUserValidatebyadministration!.hashCode) +
     (bUserValidatebydirector == null ? 0 : bUserValidatebydirector!.hashCode) +
     (bUserAttachmentautoverified == null ? 0 : bUserAttachmentautoverified!.hashCode) +
-    (bUserChangepassword == null ? 0 : bUserChangepassword!.hashCode);
+    (bUserChangepassword == null ? 0 : bUserChangepassword!.hashCode) +
+    (bUserEzsigntemplaterolegrouping == null ? 0 : bUserEzsigntemplaterolegrouping!.hashCode);
 
   @override
-  String toString() => 'UserRequestCompound[pkiUserID=$pkiUserID, fkiAgentID=$fkiAgentID, fkiBrokerID=$fkiBrokerID, fkiAssistantID=$fkiAssistantID, fkiEmployeeID=$fkiEmployeeID, fkiCompanyIDDefault=$fkiCompanyIDDefault, fkiDepartmentIDDefault=$fkiDepartmentIDDefault, fkiTimezoneID=$fkiTimezoneID, fkiLanguageID=$fkiLanguageID, objEmail=$objEmail, fkiBillingentityinternalID=$fkiBillingentityinternalID, objPhoneHome=$objPhoneHome, objPhoneSMS=$objPhoneSMS, fkiSecretquestionID=$fkiSecretquestionID, sUserSecretresponse=$sUserSecretresponse, fkiModuleIDForm=$fkiModuleIDForm, eUserType=$eUserType, eUserLogintype=$eUserLogintype, sUserFirstname=$sUserFirstname, sUserLastname=$sUserLastname, sUserLoginname=$sUserLoginname, sUserJobtitle=$sUserJobtitle, eUserEzsignaccess=$eUserEzsignaccess, bUserIsactive=$bUserIsactive, bUserValidatebyadministration=$bUserValidatebyadministration, bUserValidatebydirector=$bUserValidatebydirector, bUserAttachmentautoverified=$bUserAttachmentautoverified, bUserChangepassword=$bUserChangepassword]';
+  String toString() => 'UserRequestCompound[pkiUserID=$pkiUserID, fkiAgentID=$fkiAgentID, fkiBrokerID=$fkiBrokerID, fkiAssistantID=$fkiAssistantID, fkiEmployeeID=$fkiEmployeeID, fkiCompanyIDDefault=$fkiCompanyIDDefault, fkiDepartmentIDDefault=$fkiDepartmentIDDefault, fkiTimezoneID=$fkiTimezoneID, fkiLanguageID=$fkiLanguageID, objEmail=$objEmail, fkiBillingentityinternalID=$fkiBillingentityinternalID, objPhoneHome=$objPhoneHome, objPhoneSMS=$objPhoneSMS, fkiSecretquestionID=$fkiSecretquestionID, sUserSecretresponse=$sUserSecretresponse, fkiModuleIDForm=$fkiModuleIDForm, eUserType=$eUserType, eUserLogintype=$eUserLogintype, sUserFirstname=$sUserFirstname, sUserLastname=$sUserLastname, sUserLoginname=$sUserLoginname, sUserJobtitle=$sUserJobtitle, eUserEzsignaccess=$eUserEzsignaccess, bUserIsactive=$bUserIsactive, bUserValidatebyadministration=$bUserValidatebyadministration, bUserValidatebydirector=$bUserValidatebydirector, bUserAttachmentautoverified=$bUserAttachmentautoverified, bUserChangepassword=$bUserChangepassword, bUserEzsigntemplaterolegrouping=$bUserEzsigntemplaterolegrouping]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -393,6 +405,11 @@ class UserRequestCompound {
     } else {
       json[r'bUserChangepassword'] = null;
     }
+    if (this.bUserEzsigntemplaterolegrouping != null) {
+      json[r'bUserEzsigntemplaterolegrouping'] = this.bUserEzsigntemplaterolegrouping;
+    } else {
+      json[r'bUserEzsigntemplaterolegrouping'] = null;
+    }
     return json;
   }
 
@@ -407,10 +424,32 @@ class UserRequestCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "UserRequestCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "UserRequestCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiCompanyIDDefault'), 'Required key "UserRequestCompound[fkiCompanyIDDefault]" is missing from JSON.');
+        assert(json[r'fkiCompanyIDDefault'] != null, 'Required key "UserRequestCompound[fkiCompanyIDDefault]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiDepartmentIDDefault'), 'Required key "UserRequestCompound[fkiDepartmentIDDefault]" is missing from JSON.');
+        assert(json[r'fkiDepartmentIDDefault'] != null, 'Required key "UserRequestCompound[fkiDepartmentIDDefault]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiTimezoneID'), 'Required key "UserRequestCompound[fkiTimezoneID]" is missing from JSON.');
+        assert(json[r'fkiTimezoneID'] != null, 'Required key "UserRequestCompound[fkiTimezoneID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiLanguageID'), 'Required key "UserRequestCompound[fkiLanguageID]" is missing from JSON.');
+        assert(json[r'fkiLanguageID'] != null, 'Required key "UserRequestCompound[fkiLanguageID]" has a null value in JSON.');
+        assert(json.containsKey(r'objEmail'), 'Required key "UserRequestCompound[objEmail]" is missing from JSON.');
+        assert(json[r'objEmail'] != null, 'Required key "UserRequestCompound[objEmail]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiBillingentityinternalID'), 'Required key "UserRequestCompound[fkiBillingentityinternalID]" is missing from JSON.');
+        assert(json[r'fkiBillingentityinternalID'] != null, 'Required key "UserRequestCompound[fkiBillingentityinternalID]" has a null value in JSON.');
+        assert(json.containsKey(r'eUserType'), 'Required key "UserRequestCompound[eUserType]" is missing from JSON.');
+        assert(json[r'eUserType'] != null, 'Required key "UserRequestCompound[eUserType]" has a null value in JSON.');
+        assert(json.containsKey(r'eUserLogintype'), 'Required key "UserRequestCompound[eUserLogintype]" is missing from JSON.');
+        assert(json[r'eUserLogintype'] != null, 'Required key "UserRequestCompound[eUserLogintype]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserFirstname'), 'Required key "UserRequestCompound[sUserFirstname]" is missing from JSON.');
+        assert(json[r'sUserFirstname'] != null, 'Required key "UserRequestCompound[sUserFirstname]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserLastname'), 'Required key "UserRequestCompound[sUserLastname]" is missing from JSON.');
+        assert(json[r'sUserLastname'] != null, 'Required key "UserRequestCompound[sUserLastname]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserLoginname'), 'Required key "UserRequestCompound[sUserLoginname]" is missing from JSON.');
+        assert(json[r'sUserLoginname'] != null, 'Required key "UserRequestCompound[sUserLoginname]" has a null value in JSON.');
+        assert(json.containsKey(r'eUserEzsignaccess'), 'Required key "UserRequestCompound[eUserEzsignaccess]" is missing from JSON.');
+        assert(json[r'eUserEzsignaccess'] != null, 'Required key "UserRequestCompound[eUserEzsignaccess]" has a null value in JSON.');
+        assert(json.containsKey(r'bUserIsactive'), 'Required key "UserRequestCompound[bUserIsactive]" is missing from JSON.');
+        assert(json[r'bUserIsactive'] != null, 'Required key "UserRequestCompound[bUserIsactive]" has a null value in JSON.');
         return true;
       }());
 
@@ -443,6 +482,7 @@ class UserRequestCompound {
         bUserValidatebydirector: mapValueOfType<bool>(json, r'bUserValidatebydirector'),
         bUserAttachmentautoverified: mapValueOfType<bool>(json, r'bUserAttachmentautoverified'),
         bUserChangepassword: mapValueOfType<bool>(json, r'bUserChangepassword'),
+        bUserEzsigntemplaterolegrouping: mapValueOfType<bool>(json, r'bUserEzsigntemplaterolegrouping'),
       );
     }
     return null;

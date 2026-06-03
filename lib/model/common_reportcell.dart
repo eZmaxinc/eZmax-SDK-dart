@@ -69,10 +69,14 @@ class CommonReportcell {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CommonReportcell[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CommonReportcell[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'iReportcellColumnspan'), 'Required key "CommonReportcell[iReportcellColumnspan]" is missing from JSON.');
+        assert(json[r'iReportcellColumnspan'] != null, 'Required key "CommonReportcell[iReportcellColumnspan]" has a null value in JSON.');
+        assert(json.containsKey(r'iReportcellRowspan'), 'Required key "CommonReportcell[iReportcellRowspan]" is missing from JSON.');
+        assert(json[r'iReportcellRowspan'] != null, 'Required key "CommonReportcell[iReportcellRowspan]" has a null value in JSON.');
+        assert(json.containsKey(r'sReportcellContent'), 'Required key "CommonReportcell[sReportcellContent]" is missing from JSON.');
+        assert(json[r'sReportcellContent'] != null, 'Required key "CommonReportcell[sReportcellContent]" has a null value in JSON.');
+        assert(json.containsKey(r'iReportcellColumn'), 'Required key "CommonReportcell[iReportcellColumn]" is missing from JSON.');
+        assert(json[r'iReportcellColumn'] != null, 'Required key "CommonReportcell[iReportcellColumn]" has a null value in JSON.');
         return true;
       }());
 

@@ -70,10 +70,14 @@ class EzsigntemplateAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplateAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplateAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'eEzsignfoldertypePrivacylevel'), 'Required key "EzsigntemplateAutocompleteElementResponse[eEzsignfoldertypePrivacylevel]" is missing from JSON.');
+        assert(json[r'eEzsignfoldertypePrivacylevel'] != null, 'Required key "EzsigntemplateAutocompleteElementResponse[eEzsignfoldertypePrivacylevel]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsigntemplateDescription'), 'Required key "EzsigntemplateAutocompleteElementResponse[sEzsigntemplateDescription]" is missing from JSON.');
+        assert(json[r'sEzsigntemplateDescription'] != null, 'Required key "EzsigntemplateAutocompleteElementResponse[sEzsigntemplateDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'pkiEzsigntemplateID'), 'Required key "EzsigntemplateAutocompleteElementResponse[pkiEzsigntemplateID]" is missing from JSON.');
+        assert(json[r'pkiEzsigntemplateID'] != null, 'Required key "EzsigntemplateAutocompleteElementResponse[pkiEzsigntemplateID]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsigntemplateIsactive'), 'Required key "EzsigntemplateAutocompleteElementResponse[bEzsigntemplateIsactive]" is missing from JSON.');
+        assert(json[r'bEzsigntemplateIsactive'] != null, 'Required key "EzsigntemplateAutocompleteElementResponse[bEzsigntemplateIsactive]" has a null value in JSON.');
         return true;
       }());
 

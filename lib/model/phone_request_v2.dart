@@ -103,10 +103,8 @@ class PhoneRequestV2 {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "PhoneRequestV2[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "PhoneRequestV2[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiPhonetypeID'), 'Required key "PhoneRequestV2[fkiPhonetypeID]" is missing from JSON.');
+        assert(json[r'fkiPhonetypeID'] != null, 'Required key "PhoneRequestV2[fkiPhonetypeID]" has a null value in JSON.');
         return true;
       }());
 

@@ -96,10 +96,20 @@ class EzsigntemplatedocumentResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplatedocumentResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplatedocumentResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsigntemplatedocumentID'), 'Required key "EzsigntemplatedocumentResponseCompound[pkiEzsigntemplatedocumentID]" is missing from JSON.');
+        assert(json[r'pkiEzsigntemplatedocumentID'] != null, 'Required key "EzsigntemplatedocumentResponseCompound[pkiEzsigntemplatedocumentID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiEzsigntemplateID'), 'Required key "EzsigntemplatedocumentResponseCompound[fkiEzsigntemplateID]" is missing from JSON.');
+        assert(json[r'fkiEzsigntemplateID'] != null, 'Required key "EzsigntemplatedocumentResponseCompound[fkiEzsigntemplateID]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsigntemplatedocumentName'), 'Required key "EzsigntemplatedocumentResponseCompound[sEzsigntemplatedocumentName]" is missing from JSON.');
+        assert(json[r'sEzsigntemplatedocumentName'] != null, 'Required key "EzsigntemplatedocumentResponseCompound[sEzsigntemplatedocumentName]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigntemplatedocumentPagetotal'), 'Required key "EzsigntemplatedocumentResponseCompound[iEzsigntemplatedocumentPagetotal]" is missing from JSON.');
+        assert(json[r'iEzsigntemplatedocumentPagetotal'] != null, 'Required key "EzsigntemplatedocumentResponseCompound[iEzsigntemplatedocumentPagetotal]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigntemplatedocumentSignaturetotal'), 'Required key "EzsigntemplatedocumentResponseCompound[iEzsigntemplatedocumentSignaturetotal]" is missing from JSON.');
+        assert(json[r'iEzsigntemplatedocumentSignaturetotal'] != null, 'Required key "EzsigntemplatedocumentResponseCompound[iEzsigntemplatedocumentSignaturetotal]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsigntemplatedocumentFormfieldtotal'), 'Required key "EzsigntemplatedocumentResponseCompound[iEzsigntemplatedocumentFormfieldtotal]" is missing from JSON.');
+        assert(json[r'iEzsigntemplatedocumentFormfieldtotal'] != null, 'Required key "EzsigntemplatedocumentResponseCompound[iEzsigntemplatedocumentFormfieldtotal]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsigntemplatedocumentHassignedsignatures'), 'Required key "EzsigntemplatedocumentResponseCompound[bEzsigntemplatedocumentHassignedsignatures]" is missing from JSON.');
+        assert(json[r'bEzsigntemplatedocumentHassignedsignatures'] != null, 'Required key "EzsigntemplatedocumentResponseCompound[bEzsigntemplatedocumentHassignedsignatures]" has a null value in JSON.');
         return true;
       }());
 

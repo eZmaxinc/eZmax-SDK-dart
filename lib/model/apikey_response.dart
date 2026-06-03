@@ -135,10 +135,18 @@ class ApikeyResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "ApikeyResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "ApikeyResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiApikeyID'), 'Required key "ApikeyResponse[pkiApikeyID]" is missing from JSON.');
+        assert(json[r'pkiApikeyID'] != null, 'Required key "ApikeyResponse[pkiApikeyID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiUserID'), 'Required key "ApikeyResponse[fkiUserID]" is missing from JSON.');
+        assert(json[r'fkiUserID'] != null, 'Required key "ApikeyResponse[fkiUserID]" has a null value in JSON.');
+        assert(json.containsKey(r'objApikeyDescription'), 'Required key "ApikeyResponse[objApikeyDescription]" is missing from JSON.');
+        assert(json[r'objApikeyDescription'] != null, 'Required key "ApikeyResponse[objApikeyDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'objContactName'), 'Required key "ApikeyResponse[objContactName]" is missing from JSON.');
+        assert(json[r'objContactName'] != null, 'Required key "ApikeyResponse[objContactName]" has a null value in JSON.');
+        assert(json.containsKey(r'bApikeyIsactive'), 'Required key "ApikeyResponse[bApikeyIsactive]" is missing from JSON.');
+        assert(json[r'bApikeyIsactive'] != null, 'Required key "ApikeyResponse[bApikeyIsactive]" has a null value in JSON.');
+        assert(json.containsKey(r'objAudit'), 'Required key "ApikeyResponse[objAudit]" is missing from JSON.');
+        assert(json[r'objAudit'] != null, 'Required key "ApikeyResponse[objAudit]" has a null value in JSON.');
         return true;
       }());
 

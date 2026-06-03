@@ -104,10 +104,8 @@ class SignatureResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "SignatureResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "SignatureResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiSignatureID'), 'Required key "SignatureResponseCompound[pkiSignatureID]" is missing from JSON.');
+        assert(json[r'pkiSignatureID'] != null, 'Required key "SignatureResponseCompound[pkiSignatureID]" has a null value in JSON.');
         return true;
       }());
 

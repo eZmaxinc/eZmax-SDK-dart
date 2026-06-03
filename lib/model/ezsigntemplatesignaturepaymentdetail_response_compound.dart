@@ -90,10 +90,14 @@ class EzsigntemplatesignaturepaymentdetailResponseCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplatesignaturepaymentdetailResponseCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplatesignaturepaymentdetailResponseCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsigntemplatesignaturepaymentdetailID'), 'Required key "EzsigntemplatesignaturepaymentdetailResponseCompound[pkiEzsigntemplatesignaturepaymentdetailID]" is missing from JSON.');
+        assert(json[r'pkiEzsigntemplatesignaturepaymentdetailID'] != null, 'Required key "EzsigntemplatesignaturepaymentdetailResponseCompound[pkiEzsigntemplatesignaturepaymentdetailID]" has a null value in JSON.');
+        assert(json.containsKey(r'tEzsigntemplatesignaturepaymentdetailDescription'), 'Required key "EzsigntemplatesignaturepaymentdetailResponseCompound[tEzsigntemplatesignaturepaymentdetailDescription]" is missing from JSON.');
+        assert(json[r'tEzsigntemplatesignaturepaymentdetailDescription'] != null, 'Required key "EzsigntemplatesignaturepaymentdetailResponseCompound[tEzsigntemplatesignaturepaymentdetailDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'dEzsigntemplatesignaturepaymentdetailAmount'), 'Required key "EzsigntemplatesignaturepaymentdetailResponseCompound[dEzsigntemplatesignaturepaymentdetailAmount]" is missing from JSON.');
+        assert(json[r'dEzsigntemplatesignaturepaymentdetailAmount'] != null, 'Required key "EzsigntemplatesignaturepaymentdetailResponseCompound[dEzsigntemplatesignaturepaymentdetailAmount]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsigntemplatesignaturepaymentdetailTaxable'), 'Required key "EzsigntemplatesignaturepaymentdetailResponseCompound[eEzsigntemplatesignaturepaymentdetailTaxable]" is missing from JSON.');
+        assert(json[r'eEzsigntemplatesignaturepaymentdetailTaxable'] != null, 'Required key "EzsigntemplatesignaturepaymentdetailResponseCompound[eEzsigntemplatesignaturepaymentdetailTaxable]" has a null value in JSON.');
         return true;
       }());
 

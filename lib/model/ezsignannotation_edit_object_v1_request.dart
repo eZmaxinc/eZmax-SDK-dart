@@ -47,10 +47,8 @@ class EzsignannotationEditObjectV1Request {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignannotationEditObjectV1Request[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignannotationEditObjectV1Request[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'objEzsignannotation'), 'Required key "EzsignannotationEditObjectV1Request[objEzsignannotation]" is missing from JSON.');
+        assert(json[r'objEzsignannotation'] != null, 'Required key "EzsignannotationEditObjectV1Request[objEzsignannotation]" has a null value in JSON.');
         return true;
       }());
 

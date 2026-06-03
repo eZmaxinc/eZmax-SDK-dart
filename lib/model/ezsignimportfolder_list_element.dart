@@ -142,10 +142,10 @@ class EzsignimportfolderListElement {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsignimportfolderListElement[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsignimportfolderListElement[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiEzsignimportfolderID'), 'Required key "EzsignimportfolderListElement[pkiEzsignimportfolderID]" is missing from JSON.');
+        assert(json[r'pkiEzsignimportfolderID'] != null, 'Required key "EzsignimportfolderListElement[pkiEzsignimportfolderID]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsignimportfolderName'), 'Required key "EzsignimportfolderListElement[sEzsignimportfolderName]" is missing from JSON.');
+        assert(json[r'sEzsignimportfolderName'] != null, 'Required key "EzsignimportfolderListElement[sEzsignimportfolderName]" has a null value in JSON.');
         return true;
       }());
 

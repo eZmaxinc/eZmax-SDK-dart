@@ -57,10 +57,10 @@ class ActivesessionResponseCompoundApikey {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "ActivesessionResponseCompoundApikey[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "ActivesessionResponseCompoundApikey[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiApikeyID'), 'Required key "ActivesessionResponseCompoundApikey[pkiApikeyID]" is missing from JSON.');
+        assert(json[r'pkiApikeyID'] != null, 'Required key "ActivesessionResponseCompoundApikey[pkiApikeyID]" has a null value in JSON.');
+        assert(json.containsKey(r'sApikeyDescriptionX'), 'Required key "ActivesessionResponseCompoundApikey[sApikeyDescriptionX]" is missing from JSON.');
+        assert(json[r'sApikeyDescriptionX'] != null, 'Required key "ActivesessionResponseCompoundApikey[sApikeyDescriptionX]" has a null value in JSON.');
         return true;
       }());
 

@@ -293,10 +293,26 @@ class CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiEzsigndocumentID'), 'Required key "CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest[fkiEzsigndocumentID]" is missing from JSON.');
+        assert(json[r'fkiEzsigndocumentID'] != null, 'Required key "CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest[fkiEzsigndocumentID]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsignformfieldgroupType'), 'Required key "CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest[eEzsignformfieldgroupType]" is missing from JSON.');
+        assert(json[r'eEzsignformfieldgroupType'] != null, 'Required key "CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest[eEzsignformfieldgroupType]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsignformfieldgroupLabel'), 'Required key "CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest[sEzsignformfieldgroupLabel]" is missing from JSON.');
+        assert(json[r'sEzsignformfieldgroupLabel'] != null, 'Required key "CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest[sEzsignformfieldgroupLabel]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignformfieldgroupStep'), 'Required key "CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest[iEzsignformfieldgroupStep]" is missing from JSON.');
+        assert(json[r'iEzsignformfieldgroupStep'] != null, 'Required key "CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest[iEzsignformfieldgroupStep]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignformfieldgroupFilledmin'), 'Required key "CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest[iEzsignformfieldgroupFilledmin]" is missing from JSON.');
+        assert(json[r'iEzsignformfieldgroupFilledmin'] != null, 'Required key "CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest[iEzsignformfieldgroupFilledmin]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzsignformfieldgroupFilledmax'), 'Required key "CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest[iEzsignformfieldgroupFilledmax]" is missing from JSON.');
+        assert(json[r'iEzsignformfieldgroupFilledmax'] != null, 'Required key "CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest[iEzsignformfieldgroupFilledmax]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzsignformfieldgroupReadonly'), 'Required key "CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest[bEzsignformfieldgroupReadonly]" is missing from JSON.');
+        assert(json[r'bEzsignformfieldgroupReadonly'] != null, 'Required key "CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest[bEzsignformfieldgroupReadonly]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objEzsignformfieldgroupsigner'), 'Required key "CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest[a_objEzsignformfieldgroupsigner]" is missing from JSON.');
+        assert(json[r'a_objEzsignformfieldgroupsigner'] != null, 'Required key "CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest[a_objEzsignformfieldgroupsigner]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objEzsignformfield'), 'Required key "CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest[a_objEzsignformfield]" is missing from JSON.');
+        assert(json[r'a_objEzsignformfield'] != null, 'Required key "CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest[a_objEzsignformfield]" has a null value in JSON.');
+        assert(json.containsKey(r'objCreateezsignelementspositionedbyword'), 'Required key "CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest[objCreateezsignelementspositionedbyword]" is missing from JSON.');
+        assert(json[r'objCreateezsignelementspositionedbyword'] != null, 'Required key "CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest[objCreateezsignelementspositionedbyword]" has a null value in JSON.');
         return true;
       }());
 

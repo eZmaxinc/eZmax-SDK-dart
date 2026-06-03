@@ -68,10 +68,14 @@ class CustomCreditcardtransactionResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "CustomCreditcardtransactionResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "CustomCreditcardtransactionResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'eCreditcardtypeCodename'), 'Required key "CustomCreditcardtransactionResponse[eCreditcardtypeCodename]" is missing from JSON.');
+        assert(json[r'eCreditcardtypeCodename'] != null, 'Required key "CustomCreditcardtransactionResponse[eCreditcardtypeCodename]" has a null value in JSON.');
+        assert(json.containsKey(r'dCreditcardtransactionAmount'), 'Required key "CustomCreditcardtransactionResponse[dCreditcardtransactionAmount]" is missing from JSON.');
+        assert(json[r'dCreditcardtransactionAmount'] != null, 'Required key "CustomCreditcardtransactionResponse[dCreditcardtransactionAmount]" has a null value in JSON.');
+        assert(json.containsKey(r'sCreditcardtransactionPartiallydecryptednumber'), 'Required key "CustomCreditcardtransactionResponse[sCreditcardtransactionPartiallydecryptednumber]" is missing from JSON.');
+        assert(json[r'sCreditcardtransactionPartiallydecryptednumber'] != null, 'Required key "CustomCreditcardtransactionResponse[sCreditcardtransactionPartiallydecryptednumber]" has a null value in JSON.');
+        assert(json.containsKey(r'sCreditcardtransactionReferencenumber'), 'Required key "CustomCreditcardtransactionResponse[sCreditcardtransactionReferencenumber]" is missing from JSON.');
+        assert(json[r'sCreditcardtransactionReferencenumber'] != null, 'Required key "CustomCreditcardtransactionResponse[sCreditcardtransactionReferencenumber]" has a null value in JSON.');
         return true;
       }());
 

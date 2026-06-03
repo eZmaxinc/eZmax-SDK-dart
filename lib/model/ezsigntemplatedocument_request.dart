@@ -201,10 +201,12 @@ class EzsigntemplatedocumentRequest {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntemplatedocumentRequest[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntemplatedocumentRequest[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiEzsigntemplateID'), 'Required key "EzsigntemplatedocumentRequest[fkiEzsigntemplateID]" is missing from JSON.');
+        assert(json[r'fkiEzsigntemplateID'] != null, 'Required key "EzsigntemplatedocumentRequest[fkiEzsigntemplateID]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzsigntemplatedocumentName'), 'Required key "EzsigntemplatedocumentRequest[sEzsigntemplatedocumentName]" is missing from JSON.');
+        assert(json[r'sEzsigntemplatedocumentName'] != null, 'Required key "EzsigntemplatedocumentRequest[sEzsigntemplatedocumentName]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzsigntemplatedocumentSource'), 'Required key "EzsigntemplatedocumentRequest[eEzsigntemplatedocumentSource]" is missing from JSON.');
+        assert(json[r'eEzsigntemplatedocumentSource'] != null, 'Required key "EzsigntemplatedocumentRequest[eEzsigntemplatedocumentSource]" has a null value in JSON.');
         return true;
       }());
 

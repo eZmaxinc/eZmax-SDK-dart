@@ -48,10 +48,8 @@ class EzsigntsarequirementGetAutocompleteV2ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzsigntsarequirementGetAutocompleteV2ResponseMPayload[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzsigntsarequirementGetAutocompleteV2ResponseMPayload[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'a_objEzsigntsarequirement'), 'Required key "EzsigntsarequirementGetAutocompleteV2ResponseMPayload[a_objEzsigntsarequirement]" is missing from JSON.');
+        assert(json[r'a_objEzsigntsarequirement'] != null, 'Required key "EzsigntsarequirementGetAutocompleteV2ResponseMPayload[a_objEzsigntsarequirement]" has a null value in JSON.');
         return true;
       }());
 

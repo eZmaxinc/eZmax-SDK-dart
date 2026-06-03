@@ -58,10 +58,10 @@ class InscriptiontypeAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "InscriptiontypeAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "InscriptiontypeAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiInscriptiontypeID'), 'Required key "InscriptiontypeAutocompleteElementResponse[pkiInscriptiontypeID]" is missing from JSON.');
+        assert(json[r'pkiInscriptiontypeID'] != null, 'Required key "InscriptiontypeAutocompleteElementResponse[pkiInscriptiontypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'sInscriptiontypeNameX'), 'Required key "InscriptiontypeAutocompleteElementResponse[sInscriptiontypeNameX]" is missing from JSON.');
+        assert(json[r'sInscriptiontypeNameX'] != null, 'Required key "InscriptiontypeAutocompleteElementResponse[sInscriptiontypeNameX]" has a null value in JSON.');
         return true;
       }());
 

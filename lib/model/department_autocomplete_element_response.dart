@@ -71,10 +71,14 @@ class DepartmentAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "DepartmentAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "DepartmentAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'sCompanyNameX'), 'Required key "DepartmentAutocompleteElementResponse[sCompanyNameX]" is missing from JSON.');
+        assert(json[r'sCompanyNameX'] != null, 'Required key "DepartmentAutocompleteElementResponse[sCompanyNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'sDepartmentNameX'), 'Required key "DepartmentAutocompleteElementResponse[sDepartmentNameX]" is missing from JSON.');
+        assert(json[r'sDepartmentNameX'] != null, 'Required key "DepartmentAutocompleteElementResponse[sDepartmentNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'pkiDepartmentID'), 'Required key "DepartmentAutocompleteElementResponse[pkiDepartmentID]" is missing from JSON.');
+        assert(json[r'pkiDepartmentID'] != null, 'Required key "DepartmentAutocompleteElementResponse[pkiDepartmentID]" has a null value in JSON.');
+        assert(json.containsKey(r'bDepartmentIsactive'), 'Required key "DepartmentAutocompleteElementResponse[bDepartmentIsactive]" is missing from JSON.');
+        assert(json[r'bDepartmentIsactive'] != null, 'Required key "DepartmentAutocompleteElementResponse[bDepartmentIsactive]" has a null value in JSON.');
         return true;
       }());
 

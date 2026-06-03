@@ -133,10 +133,20 @@ class EzmaxinvoicinguserResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "EzmaxinvoicinguserResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "EzmaxinvoicinguserResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'fkiBillingentityinternalID'), 'Required key "EzmaxinvoicinguserResponse[fkiBillingentityinternalID]" is missing from JSON.');
+        assert(json[r'fkiBillingentityinternalID'] != null, 'Required key "EzmaxinvoicinguserResponse[fkiBillingentityinternalID]" has a null value in JSON.');
+        assert(json.containsKey(r'sBillingentityinternalDescriptionX'), 'Required key "EzmaxinvoicinguserResponse[sBillingentityinternalDescriptionX]" is missing from JSON.');
+        assert(json[r'sBillingentityinternalDescriptionX'] != null, 'Required key "EzmaxinvoicinguserResponse[sBillingentityinternalDescriptionX]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiUserID'), 'Required key "EzmaxinvoicinguserResponse[fkiUserID]" is missing from JSON.');
+        assert(json[r'fkiUserID'] != null, 'Required key "EzmaxinvoicinguserResponse[fkiUserID]" has a null value in JSON.');
+        assert(json.containsKey(r'iEzmaxinvoicinguserEzsigndocument'), 'Required key "EzmaxinvoicinguserResponse[iEzmaxinvoicinguserEzsigndocument]" is missing from JSON.');
+        assert(json[r'iEzmaxinvoicinguserEzsigndocument'] != null, 'Required key "EzmaxinvoicinguserResponse[iEzmaxinvoicinguserEzsigndocument]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzmaxinvoicinguserEzsignaccount'), 'Required key "EzmaxinvoicinguserResponse[bEzmaxinvoicinguserEzsignaccount]" is missing from JSON.');
+        assert(json[r'bEzmaxinvoicinguserEzsignaccount'] != null, 'Required key "EzmaxinvoicinguserResponse[bEzmaxinvoicinguserEzsignaccount]" has a null value in JSON.');
+        assert(json.containsKey(r'bEzmaxinvoicinguserBillableezsign'), 'Required key "EzmaxinvoicinguserResponse[bEzmaxinvoicinguserBillableezsign]" is missing from JSON.');
+        assert(json[r'bEzmaxinvoicinguserBillableezsign'] != null, 'Required key "EzmaxinvoicinguserResponse[bEzmaxinvoicinguserBillableezsign]" has a null value in JSON.');
+        assert(json.containsKey(r'eEzmaxinvoicinguserVariationezsign'), 'Required key "EzmaxinvoicinguserResponse[eEzmaxinvoicinguserVariationezsign]" is missing from JSON.');
+        assert(json[r'eEzmaxinvoicinguserVariationezsign'] != null, 'Required key "EzmaxinvoicinguserResponse[eEzmaxinvoicinguserVariationezsign]" has a null value in JSON.');
         return true;
       }());
 

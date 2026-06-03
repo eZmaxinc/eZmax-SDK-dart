@@ -65,10 +65,12 @@ class UsergroupexternalListElement {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "UsergroupexternalListElement[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "UsergroupexternalListElement[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiUsergroupexternalID'), 'Required key "UsergroupexternalListElement[pkiUsergroupexternalID]" is missing from JSON.');
+        assert(json[r'pkiUsergroupexternalID'] != null, 'Required key "UsergroupexternalListElement[pkiUsergroupexternalID]" has a null value in JSON.');
+        assert(json.containsKey(r'sUsergroupexternalName'), 'Required key "UsergroupexternalListElement[sUsergroupexternalName]" is missing from JSON.');
+        assert(json[r'sUsergroupexternalName'] != null, 'Required key "UsergroupexternalListElement[sUsergroupexternalName]" has a null value in JSON.');
+        assert(json.containsKey(r'sUsergroupexternalID'), 'Required key "UsergroupexternalListElement[sUsergroupexternalID]" is missing from JSON.');
+        assert(json[r'sUsergroupexternalID'] != null, 'Required key "UsergroupexternalListElement[sUsergroupexternalID]" has a null value in JSON.');
         return true;
       }());
 

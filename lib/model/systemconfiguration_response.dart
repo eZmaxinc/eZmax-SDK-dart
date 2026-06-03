@@ -304,10 +304,26 @@ class SystemconfigurationResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "SystemconfigurationResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "SystemconfigurationResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiSystemconfigurationID'), 'Required key "SystemconfigurationResponse[pkiSystemconfigurationID]" is missing from JSON.');
+        assert(json[r'pkiSystemconfigurationID'] != null, 'Required key "SystemconfigurationResponse[pkiSystemconfigurationID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiSystemconfigurationtypeID'), 'Required key "SystemconfigurationResponse[fkiSystemconfigurationtypeID]" is missing from JSON.');
+        assert(json[r'fkiSystemconfigurationtypeID'] != null, 'Required key "SystemconfigurationResponse[fkiSystemconfigurationtypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiTimezoneIDDefault'), 'Required key "SystemconfigurationResponse[fkiTimezoneIDDefault]" is missing from JSON.');
+        assert(json[r'fkiTimezoneIDDefault'] != null, 'Required key "SystemconfigurationResponse[fkiTimezoneIDDefault]" has a null value in JSON.');
+        assert(json.containsKey(r'sTimezoneNameDefault'), 'Required key "SystemconfigurationResponse[sTimezoneNameDefault]" is missing from JSON.');
+        assert(json[r'sTimezoneNameDefault'] != null, 'Required key "SystemconfigurationResponse[sTimezoneNameDefault]" has a null value in JSON.');
+        assert(json.containsKey(r'sSystemconfigurationtypeDescriptionX'), 'Required key "SystemconfigurationResponse[sSystemconfigurationtypeDescriptionX]" is missing from JSON.');
+        assert(json[r'sSystemconfigurationtypeDescriptionX'] != null, 'Required key "SystemconfigurationResponse[sSystemconfigurationtypeDescriptionX]" has a null value in JSON.');
+        assert(json.containsKey(r'eSystemconfigurationNewexternaluseraction'), 'Required key "SystemconfigurationResponse[eSystemconfigurationNewexternaluseraction]" is missing from JSON.');
+        assert(json[r'eSystemconfigurationNewexternaluseraction'] != null, 'Required key "SystemconfigurationResponse[eSystemconfigurationNewexternaluseraction]" has a null value in JSON.');
+        assert(json.containsKey(r'eSystemconfigurationLanguage1'), 'Required key "SystemconfigurationResponse[eSystemconfigurationLanguage1]" is missing from JSON.');
+        assert(json[r'eSystemconfigurationLanguage1'] != null, 'Required key "SystemconfigurationResponse[eSystemconfigurationLanguage1]" has a null value in JSON.');
+        assert(json.containsKey(r'eSystemconfigurationLanguage2'), 'Required key "SystemconfigurationResponse[eSystemconfigurationLanguage2]" is missing from JSON.');
+        assert(json[r'eSystemconfigurationLanguage2'] != null, 'Required key "SystemconfigurationResponse[eSystemconfigurationLanguage2]" has a null value in JSON.');
+        assert(json.containsKey(r'bSystemconfigurationEzsignpersonnal'), 'Required key "SystemconfigurationResponse[bSystemconfigurationEzsignpersonnal]" is missing from JSON.');
+        assert(json[r'bSystemconfigurationEzsignpersonnal'] != null, 'Required key "SystemconfigurationResponse[bSystemconfigurationEzsignpersonnal]" has a null value in JSON.');
+        assert(json.containsKey(r'bSystemconfigurationSspr'), 'Required key "SystemconfigurationResponse[bSystemconfigurationSspr]" is missing from JSON.');
+        assert(json[r'bSystemconfigurationSspr'] != null, 'Required key "SystemconfigurationResponse[bSystemconfigurationSspr]" has a null value in JSON.');
         return true;
       }());
 

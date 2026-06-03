@@ -65,10 +65,12 @@ class OtherincometypeAutocompleteElementResponse {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "OtherincometypeAutocompleteElementResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "OtherincometypeAutocompleteElementResponse[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'pkiOtherincometypeID'), 'Required key "OtherincometypeAutocompleteElementResponse[pkiOtherincometypeID]" is missing from JSON.');
+        assert(json[r'pkiOtherincometypeID'] != null, 'Required key "OtherincometypeAutocompleteElementResponse[pkiOtherincometypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'sOtherincometypeDescriptionX'), 'Required key "OtherincometypeAutocompleteElementResponse[sOtherincometypeDescriptionX]" is missing from JSON.');
+        assert(json[r'sOtherincometypeDescriptionX'] != null, 'Required key "OtherincometypeAutocompleteElementResponse[sOtherincometypeDescriptionX]" has a null value in JSON.');
+        assert(json.containsKey(r'bOtherincometypeIsactive'), 'Required key "OtherincometypeAutocompleteElementResponse[bOtherincometypeIsactive]" is missing from JSON.');
+        assert(json[r'bOtherincometypeIsactive'] != null, 'Required key "OtherincometypeAutocompleteElementResponse[bOtherincometypeIsactive]" has a null value in JSON.');
         return true;
       }());
 

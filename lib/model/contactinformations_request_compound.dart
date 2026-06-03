@@ -93,10 +93,22 @@ class ContactinformationsRequestCompound {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "ContactinformationsRequestCompound[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "ContactinformationsRequestCompound[$key]" has a null value in JSON.');
-        });
+        assert(json.containsKey(r'iAddressDefault'), 'Required key "ContactinformationsRequestCompound[iAddressDefault]" is missing from JSON.');
+        assert(json[r'iAddressDefault'] != null, 'Required key "ContactinformationsRequestCompound[iAddressDefault]" has a null value in JSON.');
+        assert(json.containsKey(r'iPhoneDefault'), 'Required key "ContactinformationsRequestCompound[iPhoneDefault]" is missing from JSON.');
+        assert(json[r'iPhoneDefault'] != null, 'Required key "ContactinformationsRequestCompound[iPhoneDefault]" has a null value in JSON.');
+        assert(json.containsKey(r'iEmailDefault'), 'Required key "ContactinformationsRequestCompound[iEmailDefault]" is missing from JSON.');
+        assert(json[r'iEmailDefault'] != null, 'Required key "ContactinformationsRequestCompound[iEmailDefault]" has a null value in JSON.');
+        assert(json.containsKey(r'iWebsiteDefault'), 'Required key "ContactinformationsRequestCompound[iWebsiteDefault]" is missing from JSON.');
+        assert(json[r'iWebsiteDefault'] != null, 'Required key "ContactinformationsRequestCompound[iWebsiteDefault]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objAddress'), 'Required key "ContactinformationsRequestCompound[a_objAddress]" is missing from JSON.');
+        assert(json[r'a_objAddress'] != null, 'Required key "ContactinformationsRequestCompound[a_objAddress]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objPhone'), 'Required key "ContactinformationsRequestCompound[a_objPhone]" is missing from JSON.');
+        assert(json[r'a_objPhone'] != null, 'Required key "ContactinformationsRequestCompound[a_objPhone]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objEmail'), 'Required key "ContactinformationsRequestCompound[a_objEmail]" is missing from JSON.');
+        assert(json[r'a_objEmail'] != null, 'Required key "ContactinformationsRequestCompound[a_objEmail]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objWebsite'), 'Required key "ContactinformationsRequestCompound[a_objWebsite]" is missing from JSON.');
+        assert(json[r'a_objWebsite'] != null, 'Required key "ContactinformationsRequestCompound[a_objWebsite]" has a null value in JSON.');
         return true;
       }());
 
