@@ -25,7 +25,7 @@ class ObjectEzsigndiscussionApi {
   /// Parameters:
   ///
   /// * [EzsigndiscussionCreateObjectV1Request] ezsigndiscussionCreateObjectV1Request (required):
-  Future<Response> ezsigndiscussionCreateObjectV1WithHttpInfo(EzsigndiscussionCreateObjectV1Request ezsigndiscussionCreateObjectV1Request,) async {
+  Future<Response> ezsigndiscussionCreateObjectV1WithHttpInfo(EzsigndiscussionCreateObjectV1Request ezsigndiscussionCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsigndiscussion';
 
@@ -47,6 +47,7 @@ class ObjectEzsigndiscussionApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -57,8 +58,8 @@ class ObjectEzsigndiscussionApi {
   /// Parameters:
   ///
   /// * [EzsigndiscussionCreateObjectV1Request] ezsigndiscussionCreateObjectV1Request (required):
-  Future<EzsigndiscussionCreateObjectV1Response?> ezsigndiscussionCreateObjectV1(EzsigndiscussionCreateObjectV1Request ezsigndiscussionCreateObjectV1Request,) async {
-    final response = await ezsigndiscussionCreateObjectV1WithHttpInfo(ezsigndiscussionCreateObjectV1Request,);
+  Future<EzsigndiscussionCreateObjectV1Response?> ezsigndiscussionCreateObjectV1(EzsigndiscussionCreateObjectV1Request ezsigndiscussionCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigndiscussionCreateObjectV1WithHttpInfo(ezsigndiscussionCreateObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -82,7 +83,7 @@ class ObjectEzsigndiscussionApi {
   ///
   /// * [int] pkiEzsigndiscussionID (required):
   ///   The unique ID of the Ezsigndiscussion
-  Future<Response> ezsigndiscussionDeleteObjectV1WithHttpInfo(int pkiEzsigndiscussionID,) async {
+  Future<Response> ezsigndiscussionDeleteObjectV1WithHttpInfo(int pkiEzsigndiscussionID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsigndiscussion/{pkiEzsigndiscussionID}'
       .replaceAll('{pkiEzsigndiscussionID}', pkiEzsigndiscussionID.toString());
@@ -105,6 +106,7 @@ class ObjectEzsigndiscussionApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -116,8 +118,8 @@ class ObjectEzsigndiscussionApi {
   ///
   /// * [int] pkiEzsigndiscussionID (required):
   ///   The unique ID of the Ezsigndiscussion
-  Future<EzsigndiscussionDeleteObjectV1Response?> ezsigndiscussionDeleteObjectV1(int pkiEzsigndiscussionID,) async {
-    final response = await ezsigndiscussionDeleteObjectV1WithHttpInfo(pkiEzsigndiscussionID,);
+  Future<EzsigndiscussionDeleteObjectV1Response?> ezsigndiscussionDeleteObjectV1(int pkiEzsigndiscussionID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigndiscussionDeleteObjectV1WithHttpInfo(pkiEzsigndiscussionID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -141,7 +143,7 @@ class ObjectEzsigndiscussionApi {
   ///
   /// * [int] pkiEzsigndiscussionID (required):
   ///   The unique ID of the Ezsigndiscussion
-  Future<Response> ezsigndiscussionGetObjectV2WithHttpInfo(int pkiEzsigndiscussionID,) async {
+  Future<Response> ezsigndiscussionGetObjectV2WithHttpInfo(int pkiEzsigndiscussionID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezsigndiscussion/{pkiEzsigndiscussionID}'
       .replaceAll('{pkiEzsigndiscussionID}', pkiEzsigndiscussionID.toString());
@@ -164,6 +166,7 @@ class ObjectEzsigndiscussionApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -175,8 +178,8 @@ class ObjectEzsigndiscussionApi {
   ///
   /// * [int] pkiEzsigndiscussionID (required):
   ///   The unique ID of the Ezsigndiscussion
-  Future<EzsigndiscussionGetObjectV2Response?> ezsigndiscussionGetObjectV2(int pkiEzsigndiscussionID,) async {
-    final response = await ezsigndiscussionGetObjectV2WithHttpInfo(pkiEzsigndiscussionID,);
+  Future<EzsigndiscussionGetObjectV2Response?> ezsigndiscussionGetObjectV2(int pkiEzsigndiscussionID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigndiscussionGetObjectV2WithHttpInfo(pkiEzsigndiscussionID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

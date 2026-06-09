@@ -25,7 +25,7 @@ class ObjectTranqcontractApi {
   /// Parameters:
   ///
   /// * [int] pkiTranqcontractID (required):
-  Future<Response> tranqcontractGetCommunicationCountV1WithHttpInfo(int pkiTranqcontractID,) async {
+  Future<Response> tranqcontractGetCommunicationCountV1WithHttpInfo(int pkiTranqcontractID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/tranqcontract/{pkiTranqcontractID}/getCommunicationCount'
       .replaceAll('{pkiTranqcontractID}', pkiTranqcontractID.toString());
@@ -48,6 +48,7 @@ class ObjectTranqcontractApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -58,8 +59,8 @@ class ObjectTranqcontractApi {
   /// Parameters:
   ///
   /// * [int] pkiTranqcontractID (required):
-  Future<TranqcontractGetCommunicationCountV1Response?> tranqcontractGetCommunicationCountV1(int pkiTranqcontractID,) async {
-    final response = await tranqcontractGetCommunicationCountV1WithHttpInfo(pkiTranqcontractID,);
+  Future<TranqcontractGetCommunicationCountV1Response?> tranqcontractGetCommunicationCountV1(int pkiTranqcontractID, { Future<void>? abortTrigger, }) async {
+    final response = await tranqcontractGetCommunicationCountV1WithHttpInfo(pkiTranqcontractID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -82,7 +83,7 @@ class ObjectTranqcontractApi {
   /// Parameters:
   ///
   /// * [int] pkiTranqcontractID (required):
-  Future<Response> tranqcontractGetCommunicationListV1WithHttpInfo(int pkiTranqcontractID,) async {
+  Future<Response> tranqcontractGetCommunicationListV1WithHttpInfo(int pkiTranqcontractID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/tranqcontract/{pkiTranqcontractID}/getCommunicationList'
       .replaceAll('{pkiTranqcontractID}', pkiTranqcontractID.toString());
@@ -105,6 +106,7 @@ class ObjectTranqcontractApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -115,8 +117,8 @@ class ObjectTranqcontractApi {
   /// Parameters:
   ///
   /// * [int] pkiTranqcontractID (required):
-  Future<TranqcontractGetCommunicationListV1Response?> tranqcontractGetCommunicationListV1(int pkiTranqcontractID,) async {
-    final response = await tranqcontractGetCommunicationListV1WithHttpInfo(pkiTranqcontractID,);
+  Future<TranqcontractGetCommunicationListV1Response?> tranqcontractGetCommunicationListV1(int pkiTranqcontractID, { Future<void>? abortTrigger, }) async {
+    final response = await tranqcontractGetCommunicationListV1WithHttpInfo(pkiTranqcontractID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -139,7 +141,7 @@ class ObjectTranqcontractApi {
   /// Parameters:
   ///
   /// * [int] pkiTranqcontractID (required):
-  Future<Response> tranqcontractGetCommunicationrecipientsV1WithHttpInfo(int pkiTranqcontractID,) async {
+  Future<Response> tranqcontractGetCommunicationrecipientsV1WithHttpInfo(int pkiTranqcontractID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/tranqcontract/{pkiTranqcontractID}/getCommunicationrecipients'
       .replaceAll('{pkiTranqcontractID}', pkiTranqcontractID.toString());
@@ -162,6 +164,7 @@ class ObjectTranqcontractApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -172,8 +175,8 @@ class ObjectTranqcontractApi {
   /// Parameters:
   ///
   /// * [int] pkiTranqcontractID (required):
-  Future<TranqcontractGetCommunicationrecipientsV1Response?> tranqcontractGetCommunicationrecipientsV1(int pkiTranqcontractID,) async {
-    final response = await tranqcontractGetCommunicationrecipientsV1WithHttpInfo(pkiTranqcontractID,);
+  Future<TranqcontractGetCommunicationrecipientsV1Response?> tranqcontractGetCommunicationrecipientsV1(int pkiTranqcontractID, { Future<void>? abortTrigger, }) async {
+    final response = await tranqcontractGetCommunicationrecipientsV1WithHttpInfo(pkiTranqcontractID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -196,7 +199,7 @@ class ObjectTranqcontractApi {
   /// Parameters:
   ///
   /// * [int] pkiTranqcontractID (required):
-  Future<Response> tranqcontractGetCommunicationsendersV1WithHttpInfo(int pkiTranqcontractID,) async {
+  Future<Response> tranqcontractGetCommunicationsendersV1WithHttpInfo(int pkiTranqcontractID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/tranqcontract/{pkiTranqcontractID}/getCommunicationsenders'
       .replaceAll('{pkiTranqcontractID}', pkiTranqcontractID.toString());
@@ -219,6 +222,7 @@ class ObjectTranqcontractApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -229,8 +233,8 @@ class ObjectTranqcontractApi {
   /// Parameters:
   ///
   /// * [int] pkiTranqcontractID (required):
-  Future<TranqcontractGetCommunicationsendersV1Response?> tranqcontractGetCommunicationsendersV1(int pkiTranqcontractID,) async {
-    final response = await tranqcontractGetCommunicationsendersV1WithHttpInfo(pkiTranqcontractID,);
+  Future<TranqcontractGetCommunicationsendersV1Response?> tranqcontractGetCommunicationsendersV1(int pkiTranqcontractID, { Future<void>? abortTrigger, }) async {
+    final response = await tranqcontractGetCommunicationsendersV1WithHttpInfo(pkiTranqcontractID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -255,7 +259,7 @@ class ObjectTranqcontractApi {
   /// * [int] pkiTranqcontractID (required):
   ///
   /// * [TranqcontractImportIntoEDMV1Request] tranqcontractImportIntoEDMV1Request (required):
-  Future<Response> tranqcontractImportIntoEDMV1WithHttpInfo(int pkiTranqcontractID, TranqcontractImportIntoEDMV1Request tranqcontractImportIntoEDMV1Request,) async {
+  Future<Response> tranqcontractImportIntoEDMV1WithHttpInfo(int pkiTranqcontractID, TranqcontractImportIntoEDMV1Request tranqcontractImportIntoEDMV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/tranqcontract/{pkiTranqcontractID}/importIntoEDM'
       .replaceAll('{pkiTranqcontractID}', pkiTranqcontractID.toString());
@@ -278,6 +282,7 @@ class ObjectTranqcontractApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -290,8 +295,8 @@ class ObjectTranqcontractApi {
   /// * [int] pkiTranqcontractID (required):
   ///
   /// * [TranqcontractImportIntoEDMV1Request] tranqcontractImportIntoEDMV1Request (required):
-  Future<TranqcontractImportIntoEDMV1Response?> tranqcontractImportIntoEDMV1(int pkiTranqcontractID, TranqcontractImportIntoEDMV1Request tranqcontractImportIntoEDMV1Request,) async {
-    final response = await tranqcontractImportIntoEDMV1WithHttpInfo(pkiTranqcontractID, tranqcontractImportIntoEDMV1Request,);
+  Future<TranqcontractImportIntoEDMV1Response?> tranqcontractImportIntoEDMV1(int pkiTranqcontractID, TranqcontractImportIntoEDMV1Request tranqcontractImportIntoEDMV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await tranqcontractImportIntoEDMV1WithHttpInfo(pkiTranqcontractID, tranqcontractImportIntoEDMV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

@@ -25,7 +25,7 @@ class ObjectElectronicfundstransferApi {
   /// Parameters:
   ///
   /// * [int] pkiElectronicfundstransferID (required):
-  Future<Response> electronicfundstransferGetCommunicationCountV1WithHttpInfo(int pkiElectronicfundstransferID,) async {
+  Future<Response> electronicfundstransferGetCommunicationCountV1WithHttpInfo(int pkiElectronicfundstransferID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationCount'
       .replaceAll('{pkiElectronicfundstransferID}', pkiElectronicfundstransferID.toString());
@@ -48,6 +48,7 @@ class ObjectElectronicfundstransferApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -58,8 +59,8 @@ class ObjectElectronicfundstransferApi {
   /// Parameters:
   ///
   /// * [int] pkiElectronicfundstransferID (required):
-  Future<ElectronicfundstransferGetCommunicationCountV1Response?> electronicfundstransferGetCommunicationCountV1(int pkiElectronicfundstransferID,) async {
-    final response = await electronicfundstransferGetCommunicationCountV1WithHttpInfo(pkiElectronicfundstransferID,);
+  Future<ElectronicfundstransferGetCommunicationCountV1Response?> electronicfundstransferGetCommunicationCountV1(int pkiElectronicfundstransferID, { Future<void>? abortTrigger, }) async {
+    final response = await electronicfundstransferGetCommunicationCountV1WithHttpInfo(pkiElectronicfundstransferID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -82,7 +83,7 @@ class ObjectElectronicfundstransferApi {
   /// Parameters:
   ///
   /// * [int] pkiElectronicfundstransferID (required):
-  Future<Response> electronicfundstransferGetCommunicationListV1WithHttpInfo(int pkiElectronicfundstransferID,) async {
+  Future<Response> electronicfundstransferGetCommunicationListV1WithHttpInfo(int pkiElectronicfundstransferID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationList'
       .replaceAll('{pkiElectronicfundstransferID}', pkiElectronicfundstransferID.toString());
@@ -105,6 +106,7 @@ class ObjectElectronicfundstransferApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -115,8 +117,8 @@ class ObjectElectronicfundstransferApi {
   /// Parameters:
   ///
   /// * [int] pkiElectronicfundstransferID (required):
-  Future<ElectronicfundstransferGetCommunicationListV1Response?> electronicfundstransferGetCommunicationListV1(int pkiElectronicfundstransferID,) async {
-    final response = await electronicfundstransferGetCommunicationListV1WithHttpInfo(pkiElectronicfundstransferID,);
+  Future<ElectronicfundstransferGetCommunicationListV1Response?> electronicfundstransferGetCommunicationListV1(int pkiElectronicfundstransferID, { Future<void>? abortTrigger, }) async {
+    final response = await electronicfundstransferGetCommunicationListV1WithHttpInfo(pkiElectronicfundstransferID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -139,7 +141,7 @@ class ObjectElectronicfundstransferApi {
   /// Parameters:
   ///
   /// * [int] pkiElectronicfundstransferID (required):
-  Future<Response> electronicfundstransferGetCommunicationrecipientsV1WithHttpInfo(int pkiElectronicfundstransferID,) async {
+  Future<Response> electronicfundstransferGetCommunicationrecipientsV1WithHttpInfo(int pkiElectronicfundstransferID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationrecipients'
       .replaceAll('{pkiElectronicfundstransferID}', pkiElectronicfundstransferID.toString());
@@ -162,6 +164,7 @@ class ObjectElectronicfundstransferApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -172,8 +175,8 @@ class ObjectElectronicfundstransferApi {
   /// Parameters:
   ///
   /// * [int] pkiElectronicfundstransferID (required):
-  Future<ElectronicfundstransferGetCommunicationrecipientsV1Response?> electronicfundstransferGetCommunicationrecipientsV1(int pkiElectronicfundstransferID,) async {
-    final response = await electronicfundstransferGetCommunicationrecipientsV1WithHttpInfo(pkiElectronicfundstransferID,);
+  Future<ElectronicfundstransferGetCommunicationrecipientsV1Response?> electronicfundstransferGetCommunicationrecipientsV1(int pkiElectronicfundstransferID, { Future<void>? abortTrigger, }) async {
+    final response = await electronicfundstransferGetCommunicationrecipientsV1WithHttpInfo(pkiElectronicfundstransferID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -196,7 +199,7 @@ class ObjectElectronicfundstransferApi {
   /// Parameters:
   ///
   /// * [int] pkiElectronicfundstransferID (required):
-  Future<Response> electronicfundstransferGetCommunicationsendersV1WithHttpInfo(int pkiElectronicfundstransferID,) async {
+  Future<Response> electronicfundstransferGetCommunicationsendersV1WithHttpInfo(int pkiElectronicfundstransferID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationsenders'
       .replaceAll('{pkiElectronicfundstransferID}', pkiElectronicfundstransferID.toString());
@@ -219,6 +222,7 @@ class ObjectElectronicfundstransferApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -229,8 +233,8 @@ class ObjectElectronicfundstransferApi {
   /// Parameters:
   ///
   /// * [int] pkiElectronicfundstransferID (required):
-  Future<ElectronicfundstransferGetCommunicationsendersV1Response?> electronicfundstransferGetCommunicationsendersV1(int pkiElectronicfundstransferID,) async {
-    final response = await electronicfundstransferGetCommunicationsendersV1WithHttpInfo(pkiElectronicfundstransferID,);
+  Future<ElectronicfundstransferGetCommunicationsendersV1Response?> electronicfundstransferGetCommunicationsendersV1(int pkiElectronicfundstransferID, { Future<void>? abortTrigger, }) async {
+    final response = await electronicfundstransferGetCommunicationsendersV1WithHttpInfo(pkiElectronicfundstransferID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -255,7 +259,7 @@ class ObjectElectronicfundstransferApi {
   /// * [int] pkiElectronicfundstransferID (required):
   ///
   /// * [ElectronicfundstransferImportIntoEDMV1Request] electronicfundstransferImportIntoEDMV1Request (required):
-  Future<Response> electronicfundstransferImportIntoEDMV1WithHttpInfo(int pkiElectronicfundstransferID, ElectronicfundstransferImportIntoEDMV1Request electronicfundstransferImportIntoEDMV1Request,) async {
+  Future<Response> electronicfundstransferImportIntoEDMV1WithHttpInfo(int pkiElectronicfundstransferID, ElectronicfundstransferImportIntoEDMV1Request electronicfundstransferImportIntoEDMV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/importIntoEDM'
       .replaceAll('{pkiElectronicfundstransferID}', pkiElectronicfundstransferID.toString());
@@ -278,6 +282,7 @@ class ObjectElectronicfundstransferApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -290,8 +295,8 @@ class ObjectElectronicfundstransferApi {
   /// * [int] pkiElectronicfundstransferID (required):
   ///
   /// * [ElectronicfundstransferImportIntoEDMV1Request] electronicfundstransferImportIntoEDMV1Request (required):
-  Future<ElectronicfundstransferImportIntoEDMV1Response?> electronicfundstransferImportIntoEDMV1(int pkiElectronicfundstransferID, ElectronicfundstransferImportIntoEDMV1Request electronicfundstransferImportIntoEDMV1Request,) async {
-    final response = await electronicfundstransferImportIntoEDMV1WithHttpInfo(pkiElectronicfundstransferID, electronicfundstransferImportIntoEDMV1Request,);
+  Future<ElectronicfundstransferImportIntoEDMV1Response?> electronicfundstransferImportIntoEDMV1(int pkiElectronicfundstransferID, ElectronicfundstransferImportIntoEDMV1Request electronicfundstransferImportIntoEDMV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await electronicfundstransferImportIntoEDMV1WithHttpInfo(pkiElectronicfundstransferID, electronicfundstransferImportIntoEDMV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

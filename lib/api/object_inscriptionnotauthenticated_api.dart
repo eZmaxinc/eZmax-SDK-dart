@@ -27,7 +27,7 @@ class ObjectInscriptionnotauthenticatedApi {
   /// * [int] pkiInscriptionnotauthenticatedID (required):
   ///
   /// * [InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request] inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request (required):
-  Future<Response> inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1WithHttpInfo(int pkiInscriptionnotauthenticatedID, InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request,) async {
+  Future<Response> inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1WithHttpInfo(int pkiInscriptionnotauthenticatedID, InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/fillInscriptionnotauthenticatedcondition'
       .replaceAll('{pkiInscriptionnotauthenticatedID}', pkiInscriptionnotauthenticatedID.toString());
@@ -50,6 +50,7 @@ class ObjectInscriptionnotauthenticatedApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -62,8 +63,8 @@ class ObjectInscriptionnotauthenticatedApi {
   /// * [int] pkiInscriptionnotauthenticatedID (required):
   ///
   /// * [InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request] inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request (required):
-  Future<InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Response?> inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1(int pkiInscriptionnotauthenticatedID, InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request,) async {
-    final response = await inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1WithHttpInfo(pkiInscriptionnotauthenticatedID, inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request,);
+  Future<InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Response?> inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1(int pkiInscriptionnotauthenticatedID, InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1WithHttpInfo(pkiInscriptionnotauthenticatedID, inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -86,7 +87,7 @@ class ObjectInscriptionnotauthenticatedApi {
   /// Parameters:
   ///
   /// * [int] pkiInscriptionnotauthenticatedID (required):
-  Future<Response> inscriptionnotauthenticatedGetCommunicationCountV1WithHttpInfo(int pkiInscriptionnotauthenticatedID,) async {
+  Future<Response> inscriptionnotauthenticatedGetCommunicationCountV1WithHttpInfo(int pkiInscriptionnotauthenticatedID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationCount'
       .replaceAll('{pkiInscriptionnotauthenticatedID}', pkiInscriptionnotauthenticatedID.toString());
@@ -109,6 +110,7 @@ class ObjectInscriptionnotauthenticatedApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -119,8 +121,8 @@ class ObjectInscriptionnotauthenticatedApi {
   /// Parameters:
   ///
   /// * [int] pkiInscriptionnotauthenticatedID (required):
-  Future<InscriptionnotauthenticatedGetCommunicationCountV1Response?> inscriptionnotauthenticatedGetCommunicationCountV1(int pkiInscriptionnotauthenticatedID,) async {
-    final response = await inscriptionnotauthenticatedGetCommunicationCountV1WithHttpInfo(pkiInscriptionnotauthenticatedID,);
+  Future<InscriptionnotauthenticatedGetCommunicationCountV1Response?> inscriptionnotauthenticatedGetCommunicationCountV1(int pkiInscriptionnotauthenticatedID, { Future<void>? abortTrigger, }) async {
+    final response = await inscriptionnotauthenticatedGetCommunicationCountV1WithHttpInfo(pkiInscriptionnotauthenticatedID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -143,7 +145,7 @@ class ObjectInscriptionnotauthenticatedApi {
   /// Parameters:
   ///
   /// * [int] pkiInscriptionnotauthenticatedID (required):
-  Future<Response> inscriptionnotauthenticatedGetCommunicationListV1WithHttpInfo(int pkiInscriptionnotauthenticatedID,) async {
+  Future<Response> inscriptionnotauthenticatedGetCommunicationListV1WithHttpInfo(int pkiInscriptionnotauthenticatedID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationList'
       .replaceAll('{pkiInscriptionnotauthenticatedID}', pkiInscriptionnotauthenticatedID.toString());
@@ -166,6 +168,7 @@ class ObjectInscriptionnotauthenticatedApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -176,8 +179,8 @@ class ObjectInscriptionnotauthenticatedApi {
   /// Parameters:
   ///
   /// * [int] pkiInscriptionnotauthenticatedID (required):
-  Future<InscriptionnotauthenticatedGetCommunicationListV1Response?> inscriptionnotauthenticatedGetCommunicationListV1(int pkiInscriptionnotauthenticatedID,) async {
-    final response = await inscriptionnotauthenticatedGetCommunicationListV1WithHttpInfo(pkiInscriptionnotauthenticatedID,);
+  Future<InscriptionnotauthenticatedGetCommunicationListV1Response?> inscriptionnotauthenticatedGetCommunicationListV1(int pkiInscriptionnotauthenticatedID, { Future<void>? abortTrigger, }) async {
+    final response = await inscriptionnotauthenticatedGetCommunicationListV1WithHttpInfo(pkiInscriptionnotauthenticatedID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -200,7 +203,7 @@ class ObjectInscriptionnotauthenticatedApi {
   /// Parameters:
   ///
   /// * [int] pkiInscriptionnotauthenticatedID (required):
-  Future<Response> inscriptionnotauthenticatedGetCommunicationrecipientsV1WithHttpInfo(int pkiInscriptionnotauthenticatedID,) async {
+  Future<Response> inscriptionnotauthenticatedGetCommunicationrecipientsV1WithHttpInfo(int pkiInscriptionnotauthenticatedID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationrecipients'
       .replaceAll('{pkiInscriptionnotauthenticatedID}', pkiInscriptionnotauthenticatedID.toString());
@@ -223,6 +226,7 @@ class ObjectInscriptionnotauthenticatedApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -233,8 +237,8 @@ class ObjectInscriptionnotauthenticatedApi {
   /// Parameters:
   ///
   /// * [int] pkiInscriptionnotauthenticatedID (required):
-  Future<InscriptionnotauthenticatedGetCommunicationrecipientsV1Response?> inscriptionnotauthenticatedGetCommunicationrecipientsV1(int pkiInscriptionnotauthenticatedID,) async {
-    final response = await inscriptionnotauthenticatedGetCommunicationrecipientsV1WithHttpInfo(pkiInscriptionnotauthenticatedID,);
+  Future<InscriptionnotauthenticatedGetCommunicationrecipientsV1Response?> inscriptionnotauthenticatedGetCommunicationrecipientsV1(int pkiInscriptionnotauthenticatedID, { Future<void>? abortTrigger, }) async {
+    final response = await inscriptionnotauthenticatedGetCommunicationrecipientsV1WithHttpInfo(pkiInscriptionnotauthenticatedID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -257,7 +261,7 @@ class ObjectInscriptionnotauthenticatedApi {
   /// Parameters:
   ///
   /// * [int] pkiInscriptionnotauthenticatedID (required):
-  Future<Response> inscriptionnotauthenticatedGetCommunicationsendersV1WithHttpInfo(int pkiInscriptionnotauthenticatedID,) async {
+  Future<Response> inscriptionnotauthenticatedGetCommunicationsendersV1WithHttpInfo(int pkiInscriptionnotauthenticatedID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationsenders'
       .replaceAll('{pkiInscriptionnotauthenticatedID}', pkiInscriptionnotauthenticatedID.toString());
@@ -280,6 +284,7 @@ class ObjectInscriptionnotauthenticatedApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -290,8 +295,8 @@ class ObjectInscriptionnotauthenticatedApi {
   /// Parameters:
   ///
   /// * [int] pkiInscriptionnotauthenticatedID (required):
-  Future<InscriptionnotauthenticatedGetCommunicationsendersV1Response?> inscriptionnotauthenticatedGetCommunicationsendersV1(int pkiInscriptionnotauthenticatedID,) async {
-    final response = await inscriptionnotauthenticatedGetCommunicationsendersV1WithHttpInfo(pkiInscriptionnotauthenticatedID,);
+  Future<InscriptionnotauthenticatedGetCommunicationsendersV1Response?> inscriptionnotauthenticatedGetCommunicationsendersV1(int pkiInscriptionnotauthenticatedID, { Future<void>? abortTrigger, }) async {
+    final response = await inscriptionnotauthenticatedGetCommunicationsendersV1WithHttpInfo(pkiInscriptionnotauthenticatedID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -314,7 +319,7 @@ class ObjectInscriptionnotauthenticatedApi {
   /// Parameters:
   ///
   /// * [int] pkiInscriptionnotauthenticatedID (required):
-  Future<Response> inscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1WithHttpInfo(int pkiInscriptionnotauthenticatedID,) async {
+  Future<Response> inscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1WithHttpInfo(int pkiInscriptionnotauthenticatedID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getInscriptionnotauthenticatedconditions'
       .replaceAll('{pkiInscriptionnotauthenticatedID}', pkiInscriptionnotauthenticatedID.toString());
@@ -337,6 +342,7 @@ class ObjectInscriptionnotauthenticatedApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -347,8 +353,8 @@ class ObjectInscriptionnotauthenticatedApi {
   /// Parameters:
   ///
   /// * [int] pkiInscriptionnotauthenticatedID (required):
-  Future<InscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1Response?> inscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1(int pkiInscriptionnotauthenticatedID,) async {
-    final response = await inscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1WithHttpInfo(pkiInscriptionnotauthenticatedID,);
+  Future<InscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1Response?> inscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1(int pkiInscriptionnotauthenticatedID, { Future<void>? abortTrigger, }) async {
+    final response = await inscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1WithHttpInfo(pkiInscriptionnotauthenticatedID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -380,7 +386,7 @@ class ObjectInscriptionnotauthenticatedApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<Response> inscriptionnotauthenticatedGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
+  Future<Response> inscriptionnotauthenticatedGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/inscriptionnotauthenticated/getList';
 
@@ -419,6 +425,7 @@ class ObjectInscriptionnotauthenticatedApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -438,8 +445,8 @@ class ObjectInscriptionnotauthenticatedApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<InscriptionnotauthenticatedGetListV1Response?> inscriptionnotauthenticatedGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
-    final response = await inscriptionnotauthenticatedGetListV1WithHttpInfo( eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, );
+  Future<InscriptionnotauthenticatedGetListV1Response?> inscriptionnotauthenticatedGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
+    final response = await inscriptionnotauthenticatedGetListV1WithHttpInfo(eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -464,7 +471,7 @@ class ObjectInscriptionnotauthenticatedApi {
   /// * [int] pkiInscriptionnotauthenticatedID (required):
   ///
   /// * [InscriptionnotauthenticatedImportIntoEDMV1Request] inscriptionnotauthenticatedImportIntoEDMV1Request (required):
-  Future<Response> inscriptionnotauthenticatedImportIntoEDMV1WithHttpInfo(int pkiInscriptionnotauthenticatedID, InscriptionnotauthenticatedImportIntoEDMV1Request inscriptionnotauthenticatedImportIntoEDMV1Request,) async {
+  Future<Response> inscriptionnotauthenticatedImportIntoEDMV1WithHttpInfo(int pkiInscriptionnotauthenticatedID, InscriptionnotauthenticatedImportIntoEDMV1Request inscriptionnotauthenticatedImportIntoEDMV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/importIntoEDM'
       .replaceAll('{pkiInscriptionnotauthenticatedID}', pkiInscriptionnotauthenticatedID.toString());
@@ -487,6 +494,7 @@ class ObjectInscriptionnotauthenticatedApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -499,8 +507,8 @@ class ObjectInscriptionnotauthenticatedApi {
   /// * [int] pkiInscriptionnotauthenticatedID (required):
   ///
   /// * [InscriptionnotauthenticatedImportIntoEDMV1Request] inscriptionnotauthenticatedImportIntoEDMV1Request (required):
-  Future<InscriptionnotauthenticatedImportIntoEDMV1Response?> inscriptionnotauthenticatedImportIntoEDMV1(int pkiInscriptionnotauthenticatedID, InscriptionnotauthenticatedImportIntoEDMV1Request inscriptionnotauthenticatedImportIntoEDMV1Request,) async {
-    final response = await inscriptionnotauthenticatedImportIntoEDMV1WithHttpInfo(pkiInscriptionnotauthenticatedID, inscriptionnotauthenticatedImportIntoEDMV1Request,);
+  Future<InscriptionnotauthenticatedImportIntoEDMV1Response?> inscriptionnotauthenticatedImportIntoEDMV1(int pkiInscriptionnotauthenticatedID, InscriptionnotauthenticatedImportIntoEDMV1Request inscriptionnotauthenticatedImportIntoEDMV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await inscriptionnotauthenticatedImportIntoEDMV1WithHttpInfo(pkiInscriptionnotauthenticatedID, inscriptionnotauthenticatedImportIntoEDMV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

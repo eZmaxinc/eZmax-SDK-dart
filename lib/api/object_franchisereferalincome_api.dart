@@ -25,7 +25,7 @@ class ObjectFranchisereferalincomeApi {
   /// Parameters:
   ///
   /// * [FranchisereferalincomeCreateObjectV2Request] franchisereferalincomeCreateObjectV2Request (required):
-  Future<Response> franchisereferalincomeCreateObjectV2WithHttpInfo(FranchisereferalincomeCreateObjectV2Request franchisereferalincomeCreateObjectV2Request,) async {
+  Future<Response> franchisereferalincomeCreateObjectV2WithHttpInfo(FranchisereferalincomeCreateObjectV2Request franchisereferalincomeCreateObjectV2Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/franchisereferalincome';
 
@@ -47,6 +47,7 @@ class ObjectFranchisereferalincomeApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -57,8 +58,8 @@ class ObjectFranchisereferalincomeApi {
   /// Parameters:
   ///
   /// * [FranchisereferalincomeCreateObjectV2Request] franchisereferalincomeCreateObjectV2Request (required):
-  Future<FranchisereferalincomeCreateObjectV2Response?> franchisereferalincomeCreateObjectV2(FranchisereferalincomeCreateObjectV2Request franchisereferalincomeCreateObjectV2Request,) async {
-    final response = await franchisereferalincomeCreateObjectV2WithHttpInfo(franchisereferalincomeCreateObjectV2Request,);
+  Future<FranchisereferalincomeCreateObjectV2Response?> franchisereferalincomeCreateObjectV2(FranchisereferalincomeCreateObjectV2Request franchisereferalincomeCreateObjectV2Request, { Future<void>? abortTrigger, }) async {
+    final response = await franchisereferalincomeCreateObjectV2WithHttpInfo(franchisereferalincomeCreateObjectV2Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

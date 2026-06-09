@@ -34,7 +34,7 @@ class ObjectEzsigntemplateglobalApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<Response> ezsigntemplateglobalGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
+  Future<Response> ezsigntemplateglobalGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezsigntemplateglobal/getAutocomplete/{sSelector}'
       .replaceAll('{sSelector}', sSelector);
@@ -68,6 +68,7 @@ class ObjectEzsigntemplateglobalApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -87,8 +88,8 @@ class ObjectEzsigntemplateglobalApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<EzsigntemplateglobalGetAutocompleteV2Response?> ezsigntemplateglobalGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
-    final response = await ezsigntemplateglobalGetAutocompleteV2WithHttpInfo(sSelector,  eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, );
+  Future<EzsigntemplateglobalGetAutocompleteV2Response?> ezsigntemplateglobalGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplateglobalGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -111,7 +112,7 @@ class ObjectEzsigntemplateglobalApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigntemplateglobalID (required):
-  Future<Response> ezsigntemplateglobalGetObjectV2WithHttpInfo(int pkiEzsigntemplateglobalID,) async {
+  Future<Response> ezsigntemplateglobalGetObjectV2WithHttpInfo(int pkiEzsigntemplateglobalID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezsigntemplateglobal/{pkiEzsigntemplateglobalID}'
       .replaceAll('{pkiEzsigntemplateglobalID}', pkiEzsigntemplateglobalID.toString());
@@ -134,6 +135,7 @@ class ObjectEzsigntemplateglobalApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -144,8 +146,8 @@ class ObjectEzsigntemplateglobalApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigntemplateglobalID (required):
-  Future<EzsigntemplateglobalGetObjectV2Response?> ezsigntemplateglobalGetObjectV2(int pkiEzsigntemplateglobalID,) async {
-    final response = await ezsigntemplateglobalGetObjectV2WithHttpInfo(pkiEzsigntemplateglobalID,);
+  Future<EzsigntemplateglobalGetObjectV2Response?> ezsigntemplateglobalGetObjectV2(int pkiEzsigntemplateglobalID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplateglobalGetObjectV2WithHttpInfo(pkiEzsigntemplateglobalID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

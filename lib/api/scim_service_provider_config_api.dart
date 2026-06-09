@@ -19,7 +19,7 @@ class ScimServiceProviderConfigApi {
   /// Get Service Provider Configuration
   ///
   /// Note: This method returns the HTTP [Response].
-  Future<Response> serviceProviderConfigGetObjectScimV2WithHttpInfo() async {
+  Future<Response> serviceProviderConfigGetObjectScimV2WithHttpInfo({ Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/scim/ServiceProviderConfig';
 
@@ -41,12 +41,13 @@ class ScimServiceProviderConfigApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
   /// Get Service Provider Configuration
-  Future<ScimServiceProviderConfig?> serviceProviderConfigGetObjectScimV2() async {
-    final response = await serviceProviderConfigGetObjectScimV2WithHttpInfo();
+  Future<ScimServiceProviderConfig?> serviceProviderConfigGetObjectScimV2({ Future<void>? abortTrigger, }) async {
+    final response = await serviceProviderConfigGetObjectScimV2WithHttpInfo(abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

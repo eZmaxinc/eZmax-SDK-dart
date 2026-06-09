@@ -31,7 +31,7 @@ class ObjectContacttitleApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<Response> contacttitleGetAutocompleteV2WithHttpInfo(String sSelector, { String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
+  Future<Response> contacttitleGetAutocompleteV2WithHttpInfo(String sSelector, { String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/contacttitle/getAutocomplete/{sSelector}'
       .replaceAll('{sSelector}', sSelector);
@@ -62,6 +62,7 @@ class ObjectContacttitleApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -78,8 +79,8 @@ class ObjectContacttitleApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<ContacttitleGetAutocompleteV2Response?> contacttitleGetAutocompleteV2(String sSelector, { String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
-    final response = await contacttitleGetAutocompleteV2WithHttpInfo(sSelector,  sQuery: sQuery, acceptLanguage: acceptLanguage, );
+  Future<ContacttitleGetAutocompleteV2Response?> contacttitleGetAutocompleteV2(String sSelector, { String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
+    final response = await contacttitleGetAutocompleteV2WithHttpInfo(sSelector, sQuery: sQuery, acceptLanguage: acceptLanguage, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

@@ -25,7 +25,7 @@ class ObjectActivesessionApi {
   /// Parameters:
   ///
   /// * [ActivesessionGenerateFederationTokenV1Request] activesessionGenerateFederationTokenV1Request (required):
-  Future<Response> activesessionGenerateFederationTokenV1WithHttpInfo(ActivesessionGenerateFederationTokenV1Request activesessionGenerateFederationTokenV1Request,) async {
+  Future<Response> activesessionGenerateFederationTokenV1WithHttpInfo(ActivesessionGenerateFederationTokenV1Request activesessionGenerateFederationTokenV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/activesession/generateFederationToken';
 
@@ -47,6 +47,7 @@ class ObjectActivesessionApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -57,8 +58,8 @@ class ObjectActivesessionApi {
   /// Parameters:
   ///
   /// * [ActivesessionGenerateFederationTokenV1Request] activesessionGenerateFederationTokenV1Request (required):
-  Future<ActivesessionGenerateFederationTokenV1Response?> activesessionGenerateFederationTokenV1(ActivesessionGenerateFederationTokenV1Request activesessionGenerateFederationTokenV1Request,) async {
-    final response = await activesessionGenerateFederationTokenV1WithHttpInfo(activesessionGenerateFederationTokenV1Request,);
+  Future<ActivesessionGenerateFederationTokenV1Response?> activesessionGenerateFederationTokenV1(ActivesessionGenerateFederationTokenV1Request activesessionGenerateFederationTokenV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await activesessionGenerateFederationTokenV1WithHttpInfo(activesessionGenerateFederationTokenV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -77,7 +78,7 @@ class ObjectActivesessionApi {
   /// Retrieve the details about the current activesession
   ///
   /// Note: This method returns the HTTP [Response].
-  Future<Response> activesessionGetCurrentV1WithHttpInfo() async {
+  Future<Response> activesessionGetCurrentV1WithHttpInfo({ Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/activesession/getCurrent';
 
@@ -99,14 +100,15 @@ class ObjectActivesessionApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
   /// Get Current Activesession
   ///
   /// Retrieve the details about the current activesession
-  Future<ActivesessionGetCurrentV1Response?> activesessionGetCurrentV1() async {
-    final response = await activesessionGetCurrentV1WithHttpInfo();
+  Future<ActivesessionGetCurrentV1Response?> activesessionGetCurrentV1({ Future<void>? abortTrigger, }) async {
+    final response = await activesessionGetCurrentV1WithHttpInfo(abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -125,7 +127,7 @@ class ObjectActivesessionApi {
   /// Retrieve the details about the current activesession
   ///
   /// Note: This method returns the HTTP [Response].
-  Future<Response> activesessionGetCurrentV2WithHttpInfo() async {
+  Future<Response> activesessionGetCurrentV2WithHttpInfo({ Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/activesession/getCurrent';
 
@@ -147,14 +149,15 @@ class ObjectActivesessionApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
   /// Get Current Activesession
   ///
   /// Retrieve the details about the current activesession
-  Future<ActivesessionGetCurrentV2Response?> activesessionGetCurrentV2() async {
-    final response = await activesessionGetCurrentV2WithHttpInfo();
+  Future<ActivesessionGetCurrentV2Response?> activesessionGetCurrentV2({ Future<void>? abortTrigger, }) async {
+    final response = await activesessionGetCurrentV2WithHttpInfo(abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -184,7 +187,7 @@ class ObjectActivesessionApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<Response> activesessionGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
+  Future<Response> activesessionGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/activesession/getList';
 
@@ -223,6 +226,7 @@ class ObjectActivesessionApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -240,8 +244,8 @@ class ObjectActivesessionApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<ActivesessionGetListV1Response?> activesessionGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
-    final response = await activesessionGetListV1WithHttpInfo( eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, );
+  Future<ActivesessionGetListV1Response?> activesessionGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
+    final response = await activesessionGetListV1WithHttpInfo(eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

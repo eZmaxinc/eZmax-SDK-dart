@@ -25,7 +25,7 @@ class ObjectOtherincomeApi {
   /// Parameters:
   ///
   /// * [int] pkiOtherincomeID (required):
-  Future<Response> otherincomeGetCommunicationCountV1WithHttpInfo(int pkiOtherincomeID,) async {
+  Future<Response> otherincomeGetCommunicationCountV1WithHttpInfo(int pkiOtherincomeID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/otherincome/{pkiOtherincomeID}/getCommunicationCount'
       .replaceAll('{pkiOtherincomeID}', pkiOtherincomeID.toString());
@@ -48,6 +48,7 @@ class ObjectOtherincomeApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -58,8 +59,8 @@ class ObjectOtherincomeApi {
   /// Parameters:
   ///
   /// * [int] pkiOtherincomeID (required):
-  Future<OtherincomeGetCommunicationCountV1Response?> otherincomeGetCommunicationCountV1(int pkiOtherincomeID,) async {
-    final response = await otherincomeGetCommunicationCountV1WithHttpInfo(pkiOtherincomeID,);
+  Future<OtherincomeGetCommunicationCountV1Response?> otherincomeGetCommunicationCountV1(int pkiOtherincomeID, { Future<void>? abortTrigger, }) async {
+    final response = await otherincomeGetCommunicationCountV1WithHttpInfo(pkiOtherincomeID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -82,7 +83,7 @@ class ObjectOtherincomeApi {
   /// Parameters:
   ///
   /// * [int] pkiOtherincomeID (required):
-  Future<Response> otherincomeGetCommunicationListV1WithHttpInfo(int pkiOtherincomeID,) async {
+  Future<Response> otherincomeGetCommunicationListV1WithHttpInfo(int pkiOtherincomeID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/otherincome/{pkiOtherincomeID}/getCommunicationList'
       .replaceAll('{pkiOtherincomeID}', pkiOtherincomeID.toString());
@@ -105,6 +106,7 @@ class ObjectOtherincomeApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -115,8 +117,8 @@ class ObjectOtherincomeApi {
   /// Parameters:
   ///
   /// * [int] pkiOtherincomeID (required):
-  Future<OtherincomeGetCommunicationListV1Response?> otherincomeGetCommunicationListV1(int pkiOtherincomeID,) async {
-    final response = await otherincomeGetCommunicationListV1WithHttpInfo(pkiOtherincomeID,);
+  Future<OtherincomeGetCommunicationListV1Response?> otherincomeGetCommunicationListV1(int pkiOtherincomeID, { Future<void>? abortTrigger, }) async {
+    final response = await otherincomeGetCommunicationListV1WithHttpInfo(pkiOtherincomeID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -139,7 +141,7 @@ class ObjectOtherincomeApi {
   /// Parameters:
   ///
   /// * [int] pkiOtherincomeID (required):
-  Future<Response> otherincomeGetCommunicationrecipientsV1WithHttpInfo(int pkiOtherincomeID,) async {
+  Future<Response> otherincomeGetCommunicationrecipientsV1WithHttpInfo(int pkiOtherincomeID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/otherincome/{pkiOtherincomeID}/getCommunicationrecipients'
       .replaceAll('{pkiOtherincomeID}', pkiOtherincomeID.toString());
@@ -162,6 +164,7 @@ class ObjectOtherincomeApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -172,8 +175,8 @@ class ObjectOtherincomeApi {
   /// Parameters:
   ///
   /// * [int] pkiOtherincomeID (required):
-  Future<OtherincomeGetCommunicationrecipientsV1Response?> otherincomeGetCommunicationrecipientsV1(int pkiOtherincomeID,) async {
-    final response = await otherincomeGetCommunicationrecipientsV1WithHttpInfo(pkiOtherincomeID,);
+  Future<OtherincomeGetCommunicationrecipientsV1Response?> otherincomeGetCommunicationrecipientsV1(int pkiOtherincomeID, { Future<void>? abortTrigger, }) async {
+    final response = await otherincomeGetCommunicationrecipientsV1WithHttpInfo(pkiOtherincomeID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -196,7 +199,7 @@ class ObjectOtherincomeApi {
   /// Parameters:
   ///
   /// * [int] pkiOtherincomeID (required):
-  Future<Response> otherincomeGetCommunicationsendersV1WithHttpInfo(int pkiOtherincomeID,) async {
+  Future<Response> otherincomeGetCommunicationsendersV1WithHttpInfo(int pkiOtherincomeID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/otherincome/{pkiOtherincomeID}/getCommunicationsenders'
       .replaceAll('{pkiOtherincomeID}', pkiOtherincomeID.toString());
@@ -219,6 +222,7 @@ class ObjectOtherincomeApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -229,8 +233,8 @@ class ObjectOtherincomeApi {
   /// Parameters:
   ///
   /// * [int] pkiOtherincomeID (required):
-  Future<OtherincomeGetCommunicationsendersV1Response?> otherincomeGetCommunicationsendersV1(int pkiOtherincomeID,) async {
-    final response = await otherincomeGetCommunicationsendersV1WithHttpInfo(pkiOtherincomeID,);
+  Future<OtherincomeGetCommunicationsendersV1Response?> otherincomeGetCommunicationsendersV1(int pkiOtherincomeID, { Future<void>? abortTrigger, }) async {
+    final response = await otherincomeGetCommunicationsendersV1WithHttpInfo(pkiOtherincomeID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -262,7 +266,7 @@ class ObjectOtherincomeApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<Response> otherincomeGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
+  Future<Response> otherincomeGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/otherincome/getList';
 
@@ -301,6 +305,7 @@ class ObjectOtherincomeApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -320,8 +325,8 @@ class ObjectOtherincomeApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<OtherincomeGetListV1Response?> otherincomeGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
-    final response = await otherincomeGetListV1WithHttpInfo( eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, );
+  Future<OtherincomeGetListV1Response?> otherincomeGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
+    final response = await otherincomeGetListV1WithHttpInfo(eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -346,7 +351,7 @@ class ObjectOtherincomeApi {
   /// * [int] pkiOtherincomeID (required):
   ///
   /// * [OtherincomeImportIntoEDMV1Request] otherincomeImportIntoEDMV1Request (required):
-  Future<Response> otherincomeImportIntoEDMV1WithHttpInfo(int pkiOtherincomeID, OtherincomeImportIntoEDMV1Request otherincomeImportIntoEDMV1Request,) async {
+  Future<Response> otherincomeImportIntoEDMV1WithHttpInfo(int pkiOtherincomeID, OtherincomeImportIntoEDMV1Request otherincomeImportIntoEDMV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/otherincome/{pkiOtherincomeID}/importIntoEDM'
       .replaceAll('{pkiOtherincomeID}', pkiOtherincomeID.toString());
@@ -369,6 +374,7 @@ class ObjectOtherincomeApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -381,8 +387,8 @@ class ObjectOtherincomeApi {
   /// * [int] pkiOtherincomeID (required):
   ///
   /// * [OtherincomeImportIntoEDMV1Request] otherincomeImportIntoEDMV1Request (required):
-  Future<OtherincomeImportIntoEDMV1Response?> otherincomeImportIntoEDMV1(int pkiOtherincomeID, OtherincomeImportIntoEDMV1Request otherincomeImportIntoEDMV1Request,) async {
-    final response = await otherincomeImportIntoEDMV1WithHttpInfo(pkiOtherincomeID, otherincomeImportIntoEDMV1Request,);
+  Future<OtherincomeImportIntoEDMV1Response?> otherincomeImportIntoEDMV1(int pkiOtherincomeID, OtherincomeImportIntoEDMV1Request otherincomeImportIntoEDMV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await otherincomeImportIntoEDMV1WithHttpInfo(pkiOtherincomeID, otherincomeImportIntoEDMV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

@@ -25,7 +25,7 @@ class ObjectDiscussionApi {
   /// Parameters:
   ///
   /// * [DiscussionChatV1Request] discussionChatV1Request (required):
-  Future<Response> discussionChatV1WithHttpInfo(DiscussionChatV1Request discussionChatV1Request,) async {
+  Future<Response> discussionChatV1WithHttpInfo(DiscussionChatV1Request discussionChatV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/discussion/chat';
 
@@ -47,6 +47,7 @@ class ObjectDiscussionApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -57,8 +58,8 @@ class ObjectDiscussionApi {
   /// Parameters:
   ///
   /// * [DiscussionChatV1Request] discussionChatV1Request (required):
-  Future<DiscussionChatV1200Response?> discussionChatV1(DiscussionChatV1Request discussionChatV1Request,) async {
-    final response = await discussionChatV1WithHttpInfo(discussionChatV1Request,);
+  Future<DiscussionChatV1200Response?> discussionChatV1(DiscussionChatV1Request discussionChatV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await discussionChatV1WithHttpInfo(discussionChatV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -81,7 +82,7 @@ class ObjectDiscussionApi {
   /// Parameters:
   ///
   /// * [DiscussionCreateObjectV1Request] discussionCreateObjectV1Request (required):
-  Future<Response> discussionCreateObjectV1WithHttpInfo(DiscussionCreateObjectV1Request discussionCreateObjectV1Request,) async {
+  Future<Response> discussionCreateObjectV1WithHttpInfo(DiscussionCreateObjectV1Request discussionCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/discussion';
 
@@ -103,6 +104,7 @@ class ObjectDiscussionApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -113,8 +115,8 @@ class ObjectDiscussionApi {
   /// Parameters:
   ///
   /// * [DiscussionCreateObjectV1Request] discussionCreateObjectV1Request (required):
-  Future<DiscussionCreateObjectV1Response?> discussionCreateObjectV1(DiscussionCreateObjectV1Request discussionCreateObjectV1Request,) async {
-    final response = await discussionCreateObjectV1WithHttpInfo(discussionCreateObjectV1Request,);
+  Future<DiscussionCreateObjectV1Response?> discussionCreateObjectV1(DiscussionCreateObjectV1Request discussionCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await discussionCreateObjectV1WithHttpInfo(discussionCreateObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -138,7 +140,7 @@ class ObjectDiscussionApi {
   ///
   /// * [int] pkiDiscussionID (required):
   ///   The unique ID of the Discussion
-  Future<Response> discussionDeleteObjectV1WithHttpInfo(int pkiDiscussionID,) async {
+  Future<Response> discussionDeleteObjectV1WithHttpInfo(int pkiDiscussionID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/discussion/{pkiDiscussionID}'
       .replaceAll('{pkiDiscussionID}', pkiDiscussionID.toString());
@@ -161,6 +163,7 @@ class ObjectDiscussionApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -172,8 +175,8 @@ class ObjectDiscussionApi {
   ///
   /// * [int] pkiDiscussionID (required):
   ///   The unique ID of the Discussion
-  Future<DiscussionDeleteObjectV1Response?> discussionDeleteObjectV1(int pkiDiscussionID,) async {
-    final response = await discussionDeleteObjectV1WithHttpInfo(pkiDiscussionID,);
+  Future<DiscussionDeleteObjectV1Response?> discussionDeleteObjectV1(int pkiDiscussionID, { Future<void>? abortTrigger, }) async {
+    final response = await discussionDeleteObjectV1WithHttpInfo(pkiDiscussionID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -197,7 +200,7 @@ class ObjectDiscussionApi {
   ///
   /// * [int] pkiDiscussionID (required):
   ///   The unique ID of the Discussion
-  Future<Response> discussionGetObjectV2WithHttpInfo(int pkiDiscussionID,) async {
+  Future<Response> discussionGetObjectV2WithHttpInfo(int pkiDiscussionID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/discussion/{pkiDiscussionID}'
       .replaceAll('{pkiDiscussionID}', pkiDiscussionID.toString());
@@ -220,6 +223,7 @@ class ObjectDiscussionApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -231,8 +235,8 @@ class ObjectDiscussionApi {
   ///
   /// * [int] pkiDiscussionID (required):
   ///   The unique ID of the Discussion
-  Future<DiscussionGetObjectV2Response?> discussionGetObjectV2(int pkiDiscussionID,) async {
-    final response = await discussionGetObjectV2WithHttpInfo(pkiDiscussionID,);
+  Future<DiscussionGetObjectV2Response?> discussionGetObjectV2(int pkiDiscussionID, { Future<void>? abortTrigger, }) async {
+    final response = await discussionGetObjectV2WithHttpInfo(pkiDiscussionID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -258,7 +262,7 @@ class ObjectDiscussionApi {
   ///   The unique ID of the Discussion
   ///
   /// * [DiscussionPatchObjectV1Request] discussionPatchObjectV1Request (required):
-  Future<Response> discussionPatchObjectV1WithHttpInfo(int pkiDiscussionID, DiscussionPatchObjectV1Request discussionPatchObjectV1Request,) async {
+  Future<Response> discussionPatchObjectV1WithHttpInfo(int pkiDiscussionID, DiscussionPatchObjectV1Request discussionPatchObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/discussion/{pkiDiscussionID}'
       .replaceAll('{pkiDiscussionID}', pkiDiscussionID.toString());
@@ -281,6 +285,7 @@ class ObjectDiscussionApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -294,8 +299,8 @@ class ObjectDiscussionApi {
   ///   The unique ID of the Discussion
   ///
   /// * [DiscussionPatchObjectV1Request] discussionPatchObjectV1Request (required):
-  Future<DiscussionPatchObjectV1Response?> discussionPatchObjectV1(int pkiDiscussionID, DiscussionPatchObjectV1Request discussionPatchObjectV1Request,) async {
-    final response = await discussionPatchObjectV1WithHttpInfo(pkiDiscussionID, discussionPatchObjectV1Request,);
+  Future<DiscussionPatchObjectV1Response?> discussionPatchObjectV1(int pkiDiscussionID, DiscussionPatchObjectV1Request discussionPatchObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await discussionPatchObjectV1WithHttpInfo(pkiDiscussionID, discussionPatchObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -318,7 +323,7 @@ class ObjectDiscussionApi {
   /// * [int] pkiDiscussionID (required):
   ///
   /// * [DiscussionUpdateDiscussionreadstatusV1Request] discussionUpdateDiscussionreadstatusV1Request (required):
-  Future<Response> discussionUpdateDiscussionreadstatusV1WithHttpInfo(int pkiDiscussionID, DiscussionUpdateDiscussionreadstatusV1Request discussionUpdateDiscussionreadstatusV1Request,) async {
+  Future<Response> discussionUpdateDiscussionreadstatusV1WithHttpInfo(int pkiDiscussionID, DiscussionUpdateDiscussionreadstatusV1Request discussionUpdateDiscussionreadstatusV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/discussion/{pkiDiscussionID}/updateDiscussionreadstatus'
       .replaceAll('{pkiDiscussionID}', pkiDiscussionID.toString());
@@ -341,6 +346,7 @@ class ObjectDiscussionApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -351,8 +357,8 @@ class ObjectDiscussionApi {
   /// * [int] pkiDiscussionID (required):
   ///
   /// * [DiscussionUpdateDiscussionreadstatusV1Request] discussionUpdateDiscussionreadstatusV1Request (required):
-  Future<DiscussionUpdateDiscussionreadstatusV1Response?> discussionUpdateDiscussionreadstatusV1(int pkiDiscussionID, DiscussionUpdateDiscussionreadstatusV1Request discussionUpdateDiscussionreadstatusV1Request,) async {
-    final response = await discussionUpdateDiscussionreadstatusV1WithHttpInfo(pkiDiscussionID, discussionUpdateDiscussionreadstatusV1Request,);
+  Future<DiscussionUpdateDiscussionreadstatusV1Response?> discussionUpdateDiscussionreadstatusV1(int pkiDiscussionID, DiscussionUpdateDiscussionreadstatusV1Request discussionUpdateDiscussionreadstatusV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await discussionUpdateDiscussionreadstatusV1WithHttpInfo(pkiDiscussionID, discussionUpdateDiscussionreadstatusV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

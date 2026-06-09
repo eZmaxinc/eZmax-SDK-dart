@@ -34,7 +34,7 @@ class ObjectAgentApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<Response> agentGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
+  Future<Response> agentGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/agent/getAutocomplete/{sSelector}'
       .replaceAll('{sSelector}', sSelector);
@@ -68,6 +68,7 @@ class ObjectAgentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -87,8 +88,8 @@ class ObjectAgentApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<AgentGetAutocompleteV2Response?> agentGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
-    final response = await agentGetAutocompleteV2WithHttpInfo(sSelector,  eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, );
+  Future<AgentGetAutocompleteV2Response?> agentGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
+    final response = await agentGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -120,7 +121,7 @@ class ObjectAgentApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<Response> agentGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
+  Future<Response> agentGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/agent/getList';
 
@@ -159,6 +160,7 @@ class ObjectAgentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -178,8 +180,8 @@ class ObjectAgentApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<AgentGetListV1Response?> agentGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
-    final response = await agentGetListV1WithHttpInfo( eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, );
+  Future<AgentGetListV1Response?> agentGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
+    final response = await agentGetListV1WithHttpInfo(eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -204,7 +206,7 @@ class ObjectAgentApi {
   /// * [int] pkiAgentID (required):
   ///
   /// * [AgentImportIntoEDMV1Request] agentImportIntoEDMV1Request (required):
-  Future<Response> agentImportIntoEDMV1WithHttpInfo(int pkiAgentID, AgentImportIntoEDMV1Request agentImportIntoEDMV1Request,) async {
+  Future<Response> agentImportIntoEDMV1WithHttpInfo(int pkiAgentID, AgentImportIntoEDMV1Request agentImportIntoEDMV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/agent/{pkiAgentID}/importIntoEDM'
       .replaceAll('{pkiAgentID}', pkiAgentID.toString());
@@ -227,6 +229,7 @@ class ObjectAgentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -239,8 +242,8 @@ class ObjectAgentApi {
   /// * [int] pkiAgentID (required):
   ///
   /// * [AgentImportIntoEDMV1Request] agentImportIntoEDMV1Request (required):
-  Future<AgentImportIntoEDMV1Response?> agentImportIntoEDMV1(int pkiAgentID, AgentImportIntoEDMV1Request agentImportIntoEDMV1Request,) async {
-    final response = await agentImportIntoEDMV1WithHttpInfo(pkiAgentID, agentImportIntoEDMV1Request,);
+  Future<AgentImportIntoEDMV1Response?> agentImportIntoEDMV1(int pkiAgentID, AgentImportIntoEDMV1Request agentImportIntoEDMV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await agentImportIntoEDMV1WithHttpInfo(pkiAgentID, agentImportIntoEDMV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

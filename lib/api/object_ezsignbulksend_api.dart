@@ -25,7 +25,7 @@ class ObjectEzsignbulksendApi {
   /// * [int] pkiEzsignbulksendID (required):
   ///
   /// * [EzsignbulksendCreateEzsignbulksendtransmissionV2Request] ezsignbulksendCreateEzsignbulksendtransmissionV2Request (required):
-  Future<Response> ezsignbulksendCreateEzsignbulksendtransmissionV2WithHttpInfo(int pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV2Request ezsignbulksendCreateEzsignbulksendtransmissionV2Request,) async {
+  Future<Response> ezsignbulksendCreateEzsignbulksendtransmissionV2WithHttpInfo(int pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV2Request ezsignbulksendCreateEzsignbulksendtransmissionV2Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission'
       .replaceAll('{pkiEzsignbulksendID}', pkiEzsignbulksendID.toString());
@@ -48,6 +48,7 @@ class ObjectEzsignbulksendApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -58,8 +59,8 @@ class ObjectEzsignbulksendApi {
   /// * [int] pkiEzsignbulksendID (required):
   ///
   /// * [EzsignbulksendCreateEzsignbulksendtransmissionV2Request] ezsignbulksendCreateEzsignbulksendtransmissionV2Request (required):
-  Future<EzsignbulksendCreateEzsignbulksendtransmissionV2Response?> ezsignbulksendCreateEzsignbulksendtransmissionV2(int pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV2Request ezsignbulksendCreateEzsignbulksendtransmissionV2Request,) async {
-    final response = await ezsignbulksendCreateEzsignbulksendtransmissionV2WithHttpInfo(pkiEzsignbulksendID, ezsignbulksendCreateEzsignbulksendtransmissionV2Request,);
+  Future<EzsignbulksendCreateEzsignbulksendtransmissionV2Response?> ezsignbulksendCreateEzsignbulksendtransmissionV2(int pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV2Request ezsignbulksendCreateEzsignbulksendtransmissionV2Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignbulksendCreateEzsignbulksendtransmissionV2WithHttpInfo(pkiEzsignbulksendID, ezsignbulksendCreateEzsignbulksendtransmissionV2Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -82,7 +83,7 @@ class ObjectEzsignbulksendApi {
   /// Parameters:
   ///
   /// * [EzsignbulksendCreateObjectV1Request] ezsignbulksendCreateObjectV1Request (required):
-  Future<Response> ezsignbulksendCreateObjectV1WithHttpInfo(EzsignbulksendCreateObjectV1Request ezsignbulksendCreateObjectV1Request,) async {
+  Future<Response> ezsignbulksendCreateObjectV1WithHttpInfo(EzsignbulksendCreateObjectV1Request ezsignbulksendCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignbulksend';
 
@@ -104,6 +105,7 @@ class ObjectEzsignbulksendApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -114,8 +116,8 @@ class ObjectEzsignbulksendApi {
   /// Parameters:
   ///
   /// * [EzsignbulksendCreateObjectV1Request] ezsignbulksendCreateObjectV1Request (required):
-  Future<EzsignbulksendCreateObjectV1Response?> ezsignbulksendCreateObjectV1(EzsignbulksendCreateObjectV1Request ezsignbulksendCreateObjectV1Request,) async {
-    final response = await ezsignbulksendCreateObjectV1WithHttpInfo(ezsignbulksendCreateObjectV1Request,);
+  Future<EzsignbulksendCreateObjectV1Response?> ezsignbulksendCreateObjectV1(EzsignbulksendCreateObjectV1Request ezsignbulksendCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignbulksendCreateObjectV1WithHttpInfo(ezsignbulksendCreateObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -138,7 +140,7 @@ class ObjectEzsignbulksendApi {
   /// Parameters:
   ///
   /// * [EzsignbulksendCreateObjectV2Request] ezsignbulksendCreateObjectV2Request (required):
-  Future<Response> ezsignbulksendCreateObjectV2WithHttpInfo(EzsignbulksendCreateObjectV2Request ezsignbulksendCreateObjectV2Request,) async {
+  Future<Response> ezsignbulksendCreateObjectV2WithHttpInfo(EzsignbulksendCreateObjectV2Request ezsignbulksendCreateObjectV2Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezsignbulksend';
 
@@ -160,6 +162,7 @@ class ObjectEzsignbulksendApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -170,8 +173,8 @@ class ObjectEzsignbulksendApi {
   /// Parameters:
   ///
   /// * [EzsignbulksendCreateObjectV2Request] ezsignbulksendCreateObjectV2Request (required):
-  Future<EzsignbulksendCreateObjectV2Response?> ezsignbulksendCreateObjectV2(EzsignbulksendCreateObjectV2Request ezsignbulksendCreateObjectV2Request,) async {
-    final response = await ezsignbulksendCreateObjectV2WithHttpInfo(ezsignbulksendCreateObjectV2Request,);
+  Future<EzsignbulksendCreateObjectV2Response?> ezsignbulksendCreateObjectV2(EzsignbulksendCreateObjectV2Request ezsignbulksendCreateObjectV2Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignbulksendCreateObjectV2WithHttpInfo(ezsignbulksendCreateObjectV2Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -194,7 +197,7 @@ class ObjectEzsignbulksendApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignbulksendID (required):
-  Future<Response> ezsignbulksendDeleteObjectV1WithHttpInfo(int pkiEzsignbulksendID,) async {
+  Future<Response> ezsignbulksendDeleteObjectV1WithHttpInfo(int pkiEzsignbulksendID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignbulksend/{pkiEzsignbulksendID}'
       .replaceAll('{pkiEzsignbulksendID}', pkiEzsignbulksendID.toString());
@@ -217,6 +220,7 @@ class ObjectEzsignbulksendApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -227,8 +231,8 @@ class ObjectEzsignbulksendApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignbulksendID (required):
-  Future<EzsignbulksendDeleteObjectV1Response?> ezsignbulksendDeleteObjectV1(int pkiEzsignbulksendID,) async {
-    final response = await ezsignbulksendDeleteObjectV1WithHttpInfo(pkiEzsignbulksendID,);
+  Future<EzsignbulksendDeleteObjectV1Response?> ezsignbulksendDeleteObjectV1(int pkiEzsignbulksendID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignbulksendDeleteObjectV1WithHttpInfo(pkiEzsignbulksendID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -253,7 +257,7 @@ class ObjectEzsignbulksendApi {
   /// * [int] pkiEzsignbulksendID (required):
   ///
   /// * [EzsignbulksendEditObjectV2Request] ezsignbulksendEditObjectV2Request (required):
-  Future<Response> ezsignbulksendEditObjectV2WithHttpInfo(int pkiEzsignbulksendID, EzsignbulksendEditObjectV2Request ezsignbulksendEditObjectV2Request,) async {
+  Future<Response> ezsignbulksendEditObjectV2WithHttpInfo(int pkiEzsignbulksendID, EzsignbulksendEditObjectV2Request ezsignbulksendEditObjectV2Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezsignbulksend/{pkiEzsignbulksendID}'
       .replaceAll('{pkiEzsignbulksendID}', pkiEzsignbulksendID.toString());
@@ -276,6 +280,7 @@ class ObjectEzsignbulksendApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -288,8 +293,8 @@ class ObjectEzsignbulksendApi {
   /// * [int] pkiEzsignbulksendID (required):
   ///
   /// * [EzsignbulksendEditObjectV2Request] ezsignbulksendEditObjectV2Request (required):
-  Future<EzsignbulksendEditObjectV2Response?> ezsignbulksendEditObjectV2(int pkiEzsignbulksendID, EzsignbulksendEditObjectV2Request ezsignbulksendEditObjectV2Request,) async {
-    final response = await ezsignbulksendEditObjectV2WithHttpInfo(pkiEzsignbulksendID, ezsignbulksendEditObjectV2Request,);
+  Future<EzsignbulksendEditObjectV2Response?> ezsignbulksendEditObjectV2(int pkiEzsignbulksendID, EzsignbulksendEditObjectV2Request ezsignbulksendEditObjectV2Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignbulksendEditObjectV2WithHttpInfo(pkiEzsignbulksendID, ezsignbulksendEditObjectV2Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -322,7 +327,7 @@ class ObjectEzsignbulksendApi {
   ///
   /// * [bool] bIncludeProof:
   ///   include the complete evidence archive including all of the above and more
-  Future<Response> ezsignbulksendGetBatchFileV1WithHttpInfo(int pkiEzsignbulksendID, { bool? bIncludeSigned, bool? bIncludeAttachment, bool? bIncludeProofdocument, bool? bIncludeProof, }) async {
+  Future<Response> ezsignbulksendGetBatchFileV1WithHttpInfo(int pkiEzsignbulksendID, { bool? bIncludeSigned, bool? bIncludeAttachment, bool? bIncludeProofdocument, bool? bIncludeProof, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignbulksend/{pkiEzsignbulksendID}/getBatchFile'
       .replaceAll('{pkiEzsignbulksendID}', pkiEzsignbulksendID.toString());
@@ -358,6 +363,7 @@ class ObjectEzsignbulksendApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -378,8 +384,8 @@ class ObjectEzsignbulksendApi {
   ///
   /// * [bool] bIncludeProof:
   ///   include the complete evidence archive including all of the above and more
-  Future<MultipartFile?> ezsignbulksendGetBatchFileV1(int pkiEzsignbulksendID, { bool? bIncludeSigned, bool? bIncludeAttachment, bool? bIncludeProofdocument, bool? bIncludeProof, }) async {
-    final response = await ezsignbulksendGetBatchFileV1WithHttpInfo(pkiEzsignbulksendID,  bIncludeSigned: bIncludeSigned, bIncludeAttachment: bIncludeAttachment, bIncludeProofdocument: bIncludeProofdocument, bIncludeProof: bIncludeProof, );
+  Future<MultipartFile?> ezsignbulksendGetBatchFileV1(int pkiEzsignbulksendID, { bool? bIncludeSigned, bool? bIncludeAttachment, bool? bIncludeProofdocument, bool? bIncludeProof, Future<void>? abortTrigger, }) async {
+    final response = await ezsignbulksendGetBatchFileV1WithHttpInfo(pkiEzsignbulksendID, bIncludeSigned: bIncludeSigned, bIncludeAttachment: bIncludeAttachment, bIncludeProofdocument: bIncludeProofdocument, bIncludeProof: bIncludeProof, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -405,7 +411,7 @@ class ObjectEzsignbulksendApi {
   ///
   /// * [String] eCsvSeparator (required):
   ///   Separator that will be used to separate fields
-  Future<Response> ezsignbulksendGetCsvTemplateV1WithHttpInfo(int pkiEzsignbulksendID, String eCsvSeparator,) async {
+  Future<Response> ezsignbulksendGetCsvTemplateV1WithHttpInfo(int pkiEzsignbulksendID, String eCsvSeparator, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignbulksend/{pkiEzsignbulksendID}/getCsvTemplate'
       .replaceAll('{pkiEzsignbulksendID}', pkiEzsignbulksendID.toString());
@@ -430,6 +436,7 @@ class ObjectEzsignbulksendApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -443,8 +450,8 @@ class ObjectEzsignbulksendApi {
   ///
   /// * [String] eCsvSeparator (required):
   ///   Separator that will be used to separate fields
-  Future<String?> ezsignbulksendGetCsvTemplateV1(int pkiEzsignbulksendID, String eCsvSeparator,) async {
-    final response = await ezsignbulksendGetCsvTemplateV1WithHttpInfo(pkiEzsignbulksendID, eCsvSeparator,);
+  Future<String?> ezsignbulksendGetCsvTemplateV1(int pkiEzsignbulksendID, String eCsvSeparator, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignbulksendGetCsvTemplateV1WithHttpInfo(pkiEzsignbulksendID, eCsvSeparator, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -467,7 +474,7 @@ class ObjectEzsignbulksendApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignbulksendID (required):
-  Future<Response> ezsignbulksendGetEzsignbulksendtransmissionsV1WithHttpInfo(int pkiEzsignbulksendID,) async {
+  Future<Response> ezsignbulksendGetEzsignbulksendtransmissionsV1WithHttpInfo(int pkiEzsignbulksendID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignbulksendtransmissions'
       .replaceAll('{pkiEzsignbulksendID}', pkiEzsignbulksendID.toString());
@@ -490,6 +497,7 @@ class ObjectEzsignbulksendApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -500,8 +508,8 @@ class ObjectEzsignbulksendApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignbulksendID (required):
-  Future<EzsignbulksendGetEzsignbulksendtransmissionsV1Response?> ezsignbulksendGetEzsignbulksendtransmissionsV1(int pkiEzsignbulksendID,) async {
-    final response = await ezsignbulksendGetEzsignbulksendtransmissionsV1WithHttpInfo(pkiEzsignbulksendID,);
+  Future<EzsignbulksendGetEzsignbulksendtransmissionsV1Response?> ezsignbulksendGetEzsignbulksendtransmissionsV1(int pkiEzsignbulksendID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignbulksendGetEzsignbulksendtransmissionsV1WithHttpInfo(pkiEzsignbulksendID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -524,7 +532,7 @@ class ObjectEzsignbulksendApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignbulksendID (required):
-  Future<Response> ezsignbulksendGetEzsignsignaturesAutomaticV1WithHttpInfo(int pkiEzsignbulksendID,) async {
+  Future<Response> ezsignbulksendGetEzsignsignaturesAutomaticV1WithHttpInfo(int pkiEzsignbulksendID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignsignaturesAutomatic'
       .replaceAll('{pkiEzsignbulksendID}', pkiEzsignbulksendID.toString());
@@ -547,6 +555,7 @@ class ObjectEzsignbulksendApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -557,8 +566,8 @@ class ObjectEzsignbulksendApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignbulksendID (required):
-  Future<EzsignbulksendGetEzsignsignaturesAutomaticV1Response?> ezsignbulksendGetEzsignsignaturesAutomaticV1(int pkiEzsignbulksendID,) async {
-    final response = await ezsignbulksendGetEzsignsignaturesAutomaticV1WithHttpInfo(pkiEzsignbulksendID,);
+  Future<EzsignbulksendGetEzsignsignaturesAutomaticV1Response?> ezsignbulksendGetEzsignsignaturesAutomaticV1(int pkiEzsignbulksendID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignbulksendGetEzsignsignaturesAutomaticV1WithHttpInfo(pkiEzsignbulksendID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -581,7 +590,7 @@ class ObjectEzsignbulksendApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignbulksendID (required):
-  Future<Response> ezsignbulksendGetFormsDataV1WithHttpInfo(int pkiEzsignbulksendID,) async {
+  Future<Response> ezsignbulksendGetFormsDataV1WithHttpInfo(int pkiEzsignbulksendID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignbulksend/{pkiEzsignbulksendID}/getFormsData'
       .replaceAll('{pkiEzsignbulksendID}', pkiEzsignbulksendID.toString());
@@ -604,6 +613,7 @@ class ObjectEzsignbulksendApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -614,8 +624,8 @@ class ObjectEzsignbulksendApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignbulksendID (required):
-  Future<EzsignbulksendGetFormsDataV1Response?> ezsignbulksendGetFormsDataV1(int pkiEzsignbulksendID,) async {
-    final response = await ezsignbulksendGetFormsDataV1WithHttpInfo(pkiEzsignbulksendID,);
+  Future<EzsignbulksendGetFormsDataV1Response?> ezsignbulksendGetFormsDataV1(int pkiEzsignbulksendID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignbulksendGetFormsDataV1WithHttpInfo(pkiEzsignbulksendID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -647,7 +657,7 @@ class ObjectEzsignbulksendApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<Response> ezsignbulksendGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
+  Future<Response> ezsignbulksendGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignbulksend/getList';
 
@@ -686,6 +696,7 @@ class ObjectEzsignbulksendApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -705,8 +716,8 @@ class ObjectEzsignbulksendApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<EzsignbulksendGetListV1Response?> ezsignbulksendGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
-    final response = await ezsignbulksendGetListV1WithHttpInfo( eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, );
+  Future<EzsignbulksendGetListV1Response?> ezsignbulksendGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
+    final response = await ezsignbulksendGetListV1WithHttpInfo(eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -729,7 +740,7 @@ class ObjectEzsignbulksendApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignbulksendID (required):
-  Future<Response> ezsignbulksendGetObjectV2WithHttpInfo(int pkiEzsignbulksendID,) async {
+  Future<Response> ezsignbulksendGetObjectV2WithHttpInfo(int pkiEzsignbulksendID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezsignbulksend/{pkiEzsignbulksendID}'
       .replaceAll('{pkiEzsignbulksendID}', pkiEzsignbulksendID.toString());
@@ -752,6 +763,7 @@ class ObjectEzsignbulksendApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -762,8 +774,8 @@ class ObjectEzsignbulksendApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignbulksendID (required):
-  Future<EzsignbulksendGetObjectV2Response?> ezsignbulksendGetObjectV2(int pkiEzsignbulksendID,) async {
-    final response = await ezsignbulksendGetObjectV2WithHttpInfo(pkiEzsignbulksendID,);
+  Future<EzsignbulksendGetObjectV2Response?> ezsignbulksendGetObjectV2(int pkiEzsignbulksendID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignbulksendGetObjectV2WithHttpInfo(pkiEzsignbulksendID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -786,7 +798,7 @@ class ObjectEzsignbulksendApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignbulksendID (required):
-  Future<Response> ezsignbulksendGetObjectV3WithHttpInfo(int pkiEzsignbulksendID,) async {
+  Future<Response> ezsignbulksendGetObjectV3WithHttpInfo(int pkiEzsignbulksendID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/3/object/ezsignbulksend/{pkiEzsignbulksendID}'
       .replaceAll('{pkiEzsignbulksendID}', pkiEzsignbulksendID.toString());
@@ -809,6 +821,7 @@ class ObjectEzsignbulksendApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -819,8 +832,8 @@ class ObjectEzsignbulksendApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignbulksendID (required):
-  Future<EzsignbulksendGetObjectV3Response?> ezsignbulksendGetObjectV3(int pkiEzsignbulksendID,) async {
-    final response = await ezsignbulksendGetObjectV3WithHttpInfo(pkiEzsignbulksendID,);
+  Future<EzsignbulksendGetObjectV3Response?> ezsignbulksendGetObjectV3(int pkiEzsignbulksendID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignbulksendGetObjectV3WithHttpInfo(pkiEzsignbulksendID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -843,7 +856,7 @@ class ObjectEzsignbulksendApi {
   /// * [int] pkiEzsignbulksendID (required):
   ///
   /// * [EzsignbulksendReorderV1Request] ezsignbulksendReorderV1Request (required):
-  Future<Response> ezsignbulksendReorderV1WithHttpInfo(int pkiEzsignbulksendID, EzsignbulksendReorderV1Request ezsignbulksendReorderV1Request,) async {
+  Future<Response> ezsignbulksendReorderV1WithHttpInfo(int pkiEzsignbulksendID, EzsignbulksendReorderV1Request ezsignbulksendReorderV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignbulksend/{pkiEzsignbulksendID}/reorder'
       .replaceAll('{pkiEzsignbulksendID}', pkiEzsignbulksendID.toString());
@@ -866,6 +879,7 @@ class ObjectEzsignbulksendApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -876,8 +890,8 @@ class ObjectEzsignbulksendApi {
   /// * [int] pkiEzsignbulksendID (required):
   ///
   /// * [EzsignbulksendReorderV1Request] ezsignbulksendReorderV1Request (required):
-  Future<EzsignbulksendReorderV1Response?> ezsignbulksendReorderV1(int pkiEzsignbulksendID, EzsignbulksendReorderV1Request ezsignbulksendReorderV1Request,) async {
-    final response = await ezsignbulksendReorderV1WithHttpInfo(pkiEzsignbulksendID, ezsignbulksendReorderV1Request,);
+  Future<EzsignbulksendReorderV1Response?> ezsignbulksendReorderV1(int pkiEzsignbulksendID, EzsignbulksendReorderV1Request ezsignbulksendReorderV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignbulksendReorderV1WithHttpInfo(pkiEzsignbulksendID, ezsignbulksendReorderV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

@@ -28,7 +28,7 @@ class ObjectEzmaxcustomerApi {
   ///   The unique ID of the Ezmaxcustomer
   ///
   /// * [EzmaxcustomerPatchObjectV1Request] ezmaxcustomerPatchObjectV1Request (required):
-  Future<Response> ezmaxcustomerPatchObjectV1WithHttpInfo(int pkiEzmaxcustomerID, EzmaxcustomerPatchObjectV1Request ezmaxcustomerPatchObjectV1Request,) async {
+  Future<Response> ezmaxcustomerPatchObjectV1WithHttpInfo(int pkiEzmaxcustomerID, EzmaxcustomerPatchObjectV1Request ezmaxcustomerPatchObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezmaxcustomer/{pkiEzmaxcustomerID}'
       .replaceAll('{pkiEzmaxcustomerID}', pkiEzmaxcustomerID.toString());
@@ -51,6 +51,7 @@ class ObjectEzmaxcustomerApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -64,8 +65,8 @@ class ObjectEzmaxcustomerApi {
   ///   The unique ID of the Ezmaxcustomer
   ///
   /// * [EzmaxcustomerPatchObjectV1Request] ezmaxcustomerPatchObjectV1Request (required):
-  Future<EzmaxcustomerPatchObjectV1Response?> ezmaxcustomerPatchObjectV1(int pkiEzmaxcustomerID, EzmaxcustomerPatchObjectV1Request ezmaxcustomerPatchObjectV1Request,) async {
-    final response = await ezmaxcustomerPatchObjectV1WithHttpInfo(pkiEzmaxcustomerID, ezmaxcustomerPatchObjectV1Request,);
+  Future<EzmaxcustomerPatchObjectV1Response?> ezmaxcustomerPatchObjectV1(int pkiEzmaxcustomerID, EzmaxcustomerPatchObjectV1Request ezmaxcustomerPatchObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezmaxcustomerPatchObjectV1WithHttpInfo(pkiEzmaxcustomerID, ezmaxcustomerPatchObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

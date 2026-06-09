@@ -25,7 +25,7 @@ class ObjectVariableexpenseApi {
   /// Parameters:
   ///
   /// * [VariableexpenseCreateObjectV1Request] variableexpenseCreateObjectV1Request (required):
-  Future<Response> variableexpenseCreateObjectV1WithHttpInfo(VariableexpenseCreateObjectV1Request variableexpenseCreateObjectV1Request,) async {
+  Future<Response> variableexpenseCreateObjectV1WithHttpInfo(VariableexpenseCreateObjectV1Request variableexpenseCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/variableexpense';
 
@@ -47,6 +47,7 @@ class ObjectVariableexpenseApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -57,8 +58,8 @@ class ObjectVariableexpenseApi {
   /// Parameters:
   ///
   /// * [VariableexpenseCreateObjectV1Request] variableexpenseCreateObjectV1Request (required):
-  Future<VariableexpenseCreateObjectV1Response?> variableexpenseCreateObjectV1(VariableexpenseCreateObjectV1Request variableexpenseCreateObjectV1Request,) async {
-    final response = await variableexpenseCreateObjectV1WithHttpInfo(variableexpenseCreateObjectV1Request,);
+  Future<VariableexpenseCreateObjectV1Response?> variableexpenseCreateObjectV1(VariableexpenseCreateObjectV1Request variableexpenseCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await variableexpenseCreateObjectV1WithHttpInfo(variableexpenseCreateObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -83,7 +84,7 @@ class ObjectVariableexpenseApi {
   /// * [int] pkiVariableexpenseID (required):
   ///
   /// * [VariableexpenseEditObjectV1Request] variableexpenseEditObjectV1Request (required):
-  Future<Response> variableexpenseEditObjectV1WithHttpInfo(int pkiVariableexpenseID, VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request,) async {
+  Future<Response> variableexpenseEditObjectV1WithHttpInfo(int pkiVariableexpenseID, VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/variableexpense/{pkiVariableexpenseID}'
       .replaceAll('{pkiVariableexpenseID}', pkiVariableexpenseID.toString());
@@ -106,6 +107,7 @@ class ObjectVariableexpenseApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -118,8 +120,8 @@ class ObjectVariableexpenseApi {
   /// * [int] pkiVariableexpenseID (required):
   ///
   /// * [VariableexpenseEditObjectV1Request] variableexpenseEditObjectV1Request (required):
-  Future<VariableexpenseEditObjectV1Response?> variableexpenseEditObjectV1(int pkiVariableexpenseID, VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request,) async {
-    final response = await variableexpenseEditObjectV1WithHttpInfo(pkiVariableexpenseID, variableexpenseEditObjectV1Request,);
+  Future<VariableexpenseEditObjectV1Response?> variableexpenseEditObjectV1(int pkiVariableexpenseID, VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await variableexpenseEditObjectV1WithHttpInfo(pkiVariableexpenseID, variableexpenseEditObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -151,7 +153,7 @@ class ObjectVariableexpenseApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<Response> variableexpenseGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
+  Future<Response> variableexpenseGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/variableexpense/getAutocomplete/{sSelector}'
       .replaceAll('{sSelector}', sSelector);
@@ -185,6 +187,7 @@ class ObjectVariableexpenseApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -204,8 +207,8 @@ class ObjectVariableexpenseApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<VariableexpenseGetAutocompleteV2Response?> variableexpenseGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
-    final response = await variableexpenseGetAutocompleteV2WithHttpInfo(sSelector,  eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, );
+  Future<VariableexpenseGetAutocompleteV2Response?> variableexpenseGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
+    final response = await variableexpenseGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -237,7 +240,7 @@ class ObjectVariableexpenseApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<Response> variableexpenseGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
+  Future<Response> variableexpenseGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/variableexpense/getList';
 
@@ -276,6 +279,7 @@ class ObjectVariableexpenseApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -295,8 +299,8 @@ class ObjectVariableexpenseApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<VariableexpenseGetListV1Response?> variableexpenseGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
-    final response = await variableexpenseGetListV1WithHttpInfo( eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, );
+  Future<VariableexpenseGetListV1Response?> variableexpenseGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
+    final response = await variableexpenseGetListV1WithHttpInfo(eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -319,7 +323,7 @@ class ObjectVariableexpenseApi {
   /// Parameters:
   ///
   /// * [int] pkiVariableexpenseID (required):
-  Future<Response> variableexpenseGetObjectV2WithHttpInfo(int pkiVariableexpenseID,) async {
+  Future<Response> variableexpenseGetObjectV2WithHttpInfo(int pkiVariableexpenseID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/variableexpense/{pkiVariableexpenseID}'
       .replaceAll('{pkiVariableexpenseID}', pkiVariableexpenseID.toString());
@@ -342,6 +346,7 @@ class ObjectVariableexpenseApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -352,8 +357,8 @@ class ObjectVariableexpenseApi {
   /// Parameters:
   ///
   /// * [int] pkiVariableexpenseID (required):
-  Future<VariableexpenseGetObjectV2Response?> variableexpenseGetObjectV2(int pkiVariableexpenseID,) async {
-    final response = await variableexpenseGetObjectV2WithHttpInfo(pkiVariableexpenseID,);
+  Future<VariableexpenseGetObjectV2Response?> variableexpenseGetObjectV2(int pkiVariableexpenseID, { Future<void>? abortTrigger, }) async {
+    final response = await variableexpenseGetObjectV2WithHttpInfo(pkiVariableexpenseID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

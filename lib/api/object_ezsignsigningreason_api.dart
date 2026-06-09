@@ -25,7 +25,7 @@ class ObjectEzsignsigningreasonApi {
   /// Parameters:
   ///
   /// * [EzsignsigningreasonCreateObjectV1Request] ezsignsigningreasonCreateObjectV1Request (required):
-  Future<Response> ezsignsigningreasonCreateObjectV1WithHttpInfo(EzsignsigningreasonCreateObjectV1Request ezsignsigningreasonCreateObjectV1Request,) async {
+  Future<Response> ezsignsigningreasonCreateObjectV1WithHttpInfo(EzsignsigningreasonCreateObjectV1Request ezsignsigningreasonCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignsigningreason';
 
@@ -47,6 +47,7 @@ class ObjectEzsignsigningreasonApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -57,8 +58,8 @@ class ObjectEzsignsigningreasonApi {
   /// Parameters:
   ///
   /// * [EzsignsigningreasonCreateObjectV1Request] ezsignsigningreasonCreateObjectV1Request (required):
-  Future<EzsignsigningreasonCreateObjectV1Response?> ezsignsigningreasonCreateObjectV1(EzsignsigningreasonCreateObjectV1Request ezsignsigningreasonCreateObjectV1Request,) async {
-    final response = await ezsignsigningreasonCreateObjectV1WithHttpInfo(ezsignsigningreasonCreateObjectV1Request,);
+  Future<EzsignsigningreasonCreateObjectV1Response?> ezsignsigningreasonCreateObjectV1(EzsignsigningreasonCreateObjectV1Request ezsignsigningreasonCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignsigningreasonCreateObjectV1WithHttpInfo(ezsignsigningreasonCreateObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -84,7 +85,7 @@ class ObjectEzsignsigningreasonApi {
   ///   The unique ID of the Ezsignsigningreason
   ///
   /// * [EzsignsigningreasonEditObjectV1Request] ezsignsigningreasonEditObjectV1Request (required):
-  Future<Response> ezsignsigningreasonEditObjectV1WithHttpInfo(int pkiEzsignsigningreasonID, EzsignsigningreasonEditObjectV1Request ezsignsigningreasonEditObjectV1Request,) async {
+  Future<Response> ezsignsigningreasonEditObjectV1WithHttpInfo(int pkiEzsignsigningreasonID, EzsignsigningreasonEditObjectV1Request ezsignsigningreasonEditObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignsigningreason/{pkiEzsignsigningreasonID}'
       .replaceAll('{pkiEzsignsigningreasonID}', pkiEzsignsigningreasonID.toString());
@@ -107,6 +108,7 @@ class ObjectEzsignsigningreasonApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -120,8 +122,8 @@ class ObjectEzsignsigningreasonApi {
   ///   The unique ID of the Ezsignsigningreason
   ///
   /// * [EzsignsigningreasonEditObjectV1Request] ezsignsigningreasonEditObjectV1Request (required):
-  Future<EzsignsigningreasonEditObjectV1Response?> ezsignsigningreasonEditObjectV1(int pkiEzsignsigningreasonID, EzsignsigningreasonEditObjectV1Request ezsignsigningreasonEditObjectV1Request,) async {
-    final response = await ezsignsigningreasonEditObjectV1WithHttpInfo(pkiEzsignsigningreasonID, ezsignsigningreasonEditObjectV1Request,);
+  Future<EzsignsigningreasonEditObjectV1Response?> ezsignsigningreasonEditObjectV1(int pkiEzsignsigningreasonID, EzsignsigningreasonEditObjectV1Request ezsignsigningreasonEditObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignsigningreasonEditObjectV1WithHttpInfo(pkiEzsignsigningreasonID, ezsignsigningreasonEditObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -153,7 +155,7 @@ class ObjectEzsignsigningreasonApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<Response> ezsignsigningreasonGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
+  Future<Response> ezsignsigningreasonGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezsignsigningreason/getAutocomplete/{sSelector}'
       .replaceAll('{sSelector}', sSelector);
@@ -187,6 +189,7 @@ class ObjectEzsignsigningreasonApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -206,8 +209,8 @@ class ObjectEzsignsigningreasonApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<EzsignsigningreasonGetAutocompleteV2Response?> ezsignsigningreasonGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
-    final response = await ezsignsigningreasonGetAutocompleteV2WithHttpInfo(sSelector,  eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, );
+  Future<EzsignsigningreasonGetAutocompleteV2Response?> ezsignsigningreasonGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
+    final response = await ezsignsigningreasonGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -239,7 +242,7 @@ class ObjectEzsignsigningreasonApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<Response> ezsignsigningreasonGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
+  Future<Response> ezsignsigningreasonGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignsigningreason/getList';
 
@@ -278,6 +281,7 @@ class ObjectEzsignsigningreasonApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -297,8 +301,8 @@ class ObjectEzsignsigningreasonApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<EzsignsigningreasonGetListV1Response?> ezsignsigningreasonGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
-    final response = await ezsignsigningreasonGetListV1WithHttpInfo( eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, );
+  Future<EzsignsigningreasonGetListV1Response?> ezsignsigningreasonGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
+    final response = await ezsignsigningreasonGetListV1WithHttpInfo(eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -322,7 +326,7 @@ class ObjectEzsignsigningreasonApi {
   ///
   /// * [int] pkiEzsignsigningreasonID (required):
   ///   The unique ID of the Ezsignsigningreason
-  Future<Response> ezsignsigningreasonGetObjectV2WithHttpInfo(int pkiEzsignsigningreasonID,) async {
+  Future<Response> ezsignsigningreasonGetObjectV2WithHttpInfo(int pkiEzsignsigningreasonID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezsignsigningreason/{pkiEzsignsigningreasonID}'
       .replaceAll('{pkiEzsignsigningreasonID}', pkiEzsignsigningreasonID.toString());
@@ -345,6 +349,7 @@ class ObjectEzsignsigningreasonApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -356,8 +361,8 @@ class ObjectEzsignsigningreasonApi {
   ///
   /// * [int] pkiEzsignsigningreasonID (required):
   ///   The unique ID of the Ezsignsigningreason
-  Future<EzsignsigningreasonGetObjectV2Response?> ezsignsigningreasonGetObjectV2(int pkiEzsignsigningreasonID,) async {
-    final response = await ezsignsigningreasonGetObjectV2WithHttpInfo(pkiEzsignsigningreasonID,);
+  Future<EzsignsigningreasonGetObjectV2Response?> ezsignsigningreasonGetObjectV2(int pkiEzsignsigningreasonID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignsigningreasonGetObjectV2WithHttpInfo(pkiEzsignsigningreasonID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

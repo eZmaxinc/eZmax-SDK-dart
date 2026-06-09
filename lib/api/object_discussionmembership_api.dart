@@ -25,7 +25,7 @@ class ObjectDiscussionmembershipApi {
   /// Parameters:
   ///
   /// * [DiscussionmembershipCreateObjectV1Request] discussionmembershipCreateObjectV1Request (required):
-  Future<Response> discussionmembershipCreateObjectV1WithHttpInfo(DiscussionmembershipCreateObjectV1Request discussionmembershipCreateObjectV1Request,) async {
+  Future<Response> discussionmembershipCreateObjectV1WithHttpInfo(DiscussionmembershipCreateObjectV1Request discussionmembershipCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/discussionmembership';
 
@@ -47,6 +47,7 @@ class ObjectDiscussionmembershipApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -57,8 +58,8 @@ class ObjectDiscussionmembershipApi {
   /// Parameters:
   ///
   /// * [DiscussionmembershipCreateObjectV1Request] discussionmembershipCreateObjectV1Request (required):
-  Future<DiscussionmembershipCreateObjectV1Response?> discussionmembershipCreateObjectV1(DiscussionmembershipCreateObjectV1Request discussionmembershipCreateObjectV1Request,) async {
-    final response = await discussionmembershipCreateObjectV1WithHttpInfo(discussionmembershipCreateObjectV1Request,);
+  Future<DiscussionmembershipCreateObjectV1Response?> discussionmembershipCreateObjectV1(DiscussionmembershipCreateObjectV1Request discussionmembershipCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await discussionmembershipCreateObjectV1WithHttpInfo(discussionmembershipCreateObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -82,7 +83,7 @@ class ObjectDiscussionmembershipApi {
   ///
   /// * [int] pkiDiscussionmembershipID (required):
   ///   The unique ID of the Discussionmembership
-  Future<Response> discussionmembershipDeleteObjectV1WithHttpInfo(int pkiDiscussionmembershipID,) async {
+  Future<Response> discussionmembershipDeleteObjectV1WithHttpInfo(int pkiDiscussionmembershipID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/discussionmembership/{pkiDiscussionmembershipID}'
       .replaceAll('{pkiDiscussionmembershipID}', pkiDiscussionmembershipID.toString());
@@ -105,6 +106,7 @@ class ObjectDiscussionmembershipApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -116,8 +118,8 @@ class ObjectDiscussionmembershipApi {
   ///
   /// * [int] pkiDiscussionmembershipID (required):
   ///   The unique ID of the Discussionmembership
-  Future<DiscussionmembershipDeleteObjectV1Response?> discussionmembershipDeleteObjectV1(int pkiDiscussionmembershipID,) async {
-    final response = await discussionmembershipDeleteObjectV1WithHttpInfo(pkiDiscussionmembershipID,);
+  Future<DiscussionmembershipDeleteObjectV1Response?> discussionmembershipDeleteObjectV1(int pkiDiscussionmembershipID, { Future<void>? abortTrigger, }) async {
+    final response = await discussionmembershipDeleteObjectV1WithHttpInfo(pkiDiscussionmembershipID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

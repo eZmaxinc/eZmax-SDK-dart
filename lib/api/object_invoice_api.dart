@@ -25,7 +25,7 @@ class ObjectInvoiceApi {
   /// Parameters:
   ///
   /// * [int] pkiInvoiceID (required):
-  Future<Response> invoiceGetAttachmentsV1WithHttpInfo(int pkiInvoiceID,) async {
+  Future<Response> invoiceGetAttachmentsV1WithHttpInfo(int pkiInvoiceID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/invoice/{pkiInvoiceID}/getAttachments'
       .replaceAll('{pkiInvoiceID}', pkiInvoiceID.toString());
@@ -48,6 +48,7 @@ class ObjectInvoiceApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -58,8 +59,8 @@ class ObjectInvoiceApi {
   /// Parameters:
   ///
   /// * [int] pkiInvoiceID (required):
-  Future<InvoiceGetAttachmentsV1Response?> invoiceGetAttachmentsV1(int pkiInvoiceID,) async {
-    final response = await invoiceGetAttachmentsV1WithHttpInfo(pkiInvoiceID,);
+  Future<InvoiceGetAttachmentsV1Response?> invoiceGetAttachmentsV1(int pkiInvoiceID, { Future<void>? abortTrigger, }) async {
+    final response = await invoiceGetAttachmentsV1WithHttpInfo(pkiInvoiceID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -82,7 +83,7 @@ class ObjectInvoiceApi {
   /// Parameters:
   ///
   /// * [int] pkiInvoiceID (required):
-  Future<Response> invoiceGetCommunicationCountV1WithHttpInfo(int pkiInvoiceID,) async {
+  Future<Response> invoiceGetCommunicationCountV1WithHttpInfo(int pkiInvoiceID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/invoice/{pkiInvoiceID}/getCommunicationCount'
       .replaceAll('{pkiInvoiceID}', pkiInvoiceID.toString());
@@ -105,6 +106,7 @@ class ObjectInvoiceApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -115,8 +117,8 @@ class ObjectInvoiceApi {
   /// Parameters:
   ///
   /// * [int] pkiInvoiceID (required):
-  Future<InvoiceGetCommunicationCountV1Response?> invoiceGetCommunicationCountV1(int pkiInvoiceID,) async {
-    final response = await invoiceGetCommunicationCountV1WithHttpInfo(pkiInvoiceID,);
+  Future<InvoiceGetCommunicationCountV1Response?> invoiceGetCommunicationCountV1(int pkiInvoiceID, { Future<void>? abortTrigger, }) async {
+    final response = await invoiceGetCommunicationCountV1WithHttpInfo(pkiInvoiceID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -139,7 +141,7 @@ class ObjectInvoiceApi {
   /// Parameters:
   ///
   /// * [int] pkiInvoiceID (required):
-  Future<Response> invoiceGetCommunicationListV1WithHttpInfo(int pkiInvoiceID,) async {
+  Future<Response> invoiceGetCommunicationListV1WithHttpInfo(int pkiInvoiceID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/invoice/{pkiInvoiceID}/getCommunicationList'
       .replaceAll('{pkiInvoiceID}', pkiInvoiceID.toString());
@@ -162,6 +164,7 @@ class ObjectInvoiceApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -172,8 +175,8 @@ class ObjectInvoiceApi {
   /// Parameters:
   ///
   /// * [int] pkiInvoiceID (required):
-  Future<InvoiceGetCommunicationListV1Response?> invoiceGetCommunicationListV1(int pkiInvoiceID,) async {
-    final response = await invoiceGetCommunicationListV1WithHttpInfo(pkiInvoiceID,);
+  Future<InvoiceGetCommunicationListV1Response?> invoiceGetCommunicationListV1(int pkiInvoiceID, { Future<void>? abortTrigger, }) async {
+    final response = await invoiceGetCommunicationListV1WithHttpInfo(pkiInvoiceID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -196,7 +199,7 @@ class ObjectInvoiceApi {
   /// Parameters:
   ///
   /// * [int] pkiInvoiceID (required):
-  Future<Response> invoiceGetCommunicationrecipientsV1WithHttpInfo(int pkiInvoiceID,) async {
+  Future<Response> invoiceGetCommunicationrecipientsV1WithHttpInfo(int pkiInvoiceID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/invoice/{pkiInvoiceID}/getCommunicationrecipients'
       .replaceAll('{pkiInvoiceID}', pkiInvoiceID.toString());
@@ -219,6 +222,7 @@ class ObjectInvoiceApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -229,8 +233,8 @@ class ObjectInvoiceApi {
   /// Parameters:
   ///
   /// * [int] pkiInvoiceID (required):
-  Future<InvoiceGetCommunicationrecipientsV1Response?> invoiceGetCommunicationrecipientsV1(int pkiInvoiceID,) async {
-    final response = await invoiceGetCommunicationrecipientsV1WithHttpInfo(pkiInvoiceID,);
+  Future<InvoiceGetCommunicationrecipientsV1Response?> invoiceGetCommunicationrecipientsV1(int pkiInvoiceID, { Future<void>? abortTrigger, }) async {
+    final response = await invoiceGetCommunicationrecipientsV1WithHttpInfo(pkiInvoiceID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -253,7 +257,7 @@ class ObjectInvoiceApi {
   /// Parameters:
   ///
   /// * [int] pkiInvoiceID (required):
-  Future<Response> invoiceGetCommunicationsendersV1WithHttpInfo(int pkiInvoiceID,) async {
+  Future<Response> invoiceGetCommunicationsendersV1WithHttpInfo(int pkiInvoiceID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/invoice/{pkiInvoiceID}/getCommunicationsenders'
       .replaceAll('{pkiInvoiceID}', pkiInvoiceID.toString());
@@ -276,6 +280,7 @@ class ObjectInvoiceApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -286,8 +291,8 @@ class ObjectInvoiceApi {
   /// Parameters:
   ///
   /// * [int] pkiInvoiceID (required):
-  Future<InvoiceGetCommunicationsendersV1Response?> invoiceGetCommunicationsendersV1(int pkiInvoiceID,) async {
-    final response = await invoiceGetCommunicationsendersV1WithHttpInfo(pkiInvoiceID,);
+  Future<InvoiceGetCommunicationsendersV1Response?> invoiceGetCommunicationsendersV1(int pkiInvoiceID, { Future<void>? abortTrigger, }) async {
+    final response = await invoiceGetCommunicationsendersV1WithHttpInfo(pkiInvoiceID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -312,7 +317,7 @@ class ObjectInvoiceApi {
   /// * [int] pkiInvoiceID (required):
   ///
   /// * [InvoiceImportIntoEDMV1Request] invoiceImportIntoEDMV1Request (required):
-  Future<Response> invoiceImportIntoEDMV1WithHttpInfo(int pkiInvoiceID, InvoiceImportIntoEDMV1Request invoiceImportIntoEDMV1Request,) async {
+  Future<Response> invoiceImportIntoEDMV1WithHttpInfo(int pkiInvoiceID, InvoiceImportIntoEDMV1Request invoiceImportIntoEDMV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/invoice/{pkiInvoiceID}/importIntoEDM'
       .replaceAll('{pkiInvoiceID}', pkiInvoiceID.toString());
@@ -335,6 +340,7 @@ class ObjectInvoiceApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -347,8 +353,8 @@ class ObjectInvoiceApi {
   /// * [int] pkiInvoiceID (required):
   ///
   /// * [InvoiceImportIntoEDMV1Request] invoiceImportIntoEDMV1Request (required):
-  Future<InvoiceImportIntoEDMV1Response?> invoiceImportIntoEDMV1(int pkiInvoiceID, InvoiceImportIntoEDMV1Request invoiceImportIntoEDMV1Request,) async {
-    final response = await invoiceImportIntoEDMV1WithHttpInfo(pkiInvoiceID, invoiceImportIntoEDMV1Request,);
+  Future<InvoiceImportIntoEDMV1Response?> invoiceImportIntoEDMV1(int pkiInvoiceID, InvoiceImportIntoEDMV1Request invoiceImportIntoEDMV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await invoiceImportIntoEDMV1WithHttpInfo(pkiInvoiceID, invoiceImportIntoEDMV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

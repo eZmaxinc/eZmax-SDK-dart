@@ -25,7 +25,7 @@ class ObjectApikeyApi {
   /// Parameters:
   ///
   /// * [ApikeyCreateObjectV2Request] apikeyCreateObjectV2Request (required):
-  Future<Response> apikeyCreateObjectV2WithHttpInfo(ApikeyCreateObjectV2Request apikeyCreateObjectV2Request,) async {
+  Future<Response> apikeyCreateObjectV2WithHttpInfo(ApikeyCreateObjectV2Request apikeyCreateObjectV2Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/apikey';
 
@@ -47,6 +47,7 @@ class ObjectApikeyApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -57,8 +58,8 @@ class ObjectApikeyApi {
   /// Parameters:
   ///
   /// * [ApikeyCreateObjectV2Request] apikeyCreateObjectV2Request (required):
-  Future<ApikeyCreateObjectV2Response?> apikeyCreateObjectV2(ApikeyCreateObjectV2Request apikeyCreateObjectV2Request,) async {
-    final response = await apikeyCreateObjectV2WithHttpInfo(apikeyCreateObjectV2Request,);
+  Future<ApikeyCreateObjectV2Response?> apikeyCreateObjectV2(ApikeyCreateObjectV2Request apikeyCreateObjectV2Request, { Future<void>? abortTrigger, }) async {
+    final response = await apikeyCreateObjectV2WithHttpInfo(apikeyCreateObjectV2Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -84,7 +85,7 @@ class ObjectApikeyApi {
   ///   The unique ID of the Apikey
   ///
   /// * [ApikeyEditObjectV1Request] apikeyEditObjectV1Request (required):
-  Future<Response> apikeyEditObjectV1WithHttpInfo(int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request,) async {
+  Future<Response> apikeyEditObjectV1WithHttpInfo(int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/apikey/{pkiApikeyID}'
       .replaceAll('{pkiApikeyID}', pkiApikeyID.toString());
@@ -107,6 +108,7 @@ class ObjectApikeyApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -120,8 +122,8 @@ class ObjectApikeyApi {
   ///   The unique ID of the Apikey
   ///
   /// * [ApikeyEditObjectV1Request] apikeyEditObjectV1Request (required):
-  Future<ApikeyEditObjectV1Response?> apikeyEditObjectV1(int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request,) async {
-    final response = await apikeyEditObjectV1WithHttpInfo(pkiApikeyID, apikeyEditObjectV1Request,);
+  Future<ApikeyEditObjectV1Response?> apikeyEditObjectV1(int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await apikeyEditObjectV1WithHttpInfo(pkiApikeyID, apikeyEditObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -146,7 +148,7 @@ class ObjectApikeyApi {
   /// * [int] pkiApikeyID (required):
   ///
   /// * [ApikeyEditPermissionsV1Request] apikeyEditPermissionsV1Request (required):
-  Future<Response> apikeyEditPermissionsV1WithHttpInfo(int pkiApikeyID, ApikeyEditPermissionsV1Request apikeyEditPermissionsV1Request,) async {
+  Future<Response> apikeyEditPermissionsV1WithHttpInfo(int pkiApikeyID, ApikeyEditPermissionsV1Request apikeyEditPermissionsV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/apikey/{pkiApikeyID}/editPermissions'
       .replaceAll('{pkiApikeyID}', pkiApikeyID.toString());
@@ -169,6 +171,7 @@ class ObjectApikeyApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -181,8 +184,8 @@ class ObjectApikeyApi {
   /// * [int] pkiApikeyID (required):
   ///
   /// * [ApikeyEditPermissionsV1Request] apikeyEditPermissionsV1Request (required):
-  Future<ApikeyEditPermissionsV1Response?> apikeyEditPermissionsV1(int pkiApikeyID, ApikeyEditPermissionsV1Request apikeyEditPermissionsV1Request,) async {
-    final response = await apikeyEditPermissionsV1WithHttpInfo(pkiApikeyID, apikeyEditPermissionsV1Request,);
+  Future<ApikeyEditPermissionsV1Response?> apikeyEditPermissionsV1(int pkiApikeyID, ApikeyEditPermissionsV1Request apikeyEditPermissionsV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await apikeyEditPermissionsV1WithHttpInfo(pkiApikeyID, apikeyEditPermissionsV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -205,7 +208,7 @@ class ObjectApikeyApi {
   /// Parameters:
   ///
   /// * [ApikeyGenerateDelegatedCredentialsV1Request] apikeyGenerateDelegatedCredentialsV1Request (required):
-  Future<Response> apikeyGenerateDelegatedCredentialsV1WithHttpInfo(ApikeyGenerateDelegatedCredentialsV1Request apikeyGenerateDelegatedCredentialsV1Request,) async {
+  Future<Response> apikeyGenerateDelegatedCredentialsV1WithHttpInfo(ApikeyGenerateDelegatedCredentialsV1Request apikeyGenerateDelegatedCredentialsV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/apikey/generateDelegatedCredentials';
 
@@ -227,6 +230,7 @@ class ObjectApikeyApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -237,8 +241,8 @@ class ObjectApikeyApi {
   /// Parameters:
   ///
   /// * [ApikeyGenerateDelegatedCredentialsV1Request] apikeyGenerateDelegatedCredentialsV1Request (required):
-  Future<ApikeyGenerateDelegatedCredentialsV1Response?> apikeyGenerateDelegatedCredentialsV1(ApikeyGenerateDelegatedCredentialsV1Request apikeyGenerateDelegatedCredentialsV1Request,) async {
-    final response = await apikeyGenerateDelegatedCredentialsV1WithHttpInfo(apikeyGenerateDelegatedCredentialsV1Request,);
+  Future<ApikeyGenerateDelegatedCredentialsV1Response?> apikeyGenerateDelegatedCredentialsV1(ApikeyGenerateDelegatedCredentialsV1Request apikeyGenerateDelegatedCredentialsV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await apikeyGenerateDelegatedCredentialsV1WithHttpInfo(apikeyGenerateDelegatedCredentialsV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -259,7 +263,7 @@ class ObjectApikeyApi {
   /// Parameters:
   ///
   /// * [int] pkiApikeyID (required):
-  Future<Response> apikeyGetCorsV1WithHttpInfo(int pkiApikeyID,) async {
+  Future<Response> apikeyGetCorsV1WithHttpInfo(int pkiApikeyID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/apikey/{pkiApikeyID}/getCors'
       .replaceAll('{pkiApikeyID}', pkiApikeyID.toString());
@@ -282,6 +286,7 @@ class ObjectApikeyApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -290,8 +295,8 @@ class ObjectApikeyApi {
   /// Parameters:
   ///
   /// * [int] pkiApikeyID (required):
-  Future<ApikeyGetCorsV1Response?> apikeyGetCorsV1(int pkiApikeyID,) async {
-    final response = await apikeyGetCorsV1WithHttpInfo(pkiApikeyID,);
+  Future<ApikeyGetCorsV1Response?> apikeyGetCorsV1(int pkiApikeyID, { Future<void>? abortTrigger, }) async {
+    final response = await apikeyGetCorsV1WithHttpInfo(pkiApikeyID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -323,7 +328,7 @@ class ObjectApikeyApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<Response> apikeyGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
+  Future<Response> apikeyGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/apikey/getList';
 
@@ -362,6 +367,7 @@ class ObjectApikeyApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -381,8 +387,8 @@ class ObjectApikeyApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<ApikeyGetListV1Response?> apikeyGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
-    final response = await apikeyGetListV1WithHttpInfo( eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, );
+  Future<ApikeyGetListV1Response?> apikeyGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
+    final response = await apikeyGetListV1WithHttpInfo(eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -406,7 +412,7 @@ class ObjectApikeyApi {
   ///
   /// * [int] pkiApikeyID (required):
   ///   The unique ID of the Apikey
-  Future<Response> apikeyGetObjectV2WithHttpInfo(int pkiApikeyID,) async {
+  Future<Response> apikeyGetObjectV2WithHttpInfo(int pkiApikeyID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/apikey/{pkiApikeyID}'
       .replaceAll('{pkiApikeyID}', pkiApikeyID.toString());
@@ -429,6 +435,7 @@ class ObjectApikeyApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -440,8 +447,8 @@ class ObjectApikeyApi {
   ///
   /// * [int] pkiApikeyID (required):
   ///   The unique ID of the Apikey
-  Future<ApikeyGetObjectV2Response?> apikeyGetObjectV2(int pkiApikeyID,) async {
-    final response = await apikeyGetObjectV2WithHttpInfo(pkiApikeyID,);
+  Future<ApikeyGetObjectV2Response?> apikeyGetObjectV2(int pkiApikeyID, { Future<void>? abortTrigger, }) async {
+    final response = await apikeyGetObjectV2WithHttpInfo(pkiApikeyID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -462,7 +469,7 @@ class ObjectApikeyApi {
   /// Parameters:
   ///
   /// * [int] pkiApikeyID (required):
-  Future<Response> apikeyGetPermissionsV1WithHttpInfo(int pkiApikeyID,) async {
+  Future<Response> apikeyGetPermissionsV1WithHttpInfo(int pkiApikeyID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/apikey/{pkiApikeyID}/getPermissions'
       .replaceAll('{pkiApikeyID}', pkiApikeyID.toString());
@@ -485,6 +492,7 @@ class ObjectApikeyApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -493,8 +501,8 @@ class ObjectApikeyApi {
   /// Parameters:
   ///
   /// * [int] pkiApikeyID (required):
-  Future<ApikeyGetPermissionsV1Response?> apikeyGetPermissionsV1(int pkiApikeyID,) async {
-    final response = await apikeyGetPermissionsV1WithHttpInfo(pkiApikeyID,);
+  Future<ApikeyGetPermissionsV1Response?> apikeyGetPermissionsV1(int pkiApikeyID, { Future<void>? abortTrigger, }) async {
+    final response = await apikeyGetPermissionsV1WithHttpInfo(pkiApikeyID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -515,7 +523,7 @@ class ObjectApikeyApi {
   /// Parameters:
   ///
   /// * [int] pkiApikeyID (required):
-  Future<Response> apikeyGetSubnetsV1WithHttpInfo(int pkiApikeyID,) async {
+  Future<Response> apikeyGetSubnetsV1WithHttpInfo(int pkiApikeyID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/apikey/{pkiApikeyID}/getSubnets'
       .replaceAll('{pkiApikeyID}', pkiApikeyID.toString());
@@ -538,6 +546,7 @@ class ObjectApikeyApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -546,8 +555,8 @@ class ObjectApikeyApi {
   /// Parameters:
   ///
   /// * [int] pkiApikeyID (required):
-  Future<ApikeyGetSubnetsV1Response?> apikeyGetSubnetsV1(int pkiApikeyID,) async {
-    final response = await apikeyGetSubnetsV1WithHttpInfo(pkiApikeyID,);
+  Future<ApikeyGetSubnetsV1Response?> apikeyGetSubnetsV1(int pkiApikeyID, { Future<void>? abortTrigger, }) async {
+    final response = await apikeyGetSubnetsV1WithHttpInfo(pkiApikeyID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -572,7 +581,7 @@ class ObjectApikeyApi {
   /// * [int] pkiApikeyID (required):
   ///
   /// * [ApikeyRegenerateV1Request] apikeyRegenerateV1Request (required):
-  Future<Response> apikeyRegenerateV1WithHttpInfo(int pkiApikeyID, ApikeyRegenerateV1Request apikeyRegenerateV1Request,) async {
+  Future<Response> apikeyRegenerateV1WithHttpInfo(int pkiApikeyID, ApikeyRegenerateV1Request apikeyRegenerateV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/apikey/{pkiApikeyID}/regenerate'
       .replaceAll('{pkiApikeyID}', pkiApikeyID.toString());
@@ -595,6 +604,7 @@ class ObjectApikeyApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -607,8 +617,8 @@ class ObjectApikeyApi {
   /// * [int] pkiApikeyID (required):
   ///
   /// * [ApikeyRegenerateV1Request] apikeyRegenerateV1Request (required):
-  Future<ApikeyRegenerateV1Response?> apikeyRegenerateV1(int pkiApikeyID, ApikeyRegenerateV1Request apikeyRegenerateV1Request,) async {
-    final response = await apikeyRegenerateV1WithHttpInfo(pkiApikeyID, apikeyRegenerateV1Request,);
+  Future<ApikeyRegenerateV1Response?> apikeyRegenerateV1(int pkiApikeyID, ApikeyRegenerateV1Request apikeyRegenerateV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await apikeyRegenerateV1WithHttpInfo(pkiApikeyID, apikeyRegenerateV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

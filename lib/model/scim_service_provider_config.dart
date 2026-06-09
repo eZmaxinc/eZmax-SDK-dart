@@ -33,13 +33,13 @@ class ScimServiceProviderConfig {
   /// An HTTP-addressable URL pointing to the service provider's human-consumable help documentation
   String documentationUri;
 
-  ScimServiceProviderConfigEtag etag;
+  ScimServiceProviderConfigChangePassword etag;
 
   ScimServiceProviderConfigFilter filter;
 
-  ScimServiceProviderConfigPatch patch_;
+  ScimServiceProviderConfigChangePassword patch_;
 
-  ScimServiceProviderConfigSort sort;
+  ScimServiceProviderConfigChangePassword sort;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ScimServiceProviderConfig &&
@@ -115,10 +115,10 @@ class ScimServiceProviderConfig {
         bulk: ScimServiceProviderConfigBulk.fromJson(json[r'bulk'])!,
         changePassword: ScimServiceProviderConfigChangePassword.fromJson(json[r'changePassword'])!,
         documentationUri: mapValueOfType<String>(json, r'documentationUri')!,
-        etag: ScimServiceProviderConfigEtag.fromJson(json[r'etag'])!,
+        etag: ScimServiceProviderConfigChangePassword.fromJson(json[r'etag'])!,
         filter: ScimServiceProviderConfigFilter.fromJson(json[r'filter'])!,
-        patch_: ScimServiceProviderConfigPatch.fromJson(json[r'patch'])!,
-        sort: ScimServiceProviderConfigSort.fromJson(json[r'sort'])!,
+        patch_: ScimServiceProviderConfigChangePassword.fromJson(json[r'patch'])!,
+        sort: ScimServiceProviderConfigChangePassword.fromJson(json[r'sort'])!,
       );
     }
     return null;

@@ -27,7 +27,7 @@ class ObjectEzsignfolderApi {
   /// * [int] pkiEzsignfolderID (required):
   ///
   /// * [Object] body (required):
-  Future<Response> ezsignfolderArchiveV1WithHttpInfo(int pkiEzsignfolderID, Object body,) async {
+  Future<Response> ezsignfolderArchiveV1WithHttpInfo(int pkiEzsignfolderID, Object body, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/archive'
       .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
@@ -50,6 +50,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -62,8 +63,8 @@ class ObjectEzsignfolderApi {
   /// * [int] pkiEzsignfolderID (required):
   ///
   /// * [Object] body (required):
-  Future<EzsignfolderArchiveV1Response?> ezsignfolderArchiveV1(int pkiEzsignfolderID, Object body,) async {
-    final response = await ezsignfolderArchiveV1WithHttpInfo(pkiEzsignfolderID, body,);
+  Future<EzsignfolderArchiveV1Response?> ezsignfolderArchiveV1(int pkiEzsignfolderID, Object body, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderArchiveV1WithHttpInfo(pkiEzsignfolderID, body, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -86,7 +87,7 @@ class ObjectEzsignfolderApi {
   /// * [int] pkiEzsignfolderID (required):
   ///
   /// * [EzsignfolderBatchDownloadV1Request] ezsignfolderBatchDownloadV1Request (required):
-  Future<Response> ezsignfolderBatchDownloadV1WithHttpInfo(int pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request,) async {
+  Future<Response> ezsignfolderBatchDownloadV1WithHttpInfo(int pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/batchDownload'
       .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
@@ -109,6 +110,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -119,8 +121,8 @@ class ObjectEzsignfolderApi {
   /// * [int] pkiEzsignfolderID (required):
   ///
   /// * [EzsignfolderBatchDownloadV1Request] ezsignfolderBatchDownloadV1Request (required):
-  Future<MultipartFile?> ezsignfolderBatchDownloadV1(int pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request,) async {
-    final response = await ezsignfolderBatchDownloadV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request,);
+  Future<MultipartFile?> ezsignfolderBatchDownloadV1(int pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderBatchDownloadV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -143,7 +145,7 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [List<EzsignfolderCreateObjectV1Request>] ezsignfolderCreateObjectV1Request (required):
-  Future<Response> ezsignfolderCreateObjectV1WithHttpInfo(List<EzsignfolderCreateObjectV1Request> ezsignfolderCreateObjectV1Request,) async {
+  Future<Response> ezsignfolderCreateObjectV1WithHttpInfo(List<EzsignfolderCreateObjectV1Request> ezsignfolderCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfolder';
 
@@ -165,6 +167,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -175,8 +178,8 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [List<EzsignfolderCreateObjectV1Request>] ezsignfolderCreateObjectV1Request (required):
-  Future<EzsignfolderCreateObjectV1Response?> ezsignfolderCreateObjectV1(List<EzsignfolderCreateObjectV1Request> ezsignfolderCreateObjectV1Request,) async {
-    final response = await ezsignfolderCreateObjectV1WithHttpInfo(ezsignfolderCreateObjectV1Request,);
+  Future<EzsignfolderCreateObjectV1Response?> ezsignfolderCreateObjectV1(List<EzsignfolderCreateObjectV1Request> ezsignfolderCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderCreateObjectV1WithHttpInfo(ezsignfolderCreateObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -199,7 +202,7 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [EzsignfolderCreateObjectV2Request] ezsignfolderCreateObjectV2Request (required):
-  Future<Response> ezsignfolderCreateObjectV2WithHttpInfo(EzsignfolderCreateObjectV2Request ezsignfolderCreateObjectV2Request,) async {
+  Future<Response> ezsignfolderCreateObjectV2WithHttpInfo(EzsignfolderCreateObjectV2Request ezsignfolderCreateObjectV2Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezsignfolder';
 
@@ -221,6 +224,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -231,8 +235,8 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [EzsignfolderCreateObjectV2Request] ezsignfolderCreateObjectV2Request (required):
-  Future<EzsignfolderCreateObjectV2Response?> ezsignfolderCreateObjectV2(EzsignfolderCreateObjectV2Request ezsignfolderCreateObjectV2Request,) async {
-    final response = await ezsignfolderCreateObjectV2WithHttpInfo(ezsignfolderCreateObjectV2Request,);
+  Future<EzsignfolderCreateObjectV2Response?> ezsignfolderCreateObjectV2(EzsignfolderCreateObjectV2Request ezsignfolderCreateObjectV2Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderCreateObjectV2WithHttpInfo(ezsignfolderCreateObjectV2Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -255,7 +259,7 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [EzsignfolderCreateObjectV3Request] ezsignfolderCreateObjectV3Request (required):
-  Future<Response> ezsignfolderCreateObjectV3WithHttpInfo(EzsignfolderCreateObjectV3Request ezsignfolderCreateObjectV3Request,) async {
+  Future<Response> ezsignfolderCreateObjectV3WithHttpInfo(EzsignfolderCreateObjectV3Request ezsignfolderCreateObjectV3Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/3/object/ezsignfolder';
 
@@ -277,6 +281,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -287,8 +292,8 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [EzsignfolderCreateObjectV3Request] ezsignfolderCreateObjectV3Request (required):
-  Future<EzsignfolderCreateObjectV3Response?> ezsignfolderCreateObjectV3(EzsignfolderCreateObjectV3Request ezsignfolderCreateObjectV3Request,) async {
-    final response = await ezsignfolderCreateObjectV3WithHttpInfo(ezsignfolderCreateObjectV3Request,);
+  Future<EzsignfolderCreateObjectV3Response?> ezsignfolderCreateObjectV3(EzsignfolderCreateObjectV3Request ezsignfolderCreateObjectV3Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderCreateObjectV3WithHttpInfo(ezsignfolderCreateObjectV3Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -309,7 +314,7 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<Response> ezsignfolderDeleteObjectV1WithHttpInfo(int pkiEzsignfolderID,) async {
+  Future<Response> ezsignfolderDeleteObjectV1WithHttpInfo(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}'
       .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
@@ -332,6 +337,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -340,8 +346,8 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<EzsignfolderDeleteObjectV1Response?> ezsignfolderDeleteObjectV1(int pkiEzsignfolderID,) async {
-    final response = await ezsignfolderDeleteObjectV1WithHttpInfo(pkiEzsignfolderID,);
+  Future<EzsignfolderDeleteObjectV1Response?> ezsignfolderDeleteObjectV1(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderDeleteObjectV1WithHttpInfo(pkiEzsignfolderID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -364,7 +370,7 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [EzsignfolderDisposeEzsignfoldersV1Request] ezsignfolderDisposeEzsignfoldersV1Request (required):
-  Future<Response> ezsignfolderDisposeEzsignfoldersV1WithHttpInfo(EzsignfolderDisposeEzsignfoldersV1Request ezsignfolderDisposeEzsignfoldersV1Request,) async {
+  Future<Response> ezsignfolderDisposeEzsignfoldersV1WithHttpInfo(EzsignfolderDisposeEzsignfoldersV1Request ezsignfolderDisposeEzsignfoldersV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfolder/disposeEzsignfolders';
 
@@ -386,6 +392,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -396,8 +403,8 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [EzsignfolderDisposeEzsignfoldersV1Request] ezsignfolderDisposeEzsignfoldersV1Request (required):
-  Future<EzsignfolderDisposeEzsignfoldersV1Response?> ezsignfolderDisposeEzsignfoldersV1(EzsignfolderDisposeEzsignfoldersV1Request ezsignfolderDisposeEzsignfoldersV1Request,) async {
-    final response = await ezsignfolderDisposeEzsignfoldersV1WithHttpInfo(ezsignfolderDisposeEzsignfoldersV1Request,);
+  Future<EzsignfolderDisposeEzsignfoldersV1Response?> ezsignfolderDisposeEzsignfoldersV1(EzsignfolderDisposeEzsignfoldersV1Request ezsignfolderDisposeEzsignfoldersV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderDisposeEzsignfoldersV1WithHttpInfo(ezsignfolderDisposeEzsignfoldersV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -422,7 +429,7 @@ class ObjectEzsignfolderApi {
   /// * [int] pkiEzsignfolderID (required):
   ///
   /// * [Object] body (required):
-  Future<Response> ezsignfolderDisposeV1WithHttpInfo(int pkiEzsignfolderID, Object body,) async {
+  Future<Response> ezsignfolderDisposeV1WithHttpInfo(int pkiEzsignfolderID, Object body, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/dispose'
       .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
@@ -445,6 +452,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -457,8 +465,8 @@ class ObjectEzsignfolderApi {
   /// * [int] pkiEzsignfolderID (required):
   ///
   /// * [Object] body (required):
-  Future<EzsignfolderDisposeV1Response?> ezsignfolderDisposeV1(int pkiEzsignfolderID, Object body,) async {
-    final response = await ezsignfolderDisposeV1WithHttpInfo(pkiEzsignfolderID, body,);
+  Future<EzsignfolderDisposeV1Response?> ezsignfolderDisposeV1(int pkiEzsignfolderID, Object body, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderDisposeV1WithHttpInfo(pkiEzsignfolderID, body, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -483,7 +491,7 @@ class ObjectEzsignfolderApi {
   /// * [int] pkiEzsignfolderID (required):
   ///
   /// * [EzsignfolderDuplicateV1Request] ezsignfolderDuplicateV1Request (required):
-  Future<Response> ezsignfolderDuplicateV1WithHttpInfo(int pkiEzsignfolderID, EzsignfolderDuplicateV1Request ezsignfolderDuplicateV1Request,) async {
+  Future<Response> ezsignfolderDuplicateV1WithHttpInfo(int pkiEzsignfolderID, EzsignfolderDuplicateV1Request ezsignfolderDuplicateV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/duplicate'
       .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
@@ -506,6 +514,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -518,8 +527,8 @@ class ObjectEzsignfolderApi {
   /// * [int] pkiEzsignfolderID (required):
   ///
   /// * [EzsignfolderDuplicateV1Request] ezsignfolderDuplicateV1Request (required):
-  Future<EzsignfolderDuplicateV1Response?> ezsignfolderDuplicateV1(int pkiEzsignfolderID, EzsignfolderDuplicateV1Request ezsignfolderDuplicateV1Request,) async {
-    final response = await ezsignfolderDuplicateV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderDuplicateV1Request,);
+  Future<EzsignfolderDuplicateV1Response?> ezsignfolderDuplicateV1(int pkiEzsignfolderID, EzsignfolderDuplicateV1Request ezsignfolderDuplicateV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderDuplicateV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderDuplicateV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -544,7 +553,7 @@ class ObjectEzsignfolderApi {
   /// * [int] pkiEzsignfolderID (required):
   ///
   /// * [EzsignfolderEditObjectV3Request] ezsignfolderEditObjectV3Request (required):
-  Future<Response> ezsignfolderEditObjectV3WithHttpInfo(int pkiEzsignfolderID, EzsignfolderEditObjectV3Request ezsignfolderEditObjectV3Request,) async {
+  Future<Response> ezsignfolderEditObjectV3WithHttpInfo(int pkiEzsignfolderID, EzsignfolderEditObjectV3Request ezsignfolderEditObjectV3Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/3/object/ezsignfolder/{pkiEzsignfolderID}'
       .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
@@ -567,6 +576,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -579,8 +589,8 @@ class ObjectEzsignfolderApi {
   /// * [int] pkiEzsignfolderID (required):
   ///
   /// * [EzsignfolderEditObjectV3Request] ezsignfolderEditObjectV3Request (required):
-  Future<EzsignfolderEditObjectV3Response?> ezsignfolderEditObjectV3(int pkiEzsignfolderID, EzsignfolderEditObjectV3Request ezsignfolderEditObjectV3Request,) async {
-    final response = await ezsignfolderEditObjectV3WithHttpInfo(pkiEzsignfolderID, ezsignfolderEditObjectV3Request,);
+  Future<EzsignfolderEditObjectV3Response?> ezsignfolderEditObjectV3(int pkiEzsignfolderID, EzsignfolderEditObjectV3Request ezsignfolderEditObjectV3Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderEditObjectV3WithHttpInfo(pkiEzsignfolderID, ezsignfolderEditObjectV3Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -605,7 +615,7 @@ class ObjectEzsignfolderApi {
   /// * [int] pkiEzsignfolderID (required):
   ///
   /// * [Object] body (required):
-  Future<Response> ezsignfolderEndPrematurelyV1WithHttpInfo(int pkiEzsignfolderID, Object body,) async {
+  Future<Response> ezsignfolderEndPrematurelyV1WithHttpInfo(int pkiEzsignfolderID, Object body, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/endPrematurely'
       .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
@@ -628,6 +638,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -640,8 +651,8 @@ class ObjectEzsignfolderApi {
   /// * [int] pkiEzsignfolderID (required):
   ///
   /// * [Object] body (required):
-  Future<EzsignfolderEndPrematurelyV1Response?> ezsignfolderEndPrematurelyV1(int pkiEzsignfolderID, Object body,) async {
-    final response = await ezsignfolderEndPrematurelyV1WithHttpInfo(pkiEzsignfolderID, body,);
+  Future<EzsignfolderEndPrematurelyV1Response?> ezsignfolderEndPrematurelyV1(int pkiEzsignfolderID, Object body, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderEndPrematurelyV1WithHttpInfo(pkiEzsignfolderID, body, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -664,7 +675,7 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<Response> ezsignfolderGetActionableElementsV1WithHttpInfo(int pkiEzsignfolderID,) async {
+  Future<Response> ezsignfolderGetActionableElementsV1WithHttpInfo(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements'
       .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
@@ -687,6 +698,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -697,8 +709,8 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<EzsignfolderGetActionableElementsV1Response?> ezsignfolderGetActionableElementsV1(int pkiEzsignfolderID,) async {
-    final response = await ezsignfolderGetActionableElementsV1WithHttpInfo(pkiEzsignfolderID,);
+  Future<EzsignfolderGetActionableElementsV1Response?> ezsignfolderGetActionableElementsV1(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderGetActionableElementsV1WithHttpInfo(pkiEzsignfolderID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -721,7 +733,7 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<Response> ezsignfolderGetActionableElementsV2WithHttpInfo(int pkiEzsignfolderID,) async {
+  Future<Response> ezsignfolderGetActionableElementsV2WithHttpInfo(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements'
       .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
@@ -744,6 +756,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -754,8 +767,8 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<EzsignfolderGetActionableElementsV2Response?> ezsignfolderGetActionableElementsV2(int pkiEzsignfolderID,) async {
-    final response = await ezsignfolderGetActionableElementsV2WithHttpInfo(pkiEzsignfolderID,);
+  Future<EzsignfolderGetActionableElementsV2Response?> ezsignfolderGetActionableElementsV2(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderGetActionableElementsV2WithHttpInfo(pkiEzsignfolderID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -778,7 +791,7 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<Response> ezsignfolderGetActionableElementsV3WithHttpInfo(int pkiEzsignfolderID,) async {
+  Future<Response> ezsignfolderGetActionableElementsV3WithHttpInfo(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/3/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements'
       .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
@@ -801,6 +814,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -811,8 +825,8 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<EzsignfolderGetActionableElementsV3Response?> ezsignfolderGetActionableElementsV3(int pkiEzsignfolderID,) async {
-    final response = await ezsignfolderGetActionableElementsV3WithHttpInfo(pkiEzsignfolderID,);
+  Future<EzsignfolderGetActionableElementsV3Response?> ezsignfolderGetActionableElementsV3(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderGetActionableElementsV3WithHttpInfo(pkiEzsignfolderID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -835,7 +849,7 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<Response> ezsignfolderGetAttachmentCountV1WithHttpInfo(int pkiEzsignfolderID,) async {
+  Future<Response> ezsignfolderGetAttachmentCountV1WithHttpInfo(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/getAttachmentCount'
       .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
@@ -858,6 +872,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -868,8 +883,8 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<EzsignfolderGetAttachmentCountV1Response?> ezsignfolderGetAttachmentCountV1(int pkiEzsignfolderID,) async {
-    final response = await ezsignfolderGetAttachmentCountV1WithHttpInfo(pkiEzsignfolderID,);
+  Future<EzsignfolderGetAttachmentCountV1Response?> ezsignfolderGetAttachmentCountV1(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderGetAttachmentCountV1WithHttpInfo(pkiEzsignfolderID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -892,7 +907,7 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<Response> ezsignfolderGetAttachmentsV1WithHttpInfo(int pkiEzsignfolderID,) async {
+  Future<Response> ezsignfolderGetAttachmentsV1WithHttpInfo(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/getAttachments'
       .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
@@ -915,6 +930,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -925,8 +941,8 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<EzsignfolderGetAttachmentsV1Response?> ezsignfolderGetAttachmentsV1(int pkiEzsignfolderID,) async {
-    final response = await ezsignfolderGetAttachmentsV1WithHttpInfo(pkiEzsignfolderID,);
+  Future<EzsignfolderGetAttachmentsV1Response?> ezsignfolderGetAttachmentsV1(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderGetAttachmentsV1WithHttpInfo(pkiEzsignfolderID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -949,7 +965,7 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<Response> ezsignfolderGetCommunicationCountV1WithHttpInfo(int pkiEzsignfolderID,) async {
+  Future<Response> ezsignfolderGetCommunicationCountV1WithHttpInfo(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationCount'
       .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
@@ -972,6 +988,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -982,8 +999,8 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<EzsignfolderGetCommunicationCountV1Response?> ezsignfolderGetCommunicationCountV1(int pkiEzsignfolderID,) async {
-    final response = await ezsignfolderGetCommunicationCountV1WithHttpInfo(pkiEzsignfolderID,);
+  Future<EzsignfolderGetCommunicationCountV1Response?> ezsignfolderGetCommunicationCountV1(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderGetCommunicationCountV1WithHttpInfo(pkiEzsignfolderID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -1006,7 +1023,7 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<Response> ezsignfolderGetCommunicationListV1WithHttpInfo(int pkiEzsignfolderID,) async {
+  Future<Response> ezsignfolderGetCommunicationListV1WithHttpInfo(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationList'
       .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
@@ -1029,6 +1046,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -1039,8 +1057,8 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<EzsignfolderGetCommunicationListV1Response?> ezsignfolderGetCommunicationListV1(int pkiEzsignfolderID,) async {
-    final response = await ezsignfolderGetCommunicationListV1WithHttpInfo(pkiEzsignfolderID,);
+  Future<EzsignfolderGetCommunicationListV1Response?> ezsignfolderGetCommunicationListV1(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderGetCommunicationListV1WithHttpInfo(pkiEzsignfolderID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -1063,7 +1081,7 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<Response> ezsignfolderGetCommunicationrecipientsV1WithHttpInfo(int pkiEzsignfolderID,) async {
+  Future<Response> ezsignfolderGetCommunicationrecipientsV1WithHttpInfo(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationrecipients'
       .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
@@ -1086,6 +1104,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -1096,8 +1115,8 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<EzsignfolderGetCommunicationrecipientsV1Response?> ezsignfolderGetCommunicationrecipientsV1(int pkiEzsignfolderID,) async {
-    final response = await ezsignfolderGetCommunicationrecipientsV1WithHttpInfo(pkiEzsignfolderID,);
+  Future<EzsignfolderGetCommunicationrecipientsV1Response?> ezsignfolderGetCommunicationrecipientsV1(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderGetCommunicationrecipientsV1WithHttpInfo(pkiEzsignfolderID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -1120,7 +1139,7 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<Response> ezsignfolderGetCommunicationsendersV1WithHttpInfo(int pkiEzsignfolderID,) async {
+  Future<Response> ezsignfolderGetCommunicationsendersV1WithHttpInfo(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationsenders'
       .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
@@ -1143,6 +1162,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -1153,8 +1173,8 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<EzsignfolderGetCommunicationsendersV1Response?> ezsignfolderGetCommunicationsendersV1(int pkiEzsignfolderID,) async {
-    final response = await ezsignfolderGetCommunicationsendersV1WithHttpInfo(pkiEzsignfolderID,);
+  Future<EzsignfolderGetCommunicationsendersV1Response?> ezsignfolderGetCommunicationsendersV1(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderGetCommunicationsendersV1WithHttpInfo(pkiEzsignfolderID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -1177,7 +1197,7 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<Response> ezsignfolderGetEzsignannotationsV1WithHttpInfo(int pkiEzsignfolderID,) async {
+  Future<Response> ezsignfolderGetEzsignannotationsV1WithHttpInfo(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignannotations'
       .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
@@ -1200,6 +1220,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -1210,8 +1231,8 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<EzsignfolderGetEzsignannotationsV1Response?> ezsignfolderGetEzsignannotationsV1(int pkiEzsignfolderID,) async {
-    final response = await ezsignfolderGetEzsignannotationsV1WithHttpInfo(pkiEzsignfolderID,);
+  Future<EzsignfolderGetEzsignannotationsV1Response?> ezsignfolderGetEzsignannotationsV1(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderGetEzsignannotationsV1WithHttpInfo(pkiEzsignfolderID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -1234,7 +1255,7 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<Response> ezsignfolderGetEzsigndocumentsV1WithHttpInfo(int pkiEzsignfolderID,) async {
+  Future<Response> ezsignfolderGetEzsigndocumentsV1WithHttpInfo(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments'
       .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
@@ -1257,6 +1278,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -1267,8 +1289,8 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<EzsignfolderGetEzsigndocumentsV1Response?> ezsignfolderGetEzsigndocumentsV1(int pkiEzsignfolderID,) async {
-    final response = await ezsignfolderGetEzsigndocumentsV1WithHttpInfo(pkiEzsignfolderID,);
+  Future<EzsignfolderGetEzsigndocumentsV1Response?> ezsignfolderGetEzsigndocumentsV1(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderGetEzsigndocumentsV1WithHttpInfo(pkiEzsignfolderID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -1291,7 +1313,7 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<Response> ezsignfolderGetEzsigndocumentsV2WithHttpInfo(int pkiEzsignfolderID,) async {
+  Future<Response> ezsignfolderGetEzsigndocumentsV2WithHttpInfo(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments'
       .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
@@ -1314,6 +1336,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -1324,8 +1347,8 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<EzsignfolderGetEzsigndocumentsV2Response?> ezsignfolderGetEzsigndocumentsV2(int pkiEzsignfolderID,) async {
-    final response = await ezsignfolderGetEzsigndocumentsV2WithHttpInfo(pkiEzsignfolderID,);
+  Future<EzsignfolderGetEzsigndocumentsV2Response?> ezsignfolderGetEzsigndocumentsV2(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderGetEzsigndocumentsV2WithHttpInfo(pkiEzsignfolderID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -1348,7 +1371,7 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<Response> ezsignfolderGetEzsignfoldersignerassociationsV1WithHttpInfo(int pkiEzsignfolderID,) async {
+  Future<Response> ezsignfolderGetEzsignfoldersignerassociationsV1WithHttpInfo(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations'
       .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
@@ -1371,6 +1394,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -1381,8 +1405,8 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<EzsignfolderGetEzsignfoldersignerassociationsV1Response?> ezsignfolderGetEzsignfoldersignerassociationsV1(int pkiEzsignfolderID,) async {
-    final response = await ezsignfolderGetEzsignfoldersignerassociationsV1WithHttpInfo(pkiEzsignfolderID,);
+  Future<EzsignfolderGetEzsignfoldersignerassociationsV1Response?> ezsignfolderGetEzsignfoldersignerassociationsV1(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderGetEzsignfoldersignerassociationsV1WithHttpInfo(pkiEzsignfolderID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -1405,7 +1429,7 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<Response> ezsignfolderGetEzsignformfieldgroupsV1WithHttpInfo(int pkiEzsignfolderID,) async {
+  Future<Response> ezsignfolderGetEzsignformfieldgroupsV1WithHttpInfo(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignformfieldgroups'
       .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
@@ -1428,6 +1452,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -1438,8 +1463,8 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<EzsignfolderGetEzsignformfieldgroupsV1Response?> ezsignfolderGetEzsignformfieldgroupsV1(int pkiEzsignfolderID,) async {
-    final response = await ezsignfolderGetEzsignformfieldgroupsV1WithHttpInfo(pkiEzsignfolderID,);
+  Future<EzsignfolderGetEzsignformfieldgroupsV1Response?> ezsignfolderGetEzsignformfieldgroupsV1(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderGetEzsignformfieldgroupsV1WithHttpInfo(pkiEzsignfolderID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -1462,7 +1487,7 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<Response> ezsignfolderGetEzsignsignaturesAutomaticV1WithHttpInfo(int pkiEzsignfolderID,) async {
+  Future<Response> ezsignfolderGetEzsignsignaturesAutomaticV1WithHttpInfo(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignsignaturesAutomatic'
       .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
@@ -1485,6 +1510,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -1495,8 +1521,8 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<EzsignfolderGetEzsignsignaturesAutomaticV1Response?> ezsignfolderGetEzsignsignaturesAutomaticV1(int pkiEzsignfolderID,) async {
-    final response = await ezsignfolderGetEzsignsignaturesAutomaticV1WithHttpInfo(pkiEzsignfolderID,);
+  Future<EzsignfolderGetEzsignsignaturesAutomaticV1Response?> ezsignfolderGetEzsignsignaturesAutomaticV1(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderGetEzsignsignaturesAutomaticV1WithHttpInfo(pkiEzsignfolderID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -1519,7 +1545,7 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<Response> ezsignfolderGetEzsignsignaturesV1WithHttpInfo(int pkiEzsignfolderID,) async {
+  Future<Response> ezsignfolderGetEzsignsignaturesV1WithHttpInfo(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignsignatures'
       .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
@@ -1542,6 +1568,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -1552,8 +1579,8 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<EzsignfolderGetEzsignsignaturesV1Response?> ezsignfolderGetEzsignsignaturesV1(int pkiEzsignfolderID,) async {
-    final response = await ezsignfolderGetEzsignsignaturesV1WithHttpInfo(pkiEzsignfolderID,);
+  Future<EzsignfolderGetEzsignsignaturesV1Response?> ezsignfolderGetEzsignsignaturesV1(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderGetEzsignsignaturesV1WithHttpInfo(pkiEzsignfolderID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -1576,7 +1603,7 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<Response> ezsignfolderGetFormsDataV1WithHttpInfo(int pkiEzsignfolderID,) async {
+  Future<Response> ezsignfolderGetFormsDataV1WithHttpInfo(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData'
       .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
@@ -1599,6 +1626,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -1609,8 +1637,8 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<EzsignfolderGetFormsDataV1Response?> ezsignfolderGetFormsDataV1(int pkiEzsignfolderID,) async {
-    final response = await ezsignfolderGetFormsDataV1WithHttpInfo(pkiEzsignfolderID,);
+  Future<EzsignfolderGetFormsDataV1Response?> ezsignfolderGetFormsDataV1(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderGetFormsDataV1WithHttpInfo(pkiEzsignfolderID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -1642,7 +1670,7 @@ class ObjectEzsignfolderApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<Response> ezsignfolderGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
+  Future<Response> ezsignfolderGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfolder/getList';
 
@@ -1681,6 +1709,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -1700,8 +1729,8 @@ class ObjectEzsignfolderApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<EzsignfolderGetListV1Response?> ezsignfolderGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
-    final response = await ezsignfolderGetListV1WithHttpInfo( eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, );
+  Future<EzsignfolderGetListV1Response?> ezsignfolderGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderGetListV1WithHttpInfo(eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -1722,7 +1751,7 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<Response> ezsignfolderGetObjectV1WithHttpInfo(int pkiEzsignfolderID,) async {
+  Future<Response> ezsignfolderGetObjectV1WithHttpInfo(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}'
       .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
@@ -1745,6 +1774,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -1753,8 +1783,8 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<EzsignfolderGetObjectV1Response?> ezsignfolderGetObjectV1(int pkiEzsignfolderID,) async {
-    final response = await ezsignfolderGetObjectV1WithHttpInfo(pkiEzsignfolderID,);
+  Future<EzsignfolderGetObjectV1Response?> ezsignfolderGetObjectV1(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderGetObjectV1WithHttpInfo(pkiEzsignfolderID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -1777,7 +1807,7 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<Response> ezsignfolderGetObjectV2WithHttpInfo(int pkiEzsignfolderID,) async {
+  Future<Response> ezsignfolderGetObjectV2WithHttpInfo(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezsignfolder/{pkiEzsignfolderID}'
       .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
@@ -1800,6 +1830,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -1810,8 +1841,8 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<EzsignfolderGetObjectV2Response?> ezsignfolderGetObjectV2(int pkiEzsignfolderID,) async {
-    final response = await ezsignfolderGetObjectV2WithHttpInfo(pkiEzsignfolderID,);
+  Future<EzsignfolderGetObjectV2Response?> ezsignfolderGetObjectV2(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderGetObjectV2WithHttpInfo(pkiEzsignfolderID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -1834,7 +1865,7 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<Response> ezsignfolderGetObjectV3WithHttpInfo(int pkiEzsignfolderID,) async {
+  Future<Response> ezsignfolderGetObjectV3WithHttpInfo(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/3/object/ezsignfolder/{pkiEzsignfolderID}'
       .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
@@ -1857,6 +1888,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -1867,8 +1899,8 @@ class ObjectEzsignfolderApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfolderID (required):
-  Future<EzsignfolderGetObjectV3Response?> ezsignfolderGetObjectV3(int pkiEzsignfolderID,) async {
-    final response = await ezsignfolderGetObjectV3WithHttpInfo(pkiEzsignfolderID,);
+  Future<EzsignfolderGetObjectV3Response?> ezsignfolderGetObjectV3(int pkiEzsignfolderID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderGetObjectV3WithHttpInfo(pkiEzsignfolderID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -1893,7 +1925,7 @@ class ObjectEzsignfolderApi {
   /// * [int] pkiEzsignfolderID (required):
   ///
   /// * [EzsignfolderImportEzsignfoldersignerassociationsV1Request] ezsignfolderImportEzsignfoldersignerassociationsV1Request (required):
-  Future<Response> ezsignfolderImportEzsignfoldersignerassociationsV1WithHttpInfo(int pkiEzsignfolderID, EzsignfolderImportEzsignfoldersignerassociationsV1Request ezsignfolderImportEzsignfoldersignerassociationsV1Request,) async {
+  Future<Response> ezsignfolderImportEzsignfoldersignerassociationsV1WithHttpInfo(int pkiEzsignfolderID, EzsignfolderImportEzsignfoldersignerassociationsV1Request ezsignfolderImportEzsignfoldersignerassociationsV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsignfoldersignerassociations'
       .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
@@ -1916,6 +1948,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -1928,8 +1961,8 @@ class ObjectEzsignfolderApi {
   /// * [int] pkiEzsignfolderID (required):
   ///
   /// * [EzsignfolderImportEzsignfoldersignerassociationsV1Request] ezsignfolderImportEzsignfoldersignerassociationsV1Request (required):
-  Future<EzsignfolderImportEzsignfoldersignerassociationsV1Response?> ezsignfolderImportEzsignfoldersignerassociationsV1(int pkiEzsignfolderID, EzsignfolderImportEzsignfoldersignerassociationsV1Request ezsignfolderImportEzsignfoldersignerassociationsV1Request,) async {
-    final response = await ezsignfolderImportEzsignfoldersignerassociationsV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderImportEzsignfoldersignerassociationsV1Request,);
+  Future<EzsignfolderImportEzsignfoldersignerassociationsV1Response?> ezsignfolderImportEzsignfoldersignerassociationsV1(int pkiEzsignfolderID, EzsignfolderImportEzsignfoldersignerassociationsV1Request ezsignfolderImportEzsignfoldersignerassociationsV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderImportEzsignfoldersignerassociationsV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderImportEzsignfoldersignerassociationsV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -1954,7 +1987,7 @@ class ObjectEzsignfolderApi {
   /// * [int] pkiEzsignfolderID (required):
   ///
   /// * [EzsignfolderImportEzsigntemplatepackageV1Request] ezsignfolderImportEzsigntemplatepackageV1Request (required):
-  Future<Response> ezsignfolderImportEzsigntemplatepackageV1WithHttpInfo(int pkiEzsignfolderID, EzsignfolderImportEzsigntemplatepackageV1Request ezsignfolderImportEzsigntemplatepackageV1Request,) async {
+  Future<Response> ezsignfolderImportEzsigntemplatepackageV1WithHttpInfo(int pkiEzsignfolderID, EzsignfolderImportEzsigntemplatepackageV1Request ezsignfolderImportEzsigntemplatepackageV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage'
       .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
@@ -1977,6 +2010,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -1989,8 +2023,8 @@ class ObjectEzsignfolderApi {
   /// * [int] pkiEzsignfolderID (required):
   ///
   /// * [EzsignfolderImportEzsigntemplatepackageV1Request] ezsignfolderImportEzsigntemplatepackageV1Request (required):
-  Future<EzsignfolderImportEzsigntemplatepackageV1Response?> ezsignfolderImportEzsigntemplatepackageV1(int pkiEzsignfolderID, EzsignfolderImportEzsigntemplatepackageV1Request ezsignfolderImportEzsigntemplatepackageV1Request,) async {
-    final response = await ezsignfolderImportEzsigntemplatepackageV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderImportEzsigntemplatepackageV1Request,);
+  Future<EzsignfolderImportEzsigntemplatepackageV1Response?> ezsignfolderImportEzsigntemplatepackageV1(int pkiEzsignfolderID, EzsignfolderImportEzsigntemplatepackageV1Request ezsignfolderImportEzsigntemplatepackageV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderImportEzsigntemplatepackageV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderImportEzsigntemplatepackageV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -2015,7 +2049,7 @@ class ObjectEzsignfolderApi {
   /// * [int] pkiEzsignfolderID (required):
   ///
   /// * [EzsignfolderImportEzsigntemplatepackageV2Request] ezsignfolderImportEzsigntemplatepackageV2Request (required):
-  Future<Response> ezsignfolderImportEzsigntemplatepackageV2WithHttpInfo(int pkiEzsignfolderID, EzsignfolderImportEzsigntemplatepackageV2Request ezsignfolderImportEzsigntemplatepackageV2Request,) async {
+  Future<Response> ezsignfolderImportEzsigntemplatepackageV2WithHttpInfo(int pkiEzsignfolderID, EzsignfolderImportEzsigntemplatepackageV2Request ezsignfolderImportEzsigntemplatepackageV2Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage'
       .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
@@ -2038,6 +2072,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -2050,8 +2085,8 @@ class ObjectEzsignfolderApi {
   /// * [int] pkiEzsignfolderID (required):
   ///
   /// * [EzsignfolderImportEzsigntemplatepackageV2Request] ezsignfolderImportEzsigntemplatepackageV2Request (required):
-  Future<EzsignfolderImportEzsigntemplatepackageV2Response?> ezsignfolderImportEzsigntemplatepackageV2(int pkiEzsignfolderID, EzsignfolderImportEzsigntemplatepackageV2Request ezsignfolderImportEzsigntemplatepackageV2Request,) async {
-    final response = await ezsignfolderImportEzsigntemplatepackageV2WithHttpInfo(pkiEzsignfolderID, ezsignfolderImportEzsigntemplatepackageV2Request,);
+  Future<EzsignfolderImportEzsigntemplatepackageV2Response?> ezsignfolderImportEzsigntemplatepackageV2(int pkiEzsignfolderID, EzsignfolderImportEzsigntemplatepackageV2Request ezsignfolderImportEzsigntemplatepackageV2Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderImportEzsigntemplatepackageV2WithHttpInfo(pkiEzsignfolderID, ezsignfolderImportEzsigntemplatepackageV2Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -2076,7 +2111,7 @@ class ObjectEzsignfolderApi {
   /// * [int] pkiEzsignfolderID (required):
   ///
   /// * [EzsignfolderImportEzsigntemplatepackageV3Request] ezsignfolderImportEzsigntemplatepackageV3Request (required):
-  Future<Response> ezsignfolderImportEzsigntemplatepackageV3WithHttpInfo(int pkiEzsignfolderID, EzsignfolderImportEzsigntemplatepackageV3Request ezsignfolderImportEzsigntemplatepackageV3Request,) async {
+  Future<Response> ezsignfolderImportEzsigntemplatepackageV3WithHttpInfo(int pkiEzsignfolderID, EzsignfolderImportEzsigntemplatepackageV3Request ezsignfolderImportEzsigntemplatepackageV3Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/3/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage'
       .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
@@ -2099,6 +2134,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -2111,8 +2147,8 @@ class ObjectEzsignfolderApi {
   /// * [int] pkiEzsignfolderID (required):
   ///
   /// * [EzsignfolderImportEzsigntemplatepackageV3Request] ezsignfolderImportEzsigntemplatepackageV3Request (required):
-  Future<EzsignfolderImportEzsigntemplatepackageV3Response?> ezsignfolderImportEzsigntemplatepackageV3(int pkiEzsignfolderID, EzsignfolderImportEzsigntemplatepackageV3Request ezsignfolderImportEzsigntemplatepackageV3Request,) async {
-    final response = await ezsignfolderImportEzsigntemplatepackageV3WithHttpInfo(pkiEzsignfolderID, ezsignfolderImportEzsigntemplatepackageV3Request,);
+  Future<EzsignfolderImportEzsigntemplatepackageV3Response?> ezsignfolderImportEzsigntemplatepackageV3(int pkiEzsignfolderID, EzsignfolderImportEzsigntemplatepackageV3Request ezsignfolderImportEzsigntemplatepackageV3Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderImportEzsigntemplatepackageV3WithHttpInfo(pkiEzsignfolderID, ezsignfolderImportEzsigntemplatepackageV3Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -2135,7 +2171,7 @@ class ObjectEzsignfolderApi {
   /// * [int] pkiEzsignfolderID (required):
   ///
   /// * [EzsignfolderReorderV2Request] ezsignfolderReorderV2Request (required):
-  Future<Response> ezsignfolderReorderV2WithHttpInfo(int pkiEzsignfolderID, EzsignfolderReorderV2Request ezsignfolderReorderV2Request,) async {
+  Future<Response> ezsignfolderReorderV2WithHttpInfo(int pkiEzsignfolderID, EzsignfolderReorderV2Request ezsignfolderReorderV2Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezsignfolder/{pkiEzsignfolderID}/reorder'
       .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
@@ -2158,6 +2194,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -2168,8 +2205,8 @@ class ObjectEzsignfolderApi {
   /// * [int] pkiEzsignfolderID (required):
   ///
   /// * [EzsignfolderReorderV2Request] ezsignfolderReorderV2Request (required):
-  Future<EzsignfolderReorderV2Response?> ezsignfolderReorderV2(int pkiEzsignfolderID, EzsignfolderReorderV2Request ezsignfolderReorderV2Request,) async {
-    final response = await ezsignfolderReorderV2WithHttpInfo(pkiEzsignfolderID, ezsignfolderReorderV2Request,);
+  Future<EzsignfolderReorderV2Response?> ezsignfolderReorderV2(int pkiEzsignfolderID, EzsignfolderReorderV2Request ezsignfolderReorderV2Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderReorderV2WithHttpInfo(pkiEzsignfolderID, ezsignfolderReorderV2Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -2194,7 +2231,7 @@ class ObjectEzsignfolderApi {
   /// * [int] pkiEzsignfolderID (required):
   ///
   /// * [EzsignfolderSendV1Request] ezsignfolderSendV1Request (required):
-  Future<Response> ezsignfolderSendV1WithHttpInfo(int pkiEzsignfolderID, EzsignfolderSendV1Request ezsignfolderSendV1Request,) async {
+  Future<Response> ezsignfolderSendV1WithHttpInfo(int pkiEzsignfolderID, EzsignfolderSendV1Request ezsignfolderSendV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/send'
       .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
@@ -2217,6 +2254,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -2229,8 +2267,8 @@ class ObjectEzsignfolderApi {
   /// * [int] pkiEzsignfolderID (required):
   ///
   /// * [EzsignfolderSendV1Request] ezsignfolderSendV1Request (required):
-  Future<EzsignfolderSendV1Response?> ezsignfolderSendV1(int pkiEzsignfolderID, EzsignfolderSendV1Request ezsignfolderSendV1Request,) async {
-    final response = await ezsignfolderSendV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderSendV1Request,);
+  Future<EzsignfolderSendV1Response?> ezsignfolderSendV1(int pkiEzsignfolderID, EzsignfolderSendV1Request ezsignfolderSendV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderSendV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderSendV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -2255,7 +2293,7 @@ class ObjectEzsignfolderApi {
   /// * [int] pkiEzsignfolderID (required):
   ///
   /// * [EzsignfolderSendV3Request] ezsignfolderSendV3Request (required):
-  Future<Response> ezsignfolderSendV3WithHttpInfo(int pkiEzsignfolderID, EzsignfolderSendV3Request ezsignfolderSendV3Request,) async {
+  Future<Response> ezsignfolderSendV3WithHttpInfo(int pkiEzsignfolderID, EzsignfolderSendV3Request ezsignfolderSendV3Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/3/object/ezsignfolder/{pkiEzsignfolderID}/send'
       .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
@@ -2278,6 +2316,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -2290,8 +2329,8 @@ class ObjectEzsignfolderApi {
   /// * [int] pkiEzsignfolderID (required):
   ///
   /// * [EzsignfolderSendV3Request] ezsignfolderSendV3Request (required):
-  Future<EzsignfolderSendV3Response?> ezsignfolderSendV3(int pkiEzsignfolderID, EzsignfolderSendV3Request ezsignfolderSendV3Request,) async {
-    final response = await ezsignfolderSendV3WithHttpInfo(pkiEzsignfolderID, ezsignfolderSendV3Request,);
+  Future<EzsignfolderSendV3Response?> ezsignfolderSendV3(int pkiEzsignfolderID, EzsignfolderSendV3Request ezsignfolderSendV3Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderSendV3WithHttpInfo(pkiEzsignfolderID, ezsignfolderSendV3Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -2316,7 +2355,7 @@ class ObjectEzsignfolderApi {
   /// * [int] pkiEzsignfolderID (required):
   ///
   /// * [Object] body (required):
-  Future<Response> ezsignfolderUnsendV1WithHttpInfo(int pkiEzsignfolderID, Object body,) async {
+  Future<Response> ezsignfolderUnsendV1WithHttpInfo(int pkiEzsignfolderID, Object body, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfolder/{pkiEzsignfolderID}/unsend'
       .replaceAll('{pkiEzsignfolderID}', pkiEzsignfolderID.toString());
@@ -2339,6 +2378,7 @@ class ObjectEzsignfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -2351,8 +2391,8 @@ class ObjectEzsignfolderApi {
   /// * [int] pkiEzsignfolderID (required):
   ///
   /// * [Object] body (required):
-  Future<EzsignfolderUnsendV1Response?> ezsignfolderUnsendV1(int pkiEzsignfolderID, Object body,) async {
-    final response = await ezsignfolderUnsendV1WithHttpInfo(pkiEzsignfolderID, body,);
+  Future<EzsignfolderUnsendV1Response?> ezsignfolderUnsendV1(int pkiEzsignfolderID, Object body, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfolderUnsendV1WithHttpInfo(pkiEzsignfolderID, body, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

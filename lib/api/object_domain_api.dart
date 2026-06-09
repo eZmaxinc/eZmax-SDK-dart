@@ -25,7 +25,7 @@ class ObjectDomainApi {
   /// Parameters:
   ///
   /// * [DomainCreateObjectV1Request] domainCreateObjectV1Request (required):
-  Future<Response> domainCreateObjectV1WithHttpInfo(DomainCreateObjectV1Request domainCreateObjectV1Request,) async {
+  Future<Response> domainCreateObjectV1WithHttpInfo(DomainCreateObjectV1Request domainCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/domain';
 
@@ -47,6 +47,7 @@ class ObjectDomainApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -57,8 +58,8 @@ class ObjectDomainApi {
   /// Parameters:
   ///
   /// * [DomainCreateObjectV1Request] domainCreateObjectV1Request (required):
-  Future<DomainCreateObjectV1Response?> domainCreateObjectV1(DomainCreateObjectV1Request domainCreateObjectV1Request,) async {
-    final response = await domainCreateObjectV1WithHttpInfo(domainCreateObjectV1Request,);
+  Future<DomainCreateObjectV1Response?> domainCreateObjectV1(DomainCreateObjectV1Request domainCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await domainCreateObjectV1WithHttpInfo(domainCreateObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -82,7 +83,7 @@ class ObjectDomainApi {
   ///
   /// * [int] pkiDomainID (required):
   ///   The unique ID of the Domain
-  Future<Response> domainDeleteObjectV1WithHttpInfo(int pkiDomainID,) async {
+  Future<Response> domainDeleteObjectV1WithHttpInfo(int pkiDomainID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/domain/{pkiDomainID}'
       .replaceAll('{pkiDomainID}', pkiDomainID.toString());
@@ -105,6 +106,7 @@ class ObjectDomainApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -116,8 +118,8 @@ class ObjectDomainApi {
   ///
   /// * [int] pkiDomainID (required):
   ///   The unique ID of the Domain
-  Future<DomainDeleteObjectV1Response?> domainDeleteObjectV1(int pkiDomainID,) async {
-    final response = await domainDeleteObjectV1WithHttpInfo(pkiDomainID,);
+  Future<DomainDeleteObjectV1Response?> domainDeleteObjectV1(int pkiDomainID, { Future<void>? abortTrigger, }) async {
+    final response = await domainDeleteObjectV1WithHttpInfo(pkiDomainID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -149,7 +151,7 @@ class ObjectDomainApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<Response> domainGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
+  Future<Response> domainGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/domain/getAutocomplete/{sSelector}'
       .replaceAll('{sSelector}', sSelector);
@@ -183,6 +185,7 @@ class ObjectDomainApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -202,8 +205,8 @@ class ObjectDomainApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<DomainGetAutocompleteV2Response?> domainGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
-    final response = await domainGetAutocompleteV2WithHttpInfo(sSelector,  eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, );
+  Future<DomainGetAutocompleteV2Response?> domainGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
+    final response = await domainGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -235,7 +238,7 @@ class ObjectDomainApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<Response> domainGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
+  Future<Response> domainGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/domain/getList';
 
@@ -274,6 +277,7 @@ class ObjectDomainApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -293,8 +297,8 @@ class ObjectDomainApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<DomainGetListV1Response?> domainGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
-    final response = await domainGetListV1WithHttpInfo( eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, );
+  Future<DomainGetListV1Response?> domainGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
+    final response = await domainGetListV1WithHttpInfo(eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -318,7 +322,7 @@ class ObjectDomainApi {
   ///
   /// * [int] pkiDomainID (required):
   ///   The unique ID of the Domain
-  Future<Response> domainGetObjectV2WithHttpInfo(int pkiDomainID,) async {
+  Future<Response> domainGetObjectV2WithHttpInfo(int pkiDomainID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/domain/{pkiDomainID}'
       .replaceAll('{pkiDomainID}', pkiDomainID.toString());
@@ -341,6 +345,7 @@ class ObjectDomainApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -352,8 +357,8 @@ class ObjectDomainApi {
   ///
   /// * [int] pkiDomainID (required):
   ///   The unique ID of the Domain
-  Future<DomainGetObjectV2Response?> domainGetObjectV2(int pkiDomainID,) async {
-    final response = await domainGetObjectV2WithHttpInfo(pkiDomainID,);
+  Future<DomainGetObjectV2Response?> domainGetObjectV2(int pkiDomainID, { Future<void>? abortTrigger, }) async {
+    final response = await domainGetObjectV2WithHttpInfo(pkiDomainID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

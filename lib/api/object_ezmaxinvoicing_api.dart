@@ -34,7 +34,7 @@ class ObjectEzmaxinvoicingApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<Response> ezmaxinvoicingGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
+  Future<Response> ezmaxinvoicingGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezmaxinvoicing/getAutocomplete/{sSelector}'
       .replaceAll('{sSelector}', sSelector);
@@ -68,6 +68,7 @@ class ObjectEzmaxinvoicingApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -87,8 +88,8 @@ class ObjectEzmaxinvoicingApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<EzmaxinvoicingGetAutocompleteV2Response?> ezmaxinvoicingGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
-    final response = await ezmaxinvoicingGetAutocompleteV2WithHttpInfo(sSelector,  eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, );
+  Future<EzmaxinvoicingGetAutocompleteV2Response?> ezmaxinvoicingGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
+    final response = await ezmaxinvoicingGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -111,7 +112,7 @@ class ObjectEzmaxinvoicingApi {
   /// Parameters:
   ///
   /// * [int] pkiEzmaxinvoicingID (required):
-  Future<Response> ezmaxinvoicingGetObjectV2WithHttpInfo(int pkiEzmaxinvoicingID,) async {
+  Future<Response> ezmaxinvoicingGetObjectV2WithHttpInfo(int pkiEzmaxinvoicingID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}'
       .replaceAll('{pkiEzmaxinvoicingID}', pkiEzmaxinvoicingID.toString());
@@ -134,6 +135,7 @@ class ObjectEzmaxinvoicingApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -144,8 +146,8 @@ class ObjectEzmaxinvoicingApi {
   /// Parameters:
   ///
   /// * [int] pkiEzmaxinvoicingID (required):
-  Future<EzmaxinvoicingGetObjectV2Response?> ezmaxinvoicingGetObjectV2(int pkiEzmaxinvoicingID,) async {
-    final response = await ezmaxinvoicingGetObjectV2WithHttpInfo(pkiEzmaxinvoicingID,);
+  Future<EzmaxinvoicingGetObjectV2Response?> ezmaxinvoicingGetObjectV2(int pkiEzmaxinvoicingID, { Future<void>? abortTrigger, }) async {
+    final response = await ezmaxinvoicingGetObjectV2WithHttpInfo(pkiEzmaxinvoicingID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -164,7 +166,7 @@ class ObjectEzmaxinvoicingApi {
   /// 
   ///
   /// Note: This method returns the HTTP [Response].
-  Future<Response> ezmaxinvoicingGetProvisionalV1WithHttpInfo() async {
+  Future<Response> ezmaxinvoicingGetProvisionalV1WithHttpInfo({ Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezmaxinvoicing/getProvisional';
 
@@ -186,14 +188,15 @@ class ObjectEzmaxinvoicingApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
   /// Retrieve provisional Ezmaxinvoicing
   ///
   /// 
-  Future<EzmaxinvoicingGetProvisionalV1Response?> ezmaxinvoicingGetProvisionalV1() async {
-    final response = await ezmaxinvoicingGetProvisionalV1WithHttpInfo();
+  Future<EzmaxinvoicingGetProvisionalV1Response?> ezmaxinvoicingGetProvisionalV1({ Future<void>? abortTrigger, }) async {
+    final response = await ezmaxinvoicingGetProvisionalV1WithHttpInfo(abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

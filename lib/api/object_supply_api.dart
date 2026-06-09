@@ -25,7 +25,7 @@ class ObjectSupplyApi {
   /// Parameters:
   ///
   /// * [SupplyCreateObjectV1Request] supplyCreateObjectV1Request (required):
-  Future<Response> supplyCreateObjectV1WithHttpInfo(SupplyCreateObjectV1Request supplyCreateObjectV1Request,) async {
+  Future<Response> supplyCreateObjectV1WithHttpInfo(SupplyCreateObjectV1Request supplyCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/supply';
 
@@ -47,6 +47,7 @@ class ObjectSupplyApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -57,8 +58,8 @@ class ObjectSupplyApi {
   /// Parameters:
   ///
   /// * [SupplyCreateObjectV1Request] supplyCreateObjectV1Request (required):
-  Future<SupplyCreateObjectV1Response?> supplyCreateObjectV1(SupplyCreateObjectV1Request supplyCreateObjectV1Request,) async {
-    final response = await supplyCreateObjectV1WithHttpInfo(supplyCreateObjectV1Request,);
+  Future<SupplyCreateObjectV1Response?> supplyCreateObjectV1(SupplyCreateObjectV1Request supplyCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await supplyCreateObjectV1WithHttpInfo(supplyCreateObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -82,7 +83,7 @@ class ObjectSupplyApi {
   ///
   /// * [int] pkiSupplyID (required):
   ///   The unique ID of the Supply
-  Future<Response> supplyDeleteObjectV1WithHttpInfo(int pkiSupplyID,) async {
+  Future<Response> supplyDeleteObjectV1WithHttpInfo(int pkiSupplyID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/supply/{pkiSupplyID}'
       .replaceAll('{pkiSupplyID}', pkiSupplyID.toString());
@@ -105,6 +106,7 @@ class ObjectSupplyApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -116,8 +118,8 @@ class ObjectSupplyApi {
   ///
   /// * [int] pkiSupplyID (required):
   ///   The unique ID of the Supply
-  Future<SupplyDeleteObjectV1Response?> supplyDeleteObjectV1(int pkiSupplyID,) async {
-    final response = await supplyDeleteObjectV1WithHttpInfo(pkiSupplyID,);
+  Future<SupplyDeleteObjectV1Response?> supplyDeleteObjectV1(int pkiSupplyID, { Future<void>? abortTrigger, }) async {
+    final response = await supplyDeleteObjectV1WithHttpInfo(pkiSupplyID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -143,7 +145,7 @@ class ObjectSupplyApi {
   ///   The unique ID of the Supply
   ///
   /// * [SupplyEditObjectV1Request] supplyEditObjectV1Request (required):
-  Future<Response> supplyEditObjectV1WithHttpInfo(int pkiSupplyID, SupplyEditObjectV1Request supplyEditObjectV1Request,) async {
+  Future<Response> supplyEditObjectV1WithHttpInfo(int pkiSupplyID, SupplyEditObjectV1Request supplyEditObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/supply/{pkiSupplyID}'
       .replaceAll('{pkiSupplyID}', pkiSupplyID.toString());
@@ -166,6 +168,7 @@ class ObjectSupplyApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -179,8 +182,8 @@ class ObjectSupplyApi {
   ///   The unique ID of the Supply
   ///
   /// * [SupplyEditObjectV1Request] supplyEditObjectV1Request (required):
-  Future<SupplyEditObjectV1Response?> supplyEditObjectV1(int pkiSupplyID, SupplyEditObjectV1Request supplyEditObjectV1Request,) async {
-    final response = await supplyEditObjectV1WithHttpInfo(pkiSupplyID, supplyEditObjectV1Request,);
+  Future<SupplyEditObjectV1Response?> supplyEditObjectV1(int pkiSupplyID, SupplyEditObjectV1Request supplyEditObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await supplyEditObjectV1WithHttpInfo(pkiSupplyID, supplyEditObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -212,7 +215,7 @@ class ObjectSupplyApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<Response> supplyGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
+  Future<Response> supplyGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/supply/getAutocomplete/{sSelector}'
       .replaceAll('{sSelector}', sSelector);
@@ -246,6 +249,7 @@ class ObjectSupplyApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -265,8 +269,8 @@ class ObjectSupplyApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<SupplyGetAutocompleteV2Response?> supplyGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
-    final response = await supplyGetAutocompleteV2WithHttpInfo(sSelector,  eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, );
+  Future<SupplyGetAutocompleteV2Response?> supplyGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
+    final response = await supplyGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -298,7 +302,7 @@ class ObjectSupplyApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<Response> supplyGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
+  Future<Response> supplyGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/supply/getList';
 
@@ -337,6 +341,7 @@ class ObjectSupplyApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -356,8 +361,8 @@ class ObjectSupplyApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<SupplyGetListV1Response?> supplyGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
-    final response = await supplyGetListV1WithHttpInfo( eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, );
+  Future<SupplyGetListV1Response?> supplyGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
+    final response = await supplyGetListV1WithHttpInfo(eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -381,7 +386,7 @@ class ObjectSupplyApi {
   ///
   /// * [int] pkiSupplyID (required):
   ///   The unique ID of the Supply
-  Future<Response> supplyGetObjectV2WithHttpInfo(int pkiSupplyID,) async {
+  Future<Response> supplyGetObjectV2WithHttpInfo(int pkiSupplyID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/supply/{pkiSupplyID}'
       .replaceAll('{pkiSupplyID}', pkiSupplyID.toString());
@@ -404,6 +409,7 @@ class ObjectSupplyApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -415,8 +421,8 @@ class ObjectSupplyApi {
   ///
   /// * [int] pkiSupplyID (required):
   ///   The unique ID of the Supply
-  Future<SupplyGetObjectV2Response?> supplyGetObjectV2(int pkiSupplyID,) async {
-    final response = await supplyGetObjectV2WithHttpInfo(pkiSupplyID,);
+  Future<SupplyGetObjectV2Response?> supplyGetObjectV2(int pkiSupplyID, { Future<void>? abortTrigger, }) async {
+    final response = await supplyGetObjectV2WithHttpInfo(pkiSupplyID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

@@ -25,7 +25,7 @@ class ObjectBrandingApi {
   /// Parameters:
   ///
   /// * [BrandingCreateObjectV2Request] brandingCreateObjectV2Request (required):
-  Future<Response> brandingCreateObjectV2WithHttpInfo(BrandingCreateObjectV2Request brandingCreateObjectV2Request,) async {
+  Future<Response> brandingCreateObjectV2WithHttpInfo(BrandingCreateObjectV2Request brandingCreateObjectV2Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/branding';
 
@@ -47,6 +47,7 @@ class ObjectBrandingApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -57,8 +58,8 @@ class ObjectBrandingApi {
   /// Parameters:
   ///
   /// * [BrandingCreateObjectV2Request] brandingCreateObjectV2Request (required):
-  Future<BrandingCreateObjectV2Response?> brandingCreateObjectV2(BrandingCreateObjectV2Request brandingCreateObjectV2Request,) async {
-    final response = await brandingCreateObjectV2WithHttpInfo(brandingCreateObjectV2Request,);
+  Future<BrandingCreateObjectV2Response?> brandingCreateObjectV2(BrandingCreateObjectV2Request brandingCreateObjectV2Request, { Future<void>? abortTrigger, }) async {
+    final response = await brandingCreateObjectV2WithHttpInfo(brandingCreateObjectV2Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -83,7 +84,7 @@ class ObjectBrandingApi {
   /// * [int] pkiBrandingID (required):
   ///
   /// * [BrandingEditObjectV2Request] brandingEditObjectV2Request (required):
-  Future<Response> brandingEditObjectV2WithHttpInfo(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request,) async {
+  Future<Response> brandingEditObjectV2WithHttpInfo(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/branding/{pkiBrandingID}'
       .replaceAll('{pkiBrandingID}', pkiBrandingID.toString());
@@ -106,6 +107,7 @@ class ObjectBrandingApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -118,8 +120,8 @@ class ObjectBrandingApi {
   /// * [int] pkiBrandingID (required):
   ///
   /// * [BrandingEditObjectV2Request] brandingEditObjectV2Request (required):
-  Future<BrandingEditObjectV2Response?> brandingEditObjectV2(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request,) async {
-    final response = await brandingEditObjectV2WithHttpInfo(pkiBrandingID, brandingEditObjectV2Request,);
+  Future<BrandingEditObjectV2Response?> brandingEditObjectV2(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, { Future<void>? abortTrigger, }) async {
+    final response = await brandingEditObjectV2WithHttpInfo(pkiBrandingID, brandingEditObjectV2Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -151,7 +153,7 @@ class ObjectBrandingApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<Response> brandingGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
+  Future<Response> brandingGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/branding/getAutocomplete/{sSelector}'
       .replaceAll('{sSelector}', sSelector);
@@ -185,6 +187,7 @@ class ObjectBrandingApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -204,8 +207,8 @@ class ObjectBrandingApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<BrandingGetAutocompleteV2Response?> brandingGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
-    final response = await brandingGetAutocompleteV2WithHttpInfo(sSelector,  eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, );
+  Future<BrandingGetAutocompleteV2Response?> brandingGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
+    final response = await brandingGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -237,7 +240,7 @@ class ObjectBrandingApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<Response> brandingGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
+  Future<Response> brandingGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/branding/getList';
 
@@ -276,6 +279,7 @@ class ObjectBrandingApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -295,8 +299,8 @@ class ObjectBrandingApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<BrandingGetListV1Response?> brandingGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
-    final response = await brandingGetListV1WithHttpInfo( eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, );
+  Future<BrandingGetListV1Response?> brandingGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
+    final response = await brandingGetListV1WithHttpInfo(eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -319,7 +323,7 @@ class ObjectBrandingApi {
   /// Parameters:
   ///
   /// * [int] pkiBrandingID (required):
-  Future<Response> brandingGetObjectV3WithHttpInfo(int pkiBrandingID,) async {
+  Future<Response> brandingGetObjectV3WithHttpInfo(int pkiBrandingID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/3/object/branding/{pkiBrandingID}'
       .replaceAll('{pkiBrandingID}', pkiBrandingID.toString());
@@ -342,6 +346,7 @@ class ObjectBrandingApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -352,8 +357,8 @@ class ObjectBrandingApi {
   /// Parameters:
   ///
   /// * [int] pkiBrandingID (required):
-  Future<BrandingGetObjectV3Response?> brandingGetObjectV3(int pkiBrandingID,) async {
-    final response = await brandingGetObjectV3WithHttpInfo(pkiBrandingID,);
+  Future<BrandingGetObjectV3Response?> brandingGetObjectV3(int pkiBrandingID, { Future<void>? abortTrigger, }) async {
+    final response = await brandingGetObjectV3WithHttpInfo(pkiBrandingID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

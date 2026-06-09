@@ -25,7 +25,7 @@ class ObjectCommunicationApi {
   /// Parameters:
   ///
   /// * [int] pkiCommunicationID (required):
-  Future<Response> communicationGetCommunicationBodyV1WithHttpInfo(int pkiCommunicationID,) async {
+  Future<Response> communicationGetCommunicationBodyV1WithHttpInfo(int pkiCommunicationID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/communication/{pkiCommunicationID}/getCommunicationBody'
       .replaceAll('{pkiCommunicationID}', pkiCommunicationID.toString());
@@ -48,6 +48,7 @@ class ObjectCommunicationApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -58,8 +59,8 @@ class ObjectCommunicationApi {
   /// Parameters:
   ///
   /// * [int] pkiCommunicationID (required):
-  Future<void> communicationGetCommunicationBodyV1(int pkiCommunicationID,) async {
-    final response = await communicationGetCommunicationBodyV1WithHttpInfo(pkiCommunicationID,);
+  Future<void> communicationGetCommunicationBodyV1(int pkiCommunicationID, { Future<void>? abortTrigger, }) async {
+    final response = await communicationGetCommunicationBodyV1WithHttpInfo(pkiCommunicationID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -74,7 +75,7 @@ class ObjectCommunicationApi {
   /// Parameters:
   ///
   /// * [CommunicationSendV1Request] communicationSendV1Request (required):
-  Future<Response> communicationSendV1WithHttpInfo(CommunicationSendV1Request communicationSendV1Request,) async {
+  Future<Response> communicationSendV1WithHttpInfo(CommunicationSendV1Request communicationSendV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/communication/send';
 
@@ -96,6 +97,7 @@ class ObjectCommunicationApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -106,8 +108,8 @@ class ObjectCommunicationApi {
   /// Parameters:
   ///
   /// * [CommunicationSendV1Request] communicationSendV1Request (required):
-  Future<CommunicationSendV1Response?> communicationSendV1(CommunicationSendV1Request communicationSendV1Request,) async {
-    final response = await communicationSendV1WithHttpInfo(communicationSendV1Request,);
+  Future<CommunicationSendV1Response?> communicationSendV1(CommunicationSendV1Request communicationSendV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await communicationSendV1WithHttpInfo(communicationSendV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

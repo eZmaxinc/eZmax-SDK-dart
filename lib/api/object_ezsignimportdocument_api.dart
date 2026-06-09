@@ -23,7 +23,7 @@ class ObjectEzsignimportdocumentApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignimportdocumentID (required):
-  Future<Response> ezsignimportdocumentDownloadV1WithHttpInfo(int pkiEzsignimportdocumentID,) async {
+  Future<Response> ezsignimportdocumentDownloadV1WithHttpInfo(int pkiEzsignimportdocumentID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignimportdocument/{pkiEzsignimportdocumentID}/download'
       .replaceAll('{pkiEzsignimportdocumentID}', pkiEzsignimportdocumentID.toString());
@@ -46,6 +46,7 @@ class ObjectEzsignimportdocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -54,8 +55,8 @@ class ObjectEzsignimportdocumentApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignimportdocumentID (required):
-  Future<EzsignimportdocumentDownloadV1Response?> ezsignimportdocumentDownloadV1(int pkiEzsignimportdocumentID,) async {
-    final response = await ezsignimportdocumentDownloadV1WithHttpInfo(pkiEzsignimportdocumentID,);
+  Future<EzsignimportdocumentDownloadV1Response?> ezsignimportdocumentDownloadV1(int pkiEzsignimportdocumentID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignimportdocumentDownloadV1WithHttpInfo(pkiEzsignimportdocumentID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

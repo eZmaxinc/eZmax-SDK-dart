@@ -25,7 +25,7 @@ class ObjectSubnetApi {
   /// Parameters:
   ///
   /// * [SubnetCreateObjectV1Request] subnetCreateObjectV1Request (required):
-  Future<Response> subnetCreateObjectV1WithHttpInfo(SubnetCreateObjectV1Request subnetCreateObjectV1Request,) async {
+  Future<Response> subnetCreateObjectV1WithHttpInfo(SubnetCreateObjectV1Request subnetCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/subnet';
 
@@ -47,6 +47,7 @@ class ObjectSubnetApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -57,8 +58,8 @@ class ObjectSubnetApi {
   /// Parameters:
   ///
   /// * [SubnetCreateObjectV1Request] subnetCreateObjectV1Request (required):
-  Future<SubnetCreateObjectV1Response?> subnetCreateObjectV1(SubnetCreateObjectV1Request subnetCreateObjectV1Request,) async {
-    final response = await subnetCreateObjectV1WithHttpInfo(subnetCreateObjectV1Request,);
+  Future<SubnetCreateObjectV1Response?> subnetCreateObjectV1(SubnetCreateObjectV1Request subnetCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await subnetCreateObjectV1WithHttpInfo(subnetCreateObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -82,7 +83,7 @@ class ObjectSubnetApi {
   ///
   /// * [int] pkiSubnetID (required):
   ///   The unique ID of the Subnet
-  Future<Response> subnetDeleteObjectV1WithHttpInfo(int pkiSubnetID,) async {
+  Future<Response> subnetDeleteObjectV1WithHttpInfo(int pkiSubnetID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/subnet/{pkiSubnetID}'
       .replaceAll('{pkiSubnetID}', pkiSubnetID.toString());
@@ -105,6 +106,7 @@ class ObjectSubnetApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -116,8 +118,8 @@ class ObjectSubnetApi {
   ///
   /// * [int] pkiSubnetID (required):
   ///   The unique ID of the Subnet
-  Future<SubnetDeleteObjectV1Response?> subnetDeleteObjectV1(int pkiSubnetID,) async {
-    final response = await subnetDeleteObjectV1WithHttpInfo(pkiSubnetID,);
+  Future<SubnetDeleteObjectV1Response?> subnetDeleteObjectV1(int pkiSubnetID, { Future<void>? abortTrigger, }) async {
+    final response = await subnetDeleteObjectV1WithHttpInfo(pkiSubnetID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -143,7 +145,7 @@ class ObjectSubnetApi {
   ///   The unique ID of the Subnet
   ///
   /// * [SubnetEditObjectV1Request] subnetEditObjectV1Request (required):
-  Future<Response> subnetEditObjectV1WithHttpInfo(int pkiSubnetID, SubnetEditObjectV1Request subnetEditObjectV1Request,) async {
+  Future<Response> subnetEditObjectV1WithHttpInfo(int pkiSubnetID, SubnetEditObjectV1Request subnetEditObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/subnet/{pkiSubnetID}'
       .replaceAll('{pkiSubnetID}', pkiSubnetID.toString());
@@ -166,6 +168,7 @@ class ObjectSubnetApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -179,8 +182,8 @@ class ObjectSubnetApi {
   ///   The unique ID of the Subnet
   ///
   /// * [SubnetEditObjectV1Request] subnetEditObjectV1Request (required):
-  Future<SubnetEditObjectV1Response?> subnetEditObjectV1(int pkiSubnetID, SubnetEditObjectV1Request subnetEditObjectV1Request,) async {
-    final response = await subnetEditObjectV1WithHttpInfo(pkiSubnetID, subnetEditObjectV1Request,);
+  Future<SubnetEditObjectV1Response?> subnetEditObjectV1(int pkiSubnetID, SubnetEditObjectV1Request subnetEditObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await subnetEditObjectV1WithHttpInfo(pkiSubnetID, subnetEditObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -204,7 +207,7 @@ class ObjectSubnetApi {
   ///
   /// * [int] pkiSubnetID (required):
   ///   The unique ID of the Subnet
-  Future<Response> subnetGetObjectV2WithHttpInfo(int pkiSubnetID,) async {
+  Future<Response> subnetGetObjectV2WithHttpInfo(int pkiSubnetID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/subnet/{pkiSubnetID}'
       .replaceAll('{pkiSubnetID}', pkiSubnetID.toString());
@@ -227,6 +230,7 @@ class ObjectSubnetApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -238,8 +242,8 @@ class ObjectSubnetApi {
   ///
   /// * [int] pkiSubnetID (required):
   ///   The unique ID of the Subnet
-  Future<SubnetGetObjectV2Response?> subnetGetObjectV2(int pkiSubnetID,) async {
-    final response = await subnetGetObjectV2WithHttpInfo(pkiSubnetID,);
+  Future<SubnetGetObjectV2Response?> subnetGetObjectV2(int pkiSubnetID, { Future<void>? abortTrigger, }) async {
+    final response = await subnetGetObjectV2WithHttpInfo(pkiSubnetID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

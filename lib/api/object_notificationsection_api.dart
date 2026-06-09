@@ -28,7 +28,7 @@ class ObjectNotificationsectionApi {
   ///
   /// * [bool] bShowHidden (required):
   ///   Whether or not to return the hidden Notificationtests
-  Future<Response> notificationsectionGetNotificationtestsV1WithHttpInfo(int pkiNotificationsectionID, bool bShowHidden,) async {
+  Future<Response> notificationsectionGetNotificationtestsV1WithHttpInfo(int pkiNotificationsectionID, bool bShowHidden, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/notificationsection/{pkiNotificationsectionID}/getNotificationtests'
       .replaceAll('{pkiNotificationsectionID}', pkiNotificationsectionID.toString());
@@ -53,6 +53,7 @@ class ObjectNotificationsectionApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -66,8 +67,8 @@ class ObjectNotificationsectionApi {
   ///
   /// * [bool] bShowHidden (required):
   ///   Whether or not to return the hidden Notificationtests
-  Future<NotificationsectionGetNotificationtestsV1Response?> notificationsectionGetNotificationtestsV1(int pkiNotificationsectionID, bool bShowHidden,) async {
-    final response = await notificationsectionGetNotificationtestsV1WithHttpInfo(pkiNotificationsectionID, bShowHidden,);
+  Future<NotificationsectionGetNotificationtestsV1Response?> notificationsectionGetNotificationtestsV1(int pkiNotificationsectionID, bool bShowHidden, { Future<void>? abortTrigger, }) async {
+    final response = await notificationsectionGetNotificationtestsV1WithHttpInfo(pkiNotificationsectionID, bShowHidden, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

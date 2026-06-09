@@ -28,7 +28,7 @@ class ObjectEzsignuserApi {
   ///   The unique ID of the Ezsignuser
   ///
   /// * [EzsignuserEditObjectV1Request] ezsignuserEditObjectV1Request (required):
-  Future<Response> ezsignuserEditObjectV1WithHttpInfo(int pkiEzsignuserID, EzsignuserEditObjectV1Request ezsignuserEditObjectV1Request,) async {
+  Future<Response> ezsignuserEditObjectV1WithHttpInfo(int pkiEzsignuserID, EzsignuserEditObjectV1Request ezsignuserEditObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignuser/{pkiEzsignuserID}'
       .replaceAll('{pkiEzsignuserID}', pkiEzsignuserID.toString());
@@ -51,6 +51,7 @@ class ObjectEzsignuserApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -64,8 +65,8 @@ class ObjectEzsignuserApi {
   ///   The unique ID of the Ezsignuser
   ///
   /// * [EzsignuserEditObjectV1Request] ezsignuserEditObjectV1Request (required):
-  Future<EzsignuserEditObjectV1Response?> ezsignuserEditObjectV1(int pkiEzsignuserID, EzsignuserEditObjectV1Request ezsignuserEditObjectV1Request,) async {
-    final response = await ezsignuserEditObjectV1WithHttpInfo(pkiEzsignuserID, ezsignuserEditObjectV1Request,);
+  Future<EzsignuserEditObjectV1Response?> ezsignuserEditObjectV1(int pkiEzsignuserID, EzsignuserEditObjectV1Request ezsignuserEditObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignuserEditObjectV1WithHttpInfo(pkiEzsignuserID, ezsignuserEditObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -89,7 +90,7 @@ class ObjectEzsignuserApi {
   ///
   /// * [int] pkiEzsignuserID (required):
   ///   The unique ID of the Ezsignuser
-  Future<Response> ezsignuserGetObjectV2WithHttpInfo(int pkiEzsignuserID,) async {
+  Future<Response> ezsignuserGetObjectV2WithHttpInfo(int pkiEzsignuserID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezsignuser/{pkiEzsignuserID}'
       .replaceAll('{pkiEzsignuserID}', pkiEzsignuserID.toString());
@@ -112,6 +113,7 @@ class ObjectEzsignuserApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -123,8 +125,8 @@ class ObjectEzsignuserApi {
   ///
   /// * [int] pkiEzsignuserID (required):
   ///   The unique ID of the Ezsignuser
-  Future<EzsignuserGetObjectV2Response?> ezsignuserGetObjectV2(int pkiEzsignuserID,) async {
-    final response = await ezsignuserGetObjectV2WithHttpInfo(pkiEzsignuserID,);
+  Future<EzsignuserGetObjectV2Response?> ezsignuserGetObjectV2(int pkiEzsignuserID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignuserGetObjectV2WithHttpInfo(pkiEzsignuserID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

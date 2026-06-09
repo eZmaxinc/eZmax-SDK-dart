@@ -25,7 +25,7 @@ class ObjectUserApi {
   /// Parameters:
   ///
   /// * [UserCreateObjectV1Request] userCreateObjectV1Request (required):
-  Future<Response> userCreateObjectV1WithHttpInfo(UserCreateObjectV1Request userCreateObjectV1Request,) async {
+  Future<Response> userCreateObjectV1WithHttpInfo(UserCreateObjectV1Request userCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/user';
 
@@ -47,6 +47,7 @@ class ObjectUserApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -57,8 +58,8 @@ class ObjectUserApi {
   /// Parameters:
   ///
   /// * [UserCreateObjectV1Request] userCreateObjectV1Request (required):
-  Future<UserCreateObjectV1Response?> userCreateObjectV1(UserCreateObjectV1Request userCreateObjectV1Request,) async {
-    final response = await userCreateObjectV1WithHttpInfo(userCreateObjectV1Request,);
+  Future<UserCreateObjectV1Response?> userCreateObjectV1(UserCreateObjectV1Request userCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await userCreateObjectV1WithHttpInfo(userCreateObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -81,7 +82,7 @@ class ObjectUserApi {
   /// Parameters:
   ///
   /// * [UserCreateObjectV2Request] userCreateObjectV2Request (required):
-  Future<Response> userCreateObjectV2WithHttpInfo(UserCreateObjectV2Request userCreateObjectV2Request,) async {
+  Future<Response> userCreateObjectV2WithHttpInfo(UserCreateObjectV2Request userCreateObjectV2Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/user';
 
@@ -103,6 +104,7 @@ class ObjectUserApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -113,8 +115,8 @@ class ObjectUserApi {
   /// Parameters:
   ///
   /// * [UserCreateObjectV2Request] userCreateObjectV2Request (required):
-  Future<UserCreateObjectV2Response?> userCreateObjectV2(UserCreateObjectV2Request userCreateObjectV2Request,) async {
-    final response = await userCreateObjectV2WithHttpInfo(userCreateObjectV2Request,);
+  Future<UserCreateObjectV2Response?> userCreateObjectV2(UserCreateObjectV2Request userCreateObjectV2Request, { Future<void>? abortTrigger, }) async {
+    final response = await userCreateObjectV2WithHttpInfo(userCreateObjectV2Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -139,7 +141,7 @@ class ObjectUserApi {
   /// * [int] pkiUserID (required):
   ///
   /// * [UserEditColleaguesV2Request] userEditColleaguesV2Request (required):
-  Future<Response> userEditColleaguesV2WithHttpInfo(int pkiUserID, UserEditColleaguesV2Request userEditColleaguesV2Request,) async {
+  Future<Response> userEditColleaguesV2WithHttpInfo(int pkiUserID, UserEditColleaguesV2Request userEditColleaguesV2Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/user/{pkiUserID}/editColleagues'
       .replaceAll('{pkiUserID}', pkiUserID.toString());
@@ -162,6 +164,7 @@ class ObjectUserApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -174,8 +177,8 @@ class ObjectUserApi {
   /// * [int] pkiUserID (required):
   ///
   /// * [UserEditColleaguesV2Request] userEditColleaguesV2Request (required):
-  Future<UserEditColleaguesV2Response?> userEditColleaguesV2(int pkiUserID, UserEditColleaguesV2Request userEditColleaguesV2Request,) async {
-    final response = await userEditColleaguesV2WithHttpInfo(pkiUserID, userEditColleaguesV2Request,);
+  Future<UserEditColleaguesV2Response?> userEditColleaguesV2(int pkiUserID, UserEditColleaguesV2Request userEditColleaguesV2Request, { Future<void>? abortTrigger, }) async {
+    final response = await userEditColleaguesV2WithHttpInfo(pkiUserID, userEditColleaguesV2Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -201,7 +204,7 @@ class ObjectUserApi {
   ///   The unique ID of the User
   ///
   /// * [UserEditObjectV1Request] userEditObjectV1Request (required):
-  Future<Response> userEditObjectV1WithHttpInfo(int pkiUserID, UserEditObjectV1Request userEditObjectV1Request,) async {
+  Future<Response> userEditObjectV1WithHttpInfo(int pkiUserID, UserEditObjectV1Request userEditObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/user/{pkiUserID}'
       .replaceAll('{pkiUserID}', pkiUserID.toString());
@@ -224,6 +227,7 @@ class ObjectUserApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -237,8 +241,8 @@ class ObjectUserApi {
   ///   The unique ID of the User
   ///
   /// * [UserEditObjectV1Request] userEditObjectV1Request (required):
-  Future<UserEditObjectV1Response?> userEditObjectV1(int pkiUserID, UserEditObjectV1Request userEditObjectV1Request,) async {
-    final response = await userEditObjectV1WithHttpInfo(pkiUserID, userEditObjectV1Request,);
+  Future<UserEditObjectV1Response?> userEditObjectV1(int pkiUserID, UserEditObjectV1Request userEditObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await userEditObjectV1WithHttpInfo(pkiUserID, userEditObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -263,7 +267,7 @@ class ObjectUserApi {
   /// * [int] pkiUserID (required):
   ///
   /// * [UserEditPermissionsV1Request] userEditPermissionsV1Request (required):
-  Future<Response> userEditPermissionsV1WithHttpInfo(int pkiUserID, UserEditPermissionsV1Request userEditPermissionsV1Request,) async {
+  Future<Response> userEditPermissionsV1WithHttpInfo(int pkiUserID, UserEditPermissionsV1Request userEditPermissionsV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/user/{pkiUserID}/editPermissions'
       .replaceAll('{pkiUserID}', pkiUserID.toString());
@@ -286,6 +290,7 @@ class ObjectUserApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -298,8 +303,8 @@ class ObjectUserApi {
   /// * [int] pkiUserID (required):
   ///
   /// * [UserEditPermissionsV1Request] userEditPermissionsV1Request (required):
-  Future<UserEditPermissionsV1Response?> userEditPermissionsV1(int pkiUserID, UserEditPermissionsV1Request userEditPermissionsV1Request,) async {
-    final response = await userEditPermissionsV1WithHttpInfo(pkiUserID, userEditPermissionsV1Request,);
+  Future<UserEditPermissionsV1Response?> userEditPermissionsV1(int pkiUserID, UserEditPermissionsV1Request userEditPermissionsV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await userEditPermissionsV1WithHttpInfo(pkiUserID, userEditPermissionsV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -320,7 +325,7 @@ class ObjectUserApi {
   /// Parameters:
   ///
   /// * [int] pkiUserID (required):
-  Future<Response> userGetApikeysV1WithHttpInfo(int pkiUserID,) async {
+  Future<Response> userGetApikeysV1WithHttpInfo(int pkiUserID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/user/{pkiUserID}/getApikeys'
       .replaceAll('{pkiUserID}', pkiUserID.toString());
@@ -343,6 +348,7 @@ class ObjectUserApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -351,8 +357,8 @@ class ObjectUserApi {
   /// Parameters:
   ///
   /// * [int] pkiUserID (required):
-  Future<UserGetApikeysV1Response?> userGetApikeysV1(int pkiUserID,) async {
-    final response = await userGetApikeysV1WithHttpInfo(pkiUserID,);
+  Future<UserGetApikeysV1Response?> userGetApikeysV1(int pkiUserID, { Future<void>? abortTrigger, }) async {
+    final response = await userGetApikeysV1WithHttpInfo(pkiUserID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -384,7 +390,7 @@ class ObjectUserApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<Response> userGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
+  Future<Response> userGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/user/getAutocomplete/{sSelector}'
       .replaceAll('{sSelector}', sSelector);
@@ -418,6 +424,7 @@ class ObjectUserApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -437,8 +444,8 @@ class ObjectUserApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<UserGetAutocompleteV2Response?> userGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
-    final response = await userGetAutocompleteV2WithHttpInfo(sSelector,  eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, );
+  Future<UserGetAutocompleteV2Response?> userGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
+    final response = await userGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -459,7 +466,7 @@ class ObjectUserApi {
   /// Parameters:
   ///
   /// * [int] pkiUserID (required):
-  Future<Response> userGetColleaguesV2WithHttpInfo(int pkiUserID,) async {
+  Future<Response> userGetColleaguesV2WithHttpInfo(int pkiUserID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/user/{pkiUserID}/getColleagues'
       .replaceAll('{pkiUserID}', pkiUserID.toString());
@@ -482,6 +489,7 @@ class ObjectUserApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -490,8 +498,8 @@ class ObjectUserApi {
   /// Parameters:
   ///
   /// * [int] pkiUserID (required):
-  Future<UserGetColleaguesV2Response?> userGetColleaguesV2(int pkiUserID,) async {
-    final response = await userGetColleaguesV2WithHttpInfo(pkiUserID,);
+  Future<UserGetColleaguesV2Response?> userGetColleaguesV2(int pkiUserID, { Future<void>? abortTrigger, }) async {
+    final response = await userGetColleaguesV2WithHttpInfo(pkiUserID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -514,7 +522,7 @@ class ObjectUserApi {
   /// Parameters:
   ///
   /// * [int] pkiUserID (required):
-  Future<Response> userGetEffectivePermissionsV1WithHttpInfo(int pkiUserID,) async {
+  Future<Response> userGetEffectivePermissionsV1WithHttpInfo(int pkiUserID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/user/{pkiUserID}/getEffectivePermissions'
       .replaceAll('{pkiUserID}', pkiUserID.toString());
@@ -537,6 +545,7 @@ class ObjectUserApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -547,8 +556,8 @@ class ObjectUserApi {
   /// Parameters:
   ///
   /// * [int] pkiUserID (required):
-  Future<UserGetEffectivePermissionsV1Response?> userGetEffectivePermissionsV1(int pkiUserID,) async {
-    final response = await userGetEffectivePermissionsV1WithHttpInfo(pkiUserID,);
+  Future<UserGetEffectivePermissionsV1Response?> userGetEffectivePermissionsV1(int pkiUserID, { Future<void>? abortTrigger, }) async {
+    final response = await userGetEffectivePermissionsV1WithHttpInfo(pkiUserID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -571,7 +580,7 @@ class ObjectUserApi {
   /// Parameters:
   ///
   /// * [int] pkiUserID (required):
-  Future<Response> userGetEzmaxcustomeruserV1WithHttpInfo(int pkiUserID,) async {
+  Future<Response> userGetEzmaxcustomeruserV1WithHttpInfo(int pkiUserID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/user/{pkiUserID}/getEzmaxcustomeruser'
       .replaceAll('{pkiUserID}', pkiUserID.toString());
@@ -594,6 +603,7 @@ class ObjectUserApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -604,8 +614,8 @@ class ObjectUserApi {
   /// Parameters:
   ///
   /// * [int] pkiUserID (required):
-  Future<UserGetEzmaxcustomeruserV1Response?> userGetEzmaxcustomeruserV1(int pkiUserID,) async {
-    final response = await userGetEzmaxcustomeruserV1WithHttpInfo(pkiUserID,);
+  Future<UserGetEzmaxcustomeruserV1Response?> userGetEzmaxcustomeruserV1(int pkiUserID, { Future<void>? abortTrigger, }) async {
+    final response = await userGetEzmaxcustomeruserV1WithHttpInfo(pkiUserID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -637,7 +647,7 @@ class ObjectUserApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<Response> userGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
+  Future<Response> userGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/user/getList';
 
@@ -676,6 +686,7 @@ class ObjectUserApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -695,8 +706,8 @@ class ObjectUserApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<UserGetListV1Response?> userGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
-    final response = await userGetListV1WithHttpInfo( eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, );
+  Future<UserGetListV1Response?> userGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
+    final response = await userGetListV1WithHttpInfo(eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -720,7 +731,7 @@ class ObjectUserApi {
   ///
   /// * [int] pkiUserID (required):
   ///   The unique ID of the User
-  Future<Response> userGetObjectV2WithHttpInfo(int pkiUserID,) async {
+  Future<Response> userGetObjectV2WithHttpInfo(int pkiUserID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/user/{pkiUserID}'
       .replaceAll('{pkiUserID}', pkiUserID.toString());
@@ -743,6 +754,7 @@ class ObjectUserApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -754,8 +766,8 @@ class ObjectUserApi {
   ///
   /// * [int] pkiUserID (required):
   ///   The unique ID of the User
-  Future<UserGetObjectV2Response?> userGetObjectV2(int pkiUserID,) async {
-    final response = await userGetObjectV2WithHttpInfo(pkiUserID,);
+  Future<UserGetObjectV2Response?> userGetObjectV2(int pkiUserID, { Future<void>? abortTrigger, }) async {
+    final response = await userGetObjectV2WithHttpInfo(pkiUserID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -776,7 +788,7 @@ class ObjectUserApi {
   /// Parameters:
   ///
   /// * [int] pkiUserID (required):
-  Future<Response> userGetPermissionsV1WithHttpInfo(int pkiUserID,) async {
+  Future<Response> userGetPermissionsV1WithHttpInfo(int pkiUserID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/user/{pkiUserID}/getPermissions'
       .replaceAll('{pkiUserID}', pkiUserID.toString());
@@ -799,6 +811,7 @@ class ObjectUserApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -807,8 +820,8 @@ class ObjectUserApi {
   /// Parameters:
   ///
   /// * [int] pkiUserID (required):
-  Future<UserGetPermissionsV1Response?> userGetPermissionsV1(int pkiUserID,) async {
-    final response = await userGetPermissionsV1WithHttpInfo(pkiUserID,);
+  Future<UserGetPermissionsV1Response?> userGetPermissionsV1(int pkiUserID, { Future<void>? abortTrigger, }) async {
+    final response = await userGetPermissionsV1WithHttpInfo(pkiUserID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -829,7 +842,7 @@ class ObjectUserApi {
   /// Parameters:
   ///
   /// * [int] pkiUserID (required):
-  Future<Response> userGetSubnetsV1WithHttpInfo(int pkiUserID,) async {
+  Future<Response> userGetSubnetsV1WithHttpInfo(int pkiUserID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/user/{pkiUserID}/getSubnets'
       .replaceAll('{pkiUserID}', pkiUserID.toString());
@@ -852,6 +865,7 @@ class ObjectUserApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -860,8 +874,8 @@ class ObjectUserApi {
   /// Parameters:
   ///
   /// * [int] pkiUserID (required):
-  Future<UserGetSubnetsV1Response?> userGetSubnetsV1(int pkiUserID,) async {
-    final response = await userGetSubnetsV1WithHttpInfo(pkiUserID,);
+  Future<UserGetSubnetsV1Response?> userGetSubnetsV1(int pkiUserID, { Future<void>? abortTrigger, }) async {
+    final response = await userGetSubnetsV1WithHttpInfo(pkiUserID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -882,7 +896,7 @@ class ObjectUserApi {
   /// Parameters:
   ///
   /// * [int] pkiUserID (required):
-  Future<Response> userGetUsergroupexternalsV1WithHttpInfo(int pkiUserID,) async {
+  Future<Response> userGetUsergroupexternalsV1WithHttpInfo(int pkiUserID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/user/{pkiUserID}/getUsergroupexternals'
       .replaceAll('{pkiUserID}', pkiUserID.toString());
@@ -905,6 +919,7 @@ class ObjectUserApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -913,8 +928,8 @@ class ObjectUserApi {
   /// Parameters:
   ///
   /// * [int] pkiUserID (required):
-  Future<UserGetUsergroupexternalsV1Response?> userGetUsergroupexternalsV1(int pkiUserID,) async {
-    final response = await userGetUsergroupexternalsV1WithHttpInfo(pkiUserID,);
+  Future<UserGetUsergroupexternalsV1Response?> userGetUsergroupexternalsV1(int pkiUserID, { Future<void>? abortTrigger, }) async {
+    final response = await userGetUsergroupexternalsV1WithHttpInfo(pkiUserID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -935,7 +950,7 @@ class ObjectUserApi {
   /// Parameters:
   ///
   /// * [int] pkiUserID (required):
-  Future<Response> userGetUsergroupsV1WithHttpInfo(int pkiUserID,) async {
+  Future<Response> userGetUsergroupsV1WithHttpInfo(int pkiUserID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/user/{pkiUserID}/getUsergroups'
       .replaceAll('{pkiUserID}', pkiUserID.toString());
@@ -958,6 +973,7 @@ class ObjectUserApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -966,8 +982,8 @@ class ObjectUserApi {
   /// Parameters:
   ///
   /// * [int] pkiUserID (required):
-  Future<UserGetUsergroupsV1Response?> userGetUsergroupsV1(int pkiUserID,) async {
-    final response = await userGetUsergroupsV1WithHttpInfo(pkiUserID,);
+  Future<UserGetUsergroupsV1Response?> userGetUsergroupsV1(int pkiUserID, { Future<void>? abortTrigger, }) async {
+    final response = await userGetUsergroupsV1WithHttpInfo(pkiUserID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -992,7 +1008,7 @@ class ObjectUserApi {
   /// * [int] pkiUserID (required):
   ///
   /// * [UserImpersonateV1Request] userImpersonateV1Request (required):
-  Future<Response> userImpersonateV1WithHttpInfo(int pkiUserID, UserImpersonateV1Request userImpersonateV1Request,) async {
+  Future<Response> userImpersonateV1WithHttpInfo(int pkiUserID, UserImpersonateV1Request userImpersonateV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/user/{pkiUserID}/impersonate'
       .replaceAll('{pkiUserID}', pkiUserID.toString());
@@ -1015,6 +1031,7 @@ class ObjectUserApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -1027,8 +1044,8 @@ class ObjectUserApi {
   /// * [int] pkiUserID (required):
   ///
   /// * [UserImpersonateV1Request] userImpersonateV1Request (required):
-  Future<UserImpersonateV1Response?> userImpersonateV1(int pkiUserID, UserImpersonateV1Request userImpersonateV1Request,) async {
-    final response = await userImpersonateV1WithHttpInfo(pkiUserID, userImpersonateV1Request,);
+  Future<UserImpersonateV1Response?> userImpersonateV1(int pkiUserID, UserImpersonateV1Request userImpersonateV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await userImpersonateV1WithHttpInfo(pkiUserID, userImpersonateV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -1053,7 +1070,7 @@ class ObjectUserApi {
   /// * [int] pkiUserID (required):
   ///
   /// * [Object] body (required):
-  Future<Response> userSendPasswordResetV1WithHttpInfo(int pkiUserID, Object body,) async {
+  Future<Response> userSendPasswordResetV1WithHttpInfo(int pkiUserID, Object body, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/user/{pkiUserID}/sendPasswordReset'
       .replaceAll('{pkiUserID}', pkiUserID.toString());
@@ -1076,6 +1093,7 @@ class ObjectUserApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -1088,8 +1106,8 @@ class ObjectUserApi {
   /// * [int] pkiUserID (required):
   ///
   /// * [Object] body (required):
-  Future<UserSendPasswordResetV1Response?> userSendPasswordResetV1(int pkiUserID, Object body,) async {
-    final response = await userSendPasswordResetV1WithHttpInfo(pkiUserID, body,);
+  Future<UserSendPasswordResetV1Response?> userSendPasswordResetV1(int pkiUserID, Object body, { Future<void>? abortTrigger, }) async {
+    final response = await userSendPasswordResetV1WithHttpInfo(pkiUserID, body, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

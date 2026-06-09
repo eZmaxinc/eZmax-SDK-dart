@@ -25,7 +25,7 @@ class ObjectAuthenticationexternalApi {
   /// Parameters:
   ///
   /// * [AuthenticationexternalCreateObjectV1Request] authenticationexternalCreateObjectV1Request (required):
-  Future<Response> authenticationexternalCreateObjectV1WithHttpInfo(AuthenticationexternalCreateObjectV1Request authenticationexternalCreateObjectV1Request,) async {
+  Future<Response> authenticationexternalCreateObjectV1WithHttpInfo(AuthenticationexternalCreateObjectV1Request authenticationexternalCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/authenticationexternal';
 
@@ -47,6 +47,7 @@ class ObjectAuthenticationexternalApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -57,8 +58,8 @@ class ObjectAuthenticationexternalApi {
   /// Parameters:
   ///
   /// * [AuthenticationexternalCreateObjectV1Request] authenticationexternalCreateObjectV1Request (required):
-  Future<AuthenticationexternalCreateObjectV1Response?> authenticationexternalCreateObjectV1(AuthenticationexternalCreateObjectV1Request authenticationexternalCreateObjectV1Request,) async {
-    final response = await authenticationexternalCreateObjectV1WithHttpInfo(authenticationexternalCreateObjectV1Request,);
+  Future<AuthenticationexternalCreateObjectV1Response?> authenticationexternalCreateObjectV1(AuthenticationexternalCreateObjectV1Request authenticationexternalCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await authenticationexternalCreateObjectV1WithHttpInfo(authenticationexternalCreateObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -82,7 +83,7 @@ class ObjectAuthenticationexternalApi {
   ///
   /// * [int] pkiAuthenticationexternalID (required):
   ///   The unique ID of the Authenticationexternal
-  Future<Response> authenticationexternalDeleteObjectV1WithHttpInfo(int pkiAuthenticationexternalID,) async {
+  Future<Response> authenticationexternalDeleteObjectV1WithHttpInfo(int pkiAuthenticationexternalID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/authenticationexternal/{pkiAuthenticationexternalID}'
       .replaceAll('{pkiAuthenticationexternalID}', pkiAuthenticationexternalID.toString());
@@ -105,6 +106,7 @@ class ObjectAuthenticationexternalApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -116,8 +118,8 @@ class ObjectAuthenticationexternalApi {
   ///
   /// * [int] pkiAuthenticationexternalID (required):
   ///   The unique ID of the Authenticationexternal
-  Future<AuthenticationexternalDeleteObjectV1Response?> authenticationexternalDeleteObjectV1(int pkiAuthenticationexternalID,) async {
-    final response = await authenticationexternalDeleteObjectV1WithHttpInfo(pkiAuthenticationexternalID,);
+  Future<AuthenticationexternalDeleteObjectV1Response?> authenticationexternalDeleteObjectV1(int pkiAuthenticationexternalID, { Future<void>? abortTrigger, }) async {
+    final response = await authenticationexternalDeleteObjectV1WithHttpInfo(pkiAuthenticationexternalID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -143,7 +145,7 @@ class ObjectAuthenticationexternalApi {
   ///   The unique ID of the Authenticationexternal
   ///
   /// * [AuthenticationexternalEditObjectV1Request] authenticationexternalEditObjectV1Request (required):
-  Future<Response> authenticationexternalEditObjectV1WithHttpInfo(int pkiAuthenticationexternalID, AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request,) async {
+  Future<Response> authenticationexternalEditObjectV1WithHttpInfo(int pkiAuthenticationexternalID, AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/authenticationexternal/{pkiAuthenticationexternalID}'
       .replaceAll('{pkiAuthenticationexternalID}', pkiAuthenticationexternalID.toString());
@@ -166,6 +168,7 @@ class ObjectAuthenticationexternalApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -179,8 +182,8 @@ class ObjectAuthenticationexternalApi {
   ///   The unique ID of the Authenticationexternal
   ///
   /// * [AuthenticationexternalEditObjectV1Request] authenticationexternalEditObjectV1Request (required):
-  Future<AuthenticationexternalEditObjectV1Response?> authenticationexternalEditObjectV1(int pkiAuthenticationexternalID, AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request,) async {
-    final response = await authenticationexternalEditObjectV1WithHttpInfo(pkiAuthenticationexternalID, authenticationexternalEditObjectV1Request,);
+  Future<AuthenticationexternalEditObjectV1Response?> authenticationexternalEditObjectV1(int pkiAuthenticationexternalID, AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await authenticationexternalEditObjectV1WithHttpInfo(pkiAuthenticationexternalID, authenticationexternalEditObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -212,7 +215,7 @@ class ObjectAuthenticationexternalApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<Response> authenticationexternalGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
+  Future<Response> authenticationexternalGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/authenticationexternal/getAutocomplete/{sSelector}'
       .replaceAll('{sSelector}', sSelector);
@@ -246,6 +249,7 @@ class ObjectAuthenticationexternalApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -265,8 +269,8 @@ class ObjectAuthenticationexternalApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<AuthenticationexternalGetAutocompleteV2Response?> authenticationexternalGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
-    final response = await authenticationexternalGetAutocompleteV2WithHttpInfo(sSelector,  eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, );
+  Future<AuthenticationexternalGetAutocompleteV2Response?> authenticationexternalGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
+    final response = await authenticationexternalGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -298,7 +302,7 @@ class ObjectAuthenticationexternalApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<Response> authenticationexternalGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
+  Future<Response> authenticationexternalGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/authenticationexternal/getList';
 
@@ -337,6 +341,7 @@ class ObjectAuthenticationexternalApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -356,8 +361,8 @@ class ObjectAuthenticationexternalApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<AuthenticationexternalGetListV1Response?> authenticationexternalGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
-    final response = await authenticationexternalGetListV1WithHttpInfo( eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, );
+  Future<AuthenticationexternalGetListV1Response?> authenticationexternalGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
+    final response = await authenticationexternalGetListV1WithHttpInfo(eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -381,7 +386,7 @@ class ObjectAuthenticationexternalApi {
   ///
   /// * [int] pkiAuthenticationexternalID (required):
   ///   The unique ID of the Authenticationexternal
-  Future<Response> authenticationexternalGetObjectV2WithHttpInfo(int pkiAuthenticationexternalID,) async {
+  Future<Response> authenticationexternalGetObjectV2WithHttpInfo(int pkiAuthenticationexternalID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/authenticationexternal/{pkiAuthenticationexternalID}'
       .replaceAll('{pkiAuthenticationexternalID}', pkiAuthenticationexternalID.toString());
@@ -404,6 +409,7 @@ class ObjectAuthenticationexternalApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -415,8 +421,8 @@ class ObjectAuthenticationexternalApi {
   ///
   /// * [int] pkiAuthenticationexternalID (required):
   ///   The unique ID of the Authenticationexternal
-  Future<AuthenticationexternalGetObjectV2Response?> authenticationexternalGetObjectV2(int pkiAuthenticationexternalID,) async {
-    final response = await authenticationexternalGetObjectV2WithHttpInfo(pkiAuthenticationexternalID,);
+  Future<AuthenticationexternalGetObjectV2Response?> authenticationexternalGetObjectV2(int pkiAuthenticationexternalID, { Future<void>? abortTrigger, }) async {
+    final response = await authenticationexternalGetObjectV2WithHttpInfo(pkiAuthenticationexternalID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -441,7 +447,7 @@ class ObjectAuthenticationexternalApi {
   /// * [int] pkiAuthenticationexternalID (required):
   ///
   /// * [Object] body (required):
-  Future<Response> authenticationexternalResetAuthorizationV1WithHttpInfo(int pkiAuthenticationexternalID, Object body,) async {
+  Future<Response> authenticationexternalResetAuthorizationV1WithHttpInfo(int pkiAuthenticationexternalID, Object body, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/authenticationexternal/{pkiAuthenticationexternalID}/resetAuthorization'
       .replaceAll('{pkiAuthenticationexternalID}', pkiAuthenticationexternalID.toString());
@@ -464,6 +470,7 @@ class ObjectAuthenticationexternalApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -476,8 +483,8 @@ class ObjectAuthenticationexternalApi {
   /// * [int] pkiAuthenticationexternalID (required):
   ///
   /// * [Object] body (required):
-  Future<AuthenticationexternalResetAuthorizationV1Response?> authenticationexternalResetAuthorizationV1(int pkiAuthenticationexternalID, Object body,) async {
-    final response = await authenticationexternalResetAuthorizationV1WithHttpInfo(pkiAuthenticationexternalID, body,);
+  Future<AuthenticationexternalResetAuthorizationV1Response?> authenticationexternalResetAuthorizationV1(int pkiAuthenticationexternalID, Object body, { Future<void>? abortTrigger, }) async {
+    final response = await authenticationexternalResetAuthorizationV1WithHttpInfo(pkiAuthenticationexternalID, body, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

@@ -25,7 +25,7 @@ class ObjectBuyercontractApi {
   /// Parameters:
   ///
   /// * [int] pkiBuyercontractID (required):
-  Future<Response> buyercontractGetCommunicationCountV1WithHttpInfo(int pkiBuyercontractID,) async {
+  Future<Response> buyercontractGetCommunicationCountV1WithHttpInfo(int pkiBuyercontractID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/buyercontract/{pkiBuyercontractID}/getCommunicationCount'
       .replaceAll('{pkiBuyercontractID}', pkiBuyercontractID.toString());
@@ -48,6 +48,7 @@ class ObjectBuyercontractApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -58,8 +59,8 @@ class ObjectBuyercontractApi {
   /// Parameters:
   ///
   /// * [int] pkiBuyercontractID (required):
-  Future<BuyercontractGetCommunicationCountV1Response?> buyercontractGetCommunicationCountV1(int pkiBuyercontractID,) async {
-    final response = await buyercontractGetCommunicationCountV1WithHttpInfo(pkiBuyercontractID,);
+  Future<BuyercontractGetCommunicationCountV1Response?> buyercontractGetCommunicationCountV1(int pkiBuyercontractID, { Future<void>? abortTrigger, }) async {
+    final response = await buyercontractGetCommunicationCountV1WithHttpInfo(pkiBuyercontractID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -82,7 +83,7 @@ class ObjectBuyercontractApi {
   /// Parameters:
   ///
   /// * [int] pkiBuyercontractID (required):
-  Future<Response> buyercontractGetCommunicationListV1WithHttpInfo(int pkiBuyercontractID,) async {
+  Future<Response> buyercontractGetCommunicationListV1WithHttpInfo(int pkiBuyercontractID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/buyercontract/{pkiBuyercontractID}/getCommunicationList'
       .replaceAll('{pkiBuyercontractID}', pkiBuyercontractID.toString());
@@ -105,6 +106,7 @@ class ObjectBuyercontractApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -115,8 +117,8 @@ class ObjectBuyercontractApi {
   /// Parameters:
   ///
   /// * [int] pkiBuyercontractID (required):
-  Future<BuyercontractGetCommunicationListV1Response?> buyercontractGetCommunicationListV1(int pkiBuyercontractID,) async {
-    final response = await buyercontractGetCommunicationListV1WithHttpInfo(pkiBuyercontractID,);
+  Future<BuyercontractGetCommunicationListV1Response?> buyercontractGetCommunicationListV1(int pkiBuyercontractID, { Future<void>? abortTrigger, }) async {
+    final response = await buyercontractGetCommunicationListV1WithHttpInfo(pkiBuyercontractID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -139,7 +141,7 @@ class ObjectBuyercontractApi {
   /// Parameters:
   ///
   /// * [int] pkiBuyercontractID (required):
-  Future<Response> buyercontractGetCommunicationrecipientsV1WithHttpInfo(int pkiBuyercontractID,) async {
+  Future<Response> buyercontractGetCommunicationrecipientsV1WithHttpInfo(int pkiBuyercontractID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/buyercontract/{pkiBuyercontractID}/getCommunicationrecipients'
       .replaceAll('{pkiBuyercontractID}', pkiBuyercontractID.toString());
@@ -162,6 +164,7 @@ class ObjectBuyercontractApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -172,8 +175,8 @@ class ObjectBuyercontractApi {
   /// Parameters:
   ///
   /// * [int] pkiBuyercontractID (required):
-  Future<BuyercontractGetCommunicationrecipientsV1Response?> buyercontractGetCommunicationrecipientsV1(int pkiBuyercontractID,) async {
-    final response = await buyercontractGetCommunicationrecipientsV1WithHttpInfo(pkiBuyercontractID,);
+  Future<BuyercontractGetCommunicationrecipientsV1Response?> buyercontractGetCommunicationrecipientsV1(int pkiBuyercontractID, { Future<void>? abortTrigger, }) async {
+    final response = await buyercontractGetCommunicationrecipientsV1WithHttpInfo(pkiBuyercontractID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -196,7 +199,7 @@ class ObjectBuyercontractApi {
   /// Parameters:
   ///
   /// * [int] pkiBuyercontractID (required):
-  Future<Response> buyercontractGetCommunicationsendersV1WithHttpInfo(int pkiBuyercontractID,) async {
+  Future<Response> buyercontractGetCommunicationsendersV1WithHttpInfo(int pkiBuyercontractID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/buyercontract/{pkiBuyercontractID}/getCommunicationsenders'
       .replaceAll('{pkiBuyercontractID}', pkiBuyercontractID.toString());
@@ -219,6 +222,7 @@ class ObjectBuyercontractApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -229,8 +233,8 @@ class ObjectBuyercontractApi {
   /// Parameters:
   ///
   /// * [int] pkiBuyercontractID (required):
-  Future<BuyercontractGetCommunicationsendersV1Response?> buyercontractGetCommunicationsendersV1(int pkiBuyercontractID,) async {
-    final response = await buyercontractGetCommunicationsendersV1WithHttpInfo(pkiBuyercontractID,);
+  Future<BuyercontractGetCommunicationsendersV1Response?> buyercontractGetCommunicationsendersV1(int pkiBuyercontractID, { Future<void>? abortTrigger, }) async {
+    final response = await buyercontractGetCommunicationsendersV1WithHttpInfo(pkiBuyercontractID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -262,7 +266,7 @@ class ObjectBuyercontractApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<Response> buyercontractGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
+  Future<Response> buyercontractGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/buyercontract/getList';
 
@@ -301,6 +305,7 @@ class ObjectBuyercontractApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -320,8 +325,8 @@ class ObjectBuyercontractApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<BuyercontractGetListV1Response?> buyercontractGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
-    final response = await buyercontractGetListV1WithHttpInfo( eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, );
+  Future<BuyercontractGetListV1Response?> buyercontractGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
+    final response = await buyercontractGetListV1WithHttpInfo(eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -346,7 +351,7 @@ class ObjectBuyercontractApi {
   /// * [int] pkiBuyercontractID (required):
   ///
   /// * [BuyercontractImportIntoEDMV1Request] buyercontractImportIntoEDMV1Request (required):
-  Future<Response> buyercontractImportIntoEDMV1WithHttpInfo(int pkiBuyercontractID, BuyercontractImportIntoEDMV1Request buyercontractImportIntoEDMV1Request,) async {
+  Future<Response> buyercontractImportIntoEDMV1WithHttpInfo(int pkiBuyercontractID, BuyercontractImportIntoEDMV1Request buyercontractImportIntoEDMV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/buyercontract/{pkiBuyercontractID}/importIntoEDM'
       .replaceAll('{pkiBuyercontractID}', pkiBuyercontractID.toString());
@@ -369,6 +374,7 @@ class ObjectBuyercontractApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -381,8 +387,8 @@ class ObjectBuyercontractApi {
   /// * [int] pkiBuyercontractID (required):
   ///
   /// * [BuyercontractImportIntoEDMV1Request] buyercontractImportIntoEDMV1Request (required):
-  Future<BuyercontractImportIntoEDMV1Response?> buyercontractImportIntoEDMV1(int pkiBuyercontractID, BuyercontractImportIntoEDMV1Request buyercontractImportIntoEDMV1Request,) async {
-    final response = await buyercontractImportIntoEDMV1WithHttpInfo(pkiBuyercontractID, buyercontractImportIntoEDMV1Request,);
+  Future<BuyercontractImportIntoEDMV1Response?> buyercontractImportIntoEDMV1(int pkiBuyercontractID, BuyercontractImportIntoEDMV1Request buyercontractImportIntoEDMV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await buyercontractImportIntoEDMV1WithHttpInfo(pkiBuyercontractID, buyercontractImportIntoEDMV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

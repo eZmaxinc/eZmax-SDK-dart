@@ -25,7 +25,7 @@ class GlobalEzmaxcustomerApi {
   /// Parameters:
   ///
   /// * [String] pksEzmaxcustomerCode (required):
-  Future<Response> globalEzmaxcustomerGetConfigurationV1WithHttpInfo(String pksEzmaxcustomerCode,) async {
+  Future<Response> globalEzmaxcustomerGetConfigurationV1WithHttpInfo(String pksEzmaxcustomerCode, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/ezmaxcustomer/{pksEzmaxcustomerCode}/getConfiguration'
       .replaceAll('{pksEzmaxcustomerCode}', pksEzmaxcustomerCode);
@@ -48,6 +48,7 @@ class GlobalEzmaxcustomerApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -58,8 +59,8 @@ class GlobalEzmaxcustomerApi {
   /// Parameters:
   ///
   /// * [String] pksEzmaxcustomerCode (required):
-  Future<GlobalEzmaxcustomerGetConfigurationV1Response?> globalEzmaxcustomerGetConfigurationV1(String pksEzmaxcustomerCode,) async {
-    final response = await globalEzmaxcustomerGetConfigurationV1WithHttpInfo(pksEzmaxcustomerCode,);
+  Future<GlobalEzmaxcustomerGetConfigurationV1Response?> globalEzmaxcustomerGetConfigurationV1(String pksEzmaxcustomerCode, { Future<void>? abortTrigger, }) async {
+    final response = await globalEzmaxcustomerGetConfigurationV1WithHttpInfo(pksEzmaxcustomerCode, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

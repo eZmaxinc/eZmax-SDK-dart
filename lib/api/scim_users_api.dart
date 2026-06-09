@@ -23,7 +23,7 @@ class ScimUsersApi {
   /// Parameters:
   ///
   /// * [ScimUser] scimUser (required):
-  Future<Response> usersCreateObjectScimV2WithHttpInfo(ScimUser scimUser,) async {
+  Future<Response> usersCreateObjectScimV2WithHttpInfo(ScimUser scimUser, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/scim/Users';
 
@@ -45,6 +45,7 @@ class ScimUsersApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -53,8 +54,8 @@ class ScimUsersApi {
   /// Parameters:
   ///
   /// * [ScimUser] scimUser (required):
-  Future<ScimUser?> usersCreateObjectScimV2(ScimUser scimUser,) async {
-    final response = await usersCreateObjectScimV2WithHttpInfo(scimUser,);
+  Future<ScimUser?> usersCreateObjectScimV2(ScimUser scimUser, { Future<void>? abortTrigger, }) async {
+    final response = await usersCreateObjectScimV2WithHttpInfo(scimUser, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -75,7 +76,7 @@ class ScimUsersApi {
   /// Parameters:
   ///
   /// * [String] userId (required):
-  Future<Response> usersDeleteObjectScimV2WithHttpInfo(String userId,) async {
+  Future<Response> usersDeleteObjectScimV2WithHttpInfo(String userId, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/scim/Users/{userId}'
       .replaceAll('{userId}', userId);
@@ -98,6 +99,7 @@ class ScimUsersApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -106,8 +108,8 @@ class ScimUsersApi {
   /// Parameters:
   ///
   /// * [String] userId (required):
-  Future<void> usersDeleteObjectScimV2(String userId,) async {
-    final response = await usersDeleteObjectScimV2WithHttpInfo(userId,);
+  Future<void> usersDeleteObjectScimV2(String userId, { Future<void>? abortTrigger, }) async {
+    final response = await usersDeleteObjectScimV2WithHttpInfo(userId, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -122,7 +124,7 @@ class ScimUsersApi {
   /// * [String] userId (required):
   ///
   /// * [ScimUser] scimUser (required):
-  Future<Response> usersEditObjectScimV2WithHttpInfo(String userId, ScimUser scimUser,) async {
+  Future<Response> usersEditObjectScimV2WithHttpInfo(String userId, ScimUser scimUser, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/scim/Users/{userId}'
       .replaceAll('{userId}', userId);
@@ -145,6 +147,7 @@ class ScimUsersApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -155,8 +158,8 @@ class ScimUsersApi {
   /// * [String] userId (required):
   ///
   /// * [ScimUser] scimUser (required):
-  Future<ScimUser?> usersEditObjectScimV2(String userId, ScimUser scimUser,) async {
-    final response = await usersEditObjectScimV2WithHttpInfo(userId, scimUser,);
+  Future<ScimUser?> usersEditObjectScimV2(String userId, ScimUser scimUser, { Future<void>? abortTrigger, }) async {
+    final response = await usersEditObjectScimV2WithHttpInfo(userId, scimUser, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -178,7 +181,7 @@ class ScimUsersApi {
   ///
   /// * [String] filter:
   ///   Filter expression for searching users
-  Future<Response> usersGetListScimV2WithHttpInfo({ String? filter, }) async {
+  Future<Response> usersGetListScimV2WithHttpInfo({ String? filter, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/scim/Users';
 
@@ -204,6 +207,7 @@ class ScimUsersApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -213,8 +217,8 @@ class ScimUsersApi {
   ///
   /// * [String] filter:
   ///   Filter expression for searching users
-  Future<ScimUserList?> usersGetListScimV2({ String? filter, }) async {
-    final response = await usersGetListScimV2WithHttpInfo( filter: filter, );
+  Future<ScimUserList?> usersGetListScimV2({ String? filter, Future<void>? abortTrigger, }) async {
+    final response = await usersGetListScimV2WithHttpInfo(filter: filter, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -235,7 +239,7 @@ class ScimUsersApi {
   /// Parameters:
   ///
   /// * [String] userId (required):
-  Future<Response> usersGetObjectScimV2WithHttpInfo(String userId,) async {
+  Future<Response> usersGetObjectScimV2WithHttpInfo(String userId, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/scim/Users/{userId}'
       .replaceAll('{userId}', userId);
@@ -258,6 +262,7 @@ class ScimUsersApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -266,8 +271,8 @@ class ScimUsersApi {
   /// Parameters:
   ///
   /// * [String] userId (required):
-  Future<ScimUser?> usersGetObjectScimV2(String userId,) async {
-    final response = await usersGetObjectScimV2WithHttpInfo(userId,);
+  Future<ScimUser?> usersGetObjectScimV2(String userId, { Future<void>? abortTrigger, }) async {
+    final response = await usersGetObjectScimV2WithHttpInfo(userId, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

@@ -25,7 +25,7 @@ class ObjectEzsignsignergroupmembershipApi {
   /// Parameters:
   ///
   /// * [EzsignsignergroupmembershipCreateObjectV1Request] ezsignsignergroupmembershipCreateObjectV1Request (required):
-  Future<Response> ezsignsignergroupmembershipCreateObjectV1WithHttpInfo(EzsignsignergroupmembershipCreateObjectV1Request ezsignsignergroupmembershipCreateObjectV1Request,) async {
+  Future<Response> ezsignsignergroupmembershipCreateObjectV1WithHttpInfo(EzsignsignergroupmembershipCreateObjectV1Request ezsignsignergroupmembershipCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignsignergroupmembership';
 
@@ -47,6 +47,7 @@ class ObjectEzsignsignergroupmembershipApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -57,8 +58,8 @@ class ObjectEzsignsignergroupmembershipApi {
   /// Parameters:
   ///
   /// * [EzsignsignergroupmembershipCreateObjectV1Request] ezsignsignergroupmembershipCreateObjectV1Request (required):
-  Future<EzsignsignergroupmembershipCreateObjectV1Response?> ezsignsignergroupmembershipCreateObjectV1(EzsignsignergroupmembershipCreateObjectV1Request ezsignsignergroupmembershipCreateObjectV1Request,) async {
-    final response = await ezsignsignergroupmembershipCreateObjectV1WithHttpInfo(ezsignsignergroupmembershipCreateObjectV1Request,);
+  Future<EzsignsignergroupmembershipCreateObjectV1Response?> ezsignsignergroupmembershipCreateObjectV1(EzsignsignergroupmembershipCreateObjectV1Request ezsignsignergroupmembershipCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignsignergroupmembershipCreateObjectV1WithHttpInfo(ezsignsignergroupmembershipCreateObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -82,7 +83,7 @@ class ObjectEzsignsignergroupmembershipApi {
   ///
   /// * [int] pkiEzsignsignergroupmembershipID (required):
   ///   The unique ID of the Ezsignsignergroupmembership
-  Future<Response> ezsignsignergroupmembershipDeleteObjectV1WithHttpInfo(int pkiEzsignsignergroupmembershipID,) async {
+  Future<Response> ezsignsignergroupmembershipDeleteObjectV1WithHttpInfo(int pkiEzsignsignergroupmembershipID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignsignergroupmembership/{pkiEzsignsignergroupmembershipID}'
       .replaceAll('{pkiEzsignsignergroupmembershipID}', pkiEzsignsignergroupmembershipID.toString());
@@ -105,6 +106,7 @@ class ObjectEzsignsignergroupmembershipApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -116,8 +118,8 @@ class ObjectEzsignsignergroupmembershipApi {
   ///
   /// * [int] pkiEzsignsignergroupmembershipID (required):
   ///   The unique ID of the Ezsignsignergroupmembership
-  Future<EzsignsignergroupmembershipDeleteObjectV1Response?> ezsignsignergroupmembershipDeleteObjectV1(int pkiEzsignsignergroupmembershipID,) async {
-    final response = await ezsignsignergroupmembershipDeleteObjectV1WithHttpInfo(pkiEzsignsignergroupmembershipID,);
+  Future<EzsignsignergroupmembershipDeleteObjectV1Response?> ezsignsignergroupmembershipDeleteObjectV1(int pkiEzsignsignergroupmembershipID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignsignergroupmembershipDeleteObjectV1WithHttpInfo(pkiEzsignsignergroupmembershipID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -141,7 +143,7 @@ class ObjectEzsignsignergroupmembershipApi {
   ///
   /// * [int] pkiEzsignsignergroupmembershipID (required):
   ///   The unique ID of the Ezsignsignergroupmembership
-  Future<Response> ezsignsignergroupmembershipGetObjectV2WithHttpInfo(int pkiEzsignsignergroupmembershipID,) async {
+  Future<Response> ezsignsignergroupmembershipGetObjectV2WithHttpInfo(int pkiEzsignsignergroupmembershipID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezsignsignergroupmembership/{pkiEzsignsignergroupmembershipID}'
       .replaceAll('{pkiEzsignsignergroupmembershipID}', pkiEzsignsignergroupmembershipID.toString());
@@ -164,6 +166,7 @@ class ObjectEzsignsignergroupmembershipApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -175,8 +178,8 @@ class ObjectEzsignsignergroupmembershipApi {
   ///
   /// * [int] pkiEzsignsignergroupmembershipID (required):
   ///   The unique ID of the Ezsignsignergroupmembership
-  Future<EzsignsignergroupmembershipGetObjectV2Response?> ezsignsignergroupmembershipGetObjectV2(int pkiEzsignsignergroupmembershipID,) async {
-    final response = await ezsignsignergroupmembershipGetObjectV2WithHttpInfo(pkiEzsignsignergroupmembershipID,);
+  Future<EzsignsignergroupmembershipGetObjectV2Response?> ezsignsignergroupmembershipGetObjectV2(int pkiEzsignsignergroupmembershipID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignsignergroupmembershipGetObjectV2WithHttpInfo(pkiEzsignsignergroupmembershipID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

@@ -25,7 +25,7 @@ class ObjectUsergroupApi {
   /// Parameters:
   ///
   /// * [UsergroupCreateObjectV1Request] usergroupCreateObjectV1Request (required):
-  Future<Response> usergroupCreateObjectV1WithHttpInfo(UsergroupCreateObjectV1Request usergroupCreateObjectV1Request,) async {
+  Future<Response> usergroupCreateObjectV1WithHttpInfo(UsergroupCreateObjectV1Request usergroupCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/usergroup';
 
@@ -47,6 +47,7 @@ class ObjectUsergroupApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -57,8 +58,8 @@ class ObjectUsergroupApi {
   /// Parameters:
   ///
   /// * [UsergroupCreateObjectV1Request] usergroupCreateObjectV1Request (required):
-  Future<UsergroupCreateObjectV1Response?> usergroupCreateObjectV1(UsergroupCreateObjectV1Request usergroupCreateObjectV1Request,) async {
-    final response = await usergroupCreateObjectV1WithHttpInfo(usergroupCreateObjectV1Request,);
+  Future<UsergroupCreateObjectV1Response?> usergroupCreateObjectV1(UsergroupCreateObjectV1Request usergroupCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await usergroupCreateObjectV1WithHttpInfo(usergroupCreateObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -83,7 +84,7 @@ class ObjectUsergroupApi {
   /// * [int] pkiUsergroupID (required):
   ///
   /// * [UsergroupEditObjectV1Request] usergroupEditObjectV1Request (required):
-  Future<Response> usergroupEditObjectV1WithHttpInfo(int pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request,) async {
+  Future<Response> usergroupEditObjectV1WithHttpInfo(int pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/usergroup/{pkiUsergroupID}'
       .replaceAll('{pkiUsergroupID}', pkiUsergroupID.toString());
@@ -106,6 +107,7 @@ class ObjectUsergroupApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -118,8 +120,8 @@ class ObjectUsergroupApi {
   /// * [int] pkiUsergroupID (required):
   ///
   /// * [UsergroupEditObjectV1Request] usergroupEditObjectV1Request (required):
-  Future<UsergroupEditObjectV1Response?> usergroupEditObjectV1(int pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request,) async {
-    final response = await usergroupEditObjectV1WithHttpInfo(pkiUsergroupID, usergroupEditObjectV1Request,);
+  Future<UsergroupEditObjectV1Response?> usergroupEditObjectV1(int pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await usergroupEditObjectV1WithHttpInfo(pkiUsergroupID, usergroupEditObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -144,7 +146,7 @@ class ObjectUsergroupApi {
   /// * [int] pkiUsergroupID (required):
   ///
   /// * [UsergroupEditPermissionsV1Request] usergroupEditPermissionsV1Request (required):
-  Future<Response> usergroupEditPermissionsV1WithHttpInfo(int pkiUsergroupID, UsergroupEditPermissionsV1Request usergroupEditPermissionsV1Request,) async {
+  Future<Response> usergroupEditPermissionsV1WithHttpInfo(int pkiUsergroupID, UsergroupEditPermissionsV1Request usergroupEditPermissionsV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/usergroup/{pkiUsergroupID}/editPermissions'
       .replaceAll('{pkiUsergroupID}', pkiUsergroupID.toString());
@@ -167,6 +169,7 @@ class ObjectUsergroupApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -179,8 +182,8 @@ class ObjectUsergroupApi {
   /// * [int] pkiUsergroupID (required):
   ///
   /// * [UsergroupEditPermissionsV1Request] usergroupEditPermissionsV1Request (required):
-  Future<UsergroupEditPermissionsV1Response?> usergroupEditPermissionsV1(int pkiUsergroupID, UsergroupEditPermissionsV1Request usergroupEditPermissionsV1Request,) async {
-    final response = await usergroupEditPermissionsV1WithHttpInfo(pkiUsergroupID, usergroupEditPermissionsV1Request,);
+  Future<UsergroupEditPermissionsV1Response?> usergroupEditPermissionsV1(int pkiUsergroupID, UsergroupEditPermissionsV1Request usergroupEditPermissionsV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await usergroupEditPermissionsV1WithHttpInfo(pkiUsergroupID, usergroupEditPermissionsV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -205,7 +208,7 @@ class ObjectUsergroupApi {
   /// * [int] pkiUsergroupID (required):
   ///
   /// * [UsergroupEditUsergroupdelegationsV1Request] usergroupEditUsergroupdelegationsV1Request (required):
-  Future<Response> usergroupEditUsergroupdelegationsV1WithHttpInfo(int pkiUsergroupID, UsergroupEditUsergroupdelegationsV1Request usergroupEditUsergroupdelegationsV1Request,) async {
+  Future<Response> usergroupEditUsergroupdelegationsV1WithHttpInfo(int pkiUsergroupID, UsergroupEditUsergroupdelegationsV1Request usergroupEditUsergroupdelegationsV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/usergroup/{pkiUsergroupID}/editUsergroupdelegations'
       .replaceAll('{pkiUsergroupID}', pkiUsergroupID.toString());
@@ -228,6 +231,7 @@ class ObjectUsergroupApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -240,8 +244,8 @@ class ObjectUsergroupApi {
   /// * [int] pkiUsergroupID (required):
   ///
   /// * [UsergroupEditUsergroupdelegationsV1Request] usergroupEditUsergroupdelegationsV1Request (required):
-  Future<UsergroupEditUsergroupdelegationsV1Response?> usergroupEditUsergroupdelegationsV1(int pkiUsergroupID, UsergroupEditUsergroupdelegationsV1Request usergroupEditUsergroupdelegationsV1Request,) async {
-    final response = await usergroupEditUsergroupdelegationsV1WithHttpInfo(pkiUsergroupID, usergroupEditUsergroupdelegationsV1Request,);
+  Future<UsergroupEditUsergroupdelegationsV1Response?> usergroupEditUsergroupdelegationsV1(int pkiUsergroupID, UsergroupEditUsergroupdelegationsV1Request usergroupEditUsergroupdelegationsV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await usergroupEditUsergroupdelegationsV1WithHttpInfo(pkiUsergroupID, usergroupEditUsergroupdelegationsV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -266,7 +270,7 @@ class ObjectUsergroupApi {
   /// * [int] pkiUsergroupID (required):
   ///
   /// * [UsergroupEditUsergroupmembershipsV1Request] usergroupEditUsergroupmembershipsV1Request (required):
-  Future<Response> usergroupEditUsergroupmembershipsV1WithHttpInfo(int pkiUsergroupID, UsergroupEditUsergroupmembershipsV1Request usergroupEditUsergroupmembershipsV1Request,) async {
+  Future<Response> usergroupEditUsergroupmembershipsV1WithHttpInfo(int pkiUsergroupID, UsergroupEditUsergroupmembershipsV1Request usergroupEditUsergroupmembershipsV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/usergroup/{pkiUsergroupID}/editUsergroupmemberships'
       .replaceAll('{pkiUsergroupID}', pkiUsergroupID.toString());
@@ -289,6 +293,7 @@ class ObjectUsergroupApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -301,8 +306,8 @@ class ObjectUsergroupApi {
   /// * [int] pkiUsergroupID (required):
   ///
   /// * [UsergroupEditUsergroupmembershipsV1Request] usergroupEditUsergroupmembershipsV1Request (required):
-  Future<UsergroupEditUsergroupmembershipsV1Response?> usergroupEditUsergroupmembershipsV1(int pkiUsergroupID, UsergroupEditUsergroupmembershipsV1Request usergroupEditUsergroupmembershipsV1Request,) async {
-    final response = await usergroupEditUsergroupmembershipsV1WithHttpInfo(pkiUsergroupID, usergroupEditUsergroupmembershipsV1Request,);
+  Future<UsergroupEditUsergroupmembershipsV1Response?> usergroupEditUsergroupmembershipsV1(int pkiUsergroupID, UsergroupEditUsergroupmembershipsV1Request usergroupEditUsergroupmembershipsV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await usergroupEditUsergroupmembershipsV1WithHttpInfo(pkiUsergroupID, usergroupEditUsergroupmembershipsV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -334,7 +339,7 @@ class ObjectUsergroupApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<Response> usergroupGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
+  Future<Response> usergroupGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/usergroup/getAutocomplete/{sSelector}'
       .replaceAll('{sSelector}', sSelector);
@@ -368,6 +373,7 @@ class ObjectUsergroupApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -387,8 +393,8 @@ class ObjectUsergroupApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<UsergroupGetAutocompleteV2Response?> usergroupGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
-    final response = await usergroupGetAutocompleteV2WithHttpInfo(sSelector,  eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, );
+  Future<UsergroupGetAutocompleteV2Response?> usergroupGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
+    final response = await usergroupGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -420,7 +426,7 @@ class ObjectUsergroupApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<Response> usergroupGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
+  Future<Response> usergroupGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/usergroup/getList';
 
@@ -459,6 +465,7 @@ class ObjectUsergroupApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -478,8 +485,8 @@ class ObjectUsergroupApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<UsergroupGetListV1Response?> usergroupGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
-    final response = await usergroupGetListV1WithHttpInfo( eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, );
+  Future<UsergroupGetListV1Response?> usergroupGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
+    final response = await usergroupGetListV1WithHttpInfo(eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -502,7 +509,7 @@ class ObjectUsergroupApi {
   /// Parameters:
   ///
   /// * [int] pkiUsergroupID (required):
-  Future<Response> usergroupGetObjectV2WithHttpInfo(int pkiUsergroupID,) async {
+  Future<Response> usergroupGetObjectV2WithHttpInfo(int pkiUsergroupID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/usergroup/{pkiUsergroupID}'
       .replaceAll('{pkiUsergroupID}', pkiUsergroupID.toString());
@@ -525,6 +532,7 @@ class ObjectUsergroupApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -535,8 +543,8 @@ class ObjectUsergroupApi {
   /// Parameters:
   ///
   /// * [int] pkiUsergroupID (required):
-  Future<UsergroupGetObjectV2Response?> usergroupGetObjectV2(int pkiUsergroupID,) async {
-    final response = await usergroupGetObjectV2WithHttpInfo(pkiUsergroupID,);
+  Future<UsergroupGetObjectV2Response?> usergroupGetObjectV2(int pkiUsergroupID, { Future<void>? abortTrigger, }) async {
+    final response = await usergroupGetObjectV2WithHttpInfo(pkiUsergroupID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -557,7 +565,7 @@ class ObjectUsergroupApi {
   /// Parameters:
   ///
   /// * [int] pkiUsergroupID (required):
-  Future<Response> usergroupGetPermissionsV1WithHttpInfo(int pkiUsergroupID,) async {
+  Future<Response> usergroupGetPermissionsV1WithHttpInfo(int pkiUsergroupID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/usergroup/{pkiUsergroupID}/getPermissions'
       .replaceAll('{pkiUsergroupID}', pkiUsergroupID.toString());
@@ -580,6 +588,7 @@ class ObjectUsergroupApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -588,8 +597,8 @@ class ObjectUsergroupApi {
   /// Parameters:
   ///
   /// * [int] pkiUsergroupID (required):
-  Future<UsergroupGetPermissionsV1Response?> usergroupGetPermissionsV1(int pkiUsergroupID,) async {
-    final response = await usergroupGetPermissionsV1WithHttpInfo(pkiUsergroupID,);
+  Future<UsergroupGetPermissionsV1Response?> usergroupGetPermissionsV1(int pkiUsergroupID, { Future<void>? abortTrigger, }) async {
+    final response = await usergroupGetPermissionsV1WithHttpInfo(pkiUsergroupID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -610,7 +619,7 @@ class ObjectUsergroupApi {
   /// Parameters:
   ///
   /// * [int] pkiUsergroupID (required):
-  Future<Response> usergroupGetUsergroupdelegationsV1WithHttpInfo(int pkiUsergroupID,) async {
+  Future<Response> usergroupGetUsergroupdelegationsV1WithHttpInfo(int pkiUsergroupID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/usergroup/{pkiUsergroupID}/getUsergroupdelegations'
       .replaceAll('{pkiUsergroupID}', pkiUsergroupID.toString());
@@ -633,6 +642,7 @@ class ObjectUsergroupApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -641,8 +651,8 @@ class ObjectUsergroupApi {
   /// Parameters:
   ///
   /// * [int] pkiUsergroupID (required):
-  Future<UsergroupGetUsergroupdelegationsV1Response?> usergroupGetUsergroupdelegationsV1(int pkiUsergroupID,) async {
-    final response = await usergroupGetUsergroupdelegationsV1WithHttpInfo(pkiUsergroupID,);
+  Future<UsergroupGetUsergroupdelegationsV1Response?> usergroupGetUsergroupdelegationsV1(int pkiUsergroupID, { Future<void>? abortTrigger, }) async {
+    final response = await usergroupGetUsergroupdelegationsV1WithHttpInfo(pkiUsergroupID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -663,7 +673,7 @@ class ObjectUsergroupApi {
   /// Parameters:
   ///
   /// * [int] pkiUsergroupID (required):
-  Future<Response> usergroupGetUsergroupmembershipsV1WithHttpInfo(int pkiUsergroupID,) async {
+  Future<Response> usergroupGetUsergroupmembershipsV1WithHttpInfo(int pkiUsergroupID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/usergroup/{pkiUsergroupID}/getUsergroupmemberships'
       .replaceAll('{pkiUsergroupID}', pkiUsergroupID.toString());
@@ -686,6 +696,7 @@ class ObjectUsergroupApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -694,8 +705,8 @@ class ObjectUsergroupApi {
   /// Parameters:
   ///
   /// * [int] pkiUsergroupID (required):
-  Future<UsergroupGetUsergroupmembershipsV1Response?> usergroupGetUsergroupmembershipsV1(int pkiUsergroupID,) async {
-    final response = await usergroupGetUsergroupmembershipsV1WithHttpInfo(pkiUsergroupID,);
+  Future<UsergroupGetUsergroupmembershipsV1Response?> usergroupGetUsergroupmembershipsV1(int pkiUsergroupID, { Future<void>? abortTrigger, }) async {
+    final response = await usergroupGetUsergroupmembershipsV1WithHttpInfo(pkiUsergroupID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

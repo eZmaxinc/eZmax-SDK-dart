@@ -25,7 +25,7 @@ class ObjectPaymenttermApi {
   /// Parameters:
   ///
   /// * [PaymenttermCreateObjectV1Request] paymenttermCreateObjectV1Request (required):
-  Future<Response> paymenttermCreateObjectV1WithHttpInfo(PaymenttermCreateObjectV1Request paymenttermCreateObjectV1Request,) async {
+  Future<Response> paymenttermCreateObjectV1WithHttpInfo(PaymenttermCreateObjectV1Request paymenttermCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/paymentterm';
 
@@ -47,6 +47,7 @@ class ObjectPaymenttermApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -57,8 +58,8 @@ class ObjectPaymenttermApi {
   /// Parameters:
   ///
   /// * [PaymenttermCreateObjectV1Request] paymenttermCreateObjectV1Request (required):
-  Future<PaymenttermCreateObjectV1Response?> paymenttermCreateObjectV1(PaymenttermCreateObjectV1Request paymenttermCreateObjectV1Request,) async {
-    final response = await paymenttermCreateObjectV1WithHttpInfo(paymenttermCreateObjectV1Request,);
+  Future<PaymenttermCreateObjectV1Response?> paymenttermCreateObjectV1(PaymenttermCreateObjectV1Request paymenttermCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await paymenttermCreateObjectV1WithHttpInfo(paymenttermCreateObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -83,7 +84,7 @@ class ObjectPaymenttermApi {
   /// * [int] pkiPaymenttermID (required):
   ///
   /// * [PaymenttermEditObjectV1Request] paymenttermEditObjectV1Request (required):
-  Future<Response> paymenttermEditObjectV1WithHttpInfo(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request,) async {
+  Future<Response> paymenttermEditObjectV1WithHttpInfo(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/paymentterm/{pkiPaymenttermID}'
       .replaceAll('{pkiPaymenttermID}', pkiPaymenttermID.toString());
@@ -106,6 +107,7 @@ class ObjectPaymenttermApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -118,8 +120,8 @@ class ObjectPaymenttermApi {
   /// * [int] pkiPaymenttermID (required):
   ///
   /// * [PaymenttermEditObjectV1Request] paymenttermEditObjectV1Request (required):
-  Future<PaymenttermEditObjectV1Response?> paymenttermEditObjectV1(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request,) async {
-    final response = await paymenttermEditObjectV1WithHttpInfo(pkiPaymenttermID, paymenttermEditObjectV1Request,);
+  Future<PaymenttermEditObjectV1Response?> paymenttermEditObjectV1(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await paymenttermEditObjectV1WithHttpInfo(pkiPaymenttermID, paymenttermEditObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -151,7 +153,7 @@ class ObjectPaymenttermApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<Response> paymenttermGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
+  Future<Response> paymenttermGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/paymentterm/getAutocomplete/{sSelector}'
       .replaceAll('{sSelector}', sSelector);
@@ -185,6 +187,7 @@ class ObjectPaymenttermApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -204,8 +207,8 @@ class ObjectPaymenttermApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<PaymenttermGetAutocompleteV2Response?> paymenttermGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
-    final response = await paymenttermGetAutocompleteV2WithHttpInfo(sSelector,  eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, );
+  Future<PaymenttermGetAutocompleteV2Response?> paymenttermGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
+    final response = await paymenttermGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -235,7 +238,7 @@ class ObjectPaymenttermApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<Response> paymenttermGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
+  Future<Response> paymenttermGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/paymentterm/getList';
 
@@ -274,6 +277,7 @@ class ObjectPaymenttermApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -291,8 +295,8 @@ class ObjectPaymenttermApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<PaymenttermGetListV1Response?> paymenttermGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
-    final response = await paymenttermGetListV1WithHttpInfo( eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, );
+  Future<PaymenttermGetListV1Response?> paymenttermGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
+    final response = await paymenttermGetListV1WithHttpInfo(eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -315,7 +319,7 @@ class ObjectPaymenttermApi {
   /// Parameters:
   ///
   /// * [int] pkiPaymenttermID (required):
-  Future<Response> paymenttermGetObjectV2WithHttpInfo(int pkiPaymenttermID,) async {
+  Future<Response> paymenttermGetObjectV2WithHttpInfo(int pkiPaymenttermID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/paymentterm/{pkiPaymenttermID}'
       .replaceAll('{pkiPaymenttermID}', pkiPaymenttermID.toString());
@@ -338,6 +342,7 @@ class ObjectPaymenttermApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -348,8 +353,8 @@ class ObjectPaymenttermApi {
   /// Parameters:
   ///
   /// * [int] pkiPaymenttermID (required):
-  Future<PaymenttermGetObjectV2Response?> paymenttermGetObjectV2(int pkiPaymenttermID,) async {
-    final response = await paymenttermGetObjectV2WithHttpInfo(pkiPaymenttermID,);
+  Future<PaymenttermGetObjectV2Response?> paymenttermGetObjectV2(int pkiPaymenttermID, { Future<void>? abortTrigger, }) async {
+    final response = await paymenttermGetObjectV2WithHttpInfo(pkiPaymenttermID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

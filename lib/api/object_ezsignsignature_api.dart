@@ -25,7 +25,7 @@ class ObjectEzsignsignatureApi {
   /// Parameters:
   ///
   /// * [List<EzsignsignatureCreateObjectV1Request>] ezsignsignatureCreateObjectV1Request (required):
-  Future<Response> ezsignsignatureCreateObjectV1WithHttpInfo(List<EzsignsignatureCreateObjectV1Request> ezsignsignatureCreateObjectV1Request,) async {
+  Future<Response> ezsignsignatureCreateObjectV1WithHttpInfo(List<EzsignsignatureCreateObjectV1Request> ezsignsignatureCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignsignature';
 
@@ -47,6 +47,7 @@ class ObjectEzsignsignatureApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -57,8 +58,8 @@ class ObjectEzsignsignatureApi {
   /// Parameters:
   ///
   /// * [List<EzsignsignatureCreateObjectV1Request>] ezsignsignatureCreateObjectV1Request (required):
-  Future<EzsignsignatureCreateObjectV1Response?> ezsignsignatureCreateObjectV1(List<EzsignsignatureCreateObjectV1Request> ezsignsignatureCreateObjectV1Request,) async {
-    final response = await ezsignsignatureCreateObjectV1WithHttpInfo(ezsignsignatureCreateObjectV1Request,);
+  Future<EzsignsignatureCreateObjectV1Response?> ezsignsignatureCreateObjectV1(List<EzsignsignatureCreateObjectV1Request> ezsignsignatureCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignsignatureCreateObjectV1WithHttpInfo(ezsignsignatureCreateObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -81,7 +82,7 @@ class ObjectEzsignsignatureApi {
   /// Parameters:
   ///
   /// * [EzsignsignatureCreateObjectV2Request] ezsignsignatureCreateObjectV2Request (required):
-  Future<Response> ezsignsignatureCreateObjectV2WithHttpInfo(EzsignsignatureCreateObjectV2Request ezsignsignatureCreateObjectV2Request,) async {
+  Future<Response> ezsignsignatureCreateObjectV2WithHttpInfo(EzsignsignatureCreateObjectV2Request ezsignsignatureCreateObjectV2Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezsignsignature';
 
@@ -103,6 +104,7 @@ class ObjectEzsignsignatureApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -113,8 +115,8 @@ class ObjectEzsignsignatureApi {
   /// Parameters:
   ///
   /// * [EzsignsignatureCreateObjectV2Request] ezsignsignatureCreateObjectV2Request (required):
-  Future<EzsignsignatureCreateObjectV2Response?> ezsignsignatureCreateObjectV2(EzsignsignatureCreateObjectV2Request ezsignsignatureCreateObjectV2Request,) async {
-    final response = await ezsignsignatureCreateObjectV2WithHttpInfo(ezsignsignatureCreateObjectV2Request,);
+  Future<EzsignsignatureCreateObjectV2Response?> ezsignsignatureCreateObjectV2(EzsignsignatureCreateObjectV2Request ezsignsignatureCreateObjectV2Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignsignatureCreateObjectV2WithHttpInfo(ezsignsignatureCreateObjectV2Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -137,7 +139,7 @@ class ObjectEzsignsignatureApi {
   /// Parameters:
   ///
   /// * [EzsignsignatureCreateObjectV3Request] ezsignsignatureCreateObjectV3Request (required):
-  Future<Response> ezsignsignatureCreateObjectV3WithHttpInfo(EzsignsignatureCreateObjectV3Request ezsignsignatureCreateObjectV3Request,) async {
+  Future<Response> ezsignsignatureCreateObjectV3WithHttpInfo(EzsignsignatureCreateObjectV3Request ezsignsignatureCreateObjectV3Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/3/object/ezsignsignature';
 
@@ -159,6 +161,7 @@ class ObjectEzsignsignatureApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -169,8 +172,8 @@ class ObjectEzsignsignatureApi {
   /// Parameters:
   ///
   /// * [EzsignsignatureCreateObjectV3Request] ezsignsignatureCreateObjectV3Request (required):
-  Future<EzsignsignatureCreateObjectV3Response?> ezsignsignatureCreateObjectV3(EzsignsignatureCreateObjectV3Request ezsignsignatureCreateObjectV3Request,) async {
-    final response = await ezsignsignatureCreateObjectV3WithHttpInfo(ezsignsignatureCreateObjectV3Request,);
+  Future<EzsignsignatureCreateObjectV3Response?> ezsignsignatureCreateObjectV3(EzsignsignatureCreateObjectV3Request ezsignsignatureCreateObjectV3Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignsignatureCreateObjectV3WithHttpInfo(ezsignsignatureCreateObjectV3Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -193,7 +196,7 @@ class ObjectEzsignsignatureApi {
   /// Parameters:
   ///
   /// * [EzsignsignatureCreateObjectV4Request] ezsignsignatureCreateObjectV4Request (required):
-  Future<Response> ezsignsignatureCreateObjectV4WithHttpInfo(EzsignsignatureCreateObjectV4Request ezsignsignatureCreateObjectV4Request,) async {
+  Future<Response> ezsignsignatureCreateObjectV4WithHttpInfo(EzsignsignatureCreateObjectV4Request ezsignsignatureCreateObjectV4Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/4/object/ezsignsignature';
 
@@ -215,6 +218,7 @@ class ObjectEzsignsignatureApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -225,8 +229,8 @@ class ObjectEzsignsignatureApi {
   /// Parameters:
   ///
   /// * [EzsignsignatureCreateObjectV4Request] ezsignsignatureCreateObjectV4Request (required):
-  Future<EzsignsignatureCreateObjectV4Response?> ezsignsignatureCreateObjectV4(EzsignsignatureCreateObjectV4Request ezsignsignatureCreateObjectV4Request,) async {
-    final response = await ezsignsignatureCreateObjectV4WithHttpInfo(ezsignsignatureCreateObjectV4Request,);
+  Future<EzsignsignatureCreateObjectV4Response?> ezsignsignatureCreateObjectV4(EzsignsignatureCreateObjectV4Request ezsignsignatureCreateObjectV4Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignsignatureCreateObjectV4WithHttpInfo(ezsignsignatureCreateObjectV4Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -249,7 +253,7 @@ class ObjectEzsignsignatureApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignsignatureID (required):
-  Future<Response> ezsignsignatureDeleteObjectV1WithHttpInfo(int pkiEzsignsignatureID,) async {
+  Future<Response> ezsignsignatureDeleteObjectV1WithHttpInfo(int pkiEzsignsignatureID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignsignature/{pkiEzsignsignatureID}'
       .replaceAll('{pkiEzsignsignatureID}', pkiEzsignsignatureID.toString());
@@ -272,6 +276,7 @@ class ObjectEzsignsignatureApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -282,8 +287,8 @@ class ObjectEzsignsignatureApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignsignatureID (required):
-  Future<EzsignsignatureDeleteObjectV1Response?> ezsignsignatureDeleteObjectV1(int pkiEzsignsignatureID,) async {
-    final response = await ezsignsignatureDeleteObjectV1WithHttpInfo(pkiEzsignsignatureID,);
+  Future<EzsignsignatureDeleteObjectV1Response?> ezsignsignatureDeleteObjectV1(int pkiEzsignsignatureID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignsignatureDeleteObjectV1WithHttpInfo(pkiEzsignsignatureID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -308,7 +313,7 @@ class ObjectEzsignsignatureApi {
   /// * [int] pkiEzsignsignatureID (required):
   ///
   /// * [EzsignsignatureEditObjectV3Request] ezsignsignatureEditObjectV3Request (required):
-  Future<Response> ezsignsignatureEditObjectV3WithHttpInfo(int pkiEzsignsignatureID, EzsignsignatureEditObjectV3Request ezsignsignatureEditObjectV3Request,) async {
+  Future<Response> ezsignsignatureEditObjectV3WithHttpInfo(int pkiEzsignsignatureID, EzsignsignatureEditObjectV3Request ezsignsignatureEditObjectV3Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/3/object/ezsignsignature/{pkiEzsignsignatureID}'
       .replaceAll('{pkiEzsignsignatureID}', pkiEzsignsignatureID.toString());
@@ -331,6 +336,7 @@ class ObjectEzsignsignatureApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -343,8 +349,8 @@ class ObjectEzsignsignatureApi {
   /// * [int] pkiEzsignsignatureID (required):
   ///
   /// * [EzsignsignatureEditObjectV3Request] ezsignsignatureEditObjectV3Request (required):
-  Future<EzsignsignatureEditObjectV3Response?> ezsignsignatureEditObjectV3(int pkiEzsignsignatureID, EzsignsignatureEditObjectV3Request ezsignsignatureEditObjectV3Request,) async {
-    final response = await ezsignsignatureEditObjectV3WithHttpInfo(pkiEzsignsignatureID, ezsignsignatureEditObjectV3Request,);
+  Future<EzsignsignatureEditObjectV3Response?> ezsignsignatureEditObjectV3(int pkiEzsignsignatureID, EzsignsignatureEditObjectV3Request ezsignsignatureEditObjectV3Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignsignatureEditObjectV3WithHttpInfo(pkiEzsignsignatureID, ezsignsignatureEditObjectV3Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -365,7 +371,7 @@ class ObjectEzsignsignatureApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignsignatureID (required):
-  Future<Response> ezsignsignatureGetEzsignsignatureattachmentV1WithHttpInfo(int pkiEzsignsignatureID,) async {
+  Future<Response> ezsignsignatureGetEzsignsignatureattachmentV1WithHttpInfo(int pkiEzsignsignatureID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignsignature/{pkiEzsignsignatureID}/getEzsignsignatureattachment'
       .replaceAll('{pkiEzsignsignatureID}', pkiEzsignsignatureID.toString());
@@ -388,6 +394,7 @@ class ObjectEzsignsignatureApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -396,8 +403,8 @@ class ObjectEzsignsignatureApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignsignatureID (required):
-  Future<EzsignsignatureGetEzsignsignatureattachmentV1Response?> ezsignsignatureGetEzsignsignatureattachmentV1(int pkiEzsignsignatureID,) async {
-    final response = await ezsignsignatureGetEzsignsignatureattachmentV1WithHttpInfo(pkiEzsignsignatureID,);
+  Future<EzsignsignatureGetEzsignsignatureattachmentV1Response?> ezsignsignatureGetEzsignsignatureattachmentV1(int pkiEzsignsignatureID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignsignatureGetEzsignsignatureattachmentV1WithHttpInfo(pkiEzsignsignatureID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -416,7 +423,7 @@ class ObjectEzsignsignatureApi {
   /// Return all the Ezsignsignatures that can be signed by the current user
   ///
   /// Note: This method returns the HTTP [Response].
-  Future<Response> ezsignsignatureGetEzsignsignaturesAutomaticV1WithHttpInfo() async {
+  Future<Response> ezsignsignatureGetEzsignsignaturesAutomaticV1WithHttpInfo({ Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignsignature/getEzsignsignaturesAutomatic';
 
@@ -438,14 +445,15 @@ class ObjectEzsignsignatureApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
   /// Retrieve all automatic Ezsignsignatures
   ///
   /// Return all the Ezsignsignatures that can be signed by the current user
-  Future<EzsignsignatureGetEzsignsignaturesAutomaticV1Response?> ezsignsignatureGetEzsignsignaturesAutomaticV1() async {
-    final response = await ezsignsignatureGetEzsignsignaturesAutomaticV1WithHttpInfo();
+  Future<EzsignsignatureGetEzsignsignaturesAutomaticV1Response?> ezsignsignatureGetEzsignsignaturesAutomaticV1({ Future<void>? abortTrigger, }) async {
+    final response = await ezsignsignatureGetEzsignsignaturesAutomaticV1WithHttpInfo(abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -468,7 +476,7 @@ class ObjectEzsignsignatureApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignsignatureID (required):
-  Future<Response> ezsignsignatureGetObjectV4WithHttpInfo(int pkiEzsignsignatureID,) async {
+  Future<Response> ezsignsignatureGetObjectV4WithHttpInfo(int pkiEzsignsignatureID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/4/object/ezsignsignature/{pkiEzsignsignatureID}'
       .replaceAll('{pkiEzsignsignatureID}', pkiEzsignsignatureID.toString());
@@ -491,6 +499,7 @@ class ObjectEzsignsignatureApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -501,8 +510,8 @@ class ObjectEzsignsignatureApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignsignatureID (required):
-  Future<EzsignsignatureGetObjectV4Response?> ezsignsignatureGetObjectV4(int pkiEzsignsignatureID,) async {
-    final response = await ezsignsignatureGetObjectV4WithHttpInfo(pkiEzsignsignatureID,);
+  Future<EzsignsignatureGetObjectV4Response?> ezsignsignatureGetObjectV4(int pkiEzsignsignatureID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignsignatureGetObjectV4WithHttpInfo(pkiEzsignsignatureID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -527,7 +536,7 @@ class ObjectEzsignsignatureApi {
   /// * [int] pkiEzsignsignatureID (required):
   ///
   /// * [EzsignsignatureSignV1Request] ezsignsignatureSignV1Request (required):
-  Future<Response> ezsignsignatureSignV1WithHttpInfo(int pkiEzsignsignatureID, EzsignsignatureSignV1Request ezsignsignatureSignV1Request,) async {
+  Future<Response> ezsignsignatureSignV1WithHttpInfo(int pkiEzsignsignatureID, EzsignsignatureSignV1Request ezsignsignatureSignV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignsignature/{pkiEzsignsignatureID}/sign'
       .replaceAll('{pkiEzsignsignatureID}', pkiEzsignsignatureID.toString());
@@ -550,6 +559,7 @@ class ObjectEzsignsignatureApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -562,8 +572,8 @@ class ObjectEzsignsignatureApi {
   /// * [int] pkiEzsignsignatureID (required):
   ///
   /// * [EzsignsignatureSignV1Request] ezsignsignatureSignV1Request (required):
-  Future<EzsignsignatureSignV1Response?> ezsignsignatureSignV1(int pkiEzsignsignatureID, EzsignsignatureSignV1Request ezsignsignatureSignV1Request,) async {
-    final response = await ezsignsignatureSignV1WithHttpInfo(pkiEzsignsignatureID, ezsignsignatureSignV1Request,);
+  Future<EzsignsignatureSignV1Response?> ezsignsignatureSignV1(int pkiEzsignsignatureID, EzsignsignatureSignV1Request ezsignsignatureSignV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignsignatureSignV1WithHttpInfo(pkiEzsignsignatureID, ezsignsignatureSignV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

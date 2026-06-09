@@ -26,7 +26,7 @@ class ObjectEzsignimportfolderApi {
   ///
   /// * [int] pkiEzsignimportfolderID (required):
   ///   The unique ID of the Ezsignimportfolder
-  Future<Response> ezsignimportfolderDeleteObjectV1WithHttpInfo(int pkiEzsignimportfolderID,) async {
+  Future<Response> ezsignimportfolderDeleteObjectV1WithHttpInfo(int pkiEzsignimportfolderID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignimportfolder/{pkiEzsignimportfolderID}'
       .replaceAll('{pkiEzsignimportfolderID}', pkiEzsignimportfolderID.toString());
@@ -49,6 +49,7 @@ class ObjectEzsignimportfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -60,8 +61,8 @@ class ObjectEzsignimportfolderApi {
   ///
   /// * [int] pkiEzsignimportfolderID (required):
   ///   The unique ID of the Ezsignimportfolder
-  Future<EzsignimportfolderDeleteObjectV1Response?> ezsignimportfolderDeleteObjectV1(int pkiEzsignimportfolderID,) async {
-    final response = await ezsignimportfolderDeleteObjectV1WithHttpInfo(pkiEzsignimportfolderID,);
+  Future<EzsignimportfolderDeleteObjectV1Response?> ezsignimportfolderDeleteObjectV1(int pkiEzsignimportfolderID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignimportfolderDeleteObjectV1WithHttpInfo(pkiEzsignimportfolderID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -93,7 +94,7 @@ class ObjectEzsignimportfolderApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<Response> ezsignimportfolderGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
+  Future<Response> ezsignimportfolderGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignimportfolder/getList';
 
@@ -132,6 +133,7 @@ class ObjectEzsignimportfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -151,8 +153,8 @@ class ObjectEzsignimportfolderApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<EzsignimportfolderGetListV1Response?> ezsignimportfolderGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
-    final response = await ezsignimportfolderGetListV1WithHttpInfo( eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, );
+  Future<EzsignimportfolderGetListV1Response?> ezsignimportfolderGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
+    final response = await ezsignimportfolderGetListV1WithHttpInfo(eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -176,7 +178,7 @@ class ObjectEzsignimportfolderApi {
   ///
   /// * [int] pkiEzsignimportfolderID (required):
   ///   The unique ID of the Ezsignimportfolder
-  Future<Response> ezsignimportfolderGetObjectV2WithHttpInfo(int pkiEzsignimportfolderID,) async {
+  Future<Response> ezsignimportfolderGetObjectV2WithHttpInfo(int pkiEzsignimportfolderID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezsignimportfolder/{pkiEzsignimportfolderID}'
       .replaceAll('{pkiEzsignimportfolderID}', pkiEzsignimportfolderID.toString());
@@ -199,6 +201,7 @@ class ObjectEzsignimportfolderApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -210,8 +213,8 @@ class ObjectEzsignimportfolderApi {
   ///
   /// * [int] pkiEzsignimportfolderID (required):
   ///   The unique ID of the Ezsignimportfolder
-  Future<EzsignimportfolderGetObjectV2Response?> ezsignimportfolderGetObjectV2(int pkiEzsignimportfolderID,) async {
-    final response = await ezsignimportfolderGetObjectV2WithHttpInfo(pkiEzsignimportfolderID,);
+  Future<EzsignimportfolderGetObjectV2Response?> ezsignimportfolderGetObjectV2(int pkiEzsignimportfolderID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignimportfolderGetObjectV2WithHttpInfo(pkiEzsignimportfolderID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

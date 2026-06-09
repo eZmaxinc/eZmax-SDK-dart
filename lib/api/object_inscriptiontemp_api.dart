@@ -25,7 +25,7 @@ class ObjectInscriptiontempApi {
   /// Parameters:
   ///
   /// * [int] pkiInscriptiontempID (required):
-  Future<Response> inscriptiontempGetCommunicationCountV1WithHttpInfo(int pkiInscriptiontempID,) async {
+  Future<Response> inscriptiontempGetCommunicationCountV1WithHttpInfo(int pkiInscriptiontempID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationCount'
       .replaceAll('{pkiInscriptiontempID}', pkiInscriptiontempID.toString());
@@ -48,6 +48,7 @@ class ObjectInscriptiontempApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -58,8 +59,8 @@ class ObjectInscriptiontempApi {
   /// Parameters:
   ///
   /// * [int] pkiInscriptiontempID (required):
-  Future<InscriptiontempGetCommunicationCountV1Response?> inscriptiontempGetCommunicationCountV1(int pkiInscriptiontempID,) async {
-    final response = await inscriptiontempGetCommunicationCountV1WithHttpInfo(pkiInscriptiontempID,);
+  Future<InscriptiontempGetCommunicationCountV1Response?> inscriptiontempGetCommunicationCountV1(int pkiInscriptiontempID, { Future<void>? abortTrigger, }) async {
+    final response = await inscriptiontempGetCommunicationCountV1WithHttpInfo(pkiInscriptiontempID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -82,7 +83,7 @@ class ObjectInscriptiontempApi {
   /// Parameters:
   ///
   /// * [int] pkiInscriptiontempID (required):
-  Future<Response> inscriptiontempGetCommunicationListV1WithHttpInfo(int pkiInscriptiontempID,) async {
+  Future<Response> inscriptiontempGetCommunicationListV1WithHttpInfo(int pkiInscriptiontempID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationList'
       .replaceAll('{pkiInscriptiontempID}', pkiInscriptiontempID.toString());
@@ -105,6 +106,7 @@ class ObjectInscriptiontempApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -115,8 +117,8 @@ class ObjectInscriptiontempApi {
   /// Parameters:
   ///
   /// * [int] pkiInscriptiontempID (required):
-  Future<InscriptiontempGetCommunicationListV1Response?> inscriptiontempGetCommunicationListV1(int pkiInscriptiontempID,) async {
-    final response = await inscriptiontempGetCommunicationListV1WithHttpInfo(pkiInscriptiontempID,);
+  Future<InscriptiontempGetCommunicationListV1Response?> inscriptiontempGetCommunicationListV1(int pkiInscriptiontempID, { Future<void>? abortTrigger, }) async {
+    final response = await inscriptiontempGetCommunicationListV1WithHttpInfo(pkiInscriptiontempID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -139,7 +141,7 @@ class ObjectInscriptiontempApi {
   /// Parameters:
   ///
   /// * [int] pkiInscriptiontempID (required):
-  Future<Response> inscriptiontempGetCommunicationrecipientsV1WithHttpInfo(int pkiInscriptiontempID,) async {
+  Future<Response> inscriptiontempGetCommunicationrecipientsV1WithHttpInfo(int pkiInscriptiontempID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationrecipients'
       .replaceAll('{pkiInscriptiontempID}', pkiInscriptiontempID.toString());
@@ -162,6 +164,7 @@ class ObjectInscriptiontempApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -172,8 +175,8 @@ class ObjectInscriptiontempApi {
   /// Parameters:
   ///
   /// * [int] pkiInscriptiontempID (required):
-  Future<InscriptiontempGetCommunicationrecipientsV1Response?> inscriptiontempGetCommunicationrecipientsV1(int pkiInscriptiontempID,) async {
-    final response = await inscriptiontempGetCommunicationrecipientsV1WithHttpInfo(pkiInscriptiontempID,);
+  Future<InscriptiontempGetCommunicationrecipientsV1Response?> inscriptiontempGetCommunicationrecipientsV1(int pkiInscriptiontempID, { Future<void>? abortTrigger, }) async {
+    final response = await inscriptiontempGetCommunicationrecipientsV1WithHttpInfo(pkiInscriptiontempID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -196,7 +199,7 @@ class ObjectInscriptiontempApi {
   /// Parameters:
   ///
   /// * [int] pkiInscriptiontempID (required):
-  Future<Response> inscriptiontempGetCommunicationsendersV1WithHttpInfo(int pkiInscriptiontempID,) async {
+  Future<Response> inscriptiontempGetCommunicationsendersV1WithHttpInfo(int pkiInscriptiontempID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationsenders'
       .replaceAll('{pkiInscriptiontempID}', pkiInscriptiontempID.toString());
@@ -219,6 +222,7 @@ class ObjectInscriptiontempApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -229,8 +233,8 @@ class ObjectInscriptiontempApi {
   /// Parameters:
   ///
   /// * [int] pkiInscriptiontempID (required):
-  Future<InscriptiontempGetCommunicationsendersV1Response?> inscriptiontempGetCommunicationsendersV1(int pkiInscriptiontempID,) async {
-    final response = await inscriptiontempGetCommunicationsendersV1WithHttpInfo(pkiInscriptiontempID,);
+  Future<InscriptiontempGetCommunicationsendersV1Response?> inscriptiontempGetCommunicationsendersV1(int pkiInscriptiontempID, { Future<void>? abortTrigger, }) async {
+    final response = await inscriptiontempGetCommunicationsendersV1WithHttpInfo(pkiInscriptiontempID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -262,7 +266,7 @@ class ObjectInscriptiontempApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<Response> inscriptiontempGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
+  Future<Response> inscriptiontempGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/inscriptiontemp/getList';
 
@@ -301,6 +305,7 @@ class ObjectInscriptiontempApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -320,8 +325,8 @@ class ObjectInscriptiontempApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<InscriptiontempGetListV1Response?> inscriptiontempGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
-    final response = await inscriptiontempGetListV1WithHttpInfo( eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, );
+  Future<InscriptiontempGetListV1Response?> inscriptiontempGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
+    final response = await inscriptiontempGetListV1WithHttpInfo(eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -346,7 +351,7 @@ class ObjectInscriptiontempApi {
   /// * [int] pkiInscriptiontempID (required):
   ///
   /// * [InscriptiontempImportIntoEDMV1Request] inscriptiontempImportIntoEDMV1Request (required):
-  Future<Response> inscriptiontempImportIntoEDMV1WithHttpInfo(int pkiInscriptiontempID, InscriptiontempImportIntoEDMV1Request inscriptiontempImportIntoEDMV1Request,) async {
+  Future<Response> inscriptiontempImportIntoEDMV1WithHttpInfo(int pkiInscriptiontempID, InscriptiontempImportIntoEDMV1Request inscriptiontempImportIntoEDMV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/inscriptiontemp/{pkiInscriptiontempID}/importIntoEDM'
       .replaceAll('{pkiInscriptiontempID}', pkiInscriptiontempID.toString());
@@ -369,6 +374,7 @@ class ObjectInscriptiontempApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -381,8 +387,8 @@ class ObjectInscriptiontempApi {
   /// * [int] pkiInscriptiontempID (required):
   ///
   /// * [InscriptiontempImportIntoEDMV1Request] inscriptiontempImportIntoEDMV1Request (required):
-  Future<InscriptiontempImportIntoEDMV1Response?> inscriptiontempImportIntoEDMV1(int pkiInscriptiontempID, InscriptiontempImportIntoEDMV1Request inscriptiontempImportIntoEDMV1Request,) async {
-    final response = await inscriptiontempImportIntoEDMV1WithHttpInfo(pkiInscriptiontempID, inscriptiontempImportIntoEDMV1Request,);
+  Future<InscriptiontempImportIntoEDMV1Response?> inscriptiontempImportIntoEDMV1(int pkiInscriptiontempID, InscriptiontempImportIntoEDMV1Request inscriptiontempImportIntoEDMV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await inscriptiontempImportIntoEDMV1WithHttpInfo(pkiInscriptiontempID, inscriptiontempImportIntoEDMV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

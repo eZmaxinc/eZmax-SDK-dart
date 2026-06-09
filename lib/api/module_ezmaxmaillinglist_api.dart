@@ -26,7 +26,7 @@ class ModuleEzmaxmaillinglistApi {
   ///
   /// * [EzmaxmaillinglistSubscribeV1Request] ezmaxmaillinglistSubscribeV1Request (required):
   ///   
-  Future<Response> ezmaxmaillinglistSubscribeV1WithHttpInfo(EzmaxmaillinglistSubscribeV1Request ezmaxmaillinglistSubscribeV1Request,) async {
+  Future<Response> ezmaxmaillinglistSubscribeV1WithHttpInfo(EzmaxmaillinglistSubscribeV1Request ezmaxmaillinglistSubscribeV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/module/ezmaxmaillinglist/subscribe';
 
@@ -48,6 +48,7 @@ class ModuleEzmaxmaillinglistApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -59,8 +60,8 @@ class ModuleEzmaxmaillinglistApi {
   ///
   /// * [EzmaxmaillinglistSubscribeV1Request] ezmaxmaillinglistSubscribeV1Request (required):
   ///   
-  Future<EzmaxmaillinglistSubscribeV1Response?> ezmaxmaillinglistSubscribeV1(EzmaxmaillinglistSubscribeV1Request ezmaxmaillinglistSubscribeV1Request,) async {
-    final response = await ezmaxmaillinglistSubscribeV1WithHttpInfo(ezmaxmaillinglistSubscribeV1Request,);
+  Future<EzmaxmaillinglistSubscribeV1Response?> ezmaxmaillinglistSubscribeV1(EzmaxmaillinglistSubscribeV1Request ezmaxmaillinglistSubscribeV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezmaxmaillinglistSubscribeV1WithHttpInfo(ezmaxmaillinglistSubscribeV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

@@ -25,7 +25,7 @@ class ObjectSignatureApi {
   /// Parameters:
   ///
   /// * [SignatureCreateObjectV1Request] signatureCreateObjectV1Request (required):
-  Future<Response> signatureCreateObjectV1WithHttpInfo(SignatureCreateObjectV1Request signatureCreateObjectV1Request,) async {
+  Future<Response> signatureCreateObjectV1WithHttpInfo(SignatureCreateObjectV1Request signatureCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/signature';
 
@@ -47,6 +47,7 @@ class ObjectSignatureApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -57,8 +58,8 @@ class ObjectSignatureApi {
   /// Parameters:
   ///
   /// * [SignatureCreateObjectV1Request] signatureCreateObjectV1Request (required):
-  Future<SignatureCreateObjectV1Response?> signatureCreateObjectV1(SignatureCreateObjectV1Request signatureCreateObjectV1Request,) async {
-    final response = await signatureCreateObjectV1WithHttpInfo(signatureCreateObjectV1Request,);
+  Future<SignatureCreateObjectV1Response?> signatureCreateObjectV1(SignatureCreateObjectV1Request signatureCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await signatureCreateObjectV1WithHttpInfo(signatureCreateObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -82,7 +83,7 @@ class ObjectSignatureApi {
   ///
   /// * [int] pkiSignatureID (required):
   ///   The unique ID of the Signature
-  Future<Response> signatureDeleteObjectV1WithHttpInfo(int pkiSignatureID,) async {
+  Future<Response> signatureDeleteObjectV1WithHttpInfo(int pkiSignatureID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/signature/{pkiSignatureID}'
       .replaceAll('{pkiSignatureID}', pkiSignatureID.toString());
@@ -105,6 +106,7 @@ class ObjectSignatureApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -116,8 +118,8 @@ class ObjectSignatureApi {
   ///
   /// * [int] pkiSignatureID (required):
   ///   The unique ID of the Signature
-  Future<SignatureDeleteObjectV1Response?> signatureDeleteObjectV1(int pkiSignatureID,) async {
-    final response = await signatureDeleteObjectV1WithHttpInfo(pkiSignatureID,);
+  Future<SignatureDeleteObjectV1Response?> signatureDeleteObjectV1(int pkiSignatureID, { Future<void>? abortTrigger, }) async {
+    final response = await signatureDeleteObjectV1WithHttpInfo(pkiSignatureID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -143,7 +145,7 @@ class ObjectSignatureApi {
   ///   The unique ID of the Signature
   ///
   /// * [SignatureEditObjectV1Request] signatureEditObjectV1Request (required):
-  Future<Response> signatureEditObjectV1WithHttpInfo(int pkiSignatureID, SignatureEditObjectV1Request signatureEditObjectV1Request,) async {
+  Future<Response> signatureEditObjectV1WithHttpInfo(int pkiSignatureID, SignatureEditObjectV1Request signatureEditObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/signature/{pkiSignatureID}'
       .replaceAll('{pkiSignatureID}', pkiSignatureID.toString());
@@ -166,6 +168,7 @@ class ObjectSignatureApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -179,8 +182,8 @@ class ObjectSignatureApi {
   ///   The unique ID of the Signature
   ///
   /// * [SignatureEditObjectV1Request] signatureEditObjectV1Request (required):
-  Future<SignatureEditObjectV1Response?> signatureEditObjectV1(int pkiSignatureID, SignatureEditObjectV1Request signatureEditObjectV1Request,) async {
-    final response = await signatureEditObjectV1WithHttpInfo(pkiSignatureID, signatureEditObjectV1Request,);
+  Future<SignatureEditObjectV1Response?> signatureEditObjectV1(int pkiSignatureID, SignatureEditObjectV1Request signatureEditObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await signatureEditObjectV1WithHttpInfo(pkiSignatureID, signatureEditObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -204,7 +207,7 @@ class ObjectSignatureApi {
   ///
   /// * [int] pkiSignatureID (required):
   ///   The unique ID of the Signature
-  Future<Response> signatureGetObjectV3WithHttpInfo(int pkiSignatureID,) async {
+  Future<Response> signatureGetObjectV3WithHttpInfo(int pkiSignatureID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/3/object/signature/{pkiSignatureID}'
       .replaceAll('{pkiSignatureID}', pkiSignatureID.toString());
@@ -227,6 +230,7 @@ class ObjectSignatureApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -238,8 +242,8 @@ class ObjectSignatureApi {
   ///
   /// * [int] pkiSignatureID (required):
   ///   The unique ID of the Signature
-  Future<SignatureGetObjectV3Response?> signatureGetObjectV3(int pkiSignatureID,) async {
-    final response = await signatureGetObjectV3WithHttpInfo(pkiSignatureID,);
+  Future<SignatureGetObjectV3Response?> signatureGetObjectV3(int pkiSignatureID, { Future<void>? abortTrigger, }) async {
+    final response = await signatureGetObjectV3WithHttpInfo(pkiSignatureID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -263,7 +267,7 @@ class ObjectSignatureApi {
   ///
   /// * [int] pkiSignatureID (required):
   ///   The unique ID of the Signature
-  Future<Response> signatureGetSVGInitialsV1WithHttpInfo(int pkiSignatureID,) async {
+  Future<Response> signatureGetSVGInitialsV1WithHttpInfo(int pkiSignatureID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/signature/{pkiSignatureID}/getSVGInitials'
       .replaceAll('{pkiSignatureID}', pkiSignatureID.toString());
@@ -286,6 +290,7 @@ class ObjectSignatureApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -297,8 +302,8 @@ class ObjectSignatureApi {
   ///
   /// * [int] pkiSignatureID (required):
   ///   The unique ID of the Signature
-  Future<void> signatureGetSVGInitialsV1(int pkiSignatureID,) async {
-    final response = await signatureGetSVGInitialsV1WithHttpInfo(pkiSignatureID,);
+  Future<void> signatureGetSVGInitialsV1(int pkiSignatureID, { Future<void>? abortTrigger, }) async {
+    final response = await signatureGetSVGInitialsV1WithHttpInfo(pkiSignatureID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -314,7 +319,7 @@ class ObjectSignatureApi {
   ///
   /// * [int] pkiSignatureID (required):
   ///   The unique ID of the Signature
-  Future<Response> signatureGetSVGSignatureV1WithHttpInfo(int pkiSignatureID,) async {
+  Future<Response> signatureGetSVGSignatureV1WithHttpInfo(int pkiSignatureID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/signature/{pkiSignatureID}/getSVGSignature'
       .replaceAll('{pkiSignatureID}', pkiSignatureID.toString());
@@ -337,6 +342,7 @@ class ObjectSignatureApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -348,8 +354,8 @@ class ObjectSignatureApi {
   ///
   /// * [int] pkiSignatureID (required):
   ///   The unique ID of the Signature
-  Future<void> signatureGetSVGSignatureV1(int pkiSignatureID,) async {
-    final response = await signatureGetSVGSignatureV1WithHttpInfo(pkiSignatureID,);
+  Future<void> signatureGetSVGSignatureV1(int pkiSignatureID, { Future<void>? abortTrigger, }) async {
+    final response = await signatureGetSVGSignatureV1WithHttpInfo(pkiSignatureID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

@@ -34,7 +34,7 @@ class ObjectLeadApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<Response> leadGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
+  Future<Response> leadGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/lead/getList';
 
@@ -73,6 +73,7 @@ class ObjectLeadApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -92,8 +93,8 @@ class ObjectLeadApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<LeadGetListV1Response?> leadGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
-    final response = await leadGetListV1WithHttpInfo( eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, );
+  Future<LeadGetListV1Response?> leadGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
+    final response = await leadGetListV1WithHttpInfo(eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -118,7 +119,7 @@ class ObjectLeadApi {
   /// * [int] pkiLeadID (required):
   ///
   /// * [LeadImportIntoEDMV1Request] leadImportIntoEDMV1Request (required):
-  Future<Response> leadImportIntoEDMV1WithHttpInfo(int pkiLeadID, LeadImportIntoEDMV1Request leadImportIntoEDMV1Request,) async {
+  Future<Response> leadImportIntoEDMV1WithHttpInfo(int pkiLeadID, LeadImportIntoEDMV1Request leadImportIntoEDMV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/lead/{pkiLeadID}/importIntoEDM'
       .replaceAll('{pkiLeadID}', pkiLeadID.toString());
@@ -141,6 +142,7 @@ class ObjectLeadApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -153,8 +155,8 @@ class ObjectLeadApi {
   /// * [int] pkiLeadID (required):
   ///
   /// * [LeadImportIntoEDMV1Request] leadImportIntoEDMV1Request (required):
-  Future<LeadImportIntoEDMV1Response?> leadImportIntoEDMV1(int pkiLeadID, LeadImportIntoEDMV1Request leadImportIntoEDMV1Request,) async {
-    final response = await leadImportIntoEDMV1WithHttpInfo(pkiLeadID, leadImportIntoEDMV1Request,);
+  Future<LeadImportIntoEDMV1Response?> leadImportIntoEDMV1(int pkiLeadID, LeadImportIntoEDMV1Request leadImportIntoEDMV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await leadImportIntoEDMV1WithHttpInfo(pkiLeadID, leadImportIntoEDMV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

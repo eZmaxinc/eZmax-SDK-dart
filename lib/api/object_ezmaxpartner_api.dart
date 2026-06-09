@@ -32,7 +32,7 @@ class ObjectEzmaxpartnerApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<Response> ezmaxpartnerGetCustomDeveloppersV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
+  Future<Response> ezmaxpartnerGetCustomDeveloppersV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezmaxpartner/getCustomDeveloppers';
 
@@ -71,6 +71,7 @@ class ObjectEzmaxpartnerApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -88,8 +89,8 @@ class ObjectEzmaxpartnerApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<EzmaxpartnerGetCustomDeveloppersV1Response?> ezmaxpartnerGetCustomDeveloppersV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
-    final response = await ezmaxpartnerGetCustomDeveloppersV1WithHttpInfo( eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, );
+  Future<EzmaxpartnerGetCustomDeveloppersV1Response?> ezmaxpartnerGetCustomDeveloppersV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
+    final response = await ezmaxpartnerGetCustomDeveloppersV1WithHttpInfo(eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -113,7 +114,7 @@ class ObjectEzmaxpartnerApi {
   ///
   /// * [int] pkiEzmaxpartnerID (required):
   ///   The unique ID of the Ezmaxpartner
-  Future<Response> ezmaxpartnerGetObjectV2WithHttpInfo(int pkiEzmaxpartnerID,) async {
+  Future<Response> ezmaxpartnerGetObjectV2WithHttpInfo(int pkiEzmaxpartnerID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezmaxpartner/{pkiEzmaxpartnerID}'
       .replaceAll('{pkiEzmaxpartnerID}', pkiEzmaxpartnerID.toString());
@@ -136,6 +137,7 @@ class ObjectEzmaxpartnerApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -147,8 +149,8 @@ class ObjectEzmaxpartnerApi {
   ///
   /// * [int] pkiEzmaxpartnerID (required):
   ///   The unique ID of the Ezmaxpartner
-  Future<EzmaxpartnerGetObjectV2Response?> ezmaxpartnerGetObjectV2(int pkiEzmaxpartnerID,) async {
-    final response = await ezmaxpartnerGetObjectV2WithHttpInfo(pkiEzmaxpartnerID,);
+  Future<EzmaxpartnerGetObjectV2Response?> ezmaxpartnerGetObjectV2(int pkiEzmaxpartnerID, { Future<void>? abortTrigger, }) async {
+    final response = await ezmaxpartnerGetObjectV2WithHttpInfo(pkiEzmaxpartnerID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

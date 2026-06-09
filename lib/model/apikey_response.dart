@@ -15,6 +15,7 @@ class ApikeyResponse {
   ApikeyResponse({
     required this.pkiApikeyID,
     required this.fkiUserID,
+    this.fkiEzmaxpartnerproductstageID,
     required this.objApikeyDescription,
     required this.objContactName,
     this.sApikeyApikey,
@@ -33,6 +34,18 @@ class ApikeyResponse {
   ///
   /// Minimum value: 0
   int fkiUserID;
+
+  /// The unique ID of the Ezmaxpartnerproductstage
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 255
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiEzmaxpartnerproductstageID;
 
   MultilingualApikeyDescription objApikeyDescription;
 
@@ -74,6 +87,7 @@ class ApikeyResponse {
   bool operator ==(Object other) => identical(this, other) || other is ApikeyResponse &&
     other.pkiApikeyID == pkiApikeyID &&
     other.fkiUserID == fkiUserID &&
+    other.fkiEzmaxpartnerproductstageID == fkiEzmaxpartnerproductstageID &&
     other.objApikeyDescription == objApikeyDescription &&
     other.objContactName == objContactName &&
     other.sApikeyApikey == sApikeyApikey &&
@@ -87,6 +101,7 @@ class ApikeyResponse {
     // ignore: unnecessary_parenthesis
     (pkiApikeyID.hashCode) +
     (fkiUserID.hashCode) +
+    (fkiEzmaxpartnerproductstageID == null ? 0 : fkiEzmaxpartnerproductstageID!.hashCode) +
     (objApikeyDescription.hashCode) +
     (objContactName.hashCode) +
     (sApikeyApikey == null ? 0 : sApikeyApikey!.hashCode) +
@@ -96,12 +111,17 @@ class ApikeyResponse {
     (objAudit.hashCode);
 
   @override
-  String toString() => 'ApikeyResponse[pkiApikeyID=$pkiApikeyID, fkiUserID=$fkiUserID, objApikeyDescription=$objApikeyDescription, objContactName=$objContactName, sApikeyApikey=$sApikeyApikey, sApikeySecret=$sApikeySecret, bApikeyIsactive=$bApikeyIsactive, bApikeyIssigned=$bApikeyIssigned, objAudit=$objAudit]';
+  String toString() => 'ApikeyResponse[pkiApikeyID=$pkiApikeyID, fkiUserID=$fkiUserID, fkiEzmaxpartnerproductstageID=$fkiEzmaxpartnerproductstageID, objApikeyDescription=$objApikeyDescription, objContactName=$objContactName, sApikeyApikey=$sApikeyApikey, sApikeySecret=$sApikeySecret, bApikeyIsactive=$bApikeyIsactive, bApikeyIssigned=$bApikeyIssigned, objAudit=$objAudit]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiApikeyID'] = this.pkiApikeyID;
       json[r'fkiUserID'] = this.fkiUserID;
+    if (this.fkiEzmaxpartnerproductstageID != null) {
+      json[r'fkiEzmaxpartnerproductstageID'] = this.fkiEzmaxpartnerproductstageID;
+    } else {
+      json[r'fkiEzmaxpartnerproductstageID'] = null;
+    }
       json[r'objApikeyDescription'] = this.objApikeyDescription;
       json[r'objContactName'] = this.objContactName;
     if (this.sApikeyApikey != null) {
@@ -153,6 +173,7 @@ class ApikeyResponse {
       return ApikeyResponse(
         pkiApikeyID: mapValueOfType<int>(json, r'pkiApikeyID')!,
         fkiUserID: mapValueOfType<int>(json, r'fkiUserID')!,
+        fkiEzmaxpartnerproductstageID: mapValueOfType<int>(json, r'fkiEzmaxpartnerproductstageID'),
         objApikeyDescription: MultilingualApikeyDescription.fromJson(json[r'objApikeyDescription'])!,
         objContactName: CustomContactNameResponse.fromJson(json[r'objContactName'])!,
         sApikeyApikey: mapValueOfType<String>(json, r'sApikeyApikey'),

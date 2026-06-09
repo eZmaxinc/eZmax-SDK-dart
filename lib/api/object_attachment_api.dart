@@ -25,7 +25,7 @@ class ObjectAttachmentApi {
   /// Parameters:
   ///
   /// * [int] pkiAttachmentID (required):
-  Future<Response> attachmentDownloadV1WithHttpInfo(int pkiAttachmentID,) async {
+  Future<Response> attachmentDownloadV1WithHttpInfo(int pkiAttachmentID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/attachment/{pkiAttachmentID}/download'
       .replaceAll('{pkiAttachmentID}', pkiAttachmentID.toString());
@@ -48,6 +48,7 @@ class ObjectAttachmentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -58,8 +59,8 @@ class ObjectAttachmentApi {
   /// Parameters:
   ///
   /// * [int] pkiAttachmentID (required):
-  Future<void> attachmentDownloadV1(int pkiAttachmentID,) async {
-    final response = await attachmentDownloadV1WithHttpInfo(pkiAttachmentID,);
+  Future<void> attachmentDownloadV1(int pkiAttachmentID, { Future<void>? abortTrigger, }) async {
+    final response = await attachmentDownloadV1WithHttpInfo(pkiAttachmentID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -74,7 +75,7 @@ class ObjectAttachmentApi {
   /// Parameters:
   ///
   /// * [int] pkiAttachmentID (required):
-  Future<Response> attachmentGetAttachmentlogsV1WithHttpInfo(int pkiAttachmentID,) async {
+  Future<Response> attachmentGetAttachmentlogsV1WithHttpInfo(int pkiAttachmentID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/attachment/{pkiAttachmentID}/getAttachmentlogs'
       .replaceAll('{pkiAttachmentID}', pkiAttachmentID.toString());
@@ -97,6 +98,7 @@ class ObjectAttachmentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -107,8 +109,8 @@ class ObjectAttachmentApi {
   /// Parameters:
   ///
   /// * [int] pkiAttachmentID (required):
-  Future<AttachmentGetAttachmentlogsV1Response?> attachmentGetAttachmentlogsV1(int pkiAttachmentID,) async {
-    final response = await attachmentGetAttachmentlogsV1WithHttpInfo(pkiAttachmentID,);
+  Future<AttachmentGetAttachmentlogsV1Response?> attachmentGetAttachmentlogsV1(int pkiAttachmentID, { Future<void>? abortTrigger, }) async {
+    final response = await attachmentGetAttachmentlogsV1WithHttpInfo(pkiAttachmentID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

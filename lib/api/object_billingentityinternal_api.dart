@@ -25,7 +25,7 @@ class ObjectBillingentityinternalApi {
   /// Parameters:
   ///
   /// * [BillingentityinternalCreateObjectV1Request] billingentityinternalCreateObjectV1Request (required):
-  Future<Response> billingentityinternalCreateObjectV1WithHttpInfo(BillingentityinternalCreateObjectV1Request billingentityinternalCreateObjectV1Request,) async {
+  Future<Response> billingentityinternalCreateObjectV1WithHttpInfo(BillingentityinternalCreateObjectV1Request billingentityinternalCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/billingentityinternal';
 
@@ -47,6 +47,7 @@ class ObjectBillingentityinternalApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -57,8 +58,8 @@ class ObjectBillingentityinternalApi {
   /// Parameters:
   ///
   /// * [BillingentityinternalCreateObjectV1Request] billingentityinternalCreateObjectV1Request (required):
-  Future<BillingentityinternalCreateObjectV1Response?> billingentityinternalCreateObjectV1(BillingentityinternalCreateObjectV1Request billingentityinternalCreateObjectV1Request,) async {
-    final response = await billingentityinternalCreateObjectV1WithHttpInfo(billingentityinternalCreateObjectV1Request,);
+  Future<BillingentityinternalCreateObjectV1Response?> billingentityinternalCreateObjectV1(BillingentityinternalCreateObjectV1Request billingentityinternalCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await billingentityinternalCreateObjectV1WithHttpInfo(billingentityinternalCreateObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -83,7 +84,7 @@ class ObjectBillingentityinternalApi {
   /// * [int] pkiBillingentityinternalID (required):
   ///
   /// * [BillingentityinternalEditObjectV1Request] billingentityinternalEditObjectV1Request (required):
-  Future<Response> billingentityinternalEditObjectV1WithHttpInfo(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request,) async {
+  Future<Response> billingentityinternalEditObjectV1WithHttpInfo(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/billingentityinternal/{pkiBillingentityinternalID}'
       .replaceAll('{pkiBillingentityinternalID}', pkiBillingentityinternalID.toString());
@@ -106,6 +107,7 @@ class ObjectBillingentityinternalApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -118,8 +120,8 @@ class ObjectBillingentityinternalApi {
   /// * [int] pkiBillingentityinternalID (required):
   ///
   /// * [BillingentityinternalEditObjectV1Request] billingentityinternalEditObjectV1Request (required):
-  Future<BillingentityinternalEditObjectV1Response?> billingentityinternalEditObjectV1(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request,) async {
-    final response = await billingentityinternalEditObjectV1WithHttpInfo(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request,);
+  Future<BillingentityinternalEditObjectV1Response?> billingentityinternalEditObjectV1(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await billingentityinternalEditObjectV1WithHttpInfo(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -151,7 +153,7 @@ class ObjectBillingentityinternalApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<Response> billingentityinternalGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
+  Future<Response> billingentityinternalGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/billingentityinternal/getAutocomplete/{sSelector}'
       .replaceAll('{sSelector}', sSelector);
@@ -185,6 +187,7 @@ class ObjectBillingentityinternalApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -204,8 +207,8 @@ class ObjectBillingentityinternalApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<BillingentityinternalGetAutocompleteV2Response?> billingentityinternalGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
-    final response = await billingentityinternalGetAutocompleteV2WithHttpInfo(sSelector,  eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, );
+  Future<BillingentityinternalGetAutocompleteV2Response?> billingentityinternalGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
+    final response = await billingentityinternalGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -237,7 +240,7 @@ class ObjectBillingentityinternalApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<Response> billingentityinternalGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
+  Future<Response> billingentityinternalGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/billingentityinternal/getList';
 
@@ -276,6 +279,7 @@ class ObjectBillingentityinternalApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -295,8 +299,8 @@ class ObjectBillingentityinternalApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<BillingentityinternalGetListV1Response?> billingentityinternalGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
-    final response = await billingentityinternalGetListV1WithHttpInfo( eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, );
+  Future<BillingentityinternalGetListV1Response?> billingentityinternalGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
+    final response = await billingentityinternalGetListV1WithHttpInfo(eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -319,7 +323,7 @@ class ObjectBillingentityinternalApi {
   /// Parameters:
   ///
   /// * [int] pkiBillingentityinternalID (required):
-  Future<Response> billingentityinternalGetObjectV2WithHttpInfo(int pkiBillingentityinternalID,) async {
+  Future<Response> billingentityinternalGetObjectV2WithHttpInfo(int pkiBillingentityinternalID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/billingentityinternal/{pkiBillingentityinternalID}'
       .replaceAll('{pkiBillingentityinternalID}', pkiBillingentityinternalID.toString());
@@ -342,6 +346,7 @@ class ObjectBillingentityinternalApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -352,8 +357,8 @@ class ObjectBillingentityinternalApi {
   /// Parameters:
   ///
   /// * [int] pkiBillingentityinternalID (required):
-  Future<BillingentityinternalGetObjectV2Response?> billingentityinternalGetObjectV2(int pkiBillingentityinternalID,) async {
-    final response = await billingentityinternalGetObjectV2WithHttpInfo(pkiBillingentityinternalID,);
+  Future<BillingentityinternalGetObjectV2Response?> billingentityinternalGetObjectV2(int pkiBillingentityinternalID, { Future<void>? abortTrigger, }) async {
+    final response = await billingentityinternalGetObjectV2WithHttpInfo(pkiBillingentityinternalID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

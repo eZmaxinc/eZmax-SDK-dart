@@ -25,7 +25,7 @@ class ObjectDiscussionmessageApi {
   /// Parameters:
   ///
   /// * [DiscussionmessageCreateObjectV1Request] discussionmessageCreateObjectV1Request (required):
-  Future<Response> discussionmessageCreateObjectV1WithHttpInfo(DiscussionmessageCreateObjectV1Request discussionmessageCreateObjectV1Request,) async {
+  Future<Response> discussionmessageCreateObjectV1WithHttpInfo(DiscussionmessageCreateObjectV1Request discussionmessageCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/discussionmessage';
 
@@ -47,6 +47,7 @@ class ObjectDiscussionmessageApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -57,8 +58,8 @@ class ObjectDiscussionmessageApi {
   /// Parameters:
   ///
   /// * [DiscussionmessageCreateObjectV1Request] discussionmessageCreateObjectV1Request (required):
-  Future<DiscussionmessageCreateObjectV1Response?> discussionmessageCreateObjectV1(DiscussionmessageCreateObjectV1Request discussionmessageCreateObjectV1Request,) async {
-    final response = await discussionmessageCreateObjectV1WithHttpInfo(discussionmessageCreateObjectV1Request,);
+  Future<DiscussionmessageCreateObjectV1Response?> discussionmessageCreateObjectV1(DiscussionmessageCreateObjectV1Request discussionmessageCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await discussionmessageCreateObjectV1WithHttpInfo(discussionmessageCreateObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -82,7 +83,7 @@ class ObjectDiscussionmessageApi {
   ///
   /// * [int] pkiDiscussionmessageID (required):
   ///   The unique ID of the Discussionmessage
-  Future<Response> discussionmessageDeleteObjectV1WithHttpInfo(int pkiDiscussionmessageID,) async {
+  Future<Response> discussionmessageDeleteObjectV1WithHttpInfo(int pkiDiscussionmessageID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/discussionmessage/{pkiDiscussionmessageID}'
       .replaceAll('{pkiDiscussionmessageID}', pkiDiscussionmessageID.toString());
@@ -105,6 +106,7 @@ class ObjectDiscussionmessageApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -116,8 +118,8 @@ class ObjectDiscussionmessageApi {
   ///
   /// * [int] pkiDiscussionmessageID (required):
   ///   The unique ID of the Discussionmessage
-  Future<DiscussionmessageDeleteObjectV1Response?> discussionmessageDeleteObjectV1(int pkiDiscussionmessageID,) async {
-    final response = await discussionmessageDeleteObjectV1WithHttpInfo(pkiDiscussionmessageID,);
+  Future<DiscussionmessageDeleteObjectV1Response?> discussionmessageDeleteObjectV1(int pkiDiscussionmessageID, { Future<void>? abortTrigger, }) async {
+    final response = await discussionmessageDeleteObjectV1WithHttpInfo(pkiDiscussionmessageID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -143,7 +145,7 @@ class ObjectDiscussionmessageApi {
   ///   The unique ID of the Discussionmessage
   ///
   /// * [DiscussionmessagePatchObjectV1Request] discussionmessagePatchObjectV1Request (required):
-  Future<Response> discussionmessagePatchObjectV1WithHttpInfo(int pkiDiscussionmessageID, DiscussionmessagePatchObjectV1Request discussionmessagePatchObjectV1Request,) async {
+  Future<Response> discussionmessagePatchObjectV1WithHttpInfo(int pkiDiscussionmessageID, DiscussionmessagePatchObjectV1Request discussionmessagePatchObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/discussionmessage/{pkiDiscussionmessageID}'
       .replaceAll('{pkiDiscussionmessageID}', pkiDiscussionmessageID.toString());
@@ -166,6 +168,7 @@ class ObjectDiscussionmessageApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -179,8 +182,8 @@ class ObjectDiscussionmessageApi {
   ///   The unique ID of the Discussionmessage
   ///
   /// * [DiscussionmessagePatchObjectV1Request] discussionmessagePatchObjectV1Request (required):
-  Future<DiscussionmessagePatchObjectV1Response?> discussionmessagePatchObjectV1(int pkiDiscussionmessageID, DiscussionmessagePatchObjectV1Request discussionmessagePatchObjectV1Request,) async {
-    final response = await discussionmessagePatchObjectV1WithHttpInfo(pkiDiscussionmessageID, discussionmessagePatchObjectV1Request,);
+  Future<DiscussionmessagePatchObjectV1Response?> discussionmessagePatchObjectV1(int pkiDiscussionmessageID, DiscussionmessagePatchObjectV1Request discussionmessagePatchObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await discussionmessagePatchObjectV1WithHttpInfo(pkiDiscussionmessageID, discussionmessagePatchObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

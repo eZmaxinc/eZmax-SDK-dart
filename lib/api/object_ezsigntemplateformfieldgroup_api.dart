@@ -25,7 +25,7 @@ class ObjectEzsigntemplateformfieldgroupApi {
   /// Parameters:
   ///
   /// * [EzsigntemplateformfieldgroupCreateObjectV1Request] ezsigntemplateformfieldgroupCreateObjectV1Request (required):
-  Future<Response> ezsigntemplateformfieldgroupCreateObjectV1WithHttpInfo(EzsigntemplateformfieldgroupCreateObjectV1Request ezsigntemplateformfieldgroupCreateObjectV1Request,) async {
+  Future<Response> ezsigntemplateformfieldgroupCreateObjectV1WithHttpInfo(EzsigntemplateformfieldgroupCreateObjectV1Request ezsigntemplateformfieldgroupCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsigntemplateformfieldgroup';
 
@@ -47,6 +47,7 @@ class ObjectEzsigntemplateformfieldgroupApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -57,8 +58,8 @@ class ObjectEzsigntemplateformfieldgroupApi {
   /// Parameters:
   ///
   /// * [EzsigntemplateformfieldgroupCreateObjectV1Request] ezsigntemplateformfieldgroupCreateObjectV1Request (required):
-  Future<EzsigntemplateformfieldgroupCreateObjectV1Response?> ezsigntemplateformfieldgroupCreateObjectV1(EzsigntemplateformfieldgroupCreateObjectV1Request ezsigntemplateformfieldgroupCreateObjectV1Request,) async {
-    final response = await ezsigntemplateformfieldgroupCreateObjectV1WithHttpInfo(ezsigntemplateformfieldgroupCreateObjectV1Request,);
+  Future<EzsigntemplateformfieldgroupCreateObjectV1Response?> ezsigntemplateformfieldgroupCreateObjectV1(EzsigntemplateformfieldgroupCreateObjectV1Request ezsigntemplateformfieldgroupCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplateformfieldgroupCreateObjectV1WithHttpInfo(ezsigntemplateformfieldgroupCreateObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -81,7 +82,7 @@ class ObjectEzsigntemplateformfieldgroupApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigntemplateformfieldgroupID (required):
-  Future<Response> ezsigntemplateformfieldgroupDeleteObjectV1WithHttpInfo(int pkiEzsigntemplateformfieldgroupID,) async {
+  Future<Response> ezsigntemplateformfieldgroupDeleteObjectV1WithHttpInfo(int pkiEzsigntemplateformfieldgroupID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID}'
       .replaceAll('{pkiEzsigntemplateformfieldgroupID}', pkiEzsigntemplateformfieldgroupID.toString());
@@ -104,6 +105,7 @@ class ObjectEzsigntemplateformfieldgroupApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -114,8 +116,8 @@ class ObjectEzsigntemplateformfieldgroupApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigntemplateformfieldgroupID (required):
-  Future<EzsigntemplateformfieldgroupDeleteObjectV1Response?> ezsigntemplateformfieldgroupDeleteObjectV1(int pkiEzsigntemplateformfieldgroupID,) async {
-    final response = await ezsigntemplateformfieldgroupDeleteObjectV1WithHttpInfo(pkiEzsigntemplateformfieldgroupID,);
+  Future<EzsigntemplateformfieldgroupDeleteObjectV1Response?> ezsigntemplateformfieldgroupDeleteObjectV1(int pkiEzsigntemplateformfieldgroupID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplateformfieldgroupDeleteObjectV1WithHttpInfo(pkiEzsigntemplateformfieldgroupID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -140,7 +142,7 @@ class ObjectEzsigntemplateformfieldgroupApi {
   /// * [int] pkiEzsigntemplateformfieldgroupID (required):
   ///
   /// * [EzsigntemplateformfieldgroupEditObjectV1Request] ezsigntemplateformfieldgroupEditObjectV1Request (required):
-  Future<Response> ezsigntemplateformfieldgroupEditObjectV1WithHttpInfo(int pkiEzsigntemplateformfieldgroupID, EzsigntemplateformfieldgroupEditObjectV1Request ezsigntemplateformfieldgroupEditObjectV1Request,) async {
+  Future<Response> ezsigntemplateformfieldgroupEditObjectV1WithHttpInfo(int pkiEzsigntemplateformfieldgroupID, EzsigntemplateformfieldgroupEditObjectV1Request ezsigntemplateformfieldgroupEditObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID}'
       .replaceAll('{pkiEzsigntemplateformfieldgroupID}', pkiEzsigntemplateformfieldgroupID.toString());
@@ -163,6 +165,7 @@ class ObjectEzsigntemplateformfieldgroupApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -175,8 +178,8 @@ class ObjectEzsigntemplateformfieldgroupApi {
   /// * [int] pkiEzsigntemplateformfieldgroupID (required):
   ///
   /// * [EzsigntemplateformfieldgroupEditObjectV1Request] ezsigntemplateformfieldgroupEditObjectV1Request (required):
-  Future<EzsigntemplateformfieldgroupEditObjectV1Response?> ezsigntemplateformfieldgroupEditObjectV1(int pkiEzsigntemplateformfieldgroupID, EzsigntemplateformfieldgroupEditObjectV1Request ezsigntemplateformfieldgroupEditObjectV1Request,) async {
-    final response = await ezsigntemplateformfieldgroupEditObjectV1WithHttpInfo(pkiEzsigntemplateformfieldgroupID, ezsigntemplateformfieldgroupEditObjectV1Request,);
+  Future<EzsigntemplateformfieldgroupEditObjectV1Response?> ezsigntemplateformfieldgroupEditObjectV1(int pkiEzsigntemplateformfieldgroupID, EzsigntemplateformfieldgroupEditObjectV1Request ezsigntemplateformfieldgroupEditObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplateformfieldgroupEditObjectV1WithHttpInfo(pkiEzsigntemplateformfieldgroupID, ezsigntemplateformfieldgroupEditObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -199,7 +202,7 @@ class ObjectEzsigntemplateformfieldgroupApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigntemplateformfieldgroupID (required):
-  Future<Response> ezsigntemplateformfieldgroupGetObjectV2WithHttpInfo(int pkiEzsigntemplateformfieldgroupID,) async {
+  Future<Response> ezsigntemplateformfieldgroupGetObjectV2WithHttpInfo(int pkiEzsigntemplateformfieldgroupID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID}'
       .replaceAll('{pkiEzsigntemplateformfieldgroupID}', pkiEzsigntemplateformfieldgroupID.toString());
@@ -222,6 +225,7 @@ class ObjectEzsigntemplateformfieldgroupApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -232,8 +236,8 @@ class ObjectEzsigntemplateformfieldgroupApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigntemplateformfieldgroupID (required):
-  Future<EzsigntemplateformfieldgroupGetObjectV2Response?> ezsigntemplateformfieldgroupGetObjectV2(int pkiEzsigntemplateformfieldgroupID,) async {
-    final response = await ezsigntemplateformfieldgroupGetObjectV2WithHttpInfo(pkiEzsigntemplateformfieldgroupID,);
+  Future<EzsigntemplateformfieldgroupGetObjectV2Response?> ezsigntemplateformfieldgroupGetObjectV2(int pkiEzsigntemplateformfieldgroupID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplateformfieldgroupGetObjectV2WithHttpInfo(pkiEzsigntemplateformfieldgroupID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

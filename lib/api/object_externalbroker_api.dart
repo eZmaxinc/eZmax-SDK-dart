@@ -27,7 +27,7 @@ class ObjectExternalbrokerApi {
   /// * [int] pkiExternalbrokerID (required):
   ///
   /// * [ExternalbrokerImportIntoEDMV1Request] externalbrokerImportIntoEDMV1Request (required):
-  Future<Response> externalbrokerImportIntoEDMV1WithHttpInfo(int pkiExternalbrokerID, ExternalbrokerImportIntoEDMV1Request externalbrokerImportIntoEDMV1Request,) async {
+  Future<Response> externalbrokerImportIntoEDMV1WithHttpInfo(int pkiExternalbrokerID, ExternalbrokerImportIntoEDMV1Request externalbrokerImportIntoEDMV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/externalbroker/{pkiExternalbrokerID}/importIntoEDM'
       .replaceAll('{pkiExternalbrokerID}', pkiExternalbrokerID.toString());
@@ -50,6 +50,7 @@ class ObjectExternalbrokerApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -62,8 +63,8 @@ class ObjectExternalbrokerApi {
   /// * [int] pkiExternalbrokerID (required):
   ///
   /// * [ExternalbrokerImportIntoEDMV1Request] externalbrokerImportIntoEDMV1Request (required):
-  Future<ExternalbrokerImportIntoEDMV1Response?> externalbrokerImportIntoEDMV1(int pkiExternalbrokerID, ExternalbrokerImportIntoEDMV1Request externalbrokerImportIntoEDMV1Request,) async {
-    final response = await externalbrokerImportIntoEDMV1WithHttpInfo(pkiExternalbrokerID, externalbrokerImportIntoEDMV1Request,);
+  Future<ExternalbrokerImportIntoEDMV1Response?> externalbrokerImportIntoEDMV1(int pkiExternalbrokerID, ExternalbrokerImportIntoEDMV1Request externalbrokerImportIntoEDMV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await externalbrokerImportIntoEDMV1WithHttpInfo(pkiExternalbrokerID, externalbrokerImportIntoEDMV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

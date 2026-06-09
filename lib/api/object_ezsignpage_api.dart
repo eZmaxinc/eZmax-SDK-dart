@@ -25,7 +25,7 @@ class ObjectEzsignpageApi {
   /// * [int] pkiEzsignpageID (required):
   ///
   /// * [Object] body (required):
-  Future<Response> ezsignpageConsultV1WithHttpInfo(int pkiEzsignpageID, Object body,) async {
+  Future<Response> ezsignpageConsultV1WithHttpInfo(int pkiEzsignpageID, Object body, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignpage/{pkiEzsignpageID}/consult'
       .replaceAll('{pkiEzsignpageID}', pkiEzsignpageID.toString());
@@ -48,6 +48,7 @@ class ObjectEzsignpageApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -58,8 +59,8 @@ class ObjectEzsignpageApi {
   /// * [int] pkiEzsignpageID (required):
   ///
   /// * [Object] body (required):
-  Future<EzsignpageConsultV1Response?> ezsignpageConsultV1(int pkiEzsignpageID, Object body,) async {
-    final response = await ezsignpageConsultV1WithHttpInfo(pkiEzsignpageID, body,);
+  Future<EzsignpageConsultV1Response?> ezsignpageConsultV1(int pkiEzsignpageID, Object body, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignpageConsultV1WithHttpInfo(pkiEzsignpageID, body, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

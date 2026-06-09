@@ -26,7 +26,7 @@ class ObjectEzsigntemplateglobalannotationApi {
   ///
   /// * [int] pkiEzsigntemplateglobalannotationID (required):
   ///   The unique ID of the Ezsigntemplateglobalannotation
-  Future<Response> ezsigntemplateglobalannotationGetObjectV2WithHttpInfo(int pkiEzsigntemplateglobalannotationID,) async {
+  Future<Response> ezsigntemplateglobalannotationGetObjectV2WithHttpInfo(int pkiEzsigntemplateglobalannotationID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezsigntemplateglobalannotation/{pkiEzsigntemplateglobalannotationID}'
       .replaceAll('{pkiEzsigntemplateglobalannotationID}', pkiEzsigntemplateglobalannotationID.toString());
@@ -49,6 +49,7 @@ class ObjectEzsigntemplateglobalannotationApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -60,8 +61,8 @@ class ObjectEzsigntemplateglobalannotationApi {
   ///
   /// * [int] pkiEzsigntemplateglobalannotationID (required):
   ///   The unique ID of the Ezsigntemplateglobalannotation
-  Future<EzsigntemplateglobalannotationGetObjectV2Response?> ezsigntemplateglobalannotationGetObjectV2(int pkiEzsigntemplateglobalannotationID,) async {
-    final response = await ezsigntemplateglobalannotationGetObjectV2WithHttpInfo(pkiEzsigntemplateglobalannotationID,);
+  Future<EzsigntemplateglobalannotationGetObjectV2Response?> ezsigntemplateglobalannotationGetObjectV2(int pkiEzsigntemplateglobalannotationID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplateglobalannotationGetObjectV2WithHttpInfo(pkiEzsigntemplateglobalannotationID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

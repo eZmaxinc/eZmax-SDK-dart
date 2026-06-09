@@ -34,7 +34,7 @@ class ObjectSupplierApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<Response> supplierGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
+  Future<Response> supplierGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/supplier/getList';
 
@@ -73,6 +73,7 @@ class ObjectSupplierApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -92,8 +93,8 @@ class ObjectSupplierApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<SupplierGetListV1Response?> supplierGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
-    final response = await supplierGetListV1WithHttpInfo( eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, );
+  Future<SupplierGetListV1Response?> supplierGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
+    final response = await supplierGetListV1WithHttpInfo(eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -118,7 +119,7 @@ class ObjectSupplierApi {
   /// * [int] pkiSupplierID (required):
   ///
   /// * [SupplierImportIntoEDMV1Request] supplierImportIntoEDMV1Request (required):
-  Future<Response> supplierImportIntoEDMV1WithHttpInfo(int pkiSupplierID, SupplierImportIntoEDMV1Request supplierImportIntoEDMV1Request,) async {
+  Future<Response> supplierImportIntoEDMV1WithHttpInfo(int pkiSupplierID, SupplierImportIntoEDMV1Request supplierImportIntoEDMV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/supplier/{pkiSupplierID}/importIntoEDM'
       .replaceAll('{pkiSupplierID}', pkiSupplierID.toString());
@@ -141,6 +142,7 @@ class ObjectSupplierApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -153,8 +155,8 @@ class ObjectSupplierApi {
   /// * [int] pkiSupplierID (required):
   ///
   /// * [SupplierImportIntoEDMV1Request] supplierImportIntoEDMV1Request (required):
-  Future<SupplierImportIntoEDMV1Response?> supplierImportIntoEDMV1(int pkiSupplierID, SupplierImportIntoEDMV1Request supplierImportIntoEDMV1Request,) async {
-    final response = await supplierImportIntoEDMV1WithHttpInfo(pkiSupplierID, supplierImportIntoEDMV1Request,);
+  Future<SupplierImportIntoEDMV1Response?> supplierImportIntoEDMV1(int pkiSupplierID, SupplierImportIntoEDMV1Request supplierImportIntoEDMV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await supplierImportIntoEDMV1WithHttpInfo(pkiSupplierID, supplierImportIntoEDMV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

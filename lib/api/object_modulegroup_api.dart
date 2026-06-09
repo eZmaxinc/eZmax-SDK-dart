@@ -24,7 +24,7 @@ class ObjectModulegroupApi {
   ///
   /// * [String] eContext (required):
   ///   The context of the Modulegroup
-  Future<Response> modulegroupGetAllV1WithHttpInfo(String eContext,) async {
+  Future<Response> modulegroupGetAllV1WithHttpInfo(String eContext, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/modulegroup/getAll/{eContext}'
       .replaceAll('{eContext}', eContext);
@@ -47,6 +47,7 @@ class ObjectModulegroupApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -56,8 +57,8 @@ class ObjectModulegroupApi {
   ///
   /// * [String] eContext (required):
   ///   The context of the Modulegroup
-  Future<ModulegroupGetAllV1Response?> modulegroupGetAllV1(String eContext,) async {
-    final response = await modulegroupGetAllV1WithHttpInfo(eContext,);
+  Future<ModulegroupGetAllV1Response?> modulegroupGetAllV1(String eContext, { Future<void>? abortTrigger, }) async {
+    final response = await modulegroupGetAllV1WithHttpInfo(eContext, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

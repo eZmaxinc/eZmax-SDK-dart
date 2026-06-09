@@ -25,7 +25,7 @@ class GlobalEzmaxclientApi {
   /// Parameters:
   ///
   /// * [FieldPksEzmaxclientOs] pksEzmaxclientOs (required):
-  Future<Response> globalEzmaxclientVersionV1WithHttpInfo(FieldPksEzmaxclientOs pksEzmaxclientOs,) async {
+  Future<Response> globalEzmaxclientVersionV1WithHttpInfo(FieldPksEzmaxclientOs pksEzmaxclientOs, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/ezmaxclient/{pksEzmaxclientOs}/version'
       .replaceAll('{pksEzmaxclientOs}', pksEzmaxclientOs.toString());
@@ -48,6 +48,7 @@ class GlobalEzmaxclientApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -58,8 +59,8 @@ class GlobalEzmaxclientApi {
   /// Parameters:
   ///
   /// * [FieldPksEzmaxclientOs] pksEzmaxclientOs (required):
-  Future<GlobalEzmaxclientVersionV1Response?> globalEzmaxclientVersionV1(FieldPksEzmaxclientOs pksEzmaxclientOs,) async {
-    final response = await globalEzmaxclientVersionV1WithHttpInfo(pksEzmaxclientOs,);
+  Future<GlobalEzmaxclientVersionV1Response?> globalEzmaxclientVersionV1(FieldPksEzmaxclientOs pksEzmaxclientOs, { Future<void>? abortTrigger, }) async {
+    final response = await globalEzmaxclientVersionV1WithHttpInfo(pksEzmaxclientOs, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

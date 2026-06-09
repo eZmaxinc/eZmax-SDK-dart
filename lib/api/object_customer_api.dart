@@ -34,7 +34,7 @@ class ObjectCustomerApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<Response> customerGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
+  Future<Response> customerGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/customer/getAutocomplete/{sSelector}'
       .replaceAll('{sSelector}', sSelector);
@@ -68,6 +68,7 @@ class ObjectCustomerApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -87,8 +88,8 @@ class ObjectCustomerApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<CustomerGetAutocompleteV2Response?> customerGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
-    final response = await customerGetAutocompleteV2WithHttpInfo(sSelector,  eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, );
+  Future<CustomerGetAutocompleteV2Response?> customerGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
+    final response = await customerGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -112,7 +113,7 @@ class ObjectCustomerApi {
   ///
   /// * [int] pkiCustomerID (required):
   ///   The unique ID of the Customer
-  Future<Response> customerGetObjectV2WithHttpInfo(int pkiCustomerID,) async {
+  Future<Response> customerGetObjectV2WithHttpInfo(int pkiCustomerID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/customer/{pkiCustomerID}'
       .replaceAll('{pkiCustomerID}', pkiCustomerID.toString());
@@ -135,6 +136,7 @@ class ObjectCustomerApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -146,8 +148,8 @@ class ObjectCustomerApi {
   ///
   /// * [int] pkiCustomerID (required):
   ///   The unique ID of the Customer
-  Future<CustomerGetObjectV2Response?> customerGetObjectV2(int pkiCustomerID,) async {
-    final response = await customerGetObjectV2WithHttpInfo(pkiCustomerID,);
+  Future<CustomerGetObjectV2Response?> customerGetObjectV2(int pkiCustomerID, { Future<void>? abortTrigger, }) async {
+    final response = await customerGetObjectV2WithHttpInfo(pkiCustomerID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -172,7 +174,7 @@ class ObjectCustomerApi {
   /// * [int] pkiCustomerID (required):
   ///
   /// * [CustomerImportIntoEDMV1Request] customerImportIntoEDMV1Request (required):
-  Future<Response> customerImportIntoEDMV1WithHttpInfo(int pkiCustomerID, CustomerImportIntoEDMV1Request customerImportIntoEDMV1Request,) async {
+  Future<Response> customerImportIntoEDMV1WithHttpInfo(int pkiCustomerID, CustomerImportIntoEDMV1Request customerImportIntoEDMV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/customer/{pkiCustomerID}/importIntoEDM'
       .replaceAll('{pkiCustomerID}', pkiCustomerID.toString());
@@ -195,6 +197,7 @@ class ObjectCustomerApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -207,8 +210,8 @@ class ObjectCustomerApi {
   /// * [int] pkiCustomerID (required):
   ///
   /// * [CustomerImportIntoEDMV1Request] customerImportIntoEDMV1Request (required):
-  Future<CustomerImportIntoEDMV1Response?> customerImportIntoEDMV1(int pkiCustomerID, CustomerImportIntoEDMV1Request customerImportIntoEDMV1Request,) async {
-    final response = await customerImportIntoEDMV1WithHttpInfo(pkiCustomerID, customerImportIntoEDMV1Request,);
+  Future<CustomerImportIntoEDMV1Response?> customerImportIntoEDMV1(int pkiCustomerID, CustomerImportIntoEDMV1Request customerImportIntoEDMV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await customerImportIntoEDMV1WithHttpInfo(pkiCustomerID, customerImportIntoEDMV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

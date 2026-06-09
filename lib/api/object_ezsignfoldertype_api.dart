@@ -25,7 +25,7 @@ class ObjectEzsignfoldertypeApi {
   /// Parameters:
   ///
   /// * [EzsignfoldertypeCreateObjectV3Request] ezsignfoldertypeCreateObjectV3Request (required):
-  Future<Response> ezsignfoldertypeCreateObjectV3WithHttpInfo(EzsignfoldertypeCreateObjectV3Request ezsignfoldertypeCreateObjectV3Request,) async {
+  Future<Response> ezsignfoldertypeCreateObjectV3WithHttpInfo(EzsignfoldertypeCreateObjectV3Request ezsignfoldertypeCreateObjectV3Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/3/object/ezsignfoldertype';
 
@@ -47,6 +47,7 @@ class ObjectEzsignfoldertypeApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -57,8 +58,8 @@ class ObjectEzsignfoldertypeApi {
   /// Parameters:
   ///
   /// * [EzsignfoldertypeCreateObjectV3Request] ezsignfoldertypeCreateObjectV3Request (required):
-  Future<EzsignfoldertypeCreateObjectV3Response?> ezsignfoldertypeCreateObjectV3(EzsignfoldertypeCreateObjectV3Request ezsignfoldertypeCreateObjectV3Request,) async {
-    final response = await ezsignfoldertypeCreateObjectV3WithHttpInfo(ezsignfoldertypeCreateObjectV3Request,);
+  Future<EzsignfoldertypeCreateObjectV3Response?> ezsignfoldertypeCreateObjectV3(EzsignfoldertypeCreateObjectV3Request ezsignfoldertypeCreateObjectV3Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfoldertypeCreateObjectV3WithHttpInfo(ezsignfoldertypeCreateObjectV3Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -81,7 +82,7 @@ class ObjectEzsignfoldertypeApi {
   /// Parameters:
   ///
   /// * [EzsignfoldertypeCreateObjectV4Request] ezsignfoldertypeCreateObjectV4Request (required):
-  Future<Response> ezsignfoldertypeCreateObjectV4WithHttpInfo(EzsignfoldertypeCreateObjectV4Request ezsignfoldertypeCreateObjectV4Request,) async {
+  Future<Response> ezsignfoldertypeCreateObjectV4WithHttpInfo(EzsignfoldertypeCreateObjectV4Request ezsignfoldertypeCreateObjectV4Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/4/object/ezsignfoldertype';
 
@@ -103,6 +104,7 @@ class ObjectEzsignfoldertypeApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -113,8 +115,8 @@ class ObjectEzsignfoldertypeApi {
   /// Parameters:
   ///
   /// * [EzsignfoldertypeCreateObjectV4Request] ezsignfoldertypeCreateObjectV4Request (required):
-  Future<EzsignfoldertypeCreateObjectV4Response?> ezsignfoldertypeCreateObjectV4(EzsignfoldertypeCreateObjectV4Request ezsignfoldertypeCreateObjectV4Request,) async {
-    final response = await ezsignfoldertypeCreateObjectV4WithHttpInfo(ezsignfoldertypeCreateObjectV4Request,);
+  Future<EzsignfoldertypeCreateObjectV4Response?> ezsignfoldertypeCreateObjectV4(EzsignfoldertypeCreateObjectV4Request ezsignfoldertypeCreateObjectV4Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfoldertypeCreateObjectV4WithHttpInfo(ezsignfoldertypeCreateObjectV4Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -139,7 +141,7 @@ class ObjectEzsignfoldertypeApi {
   /// * [int] pkiEzsignfoldertypeID (required):
   ///
   /// * [EzsignfoldertypeEditObjectV3Request] ezsignfoldertypeEditObjectV3Request (required):
-  Future<Response> ezsignfoldertypeEditObjectV3WithHttpInfo(int pkiEzsignfoldertypeID, EzsignfoldertypeEditObjectV3Request ezsignfoldertypeEditObjectV3Request,) async {
+  Future<Response> ezsignfoldertypeEditObjectV3WithHttpInfo(int pkiEzsignfoldertypeID, EzsignfoldertypeEditObjectV3Request ezsignfoldertypeEditObjectV3Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/3/object/ezsignfoldertype/{pkiEzsignfoldertypeID}'
       .replaceAll('{pkiEzsignfoldertypeID}', pkiEzsignfoldertypeID.toString());
@@ -162,6 +164,7 @@ class ObjectEzsignfoldertypeApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -174,8 +177,8 @@ class ObjectEzsignfoldertypeApi {
   /// * [int] pkiEzsignfoldertypeID (required):
   ///
   /// * [EzsignfoldertypeEditObjectV3Request] ezsignfoldertypeEditObjectV3Request (required):
-  Future<EzsignfoldertypeEditObjectV3Response?> ezsignfoldertypeEditObjectV3(int pkiEzsignfoldertypeID, EzsignfoldertypeEditObjectV3Request ezsignfoldertypeEditObjectV3Request,) async {
-    final response = await ezsignfoldertypeEditObjectV3WithHttpInfo(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV3Request,);
+  Future<EzsignfoldertypeEditObjectV3Response?> ezsignfoldertypeEditObjectV3(int pkiEzsignfoldertypeID, EzsignfoldertypeEditObjectV3Request ezsignfoldertypeEditObjectV3Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfoldertypeEditObjectV3WithHttpInfo(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV3Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -200,7 +203,7 @@ class ObjectEzsignfoldertypeApi {
   /// * [int] pkiEzsignfoldertypeID (required):
   ///
   /// * [EzsignfoldertypeEditObjectV4Request] ezsignfoldertypeEditObjectV4Request (required):
-  Future<Response> ezsignfoldertypeEditObjectV4WithHttpInfo(int pkiEzsignfoldertypeID, EzsignfoldertypeEditObjectV4Request ezsignfoldertypeEditObjectV4Request,) async {
+  Future<Response> ezsignfoldertypeEditObjectV4WithHttpInfo(int pkiEzsignfoldertypeID, EzsignfoldertypeEditObjectV4Request ezsignfoldertypeEditObjectV4Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/4/object/ezsignfoldertype/{pkiEzsignfoldertypeID}'
       .replaceAll('{pkiEzsignfoldertypeID}', pkiEzsignfoldertypeID.toString());
@@ -223,6 +226,7 @@ class ObjectEzsignfoldertypeApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -235,8 +239,8 @@ class ObjectEzsignfoldertypeApi {
   /// * [int] pkiEzsignfoldertypeID (required):
   ///
   /// * [EzsignfoldertypeEditObjectV4Request] ezsignfoldertypeEditObjectV4Request (required):
-  Future<EzsignfoldertypeEditObjectV4Response?> ezsignfoldertypeEditObjectV4(int pkiEzsignfoldertypeID, EzsignfoldertypeEditObjectV4Request ezsignfoldertypeEditObjectV4Request,) async {
-    final response = await ezsignfoldertypeEditObjectV4WithHttpInfo(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV4Request,);
+  Future<EzsignfoldertypeEditObjectV4Response?> ezsignfoldertypeEditObjectV4(int pkiEzsignfoldertypeID, EzsignfoldertypeEditObjectV4Request ezsignfoldertypeEditObjectV4Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfoldertypeEditObjectV4WithHttpInfo(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV4Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -268,7 +272,7 @@ class ObjectEzsignfoldertypeApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<Response> ezsignfoldertypeGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
+  Future<Response> ezsignfoldertypeGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezsignfoldertype/getAutocomplete/{sSelector}'
       .replaceAll('{sSelector}', sSelector);
@@ -302,6 +306,7 @@ class ObjectEzsignfoldertypeApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -321,8 +326,8 @@ class ObjectEzsignfoldertypeApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<EzsignfoldertypeGetAutocompleteV2Response?> ezsignfoldertypeGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
-    final response = await ezsignfoldertypeGetAutocompleteV2WithHttpInfo(sSelector,  eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, );
+  Future<EzsignfoldertypeGetAutocompleteV2Response?> ezsignfoldertypeGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
+    final response = await ezsignfoldertypeGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -354,7 +359,7 @@ class ObjectEzsignfoldertypeApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<Response> ezsignfoldertypeGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
+  Future<Response> ezsignfoldertypeGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfoldertype/getList';
 
@@ -393,6 +398,7 @@ class ObjectEzsignfoldertypeApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -412,8 +418,8 @@ class ObjectEzsignfoldertypeApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<EzsignfoldertypeGetListV1Response?> ezsignfoldertypeGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
-    final response = await ezsignfoldertypeGetListV1WithHttpInfo( eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, );
+  Future<EzsignfoldertypeGetListV1Response?> ezsignfoldertypeGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
+    final response = await ezsignfoldertypeGetListV1WithHttpInfo(eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -436,7 +442,7 @@ class ObjectEzsignfoldertypeApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfoldertypeID (required):
-  Future<Response> ezsignfoldertypeGetObjectV2WithHttpInfo(int pkiEzsignfoldertypeID,) async {
+  Future<Response> ezsignfoldertypeGetObjectV2WithHttpInfo(int pkiEzsignfoldertypeID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezsignfoldertype/{pkiEzsignfoldertypeID}'
       .replaceAll('{pkiEzsignfoldertypeID}', pkiEzsignfoldertypeID.toString());
@@ -459,6 +465,7 @@ class ObjectEzsignfoldertypeApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -469,8 +476,8 @@ class ObjectEzsignfoldertypeApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfoldertypeID (required):
-  Future<EzsignfoldertypeGetObjectV2Response?> ezsignfoldertypeGetObjectV2(int pkiEzsignfoldertypeID,) async {
-    final response = await ezsignfoldertypeGetObjectV2WithHttpInfo(pkiEzsignfoldertypeID,);
+  Future<EzsignfoldertypeGetObjectV2Response?> ezsignfoldertypeGetObjectV2(int pkiEzsignfoldertypeID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfoldertypeGetObjectV2WithHttpInfo(pkiEzsignfoldertypeID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -493,7 +500,7 @@ class ObjectEzsignfoldertypeApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfoldertypeID (required):
-  Future<Response> ezsignfoldertypeGetObjectV4WithHttpInfo(int pkiEzsignfoldertypeID,) async {
+  Future<Response> ezsignfoldertypeGetObjectV4WithHttpInfo(int pkiEzsignfoldertypeID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/4/object/ezsignfoldertype/{pkiEzsignfoldertypeID}'
       .replaceAll('{pkiEzsignfoldertypeID}', pkiEzsignfoldertypeID.toString());
@@ -516,6 +523,7 @@ class ObjectEzsignfoldertypeApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -526,8 +534,8 @@ class ObjectEzsignfoldertypeApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfoldertypeID (required):
-  Future<EzsignfoldertypeGetObjectV4Response?> ezsignfoldertypeGetObjectV4(int pkiEzsignfoldertypeID,) async {
-    final response = await ezsignfoldertypeGetObjectV4WithHttpInfo(pkiEzsignfoldertypeID,);
+  Future<EzsignfoldertypeGetObjectV4Response?> ezsignfoldertypeGetObjectV4(int pkiEzsignfoldertypeID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfoldertypeGetObjectV4WithHttpInfo(pkiEzsignfoldertypeID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

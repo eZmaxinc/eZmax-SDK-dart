@@ -25,7 +25,7 @@ class ObjectPermissionApi {
   /// Parameters:
   ///
   /// * [PermissionCreateObjectV1Request] permissionCreateObjectV1Request (required):
-  Future<Response> permissionCreateObjectV1WithHttpInfo(PermissionCreateObjectV1Request permissionCreateObjectV1Request,) async {
+  Future<Response> permissionCreateObjectV1WithHttpInfo(PermissionCreateObjectV1Request permissionCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/permission';
 
@@ -47,6 +47,7 @@ class ObjectPermissionApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -57,8 +58,8 @@ class ObjectPermissionApi {
   /// Parameters:
   ///
   /// * [PermissionCreateObjectV1Request] permissionCreateObjectV1Request (required):
-  Future<PermissionCreateObjectV1Response?> permissionCreateObjectV1(PermissionCreateObjectV1Request permissionCreateObjectV1Request,) async {
-    final response = await permissionCreateObjectV1WithHttpInfo(permissionCreateObjectV1Request,);
+  Future<PermissionCreateObjectV1Response?> permissionCreateObjectV1(PermissionCreateObjectV1Request permissionCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await permissionCreateObjectV1WithHttpInfo(permissionCreateObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -82,7 +83,7 @@ class ObjectPermissionApi {
   ///
   /// * [int] pkiPermissionID (required):
   ///   The unique ID of the Permission
-  Future<Response> permissionDeleteObjectV1WithHttpInfo(int pkiPermissionID,) async {
+  Future<Response> permissionDeleteObjectV1WithHttpInfo(int pkiPermissionID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/permission/{pkiPermissionID}'
       .replaceAll('{pkiPermissionID}', pkiPermissionID.toString());
@@ -105,6 +106,7 @@ class ObjectPermissionApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -116,8 +118,8 @@ class ObjectPermissionApi {
   ///
   /// * [int] pkiPermissionID (required):
   ///   The unique ID of the Permission
-  Future<PermissionDeleteObjectV1Response?> permissionDeleteObjectV1(int pkiPermissionID,) async {
-    final response = await permissionDeleteObjectV1WithHttpInfo(pkiPermissionID,);
+  Future<PermissionDeleteObjectV1Response?> permissionDeleteObjectV1(int pkiPermissionID, { Future<void>? abortTrigger, }) async {
+    final response = await permissionDeleteObjectV1WithHttpInfo(pkiPermissionID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -143,7 +145,7 @@ class ObjectPermissionApi {
   ///   The unique ID of the Permission
   ///
   /// * [PermissionEditObjectV1Request] permissionEditObjectV1Request (required):
-  Future<Response> permissionEditObjectV1WithHttpInfo(int pkiPermissionID, PermissionEditObjectV1Request permissionEditObjectV1Request,) async {
+  Future<Response> permissionEditObjectV1WithHttpInfo(int pkiPermissionID, PermissionEditObjectV1Request permissionEditObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/permission/{pkiPermissionID}'
       .replaceAll('{pkiPermissionID}', pkiPermissionID.toString());
@@ -166,6 +168,7 @@ class ObjectPermissionApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -179,8 +182,8 @@ class ObjectPermissionApi {
   ///   The unique ID of the Permission
   ///
   /// * [PermissionEditObjectV1Request] permissionEditObjectV1Request (required):
-  Future<PermissionEditObjectV1Response?> permissionEditObjectV1(int pkiPermissionID, PermissionEditObjectV1Request permissionEditObjectV1Request,) async {
-    final response = await permissionEditObjectV1WithHttpInfo(pkiPermissionID, permissionEditObjectV1Request,);
+  Future<PermissionEditObjectV1Response?> permissionEditObjectV1(int pkiPermissionID, PermissionEditObjectV1Request permissionEditObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await permissionEditObjectV1WithHttpInfo(pkiPermissionID, permissionEditObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -204,7 +207,7 @@ class ObjectPermissionApi {
   ///
   /// * [int] pkiPermissionID (required):
   ///   The unique ID of the Permission
-  Future<Response> permissionGetObjectV2WithHttpInfo(int pkiPermissionID,) async {
+  Future<Response> permissionGetObjectV2WithHttpInfo(int pkiPermissionID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/permission/{pkiPermissionID}'
       .replaceAll('{pkiPermissionID}', pkiPermissionID.toString());
@@ -227,6 +230,7 @@ class ObjectPermissionApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -238,8 +242,8 @@ class ObjectPermissionApi {
   ///
   /// * [int] pkiPermissionID (required):
   ///   The unique ID of the Permission
-  Future<PermissionGetObjectV2Response?> permissionGetObjectV2(int pkiPermissionID,) async {
-    final response = await permissionGetObjectV2WithHttpInfo(pkiPermissionID,);
+  Future<PermissionGetObjectV2Response?> permissionGetObjectV2(int pkiPermissionID, { Future<void>? abortTrigger, }) async {
+    final response = await permissionGetObjectV2WithHttpInfo(pkiPermissionID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

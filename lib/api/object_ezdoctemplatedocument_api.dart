@@ -25,7 +25,7 @@ class ObjectEzdoctemplatedocumentApi {
   /// Parameters:
   ///
   /// * [EzdoctemplatedocumentCreateObjectV1Request] ezdoctemplatedocumentCreateObjectV1Request (required):
-  Future<Response> ezdoctemplatedocumentCreateObjectV1WithHttpInfo(EzdoctemplatedocumentCreateObjectV1Request ezdoctemplatedocumentCreateObjectV1Request,) async {
+  Future<Response> ezdoctemplatedocumentCreateObjectV1WithHttpInfo(EzdoctemplatedocumentCreateObjectV1Request ezdoctemplatedocumentCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezdoctemplatedocument';
 
@@ -47,6 +47,7 @@ class ObjectEzdoctemplatedocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -57,8 +58,8 @@ class ObjectEzdoctemplatedocumentApi {
   /// Parameters:
   ///
   /// * [EzdoctemplatedocumentCreateObjectV1Request] ezdoctemplatedocumentCreateObjectV1Request (required):
-  Future<EzdoctemplatedocumentCreateObjectV1Response?> ezdoctemplatedocumentCreateObjectV1(EzdoctemplatedocumentCreateObjectV1Request ezdoctemplatedocumentCreateObjectV1Request,) async {
-    final response = await ezdoctemplatedocumentCreateObjectV1WithHttpInfo(ezdoctemplatedocumentCreateObjectV1Request,);
+  Future<EzdoctemplatedocumentCreateObjectV1Response?> ezdoctemplatedocumentCreateObjectV1(EzdoctemplatedocumentCreateObjectV1Request ezdoctemplatedocumentCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezdoctemplatedocumentCreateObjectV1WithHttpInfo(ezdoctemplatedocumentCreateObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -81,7 +82,7 @@ class ObjectEzdoctemplatedocumentApi {
   /// Parameters:
   ///
   /// * [int] pkiEzdoctemplatedocumentID (required):
-  Future<Response> ezdoctemplatedocumentDownloadV1WithHttpInfo(int pkiEzdoctemplatedocumentID,) async {
+  Future<Response> ezdoctemplatedocumentDownloadV1WithHttpInfo(int pkiEzdoctemplatedocumentID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezdoctemplatedocument/{pkiEzdoctemplatedocumentID}/download'
       .replaceAll('{pkiEzdoctemplatedocumentID}', pkiEzdoctemplatedocumentID.toString());
@@ -104,6 +105,7 @@ class ObjectEzdoctemplatedocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -114,8 +116,8 @@ class ObjectEzdoctemplatedocumentApi {
   /// Parameters:
   ///
   /// * [int] pkiEzdoctemplatedocumentID (required):
-  Future<void> ezdoctemplatedocumentDownloadV1(int pkiEzdoctemplatedocumentID,) async {
-    final response = await ezdoctemplatedocumentDownloadV1WithHttpInfo(pkiEzdoctemplatedocumentID,);
+  Future<void> ezdoctemplatedocumentDownloadV1(int pkiEzdoctemplatedocumentID, { Future<void>? abortTrigger, }) async {
+    final response = await ezdoctemplatedocumentDownloadV1WithHttpInfo(pkiEzdoctemplatedocumentID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -133,7 +135,7 @@ class ObjectEzdoctemplatedocumentApi {
   ///   The unique ID of the Ezdoctemplatedocument
   ///
   /// * [EzdoctemplatedocumentEditObjectV1Request] ezdoctemplatedocumentEditObjectV1Request (required):
-  Future<Response> ezdoctemplatedocumentEditObjectV1WithHttpInfo(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentEditObjectV1Request ezdoctemplatedocumentEditObjectV1Request,) async {
+  Future<Response> ezdoctemplatedocumentEditObjectV1WithHttpInfo(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentEditObjectV1Request ezdoctemplatedocumentEditObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezdoctemplatedocument/{pkiEzdoctemplatedocumentID}'
       .replaceAll('{pkiEzdoctemplatedocumentID}', pkiEzdoctemplatedocumentID.toString());
@@ -156,6 +158,7 @@ class ObjectEzdoctemplatedocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -169,8 +172,8 @@ class ObjectEzdoctemplatedocumentApi {
   ///   The unique ID of the Ezdoctemplatedocument
   ///
   /// * [EzdoctemplatedocumentEditObjectV1Request] ezdoctemplatedocumentEditObjectV1Request (required):
-  Future<EzdoctemplatedocumentEditObjectV1Response?> ezdoctemplatedocumentEditObjectV1(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentEditObjectV1Request ezdoctemplatedocumentEditObjectV1Request,) async {
-    final response = await ezdoctemplatedocumentEditObjectV1WithHttpInfo(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentEditObjectV1Request,);
+  Future<EzdoctemplatedocumentEditObjectV1Response?> ezdoctemplatedocumentEditObjectV1(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentEditObjectV1Request ezdoctemplatedocumentEditObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezdoctemplatedocumentEditObjectV1WithHttpInfo(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentEditObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -208,7 +211,7 @@ class ObjectEzdoctemplatedocumentApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<Response> ezdoctemplatedocumentGetAutocompleteV2WithHttpInfo(String sSelector, String eType, { String? fkiEzsignfoldertypeID, String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
+  Future<Response> ezdoctemplatedocumentGetAutocompleteV2WithHttpInfo(String sSelector, String eType, { String? fkiEzsignfoldertypeID, String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezdoctemplatedocument/getAutocomplete/{sSelector}'
       .replaceAll('{sSelector}', sSelector);
@@ -246,6 +249,7 @@ class ObjectEzdoctemplatedocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -271,8 +275,8 @@ class ObjectEzdoctemplatedocumentApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<EzdoctemplatedocumentGetAutocompleteV2Response?> ezdoctemplatedocumentGetAutocompleteV2(String sSelector, String eType, { String? fkiEzsignfoldertypeID, String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
-    final response = await ezdoctemplatedocumentGetAutocompleteV2WithHttpInfo(sSelector, eType,  fkiEzsignfoldertypeID: fkiEzsignfoldertypeID, eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, );
+  Future<EzdoctemplatedocumentGetAutocompleteV2Response?> ezdoctemplatedocumentGetAutocompleteV2(String sSelector, String eType, { String? fkiEzsignfoldertypeID, String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
+    final response = await ezdoctemplatedocumentGetAutocompleteV2WithHttpInfo(sSelector, eType, fkiEzsignfoldertypeID: fkiEzsignfoldertypeID, eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -304,7 +308,7 @@ class ObjectEzdoctemplatedocumentApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<Response> ezdoctemplatedocumentGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
+  Future<Response> ezdoctemplatedocumentGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezdoctemplatedocument/getList';
 
@@ -343,6 +347,7 @@ class ObjectEzdoctemplatedocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -362,8 +367,8 @@ class ObjectEzdoctemplatedocumentApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<EzdoctemplatedocumentGetListV1Response?> ezdoctemplatedocumentGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
-    final response = await ezdoctemplatedocumentGetListV1WithHttpInfo( eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, );
+  Future<EzdoctemplatedocumentGetListV1Response?> ezdoctemplatedocumentGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
+    final response = await ezdoctemplatedocumentGetListV1WithHttpInfo(eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -387,7 +392,7 @@ class ObjectEzdoctemplatedocumentApi {
   ///
   /// * [int] pkiEzdoctemplatedocumentID (required):
   ///   The unique ID of the Ezdoctemplatedocument
-  Future<Response> ezdoctemplatedocumentGetObjectV2WithHttpInfo(int pkiEzdoctemplatedocumentID,) async {
+  Future<Response> ezdoctemplatedocumentGetObjectV2WithHttpInfo(int pkiEzdoctemplatedocumentID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezdoctemplatedocument/{pkiEzdoctemplatedocumentID}'
       .replaceAll('{pkiEzdoctemplatedocumentID}', pkiEzdoctemplatedocumentID.toString());
@@ -410,6 +415,7 @@ class ObjectEzdoctemplatedocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -421,8 +427,8 @@ class ObjectEzdoctemplatedocumentApi {
   ///
   /// * [int] pkiEzdoctemplatedocumentID (required):
   ///   The unique ID of the Ezdoctemplatedocument
-  Future<EzdoctemplatedocumentGetObjectV2Response?> ezdoctemplatedocumentGetObjectV2(int pkiEzdoctemplatedocumentID,) async {
-    final response = await ezdoctemplatedocumentGetObjectV2WithHttpInfo(pkiEzdoctemplatedocumentID,);
+  Future<EzdoctemplatedocumentGetObjectV2Response?> ezdoctemplatedocumentGetObjectV2(int pkiEzdoctemplatedocumentID, { Future<void>? abortTrigger, }) async {
+    final response = await ezdoctemplatedocumentGetObjectV2WithHttpInfo(pkiEzdoctemplatedocumentID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -448,7 +454,7 @@ class ObjectEzdoctemplatedocumentApi {
   ///   The unique ID of the Ezdoctemplatedocument
   ///
   /// * [EzdoctemplatedocumentPatchObjectV1Request] ezdoctemplatedocumentPatchObjectV1Request (required):
-  Future<Response> ezdoctemplatedocumentPatchObjectV1WithHttpInfo(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentPatchObjectV1Request ezdoctemplatedocumentPatchObjectV1Request,) async {
+  Future<Response> ezdoctemplatedocumentPatchObjectV1WithHttpInfo(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentPatchObjectV1Request ezdoctemplatedocumentPatchObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezdoctemplatedocument/{pkiEzdoctemplatedocumentID}'
       .replaceAll('{pkiEzdoctemplatedocumentID}', pkiEzdoctemplatedocumentID.toString());
@@ -471,6 +477,7 @@ class ObjectEzdoctemplatedocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -484,8 +491,8 @@ class ObjectEzdoctemplatedocumentApi {
   ///   The unique ID of the Ezdoctemplatedocument
   ///
   /// * [EzdoctemplatedocumentPatchObjectV1Request] ezdoctemplatedocumentPatchObjectV1Request (required):
-  Future<EzdoctemplatedocumentPatchObjectV1Response?> ezdoctemplatedocumentPatchObjectV1(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentPatchObjectV1Request ezdoctemplatedocumentPatchObjectV1Request,) async {
-    final response = await ezdoctemplatedocumentPatchObjectV1WithHttpInfo(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentPatchObjectV1Request,);
+  Future<EzdoctemplatedocumentPatchObjectV1Response?> ezdoctemplatedocumentPatchObjectV1(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentPatchObjectV1Request ezdoctemplatedocumentPatchObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezdoctemplatedocumentPatchObjectV1WithHttpInfo(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentPatchObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

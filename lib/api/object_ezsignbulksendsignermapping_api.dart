@@ -25,7 +25,7 @@ class ObjectEzsignbulksendsignermappingApi {
   /// Parameters:
   ///
   /// * [EzsignbulksendsignermappingCreateObjectV1Request] ezsignbulksendsignermappingCreateObjectV1Request (required):
-  Future<Response> ezsignbulksendsignermappingCreateObjectV1WithHttpInfo(EzsignbulksendsignermappingCreateObjectV1Request ezsignbulksendsignermappingCreateObjectV1Request,) async {
+  Future<Response> ezsignbulksendsignermappingCreateObjectV1WithHttpInfo(EzsignbulksendsignermappingCreateObjectV1Request ezsignbulksendsignermappingCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignbulksendsignermapping';
 
@@ -47,6 +47,7 @@ class ObjectEzsignbulksendsignermappingApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -57,8 +58,8 @@ class ObjectEzsignbulksendsignermappingApi {
   /// Parameters:
   ///
   /// * [EzsignbulksendsignermappingCreateObjectV1Request] ezsignbulksendsignermappingCreateObjectV1Request (required):
-  Future<EzsignbulksendsignermappingCreateObjectV1Response?> ezsignbulksendsignermappingCreateObjectV1(EzsignbulksendsignermappingCreateObjectV1Request ezsignbulksendsignermappingCreateObjectV1Request,) async {
-    final response = await ezsignbulksendsignermappingCreateObjectV1WithHttpInfo(ezsignbulksendsignermappingCreateObjectV1Request,);
+  Future<EzsignbulksendsignermappingCreateObjectV1Response?> ezsignbulksendsignermappingCreateObjectV1(EzsignbulksendsignermappingCreateObjectV1Request ezsignbulksendsignermappingCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignbulksendsignermappingCreateObjectV1WithHttpInfo(ezsignbulksendsignermappingCreateObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -81,7 +82,7 @@ class ObjectEzsignbulksendsignermappingApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignbulksendsignermappingID (required):
-  Future<Response> ezsignbulksendsignermappingDeleteObjectV1WithHttpInfo(int pkiEzsignbulksendsignermappingID,) async {
+  Future<Response> ezsignbulksendsignermappingDeleteObjectV1WithHttpInfo(int pkiEzsignbulksendsignermappingID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}'
       .replaceAll('{pkiEzsignbulksendsignermappingID}', pkiEzsignbulksendsignermappingID.toString());
@@ -104,6 +105,7 @@ class ObjectEzsignbulksendsignermappingApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -114,8 +116,8 @@ class ObjectEzsignbulksendsignermappingApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignbulksendsignermappingID (required):
-  Future<EzsignbulksendsignermappingDeleteObjectV1Response?> ezsignbulksendsignermappingDeleteObjectV1(int pkiEzsignbulksendsignermappingID,) async {
-    final response = await ezsignbulksendsignermappingDeleteObjectV1WithHttpInfo(pkiEzsignbulksendsignermappingID,);
+  Future<EzsignbulksendsignermappingDeleteObjectV1Response?> ezsignbulksendsignermappingDeleteObjectV1(int pkiEzsignbulksendsignermappingID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignbulksendsignermappingDeleteObjectV1WithHttpInfo(pkiEzsignbulksendsignermappingID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -138,7 +140,7 @@ class ObjectEzsignbulksendsignermappingApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignbulksendsignermappingID (required):
-  Future<Response> ezsignbulksendsignermappingGetObjectV2WithHttpInfo(int pkiEzsignbulksendsignermappingID,) async {
+  Future<Response> ezsignbulksendsignermappingGetObjectV2WithHttpInfo(int pkiEzsignbulksendsignermappingID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}'
       .replaceAll('{pkiEzsignbulksendsignermappingID}', pkiEzsignbulksendsignermappingID.toString());
@@ -161,6 +163,7 @@ class ObjectEzsignbulksendsignermappingApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -171,8 +174,8 @@ class ObjectEzsignbulksendsignermappingApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignbulksendsignermappingID (required):
-  Future<EzsignbulksendsignermappingGetObjectV2Response?> ezsignbulksendsignermappingGetObjectV2(int pkiEzsignbulksendsignermappingID,) async {
-    final response = await ezsignbulksendsignermappingGetObjectV2WithHttpInfo(pkiEzsignbulksendsignermappingID,);
+  Future<EzsignbulksendsignermappingGetObjectV2Response?> ezsignbulksendsignermappingGetObjectV2(int pkiEzsignbulksendsignermappingID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignbulksendsignermappingGetObjectV2WithHttpInfo(pkiEzsignbulksendsignermappingID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

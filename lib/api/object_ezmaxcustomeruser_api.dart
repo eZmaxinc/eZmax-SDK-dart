@@ -28,7 +28,7 @@ class ObjectEzmaxcustomeruserApi {
   ///   The unique ID of the Ezmaxcustomeruser
   ///
   /// * [EzmaxcustomeruserPatchObjectV1Request] ezmaxcustomeruserPatchObjectV1Request (required):
-  Future<Response> ezmaxcustomeruserPatchObjectV1WithHttpInfo(int pkiEzmaxcustomeruserID, EzmaxcustomeruserPatchObjectV1Request ezmaxcustomeruserPatchObjectV1Request,) async {
+  Future<Response> ezmaxcustomeruserPatchObjectV1WithHttpInfo(int pkiEzmaxcustomeruserID, EzmaxcustomeruserPatchObjectV1Request ezmaxcustomeruserPatchObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezmaxcustomeruser/{pkiEzmaxcustomeruserID}'
       .replaceAll('{pkiEzmaxcustomeruserID}', pkiEzmaxcustomeruserID.toString());
@@ -51,6 +51,7 @@ class ObjectEzmaxcustomeruserApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -64,8 +65,8 @@ class ObjectEzmaxcustomeruserApi {
   ///   The unique ID of the Ezmaxcustomeruser
   ///
   /// * [EzmaxcustomeruserPatchObjectV1Request] ezmaxcustomeruserPatchObjectV1Request (required):
-  Future<EzmaxcustomeruserPatchObjectV1Response?> ezmaxcustomeruserPatchObjectV1(int pkiEzmaxcustomeruserID, EzmaxcustomeruserPatchObjectV1Request ezmaxcustomeruserPatchObjectV1Request,) async {
-    final response = await ezmaxcustomeruserPatchObjectV1WithHttpInfo(pkiEzmaxcustomeruserID, ezmaxcustomeruserPatchObjectV1Request,);
+  Future<EzmaxcustomeruserPatchObjectV1Response?> ezmaxcustomeruserPatchObjectV1(int pkiEzmaxcustomeruserID, EzmaxcustomeruserPatchObjectV1Request ezmaxcustomeruserPatchObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezmaxcustomeruserPatchObjectV1WithHttpInfo(pkiEzmaxcustomeruserID, ezmaxcustomeruserPatchObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

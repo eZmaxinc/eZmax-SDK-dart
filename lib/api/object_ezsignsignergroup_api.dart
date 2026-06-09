@@ -25,7 +25,7 @@ class ObjectEzsignsignergroupApi {
   /// Parameters:
   ///
   /// * [EzsignsignergroupCreateObjectV1Request] ezsignsignergroupCreateObjectV1Request (required):
-  Future<Response> ezsignsignergroupCreateObjectV1WithHttpInfo(EzsignsignergroupCreateObjectV1Request ezsignsignergroupCreateObjectV1Request,) async {
+  Future<Response> ezsignsignergroupCreateObjectV1WithHttpInfo(EzsignsignergroupCreateObjectV1Request ezsignsignergroupCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignsignergroup';
 
@@ -47,6 +47,7 @@ class ObjectEzsignsignergroupApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -57,8 +58,8 @@ class ObjectEzsignsignergroupApi {
   /// Parameters:
   ///
   /// * [EzsignsignergroupCreateObjectV1Request] ezsignsignergroupCreateObjectV1Request (required):
-  Future<EzsignsignergroupCreateObjectV1Response?> ezsignsignergroupCreateObjectV1(EzsignsignergroupCreateObjectV1Request ezsignsignergroupCreateObjectV1Request,) async {
-    final response = await ezsignsignergroupCreateObjectV1WithHttpInfo(ezsignsignergroupCreateObjectV1Request,);
+  Future<EzsignsignergroupCreateObjectV1Response?> ezsignsignergroupCreateObjectV1(EzsignsignergroupCreateObjectV1Request ezsignsignergroupCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignsignergroupCreateObjectV1WithHttpInfo(ezsignsignergroupCreateObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -82,7 +83,7 @@ class ObjectEzsignsignergroupApi {
   ///
   /// * [int] pkiEzsignsignergroupID (required):
   ///   The unique ID of the Ezsignsignergroup
-  Future<Response> ezsignsignergroupDeleteObjectV1WithHttpInfo(int pkiEzsignsignergroupID,) async {
+  Future<Response> ezsignsignergroupDeleteObjectV1WithHttpInfo(int pkiEzsignsignergroupID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignsignergroup/{pkiEzsignsignergroupID}'
       .replaceAll('{pkiEzsignsignergroupID}', pkiEzsignsignergroupID.toString());
@@ -105,6 +106,7 @@ class ObjectEzsignsignergroupApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -116,8 +118,8 @@ class ObjectEzsignsignergroupApi {
   ///
   /// * [int] pkiEzsignsignergroupID (required):
   ///   The unique ID of the Ezsignsignergroup
-  Future<EzsignsignergroupDeleteObjectV1Response?> ezsignsignergroupDeleteObjectV1(int pkiEzsignsignergroupID,) async {
-    final response = await ezsignsignergroupDeleteObjectV1WithHttpInfo(pkiEzsignsignergroupID,);
+  Future<EzsignsignergroupDeleteObjectV1Response?> ezsignsignergroupDeleteObjectV1(int pkiEzsignsignergroupID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignsignergroupDeleteObjectV1WithHttpInfo(pkiEzsignsignergroupID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -142,7 +144,7 @@ class ObjectEzsignsignergroupApi {
   /// * [int] pkiEzsignsignergroupID (required):
   ///
   /// * [EzsignsignergroupEditEzsignsignergroupmembershipsV1Request] ezsignsignergroupEditEzsignsignergroupmembershipsV1Request (required):
-  Future<Response> ezsignsignergroupEditEzsignsignergroupmembershipsV1WithHttpInfo(int pkiEzsignsignergroupID, EzsignsignergroupEditEzsignsignergroupmembershipsV1Request ezsignsignergroupEditEzsignsignergroupmembershipsV1Request,) async {
+  Future<Response> ezsignsignergroupEditEzsignsignergroupmembershipsV1WithHttpInfo(int pkiEzsignsignergroupID, EzsignsignergroupEditEzsignsignergroupmembershipsV1Request ezsignsignergroupEditEzsignsignergroupmembershipsV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignsignergroup/{pkiEzsignsignergroupID}/editEzsignsignergroupmemberships'
       .replaceAll('{pkiEzsignsignergroupID}', pkiEzsignsignergroupID.toString());
@@ -165,6 +167,7 @@ class ObjectEzsignsignergroupApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -177,8 +180,8 @@ class ObjectEzsignsignergroupApi {
   /// * [int] pkiEzsignsignergroupID (required):
   ///
   /// * [EzsignsignergroupEditEzsignsignergroupmembershipsV1Request] ezsignsignergroupEditEzsignsignergroupmembershipsV1Request (required):
-  Future<EzsignsignergroupEditEzsignsignergroupmembershipsV1Response?> ezsignsignergroupEditEzsignsignergroupmembershipsV1(int pkiEzsignsignergroupID, EzsignsignergroupEditEzsignsignergroupmembershipsV1Request ezsignsignergroupEditEzsignsignergroupmembershipsV1Request,) async {
-    final response = await ezsignsignergroupEditEzsignsignergroupmembershipsV1WithHttpInfo(pkiEzsignsignergroupID, ezsignsignergroupEditEzsignsignergroupmembershipsV1Request,);
+  Future<EzsignsignergroupEditEzsignsignergroupmembershipsV1Response?> ezsignsignergroupEditEzsignsignergroupmembershipsV1(int pkiEzsignsignergroupID, EzsignsignergroupEditEzsignsignergroupmembershipsV1Request ezsignsignergroupEditEzsignsignergroupmembershipsV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignsignergroupEditEzsignsignergroupmembershipsV1WithHttpInfo(pkiEzsignsignergroupID, ezsignsignergroupEditEzsignsignergroupmembershipsV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -204,7 +207,7 @@ class ObjectEzsignsignergroupApi {
   ///   The unique ID of the Ezsignsignergroup
   ///
   /// * [EzsignsignergroupEditObjectV1Request] ezsignsignergroupEditObjectV1Request (required):
-  Future<Response> ezsignsignergroupEditObjectV1WithHttpInfo(int pkiEzsignsignergroupID, EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request,) async {
+  Future<Response> ezsignsignergroupEditObjectV1WithHttpInfo(int pkiEzsignsignergroupID, EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignsignergroup/{pkiEzsignsignergroupID}'
       .replaceAll('{pkiEzsignsignergroupID}', pkiEzsignsignergroupID.toString());
@@ -227,6 +230,7 @@ class ObjectEzsignsignergroupApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -240,8 +244,8 @@ class ObjectEzsignsignergroupApi {
   ///   The unique ID of the Ezsignsignergroup
   ///
   /// * [EzsignsignergroupEditObjectV1Request] ezsignsignergroupEditObjectV1Request (required):
-  Future<EzsignsignergroupEditObjectV1Response?> ezsignsignergroupEditObjectV1(int pkiEzsignsignergroupID, EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request,) async {
-    final response = await ezsignsignergroupEditObjectV1WithHttpInfo(pkiEzsignsignergroupID, ezsignsignergroupEditObjectV1Request,);
+  Future<EzsignsignergroupEditObjectV1Response?> ezsignsignergroupEditObjectV1(int pkiEzsignsignergroupID, EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignsignergroupEditObjectV1WithHttpInfo(pkiEzsignsignergroupID, ezsignsignergroupEditObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -262,7 +266,7 @@ class ObjectEzsignsignergroupApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignsignergroupID (required):
-  Future<Response> ezsignsignergroupGetEzsignsignergroupmembershipsV1WithHttpInfo(int pkiEzsignsignergroupID,) async {
+  Future<Response> ezsignsignergroupGetEzsignsignergroupmembershipsV1WithHttpInfo(int pkiEzsignsignergroupID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignsignergroup/{pkiEzsignsignergroupID}/getEzsignsignergroupmemberships'
       .replaceAll('{pkiEzsignsignergroupID}', pkiEzsignsignergroupID.toString());
@@ -285,6 +289,7 @@ class ObjectEzsignsignergroupApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -293,8 +298,8 @@ class ObjectEzsignsignergroupApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignsignergroupID (required):
-  Future<EzsignsignergroupGetEzsignsignergroupmembershipsV1Response?> ezsignsignergroupGetEzsignsignergroupmembershipsV1(int pkiEzsignsignergroupID,) async {
-    final response = await ezsignsignergroupGetEzsignsignergroupmembershipsV1WithHttpInfo(pkiEzsignsignergroupID,);
+  Future<EzsignsignergroupGetEzsignsignergroupmembershipsV1Response?> ezsignsignergroupGetEzsignsignergroupmembershipsV1(int pkiEzsignsignergroupID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignsignergroupGetEzsignsignergroupmembershipsV1WithHttpInfo(pkiEzsignsignergroupID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -318,7 +323,7 @@ class ObjectEzsignsignergroupApi {
   ///
   /// * [int] pkiEzsignsignergroupID (required):
   ///   The unique ID of the Ezsignsignergroup
-  Future<Response> ezsignsignergroupGetObjectV2WithHttpInfo(int pkiEzsignsignergroupID,) async {
+  Future<Response> ezsignsignergroupGetObjectV2WithHttpInfo(int pkiEzsignsignergroupID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezsignsignergroup/{pkiEzsignsignergroupID}'
       .replaceAll('{pkiEzsignsignergroupID}', pkiEzsignsignergroupID.toString());
@@ -341,6 +346,7 @@ class ObjectEzsignsignergroupApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -352,8 +358,8 @@ class ObjectEzsignsignergroupApi {
   ///
   /// * [int] pkiEzsignsignergroupID (required):
   ///   The unique ID of the Ezsignsignergroup
-  Future<EzsignsignergroupGetObjectV2Response?> ezsignsignergroupGetObjectV2(int pkiEzsignsignergroupID,) async {
-    final response = await ezsignsignergroupGetObjectV2WithHttpInfo(pkiEzsignsignergroupID,);
+  Future<EzsignsignergroupGetObjectV2Response?> ezsignsignergroupGetObjectV2(int pkiEzsignsignergroupID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignsignergroupGetObjectV2WithHttpInfo(pkiEzsignsignergroupID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

@@ -25,7 +25,7 @@ class ObjectNotificationtestApi {
   /// Parameters:
   ///
   /// * [int] pkiNotificationtestID (required):
-  Future<Response> notificationtestGetElementsV2WithHttpInfo(int pkiNotificationtestID,) async {
+  Future<Response> notificationtestGetElementsV2WithHttpInfo(int pkiNotificationtestID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/notificationtest/{pkiNotificationtestID}/getElements'
       .replaceAll('{pkiNotificationtestID}', pkiNotificationtestID.toString());
@@ -48,6 +48,7 @@ class ObjectNotificationtestApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -58,8 +59,8 @@ class ObjectNotificationtestApi {
   /// Parameters:
   ///
   /// * [int] pkiNotificationtestID (required):
-  Future<NotificationtestGetElementsV2Response?> notificationtestGetElementsV2(int pkiNotificationtestID,) async {
-    final response = await notificationtestGetElementsV2WithHttpInfo(pkiNotificationtestID,);
+  Future<NotificationtestGetElementsV2Response?> notificationtestGetElementsV2(int pkiNotificationtestID, { Future<void>? abortTrigger, }) async {
+    final response = await notificationtestGetElementsV2WithHttpInfo(pkiNotificationtestID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

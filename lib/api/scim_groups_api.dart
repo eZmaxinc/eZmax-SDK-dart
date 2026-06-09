@@ -23,7 +23,7 @@ class ScimGroupsApi {
   /// Parameters:
   ///
   /// * [ScimGroup] scimGroup (required):
-  Future<Response> groupsCreateObjectScimV2WithHttpInfo(ScimGroup scimGroup,) async {
+  Future<Response> groupsCreateObjectScimV2WithHttpInfo(ScimGroup scimGroup, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/scim/Groups';
 
@@ -45,6 +45,7 @@ class ScimGroupsApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -53,8 +54,8 @@ class ScimGroupsApi {
   /// Parameters:
   ///
   /// * [ScimGroup] scimGroup (required):
-  Future<ScimGroup?> groupsCreateObjectScimV2(ScimGroup scimGroup,) async {
-    final response = await groupsCreateObjectScimV2WithHttpInfo(scimGroup,);
+  Future<ScimGroup?> groupsCreateObjectScimV2(ScimGroup scimGroup, { Future<void>? abortTrigger, }) async {
+    final response = await groupsCreateObjectScimV2WithHttpInfo(scimGroup, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -75,7 +76,7 @@ class ScimGroupsApi {
   /// Parameters:
   ///
   /// * [String] groupId (required):
-  Future<Response> groupsDeleteObjectScimV2WithHttpInfo(String groupId,) async {
+  Future<Response> groupsDeleteObjectScimV2WithHttpInfo(String groupId, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/scim/Groups/{groupId}'
       .replaceAll('{groupId}', groupId);
@@ -98,6 +99,7 @@ class ScimGroupsApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -106,8 +108,8 @@ class ScimGroupsApi {
   /// Parameters:
   ///
   /// * [String] groupId (required):
-  Future<void> groupsDeleteObjectScimV2(String groupId,) async {
-    final response = await groupsDeleteObjectScimV2WithHttpInfo(groupId,);
+  Future<void> groupsDeleteObjectScimV2(String groupId, { Future<void>? abortTrigger, }) async {
+    final response = await groupsDeleteObjectScimV2WithHttpInfo(groupId, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -122,7 +124,7 @@ class ScimGroupsApi {
   /// * [String] groupId (required):
   ///
   /// * [ScimGroup] scimGroup (required):
-  Future<Response> groupsEditObjectScimV2WithHttpInfo(String groupId, ScimGroup scimGroup,) async {
+  Future<Response> groupsEditObjectScimV2WithHttpInfo(String groupId, ScimGroup scimGroup, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/scim/Groups/{groupId}'
       .replaceAll('{groupId}', groupId);
@@ -145,6 +147,7 @@ class ScimGroupsApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -155,8 +158,8 @@ class ScimGroupsApi {
   /// * [String] groupId (required):
   ///
   /// * [ScimGroup] scimGroup (required):
-  Future<ScimGroup?> groupsEditObjectScimV2(String groupId, ScimGroup scimGroup,) async {
-    final response = await groupsEditObjectScimV2WithHttpInfo(groupId, scimGroup,);
+  Future<ScimGroup?> groupsEditObjectScimV2(String groupId, ScimGroup scimGroup, { Future<void>? abortTrigger, }) async {
+    final response = await groupsEditObjectScimV2WithHttpInfo(groupId, scimGroup, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -178,7 +181,7 @@ class ScimGroupsApi {
   ///
   /// * [String] filter:
   ///   Filter expression for searching groups
-  Future<Response> groupsGetListScimV2WithHttpInfo({ String? filter, }) async {
+  Future<Response> groupsGetListScimV2WithHttpInfo({ String? filter, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/scim/Groups';
 
@@ -204,6 +207,7 @@ class ScimGroupsApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -213,8 +217,8 @@ class ScimGroupsApi {
   ///
   /// * [String] filter:
   ///   Filter expression for searching groups
-  Future<ScimGroup?> groupsGetListScimV2({ String? filter, }) async {
-    final response = await groupsGetListScimV2WithHttpInfo( filter: filter, );
+  Future<ScimGroup?> groupsGetListScimV2({ String? filter, Future<void>? abortTrigger, }) async {
+    final response = await groupsGetListScimV2WithHttpInfo(filter: filter, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -235,7 +239,7 @@ class ScimGroupsApi {
   /// Parameters:
   ///
   /// * [String] groupId (required):
-  Future<Response> groupsGetObjectScimV2WithHttpInfo(String groupId,) async {
+  Future<Response> groupsGetObjectScimV2WithHttpInfo(String groupId, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/scim/Groups/{groupId}'
       .replaceAll('{groupId}', groupId);
@@ -258,6 +262,7 @@ class ScimGroupsApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -266,8 +271,8 @@ class ScimGroupsApi {
   /// Parameters:
   ///
   /// * [String] groupId (required):
-  Future<ScimGroup?> groupsGetObjectScimV2(String groupId,) async {
-    final response = await groupsGetObjectScimV2WithHttpInfo(groupId,);
+  Future<ScimGroup?> groupsGetObjectScimV2(String groupId, { Future<void>? abortTrigger, }) async {
+    final response = await groupsGetObjectScimV2WithHttpInfo(groupId, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

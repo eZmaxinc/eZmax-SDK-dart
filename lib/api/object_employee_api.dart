@@ -34,7 +34,7 @@ class ObjectEmployeeApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<Response> employeeGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
+  Future<Response> employeeGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/employee/getList';
 
@@ -73,6 +73,7 @@ class ObjectEmployeeApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -92,8 +93,8 @@ class ObjectEmployeeApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<EmployeeGetListV1Response?> employeeGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
-    final response = await employeeGetListV1WithHttpInfo( eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, );
+  Future<EmployeeGetListV1Response?> employeeGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
+    final response = await employeeGetListV1WithHttpInfo(eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -118,7 +119,7 @@ class ObjectEmployeeApi {
   /// * [int] pkiEmployeeID (required):
   ///
   /// * [EmployeeImportIntoEDMV1Request] employeeImportIntoEDMV1Request (required):
-  Future<Response> employeeImportIntoEDMV1WithHttpInfo(int pkiEmployeeID, EmployeeImportIntoEDMV1Request employeeImportIntoEDMV1Request,) async {
+  Future<Response> employeeImportIntoEDMV1WithHttpInfo(int pkiEmployeeID, EmployeeImportIntoEDMV1Request employeeImportIntoEDMV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/employee/{pkiEmployeeID}/importIntoEDM'
       .replaceAll('{pkiEmployeeID}', pkiEmployeeID.toString());
@@ -141,6 +142,7 @@ class ObjectEmployeeApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -153,8 +155,8 @@ class ObjectEmployeeApi {
   /// * [int] pkiEmployeeID (required):
   ///
   /// * [EmployeeImportIntoEDMV1Request] employeeImportIntoEDMV1Request (required):
-  Future<EmployeeImportIntoEDMV1Response?> employeeImportIntoEDMV1(int pkiEmployeeID, EmployeeImportIntoEDMV1Request employeeImportIntoEDMV1Request,) async {
-    final response = await employeeImportIntoEDMV1WithHttpInfo(pkiEmployeeID, employeeImportIntoEDMV1Request,);
+  Future<EmployeeImportIntoEDMV1Response?> employeeImportIntoEDMV1(int pkiEmployeeID, EmployeeImportIntoEDMV1Request employeeImportIntoEDMV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await employeeImportIntoEDMV1WithHttpInfo(pkiEmployeeID, employeeImportIntoEDMV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

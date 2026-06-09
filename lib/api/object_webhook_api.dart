@@ -25,7 +25,7 @@ class ObjectWebhookApi {
   /// Parameters:
   ///
   /// * [WebhookCreateObjectV2Request] webhookCreateObjectV2Request (required):
-  Future<Response> webhookCreateObjectV2WithHttpInfo(WebhookCreateObjectV2Request webhookCreateObjectV2Request,) async {
+  Future<Response> webhookCreateObjectV2WithHttpInfo(WebhookCreateObjectV2Request webhookCreateObjectV2Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/webhook';
 
@@ -47,6 +47,7 @@ class ObjectWebhookApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -57,8 +58,8 @@ class ObjectWebhookApi {
   /// Parameters:
   ///
   /// * [WebhookCreateObjectV2Request] webhookCreateObjectV2Request (required):
-  Future<WebhookCreateObjectV2Response?> webhookCreateObjectV2(WebhookCreateObjectV2Request webhookCreateObjectV2Request,) async {
-    final response = await webhookCreateObjectV2WithHttpInfo(webhookCreateObjectV2Request,);
+  Future<WebhookCreateObjectV2Response?> webhookCreateObjectV2(WebhookCreateObjectV2Request webhookCreateObjectV2Request, { Future<void>? abortTrigger, }) async {
+    final response = await webhookCreateObjectV2WithHttpInfo(webhookCreateObjectV2Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -81,7 +82,7 @@ class ObjectWebhookApi {
   /// Parameters:
   ///
   /// * [int] pkiWebhookID (required):
-  Future<Response> webhookDeleteObjectV1WithHttpInfo(int pkiWebhookID,) async {
+  Future<Response> webhookDeleteObjectV1WithHttpInfo(int pkiWebhookID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/webhook/{pkiWebhookID}'
       .replaceAll('{pkiWebhookID}', pkiWebhookID.toString());
@@ -104,6 +105,7 @@ class ObjectWebhookApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -114,8 +116,8 @@ class ObjectWebhookApi {
   /// Parameters:
   ///
   /// * [int] pkiWebhookID (required):
-  Future<WebhookDeleteObjectV1Response?> webhookDeleteObjectV1(int pkiWebhookID,) async {
-    final response = await webhookDeleteObjectV1WithHttpInfo(pkiWebhookID,);
+  Future<WebhookDeleteObjectV1Response?> webhookDeleteObjectV1(int pkiWebhookID, { Future<void>? abortTrigger, }) async {
+    final response = await webhookDeleteObjectV1WithHttpInfo(pkiWebhookID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -140,7 +142,7 @@ class ObjectWebhookApi {
   /// * [int] pkiWebhookID (required):
   ///
   /// * [WebhookEditObjectV1Request] webhookEditObjectV1Request (required):
-  Future<Response> webhookEditObjectV1WithHttpInfo(int pkiWebhookID, WebhookEditObjectV1Request webhookEditObjectV1Request,) async {
+  Future<Response> webhookEditObjectV1WithHttpInfo(int pkiWebhookID, WebhookEditObjectV1Request webhookEditObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/webhook/{pkiWebhookID}'
       .replaceAll('{pkiWebhookID}', pkiWebhookID.toString());
@@ -163,6 +165,7 @@ class ObjectWebhookApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -175,8 +178,8 @@ class ObjectWebhookApi {
   /// * [int] pkiWebhookID (required):
   ///
   /// * [WebhookEditObjectV1Request] webhookEditObjectV1Request (required):
-  Future<WebhookEditObjectV1Response?> webhookEditObjectV1(int pkiWebhookID, WebhookEditObjectV1Request webhookEditObjectV1Request,) async {
-    final response = await webhookEditObjectV1WithHttpInfo(pkiWebhookID, webhookEditObjectV1Request,);
+  Future<WebhookEditObjectV1Response?> webhookEditObjectV1(int pkiWebhookID, WebhookEditObjectV1Request webhookEditObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await webhookEditObjectV1WithHttpInfo(pkiWebhookID, webhookEditObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -202,7 +205,7 @@ class ObjectWebhookApi {
   ///
   /// * [String] eWebhookHistoryinterval (required):
   ///   The number of days to return
-  Future<Response> webhookGetHistoryV1WithHttpInfo(int pkiWebhookID, String eWebhookHistoryinterval,) async {
+  Future<Response> webhookGetHistoryV1WithHttpInfo(int pkiWebhookID, String eWebhookHistoryinterval, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/webhook/{pkiWebhookID}/getHistory'
       .replaceAll('{pkiWebhookID}', pkiWebhookID.toString());
@@ -227,6 +230,7 @@ class ObjectWebhookApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -240,8 +244,8 @@ class ObjectWebhookApi {
   ///
   /// * [String] eWebhookHistoryinterval (required):
   ///   The number of days to return
-  Future<WebhookGetHistoryV1Response?> webhookGetHistoryV1(int pkiWebhookID, String eWebhookHistoryinterval,) async {
-    final response = await webhookGetHistoryV1WithHttpInfo(pkiWebhookID, eWebhookHistoryinterval,);
+  Future<WebhookGetHistoryV1Response?> webhookGetHistoryV1(int pkiWebhookID, String eWebhookHistoryinterval, { Future<void>? abortTrigger, }) async {
+    final response = await webhookGetHistoryV1WithHttpInfo(pkiWebhookID, eWebhookHistoryinterval, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -273,7 +277,7 @@ class ObjectWebhookApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<Response> webhookGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
+  Future<Response> webhookGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/webhook/getList';
 
@@ -312,6 +316,7 @@ class ObjectWebhookApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -331,8 +336,8 @@ class ObjectWebhookApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<WebhookGetListV1Response?> webhookGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
-    final response = await webhookGetListV1WithHttpInfo( eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, );
+  Future<WebhookGetListV1Response?> webhookGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
+    final response = await webhookGetListV1WithHttpInfo(eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -355,7 +360,7 @@ class ObjectWebhookApi {
   /// Parameters:
   ///
   /// * [int] pkiWebhookID (required):
-  Future<Response> webhookGetObjectV2WithHttpInfo(int pkiWebhookID,) async {
+  Future<Response> webhookGetObjectV2WithHttpInfo(int pkiWebhookID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/webhook/{pkiWebhookID}'
       .replaceAll('{pkiWebhookID}', pkiWebhookID.toString());
@@ -378,6 +383,7 @@ class ObjectWebhookApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -388,8 +394,8 @@ class ObjectWebhookApi {
   /// Parameters:
   ///
   /// * [int] pkiWebhookID (required):
-  Future<WebhookGetObjectV2Response?> webhookGetObjectV2(int pkiWebhookID,) async {
-    final response = await webhookGetObjectV2WithHttpInfo(pkiWebhookID,);
+  Future<WebhookGetObjectV2Response?> webhookGetObjectV2(int pkiWebhookID, { Future<void>? abortTrigger, }) async {
+    final response = await webhookGetObjectV2WithHttpInfo(pkiWebhookID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -414,7 +420,7 @@ class ObjectWebhookApi {
   /// * [int] pkiWebhookID (required):
   ///
   /// * [WebhookRegenerateApikeyV1Request] webhookRegenerateApikeyV1Request (required):
-  Future<Response> webhookRegenerateApikeyV1WithHttpInfo(int pkiWebhookID, WebhookRegenerateApikeyV1Request webhookRegenerateApikeyV1Request,) async {
+  Future<Response> webhookRegenerateApikeyV1WithHttpInfo(int pkiWebhookID, WebhookRegenerateApikeyV1Request webhookRegenerateApikeyV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/webhook/{pkiWebhookID}/regenerateApikey'
       .replaceAll('{pkiWebhookID}', pkiWebhookID.toString());
@@ -437,6 +443,7 @@ class ObjectWebhookApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -449,8 +456,8 @@ class ObjectWebhookApi {
   /// * [int] pkiWebhookID (required):
   ///
   /// * [WebhookRegenerateApikeyV1Request] webhookRegenerateApikeyV1Request (required):
-  Future<WebhookRegenerateApikeyV1Response?> webhookRegenerateApikeyV1(int pkiWebhookID, WebhookRegenerateApikeyV1Request webhookRegenerateApikeyV1Request,) async {
-    final response = await webhookRegenerateApikeyV1WithHttpInfo(pkiWebhookID, webhookRegenerateApikeyV1Request,);
+  Future<WebhookRegenerateApikeyV1Response?> webhookRegenerateApikeyV1(int pkiWebhookID, WebhookRegenerateApikeyV1Request webhookRegenerateApikeyV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await webhookRegenerateApikeyV1WithHttpInfo(pkiWebhookID, webhookRegenerateApikeyV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -471,7 +478,7 @@ class ObjectWebhookApi {
   /// Parameters:
   ///
   /// * [WebhookSendWebhookV1Request] webhookSendWebhookV1Request (required):
-  Future<Response> webhookSendWebhookV1WithHttpInfo(WebhookSendWebhookV1Request webhookSendWebhookV1Request,) async {
+  Future<Response> webhookSendWebhookV1WithHttpInfo(WebhookSendWebhookV1Request webhookSendWebhookV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/webhook/sendWebhook';
 
@@ -493,6 +500,7 @@ class ObjectWebhookApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -501,8 +509,8 @@ class ObjectWebhookApi {
   /// Parameters:
   ///
   /// * [WebhookSendWebhookV1Request] webhookSendWebhookV1Request (required):
-  Future<WebhookSendWebhookV1Response?> webhookSendWebhookV1(WebhookSendWebhookV1Request webhookSendWebhookV1Request,) async {
-    final response = await webhookSendWebhookV1WithHttpInfo(webhookSendWebhookV1Request,);
+  Future<WebhookSendWebhookV1Response?> webhookSendWebhookV1(WebhookSendWebhookV1Request webhookSendWebhookV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await webhookSendWebhookV1WithHttpInfo(webhookSendWebhookV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -527,7 +535,7 @@ class ObjectWebhookApi {
   /// * [int] pkiWebhookID (required):
   ///
   /// * [Object] body (required):
-  Future<Response> webhookTestV1WithHttpInfo(int pkiWebhookID, Object body,) async {
+  Future<Response> webhookTestV1WithHttpInfo(int pkiWebhookID, Object body, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/webhook/{pkiWebhookID}/test'
       .replaceAll('{pkiWebhookID}', pkiWebhookID.toString());
@@ -550,6 +558,7 @@ class ObjectWebhookApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -562,8 +571,8 @@ class ObjectWebhookApi {
   /// * [int] pkiWebhookID (required):
   ///
   /// * [Object] body (required):
-  Future<WebhookTestV1Response?> webhookTestV1(int pkiWebhookID, Object body,) async {
-    final response = await webhookTestV1WithHttpInfo(pkiWebhookID, body,);
+  Future<WebhookTestV1Response?> webhookTestV1(int pkiWebhookID, Object body, { Future<void>? abortTrigger, }) async {
+    final response = await webhookTestV1WithHttpInfo(pkiWebhookID, body, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

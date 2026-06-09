@@ -25,7 +25,7 @@ class ObjectEzsigntemplatepackagesignermembershipApi {
   /// Parameters:
   ///
   /// * [EzsigntemplatepackagesignermembershipCreateObjectV1Request] ezsigntemplatepackagesignermembershipCreateObjectV1Request (required):
-  Future<Response> ezsigntemplatepackagesignermembershipCreateObjectV1WithHttpInfo(EzsigntemplatepackagesignermembershipCreateObjectV1Request ezsigntemplatepackagesignermembershipCreateObjectV1Request,) async {
+  Future<Response> ezsigntemplatepackagesignermembershipCreateObjectV1WithHttpInfo(EzsigntemplatepackagesignermembershipCreateObjectV1Request ezsigntemplatepackagesignermembershipCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsigntemplatepackagesignermembership';
 
@@ -47,6 +47,7 @@ class ObjectEzsigntemplatepackagesignermembershipApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -57,8 +58,8 @@ class ObjectEzsigntemplatepackagesignermembershipApi {
   /// Parameters:
   ///
   /// * [EzsigntemplatepackagesignermembershipCreateObjectV1Request] ezsigntemplatepackagesignermembershipCreateObjectV1Request (required):
-  Future<EzsigntemplatepackagesignermembershipCreateObjectV1Response?> ezsigntemplatepackagesignermembershipCreateObjectV1(EzsigntemplatepackagesignermembershipCreateObjectV1Request ezsigntemplatepackagesignermembershipCreateObjectV1Request,) async {
-    final response = await ezsigntemplatepackagesignermembershipCreateObjectV1WithHttpInfo(ezsigntemplatepackagesignermembershipCreateObjectV1Request,);
+  Future<EzsigntemplatepackagesignermembershipCreateObjectV1Response?> ezsigntemplatepackagesignermembershipCreateObjectV1(EzsigntemplatepackagesignermembershipCreateObjectV1Request ezsigntemplatepackagesignermembershipCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplatepackagesignermembershipCreateObjectV1WithHttpInfo(ezsigntemplatepackagesignermembershipCreateObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -81,7 +82,7 @@ class ObjectEzsigntemplatepackagesignermembershipApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigntemplatepackagesignermembershipID (required):
-  Future<Response> ezsigntemplatepackagesignermembershipDeleteObjectV1WithHttpInfo(int pkiEzsigntemplatepackagesignermembershipID,) async {
+  Future<Response> ezsigntemplatepackagesignermembershipDeleteObjectV1WithHttpInfo(int pkiEzsigntemplatepackagesignermembershipID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsigntemplatepackagesignermembership/{pkiEzsigntemplatepackagesignermembershipID}'
       .replaceAll('{pkiEzsigntemplatepackagesignermembershipID}', pkiEzsigntemplatepackagesignermembershipID.toString());
@@ -104,6 +105,7 @@ class ObjectEzsigntemplatepackagesignermembershipApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -114,8 +116,8 @@ class ObjectEzsigntemplatepackagesignermembershipApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigntemplatepackagesignermembershipID (required):
-  Future<EzsigntemplatepackagesignermembershipDeleteObjectV1Response?> ezsigntemplatepackagesignermembershipDeleteObjectV1(int pkiEzsigntemplatepackagesignermembershipID,) async {
-    final response = await ezsigntemplatepackagesignermembershipDeleteObjectV1WithHttpInfo(pkiEzsigntemplatepackagesignermembershipID,);
+  Future<EzsigntemplatepackagesignermembershipDeleteObjectV1Response?> ezsigntemplatepackagesignermembershipDeleteObjectV1(int pkiEzsigntemplatepackagesignermembershipID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplatepackagesignermembershipDeleteObjectV1WithHttpInfo(pkiEzsigntemplatepackagesignermembershipID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -138,7 +140,7 @@ class ObjectEzsigntemplatepackagesignermembershipApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigntemplatepackagesignermembershipID (required):
-  Future<Response> ezsigntemplatepackagesignermembershipGetObjectV2WithHttpInfo(int pkiEzsigntemplatepackagesignermembershipID,) async {
+  Future<Response> ezsigntemplatepackagesignermembershipGetObjectV2WithHttpInfo(int pkiEzsigntemplatepackagesignermembershipID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezsigntemplatepackagesignermembership/{pkiEzsigntemplatepackagesignermembershipID}'
       .replaceAll('{pkiEzsigntemplatepackagesignermembershipID}', pkiEzsigntemplatepackagesignermembershipID.toString());
@@ -161,6 +163,7 @@ class ObjectEzsigntemplatepackagesignermembershipApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -171,8 +174,8 @@ class ObjectEzsigntemplatepackagesignermembershipApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigntemplatepackagesignermembershipID (required):
-  Future<EzsigntemplatepackagesignermembershipGetObjectV2Response?> ezsigntemplatepackagesignermembershipGetObjectV2(int pkiEzsigntemplatepackagesignermembershipID,) async {
-    final response = await ezsigntemplatepackagesignermembershipGetObjectV2WithHttpInfo(pkiEzsigntemplatepackagesignermembershipID,);
+  Future<EzsigntemplatepackagesignermembershipGetObjectV2Response?> ezsigntemplatepackagesignermembershipGetObjectV2(int pkiEzsigntemplatepackagesignermembershipID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplatepackagesignermembershipGetObjectV2WithHttpInfo(pkiEzsigntemplatepackagesignermembershipID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

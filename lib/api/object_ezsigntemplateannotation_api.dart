@@ -25,7 +25,7 @@ class ObjectEzsigntemplateannotationApi {
   /// Parameters:
   ///
   /// * [EzsigntemplateannotationCreateObjectV1Request] ezsigntemplateannotationCreateObjectV1Request (required):
-  Future<Response> ezsigntemplateannotationCreateObjectV1WithHttpInfo(EzsigntemplateannotationCreateObjectV1Request ezsigntemplateannotationCreateObjectV1Request,) async {
+  Future<Response> ezsigntemplateannotationCreateObjectV1WithHttpInfo(EzsigntemplateannotationCreateObjectV1Request ezsigntemplateannotationCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsigntemplateannotation';
 
@@ -47,6 +47,7 @@ class ObjectEzsigntemplateannotationApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -57,8 +58,8 @@ class ObjectEzsigntemplateannotationApi {
   /// Parameters:
   ///
   /// * [EzsigntemplateannotationCreateObjectV1Request] ezsigntemplateannotationCreateObjectV1Request (required):
-  Future<EzsigntemplateannotationCreateObjectV1Response?> ezsigntemplateannotationCreateObjectV1(EzsigntemplateannotationCreateObjectV1Request ezsigntemplateannotationCreateObjectV1Request,) async {
-    final response = await ezsigntemplateannotationCreateObjectV1WithHttpInfo(ezsigntemplateannotationCreateObjectV1Request,);
+  Future<EzsigntemplateannotationCreateObjectV1Response?> ezsigntemplateannotationCreateObjectV1(EzsigntemplateannotationCreateObjectV1Request ezsigntemplateannotationCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplateannotationCreateObjectV1WithHttpInfo(ezsigntemplateannotationCreateObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -82,7 +83,7 @@ class ObjectEzsigntemplateannotationApi {
   ///
   /// * [int] pkiEzsigntemplateannotationID (required):
   ///   The unique ID of the Ezsigntemplateannotation
-  Future<Response> ezsigntemplateannotationDeleteObjectV1WithHttpInfo(int pkiEzsigntemplateannotationID,) async {
+  Future<Response> ezsigntemplateannotationDeleteObjectV1WithHttpInfo(int pkiEzsigntemplateannotationID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsigntemplateannotation/{pkiEzsigntemplateannotationID}'
       .replaceAll('{pkiEzsigntemplateannotationID}', pkiEzsigntemplateannotationID.toString());
@@ -105,6 +106,7 @@ class ObjectEzsigntemplateannotationApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -116,8 +118,8 @@ class ObjectEzsigntemplateannotationApi {
   ///
   /// * [int] pkiEzsigntemplateannotationID (required):
   ///   The unique ID of the Ezsigntemplateannotation
-  Future<EzsigntemplateannotationDeleteObjectV1Response?> ezsigntemplateannotationDeleteObjectV1(int pkiEzsigntemplateannotationID,) async {
-    final response = await ezsigntemplateannotationDeleteObjectV1WithHttpInfo(pkiEzsigntemplateannotationID,);
+  Future<EzsigntemplateannotationDeleteObjectV1Response?> ezsigntemplateannotationDeleteObjectV1(int pkiEzsigntemplateannotationID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplateannotationDeleteObjectV1WithHttpInfo(pkiEzsigntemplateannotationID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -143,7 +145,7 @@ class ObjectEzsigntemplateannotationApi {
   ///   The unique ID of the Ezsigntemplateannotation
   ///
   /// * [EzsigntemplateannotationEditObjectV1Request] ezsigntemplateannotationEditObjectV1Request (required):
-  Future<Response> ezsigntemplateannotationEditObjectV1WithHttpInfo(int pkiEzsigntemplateannotationID, EzsigntemplateannotationEditObjectV1Request ezsigntemplateannotationEditObjectV1Request,) async {
+  Future<Response> ezsigntemplateannotationEditObjectV1WithHttpInfo(int pkiEzsigntemplateannotationID, EzsigntemplateannotationEditObjectV1Request ezsigntemplateannotationEditObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsigntemplateannotation/{pkiEzsigntemplateannotationID}'
       .replaceAll('{pkiEzsigntemplateannotationID}', pkiEzsigntemplateannotationID.toString());
@@ -166,6 +168,7 @@ class ObjectEzsigntemplateannotationApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -179,8 +182,8 @@ class ObjectEzsigntemplateannotationApi {
   ///   The unique ID of the Ezsigntemplateannotation
   ///
   /// * [EzsigntemplateannotationEditObjectV1Request] ezsigntemplateannotationEditObjectV1Request (required):
-  Future<EzsigntemplateannotationEditObjectV1Response?> ezsigntemplateannotationEditObjectV1(int pkiEzsigntemplateannotationID, EzsigntemplateannotationEditObjectV1Request ezsigntemplateannotationEditObjectV1Request,) async {
-    final response = await ezsigntemplateannotationEditObjectV1WithHttpInfo(pkiEzsigntemplateannotationID, ezsigntemplateannotationEditObjectV1Request,);
+  Future<EzsigntemplateannotationEditObjectV1Response?> ezsigntemplateannotationEditObjectV1(int pkiEzsigntemplateannotationID, EzsigntemplateannotationEditObjectV1Request ezsigntemplateannotationEditObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplateannotationEditObjectV1WithHttpInfo(pkiEzsigntemplateannotationID, ezsigntemplateannotationEditObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -204,7 +207,7 @@ class ObjectEzsigntemplateannotationApi {
   ///
   /// * [int] pkiEzsigntemplateannotationID (required):
   ///   The unique ID of the Ezsigntemplateannotation
-  Future<Response> ezsigntemplateannotationGetObjectV2WithHttpInfo(int pkiEzsigntemplateannotationID,) async {
+  Future<Response> ezsigntemplateannotationGetObjectV2WithHttpInfo(int pkiEzsigntemplateannotationID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezsigntemplateannotation/{pkiEzsigntemplateannotationID}'
       .replaceAll('{pkiEzsigntemplateannotationID}', pkiEzsigntemplateannotationID.toString());
@@ -227,6 +230,7 @@ class ObjectEzsigntemplateannotationApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -238,8 +242,8 @@ class ObjectEzsigntemplateannotationApi {
   ///
   /// * [int] pkiEzsigntemplateannotationID (required):
   ///   The unique ID of the Ezsigntemplateannotation
-  Future<EzsigntemplateannotationGetObjectV2Response?> ezsigntemplateannotationGetObjectV2(int pkiEzsigntemplateannotationID,) async {
-    final response = await ezsigntemplateannotationGetObjectV2WithHttpInfo(pkiEzsigntemplateannotationID,);
+  Future<EzsigntemplateannotationGetObjectV2Response?> ezsigntemplateannotationGetObjectV2(int pkiEzsigntemplateannotationID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplateannotationGetObjectV2WithHttpInfo(pkiEzsigntemplateannotationID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

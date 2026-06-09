@@ -27,7 +27,7 @@ class ObjectEzsignfoldersignerassociationApi {
   /// * [int] pkiEzsignfoldersignerassociationID (required):
   ///
   /// * [EzsignfoldersignerassociationCreateEmbeddedUrlV1Request] ezsignfoldersignerassociationCreateEmbeddedUrlV1Request (required):
-  Future<Response> ezsignfoldersignerassociationCreateEmbeddedUrlV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationCreateEmbeddedUrlV1Request ezsignfoldersignerassociationCreateEmbeddedUrlV1Request,) async {
+  Future<Response> ezsignfoldersignerassociationCreateEmbeddedUrlV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationCreateEmbeddedUrlV1Request ezsignfoldersignerassociationCreateEmbeddedUrlV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/createEmbeddedUrl'
       .replaceAll('{pkiEzsignfoldersignerassociationID}', pkiEzsignfoldersignerassociationID.toString());
@@ -50,6 +50,7 @@ class ObjectEzsignfoldersignerassociationApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -62,8 +63,8 @@ class ObjectEzsignfoldersignerassociationApi {
   /// * [int] pkiEzsignfoldersignerassociationID (required):
   ///
   /// * [EzsignfoldersignerassociationCreateEmbeddedUrlV1Request] ezsignfoldersignerassociationCreateEmbeddedUrlV1Request (required):
-  Future<EzsignfoldersignerassociationCreateEmbeddedUrlV1Response?> ezsignfoldersignerassociationCreateEmbeddedUrlV1(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationCreateEmbeddedUrlV1Request ezsignfoldersignerassociationCreateEmbeddedUrlV1Request,) async {
-    final response = await ezsignfoldersignerassociationCreateEmbeddedUrlV1WithHttpInfo(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationCreateEmbeddedUrlV1Request,);
+  Future<EzsignfoldersignerassociationCreateEmbeddedUrlV1Response?> ezsignfoldersignerassociationCreateEmbeddedUrlV1(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationCreateEmbeddedUrlV1Request ezsignfoldersignerassociationCreateEmbeddedUrlV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfoldersignerassociationCreateEmbeddedUrlV1WithHttpInfo(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationCreateEmbeddedUrlV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -88,7 +89,7 @@ class ObjectEzsignfoldersignerassociationApi {
   /// * [int] pkiEzsignfoldersignerassociationID (required):
   ///
   /// * [EzsignfoldersignerassociationCreateEmbeddedUrlV2Request] ezsignfoldersignerassociationCreateEmbeddedUrlV2Request (required):
-  Future<Response> ezsignfoldersignerassociationCreateEmbeddedUrlV2WithHttpInfo(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationCreateEmbeddedUrlV2Request ezsignfoldersignerassociationCreateEmbeddedUrlV2Request,) async {
+  Future<Response> ezsignfoldersignerassociationCreateEmbeddedUrlV2WithHttpInfo(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationCreateEmbeddedUrlV2Request ezsignfoldersignerassociationCreateEmbeddedUrlV2Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/createEmbeddedUrl'
       .replaceAll('{pkiEzsignfoldersignerassociationID}', pkiEzsignfoldersignerassociationID.toString());
@@ -111,6 +112,7 @@ class ObjectEzsignfoldersignerassociationApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -123,8 +125,8 @@ class ObjectEzsignfoldersignerassociationApi {
   /// * [int] pkiEzsignfoldersignerassociationID (required):
   ///
   /// * [EzsignfoldersignerassociationCreateEmbeddedUrlV2Request] ezsignfoldersignerassociationCreateEmbeddedUrlV2Request (required):
-  Future<EzsignfoldersignerassociationCreateEmbeddedUrlV2Response?> ezsignfoldersignerassociationCreateEmbeddedUrlV2(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationCreateEmbeddedUrlV2Request ezsignfoldersignerassociationCreateEmbeddedUrlV2Request,) async {
-    final response = await ezsignfoldersignerassociationCreateEmbeddedUrlV2WithHttpInfo(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationCreateEmbeddedUrlV2Request,);
+  Future<EzsignfoldersignerassociationCreateEmbeddedUrlV2Response?> ezsignfoldersignerassociationCreateEmbeddedUrlV2(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationCreateEmbeddedUrlV2Request ezsignfoldersignerassociationCreateEmbeddedUrlV2Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfoldersignerassociationCreateEmbeddedUrlV2WithHttpInfo(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationCreateEmbeddedUrlV2Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -147,7 +149,7 @@ class ObjectEzsignfoldersignerassociationApi {
   /// Parameters:
   ///
   /// * [List<EzsignfoldersignerassociationCreateObjectV1Request>] ezsignfoldersignerassociationCreateObjectV1Request (required):
-  Future<Response> ezsignfoldersignerassociationCreateObjectV1WithHttpInfo(List<EzsignfoldersignerassociationCreateObjectV1Request> ezsignfoldersignerassociationCreateObjectV1Request,) async {
+  Future<Response> ezsignfoldersignerassociationCreateObjectV1WithHttpInfo(List<EzsignfoldersignerassociationCreateObjectV1Request> ezsignfoldersignerassociationCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfoldersignerassociation';
 
@@ -169,6 +171,7 @@ class ObjectEzsignfoldersignerassociationApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -179,8 +182,8 @@ class ObjectEzsignfoldersignerassociationApi {
   /// Parameters:
   ///
   /// * [List<EzsignfoldersignerassociationCreateObjectV1Request>] ezsignfoldersignerassociationCreateObjectV1Request (required):
-  Future<EzsignfoldersignerassociationCreateObjectV1Response?> ezsignfoldersignerassociationCreateObjectV1(List<EzsignfoldersignerassociationCreateObjectV1Request> ezsignfoldersignerassociationCreateObjectV1Request,) async {
-    final response = await ezsignfoldersignerassociationCreateObjectV1WithHttpInfo(ezsignfoldersignerassociationCreateObjectV1Request,);
+  Future<EzsignfoldersignerassociationCreateObjectV1Response?> ezsignfoldersignerassociationCreateObjectV1(List<EzsignfoldersignerassociationCreateObjectV1Request> ezsignfoldersignerassociationCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfoldersignerassociationCreateObjectV1WithHttpInfo(ezsignfoldersignerassociationCreateObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -203,7 +206,7 @@ class ObjectEzsignfoldersignerassociationApi {
   /// Parameters:
   ///
   /// * [EzsignfoldersignerassociationCreateObjectV2Request] ezsignfoldersignerassociationCreateObjectV2Request (required):
-  Future<Response> ezsignfoldersignerassociationCreateObjectV2WithHttpInfo(EzsignfoldersignerassociationCreateObjectV2Request ezsignfoldersignerassociationCreateObjectV2Request,) async {
+  Future<Response> ezsignfoldersignerassociationCreateObjectV2WithHttpInfo(EzsignfoldersignerassociationCreateObjectV2Request ezsignfoldersignerassociationCreateObjectV2Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezsignfoldersignerassociation';
 
@@ -225,6 +228,7 @@ class ObjectEzsignfoldersignerassociationApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -235,8 +239,8 @@ class ObjectEzsignfoldersignerassociationApi {
   /// Parameters:
   ///
   /// * [EzsignfoldersignerassociationCreateObjectV2Request] ezsignfoldersignerassociationCreateObjectV2Request (required):
-  Future<EzsignfoldersignerassociationCreateObjectV2Response?> ezsignfoldersignerassociationCreateObjectV2(EzsignfoldersignerassociationCreateObjectV2Request ezsignfoldersignerassociationCreateObjectV2Request,) async {
-    final response = await ezsignfoldersignerassociationCreateObjectV2WithHttpInfo(ezsignfoldersignerassociationCreateObjectV2Request,);
+  Future<EzsignfoldersignerassociationCreateObjectV2Response?> ezsignfoldersignerassociationCreateObjectV2(EzsignfoldersignerassociationCreateObjectV2Request ezsignfoldersignerassociationCreateObjectV2Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfoldersignerassociationCreateObjectV2WithHttpInfo(ezsignfoldersignerassociationCreateObjectV2Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -259,7 +263,7 @@ class ObjectEzsignfoldersignerassociationApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfoldersignerassociationID (required):
-  Future<Response> ezsignfoldersignerassociationDeleteObjectV1WithHttpInfo(int pkiEzsignfoldersignerassociationID,) async {
+  Future<Response> ezsignfoldersignerassociationDeleteObjectV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}'
       .replaceAll('{pkiEzsignfoldersignerassociationID}', pkiEzsignfoldersignerassociationID.toString());
@@ -282,6 +286,7 @@ class ObjectEzsignfoldersignerassociationApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -292,8 +297,8 @@ class ObjectEzsignfoldersignerassociationApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfoldersignerassociationID (required):
-  Future<EzsignfoldersignerassociationDeleteObjectV1Response?> ezsignfoldersignerassociationDeleteObjectV1(int pkiEzsignfoldersignerassociationID,) async {
-    final response = await ezsignfoldersignerassociationDeleteObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID,);
+  Future<EzsignfoldersignerassociationDeleteObjectV1Response?> ezsignfoldersignerassociationDeleteObjectV1(int pkiEzsignfoldersignerassociationID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfoldersignerassociationDeleteObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -318,7 +323,7 @@ class ObjectEzsignfoldersignerassociationApi {
   /// * [int] pkiEzsignfoldersignerassociationID (required):
   ///
   /// * [EzsignfoldersignerassociationEditObjectV1Request] ezsignfoldersignerassociationEditObjectV1Request (required):
-  Future<Response> ezsignfoldersignerassociationEditObjectV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request,) async {
+  Future<Response> ezsignfoldersignerassociationEditObjectV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}'
       .replaceAll('{pkiEzsignfoldersignerassociationID}', pkiEzsignfoldersignerassociationID.toString());
@@ -341,6 +346,7 @@ class ObjectEzsignfoldersignerassociationApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -353,8 +359,8 @@ class ObjectEzsignfoldersignerassociationApi {
   /// * [int] pkiEzsignfoldersignerassociationID (required):
   ///
   /// * [EzsignfoldersignerassociationEditObjectV1Request] ezsignfoldersignerassociationEditObjectV1Request (required):
-  Future<EzsignfoldersignerassociationEditObjectV1Response?> ezsignfoldersignerassociationEditObjectV1(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request,) async {
-    final response = await ezsignfoldersignerassociationEditObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationEditObjectV1Request,);
+  Future<EzsignfoldersignerassociationEditObjectV1Response?> ezsignfoldersignerassociationEditObjectV1(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfoldersignerassociationEditObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationEditObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -379,7 +385,7 @@ class ObjectEzsignfoldersignerassociationApi {
   /// * [int] pkiEzsignfoldersignerassociationID (required):
   ///
   /// * [Object] body (required):
-  Future<Response> ezsignfoldersignerassociationForceDisconnectV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, Object body,) async {
+  Future<Response> ezsignfoldersignerassociationForceDisconnectV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, Object body, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/forceDisconnect'
       .replaceAll('{pkiEzsignfoldersignerassociationID}', pkiEzsignfoldersignerassociationID.toString());
@@ -402,6 +408,7 @@ class ObjectEzsignfoldersignerassociationApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -414,8 +421,8 @@ class ObjectEzsignfoldersignerassociationApi {
   /// * [int] pkiEzsignfoldersignerassociationID (required):
   ///
   /// * [Object] body (required):
-  Future<EzsignfoldersignerassociationForceDisconnectV1Response?> ezsignfoldersignerassociationForceDisconnectV1(int pkiEzsignfoldersignerassociationID, Object body,) async {
-    final response = await ezsignfoldersignerassociationForceDisconnectV1WithHttpInfo(pkiEzsignfoldersignerassociationID, body,);
+  Future<EzsignfoldersignerassociationForceDisconnectV1Response?> ezsignfoldersignerassociationForceDisconnectV1(int pkiEzsignfoldersignerassociationID, Object body, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfoldersignerassociationForceDisconnectV1WithHttpInfo(pkiEzsignfoldersignerassociationID, body, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -438,7 +445,7 @@ class ObjectEzsignfoldersignerassociationApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfoldersignerassociationID (required):
-  Future<Response> ezsignfoldersignerassociationGetInPersonLoginUrlV1WithHttpInfo(int pkiEzsignfoldersignerassociationID,) async {
+  Future<Response> ezsignfoldersignerassociationGetInPersonLoginUrlV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getInPersonLoginUrl'
       .replaceAll('{pkiEzsignfoldersignerassociationID}', pkiEzsignfoldersignerassociationID.toString());
@@ -461,6 +468,7 @@ class ObjectEzsignfoldersignerassociationApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -471,8 +479,8 @@ class ObjectEzsignfoldersignerassociationApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfoldersignerassociationID (required):
-  Future<EzsignfoldersignerassociationGetInPersonLoginUrlV1Response?> ezsignfoldersignerassociationGetInPersonLoginUrlV1(int pkiEzsignfoldersignerassociationID,) async {
-    final response = await ezsignfoldersignerassociationGetInPersonLoginUrlV1WithHttpInfo(pkiEzsignfoldersignerassociationID,);
+  Future<EzsignfoldersignerassociationGetInPersonLoginUrlV1Response?> ezsignfoldersignerassociationGetInPersonLoginUrlV1(int pkiEzsignfoldersignerassociationID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfoldersignerassociationGetInPersonLoginUrlV1WithHttpInfo(pkiEzsignfoldersignerassociationID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -495,7 +503,7 @@ class ObjectEzsignfoldersignerassociationApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfoldersignerassociationID (required):
-  Future<Response> ezsignfoldersignerassociationGetObjectV1WithHttpInfo(int pkiEzsignfoldersignerassociationID,) async {
+  Future<Response> ezsignfoldersignerassociationGetObjectV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}'
       .replaceAll('{pkiEzsignfoldersignerassociationID}', pkiEzsignfoldersignerassociationID.toString());
@@ -518,6 +526,7 @@ class ObjectEzsignfoldersignerassociationApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -528,8 +537,8 @@ class ObjectEzsignfoldersignerassociationApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfoldersignerassociationID (required):
-  Future<EzsignfoldersignerassociationGetObjectV1Response?> ezsignfoldersignerassociationGetObjectV1(int pkiEzsignfoldersignerassociationID,) async {
-    final response = await ezsignfoldersignerassociationGetObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID,);
+  Future<EzsignfoldersignerassociationGetObjectV1Response?> ezsignfoldersignerassociationGetObjectV1(int pkiEzsignfoldersignerassociationID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfoldersignerassociationGetObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -552,7 +561,7 @@ class ObjectEzsignfoldersignerassociationApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfoldersignerassociationID (required):
-  Future<Response> ezsignfoldersignerassociationGetObjectV2WithHttpInfo(int pkiEzsignfoldersignerassociationID,) async {
+  Future<Response> ezsignfoldersignerassociationGetObjectV2WithHttpInfo(int pkiEzsignfoldersignerassociationID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}'
       .replaceAll('{pkiEzsignfoldersignerassociationID}', pkiEzsignfoldersignerassociationID.toString());
@@ -575,6 +584,7 @@ class ObjectEzsignfoldersignerassociationApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -585,8 +595,8 @@ class ObjectEzsignfoldersignerassociationApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsignfoldersignerassociationID (required):
-  Future<EzsignfoldersignerassociationGetObjectV2Response?> ezsignfoldersignerassociationGetObjectV2(int pkiEzsignfoldersignerassociationID,) async {
-    final response = await ezsignfoldersignerassociationGetObjectV2WithHttpInfo(pkiEzsignfoldersignerassociationID,);
+  Future<EzsignfoldersignerassociationGetObjectV2Response?> ezsignfoldersignerassociationGetObjectV2(int pkiEzsignfoldersignerassociationID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfoldersignerassociationGetObjectV2WithHttpInfo(pkiEzsignfoldersignerassociationID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -609,7 +619,7 @@ class ObjectEzsignfoldersignerassociationApi {
   /// * [int] pkiEzsignfoldersignerassociationID (required):
   ///
   /// * [EzsignfoldersignerassociationPatchObjectV1Request] ezsignfoldersignerassociationPatchObjectV1Request (required):
-  Future<Response> ezsignfoldersignerassociationPatchObjectV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request,) async {
+  Future<Response> ezsignfoldersignerassociationPatchObjectV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}'
       .replaceAll('{pkiEzsignfoldersignerassociationID}', pkiEzsignfoldersignerassociationID.toString());
@@ -632,6 +642,7 @@ class ObjectEzsignfoldersignerassociationApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -642,8 +653,8 @@ class ObjectEzsignfoldersignerassociationApi {
   /// * [int] pkiEzsignfoldersignerassociationID (required):
   ///
   /// * [EzsignfoldersignerassociationPatchObjectV1Request] ezsignfoldersignerassociationPatchObjectV1Request (required):
-  Future<EzsignfoldersignerassociationPatchObjectV1Response?> ezsignfoldersignerassociationPatchObjectV1(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request,) async {
-    final response = await ezsignfoldersignerassociationPatchObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationPatchObjectV1Request,);
+  Future<EzsignfoldersignerassociationPatchObjectV1Response?> ezsignfoldersignerassociationPatchObjectV1(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfoldersignerassociationPatchObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationPatchObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -668,7 +679,7 @@ class ObjectEzsignfoldersignerassociationApi {
   /// * [int] pkiEzsignfoldersignerassociationID (required):
   ///
   /// * [EzsignfoldersignerassociationReassignV1Request] ezsignfoldersignerassociationReassignV1Request (required):
-  Future<Response> ezsignfoldersignerassociationReassignV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request,) async {
+  Future<Response> ezsignfoldersignerassociationReassignV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/reassign'
       .replaceAll('{pkiEzsignfoldersignerassociationID}', pkiEzsignfoldersignerassociationID.toString());
@@ -691,6 +702,7 @@ class ObjectEzsignfoldersignerassociationApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -703,8 +715,8 @@ class ObjectEzsignfoldersignerassociationApi {
   /// * [int] pkiEzsignfoldersignerassociationID (required):
   ///
   /// * [EzsignfoldersignerassociationReassignV1Request] ezsignfoldersignerassociationReassignV1Request (required):
-  Future<EzsignfoldersignerassociationReassignV1Response?> ezsignfoldersignerassociationReassignV1(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request,) async {
-    final response = await ezsignfoldersignerassociationReassignV1WithHttpInfo(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationReassignV1Request,);
+  Future<EzsignfoldersignerassociationReassignV1Response?> ezsignfoldersignerassociationReassignV1(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfoldersignerassociationReassignV1WithHttpInfo(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationReassignV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

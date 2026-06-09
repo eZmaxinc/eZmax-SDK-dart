@@ -27,7 +27,7 @@ class ObjectBillingentityexternalApi {
   /// * [int] pkiBillingentityexternalID (required):
   ///
   /// * [BillingentityexternalGenerateFederationTokenV1Request] billingentityexternalGenerateFederationTokenV1Request (required):
-  Future<Response> billingentityexternalGenerateFederationTokenV1WithHttpInfo(int pkiBillingentityexternalID, BillingentityexternalGenerateFederationTokenV1Request billingentityexternalGenerateFederationTokenV1Request,) async {
+  Future<Response> billingentityexternalGenerateFederationTokenV1WithHttpInfo(int pkiBillingentityexternalID, BillingentityexternalGenerateFederationTokenV1Request billingentityexternalGenerateFederationTokenV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/billingentityexternal/{pkiBillingentityexternalID}/generateFederationToken'
       .replaceAll('{pkiBillingentityexternalID}', pkiBillingentityexternalID.toString());
@@ -50,6 +50,7 @@ class ObjectBillingentityexternalApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -62,8 +63,8 @@ class ObjectBillingentityexternalApi {
   /// * [int] pkiBillingentityexternalID (required):
   ///
   /// * [BillingentityexternalGenerateFederationTokenV1Request] billingentityexternalGenerateFederationTokenV1Request (required):
-  Future<BillingentityexternalGenerateFederationTokenV1Response?> billingentityexternalGenerateFederationTokenV1(int pkiBillingentityexternalID, BillingentityexternalGenerateFederationTokenV1Request billingentityexternalGenerateFederationTokenV1Request,) async {
-    final response = await billingentityexternalGenerateFederationTokenV1WithHttpInfo(pkiBillingentityexternalID, billingentityexternalGenerateFederationTokenV1Request,);
+  Future<BillingentityexternalGenerateFederationTokenV1Response?> billingentityexternalGenerateFederationTokenV1(int pkiBillingentityexternalID, BillingentityexternalGenerateFederationTokenV1Request billingentityexternalGenerateFederationTokenV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await billingentityexternalGenerateFederationTokenV1WithHttpInfo(pkiBillingentityexternalID, billingentityexternalGenerateFederationTokenV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -95,7 +96,7 @@ class ObjectBillingentityexternalApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<Response> billingentityexternalGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
+  Future<Response> billingentityexternalGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/billingentityexternal/getAutocomplete/{sSelector}'
       .replaceAll('{sSelector}', sSelector);
@@ -129,6 +130,7 @@ class ObjectBillingentityexternalApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -148,8 +150,8 @@ class ObjectBillingentityexternalApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<BillingentityexternalGetAutocompleteV2Response?> billingentityexternalGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
-    final response = await billingentityexternalGetAutocompleteV2WithHttpInfo(sSelector,  eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, );
+  Future<BillingentityexternalGetAutocompleteV2Response?> billingentityexternalGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
+    final response = await billingentityexternalGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

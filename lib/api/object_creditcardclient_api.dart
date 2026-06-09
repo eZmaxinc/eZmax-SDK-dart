@@ -25,7 +25,7 @@ class ObjectCreditcardclientApi {
   /// Parameters:
   ///
   /// * [CreditcardclientCreateObjectV1Request] creditcardclientCreateObjectV1Request (required):
-  Future<Response> creditcardclientCreateObjectV1WithHttpInfo(CreditcardclientCreateObjectV1Request creditcardclientCreateObjectV1Request,) async {
+  Future<Response> creditcardclientCreateObjectV1WithHttpInfo(CreditcardclientCreateObjectV1Request creditcardclientCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/creditcardclient';
 
@@ -47,6 +47,7 @@ class ObjectCreditcardclientApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -57,8 +58,8 @@ class ObjectCreditcardclientApi {
   /// Parameters:
   ///
   /// * [CreditcardclientCreateObjectV1Request] creditcardclientCreateObjectV1Request (required):
-  Future<CreditcardclientCreateObjectV1Response?> creditcardclientCreateObjectV1(CreditcardclientCreateObjectV1Request creditcardclientCreateObjectV1Request,) async {
-    final response = await creditcardclientCreateObjectV1WithHttpInfo(creditcardclientCreateObjectV1Request,);
+  Future<CreditcardclientCreateObjectV1Response?> creditcardclientCreateObjectV1(CreditcardclientCreateObjectV1Request creditcardclientCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await creditcardclientCreateObjectV1WithHttpInfo(creditcardclientCreateObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -82,7 +83,7 @@ class ObjectCreditcardclientApi {
   ///
   /// * [int] pkiCreditcardclientID (required):
   ///   The unique ID of the Creditcardclient
-  Future<Response> creditcardclientDeleteObjectV1WithHttpInfo(int pkiCreditcardclientID,) async {
+  Future<Response> creditcardclientDeleteObjectV1WithHttpInfo(int pkiCreditcardclientID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/creditcardclient/{pkiCreditcardclientID}'
       .replaceAll('{pkiCreditcardclientID}', pkiCreditcardclientID.toString());
@@ -105,6 +106,7 @@ class ObjectCreditcardclientApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -116,8 +118,8 @@ class ObjectCreditcardclientApi {
   ///
   /// * [int] pkiCreditcardclientID (required):
   ///   The unique ID of the Creditcardclient
-  Future<CreditcardclientDeleteObjectV1Response?> creditcardclientDeleteObjectV1(int pkiCreditcardclientID,) async {
-    final response = await creditcardclientDeleteObjectV1WithHttpInfo(pkiCreditcardclientID,);
+  Future<CreditcardclientDeleteObjectV1Response?> creditcardclientDeleteObjectV1(int pkiCreditcardclientID, { Future<void>? abortTrigger, }) async {
+    final response = await creditcardclientDeleteObjectV1WithHttpInfo(pkiCreditcardclientID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -143,7 +145,7 @@ class ObjectCreditcardclientApi {
   ///   The unique ID of the Creditcardclient
   ///
   /// * [CreditcardclientEditObjectV1Request] creditcardclientEditObjectV1Request (required):
-  Future<Response> creditcardclientEditObjectV1WithHttpInfo(int pkiCreditcardclientID, CreditcardclientEditObjectV1Request creditcardclientEditObjectV1Request,) async {
+  Future<Response> creditcardclientEditObjectV1WithHttpInfo(int pkiCreditcardclientID, CreditcardclientEditObjectV1Request creditcardclientEditObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/creditcardclient/{pkiCreditcardclientID}'
       .replaceAll('{pkiCreditcardclientID}', pkiCreditcardclientID.toString());
@@ -166,6 +168,7 @@ class ObjectCreditcardclientApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -179,8 +182,8 @@ class ObjectCreditcardclientApi {
   ///   The unique ID of the Creditcardclient
   ///
   /// * [CreditcardclientEditObjectV1Request] creditcardclientEditObjectV1Request (required):
-  Future<CreditcardclientEditObjectV1Response?> creditcardclientEditObjectV1(int pkiCreditcardclientID, CreditcardclientEditObjectV1Request creditcardclientEditObjectV1Request,) async {
-    final response = await creditcardclientEditObjectV1WithHttpInfo(pkiCreditcardclientID, creditcardclientEditObjectV1Request,);
+  Future<CreditcardclientEditObjectV1Response?> creditcardclientEditObjectV1(int pkiCreditcardclientID, CreditcardclientEditObjectV1Request creditcardclientEditObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await creditcardclientEditObjectV1WithHttpInfo(pkiCreditcardclientID, creditcardclientEditObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -212,7 +215,7 @@ class ObjectCreditcardclientApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<Response> creditcardclientGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
+  Future<Response> creditcardclientGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/creditcardclient/getAutocomplete/{sSelector}'
       .replaceAll('{sSelector}', sSelector);
@@ -246,6 +249,7 @@ class ObjectCreditcardclientApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -265,8 +269,8 @@ class ObjectCreditcardclientApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<CreditcardclientGetAutocompleteV2Response?> creditcardclientGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
-    final response = await creditcardclientGetAutocompleteV2WithHttpInfo(sSelector,  eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, );
+  Future<CreditcardclientGetAutocompleteV2Response?> creditcardclientGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
+    final response = await creditcardclientGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -298,7 +302,7 @@ class ObjectCreditcardclientApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<Response> creditcardclientGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
+  Future<Response> creditcardclientGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/creditcardclient/getList';
 
@@ -337,6 +341,7 @@ class ObjectCreditcardclientApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -356,8 +361,8 @@ class ObjectCreditcardclientApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<CreditcardclientGetListV1Response?> creditcardclientGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
-    final response = await creditcardclientGetListV1WithHttpInfo( eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, );
+  Future<CreditcardclientGetListV1Response?> creditcardclientGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
+    final response = await creditcardclientGetListV1WithHttpInfo(eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -381,7 +386,7 @@ class ObjectCreditcardclientApi {
   ///
   /// * [int] pkiCreditcardclientID (required):
   ///   The unique ID of the Creditcardclient
-  Future<Response> creditcardclientGetObjectV2WithHttpInfo(int pkiCreditcardclientID,) async {
+  Future<Response> creditcardclientGetObjectV2WithHttpInfo(int pkiCreditcardclientID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/creditcardclient/{pkiCreditcardclientID}'
       .replaceAll('{pkiCreditcardclientID}', pkiCreditcardclientID.toString());
@@ -404,6 +409,7 @@ class ObjectCreditcardclientApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -415,8 +421,8 @@ class ObjectCreditcardclientApi {
   ///
   /// * [int] pkiCreditcardclientID (required):
   ///   The unique ID of the Creditcardclient
-  Future<CreditcardclientGetObjectV2Response?> creditcardclientGetObjectV2(int pkiCreditcardclientID,) async {
-    final response = await creditcardclientGetObjectV2WithHttpInfo(pkiCreditcardclientID,);
+  Future<CreditcardclientGetObjectV2Response?> creditcardclientGetObjectV2(int pkiCreditcardclientID, { Future<void>? abortTrigger, }) async {
+    final response = await creditcardclientGetObjectV2WithHttpInfo(pkiCreditcardclientID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -442,7 +448,7 @@ class ObjectCreditcardclientApi {
   ///   The unique ID of the Creditcardclient
   ///
   /// * [CreditcardclientPatchObjectV1Request] creditcardclientPatchObjectV1Request (required):
-  Future<Response> creditcardclientPatchObjectV1WithHttpInfo(int pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request,) async {
+  Future<Response> creditcardclientPatchObjectV1WithHttpInfo(int pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/creditcardclient/{pkiCreditcardclientID}'
       .replaceAll('{pkiCreditcardclientID}', pkiCreditcardclientID.toString());
@@ -465,6 +471,7 @@ class ObjectCreditcardclientApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -478,8 +485,8 @@ class ObjectCreditcardclientApi {
   ///   The unique ID of the Creditcardclient
   ///
   /// * [CreditcardclientPatchObjectV1Request] creditcardclientPatchObjectV1Request (required):
-  Future<CreditcardclientPatchObjectV1Response?> creditcardclientPatchObjectV1(int pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request,) async {
-    final response = await creditcardclientPatchObjectV1WithHttpInfo(pkiCreditcardclientID, creditcardclientPatchObjectV1Request,);
+  Future<CreditcardclientPatchObjectV1Response?> creditcardclientPatchObjectV1(int pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await creditcardclientPatchObjectV1WithHttpInfo(pkiCreditcardclientID, creditcardclientPatchObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

@@ -25,7 +25,7 @@ class ModuleUserApi {
   /// Parameters:
   ///
   /// * [List<UserCreateEzsignuserV1Request>] userCreateEzsignuserV1Request (required):
-  Future<Response> userCreateEzsignuserV1WithHttpInfo(List<UserCreateEzsignuserV1Request> userCreateEzsignuserV1Request,) async {
+  Future<Response> userCreateEzsignuserV1WithHttpInfo(List<UserCreateEzsignuserV1Request> userCreateEzsignuserV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/module/user/createezsignuser';
 
@@ -47,6 +47,7 @@ class ModuleUserApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -57,8 +58,8 @@ class ModuleUserApi {
   /// Parameters:
   ///
   /// * [List<UserCreateEzsignuserV1Request>] userCreateEzsignuserV1Request (required):
-  Future<UserCreateEzsignuserV1Response?> userCreateEzsignuserV1(List<UserCreateEzsignuserV1Request> userCreateEzsignuserV1Request,) async {
-    final response = await userCreateEzsignuserV1WithHttpInfo(userCreateEzsignuserV1Request,);
+  Future<UserCreateEzsignuserV1Response?> userCreateEzsignuserV1(List<UserCreateEzsignuserV1Request> userCreateEzsignuserV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await userCreateEzsignuserV1WithHttpInfo(userCreateEzsignuserV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

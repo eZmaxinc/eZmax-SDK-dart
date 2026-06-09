@@ -1824,10 +1824,7 @@ doc/ScimServiceProviderConfig.md
 doc/ScimServiceProviderConfigApi.md
 doc/ScimServiceProviderConfigBulk.md
 doc/ScimServiceProviderConfigChangePassword.md
-doc/ScimServiceProviderConfigEtag.md
 doc/ScimServiceProviderConfigFilter.md
-doc/ScimServiceProviderConfigPatch.md
-doc/ScimServiceProviderConfigSort.md
 doc/ScimUser.md
 doc/ScimUserList.md
 doc/ScimUsersApi.md
@@ -3969,10 +3966,7 @@ lib/model/scim_group_member.dart
 lib/model/scim_service_provider_config.dart
 lib/model/scim_service_provider_config_bulk.dart
 lib/model/scim_service_provider_config_change_password.dart
-lib/model/scim_service_provider_config_etag.dart
 lib/model/scim_service_provider_config_filter.dart
-lib/model/scim_service_provider_config_patch.dart
-lib/model/scim_service_provider_config_sort.dart
 lib/model/scim_user.dart
 lib/model/scim_user_list.dart
 lib/model/secretquestion_autocomplete_element_response.dart

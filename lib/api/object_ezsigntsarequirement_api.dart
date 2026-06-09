@@ -36,7 +36,7 @@ class ObjectEzsigntsarequirementApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<Response> ezsigntsarequirementGetAutocompleteV2WithHttpInfo(String sSelector, { int? fkiEzsignfoldertypeID, String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
+  Future<Response> ezsigntsarequirementGetAutocompleteV2WithHttpInfo(String sSelector, { int? fkiEzsignfoldertypeID, String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezsigntsarequirement/getAutocomplete/{sSelector}'
       .replaceAll('{sSelector}', sSelector);
@@ -73,6 +73,7 @@ class ObjectEzsigntsarequirementApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -94,8 +95,8 @@ class ObjectEzsigntsarequirementApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<EzsigntsarequirementGetAutocompleteV2Response?> ezsigntsarequirementGetAutocompleteV2(String sSelector, { int? fkiEzsignfoldertypeID, String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
-    final response = await ezsigntsarequirementGetAutocompleteV2WithHttpInfo(sSelector,  fkiEzsignfoldertypeID: fkiEzsignfoldertypeID, eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, );
+  Future<EzsigntsarequirementGetAutocompleteV2Response?> ezsigntsarequirementGetAutocompleteV2(String sSelector, { int? fkiEzsignfoldertypeID, String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
+    final response = await ezsigntsarequirementGetAutocompleteV2WithHttpInfo(sSelector, fkiEzsignfoldertypeID: fkiEzsignfoldertypeID, eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

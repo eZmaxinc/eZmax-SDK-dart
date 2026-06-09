@@ -34,7 +34,7 @@ class ObjectCreditcardmerchantApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<Response> creditcardmerchantGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
+  Future<Response> creditcardmerchantGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/creditcardmerchant/getAutocomplete/{sSelector}'
       .replaceAll('{sSelector}', sSelector);
@@ -68,6 +68,7 @@ class ObjectCreditcardmerchantApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -87,8 +88,8 @@ class ObjectCreditcardmerchantApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<CreditcardmerchantGetAutocompleteV2Response?> creditcardmerchantGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
-    final response = await creditcardmerchantGetAutocompleteV2WithHttpInfo(sSelector,  eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, );
+  Future<CreditcardmerchantGetAutocompleteV2Response?> creditcardmerchantGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
+    final response = await creditcardmerchantGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -120,7 +121,7 @@ class ObjectCreditcardmerchantApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<Response> creditcardmerchantGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
+  Future<Response> creditcardmerchantGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/creditcardmerchant/getList';
 
@@ -159,6 +160,7 @@ class ObjectCreditcardmerchantApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -178,8 +180,8 @@ class ObjectCreditcardmerchantApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<CreditcardmerchantGetListV1Response?> creditcardmerchantGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
-    final response = await creditcardmerchantGetListV1WithHttpInfo( eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, );
+  Future<CreditcardmerchantGetListV1Response?> creditcardmerchantGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
+    final response = await creditcardmerchantGetListV1WithHttpInfo(eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -203,7 +205,7 @@ class ObjectCreditcardmerchantApi {
   ///
   /// * [int] pkiCreditcardmerchantID (required):
   ///   The unique ID of the Creditcardmerchant
-  Future<Response> creditcardmerchantGetObjectV2WithHttpInfo(int pkiCreditcardmerchantID,) async {
+  Future<Response> creditcardmerchantGetObjectV2WithHttpInfo(int pkiCreditcardmerchantID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/creditcardmerchant/{pkiCreditcardmerchantID}'
       .replaceAll('{pkiCreditcardmerchantID}', pkiCreditcardmerchantID.toString());
@@ -226,6 +228,7 @@ class ObjectCreditcardmerchantApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -237,8 +240,8 @@ class ObjectCreditcardmerchantApi {
   ///
   /// * [int] pkiCreditcardmerchantID (required):
   ///   The unique ID of the Creditcardmerchant
-  Future<CreditcardmerchantGetObjectV2Response?> creditcardmerchantGetObjectV2(int pkiCreditcardmerchantID,) async {
-    final response = await creditcardmerchantGetObjectV2WithHttpInfo(pkiCreditcardmerchantID,);
+  Future<CreditcardmerchantGetObjectV2Response?> creditcardmerchantGetObjectV2(int pkiCreditcardmerchantID, { Future<void>? abortTrigger, }) async {
+    final response = await creditcardmerchantGetObjectV2WithHttpInfo(pkiCreditcardmerchantID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

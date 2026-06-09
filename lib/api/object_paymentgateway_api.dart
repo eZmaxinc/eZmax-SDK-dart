@@ -25,7 +25,7 @@ class ObjectPaymentgatewayApi {
   /// Parameters:
   ///
   /// * [PaymentgatewayCreateObjectV1Request] paymentgatewayCreateObjectV1Request (required):
-  Future<Response> paymentgatewayCreateObjectV1WithHttpInfo(PaymentgatewayCreateObjectV1Request paymentgatewayCreateObjectV1Request,) async {
+  Future<Response> paymentgatewayCreateObjectV1WithHttpInfo(PaymentgatewayCreateObjectV1Request paymentgatewayCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/paymentgateway';
 
@@ -47,6 +47,7 @@ class ObjectPaymentgatewayApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -57,8 +58,8 @@ class ObjectPaymentgatewayApi {
   /// Parameters:
   ///
   /// * [PaymentgatewayCreateObjectV1Request] paymentgatewayCreateObjectV1Request (required):
-  Future<PaymentgatewayCreateObjectV1Response?> paymentgatewayCreateObjectV1(PaymentgatewayCreateObjectV1Request paymentgatewayCreateObjectV1Request,) async {
-    final response = await paymentgatewayCreateObjectV1WithHttpInfo(paymentgatewayCreateObjectV1Request,);
+  Future<PaymentgatewayCreateObjectV1Response?> paymentgatewayCreateObjectV1(PaymentgatewayCreateObjectV1Request paymentgatewayCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await paymentgatewayCreateObjectV1WithHttpInfo(paymentgatewayCreateObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -84,7 +85,7 @@ class ObjectPaymentgatewayApi {
   ///   The unique ID of the Paymentgateway
   ///
   /// * [PaymentgatewayEditObjectV1Request] paymentgatewayEditObjectV1Request (required):
-  Future<Response> paymentgatewayEditObjectV1WithHttpInfo(int pkiPaymentgatewayID, PaymentgatewayEditObjectV1Request paymentgatewayEditObjectV1Request,) async {
+  Future<Response> paymentgatewayEditObjectV1WithHttpInfo(int pkiPaymentgatewayID, PaymentgatewayEditObjectV1Request paymentgatewayEditObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/paymentgateway/{pkiPaymentgatewayID}'
       .replaceAll('{pkiPaymentgatewayID}', pkiPaymentgatewayID.toString());
@@ -107,6 +108,7 @@ class ObjectPaymentgatewayApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -120,8 +122,8 @@ class ObjectPaymentgatewayApi {
   ///   The unique ID of the Paymentgateway
   ///
   /// * [PaymentgatewayEditObjectV1Request] paymentgatewayEditObjectV1Request (required):
-  Future<PaymentgatewayEditObjectV1Response?> paymentgatewayEditObjectV1(int pkiPaymentgatewayID, PaymentgatewayEditObjectV1Request paymentgatewayEditObjectV1Request,) async {
-    final response = await paymentgatewayEditObjectV1WithHttpInfo(pkiPaymentgatewayID, paymentgatewayEditObjectV1Request,);
+  Future<PaymentgatewayEditObjectV1Response?> paymentgatewayEditObjectV1(int pkiPaymentgatewayID, PaymentgatewayEditObjectV1Request paymentgatewayEditObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await paymentgatewayEditObjectV1WithHttpInfo(pkiPaymentgatewayID, paymentgatewayEditObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -153,7 +155,7 @@ class ObjectPaymentgatewayApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<Response> paymentgatewayGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
+  Future<Response> paymentgatewayGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/paymentgateway/getAutocomplete/{sSelector}'
       .replaceAll('{sSelector}', sSelector);
@@ -187,6 +189,7 @@ class ObjectPaymentgatewayApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -206,8 +209,8 @@ class ObjectPaymentgatewayApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<PaymentgatewayGetAutocompleteV2Response?> paymentgatewayGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
-    final response = await paymentgatewayGetAutocompleteV2WithHttpInfo(sSelector,  eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, );
+  Future<PaymentgatewayGetAutocompleteV2Response?> paymentgatewayGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
+    final response = await paymentgatewayGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -239,7 +242,7 @@ class ObjectPaymentgatewayApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<Response> paymentgatewayGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
+  Future<Response> paymentgatewayGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/paymentgateway/getList';
 
@@ -278,6 +281,7 @@ class ObjectPaymentgatewayApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -297,8 +301,8 @@ class ObjectPaymentgatewayApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<PaymentgatewayGetListV1Response?> paymentgatewayGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
-    final response = await paymentgatewayGetListV1WithHttpInfo( eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, );
+  Future<PaymentgatewayGetListV1Response?> paymentgatewayGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
+    final response = await paymentgatewayGetListV1WithHttpInfo(eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -322,7 +326,7 @@ class ObjectPaymentgatewayApi {
   ///
   /// * [int] pkiPaymentgatewayID (required):
   ///   The unique ID of the Paymentgateway
-  Future<Response> paymentgatewayGetObjectV2WithHttpInfo(int pkiPaymentgatewayID,) async {
+  Future<Response> paymentgatewayGetObjectV2WithHttpInfo(int pkiPaymentgatewayID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/paymentgateway/{pkiPaymentgatewayID}'
       .replaceAll('{pkiPaymentgatewayID}', pkiPaymentgatewayID.toString());
@@ -345,6 +349,7 @@ class ObjectPaymentgatewayApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -356,8 +361,8 @@ class ObjectPaymentgatewayApi {
   ///
   /// * [int] pkiPaymentgatewayID (required):
   ///   The unique ID of the Paymentgateway
-  Future<PaymentgatewayGetObjectV2Response?> paymentgatewayGetObjectV2(int pkiPaymentgatewayID,) async {
-    final response = await paymentgatewayGetObjectV2WithHttpInfo(pkiPaymentgatewayID,);
+  Future<PaymentgatewayGetObjectV2Response?> paymentgatewayGetObjectV2(int pkiPaymentgatewayID, { Future<void>? abortTrigger, }) async {
+    final response = await paymentgatewayGetObjectV2WithHttpInfo(pkiPaymentgatewayID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

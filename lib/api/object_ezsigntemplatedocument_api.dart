@@ -25,7 +25,7 @@ class ObjectEzsigntemplatedocumentApi {
   /// Parameters:
   ///
   /// * [EzsigntemplatedocumentCreateObjectV1Request] ezsigntemplatedocumentCreateObjectV1Request (required):
-  Future<Response> ezsigntemplatedocumentCreateObjectV1WithHttpInfo(EzsigntemplatedocumentCreateObjectV1Request ezsigntemplatedocumentCreateObjectV1Request,) async {
+  Future<Response> ezsigntemplatedocumentCreateObjectV1WithHttpInfo(EzsigntemplatedocumentCreateObjectV1Request ezsigntemplatedocumentCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsigntemplatedocument';
 
@@ -47,6 +47,7 @@ class ObjectEzsigntemplatedocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -57,8 +58,8 @@ class ObjectEzsigntemplatedocumentApi {
   /// Parameters:
   ///
   /// * [EzsigntemplatedocumentCreateObjectV1Request] ezsigntemplatedocumentCreateObjectV1Request (required):
-  Future<EzsigntemplatedocumentCreateObjectV1Response?> ezsigntemplatedocumentCreateObjectV1(EzsigntemplatedocumentCreateObjectV1Request ezsigntemplatedocumentCreateObjectV1Request,) async {
-    final response = await ezsigntemplatedocumentCreateObjectV1WithHttpInfo(ezsigntemplatedocumentCreateObjectV1Request,);
+  Future<EzsigntemplatedocumentCreateObjectV1Response?> ezsigntemplatedocumentCreateObjectV1(EzsigntemplatedocumentCreateObjectV1Request ezsigntemplatedocumentCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplatedocumentCreateObjectV1WithHttpInfo(ezsigntemplatedocumentCreateObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -81,7 +82,7 @@ class ObjectEzsigntemplatedocumentApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigntemplatedocumentID (required):
-  Future<Response> ezsigntemplatedocumentDownloadV1WithHttpInfo(int pkiEzsigntemplatedocumentID,) async {
+  Future<Response> ezsigntemplatedocumentDownloadV1WithHttpInfo(int pkiEzsigntemplatedocumentID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/download'
       .replaceAll('{pkiEzsigntemplatedocumentID}', pkiEzsigntemplatedocumentID.toString());
@@ -104,6 +105,7 @@ class ObjectEzsigntemplatedocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -114,8 +116,8 @@ class ObjectEzsigntemplatedocumentApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigntemplatedocumentID (required):
-  Future<void> ezsigntemplatedocumentDownloadV1(int pkiEzsigntemplatedocumentID,) async {
-    final response = await ezsigntemplatedocumentDownloadV1WithHttpInfo(pkiEzsigntemplatedocumentID,);
+  Future<void> ezsigntemplatedocumentDownloadV1(int pkiEzsigntemplatedocumentID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplatedocumentDownloadV1WithHttpInfo(pkiEzsigntemplatedocumentID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -132,7 +134,7 @@ class ObjectEzsigntemplatedocumentApi {
   /// * [int] pkiEzsigntemplatedocumentID (required):
   ///
   /// * [EzsigntemplatedocumentEditEzsigntemplateannotationsV1Request] ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request (required):
-  Future<Response> ezsigntemplatedocumentEditEzsigntemplateannotationsV1WithHttpInfo(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentEditEzsigntemplateannotationsV1Request ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request,) async {
+  Future<Response> ezsigntemplatedocumentEditEzsigntemplateannotationsV1WithHttpInfo(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentEditEzsigntemplateannotationsV1Request ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplateannotations'
       .replaceAll('{pkiEzsigntemplatedocumentID}', pkiEzsigntemplatedocumentID.toString());
@@ -155,6 +157,7 @@ class ObjectEzsigntemplatedocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -167,8 +170,8 @@ class ObjectEzsigntemplatedocumentApi {
   /// * [int] pkiEzsigntemplatedocumentID (required):
   ///
   /// * [EzsigntemplatedocumentEditEzsigntemplateannotationsV1Request] ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request (required):
-  Future<EzsigntemplatedocumentEditEzsigntemplateannotationsV1Response?> ezsigntemplatedocumentEditEzsigntemplateannotationsV1(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentEditEzsigntemplateannotationsV1Request ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request,) async {
-    final response = await ezsigntemplatedocumentEditEzsigntemplateannotationsV1WithHttpInfo(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request,);
+  Future<EzsigntemplatedocumentEditEzsigntemplateannotationsV1Response?> ezsigntemplatedocumentEditEzsigntemplateannotationsV1(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentEditEzsigntemplateannotationsV1Request ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplatedocumentEditEzsigntemplateannotationsV1WithHttpInfo(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -193,7 +196,7 @@ class ObjectEzsigntemplatedocumentApi {
   /// * [int] pkiEzsigntemplatedocumentID (required):
   ///
   /// * [EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request] ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request (required):
-  Future<Response> ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1WithHttpInfo(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request,) async {
+  Future<Response> ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1WithHttpInfo(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplatedocumentpagerecognitions'
       .replaceAll('{pkiEzsigntemplatedocumentID}', pkiEzsigntemplatedocumentID.toString());
@@ -216,6 +219,7 @@ class ObjectEzsigntemplatedocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -228,8 +232,8 @@ class ObjectEzsigntemplatedocumentApi {
   /// * [int] pkiEzsigntemplatedocumentID (required):
   ///
   /// * [EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request] ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request (required):
-  Future<EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Response?> ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request,) async {
-    final response = await ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1WithHttpInfo(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request,);
+  Future<EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Response?> ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1WithHttpInfo(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -254,7 +258,7 @@ class ObjectEzsigntemplatedocumentApi {
   /// * [int] pkiEzsigntemplatedocumentID (required):
   ///
   /// * [EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request] ezsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request (required):
-  Future<Response> ezsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1WithHttpInfo(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request ezsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request,) async {
+  Future<Response> ezsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1WithHttpInfo(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request ezsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplateformfieldgroups'
       .replaceAll('{pkiEzsigntemplatedocumentID}', pkiEzsigntemplatedocumentID.toString());
@@ -277,6 +281,7 @@ class ObjectEzsigntemplatedocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -289,8 +294,8 @@ class ObjectEzsigntemplatedocumentApi {
   /// * [int] pkiEzsigntemplatedocumentID (required):
   ///
   /// * [EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request] ezsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request (required):
-  Future<EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Response?> ezsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request ezsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request,) async {
-    final response = await ezsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1WithHttpInfo(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request,);
+  Future<EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Response?> ezsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request ezsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1WithHttpInfo(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -315,7 +320,7 @@ class ObjectEzsigntemplatedocumentApi {
   /// * [int] pkiEzsigntemplatedocumentID (required):
   ///
   /// * [EzsigntemplatedocumentEditEzsigntemplatesignaturesV1Request] ezsigntemplatedocumentEditEzsigntemplatesignaturesV1Request (required):
-  Future<Response> ezsigntemplatedocumentEditEzsigntemplatesignaturesV1WithHttpInfo(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentEditEzsigntemplatesignaturesV1Request ezsigntemplatedocumentEditEzsigntemplatesignaturesV1Request,) async {
+  Future<Response> ezsigntemplatedocumentEditEzsigntemplatesignaturesV1WithHttpInfo(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentEditEzsigntemplatesignaturesV1Request ezsigntemplatedocumentEditEzsigntemplatesignaturesV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplatesignatures'
       .replaceAll('{pkiEzsigntemplatedocumentID}', pkiEzsigntemplatedocumentID.toString());
@@ -338,6 +343,7 @@ class ObjectEzsigntemplatedocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -350,8 +356,8 @@ class ObjectEzsigntemplatedocumentApi {
   /// * [int] pkiEzsigntemplatedocumentID (required):
   ///
   /// * [EzsigntemplatedocumentEditEzsigntemplatesignaturesV1Request] ezsigntemplatedocumentEditEzsigntemplatesignaturesV1Request (required):
-  Future<EzsigntemplatedocumentEditEzsigntemplatesignaturesV1Response?> ezsigntemplatedocumentEditEzsigntemplatesignaturesV1(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentEditEzsigntemplatesignaturesV1Request ezsigntemplatedocumentEditEzsigntemplatesignaturesV1Request,) async {
-    final response = await ezsigntemplatedocumentEditEzsigntemplatesignaturesV1WithHttpInfo(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentEditEzsigntemplatesignaturesV1Request,);
+  Future<EzsigntemplatedocumentEditEzsigntemplatesignaturesV1Response?> ezsigntemplatedocumentEditEzsigntemplatesignaturesV1(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentEditEzsigntemplatesignaturesV1Request ezsigntemplatedocumentEditEzsigntemplatesignaturesV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplatedocumentEditEzsigntemplatesignaturesV1WithHttpInfo(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentEditEzsigntemplatesignaturesV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -376,7 +382,7 @@ class ObjectEzsigntemplatedocumentApi {
   /// * [int] pkiEzsigntemplatedocumentID (required):
   ///
   /// * [EzsigntemplatedocumentEditEzsigntemplatesignaturesV2Request] ezsigntemplatedocumentEditEzsigntemplatesignaturesV2Request (required):
-  Future<Response> ezsigntemplatedocumentEditEzsigntemplatesignaturesV2WithHttpInfo(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentEditEzsigntemplatesignaturesV2Request ezsigntemplatedocumentEditEzsigntemplatesignaturesV2Request,) async {
+  Future<Response> ezsigntemplatedocumentEditEzsigntemplatesignaturesV2WithHttpInfo(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentEditEzsigntemplatesignaturesV2Request ezsigntemplatedocumentEditEzsigntemplatesignaturesV2Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplatesignatures'
       .replaceAll('{pkiEzsigntemplatedocumentID}', pkiEzsigntemplatedocumentID.toString());
@@ -399,6 +405,7 @@ class ObjectEzsigntemplatedocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -411,8 +418,8 @@ class ObjectEzsigntemplatedocumentApi {
   /// * [int] pkiEzsigntemplatedocumentID (required):
   ///
   /// * [EzsigntemplatedocumentEditEzsigntemplatesignaturesV2Request] ezsigntemplatedocumentEditEzsigntemplatesignaturesV2Request (required):
-  Future<EzsigntemplatedocumentEditEzsigntemplatesignaturesV2Response?> ezsigntemplatedocumentEditEzsigntemplatesignaturesV2(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentEditEzsigntemplatesignaturesV2Request ezsigntemplatedocumentEditEzsigntemplatesignaturesV2Request,) async {
-    final response = await ezsigntemplatedocumentEditEzsigntemplatesignaturesV2WithHttpInfo(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentEditEzsigntemplatesignaturesV2Request,);
+  Future<EzsigntemplatedocumentEditEzsigntemplatesignaturesV2Response?> ezsigntemplatedocumentEditEzsigntemplatesignaturesV2(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentEditEzsigntemplatesignaturesV2Request ezsigntemplatedocumentEditEzsigntemplatesignaturesV2Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplatedocumentEditEzsigntemplatesignaturesV2WithHttpInfo(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentEditEzsigntemplatesignaturesV2Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -437,7 +444,7 @@ class ObjectEzsigntemplatedocumentApi {
   /// * [int] pkiEzsigntemplatedocumentID (required):
   ///
   /// * [EzsigntemplatedocumentEditObjectV1Request] ezsigntemplatedocumentEditObjectV1Request (required):
-  Future<Response> ezsigntemplatedocumentEditObjectV1WithHttpInfo(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentEditObjectV1Request ezsigntemplatedocumentEditObjectV1Request,) async {
+  Future<Response> ezsigntemplatedocumentEditObjectV1WithHttpInfo(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentEditObjectV1Request ezsigntemplatedocumentEditObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}'
       .replaceAll('{pkiEzsigntemplatedocumentID}', pkiEzsigntemplatedocumentID.toString());
@@ -460,6 +467,7 @@ class ObjectEzsigntemplatedocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -472,8 +480,8 @@ class ObjectEzsigntemplatedocumentApi {
   /// * [int] pkiEzsigntemplatedocumentID (required):
   ///
   /// * [EzsigntemplatedocumentEditObjectV1Request] ezsigntemplatedocumentEditObjectV1Request (required):
-  Future<EzsigntemplatedocumentEditObjectV1Response?> ezsigntemplatedocumentEditObjectV1(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentEditObjectV1Request ezsigntemplatedocumentEditObjectV1Request,) async {
-    final response = await ezsigntemplatedocumentEditObjectV1WithHttpInfo(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentEditObjectV1Request,);
+  Future<EzsigntemplatedocumentEditObjectV1Response?> ezsigntemplatedocumentEditObjectV1(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentEditObjectV1Request ezsigntemplatedocumentEditObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplatedocumentEditObjectV1WithHttpInfo(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentEditObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -498,7 +506,7 @@ class ObjectEzsigntemplatedocumentApi {
   /// * [int] pkiEzsigntemplatedocumentID (required):
   ///
   /// * [EzsigntemplatedocumentExtractTextV1Request] ezsigntemplatedocumentExtractTextV1Request (required):
-  Future<Response> ezsigntemplatedocumentExtractTextV1WithHttpInfo(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentExtractTextV1Request ezsigntemplatedocumentExtractTextV1Request,) async {
+  Future<Response> ezsigntemplatedocumentExtractTextV1WithHttpInfo(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentExtractTextV1Request ezsigntemplatedocumentExtractTextV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/extractText'
       .replaceAll('{pkiEzsigntemplatedocumentID}', pkiEzsigntemplatedocumentID.toString());
@@ -521,6 +529,7 @@ class ObjectEzsigntemplatedocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -533,8 +542,8 @@ class ObjectEzsigntemplatedocumentApi {
   /// * [int] pkiEzsigntemplatedocumentID (required):
   ///
   /// * [EzsigntemplatedocumentExtractTextV1Request] ezsigntemplatedocumentExtractTextV1Request (required):
-  Future<EzsigntemplatedocumentExtractTextV1Response?> ezsigntemplatedocumentExtractTextV1(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentExtractTextV1Request ezsigntemplatedocumentExtractTextV1Request,) async {
-    final response = await ezsigntemplatedocumentExtractTextV1WithHttpInfo(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentExtractTextV1Request,);
+  Future<EzsigntemplatedocumentExtractTextV1Response?> ezsigntemplatedocumentExtractTextV1(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentExtractTextV1Request ezsigntemplatedocumentExtractTextV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplatedocumentExtractTextV1WithHttpInfo(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentExtractTextV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -559,7 +568,7 @@ class ObjectEzsigntemplatedocumentApi {
   /// * [int] pkiEzsigntemplatedocumentID (required):
   ///
   /// * [Object] body (required):
-  Future<Response> ezsigntemplatedocumentFlattenV1WithHttpInfo(int pkiEzsigntemplatedocumentID, Object body,) async {
+  Future<Response> ezsigntemplatedocumentFlattenV1WithHttpInfo(int pkiEzsigntemplatedocumentID, Object body, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/flatten'
       .replaceAll('{pkiEzsigntemplatedocumentID}', pkiEzsigntemplatedocumentID.toString());
@@ -582,6 +591,7 @@ class ObjectEzsigntemplatedocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -594,8 +604,8 @@ class ObjectEzsigntemplatedocumentApi {
   /// * [int] pkiEzsigntemplatedocumentID (required):
   ///
   /// * [Object] body (required):
-  Future<EzsigntemplatedocumentFlattenV1Response?> ezsigntemplatedocumentFlattenV1(int pkiEzsigntemplatedocumentID, Object body,) async {
-    final response = await ezsigntemplatedocumentFlattenV1WithHttpInfo(pkiEzsigntemplatedocumentID, body,);
+  Future<EzsigntemplatedocumentFlattenV1Response?> ezsigntemplatedocumentFlattenV1(int pkiEzsigntemplatedocumentID, Object body, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplatedocumentFlattenV1WithHttpInfo(pkiEzsigntemplatedocumentID, body, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -618,7 +628,7 @@ class ObjectEzsigntemplatedocumentApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigntemplatedocumentID (required):
-  Future<Response> ezsigntemplatedocumentGetEzsigntemplateannotationsV1WithHttpInfo(int pkiEzsigntemplatedocumentID,) async {
+  Future<Response> ezsigntemplatedocumentGetEzsigntemplateannotationsV1WithHttpInfo(int pkiEzsigntemplatedocumentID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplateannotations'
       .replaceAll('{pkiEzsigntemplatedocumentID}', pkiEzsigntemplatedocumentID.toString());
@@ -641,6 +651,7 @@ class ObjectEzsigntemplatedocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -651,8 +662,8 @@ class ObjectEzsigntemplatedocumentApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigntemplatedocumentID (required):
-  Future<EzsigntemplatedocumentGetEzsigntemplateannotationsV1Response?> ezsigntemplatedocumentGetEzsigntemplateannotationsV1(int pkiEzsigntemplatedocumentID,) async {
-    final response = await ezsigntemplatedocumentGetEzsigntemplateannotationsV1WithHttpInfo(pkiEzsigntemplatedocumentID,);
+  Future<EzsigntemplatedocumentGetEzsigntemplateannotationsV1Response?> ezsigntemplatedocumentGetEzsigntemplateannotationsV1(int pkiEzsigntemplatedocumentID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplatedocumentGetEzsigntemplateannotationsV1WithHttpInfo(pkiEzsigntemplatedocumentID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -675,7 +686,7 @@ class ObjectEzsigntemplatedocumentApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigntemplatedocumentID (required):
-  Future<Response> ezsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1WithHttpInfo(int pkiEzsigntemplatedocumentID,) async {
+  Future<Response> ezsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1WithHttpInfo(int pkiEzsigntemplatedocumentID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatedocumentpagerecognitions'
       .replaceAll('{pkiEzsigntemplatedocumentID}', pkiEzsigntemplatedocumentID.toString());
@@ -698,6 +709,7 @@ class ObjectEzsigntemplatedocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -708,8 +720,8 @@ class ObjectEzsigntemplatedocumentApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigntemplatedocumentID (required):
-  Future<EzsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1Response?> ezsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1(int pkiEzsigntemplatedocumentID,) async {
-    final response = await ezsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1WithHttpInfo(pkiEzsigntemplatedocumentID,);
+  Future<EzsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1Response?> ezsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1(int pkiEzsigntemplatedocumentID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1WithHttpInfo(pkiEzsigntemplatedocumentID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -732,7 +744,7 @@ class ObjectEzsigntemplatedocumentApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigntemplatedocumentID (required):
-  Future<Response> ezsigntemplatedocumentGetEzsigntemplatedocumentpagesV1WithHttpInfo(int pkiEzsigntemplatedocumentID,) async {
+  Future<Response> ezsigntemplatedocumentGetEzsigntemplatedocumentpagesV1WithHttpInfo(int pkiEzsigntemplatedocumentID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatedocumentpages'
       .replaceAll('{pkiEzsigntemplatedocumentID}', pkiEzsigntemplatedocumentID.toString());
@@ -755,6 +767,7 @@ class ObjectEzsigntemplatedocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -765,8 +778,8 @@ class ObjectEzsigntemplatedocumentApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigntemplatedocumentID (required):
-  Future<EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1Response?> ezsigntemplatedocumentGetEzsigntemplatedocumentpagesV1(int pkiEzsigntemplatedocumentID,) async {
-    final response = await ezsigntemplatedocumentGetEzsigntemplatedocumentpagesV1WithHttpInfo(pkiEzsigntemplatedocumentID,);
+  Future<EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1Response?> ezsigntemplatedocumentGetEzsigntemplatedocumentpagesV1(int pkiEzsigntemplatedocumentID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplatedocumentGetEzsigntemplatedocumentpagesV1WithHttpInfo(pkiEzsigntemplatedocumentID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -789,7 +802,7 @@ class ObjectEzsigntemplatedocumentApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigntemplatedocumentID (required):
-  Future<Response> ezsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1WithHttpInfo(int pkiEzsigntemplatedocumentID,) async {
+  Future<Response> ezsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1WithHttpInfo(int pkiEzsigntemplatedocumentID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplateformfieldgroups'
       .replaceAll('{pkiEzsigntemplatedocumentID}', pkiEzsigntemplatedocumentID.toString());
@@ -812,6 +825,7 @@ class ObjectEzsigntemplatedocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -822,8 +836,8 @@ class ObjectEzsigntemplatedocumentApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigntemplatedocumentID (required):
-  Future<EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response?> ezsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1(int pkiEzsigntemplatedocumentID,) async {
-    final response = await ezsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1WithHttpInfo(pkiEzsigntemplatedocumentID,);
+  Future<EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response?> ezsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1(int pkiEzsigntemplatedocumentID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1WithHttpInfo(pkiEzsigntemplatedocumentID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -846,7 +860,7 @@ class ObjectEzsigntemplatedocumentApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigntemplatedocumentID (required):
-  Future<Response> ezsigntemplatedocumentGetEzsigntemplatesignaturesV2WithHttpInfo(int pkiEzsigntemplatedocumentID,) async {
+  Future<Response> ezsigntemplatedocumentGetEzsigntemplatesignaturesV2WithHttpInfo(int pkiEzsigntemplatedocumentID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatesignatures'
       .replaceAll('{pkiEzsigntemplatedocumentID}', pkiEzsigntemplatedocumentID.toString());
@@ -869,6 +883,7 @@ class ObjectEzsigntemplatedocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -879,8 +894,8 @@ class ObjectEzsigntemplatedocumentApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigntemplatedocumentID (required):
-  Future<EzsigntemplatedocumentGetEzsigntemplatesignaturesV2Response?> ezsigntemplatedocumentGetEzsigntemplatesignaturesV2(int pkiEzsigntemplatedocumentID,) async {
-    final response = await ezsigntemplatedocumentGetEzsigntemplatesignaturesV2WithHttpInfo(pkiEzsigntemplatedocumentID,);
+  Future<EzsigntemplatedocumentGetEzsigntemplatesignaturesV2Response?> ezsigntemplatedocumentGetEzsigntemplatesignaturesV2(int pkiEzsigntemplatedocumentID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplatedocumentGetEzsigntemplatesignaturesV2WithHttpInfo(pkiEzsigntemplatedocumentID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -903,7 +918,7 @@ class ObjectEzsigntemplatedocumentApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigntemplatedocumentID (required):
-  Future<Response> ezsigntemplatedocumentGetObjectV2WithHttpInfo(int pkiEzsigntemplatedocumentID,) async {
+  Future<Response> ezsigntemplatedocumentGetObjectV2WithHttpInfo(int pkiEzsigntemplatedocumentID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}'
       .replaceAll('{pkiEzsigntemplatedocumentID}', pkiEzsigntemplatedocumentID.toString());
@@ -926,6 +941,7 @@ class ObjectEzsigntemplatedocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -936,8 +952,8 @@ class ObjectEzsigntemplatedocumentApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigntemplatedocumentID (required):
-  Future<EzsigntemplatedocumentGetObjectV2Response?> ezsigntemplatedocumentGetObjectV2(int pkiEzsigntemplatedocumentID,) async {
-    final response = await ezsigntemplatedocumentGetObjectV2WithHttpInfo(pkiEzsigntemplatedocumentID,);
+  Future<EzsigntemplatedocumentGetObjectV2Response?> ezsigntemplatedocumentGetObjectV2(int pkiEzsigntemplatedocumentID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplatedocumentGetObjectV2WithHttpInfo(pkiEzsigntemplatedocumentID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -962,7 +978,7 @@ class ObjectEzsigntemplatedocumentApi {
   /// * [int] pkiEzsigntemplatedocumentID (required):
   ///
   /// * [EzsigntemplatedocumentGetWordsPositionsV1Request] ezsigntemplatedocumentGetWordsPositionsV1Request (required):
-  Future<Response> ezsigntemplatedocumentGetWordsPositionsV1WithHttpInfo(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentGetWordsPositionsV1Request ezsigntemplatedocumentGetWordsPositionsV1Request,) async {
+  Future<Response> ezsigntemplatedocumentGetWordsPositionsV1WithHttpInfo(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentGetWordsPositionsV1Request ezsigntemplatedocumentGetWordsPositionsV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getWordsPositions'
       .replaceAll('{pkiEzsigntemplatedocumentID}', pkiEzsigntemplatedocumentID.toString());
@@ -985,6 +1001,7 @@ class ObjectEzsigntemplatedocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -997,8 +1014,8 @@ class ObjectEzsigntemplatedocumentApi {
   /// * [int] pkiEzsigntemplatedocumentID (required):
   ///
   /// * [EzsigntemplatedocumentGetWordsPositionsV1Request] ezsigntemplatedocumentGetWordsPositionsV1Request (required):
-  Future<EzsigntemplatedocumentGetWordsPositionsV1Response?> ezsigntemplatedocumentGetWordsPositionsV1(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentGetWordsPositionsV1Request ezsigntemplatedocumentGetWordsPositionsV1Request,) async {
-    final response = await ezsigntemplatedocumentGetWordsPositionsV1WithHttpInfo(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentGetWordsPositionsV1Request,);
+  Future<EzsigntemplatedocumentGetWordsPositionsV1Response?> ezsigntemplatedocumentGetWordsPositionsV1(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentGetWordsPositionsV1Request ezsigntemplatedocumentGetWordsPositionsV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplatedocumentGetWordsPositionsV1WithHttpInfo(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentGetWordsPositionsV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -1023,7 +1040,7 @@ class ObjectEzsigntemplatedocumentApi {
   /// * [int] pkiEzsigntemplatedocumentID (required):
   ///
   /// * [EzsigntemplatedocumentPatchObjectV1Request] ezsigntemplatedocumentPatchObjectV1Request (required):
-  Future<Response> ezsigntemplatedocumentPatchObjectV1WithHttpInfo(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentPatchObjectV1Request ezsigntemplatedocumentPatchObjectV1Request,) async {
+  Future<Response> ezsigntemplatedocumentPatchObjectV1WithHttpInfo(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentPatchObjectV1Request ezsigntemplatedocumentPatchObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}'
       .replaceAll('{pkiEzsigntemplatedocumentID}', pkiEzsigntemplatedocumentID.toString());
@@ -1046,6 +1063,7 @@ class ObjectEzsigntemplatedocumentApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -1058,8 +1076,8 @@ class ObjectEzsigntemplatedocumentApi {
   /// * [int] pkiEzsigntemplatedocumentID (required):
   ///
   /// * [EzsigntemplatedocumentPatchObjectV1Request] ezsigntemplatedocumentPatchObjectV1Request (required):
-  Future<EzsigntemplatedocumentPatchObjectV1Response?> ezsigntemplatedocumentPatchObjectV1(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentPatchObjectV1Request ezsigntemplatedocumentPatchObjectV1Request,) async {
-    final response = await ezsigntemplatedocumentPatchObjectV1WithHttpInfo(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentPatchObjectV1Request,);
+  Future<EzsigntemplatedocumentPatchObjectV1Response?> ezsigntemplatedocumentPatchObjectV1(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentPatchObjectV1Request ezsigntemplatedocumentPatchObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplatedocumentPatchObjectV1WithHttpInfo(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentPatchObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

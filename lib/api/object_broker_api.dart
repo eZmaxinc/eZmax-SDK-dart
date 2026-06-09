@@ -34,7 +34,7 @@ class ObjectBrokerApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<Response> brokerGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
+  Future<Response> brokerGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/broker/getAutocomplete/{sSelector}'
       .replaceAll('{sSelector}', sSelector);
@@ -68,6 +68,7 @@ class ObjectBrokerApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -87,8 +88,8 @@ class ObjectBrokerApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<BrokerGetAutocompleteV2Response?> brokerGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
-    final response = await brokerGetAutocompleteV2WithHttpInfo(sSelector,  eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, );
+  Future<BrokerGetAutocompleteV2Response?> brokerGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
+    final response = await brokerGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -120,7 +121,7 @@ class ObjectBrokerApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<Response> brokerGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
+  Future<Response> brokerGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/broker/getList';
 
@@ -159,6 +160,7 @@ class ObjectBrokerApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -178,8 +180,8 @@ class ObjectBrokerApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<BrokerGetListV1Response?> brokerGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
-    final response = await brokerGetListV1WithHttpInfo( eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, );
+  Future<BrokerGetListV1Response?> brokerGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
+    final response = await brokerGetListV1WithHttpInfo(eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -204,7 +206,7 @@ class ObjectBrokerApi {
   /// * [int] pkiBrokerID (required):
   ///
   /// * [BrokerImportIntoEDMV1Request] brokerImportIntoEDMV1Request (required):
-  Future<Response> brokerImportIntoEDMV1WithHttpInfo(int pkiBrokerID, BrokerImportIntoEDMV1Request brokerImportIntoEDMV1Request,) async {
+  Future<Response> brokerImportIntoEDMV1WithHttpInfo(int pkiBrokerID, BrokerImportIntoEDMV1Request brokerImportIntoEDMV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/broker/{pkiBrokerID}/importIntoEDM'
       .replaceAll('{pkiBrokerID}', pkiBrokerID.toString());
@@ -227,6 +229,7 @@ class ObjectBrokerApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -239,8 +242,8 @@ class ObjectBrokerApi {
   /// * [int] pkiBrokerID (required):
   ///
   /// * [BrokerImportIntoEDMV1Request] brokerImportIntoEDMV1Request (required):
-  Future<BrokerImportIntoEDMV1Response?> brokerImportIntoEDMV1(int pkiBrokerID, BrokerImportIntoEDMV1Request brokerImportIntoEDMV1Request,) async {
-    final response = await brokerImportIntoEDMV1WithHttpInfo(pkiBrokerID, brokerImportIntoEDMV1Request,);
+  Future<BrokerImportIntoEDMV1Response?> brokerImportIntoEDMV1(int pkiBrokerID, BrokerImportIntoEDMV1Request brokerImportIntoEDMV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await brokerImportIntoEDMV1WithHttpInfo(pkiBrokerID, brokerImportIntoEDMV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

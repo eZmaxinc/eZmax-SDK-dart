@@ -37,7 +37,7 @@ class ObjectRealestateboardApi {
   ///
   /// * [String] fkiProvinceID:
   ///   The province ID to filter the results expected
-  Future<Response> realestateboardGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, String? fkiProvinceID, }) async {
+  Future<Response> realestateboardGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, String? fkiProvinceID, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/realestateboard/getAutocomplete/{sSelector}'
       .replaceAll('{sSelector}', sSelector);
@@ -74,6 +74,7 @@ class ObjectRealestateboardApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -96,8 +97,8 @@ class ObjectRealestateboardApi {
   ///
   /// * [String] fkiProvinceID:
   ///   The province ID to filter the results expected
-  Future<RealestateboardGetAutocompleteV2Response?> realestateboardGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, String? fkiProvinceID, }) async {
-    final response = await realestateboardGetAutocompleteV2WithHttpInfo(sSelector,  eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, fkiProvinceID: fkiProvinceID, );
+  Future<RealestateboardGetAutocompleteV2Response?> realestateboardGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, String? fkiProvinceID, Future<void>? abortTrigger, }) async {
+    final response = await realestateboardGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, fkiProvinceID: fkiProvinceID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

@@ -25,7 +25,7 @@ class ObjectEzsigntemplatepackagemembershipApi {
   /// Parameters:
   ///
   /// * [EzsigntemplatepackagemembershipCreateObjectV1Request] ezsigntemplatepackagemembershipCreateObjectV1Request (required):
-  Future<Response> ezsigntemplatepackagemembershipCreateObjectV1WithHttpInfo(EzsigntemplatepackagemembershipCreateObjectV1Request ezsigntemplatepackagemembershipCreateObjectV1Request,) async {
+  Future<Response> ezsigntemplatepackagemembershipCreateObjectV1WithHttpInfo(EzsigntemplatepackagemembershipCreateObjectV1Request ezsigntemplatepackagemembershipCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsigntemplatepackagemembership';
 
@@ -47,6 +47,7 @@ class ObjectEzsigntemplatepackagemembershipApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -57,8 +58,8 @@ class ObjectEzsigntemplatepackagemembershipApi {
   /// Parameters:
   ///
   /// * [EzsigntemplatepackagemembershipCreateObjectV1Request] ezsigntemplatepackagemembershipCreateObjectV1Request (required):
-  Future<EzsigntemplatepackagemembershipCreateObjectV1Response?> ezsigntemplatepackagemembershipCreateObjectV1(EzsigntemplatepackagemembershipCreateObjectV1Request ezsigntemplatepackagemembershipCreateObjectV1Request,) async {
-    final response = await ezsigntemplatepackagemembershipCreateObjectV1WithHttpInfo(ezsigntemplatepackagemembershipCreateObjectV1Request,);
+  Future<EzsigntemplatepackagemembershipCreateObjectV1Response?> ezsigntemplatepackagemembershipCreateObjectV1(EzsigntemplatepackagemembershipCreateObjectV1Request ezsigntemplatepackagemembershipCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplatepackagemembershipCreateObjectV1WithHttpInfo(ezsigntemplatepackagemembershipCreateObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -81,7 +82,7 @@ class ObjectEzsigntemplatepackagemembershipApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigntemplatepackagemembershipID (required):
-  Future<Response> ezsigntemplatepackagemembershipDeleteObjectV1WithHttpInfo(int pkiEzsigntemplatepackagemembershipID,) async {
+  Future<Response> ezsigntemplatepackagemembershipDeleteObjectV1WithHttpInfo(int pkiEzsigntemplatepackagemembershipID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID}'
       .replaceAll('{pkiEzsigntemplatepackagemembershipID}', pkiEzsigntemplatepackagemembershipID.toString());
@@ -104,6 +105,7 @@ class ObjectEzsigntemplatepackagemembershipApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -114,8 +116,8 @@ class ObjectEzsigntemplatepackagemembershipApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigntemplatepackagemembershipID (required):
-  Future<EzsigntemplatepackagemembershipDeleteObjectV1Response?> ezsigntemplatepackagemembershipDeleteObjectV1(int pkiEzsigntemplatepackagemembershipID,) async {
-    final response = await ezsigntemplatepackagemembershipDeleteObjectV1WithHttpInfo(pkiEzsigntemplatepackagemembershipID,);
+  Future<EzsigntemplatepackagemembershipDeleteObjectV1Response?> ezsigntemplatepackagemembershipDeleteObjectV1(int pkiEzsigntemplatepackagemembershipID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplatepackagemembershipDeleteObjectV1WithHttpInfo(pkiEzsigntemplatepackagemembershipID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -138,7 +140,7 @@ class ObjectEzsigntemplatepackagemembershipApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigntemplatepackagemembershipID (required):
-  Future<Response> ezsigntemplatepackagemembershipGetObjectV2WithHttpInfo(int pkiEzsigntemplatepackagemembershipID,) async {
+  Future<Response> ezsigntemplatepackagemembershipGetObjectV2WithHttpInfo(int pkiEzsigntemplatepackagemembershipID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID}'
       .replaceAll('{pkiEzsigntemplatepackagemembershipID}', pkiEzsigntemplatepackagemembershipID.toString());
@@ -161,6 +163,7 @@ class ObjectEzsigntemplatepackagemembershipApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -171,8 +174,8 @@ class ObjectEzsigntemplatepackagemembershipApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigntemplatepackagemembershipID (required):
-  Future<EzsigntemplatepackagemembershipGetObjectV2Response?> ezsigntemplatepackagemembershipGetObjectV2(int pkiEzsigntemplatepackagemembershipID,) async {
-    final response = await ezsigntemplatepackagemembershipGetObjectV2WithHttpInfo(pkiEzsigntemplatepackagemembershipID,);
+  Future<EzsigntemplatepackagemembershipGetObjectV2Response?> ezsigntemplatepackagemembershipGetObjectV2(int pkiEzsigntemplatepackagemembershipID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplatepackagemembershipGetObjectV2WithHttpInfo(pkiEzsigntemplatepackagemembershipID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

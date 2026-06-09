@@ -25,7 +25,7 @@ class ObjectRejectedoffertopurchaseApi {
   /// Parameters:
   ///
   /// * [int] pkiRejectedoffertopurchaseID (required):
-  Future<Response> rejectedoffertopurchaseGetCommunicationCountV1WithHttpInfo(int pkiRejectedoffertopurchaseID,) async {
+  Future<Response> rejectedoffertopurchaseGetCommunicationCountV1WithHttpInfo(int pkiRejectedoffertopurchaseID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationCount'
       .replaceAll('{pkiRejectedoffertopurchaseID}', pkiRejectedoffertopurchaseID.toString());
@@ -48,6 +48,7 @@ class ObjectRejectedoffertopurchaseApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -58,8 +59,8 @@ class ObjectRejectedoffertopurchaseApi {
   /// Parameters:
   ///
   /// * [int] pkiRejectedoffertopurchaseID (required):
-  Future<RejectedoffertopurchaseGetCommunicationCountV1Response?> rejectedoffertopurchaseGetCommunicationCountV1(int pkiRejectedoffertopurchaseID,) async {
-    final response = await rejectedoffertopurchaseGetCommunicationCountV1WithHttpInfo(pkiRejectedoffertopurchaseID,);
+  Future<RejectedoffertopurchaseGetCommunicationCountV1Response?> rejectedoffertopurchaseGetCommunicationCountV1(int pkiRejectedoffertopurchaseID, { Future<void>? abortTrigger, }) async {
+    final response = await rejectedoffertopurchaseGetCommunicationCountV1WithHttpInfo(pkiRejectedoffertopurchaseID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -82,7 +83,7 @@ class ObjectRejectedoffertopurchaseApi {
   /// Parameters:
   ///
   /// * [int] pkiRejectedoffertopurchaseID (required):
-  Future<Response> rejectedoffertopurchaseGetCommunicationListV1WithHttpInfo(int pkiRejectedoffertopurchaseID,) async {
+  Future<Response> rejectedoffertopurchaseGetCommunicationListV1WithHttpInfo(int pkiRejectedoffertopurchaseID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationList'
       .replaceAll('{pkiRejectedoffertopurchaseID}', pkiRejectedoffertopurchaseID.toString());
@@ -105,6 +106,7 @@ class ObjectRejectedoffertopurchaseApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -115,8 +117,8 @@ class ObjectRejectedoffertopurchaseApi {
   /// Parameters:
   ///
   /// * [int] pkiRejectedoffertopurchaseID (required):
-  Future<RejectedoffertopurchaseGetCommunicationListV1Response?> rejectedoffertopurchaseGetCommunicationListV1(int pkiRejectedoffertopurchaseID,) async {
-    final response = await rejectedoffertopurchaseGetCommunicationListV1WithHttpInfo(pkiRejectedoffertopurchaseID,);
+  Future<RejectedoffertopurchaseGetCommunicationListV1Response?> rejectedoffertopurchaseGetCommunicationListV1(int pkiRejectedoffertopurchaseID, { Future<void>? abortTrigger, }) async {
+    final response = await rejectedoffertopurchaseGetCommunicationListV1WithHttpInfo(pkiRejectedoffertopurchaseID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -139,7 +141,7 @@ class ObjectRejectedoffertopurchaseApi {
   /// Parameters:
   ///
   /// * [int] pkiRejectedoffertopurchaseID (required):
-  Future<Response> rejectedoffertopurchaseGetCommunicationrecipientsV1WithHttpInfo(int pkiRejectedoffertopurchaseID,) async {
+  Future<Response> rejectedoffertopurchaseGetCommunicationrecipientsV1WithHttpInfo(int pkiRejectedoffertopurchaseID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationrecipients'
       .replaceAll('{pkiRejectedoffertopurchaseID}', pkiRejectedoffertopurchaseID.toString());
@@ -162,6 +164,7 @@ class ObjectRejectedoffertopurchaseApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -172,8 +175,8 @@ class ObjectRejectedoffertopurchaseApi {
   /// Parameters:
   ///
   /// * [int] pkiRejectedoffertopurchaseID (required):
-  Future<RejectedoffertopurchaseGetCommunicationrecipientsV1Response?> rejectedoffertopurchaseGetCommunicationrecipientsV1(int pkiRejectedoffertopurchaseID,) async {
-    final response = await rejectedoffertopurchaseGetCommunicationrecipientsV1WithHttpInfo(pkiRejectedoffertopurchaseID,);
+  Future<RejectedoffertopurchaseGetCommunicationrecipientsV1Response?> rejectedoffertopurchaseGetCommunicationrecipientsV1(int pkiRejectedoffertopurchaseID, { Future<void>? abortTrigger, }) async {
+    final response = await rejectedoffertopurchaseGetCommunicationrecipientsV1WithHttpInfo(pkiRejectedoffertopurchaseID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -196,7 +199,7 @@ class ObjectRejectedoffertopurchaseApi {
   /// Parameters:
   ///
   /// * [int] pkiRejectedoffertopurchaseID (required):
-  Future<Response> rejectedoffertopurchaseGetCommunicationsendersV1WithHttpInfo(int pkiRejectedoffertopurchaseID,) async {
+  Future<Response> rejectedoffertopurchaseGetCommunicationsendersV1WithHttpInfo(int pkiRejectedoffertopurchaseID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationsenders'
       .replaceAll('{pkiRejectedoffertopurchaseID}', pkiRejectedoffertopurchaseID.toString());
@@ -219,6 +222,7 @@ class ObjectRejectedoffertopurchaseApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -229,8 +233,8 @@ class ObjectRejectedoffertopurchaseApi {
   /// Parameters:
   ///
   /// * [int] pkiRejectedoffertopurchaseID (required):
-  Future<RejectedoffertopurchaseGetCommunicationsendersV1Response?> rejectedoffertopurchaseGetCommunicationsendersV1(int pkiRejectedoffertopurchaseID,) async {
-    final response = await rejectedoffertopurchaseGetCommunicationsendersV1WithHttpInfo(pkiRejectedoffertopurchaseID,);
+  Future<RejectedoffertopurchaseGetCommunicationsendersV1Response?> rejectedoffertopurchaseGetCommunicationsendersV1(int pkiRejectedoffertopurchaseID, { Future<void>? abortTrigger, }) async {
+    final response = await rejectedoffertopurchaseGetCommunicationsendersV1WithHttpInfo(pkiRejectedoffertopurchaseID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -262,7 +266,7 @@ class ObjectRejectedoffertopurchaseApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<Response> rejectedoffertopurchaseGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
+  Future<Response> rejectedoffertopurchaseGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/rejectedoffertopurchase/getList';
 
@@ -301,6 +305,7 @@ class ObjectRejectedoffertopurchaseApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -320,8 +325,8 @@ class ObjectRejectedoffertopurchaseApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<RejectedoffertopurchaseGetListV1Response?> rejectedoffertopurchaseGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
-    final response = await rejectedoffertopurchaseGetListV1WithHttpInfo( eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, );
+  Future<RejectedoffertopurchaseGetListV1Response?> rejectedoffertopurchaseGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
+    final response = await rejectedoffertopurchaseGetListV1WithHttpInfo(eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -346,7 +351,7 @@ class ObjectRejectedoffertopurchaseApi {
   /// * [int] pkiRejectedoffertopurchaseID (required):
   ///
   /// * [RejectedoffertopurchaseImportIntoEDMV1Request] rejectedoffertopurchaseImportIntoEDMV1Request (required):
-  Future<Response> rejectedoffertopurchaseImportIntoEDMV1WithHttpInfo(int pkiRejectedoffertopurchaseID, RejectedoffertopurchaseImportIntoEDMV1Request rejectedoffertopurchaseImportIntoEDMV1Request,) async {
+  Future<Response> rejectedoffertopurchaseImportIntoEDMV1WithHttpInfo(int pkiRejectedoffertopurchaseID, RejectedoffertopurchaseImportIntoEDMV1Request rejectedoffertopurchaseImportIntoEDMV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/importIntoEDM'
       .replaceAll('{pkiRejectedoffertopurchaseID}', pkiRejectedoffertopurchaseID.toString());
@@ -369,6 +374,7 @@ class ObjectRejectedoffertopurchaseApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -381,8 +387,8 @@ class ObjectRejectedoffertopurchaseApi {
   /// * [int] pkiRejectedoffertopurchaseID (required):
   ///
   /// * [RejectedoffertopurchaseImportIntoEDMV1Request] rejectedoffertopurchaseImportIntoEDMV1Request (required):
-  Future<RejectedoffertopurchaseImportIntoEDMV1Response?> rejectedoffertopurchaseImportIntoEDMV1(int pkiRejectedoffertopurchaseID, RejectedoffertopurchaseImportIntoEDMV1Request rejectedoffertopurchaseImportIntoEDMV1Request,) async {
-    final response = await rejectedoffertopurchaseImportIntoEDMV1WithHttpInfo(pkiRejectedoffertopurchaseID, rejectedoffertopurchaseImportIntoEDMV1Request,);
+  Future<RejectedoffertopurchaseImportIntoEDMV1Response?> rejectedoffertopurchaseImportIntoEDMV1(int pkiRejectedoffertopurchaseID, RejectedoffertopurchaseImportIntoEDMV1Request rejectedoffertopurchaseImportIntoEDMV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await rejectedoffertopurchaseImportIntoEDMV1WithHttpInfo(pkiRejectedoffertopurchaseID, rejectedoffertopurchaseImportIntoEDMV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

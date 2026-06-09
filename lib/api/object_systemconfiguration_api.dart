@@ -28,7 +28,7 @@ class ObjectSystemconfigurationApi {
   ///   The unique ID of the Systemconfiguration
   ///
   /// * [SystemconfigurationEditObjectV2Request] systemconfigurationEditObjectV2Request (required):
-  Future<Response> systemconfigurationEditObjectV2WithHttpInfo(int pkiSystemconfigurationID, SystemconfigurationEditObjectV2Request systemconfigurationEditObjectV2Request,) async {
+  Future<Response> systemconfigurationEditObjectV2WithHttpInfo(int pkiSystemconfigurationID, SystemconfigurationEditObjectV2Request systemconfigurationEditObjectV2Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/systemconfiguration/{pkiSystemconfigurationID}'
       .replaceAll('{pkiSystemconfigurationID}', pkiSystemconfigurationID.toString());
@@ -51,6 +51,7 @@ class ObjectSystemconfigurationApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -64,8 +65,8 @@ class ObjectSystemconfigurationApi {
   ///   The unique ID of the Systemconfiguration
   ///
   /// * [SystemconfigurationEditObjectV2Request] systemconfigurationEditObjectV2Request (required):
-  Future<SystemconfigurationEditObjectV2Response?> systemconfigurationEditObjectV2(int pkiSystemconfigurationID, SystemconfigurationEditObjectV2Request systemconfigurationEditObjectV2Request,) async {
-    final response = await systemconfigurationEditObjectV2WithHttpInfo(pkiSystemconfigurationID, systemconfigurationEditObjectV2Request,);
+  Future<SystemconfigurationEditObjectV2Response?> systemconfigurationEditObjectV2(int pkiSystemconfigurationID, SystemconfigurationEditObjectV2Request systemconfigurationEditObjectV2Request, { Future<void>? abortTrigger, }) async {
+    final response = await systemconfigurationEditObjectV2WithHttpInfo(pkiSystemconfigurationID, systemconfigurationEditObjectV2Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -89,7 +90,7 @@ class ObjectSystemconfigurationApi {
   ///
   /// * [int] pkiSystemconfigurationID (required):
   ///   The unique ID of the Systemconfiguration
-  Future<Response> systemconfigurationGetObjectV2WithHttpInfo(int pkiSystemconfigurationID,) async {
+  Future<Response> systemconfigurationGetObjectV2WithHttpInfo(int pkiSystemconfigurationID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/systemconfiguration/{pkiSystemconfigurationID}'
       .replaceAll('{pkiSystemconfigurationID}', pkiSystemconfigurationID.toString());
@@ -112,6 +113,7 @@ class ObjectSystemconfigurationApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -123,8 +125,8 @@ class ObjectSystemconfigurationApi {
   ///
   /// * [int] pkiSystemconfigurationID (required):
   ///   The unique ID of the Systemconfiguration
-  Future<SystemconfigurationGetObjectV2Response?> systemconfigurationGetObjectV2(int pkiSystemconfigurationID,) async {
-    final response = await systemconfigurationGetObjectV2WithHttpInfo(pkiSystemconfigurationID,);
+  Future<SystemconfigurationGetObjectV2Response?> systemconfigurationGetObjectV2(int pkiSystemconfigurationID, { Future<void>? abortTrigger, }) async {
+    final response = await systemconfigurationGetObjectV2WithHttpInfo(pkiSystemconfigurationID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

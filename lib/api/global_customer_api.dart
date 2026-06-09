@@ -28,7 +28,7 @@ class GlobalCustomerApi {
   ///
   /// * [String] sInfrastructureproductCode:
   ///   The infrastructure product Code  If undefined, \"appcluster01\" is assumed
-  Future<Response> globalCustomerGetEndpointV1WithHttpInfo(String pksCustomerCode, { String? sInfrastructureproductCode, }) async {
+  Future<Response> globalCustomerGetEndpointV1WithHttpInfo(String pksCustomerCode, { String? sInfrastructureproductCode, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/customer/{pksCustomerCode}/endpoint'
       .replaceAll('{pksCustomerCode}', pksCustomerCode);
@@ -55,6 +55,7 @@ class GlobalCustomerApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -68,8 +69,8 @@ class GlobalCustomerApi {
   ///
   /// * [String] sInfrastructureproductCode:
   ///   The infrastructure product Code  If undefined, \"appcluster01\" is assumed
-  Future<GlobalCustomerGetEndpointV1Response?> globalCustomerGetEndpointV1(String pksCustomerCode, { String? sInfrastructureproductCode, }) async {
-    final response = await globalCustomerGetEndpointV1WithHttpInfo(pksCustomerCode,  sInfrastructureproductCode: sInfrastructureproductCode, );
+  Future<GlobalCustomerGetEndpointV1Response?> globalCustomerGetEndpointV1(String pksCustomerCode, { String? sInfrastructureproductCode, Future<void>? abortTrigger, }) async {
+    final response = await globalCustomerGetEndpointV1WithHttpInfo(pksCustomerCode, sInfrastructureproductCode: sInfrastructureproductCode, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

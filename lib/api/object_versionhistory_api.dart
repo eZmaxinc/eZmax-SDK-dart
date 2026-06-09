@@ -25,7 +25,7 @@ class ObjectVersionhistoryApi {
   /// Parameters:
   ///
   /// * [int] pkiVersionhistoryID (required):
-  Future<Response> versionhistoryGetObjectV2WithHttpInfo(int pkiVersionhistoryID,) async {
+  Future<Response> versionhistoryGetObjectV2WithHttpInfo(int pkiVersionhistoryID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/versionhistory/{pkiVersionhistoryID}'
       .replaceAll('{pkiVersionhistoryID}', pkiVersionhistoryID.toString());
@@ -48,6 +48,7 @@ class ObjectVersionhistoryApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -58,8 +59,8 @@ class ObjectVersionhistoryApi {
   /// Parameters:
   ///
   /// * [int] pkiVersionhistoryID (required):
-  Future<VersionhistoryGetObjectV2Response?> versionhistoryGetObjectV2(int pkiVersionhistoryID,) async {
-    final response = await versionhistoryGetObjectV2WithHttpInfo(pkiVersionhistoryID,);
+  Future<VersionhistoryGetObjectV2Response?> versionhistoryGetObjectV2(int pkiVersionhistoryID, { Future<void>? abortTrigger, }) async {
+    final response = await versionhistoryGetObjectV2WithHttpInfo(pkiVersionhistoryID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

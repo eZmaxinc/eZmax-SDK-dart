@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiApikeyID** | **int** | The unique ID of the Apikey | 
 **fkiUserID** | **int** | The unique ID of the User | 
+**fkiEzmaxpartnerproductstageID** | **int** | The unique ID of the Ezmaxpartnerproductstage | [optional] 
 **objApikeyDescription** | [**MultilingualApikeyDescription**](MultilingualApikeyDescription.md) |  | 
 **objContactName** | [**CustomContactNameResponse**](CustomContactNameResponse.md) |  | 
 **sApikeyApikey** | **String** | The Apikey for the API key.  This will be hidden if we are not creating or regenerating the Apikey. | [optional] 

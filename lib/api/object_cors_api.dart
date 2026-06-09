@@ -25,7 +25,7 @@ class ObjectCorsApi {
   /// Parameters:
   ///
   /// * [CorsCreateObjectV1Request] corsCreateObjectV1Request (required):
-  Future<Response> corsCreateObjectV1WithHttpInfo(CorsCreateObjectV1Request corsCreateObjectV1Request,) async {
+  Future<Response> corsCreateObjectV1WithHttpInfo(CorsCreateObjectV1Request corsCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/cors';
 
@@ -47,6 +47,7 @@ class ObjectCorsApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -57,8 +58,8 @@ class ObjectCorsApi {
   /// Parameters:
   ///
   /// * [CorsCreateObjectV1Request] corsCreateObjectV1Request (required):
-  Future<CorsCreateObjectV1Response?> corsCreateObjectV1(CorsCreateObjectV1Request corsCreateObjectV1Request,) async {
-    final response = await corsCreateObjectV1WithHttpInfo(corsCreateObjectV1Request,);
+  Future<CorsCreateObjectV1Response?> corsCreateObjectV1(CorsCreateObjectV1Request corsCreateObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await corsCreateObjectV1WithHttpInfo(corsCreateObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -82,7 +83,7 @@ class ObjectCorsApi {
   ///
   /// * [int] pkiCorsID (required):
   ///   The unique ID of the Cors
-  Future<Response> corsDeleteObjectV1WithHttpInfo(int pkiCorsID,) async {
+  Future<Response> corsDeleteObjectV1WithHttpInfo(int pkiCorsID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/cors/{pkiCorsID}'
       .replaceAll('{pkiCorsID}', pkiCorsID.toString());
@@ -105,6 +106,7 @@ class ObjectCorsApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -116,8 +118,8 @@ class ObjectCorsApi {
   ///
   /// * [int] pkiCorsID (required):
   ///   The unique ID of the Cors
-  Future<CorsDeleteObjectV1Response?> corsDeleteObjectV1(int pkiCorsID,) async {
-    final response = await corsDeleteObjectV1WithHttpInfo(pkiCorsID,);
+  Future<CorsDeleteObjectV1Response?> corsDeleteObjectV1(int pkiCorsID, { Future<void>? abortTrigger, }) async {
+    final response = await corsDeleteObjectV1WithHttpInfo(pkiCorsID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -143,7 +145,7 @@ class ObjectCorsApi {
   ///   The unique ID of the Cors
   ///
   /// * [CorsEditObjectV1Request] corsEditObjectV1Request (required):
-  Future<Response> corsEditObjectV1WithHttpInfo(int pkiCorsID, CorsEditObjectV1Request corsEditObjectV1Request,) async {
+  Future<Response> corsEditObjectV1WithHttpInfo(int pkiCorsID, CorsEditObjectV1Request corsEditObjectV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/cors/{pkiCorsID}'
       .replaceAll('{pkiCorsID}', pkiCorsID.toString());
@@ -166,6 +168,7 @@ class ObjectCorsApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -179,8 +182,8 @@ class ObjectCorsApi {
   ///   The unique ID of the Cors
   ///
   /// * [CorsEditObjectV1Request] corsEditObjectV1Request (required):
-  Future<CorsEditObjectV1Response?> corsEditObjectV1(int pkiCorsID, CorsEditObjectV1Request corsEditObjectV1Request,) async {
-    final response = await corsEditObjectV1WithHttpInfo(pkiCorsID, corsEditObjectV1Request,);
+  Future<CorsEditObjectV1Response?> corsEditObjectV1(int pkiCorsID, CorsEditObjectV1Request corsEditObjectV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await corsEditObjectV1WithHttpInfo(pkiCorsID, corsEditObjectV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -204,7 +207,7 @@ class ObjectCorsApi {
   ///
   /// * [int] pkiCorsID (required):
   ///   The unique ID of the Cors
-  Future<Response> corsGetObjectV2WithHttpInfo(int pkiCorsID,) async {
+  Future<Response> corsGetObjectV2WithHttpInfo(int pkiCorsID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/cors/{pkiCorsID}'
       .replaceAll('{pkiCorsID}', pkiCorsID.toString());
@@ -227,6 +230,7 @@ class ObjectCorsApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -238,8 +242,8 @@ class ObjectCorsApi {
   ///
   /// * [int] pkiCorsID (required):
   ///   The unique ID of the Cors
-  Future<CorsGetObjectV2Response?> corsGetObjectV2(int pkiCorsID,) async {
-    final response = await corsGetObjectV2WithHttpInfo(pkiCorsID,);
+  Future<CorsGetObjectV2Response?> corsGetObjectV2(int pkiCorsID, { Future<void>? abortTrigger, }) async {
+    final response = await corsGetObjectV2WithHttpInfo(pkiCorsID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

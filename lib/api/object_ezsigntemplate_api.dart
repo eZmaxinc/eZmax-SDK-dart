@@ -27,7 +27,7 @@ class ObjectEzsigntemplateApi {
   /// * [int] pkiEzsigntemplateID (required):
   ///
   /// * [EzsigntemplateCopyV1Request] ezsigntemplateCopyV1Request (required):
-  Future<Response> ezsigntemplateCopyV1WithHttpInfo(int pkiEzsigntemplateID, EzsigntemplateCopyV1Request ezsigntemplateCopyV1Request,) async {
+  Future<Response> ezsigntemplateCopyV1WithHttpInfo(int pkiEzsigntemplateID, EzsigntemplateCopyV1Request ezsigntemplateCopyV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsigntemplate/{pkiEzsigntemplateID}/copy'
       .replaceAll('{pkiEzsigntemplateID}', pkiEzsigntemplateID.toString());
@@ -50,6 +50,7 @@ class ObjectEzsigntemplateApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -62,8 +63,8 @@ class ObjectEzsigntemplateApi {
   /// * [int] pkiEzsigntemplateID (required):
   ///
   /// * [EzsigntemplateCopyV1Request] ezsigntemplateCopyV1Request (required):
-  Future<EzsigntemplateCopyV1Response?> ezsigntemplateCopyV1(int pkiEzsigntemplateID, EzsigntemplateCopyV1Request ezsigntemplateCopyV1Request,) async {
-    final response = await ezsigntemplateCopyV1WithHttpInfo(pkiEzsigntemplateID, ezsigntemplateCopyV1Request,);
+  Future<EzsigntemplateCopyV1Response?> ezsigntemplateCopyV1(int pkiEzsigntemplateID, EzsigntemplateCopyV1Request ezsigntemplateCopyV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplateCopyV1WithHttpInfo(pkiEzsigntemplateID, ezsigntemplateCopyV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -86,7 +87,7 @@ class ObjectEzsigntemplateApi {
   /// Parameters:
   ///
   /// * [EzsigntemplateCreateObjectV3Request] ezsigntemplateCreateObjectV3Request (required):
-  Future<Response> ezsigntemplateCreateObjectV3WithHttpInfo(EzsigntemplateCreateObjectV3Request ezsigntemplateCreateObjectV3Request,) async {
+  Future<Response> ezsigntemplateCreateObjectV3WithHttpInfo(EzsigntemplateCreateObjectV3Request ezsigntemplateCreateObjectV3Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/3/object/ezsigntemplate';
 
@@ -108,6 +109,7 @@ class ObjectEzsigntemplateApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -118,8 +120,8 @@ class ObjectEzsigntemplateApi {
   /// Parameters:
   ///
   /// * [EzsigntemplateCreateObjectV3Request] ezsigntemplateCreateObjectV3Request (required):
-  Future<EzsigntemplateCreateObjectV3Response?> ezsigntemplateCreateObjectV3(EzsigntemplateCreateObjectV3Request ezsigntemplateCreateObjectV3Request,) async {
-    final response = await ezsigntemplateCreateObjectV3WithHttpInfo(ezsigntemplateCreateObjectV3Request,);
+  Future<EzsigntemplateCreateObjectV3Response?> ezsigntemplateCreateObjectV3(EzsigntemplateCreateObjectV3Request ezsigntemplateCreateObjectV3Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplateCreateObjectV3WithHttpInfo(ezsigntemplateCreateObjectV3Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -142,7 +144,7 @@ class ObjectEzsigntemplateApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigntemplateID (required):
-  Future<Response> ezsigntemplateDeleteObjectV1WithHttpInfo(int pkiEzsigntemplateID,) async {
+  Future<Response> ezsigntemplateDeleteObjectV1WithHttpInfo(int pkiEzsigntemplateID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsigntemplate/{pkiEzsigntemplateID}'
       .replaceAll('{pkiEzsigntemplateID}', pkiEzsigntemplateID.toString());
@@ -165,6 +167,7 @@ class ObjectEzsigntemplateApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -175,8 +178,8 @@ class ObjectEzsigntemplateApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigntemplateID (required):
-  Future<EzsigntemplateDeleteObjectV1Response?> ezsigntemplateDeleteObjectV1(int pkiEzsigntemplateID,) async {
-    final response = await ezsigntemplateDeleteObjectV1WithHttpInfo(pkiEzsigntemplateID,);
+  Future<EzsigntemplateDeleteObjectV1Response?> ezsigntemplateDeleteObjectV1(int pkiEzsigntemplateID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplateDeleteObjectV1WithHttpInfo(pkiEzsigntemplateID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -201,7 +204,7 @@ class ObjectEzsigntemplateApi {
   /// * [int] pkiEzsigntemplateID (required):
   ///
   /// * [EzsigntemplateEditObjectV3Request] ezsigntemplateEditObjectV3Request (required):
-  Future<Response> ezsigntemplateEditObjectV3WithHttpInfo(int pkiEzsigntemplateID, EzsigntemplateEditObjectV3Request ezsigntemplateEditObjectV3Request,) async {
+  Future<Response> ezsigntemplateEditObjectV3WithHttpInfo(int pkiEzsigntemplateID, EzsigntemplateEditObjectV3Request ezsigntemplateEditObjectV3Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/3/object/ezsigntemplate/{pkiEzsigntemplateID}'
       .replaceAll('{pkiEzsigntemplateID}', pkiEzsigntemplateID.toString());
@@ -224,6 +227,7 @@ class ObjectEzsigntemplateApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -236,8 +240,8 @@ class ObjectEzsigntemplateApi {
   /// * [int] pkiEzsigntemplateID (required):
   ///
   /// * [EzsigntemplateEditObjectV3Request] ezsigntemplateEditObjectV3Request (required):
-  Future<EzsigntemplateEditObjectV3Response?> ezsigntemplateEditObjectV3(int pkiEzsigntemplateID, EzsigntemplateEditObjectV3Request ezsigntemplateEditObjectV3Request,) async {
-    final response = await ezsigntemplateEditObjectV3WithHttpInfo(pkiEzsigntemplateID, ezsigntemplateEditObjectV3Request,);
+  Future<EzsigntemplateEditObjectV3Response?> ezsigntemplateEditObjectV3(int pkiEzsigntemplateID, EzsigntemplateEditObjectV3Request ezsigntemplateEditObjectV3Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplateEditObjectV3WithHttpInfo(pkiEzsigntemplateID, ezsigntemplateEditObjectV3Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -272,7 +276,7 @@ class ObjectEzsigntemplateApi {
   ///
   /// * [int] fkiEzsignfoldertypeID:
   ///   The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic
-  Future<Response> ezsigntemplateGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, int? fkiEzsignfoldertypeID, }) async {
+  Future<Response> ezsigntemplateGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, int? fkiEzsignfoldertypeID, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/ezsigntemplate/getAutocomplete/{sSelector}'
       .replaceAll('{sSelector}', sSelector);
@@ -309,6 +313,7 @@ class ObjectEzsigntemplateApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -331,8 +336,8 @@ class ObjectEzsigntemplateApi {
   ///
   /// * [int] fkiEzsignfoldertypeID:
   ///   The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic
-  Future<EzsigntemplateGetAutocompleteV2Response?> ezsigntemplateGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, int? fkiEzsignfoldertypeID, }) async {
-    final response = await ezsigntemplateGetAutocompleteV2WithHttpInfo(sSelector,  eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, fkiEzsignfoldertypeID: fkiEzsignfoldertypeID, );
+  Future<EzsigntemplateGetAutocompleteV2Response?> ezsigntemplateGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, int? fkiEzsignfoldertypeID, Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplateGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, fkiEzsignfoldertypeID: fkiEzsignfoldertypeID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -364,7 +369,7 @@ class ObjectEzsigntemplateApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<Response> ezsigntemplateGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
+  Future<Response> ezsigntemplateGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/object/ezsigntemplate/getList';
 
@@ -403,6 +408,7 @@ class ObjectEzsigntemplateApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -422,8 +428,8 @@ class ObjectEzsigntemplateApi {
   /// * [HeaderAcceptLanguage] acceptLanguage:
   ///
   /// * [String] sFilter:
-  Future<EzsigntemplateGetListV1Response?> ezsigntemplateGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, }) async {
-    final response = await ezsigntemplateGetListV1WithHttpInfo( eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, );
+  Future<EzsigntemplateGetListV1Response?> ezsigntemplateGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplateGetListV1WithHttpInfo(eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -446,7 +452,7 @@ class ObjectEzsigntemplateApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigntemplateID (required):
-  Future<Response> ezsigntemplateGetObjectV3WithHttpInfo(int pkiEzsigntemplateID,) async {
+  Future<Response> ezsigntemplateGetObjectV3WithHttpInfo(int pkiEzsigntemplateID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/3/object/ezsigntemplate/{pkiEzsigntemplateID}'
       .replaceAll('{pkiEzsigntemplateID}', pkiEzsigntemplateID.toString());
@@ -469,6 +475,7 @@ class ObjectEzsigntemplateApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -479,8 +486,8 @@ class ObjectEzsigntemplateApi {
   /// Parameters:
   ///
   /// * [int] pkiEzsigntemplateID (required):
-  Future<EzsigntemplateGetObjectV3Response?> ezsigntemplateGetObjectV3(int pkiEzsigntemplateID,) async {
-    final response = await ezsigntemplateGetObjectV3WithHttpInfo(pkiEzsigntemplateID,);
+  Future<EzsigntemplateGetObjectV3Response?> ezsigntemplateGetObjectV3(int pkiEzsigntemplateID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplateGetObjectV3WithHttpInfo(pkiEzsigntemplateID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

@@ -58,7 +58,7 @@ class ObjectInscriptionchecklistApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<Response> inscriptionchecklistGetAutocompleteV3WithHttpInfo(String sSelector, { String? fkiBuyercontractID, String? fkiInscriptionID, String? fkiInscriptionnotauthenticatedID, String? fkiInscriptiontempID, String? fkiAgentID, String? fkiBrokerID, String? fkiOtherincomeID, String? fkiRejectedoffertopurchaseID, String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
+  Future<Response> inscriptionchecklistGetAutocompleteV3WithHttpInfo(String sSelector, { String? fkiBuyercontractID, String? fkiInscriptionID, String? fkiInscriptionnotauthenticatedID, String? fkiInscriptiontempID, String? fkiAgentID, String? fkiBrokerID, String? fkiOtherincomeID, String? fkiRejectedoffertopurchaseID, String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/3/object/inscriptionchecklist/getAutocomplete/{sSelector}'
       .replaceAll('{sSelector}', sSelector);
@@ -116,6 +116,7 @@ class ObjectInscriptionchecklistApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -159,8 +160,8 @@ class ObjectInscriptionchecklistApi {
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<InscriptionchecklistGetAutocompleteV3Response?> inscriptionchecklistGetAutocompleteV3(String sSelector, { String? fkiBuyercontractID, String? fkiInscriptionID, String? fkiInscriptionnotauthenticatedID, String? fkiInscriptiontempID, String? fkiAgentID, String? fkiBrokerID, String? fkiOtherincomeID, String? fkiRejectedoffertopurchaseID, String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, }) async {
-    final response = await inscriptionchecklistGetAutocompleteV3WithHttpInfo(sSelector,  fkiBuyercontractID: fkiBuyercontractID, fkiInscriptionID: fkiInscriptionID, fkiInscriptionnotauthenticatedID: fkiInscriptionnotauthenticatedID, fkiInscriptiontempID: fkiInscriptiontempID, fkiAgentID: fkiAgentID, fkiBrokerID: fkiBrokerID, fkiOtherincomeID: fkiOtherincomeID, fkiRejectedoffertopurchaseID: fkiRejectedoffertopurchaseID, eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, );
+  Future<InscriptionchecklistGetAutocompleteV3Response?> inscriptionchecklistGetAutocompleteV3(String sSelector, { String? fkiBuyercontractID, String? fkiInscriptionID, String? fkiInscriptionnotauthenticatedID, String? fkiInscriptiontempID, String? fkiAgentID, String? fkiBrokerID, String? fkiOtherincomeID, String? fkiRejectedoffertopurchaseID, String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
+    final response = await inscriptionchecklistGetAutocompleteV3WithHttpInfo(sSelector, fkiBuyercontractID: fkiBuyercontractID, fkiInscriptionID: fkiInscriptionID, fkiInscriptionnotauthenticatedID: fkiInscriptionnotauthenticatedID, fkiInscriptiontempID: fkiInscriptiontempID, fkiAgentID: fkiAgentID, fkiBrokerID: fkiBrokerID, fkiOtherincomeID: fkiOtherincomeID, fkiRejectedoffertopurchaseID: fkiRejectedoffertopurchaseID, eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

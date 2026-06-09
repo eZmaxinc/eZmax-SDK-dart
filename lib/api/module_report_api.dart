@@ -25,7 +25,7 @@ class ModuleReportApi {
   /// Parameters:
   ///
   /// * [String] sReportgroupCacheID (required):
-  Future<Response> reportGetReportFromCacheV1WithHttpInfo(String sReportgroupCacheID,) async {
+  Future<Response> reportGetReportFromCacheV1WithHttpInfo(String sReportgroupCacheID, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/module/report/getReportFromCache/{sReportgroupCacheID}'
       .replaceAll('{sReportgroupCacheID}', sReportgroupCacheID);
@@ -48,6 +48,7 @@ class ModuleReportApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -58,8 +59,8 @@ class ModuleReportApi {
   /// Parameters:
   ///
   /// * [String] sReportgroupCacheID (required):
-  Future<CommonGetReportV1Response?> reportGetReportFromCacheV1(String sReportgroupCacheID,) async {
-    final response = await reportGetReportFromCacheV1WithHttpInfo(sReportgroupCacheID,);
+  Future<CommonGetReportV1Response?> reportGetReportFromCacheV1(String sReportgroupCacheID, { Future<void>? abortTrigger, }) async {
+    final response = await reportGetReportFromCacheV1WithHttpInfo(sReportgroupCacheID, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
