@@ -16,10 +16,13 @@ class InscriptionnotauthenticatedListElement {
     required this.pkiInscriptionID,
     this.pkiInscriptionnotauthenticatedID,
     required this.fkiInscriptiontypeID,
+    this.fkiBuyercontractID,
+    this.sBuyercontractContract,
     required this.sInscriptiontypeNameX,
     required this.eInscriptionStep,
     required this.sInscriptionCivicend,
     this.sInscriptionMLS,
+    this.sInscriptionContract,
     required this.dInscriptionSaleprice,
     required this.dInscriptionRentprice,
     this.dtInscriptionDate,
@@ -67,6 +70,27 @@ class InscriptionnotauthenticatedListElement {
   /// Maximum value: 255
   int fkiInscriptiontypeID;
 
+  /// The unique ID of the Buyercontract
+  ///
+  /// Minimum value: 1
+  /// Maximum value: 65535
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiBuyercontractID;
+
+  /// The number of the Buyercontract
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sBuyercontractContract;
+
   /// The name of the Inscriptiontype in the language of the requester
   String sInscriptiontypeNameX;
 
@@ -83,6 +107,15 @@ class InscriptionnotauthenticatedListElement {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   String? sInscriptionMLS;
+
+  /// The sale contract number
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sInscriptionContract;
 
   /// The saleprice of the Inscription
   String dInscriptionSaleprice;
@@ -270,10 +303,13 @@ class InscriptionnotauthenticatedListElement {
     other.pkiInscriptionID == pkiInscriptionID &&
     other.pkiInscriptionnotauthenticatedID == pkiInscriptionnotauthenticatedID &&
     other.fkiInscriptiontypeID == fkiInscriptiontypeID &&
+    other.fkiBuyercontractID == fkiBuyercontractID &&
+    other.sBuyercontractContract == sBuyercontractContract &&
     other.sInscriptiontypeNameX == sInscriptiontypeNameX &&
     other.eInscriptionStep == eInscriptionStep &&
     other.sInscriptionCivicend == sInscriptionCivicend &&
     other.sInscriptionMLS == sInscriptionMLS &&
+    other.sInscriptionContract == sInscriptionContract &&
     other.dInscriptionSaleprice == dInscriptionSaleprice &&
     other.dInscriptionRentprice == dInscriptionRentprice &&
     other.dtInscriptionDate == dtInscriptionDate &&
@@ -304,10 +340,13 @@ class InscriptionnotauthenticatedListElement {
     (pkiInscriptionID.hashCode) +
     (pkiInscriptionnotauthenticatedID == null ? 0 : pkiInscriptionnotauthenticatedID!.hashCode) +
     (fkiInscriptiontypeID.hashCode) +
+    (fkiBuyercontractID == null ? 0 : fkiBuyercontractID!.hashCode) +
+    (sBuyercontractContract == null ? 0 : sBuyercontractContract!.hashCode) +
     (sInscriptiontypeNameX.hashCode) +
     (eInscriptionStep.hashCode) +
     (sInscriptionCivicend.hashCode) +
     (sInscriptionMLS == null ? 0 : sInscriptionMLS!.hashCode) +
+    (sInscriptionContract == null ? 0 : sInscriptionContract!.hashCode) +
     (dInscriptionSaleprice.hashCode) +
     (dInscriptionRentprice.hashCode) +
     (dtInscriptionDate == null ? 0 : dtInscriptionDate!.hashCode) +
@@ -333,7 +372,7 @@ class InscriptionnotauthenticatedListElement {
     (sInscriptionnotauthenticatedOffertopurchasenumber.hashCode);
 
   @override
-  String toString() => 'InscriptionnotauthenticatedListElement[pkiInscriptionID=$pkiInscriptionID, pkiInscriptionnotauthenticatedID=$pkiInscriptionnotauthenticatedID, fkiInscriptiontypeID=$fkiInscriptiontypeID, sInscriptiontypeNameX=$sInscriptiontypeNameX, eInscriptionStep=$eInscriptionStep, sInscriptionCivicend=$sInscriptionCivicend, sInscriptionMLS=$sInscriptionMLS, dInscriptionSaleprice=$dInscriptionSaleprice, dInscriptionRentprice=$dInscriptionRentprice, dtInscriptionDate=$dtInscriptionDate, dtInscriptionExpirationdate=$dtInscriptionExpirationdate, dtInscriptionNotarydate=$dtInscriptionNotarydate, bInscriptionInspection=$bInscriptionInspection, bInscriptionIsactive=$bInscriptionIsactive, bInscriptionArchived=$bInscriptionArchived, dtInscriptionnotauthenticatedNotaryscheduledate=$dtInscriptionnotauthenticatedNotaryscheduledate, dtInscriptionnotauthenticatedTransactiondate=$dtInscriptionnotauthenticatedTransactiondate, dtInscriptionnotauthenticatedTransactiondateReal=$dtInscriptionnotauthenticatedTransactiondateReal, bInscriptionnotauthenticatedConditional=$bInscriptionnotauthenticatedConditional, bInscriptionnotauthenticatedIsactive=$bInscriptionnotauthenticatedIsactive, sAddressCivic=$sAddressCivic, sAddressStreet=$sAddressStreet, sAddressSuite=$sAddressSuite, sAddressCity=$sAddressCity, sAddressZip=$sAddressZip, fkiProvinceID=$fkiProvinceID, sProvinceNameX=$sProvinceNameX, fkiCountryID=$fkiCountryID, sCountryNameX=$sCountryNameX, sInscriptionnotauthenticatedOffertopurchasenumber=$sInscriptionnotauthenticatedOffertopurchasenumber]';
+  String toString() => 'InscriptionnotauthenticatedListElement[pkiInscriptionID=$pkiInscriptionID, pkiInscriptionnotauthenticatedID=$pkiInscriptionnotauthenticatedID, fkiInscriptiontypeID=$fkiInscriptiontypeID, fkiBuyercontractID=$fkiBuyercontractID, sBuyercontractContract=$sBuyercontractContract, sInscriptiontypeNameX=$sInscriptiontypeNameX, eInscriptionStep=$eInscriptionStep, sInscriptionCivicend=$sInscriptionCivicend, sInscriptionMLS=$sInscriptionMLS, sInscriptionContract=$sInscriptionContract, dInscriptionSaleprice=$dInscriptionSaleprice, dInscriptionRentprice=$dInscriptionRentprice, dtInscriptionDate=$dtInscriptionDate, dtInscriptionExpirationdate=$dtInscriptionExpirationdate, dtInscriptionNotarydate=$dtInscriptionNotarydate, bInscriptionInspection=$bInscriptionInspection, bInscriptionIsactive=$bInscriptionIsactive, bInscriptionArchived=$bInscriptionArchived, dtInscriptionnotauthenticatedNotaryscheduledate=$dtInscriptionnotauthenticatedNotaryscheduledate, dtInscriptionnotauthenticatedTransactiondate=$dtInscriptionnotauthenticatedTransactiondate, dtInscriptionnotauthenticatedTransactiondateReal=$dtInscriptionnotauthenticatedTransactiondateReal, bInscriptionnotauthenticatedConditional=$bInscriptionnotauthenticatedConditional, bInscriptionnotauthenticatedIsactive=$bInscriptionnotauthenticatedIsactive, sAddressCivic=$sAddressCivic, sAddressStreet=$sAddressStreet, sAddressSuite=$sAddressSuite, sAddressCity=$sAddressCity, sAddressZip=$sAddressZip, fkiProvinceID=$fkiProvinceID, sProvinceNameX=$sProvinceNameX, fkiCountryID=$fkiCountryID, sCountryNameX=$sCountryNameX, sInscriptionnotauthenticatedOffertopurchasenumber=$sInscriptionnotauthenticatedOffertopurchasenumber]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -344,6 +383,16 @@ class InscriptionnotauthenticatedListElement {
       json[r'pkiInscriptionnotauthenticatedID'] = null;
     }
       json[r'fkiInscriptiontypeID'] = this.fkiInscriptiontypeID;
+    if (this.fkiBuyercontractID != null) {
+      json[r'fkiBuyercontractID'] = this.fkiBuyercontractID;
+    } else {
+      json[r'fkiBuyercontractID'] = null;
+    }
+    if (this.sBuyercontractContract != null) {
+      json[r'sBuyercontractContract'] = this.sBuyercontractContract;
+    } else {
+      json[r'sBuyercontractContract'] = null;
+    }
       json[r'sInscriptiontypeNameX'] = this.sInscriptiontypeNameX;
       json[r'eInscriptionStep'] = this.eInscriptionStep;
       json[r'sInscriptionCivicend'] = this.sInscriptionCivicend;
@@ -351,6 +400,11 @@ class InscriptionnotauthenticatedListElement {
       json[r'sInscriptionMLS'] = this.sInscriptionMLS;
     } else {
       json[r'sInscriptionMLS'] = null;
+    }
+    if (this.sInscriptionContract != null) {
+      json[r'sInscriptionContract'] = this.sInscriptionContract;
+    } else {
+      json[r'sInscriptionContract'] = null;
     }
       json[r'dInscriptionSaleprice'] = this.dInscriptionSaleprice;
       json[r'dInscriptionRentprice'] = this.dInscriptionRentprice;
@@ -488,10 +542,13 @@ class InscriptionnotauthenticatedListElement {
         pkiInscriptionID: mapValueOfType<int>(json, r'pkiInscriptionID')!,
         pkiInscriptionnotauthenticatedID: mapValueOfType<int>(json, r'pkiInscriptionnotauthenticatedID'),
         fkiInscriptiontypeID: mapValueOfType<int>(json, r'fkiInscriptiontypeID')!,
+        fkiBuyercontractID: mapValueOfType<int>(json, r'fkiBuyercontractID'),
+        sBuyercontractContract: mapValueOfType<String>(json, r'sBuyercontractContract'),
         sInscriptiontypeNameX: mapValueOfType<String>(json, r'sInscriptiontypeNameX')!,
         eInscriptionStep: FieldEInscriptionStep.fromJson(json[r'eInscriptionStep'])!,
         sInscriptionCivicend: mapValueOfType<String>(json, r'sInscriptionCivicend')!,
         sInscriptionMLS: mapValueOfType<String>(json, r'sInscriptionMLS'),
+        sInscriptionContract: mapValueOfType<String>(json, r'sInscriptionContract'),
         dInscriptionSaleprice: mapValueOfType<String>(json, r'dInscriptionSaleprice')!,
         dInscriptionRentprice: mapValueOfType<String>(json, r'dInscriptionRentprice')!,
         dtInscriptionDate: mapValueOfType<String>(json, r'dtInscriptionDate'),

@@ -1299,6 +1299,84 @@ class ObjectEzsigndocumentApi {
     return null;
   }
 
+  /// Retrieve actionable elements of a user for the Ezsigndocument
+  ///
+  /// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by a user at the current step in the process
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  ///
+  /// * [String] eSignerType (required):
+  ///
+  /// * [int] fkiEzsignsignerID:
+  ///
+  /// * [int] fkiUserID:
+  Future<Response> ezsigndocumentGetActionableElementsForSignerV1WithHttpInfo(int pkiEzsigndocumentID, String eSignerType, { int? fkiEzsignsignerID, int? fkiUserID, Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElementsForSigner'
+      .replaceAll('{pkiEzsigndocumentID}', pkiEzsigndocumentID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+      queryParams.addAll(_queryParams('', 'eSignerType', eSignerType));
+    if (fkiEzsignsignerID != null) {
+      queryParams.addAll(_queryParams('', 'fkiEzsignsignerID', fkiEzsignsignerID));
+    }
+    if (fkiUserID != null) {
+      queryParams.addAll(_queryParams('', 'fkiUserID', fkiUserID));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Retrieve actionable elements of a user for the Ezsigndocument
+  ///
+  /// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by a user at the current step in the process
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigndocumentID (required):
+  ///
+  /// * [String] eSignerType (required):
+  ///
+  /// * [int] fkiEzsignsignerID:
+  ///
+  /// * [int] fkiUserID:
+  Future<EzsigndocumentGetActionableElementsForSignerV1Response?> ezsigndocumentGetActionableElementsForSignerV1(int pkiEzsigndocumentID, String eSignerType, { int? fkiEzsignsignerID, int? fkiUserID, Future<void>? abortTrigger, }) async {
+    final response = await ezsigndocumentGetActionableElementsForSignerV1WithHttpInfo(pkiEzsigndocumentID, eSignerType, fkiEzsignsignerID: fkiEzsignsignerID, fkiUserID: fkiUserID, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigndocumentGetActionableElementsForSignerV1Response',) as EzsigndocumentGetActionableElementsForSignerV1Response;
+    
+    }
+    return null;
+  }
+
   /// Retrieve actionable elements for the Ezsigndocument
   ///
   /// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process.  Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3. 

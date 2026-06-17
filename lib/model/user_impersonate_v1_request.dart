@@ -13,14 +13,8 @@ part of openapi.api;
 class UserImpersonateV1Request {
   /// Returns a new [UserImpersonateV1Request] instance.
   UserImpersonateV1Request({
-    required this.fkiUserID,
     required this.iExpirationMinutes,
   });
-
-  /// The unique ID of the User
-  ///
-  /// Minimum value: 0
-  int fkiUserID;
 
   /// The number of minute before key is no longer active
   ///
@@ -30,21 +24,18 @@ class UserImpersonateV1Request {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is UserImpersonateV1Request &&
-    other.fkiUserID == fkiUserID &&
     other.iExpirationMinutes == iExpirationMinutes;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (fkiUserID.hashCode) +
     (iExpirationMinutes.hashCode);
 
   @override
-  String toString() => 'UserImpersonateV1Request[fkiUserID=$fkiUserID, iExpirationMinutes=$iExpirationMinutes]';
+  String toString() => 'UserImpersonateV1Request[iExpirationMinutes=$iExpirationMinutes]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'fkiUserID'] = this.fkiUserID;
       json[r'iExpirationMinutes'] = this.iExpirationMinutes;
     return json;
   }
@@ -60,15 +51,12 @@ class UserImpersonateV1Request {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        assert(json.containsKey(r'fkiUserID'), 'Required key "UserImpersonateV1Request[fkiUserID]" is missing from JSON.');
-        assert(json[r'fkiUserID'] != null, 'Required key "UserImpersonateV1Request[fkiUserID]" has a null value in JSON.');
         assert(json.containsKey(r'iExpirationMinutes'), 'Required key "UserImpersonateV1Request[iExpirationMinutes]" is missing from JSON.');
         assert(json[r'iExpirationMinutes'] != null, 'Required key "UserImpersonateV1Request[iExpirationMinutes]" has a null value in JSON.');
         return true;
       }());
 
       return UserImpersonateV1Request(
-        fkiUserID: mapValueOfType<int>(json, r'fkiUserID')!,
         iExpirationMinutes: mapValueOfType<int>(json, r'iExpirationMinutes')!,
       );
     }
@@ -117,7 +105,6 @@ class UserImpersonateV1Request {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'fkiUserID',
     'iExpirationMinutes',
   };
 }

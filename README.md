@@ -41,16 +41,19 @@ Please follow the [installation procedure](#installation--usage) and then run th
 ```dart
 import 'package:openapi/api.dart';
 
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
 
-final api_instance = GlobalCustomerApi();
-final pksCustomerCode = pksCustomerCode_example; // String | 
-final sInfrastructureproductCode = sInfrastructureproductCode_example; // String | The infrastructure product Code  If undefined, \"appcluster01\" is assumed
+final api_instance = DocumentationEzmaxpartnerApi();
+final documentationSubscribeV1Request = DocumentationSubscribeV1Request(); // DocumentationSubscribeV1Request | 
 
 try {
-    final result = api_instance.globalCustomerGetEndpointV1(pksCustomerCode, sInfrastructureproductCode);
+    final result = api_instance.documentationSubscribeV1(documentationSubscribeV1Request);
     print(result);
 } catch (e) {
-    print('Exception when calling GlobalCustomerApi->globalCustomerGetEndpointV1: $e\n');
+    print('Exception when calling DocumentationEzmaxpartnerApi->documentationSubscribeV1: $e\n');
 }
 
 ```
@@ -61,6 +64,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*DocumentationEzmaxpartnerApi* | [**documentationSubscribeV1**](doc//DocumentationEzmaxpartnerApi.md#documentationsubscribev1) | **POST** /1/documentation/subscribe | Subscribe to an Ezmaxparnerproductstage
 *GlobalCustomerApi* | [**globalCustomerGetEndpointV1**](doc//GlobalCustomerApi.md#globalcustomergetendpointv1) | **GET** /1/customer/{pksCustomerCode}/endpoint | Get customer endpoint
 *GlobalEzmaxclientApi* | [**globalEzmaxclientVersionV1**](doc//GlobalEzmaxclientApi.md#globalezmaxclientversionv1) | **GET** /1/ezmaxclient/{pksEzmaxclientOs}/version | Retrieve the latest version of the Ezmaxclient
 *GlobalEzmaxcustomerApi* | [**globalEzmaxcustomerGetConfigurationV1**](doc//GlobalEzmaxcustomerApi.md#globalezmaxcustomergetconfigurationv1) | **GET** /1/ezmaxcustomer/{pksEzmaxcustomerCode}/getConfiguration | Get ezmaxcustomer configuration
@@ -239,6 +243,7 @@ Class | Method | HTTP request | Description
 *ObjectEzsigndocumentApi* | [**ezsigndocumentEndPrematurelyV1**](doc//ObjectEzsigndocumentApi.md#ezsigndocumentendprematurelyv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/endPrematurely | End prematurely
 *ObjectEzsigndocumentApi* | [**ezsigndocumentExtractTextV1**](doc//ObjectEzsigndocumentApi.md#ezsigndocumentextracttextv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/extractText | Extract text from Ezsigndocument area
 *ObjectEzsigndocumentApi* | [**ezsigndocumentFlattenV1**](doc//ObjectEzsigndocumentApi.md#ezsigndocumentflattenv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/flatten | Flatten
+*ObjectEzsigndocumentApi* | [**ezsigndocumentGetActionableElementsForSignerV1**](doc//ObjectEzsigndocumentApi.md#ezsigndocumentgetactionableelementsforsignerv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElementsForSigner | Retrieve actionable elements of a user for the Ezsigndocument
 *ObjectEzsigndocumentApi* | [**ezsigndocumentGetActionableElementsV1**](doc//ObjectEzsigndocumentApi.md#ezsigndocumentgetactionableelementsv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements | Retrieve actionable elements for the Ezsigndocument
 *ObjectEzsigndocumentApi* | [**ezsigndocumentGetActionableElementsV2**](doc//ObjectEzsigndocumentApi.md#ezsigndocumentgetactionableelementsv2) | **GET** /2/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements | Retrieve actionable elements for the Ezsigndocument
 *ObjectEzsigndocumentApi* | [**ezsigndocumentGetActionableElementsV3**](doc//ObjectEzsigndocumentApi.md#ezsigndocumentgetactionableelementsv3) | **GET** /3/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements | Retrieve actionable elements for the Ezsigndocument
@@ -274,6 +279,7 @@ Class | Method | HTTP request | Description
 *ObjectEzsignfolderApi* | [**ezsignfolderDuplicateV1**](doc//ObjectEzsignfolderApi.md#ezsignfolderduplicatev1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/duplicate | Duplicate the Ezsignfolder
 *ObjectEzsignfolderApi* | [**ezsignfolderEditObjectV3**](doc//ObjectEzsignfolderApi.md#ezsignfoldereditobjectv3) | **PUT** /3/object/ezsignfolder/{pkiEzsignfolderID} | Edit an existing Ezsignfolder
 *ObjectEzsignfolderApi* | [**ezsignfolderEndPrematurelyV1**](doc//ObjectEzsignfolderApi.md#ezsignfolderendprematurelyv1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/endPrematurely | End prematurely
+*ObjectEzsignfolderApi* | [**ezsignfolderGetActionableElementsForSignerV1**](doc//ObjectEzsignfolderApi.md#ezsignfoldergetactionableelementsforsignerv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElementsForSigner | Retrieve actionable elements of a user for the Ezsignfolder
 *ObjectEzsignfolderApi* | [**ezsignfolderGetActionableElementsV1**](doc//ObjectEzsignfolderApi.md#ezsignfoldergetactionableelementsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements | Retrieve actionable elements for the Ezsignfolder
 *ObjectEzsignfolderApi* | [**ezsignfolderGetActionableElementsV2**](doc//ObjectEzsignfolderApi.md#ezsignfoldergetactionableelementsv2) | **GET** /2/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements | Retrieve actionable elements for the Ezsignfolder
 *ObjectEzsignfolderApi* | [**ezsignfolderGetActionableElementsV3**](doc//ObjectEzsignfolderApi.md#ezsignfoldergetactionableelementsv3) | **GET** /3/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements | Retrieve actionable elements for the Ezsignfolder
@@ -948,6 +954,7 @@ Class | Method | HTTP request | Description
  - [CustomEzmaxinvoicingEzsigndocumentResponse](doc//CustomEzmaxinvoicingEzsigndocumentResponse.md)
  - [CustomEzmaxinvoicingEzsignfolderResponse](doc//CustomEzmaxinvoicingEzsignfolderResponse.md)
  - [CustomEzmaxpartnerListElement](doc//CustomEzmaxpartnerListElement.md)
+ - [CustomEzmaxpartnerproductSubscribe](doc//CustomEzmaxpartnerproductSubscribe.md)
  - [CustomEzmaxpricingResponse](doc//CustomEzmaxpricingResponse.md)
  - [CustomEzsigndocumentDuplicateRequest](doc//CustomEzsigndocumentDuplicateRequest.md)
  - [CustomEzsigndocumentEzsignsignaturesAutomaticResponse](doc//CustomEzsigndocumentEzsignsignaturesAutomaticResponse.md)
@@ -1040,6 +1047,8 @@ Class | Method | HTTP request | Description
  - [DiscussionmessageRequestPatch](doc//DiscussionmessageRequestPatch.md)
  - [DiscussionmessageResponse](doc//DiscussionmessageResponse.md)
  - [DiscussionmessageResponseCompound](doc//DiscussionmessageResponseCompound.md)
+ - [DocumentationSubscribeV1Request](doc//DocumentationSubscribeV1Request.md)
+ - [DocumentationSubscribeV1Response](doc//DocumentationSubscribeV1Response.md)
  - [DomainAutocompleteElementResponse](doc//DomainAutocompleteElementResponse.md)
  - [DomainCreateObjectV1Request](doc//DomainCreateObjectV1Request.md)
  - [DomainCreateObjectV1Response](doc//DomainCreateObjectV1Response.md)
@@ -1298,6 +1307,8 @@ Class | Method | HTTP request | Description
  - [EzsigndocumentExtractTextV1Response](doc//EzsigndocumentExtractTextV1Response.md)
  - [EzsigndocumentExtractTextV1ResponseMPayload](doc//EzsigndocumentExtractTextV1ResponseMPayload.md)
  - [EzsigndocumentFlattenV1Response](doc//EzsigndocumentFlattenV1Response.md)
+ - [EzsigndocumentGetActionableElementsForSignerV1Response](doc//EzsigndocumentGetActionableElementsForSignerV1Response.md)
+ - [EzsigndocumentGetActionableElementsForSignerV1ResponseMPayload](doc//EzsigndocumentGetActionableElementsForSignerV1ResponseMPayload.md)
  - [EzsigndocumentGetActionableElementsV1Response](doc//EzsigndocumentGetActionableElementsV1Response.md)
  - [EzsigndocumentGetActionableElementsV1ResponseMPayload](doc//EzsigndocumentGetActionableElementsV1ResponseMPayload.md)
  - [EzsigndocumentGetActionableElementsV2Response](doc//EzsigndocumentGetActionableElementsV2Response.md)
@@ -1382,6 +1393,8 @@ Class | Method | HTTP request | Description
  - [EzsignfolderEditObjectV3Request](doc//EzsignfolderEditObjectV3Request.md)
  - [EzsignfolderEditObjectV3Response](doc//EzsignfolderEditObjectV3Response.md)
  - [EzsignfolderEndPrematurelyV1Response](doc//EzsignfolderEndPrematurelyV1Response.md)
+ - [EzsignfolderGetActionableElementsForSignerV1Response](doc//EzsignfolderGetActionableElementsForSignerV1Response.md)
+ - [EzsignfolderGetActionableElementsForSignerV1ResponseMPayload](doc//EzsignfolderGetActionableElementsForSignerV1ResponseMPayload.md)
  - [EzsignfolderGetActionableElementsV1Response](doc//EzsignfolderGetActionableElementsV1Response.md)
  - [EzsignfolderGetActionableElementsV1ResponseMPayload](doc//EzsignfolderGetActionableElementsV1ResponseMPayload.md)
  - [EzsignfolderGetActionableElementsV2Response](doc//EzsignfolderGetActionableElementsV2Response.md)
@@ -2573,6 +2586,8 @@ Class | Method | HTTP request | Description
  - [WebhookDeleteObjectV1Response](doc//WebhookDeleteObjectV1Response.md)
  - [WebhookEditObjectV1Request](doc//WebhookEditObjectV1Request.md)
  - [WebhookEditObjectV1Response](doc//WebhookEditObjectV1Response.md)
+ - [WebhookEzmaxpartnerproductSubscribe](doc//WebhookEzmaxpartnerproductSubscribe.md)
+ - [WebhookEzmaxpartnerproductUnsubscribe](doc//WebhookEzmaxpartnerproductUnsubscribe.md)
  - [WebhookEzsignDocumentCompleted](doc//WebhookEzsignDocumentCompleted.md)
  - [WebhookEzsignDocumentFormCompleted](doc//WebhookEzsignDocumentFormCompleted.md)
  - [WebhookEzsignDocumentUnsent](doc//WebhookEzsignDocumentUnsent.md)

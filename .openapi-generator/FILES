@@ -326,6 +326,7 @@ doc/CustomEzmaxcustomeruserResponse.md
 doc/CustomEzmaxinvoicingEzsigndocumentResponse.md
 doc/CustomEzmaxinvoicingEzsignfolderResponse.md
 doc/CustomEzmaxpartnerListElement.md
+doc/CustomEzmaxpartnerproductSubscribe.md
 doc/CustomEzmaxpricingResponse.md
 doc/CustomEzsigndocumentDuplicateRequest.md
 doc/CustomEzsigndocumentEzsignsignaturesAutomaticResponse.md
@@ -418,6 +419,9 @@ doc/DiscussionmessageRequestCompound.md
 doc/DiscussionmessageRequestPatch.md
 doc/DiscussionmessageResponse.md
 doc/DiscussionmessageResponseCompound.md
+doc/DocumentationEzmaxpartnerApi.md
+doc/DocumentationSubscribeV1Request.md
+doc/DocumentationSubscribeV1Response.md
 doc/DomainAutocompleteElementResponse.md
 doc/DomainCreateObjectV1Request.md
 doc/DomainCreateObjectV1Response.md
@@ -676,6 +680,8 @@ doc/EzsigndocumentExtractTextV1Request.md
 doc/EzsigndocumentExtractTextV1Response.md
 doc/EzsigndocumentExtractTextV1ResponseMPayload.md
 doc/EzsigndocumentFlattenV1Response.md
+doc/EzsigndocumentGetActionableElementsForSignerV1Response.md
+doc/EzsigndocumentGetActionableElementsForSignerV1ResponseMPayload.md
 doc/EzsigndocumentGetActionableElementsV1Response.md
 doc/EzsigndocumentGetActionableElementsV1ResponseMPayload.md
 doc/EzsigndocumentGetActionableElementsV2Response.md
@@ -760,6 +766,8 @@ doc/EzsignfolderDuplicateV1ResponseMPayload.md
 doc/EzsignfolderEditObjectV3Request.md
 doc/EzsignfolderEditObjectV3Response.md
 doc/EzsignfolderEndPrematurelyV1Response.md
+doc/EzsignfolderGetActionableElementsForSignerV1Response.md
+doc/EzsignfolderGetActionableElementsForSignerV1ResponseMPayload.md
 doc/EzsignfolderGetActionableElementsV1Response.md
 doc/EzsignfolderGetActionableElementsV1ResponseMPayload.md
 doc/EzsignfolderGetActionableElementsV2Response.md
@@ -2090,6 +2098,8 @@ doc/WebhookCreateObjectV2ResponseMPayload.md
 doc/WebhookDeleteObjectV1Response.md
 doc/WebhookEditObjectV1Request.md
 doc/WebhookEditObjectV1Response.md
+doc/WebhookEzmaxpartnerproductSubscribe.md
+doc/WebhookEzmaxpartnerproductUnsubscribe.md
 doc/WebhookEzsignDocumentCompleted.md
 doc/WebhookEzsignDocumentFormCompleted.md
 doc/WebhookEzsignDocumentUnsent.md
@@ -2136,6 +2146,7 @@ doc/WebsocketResponseInformationV1.md
 doc/WebsocketResponseInformationV1MPayload.md
 git_push.sh
 lib/api.dart
+lib/api/documentation_ezmaxpartner_api.dart
 lib/api/global_customer_api.dart
 lib/api/global_ezmaxclient_api.dart
 lib/api/global_ezmaxcustomer_api.dart
@@ -2606,6 +2617,7 @@ lib/model/custom_ezmaxcustomeruser_response.dart
 lib/model/custom_ezmaxinvoicing_ezsigndocument_response.dart
 lib/model/custom_ezmaxinvoicing_ezsignfolder_response.dart
 lib/model/custom_ezmaxpartner_list_element.dart
+lib/model/custom_ezmaxpartnerproduct_subscribe.dart
 lib/model/custom_ezmaxpricing_response.dart
 lib/model/custom_ezsigndocument_duplicate_request.dart
 lib/model/custom_ezsigndocument_ezsignsignatures_automatic_response.dart
@@ -2698,6 +2710,8 @@ lib/model/discussionmessage_request_compound.dart
 lib/model/discussionmessage_request_patch.dart
 lib/model/discussionmessage_response.dart
 lib/model/discussionmessage_response_compound.dart
+lib/model/documentation_subscribe_v1_request.dart
+lib/model/documentation_subscribe_v1_response.dart
 lib/model/domain_autocomplete_element_response.dart
 lib/model/domain_create_object_v1_request.dart
 lib/model/domain_create_object_v1_response.dart
@@ -2956,6 +2970,8 @@ lib/model/ezsigndocument_extract_text_v1_request.dart
 lib/model/ezsigndocument_extract_text_v1_response.dart
 lib/model/ezsigndocument_extract_text_v1_response_m_payload.dart
 lib/model/ezsigndocument_flatten_v1_response.dart
+lib/model/ezsigndocument_get_actionable_elements_for_signer_v1_response.dart
+lib/model/ezsigndocument_get_actionable_elements_for_signer_v1_response_m_payload.dart
 lib/model/ezsigndocument_get_actionable_elements_v1_response.dart
 lib/model/ezsigndocument_get_actionable_elements_v1_response_m_payload.dart
 lib/model/ezsigndocument_get_actionable_elements_v2_response.dart
@@ -3040,6 +3056,8 @@ lib/model/ezsignfolder_duplicate_v1_response_m_payload.dart
 lib/model/ezsignfolder_edit_object_v3_request.dart
 lib/model/ezsignfolder_edit_object_v3_response.dart
 lib/model/ezsignfolder_end_prematurely_v1_response.dart
+lib/model/ezsignfolder_get_actionable_elements_for_signer_v1_response.dart
+lib/model/ezsignfolder_get_actionable_elements_for_signer_v1_response_m_payload.dart
 lib/model/ezsignfolder_get_actionable_elements_v1_response.dart
 lib/model/ezsignfolder_get_actionable_elements_v1_response_m_payload.dart
 lib/model/ezsignfolder_get_actionable_elements_v2_response.dart
@@ -4231,6 +4249,8 @@ lib/model/webhook_create_object_v2_response_m_payload.dart
 lib/model/webhook_delete_object_v1_response.dart
 lib/model/webhook_edit_object_v1_request.dart
 lib/model/webhook_edit_object_v1_response.dart
+lib/model/webhook_ezmaxpartnerproduct_subscribe.dart
+lib/model/webhook_ezmaxpartnerproduct_unsubscribe.dart
 lib/model/webhook_ezsign_document_completed.dart
 lib/model/webhook_ezsign_document_form_completed.dart
 lib/model/webhook_ezsign_document_unsent.dart

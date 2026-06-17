@@ -829,6 +829,8 @@ class ApiClient {
           return CustomEzmaxinvoicingEzsignfolderResponse.fromJson(value);
         case 'CustomEzmaxpartnerListElement':
           return CustomEzmaxpartnerListElement.fromJson(value);
+        case 'CustomEzmaxpartnerproductSubscribe':
+          return CustomEzmaxpartnerproductSubscribe.fromJson(value);
         case 'CustomEzmaxpricingResponse':
           return CustomEzmaxpricingResponse.fromJson(value);
         case 'CustomEzsigndocumentDuplicateRequest':
@@ -1013,6 +1015,10 @@ class ApiClient {
           return DiscussionmessageResponse.fromJson(value);
         case 'DiscussionmessageResponseCompound':
           return DiscussionmessageResponseCompound.fromJson(value);
+        case 'DocumentationSubscribeV1Request':
+          return DocumentationSubscribeV1Request.fromJson(value);
+        case 'DocumentationSubscribeV1Response':
+          return DocumentationSubscribeV1Response.fromJson(value);
         case 'DomainAutocompleteElementResponse':
           return DomainAutocompleteElementResponse.fromJson(value);
         case 'DomainCreateObjectV1Request':
@@ -1529,6 +1535,10 @@ class ApiClient {
           return EzsigndocumentExtractTextV1ResponseMPayload.fromJson(value);
         case 'EzsigndocumentFlattenV1Response':
           return EzsigndocumentFlattenV1Response.fromJson(value);
+        case 'EzsigndocumentGetActionableElementsForSignerV1Response':
+          return EzsigndocumentGetActionableElementsForSignerV1Response.fromJson(value);
+        case 'EzsigndocumentGetActionableElementsForSignerV1ResponseMPayload':
+          return EzsigndocumentGetActionableElementsForSignerV1ResponseMPayload.fromJson(value);
         case 'EzsigndocumentGetActionableElementsV1Response':
           return EzsigndocumentGetActionableElementsV1Response.fromJson(value);
         case 'EzsigndocumentGetActionableElementsV1ResponseMPayload':
@@ -1697,6 +1707,10 @@ class ApiClient {
           return EzsignfolderEditObjectV3Response.fromJson(value);
         case 'EzsignfolderEndPrematurelyV1Response':
           return EzsignfolderEndPrematurelyV1Response.fromJson(value);
+        case 'EzsignfolderGetActionableElementsForSignerV1Response':
+          return EzsignfolderGetActionableElementsForSignerV1Response.fromJson(value);
+        case 'EzsignfolderGetActionableElementsForSignerV1ResponseMPayload':
+          return EzsignfolderGetActionableElementsForSignerV1ResponseMPayload.fromJson(value);
         case 'EzsignfolderGetActionableElementsV1Response':
           return EzsignfolderGetActionableElementsV1Response.fromJson(value);
         case 'EzsignfolderGetActionableElementsV1ResponseMPayload':
@@ -4079,6 +4093,10 @@ class ApiClient {
           return WebhookEditObjectV1Request.fromJson(value);
         case 'WebhookEditObjectV1Response':
           return WebhookEditObjectV1Response.fromJson(value);
+        case 'WebhookEzmaxpartnerproductSubscribe':
+          return WebhookEzmaxpartnerproductSubscribe.fromJson(value);
+        case 'WebhookEzmaxpartnerproductUnsubscribe':
+          return WebhookEzmaxpartnerproductUnsubscribe.fromJson(value);
         case 'WebhookEzsignDocumentCompleted':
           return WebhookEzsignDocumentCompleted.fromJson(value);
         case 'WebhookEzsignDocumentFormCompleted':
