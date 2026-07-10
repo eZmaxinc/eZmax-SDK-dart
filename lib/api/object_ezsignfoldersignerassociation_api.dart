@@ -254,6 +254,63 @@ class ObjectEzsignfoldersignerassociationApi {
     return null;
   }
 
+  /// Create a new Ezsignfoldersignerassociation
+  ///
+  /// The endpoint allows to create one or many elements at once.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [EzsignfoldersignerassociationCreateObjectV3Request] ezsignfoldersignerassociationCreateObjectV3Request (required):
+  Future<Response> ezsignfoldersignerassociationCreateObjectV3WithHttpInfo(EzsignfoldersignerassociationCreateObjectV3Request ezsignfoldersignerassociationCreateObjectV3Request, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/3/object/ezsignfoldersignerassociation';
+
+    // ignore: prefer_final_locals
+    Object? postBody = ezsignfoldersignerassociationCreateObjectV3Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Create a new Ezsignfoldersignerassociation
+  ///
+  /// The endpoint allows to create one or many elements at once.
+  ///
+  /// Parameters:
+  ///
+  /// * [EzsignfoldersignerassociationCreateObjectV3Request] ezsignfoldersignerassociationCreateObjectV3Request (required):
+  Future<EzsignfoldersignerassociationCreateObjectV3Response?> ezsignfoldersignerassociationCreateObjectV3(EzsignfoldersignerassociationCreateObjectV3Request ezsignfoldersignerassociationCreateObjectV3Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfoldersignerassociationCreateObjectV3WithHttpInfo(ezsignfoldersignerassociationCreateObjectV3Request, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfoldersignerassociationCreateObjectV3Response',) as EzsignfoldersignerassociationCreateObjectV3Response;
+    
+    }
+    return null;
+  }
+
   /// Delete an existing Ezsignfoldersignerassociation
   ///
   /// 
@@ -369,6 +426,68 @@ class ObjectEzsignfoldersignerassociationApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfoldersignerassociationEditObjectV1Response',) as EzsignfoldersignerassociationEditObjectV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Edit an existing Ezsignfoldersignerassociation
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfoldersignerassociationID (required):
+  ///
+  /// * [EzsignfoldersignerassociationEditObjectV2Request] ezsignfoldersignerassociationEditObjectV2Request (required):
+  Future<Response> ezsignfoldersignerassociationEditObjectV2WithHttpInfo(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV2Request ezsignfoldersignerassociationEditObjectV2Request, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/2/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}'
+      .replaceAll('{pkiEzsignfoldersignerassociationID}', pkiEzsignfoldersignerassociationID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = ezsignfoldersignerassociationEditObjectV2Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'PUT',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Edit an existing Ezsignfoldersignerassociation
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfoldersignerassociationID (required):
+  ///
+  /// * [EzsignfoldersignerassociationEditObjectV2Request] ezsignfoldersignerassociationEditObjectV2Request (required):
+  Future<EzsignfoldersignerassociationEditObjectV2Response?> ezsignfoldersignerassociationEditObjectV2(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV2Request ezsignfoldersignerassociationEditObjectV2Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfoldersignerassociationEditObjectV2WithHttpInfo(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationEditObjectV2Request, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfoldersignerassociationEditObjectV2Response',) as EzsignfoldersignerassociationEditObjectV2Response;
     
     }
     return null;
@@ -605,6 +724,64 @@ class ObjectEzsignfoldersignerassociationApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfoldersignerassociationGetObjectV2Response',) as EzsignfoldersignerassociationGetObjectV2Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve an existing Ezsignfoldersignerassociation
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfoldersignerassociationID (required):
+  Future<Response> ezsignfoldersignerassociationGetObjectV3WithHttpInfo(int pkiEzsignfoldersignerassociationID, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/3/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}'
+      .replaceAll('{pkiEzsignfoldersignerassociationID}', pkiEzsignfoldersignerassociationID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Retrieve an existing Ezsignfoldersignerassociation
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignfoldersignerassociationID (required):
+  Future<EzsignfoldersignerassociationGetObjectV3Response?> ezsignfoldersignerassociationGetObjectV3(int pkiEzsignfoldersignerassociationID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignfoldersignerassociationGetObjectV3WithHttpInfo(pkiEzsignfoldersignerassociationID, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignfoldersignerassociationGetObjectV3Response',) as EzsignfoldersignerassociationGetObjectV3Response;
     
     }
     return null;

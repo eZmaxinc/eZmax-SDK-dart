@@ -853,6 +853,8 @@ class ApiClient {
           return CustomEzsignfolderezsigntemplatepublicSignerResponse.fromJson(value);
         case 'CustomEzsignfoldersignerassociationActionableElementResponse':
           return CustomEzsignfoldersignerassociationActionableElementResponse.fromJson(value);
+        case 'CustomEzsignfoldersignerassociationActionableElementResponseV2':
+          return CustomEzsignfoldersignerassociationActionableElementResponseV2.fromJson(value);
         case 'CustomEzsignfoldersignerassociationstatusResponse':
           return CustomEzsignfoldersignerassociationstatusResponse.fromJson(value);
         case 'CustomEzsignfoldersignerassociationstatusResponseV3':
@@ -1763,6 +1765,10 @@ class ApiClient {
           return EzsignfolderGetEzsignfoldersignerassociationsV1Response.fromJson(value);
         case 'EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload':
           return EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload.fromJson(value);
+        case 'EzsignfolderGetEzsignfoldersignerassociationsV2Response':
+          return EzsignfolderGetEzsignfoldersignerassociationsV2Response.fromJson(value);
+        case 'EzsignfolderGetEzsignfoldersignerassociationsV2ResponseMPayload':
+          return EzsignfolderGetEzsignfoldersignerassociationsV2ResponseMPayload.fromJson(value);
         case 'EzsignfolderGetEzsignformfieldgroupsV1Response':
           return EzsignfolderGetEzsignformfieldgroupsV1Response.fromJson(value);
         case 'EzsignfolderGetEzsignformfieldgroupsV1ResponseMPayload':
@@ -1875,12 +1881,22 @@ class ApiClient {
           return EzsignfoldersignerassociationCreateObjectV2Response.fromJson(value);
         case 'EzsignfoldersignerassociationCreateObjectV2ResponseMPayload':
           return EzsignfoldersignerassociationCreateObjectV2ResponseMPayload.fromJson(value);
+        case 'EzsignfoldersignerassociationCreateObjectV3Request':
+          return EzsignfoldersignerassociationCreateObjectV3Request.fromJson(value);
+        case 'EzsignfoldersignerassociationCreateObjectV3Response':
+          return EzsignfoldersignerassociationCreateObjectV3Response.fromJson(value);
+        case 'EzsignfoldersignerassociationCreateObjectV3ResponseMPayload':
+          return EzsignfoldersignerassociationCreateObjectV3ResponseMPayload.fromJson(value);
         case 'EzsignfoldersignerassociationDeleteObjectV1Response':
           return EzsignfoldersignerassociationDeleteObjectV1Response.fromJson(value);
         case 'EzsignfoldersignerassociationEditObjectV1Request':
           return EzsignfoldersignerassociationEditObjectV1Request.fromJson(value);
         case 'EzsignfoldersignerassociationEditObjectV1Response':
           return EzsignfoldersignerassociationEditObjectV1Response.fromJson(value);
+        case 'EzsignfoldersignerassociationEditObjectV2Request':
+          return EzsignfoldersignerassociationEditObjectV2Request.fromJson(value);
+        case 'EzsignfoldersignerassociationEditObjectV2Response':
+          return EzsignfoldersignerassociationEditObjectV2Response.fromJson(value);
         case 'EzsignfoldersignerassociationForceDisconnectV1Response':
           return EzsignfoldersignerassociationForceDisconnectV1Response.fromJson(value);
         case 'EzsignfoldersignerassociationGetInPersonLoginUrlV1Response':
@@ -1895,6 +1911,10 @@ class ApiClient {
           return EzsignfoldersignerassociationGetObjectV2Response.fromJson(value);
         case 'EzsignfoldersignerassociationGetObjectV2ResponseMPayload':
           return EzsignfoldersignerassociationGetObjectV2ResponseMPayload.fromJson(value);
+        case 'EzsignfoldersignerassociationGetObjectV3Response':
+          return EzsignfoldersignerassociationGetObjectV3Response.fromJson(value);
+        case 'EzsignfoldersignerassociationGetObjectV3ResponseMPayload':
+          return EzsignfoldersignerassociationGetObjectV3ResponseMPayload.fromJson(value);
         case 'EzsignfoldersignerassociationPatchObjectV1Request':
           return EzsignfoldersignerassociationPatchObjectV1Request.fromJson(value);
         case 'EzsignfoldersignerassociationPatchObjectV1Response':
@@ -1907,14 +1927,22 @@ class ApiClient {
           return EzsignfoldersignerassociationRequest.fromJson(value);
         case 'EzsignfoldersignerassociationRequestCompound':
           return EzsignfoldersignerassociationRequestCompound.fromJson(value);
+        case 'EzsignfoldersignerassociationRequestCompoundV2':
+          return EzsignfoldersignerassociationRequestCompoundV2.fromJson(value);
         case 'EzsignfoldersignerassociationRequestPatch':
           return EzsignfoldersignerassociationRequestPatch.fromJson(value);
+        case 'EzsignfoldersignerassociationRequestV2':
+          return EzsignfoldersignerassociationRequestV2.fromJson(value);
         case 'EzsignfoldersignerassociationResponse':
           return EzsignfoldersignerassociationResponse.fromJson(value);
         case 'EzsignfoldersignerassociationResponseCompound':
           return EzsignfoldersignerassociationResponseCompound.fromJson(value);
         case 'EzsignfoldersignerassociationResponseCompoundUser':
           return EzsignfoldersignerassociationResponseCompoundUser.fromJson(value);
+        case 'EzsignfoldersignerassociationResponseCompoundV3':
+          return EzsignfoldersignerassociationResponseCompoundV3.fromJson(value);
+        case 'EzsignfoldersignerassociationResponseV3':
+          return EzsignfoldersignerassociationResponseV3.fromJson(value);
         case 'EzsignfoldertypeAutocompleteElementResponse':
           return EzsignfoldertypeAutocompleteElementResponse.fromJson(value);
         case 'EzsignfoldertypeCreateObjectV3Request':
@@ -2857,6 +2885,8 @@ class ApiClient {
           return FieldEEzsignfolderSourceTypeTransformer().decode(value);
         case 'FieldEEzsignfolderStep':
           return FieldEEzsignfolderStepTypeTransformer().decode(value);
+        case 'FieldEEzsignfoldersignerassociationRole':
+          return FieldEEzsignfoldersignerassociationRoleTypeTransformer().decode(value);
         case 'FieldEEzsignfoldertypeCompletion':
           return FieldEEzsignfoldertypeCompletionTypeTransformer().decode(value);
         case 'FieldEEzsignfoldertypeDisposal':
@@ -2973,8 +3003,26 @@ class ApiClient {
           return FieldEEzsigntemplatesignaturepaymentdetailTaxableTypeTransformer().decode(value);
         case 'FieldEEzsigntemplatesignerMapping':
           return FieldEEzsigntemplatesignerMappingTypeTransformer().decode(value);
+        case 'FieldEInscriptionRemunerationinscriptorsellertype':
+          return FieldEInscriptionRemunerationinscriptorsellertypeTypeTransformer().decode(value);
+        case 'FieldEInscriptionRemunerationreferencetype':
+          return FieldEInscriptionRemunerationreferencetypeTypeTransformer().decode(value);
+        case 'FieldEInscriptionRemunerationtotaltype':
+          return FieldEInscriptionRemunerationtotaltypeTypeTransformer().decode(value);
+        case 'FieldEInscriptionRemunerationtype':
+          return FieldEInscriptionRemunerationtypeTypeTransformer().decode(value);
+        case 'FieldEInscriptionResidenceType':
+          return FieldEInscriptionResidenceTypeTypeTransformer().decode(value);
         case 'FieldEInscriptionStep':
           return FieldEInscriptionStepTypeTransformer().decode(value);
+        case 'FieldEInscriptionType':
+          return FieldEInscriptionTypeTypeTransformer().decode(value);
+        case 'FieldEInscriptionnotauthenticatedRemunerationtype':
+          return FieldEInscriptionnotauthenticatedRemunerationtypeTypeTransformer().decode(value);
+        case 'FieldEInscriptionnotauthenticatedResidenceType':
+          return FieldEInscriptionnotauthenticatedResidenceTypeTypeTransformer().decode(value);
+        case 'FieldEInscriptionnotauthenticatedType':
+          return FieldEInscriptionnotauthenticatedTypeTypeTransformer().decode(value);
         case 'FieldEInscriptiontempStatus':
           return FieldEInscriptiontempStatusTypeTransformer().decode(value);
         case 'FieldELeadStatus':
@@ -3021,12 +3069,16 @@ class ApiClient {
           return FieldEVersionhistoryTypeTypeTransformer().decode(value);
         case 'FieldEVersionhistoryUsertype':
           return FieldEVersionhistoryUsertypeTypeTransformer().decode(value);
+        case 'FieldEWebhookEzmaxpartnerevent':
+          return FieldEWebhookEzmaxpartnereventTypeTransformer().decode(value);
         case 'FieldEWebhookEzsignevent':
           return FieldEWebhookEzsigneventTypeTransformer().decode(value);
         case 'FieldEWebhookManagementevent':
           return FieldEWebhookManagementeventTypeTransformer().decode(value);
         case 'FieldEWebhookModule':
           return FieldEWebhookModuleTypeTransformer().decode(value);
+        case 'FieldEtInscriptionnotauthenticatedMortgagetype':
+          return FieldEtInscriptionnotauthenticatedMortgagetypeTypeTransformer().decode(value);
         case 'FieldPksEzmaxclientOs':
           return FieldPksEzmaxclientOsTypeTransformer().decode(value);
         case 'FontAutocompleteElementResponse':
@@ -3103,10 +3155,16 @@ class ApiClient {
           return InscriptionGetCommunicationsendersV1Response.fromJson(value);
         case 'InscriptionGetCommunicationsendersV1ResponseMPayload':
           return InscriptionGetCommunicationsendersV1ResponseMPayload.fromJson(value);
+        case 'InscriptionGetInscriptionnotauthenticatedsV1Response':
+          return InscriptionGetInscriptionnotauthenticatedsV1Response.fromJson(value);
         case 'InscriptionGetListV1Response':
           return InscriptionGetListV1Response.fromJson(value);
         case 'InscriptionGetListV1ResponseMPayload':
           return InscriptionGetListV1ResponseMPayload.fromJson(value);
+        case 'InscriptionGetObjectV2Response':
+          return InscriptionGetObjectV2Response.fromJson(value);
+        case 'InscriptionGetObjectV2ResponseMPayload':
+          return InscriptionGetObjectV2ResponseMPayload.fromJson(value);
         case 'InscriptionImportIntoEDMV1Request':
           return InscriptionImportIntoEDMV1Request.fromJson(value);
         case 'InscriptionImportIntoEDMV1Response':
@@ -3121,6 +3179,10 @@ class ApiClient {
           return InscriptionPrepareFilesTransferV1Response.fromJson(value);
         case 'InscriptionPrepareFilesTransferV1ResponseMPayload':
           return InscriptionPrepareFilesTransferV1ResponseMPayload.fromJson(value);
+        case 'InscriptionResponse':
+          return InscriptionResponse.fromJson(value);
+        case 'InscriptionResponseCompound':
+          return InscriptionResponseCompound.fromJson(value);
         case 'InscriptionchecklistAutocompleteElementResponse':
           return InscriptionchecklistAutocompleteElementResponse.fromJson(value);
         case 'InscriptionchecklistGetAutocompleteV3Response':
@@ -3155,6 +3217,10 @@ class ApiClient {
           return InscriptionnotauthenticatedGetListV1Response.fromJson(value);
         case 'InscriptionnotauthenticatedGetListV1ResponseMPayload':
           return InscriptionnotauthenticatedGetListV1ResponseMPayload.fromJson(value);
+        case 'InscriptionnotauthenticatedGetObjectV2Response':
+          return InscriptionnotauthenticatedGetObjectV2Response.fromJson(value);
+        case 'InscriptionnotauthenticatedGetObjectV2ResponseMPayload':
+          return InscriptionnotauthenticatedGetObjectV2ResponseMPayload.fromJson(value);
         case 'InscriptionnotauthenticatedImportIntoEDMV1Request':
           return InscriptionnotauthenticatedImportIntoEDMV1Request.fromJson(value);
         case 'InscriptionnotauthenticatedImportIntoEDMV1Response':
@@ -3163,6 +3229,10 @@ class ApiClient {
           return InscriptionnotauthenticatedImportIntoEDMV1ResponseMPayload.fromJson(value);
         case 'InscriptionnotauthenticatedListElement':
           return InscriptionnotauthenticatedListElement.fromJson(value);
+        case 'InscriptionnotauthenticatedResponse':
+          return InscriptionnotauthenticatedResponse.fromJson(value);
+        case 'InscriptionnotauthenticatedResponseCompound':
+          return InscriptionnotauthenticatedResponseCompound.fromJson(value);
         case 'InscriptionnotauthenticatedconditionResponse':
           return InscriptionnotauthenticatedconditionResponse.fromJson(value);
         case 'InscriptionnotauthenticatedconditionResponseCompound':
@@ -3295,6 +3365,8 @@ class ApiClient {
           return MultilingualEzmaxpartnerDescription.fromJson(value);
         case 'MultilingualEzmaxpartnerEmailaddress':
           return MultilingualEzmaxpartnerEmailaddress.fromJson(value);
+        case 'MultilingualEzmaxpartnerLogourl':
+          return MultilingualEzmaxpartnerLogourl.fromJson(value);
         case 'MultilingualEzmaxpartnerName':
           return MultilingualEzmaxpartnerName.fromJson(value);
         case 'MultilingualEzmaxpartnerPhoneE164':

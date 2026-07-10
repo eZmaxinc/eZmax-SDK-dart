@@ -23,11 +23,13 @@ class FieldEWebhookModule {
 
   String toJson() => value;
 
+  static const ezmaxpartner = FieldEWebhookModule._(r'Ezmaxpartner');
   static const ezsign = FieldEWebhookModule._(r'Ezsign');
   static const management = FieldEWebhookModule._(r'Management');
 
   /// List of all possible values in this [enum][FieldEWebhookModule].
   static const values = <FieldEWebhookModule>[
+    ezmaxpartner,
     ezsign,
     management,
   ];
@@ -68,6 +70,7 @@ class FieldEWebhookModuleTypeTransformer {
   FieldEWebhookModule? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data) {
+        case r'Ezmaxpartner': return FieldEWebhookModule.ezmaxpartner;
         case r'Ezsign': return FieldEWebhookModule.ezsign;
         case r'Management': return FieldEWebhookModule.management;
         default:

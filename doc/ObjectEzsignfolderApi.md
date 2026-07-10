@@ -34,6 +34,7 @@ Method | HTTP request | Description
 [**ezsignfolderGetEzsigndocumentsV1**](ObjectEzsignfolderApi.md#ezsignfoldergetezsigndocumentsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder's Ezsigndocuments
 [**ezsignfolderGetEzsigndocumentsV2**](ObjectEzsignfolderApi.md#ezsignfoldergetezsigndocumentsv2) | **GET** /2/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder's Ezsigndocuments
 [**ezsignfolderGetEzsignfoldersignerassociationsV1**](ObjectEzsignfolderApi.md#ezsignfoldergetezsignfoldersignerassociationsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations | Retrieve an existing Ezsignfolder's Ezsignfoldersignerassociations
+[**ezsignfolderGetEzsignfoldersignerassociationsV2**](ObjectEzsignfolderApi.md#ezsignfoldergetezsignfoldersignerassociationsv2) | **GET** /2/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations | Retrieve an existing Ezsignfolder's Ezsignfoldersignerassociations
 [**ezsignfolderGetEzsignformfieldgroupsV1**](ObjectEzsignfolderApi.md#ezsignfoldergetezsignformfieldgroupsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignformfieldgroups | Retrieve an existing Ezsignfolder's Ezsignformfieldgroups
 [**ezsignfolderGetEzsignsignaturesAutomaticV1**](ObjectEzsignfolderApi.md#ezsignfoldergetezsignsignaturesautomaticv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignsignaturesAutomatic | Retrieve an existing Ezsignfolder's automatic Ezsignsignatures
 [**ezsignfolderGetEzsignsignaturesV1**](ObjectEzsignfolderApi.md#ezsignfoldergetezsignsignaturesv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignsignatures | Retrieve an existing Ezsignfolder's Ezsignsignatures
@@ -1229,6 +1230,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignfolderGetEzsignfoldersignerassociationsV1Response**](EzsignfolderGetEzsignfoldersignerassociationsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsignfolderGetEzsignfoldersignerassociationsV2**
+> EzsignfolderGetEzsignfoldersignerassociationsV2Response ezsignfolderGetEzsignfoldersignerassociationsV2(pkiEzsignfolderID)
+
+Retrieve an existing Ezsignfolder's Ezsignfoldersignerassociations
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectEzsignfolderApi();
+final pkiEzsignfolderID = 56; // int | 
+
+try {
+    final result = api_instance.ezsignfolderGetEzsignfoldersignerassociationsV2(pkiEzsignfolderID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectEzsignfolderApi->ezsignfolderGetEzsignfoldersignerassociationsV2: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **int**|  | 
+
+### Return type
+
+[**EzsignfolderGetEzsignfoldersignerassociationsV2Response**](EzsignfolderGetEzsignfoldersignerassociationsV2Response.md)
 
 ### Authorization
 

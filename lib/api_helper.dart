@@ -244,6 +244,9 @@ String parameterToString(dynamic value) {
   if (value is FieldEEzsignfolderStep) {
     return FieldEEzsignfolderStepTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEEzsignfoldersignerassociationRole) {
+    return FieldEEzsignfoldersignerassociationRoleTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEEzsignfoldertypeCompletion) {
     return FieldEEzsignfoldertypeCompletionTypeTransformer().encode(value).toString();
   }
@@ -418,8 +421,35 @@ String parameterToString(dynamic value) {
   if (value is FieldEEzsigntemplatesignerMapping) {
     return FieldEEzsigntemplatesignerMappingTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEInscriptionRemunerationinscriptorsellertype) {
+    return FieldEInscriptionRemunerationinscriptorsellertypeTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEInscriptionRemunerationreferencetype) {
+    return FieldEInscriptionRemunerationreferencetypeTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEInscriptionRemunerationtotaltype) {
+    return FieldEInscriptionRemunerationtotaltypeTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEInscriptionRemunerationtype) {
+    return FieldEInscriptionRemunerationtypeTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEInscriptionResidenceType) {
+    return FieldEInscriptionResidenceTypeTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEInscriptionStep) {
     return FieldEInscriptionStepTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEInscriptionType) {
+    return FieldEInscriptionTypeTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEInscriptionnotauthenticatedRemunerationtype) {
+    return FieldEInscriptionnotauthenticatedRemunerationtypeTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEInscriptionnotauthenticatedResidenceType) {
+    return FieldEInscriptionnotauthenticatedResidenceTypeTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEInscriptionnotauthenticatedType) {
+    return FieldEInscriptionnotauthenticatedTypeTypeTransformer().encode(value).toString();
   }
   if (value is FieldEInscriptiontempStatus) {
     return FieldEInscriptiontempStatusTypeTransformer().encode(value).toString();
@@ -490,6 +520,9 @@ String parameterToString(dynamic value) {
   if (value is FieldEVersionhistoryUsertype) {
     return FieldEVersionhistoryUsertypeTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEWebhookEzmaxpartnerevent) {
+    return FieldEWebhookEzmaxpartnereventTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEWebhookEzsignevent) {
     return FieldEWebhookEzsigneventTypeTransformer().encode(value).toString();
   }
@@ -498,6 +531,9 @@ String parameterToString(dynamic value) {
   }
   if (value is FieldEWebhookModule) {
     return FieldEWebhookModuleTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEtInscriptionnotauthenticatedMortgagetype) {
+    return FieldEtInscriptionnotauthenticatedMortgagetypeTypeTransformer().encode(value).toString();
   }
   if (value is FieldPksEzmaxclientOs) {
     return FieldPksEzmaxclientOsTypeTransformer().encode(value).toString();

@@ -22,6 +22,7 @@ class EzmaxpartnerResponseCompound {
     required this.objEzmaxpartnerShortdescription,
     required this.objEzmaxpartnerUrl,
     this.bEzmaxpartnerIsactive,
+    required this.objEzmaxpartnerLogourl,
   });
 
   FieldEEzmaxpartnerCustomdevelopment eEzmaxpartnerCustomdevelopment;
@@ -49,6 +50,8 @@ class EzmaxpartnerResponseCompound {
   ///
   bool? bEzmaxpartnerIsactive;
 
+  MultilingualEzmaxpartnerLogourl objEzmaxpartnerLogourl;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzmaxpartnerResponseCompound &&
     other.eEzmaxpartnerCustomdevelopment == eEzmaxpartnerCustomdevelopment &&
@@ -59,7 +62,8 @@ class EzmaxpartnerResponseCompound {
     other.objEzmaxpartnerPhoneE164 == objEzmaxpartnerPhoneE164 &&
     other.objEzmaxpartnerShortdescription == objEzmaxpartnerShortdescription &&
     other.objEzmaxpartnerUrl == objEzmaxpartnerUrl &&
-    other.bEzmaxpartnerIsactive == bEzmaxpartnerIsactive;
+    other.bEzmaxpartnerIsactive == bEzmaxpartnerIsactive &&
+    other.objEzmaxpartnerLogourl == objEzmaxpartnerLogourl;
 
   @override
   int get hashCode =>
@@ -72,10 +76,11 @@ class EzmaxpartnerResponseCompound {
     (objEzmaxpartnerPhoneE164.hashCode) +
     (objEzmaxpartnerShortdescription.hashCode) +
     (objEzmaxpartnerUrl.hashCode) +
-    (bEzmaxpartnerIsactive == null ? 0 : bEzmaxpartnerIsactive!.hashCode);
+    (bEzmaxpartnerIsactive == null ? 0 : bEzmaxpartnerIsactive!.hashCode) +
+    (objEzmaxpartnerLogourl.hashCode);
 
   @override
-  String toString() => 'EzmaxpartnerResponseCompound[eEzmaxpartnerCustomdevelopment=$eEzmaxpartnerCustomdevelopment, objEzmaxpartnerAddress=$objEzmaxpartnerAddress, objEzmaxpartnerDescription=$objEzmaxpartnerDescription, objEzmaxpartnerEmailaddress=$objEzmaxpartnerEmailaddress, objEzmaxpartnerName=$objEzmaxpartnerName, objEzmaxpartnerPhoneE164=$objEzmaxpartnerPhoneE164, objEzmaxpartnerShortdescription=$objEzmaxpartnerShortdescription, objEzmaxpartnerUrl=$objEzmaxpartnerUrl, bEzmaxpartnerIsactive=$bEzmaxpartnerIsactive]';
+  String toString() => 'EzmaxpartnerResponseCompound[eEzmaxpartnerCustomdevelopment=$eEzmaxpartnerCustomdevelopment, objEzmaxpartnerAddress=$objEzmaxpartnerAddress, objEzmaxpartnerDescription=$objEzmaxpartnerDescription, objEzmaxpartnerEmailaddress=$objEzmaxpartnerEmailaddress, objEzmaxpartnerName=$objEzmaxpartnerName, objEzmaxpartnerPhoneE164=$objEzmaxpartnerPhoneE164, objEzmaxpartnerShortdescription=$objEzmaxpartnerShortdescription, objEzmaxpartnerUrl=$objEzmaxpartnerUrl, bEzmaxpartnerIsactive=$bEzmaxpartnerIsactive, objEzmaxpartnerLogourl=$objEzmaxpartnerLogourl]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -92,6 +97,7 @@ class EzmaxpartnerResponseCompound {
     } else {
       json[r'bEzmaxpartnerIsactive'] = null;
     }
+      json[r'objEzmaxpartnerLogourl'] = this.objEzmaxpartnerLogourl;
     return json;
   }
 
@@ -122,6 +128,8 @@ class EzmaxpartnerResponseCompound {
         assert(json[r'objEzmaxpartnerShortdescription'] != null, 'Required key "EzmaxpartnerResponseCompound[objEzmaxpartnerShortdescription]" has a null value in JSON.');
         assert(json.containsKey(r'objEzmaxpartnerUrl'), 'Required key "EzmaxpartnerResponseCompound[objEzmaxpartnerUrl]" is missing from JSON.');
         assert(json[r'objEzmaxpartnerUrl'] != null, 'Required key "EzmaxpartnerResponseCompound[objEzmaxpartnerUrl]" has a null value in JSON.');
+        assert(json.containsKey(r'objEzmaxpartnerLogourl'), 'Required key "EzmaxpartnerResponseCompound[objEzmaxpartnerLogourl]" is missing from JSON.');
+        assert(json[r'objEzmaxpartnerLogourl'] != null, 'Required key "EzmaxpartnerResponseCompound[objEzmaxpartnerLogourl]" has a null value in JSON.');
         return true;
       }());
 
@@ -135,6 +143,7 @@ class EzmaxpartnerResponseCompound {
         objEzmaxpartnerShortdescription: MultilingualEzmaxpartnerShortdescription.fromJson(json[r'objEzmaxpartnerShortdescription'])!,
         objEzmaxpartnerUrl: MultilingualEzmaxpartnerUrl.fromJson(json[r'objEzmaxpartnerUrl'])!,
         bEzmaxpartnerIsactive: mapValueOfType<bool>(json, r'bEzmaxpartnerIsactive'),
+        objEzmaxpartnerLogourl: MultilingualEzmaxpartnerLogourl.fromJson(json[r'objEzmaxpartnerLogourl'])!,
       );
     }
     return null;
@@ -190,6 +199,7 @@ class EzmaxpartnerResponseCompound {
     'objEzmaxpartnerPhoneE164',
     'objEzmaxpartnerShortdescription',
     'objEzmaxpartnerUrl',
+    'objEzmaxpartnerLogourl',
   };
 }
 

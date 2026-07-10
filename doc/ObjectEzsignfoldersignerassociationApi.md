@@ -13,12 +13,15 @@ Method | HTTP request | Description
 [**ezsignfoldersignerassociationCreateEmbeddedUrlV2**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationcreateembeddedurlv2) | **POST** /2/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/createEmbeddedUrl | Creates an Url to allow embedded signing
 [**ezsignfoldersignerassociationCreateObjectV1**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationcreateobjectv1) | **POST** /1/object/ezsignfoldersignerassociation | Create a new Ezsignfoldersignerassociation
 [**ezsignfoldersignerassociationCreateObjectV2**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationcreateobjectv2) | **POST** /2/object/ezsignfoldersignerassociation | Create a new Ezsignfoldersignerassociation
+[**ezsignfoldersignerassociationCreateObjectV3**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationcreateobjectv3) | **POST** /3/object/ezsignfoldersignerassociation | Create a new Ezsignfoldersignerassociation
 [**ezsignfoldersignerassociationDeleteObjectV1**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationdeleteobjectv1) | **DELETE** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} | Delete an existing Ezsignfoldersignerassociation
 [**ezsignfoldersignerassociationEditObjectV1**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationeditobjectv1) | **PUT** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} | Edit an existing Ezsignfoldersignerassociation
+[**ezsignfoldersignerassociationEditObjectV2**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationeditobjectv2) | **PUT** /2/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} | Edit an existing Ezsignfoldersignerassociation
 [**ezsignfoldersignerassociationForceDisconnectV1**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationforcedisconnectv1) | **POST** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/forceDisconnect | Disconnects the Ezsignfoldersignerassociation
 [**ezsignfoldersignerassociationGetInPersonLoginUrlV1**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationgetinpersonloginurlv1) | **GET** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getInPersonLoginUrl | Retrieve a Login Url to allow In-Person signing
 [**ezsignfoldersignerassociationGetObjectV1**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationgetobjectv1) | **GET** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} | Retrieve an existing Ezsignfoldersignerassociation
 [**ezsignfoldersignerassociationGetObjectV2**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationgetobjectv2) | **GET** /2/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} | Retrieve an existing Ezsignfoldersignerassociation
+[**ezsignfoldersignerassociationGetObjectV3**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationgetobjectv3) | **GET** /3/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} | Retrieve an existing Ezsignfoldersignerassociation
 [**ezsignfoldersignerassociationPatchObjectV1**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationpatchobjectv1) | **PATCH** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} | Patch an existing Ezsignfoldersignerassociation
 [**ezsignfoldersignerassociationReassignV1**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationreassignv1) | **POST** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/reassign | Reassign remaining unsigned signatures and forms
 
@@ -215,6 +218,53 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **ezsignfoldersignerassociationCreateObjectV3**
+> EzsignfoldersignerassociationCreateObjectV3Response ezsignfoldersignerassociationCreateObjectV3(ezsignfoldersignerassociationCreateObjectV3Request)
+
+Create a new Ezsignfoldersignerassociation
+
+The endpoint allows to create one or many elements at once.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectEzsignfoldersignerassociationApi();
+final ezsignfoldersignerassociationCreateObjectV3Request = EzsignfoldersignerassociationCreateObjectV3Request(); // EzsignfoldersignerassociationCreateObjectV3Request | 
+
+try {
+    final result = api_instance.ezsignfoldersignerassociationCreateObjectV3(ezsignfoldersignerassociationCreateObjectV3Request);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectEzsignfoldersignerassociationApi->ezsignfoldersignerassociationCreateObjectV3: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ezsignfoldersignerassociationCreateObjectV3Request** | [**EzsignfoldersignerassociationCreateObjectV3Request**](EzsignfoldersignerassociationCreateObjectV3Request.md)|  | 
+
+### Return type
+
+[**EzsignfoldersignerassociationCreateObjectV3Response**](EzsignfoldersignerassociationCreateObjectV3Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **ezsignfoldersignerassociationDeleteObjectV1**
 > EzsignfoldersignerassociationDeleteObjectV1Response ezsignfoldersignerassociationDeleteObjectV1(pkiEzsignfoldersignerassociationID)
 
@@ -299,6 +349,55 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignfoldersignerassociationEditObjectV1Response**](EzsignfoldersignerassociationEditObjectV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsignfoldersignerassociationEditObjectV2**
+> EzsignfoldersignerassociationEditObjectV2Response ezsignfoldersignerassociationEditObjectV2(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationEditObjectV2Request)
+
+Edit an existing Ezsignfoldersignerassociation
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectEzsignfoldersignerassociationApi();
+final pkiEzsignfoldersignerassociationID = 56; // int | 
+final ezsignfoldersignerassociationEditObjectV2Request = EzsignfoldersignerassociationEditObjectV2Request(); // EzsignfoldersignerassociationEditObjectV2Request | 
+
+try {
+    final result = api_instance.ezsignfoldersignerassociationEditObjectV2(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationEditObjectV2Request);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectEzsignfoldersignerassociationApi->ezsignfoldersignerassociationEditObjectV2: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfoldersignerassociationID** | **int**|  | 
+ **ezsignfoldersignerassociationEditObjectV2Request** | [**EzsignfoldersignerassociationEditObjectV2Request**](EzsignfoldersignerassociationEditObjectV2Request.md)|  | 
+
+### Return type
+
+[**EzsignfoldersignerassociationEditObjectV2Response**](EzsignfoldersignerassociationEditObjectV2Response.md)
 
 ### Authorization
 
@@ -489,6 +588,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignfoldersignerassociationGetObjectV2Response**](EzsignfoldersignerassociationGetObjectV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsignfoldersignerassociationGetObjectV3**
+> EzsignfoldersignerassociationGetObjectV3Response ezsignfoldersignerassociationGetObjectV3(pkiEzsignfoldersignerassociationID)
+
+Retrieve an existing Ezsignfoldersignerassociation
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectEzsignfoldersignerassociationApi();
+final pkiEzsignfoldersignerassociationID = 56; // int | 
+
+try {
+    final result = api_instance.ezsignfoldersignerassociationGetObjectV3(pkiEzsignfoldersignerassociationID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectEzsignfoldersignerassociationApi->ezsignfoldersignerassociationGetObjectV3: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfoldersignerassociationID** | **int**|  | 
+
+### Return type
+
+[**EzsignfoldersignerassociationGetObjectV3Response**](EzsignfoldersignerassociationGetObjectV3Response.md)
 
 ### Authorization
 

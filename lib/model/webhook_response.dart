@@ -19,6 +19,7 @@ class WebhookResponse {
     this.fkiEzsignfoldertypeID,
     this.sEzsignfoldertypeNameX,
     required this.eWebhookModule,
+    this.eWebhookEzmaxpartnerevent,
     this.eWebhookEzsignevent,
     this.eWebhookManagementevent,
     required this.sWebhookUrl,
@@ -78,6 +79,14 @@ class WebhookResponse {
   String? sEzsignfoldertypeNameX;
 
   FieldEWebhookModule eWebhookModule;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEWebhookEzmaxpartnerevent? eWebhookEzmaxpartnerevent;
 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -153,6 +162,7 @@ class WebhookResponse {
     other.fkiEzsignfoldertypeID == fkiEzsignfoldertypeID &&
     other.sEzsignfoldertypeNameX == sEzsignfoldertypeNameX &&
     other.eWebhookModule == eWebhookModule &&
+    other.eWebhookEzmaxpartnerevent == eWebhookEzmaxpartnerevent &&
     other.eWebhookEzsignevent == eWebhookEzsignevent &&
     other.eWebhookManagementevent == eWebhookManagementevent &&
     other.sWebhookUrl == sWebhookUrl &&
@@ -174,6 +184,7 @@ class WebhookResponse {
     (fkiEzsignfoldertypeID == null ? 0 : fkiEzsignfoldertypeID!.hashCode) +
     (sEzsignfoldertypeNameX == null ? 0 : sEzsignfoldertypeNameX!.hashCode) +
     (eWebhookModule.hashCode) +
+    (eWebhookEzmaxpartnerevent == null ? 0 : eWebhookEzmaxpartnerevent!.hashCode) +
     (eWebhookEzsignevent == null ? 0 : eWebhookEzsignevent!.hashCode) +
     (eWebhookManagementevent == null ? 0 : eWebhookManagementevent!.hashCode) +
     (sWebhookUrl.hashCode) +
@@ -187,7 +198,7 @@ class WebhookResponse {
     (objAudit == null ? 0 : objAudit!.hashCode);
 
   @override
-  String toString() => 'WebhookResponse[pkiWebhookID=$pkiWebhookID, fkiAuthenticationexternalID=$fkiAuthenticationexternalID, sWebhookDescription=$sWebhookDescription, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, sWebhookUrl=$sWebhookUrl, sWebhookEmailfailed=$sWebhookEmailfailed, sWebhookApikey=$sWebhookApikey, sWebhookSecret=$sWebhookSecret, bWebhookIsactive=$bWebhookIsactive, bWebhookIssigned=$bWebhookIssigned, bWebhookSkipsslvalidation=$bWebhookSkipsslvalidation, sAuthenticationexternalDescription=$sAuthenticationexternalDescription, objAudit=$objAudit]';
+  String toString() => 'WebhookResponse[pkiWebhookID=$pkiWebhookID, fkiAuthenticationexternalID=$fkiAuthenticationexternalID, sWebhookDescription=$sWebhookDescription, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, eWebhookModule=$eWebhookModule, eWebhookEzmaxpartnerevent=$eWebhookEzmaxpartnerevent, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, sWebhookUrl=$sWebhookUrl, sWebhookEmailfailed=$sWebhookEmailfailed, sWebhookApikey=$sWebhookApikey, sWebhookSecret=$sWebhookSecret, bWebhookIsactive=$bWebhookIsactive, bWebhookIssigned=$bWebhookIssigned, bWebhookSkipsslvalidation=$bWebhookSkipsslvalidation, sAuthenticationexternalDescription=$sAuthenticationexternalDescription, objAudit=$objAudit]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -213,6 +224,11 @@ class WebhookResponse {
       json[r'sEzsignfoldertypeNameX'] = null;
     }
       json[r'eWebhookModule'] = this.eWebhookModule;
+    if (this.eWebhookEzmaxpartnerevent != null) {
+      json[r'eWebhookEzmaxpartnerevent'] = this.eWebhookEzmaxpartnerevent;
+    } else {
+      json[r'eWebhookEzmaxpartnerevent'] = null;
+    }
     if (this.eWebhookEzsignevent != null) {
       json[r'eWebhookEzsignevent'] = this.eWebhookEzsignevent;
     } else {
@@ -286,6 +302,7 @@ class WebhookResponse {
         fkiEzsignfoldertypeID: mapValueOfType<int>(json, r'fkiEzsignfoldertypeID'),
         sEzsignfoldertypeNameX: mapValueOfType<String>(json, r'sEzsignfoldertypeNameX'),
         eWebhookModule: FieldEWebhookModule.fromJson(json[r'eWebhookModule'])!,
+        eWebhookEzmaxpartnerevent: FieldEWebhookEzmaxpartnerevent.fromJson(json[r'eWebhookEzmaxpartnerevent']),
         eWebhookEzsignevent: FieldEWebhookEzsignevent.fromJson(json[r'eWebhookEzsignevent']),
         eWebhookManagementevent: FieldEWebhookManagementevent.fromJson(json[r'eWebhookManagementevent']),
         sWebhookUrl: mapValueOfType<String>(json, r'sWebhookUrl')!,

@@ -36,6 +36,7 @@ class InscriptionnotauthenticatedListElement {
     this.dtInscriptionnotauthenticatedTransactiondateReal,
     this.bInscriptionnotauthenticatedConditional,
     this.bInscriptionnotauthenticatedIsactive,
+    this.bInscriptionnotauthenticatedDraft,
     this.sAddressCivic,
     this.sAddressStreet,
     this.sAddressSuite,
@@ -210,6 +211,15 @@ class InscriptionnotauthenticatedListElement {
   ///
   bool? bInscriptionnotauthenticatedIsactive;
 
+  /// Whether the inscriptionnotauthenticated is a draft or not
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bInscriptionnotauthenticatedDraft;
+
   /// The Civic number.
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -323,6 +333,7 @@ class InscriptionnotauthenticatedListElement {
     other.dtInscriptionnotauthenticatedTransactiondateReal == dtInscriptionnotauthenticatedTransactiondateReal &&
     other.bInscriptionnotauthenticatedConditional == bInscriptionnotauthenticatedConditional &&
     other.bInscriptionnotauthenticatedIsactive == bInscriptionnotauthenticatedIsactive &&
+    other.bInscriptionnotauthenticatedDraft == bInscriptionnotauthenticatedDraft &&
     other.sAddressCivic == sAddressCivic &&
     other.sAddressStreet == sAddressStreet &&
     other.sAddressSuite == sAddressSuite &&
@@ -360,6 +371,7 @@ class InscriptionnotauthenticatedListElement {
     (dtInscriptionnotauthenticatedTransactiondateReal == null ? 0 : dtInscriptionnotauthenticatedTransactiondateReal!.hashCode) +
     (bInscriptionnotauthenticatedConditional == null ? 0 : bInscriptionnotauthenticatedConditional!.hashCode) +
     (bInscriptionnotauthenticatedIsactive == null ? 0 : bInscriptionnotauthenticatedIsactive!.hashCode) +
+    (bInscriptionnotauthenticatedDraft == null ? 0 : bInscriptionnotauthenticatedDraft!.hashCode) +
     (sAddressCivic == null ? 0 : sAddressCivic!.hashCode) +
     (sAddressStreet == null ? 0 : sAddressStreet!.hashCode) +
     (sAddressSuite == null ? 0 : sAddressSuite!.hashCode) +
@@ -372,7 +384,7 @@ class InscriptionnotauthenticatedListElement {
     (sInscriptionnotauthenticatedOffertopurchasenumber.hashCode);
 
   @override
-  String toString() => 'InscriptionnotauthenticatedListElement[pkiInscriptionID=$pkiInscriptionID, pkiInscriptionnotauthenticatedID=$pkiInscriptionnotauthenticatedID, fkiInscriptiontypeID=$fkiInscriptiontypeID, fkiBuyercontractID=$fkiBuyercontractID, sBuyercontractContract=$sBuyercontractContract, sInscriptiontypeNameX=$sInscriptiontypeNameX, eInscriptionStep=$eInscriptionStep, sInscriptionCivicend=$sInscriptionCivicend, sInscriptionMLS=$sInscriptionMLS, sInscriptionContract=$sInscriptionContract, dInscriptionSaleprice=$dInscriptionSaleprice, dInscriptionRentprice=$dInscriptionRentprice, dtInscriptionDate=$dtInscriptionDate, dtInscriptionExpirationdate=$dtInscriptionExpirationdate, dtInscriptionNotarydate=$dtInscriptionNotarydate, bInscriptionInspection=$bInscriptionInspection, bInscriptionIsactive=$bInscriptionIsactive, bInscriptionArchived=$bInscriptionArchived, dtInscriptionnotauthenticatedNotaryscheduledate=$dtInscriptionnotauthenticatedNotaryscheduledate, dtInscriptionnotauthenticatedTransactiondate=$dtInscriptionnotauthenticatedTransactiondate, dtInscriptionnotauthenticatedTransactiondateReal=$dtInscriptionnotauthenticatedTransactiondateReal, bInscriptionnotauthenticatedConditional=$bInscriptionnotauthenticatedConditional, bInscriptionnotauthenticatedIsactive=$bInscriptionnotauthenticatedIsactive, sAddressCivic=$sAddressCivic, sAddressStreet=$sAddressStreet, sAddressSuite=$sAddressSuite, sAddressCity=$sAddressCity, sAddressZip=$sAddressZip, fkiProvinceID=$fkiProvinceID, sProvinceNameX=$sProvinceNameX, fkiCountryID=$fkiCountryID, sCountryNameX=$sCountryNameX, sInscriptionnotauthenticatedOffertopurchasenumber=$sInscriptionnotauthenticatedOffertopurchasenumber]';
+  String toString() => 'InscriptionnotauthenticatedListElement[pkiInscriptionID=$pkiInscriptionID, pkiInscriptionnotauthenticatedID=$pkiInscriptionnotauthenticatedID, fkiInscriptiontypeID=$fkiInscriptiontypeID, fkiBuyercontractID=$fkiBuyercontractID, sBuyercontractContract=$sBuyercontractContract, sInscriptiontypeNameX=$sInscriptiontypeNameX, eInscriptionStep=$eInscriptionStep, sInscriptionCivicend=$sInscriptionCivicend, sInscriptionMLS=$sInscriptionMLS, sInscriptionContract=$sInscriptionContract, dInscriptionSaleprice=$dInscriptionSaleprice, dInscriptionRentprice=$dInscriptionRentprice, dtInscriptionDate=$dtInscriptionDate, dtInscriptionExpirationdate=$dtInscriptionExpirationdate, dtInscriptionNotarydate=$dtInscriptionNotarydate, bInscriptionInspection=$bInscriptionInspection, bInscriptionIsactive=$bInscriptionIsactive, bInscriptionArchived=$bInscriptionArchived, dtInscriptionnotauthenticatedNotaryscheduledate=$dtInscriptionnotauthenticatedNotaryscheduledate, dtInscriptionnotauthenticatedTransactiondate=$dtInscriptionnotauthenticatedTransactiondate, dtInscriptionnotauthenticatedTransactiondateReal=$dtInscriptionnotauthenticatedTransactiondateReal, bInscriptionnotauthenticatedConditional=$bInscriptionnotauthenticatedConditional, bInscriptionnotauthenticatedIsactive=$bInscriptionnotauthenticatedIsactive, bInscriptionnotauthenticatedDraft=$bInscriptionnotauthenticatedDraft, sAddressCivic=$sAddressCivic, sAddressStreet=$sAddressStreet, sAddressSuite=$sAddressSuite, sAddressCity=$sAddressCity, sAddressZip=$sAddressZip, fkiProvinceID=$fkiProvinceID, sProvinceNameX=$sProvinceNameX, fkiCountryID=$fkiCountryID, sCountryNameX=$sCountryNameX, sInscriptionnotauthenticatedOffertopurchasenumber=$sInscriptionnotauthenticatedOffertopurchasenumber]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -454,6 +466,11 @@ class InscriptionnotauthenticatedListElement {
       json[r'bInscriptionnotauthenticatedIsactive'] = this.bInscriptionnotauthenticatedIsactive;
     } else {
       json[r'bInscriptionnotauthenticatedIsactive'] = null;
+    }
+    if (this.bInscriptionnotauthenticatedDraft != null) {
+      json[r'bInscriptionnotauthenticatedDraft'] = this.bInscriptionnotauthenticatedDraft;
+    } else {
+      json[r'bInscriptionnotauthenticatedDraft'] = null;
     }
     if (this.sAddressCivic != null) {
       json[r'sAddressCivic'] = this.sAddressCivic;
@@ -562,6 +579,7 @@ class InscriptionnotauthenticatedListElement {
         dtInscriptionnotauthenticatedTransactiondateReal: mapValueOfType<String>(json, r'dtInscriptionnotauthenticatedTransactiondateReal'),
         bInscriptionnotauthenticatedConditional: mapValueOfType<bool>(json, r'bInscriptionnotauthenticatedConditional'),
         bInscriptionnotauthenticatedIsactive: mapValueOfType<bool>(json, r'bInscriptionnotauthenticatedIsactive'),
+        bInscriptionnotauthenticatedDraft: mapValueOfType<bool>(json, r'bInscriptionnotauthenticatedDraft'),
         sAddressCivic: mapValueOfType<String>(json, r'sAddressCivic'),
         sAddressStreet: mapValueOfType<String>(json, r'sAddressStreet'),
         sAddressSuite: mapValueOfType<String>(json, r'sAddressSuite'),
