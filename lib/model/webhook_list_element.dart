@@ -21,6 +21,7 @@ class WebhookListElement {
     required this.eWebhookModule,
     this.eWebhookEzsignevent,
     this.eWebhookManagementevent,
+    this.eWebhookRealestateevent,
     required this.bWebhookIsactive,
     required this.bWebhookIssigned,
   });
@@ -58,6 +59,14 @@ class WebhookListElement {
   ///
   FieldEWebhookManagementevent? eWebhookManagementevent;
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEWebhookRealestateevent? eWebhookRealestateevent;
+
   /// Whether the Webhook is active or not
   bool bWebhookIsactive;
 
@@ -74,6 +83,7 @@ class WebhookListElement {
     other.eWebhookModule == eWebhookModule &&
     other.eWebhookEzsignevent == eWebhookEzsignevent &&
     other.eWebhookManagementevent == eWebhookManagementevent &&
+    other.eWebhookRealestateevent == eWebhookRealestateevent &&
     other.bWebhookIsactive == bWebhookIsactive &&
     other.bWebhookIssigned == bWebhookIssigned;
 
@@ -88,11 +98,12 @@ class WebhookListElement {
     (eWebhookModule.hashCode) +
     (eWebhookEzsignevent == null ? 0 : eWebhookEzsignevent!.hashCode) +
     (eWebhookManagementevent == null ? 0 : eWebhookManagementevent!.hashCode) +
+    (eWebhookRealestateevent == null ? 0 : eWebhookRealestateevent!.hashCode) +
     (bWebhookIsactive.hashCode) +
     (bWebhookIssigned.hashCode);
 
   @override
-  String toString() => 'WebhookListElement[pkiWebhookID=$pkiWebhookID, sWebhookDescription=$sWebhookDescription, sWebhookUrl=$sWebhookUrl, sWebhookEvent=$sWebhookEvent, sWebhookEmailfailed=$sWebhookEmailfailed, eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, bWebhookIsactive=$bWebhookIsactive, bWebhookIssigned=$bWebhookIssigned]';
+  String toString() => 'WebhookListElement[pkiWebhookID=$pkiWebhookID, sWebhookDescription=$sWebhookDescription, sWebhookUrl=$sWebhookUrl, sWebhookEvent=$sWebhookEvent, sWebhookEmailfailed=$sWebhookEmailfailed, eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, eWebhookRealestateevent=$eWebhookRealestateevent, bWebhookIsactive=$bWebhookIsactive, bWebhookIssigned=$bWebhookIssigned]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -111,6 +122,11 @@ class WebhookListElement {
       json[r'eWebhookManagementevent'] = this.eWebhookManagementevent;
     } else {
       json[r'eWebhookManagementevent'] = null;
+    }
+    if (this.eWebhookRealestateevent != null) {
+      json[r'eWebhookRealestateevent'] = this.eWebhookRealestateevent;
+    } else {
+      json[r'eWebhookRealestateevent'] = null;
     }
       json[r'bWebhookIsactive'] = this.bWebhookIsactive;
       json[r'bWebhookIssigned'] = this.bWebhookIssigned;
@@ -156,6 +172,7 @@ class WebhookListElement {
         eWebhookModule: FieldEWebhookModule.fromJson(json[r'eWebhookModule'])!,
         eWebhookEzsignevent: FieldEWebhookEzsignevent.fromJson(json[r'eWebhookEzsignevent']),
         eWebhookManagementevent: FieldEWebhookManagementevent.fromJson(json[r'eWebhookManagementevent']),
+        eWebhookRealestateevent: FieldEWebhookRealestateevent.fromJson(json[r'eWebhookRealestateevent']),
         bWebhookIsactive: mapValueOfType<bool>(json, r'bWebhookIsactive')!,
         bWebhookIssigned: mapValueOfType<bool>(json, r'bWebhookIssigned')!,
       );

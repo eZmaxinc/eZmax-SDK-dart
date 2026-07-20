@@ -11,29 +11,29 @@
 part of openapi.api;
 
 /// The type of the Ezsigntemplateannotation
-class FieldEEzsigntemplateannotationType {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsigntemplateannotationType._(this.value);
+enum FieldEEzsigntemplateannotationType {
+  dropdown._(r'Dropdown'),
+  text._(r'Text'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsigntemplateannotationType._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const dropdown = FieldEEzsigntemplateannotationType._(r'Dropdown');
-  static const text = FieldEEzsigntemplateannotationType._(r'Text');
-
-  /// List of all possible values in this [enum][FieldEEzsigntemplateannotationType].
-  static const values = <FieldEEzsigntemplateannotationType>[
-    dropdown,
-    text,
-  ];
-
+  /// Returns the instance of [FieldEEzsigntemplateannotationType] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsigntemplateannotationType? fromJson(dynamic value) => FieldEEzsigntemplateannotationTypeTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsigntemplateannotationType]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsigntemplateannotationType> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsigntemplateannotationType>[];
     if (json is List && json.isNotEmpty) {
@@ -55,9 +55,11 @@ class FieldEEzsigntemplateannotationTypeTypeTransformer {
 
   const FieldEEzsigntemplateannotationTypeTypeTransformer._();
 
-  String encode(FieldEEzsigntemplateannotationType data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsigntemplateannotationType data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsigntemplateannotationType.
+  /// Returns the instance of [FieldEEzsigntemplateannotationType] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -66,6 +68,9 @@ class FieldEEzsigntemplateannotationTypeTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsigntemplateannotationType? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsigntemplateannotationType) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Dropdown': return FieldEEzsigntemplateannotationType.dropdown;
@@ -79,7 +84,7 @@ class FieldEEzsigntemplateannotationTypeTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsigntemplateannotationTypeTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsigntemplateannotationTypeTypeTransformer? _instance;
 }
 

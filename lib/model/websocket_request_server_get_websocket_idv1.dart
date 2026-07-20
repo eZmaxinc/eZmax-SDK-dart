@@ -107,27 +107,28 @@ class WebsocketRequestServerGetWebsocketIDV1 {
 }
 
 /// The Type of message
-class WebsocketRequestServerGetWebsocketIDV1EWebsocketMessagetypeEnum {
-  /// Instantiate a new enum with the provided [value].
-  const WebsocketRequestServerGetWebsocketIDV1EWebsocketMessagetypeEnum._(this.value);
+enum WebsocketRequestServerGetWebsocketIDV1EWebsocketMessagetypeEnum {
+  requestServerGetWebsocketIDV1._(r'RequestServer-GetWebsocketID-V1'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const WebsocketRequestServerGetWebsocketIDV1EWebsocketMessagetypeEnum._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const requestServerGetWebsocketIDV1 = WebsocketRequestServerGetWebsocketIDV1EWebsocketMessagetypeEnum._(r'RequestServer-GetWebsocketID-V1');
-
-  /// List of all possible values in this [enum][WebsocketRequestServerGetWebsocketIDV1EWebsocketMessagetypeEnum].
-  static const values = <WebsocketRequestServerGetWebsocketIDV1EWebsocketMessagetypeEnum>[
-    requestServerGetWebsocketIDV1,
-  ];
-
+  /// Returns the instance of [WebsocketRequestServerGetWebsocketIDV1EWebsocketMessagetypeEnum] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static WebsocketRequestServerGetWebsocketIDV1EWebsocketMessagetypeEnum? fromJson(dynamic value) => WebsocketRequestServerGetWebsocketIDV1EWebsocketMessagetypeEnumTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [WebsocketRequestServerGetWebsocketIDV1EWebsocketMessagetypeEnum]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<WebsocketRequestServerGetWebsocketIDV1EWebsocketMessagetypeEnum> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <WebsocketRequestServerGetWebsocketIDV1EWebsocketMessagetypeEnum>[];
     if (json is List && json.isNotEmpty) {
@@ -149,9 +150,10 @@ class WebsocketRequestServerGetWebsocketIDV1EWebsocketMessagetypeEnumTypeTransfo
 
   const WebsocketRequestServerGetWebsocketIDV1EWebsocketMessagetypeEnumTypeTransformer._();
 
-  String encode(WebsocketRequestServerGetWebsocketIDV1EWebsocketMessagetypeEnum data) => data.value;
+  String encode(WebsocketRequestServerGetWebsocketIDV1EWebsocketMessagetypeEnum data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a WebsocketRequestServerGetWebsocketIDV1EWebsocketMessagetypeEnum.
+  /// Returns the instance of [WebsocketRequestServerGetWebsocketIDV1EWebsocketMessagetypeEnum] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -160,6 +162,9 @@ class WebsocketRequestServerGetWebsocketIDV1EWebsocketMessagetypeEnumTypeTransfo
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   WebsocketRequestServerGetWebsocketIDV1EWebsocketMessagetypeEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data is WebsocketRequestServerGetWebsocketIDV1EWebsocketMessagetypeEnum) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'RequestServer-GetWebsocketID-V1': return WebsocketRequestServerGetWebsocketIDV1EWebsocketMessagetypeEnum.requestServerGetWebsocketIDV1;
@@ -172,7 +177,7 @@ class WebsocketRequestServerGetWebsocketIDV1EWebsocketMessagetypeEnumTypeTransfo
     return null;
   }
 
-  /// Singleton [WebsocketRequestServerGetWebsocketIDV1EWebsocketMessagetypeEnumTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static WebsocketRequestServerGetWebsocketIDV1EWebsocketMessagetypeEnumTypeTransformer? _instance;
 }
 

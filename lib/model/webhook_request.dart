@@ -20,6 +20,7 @@ class WebhookRequest {
     required this.eWebhookModule,
     this.eWebhookEzsignevent,
     this.eWebhookManagementevent,
+    this.eWebhookRealestateevent,
     required this.sWebhookUrl,
     required this.sWebhookEmailfailed,
     required this.bWebhookIsactive,
@@ -81,6 +82,14 @@ class WebhookRequest {
   ///
   FieldEWebhookManagementevent? eWebhookManagementevent;
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEWebhookRealestateevent? eWebhookRealestateevent;
+
   /// The URL of the Webhook callback
   String sWebhookUrl;
 
@@ -111,6 +120,7 @@ class WebhookRequest {
     other.eWebhookModule == eWebhookModule &&
     other.eWebhookEzsignevent == eWebhookEzsignevent &&
     other.eWebhookManagementevent == eWebhookManagementevent &&
+    other.eWebhookRealestateevent == eWebhookRealestateevent &&
     other.sWebhookUrl == sWebhookUrl &&
     other.sWebhookEmailfailed == sWebhookEmailfailed &&
     other.bWebhookIsactive == bWebhookIsactive &&
@@ -127,6 +137,7 @@ class WebhookRequest {
     (eWebhookModule.hashCode) +
     (eWebhookEzsignevent == null ? 0 : eWebhookEzsignevent!.hashCode) +
     (eWebhookManagementevent == null ? 0 : eWebhookManagementevent!.hashCode) +
+    (eWebhookRealestateevent == null ? 0 : eWebhookRealestateevent!.hashCode) +
     (sWebhookUrl.hashCode) +
     (sWebhookEmailfailed.hashCode) +
     (bWebhookIsactive.hashCode) +
@@ -134,7 +145,7 @@ class WebhookRequest {
     (bWebhookSkipsslvalidation.hashCode);
 
   @override
-  String toString() => 'WebhookRequest[pkiWebhookID=$pkiWebhookID, fkiAuthenticationexternalID=$fkiAuthenticationexternalID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sWebhookDescription=$sWebhookDescription, eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, sWebhookUrl=$sWebhookUrl, sWebhookEmailfailed=$sWebhookEmailfailed, bWebhookIsactive=$bWebhookIsactive, bWebhookIssigned=$bWebhookIssigned, bWebhookSkipsslvalidation=$bWebhookSkipsslvalidation]';
+  String toString() => 'WebhookRequest[pkiWebhookID=$pkiWebhookID, fkiAuthenticationexternalID=$fkiAuthenticationexternalID, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sWebhookDescription=$sWebhookDescription, eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, eWebhookRealestateevent=$eWebhookRealestateevent, sWebhookUrl=$sWebhookUrl, sWebhookEmailfailed=$sWebhookEmailfailed, bWebhookIsactive=$bWebhookIsactive, bWebhookIssigned=$bWebhookIssigned, bWebhookSkipsslvalidation=$bWebhookSkipsslvalidation]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -164,6 +175,11 @@ class WebhookRequest {
       json[r'eWebhookManagementevent'] = this.eWebhookManagementevent;
     } else {
       json[r'eWebhookManagementevent'] = null;
+    }
+    if (this.eWebhookRealestateevent != null) {
+      json[r'eWebhookRealestateevent'] = this.eWebhookRealestateevent;
+    } else {
+      json[r'eWebhookRealestateevent'] = null;
     }
       json[r'sWebhookUrl'] = this.sWebhookUrl;
       json[r'sWebhookEmailfailed'] = this.sWebhookEmailfailed;
@@ -211,6 +227,7 @@ class WebhookRequest {
         eWebhookModule: FieldEWebhookModule.fromJson(json[r'eWebhookModule'])!,
         eWebhookEzsignevent: FieldEWebhookEzsignevent.fromJson(json[r'eWebhookEzsignevent']),
         eWebhookManagementevent: FieldEWebhookManagementevent.fromJson(json[r'eWebhookManagementevent']),
+        eWebhookRealestateevent: FieldEWebhookRealestateevent.fromJson(json[r'eWebhookRealestateevent']),
         sWebhookUrl: mapValueOfType<String>(json, r'sWebhookUrl')!,
         sWebhookEmailfailed: mapValueOfType<String>(json, r'sWebhookEmailfailed')!,
         bWebhookIsactive: mapValueOfType<bool>(json, r'bWebhookIsactive')!,

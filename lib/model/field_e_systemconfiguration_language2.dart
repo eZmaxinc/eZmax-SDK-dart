@@ -11,31 +11,30 @@
 part of openapi.api;
 
 /// The type of the english for the client
-class FieldESystemconfigurationLanguage2 {
-  /// Instantiate a new enum with the provided [value].
-  const FieldESystemconfigurationLanguage2._(this.value);
+enum FieldESystemconfigurationLanguage2 {
+  enCA._(r'en_CA'),
+  enQC._(r'en_QC'),
+  enUS._(r'en_US'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldESystemconfigurationLanguage2._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const enCA = FieldESystemconfigurationLanguage2._(r'en_CA');
-  static const enQC = FieldESystemconfigurationLanguage2._(r'en_QC');
-  static const enUS = FieldESystemconfigurationLanguage2._(r'en_US');
-
-  /// List of all possible values in this [enum][FieldESystemconfigurationLanguage2].
-  static const values = <FieldESystemconfigurationLanguage2>[
-    enCA,
-    enQC,
-    enUS,
-  ];
-
+  /// Returns the instance of [FieldESystemconfigurationLanguage2] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldESystemconfigurationLanguage2? fromJson(dynamic value) => FieldESystemconfigurationLanguage2TypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldESystemconfigurationLanguage2]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldESystemconfigurationLanguage2> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldESystemconfigurationLanguage2>[];
     if (json is List && json.isNotEmpty) {
@@ -57,9 +56,11 @@ class FieldESystemconfigurationLanguage2TypeTransformer {
 
   const FieldESystemconfigurationLanguage2TypeTransformer._();
 
-  String encode(FieldESystemconfigurationLanguage2 data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldESystemconfigurationLanguage2 data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldESystemconfigurationLanguage2.
+  /// Returns the instance of [FieldESystemconfigurationLanguage2] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -68,6 +69,9 @@ class FieldESystemconfigurationLanguage2TypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldESystemconfigurationLanguage2? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldESystemconfigurationLanguage2) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'en_CA': return FieldESystemconfigurationLanguage2.enCA;
@@ -82,7 +86,7 @@ class FieldESystemconfigurationLanguage2TypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldESystemconfigurationLanguage2TypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldESystemconfigurationLanguage2TypeTransformer? _instance;
 }
 

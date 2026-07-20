@@ -11,33 +11,31 @@
 part of openapi.api;
 
 /// The limittype of the Ezsigntemplatepublic
-class FieldEEzsigntemplatepublicLimittype {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsigntemplatepublicLimittype._(this.value);
+enum FieldEEzsigntemplatepublicLimittype {
+  hour._(r'Hour'),
+  day._(r'Day'),
+  month._(r'Month'),
+  total._(r'Total'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsigntemplatepublicLimittype._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const hour = FieldEEzsigntemplatepublicLimittype._(r'Hour');
-  static const day = FieldEEzsigntemplatepublicLimittype._(r'Day');
-  static const month = FieldEEzsigntemplatepublicLimittype._(r'Month');
-  static const total = FieldEEzsigntemplatepublicLimittype._(r'Total');
-
-  /// List of all possible values in this [enum][FieldEEzsigntemplatepublicLimittype].
-  static const values = <FieldEEzsigntemplatepublicLimittype>[
-    hour,
-    day,
-    month,
-    total,
-  ];
-
+  /// Returns the instance of [FieldEEzsigntemplatepublicLimittype] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsigntemplatepublicLimittype? fromJson(dynamic value) => FieldEEzsigntemplatepublicLimittypeTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsigntemplatepublicLimittype]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsigntemplatepublicLimittype> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsigntemplatepublicLimittype>[];
     if (json is List && json.isNotEmpty) {
@@ -59,9 +57,11 @@ class FieldEEzsigntemplatepublicLimittypeTypeTransformer {
 
   const FieldEEzsigntemplatepublicLimittypeTypeTransformer._();
 
-  String encode(FieldEEzsigntemplatepublicLimittype data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsigntemplatepublicLimittype data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsigntemplatepublicLimittype.
+  /// Returns the instance of [FieldEEzsigntemplatepublicLimittype] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -70,6 +70,9 @@ class FieldEEzsigntemplatepublicLimittypeTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsigntemplatepublicLimittype? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsigntemplatepublicLimittype) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Hour': return FieldEEzsigntemplatepublicLimittype.hour;
@@ -85,7 +88,7 @@ class FieldEEzsigntemplatepublicLimittypeTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsigntemplatepublicLimittypeTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsigntemplatepublicLimittypeTypeTransformer? _instance;
 }
 

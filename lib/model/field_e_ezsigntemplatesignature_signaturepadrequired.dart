@@ -11,31 +11,30 @@
 part of openapi.api;
 
 /// Whether the signature pad is required or not.
-class FieldEEzsigntemplatesignatureSignaturepadrequired {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsigntemplatesignatureSignaturepadrequired._(this.value);
+enum FieldEEzsigntemplatesignatureSignaturepadrequired {
+  no._(r'No'),
+  bestEffort._(r'BestEffort'),
+  mandatory._(r'Mandatory'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsigntemplatesignatureSignaturepadrequired._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const no = FieldEEzsigntemplatesignatureSignaturepadrequired._(r'No');
-  static const bestEffort = FieldEEzsigntemplatesignatureSignaturepadrequired._(r'BestEffort');
-  static const mandatory = FieldEEzsigntemplatesignatureSignaturepadrequired._(r'Mandatory');
-
-  /// List of all possible values in this [enum][FieldEEzsigntemplatesignatureSignaturepadrequired].
-  static const values = <FieldEEzsigntemplatesignatureSignaturepadrequired>[
-    no,
-    bestEffort,
-    mandatory,
-  ];
-
+  /// Returns the instance of [FieldEEzsigntemplatesignatureSignaturepadrequired] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsigntemplatesignatureSignaturepadrequired? fromJson(dynamic value) => FieldEEzsigntemplatesignatureSignaturepadrequiredTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsigntemplatesignatureSignaturepadrequired]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsigntemplatesignatureSignaturepadrequired> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsigntemplatesignatureSignaturepadrequired>[];
     if (json is List && json.isNotEmpty) {
@@ -57,9 +56,11 @@ class FieldEEzsigntemplatesignatureSignaturepadrequiredTypeTransformer {
 
   const FieldEEzsigntemplatesignatureSignaturepadrequiredTypeTransformer._();
 
-  String encode(FieldEEzsigntemplatesignatureSignaturepadrequired data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsigntemplatesignatureSignaturepadrequired data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsigntemplatesignatureSignaturepadrequired.
+  /// Returns the instance of [FieldEEzsigntemplatesignatureSignaturepadrequired] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -68,6 +69,9 @@ class FieldEEzsigntemplatesignatureSignaturepadrequiredTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsigntemplatesignatureSignaturepadrequired? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsigntemplatesignatureSignaturepadrequired) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'No': return FieldEEzsigntemplatesignatureSignaturepadrequired.no;
@@ -82,7 +86,7 @@ class FieldEEzsigntemplatesignatureSignaturepadrequiredTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsigntemplatesignatureSignaturepadrequiredTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsigntemplatesignatureSignaturepadrequiredTypeTransformer? _instance;
 }
 

@@ -11,41 +11,35 @@
 part of openapi.api;
 
 /// The location of the tooltip relative to the Ezsignformfieldgroup's location.
-class FieldEEzsignformfieldgroupTooltipposition {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsignformfieldgroupTooltipposition._(this.value);
+enum FieldEEzsignformfieldgroupTooltipposition {
+  topLeft._(r'TopLeft'),
+  topCenter._(r'TopCenter'),
+  topRight._(r'TopRight'),
+  middleLeft._(r'MiddleLeft'),
+  middleRight._(r'MiddleRight'),
+  bottomLeft._(r'BottomLeft'),
+  bottomCenter._(r'BottomCenter'),
+  bottomRight._(r'BottomRight'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsignformfieldgroupTooltipposition._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const topLeft = FieldEEzsignformfieldgroupTooltipposition._(r'TopLeft');
-  static const topCenter = FieldEEzsignformfieldgroupTooltipposition._(r'TopCenter');
-  static const topRight = FieldEEzsignformfieldgroupTooltipposition._(r'TopRight');
-  static const middleLeft = FieldEEzsignformfieldgroupTooltipposition._(r'MiddleLeft');
-  static const middleRight = FieldEEzsignformfieldgroupTooltipposition._(r'MiddleRight');
-  static const bottomLeft = FieldEEzsignformfieldgroupTooltipposition._(r'BottomLeft');
-  static const bottomCenter = FieldEEzsignformfieldgroupTooltipposition._(r'BottomCenter');
-  static const bottomRight = FieldEEzsignformfieldgroupTooltipposition._(r'BottomRight');
-
-  /// List of all possible values in this [enum][FieldEEzsignformfieldgroupTooltipposition].
-  static const values = <FieldEEzsignformfieldgroupTooltipposition>[
-    topLeft,
-    topCenter,
-    topRight,
-    middleLeft,
-    middleRight,
-    bottomLeft,
-    bottomCenter,
-    bottomRight,
-  ];
-
+  /// Returns the instance of [FieldEEzsignformfieldgroupTooltipposition] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsignformfieldgroupTooltipposition? fromJson(dynamic value) => FieldEEzsignformfieldgroupTooltippositionTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsignformfieldgroupTooltipposition]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsignformfieldgroupTooltipposition> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsignformfieldgroupTooltipposition>[];
     if (json is List && json.isNotEmpty) {
@@ -67,9 +61,11 @@ class FieldEEzsignformfieldgroupTooltippositionTypeTransformer {
 
   const FieldEEzsignformfieldgroupTooltippositionTypeTransformer._();
 
-  String encode(FieldEEzsignformfieldgroupTooltipposition data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsignformfieldgroupTooltipposition data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsignformfieldgroupTooltipposition.
+  /// Returns the instance of [FieldEEzsignformfieldgroupTooltipposition] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -78,6 +74,9 @@ class FieldEEzsignformfieldgroupTooltippositionTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsignformfieldgroupTooltipposition? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsignformfieldgroupTooltipposition) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'TopLeft': return FieldEEzsignformfieldgroupTooltipposition.topLeft;
@@ -97,7 +96,7 @@ class FieldEEzsignformfieldgroupTooltippositionTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsignformfieldgroupTooltippositionTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsignformfieldgroupTooltippositionTypeTransformer? _instance;
 }
 

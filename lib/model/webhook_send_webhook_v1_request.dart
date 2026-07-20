@@ -16,6 +16,7 @@ class WebhookSendWebhookV1Request {
     required this.eWebhookModule,
     this.eWebhookEzsignevent,
     this.eWebhookManagementevent,
+    this.eWebhookRealestateevent,
     this.fkiEzsignfolderID,
     this.fkiEzsigndocumentID,
     this.fkiEzsignsignerID,
@@ -40,6 +41,14 @@ class WebhookSendWebhookV1Request {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   FieldEWebhookManagementevent? eWebhookManagementevent;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEWebhookRealestateevent? eWebhookRealestateevent;
 
   /// The unique ID of the Ezsignfolder
   ///
@@ -102,6 +111,7 @@ class WebhookSendWebhookV1Request {
     other.eWebhookModule == eWebhookModule &&
     other.eWebhookEzsignevent == eWebhookEzsignevent &&
     other.eWebhookManagementevent == eWebhookManagementevent &&
+    other.eWebhookRealestateevent == eWebhookRealestateevent &&
     other.fkiEzsignfolderID == fkiEzsignfolderID &&
     other.fkiEzsigndocumentID == fkiEzsigndocumentID &&
     other.fkiEzsignsignerID == fkiEzsignsignerID &&
@@ -114,6 +124,7 @@ class WebhookSendWebhookV1Request {
     (eWebhookModule.hashCode) +
     (eWebhookEzsignevent == null ? 0 : eWebhookEzsignevent!.hashCode) +
     (eWebhookManagementevent == null ? 0 : eWebhookManagementevent!.hashCode) +
+    (eWebhookRealestateevent == null ? 0 : eWebhookRealestateevent!.hashCode) +
     (fkiEzsignfolderID == null ? 0 : fkiEzsignfolderID!.hashCode) +
     (fkiEzsigndocumentID == null ? 0 : fkiEzsigndocumentID!.hashCode) +
     (fkiEzsignsignerID == null ? 0 : fkiEzsignsignerID!.hashCode) +
@@ -121,7 +132,7 @@ class WebhookSendWebhookV1Request {
     (fkiUserstagedID == null ? 0 : fkiUserstagedID!.hashCode);
 
   @override
-  String toString() => 'WebhookSendWebhookV1Request[eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, fkiEzsignfolderID=$fkiEzsignfolderID, fkiEzsigndocumentID=$fkiEzsigndocumentID, fkiEzsignsignerID=$fkiEzsignsignerID, fkiUserID=$fkiUserID, fkiUserstagedID=$fkiUserstagedID]';
+  String toString() => 'WebhookSendWebhookV1Request[eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, eWebhookRealestateevent=$eWebhookRealestateevent, fkiEzsignfolderID=$fkiEzsignfolderID, fkiEzsigndocumentID=$fkiEzsigndocumentID, fkiEzsignsignerID=$fkiEzsignsignerID, fkiUserID=$fkiUserID, fkiUserstagedID=$fkiUserstagedID]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -135,6 +146,11 @@ class WebhookSendWebhookV1Request {
       json[r'eWebhookManagementevent'] = this.eWebhookManagementevent;
     } else {
       json[r'eWebhookManagementevent'] = null;
+    }
+    if (this.eWebhookRealestateevent != null) {
+      json[r'eWebhookRealestateevent'] = this.eWebhookRealestateevent;
+    } else {
+      json[r'eWebhookRealestateevent'] = null;
     }
     if (this.fkiEzsignfolderID != null) {
       json[r'fkiEzsignfolderID'] = this.fkiEzsignfolderID;
@@ -184,6 +200,7 @@ class WebhookSendWebhookV1Request {
         eWebhookModule: FieldEWebhookModule.fromJson(json[r'eWebhookModule'])!,
         eWebhookEzsignevent: CustomEWebhookEzsignevent.fromJson(json[r'eWebhookEzsignevent']),
         eWebhookManagementevent: FieldEWebhookManagementevent.fromJson(json[r'eWebhookManagementevent']),
+        eWebhookRealestateevent: FieldEWebhookRealestateevent.fromJson(json[r'eWebhookRealestateevent']),
         fkiEzsignfolderID: mapValueOfType<int>(json, r'fkiEzsignfolderID'),
         fkiEzsigndocumentID: mapValueOfType<int>(json, r'fkiEzsigndocumentID'),
         fkiEzsignsignerID: mapValueOfType<int>(json, r'fkiEzsignsignerID'),

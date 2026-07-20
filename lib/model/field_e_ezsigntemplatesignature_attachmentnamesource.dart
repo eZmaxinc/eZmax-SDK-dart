@@ -11,31 +11,30 @@
 part of openapi.api;
 
 /// The source of the name of the attachment added to the Ezsigntemplatesignature
-class FieldEEzsigntemplatesignatureAttachmentnamesource {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsigntemplatesignatureAttachmentnamesource._(this.value);
+enum FieldEEzsigntemplatesignatureAttachmentnamesource {
+  description._(r'Description'),
+  customer._(r'Customer'),
+  descriptionCustomer._(r'DescriptionCustomer'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsigntemplatesignatureAttachmentnamesource._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const description = FieldEEzsigntemplatesignatureAttachmentnamesource._(r'Description');
-  static const customer = FieldEEzsigntemplatesignatureAttachmentnamesource._(r'Customer');
-  static const descriptionCustomer = FieldEEzsigntemplatesignatureAttachmentnamesource._(r'DescriptionCustomer');
-
-  /// List of all possible values in this [enum][FieldEEzsigntemplatesignatureAttachmentnamesource].
-  static const values = <FieldEEzsigntemplatesignatureAttachmentnamesource>[
-    description,
-    customer,
-    descriptionCustomer,
-  ];
-
+  /// Returns the instance of [FieldEEzsigntemplatesignatureAttachmentnamesource] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsigntemplatesignatureAttachmentnamesource? fromJson(dynamic value) => FieldEEzsigntemplatesignatureAttachmentnamesourceTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsigntemplatesignatureAttachmentnamesource]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsigntemplatesignatureAttachmentnamesource> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsigntemplatesignatureAttachmentnamesource>[];
     if (json is List && json.isNotEmpty) {
@@ -57,9 +56,11 @@ class FieldEEzsigntemplatesignatureAttachmentnamesourceTypeTransformer {
 
   const FieldEEzsigntemplatesignatureAttachmentnamesourceTypeTransformer._();
 
-  String encode(FieldEEzsigntemplatesignatureAttachmentnamesource data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsigntemplatesignatureAttachmentnamesource data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsigntemplatesignatureAttachmentnamesource.
+  /// Returns the instance of [FieldEEzsigntemplatesignatureAttachmentnamesource] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -68,6 +69,9 @@ class FieldEEzsigntemplatesignatureAttachmentnamesourceTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsigntemplatesignatureAttachmentnamesource? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsigntemplatesignatureAttachmentnamesource) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Description': return FieldEEzsigntemplatesignatureAttachmentnamesource.description;
@@ -82,7 +86,7 @@ class FieldEEzsigntemplatesignatureAttachmentnamesourceTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsigntemplatesignatureAttachmentnamesourceTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsigntemplatesignatureAttachmentnamesourceTypeTransformer? _instance;
 }
 

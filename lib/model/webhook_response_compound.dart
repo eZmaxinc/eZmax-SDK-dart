@@ -22,6 +22,7 @@ class WebhookResponseCompound {
     this.eWebhookEzmaxpartnerevent,
     this.eWebhookEzsignevent,
     this.eWebhookManagementevent,
+    this.eWebhookRealestateevent,
     required this.sWebhookUrl,
     required this.sWebhookEmailfailed,
     this.sWebhookApikey,
@@ -107,6 +108,14 @@ class WebhookResponseCompound {
   ///
   FieldEWebhookManagementevent? eWebhookManagementevent;
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEWebhookRealestateevent? eWebhookRealestateevent;
+
   /// The URL of the Webhook callback
   String sWebhookUrl;
 
@@ -188,6 +197,7 @@ class WebhookResponseCompound {
     other.eWebhookEzmaxpartnerevent == eWebhookEzmaxpartnerevent &&
     other.eWebhookEzsignevent == eWebhookEzsignevent &&
     other.eWebhookManagementevent == eWebhookManagementevent &&
+    other.eWebhookRealestateevent == eWebhookRealestateevent &&
     other.sWebhookUrl == sWebhookUrl &&
     other.sWebhookEmailfailed == sWebhookEmailfailed &&
     other.sWebhookApikey == sWebhookApikey &&
@@ -213,6 +223,7 @@ class WebhookResponseCompound {
     (eWebhookEzmaxpartnerevent == null ? 0 : eWebhookEzmaxpartnerevent!.hashCode) +
     (eWebhookEzsignevent == null ? 0 : eWebhookEzsignevent!.hashCode) +
     (eWebhookManagementevent == null ? 0 : eWebhookManagementevent!.hashCode) +
+    (eWebhookRealestateevent == null ? 0 : eWebhookRealestateevent!.hashCode) +
     (sWebhookUrl.hashCode) +
     (sWebhookEmailfailed.hashCode) +
     (sWebhookApikey == null ? 0 : sWebhookApikey!.hashCode) +
@@ -227,7 +238,7 @@ class WebhookResponseCompound {
     (aObjWebhookheader.hashCode);
 
   @override
-  String toString() => 'WebhookResponseCompound[pkiWebhookID=$pkiWebhookID, fkiAuthenticationexternalID=$fkiAuthenticationexternalID, sWebhookDescription=$sWebhookDescription, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, eWebhookModule=$eWebhookModule, eWebhookEzmaxpartnerevent=$eWebhookEzmaxpartnerevent, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, sWebhookUrl=$sWebhookUrl, sWebhookEmailfailed=$sWebhookEmailfailed, sWebhookApikey=$sWebhookApikey, sWebhookSecret=$sWebhookSecret, bWebhookIsactive=$bWebhookIsactive, bWebhookIssigned=$bWebhookIssigned, bWebhookSkipsslvalidation=$bWebhookSkipsslvalidation, sAuthenticationexternalDescription=$sAuthenticationexternalDescription, objAudit=$objAudit, sWebhookEvent=$sWebhookEvent, sWebhookAuthentificationexternalerror=$sWebhookAuthentificationexternalerror, aObjWebhookheader=$aObjWebhookheader]';
+  String toString() => 'WebhookResponseCompound[pkiWebhookID=$pkiWebhookID, fkiAuthenticationexternalID=$fkiAuthenticationexternalID, sWebhookDescription=$sWebhookDescription, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, eWebhookModule=$eWebhookModule, eWebhookEzmaxpartnerevent=$eWebhookEzmaxpartnerevent, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, eWebhookRealestateevent=$eWebhookRealestateevent, sWebhookUrl=$sWebhookUrl, sWebhookEmailfailed=$sWebhookEmailfailed, sWebhookApikey=$sWebhookApikey, sWebhookSecret=$sWebhookSecret, bWebhookIsactive=$bWebhookIsactive, bWebhookIssigned=$bWebhookIssigned, bWebhookSkipsslvalidation=$bWebhookSkipsslvalidation, sAuthenticationexternalDescription=$sAuthenticationexternalDescription, objAudit=$objAudit, sWebhookEvent=$sWebhookEvent, sWebhookAuthentificationexternalerror=$sWebhookAuthentificationexternalerror, aObjWebhookheader=$aObjWebhookheader]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -267,6 +278,11 @@ class WebhookResponseCompound {
       json[r'eWebhookManagementevent'] = this.eWebhookManagementevent;
     } else {
       json[r'eWebhookManagementevent'] = null;
+    }
+    if (this.eWebhookRealestateevent != null) {
+      json[r'eWebhookRealestateevent'] = this.eWebhookRealestateevent;
+    } else {
+      json[r'eWebhookRealestateevent'] = null;
     }
       json[r'sWebhookUrl'] = this.sWebhookUrl;
       json[r'sWebhookEmailfailed'] = this.sWebhookEmailfailed;
@@ -345,6 +361,7 @@ class WebhookResponseCompound {
         eWebhookEzmaxpartnerevent: FieldEWebhookEzmaxpartnerevent.fromJson(json[r'eWebhookEzmaxpartnerevent']),
         eWebhookEzsignevent: FieldEWebhookEzsignevent.fromJson(json[r'eWebhookEzsignevent']),
         eWebhookManagementevent: FieldEWebhookManagementevent.fromJson(json[r'eWebhookManagementevent']),
+        eWebhookRealestateevent: FieldEWebhookRealestateevent.fromJson(json[r'eWebhookRealestateevent']),
         sWebhookUrl: mapValueOfType<String>(json, r'sWebhookUrl')!,
         sWebhookEmailfailed: mapValueOfType<String>(json, r'sWebhookEmailfailed')!,
         sWebhookApikey: mapValueOfType<String>(json, r'sWebhookApikey'),

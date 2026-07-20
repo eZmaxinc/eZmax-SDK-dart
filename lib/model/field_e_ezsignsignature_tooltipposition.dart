@@ -11,41 +11,35 @@
 part of openapi.api;
 
 /// The location of the tooltip relative to the Ezsignsignature's location.
-class FieldEEzsignsignatureTooltipposition {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsignsignatureTooltipposition._(this.value);
+enum FieldEEzsignsignatureTooltipposition {
+  topLeft._(r'TopLeft'),
+  topCenter._(r'TopCenter'),
+  topRight._(r'TopRight'),
+  middleLeft._(r'MiddleLeft'),
+  middleRight._(r'MiddleRight'),
+  bottomLeft._(r'BottomLeft'),
+  bottomCenter._(r'BottomCenter'),
+  bottomRight._(r'BottomRight'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsignsignatureTooltipposition._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const topLeft = FieldEEzsignsignatureTooltipposition._(r'TopLeft');
-  static const topCenter = FieldEEzsignsignatureTooltipposition._(r'TopCenter');
-  static const topRight = FieldEEzsignsignatureTooltipposition._(r'TopRight');
-  static const middleLeft = FieldEEzsignsignatureTooltipposition._(r'MiddleLeft');
-  static const middleRight = FieldEEzsignsignatureTooltipposition._(r'MiddleRight');
-  static const bottomLeft = FieldEEzsignsignatureTooltipposition._(r'BottomLeft');
-  static const bottomCenter = FieldEEzsignsignatureTooltipposition._(r'BottomCenter');
-  static const bottomRight = FieldEEzsignsignatureTooltipposition._(r'BottomRight');
-
-  /// List of all possible values in this [enum][FieldEEzsignsignatureTooltipposition].
-  static const values = <FieldEEzsignsignatureTooltipposition>[
-    topLeft,
-    topCenter,
-    topRight,
-    middleLeft,
-    middleRight,
-    bottomLeft,
-    bottomCenter,
-    bottomRight,
-  ];
-
+  /// Returns the instance of [FieldEEzsignsignatureTooltipposition] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsignsignatureTooltipposition? fromJson(dynamic value) => FieldEEzsignsignatureTooltippositionTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsignsignatureTooltipposition]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsignsignatureTooltipposition> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsignsignatureTooltipposition>[];
     if (json is List && json.isNotEmpty) {
@@ -67,9 +61,11 @@ class FieldEEzsignsignatureTooltippositionTypeTransformer {
 
   const FieldEEzsignsignatureTooltippositionTypeTransformer._();
 
-  String encode(FieldEEzsignsignatureTooltipposition data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsignsignatureTooltipposition data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsignsignatureTooltipposition.
+  /// Returns the instance of [FieldEEzsignsignatureTooltipposition] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -78,6 +74,9 @@ class FieldEEzsignsignatureTooltippositionTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsignsignatureTooltipposition? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsignsignatureTooltipposition) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'TopLeft': return FieldEEzsignsignatureTooltipposition.topLeft;
@@ -97,7 +96,7 @@ class FieldEEzsignsignatureTooltippositionTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsignsignatureTooltippositionTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsignsignatureTooltippositionTypeTransformer? _instance;
 }
 

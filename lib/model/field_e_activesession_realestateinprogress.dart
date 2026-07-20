@@ -11,33 +11,31 @@
 part of openapi.api;
 
 /// Clone rights for active real estate folders
-class FieldEActivesessionRealestateinprogress {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEActivesessionRealestateinprogress._(this.value);
+enum FieldEActivesessionRealestateinprogress {
+  no._(r'No'),
+  read._(r'Read'),
+  modify._(r'Modify'),
+  create._(r'Create'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEActivesessionRealestateinprogress._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const no = FieldEActivesessionRealestateinprogress._(r'No');
-  static const read = FieldEActivesessionRealestateinprogress._(r'Read');
-  static const modify = FieldEActivesessionRealestateinprogress._(r'Modify');
-  static const create = FieldEActivesessionRealestateinprogress._(r'Create');
-
-  /// List of all possible values in this [enum][FieldEActivesessionRealestateinprogress].
-  static const values = <FieldEActivesessionRealestateinprogress>[
-    no,
-    read,
-    modify,
-    create,
-  ];
-
+  /// Returns the instance of [FieldEActivesessionRealestateinprogress] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEActivesessionRealestateinprogress? fromJson(dynamic value) => FieldEActivesessionRealestateinprogressTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEActivesessionRealestateinprogress]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEActivesessionRealestateinprogress> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEActivesessionRealestateinprogress>[];
     if (json is List && json.isNotEmpty) {
@@ -59,9 +57,11 @@ class FieldEActivesessionRealestateinprogressTypeTransformer {
 
   const FieldEActivesessionRealestateinprogressTypeTransformer._();
 
-  String encode(FieldEActivesessionRealestateinprogress data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEActivesessionRealestateinprogress data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEActivesessionRealestateinprogress.
+  /// Returns the instance of [FieldEActivesessionRealestateinprogress] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -70,6 +70,9 @@ class FieldEActivesessionRealestateinprogressTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEActivesessionRealestateinprogress? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEActivesessionRealestateinprogress) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'No': return FieldEActivesessionRealestateinprogress.no;
@@ -85,7 +88,7 @@ class FieldEActivesessionRealestateinprogressTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEActivesessionRealestateinprogressTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEActivesessionRealestateinprogressTypeTransformer? _instance;
 }
 

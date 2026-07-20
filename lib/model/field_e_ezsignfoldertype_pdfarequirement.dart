@@ -11,31 +11,30 @@
 part of openapi.api;
 
 /// The PDF/a requirement of the Ezsignfolder type.  * **None** is for not enforcing the PDF/a * **Declared** is to check the value declared by the document * **Verified** is to verify the document to see the compliance. May takes more time processing the document
-class FieldEEzsignfoldertypePdfarequirement {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsignfoldertypePdfarequirement._(this.value);
+enum FieldEEzsignfoldertypePdfarequirement {
+  none._(r'None'),
+  declared._(r'Declared'),
+  verified._(r'Verified'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsignfoldertypePdfarequirement._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const none = FieldEEzsignfoldertypePdfarequirement._(r'None');
-  static const declared = FieldEEzsignfoldertypePdfarequirement._(r'Declared');
-  static const verified = FieldEEzsignfoldertypePdfarequirement._(r'Verified');
-
-  /// List of all possible values in this [enum][FieldEEzsignfoldertypePdfarequirement].
-  static const values = <FieldEEzsignfoldertypePdfarequirement>[
-    none,
-    declared,
-    verified,
-  ];
-
+  /// Returns the instance of [FieldEEzsignfoldertypePdfarequirement] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsignfoldertypePdfarequirement? fromJson(dynamic value) => FieldEEzsignfoldertypePdfarequirementTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsignfoldertypePdfarequirement]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsignfoldertypePdfarequirement> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsignfoldertypePdfarequirement>[];
     if (json is List && json.isNotEmpty) {
@@ -57,9 +56,11 @@ class FieldEEzsignfoldertypePdfarequirementTypeTransformer {
 
   const FieldEEzsignfoldertypePdfarequirementTypeTransformer._();
 
-  String encode(FieldEEzsignfoldertypePdfarequirement data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsignfoldertypePdfarequirement data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsignfoldertypePdfarequirement.
+  /// Returns the instance of [FieldEEzsignfoldertypePdfarequirement] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -68,6 +69,9 @@ class FieldEEzsignfoldertypePdfarequirementTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsignfoldertypePdfarequirement? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsignfoldertypePdfarequirement) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'None': return FieldEEzsignfoldertypePdfarequirement.none;
@@ -82,7 +86,7 @@ class FieldEEzsignfoldertypePdfarequirementTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsignfoldertypePdfarequirementTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsignfoldertypePdfarequirementTypeTransformer? _instance;
 }
 

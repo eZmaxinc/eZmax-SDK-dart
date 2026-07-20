@@ -11,29 +11,29 @@
 part of openapi.api;
 
 /// The Font Weight
-class EnumFontweight {
-  /// Instantiate a new enum with the provided [value].
-  const EnumFontweight._(this.value);
+enum EnumFontweight {
+  normal._(r'Normal'),
+  bold._(r'Bold'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const EnumFontweight._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const normal = EnumFontweight._(r'Normal');
-  static const bold = EnumFontweight._(r'Bold');
-
-  /// List of all possible values in this [enum][EnumFontweight].
-  static const values = <EnumFontweight>[
-    normal,
-    bold,
-  ];
-
+  /// Returns the instance of [EnumFontweight] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static EnumFontweight? fromJson(dynamic value) => EnumFontweightTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [EnumFontweight]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<EnumFontweight> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EnumFontweight>[];
     if (json is List && json.isNotEmpty) {
@@ -55,9 +55,11 @@ class EnumFontweightTypeTransformer {
 
   const EnumFontweightTypeTransformer._();
 
-  String encode(EnumFontweight data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(EnumFontweight data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a EnumFontweight.
+  /// Returns the instance of [EnumFontweight] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -66,6 +68,9 @@ class EnumFontweightTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   EnumFontweight? decode(dynamic data, {bool allowNull = true}) {
+    if (data is EnumFontweight) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Normal': return EnumFontweight.normal;
@@ -79,7 +84,7 @@ class EnumFontweightTypeTransformer {
     return null;
   }
 
-  /// Singleton [EnumFontweightTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static EnumFontweightTypeTransformer? _instance;
 }
 

@@ -11,35 +11,32 @@
 part of openapi.api;
 
 /// The status of the Lead
-class FieldELeadStatus {
-  /// Instantiate a new enum with the provided [value].
-  const FieldELeadStatus._(this.value);
+enum FieldELeadStatus {
+  new_._(r'New'),
+  dispatching._(r'Dispatching'),
+  assigned._(r'Assigned'),
+  lost._(r'Lost'),
+  won._(r'Won'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldELeadStatus._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const new_ = FieldELeadStatus._(r'New');
-  static const dispatching = FieldELeadStatus._(r'Dispatching');
-  static const assigned = FieldELeadStatus._(r'Assigned');
-  static const lost = FieldELeadStatus._(r'Lost');
-  static const won = FieldELeadStatus._(r'Won');
-
-  /// List of all possible values in this [enum][FieldELeadStatus].
-  static const values = <FieldELeadStatus>[
-    new_,
-    dispatching,
-    assigned,
-    lost,
-    won,
-  ];
-
+  /// Returns the instance of [FieldELeadStatus] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldELeadStatus? fromJson(dynamic value) => FieldELeadStatusTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldELeadStatus]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldELeadStatus> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldELeadStatus>[];
     if (json is List && json.isNotEmpty) {
@@ -61,9 +58,11 @@ class FieldELeadStatusTypeTransformer {
 
   const FieldELeadStatusTypeTransformer._();
 
-  String encode(FieldELeadStatus data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldELeadStatus data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldELeadStatus.
+  /// Returns the instance of [FieldELeadStatus] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -72,6 +71,9 @@ class FieldELeadStatusTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldELeadStatus? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldELeadStatus) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'New': return FieldELeadStatus.new_;
@@ -88,7 +90,7 @@ class FieldELeadStatusTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldELeadStatusTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldELeadStatusTypeTransformer? _instance;
 }
 

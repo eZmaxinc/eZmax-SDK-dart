@@ -11,47 +11,38 @@
 part of openapi.api;
 
 /// The operator of the Ezsignelementdependency
-class FieldEEzsignelementdependencyOperator {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsignelementdependencyOperator._(this.value);
+enum FieldEEzsignelementdependencyOperator {
+  eq._(r'eq'),
+  neq._(r'neq'),
+  gt._(r'gt'),
+  gte._(r'gte'),
+  lt._(r'lt'),
+  lte._(r'lte'),
+  in_._(r'in'),
+  nin._(r'nin'),
+  rg._(r'rg'),
+  like._(r'like'),
+  between._(r'between'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsignelementdependencyOperator._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const eq = FieldEEzsignelementdependencyOperator._(r'eq');
-  static const neq = FieldEEzsignelementdependencyOperator._(r'neq');
-  static const gt = FieldEEzsignelementdependencyOperator._(r'gt');
-  static const gte = FieldEEzsignelementdependencyOperator._(r'gte');
-  static const lt = FieldEEzsignelementdependencyOperator._(r'lt');
-  static const lte = FieldEEzsignelementdependencyOperator._(r'lte');
-  static const in_ = FieldEEzsignelementdependencyOperator._(r'in');
-  static const nin = FieldEEzsignelementdependencyOperator._(r'nin');
-  static const rg = FieldEEzsignelementdependencyOperator._(r'rg');
-  static const like = FieldEEzsignelementdependencyOperator._(r'like');
-  static const between = FieldEEzsignelementdependencyOperator._(r'between');
-
-  /// List of all possible values in this [enum][FieldEEzsignelementdependencyOperator].
-  static const values = <FieldEEzsignelementdependencyOperator>[
-    eq,
-    neq,
-    gt,
-    gte,
-    lt,
-    lte,
-    in_,
-    nin,
-    rg,
-    like,
-    between,
-  ];
-
+  /// Returns the instance of [FieldEEzsignelementdependencyOperator] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsignelementdependencyOperator? fromJson(dynamic value) => FieldEEzsignelementdependencyOperatorTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsignelementdependencyOperator]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsignelementdependencyOperator> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsignelementdependencyOperator>[];
     if (json is List && json.isNotEmpty) {
@@ -73,9 +64,11 @@ class FieldEEzsignelementdependencyOperatorTypeTransformer {
 
   const FieldEEzsignelementdependencyOperatorTypeTransformer._();
 
-  String encode(FieldEEzsignelementdependencyOperator data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsignelementdependencyOperator data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsignelementdependencyOperator.
+  /// Returns the instance of [FieldEEzsignelementdependencyOperator] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -84,6 +77,9 @@ class FieldEEzsignelementdependencyOperatorTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsignelementdependencyOperator? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsignelementdependencyOperator) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'eq': return FieldEEzsignelementdependencyOperator.eq;
@@ -106,7 +102,7 @@ class FieldEEzsignelementdependencyOperatorTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsignelementdependencyOperatorTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsignelementdependencyOperatorTypeTransformer? _instance;
 }
 

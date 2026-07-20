@@ -11,29 +11,29 @@
 part of openapi.api;
 
 /// The order by for the Ezsignformfield in the CSV file.
-class FieldEEzsignbulksendEzsignformfieldorder {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsignbulksendEzsignformfieldorder._(this.value);
+enum FieldEEzsignbulksendEzsignformfieldorder {
+  position._(r'Position'),
+  name._(r'Name'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsignbulksendEzsignformfieldorder._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const position = FieldEEzsignbulksendEzsignformfieldorder._(r'Position');
-  static const name = FieldEEzsignbulksendEzsignformfieldorder._(r'Name');
-
-  /// List of all possible values in this [enum][FieldEEzsignbulksendEzsignformfieldorder].
-  static const values = <FieldEEzsignbulksendEzsignformfieldorder>[
-    position,
-    name,
-  ];
-
+  /// Returns the instance of [FieldEEzsignbulksendEzsignformfieldorder] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsignbulksendEzsignformfieldorder? fromJson(dynamic value) => FieldEEzsignbulksendEzsignformfieldorderTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsignbulksendEzsignformfieldorder]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsignbulksendEzsignformfieldorder> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsignbulksendEzsignformfieldorder>[];
     if (json is List && json.isNotEmpty) {
@@ -55,9 +55,11 @@ class FieldEEzsignbulksendEzsignformfieldorderTypeTransformer {
 
   const FieldEEzsignbulksendEzsignformfieldorderTypeTransformer._();
 
-  String encode(FieldEEzsignbulksendEzsignformfieldorder data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsignbulksendEzsignformfieldorder data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsignbulksendEzsignformfieldorder.
+  /// Returns the instance of [FieldEEzsignbulksendEzsignformfieldorder] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -66,6 +68,9 @@ class FieldEEzsignbulksendEzsignformfieldorderTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsignbulksendEzsignformfieldorder? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsignbulksendEzsignformfieldorder) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Position': return FieldEEzsignbulksendEzsignformfieldorder.position;
@@ -79,7 +84,7 @@ class FieldEEzsignbulksendEzsignformfieldorderTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsignbulksendEzsignformfieldorderTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsignbulksendEzsignformfieldorderTypeTransformer? _instance;
 }
 

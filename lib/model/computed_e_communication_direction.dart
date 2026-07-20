@@ -11,29 +11,29 @@
 part of openapi.api;
 
 /// The direction of the Communication
-class ComputedECommunicationDirection {
-  /// Instantiate a new enum with the provided [value].
-  const ComputedECommunicationDirection._(this.value);
+enum ComputedECommunicationDirection {
+  outbound._(r'Outbound'),
+  inbound._(r'Inbound'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const ComputedECommunicationDirection._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const outbound = ComputedECommunicationDirection._(r'Outbound');
-  static const inbound = ComputedECommunicationDirection._(r'Inbound');
-
-  /// List of all possible values in this [enum][ComputedECommunicationDirection].
-  static const values = <ComputedECommunicationDirection>[
-    outbound,
-    inbound,
-  ];
-
+  /// Returns the instance of [ComputedECommunicationDirection] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static ComputedECommunicationDirection? fromJson(dynamic value) => ComputedECommunicationDirectionTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [ComputedECommunicationDirection]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<ComputedECommunicationDirection> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <ComputedECommunicationDirection>[];
     if (json is List && json.isNotEmpty) {
@@ -55,9 +55,11 @@ class ComputedECommunicationDirectionTypeTransformer {
 
   const ComputedECommunicationDirectionTypeTransformer._();
 
-  String encode(ComputedECommunicationDirection data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(ComputedECommunicationDirection data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a ComputedECommunicationDirection.
+  /// Returns the instance of [ComputedECommunicationDirection] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -66,6 +68,9 @@ class ComputedECommunicationDirectionTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   ComputedECommunicationDirection? decode(dynamic data, {bool allowNull = true}) {
+    if (data is ComputedECommunicationDirection) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Outbound': return ComputedECommunicationDirection.outbound;
@@ -79,7 +84,7 @@ class ComputedECommunicationDirectionTypeTransformer {
     return null;
   }
 
-  /// Singleton [ComputedECommunicationDirectionTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static ComputedECommunicationDirectionTypeTransformer? _instance;
 }
 

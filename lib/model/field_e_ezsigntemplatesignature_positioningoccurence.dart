@@ -11,31 +11,30 @@
 part of openapi.api;
 
 /// The occurence of the pattern to add the Ezsigntemplatesignature  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**
-class FieldEEzsigntemplatesignaturePositioningoccurence {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsigntemplatesignaturePositioningoccurence._(this.value);
+enum FieldEEzsigntemplatesignaturePositioningoccurence {
+  all._(r'All'),
+  first._(r'First'),
+  last._(r'Last'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsigntemplatesignaturePositioningoccurence._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const all = FieldEEzsigntemplatesignaturePositioningoccurence._(r'All');
-  static const first = FieldEEzsigntemplatesignaturePositioningoccurence._(r'First');
-  static const last = FieldEEzsigntemplatesignaturePositioningoccurence._(r'Last');
-
-  /// List of all possible values in this [enum][FieldEEzsigntemplatesignaturePositioningoccurence].
-  static const values = <FieldEEzsigntemplatesignaturePositioningoccurence>[
-    all,
-    first,
-    last,
-  ];
-
+  /// Returns the instance of [FieldEEzsigntemplatesignaturePositioningoccurence] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsigntemplatesignaturePositioningoccurence? fromJson(dynamic value) => FieldEEzsigntemplatesignaturePositioningoccurenceTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsigntemplatesignaturePositioningoccurence]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsigntemplatesignaturePositioningoccurence> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsigntemplatesignaturePositioningoccurence>[];
     if (json is List && json.isNotEmpty) {
@@ -57,9 +56,11 @@ class FieldEEzsigntemplatesignaturePositioningoccurenceTypeTransformer {
 
   const FieldEEzsigntemplatesignaturePositioningoccurenceTypeTransformer._();
 
-  String encode(FieldEEzsigntemplatesignaturePositioningoccurence data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsigntemplatesignaturePositioningoccurence data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsigntemplatesignaturePositioningoccurence.
+  /// Returns the instance of [FieldEEzsigntemplatesignaturePositioningoccurence] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -68,6 +69,9 @@ class FieldEEzsigntemplatesignaturePositioningoccurenceTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsigntemplatesignaturePositioningoccurence? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsigntemplatesignaturePositioningoccurence) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'All': return FieldEEzsigntemplatesignaturePositioningoccurence.all;
@@ -82,7 +86,7 @@ class FieldEEzsigntemplatesignaturePositioningoccurenceTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsigntemplatesignaturePositioningoccurenceTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsigntemplatesignaturePositioningoccurenceTypeTransformer? _instance;
 }
 

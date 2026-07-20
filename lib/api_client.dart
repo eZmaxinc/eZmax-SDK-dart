@@ -2795,6 +2795,8 @@ class ApiClient {
           return FieldEActivesessionUsertypeTypeTransformer().decode(value);
         case 'FieldEActivesessionWeekdaystart':
           return FieldEActivesessionWeekdaystartTypeTransformer().decode(value);
+        case 'FieldEAgentSchedule':
+          return FieldEAgentScheduleTypeTransformer().decode(value);
         case 'FieldEAttachmentDocumenttype':
           return FieldEAttachmentDocumenttypeTypeTransformer().decode(value);
         case 'FieldEAttachmentPrivacy':
@@ -3077,6 +3079,8 @@ class ApiClient {
           return FieldEWebhookManagementeventTypeTransformer().decode(value);
         case 'FieldEWebhookModule':
           return FieldEWebhookModuleTypeTransformer().decode(value);
+        case 'FieldEWebhookRealestateevent':
+          return FieldEWebhookRealestateeventTypeTransformer().decode(value);
         case 'FieldEtInscriptionnotauthenticatedMortgagetype':
           return FieldEtInscriptionnotauthenticatedMortgagetypeTypeTransformer().decode(value);
         case 'FieldPksEzmaxclientOs':
@@ -3635,8 +3639,14 @@ class ApiClient {
           return ScimServiceProviderConfigBulk.fromJson(value);
         case 'ScimServiceProviderConfigChangePassword':
           return ScimServiceProviderConfigChangePassword.fromJson(value);
+        case 'ScimServiceProviderConfigEtag':
+          return ScimServiceProviderConfigEtag.fromJson(value);
         case 'ScimServiceProviderConfigFilter':
           return ScimServiceProviderConfigFilter.fromJson(value);
+        case 'ScimServiceProviderConfigPatch':
+          return ScimServiceProviderConfigPatch.fromJson(value);
+        case 'ScimServiceProviderConfigSort':
+          return ScimServiceProviderConfigSort.fromJson(value);
         case 'ScimUser':
           return ScimUser.fromJson(value);
         case 'ScimUserList':
@@ -4203,6 +4213,14 @@ class ApiClient {
           return WebhookGetObjectV2ResponseMPayload.fromJson(value);
         case 'WebhookListElement':
           return WebhookListElement.fromJson(value);
+        case 'WebhookRealestateInscriptionCreated':
+          return WebhookRealestateInscriptionCreated.fromJson(value);
+        case 'WebhookRealestateInscriptionModified':
+          return WebhookRealestateInscriptionModified.fromJson(value);
+        case 'WebhookRealestateInscriptionnotauthenticatedCreated':
+          return WebhookRealestateInscriptionnotauthenticatedCreated.fromJson(value);
+        case 'WebhookRealestateInscriptionnotauthenticatedModified':
+          return WebhookRealestateInscriptionnotauthenticatedModified.fromJson(value);
         case 'WebhookRegenerateApikeyV1Request':
           return WebhookRegenerateApikeyV1Request.fromJson(value);
         case 'WebhookRegenerateApikeyV1Response':

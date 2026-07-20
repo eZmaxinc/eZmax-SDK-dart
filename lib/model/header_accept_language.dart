@@ -11,31 +11,30 @@
 part of openapi.api;
 
 /// The language of the returned content.  1. **\\*** (or header not defined) Default language 2. **en** English 2. **fr** French  
-class HeaderAcceptLanguage {
-  /// Instantiate a new enum with the provided [value].
-  const HeaderAcceptLanguage._(this.value);
+enum HeaderAcceptLanguage {
+  star._(r'*'),
+  en._(r'en'),
+  fr._(r'fr'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const HeaderAcceptLanguage._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const star = HeaderAcceptLanguage._(r'*');
-  static const en = HeaderAcceptLanguage._(r'en');
-  static const fr = HeaderAcceptLanguage._(r'fr');
-
-  /// List of all possible values in this [enum][HeaderAcceptLanguage].
-  static const values = <HeaderAcceptLanguage>[
-    star,
-    en,
-    fr,
-  ];
-
+  /// Returns the instance of [HeaderAcceptLanguage] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static HeaderAcceptLanguage? fromJson(dynamic value) => HeaderAcceptLanguageTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [HeaderAcceptLanguage]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<HeaderAcceptLanguage> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <HeaderAcceptLanguage>[];
     if (json is List && json.isNotEmpty) {
@@ -57,9 +56,11 @@ class HeaderAcceptLanguageTypeTransformer {
 
   const HeaderAcceptLanguageTypeTransformer._();
 
-  String encode(HeaderAcceptLanguage data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(HeaderAcceptLanguage data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a HeaderAcceptLanguage.
+  /// Returns the instance of [HeaderAcceptLanguage] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -68,6 +69,9 @@ class HeaderAcceptLanguageTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   HeaderAcceptLanguage? decode(dynamic data, {bool allowNull = true}) {
+    if (data is HeaderAcceptLanguage) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'*': return HeaderAcceptLanguage.star;
@@ -82,7 +86,7 @@ class HeaderAcceptLanguageTypeTransformer {
     return null;
   }
 
-  /// Singleton [HeaderAcceptLanguageTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static HeaderAcceptLanguageTypeTransformer? _instance;
 }
 

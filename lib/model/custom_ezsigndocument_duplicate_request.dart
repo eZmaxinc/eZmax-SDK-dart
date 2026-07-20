@@ -120,29 +120,29 @@ class CustomEzsigndocumentDuplicateRequest {
 }
 
 /// Which version of the Ezsigndocument you would like to copy
-class CustomEzsigndocumentDuplicateRequestEEzsigndocumentVersionEnum {
-  /// Instantiate a new enum with the provided [value].
-  const CustomEzsigndocumentDuplicateRequestEEzsigndocumentVersionEnum._(this.value);
+enum CustomEzsigndocumentDuplicateRequestEEzsigndocumentVersionEnum {
+  initial._(r'Initial'),
+  signed._(r'Signed'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const CustomEzsigndocumentDuplicateRequestEEzsigndocumentVersionEnum._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const initial = CustomEzsigndocumentDuplicateRequestEEzsigndocumentVersionEnum._(r'Initial');
-  static const signed = CustomEzsigndocumentDuplicateRequestEEzsigndocumentVersionEnum._(r'Signed');
-
-  /// List of all possible values in this [enum][CustomEzsigndocumentDuplicateRequestEEzsigndocumentVersionEnum].
-  static const values = <CustomEzsigndocumentDuplicateRequestEEzsigndocumentVersionEnum>[
-    initial,
-    signed,
-  ];
-
+  /// Returns the instance of [CustomEzsigndocumentDuplicateRequestEEzsigndocumentVersionEnum] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static CustomEzsigndocumentDuplicateRequestEEzsigndocumentVersionEnum? fromJson(dynamic value) => CustomEzsigndocumentDuplicateRequestEEzsigndocumentVersionEnumTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [CustomEzsigndocumentDuplicateRequestEEzsigndocumentVersionEnum]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<CustomEzsigndocumentDuplicateRequestEEzsigndocumentVersionEnum> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <CustomEzsigndocumentDuplicateRequestEEzsigndocumentVersionEnum>[];
     if (json is List && json.isNotEmpty) {
@@ -164,9 +164,10 @@ class CustomEzsigndocumentDuplicateRequestEEzsigndocumentVersionEnumTypeTransfor
 
   const CustomEzsigndocumentDuplicateRequestEEzsigndocumentVersionEnumTypeTransformer._();
 
-  String encode(CustomEzsigndocumentDuplicateRequestEEzsigndocumentVersionEnum data) => data.value;
+  String encode(CustomEzsigndocumentDuplicateRequestEEzsigndocumentVersionEnum data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a CustomEzsigndocumentDuplicateRequestEEzsigndocumentVersionEnum.
+  /// Returns the instance of [CustomEzsigndocumentDuplicateRequestEEzsigndocumentVersionEnum] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -175,6 +176,9 @@ class CustomEzsigndocumentDuplicateRequestEEzsigndocumentVersionEnumTypeTransfor
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   CustomEzsigndocumentDuplicateRequestEEzsigndocumentVersionEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data is CustomEzsigndocumentDuplicateRequestEEzsigndocumentVersionEnum) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Initial': return CustomEzsigndocumentDuplicateRequestEEzsigndocumentVersionEnum.initial;
@@ -188,7 +192,7 @@ class CustomEzsigndocumentDuplicateRequestEEzsigndocumentVersionEnumTypeTransfor
     return null;
   }
 
-  /// Singleton [CustomEzsigndocumentDuplicateRequestEEzsigndocumentVersionEnumTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static CustomEzsigndocumentDuplicateRequestEEzsigndocumentVersionEnumTypeTransformer? _instance;
 }
 

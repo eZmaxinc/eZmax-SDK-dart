@@ -11,31 +11,30 @@
 part of openapi.api;
 
 /// The type of the Inscription
-class FieldEInscriptionType {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEInscriptionType._(this.value);
+enum FieldEInscriptionType {
+  rent._(r'Rent'),
+  sale._(r'Sale'),
+  rentOrSale._(r'RentOrSale'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEInscriptionType._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const rent = FieldEInscriptionType._(r'Rent');
-  static const sale = FieldEInscriptionType._(r'Sale');
-  static const rentOrSale = FieldEInscriptionType._(r'RentOrSale');
-
-  /// List of all possible values in this [enum][FieldEInscriptionType].
-  static const values = <FieldEInscriptionType>[
-    rent,
-    sale,
-    rentOrSale,
-  ];
-
+  /// Returns the instance of [FieldEInscriptionType] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEInscriptionType? fromJson(dynamic value) => FieldEInscriptionTypeTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEInscriptionType]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEInscriptionType> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEInscriptionType>[];
     if (json is List && json.isNotEmpty) {
@@ -57,9 +56,11 @@ class FieldEInscriptionTypeTypeTransformer {
 
   const FieldEInscriptionTypeTypeTransformer._();
 
-  String encode(FieldEInscriptionType data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEInscriptionType data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEInscriptionType.
+  /// Returns the instance of [FieldEInscriptionType] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -68,6 +69,9 @@ class FieldEInscriptionTypeTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEInscriptionType? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEInscriptionType) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Rent': return FieldEInscriptionType.rent;
@@ -82,7 +86,7 @@ class FieldEInscriptionTypeTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEInscriptionTypeTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEInscriptionTypeTypeTransformer? _instance;
 }
 

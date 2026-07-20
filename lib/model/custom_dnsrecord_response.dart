@@ -176,31 +176,30 @@ class CustomDnsrecordResponse {
 }
 
 /// The type of the Dnsrecord
-class CustomDnsrecordResponseEDnsrecordTypeEnum {
-  /// Instantiate a new enum with the provided [value].
-  const CustomDnsrecordResponseEDnsrecordTypeEnum._(this.value);
+enum CustomDnsrecordResponseEDnsrecordTypeEnum {
+  CNAME._(r'CNAME'),
+  MX._(r'MX'),
+  TXT._(r'TXT'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const CustomDnsrecordResponseEDnsrecordTypeEnum._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const CNAME = CustomDnsrecordResponseEDnsrecordTypeEnum._(r'CNAME');
-  static const MX = CustomDnsrecordResponseEDnsrecordTypeEnum._(r'MX');
-  static const TXT = CustomDnsrecordResponseEDnsrecordTypeEnum._(r'TXT');
-
-  /// List of all possible values in this [enum][CustomDnsrecordResponseEDnsrecordTypeEnum].
-  static const values = <CustomDnsrecordResponseEDnsrecordTypeEnum>[
-    CNAME,
-    MX,
-    TXT,
-  ];
-
+  /// Returns the instance of [CustomDnsrecordResponseEDnsrecordTypeEnum] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static CustomDnsrecordResponseEDnsrecordTypeEnum? fromJson(dynamic value) => CustomDnsrecordResponseEDnsrecordTypeEnumTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [CustomDnsrecordResponseEDnsrecordTypeEnum]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<CustomDnsrecordResponseEDnsrecordTypeEnum> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <CustomDnsrecordResponseEDnsrecordTypeEnum>[];
     if (json is List && json.isNotEmpty) {
@@ -222,9 +221,10 @@ class CustomDnsrecordResponseEDnsrecordTypeEnumTypeTransformer {
 
   const CustomDnsrecordResponseEDnsrecordTypeEnumTypeTransformer._();
 
-  String encode(CustomDnsrecordResponseEDnsrecordTypeEnum data) => data.value;
+  String encode(CustomDnsrecordResponseEDnsrecordTypeEnum data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a CustomDnsrecordResponseEDnsrecordTypeEnum.
+  /// Returns the instance of [CustomDnsrecordResponseEDnsrecordTypeEnum] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -233,6 +233,9 @@ class CustomDnsrecordResponseEDnsrecordTypeEnumTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   CustomDnsrecordResponseEDnsrecordTypeEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data is CustomDnsrecordResponseEDnsrecordTypeEnum) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'CNAME': return CustomDnsrecordResponseEDnsrecordTypeEnum.CNAME;
@@ -247,37 +250,36 @@ class CustomDnsrecordResponseEDnsrecordTypeEnumTypeTransformer {
     return null;
   }
 
-  /// Singleton [CustomDnsrecordResponseEDnsrecordTypeEnumTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static CustomDnsrecordResponseEDnsrecordTypeEnumTypeTransformer? _instance;
 }
 
 
 /// The validation of the Dnsrecord
-class CustomDnsrecordResponseEDnsrecordValidationEnum {
-  /// Instantiate a new enum with the provided [value].
-  const CustomDnsrecordResponseEDnsrecordValidationEnum._(this.value);
+enum CustomDnsrecordResponseEDnsrecordValidationEnum {
+  match._(r'Match'),
+  mismatch._(r'Mismatch'),
+  notFound._(r'NotFound'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const CustomDnsrecordResponseEDnsrecordValidationEnum._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const match = CustomDnsrecordResponseEDnsrecordValidationEnum._(r'Match');
-  static const mismatch = CustomDnsrecordResponseEDnsrecordValidationEnum._(r'Mismatch');
-  static const notFound = CustomDnsrecordResponseEDnsrecordValidationEnum._(r'NotFound');
-
-  /// List of all possible values in this [enum][CustomDnsrecordResponseEDnsrecordValidationEnum].
-  static const values = <CustomDnsrecordResponseEDnsrecordValidationEnum>[
-    match,
-    mismatch,
-    notFound,
-  ];
-
+  /// Returns the instance of [CustomDnsrecordResponseEDnsrecordValidationEnum] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static CustomDnsrecordResponseEDnsrecordValidationEnum? fromJson(dynamic value) => CustomDnsrecordResponseEDnsrecordValidationEnumTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [CustomDnsrecordResponseEDnsrecordValidationEnum]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<CustomDnsrecordResponseEDnsrecordValidationEnum> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <CustomDnsrecordResponseEDnsrecordValidationEnum>[];
     if (json is List && json.isNotEmpty) {
@@ -299,9 +301,10 @@ class CustomDnsrecordResponseEDnsrecordValidationEnumTypeTransformer {
 
   const CustomDnsrecordResponseEDnsrecordValidationEnumTypeTransformer._();
 
-  String encode(CustomDnsrecordResponseEDnsrecordValidationEnum data) => data.value;
+  String encode(CustomDnsrecordResponseEDnsrecordValidationEnum data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a CustomDnsrecordResponseEDnsrecordValidationEnum.
+  /// Returns the instance of [CustomDnsrecordResponseEDnsrecordValidationEnum] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -310,6 +313,9 @@ class CustomDnsrecordResponseEDnsrecordValidationEnumTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   CustomDnsrecordResponseEDnsrecordValidationEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data is CustomDnsrecordResponseEDnsrecordValidationEnum) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Match': return CustomDnsrecordResponseEDnsrecordValidationEnum.match;
@@ -324,7 +330,7 @@ class CustomDnsrecordResponseEDnsrecordValidationEnumTypeTransformer {
     return null;
   }
 
-  /// Singleton [CustomDnsrecordResponseEDnsrecordValidationEnumTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static CustomDnsrecordResponseEDnsrecordValidationEnumTypeTransformer? _instance;
 }
 

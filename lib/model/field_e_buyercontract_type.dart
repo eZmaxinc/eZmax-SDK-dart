@@ -11,31 +11,30 @@
 part of openapi.api;
 
 /// The type of the Buyercontract
-class FieldEBuyercontractType {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEBuyercontractType._(this.value);
+enum FieldEBuyercontractType {
+  rent._(r'Rent'),
+  sale._(r'Sale'),
+  rentOrSale._(r'RentOrSale'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEBuyercontractType._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const rent = FieldEBuyercontractType._(r'Rent');
-  static const sale = FieldEBuyercontractType._(r'Sale');
-  static const rentOrSale = FieldEBuyercontractType._(r'RentOrSale');
-
-  /// List of all possible values in this [enum][FieldEBuyercontractType].
-  static const values = <FieldEBuyercontractType>[
-    rent,
-    sale,
-    rentOrSale,
-  ];
-
+  /// Returns the instance of [FieldEBuyercontractType] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEBuyercontractType? fromJson(dynamic value) => FieldEBuyercontractTypeTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEBuyercontractType]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEBuyercontractType> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEBuyercontractType>[];
     if (json is List && json.isNotEmpty) {
@@ -57,9 +56,11 @@ class FieldEBuyercontractTypeTypeTransformer {
 
   const FieldEBuyercontractTypeTypeTransformer._();
 
-  String encode(FieldEBuyercontractType data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEBuyercontractType data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEBuyercontractType.
+  /// Returns the instance of [FieldEBuyercontractType] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -68,6 +69,9 @@ class FieldEBuyercontractTypeTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEBuyercontractType? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEBuyercontractType) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Rent': return FieldEBuyercontractType.rent;
@@ -82,7 +86,7 @@ class FieldEBuyercontractTypeTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEBuyercontractTypeTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEBuyercontractTypeTypeTransformer? _instance;
 }
 

@@ -11,39 +11,34 @@
 part of openapi.api;
 
 /// The Type of Ezsigntemplateformfieldgroup
-class FieldEEzsigntemplateformfieldgroupType {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsigntemplateformfieldgroupType._(this.value);
+enum FieldEEzsigntemplateformfieldgroupType {
+  text._(r'Text'),
+  textarea._(r'Textarea'),
+  dropdown._(r'Dropdown'),
+  radio._(r'Radio'),
+  checkbox._(r'Checkbox'),
+  number._(r'Number'),
+  date._(r'Date'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsigntemplateformfieldgroupType._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const text = FieldEEzsigntemplateformfieldgroupType._(r'Text');
-  static const textarea = FieldEEzsigntemplateformfieldgroupType._(r'Textarea');
-  static const dropdown = FieldEEzsigntemplateformfieldgroupType._(r'Dropdown');
-  static const radio = FieldEEzsigntemplateformfieldgroupType._(r'Radio');
-  static const checkbox = FieldEEzsigntemplateformfieldgroupType._(r'Checkbox');
-  static const number = FieldEEzsigntemplateformfieldgroupType._(r'Number');
-  static const date = FieldEEzsigntemplateformfieldgroupType._(r'Date');
-
-  /// List of all possible values in this [enum][FieldEEzsigntemplateformfieldgroupType].
-  static const values = <FieldEEzsigntemplateformfieldgroupType>[
-    text,
-    textarea,
-    dropdown,
-    radio,
-    checkbox,
-    number,
-    date,
-  ];
-
+  /// Returns the instance of [FieldEEzsigntemplateformfieldgroupType] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsigntemplateformfieldgroupType? fromJson(dynamic value) => FieldEEzsigntemplateformfieldgroupTypeTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsigntemplateformfieldgroupType]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsigntemplateformfieldgroupType> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsigntemplateformfieldgroupType>[];
     if (json is List && json.isNotEmpty) {
@@ -65,9 +60,11 @@ class FieldEEzsigntemplateformfieldgroupTypeTypeTransformer {
 
   const FieldEEzsigntemplateformfieldgroupTypeTypeTransformer._();
 
-  String encode(FieldEEzsigntemplateformfieldgroupType data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsigntemplateformfieldgroupType data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsigntemplateformfieldgroupType.
+  /// Returns the instance of [FieldEEzsigntemplateformfieldgroupType] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -76,6 +73,9 @@ class FieldEEzsigntemplateformfieldgroupTypeTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsigntemplateformfieldgroupType? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsigntemplateformfieldgroupType) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Text': return FieldEEzsigntemplateformfieldgroupType.text;
@@ -94,7 +94,7 @@ class FieldEEzsigntemplateformfieldgroupTypeTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsigntemplateformfieldgroupTypeTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsigntemplateformfieldgroupTypeTypeTransformer? _instance;
 }
 

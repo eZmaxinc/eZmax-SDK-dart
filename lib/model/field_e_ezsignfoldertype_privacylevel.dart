@@ -11,29 +11,29 @@
 part of openapi.api;
 
 /// The Privacy level of the Ezsignfolder type.  * **User** is for personal folders use and cannot be shared * **Usergroup** is for shared folders and complex permission can be configured to control access
-class FieldEEzsignfoldertypePrivacylevel {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsignfoldertypePrivacylevel._(this.value);
+enum FieldEEzsignfoldertypePrivacylevel {
+  user._(r'User'),
+  usergroup._(r'Usergroup'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsignfoldertypePrivacylevel._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const user = FieldEEzsignfoldertypePrivacylevel._(r'User');
-  static const usergroup = FieldEEzsignfoldertypePrivacylevel._(r'Usergroup');
-
-  /// List of all possible values in this [enum][FieldEEzsignfoldertypePrivacylevel].
-  static const values = <FieldEEzsignfoldertypePrivacylevel>[
-    user,
-    usergroup,
-  ];
-
+  /// Returns the instance of [FieldEEzsignfoldertypePrivacylevel] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsignfoldertypePrivacylevel? fromJson(dynamic value) => FieldEEzsignfoldertypePrivacylevelTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsignfoldertypePrivacylevel]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsignfoldertypePrivacylevel> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsignfoldertypePrivacylevel>[];
     if (json is List && json.isNotEmpty) {
@@ -55,9 +55,11 @@ class FieldEEzsignfoldertypePrivacylevelTypeTransformer {
 
   const FieldEEzsignfoldertypePrivacylevelTypeTransformer._();
 
-  String encode(FieldEEzsignfoldertypePrivacylevel data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsignfoldertypePrivacylevel data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsignfoldertypePrivacylevel.
+  /// Returns the instance of [FieldEEzsignfoldertypePrivacylevel] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -66,6 +68,9 @@ class FieldEEzsignfoldertypePrivacylevelTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsignfoldertypePrivacylevel? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsignfoldertypePrivacylevel) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'User': return FieldEEzsignfoldertypePrivacylevel.user;
@@ -79,7 +84,7 @@ class FieldEEzsignfoldertypePrivacylevelTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsignfoldertypePrivacylevelTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsignfoldertypePrivacylevelTypeTransformer? _instance;
 }
 

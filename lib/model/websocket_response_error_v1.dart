@@ -128,27 +128,28 @@ class WebsocketResponseErrorV1 {
 }
 
 /// The Type of message
-class WebsocketResponseErrorV1EWebsocketMessagetypeEnum {
-  /// Instantiate a new enum with the provided [value].
-  const WebsocketResponseErrorV1EWebsocketMessagetypeEnum._(this.value);
+enum WebsocketResponseErrorV1EWebsocketMessagetypeEnum {
+  responseErrorV1._(r'Response-Error-V1'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const WebsocketResponseErrorV1EWebsocketMessagetypeEnum._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const responseErrorV1 = WebsocketResponseErrorV1EWebsocketMessagetypeEnum._(r'Response-Error-V1');
-
-  /// List of all possible values in this [enum][WebsocketResponseErrorV1EWebsocketMessagetypeEnum].
-  static const values = <WebsocketResponseErrorV1EWebsocketMessagetypeEnum>[
-    responseErrorV1,
-  ];
-
+  /// Returns the instance of [WebsocketResponseErrorV1EWebsocketMessagetypeEnum] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static WebsocketResponseErrorV1EWebsocketMessagetypeEnum? fromJson(dynamic value) => WebsocketResponseErrorV1EWebsocketMessagetypeEnumTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [WebsocketResponseErrorV1EWebsocketMessagetypeEnum]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<WebsocketResponseErrorV1EWebsocketMessagetypeEnum> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <WebsocketResponseErrorV1EWebsocketMessagetypeEnum>[];
     if (json is List && json.isNotEmpty) {
@@ -170,9 +171,10 @@ class WebsocketResponseErrorV1EWebsocketMessagetypeEnumTypeTransformer {
 
   const WebsocketResponseErrorV1EWebsocketMessagetypeEnumTypeTransformer._();
 
-  String encode(WebsocketResponseErrorV1EWebsocketMessagetypeEnum data) => data.value;
+  String encode(WebsocketResponseErrorV1EWebsocketMessagetypeEnum data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a WebsocketResponseErrorV1EWebsocketMessagetypeEnum.
+  /// Returns the instance of [WebsocketResponseErrorV1EWebsocketMessagetypeEnum] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -181,6 +183,9 @@ class WebsocketResponseErrorV1EWebsocketMessagetypeEnumTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   WebsocketResponseErrorV1EWebsocketMessagetypeEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data is WebsocketResponseErrorV1EWebsocketMessagetypeEnum) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Response-Error-V1': return WebsocketResponseErrorV1EWebsocketMessagetypeEnum.responseErrorV1;
@@ -193,7 +198,7 @@ class WebsocketResponseErrorV1EWebsocketMessagetypeEnumTypeTransformer {
     return null;
   }
 
-  /// Singleton [WebsocketResponseErrorV1EWebsocketMessagetypeEnumTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static WebsocketResponseErrorV1EWebsocketMessagetypeEnumTypeTransformer? _instance;
 }
 

@@ -22,6 +22,7 @@ class CustomWebhookResponse {
     this.eWebhookEzmaxpartnerevent,
     this.eWebhookEzsignevent,
     this.eWebhookManagementevent,
+    this.eWebhookRealestateevent,
     required this.sWebhookUrl,
     required this.sWebhookEmailfailed,
     this.sWebhookApikey,
@@ -110,6 +111,14 @@ class CustomWebhookResponse {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   FieldEWebhookManagementevent? eWebhookManagementevent;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEWebhookRealestateevent? eWebhookRealestateevent;
 
   /// The URL of the Webhook callback
   String sWebhookUrl;
@@ -213,6 +222,7 @@ class CustomWebhookResponse {
     other.eWebhookEzmaxpartnerevent == eWebhookEzmaxpartnerevent &&
     other.eWebhookEzsignevent == eWebhookEzsignevent &&
     other.eWebhookManagementevent == eWebhookManagementevent &&
+    other.eWebhookRealestateevent == eWebhookRealestateevent &&
     other.sWebhookUrl == sWebhookUrl &&
     other.sWebhookEmailfailed == sWebhookEmailfailed &&
     other.sWebhookApikey == sWebhookApikey &&
@@ -242,6 +252,7 @@ class CustomWebhookResponse {
     (eWebhookEzmaxpartnerevent == null ? 0 : eWebhookEzmaxpartnerevent!.hashCode) +
     (eWebhookEzsignevent == null ? 0 : eWebhookEzsignevent!.hashCode) +
     (eWebhookManagementevent == null ? 0 : eWebhookManagementevent!.hashCode) +
+    (eWebhookRealestateevent == null ? 0 : eWebhookRealestateevent!.hashCode) +
     (sWebhookUrl.hashCode) +
     (sWebhookEmailfailed.hashCode) +
     (sWebhookApikey == null ? 0 : sWebhookApikey!.hashCode) +
@@ -260,7 +271,7 @@ class CustomWebhookResponse {
     (fkiEzmaxpartnerproductstagewebhookID == null ? 0 : fkiEzmaxpartnerproductstagewebhookID!.hashCode);
 
   @override
-  String toString() => 'CustomWebhookResponse[pkiWebhookID=$pkiWebhookID, fkiAuthenticationexternalID=$fkiAuthenticationexternalID, sWebhookDescription=$sWebhookDescription, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, eWebhookModule=$eWebhookModule, eWebhookEzmaxpartnerevent=$eWebhookEzmaxpartnerevent, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, sWebhookUrl=$sWebhookUrl, sWebhookEmailfailed=$sWebhookEmailfailed, sWebhookApikey=$sWebhookApikey, sWebhookSecret=$sWebhookSecret, bWebhookIsactive=$bWebhookIsactive, bWebhookIssigned=$bWebhookIssigned, bWebhookSkipsslvalidation=$bWebhookSkipsslvalidation, sAuthenticationexternalDescription=$sAuthenticationexternalDescription, objAudit=$objAudit, sWebhookEvent=$sWebhookEvent, sWebhookAuthentificationexternalerror=$sWebhookAuthentificationexternalerror, aObjWebhookheader=$aObjWebhookheader, pksCustomerCode=$pksCustomerCode, bWebhookTest=$bWebhookTest, eWebhookEmittype=$eWebhookEmittype, fkiEzmaxpartnerproductstagewebhookID=$fkiEzmaxpartnerproductstagewebhookID]';
+  String toString() => 'CustomWebhookResponse[pkiWebhookID=$pkiWebhookID, fkiAuthenticationexternalID=$fkiAuthenticationexternalID, sWebhookDescription=$sWebhookDescription, fkiEzsignfoldertypeID=$fkiEzsignfoldertypeID, sEzsignfoldertypeNameX=$sEzsignfoldertypeNameX, eWebhookModule=$eWebhookModule, eWebhookEzmaxpartnerevent=$eWebhookEzmaxpartnerevent, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, eWebhookRealestateevent=$eWebhookRealestateevent, sWebhookUrl=$sWebhookUrl, sWebhookEmailfailed=$sWebhookEmailfailed, sWebhookApikey=$sWebhookApikey, sWebhookSecret=$sWebhookSecret, bWebhookIsactive=$bWebhookIsactive, bWebhookIssigned=$bWebhookIssigned, bWebhookSkipsslvalidation=$bWebhookSkipsslvalidation, sAuthenticationexternalDescription=$sAuthenticationexternalDescription, objAudit=$objAudit, sWebhookEvent=$sWebhookEvent, sWebhookAuthentificationexternalerror=$sWebhookAuthentificationexternalerror, aObjWebhookheader=$aObjWebhookheader, pksCustomerCode=$pksCustomerCode, bWebhookTest=$bWebhookTest, eWebhookEmittype=$eWebhookEmittype, fkiEzmaxpartnerproductstagewebhookID=$fkiEzmaxpartnerproductstagewebhookID]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -300,6 +311,11 @@ class CustomWebhookResponse {
       json[r'eWebhookManagementevent'] = this.eWebhookManagementevent;
     } else {
       json[r'eWebhookManagementevent'] = null;
+    }
+    if (this.eWebhookRealestateevent != null) {
+      json[r'eWebhookRealestateevent'] = this.eWebhookRealestateevent;
+    } else {
+      json[r'eWebhookRealestateevent'] = null;
     }
       json[r'sWebhookUrl'] = this.sWebhookUrl;
       json[r'sWebhookEmailfailed'] = this.sWebhookEmailfailed;
@@ -394,6 +410,7 @@ class CustomWebhookResponse {
         eWebhookEzmaxpartnerevent: FieldEWebhookEzmaxpartnerevent.fromJson(json[r'eWebhookEzmaxpartnerevent']),
         eWebhookEzsignevent: FieldEWebhookEzsignevent.fromJson(json[r'eWebhookEzsignevent']),
         eWebhookManagementevent: FieldEWebhookManagementevent.fromJson(json[r'eWebhookManagementevent']),
+        eWebhookRealestateevent: FieldEWebhookRealestateevent.fromJson(json[r'eWebhookRealestateevent']),
         sWebhookUrl: mapValueOfType<String>(json, r'sWebhookUrl')!,
         sWebhookEmailfailed: mapValueOfType<String>(json, r'sWebhookEmailfailed')!,
         sWebhookApikey: mapValueOfType<String>(json, r'sWebhookApikey'),
@@ -470,31 +487,30 @@ class CustomWebhookResponse {
 }
 
 /// Wheter the webhook received is a manual test or a real event
-class CustomWebhookResponseEWebhookEmittypeEnum {
-  /// Instantiate a new enum with the provided [value].
-  const CustomWebhookResponseEWebhookEmittypeEnum._(this.value);
+enum CustomWebhookResponseEWebhookEmittypeEnum {
+  automatic._(r'Automatic'),
+  manual._(r'Manual'),
+  test._(r'Test'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const CustomWebhookResponseEWebhookEmittypeEnum._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const automatic = CustomWebhookResponseEWebhookEmittypeEnum._(r'Automatic');
-  static const manual = CustomWebhookResponseEWebhookEmittypeEnum._(r'Manual');
-  static const test = CustomWebhookResponseEWebhookEmittypeEnum._(r'Test');
-
-  /// List of all possible values in this [enum][CustomWebhookResponseEWebhookEmittypeEnum].
-  static const values = <CustomWebhookResponseEWebhookEmittypeEnum>[
-    automatic,
-    manual,
-    test,
-  ];
-
+  /// Returns the instance of [CustomWebhookResponseEWebhookEmittypeEnum] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static CustomWebhookResponseEWebhookEmittypeEnum? fromJson(dynamic value) => CustomWebhookResponseEWebhookEmittypeEnumTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [CustomWebhookResponseEWebhookEmittypeEnum]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<CustomWebhookResponseEWebhookEmittypeEnum> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <CustomWebhookResponseEWebhookEmittypeEnum>[];
     if (json is List && json.isNotEmpty) {
@@ -516,9 +532,10 @@ class CustomWebhookResponseEWebhookEmittypeEnumTypeTransformer {
 
   const CustomWebhookResponseEWebhookEmittypeEnumTypeTransformer._();
 
-  String encode(CustomWebhookResponseEWebhookEmittypeEnum data) => data.value;
+  String encode(CustomWebhookResponseEWebhookEmittypeEnum data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a CustomWebhookResponseEWebhookEmittypeEnum.
+  /// Returns the instance of [CustomWebhookResponseEWebhookEmittypeEnum] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -527,6 +544,9 @@ class CustomWebhookResponseEWebhookEmittypeEnumTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   CustomWebhookResponseEWebhookEmittypeEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data is CustomWebhookResponseEWebhookEmittypeEnum) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Automatic': return CustomWebhookResponseEWebhookEmittypeEnum.automatic;
@@ -541,7 +561,7 @@ class CustomWebhookResponseEWebhookEmittypeEnumTypeTransformer {
     return null;
   }
 
-  /// Singleton [CustomWebhookResponseEWebhookEmittypeEnumTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static CustomWebhookResponseEWebhookEmittypeEnumTypeTransformer? _instance;
 }
 

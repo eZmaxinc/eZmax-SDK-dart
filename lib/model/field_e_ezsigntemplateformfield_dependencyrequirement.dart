@@ -11,29 +11,29 @@
 part of openapi.api;
 
 /// The Dependency requirement of the Ezsigntemplateformfield
-class FieldEEzsigntemplateformfieldDependencyrequirement {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsigntemplateformfieldDependencyrequirement._(this.value);
+enum FieldEEzsigntemplateformfieldDependencyrequirement {
+  allOf._(r'AllOf'),
+  anyOf._(r'AnyOf'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsigntemplateformfieldDependencyrequirement._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const allOf = FieldEEzsigntemplateformfieldDependencyrequirement._(r'AllOf');
-  static const anyOf = FieldEEzsigntemplateformfieldDependencyrequirement._(r'AnyOf');
-
-  /// List of all possible values in this [enum][FieldEEzsigntemplateformfieldDependencyrequirement].
-  static const values = <FieldEEzsigntemplateformfieldDependencyrequirement>[
-    allOf,
-    anyOf,
-  ];
-
+  /// Returns the instance of [FieldEEzsigntemplateformfieldDependencyrequirement] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsigntemplateformfieldDependencyrequirement? fromJson(dynamic value) => FieldEEzsigntemplateformfieldDependencyrequirementTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsigntemplateformfieldDependencyrequirement]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsigntemplateformfieldDependencyrequirement> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsigntemplateformfieldDependencyrequirement>[];
     if (json is List && json.isNotEmpty) {
@@ -55,9 +55,11 @@ class FieldEEzsigntemplateformfieldDependencyrequirementTypeTransformer {
 
   const FieldEEzsigntemplateformfieldDependencyrequirementTypeTransformer._();
 
-  String encode(FieldEEzsigntemplateformfieldDependencyrequirement data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsigntemplateformfieldDependencyrequirement data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsigntemplateformfieldDependencyrequirement.
+  /// Returns the instance of [FieldEEzsigntemplateformfieldDependencyrequirement] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -66,6 +68,9 @@ class FieldEEzsigntemplateformfieldDependencyrequirementTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsigntemplateformfieldDependencyrequirement? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsigntemplateformfieldDependencyrequirement) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'AllOf': return FieldEEzsigntemplateformfieldDependencyrequirement.allOf;
@@ -79,7 +84,7 @@ class FieldEEzsigntemplateformfieldDependencyrequirementTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsigntemplateformfieldDependencyrequirementTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsigntemplateformfieldDependencyrequirementTypeTransformer? _instance;
 }
 

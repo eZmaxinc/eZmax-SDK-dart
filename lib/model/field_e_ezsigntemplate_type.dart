@@ -11,33 +11,31 @@
 part of openapi.api;
 
 /// The Type of Ezsigntemplate  **Usergroup** is now deprecated and replace with **Ezsignfoldertype**
-class FieldEEzsigntemplateType {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsigntemplateType._(this.value);
+enum FieldEEzsigntemplateType {
+  user._(r'User'),
+  usergroup._(r'Usergroup'),
+  company._(r'Company'),
+  ezsignfoldertype._(r'Ezsignfoldertype'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsigntemplateType._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const user = FieldEEzsigntemplateType._(r'User');
-  static const usergroup = FieldEEzsigntemplateType._(r'Usergroup');
-  static const company = FieldEEzsigntemplateType._(r'Company');
-  static const ezsignfoldertype = FieldEEzsigntemplateType._(r'Ezsignfoldertype');
-
-  /// List of all possible values in this [enum][FieldEEzsigntemplateType].
-  static const values = <FieldEEzsigntemplateType>[
-    user,
-    usergroup,
-    company,
-    ezsignfoldertype,
-  ];
-
+  /// Returns the instance of [FieldEEzsigntemplateType] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsigntemplateType? fromJson(dynamic value) => FieldEEzsigntemplateTypeTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsigntemplateType]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsigntemplateType> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsigntemplateType>[];
     if (json is List && json.isNotEmpty) {
@@ -59,9 +57,11 @@ class FieldEEzsigntemplateTypeTypeTransformer {
 
   const FieldEEzsigntemplateTypeTypeTransformer._();
 
-  String encode(FieldEEzsigntemplateType data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsigntemplateType data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsigntemplateType.
+  /// Returns the instance of [FieldEEzsigntemplateType] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -70,6 +70,9 @@ class FieldEEzsigntemplateTypeTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsigntemplateType? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsigntemplateType) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'User': return FieldEEzsigntemplateType.user;
@@ -85,7 +88,7 @@ class FieldEEzsigntemplateTypeTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsigntemplateTypeTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsigntemplateTypeTypeTransformer? _instance;
 }
 

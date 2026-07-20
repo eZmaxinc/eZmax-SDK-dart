@@ -11,10 +11,15 @@ Name | Type | Description | Notes
 **pkiInscriptionID** | **int** | The unique ID of the Inscription. | 
 **pkiInscriptionnotauthenticatedID** | **int** | The unique ID of the Inscriptionnotauthenticated. | [optional] 
 **fkiInscriptiontypeID** | **int** | The unique ID of the Inscriptiontype | 
+**sInscriptiontypeNameX** | **String** | The name of the Inscriptiontype in the language of the requester | 
+**fkiInscriptionbuildingtypeID** | **int** | The unique ID of the Inscriptionbuildingtype | 
+**sInscriptionbuildingtypeNameX** | **String** | The name of the Inscriptionbuildingtype in the language of the requester | 
+**fkiInscriptioncategoryID** | **int** | The unique ID of the Inscriptioncategory | 
+**sInscriptioncategoryNameX** | **String** | The name of the Inscriptioncategory in the language of the requester | 
 **fkiBuyercontractID** | **int** | The unique ID of the Buyercontract | [optional] 
 **sBuyercontractContract** | **String** | The number of the Buyercontract | [optional] 
-**sInscriptiontypeNameX** | **String** | The name of the Inscriptiontype in the language of the requester | 
 **eInscriptionStep** | [**FieldEInscriptionStep**](FieldEInscriptionStep.md) |  | 
+**eInscriptionType** | [**FieldEInscriptionType**](FieldEInscriptionType.md) |  | 
 **sInscriptionCivicend** | **String** | The civicend of the Inscription | 
 **sInscriptionMLS** | **String** | The mls of the Inscription | [optional] 
 **sInscriptionContract** | **String** | The sale contract number | [optional] 
@@ -41,6 +46,7 @@ Name | Type | Description | Notes
 **fkiCountryID** | **int** | The unique ID of the Country.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|Canada| |2|United-States| | [optional] 
 **sCountryNameX** | **String** | The name of the Country in the language of the requester | [optional] 
 **iInscriptionnotauthenticatedCanceled** | **int** | The numbre of inscriptionnotauthenticated was canceled in this Inscription | 
+**iInscriptionUnit** | **int** | The unit of the Inscription | 
 **bAllowedCopyintoinscriptionedm** | **bool** | Whether we are allowed to copy into the Inscription EDM | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

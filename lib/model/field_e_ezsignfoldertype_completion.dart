@@ -11,31 +11,30 @@
 part of openapi.api;
 
 /// Indicates if the Ezsigndocument is completed when all signatures of this Ezsigndocument were applied or when all signatures of all Ezsigndocument were applied. When eEzsignfoldertypeCompletion equals PerEzsignfolderStepSync, the document steps are synchronized. All documents move to a new step when all forms or signatures from the previous step have been completed for all documents.
-class FieldEEzsignfoldertypeCompletion {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsignfoldertypeCompletion._(this.value);
+enum FieldEEzsignfoldertypeCompletion {
+  perEzsigndocument._(r'PerEzsigndocument'),
+  perEzsignfolder._(r'PerEzsignfolder'),
+  perEzsignfolderStepSync._(r'PerEzsignfolderStepSync'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsignfoldertypeCompletion._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const perEzsigndocument = FieldEEzsignfoldertypeCompletion._(r'PerEzsigndocument');
-  static const perEzsignfolder = FieldEEzsignfoldertypeCompletion._(r'PerEzsignfolder');
-  static const perEzsignfolderStepSync = FieldEEzsignfoldertypeCompletion._(r'PerEzsignfolderStepSync');
-
-  /// List of all possible values in this [enum][FieldEEzsignfoldertypeCompletion].
-  static const values = <FieldEEzsignfoldertypeCompletion>[
-    perEzsigndocument,
-    perEzsignfolder,
-    perEzsignfolderStepSync,
-  ];
-
+  /// Returns the instance of [FieldEEzsignfoldertypeCompletion] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsignfoldertypeCompletion? fromJson(dynamic value) => FieldEEzsignfoldertypeCompletionTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsignfoldertypeCompletion]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsignfoldertypeCompletion> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsignfoldertypeCompletion>[];
     if (json is List && json.isNotEmpty) {
@@ -57,9 +56,11 @@ class FieldEEzsignfoldertypeCompletionTypeTransformer {
 
   const FieldEEzsignfoldertypeCompletionTypeTransformer._();
 
-  String encode(FieldEEzsignfoldertypeCompletion data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsignfoldertypeCompletion data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsignfoldertypeCompletion.
+  /// Returns the instance of [FieldEEzsignfoldertypeCompletion] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -68,6 +69,9 @@ class FieldEEzsignfoldertypeCompletionTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsignfoldertypeCompletion? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsignfoldertypeCompletion) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'PerEzsigndocument': return FieldEEzsignfoldertypeCompletion.perEzsigndocument;
@@ -82,7 +86,7 @@ class FieldEEzsignfoldertypeCompletionTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsignfoldertypeCompletionTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsignfoldertypeCompletionTypeTransformer? _instance;
 }
 

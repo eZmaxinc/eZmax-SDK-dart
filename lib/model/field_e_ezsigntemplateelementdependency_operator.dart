@@ -11,47 +11,38 @@
 part of openapi.api;
 
 /// The operator of the Ezsigntemplateelementdependency
-class FieldEEzsigntemplateelementdependencyOperator {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsigntemplateelementdependencyOperator._(this.value);
+enum FieldEEzsigntemplateelementdependencyOperator {
+  eq._(r'eq'),
+  neq._(r'neq'),
+  gt._(r'gt'),
+  gte._(r'gte'),
+  lt._(r'lt'),
+  lte._(r'lte'),
+  in_._(r'in'),
+  nin._(r'nin'),
+  rg._(r'rg'),
+  like._(r'like'),
+  between._(r'between'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsigntemplateelementdependencyOperator._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const eq = FieldEEzsigntemplateelementdependencyOperator._(r'eq');
-  static const neq = FieldEEzsigntemplateelementdependencyOperator._(r'neq');
-  static const gt = FieldEEzsigntemplateelementdependencyOperator._(r'gt');
-  static const gte = FieldEEzsigntemplateelementdependencyOperator._(r'gte');
-  static const lt = FieldEEzsigntemplateelementdependencyOperator._(r'lt');
-  static const lte = FieldEEzsigntemplateelementdependencyOperator._(r'lte');
-  static const in_ = FieldEEzsigntemplateelementdependencyOperator._(r'in');
-  static const nin = FieldEEzsigntemplateelementdependencyOperator._(r'nin');
-  static const rg = FieldEEzsigntemplateelementdependencyOperator._(r'rg');
-  static const like = FieldEEzsigntemplateelementdependencyOperator._(r'like');
-  static const between = FieldEEzsigntemplateelementdependencyOperator._(r'between');
-
-  /// List of all possible values in this [enum][FieldEEzsigntemplateelementdependencyOperator].
-  static const values = <FieldEEzsigntemplateelementdependencyOperator>[
-    eq,
-    neq,
-    gt,
-    gte,
-    lt,
-    lte,
-    in_,
-    nin,
-    rg,
-    like,
-    between,
-  ];
-
+  /// Returns the instance of [FieldEEzsigntemplateelementdependencyOperator] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsigntemplateelementdependencyOperator? fromJson(dynamic value) => FieldEEzsigntemplateelementdependencyOperatorTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsigntemplateelementdependencyOperator]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsigntemplateelementdependencyOperator> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsigntemplateelementdependencyOperator>[];
     if (json is List && json.isNotEmpty) {
@@ -73,9 +64,11 @@ class FieldEEzsigntemplateelementdependencyOperatorTypeTransformer {
 
   const FieldEEzsigntemplateelementdependencyOperatorTypeTransformer._();
 
-  String encode(FieldEEzsigntemplateelementdependencyOperator data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsigntemplateelementdependencyOperator data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsigntemplateelementdependencyOperator.
+  /// Returns the instance of [FieldEEzsigntemplateelementdependencyOperator] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -84,6 +77,9 @@ class FieldEEzsigntemplateelementdependencyOperatorTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsigntemplateelementdependencyOperator? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsigntemplateelementdependencyOperator) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'eq': return FieldEEzsigntemplateelementdependencyOperator.eq;
@@ -106,7 +102,7 @@ class FieldEEzsigntemplateelementdependencyOperatorTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsigntemplateelementdependencyOperatorTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsigntemplateelementdependencyOperatorTypeTransformer? _instance;
 }
 

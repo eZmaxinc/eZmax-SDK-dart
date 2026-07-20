@@ -11,31 +11,30 @@
 part of openapi.api;
 
 /// The verticalalignment of the Ezsigntemplateglobalannotation
-class FieldEEzsigntemplateglobalannotationVerticalalignment {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsigntemplateglobalannotationVerticalalignment._(this.value);
+enum FieldEEzsigntemplateglobalannotationVerticalalignment {
+  bottom._(r'Bottom'),
+  middle._(r'Middle'),
+  top._(r'Top'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsigntemplateglobalannotationVerticalalignment._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const bottom = FieldEEzsigntemplateglobalannotationVerticalalignment._(r'Bottom');
-  static const middle = FieldEEzsigntemplateglobalannotationVerticalalignment._(r'Middle');
-  static const top = FieldEEzsigntemplateglobalannotationVerticalalignment._(r'Top');
-
-  /// List of all possible values in this [enum][FieldEEzsigntemplateglobalannotationVerticalalignment].
-  static const values = <FieldEEzsigntemplateglobalannotationVerticalalignment>[
-    bottom,
-    middle,
-    top,
-  ];
-
+  /// Returns the instance of [FieldEEzsigntemplateglobalannotationVerticalalignment] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsigntemplateglobalannotationVerticalalignment? fromJson(dynamic value) => FieldEEzsigntemplateglobalannotationVerticalalignmentTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsigntemplateglobalannotationVerticalalignment]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsigntemplateglobalannotationVerticalalignment> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsigntemplateglobalannotationVerticalalignment>[];
     if (json is List && json.isNotEmpty) {
@@ -57,9 +56,11 @@ class FieldEEzsigntemplateglobalannotationVerticalalignmentTypeTransformer {
 
   const FieldEEzsigntemplateglobalannotationVerticalalignmentTypeTransformer._();
 
-  String encode(FieldEEzsigntemplateglobalannotationVerticalalignment data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsigntemplateglobalannotationVerticalalignment data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsigntemplateglobalannotationVerticalalignment.
+  /// Returns the instance of [FieldEEzsigntemplateglobalannotationVerticalalignment] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -68,6 +69,9 @@ class FieldEEzsigntemplateglobalannotationVerticalalignmentTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsigntemplateglobalannotationVerticalalignment? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsigntemplateglobalannotationVerticalalignment) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Bottom': return FieldEEzsigntemplateglobalannotationVerticalalignment.bottom;
@@ -82,7 +86,7 @@ class FieldEEzsigntemplateglobalannotationVerticalalignmentTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsigntemplateglobalannotationVerticalalignmentTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsigntemplateglobalannotationVerticalalignmentTypeTransformer? _instance;
 }
 

@@ -190,35 +190,32 @@ class EzsignsignerRequestCompound {
 }
 
 /// The method the Ezsignsigner will authenticate to the signing platform.  1. **Password** means the Ezsignsigner will receive a secure link by email. 2. **PasswordPhone** means the Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**. 3. **PasswordQuestion** means the Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer. 4. **InPersonPhone** means the Ezsignsigner will only be able to sign \"In-Person\" and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**. 5. **InPerson** means the Ezsignsigner will only be able to sign \"In-Person\" and there won't be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type.
-class EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum {
-  /// Instantiate a new enum with the provided [value].
-  const EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum._(this.value);
+enum EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum {
+  password._(r'Password'),
+  passwordPhone._(r'PasswordPhone'),
+  passwordQuestion._(r'PasswordQuestion'),
+  inPersonPhone._(r'InPersonPhone'),
+  inPerson._(r'InPerson'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const password = EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum._(r'Password');
-  static const passwordPhone = EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum._(r'PasswordPhone');
-  static const passwordQuestion = EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum._(r'PasswordQuestion');
-  static const inPersonPhone = EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum._(r'InPersonPhone');
-  static const inPerson = EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum._(r'InPerson');
-
-  /// List of all possible values in this [enum][EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum].
-  static const values = <EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum>[
-    password,
-    passwordPhone,
-    passwordQuestion,
-    inPersonPhone,
-    inPerson,
-  ];
-
+  /// Returns the instance of [EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum? fromJson(dynamic value) => EzsignsignerRequestCompoundEEzsignsignerLogintypeEnumTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum>[];
     if (json is List && json.isNotEmpty) {
@@ -240,9 +237,10 @@ class EzsignsignerRequestCompoundEEzsignsignerLogintypeEnumTypeTransformer {
 
   const EzsignsignerRequestCompoundEEzsignsignerLogintypeEnumTypeTransformer._();
 
-  String encode(EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum data) => data.value;
+  String encode(EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum.
+  /// Returns the instance of [EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -251,6 +249,9 @@ class EzsignsignerRequestCompoundEEzsignsignerLogintypeEnumTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data is EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Password': return EzsignsignerRequestCompoundEEzsignsignerLogintypeEnum.password;
@@ -267,7 +268,7 @@ class EzsignsignerRequestCompoundEEzsignsignerLogintypeEnumTypeTransformer {
     return null;
   }
 
-  /// Singleton [EzsignsignerRequestCompoundEEzsignsignerLogintypeEnumTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static EzsignsignerRequestCompoundEEzsignsignerLogintypeEnumTypeTransformer? _instance;
 }
 

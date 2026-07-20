@@ -11,47 +11,38 @@
 part of openapi.api;
 
 /// The step of the Inscription
-class FieldEInscriptionStep {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEInscriptionStep._(this.value);
+enum FieldEInscriptionStep {
+  temporaryNotAuthenticated._(r'TemporaryNotAuthenticated'),
+  importedInscription._(r'ImportedInscription'),
+  inscription._(r'Inscription'),
+  modifiedInscription._(r'ModifiedInscription'),
+  contractEnded._(r'ContractEnded'),
+  expiredInscription._(r'ExpiredInscription'),
+  outMarket._(r'Out-market'),
+  importedNotauthenticated._(r'ImportedNotauthenticated'),
+  notAuthenticated._(r'NotAuthenticated'),
+  modifiedNotauthenticated._(r'ModifiedNotauthenticated'),
+  authenticated._(r'Authenticated'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEInscriptionStep._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const temporaryNotAuthenticated = FieldEInscriptionStep._(r'TemporaryNotAuthenticated');
-  static const importedInscription = FieldEInscriptionStep._(r'ImportedInscription');
-  static const inscription = FieldEInscriptionStep._(r'Inscription');
-  static const modifiedInscription = FieldEInscriptionStep._(r'ModifiedInscription');
-  static const contractEnded = FieldEInscriptionStep._(r'ContractEnded');
-  static const expiredInscription = FieldEInscriptionStep._(r'ExpiredInscription');
-  static const outMarket = FieldEInscriptionStep._(r'Out-market');
-  static const importedNotauthenticated = FieldEInscriptionStep._(r'ImportedNotauthenticated');
-  static const notAuthenticated = FieldEInscriptionStep._(r'NotAuthenticated');
-  static const modifiedNotauthenticated = FieldEInscriptionStep._(r'ModifiedNotauthenticated');
-  static const authenticated = FieldEInscriptionStep._(r'Authenticated');
-
-  /// List of all possible values in this [enum][FieldEInscriptionStep].
-  static const values = <FieldEInscriptionStep>[
-    temporaryNotAuthenticated,
-    importedInscription,
-    inscription,
-    modifiedInscription,
-    contractEnded,
-    expiredInscription,
-    outMarket,
-    importedNotauthenticated,
-    notAuthenticated,
-    modifiedNotauthenticated,
-    authenticated,
-  ];
-
+  /// Returns the instance of [FieldEInscriptionStep] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEInscriptionStep? fromJson(dynamic value) => FieldEInscriptionStepTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEInscriptionStep]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEInscriptionStep> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEInscriptionStep>[];
     if (json is List && json.isNotEmpty) {
@@ -73,9 +64,11 @@ class FieldEInscriptionStepTypeTransformer {
 
   const FieldEInscriptionStepTypeTransformer._();
 
-  String encode(FieldEInscriptionStep data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEInscriptionStep data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEInscriptionStep.
+  /// Returns the instance of [FieldEInscriptionStep] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -84,6 +77,9 @@ class FieldEInscriptionStepTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEInscriptionStep? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEInscriptionStep) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'TemporaryNotAuthenticated': return FieldEInscriptionStep.temporaryNotAuthenticated;
@@ -106,7 +102,7 @@ class FieldEInscriptionStepTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEInscriptionStepTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEInscriptionStepTypeTransformer? _instance;
 }
 

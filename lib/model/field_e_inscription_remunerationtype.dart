@@ -11,29 +11,29 @@
 part of openapi.api;
 
 /// The remunerationtype of the Inscription
-class FieldEInscriptionRemunerationtype {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEInscriptionRemunerationtype._(this.value);
+enum FieldEInscriptionRemunerationtype {
+  percentage._(r'Percentage'),
+  dollars._(r'Dollars'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEInscriptionRemunerationtype._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const percentage = FieldEInscriptionRemunerationtype._(r'Percentage');
-  static const dollars = FieldEInscriptionRemunerationtype._(r'Dollars');
-
-  /// List of all possible values in this [enum][FieldEInscriptionRemunerationtype].
-  static const values = <FieldEInscriptionRemunerationtype>[
-    percentage,
-    dollars,
-  ];
-
+  /// Returns the instance of [FieldEInscriptionRemunerationtype] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEInscriptionRemunerationtype? fromJson(dynamic value) => FieldEInscriptionRemunerationtypeTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEInscriptionRemunerationtype]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEInscriptionRemunerationtype> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEInscriptionRemunerationtype>[];
     if (json is List && json.isNotEmpty) {
@@ -55,9 +55,11 @@ class FieldEInscriptionRemunerationtypeTypeTransformer {
 
   const FieldEInscriptionRemunerationtypeTypeTransformer._();
 
-  String encode(FieldEInscriptionRemunerationtype data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEInscriptionRemunerationtype data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEInscriptionRemunerationtype.
+  /// Returns the instance of [FieldEInscriptionRemunerationtype] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -66,6 +68,9 @@ class FieldEInscriptionRemunerationtypeTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEInscriptionRemunerationtype? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEInscriptionRemunerationtype) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Percentage': return FieldEInscriptionRemunerationtype.percentage;
@@ -79,7 +84,7 @@ class FieldEInscriptionRemunerationtypeTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEInscriptionRemunerationtypeTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEInscriptionRemunerationtypeTypeTransformer? _instance;
 }
 

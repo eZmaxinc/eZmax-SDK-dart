@@ -117,27 +117,28 @@ class WebsocketResponseGetWebsocketIDV1 {
 }
 
 /// The Type of message
-class WebsocketResponseGetWebsocketIDV1EWebsocketMessagetypeEnum {
-  /// Instantiate a new enum with the provided [value].
-  const WebsocketResponseGetWebsocketIDV1EWebsocketMessagetypeEnum._(this.value);
+enum WebsocketResponseGetWebsocketIDV1EWebsocketMessagetypeEnum {
+  responseGetWebsocketIDV1._(r'Response-GetWebsocketID-V1'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const WebsocketResponseGetWebsocketIDV1EWebsocketMessagetypeEnum._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const responseGetWebsocketIDV1 = WebsocketResponseGetWebsocketIDV1EWebsocketMessagetypeEnum._(r'Response-GetWebsocketID-V1');
-
-  /// List of all possible values in this [enum][WebsocketResponseGetWebsocketIDV1EWebsocketMessagetypeEnum].
-  static const values = <WebsocketResponseGetWebsocketIDV1EWebsocketMessagetypeEnum>[
-    responseGetWebsocketIDV1,
-  ];
-
+  /// Returns the instance of [WebsocketResponseGetWebsocketIDV1EWebsocketMessagetypeEnum] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static WebsocketResponseGetWebsocketIDV1EWebsocketMessagetypeEnum? fromJson(dynamic value) => WebsocketResponseGetWebsocketIDV1EWebsocketMessagetypeEnumTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [WebsocketResponseGetWebsocketIDV1EWebsocketMessagetypeEnum]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<WebsocketResponseGetWebsocketIDV1EWebsocketMessagetypeEnum> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <WebsocketResponseGetWebsocketIDV1EWebsocketMessagetypeEnum>[];
     if (json is List && json.isNotEmpty) {
@@ -159,9 +160,10 @@ class WebsocketResponseGetWebsocketIDV1EWebsocketMessagetypeEnumTypeTransformer 
 
   const WebsocketResponseGetWebsocketIDV1EWebsocketMessagetypeEnumTypeTransformer._();
 
-  String encode(WebsocketResponseGetWebsocketIDV1EWebsocketMessagetypeEnum data) => data.value;
+  String encode(WebsocketResponseGetWebsocketIDV1EWebsocketMessagetypeEnum data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a WebsocketResponseGetWebsocketIDV1EWebsocketMessagetypeEnum.
+  /// Returns the instance of [WebsocketResponseGetWebsocketIDV1EWebsocketMessagetypeEnum] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -170,6 +172,9 @@ class WebsocketResponseGetWebsocketIDV1EWebsocketMessagetypeEnumTypeTransformer 
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   WebsocketResponseGetWebsocketIDV1EWebsocketMessagetypeEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data is WebsocketResponseGetWebsocketIDV1EWebsocketMessagetypeEnum) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Response-GetWebsocketID-V1': return WebsocketResponseGetWebsocketIDV1EWebsocketMessagetypeEnum.responseGetWebsocketIDV1;
@@ -182,7 +187,7 @@ class WebsocketResponseGetWebsocketIDV1EWebsocketMessagetypeEnumTypeTransformer 
     return null;
   }
 
-  /// Singleton [WebsocketResponseGetWebsocketIDV1EWebsocketMessagetypeEnumTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static WebsocketResponseGetWebsocketIDV1EWebsocketMessagetypeEnumTypeTransformer? _instance;
 }
 

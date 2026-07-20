@@ -144,31 +144,30 @@ class EzdoctemplatedocumentRequestPatch {
 }
 
 /// Indicates the format of the template.  This field is Required when sEzdoctemplatedocumentBase64 is set.
-class EzdoctemplatedocumentRequestPatchEEzdoctemplatedocumentFormatEnum {
-  /// Instantiate a new enum with the provided [value].
-  const EzdoctemplatedocumentRequestPatchEEzdoctemplatedocumentFormatEnum._(this.value);
+enum EzdoctemplatedocumentRequestPatchEEzdoctemplatedocumentFormatEnum {
+  docx._(r'Docx'),
+  html._(r'Html'),
+  tx._(r'Tx'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const EzdoctemplatedocumentRequestPatchEEzdoctemplatedocumentFormatEnum._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const docx = EzdoctemplatedocumentRequestPatchEEzdoctemplatedocumentFormatEnum._(r'Docx');
-  static const html = EzdoctemplatedocumentRequestPatchEEzdoctemplatedocumentFormatEnum._(r'Html');
-  static const tx = EzdoctemplatedocumentRequestPatchEEzdoctemplatedocumentFormatEnum._(r'Tx');
-
-  /// List of all possible values in this [enum][EzdoctemplatedocumentRequestPatchEEzdoctemplatedocumentFormatEnum].
-  static const values = <EzdoctemplatedocumentRequestPatchEEzdoctemplatedocumentFormatEnum>[
-    docx,
-    html,
-    tx,
-  ];
-
+  /// Returns the instance of [EzdoctemplatedocumentRequestPatchEEzdoctemplatedocumentFormatEnum] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static EzdoctemplatedocumentRequestPatchEEzdoctemplatedocumentFormatEnum? fromJson(dynamic value) => EzdoctemplatedocumentRequestPatchEEzdoctemplatedocumentFormatEnumTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [EzdoctemplatedocumentRequestPatchEEzdoctemplatedocumentFormatEnum]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<EzdoctemplatedocumentRequestPatchEEzdoctemplatedocumentFormatEnum> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzdoctemplatedocumentRequestPatchEEzdoctemplatedocumentFormatEnum>[];
     if (json is List && json.isNotEmpty) {
@@ -190,9 +189,10 @@ class EzdoctemplatedocumentRequestPatchEEzdoctemplatedocumentFormatEnumTypeTrans
 
   const EzdoctemplatedocumentRequestPatchEEzdoctemplatedocumentFormatEnumTypeTransformer._();
 
-  String encode(EzdoctemplatedocumentRequestPatchEEzdoctemplatedocumentFormatEnum data) => data.value;
+  String encode(EzdoctemplatedocumentRequestPatchEEzdoctemplatedocumentFormatEnum data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a EzdoctemplatedocumentRequestPatchEEzdoctemplatedocumentFormatEnum.
+  /// Returns the instance of [EzdoctemplatedocumentRequestPatchEEzdoctemplatedocumentFormatEnum] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -201,6 +201,9 @@ class EzdoctemplatedocumentRequestPatchEEzdoctemplatedocumentFormatEnumTypeTrans
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   EzdoctemplatedocumentRequestPatchEEzdoctemplatedocumentFormatEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data is EzdoctemplatedocumentRequestPatchEEzdoctemplatedocumentFormatEnum) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Docx': return EzdoctemplatedocumentRequestPatchEEzdoctemplatedocumentFormatEnum.docx;
@@ -215,7 +218,7 @@ class EzdoctemplatedocumentRequestPatchEEzdoctemplatedocumentFormatEnumTypeTrans
     return null;
   }
 
-  /// Singleton [EzdoctemplatedocumentRequestPatchEEzdoctemplatedocumentFormatEnumTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static EzdoctemplatedocumentRequestPatchEEzdoctemplatedocumentFormatEnumTypeTransformer? _instance;
 }
 

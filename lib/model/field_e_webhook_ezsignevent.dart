@@ -11,45 +11,37 @@
 part of openapi.api;
 
 /// This Ezsign Event. This property will be set only if the Module is \"Ezsign\"
-class FieldEWebhookEzsignevent {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEWebhookEzsignevent._(this.value);
+enum FieldEWebhookEzsignevent {
+  documentCompleted._(r'DocumentCompleted'),
+  documentFormCompleted._(r'DocumentFormCompleted'),
+  documentUnsent._(r'DocumentUnsent'),
+  ezsignsignerAcceptclause._(r'EzsignsignerAcceptclause'),
+  ezsignsignerConnect._(r'EzsignsignerConnect'),
+  folderCompleted._(r'FolderCompleted'),
+  folderDisposed._(r'FolderDisposed'),
+  folderSent._(r'FolderSent'),
+  folderUnsent._(r'FolderUnsent'),
+  signatureSigned._(r'SignatureSigned'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEWebhookEzsignevent._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const documentCompleted = FieldEWebhookEzsignevent._(r'DocumentCompleted');
-  static const documentFormCompleted = FieldEWebhookEzsignevent._(r'DocumentFormCompleted');
-  static const documentUnsent = FieldEWebhookEzsignevent._(r'DocumentUnsent');
-  static const ezsignsignerAcceptclause = FieldEWebhookEzsignevent._(r'EzsignsignerAcceptclause');
-  static const ezsignsignerConnect = FieldEWebhookEzsignevent._(r'EzsignsignerConnect');
-  static const folderCompleted = FieldEWebhookEzsignevent._(r'FolderCompleted');
-  static const folderDisposed = FieldEWebhookEzsignevent._(r'FolderDisposed');
-  static const folderSent = FieldEWebhookEzsignevent._(r'FolderSent');
-  static const folderUnsent = FieldEWebhookEzsignevent._(r'FolderUnsent');
-  static const signatureSigned = FieldEWebhookEzsignevent._(r'SignatureSigned');
-
-  /// List of all possible values in this [enum][FieldEWebhookEzsignevent].
-  static const values = <FieldEWebhookEzsignevent>[
-    documentCompleted,
-    documentFormCompleted,
-    documentUnsent,
-    ezsignsignerAcceptclause,
-    ezsignsignerConnect,
-    folderCompleted,
-    folderDisposed,
-    folderSent,
-    folderUnsent,
-    signatureSigned,
-  ];
-
+  /// Returns the instance of [FieldEWebhookEzsignevent] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEWebhookEzsignevent? fromJson(dynamic value) => FieldEWebhookEzsigneventTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEWebhookEzsignevent]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEWebhookEzsignevent> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEWebhookEzsignevent>[];
     if (json is List && json.isNotEmpty) {
@@ -71,9 +63,11 @@ class FieldEWebhookEzsigneventTypeTransformer {
 
   const FieldEWebhookEzsigneventTypeTransformer._();
 
-  String encode(FieldEWebhookEzsignevent data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEWebhookEzsignevent data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEWebhookEzsignevent.
+  /// Returns the instance of [FieldEWebhookEzsignevent] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -82,6 +76,9 @@ class FieldEWebhookEzsigneventTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEWebhookEzsignevent? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEWebhookEzsignevent) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'DocumentCompleted': return FieldEWebhookEzsignevent.documentCompleted;
@@ -103,7 +100,7 @@ class FieldEWebhookEzsigneventTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEWebhookEzsigneventTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEWebhookEzsigneventTypeTransformer? _instance;
 }
 

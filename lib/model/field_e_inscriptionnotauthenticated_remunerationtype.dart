@@ -11,33 +11,31 @@
 part of openapi.api;
 
 /// The remunerationtype of the Inscriptionnotauthenticated
-class FieldEInscriptionnotauthenticatedRemunerationtype {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEInscriptionnotauthenticatedRemunerationtype._(this.value);
+enum FieldEInscriptionnotauthenticatedRemunerationtype {
+  percentage._(r'Percentage'),
+  percentageTaxesIncluded._(r'PercentageTaxesIncluded'),
+  dollars._(r'Dollars'),
+  dollarsTaxesIncluded._(r'DollarsTaxesIncluded'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEInscriptionnotauthenticatedRemunerationtype._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const percentage = FieldEInscriptionnotauthenticatedRemunerationtype._(r'Percentage');
-  static const percentageTaxesIncluded = FieldEInscriptionnotauthenticatedRemunerationtype._(r'PercentageTaxesIncluded');
-  static const dollars = FieldEInscriptionnotauthenticatedRemunerationtype._(r'Dollars');
-  static const dollarsTaxesIncluded = FieldEInscriptionnotauthenticatedRemunerationtype._(r'DollarsTaxesIncluded');
-
-  /// List of all possible values in this [enum][FieldEInscriptionnotauthenticatedRemunerationtype].
-  static const values = <FieldEInscriptionnotauthenticatedRemunerationtype>[
-    percentage,
-    percentageTaxesIncluded,
-    dollars,
-    dollarsTaxesIncluded,
-  ];
-
+  /// Returns the instance of [FieldEInscriptionnotauthenticatedRemunerationtype] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEInscriptionnotauthenticatedRemunerationtype? fromJson(dynamic value) => FieldEInscriptionnotauthenticatedRemunerationtypeTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEInscriptionnotauthenticatedRemunerationtype]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEInscriptionnotauthenticatedRemunerationtype> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEInscriptionnotauthenticatedRemunerationtype>[];
     if (json is List && json.isNotEmpty) {
@@ -59,9 +57,11 @@ class FieldEInscriptionnotauthenticatedRemunerationtypeTypeTransformer {
 
   const FieldEInscriptionnotauthenticatedRemunerationtypeTypeTransformer._();
 
-  String encode(FieldEInscriptionnotauthenticatedRemunerationtype data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEInscriptionnotauthenticatedRemunerationtype data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEInscriptionnotauthenticatedRemunerationtype.
+  /// Returns the instance of [FieldEInscriptionnotauthenticatedRemunerationtype] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -70,6 +70,9 @@ class FieldEInscriptionnotauthenticatedRemunerationtypeTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEInscriptionnotauthenticatedRemunerationtype? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEInscriptionnotauthenticatedRemunerationtype) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Percentage': return FieldEInscriptionnotauthenticatedRemunerationtype.percentage;
@@ -85,7 +88,7 @@ class FieldEInscriptionnotauthenticatedRemunerationtypeTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEInscriptionnotauthenticatedRemunerationtypeTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEInscriptionnotauthenticatedRemunerationtypeTypeTransformer? _instance;
 }
 

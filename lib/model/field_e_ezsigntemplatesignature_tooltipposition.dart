@@ -11,41 +11,35 @@
 part of openapi.api;
 
 /// The location of the tooltip relative to the Ezsigntemplatesignature's location.
-class FieldEEzsigntemplatesignatureTooltipposition {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsigntemplatesignatureTooltipposition._(this.value);
+enum FieldEEzsigntemplatesignatureTooltipposition {
+  topLeft._(r'TopLeft'),
+  topCenter._(r'TopCenter'),
+  topRight._(r'TopRight'),
+  middleLeft._(r'MiddleLeft'),
+  middleRight._(r'MiddleRight'),
+  bottomLeft._(r'BottomLeft'),
+  bottomCenter._(r'BottomCenter'),
+  bottomRight._(r'BottomRight'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsigntemplatesignatureTooltipposition._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const topLeft = FieldEEzsigntemplatesignatureTooltipposition._(r'TopLeft');
-  static const topCenter = FieldEEzsigntemplatesignatureTooltipposition._(r'TopCenter');
-  static const topRight = FieldEEzsigntemplatesignatureTooltipposition._(r'TopRight');
-  static const middleLeft = FieldEEzsigntemplatesignatureTooltipposition._(r'MiddleLeft');
-  static const middleRight = FieldEEzsigntemplatesignatureTooltipposition._(r'MiddleRight');
-  static const bottomLeft = FieldEEzsigntemplatesignatureTooltipposition._(r'BottomLeft');
-  static const bottomCenter = FieldEEzsigntemplatesignatureTooltipposition._(r'BottomCenter');
-  static const bottomRight = FieldEEzsigntemplatesignatureTooltipposition._(r'BottomRight');
-
-  /// List of all possible values in this [enum][FieldEEzsigntemplatesignatureTooltipposition].
-  static const values = <FieldEEzsigntemplatesignatureTooltipposition>[
-    topLeft,
-    topCenter,
-    topRight,
-    middleLeft,
-    middleRight,
-    bottomLeft,
-    bottomCenter,
-    bottomRight,
-  ];
-
+  /// Returns the instance of [FieldEEzsigntemplatesignatureTooltipposition] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsigntemplatesignatureTooltipposition? fromJson(dynamic value) => FieldEEzsigntemplatesignatureTooltippositionTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsigntemplatesignatureTooltipposition]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsigntemplatesignatureTooltipposition> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsigntemplatesignatureTooltipposition>[];
     if (json is List && json.isNotEmpty) {
@@ -67,9 +61,11 @@ class FieldEEzsigntemplatesignatureTooltippositionTypeTransformer {
 
   const FieldEEzsigntemplatesignatureTooltippositionTypeTransformer._();
 
-  String encode(FieldEEzsigntemplatesignatureTooltipposition data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsigntemplatesignatureTooltipposition data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsigntemplatesignatureTooltipposition.
+  /// Returns the instance of [FieldEEzsigntemplatesignatureTooltipposition] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -78,6 +74,9 @@ class FieldEEzsigntemplatesignatureTooltippositionTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsigntemplatesignatureTooltipposition? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsigntemplatesignatureTooltipposition) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'TopLeft': return FieldEEzsigntemplatesignatureTooltipposition.topLeft;
@@ -97,7 +96,7 @@ class FieldEEzsigntemplatesignatureTooltippositionTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsigntemplatesignatureTooltippositionTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsigntemplatesignatureTooltippositionTypeTransformer? _instance;
 }
 

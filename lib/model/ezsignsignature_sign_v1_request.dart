@@ -256,29 +256,29 @@ class EzsignsignatureSignV1Request {
 }
 
 /// Whether the attachment are accepted or refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**
-class EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum {
-  /// Instantiate a new enum with the provided [value].
-  const EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum._(this.value);
+enum EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum {
+  accepted._(r'Accepted'),
+  refused._(r'Refused'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const accepted = EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum._(r'Accepted');
-  static const refused = EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum._(r'Refused');
-
-  /// List of all possible values in this [enum][EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum].
-  static const values = <EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum>[
-    accepted,
-    refused,
-  ];
-
+  /// Returns the instance of [EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum? fromJson(dynamic value) => EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnumTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum>[];
     if (json is List && json.isNotEmpty) {
@@ -300,9 +300,10 @@ class EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnumTypeTransf
 
   const EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnumTypeTransformer._();
 
-  String encode(EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum data) => data.value;
+  String encode(EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum.
+  /// Returns the instance of [EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -311,6 +312,9 @@ class EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnumTypeTransf
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data is EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Accepted': return EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnum.accepted;
@@ -324,7 +328,7 @@ class EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnumTypeTransf
     return null;
   }
 
-  /// Singleton [EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnumTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static EzsignsignatureSignV1RequestEAttachmentsConfirmationDecisionEnumTypeTransformer? _instance;
 }
 

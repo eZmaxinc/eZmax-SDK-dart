@@ -11,31 +11,30 @@
 part of openapi.api;
 
 /// The taxable of the Variableexpense
-class FieldEVariableexpenseTaxable {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEVariableexpenseTaxable._(this.value);
+enum FieldEVariableexpenseTaxable {
+  yes._(r'Yes'),
+  no._(r'No'),
+  included._(r'Included'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEVariableexpenseTaxable._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const yes = FieldEVariableexpenseTaxable._(r'Yes');
-  static const no = FieldEVariableexpenseTaxable._(r'No');
-  static const included = FieldEVariableexpenseTaxable._(r'Included');
-
-  /// List of all possible values in this [enum][FieldEVariableexpenseTaxable].
-  static const values = <FieldEVariableexpenseTaxable>[
-    yes,
-    no,
-    included,
-  ];
-
+  /// Returns the instance of [FieldEVariableexpenseTaxable] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEVariableexpenseTaxable? fromJson(dynamic value) => FieldEVariableexpenseTaxableTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEVariableexpenseTaxable]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEVariableexpenseTaxable> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEVariableexpenseTaxable>[];
     if (json is List && json.isNotEmpty) {
@@ -57,9 +56,11 @@ class FieldEVariableexpenseTaxableTypeTransformer {
 
   const FieldEVariableexpenseTaxableTypeTransformer._();
 
-  String encode(FieldEVariableexpenseTaxable data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEVariableexpenseTaxable data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEVariableexpenseTaxable.
+  /// Returns the instance of [FieldEVariableexpenseTaxable] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -68,6 +69,9 @@ class FieldEVariableexpenseTaxableTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEVariableexpenseTaxable? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEVariableexpenseTaxable) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Yes': return FieldEVariableexpenseTaxable.yes;
@@ -82,7 +86,7 @@ class FieldEVariableexpenseTaxableTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEVariableexpenseTaxableTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEVariableexpenseTaxableTypeTransformer? _instance;
 }
 

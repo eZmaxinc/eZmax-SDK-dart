@@ -11,31 +11,30 @@
 part of openapi.api;
 
 /// The validation type of the Ezsignelementdependency
-class FieldEEzsignelementdependencyValidation {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsignelementdependencyValidation._(this.value);
+enum FieldEEzsignelementdependencyValidation {
+  value._(r'Value'),
+  selected._(r'Selected'),
+  filled._(r'Filled'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsignelementdependencyValidation._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const value = FieldEEzsignelementdependencyValidation._(r'Value');
-  static const selected = FieldEEzsignelementdependencyValidation._(r'Selected');
-  static const filled = FieldEEzsignelementdependencyValidation._(r'Filled');
-
-  /// List of all possible values in this [enum][FieldEEzsignelementdependencyValidation].
-  static const values = <FieldEEzsignelementdependencyValidation>[
-    value,
-    selected,
-    filled,
-  ];
-
+  /// Returns the instance of [FieldEEzsignelementdependencyValidation] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsignelementdependencyValidation? fromJson(dynamic value) => FieldEEzsignelementdependencyValidationTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsignelementdependencyValidation]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsignelementdependencyValidation> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsignelementdependencyValidation>[];
     if (json is List && json.isNotEmpty) {
@@ -57,9 +56,11 @@ class FieldEEzsignelementdependencyValidationTypeTransformer {
 
   const FieldEEzsignelementdependencyValidationTypeTransformer._();
 
-  String encode(FieldEEzsignelementdependencyValidation data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsignelementdependencyValidation data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsignelementdependencyValidation.
+  /// Returns the instance of [FieldEEzsignelementdependencyValidation] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -68,6 +69,9 @@ class FieldEEzsignelementdependencyValidationTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsignelementdependencyValidation? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsignelementdependencyValidation) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Value': return FieldEEzsignelementdependencyValidation.value;
@@ -82,7 +86,7 @@ class FieldEEzsignelementdependencyValidationTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsignelementdependencyValidationTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsignelementdependencyValidationTypeTransformer? _instance;
 }
 

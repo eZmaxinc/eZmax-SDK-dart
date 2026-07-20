@@ -11,33 +11,31 @@
 part of openapi.api;
 
 /// Whether the Ezmaxpartner offers custom development.
-class FieldEEzmaxpartnerCustomdevelopment {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzmaxpartnerCustomdevelopment._(this.value);
+enum FieldEEzmaxpartnerCustomdevelopment {
+  empty._(r''),
+  no._(r'No'),
+  notListed._(r'NotListed'),
+  listed._(r'Listed'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzmaxpartnerCustomdevelopment._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const empty = FieldEEzmaxpartnerCustomdevelopment._(r'');
-  static const no = FieldEEzmaxpartnerCustomdevelopment._(r'No');
-  static const notListed = FieldEEzmaxpartnerCustomdevelopment._(r'NotListed');
-  static const listed = FieldEEzmaxpartnerCustomdevelopment._(r'Listed');
-
-  /// List of all possible values in this [enum][FieldEEzmaxpartnerCustomdevelopment].
-  static const values = <FieldEEzmaxpartnerCustomdevelopment>[
-    empty,
-    no,
-    notListed,
-    listed,
-  ];
-
+  /// Returns the instance of [FieldEEzmaxpartnerCustomdevelopment] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzmaxpartnerCustomdevelopment? fromJson(dynamic value) => FieldEEzmaxpartnerCustomdevelopmentTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzmaxpartnerCustomdevelopment]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzmaxpartnerCustomdevelopment> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzmaxpartnerCustomdevelopment>[];
     if (json is List && json.isNotEmpty) {
@@ -59,9 +57,11 @@ class FieldEEzmaxpartnerCustomdevelopmentTypeTransformer {
 
   const FieldEEzmaxpartnerCustomdevelopmentTypeTransformer._();
 
-  String encode(FieldEEzmaxpartnerCustomdevelopment data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzmaxpartnerCustomdevelopment data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzmaxpartnerCustomdevelopment.
+  /// Returns the instance of [FieldEEzmaxpartnerCustomdevelopment] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -70,6 +70,9 @@ class FieldEEzmaxpartnerCustomdevelopmentTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzmaxpartnerCustomdevelopment? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzmaxpartnerCustomdevelopment) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'': return FieldEEzmaxpartnerCustomdevelopment.empty;
@@ -85,7 +88,7 @@ class FieldEEzmaxpartnerCustomdevelopmentTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzmaxpartnerCustomdevelopmentTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzmaxpartnerCustomdevelopmentTypeTransformer? _instance;
 }
 

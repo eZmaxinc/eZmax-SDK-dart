@@ -35,6 +35,7 @@ class AgentListElement {
     this.dtAgentSenioritydate,
     this.dtAgentSickleavestart,
     this.dtAgentSickleaveend,
+    required this.eAgentSchedule,
     required this.bAgentTranquillit,
     required this.bAgentResidentiallicense,
     required this.bAgentCommerciallicense,
@@ -205,6 +206,8 @@ class AgentListElement {
   ///
   String? dtAgentSickleaveend;
 
+  FieldEAgentSchedule eAgentSchedule;
+
   /// Whether if it's an tranquillit
   bool bAgentTranquillit;
 
@@ -374,6 +377,7 @@ class AgentListElement {
     other.dtAgentSenioritydate == dtAgentSenioritydate &&
     other.dtAgentSickleavestart == dtAgentSickleavestart &&
     other.dtAgentSickleaveend == dtAgentSickleaveend &&
+    other.eAgentSchedule == eAgentSchedule &&
     other.bAgentTranquillit == bAgentTranquillit &&
     other.bAgentResidentiallicense == bAgentResidentiallicense &&
     other.bAgentCommerciallicense == bAgentCommerciallicense &&
@@ -421,6 +425,7 @@ class AgentListElement {
     (dtAgentSenioritydate == null ? 0 : dtAgentSenioritydate!.hashCode) +
     (dtAgentSickleavestart == null ? 0 : dtAgentSickleavestart!.hashCode) +
     (dtAgentSickleaveend == null ? 0 : dtAgentSickleaveend!.hashCode) +
+    (eAgentSchedule.hashCode) +
     (bAgentTranquillit.hashCode) +
     (bAgentResidentiallicense.hashCode) +
     (bAgentCommerciallicense.hashCode) +
@@ -444,7 +449,7 @@ class AgentListElement {
     (sCountryNameX == null ? 0 : sCountryNameX!.hashCode);
 
   @override
-  String toString() => 'AgentListElement[pkiAgentID=$pkiAgentID, fkiAgenttypeID=$fkiAgenttypeID, sAgenttypeNameX=$sAgenttypeNameX, fkiAgentincorporationID=$fkiAgentincorporationID, sAgentincorporationName=$sAgentincorporationName, fkiDepartmentID=$fkiDepartmentID, sDepartmentNameX=$sDepartmentNameX, fkiLanguageID=$fkiLanguageID, sLanguageNameX=$sLanguageNameX, sRealestateboardnumberNumber=$sRealestateboardnumberNumber, sAgentCode=$sAgentCode, iAgentPhotocopiercode=$iAgentPhotocopiercode, iAgentLongdistancecode=$iAgentLongdistancecode, iAgentBannernumber=$iAgentBannernumber, sAgentRealestateassociationlicense=$sAgentRealestateassociationlicense, dtAgentHiredate=$dtAgentHiredate, dtAgentLeavedate=$dtAgentLeavedate, dtAgentContractdate=$dtAgentContractdate, dtAgentTransferdate=$dtAgentTransferdate, dtAgentSenioritydate=$dtAgentSenioritydate, dtAgentSickleavestart=$dtAgentSickleavestart, dtAgentSickleaveend=$dtAgentSickleaveend, bAgentTranquillit=$bAgentTranquillit, bAgentResidentiallicense=$bAgentResidentiallicense, bAgentCommerciallicense=$bAgentCommerciallicense, bAgentMortgagelicense=$bAgentMortgagelicense, bAgentPaidbyofficetranquillit=$bAgentPaidbyofficetranquillit, dtAgentFintraccertification=$dtAgentFintraccertification, bAgentIsactive=$bAgentIsactive, sContactFirstname=$sContactFirstname, sContactLastname=$sContactLastname, dtContactBirthdate=$dtContactBirthdate, sEmailAddress=$sEmailAddress, sPhoneE164=$sPhoneE164, sAddressCivic=$sAddressCivic, sAddressStreet=$sAddressStreet, sAddressSuite=$sAddressSuite, sAddressCity=$sAddressCity, sAddressZip=$sAddressZip, fkiProvinceID=$fkiProvinceID, sProvinceNameX=$sProvinceNameX, fkiCountryID=$fkiCountryID, sCountryNameX=$sCountryNameX]';
+  String toString() => 'AgentListElement[pkiAgentID=$pkiAgentID, fkiAgenttypeID=$fkiAgenttypeID, sAgenttypeNameX=$sAgenttypeNameX, fkiAgentincorporationID=$fkiAgentincorporationID, sAgentincorporationName=$sAgentincorporationName, fkiDepartmentID=$fkiDepartmentID, sDepartmentNameX=$sDepartmentNameX, fkiLanguageID=$fkiLanguageID, sLanguageNameX=$sLanguageNameX, sRealestateboardnumberNumber=$sRealestateboardnumberNumber, sAgentCode=$sAgentCode, iAgentPhotocopiercode=$iAgentPhotocopiercode, iAgentLongdistancecode=$iAgentLongdistancecode, iAgentBannernumber=$iAgentBannernumber, sAgentRealestateassociationlicense=$sAgentRealestateassociationlicense, dtAgentHiredate=$dtAgentHiredate, dtAgentLeavedate=$dtAgentLeavedate, dtAgentContractdate=$dtAgentContractdate, dtAgentTransferdate=$dtAgentTransferdate, dtAgentSenioritydate=$dtAgentSenioritydate, dtAgentSickleavestart=$dtAgentSickleavestart, dtAgentSickleaveend=$dtAgentSickleaveend, eAgentSchedule=$eAgentSchedule, bAgentTranquillit=$bAgentTranquillit, bAgentResidentiallicense=$bAgentResidentiallicense, bAgentCommerciallicense=$bAgentCommerciallicense, bAgentMortgagelicense=$bAgentMortgagelicense, bAgentPaidbyofficetranquillit=$bAgentPaidbyofficetranquillit, dtAgentFintraccertification=$dtAgentFintraccertification, bAgentIsactive=$bAgentIsactive, sContactFirstname=$sContactFirstname, sContactLastname=$sContactLastname, dtContactBirthdate=$dtContactBirthdate, sEmailAddress=$sEmailAddress, sPhoneE164=$sPhoneE164, sAddressCivic=$sAddressCivic, sAddressStreet=$sAddressStreet, sAddressSuite=$sAddressSuite, sAddressCity=$sAddressCity, sAddressZip=$sAddressZip, fkiProvinceID=$fkiProvinceID, sProvinceNameX=$sProvinceNameX, fkiCountryID=$fkiCountryID, sCountryNameX=$sCountryNameX]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -510,6 +515,7 @@ class AgentListElement {
     } else {
       json[r'dtAgentSickleaveend'] = null;
     }
+      json[r'eAgentSchedule'] = this.eAgentSchedule;
       json[r'bAgentTranquillit'] = this.bAgentTranquillit;
       json[r'bAgentResidentiallicense'] = this.bAgentResidentiallicense;
       json[r'bAgentCommerciallicense'] = this.bAgentCommerciallicense;
@@ -621,6 +627,8 @@ class AgentListElement {
         assert(json[r'iAgentBannernumber'] != null, 'Required key "AgentListElement[iAgentBannernumber]" has a null value in JSON.');
         assert(json.containsKey(r'sAgentRealestateassociationlicense'), 'Required key "AgentListElement[sAgentRealestateassociationlicense]" is missing from JSON.');
         assert(json[r'sAgentRealestateassociationlicense'] != null, 'Required key "AgentListElement[sAgentRealestateassociationlicense]" has a null value in JSON.');
+        assert(json.containsKey(r'eAgentSchedule'), 'Required key "AgentListElement[eAgentSchedule]" is missing from JSON.');
+        assert(json[r'eAgentSchedule'] != null, 'Required key "AgentListElement[eAgentSchedule]" has a null value in JSON.');
         assert(json.containsKey(r'bAgentTranquillit'), 'Required key "AgentListElement[bAgentTranquillit]" is missing from JSON.');
         assert(json[r'bAgentTranquillit'] != null, 'Required key "AgentListElement[bAgentTranquillit]" has a null value in JSON.');
         assert(json.containsKey(r'bAgentResidentiallicense'), 'Required key "AgentListElement[bAgentResidentiallicense]" is missing from JSON.');
@@ -663,6 +671,7 @@ class AgentListElement {
         dtAgentSenioritydate: mapValueOfType<String>(json, r'dtAgentSenioritydate'),
         dtAgentSickleavestart: mapValueOfType<String>(json, r'dtAgentSickleavestart'),
         dtAgentSickleaveend: mapValueOfType<String>(json, r'dtAgentSickleaveend'),
+        eAgentSchedule: FieldEAgentSchedule.fromJson(json[r'eAgentSchedule'])!,
         bAgentTranquillit: mapValueOfType<bool>(json, r'bAgentTranquillit')!,
         bAgentResidentiallicense: mapValueOfType<bool>(json, r'bAgentResidentiallicense')!,
         bAgentCommerciallicense: mapValueOfType<bool>(json, r'bAgentCommerciallicense')!,
@@ -743,6 +752,7 @@ class AgentListElement {
     'iAgentLongdistancecode',
     'iAgentBannernumber',
     'sAgentRealestateassociationlicense',
+    'eAgentSchedule',
     'bAgentTranquillit',
     'bAgentResidentiallicense',
     'bAgentCommerciallicense',

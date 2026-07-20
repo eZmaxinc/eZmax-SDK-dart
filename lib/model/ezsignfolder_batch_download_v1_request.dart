@@ -119,31 +119,30 @@ class EzsignfolderBatchDownloadV1Request {
 }
 
 
-class EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnum {
-  /// Instantiate a new enum with the provided [value].
-  const EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnum._(this.value);
+enum EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnum {
+  signed._(r'Signed'),
+  proof._(r'Proof'),
+  proofdocument._(r'Proofdocument'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnum._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const signed = EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnum._(r'Signed');
-  static const proof = EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnum._(r'Proof');
-  static const proofdocument = EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnum._(r'Proofdocument');
-
-  /// List of all possible values in this [enum][EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnum].
-  static const values = <EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnum>[
-    signed,
-    proof,
-    proofdocument,
-  ];
-
+  /// Returns the instance of [EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnum] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnum? fromJson(dynamic value) => EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnumTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnum]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnum> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnum>[];
     if (json is List && json.isNotEmpty) {
@@ -165,9 +164,10 @@ class EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnumTypeTransformer {
 
   const EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnumTypeTransformer._();
 
-  String encode(EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnum data) => data.value;
+  String encode(EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnum data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnum.
+  /// Returns the instance of [EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnum] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -176,6 +176,9 @@ class EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnumTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data is EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnum) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Signed': return EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnum.signed;
@@ -190,7 +193,7 @@ class EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnumTypeTransformer {
     return null;
   }
 
-  /// Singleton [EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnumTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static EzsignfolderBatchDownloadV1RequestAEDocumentTypeEnumTypeTransformer? _instance;
 }
 

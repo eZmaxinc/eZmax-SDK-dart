@@ -11,33 +11,31 @@
 part of openapi.api;
 
 /// Clone rights for eZsign folders.
-class FieldEActivesessionEzsign {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEActivesessionEzsign._(this.value);
+enum FieldEActivesessionEzsign {
+  no._(r'No'),
+  read._(r'Read'),
+  modify._(r'Modify'),
+  full._(r'Full'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEActivesessionEzsign._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const no = FieldEActivesessionEzsign._(r'No');
-  static const read = FieldEActivesessionEzsign._(r'Read');
-  static const modify = FieldEActivesessionEzsign._(r'Modify');
-  static const full = FieldEActivesessionEzsign._(r'Full');
-
-  /// List of all possible values in this [enum][FieldEActivesessionEzsign].
-  static const values = <FieldEActivesessionEzsign>[
-    no,
-    read,
-    modify,
-    full,
-  ];
-
+  /// Returns the instance of [FieldEActivesessionEzsign] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEActivesessionEzsign? fromJson(dynamic value) => FieldEActivesessionEzsignTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEActivesessionEzsign]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEActivesessionEzsign> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEActivesessionEzsign>[];
     if (json is List && json.isNotEmpty) {
@@ -59,9 +57,11 @@ class FieldEActivesessionEzsignTypeTransformer {
 
   const FieldEActivesessionEzsignTypeTransformer._();
 
-  String encode(FieldEActivesessionEzsign data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEActivesessionEzsign data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEActivesessionEzsign.
+  /// Returns the instance of [FieldEActivesessionEzsign] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -70,6 +70,9 @@ class FieldEActivesessionEzsignTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEActivesessionEzsign? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEActivesessionEzsign) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'No': return FieldEActivesessionEzsign.no;
@@ -85,7 +88,7 @@ class FieldEActivesessionEzsignTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEActivesessionEzsignTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEActivesessionEzsignTypeTransformer? _instance;
 }
 

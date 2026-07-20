@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **eWebhookModule** | [**FieldEWebhookModule**](FieldEWebhookModule.md) |  | 
 **eWebhookEzsignevent** | [**CustomEWebhookEzsignevent**](CustomEWebhookEzsignevent.md) |  | [optional] 
 **eWebhookManagementevent** | [**FieldEWebhookManagementevent**](FieldEWebhookManagementevent.md) |  | [optional] 
+**eWebhookRealestateevent** | [**FieldEWebhookRealestateevent**](FieldEWebhookRealestateevent.md) |  | [optional] 
 **fkiEzsignfolderID** | **int** | The unique ID of the Ezsignfolder | [optional] 
 **fkiEzsigndocumentID** | **int** | The unique ID of the Ezsigndocument | [optional] 
 **fkiEzsignsignerID** | **int** | The unique ID of the Ezsignsigner | [optional] 

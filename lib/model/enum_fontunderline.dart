@@ -11,31 +11,30 @@
 part of openapi.api;
 
 /// The Font Underline style
-class EnumFontunderline {
-  /// Instantiate a new enum with the provided [value].
-  const EnumFontunderline._(this.value);
+enum EnumFontunderline {
+  none._(r'None'),
+  single._(r'Single'),
+  double_._(r'Double'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const EnumFontunderline._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const none = EnumFontunderline._(r'None');
-  static const single = EnumFontunderline._(r'Single');
-  static const double_ = EnumFontunderline._(r'Double');
-
-  /// List of all possible values in this [enum][EnumFontunderline].
-  static const values = <EnumFontunderline>[
-    none,
-    single,
-    double_,
-  ];
-
+  /// Returns the instance of [EnumFontunderline] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static EnumFontunderline? fromJson(dynamic value) => EnumFontunderlineTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [EnumFontunderline]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<EnumFontunderline> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EnumFontunderline>[];
     if (json is List && json.isNotEmpty) {
@@ -57,9 +56,11 @@ class EnumFontunderlineTypeTransformer {
 
   const EnumFontunderlineTypeTransformer._();
 
-  String encode(EnumFontunderline data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(EnumFontunderline data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a EnumFontunderline.
+  /// Returns the instance of [EnumFontunderline] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -68,6 +69,9 @@ class EnumFontunderlineTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   EnumFontunderline? decode(dynamic data, {bool allowNull = true}) {
+    if (data is EnumFontunderline) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'None': return EnumFontunderline.none;
@@ -82,7 +86,7 @@ class EnumFontunderlineTypeTransformer {
     return null;
   }
 
-  /// Singleton [EnumFontunderlineTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static EnumFontunderlineTypeTransformer? _instance;
 }
 

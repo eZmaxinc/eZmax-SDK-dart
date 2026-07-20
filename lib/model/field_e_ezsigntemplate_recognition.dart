@@ -11,31 +11,30 @@
 part of openapi.api;
 
 /// Indicates whether we use the name or the content to recognize the templates to be automatically applied to documents
-class FieldEEzsigntemplateRecognition {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsigntemplateRecognition._(this.value);
+enum FieldEEzsigntemplateRecognition {
+  no._(r'No'),
+  filename._(r'Filename'),
+  content._(r'Content'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsigntemplateRecognition._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const no = FieldEEzsigntemplateRecognition._(r'No');
-  static const filename = FieldEEzsigntemplateRecognition._(r'Filename');
-  static const content = FieldEEzsigntemplateRecognition._(r'Content');
-
-  /// List of all possible values in this [enum][FieldEEzsigntemplateRecognition].
-  static const values = <FieldEEzsigntemplateRecognition>[
-    no,
-    filename,
-    content,
-  ];
-
+  /// Returns the instance of [FieldEEzsigntemplateRecognition] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsigntemplateRecognition? fromJson(dynamic value) => FieldEEzsigntemplateRecognitionTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsigntemplateRecognition]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsigntemplateRecognition> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsigntemplateRecognition>[];
     if (json is List && json.isNotEmpty) {
@@ -57,9 +56,11 @@ class FieldEEzsigntemplateRecognitionTypeTransformer {
 
   const FieldEEzsigntemplateRecognitionTypeTransformer._();
 
-  String encode(FieldEEzsigntemplateRecognition data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsigntemplateRecognition data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsigntemplateRecognition.
+  /// Returns the instance of [FieldEEzsigntemplateRecognition] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -68,6 +69,9 @@ class FieldEEzsigntemplateRecognitionTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsigntemplateRecognition? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsigntemplateRecognition) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'No': return FieldEEzsigntemplateRecognition.no;
@@ -82,7 +86,7 @@ class FieldEEzsigntemplateRecognitionTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsigntemplateRecognitionTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsigntemplateRecognitionTypeTransformer? _instance;
 }
 

@@ -11,43 +11,36 @@
 part of openapi.api;
 
 /// The signature step of the Ezsigndocument.
-class FieldEEzsigndocumentStep {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsigndocumentStep._(this.value);
+enum FieldEEzsigndocumentStep {
+  unsent._(r'Unsent'),
+  unsigned._(r'Unsigned'),
+  partiallySigned._(r'PartiallySigned'),
+  declinedToSign._(r'DeclinedToSign'),
+  pendingPrematurelyEnded._(r'PendingPrematurelyEnded'),
+  prematurelyEnded._(r'PrematurelyEnded'),
+  pendingCompletion._(r'PendingCompletion'),
+  completed._(r'Completed'),
+  disposed._(r'Disposed'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsigndocumentStep._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const unsent = FieldEEzsigndocumentStep._(r'Unsent');
-  static const unsigned = FieldEEzsigndocumentStep._(r'Unsigned');
-  static const partiallySigned = FieldEEzsigndocumentStep._(r'PartiallySigned');
-  static const declinedToSign = FieldEEzsigndocumentStep._(r'DeclinedToSign');
-  static const pendingPrematurelyEnded = FieldEEzsigndocumentStep._(r'PendingPrematurelyEnded');
-  static const prematurelyEnded = FieldEEzsigndocumentStep._(r'PrematurelyEnded');
-  static const pendingCompletion = FieldEEzsigndocumentStep._(r'PendingCompletion');
-  static const completed = FieldEEzsigndocumentStep._(r'Completed');
-  static const disposed = FieldEEzsigndocumentStep._(r'Disposed');
-
-  /// List of all possible values in this [enum][FieldEEzsigndocumentStep].
-  static const values = <FieldEEzsigndocumentStep>[
-    unsent,
-    unsigned,
-    partiallySigned,
-    declinedToSign,
-    pendingPrematurelyEnded,
-    prematurelyEnded,
-    pendingCompletion,
-    completed,
-    disposed,
-  ];
-
+  /// Returns the instance of [FieldEEzsigndocumentStep] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsigndocumentStep? fromJson(dynamic value) => FieldEEzsigndocumentStepTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsigndocumentStep]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsigndocumentStep> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsigndocumentStep>[];
     if (json is List && json.isNotEmpty) {
@@ -69,9 +62,11 @@ class FieldEEzsigndocumentStepTypeTransformer {
 
   const FieldEEzsigndocumentStepTypeTransformer._();
 
-  String encode(FieldEEzsigndocumentStep data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsigndocumentStep data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsigndocumentStep.
+  /// Returns the instance of [FieldEEzsigndocumentStep] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -80,6 +75,9 @@ class FieldEEzsigndocumentStepTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsigndocumentStep? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsigndocumentStep) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Unsent': return FieldEEzsigndocumentStep.unsent;
@@ -100,7 +98,7 @@ class FieldEEzsigndocumentStepTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsigndocumentStepTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsigndocumentStepTypeTransformer? _instance;
 }
 

@@ -11,33 +11,31 @@
 part of openapi.api;
 
 /// Mapping configuration to use when template is apply to an document.  1. **Manual** User need to choose mapping manually. 2. **Creator** mapping will be set to creator of template. 3. **User** mapping will be set to fkiUserID 4. **Usergroup** mapping will be set to fkiUsergroupID.
-class FieldEEzsigntemplatesignerMapping {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsigntemplatesignerMapping._(this.value);
+enum FieldEEzsigntemplatesignerMapping {
+  manual._(r'Manual'),
+  creator._(r'Creator'),
+  user._(r'User'),
+  usergroup._(r'Usergroup'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsigntemplatesignerMapping._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const manual = FieldEEzsigntemplatesignerMapping._(r'Manual');
-  static const creator = FieldEEzsigntemplatesignerMapping._(r'Creator');
-  static const user = FieldEEzsigntemplatesignerMapping._(r'User');
-  static const usergroup = FieldEEzsigntemplatesignerMapping._(r'Usergroup');
-
-  /// List of all possible values in this [enum][FieldEEzsigntemplatesignerMapping].
-  static const values = <FieldEEzsigntemplatesignerMapping>[
-    manual,
-    creator,
-    user,
-    usergroup,
-  ];
-
+  /// Returns the instance of [FieldEEzsigntemplatesignerMapping] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsigntemplatesignerMapping? fromJson(dynamic value) => FieldEEzsigntemplatesignerMappingTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsigntemplatesignerMapping]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsigntemplatesignerMapping> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsigntemplatesignerMapping>[];
     if (json is List && json.isNotEmpty) {
@@ -59,9 +57,11 @@ class FieldEEzsigntemplatesignerMappingTypeTransformer {
 
   const FieldEEzsigntemplatesignerMappingTypeTransformer._();
 
-  String encode(FieldEEzsigntemplatesignerMapping data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsigntemplatesignerMapping data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsigntemplatesignerMapping.
+  /// Returns the instance of [FieldEEzsigntemplatesignerMapping] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -70,6 +70,9 @@ class FieldEEzsigntemplatesignerMappingTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsigntemplatesignerMapping? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsigntemplatesignerMapping) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Manual': return FieldEEzsigntemplatesignerMapping.manual;
@@ -85,7 +88,7 @@ class FieldEEzsigntemplatesignerMappingTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsigntemplatesignerMappingTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsigntemplatesignerMappingTypeTransformer? _instance;
 }
 

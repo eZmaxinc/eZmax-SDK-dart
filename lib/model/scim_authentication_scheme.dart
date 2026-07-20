@@ -129,35 +129,32 @@ class ScimAuthenticationScheme {
 }
 
 /// The authentication scheme.
-class ScimAuthenticationSchemeTypeEnum {
-  /// Instantiate a new enum with the provided [value].
-  const ScimAuthenticationSchemeTypeEnum._(this.value);
+enum ScimAuthenticationSchemeTypeEnum {
+  oauth._(r'oauth'),
+  oauth2._(r'oauth2'),
+  oauthbearertoken._(r'oauthbearertoken'),
+  httpbasic._(r'httpbasic'),
+  httpdigest._(r'httpdigest'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const ScimAuthenticationSchemeTypeEnum._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const oauth = ScimAuthenticationSchemeTypeEnum._(r'oauth');
-  static const oauth2 = ScimAuthenticationSchemeTypeEnum._(r'oauth2');
-  static const oauthbearertoken = ScimAuthenticationSchemeTypeEnum._(r'oauthbearertoken');
-  static const httpbasic = ScimAuthenticationSchemeTypeEnum._(r'httpbasic');
-  static const httpdigest = ScimAuthenticationSchemeTypeEnum._(r'httpdigest');
-
-  /// List of all possible values in this [enum][ScimAuthenticationSchemeTypeEnum].
-  static const values = <ScimAuthenticationSchemeTypeEnum>[
-    oauth,
-    oauth2,
-    oauthbearertoken,
-    httpbasic,
-    httpdigest,
-  ];
-
+  /// Returns the instance of [ScimAuthenticationSchemeTypeEnum] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static ScimAuthenticationSchemeTypeEnum? fromJson(dynamic value) => ScimAuthenticationSchemeTypeEnumTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [ScimAuthenticationSchemeTypeEnum]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<ScimAuthenticationSchemeTypeEnum> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <ScimAuthenticationSchemeTypeEnum>[];
     if (json is List && json.isNotEmpty) {
@@ -179,9 +176,10 @@ class ScimAuthenticationSchemeTypeEnumTypeTransformer {
 
   const ScimAuthenticationSchemeTypeEnumTypeTransformer._();
 
-  String encode(ScimAuthenticationSchemeTypeEnum data) => data.value;
+  String encode(ScimAuthenticationSchemeTypeEnum data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a ScimAuthenticationSchemeTypeEnum.
+  /// Returns the instance of [ScimAuthenticationSchemeTypeEnum] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -190,6 +188,9 @@ class ScimAuthenticationSchemeTypeEnumTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   ScimAuthenticationSchemeTypeEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data is ScimAuthenticationSchemeTypeEnum) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'oauth': return ScimAuthenticationSchemeTypeEnum.oauth;
@@ -206,7 +207,7 @@ class ScimAuthenticationSchemeTypeEnumTypeTransformer {
     return null;
   }
 
-  /// Singleton [ScimAuthenticationSchemeTypeEnumTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static ScimAuthenticationSchemeTypeEnumTypeTransformer? _instance;
 }
 

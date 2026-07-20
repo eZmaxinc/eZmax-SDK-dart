@@ -11,31 +11,30 @@
 part of openapi.api;
 
 /// The status of the Discussionmessage
-class FieldEDiscussionmessageStatus {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEDiscussionmessageStatus._(this.value);
+enum FieldEDiscussionmessageStatus {
+  new_._(r'New'),
+  edited._(r'Edited'),
+  deleted._(r'Deleted'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEDiscussionmessageStatus._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const new_ = FieldEDiscussionmessageStatus._(r'New');
-  static const edited = FieldEDiscussionmessageStatus._(r'Edited');
-  static const deleted = FieldEDiscussionmessageStatus._(r'Deleted');
-
-  /// List of all possible values in this [enum][FieldEDiscussionmessageStatus].
-  static const values = <FieldEDiscussionmessageStatus>[
-    new_,
-    edited,
-    deleted,
-  ];
-
+  /// Returns the instance of [FieldEDiscussionmessageStatus] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEDiscussionmessageStatus? fromJson(dynamic value) => FieldEDiscussionmessageStatusTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEDiscussionmessageStatus]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEDiscussionmessageStatus> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEDiscussionmessageStatus>[];
     if (json is List && json.isNotEmpty) {
@@ -57,9 +56,11 @@ class FieldEDiscussionmessageStatusTypeTransformer {
 
   const FieldEDiscussionmessageStatusTypeTransformer._();
 
-  String encode(FieldEDiscussionmessageStatus data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEDiscussionmessageStatus data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEDiscussionmessageStatus.
+  /// Returns the instance of [FieldEDiscussionmessageStatus] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -68,6 +69,9 @@ class FieldEDiscussionmessageStatusTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEDiscussionmessageStatus? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEDiscussionmessageStatus) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'New': return FieldEDiscussionmessageStatus.new_;
@@ -82,7 +86,7 @@ class FieldEDiscussionmessageStatusTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEDiscussionmessageStatusTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEDiscussionmessageStatusTypeTransformer? _instance;
 }
 

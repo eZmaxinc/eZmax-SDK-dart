@@ -11,37 +11,33 @@
 part of openapi.api;
 
 /// The step of the Buyercontract
-class FieldEBuyercontractStep {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEBuyercontractStep._(this.value);
+enum FieldEBuyercontractStep {
+  imported._(r'Imported'),
+  active._(r'Active'),
+  modified._(r'Modified'),
+  contractEnded._(r'ContractEnded'),
+  expiredContract._(r'ExpiredContract'),
+  bought._(r'Bought'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEBuyercontractStep._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const imported = FieldEBuyercontractStep._(r'Imported');
-  static const active = FieldEBuyercontractStep._(r'Active');
-  static const modified = FieldEBuyercontractStep._(r'Modified');
-  static const contractEnded = FieldEBuyercontractStep._(r'ContractEnded');
-  static const expiredContract = FieldEBuyercontractStep._(r'ExpiredContract');
-  static const bought = FieldEBuyercontractStep._(r'Bought');
-
-  /// List of all possible values in this [enum][FieldEBuyercontractStep].
-  static const values = <FieldEBuyercontractStep>[
-    imported,
-    active,
-    modified,
-    contractEnded,
-    expiredContract,
-    bought,
-  ];
-
+  /// Returns the instance of [FieldEBuyercontractStep] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEBuyercontractStep? fromJson(dynamic value) => FieldEBuyercontractStepTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEBuyercontractStep]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEBuyercontractStep> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEBuyercontractStep>[];
     if (json is List && json.isNotEmpty) {
@@ -63,9 +59,11 @@ class FieldEBuyercontractStepTypeTransformer {
 
   const FieldEBuyercontractStepTypeTransformer._();
 
-  String encode(FieldEBuyercontractStep data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEBuyercontractStep data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEBuyercontractStep.
+  /// Returns the instance of [FieldEBuyercontractStep] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -74,6 +72,9 @@ class FieldEBuyercontractStepTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEBuyercontractStep? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEBuyercontractStep) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Imported': return FieldEBuyercontractStep.imported;
@@ -91,7 +92,7 @@ class FieldEBuyercontractStepTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEBuyercontractStepTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEBuyercontractStepTypeTransformer? _instance;
 }
 

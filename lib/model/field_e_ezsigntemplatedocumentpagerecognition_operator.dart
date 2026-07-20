@@ -11,31 +11,30 @@
 part of openapi.api;
 
 /// The operator of the Ezsigntemplatedocumentpagerecognition
-class FieldEEzsigntemplatedocumentpagerecognitionOperator {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsigntemplatedocumentpagerecognitionOperator._(this.value);
+enum FieldEEzsigntemplatedocumentpagerecognitionOperator {
+  eq._(r'eq'),
+  in_._(r'in'),
+  similar._(r'similar'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsigntemplatedocumentpagerecognitionOperator._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const eq = FieldEEzsigntemplatedocumentpagerecognitionOperator._(r'eq');
-  static const in_ = FieldEEzsigntemplatedocumentpagerecognitionOperator._(r'in');
-  static const similar = FieldEEzsigntemplatedocumentpagerecognitionOperator._(r'similar');
-
-  /// List of all possible values in this [enum][FieldEEzsigntemplatedocumentpagerecognitionOperator].
-  static const values = <FieldEEzsigntemplatedocumentpagerecognitionOperator>[
-    eq,
-    in_,
-    similar,
-  ];
-
+  /// Returns the instance of [FieldEEzsigntemplatedocumentpagerecognitionOperator] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsigntemplatedocumentpagerecognitionOperator? fromJson(dynamic value) => FieldEEzsigntemplatedocumentpagerecognitionOperatorTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsigntemplatedocumentpagerecognitionOperator]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsigntemplatedocumentpagerecognitionOperator> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsigntemplatedocumentpagerecognitionOperator>[];
     if (json is List && json.isNotEmpty) {
@@ -57,9 +56,11 @@ class FieldEEzsigntemplatedocumentpagerecognitionOperatorTypeTransformer {
 
   const FieldEEzsigntemplatedocumentpagerecognitionOperatorTypeTransformer._();
 
-  String encode(FieldEEzsigntemplatedocumentpagerecognitionOperator data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsigntemplatedocumentpagerecognitionOperator data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsigntemplatedocumentpagerecognitionOperator.
+  /// Returns the instance of [FieldEEzsigntemplatedocumentpagerecognitionOperator] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -68,6 +69,9 @@ class FieldEEzsigntemplatedocumentpagerecognitionOperatorTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsigntemplatedocumentpagerecognitionOperator? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsigntemplatedocumentpagerecognitionOperator) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'eq': return FieldEEzsigntemplatedocumentpagerecognitionOperator.eq;
@@ -82,7 +86,7 @@ class FieldEEzsigntemplatedocumentpagerecognitionOperatorTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsigntemplatedocumentpagerecognitionOperatorTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsigntemplatedocumentpagerecognitionOperatorTypeTransformer? _instance;
 }
 

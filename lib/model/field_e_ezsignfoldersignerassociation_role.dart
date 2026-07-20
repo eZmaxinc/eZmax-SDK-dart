@@ -11,31 +11,30 @@
 part of openapi.api;
 
 /// The type of the EzsignfoldersignerassociationRole.  1. **CC** receive a copy of all documents. 2. **Signer** sign document. 3. **SignerAndCC** sign document and receive a copy of all documents.
-class FieldEEzsignfoldersignerassociationRole {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsignfoldersignerassociationRole._(this.value);
+enum FieldEEzsignfoldersignerassociationRole {
+  CC._(r'CC'),
+  signer._(r'Signer'),
+  signerAndCC._(r'SignerAndCC'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsignfoldersignerassociationRole._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const CC = FieldEEzsignfoldersignerassociationRole._(r'CC');
-  static const signer = FieldEEzsignfoldersignerassociationRole._(r'Signer');
-  static const signerAndCC = FieldEEzsignfoldersignerassociationRole._(r'SignerAndCC');
-
-  /// List of all possible values in this [enum][FieldEEzsignfoldersignerassociationRole].
-  static const values = <FieldEEzsignfoldersignerassociationRole>[
-    CC,
-    signer,
-    signerAndCC,
-  ];
-
+  /// Returns the instance of [FieldEEzsignfoldersignerassociationRole] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsignfoldersignerassociationRole? fromJson(dynamic value) => FieldEEzsignfoldersignerassociationRoleTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsignfoldersignerassociationRole]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsignfoldersignerassociationRole> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsignfoldersignerassociationRole>[];
     if (json is List && json.isNotEmpty) {
@@ -57,9 +56,11 @@ class FieldEEzsignfoldersignerassociationRoleTypeTransformer {
 
   const FieldEEzsignfoldersignerassociationRoleTypeTransformer._();
 
-  String encode(FieldEEzsignfoldersignerassociationRole data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsignfoldersignerassociationRole data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsignfoldersignerassociationRole.
+  /// Returns the instance of [FieldEEzsignfoldersignerassociationRole] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -68,6 +69,9 @@ class FieldEEzsignfoldersignerassociationRoleTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsignfoldersignerassociationRole? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsignfoldersignerassociationRole) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'CC': return FieldEEzsignfoldersignerassociationRole.CC;
@@ -82,7 +86,7 @@ class FieldEEzsignfoldersignerassociationRoleTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsignfoldersignerassociationRoleTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsignfoldersignerassociationRoleTypeTransformer? _instance;
 }
 

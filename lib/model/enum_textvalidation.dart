@@ -11,51 +11,40 @@
 part of openapi.api;
 
 /// The text validation
-class EnumTextvalidation {
-  /// Instantiate a new enum with the provided [value].
-  const EnumTextvalidation._(this.value);
+enum EnumTextvalidation {
+  none._(r'None'),
+  dateLeftParenthesisYYYYMMDDRightParenthesis._(r'Date (YYYY-MM-DD)'),
+  dateLeftParenthesisMMSlashDDSlashYYYYRightParenthesis._(r'Date (MM/DD/YYYY)'),
+  dateLeftParenthesisMMSlashDDSlashYYRightParenthesis._(r'Date (MM/DD/YY)'),
+  dateLeftParenthesisDDSlashMMSlashYYYYRightParenthesis._(r'Date (DD/MM/YYYY)'),
+  dateLeftParenthesisDDSlashMMSlashYYRightParenthesis._(r'Date (DD/MM/YY)'),
+  email._(r'Email'),
+  letters._(r'Letters'),
+  numbers._(r'Numbers'),
+  zip._(r'Zip'),
+  zipPlus4._(r'Zip+4'),
+  postalCode._(r'PostalCode'),
+  custom._(r'Custom'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const EnumTextvalidation._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const none = EnumTextvalidation._(r'None');
-  static const dateLeftParenthesisYYYYMMDDRightParenthesis = EnumTextvalidation._(r'Date (YYYY-MM-DD)');
-  static const dateLeftParenthesisMMSlashDDSlashYYYYRightParenthesis = EnumTextvalidation._(r'Date (MM/DD/YYYY)');
-  static const dateLeftParenthesisMMSlashDDSlashYYRightParenthesis = EnumTextvalidation._(r'Date (MM/DD/YY)');
-  static const dateLeftParenthesisDDSlashMMSlashYYYYRightParenthesis = EnumTextvalidation._(r'Date (DD/MM/YYYY)');
-  static const dateLeftParenthesisDDSlashMMSlashYYRightParenthesis = EnumTextvalidation._(r'Date (DD/MM/YY)');
-  static const email = EnumTextvalidation._(r'Email');
-  static const letters = EnumTextvalidation._(r'Letters');
-  static const numbers = EnumTextvalidation._(r'Numbers');
-  static const zip = EnumTextvalidation._(r'Zip');
-  static const zipPlus4 = EnumTextvalidation._(r'Zip+4');
-  static const postalCode = EnumTextvalidation._(r'PostalCode');
-  static const custom = EnumTextvalidation._(r'Custom');
-
-  /// List of all possible values in this [enum][EnumTextvalidation].
-  static const values = <EnumTextvalidation>[
-    none,
-    dateLeftParenthesisYYYYMMDDRightParenthesis,
-    dateLeftParenthesisMMSlashDDSlashYYYYRightParenthesis,
-    dateLeftParenthesisMMSlashDDSlashYYRightParenthesis,
-    dateLeftParenthesisDDSlashMMSlashYYYYRightParenthesis,
-    dateLeftParenthesisDDSlashMMSlashYYRightParenthesis,
-    email,
-    letters,
-    numbers,
-    zip,
-    zipPlus4,
-    postalCode,
-    custom,
-  ];
-
+  /// Returns the instance of [EnumTextvalidation] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static EnumTextvalidation? fromJson(dynamic value) => EnumTextvalidationTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [EnumTextvalidation]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<EnumTextvalidation> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EnumTextvalidation>[];
     if (json is List && json.isNotEmpty) {
@@ -77,9 +66,11 @@ class EnumTextvalidationTypeTransformer {
 
   const EnumTextvalidationTypeTransformer._();
 
-  String encode(EnumTextvalidation data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(EnumTextvalidation data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a EnumTextvalidation.
+  /// Returns the instance of [EnumTextvalidation] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -88,6 +79,9 @@ class EnumTextvalidationTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   EnumTextvalidation? decode(dynamic data, {bool allowNull = true}) {
+    if (data is EnumTextvalidation) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'None': return EnumTextvalidation.none;
@@ -112,7 +106,7 @@ class EnumTextvalidationTypeTransformer {
     return null;
   }
 
-  /// Singleton [EnumTextvalidationTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static EnumTextvalidationTypeTransformer? _instance;
 }
 

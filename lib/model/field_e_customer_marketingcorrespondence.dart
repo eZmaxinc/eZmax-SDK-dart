@@ -11,33 +11,31 @@
 part of openapi.api;
 
 /// The marketingcorrespondence of the Customer
-class FieldECustomerMarketingcorrespondence {
-  /// Instantiate a new enum with the provided [value].
-  const FieldECustomerMarketingcorrespondence._(this.value);
+enum FieldECustomerMarketingcorrespondence {
+  no._(r'No'),
+  email._(r'Email'),
+  mail._(r'Mail'),
+  any._(r'Any'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldECustomerMarketingcorrespondence._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const no = FieldECustomerMarketingcorrespondence._(r'No');
-  static const email = FieldECustomerMarketingcorrespondence._(r'Email');
-  static const mail = FieldECustomerMarketingcorrespondence._(r'Mail');
-  static const any = FieldECustomerMarketingcorrespondence._(r'Any');
-
-  /// List of all possible values in this [enum][FieldECustomerMarketingcorrespondence].
-  static const values = <FieldECustomerMarketingcorrespondence>[
-    no,
-    email,
-    mail,
-    any,
-  ];
-
+  /// Returns the instance of [FieldECustomerMarketingcorrespondence] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldECustomerMarketingcorrespondence? fromJson(dynamic value) => FieldECustomerMarketingcorrespondenceTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldECustomerMarketingcorrespondence]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldECustomerMarketingcorrespondence> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldECustomerMarketingcorrespondence>[];
     if (json is List && json.isNotEmpty) {
@@ -59,9 +57,11 @@ class FieldECustomerMarketingcorrespondenceTypeTransformer {
 
   const FieldECustomerMarketingcorrespondenceTypeTransformer._();
 
-  String encode(FieldECustomerMarketingcorrespondence data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldECustomerMarketingcorrespondence data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldECustomerMarketingcorrespondence.
+  /// Returns the instance of [FieldECustomerMarketingcorrespondence] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -70,6 +70,9 @@ class FieldECustomerMarketingcorrespondenceTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldECustomerMarketingcorrespondence? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldECustomerMarketingcorrespondence) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'No': return FieldECustomerMarketingcorrespondence.no;
@@ -85,7 +88,7 @@ class FieldECustomerMarketingcorrespondenceTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldECustomerMarketingcorrespondenceTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldECustomerMarketingcorrespondenceTypeTransformer? _instance;
 }
 

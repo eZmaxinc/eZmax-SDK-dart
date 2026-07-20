@@ -11,31 +11,30 @@
 part of openapi.api;
 
 /// The Robot used for the Discussion.
-class FieldEDiscussionRobot {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEDiscussionRobot._(this.value);
+enum FieldEDiscussionRobot {
+  advanced._(r'Advanced'),
+  normal._(r'Normal'),
+  support._(r'Support'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEDiscussionRobot._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const advanced = FieldEDiscussionRobot._(r'Advanced');
-  static const normal = FieldEDiscussionRobot._(r'Normal');
-  static const support = FieldEDiscussionRobot._(r'Support');
-
-  /// List of all possible values in this [enum][FieldEDiscussionRobot].
-  static const values = <FieldEDiscussionRobot>[
-    advanced,
-    normal,
-    support,
-  ];
-
+  /// Returns the instance of [FieldEDiscussionRobot] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEDiscussionRobot? fromJson(dynamic value) => FieldEDiscussionRobotTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEDiscussionRobot]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEDiscussionRobot> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEDiscussionRobot>[];
     if (json is List && json.isNotEmpty) {
@@ -57,9 +56,11 @@ class FieldEDiscussionRobotTypeTransformer {
 
   const FieldEDiscussionRobotTypeTransformer._();
 
-  String encode(FieldEDiscussionRobot data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEDiscussionRobot data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEDiscussionRobot.
+  /// Returns the instance of [FieldEDiscussionRobot] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -68,6 +69,9 @@ class FieldEDiscussionRobotTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEDiscussionRobot? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEDiscussionRobot) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Advanced': return FieldEDiscussionRobot.advanced;
@@ -82,7 +86,7 @@ class FieldEDiscussionRobotTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEDiscussionRobotTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEDiscussionRobotTypeTransformer? _instance;
 }
 

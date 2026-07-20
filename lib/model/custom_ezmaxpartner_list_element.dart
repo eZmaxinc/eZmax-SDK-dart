@@ -20,6 +20,7 @@ class CustomEzmaxpartnerListElement {
     required this.sEzmaxpartnerNameX,
     required this.sEzmaxpartnerPhoneE164X,
     required this.sEzmaxpartnerUrlX,
+    required this.objEzmaxpartnerLogourl,
   });
 
   /// The unique ID of the Ezmaxpartner
@@ -45,6 +46,8 @@ class CustomEzmaxpartnerListElement {
   /// The url of the Ezmaxpartner website in the language of the requester
   String sEzmaxpartnerUrlX;
 
+  MultilingualEzmaxpartnerLogourl objEzmaxpartnerLogourl;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is CustomEzmaxpartnerListElement &&
     other.pkiEzmaxpartnerID == pkiEzmaxpartnerID &&
@@ -53,7 +56,8 @@ class CustomEzmaxpartnerListElement {
     other.sEzmaxpartnerShortdescriptionX == sEzmaxpartnerShortdescriptionX &&
     other.sEzmaxpartnerNameX == sEzmaxpartnerNameX &&
     other.sEzmaxpartnerPhoneE164X == sEzmaxpartnerPhoneE164X &&
-    other.sEzmaxpartnerUrlX == sEzmaxpartnerUrlX;
+    other.sEzmaxpartnerUrlX == sEzmaxpartnerUrlX &&
+    other.objEzmaxpartnerLogourl == objEzmaxpartnerLogourl;
 
   @override
   int get hashCode =>
@@ -64,10 +68,11 @@ class CustomEzmaxpartnerListElement {
     (sEzmaxpartnerShortdescriptionX.hashCode) +
     (sEzmaxpartnerNameX.hashCode) +
     (sEzmaxpartnerPhoneE164X.hashCode) +
-    (sEzmaxpartnerUrlX.hashCode);
+    (sEzmaxpartnerUrlX.hashCode) +
+    (objEzmaxpartnerLogourl.hashCode);
 
   @override
-  String toString() => 'CustomEzmaxpartnerListElement[pkiEzmaxpartnerID=$pkiEzmaxpartnerID, sEzmaxpartnerAddressX=$sEzmaxpartnerAddressX, sEzmaxpartnerEmailaddressX=$sEzmaxpartnerEmailaddressX, sEzmaxpartnerShortdescriptionX=$sEzmaxpartnerShortdescriptionX, sEzmaxpartnerNameX=$sEzmaxpartnerNameX, sEzmaxpartnerPhoneE164X=$sEzmaxpartnerPhoneE164X, sEzmaxpartnerUrlX=$sEzmaxpartnerUrlX]';
+  String toString() => 'CustomEzmaxpartnerListElement[pkiEzmaxpartnerID=$pkiEzmaxpartnerID, sEzmaxpartnerAddressX=$sEzmaxpartnerAddressX, sEzmaxpartnerEmailaddressX=$sEzmaxpartnerEmailaddressX, sEzmaxpartnerShortdescriptionX=$sEzmaxpartnerShortdescriptionX, sEzmaxpartnerNameX=$sEzmaxpartnerNameX, sEzmaxpartnerPhoneE164X=$sEzmaxpartnerPhoneE164X, sEzmaxpartnerUrlX=$sEzmaxpartnerUrlX, objEzmaxpartnerLogourl=$objEzmaxpartnerLogourl]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -78,6 +83,7 @@ class CustomEzmaxpartnerListElement {
       json[r'sEzmaxpartnerNameX'] = this.sEzmaxpartnerNameX;
       json[r'sEzmaxpartnerPhoneE164X'] = this.sEzmaxpartnerPhoneE164X;
       json[r'sEzmaxpartnerUrlX'] = this.sEzmaxpartnerUrlX;
+      json[r'objEzmaxpartnerLogourl'] = this.objEzmaxpartnerLogourl;
     return json;
   }
 
@@ -106,6 +112,8 @@ class CustomEzmaxpartnerListElement {
         assert(json[r'sEzmaxpartnerPhoneE164X'] != null, 'Required key "CustomEzmaxpartnerListElement[sEzmaxpartnerPhoneE164X]" has a null value in JSON.');
         assert(json.containsKey(r'sEzmaxpartnerUrlX'), 'Required key "CustomEzmaxpartnerListElement[sEzmaxpartnerUrlX]" is missing from JSON.');
         assert(json[r'sEzmaxpartnerUrlX'] != null, 'Required key "CustomEzmaxpartnerListElement[sEzmaxpartnerUrlX]" has a null value in JSON.');
+        assert(json.containsKey(r'objEzmaxpartnerLogourl'), 'Required key "CustomEzmaxpartnerListElement[objEzmaxpartnerLogourl]" is missing from JSON.');
+        assert(json[r'objEzmaxpartnerLogourl'] != null, 'Required key "CustomEzmaxpartnerListElement[objEzmaxpartnerLogourl]" has a null value in JSON.');
         return true;
       }());
 
@@ -117,6 +125,7 @@ class CustomEzmaxpartnerListElement {
         sEzmaxpartnerNameX: mapValueOfType<String>(json, r'sEzmaxpartnerNameX')!,
         sEzmaxpartnerPhoneE164X: mapValueOfType<String>(json, r'sEzmaxpartnerPhoneE164X')!,
         sEzmaxpartnerUrlX: mapValueOfType<String>(json, r'sEzmaxpartnerUrlX')!,
+        objEzmaxpartnerLogourl: MultilingualEzmaxpartnerLogourl.fromJson(json[r'objEzmaxpartnerLogourl'])!,
       );
     }
     return null;
@@ -171,6 +180,7 @@ class CustomEzmaxpartnerListElement {
     'sEzmaxpartnerNameX',
     'sEzmaxpartnerPhoneE164X',
     'sEzmaxpartnerUrlX',
+    'objEzmaxpartnerLogourl',
   };
 }
 

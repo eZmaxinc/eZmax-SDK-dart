@@ -11,29 +11,29 @@
 part of openapi.api;
 
 /// The Signer requirement of the Ezsigntemplateformfieldgroup. **All** means anyone can fill it, **One** means a specific person must fill it.
-class FieldEEzsigntemplateformfieldgroupSignerrequirement {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsigntemplateformfieldgroupSignerrequirement._(this.value);
+enum FieldEEzsigntemplateformfieldgroupSignerrequirement {
+  all._(r'All'),
+  one._(r'One'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsigntemplateformfieldgroupSignerrequirement._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const all = FieldEEzsigntemplateformfieldgroupSignerrequirement._(r'All');
-  static const one = FieldEEzsigntemplateformfieldgroupSignerrequirement._(r'One');
-
-  /// List of all possible values in this [enum][FieldEEzsigntemplateformfieldgroupSignerrequirement].
-  static const values = <FieldEEzsigntemplateformfieldgroupSignerrequirement>[
-    all,
-    one,
-  ];
-
+  /// Returns the instance of [FieldEEzsigntemplateformfieldgroupSignerrequirement] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsigntemplateformfieldgroupSignerrequirement? fromJson(dynamic value) => FieldEEzsigntemplateformfieldgroupSignerrequirementTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsigntemplateformfieldgroupSignerrequirement]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsigntemplateformfieldgroupSignerrequirement> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsigntemplateformfieldgroupSignerrequirement>[];
     if (json is List && json.isNotEmpty) {
@@ -55,9 +55,11 @@ class FieldEEzsigntemplateformfieldgroupSignerrequirementTypeTransformer {
 
   const FieldEEzsigntemplateformfieldgroupSignerrequirementTypeTransformer._();
 
-  String encode(FieldEEzsigntemplateformfieldgroupSignerrequirement data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsigntemplateformfieldgroupSignerrequirement data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsigntemplateformfieldgroupSignerrequirement.
+  /// Returns the instance of [FieldEEzsigntemplateformfieldgroupSignerrequirement] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -66,6 +68,9 @@ class FieldEEzsigntemplateformfieldgroupSignerrequirementTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsigntemplateformfieldgroupSignerrequirement? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsigntemplateformfieldgroupSignerrequirement) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'All': return FieldEEzsigntemplateformfieldgroupSignerrequirement.all;
@@ -79,7 +84,7 @@ class FieldEEzsigntemplateformfieldgroupSignerrequirementTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsigntemplateformfieldgroupSignerrequirementTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsigntemplateformfieldgroupSignerrequirementTypeTransformer? _instance;
 }
 

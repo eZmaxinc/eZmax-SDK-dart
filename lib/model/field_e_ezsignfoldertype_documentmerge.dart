@@ -11,31 +11,30 @@
 part of openapi.api;
 
 /// Indicates if document can be merged into one
-class FieldEEzsignfoldertypeDocumentmerge {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsignfoldertypeDocumentmerge._(this.value);
+enum FieldEEzsignfoldertypeDocumentmerge {
+  no._(r'No'),
+  yesWithWatermark._(r'YesWithWatermark'),
+  yes._(r'Yes'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsignfoldertypeDocumentmerge._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const no = FieldEEzsignfoldertypeDocumentmerge._(r'No');
-  static const yesWithWatermark = FieldEEzsignfoldertypeDocumentmerge._(r'YesWithWatermark');
-  static const yes = FieldEEzsignfoldertypeDocumentmerge._(r'Yes');
-
-  /// List of all possible values in this [enum][FieldEEzsignfoldertypeDocumentmerge].
-  static const values = <FieldEEzsignfoldertypeDocumentmerge>[
-    no,
-    yesWithWatermark,
-    yes,
-  ];
-
+  /// Returns the instance of [FieldEEzsignfoldertypeDocumentmerge] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsignfoldertypeDocumentmerge? fromJson(dynamic value) => FieldEEzsignfoldertypeDocumentmergeTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsignfoldertypeDocumentmerge]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsignfoldertypeDocumentmerge> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsignfoldertypeDocumentmerge>[];
     if (json is List && json.isNotEmpty) {
@@ -57,9 +56,11 @@ class FieldEEzsignfoldertypeDocumentmergeTypeTransformer {
 
   const FieldEEzsignfoldertypeDocumentmergeTypeTransformer._();
 
-  String encode(FieldEEzsignfoldertypeDocumentmerge data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsignfoldertypeDocumentmerge data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsignfoldertypeDocumentmerge.
+  /// Returns the instance of [FieldEEzsignfoldertypeDocumentmerge] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -68,6 +69,9 @@ class FieldEEzsignfoldertypeDocumentmergeTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsignfoldertypeDocumentmerge? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsignfoldertypeDocumentmerge) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'No': return FieldEEzsignfoldertypeDocumentmerge.no;
@@ -82,7 +86,7 @@ class FieldEEzsignfoldertypeDocumentmergeTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsignfoldertypeDocumentmergeTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsignfoldertypeDocumentmergeTypeTransformer? _instance;
 }
 

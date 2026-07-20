@@ -11,97 +11,63 @@
 part of openapi.api;
 
 /// The type of the Contact
-class FieldEContactType {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEContactType._(this.value);
+enum FieldEContactType {
+  agent._(r'Agent'),
+  assistant._(r'Assistant'),
+  bankAccount._(r'BankAccount'),
+  borrower._(r'Borrower'),
+  buyer._(r'Buyer'),
+  company._(r'Company'),
+  contractCreator._(r'ContractCreator'),
+  creditcardmerchant._(r'Creditcardmerchant'),
+  customer._(r'Customer'),
+  depositreceipt._(r'Depositreceipt'),
+  employee._(r'Employee'),
+  externalBroker._(r'ExternalBroker'),
+  ezsignSigner._(r'EzsignSigner'),
+  ezsignUser._(r'EzsignUser'),
+  ezcomAgent._(r'EzcomAgent'),
+  ezcomApprover._(r'EzcomApprover'),
+  financialInstitution._(r'FinancialInstitution'),
+  franchiseBroker._(r'FranchiseBroker'),
+  franchisefranchisecontact._(r'Franchisefranchisecontact'),
+  franchisefranchisesignatory._(r'Franchisefranchisesignatory'),
+  franchiseOfficeBroker._(r'FranchiseOfficeBroker'),
+  franchiseCompany._(r'FranchiseCompany'),
+  franchiseOwner._(r'FranchiseOwner'),
+  lead._(r'Lead'),
+  marketingCampaignSample._(r'MarketingCampaignSample'),
+  notary._(r'Notary'),
+  payer._(r'Payer'),
+  petowner._(r'Petowner'),
+  privateTo._(r'PrivateTo'),
+  rewardMember._(r'RewardMember'),
+  rewardRepresentative._(r'RewardRepresentative'),
+  seller._(r'Seller'),
+  shared._(r'Shared'),
+  supplier._(r'Supplier'),
+  survey._(r'Survey'),
+  inspector._(r'Inspector'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEContactType._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const agent = FieldEContactType._(r'Agent');
-  static const assistant = FieldEContactType._(r'Assistant');
-  static const bankAccount = FieldEContactType._(r'BankAccount');
-  static const borrower = FieldEContactType._(r'Borrower');
-  static const buyer = FieldEContactType._(r'Buyer');
-  static const company = FieldEContactType._(r'Company');
-  static const contractCreator = FieldEContactType._(r'ContractCreator');
-  static const creditcardmerchant = FieldEContactType._(r'Creditcardmerchant');
-  static const customer = FieldEContactType._(r'Customer');
-  static const depositreceipt = FieldEContactType._(r'Depositreceipt');
-  static const employee = FieldEContactType._(r'Employee');
-  static const externalBroker = FieldEContactType._(r'ExternalBroker');
-  static const ezsignSigner = FieldEContactType._(r'EzsignSigner');
-  static const ezsignUser = FieldEContactType._(r'EzsignUser');
-  static const ezcomAgent = FieldEContactType._(r'EzcomAgent');
-  static const ezcomApprover = FieldEContactType._(r'EzcomApprover');
-  static const financialInstitution = FieldEContactType._(r'FinancialInstitution');
-  static const franchiseBroker = FieldEContactType._(r'FranchiseBroker');
-  static const franchisefranchisecontact = FieldEContactType._(r'Franchisefranchisecontact');
-  static const franchisefranchisesignatory = FieldEContactType._(r'Franchisefranchisesignatory');
-  static const franchiseOfficeBroker = FieldEContactType._(r'FranchiseOfficeBroker');
-  static const franchiseCompany = FieldEContactType._(r'FranchiseCompany');
-  static const franchiseOwner = FieldEContactType._(r'FranchiseOwner');
-  static const lead = FieldEContactType._(r'Lead');
-  static const marketingCampaignSample = FieldEContactType._(r'MarketingCampaignSample');
-  static const notary = FieldEContactType._(r'Notary');
-  static const payer = FieldEContactType._(r'Payer');
-  static const petowner = FieldEContactType._(r'Petowner');
-  static const privateTo = FieldEContactType._(r'PrivateTo');
-  static const rewardMember = FieldEContactType._(r'RewardMember');
-  static const rewardRepresentative = FieldEContactType._(r'RewardRepresentative');
-  static const seller = FieldEContactType._(r'Seller');
-  static const shared = FieldEContactType._(r'Shared');
-  static const supplier = FieldEContactType._(r'Supplier');
-  static const survey = FieldEContactType._(r'Survey');
-  static const inspector = FieldEContactType._(r'Inspector');
-
-  /// List of all possible values in this [enum][FieldEContactType].
-  static const values = <FieldEContactType>[
-    agent,
-    assistant,
-    bankAccount,
-    borrower,
-    buyer,
-    company,
-    contractCreator,
-    creditcardmerchant,
-    customer,
-    depositreceipt,
-    employee,
-    externalBroker,
-    ezsignSigner,
-    ezsignUser,
-    ezcomAgent,
-    ezcomApprover,
-    financialInstitution,
-    franchiseBroker,
-    franchisefranchisecontact,
-    franchisefranchisesignatory,
-    franchiseOfficeBroker,
-    franchiseCompany,
-    franchiseOwner,
-    lead,
-    marketingCampaignSample,
-    notary,
-    payer,
-    petowner,
-    privateTo,
-    rewardMember,
-    rewardRepresentative,
-    seller,
-    shared,
-    supplier,
-    survey,
-    inspector,
-  ];
-
+  /// Returns the instance of [FieldEContactType] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEContactType? fromJson(dynamic value) => FieldEContactTypeTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEContactType]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEContactType> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEContactType>[];
     if (json is List && json.isNotEmpty) {
@@ -123,9 +89,11 @@ class FieldEContactTypeTypeTransformer {
 
   const FieldEContactTypeTypeTransformer._();
 
-  String encode(FieldEContactType data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEContactType data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEContactType.
+  /// Returns the instance of [FieldEContactType] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -134,6 +102,9 @@ class FieldEContactTypeTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEContactType? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEContactType) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Agent': return FieldEContactType.agent;
@@ -181,7 +152,7 @@ class FieldEContactTypeTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEContactTypeTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEContactTypeTypeTransformer? _instance;
 }
 

@@ -11,35 +11,32 @@
 part of openapi.api;
 
 /// The type of Versionhistory.
-class FieldEVersionhistoryType {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEVersionhistoryType._(this.value);
+enum FieldEVersionhistoryType {
+  agentBroker._(r'AgentBroker'),
+  newFeature._(r'NewFeature'),
+  correction._(r'Correction'),
+  modification._(r'Modification'),
+  importantMessage._(r'ImportantMessage'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEVersionhistoryType._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const agentBroker = FieldEVersionhistoryType._(r'AgentBroker');
-  static const newFeature = FieldEVersionhistoryType._(r'NewFeature');
-  static const correction = FieldEVersionhistoryType._(r'Correction');
-  static const modification = FieldEVersionhistoryType._(r'Modification');
-  static const importantMessage = FieldEVersionhistoryType._(r'ImportantMessage');
-
-  /// List of all possible values in this [enum][FieldEVersionhistoryType].
-  static const values = <FieldEVersionhistoryType>[
-    agentBroker,
-    newFeature,
-    correction,
-    modification,
-    importantMessage,
-  ];
-
+  /// Returns the instance of [FieldEVersionhistoryType] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEVersionhistoryType? fromJson(dynamic value) => FieldEVersionhistoryTypeTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEVersionhistoryType]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEVersionhistoryType> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEVersionhistoryType>[];
     if (json is List && json.isNotEmpty) {
@@ -61,9 +58,11 @@ class FieldEVersionhistoryTypeTypeTransformer {
 
   const FieldEVersionhistoryTypeTypeTransformer._();
 
-  String encode(FieldEVersionhistoryType data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEVersionhistoryType data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEVersionhistoryType.
+  /// Returns the instance of [FieldEVersionhistoryType] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -72,6 +71,9 @@ class FieldEVersionhistoryTypeTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEVersionhistoryType? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEVersionhistoryType) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'AgentBroker': return FieldEVersionhistoryType.agentBroker;
@@ -88,7 +90,7 @@ class FieldEVersionhistoryTypeTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEVersionhistoryTypeTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEVersionhistoryTypeTypeTransformer? _instance;
 }
 

@@ -129,31 +129,30 @@ class CommonReportsubsectionpart {
 }
 
 /// The type of the Reportsubsectionpart
-class CommonReportsubsectionpartEReportsubsectionpartTypeEnum {
-  /// Instantiate a new enum with the provided [value].
-  const CommonReportsubsectionpartEReportsubsectionpartTypeEnum._(this.value);
+enum CommonReportsubsectionpartEReportsubsectionpartTypeEnum {
+  header._(r'Header'),
+  body._(r'Body'),
+  footer._(r'Footer'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const CommonReportsubsectionpartEReportsubsectionpartTypeEnum._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const header = CommonReportsubsectionpartEReportsubsectionpartTypeEnum._(r'Header');
-  static const body = CommonReportsubsectionpartEReportsubsectionpartTypeEnum._(r'Body');
-  static const footer = CommonReportsubsectionpartEReportsubsectionpartTypeEnum._(r'Footer');
-
-  /// List of all possible values in this [enum][CommonReportsubsectionpartEReportsubsectionpartTypeEnum].
-  static const values = <CommonReportsubsectionpartEReportsubsectionpartTypeEnum>[
-    header,
-    body,
-    footer,
-  ];
-
+  /// Returns the instance of [CommonReportsubsectionpartEReportsubsectionpartTypeEnum] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static CommonReportsubsectionpartEReportsubsectionpartTypeEnum? fromJson(dynamic value) => CommonReportsubsectionpartEReportsubsectionpartTypeEnumTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [CommonReportsubsectionpartEReportsubsectionpartTypeEnum]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<CommonReportsubsectionpartEReportsubsectionpartTypeEnum> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <CommonReportsubsectionpartEReportsubsectionpartTypeEnum>[];
     if (json is List && json.isNotEmpty) {
@@ -175,9 +174,10 @@ class CommonReportsubsectionpartEReportsubsectionpartTypeEnumTypeTransformer {
 
   const CommonReportsubsectionpartEReportsubsectionpartTypeEnumTypeTransformer._();
 
-  String encode(CommonReportsubsectionpartEReportsubsectionpartTypeEnum data) => data.value;
+  String encode(CommonReportsubsectionpartEReportsubsectionpartTypeEnum data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a CommonReportsubsectionpartEReportsubsectionpartTypeEnum.
+  /// Returns the instance of [CommonReportsubsectionpartEReportsubsectionpartTypeEnum] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -186,6 +186,9 @@ class CommonReportsubsectionpartEReportsubsectionpartTypeEnumTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   CommonReportsubsectionpartEReportsubsectionpartTypeEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data is CommonReportsubsectionpartEReportsubsectionpartTypeEnum) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Header': return CommonReportsubsectionpartEReportsubsectionpartTypeEnum.header;
@@ -200,7 +203,7 @@ class CommonReportsubsectionpartEReportsubsectionpartTypeEnumTypeTransformer {
     return null;
   }
 
-  /// Singleton [CommonReportsubsectionpartEReportsubsectionpartTypeEnumTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static CommonReportsubsectionpartEReportsubsectionpartTypeEnumTypeTransformer? _instance;
 }
 

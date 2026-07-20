@@ -11,29 +11,29 @@
 part of openapi.api;
 
 /// The Dependency requirement of the Ezsignsignature
-class FieldEEzsignsignatureDependencyrequirement {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsignsignatureDependencyrequirement._(this.value);
+enum FieldEEzsignsignatureDependencyrequirement {
+  allOf._(r'AllOf'),
+  anyOf._(r'AnyOf'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsignsignatureDependencyrequirement._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const allOf = FieldEEzsignsignatureDependencyrequirement._(r'AllOf');
-  static const anyOf = FieldEEzsignsignatureDependencyrequirement._(r'AnyOf');
-
-  /// List of all possible values in this [enum][FieldEEzsignsignatureDependencyrequirement].
-  static const values = <FieldEEzsignsignatureDependencyrequirement>[
-    allOf,
-    anyOf,
-  ];
-
+  /// Returns the instance of [FieldEEzsignsignatureDependencyrequirement] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsignsignatureDependencyrequirement? fromJson(dynamic value) => FieldEEzsignsignatureDependencyrequirementTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsignsignatureDependencyrequirement]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsignsignatureDependencyrequirement> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsignsignatureDependencyrequirement>[];
     if (json is List && json.isNotEmpty) {
@@ -55,9 +55,11 @@ class FieldEEzsignsignatureDependencyrequirementTypeTransformer {
 
   const FieldEEzsignsignatureDependencyrequirementTypeTransformer._();
 
-  String encode(FieldEEzsignsignatureDependencyrequirement data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsignsignatureDependencyrequirement data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsignsignatureDependencyrequirement.
+  /// Returns the instance of [FieldEEzsignsignatureDependencyrequirement] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -66,6 +68,9 @@ class FieldEEzsignsignatureDependencyrequirementTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsignsignatureDependencyrequirement? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsignsignatureDependencyrequirement) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'AllOf': return FieldEEzsignsignatureDependencyrequirement.allOf;
@@ -79,7 +84,7 @@ class FieldEEzsignsignatureDependencyrequirementTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsignsignatureDependencyrequirementTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsignsignatureDependencyrequirementTypeTransformer? _instance;
 }
 

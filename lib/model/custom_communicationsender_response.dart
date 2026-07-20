@@ -269,35 +269,32 @@ class CustomCommunicationsenderResponse {
 }
 
 
-class CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnum {
-  /// Instantiate a new enum with the provided [value].
-  const CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnum._(this.value);
+enum CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnum {
+  agent._(r'Agent'),
+  broker._(r'Broker'),
+  user._(r'User'),
+  mailboxshared._(r'Mailboxshared'),
+  phonelineshared._(r'Phonelineshared'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnum._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const agent = CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnum._(r'Agent');
-  static const broker = CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnum._(r'Broker');
-  static const user = CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnum._(r'User');
-  static const mailboxshared = CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnum._(r'Mailboxshared');
-  static const phonelineshared = CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnum._(r'Phonelineshared');
-
-  /// List of all possible values in this [enum][CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnum].
-  static const values = <CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnum>[
-    agent,
-    broker,
-    user,
-    mailboxshared,
-    phonelineshared,
-  ];
-
+  /// Returns the instance of [CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnum] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnum? fromJson(dynamic value) => CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnumTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnum]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnum> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnum>[];
     if (json is List && json.isNotEmpty) {
@@ -319,9 +316,10 @@ class CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnumTypeTra
 
   const CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnumTypeTransformer._();
 
-  String encode(CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnum data) => data.value;
+  String encode(CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnum data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnum.
+  /// Returns the instance of [CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnum] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -330,6 +328,9 @@ class CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnumTypeTra
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data is CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnum) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Agent': return CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnum.agent;
@@ -346,7 +347,7 @@ class CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnumTypeTra
     return null;
   }
 
-  /// Singleton [CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnumTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static CustomCommunicationsenderResponseECommunicationsenderObjecttypeEnumTypeTransformer? _instance;
 }
 

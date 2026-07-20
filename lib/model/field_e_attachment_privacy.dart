@@ -11,37 +11,33 @@
 part of openapi.api;
 
 /// The privacy of the Attachment
-class FieldEAttachmentPrivacy {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEAttachmentPrivacy._(this.value);
+enum FieldEAttachmentPrivacy {
+  all._(r'All'),
+  inscriptor._(r'Inscriptor'),
+  seller._(r'Seller'),
+  administration._(r'Administration'),
+  creator._(r'Creator'),
+  specificuser._(r'Specificuser'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEAttachmentPrivacy._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const all = FieldEAttachmentPrivacy._(r'All');
-  static const inscriptor = FieldEAttachmentPrivacy._(r'Inscriptor');
-  static const seller = FieldEAttachmentPrivacy._(r'Seller');
-  static const administration = FieldEAttachmentPrivacy._(r'Administration');
-  static const creator = FieldEAttachmentPrivacy._(r'Creator');
-  static const specificuser = FieldEAttachmentPrivacy._(r'Specificuser');
-
-  /// List of all possible values in this [enum][FieldEAttachmentPrivacy].
-  static const values = <FieldEAttachmentPrivacy>[
-    all,
-    inscriptor,
-    seller,
-    administration,
-    creator,
-    specificuser,
-  ];
-
+  /// Returns the instance of [FieldEAttachmentPrivacy] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEAttachmentPrivacy? fromJson(dynamic value) => FieldEAttachmentPrivacyTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEAttachmentPrivacy]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEAttachmentPrivacy> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEAttachmentPrivacy>[];
     if (json is List && json.isNotEmpty) {
@@ -63,9 +59,11 @@ class FieldEAttachmentPrivacyTypeTransformer {
 
   const FieldEAttachmentPrivacyTypeTransformer._();
 
-  String encode(FieldEAttachmentPrivacy data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEAttachmentPrivacy data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEAttachmentPrivacy.
+  /// Returns the instance of [FieldEAttachmentPrivacy] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -74,6 +72,9 @@ class FieldEAttachmentPrivacyTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEAttachmentPrivacy? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEAttachmentPrivacy) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'All': return FieldEAttachmentPrivacy.all;
@@ -91,7 +92,7 @@ class FieldEAttachmentPrivacyTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEAttachmentPrivacyTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEAttachmentPrivacyTypeTransformer? _instance;
 }
 

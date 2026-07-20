@@ -11,31 +11,30 @@
 part of openapi.api;
 
 /// The type of authentication for the User
-class FieldEUserLogintype {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEUserLogintype._(this.value);
+enum FieldEUserLogintype {
+  password._(r'Password'),
+  passwordPhone._(r'PasswordPhone'),
+  passwordQuestion._(r'PasswordQuestion'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEUserLogintype._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const password = FieldEUserLogintype._(r'Password');
-  static const passwordPhone = FieldEUserLogintype._(r'PasswordPhone');
-  static const passwordQuestion = FieldEUserLogintype._(r'PasswordQuestion');
-
-  /// List of all possible values in this [enum][FieldEUserLogintype].
-  static const values = <FieldEUserLogintype>[
-    password,
-    passwordPhone,
-    passwordQuestion,
-  ];
-
+  /// Returns the instance of [FieldEUserLogintype] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEUserLogintype? fromJson(dynamic value) => FieldEUserLogintypeTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEUserLogintype]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEUserLogintype> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEUserLogintype>[];
     if (json is List && json.isNotEmpty) {
@@ -57,9 +56,11 @@ class FieldEUserLogintypeTypeTransformer {
 
   const FieldEUserLogintypeTypeTransformer._();
 
-  String encode(FieldEUserLogintype data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEUserLogintype data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEUserLogintype.
+  /// Returns the instance of [FieldEUserLogintype] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -68,6 +69,9 @@ class FieldEUserLogintypeTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEUserLogintype? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEUserLogintype) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Password': return FieldEUserLogintype.password;
@@ -82,7 +86,7 @@ class FieldEUserLogintypeTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEUserLogintypeTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEUserLogintypeTypeTransformer? _instance;
 }
 

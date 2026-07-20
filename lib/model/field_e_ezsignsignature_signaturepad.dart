@@ -11,27 +11,28 @@
 part of openapi.api;
 
 /// The type of signature pad required.
-class FieldEEzsignsignatureSignaturepad {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsignsignatureSignaturepad._(this.value);
+enum FieldEEzsignsignatureSignaturepad {
+  topaz._(r'Topaz'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsignsignatureSignaturepad._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const topaz = FieldEEzsignsignatureSignaturepad._(r'Topaz');
-
-  /// List of all possible values in this [enum][FieldEEzsignsignatureSignaturepad].
-  static const values = <FieldEEzsignsignatureSignaturepad>[
-    topaz,
-  ];
-
+  /// Returns the instance of [FieldEEzsignsignatureSignaturepad] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsignsignatureSignaturepad? fromJson(dynamic value) => FieldEEzsignsignatureSignaturepadTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsignsignatureSignaturepad]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsignsignatureSignaturepad> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsignsignatureSignaturepad>[];
     if (json is List && json.isNotEmpty) {
@@ -53,9 +54,11 @@ class FieldEEzsignsignatureSignaturepadTypeTransformer {
 
   const FieldEEzsignsignatureSignaturepadTypeTransformer._();
 
-  String encode(FieldEEzsignsignatureSignaturepad data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsignsignatureSignaturepad data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsignsignatureSignaturepad.
+  /// Returns the instance of [FieldEEzsignsignatureSignaturepad] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -64,6 +67,9 @@ class FieldEEzsignsignatureSignaturepadTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsignsignatureSignaturepad? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsignsignatureSignaturepad) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Topaz': return FieldEEzsignsignatureSignaturepad.topaz;
@@ -76,7 +82,7 @@ class FieldEEzsignsignatureSignaturepadTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsignsignatureSignaturepadTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsignsignatureSignaturepadTypeTransformer? _instance;
 }
 

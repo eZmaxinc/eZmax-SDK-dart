@@ -11,47 +11,38 @@
 part of openapi.api;
 
 /// The type of the Contactinformations
-class FieldEContactinformationsType {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEContactinformationsType._(this.value);
+enum FieldEContactinformationsType {
+  bankAccount._(r'BankAccount'),
+  contactObject._(r'ContactObject'),
+  creditCard._(r'CreditCard'),
+  customer._(r'Customer'),
+  externalBroker._(r'ExternalBroker'),
+  externalBrokerFirm._(r'ExternalBrokerFirm'),
+  ezcomCompany._(r'EzcomCompany'),
+  financialInstitution._(r'FinancialInstitution'),
+  franchiseCompany._(r'FranchiseCompany'),
+  franchiseOffice._(r'FranchiseOffice'),
+  supplier._(r'Supplier'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEContactinformationsType._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const bankAccount = FieldEContactinformationsType._(r'BankAccount');
-  static const contactObject = FieldEContactinformationsType._(r'ContactObject');
-  static const creditCard = FieldEContactinformationsType._(r'CreditCard');
-  static const customer = FieldEContactinformationsType._(r'Customer');
-  static const externalBroker = FieldEContactinformationsType._(r'ExternalBroker');
-  static const externalBrokerFirm = FieldEContactinformationsType._(r'ExternalBrokerFirm');
-  static const ezcomCompany = FieldEContactinformationsType._(r'EzcomCompany');
-  static const financialInstitution = FieldEContactinformationsType._(r'FinancialInstitution');
-  static const franchiseCompany = FieldEContactinformationsType._(r'FranchiseCompany');
-  static const franchiseOffice = FieldEContactinformationsType._(r'FranchiseOffice');
-  static const supplier = FieldEContactinformationsType._(r'Supplier');
-
-  /// List of all possible values in this [enum][FieldEContactinformationsType].
-  static const values = <FieldEContactinformationsType>[
-    bankAccount,
-    contactObject,
-    creditCard,
-    customer,
-    externalBroker,
-    externalBrokerFirm,
-    ezcomCompany,
-    financialInstitution,
-    franchiseCompany,
-    franchiseOffice,
-    supplier,
-  ];
-
+  /// Returns the instance of [FieldEContactinformationsType] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEContactinformationsType? fromJson(dynamic value) => FieldEContactinformationsTypeTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEContactinformationsType]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEContactinformationsType> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEContactinformationsType>[];
     if (json is List && json.isNotEmpty) {
@@ -73,9 +64,11 @@ class FieldEContactinformationsTypeTypeTransformer {
 
   const FieldEContactinformationsTypeTypeTransformer._();
 
-  String encode(FieldEContactinformationsType data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEContactinformationsType data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEContactinformationsType.
+  /// Returns the instance of [FieldEContactinformationsType] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -84,6 +77,9 @@ class FieldEContactinformationsTypeTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEContactinformationsType? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEContactinformationsType) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'BankAccount': return FieldEContactinformationsType.bankAccount;
@@ -106,7 +102,7 @@ class FieldEContactinformationsTypeTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEContactinformationsTypeTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEContactinformationsTypeTypeTransformer? _instance;
 }
 

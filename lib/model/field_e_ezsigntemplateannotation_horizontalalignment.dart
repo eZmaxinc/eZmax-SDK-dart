@@ -11,31 +11,30 @@
 part of openapi.api;
 
 /// The horizontalalignment of the Ezsigntemplateannotation
-class FieldEEzsigntemplateannotationHorizontalalignment {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsigntemplateannotationHorizontalalignment._(this.value);
+enum FieldEEzsigntemplateannotationHorizontalalignment {
+  center._(r'Center'),
+  left._(r'Left'),
+  right._(r'Right'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsigntemplateannotationHorizontalalignment._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const center = FieldEEzsigntemplateannotationHorizontalalignment._(r'Center');
-  static const left = FieldEEzsigntemplateannotationHorizontalalignment._(r'Left');
-  static const right = FieldEEzsigntemplateannotationHorizontalalignment._(r'Right');
-
-  /// List of all possible values in this [enum][FieldEEzsigntemplateannotationHorizontalalignment].
-  static const values = <FieldEEzsigntemplateannotationHorizontalalignment>[
-    center,
-    left,
-    right,
-  ];
-
+  /// Returns the instance of [FieldEEzsigntemplateannotationHorizontalalignment] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsigntemplateannotationHorizontalalignment? fromJson(dynamic value) => FieldEEzsigntemplateannotationHorizontalalignmentTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsigntemplateannotationHorizontalalignment]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsigntemplateannotationHorizontalalignment> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsigntemplateannotationHorizontalalignment>[];
     if (json is List && json.isNotEmpty) {
@@ -57,9 +56,11 @@ class FieldEEzsigntemplateannotationHorizontalalignmentTypeTransformer {
 
   const FieldEEzsigntemplateannotationHorizontalalignmentTypeTransformer._();
 
-  String encode(FieldEEzsigntemplateannotationHorizontalalignment data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsigntemplateannotationHorizontalalignment data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsigntemplateannotationHorizontalalignment.
+  /// Returns the instance of [FieldEEzsigntemplateannotationHorizontalalignment] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -68,6 +69,9 @@ class FieldEEzsigntemplateannotationHorizontalalignmentTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsigntemplateannotationHorizontalalignment? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsigntemplateannotationHorizontalalignment) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Center': return FieldEEzsigntemplateannotationHorizontalalignment.center;
@@ -82,7 +86,7 @@ class FieldEEzsigntemplateannotationHorizontalalignmentTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsigntemplateannotationHorizontalalignmentTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsigntemplateannotationHorizontalalignmentTypeTransformer? _instance;
 }
 

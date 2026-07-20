@@ -251,29 +251,29 @@ class CommunicationRequest {
 }
 
 /// How the attachment should be included in the email.   Only used if eCommunicationType is **Email**
-class CommunicationRequestECommunicationAttachmenttypeEnum {
-  /// Instantiate a new enum with the provided [value].
-  const CommunicationRequestECommunicationAttachmenttypeEnum._(this.value);
+enum CommunicationRequestECommunicationAttachmenttypeEnum {
+  attachment._(r'Attachment'),
+  url._(r'Url'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const CommunicationRequestECommunicationAttachmenttypeEnum._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const attachment = CommunicationRequestECommunicationAttachmenttypeEnum._(r'Attachment');
-  static const url = CommunicationRequestECommunicationAttachmenttypeEnum._(r'Url');
-
-  /// List of all possible values in this [enum][CommunicationRequestECommunicationAttachmenttypeEnum].
-  static const values = <CommunicationRequestECommunicationAttachmenttypeEnum>[
-    attachment,
-    url,
-  ];
-
+  /// Returns the instance of [CommunicationRequestECommunicationAttachmenttypeEnum] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static CommunicationRequestECommunicationAttachmenttypeEnum? fromJson(dynamic value) => CommunicationRequestECommunicationAttachmenttypeEnumTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [CommunicationRequestECommunicationAttachmenttypeEnum]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<CommunicationRequestECommunicationAttachmenttypeEnum> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <CommunicationRequestECommunicationAttachmenttypeEnum>[];
     if (json is List && json.isNotEmpty) {
@@ -295,9 +295,10 @@ class CommunicationRequestECommunicationAttachmenttypeEnumTypeTransformer {
 
   const CommunicationRequestECommunicationAttachmenttypeEnumTypeTransformer._();
 
-  String encode(CommunicationRequestECommunicationAttachmenttypeEnum data) => data.value;
+  String encode(CommunicationRequestECommunicationAttachmenttypeEnum data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a CommunicationRequestECommunicationAttachmenttypeEnum.
+  /// Returns the instance of [CommunicationRequestECommunicationAttachmenttypeEnum] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -306,6 +307,9 @@ class CommunicationRequestECommunicationAttachmenttypeEnumTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   CommunicationRequestECommunicationAttachmenttypeEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data is CommunicationRequestECommunicationAttachmenttypeEnum) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Attachment': return CommunicationRequestECommunicationAttachmenttypeEnum.attachment;
@@ -319,7 +323,7 @@ class CommunicationRequestECommunicationAttachmenttypeEnumTypeTransformer {
     return null;
   }
 
-  /// Singleton [CommunicationRequestECommunicationAttachmenttypeEnumTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static CommunicationRequestECommunicationAttachmenttypeEnumTypeTransformer? _instance;
 }
 

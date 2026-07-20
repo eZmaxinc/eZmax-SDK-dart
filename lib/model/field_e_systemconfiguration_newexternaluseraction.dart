@@ -11,29 +11,29 @@
 part of openapi.api;
 
 /// The action we do when a new external user connects itself
-class FieldESystemconfigurationNewexternaluseraction {
-  /// Instantiate a new enum with the provided [value].
-  const FieldESystemconfigurationNewexternaluseraction._(this.value);
+enum FieldESystemconfigurationNewexternaluseraction {
+  stage._(r'Stage'),
+  autoCreate._(r'AutoCreate'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldESystemconfigurationNewexternaluseraction._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const stage = FieldESystemconfigurationNewexternaluseraction._(r'Stage');
-  static const autoCreate = FieldESystemconfigurationNewexternaluseraction._(r'AutoCreate');
-
-  /// List of all possible values in this [enum][FieldESystemconfigurationNewexternaluseraction].
-  static const values = <FieldESystemconfigurationNewexternaluseraction>[
-    stage,
-    autoCreate,
-  ];
-
+  /// Returns the instance of [FieldESystemconfigurationNewexternaluseraction] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldESystemconfigurationNewexternaluseraction? fromJson(dynamic value) => FieldESystemconfigurationNewexternaluseractionTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldESystemconfigurationNewexternaluseraction]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldESystemconfigurationNewexternaluseraction> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldESystemconfigurationNewexternaluseraction>[];
     if (json is List && json.isNotEmpty) {
@@ -55,9 +55,11 @@ class FieldESystemconfigurationNewexternaluseractionTypeTransformer {
 
   const FieldESystemconfigurationNewexternaluseractionTypeTransformer._();
 
-  String encode(FieldESystemconfigurationNewexternaluseraction data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldESystemconfigurationNewexternaluseraction data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldESystemconfigurationNewexternaluseraction.
+  /// Returns the instance of [FieldESystemconfigurationNewexternaluseraction] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -66,6 +68,9 @@ class FieldESystemconfigurationNewexternaluseractionTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldESystemconfigurationNewexternaluseraction? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldESystemconfigurationNewexternaluseraction) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Stage': return FieldESystemconfigurationNewexternaluseraction.stage;
@@ -79,7 +84,7 @@ class FieldESystemconfigurationNewexternaluseractionTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldESystemconfigurationNewexternaluseractionTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldESystemconfigurationNewexternaluseractionTypeTransformer? _instance;
 }
 

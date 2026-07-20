@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **eWebhookModule** | [**FieldEWebhookModule**](FieldEWebhookModule.md) |  | 
 **eWebhookEzsignevent** | [**FieldEWebhookEzsignevent**](FieldEWebhookEzsignevent.md) |  | [optional] 
 **eWebhookManagementevent** | [**FieldEWebhookManagementevent**](FieldEWebhookManagementevent.md) |  | [optional] 
+**eWebhookRealestateevent** | [**FieldEWebhookRealestateevent**](FieldEWebhookRealestateevent.md) |  | [optional] 
 **bWebhookIsactive** | **bool** | Whether the Webhook is active or not | 
 **bWebhookIssigned** | **bool** | Whether the requests will be signed or not | 
 

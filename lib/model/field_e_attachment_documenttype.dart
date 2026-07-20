@@ -11,123 +11,76 @@
 part of openapi.api;
 
 /// The documenttype of the Attachment
-class FieldEAttachmentDocumenttype {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEAttachmentDocumenttype._(this.value);
+enum FieldEAttachmentDocumenttype {
+  adjustment._(r'Adjustment'),
+  agent._(r'Agent'),
+  bankaccount._(r'Bankaccount'),
+  broker._(r'Broker'),
+  buyercontract._(r'Buyercontract'),
+  commissionadvance._(r'Commissionadvance'),
+  communication._(r'Communication'),
+  customer._(r'Customer'),
+  customertemplate._(r'Customertemplate'),
+  deposit._(r'Deposit'),
+  deposittransitcheque._(r'Deposittransitcheque'),
+  disclosure._(r'Disclosure'),
+  electronicfundstransfer._(r'Electronicfundstransfer'),
+  employee._(r'Employee'),
+  externalbroker._(r'Externalbroker'),
+  ezcomadvanceserver._(r'Ezcomadvanceserver'),
+  ezcomcompany._(r'Ezcomcompany'),
+  ezsigndocument._(r'Ezsigndocument'),
+  ezsigndocumentProof._(r'EzsigndocumentProof'),
+  ezsigndocumentProofdocument._(r'EzsigndocumentProofdocument'),
+  ezsigndocumentgroup._(r'Ezsigndocumentgroup'),
+  ezsigndocumentgroupProof._(r'EzsigndocumentgroupProof'),
+  ezsigndocumentgroupProofdocument._(r'EzsigndocumentgroupProofdocument'),
+  ezsigndocumentAttachment._(r'EzsigndocumentAttachment'),
+  folder._(r'Folder'),
+  franchiseagence._(r'Franchiseagence'),
+  franchisebroker._(r'Franchisebroker'),
+  franchisecomplaint._(r'Franchisecomplaint'),
+  franchisefranchise._(r'Franchisefranchise'),
+  franchiseoffice._(r'Franchiseoffice'),
+  ghacqcontract._(r'Ghacqcontract'),
+  inscription._(r'Inscription'),
+  inscriptionnotauthenticated._(r'Inscriptionnotauthenticated'),
+  inscriptiontemp._(r'Inscriptiontemp'),
+  invoice._(r'Invoice'),
+  lead._(r'Lead'),
+  marketingfollow._(r'Marketingfollow'),
+  marketingprogram._(r'Marketingprogram'),
+  notary._(r'Notary'),
+  officetaxreport._(r'Officetaxreport'),
+  otherincome._(r'Otherincome'),
+  paymentpreparation._(r'Paymentpreparation'),
+  purchase._(r'Purchase'),
+  reconciliation._(r'Reconciliation'),
+  rejectedoffertopurchase._(r'Rejectedoffertopurchase'),
+  salary._(r'Salary'),
+  supplier._(r'Supplier'),
+  template._(r'Template'),
+  tranqcontract._(r'Tranqcontract'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEAttachmentDocumenttype._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const adjustment = FieldEAttachmentDocumenttype._(r'Adjustment');
-  static const agent = FieldEAttachmentDocumenttype._(r'Agent');
-  static const bankaccount = FieldEAttachmentDocumenttype._(r'Bankaccount');
-  static const broker = FieldEAttachmentDocumenttype._(r'Broker');
-  static const buyercontract = FieldEAttachmentDocumenttype._(r'Buyercontract');
-  static const commissionadvance = FieldEAttachmentDocumenttype._(r'Commissionadvance');
-  static const communication = FieldEAttachmentDocumenttype._(r'Communication');
-  static const customer = FieldEAttachmentDocumenttype._(r'Customer');
-  static const customertemplate = FieldEAttachmentDocumenttype._(r'Customertemplate');
-  static const deposit = FieldEAttachmentDocumenttype._(r'Deposit');
-  static const deposittransitcheque = FieldEAttachmentDocumenttype._(r'Deposittransitcheque');
-  static const disclosure = FieldEAttachmentDocumenttype._(r'Disclosure');
-  static const electronicfundstransfer = FieldEAttachmentDocumenttype._(r'Electronicfundstransfer');
-  static const employee = FieldEAttachmentDocumenttype._(r'Employee');
-  static const externalbroker = FieldEAttachmentDocumenttype._(r'Externalbroker');
-  static const ezcomadvanceserver = FieldEAttachmentDocumenttype._(r'Ezcomadvanceserver');
-  static const ezcomcompany = FieldEAttachmentDocumenttype._(r'Ezcomcompany');
-  static const ezsigndocument = FieldEAttachmentDocumenttype._(r'Ezsigndocument');
-  static const ezsigndocumentProof = FieldEAttachmentDocumenttype._(r'EzsigndocumentProof');
-  static const ezsigndocumentProofdocument = FieldEAttachmentDocumenttype._(r'EzsigndocumentProofdocument');
-  static const ezsigndocumentgroup = FieldEAttachmentDocumenttype._(r'Ezsigndocumentgroup');
-  static const ezsigndocumentgroupProof = FieldEAttachmentDocumenttype._(r'EzsigndocumentgroupProof');
-  static const ezsigndocumentgroupProofdocument = FieldEAttachmentDocumenttype._(r'EzsigndocumentgroupProofdocument');
-  static const ezsigndocumentAttachment = FieldEAttachmentDocumenttype._(r'EzsigndocumentAttachment');
-  static const folder = FieldEAttachmentDocumenttype._(r'Folder');
-  static const franchiseagence = FieldEAttachmentDocumenttype._(r'Franchiseagence');
-  static const franchisebroker = FieldEAttachmentDocumenttype._(r'Franchisebroker');
-  static const franchisecomplaint = FieldEAttachmentDocumenttype._(r'Franchisecomplaint');
-  static const franchisefranchise = FieldEAttachmentDocumenttype._(r'Franchisefranchise');
-  static const franchiseoffice = FieldEAttachmentDocumenttype._(r'Franchiseoffice');
-  static const ghacqcontract = FieldEAttachmentDocumenttype._(r'Ghacqcontract');
-  static const inscription = FieldEAttachmentDocumenttype._(r'Inscription');
-  static const inscriptionnotauthenticated = FieldEAttachmentDocumenttype._(r'Inscriptionnotauthenticated');
-  static const inscriptiontemp = FieldEAttachmentDocumenttype._(r'Inscriptiontemp');
-  static const invoice = FieldEAttachmentDocumenttype._(r'Invoice');
-  static const lead = FieldEAttachmentDocumenttype._(r'Lead');
-  static const marketingfollow = FieldEAttachmentDocumenttype._(r'Marketingfollow');
-  static const marketingprogram = FieldEAttachmentDocumenttype._(r'Marketingprogram');
-  static const notary = FieldEAttachmentDocumenttype._(r'Notary');
-  static const officetaxreport = FieldEAttachmentDocumenttype._(r'Officetaxreport');
-  static const otherincome = FieldEAttachmentDocumenttype._(r'Otherincome');
-  static const paymentpreparation = FieldEAttachmentDocumenttype._(r'Paymentpreparation');
-  static const purchase = FieldEAttachmentDocumenttype._(r'Purchase');
-  static const reconciliation = FieldEAttachmentDocumenttype._(r'Reconciliation');
-  static const rejectedoffertopurchase = FieldEAttachmentDocumenttype._(r'Rejectedoffertopurchase');
-  static const salary = FieldEAttachmentDocumenttype._(r'Salary');
-  static const supplier = FieldEAttachmentDocumenttype._(r'Supplier');
-  static const template = FieldEAttachmentDocumenttype._(r'Template');
-  static const tranqcontract = FieldEAttachmentDocumenttype._(r'Tranqcontract');
-
-  /// List of all possible values in this [enum][FieldEAttachmentDocumenttype].
-  static const values = <FieldEAttachmentDocumenttype>[
-    adjustment,
-    agent,
-    bankaccount,
-    broker,
-    buyercontract,
-    commissionadvance,
-    communication,
-    customer,
-    customertemplate,
-    deposit,
-    deposittransitcheque,
-    disclosure,
-    electronicfundstransfer,
-    employee,
-    externalbroker,
-    ezcomadvanceserver,
-    ezcomcompany,
-    ezsigndocument,
-    ezsigndocumentProof,
-    ezsigndocumentProofdocument,
-    ezsigndocumentgroup,
-    ezsigndocumentgroupProof,
-    ezsigndocumentgroupProofdocument,
-    ezsigndocumentAttachment,
-    folder,
-    franchiseagence,
-    franchisebroker,
-    franchisecomplaint,
-    franchisefranchise,
-    franchiseoffice,
-    ghacqcontract,
-    inscription,
-    inscriptionnotauthenticated,
-    inscriptiontemp,
-    invoice,
-    lead,
-    marketingfollow,
-    marketingprogram,
-    notary,
-    officetaxreport,
-    otherincome,
-    paymentpreparation,
-    purchase,
-    reconciliation,
-    rejectedoffertopurchase,
-    salary,
-    supplier,
-    template,
-    tranqcontract,
-  ];
-
+  /// Returns the instance of [FieldEAttachmentDocumenttype] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEAttachmentDocumenttype? fromJson(dynamic value) => FieldEAttachmentDocumenttypeTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEAttachmentDocumenttype]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEAttachmentDocumenttype> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEAttachmentDocumenttype>[];
     if (json is List && json.isNotEmpty) {
@@ -149,9 +102,11 @@ class FieldEAttachmentDocumenttypeTypeTransformer {
 
   const FieldEAttachmentDocumenttypeTypeTransformer._();
 
-  String encode(FieldEAttachmentDocumenttype data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEAttachmentDocumenttype data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEAttachmentDocumenttype.
+  /// Returns the instance of [FieldEAttachmentDocumenttype] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -160,6 +115,9 @@ class FieldEAttachmentDocumenttypeTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEAttachmentDocumenttype? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEAttachmentDocumenttype) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Adjustment': return FieldEAttachmentDocumenttype.adjustment;
@@ -220,7 +178,7 @@ class FieldEAttachmentDocumenttypeTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEAttachmentDocumenttypeTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEAttachmentDocumenttypeTypeTransformer? _instance;
 }
 

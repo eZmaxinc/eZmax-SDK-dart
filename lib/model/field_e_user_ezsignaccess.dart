@@ -11,33 +11,31 @@
 part of openapi.api;
 
 /// The type of eZsign access the User has
-class FieldEUserEzsignaccess {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEUserEzsignaccess._(this.value);
+enum FieldEUserEzsignaccess {
+  no._(r'No'),
+  paidByOffice._(r'PaidByOffice'),
+  perDocument._(r'PerDocument'),
+  prepaid._(r'Prepaid'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEUserEzsignaccess._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const no = FieldEUserEzsignaccess._(r'No');
-  static const paidByOffice = FieldEUserEzsignaccess._(r'PaidByOffice');
-  static const perDocument = FieldEUserEzsignaccess._(r'PerDocument');
-  static const prepaid = FieldEUserEzsignaccess._(r'Prepaid');
-
-  /// List of all possible values in this [enum][FieldEUserEzsignaccess].
-  static const values = <FieldEUserEzsignaccess>[
-    no,
-    paidByOffice,
-    perDocument,
-    prepaid,
-  ];
-
+  /// Returns the instance of [FieldEUserEzsignaccess] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEUserEzsignaccess? fromJson(dynamic value) => FieldEUserEzsignaccessTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEUserEzsignaccess]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEUserEzsignaccess> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEUserEzsignaccess>[];
     if (json is List && json.isNotEmpty) {
@@ -59,9 +57,11 @@ class FieldEUserEzsignaccessTypeTransformer {
 
   const FieldEUserEzsignaccessTypeTransformer._();
 
-  String encode(FieldEUserEzsignaccess data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEUserEzsignaccess data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEUserEzsignaccess.
+  /// Returns the instance of [FieldEUserEzsignaccess] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -70,6 +70,9 @@ class FieldEUserEzsignaccessTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEUserEzsignaccess? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEUserEzsignaccess) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'No': return FieldEUserEzsignaccess.no;
@@ -85,7 +88,7 @@ class FieldEUserEzsignaccessTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEUserEzsignaccessTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEUserEzsignaccessTypeTransformer? _instance;
 }
 

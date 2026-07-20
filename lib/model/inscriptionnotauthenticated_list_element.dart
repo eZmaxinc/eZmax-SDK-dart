@@ -16,10 +16,15 @@ class InscriptionnotauthenticatedListElement {
     required this.pkiInscriptionID,
     this.pkiInscriptionnotauthenticatedID,
     required this.fkiInscriptiontypeID,
+    required this.sInscriptiontypeNameX,
+    required this.fkiInscriptionbuildingtypeID,
+    required this.sInscriptionbuildingtypeNameX,
+    required this.fkiInscriptioncategoryID,
+    required this.sInscriptioncategoryNameX,
     this.fkiBuyercontractID,
     this.sBuyercontractContract,
-    required this.sInscriptiontypeNameX,
     required this.eInscriptionStep,
+    required this.eInscriptionType,
     required this.sInscriptionCivicend,
     this.sInscriptionMLS,
     this.sInscriptionContract,
@@ -47,6 +52,7 @@ class InscriptionnotauthenticatedListElement {
     this.fkiCountryID,
     this.sCountryNameX,
     required this.sInscriptionnotauthenticatedOffertopurchasenumber,
+    required this.iInscriptionUnit,
   });
 
   /// The unique ID of the Inscription.
@@ -71,6 +77,27 @@ class InscriptionnotauthenticatedListElement {
   /// Maximum value: 255
   int fkiInscriptiontypeID;
 
+  /// The name of the Inscriptiontype in the language of the requester
+  String sInscriptiontypeNameX;
+
+  /// The unique ID of the Inscriptionbuildingtype
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 255
+  int fkiInscriptionbuildingtypeID;
+
+  /// The name of the Inscriptionbuildingtype in the language of the requester
+  String sInscriptionbuildingtypeNameX;
+
+  /// The unique ID of the Inscriptioncategory
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 255
+  int fkiInscriptioncategoryID;
+
+  /// The name of the Inscriptioncategory in the language of the requester
+  String sInscriptioncategoryNameX;
+
   /// The unique ID of the Buyercontract
   ///
   /// Minimum value: 1
@@ -92,10 +119,9 @@ class InscriptionnotauthenticatedListElement {
   ///
   String? sBuyercontractContract;
 
-  /// The name of the Inscriptiontype in the language of the requester
-  String sInscriptiontypeNameX;
-
   FieldEInscriptionStep eInscriptionStep;
+
+  FieldEInscriptionType eInscriptionType;
 
   /// The civicend of the Inscription
   String sInscriptionCivicend;
@@ -308,15 +334,26 @@ class InscriptionnotauthenticatedListElement {
   /// The Offer to purchase number
   String sInscriptionnotauthenticatedOffertopurchasenumber;
 
+  /// The unit of the Inscription
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 255
+  int iInscriptionUnit;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is InscriptionnotauthenticatedListElement &&
     other.pkiInscriptionID == pkiInscriptionID &&
     other.pkiInscriptionnotauthenticatedID == pkiInscriptionnotauthenticatedID &&
     other.fkiInscriptiontypeID == fkiInscriptiontypeID &&
+    other.sInscriptiontypeNameX == sInscriptiontypeNameX &&
+    other.fkiInscriptionbuildingtypeID == fkiInscriptionbuildingtypeID &&
+    other.sInscriptionbuildingtypeNameX == sInscriptionbuildingtypeNameX &&
+    other.fkiInscriptioncategoryID == fkiInscriptioncategoryID &&
+    other.sInscriptioncategoryNameX == sInscriptioncategoryNameX &&
     other.fkiBuyercontractID == fkiBuyercontractID &&
     other.sBuyercontractContract == sBuyercontractContract &&
-    other.sInscriptiontypeNameX == sInscriptiontypeNameX &&
     other.eInscriptionStep == eInscriptionStep &&
+    other.eInscriptionType == eInscriptionType &&
     other.sInscriptionCivicend == sInscriptionCivicend &&
     other.sInscriptionMLS == sInscriptionMLS &&
     other.sInscriptionContract == sInscriptionContract &&
@@ -343,7 +380,8 @@ class InscriptionnotauthenticatedListElement {
     other.sProvinceNameX == sProvinceNameX &&
     other.fkiCountryID == fkiCountryID &&
     other.sCountryNameX == sCountryNameX &&
-    other.sInscriptionnotauthenticatedOffertopurchasenumber == sInscriptionnotauthenticatedOffertopurchasenumber;
+    other.sInscriptionnotauthenticatedOffertopurchasenumber == sInscriptionnotauthenticatedOffertopurchasenumber &&
+    other.iInscriptionUnit == iInscriptionUnit;
 
   @override
   int get hashCode =>
@@ -351,10 +389,15 @@ class InscriptionnotauthenticatedListElement {
     (pkiInscriptionID.hashCode) +
     (pkiInscriptionnotauthenticatedID == null ? 0 : pkiInscriptionnotauthenticatedID!.hashCode) +
     (fkiInscriptiontypeID.hashCode) +
+    (sInscriptiontypeNameX.hashCode) +
+    (fkiInscriptionbuildingtypeID.hashCode) +
+    (sInscriptionbuildingtypeNameX.hashCode) +
+    (fkiInscriptioncategoryID.hashCode) +
+    (sInscriptioncategoryNameX.hashCode) +
     (fkiBuyercontractID == null ? 0 : fkiBuyercontractID!.hashCode) +
     (sBuyercontractContract == null ? 0 : sBuyercontractContract!.hashCode) +
-    (sInscriptiontypeNameX.hashCode) +
     (eInscriptionStep.hashCode) +
+    (eInscriptionType.hashCode) +
     (sInscriptionCivicend.hashCode) +
     (sInscriptionMLS == null ? 0 : sInscriptionMLS!.hashCode) +
     (sInscriptionContract == null ? 0 : sInscriptionContract!.hashCode) +
@@ -381,10 +424,11 @@ class InscriptionnotauthenticatedListElement {
     (sProvinceNameX == null ? 0 : sProvinceNameX!.hashCode) +
     (fkiCountryID == null ? 0 : fkiCountryID!.hashCode) +
     (sCountryNameX == null ? 0 : sCountryNameX!.hashCode) +
-    (sInscriptionnotauthenticatedOffertopurchasenumber.hashCode);
+    (sInscriptionnotauthenticatedOffertopurchasenumber.hashCode) +
+    (iInscriptionUnit.hashCode);
 
   @override
-  String toString() => 'InscriptionnotauthenticatedListElement[pkiInscriptionID=$pkiInscriptionID, pkiInscriptionnotauthenticatedID=$pkiInscriptionnotauthenticatedID, fkiInscriptiontypeID=$fkiInscriptiontypeID, fkiBuyercontractID=$fkiBuyercontractID, sBuyercontractContract=$sBuyercontractContract, sInscriptiontypeNameX=$sInscriptiontypeNameX, eInscriptionStep=$eInscriptionStep, sInscriptionCivicend=$sInscriptionCivicend, sInscriptionMLS=$sInscriptionMLS, sInscriptionContract=$sInscriptionContract, dInscriptionSaleprice=$dInscriptionSaleprice, dInscriptionRentprice=$dInscriptionRentprice, dtInscriptionDate=$dtInscriptionDate, dtInscriptionExpirationdate=$dtInscriptionExpirationdate, dtInscriptionNotarydate=$dtInscriptionNotarydate, bInscriptionInspection=$bInscriptionInspection, bInscriptionIsactive=$bInscriptionIsactive, bInscriptionArchived=$bInscriptionArchived, dtInscriptionnotauthenticatedNotaryscheduledate=$dtInscriptionnotauthenticatedNotaryscheduledate, dtInscriptionnotauthenticatedTransactiondate=$dtInscriptionnotauthenticatedTransactiondate, dtInscriptionnotauthenticatedTransactiondateReal=$dtInscriptionnotauthenticatedTransactiondateReal, bInscriptionnotauthenticatedConditional=$bInscriptionnotauthenticatedConditional, bInscriptionnotauthenticatedIsactive=$bInscriptionnotauthenticatedIsactive, bInscriptionnotauthenticatedDraft=$bInscriptionnotauthenticatedDraft, sAddressCivic=$sAddressCivic, sAddressStreet=$sAddressStreet, sAddressSuite=$sAddressSuite, sAddressCity=$sAddressCity, sAddressZip=$sAddressZip, fkiProvinceID=$fkiProvinceID, sProvinceNameX=$sProvinceNameX, fkiCountryID=$fkiCountryID, sCountryNameX=$sCountryNameX, sInscriptionnotauthenticatedOffertopurchasenumber=$sInscriptionnotauthenticatedOffertopurchasenumber]';
+  String toString() => 'InscriptionnotauthenticatedListElement[pkiInscriptionID=$pkiInscriptionID, pkiInscriptionnotauthenticatedID=$pkiInscriptionnotauthenticatedID, fkiInscriptiontypeID=$fkiInscriptiontypeID, sInscriptiontypeNameX=$sInscriptiontypeNameX, fkiInscriptionbuildingtypeID=$fkiInscriptionbuildingtypeID, sInscriptionbuildingtypeNameX=$sInscriptionbuildingtypeNameX, fkiInscriptioncategoryID=$fkiInscriptioncategoryID, sInscriptioncategoryNameX=$sInscriptioncategoryNameX, fkiBuyercontractID=$fkiBuyercontractID, sBuyercontractContract=$sBuyercontractContract, eInscriptionStep=$eInscriptionStep, eInscriptionType=$eInscriptionType, sInscriptionCivicend=$sInscriptionCivicend, sInscriptionMLS=$sInscriptionMLS, sInscriptionContract=$sInscriptionContract, dInscriptionSaleprice=$dInscriptionSaleprice, dInscriptionRentprice=$dInscriptionRentprice, dtInscriptionDate=$dtInscriptionDate, dtInscriptionExpirationdate=$dtInscriptionExpirationdate, dtInscriptionNotarydate=$dtInscriptionNotarydate, bInscriptionInspection=$bInscriptionInspection, bInscriptionIsactive=$bInscriptionIsactive, bInscriptionArchived=$bInscriptionArchived, dtInscriptionnotauthenticatedNotaryscheduledate=$dtInscriptionnotauthenticatedNotaryscheduledate, dtInscriptionnotauthenticatedTransactiondate=$dtInscriptionnotauthenticatedTransactiondate, dtInscriptionnotauthenticatedTransactiondateReal=$dtInscriptionnotauthenticatedTransactiondateReal, bInscriptionnotauthenticatedConditional=$bInscriptionnotauthenticatedConditional, bInscriptionnotauthenticatedIsactive=$bInscriptionnotauthenticatedIsactive, bInscriptionnotauthenticatedDraft=$bInscriptionnotauthenticatedDraft, sAddressCivic=$sAddressCivic, sAddressStreet=$sAddressStreet, sAddressSuite=$sAddressSuite, sAddressCity=$sAddressCity, sAddressZip=$sAddressZip, fkiProvinceID=$fkiProvinceID, sProvinceNameX=$sProvinceNameX, fkiCountryID=$fkiCountryID, sCountryNameX=$sCountryNameX, sInscriptionnotauthenticatedOffertopurchasenumber=$sInscriptionnotauthenticatedOffertopurchasenumber, iInscriptionUnit=$iInscriptionUnit]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -395,6 +439,11 @@ class InscriptionnotauthenticatedListElement {
       json[r'pkiInscriptionnotauthenticatedID'] = null;
     }
       json[r'fkiInscriptiontypeID'] = this.fkiInscriptiontypeID;
+      json[r'sInscriptiontypeNameX'] = this.sInscriptiontypeNameX;
+      json[r'fkiInscriptionbuildingtypeID'] = this.fkiInscriptionbuildingtypeID;
+      json[r'sInscriptionbuildingtypeNameX'] = this.sInscriptionbuildingtypeNameX;
+      json[r'fkiInscriptioncategoryID'] = this.fkiInscriptioncategoryID;
+      json[r'sInscriptioncategoryNameX'] = this.sInscriptioncategoryNameX;
     if (this.fkiBuyercontractID != null) {
       json[r'fkiBuyercontractID'] = this.fkiBuyercontractID;
     } else {
@@ -405,8 +454,8 @@ class InscriptionnotauthenticatedListElement {
     } else {
       json[r'sBuyercontractContract'] = null;
     }
-      json[r'sInscriptiontypeNameX'] = this.sInscriptiontypeNameX;
       json[r'eInscriptionStep'] = this.eInscriptionStep;
+      json[r'eInscriptionType'] = this.eInscriptionType;
       json[r'sInscriptionCivicend'] = this.sInscriptionCivicend;
     if (this.sInscriptionMLS != null) {
       json[r'sInscriptionMLS'] = this.sInscriptionMLS;
@@ -518,6 +567,7 @@ class InscriptionnotauthenticatedListElement {
       json[r'sCountryNameX'] = null;
     }
       json[r'sInscriptionnotauthenticatedOffertopurchasenumber'] = this.sInscriptionnotauthenticatedOffertopurchasenumber;
+      json[r'iInscriptionUnit'] = this.iInscriptionUnit;
     return json;
   }
 
@@ -538,8 +588,18 @@ class InscriptionnotauthenticatedListElement {
         assert(json[r'fkiInscriptiontypeID'] != null, 'Required key "InscriptionnotauthenticatedListElement[fkiInscriptiontypeID]" has a null value in JSON.');
         assert(json.containsKey(r'sInscriptiontypeNameX'), 'Required key "InscriptionnotauthenticatedListElement[sInscriptiontypeNameX]" is missing from JSON.');
         assert(json[r'sInscriptiontypeNameX'] != null, 'Required key "InscriptionnotauthenticatedListElement[sInscriptiontypeNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiInscriptionbuildingtypeID'), 'Required key "InscriptionnotauthenticatedListElement[fkiInscriptionbuildingtypeID]" is missing from JSON.');
+        assert(json[r'fkiInscriptionbuildingtypeID'] != null, 'Required key "InscriptionnotauthenticatedListElement[fkiInscriptionbuildingtypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'sInscriptionbuildingtypeNameX'), 'Required key "InscriptionnotauthenticatedListElement[sInscriptionbuildingtypeNameX]" is missing from JSON.');
+        assert(json[r'sInscriptionbuildingtypeNameX'] != null, 'Required key "InscriptionnotauthenticatedListElement[sInscriptionbuildingtypeNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiInscriptioncategoryID'), 'Required key "InscriptionnotauthenticatedListElement[fkiInscriptioncategoryID]" is missing from JSON.');
+        assert(json[r'fkiInscriptioncategoryID'] != null, 'Required key "InscriptionnotauthenticatedListElement[fkiInscriptioncategoryID]" has a null value in JSON.');
+        assert(json.containsKey(r'sInscriptioncategoryNameX'), 'Required key "InscriptionnotauthenticatedListElement[sInscriptioncategoryNameX]" is missing from JSON.');
+        assert(json[r'sInscriptioncategoryNameX'] != null, 'Required key "InscriptionnotauthenticatedListElement[sInscriptioncategoryNameX]" has a null value in JSON.');
         assert(json.containsKey(r'eInscriptionStep'), 'Required key "InscriptionnotauthenticatedListElement[eInscriptionStep]" is missing from JSON.');
         assert(json[r'eInscriptionStep'] != null, 'Required key "InscriptionnotauthenticatedListElement[eInscriptionStep]" has a null value in JSON.');
+        assert(json.containsKey(r'eInscriptionType'), 'Required key "InscriptionnotauthenticatedListElement[eInscriptionType]" is missing from JSON.');
+        assert(json[r'eInscriptionType'] != null, 'Required key "InscriptionnotauthenticatedListElement[eInscriptionType]" has a null value in JSON.');
         assert(json.containsKey(r'sInscriptionCivicend'), 'Required key "InscriptionnotauthenticatedListElement[sInscriptionCivicend]" is missing from JSON.');
         assert(json[r'sInscriptionCivicend'] != null, 'Required key "InscriptionnotauthenticatedListElement[sInscriptionCivicend]" has a null value in JSON.');
         assert(json.containsKey(r'dInscriptionSaleprice'), 'Required key "InscriptionnotauthenticatedListElement[dInscriptionSaleprice]" is missing from JSON.');
@@ -552,6 +612,8 @@ class InscriptionnotauthenticatedListElement {
         assert(json[r'bInscriptionArchived'] != null, 'Required key "InscriptionnotauthenticatedListElement[bInscriptionArchived]" has a null value in JSON.');
         assert(json.containsKey(r'sInscriptionnotauthenticatedOffertopurchasenumber'), 'Required key "InscriptionnotauthenticatedListElement[sInscriptionnotauthenticatedOffertopurchasenumber]" is missing from JSON.');
         assert(json[r'sInscriptionnotauthenticatedOffertopurchasenumber'] != null, 'Required key "InscriptionnotauthenticatedListElement[sInscriptionnotauthenticatedOffertopurchasenumber]" has a null value in JSON.');
+        assert(json.containsKey(r'iInscriptionUnit'), 'Required key "InscriptionnotauthenticatedListElement[iInscriptionUnit]" is missing from JSON.');
+        assert(json[r'iInscriptionUnit'] != null, 'Required key "InscriptionnotauthenticatedListElement[iInscriptionUnit]" has a null value in JSON.');
         return true;
       }());
 
@@ -559,10 +621,15 @@ class InscriptionnotauthenticatedListElement {
         pkiInscriptionID: mapValueOfType<int>(json, r'pkiInscriptionID')!,
         pkiInscriptionnotauthenticatedID: mapValueOfType<int>(json, r'pkiInscriptionnotauthenticatedID'),
         fkiInscriptiontypeID: mapValueOfType<int>(json, r'fkiInscriptiontypeID')!,
+        sInscriptiontypeNameX: mapValueOfType<String>(json, r'sInscriptiontypeNameX')!,
+        fkiInscriptionbuildingtypeID: mapValueOfType<int>(json, r'fkiInscriptionbuildingtypeID')!,
+        sInscriptionbuildingtypeNameX: mapValueOfType<String>(json, r'sInscriptionbuildingtypeNameX')!,
+        fkiInscriptioncategoryID: mapValueOfType<int>(json, r'fkiInscriptioncategoryID')!,
+        sInscriptioncategoryNameX: mapValueOfType<String>(json, r'sInscriptioncategoryNameX')!,
         fkiBuyercontractID: mapValueOfType<int>(json, r'fkiBuyercontractID'),
         sBuyercontractContract: mapValueOfType<String>(json, r'sBuyercontractContract'),
-        sInscriptiontypeNameX: mapValueOfType<String>(json, r'sInscriptiontypeNameX')!,
         eInscriptionStep: FieldEInscriptionStep.fromJson(json[r'eInscriptionStep'])!,
+        eInscriptionType: FieldEInscriptionType.fromJson(json[r'eInscriptionType'])!,
         sInscriptionCivicend: mapValueOfType<String>(json, r'sInscriptionCivicend')!,
         sInscriptionMLS: mapValueOfType<String>(json, r'sInscriptionMLS'),
         sInscriptionContract: mapValueOfType<String>(json, r'sInscriptionContract'),
@@ -590,6 +657,7 @@ class InscriptionnotauthenticatedListElement {
         fkiCountryID: mapValueOfType<int>(json, r'fkiCountryID'),
         sCountryNameX: mapValueOfType<String>(json, r'sCountryNameX'),
         sInscriptionnotauthenticatedOffertopurchasenumber: mapValueOfType<String>(json, r'sInscriptionnotauthenticatedOffertopurchasenumber')!,
+        iInscriptionUnit: mapValueOfType<int>(json, r'iInscriptionUnit')!,
       );
     }
     return null;
@@ -640,13 +708,19 @@ class InscriptionnotauthenticatedListElement {
     'pkiInscriptionID',
     'fkiInscriptiontypeID',
     'sInscriptiontypeNameX',
+    'fkiInscriptionbuildingtypeID',
+    'sInscriptionbuildingtypeNameX',
+    'fkiInscriptioncategoryID',
+    'sInscriptioncategoryNameX',
     'eInscriptionStep',
+    'eInscriptionType',
     'sInscriptionCivicend',
     'dInscriptionSaleprice',
     'dInscriptionRentprice',
     'bInscriptionIsactive',
     'bInscriptionArchived',
     'sInscriptionnotauthenticatedOffertopurchasenumber',
+    'iInscriptionUnit',
   };
 }
 

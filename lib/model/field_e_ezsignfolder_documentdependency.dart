@@ -11,29 +11,29 @@
 part of openapi.api;
 
 /// Indicates if document dependencies apply to all users or just to Ezsignsigner
-class FieldEEzsignfolderDocumentdependency {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsignfolderDocumentdependency._(this.value);
+enum FieldEEzsignfolderDocumentdependency {
+  all._(r'All'),
+  ezsignsignerOnly._(r'EzsignsignerOnly'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsignfolderDocumentdependency._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const all = FieldEEzsignfolderDocumentdependency._(r'All');
-  static const ezsignsignerOnly = FieldEEzsignfolderDocumentdependency._(r'EzsignsignerOnly');
-
-  /// List of all possible values in this [enum][FieldEEzsignfolderDocumentdependency].
-  static const values = <FieldEEzsignfolderDocumentdependency>[
-    all,
-    ezsignsignerOnly,
-  ];
-
+  /// Returns the instance of [FieldEEzsignfolderDocumentdependency] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsignfolderDocumentdependency? fromJson(dynamic value) => FieldEEzsignfolderDocumentdependencyTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsignfolderDocumentdependency]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsignfolderDocumentdependency> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsignfolderDocumentdependency>[];
     if (json is List && json.isNotEmpty) {
@@ -55,9 +55,11 @@ class FieldEEzsignfolderDocumentdependencyTypeTransformer {
 
   const FieldEEzsignfolderDocumentdependencyTypeTransformer._();
 
-  String encode(FieldEEzsignfolderDocumentdependency data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsignfolderDocumentdependency data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsignfolderDocumentdependency.
+  /// Returns the instance of [FieldEEzsignfolderDocumentdependency] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -66,6 +68,9 @@ class FieldEEzsignfolderDocumentdependencyTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsignfolderDocumentdependency? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsignfolderDocumentdependency) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'All': return FieldEEzsignfolderDocumentdependency.all;
@@ -79,7 +84,7 @@ class FieldEEzsignfolderDocumentdependencyTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsignfolderDocumentdependencyTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsignfolderDocumentdependencyTypeTransformer? _instance;
 }
 

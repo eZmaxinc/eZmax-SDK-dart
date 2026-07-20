@@ -11,43 +11,36 @@
 part of openapi.api;
 
 /// This Ezsign Event. This property will be set only if the Module is \"Ezsign\"
-class CustomEWebhookEzsignevent {
-  /// Instantiate a new enum with the provided [value].
-  const CustomEWebhookEzsignevent._(this.value);
+enum CustomEWebhookEzsignevent {
+  documentCompleted._(r'DocumentCompleted'),
+  documentFormCompleted._(r'DocumentFormCompleted'),
+  documentUnsent._(r'DocumentUnsent'),
+  ezsignsignerAcceptclause._(r'EzsignsignerAcceptclause'),
+  ezsignsignerConnect._(r'EzsignsignerConnect'),
+  folderCompleted._(r'FolderCompleted'),
+  folderDisposed._(r'FolderDisposed'),
+  folderSent._(r'FolderSent'),
+  folderUnsent._(r'FolderUnsent'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const CustomEWebhookEzsignevent._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const documentCompleted = CustomEWebhookEzsignevent._(r'DocumentCompleted');
-  static const documentFormCompleted = CustomEWebhookEzsignevent._(r'DocumentFormCompleted');
-  static const documentUnsent = CustomEWebhookEzsignevent._(r'DocumentUnsent');
-  static const ezsignsignerAcceptclause = CustomEWebhookEzsignevent._(r'EzsignsignerAcceptclause');
-  static const ezsignsignerConnect = CustomEWebhookEzsignevent._(r'EzsignsignerConnect');
-  static const folderCompleted = CustomEWebhookEzsignevent._(r'FolderCompleted');
-  static const folderDisposed = CustomEWebhookEzsignevent._(r'FolderDisposed');
-  static const folderSent = CustomEWebhookEzsignevent._(r'FolderSent');
-  static const folderUnsent = CustomEWebhookEzsignevent._(r'FolderUnsent');
-
-  /// List of all possible values in this [enum][CustomEWebhookEzsignevent].
-  static const values = <CustomEWebhookEzsignevent>[
-    documentCompleted,
-    documentFormCompleted,
-    documentUnsent,
-    ezsignsignerAcceptclause,
-    ezsignsignerConnect,
-    folderCompleted,
-    folderDisposed,
-    folderSent,
-    folderUnsent,
-  ];
-
+  /// Returns the instance of [CustomEWebhookEzsignevent] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static CustomEWebhookEzsignevent? fromJson(dynamic value) => CustomEWebhookEzsigneventTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [CustomEWebhookEzsignevent]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<CustomEWebhookEzsignevent> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <CustomEWebhookEzsignevent>[];
     if (json is List && json.isNotEmpty) {
@@ -69,9 +62,11 @@ class CustomEWebhookEzsigneventTypeTransformer {
 
   const CustomEWebhookEzsigneventTypeTransformer._();
 
-  String encode(CustomEWebhookEzsignevent data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(CustomEWebhookEzsignevent data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a CustomEWebhookEzsignevent.
+  /// Returns the instance of [CustomEWebhookEzsignevent] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -80,6 +75,9 @@ class CustomEWebhookEzsigneventTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   CustomEWebhookEzsignevent? decode(dynamic data, {bool allowNull = true}) {
+    if (data is CustomEWebhookEzsignevent) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'DocumentCompleted': return CustomEWebhookEzsignevent.documentCompleted;
@@ -100,7 +98,7 @@ class CustomEWebhookEzsigneventTypeTransformer {
     return null;
   }
 
-  /// Singleton [CustomEWebhookEzsigneventTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static CustomEWebhookEzsigneventTypeTransformer? _instance;
 }
 

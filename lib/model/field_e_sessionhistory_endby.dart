@@ -11,55 +11,42 @@
 part of openapi.api;
 
 /// The Type of the Sessionhistory
-class FieldESessionhistoryEndby {
-  /// Instantiate a new enum with the provided [value].
-  const FieldESessionhistoryEndby._(this.value);
+enum FieldESessionhistoryEndby {
+  decryption._(r'Decryption'),
+  hack._(r'Hack'),
+  expired._(r'Expired'),
+  hijack._(r'Hijack'),
+  doubleLogon._(r'DoubleLogon'),
+  garbage._(r'Garbage'),
+  logoff._(r'Logoff'),
+  badAuth._(r'BadAuth'),
+  locked._(r'Locked'),
+  inactive._(r'Inactive'),
+  invalidUser._(r'InvalidUser'),
+  badUserType._(r'BadUserType'),
+  badIP._(r'BadIP'),
+  forcedLogoff._(r'ForcedLogoff'),
+  suspended._(r'Suspended'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldESessionhistoryEndby._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const decryption = FieldESessionhistoryEndby._(r'Decryption');
-  static const hack = FieldESessionhistoryEndby._(r'Hack');
-  static const expired = FieldESessionhistoryEndby._(r'Expired');
-  static const hijack = FieldESessionhistoryEndby._(r'Hijack');
-  static const doubleLogon = FieldESessionhistoryEndby._(r'DoubleLogon');
-  static const garbage = FieldESessionhistoryEndby._(r'Garbage');
-  static const logoff = FieldESessionhistoryEndby._(r'Logoff');
-  static const badAuth = FieldESessionhistoryEndby._(r'BadAuth');
-  static const locked = FieldESessionhistoryEndby._(r'Locked');
-  static const inactive = FieldESessionhistoryEndby._(r'Inactive');
-  static const invalidUser = FieldESessionhistoryEndby._(r'InvalidUser');
-  static const badUserType = FieldESessionhistoryEndby._(r'BadUserType');
-  static const badIP = FieldESessionhistoryEndby._(r'BadIP');
-  static const forcedLogoff = FieldESessionhistoryEndby._(r'ForcedLogoff');
-  static const suspended = FieldESessionhistoryEndby._(r'Suspended');
-
-  /// List of all possible values in this [enum][FieldESessionhistoryEndby].
-  static const values = <FieldESessionhistoryEndby>[
-    decryption,
-    hack,
-    expired,
-    hijack,
-    doubleLogon,
-    garbage,
-    logoff,
-    badAuth,
-    locked,
-    inactive,
-    invalidUser,
-    badUserType,
-    badIP,
-    forcedLogoff,
-    suspended,
-  ];
-
+  /// Returns the instance of [FieldESessionhistoryEndby] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldESessionhistoryEndby? fromJson(dynamic value) => FieldESessionhistoryEndbyTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldESessionhistoryEndby]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldESessionhistoryEndby> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldESessionhistoryEndby>[];
     if (json is List && json.isNotEmpty) {
@@ -81,9 +68,11 @@ class FieldESessionhistoryEndbyTypeTransformer {
 
   const FieldESessionhistoryEndbyTypeTransformer._();
 
-  String encode(FieldESessionhistoryEndby data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldESessionhistoryEndby data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldESessionhistoryEndby.
+  /// Returns the instance of [FieldESessionhistoryEndby] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -92,6 +81,9 @@ class FieldESessionhistoryEndbyTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldESessionhistoryEndby? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldESessionhistoryEndby) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Decryption': return FieldESessionhistoryEndby.decryption;
@@ -118,7 +110,7 @@ class FieldESessionhistoryEndbyTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldESessionhistoryEndbyTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldESessionhistoryEndbyTypeTransformer? _instance;
 }
 

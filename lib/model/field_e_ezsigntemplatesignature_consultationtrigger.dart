@@ -11,29 +11,29 @@
 part of openapi.api;
 
 /// Indicates when the “consultation” type signature must be signed.  1. **Automatic** When the document is displayed . 2. **Manual** The user must indicate that he has viewed the document.
-class FieldEEzsigntemplatesignatureConsultationtrigger {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsigntemplatesignatureConsultationtrigger._(this.value);
+enum FieldEEzsigntemplatesignatureConsultationtrigger {
+  automatic._(r'Automatic'),
+  manual._(r'Manual'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsigntemplatesignatureConsultationtrigger._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const automatic = FieldEEzsigntemplatesignatureConsultationtrigger._(r'Automatic');
-  static const manual = FieldEEzsigntemplatesignatureConsultationtrigger._(r'Manual');
-
-  /// List of all possible values in this [enum][FieldEEzsigntemplatesignatureConsultationtrigger].
-  static const values = <FieldEEzsigntemplatesignatureConsultationtrigger>[
-    automatic,
-    manual,
-  ];
-
+  /// Returns the instance of [FieldEEzsigntemplatesignatureConsultationtrigger] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsigntemplatesignatureConsultationtrigger? fromJson(dynamic value) => FieldEEzsigntemplatesignatureConsultationtriggerTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsigntemplatesignatureConsultationtrigger]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsigntemplatesignatureConsultationtrigger> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsigntemplatesignatureConsultationtrigger>[];
     if (json is List && json.isNotEmpty) {
@@ -55,9 +55,11 @@ class FieldEEzsigntemplatesignatureConsultationtriggerTypeTransformer {
 
   const FieldEEzsigntemplatesignatureConsultationtriggerTypeTransformer._();
 
-  String encode(FieldEEzsigntemplatesignatureConsultationtrigger data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsigntemplatesignatureConsultationtrigger data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsigntemplatesignatureConsultationtrigger.
+  /// Returns the instance of [FieldEEzsigntemplatesignatureConsultationtrigger] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -66,6 +68,9 @@ class FieldEEzsigntemplatesignatureConsultationtriggerTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsigntemplatesignatureConsultationtrigger? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsigntemplatesignatureConsultationtrigger) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Automatic': return FieldEEzsigntemplatesignatureConsultationtrigger.automatic;
@@ -79,7 +84,7 @@ class FieldEEzsigntemplatesignatureConsultationtriggerTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsigntemplatesignatureConsultationtriggerTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsigntemplatesignatureConsultationtriggerTypeTransformer? _instance;
 }
 

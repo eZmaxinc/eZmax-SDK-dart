@@ -11,31 +11,30 @@
 part of openapi.api;
 
 /// How we display the date in signatures
-class FieldEEzsignfoldertypeSignaturedatedisplay {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsignfoldertypeSignaturedatedisplay._(this.value);
+enum FieldEEzsignfoldertypeSignaturedatedisplay {
+  default_._(r'Default'),
+  hidden._(r'Hidden'),
+  custom._(r'Custom'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsignfoldertypeSignaturedatedisplay._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const default_ = FieldEEzsignfoldertypeSignaturedatedisplay._(r'Default');
-  static const hidden = FieldEEzsignfoldertypeSignaturedatedisplay._(r'Hidden');
-  static const custom = FieldEEzsignfoldertypeSignaturedatedisplay._(r'Custom');
-
-  /// List of all possible values in this [enum][FieldEEzsignfoldertypeSignaturedatedisplay].
-  static const values = <FieldEEzsignfoldertypeSignaturedatedisplay>[
-    default_,
-    hidden,
-    custom,
-  ];
-
+  /// Returns the instance of [FieldEEzsignfoldertypeSignaturedatedisplay] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsignfoldertypeSignaturedatedisplay? fromJson(dynamic value) => FieldEEzsignfoldertypeSignaturedatedisplayTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsignfoldertypeSignaturedatedisplay]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsignfoldertypeSignaturedatedisplay> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsignfoldertypeSignaturedatedisplay>[];
     if (json is List && json.isNotEmpty) {
@@ -57,9 +56,11 @@ class FieldEEzsignfoldertypeSignaturedatedisplayTypeTransformer {
 
   const FieldEEzsignfoldertypeSignaturedatedisplayTypeTransformer._();
 
-  String encode(FieldEEzsignfoldertypeSignaturedatedisplay data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsignfoldertypeSignaturedatedisplay data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsignfoldertypeSignaturedatedisplay.
+  /// Returns the instance of [FieldEEzsignfoldertypeSignaturedatedisplay] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -68,6 +69,9 @@ class FieldEEzsignfoldertypeSignaturedatedisplayTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsignfoldertypeSignaturedatedisplay? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsignfoldertypeSignaturedatedisplay) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Default': return FieldEEzsignfoldertypeSignaturedatedisplay.default_;
@@ -82,7 +86,7 @@ class FieldEEzsignfoldertypeSignaturedatedisplayTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsignfoldertypeSignaturedatedisplayTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsignfoldertypeSignaturedatedisplayTypeTransformer? _instance;
 }
 

@@ -11,93 +11,61 @@
 part of openapi.api;
 
 /// The Ezsigndocumentlog Type.
-class FieldEEzsigndocumentlogType {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsigndocumentlogType._(this.value);
+enum FieldEEzsigndocumentlogType {
+  clone._(r'Clone'),
+  login._(r'Login'),
+  sendcode._(r'Sendcode'),
+  badcode._(r'Badcode'),
+  goodcode._(r'Goodcode'),
+  badresponse._(r'Badresponse'),
+  goodresponse._(r'Goodresponse'),
+  authentication._(r'Authentication'),
+  createpage._(r'Createpage'),
+  download._(r'Download'),
+  send._(r'Send'),
+  sign._(r'Sign'),
+  upload._(r'Upload'),
+  view._(r'View'),
+  completion._(r'Completion'),
+  changelimitdate._(r'Changelimitdate'),
+  unsign._(r'Unsign'),
+  importFromInstanet._(r'ImportFromInstanet'),
+  createdFromEzsigntemplatepublic._(r'CreatedFromEzsigntemplatepublic'),
+  sendEmail._(r'SendEmail'),
+  formCompletion._(r'FormCompletion'),
+  formSaveAsDraft._(r'FormSaveAsDraft'),
+  signatureAttachmentAdd._(r'SignatureAttachmentAdd'),
+  signatureAttachmentValidation._(r'SignatureAttachmentValidation'),
+  signatureAttachmentRefused._(r'SignatureAttachmentRefused'),
+  signatureAttachmentDeleted._(r'SignatureAttachmentDeleted'),
+  declinedToSign._(r'DeclinedToSign'),
+  delayedSendEmail._(r'DelayedSendEmail'),
+  annotationAdded._(r'AnnotationAdded'),
+  flatten._(r'Flatten'),
+  regeneratePage._(r'RegeneratePage'),
+  regeneratePageForm._(r'RegeneratePageForm'),
+  reassign._(r'Reassign'),
+  documentCompletion._(r'DocumentCompletion'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsigndocumentlogType._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const clone = FieldEEzsigndocumentlogType._(r'Clone');
-  static const login = FieldEEzsigndocumentlogType._(r'Login');
-  static const sendcode = FieldEEzsigndocumentlogType._(r'Sendcode');
-  static const badcode = FieldEEzsigndocumentlogType._(r'Badcode');
-  static const goodcode = FieldEEzsigndocumentlogType._(r'Goodcode');
-  static const badresponse = FieldEEzsigndocumentlogType._(r'Badresponse');
-  static const goodresponse = FieldEEzsigndocumentlogType._(r'Goodresponse');
-  static const authentication = FieldEEzsigndocumentlogType._(r'Authentication');
-  static const createpage = FieldEEzsigndocumentlogType._(r'Createpage');
-  static const download = FieldEEzsigndocumentlogType._(r'Download');
-  static const send = FieldEEzsigndocumentlogType._(r'Send');
-  static const sign = FieldEEzsigndocumentlogType._(r'Sign');
-  static const upload = FieldEEzsigndocumentlogType._(r'Upload');
-  static const view = FieldEEzsigndocumentlogType._(r'View');
-  static const completion = FieldEEzsigndocumentlogType._(r'Completion');
-  static const changelimitdate = FieldEEzsigndocumentlogType._(r'Changelimitdate');
-  static const unsign = FieldEEzsigndocumentlogType._(r'Unsign');
-  static const importFromInstanet = FieldEEzsigndocumentlogType._(r'ImportFromInstanet');
-  static const createdFromEzsigntemplatepublic = FieldEEzsigndocumentlogType._(r'CreatedFromEzsigntemplatepublic');
-  static const sendEmail = FieldEEzsigndocumentlogType._(r'SendEmail');
-  static const formCompletion = FieldEEzsigndocumentlogType._(r'FormCompletion');
-  static const formSaveAsDraft = FieldEEzsigndocumentlogType._(r'FormSaveAsDraft');
-  static const signatureAttachmentAdd = FieldEEzsigndocumentlogType._(r'SignatureAttachmentAdd');
-  static const signatureAttachmentValidation = FieldEEzsigndocumentlogType._(r'SignatureAttachmentValidation');
-  static const signatureAttachmentRefused = FieldEEzsigndocumentlogType._(r'SignatureAttachmentRefused');
-  static const signatureAttachmentDeleted = FieldEEzsigndocumentlogType._(r'SignatureAttachmentDeleted');
-  static const declinedToSign = FieldEEzsigndocumentlogType._(r'DeclinedToSign');
-  static const delayedSendEmail = FieldEEzsigndocumentlogType._(r'DelayedSendEmail');
-  static const annotationAdded = FieldEEzsigndocumentlogType._(r'AnnotationAdded');
-  static const flatten = FieldEEzsigndocumentlogType._(r'Flatten');
-  static const regeneratePage = FieldEEzsigndocumentlogType._(r'RegeneratePage');
-  static const regeneratePageForm = FieldEEzsigndocumentlogType._(r'RegeneratePageForm');
-  static const reassign = FieldEEzsigndocumentlogType._(r'Reassign');
-  static const documentCompletion = FieldEEzsigndocumentlogType._(r'DocumentCompletion');
-
-  /// List of all possible values in this [enum][FieldEEzsigndocumentlogType].
-  static const values = <FieldEEzsigndocumentlogType>[
-    clone,
-    login,
-    sendcode,
-    badcode,
-    goodcode,
-    badresponse,
-    goodresponse,
-    authentication,
-    createpage,
-    download,
-    send,
-    sign,
-    upload,
-    view,
-    completion,
-    changelimitdate,
-    unsign,
-    importFromInstanet,
-    createdFromEzsigntemplatepublic,
-    sendEmail,
-    formCompletion,
-    formSaveAsDraft,
-    signatureAttachmentAdd,
-    signatureAttachmentValidation,
-    signatureAttachmentRefused,
-    signatureAttachmentDeleted,
-    declinedToSign,
-    delayedSendEmail,
-    annotationAdded,
-    flatten,
-    regeneratePage,
-    regeneratePageForm,
-    reassign,
-    documentCompletion,
-  ];
-
+  /// Returns the instance of [FieldEEzsigndocumentlogType] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsigndocumentlogType? fromJson(dynamic value) => FieldEEzsigndocumentlogTypeTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsigndocumentlogType]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsigndocumentlogType> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsigndocumentlogType>[];
     if (json is List && json.isNotEmpty) {
@@ -119,9 +87,11 @@ class FieldEEzsigndocumentlogTypeTypeTransformer {
 
   const FieldEEzsigndocumentlogTypeTypeTransformer._();
 
-  String encode(FieldEEzsigndocumentlogType data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsigndocumentlogType data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsigndocumentlogType.
+  /// Returns the instance of [FieldEEzsigndocumentlogType] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -130,6 +100,9 @@ class FieldEEzsigndocumentlogTypeTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsigndocumentlogType? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsigndocumentlogType) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Clone': return FieldEEzsigndocumentlogType.clone;
@@ -175,7 +148,7 @@ class FieldEEzsigndocumentlogTypeTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsigndocumentlogTypeTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsigndocumentlogTypeTypeTransformer? _instance;
 }
 

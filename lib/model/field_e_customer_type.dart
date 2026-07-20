@@ -11,35 +11,32 @@
 part of openapi.api;
 
 /// The type of the Customer
-class FieldECustomerType {
-  /// Instantiate a new enum with the provided [value].
-  const FieldECustomerType._(this.value);
+enum FieldECustomerType {
+  normal._(r'Normal'),
+  vetrxServer._(r'Vetrx-Server'),
+  rewardAdministration._(r'Reward-Administration'),
+  rewardRepresentative._(r'Reward-Representative'),
+  rewardServer._(r'Reward-Server'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldECustomerType._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const normal = FieldECustomerType._(r'Normal');
-  static const vetrxServer = FieldECustomerType._(r'Vetrx-Server');
-  static const rewardAdministration = FieldECustomerType._(r'Reward-Administration');
-  static const rewardRepresentative = FieldECustomerType._(r'Reward-Representative');
-  static const rewardServer = FieldECustomerType._(r'Reward-Server');
-
-  /// List of all possible values in this [enum][FieldECustomerType].
-  static const values = <FieldECustomerType>[
-    normal,
-    vetrxServer,
-    rewardAdministration,
-    rewardRepresentative,
-    rewardServer,
-  ];
-
+  /// Returns the instance of [FieldECustomerType] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldECustomerType? fromJson(dynamic value) => FieldECustomerTypeTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldECustomerType]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldECustomerType> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldECustomerType>[];
     if (json is List && json.isNotEmpty) {
@@ -61,9 +58,11 @@ class FieldECustomerTypeTypeTransformer {
 
   const FieldECustomerTypeTypeTransformer._();
 
-  String encode(FieldECustomerType data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldECustomerType data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldECustomerType.
+  /// Returns the instance of [FieldECustomerType] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -72,6 +71,9 @@ class FieldECustomerTypeTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldECustomerType? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldECustomerType) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Normal': return FieldECustomerType.normal;
@@ -88,7 +90,7 @@ class FieldECustomerTypeTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldECustomerTypeTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldECustomerTypeTypeTransformer? _instance;
 }
 

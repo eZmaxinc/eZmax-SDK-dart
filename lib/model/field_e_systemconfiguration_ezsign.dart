@@ -11,29 +11,29 @@
 part of openapi.api;
 
 /// Whether if Ezsign is paid by the company or not
-class FieldESystemconfigurationEzsign {
-  /// Instantiate a new enum with the provided [value].
-  const FieldESystemconfigurationEzsign._(this.value);
+enum FieldESystemconfigurationEzsign {
+  no._(r'No'),
+  yes._(r'Yes'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldESystemconfigurationEzsign._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const no = FieldESystemconfigurationEzsign._(r'No');
-  static const yes = FieldESystemconfigurationEzsign._(r'Yes');
-
-  /// List of all possible values in this [enum][FieldESystemconfigurationEzsign].
-  static const values = <FieldESystemconfigurationEzsign>[
-    no,
-    yes,
-  ];
-
+  /// Returns the instance of [FieldESystemconfigurationEzsign] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldESystemconfigurationEzsign? fromJson(dynamic value) => FieldESystemconfigurationEzsignTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldESystemconfigurationEzsign]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldESystemconfigurationEzsign> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldESystemconfigurationEzsign>[];
     if (json is List && json.isNotEmpty) {
@@ -55,9 +55,11 @@ class FieldESystemconfigurationEzsignTypeTransformer {
 
   const FieldESystemconfigurationEzsignTypeTransformer._();
 
-  String encode(FieldESystemconfigurationEzsign data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldESystemconfigurationEzsign data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldESystemconfigurationEzsign.
+  /// Returns the instance of [FieldESystemconfigurationEzsign] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -66,6 +68,9 @@ class FieldESystemconfigurationEzsignTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldESystemconfigurationEzsign? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldESystemconfigurationEzsign) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'No': return FieldESystemconfigurationEzsign.no;
@@ -79,7 +84,7 @@ class FieldESystemconfigurationEzsignTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldESystemconfigurationEzsignTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldESystemconfigurationEzsignTypeTransformer? _instance;
 }
 

@@ -11,33 +11,31 @@
 part of openapi.api;
 
 /// Subscription level when a user has a Prepaid subscription.
-class FieldEUserEzsignprepaid {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEUserEzsignprepaid._(this.value);
+enum FieldEUserEzsignprepaid {
+  no._(r'No'),
+  basic._(r'Basic'),
+  standard._(r'Standard'),
+  pro._(r'Pro'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEUserEzsignprepaid._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const no = FieldEUserEzsignprepaid._(r'No');
-  static const basic = FieldEUserEzsignprepaid._(r'Basic');
-  static const standard = FieldEUserEzsignprepaid._(r'Standard');
-  static const pro = FieldEUserEzsignprepaid._(r'Pro');
-
-  /// List of all possible values in this [enum][FieldEUserEzsignprepaid].
-  static const values = <FieldEUserEzsignprepaid>[
-    no,
-    basic,
-    standard,
-    pro,
-  ];
-
+  /// Returns the instance of [FieldEUserEzsignprepaid] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEUserEzsignprepaid? fromJson(dynamic value) => FieldEUserEzsignprepaidTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEUserEzsignprepaid]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEUserEzsignprepaid> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEUserEzsignprepaid>[];
     if (json is List && json.isNotEmpty) {
@@ -59,9 +57,11 @@ class FieldEUserEzsignprepaidTypeTransformer {
 
   const FieldEUserEzsignprepaidTypeTransformer._();
 
-  String encode(FieldEUserEzsignprepaid data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEUserEzsignprepaid data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEUserEzsignprepaid.
+  /// Returns the instance of [FieldEUserEzsignprepaid] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -70,6 +70,9 @@ class FieldEUserEzsignprepaidTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEUserEzsignprepaid? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEUserEzsignprepaid) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'No': return FieldEUserEzsignprepaid.no;
@@ -85,7 +88,7 @@ class FieldEUserEzsignprepaidTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEUserEzsignprepaidTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEUserEzsignprepaidTypeTransformer? _instance;
 }
 

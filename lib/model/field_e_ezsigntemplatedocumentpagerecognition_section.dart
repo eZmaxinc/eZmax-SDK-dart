@@ -11,33 +11,31 @@
 part of openapi.api;
 
 /// The section of the Ezsigntemplatedocumentpagerecognition
-class FieldEEzsigntemplatedocumentpagerecognitionSection {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsigntemplatedocumentpagerecognitionSection._(this.value);
+enum FieldEEzsigntemplatedocumentpagerecognitionSection {
+  firstLine._(r'FirstLine'),
+  lastLine._(r'LastLine'),
+  page._(r'Page'),
+  region._(r'Region'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsigntemplatedocumentpagerecognitionSection._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const firstLine = FieldEEzsigntemplatedocumentpagerecognitionSection._(r'FirstLine');
-  static const lastLine = FieldEEzsigntemplatedocumentpagerecognitionSection._(r'LastLine');
-  static const page = FieldEEzsigntemplatedocumentpagerecognitionSection._(r'Page');
-  static const region = FieldEEzsigntemplatedocumentpagerecognitionSection._(r'Region');
-
-  /// List of all possible values in this [enum][FieldEEzsigntemplatedocumentpagerecognitionSection].
-  static const values = <FieldEEzsigntemplatedocumentpagerecognitionSection>[
-    firstLine,
-    lastLine,
-    page,
-    region,
-  ];
-
+  /// Returns the instance of [FieldEEzsigntemplatedocumentpagerecognitionSection] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsigntemplatedocumentpagerecognitionSection? fromJson(dynamic value) => FieldEEzsigntemplatedocumentpagerecognitionSectionTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsigntemplatedocumentpagerecognitionSection]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsigntemplatedocumentpagerecognitionSection> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsigntemplatedocumentpagerecognitionSection>[];
     if (json is List && json.isNotEmpty) {
@@ -59,9 +57,11 @@ class FieldEEzsigntemplatedocumentpagerecognitionSectionTypeTransformer {
 
   const FieldEEzsigntemplatedocumentpagerecognitionSectionTypeTransformer._();
 
-  String encode(FieldEEzsigntemplatedocumentpagerecognitionSection data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsigntemplatedocumentpagerecognitionSection data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsigntemplatedocumentpagerecognitionSection.
+  /// Returns the instance of [FieldEEzsigntemplatedocumentpagerecognitionSection] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -70,6 +70,9 @@ class FieldEEzsigntemplatedocumentpagerecognitionSectionTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsigntemplatedocumentpagerecognitionSection? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsigntemplatedocumentpagerecognitionSection) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'FirstLine': return FieldEEzsigntemplatedocumentpagerecognitionSection.firstLine;
@@ -85,7 +88,7 @@ class FieldEEzsigntemplatedocumentpagerecognitionSectionTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsigntemplatedocumentpagerecognitionSectionTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsigntemplatedocumentpagerecognitionSectionTypeTransformer? _instance;
 }
 

@@ -11,29 +11,29 @@
 part of openapi.api;
 
 /// The Action to do if the PDFA is non compliant of the Ezsignfolder type.  * **Reject** is for rejecting the document * **Convert** is for converting to the fkiPdfalevelIDConvert configured
-class FieldEEzsignfoldertypePdfanoncompliantaction {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsignfoldertypePdfanoncompliantaction._(this.value);
+enum FieldEEzsignfoldertypePdfanoncompliantaction {
+  reject._(r'Reject'),
+  convert._(r'Convert'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsignfoldertypePdfanoncompliantaction._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const reject = FieldEEzsignfoldertypePdfanoncompliantaction._(r'Reject');
-  static const convert = FieldEEzsignfoldertypePdfanoncompliantaction._(r'Convert');
-
-  /// List of all possible values in this [enum][FieldEEzsignfoldertypePdfanoncompliantaction].
-  static const values = <FieldEEzsignfoldertypePdfanoncompliantaction>[
-    reject,
-    convert,
-  ];
-
+  /// Returns the instance of [FieldEEzsignfoldertypePdfanoncompliantaction] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsignfoldertypePdfanoncompliantaction? fromJson(dynamic value) => FieldEEzsignfoldertypePdfanoncompliantactionTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsignfoldertypePdfanoncompliantaction]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsignfoldertypePdfanoncompliantaction> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsignfoldertypePdfanoncompliantaction>[];
     if (json is List && json.isNotEmpty) {
@@ -55,9 +55,11 @@ class FieldEEzsignfoldertypePdfanoncompliantactionTypeTransformer {
 
   const FieldEEzsignfoldertypePdfanoncompliantactionTypeTransformer._();
 
-  String encode(FieldEEzsignfoldertypePdfanoncompliantaction data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsignfoldertypePdfanoncompliantaction data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsignfoldertypePdfanoncompliantaction.
+  /// Returns the instance of [FieldEEzsignfoldertypePdfanoncompliantaction] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -66,6 +68,9 @@ class FieldEEzsignfoldertypePdfanoncompliantactionTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsignfoldertypePdfanoncompliantaction? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsignfoldertypePdfanoncompliantaction) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Reject': return FieldEEzsignfoldertypePdfanoncompliantaction.reject;
@@ -79,7 +84,7 @@ class FieldEEzsignfoldertypePdfanoncompliantactionTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsignfoldertypePdfanoncompliantactionTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsignfoldertypePdfanoncompliantactionTypeTransformer? _instance;
 }
 

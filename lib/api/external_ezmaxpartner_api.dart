@@ -11,8 +11,8 @@
 part of openapi.api;
 
 
-class DocumentationEzmaxpartnerApi {
-  DocumentationEzmaxpartnerApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
+class ExternalEzmaxpartnerApi {
+  ExternalEzmaxpartnerApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
 
   final ApiClient apiClient;
 
@@ -26,9 +26,9 @@ class DocumentationEzmaxpartnerApi {
   ///
   /// * [DocumentationSubscribeV1Request] documentationSubscribeV1Request (required):
   ///   
-  Future<Response> documentationSubscribeV1WithHttpInfo(DocumentationSubscribeV1Request documentationSubscribeV1Request, { Future<void>? abortTrigger, }) async {
+  Future<Response> externalpartnerSubscribeV1WithHttpInfo(DocumentationSubscribeV1Request documentationSubscribeV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/1/documentation/subscribe';
+    final path = r'/1/external/ezmaxpartner/subscribe';
 
     // ignore: prefer_final_locals
     Object? postBody = documentationSubscribeV1Request;
@@ -60,8 +60,8 @@ class DocumentationEzmaxpartnerApi {
   ///
   /// * [DocumentationSubscribeV1Request] documentationSubscribeV1Request (required):
   ///   
-  Future<DocumentationSubscribeV1Response?> documentationSubscribeV1(DocumentationSubscribeV1Request documentationSubscribeV1Request, { Future<void>? abortTrigger, }) async {
-    final response = await documentationSubscribeV1WithHttpInfo(documentationSubscribeV1Request, abortTrigger: abortTrigger,);
+  Future<DocumentationSubscribeV1Response?> externalpartnerSubscribeV1(DocumentationSubscribeV1Request documentationSubscribeV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await externalpartnerSubscribeV1WithHttpInfo(documentationSubscribeV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

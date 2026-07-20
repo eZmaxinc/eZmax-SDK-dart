@@ -11,31 +11,30 @@
 part of openapi.api;
 
 /// Frequency at which reminders will be sent to signers that haven't signed the documents
-class FieldEUserEzsignsendreminderfrequency {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEUserEzsignsendreminderfrequency._(this.value);
+enum FieldEUserEzsignsendreminderfrequency {
+  none._(r'None'),
+  daily._(r'Daily'),
+  weekly._(r'Weekly'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEUserEzsignsendreminderfrequency._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const none = FieldEUserEzsignsendreminderfrequency._(r'None');
-  static const daily = FieldEUserEzsignsendreminderfrequency._(r'Daily');
-  static const weekly = FieldEUserEzsignsendreminderfrequency._(r'Weekly');
-
-  /// List of all possible values in this [enum][FieldEUserEzsignsendreminderfrequency].
-  static const values = <FieldEUserEzsignsendreminderfrequency>[
-    none,
-    daily,
-    weekly,
-  ];
-
+  /// Returns the instance of [FieldEUserEzsignsendreminderfrequency] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEUserEzsignsendreminderfrequency? fromJson(dynamic value) => FieldEUserEzsignsendreminderfrequencyTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEUserEzsignsendreminderfrequency]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEUserEzsignsendreminderfrequency> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEUserEzsignsendreminderfrequency>[];
     if (json is List && json.isNotEmpty) {
@@ -57,9 +56,11 @@ class FieldEUserEzsignsendreminderfrequencyTypeTransformer {
 
   const FieldEUserEzsignsendreminderfrequencyTypeTransformer._();
 
-  String encode(FieldEUserEzsignsendreminderfrequency data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEUserEzsignsendreminderfrequency data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEUserEzsignsendreminderfrequency.
+  /// Returns the instance of [FieldEUserEzsignsendreminderfrequency] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -68,6 +69,9 @@ class FieldEUserEzsignsendreminderfrequencyTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEUserEzsignsendreminderfrequency? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEUserEzsignsendreminderfrequency) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'None': return FieldEUserEzsignsendreminderfrequency.none;
@@ -82,7 +86,7 @@ class FieldEUserEzsignsendreminderfrequencyTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEUserEzsignsendreminderfrequencyTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEUserEzsignsendreminderfrequencyTypeTransformer? _instance;
 }
 

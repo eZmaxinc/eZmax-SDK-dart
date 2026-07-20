@@ -11,29 +11,29 @@
 part of openapi.api;
 
 /// The Origin of User for the Activesession
-class FieldEActivesessionOrigin {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEActivesessionOrigin._(this.value);
+enum FieldEActivesessionOrigin {
+  builtIn._(r'BuiltIn'),
+  external_._(r'External'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEActivesessionOrigin._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const builtIn = FieldEActivesessionOrigin._(r'BuiltIn');
-  static const external_ = FieldEActivesessionOrigin._(r'External');
-
-  /// List of all possible values in this [enum][FieldEActivesessionOrigin].
-  static const values = <FieldEActivesessionOrigin>[
-    builtIn,
-    external_,
-  ];
-
+  /// Returns the instance of [FieldEActivesessionOrigin] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEActivesessionOrigin? fromJson(dynamic value) => FieldEActivesessionOriginTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEActivesessionOrigin]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEActivesessionOrigin> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEActivesessionOrigin>[];
     if (json is List && json.isNotEmpty) {
@@ -55,9 +55,11 @@ class FieldEActivesessionOriginTypeTransformer {
 
   const FieldEActivesessionOriginTypeTransformer._();
 
-  String encode(FieldEActivesessionOrigin data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEActivesessionOrigin data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEActivesessionOrigin.
+  /// Returns the instance of [FieldEActivesessionOrigin] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -66,6 +68,9 @@ class FieldEActivesessionOriginTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEActivesessionOrigin? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEActivesessionOrigin) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'BuiltIn': return FieldEActivesessionOrigin.builtIn;
@@ -79,7 +84,7 @@ class FieldEActivesessionOriginTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEActivesessionOriginTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEActivesessionOriginTypeTransformer? _instance;
 }
 

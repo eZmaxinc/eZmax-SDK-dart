@@ -191,31 +191,30 @@ class EzsigndocumentExtractTextV1Request {
 }
 
 /// The section of the page
-class EzsigndocumentExtractTextV1RequestESectionEnum {
-  /// Instantiate a new enum with the provided [value].
-  const EzsigndocumentExtractTextV1RequestESectionEnum._(this.value);
+enum EzsigndocumentExtractTextV1RequestESectionEnum {
+  firstLine._(r'FirstLine'),
+  lastLine._(r'LastLine'),
+  region._(r'Region'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const EzsigndocumentExtractTextV1RequestESectionEnum._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const firstLine = EzsigndocumentExtractTextV1RequestESectionEnum._(r'FirstLine');
-  static const lastLine = EzsigndocumentExtractTextV1RequestESectionEnum._(r'LastLine');
-  static const region = EzsigndocumentExtractTextV1RequestESectionEnum._(r'Region');
-
-  /// List of all possible values in this [enum][EzsigndocumentExtractTextV1RequestESectionEnum].
-  static const values = <EzsigndocumentExtractTextV1RequestESectionEnum>[
-    firstLine,
-    lastLine,
-    region,
-  ];
-
+  /// Returns the instance of [EzsigndocumentExtractTextV1RequestESectionEnum] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static EzsigndocumentExtractTextV1RequestESectionEnum? fromJson(dynamic value) => EzsigndocumentExtractTextV1RequestESectionEnumTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [EzsigndocumentExtractTextV1RequestESectionEnum]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<EzsigndocumentExtractTextV1RequestESectionEnum> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsigndocumentExtractTextV1RequestESectionEnum>[];
     if (json is List && json.isNotEmpty) {
@@ -237,9 +236,10 @@ class EzsigndocumentExtractTextV1RequestESectionEnumTypeTransformer {
 
   const EzsigndocumentExtractTextV1RequestESectionEnumTypeTransformer._();
 
-  String encode(EzsigndocumentExtractTextV1RequestESectionEnum data) => data.value;
+  String encode(EzsigndocumentExtractTextV1RequestESectionEnum data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a EzsigndocumentExtractTextV1RequestESectionEnum.
+  /// Returns the instance of [EzsigndocumentExtractTextV1RequestESectionEnum] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -248,6 +248,9 @@ class EzsigndocumentExtractTextV1RequestESectionEnumTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   EzsigndocumentExtractTextV1RequestESectionEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data is EzsigndocumentExtractTextV1RequestESectionEnum) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'FirstLine': return EzsigndocumentExtractTextV1RequestESectionEnum.firstLine;
@@ -262,7 +265,7 @@ class EzsigndocumentExtractTextV1RequestESectionEnumTypeTransformer {
     return null;
   }
 
-  /// Singleton [EzsigndocumentExtractTextV1RequestESectionEnumTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static EzsigndocumentExtractTextV1RequestESectionEnumTypeTransformer? _instance;
 }
 

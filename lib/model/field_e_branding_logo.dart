@@ -11,31 +11,30 @@
 part of openapi.api;
 
 /// The logo for the Branding. Select the value 'Default' if you want to use the default logo and delete the custom one if you used one
-class FieldEBrandingLogo {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEBrandingLogo._(this.value);
+enum FieldEBrandingLogo {
+  default_._(r'Default'),
+  JPEG._(r'JPEG'),
+  PNG._(r'PNG'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEBrandingLogo._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const default_ = FieldEBrandingLogo._(r'Default');
-  static const JPEG = FieldEBrandingLogo._(r'JPEG');
-  static const PNG = FieldEBrandingLogo._(r'PNG');
-
-  /// List of all possible values in this [enum][FieldEBrandingLogo].
-  static const values = <FieldEBrandingLogo>[
-    default_,
-    JPEG,
-    PNG,
-  ];
-
+  /// Returns the instance of [FieldEBrandingLogo] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEBrandingLogo? fromJson(dynamic value) => FieldEBrandingLogoTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEBrandingLogo]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEBrandingLogo> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEBrandingLogo>[];
     if (json is List && json.isNotEmpty) {
@@ -57,9 +56,11 @@ class FieldEBrandingLogoTypeTransformer {
 
   const FieldEBrandingLogoTypeTransformer._();
 
-  String encode(FieldEBrandingLogo data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEBrandingLogo data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEBrandingLogo.
+  /// Returns the instance of [FieldEBrandingLogo] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -68,6 +69,9 @@ class FieldEBrandingLogoTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEBrandingLogo? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEBrandingLogo) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Default': return FieldEBrandingLogo.default_;
@@ -82,7 +86,7 @@ class FieldEBrandingLogoTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEBrandingLogoTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEBrandingLogoTypeTransformer? _instance;
 }
 

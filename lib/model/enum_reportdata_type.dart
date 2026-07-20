@@ -11,43 +11,36 @@
 part of openapi.api;
 
 /// Type of data in column
-class EnumReportdataType {
-  /// Instantiate a new enum with the provided [value].
-  const EnumReportdataType._(this.value);
+enum EnumReportdataType {
+  date._(r'Date'),
+  fileSize._(r'FileSize'),
+  integer._(r'Integer'),
+  money._(r'Money'),
+  number._(r'Number'),
+  percentage._(r'Percentage'),
+  percentageInt._(r'PercentageInt'),
+  period._(r'Period'),
+  string._(r'String'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const EnumReportdataType._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const date = EnumReportdataType._(r'Date');
-  static const fileSize = EnumReportdataType._(r'FileSize');
-  static const integer = EnumReportdataType._(r'Integer');
-  static const money = EnumReportdataType._(r'Money');
-  static const number = EnumReportdataType._(r'Number');
-  static const percentage = EnumReportdataType._(r'Percentage');
-  static const percentageInt = EnumReportdataType._(r'PercentageInt');
-  static const period = EnumReportdataType._(r'Period');
-  static const string = EnumReportdataType._(r'String');
-
-  /// List of all possible values in this [enum][EnumReportdataType].
-  static const values = <EnumReportdataType>[
-    date,
-    fileSize,
-    integer,
-    money,
-    number,
-    percentage,
-    percentageInt,
-    period,
-    string,
-  ];
-
+  /// Returns the instance of [EnumReportdataType] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static EnumReportdataType? fromJson(dynamic value) => EnumReportdataTypeTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [EnumReportdataType]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<EnumReportdataType> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EnumReportdataType>[];
     if (json is List && json.isNotEmpty) {
@@ -69,9 +62,11 @@ class EnumReportdataTypeTypeTransformer {
 
   const EnumReportdataTypeTypeTransformer._();
 
-  String encode(EnumReportdataType data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(EnumReportdataType data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a EnumReportdataType.
+  /// Returns the instance of [EnumReportdataType] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -80,6 +75,9 @@ class EnumReportdataTypeTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   EnumReportdataType? decode(dynamic data, {bool allowNull = true}) {
+    if (data is EnumReportdataType) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Date': return EnumReportdataType.date;
@@ -100,7 +98,7 @@ class EnumReportdataTypeTypeTransformer {
     return null;
   }
 
-  /// Singleton [EnumReportdataTypeTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static EnumReportdataTypeTypeTransformer? _instance;
 }
 

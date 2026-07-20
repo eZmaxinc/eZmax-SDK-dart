@@ -11,31 +11,30 @@
 part of openapi.api;
 
 /// The Ezmaxinvoicingcontract payment type
-class FieldEEzmaxinvoicingcontractPaymenttype {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzmaxinvoicingcontractPaymenttype._(this.value);
+enum FieldEEzmaxinvoicingcontractPaymenttype {
+  cheque._(r'Cheque'),
+  creditCard._(r'CreditCard'),
+  directDebit._(r'DirectDebit'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzmaxinvoicingcontractPaymenttype._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const cheque = FieldEEzmaxinvoicingcontractPaymenttype._(r'Cheque');
-  static const creditCard = FieldEEzmaxinvoicingcontractPaymenttype._(r'CreditCard');
-  static const directDebit = FieldEEzmaxinvoicingcontractPaymenttype._(r'DirectDebit');
-
-  /// List of all possible values in this [enum][FieldEEzmaxinvoicingcontractPaymenttype].
-  static const values = <FieldEEzmaxinvoicingcontractPaymenttype>[
-    cheque,
-    creditCard,
-    directDebit,
-  ];
-
+  /// Returns the instance of [FieldEEzmaxinvoicingcontractPaymenttype] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzmaxinvoicingcontractPaymenttype? fromJson(dynamic value) => FieldEEzmaxinvoicingcontractPaymenttypeTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzmaxinvoicingcontractPaymenttype]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzmaxinvoicingcontractPaymenttype> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzmaxinvoicingcontractPaymenttype>[];
     if (json is List && json.isNotEmpty) {
@@ -57,9 +56,11 @@ class FieldEEzmaxinvoicingcontractPaymenttypeTypeTransformer {
 
   const FieldEEzmaxinvoicingcontractPaymenttypeTypeTransformer._();
 
-  String encode(FieldEEzmaxinvoicingcontractPaymenttype data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzmaxinvoicingcontractPaymenttype data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzmaxinvoicingcontractPaymenttype.
+  /// Returns the instance of [FieldEEzmaxinvoicingcontractPaymenttype] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -68,6 +69,9 @@ class FieldEEzmaxinvoicingcontractPaymenttypeTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzmaxinvoicingcontractPaymenttype? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzmaxinvoicingcontractPaymenttype) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Cheque': return FieldEEzmaxinvoicingcontractPaymenttype.cheque;
@@ -82,7 +86,7 @@ class FieldEEzmaxinvoicingcontractPaymenttypeTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzmaxinvoicingcontractPaymenttypeTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzmaxinvoicingcontractPaymenttypeTypeTransformer? _instance;
 }
 

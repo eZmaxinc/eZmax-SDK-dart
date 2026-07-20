@@ -109,6 +109,9 @@ String parameterToString(dynamic value) {
   if (value is FieldEActivesessionWeekdaystart) {
     return FieldEActivesessionWeekdaystartTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEAgentSchedule) {
+    return FieldEAgentScheduleTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEAttachmentDocumenttype) {
     return FieldEAttachmentDocumenttypeTypeTransformer().encode(value).toString();
   }
@@ -531,6 +534,9 @@ String parameterToString(dynamic value) {
   }
   if (value is FieldEWebhookModule) {
     return FieldEWebhookModuleTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEWebhookRealestateevent) {
+    return FieldEWebhookRealestateeventTypeTransformer().encode(value).toString();
   }
   if (value is FieldEtInscriptionnotauthenticatedMortgagetype) {
     return FieldEtInscriptionnotauthenticatedMortgagetypeTypeTransformer().encode(value).toString();

@@ -11,83 +11,56 @@
 part of openapi.api;
 
 /// The Type for the Attachmentlog
-class FieldEAttachmentlogType {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEAttachmentlogType._(this.value);
+enum FieldEAttachmentlogType {
+  autoValidation._(r'AutoValidation'),
+  copyFrom._(r'CopyFrom'),
+  copyTo._(r'CopyTo'),
+  copyToEzsign._(r'CopyToEzsign'),
+  createByEzsign._(r'CreateByEzsign'),
+  download._(r'Download'),
+  deleted._(r'Deleted'),
+  destroyed._(r'Destroyed'),
+  email._(r'Email'),
+  emailCC._(r'EmailCC'),
+  emailCCI._(r'EmailCCI'),
+  fax._(r'Fax'),
+  importedFromExternalSystem._(r'ImportedFromExternalSystem'),
+  importedFromEZA._(r'ImportedFromEZA'),
+  importedFromFaltour._(r'ImportedFromFaltour'),
+  importedFromLonewolf._(r'ImportedFromLonewolf'),
+  importedFromProspects._(r'ImportedFromProspects'),
+  move._(r'Move'),
+  openFromEmail._(r'OpenFromEmail'),
+  purged._(r'Purged'),
+  reject._(r'Reject'),
+  rename._(r'Rename'),
+  restore._(r'Restore'),
+  scanned._(r'Scanned'),
+  sendToGED._(r'SendToGED'),
+  unvalidatedBy._(r'UnvalidatedBy'),
+  upload._(r'Upload'),
+  validatedBy._(r'ValidatedBy'),
+  vetinfoUpload._(r'VetinfoUpload'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEAttachmentlogType._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const autoValidation = FieldEAttachmentlogType._(r'AutoValidation');
-  static const copyFrom = FieldEAttachmentlogType._(r'CopyFrom');
-  static const copyTo = FieldEAttachmentlogType._(r'CopyTo');
-  static const copyToEzsign = FieldEAttachmentlogType._(r'CopyToEzsign');
-  static const createByEzsign = FieldEAttachmentlogType._(r'CreateByEzsign');
-  static const download = FieldEAttachmentlogType._(r'Download');
-  static const deleted = FieldEAttachmentlogType._(r'Deleted');
-  static const destroyed = FieldEAttachmentlogType._(r'Destroyed');
-  static const email = FieldEAttachmentlogType._(r'Email');
-  static const emailCC = FieldEAttachmentlogType._(r'EmailCC');
-  static const emailCCI = FieldEAttachmentlogType._(r'EmailCCI');
-  static const fax = FieldEAttachmentlogType._(r'Fax');
-  static const importedFromExternalSystem = FieldEAttachmentlogType._(r'ImportedFromExternalSystem');
-  static const importedFromEZA = FieldEAttachmentlogType._(r'ImportedFromEZA');
-  static const importedFromFaltour = FieldEAttachmentlogType._(r'ImportedFromFaltour');
-  static const importedFromLonewolf = FieldEAttachmentlogType._(r'ImportedFromLonewolf');
-  static const importedFromProspects = FieldEAttachmentlogType._(r'ImportedFromProspects');
-  static const move = FieldEAttachmentlogType._(r'Move');
-  static const openFromEmail = FieldEAttachmentlogType._(r'OpenFromEmail');
-  static const purged = FieldEAttachmentlogType._(r'Purged');
-  static const reject = FieldEAttachmentlogType._(r'Reject');
-  static const rename = FieldEAttachmentlogType._(r'Rename');
-  static const restore = FieldEAttachmentlogType._(r'Restore');
-  static const scanned = FieldEAttachmentlogType._(r'Scanned');
-  static const sendToGED = FieldEAttachmentlogType._(r'SendToGED');
-  static const unvalidatedBy = FieldEAttachmentlogType._(r'UnvalidatedBy');
-  static const upload = FieldEAttachmentlogType._(r'Upload');
-  static const validatedBy = FieldEAttachmentlogType._(r'ValidatedBy');
-  static const vetinfoUpload = FieldEAttachmentlogType._(r'VetinfoUpload');
-
-  /// List of all possible values in this [enum][FieldEAttachmentlogType].
-  static const values = <FieldEAttachmentlogType>[
-    autoValidation,
-    copyFrom,
-    copyTo,
-    copyToEzsign,
-    createByEzsign,
-    download,
-    deleted,
-    destroyed,
-    email,
-    emailCC,
-    emailCCI,
-    fax,
-    importedFromExternalSystem,
-    importedFromEZA,
-    importedFromFaltour,
-    importedFromLonewolf,
-    importedFromProspects,
-    move,
-    openFromEmail,
-    purged,
-    reject,
-    rename,
-    restore,
-    scanned,
-    sendToGED,
-    unvalidatedBy,
-    upload,
-    validatedBy,
-    vetinfoUpload,
-  ];
-
+  /// Returns the instance of [FieldEAttachmentlogType] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEAttachmentlogType? fromJson(dynamic value) => FieldEAttachmentlogTypeTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEAttachmentlogType]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEAttachmentlogType> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEAttachmentlogType>[];
     if (json is List && json.isNotEmpty) {
@@ -109,9 +82,11 @@ class FieldEAttachmentlogTypeTypeTransformer {
 
   const FieldEAttachmentlogTypeTypeTransformer._();
 
-  String encode(FieldEAttachmentlogType data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEAttachmentlogType data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEAttachmentlogType.
+  /// Returns the instance of [FieldEAttachmentlogType] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -120,6 +95,9 @@ class FieldEAttachmentlogTypeTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEAttachmentlogType? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEAttachmentlogType) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'AutoValidation': return FieldEAttachmentlogType.autoValidation;
@@ -160,7 +138,7 @@ class FieldEAttachmentlogTypeTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEAttachmentlogTypeTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEAttachmentlogTypeTypeTransformer? _instance;
 }
 

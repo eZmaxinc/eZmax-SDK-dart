@@ -128,29 +128,29 @@ class EzsigndocumentGetWordsPositionsV1Request {
 }
 
 /// Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*.
-class EzsigndocumentGetWordsPositionsV1RequestEGetEnum {
-  /// Instantiate a new enum with the provided [value].
-  const EzsigndocumentGetWordsPositionsV1RequestEGetEnum._(this.value);
+enum EzsigndocumentGetWordsPositionsV1RequestEGetEnum {
+  all._(r'All'),
+  words._(r'Words'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const EzsigndocumentGetWordsPositionsV1RequestEGetEnum._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const all = EzsigndocumentGetWordsPositionsV1RequestEGetEnum._(r'All');
-  static const words = EzsigndocumentGetWordsPositionsV1RequestEGetEnum._(r'Words');
-
-  /// List of all possible values in this [enum][EzsigndocumentGetWordsPositionsV1RequestEGetEnum].
-  static const values = <EzsigndocumentGetWordsPositionsV1RequestEGetEnum>[
-    all,
-    words,
-  ];
-
+  /// Returns the instance of [EzsigndocumentGetWordsPositionsV1RequestEGetEnum] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static EzsigndocumentGetWordsPositionsV1RequestEGetEnum? fromJson(dynamic value) => EzsigndocumentGetWordsPositionsV1RequestEGetEnumTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [EzsigndocumentGetWordsPositionsV1RequestEGetEnum]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<EzsigndocumentGetWordsPositionsV1RequestEGetEnum> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsigndocumentGetWordsPositionsV1RequestEGetEnum>[];
     if (json is List && json.isNotEmpty) {
@@ -172,9 +172,10 @@ class EzsigndocumentGetWordsPositionsV1RequestEGetEnumTypeTransformer {
 
   const EzsigndocumentGetWordsPositionsV1RequestEGetEnumTypeTransformer._();
 
-  String encode(EzsigndocumentGetWordsPositionsV1RequestEGetEnum data) => data.value;
+  String encode(EzsigndocumentGetWordsPositionsV1RequestEGetEnum data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a EzsigndocumentGetWordsPositionsV1RequestEGetEnum.
+  /// Returns the instance of [EzsigndocumentGetWordsPositionsV1RequestEGetEnum] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -183,6 +184,9 @@ class EzsigndocumentGetWordsPositionsV1RequestEGetEnumTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   EzsigndocumentGetWordsPositionsV1RequestEGetEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data is EzsigndocumentGetWordsPositionsV1RequestEGetEnum) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'All': return EzsigndocumentGetWordsPositionsV1RequestEGetEnum.all;
@@ -196,7 +200,7 @@ class EzsigndocumentGetWordsPositionsV1RequestEGetEnumTypeTransformer {
     return null;
   }
 
-  /// Singleton [EzsigndocumentGetWordsPositionsV1RequestEGetEnumTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static EzsigndocumentGetWordsPositionsV1RequestEGetEnumTypeTransformer? _instance;
 }
 

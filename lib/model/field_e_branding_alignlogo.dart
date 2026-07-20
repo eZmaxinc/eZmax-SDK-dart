@@ -11,31 +11,30 @@
 part of openapi.api;
 
 /// Alignment of logo for the Branding.
-class FieldEBrandingAlignlogo {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEBrandingAlignlogo._(this.value);
+enum FieldEBrandingAlignlogo {
+  center._(r'Center'),
+  left._(r'Left'),
+  right._(r'Right'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEBrandingAlignlogo._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const center = FieldEBrandingAlignlogo._(r'Center');
-  static const left = FieldEBrandingAlignlogo._(r'Left');
-  static const right = FieldEBrandingAlignlogo._(r'Right');
-
-  /// List of all possible values in this [enum][FieldEBrandingAlignlogo].
-  static const values = <FieldEBrandingAlignlogo>[
-    center,
-    left,
-    right,
-  ];
-
+  /// Returns the instance of [FieldEBrandingAlignlogo] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEBrandingAlignlogo? fromJson(dynamic value) => FieldEBrandingAlignlogoTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEBrandingAlignlogo]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEBrandingAlignlogo> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEBrandingAlignlogo>[];
     if (json is List && json.isNotEmpty) {
@@ -57,9 +56,11 @@ class FieldEBrandingAlignlogoTypeTransformer {
 
   const FieldEBrandingAlignlogoTypeTransformer._();
 
-  String encode(FieldEBrandingAlignlogo data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEBrandingAlignlogo data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEBrandingAlignlogo.
+  /// Returns the instance of [FieldEBrandingAlignlogo] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -68,6 +69,9 @@ class FieldEBrandingAlignlogoTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEBrandingAlignlogo? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEBrandingAlignlogo) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Center': return FieldEBrandingAlignlogo.center;
@@ -82,7 +86,7 @@ class FieldEBrandingAlignlogoTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEBrandingAlignlogoTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEBrandingAlignlogoTypeTransformer? _instance;
 }
 

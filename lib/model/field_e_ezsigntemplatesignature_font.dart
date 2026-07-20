@@ -11,29 +11,29 @@
 part of openapi.api;
 
 /// The font of the signature. This can only be set if eEzsigntemplatesignatureType is **Name** or **Initials** **Deprecated**
-class FieldEEzsigntemplatesignatureFont {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsigntemplatesignatureFont._(this.value);
+enum FieldEEzsigntemplatesignatureFont {
+  normal._(r'Normal'),
+  cursive._(r'Cursive'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsigntemplatesignatureFont._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const normal = FieldEEzsigntemplatesignatureFont._(r'Normal');
-  static const cursive = FieldEEzsigntemplatesignatureFont._(r'Cursive');
-
-  /// List of all possible values in this [enum][FieldEEzsigntemplatesignatureFont].
-  static const values = <FieldEEzsigntemplatesignatureFont>[
-    normal,
-    cursive,
-  ];
-
+  /// Returns the instance of [FieldEEzsigntemplatesignatureFont] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsigntemplatesignatureFont? fromJson(dynamic value) => FieldEEzsigntemplatesignatureFontTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsigntemplatesignatureFont]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsigntemplatesignatureFont> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsigntemplatesignatureFont>[];
     if (json is List && json.isNotEmpty) {
@@ -55,9 +55,11 @@ class FieldEEzsigntemplatesignatureFontTypeTransformer {
 
   const FieldEEzsigntemplatesignatureFontTypeTransformer._();
 
-  String encode(FieldEEzsigntemplatesignatureFont data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsigntemplatesignatureFont data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsigntemplatesignatureFont.
+  /// Returns the instance of [FieldEEzsigntemplatesignatureFont] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -66,6 +68,9 @@ class FieldEEzsigntemplatesignatureFontTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsigntemplatesignatureFont? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsigntemplatesignatureFont) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Normal': return FieldEEzsigntemplatesignatureFont.normal;
@@ -79,7 +84,7 @@ class FieldEEzsigntemplatesignatureFontTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsigntemplatesignatureFontTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsigntemplatesignatureFontTypeTransformer? _instance;
 }
 

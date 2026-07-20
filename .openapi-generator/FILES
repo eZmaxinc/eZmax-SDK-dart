@@ -420,7 +420,6 @@ doc/DiscussionmessageRequestCompound.md
 doc/DiscussionmessageRequestPatch.md
 doc/DiscussionmessageResponse.md
 doc/DiscussionmessageResponseCompound.md
-doc/DocumentationEzmaxpartnerApi.md
 doc/DocumentationSubscribeV1Request.md
 doc/DocumentationSubscribeV1Response.md
 doc/DomainAutocompleteElementResponse.md
@@ -469,6 +468,7 @@ doc/EnumHorizontalalignment.md
 doc/EnumReportdataType.md
 doc/EnumTextvalidation.md
 doc/EnumVerticalalignment.md
+doc/ExternalEzmaxpartnerApi.md
 doc/ExternalbrokerImportIntoEDMV1Request.md
 doc/ExternalbrokerImportIntoEDMV1Response.md
 doc/ExternalbrokerImportIntoEDMV1ResponseMPayload.md
@@ -1310,6 +1310,7 @@ doc/FieldEActivesessionOrigin.md
 doc/FieldEActivesessionRealestateinprogress.md
 doc/FieldEActivesessionUsertype.md
 doc/FieldEActivesessionWeekdaystart.md
+doc/FieldEAgentSchedule.md
 doc/FieldEAttachmentDocumenttype.md
 doc/FieldEAttachmentPrivacy.md
 doc/FieldEAttachmentType.md
@@ -1451,6 +1452,7 @@ doc/FieldEWebhookEzmaxpartnerevent.md
 doc/FieldEWebhookEzsignevent.md
 doc/FieldEWebhookManagementevent.md
 doc/FieldEWebhookModule.md
+doc/FieldEWebhookRealestateevent.md
 doc/FieldEtInscriptionnotauthenticatedMortgagetype.md
 doc/FieldPksEzmaxclientOs.md
 doc/FontAutocompleteElementResponse.md
@@ -1868,7 +1870,10 @@ doc/ScimServiceProviderConfig.md
 doc/ScimServiceProviderConfigApi.md
 doc/ScimServiceProviderConfigBulk.md
 doc/ScimServiceProviderConfigChangePassword.md
+doc/ScimServiceProviderConfigEtag.md
 doc/ScimServiceProviderConfigFilter.md
+doc/ScimServiceProviderConfigPatch.md
+doc/ScimServiceProviderConfigSort.md
 doc/ScimUser.md
 doc/ScimUserList.md
 doc/ScimUsersApi.md
@@ -2153,6 +2158,10 @@ doc/WebhookGetListV1ResponseMPayload.md
 doc/WebhookGetObjectV2Response.md
 doc/WebhookGetObjectV2ResponseMPayload.md
 doc/WebhookListElement.md
+doc/WebhookRealestateInscriptionCreated.md
+doc/WebhookRealestateInscriptionModified.md
+doc/WebhookRealestateInscriptionnotauthenticatedCreated.md
+doc/WebhookRealestateInscriptionnotauthenticatedModified.md
 doc/WebhookRegenerateApikeyV1Request.md
 doc/WebhookRegenerateApikeyV1Response.md
 doc/WebhookRegenerateApikeyV1ResponseMPayload.md
@@ -2182,7 +2191,7 @@ doc/WebsocketResponseInformationV1.md
 doc/WebsocketResponseInformationV1MPayload.md
 git_push.sh
 lib/api.dart
-lib/api/documentation_ezmaxpartner_api.dart
+lib/api/external_ezmaxpartner_api.dart
 lib/api/global_customer_api.dart
 lib/api/global_ezmaxclient_api.dart
 lib/api/global_ezmaxcustomer_api.dart
@@ -3636,6 +3645,7 @@ lib/model/field_e_activesession_origin.dart
 lib/model/field_e_activesession_realestateinprogress.dart
 lib/model/field_e_activesession_usertype.dart
 lib/model/field_e_activesession_weekdaystart.dart
+lib/model/field_e_agent_schedule.dart
 lib/model/field_e_attachment_documenttype.dart
 lib/model/field_e_attachment_privacy.dart
 lib/model/field_e_attachment_type.dart
@@ -3777,6 +3787,7 @@ lib/model/field_e_webhook_ezmaxpartnerevent.dart
 lib/model/field_e_webhook_ezsignevent.dart
 lib/model/field_e_webhook_managementevent.dart
 lib/model/field_e_webhook_module.dart
+lib/model/field_e_webhook_realestateevent.dart
 lib/model/field_et_inscriptionnotauthenticated_mortgagetype.dart
 lib/model/field_pks_ezmaxclient_os.dart
 lib/model/font_autocomplete_element_response.dart
@@ -4056,7 +4067,10 @@ lib/model/scim_group_member.dart
 lib/model/scim_service_provider_config.dart
 lib/model/scim_service_provider_config_bulk.dart
 lib/model/scim_service_provider_config_change_password.dart
+lib/model/scim_service_provider_config_etag.dart
 lib/model/scim_service_provider_config_filter.dart
+lib/model/scim_service_provider_config_patch.dart
+lib/model/scim_service_provider_config_sort.dart
 lib/model/scim_user.dart
 lib/model/scim_user_list.dart
 lib/model/secretquestion_autocomplete_element_response.dart
@@ -4340,6 +4354,10 @@ lib/model/webhook_get_list_v1_response_m_payload.dart
 lib/model/webhook_get_object_v2_response.dart
 lib/model/webhook_get_object_v2_response_m_payload.dart
 lib/model/webhook_list_element.dart
+lib/model/webhook_realestate_inscription_created.dart
+lib/model/webhook_realestate_inscription_modified.dart
+lib/model/webhook_realestate_inscriptionnotauthenticated_created.dart
+lib/model/webhook_realestate_inscriptionnotauthenticated_modified.dart
 lib/model/webhook_regenerate_apikey_v1_request.dart
 lib/model/webhook_regenerate_apikey_v1_response.dart
 lib/model/webhook_regenerate_apikey_v1_response_m_payload.dart

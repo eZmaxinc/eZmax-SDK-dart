@@ -11,39 +11,34 @@
 part of openapi.api;
 
 /// The mortgagetype of the Inscriptionnotauthenticated
-class FieldEtInscriptionnotauthenticatedMortgagetype {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEtInscriptionnotauthenticatedMortgagetype._(this.value);
+enum FieldEtInscriptionnotauthenticatedMortgagetype {
+  empty._(r''),
+  cash._(r'Cash'),
+  assumption._(r'Assumption'),
+  withoutAgent._(r'WithoutAgent'),
+  institution._(r'Institution'),
+  agent._(r'Agent'),
+  broker._(r'Broker'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEtInscriptionnotauthenticatedMortgagetype._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const empty = FieldEtInscriptionnotauthenticatedMortgagetype._(r'');
-  static const cash = FieldEtInscriptionnotauthenticatedMortgagetype._(r'Cash');
-  static const assumption = FieldEtInscriptionnotauthenticatedMortgagetype._(r'Assumption');
-  static const withoutAgent = FieldEtInscriptionnotauthenticatedMortgagetype._(r'WithoutAgent');
-  static const institution = FieldEtInscriptionnotauthenticatedMortgagetype._(r'Institution');
-  static const agent = FieldEtInscriptionnotauthenticatedMortgagetype._(r'Agent');
-  static const broker = FieldEtInscriptionnotauthenticatedMortgagetype._(r'Broker');
-
-  /// List of all possible values in this [enum][FieldEtInscriptionnotauthenticatedMortgagetype].
-  static const values = <FieldEtInscriptionnotauthenticatedMortgagetype>[
-    empty,
-    cash,
-    assumption,
-    withoutAgent,
-    institution,
-    agent,
-    broker,
-  ];
-
+  /// Returns the instance of [FieldEtInscriptionnotauthenticatedMortgagetype] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEtInscriptionnotauthenticatedMortgagetype? fromJson(dynamic value) => FieldEtInscriptionnotauthenticatedMortgagetypeTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEtInscriptionnotauthenticatedMortgagetype]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEtInscriptionnotauthenticatedMortgagetype> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEtInscriptionnotauthenticatedMortgagetype>[];
     if (json is List && json.isNotEmpty) {
@@ -65,9 +60,11 @@ class FieldEtInscriptionnotauthenticatedMortgagetypeTypeTransformer {
 
   const FieldEtInscriptionnotauthenticatedMortgagetypeTypeTransformer._();
 
-  String encode(FieldEtInscriptionnotauthenticatedMortgagetype data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEtInscriptionnotauthenticatedMortgagetype data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEtInscriptionnotauthenticatedMortgagetype.
+  /// Returns the instance of [FieldEtInscriptionnotauthenticatedMortgagetype] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -76,6 +73,9 @@ class FieldEtInscriptionnotauthenticatedMortgagetypeTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEtInscriptionnotauthenticatedMortgagetype? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEtInscriptionnotauthenticatedMortgagetype) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'': return FieldEtInscriptionnotauthenticatedMortgagetype.empty;
@@ -94,7 +94,7 @@ class FieldEtInscriptionnotauthenticatedMortgagetypeTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEtInscriptionnotauthenticatedMortgagetypeTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEtInscriptionnotauthenticatedMortgagetypeTypeTransformer? _instance;
 }
 

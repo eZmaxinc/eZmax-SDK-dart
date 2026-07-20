@@ -11,33 +11,31 @@
 part of openapi.api;
 
 /// eZsign subscription level
-class FieldEActivesessionEzsignprepaid {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEActivesessionEzsignprepaid._(this.value);
+enum FieldEActivesessionEzsignprepaid {
+  no._(r'No'),
+  basic._(r'Basic'),
+  standard._(r'Standard'),
+  pro._(r'Pro'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEActivesessionEzsignprepaid._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const no = FieldEActivesessionEzsignprepaid._(r'No');
-  static const basic = FieldEActivesessionEzsignprepaid._(r'Basic');
-  static const standard = FieldEActivesessionEzsignprepaid._(r'Standard');
-  static const pro = FieldEActivesessionEzsignprepaid._(r'Pro');
-
-  /// List of all possible values in this [enum][FieldEActivesessionEzsignprepaid].
-  static const values = <FieldEActivesessionEzsignprepaid>[
-    no,
-    basic,
-    standard,
-    pro,
-  ];
-
+  /// Returns the instance of [FieldEActivesessionEzsignprepaid] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEActivesessionEzsignprepaid? fromJson(dynamic value) => FieldEActivesessionEzsignprepaidTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEActivesessionEzsignprepaid]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEActivesessionEzsignprepaid> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEActivesessionEzsignprepaid>[];
     if (json is List && json.isNotEmpty) {
@@ -59,9 +57,11 @@ class FieldEActivesessionEzsignprepaidTypeTransformer {
 
   const FieldEActivesessionEzsignprepaidTypeTransformer._();
 
-  String encode(FieldEActivesessionEzsignprepaid data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEActivesessionEzsignprepaid data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEActivesessionEzsignprepaid.
+  /// Returns the instance of [FieldEActivesessionEzsignprepaid] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -70,6 +70,9 @@ class FieldEActivesessionEzsignprepaidTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEActivesessionEzsignprepaid? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEActivesessionEzsignprepaid) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'No': return FieldEActivesessionEzsignprepaid.no;
@@ -85,7 +88,7 @@ class FieldEActivesessionEzsignprepaidTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEActivesessionEzsignprepaidTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEActivesessionEzsignprepaidTypeTransformer? _instance;
 }
 

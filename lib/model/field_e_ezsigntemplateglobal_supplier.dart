@@ -11,31 +11,30 @@
 part of openapi.api;
 
 /// The Supplier of the Ezsigntemplateglobal
-class FieldEEzsigntemplateglobalSupplier {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsigntemplateglobalSupplier._(this.value);
+enum FieldEEzsigntemplateglobalSupplier {
+  centris._(r'Centris'),
+  webforms._(r'Webforms'),
+  GHACQ._(r'GHACQ'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsigntemplateglobalSupplier._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const centris = FieldEEzsigntemplateglobalSupplier._(r'Centris');
-  static const webforms = FieldEEzsigntemplateglobalSupplier._(r'Webforms');
-  static const GHACQ = FieldEEzsigntemplateglobalSupplier._(r'GHACQ');
-
-  /// List of all possible values in this [enum][FieldEEzsigntemplateglobalSupplier].
-  static const values = <FieldEEzsigntemplateglobalSupplier>[
-    centris,
-    webforms,
-    GHACQ,
-  ];
-
+  /// Returns the instance of [FieldEEzsigntemplateglobalSupplier] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsigntemplateglobalSupplier? fromJson(dynamic value) => FieldEEzsigntemplateglobalSupplierTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsigntemplateglobalSupplier]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsigntemplateglobalSupplier> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsigntemplateglobalSupplier>[];
     if (json is List && json.isNotEmpty) {
@@ -57,9 +56,11 @@ class FieldEEzsigntemplateglobalSupplierTypeTransformer {
 
   const FieldEEzsigntemplateglobalSupplierTypeTransformer._();
 
-  String encode(FieldEEzsigntemplateglobalSupplier data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsigntemplateglobalSupplier data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsigntemplateglobalSupplier.
+  /// Returns the instance of [FieldEEzsigntemplateglobalSupplier] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -68,6 +69,9 @@ class FieldEEzsigntemplateglobalSupplierTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsigntemplateglobalSupplier? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsigntemplateglobalSupplier) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Centris': return FieldEEzsigntemplateglobalSupplier.centris;
@@ -82,7 +86,7 @@ class FieldEEzsigntemplateglobalSupplierTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsigntemplateglobalSupplierTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsigntemplateglobalSupplierTypeTransformer? _instance;
 }
 

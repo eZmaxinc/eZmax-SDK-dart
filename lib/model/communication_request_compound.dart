@@ -291,29 +291,29 @@ class CommunicationRequestCompound {
 }
 
 /// How the attachment should be included in the email.   Only used if eCommunicationType is **Email**
-class CommunicationRequestCompoundECommunicationAttachmenttypeEnum {
-  /// Instantiate a new enum with the provided [value].
-  const CommunicationRequestCompoundECommunicationAttachmenttypeEnum._(this.value);
+enum CommunicationRequestCompoundECommunicationAttachmenttypeEnum {
+  attachment._(r'Attachment'),
+  url._(r'Url'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const CommunicationRequestCompoundECommunicationAttachmenttypeEnum._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const attachment = CommunicationRequestCompoundECommunicationAttachmenttypeEnum._(r'Attachment');
-  static const url = CommunicationRequestCompoundECommunicationAttachmenttypeEnum._(r'Url');
-
-  /// List of all possible values in this [enum][CommunicationRequestCompoundECommunicationAttachmenttypeEnum].
-  static const values = <CommunicationRequestCompoundECommunicationAttachmenttypeEnum>[
-    attachment,
-    url,
-  ];
-
+  /// Returns the instance of [CommunicationRequestCompoundECommunicationAttachmenttypeEnum] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static CommunicationRequestCompoundECommunicationAttachmenttypeEnum? fromJson(dynamic value) => CommunicationRequestCompoundECommunicationAttachmenttypeEnumTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [CommunicationRequestCompoundECommunicationAttachmenttypeEnum]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<CommunicationRequestCompoundECommunicationAttachmenttypeEnum> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <CommunicationRequestCompoundECommunicationAttachmenttypeEnum>[];
     if (json is List && json.isNotEmpty) {
@@ -335,9 +335,10 @@ class CommunicationRequestCompoundECommunicationAttachmenttypeEnumTypeTransforme
 
   const CommunicationRequestCompoundECommunicationAttachmenttypeEnumTypeTransformer._();
 
-  String encode(CommunicationRequestCompoundECommunicationAttachmenttypeEnum data) => data.value;
+  String encode(CommunicationRequestCompoundECommunicationAttachmenttypeEnum data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a CommunicationRequestCompoundECommunicationAttachmenttypeEnum.
+  /// Returns the instance of [CommunicationRequestCompoundECommunicationAttachmenttypeEnum] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -346,6 +347,9 @@ class CommunicationRequestCompoundECommunicationAttachmenttypeEnumTypeTransforme
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   CommunicationRequestCompoundECommunicationAttachmenttypeEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data is CommunicationRequestCompoundECommunicationAttachmenttypeEnum) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Attachment': return CommunicationRequestCompoundECommunicationAttachmenttypeEnum.attachment;
@@ -359,7 +363,7 @@ class CommunicationRequestCompoundECommunicationAttachmenttypeEnumTypeTransforme
     return null;
   }
 
-  /// Singleton [CommunicationRequestCompoundECommunicationAttachmenttypeEnumTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static CommunicationRequestCompoundECommunicationAttachmenttypeEnumTypeTransformer? _instance;
 }
 

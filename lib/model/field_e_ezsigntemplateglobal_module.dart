@@ -11,29 +11,29 @@
 part of openapi.api;
 
 /// The Module for the Ezsigntemplateglobal
-class FieldEEzsigntemplateglobalModule {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsigntemplateglobalModule._(this.value);
+enum FieldEEzsigntemplateglobalModule {
+  all._(r'All'),
+  inscription._(r'Inscription'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsigntemplateglobalModule._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const all = FieldEEzsigntemplateglobalModule._(r'All');
-  static const inscription = FieldEEzsigntemplateglobalModule._(r'Inscription');
-
-  /// List of all possible values in this [enum][FieldEEzsigntemplateglobalModule].
-  static const values = <FieldEEzsigntemplateglobalModule>[
-    all,
-    inscription,
-  ];
-
+  /// Returns the instance of [FieldEEzsigntemplateglobalModule] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsigntemplateglobalModule? fromJson(dynamic value) => FieldEEzsigntemplateglobalModuleTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsigntemplateglobalModule]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsigntemplateglobalModule> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsigntemplateglobalModule>[];
     if (json is List && json.isNotEmpty) {
@@ -55,9 +55,11 @@ class FieldEEzsigntemplateglobalModuleTypeTransformer {
 
   const FieldEEzsigntemplateglobalModuleTypeTransformer._();
 
-  String encode(FieldEEzsigntemplateglobalModule data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsigntemplateglobalModule data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsigntemplateglobalModule.
+  /// Returns the instance of [FieldEEzsigntemplateglobalModule] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -66,6 +68,9 @@ class FieldEEzsigntemplateglobalModuleTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsigntemplateglobalModule? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsigntemplateglobalModule) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'All': return FieldEEzsigntemplateglobalModule.all;
@@ -79,7 +84,7 @@ class FieldEEzsigntemplateglobalModuleTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsigntemplateglobalModuleTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsigntemplateglobalModuleTypeTransformer? _instance;
 }
 

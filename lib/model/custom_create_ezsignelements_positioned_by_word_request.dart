@@ -140,31 +140,30 @@ class CustomCreateEzsignelementsPositionedByWordRequest {
 }
 
 /// The occurance in the search to add the ezsign element
-class CustomCreateEzsignelementsPositionedByWordRequestECreateezsignelementspositionedbywordOccuranceEnum {
-  /// Instantiate a new enum with the provided [value].
-  const CustomCreateEzsignelementsPositionedByWordRequestECreateezsignelementspositionedbywordOccuranceEnum._(this.value);
+enum CustomCreateEzsignelementsPositionedByWordRequestECreateezsignelementspositionedbywordOccuranceEnum {
+  all._(r'All'),
+  first._(r'First'),
+  last._(r'Last'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const CustomCreateEzsignelementsPositionedByWordRequestECreateezsignelementspositionedbywordOccuranceEnum._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const all = CustomCreateEzsignelementsPositionedByWordRequestECreateezsignelementspositionedbywordOccuranceEnum._(r'All');
-  static const first = CustomCreateEzsignelementsPositionedByWordRequestECreateezsignelementspositionedbywordOccuranceEnum._(r'First');
-  static const last = CustomCreateEzsignelementsPositionedByWordRequestECreateezsignelementspositionedbywordOccuranceEnum._(r'Last');
-
-  /// List of all possible values in this [enum][CustomCreateEzsignelementsPositionedByWordRequestECreateezsignelementspositionedbywordOccuranceEnum].
-  static const values = <CustomCreateEzsignelementsPositionedByWordRequestECreateezsignelementspositionedbywordOccuranceEnum>[
-    all,
-    first,
-    last,
-  ];
-
+  /// Returns the instance of [CustomCreateEzsignelementsPositionedByWordRequestECreateezsignelementspositionedbywordOccuranceEnum] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static CustomCreateEzsignelementsPositionedByWordRequestECreateezsignelementspositionedbywordOccuranceEnum? fromJson(dynamic value) => CustomCreateEzsignelementsPositionedByWordRequestECreateezsignelementspositionedbywordOccuranceEnumTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [CustomCreateEzsignelementsPositionedByWordRequestECreateezsignelementspositionedbywordOccuranceEnum]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<CustomCreateEzsignelementsPositionedByWordRequestECreateezsignelementspositionedbywordOccuranceEnum> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <CustomCreateEzsignelementsPositionedByWordRequestECreateezsignelementspositionedbywordOccuranceEnum>[];
     if (json is List && json.isNotEmpty) {
@@ -186,9 +185,10 @@ class CustomCreateEzsignelementsPositionedByWordRequestECreateezsignelementsposi
 
   const CustomCreateEzsignelementsPositionedByWordRequestECreateezsignelementspositionedbywordOccuranceEnumTypeTransformer._();
 
-  String encode(CustomCreateEzsignelementsPositionedByWordRequestECreateezsignelementspositionedbywordOccuranceEnum data) => data.value;
+  String encode(CustomCreateEzsignelementsPositionedByWordRequestECreateezsignelementspositionedbywordOccuranceEnum data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a CustomCreateEzsignelementsPositionedByWordRequestECreateezsignelementspositionedbywordOccuranceEnum.
+  /// Returns the instance of [CustomCreateEzsignelementsPositionedByWordRequestECreateezsignelementspositionedbywordOccuranceEnum] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -197,6 +197,9 @@ class CustomCreateEzsignelementsPositionedByWordRequestECreateezsignelementsposi
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   CustomCreateEzsignelementsPositionedByWordRequestECreateezsignelementspositionedbywordOccuranceEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data is CustomCreateEzsignelementsPositionedByWordRequestECreateezsignelementspositionedbywordOccuranceEnum) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'All': return CustomCreateEzsignelementsPositionedByWordRequestECreateezsignelementspositionedbywordOccuranceEnum.all;
@@ -211,7 +214,7 @@ class CustomCreateEzsignelementsPositionedByWordRequestECreateezsignelementsposi
     return null;
   }
 
-  /// Singleton [CustomCreateEzsignelementsPositionedByWordRequestECreateezsignelementspositionedbywordOccuranceEnumTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static CustomCreateEzsignelementsPositionedByWordRequestECreateezsignelementspositionedbywordOccuranceEnumTypeTransformer? _instance;
 }
 

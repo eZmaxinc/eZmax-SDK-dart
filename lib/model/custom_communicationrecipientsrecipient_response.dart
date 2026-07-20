@@ -467,57 +467,43 @@ class CustomCommunicationrecipientsrecipientResponse {
 }
 
 
-class CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsrecipientObjecttypeEnum {
-  /// Instantiate a new enum with the provided [value].
-  const CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsrecipientObjecttypeEnum._(this.value);
+enum CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsrecipientObjecttypeEnum {
+  agent._(r'Agent'),
+  agentincorporation._(r'Agentincorporation'),
+  assistant._(r'Assistant'),
+  broker._(r'Broker'),
+  contact._(r'Contact'),
+  customer._(r'Customer'),
+  employee._(r'Employee'),
+  externalbroker._(r'Externalbroker'),
+  ezcomagent._(r'Ezcomagent'),
+  ezcomcompany._(r'Ezcomcompany'),
+  ezsignsigner._(r'Ezsignsigner'),
+  franchiseoffice._(r'Franchiseoffice'),
+  notary._(r'Notary'),
+  rewardmember._(r'Rewardmember'),
+  supplier._(r'Supplier'),
+  user._(r'User'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsrecipientObjecttypeEnum._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const agent = CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsrecipientObjecttypeEnum._(r'Agent');
-  static const agentincorporation = CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsrecipientObjecttypeEnum._(r'Agentincorporation');
-  static const assistant = CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsrecipientObjecttypeEnum._(r'Assistant');
-  static const broker = CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsrecipientObjecttypeEnum._(r'Broker');
-  static const contact = CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsrecipientObjecttypeEnum._(r'Contact');
-  static const customer = CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsrecipientObjecttypeEnum._(r'Customer');
-  static const employee = CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsrecipientObjecttypeEnum._(r'Employee');
-  static const externalbroker = CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsrecipientObjecttypeEnum._(r'Externalbroker');
-  static const ezcomagent = CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsrecipientObjecttypeEnum._(r'Ezcomagent');
-  static const ezcomcompany = CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsrecipientObjecttypeEnum._(r'Ezcomcompany');
-  static const ezsignsigner = CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsrecipientObjecttypeEnum._(r'Ezsignsigner');
-  static const franchiseoffice = CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsrecipientObjecttypeEnum._(r'Franchiseoffice');
-  static const notary = CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsrecipientObjecttypeEnum._(r'Notary');
-  static const rewardmember = CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsrecipientObjecttypeEnum._(r'Rewardmember');
-  static const supplier = CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsrecipientObjecttypeEnum._(r'Supplier');
-  static const user = CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsrecipientObjecttypeEnum._(r'User');
-
-  /// List of all possible values in this [enum][CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsrecipientObjecttypeEnum].
-  static const values = <CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsrecipientObjecttypeEnum>[
-    agent,
-    agentincorporation,
-    assistant,
-    broker,
-    contact,
-    customer,
-    employee,
-    externalbroker,
-    ezcomagent,
-    ezcomcompany,
-    ezsignsigner,
-    franchiseoffice,
-    notary,
-    rewardmember,
-    supplier,
-    user,
-  ];
-
+  /// Returns the instance of [CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsrecipientObjecttypeEnum] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsrecipientObjecttypeEnum? fromJson(dynamic value) => CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsrecipientObjecttypeEnumTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsrecipientObjecttypeEnum]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsrecipientObjecttypeEnum> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsrecipientObjecttypeEnum>[];
     if (json is List && json.isNotEmpty) {
@@ -539,9 +525,10 @@ class CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsreci
 
   const CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsrecipientObjecttypeEnumTypeTransformer._();
 
-  String encode(CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsrecipientObjecttypeEnum data) => data.value;
+  String encode(CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsrecipientObjecttypeEnum data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsrecipientObjecttypeEnum.
+  /// Returns the instance of [CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsrecipientObjecttypeEnum] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -550,6 +537,9 @@ class CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsreci
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsrecipientObjecttypeEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data is CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsrecipientObjecttypeEnum) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Agent': return CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsrecipientObjecttypeEnum.agent;
@@ -577,7 +567,7 @@ class CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsreci
     return null;
   }
 
-  /// Singleton [CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsrecipientObjecttypeEnumTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static CustomCommunicationrecipientsrecipientResponseECommunicationrecipientsrecipientObjecttypeEnumTypeTransformer? _instance;
 }
 

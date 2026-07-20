@@ -165,33 +165,31 @@ class CustomAttachmentImportIntoEDMResponse {
 }
 
 
-class CustomAttachmentImportIntoEDMResponseEAttachmentStatusEnum {
-  /// Instantiate a new enum with the provided [value].
-  const CustomAttachmentImportIntoEDMResponseEAttachmentStatusEnum._(this.value);
+enum CustomAttachmentImportIntoEDMResponseEAttachmentStatusEnum {
+  accepted._(r'Accepted'),
+  fileExists._(r'FileExists'),
+  forbidden._(r'Forbidden'),
+  overwrite._(r'Overwrite'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const CustomAttachmentImportIntoEDMResponseEAttachmentStatusEnum._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const accepted = CustomAttachmentImportIntoEDMResponseEAttachmentStatusEnum._(r'Accepted');
-  static const fileExists = CustomAttachmentImportIntoEDMResponseEAttachmentStatusEnum._(r'FileExists');
-  static const forbidden = CustomAttachmentImportIntoEDMResponseEAttachmentStatusEnum._(r'Forbidden');
-  static const overwrite = CustomAttachmentImportIntoEDMResponseEAttachmentStatusEnum._(r'Overwrite');
-
-  /// List of all possible values in this [enum][CustomAttachmentImportIntoEDMResponseEAttachmentStatusEnum].
-  static const values = <CustomAttachmentImportIntoEDMResponseEAttachmentStatusEnum>[
-    accepted,
-    fileExists,
-    forbidden,
-    overwrite,
-  ];
-
+  /// Returns the instance of [CustomAttachmentImportIntoEDMResponseEAttachmentStatusEnum] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static CustomAttachmentImportIntoEDMResponseEAttachmentStatusEnum? fromJson(dynamic value) => CustomAttachmentImportIntoEDMResponseEAttachmentStatusEnumTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [CustomAttachmentImportIntoEDMResponseEAttachmentStatusEnum]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<CustomAttachmentImportIntoEDMResponseEAttachmentStatusEnum> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <CustomAttachmentImportIntoEDMResponseEAttachmentStatusEnum>[];
     if (json is List && json.isNotEmpty) {
@@ -213,9 +211,10 @@ class CustomAttachmentImportIntoEDMResponseEAttachmentStatusEnumTypeTransformer 
 
   const CustomAttachmentImportIntoEDMResponseEAttachmentStatusEnumTypeTransformer._();
 
-  String encode(CustomAttachmentImportIntoEDMResponseEAttachmentStatusEnum data) => data.value;
+  String encode(CustomAttachmentImportIntoEDMResponseEAttachmentStatusEnum data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a CustomAttachmentImportIntoEDMResponseEAttachmentStatusEnum.
+  /// Returns the instance of [CustomAttachmentImportIntoEDMResponseEAttachmentStatusEnum] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -224,6 +223,9 @@ class CustomAttachmentImportIntoEDMResponseEAttachmentStatusEnumTypeTransformer 
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   CustomAttachmentImportIntoEDMResponseEAttachmentStatusEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data is CustomAttachmentImportIntoEDMResponseEAttachmentStatusEnum) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Accepted': return CustomAttachmentImportIntoEDMResponseEAttachmentStatusEnum.accepted;
@@ -239,7 +241,7 @@ class CustomAttachmentImportIntoEDMResponseEAttachmentStatusEnumTypeTransformer 
     return null;
   }
 
-  /// Singleton [CustomAttachmentImportIntoEDMResponseEAttachmentStatusEnumTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static CustomAttachmentImportIntoEDMResponseEAttachmentStatusEnumTypeTransformer? _instance;
 }
 

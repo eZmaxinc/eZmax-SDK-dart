@@ -11,31 +11,31 @@
 part of openapi.api;
 
 /// The module for the Webhook
-class FieldEWebhookModule {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEWebhookModule._(this.value);
+enum FieldEWebhookModule {
+  ezmaxpartner._(r'Ezmaxpartner'),
+  ezsign._(r'Ezsign'),
+  management._(r'Management'),
+  realestate._(r'Realestate'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEWebhookModule._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const ezmaxpartner = FieldEWebhookModule._(r'Ezmaxpartner');
-  static const ezsign = FieldEWebhookModule._(r'Ezsign');
-  static const management = FieldEWebhookModule._(r'Management');
-
-  /// List of all possible values in this [enum][FieldEWebhookModule].
-  static const values = <FieldEWebhookModule>[
-    ezmaxpartner,
-    ezsign,
-    management,
-  ];
-
+  /// Returns the instance of [FieldEWebhookModule] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEWebhookModule? fromJson(dynamic value) => FieldEWebhookModuleTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEWebhookModule]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEWebhookModule> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEWebhookModule>[];
     if (json is List && json.isNotEmpty) {
@@ -57,9 +57,11 @@ class FieldEWebhookModuleTypeTransformer {
 
   const FieldEWebhookModuleTypeTransformer._();
 
-  String encode(FieldEWebhookModule data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEWebhookModule data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEWebhookModule.
+  /// Returns the instance of [FieldEWebhookModule] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -68,11 +70,15 @@ class FieldEWebhookModuleTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEWebhookModule? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEWebhookModule) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Ezmaxpartner': return FieldEWebhookModule.ezmaxpartner;
         case r'Ezsign': return FieldEWebhookModule.ezsign;
         case r'Management': return FieldEWebhookModule.management;
+        case r'Realestate': return FieldEWebhookModule.realestate;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
@@ -82,7 +88,7 @@ class FieldEWebhookModuleTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEWebhookModuleTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEWebhookModuleTypeTransformer? _instance;
 }
 

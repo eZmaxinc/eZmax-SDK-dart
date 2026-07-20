@@ -11,29 +11,29 @@
 part of openapi.api;
 
 /// The type of the Authenticationexternal
-class FieldEAuthenticationexternalType {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEAuthenticationexternalType._(this.value);
+enum FieldEAuthenticationexternalType {
+  salesforce._(r'Salesforce'),
+  salesforceSandbox._(r'SalesforceSandbox'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEAuthenticationexternalType._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const salesforce = FieldEAuthenticationexternalType._(r'Salesforce');
-  static const salesforceSandbox = FieldEAuthenticationexternalType._(r'SalesforceSandbox');
-
-  /// List of all possible values in this [enum][FieldEAuthenticationexternalType].
-  static const values = <FieldEAuthenticationexternalType>[
-    salesforce,
-    salesforceSandbox,
-  ];
-
+  /// Returns the instance of [FieldEAuthenticationexternalType] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEAuthenticationexternalType? fromJson(dynamic value) => FieldEAuthenticationexternalTypeTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEAuthenticationexternalType]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEAuthenticationexternalType> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEAuthenticationexternalType>[];
     if (json is List && json.isNotEmpty) {
@@ -55,9 +55,11 @@ class FieldEAuthenticationexternalTypeTypeTransformer {
 
   const FieldEAuthenticationexternalTypeTypeTransformer._();
 
-  String encode(FieldEAuthenticationexternalType data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEAuthenticationexternalType data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEAuthenticationexternalType.
+  /// Returns the instance of [FieldEAuthenticationexternalType] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -66,6 +68,9 @@ class FieldEAuthenticationexternalTypeTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEAuthenticationexternalType? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEAuthenticationexternalType) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Salesforce': return FieldEAuthenticationexternalType.salesforce;
@@ -79,7 +84,7 @@ class FieldEAuthenticationexternalTypeTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEAuthenticationexternalTypeTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEAuthenticationexternalTypeTypeTransformer? _instance;
 }
 

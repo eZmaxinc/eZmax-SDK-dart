@@ -11,29 +11,29 @@
 part of openapi.api;
 
 /// The Ezmaxpartnerevent of the Ezmaxpartnerproductstagewebhook
-class FieldEWebhookEzmaxpartnerevent {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEWebhookEzmaxpartnerevent._(this.value);
+enum FieldEWebhookEzmaxpartnerevent {
+  productstageSubscribe._(r'ProductstageSubscribe'),
+  productstageUnsubscribe._(r'ProductstageUnsubscribe'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEWebhookEzmaxpartnerevent._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const productstageSubscribe = FieldEWebhookEzmaxpartnerevent._(r'ProductstageSubscribe');
-  static const productstageUnsubscribe = FieldEWebhookEzmaxpartnerevent._(r'ProductstageUnsubscribe');
-
-  /// List of all possible values in this [enum][FieldEWebhookEzmaxpartnerevent].
-  static const values = <FieldEWebhookEzmaxpartnerevent>[
-    productstageSubscribe,
-    productstageUnsubscribe,
-  ];
-
+  /// Returns the instance of [FieldEWebhookEzmaxpartnerevent] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEWebhookEzmaxpartnerevent? fromJson(dynamic value) => FieldEWebhookEzmaxpartnereventTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEWebhookEzmaxpartnerevent]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEWebhookEzmaxpartnerevent> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEWebhookEzmaxpartnerevent>[];
     if (json is List && json.isNotEmpty) {
@@ -55,9 +55,11 @@ class FieldEWebhookEzmaxpartnereventTypeTransformer {
 
   const FieldEWebhookEzmaxpartnereventTypeTransformer._();
 
-  String encode(FieldEWebhookEzmaxpartnerevent data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEWebhookEzmaxpartnerevent data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEWebhookEzmaxpartnerevent.
+  /// Returns the instance of [FieldEWebhookEzmaxpartnerevent] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -66,6 +68,9 @@ class FieldEWebhookEzmaxpartnereventTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEWebhookEzmaxpartnerevent? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEWebhookEzmaxpartnerevent) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'ProductstageSubscribe': return FieldEWebhookEzmaxpartnerevent.productstageSubscribe;
@@ -79,7 +84,7 @@ class FieldEWebhookEzmaxpartnereventTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEWebhookEzmaxpartnereventTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEWebhookEzmaxpartnereventTypeTransformer? _instance;
 }
 

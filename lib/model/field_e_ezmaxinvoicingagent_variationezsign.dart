@@ -11,31 +11,30 @@
 part of openapi.api;
 
 /// Variation type for eZsign
-class FieldEEzmaxinvoicingagentVariationezsign {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzmaxinvoicingagentVariationezsign._(this.value);
+enum FieldEEzmaxinvoicingagentVariationezsign {
+  charge._(r'Charge'),
+  refund._(r'Refund'),
+  same._(r'Same'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzmaxinvoicingagentVariationezsign._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const charge = FieldEEzmaxinvoicingagentVariationezsign._(r'Charge');
-  static const refund = FieldEEzmaxinvoicingagentVariationezsign._(r'Refund');
-  static const same = FieldEEzmaxinvoicingagentVariationezsign._(r'Same');
-
-  /// List of all possible values in this [enum][FieldEEzmaxinvoicingagentVariationezsign].
-  static const values = <FieldEEzmaxinvoicingagentVariationezsign>[
-    charge,
-    refund,
-    same,
-  ];
-
+  /// Returns the instance of [FieldEEzmaxinvoicingagentVariationezsign] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzmaxinvoicingagentVariationezsign? fromJson(dynamic value) => FieldEEzmaxinvoicingagentVariationezsignTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzmaxinvoicingagentVariationezsign]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzmaxinvoicingagentVariationezsign> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzmaxinvoicingagentVariationezsign>[];
     if (json is List && json.isNotEmpty) {
@@ -57,9 +56,11 @@ class FieldEEzmaxinvoicingagentVariationezsignTypeTransformer {
 
   const FieldEEzmaxinvoicingagentVariationezsignTypeTransformer._();
 
-  String encode(FieldEEzmaxinvoicingagentVariationezsign data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzmaxinvoicingagentVariationezsign data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzmaxinvoicingagentVariationezsign.
+  /// Returns the instance of [FieldEEzmaxinvoicingagentVariationezsign] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -68,6 +69,9 @@ class FieldEEzmaxinvoicingagentVariationezsignTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzmaxinvoicingagentVariationezsign? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzmaxinvoicingagentVariationezsign) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Charge': return FieldEEzmaxinvoicingagentVariationezsign.charge;
@@ -82,7 +86,7 @@ class FieldEEzmaxinvoicingagentVariationezsignTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzmaxinvoicingagentVariationezsignTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzmaxinvoicingagentVariationezsignTypeTransformer? _instance;
 }
 

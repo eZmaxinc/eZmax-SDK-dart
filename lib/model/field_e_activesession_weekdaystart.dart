@@ -11,39 +11,34 @@
 part of openapi.api;
 
 /// The weekday start of the User.
-class FieldEActivesessionWeekdaystart {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEActivesessionWeekdaystart._(this.value);
+enum FieldEActivesessionWeekdaystart {
+  sunday._(r'Sunday'),
+  monday._(r'Monday'),
+  tuesday._(r'Tuesday'),
+  wednesday._(r'Wednesday'),
+  thursday._(r'Thursday'),
+  friday._(r'Friday'),
+  saturday._(r'Saturday'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEActivesessionWeekdaystart._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const sunday = FieldEActivesessionWeekdaystart._(r'Sunday');
-  static const monday = FieldEActivesessionWeekdaystart._(r'Monday');
-  static const tuesday = FieldEActivesessionWeekdaystart._(r'Tuesday');
-  static const wednesday = FieldEActivesessionWeekdaystart._(r'Wednesday');
-  static const thursday = FieldEActivesessionWeekdaystart._(r'Thursday');
-  static const friday = FieldEActivesessionWeekdaystart._(r'Friday');
-  static const saturday = FieldEActivesessionWeekdaystart._(r'Saturday');
-
-  /// List of all possible values in this [enum][FieldEActivesessionWeekdaystart].
-  static const values = <FieldEActivesessionWeekdaystart>[
-    sunday,
-    monday,
-    tuesday,
-    wednesday,
-    thursday,
-    friday,
-    saturday,
-  ];
-
+  /// Returns the instance of [FieldEActivesessionWeekdaystart] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEActivesessionWeekdaystart? fromJson(dynamic value) => FieldEActivesessionWeekdaystartTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEActivesessionWeekdaystart]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEActivesessionWeekdaystart> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEActivesessionWeekdaystart>[];
     if (json is List && json.isNotEmpty) {
@@ -65,9 +60,11 @@ class FieldEActivesessionWeekdaystartTypeTransformer {
 
   const FieldEActivesessionWeekdaystartTypeTransformer._();
 
-  String encode(FieldEActivesessionWeekdaystart data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEActivesessionWeekdaystart data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEActivesessionWeekdaystart.
+  /// Returns the instance of [FieldEActivesessionWeekdaystart] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -76,6 +73,9 @@ class FieldEActivesessionWeekdaystartTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEActivesessionWeekdaystart? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEActivesessionWeekdaystart) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Sunday': return FieldEActivesessionWeekdaystart.sunday;
@@ -94,7 +94,7 @@ class FieldEActivesessionWeekdaystartTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEActivesessionWeekdaystartTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEActivesessionWeekdaystartTypeTransformer? _instance;
 }
 

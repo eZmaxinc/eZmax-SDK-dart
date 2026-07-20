@@ -277,31 +277,30 @@ class EzsigntemplatedocumentRequestCompound {
 }
 
 /// Indicates where to look for the document binary content.
-class EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentSourceEnum {
-  /// Instantiate a new enum with the provided [value].
-  const EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentSourceEnum._(this.value);
+enum EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentSourceEnum {
+  base64._(r'Base64'),
+  url._(r'Url'),
+  ezsigndocument._(r'Ezsigndocument'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentSourceEnum._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const base64 = EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentSourceEnum._(r'Base64');
-  static const url = EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentSourceEnum._(r'Url');
-  static const ezsigndocument = EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentSourceEnum._(r'Ezsigndocument');
-
-  /// List of all possible values in this [enum][EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentSourceEnum].
-  static const values = <EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentSourceEnum>[
-    base64,
-    url,
-    ezsigndocument,
-  ];
-
+  /// Returns the instance of [EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentSourceEnum] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentSourceEnum? fromJson(dynamic value) => EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentSourceEnumTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentSourceEnum]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentSourceEnum> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentSourceEnum>[];
     if (json is List && json.isNotEmpty) {
@@ -323,9 +322,10 @@ class EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentSourceEnumType
 
   const EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentSourceEnumTypeTransformer._();
 
-  String encode(EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentSourceEnum data) => data.value;
+  String encode(EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentSourceEnum data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentSourceEnum.
+  /// Returns the instance of [EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentSourceEnum] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -334,6 +334,9 @@ class EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentSourceEnumType
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentSourceEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data is EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentSourceEnum) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Base64': return EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentSourceEnum.base64;
@@ -348,45 +351,40 @@ class EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentSourceEnumType
     return null;
   }
 
-  /// Singleton [EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentSourceEnumTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentSourceEnumTypeTransformer? _instance;
 }
 
 
 /// Indicates the format of the template.
-class EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum {
-  /// Instantiate a new enum with the provided [value].
-  const EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum._(this.value);
+enum EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum {
+  pdf._(r'Pdf'),
+  doc._(r'Doc'),
+  docx._(r'Docx'),
+  xls._(r'Xls'),
+  xlsx._(r'Xlsx'),
+  ppt._(r'Ppt'),
+  pptx._(r'Pptx'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const pdf = EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum._(r'Pdf');
-  static const doc = EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum._(r'Doc');
-  static const docx = EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum._(r'Docx');
-  static const xls = EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum._(r'Xls');
-  static const xlsx = EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum._(r'Xlsx');
-  static const ppt = EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum._(r'Ppt');
-  static const pptx = EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum._(r'Pptx');
-
-  /// List of all possible values in this [enum][EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum].
-  static const values = <EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum>[
-    pdf,
-    doc,
-    docx,
-    xls,
-    xlsx,
-    ppt,
-    pptx,
-  ];
-
+  /// Returns the instance of [EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum? fromJson(dynamic value) => EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnumTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum>[];
     if (json is List && json.isNotEmpty) {
@@ -408,9 +406,10 @@ class EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnumType
 
   const EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnumTypeTransformer._();
 
-  String encode(EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum data) => data.value;
+  String encode(EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum.
+  /// Returns the instance of [EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -419,6 +418,9 @@ class EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnumType
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data is EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Pdf': return EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnum.pdf;
@@ -437,39 +439,37 @@ class EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnumType
     return null;
   }
 
-  /// Singleton [EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnumTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormatEnumTypeTransformer? _instance;
 }
 
 
 /// If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsigntemplateformfieldgroups and assign them to the specified **fkiEzsigntemplatesignerID**  **Discard** removes the form from the document  **Flatten** prints the form values in the document.
-class EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormEnum {
-  /// Instantiate a new enum with the provided [value].
-  const EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormEnum._(this.value);
+enum EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormEnum {
+  keep._(r'Keep'),
+  convert._(r'Convert'),
+  discard._(r'Discard'),
+  flatten._(r'Flatten'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormEnum._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const keep = EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormEnum._(r'Keep');
-  static const convert = EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormEnum._(r'Convert');
-  static const discard = EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormEnum._(r'Discard');
-  static const flatten = EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormEnum._(r'Flatten');
-
-  /// List of all possible values in this [enum][EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormEnum].
-  static const values = <EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormEnum>[
-    keep,
-    convert,
-    discard,
-    flatten,
-  ];
-
+  /// Returns the instance of [EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormEnum] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormEnum? fromJson(dynamic value) => EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormEnumTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormEnum]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormEnum> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormEnum>[];
     if (json is List && json.isNotEmpty) {
@@ -491,9 +491,10 @@ class EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormEnumTypeTr
 
   const EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormEnumTypeTransformer._();
 
-  String encode(EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormEnum data) => data.value;
+  String encode(EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormEnum data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormEnum.
+  /// Returns the instance of [EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormEnum] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -502,6 +503,9 @@ class EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormEnumTypeTr
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data is EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormEnum) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Keep': return EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormEnum.keep;
@@ -517,7 +521,7 @@ class EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormEnumTypeTr
     return null;
   }
 
-  /// Singleton [EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormEnumTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static EzsigntemplatedocumentRequestCompoundEEzsigntemplatedocumentFormEnumTypeTransformer? _instance;
 }
 

@@ -11,31 +11,30 @@
 part of openapi.api;
 
 /// The display status for the Notificationtest.
-class FieldENotificationpreferenceStatus {
-  /// Instantiate a new enum with the provided [value].
-  const FieldENotificationpreferenceStatus._(this.value);
+enum FieldENotificationpreferenceStatus {
+  show_._(r'Show'),
+  hide_._(r'Hide'),
+  pin._(r'Pin'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldENotificationpreferenceStatus._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const show_ = FieldENotificationpreferenceStatus._(r'Show');
-  static const hide_ = FieldENotificationpreferenceStatus._(r'Hide');
-  static const pin = FieldENotificationpreferenceStatus._(r'Pin');
-
-  /// List of all possible values in this [enum][FieldENotificationpreferenceStatus].
-  static const values = <FieldENotificationpreferenceStatus>[
-    show_,
-    hide_,
-    pin,
-  ];
-
+  /// Returns the instance of [FieldENotificationpreferenceStatus] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldENotificationpreferenceStatus? fromJson(dynamic value) => FieldENotificationpreferenceStatusTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldENotificationpreferenceStatus]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldENotificationpreferenceStatus> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldENotificationpreferenceStatus>[];
     if (json is List && json.isNotEmpty) {
@@ -57,9 +56,11 @@ class FieldENotificationpreferenceStatusTypeTransformer {
 
   const FieldENotificationpreferenceStatusTypeTransformer._();
 
-  String encode(FieldENotificationpreferenceStatus data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldENotificationpreferenceStatus data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldENotificationpreferenceStatus.
+  /// Returns the instance of [FieldENotificationpreferenceStatus] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -68,6 +69,9 @@ class FieldENotificationpreferenceStatusTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldENotificationpreferenceStatus? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldENotificationpreferenceStatus) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Show': return FieldENotificationpreferenceStatus.show_;
@@ -82,7 +86,7 @@ class FieldENotificationpreferenceStatusTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldENotificationpreferenceStatusTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldENotificationpreferenceStatusTypeTransformer? _instance;
 }
 

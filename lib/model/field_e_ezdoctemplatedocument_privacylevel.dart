@@ -11,31 +11,30 @@
 part of openapi.api;
 
 /// The Privacy level of the Ezdoctemplatedocument.  * **User** is for personal templates use and cannot be shared * **Ezsignfoldertype** and **Company** is for shared template
-class FieldEEzdoctemplatedocumentPrivacylevel {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzdoctemplatedocumentPrivacylevel._(this.value);
+enum FieldEEzdoctemplatedocumentPrivacylevel {
+  company._(r'Company'),
+  ezsignfoldertype._(r'Ezsignfoldertype'),
+  user._(r'User'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzdoctemplatedocumentPrivacylevel._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const company = FieldEEzdoctemplatedocumentPrivacylevel._(r'Company');
-  static const ezsignfoldertype = FieldEEzdoctemplatedocumentPrivacylevel._(r'Ezsignfoldertype');
-  static const user = FieldEEzdoctemplatedocumentPrivacylevel._(r'User');
-
-  /// List of all possible values in this [enum][FieldEEzdoctemplatedocumentPrivacylevel].
-  static const values = <FieldEEzdoctemplatedocumentPrivacylevel>[
-    company,
-    ezsignfoldertype,
-    user,
-  ];
-
+  /// Returns the instance of [FieldEEzdoctemplatedocumentPrivacylevel] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzdoctemplatedocumentPrivacylevel? fromJson(dynamic value) => FieldEEzdoctemplatedocumentPrivacylevelTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzdoctemplatedocumentPrivacylevel]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzdoctemplatedocumentPrivacylevel> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzdoctemplatedocumentPrivacylevel>[];
     if (json is List && json.isNotEmpty) {
@@ -57,9 +56,11 @@ class FieldEEzdoctemplatedocumentPrivacylevelTypeTransformer {
 
   const FieldEEzdoctemplatedocumentPrivacylevelTypeTransformer._();
 
-  String encode(FieldEEzdoctemplatedocumentPrivacylevel data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzdoctemplatedocumentPrivacylevel data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzdoctemplatedocumentPrivacylevel.
+  /// Returns the instance of [FieldEEzdoctemplatedocumentPrivacylevel] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -68,6 +69,9 @@ class FieldEEzdoctemplatedocumentPrivacylevelTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzdoctemplatedocumentPrivacylevel? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzdoctemplatedocumentPrivacylevel) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Company': return FieldEEzdoctemplatedocumentPrivacylevel.company;
@@ -82,7 +86,7 @@ class FieldEEzdoctemplatedocumentPrivacylevelTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzdoctemplatedocumentPrivacylevelTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzdoctemplatedocumentPrivacylevelTypeTransformer? _instance;
 }
 

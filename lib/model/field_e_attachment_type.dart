@@ -11,35 +11,32 @@
 part of openapi.api;
 
 /// The type of the Attachment
-class FieldEAttachmentType {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEAttachmentType._(this.value);
+enum FieldEAttachmentType {
+  other._(r'Other'),
+  pdf._(r'Pdf'),
+  pdfGenerated._(r'PdfGenerated'),
+  pdfScanned._(r'PdfScanned'),
+  ezsign._(r'Ezsign'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEAttachmentType._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const other = FieldEAttachmentType._(r'Other');
-  static const pdf = FieldEAttachmentType._(r'Pdf');
-  static const pdfGenerated = FieldEAttachmentType._(r'PdfGenerated');
-  static const pdfScanned = FieldEAttachmentType._(r'PdfScanned');
-  static const ezsign = FieldEAttachmentType._(r'Ezsign');
-
-  /// List of all possible values in this [enum][FieldEAttachmentType].
-  static const values = <FieldEAttachmentType>[
-    other,
-    pdf,
-    pdfGenerated,
-    pdfScanned,
-    ezsign,
-  ];
-
+  /// Returns the instance of [FieldEAttachmentType] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEAttachmentType? fromJson(dynamic value) => FieldEAttachmentTypeTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEAttachmentType]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEAttachmentType> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEAttachmentType>[];
     if (json is List && json.isNotEmpty) {
@@ -61,9 +58,11 @@ class FieldEAttachmentTypeTypeTransformer {
 
   const FieldEAttachmentTypeTypeTransformer._();
 
-  String encode(FieldEAttachmentType data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEAttachmentType data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEAttachmentType.
+  /// Returns the instance of [FieldEAttachmentType] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -72,6 +71,9 @@ class FieldEAttachmentTypeTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEAttachmentType? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEAttachmentType) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Other': return FieldEAttachmentType.other;
@@ -88,7 +90,7 @@ class FieldEAttachmentTypeTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEAttachmentTypeTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEAttachmentTypeTypeTransformer? _instance;
 }
 

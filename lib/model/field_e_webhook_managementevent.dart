@@ -11,29 +11,29 @@
 part of openapi.api;
 
 /// This Management Event. This property will be set only if the Module is \"Management\".
-class FieldEWebhookManagementevent {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEWebhookManagementevent._(this.value);
+enum FieldEWebhookManagementevent {
+  userCreated._(r'UserCreated'),
+  userstagedCreated._(r'UserstagedCreated'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEWebhookManagementevent._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const userCreated = FieldEWebhookManagementevent._(r'UserCreated');
-  static const userstagedCreated = FieldEWebhookManagementevent._(r'UserstagedCreated');
-
-  /// List of all possible values in this [enum][FieldEWebhookManagementevent].
-  static const values = <FieldEWebhookManagementevent>[
-    userCreated,
-    userstagedCreated,
-  ];
-
+  /// Returns the instance of [FieldEWebhookManagementevent] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEWebhookManagementevent? fromJson(dynamic value) => FieldEWebhookManagementeventTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEWebhookManagementevent]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEWebhookManagementevent> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEWebhookManagementevent>[];
     if (json is List && json.isNotEmpty) {
@@ -55,9 +55,11 @@ class FieldEWebhookManagementeventTypeTransformer {
 
   const FieldEWebhookManagementeventTypeTransformer._();
 
-  String encode(FieldEWebhookManagementevent data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEWebhookManagementevent data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEWebhookManagementevent.
+  /// Returns the instance of [FieldEWebhookManagementevent] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -66,6 +68,9 @@ class FieldEWebhookManagementeventTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEWebhookManagementevent? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEWebhookManagementevent) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'UserCreated': return FieldEWebhookManagementevent.userCreated;
@@ -79,7 +84,7 @@ class FieldEWebhookManagementeventTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEWebhookManagementeventTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEWebhookManagementeventTypeTransformer? _instance;
 }
 

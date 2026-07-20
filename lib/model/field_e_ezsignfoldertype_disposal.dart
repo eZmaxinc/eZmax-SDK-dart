@@ -11,31 +11,30 @@
 part of openapi.api;
 
 /// The type of disposal
-class FieldEEzsignfoldertypeDisposal {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsignfoldertypeDisposal._(this.value);
+enum FieldEEzsignfoldertypeDisposal {
+  no._(r'No'),
+  manual._(r'Manual'),
+  automatic._(r'Automatic'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsignfoldertypeDisposal._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const no = FieldEEzsignfoldertypeDisposal._(r'No');
-  static const manual = FieldEEzsignfoldertypeDisposal._(r'Manual');
-  static const automatic = FieldEEzsignfoldertypeDisposal._(r'Automatic');
-
-  /// List of all possible values in this [enum][FieldEEzsignfoldertypeDisposal].
-  static const values = <FieldEEzsignfoldertypeDisposal>[
-    no,
-    manual,
-    automatic,
-  ];
-
+  /// Returns the instance of [FieldEEzsignfoldertypeDisposal] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsignfoldertypeDisposal? fromJson(dynamic value) => FieldEEzsignfoldertypeDisposalTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsignfoldertypeDisposal]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsignfoldertypeDisposal> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsignfoldertypeDisposal>[];
     if (json is List && json.isNotEmpty) {
@@ -57,9 +56,11 @@ class FieldEEzsignfoldertypeDisposalTypeTransformer {
 
   const FieldEEzsignfoldertypeDisposalTypeTransformer._();
 
-  String encode(FieldEEzsignfoldertypeDisposal data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsignfoldertypeDisposal data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsignfoldertypeDisposal.
+  /// Returns the instance of [FieldEEzsignfoldertypeDisposal] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -68,6 +69,9 @@ class FieldEEzsignfoldertypeDisposalTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsignfoldertypeDisposal? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsignfoldertypeDisposal) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'No': return FieldEEzsignfoldertypeDisposal.no;
@@ -82,7 +86,7 @@ class FieldEEzsignfoldertypeDisposalTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsignfoldertypeDisposalTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsignfoldertypeDisposalTypeTransformer? _instance;
 }
 

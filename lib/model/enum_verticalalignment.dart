@@ -11,31 +11,30 @@
 part of openapi.api;
 
 /// The Vertical alignment
-class EnumVerticalalignment {
-  /// Instantiate a new enum with the provided [value].
-  const EnumVerticalalignment._(this.value);
+enum EnumVerticalalignment {
+  bottom._(r'Bottom'),
+  middle._(r'Middle'),
+  top._(r'Top'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const EnumVerticalalignment._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const bottom = EnumVerticalalignment._(r'Bottom');
-  static const middle = EnumVerticalalignment._(r'Middle');
-  static const top = EnumVerticalalignment._(r'Top');
-
-  /// List of all possible values in this [enum][EnumVerticalalignment].
-  static const values = <EnumVerticalalignment>[
-    bottom,
-    middle,
-    top,
-  ];
-
+  /// Returns the instance of [EnumVerticalalignment] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static EnumVerticalalignment? fromJson(dynamic value) => EnumVerticalalignmentTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [EnumVerticalalignment]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<EnumVerticalalignment> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <EnumVerticalalignment>[];
     if (json is List && json.isNotEmpty) {
@@ -57,9 +56,11 @@ class EnumVerticalalignmentTypeTransformer {
 
   const EnumVerticalalignmentTypeTransformer._();
 
-  String encode(EnumVerticalalignment data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(EnumVerticalalignment data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a EnumVerticalalignment.
+  /// Returns the instance of [EnumVerticalalignment] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -68,6 +69,9 @@ class EnumVerticalalignmentTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   EnumVerticalalignment? decode(dynamic data, {bool allowNull = true}) {
+    if (data is EnumVerticalalignment) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Bottom': return EnumVerticalalignment.bottom;
@@ -82,7 +86,7 @@ class EnumVerticalalignmentTypeTransformer {
     return null;
   }
 
-  /// Singleton [EnumVerticalalignmentTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static EnumVerticalalignmentTypeTransformer? _instance;
 }
 

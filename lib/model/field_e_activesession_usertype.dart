@@ -11,37 +11,33 @@
 part of openapi.api;
 
 /// The Type of User for the Activesession
-class FieldEActivesessionUsertype {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEActivesessionUsertype._(this.value);
+enum FieldEActivesessionUsertype {
+  agentBroker._(r'AgentBroker'),
+  assistant._(r'Assistant'),
+  employee._(r'Employee'),
+  ezsignSigner._(r'EzsignSigner'),
+  ezsignUser._(r'EzsignUser'),
+  normal._(r'Normal'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEActivesessionUsertype._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const agentBroker = FieldEActivesessionUsertype._(r'AgentBroker');
-  static const assistant = FieldEActivesessionUsertype._(r'Assistant');
-  static const employee = FieldEActivesessionUsertype._(r'Employee');
-  static const ezsignSigner = FieldEActivesessionUsertype._(r'EzsignSigner');
-  static const ezsignUser = FieldEActivesessionUsertype._(r'EzsignUser');
-  static const normal = FieldEActivesessionUsertype._(r'Normal');
-
-  /// List of all possible values in this [enum][FieldEActivesessionUsertype].
-  static const values = <FieldEActivesessionUsertype>[
-    agentBroker,
-    assistant,
-    employee,
-    ezsignSigner,
-    ezsignUser,
-    normal,
-  ];
-
+  /// Returns the instance of [FieldEActivesessionUsertype] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEActivesessionUsertype? fromJson(dynamic value) => FieldEActivesessionUsertypeTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEActivesessionUsertype]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEActivesessionUsertype> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEActivesessionUsertype>[];
     if (json is List && json.isNotEmpty) {
@@ -63,9 +59,11 @@ class FieldEActivesessionUsertypeTypeTransformer {
 
   const FieldEActivesessionUsertypeTypeTransformer._();
 
-  String encode(FieldEActivesessionUsertype data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEActivesessionUsertype data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEActivesessionUsertype.
+  /// Returns the instance of [FieldEActivesessionUsertype] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -74,6 +72,9 @@ class FieldEActivesessionUsertypeTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEActivesessionUsertype? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEActivesessionUsertype) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'AgentBroker': return FieldEActivesessionUsertype.agentBroker;
@@ -91,7 +92,7 @@ class FieldEActivesessionUsertypeTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEActivesessionUsertypeTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEActivesessionUsertypeTypeTransformer? _instance;
 }
 

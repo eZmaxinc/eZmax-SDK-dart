@@ -11,35 +11,32 @@
 part of openapi.api;
 
 /// The user type of the User.
-class FieldEUserType {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEUserType._(this.value);
+enum FieldEUserType {
+  agentBroker._(r'AgentBroker'),
+  assistant._(r'Assistant'),
+  employee._(r'Employee'),
+  ezsignUser._(r'EzsignUser'),
+  normal._(r'Normal'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEUserType._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const agentBroker = FieldEUserType._(r'AgentBroker');
-  static const assistant = FieldEUserType._(r'Assistant');
-  static const employee = FieldEUserType._(r'Employee');
-  static const ezsignUser = FieldEUserType._(r'EzsignUser');
-  static const normal = FieldEUserType._(r'Normal');
-
-  /// List of all possible values in this [enum][FieldEUserType].
-  static const values = <FieldEUserType>[
-    agentBroker,
-    assistant,
-    employee,
-    ezsignUser,
-    normal,
-  ];
-
+  /// Returns the instance of [FieldEUserType] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEUserType? fromJson(dynamic value) => FieldEUserTypeTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEUserType]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEUserType> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEUserType>[];
     if (json is List && json.isNotEmpty) {
@@ -61,9 +58,11 @@ class FieldEUserTypeTypeTransformer {
 
   const FieldEUserTypeTypeTransformer._();
 
-  String encode(FieldEUserType data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEUserType data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEUserType.
+  /// Returns the instance of [FieldEUserType] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -72,6 +71,9 @@ class FieldEUserTypeTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEUserType? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEUserType) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'AgentBroker': return FieldEUserType.agentBroker;
@@ -88,7 +90,7 @@ class FieldEUserTypeTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEUserTypeTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEUserTypeTypeTransformer? _instance;
 }
 

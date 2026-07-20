@@ -11,31 +11,30 @@
 part of openapi.api;
 
 /// The codename of the Creditcardtype
-class FieldECreditcardtypeCodename {
-  /// Instantiate a new enum with the provided [value].
-  const FieldECreditcardtypeCodename._(this.value);
+enum FieldECreditcardtypeCodename {
+  amex._(r'Amex'),
+  mastercard._(r'Mastercard'),
+  visa._(r'Visa'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldECreditcardtypeCodename._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const amex = FieldECreditcardtypeCodename._(r'Amex');
-  static const mastercard = FieldECreditcardtypeCodename._(r'Mastercard');
-  static const visa = FieldECreditcardtypeCodename._(r'Visa');
-
-  /// List of all possible values in this [enum][FieldECreditcardtypeCodename].
-  static const values = <FieldECreditcardtypeCodename>[
-    amex,
-    mastercard,
-    visa,
-  ];
-
+  /// Returns the instance of [FieldECreditcardtypeCodename] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldECreditcardtypeCodename? fromJson(dynamic value) => FieldECreditcardtypeCodenameTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldECreditcardtypeCodename]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldECreditcardtypeCodename> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldECreditcardtypeCodename>[];
     if (json is List && json.isNotEmpty) {
@@ -57,9 +56,11 @@ class FieldECreditcardtypeCodenameTypeTransformer {
 
   const FieldECreditcardtypeCodenameTypeTransformer._();
 
-  String encode(FieldECreditcardtypeCodename data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldECreditcardtypeCodename data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldECreditcardtypeCodename.
+  /// Returns the instance of [FieldECreditcardtypeCodename] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -68,6 +69,9 @@ class FieldECreditcardtypeCodenameTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldECreditcardtypeCodename? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldECreditcardtypeCodename) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Amex': return FieldECreditcardtypeCodename.amex;
@@ -82,7 +86,7 @@ class FieldECreditcardtypeCodenameTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldECreditcardtypeCodenameTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldECreditcardtypeCodenameTypeTransformer? _instance;
 }
 

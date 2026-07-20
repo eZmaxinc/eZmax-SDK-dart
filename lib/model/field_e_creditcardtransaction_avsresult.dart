@@ -11,35 +11,32 @@
 part of openapi.api;
 
 /// The result for the address validation
-class FieldECreditcardtransactionAvsresult {
-  /// Instantiate a new enum with the provided [value].
-  const FieldECreditcardtransactionAvsresult._(this.value);
+enum FieldECreditcardtransactionAvsresult {
+  match._(r'Match'),
+  noMatch._(r'NoMatch'),
+  partialMatch._(r'PartialMatch'),
+  notImplemented._(r'NotImplemented'),
+  notVerified._(r'NotVerified'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldECreditcardtransactionAvsresult._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const match = FieldECreditcardtransactionAvsresult._(r'Match');
-  static const noMatch = FieldECreditcardtransactionAvsresult._(r'NoMatch');
-  static const partialMatch = FieldECreditcardtransactionAvsresult._(r'PartialMatch');
-  static const notImplemented = FieldECreditcardtransactionAvsresult._(r'NotImplemented');
-  static const notVerified = FieldECreditcardtransactionAvsresult._(r'NotVerified');
-
-  /// List of all possible values in this [enum][FieldECreditcardtransactionAvsresult].
-  static const values = <FieldECreditcardtransactionAvsresult>[
-    match,
-    noMatch,
-    partialMatch,
-    notImplemented,
-    notVerified,
-  ];
-
+  /// Returns the instance of [FieldECreditcardtransactionAvsresult] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldECreditcardtransactionAvsresult? fromJson(dynamic value) => FieldECreditcardtransactionAvsresultTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldECreditcardtransactionAvsresult]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldECreditcardtransactionAvsresult> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldECreditcardtransactionAvsresult>[];
     if (json is List && json.isNotEmpty) {
@@ -61,9 +58,11 @@ class FieldECreditcardtransactionAvsresultTypeTransformer {
 
   const FieldECreditcardtransactionAvsresultTypeTransformer._();
 
-  String encode(FieldECreditcardtransactionAvsresult data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldECreditcardtransactionAvsresult data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldECreditcardtransactionAvsresult.
+  /// Returns the instance of [FieldECreditcardtransactionAvsresult] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -72,6 +71,9 @@ class FieldECreditcardtransactionAvsresultTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldECreditcardtransactionAvsresult? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldECreditcardtransactionAvsresult) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Match': return FieldECreditcardtransactionAvsresult.match;
@@ -88,7 +90,7 @@ class FieldECreditcardtransactionAvsresultTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldECreditcardtransactionAvsresultTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldECreditcardtransactionAvsresultTypeTransformer? _instance;
 }
 

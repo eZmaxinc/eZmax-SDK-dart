@@ -11,33 +11,31 @@
 part of openapi.api;
 
 /// Indicates the user's access level to this folder.
-class ComputedEEzsignfolderAccess {
-  /// Instantiate a new enum with the provided [value].
-  const ComputedEEzsignfolderAccess._(this.value);
+enum ComputedEEzsignfolderAccess {
+  signer._(r'Signer'),
+  read._(r'Read'),
+  modify._(r'Modify'),
+  full._(r'Full'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const ComputedEEzsignfolderAccess._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const signer = ComputedEEzsignfolderAccess._(r'Signer');
-  static const read = ComputedEEzsignfolderAccess._(r'Read');
-  static const modify = ComputedEEzsignfolderAccess._(r'Modify');
-  static const full = ComputedEEzsignfolderAccess._(r'Full');
-
-  /// List of all possible values in this [enum][ComputedEEzsignfolderAccess].
-  static const values = <ComputedEEzsignfolderAccess>[
-    signer,
-    read,
-    modify,
-    full,
-  ];
-
+  /// Returns the instance of [ComputedEEzsignfolderAccess] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static ComputedEEzsignfolderAccess? fromJson(dynamic value) => ComputedEEzsignfolderAccessTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [ComputedEEzsignfolderAccess]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<ComputedEEzsignfolderAccess> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <ComputedEEzsignfolderAccess>[];
     if (json is List && json.isNotEmpty) {
@@ -59,9 +57,11 @@ class ComputedEEzsignfolderAccessTypeTransformer {
 
   const ComputedEEzsignfolderAccessTypeTransformer._();
 
-  String encode(ComputedEEzsignfolderAccess data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(ComputedEEzsignfolderAccess data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a ComputedEEzsignfolderAccess.
+  /// Returns the instance of [ComputedEEzsignfolderAccess] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -70,6 +70,9 @@ class ComputedEEzsignfolderAccessTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   ComputedEEzsignfolderAccess? decode(dynamic data, {bool allowNull = true}) {
+    if (data is ComputedEEzsignfolderAccess) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Signer': return ComputedEEzsignfolderAccess.signer;
@@ -85,7 +88,7 @@ class ComputedEEzsignfolderAccessTypeTransformer {
     return null;
   }
 
-  /// Singleton [ComputedEEzsignfolderAccessTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static ComputedEEzsignfolderAccessTypeTransformer? _instance;
 }
 

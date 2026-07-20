@@ -129,35 +129,32 @@ class CustomAttachmentPrepareFilesTransferResponse {
 }
 
 /// Returns the action required for the attachment
-class CustomAttachmentPrepareFilesTransferResponseEAttachmentActionEnum {
-  /// Instantiate a new enum with the provided [value].
-  const CustomAttachmentPrepareFilesTransferResponseEAttachmentActionEnum._(this.value);
+enum CustomAttachmentPrepareFilesTransferResponseEAttachmentActionEnum {
+  accept._(r'Accept'),
+  discard._(r'Discard'),
+  overwrite._(r'Overwrite'),
+  reject._(r'Reject'),
+  restore._(r'Restore'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const CustomAttachmentPrepareFilesTransferResponseEAttachmentActionEnum._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const accept = CustomAttachmentPrepareFilesTransferResponseEAttachmentActionEnum._(r'Accept');
-  static const discard = CustomAttachmentPrepareFilesTransferResponseEAttachmentActionEnum._(r'Discard');
-  static const overwrite = CustomAttachmentPrepareFilesTransferResponseEAttachmentActionEnum._(r'Overwrite');
-  static const reject = CustomAttachmentPrepareFilesTransferResponseEAttachmentActionEnum._(r'Reject');
-  static const restore = CustomAttachmentPrepareFilesTransferResponseEAttachmentActionEnum._(r'Restore');
-
-  /// List of all possible values in this [enum][CustomAttachmentPrepareFilesTransferResponseEAttachmentActionEnum].
-  static const values = <CustomAttachmentPrepareFilesTransferResponseEAttachmentActionEnum>[
-    accept,
-    discard,
-    overwrite,
-    reject,
-    restore,
-  ];
-
+  /// Returns the instance of [CustomAttachmentPrepareFilesTransferResponseEAttachmentActionEnum] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static CustomAttachmentPrepareFilesTransferResponseEAttachmentActionEnum? fromJson(dynamic value) => CustomAttachmentPrepareFilesTransferResponseEAttachmentActionEnumTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [CustomAttachmentPrepareFilesTransferResponseEAttachmentActionEnum]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<CustomAttachmentPrepareFilesTransferResponseEAttachmentActionEnum> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <CustomAttachmentPrepareFilesTransferResponseEAttachmentActionEnum>[];
     if (json is List && json.isNotEmpty) {
@@ -179,9 +176,10 @@ class CustomAttachmentPrepareFilesTransferResponseEAttachmentActionEnumTypeTrans
 
   const CustomAttachmentPrepareFilesTransferResponseEAttachmentActionEnumTypeTransformer._();
 
-  String encode(CustomAttachmentPrepareFilesTransferResponseEAttachmentActionEnum data) => data.value;
+  String encode(CustomAttachmentPrepareFilesTransferResponseEAttachmentActionEnum data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a CustomAttachmentPrepareFilesTransferResponseEAttachmentActionEnum.
+  /// Returns the instance of [CustomAttachmentPrepareFilesTransferResponseEAttachmentActionEnum] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -190,6 +188,9 @@ class CustomAttachmentPrepareFilesTransferResponseEAttachmentActionEnumTypeTrans
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   CustomAttachmentPrepareFilesTransferResponseEAttachmentActionEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data is CustomAttachmentPrepareFilesTransferResponseEAttachmentActionEnum) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Accept': return CustomAttachmentPrepareFilesTransferResponseEAttachmentActionEnum.accept;
@@ -206,7 +207,7 @@ class CustomAttachmentPrepareFilesTransferResponseEAttachmentActionEnumTypeTrans
     return null;
   }
 
-  /// Singleton [CustomAttachmentPrepareFilesTransferResponseEAttachmentActionEnumTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static CustomAttachmentPrepareFilesTransferResponseEAttachmentActionEnumTypeTransformer? _instance;
 }
 

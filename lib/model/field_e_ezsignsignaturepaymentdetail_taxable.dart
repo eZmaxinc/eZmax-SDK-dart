@@ -11,31 +11,30 @@
 part of openapi.api;
 
 /// Whether the Ezsignsignaturepaymentdetail is taxable or not
-class FieldEEzsignsignaturepaymentdetailTaxable {
-  /// Instantiate a new enum with the provided [value].
-  const FieldEEzsignsignaturepaymentdetailTaxable._(this.value);
+enum FieldEEzsignsignaturepaymentdetailTaxable {
+  yes._(r'Yes'),
+  no._(r'No'),
+  included._(r'Included'),
+  ;
+
+  /// Instantiate a new enum with the provided value.
+  const FieldEEzsignsignaturepaymentdetailTaxable._(this._value);
 
   /// The underlying value of this enum member.
-  final String value;
+  final String _value;
 
   @override
-  String toString() => value;
+  String toString() => _value;
 
-  String toJson() => value;
+  /// Encodes this enum as a value suitable for JSON.
+  String toJson() => _value;
 
-  static const yes = FieldEEzsignsignaturepaymentdetailTaxable._(r'Yes');
-  static const no = FieldEEzsignsignaturepaymentdetailTaxable._(r'No');
-  static const included = FieldEEzsignsignaturepaymentdetailTaxable._(r'Included');
-
-  /// List of all possible values in this [enum][FieldEEzsignsignaturepaymentdetailTaxable].
-  static const values = <FieldEEzsignsignaturepaymentdetailTaxable>[
-    yes,
-    no,
-    included,
-  ];
-
+  /// Returns the instance of [FieldEEzsignsignaturepaymentdetailTaxable] that was successfully decoded
+  /// from the passed [value] on success, null otherwise.
   static FieldEEzsignsignaturepaymentdetailTaxable? fromJson(dynamic value) => FieldEEzsignsignaturepaymentdetailTaxableTypeTransformer().decode(value);
 
+  /// Returns a [List] containing instances of [FieldEEzsignsignaturepaymentdetailTaxable]
+  /// that were successfully decoded from the passed [JSON][json].
   static List<FieldEEzsignsignaturepaymentdetailTaxable> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FieldEEzsignsignaturepaymentdetailTaxable>[];
     if (json is List && json.isNotEmpty) {
@@ -57,9 +56,11 @@ class FieldEEzsignsignaturepaymentdetailTaxableTypeTransformer {
 
   const FieldEEzsignsignaturepaymentdetailTaxableTypeTransformer._();
 
-  String encode(FieldEEzsignsignaturepaymentdetailTaxable data) => data.value;
+  /// Encodes this enum as a value suitable for JSON.
+  String encode(FieldEEzsignsignaturepaymentdetailTaxable data) => data._value;
 
-  /// Decodes a [dynamic value][data] to a FieldEEzsignsignaturepaymentdetailTaxable.
+  /// Returns the instance of [FieldEEzsignsignaturepaymentdetailTaxable] that was successfully decoded
+  /// from the passed [data] value on success, null otherwise.
   ///
   /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
   /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
@@ -68,6 +69,9 @@ class FieldEEzsignsignaturepaymentdetailTaxableTypeTransformer {
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
   FieldEEzsignsignaturepaymentdetailTaxable? decode(dynamic data, {bool allowNull = true}) {
+    if (data is FieldEEzsignsignaturepaymentdetailTaxable) {
+      return data;
+    }
     if (data != null) {
       switch (data) {
         case r'Yes': return FieldEEzsignsignaturepaymentdetailTaxable.yes;
@@ -82,7 +86,7 @@ class FieldEEzsignsignaturepaymentdetailTaxableTypeTransformer {
     return null;
   }
 
-  /// Singleton [FieldEEzsignsignaturepaymentdetailTaxableTypeTransformer] instance.
+  /// The singleton instance of this transformer.
   static FieldEEzsignsignaturepaymentdetailTaxableTypeTransformer? _instance;
 }
 
