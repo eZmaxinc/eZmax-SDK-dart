@@ -420,8 +420,6 @@ doc/DiscussionmessageRequestCompound.md
 doc/DiscussionmessageRequestPatch.md
 doc/DiscussionmessageResponse.md
 doc/DiscussionmessageResponseCompound.md
-doc/DocumentationSubscribeV1Request.md
-doc/DocumentationSubscribeV1Response.md
 doc/DomainAutocompleteElementResponse.md
 doc/DomainCreateObjectV1Request.md
 doc/DomainCreateObjectV1Response.md
@@ -542,6 +540,8 @@ doc/EzmaxpartnerGetObjectV2Response.md
 doc/EzmaxpartnerGetObjectV2ResponseMPayload.md
 doc/EzmaxpartnerResponse.md
 doc/EzmaxpartnerResponseCompound.md
+doc/EzmaxpartnerSubscribeV1Request.md
+doc/EzmaxpartnerSubscribeV1Response.md
 doc/EzmaxproductAutocompleteElementResponse.md
 doc/EzmaxproductGetAutocompleteV2Response.md
 doc/EzmaxproductGetAutocompleteV2ResponseMPayload.md
@@ -2756,8 +2756,6 @@ lib/model/discussionmessage_request_compound.dart
 lib/model/discussionmessage_request_patch.dart
 lib/model/discussionmessage_response.dart
 lib/model/discussionmessage_response_compound.dart
-lib/model/documentation_subscribe_v1_request.dart
-lib/model/documentation_subscribe_v1_response.dart
 lib/model/domain_autocomplete_element_response.dart
 lib/model/domain_create_object_v1_request.dart
 lib/model/domain_create_object_v1_response.dart
@@ -2877,6 +2875,8 @@ lib/model/ezmaxpartner_get_object_v2_response.dart
 lib/model/ezmaxpartner_get_object_v2_response_m_payload.dart
 lib/model/ezmaxpartner_response.dart
 lib/model/ezmaxpartner_response_compound.dart
+lib/model/ezmaxpartner_subscribe_v1_request.dart
+lib/model/ezmaxpartner_subscribe_v1_response.dart
 lib/model/ezmaxproduct_autocomplete_element_response.dart
 lib/model/ezmaxproduct_get_autocomplete_v2_response.dart
 lib/model/ezmaxproduct_get_autocomplete_v2_response_m_payload.dart

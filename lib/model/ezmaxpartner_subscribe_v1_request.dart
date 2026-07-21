@@ -10,9 +10,9 @@
 
 part of openapi.api;
 
-class DocumentationSubscribeV1Request {
-  /// Returns a new [DocumentationSubscribeV1Request] instance.
-  DocumentationSubscribeV1Request({
+class EzmaxpartnerSubscribeV1Request {
+  /// Returns a new [EzmaxpartnerSubscribeV1Request] instance.
+  EzmaxpartnerSubscribeV1Request({
     this.pksEzmaxcustomerCode,
     this.sInfrastructureenvironmenttypeDescription,
     this.sCompanyName1,
@@ -258,7 +258,7 @@ class DocumentationSubscribeV1Request {
   EmailRequestCompound? objEmail;
 
   @override
-  bool operator ==(Object other) => identical(this, other) || other is DocumentationSubscribeV1Request &&
+  bool operator ==(Object other) => identical(this, other) || other is EzmaxpartnerSubscribeV1Request &&
     other.pksEzmaxcustomerCode == pksEzmaxcustomerCode &&
     other.sInfrastructureenvironmenttypeDescription == sInfrastructureenvironmenttypeDescription &&
     other.sCompanyName1 == sCompanyName1 &&
@@ -311,7 +311,7 @@ class DocumentationSubscribeV1Request {
     (objEmail == null ? 0 : objEmail!.hashCode);
 
   @override
-  String toString() => 'DocumentationSubscribeV1Request[pksEzmaxcustomerCode=$pksEzmaxcustomerCode, sInfrastructureenvironmenttypeDescription=$sInfrastructureenvironmenttypeDescription, sCompanyName1=$sCompanyName1, sCompanyName2=$sCompanyName2, fkiSystemconfigurationtypeID=$fkiSystemconfigurationtypeID, sSystemconfigurationtypeDescription1=$sSystemconfigurationtypeDescription1, sSystemconfigurationtypeDescription2=$sSystemconfigurationtypeDescription2, fkiEzmaxpartnerID=$fkiEzmaxpartnerID, sEzmaxpartnerName1=$sEzmaxpartnerName1, sEzmaxpartnerName2=$sEzmaxpartnerName2, fkiEzmaxpartnerproductID=$fkiEzmaxpartnerproductID, sEzmaxpartnerproductName1=$sEzmaxpartnerproductName1, sEzmaxpartnerproductName2=$sEzmaxpartnerproductName2, fkiEzmaxpartnerproductstageID=$fkiEzmaxpartnerproductstageID, sEzmaxpartnerproductstageCode=$sEzmaxpartnerproductstageCode, sUserLoginName=$sUserLoginName, sUserFirstName=$sUserFirstName, sUserLastName=$sUserLastName, fkiUserID=$fkiUserID, fkiLanguageID=$fkiLanguageID, objAddress=$objAddress, objphone=$objphone, objEmail=$objEmail]';
+  String toString() => 'EzmaxpartnerSubscribeV1Request[pksEzmaxcustomerCode=$pksEzmaxcustomerCode, sInfrastructureenvironmenttypeDescription=$sInfrastructureenvironmenttypeDescription, sCompanyName1=$sCompanyName1, sCompanyName2=$sCompanyName2, fkiSystemconfigurationtypeID=$fkiSystemconfigurationtypeID, sSystemconfigurationtypeDescription1=$sSystemconfigurationtypeDescription1, sSystemconfigurationtypeDescription2=$sSystemconfigurationtypeDescription2, fkiEzmaxpartnerID=$fkiEzmaxpartnerID, sEzmaxpartnerName1=$sEzmaxpartnerName1, sEzmaxpartnerName2=$sEzmaxpartnerName2, fkiEzmaxpartnerproductID=$fkiEzmaxpartnerproductID, sEzmaxpartnerproductName1=$sEzmaxpartnerproductName1, sEzmaxpartnerproductName2=$sEzmaxpartnerproductName2, fkiEzmaxpartnerproductstageID=$fkiEzmaxpartnerproductstageID, sEzmaxpartnerproductstageCode=$sEzmaxpartnerproductstageCode, sUserLoginName=$sUserLoginName, sUserFirstName=$sUserFirstName, sUserLastName=$sUserLastName, fkiUserID=$fkiUserID, fkiLanguageID=$fkiLanguageID, objAddress=$objAddress, objphone=$objphone, objEmail=$objEmail]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -433,10 +433,10 @@ class DocumentationSubscribeV1Request {
     return json;
   }
 
-  /// Returns a new [DocumentationSubscribeV1Request] instance and imports its values from
+  /// Returns a new [EzmaxpartnerSubscribeV1Request] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static DocumentationSubscribeV1Request? fromJson(dynamic value) {
+  static EzmaxpartnerSubscribeV1Request? fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
 
@@ -447,7 +447,7 @@ class DocumentationSubscribeV1Request {
         return true;
       }());
 
-      return DocumentationSubscribeV1Request(
+      return EzmaxpartnerSubscribeV1Request(
         pksEzmaxcustomerCode: mapValueOfType<String>(json, r'pksEzmaxcustomerCode'),
         sInfrastructureenvironmenttypeDescription: mapValueOfType<String>(json, r'sInfrastructureenvironmenttypeDescription'),
         sCompanyName1: mapValueOfType<String>(json, r'sCompanyName1'),
@@ -476,11 +476,11 @@ class DocumentationSubscribeV1Request {
     return null;
   }
 
-  static List<DocumentationSubscribeV1Request> listFromJson(dynamic json, {bool growable = false,}) {
-    final result = <DocumentationSubscribeV1Request>[];
+  static List<EzmaxpartnerSubscribeV1Request> listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <EzmaxpartnerSubscribeV1Request>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
-        final value = DocumentationSubscribeV1Request.fromJson(row);
+        final value = EzmaxpartnerSubscribeV1Request.fromJson(row);
         if (value != null) {
           result.add(value);
         }
@@ -489,12 +489,12 @@ class DocumentationSubscribeV1Request {
     return result.toList(growable: growable);
   }
 
-  static Map<String, DocumentationSubscribeV1Request> mapFromJson(dynamic json) {
-    final map = <String, DocumentationSubscribeV1Request>{};
+  static Map<String, EzmaxpartnerSubscribeV1Request> mapFromJson(dynamic json) {
+    final map = <String, EzmaxpartnerSubscribeV1Request>{};
     if (json is Map && json.isNotEmpty) {
       json = json.cast<String, dynamic>(); // ignore: parameter_assignments
       for (final entry in json.entries) {
-        final value = DocumentationSubscribeV1Request.fromJson(entry.value);
+        final value = EzmaxpartnerSubscribeV1Request.fromJson(entry.value);
         if (value != null) {
           map[entry.key] = value;
         }
@@ -503,14 +503,14 @@ class DocumentationSubscribeV1Request {
     return map;
   }
 
-  // maps a json object with a list of DocumentationSubscribeV1Request-objects as value to a dart map
-  static Map<String, List<DocumentationSubscribeV1Request>> mapListFromJson(dynamic json, {bool growable = false,}) {
-    final map = <String, List<DocumentationSubscribeV1Request>>{};
+  // maps a json object with a list of EzmaxpartnerSubscribeV1Request-objects as value to a dart map
+  static Map<String, List<EzmaxpartnerSubscribeV1Request>> mapListFromJson(dynamic json, {bool growable = false,}) {
+    final map = <String, List<EzmaxpartnerSubscribeV1Request>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = DocumentationSubscribeV1Request.listFromJson(entry.value, growable: growable,);
+        map[entry.key] = EzmaxpartnerSubscribeV1Request.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;

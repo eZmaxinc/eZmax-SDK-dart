@@ -1017,10 +1017,6 @@ class ApiClient {
           return DiscussionmessageResponse.fromJson(value);
         case 'DiscussionmessageResponseCompound':
           return DiscussionmessageResponseCompound.fromJson(value);
-        case 'DocumentationSubscribeV1Request':
-          return DocumentationSubscribeV1Request.fromJson(value);
-        case 'DocumentationSubscribeV1Response':
-          return DocumentationSubscribeV1Response.fromJson(value);
         case 'DomainAutocompleteElementResponse':
           return DomainAutocompleteElementResponse.fromJson(value);
         case 'DomainCreateObjectV1Request':
@@ -1259,6 +1255,10 @@ class ApiClient {
           return EzmaxpartnerResponse.fromJson(value);
         case 'EzmaxpartnerResponseCompound':
           return EzmaxpartnerResponseCompound.fromJson(value);
+        case 'EzmaxpartnerSubscribeV1Request':
+          return EzmaxpartnerSubscribeV1Request.fromJson(value);
+        case 'EzmaxpartnerSubscribeV1Response':
+          return EzmaxpartnerSubscribeV1Response.fromJson(value);
         case 'EzmaxproductAutocompleteElementResponse':
           return EzmaxproductAutocompleteElementResponse.fromJson(value);
         case 'EzmaxproductGetAutocompleteV2Response':

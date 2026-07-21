@@ -24,14 +24,14 @@ class ExternalEzmaxpartnerApi {
   ///
   /// Parameters:
   ///
-  /// * [DocumentationSubscribeV1Request] documentationSubscribeV1Request (required):
+  /// * [EzmaxpartnerSubscribeV1Request] ezmaxpartnerSubscribeV1Request (required):
   ///   
-  Future<Response> externalpartnerSubscribeV1WithHttpInfo(DocumentationSubscribeV1Request documentationSubscribeV1Request, { Future<void>? abortTrigger, }) async {
+  Future<Response> ezmaxpartnerSubscribeV1WithHttpInfo(EzmaxpartnerSubscribeV1Request ezmaxpartnerSubscribeV1Request, { Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/1/external/ezmaxpartner/subscribe';
 
     // ignore: prefer_final_locals
-    Object? postBody = documentationSubscribeV1Request;
+    Object? postBody = ezmaxpartnerSubscribeV1Request;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
@@ -58,10 +58,10 @@ class ExternalEzmaxpartnerApi {
   ///
   /// Parameters:
   ///
-  /// * [DocumentationSubscribeV1Request] documentationSubscribeV1Request (required):
+  /// * [EzmaxpartnerSubscribeV1Request] ezmaxpartnerSubscribeV1Request (required):
   ///   
-  Future<DocumentationSubscribeV1Response?> externalpartnerSubscribeV1(DocumentationSubscribeV1Request documentationSubscribeV1Request, { Future<void>? abortTrigger, }) async {
-    final response = await externalpartnerSubscribeV1WithHttpInfo(documentationSubscribeV1Request, abortTrigger: abortTrigger,);
+  Future<EzmaxpartnerSubscribeV1Response?> ezmaxpartnerSubscribeV1(EzmaxpartnerSubscribeV1Request ezmaxpartnerSubscribeV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezmaxpartnerSubscribeV1WithHttpInfo(ezmaxpartnerSubscribeV1Request, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -69,7 +69,7 @@ class ExternalEzmaxpartnerApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'DocumentationSubscribeV1Response',) as DocumentationSubscribeV1Response;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzmaxpartnerSubscribeV1Response',) as EzmaxpartnerSubscribeV1Response;
     
     }
     return null;

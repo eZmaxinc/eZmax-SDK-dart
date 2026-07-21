@@ -1,4 +1,4 @@
-# openapi.model.DocumentationSubscribeV1Response
+# openapi.model.EzmaxpartnerSubscribeV1Response
 
 ## Load the model package
 ```dart

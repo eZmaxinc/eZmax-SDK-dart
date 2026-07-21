@@ -9,11 +9,11 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**externalpartnerSubscribeV1**](ExternalEzmaxpartnerApi.md#externalpartnersubscribev1) | **POST** /1/external/ezmaxpartner/subscribe | Subscribe to an Ezmaxparnerproductstage
+[**ezmaxpartnerSubscribeV1**](ExternalEzmaxpartnerApi.md#ezmaxpartnersubscribev1) | **POST** /1/external/ezmaxpartner/subscribe | Subscribe to an Ezmaxparnerproductstage
 
 
-# **externalpartnerSubscribeV1**
-> DocumentationSubscribeV1Response externalpartnerSubscribeV1(documentationSubscribeV1Request)
+# **ezmaxpartnerSubscribeV1**
+> EzmaxpartnerSubscribeV1Response ezmaxpartnerSubscribeV1(ezmaxpartnerSubscribeV1Request)
 
 Subscribe to an Ezmaxparnerproductstage
 
@@ -28,13 +28,13 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
 
 final api_instance = ExternalEzmaxpartnerApi();
-final documentationSubscribeV1Request = DocumentationSubscribeV1Request(); // DocumentationSubscribeV1Request | 
+final ezmaxpartnerSubscribeV1Request = EzmaxpartnerSubscribeV1Request(); // EzmaxpartnerSubscribeV1Request | 
 
 try {
-    final result = api_instance.externalpartnerSubscribeV1(documentationSubscribeV1Request);
+    final result = api_instance.ezmaxpartnerSubscribeV1(ezmaxpartnerSubscribeV1Request);
     print(result);
 } catch (e) {
-    print('Exception when calling ExternalEzmaxpartnerApi->externalpartnerSubscribeV1: $e\n');
+    print('Exception when calling ExternalEzmaxpartnerApi->ezmaxpartnerSubscribeV1: $e\n');
 }
 ```
 
@@ -42,11 +42,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **documentationSubscribeV1Request** | [**DocumentationSubscribeV1Request**](DocumentationSubscribeV1Request.md)|  | 
+ **ezmaxpartnerSubscribeV1Request** | [**EzmaxpartnerSubscribeV1Request**](EzmaxpartnerSubscribeV1Request.md)|  | 
 
 ### Return type
 
-[**DocumentationSubscribeV1Response**](DocumentationSubscribeV1Response.md)
+[**EzmaxpartnerSubscribeV1Response**](EzmaxpartnerSubscribeV1Response.md)
 
 ### Authorization
 

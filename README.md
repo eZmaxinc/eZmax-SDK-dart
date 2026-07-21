@@ -47,13 +47,13 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
 
 final api_instance = ExternalEzmaxpartnerApi();
-final documentationSubscribeV1Request = DocumentationSubscribeV1Request(); // DocumentationSubscribeV1Request | 
+final ezmaxpartnerSubscribeV1Request = EzmaxpartnerSubscribeV1Request(); // EzmaxpartnerSubscribeV1Request | 
 
 try {
-    final result = api_instance.externalpartnerSubscribeV1(documentationSubscribeV1Request);
+    final result = api_instance.ezmaxpartnerSubscribeV1(ezmaxpartnerSubscribeV1Request);
     print(result);
 } catch (e) {
-    print('Exception when calling ExternalEzmaxpartnerApi->externalpartnerSubscribeV1: $e\n');
+    print('Exception when calling ExternalEzmaxpartnerApi->ezmaxpartnerSubscribeV1: $e\n');
 }
 
 ```
@@ -64,7 +64,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*ExternalEzmaxpartnerApi* | [**externalpartnerSubscribeV1**](doc//ExternalEzmaxpartnerApi.md#externalpartnersubscribev1) | **POST** /1/external/ezmaxpartner/subscribe | Subscribe to an Ezmaxparnerproductstage
+*ExternalEzmaxpartnerApi* | [**ezmaxpartnerSubscribeV1**](doc//ExternalEzmaxpartnerApi.md#ezmaxpartnersubscribev1) | **POST** /1/external/ezmaxpartner/subscribe | Subscribe to an Ezmaxparnerproductstage
 *GlobalCustomerApi* | [**globalCustomerGetEndpointV1**](doc//GlobalCustomerApi.md#globalcustomergetendpointv1) | **GET** /1/customer/{pksCustomerCode}/endpoint | Get customer endpoint
 *GlobalEzmaxclientApi* | [**globalEzmaxclientVersionV1**](doc//GlobalEzmaxclientApi.md#globalezmaxclientversionv1) | **GET** /1/ezmaxclient/{pksEzmaxclientOs}/version | Retrieve the latest version of the Ezmaxclient
 *GlobalEzmaxcustomerApi* | [**globalEzmaxcustomerGetConfigurationV1**](doc//GlobalEzmaxcustomerApi.md#globalezmaxcustomergetconfigurationv1) | **GET** /1/ezmaxcustomer/{pksEzmaxcustomerCode}/getConfiguration | Get ezmaxcustomer configuration
@@ -1055,8 +1055,6 @@ Class | Method | HTTP request | Description
  - [DiscussionmessageRequestPatch](doc//DiscussionmessageRequestPatch.md)
  - [DiscussionmessageResponse](doc//DiscussionmessageResponse.md)
  - [DiscussionmessageResponseCompound](doc//DiscussionmessageResponseCompound.md)
- - [DocumentationSubscribeV1Request](doc//DocumentationSubscribeV1Request.md)
- - [DocumentationSubscribeV1Response](doc//DocumentationSubscribeV1Response.md)
  - [DomainAutocompleteElementResponse](doc//DomainAutocompleteElementResponse.md)
  - [DomainCreateObjectV1Request](doc//DomainCreateObjectV1Request.md)
  - [DomainCreateObjectV1Response](doc//DomainCreateObjectV1Response.md)
@@ -1176,6 +1174,8 @@ Class | Method | HTTP request | Description
  - [EzmaxpartnerGetObjectV2ResponseMPayload](doc//EzmaxpartnerGetObjectV2ResponseMPayload.md)
  - [EzmaxpartnerResponse](doc//EzmaxpartnerResponse.md)
  - [EzmaxpartnerResponseCompound](doc//EzmaxpartnerResponseCompound.md)
+ - [EzmaxpartnerSubscribeV1Request](doc//EzmaxpartnerSubscribeV1Request.md)
+ - [EzmaxpartnerSubscribeV1Response](doc//EzmaxpartnerSubscribeV1Response.md)
  - [EzmaxproductAutocompleteElementResponse](doc//EzmaxproductAutocompleteElementResponse.md)
  - [EzmaxproductGetAutocompleteV2Response](doc//EzmaxproductGetAutocompleteV2Response.md)
  - [EzmaxproductGetAutocompleteV2ResponseMPayload](doc//EzmaxproductGetAutocompleteV2ResponseMPayload.md)

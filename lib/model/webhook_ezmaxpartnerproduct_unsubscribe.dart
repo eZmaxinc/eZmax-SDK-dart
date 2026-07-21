@@ -16,6 +16,7 @@ class WebhookEzmaxpartnerproductUnsubscribe {
     required this.objWebhook,
     this.aObjAttempt = const [],
     required this.objEzmaxpartnerproduct,
+    this.sExternalID,
   });
 
   CustomWebhookResponse objWebhook;
@@ -25,27 +26,42 @@ class WebhookEzmaxpartnerproductUnsubscribe {
 
   CustomEzmaxpartnerproductSubscribe objEzmaxpartnerproduct;
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sExternalID;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is WebhookEzmaxpartnerproductUnsubscribe &&
     other.objWebhook == objWebhook &&
     _deepEquality.equals(other.aObjAttempt, aObjAttempt) &&
-    other.objEzmaxpartnerproduct == objEzmaxpartnerproduct;
+    other.objEzmaxpartnerproduct == objEzmaxpartnerproduct &&
+    other.sExternalID == sExternalID;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (objWebhook.hashCode) +
     (aObjAttempt.hashCode) +
-    (objEzmaxpartnerproduct.hashCode);
+    (objEzmaxpartnerproduct.hashCode) +
+    (sExternalID == null ? 0 : sExternalID!.hashCode);
 
   @override
-  String toString() => 'WebhookEzmaxpartnerproductUnsubscribe[objWebhook=$objWebhook, aObjAttempt=$aObjAttempt, objEzmaxpartnerproduct=$objEzmaxpartnerproduct]';
+  String toString() => 'WebhookEzmaxpartnerproductUnsubscribe[objWebhook=$objWebhook, aObjAttempt=$aObjAttempt, objEzmaxpartnerproduct=$objEzmaxpartnerproduct, sExternalID=$sExternalID]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'objWebhook'] = this.objWebhook;
       json[r'a_objAttempt'] = this.aObjAttempt;
       json[r'objEzmaxpartnerproduct'] = this.objEzmaxpartnerproduct;
+    if (this.sExternalID != null) {
+      json[r'sExternalID'] = this.sExternalID;
+    } else {
+      json[r'sExternalID'] = null;
+    }
     return json;
   }
 
@@ -73,6 +89,7 @@ class WebhookEzmaxpartnerproductUnsubscribe {
         objWebhook: CustomWebhookResponse.fromJson(json[r'objWebhook'])!,
         aObjAttempt: AttemptResponseCompound.listFromJson(json[r'a_objAttempt']),
         objEzmaxpartnerproduct: CustomEzmaxpartnerproductSubscribe.fromJson(json[r'objEzmaxpartnerproduct'])!,
+        sExternalID: mapValueOfType<String>(json, r'sExternalID'),
       );
     }
     return null;
