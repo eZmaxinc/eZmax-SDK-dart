@@ -10,7 +10,7 @@
 
 part of openapi.api;
 
-/// The residencetype of the Inscriptionnotauthenticated
+/// The residence type of the Inscriptionnotauthenticated
 enum FieldEInscriptionnotauthenticatedResidenceType {
   principal._(r'Principal'),
   secondary._(r'Secondary'),

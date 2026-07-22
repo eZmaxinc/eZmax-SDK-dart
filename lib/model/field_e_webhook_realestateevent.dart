@@ -10,7 +10,7 @@
 
 part of openapi.api;
 
-/// The realestateevent of the Webhook
+/// The Realestateevent of the Webhook
 enum FieldEWebhookRealestateevent {
   inscriptionCreated._(r'InscriptionCreated'),
   inscriptionModified._(r'InscriptionModified'),

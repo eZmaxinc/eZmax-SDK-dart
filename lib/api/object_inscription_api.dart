@@ -306,7 +306,7 @@ class ObjectInscriptionApi {
     return null;
   }
 
-  /// Retrieve Inscriptionnotauthenticated list
+  /// Retrieve Inscription's Inscriptionnotauthenticated
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -340,7 +340,7 @@ class ObjectInscriptionApi {
     );
   }
 
-  /// Retrieve Inscriptionnotauthenticated list
+  /// Retrieve Inscription's Inscriptionnotauthenticated
   ///
   /// Parameters:
   ///

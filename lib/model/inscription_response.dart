@@ -14,14 +14,12 @@ class InscriptionResponse {
   /// Returns a new [InscriptionResponse] instance.
   InscriptionResponse({
     required this.pkiInscriptionID,
-    required this.fkiCompanyID,
-    this.sCompanyNameX,
-    required this.fkiDepartmentID,
+    this.fkiDepartmentID,
     this.sDepartmentNameX,
     required this.fkiRealestateboardID,
     this.sRealestateboardNameX,
     required this.fkiAddressID,
-    this.sAddress,
+    this.objAddress,
     required this.fkiInscriptionbuildingtypeID,
     this.sInscriptionbuildingtypeNameX,
     required this.fkiInscriptiontypeID,
@@ -31,7 +29,7 @@ class InscriptionResponse {
     required this.eInscriptionStep,
     required this.eInscriptionResidenceType,
     required this.sInscriptionCivicend,
-    required this.sInscriptionMLS,
+    this.sInscriptionMLS,
     required this.sInscriptionContract,
     required this.iInscriptionSellerdeclaration,
     required this.eInscriptionType,
@@ -47,12 +45,12 @@ class InscriptionResponse {
     required this.dInscriptionRemunerationreference,
     required this.dInscriptionRemunerationtotal,
     required this.dInscriptionMortgagesold,
-    required this.dtInscriptionDate,
-    required this.dtInscriptionCancellationdate,
-    required this.dtInscriptionInitialexpirationdate,
-    required this.dtInscriptionExpirationdate,
-    required this.dtInscriptionNotarydate,
-    required this.dtInscriptionNotaryentereddate,
+    this.dtInscriptionDate,
+    this.dtInscriptionCancellationdate,
+    this.dtInscriptionInitialexpirationdate,
+    this.dtInscriptionExpirationdate,
+    this.dtInscriptionNotarydate,
+    this.dtInscriptionNotaryentereddate,
     required this.tInscriptionCadastre,
     required this.bInscriptionReference,
     required this.bInscriptionInspection,
@@ -68,6 +66,7 @@ class InscriptionResponse {
     required this.bInscriptionSoldwithoutlegalwarranty,
     required this.iInscriptionConstructionyear,
     required this.iInscriptionUnit,
+    this.objAudit,
   });
 
   /// The unique ID of the Inscription.
@@ -75,25 +74,16 @@ class InscriptionResponse {
   /// Minimum value: 0
   int pkiInscriptionID;
 
-  /// The unique ID of the Company
+  /// The unique ID of the Department
   ///
-  /// Minimum value: 1
-  /// Maximum value: 255
-  int fkiCompanyID;
-
-  /// The Name of the Company in the language of the requester
+  /// Minimum value: 0
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
   /// source code must fall back to having a nullable type.
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
-  String? sCompanyNameX;
-
-  /// The unique ID of the Department
-  ///
-  /// Minimum value: 0
-  int fkiDepartmentID;
+  int? fkiDepartmentID;
 
   /// The Name of the Department in the language of the requester
   ///
@@ -121,14 +111,13 @@ class InscriptionResponse {
   /// Minimum value: 0
   int fkiAddressID;
 
-  /// The complete address in a single line
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
   /// source code must fall back to having a nullable type.
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
-  String? sAddress;
+  AddressResponseCompound? objAddress;
 
   /// The unique ID of the Inscriptionbuildingtype
   ///
@@ -179,16 +168,22 @@ class InscriptionResponse {
 
   FieldEInscriptionResidenceType eInscriptionResidenceType;
 
-  /// The civicend of the Inscription
+  /// The address civic end of the Inscription
   String sInscriptionCivicend;
 
   /// The mls of the Inscription
-  String sInscriptionMLS;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sInscriptionMLS;
 
   /// The sale contract number
   String sInscriptionContract;
 
-  /// The sellerdeclaration of the Inscription
+  /// The seller declaration number of the Inscription
   ///
   /// Minimum value: 0
   /// Maximum value: 16777215
@@ -196,13 +191,13 @@ class InscriptionResponse {
 
   FieldEInscriptionType eInscriptionType;
 
-  /// The initialsaleprice of the Inscription
+  /// The initial sale price of the Inscription
   String dInscriptionInitialsaleprice;
 
   /// The saleprice of the Inscription
   String dInscriptionSaleprice;
 
-  /// The rentprice of the Inscription
+  /// The rent price of the Inscription
   String dInscriptionRentprice;
 
   FieldEInscriptionRemunerationtype eInscriptionRemunerationtype;
@@ -213,38 +208,74 @@ class InscriptionResponse {
 
   FieldEInscriptionRemunerationtotaltype eInscriptionRemunerationtotaltype;
 
-  /// The remuneration of the Inscription
+  /// The remuneration amount of the Inscription
   String dInscriptionRemuneration;
 
-  /// The remunerationinscriptorseller of the Inscription
+  /// The remuneration amount for the inscriptor or seller of the Inscription
   String dInscriptionRemunerationinscriptorseller;
 
-  /// The remunerationreference of the Inscription
+  /// The remuneration amount for the reference of the Inscription
   String dInscriptionRemunerationreference;
 
-  /// The remunerationtotal of the Inscription
+  /// The remuneration amount total of the Inscription
   String dInscriptionRemunerationtotal;
 
-  /// The mortgagesold of the Inscription
+  /// The balande for the mortgage of the Inscription
   String dInscriptionMortgagesold;
 
   /// The date of the Inscription
-  String dtInscriptionDate;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? dtInscriptionDate;
 
-  /// The cancellationdate of the Inscription
-  String dtInscriptionCancellationdate;
+  /// The cancellation date of the Inscription
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? dtInscriptionCancellationdate;
 
-  /// The initialexpirationdate of the Inscription
-  String dtInscriptionInitialexpirationdate;
+  /// The initial expiration date of the Inscription
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? dtInscriptionInitialexpirationdate;
 
-  /// The expirationdate of the Inscription
-  String dtInscriptionExpirationdate;
+  /// The expiration date of the Inscription
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? dtInscriptionExpirationdate;
 
-  /// The notarydate of the Inscription
-  String dtInscriptionNotarydate;
+  /// The notary date of the Inscription
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? dtInscriptionNotarydate;
 
-  /// The notaryentereddate of the Inscription
-  String dtInscriptionNotaryentereddate;
+  /// The notary entered date of the Inscription
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? dtInscriptionNotaryentereddate;
 
   /// The cadastre of the Inscription
   String tInscriptionCadastre;
@@ -258,7 +289,7 @@ class InscriptionResponse {
   /// Whether the inscription is active or not
   bool bInscriptionIsactive;
 
-  /// The checklistnote of the Inscription
+  /// The checklist note of the Inscription
   String tInscriptionChecklistnote;
 
   /// Whether if it's an new
@@ -276,38 +307,44 @@ class InscriptionResponse {
   /// Whether if it's an repossession
   bool bInscriptionRepossession;
 
-  /// Whether if it's an issolicitation
+  /// Whether if it's a solicitation
   bool bInscriptionIssolicitation;
 
-  /// Whether if it's an salebyowner
+  /// Whether if it's a sale by the owner
   bool bInscriptionSalebyowner;
 
-  /// Whether if it's an soldwithoutlegalwarranty
+  /// Whether if it's sold without the legal warranty
   bool bInscriptionSoldwithoutlegalwarranty;
 
-  /// The constructionyear of the Inscription
+  /// The construction year of the Inscription
   ///
   /// Minimum value: 0
   /// Maximum value: 65535
   int iInscriptionConstructionyear;
 
-  /// The unit of the Inscription
+  /// The number of unit for the Inscription
   ///
   /// Minimum value: 0
   /// Maximum value: 255
   int iInscriptionUnit;
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  CommonAudit? objAudit;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is InscriptionResponse &&
     other.pkiInscriptionID == pkiInscriptionID &&
-    other.fkiCompanyID == fkiCompanyID &&
-    other.sCompanyNameX == sCompanyNameX &&
     other.fkiDepartmentID == fkiDepartmentID &&
     other.sDepartmentNameX == sDepartmentNameX &&
     other.fkiRealestateboardID == fkiRealestateboardID &&
     other.sRealestateboardNameX == sRealestateboardNameX &&
     other.fkiAddressID == fkiAddressID &&
-    other.sAddress == sAddress &&
+    other.objAddress == objAddress &&
     other.fkiInscriptionbuildingtypeID == fkiInscriptionbuildingtypeID &&
     other.sInscriptionbuildingtypeNameX == sInscriptionbuildingtypeNameX &&
     other.fkiInscriptiontypeID == fkiInscriptiontypeID &&
@@ -353,20 +390,19 @@ class InscriptionResponse {
     other.bInscriptionSalebyowner == bInscriptionSalebyowner &&
     other.bInscriptionSoldwithoutlegalwarranty == bInscriptionSoldwithoutlegalwarranty &&
     other.iInscriptionConstructionyear == iInscriptionConstructionyear &&
-    other.iInscriptionUnit == iInscriptionUnit;
+    other.iInscriptionUnit == iInscriptionUnit &&
+    other.objAudit == objAudit;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiInscriptionID.hashCode) +
-    (fkiCompanyID.hashCode) +
-    (sCompanyNameX == null ? 0 : sCompanyNameX!.hashCode) +
-    (fkiDepartmentID.hashCode) +
+    (fkiDepartmentID == null ? 0 : fkiDepartmentID!.hashCode) +
     (sDepartmentNameX == null ? 0 : sDepartmentNameX!.hashCode) +
     (fkiRealestateboardID.hashCode) +
     (sRealestateboardNameX == null ? 0 : sRealestateboardNameX!.hashCode) +
     (fkiAddressID.hashCode) +
-    (sAddress == null ? 0 : sAddress!.hashCode) +
+    (objAddress == null ? 0 : objAddress!.hashCode) +
     (fkiInscriptionbuildingtypeID.hashCode) +
     (sInscriptionbuildingtypeNameX == null ? 0 : sInscriptionbuildingtypeNameX!.hashCode) +
     (fkiInscriptiontypeID.hashCode) +
@@ -376,7 +412,7 @@ class InscriptionResponse {
     (eInscriptionStep.hashCode) +
     (eInscriptionResidenceType.hashCode) +
     (sInscriptionCivicend.hashCode) +
-    (sInscriptionMLS.hashCode) +
+    (sInscriptionMLS == null ? 0 : sInscriptionMLS!.hashCode) +
     (sInscriptionContract.hashCode) +
     (iInscriptionSellerdeclaration.hashCode) +
     (eInscriptionType.hashCode) +
@@ -392,12 +428,12 @@ class InscriptionResponse {
     (dInscriptionRemunerationreference.hashCode) +
     (dInscriptionRemunerationtotal.hashCode) +
     (dInscriptionMortgagesold.hashCode) +
-    (dtInscriptionDate.hashCode) +
-    (dtInscriptionCancellationdate.hashCode) +
-    (dtInscriptionInitialexpirationdate.hashCode) +
-    (dtInscriptionExpirationdate.hashCode) +
-    (dtInscriptionNotarydate.hashCode) +
-    (dtInscriptionNotaryentereddate.hashCode) +
+    (dtInscriptionDate == null ? 0 : dtInscriptionDate!.hashCode) +
+    (dtInscriptionCancellationdate == null ? 0 : dtInscriptionCancellationdate!.hashCode) +
+    (dtInscriptionInitialexpirationdate == null ? 0 : dtInscriptionInitialexpirationdate!.hashCode) +
+    (dtInscriptionExpirationdate == null ? 0 : dtInscriptionExpirationdate!.hashCode) +
+    (dtInscriptionNotarydate == null ? 0 : dtInscriptionNotarydate!.hashCode) +
+    (dtInscriptionNotaryentereddate == null ? 0 : dtInscriptionNotaryentereddate!.hashCode) +
     (tInscriptionCadastre.hashCode) +
     (bInscriptionReference.hashCode) +
     (bInscriptionInspection.hashCode) +
@@ -412,21 +448,20 @@ class InscriptionResponse {
     (bInscriptionSalebyowner.hashCode) +
     (bInscriptionSoldwithoutlegalwarranty.hashCode) +
     (iInscriptionConstructionyear.hashCode) +
-    (iInscriptionUnit.hashCode);
+    (iInscriptionUnit.hashCode) +
+    (objAudit == null ? 0 : objAudit!.hashCode);
 
   @override
-  String toString() => 'InscriptionResponse[pkiInscriptionID=$pkiInscriptionID, fkiCompanyID=$fkiCompanyID, sCompanyNameX=$sCompanyNameX, fkiDepartmentID=$fkiDepartmentID, sDepartmentNameX=$sDepartmentNameX, fkiRealestateboardID=$fkiRealestateboardID, sRealestateboardNameX=$sRealestateboardNameX, fkiAddressID=$fkiAddressID, sAddress=$sAddress, fkiInscriptionbuildingtypeID=$fkiInscriptionbuildingtypeID, sInscriptionbuildingtypeNameX=$sInscriptionbuildingtypeNameX, fkiInscriptiontypeID=$fkiInscriptiontypeID, sInscriptiontypeNameX=$sInscriptiontypeNameX, fkiInscriptioncategoryID=$fkiInscriptioncategoryID, sInscriptioncategoryNameX=$sInscriptioncategoryNameX, eInscriptionStep=$eInscriptionStep, eInscriptionResidenceType=$eInscriptionResidenceType, sInscriptionCivicend=$sInscriptionCivicend, sInscriptionMLS=$sInscriptionMLS, sInscriptionContract=$sInscriptionContract, iInscriptionSellerdeclaration=$iInscriptionSellerdeclaration, eInscriptionType=$eInscriptionType, dInscriptionInitialsaleprice=$dInscriptionInitialsaleprice, dInscriptionSaleprice=$dInscriptionSaleprice, dInscriptionRentprice=$dInscriptionRentprice, eInscriptionRemunerationtype=$eInscriptionRemunerationtype, eInscriptionRemunerationinscriptorsellertype=$eInscriptionRemunerationinscriptorsellertype, eInscriptionRemunerationreferencetype=$eInscriptionRemunerationreferencetype, eInscriptionRemunerationtotaltype=$eInscriptionRemunerationtotaltype, dInscriptionRemuneration=$dInscriptionRemuneration, dInscriptionRemunerationinscriptorseller=$dInscriptionRemunerationinscriptorseller, dInscriptionRemunerationreference=$dInscriptionRemunerationreference, dInscriptionRemunerationtotal=$dInscriptionRemunerationtotal, dInscriptionMortgagesold=$dInscriptionMortgagesold, dtInscriptionDate=$dtInscriptionDate, dtInscriptionCancellationdate=$dtInscriptionCancellationdate, dtInscriptionInitialexpirationdate=$dtInscriptionInitialexpirationdate, dtInscriptionExpirationdate=$dtInscriptionExpirationdate, dtInscriptionNotarydate=$dtInscriptionNotarydate, dtInscriptionNotaryentereddate=$dtInscriptionNotaryentereddate, tInscriptionCadastre=$tInscriptionCadastre, bInscriptionReference=$bInscriptionReference, bInscriptionInspection=$bInscriptionInspection, bInscriptionIsactive=$bInscriptionIsactive, tInscriptionChecklistnote=$tInscriptionChecklistnote, bInscriptionNew=$bInscriptionNew, bInscriptionHomeowner=$bInscriptionHomeowner, bInscriptionArchived=$bInscriptionArchived, bInscriptionLitigation=$bInscriptionLitigation, bInscriptionRepossession=$bInscriptionRepossession, bInscriptionIssolicitation=$bInscriptionIssolicitation, bInscriptionSalebyowner=$bInscriptionSalebyowner, bInscriptionSoldwithoutlegalwarranty=$bInscriptionSoldwithoutlegalwarranty, iInscriptionConstructionyear=$iInscriptionConstructionyear, iInscriptionUnit=$iInscriptionUnit]';
+  String toString() => 'InscriptionResponse[pkiInscriptionID=$pkiInscriptionID, fkiDepartmentID=$fkiDepartmentID, sDepartmentNameX=$sDepartmentNameX, fkiRealestateboardID=$fkiRealestateboardID, sRealestateboardNameX=$sRealestateboardNameX, fkiAddressID=$fkiAddressID, objAddress=$objAddress, fkiInscriptionbuildingtypeID=$fkiInscriptionbuildingtypeID, sInscriptionbuildingtypeNameX=$sInscriptionbuildingtypeNameX, fkiInscriptiontypeID=$fkiInscriptiontypeID, sInscriptiontypeNameX=$sInscriptiontypeNameX, fkiInscriptioncategoryID=$fkiInscriptioncategoryID, sInscriptioncategoryNameX=$sInscriptioncategoryNameX, eInscriptionStep=$eInscriptionStep, eInscriptionResidenceType=$eInscriptionResidenceType, sInscriptionCivicend=$sInscriptionCivicend, sInscriptionMLS=$sInscriptionMLS, sInscriptionContract=$sInscriptionContract, iInscriptionSellerdeclaration=$iInscriptionSellerdeclaration, eInscriptionType=$eInscriptionType, dInscriptionInitialsaleprice=$dInscriptionInitialsaleprice, dInscriptionSaleprice=$dInscriptionSaleprice, dInscriptionRentprice=$dInscriptionRentprice, eInscriptionRemunerationtype=$eInscriptionRemunerationtype, eInscriptionRemunerationinscriptorsellertype=$eInscriptionRemunerationinscriptorsellertype, eInscriptionRemunerationreferencetype=$eInscriptionRemunerationreferencetype, eInscriptionRemunerationtotaltype=$eInscriptionRemunerationtotaltype, dInscriptionRemuneration=$dInscriptionRemuneration, dInscriptionRemunerationinscriptorseller=$dInscriptionRemunerationinscriptorseller, dInscriptionRemunerationreference=$dInscriptionRemunerationreference, dInscriptionRemunerationtotal=$dInscriptionRemunerationtotal, dInscriptionMortgagesold=$dInscriptionMortgagesold, dtInscriptionDate=$dtInscriptionDate, dtInscriptionCancellationdate=$dtInscriptionCancellationdate, dtInscriptionInitialexpirationdate=$dtInscriptionInitialexpirationdate, dtInscriptionExpirationdate=$dtInscriptionExpirationdate, dtInscriptionNotarydate=$dtInscriptionNotarydate, dtInscriptionNotaryentereddate=$dtInscriptionNotaryentereddate, tInscriptionCadastre=$tInscriptionCadastre, bInscriptionReference=$bInscriptionReference, bInscriptionInspection=$bInscriptionInspection, bInscriptionIsactive=$bInscriptionIsactive, tInscriptionChecklistnote=$tInscriptionChecklistnote, bInscriptionNew=$bInscriptionNew, bInscriptionHomeowner=$bInscriptionHomeowner, bInscriptionArchived=$bInscriptionArchived, bInscriptionLitigation=$bInscriptionLitigation, bInscriptionRepossession=$bInscriptionRepossession, bInscriptionIssolicitation=$bInscriptionIssolicitation, bInscriptionSalebyowner=$bInscriptionSalebyowner, bInscriptionSoldwithoutlegalwarranty=$bInscriptionSoldwithoutlegalwarranty, iInscriptionConstructionyear=$iInscriptionConstructionyear, iInscriptionUnit=$iInscriptionUnit, objAudit=$objAudit]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiInscriptionID'] = this.pkiInscriptionID;
-      json[r'fkiCompanyID'] = this.fkiCompanyID;
-    if (this.sCompanyNameX != null) {
-      json[r'sCompanyNameX'] = this.sCompanyNameX;
-    } else {
-      json[r'sCompanyNameX'] = null;
-    }
+    if (this.fkiDepartmentID != null) {
       json[r'fkiDepartmentID'] = this.fkiDepartmentID;
+    } else {
+      json[r'fkiDepartmentID'] = null;
+    }
     if (this.sDepartmentNameX != null) {
       json[r'sDepartmentNameX'] = this.sDepartmentNameX;
     } else {
@@ -439,10 +474,10 @@ class InscriptionResponse {
       json[r'sRealestateboardNameX'] = null;
     }
       json[r'fkiAddressID'] = this.fkiAddressID;
-    if (this.sAddress != null) {
-      json[r'sAddress'] = this.sAddress;
+    if (this.objAddress != null) {
+      json[r'objAddress'] = this.objAddress;
     } else {
-      json[r'sAddress'] = null;
+      json[r'objAddress'] = null;
     }
       json[r'fkiInscriptionbuildingtypeID'] = this.fkiInscriptionbuildingtypeID;
     if (this.sInscriptionbuildingtypeNameX != null) {
@@ -465,7 +500,11 @@ class InscriptionResponse {
       json[r'eInscriptionStep'] = this.eInscriptionStep;
       json[r'eInscriptionResidenceType'] = this.eInscriptionResidenceType;
       json[r'sInscriptionCivicend'] = this.sInscriptionCivicend;
+    if (this.sInscriptionMLS != null) {
       json[r'sInscriptionMLS'] = this.sInscriptionMLS;
+    } else {
+      json[r'sInscriptionMLS'] = null;
+    }
       json[r'sInscriptionContract'] = this.sInscriptionContract;
       json[r'iInscriptionSellerdeclaration'] = this.iInscriptionSellerdeclaration;
       json[r'eInscriptionType'] = this.eInscriptionType;
@@ -481,12 +520,36 @@ class InscriptionResponse {
       json[r'dInscriptionRemunerationreference'] = this.dInscriptionRemunerationreference;
       json[r'dInscriptionRemunerationtotal'] = this.dInscriptionRemunerationtotal;
       json[r'dInscriptionMortgagesold'] = this.dInscriptionMortgagesold;
+    if (this.dtInscriptionDate != null) {
       json[r'dtInscriptionDate'] = this.dtInscriptionDate;
+    } else {
+      json[r'dtInscriptionDate'] = null;
+    }
+    if (this.dtInscriptionCancellationdate != null) {
       json[r'dtInscriptionCancellationdate'] = this.dtInscriptionCancellationdate;
+    } else {
+      json[r'dtInscriptionCancellationdate'] = null;
+    }
+    if (this.dtInscriptionInitialexpirationdate != null) {
       json[r'dtInscriptionInitialexpirationdate'] = this.dtInscriptionInitialexpirationdate;
+    } else {
+      json[r'dtInscriptionInitialexpirationdate'] = null;
+    }
+    if (this.dtInscriptionExpirationdate != null) {
       json[r'dtInscriptionExpirationdate'] = this.dtInscriptionExpirationdate;
+    } else {
+      json[r'dtInscriptionExpirationdate'] = null;
+    }
+    if (this.dtInscriptionNotarydate != null) {
       json[r'dtInscriptionNotarydate'] = this.dtInscriptionNotarydate;
+    } else {
+      json[r'dtInscriptionNotarydate'] = null;
+    }
+    if (this.dtInscriptionNotaryentereddate != null) {
       json[r'dtInscriptionNotaryentereddate'] = this.dtInscriptionNotaryentereddate;
+    } else {
+      json[r'dtInscriptionNotaryentereddate'] = null;
+    }
       json[r'tInscriptionCadastre'] = this.tInscriptionCadastre;
       json[r'bInscriptionReference'] = this.bInscriptionReference;
       json[r'bInscriptionInspection'] = this.bInscriptionInspection;
@@ -502,6 +565,11 @@ class InscriptionResponse {
       json[r'bInscriptionSoldwithoutlegalwarranty'] = this.bInscriptionSoldwithoutlegalwarranty;
       json[r'iInscriptionConstructionyear'] = this.iInscriptionConstructionyear;
       json[r'iInscriptionUnit'] = this.iInscriptionUnit;
+    if (this.objAudit != null) {
+      json[r'objAudit'] = this.objAudit;
+    } else {
+      json[r'objAudit'] = null;
+    }
     return json;
   }
 
@@ -518,10 +586,6 @@ class InscriptionResponse {
       assert(() {
         assert(json.containsKey(r'pkiInscriptionID'), 'Required key "InscriptionResponse[pkiInscriptionID]" is missing from JSON.');
         assert(json[r'pkiInscriptionID'] != null, 'Required key "InscriptionResponse[pkiInscriptionID]" has a null value in JSON.');
-        assert(json.containsKey(r'fkiCompanyID'), 'Required key "InscriptionResponse[fkiCompanyID]" is missing from JSON.');
-        assert(json[r'fkiCompanyID'] != null, 'Required key "InscriptionResponse[fkiCompanyID]" has a null value in JSON.');
-        assert(json.containsKey(r'fkiDepartmentID'), 'Required key "InscriptionResponse[fkiDepartmentID]" is missing from JSON.');
-        assert(json[r'fkiDepartmentID'] != null, 'Required key "InscriptionResponse[fkiDepartmentID]" has a null value in JSON.');
         assert(json.containsKey(r'fkiRealestateboardID'), 'Required key "InscriptionResponse[fkiRealestateboardID]" is missing from JSON.');
         assert(json[r'fkiRealestateboardID'] != null, 'Required key "InscriptionResponse[fkiRealestateboardID]" has a null value in JSON.');
         assert(json.containsKey(r'fkiAddressID'), 'Required key "InscriptionResponse[fkiAddressID]" is missing from JSON.');
@@ -538,8 +602,6 @@ class InscriptionResponse {
         assert(json[r'eInscriptionResidenceType'] != null, 'Required key "InscriptionResponse[eInscriptionResidenceType]" has a null value in JSON.');
         assert(json.containsKey(r'sInscriptionCivicend'), 'Required key "InscriptionResponse[sInscriptionCivicend]" is missing from JSON.');
         assert(json[r'sInscriptionCivicend'] != null, 'Required key "InscriptionResponse[sInscriptionCivicend]" has a null value in JSON.');
-        assert(json.containsKey(r'sInscriptionMLS'), 'Required key "InscriptionResponse[sInscriptionMLS]" is missing from JSON.');
-        assert(json[r'sInscriptionMLS'] != null, 'Required key "InscriptionResponse[sInscriptionMLS]" has a null value in JSON.');
         assert(json.containsKey(r'sInscriptionContract'), 'Required key "InscriptionResponse[sInscriptionContract]" is missing from JSON.');
         assert(json[r'sInscriptionContract'] != null, 'Required key "InscriptionResponse[sInscriptionContract]" has a null value in JSON.');
         assert(json.containsKey(r'iInscriptionSellerdeclaration'), 'Required key "InscriptionResponse[iInscriptionSellerdeclaration]" is missing from JSON.');
@@ -570,18 +632,6 @@ class InscriptionResponse {
         assert(json[r'dInscriptionRemunerationtotal'] != null, 'Required key "InscriptionResponse[dInscriptionRemunerationtotal]" has a null value in JSON.');
         assert(json.containsKey(r'dInscriptionMortgagesold'), 'Required key "InscriptionResponse[dInscriptionMortgagesold]" is missing from JSON.');
         assert(json[r'dInscriptionMortgagesold'] != null, 'Required key "InscriptionResponse[dInscriptionMortgagesold]" has a null value in JSON.');
-        assert(json.containsKey(r'dtInscriptionDate'), 'Required key "InscriptionResponse[dtInscriptionDate]" is missing from JSON.');
-        assert(json[r'dtInscriptionDate'] != null, 'Required key "InscriptionResponse[dtInscriptionDate]" has a null value in JSON.');
-        assert(json.containsKey(r'dtInscriptionCancellationdate'), 'Required key "InscriptionResponse[dtInscriptionCancellationdate]" is missing from JSON.');
-        assert(json[r'dtInscriptionCancellationdate'] != null, 'Required key "InscriptionResponse[dtInscriptionCancellationdate]" has a null value in JSON.');
-        assert(json.containsKey(r'dtInscriptionInitialexpirationdate'), 'Required key "InscriptionResponse[dtInscriptionInitialexpirationdate]" is missing from JSON.');
-        assert(json[r'dtInscriptionInitialexpirationdate'] != null, 'Required key "InscriptionResponse[dtInscriptionInitialexpirationdate]" has a null value in JSON.');
-        assert(json.containsKey(r'dtInscriptionExpirationdate'), 'Required key "InscriptionResponse[dtInscriptionExpirationdate]" is missing from JSON.');
-        assert(json[r'dtInscriptionExpirationdate'] != null, 'Required key "InscriptionResponse[dtInscriptionExpirationdate]" has a null value in JSON.');
-        assert(json.containsKey(r'dtInscriptionNotarydate'), 'Required key "InscriptionResponse[dtInscriptionNotarydate]" is missing from JSON.');
-        assert(json[r'dtInscriptionNotarydate'] != null, 'Required key "InscriptionResponse[dtInscriptionNotarydate]" has a null value in JSON.');
-        assert(json.containsKey(r'dtInscriptionNotaryentereddate'), 'Required key "InscriptionResponse[dtInscriptionNotaryentereddate]" is missing from JSON.');
-        assert(json[r'dtInscriptionNotaryentereddate'] != null, 'Required key "InscriptionResponse[dtInscriptionNotaryentereddate]" has a null value in JSON.');
         assert(json.containsKey(r'tInscriptionCadastre'), 'Required key "InscriptionResponse[tInscriptionCadastre]" is missing from JSON.');
         assert(json[r'tInscriptionCadastre'] != null, 'Required key "InscriptionResponse[tInscriptionCadastre]" has a null value in JSON.');
         assert(json.containsKey(r'bInscriptionReference'), 'Required key "InscriptionResponse[bInscriptionReference]" is missing from JSON.');
@@ -617,14 +667,12 @@ class InscriptionResponse {
 
       return InscriptionResponse(
         pkiInscriptionID: mapValueOfType<int>(json, r'pkiInscriptionID')!,
-        fkiCompanyID: mapValueOfType<int>(json, r'fkiCompanyID')!,
-        sCompanyNameX: mapValueOfType<String>(json, r'sCompanyNameX'),
-        fkiDepartmentID: mapValueOfType<int>(json, r'fkiDepartmentID')!,
+        fkiDepartmentID: mapValueOfType<int>(json, r'fkiDepartmentID'),
         sDepartmentNameX: mapValueOfType<String>(json, r'sDepartmentNameX'),
         fkiRealestateboardID: mapValueOfType<int>(json, r'fkiRealestateboardID')!,
         sRealestateboardNameX: mapValueOfType<String>(json, r'sRealestateboardNameX'),
         fkiAddressID: mapValueOfType<int>(json, r'fkiAddressID')!,
-        sAddress: mapValueOfType<String>(json, r'sAddress'),
+        objAddress: AddressResponseCompound.fromJson(json[r'objAddress']),
         fkiInscriptionbuildingtypeID: mapValueOfType<int>(json, r'fkiInscriptionbuildingtypeID')!,
         sInscriptionbuildingtypeNameX: mapValueOfType<String>(json, r'sInscriptionbuildingtypeNameX'),
         fkiInscriptiontypeID: mapValueOfType<int>(json, r'fkiInscriptiontypeID')!,
@@ -634,7 +682,7 @@ class InscriptionResponse {
         eInscriptionStep: FieldEInscriptionStep.fromJson(json[r'eInscriptionStep'])!,
         eInscriptionResidenceType: FieldEInscriptionResidenceType.fromJson(json[r'eInscriptionResidenceType'])!,
         sInscriptionCivicend: mapValueOfType<String>(json, r'sInscriptionCivicend')!,
-        sInscriptionMLS: mapValueOfType<String>(json, r'sInscriptionMLS')!,
+        sInscriptionMLS: mapValueOfType<String>(json, r'sInscriptionMLS'),
         sInscriptionContract: mapValueOfType<String>(json, r'sInscriptionContract')!,
         iInscriptionSellerdeclaration: mapValueOfType<int>(json, r'iInscriptionSellerdeclaration')!,
         eInscriptionType: FieldEInscriptionType.fromJson(json[r'eInscriptionType'])!,
@@ -650,12 +698,12 @@ class InscriptionResponse {
         dInscriptionRemunerationreference: mapValueOfType<String>(json, r'dInscriptionRemunerationreference')!,
         dInscriptionRemunerationtotal: mapValueOfType<String>(json, r'dInscriptionRemunerationtotal')!,
         dInscriptionMortgagesold: mapValueOfType<String>(json, r'dInscriptionMortgagesold')!,
-        dtInscriptionDate: mapValueOfType<String>(json, r'dtInscriptionDate')!,
-        dtInscriptionCancellationdate: mapValueOfType<String>(json, r'dtInscriptionCancellationdate')!,
-        dtInscriptionInitialexpirationdate: mapValueOfType<String>(json, r'dtInscriptionInitialexpirationdate')!,
-        dtInscriptionExpirationdate: mapValueOfType<String>(json, r'dtInscriptionExpirationdate')!,
-        dtInscriptionNotarydate: mapValueOfType<String>(json, r'dtInscriptionNotarydate')!,
-        dtInscriptionNotaryentereddate: mapValueOfType<String>(json, r'dtInscriptionNotaryentereddate')!,
+        dtInscriptionDate: mapValueOfType<String>(json, r'dtInscriptionDate'),
+        dtInscriptionCancellationdate: mapValueOfType<String>(json, r'dtInscriptionCancellationdate'),
+        dtInscriptionInitialexpirationdate: mapValueOfType<String>(json, r'dtInscriptionInitialexpirationdate'),
+        dtInscriptionExpirationdate: mapValueOfType<String>(json, r'dtInscriptionExpirationdate'),
+        dtInscriptionNotarydate: mapValueOfType<String>(json, r'dtInscriptionNotarydate'),
+        dtInscriptionNotaryentereddate: mapValueOfType<String>(json, r'dtInscriptionNotaryentereddate'),
         tInscriptionCadastre: mapValueOfType<String>(json, r'tInscriptionCadastre')!,
         bInscriptionReference: mapValueOfType<bool>(json, r'bInscriptionReference')!,
         bInscriptionInspection: mapValueOfType<bool>(json, r'bInscriptionInspection')!,
@@ -671,6 +719,7 @@ class InscriptionResponse {
         bInscriptionSoldwithoutlegalwarranty: mapValueOfType<bool>(json, r'bInscriptionSoldwithoutlegalwarranty')!,
         iInscriptionConstructionyear: mapValueOfType<int>(json, r'iInscriptionConstructionyear')!,
         iInscriptionUnit: mapValueOfType<int>(json, r'iInscriptionUnit')!,
+        objAudit: CommonAudit.fromJson(json[r'objAudit']),
       );
     }
     return null;
@@ -719,8 +768,6 @@ class InscriptionResponse {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'pkiInscriptionID',
-    'fkiCompanyID',
-    'fkiDepartmentID',
     'fkiRealestateboardID',
     'fkiAddressID',
     'fkiInscriptionbuildingtypeID',
@@ -729,7 +776,6 @@ class InscriptionResponse {
     'eInscriptionStep',
     'eInscriptionResidenceType',
     'sInscriptionCivicend',
-    'sInscriptionMLS',
     'sInscriptionContract',
     'iInscriptionSellerdeclaration',
     'eInscriptionType',
@@ -745,12 +791,6 @@ class InscriptionResponse {
     'dInscriptionRemunerationreference',
     'dInscriptionRemunerationtotal',
     'dInscriptionMortgagesold',
-    'dtInscriptionDate',
-    'dtInscriptionCancellationdate',
-    'dtInscriptionInitialexpirationdate',
-    'dtInscriptionExpirationdate',
-    'dtInscriptionNotarydate',
-    'dtInscriptionNotaryentereddate',
     'tInscriptionCadastre',
     'bInscriptionReference',
     'bInscriptionInspection',

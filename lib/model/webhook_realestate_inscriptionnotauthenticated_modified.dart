@@ -15,7 +15,7 @@ class WebhookRealestateInscriptionnotauthenticatedModified {
   WebhookRealestateInscriptionnotauthenticatedModified({
     required this.objWebhook,
     this.aObjAttempt = const [],
-    required this.objEzmaxpartnerproduct,
+    required this.objInscriptionnotauthenticated,
   });
 
   CustomWebhookResponse objWebhook;
@@ -23,29 +23,29 @@ class WebhookRealestateInscriptionnotauthenticatedModified {
   /// An array containing details of previous attempts that were made to deliver the message. The array is empty if it's the first attempt.
   List<AttemptResponseCompound> aObjAttempt;
 
-  InscriptionnotauthenticatedResponse objEzmaxpartnerproduct;
+  InscriptionnotauthenticatedResponse objInscriptionnotauthenticated;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is WebhookRealestateInscriptionnotauthenticatedModified &&
     other.objWebhook == objWebhook &&
     _deepEquality.equals(other.aObjAttempt, aObjAttempt) &&
-    other.objEzmaxpartnerproduct == objEzmaxpartnerproduct;
+    other.objInscriptionnotauthenticated == objInscriptionnotauthenticated;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (objWebhook.hashCode) +
     (aObjAttempt.hashCode) +
-    (objEzmaxpartnerproduct.hashCode);
+    (objInscriptionnotauthenticated.hashCode);
 
   @override
-  String toString() => 'WebhookRealestateInscriptionnotauthenticatedModified[objWebhook=$objWebhook, aObjAttempt=$aObjAttempt, objEzmaxpartnerproduct=$objEzmaxpartnerproduct]';
+  String toString() => 'WebhookRealestateInscriptionnotauthenticatedModified[objWebhook=$objWebhook, aObjAttempt=$aObjAttempt, objInscriptionnotauthenticated=$objInscriptionnotauthenticated]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'objWebhook'] = this.objWebhook;
       json[r'a_objAttempt'] = this.aObjAttempt;
-      json[r'objEzmaxpartnerproduct'] = this.objEzmaxpartnerproduct;
+      json[r'objInscriptionnotauthenticated'] = this.objInscriptionnotauthenticated;
     return json;
   }
 
@@ -64,15 +64,15 @@ class WebhookRealestateInscriptionnotauthenticatedModified {
         assert(json[r'objWebhook'] != null, 'Required key "WebhookRealestateInscriptionnotauthenticatedModified[objWebhook]" has a null value in JSON.');
         assert(json.containsKey(r'a_objAttempt'), 'Required key "WebhookRealestateInscriptionnotauthenticatedModified[a_objAttempt]" is missing from JSON.');
         assert(json[r'a_objAttempt'] != null, 'Required key "WebhookRealestateInscriptionnotauthenticatedModified[a_objAttempt]" has a null value in JSON.');
-        assert(json.containsKey(r'objEzmaxpartnerproduct'), 'Required key "WebhookRealestateInscriptionnotauthenticatedModified[objEzmaxpartnerproduct]" is missing from JSON.');
-        assert(json[r'objEzmaxpartnerproduct'] != null, 'Required key "WebhookRealestateInscriptionnotauthenticatedModified[objEzmaxpartnerproduct]" has a null value in JSON.');
+        assert(json.containsKey(r'objInscriptionnotauthenticated'), 'Required key "WebhookRealestateInscriptionnotauthenticatedModified[objInscriptionnotauthenticated]" is missing from JSON.');
+        assert(json[r'objInscriptionnotauthenticated'] != null, 'Required key "WebhookRealestateInscriptionnotauthenticatedModified[objInscriptionnotauthenticated]" has a null value in JSON.');
         return true;
       }());
 
       return WebhookRealestateInscriptionnotauthenticatedModified(
         objWebhook: CustomWebhookResponse.fromJson(json[r'objWebhook'])!,
         aObjAttempt: AttemptResponseCompound.listFromJson(json[r'a_objAttempt']),
-        objEzmaxpartnerproduct: InscriptionnotauthenticatedResponse.fromJson(json[r'objEzmaxpartnerproduct'])!,
+        objInscriptionnotauthenticated: InscriptionnotauthenticatedResponse.fromJson(json[r'objInscriptionnotauthenticated'])!,
       );
     }
     return null;
@@ -122,7 +122,7 @@ class WebhookRealestateInscriptionnotauthenticatedModified {
   static const requiredKeys = <String>{
     'objWebhook',
     'a_objAttempt',
-    'objEzmaxpartnerproduct',
+    'objInscriptionnotauthenticated',
   };
 }
 

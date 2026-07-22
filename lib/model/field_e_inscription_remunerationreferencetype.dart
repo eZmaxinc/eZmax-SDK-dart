@@ -10,7 +10,7 @@
 
 part of openapi.api;
 
-/// The remunerationreferencetype of the Inscription
+/// The type of remuneration for reference of the Inscription
 enum FieldEInscriptionRemunerationreferencetype {
   percentage._(r'Percentage'),
   dollars._(r'Dollars'),

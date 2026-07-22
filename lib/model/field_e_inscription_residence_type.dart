@@ -10,7 +10,7 @@
 
 part of openapi.api;
 
-/// The residencetype of the Inscription
+/// The residence type of the Inscription
 enum FieldEInscriptionResidenceType {
   principal._(r'Principal'),
   secondary._(r'Secondary'),

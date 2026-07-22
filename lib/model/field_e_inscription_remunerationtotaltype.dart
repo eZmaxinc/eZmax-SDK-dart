@@ -10,7 +10,7 @@
 
 part of openapi.api;
 
-/// The remunerationtotaltype of the Inscription
+/// The type for the remuneration total of the Inscription
 enum FieldEInscriptionRemunerationtotaltype {
   percentage._(r'Percentage'),
   dollars._(r'Dollars'),

@@ -10,7 +10,7 @@
 
 part of openapi.api;
 
-/// The remunerationtype of the Inscriptionnotauthenticated
+/// The type of remuneration of the Inscriptionnotauthenticated
 enum FieldEInscriptionnotauthenticatedRemunerationtype {
   percentage._(r'Percentage'),
   percentageTaxesIncluded._(r'PercentageTaxesIncluded'),

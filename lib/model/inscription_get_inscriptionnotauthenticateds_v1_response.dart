@@ -28,8 +28,7 @@ class InscriptionGetInscriptionnotauthenticatedsV1Response {
   ///
   CommonResponseObjDebug? objDebug;
 
-  /// Response for GET /1/object/inscription/{pkiInscriptionID}/getInscriptionnotauthenticateds
-  Object mPayload;
+  InscriptionGetInscriptionnotauthenticatedsV1ResponseMPayload mPayload;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is InscriptionGetInscriptionnotauthenticatedsV1Response &&
@@ -80,7 +79,7 @@ class InscriptionGetInscriptionnotauthenticatedsV1Response {
       return InscriptionGetInscriptionnotauthenticatedsV1Response(
         objDebugPayload: CommonResponseObjDebugPayload.fromJson(json[r'objDebugPayload'])!,
         objDebug: CommonResponseObjDebug.fromJson(json[r'objDebug']),
-        mPayload: mapValueOfType<Object>(json, r'mPayload')!,
+        mPayload: InscriptionGetInscriptionnotauthenticatedsV1ResponseMPayload.fromJson(json[r'mPayload'])!,
       );
     }
     return null;

@@ -3161,6 +3161,8 @@ class ApiClient {
           return InscriptionGetCommunicationsendersV1ResponseMPayload.fromJson(value);
         case 'InscriptionGetInscriptionnotauthenticatedsV1Response':
           return InscriptionGetInscriptionnotauthenticatedsV1Response.fromJson(value);
+        case 'InscriptionGetInscriptionnotauthenticatedsV1ResponseMPayload':
+          return InscriptionGetInscriptionnotauthenticatedsV1ResponseMPayload.fromJson(value);
         case 'InscriptionGetListV1Response':
           return InscriptionGetListV1Response.fromJson(value);
         case 'InscriptionGetListV1ResponseMPayload':

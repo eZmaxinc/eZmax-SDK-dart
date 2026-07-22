@@ -1658,6 +1658,7 @@ part 'model/inscription_get_communicationrecipients_v1_response_m_payload.dart';
 part 'model/inscription_get_communicationsenders_v1_response.dart';
 part 'model/inscription_get_communicationsenders_v1_response_m_payload.dart';
 part 'model/inscription_get_inscriptionnotauthenticateds_v1_response.dart';
+part 'model/inscription_get_inscriptionnotauthenticateds_v1_response_m_payload.dart';
 part 'model/inscription_get_list_v1_response.dart';
 part 'model/inscription_get_list_v1_response_m_payload.dart';
 part 'model/inscription_get_object_v2_response.dart';

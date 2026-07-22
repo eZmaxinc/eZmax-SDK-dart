@@ -10,7 +10,7 @@
 
 part of openapi.api;
 
-/// The remunerationinscriptorsellertype of the Inscription
+/// The type of remuneration for inscriptor and seller of the Inscription
 enum FieldEInscriptionRemunerationinscriptorsellertype {
   percentage._(r'Percentage'),
   dollars._(r'Dollars'),

@@ -123,7 +123,7 @@ class InscriptionnotauthenticatedListElement {
 
   FieldEInscriptionType eInscriptionType;
 
-  /// The civicend of the Inscription
+  /// The address civic end of the Inscription
   String sInscriptionCivicend;
 
   /// The mls of the Inscription
@@ -147,7 +147,7 @@ class InscriptionnotauthenticatedListElement {
   /// The saleprice of the Inscription
   String dInscriptionSaleprice;
 
-  /// The rentprice of the Inscription
+  /// The rent price of the Inscription
   String dInscriptionRentprice;
 
   /// The date of the Inscription
@@ -159,7 +159,7 @@ class InscriptionnotauthenticatedListElement {
   ///
   String? dtInscriptionDate;
 
-  /// The expirationdate of the Inscription
+  /// The expiration date of the Inscription
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -168,7 +168,7 @@ class InscriptionnotauthenticatedListElement {
   ///
   String? dtInscriptionExpirationdate;
 
-  /// The notarydate of the Inscription
+  /// The notary date of the Inscription
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -192,7 +192,7 @@ class InscriptionnotauthenticatedListElement {
   /// Whether the inscription is archived or not
   bool bInscriptionArchived;
 
-  /// The notaryscheduledate of the Inscriptionnotauthenticated
+  /// The notary schedule date of the Inscriptionnotauthenticated
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -201,7 +201,7 @@ class InscriptionnotauthenticatedListElement {
   ///
   String? dtInscriptionnotauthenticatedNotaryscheduledate;
 
-  /// The transactiondate of the Inscriptionnotauthenticated
+  /// The transaction date of the Inscriptionnotauthenticated
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -210,7 +210,7 @@ class InscriptionnotauthenticatedListElement {
   ///
   String? dtInscriptionnotauthenticatedTransactiondate;
 
-  /// The transactiondatereal of the Inscriptionnotauthenticated
+  /// The real transactiondate of the Inscriptionnotauthenticated
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -237,7 +237,7 @@ class InscriptionnotauthenticatedListElement {
   ///
   bool? bInscriptionnotauthenticatedIsactive;
 
-  /// Whether the inscriptionnotauthenticated is a draft or not
+  /// Whether the Inscriptionnotauthenticated is a draft or not
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -331,10 +331,10 @@ class InscriptionnotauthenticatedListElement {
   ///
   String? sCountryNameX;
 
-  /// The Offer to purchase number
+  /// The offer to purchase number of the Inscriptionnotauthenticated
   String sInscriptionnotauthenticatedOffertopurchasenumber;
 
-  /// The unit of the Inscription
+  /// The number of unit for the Inscription
   ///
   /// Minimum value: 0
   /// Maximum value: 255

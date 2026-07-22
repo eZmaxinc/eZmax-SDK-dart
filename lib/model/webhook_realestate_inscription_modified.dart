@@ -15,7 +15,7 @@ class WebhookRealestateInscriptionModified {
   WebhookRealestateInscriptionModified({
     required this.objWebhook,
     this.aObjAttempt = const [],
-    required this.objEzmaxpartnerproduct,
+    required this.objInscription,
   });
 
   CustomWebhookResponse objWebhook;
@@ -23,29 +23,29 @@ class WebhookRealestateInscriptionModified {
   /// An array containing details of previous attempts that were made to deliver the message. The array is empty if it's the first attempt.
   List<AttemptResponseCompound> aObjAttempt;
 
-  InscriptionResponse objEzmaxpartnerproduct;
+  InscriptionResponse objInscription;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is WebhookRealestateInscriptionModified &&
     other.objWebhook == objWebhook &&
     _deepEquality.equals(other.aObjAttempt, aObjAttempt) &&
-    other.objEzmaxpartnerproduct == objEzmaxpartnerproduct;
+    other.objInscription == objInscription;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (objWebhook.hashCode) +
     (aObjAttempt.hashCode) +
-    (objEzmaxpartnerproduct.hashCode);
+    (objInscription.hashCode);
 
   @override
-  String toString() => 'WebhookRealestateInscriptionModified[objWebhook=$objWebhook, aObjAttempt=$aObjAttempt, objEzmaxpartnerproduct=$objEzmaxpartnerproduct]';
+  String toString() => 'WebhookRealestateInscriptionModified[objWebhook=$objWebhook, aObjAttempt=$aObjAttempt, objInscription=$objInscription]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'objWebhook'] = this.objWebhook;
       json[r'a_objAttempt'] = this.aObjAttempt;
-      json[r'objEzmaxpartnerproduct'] = this.objEzmaxpartnerproduct;
+      json[r'objInscription'] = this.objInscription;
     return json;
   }
 
@@ -64,15 +64,15 @@ class WebhookRealestateInscriptionModified {
         assert(json[r'objWebhook'] != null, 'Required key "WebhookRealestateInscriptionModified[objWebhook]" has a null value in JSON.');
         assert(json.containsKey(r'a_objAttempt'), 'Required key "WebhookRealestateInscriptionModified[a_objAttempt]" is missing from JSON.');
         assert(json[r'a_objAttempt'] != null, 'Required key "WebhookRealestateInscriptionModified[a_objAttempt]" has a null value in JSON.');
-        assert(json.containsKey(r'objEzmaxpartnerproduct'), 'Required key "WebhookRealestateInscriptionModified[objEzmaxpartnerproduct]" is missing from JSON.');
-        assert(json[r'objEzmaxpartnerproduct'] != null, 'Required key "WebhookRealestateInscriptionModified[objEzmaxpartnerproduct]" has a null value in JSON.');
+        assert(json.containsKey(r'objInscription'), 'Required key "WebhookRealestateInscriptionModified[objInscription]" is missing from JSON.');
+        assert(json[r'objInscription'] != null, 'Required key "WebhookRealestateInscriptionModified[objInscription]" has a null value in JSON.');
         return true;
       }());
 
       return WebhookRealestateInscriptionModified(
         objWebhook: CustomWebhookResponse.fromJson(json[r'objWebhook'])!,
         aObjAttempt: AttemptResponseCompound.listFromJson(json[r'a_objAttempt']),
-        objEzmaxpartnerproduct: InscriptionResponse.fromJson(json[r'objEzmaxpartnerproduct'])!,
+        objInscription: InscriptionResponse.fromJson(json[r'objInscription'])!,
       );
     }
     return null;
@@ -122,7 +122,7 @@ class WebhookRealestateInscriptionModified {
   static const requiredKeys = <String>{
     'objWebhook',
     'a_objAttempt',
-    'objEzmaxpartnerproduct',
+    'objInscription',
   };
 }
 

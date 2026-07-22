@@ -14,22 +14,20 @@ class InscriptionnotauthenticatedResponseCompound {
   /// Returns a new [InscriptionnotauthenticatedResponseCompound] instance.
   InscriptionnotauthenticatedResponseCompound({
     required this.pkiInscriptionnotauthenticatedID,
-    required this.fkiCompanyID,
-    this.sCompanyNameX,
     required this.fkiInscriptionID,
-    required this.fkiDepartmentID,
+    this.fkiDepartmentID,
     this.sDepartmentNameX,
-    required this.fkiFinancialinstitutionID,
+    this.fkiFinancialinstitutionID,
     this.sFinancialinstitutionNameX,
-    required this.fkiBuyercontractID,
+    this.fkiBuyercontractID,
     this.sBuyercontractContract,
-    required this.fkiMortgagesupplierID,
+    this.fkiMortgagesupplierID,
     this.sMortgagesupplierNameX,
     required this.fkiTaxassignmentID,
     this.sTaxassignmentDescriptionX,
-    required this.dtInscriptionnotauthenticatedTransactiondate,
-    required this.dtInscriptionnotauthenticatedTransactiondateReal,
-    required this.dtInscriptionnotauthenticatedDepositdate,
+    this.dtInscriptionnotauthenticatedTransactiondate,
+    this.dtInscriptionnotauthenticatedTransactiondateReal,
+    this.dtInscriptionnotauthenticatedDepositdate,
     required this.eInscriptionnotauthenticatedType,
     required this.dInscriptionnotauthenticatedMortgageloan,
     required this.etInscriptionnotauthenticatedMortgagetype,
@@ -38,16 +36,16 @@ class InscriptionnotauthenticatedResponseCompound {
     required this.dInscriptionnotauthenticatedRemuneration,
     required this.dInscriptionnotauthenticatedRemunerationsubtotal,
     required this.dInscriptionnotauthenticatedRemunerationtotal,
-    required this.dtInscriptionnotauthenticatedCancellationdate,
-    required this.dtInscriptionnotauthenticatedPossessiondate,
+    this.dtInscriptionnotauthenticatedCancellationdate,
+    this.dtInscriptionnotauthenticatedPossessiondate,
     required this.sInscriptionnotauthenticatedOffertopurchasenumber,
-    required this.dtInscriptionnotauthenticatedNotaryscheduledate,
-    required this.dtInscriptionnotauthenticatedFinancingscheduledate,
+    this.dtInscriptionnotauthenticatedNotaryscheduledate,
+    this.dtInscriptionnotauthenticatedFinancingscheduledate,
     required this.bInscriptionnotauthenticatedConditional,
     required this.bInscriptionnotauthenticatedMortgageisreferenced,
     required this.bInscriptionnotauthenticatedHomeowner,
     required this.tInscriptionnotauthenticatedConditions,
-    required this.dtInscriptionnotauthenticatedConditiondeadlinedate,
+    this.dtInscriptionnotauthenticatedConditiondeadlinedate,
     required this.iInscriptionnotauthenticatedOrder,
     required this.bInscriptionnotauthenticatedIsactive,
     required this.eInscriptionnotauthenticatedResidenceType,
@@ -61,21 +59,6 @@ class InscriptionnotauthenticatedResponseCompound {
   /// Minimum value: 0
   int pkiInscriptionnotauthenticatedID;
 
-  /// The unique ID of the Company
-  ///
-  /// Minimum value: 1
-  /// Maximum value: 255
-  int fkiCompanyID;
-
-  /// The Name of the Company in the language of the requester
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  String? sCompanyNameX;
-
   /// The unique ID of the Inscription.
   ///
   /// Minimum value: 0
@@ -84,7 +67,13 @@ class InscriptionnotauthenticatedResponseCompound {
   /// The unique ID of the Department
   ///
   /// Minimum value: 0
-  int fkiDepartmentID;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiDepartmentID;
 
   /// The Name of the Department in the language of the requester
   ///
@@ -99,7 +88,13 @@ class InscriptionnotauthenticatedResponseCompound {
   ///
   /// Minimum value: 0
   /// Maximum value: 65535
-  int fkiFinancialinstitutionID;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiFinancialinstitutionID;
 
   /// The name of the Financialinstitution in the language of the requester
   ///
@@ -114,7 +109,13 @@ class InscriptionnotauthenticatedResponseCompound {
   ///
   /// Minimum value: 1
   /// Maximum value: 65535
-  int fkiBuyercontractID;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiBuyercontractID;
 
   /// The number of the Buyercontract
   ///
@@ -129,7 +130,13 @@ class InscriptionnotauthenticatedResponseCompound {
   ///
   /// Minimum value: 0
   /// Maximum value: 255
-  int fkiMortgagesupplierID;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiMortgagesupplierID;
 
   /// The name of the Mortagesupplier in the language of the requester
   ///
@@ -155,65 +162,113 @@ class InscriptionnotauthenticatedResponseCompound {
   ///
   String? sTaxassignmentDescriptionX;
 
-  /// The transactiondate of the Inscriptionnotauthenticated
-  String dtInscriptionnotauthenticatedTransactiondate;
+  /// The transaction date of the Inscriptionnotauthenticated
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? dtInscriptionnotauthenticatedTransactiondate;
 
-  /// The transactiondatereal of the Inscriptionnotauthenticated
-  String dtInscriptionnotauthenticatedTransactiondateReal;
+  /// The real transactiondate of the Inscriptionnotauthenticated
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? dtInscriptionnotauthenticatedTransactiondateReal;
 
-  /// The depositdate of the Inscriptionnotauthenticated
-  String dtInscriptionnotauthenticatedDepositdate;
+  /// The deposit date of the Inscriptionnotauthenticated
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? dtInscriptionnotauthenticatedDepositdate;
 
   FieldEInscriptionnotauthenticatedType eInscriptionnotauthenticatedType;
 
-  /// The mortgageloan of the Inscriptionnotauthenticated
+  /// The amount of the mortgage loan of the Inscriptionnotauthenticated
   String dInscriptionnotauthenticatedMortgageloan;
 
   FieldEtInscriptionnotauthenticatedMortgagetype etInscriptionnotauthenticatedMortgagetype;
 
-  /// The transactionprice of the Inscriptionnotauthenticated
+  /// The transaction price of the Inscriptionnotauthenticated
   String dInscriptionnotauthenticatedTransactionprice;
 
   FieldEInscriptionnotauthenticatedRemunerationtype eInscriptionnotauthenticatedRemunerationtype;
 
-  /// The remuneration of the Inscriptionnotauthenticated
+  /// The amount for the remuneration of the Inscriptionnotauthenticated
   String dInscriptionnotauthenticatedRemuneration;
 
-  /// The remunerationsubtotal of the Inscriptionnotauthenticated
+  /// The subtotal for the remuneration of the Inscriptionnotauthenticated
   String dInscriptionnotauthenticatedRemunerationsubtotal;
 
-  /// The remunerationtotal of the Inscriptionnotauthenticated
+  /// The total for the remuneration of the Inscriptionnotauthenticated
   String dInscriptionnotauthenticatedRemunerationtotal;
 
-  /// The cancellationdate of the Inscriptionnotauthenticated
-  String dtInscriptionnotauthenticatedCancellationdate;
+  /// The cancellation date of the Inscriptionnotauthenticated
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? dtInscriptionnotauthenticatedCancellationdate;
 
-  /// The possessiondate of the Inscriptionnotauthenticated
-  String dtInscriptionnotauthenticatedPossessiondate;
+  /// The possession date of the Inscriptionnotauthenticated
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? dtInscriptionnotauthenticatedPossessiondate;
 
-  /// The Offer to purchase number
+  /// The offer to purchase number of the Inscriptionnotauthenticated
   String sInscriptionnotauthenticatedOffertopurchasenumber;
 
-  /// The notaryscheduledate of the Inscriptionnotauthenticated
-  String dtInscriptionnotauthenticatedNotaryscheduledate;
+  /// The notary schedule date of the Inscriptionnotauthenticated
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? dtInscriptionnotauthenticatedNotaryscheduledate;
 
-  /// The financingscheduledate of the Inscriptionnotauthenticated
-  String dtInscriptionnotauthenticatedFinancingscheduledate;
+  /// The financing schedule date of the Inscriptionnotauthenticated
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? dtInscriptionnotauthenticatedFinancingscheduledate;
 
   /// Whether the inscriptionnotauthenticated is conditional
   bool bInscriptionnotauthenticatedConditional;
 
-  /// Whether if it's an mortgageisreferenced
+  /// Whether if the mortgage is referenced
   bool bInscriptionnotauthenticatedMortgageisreferenced;
 
-  /// Whether if it's an homeowner
+  /// Whether if it's an home owner
   bool bInscriptionnotauthenticatedHomeowner;
 
   /// The conditions of the Inscriptionnotauthenticated
   String tInscriptionnotauthenticatedConditions;
 
-  /// The conditiondeadlinedate of the Inscriptionnotauthenticated
-  String dtInscriptionnotauthenticatedConditiondeadlinedate;
+  /// The condition deadline date of the Inscriptionnotauthenticated
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? dtInscriptionnotauthenticatedConditiondeadlinedate;
 
   /// The order of the Inscriptionnotauthenticated
   ///
@@ -226,20 +281,18 @@ class InscriptionnotauthenticatedResponseCompound {
 
   FieldEInscriptionnotauthenticatedResidenceType eInscriptionnotauthenticatedResidenceType;
 
-  /// The checklistnote of the Inscriptionnotauthenticated
+  /// The checklist note of the Inscriptionnotauthenticated
   String tInscriptionnotauthenticatedChecklistnote;
 
-  /// The selleronlyretribution of the Inscriptionnotauthenticated
+  /// The amount retribution for the seller only of the Inscriptionnotauthenticated
   String dInscriptionnotauthenticatedSelleronlyretribution;
 
-  /// Whether the inscriptionnotauthenticated is a draft or not
+  /// Whether the Inscriptionnotauthenticated is a draft or not
   bool bInscriptionnotauthenticatedDraft;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is InscriptionnotauthenticatedResponseCompound &&
     other.pkiInscriptionnotauthenticatedID == pkiInscriptionnotauthenticatedID &&
-    other.fkiCompanyID == fkiCompanyID &&
-    other.sCompanyNameX == sCompanyNameX &&
     other.fkiInscriptionID == fkiInscriptionID &&
     other.fkiDepartmentID == fkiDepartmentID &&
     other.sDepartmentNameX == sDepartmentNameX &&
@@ -283,22 +336,20 @@ class InscriptionnotauthenticatedResponseCompound {
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiInscriptionnotauthenticatedID.hashCode) +
-    (fkiCompanyID.hashCode) +
-    (sCompanyNameX == null ? 0 : sCompanyNameX!.hashCode) +
     (fkiInscriptionID.hashCode) +
-    (fkiDepartmentID.hashCode) +
+    (fkiDepartmentID == null ? 0 : fkiDepartmentID!.hashCode) +
     (sDepartmentNameX == null ? 0 : sDepartmentNameX!.hashCode) +
-    (fkiFinancialinstitutionID.hashCode) +
+    (fkiFinancialinstitutionID == null ? 0 : fkiFinancialinstitutionID!.hashCode) +
     (sFinancialinstitutionNameX == null ? 0 : sFinancialinstitutionNameX!.hashCode) +
-    (fkiBuyercontractID.hashCode) +
+    (fkiBuyercontractID == null ? 0 : fkiBuyercontractID!.hashCode) +
     (sBuyercontractContract == null ? 0 : sBuyercontractContract!.hashCode) +
-    (fkiMortgagesupplierID.hashCode) +
+    (fkiMortgagesupplierID == null ? 0 : fkiMortgagesupplierID!.hashCode) +
     (sMortgagesupplierNameX == null ? 0 : sMortgagesupplierNameX!.hashCode) +
     (fkiTaxassignmentID.hashCode) +
     (sTaxassignmentDescriptionX == null ? 0 : sTaxassignmentDescriptionX!.hashCode) +
-    (dtInscriptionnotauthenticatedTransactiondate.hashCode) +
-    (dtInscriptionnotauthenticatedTransactiondateReal.hashCode) +
-    (dtInscriptionnotauthenticatedDepositdate.hashCode) +
+    (dtInscriptionnotauthenticatedTransactiondate == null ? 0 : dtInscriptionnotauthenticatedTransactiondate!.hashCode) +
+    (dtInscriptionnotauthenticatedTransactiondateReal == null ? 0 : dtInscriptionnotauthenticatedTransactiondateReal!.hashCode) +
+    (dtInscriptionnotauthenticatedDepositdate == null ? 0 : dtInscriptionnotauthenticatedDepositdate!.hashCode) +
     (eInscriptionnotauthenticatedType.hashCode) +
     (dInscriptionnotauthenticatedMortgageloan.hashCode) +
     (etInscriptionnotauthenticatedMortgagetype.hashCode) +
@@ -307,16 +358,16 @@ class InscriptionnotauthenticatedResponseCompound {
     (dInscriptionnotauthenticatedRemuneration.hashCode) +
     (dInscriptionnotauthenticatedRemunerationsubtotal.hashCode) +
     (dInscriptionnotauthenticatedRemunerationtotal.hashCode) +
-    (dtInscriptionnotauthenticatedCancellationdate.hashCode) +
-    (dtInscriptionnotauthenticatedPossessiondate.hashCode) +
+    (dtInscriptionnotauthenticatedCancellationdate == null ? 0 : dtInscriptionnotauthenticatedCancellationdate!.hashCode) +
+    (dtInscriptionnotauthenticatedPossessiondate == null ? 0 : dtInscriptionnotauthenticatedPossessiondate!.hashCode) +
     (sInscriptionnotauthenticatedOffertopurchasenumber.hashCode) +
-    (dtInscriptionnotauthenticatedNotaryscheduledate.hashCode) +
-    (dtInscriptionnotauthenticatedFinancingscheduledate.hashCode) +
+    (dtInscriptionnotauthenticatedNotaryscheduledate == null ? 0 : dtInscriptionnotauthenticatedNotaryscheduledate!.hashCode) +
+    (dtInscriptionnotauthenticatedFinancingscheduledate == null ? 0 : dtInscriptionnotauthenticatedFinancingscheduledate!.hashCode) +
     (bInscriptionnotauthenticatedConditional.hashCode) +
     (bInscriptionnotauthenticatedMortgageisreferenced.hashCode) +
     (bInscriptionnotauthenticatedHomeowner.hashCode) +
     (tInscriptionnotauthenticatedConditions.hashCode) +
-    (dtInscriptionnotauthenticatedConditiondeadlinedate.hashCode) +
+    (dtInscriptionnotauthenticatedConditiondeadlinedate == null ? 0 : dtInscriptionnotauthenticatedConditiondeadlinedate!.hashCode) +
     (iInscriptionnotauthenticatedOrder.hashCode) +
     (bInscriptionnotauthenticatedIsactive.hashCode) +
     (eInscriptionnotauthenticatedResidenceType.hashCode) +
@@ -325,37 +376,47 @@ class InscriptionnotauthenticatedResponseCompound {
     (bInscriptionnotauthenticatedDraft.hashCode);
 
   @override
-  String toString() => 'InscriptionnotauthenticatedResponseCompound[pkiInscriptionnotauthenticatedID=$pkiInscriptionnotauthenticatedID, fkiCompanyID=$fkiCompanyID, sCompanyNameX=$sCompanyNameX, fkiInscriptionID=$fkiInscriptionID, fkiDepartmentID=$fkiDepartmentID, sDepartmentNameX=$sDepartmentNameX, fkiFinancialinstitutionID=$fkiFinancialinstitutionID, sFinancialinstitutionNameX=$sFinancialinstitutionNameX, fkiBuyercontractID=$fkiBuyercontractID, sBuyercontractContract=$sBuyercontractContract, fkiMortgagesupplierID=$fkiMortgagesupplierID, sMortgagesupplierNameX=$sMortgagesupplierNameX, fkiTaxassignmentID=$fkiTaxassignmentID, sTaxassignmentDescriptionX=$sTaxassignmentDescriptionX, dtInscriptionnotauthenticatedTransactiondate=$dtInscriptionnotauthenticatedTransactiondate, dtInscriptionnotauthenticatedTransactiondateReal=$dtInscriptionnotauthenticatedTransactiondateReal, dtInscriptionnotauthenticatedDepositdate=$dtInscriptionnotauthenticatedDepositdate, eInscriptionnotauthenticatedType=$eInscriptionnotauthenticatedType, dInscriptionnotauthenticatedMortgageloan=$dInscriptionnotauthenticatedMortgageloan, etInscriptionnotauthenticatedMortgagetype=$etInscriptionnotauthenticatedMortgagetype, dInscriptionnotauthenticatedTransactionprice=$dInscriptionnotauthenticatedTransactionprice, eInscriptionnotauthenticatedRemunerationtype=$eInscriptionnotauthenticatedRemunerationtype, dInscriptionnotauthenticatedRemuneration=$dInscriptionnotauthenticatedRemuneration, dInscriptionnotauthenticatedRemunerationsubtotal=$dInscriptionnotauthenticatedRemunerationsubtotal, dInscriptionnotauthenticatedRemunerationtotal=$dInscriptionnotauthenticatedRemunerationtotal, dtInscriptionnotauthenticatedCancellationdate=$dtInscriptionnotauthenticatedCancellationdate, dtInscriptionnotauthenticatedPossessiondate=$dtInscriptionnotauthenticatedPossessiondate, sInscriptionnotauthenticatedOffertopurchasenumber=$sInscriptionnotauthenticatedOffertopurchasenumber, dtInscriptionnotauthenticatedNotaryscheduledate=$dtInscriptionnotauthenticatedNotaryscheduledate, dtInscriptionnotauthenticatedFinancingscheduledate=$dtInscriptionnotauthenticatedFinancingscheduledate, bInscriptionnotauthenticatedConditional=$bInscriptionnotauthenticatedConditional, bInscriptionnotauthenticatedMortgageisreferenced=$bInscriptionnotauthenticatedMortgageisreferenced, bInscriptionnotauthenticatedHomeowner=$bInscriptionnotauthenticatedHomeowner, tInscriptionnotauthenticatedConditions=$tInscriptionnotauthenticatedConditions, dtInscriptionnotauthenticatedConditiondeadlinedate=$dtInscriptionnotauthenticatedConditiondeadlinedate, iInscriptionnotauthenticatedOrder=$iInscriptionnotauthenticatedOrder, bInscriptionnotauthenticatedIsactive=$bInscriptionnotauthenticatedIsactive, eInscriptionnotauthenticatedResidenceType=$eInscriptionnotauthenticatedResidenceType, tInscriptionnotauthenticatedChecklistnote=$tInscriptionnotauthenticatedChecklistnote, dInscriptionnotauthenticatedSelleronlyretribution=$dInscriptionnotauthenticatedSelleronlyretribution, bInscriptionnotauthenticatedDraft=$bInscriptionnotauthenticatedDraft]';
+  String toString() => 'InscriptionnotauthenticatedResponseCompound[pkiInscriptionnotauthenticatedID=$pkiInscriptionnotauthenticatedID, fkiInscriptionID=$fkiInscriptionID, fkiDepartmentID=$fkiDepartmentID, sDepartmentNameX=$sDepartmentNameX, fkiFinancialinstitutionID=$fkiFinancialinstitutionID, sFinancialinstitutionNameX=$sFinancialinstitutionNameX, fkiBuyercontractID=$fkiBuyercontractID, sBuyercontractContract=$sBuyercontractContract, fkiMortgagesupplierID=$fkiMortgagesupplierID, sMortgagesupplierNameX=$sMortgagesupplierNameX, fkiTaxassignmentID=$fkiTaxassignmentID, sTaxassignmentDescriptionX=$sTaxassignmentDescriptionX, dtInscriptionnotauthenticatedTransactiondate=$dtInscriptionnotauthenticatedTransactiondate, dtInscriptionnotauthenticatedTransactiondateReal=$dtInscriptionnotauthenticatedTransactiondateReal, dtInscriptionnotauthenticatedDepositdate=$dtInscriptionnotauthenticatedDepositdate, eInscriptionnotauthenticatedType=$eInscriptionnotauthenticatedType, dInscriptionnotauthenticatedMortgageloan=$dInscriptionnotauthenticatedMortgageloan, etInscriptionnotauthenticatedMortgagetype=$etInscriptionnotauthenticatedMortgagetype, dInscriptionnotauthenticatedTransactionprice=$dInscriptionnotauthenticatedTransactionprice, eInscriptionnotauthenticatedRemunerationtype=$eInscriptionnotauthenticatedRemunerationtype, dInscriptionnotauthenticatedRemuneration=$dInscriptionnotauthenticatedRemuneration, dInscriptionnotauthenticatedRemunerationsubtotal=$dInscriptionnotauthenticatedRemunerationsubtotal, dInscriptionnotauthenticatedRemunerationtotal=$dInscriptionnotauthenticatedRemunerationtotal, dtInscriptionnotauthenticatedCancellationdate=$dtInscriptionnotauthenticatedCancellationdate, dtInscriptionnotauthenticatedPossessiondate=$dtInscriptionnotauthenticatedPossessiondate, sInscriptionnotauthenticatedOffertopurchasenumber=$sInscriptionnotauthenticatedOffertopurchasenumber, dtInscriptionnotauthenticatedNotaryscheduledate=$dtInscriptionnotauthenticatedNotaryscheduledate, dtInscriptionnotauthenticatedFinancingscheduledate=$dtInscriptionnotauthenticatedFinancingscheduledate, bInscriptionnotauthenticatedConditional=$bInscriptionnotauthenticatedConditional, bInscriptionnotauthenticatedMortgageisreferenced=$bInscriptionnotauthenticatedMortgageisreferenced, bInscriptionnotauthenticatedHomeowner=$bInscriptionnotauthenticatedHomeowner, tInscriptionnotauthenticatedConditions=$tInscriptionnotauthenticatedConditions, dtInscriptionnotauthenticatedConditiondeadlinedate=$dtInscriptionnotauthenticatedConditiondeadlinedate, iInscriptionnotauthenticatedOrder=$iInscriptionnotauthenticatedOrder, bInscriptionnotauthenticatedIsactive=$bInscriptionnotauthenticatedIsactive, eInscriptionnotauthenticatedResidenceType=$eInscriptionnotauthenticatedResidenceType, tInscriptionnotauthenticatedChecklistnote=$tInscriptionnotauthenticatedChecklistnote, dInscriptionnotauthenticatedSelleronlyretribution=$dInscriptionnotauthenticatedSelleronlyretribution, bInscriptionnotauthenticatedDraft=$bInscriptionnotauthenticatedDraft]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiInscriptionnotauthenticatedID'] = this.pkiInscriptionnotauthenticatedID;
-      json[r'fkiCompanyID'] = this.fkiCompanyID;
-    if (this.sCompanyNameX != null) {
-      json[r'sCompanyNameX'] = this.sCompanyNameX;
-    } else {
-      json[r'sCompanyNameX'] = null;
-    }
       json[r'fkiInscriptionID'] = this.fkiInscriptionID;
+    if (this.fkiDepartmentID != null) {
       json[r'fkiDepartmentID'] = this.fkiDepartmentID;
+    } else {
+      json[r'fkiDepartmentID'] = null;
+    }
     if (this.sDepartmentNameX != null) {
       json[r'sDepartmentNameX'] = this.sDepartmentNameX;
     } else {
       json[r'sDepartmentNameX'] = null;
     }
+    if (this.fkiFinancialinstitutionID != null) {
       json[r'fkiFinancialinstitutionID'] = this.fkiFinancialinstitutionID;
+    } else {
+      json[r'fkiFinancialinstitutionID'] = null;
+    }
     if (this.sFinancialinstitutionNameX != null) {
       json[r'sFinancialinstitutionNameX'] = this.sFinancialinstitutionNameX;
     } else {
       json[r'sFinancialinstitutionNameX'] = null;
     }
+    if (this.fkiBuyercontractID != null) {
       json[r'fkiBuyercontractID'] = this.fkiBuyercontractID;
+    } else {
+      json[r'fkiBuyercontractID'] = null;
+    }
     if (this.sBuyercontractContract != null) {
       json[r'sBuyercontractContract'] = this.sBuyercontractContract;
     } else {
       json[r'sBuyercontractContract'] = null;
     }
+    if (this.fkiMortgagesupplierID != null) {
       json[r'fkiMortgagesupplierID'] = this.fkiMortgagesupplierID;
+    } else {
+      json[r'fkiMortgagesupplierID'] = null;
+    }
     if (this.sMortgagesupplierNameX != null) {
       json[r'sMortgagesupplierNameX'] = this.sMortgagesupplierNameX;
     } else {
@@ -367,9 +428,21 @@ class InscriptionnotauthenticatedResponseCompound {
     } else {
       json[r'sTaxassignmentDescriptionX'] = null;
     }
+    if (this.dtInscriptionnotauthenticatedTransactiondate != null) {
       json[r'dtInscriptionnotauthenticatedTransactiondate'] = this.dtInscriptionnotauthenticatedTransactiondate;
+    } else {
+      json[r'dtInscriptionnotauthenticatedTransactiondate'] = null;
+    }
+    if (this.dtInscriptionnotauthenticatedTransactiondateReal != null) {
       json[r'dtInscriptionnotauthenticatedTransactiondateReal'] = this.dtInscriptionnotauthenticatedTransactiondateReal;
+    } else {
+      json[r'dtInscriptionnotauthenticatedTransactiondateReal'] = null;
+    }
+    if (this.dtInscriptionnotauthenticatedDepositdate != null) {
       json[r'dtInscriptionnotauthenticatedDepositdate'] = this.dtInscriptionnotauthenticatedDepositdate;
+    } else {
+      json[r'dtInscriptionnotauthenticatedDepositdate'] = null;
+    }
       json[r'eInscriptionnotauthenticatedType'] = this.eInscriptionnotauthenticatedType;
       json[r'dInscriptionnotauthenticatedMortgageloan'] = this.dInscriptionnotauthenticatedMortgageloan;
       json[r'etInscriptionnotauthenticatedMortgagetype'] = this.etInscriptionnotauthenticatedMortgagetype;
@@ -378,16 +451,36 @@ class InscriptionnotauthenticatedResponseCompound {
       json[r'dInscriptionnotauthenticatedRemuneration'] = this.dInscriptionnotauthenticatedRemuneration;
       json[r'dInscriptionnotauthenticatedRemunerationsubtotal'] = this.dInscriptionnotauthenticatedRemunerationsubtotal;
       json[r'dInscriptionnotauthenticatedRemunerationtotal'] = this.dInscriptionnotauthenticatedRemunerationtotal;
+    if (this.dtInscriptionnotauthenticatedCancellationdate != null) {
       json[r'dtInscriptionnotauthenticatedCancellationdate'] = this.dtInscriptionnotauthenticatedCancellationdate;
+    } else {
+      json[r'dtInscriptionnotauthenticatedCancellationdate'] = null;
+    }
+    if (this.dtInscriptionnotauthenticatedPossessiondate != null) {
       json[r'dtInscriptionnotauthenticatedPossessiondate'] = this.dtInscriptionnotauthenticatedPossessiondate;
+    } else {
+      json[r'dtInscriptionnotauthenticatedPossessiondate'] = null;
+    }
       json[r'sInscriptionnotauthenticatedOffertopurchasenumber'] = this.sInscriptionnotauthenticatedOffertopurchasenumber;
+    if (this.dtInscriptionnotauthenticatedNotaryscheduledate != null) {
       json[r'dtInscriptionnotauthenticatedNotaryscheduledate'] = this.dtInscriptionnotauthenticatedNotaryscheduledate;
+    } else {
+      json[r'dtInscriptionnotauthenticatedNotaryscheduledate'] = null;
+    }
+    if (this.dtInscriptionnotauthenticatedFinancingscheduledate != null) {
       json[r'dtInscriptionnotauthenticatedFinancingscheduledate'] = this.dtInscriptionnotauthenticatedFinancingscheduledate;
+    } else {
+      json[r'dtInscriptionnotauthenticatedFinancingscheduledate'] = null;
+    }
       json[r'bInscriptionnotauthenticatedConditional'] = this.bInscriptionnotauthenticatedConditional;
       json[r'bInscriptionnotauthenticatedMortgageisreferenced'] = this.bInscriptionnotauthenticatedMortgageisreferenced;
       json[r'bInscriptionnotauthenticatedHomeowner'] = this.bInscriptionnotauthenticatedHomeowner;
       json[r'tInscriptionnotauthenticatedConditions'] = this.tInscriptionnotauthenticatedConditions;
+    if (this.dtInscriptionnotauthenticatedConditiondeadlinedate != null) {
       json[r'dtInscriptionnotauthenticatedConditiondeadlinedate'] = this.dtInscriptionnotauthenticatedConditiondeadlinedate;
+    } else {
+      json[r'dtInscriptionnotauthenticatedConditiondeadlinedate'] = null;
+    }
       json[r'iInscriptionnotauthenticatedOrder'] = this.iInscriptionnotauthenticatedOrder;
       json[r'bInscriptionnotauthenticatedIsactive'] = this.bInscriptionnotauthenticatedIsactive;
       json[r'eInscriptionnotauthenticatedResidenceType'] = this.eInscriptionnotauthenticatedResidenceType;
@@ -410,26 +503,10 @@ class InscriptionnotauthenticatedResponseCompound {
       assert(() {
         assert(json.containsKey(r'pkiInscriptionnotauthenticatedID'), 'Required key "InscriptionnotauthenticatedResponseCompound[pkiInscriptionnotauthenticatedID]" is missing from JSON.');
         assert(json[r'pkiInscriptionnotauthenticatedID'] != null, 'Required key "InscriptionnotauthenticatedResponseCompound[pkiInscriptionnotauthenticatedID]" has a null value in JSON.');
-        assert(json.containsKey(r'fkiCompanyID'), 'Required key "InscriptionnotauthenticatedResponseCompound[fkiCompanyID]" is missing from JSON.');
-        assert(json[r'fkiCompanyID'] != null, 'Required key "InscriptionnotauthenticatedResponseCompound[fkiCompanyID]" has a null value in JSON.');
         assert(json.containsKey(r'fkiInscriptionID'), 'Required key "InscriptionnotauthenticatedResponseCompound[fkiInscriptionID]" is missing from JSON.');
         assert(json[r'fkiInscriptionID'] != null, 'Required key "InscriptionnotauthenticatedResponseCompound[fkiInscriptionID]" has a null value in JSON.');
-        assert(json.containsKey(r'fkiDepartmentID'), 'Required key "InscriptionnotauthenticatedResponseCompound[fkiDepartmentID]" is missing from JSON.');
-        assert(json[r'fkiDepartmentID'] != null, 'Required key "InscriptionnotauthenticatedResponseCompound[fkiDepartmentID]" has a null value in JSON.');
-        assert(json.containsKey(r'fkiFinancialinstitutionID'), 'Required key "InscriptionnotauthenticatedResponseCompound[fkiFinancialinstitutionID]" is missing from JSON.');
-        assert(json[r'fkiFinancialinstitutionID'] != null, 'Required key "InscriptionnotauthenticatedResponseCompound[fkiFinancialinstitutionID]" has a null value in JSON.');
-        assert(json.containsKey(r'fkiBuyercontractID'), 'Required key "InscriptionnotauthenticatedResponseCompound[fkiBuyercontractID]" is missing from JSON.');
-        assert(json[r'fkiBuyercontractID'] != null, 'Required key "InscriptionnotauthenticatedResponseCompound[fkiBuyercontractID]" has a null value in JSON.');
-        assert(json.containsKey(r'fkiMortgagesupplierID'), 'Required key "InscriptionnotauthenticatedResponseCompound[fkiMortgagesupplierID]" is missing from JSON.');
-        assert(json[r'fkiMortgagesupplierID'] != null, 'Required key "InscriptionnotauthenticatedResponseCompound[fkiMortgagesupplierID]" has a null value in JSON.');
         assert(json.containsKey(r'fkiTaxassignmentID'), 'Required key "InscriptionnotauthenticatedResponseCompound[fkiTaxassignmentID]" is missing from JSON.');
         assert(json[r'fkiTaxassignmentID'] != null, 'Required key "InscriptionnotauthenticatedResponseCompound[fkiTaxassignmentID]" has a null value in JSON.');
-        assert(json.containsKey(r'dtInscriptionnotauthenticatedTransactiondate'), 'Required key "InscriptionnotauthenticatedResponseCompound[dtInscriptionnotauthenticatedTransactiondate]" is missing from JSON.');
-        assert(json[r'dtInscriptionnotauthenticatedTransactiondate'] != null, 'Required key "InscriptionnotauthenticatedResponseCompound[dtInscriptionnotauthenticatedTransactiondate]" has a null value in JSON.');
-        assert(json.containsKey(r'dtInscriptionnotauthenticatedTransactiondateReal'), 'Required key "InscriptionnotauthenticatedResponseCompound[dtInscriptionnotauthenticatedTransactiondateReal]" is missing from JSON.');
-        assert(json[r'dtInscriptionnotauthenticatedTransactiondateReal'] != null, 'Required key "InscriptionnotauthenticatedResponseCompound[dtInscriptionnotauthenticatedTransactiondateReal]" has a null value in JSON.');
-        assert(json.containsKey(r'dtInscriptionnotauthenticatedDepositdate'), 'Required key "InscriptionnotauthenticatedResponseCompound[dtInscriptionnotauthenticatedDepositdate]" is missing from JSON.');
-        assert(json[r'dtInscriptionnotauthenticatedDepositdate'] != null, 'Required key "InscriptionnotauthenticatedResponseCompound[dtInscriptionnotauthenticatedDepositdate]" has a null value in JSON.');
         assert(json.containsKey(r'eInscriptionnotauthenticatedType'), 'Required key "InscriptionnotauthenticatedResponseCompound[eInscriptionnotauthenticatedType]" is missing from JSON.');
         assert(json[r'eInscriptionnotauthenticatedType'] != null, 'Required key "InscriptionnotauthenticatedResponseCompound[eInscriptionnotauthenticatedType]" has a null value in JSON.');
         assert(json.containsKey(r'dInscriptionnotauthenticatedMortgageloan'), 'Required key "InscriptionnotauthenticatedResponseCompound[dInscriptionnotauthenticatedMortgageloan]" is missing from JSON.');
@@ -446,16 +523,8 @@ class InscriptionnotauthenticatedResponseCompound {
         assert(json[r'dInscriptionnotauthenticatedRemunerationsubtotal'] != null, 'Required key "InscriptionnotauthenticatedResponseCompound[dInscriptionnotauthenticatedRemunerationsubtotal]" has a null value in JSON.');
         assert(json.containsKey(r'dInscriptionnotauthenticatedRemunerationtotal'), 'Required key "InscriptionnotauthenticatedResponseCompound[dInscriptionnotauthenticatedRemunerationtotal]" is missing from JSON.');
         assert(json[r'dInscriptionnotauthenticatedRemunerationtotal'] != null, 'Required key "InscriptionnotauthenticatedResponseCompound[dInscriptionnotauthenticatedRemunerationtotal]" has a null value in JSON.');
-        assert(json.containsKey(r'dtInscriptionnotauthenticatedCancellationdate'), 'Required key "InscriptionnotauthenticatedResponseCompound[dtInscriptionnotauthenticatedCancellationdate]" is missing from JSON.');
-        assert(json[r'dtInscriptionnotauthenticatedCancellationdate'] != null, 'Required key "InscriptionnotauthenticatedResponseCompound[dtInscriptionnotauthenticatedCancellationdate]" has a null value in JSON.');
-        assert(json.containsKey(r'dtInscriptionnotauthenticatedPossessiondate'), 'Required key "InscriptionnotauthenticatedResponseCompound[dtInscriptionnotauthenticatedPossessiondate]" is missing from JSON.');
-        assert(json[r'dtInscriptionnotauthenticatedPossessiondate'] != null, 'Required key "InscriptionnotauthenticatedResponseCompound[dtInscriptionnotauthenticatedPossessiondate]" has a null value in JSON.');
         assert(json.containsKey(r'sInscriptionnotauthenticatedOffertopurchasenumber'), 'Required key "InscriptionnotauthenticatedResponseCompound[sInscriptionnotauthenticatedOffertopurchasenumber]" is missing from JSON.');
         assert(json[r'sInscriptionnotauthenticatedOffertopurchasenumber'] != null, 'Required key "InscriptionnotauthenticatedResponseCompound[sInscriptionnotauthenticatedOffertopurchasenumber]" has a null value in JSON.');
-        assert(json.containsKey(r'dtInscriptionnotauthenticatedNotaryscheduledate'), 'Required key "InscriptionnotauthenticatedResponseCompound[dtInscriptionnotauthenticatedNotaryscheduledate]" is missing from JSON.');
-        assert(json[r'dtInscriptionnotauthenticatedNotaryscheduledate'] != null, 'Required key "InscriptionnotauthenticatedResponseCompound[dtInscriptionnotauthenticatedNotaryscheduledate]" has a null value in JSON.');
-        assert(json.containsKey(r'dtInscriptionnotauthenticatedFinancingscheduledate'), 'Required key "InscriptionnotauthenticatedResponseCompound[dtInscriptionnotauthenticatedFinancingscheduledate]" is missing from JSON.');
-        assert(json[r'dtInscriptionnotauthenticatedFinancingscheduledate'] != null, 'Required key "InscriptionnotauthenticatedResponseCompound[dtInscriptionnotauthenticatedFinancingscheduledate]" has a null value in JSON.');
         assert(json.containsKey(r'bInscriptionnotauthenticatedConditional'), 'Required key "InscriptionnotauthenticatedResponseCompound[bInscriptionnotauthenticatedConditional]" is missing from JSON.');
         assert(json[r'bInscriptionnotauthenticatedConditional'] != null, 'Required key "InscriptionnotauthenticatedResponseCompound[bInscriptionnotauthenticatedConditional]" has a null value in JSON.');
         assert(json.containsKey(r'bInscriptionnotauthenticatedMortgageisreferenced'), 'Required key "InscriptionnotauthenticatedResponseCompound[bInscriptionnotauthenticatedMortgageisreferenced]" is missing from JSON.');
@@ -464,8 +533,6 @@ class InscriptionnotauthenticatedResponseCompound {
         assert(json[r'bInscriptionnotauthenticatedHomeowner'] != null, 'Required key "InscriptionnotauthenticatedResponseCompound[bInscriptionnotauthenticatedHomeowner]" has a null value in JSON.');
         assert(json.containsKey(r'tInscriptionnotauthenticatedConditions'), 'Required key "InscriptionnotauthenticatedResponseCompound[tInscriptionnotauthenticatedConditions]" is missing from JSON.');
         assert(json[r'tInscriptionnotauthenticatedConditions'] != null, 'Required key "InscriptionnotauthenticatedResponseCompound[tInscriptionnotauthenticatedConditions]" has a null value in JSON.');
-        assert(json.containsKey(r'dtInscriptionnotauthenticatedConditiondeadlinedate'), 'Required key "InscriptionnotauthenticatedResponseCompound[dtInscriptionnotauthenticatedConditiondeadlinedate]" is missing from JSON.');
-        assert(json[r'dtInscriptionnotauthenticatedConditiondeadlinedate'] != null, 'Required key "InscriptionnotauthenticatedResponseCompound[dtInscriptionnotauthenticatedConditiondeadlinedate]" has a null value in JSON.');
         assert(json.containsKey(r'iInscriptionnotauthenticatedOrder'), 'Required key "InscriptionnotauthenticatedResponseCompound[iInscriptionnotauthenticatedOrder]" is missing from JSON.');
         assert(json[r'iInscriptionnotauthenticatedOrder'] != null, 'Required key "InscriptionnotauthenticatedResponseCompound[iInscriptionnotauthenticatedOrder]" has a null value in JSON.');
         assert(json.containsKey(r'bInscriptionnotauthenticatedIsactive'), 'Required key "InscriptionnotauthenticatedResponseCompound[bInscriptionnotauthenticatedIsactive]" is missing from JSON.');
@@ -483,22 +550,20 @@ class InscriptionnotauthenticatedResponseCompound {
 
       return InscriptionnotauthenticatedResponseCompound(
         pkiInscriptionnotauthenticatedID: mapValueOfType<int>(json, r'pkiInscriptionnotauthenticatedID')!,
-        fkiCompanyID: mapValueOfType<int>(json, r'fkiCompanyID')!,
-        sCompanyNameX: mapValueOfType<String>(json, r'sCompanyNameX'),
         fkiInscriptionID: mapValueOfType<int>(json, r'fkiInscriptionID')!,
-        fkiDepartmentID: mapValueOfType<int>(json, r'fkiDepartmentID')!,
+        fkiDepartmentID: mapValueOfType<int>(json, r'fkiDepartmentID'),
         sDepartmentNameX: mapValueOfType<String>(json, r'sDepartmentNameX'),
-        fkiFinancialinstitutionID: mapValueOfType<int>(json, r'fkiFinancialinstitutionID')!,
+        fkiFinancialinstitutionID: mapValueOfType<int>(json, r'fkiFinancialinstitutionID'),
         sFinancialinstitutionNameX: mapValueOfType<String>(json, r'sFinancialinstitutionNameX'),
-        fkiBuyercontractID: mapValueOfType<int>(json, r'fkiBuyercontractID')!,
+        fkiBuyercontractID: mapValueOfType<int>(json, r'fkiBuyercontractID'),
         sBuyercontractContract: mapValueOfType<String>(json, r'sBuyercontractContract'),
-        fkiMortgagesupplierID: mapValueOfType<int>(json, r'fkiMortgagesupplierID')!,
+        fkiMortgagesupplierID: mapValueOfType<int>(json, r'fkiMortgagesupplierID'),
         sMortgagesupplierNameX: mapValueOfType<String>(json, r'sMortgagesupplierNameX'),
         fkiTaxassignmentID: mapValueOfType<int>(json, r'fkiTaxassignmentID')!,
         sTaxassignmentDescriptionX: mapValueOfType<String>(json, r'sTaxassignmentDescriptionX'),
-        dtInscriptionnotauthenticatedTransactiondate: mapValueOfType<String>(json, r'dtInscriptionnotauthenticatedTransactiondate')!,
-        dtInscriptionnotauthenticatedTransactiondateReal: mapValueOfType<String>(json, r'dtInscriptionnotauthenticatedTransactiondateReal')!,
-        dtInscriptionnotauthenticatedDepositdate: mapValueOfType<String>(json, r'dtInscriptionnotauthenticatedDepositdate')!,
+        dtInscriptionnotauthenticatedTransactiondate: mapValueOfType<String>(json, r'dtInscriptionnotauthenticatedTransactiondate'),
+        dtInscriptionnotauthenticatedTransactiondateReal: mapValueOfType<String>(json, r'dtInscriptionnotauthenticatedTransactiondateReal'),
+        dtInscriptionnotauthenticatedDepositdate: mapValueOfType<String>(json, r'dtInscriptionnotauthenticatedDepositdate'),
         eInscriptionnotauthenticatedType: FieldEInscriptionnotauthenticatedType.fromJson(json[r'eInscriptionnotauthenticatedType'])!,
         dInscriptionnotauthenticatedMortgageloan: mapValueOfType<String>(json, r'dInscriptionnotauthenticatedMortgageloan')!,
         etInscriptionnotauthenticatedMortgagetype: FieldEtInscriptionnotauthenticatedMortgagetype.fromJson(json[r'etInscriptionnotauthenticatedMortgagetype'])!,
@@ -507,16 +572,16 @@ class InscriptionnotauthenticatedResponseCompound {
         dInscriptionnotauthenticatedRemuneration: mapValueOfType<String>(json, r'dInscriptionnotauthenticatedRemuneration')!,
         dInscriptionnotauthenticatedRemunerationsubtotal: mapValueOfType<String>(json, r'dInscriptionnotauthenticatedRemunerationsubtotal')!,
         dInscriptionnotauthenticatedRemunerationtotal: mapValueOfType<String>(json, r'dInscriptionnotauthenticatedRemunerationtotal')!,
-        dtInscriptionnotauthenticatedCancellationdate: mapValueOfType<String>(json, r'dtInscriptionnotauthenticatedCancellationdate')!,
-        dtInscriptionnotauthenticatedPossessiondate: mapValueOfType<String>(json, r'dtInscriptionnotauthenticatedPossessiondate')!,
+        dtInscriptionnotauthenticatedCancellationdate: mapValueOfType<String>(json, r'dtInscriptionnotauthenticatedCancellationdate'),
+        dtInscriptionnotauthenticatedPossessiondate: mapValueOfType<String>(json, r'dtInscriptionnotauthenticatedPossessiondate'),
         sInscriptionnotauthenticatedOffertopurchasenumber: mapValueOfType<String>(json, r'sInscriptionnotauthenticatedOffertopurchasenumber')!,
-        dtInscriptionnotauthenticatedNotaryscheduledate: mapValueOfType<String>(json, r'dtInscriptionnotauthenticatedNotaryscheduledate')!,
-        dtInscriptionnotauthenticatedFinancingscheduledate: mapValueOfType<String>(json, r'dtInscriptionnotauthenticatedFinancingscheduledate')!,
+        dtInscriptionnotauthenticatedNotaryscheduledate: mapValueOfType<String>(json, r'dtInscriptionnotauthenticatedNotaryscheduledate'),
+        dtInscriptionnotauthenticatedFinancingscheduledate: mapValueOfType<String>(json, r'dtInscriptionnotauthenticatedFinancingscheduledate'),
         bInscriptionnotauthenticatedConditional: mapValueOfType<bool>(json, r'bInscriptionnotauthenticatedConditional')!,
         bInscriptionnotauthenticatedMortgageisreferenced: mapValueOfType<bool>(json, r'bInscriptionnotauthenticatedMortgageisreferenced')!,
         bInscriptionnotauthenticatedHomeowner: mapValueOfType<bool>(json, r'bInscriptionnotauthenticatedHomeowner')!,
         tInscriptionnotauthenticatedConditions: mapValueOfType<String>(json, r'tInscriptionnotauthenticatedConditions')!,
-        dtInscriptionnotauthenticatedConditiondeadlinedate: mapValueOfType<String>(json, r'dtInscriptionnotauthenticatedConditiondeadlinedate')!,
+        dtInscriptionnotauthenticatedConditiondeadlinedate: mapValueOfType<String>(json, r'dtInscriptionnotauthenticatedConditiondeadlinedate'),
         iInscriptionnotauthenticatedOrder: mapValueOfType<int>(json, r'iInscriptionnotauthenticatedOrder')!,
         bInscriptionnotauthenticatedIsactive: mapValueOfType<bool>(json, r'bInscriptionnotauthenticatedIsactive')!,
         eInscriptionnotauthenticatedResidenceType: FieldEInscriptionnotauthenticatedResidenceType.fromJson(json[r'eInscriptionnotauthenticatedResidenceType'])!,
@@ -571,16 +636,8 @@ class InscriptionnotauthenticatedResponseCompound {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'pkiInscriptionnotauthenticatedID',
-    'fkiCompanyID',
     'fkiInscriptionID',
-    'fkiDepartmentID',
-    'fkiFinancialinstitutionID',
-    'fkiBuyercontractID',
-    'fkiMortgagesupplierID',
     'fkiTaxassignmentID',
-    'dtInscriptionnotauthenticatedTransactiondate',
-    'dtInscriptionnotauthenticatedTransactiondateReal',
-    'dtInscriptionnotauthenticatedDepositdate',
     'eInscriptionnotauthenticatedType',
     'dInscriptionnotauthenticatedMortgageloan',
     'etInscriptionnotauthenticatedMortgagetype',
@@ -589,16 +646,11 @@ class InscriptionnotauthenticatedResponseCompound {
     'dInscriptionnotauthenticatedRemuneration',
     'dInscriptionnotauthenticatedRemunerationsubtotal',
     'dInscriptionnotauthenticatedRemunerationtotal',
-    'dtInscriptionnotauthenticatedCancellationdate',
-    'dtInscriptionnotauthenticatedPossessiondate',
     'sInscriptionnotauthenticatedOffertopurchasenumber',
-    'dtInscriptionnotauthenticatedNotaryscheduledate',
-    'dtInscriptionnotauthenticatedFinancingscheduledate',
     'bInscriptionnotauthenticatedConditional',
     'bInscriptionnotauthenticatedMortgageisreferenced',
     'bInscriptionnotauthenticatedHomeowner',
     'tInscriptionnotauthenticatedConditions',
-    'dtInscriptionnotauthenticatedConditiondeadlinedate',
     'iInscriptionnotauthenticatedOrder',
     'bInscriptionnotauthenticatedIsactive',
     'eInscriptionnotauthenticatedResidenceType',
