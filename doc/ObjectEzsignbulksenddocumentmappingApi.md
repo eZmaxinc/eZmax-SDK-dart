@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**ezsignbulksenddocumentmappingCreateObjectV1**](ObjectEzsignbulksenddocumentmappingApi.md#ezsignbulksenddocumentmappingcreateobjectv1) | **POST** /1/object/ezsignbulksenddocumentmapping | Create a new Ezsignbulksenddocumentmapping
 [**ezsignbulksenddocumentmappingDeleteObjectV1**](ObjectEzsignbulksenddocumentmappingApi.md#ezsignbulksenddocumentmappingdeleteobjectv1) | **DELETE** /1/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID} | Delete an existing Ezsignbulksenddocumentmapping
 [**ezsignbulksenddocumentmappingGetObjectV2**](ObjectEzsignbulksenddocumentmappingApi.md#ezsignbulksenddocumentmappinggetobjectv2) | **GET** /2/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID} | Retrieve an existing Ezsignbulksenddocumentmapping
+[**ezsignbulksenddocumentmappingGetObjectV3**](ObjectEzsignbulksenddocumentmappingApi.md#ezsignbulksenddocumentmappinggetobjectv3) | **GET** /3/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID} | Retrieve an existing Ezsignbulksenddocumentmapping
 
 
 # **ezsignbulksenddocumentmappingCreateObjectV1**
@@ -143,6 +144,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignbulksenddocumentmappingGetObjectV2Response**](EzsignbulksenddocumentmappingGetObjectV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsignbulksenddocumentmappingGetObjectV3**
+> EzsignbulksenddocumentmappingGetObjectV3Response ezsignbulksenddocumentmappingGetObjectV3(pkiEzsignbulksenddocumentmappingID)
+
+Retrieve an existing Ezsignbulksenddocumentmapping
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectEzsignbulksenddocumentmappingApi();
+final pkiEzsignbulksenddocumentmappingID = 56; // int | 
+
+try {
+    final result = api_instance.ezsignbulksenddocumentmappingGetObjectV3(pkiEzsignbulksenddocumentmappingID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectEzsignbulksenddocumentmappingApi->ezsignbulksenddocumentmappingGetObjectV3: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignbulksenddocumentmappingID** | **int**|  | 
+
+### Return type
+
+[**EzsignbulksenddocumentmappingGetObjectV3Response**](EzsignbulksenddocumentmappingGetObjectV3Response.md)
 
 ### Authorization
 

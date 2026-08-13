@@ -13,11 +13,16 @@ part of openapi.api;
 class EzmaxpartnerSubscribeV1Response {
   /// Returns a new [EzmaxpartnerSubscribeV1Response] instance.
   EzmaxpartnerSubscribeV1Response({
-    required this.sExternalID,
+    this.sExternalID,
   });
 
-  /// 
-  String sExternalID;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sExternalID;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzmaxpartnerSubscribeV1Response &&
@@ -26,14 +31,18 @@ class EzmaxpartnerSubscribeV1Response {
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (sExternalID.hashCode);
+    (sExternalID == null ? 0 : sExternalID!.hashCode);
 
   @override
   String toString() => 'EzmaxpartnerSubscribeV1Response[sExternalID=$sExternalID]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
+    if (this.sExternalID != null) {
       json[r'sExternalID'] = this.sExternalID;
+    } else {
+      json[r'sExternalID'] = null;
+    }
     return json;
   }
 
@@ -48,13 +57,11 @@ class EzmaxpartnerSubscribeV1Response {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        assert(json.containsKey(r'sExternalID'), 'Required key "EzmaxpartnerSubscribeV1Response[sExternalID]" is missing from JSON.');
-        assert(json[r'sExternalID'] != null, 'Required key "EzmaxpartnerSubscribeV1Response[sExternalID]" has a null value in JSON.');
         return true;
       }());
 
       return EzmaxpartnerSubscribeV1Response(
-        sExternalID: mapValueOfType<String>(json, r'sExternalID')!,
+        sExternalID: mapValueOfType<String>(json, r'sExternalID'),
       );
     }
     return null;
@@ -102,7 +109,6 @@ class EzmaxpartnerSubscribeV1Response {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'sExternalID',
   };
 }
 

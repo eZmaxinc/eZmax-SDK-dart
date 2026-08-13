@@ -12,8 +12,8 @@ Name | Type | Description | Notes
 **aObjAttempt** | [**List<AttemptResponseCompound>**](AttemptResponseCompound.md) | An array containing details of previous attempts that were made to deliver the message. The array is empty if it's the first attempt. | [default to const []]
 **objEzmaxpartnerproduct** | [**CustomEzmaxpartnerproductSubscribe**](CustomEzmaxpartnerproductSubscribe.md) |  | 
 **sExternalID** | **String** |  | [optional] 
-**sApikeyApikey** | **String** |  | [optional] 
-**sApikeySecret** | **String** |  | [optional] 
+**sApikeyApikey** | **String** |  | 
+**sApikeySecret** | **String** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

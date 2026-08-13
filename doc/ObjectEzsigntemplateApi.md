@@ -16,6 +16,7 @@ Method | HTTP request | Description
 [**ezsigntemplateGetAutocompleteV2**](ObjectEzsigntemplateApi.md#ezsigntemplategetautocompletev2) | **GET** /2/object/ezsigntemplate/getAutocomplete/{sSelector} | Retrieve Ezsigntemplates and IDs
 [**ezsigntemplateGetListV1**](ObjectEzsigntemplateApi.md#ezsigntemplategetlistv1) | **GET** /1/object/ezsigntemplate/getList | Retrieve Ezsigntemplate list
 [**ezsigntemplateGetObjectV3**](ObjectEzsigntemplateApi.md#ezsigntemplategetobjectv3) | **GET** /3/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate
+[**ezsigntemplateGetObjectV4**](ObjectEzsigntemplateApi.md#ezsigntemplategetobjectv4) | **GET** /4/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate
 
 
 # **ezsigntemplateCopyV1**
@@ -355,6 +356,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsigntemplateGetObjectV3Response**](EzsigntemplateGetObjectV3Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsigntemplateGetObjectV4**
+> EzsigntemplateGetObjectV4Response ezsigntemplateGetObjectV4(pkiEzsigntemplateID)
+
+Retrieve an existing Ezsigntemplate
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectEzsigntemplateApi();
+final pkiEzsigntemplateID = 56; // int | 
+
+try {
+    final result = api_instance.ezsigntemplateGetObjectV4(pkiEzsigntemplateID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectEzsigntemplateApi->ezsigntemplateGetObjectV4: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigntemplateID** | **int**|  | 
+
+### Return type
+
+[**EzsigntemplateGetObjectV4Response**](EzsigntemplateGetObjectV4Response.md)
 
 ### Authorization
 

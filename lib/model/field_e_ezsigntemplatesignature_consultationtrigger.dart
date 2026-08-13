@@ -10,10 +10,11 @@
 
 part of openapi.api;
 
-/// Indicates when the “consultation” type signature must be signed.  1. **Automatic** When the document is displayed . 2. **Manual** The user must indicate that he has viewed the document.
+/// Indicates when the “consultation” type signature must be signed.  1. **Automatic** When the document is displayed . 2. **Manual** The user must indicate that he has viewed the document. 3. **Optional** The user can view the document, but they are not required to do so. Same as **Automatic** when user view the document.
 enum FieldEEzsigntemplatesignatureConsultationtrigger {
   automatic._(r'Automatic'),
   manual._(r'Manual'),
+  optional._(r'Optional'),
   ;
 
   /// Instantiate a new enum with the provided value.
@@ -75,6 +76,7 @@ class FieldEEzsigntemplatesignatureConsultationtriggerTypeTransformer {
       switch (data) {
         case r'Automatic': return FieldEEzsigntemplatesignatureConsultationtrigger.automatic;
         case r'Manual': return FieldEEzsigntemplatesignatureConsultationtrigger.manual;
+        case r'Optional': return FieldEEzsigntemplatesignatureConsultationtrigger.optional;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');

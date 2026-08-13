@@ -217,6 +217,9 @@ String parameterToString(dynamic value) {
   if (value is FieldEEzsignbulksendEzsignformfieldorder) {
     return FieldEEzsignbulksendEzsignformfieldorderTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEEzsignbulksendsignermappingRole) {
+    return FieldEEzsignbulksendsignermappingRoleTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEEzsigndocumentStep) {
     return FieldEEzsigndocumentStepTypeTransformer().encode(value).toString();
   }
@@ -385,6 +388,9 @@ String parameterToString(dynamic value) {
   if (value is FieldEEzsigntemplatepackagesignerMapping) {
     return FieldEEzsigntemplatepackagesignerMappingTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEEzsigntemplatepackagesignerRole) {
+    return FieldEEzsigntemplatepackagesignerRoleTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEEzsigntemplatepublicLimittype) {
     return FieldEEzsigntemplatepublicLimittypeTypeTransformer().encode(value).toString();
   }
@@ -423,6 +429,9 @@ String parameterToString(dynamic value) {
   }
   if (value is FieldEEzsigntemplatesignerMapping) {
     return FieldEEzsigntemplatesignerMappingTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzsigntemplatesignerRole) {
+    return FieldEEzsigntemplatesignerRoleTypeTransformer().encode(value).toString();
   }
   if (value is FieldEInscriptionRemunerationinscriptorsellertype) {
     return FieldEInscriptionRemunerationinscriptorsellertypeTypeTransformer().encode(value).toString();

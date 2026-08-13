@@ -30,6 +30,7 @@ class EzsignformfieldgroupResponseCompound {
     this.sEzsignformfieldgroupTextvalidationcustommessage,
     this.tEzsignformfieldgroupTooltip,
     this.eEzsignformfieldgroupTooltipposition,
+    this.dtEzsignformfieldgroupCompleted,
     this.aObjEzsignformfield = const [],
     this.aObjDropdownElement = const [],
     this.aObjEzsignformfieldgroupsigner = const [],
@@ -149,6 +150,15 @@ class EzsignformfieldgroupResponseCompound {
   ///
   FieldEEzsignformfieldgroupTooltipposition? eEzsignformfieldgroupTooltipposition;
 
+  /// The date the Ezsignformfieldgroup was completed.
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? dtEzsignformfieldgroupCompleted;
+
   List<EzsignformfieldResponseCompound> aObjEzsignformfield;
 
   List<CustomDropdownElementResponseCompound> aObjDropdownElement;
@@ -174,6 +184,7 @@ class EzsignformfieldgroupResponseCompound {
     other.sEzsignformfieldgroupTextvalidationcustommessage == sEzsignformfieldgroupTextvalidationcustommessage &&
     other.tEzsignformfieldgroupTooltip == tEzsignformfieldgroupTooltip &&
     other.eEzsignformfieldgroupTooltipposition == eEzsignformfieldgroupTooltipposition &&
+    other.dtEzsignformfieldgroupCompleted == dtEzsignformfieldgroupCompleted &&
     _deepEquality.equals(other.aObjEzsignformfield, aObjEzsignformfield) &&
     _deepEquality.equals(other.aObjDropdownElement, aObjDropdownElement) &&
     _deepEquality.equals(other.aObjEzsignformfieldgroupsigner, aObjEzsignformfieldgroupsigner);
@@ -198,12 +209,13 @@ class EzsignformfieldgroupResponseCompound {
     (sEzsignformfieldgroupTextvalidationcustommessage == null ? 0 : sEzsignformfieldgroupTextvalidationcustommessage!.hashCode) +
     (tEzsignformfieldgroupTooltip == null ? 0 : tEzsignformfieldgroupTooltip!.hashCode) +
     (eEzsignformfieldgroupTooltipposition == null ? 0 : eEzsignformfieldgroupTooltipposition!.hashCode) +
+    (dtEzsignformfieldgroupCompleted == null ? 0 : dtEzsignformfieldgroupCompleted!.hashCode) +
     (aObjEzsignformfield.hashCode) +
     (aObjDropdownElement.hashCode) +
     (aObjEzsignformfieldgroupsigner.hashCode);
 
   @override
-  String toString() => 'EzsignformfieldgroupResponseCompound[pkiEzsignformfieldgroupID=$pkiEzsignformfieldgroupID, fkiEzsigndocumentID=$fkiEzsigndocumentID, eEzsignformfieldgroupType=$eEzsignformfieldgroupType, eEzsignformfieldgroupSignerrequirement=$eEzsignformfieldgroupSignerrequirement, sEzsignformfieldgroupLabel=$sEzsignformfieldgroupLabel, iEzsignformfieldgroupStep=$iEzsignformfieldgroupStep, sEzsignformfieldgroupDefaultvalue=$sEzsignformfieldgroupDefaultvalue, iEzsignformfieldgroupFilledmin=$iEzsignformfieldgroupFilledmin, iEzsignformfieldgroupFilledmax=$iEzsignformfieldgroupFilledmax, bEzsignformfieldgroupReadonly=$bEzsignformfieldgroupReadonly, iEzsignformfieldgroupMaxlength=$iEzsignformfieldgroupMaxlength, bEzsignformfieldgroupEncrypted=$bEzsignformfieldgroupEncrypted, eEzsignformfieldgroupTextvalidation=$eEzsignformfieldgroupTextvalidation, sEzsignformfieldgroupRegexp=$sEzsignformfieldgroupRegexp, sEzsignformfieldgroupTextvalidationcustommessage=$sEzsignformfieldgroupTextvalidationcustommessage, tEzsignformfieldgroupTooltip=$tEzsignformfieldgroupTooltip, eEzsignformfieldgroupTooltipposition=$eEzsignformfieldgroupTooltipposition, aObjEzsignformfield=$aObjEzsignformfield, aObjDropdownElement=$aObjDropdownElement, aObjEzsignformfieldgroupsigner=$aObjEzsignformfieldgroupsigner]';
+  String toString() => 'EzsignformfieldgroupResponseCompound[pkiEzsignformfieldgroupID=$pkiEzsignformfieldgroupID, fkiEzsigndocumentID=$fkiEzsigndocumentID, eEzsignformfieldgroupType=$eEzsignformfieldgroupType, eEzsignformfieldgroupSignerrequirement=$eEzsignformfieldgroupSignerrequirement, sEzsignformfieldgroupLabel=$sEzsignformfieldgroupLabel, iEzsignformfieldgroupStep=$iEzsignformfieldgroupStep, sEzsignformfieldgroupDefaultvalue=$sEzsignformfieldgroupDefaultvalue, iEzsignformfieldgroupFilledmin=$iEzsignformfieldgroupFilledmin, iEzsignformfieldgroupFilledmax=$iEzsignformfieldgroupFilledmax, bEzsignformfieldgroupReadonly=$bEzsignformfieldgroupReadonly, iEzsignformfieldgroupMaxlength=$iEzsignformfieldgroupMaxlength, bEzsignformfieldgroupEncrypted=$bEzsignformfieldgroupEncrypted, eEzsignformfieldgroupTextvalidation=$eEzsignformfieldgroupTextvalidation, sEzsignformfieldgroupRegexp=$sEzsignformfieldgroupRegexp, sEzsignformfieldgroupTextvalidationcustommessage=$sEzsignformfieldgroupTextvalidationcustommessage, tEzsignformfieldgroupTooltip=$tEzsignformfieldgroupTooltip, eEzsignformfieldgroupTooltipposition=$eEzsignformfieldgroupTooltipposition, dtEzsignformfieldgroupCompleted=$dtEzsignformfieldgroupCompleted, aObjEzsignformfield=$aObjEzsignformfield, aObjDropdownElement=$aObjDropdownElement, aObjEzsignformfieldgroupsigner=$aObjEzsignformfieldgroupsigner]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -259,6 +271,11 @@ class EzsignformfieldgroupResponseCompound {
       json[r'eEzsignformfieldgroupTooltipposition'] = this.eEzsignformfieldgroupTooltipposition;
     } else {
       json[r'eEzsignformfieldgroupTooltipposition'] = null;
+    }
+    if (this.dtEzsignformfieldgroupCompleted != null) {
+      json[r'dtEzsignformfieldgroupCompleted'] = this.dtEzsignformfieldgroupCompleted;
+    } else {
+      json[r'dtEzsignformfieldgroupCompleted'] = null;
     }
       json[r'a_objEzsignformfield'] = this.aObjEzsignformfield;
       json[r'a_objDropdownElement'] = this.aObjDropdownElement;
@@ -318,6 +335,7 @@ class EzsignformfieldgroupResponseCompound {
         sEzsignformfieldgroupTextvalidationcustommessage: mapValueOfType<String>(json, r'sEzsignformfieldgroupTextvalidationcustommessage'),
         tEzsignformfieldgroupTooltip: mapValueOfType<String>(json, r'tEzsignformfieldgroupTooltip'),
         eEzsignformfieldgroupTooltipposition: FieldEEzsignformfieldgroupTooltipposition.fromJson(json[r'eEzsignformfieldgroupTooltipposition']),
+        dtEzsignformfieldgroupCompleted: mapValueOfType<String>(json, r'dtEzsignformfieldgroupCompleted'),
         aObjEzsignformfield: EzsignformfieldResponseCompound.listFromJson(json[r'a_objEzsignformfield']),
         aObjDropdownElement: CustomDropdownElementResponseCompound.listFromJson(json[r'a_objDropdownElement']),
         aObjEzsignformfieldgroupsigner: EzsignformfieldgroupsignerResponseCompound.listFromJson(json[r'a_objEzsignformfieldgroupsigner']),

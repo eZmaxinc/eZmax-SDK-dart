@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**ezsigntemplatepackagemembershipCreateObjectV1**](ObjectEzsigntemplatepackagemembershipApi.md#ezsigntemplatepackagemembershipcreateobjectv1) | **POST** /1/object/ezsigntemplatepackagemembership | Create a new Ezsigntemplatepackagemembership
 [**ezsigntemplatepackagemembershipDeleteObjectV1**](ObjectEzsigntemplatepackagemembershipApi.md#ezsigntemplatepackagemembershipdeleteobjectv1) | **DELETE** /1/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID} | Delete an existing Ezsigntemplatepackagemembership
 [**ezsigntemplatepackagemembershipGetObjectV2**](ObjectEzsigntemplatepackagemembershipApi.md#ezsigntemplatepackagemembershipgetobjectv2) | **GET** /2/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID} | Retrieve an existing Ezsigntemplatepackagemembership
+[**ezsigntemplatepackagemembershipGetObjectV3**](ObjectEzsigntemplatepackagemembershipApi.md#ezsigntemplatepackagemembershipgetobjectv3) | **GET** /3/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID} | Retrieve an existing Ezsigntemplatepackagemembership
 
 
 # **ezsigntemplatepackagemembershipCreateObjectV1**
@@ -143,6 +144,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsigntemplatepackagemembershipGetObjectV2Response**](EzsigntemplatepackagemembershipGetObjectV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsigntemplatepackagemembershipGetObjectV3**
+> EzsigntemplatepackagemembershipGetObjectV3Response ezsigntemplatepackagemembershipGetObjectV3(pkiEzsigntemplatepackagemembershipID)
+
+Retrieve an existing Ezsigntemplatepackagemembership
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectEzsigntemplatepackagemembershipApi();
+final pkiEzsigntemplatepackagemembershipID = 56; // int | 
+
+try {
+    final result = api_instance.ezsigntemplatepackagemembershipGetObjectV3(pkiEzsigntemplatepackagemembershipID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectEzsigntemplatepackagemembershipApi->ezsigntemplatepackagemembershipGetObjectV3: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigntemplatepackagemembershipID** | **int**|  | 
+
+### Return type
+
+[**EzsigntemplatepackagemembershipGetObjectV3Response**](EzsigntemplatepackagemembershipGetObjectV3Response.md)
 
 ### Authorization
 

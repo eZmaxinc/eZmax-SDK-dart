@@ -13,8 +13,17 @@ part of openapi.api;
 class EzsignfoldersignerassociationRequestPatch {
   /// Returns a new [EzsignfoldersignerassociationRequestPatch] instance.
   EzsignfoldersignerassociationRequestPatch({
+    this.eEzsignfoldersignerassociationRole,
     this.tEzsignfoldersignerassociationMessage,
   });
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEEzsignfoldersignerassociationRole? eEzsignfoldersignerassociationRole;
 
   /// A custom text message that will be added to the email sent.
   ///
@@ -27,18 +36,25 @@ class EzsignfoldersignerassociationRequestPatch {
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfoldersignerassociationRequestPatch &&
+    other.eEzsignfoldersignerassociationRole == eEzsignfoldersignerassociationRole &&
     other.tEzsignfoldersignerassociationMessage == tEzsignfoldersignerassociationMessage;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
+    (eEzsignfoldersignerassociationRole == null ? 0 : eEzsignfoldersignerassociationRole!.hashCode) +
     (tEzsignfoldersignerassociationMessage == null ? 0 : tEzsignfoldersignerassociationMessage!.hashCode);
 
   @override
-  String toString() => 'EzsignfoldersignerassociationRequestPatch[tEzsignfoldersignerassociationMessage=$tEzsignfoldersignerassociationMessage]';
+  String toString() => 'EzsignfoldersignerassociationRequestPatch[eEzsignfoldersignerassociationRole=$eEzsignfoldersignerassociationRole, tEzsignfoldersignerassociationMessage=$tEzsignfoldersignerassociationMessage]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
+    if (this.eEzsignfoldersignerassociationRole != null) {
+      json[r'eEzsignfoldersignerassociationRole'] = this.eEzsignfoldersignerassociationRole;
+    } else {
+      json[r'eEzsignfoldersignerassociationRole'] = null;
+    }
     if (this.tEzsignfoldersignerassociationMessage != null) {
       json[r'tEzsignfoldersignerassociationMessage'] = this.tEzsignfoldersignerassociationMessage;
     } else {
@@ -62,6 +78,7 @@ class EzsignfoldersignerassociationRequestPatch {
       }());
 
       return EzsignfoldersignerassociationRequestPatch(
+        eEzsignfoldersignerassociationRole: FieldEEzsignfoldersignerassociationRole.fromJson(json[r'eEzsignfoldersignerassociationRole']),
         tEzsignfoldersignerassociationMessage: mapValueOfType<String>(json, r'tEzsignfoldersignerassociationMessage'),
       );
     }

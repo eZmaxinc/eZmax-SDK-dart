@@ -500,4 +500,62 @@ class ObjectEzsigntemplateApi {
     }
     return null;
   }
+
+  /// Retrieve an existing Ezsigntemplate
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigntemplateID (required):
+  Future<Response> ezsigntemplateGetObjectV4WithHttpInfo(int pkiEzsigntemplateID, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/4/object/ezsigntemplate/{pkiEzsigntemplateID}'
+      .replaceAll('{pkiEzsigntemplateID}', pkiEzsigntemplateID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Retrieve an existing Ezsigntemplate
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsigntemplateID (required):
+  Future<EzsigntemplateGetObjectV4Response?> ezsigntemplateGetObjectV4(int pkiEzsigntemplateID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsigntemplateGetObjectV4WithHttpInfo(pkiEzsigntemplateID, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsigntemplateGetObjectV4Response',) as EzsigntemplateGetObjectV4Response;
+    
+    }
+    return null;
+  }
 }

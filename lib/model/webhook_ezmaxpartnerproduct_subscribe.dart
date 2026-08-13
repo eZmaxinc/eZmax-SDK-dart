@@ -17,8 +17,8 @@ class WebhookEzmaxpartnerproductSubscribe {
     this.aObjAttempt = const [],
     required this.objEzmaxpartnerproduct,
     this.sExternalID,
-    this.sApikeyApikey,
-    this.sApikeySecret,
+    required this.sApikeyApikey,
+    required this.sApikeySecret,
   });
 
   CustomWebhookResponse objWebhook;
@@ -36,21 +36,9 @@ class WebhookEzmaxpartnerproductSubscribe {
   ///
   String? sExternalID;
 
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  String? sApikeyApikey;
+  String sApikeyApikey;
 
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  String? sApikeySecret;
+  String sApikeySecret;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is WebhookEzmaxpartnerproductSubscribe &&
@@ -68,8 +56,8 @@ class WebhookEzmaxpartnerproductSubscribe {
     (aObjAttempt.hashCode) +
     (objEzmaxpartnerproduct.hashCode) +
     (sExternalID == null ? 0 : sExternalID!.hashCode) +
-    (sApikeyApikey == null ? 0 : sApikeyApikey!.hashCode) +
-    (sApikeySecret == null ? 0 : sApikeySecret!.hashCode);
+    (sApikeyApikey.hashCode) +
+    (sApikeySecret.hashCode);
 
   @override
   String toString() => 'WebhookEzmaxpartnerproductSubscribe[objWebhook=$objWebhook, aObjAttempt=$aObjAttempt, objEzmaxpartnerproduct=$objEzmaxpartnerproduct, sExternalID=$sExternalID, sApikeyApikey=$sApikeyApikey, sApikeySecret=$sApikeySecret]';
@@ -84,16 +72,8 @@ class WebhookEzmaxpartnerproductSubscribe {
     } else {
       json[r'sExternalID'] = null;
     }
-    if (this.sApikeyApikey != null) {
       json[r'sApikeyApikey'] = this.sApikeyApikey;
-    } else {
-      json[r'sApikeyApikey'] = null;
-    }
-    if (this.sApikeySecret != null) {
       json[r'sApikeySecret'] = this.sApikeySecret;
-    } else {
-      json[r'sApikeySecret'] = null;
-    }
     return json;
   }
 
@@ -114,6 +94,10 @@ class WebhookEzmaxpartnerproductSubscribe {
         assert(json[r'a_objAttempt'] != null, 'Required key "WebhookEzmaxpartnerproductSubscribe[a_objAttempt]" has a null value in JSON.');
         assert(json.containsKey(r'objEzmaxpartnerproduct'), 'Required key "WebhookEzmaxpartnerproductSubscribe[objEzmaxpartnerproduct]" is missing from JSON.');
         assert(json[r'objEzmaxpartnerproduct'] != null, 'Required key "WebhookEzmaxpartnerproductSubscribe[objEzmaxpartnerproduct]" has a null value in JSON.');
+        assert(json.containsKey(r'sApikeyApikey'), 'Required key "WebhookEzmaxpartnerproductSubscribe[sApikeyApikey]" is missing from JSON.');
+        assert(json[r'sApikeyApikey'] != null, 'Required key "WebhookEzmaxpartnerproductSubscribe[sApikeyApikey]" has a null value in JSON.');
+        assert(json.containsKey(r'sApikeySecret'), 'Required key "WebhookEzmaxpartnerproductSubscribe[sApikeySecret]" is missing from JSON.');
+        assert(json[r'sApikeySecret'] != null, 'Required key "WebhookEzmaxpartnerproductSubscribe[sApikeySecret]" has a null value in JSON.');
         return true;
       }());
 
@@ -122,8 +106,8 @@ class WebhookEzmaxpartnerproductSubscribe {
         aObjAttempt: AttemptResponseCompound.listFromJson(json[r'a_objAttempt']),
         objEzmaxpartnerproduct: CustomEzmaxpartnerproductSubscribe.fromJson(json[r'objEzmaxpartnerproduct'])!,
         sExternalID: mapValueOfType<String>(json, r'sExternalID'),
-        sApikeyApikey: mapValueOfType<String>(json, r'sApikeyApikey'),
-        sApikeySecret: mapValueOfType<String>(json, r'sApikeySecret'),
+        sApikeyApikey: mapValueOfType<String>(json, r'sApikeyApikey')!,
+        sApikeySecret: mapValueOfType<String>(json, r'sApikeySecret')!,
       );
     }
     return null;
@@ -174,6 +158,8 @@ class WebhookEzmaxpartnerproductSubscribe {
     'objWebhook',
     'a_objAttempt',
     'objEzmaxpartnerproduct',
+    'sApikeyApikey',
+    'sApikeySecret',
   };
 }
 

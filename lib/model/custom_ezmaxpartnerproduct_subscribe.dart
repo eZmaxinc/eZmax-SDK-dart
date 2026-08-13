@@ -13,225 +13,105 @@ part of openapi.api;
 class CustomEzmaxpartnerproductSubscribe {
   /// Returns a new [CustomEzmaxpartnerproductSubscribe] instance.
   CustomEzmaxpartnerproductSubscribe({
-    this.pksEzmaxcustomerCode,
-    this.sInfrastructureenvironmenttypeDescription,
-    this.sCompanyName1,
-    this.sCompanyName2,
-    this.fkiSystemconfigurationtypeID,
-    this.sSystemconfigurationtypeDescription1,
-    this.sSystemconfigurationtypeDescription2,
-    this.fkiEzmaxpartnerID,
-    this.sEzmaxpartnerName1,
-    this.sEzmaxpartnerName2,
-    this.fkiEzmaxpartnerproductID,
-    this.sEzmaxpartnerproductName1,
-    this.sEzmaxpartnerproductName2,
-    this.fkiEzmaxpartnerproductstageID,
-    this.sEzmaxpartnerproductstageCode,
-    this.sUserLoginName,
-    this.sUserFirstName,
-    this.sUserLastName,
-    this.fkiUserID,
-    this.fkiLanguageID,
+    required this.pksEzmaxcustomerCode,
+    required this.sInfrastructureenvironmenttypeDescription,
+    required this.sCompanyName1,
+    required this.sCompanyName2,
+    required this.fkiSystemconfigurationtypeID,
+    required this.sSystemconfigurationtypeDescription1,
+    required this.sSystemconfigurationtypeDescription2,
+    required this.fkiEzmaxpartnerID,
+    required this.sEzmaxpartnerName1,
+    required this.sEzmaxpartnerName2,
+    required this.fkiEzmaxpartnerproductID,
+    required this.sEzmaxpartnerproductName1,
+    required this.sEzmaxpartnerproductName2,
+    required this.fkiEzmaxpartnerproductstageID,
+    required this.sEzmaxpartnerproductstageCode,
+    required this.sUserLoginName,
+    required this.sUserFirstName,
+    required this.sUserLastName,
+    required this.fkiUserID,
+    required this.fkiLanguageID,
     this.objAddress,
     this.objphone,
     this.objEmail,
   });
 
   /// The Ezmaxcustomer code
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  String? pksEzmaxcustomerCode;
+  String pksEzmaxcustomerCode;
 
   /// The environment type Description
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  String? sInfrastructureenvironmenttypeDescription;
+  String sInfrastructureenvironmenttypeDescription;
 
   /// The Name of the Company in French
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  String? sCompanyName1;
+  String sCompanyName1;
 
   /// The Name of the Company in English
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  String? sCompanyName2;
+  String sCompanyName2;
 
   /// The unique ID of the Systemconfigurationtype
   ///
   /// Minimum value: 1
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  int? fkiSystemconfigurationtypeID;
+  int fkiSystemconfigurationtypeID;
 
   /// The description of the Systemconfigurationtype in the language of the requester
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  String? sSystemconfigurationtypeDescription1;
+  String sSystemconfigurationtypeDescription1;
 
   /// The description of the Systemconfigurationtype in the language of the requester
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  String? sSystemconfigurationtypeDescription2;
+  String sSystemconfigurationtypeDescription2;
 
   /// The unique ID of the Ezmaxpartner
   ///
   /// Minimum value: 1
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  int? fkiEzmaxpartnerID;
+  int fkiEzmaxpartnerID;
 
   /// The name of the Ezmaxpartner in french
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  String? sEzmaxpartnerName1;
+  String sEzmaxpartnerName1;
 
   /// The name of the Ezmaxpartner in english
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  String? sEzmaxpartnerName2;
+  String sEzmaxpartnerName2;
 
   /// The unique ID of the Ezmaxpartnerproduct
   ///
   /// Minimum value: 0
   /// Maximum value: 255
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  int? fkiEzmaxpartnerproductID;
+  int fkiEzmaxpartnerproductID;
 
   /// The name1 of the Ezmaxpartnerproduct
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  String? sEzmaxpartnerproductName1;
+  String sEzmaxpartnerproductName1;
 
   /// The name2 of the Ezmaxpartnerproduct
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  String? sEzmaxpartnerproductName2;
+  String sEzmaxpartnerproductName2;
 
   /// The unique ID of the Ezmaxpartnerproductstage
   ///
   /// Minimum value: 0
   /// Maximum value: 255
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  int? fkiEzmaxpartnerproductstageID;
+  int fkiEzmaxpartnerproductstageID;
 
   /// The code of the sEzmaxpartnerproductstage
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  String? sEzmaxpartnerproductstageCode;
+  String sEzmaxpartnerproductstageCode;
 
   /// The login name of the User.
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  String? sUserLoginName;
+  String sUserLoginName;
 
   /// The first name of the user
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  String? sUserFirstName;
+  String sUserFirstName;
 
   /// The last name of the user
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  String? sUserLastName;
+  String sUserLastName;
 
   /// The unique ID of the User
   ///
   /// Minimum value: 0
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  int? fkiUserID;
+  int fkiUserID;
 
   /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
   ///
   /// Minimum value: 1
   /// Maximum value: 2
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  int? fkiLanguageID;
+  int fkiLanguageID;
 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -286,26 +166,26 @@ class CustomEzmaxpartnerproductSubscribe {
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (pksEzmaxcustomerCode == null ? 0 : pksEzmaxcustomerCode!.hashCode) +
-    (sInfrastructureenvironmenttypeDescription == null ? 0 : sInfrastructureenvironmenttypeDescription!.hashCode) +
-    (sCompanyName1 == null ? 0 : sCompanyName1!.hashCode) +
-    (sCompanyName2 == null ? 0 : sCompanyName2!.hashCode) +
-    (fkiSystemconfigurationtypeID == null ? 0 : fkiSystemconfigurationtypeID!.hashCode) +
-    (sSystemconfigurationtypeDescription1 == null ? 0 : sSystemconfigurationtypeDescription1!.hashCode) +
-    (sSystemconfigurationtypeDescription2 == null ? 0 : sSystemconfigurationtypeDescription2!.hashCode) +
-    (fkiEzmaxpartnerID == null ? 0 : fkiEzmaxpartnerID!.hashCode) +
-    (sEzmaxpartnerName1 == null ? 0 : sEzmaxpartnerName1!.hashCode) +
-    (sEzmaxpartnerName2 == null ? 0 : sEzmaxpartnerName2!.hashCode) +
-    (fkiEzmaxpartnerproductID == null ? 0 : fkiEzmaxpartnerproductID!.hashCode) +
-    (sEzmaxpartnerproductName1 == null ? 0 : sEzmaxpartnerproductName1!.hashCode) +
-    (sEzmaxpartnerproductName2 == null ? 0 : sEzmaxpartnerproductName2!.hashCode) +
-    (fkiEzmaxpartnerproductstageID == null ? 0 : fkiEzmaxpartnerproductstageID!.hashCode) +
-    (sEzmaxpartnerproductstageCode == null ? 0 : sEzmaxpartnerproductstageCode!.hashCode) +
-    (sUserLoginName == null ? 0 : sUserLoginName!.hashCode) +
-    (sUserFirstName == null ? 0 : sUserFirstName!.hashCode) +
-    (sUserLastName == null ? 0 : sUserLastName!.hashCode) +
-    (fkiUserID == null ? 0 : fkiUserID!.hashCode) +
-    (fkiLanguageID == null ? 0 : fkiLanguageID!.hashCode) +
+    (pksEzmaxcustomerCode.hashCode) +
+    (sInfrastructureenvironmenttypeDescription.hashCode) +
+    (sCompanyName1.hashCode) +
+    (sCompanyName2.hashCode) +
+    (fkiSystemconfigurationtypeID.hashCode) +
+    (sSystemconfigurationtypeDescription1.hashCode) +
+    (sSystemconfigurationtypeDescription2.hashCode) +
+    (fkiEzmaxpartnerID.hashCode) +
+    (sEzmaxpartnerName1.hashCode) +
+    (sEzmaxpartnerName2.hashCode) +
+    (fkiEzmaxpartnerproductID.hashCode) +
+    (sEzmaxpartnerproductName1.hashCode) +
+    (sEzmaxpartnerproductName2.hashCode) +
+    (fkiEzmaxpartnerproductstageID.hashCode) +
+    (sEzmaxpartnerproductstageCode.hashCode) +
+    (sUserLoginName.hashCode) +
+    (sUserFirstName.hashCode) +
+    (sUserLastName.hashCode) +
+    (fkiUserID.hashCode) +
+    (fkiLanguageID.hashCode) +
     (objAddress == null ? 0 : objAddress!.hashCode) +
     (objphone == null ? 0 : objphone!.hashCode) +
     (objEmail == null ? 0 : objEmail!.hashCode);
@@ -315,106 +195,26 @@ class CustomEzmaxpartnerproductSubscribe {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (this.pksEzmaxcustomerCode != null) {
       json[r'pksEzmaxcustomerCode'] = this.pksEzmaxcustomerCode;
-    } else {
-      json[r'pksEzmaxcustomerCode'] = null;
-    }
-    if (this.sInfrastructureenvironmenttypeDescription != null) {
       json[r'sInfrastructureenvironmenttypeDescription'] = this.sInfrastructureenvironmenttypeDescription;
-    } else {
-      json[r'sInfrastructureenvironmenttypeDescription'] = null;
-    }
-    if (this.sCompanyName1 != null) {
       json[r'sCompanyName1'] = this.sCompanyName1;
-    } else {
-      json[r'sCompanyName1'] = null;
-    }
-    if (this.sCompanyName2 != null) {
       json[r'sCompanyName2'] = this.sCompanyName2;
-    } else {
-      json[r'sCompanyName2'] = null;
-    }
-    if (this.fkiSystemconfigurationtypeID != null) {
       json[r'fkiSystemconfigurationtypeID'] = this.fkiSystemconfigurationtypeID;
-    } else {
-      json[r'fkiSystemconfigurationtypeID'] = null;
-    }
-    if (this.sSystemconfigurationtypeDescription1 != null) {
       json[r'sSystemconfigurationtypeDescription1'] = this.sSystemconfigurationtypeDescription1;
-    } else {
-      json[r'sSystemconfigurationtypeDescription1'] = null;
-    }
-    if (this.sSystemconfigurationtypeDescription2 != null) {
       json[r'sSystemconfigurationtypeDescription2'] = this.sSystemconfigurationtypeDescription2;
-    } else {
-      json[r'sSystemconfigurationtypeDescription2'] = null;
-    }
-    if (this.fkiEzmaxpartnerID != null) {
       json[r'fkiEzmaxpartnerID'] = this.fkiEzmaxpartnerID;
-    } else {
-      json[r'fkiEzmaxpartnerID'] = null;
-    }
-    if (this.sEzmaxpartnerName1 != null) {
       json[r'sEzmaxpartnerName1'] = this.sEzmaxpartnerName1;
-    } else {
-      json[r'sEzmaxpartnerName1'] = null;
-    }
-    if (this.sEzmaxpartnerName2 != null) {
       json[r'sEzmaxpartnerName2'] = this.sEzmaxpartnerName2;
-    } else {
-      json[r'sEzmaxpartnerName2'] = null;
-    }
-    if (this.fkiEzmaxpartnerproductID != null) {
       json[r'fkiEzmaxpartnerproductID'] = this.fkiEzmaxpartnerproductID;
-    } else {
-      json[r'fkiEzmaxpartnerproductID'] = null;
-    }
-    if (this.sEzmaxpartnerproductName1 != null) {
       json[r'sEzmaxpartnerproductName1'] = this.sEzmaxpartnerproductName1;
-    } else {
-      json[r'sEzmaxpartnerproductName1'] = null;
-    }
-    if (this.sEzmaxpartnerproductName2 != null) {
       json[r'sEzmaxpartnerproductName2'] = this.sEzmaxpartnerproductName2;
-    } else {
-      json[r'sEzmaxpartnerproductName2'] = null;
-    }
-    if (this.fkiEzmaxpartnerproductstageID != null) {
       json[r'fkiEzmaxpartnerproductstageID'] = this.fkiEzmaxpartnerproductstageID;
-    } else {
-      json[r'fkiEzmaxpartnerproductstageID'] = null;
-    }
-    if (this.sEzmaxpartnerproductstageCode != null) {
       json[r'sEzmaxpartnerproductstageCode'] = this.sEzmaxpartnerproductstageCode;
-    } else {
-      json[r'sEzmaxpartnerproductstageCode'] = null;
-    }
-    if (this.sUserLoginName != null) {
       json[r'sUserLoginName'] = this.sUserLoginName;
-    } else {
-      json[r'sUserLoginName'] = null;
-    }
-    if (this.sUserFirstName != null) {
       json[r'sUserFirstName'] = this.sUserFirstName;
-    } else {
-      json[r'sUserFirstName'] = null;
-    }
-    if (this.sUserLastName != null) {
       json[r'sUserLastName'] = this.sUserLastName;
-    } else {
-      json[r'sUserLastName'] = null;
-    }
-    if (this.fkiUserID != null) {
       json[r'fkiUserID'] = this.fkiUserID;
-    } else {
-      json[r'fkiUserID'] = null;
-    }
-    if (this.fkiLanguageID != null) {
       json[r'fkiLanguageID'] = this.fkiLanguageID;
-    } else {
-      json[r'fkiLanguageID'] = null;
-    }
     if (this.objAddress != null) {
       json[r'objAddress'] = this.objAddress;
     } else {
@@ -444,30 +244,70 @@ class CustomEzmaxpartnerproductSubscribe {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
+        assert(json.containsKey(r'pksEzmaxcustomerCode'), 'Required key "CustomEzmaxpartnerproductSubscribe[pksEzmaxcustomerCode]" is missing from JSON.');
+        assert(json[r'pksEzmaxcustomerCode'] != null, 'Required key "CustomEzmaxpartnerproductSubscribe[pksEzmaxcustomerCode]" has a null value in JSON.');
+        assert(json.containsKey(r'sInfrastructureenvironmenttypeDescription'), 'Required key "CustomEzmaxpartnerproductSubscribe[sInfrastructureenvironmenttypeDescription]" is missing from JSON.');
+        assert(json[r'sInfrastructureenvironmenttypeDescription'] != null, 'Required key "CustomEzmaxpartnerproductSubscribe[sInfrastructureenvironmenttypeDescription]" has a null value in JSON.');
+        assert(json.containsKey(r'sCompanyName1'), 'Required key "CustomEzmaxpartnerproductSubscribe[sCompanyName1]" is missing from JSON.');
+        assert(json[r'sCompanyName1'] != null, 'Required key "CustomEzmaxpartnerproductSubscribe[sCompanyName1]" has a null value in JSON.');
+        assert(json.containsKey(r'sCompanyName2'), 'Required key "CustomEzmaxpartnerproductSubscribe[sCompanyName2]" is missing from JSON.');
+        assert(json[r'sCompanyName2'] != null, 'Required key "CustomEzmaxpartnerproductSubscribe[sCompanyName2]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiSystemconfigurationtypeID'), 'Required key "CustomEzmaxpartnerproductSubscribe[fkiSystemconfigurationtypeID]" is missing from JSON.');
+        assert(json[r'fkiSystemconfigurationtypeID'] != null, 'Required key "CustomEzmaxpartnerproductSubscribe[fkiSystemconfigurationtypeID]" has a null value in JSON.');
+        assert(json.containsKey(r'sSystemconfigurationtypeDescription1'), 'Required key "CustomEzmaxpartnerproductSubscribe[sSystemconfigurationtypeDescription1]" is missing from JSON.');
+        assert(json[r'sSystemconfigurationtypeDescription1'] != null, 'Required key "CustomEzmaxpartnerproductSubscribe[sSystemconfigurationtypeDescription1]" has a null value in JSON.');
+        assert(json.containsKey(r'sSystemconfigurationtypeDescription2'), 'Required key "CustomEzmaxpartnerproductSubscribe[sSystemconfigurationtypeDescription2]" is missing from JSON.');
+        assert(json[r'sSystemconfigurationtypeDescription2'] != null, 'Required key "CustomEzmaxpartnerproductSubscribe[sSystemconfigurationtypeDescription2]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiEzmaxpartnerID'), 'Required key "CustomEzmaxpartnerproductSubscribe[fkiEzmaxpartnerID]" is missing from JSON.');
+        assert(json[r'fkiEzmaxpartnerID'] != null, 'Required key "CustomEzmaxpartnerproductSubscribe[fkiEzmaxpartnerID]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzmaxpartnerName1'), 'Required key "CustomEzmaxpartnerproductSubscribe[sEzmaxpartnerName1]" is missing from JSON.');
+        assert(json[r'sEzmaxpartnerName1'] != null, 'Required key "CustomEzmaxpartnerproductSubscribe[sEzmaxpartnerName1]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzmaxpartnerName2'), 'Required key "CustomEzmaxpartnerproductSubscribe[sEzmaxpartnerName2]" is missing from JSON.');
+        assert(json[r'sEzmaxpartnerName2'] != null, 'Required key "CustomEzmaxpartnerproductSubscribe[sEzmaxpartnerName2]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiEzmaxpartnerproductID'), 'Required key "CustomEzmaxpartnerproductSubscribe[fkiEzmaxpartnerproductID]" is missing from JSON.');
+        assert(json[r'fkiEzmaxpartnerproductID'] != null, 'Required key "CustomEzmaxpartnerproductSubscribe[fkiEzmaxpartnerproductID]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzmaxpartnerproductName1'), 'Required key "CustomEzmaxpartnerproductSubscribe[sEzmaxpartnerproductName1]" is missing from JSON.');
+        assert(json[r'sEzmaxpartnerproductName1'] != null, 'Required key "CustomEzmaxpartnerproductSubscribe[sEzmaxpartnerproductName1]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzmaxpartnerproductName2'), 'Required key "CustomEzmaxpartnerproductSubscribe[sEzmaxpartnerproductName2]" is missing from JSON.');
+        assert(json[r'sEzmaxpartnerproductName2'] != null, 'Required key "CustomEzmaxpartnerproductSubscribe[sEzmaxpartnerproductName2]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiEzmaxpartnerproductstageID'), 'Required key "CustomEzmaxpartnerproductSubscribe[fkiEzmaxpartnerproductstageID]" is missing from JSON.');
+        assert(json[r'fkiEzmaxpartnerproductstageID'] != null, 'Required key "CustomEzmaxpartnerproductSubscribe[fkiEzmaxpartnerproductstageID]" has a null value in JSON.');
+        assert(json.containsKey(r'sEzmaxpartnerproductstageCode'), 'Required key "CustomEzmaxpartnerproductSubscribe[sEzmaxpartnerproductstageCode]" is missing from JSON.');
+        assert(json[r'sEzmaxpartnerproductstageCode'] != null, 'Required key "CustomEzmaxpartnerproductSubscribe[sEzmaxpartnerproductstageCode]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserLoginName'), 'Required key "CustomEzmaxpartnerproductSubscribe[sUserLoginName]" is missing from JSON.');
+        assert(json[r'sUserLoginName'] != null, 'Required key "CustomEzmaxpartnerproductSubscribe[sUserLoginName]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserFirstName'), 'Required key "CustomEzmaxpartnerproductSubscribe[sUserFirstName]" is missing from JSON.');
+        assert(json[r'sUserFirstName'] != null, 'Required key "CustomEzmaxpartnerproductSubscribe[sUserFirstName]" has a null value in JSON.');
+        assert(json.containsKey(r'sUserLastName'), 'Required key "CustomEzmaxpartnerproductSubscribe[sUserLastName]" is missing from JSON.');
+        assert(json[r'sUserLastName'] != null, 'Required key "CustomEzmaxpartnerproductSubscribe[sUserLastName]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiUserID'), 'Required key "CustomEzmaxpartnerproductSubscribe[fkiUserID]" is missing from JSON.');
+        assert(json[r'fkiUserID'] != null, 'Required key "CustomEzmaxpartnerproductSubscribe[fkiUserID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiLanguageID'), 'Required key "CustomEzmaxpartnerproductSubscribe[fkiLanguageID]" is missing from JSON.');
+        assert(json[r'fkiLanguageID'] != null, 'Required key "CustomEzmaxpartnerproductSubscribe[fkiLanguageID]" has a null value in JSON.');
         return true;
       }());
 
       return CustomEzmaxpartnerproductSubscribe(
-        pksEzmaxcustomerCode: mapValueOfType<String>(json, r'pksEzmaxcustomerCode'),
-        sInfrastructureenvironmenttypeDescription: mapValueOfType<String>(json, r'sInfrastructureenvironmenttypeDescription'),
-        sCompanyName1: mapValueOfType<String>(json, r'sCompanyName1'),
-        sCompanyName2: mapValueOfType<String>(json, r'sCompanyName2'),
-        fkiSystemconfigurationtypeID: mapValueOfType<int>(json, r'fkiSystemconfigurationtypeID'),
-        sSystemconfigurationtypeDescription1: mapValueOfType<String>(json, r'sSystemconfigurationtypeDescription1'),
-        sSystemconfigurationtypeDescription2: mapValueOfType<String>(json, r'sSystemconfigurationtypeDescription2'),
-        fkiEzmaxpartnerID: mapValueOfType<int>(json, r'fkiEzmaxpartnerID'),
-        sEzmaxpartnerName1: mapValueOfType<String>(json, r'sEzmaxpartnerName1'),
-        sEzmaxpartnerName2: mapValueOfType<String>(json, r'sEzmaxpartnerName2'),
-        fkiEzmaxpartnerproductID: mapValueOfType<int>(json, r'fkiEzmaxpartnerproductID'),
-        sEzmaxpartnerproductName1: mapValueOfType<String>(json, r'sEzmaxpartnerproductName1'),
-        sEzmaxpartnerproductName2: mapValueOfType<String>(json, r'sEzmaxpartnerproductName2'),
-        fkiEzmaxpartnerproductstageID: mapValueOfType<int>(json, r'fkiEzmaxpartnerproductstageID'),
-        sEzmaxpartnerproductstageCode: mapValueOfType<String>(json, r'sEzmaxpartnerproductstageCode'),
-        sUserLoginName: mapValueOfType<String>(json, r'sUserLoginName'),
-        sUserFirstName: mapValueOfType<String>(json, r'sUserFirstName'),
-        sUserLastName: mapValueOfType<String>(json, r'sUserLastName'),
-        fkiUserID: mapValueOfType<int>(json, r'fkiUserID'),
-        fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID'),
+        pksEzmaxcustomerCode: mapValueOfType<String>(json, r'pksEzmaxcustomerCode')!,
+        sInfrastructureenvironmenttypeDescription: mapValueOfType<String>(json, r'sInfrastructureenvironmenttypeDescription')!,
+        sCompanyName1: mapValueOfType<String>(json, r'sCompanyName1')!,
+        sCompanyName2: mapValueOfType<String>(json, r'sCompanyName2')!,
+        fkiSystemconfigurationtypeID: mapValueOfType<int>(json, r'fkiSystemconfigurationtypeID')!,
+        sSystemconfigurationtypeDescription1: mapValueOfType<String>(json, r'sSystemconfigurationtypeDescription1')!,
+        sSystemconfigurationtypeDescription2: mapValueOfType<String>(json, r'sSystemconfigurationtypeDescription2')!,
+        fkiEzmaxpartnerID: mapValueOfType<int>(json, r'fkiEzmaxpartnerID')!,
+        sEzmaxpartnerName1: mapValueOfType<String>(json, r'sEzmaxpartnerName1')!,
+        sEzmaxpartnerName2: mapValueOfType<String>(json, r'sEzmaxpartnerName2')!,
+        fkiEzmaxpartnerproductID: mapValueOfType<int>(json, r'fkiEzmaxpartnerproductID')!,
+        sEzmaxpartnerproductName1: mapValueOfType<String>(json, r'sEzmaxpartnerproductName1')!,
+        sEzmaxpartnerproductName2: mapValueOfType<String>(json, r'sEzmaxpartnerproductName2')!,
+        fkiEzmaxpartnerproductstageID: mapValueOfType<int>(json, r'fkiEzmaxpartnerproductstageID')!,
+        sEzmaxpartnerproductstageCode: mapValueOfType<String>(json, r'sEzmaxpartnerproductstageCode')!,
+        sUserLoginName: mapValueOfType<String>(json, r'sUserLoginName')!,
+        sUserFirstName: mapValueOfType<String>(json, r'sUserFirstName')!,
+        sUserLastName: mapValueOfType<String>(json, r'sUserLastName')!,
+        fkiUserID: mapValueOfType<int>(json, r'fkiUserID')!,
+        fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID')!,
         objAddress: AddressRequestCompound.fromJson(json[r'objAddress']),
         objphone: PhoneRequestCompoundV2.fromJson(json[r'objphone']),
         objEmail: EmailRequestCompound.fromJson(json[r'objEmail']),
@@ -518,6 +358,26 @@ class CustomEzmaxpartnerproductSubscribe {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
+    'pksEzmaxcustomerCode',
+    'sInfrastructureenvironmenttypeDescription',
+    'sCompanyName1',
+    'sCompanyName2',
+    'fkiSystemconfigurationtypeID',
+    'sSystemconfigurationtypeDescription1',
+    'sSystemconfigurationtypeDescription2',
+    'fkiEzmaxpartnerID',
+    'sEzmaxpartnerName1',
+    'sEzmaxpartnerName2',
+    'fkiEzmaxpartnerproductID',
+    'sEzmaxpartnerproductName1',
+    'sEzmaxpartnerproductName2',
+    'fkiEzmaxpartnerproductstageID',
+    'sEzmaxpartnerproductstageCode',
+    'sUserLoginName',
+    'sUserFirstName',
+    'sUserLastName',
+    'fkiUserID',
+    'fkiLanguageID',
   };
 }
 

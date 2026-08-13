@@ -73,6 +73,63 @@ class ObjectEzsignbulksendsignermappingApi {
     return null;
   }
 
+  /// Create a new Ezsignbulksendsignermapping
+  ///
+  /// The endpoint allows to create one or many elements at once.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [EzsignbulksendsignermappingCreateObjectV2Request] ezsignbulksendsignermappingCreateObjectV2Request (required):
+  Future<Response> ezsignbulksendsignermappingCreateObjectV2WithHttpInfo(EzsignbulksendsignermappingCreateObjectV2Request ezsignbulksendsignermappingCreateObjectV2Request, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/2/object/ezsignbulksendsignermapping';
+
+    // ignore: prefer_final_locals
+    Object? postBody = ezsignbulksendsignermappingCreateObjectV2Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Create a new Ezsignbulksendsignermapping
+  ///
+  /// The endpoint allows to create one or many elements at once.
+  ///
+  /// Parameters:
+  ///
+  /// * [EzsignbulksendsignermappingCreateObjectV2Request] ezsignbulksendsignermappingCreateObjectV2Request (required):
+  Future<EzsignbulksendsignermappingCreateObjectV2Response?> ezsignbulksendsignermappingCreateObjectV2(EzsignbulksendsignermappingCreateObjectV2Request ezsignbulksendsignermappingCreateObjectV2Request, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignbulksendsignermappingCreateObjectV2WithHttpInfo(ezsignbulksendsignermappingCreateObjectV2Request, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignbulksendsignermappingCreateObjectV2Response',) as EzsignbulksendsignermappingCreateObjectV2Response;
+    
+    }
+    return null;
+  }
+
   /// Delete an existing Ezsignbulksendsignermapping
   ///
   /// 
@@ -184,6 +241,64 @@ class ObjectEzsignbulksendsignermappingApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignbulksendsignermappingGetObjectV2Response',) as EzsignbulksendsignermappingGetObjectV2Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve an existing Ezsignbulksendsignermapping
+  ///
+  /// 
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignbulksendsignermappingID (required):
+  Future<Response> ezsignbulksendsignermappingGetObjectV3WithHttpInfo(int pkiEzsignbulksendsignermappingID, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/3/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}'
+      .replaceAll('{pkiEzsignbulksendsignermappingID}', pkiEzsignbulksendsignermappingID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Retrieve an existing Ezsignbulksendsignermapping
+  ///
+  /// 
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEzsignbulksendsignermappingID (required):
+  Future<EzsignbulksendsignermappingGetObjectV3Response?> ezsignbulksendsignermappingGetObjectV3(int pkiEzsignbulksendsignermappingID, { Future<void>? abortTrigger, }) async {
+    final response = await ezsignbulksendsignermappingGetObjectV3WithHttpInfo(pkiEzsignbulksendsignermappingID, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EzsignbulksendsignermappingGetObjectV3Response',) as EzsignbulksendsignermappingGetObjectV3Response;
     
     }
     return null;

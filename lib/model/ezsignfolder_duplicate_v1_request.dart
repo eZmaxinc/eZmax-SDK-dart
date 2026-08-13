@@ -17,6 +17,7 @@ class EzsignfolderDuplicateV1Request {
     this.aFkiEzsignfoldersignerassociationID = const [],
     this.aObjEzsigndocument = const [],
     this.tEzsignfolderNote,
+    this.bKeepenteredvalues = true,
   });
 
   /// The description of the Ezsignfolder
@@ -35,12 +36,16 @@ class EzsignfolderDuplicateV1Request {
   ///
   String? tEzsignfolderNote;
 
+  /// Whether we keep the entered values or not in the Ezsignform
+  bool bKeepenteredvalues;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignfolderDuplicateV1Request &&
     other.sEzsignfolderDescription == sEzsignfolderDescription &&
     _deepEquality.equals(other.aFkiEzsignfoldersignerassociationID, aFkiEzsignfoldersignerassociationID) &&
     _deepEquality.equals(other.aObjEzsigndocument, aObjEzsigndocument) &&
-    other.tEzsignfolderNote == tEzsignfolderNote;
+    other.tEzsignfolderNote == tEzsignfolderNote &&
+    other.bKeepenteredvalues == bKeepenteredvalues;
 
   @override
   int get hashCode =>
@@ -48,10 +53,11 @@ class EzsignfolderDuplicateV1Request {
     (sEzsignfolderDescription.hashCode) +
     (aFkiEzsignfoldersignerassociationID.hashCode) +
     (aObjEzsigndocument.hashCode) +
-    (tEzsignfolderNote == null ? 0 : tEzsignfolderNote!.hashCode);
+    (tEzsignfolderNote == null ? 0 : tEzsignfolderNote!.hashCode) +
+    (bKeepenteredvalues.hashCode);
 
   @override
-  String toString() => 'EzsignfolderDuplicateV1Request[sEzsignfolderDescription=$sEzsignfolderDescription, aFkiEzsignfoldersignerassociationID=$aFkiEzsignfoldersignerassociationID, aObjEzsigndocument=$aObjEzsigndocument, tEzsignfolderNote=$tEzsignfolderNote]';
+  String toString() => 'EzsignfolderDuplicateV1Request[sEzsignfolderDescription=$sEzsignfolderDescription, aFkiEzsignfoldersignerassociationID=$aFkiEzsignfoldersignerassociationID, aObjEzsigndocument=$aObjEzsigndocument, tEzsignfolderNote=$tEzsignfolderNote, bKeepenteredvalues=$bKeepenteredvalues]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -63,6 +69,7 @@ class EzsignfolderDuplicateV1Request {
     } else {
       json[r'tEzsignfolderNote'] = null;
     }
+      json[r'bKeepenteredvalues'] = this.bKeepenteredvalues;
     return json;
   }
 
@@ -93,6 +100,7 @@ class EzsignfolderDuplicateV1Request {
             : const [],
         aObjEzsigndocument: CustomEzsigndocumentDuplicateRequest.listFromJson(json[r'a_objEzsigndocument']),
         tEzsignfolderNote: mapValueOfType<String>(json, r'tEzsignfolderNote'),
+        bKeepenteredvalues: mapValueOfType<bool>(json, r'bKeepenteredvalues') ?? true,
       );
     }
     return null;
