@@ -9,6 +9,8 @@ import 'package:openapi/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiUserID** | **int** | The unique ID of the User | 
+**fkiAgentID** | **int** | The unique ID of the Agent. | [optional] 
+**fkiBrokerID** | **int** | The unique ID of the Broker. | [optional] 
 **sUserFirstname** | **String** | The first name of the user | 
 **sUserLastname** | **String** | The last name of the user | 
 **sUserLoginname** | **String** | The login name of the User. | 

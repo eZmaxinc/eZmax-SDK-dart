@@ -13,6 +13,7 @@ part of openapi.api;
 /// The role of the Ezsignfoldersignerassociation.  1. **CC** receive a copy of all documents. 2. **Signer** sign document. 3. **SignerAndCC** sign document and receive a copy of all documents.
 enum FieldEEzsignfoldersignerassociationRole {
   CC._(r'CC'),
+  cCDeleted._(r'CCDeleted'),
   signer._(r'Signer'),
   signerAndCC._(r'SignerAndCC'),
   ;
@@ -75,6 +76,7 @@ class FieldEEzsignfoldersignerassociationRoleTypeTransformer {
     if (data != null) {
       switch (data) {
         case r'CC': return FieldEEzsignfoldersignerassociationRole.CC;
+        case r'CCDeleted': return FieldEEzsignfoldersignerassociationRole.cCDeleted;
         case r'Signer': return FieldEEzsignfoldersignerassociationRole.signer;
         case r'SignerAndCC': return FieldEEzsignfoldersignerassociationRole.signerAndCC;
         default:

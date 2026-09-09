@@ -136,6 +136,9 @@ String parameterToString(dynamic value) {
   if (value is FieldEBrandingLogo) {
     return FieldEBrandingLogoTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEBuyercontractRemunerationtype) {
+    return FieldEBuyercontractRemunerationtypeTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEBuyercontractStep) {
     return FieldEBuyercontractStepTypeTransformer().encode(value).toString();
   }

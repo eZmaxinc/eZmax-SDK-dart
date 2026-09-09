@@ -16,6 +16,118 @@ class ObjectEmployeeApi {
 
   final ApiClient apiClient;
 
+  /// Download multiples attachments from a Employee
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEmployeeID (required):
+  ///
+  /// * [EmployeeBatchDownloadV1Request] employeeBatchDownloadV1Request (required):
+  Future<Response> employeeBatchDownloadV1WithHttpInfo(int pkiEmployeeID, EmployeeBatchDownloadV1Request employeeBatchDownloadV1Request, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/employee/{pkiEmployeeID}/batchDownload'
+      .replaceAll('{pkiEmployeeID}', pkiEmployeeID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = employeeBatchDownloadV1Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Download multiples attachments from a Employee
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEmployeeID (required):
+  ///
+  /// * [EmployeeBatchDownloadV1Request] employeeBatchDownloadV1Request (required):
+  Future<MultipartFile?> employeeBatchDownloadV1(int pkiEmployeeID, EmployeeBatchDownloadV1Request employeeBatchDownloadV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await employeeBatchDownloadV1WithHttpInfo(pkiEmployeeID, employeeBatchDownloadV1Request, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'MultipartFile',) as MultipartFile;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve Employee's attachments
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEmployeeID (required):
+  Future<Response> employeeGetAttachmentsV1WithHttpInfo(int pkiEmployeeID, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/employee/{pkiEmployeeID}/getAttachments'
+      .replaceAll('{pkiEmployeeID}', pkiEmployeeID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Retrieve Employee's attachments
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEmployeeID (required):
+  Future<EmployeeGetAttachmentsV1Response?> employeeGetAttachmentsV1(int pkiEmployeeID, { Future<void>? abortTrigger, }) async {
+    final response = await employeeGetAttachmentsV1WithHttpInfo(pkiEmployeeID, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EmployeeGetAttachmentsV1Response',) as EmployeeGetAttachmentsV1Response;
+    
+    }
+    return null;
+  }
+
   /// Retrieve Employee list
   ///
   /// 

@@ -16,6 +16,118 @@ class ObjectAgentApi {
 
   final ApiClient apiClient;
 
+  /// Download multiples attachments from a Agent
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiAgentID (required):
+  ///
+  /// * [AgentBatchDownloadV1Request] agentBatchDownloadV1Request (required):
+  Future<Response> agentBatchDownloadV1WithHttpInfo(int pkiAgentID, AgentBatchDownloadV1Request agentBatchDownloadV1Request, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/agent/{pkiAgentID}/batchDownload'
+      .replaceAll('{pkiAgentID}', pkiAgentID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = agentBatchDownloadV1Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Download multiples attachments from a Agent
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiAgentID (required):
+  ///
+  /// * [AgentBatchDownloadV1Request] agentBatchDownloadV1Request (required):
+  Future<MultipartFile?> agentBatchDownloadV1(int pkiAgentID, AgentBatchDownloadV1Request agentBatchDownloadV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await agentBatchDownloadV1WithHttpInfo(pkiAgentID, agentBatchDownloadV1Request, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'MultipartFile',) as MultipartFile;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve Agent's attachments
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiAgentID (required):
+  Future<Response> agentGetAttachmentsV1WithHttpInfo(int pkiAgentID, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/agent/{pkiAgentID}/getAttachments'
+      .replaceAll('{pkiAgentID}', pkiAgentID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Retrieve Agent's attachments
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiAgentID (required):
+  Future<AgentGetAttachmentsV1Response?> agentGetAttachmentsV1(int pkiAgentID, { Future<void>? abortTrigger, }) async {
+    final response = await agentGetAttachmentsV1WithHttpInfo(pkiAgentID, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AgentGetAttachmentsV1Response',) as AgentGetAttachmentsV1Response;
+    
+    }
+    return null;
+  }
+
   /// Retrieve Agents and IDs
   ///
   /// Get the list of Agent to be used in a dropdown or autocomplete control.

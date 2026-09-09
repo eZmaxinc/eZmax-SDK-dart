@@ -16,6 +16,118 @@ class ObjectOtherincomeApi {
 
   final ApiClient apiClient;
 
+  /// Download multiples attachments from a Otherincome
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiOtherincomeID (required):
+  ///
+  /// * [OtherincomeBatchDownloadV1Request] otherincomeBatchDownloadV1Request (required):
+  Future<Response> otherincomeBatchDownloadV1WithHttpInfo(int pkiOtherincomeID, OtherincomeBatchDownloadV1Request otherincomeBatchDownloadV1Request, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/otherincome/{pkiOtherincomeID}/batchDownload'
+      .replaceAll('{pkiOtherincomeID}', pkiOtherincomeID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = otherincomeBatchDownloadV1Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Download multiples attachments from a Otherincome
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiOtherincomeID (required):
+  ///
+  /// * [OtherincomeBatchDownloadV1Request] otherincomeBatchDownloadV1Request (required):
+  Future<MultipartFile?> otherincomeBatchDownloadV1(int pkiOtherincomeID, OtherincomeBatchDownloadV1Request otherincomeBatchDownloadV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await otherincomeBatchDownloadV1WithHttpInfo(pkiOtherincomeID, otherincomeBatchDownloadV1Request, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'MultipartFile',) as MultipartFile;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve Otherincome's attachments
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiOtherincomeID (required):
+  Future<Response> otherincomeGetAttachmentsV1WithHttpInfo(int pkiOtherincomeID, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/otherincome/{pkiOtherincomeID}/getAttachments'
+      .replaceAll('{pkiOtherincomeID}', pkiOtherincomeID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Retrieve Otherincome's attachments
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiOtherincomeID (required):
+  Future<OtherincomeGetAttachmentsV1Response?> otherincomeGetAttachmentsV1(int pkiOtherincomeID, { Future<void>? abortTrigger, }) async {
+    final response = await otherincomeGetAttachmentsV1WithHttpInfo(pkiOtherincomeID, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'OtherincomeGetAttachmentsV1Response',) as OtherincomeGetAttachmentsV1Response;
+    
+    }
+    return null;
+  }
+
   /// Retrieve Communication count
   ///
   /// 

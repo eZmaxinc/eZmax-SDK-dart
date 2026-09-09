@@ -12,6 +12,8 @@ part of openapi.api;
 
 /// The Realestateevent of the Webhook
 enum FieldEWebhookRealestateevent {
+  buyercontractCreated._(r'BuyercontractCreated'),
+  buyercontractModified._(r'BuyercontractModified'),
   inscriptionCreated._(r'InscriptionCreated'),
   inscriptionModified._(r'InscriptionModified'),
   inscriptionnotauthenticatedCreated._(r'InscriptionnotauthenticatedCreated'),
@@ -75,6 +77,8 @@ class FieldEWebhookRealestateeventTypeTransformer {
     }
     if (data != null) {
       switch (data) {
+        case r'BuyercontractCreated': return FieldEWebhookRealestateevent.buyercontractCreated;
+        case r'BuyercontractModified': return FieldEWebhookRealestateevent.buyercontractModified;
         case r'InscriptionCreated': return FieldEWebhookRealestateevent.inscriptionCreated;
         case r'InscriptionModified': return FieldEWebhookRealestateevent.inscriptionModified;
         case r'InscriptionnotauthenticatedCreated': return FieldEWebhookRealestateevent.inscriptionnotauthenticatedCreated;

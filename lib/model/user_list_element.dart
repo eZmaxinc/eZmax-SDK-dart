@@ -14,6 +14,8 @@ class UserListElement {
   /// Returns a new [UserListElement] instance.
   UserListElement({
     required this.pkiUserID,
+    this.fkiAgentID,
+    this.fkiBrokerID,
     required this.sUserFirstname,
     required this.sUserLastname,
     required this.sUserLoginname,
@@ -31,6 +33,28 @@ class UserListElement {
   ///
   /// Minimum value: 0
   int pkiUserID;
+
+  /// The unique ID of the Agent.
+  ///
+  /// Minimum value: 0
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiAgentID;
+
+  /// The unique ID of the Broker.
+  ///
+  /// Minimum value: 0
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiBrokerID;
 
   /// The first name of the user
   String sUserFirstname;
@@ -83,6 +107,8 @@ class UserListElement {
   @override
   bool operator ==(Object other) => identical(this, other) || other is UserListElement &&
     other.pkiUserID == pkiUserID &&
+    other.fkiAgentID == fkiAgentID &&
+    other.fkiBrokerID == fkiBrokerID &&
     other.sUserFirstname == sUserFirstname &&
     other.sUserLastname == sUserLastname &&
     other.sUserLoginname == sUserLoginname &&
@@ -99,6 +125,8 @@ class UserListElement {
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiUserID.hashCode) +
+    (fkiAgentID == null ? 0 : fkiAgentID!.hashCode) +
+    (fkiBrokerID == null ? 0 : fkiBrokerID!.hashCode) +
     (sUserFirstname.hashCode) +
     (sUserLastname.hashCode) +
     (sUserLoginname.hashCode) +
@@ -112,11 +140,21 @@ class UserListElement {
     (sUserJobtitle == null ? 0 : sUserJobtitle!.hashCode);
 
   @override
-  String toString() => 'UserListElement[pkiUserID=$pkiUserID, sUserFirstname=$sUserFirstname, sUserLastname=$sUserLastname, sUserLoginname=$sUserLoginname, bUserIsactive=$bUserIsactive, bUserSuspended=$bUserSuspended, eUserType=$eUserType, eUserOrigin=$eUserOrigin, eUserEzsignaccess=$eUserEzsignaccess, dtUserEzsignprepaidexpiration=$dtUserEzsignprepaidexpiration, sEmailAddress=$sEmailAddress, sUserJobtitle=$sUserJobtitle]';
+  String toString() => 'UserListElement[pkiUserID=$pkiUserID, fkiAgentID=$fkiAgentID, fkiBrokerID=$fkiBrokerID, sUserFirstname=$sUserFirstname, sUserLastname=$sUserLastname, sUserLoginname=$sUserLoginname, bUserIsactive=$bUserIsactive, bUserSuspended=$bUserSuspended, eUserType=$eUserType, eUserOrigin=$eUserOrigin, eUserEzsignaccess=$eUserEzsignaccess, dtUserEzsignprepaidexpiration=$dtUserEzsignprepaidexpiration, sEmailAddress=$sEmailAddress, sUserJobtitle=$sUserJobtitle]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiUserID'] = this.pkiUserID;
+    if (this.fkiAgentID != null) {
+      json[r'fkiAgentID'] = this.fkiAgentID;
+    } else {
+      json[r'fkiAgentID'] = null;
+    }
+    if (this.fkiBrokerID != null) {
+      json[r'fkiBrokerID'] = this.fkiBrokerID;
+    } else {
+      json[r'fkiBrokerID'] = null;
+    }
       json[r'sUserFirstname'] = this.sUserFirstname;
       json[r'sUserLastname'] = this.sUserLastname;
       json[r'sUserLoginname'] = this.sUserLoginname;
@@ -177,6 +215,8 @@ class UserListElement {
 
       return UserListElement(
         pkiUserID: mapValueOfType<int>(json, r'pkiUserID')!,
+        fkiAgentID: mapValueOfType<int>(json, r'fkiAgentID'),
+        fkiBrokerID: mapValueOfType<int>(json, r'fkiBrokerID'),
         sUserFirstname: mapValueOfType<String>(json, r'sUserFirstname')!,
         sUserLastname: mapValueOfType<String>(json, r'sUserLastname')!,
         sUserLoginname: mapValueOfType<String>(json, r'sUserLoginname')!,

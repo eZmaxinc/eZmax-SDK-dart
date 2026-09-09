@@ -27,7 +27,7 @@ class EzsigntemplateelementdependencyResponseCompound {
   /// The unique ID of the Ezsigntemplateelementdependency
   ///
   /// Minimum value: 0
-  /// Maximum value: 65535
+  /// Maximum value: 16777215
   int pkiEzsigntemplateelementdependencyID;
 
   /// The unique ID of the Ezsigntemplateformfield

@@ -28,6 +28,7 @@ class AgentListElement {
     required this.iAgentLongdistancecode,
     required this.iAgentBannernumber,
     required this.sAgentRealestateassociationlicense,
+    this.dtAgentPermitexpiration,
     this.dtAgentHiredate,
     this.dtAgentLeavedate,
     this.dtAgentContractdate,
@@ -143,7 +144,16 @@ class AgentListElement {
   /// The realestateassociationlicense of the Agent
   String sAgentRealestateassociationlicense;
 
-  /// The hiredate of the Agent
+  /// The expiration date of permit of the Agent
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? dtAgentPermitexpiration;
+
+  /// The hire date of the Agent
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -152,7 +162,7 @@ class AgentListElement {
   ///
   String? dtAgentHiredate;
 
-  /// The leavedate of the Agent
+  /// The leave date of the Agent
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -370,6 +380,7 @@ class AgentListElement {
     other.iAgentLongdistancecode == iAgentLongdistancecode &&
     other.iAgentBannernumber == iAgentBannernumber &&
     other.sAgentRealestateassociationlicense == sAgentRealestateassociationlicense &&
+    other.dtAgentPermitexpiration == dtAgentPermitexpiration &&
     other.dtAgentHiredate == dtAgentHiredate &&
     other.dtAgentLeavedate == dtAgentLeavedate &&
     other.dtAgentContractdate == dtAgentContractdate &&
@@ -418,6 +429,7 @@ class AgentListElement {
     (iAgentLongdistancecode.hashCode) +
     (iAgentBannernumber.hashCode) +
     (sAgentRealestateassociationlicense.hashCode) +
+    (dtAgentPermitexpiration == null ? 0 : dtAgentPermitexpiration!.hashCode) +
     (dtAgentHiredate == null ? 0 : dtAgentHiredate!.hashCode) +
     (dtAgentLeavedate == null ? 0 : dtAgentLeavedate!.hashCode) +
     (dtAgentContractdate == null ? 0 : dtAgentContractdate!.hashCode) +
@@ -449,7 +461,7 @@ class AgentListElement {
     (sCountryNameX == null ? 0 : sCountryNameX!.hashCode);
 
   @override
-  String toString() => 'AgentListElement[pkiAgentID=$pkiAgentID, fkiAgenttypeID=$fkiAgenttypeID, sAgenttypeNameX=$sAgenttypeNameX, fkiAgentincorporationID=$fkiAgentincorporationID, sAgentincorporationName=$sAgentincorporationName, fkiDepartmentID=$fkiDepartmentID, sDepartmentNameX=$sDepartmentNameX, fkiLanguageID=$fkiLanguageID, sLanguageNameX=$sLanguageNameX, sRealestateboardnumberNumber=$sRealestateboardnumberNumber, sAgentCode=$sAgentCode, iAgentPhotocopiercode=$iAgentPhotocopiercode, iAgentLongdistancecode=$iAgentLongdistancecode, iAgentBannernumber=$iAgentBannernumber, sAgentRealestateassociationlicense=$sAgentRealestateassociationlicense, dtAgentHiredate=$dtAgentHiredate, dtAgentLeavedate=$dtAgentLeavedate, dtAgentContractdate=$dtAgentContractdate, dtAgentTransferdate=$dtAgentTransferdate, dtAgentSenioritydate=$dtAgentSenioritydate, dtAgentSickleavestart=$dtAgentSickleavestart, dtAgentSickleaveend=$dtAgentSickleaveend, eAgentSchedule=$eAgentSchedule, bAgentTranquillit=$bAgentTranquillit, bAgentResidentiallicense=$bAgentResidentiallicense, bAgentCommerciallicense=$bAgentCommerciallicense, bAgentMortgagelicense=$bAgentMortgagelicense, bAgentPaidbyofficetranquillit=$bAgentPaidbyofficetranquillit, dtAgentFintraccertification=$dtAgentFintraccertification, bAgentIsactive=$bAgentIsactive, sContactFirstname=$sContactFirstname, sContactLastname=$sContactLastname, dtContactBirthdate=$dtContactBirthdate, sEmailAddress=$sEmailAddress, sPhoneE164=$sPhoneE164, sAddressCivic=$sAddressCivic, sAddressStreet=$sAddressStreet, sAddressSuite=$sAddressSuite, sAddressCity=$sAddressCity, sAddressZip=$sAddressZip, fkiProvinceID=$fkiProvinceID, sProvinceNameX=$sProvinceNameX, fkiCountryID=$fkiCountryID, sCountryNameX=$sCountryNameX]';
+  String toString() => 'AgentListElement[pkiAgentID=$pkiAgentID, fkiAgenttypeID=$fkiAgenttypeID, sAgenttypeNameX=$sAgenttypeNameX, fkiAgentincorporationID=$fkiAgentincorporationID, sAgentincorporationName=$sAgentincorporationName, fkiDepartmentID=$fkiDepartmentID, sDepartmentNameX=$sDepartmentNameX, fkiLanguageID=$fkiLanguageID, sLanguageNameX=$sLanguageNameX, sRealestateboardnumberNumber=$sRealestateboardnumberNumber, sAgentCode=$sAgentCode, iAgentPhotocopiercode=$iAgentPhotocopiercode, iAgentLongdistancecode=$iAgentLongdistancecode, iAgentBannernumber=$iAgentBannernumber, sAgentRealestateassociationlicense=$sAgentRealestateassociationlicense, dtAgentPermitexpiration=$dtAgentPermitexpiration, dtAgentHiredate=$dtAgentHiredate, dtAgentLeavedate=$dtAgentLeavedate, dtAgentContractdate=$dtAgentContractdate, dtAgentTransferdate=$dtAgentTransferdate, dtAgentSenioritydate=$dtAgentSenioritydate, dtAgentSickleavestart=$dtAgentSickleavestart, dtAgentSickleaveend=$dtAgentSickleaveend, eAgentSchedule=$eAgentSchedule, bAgentTranquillit=$bAgentTranquillit, bAgentResidentiallicense=$bAgentResidentiallicense, bAgentCommerciallicense=$bAgentCommerciallicense, bAgentMortgagelicense=$bAgentMortgagelicense, bAgentPaidbyofficetranquillit=$bAgentPaidbyofficetranquillit, dtAgentFintraccertification=$dtAgentFintraccertification, bAgentIsactive=$bAgentIsactive, sContactFirstname=$sContactFirstname, sContactLastname=$sContactLastname, dtContactBirthdate=$dtContactBirthdate, sEmailAddress=$sEmailAddress, sPhoneE164=$sPhoneE164, sAddressCivic=$sAddressCivic, sAddressStreet=$sAddressStreet, sAddressSuite=$sAddressSuite, sAddressCity=$sAddressCity, sAddressZip=$sAddressZip, fkiProvinceID=$fkiProvinceID, sProvinceNameX=$sProvinceNameX, fkiCountryID=$fkiCountryID, sCountryNameX=$sCountryNameX]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -480,6 +492,11 @@ class AgentListElement {
       json[r'iAgentLongdistancecode'] = this.iAgentLongdistancecode;
       json[r'iAgentBannernumber'] = this.iAgentBannernumber;
       json[r'sAgentRealestateassociationlicense'] = this.sAgentRealestateassociationlicense;
+    if (this.dtAgentPermitexpiration != null) {
+      json[r'dtAgentPermitexpiration'] = this.dtAgentPermitexpiration;
+    } else {
+      json[r'dtAgentPermitexpiration'] = null;
+    }
     if (this.dtAgentHiredate != null) {
       json[r'dtAgentHiredate'] = this.dtAgentHiredate;
     } else {
@@ -664,6 +681,7 @@ class AgentListElement {
         iAgentLongdistancecode: mapValueOfType<int>(json, r'iAgentLongdistancecode')!,
         iAgentBannernumber: mapValueOfType<int>(json, r'iAgentBannernumber')!,
         sAgentRealestateassociationlicense: mapValueOfType<String>(json, r'sAgentRealestateassociationlicense')!,
+        dtAgentPermitexpiration: mapValueOfType<String>(json, r'dtAgentPermitexpiration'),
         dtAgentHiredate: mapValueOfType<String>(json, r'dtAgentHiredate'),
         dtAgentLeavedate: mapValueOfType<String>(json, r'dtAgentLeavedate'),
         dtAgentContractdate: mapValueOfType<String>(json, r'dtAgentContractdate'),

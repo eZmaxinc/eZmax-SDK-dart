@@ -16,6 +16,118 @@ class ObjectElectronicfundstransferApi {
 
   final ApiClient apiClient;
 
+  /// Download multiples attachments from an Electronicfundstransfer
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiElectronicfundstransferID (required):
+  ///
+  /// * [ElectronicfundstransferBatchDownloadV1Request] electronicfundstransferBatchDownloadV1Request (required):
+  Future<Response> electronicfundstransferBatchDownloadV1WithHttpInfo(int pkiElectronicfundstransferID, ElectronicfundstransferBatchDownloadV1Request electronicfundstransferBatchDownloadV1Request, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/batchDownload'
+      .replaceAll('{pkiElectronicfundstransferID}', pkiElectronicfundstransferID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = electronicfundstransferBatchDownloadV1Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Download multiples attachments from an Electronicfundstransfer
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiElectronicfundstransferID (required):
+  ///
+  /// * [ElectronicfundstransferBatchDownloadV1Request] electronicfundstransferBatchDownloadV1Request (required):
+  Future<MultipartFile?> electronicfundstransferBatchDownloadV1(int pkiElectronicfundstransferID, ElectronicfundstransferBatchDownloadV1Request electronicfundstransferBatchDownloadV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await electronicfundstransferBatchDownloadV1WithHttpInfo(pkiElectronicfundstransferID, electronicfundstransferBatchDownloadV1Request, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'MultipartFile',) as MultipartFile;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve Electronicfundstransfer's attachments
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiElectronicfundstransferID (required):
+  Future<Response> electronicfundstransferGetAttachmentsV1WithHttpInfo(int pkiElectronicfundstransferID, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getAttachments'
+      .replaceAll('{pkiElectronicfundstransferID}', pkiElectronicfundstransferID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Retrieve Electronicfundstransfer's attachments
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiElectronicfundstransferID (required):
+  Future<ElectronicfundstransferGetAttachmentsV1Response?> electronicfundstransferGetAttachmentsV1(int pkiElectronicfundstransferID, { Future<void>? abortTrigger, }) async {
+    final response = await electronicfundstransferGetAttachmentsV1WithHttpInfo(pkiElectronicfundstransferID, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'ElectronicfundstransferGetAttachmentsV1Response',) as ElectronicfundstransferGetAttachmentsV1Response;
+    
+    }
+    return null;
+  }
+
   /// Retrieve Communication count
   ///
   /// 

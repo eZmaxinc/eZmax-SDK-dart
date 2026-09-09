@@ -45,10 +45,10 @@ class BuyercontractListElement {
 
   FieldEBuyercontractStep eBuyercontractStep;
 
-  /// The minimumprice of the Buyercontract
+  /// The minimum price of the Buyercontract
   String dBuyercontractMinimumprice;
 
-  /// The maximumprice of the Buyercontract
+  /// The maximum price of the Buyercontract
   String dBuyercontractMaximumprice;
 
   FieldEBuyercontractType eBuyercontractType;
@@ -65,7 +65,7 @@ class BuyercontractListElement {
   /// The date of the Buyercontract
   String dtBuyercontractDate;
 
-  /// The expirationdate of the Buyercontract
+  /// The expiration date of the Buyercontract
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated

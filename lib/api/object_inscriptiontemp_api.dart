@@ -16,6 +16,118 @@ class ObjectInscriptiontempApi {
 
   final ApiClient apiClient;
 
+  /// Download multiples attachments from a Inscriptiontemp
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiInscriptiontempID (required):
+  ///
+  /// * [InscriptiontempBatchDownloadV1Request] inscriptiontempBatchDownloadV1Request (required):
+  Future<Response> inscriptiontempBatchDownloadV1WithHttpInfo(int pkiInscriptiontempID, InscriptiontempBatchDownloadV1Request inscriptiontempBatchDownloadV1Request, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/inscriptiontemp/{pkiInscriptiontempID}/batchDownload'
+      .replaceAll('{pkiInscriptiontempID}', pkiInscriptiontempID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = inscriptiontempBatchDownloadV1Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Download multiples attachments from a Inscriptiontemp
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiInscriptiontempID (required):
+  ///
+  /// * [InscriptiontempBatchDownloadV1Request] inscriptiontempBatchDownloadV1Request (required):
+  Future<MultipartFile?> inscriptiontempBatchDownloadV1(int pkiInscriptiontempID, InscriptiontempBatchDownloadV1Request inscriptiontempBatchDownloadV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await inscriptiontempBatchDownloadV1WithHttpInfo(pkiInscriptiontempID, inscriptiontempBatchDownloadV1Request, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'MultipartFile',) as MultipartFile;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve Inscriptiontemp's attachments
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiInscriptiontempID (required):
+  Future<Response> inscriptiontempGetAttachmentsV1WithHttpInfo(int pkiInscriptiontempID, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/inscriptiontemp/{pkiInscriptiontempID}/getAttachments'
+      .replaceAll('{pkiInscriptiontempID}', pkiInscriptiontempID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Retrieve Inscriptiontemp's attachments
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiInscriptiontempID (required):
+  Future<InscriptiontempGetAttachmentsV1Response?> inscriptiontempGetAttachmentsV1(int pkiInscriptiontempID, { Future<void>? abortTrigger, }) async {
+    final response = await inscriptiontempGetAttachmentsV1WithHttpInfo(pkiInscriptiontempID, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'InscriptiontempGetAttachmentsV1Response',) as InscriptiontempGetAttachmentsV1Response;
+    
+    }
+    return null;
+  }
+
   /// Retrieve Communication count
   ///
   /// 

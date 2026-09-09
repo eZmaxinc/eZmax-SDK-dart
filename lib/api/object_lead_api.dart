@@ -16,6 +16,118 @@ class ObjectLeadApi {
 
   final ApiClient apiClient;
 
+  /// Download multiples attachments from a Lead
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiLeadID (required):
+  ///
+  /// * [LeadBatchDownloadV1Request] leadBatchDownloadV1Request (required):
+  Future<Response> leadBatchDownloadV1WithHttpInfo(int pkiLeadID, LeadBatchDownloadV1Request leadBatchDownloadV1Request, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/lead/{pkiLeadID}/batchDownload'
+      .replaceAll('{pkiLeadID}', pkiLeadID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = leadBatchDownloadV1Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Download multiples attachments from a Lead
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiLeadID (required):
+  ///
+  /// * [LeadBatchDownloadV1Request] leadBatchDownloadV1Request (required):
+  Future<MultipartFile?> leadBatchDownloadV1(int pkiLeadID, LeadBatchDownloadV1Request leadBatchDownloadV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await leadBatchDownloadV1WithHttpInfo(pkiLeadID, leadBatchDownloadV1Request, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'MultipartFile',) as MultipartFile;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve Lead's attachments
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiLeadID (required):
+  Future<Response> leadGetAttachmentsV1WithHttpInfo(int pkiLeadID, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/lead/{pkiLeadID}/getAttachments'
+      .replaceAll('{pkiLeadID}', pkiLeadID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Retrieve Lead's attachments
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiLeadID (required):
+  Future<LeadGetAttachmentsV1Response?> leadGetAttachmentsV1(int pkiLeadID, { Future<void>? abortTrigger, }) async {
+    final response = await leadGetAttachmentsV1WithHttpInfo(pkiLeadID, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'LeadGetAttachmentsV1Response',) as LeadGetAttachmentsV1Response;
+    
+    }
+    return null;
+  }
+
   /// Retrieve Lead list
   ///
   /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eLeadStatus | New<br>Dispatching<br>Assigned<br>Lost<br>Won |
