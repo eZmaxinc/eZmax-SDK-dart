@@ -11,6 +11,10 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**employeeBatchDownloadV1**](ObjectEmployeeApi.md#employeebatchdownloadv1) | **POST** /1/object/employee/{pkiEmployeeID}/batchDownload | Download multiples attachments from a Employee
 [**employeeGetAttachmentsV1**](ObjectEmployeeApi.md#employeegetattachmentsv1) | **GET** /1/object/employee/{pkiEmployeeID}/getAttachments | Retrieve Employee's attachments
+[**employeeGetCommunicationCountV1**](ObjectEmployeeApi.md#employeegetcommunicationcountv1) | **GET** /1/object/employee/{pkiEmployeeID}/getCommunicationCount | Retrieve Communication count
+[**employeeGetCommunicationListV1**](ObjectEmployeeApi.md#employeegetcommunicationlistv1) | **GET** /1/object/employee/{pkiEmployeeID}/getCommunicationList | Retrieve Communication list
+[**employeeGetCommunicationrecipientsV1**](ObjectEmployeeApi.md#employeegetcommunicationrecipientsv1) | **GET** /1/object/employee/{pkiEmployeeID}/getCommunicationrecipients | Retrieve Communication recipients
+[**employeeGetCommunicationsendersV1**](ObjectEmployeeApi.md#employeegetcommunicationsendersv1) | **GET** /1/object/employee/{pkiEmployeeID}/getCommunicationsenders | Retrieve Communication senders
 [**employeeGetListV1**](ObjectEmployeeApi.md#employeegetlistv1) | **GET** /1/object/employee/getList | Retrieve Employee list
 [**employeeImportIntoEDMV1**](ObjectEmployeeApi.md#employeeimportintoedmv1) | **POST** /1/object/employee/{pkiEmployeeID}/importIntoEDM | Import attachments into the Employee
 
@@ -95,6 +99,186 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EmployeeGetAttachmentsV1Response**](EmployeeGetAttachmentsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **employeeGetCommunicationCountV1**
+> EmployeeGetCommunicationCountV1Response employeeGetCommunicationCountV1(pkiEmployeeID)
+
+Retrieve Communication count
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectEmployeeApi();
+final pkiEmployeeID = 56; // int | 
+
+try {
+    final result = api_instance.employeeGetCommunicationCountV1(pkiEmployeeID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectEmployeeApi->employeeGetCommunicationCountV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEmployeeID** | **int**|  | 
+
+### Return type
+
+[**EmployeeGetCommunicationCountV1Response**](EmployeeGetCommunicationCountV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **employeeGetCommunicationListV1**
+> EmployeeGetCommunicationListV1Response employeeGetCommunicationListV1(pkiEmployeeID)
+
+Retrieve Communication list
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectEmployeeApi();
+final pkiEmployeeID = 56; // int | 
+
+try {
+    final result = api_instance.employeeGetCommunicationListV1(pkiEmployeeID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectEmployeeApi->employeeGetCommunicationListV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEmployeeID** | **int**|  | 
+
+### Return type
+
+[**EmployeeGetCommunicationListV1Response**](EmployeeGetCommunicationListV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **employeeGetCommunicationrecipientsV1**
+> EmployeeGetCommunicationrecipientsV1Response employeeGetCommunicationrecipientsV1(pkiEmployeeID)
+
+Retrieve Communication recipients
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectEmployeeApi();
+final pkiEmployeeID = 56; // int | 
+
+try {
+    final result = api_instance.employeeGetCommunicationrecipientsV1(pkiEmployeeID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectEmployeeApi->employeeGetCommunicationrecipientsV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEmployeeID** | **int**|  | 
+
+### Return type
+
+[**EmployeeGetCommunicationrecipientsV1Response**](EmployeeGetCommunicationrecipientsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **employeeGetCommunicationsendersV1**
+> EmployeeGetCommunicationsendersV1Response employeeGetCommunicationsendersV1(pkiEmployeeID)
+
+Retrieve Communication senders
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectEmployeeApi();
+final pkiEmployeeID = 56; // int | 
+
+try {
+    final result = api_instance.employeeGetCommunicationsendersV1(pkiEmployeeID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectEmployeeApi->employeeGetCommunicationsendersV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEmployeeID** | **int**|  | 
+
+### Return type
+
+[**EmployeeGetCommunicationsendersV1Response**](EmployeeGetCommunicationsendersV1Response.md)
 
 ### Authorization
 

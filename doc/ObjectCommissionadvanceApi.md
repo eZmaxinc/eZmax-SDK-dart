@@ -11,6 +11,10 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**commissionadvanceBatchDownloadV1**](ObjectCommissionadvanceApi.md#commissionadvancebatchdownloadv1) | **POST** /1/object/commissionadvance/{pkiCommissionadvanceID}/batchDownload | Download multiples attachments from a Commission advance
 [**commissionadvanceGetAttachmentsV1**](ObjectCommissionadvanceApi.md#commissionadvancegetattachmentsv1) | **GET** /1/object/commissionadvance/{pkiCommissionadvanceID}/getAttachments | Retrieve Commissionadvance's attachments
+[**commissionadvanceGetCommunicationCountV1**](ObjectCommissionadvanceApi.md#commissionadvancegetcommunicationcountv1) | **GET** /1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationCount | Retrieve Communication count
+[**commissionadvanceGetCommunicationListV1**](ObjectCommissionadvanceApi.md#commissionadvancegetcommunicationlistv1) | **GET** /1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationList | Retrieve Communication list
+[**commissionadvanceGetCommunicationrecipientsV1**](ObjectCommissionadvanceApi.md#commissionadvancegetcommunicationrecipientsv1) | **GET** /1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationrecipients | Retrieve Communication recipients
+[**commissionadvanceGetCommunicationsendersV1**](ObjectCommissionadvanceApi.md#commissionadvancegetcommunicationsendersv1) | **GET** /1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationsenders | Retrieve Communication senders
 [**commissionadvanceImportIntoEDMV1**](ObjectCommissionadvanceApi.md#commissionadvanceimportintoedmv1) | **POST** /1/object/commissionadvance/{pkiCommissionadvanceID}/importIntoEDM | Import attachments into the Commissionadvance
 
 
@@ -94,6 +98,186 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CommissionadvanceGetAttachmentsV1Response**](CommissionadvanceGetAttachmentsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **commissionadvanceGetCommunicationCountV1**
+> CommissionadvanceGetCommunicationCountV1Response commissionadvanceGetCommunicationCountV1(pkiCommissionadvanceID)
+
+Retrieve Communication count
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectCommissionadvanceApi();
+final pkiCommissionadvanceID = 56; // int | 
+
+try {
+    final result = api_instance.commissionadvanceGetCommunicationCountV1(pkiCommissionadvanceID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectCommissionadvanceApi->commissionadvanceGetCommunicationCountV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiCommissionadvanceID** | **int**|  | 
+
+### Return type
+
+[**CommissionadvanceGetCommunicationCountV1Response**](CommissionadvanceGetCommunicationCountV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **commissionadvanceGetCommunicationListV1**
+> CommissionadvanceGetCommunicationListV1Response commissionadvanceGetCommunicationListV1(pkiCommissionadvanceID)
+
+Retrieve Communication list
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectCommissionadvanceApi();
+final pkiCommissionadvanceID = 56; // int | 
+
+try {
+    final result = api_instance.commissionadvanceGetCommunicationListV1(pkiCommissionadvanceID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectCommissionadvanceApi->commissionadvanceGetCommunicationListV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiCommissionadvanceID** | **int**|  | 
+
+### Return type
+
+[**CommissionadvanceGetCommunicationListV1Response**](CommissionadvanceGetCommunicationListV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **commissionadvanceGetCommunicationrecipientsV1**
+> CommissionadvanceGetCommunicationrecipientsV1Response commissionadvanceGetCommunicationrecipientsV1(pkiCommissionadvanceID)
+
+Retrieve Communication recipients
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectCommissionadvanceApi();
+final pkiCommissionadvanceID = 56; // int | 
+
+try {
+    final result = api_instance.commissionadvanceGetCommunicationrecipientsV1(pkiCommissionadvanceID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectCommissionadvanceApi->commissionadvanceGetCommunicationrecipientsV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiCommissionadvanceID** | **int**|  | 
+
+### Return type
+
+[**CommissionadvanceGetCommunicationrecipientsV1Response**](CommissionadvanceGetCommunicationrecipientsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **commissionadvanceGetCommunicationsendersV1**
+> CommissionadvanceGetCommunicationsendersV1Response commissionadvanceGetCommunicationsendersV1(pkiCommissionadvanceID)
+
+Retrieve Communication senders
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectCommissionadvanceApi();
+final pkiCommissionadvanceID = 56; // int | 
+
+try {
+    final result = api_instance.commissionadvanceGetCommunicationsendersV1(pkiCommissionadvanceID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectCommissionadvanceApi->commissionadvanceGetCommunicationsendersV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiCommissionadvanceID** | **int**|  | 
+
+### Return type
+
+[**CommissionadvanceGetCommunicationsendersV1Response**](CommissionadvanceGetCommunicationsendersV1Response.md)
 
 ### Authorization
 

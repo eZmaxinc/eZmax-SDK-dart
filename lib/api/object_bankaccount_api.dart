@@ -215,6 +215,222 @@ class ObjectBankaccountApi {
     return null;
   }
 
+  /// Retrieve Communication count
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiBankaccountID (required):
+  Future<Response> bankaccountGetCommunicationCountV1WithHttpInfo(int pkiBankaccountID, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/bankaccount/{pkiBankaccountID}/getCommunicationCount'
+      .replaceAll('{pkiBankaccountID}', pkiBankaccountID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Retrieve Communication count
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiBankaccountID (required):
+  Future<BankaccountGetCommunicationCountV1Response?> bankaccountGetCommunicationCountV1(int pkiBankaccountID, { Future<void>? abortTrigger, }) async {
+    final response = await bankaccountGetCommunicationCountV1WithHttpInfo(pkiBankaccountID, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'BankaccountGetCommunicationCountV1Response',) as BankaccountGetCommunicationCountV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve Communication list
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiBankaccountID (required):
+  Future<Response> bankaccountGetCommunicationListV1WithHttpInfo(int pkiBankaccountID, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/bankaccount/{pkiBankaccountID}/getCommunicationList'
+      .replaceAll('{pkiBankaccountID}', pkiBankaccountID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Retrieve Communication list
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiBankaccountID (required):
+  Future<BankaccountGetCommunicationListV1Response?> bankaccountGetCommunicationListV1(int pkiBankaccountID, { Future<void>? abortTrigger, }) async {
+    final response = await bankaccountGetCommunicationListV1WithHttpInfo(pkiBankaccountID, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'BankaccountGetCommunicationListV1Response',) as BankaccountGetCommunicationListV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve Communication recipients
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiBankaccountID (required):
+  Future<Response> bankaccountGetCommunicationrecipientsV1WithHttpInfo(int pkiBankaccountID, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/bankaccount/{pkiBankaccountID}/getCommunicationrecipients'
+      .replaceAll('{pkiBankaccountID}', pkiBankaccountID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Retrieve Communication recipients
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiBankaccountID (required):
+  Future<BankaccountGetCommunicationrecipientsV1Response?> bankaccountGetCommunicationrecipientsV1(int pkiBankaccountID, { Future<void>? abortTrigger, }) async {
+    final response = await bankaccountGetCommunicationrecipientsV1WithHttpInfo(pkiBankaccountID, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'BankaccountGetCommunicationrecipientsV1Response',) as BankaccountGetCommunicationrecipientsV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve Communication senders
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiBankaccountID (required):
+  Future<Response> bankaccountGetCommunicationsendersV1WithHttpInfo(int pkiBankaccountID, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/bankaccount/{pkiBankaccountID}/getCommunicationsenders'
+      .replaceAll('{pkiBankaccountID}', pkiBankaccountID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Retrieve Communication senders
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiBankaccountID (required):
+  Future<BankaccountGetCommunicationsendersV1Response?> bankaccountGetCommunicationsendersV1(int pkiBankaccountID, { Future<void>? abortTrigger, }) async {
+    final response = await bankaccountGetCommunicationsendersV1WithHttpInfo(pkiBankaccountID, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'BankaccountGetCommunicationsendersV1Response',) as BankaccountGetCommunicationsendersV1Response;
+    
+    }
+    return null;
+  }
+
   /// Import attachments into the Bankaccount
   ///
   /// Note: This method returns the HTTP [Response].

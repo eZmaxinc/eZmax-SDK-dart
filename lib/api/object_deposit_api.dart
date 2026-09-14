@@ -128,6 +128,222 @@ class ObjectDepositApi {
     return null;
   }
 
+  /// Retrieve Communication count
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiDepositID (required):
+  Future<Response> depositGetCommunicationCountV1WithHttpInfo(int pkiDepositID, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/deposit/{pkiDepositID}/getCommunicationCount'
+      .replaceAll('{pkiDepositID}', pkiDepositID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Retrieve Communication count
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiDepositID (required):
+  Future<DepositGetCommunicationCountV1Response?> depositGetCommunicationCountV1(int pkiDepositID, { Future<void>? abortTrigger, }) async {
+    final response = await depositGetCommunicationCountV1WithHttpInfo(pkiDepositID, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'DepositGetCommunicationCountV1Response',) as DepositGetCommunicationCountV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve Communication list
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiDepositID (required):
+  Future<Response> depositGetCommunicationListV1WithHttpInfo(int pkiDepositID, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/deposit/{pkiDepositID}/getCommunicationList'
+      .replaceAll('{pkiDepositID}', pkiDepositID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Retrieve Communication list
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiDepositID (required):
+  Future<DepositGetCommunicationListV1Response?> depositGetCommunicationListV1(int pkiDepositID, { Future<void>? abortTrigger, }) async {
+    final response = await depositGetCommunicationListV1WithHttpInfo(pkiDepositID, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'DepositGetCommunicationListV1Response',) as DepositGetCommunicationListV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve Communication recipients
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiDepositID (required):
+  Future<Response> depositGetCommunicationrecipientsV1WithHttpInfo(int pkiDepositID, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/deposit/{pkiDepositID}/getCommunicationrecipients'
+      .replaceAll('{pkiDepositID}', pkiDepositID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Retrieve Communication recipients
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiDepositID (required):
+  Future<DepositGetCommunicationrecipientsV1Response?> depositGetCommunicationrecipientsV1(int pkiDepositID, { Future<void>? abortTrigger, }) async {
+    final response = await depositGetCommunicationrecipientsV1WithHttpInfo(pkiDepositID, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'DepositGetCommunicationrecipientsV1Response',) as DepositGetCommunicationrecipientsV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve Communication senders
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiDepositID (required):
+  Future<Response> depositGetCommunicationsendersV1WithHttpInfo(int pkiDepositID, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/deposit/{pkiDepositID}/getCommunicationsenders'
+      .replaceAll('{pkiDepositID}', pkiDepositID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Retrieve Communication senders
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiDepositID (required):
+  Future<DepositGetCommunicationsendersV1Response?> depositGetCommunicationsendersV1(int pkiDepositID, { Future<void>? abortTrigger, }) async {
+    final response = await depositGetCommunicationsendersV1WithHttpInfo(pkiDepositID, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'DepositGetCommunicationsendersV1Response',) as DepositGetCommunicationsendersV1Response;
+    
+    }
+    return null;
+  }
+
   /// Import attachments into the Deposit
   ///
   /// Note: This method returns the HTTP [Response].

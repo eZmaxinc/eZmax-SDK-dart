@@ -12,6 +12,10 @@ Method | HTTP request | Description
 [**customerBatchDownloadV1**](ObjectCustomerApi.md#customerbatchdownloadv1) | **POST** /1/object/customer/{pkiCustomerID}/batchDownload | Download multiples attachments from a Customer
 [**customerGetAttachmentsV1**](ObjectCustomerApi.md#customergetattachmentsv1) | **GET** /1/object/customer/{pkiCustomerID}/getAttachments | Retrieve Customer's attachments
 [**customerGetAutocompleteV2**](ObjectCustomerApi.md#customergetautocompletev2) | **GET** /2/object/customer/getAutocomplete/{sSelector} | Retrieve Customers and IDs
+[**customerGetCommunicationCountV1**](ObjectCustomerApi.md#customergetcommunicationcountv1) | **GET** /1/object/customer/{pkiCustomerID}/getCommunicationCount | Retrieve Communication count
+[**customerGetCommunicationListV1**](ObjectCustomerApi.md#customergetcommunicationlistv1) | **GET** /1/object/customer/{pkiCustomerID}/getCommunicationList | Retrieve Communication list
+[**customerGetCommunicationrecipientsV1**](ObjectCustomerApi.md#customergetcommunicationrecipientsv1) | **GET** /1/object/customer/{pkiCustomerID}/getCommunicationrecipients | Retrieve Communication recipients
+[**customerGetCommunicationsendersV1**](ObjectCustomerApi.md#customergetcommunicationsendersv1) | **GET** /1/object/customer/{pkiCustomerID}/getCommunicationsenders | Retrieve Communication senders
 [**customerGetObjectV2**](ObjectCustomerApi.md#customergetobjectv2) | **GET** /2/object/customer/{pkiCustomerID} | Retrieve an existing Customer
 [**customerImportIntoEDMV1**](ObjectCustomerApi.md#customerimportintoedmv1) | **POST** /1/object/customer/{pkiCustomerID}/importIntoEDM | Import attachments into the Customer
 
@@ -149,6 +153,186 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CustomerGetAutocompleteV2Response**](CustomerGetAutocompleteV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **customerGetCommunicationCountV1**
+> CustomerGetCommunicationCountV1Response customerGetCommunicationCountV1(pkiCustomerID)
+
+Retrieve Communication count
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectCustomerApi();
+final pkiCustomerID = 56; // int | 
+
+try {
+    final result = api_instance.customerGetCommunicationCountV1(pkiCustomerID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectCustomerApi->customerGetCommunicationCountV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiCustomerID** | **int**|  | 
+
+### Return type
+
+[**CustomerGetCommunicationCountV1Response**](CustomerGetCommunicationCountV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **customerGetCommunicationListV1**
+> CustomerGetCommunicationListV1Response customerGetCommunicationListV1(pkiCustomerID)
+
+Retrieve Communication list
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectCustomerApi();
+final pkiCustomerID = 56; // int | 
+
+try {
+    final result = api_instance.customerGetCommunicationListV1(pkiCustomerID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectCustomerApi->customerGetCommunicationListV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiCustomerID** | **int**|  | 
+
+### Return type
+
+[**CustomerGetCommunicationListV1Response**](CustomerGetCommunicationListV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **customerGetCommunicationrecipientsV1**
+> CustomerGetCommunicationrecipientsV1Response customerGetCommunicationrecipientsV1(pkiCustomerID)
+
+Retrieve Communication recipients
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectCustomerApi();
+final pkiCustomerID = 56; // int | 
+
+try {
+    final result = api_instance.customerGetCommunicationrecipientsV1(pkiCustomerID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectCustomerApi->customerGetCommunicationrecipientsV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiCustomerID** | **int**|  | 
+
+### Return type
+
+[**CustomerGetCommunicationrecipientsV1Response**](CustomerGetCommunicationrecipientsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **customerGetCommunicationsendersV1**
+> CustomerGetCommunicationsendersV1Response customerGetCommunicationsendersV1(pkiCustomerID)
+
+Retrieve Communication senders
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectCustomerApi();
+final pkiCustomerID = 56; // int | 
+
+try {
+    final result = api_instance.customerGetCommunicationsendersV1(pkiCustomerID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectCustomerApi->customerGetCommunicationsendersV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiCustomerID** | **int**|  | 
+
+### Return type
+
+[**CustomerGetCommunicationsendersV1Response**](CustomerGetCommunicationsendersV1Response.md)
 
 ### Authorization
 

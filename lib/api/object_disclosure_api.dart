@@ -128,6 +128,222 @@ class ObjectDisclosureApi {
     return null;
   }
 
+  /// Retrieve Communication count
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiDisclosureID (required):
+  Future<Response> disclosureGetCommunicationCountV1WithHttpInfo(int pkiDisclosureID, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/disclosure/{pkiDisclosureID}/getCommunicationCount'
+      .replaceAll('{pkiDisclosureID}', pkiDisclosureID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Retrieve Communication count
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiDisclosureID (required):
+  Future<DisclosureGetCommunicationCountV1Response?> disclosureGetCommunicationCountV1(int pkiDisclosureID, { Future<void>? abortTrigger, }) async {
+    final response = await disclosureGetCommunicationCountV1WithHttpInfo(pkiDisclosureID, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'DisclosureGetCommunicationCountV1Response',) as DisclosureGetCommunicationCountV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve Communication list
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiDisclosureID (required):
+  Future<Response> disclosureGetCommunicationListV1WithHttpInfo(int pkiDisclosureID, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/disclosure/{pkiDisclosureID}/getCommunicationList'
+      .replaceAll('{pkiDisclosureID}', pkiDisclosureID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Retrieve Communication list
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiDisclosureID (required):
+  Future<DisclosureGetCommunicationListV1Response?> disclosureGetCommunicationListV1(int pkiDisclosureID, { Future<void>? abortTrigger, }) async {
+    final response = await disclosureGetCommunicationListV1WithHttpInfo(pkiDisclosureID, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'DisclosureGetCommunicationListV1Response',) as DisclosureGetCommunicationListV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve Communication recipients
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiDisclosureID (required):
+  Future<Response> disclosureGetCommunicationrecipientsV1WithHttpInfo(int pkiDisclosureID, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/disclosure/{pkiDisclosureID}/getCommunicationrecipients'
+      .replaceAll('{pkiDisclosureID}', pkiDisclosureID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Retrieve Communication recipients
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiDisclosureID (required):
+  Future<DisclosureGetCommunicationrecipientsV1Response?> disclosureGetCommunicationrecipientsV1(int pkiDisclosureID, { Future<void>? abortTrigger, }) async {
+    final response = await disclosureGetCommunicationrecipientsV1WithHttpInfo(pkiDisclosureID, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'DisclosureGetCommunicationrecipientsV1Response',) as DisclosureGetCommunicationrecipientsV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve Communication senders
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiDisclosureID (required):
+  Future<Response> disclosureGetCommunicationsendersV1WithHttpInfo(int pkiDisclosureID, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/disclosure/{pkiDisclosureID}/getCommunicationsenders'
+      .replaceAll('{pkiDisclosureID}', pkiDisclosureID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Retrieve Communication senders
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiDisclosureID (required):
+  Future<DisclosureGetCommunicationsendersV1Response?> disclosureGetCommunicationsendersV1(int pkiDisclosureID, { Future<void>? abortTrigger, }) async {
+    final response = await disclosureGetCommunicationsendersV1WithHttpInfo(pkiDisclosureID, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'DisclosureGetCommunicationsendersV1Response',) as DisclosureGetCommunicationsendersV1Response;
+    
+    }
+    return null;
+  }
+
   /// Import attachments into the Disclosure
   ///
   /// Note: This method returns the HTTP [Response].

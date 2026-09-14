@@ -128,6 +128,222 @@ class ObjectEmployeeApi {
     return null;
   }
 
+  /// Retrieve Communication count
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEmployeeID (required):
+  Future<Response> employeeGetCommunicationCountV1WithHttpInfo(int pkiEmployeeID, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/employee/{pkiEmployeeID}/getCommunicationCount'
+      .replaceAll('{pkiEmployeeID}', pkiEmployeeID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Retrieve Communication count
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEmployeeID (required):
+  Future<EmployeeGetCommunicationCountV1Response?> employeeGetCommunicationCountV1(int pkiEmployeeID, { Future<void>? abortTrigger, }) async {
+    final response = await employeeGetCommunicationCountV1WithHttpInfo(pkiEmployeeID, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EmployeeGetCommunicationCountV1Response',) as EmployeeGetCommunicationCountV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve Communication list
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEmployeeID (required):
+  Future<Response> employeeGetCommunicationListV1WithHttpInfo(int pkiEmployeeID, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/employee/{pkiEmployeeID}/getCommunicationList'
+      .replaceAll('{pkiEmployeeID}', pkiEmployeeID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Retrieve Communication list
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEmployeeID (required):
+  Future<EmployeeGetCommunicationListV1Response?> employeeGetCommunicationListV1(int pkiEmployeeID, { Future<void>? abortTrigger, }) async {
+    final response = await employeeGetCommunicationListV1WithHttpInfo(pkiEmployeeID, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EmployeeGetCommunicationListV1Response',) as EmployeeGetCommunicationListV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve Communication recipients
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEmployeeID (required):
+  Future<Response> employeeGetCommunicationrecipientsV1WithHttpInfo(int pkiEmployeeID, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/employee/{pkiEmployeeID}/getCommunicationrecipients'
+      .replaceAll('{pkiEmployeeID}', pkiEmployeeID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Retrieve Communication recipients
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEmployeeID (required):
+  Future<EmployeeGetCommunicationrecipientsV1Response?> employeeGetCommunicationrecipientsV1(int pkiEmployeeID, { Future<void>? abortTrigger, }) async {
+    final response = await employeeGetCommunicationrecipientsV1WithHttpInfo(pkiEmployeeID, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EmployeeGetCommunicationrecipientsV1Response',) as EmployeeGetCommunicationrecipientsV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve Communication senders
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEmployeeID (required):
+  Future<Response> employeeGetCommunicationsendersV1WithHttpInfo(int pkiEmployeeID, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/employee/{pkiEmployeeID}/getCommunicationsenders'
+      .replaceAll('{pkiEmployeeID}', pkiEmployeeID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Retrieve Communication senders
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiEmployeeID (required):
+  Future<EmployeeGetCommunicationsendersV1Response?> employeeGetCommunicationsendersV1(int pkiEmployeeID, { Future<void>? abortTrigger, }) async {
+    final response = await employeeGetCommunicationsendersV1WithHttpInfo(pkiEmployeeID, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EmployeeGetCommunicationsendersV1Response',) as EmployeeGetCommunicationsendersV1Response;
+    
+    }
+    return null;
+  }
+
   /// Retrieve Employee list
   ///
   /// 

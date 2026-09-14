@@ -128,6 +128,222 @@ class ObjectDeposittransitchequeApi {
     return null;
   }
 
+  /// Retrieve Communication count
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiDeposittransitchequeID (required):
+  Future<Response> deposittransitchequeGetCommunicationCountV1WithHttpInfo(int pkiDeposittransitchequeID, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationCount'
+      .replaceAll('{pkiDeposittransitchequeID}', pkiDeposittransitchequeID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Retrieve Communication count
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiDeposittransitchequeID (required):
+  Future<DeposittransitchequeGetCommunicationCountV1Response?> deposittransitchequeGetCommunicationCountV1(int pkiDeposittransitchequeID, { Future<void>? abortTrigger, }) async {
+    final response = await deposittransitchequeGetCommunicationCountV1WithHttpInfo(pkiDeposittransitchequeID, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'DeposittransitchequeGetCommunicationCountV1Response',) as DeposittransitchequeGetCommunicationCountV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve Communication list
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiDeposittransitchequeID (required):
+  Future<Response> deposittransitchequeGetCommunicationListV1WithHttpInfo(int pkiDeposittransitchequeID, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationList'
+      .replaceAll('{pkiDeposittransitchequeID}', pkiDeposittransitchequeID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Retrieve Communication list
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiDeposittransitchequeID (required):
+  Future<DeposittransitchequeGetCommunicationListV1Response?> deposittransitchequeGetCommunicationListV1(int pkiDeposittransitchequeID, { Future<void>? abortTrigger, }) async {
+    final response = await deposittransitchequeGetCommunicationListV1WithHttpInfo(pkiDeposittransitchequeID, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'DeposittransitchequeGetCommunicationListV1Response',) as DeposittransitchequeGetCommunicationListV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve Communication recipients
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiDeposittransitchequeID (required):
+  Future<Response> deposittransitchequeGetCommunicationrecipientsV1WithHttpInfo(int pkiDeposittransitchequeID, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationrecipients'
+      .replaceAll('{pkiDeposittransitchequeID}', pkiDeposittransitchequeID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Retrieve Communication recipients
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiDeposittransitchequeID (required):
+  Future<DeposittransitchequeGetCommunicationrecipientsV1Response?> deposittransitchequeGetCommunicationrecipientsV1(int pkiDeposittransitchequeID, { Future<void>? abortTrigger, }) async {
+    final response = await deposittransitchequeGetCommunicationrecipientsV1WithHttpInfo(pkiDeposittransitchequeID, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'DeposittransitchequeGetCommunicationrecipientsV1Response',) as DeposittransitchequeGetCommunicationrecipientsV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve Communication senders
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiDeposittransitchequeID (required):
+  Future<Response> deposittransitchequeGetCommunicationsendersV1WithHttpInfo(int pkiDeposittransitchequeID, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationsenders'
+      .replaceAll('{pkiDeposittransitchequeID}', pkiDeposittransitchequeID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Retrieve Communication senders
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiDeposittransitchequeID (required):
+  Future<DeposittransitchequeGetCommunicationsendersV1Response?> deposittransitchequeGetCommunicationsendersV1(int pkiDeposittransitchequeID, { Future<void>? abortTrigger, }) async {
+    final response = await deposittransitchequeGetCommunicationsendersV1WithHttpInfo(pkiDeposittransitchequeID, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'DeposittransitchequeGetCommunicationsendersV1Response',) as DeposittransitchequeGetCommunicationsendersV1Response;
+    
+    }
+    return null;
+  }
+
   /// Import attachments into the Deposittransitcheque
   ///
   /// Note: This method returns the HTTP [Response].

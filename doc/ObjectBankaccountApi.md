@@ -12,6 +12,10 @@ Method | HTTP request | Description
 [**bankaccountBatchDownloadV1**](ObjectBankaccountApi.md#bankaccountbatchdownloadv1) | **POST** /1/object/bankaccount/{pkiBankaccountID}/batchDownload | Download multiples attachments from a Bankaccount
 [**bankaccountGetAttachmentsV1**](ObjectBankaccountApi.md#bankaccountgetattachmentsv1) | **GET** /1/object/bankaccount/{pkiBankaccountID}/getAttachments | Retrieve Bankaccount's attachments
 [**bankaccountGetAutocompleteV2**](ObjectBankaccountApi.md#bankaccountgetautocompletev2) | **GET** /2/object/bankaccount/getAutocomplete/{sSelector} | Retrieve Bankaccounts and IDs
+[**bankaccountGetCommunicationCountV1**](ObjectBankaccountApi.md#bankaccountgetcommunicationcountv1) | **GET** /1/object/bankaccount/{pkiBankaccountID}/getCommunicationCount | Retrieve Communication count
+[**bankaccountGetCommunicationListV1**](ObjectBankaccountApi.md#bankaccountgetcommunicationlistv1) | **GET** /1/object/bankaccount/{pkiBankaccountID}/getCommunicationList | Retrieve Communication list
+[**bankaccountGetCommunicationrecipientsV1**](ObjectBankaccountApi.md#bankaccountgetcommunicationrecipientsv1) | **GET** /1/object/bankaccount/{pkiBankaccountID}/getCommunicationrecipients | Retrieve Communication recipients
+[**bankaccountGetCommunicationsendersV1**](ObjectBankaccountApi.md#bankaccountgetcommunicationsendersv1) | **GET** /1/object/bankaccount/{pkiBankaccountID}/getCommunicationsenders | Retrieve Communication senders
 [**bankaccountImportIntoEDMV1**](ObjectBankaccountApi.md#bankaccountimportintoedmv1) | **POST** /1/object/bankaccount/{pkiBankaccountID}/importIntoEDM | Import attachments into the Bankaccount
 
 
@@ -148,6 +152,186 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**BankaccountGetAutocompleteV2Response**](BankaccountGetAutocompleteV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **bankaccountGetCommunicationCountV1**
+> BankaccountGetCommunicationCountV1Response bankaccountGetCommunicationCountV1(pkiBankaccountID)
+
+Retrieve Communication count
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectBankaccountApi();
+final pkiBankaccountID = 56; // int | 
+
+try {
+    final result = api_instance.bankaccountGetCommunicationCountV1(pkiBankaccountID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectBankaccountApi->bankaccountGetCommunicationCountV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiBankaccountID** | **int**|  | 
+
+### Return type
+
+[**BankaccountGetCommunicationCountV1Response**](BankaccountGetCommunicationCountV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **bankaccountGetCommunicationListV1**
+> BankaccountGetCommunicationListV1Response bankaccountGetCommunicationListV1(pkiBankaccountID)
+
+Retrieve Communication list
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectBankaccountApi();
+final pkiBankaccountID = 56; // int | 
+
+try {
+    final result = api_instance.bankaccountGetCommunicationListV1(pkiBankaccountID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectBankaccountApi->bankaccountGetCommunicationListV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiBankaccountID** | **int**|  | 
+
+### Return type
+
+[**BankaccountGetCommunicationListV1Response**](BankaccountGetCommunicationListV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **bankaccountGetCommunicationrecipientsV1**
+> BankaccountGetCommunicationrecipientsV1Response bankaccountGetCommunicationrecipientsV1(pkiBankaccountID)
+
+Retrieve Communication recipients
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectBankaccountApi();
+final pkiBankaccountID = 56; // int | 
+
+try {
+    final result = api_instance.bankaccountGetCommunicationrecipientsV1(pkiBankaccountID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectBankaccountApi->bankaccountGetCommunicationrecipientsV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiBankaccountID** | **int**|  | 
+
+### Return type
+
+[**BankaccountGetCommunicationrecipientsV1Response**](BankaccountGetCommunicationrecipientsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **bankaccountGetCommunicationsendersV1**
+> BankaccountGetCommunicationsendersV1Response bankaccountGetCommunicationsendersV1(pkiBankaccountID)
+
+Retrieve Communication senders
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectBankaccountApi();
+final pkiBankaccountID = 56; // int | 
+
+try {
+    final result = api_instance.bankaccountGetCommunicationsendersV1(pkiBankaccountID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectBankaccountApi->bankaccountGetCommunicationsendersV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiBankaccountID** | **int**|  | 
+
+### Return type
+
+[**BankaccountGetCommunicationsendersV1Response**](BankaccountGetCommunicationsendersV1Response.md)
 
 ### Authorization
 

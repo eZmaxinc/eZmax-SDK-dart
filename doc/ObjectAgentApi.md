@@ -12,6 +12,10 @@ Method | HTTP request | Description
 [**agentBatchDownloadV1**](ObjectAgentApi.md#agentbatchdownloadv1) | **POST** /1/object/agent/{pkiAgentID}/batchDownload | Download multiples attachments from a Agent
 [**agentGetAttachmentsV1**](ObjectAgentApi.md#agentgetattachmentsv1) | **GET** /1/object/agent/{pkiAgentID}/getAttachments | Retrieve Agent's attachments
 [**agentGetAutocompleteV2**](ObjectAgentApi.md#agentgetautocompletev2) | **GET** /2/object/agent/getAutocomplete/{sSelector} | Retrieve Agents and IDs
+[**agentGetCommunicationCountV1**](ObjectAgentApi.md#agentgetcommunicationcountv1) | **GET** /1/object/agent/{pkiAgentID}/getCommunicationCount | Retrieve Communication count
+[**agentGetCommunicationListV1**](ObjectAgentApi.md#agentgetcommunicationlistv1) | **GET** /1/object/agent/{pkiAgentID}/getCommunicationList | Retrieve Communication list
+[**agentGetCommunicationrecipientsV1**](ObjectAgentApi.md#agentgetcommunicationrecipientsv1) | **GET** /1/object/agent/{pkiAgentID}/getCommunicationrecipients | Retrieve Communication recipients
+[**agentGetCommunicationsendersV1**](ObjectAgentApi.md#agentgetcommunicationsendersv1) | **GET** /1/object/agent/{pkiAgentID}/getCommunicationsenders | Retrieve Communication senders
 [**agentGetListV1**](ObjectAgentApi.md#agentgetlistv1) | **GET** /1/object/agent/getList | Retrieve Agent list
 [**agentImportIntoEDMV1**](ObjectAgentApi.md#agentimportintoedmv1) | **POST** /1/object/agent/{pkiAgentID}/importIntoEDM | Import attachments into the Agent
 
@@ -149,6 +153,186 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AgentGetAutocompleteV2Response**](AgentGetAutocompleteV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **agentGetCommunicationCountV1**
+> AgentGetCommunicationCountV1Response agentGetCommunicationCountV1(pkiAgentID)
+
+Retrieve Communication count
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectAgentApi();
+final pkiAgentID = 56; // int | 
+
+try {
+    final result = api_instance.agentGetCommunicationCountV1(pkiAgentID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectAgentApi->agentGetCommunicationCountV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiAgentID** | **int**|  | 
+
+### Return type
+
+[**AgentGetCommunicationCountV1Response**](AgentGetCommunicationCountV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **agentGetCommunicationListV1**
+> AgentGetCommunicationListV1Response agentGetCommunicationListV1(pkiAgentID)
+
+Retrieve Communication list
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectAgentApi();
+final pkiAgentID = 56; // int | 
+
+try {
+    final result = api_instance.agentGetCommunicationListV1(pkiAgentID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectAgentApi->agentGetCommunicationListV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiAgentID** | **int**|  | 
+
+### Return type
+
+[**AgentGetCommunicationListV1Response**](AgentGetCommunicationListV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **agentGetCommunicationrecipientsV1**
+> AgentGetCommunicationrecipientsV1Response agentGetCommunicationrecipientsV1(pkiAgentID)
+
+Retrieve Communication recipients
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectAgentApi();
+final pkiAgentID = 56; // int | 
+
+try {
+    final result = api_instance.agentGetCommunicationrecipientsV1(pkiAgentID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectAgentApi->agentGetCommunicationrecipientsV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiAgentID** | **int**|  | 
+
+### Return type
+
+[**AgentGetCommunicationrecipientsV1Response**](AgentGetCommunicationrecipientsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **agentGetCommunicationsendersV1**
+> AgentGetCommunicationsendersV1Response agentGetCommunicationsendersV1(pkiAgentID)
+
+Retrieve Communication senders
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectAgentApi();
+final pkiAgentID = 56; // int | 
+
+try {
+    final result = api_instance.agentGetCommunicationsendersV1(pkiAgentID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectAgentApi->agentGetCommunicationsendersV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiAgentID** | **int**|  | 
+
+### Return type
+
+[**AgentGetCommunicationsendersV1Response**](AgentGetCommunicationsendersV1Response.md)
 
 ### Authorization
 

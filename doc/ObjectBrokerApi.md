@@ -12,6 +12,10 @@ Method | HTTP request | Description
 [**brokerBatchDownloadV1**](ObjectBrokerApi.md#brokerbatchdownloadv1) | **POST** /1/object/broker/{pkiBrokerID}/batchDownload | Download multiples attachments from a Broker
 [**brokerGetAttachmentsV1**](ObjectBrokerApi.md#brokergetattachmentsv1) | **GET** /1/object/broker/{pkiBrokerID}/getAttachments | Retrieve Broker's attachments
 [**brokerGetAutocompleteV2**](ObjectBrokerApi.md#brokergetautocompletev2) | **GET** /2/object/broker/getAutocomplete/{sSelector} | Retrieve Brokers and IDs
+[**brokerGetCommunicationCountV1**](ObjectBrokerApi.md#brokergetcommunicationcountv1) | **GET** /1/object/broker/{pkiBrokerID}/getCommunicationCount | Retrieve Communication count
+[**brokerGetCommunicationListV1**](ObjectBrokerApi.md#brokergetcommunicationlistv1) | **GET** /1/object/broker/{pkiBrokerID}/getCommunicationList | Retrieve Communication list
+[**brokerGetCommunicationrecipientsV1**](ObjectBrokerApi.md#brokergetcommunicationrecipientsv1) | **GET** /1/object/broker/{pkiBrokerID}/getCommunicationrecipients | Retrieve Communication recipients
+[**brokerGetCommunicationsendersV1**](ObjectBrokerApi.md#brokergetcommunicationsendersv1) | **GET** /1/object/broker/{pkiBrokerID}/getCommunicationsenders | Retrieve Communication senders
 [**brokerGetListV1**](ObjectBrokerApi.md#brokergetlistv1) | **GET** /1/object/broker/getList | Retrieve Broker list
 [**brokerImportIntoEDMV1**](ObjectBrokerApi.md#brokerimportintoedmv1) | **POST** /1/object/broker/{pkiBrokerID}/importIntoEDM | Import attachments into the Broker
 
@@ -149,6 +153,186 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**BrokerGetAutocompleteV2Response**](BrokerGetAutocompleteV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **brokerGetCommunicationCountV1**
+> BrokerGetCommunicationCountV1Response brokerGetCommunicationCountV1(pkiBrokerID)
+
+Retrieve Communication count
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectBrokerApi();
+final pkiBrokerID = 56; // int | 
+
+try {
+    final result = api_instance.brokerGetCommunicationCountV1(pkiBrokerID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectBrokerApi->brokerGetCommunicationCountV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiBrokerID** | **int**|  | 
+
+### Return type
+
+[**BrokerGetCommunicationCountV1Response**](BrokerGetCommunicationCountV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **brokerGetCommunicationListV1**
+> BrokerGetCommunicationListV1Response brokerGetCommunicationListV1(pkiBrokerID)
+
+Retrieve Communication list
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectBrokerApi();
+final pkiBrokerID = 56; // int | 
+
+try {
+    final result = api_instance.brokerGetCommunicationListV1(pkiBrokerID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectBrokerApi->brokerGetCommunicationListV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiBrokerID** | **int**|  | 
+
+### Return type
+
+[**BrokerGetCommunicationListV1Response**](BrokerGetCommunicationListV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **brokerGetCommunicationrecipientsV1**
+> BrokerGetCommunicationrecipientsV1Response brokerGetCommunicationrecipientsV1(pkiBrokerID)
+
+Retrieve Communication recipients
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectBrokerApi();
+final pkiBrokerID = 56; // int | 
+
+try {
+    final result = api_instance.brokerGetCommunicationrecipientsV1(pkiBrokerID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectBrokerApi->brokerGetCommunicationrecipientsV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiBrokerID** | **int**|  | 
+
+### Return type
+
+[**BrokerGetCommunicationrecipientsV1Response**](BrokerGetCommunicationrecipientsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **brokerGetCommunicationsendersV1**
+> BrokerGetCommunicationsendersV1Response brokerGetCommunicationsendersV1(pkiBrokerID)
+
+Retrieve Communication senders
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectBrokerApi();
+final pkiBrokerID = 56; // int | 
+
+try {
+    final result = api_instance.brokerGetCommunicationsendersV1(pkiBrokerID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectBrokerApi->brokerGetCommunicationsendersV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiBrokerID** | **int**|  | 
+
+### Return type
+
+[**BrokerGetCommunicationsendersV1Response**](BrokerGetCommunicationsendersV1Response.md)
 
 ### Authorization
 

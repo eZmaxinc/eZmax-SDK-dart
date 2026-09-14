@@ -62,6 +62,7 @@ class AttachmentResponse {
     this.fkiEzsigndocumentIDReference,
     required this.eAttachmentDocumenttype,
     required this.sAttachmentName,
+    required this.sAttachmentCategory,
     required this.eAttachmentPrivacy,
     this.fkiUserIDSpecific,
     required this.eAttachmentType,
@@ -620,6 +621,9 @@ class AttachmentResponse {
   /// The name of the Attachment
   String sAttachmentName;
 
+  /// The attachment category
+  String sAttachmentCategory;
+
   FieldEAttachmentPrivacy eAttachmentPrivacy;
 
   /// The unique ID of the User
@@ -743,6 +747,7 @@ class AttachmentResponse {
     other.fkiEzsigndocumentIDReference == fkiEzsigndocumentIDReference &&
     other.eAttachmentDocumenttype == eAttachmentDocumenttype &&
     other.sAttachmentName == sAttachmentName &&
+    other.sAttachmentCategory == sAttachmentCategory &&
     other.eAttachmentPrivacy == eAttachmentPrivacy &&
     other.fkiUserIDSpecific == fkiUserIDSpecific &&
     other.eAttachmentType == eAttachmentType &&
@@ -808,6 +813,7 @@ class AttachmentResponse {
     (fkiEzsigndocumentIDReference == null ? 0 : fkiEzsigndocumentIDReference!.hashCode) +
     (eAttachmentDocumenttype.hashCode) +
     (sAttachmentName.hashCode) +
+    (sAttachmentCategory.hashCode) +
     (eAttachmentPrivacy.hashCode) +
     (fkiUserIDSpecific == null ? 0 : fkiUserIDSpecific!.hashCode) +
     (eAttachmentType.hashCode) +
@@ -822,7 +828,7 @@ class AttachmentResponse {
     (objAudit == null ? 0 : objAudit!.hashCode);
 
   @override
-  String toString() => 'AttachmentResponse[pkiAttachmentID=$pkiAttachmentID, fkiComputerID=$fkiComputerID, fkiAdjustmentID=$fkiAdjustmentID, fkiAgentID=$fkiAgentID, fkiBankaccountID=$fkiBankaccountID, fkiBrokerID=$fkiBrokerID, fkiCommissionadvanceID=$fkiCommissionadvanceID, fkiCommunicationID=$fkiCommunicationID, fkiCustomerID=$fkiCustomerID, fkiCustomertemplateID=$fkiCustomertemplateID, fkiDepositID=$fkiDepositID, fkiDeposittransitchequeID=$fkiDeposittransitchequeID, fkiElectronicfundstransferID=$fkiElectronicfundstransferID, fkiEmployeeID=$fkiEmployeeID, fkiExternalbrokerID=$fkiExternalbrokerID, fkiEzcomadvanceserverID=$fkiEzcomadvanceserverID, fkiEzcomcompanyID=$fkiEzcomcompanyID, fkiEzsigndocumentID=$fkiEzsigndocumentID, fkiGhacqcontractID=$fkiGhacqcontractID, fkiInscriptionID=$fkiInscriptionID, fkiInscriptiontempID=$fkiInscriptiontempID, fkiInscriptionnotauthenticatedID=$fkiInscriptionnotauthenticatedID, fkiInvoiceID=$fkiInvoiceID, fkiBuyercontractID=$fkiBuyercontractID, fkiFranchisebrokerID=$fkiFranchisebrokerID, fkiFranchiseagenceID=$fkiFranchiseagenceID, fkiFranchiseofficeID=$fkiFranchiseofficeID, fkiFranchisefranchiseID=$fkiFranchisefranchiseID, fkiFranchisecomplaintID=$fkiFranchisecomplaintID, fkiLeadID=$fkiLeadID, fkiMarketingprogramID=$fkiMarketingprogramID, fkiMarketingfollowID=$fkiMarketingfollowID, fkiNotaryID=$fkiNotaryID, fkiOfficetaxreportID=$fkiOfficetaxreportID, fkiOtherincomeID=$fkiOtherincomeID, fkiPaymentpreparationID=$fkiPaymentpreparationID, fkiPurchaseID=$fkiPurchaseID, fkiSalaryID=$fkiSalaryID, fkiSupplierID=$fkiSupplierID, fkiTranqcontractID=$fkiTranqcontractID, fkiTemplateID=$fkiTemplateID, fkiInscriptionchecklistID=$fkiInscriptionchecklistID, fkiFolderID=$fkiFolderID, fkiRejectedoffertopurchaseID=$fkiRejectedoffertopurchaseID, fkiDisclosureID=$fkiDisclosureID, fkiReconciliationID=$fkiReconciliationID, fkiEzsigndocumentIDReference=$fkiEzsigndocumentIDReference, eAttachmentDocumenttype=$eAttachmentDocumenttype, sAttachmentName=$sAttachmentName, eAttachmentPrivacy=$eAttachmentPrivacy, fkiUserIDSpecific=$fkiUserIDSpecific, eAttachmentType=$eAttachmentType, iAttachmentSize=$iAttachmentSize, iAttachmentEDMmoduleflag=$iAttachmentEDMmoduleflag, sAttachmentMD5=$sAttachmentMD5, bAttachmentDeleted=$bAttachmentDeleted, bAttachmentValid=$bAttachmentValid, eAttachmentVerified=$eAttachmentVerified, tAttachmentRejectioncomment=$tAttachmentRejectioncomment, fkiUserIDOwner=$fkiUserIDOwner, objAudit=$objAudit]';
+  String toString() => 'AttachmentResponse[pkiAttachmentID=$pkiAttachmentID, fkiComputerID=$fkiComputerID, fkiAdjustmentID=$fkiAdjustmentID, fkiAgentID=$fkiAgentID, fkiBankaccountID=$fkiBankaccountID, fkiBrokerID=$fkiBrokerID, fkiCommissionadvanceID=$fkiCommissionadvanceID, fkiCommunicationID=$fkiCommunicationID, fkiCustomerID=$fkiCustomerID, fkiCustomertemplateID=$fkiCustomertemplateID, fkiDepositID=$fkiDepositID, fkiDeposittransitchequeID=$fkiDeposittransitchequeID, fkiElectronicfundstransferID=$fkiElectronicfundstransferID, fkiEmployeeID=$fkiEmployeeID, fkiExternalbrokerID=$fkiExternalbrokerID, fkiEzcomadvanceserverID=$fkiEzcomadvanceserverID, fkiEzcomcompanyID=$fkiEzcomcompanyID, fkiEzsigndocumentID=$fkiEzsigndocumentID, fkiGhacqcontractID=$fkiGhacqcontractID, fkiInscriptionID=$fkiInscriptionID, fkiInscriptiontempID=$fkiInscriptiontempID, fkiInscriptionnotauthenticatedID=$fkiInscriptionnotauthenticatedID, fkiInvoiceID=$fkiInvoiceID, fkiBuyercontractID=$fkiBuyercontractID, fkiFranchisebrokerID=$fkiFranchisebrokerID, fkiFranchiseagenceID=$fkiFranchiseagenceID, fkiFranchiseofficeID=$fkiFranchiseofficeID, fkiFranchisefranchiseID=$fkiFranchisefranchiseID, fkiFranchisecomplaintID=$fkiFranchisecomplaintID, fkiLeadID=$fkiLeadID, fkiMarketingprogramID=$fkiMarketingprogramID, fkiMarketingfollowID=$fkiMarketingfollowID, fkiNotaryID=$fkiNotaryID, fkiOfficetaxreportID=$fkiOfficetaxreportID, fkiOtherincomeID=$fkiOtherincomeID, fkiPaymentpreparationID=$fkiPaymentpreparationID, fkiPurchaseID=$fkiPurchaseID, fkiSalaryID=$fkiSalaryID, fkiSupplierID=$fkiSupplierID, fkiTranqcontractID=$fkiTranqcontractID, fkiTemplateID=$fkiTemplateID, fkiInscriptionchecklistID=$fkiInscriptionchecklistID, fkiFolderID=$fkiFolderID, fkiRejectedoffertopurchaseID=$fkiRejectedoffertopurchaseID, fkiDisclosureID=$fkiDisclosureID, fkiReconciliationID=$fkiReconciliationID, fkiEzsigndocumentIDReference=$fkiEzsigndocumentIDReference, eAttachmentDocumenttype=$eAttachmentDocumenttype, sAttachmentName=$sAttachmentName, sAttachmentCategory=$sAttachmentCategory, eAttachmentPrivacy=$eAttachmentPrivacy, fkiUserIDSpecific=$fkiUserIDSpecific, eAttachmentType=$eAttachmentType, iAttachmentSize=$iAttachmentSize, iAttachmentEDMmoduleflag=$iAttachmentEDMmoduleflag, sAttachmentMD5=$sAttachmentMD5, bAttachmentDeleted=$bAttachmentDeleted, bAttachmentValid=$bAttachmentValid, eAttachmentVerified=$eAttachmentVerified, tAttachmentRejectioncomment=$tAttachmentRejectioncomment, fkiUserIDOwner=$fkiUserIDOwner, objAudit=$objAudit]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -1059,6 +1065,7 @@ class AttachmentResponse {
     }
       json[r'eAttachmentDocumenttype'] = this.eAttachmentDocumenttype;
       json[r'sAttachmentName'] = this.sAttachmentName;
+      json[r'sAttachmentCategory'] = this.sAttachmentCategory;
       json[r'eAttachmentPrivacy'] = this.eAttachmentPrivacy;
     if (this.fkiUserIDSpecific != null) {
       json[r'fkiUserIDSpecific'] = this.fkiUserIDSpecific;
@@ -1111,6 +1118,8 @@ class AttachmentResponse {
         assert(json[r'eAttachmentDocumenttype'] != null, 'Required key "AttachmentResponse[eAttachmentDocumenttype]" has a null value in JSON.');
         assert(json.containsKey(r'sAttachmentName'), 'Required key "AttachmentResponse[sAttachmentName]" is missing from JSON.');
         assert(json[r'sAttachmentName'] != null, 'Required key "AttachmentResponse[sAttachmentName]" has a null value in JSON.');
+        assert(json.containsKey(r'sAttachmentCategory'), 'Required key "AttachmentResponse[sAttachmentCategory]" is missing from JSON.');
+        assert(json[r'sAttachmentCategory'] != null, 'Required key "AttachmentResponse[sAttachmentCategory]" has a null value in JSON.');
         assert(json.containsKey(r'eAttachmentPrivacy'), 'Required key "AttachmentResponse[eAttachmentPrivacy]" is missing from JSON.');
         assert(json[r'eAttachmentPrivacy'] != null, 'Required key "AttachmentResponse[eAttachmentPrivacy]" has a null value in JSON.');
         assert(json.containsKey(r'eAttachmentType'), 'Required key "AttachmentResponse[eAttachmentType]" is missing from JSON.');
@@ -1178,6 +1187,7 @@ class AttachmentResponse {
         fkiEzsigndocumentIDReference: mapValueOfType<int>(json, r'fkiEzsigndocumentIDReference'),
         eAttachmentDocumenttype: FieldEAttachmentDocumenttype.fromJson(json[r'eAttachmentDocumenttype'])!,
         sAttachmentName: mapValueOfType<String>(json, r'sAttachmentName')!,
+        sAttachmentCategory: mapValueOfType<String>(json, r'sAttachmentCategory')!,
         eAttachmentPrivacy: FieldEAttachmentPrivacy.fromJson(json[r'eAttachmentPrivacy'])!,
         fkiUserIDSpecific: mapValueOfType<int>(json, r'fkiUserIDSpecific'),
         eAttachmentType: FieldEAttachmentType.fromJson(json[r'eAttachmentType'])!,
@@ -1240,6 +1250,7 @@ class AttachmentResponse {
     'pkiAttachmentID',
     'eAttachmentDocumenttype',
     'sAttachmentName',
+    'sAttachmentCategory',
     'eAttachmentPrivacy',
     'eAttachmentType',
     'iAttachmentSize',

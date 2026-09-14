@@ -259,6 +259,22 @@ class ApiClient {
           return AgentGetAutocompleteV2Response.fromJson(value);
         case 'AgentGetAutocompleteV2ResponseMPayload':
           return AgentGetAutocompleteV2ResponseMPayload.fromJson(value);
+        case 'AgentGetCommunicationCountV1Response':
+          return AgentGetCommunicationCountV1Response.fromJson(value);
+        case 'AgentGetCommunicationCountV1ResponseMPayload':
+          return AgentGetCommunicationCountV1ResponseMPayload.fromJson(value);
+        case 'AgentGetCommunicationListV1Response':
+          return AgentGetCommunicationListV1Response.fromJson(value);
+        case 'AgentGetCommunicationListV1ResponseMPayload':
+          return AgentGetCommunicationListV1ResponseMPayload.fromJson(value);
+        case 'AgentGetCommunicationrecipientsV1Response':
+          return AgentGetCommunicationrecipientsV1Response.fromJson(value);
+        case 'AgentGetCommunicationrecipientsV1ResponseMPayload':
+          return AgentGetCommunicationrecipientsV1ResponseMPayload.fromJson(value);
+        case 'AgentGetCommunicationsendersV1Response':
+          return AgentGetCommunicationsendersV1Response.fromJson(value);
+        case 'AgentGetCommunicationsendersV1ResponseMPayload':
+          return AgentGetCommunicationsendersV1ResponseMPayload.fromJson(value);
         case 'AgentGetListV1Response':
           return AgentGetListV1Response.fromJson(value);
         case 'AgentGetListV1ResponseMPayload':
@@ -335,6 +351,10 @@ class ApiClient {
           return ApikeyResponse.fromJson(value);
         case 'ApikeyResponseCompound':
           return ApikeyResponseCompound.fromJson(value);
+        case 'AttachmentDeleteV1Response':
+          return AttachmentDeleteV1Response.fromJson(value);
+        case 'AttachmentDeleteV1ResponseMPayload':
+          return AttachmentDeleteV1ResponseMPayload.fromJson(value);
         case 'AttachmentGetAttachmentlogsV1Response':
           return AttachmentGetAttachmentlogsV1Response.fromJson(value);
         case 'AttachmentGetAttachmentlogsV1ResponseMPayload':
@@ -349,6 +369,18 @@ class ApiClient {
           return AttachmentResponse.fromJson(value);
         case 'AttachmentResponseCompound':
           return AttachmentResponseCompound.fromJson(value);
+        case 'AttachmentRestoreV1Request':
+          return AttachmentRestoreV1Request.fromJson(value);
+        case 'AttachmentRestoreV1Response':
+          return AttachmentRestoreV1Response.fromJson(value);
+        case 'AttachmentRestoreV1ResponseMPayload':
+          return AttachmentRestoreV1ResponseMPayload.fromJson(value);
+        case 'AttachmentValidateV1Request':
+          return AttachmentValidateV1Request.fromJson(value);
+        case 'AttachmentValidateV1Response':
+          return AttachmentValidateV1Response.fromJson(value);
+        case 'AttachmentValidateV1ResponseMPayload':
+          return AttachmentValidateV1ResponseMPayload.fromJson(value);
         case 'AttachmentlogResponse':
           return AttachmentlogResponse.fromJson(value);
         case 'AttachmentlogResponseCompound':
@@ -407,6 +439,22 @@ class ApiClient {
           return BankaccountGetAutocompleteV2Response.fromJson(value);
         case 'BankaccountGetAutocompleteV2ResponseMPayload':
           return BankaccountGetAutocompleteV2ResponseMPayload.fromJson(value);
+        case 'BankaccountGetCommunicationCountV1Response':
+          return BankaccountGetCommunicationCountV1Response.fromJson(value);
+        case 'BankaccountGetCommunicationCountV1ResponseMPayload':
+          return BankaccountGetCommunicationCountV1ResponseMPayload.fromJson(value);
+        case 'BankaccountGetCommunicationListV1Response':
+          return BankaccountGetCommunicationListV1Response.fromJson(value);
+        case 'BankaccountGetCommunicationListV1ResponseMPayload':
+          return BankaccountGetCommunicationListV1ResponseMPayload.fromJson(value);
+        case 'BankaccountGetCommunicationrecipientsV1Response':
+          return BankaccountGetCommunicationrecipientsV1Response.fromJson(value);
+        case 'BankaccountGetCommunicationrecipientsV1ResponseMPayload':
+          return BankaccountGetCommunicationrecipientsV1ResponseMPayload.fromJson(value);
+        case 'BankaccountGetCommunicationsendersV1Response':
+          return BankaccountGetCommunicationsendersV1Response.fromJson(value);
+        case 'BankaccountGetCommunicationsendersV1ResponseMPayload':
+          return BankaccountGetCommunicationsendersV1ResponseMPayload.fromJson(value);
         case 'BankaccountImportIntoEDMV1Request':
           return BankaccountImportIntoEDMV1Request.fromJson(value);
         case 'BankaccountImportIntoEDMV1Response':
@@ -513,6 +561,22 @@ class ApiClient {
           return BrokerGetAutocompleteV2Response.fromJson(value);
         case 'BrokerGetAutocompleteV2ResponseMPayload':
           return BrokerGetAutocompleteV2ResponseMPayload.fromJson(value);
+        case 'BrokerGetCommunicationCountV1Response':
+          return BrokerGetCommunicationCountV1Response.fromJson(value);
+        case 'BrokerGetCommunicationCountV1ResponseMPayload':
+          return BrokerGetCommunicationCountV1ResponseMPayload.fromJson(value);
+        case 'BrokerGetCommunicationListV1Response':
+          return BrokerGetCommunicationListV1Response.fromJson(value);
+        case 'BrokerGetCommunicationListV1ResponseMPayload':
+          return BrokerGetCommunicationListV1ResponseMPayload.fromJson(value);
+        case 'BrokerGetCommunicationrecipientsV1Response':
+          return BrokerGetCommunicationrecipientsV1Response.fromJson(value);
+        case 'BrokerGetCommunicationrecipientsV1ResponseMPayload':
+          return BrokerGetCommunicationrecipientsV1ResponseMPayload.fromJson(value);
+        case 'BrokerGetCommunicationsendersV1Response':
+          return BrokerGetCommunicationsendersV1Response.fromJson(value);
+        case 'BrokerGetCommunicationsendersV1ResponseMPayload':
+          return BrokerGetCommunicationsendersV1ResponseMPayload.fromJson(value);
         case 'BrokerGetListV1Response':
           return BrokerGetListV1Response.fromJson(value);
         case 'BrokerGetListV1ResponseMPayload':
@@ -587,6 +651,22 @@ class ApiClient {
           return CommissionadvanceGetAttachmentsV1Response.fromJson(value);
         case 'CommissionadvanceGetAttachmentsV1ResponseMPayload':
           return CommissionadvanceGetAttachmentsV1ResponseMPayload.fromJson(value);
+        case 'CommissionadvanceGetCommunicationCountV1Response':
+          return CommissionadvanceGetCommunicationCountV1Response.fromJson(value);
+        case 'CommissionadvanceGetCommunicationCountV1ResponseMPayload':
+          return CommissionadvanceGetCommunicationCountV1ResponseMPayload.fromJson(value);
+        case 'CommissionadvanceGetCommunicationListV1Response':
+          return CommissionadvanceGetCommunicationListV1Response.fromJson(value);
+        case 'CommissionadvanceGetCommunicationListV1ResponseMPayload':
+          return CommissionadvanceGetCommunicationListV1ResponseMPayload.fromJson(value);
+        case 'CommissionadvanceGetCommunicationrecipientsV1Response':
+          return CommissionadvanceGetCommunicationrecipientsV1Response.fromJson(value);
+        case 'CommissionadvanceGetCommunicationrecipientsV1ResponseMPayload':
+          return CommissionadvanceGetCommunicationrecipientsV1ResponseMPayload.fromJson(value);
+        case 'CommissionadvanceGetCommunicationsendersV1Response':
+          return CommissionadvanceGetCommunicationsendersV1Response.fromJson(value);
+        case 'CommissionadvanceGetCommunicationsendersV1ResponseMPayload':
+          return CommissionadvanceGetCommunicationsendersV1ResponseMPayload.fromJson(value);
         case 'CommissionadvanceImportIntoEDMV1Request':
           return CommissionadvanceImportIntoEDMV1Request.fromJson(value);
         case 'CommissionadvanceImportIntoEDMV1Response':
@@ -1009,6 +1089,22 @@ class ApiClient {
           return CustomerGetAutocompleteV2Response.fromJson(value);
         case 'CustomerGetAutocompleteV2ResponseMPayload':
           return CustomerGetAutocompleteV2ResponseMPayload.fromJson(value);
+        case 'CustomerGetCommunicationCountV1Response':
+          return CustomerGetCommunicationCountV1Response.fromJson(value);
+        case 'CustomerGetCommunicationCountV1ResponseMPayload':
+          return CustomerGetCommunicationCountV1ResponseMPayload.fromJson(value);
+        case 'CustomerGetCommunicationListV1Response':
+          return CustomerGetCommunicationListV1Response.fromJson(value);
+        case 'CustomerGetCommunicationListV1ResponseMPayload':
+          return CustomerGetCommunicationListV1ResponseMPayload.fromJson(value);
+        case 'CustomerGetCommunicationrecipientsV1Response':
+          return CustomerGetCommunicationrecipientsV1Response.fromJson(value);
+        case 'CustomerGetCommunicationrecipientsV1ResponseMPayload':
+          return CustomerGetCommunicationrecipientsV1ResponseMPayload.fromJson(value);
+        case 'CustomerGetCommunicationsendersV1Response':
+          return CustomerGetCommunicationsendersV1Response.fromJson(value);
+        case 'CustomerGetCommunicationsendersV1ResponseMPayload':
+          return CustomerGetCommunicationsendersV1ResponseMPayload.fromJson(value);
         case 'CustomerGetObjectV2Response':
           return CustomerGetObjectV2Response.fromJson(value);
         case 'CustomerGetObjectV2ResponseMPayload':
@@ -1035,6 +1131,22 @@ class ApiClient {
           return DepositGetAttachmentsV1Response.fromJson(value);
         case 'DepositGetAttachmentsV1ResponseMPayload':
           return DepositGetAttachmentsV1ResponseMPayload.fromJson(value);
+        case 'DepositGetCommunicationCountV1Response':
+          return DepositGetCommunicationCountV1Response.fromJson(value);
+        case 'DepositGetCommunicationCountV1ResponseMPayload':
+          return DepositGetCommunicationCountV1ResponseMPayload.fromJson(value);
+        case 'DepositGetCommunicationListV1Response':
+          return DepositGetCommunicationListV1Response.fromJson(value);
+        case 'DepositGetCommunicationListV1ResponseMPayload':
+          return DepositGetCommunicationListV1ResponseMPayload.fromJson(value);
+        case 'DepositGetCommunicationrecipientsV1Response':
+          return DepositGetCommunicationrecipientsV1Response.fromJson(value);
+        case 'DepositGetCommunicationrecipientsV1ResponseMPayload':
+          return DepositGetCommunicationrecipientsV1ResponseMPayload.fromJson(value);
+        case 'DepositGetCommunicationsendersV1Response':
+          return DepositGetCommunicationsendersV1Response.fromJson(value);
+        case 'DepositGetCommunicationsendersV1ResponseMPayload':
+          return DepositGetCommunicationsendersV1ResponseMPayload.fromJson(value);
         case 'DepositImportIntoEDMV1Request':
           return DepositImportIntoEDMV1Request.fromJson(value);
         case 'DepositImportIntoEDMV1Response':
@@ -1047,6 +1159,22 @@ class ApiClient {
           return DeposittransitchequeGetAttachmentsV1Response.fromJson(value);
         case 'DeposittransitchequeGetAttachmentsV1ResponseMPayload':
           return DeposittransitchequeGetAttachmentsV1ResponseMPayload.fromJson(value);
+        case 'DeposittransitchequeGetCommunicationCountV1Response':
+          return DeposittransitchequeGetCommunicationCountV1Response.fromJson(value);
+        case 'DeposittransitchequeGetCommunicationCountV1ResponseMPayload':
+          return DeposittransitchequeGetCommunicationCountV1ResponseMPayload.fromJson(value);
+        case 'DeposittransitchequeGetCommunicationListV1Response':
+          return DeposittransitchequeGetCommunicationListV1Response.fromJson(value);
+        case 'DeposittransitchequeGetCommunicationListV1ResponseMPayload':
+          return DeposittransitchequeGetCommunicationListV1ResponseMPayload.fromJson(value);
+        case 'DeposittransitchequeGetCommunicationrecipientsV1Response':
+          return DeposittransitchequeGetCommunicationrecipientsV1Response.fromJson(value);
+        case 'DeposittransitchequeGetCommunicationrecipientsV1ResponseMPayload':
+          return DeposittransitchequeGetCommunicationrecipientsV1ResponseMPayload.fromJson(value);
+        case 'DeposittransitchequeGetCommunicationsendersV1Response':
+          return DeposittransitchequeGetCommunicationsendersV1Response.fromJson(value);
+        case 'DeposittransitchequeGetCommunicationsendersV1ResponseMPayload':
+          return DeposittransitchequeGetCommunicationsendersV1ResponseMPayload.fromJson(value);
         case 'DeposittransitchequeImportIntoEDMV1Request':
           return DeposittransitchequeImportIntoEDMV1Request.fromJson(value);
         case 'DeposittransitchequeImportIntoEDMV1Response':
@@ -1059,6 +1187,22 @@ class ApiClient {
           return DisclosureGetAttachmentsV1Response.fromJson(value);
         case 'DisclosureGetAttachmentsV1ResponseMPayload':
           return DisclosureGetAttachmentsV1ResponseMPayload.fromJson(value);
+        case 'DisclosureGetCommunicationCountV1Response':
+          return DisclosureGetCommunicationCountV1Response.fromJson(value);
+        case 'DisclosureGetCommunicationCountV1ResponseMPayload':
+          return DisclosureGetCommunicationCountV1ResponseMPayload.fromJson(value);
+        case 'DisclosureGetCommunicationListV1Response':
+          return DisclosureGetCommunicationListV1Response.fromJson(value);
+        case 'DisclosureGetCommunicationListV1ResponseMPayload':
+          return DisclosureGetCommunicationListV1ResponseMPayload.fromJson(value);
+        case 'DisclosureGetCommunicationrecipientsV1Response':
+          return DisclosureGetCommunicationrecipientsV1Response.fromJson(value);
+        case 'DisclosureGetCommunicationrecipientsV1ResponseMPayload':
+          return DisclosureGetCommunicationrecipientsV1ResponseMPayload.fromJson(value);
+        case 'DisclosureGetCommunicationsendersV1Response':
+          return DisclosureGetCommunicationsendersV1Response.fromJson(value);
+        case 'DisclosureGetCommunicationsendersV1ResponseMPayload':
+          return DisclosureGetCommunicationsendersV1ResponseMPayload.fromJson(value);
         case 'DisclosureImportIntoEDMV1Request':
           return DisclosureImportIntoEDMV1Request.fromJson(value);
         case 'DisclosureImportIntoEDMV1Response':
@@ -1217,6 +1361,22 @@ class ApiClient {
           return EmployeeGetAttachmentsV1Response.fromJson(value);
         case 'EmployeeGetAttachmentsV1ResponseMPayload':
           return EmployeeGetAttachmentsV1ResponseMPayload.fromJson(value);
+        case 'EmployeeGetCommunicationCountV1Response':
+          return EmployeeGetCommunicationCountV1Response.fromJson(value);
+        case 'EmployeeGetCommunicationCountV1ResponseMPayload':
+          return EmployeeGetCommunicationCountV1ResponseMPayload.fromJson(value);
+        case 'EmployeeGetCommunicationListV1Response':
+          return EmployeeGetCommunicationListV1Response.fromJson(value);
+        case 'EmployeeGetCommunicationListV1ResponseMPayload':
+          return EmployeeGetCommunicationListV1ResponseMPayload.fromJson(value);
+        case 'EmployeeGetCommunicationrecipientsV1Response':
+          return EmployeeGetCommunicationrecipientsV1Response.fromJson(value);
+        case 'EmployeeGetCommunicationrecipientsV1ResponseMPayload':
+          return EmployeeGetCommunicationrecipientsV1ResponseMPayload.fromJson(value);
+        case 'EmployeeGetCommunicationsendersV1Response':
+          return EmployeeGetCommunicationsendersV1Response.fromJson(value);
+        case 'EmployeeGetCommunicationsendersV1ResponseMPayload':
+          return EmployeeGetCommunicationsendersV1ResponseMPayload.fromJson(value);
         case 'EmployeeGetListV1Response':
           return EmployeeGetListV1Response.fromJson(value);
         case 'EmployeeGetListV1ResponseMPayload':
@@ -1247,6 +1407,22 @@ class ApiClient {
           return ExternalbrokerGetAttachmentsV1Response.fromJson(value);
         case 'ExternalbrokerGetAttachmentsV1ResponseMPayload':
           return ExternalbrokerGetAttachmentsV1ResponseMPayload.fromJson(value);
+        case 'ExternalbrokerGetCommunicationCountV1Response':
+          return ExternalbrokerGetCommunicationCountV1Response.fromJson(value);
+        case 'ExternalbrokerGetCommunicationCountV1ResponseMPayload':
+          return ExternalbrokerGetCommunicationCountV1ResponseMPayload.fromJson(value);
+        case 'ExternalbrokerGetCommunicationListV1Response':
+          return ExternalbrokerGetCommunicationListV1Response.fromJson(value);
+        case 'ExternalbrokerGetCommunicationListV1ResponseMPayload':
+          return ExternalbrokerGetCommunicationListV1ResponseMPayload.fromJson(value);
+        case 'ExternalbrokerGetCommunicationrecipientsV1Response':
+          return ExternalbrokerGetCommunicationrecipientsV1Response.fromJson(value);
+        case 'ExternalbrokerGetCommunicationrecipientsV1ResponseMPayload':
+          return ExternalbrokerGetCommunicationrecipientsV1ResponseMPayload.fromJson(value);
+        case 'ExternalbrokerGetCommunicationsendersV1Response':
+          return ExternalbrokerGetCommunicationsendersV1Response.fromJson(value);
+        case 'ExternalbrokerGetCommunicationsendersV1ResponseMPayload':
+          return ExternalbrokerGetCommunicationsendersV1ResponseMPayload.fromJson(value);
         case 'ExternalbrokerImportIntoEDMV1Request':
           return ExternalbrokerImportIntoEDMV1Request.fromJson(value);
         case 'ExternalbrokerImportIntoEDMV1Response':

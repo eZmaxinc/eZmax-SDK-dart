@@ -16,6 +16,68 @@ class ObjectAttachmentApi {
 
   final ApiClient apiClient;
 
+  /// Delete an existing attachment
+  ///
+  /// Te endpoint allows to delete an attachment.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiAttachmentID (required):
+  ///
+  /// * [Object] body (required):
+  Future<Response> attachmentDeleteV1WithHttpInfo(int pkiAttachmentID, Object body, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/attachment/{pkiAttachmentID}/delete'
+      .replaceAll('{pkiAttachmentID}', pkiAttachmentID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = body;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Delete an existing attachment
+  ///
+  /// Te endpoint allows to delete an attachment.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiAttachmentID (required):
+  ///
+  /// * [Object] body (required):
+  Future<AttachmentDeleteV1Response?> attachmentDeleteV1(int pkiAttachmentID, Object body, { Future<void>? abortTrigger, }) async {
+    final response = await attachmentDeleteV1WithHttpInfo(pkiAttachmentID, body, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AttachmentDeleteV1Response',) as AttachmentDeleteV1Response;
+    
+    }
+    return null;
+  }
+
   /// Retrieve the content
   ///
   /// Using this endpoint, you can retrieve the content of an attachment.
@@ -124,7 +186,7 @@ class ObjectAttachmentApi {
     return null;
   }
 
-  /// Rename an Attachment
+  /// Rename an attachment
   ///
   /// The endpoint allows to change the attachment's file name and category.
   ///
@@ -162,7 +224,7 @@ class ObjectAttachmentApi {
     );
   }
 
-  /// Rename an Attachment
+  /// Rename an attachment
   ///
   /// The endpoint allows to change the attachment's file name and category.
   ///
@@ -181,6 +243,130 @@ class ObjectAttachmentApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AttachmentRenameV1Response',) as AttachmentRenameV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Restore a deleted attachment
+  ///
+  /// The endpoints allows to restore a previously deleted attachment.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiAttachmentID (required):
+  ///
+  /// * [AttachmentRestoreV1Request] attachmentRestoreV1Request (required):
+  Future<Response> attachmentRestoreV1WithHttpInfo(int pkiAttachmentID, AttachmentRestoreV1Request attachmentRestoreV1Request, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/attachment/{pkiAttachmentID}/restore'
+      .replaceAll('{pkiAttachmentID}', pkiAttachmentID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = attachmentRestoreV1Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Restore a deleted attachment
+  ///
+  /// The endpoints allows to restore a previously deleted attachment.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiAttachmentID (required):
+  ///
+  /// * [AttachmentRestoreV1Request] attachmentRestoreV1Request (required):
+  Future<AttachmentRestoreV1Response?> attachmentRestoreV1(int pkiAttachmentID, AttachmentRestoreV1Request attachmentRestoreV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await attachmentRestoreV1WithHttpInfo(pkiAttachmentID, attachmentRestoreV1Request, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AttachmentRestoreV1Response',) as AttachmentRestoreV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Validate an existing attachment
+  ///
+  /// This endpoint allows to validate or reject an attachment.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiAttachmentID (required):
+  ///
+  /// * [AttachmentValidateV1Request] attachmentValidateV1Request (required):
+  Future<Response> attachmentValidateV1WithHttpInfo(int pkiAttachmentID, AttachmentValidateV1Request attachmentValidateV1Request, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/attachment/{pkiAttachmentID}/validate'
+      .replaceAll('{pkiAttachmentID}', pkiAttachmentID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = attachmentValidateV1Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'PATCH',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Validate an existing attachment
+  ///
+  /// This endpoint allows to validate or reject an attachment.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiAttachmentID (required):
+  ///
+  /// * [AttachmentValidateV1Request] attachmentValidateV1Request (required):
+  Future<AttachmentValidateV1Response?> attachmentValidateV1(int pkiAttachmentID, AttachmentValidateV1Request attachmentValidateV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await attachmentValidateV1WithHttpInfo(pkiAttachmentID, attachmentValidateV1Request, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AttachmentValidateV1Response',) as AttachmentValidateV1Response;
     
     }
     return null;
