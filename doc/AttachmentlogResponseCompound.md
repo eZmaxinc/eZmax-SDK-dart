@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **fkiAttachmentID** | **int** | The unique ID of the Attachment. | 
 **fkiUserID** | **int** | The unique ID of the User | 
+**objUser** | [**CustomUserNameResponse**](CustomUserNameResponse.md) |  | 
 **dtAttachmentlogDatetime** | **String** | The created date | 
 **eAttachmentlogType** | [**FieldEAttachmentlogType**](FieldEAttachmentlogType.md) |  | 
 **sAttachmentlogDetail** | **String** | The additionnal detail | [optional] 

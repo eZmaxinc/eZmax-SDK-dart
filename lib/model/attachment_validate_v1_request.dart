@@ -13,26 +13,104 @@ part of openapi.api;
 class AttachmentValidateV1Request {
   /// Returns a new [AttachmentValidateV1Request] instance.
   AttachmentValidateV1Request({
+    this.fkiAttachmentrejectreasonID,
     required this.eAttachmentVerified,
+    this.tAttachmentRejectioncomment,
+    this.aSNotificationEmailAddress = const {},
+    this.tNotificationMessage,
+    this.bNotificationIncludeAttachment,
   });
+
+  /// The unique ID of the Attachmentrejectreason
+  ///
+  /// Minimum value: 0
+  /// Maximum value: 255
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiAttachmentrejectreasonID;
 
   FieldEAttachmentVerified eAttachmentVerified;
 
+  /// The rejectioncomment of the Attachment
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? tAttachmentRejectioncomment;
+
+  /// A list of email addresses to send a rejection notification to.
+  Set<String> aSNotificationEmailAddress;
+
+  /// The email body to send to the notification recipients.
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? tNotificationMessage;
+
+  /// Should a copy of the attachment be included in the email.
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  bool? bNotificationIncludeAttachment;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is AttachmentValidateV1Request &&
-    other.eAttachmentVerified == eAttachmentVerified;
+    other.fkiAttachmentrejectreasonID == fkiAttachmentrejectreasonID &&
+    other.eAttachmentVerified == eAttachmentVerified &&
+    other.tAttachmentRejectioncomment == tAttachmentRejectioncomment &&
+    _deepEquality.equals(other.aSNotificationEmailAddress, aSNotificationEmailAddress) &&
+    other.tNotificationMessage == tNotificationMessage &&
+    other.bNotificationIncludeAttachment == bNotificationIncludeAttachment;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (eAttachmentVerified.hashCode);
+    (fkiAttachmentrejectreasonID == null ? 0 : fkiAttachmentrejectreasonID!.hashCode) +
+    (eAttachmentVerified.hashCode) +
+    (tAttachmentRejectioncomment == null ? 0 : tAttachmentRejectioncomment!.hashCode) +
+    (aSNotificationEmailAddress.hashCode) +
+    (tNotificationMessage == null ? 0 : tNotificationMessage!.hashCode) +
+    (bNotificationIncludeAttachment == null ? 0 : bNotificationIncludeAttachment!.hashCode);
 
   @override
-  String toString() => 'AttachmentValidateV1Request[eAttachmentVerified=$eAttachmentVerified]';
+  String toString() => 'AttachmentValidateV1Request[fkiAttachmentrejectreasonID=$fkiAttachmentrejectreasonID, eAttachmentVerified=$eAttachmentVerified, tAttachmentRejectioncomment=$tAttachmentRejectioncomment, aSNotificationEmailAddress=$aSNotificationEmailAddress, tNotificationMessage=$tNotificationMessage, bNotificationIncludeAttachment=$bNotificationIncludeAttachment]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
+    if (this.fkiAttachmentrejectreasonID != null) {
+      json[r'fkiAttachmentrejectreasonID'] = this.fkiAttachmentrejectreasonID;
+    } else {
+      json[r'fkiAttachmentrejectreasonID'] = null;
+    }
       json[r'eAttachmentVerified'] = this.eAttachmentVerified;
+    if (this.tAttachmentRejectioncomment != null) {
+      json[r'tAttachmentRejectioncomment'] = this.tAttachmentRejectioncomment;
+    } else {
+      json[r'tAttachmentRejectioncomment'] = null;
+    }
+      json[r'a_sNotificationEmailAddress'] = this.aSNotificationEmailAddress.toList(growable: false);
+    if (this.tNotificationMessage != null) {
+      json[r'tNotificationMessage'] = this.tNotificationMessage;
+    } else {
+      json[r'tNotificationMessage'] = null;
+    }
+    if (this.bNotificationIncludeAttachment != null) {
+      json[r'bNotificationIncludeAttachment'] = this.bNotificationIncludeAttachment;
+    } else {
+      json[r'bNotificationIncludeAttachment'] = null;
+    }
     return json;
   }
 
@@ -53,7 +131,14 @@ class AttachmentValidateV1Request {
       }());
 
       return AttachmentValidateV1Request(
+        fkiAttachmentrejectreasonID: mapValueOfType<int>(json, r'fkiAttachmentrejectreasonID'),
         eAttachmentVerified: FieldEAttachmentVerified.fromJson(json[r'eAttachmentVerified'])!,
+        tAttachmentRejectioncomment: mapValueOfType<String>(json, r'tAttachmentRejectioncomment'),
+        aSNotificationEmailAddress: json[r'a_sNotificationEmailAddress'] is Iterable
+            ? (json[r'a_sNotificationEmailAddress'] as Iterable).cast<String>().toSet()
+            : const {},
+        tNotificationMessage: mapValueOfType<String>(json, r'tNotificationMessage'),
+        bNotificationIncludeAttachment: mapValueOfType<bool>(json, r'bNotificationIncludeAttachment'),
       );
     }
     return null;

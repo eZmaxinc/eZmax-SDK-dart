@@ -16,6 +16,7 @@ class CustomUserNameResponse {
     this.sContacttitleNameX,
     required this.sUserLastname,
     required this.sUserFirstname,
+    this.sUserLoginname,
     this.sUserJobtitle,
   });
 
@@ -34,6 +35,15 @@ class CustomUserNameResponse {
   /// The first name of the user
   String sUserFirstname;
 
+  /// The login name of the User.
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sUserLoginname;
+
   /// The job title of the user
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -48,6 +58,7 @@ class CustomUserNameResponse {
     other.sContacttitleNameX == sContacttitleNameX &&
     other.sUserLastname == sUserLastname &&
     other.sUserFirstname == sUserFirstname &&
+    other.sUserLoginname == sUserLoginname &&
     other.sUserJobtitle == sUserJobtitle;
 
   @override
@@ -56,10 +67,11 @@ class CustomUserNameResponse {
     (sContacttitleNameX == null ? 0 : sContacttitleNameX!.hashCode) +
     (sUserLastname.hashCode) +
     (sUserFirstname.hashCode) +
+    (sUserLoginname == null ? 0 : sUserLoginname!.hashCode) +
     (sUserJobtitle == null ? 0 : sUserJobtitle!.hashCode);
 
   @override
-  String toString() => 'CustomUserNameResponse[sContacttitleNameX=$sContacttitleNameX, sUserLastname=$sUserLastname, sUserFirstname=$sUserFirstname, sUserJobtitle=$sUserJobtitle]';
+  String toString() => 'CustomUserNameResponse[sContacttitleNameX=$sContacttitleNameX, sUserLastname=$sUserLastname, sUserFirstname=$sUserFirstname, sUserLoginname=$sUserLoginname, sUserJobtitle=$sUserJobtitle]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -70,6 +82,11 @@ class CustomUserNameResponse {
     }
       json[r'sUserLastname'] = this.sUserLastname;
       json[r'sUserFirstname'] = this.sUserFirstname;
+    if (this.sUserLoginname != null) {
+      json[r'sUserLoginname'] = this.sUserLoginname;
+    } else {
+      json[r'sUserLoginname'] = null;
+    }
     if (this.sUserJobtitle != null) {
       json[r'sUserJobtitle'] = this.sUserJobtitle;
     } else {
@@ -100,6 +117,7 @@ class CustomUserNameResponse {
         sContacttitleNameX: mapValueOfType<String>(json, r'sContacttitleNameX'),
         sUserLastname: mapValueOfType<String>(json, r'sUserLastname')!,
         sUserFirstname: mapValueOfType<String>(json, r'sUserFirstname')!,
+        sUserLoginname: mapValueOfType<String>(json, r'sUserLoginname'),
         sUserJobtitle: mapValueOfType<String>(json, r'sUserJobtitle'),
       );
     }

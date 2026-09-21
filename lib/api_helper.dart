@@ -130,6 +130,9 @@ String parameterToString(dynamic value) {
   if (value is FieldEAuthenticationexternalType) {
     return FieldEAuthenticationexternalTypeTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEBankaccountType) {
+    return FieldEBankaccountTypeTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEBrandingAlignlogo) {
     return FieldEBrandingAlignlogoTypeTransformer().encode(value).toString();
   }
@@ -183,6 +186,9 @@ String parameterToString(dynamic value) {
   }
   if (value is FieldECustomerType) {
     return FieldECustomerTypeTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEDisclosureInteresttype) {
+    return FieldEDisclosureInteresttypeTypeTransformer().encode(value).toString();
   }
   if (value is FieldEDiscussionRobot) {
     return FieldEDiscussionRobotTypeTransformer().encode(value).toString();
@@ -468,6 +474,9 @@ String parameterToString(dynamic value) {
   }
   if (value is FieldEInscriptiontempStatus) {
     return FieldEInscriptiontempStatusTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEInvoiceType) {
+    return FieldEInvoiceTypeTypeTransformer().encode(value).toString();
   }
   if (value is FieldELeadStatus) {
     return FieldELeadStatusTypeTransformer().encode(value).toString();

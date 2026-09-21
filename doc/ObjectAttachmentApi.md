@@ -10,11 +10,13 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**attachmentDeleteV1**](ObjectAttachmentApi.md#attachmentdeletev1) | **POST** /1/object/attachment/{pkiAttachmentID}/delete | Delete an existing attachment
+[**attachmentDocumentTypeV1**](ObjectAttachmentApi.md#attachmentdocumenttypev1) | **POST** /1/object/attachment/{pkiAttachmentID}/documentType | Change attachment document type
 [**attachmentDownloadV1**](ObjectAttachmentApi.md#attachmentdownloadv1) | **GET** /1/object/attachment/{pkiAttachmentID}/download | Retrieve the content
 [**attachmentGetAttachmentlogsV1**](ObjectAttachmentApi.md#attachmentgetattachmentlogsv1) | **GET** /1/object/attachment/{pkiAttachmentID}/getAttachmentlogs | Retrieve the Attachmentlogs
+[**attachmentPrivacyV1**](ObjectAttachmentApi.md#attachmentprivacyv1) | **POST** /1/object/attachment/{pkiAttachmentID}/privacy | Change the attachment privacy
 [**attachmentRenameV1**](ObjectAttachmentApi.md#attachmentrenamev1) | **POST** /1/object/attachment/{pkiAttachmentID}/rename | Rename an attachment
 [**attachmentRestoreV1**](ObjectAttachmentApi.md#attachmentrestorev1) | **POST** /1/object/attachment/{pkiAttachmentID}/restore | Restore a deleted attachment
-[**attachmentValidateV1**](ObjectAttachmentApi.md#attachmentvalidatev1) | **PATCH** /1/object/attachment/{pkiAttachmentID}/validate | Validate an existing attachment
+[**attachmentValidateV1**](ObjectAttachmentApi.md#attachmentvalidatev1) | **POST** /1/object/attachment/{pkiAttachmentID}/validate | Validate an existing attachment
 
 
 # **attachmentDeleteV1**
@@ -54,6 +56,55 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AttachmentDeleteV1Response**](AttachmentDeleteV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **attachmentDocumentTypeV1**
+> AttachmentDocumentTypeV1Response attachmentDocumentTypeV1(pkiAttachmentID, attachmentDocumentTypeV1Request)
+
+Change attachment document type
+
+The endpoint allows to change the checklist document type for an attachment.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectAttachmentApi();
+final pkiAttachmentID = 56; // int | 
+final attachmentDocumentTypeV1Request = AttachmentDocumentTypeV1Request(); // AttachmentDocumentTypeV1Request | 
+
+try {
+    final result = api_instance.attachmentDocumentTypeV1(pkiAttachmentID, attachmentDocumentTypeV1Request);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectAttachmentApi->attachmentDocumentTypeV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiAttachmentID** | **int**|  | 
+ **attachmentDocumentTypeV1Request** | [**AttachmentDocumentTypeV1Request**](AttachmentDocumentTypeV1Request.md)|  | 
+
+### Return type
+
+[**AttachmentDocumentTypeV1Response**](AttachmentDocumentTypeV1Response.md)
 
 ### Authorization
 
@@ -159,6 +210,55 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **attachmentPrivacyV1**
+> AttachmentPrivacyV1Response attachmentPrivacyV1(pkiAttachmentID, attachmentPrivacyV1Request)
+
+Change the attachment privacy
+
+The endpoint allows to change an attachment's access privacy.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectAttachmentApi();
+final pkiAttachmentID = 56; // int | 
+final attachmentPrivacyV1Request = AttachmentPrivacyV1Request(); // AttachmentPrivacyV1Request | 
+
+try {
+    final result = api_instance.attachmentPrivacyV1(pkiAttachmentID, attachmentPrivacyV1Request);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectAttachmentApi->attachmentPrivacyV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiAttachmentID** | **int**|  | 
+ **attachmentPrivacyV1Request** | [**AttachmentPrivacyV1Request**](AttachmentPrivacyV1Request.md)|  | 
+
+### Return type
+
+[**AttachmentPrivacyV1Response**](AttachmentPrivacyV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

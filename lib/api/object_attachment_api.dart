@@ -78,6 +78,68 @@ class ObjectAttachmentApi {
     return null;
   }
 
+  /// Change attachment document type
+  ///
+  /// The endpoint allows to change the checklist document type for an attachment.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiAttachmentID (required):
+  ///
+  /// * [AttachmentDocumentTypeV1Request] attachmentDocumentTypeV1Request (required):
+  Future<Response> attachmentDocumentTypeV1WithHttpInfo(int pkiAttachmentID, AttachmentDocumentTypeV1Request attachmentDocumentTypeV1Request, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/attachment/{pkiAttachmentID}/documentType'
+      .replaceAll('{pkiAttachmentID}', pkiAttachmentID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = attachmentDocumentTypeV1Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Change attachment document type
+  ///
+  /// The endpoint allows to change the checklist document type for an attachment.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiAttachmentID (required):
+  ///
+  /// * [AttachmentDocumentTypeV1Request] attachmentDocumentTypeV1Request (required):
+  Future<AttachmentDocumentTypeV1Response?> attachmentDocumentTypeV1(int pkiAttachmentID, AttachmentDocumentTypeV1Request attachmentDocumentTypeV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await attachmentDocumentTypeV1WithHttpInfo(pkiAttachmentID, attachmentDocumentTypeV1Request, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AttachmentDocumentTypeV1Response',) as AttachmentDocumentTypeV1Response;
+    
+    }
+    return null;
+  }
+
   /// Retrieve the content
   ///
   /// Using this endpoint, you can retrieve the content of an attachment.
@@ -181,6 +243,68 @@ class ObjectAttachmentApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AttachmentGetAttachmentlogsV1Response',) as AttachmentGetAttachmentlogsV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Change the attachment privacy
+  ///
+  /// The endpoint allows to change an attachment's access privacy.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiAttachmentID (required):
+  ///
+  /// * [AttachmentPrivacyV1Request] attachmentPrivacyV1Request (required):
+  Future<Response> attachmentPrivacyV1WithHttpInfo(int pkiAttachmentID, AttachmentPrivacyV1Request attachmentPrivacyV1Request, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/attachment/{pkiAttachmentID}/privacy'
+      .replaceAll('{pkiAttachmentID}', pkiAttachmentID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = attachmentPrivacyV1Request;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Change the attachment privacy
+  ///
+  /// The endpoint allows to change an attachment's access privacy.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiAttachmentID (required):
+  ///
+  /// * [AttachmentPrivacyV1Request] attachmentPrivacyV1Request (required):
+  Future<AttachmentPrivacyV1Response?> attachmentPrivacyV1(int pkiAttachmentID, AttachmentPrivacyV1Request attachmentPrivacyV1Request, { Future<void>? abortTrigger, }) async {
+    final response = await attachmentPrivacyV1WithHttpInfo(pkiAttachmentID, attachmentPrivacyV1Request, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'AttachmentPrivacyV1Response',) as AttachmentPrivacyV1Response;
     
     }
     return null;
@@ -338,7 +462,7 @@ class ObjectAttachmentApi {
 
     return apiClient.invokeAPI(
       path,
-      'PATCH',
+      'POST',
       queryParams,
       postBody,
       headerParams,

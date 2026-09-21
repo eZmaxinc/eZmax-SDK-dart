@@ -54,7 +54,8 @@ class AttachmentResponseCompound {
     this.fkiSupplierID,
     this.fkiTranqcontractID,
     this.fkiTemplateID,
-    this.fkiInscriptionchecklistID,
+    this.fkiDocumenttypechecklistID,
+    this.sDocumenttypeNameX,
     this.fkiFolderID,
     this.fkiRejectedoffertopurchaseID,
     this.fkiDisclosureID,
@@ -545,7 +546,7 @@ class AttachmentResponseCompound {
   ///
   int? fkiTemplateID;
 
-  /// The unique ID of the Inscriptionchecklist
+  /// The unique ID of the Documenttypechecklist
   ///
   /// Minimum value: 0
   /// Maximum value: 16777215
@@ -555,7 +556,16 @@ class AttachmentResponseCompound {
   /// source code must fall back to having a nullable type.
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
-  int? fkiInscriptionchecklistID;
+  int? fkiDocumenttypechecklistID;
+
+  /// The name of the Documenttype in the language of the requester
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? sDocumenttypeNameX;
 
   /// The unique ID of the Folder
   ///
@@ -739,7 +749,8 @@ class AttachmentResponseCompound {
     other.fkiSupplierID == fkiSupplierID &&
     other.fkiTranqcontractID == fkiTranqcontractID &&
     other.fkiTemplateID == fkiTemplateID &&
-    other.fkiInscriptionchecklistID == fkiInscriptionchecklistID &&
+    other.fkiDocumenttypechecklistID == fkiDocumenttypechecklistID &&
+    other.sDocumenttypeNameX == sDocumenttypeNameX &&
     other.fkiFolderID == fkiFolderID &&
     other.fkiRejectedoffertopurchaseID == fkiRejectedoffertopurchaseID &&
     other.fkiDisclosureID == fkiDisclosureID &&
@@ -805,7 +816,8 @@ class AttachmentResponseCompound {
     (fkiSupplierID == null ? 0 : fkiSupplierID!.hashCode) +
     (fkiTranqcontractID == null ? 0 : fkiTranqcontractID!.hashCode) +
     (fkiTemplateID == null ? 0 : fkiTemplateID!.hashCode) +
-    (fkiInscriptionchecklistID == null ? 0 : fkiInscriptionchecklistID!.hashCode) +
+    (fkiDocumenttypechecklistID == null ? 0 : fkiDocumenttypechecklistID!.hashCode) +
+    (sDocumenttypeNameX == null ? 0 : sDocumenttypeNameX!.hashCode) +
     (fkiFolderID == null ? 0 : fkiFolderID!.hashCode) +
     (fkiRejectedoffertopurchaseID == null ? 0 : fkiRejectedoffertopurchaseID!.hashCode) +
     (fkiDisclosureID == null ? 0 : fkiDisclosureID!.hashCode) +
@@ -828,7 +840,7 @@ class AttachmentResponseCompound {
     (objAudit == null ? 0 : objAudit!.hashCode);
 
   @override
-  String toString() => 'AttachmentResponseCompound[pkiAttachmentID=$pkiAttachmentID, fkiComputerID=$fkiComputerID, fkiAdjustmentID=$fkiAdjustmentID, fkiAgentID=$fkiAgentID, fkiBankaccountID=$fkiBankaccountID, fkiBrokerID=$fkiBrokerID, fkiCommissionadvanceID=$fkiCommissionadvanceID, fkiCommunicationID=$fkiCommunicationID, fkiCustomerID=$fkiCustomerID, fkiCustomertemplateID=$fkiCustomertemplateID, fkiDepositID=$fkiDepositID, fkiDeposittransitchequeID=$fkiDeposittransitchequeID, fkiElectronicfundstransferID=$fkiElectronicfundstransferID, fkiEmployeeID=$fkiEmployeeID, fkiExternalbrokerID=$fkiExternalbrokerID, fkiEzcomadvanceserverID=$fkiEzcomadvanceserverID, fkiEzcomcompanyID=$fkiEzcomcompanyID, fkiEzsigndocumentID=$fkiEzsigndocumentID, fkiGhacqcontractID=$fkiGhacqcontractID, fkiInscriptionID=$fkiInscriptionID, fkiInscriptiontempID=$fkiInscriptiontempID, fkiInscriptionnotauthenticatedID=$fkiInscriptionnotauthenticatedID, fkiInvoiceID=$fkiInvoiceID, fkiBuyercontractID=$fkiBuyercontractID, fkiFranchisebrokerID=$fkiFranchisebrokerID, fkiFranchiseagenceID=$fkiFranchiseagenceID, fkiFranchiseofficeID=$fkiFranchiseofficeID, fkiFranchisefranchiseID=$fkiFranchisefranchiseID, fkiFranchisecomplaintID=$fkiFranchisecomplaintID, fkiLeadID=$fkiLeadID, fkiMarketingprogramID=$fkiMarketingprogramID, fkiMarketingfollowID=$fkiMarketingfollowID, fkiNotaryID=$fkiNotaryID, fkiOfficetaxreportID=$fkiOfficetaxreportID, fkiOtherincomeID=$fkiOtherincomeID, fkiPaymentpreparationID=$fkiPaymentpreparationID, fkiPurchaseID=$fkiPurchaseID, fkiSalaryID=$fkiSalaryID, fkiSupplierID=$fkiSupplierID, fkiTranqcontractID=$fkiTranqcontractID, fkiTemplateID=$fkiTemplateID, fkiInscriptionchecklistID=$fkiInscriptionchecklistID, fkiFolderID=$fkiFolderID, fkiRejectedoffertopurchaseID=$fkiRejectedoffertopurchaseID, fkiDisclosureID=$fkiDisclosureID, fkiReconciliationID=$fkiReconciliationID, fkiEzsigndocumentIDReference=$fkiEzsigndocumentIDReference, eAttachmentDocumenttype=$eAttachmentDocumenttype, sAttachmentName=$sAttachmentName, sAttachmentCategory=$sAttachmentCategory, eAttachmentPrivacy=$eAttachmentPrivacy, fkiUserIDSpecific=$fkiUserIDSpecific, eAttachmentType=$eAttachmentType, iAttachmentSize=$iAttachmentSize, iAttachmentEDMmoduleflag=$iAttachmentEDMmoduleflag, sAttachmentMD5=$sAttachmentMD5, bAttachmentDeleted=$bAttachmentDeleted, bAttachmentValid=$bAttachmentValid, eAttachmentVerified=$eAttachmentVerified, tAttachmentRejectioncomment=$tAttachmentRejectioncomment, fkiUserIDOwner=$fkiUserIDOwner, objAudit=$objAudit]';
+  String toString() => 'AttachmentResponseCompound[pkiAttachmentID=$pkiAttachmentID, fkiComputerID=$fkiComputerID, fkiAdjustmentID=$fkiAdjustmentID, fkiAgentID=$fkiAgentID, fkiBankaccountID=$fkiBankaccountID, fkiBrokerID=$fkiBrokerID, fkiCommissionadvanceID=$fkiCommissionadvanceID, fkiCommunicationID=$fkiCommunicationID, fkiCustomerID=$fkiCustomerID, fkiCustomertemplateID=$fkiCustomertemplateID, fkiDepositID=$fkiDepositID, fkiDeposittransitchequeID=$fkiDeposittransitchequeID, fkiElectronicfundstransferID=$fkiElectronicfundstransferID, fkiEmployeeID=$fkiEmployeeID, fkiExternalbrokerID=$fkiExternalbrokerID, fkiEzcomadvanceserverID=$fkiEzcomadvanceserverID, fkiEzcomcompanyID=$fkiEzcomcompanyID, fkiEzsigndocumentID=$fkiEzsigndocumentID, fkiGhacqcontractID=$fkiGhacqcontractID, fkiInscriptionID=$fkiInscriptionID, fkiInscriptiontempID=$fkiInscriptiontempID, fkiInscriptionnotauthenticatedID=$fkiInscriptionnotauthenticatedID, fkiInvoiceID=$fkiInvoiceID, fkiBuyercontractID=$fkiBuyercontractID, fkiFranchisebrokerID=$fkiFranchisebrokerID, fkiFranchiseagenceID=$fkiFranchiseagenceID, fkiFranchiseofficeID=$fkiFranchiseofficeID, fkiFranchisefranchiseID=$fkiFranchisefranchiseID, fkiFranchisecomplaintID=$fkiFranchisecomplaintID, fkiLeadID=$fkiLeadID, fkiMarketingprogramID=$fkiMarketingprogramID, fkiMarketingfollowID=$fkiMarketingfollowID, fkiNotaryID=$fkiNotaryID, fkiOfficetaxreportID=$fkiOfficetaxreportID, fkiOtherincomeID=$fkiOtherincomeID, fkiPaymentpreparationID=$fkiPaymentpreparationID, fkiPurchaseID=$fkiPurchaseID, fkiSalaryID=$fkiSalaryID, fkiSupplierID=$fkiSupplierID, fkiTranqcontractID=$fkiTranqcontractID, fkiTemplateID=$fkiTemplateID, fkiDocumenttypechecklistID=$fkiDocumenttypechecklistID, sDocumenttypeNameX=$sDocumenttypeNameX, fkiFolderID=$fkiFolderID, fkiRejectedoffertopurchaseID=$fkiRejectedoffertopurchaseID, fkiDisclosureID=$fkiDisclosureID, fkiReconciliationID=$fkiReconciliationID, fkiEzsigndocumentIDReference=$fkiEzsigndocumentIDReference, eAttachmentDocumenttype=$eAttachmentDocumenttype, sAttachmentName=$sAttachmentName, sAttachmentCategory=$sAttachmentCategory, eAttachmentPrivacy=$eAttachmentPrivacy, fkiUserIDSpecific=$fkiUserIDSpecific, eAttachmentType=$eAttachmentType, iAttachmentSize=$iAttachmentSize, iAttachmentEDMmoduleflag=$iAttachmentEDMmoduleflag, sAttachmentMD5=$sAttachmentMD5, bAttachmentDeleted=$bAttachmentDeleted, bAttachmentValid=$bAttachmentValid, eAttachmentVerified=$eAttachmentVerified, tAttachmentRejectioncomment=$tAttachmentRejectioncomment, fkiUserIDOwner=$fkiUserIDOwner, objAudit=$objAudit]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -1033,10 +1045,15 @@ class AttachmentResponseCompound {
     } else {
       json[r'fkiTemplateID'] = null;
     }
-    if (this.fkiInscriptionchecklistID != null) {
-      json[r'fkiInscriptionchecklistID'] = this.fkiInscriptionchecklistID;
+    if (this.fkiDocumenttypechecklistID != null) {
+      json[r'fkiDocumenttypechecklistID'] = this.fkiDocumenttypechecklistID;
     } else {
-      json[r'fkiInscriptionchecklistID'] = null;
+      json[r'fkiDocumenttypechecklistID'] = null;
+    }
+    if (this.sDocumenttypeNameX != null) {
+      json[r'sDocumenttypeNameX'] = this.sDocumenttypeNameX;
+    } else {
+      json[r'sDocumenttypeNameX'] = null;
     }
     if (this.fkiFolderID != null) {
       json[r'fkiFolderID'] = this.fkiFolderID;
@@ -1179,7 +1196,8 @@ class AttachmentResponseCompound {
         fkiSupplierID: mapValueOfType<int>(json, r'fkiSupplierID'),
         fkiTranqcontractID: mapValueOfType<int>(json, r'fkiTranqcontractID'),
         fkiTemplateID: mapValueOfType<int>(json, r'fkiTemplateID'),
-        fkiInscriptionchecklistID: mapValueOfType<int>(json, r'fkiInscriptionchecklistID'),
+        fkiDocumenttypechecklistID: mapValueOfType<int>(json, r'fkiDocumenttypechecklistID'),
+        sDocumenttypeNameX: mapValueOfType<String>(json, r'sDocumenttypeNameX'),
         fkiFolderID: mapValueOfType<int>(json, r'fkiFolderID'),
         fkiRejectedoffertopurchaseID: mapValueOfType<int>(json, r'fkiRejectedoffertopurchaseID'),
         fkiDisclosureID: mapValueOfType<int>(json, r'fkiDisclosureID'),

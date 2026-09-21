@@ -344,6 +344,98 @@ class ObjectDisclosureApi {
     return null;
   }
 
+  /// Retrieve Disclosure list
+  ///
+  /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eDisclosureInteresttype | Direct<br>Indirect |
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [String] eOrderBy:
+  ///   Specify how you want the results to be sorted
+  ///
+  /// * [int] iRowMax:
+  ///
+  /// * [int] iRowOffset:
+  ///
+  /// * [HeaderAcceptLanguage] acceptLanguage:
+  ///
+  /// * [String] sFilter:
+  Future<Response> disclosureGetListV1WithHttpInfo({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/disclosure/getList';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (eOrderBy != null) {
+      queryParams.addAll(_queryParams('', 'eOrderBy', eOrderBy));
+    }
+    if (iRowMax != null) {
+      queryParams.addAll(_queryParams('', 'iRowMax', iRowMax));
+    }
+    if (iRowOffset != null) {
+      queryParams.addAll(_queryParams('', 'iRowOffset', iRowOffset));
+    }
+    if (sFilter != null) {
+      queryParams.addAll(_queryParams('', 'sFilter', sFilter));
+    }
+
+    if (acceptLanguage != null) {
+      headerParams[r'Accept-Language'] = parameterToString(acceptLanguage);
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Retrieve Disclosure list
+  ///
+  /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eDisclosureInteresttype | Direct<br>Indirect |
+  ///
+  /// Parameters:
+  ///
+  /// * [String] eOrderBy:
+  ///   Specify how you want the results to be sorted
+  ///
+  /// * [int] iRowMax:
+  ///
+  /// * [int] iRowOffset:
+  ///
+  /// * [HeaderAcceptLanguage] acceptLanguage:
+  ///
+  /// * [String] sFilter:
+  Future<DisclosureGetListV1Response?> disclosureGetListV1({ String? eOrderBy, int? iRowMax, int? iRowOffset, HeaderAcceptLanguage? acceptLanguage, String? sFilter, Future<void>? abortTrigger, }) async {
+    final response = await disclosureGetListV1WithHttpInfo(eOrderBy: eOrderBy, iRowMax: iRowMax, iRowOffset: iRowOffset, acceptLanguage: acceptLanguage, sFilter: sFilter, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'DisclosureGetListV1Response',) as DisclosureGetListV1Response;
+    
+    }
+    return null;
+  }
+
   /// Import attachments into the Disclosure
   ///
   /// Note: This method returns the HTTP [Response].

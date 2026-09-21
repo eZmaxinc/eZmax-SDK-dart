@@ -15,6 +15,7 @@ class AttachmentlogResponseCompound {
   AttachmentlogResponseCompound({
     required this.fkiAttachmentID,
     required this.fkiUserID,
+    required this.objUser,
     required this.dtAttachmentlogDatetime,
     required this.eAttachmentlogType,
     this.sAttachmentlogDetail,
@@ -29,6 +30,8 @@ class AttachmentlogResponseCompound {
   ///
   /// Minimum value: 0
   int fkiUserID;
+
+  CustomUserNameResponse objUser;
 
   /// The created date
   String dtAttachmentlogDatetime;
@@ -48,6 +51,7 @@ class AttachmentlogResponseCompound {
   bool operator ==(Object other) => identical(this, other) || other is AttachmentlogResponseCompound &&
     other.fkiAttachmentID == fkiAttachmentID &&
     other.fkiUserID == fkiUserID &&
+    other.objUser == objUser &&
     other.dtAttachmentlogDatetime == dtAttachmentlogDatetime &&
     other.eAttachmentlogType == eAttachmentlogType &&
     other.sAttachmentlogDetail == sAttachmentlogDetail;
@@ -57,17 +61,19 @@ class AttachmentlogResponseCompound {
     // ignore: unnecessary_parenthesis
     (fkiAttachmentID.hashCode) +
     (fkiUserID.hashCode) +
+    (objUser.hashCode) +
     (dtAttachmentlogDatetime.hashCode) +
     (eAttachmentlogType.hashCode) +
     (sAttachmentlogDetail == null ? 0 : sAttachmentlogDetail!.hashCode);
 
   @override
-  String toString() => 'AttachmentlogResponseCompound[fkiAttachmentID=$fkiAttachmentID, fkiUserID=$fkiUserID, dtAttachmentlogDatetime=$dtAttachmentlogDatetime, eAttachmentlogType=$eAttachmentlogType, sAttachmentlogDetail=$sAttachmentlogDetail]';
+  String toString() => 'AttachmentlogResponseCompound[fkiAttachmentID=$fkiAttachmentID, fkiUserID=$fkiUserID, objUser=$objUser, dtAttachmentlogDatetime=$dtAttachmentlogDatetime, eAttachmentlogType=$eAttachmentlogType, sAttachmentlogDetail=$sAttachmentlogDetail]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'fkiAttachmentID'] = this.fkiAttachmentID;
       json[r'fkiUserID'] = this.fkiUserID;
+      json[r'objUser'] = this.objUser;
       json[r'dtAttachmentlogDatetime'] = this.dtAttachmentlogDatetime;
       json[r'eAttachmentlogType'] = this.eAttachmentlogType;
     if (this.sAttachmentlogDetail != null) {
@@ -93,6 +99,8 @@ class AttachmentlogResponseCompound {
         assert(json[r'fkiAttachmentID'] != null, 'Required key "AttachmentlogResponseCompound[fkiAttachmentID]" has a null value in JSON.');
         assert(json.containsKey(r'fkiUserID'), 'Required key "AttachmentlogResponseCompound[fkiUserID]" is missing from JSON.');
         assert(json[r'fkiUserID'] != null, 'Required key "AttachmentlogResponseCompound[fkiUserID]" has a null value in JSON.');
+        assert(json.containsKey(r'objUser'), 'Required key "AttachmentlogResponseCompound[objUser]" is missing from JSON.');
+        assert(json[r'objUser'] != null, 'Required key "AttachmentlogResponseCompound[objUser]" has a null value in JSON.');
         assert(json.containsKey(r'dtAttachmentlogDatetime'), 'Required key "AttachmentlogResponseCompound[dtAttachmentlogDatetime]" is missing from JSON.');
         assert(json[r'dtAttachmentlogDatetime'] != null, 'Required key "AttachmentlogResponseCompound[dtAttachmentlogDatetime]" has a null value in JSON.');
         assert(json.containsKey(r'eAttachmentlogType'), 'Required key "AttachmentlogResponseCompound[eAttachmentlogType]" is missing from JSON.');
@@ -103,6 +111,7 @@ class AttachmentlogResponseCompound {
       return AttachmentlogResponseCompound(
         fkiAttachmentID: mapValueOfType<int>(json, r'fkiAttachmentID')!,
         fkiUserID: mapValueOfType<int>(json, r'fkiUserID')!,
+        objUser: CustomUserNameResponse.fromJson(json[r'objUser'])!,
         dtAttachmentlogDatetime: mapValueOfType<String>(json, r'dtAttachmentlogDatetime')!,
         eAttachmentlogType: FieldEAttachmentlogType.fromJson(json[r'eAttachmentlogType'])!,
         sAttachmentlogDetail: mapValueOfType<String>(json, r'sAttachmentlogDetail'),
@@ -155,6 +164,7 @@ class AttachmentlogResponseCompound {
   static const requiredKeys = <String>{
     'fkiAttachmentID',
     'fkiUserID',
+    'objUser',
     'dtAttachmentlogDatetime',
     'eAttachmentlogType',
   };

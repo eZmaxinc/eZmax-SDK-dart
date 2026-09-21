@@ -15,6 +15,7 @@ enum FieldEAttachmentVerified {
   no._(r'No'),
   yes._(r'Yes'),
   rejected._(r'Rejected'),
+  pending._(r'Pending'),
   ;
 
   /// Instantiate a new enum with the provided value.
@@ -77,6 +78,7 @@ class FieldEAttachmentVerifiedTypeTransformer {
         case r'No': return FieldEAttachmentVerified.no;
         case r'Yes': return FieldEAttachmentVerified.yes;
         case r'Rejected': return FieldEAttachmentVerified.rejected;
+        case r'Pending': return FieldEAttachmentVerified.pending;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
