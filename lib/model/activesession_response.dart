@@ -17,7 +17,9 @@ class ActivesessionResponse {
     required this.eActivesessionOrigin,
     required this.eActivesessionWeekdaystart,
     required this.fkiLanguageID,
+    required this.fkiCompanyID,
     required this.sCompanyNameX,
+    required this.fkiDepartmentID,
     required this.sDepartmentNameX,
     required this.bActivesessionDebug,
     required this.bActivesessionIssuperadmin,
@@ -46,8 +48,19 @@ class ActivesessionResponse {
   /// Maximum value: 2
   int fkiLanguageID;
 
+  /// The unique ID of the Company
+  ///
+  /// Minimum value: 1
+  /// Maximum value: 255
+  int fkiCompanyID;
+
   /// The Name of the Company in the language of the requester
   String sCompanyNameX;
+
+  /// The unique ID of the Department
+  ///
+  /// Minimum value: 0
+  int fkiDepartmentID;
 
   /// The Name of the Department in the language of the requester
   String sDepartmentNameX;
@@ -146,7 +159,9 @@ class ActivesessionResponse {
     other.eActivesessionOrigin == eActivesessionOrigin &&
     other.eActivesessionWeekdaystart == eActivesessionWeekdaystart &&
     other.fkiLanguageID == fkiLanguageID &&
+    other.fkiCompanyID == fkiCompanyID &&
     other.sCompanyNameX == sCompanyNameX &&
+    other.fkiDepartmentID == fkiDepartmentID &&
     other.sDepartmentNameX == sDepartmentNameX &&
     other.bActivesessionDebug == bActivesessionDebug &&
     other.bActivesessionIssuperadmin == bActivesessionIssuperadmin &&
@@ -169,7 +184,9 @@ class ActivesessionResponse {
     (eActivesessionOrigin.hashCode) +
     (eActivesessionWeekdaystart.hashCode) +
     (fkiLanguageID.hashCode) +
+    (fkiCompanyID.hashCode) +
     (sCompanyNameX.hashCode) +
+    (fkiDepartmentID.hashCode) +
     (sDepartmentNameX.hashCode) +
     (bActivesessionDebug.hashCode) +
     (bActivesessionIssuperadmin.hashCode) +
@@ -186,7 +203,7 @@ class ActivesessionResponse {
     (fkiSignatureID == null ? 0 : fkiSignatureID!.hashCode);
 
   @override
-  String toString() => 'ActivesessionResponse[eActivesessionUsertype=$eActivesessionUsertype, eActivesessionOrigin=$eActivesessionOrigin, eActivesessionWeekdaystart=$eActivesessionWeekdaystart, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, bActivesessionDebug=$bActivesessionDebug, bActivesessionIssuperadmin=$bActivesessionIssuperadmin, bActivesessionAttachment=$bActivesessionAttachment, bActivesessionCanafe=$bActivesessionCanafe, bActivesessionFinancial=$bActivesessionFinancial, bActivesessionRealestatecompleted=$bActivesessionRealestatecompleted, eActivesessionEzsign=$eActivesessionEzsign, eActivesessionEzsignaccess=$eActivesessionEzsignaccess, eActivesessionEzsignprepaid=$eActivesessionEzsignprepaid, eActivesessionRealestateinprogress=$eActivesessionRealestateinprogress, pksCustomerCode=$pksCustomerCode, fkiSystemconfigurationtypeID=$fkiSystemconfigurationtypeID, fkiSignatureID=$fkiSignatureID]';
+  String toString() => 'ActivesessionResponse[eActivesessionUsertype=$eActivesessionUsertype, eActivesessionOrigin=$eActivesessionOrigin, eActivesessionWeekdaystart=$eActivesessionWeekdaystart, fkiLanguageID=$fkiLanguageID, fkiCompanyID=$fkiCompanyID, sCompanyNameX=$sCompanyNameX, fkiDepartmentID=$fkiDepartmentID, sDepartmentNameX=$sDepartmentNameX, bActivesessionDebug=$bActivesessionDebug, bActivesessionIssuperadmin=$bActivesessionIssuperadmin, bActivesessionAttachment=$bActivesessionAttachment, bActivesessionCanafe=$bActivesessionCanafe, bActivesessionFinancial=$bActivesessionFinancial, bActivesessionRealestatecompleted=$bActivesessionRealestatecompleted, eActivesessionEzsign=$eActivesessionEzsign, eActivesessionEzsignaccess=$eActivesessionEzsignaccess, eActivesessionEzsignprepaid=$eActivesessionEzsignprepaid, eActivesessionRealestateinprogress=$eActivesessionRealestateinprogress, pksCustomerCode=$pksCustomerCode, fkiSystemconfigurationtypeID=$fkiSystemconfigurationtypeID, fkiSignatureID=$fkiSignatureID]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -194,7 +211,9 @@ class ActivesessionResponse {
       json[r'eActivesessionOrigin'] = this.eActivesessionOrigin;
       json[r'eActivesessionWeekdaystart'] = this.eActivesessionWeekdaystart;
       json[r'fkiLanguageID'] = this.fkiLanguageID;
+      json[r'fkiCompanyID'] = this.fkiCompanyID;
       json[r'sCompanyNameX'] = this.sCompanyNameX;
+      json[r'fkiDepartmentID'] = this.fkiDepartmentID;
       json[r'sDepartmentNameX'] = this.sDepartmentNameX;
       json[r'bActivesessionDebug'] = this.bActivesessionDebug;
       json[r'bActivesessionIssuperadmin'] = this.bActivesessionIssuperadmin;
@@ -263,8 +282,12 @@ class ActivesessionResponse {
         assert(json[r'eActivesessionWeekdaystart'] != null, 'Required key "ActivesessionResponse[eActivesessionWeekdaystart]" has a null value in JSON.');
         assert(json.containsKey(r'fkiLanguageID'), 'Required key "ActivesessionResponse[fkiLanguageID]" is missing from JSON.');
         assert(json[r'fkiLanguageID'] != null, 'Required key "ActivesessionResponse[fkiLanguageID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiCompanyID'), 'Required key "ActivesessionResponse[fkiCompanyID]" is missing from JSON.');
+        assert(json[r'fkiCompanyID'] != null, 'Required key "ActivesessionResponse[fkiCompanyID]" has a null value in JSON.');
         assert(json.containsKey(r'sCompanyNameX'), 'Required key "ActivesessionResponse[sCompanyNameX]" is missing from JSON.');
         assert(json[r'sCompanyNameX'] != null, 'Required key "ActivesessionResponse[sCompanyNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiDepartmentID'), 'Required key "ActivesessionResponse[fkiDepartmentID]" is missing from JSON.');
+        assert(json[r'fkiDepartmentID'] != null, 'Required key "ActivesessionResponse[fkiDepartmentID]" has a null value in JSON.');
         assert(json.containsKey(r'sDepartmentNameX'), 'Required key "ActivesessionResponse[sDepartmentNameX]" is missing from JSON.');
         assert(json[r'sDepartmentNameX'] != null, 'Required key "ActivesessionResponse[sDepartmentNameX]" has a null value in JSON.');
         assert(json.containsKey(r'bActivesessionDebug'), 'Required key "ActivesessionResponse[bActivesessionDebug]" is missing from JSON.');
@@ -285,7 +308,9 @@ class ActivesessionResponse {
         eActivesessionOrigin: FieldEActivesessionOrigin.fromJson(json[r'eActivesessionOrigin'])!,
         eActivesessionWeekdaystart: FieldEActivesessionWeekdaystart.fromJson(json[r'eActivesessionWeekdaystart'])!,
         fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID')!,
+        fkiCompanyID: mapValueOfType<int>(json, r'fkiCompanyID')!,
         sCompanyNameX: mapValueOfType<String>(json, r'sCompanyNameX')!,
+        fkiDepartmentID: mapValueOfType<int>(json, r'fkiDepartmentID')!,
         sDepartmentNameX: mapValueOfType<String>(json, r'sDepartmentNameX')!,
         bActivesessionDebug: mapValueOfType<bool>(json, r'bActivesessionDebug')!,
         bActivesessionIssuperadmin: mapValueOfType<bool>(json, r'bActivesessionIssuperadmin')!,
@@ -351,7 +376,9 @@ class ActivesessionResponse {
     'eActivesessionOrigin',
     'eActivesessionWeekdaystart',
     'fkiLanguageID',
+    'fkiCompanyID',
     'sCompanyNameX',
+    'fkiDepartmentID',
     'sDepartmentNameX',
     'bActivesessionDebug',
     'bActivesessionIssuperadmin',

@@ -15,6 +15,7 @@ Method | HTTP request | Description
 [**electronicfundstransferGetCommunicationListV1**](ObjectElectronicfundstransferApi.md#electronicfundstransfergetcommunicationlistv1) | **GET** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationList | Retrieve Communication list
 [**electronicfundstransferGetCommunicationrecipientsV1**](ObjectElectronicfundstransferApi.md#electronicfundstransfergetcommunicationrecipientsv1) | **GET** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationrecipients | Retrieve Electronicfundstransfer's Communicationrecipient
 [**electronicfundstransferGetCommunicationsendersV1**](ObjectElectronicfundstransferApi.md#electronicfundstransfergetcommunicationsendersv1) | **GET** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationsenders | Retrieve Electronicfundstransfer's Communicationsender
+[**electronicfundstransferGetListV1**](ObjectElectronicfundstransferApi.md#electronicfundstransfergetlistv1) | **GET** /1/object/electronicfundstransfer/getList | Retrieve Electronicfundstransfer list
 [**electronicfundstransferImportIntoEDMV1**](ObjectElectronicfundstransferApi.md#electronicfundstransferimportintoedmv1) | **POST** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/importIntoEDM | Import attachments into the Electronicfundstransfer
 
 
@@ -295,6 +296,61 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **electronicfundstransferGetListV1**
+> ElectronicfundstransferGetListV1Response electronicfundstransferGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+
+Retrieve Electronicfundstransfer list
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectElectronicfundstransferApi();
+final eOrderBy = eOrderBy_example; // String | Specify how you want the results to be sorted
+final iRowMax = 56; // int | 
+final iRowOffset = 56; // int | 
+final acceptLanguage = ; // HeaderAcceptLanguage | 
+final sFilter = sFilter_example; // String | 
+
+try {
+    final result = api_instance.electronicfundstransferGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectElectronicfundstransferApi->electronicfundstransferGetListV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] 
+ **iRowMax** | **int**|  | [optional] 
+ **iRowOffset** | **int**|  | [optional] [default to 0]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] 
+ **sFilter** | **String**|  | [optional] 
+
+### Return type
+
+[**ElectronicfundstransferGetListV1Response**](ElectronicfundstransferGetListV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

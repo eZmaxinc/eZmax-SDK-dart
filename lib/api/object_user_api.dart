@@ -386,11 +386,14 @@ class ObjectUserApi {
   /// * [String] eFilterActive:
   ///   Specify which results we want to display.
   ///
+  /// * [String] fkiAttachmentID:
+  ///   Specify for which fkiAttachmentID we want to find users for. Only used when sSelector is AttachmentSpecificUser.
+  ///
   /// * [String] sQuery:
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<Response> userGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
+  Future<Response> userGetAutocompleteV2WithHttpInfo(String sSelector, { String? eFilterActive, String? fkiAttachmentID, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/2/object/user/getAutocomplete/{sSelector}'
       .replaceAll('{sSelector}', sSelector);
@@ -404,6 +407,9 @@ class ObjectUserApi {
 
     if (eFilterActive != null) {
       queryParams.addAll(_queryParams('', 'eFilterActive', eFilterActive));
+    }
+    if (fkiAttachmentID != null) {
+      queryParams.addAll(_queryParams('', 'fkiAttachmentID', fkiAttachmentID));
     }
     if (sQuery != null) {
       queryParams.addAll(_queryParams('', 'sQuery', sQuery));
@@ -440,12 +446,15 @@ class ObjectUserApi {
   /// * [String] eFilterActive:
   ///   Specify which results we want to display.
   ///
+  /// * [String] fkiAttachmentID:
+  ///   Specify for which fkiAttachmentID we want to find users for. Only used when sSelector is AttachmentSpecificUser.
+  ///
   /// * [String] sQuery:
   ///   Allow to filter the returned results
   ///
   /// * [HeaderAcceptLanguage] acceptLanguage:
-  Future<UserGetAutocompleteV2Response?> userGetAutocompleteV2(String sSelector, { String? eFilterActive, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
-    final response = await userGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive: eFilterActive, sQuery: sQuery, acceptLanguage: acceptLanguage, abortTrigger: abortTrigger,);
+  Future<UserGetAutocompleteV2Response?> userGetAutocompleteV2(String sSelector, { String? eFilterActive, String? fkiAttachmentID, String? sQuery, HeaderAcceptLanguage? acceptLanguage, Future<void>? abortTrigger, }) async {
+    final response = await userGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive: eFilterActive, fkiAttachmentID: fkiAttachmentID, sQuery: sQuery, acceptLanguage: acceptLanguage, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

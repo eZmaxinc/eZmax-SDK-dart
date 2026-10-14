@@ -128,6 +128,222 @@ class ObjectPaymentpreparationApi {
     return null;
   }
 
+  /// Retrieve Communication count
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiPaymentpreparationID (required):
+  Future<Response> paymentpreparationGetCommunicationCountV1WithHttpInfo(int pkiPaymentpreparationID, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/paymentpreparation/{pkiPaymentpreparationID}/getCommunicationCount'
+      .replaceAll('{pkiPaymentpreparationID}', pkiPaymentpreparationID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Retrieve Communication count
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiPaymentpreparationID (required):
+  Future<PaymentpreparationGetCommunicationCountV1Response?> paymentpreparationGetCommunicationCountV1(int pkiPaymentpreparationID, { Future<void>? abortTrigger, }) async {
+    final response = await paymentpreparationGetCommunicationCountV1WithHttpInfo(pkiPaymentpreparationID, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'PaymentpreparationGetCommunicationCountV1Response',) as PaymentpreparationGetCommunicationCountV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve Communication list
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiPaymentpreparationID (required):
+  Future<Response> paymentpreparationGetCommunicationListV1WithHttpInfo(int pkiPaymentpreparationID, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/paymentpreparation/{pkiPaymentpreparationID}/getCommunicationList'
+      .replaceAll('{pkiPaymentpreparationID}', pkiPaymentpreparationID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Retrieve Communication list
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiPaymentpreparationID (required):
+  Future<PaymentpreparationGetCommunicationListV1Response?> paymentpreparationGetCommunicationListV1(int pkiPaymentpreparationID, { Future<void>? abortTrigger, }) async {
+    final response = await paymentpreparationGetCommunicationListV1WithHttpInfo(pkiPaymentpreparationID, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'PaymentpreparationGetCommunicationListV1Response',) as PaymentpreparationGetCommunicationListV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve Communication recipients
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiPaymentpreparationID (required):
+  Future<Response> paymentpreparationGetCommunicationrecipientsV1WithHttpInfo(int pkiPaymentpreparationID, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/paymentpreparation/{pkiPaymentpreparationID}/getCommunicationrecipients'
+      .replaceAll('{pkiPaymentpreparationID}', pkiPaymentpreparationID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Retrieve Communication recipients
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiPaymentpreparationID (required):
+  Future<PaymentpreparationGetCommunicationrecipientsV1Response?> paymentpreparationGetCommunicationrecipientsV1(int pkiPaymentpreparationID, { Future<void>? abortTrigger, }) async {
+    final response = await paymentpreparationGetCommunicationrecipientsV1WithHttpInfo(pkiPaymentpreparationID, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'PaymentpreparationGetCommunicationrecipientsV1Response',) as PaymentpreparationGetCommunicationrecipientsV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Retrieve Communication senders
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiPaymentpreparationID (required):
+  Future<Response> paymentpreparationGetCommunicationsendersV1WithHttpInfo(int pkiPaymentpreparationID, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/paymentpreparation/{pkiPaymentpreparationID}/getCommunicationsenders'
+      .replaceAll('{pkiPaymentpreparationID}', pkiPaymentpreparationID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Retrieve Communication senders
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiPaymentpreparationID (required):
+  Future<PaymentpreparationGetCommunicationsendersV1Response?> paymentpreparationGetCommunicationsendersV1(int pkiPaymentpreparationID, { Future<void>? abortTrigger, }) async {
+    final response = await paymentpreparationGetCommunicationsendersV1WithHttpInfo(pkiPaymentpreparationID, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'PaymentpreparationGetCommunicationsendersV1Response',) as PaymentpreparationGetCommunicationsendersV1Response;
+    
+    }
+    return null;
+  }
+
   /// Import attachments into the Paymentpreparation
   ///
   /// Note: This method returns the HTTP [Response].

@@ -11,6 +11,10 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**salaryBatchDownloadV1**](ObjectSalaryApi.md#salarybatchdownloadv1) | **POST** /1/object/salary/{pkiSalaryID}/batchDownload | Download multiples attachments from a Reconciliation
 [**salaryGetAttachmentsV1**](ObjectSalaryApi.md#salarygetattachmentsv1) | **GET** /1/object/salary/{pkiSalaryID}/getAttachments | Retrieve Salary's attachments
+[**salaryGetCommunicationCountV1**](ObjectSalaryApi.md#salarygetcommunicationcountv1) | **GET** /1/object/salary/{pkiSalaryID}/getCommunicationCount | Retrieve Communication count
+[**salaryGetCommunicationListV1**](ObjectSalaryApi.md#salarygetcommunicationlistv1) | **GET** /1/object/salary/{pkiSalaryID}/getCommunicationList | Retrieve Communication list
+[**salaryGetCommunicationrecipientsV1**](ObjectSalaryApi.md#salarygetcommunicationrecipientsv1) | **GET** /1/object/salary/{pkiSalaryID}/getCommunicationrecipients | Retrieve Communication recipients
+[**salaryGetCommunicationsendersV1**](ObjectSalaryApi.md#salarygetcommunicationsendersv1) | **GET** /1/object/salary/{pkiSalaryID}/getCommunicationsenders | Retrieve Communication senders
 [**salaryGetListV1**](ObjectSalaryApi.md#salarygetlistv1) | **GET** /1/object/salary/getList | Retrieve Salary list
 [**salaryImportIntoEDMV1**](ObjectSalaryApi.md#salaryimportintoedmv1) | **POST** /1/object/salary/{pkiSalaryID}/importIntoEDM | Import attachments into the Salary
 
@@ -95,6 +99,186 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SalaryGetAttachmentsV1Response**](SalaryGetAttachmentsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **salaryGetCommunicationCountV1**
+> SalaryGetCommunicationCountV1Response salaryGetCommunicationCountV1(pkiSalaryID)
+
+Retrieve Communication count
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectSalaryApi();
+final pkiSalaryID = 56; // int | 
+
+try {
+    final result = api_instance.salaryGetCommunicationCountV1(pkiSalaryID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectSalaryApi->salaryGetCommunicationCountV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiSalaryID** | **int**|  | 
+
+### Return type
+
+[**SalaryGetCommunicationCountV1Response**](SalaryGetCommunicationCountV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **salaryGetCommunicationListV1**
+> SalaryGetCommunicationListV1Response salaryGetCommunicationListV1(pkiSalaryID)
+
+Retrieve Communication list
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectSalaryApi();
+final pkiSalaryID = 56; // int | 
+
+try {
+    final result = api_instance.salaryGetCommunicationListV1(pkiSalaryID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectSalaryApi->salaryGetCommunicationListV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiSalaryID** | **int**|  | 
+
+### Return type
+
+[**SalaryGetCommunicationListV1Response**](SalaryGetCommunicationListV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **salaryGetCommunicationrecipientsV1**
+> SalaryGetCommunicationrecipientsV1Response salaryGetCommunicationrecipientsV1(pkiSalaryID)
+
+Retrieve Communication recipients
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectSalaryApi();
+final pkiSalaryID = 56; // int | 
+
+try {
+    final result = api_instance.salaryGetCommunicationrecipientsV1(pkiSalaryID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectSalaryApi->salaryGetCommunicationrecipientsV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiSalaryID** | **int**|  | 
+
+### Return type
+
+[**SalaryGetCommunicationrecipientsV1Response**](SalaryGetCommunicationrecipientsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **salaryGetCommunicationsendersV1**
+> SalaryGetCommunicationsendersV1Response salaryGetCommunicationsendersV1(pkiSalaryID)
+
+Retrieve Communication senders
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectSalaryApi();
+final pkiSalaryID = 56; // int | 
+
+try {
+    final result = api_instance.salaryGetCommunicationsendersV1(pkiSalaryID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectSalaryApi->salaryGetCommunicationsendersV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiSalaryID** | **int**|  | 
+
+### Return type
+
+[**SalaryGetCommunicationsendersV1Response**](SalaryGetCommunicationsendersV1Response.md)
 
 ### Authorization
 

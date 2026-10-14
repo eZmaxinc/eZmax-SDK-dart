@@ -11,6 +11,10 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**purchaseBatchDownloadV1**](ObjectPurchaseApi.md#purchasebatchdownloadv1) | **POST** /1/object/purchase/{pkiPurchaseID}/batchDownload | Download multiples attachments from a Purchase
 [**purchaseGetAttachmentsV1**](ObjectPurchaseApi.md#purchasegetattachmentsv1) | **GET** /1/object/purchase/{pkiPurchaseID}/getAttachments | Retrieve Purchase's attachments
+[**purchaseGetCommunicationCountV1**](ObjectPurchaseApi.md#purchasegetcommunicationcountv1) | **GET** /1/object/purchase/{pkiPurchaseID}/getCommunicationCount | Retrieve Communication count
+[**purchaseGetCommunicationListV1**](ObjectPurchaseApi.md#purchasegetcommunicationlistv1) | **GET** /1/object/purchase/{pkiPurchaseID}/getCommunicationList | Retrieve Communication list
+[**purchaseGetCommunicationrecipientsV1**](ObjectPurchaseApi.md#purchasegetcommunicationrecipientsv1) | **GET** /1/object/purchase/{pkiPurchaseID}/getCommunicationrecipients | Retrieve Communication recipients
+[**purchaseGetCommunicationsendersV1**](ObjectPurchaseApi.md#purchasegetcommunicationsendersv1) | **GET** /1/object/purchase/{pkiPurchaseID}/getCommunicationsenders | Retrieve Communication senders
 [**purchaseGetListV1**](ObjectPurchaseApi.md#purchasegetlistv1) | **GET** /1/object/purchase/getList | Retrieve Purchase list
 [**purchaseImportIntoEDMV1**](ObjectPurchaseApi.md#purchaseimportintoedmv1) | **POST** /1/object/purchase/{pkiPurchaseID}/importIntoEDM | Import attachments into the Purchase
 
@@ -95,6 +99,186 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PurchaseGetAttachmentsV1Response**](PurchaseGetAttachmentsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **purchaseGetCommunicationCountV1**
+> PurchaseGetCommunicationCountV1Response purchaseGetCommunicationCountV1(pkiPurchaseID)
+
+Retrieve Communication count
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectPurchaseApi();
+final pkiPurchaseID = 56; // int | 
+
+try {
+    final result = api_instance.purchaseGetCommunicationCountV1(pkiPurchaseID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectPurchaseApi->purchaseGetCommunicationCountV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiPurchaseID** | **int**|  | 
+
+### Return type
+
+[**PurchaseGetCommunicationCountV1Response**](PurchaseGetCommunicationCountV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **purchaseGetCommunicationListV1**
+> PurchaseGetCommunicationListV1Response purchaseGetCommunicationListV1(pkiPurchaseID)
+
+Retrieve Communication list
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectPurchaseApi();
+final pkiPurchaseID = 56; // int | 
+
+try {
+    final result = api_instance.purchaseGetCommunicationListV1(pkiPurchaseID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectPurchaseApi->purchaseGetCommunicationListV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiPurchaseID** | **int**|  | 
+
+### Return type
+
+[**PurchaseGetCommunicationListV1Response**](PurchaseGetCommunicationListV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **purchaseGetCommunicationrecipientsV1**
+> PurchaseGetCommunicationrecipientsV1Response purchaseGetCommunicationrecipientsV1(pkiPurchaseID)
+
+Retrieve Communication recipients
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectPurchaseApi();
+final pkiPurchaseID = 56; // int | 
+
+try {
+    final result = api_instance.purchaseGetCommunicationrecipientsV1(pkiPurchaseID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectPurchaseApi->purchaseGetCommunicationrecipientsV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiPurchaseID** | **int**|  | 
+
+### Return type
+
+[**PurchaseGetCommunicationrecipientsV1Response**](PurchaseGetCommunicationrecipientsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **purchaseGetCommunicationsendersV1**
+> PurchaseGetCommunicationsendersV1Response purchaseGetCommunicationsendersV1(pkiPurchaseID)
+
+Retrieve Communication senders
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectPurchaseApi();
+final pkiPurchaseID = 56; // int | 
+
+try {
+    final result = api_instance.purchaseGetCommunicationsendersV1(pkiPurchaseID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectPurchaseApi->purchaseGetCommunicationsendersV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiPurchaseID** | **int**|  | 
+
+### Return type
+
+[**PurchaseGetCommunicationsendersV1Response**](PurchaseGetCommunicationsendersV1Response.md)
 
 ### Authorization
 

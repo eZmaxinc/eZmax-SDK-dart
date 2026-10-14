@@ -13,26 +13,26 @@ part of openapi.api;
 class InvoiceImportIntoEDMV1ResponseMPayload {
   /// Returns a new [InvoiceImportIntoEDMV1ResponseMPayload] instance.
   InvoiceImportIntoEDMV1ResponseMPayload({
-    this.aPkiAttachmentID = const [],
+    this.aObjAttachment = const [],
   });
 
-  List<int> aPkiAttachmentID;
+  List<CustomAttachmentImportIntoEDMResponse> aObjAttachment;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is InvoiceImportIntoEDMV1ResponseMPayload &&
-    _deepEquality.equals(other.aPkiAttachmentID, aPkiAttachmentID);
+    _deepEquality.equals(other.aObjAttachment, aObjAttachment);
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (aPkiAttachmentID.hashCode);
+    (aObjAttachment.hashCode);
 
   @override
-  String toString() => 'InvoiceImportIntoEDMV1ResponseMPayload[aPkiAttachmentID=$aPkiAttachmentID]';
+  String toString() => 'InvoiceImportIntoEDMV1ResponseMPayload[aObjAttachment=$aObjAttachment]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'a_pkiAttachmentID'] = this.aPkiAttachmentID;
+      json[r'a_objAttachment'] = this.aObjAttachment;
     return json;
   }
 
@@ -47,15 +47,13 @@ class InvoiceImportIntoEDMV1ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        assert(json.containsKey(r'a_pkiAttachmentID'), 'Required key "InvoiceImportIntoEDMV1ResponseMPayload[a_pkiAttachmentID]" is missing from JSON.');
-        assert(json[r'a_pkiAttachmentID'] != null, 'Required key "InvoiceImportIntoEDMV1ResponseMPayload[a_pkiAttachmentID]" has a null value in JSON.');
+        assert(json.containsKey(r'a_objAttachment'), 'Required key "InvoiceImportIntoEDMV1ResponseMPayload[a_objAttachment]" is missing from JSON.');
+        assert(json[r'a_objAttachment'] != null, 'Required key "InvoiceImportIntoEDMV1ResponseMPayload[a_objAttachment]" has a null value in JSON.');
         return true;
       }());
 
       return InvoiceImportIntoEDMV1ResponseMPayload(
-        aPkiAttachmentID: json[r'a_pkiAttachmentID'] is Iterable
-            ? (json[r'a_pkiAttachmentID'] as Iterable).cast<int>().toList(growable: false)
-            : const [],
+        aObjAttachment: CustomAttachmentImportIntoEDMResponse.listFromJson(json[r'a_objAttachment']),
       );
     }
     return null;
@@ -103,7 +101,7 @@ class InvoiceImportIntoEDMV1ResponseMPayload {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'a_pkiAttachmentID',
+    'a_objAttachment',
   };
 }
 

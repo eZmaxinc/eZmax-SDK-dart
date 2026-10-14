@@ -53,7 +53,7 @@ class DiscussionmembershipRequest {
   /// The unique ID of the Usergroup
   ///
   /// Minimum value: 0
-  /// Maximum value: 255
+  /// Maximum value: 65535
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated

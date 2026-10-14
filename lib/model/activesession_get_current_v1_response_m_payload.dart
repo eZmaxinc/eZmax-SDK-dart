@@ -17,7 +17,9 @@ class ActivesessionGetCurrentV1ResponseMPayload {
     required this.eActivesessionOrigin,
     required this.eActivesessionWeekdaystart,
     required this.fkiLanguageID,
+    required this.fkiCompanyID,
     required this.sCompanyNameX,
+    required this.fkiDepartmentID,
     required this.sDepartmentNameX,
     required this.bActivesessionDebug,
     required this.bActivesessionIssuperadmin,
@@ -61,8 +63,19 @@ class ActivesessionGetCurrentV1ResponseMPayload {
   /// Maximum value: 2
   int fkiLanguageID;
 
+  /// The unique ID of the Company
+  ///
+  /// Minimum value: 1
+  /// Maximum value: 255
+  int fkiCompanyID;
+
   /// The Name of the Company in the language of the requester
   String sCompanyNameX;
+
+  /// The unique ID of the Department
+  ///
+  /// Minimum value: 0
+  int fkiDepartmentID;
 
   /// The Name of the Department in the language of the requester
   String sDepartmentNameX;
@@ -269,7 +282,9 @@ class ActivesessionGetCurrentV1ResponseMPayload {
     other.eActivesessionOrigin == eActivesessionOrigin &&
     other.eActivesessionWeekdaystart == eActivesessionWeekdaystart &&
     other.fkiLanguageID == fkiLanguageID &&
+    other.fkiCompanyID == fkiCompanyID &&
     other.sCompanyNameX == sCompanyNameX &&
+    other.fkiDepartmentID == fkiDepartmentID &&
     other.sDepartmentNameX == sDepartmentNameX &&
     other.bActivesessionDebug == bActivesessionDebug &&
     other.bActivesessionIssuperadmin == bActivesessionIssuperadmin &&
@@ -307,7 +322,9 @@ class ActivesessionGetCurrentV1ResponseMPayload {
     (eActivesessionOrigin.hashCode) +
     (eActivesessionWeekdaystart.hashCode) +
     (fkiLanguageID.hashCode) +
+    (fkiCompanyID.hashCode) +
     (sCompanyNameX.hashCode) +
+    (fkiDepartmentID.hashCode) +
     (sDepartmentNameX.hashCode) +
     (bActivesessionDebug.hashCode) +
     (bActivesessionIssuperadmin.hashCode) +
@@ -339,7 +356,7 @@ class ActivesessionGetCurrentV1ResponseMPayload {
     (bActivesessionMaillinglistrequest == null ? 0 : bActivesessionMaillinglistrequest!.hashCode);
 
   @override
-  String toString() => 'ActivesessionGetCurrentV1ResponseMPayload[eActivesessionUsertype=$eActivesessionUsertype, eActivesessionOrigin=$eActivesessionOrigin, eActivesessionWeekdaystart=$eActivesessionWeekdaystart, fkiLanguageID=$fkiLanguageID, sCompanyNameX=$sCompanyNameX, sDepartmentNameX=$sDepartmentNameX, bActivesessionDebug=$bActivesessionDebug, bActivesessionIssuperadmin=$bActivesessionIssuperadmin, bActivesessionAttachment=$bActivesessionAttachment, bActivesessionCanafe=$bActivesessionCanafe, bActivesessionFinancial=$bActivesessionFinancial, bActivesessionRealestatecompleted=$bActivesessionRealestatecompleted, eActivesessionEzsign=$eActivesessionEzsign, eActivesessionEzsignaccess=$eActivesessionEzsignaccess, eActivesessionEzsignprepaid=$eActivesessionEzsignprepaid, eActivesessionRealestateinprogress=$eActivesessionRealestateinprogress, pksCustomerCode=$pksCustomerCode, fkiSystemconfigurationtypeID=$fkiSystemconfigurationtypeID, fkiSignatureID=$fkiSignatureID, fkiEzsignuserID=$fkiEzsignuserID, bSystemconfigurationEzsignpaidbyoffice=$bSystemconfigurationEzsignpaidbyoffice, eSystemconfigurationEzsignofficeplan=$eSystemconfigurationEzsignofficeplan, eUserEzsignaccess=$eUserEzsignaccess, eUserEzsignprepaid=$eUserEzsignprepaid, bUserEzsigntrial=$bUserEzsigntrial, bUserEzsigntemplaterolegrouping=$bUserEzsigntemplaterolegrouping, dtUserEzsignprepaidexpiration=$dtUserEzsignprepaidexpiration, dtUserNpsrequest=$dtUserNpsrequest, aPkiPermissionID=$aPkiPermissionID, objUserReal=$objUserReal, objUserCloned=$objUserCloned, objApikey=$objApikey, aEModuleInternalname=$aEModuleInternalname, bActivesessionMaillinglistrequest=$bActivesessionMaillinglistrequest]';
+  String toString() => 'ActivesessionGetCurrentV1ResponseMPayload[eActivesessionUsertype=$eActivesessionUsertype, eActivesessionOrigin=$eActivesessionOrigin, eActivesessionWeekdaystart=$eActivesessionWeekdaystart, fkiLanguageID=$fkiLanguageID, fkiCompanyID=$fkiCompanyID, sCompanyNameX=$sCompanyNameX, fkiDepartmentID=$fkiDepartmentID, sDepartmentNameX=$sDepartmentNameX, bActivesessionDebug=$bActivesessionDebug, bActivesessionIssuperadmin=$bActivesessionIssuperadmin, bActivesessionAttachment=$bActivesessionAttachment, bActivesessionCanafe=$bActivesessionCanafe, bActivesessionFinancial=$bActivesessionFinancial, bActivesessionRealestatecompleted=$bActivesessionRealestatecompleted, eActivesessionEzsign=$eActivesessionEzsign, eActivesessionEzsignaccess=$eActivesessionEzsignaccess, eActivesessionEzsignprepaid=$eActivesessionEzsignprepaid, eActivesessionRealestateinprogress=$eActivesessionRealestateinprogress, pksCustomerCode=$pksCustomerCode, fkiSystemconfigurationtypeID=$fkiSystemconfigurationtypeID, fkiSignatureID=$fkiSignatureID, fkiEzsignuserID=$fkiEzsignuserID, bSystemconfigurationEzsignpaidbyoffice=$bSystemconfigurationEzsignpaidbyoffice, eSystemconfigurationEzsignofficeplan=$eSystemconfigurationEzsignofficeplan, eUserEzsignaccess=$eUserEzsignaccess, eUserEzsignprepaid=$eUserEzsignprepaid, bUserEzsigntrial=$bUserEzsigntrial, bUserEzsigntemplaterolegrouping=$bUserEzsigntemplaterolegrouping, dtUserEzsignprepaidexpiration=$dtUserEzsignprepaidexpiration, dtUserNpsrequest=$dtUserNpsrequest, aPkiPermissionID=$aPkiPermissionID, objUserReal=$objUserReal, objUserCloned=$objUserCloned, objApikey=$objApikey, aEModuleInternalname=$aEModuleInternalname, bActivesessionMaillinglistrequest=$bActivesessionMaillinglistrequest]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -347,7 +364,9 @@ class ActivesessionGetCurrentV1ResponseMPayload {
       json[r'eActivesessionOrigin'] = this.eActivesessionOrigin;
       json[r'eActivesessionWeekdaystart'] = this.eActivesessionWeekdaystart;
       json[r'fkiLanguageID'] = this.fkiLanguageID;
+      json[r'fkiCompanyID'] = this.fkiCompanyID;
       json[r'sCompanyNameX'] = this.sCompanyNameX;
+      json[r'fkiDepartmentID'] = this.fkiDepartmentID;
       json[r'sDepartmentNameX'] = this.sDepartmentNameX;
       json[r'bActivesessionDebug'] = this.bActivesessionDebug;
       json[r'bActivesessionIssuperadmin'] = this.bActivesessionIssuperadmin;
@@ -475,8 +494,12 @@ class ActivesessionGetCurrentV1ResponseMPayload {
         assert(json[r'eActivesessionWeekdaystart'] != null, 'Required key "ActivesessionGetCurrentV1ResponseMPayload[eActivesessionWeekdaystart]" has a null value in JSON.');
         assert(json.containsKey(r'fkiLanguageID'), 'Required key "ActivesessionGetCurrentV1ResponseMPayload[fkiLanguageID]" is missing from JSON.');
         assert(json[r'fkiLanguageID'] != null, 'Required key "ActivesessionGetCurrentV1ResponseMPayload[fkiLanguageID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiCompanyID'), 'Required key "ActivesessionGetCurrentV1ResponseMPayload[fkiCompanyID]" is missing from JSON.');
+        assert(json[r'fkiCompanyID'] != null, 'Required key "ActivesessionGetCurrentV1ResponseMPayload[fkiCompanyID]" has a null value in JSON.');
         assert(json.containsKey(r'sCompanyNameX'), 'Required key "ActivesessionGetCurrentV1ResponseMPayload[sCompanyNameX]" is missing from JSON.');
         assert(json[r'sCompanyNameX'] != null, 'Required key "ActivesessionGetCurrentV1ResponseMPayload[sCompanyNameX]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiDepartmentID'), 'Required key "ActivesessionGetCurrentV1ResponseMPayload[fkiDepartmentID]" is missing from JSON.');
+        assert(json[r'fkiDepartmentID'] != null, 'Required key "ActivesessionGetCurrentV1ResponseMPayload[fkiDepartmentID]" has a null value in JSON.');
         assert(json.containsKey(r'sDepartmentNameX'), 'Required key "ActivesessionGetCurrentV1ResponseMPayload[sDepartmentNameX]" is missing from JSON.');
         assert(json[r'sDepartmentNameX'] != null, 'Required key "ActivesessionGetCurrentV1ResponseMPayload[sDepartmentNameX]" has a null value in JSON.');
         assert(json.containsKey(r'bActivesessionDebug'), 'Required key "ActivesessionGetCurrentV1ResponseMPayload[bActivesessionDebug]" is missing from JSON.');
@@ -505,7 +528,9 @@ class ActivesessionGetCurrentV1ResponseMPayload {
         eActivesessionOrigin: FieldEActivesessionOrigin.fromJson(json[r'eActivesessionOrigin'])!,
         eActivesessionWeekdaystart: FieldEActivesessionWeekdaystart.fromJson(json[r'eActivesessionWeekdaystart'])!,
         fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID')!,
+        fkiCompanyID: mapValueOfType<int>(json, r'fkiCompanyID')!,
         sCompanyNameX: mapValueOfType<String>(json, r'sCompanyNameX')!,
+        fkiDepartmentID: mapValueOfType<int>(json, r'fkiDepartmentID')!,
         sDepartmentNameX: mapValueOfType<String>(json, r'sDepartmentNameX')!,
         bActivesessionDebug: mapValueOfType<bool>(json, r'bActivesessionDebug')!,
         bActivesessionIssuperadmin: mapValueOfType<bool>(json, r'bActivesessionIssuperadmin')!,
@@ -590,7 +615,9 @@ class ActivesessionGetCurrentV1ResponseMPayload {
     'eActivesessionOrigin',
     'eActivesessionWeekdaystart',
     'fkiLanguageID',
+    'fkiCompanyID',
     'sCompanyNameX',
+    'fkiDepartmentID',
     'sDepartmentNameX',
     'bActivesessionDebug',
     'bActivesessionIssuperadmin',

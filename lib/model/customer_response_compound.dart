@@ -15,44 +15,44 @@ class CustomerResponseCompound {
   CustomerResponseCompound({
     required this.pkiCustomerID,
     required this.fkiCompanyID,
-    required this.fkiCustomergroupID,
+    this.fkiCustomergroupID,
     required this.sCustomerName,
     this.sCustomerNote,
     required this.fkiContactinformationsID,
     required this.fkiContactcontainerID,
-    required this.fkiImageID,
+    this.fkiImageID,
     required this.fkiGlaccountcontainerID,
     required this.fkiLanguageID,
     required this.fkiDepartmentID,
     required this.fkiPaymentmethodID,
-    required this.fkiElectronicfundstransferbankaccountID,
-    required this.fkiElectronicfundstransferbankaccountIDDirectdebit,
+    this.fkiElectronicfundstransferbankaccountID,
+    this.fkiElectronicfundstransferbankaccountIDDirectdebit,
     required this.fkiSendingmethodID,
     required this.fkiTaxassignmentID,
     required this.fkiAttendancestatusID,
-    required this.fkiAgentIDVariableexpensechargeto,
-    required this.fkiBrokerIDVariableexpensechargeto,
-    required this.fkiCustomerIDVariableexpensechargeto,
-    required this.fkiGlaccountcontainerIDVariableexpensechargeto,
-    required this.fkiAgentIDSupplychargechargeto,
-    required this.fkiBrokerIDSupplychargechargeto,
-    required this.fkiCustomerIDSupplychargechargeto,
-    required this.fkiGlaccountcontainerIDSupplychargechargeto,
-    required this.fkiInvoicealternatelogoID,
-    required this.fkiSynchronizationlinkserverID,
+    this.fkiAgentIDVariableexpensechargeto,
+    this.fkiBrokerIDVariableexpensechargeto,
+    this.fkiCustomerIDVariableexpensechargeto,
+    this.fkiGlaccountcontainerIDVariableexpensechargeto,
+    this.fkiAgentIDSupplychargechargeto,
+    this.fkiBrokerIDSupplychargechargeto,
+    this.fkiCustomerIDSupplychargechargeto,
+    this.fkiGlaccountcontainerIDSupplychargechargeto,
+    this.fkiInvoicealternatelogoID,
+    this.fkiSynchronizationlinkserverID,
     this.efkiUserID,
     this.efksCustomerCode,
     required this.sCustomerCode,
-    required this.dCustomerFulltimeequivalent,
+    this.dCustomerFulltimeequivalent,
     required this.iCustomerPhotocopiercode,
     required this.iCustomerLongdistancecode,
     required this.iCustomerTimewindowstart,
     required this.iCustomerTimewindowend,
     required this.dCustomerMinimumchargeableinterests,
-    required this.dtCustomerBirthdate,
+    this.dtCustomerBirthdate,
     required this.dtCustomerTransfer,
     required this.dtCustomerTransferappointment,
-    required this.dtCustomerTransfersurvey,
+    this.dtCustomerTransfersurvey,
     required this.bCustomerIsactive,
     required this.bCustomerVariableexpensefinanced,
     required this.bCustomerVariableexpensefinancedtaxes,
@@ -82,7 +82,13 @@ class CustomerResponseCompound {
   ///
   /// Minimum value: 0
   /// Maximum value: 255
-  int fkiCustomergroupID;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiCustomergroupID;
 
   /// The name of the Customer
   String sCustomerName;
@@ -109,7 +115,13 @@ class CustomerResponseCompound {
   int fkiContactcontainerID;
 
   /// The unique ID of the Image
-  int fkiImageID;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiImageID;
 
   /// The unique ID of the Glaccountcontainer
   ///
@@ -137,13 +149,25 @@ class CustomerResponseCompound {
   ///
   /// Minimum value: 0
   /// Maximum value: 65535
-  int fkiElectronicfundstransferbankaccountID;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiElectronicfundstransferbankaccountID;
 
   /// The unique ID of the Electronicfundstransferbankaccount
   ///
   /// Minimum value: 0
   /// Maximum value: 65535
-  int fkiElectronicfundstransferbankaccountIDDirectdebit;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiElectronicfundstransferbankaccountIDDirectdebit;
 
   /// The unique ID of the Sendingmethod
   ///
@@ -166,54 +190,114 @@ class CustomerResponseCompound {
   /// The unique ID of the Agent.
   ///
   /// Minimum value: 0
-  int fkiAgentIDVariableexpensechargeto;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiAgentIDVariableexpensechargeto;
 
   /// The unique ID of the Broker.
   ///
   /// Minimum value: 0
-  int fkiBrokerIDVariableexpensechargeto;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiBrokerIDVariableexpensechargeto;
 
   /// The unique ID of the Customer.
   ///
   /// Minimum value: 0
-  int fkiCustomerIDVariableexpensechargeto;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiCustomerIDVariableexpensechargeto;
 
   /// The unique ID of the Glaccountcontainer
   ///
   /// Minimum value: 0
-  int fkiGlaccountcontainerIDVariableexpensechargeto;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiGlaccountcontainerIDVariableexpensechargeto;
 
   /// The unique ID of the Agent.
   ///
   /// Minimum value: 0
-  int fkiAgentIDSupplychargechargeto;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiAgentIDSupplychargechargeto;
 
   /// The unique ID of the Broker.
   ///
   /// Minimum value: 0
-  int fkiBrokerIDSupplychargechargeto;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiBrokerIDSupplychargechargeto;
 
   /// The unique ID of the Customer.
   ///
   /// Minimum value: 0
-  int fkiCustomerIDSupplychargechargeto;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiCustomerIDSupplychargechargeto;
 
   /// The unique ID of the Glaccountcontainer
   ///
   /// Minimum value: 0
-  int fkiGlaccountcontainerIDSupplychargechargeto;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiGlaccountcontainerIDSupplychargechargeto;
 
   /// The unique ID of the Invoicealternatelogo
   ///
   /// Minimum value: 0
   /// Maximum value: 255
-  int fkiInvoicealternatelogoID;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiInvoicealternatelogoID;
 
   /// The unique ID of the Synchronizationlinkserver
   ///
   /// Minimum value: 0
   /// Maximum value: 255
-  int fkiSynchronizationlinkserverID;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiSynchronizationlinkserverID;
 
   /// The unique ID of the User
   ///
@@ -239,7 +323,13 @@ class CustomerResponseCompound {
   String sCustomerCode;
 
   /// The fulltimeequivalent of the Customer
-  String dCustomerFulltimeequivalent;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? dCustomerFulltimeequivalent;
 
   /// The photocopiercode of the Customer
   ///
@@ -269,7 +359,13 @@ class CustomerResponseCompound {
   String dCustomerMinimumchargeableinterests;
 
   /// The birthdate of the Customer
-  String dtCustomerBirthdate;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? dtCustomerBirthdate;
 
   /// The transfer of the Customer
   String dtCustomerTransfer;
@@ -278,7 +374,13 @@ class CustomerResponseCompound {
   String dtCustomerTransferappointment;
 
   /// The transfersurvey of the Customer
-  String dtCustomerTransfersurvey;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? dtCustomerTransfersurvey;
 
   /// Whether the customer is active or not
   bool bCustomerIsactive;
@@ -379,44 +481,44 @@ class CustomerResponseCompound {
     // ignore: unnecessary_parenthesis
     (pkiCustomerID.hashCode) +
     (fkiCompanyID.hashCode) +
-    (fkiCustomergroupID.hashCode) +
+    (fkiCustomergroupID == null ? 0 : fkiCustomergroupID!.hashCode) +
     (sCustomerName.hashCode) +
     (sCustomerNote == null ? 0 : sCustomerNote!.hashCode) +
     (fkiContactinformationsID.hashCode) +
     (fkiContactcontainerID.hashCode) +
-    (fkiImageID.hashCode) +
+    (fkiImageID == null ? 0 : fkiImageID!.hashCode) +
     (fkiGlaccountcontainerID.hashCode) +
     (fkiLanguageID.hashCode) +
     (fkiDepartmentID.hashCode) +
     (fkiPaymentmethodID.hashCode) +
-    (fkiElectronicfundstransferbankaccountID.hashCode) +
-    (fkiElectronicfundstransferbankaccountIDDirectdebit.hashCode) +
+    (fkiElectronicfundstransferbankaccountID == null ? 0 : fkiElectronicfundstransferbankaccountID!.hashCode) +
+    (fkiElectronicfundstransferbankaccountIDDirectdebit == null ? 0 : fkiElectronicfundstransferbankaccountIDDirectdebit!.hashCode) +
     (fkiSendingmethodID.hashCode) +
     (fkiTaxassignmentID.hashCode) +
     (fkiAttendancestatusID.hashCode) +
-    (fkiAgentIDVariableexpensechargeto.hashCode) +
-    (fkiBrokerIDVariableexpensechargeto.hashCode) +
-    (fkiCustomerIDVariableexpensechargeto.hashCode) +
-    (fkiGlaccountcontainerIDVariableexpensechargeto.hashCode) +
-    (fkiAgentIDSupplychargechargeto.hashCode) +
-    (fkiBrokerIDSupplychargechargeto.hashCode) +
-    (fkiCustomerIDSupplychargechargeto.hashCode) +
-    (fkiGlaccountcontainerIDSupplychargechargeto.hashCode) +
-    (fkiInvoicealternatelogoID.hashCode) +
-    (fkiSynchronizationlinkserverID.hashCode) +
+    (fkiAgentIDVariableexpensechargeto == null ? 0 : fkiAgentIDVariableexpensechargeto!.hashCode) +
+    (fkiBrokerIDVariableexpensechargeto == null ? 0 : fkiBrokerIDVariableexpensechargeto!.hashCode) +
+    (fkiCustomerIDVariableexpensechargeto == null ? 0 : fkiCustomerIDVariableexpensechargeto!.hashCode) +
+    (fkiGlaccountcontainerIDVariableexpensechargeto == null ? 0 : fkiGlaccountcontainerIDVariableexpensechargeto!.hashCode) +
+    (fkiAgentIDSupplychargechargeto == null ? 0 : fkiAgentIDSupplychargechargeto!.hashCode) +
+    (fkiBrokerIDSupplychargechargeto == null ? 0 : fkiBrokerIDSupplychargechargeto!.hashCode) +
+    (fkiCustomerIDSupplychargechargeto == null ? 0 : fkiCustomerIDSupplychargechargeto!.hashCode) +
+    (fkiGlaccountcontainerIDSupplychargechargeto == null ? 0 : fkiGlaccountcontainerIDSupplychargechargeto!.hashCode) +
+    (fkiInvoicealternatelogoID == null ? 0 : fkiInvoicealternatelogoID!.hashCode) +
+    (fkiSynchronizationlinkserverID == null ? 0 : fkiSynchronizationlinkserverID!.hashCode) +
     (efkiUserID == null ? 0 : efkiUserID!.hashCode) +
     (efksCustomerCode == null ? 0 : efksCustomerCode!.hashCode) +
     (sCustomerCode.hashCode) +
-    (dCustomerFulltimeequivalent.hashCode) +
+    (dCustomerFulltimeequivalent == null ? 0 : dCustomerFulltimeequivalent!.hashCode) +
     (iCustomerPhotocopiercode.hashCode) +
     (iCustomerLongdistancecode.hashCode) +
     (iCustomerTimewindowstart.hashCode) +
     (iCustomerTimewindowend.hashCode) +
     (dCustomerMinimumchargeableinterests.hashCode) +
-    (dtCustomerBirthdate.hashCode) +
+    (dtCustomerBirthdate == null ? 0 : dtCustomerBirthdate!.hashCode) +
     (dtCustomerTransfer.hashCode) +
     (dtCustomerTransferappointment.hashCode) +
-    (dtCustomerTransfersurvey.hashCode) +
+    (dtCustomerTransfersurvey == null ? 0 : dtCustomerTransfersurvey!.hashCode) +
     (bCustomerIsactive.hashCode) +
     (bCustomerVariableexpensefinanced.hashCode) +
     (bCustomerVariableexpensefinancedtaxes.hashCode) +
@@ -437,7 +539,11 @@ class CustomerResponseCompound {
     final json = <String, dynamic>{};
       json[r'pkiCustomerID'] = this.pkiCustomerID;
       json[r'fkiCompanyID'] = this.fkiCompanyID;
+    if (this.fkiCustomergroupID != null) {
       json[r'fkiCustomergroupID'] = this.fkiCustomergroupID;
+    } else {
+      json[r'fkiCustomergroupID'] = null;
+    }
       json[r'sCustomerName'] = this.sCustomerName;
     if (this.sCustomerNote != null) {
       json[r'sCustomerNote'] = this.sCustomerNote;
@@ -446,26 +552,78 @@ class CustomerResponseCompound {
     }
       json[r'fkiContactinformationsID'] = this.fkiContactinformationsID;
       json[r'fkiContactcontainerID'] = this.fkiContactcontainerID;
+    if (this.fkiImageID != null) {
       json[r'fkiImageID'] = this.fkiImageID;
+    } else {
+      json[r'fkiImageID'] = null;
+    }
       json[r'fkiGlaccountcontainerID'] = this.fkiGlaccountcontainerID;
       json[r'fkiLanguageID'] = this.fkiLanguageID;
       json[r'fkiDepartmentID'] = this.fkiDepartmentID;
       json[r'fkiPaymentmethodID'] = this.fkiPaymentmethodID;
+    if (this.fkiElectronicfundstransferbankaccountID != null) {
       json[r'fkiElectronicfundstransferbankaccountID'] = this.fkiElectronicfundstransferbankaccountID;
+    } else {
+      json[r'fkiElectronicfundstransferbankaccountID'] = null;
+    }
+    if (this.fkiElectronicfundstransferbankaccountIDDirectdebit != null) {
       json[r'fkiElectronicfundstransferbankaccountIDDirectdebit'] = this.fkiElectronicfundstransferbankaccountIDDirectdebit;
+    } else {
+      json[r'fkiElectronicfundstransferbankaccountIDDirectdebit'] = null;
+    }
       json[r'fkiSendingmethodID'] = this.fkiSendingmethodID;
       json[r'fkiTaxassignmentID'] = this.fkiTaxassignmentID;
       json[r'fkiAttendancestatusID'] = this.fkiAttendancestatusID;
+    if (this.fkiAgentIDVariableexpensechargeto != null) {
       json[r'fkiAgentIDVariableexpensechargeto'] = this.fkiAgentIDVariableexpensechargeto;
+    } else {
+      json[r'fkiAgentIDVariableexpensechargeto'] = null;
+    }
+    if (this.fkiBrokerIDVariableexpensechargeto != null) {
       json[r'fkiBrokerIDVariableexpensechargeto'] = this.fkiBrokerIDVariableexpensechargeto;
+    } else {
+      json[r'fkiBrokerIDVariableexpensechargeto'] = null;
+    }
+    if (this.fkiCustomerIDVariableexpensechargeto != null) {
       json[r'fkiCustomerIDVariableexpensechargeto'] = this.fkiCustomerIDVariableexpensechargeto;
+    } else {
+      json[r'fkiCustomerIDVariableexpensechargeto'] = null;
+    }
+    if (this.fkiGlaccountcontainerIDVariableexpensechargeto != null) {
       json[r'fkiGlaccountcontainerIDVariableexpensechargeto'] = this.fkiGlaccountcontainerIDVariableexpensechargeto;
+    } else {
+      json[r'fkiGlaccountcontainerIDVariableexpensechargeto'] = null;
+    }
+    if (this.fkiAgentIDSupplychargechargeto != null) {
       json[r'fkiAgentIDSupplychargechargeto'] = this.fkiAgentIDSupplychargechargeto;
+    } else {
+      json[r'fkiAgentIDSupplychargechargeto'] = null;
+    }
+    if (this.fkiBrokerIDSupplychargechargeto != null) {
       json[r'fkiBrokerIDSupplychargechargeto'] = this.fkiBrokerIDSupplychargechargeto;
+    } else {
+      json[r'fkiBrokerIDSupplychargechargeto'] = null;
+    }
+    if (this.fkiCustomerIDSupplychargechargeto != null) {
       json[r'fkiCustomerIDSupplychargechargeto'] = this.fkiCustomerIDSupplychargechargeto;
+    } else {
+      json[r'fkiCustomerIDSupplychargechargeto'] = null;
+    }
+    if (this.fkiGlaccountcontainerIDSupplychargechargeto != null) {
       json[r'fkiGlaccountcontainerIDSupplychargechargeto'] = this.fkiGlaccountcontainerIDSupplychargechargeto;
+    } else {
+      json[r'fkiGlaccountcontainerIDSupplychargechargeto'] = null;
+    }
+    if (this.fkiInvoicealternatelogoID != null) {
       json[r'fkiInvoicealternatelogoID'] = this.fkiInvoicealternatelogoID;
+    } else {
+      json[r'fkiInvoicealternatelogoID'] = null;
+    }
+    if (this.fkiSynchronizationlinkserverID != null) {
       json[r'fkiSynchronizationlinkserverID'] = this.fkiSynchronizationlinkserverID;
+    } else {
+      json[r'fkiSynchronizationlinkserverID'] = null;
+    }
     if (this.efkiUserID != null) {
       json[r'efkiUserID'] = this.efkiUserID;
     } else {
@@ -477,16 +635,28 @@ class CustomerResponseCompound {
       json[r'efksCustomerCode'] = null;
     }
       json[r'sCustomerCode'] = this.sCustomerCode;
+    if (this.dCustomerFulltimeequivalent != null) {
       json[r'dCustomerFulltimeequivalent'] = this.dCustomerFulltimeequivalent;
+    } else {
+      json[r'dCustomerFulltimeequivalent'] = null;
+    }
       json[r'iCustomerPhotocopiercode'] = this.iCustomerPhotocopiercode;
       json[r'iCustomerLongdistancecode'] = this.iCustomerLongdistancecode;
       json[r'iCustomerTimewindowstart'] = this.iCustomerTimewindowstart;
       json[r'iCustomerTimewindowend'] = this.iCustomerTimewindowend;
       json[r'dCustomerMinimumchargeableinterests'] = this.dCustomerMinimumchargeableinterests;
+    if (this.dtCustomerBirthdate != null) {
       json[r'dtCustomerBirthdate'] = this.dtCustomerBirthdate;
+    } else {
+      json[r'dtCustomerBirthdate'] = null;
+    }
       json[r'dtCustomerTransfer'] = this.dtCustomerTransfer;
       json[r'dtCustomerTransferappointment'] = this.dtCustomerTransferappointment;
+    if (this.dtCustomerTransfersurvey != null) {
       json[r'dtCustomerTransfersurvey'] = this.dtCustomerTransfersurvey;
+    } else {
+      json[r'dtCustomerTransfersurvey'] = null;
+    }
       json[r'bCustomerIsactive'] = this.bCustomerIsactive;
       json[r'bCustomerVariableexpensefinanced'] = this.bCustomerVariableexpensefinanced;
       json[r'bCustomerVariableexpensefinancedtaxes'] = this.bCustomerVariableexpensefinancedtaxes;
@@ -521,16 +691,12 @@ class CustomerResponseCompound {
         assert(json[r'pkiCustomerID'] != null, 'Required key "CustomerResponseCompound[pkiCustomerID]" has a null value in JSON.');
         assert(json.containsKey(r'fkiCompanyID'), 'Required key "CustomerResponseCompound[fkiCompanyID]" is missing from JSON.');
         assert(json[r'fkiCompanyID'] != null, 'Required key "CustomerResponseCompound[fkiCompanyID]" has a null value in JSON.');
-        assert(json.containsKey(r'fkiCustomergroupID'), 'Required key "CustomerResponseCompound[fkiCustomergroupID]" is missing from JSON.');
-        assert(json[r'fkiCustomergroupID'] != null, 'Required key "CustomerResponseCompound[fkiCustomergroupID]" has a null value in JSON.');
         assert(json.containsKey(r'sCustomerName'), 'Required key "CustomerResponseCompound[sCustomerName]" is missing from JSON.');
         assert(json[r'sCustomerName'] != null, 'Required key "CustomerResponseCompound[sCustomerName]" has a null value in JSON.');
         assert(json.containsKey(r'fkiContactinformationsID'), 'Required key "CustomerResponseCompound[fkiContactinformationsID]" is missing from JSON.');
         assert(json[r'fkiContactinformationsID'] != null, 'Required key "CustomerResponseCompound[fkiContactinformationsID]" has a null value in JSON.');
         assert(json.containsKey(r'fkiContactcontainerID'), 'Required key "CustomerResponseCompound[fkiContactcontainerID]" is missing from JSON.');
         assert(json[r'fkiContactcontainerID'] != null, 'Required key "CustomerResponseCompound[fkiContactcontainerID]" has a null value in JSON.');
-        assert(json.containsKey(r'fkiImageID'), 'Required key "CustomerResponseCompound[fkiImageID]" is missing from JSON.');
-        assert(json[r'fkiImageID'] != null, 'Required key "CustomerResponseCompound[fkiImageID]" has a null value in JSON.');
         assert(json.containsKey(r'fkiGlaccountcontainerID'), 'Required key "CustomerResponseCompound[fkiGlaccountcontainerID]" is missing from JSON.');
         assert(json[r'fkiGlaccountcontainerID'] != null, 'Required key "CustomerResponseCompound[fkiGlaccountcontainerID]" has a null value in JSON.');
         assert(json.containsKey(r'fkiLanguageID'), 'Required key "CustomerResponseCompound[fkiLanguageID]" is missing from JSON.');
@@ -539,40 +705,14 @@ class CustomerResponseCompound {
         assert(json[r'fkiDepartmentID'] != null, 'Required key "CustomerResponseCompound[fkiDepartmentID]" has a null value in JSON.');
         assert(json.containsKey(r'fkiPaymentmethodID'), 'Required key "CustomerResponseCompound[fkiPaymentmethodID]" is missing from JSON.');
         assert(json[r'fkiPaymentmethodID'] != null, 'Required key "CustomerResponseCompound[fkiPaymentmethodID]" has a null value in JSON.');
-        assert(json.containsKey(r'fkiElectronicfundstransferbankaccountID'), 'Required key "CustomerResponseCompound[fkiElectronicfundstransferbankaccountID]" is missing from JSON.');
-        assert(json[r'fkiElectronicfundstransferbankaccountID'] != null, 'Required key "CustomerResponseCompound[fkiElectronicfundstransferbankaccountID]" has a null value in JSON.');
-        assert(json.containsKey(r'fkiElectronicfundstransferbankaccountIDDirectdebit'), 'Required key "CustomerResponseCompound[fkiElectronicfundstransferbankaccountIDDirectdebit]" is missing from JSON.');
-        assert(json[r'fkiElectronicfundstransferbankaccountIDDirectdebit'] != null, 'Required key "CustomerResponseCompound[fkiElectronicfundstransferbankaccountIDDirectdebit]" has a null value in JSON.');
         assert(json.containsKey(r'fkiSendingmethodID'), 'Required key "CustomerResponseCompound[fkiSendingmethodID]" is missing from JSON.');
         assert(json[r'fkiSendingmethodID'] != null, 'Required key "CustomerResponseCompound[fkiSendingmethodID]" has a null value in JSON.');
         assert(json.containsKey(r'fkiTaxassignmentID'), 'Required key "CustomerResponseCompound[fkiTaxassignmentID]" is missing from JSON.');
         assert(json[r'fkiTaxassignmentID'] != null, 'Required key "CustomerResponseCompound[fkiTaxassignmentID]" has a null value in JSON.');
         assert(json.containsKey(r'fkiAttendancestatusID'), 'Required key "CustomerResponseCompound[fkiAttendancestatusID]" is missing from JSON.');
         assert(json[r'fkiAttendancestatusID'] != null, 'Required key "CustomerResponseCompound[fkiAttendancestatusID]" has a null value in JSON.');
-        assert(json.containsKey(r'fkiAgentIDVariableexpensechargeto'), 'Required key "CustomerResponseCompound[fkiAgentIDVariableexpensechargeto]" is missing from JSON.');
-        assert(json[r'fkiAgentIDVariableexpensechargeto'] != null, 'Required key "CustomerResponseCompound[fkiAgentIDVariableexpensechargeto]" has a null value in JSON.');
-        assert(json.containsKey(r'fkiBrokerIDVariableexpensechargeto'), 'Required key "CustomerResponseCompound[fkiBrokerIDVariableexpensechargeto]" is missing from JSON.');
-        assert(json[r'fkiBrokerIDVariableexpensechargeto'] != null, 'Required key "CustomerResponseCompound[fkiBrokerIDVariableexpensechargeto]" has a null value in JSON.');
-        assert(json.containsKey(r'fkiCustomerIDVariableexpensechargeto'), 'Required key "CustomerResponseCompound[fkiCustomerIDVariableexpensechargeto]" is missing from JSON.');
-        assert(json[r'fkiCustomerIDVariableexpensechargeto'] != null, 'Required key "CustomerResponseCompound[fkiCustomerIDVariableexpensechargeto]" has a null value in JSON.');
-        assert(json.containsKey(r'fkiGlaccountcontainerIDVariableexpensechargeto'), 'Required key "CustomerResponseCompound[fkiGlaccountcontainerIDVariableexpensechargeto]" is missing from JSON.');
-        assert(json[r'fkiGlaccountcontainerIDVariableexpensechargeto'] != null, 'Required key "CustomerResponseCompound[fkiGlaccountcontainerIDVariableexpensechargeto]" has a null value in JSON.');
-        assert(json.containsKey(r'fkiAgentIDSupplychargechargeto'), 'Required key "CustomerResponseCompound[fkiAgentIDSupplychargechargeto]" is missing from JSON.');
-        assert(json[r'fkiAgentIDSupplychargechargeto'] != null, 'Required key "CustomerResponseCompound[fkiAgentIDSupplychargechargeto]" has a null value in JSON.');
-        assert(json.containsKey(r'fkiBrokerIDSupplychargechargeto'), 'Required key "CustomerResponseCompound[fkiBrokerIDSupplychargechargeto]" is missing from JSON.');
-        assert(json[r'fkiBrokerIDSupplychargechargeto'] != null, 'Required key "CustomerResponseCompound[fkiBrokerIDSupplychargechargeto]" has a null value in JSON.');
-        assert(json.containsKey(r'fkiCustomerIDSupplychargechargeto'), 'Required key "CustomerResponseCompound[fkiCustomerIDSupplychargechargeto]" is missing from JSON.');
-        assert(json[r'fkiCustomerIDSupplychargechargeto'] != null, 'Required key "CustomerResponseCompound[fkiCustomerIDSupplychargechargeto]" has a null value in JSON.');
-        assert(json.containsKey(r'fkiGlaccountcontainerIDSupplychargechargeto'), 'Required key "CustomerResponseCompound[fkiGlaccountcontainerIDSupplychargechargeto]" is missing from JSON.');
-        assert(json[r'fkiGlaccountcontainerIDSupplychargechargeto'] != null, 'Required key "CustomerResponseCompound[fkiGlaccountcontainerIDSupplychargechargeto]" has a null value in JSON.');
-        assert(json.containsKey(r'fkiInvoicealternatelogoID'), 'Required key "CustomerResponseCompound[fkiInvoicealternatelogoID]" is missing from JSON.');
-        assert(json[r'fkiInvoicealternatelogoID'] != null, 'Required key "CustomerResponseCompound[fkiInvoicealternatelogoID]" has a null value in JSON.');
-        assert(json.containsKey(r'fkiSynchronizationlinkserverID'), 'Required key "CustomerResponseCompound[fkiSynchronizationlinkserverID]" is missing from JSON.');
-        assert(json[r'fkiSynchronizationlinkserverID'] != null, 'Required key "CustomerResponseCompound[fkiSynchronizationlinkserverID]" has a null value in JSON.');
         assert(json.containsKey(r'sCustomerCode'), 'Required key "CustomerResponseCompound[sCustomerCode]" is missing from JSON.');
         assert(json[r'sCustomerCode'] != null, 'Required key "CustomerResponseCompound[sCustomerCode]" has a null value in JSON.');
-        assert(json.containsKey(r'dCustomerFulltimeequivalent'), 'Required key "CustomerResponseCompound[dCustomerFulltimeequivalent]" is missing from JSON.');
-        assert(json[r'dCustomerFulltimeequivalent'] != null, 'Required key "CustomerResponseCompound[dCustomerFulltimeequivalent]" has a null value in JSON.');
         assert(json.containsKey(r'iCustomerPhotocopiercode'), 'Required key "CustomerResponseCompound[iCustomerPhotocopiercode]" is missing from JSON.');
         assert(json[r'iCustomerPhotocopiercode'] != null, 'Required key "CustomerResponseCompound[iCustomerPhotocopiercode]" has a null value in JSON.');
         assert(json.containsKey(r'iCustomerLongdistancecode'), 'Required key "CustomerResponseCompound[iCustomerLongdistancecode]" is missing from JSON.');
@@ -583,14 +723,10 @@ class CustomerResponseCompound {
         assert(json[r'iCustomerTimewindowend'] != null, 'Required key "CustomerResponseCompound[iCustomerTimewindowend]" has a null value in JSON.');
         assert(json.containsKey(r'dCustomerMinimumchargeableinterests'), 'Required key "CustomerResponseCompound[dCustomerMinimumchargeableinterests]" is missing from JSON.');
         assert(json[r'dCustomerMinimumchargeableinterests'] != null, 'Required key "CustomerResponseCompound[dCustomerMinimumchargeableinterests]" has a null value in JSON.');
-        assert(json.containsKey(r'dtCustomerBirthdate'), 'Required key "CustomerResponseCompound[dtCustomerBirthdate]" is missing from JSON.');
-        assert(json[r'dtCustomerBirthdate'] != null, 'Required key "CustomerResponseCompound[dtCustomerBirthdate]" has a null value in JSON.');
         assert(json.containsKey(r'dtCustomerTransfer'), 'Required key "CustomerResponseCompound[dtCustomerTransfer]" is missing from JSON.');
         assert(json[r'dtCustomerTransfer'] != null, 'Required key "CustomerResponseCompound[dtCustomerTransfer]" has a null value in JSON.');
         assert(json.containsKey(r'dtCustomerTransferappointment'), 'Required key "CustomerResponseCompound[dtCustomerTransferappointment]" is missing from JSON.');
         assert(json[r'dtCustomerTransferappointment'] != null, 'Required key "CustomerResponseCompound[dtCustomerTransferappointment]" has a null value in JSON.');
-        assert(json.containsKey(r'dtCustomerTransfersurvey'), 'Required key "CustomerResponseCompound[dtCustomerTransfersurvey]" is missing from JSON.');
-        assert(json[r'dtCustomerTransfersurvey'] != null, 'Required key "CustomerResponseCompound[dtCustomerTransfersurvey]" has a null value in JSON.');
         assert(json.containsKey(r'bCustomerIsactive'), 'Required key "CustomerResponseCompound[bCustomerIsactive]" is missing from JSON.');
         assert(json[r'bCustomerIsactive'] != null, 'Required key "CustomerResponseCompound[bCustomerIsactive]" has a null value in JSON.');
         assert(json.containsKey(r'bCustomerVariableexpensefinanced'), 'Required key "CustomerResponseCompound[bCustomerVariableexpensefinanced]" is missing from JSON.');
@@ -619,44 +755,44 @@ class CustomerResponseCompound {
       return CustomerResponseCompound(
         pkiCustomerID: mapValueOfType<int>(json, r'pkiCustomerID')!,
         fkiCompanyID: mapValueOfType<int>(json, r'fkiCompanyID')!,
-        fkiCustomergroupID: mapValueOfType<int>(json, r'fkiCustomergroupID')!,
+        fkiCustomergroupID: mapValueOfType<int>(json, r'fkiCustomergroupID'),
         sCustomerName: mapValueOfType<String>(json, r'sCustomerName')!,
         sCustomerNote: mapValueOfType<String>(json, r'sCustomerNote'),
         fkiContactinformationsID: mapValueOfType<int>(json, r'fkiContactinformationsID')!,
         fkiContactcontainerID: mapValueOfType<int>(json, r'fkiContactcontainerID')!,
-        fkiImageID: mapValueOfType<int>(json, r'fkiImageID')!,
+        fkiImageID: mapValueOfType<int>(json, r'fkiImageID'),
         fkiGlaccountcontainerID: mapValueOfType<int>(json, r'fkiGlaccountcontainerID')!,
         fkiLanguageID: mapValueOfType<int>(json, r'fkiLanguageID')!,
         fkiDepartmentID: mapValueOfType<int>(json, r'fkiDepartmentID')!,
         fkiPaymentmethodID: mapValueOfType<int>(json, r'fkiPaymentmethodID')!,
-        fkiElectronicfundstransferbankaccountID: mapValueOfType<int>(json, r'fkiElectronicfundstransferbankaccountID')!,
-        fkiElectronicfundstransferbankaccountIDDirectdebit: mapValueOfType<int>(json, r'fkiElectronicfundstransferbankaccountIDDirectdebit')!,
+        fkiElectronicfundstransferbankaccountID: mapValueOfType<int>(json, r'fkiElectronicfundstransferbankaccountID'),
+        fkiElectronicfundstransferbankaccountIDDirectdebit: mapValueOfType<int>(json, r'fkiElectronicfundstransferbankaccountIDDirectdebit'),
         fkiSendingmethodID: mapValueOfType<int>(json, r'fkiSendingmethodID')!,
         fkiTaxassignmentID: mapValueOfType<int>(json, r'fkiTaxassignmentID')!,
         fkiAttendancestatusID: mapValueOfType<int>(json, r'fkiAttendancestatusID')!,
-        fkiAgentIDVariableexpensechargeto: mapValueOfType<int>(json, r'fkiAgentIDVariableexpensechargeto')!,
-        fkiBrokerIDVariableexpensechargeto: mapValueOfType<int>(json, r'fkiBrokerIDVariableexpensechargeto')!,
-        fkiCustomerIDVariableexpensechargeto: mapValueOfType<int>(json, r'fkiCustomerIDVariableexpensechargeto')!,
-        fkiGlaccountcontainerIDVariableexpensechargeto: mapValueOfType<int>(json, r'fkiGlaccountcontainerIDVariableexpensechargeto')!,
-        fkiAgentIDSupplychargechargeto: mapValueOfType<int>(json, r'fkiAgentIDSupplychargechargeto')!,
-        fkiBrokerIDSupplychargechargeto: mapValueOfType<int>(json, r'fkiBrokerIDSupplychargechargeto')!,
-        fkiCustomerIDSupplychargechargeto: mapValueOfType<int>(json, r'fkiCustomerIDSupplychargechargeto')!,
-        fkiGlaccountcontainerIDSupplychargechargeto: mapValueOfType<int>(json, r'fkiGlaccountcontainerIDSupplychargechargeto')!,
-        fkiInvoicealternatelogoID: mapValueOfType<int>(json, r'fkiInvoicealternatelogoID')!,
-        fkiSynchronizationlinkserverID: mapValueOfType<int>(json, r'fkiSynchronizationlinkserverID')!,
+        fkiAgentIDVariableexpensechargeto: mapValueOfType<int>(json, r'fkiAgentIDVariableexpensechargeto'),
+        fkiBrokerIDVariableexpensechargeto: mapValueOfType<int>(json, r'fkiBrokerIDVariableexpensechargeto'),
+        fkiCustomerIDVariableexpensechargeto: mapValueOfType<int>(json, r'fkiCustomerIDVariableexpensechargeto'),
+        fkiGlaccountcontainerIDVariableexpensechargeto: mapValueOfType<int>(json, r'fkiGlaccountcontainerIDVariableexpensechargeto'),
+        fkiAgentIDSupplychargechargeto: mapValueOfType<int>(json, r'fkiAgentIDSupplychargechargeto'),
+        fkiBrokerIDSupplychargechargeto: mapValueOfType<int>(json, r'fkiBrokerIDSupplychargechargeto'),
+        fkiCustomerIDSupplychargechargeto: mapValueOfType<int>(json, r'fkiCustomerIDSupplychargechargeto'),
+        fkiGlaccountcontainerIDSupplychargechargeto: mapValueOfType<int>(json, r'fkiGlaccountcontainerIDSupplychargechargeto'),
+        fkiInvoicealternatelogoID: mapValueOfType<int>(json, r'fkiInvoicealternatelogoID'),
+        fkiSynchronizationlinkserverID: mapValueOfType<int>(json, r'fkiSynchronizationlinkserverID'),
         efkiUserID: mapValueOfType<int>(json, r'efkiUserID'),
         efksCustomerCode: mapValueOfType<String>(json, r'efksCustomerCode'),
         sCustomerCode: mapValueOfType<String>(json, r'sCustomerCode')!,
-        dCustomerFulltimeequivalent: mapValueOfType<String>(json, r'dCustomerFulltimeequivalent')!,
+        dCustomerFulltimeequivalent: mapValueOfType<String>(json, r'dCustomerFulltimeequivalent'),
         iCustomerPhotocopiercode: mapValueOfType<int>(json, r'iCustomerPhotocopiercode')!,
         iCustomerLongdistancecode: mapValueOfType<int>(json, r'iCustomerLongdistancecode')!,
         iCustomerTimewindowstart: mapValueOfType<int>(json, r'iCustomerTimewindowstart')!,
         iCustomerTimewindowend: mapValueOfType<int>(json, r'iCustomerTimewindowend')!,
         dCustomerMinimumchargeableinterests: mapValueOfType<String>(json, r'dCustomerMinimumchargeableinterests')!,
-        dtCustomerBirthdate: mapValueOfType<String>(json, r'dtCustomerBirthdate')!,
+        dtCustomerBirthdate: mapValueOfType<String>(json, r'dtCustomerBirthdate'),
         dtCustomerTransfer: mapValueOfType<String>(json, r'dtCustomerTransfer')!,
         dtCustomerTransferappointment: mapValueOfType<String>(json, r'dtCustomerTransferappointment')!,
-        dtCustomerTransfersurvey: mapValueOfType<String>(json, r'dtCustomerTransfersurvey')!,
+        dtCustomerTransfersurvey: mapValueOfType<String>(json, r'dtCustomerTransfersurvey'),
         bCustomerIsactive: mapValueOfType<bool>(json, r'bCustomerIsactive')!,
         bCustomerVariableexpensefinanced: mapValueOfType<bool>(json, r'bCustomerVariableexpensefinanced')!,
         bCustomerVariableexpensefinancedtaxes: mapValueOfType<bool>(json, r'bCustomerVariableexpensefinancedtaxes')!,
@@ -718,41 +854,24 @@ class CustomerResponseCompound {
   static const requiredKeys = <String>{
     'pkiCustomerID',
     'fkiCompanyID',
-    'fkiCustomergroupID',
     'sCustomerName',
     'fkiContactinformationsID',
     'fkiContactcontainerID',
-    'fkiImageID',
     'fkiGlaccountcontainerID',
     'fkiLanguageID',
     'fkiDepartmentID',
     'fkiPaymentmethodID',
-    'fkiElectronicfundstransferbankaccountID',
-    'fkiElectronicfundstransferbankaccountIDDirectdebit',
     'fkiSendingmethodID',
     'fkiTaxassignmentID',
     'fkiAttendancestatusID',
-    'fkiAgentIDVariableexpensechargeto',
-    'fkiBrokerIDVariableexpensechargeto',
-    'fkiCustomerIDVariableexpensechargeto',
-    'fkiGlaccountcontainerIDVariableexpensechargeto',
-    'fkiAgentIDSupplychargechargeto',
-    'fkiBrokerIDSupplychargechargeto',
-    'fkiCustomerIDSupplychargechargeto',
-    'fkiGlaccountcontainerIDSupplychargechargeto',
-    'fkiInvoicealternatelogoID',
-    'fkiSynchronizationlinkserverID',
     'sCustomerCode',
-    'dCustomerFulltimeequivalent',
     'iCustomerPhotocopiercode',
     'iCustomerLongdistancecode',
     'iCustomerTimewindowstart',
     'iCustomerTimewindowend',
     'dCustomerMinimumchargeableinterests',
-    'dtCustomerBirthdate',
     'dtCustomerTransfer',
     'dtCustomerTransferappointment',
-    'dtCustomerTransfersurvey',
     'bCustomerIsactive',
     'bCustomerVariableexpensefinanced',
     'bCustomerVariableexpensefinancedtaxes',

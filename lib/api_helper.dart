@@ -109,6 +109,9 @@ String parameterToString(dynamic value) {
   if (value is FieldEActivesessionWeekdaystart) {
     return FieldEActivesessionWeekdaystartTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEAdjustmentreminderType) {
+    return FieldEAdjustmentreminderTypeTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEAgentSchedule) {
     return FieldEAgentScheduleTypeTransformer().encode(value).toString();
   }

@@ -316,7 +316,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **userGetAutocompleteV2**
-> UserGetAutocompleteV2Response userGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+> UserGetAutocompleteV2Response userGetAutocompleteV2(sSelector, eFilterActive, fkiAttachmentID, sQuery, acceptLanguage)
 
 Retrieve Users and IDs
 
@@ -333,11 +333,12 @@ import 'package:openapi/api.dart';
 final api_instance = ObjectUserApi();
 final sSelector = sSelector_example; // String | The type of Users to return
 final eFilterActive = eFilterActive_example; // String | Specify which results we want to display.
+final fkiAttachmentID = fkiAttachmentID_example; // String | Specify for which fkiAttachmentID we want to find users for. Only used when sSelector is AttachmentSpecificUser.
 final sQuery = sQuery_example; // String | Allow to filter the returned results
 final acceptLanguage = ; // HeaderAcceptLanguage | 
 
 try {
-    final result = api_instance.userGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
+    final result = api_instance.userGetAutocompleteV2(sSelector, eFilterActive, fkiAttachmentID, sQuery, acceptLanguage);
     print(result);
 } catch (e) {
     print('Exception when calling ObjectUserApi->userGetAutocompleteV2: $e\n');
@@ -350,6 +351,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **String**| The type of Users to return | 
  **eFilterActive** | **String**| Specify which results we want to display. | [optional] [default to 'Active']
+ **fkiAttachmentID** | **String**| Specify for which fkiAttachmentID we want to find users for. Only used when sSelector is AttachmentSpecificUser. | [optional] 
  **sQuery** | **String**| Allow to filter the returned results | [optional] 
  **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] 
 

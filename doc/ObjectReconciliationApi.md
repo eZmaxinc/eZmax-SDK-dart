@@ -11,6 +11,10 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**reconciliationBatchDownloadV1**](ObjectReconciliationApi.md#reconciliationbatchdownloadv1) | **POST** /1/object/reconciliation/{pkiReconciliationID}/batchDownload | Download multiples attachments from a Reconciliation
 [**reconciliationGetAttachmentsV1**](ObjectReconciliationApi.md#reconciliationgetattachmentsv1) | **GET** /1/object/reconciliation/{pkiReconciliationID}/getAttachments | Retrieve Reconciliation's attachments
+[**reconciliationGetCommunicationCountV1**](ObjectReconciliationApi.md#reconciliationgetcommunicationcountv1) | **GET** /1/object/reconciliation/{pkiReconciliationID}/getCommunicationCount | Retrieve Communication count
+[**reconciliationGetCommunicationListV1**](ObjectReconciliationApi.md#reconciliationgetcommunicationlistv1) | **GET** /1/object/reconciliation/{pkiReconciliationID}/getCommunicationList | Retrieve Communication list
+[**reconciliationGetCommunicationrecipientsV1**](ObjectReconciliationApi.md#reconciliationgetcommunicationrecipientsv1) | **GET** /1/object/reconciliation/{pkiReconciliationID}/getCommunicationrecipients | Retrieve Communication recipients
+[**reconciliationGetCommunicationsendersV1**](ObjectReconciliationApi.md#reconciliationgetcommunicationsendersv1) | **GET** /1/object/reconciliation/{pkiReconciliationID}/getCommunicationsenders | Retrieve Communication senders
 [**reconciliationImportIntoEDMV1**](ObjectReconciliationApi.md#reconciliationimportintoedmv1) | **POST** /1/object/reconciliation/{pkiReconciliationID}/importIntoEDM | Import attachments into the Reconciliation
 
 
@@ -94,6 +98,186 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ReconciliationGetAttachmentsV1Response**](ReconciliationGetAttachmentsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **reconciliationGetCommunicationCountV1**
+> ReconciliationGetCommunicationCountV1Response reconciliationGetCommunicationCountV1(pkiReconciliationID)
+
+Retrieve Communication count
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectReconciliationApi();
+final pkiReconciliationID = 56; // int | 
+
+try {
+    final result = api_instance.reconciliationGetCommunicationCountV1(pkiReconciliationID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectReconciliationApi->reconciliationGetCommunicationCountV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiReconciliationID** | **int**|  | 
+
+### Return type
+
+[**ReconciliationGetCommunicationCountV1Response**](ReconciliationGetCommunicationCountV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **reconciliationGetCommunicationListV1**
+> ReconciliationGetCommunicationListV1Response reconciliationGetCommunicationListV1(pkiReconciliationID)
+
+Retrieve Communication list
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectReconciliationApi();
+final pkiReconciliationID = 56; // int | 
+
+try {
+    final result = api_instance.reconciliationGetCommunicationListV1(pkiReconciliationID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectReconciliationApi->reconciliationGetCommunicationListV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiReconciliationID** | **int**|  | 
+
+### Return type
+
+[**ReconciliationGetCommunicationListV1Response**](ReconciliationGetCommunicationListV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **reconciliationGetCommunicationrecipientsV1**
+> ReconciliationGetCommunicationrecipientsV1Response reconciliationGetCommunicationrecipientsV1(pkiReconciliationID)
+
+Retrieve Communication recipients
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectReconciliationApi();
+final pkiReconciliationID = 56; // int | 
+
+try {
+    final result = api_instance.reconciliationGetCommunicationrecipientsV1(pkiReconciliationID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectReconciliationApi->reconciliationGetCommunicationrecipientsV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiReconciliationID** | **int**|  | 
+
+### Return type
+
+[**ReconciliationGetCommunicationrecipientsV1Response**](ReconciliationGetCommunicationrecipientsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **reconciliationGetCommunicationsendersV1**
+> ReconciliationGetCommunicationsendersV1Response reconciliationGetCommunicationsendersV1(pkiReconciliationID)
+
+Retrieve Communication senders
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectReconciliationApi();
+final pkiReconciliationID = 56; // int | 
+
+try {
+    final result = api_instance.reconciliationGetCommunicationsendersV1(pkiReconciliationID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectReconciliationApi->reconciliationGetCommunicationsendersV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiReconciliationID** | **int**|  | 
+
+### Return type
+
+[**ReconciliationGetCommunicationsendersV1Response**](ReconciliationGetCommunicationsendersV1Response.md)
 
 ### Authorization
 

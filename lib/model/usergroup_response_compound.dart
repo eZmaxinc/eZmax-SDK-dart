@@ -22,7 +22,7 @@ class UsergroupResponseCompound {
   /// The unique ID of the Usergroup
   ///
   /// Minimum value: 0
-  /// Maximum value: 255
+  /// Maximum value: 65535
   int pkiUsergroupID;
 
   MultilingualUsergroupName objUsergroupName;

@@ -17,6 +17,7 @@ class CommunicationreferenceRequest {
     this.fkiBuyercontractID,
     this.fkiEzsignfolderID,
     this.fkiInscriptionID,
+    this.fkiInscriptionnotauthenticatedID,
     this.fkiInscriptiontempID,
     this.fkiInvoiceID,
     this.fkiOtherincomeID,
@@ -69,6 +70,17 @@ class CommunicationreferenceRequest {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   int? fkiInscriptionID;
+
+  /// The unique ID of the Inscriptionnotauthenticated.
+  ///
+  /// Minimum value: 0
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? fkiInscriptionnotauthenticatedID;
 
   /// The unique ID of the Inscriptiontemp
   ///
@@ -135,6 +147,7 @@ class CommunicationreferenceRequest {
     other.fkiBuyercontractID == fkiBuyercontractID &&
     other.fkiEzsignfolderID == fkiEzsignfolderID &&
     other.fkiInscriptionID == fkiInscriptionID &&
+    other.fkiInscriptionnotauthenticatedID == fkiInscriptionnotauthenticatedID &&
     other.fkiInscriptiontempID == fkiInscriptiontempID &&
     other.fkiInvoiceID == fkiInvoiceID &&
     other.fkiOtherincomeID == fkiOtherincomeID &&
@@ -148,6 +161,7 @@ class CommunicationreferenceRequest {
     (fkiBuyercontractID == null ? 0 : fkiBuyercontractID!.hashCode) +
     (fkiEzsignfolderID == null ? 0 : fkiEzsignfolderID!.hashCode) +
     (fkiInscriptionID == null ? 0 : fkiInscriptionID!.hashCode) +
+    (fkiInscriptionnotauthenticatedID == null ? 0 : fkiInscriptionnotauthenticatedID!.hashCode) +
     (fkiInscriptiontempID == null ? 0 : fkiInscriptiontempID!.hashCode) +
     (fkiInvoiceID == null ? 0 : fkiInvoiceID!.hashCode) +
     (fkiOtherincomeID == null ? 0 : fkiOtherincomeID!.hashCode) +
@@ -155,7 +169,7 @@ class CommunicationreferenceRequest {
     (fkiRejectedoffertopurchaseID == null ? 0 : fkiRejectedoffertopurchaseID!.hashCode);
 
   @override
-  String toString() => 'CommunicationreferenceRequest[pkiCommunicationreferenceID=$pkiCommunicationreferenceID, fkiBuyercontractID=$fkiBuyercontractID, fkiEzsignfolderID=$fkiEzsignfolderID, fkiInscriptionID=$fkiInscriptionID, fkiInscriptiontempID=$fkiInscriptiontempID, fkiInvoiceID=$fkiInvoiceID, fkiOtherincomeID=$fkiOtherincomeID, fkiElectronicfundstransferID=$fkiElectronicfundstransferID, fkiRejectedoffertopurchaseID=$fkiRejectedoffertopurchaseID]';
+  String toString() => 'CommunicationreferenceRequest[pkiCommunicationreferenceID=$pkiCommunicationreferenceID, fkiBuyercontractID=$fkiBuyercontractID, fkiEzsignfolderID=$fkiEzsignfolderID, fkiInscriptionID=$fkiInscriptionID, fkiInscriptionnotauthenticatedID=$fkiInscriptionnotauthenticatedID, fkiInscriptiontempID=$fkiInscriptiontempID, fkiInvoiceID=$fkiInvoiceID, fkiOtherincomeID=$fkiOtherincomeID, fkiElectronicfundstransferID=$fkiElectronicfundstransferID, fkiRejectedoffertopurchaseID=$fkiRejectedoffertopurchaseID]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -178,6 +192,11 @@ class CommunicationreferenceRequest {
       json[r'fkiInscriptionID'] = this.fkiInscriptionID;
     } else {
       json[r'fkiInscriptionID'] = null;
+    }
+    if (this.fkiInscriptionnotauthenticatedID != null) {
+      json[r'fkiInscriptionnotauthenticatedID'] = this.fkiInscriptionnotauthenticatedID;
+    } else {
+      json[r'fkiInscriptionnotauthenticatedID'] = null;
     }
     if (this.fkiInscriptiontempID != null) {
       json[r'fkiInscriptiontempID'] = this.fkiInscriptiontempID;
@@ -226,6 +245,7 @@ class CommunicationreferenceRequest {
         fkiBuyercontractID: mapValueOfType<int>(json, r'fkiBuyercontractID'),
         fkiEzsignfolderID: mapValueOfType<int>(json, r'fkiEzsignfolderID'),
         fkiInscriptionID: mapValueOfType<int>(json, r'fkiInscriptionID'),
+        fkiInscriptionnotauthenticatedID: mapValueOfType<int>(json, r'fkiInscriptionnotauthenticatedID'),
         fkiInscriptiontempID: mapValueOfType<int>(json, r'fkiInscriptiontempID'),
         fkiInvoiceID: mapValueOfType<int>(json, r'fkiInvoiceID'),
         fkiOtherincomeID: mapValueOfType<int>(json, r'fkiOtherincomeID'),
