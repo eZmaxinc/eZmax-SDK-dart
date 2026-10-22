@@ -1335,6 +1335,72 @@ class ApiClient {
           return DiscussionmessageResponse.fromJson(value);
         case 'DiscussionmessageResponseCompound':
           return DiscussionmessageResponseCompound.fromJson(value);
+        case 'DocumenttypeAutocompleteElementResponse':
+          return DocumenttypeAutocompleteElementResponse.fromJson(value);
+        case 'DocumenttypeCreateObjectV1Request':
+          return DocumenttypeCreateObjectV1Request.fromJson(value);
+        case 'DocumenttypeCreateObjectV1Response':
+          return DocumenttypeCreateObjectV1Response.fromJson(value);
+        case 'DocumenttypeCreateObjectV1ResponseMPayload':
+          return DocumenttypeCreateObjectV1ResponseMPayload.fromJson(value);
+        case 'DocumenttypeDeleteObjectV1Response':
+          return DocumenttypeDeleteObjectV1Response.fromJson(value);
+        case 'DocumenttypeEditObjectV1Request':
+          return DocumenttypeEditObjectV1Request.fromJson(value);
+        case 'DocumenttypeEditObjectV1Response':
+          return DocumenttypeEditObjectV1Response.fromJson(value);
+        case 'DocumenttypeGetAutocompleteV2Response':
+          return DocumenttypeGetAutocompleteV2Response.fromJson(value);
+        case 'DocumenttypeGetAutocompleteV2ResponseMPayload':
+          return DocumenttypeGetAutocompleteV2ResponseMPayload.fromJson(value);
+        case 'DocumenttypeGetListV1Response':
+          return DocumenttypeGetListV1Response.fromJson(value);
+        case 'DocumenttypeGetListV1ResponseMPayload':
+          return DocumenttypeGetListV1ResponseMPayload.fromJson(value);
+        case 'DocumenttypeGetObjectV2Response':
+          return DocumenttypeGetObjectV2Response.fromJson(value);
+        case 'DocumenttypeGetObjectV2ResponseMPayload':
+          return DocumenttypeGetObjectV2ResponseMPayload.fromJson(value);
+        case 'DocumenttypeListElement':
+          return DocumenttypeListElement.fromJson(value);
+        case 'DocumenttypeRequest':
+          return DocumenttypeRequest.fromJson(value);
+        case 'DocumenttypeRequestCompound':
+          return DocumenttypeRequestCompound.fromJson(value);
+        case 'DocumenttypeResponse':
+          return DocumenttypeResponse.fromJson(value);
+        case 'DocumenttypeResponseCompound':
+          return DocumenttypeResponseCompound.fromJson(value);
+        case 'DocumenttypechecklistCreateObjectV1Request':
+          return DocumenttypechecklistCreateObjectV1Request.fromJson(value);
+        case 'DocumenttypechecklistCreateObjectV1Response':
+          return DocumenttypechecklistCreateObjectV1Response.fromJson(value);
+        case 'DocumenttypechecklistCreateObjectV1ResponseMPayload':
+          return DocumenttypechecklistCreateObjectV1ResponseMPayload.fromJson(value);
+        case 'DocumenttypechecklistDeleteObjectV1Response':
+          return DocumenttypechecklistDeleteObjectV1Response.fromJson(value);
+        case 'DocumenttypechecklistEditObjectV1Request':
+          return DocumenttypechecklistEditObjectV1Request.fromJson(value);
+        case 'DocumenttypechecklistEditObjectV1Response':
+          return DocumenttypechecklistEditObjectV1Response.fromJson(value);
+        case 'DocumenttypechecklistGetListV1Response':
+          return DocumenttypechecklistGetListV1Response.fromJson(value);
+        case 'DocumenttypechecklistGetListV1ResponseMPayload':
+          return DocumenttypechecklistGetListV1ResponseMPayload.fromJson(value);
+        case 'DocumenttypechecklistGetObjectV2Response':
+          return DocumenttypechecklistGetObjectV2Response.fromJson(value);
+        case 'DocumenttypechecklistGetObjectV2ResponseMPayload':
+          return DocumenttypechecklistGetObjectV2ResponseMPayload.fromJson(value);
+        case 'DocumenttypechecklistListElement':
+          return DocumenttypechecklistListElement.fromJson(value);
+        case 'DocumenttypechecklistRequest':
+          return DocumenttypechecklistRequest.fromJson(value);
+        case 'DocumenttypechecklistRequestCompound':
+          return DocumenttypechecklistRequestCompound.fromJson(value);
+        case 'DocumenttypechecklistResponse':
+          return DocumenttypechecklistResponse.fromJson(value);
+        case 'DocumenttypechecklistResponseCompound':
+          return DocumenttypechecklistResponseCompound.fromJson(value);
         case 'DomainAutocompleteElementResponse':
           return DomainAutocompleteElementResponse.fromJson(value);
         case 'DomainCreateObjectV1Request':
@@ -3339,6 +3405,22 @@ class ApiClient {
           return FieldEDiscussionRobotTypeTransformer().decode(value);
         case 'FieldEDiscussionmessageStatus':
           return FieldEDiscussionmessageStatusTypeTransformer().decode(value);
+        case 'FieldEDocumenttypeEzcom':
+          return FieldEDocumenttypeEzcomTypeTransformer().decode(value);
+        case 'FieldEDocumenttypePrivacydefault':
+          return FieldEDocumenttypePrivacydefaultTypeTransformer().decode(value);
+        case 'FieldEDocumenttypeRepossession':
+          return FieldEDocumenttypeRepossessionTypeTransformer().decode(value);
+        case 'FieldEDocumenttypeSalebyowner':
+          return FieldEDocumenttypeSalebyownerTypeTransformer().decode(value);
+        case 'FieldEDocumenttypeSaledisplaybyrole':
+          return FieldEDocumenttypeSaledisplaybyroleTypeTransformer().decode(value);
+        case 'FieldEDocumenttypeStatusdefault':
+          return FieldEDocumenttypeStatusdefaultTypeTransformer().decode(value);
+        case 'FieldEDocumenttypeTransactiontype':
+          return FieldEDocumenttypeTransactiontypeTypeTransformer().decode(value);
+        case 'FieldEDocumenttypechecklistStatus':
+          return FieldEDocumenttypechecklistStatusTypeTransformer().decode(value);
         case 'FieldEErrorCode':
           return FieldEErrorCodeTypeTransformer().decode(value);
         case 'FieldEEzdoctemplatedocumentPrivacylevel':
@@ -3927,6 +4009,8 @@ class ApiClient {
           return MultilingualBillingentityinternalDescription.fromJson(value);
         case 'MultilingualBrandingDescription':
           return MultilingualBrandingDescription.fromJson(value);
+        case 'MultilingualDocumenttypeName':
+          return MultilingualDocumenttypeName.fromJson(value);
         case 'MultilingualEzdoctemplatedocumentName':
           return MultilingualEzdoctemplatedocumentName.fromJson(value);
         case 'MultilingualEzmaxcustomerCompany':
