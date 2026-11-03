@@ -29,7 +29,7 @@ class DocumenttypeListElement {
     required this.bDocumenttypeForeclosedsale,
     required this.bDocumenttypeCommercialfunding,
     required this.bDocumenttypeCanafe,
-    required this.eDocumenttypeEzcom,
+    this.eDocumenttypeEzcom,
     required this.eDocumenttypePrivacydefault,
     required this.eDocumenttypeStatusdefault,
     required this.eDocumenttypeSalebyowner,
@@ -89,7 +89,13 @@ class DocumenttypeListElement {
   /// Whether if it's an canafe
   bool bDocumenttypeCanafe;
 
-  FieldEDocumenttypeEzcom eDocumenttypeEzcom;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEDocumenttypeEzcom? eDocumenttypeEzcom;
 
   FieldEDocumenttypePrivacydefault eDocumenttypePrivacydefault;
 
@@ -148,7 +154,7 @@ class DocumenttypeListElement {
     (bDocumenttypeForeclosedsale.hashCode) +
     (bDocumenttypeCommercialfunding.hashCode) +
     (bDocumenttypeCanafe.hashCode) +
-    (eDocumenttypeEzcom.hashCode) +
+    (eDocumenttypeEzcom == null ? 0 : eDocumenttypeEzcom!.hashCode) +
     (eDocumenttypePrivacydefault.hashCode) +
     (eDocumenttypeStatusdefault.hashCode) +
     (eDocumenttypeSalebyowner.hashCode) +
@@ -177,7 +183,11 @@ class DocumenttypeListElement {
       json[r'bDocumenttypeForeclosedsale'] = this.bDocumenttypeForeclosedsale;
       json[r'bDocumenttypeCommercialfunding'] = this.bDocumenttypeCommercialfunding;
       json[r'bDocumenttypeCanafe'] = this.bDocumenttypeCanafe;
+    if (this.eDocumenttypeEzcom != null) {
       json[r'eDocumenttypeEzcom'] = this.eDocumenttypeEzcom;
+    } else {
+      json[r'eDocumenttypeEzcom'] = null;
+    }
       json[r'eDocumenttypePrivacydefault'] = this.eDocumenttypePrivacydefault;
       json[r'eDocumenttypeStatusdefault'] = this.eDocumenttypeStatusdefault;
       json[r'eDocumenttypeSalebyowner'] = this.eDocumenttypeSalebyowner;
@@ -230,8 +240,6 @@ class DocumenttypeListElement {
         assert(json[r'bDocumenttypeCommercialfunding'] != null, 'Required key "DocumenttypeListElement[bDocumenttypeCommercialfunding]" has a null value in JSON.');
         assert(json.containsKey(r'bDocumenttypeCanafe'), 'Required key "DocumenttypeListElement[bDocumenttypeCanafe]" is missing from JSON.');
         assert(json[r'bDocumenttypeCanafe'] != null, 'Required key "DocumenttypeListElement[bDocumenttypeCanafe]" has a null value in JSON.');
-        assert(json.containsKey(r'eDocumenttypeEzcom'), 'Required key "DocumenttypeListElement[eDocumenttypeEzcom]" is missing from JSON.');
-        assert(json[r'eDocumenttypeEzcom'] != null, 'Required key "DocumenttypeListElement[eDocumenttypeEzcom]" has a null value in JSON.');
         assert(json.containsKey(r'eDocumenttypePrivacydefault'), 'Required key "DocumenttypeListElement[eDocumenttypePrivacydefault]" is missing from JSON.');
         assert(json[r'eDocumenttypePrivacydefault'] != null, 'Required key "DocumenttypeListElement[eDocumenttypePrivacydefault]" has a null value in JSON.');
         assert(json.containsKey(r'eDocumenttypeStatusdefault'), 'Required key "DocumenttypeListElement[eDocumenttypeStatusdefault]" is missing from JSON.');
@@ -264,7 +272,7 @@ class DocumenttypeListElement {
         bDocumenttypeForeclosedsale: mapValueOfType<bool>(json, r'bDocumenttypeForeclosedsale')!,
         bDocumenttypeCommercialfunding: mapValueOfType<bool>(json, r'bDocumenttypeCommercialfunding')!,
         bDocumenttypeCanafe: mapValueOfType<bool>(json, r'bDocumenttypeCanafe')!,
-        eDocumenttypeEzcom: FieldEDocumenttypeEzcom.fromJson(json[r'eDocumenttypeEzcom'])!,
+        eDocumenttypeEzcom: FieldEDocumenttypeEzcom.fromJson(json[r'eDocumenttypeEzcom']),
         eDocumenttypePrivacydefault: FieldEDocumenttypePrivacydefault.fromJson(json[r'eDocumenttypePrivacydefault'])!,
         eDocumenttypeStatusdefault: FieldEDocumenttypeStatusdefault.fromJson(json[r'eDocumenttypeStatusdefault'])!,
         eDocumenttypeSalebyowner: FieldEDocumenttypeSalebyowner.fromJson(json[r'eDocumenttypeSalebyowner'])!,
@@ -334,7 +342,6 @@ class DocumenttypeListElement {
     'bDocumenttypeForeclosedsale',
     'bDocumenttypeCommercialfunding',
     'bDocumenttypeCanafe',
-    'eDocumenttypeEzcom',
     'eDocumenttypePrivacydefault',
     'eDocumenttypeStatusdefault',
     'eDocumenttypeSalebyowner',

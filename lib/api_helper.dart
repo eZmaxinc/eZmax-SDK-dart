@@ -58,6 +58,9 @@ String parameterToString(dynamic value) {
   if (value is ComputedECommunicationDirection) {
     return ComputedECommunicationDirectionTypeTransformer().encode(value).toString();
   }
+  if (value is ComputedEDocumenttypeStep) {
+    return ComputedEDocumenttypeStepTypeTransformer().encode(value).toString();
+  }
   if (value is ComputedEEzsigndocumentSteptype) {
     return ComputedEEzsigndocumentSteptypeTypeTransformer().encode(value).toString();
   }

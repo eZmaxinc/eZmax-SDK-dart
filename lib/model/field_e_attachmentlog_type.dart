@@ -31,6 +31,7 @@ enum FieldEAttachmentlogType {
   importedFromProspects._(r'ImportedFromProspects'),
   move._(r'Move'),
   openFromEmail._(r'OpenFromEmail'),
+  pending._(r'Pending'),
   purged._(r'Purged'),
   reject._(r'Reject'),
   rename._(r'Rename'),
@@ -119,6 +120,7 @@ class FieldEAttachmentlogTypeTypeTransformer {
         case r'ImportedFromProspects': return FieldEAttachmentlogType.importedFromProspects;
         case r'Move': return FieldEAttachmentlogType.move;
         case r'OpenFromEmail': return FieldEAttachmentlogType.openFromEmail;
+        case r'Pending': return FieldEAttachmentlogType.pending;
         case r'Purged': return FieldEAttachmentlogType.purged;
         case r'Reject': return FieldEAttachmentlogType.reject;
         case r'Rename': return FieldEAttachmentlogType.rename;

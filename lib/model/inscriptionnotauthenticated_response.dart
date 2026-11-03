@@ -15,6 +15,7 @@ class InscriptionnotauthenticatedResponse {
   InscriptionnotauthenticatedResponse({
     required this.pkiInscriptionnotauthenticatedID,
     required this.fkiInscriptionID,
+    required this.objInscription,
     this.fkiDepartmentID,
     this.sDepartmentNameX,
     this.fkiFinancialinstitutionID,
@@ -63,6 +64,8 @@ class InscriptionnotauthenticatedResponse {
   ///
   /// Minimum value: 0
   int fkiInscriptionID;
+
+  CustomInscription objInscription;
 
   /// The unique ID of the Department
   ///
@@ -294,6 +297,7 @@ class InscriptionnotauthenticatedResponse {
   bool operator ==(Object other) => identical(this, other) || other is InscriptionnotauthenticatedResponse &&
     other.pkiInscriptionnotauthenticatedID == pkiInscriptionnotauthenticatedID &&
     other.fkiInscriptionID == fkiInscriptionID &&
+    other.objInscription == objInscription &&
     other.fkiDepartmentID == fkiDepartmentID &&
     other.sDepartmentNameX == sDepartmentNameX &&
     other.fkiFinancialinstitutionID == fkiFinancialinstitutionID &&
@@ -337,6 +341,7 @@ class InscriptionnotauthenticatedResponse {
     // ignore: unnecessary_parenthesis
     (pkiInscriptionnotauthenticatedID.hashCode) +
     (fkiInscriptionID.hashCode) +
+    (objInscription.hashCode) +
     (fkiDepartmentID == null ? 0 : fkiDepartmentID!.hashCode) +
     (sDepartmentNameX == null ? 0 : sDepartmentNameX!.hashCode) +
     (fkiFinancialinstitutionID == null ? 0 : fkiFinancialinstitutionID!.hashCode) +
@@ -376,12 +381,13 @@ class InscriptionnotauthenticatedResponse {
     (bInscriptionnotauthenticatedDraft.hashCode);
 
   @override
-  String toString() => 'InscriptionnotauthenticatedResponse[pkiInscriptionnotauthenticatedID=$pkiInscriptionnotauthenticatedID, fkiInscriptionID=$fkiInscriptionID, fkiDepartmentID=$fkiDepartmentID, sDepartmentNameX=$sDepartmentNameX, fkiFinancialinstitutionID=$fkiFinancialinstitutionID, sFinancialinstitutionNameX=$sFinancialinstitutionNameX, fkiBuyercontractID=$fkiBuyercontractID, sBuyercontractContract=$sBuyercontractContract, fkiMortgagesupplierID=$fkiMortgagesupplierID, sMortgagesupplierNameX=$sMortgagesupplierNameX, fkiTaxassignmentID=$fkiTaxassignmentID, sTaxassignmentDescriptionX=$sTaxassignmentDescriptionX, dtInscriptionnotauthenticatedTransactiondate=$dtInscriptionnotauthenticatedTransactiondate, dtInscriptionnotauthenticatedTransactiondateReal=$dtInscriptionnotauthenticatedTransactiondateReal, dtInscriptionnotauthenticatedDepositdate=$dtInscriptionnotauthenticatedDepositdate, eInscriptionnotauthenticatedType=$eInscriptionnotauthenticatedType, dInscriptionnotauthenticatedMortgageloan=$dInscriptionnotauthenticatedMortgageloan, etInscriptionnotauthenticatedMortgagetype=$etInscriptionnotauthenticatedMortgagetype, dInscriptionnotauthenticatedTransactionprice=$dInscriptionnotauthenticatedTransactionprice, eInscriptionnotauthenticatedRemunerationtype=$eInscriptionnotauthenticatedRemunerationtype, dInscriptionnotauthenticatedRemuneration=$dInscriptionnotauthenticatedRemuneration, dInscriptionnotauthenticatedRemunerationsubtotal=$dInscriptionnotauthenticatedRemunerationsubtotal, dInscriptionnotauthenticatedRemunerationtotal=$dInscriptionnotauthenticatedRemunerationtotal, dtInscriptionnotauthenticatedCancellationdate=$dtInscriptionnotauthenticatedCancellationdate, dtInscriptionnotauthenticatedPossessiondate=$dtInscriptionnotauthenticatedPossessiondate, sInscriptionnotauthenticatedOffertopurchasenumber=$sInscriptionnotauthenticatedOffertopurchasenumber, dtInscriptionnotauthenticatedNotaryscheduledate=$dtInscriptionnotauthenticatedNotaryscheduledate, dtInscriptionnotauthenticatedFinancingscheduledate=$dtInscriptionnotauthenticatedFinancingscheduledate, bInscriptionnotauthenticatedConditional=$bInscriptionnotauthenticatedConditional, bInscriptionnotauthenticatedMortgageisreferenced=$bInscriptionnotauthenticatedMortgageisreferenced, bInscriptionnotauthenticatedHomeowner=$bInscriptionnotauthenticatedHomeowner, tInscriptionnotauthenticatedConditions=$tInscriptionnotauthenticatedConditions, dtInscriptionnotauthenticatedConditiondeadlinedate=$dtInscriptionnotauthenticatedConditiondeadlinedate, iInscriptionnotauthenticatedOrder=$iInscriptionnotauthenticatedOrder, bInscriptionnotauthenticatedIsactive=$bInscriptionnotauthenticatedIsactive, eInscriptionnotauthenticatedResidenceType=$eInscriptionnotauthenticatedResidenceType, tInscriptionnotauthenticatedChecklistnote=$tInscriptionnotauthenticatedChecklistnote, dInscriptionnotauthenticatedSelleronlyretribution=$dInscriptionnotauthenticatedSelleronlyretribution, bInscriptionnotauthenticatedDraft=$bInscriptionnotauthenticatedDraft]';
+  String toString() => 'InscriptionnotauthenticatedResponse[pkiInscriptionnotauthenticatedID=$pkiInscriptionnotauthenticatedID, fkiInscriptionID=$fkiInscriptionID, objInscription=$objInscription, fkiDepartmentID=$fkiDepartmentID, sDepartmentNameX=$sDepartmentNameX, fkiFinancialinstitutionID=$fkiFinancialinstitutionID, sFinancialinstitutionNameX=$sFinancialinstitutionNameX, fkiBuyercontractID=$fkiBuyercontractID, sBuyercontractContract=$sBuyercontractContract, fkiMortgagesupplierID=$fkiMortgagesupplierID, sMortgagesupplierNameX=$sMortgagesupplierNameX, fkiTaxassignmentID=$fkiTaxassignmentID, sTaxassignmentDescriptionX=$sTaxassignmentDescriptionX, dtInscriptionnotauthenticatedTransactiondate=$dtInscriptionnotauthenticatedTransactiondate, dtInscriptionnotauthenticatedTransactiondateReal=$dtInscriptionnotauthenticatedTransactiondateReal, dtInscriptionnotauthenticatedDepositdate=$dtInscriptionnotauthenticatedDepositdate, eInscriptionnotauthenticatedType=$eInscriptionnotauthenticatedType, dInscriptionnotauthenticatedMortgageloan=$dInscriptionnotauthenticatedMortgageloan, etInscriptionnotauthenticatedMortgagetype=$etInscriptionnotauthenticatedMortgagetype, dInscriptionnotauthenticatedTransactionprice=$dInscriptionnotauthenticatedTransactionprice, eInscriptionnotauthenticatedRemunerationtype=$eInscriptionnotauthenticatedRemunerationtype, dInscriptionnotauthenticatedRemuneration=$dInscriptionnotauthenticatedRemuneration, dInscriptionnotauthenticatedRemunerationsubtotal=$dInscriptionnotauthenticatedRemunerationsubtotal, dInscriptionnotauthenticatedRemunerationtotal=$dInscriptionnotauthenticatedRemunerationtotal, dtInscriptionnotauthenticatedCancellationdate=$dtInscriptionnotauthenticatedCancellationdate, dtInscriptionnotauthenticatedPossessiondate=$dtInscriptionnotauthenticatedPossessiondate, sInscriptionnotauthenticatedOffertopurchasenumber=$sInscriptionnotauthenticatedOffertopurchasenumber, dtInscriptionnotauthenticatedNotaryscheduledate=$dtInscriptionnotauthenticatedNotaryscheduledate, dtInscriptionnotauthenticatedFinancingscheduledate=$dtInscriptionnotauthenticatedFinancingscheduledate, bInscriptionnotauthenticatedConditional=$bInscriptionnotauthenticatedConditional, bInscriptionnotauthenticatedMortgageisreferenced=$bInscriptionnotauthenticatedMortgageisreferenced, bInscriptionnotauthenticatedHomeowner=$bInscriptionnotauthenticatedHomeowner, tInscriptionnotauthenticatedConditions=$tInscriptionnotauthenticatedConditions, dtInscriptionnotauthenticatedConditiondeadlinedate=$dtInscriptionnotauthenticatedConditiondeadlinedate, iInscriptionnotauthenticatedOrder=$iInscriptionnotauthenticatedOrder, bInscriptionnotauthenticatedIsactive=$bInscriptionnotauthenticatedIsactive, eInscriptionnotauthenticatedResidenceType=$eInscriptionnotauthenticatedResidenceType, tInscriptionnotauthenticatedChecklistnote=$tInscriptionnotauthenticatedChecklistnote, dInscriptionnotauthenticatedSelleronlyretribution=$dInscriptionnotauthenticatedSelleronlyretribution, bInscriptionnotauthenticatedDraft=$bInscriptionnotauthenticatedDraft]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiInscriptionnotauthenticatedID'] = this.pkiInscriptionnotauthenticatedID;
       json[r'fkiInscriptionID'] = this.fkiInscriptionID;
+      json[r'objInscription'] = this.objInscription;
     if (this.fkiDepartmentID != null) {
       json[r'fkiDepartmentID'] = this.fkiDepartmentID;
     } else {
@@ -505,6 +511,8 @@ class InscriptionnotauthenticatedResponse {
         assert(json[r'pkiInscriptionnotauthenticatedID'] != null, 'Required key "InscriptionnotauthenticatedResponse[pkiInscriptionnotauthenticatedID]" has a null value in JSON.');
         assert(json.containsKey(r'fkiInscriptionID'), 'Required key "InscriptionnotauthenticatedResponse[fkiInscriptionID]" is missing from JSON.');
         assert(json[r'fkiInscriptionID'] != null, 'Required key "InscriptionnotauthenticatedResponse[fkiInscriptionID]" has a null value in JSON.');
+        assert(json.containsKey(r'objInscription'), 'Required key "InscriptionnotauthenticatedResponse[objInscription]" is missing from JSON.');
+        assert(json[r'objInscription'] != null, 'Required key "InscriptionnotauthenticatedResponse[objInscription]" has a null value in JSON.');
         assert(json.containsKey(r'fkiTaxassignmentID'), 'Required key "InscriptionnotauthenticatedResponse[fkiTaxassignmentID]" is missing from JSON.');
         assert(json[r'fkiTaxassignmentID'] != null, 'Required key "InscriptionnotauthenticatedResponse[fkiTaxassignmentID]" has a null value in JSON.');
         assert(json.containsKey(r'eInscriptionnotauthenticatedType'), 'Required key "InscriptionnotauthenticatedResponse[eInscriptionnotauthenticatedType]" is missing from JSON.');
@@ -551,6 +559,7 @@ class InscriptionnotauthenticatedResponse {
       return InscriptionnotauthenticatedResponse(
         pkiInscriptionnotauthenticatedID: mapValueOfType<int>(json, r'pkiInscriptionnotauthenticatedID')!,
         fkiInscriptionID: mapValueOfType<int>(json, r'fkiInscriptionID')!,
+        objInscription: CustomInscription.fromJson(json[r'objInscription'])!,
         fkiDepartmentID: mapValueOfType<int>(json, r'fkiDepartmentID'),
         sDepartmentNameX: mapValueOfType<String>(json, r'sDepartmentNameX'),
         fkiFinancialinstitutionID: mapValueOfType<int>(json, r'fkiFinancialinstitutionID'),
@@ -637,6 +646,7 @@ class InscriptionnotauthenticatedResponse {
   static const requiredKeys = <String>{
     'pkiInscriptionnotauthenticatedID',
     'fkiInscriptionID',
+    'objInscription',
     'fkiTaxassignmentID',
     'eInscriptionnotauthenticatedType',
     'dInscriptionnotauthenticatedMortgageloan',

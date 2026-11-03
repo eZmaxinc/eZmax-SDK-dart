@@ -15,6 +15,7 @@ class DocumenttypeRequestCompound {
   DocumenttypeRequestCompound({
     this.pkiDocumenttypeID,
     required this.objDocumenttypeName,
+    required this.eDocumenttypeStep,
     required this.sDocumenttypeDefaultfilename,
     required this.bDocumenttypeShowagent,
     required this.bDocumenttypeIsactive,
@@ -29,13 +30,14 @@ class DocumenttypeRequestCompound {
     required this.bDocumenttypeForeclosedsale,
     required this.bDocumenttypeCommercialfunding,
     required this.bDocumenttypeCanafe,
-    required this.eDocumenttypeEzcom,
+    this.eDocumenttypeEzcom,
     required this.eDocumenttypePrivacydefault,
     required this.eDocumenttypeStatusdefault,
     required this.eDocumenttypeSalebyowner,
     required this.eDocumenttypeSaledisplaybyrole,
     required this.eDocumenttypeTransactiontype,
     required this.eDocumenttypeRepossession,
+    this.aFkiInscriptiontypeID = const [],
   });
 
   /// The unique ID of the Documenttype
@@ -51,6 +53,8 @@ class DocumenttypeRequestCompound {
   int? pkiDocumenttypeID;
 
   MultilingualDocumenttypeName objDocumenttypeName;
+
+  ComputedEDocumenttypeStep eDocumenttypeStep;
 
   /// The defaultfilename of the Documenttype
   String sDocumenttypeDefaultfilename;
@@ -94,7 +98,13 @@ class DocumenttypeRequestCompound {
   /// Whether if it's an canafe
   bool bDocumenttypeCanafe;
 
-  FieldEDocumenttypeEzcom eDocumenttypeEzcom;
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEDocumenttypeEzcom? eDocumenttypeEzcom;
 
   FieldEDocumenttypePrivacydefault eDocumenttypePrivacydefault;
 
@@ -108,10 +118,13 @@ class DocumenttypeRequestCompound {
 
   FieldEDocumenttypeRepossession eDocumenttypeRepossession;
 
+  List<int> aFkiInscriptiontypeID;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is DocumenttypeRequestCompound &&
     other.pkiDocumenttypeID == pkiDocumenttypeID &&
     other.objDocumenttypeName == objDocumenttypeName &&
+    other.eDocumenttypeStep == eDocumenttypeStep &&
     other.sDocumenttypeDefaultfilename == sDocumenttypeDefaultfilename &&
     other.bDocumenttypeShowagent == bDocumenttypeShowagent &&
     other.bDocumenttypeIsactive == bDocumenttypeIsactive &&
@@ -132,13 +145,15 @@ class DocumenttypeRequestCompound {
     other.eDocumenttypeSalebyowner == eDocumenttypeSalebyowner &&
     other.eDocumenttypeSaledisplaybyrole == eDocumenttypeSaledisplaybyrole &&
     other.eDocumenttypeTransactiontype == eDocumenttypeTransactiontype &&
-    other.eDocumenttypeRepossession == eDocumenttypeRepossession;
+    other.eDocumenttypeRepossession == eDocumenttypeRepossession &&
+    _deepEquality.equals(other.aFkiInscriptiontypeID, aFkiInscriptiontypeID);
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiDocumenttypeID == null ? 0 : pkiDocumenttypeID!.hashCode) +
     (objDocumenttypeName.hashCode) +
+    (eDocumenttypeStep.hashCode) +
     (sDocumenttypeDefaultfilename.hashCode) +
     (bDocumenttypeShowagent.hashCode) +
     (bDocumenttypeIsactive.hashCode) +
@@ -153,16 +168,17 @@ class DocumenttypeRequestCompound {
     (bDocumenttypeForeclosedsale.hashCode) +
     (bDocumenttypeCommercialfunding.hashCode) +
     (bDocumenttypeCanafe.hashCode) +
-    (eDocumenttypeEzcom.hashCode) +
+    (eDocumenttypeEzcom == null ? 0 : eDocumenttypeEzcom!.hashCode) +
     (eDocumenttypePrivacydefault.hashCode) +
     (eDocumenttypeStatusdefault.hashCode) +
     (eDocumenttypeSalebyowner.hashCode) +
     (eDocumenttypeSaledisplaybyrole.hashCode) +
     (eDocumenttypeTransactiontype.hashCode) +
-    (eDocumenttypeRepossession.hashCode);
+    (eDocumenttypeRepossession.hashCode) +
+    (aFkiInscriptiontypeID.hashCode);
 
   @override
-  String toString() => 'DocumenttypeRequestCompound[pkiDocumenttypeID=$pkiDocumenttypeID, objDocumenttypeName=$objDocumenttypeName, sDocumenttypeDefaultfilename=$sDocumenttypeDefaultfilename, bDocumenttypeShowagent=$bDocumenttypeShowagent, bDocumenttypeIsactive=$bDocumenttypeIsactive, bDocumenttypeIsrequired=$bDocumenttypeIsrequired, bDocumenttypeSale=$bDocumenttypeSale, bDocumenttypeRental=$bDocumenttypeRental, bDocumenttypeReference=$bDocumenttypeReference, bDocumenttypeMortgagereference=$bDocumenttypeMortgagereference, bDocumenttypeEvaluation=$bDocumenttypeEvaluation, bDocumenttypeConsultation=$bDocumenttypeConsultation, bDocumenttypeOtherservices=$bDocumenttypeOtherservices, bDocumenttypeForeclosedsale=$bDocumenttypeForeclosedsale, bDocumenttypeCommercialfunding=$bDocumenttypeCommercialfunding, bDocumenttypeCanafe=$bDocumenttypeCanafe, eDocumenttypeEzcom=$eDocumenttypeEzcom, eDocumenttypePrivacydefault=$eDocumenttypePrivacydefault, eDocumenttypeStatusdefault=$eDocumenttypeStatusdefault, eDocumenttypeSalebyowner=$eDocumenttypeSalebyowner, eDocumenttypeSaledisplaybyrole=$eDocumenttypeSaledisplaybyrole, eDocumenttypeTransactiontype=$eDocumenttypeTransactiontype, eDocumenttypeRepossession=$eDocumenttypeRepossession]';
+  String toString() => 'DocumenttypeRequestCompound[pkiDocumenttypeID=$pkiDocumenttypeID, objDocumenttypeName=$objDocumenttypeName, eDocumenttypeStep=$eDocumenttypeStep, sDocumenttypeDefaultfilename=$sDocumenttypeDefaultfilename, bDocumenttypeShowagent=$bDocumenttypeShowagent, bDocumenttypeIsactive=$bDocumenttypeIsactive, bDocumenttypeIsrequired=$bDocumenttypeIsrequired, bDocumenttypeSale=$bDocumenttypeSale, bDocumenttypeRental=$bDocumenttypeRental, bDocumenttypeReference=$bDocumenttypeReference, bDocumenttypeMortgagereference=$bDocumenttypeMortgagereference, bDocumenttypeEvaluation=$bDocumenttypeEvaluation, bDocumenttypeConsultation=$bDocumenttypeConsultation, bDocumenttypeOtherservices=$bDocumenttypeOtherservices, bDocumenttypeForeclosedsale=$bDocumenttypeForeclosedsale, bDocumenttypeCommercialfunding=$bDocumenttypeCommercialfunding, bDocumenttypeCanafe=$bDocumenttypeCanafe, eDocumenttypeEzcom=$eDocumenttypeEzcom, eDocumenttypePrivacydefault=$eDocumenttypePrivacydefault, eDocumenttypeStatusdefault=$eDocumenttypeStatusdefault, eDocumenttypeSalebyowner=$eDocumenttypeSalebyowner, eDocumenttypeSaledisplaybyrole=$eDocumenttypeSaledisplaybyrole, eDocumenttypeTransactiontype=$eDocumenttypeTransactiontype, eDocumenttypeRepossession=$eDocumenttypeRepossession, aFkiInscriptiontypeID=$aFkiInscriptiontypeID]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -172,6 +188,7 @@ class DocumenttypeRequestCompound {
       json[r'pkiDocumenttypeID'] = null;
     }
       json[r'objDocumenttypeName'] = this.objDocumenttypeName;
+      json[r'eDocumenttypeStep'] = this.eDocumenttypeStep;
       json[r'sDocumenttypeDefaultfilename'] = this.sDocumenttypeDefaultfilename;
       json[r'bDocumenttypeShowagent'] = this.bDocumenttypeShowagent;
       json[r'bDocumenttypeIsactive'] = this.bDocumenttypeIsactive;
@@ -186,13 +203,18 @@ class DocumenttypeRequestCompound {
       json[r'bDocumenttypeForeclosedsale'] = this.bDocumenttypeForeclosedsale;
       json[r'bDocumenttypeCommercialfunding'] = this.bDocumenttypeCommercialfunding;
       json[r'bDocumenttypeCanafe'] = this.bDocumenttypeCanafe;
+    if (this.eDocumenttypeEzcom != null) {
       json[r'eDocumenttypeEzcom'] = this.eDocumenttypeEzcom;
+    } else {
+      json[r'eDocumenttypeEzcom'] = null;
+    }
       json[r'eDocumenttypePrivacydefault'] = this.eDocumenttypePrivacydefault;
       json[r'eDocumenttypeStatusdefault'] = this.eDocumenttypeStatusdefault;
       json[r'eDocumenttypeSalebyowner'] = this.eDocumenttypeSalebyowner;
       json[r'eDocumenttypeSaledisplaybyrole'] = this.eDocumenttypeSaledisplaybyrole;
       json[r'eDocumenttypeTransactiontype'] = this.eDocumenttypeTransactiontype;
       json[r'eDocumenttypeRepossession'] = this.eDocumenttypeRepossession;
+      json[r'a_fkiInscriptiontypeID'] = this.aFkiInscriptiontypeID;
     return json;
   }
 
@@ -209,6 +231,8 @@ class DocumenttypeRequestCompound {
       assert(() {
         assert(json.containsKey(r'objDocumenttypeName'), 'Required key "DocumenttypeRequestCompound[objDocumenttypeName]" is missing from JSON.');
         assert(json[r'objDocumenttypeName'] != null, 'Required key "DocumenttypeRequestCompound[objDocumenttypeName]" has a null value in JSON.');
+        assert(json.containsKey(r'eDocumenttypeStep'), 'Required key "DocumenttypeRequestCompound[eDocumenttypeStep]" is missing from JSON.');
+        assert(json[r'eDocumenttypeStep'] != null, 'Required key "DocumenttypeRequestCompound[eDocumenttypeStep]" has a null value in JSON.');
         assert(json.containsKey(r'sDocumenttypeDefaultfilename'), 'Required key "DocumenttypeRequestCompound[sDocumenttypeDefaultfilename]" is missing from JSON.');
         assert(json[r'sDocumenttypeDefaultfilename'] != null, 'Required key "DocumenttypeRequestCompound[sDocumenttypeDefaultfilename]" has a null value in JSON.');
         assert(json.containsKey(r'bDocumenttypeShowagent'), 'Required key "DocumenttypeRequestCompound[bDocumenttypeShowagent]" is missing from JSON.');
@@ -237,8 +261,6 @@ class DocumenttypeRequestCompound {
         assert(json[r'bDocumenttypeCommercialfunding'] != null, 'Required key "DocumenttypeRequestCompound[bDocumenttypeCommercialfunding]" has a null value in JSON.');
         assert(json.containsKey(r'bDocumenttypeCanafe'), 'Required key "DocumenttypeRequestCompound[bDocumenttypeCanafe]" is missing from JSON.');
         assert(json[r'bDocumenttypeCanafe'] != null, 'Required key "DocumenttypeRequestCompound[bDocumenttypeCanafe]" has a null value in JSON.');
-        assert(json.containsKey(r'eDocumenttypeEzcom'), 'Required key "DocumenttypeRequestCompound[eDocumenttypeEzcom]" is missing from JSON.');
-        assert(json[r'eDocumenttypeEzcom'] != null, 'Required key "DocumenttypeRequestCompound[eDocumenttypeEzcom]" has a null value in JSON.');
         assert(json.containsKey(r'eDocumenttypePrivacydefault'), 'Required key "DocumenttypeRequestCompound[eDocumenttypePrivacydefault]" is missing from JSON.');
         assert(json[r'eDocumenttypePrivacydefault'] != null, 'Required key "DocumenttypeRequestCompound[eDocumenttypePrivacydefault]" has a null value in JSON.');
         assert(json.containsKey(r'eDocumenttypeStatusdefault'), 'Required key "DocumenttypeRequestCompound[eDocumenttypeStatusdefault]" is missing from JSON.');
@@ -251,12 +273,15 @@ class DocumenttypeRequestCompound {
         assert(json[r'eDocumenttypeTransactiontype'] != null, 'Required key "DocumenttypeRequestCompound[eDocumenttypeTransactiontype]" has a null value in JSON.');
         assert(json.containsKey(r'eDocumenttypeRepossession'), 'Required key "DocumenttypeRequestCompound[eDocumenttypeRepossession]" is missing from JSON.');
         assert(json[r'eDocumenttypeRepossession'] != null, 'Required key "DocumenttypeRequestCompound[eDocumenttypeRepossession]" has a null value in JSON.');
+        assert(json.containsKey(r'a_fkiInscriptiontypeID'), 'Required key "DocumenttypeRequestCompound[a_fkiInscriptiontypeID]" is missing from JSON.');
+        assert(json[r'a_fkiInscriptiontypeID'] != null, 'Required key "DocumenttypeRequestCompound[a_fkiInscriptiontypeID]" has a null value in JSON.');
         return true;
       }());
 
       return DocumenttypeRequestCompound(
         pkiDocumenttypeID: mapValueOfType<int>(json, r'pkiDocumenttypeID'),
         objDocumenttypeName: MultilingualDocumenttypeName.fromJson(json[r'objDocumenttypeName'])!,
+        eDocumenttypeStep: ComputedEDocumenttypeStep.fromJson(json[r'eDocumenttypeStep'])!,
         sDocumenttypeDefaultfilename: mapValueOfType<String>(json, r'sDocumenttypeDefaultfilename')!,
         bDocumenttypeShowagent: mapValueOfType<bool>(json, r'bDocumenttypeShowagent')!,
         bDocumenttypeIsactive: mapValueOfType<bool>(json, r'bDocumenttypeIsactive')!,
@@ -271,13 +296,16 @@ class DocumenttypeRequestCompound {
         bDocumenttypeForeclosedsale: mapValueOfType<bool>(json, r'bDocumenttypeForeclosedsale')!,
         bDocumenttypeCommercialfunding: mapValueOfType<bool>(json, r'bDocumenttypeCommercialfunding')!,
         bDocumenttypeCanafe: mapValueOfType<bool>(json, r'bDocumenttypeCanafe')!,
-        eDocumenttypeEzcom: FieldEDocumenttypeEzcom.fromJson(json[r'eDocumenttypeEzcom'])!,
+        eDocumenttypeEzcom: FieldEDocumenttypeEzcom.fromJson(json[r'eDocumenttypeEzcom']),
         eDocumenttypePrivacydefault: FieldEDocumenttypePrivacydefault.fromJson(json[r'eDocumenttypePrivacydefault'])!,
         eDocumenttypeStatusdefault: FieldEDocumenttypeStatusdefault.fromJson(json[r'eDocumenttypeStatusdefault'])!,
         eDocumenttypeSalebyowner: FieldEDocumenttypeSalebyowner.fromJson(json[r'eDocumenttypeSalebyowner'])!,
         eDocumenttypeSaledisplaybyrole: FieldEDocumenttypeSaledisplaybyrole.fromJson(json[r'eDocumenttypeSaledisplaybyrole'])!,
         eDocumenttypeTransactiontype: FieldEDocumenttypeTransactiontype.fromJson(json[r'eDocumenttypeTransactiontype'])!,
         eDocumenttypeRepossession: FieldEDocumenttypeRepossession.fromJson(json[r'eDocumenttypeRepossession'])!,
+        aFkiInscriptiontypeID: json[r'a_fkiInscriptiontypeID'] is Iterable
+            ? (json[r'a_fkiInscriptiontypeID'] as Iterable).cast<int>().toList(growable: false)
+            : const [],
       );
     }
     return null;
@@ -326,6 +354,7 @@ class DocumenttypeRequestCompound {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'objDocumenttypeName',
+    'eDocumenttypeStep',
     'sDocumenttypeDefaultfilename',
     'bDocumenttypeShowagent',
     'bDocumenttypeIsactive',
@@ -340,13 +369,13 @@ class DocumenttypeRequestCompound {
     'bDocumenttypeForeclosedsale',
     'bDocumenttypeCommercialfunding',
     'bDocumenttypeCanafe',
-    'eDocumenttypeEzcom',
     'eDocumenttypePrivacydefault',
     'eDocumenttypeStatusdefault',
     'eDocumenttypeSalebyowner',
     'eDocumenttypeSaledisplaybyrole',
     'eDocumenttypeTransactiontype',
     'eDocumenttypeRepossession',
+    'a_fkiInscriptiontypeID',
   };
 }
 

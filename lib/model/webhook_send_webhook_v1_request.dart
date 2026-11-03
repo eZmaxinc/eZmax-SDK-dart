@@ -15,6 +15,7 @@ class WebhookSendWebhookV1Request {
   WebhookSendWebhookV1Request({
     required this.eWebhookModule,
     this.eWebhookEzsignevent,
+    this.eWebhookEzmaxpartnerevent,
     this.eWebhookManagementevent,
     this.eWebhookRealestateevent,
     this.fkiEzsignfolderID,
@@ -33,6 +34,14 @@ class WebhookSendWebhookV1Request {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   CustomEWebhookEzsignevent? eWebhookEzsignevent;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  FieldEWebhookEzmaxpartnerevent? eWebhookEzmaxpartnerevent;
 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -110,6 +119,7 @@ class WebhookSendWebhookV1Request {
   bool operator ==(Object other) => identical(this, other) || other is WebhookSendWebhookV1Request &&
     other.eWebhookModule == eWebhookModule &&
     other.eWebhookEzsignevent == eWebhookEzsignevent &&
+    other.eWebhookEzmaxpartnerevent == eWebhookEzmaxpartnerevent &&
     other.eWebhookManagementevent == eWebhookManagementevent &&
     other.eWebhookRealestateevent == eWebhookRealestateevent &&
     other.fkiEzsignfolderID == fkiEzsignfolderID &&
@@ -123,6 +133,7 @@ class WebhookSendWebhookV1Request {
     // ignore: unnecessary_parenthesis
     (eWebhookModule.hashCode) +
     (eWebhookEzsignevent == null ? 0 : eWebhookEzsignevent!.hashCode) +
+    (eWebhookEzmaxpartnerevent == null ? 0 : eWebhookEzmaxpartnerevent!.hashCode) +
     (eWebhookManagementevent == null ? 0 : eWebhookManagementevent!.hashCode) +
     (eWebhookRealestateevent == null ? 0 : eWebhookRealestateevent!.hashCode) +
     (fkiEzsignfolderID == null ? 0 : fkiEzsignfolderID!.hashCode) +
@@ -132,7 +143,7 @@ class WebhookSendWebhookV1Request {
     (fkiUserstagedID == null ? 0 : fkiUserstagedID!.hashCode);
 
   @override
-  String toString() => 'WebhookSendWebhookV1Request[eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookManagementevent=$eWebhookManagementevent, eWebhookRealestateevent=$eWebhookRealestateevent, fkiEzsignfolderID=$fkiEzsignfolderID, fkiEzsigndocumentID=$fkiEzsigndocumentID, fkiEzsignsignerID=$fkiEzsignsignerID, fkiUserID=$fkiUserID, fkiUserstagedID=$fkiUserstagedID]';
+  String toString() => 'WebhookSendWebhookV1Request[eWebhookModule=$eWebhookModule, eWebhookEzsignevent=$eWebhookEzsignevent, eWebhookEzmaxpartnerevent=$eWebhookEzmaxpartnerevent, eWebhookManagementevent=$eWebhookManagementevent, eWebhookRealestateevent=$eWebhookRealestateevent, fkiEzsignfolderID=$fkiEzsignfolderID, fkiEzsigndocumentID=$fkiEzsigndocumentID, fkiEzsignsignerID=$fkiEzsignsignerID, fkiUserID=$fkiUserID, fkiUserstagedID=$fkiUserstagedID]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -141,6 +152,11 @@ class WebhookSendWebhookV1Request {
       json[r'eWebhookEzsignevent'] = this.eWebhookEzsignevent;
     } else {
       json[r'eWebhookEzsignevent'] = null;
+    }
+    if (this.eWebhookEzmaxpartnerevent != null) {
+      json[r'eWebhookEzmaxpartnerevent'] = this.eWebhookEzmaxpartnerevent;
+    } else {
+      json[r'eWebhookEzmaxpartnerevent'] = null;
     }
     if (this.eWebhookManagementevent != null) {
       json[r'eWebhookManagementevent'] = this.eWebhookManagementevent;
@@ -199,6 +215,7 @@ class WebhookSendWebhookV1Request {
       return WebhookSendWebhookV1Request(
         eWebhookModule: FieldEWebhookModule.fromJson(json[r'eWebhookModule'])!,
         eWebhookEzsignevent: CustomEWebhookEzsignevent.fromJson(json[r'eWebhookEzsignevent']),
+        eWebhookEzmaxpartnerevent: FieldEWebhookEzmaxpartnerevent.fromJson(json[r'eWebhookEzmaxpartnerevent']),
         eWebhookManagementevent: FieldEWebhookManagementevent.fromJson(json[r'eWebhookManagementevent']),
         eWebhookRealestateevent: FieldEWebhookRealestateevent.fromJson(json[r'eWebhookRealestateevent']),
         fkiEzsignfolderID: mapValueOfType<int>(json, r'fkiEzsignfolderID'),

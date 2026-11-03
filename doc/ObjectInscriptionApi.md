@@ -20,6 +20,7 @@ Method | HTTP request | Description
 [**inscriptionGetObjectV2**](ObjectInscriptionApi.md#inscriptiongetobjectv2) | **GET** /2/object/inscription/{pkiInscriptionID} | Retrieve an existing Inscription
 [**inscriptionImportIntoEDMV1**](ObjectInscriptionApi.md#inscriptionimportintoedmv1) | **POST** /1/object/inscription/{pkiInscriptionID}/importIntoEDM | Import attachments into the Inscription
 [**inscriptionPrepareFilesTransferV1**](ObjectInscriptionApi.md#inscriptionpreparefilestransferv1) | **POST** /1/object/inscription/{pkiInscriptionID}/prepareFilesTransfer | Prepares file transfer into EDM
+[**inscriptionSynchronizationDocumenttypeV1**](ObjectInscriptionApi.md#inscriptionsynchronizationdocumenttypev1) | **POST** /1/object/inscription/{pkiInscriptionID}/synchronizationDocumenttype | Synchronization of the Documenttype in the Inscription
 
 
 # **inscriptionBatchDownloadV1**
@@ -537,6 +538,55 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**InscriptionPrepareFilesTransferV1Response**](InscriptionPrepareFilesTransferV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **inscriptionSynchronizationDocumenttypeV1**
+> InscriptionSynchronizationDocumenttypeV1Response inscriptionSynchronizationDocumenttypeV1(pkiInscriptionID, body)
+
+Synchronization of the Documenttype in the Inscription
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectInscriptionApi();
+final pkiInscriptionID = 56; // int | 
+final body = Object(); // Object | 
+
+try {
+    final result = api_instance.inscriptionSynchronizationDocumenttypeV1(pkiInscriptionID, body);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectInscriptionApi->inscriptionSynchronizationDocumenttypeV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiInscriptionID** | **int**|  | 
+ **body** | **Object**|  | 
+
+### Return type
+
+[**InscriptionSynchronizationDocumenttypeV1Response**](InscriptionSynchronizationDocumenttypeV1Response.md)
 
 ### Authorization
 

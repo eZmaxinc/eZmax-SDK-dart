@@ -14,7 +14,7 @@ class AttachmentrejectreasonAutocompleteElementResponse {
   /// Returns a new [AttachmentrejectreasonAutocompleteElementResponse] instance.
   AttachmentrejectreasonAutocompleteElementResponse({
     required this.pkiAttachmentrejectreasonID,
-    required this.sAttachmentrejectreasonnameX,
+    required this.sAttachmentrejectreasonNameX,
     required this.bAttachmentrejectreasonIsactive,
   });
 
@@ -25,7 +25,7 @@ class AttachmentrejectreasonAutocompleteElementResponse {
   int pkiAttachmentrejectreasonID;
 
   /// The name of the Attachmentrejectreason in the language of the requester
-  String sAttachmentrejectreasonnameX;
+  String sAttachmentrejectreasonNameX;
 
   /// Whether the Attachmentrejectreason is active or not
   bool bAttachmentrejectreasonIsactive;
@@ -33,23 +33,23 @@ class AttachmentrejectreasonAutocompleteElementResponse {
   @override
   bool operator ==(Object other) => identical(this, other) || other is AttachmentrejectreasonAutocompleteElementResponse &&
     other.pkiAttachmentrejectreasonID == pkiAttachmentrejectreasonID &&
-    other.sAttachmentrejectreasonnameX == sAttachmentrejectreasonnameX &&
+    other.sAttachmentrejectreasonNameX == sAttachmentrejectreasonNameX &&
     other.bAttachmentrejectreasonIsactive == bAttachmentrejectreasonIsactive;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
     (pkiAttachmentrejectreasonID.hashCode) +
-    (sAttachmentrejectreasonnameX.hashCode) +
+    (sAttachmentrejectreasonNameX.hashCode) +
     (bAttachmentrejectreasonIsactive.hashCode);
 
   @override
-  String toString() => 'AttachmentrejectreasonAutocompleteElementResponse[pkiAttachmentrejectreasonID=$pkiAttachmentrejectreasonID, sAttachmentrejectreasonnameX=$sAttachmentrejectreasonnameX, bAttachmentrejectreasonIsactive=$bAttachmentrejectreasonIsactive]';
+  String toString() => 'AttachmentrejectreasonAutocompleteElementResponse[pkiAttachmentrejectreasonID=$pkiAttachmentrejectreasonID, sAttachmentrejectreasonNameX=$sAttachmentrejectreasonNameX, bAttachmentrejectreasonIsactive=$bAttachmentrejectreasonIsactive]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
       json[r'pkiAttachmentrejectreasonID'] = this.pkiAttachmentrejectreasonID;
-      json[r'sAttachmentrejectreasonnameX'] = this.sAttachmentrejectreasonnameX;
+      json[r'sAttachmentrejectreasonNameX'] = this.sAttachmentrejectreasonNameX;
       json[r'bAttachmentrejectreasonIsactive'] = this.bAttachmentrejectreasonIsactive;
     return json;
   }
@@ -67,8 +67,8 @@ class AttachmentrejectreasonAutocompleteElementResponse {
       assert(() {
         assert(json.containsKey(r'pkiAttachmentrejectreasonID'), 'Required key "AttachmentrejectreasonAutocompleteElementResponse[pkiAttachmentrejectreasonID]" is missing from JSON.');
         assert(json[r'pkiAttachmentrejectreasonID'] != null, 'Required key "AttachmentrejectreasonAutocompleteElementResponse[pkiAttachmentrejectreasonID]" has a null value in JSON.');
-        assert(json.containsKey(r'sAttachmentrejectreasonnameX'), 'Required key "AttachmentrejectreasonAutocompleteElementResponse[sAttachmentrejectreasonnameX]" is missing from JSON.');
-        assert(json[r'sAttachmentrejectreasonnameX'] != null, 'Required key "AttachmentrejectreasonAutocompleteElementResponse[sAttachmentrejectreasonnameX]" has a null value in JSON.');
+        assert(json.containsKey(r'sAttachmentrejectreasonNameX'), 'Required key "AttachmentrejectreasonAutocompleteElementResponse[sAttachmentrejectreasonNameX]" is missing from JSON.');
+        assert(json[r'sAttachmentrejectreasonNameX'] != null, 'Required key "AttachmentrejectreasonAutocompleteElementResponse[sAttachmentrejectreasonNameX]" has a null value in JSON.');
         assert(json.containsKey(r'bAttachmentrejectreasonIsactive'), 'Required key "AttachmentrejectreasonAutocompleteElementResponse[bAttachmentrejectreasonIsactive]" is missing from JSON.');
         assert(json[r'bAttachmentrejectreasonIsactive'] != null, 'Required key "AttachmentrejectreasonAutocompleteElementResponse[bAttachmentrejectreasonIsactive]" has a null value in JSON.');
         return true;
@@ -76,7 +76,7 @@ class AttachmentrejectreasonAutocompleteElementResponse {
 
       return AttachmentrejectreasonAutocompleteElementResponse(
         pkiAttachmentrejectreasonID: mapValueOfType<int>(json, r'pkiAttachmentrejectreasonID')!,
-        sAttachmentrejectreasonnameX: mapValueOfType<String>(json, r'sAttachmentrejectreasonnameX')!,
+        sAttachmentrejectreasonNameX: mapValueOfType<String>(json, r'sAttachmentrejectreasonNameX')!,
         bAttachmentrejectreasonIsactive: mapValueOfType<bool>(json, r'bAttachmentrejectreasonIsactive')!,
       );
     }
@@ -126,7 +126,7 @@ class AttachmentrejectreasonAutocompleteElementResponse {
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
     'pkiAttachmentrejectreasonID',
-    'sAttachmentrejectreasonnameX',
+    'sAttachmentrejectreasonNameX',
     'bAttachmentrejectreasonIsactive',
   };
 }

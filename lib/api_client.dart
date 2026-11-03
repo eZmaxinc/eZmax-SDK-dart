@@ -367,22 +367,10 @@ class ApiClient {
           return AttachmentDeleteV1Response.fromJson(value);
         case 'AttachmentDeleteV1ResponseMPayload':
           return AttachmentDeleteV1ResponseMPayload.fromJson(value);
-        case 'AttachmentDocumentTypeV1Request':
-          return AttachmentDocumentTypeV1Request.fromJson(value);
-        case 'AttachmentDocumentTypeV1Response':
-          return AttachmentDocumentTypeV1Response.fromJson(value);
-        case 'AttachmentDocumentTypeV1ResponseMPayload':
-          return AttachmentDocumentTypeV1ResponseMPayload.fromJson(value);
         case 'AttachmentGetAttachmentlogsV1Response':
           return AttachmentGetAttachmentlogsV1Response.fromJson(value);
         case 'AttachmentGetAttachmentlogsV1ResponseMPayload':
           return AttachmentGetAttachmentlogsV1ResponseMPayload.fromJson(value);
-        case 'AttachmentPrivacyV1Request':
-          return AttachmentPrivacyV1Request.fromJson(value);
-        case 'AttachmentPrivacyV1Response':
-          return AttachmentPrivacyV1Response.fromJson(value);
-        case 'AttachmentPrivacyV1ResponseMPayload':
-          return AttachmentPrivacyV1ResponseMPayload.fromJson(value);
         case 'AttachmentRenameV1Request':
           return AttachmentRenameV1Request.fromJson(value);
         case 'AttachmentRenameV1Response':
@@ -399,6 +387,18 @@ class ApiClient {
           return AttachmentRestoreV1Response.fromJson(value);
         case 'AttachmentRestoreV1ResponseMPayload':
           return AttachmentRestoreV1ResponseMPayload.fromJson(value);
+        case 'AttachmentSetDocumentTypeV1Request':
+          return AttachmentSetDocumentTypeV1Request.fromJson(value);
+        case 'AttachmentSetDocumentTypeV1Response':
+          return AttachmentSetDocumentTypeV1Response.fromJson(value);
+        case 'AttachmentSetDocumentTypeV1ResponseMPayload':
+          return AttachmentSetDocumentTypeV1ResponseMPayload.fromJson(value);
+        case 'AttachmentSetPrivacyV1Request':
+          return AttachmentSetPrivacyV1Request.fromJson(value);
+        case 'AttachmentSetPrivacyV1Response':
+          return AttachmentSetPrivacyV1Response.fromJson(value);
+        case 'AttachmentSetPrivacyV1ResponseMPayload':
+          return AttachmentSetPrivacyV1ResponseMPayload.fromJson(value);
         case 'AttachmentValidateV1Request':
           return AttachmentValidateV1Request.fromJson(value);
         case 'AttachmentValidateV1Response':
@@ -809,6 +809,8 @@ class ApiClient {
           return CompanyGetAutocompleteV2ResponseMPayload.fromJson(value);
         case 'ComputedECommunicationDirection':
           return ComputedECommunicationDirectionTypeTransformer().decode(value);
+        case 'ComputedEDocumenttypeStep':
+          return ComputedEDocumenttypeStepTypeTransformer().decode(value);
         case 'ComputedEEzsigndocumentSteptype':
           return ComputedEEzsigndocumentSteptypeTypeTransformer().decode(value);
         case 'ComputedEEzsignfolderAccess':
@@ -1091,6 +1093,8 @@ class ApiClient {
           return CustomFormsDataFolderResponse.fromJson(value);
         case 'CustomImportEzsigntemplatepackageRelationRequest':
           return CustomImportEzsigntemplatepackageRelationRequest.fromJson(value);
+        case 'CustomInscription':
+          return CustomInscription.fromJson(value);
         case 'CustomInscriptionnotauthenticatedconditionRequest':
           return CustomInscriptionnotauthenticatedconditionRequest.fromJson(value);
         case 'CustomNotificationsubsectiongetnotificationtestsResponse':
@@ -1343,8 +1347,6 @@ class ApiClient {
           return DocumenttypeCreateObjectV1Response.fromJson(value);
         case 'DocumenttypeCreateObjectV1ResponseMPayload':
           return DocumenttypeCreateObjectV1ResponseMPayload.fromJson(value);
-        case 'DocumenttypeDeleteObjectV1Response':
-          return DocumenttypeDeleteObjectV1Response.fromJson(value);
         case 'DocumenttypeEditObjectV1Request':
           return DocumenttypeEditObjectV1Request.fromJson(value);
         case 'DocumenttypeEditObjectV1Response':
@@ -1371,36 +1373,14 @@ class ApiClient {
           return DocumenttypeResponse.fromJson(value);
         case 'DocumenttypeResponseCompound':
           return DocumenttypeResponseCompound.fromJson(value);
-        case 'DocumenttypechecklistCreateObjectV1Request':
-          return DocumenttypechecklistCreateObjectV1Request.fromJson(value);
-        case 'DocumenttypechecklistCreateObjectV1Response':
-          return DocumenttypechecklistCreateObjectV1Response.fromJson(value);
-        case 'DocumenttypechecklistCreateObjectV1ResponseMPayload':
-          return DocumenttypechecklistCreateObjectV1ResponseMPayload.fromJson(value);
         case 'DocumenttypechecklistDeleteObjectV1Response':
           return DocumenttypechecklistDeleteObjectV1Response.fromJson(value);
-        case 'DocumenttypechecklistEditObjectV1Request':
-          return DocumenttypechecklistEditObjectV1Request.fromJson(value);
-        case 'DocumenttypechecklistEditObjectV1Response':
-          return DocumenttypechecklistEditObjectV1Response.fromJson(value);
-        case 'DocumenttypechecklistGetListV1Response':
-          return DocumenttypechecklistGetListV1Response.fromJson(value);
-        case 'DocumenttypechecklistGetListV1ResponseMPayload':
-          return DocumenttypechecklistGetListV1ResponseMPayload.fromJson(value);
-        case 'DocumenttypechecklistGetObjectV2Response':
-          return DocumenttypechecklistGetObjectV2Response.fromJson(value);
-        case 'DocumenttypechecklistGetObjectV2ResponseMPayload':
-          return DocumenttypechecklistGetObjectV2ResponseMPayload.fromJson(value);
-        case 'DocumenttypechecklistListElement':
-          return DocumenttypechecklistListElement.fromJson(value);
-        case 'DocumenttypechecklistRequest':
-          return DocumenttypechecklistRequest.fromJson(value);
-        case 'DocumenttypechecklistRequestCompound':
-          return DocumenttypechecklistRequestCompound.fromJson(value);
-        case 'DocumenttypechecklistResponse':
-          return DocumenttypechecklistResponse.fromJson(value);
-        case 'DocumenttypechecklistResponseCompound':
-          return DocumenttypechecklistResponseCompound.fromJson(value);
+        case 'DocumenttypechecklistPatchObjectV1Request':
+          return DocumenttypechecklistPatchObjectV1Request.fromJson(value);
+        case 'DocumenttypechecklistPatchObjectV1Response':
+          return DocumenttypechecklistPatchObjectV1Response.fromJson(value);
+        case 'DocumenttypechecklistRequestPatch':
+          return DocumenttypechecklistRequestPatch.fromJson(value);
         case 'DomainAutocompleteElementResponse':
           return DomainAutocompleteElementResponse.fromJson(value);
         case 'DomainCreateObjectV1Request':
@@ -3801,6 +3781,8 @@ class ApiClient {
           return InscriptionResponse.fromJson(value);
         case 'InscriptionResponseCompound':
           return InscriptionResponseCompound.fromJson(value);
+        case 'InscriptionSynchronizationDocumenttypeV1Response':
+          return InscriptionSynchronizationDocumenttypeV1Response.fromJson(value);
         case 'InscriptionchecklistAutocompleteElementResponse':
           return InscriptionchecklistAutocompleteElementResponse.fromJson(value);
         case 'InscriptionchecklistGetAutocompleteV3Response':
