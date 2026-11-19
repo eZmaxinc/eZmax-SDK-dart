@@ -410,6 +410,7 @@ doc/CustomCommunicationsenderResponse.md
 doc/CustomContactNameResponse.md
 doc/CustomCreateEzsignelementsPositionedByWordRequest.md
 doc/CustomCreditcardRequest.md
+doc/CustomCreditcardmerchantResponse.md
 doc/CustomCreditcardtransactionResponse.md
 doc/CustomCreditcardtransactionresponseResponse.md
 doc/CustomDiscussionconfigurationResponse.md
@@ -3215,6 +3216,7 @@ lib/model/custom_communicationsender_response.dart
 lib/model/custom_contact_name_response.dart
 lib/model/custom_create_ezsignelements_positioned_by_word_request.dart
 lib/model/custom_creditcard_request.dart
+lib/model/custom_creditcardmerchant_response.dart
 lib/model/custom_creditcardtransaction_response.dart
 lib/model/custom_creditcardtransactionresponse_response.dart
 lib/model/custom_discussionconfiguration_response.dart

@@ -997,6 +997,8 @@ class ApiClient {
           return CustomCreateEzsignelementsPositionedByWordRequest.fromJson(value);
         case 'CustomCreditcardRequest':
           return CustomCreditcardRequest.fromJson(value);
+        case 'CustomCreditcardmerchantResponse':
+          return CustomCreditcardmerchantResponse.fromJson(value);
         case 'CustomCreditcardtransactionResponse':
           return CustomCreditcardtransactionResponse.fromJson(value);
         case 'CustomCreditcardtransactionresponseResponse':

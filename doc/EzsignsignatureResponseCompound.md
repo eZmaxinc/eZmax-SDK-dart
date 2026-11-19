@@ -60,6 +60,7 @@ Name | Type | Description | Notes
 **aObjEzsignelementdependency** | [**List<EzsignelementdependencyResponseCompound>**](EzsignelementdependencyResponseCompound.md) |  | [optional] [default to const []]
 **objTimezone** | [**CustomTimezoneWithCodeResponse**](CustomTimezoneWithCodeResponse.md) |  | [optional] 
 **aObjEzsignsignaturepaymentdetail** | [**List<EzsignsignaturepaymentdetailResponseCompound>**](EzsignsignaturepaymentdetailResponseCompound.md) |  | [optional] [default to const []]
+**objCreditcardmerchant** | [**CustomCreditcardmerchantResponse**](CustomCreditcardmerchantResponse.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

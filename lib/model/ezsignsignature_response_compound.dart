@@ -65,6 +65,7 @@ class EzsignsignatureResponseCompound {
     this.aObjEzsignelementdependency = const [],
     this.objTimezone,
     this.aObjEzsignsignaturepaymentdetail = const [],
+    this.objCreditcardmerchant,
   });
 
   /// The unique ID of the Ezsignsignature
@@ -476,6 +477,14 @@ class EzsignsignatureResponseCompound {
 
   List<EzsignsignaturepaymentdetailResponseCompound> aObjEzsignsignaturepaymentdetail;
 
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  CustomCreditcardmerchantResponse? objCreditcardmerchant;
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is EzsignsignatureResponseCompound &&
     other.pkiEzsignsignatureID == pkiEzsignsignatureID &&
@@ -529,7 +538,8 @@ class EzsignsignatureResponseCompound {
     other.objCreditcardtransaction == objCreditcardtransaction &&
     _deepEquality.equals(other.aObjEzsignelementdependency, aObjEzsignelementdependency) &&
     other.objTimezone == objTimezone &&
-    _deepEquality.equals(other.aObjEzsignsignaturepaymentdetail, aObjEzsignsignaturepaymentdetail);
+    _deepEquality.equals(other.aObjEzsignsignaturepaymentdetail, aObjEzsignsignaturepaymentdetail) &&
+    other.objCreditcardmerchant == objCreditcardmerchant;
 
   @override
   int get hashCode =>
@@ -585,10 +595,11 @@ class EzsignsignatureResponseCompound {
     (objCreditcardtransaction == null ? 0 : objCreditcardtransaction!.hashCode) +
     (aObjEzsignelementdependency.hashCode) +
     (objTimezone == null ? 0 : objTimezone!.hashCode) +
-    (aObjEzsignsignaturepaymentdetail.hashCode);
+    (aObjEzsignsignaturepaymentdetail.hashCode) +
+    (objCreditcardmerchant == null ? 0 : objCreditcardmerchant!.hashCode);
 
   @override
-  String toString() => 'EzsignsignatureResponseCompound[pkiEzsignsignatureID=$pkiEzsignsignatureID, fkiEzsigndocumentID=$fkiEzsigndocumentID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, fkiEzsignsigningreasonID=$fkiEzsignsigningreasonID, fkiFontID=$fkiFontID, fkiPaymentgatewayID=$fkiPaymentgatewayID, sCurrencyDescriptionX=$sCurrencyDescriptionX, dEzsignsignatureCreditcardamount=$dEzsignsignatureCreditcardamount, sEzsignsignatureCreditcardamountdescription=$sEzsignsignatureCreditcardamountdescription, bEzsignsignatureCreditcardcustomamount=$bEzsignsignatureCreditcardcustomamount, sEzsignsigningreasonDescriptionX=$sEzsignsigningreasonDescriptionX, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureHeight=$iEzsignsignatureHeight, iEzsignsignatureWidth=$iEzsignsignatureWidth, iEzsignsignatureStep=$iEzsignsignatureStep, iEzsignsignatureStepadjusted=$iEzsignsignatureStepadjusted, eEzsignsignatureType=$eEzsignsignatureType, eEzsignsignatureSignaturepad=$eEzsignsignatureSignaturepad, eEzsignsignatureSignaturepadrequired=$eEzsignsignatureSignaturepadrequired, tEzsignsignatureTooltip=$tEzsignsignatureTooltip, eEzsignsignatureTooltipposition=$eEzsignsignatureTooltipposition, eEzsignsignatureFont=$eEzsignsignatureFont, iEzsignsignatureValidationstep=$iEzsignsignatureValidationstep, sEzsignsignatureAttachmentdescription=$sEzsignsignatureAttachmentdescription, eEzsignsignatureAttachmentnamesource=$eEzsignsignatureAttachmentnamesource, eEzsignsignatureConsultationtrigger=$eEzsignsignatureConsultationtrigger, bEzsignsignatureHandwritten=$bEzsignsignatureHandwritten, bEzsignsignatureReason=$bEzsignsignatureReason, bEzsignsignatureRequired=$bEzsignsignatureRequired, fkiEzsignfoldersignerassociationIDValidation=$fkiEzsignfoldersignerassociationIDValidation, dtEzsignsignatureDate=$dtEzsignsignatureDate, iEzsignsignatureattachmentCount=$iEzsignsignatureattachmentCount, sEzsignsignatureDescription=$sEzsignsignatureDescription, iEzsignsignatureMaxlength=$iEzsignsignatureMaxlength, eEzsignsignatureTextvalidation=$eEzsignsignatureTextvalidation, sEzsignsignatureTextvalidationcustommessage=$sEzsignsignatureTextvalidationcustommessage, eEzsignsignatureDependencyrequirement=$eEzsignsignatureDependencyrequirement, sEzsignsignatureDefaultvalue=$sEzsignsignatureDefaultvalue, sEzsignsignatureRegexp=$sEzsignsignatureRegexp, objContactName=$objContactName, objContactNameDelegation=$objContactNameDelegation, objSignature=$objSignature, dtEzsignsignatureDateInFolderTimezone=$dtEzsignsignatureDateInFolderTimezone, sEzsignsignergroupDescriptionX=$sEzsignsignergroupDescriptionX, bEzsignsignatureCustomdate=$bEzsignsignatureCustomdate, aObjEzsignsignaturecustomdate=$aObjEzsignsignaturecustomdate, objCreditcardtransaction=$objCreditcardtransaction, aObjEzsignelementdependency=$aObjEzsignelementdependency, objTimezone=$objTimezone, aObjEzsignsignaturepaymentdetail=$aObjEzsignsignaturepaymentdetail]';
+  String toString() => 'EzsignsignatureResponseCompound[pkiEzsignsignatureID=$pkiEzsignsignatureID, fkiEzsigndocumentID=$fkiEzsigndocumentID, fkiEzsignfoldersignerassociationID=$fkiEzsignfoldersignerassociationID, fkiEzsignsigningreasonID=$fkiEzsignsigningreasonID, fkiFontID=$fkiFontID, fkiPaymentgatewayID=$fkiPaymentgatewayID, sCurrencyDescriptionX=$sCurrencyDescriptionX, dEzsignsignatureCreditcardamount=$dEzsignsignatureCreditcardamount, sEzsignsignatureCreditcardamountdescription=$sEzsignsignatureCreditcardamountdescription, bEzsignsignatureCreditcardcustomamount=$bEzsignsignatureCreditcardcustomamount, sEzsignsigningreasonDescriptionX=$sEzsignsigningreasonDescriptionX, iEzsignpagePagenumber=$iEzsignpagePagenumber, iEzsignsignatureX=$iEzsignsignatureX, iEzsignsignatureY=$iEzsignsignatureY, iEzsignsignatureHeight=$iEzsignsignatureHeight, iEzsignsignatureWidth=$iEzsignsignatureWidth, iEzsignsignatureStep=$iEzsignsignatureStep, iEzsignsignatureStepadjusted=$iEzsignsignatureStepadjusted, eEzsignsignatureType=$eEzsignsignatureType, eEzsignsignatureSignaturepad=$eEzsignsignatureSignaturepad, eEzsignsignatureSignaturepadrequired=$eEzsignsignatureSignaturepadrequired, tEzsignsignatureTooltip=$tEzsignsignatureTooltip, eEzsignsignatureTooltipposition=$eEzsignsignatureTooltipposition, eEzsignsignatureFont=$eEzsignsignatureFont, iEzsignsignatureValidationstep=$iEzsignsignatureValidationstep, sEzsignsignatureAttachmentdescription=$sEzsignsignatureAttachmentdescription, eEzsignsignatureAttachmentnamesource=$eEzsignsignatureAttachmentnamesource, eEzsignsignatureConsultationtrigger=$eEzsignsignatureConsultationtrigger, bEzsignsignatureHandwritten=$bEzsignsignatureHandwritten, bEzsignsignatureReason=$bEzsignsignatureReason, bEzsignsignatureRequired=$bEzsignsignatureRequired, fkiEzsignfoldersignerassociationIDValidation=$fkiEzsignfoldersignerassociationIDValidation, dtEzsignsignatureDate=$dtEzsignsignatureDate, iEzsignsignatureattachmentCount=$iEzsignsignatureattachmentCount, sEzsignsignatureDescription=$sEzsignsignatureDescription, iEzsignsignatureMaxlength=$iEzsignsignatureMaxlength, eEzsignsignatureTextvalidation=$eEzsignsignatureTextvalidation, sEzsignsignatureTextvalidationcustommessage=$sEzsignsignatureTextvalidationcustommessage, eEzsignsignatureDependencyrequirement=$eEzsignsignatureDependencyrequirement, sEzsignsignatureDefaultvalue=$sEzsignsignatureDefaultvalue, sEzsignsignatureRegexp=$sEzsignsignatureRegexp, objContactName=$objContactName, objContactNameDelegation=$objContactNameDelegation, objSignature=$objSignature, dtEzsignsignatureDateInFolderTimezone=$dtEzsignsignatureDateInFolderTimezone, sEzsignsignergroupDescriptionX=$sEzsignsignergroupDescriptionX, bEzsignsignatureCustomdate=$bEzsignsignatureCustomdate, aObjEzsignsignaturecustomdate=$aObjEzsignsignaturecustomdate, objCreditcardtransaction=$objCreditcardtransaction, aObjEzsignelementdependency=$aObjEzsignelementdependency, objTimezone=$objTimezone, aObjEzsignsignaturepaymentdetail=$aObjEzsignsignaturepaymentdetail, objCreditcardmerchant=$objCreditcardmerchant]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -804,6 +815,11 @@ class EzsignsignatureResponseCompound {
       json[r'objTimezone'] = null;
     }
       json[r'a_objEzsignsignaturepaymentdetail'] = this.aObjEzsignsignaturepaymentdetail;
+    if (this.objCreditcardmerchant != null) {
+      json[r'objCreditcardmerchant'] = this.objCreditcardmerchant;
+    } else {
+      json[r'objCreditcardmerchant'] = null;
+    }
     return json;
   }
 
@@ -892,6 +908,7 @@ class EzsignsignatureResponseCompound {
         aObjEzsignelementdependency: EzsignelementdependencyResponseCompound.listFromJson(json[r'a_objEzsignelementdependency']),
         objTimezone: CustomTimezoneWithCodeResponse.fromJson(json[r'objTimezone']),
         aObjEzsignsignaturepaymentdetail: EzsignsignaturepaymentdetailResponseCompound.listFromJson(json[r'a_objEzsignsignaturepaymentdetail']),
+        objCreditcardmerchant: CustomCreditcardmerchantResponse.fromJson(json[r'objCreditcardmerchant']),
       );
     }
     return null;

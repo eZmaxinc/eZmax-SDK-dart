@@ -1234,6 +1234,7 @@ Class | Method | HTTP request | Description
  - [CustomContactNameResponse](doc//CustomContactNameResponse.md)
  - [CustomCreateEzsignelementsPositionedByWordRequest](doc//CustomCreateEzsignelementsPositionedByWordRequest.md)
  - [CustomCreditcardRequest](doc//CustomCreditcardRequest.md)
+ - [CustomCreditcardmerchantResponse](doc//CustomCreditcardmerchantResponse.md)
  - [CustomCreditcardtransactionResponse](doc//CustomCreditcardtransactionResponse.md)
  - [CustomCreditcardtransactionresponseResponse](doc//CustomCreditcardtransactionresponseResponse.md)
  - [CustomDiscussionconfigurationResponse](doc//CustomDiscussionconfigurationResponse.md)

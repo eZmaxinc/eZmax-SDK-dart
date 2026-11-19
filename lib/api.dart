@@ -593,6 +593,7 @@ part 'model/custom_communicationsender_response.dart';
 part 'model/custom_contact_name_response.dart';
 part 'model/custom_create_ezsignelements_positioned_by_word_request.dart';
 part 'model/custom_creditcard_request.dart';
+part 'model/custom_creditcardmerchant_response.dart';
 part 'model/custom_creditcardtransaction_response.dart';
 part 'model/custom_creditcardtransactionresponse_response.dart';
 part 'model/custom_discussionconfiguration_response.dart';
