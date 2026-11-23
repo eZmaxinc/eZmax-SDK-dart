@@ -1099,6 +1099,12 @@ class ApiClient {
           return CustomInscription.fromJson(value);
         case 'CustomInscriptionnotauthenticatedconditionRequest':
           return CustomInscriptionnotauthenticatedconditionRequest.fromJson(value);
+        case 'CustomModulePartnerResponseCompound':
+          return CustomModulePartnerResponseCompound.fromJson(value);
+        case 'CustomModulegroupPartnerResponseCompound':
+          return CustomModulegroupPartnerResponseCompound.fromJson(value);
+        case 'CustomModulesectionPartnerResponseCompound':
+          return CustomModulesectionPartnerResponseCompound.fromJson(value);
         case 'CustomNotificationsubsectiongetnotificationtestsResponse':
           return CustomNotificationsubsectiongetnotificationtestsResponse.fromJson(value);
         case 'CustomNotificationtestgetelementsResponse':
@@ -1285,6 +1291,12 @@ class ApiClient {
           return DiscussionGetObjectV2Response.fromJson(value);
         case 'DiscussionGetObjectV2ResponseMPayload':
           return DiscussionGetObjectV2ResponseMPayload.fromJson(value);
+        case 'DiscussionImproveMessageV1Request':
+          return DiscussionImproveMessageV1Request.fromJson(value);
+        case 'DiscussionImproveMessageV1Response':
+          return DiscussionImproveMessageV1Response.fromJson(value);
+        case 'DiscussionImproveMessageV1ResponseMPayload':
+          return DiscussionImproveMessageV1ResponseMPayload.fromJson(value);
         case 'DiscussionPatchObjectV1Request':
           return DiscussionPatchObjectV1Request.fromJson(value);
         case 'DiscussionPatchObjectV1Response':
@@ -1687,6 +1699,38 @@ class ApiClient {
           return EzmaxpartnerSubscribeV1Request.fromJson(value);
         case 'EzmaxpartnerSubscribeV1Response':
           return EzmaxpartnerSubscribeV1Response.fromJson(value);
+        case 'EzmaxpartnerproductstageGetEzmaxpartnerproductstagepermissionsV1Response':
+          return EzmaxpartnerproductstageGetEzmaxpartnerproductstagepermissionsV1Response.fromJson(value);
+        case 'EzmaxpartnerproductstageGetEzmaxpartnerproductstagepermissionsV1ResponseMPayload':
+          return EzmaxpartnerproductstageGetEzmaxpartnerproductstagepermissionsV1ResponseMPayload.fromJson(value);
+        case 'EzmaxpartnerproductstageGetEzmaxpartnerproductstagewebhooksV1Response':
+          return EzmaxpartnerproductstageGetEzmaxpartnerproductstagewebhooksV1Response.fromJson(value);
+        case 'EzmaxpartnerproductstageGetEzmaxpartnerproductstagewebhooksV1ResponseMPayload':
+          return EzmaxpartnerproductstageGetEzmaxpartnerproductstagewebhooksV1ResponseMPayload.fromJson(value);
+        case 'EzmaxpartnerproductstageGetListV1Response':
+          return EzmaxpartnerproductstageGetListV1Response.fromJson(value);
+        case 'EzmaxpartnerproductstageGetListV1ResponseMPayload':
+          return EzmaxpartnerproductstageGetListV1ResponseMPayload.fromJson(value);
+        case 'EzmaxpartnerproductstageGetObjectV2Response':
+          return EzmaxpartnerproductstageGetObjectV2Response.fromJson(value);
+        case 'EzmaxpartnerproductstageGetObjectV2ResponseMPayload':
+          return EzmaxpartnerproductstageGetObjectV2ResponseMPayload.fromJson(value);
+        case 'EzmaxpartnerproductstageListElement':
+          return EzmaxpartnerproductstageListElement.fromJson(value);
+        case 'EzmaxpartnerproductstageResponse':
+          return EzmaxpartnerproductstageResponse.fromJson(value);
+        case 'EzmaxpartnerproductstageResponseCompound':
+          return EzmaxpartnerproductstageResponseCompound.fromJson(value);
+        case 'EzmaxpartnerproductstageSubscribeV1Response':
+          return EzmaxpartnerproductstageSubscribeV1Response.fromJson(value);
+        case 'EzmaxpartnerproductstageUnsubscribeV1Response':
+          return EzmaxpartnerproductstageUnsubscribeV1Response.fromJson(value);
+        case 'EzmaxpartnerproductstagesubscriptionResponse':
+          return EzmaxpartnerproductstagesubscriptionResponse.fromJson(value);
+        case 'EzmaxpartnerproductstagewebhookResponse':
+          return EzmaxpartnerproductstagewebhookResponse.fromJson(value);
+        case 'EzmaxpartnerproductstagewebhookResponseCompound':
+          return EzmaxpartnerproductstagewebhookResponseCompound.fromJson(value);
         case 'EzmaxproductAutocompleteElementResponse':
           return EzmaxproductAutocompleteElementResponse.fromJson(value);
         case 'EzmaxproductGetAutocompleteV2Response':
@@ -3419,6 +3463,20 @@ class ApiClient {
           return FieldEEzmaxinvoicinguserVariationezsignTypeTransformer().decode(value);
         case 'FieldEEzmaxpartnerCustomdevelopment':
           return FieldEEzmaxpartnerCustomdevelopmentTypeTransformer().decode(value);
+        case 'FieldEEzmaxpartnerproductstageCode':
+          return FieldEEzmaxpartnerproductstageCodeTypeTransformer().decode(value);
+        case 'FieldEEzmaxpartnerproductstageInstallationtype':
+          return FieldEEzmaxpartnerproductstageInstallationtypeTypeTransformer().decode(value);
+        case 'FieldEEzmaxpartnerproductstagewebhookEzmaxpartnerevent':
+          return FieldEEzmaxpartnerproductstagewebhookEzmaxpartnereventTypeTransformer().decode(value);
+        case 'FieldEEzmaxpartnerproductstagewebhookEzsignevent':
+          return FieldEEzmaxpartnerproductstagewebhookEzsigneventTypeTransformer().decode(value);
+        case 'FieldEEzmaxpartnerproductstagewebhookManagementevent':
+          return FieldEEzmaxpartnerproductstagewebhookManagementeventTypeTransformer().decode(value);
+        case 'FieldEEzmaxpartnerproductstagewebhookModule':
+          return FieldEEzmaxpartnerproductstagewebhookModuleTypeTransformer().decode(value);
+        case 'FieldEEzmaxpartnerproductstagewebhookRealestateevent':
+          return FieldEEzmaxpartnerproductstagewebhookRealestateeventTypeTransformer().decode(value);
         case 'FieldEEzsignannotationType':
           return FieldEEzsignannotationTypeTypeTransformer().decode(value);
         case 'FieldEEzsignbulksendEzsignformfieldorder':

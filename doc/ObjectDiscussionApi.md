@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**discussionCreateObjectV1**](ObjectDiscussionApi.md#discussioncreateobjectv1) | **POST** /1/object/discussion | Create a new Discussion
 [**discussionDeleteObjectV1**](ObjectDiscussionApi.md#discussiondeleteobjectv1) | **DELETE** /1/object/discussion/{pkiDiscussionID} | Delete an existing Discussion
 [**discussionGetObjectV2**](ObjectDiscussionApi.md#discussiongetobjectv2) | **GET** /2/object/discussion/{pkiDiscussionID} | Retrieve an existing Discussion
+[**discussionImproveMessageV1**](ObjectDiscussionApi.md#discussionimprovemessagev1) | **POST** /1/object/discussion/improveMessage | Improve a message using the AI
 [**discussionPatchObjectV1**](ObjectDiscussionApi.md#discussionpatchobjectv1) | **PATCH** /1/object/discussion/{pkiDiscussionID} | Patch an existing Discussion
 [**discussionUpdateDiscussionreadstatusV1**](ObjectDiscussionApi.md#discussionupdatediscussionreadstatusv1) | **POST** /1/object/discussion/{pkiDiscussionID}/updateDiscussionreadstatus | Update the read status of the discussion
 
@@ -201,6 +202,53 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **discussionImproveMessageV1**
+> DiscussionImproveMessageV1Response discussionImproveMessageV1(discussionImproveMessageV1Request)
+
+Improve a message using the AI
+
+Improve a message using the AI.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectDiscussionApi();
+final discussionImproveMessageV1Request = DiscussionImproveMessageV1Request(); // DiscussionImproveMessageV1Request | 
+
+try {
+    final result = api_instance.discussionImproveMessageV1(discussionImproveMessageV1Request);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectDiscussionApi->discussionImproveMessageV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **discussionImproveMessageV1Request** | [**DiscussionImproveMessageV1Request**](DiscussionImproveMessageV1Request.md)|  | 
+
+### Return type
+
+[**DiscussionImproveMessageV1Response**](DiscussionImproveMessageV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

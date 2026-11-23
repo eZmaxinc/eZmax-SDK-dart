@@ -36,8 +36,10 @@ class WebhookEzmaxpartnerproductSubscribe {
   ///
   String? sExternalID;
 
+  /// The Apikey for the API key.  This will be hidden if we are not creating or regenerating the Apikey.
   String sApikeyApikey;
 
+  /// The secret of the Apikey
   String sApikeySecret;
 
   @override

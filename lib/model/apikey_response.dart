@@ -60,7 +60,7 @@ class ApikeyResponse {
   ///
   String? sApikeyApikey;
 
-  /// The Secret for the API key.  This will be hidden if we are not creating or regenerating the Apikey.
+  /// The secret of the Apikey
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated

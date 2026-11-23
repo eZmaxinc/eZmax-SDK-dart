@@ -1,0 +1,145 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.18
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+part of openapi.api;
+
+class CustomModulesectionPartnerResponseCompound {
+  /// Returns a new [CustomModulesectionPartnerResponseCompound] instance.
+  CustomModulesectionPartnerResponseCompound({
+    required this.pkiModulesectionID,
+    required this.fkiModuleID,
+    required this.sModulesectionInternalname,
+    required this.sModulesectionNameX,
+  });
+
+  /// The unique ID of the Modulesection
+  ///
+  /// Minimum value: 0
+  int pkiModulesectionID;
+
+  /// The unique ID of the Module
+  ///
+  /// Minimum value: 0
+  int fkiModuleID;
+
+  /// The Internal name of the Module section.
+  String sModulesectionInternalname;
+
+  /// The Name of the Modulesection in the language of the requester
+  String sModulesectionNameX;
+
+  @override
+  bool operator ==(Object other) => identical(this, other) || other is CustomModulesectionPartnerResponseCompound &&
+    other.pkiModulesectionID == pkiModulesectionID &&
+    other.fkiModuleID == fkiModuleID &&
+    other.sModulesectionInternalname == sModulesectionInternalname &&
+    other.sModulesectionNameX == sModulesectionNameX;
+
+  @override
+  int get hashCode =>
+    // ignore: unnecessary_parenthesis
+    (pkiModulesectionID.hashCode) +
+    (fkiModuleID.hashCode) +
+    (sModulesectionInternalname.hashCode) +
+    (sModulesectionNameX.hashCode);
+
+  @override
+  String toString() => 'CustomModulesectionPartnerResponseCompound[pkiModulesectionID=$pkiModulesectionID, fkiModuleID=$fkiModuleID, sModulesectionInternalname=$sModulesectionInternalname, sModulesectionNameX=$sModulesectionNameX]';
+
+  Map<String, dynamic> toJson() {
+    final json = <String, dynamic>{};
+      json[r'pkiModulesectionID'] = this.pkiModulesectionID;
+      json[r'fkiModuleID'] = this.fkiModuleID;
+      json[r'sModulesectionInternalname'] = this.sModulesectionInternalname;
+      json[r'sModulesectionNameX'] = this.sModulesectionNameX;
+    return json;
+  }
+
+  /// Returns a new [CustomModulesectionPartnerResponseCompound] instance and imports its values from
+  /// [value] if it's a [Map], null otherwise.
+  // ignore: prefer_constructors_over_static_methods
+  static CustomModulesectionPartnerResponseCompound? fromJson(dynamic value) {
+    if (value is Map) {
+      final json = value.cast<String, dynamic>();
+
+      // Ensure that the map contains the required keys.
+      // Note 1: the values aren't checked for validity beyond being non-null.
+      // Note 2: this code is stripped in release mode!
+      assert(() {
+        assert(json.containsKey(r'pkiModulesectionID'), 'Required key "CustomModulesectionPartnerResponseCompound[pkiModulesectionID]" is missing from JSON.');
+        assert(json[r'pkiModulesectionID'] != null, 'Required key "CustomModulesectionPartnerResponseCompound[pkiModulesectionID]" has a null value in JSON.');
+        assert(json.containsKey(r'fkiModuleID'), 'Required key "CustomModulesectionPartnerResponseCompound[fkiModuleID]" is missing from JSON.');
+        assert(json[r'fkiModuleID'] != null, 'Required key "CustomModulesectionPartnerResponseCompound[fkiModuleID]" has a null value in JSON.');
+        assert(json.containsKey(r'sModulesectionInternalname'), 'Required key "CustomModulesectionPartnerResponseCompound[sModulesectionInternalname]" is missing from JSON.');
+        assert(json[r'sModulesectionInternalname'] != null, 'Required key "CustomModulesectionPartnerResponseCompound[sModulesectionInternalname]" has a null value in JSON.');
+        assert(json.containsKey(r'sModulesectionNameX'), 'Required key "CustomModulesectionPartnerResponseCompound[sModulesectionNameX]" is missing from JSON.');
+        assert(json[r'sModulesectionNameX'] != null, 'Required key "CustomModulesectionPartnerResponseCompound[sModulesectionNameX]" has a null value in JSON.');
+        return true;
+      }());
+
+      return CustomModulesectionPartnerResponseCompound(
+        pkiModulesectionID: mapValueOfType<int>(json, r'pkiModulesectionID')!,
+        fkiModuleID: mapValueOfType<int>(json, r'fkiModuleID')!,
+        sModulesectionInternalname: mapValueOfType<String>(json, r'sModulesectionInternalname')!,
+        sModulesectionNameX: mapValueOfType<String>(json, r'sModulesectionNameX')!,
+      );
+    }
+    return null;
+  }
+
+  static List<CustomModulesectionPartnerResponseCompound> listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <CustomModulesectionPartnerResponseCompound>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = CustomModulesectionPartnerResponseCompound.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
+
+  static Map<String, CustomModulesectionPartnerResponseCompound> mapFromJson(dynamic json) {
+    final map = <String, CustomModulesectionPartnerResponseCompound>{};
+    if (json is Map && json.isNotEmpty) {
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = CustomModulesectionPartnerResponseCompound.fromJson(entry.value);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
+    }
+    return map;
+  }
+
+  // maps a json object with a list of CustomModulesectionPartnerResponseCompound-objects as value to a dart map
+  static Map<String, List<CustomModulesectionPartnerResponseCompound>> mapListFromJson(dynamic json, {bool growable = false,}) {
+    final map = <String, List<CustomModulesectionPartnerResponseCompound>>{};
+    if (json is Map && json.isNotEmpty) {
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
+      for (final entry in json.entries) {
+        map[entry.key] = CustomModulesectionPartnerResponseCompound.listFromJson(entry.value, growable: growable,);
+      }
+    }
+    return map;
+  }
+
+  /// The list of required keys that must be present in a JSON.
+  static const requiredKeys = <String>{
+    'pkiModulesectionID',
+    'fkiModuleID',
+    'sModulesectionInternalname',
+    'sModulesectionNameX',
+  };
+}
+

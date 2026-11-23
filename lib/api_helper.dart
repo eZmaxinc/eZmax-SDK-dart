@@ -250,6 +250,27 @@ String parameterToString(dynamic value) {
   if (value is FieldEEzmaxpartnerCustomdevelopment) {
     return FieldEEzmaxpartnerCustomdevelopmentTypeTransformer().encode(value).toString();
   }
+  if (value is FieldEEzmaxpartnerproductstageCode) {
+    return FieldEEzmaxpartnerproductstageCodeTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzmaxpartnerproductstageInstallationtype) {
+    return FieldEEzmaxpartnerproductstageInstallationtypeTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzmaxpartnerproductstagewebhookEzmaxpartnerevent) {
+    return FieldEEzmaxpartnerproductstagewebhookEzmaxpartnereventTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzmaxpartnerproductstagewebhookEzsignevent) {
+    return FieldEEzmaxpartnerproductstagewebhookEzsigneventTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzmaxpartnerproductstagewebhookManagementevent) {
+    return FieldEEzmaxpartnerproductstagewebhookManagementeventTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzmaxpartnerproductstagewebhookModule) {
+    return FieldEEzmaxpartnerproductstagewebhookModuleTypeTransformer().encode(value).toString();
+  }
+  if (value is FieldEEzmaxpartnerproductstagewebhookRealestateevent) {
+    return FieldEEzmaxpartnerproductstagewebhookRealestateeventTypeTransformer().encode(value).toString();
+  }
   if (value is FieldEEzsignannotationType) {
     return FieldEEzsignannotationTypeTypeTransformer().encode(value).toString();
   }
