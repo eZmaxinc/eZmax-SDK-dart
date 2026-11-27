@@ -387,12 +387,6 @@ class ApiClient {
           return AttachmentRestoreV1Response.fromJson(value);
         case 'AttachmentRestoreV1ResponseMPayload':
           return AttachmentRestoreV1ResponseMPayload.fromJson(value);
-        case 'AttachmentSetDocumentTypeV1Request':
-          return AttachmentSetDocumentTypeV1Request.fromJson(value);
-        case 'AttachmentSetDocumentTypeV1Response':
-          return AttachmentSetDocumentTypeV1Response.fromJson(value);
-        case 'AttachmentSetDocumentTypeV1ResponseMPayload':
-          return AttachmentSetDocumentTypeV1ResponseMPayload.fromJson(value);
         case 'AttachmentSetPrivacyV1Request':
           return AttachmentSetPrivacyV1Request.fromJson(value);
         case 'AttachmentSetPrivacyV1Response':
@@ -809,8 +803,6 @@ class ApiClient {
           return CompanyGetAutocompleteV2ResponseMPayload.fromJson(value);
         case 'ComputedECommunicationDirection':
           return ComputedECommunicationDirectionTypeTransformer().decode(value);
-        case 'ComputedEDocumenttypeStep':
-          return ComputedEDocumenttypeStepTypeTransformer().decode(value);
         case 'ComputedEEzsigndocumentSteptype':
           return ComputedEEzsigndocumentSteptypeTypeTransformer().decode(value);
         case 'ComputedEEzsignfolderAccess':
@@ -1347,42 +1339,6 @@ class ApiClient {
           return DiscussionmessageResponse.fromJson(value);
         case 'DiscussionmessageResponseCompound':
           return DiscussionmessageResponseCompound.fromJson(value);
-        case 'DocumenttypeAutocompleteElementResponse':
-          return DocumenttypeAutocompleteElementResponse.fromJson(value);
-        case 'DocumenttypeCreateObjectV1Request':
-          return DocumenttypeCreateObjectV1Request.fromJson(value);
-        case 'DocumenttypeCreateObjectV1Response':
-          return DocumenttypeCreateObjectV1Response.fromJson(value);
-        case 'DocumenttypeCreateObjectV1ResponseMPayload':
-          return DocumenttypeCreateObjectV1ResponseMPayload.fromJson(value);
-        case 'DocumenttypeEditObjectV1Request':
-          return DocumenttypeEditObjectV1Request.fromJson(value);
-        case 'DocumenttypeEditObjectV1Response':
-          return DocumenttypeEditObjectV1Response.fromJson(value);
-        case 'DocumenttypeGetAutocompleteV2Response':
-          return DocumenttypeGetAutocompleteV2Response.fromJson(value);
-        case 'DocumenttypeGetAutocompleteV2ResponseMPayload':
-          return DocumenttypeGetAutocompleteV2ResponseMPayload.fromJson(value);
-        case 'DocumenttypeGetListV1Response':
-          return DocumenttypeGetListV1Response.fromJson(value);
-        case 'DocumenttypeGetListV1ResponseMPayload':
-          return DocumenttypeGetListV1ResponseMPayload.fromJson(value);
-        case 'DocumenttypeGetObjectV2Response':
-          return DocumenttypeGetObjectV2Response.fromJson(value);
-        case 'DocumenttypeGetObjectV2ResponseMPayload':
-          return DocumenttypeGetObjectV2ResponseMPayload.fromJson(value);
-        case 'DocumenttypeListElement':
-          return DocumenttypeListElement.fromJson(value);
-        case 'DocumenttypeRequest':
-          return DocumenttypeRequest.fromJson(value);
-        case 'DocumenttypeRequestCompound':
-          return DocumenttypeRequestCompound.fromJson(value);
-        case 'DocumenttypeResponse':
-          return DocumenttypeResponse.fromJson(value);
-        case 'DocumenttypeResponseCompound':
-          return DocumenttypeResponseCompound.fromJson(value);
-        case 'DocumenttypechecklistDeleteObjectV1Response':
-          return DocumenttypechecklistDeleteObjectV1Response.fromJson(value);
         case 'DocumenttypechecklistPatchObjectV1Request':
           return DocumenttypechecklistPatchObjectV1Request.fromJson(value);
         case 'DocumenttypechecklistPatchObjectV1Response':
@@ -3425,20 +3381,6 @@ class ApiClient {
           return FieldEDiscussionRobotTypeTransformer().decode(value);
         case 'FieldEDiscussionmessageStatus':
           return FieldEDiscussionmessageStatusTypeTransformer().decode(value);
-        case 'FieldEDocumenttypeEzcom':
-          return FieldEDocumenttypeEzcomTypeTransformer().decode(value);
-        case 'FieldEDocumenttypePrivacydefault':
-          return FieldEDocumenttypePrivacydefaultTypeTransformer().decode(value);
-        case 'FieldEDocumenttypeRepossession':
-          return FieldEDocumenttypeRepossessionTypeTransformer().decode(value);
-        case 'FieldEDocumenttypeSalebyowner':
-          return FieldEDocumenttypeSalebyownerTypeTransformer().decode(value);
-        case 'FieldEDocumenttypeSaledisplaybyrole':
-          return FieldEDocumenttypeSaledisplaybyroleTypeTransformer().decode(value);
-        case 'FieldEDocumenttypeStatusdefault':
-          return FieldEDocumenttypeStatusdefaultTypeTransformer().decode(value);
-        case 'FieldEDocumenttypeTransactiontype':
-          return FieldEDocumenttypeTransactiontypeTypeTransformer().decode(value);
         case 'FieldEDocumenttypechecklistStatus':
           return FieldEDocumenttypechecklistStatusTypeTransformer().decode(value);
         case 'FieldEErrorCode':
@@ -3835,8 +3777,6 @@ class ApiClient {
           return InscriptionResponse.fromJson(value);
         case 'InscriptionResponseCompound':
           return InscriptionResponseCompound.fromJson(value);
-        case 'InscriptionSynchronizationDocumenttypeV1Response':
-          return InscriptionSynchronizationDocumenttypeV1Response.fromJson(value);
         case 'InscriptionchecklistAutocompleteElementResponse':
           return InscriptionchecklistAutocompleteElementResponse.fromJson(value);
         case 'InscriptionchecklistGetAutocompleteV3Response':
@@ -4045,8 +3985,6 @@ class ApiClient {
           return MultilingualBillingentityinternalDescription.fromJson(value);
         case 'MultilingualBrandingDescription':
           return MultilingualBrandingDescription.fromJson(value);
-        case 'MultilingualDocumenttypeName':
-          return MultilingualDocumenttypeName.fromJson(value);
         case 'MultilingualEzdoctemplatedocumentName':
           return MultilingualEzdoctemplatedocumentName.fromJson(value);
         case 'MultilingualEzmaxcustomerCompany':

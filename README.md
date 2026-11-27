@@ -109,7 +109,6 @@ Class | Method | HTTP request | Description
 *ObjectAttachmentApi* | [**attachmentGetAttachmentlogsV1**](doc//ObjectAttachmentApi.md#attachmentgetattachmentlogsv1) | **GET** /1/object/attachment/{pkiAttachmentID}/getAttachmentlogs | Retrieve the Attachmentlogs
 *ObjectAttachmentApi* | [**attachmentRenameV1**](doc//ObjectAttachmentApi.md#attachmentrenamev1) | **POST** /1/object/attachment/{pkiAttachmentID}/rename | Rename an attachment
 *ObjectAttachmentApi* | [**attachmentRestoreV1**](doc//ObjectAttachmentApi.md#attachmentrestorev1) | **POST** /1/object/attachment/{pkiAttachmentID}/restore | Restore a deleted attachment
-*ObjectAttachmentApi* | [**attachmentSetDocumentTypeV1**](doc//ObjectAttachmentApi.md#attachmentsetdocumenttypev1) | **POST** /1/object/attachment/{pkiAttachmentID}/setDocumentType | Change attachment document type
 *ObjectAttachmentApi* | [**attachmentSetPrivacyV1**](doc//ObjectAttachmentApi.md#attachmentsetprivacyv1) | **POST** /1/object/attachment/{pkiAttachmentID}/setPrivacy | Change the attachment privacy
 *ObjectAttachmentApi* | [**attachmentValidateV1**](doc//ObjectAttachmentApi.md#attachmentvalidatev1) | **POST** /1/object/attachment/{pkiAttachmentID}/validate | Validate an existing attachment
 *ObjectAttachmentrejectreasonApi* | [**attachmentrejectreasonGetAutocompleteV2**](doc//ObjectAttachmentrejectreasonApi.md#attachmentrejectreasongetautocompletev2) | **GET** /2/object/attachmentrejectreason/getAutocomplete/{sSelector} | Retrieve Attachmentrejectreasons and IDs
@@ -233,12 +232,6 @@ Class | Method | HTTP request | Description
 *ObjectDiscussionmessageApi* | [**discussionmessageCreateObjectV1**](doc//ObjectDiscussionmessageApi.md#discussionmessagecreateobjectv1) | **POST** /1/object/discussionmessage | Create a new Discussionmessage
 *ObjectDiscussionmessageApi* | [**discussionmessageDeleteObjectV1**](doc//ObjectDiscussionmessageApi.md#discussionmessagedeleteobjectv1) | **DELETE** /1/object/discussionmessage/{pkiDiscussionmessageID} | Delete an existing Discussionmessage
 *ObjectDiscussionmessageApi* | [**discussionmessagePatchObjectV1**](doc//ObjectDiscussionmessageApi.md#discussionmessagepatchobjectv1) | **PATCH** /1/object/discussionmessage/{pkiDiscussionmessageID} | Patch an existing Discussionmessage
-*ObjectDocumenttypeApi* | [**documenttypeCreateObjectV1**](doc//ObjectDocumenttypeApi.md#documenttypecreateobjectv1) | **POST** /1/object/documenttype | Create a new Documenttype
-*ObjectDocumenttypeApi* | [**documenttypeEditObjectV1**](doc//ObjectDocumenttypeApi.md#documenttypeeditobjectv1) | **PUT** /1/object/documenttype/{pkiDocumenttypeID} | Edit an existing Documenttype
-*ObjectDocumenttypeApi* | [**documenttypeGetAutocompleteV2**](doc//ObjectDocumenttypeApi.md#documenttypegetautocompletev2) | **GET** /2/object/documenttype/getAutocomplete/{sSelector} | Retrieve Documenttypes and IDs
-*ObjectDocumenttypeApi* | [**documenttypeGetListV1**](doc//ObjectDocumenttypeApi.md#documenttypegetlistv1) | **GET** /1/object/documenttype/getList | Retrieve Documenttype list
-*ObjectDocumenttypeApi* | [**documenttypeGetObjectV2**](doc//ObjectDocumenttypeApi.md#documenttypegetobjectv2) | **GET** /2/object/documenttype/{pkiDocumenttypeID} | Retrieve an existing Documenttype
-*ObjectDocumenttypechecklistApi* | [**documenttypechecklistDeleteObjectV1**](doc//ObjectDocumenttypechecklistApi.md#documenttypechecklistdeleteobjectv1) | **DELETE** /1/object/documenttypechecklist/{pkiDocumenttypechecklistID} | Delete an existing Documenttypechecklist
 *ObjectDocumenttypechecklistApi* | [**documenttypechecklistPatchObjectV1**](doc//ObjectDocumenttypechecklistApi.md#documenttypechecklistpatchobjectv1) | **PATCH** /1/object/documenttypechecklist/{pkiDocumenttypechecklistID} | Patch an existing Documenttypechecklist
 *ObjectDomainApi* | [**domainCreateObjectV1**](doc//ObjectDomainApi.md#domaincreateobjectv1) | **POST** /1/object/domain | Create a new Domain
 *ObjectDomainApi* | [**domainDeleteObjectV1**](doc//ObjectDomainApi.md#domaindeleteobjectv1) | **DELETE** /1/object/domain/{pkiDomainID} | Delete an existing Domain
@@ -588,7 +581,6 @@ Class | Method | HTTP request | Description
 *ObjectInscriptionApi* | [**inscriptionGetObjectV2**](doc//ObjectInscriptionApi.md#inscriptiongetobjectv2) | **GET** /2/object/inscription/{pkiInscriptionID} | Retrieve an existing Inscription
 *ObjectInscriptionApi* | [**inscriptionImportIntoEDMV1**](doc//ObjectInscriptionApi.md#inscriptionimportintoedmv1) | **POST** /1/object/inscription/{pkiInscriptionID}/importIntoEDM | Import attachments into the Inscription
 *ObjectInscriptionApi* | [**inscriptionPrepareFilesTransferV1**](doc//ObjectInscriptionApi.md#inscriptionpreparefilestransferv1) | **POST** /1/object/inscription/{pkiInscriptionID}/prepareFilesTransfer | Prepares file transfer into EDM
-*ObjectInscriptionApi* | [**inscriptionSynchronizationDocumenttypeV1**](doc//ObjectInscriptionApi.md#inscriptionsynchronizationdocumenttypev1) | **POST** /1/object/inscription/{pkiInscriptionID}/synchronizationDocumenttype | Synchronization of the Documenttype in the Inscription
 *ObjectInscriptionchecklistApi* | [**inscriptionchecklistGetAutocompleteV3**](doc//ObjectInscriptionchecklistApi.md#inscriptionchecklistgetautocompletev3) | **GET** /3/object/inscriptionchecklist/getAutocomplete/{sSelector} | Retrieve Inscriptionchecklists and IDs
 *ObjectInscriptionnotauthenticatedApi* | [**inscriptionnotauthenticatedBatchDownloadV1**](doc//ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedbatchdownloadv1) | **POST** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/batchDownload | Download multiples attachments from a Inscriptionnotauthenticated
 *ObjectInscriptionnotauthenticatedApi* | [**inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1**](doc//ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedfillinscriptionnotauthenticatedconditionv1) | **POST** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/fillInscriptionnotauthenticatedcondition | Fills the Inscriptionnotauthenticatedcondition in the Inscriptionnotauthenticated
@@ -935,9 +927,6 @@ Class | Method | HTTP request | Description
  - [AttachmentRestoreV1Request](doc//AttachmentRestoreV1Request.md)
  - [AttachmentRestoreV1Response](doc//AttachmentRestoreV1Response.md)
  - [AttachmentRestoreV1ResponseMPayload](doc//AttachmentRestoreV1ResponseMPayload.md)
- - [AttachmentSetDocumentTypeV1Request](doc//AttachmentSetDocumentTypeV1Request.md)
- - [AttachmentSetDocumentTypeV1Response](doc//AttachmentSetDocumentTypeV1Response.md)
- - [AttachmentSetDocumentTypeV1ResponseMPayload](doc//AttachmentSetDocumentTypeV1ResponseMPayload.md)
  - [AttachmentSetPrivacyV1Request](doc//AttachmentSetPrivacyV1Request.md)
  - [AttachmentSetPrivacyV1Response](doc//AttachmentSetPrivacyV1Response.md)
  - [AttachmentSetPrivacyV1ResponseMPayload](doc//AttachmentSetPrivacyV1ResponseMPayload.md)
@@ -1146,7 +1135,6 @@ Class | Method | HTTP request | Description
  - [CompanyGetAutocompleteV2Response](doc//CompanyGetAutocompleteV2Response.md)
  - [CompanyGetAutocompleteV2ResponseMPayload](doc//CompanyGetAutocompleteV2ResponseMPayload.md)
  - [ComputedECommunicationDirection](doc//ComputedECommunicationDirection.md)
- - [ComputedEDocumenttypeStep](doc//ComputedEDocumenttypeStep.md)
  - [ComputedEEzsigndocumentSteptype](doc//ComputedEEzsigndocumentSteptype.md)
  - [ComputedEEzsignfolderAccess](doc//ComputedEEzsignfolderAccess.md)
  - [ComputedEEzsignimportfolderStatus](doc//ComputedEEzsignimportfolderStatus.md)
@@ -1415,24 +1403,6 @@ Class | Method | HTTP request | Description
  - [DiscussionmessageRequestPatch](doc//DiscussionmessageRequestPatch.md)
  - [DiscussionmessageResponse](doc//DiscussionmessageResponse.md)
  - [DiscussionmessageResponseCompound](doc//DiscussionmessageResponseCompound.md)
- - [DocumenttypeAutocompleteElementResponse](doc//DocumenttypeAutocompleteElementResponse.md)
- - [DocumenttypeCreateObjectV1Request](doc//DocumenttypeCreateObjectV1Request.md)
- - [DocumenttypeCreateObjectV1Response](doc//DocumenttypeCreateObjectV1Response.md)
- - [DocumenttypeCreateObjectV1ResponseMPayload](doc//DocumenttypeCreateObjectV1ResponseMPayload.md)
- - [DocumenttypeEditObjectV1Request](doc//DocumenttypeEditObjectV1Request.md)
- - [DocumenttypeEditObjectV1Response](doc//DocumenttypeEditObjectV1Response.md)
- - [DocumenttypeGetAutocompleteV2Response](doc//DocumenttypeGetAutocompleteV2Response.md)
- - [DocumenttypeGetAutocompleteV2ResponseMPayload](doc//DocumenttypeGetAutocompleteV2ResponseMPayload.md)
- - [DocumenttypeGetListV1Response](doc//DocumenttypeGetListV1Response.md)
- - [DocumenttypeGetListV1ResponseMPayload](doc//DocumenttypeGetListV1ResponseMPayload.md)
- - [DocumenttypeGetObjectV2Response](doc//DocumenttypeGetObjectV2Response.md)
- - [DocumenttypeGetObjectV2ResponseMPayload](doc//DocumenttypeGetObjectV2ResponseMPayload.md)
- - [DocumenttypeListElement](doc//DocumenttypeListElement.md)
- - [DocumenttypeRequest](doc//DocumenttypeRequest.md)
- - [DocumenttypeRequestCompound](doc//DocumenttypeRequestCompound.md)
- - [DocumenttypeResponse](doc//DocumenttypeResponse.md)
- - [DocumenttypeResponseCompound](doc//DocumenttypeResponseCompound.md)
- - [DocumenttypechecklistDeleteObjectV1Response](doc//DocumenttypechecklistDeleteObjectV1Response.md)
  - [DocumenttypechecklistPatchObjectV1Request](doc//DocumenttypechecklistPatchObjectV1Request.md)
  - [DocumenttypechecklistPatchObjectV1Response](doc//DocumenttypechecklistPatchObjectV1Response.md)
  - [DocumenttypechecklistRequestPatch](doc//DocumenttypechecklistRequestPatch.md)
@@ -2454,13 +2424,6 @@ Class | Method | HTTP request | Description
  - [FieldEDisclosureInteresttype](doc//FieldEDisclosureInteresttype.md)
  - [FieldEDiscussionRobot](doc//FieldEDiscussionRobot.md)
  - [FieldEDiscussionmessageStatus](doc//FieldEDiscussionmessageStatus.md)
- - [FieldEDocumenttypeEzcom](doc//FieldEDocumenttypeEzcom.md)
- - [FieldEDocumenttypePrivacydefault](doc//FieldEDocumenttypePrivacydefault.md)
- - [FieldEDocumenttypeRepossession](doc//FieldEDocumenttypeRepossession.md)
- - [FieldEDocumenttypeSalebyowner](doc//FieldEDocumenttypeSalebyowner.md)
- - [FieldEDocumenttypeSaledisplaybyrole](doc//FieldEDocumenttypeSaledisplaybyrole.md)
- - [FieldEDocumenttypeStatusdefault](doc//FieldEDocumenttypeStatusdefault.md)
- - [FieldEDocumenttypeTransactiontype](doc//FieldEDocumenttypeTransactiontype.md)
  - [FieldEDocumenttypechecklistStatus](doc//FieldEDocumenttypechecklistStatus.md)
  - [FieldEErrorCode](doc//FieldEErrorCode.md)
  - [FieldEEzdoctemplatedocumentPrivacylevel](doc//FieldEEzdoctemplatedocumentPrivacylevel.md)
@@ -2659,7 +2622,6 @@ Class | Method | HTTP request | Description
  - [InscriptionPrepareFilesTransferV1ResponseMPayload](doc//InscriptionPrepareFilesTransferV1ResponseMPayload.md)
  - [InscriptionResponse](doc//InscriptionResponse.md)
  - [InscriptionResponseCompound](doc//InscriptionResponseCompound.md)
- - [InscriptionSynchronizationDocumenttypeV1Response](doc//InscriptionSynchronizationDocumenttypeV1Response.md)
  - [InscriptionchecklistAutocompleteElementResponse](doc//InscriptionchecklistAutocompleteElementResponse.md)
  - [InscriptionchecklistGetAutocompleteV3Response](doc//InscriptionchecklistGetAutocompleteV3Response.md)
  - [InscriptionchecklistGetAutocompleteV3ResponseMPayload](doc//InscriptionchecklistGetAutocompleteV3ResponseMPayload.md)
@@ -2764,7 +2726,6 @@ Class | Method | HTTP request | Description
  - [MultilingualApikeyDescription](doc//MultilingualApikeyDescription.md)
  - [MultilingualBillingentityinternalDescription](doc//MultilingualBillingentityinternalDescription.md)
  - [MultilingualBrandingDescription](doc//MultilingualBrandingDescription.md)
- - [MultilingualDocumenttypeName](doc//MultilingualDocumenttypeName.md)
  - [MultilingualEzdoctemplatedocumentName](doc//MultilingualEzdoctemplatedocumentName.md)
  - [MultilingualEzmaxcustomerCompany](doc//MultilingualEzmaxcustomerCompany.md)
  - [MultilingualEzmaxcustomerNote](doc//MultilingualEzmaxcustomerNote.md)

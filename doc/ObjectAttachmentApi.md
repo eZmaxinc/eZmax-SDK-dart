@@ -14,7 +14,6 @@ Method | HTTP request | Description
 [**attachmentGetAttachmentlogsV1**](ObjectAttachmentApi.md#attachmentgetattachmentlogsv1) | **GET** /1/object/attachment/{pkiAttachmentID}/getAttachmentlogs | Retrieve the Attachmentlogs
 [**attachmentRenameV1**](ObjectAttachmentApi.md#attachmentrenamev1) | **POST** /1/object/attachment/{pkiAttachmentID}/rename | Rename an attachment
 [**attachmentRestoreV1**](ObjectAttachmentApi.md#attachmentrestorev1) | **POST** /1/object/attachment/{pkiAttachmentID}/restore | Restore a deleted attachment
-[**attachmentSetDocumentTypeV1**](ObjectAttachmentApi.md#attachmentsetdocumenttypev1) | **POST** /1/object/attachment/{pkiAttachmentID}/setDocumentType | Change attachment document type
 [**attachmentSetPrivacyV1**](ObjectAttachmentApi.md#attachmentsetprivacyv1) | **POST** /1/object/attachment/{pkiAttachmentID}/setPrivacy | Change the attachment privacy
 [**attachmentValidateV1**](ObjectAttachmentApi.md#attachmentvalidatev1) | **POST** /1/object/attachment/{pkiAttachmentID}/validate | Validate an existing attachment
 
@@ -251,55 +250,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AttachmentRestoreV1Response**](AttachmentRestoreV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **attachmentSetDocumentTypeV1**
-> AttachmentSetDocumentTypeV1Response attachmentSetDocumentTypeV1(pkiAttachmentID, attachmentSetDocumentTypeV1Request)
-
-Change attachment document type
-
-The endpoint allows to change the document type for an attachment.
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectAttachmentApi();
-final pkiAttachmentID = 56; // int | 
-final attachmentSetDocumentTypeV1Request = AttachmentSetDocumentTypeV1Request(); // AttachmentSetDocumentTypeV1Request | 
-
-try {
-    final result = api_instance.attachmentSetDocumentTypeV1(pkiAttachmentID, attachmentSetDocumentTypeV1Request);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectAttachmentApi->attachmentSetDocumentTypeV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiAttachmentID** | **int**|  | 
- **attachmentSetDocumentTypeV1Request** | [**AttachmentSetDocumentTypeV1Request**](AttachmentSetDocumentTypeV1Request.md)|  | 
-
-### Return type
-
-[**AttachmentSetDocumentTypeV1Response**](AttachmentSetDocumentTypeV1Response.md)
 
 ### Authorization
 

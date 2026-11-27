@@ -58,9 +58,6 @@ String parameterToString(dynamic value) {
   if (value is ComputedECommunicationDirection) {
     return ComputedECommunicationDirectionTypeTransformer().encode(value).toString();
   }
-  if (value is ComputedEDocumenttypeStep) {
-    return ComputedEDocumenttypeStepTypeTransformer().encode(value).toString();
-  }
   if (value is ComputedEEzsigndocumentSteptype) {
     return ComputedEEzsigndocumentSteptypeTypeTransformer().encode(value).toString();
   }
@@ -201,27 +198,6 @@ String parameterToString(dynamic value) {
   }
   if (value is FieldEDiscussionmessageStatus) {
     return FieldEDiscussionmessageStatusTypeTransformer().encode(value).toString();
-  }
-  if (value is FieldEDocumenttypeEzcom) {
-    return FieldEDocumenttypeEzcomTypeTransformer().encode(value).toString();
-  }
-  if (value is FieldEDocumenttypePrivacydefault) {
-    return FieldEDocumenttypePrivacydefaultTypeTransformer().encode(value).toString();
-  }
-  if (value is FieldEDocumenttypeRepossession) {
-    return FieldEDocumenttypeRepossessionTypeTransformer().encode(value).toString();
-  }
-  if (value is FieldEDocumenttypeSalebyowner) {
-    return FieldEDocumenttypeSalebyownerTypeTransformer().encode(value).toString();
-  }
-  if (value is FieldEDocumenttypeSaledisplaybyrole) {
-    return FieldEDocumenttypeSaledisplaybyroleTypeTransformer().encode(value).toString();
-  }
-  if (value is FieldEDocumenttypeStatusdefault) {
-    return FieldEDocumenttypeStatusdefaultTypeTransformer().encode(value).toString();
-  }
-  if (value is FieldEDocumenttypeTransactiontype) {
-    return FieldEDocumenttypeTransactiontypeTypeTransformer().encode(value).toString();
   }
   if (value is FieldEDocumenttypechecklistStatus) {
     return FieldEDocumenttypechecklistStatusTypeTransformer().encode(value).toString();
