@@ -15,10 +15,8 @@ Method | HTTP request | Description
 [**otherincomeGetCommunicationListV1**](ObjectOtherincomeApi.md#otherincomegetcommunicationlistv1) | **GET** /1/object/otherincome/{pkiOtherincomeID}/getCommunicationList | Retrieve Communication list
 [**otherincomeGetCommunicationrecipientsV1**](ObjectOtherincomeApi.md#otherincomegetcommunicationrecipientsv1) | **GET** /1/object/otherincome/{pkiOtherincomeID}/getCommunicationrecipients | Retrieve Otherincome's Communicationrecipient
 [**otherincomeGetCommunicationsendersV1**](ObjectOtherincomeApi.md#otherincomegetcommunicationsendersv1) | **GET** /1/object/otherincome/{pkiOtherincomeID}/getCommunicationsenders | Retrieve Otherincome's Communicationsender
-[**otherincomeGetDocumenttypechecklistV1**](ObjectOtherincomeApi.md#otherincomegetdocumenttypechecklistv1) | **GET** /1/object/otherincome/{pkiOtherincomeID}/getDocumenttypechecklist | Retrieve Document type checklist
 [**otherincomeGetListV1**](ObjectOtherincomeApi.md#otherincomegetlistv1) | **GET** /1/object/otherincome/getList | Retrieve Otherincome list
 [**otherincomeImportIntoEDMV1**](ObjectOtherincomeApi.md#otherincomeimportintoedmv1) | **POST** /1/object/otherincome/{pkiOtherincomeID}/importIntoEDM | Import attachments into the Otherincome
-[**otherincomeSyncDocumenttypechecklistV1**](ObjectOtherincomeApi.md#otherincomesyncdocumenttypechecklistv1) | **POST** /1/object/otherincome/{pkiOtherincomeID}/syncDocumenttypechecklist | Synchronize Document type checklist
 
 
 # **otherincomeBatchDownloadV1**
@@ -301,51 +299,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **otherincomeGetDocumenttypechecklistV1**
-> OtherincomeGetDocumenttypechecklistV1Response otherincomeGetDocumenttypechecklistV1(pkiOtherincomeID)
-
-Retrieve Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectOtherincomeApi();
-final pkiOtherincomeID = 56; // int | 
-
-try {
-    final result = api_instance.otherincomeGetDocumenttypechecklistV1(pkiOtherincomeID);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectOtherincomeApi->otherincomeGetDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiOtherincomeID** | **int**|  | 
-
-### Return type
-
-[**OtherincomeGetDocumenttypechecklistV1Response**](OtherincomeGetDocumenttypechecklistV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **otherincomeGetListV1**
 > OtherincomeGetListV1Response otherincomeGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
@@ -438,53 +391,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**OtherincomeImportIntoEDMV1Response**](OtherincomeImportIntoEDMV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **otherincomeSyncDocumenttypechecklistV1**
-> OtherincomeSyncDocumenttypechecklistV1Response otherincomeSyncDocumenttypechecklistV1(pkiOtherincomeID, body)
-
-Synchronize Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectOtherincomeApi();
-final pkiOtherincomeID = 56; // int | 
-final body = Object(); // Object | 
-
-try {
-    final result = api_instance.otherincomeSyncDocumenttypechecklistV1(pkiOtherincomeID, body);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectOtherincomeApi->otherincomeSyncDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiOtherincomeID** | **int**|  | 
- **body** | **Object**|  | [optional] 
-
-### Return type
-
-[**OtherincomeSyncDocumenttypechecklistV1Response**](OtherincomeSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

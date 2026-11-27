@@ -344,60 +344,6 @@ class ObjectEmployeeApi {
     return null;
   }
 
-  /// Retrieve Document type checklist
-  ///
-  /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiEmployeeID (required):
-  Future<Response> employeeGetDocumenttypechecklistV1WithHttpInfo(int pkiEmployeeID, { Future<void>? abortTrigger, }) async {
-    // ignore: prefer_const_declarations
-    final path = r'/1/object/employee/{pkiEmployeeID}/getDocumenttypechecklist'
-      .replaceAll('{pkiEmployeeID}', pkiEmployeeID.toString());
-
-    // ignore: prefer_final_locals
-    Object? postBody;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>[];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'GET',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-      abortTrigger: abortTrigger,
-    );
-  }
-
-  /// Retrieve Document type checklist
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiEmployeeID (required):
-  Future<EmployeeGetDocumenttypechecklistV1Response?> employeeGetDocumenttypechecklistV1(int pkiEmployeeID, { Future<void>? abortTrigger, }) async {
-    final response = await employeeGetDocumenttypechecklistV1WithHttpInfo(pkiEmployeeID, abortTrigger: abortTrigger,);
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EmployeeGetDocumenttypechecklistV1Response',) as EmployeeGetDocumenttypechecklistV1Response;
-    
-    }
-    return null;
-  }
-
   /// Retrieve Employee list
   ///
   /// 
@@ -547,64 +493,6 @@ class ObjectEmployeeApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EmployeeImportIntoEDMV1Response',) as EmployeeImportIntoEDMV1Response;
-    
-    }
-    return null;
-  }
-
-  /// Synchronize Document type checklist
-  ///
-  /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiEmployeeID (required):
-  ///
-  /// * [Object] body:
-  Future<Response> employeeSyncDocumenttypechecklistV1WithHttpInfo(int pkiEmployeeID, { Object? body, Future<void>? abortTrigger, }) async {
-    // ignore: prefer_const_declarations
-    final path = r'/1/object/employee/{pkiEmployeeID}/syncDocumenttypechecklist'
-      .replaceAll('{pkiEmployeeID}', pkiEmployeeID.toString());
-
-    // ignore: prefer_final_locals
-    Object? postBody = body;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>['application/json'];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'POST',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-      abortTrigger: abortTrigger,
-    );
-  }
-
-  /// Synchronize Document type checklist
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiEmployeeID (required):
-  ///
-  /// * [Object] body:
-  Future<EmployeeSyncDocumenttypechecklistV1Response?> employeeSyncDocumenttypechecklistV1(int pkiEmployeeID, { Object? body, Future<void>? abortTrigger, }) async {
-    final response = await employeeSyncDocumenttypechecklistV1WithHttpInfo(pkiEmployeeID, body: body, abortTrigger: abortTrigger,);
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'EmployeeSyncDocumenttypechecklistV1Response',) as EmployeeSyncDocumenttypechecklistV1Response;
     
     }
     return null;

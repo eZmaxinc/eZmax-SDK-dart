@@ -15,10 +15,8 @@ Method | HTTP request | Description
 [**rejectedoffertopurchaseGetCommunicationListV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchasegetcommunicationlistv1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationList | Retrieve Communication list
 [**rejectedoffertopurchaseGetCommunicationrecipientsV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchasegetcommunicationrecipientsv1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationrecipients | Retrieve Rejectedoffertopurchase's Communicationrecipient
 [**rejectedoffertopurchaseGetCommunicationsendersV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchasegetcommunicationsendersv1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationsenders | Retrieve Rejectedoffertopurchase's Communicationsender
-[**rejectedoffertopurchaseGetDocumenttypechecklistV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchasegetdocumenttypechecklistv1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getDocumenttypechecklist | Retrieve Document type checklist
 [**rejectedoffertopurchaseGetListV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchasegetlistv1) | **GET** /1/object/rejectedoffertopurchase/getList | Retrieve Rejectedoffertopurchase list
 [**rejectedoffertopurchaseImportIntoEDMV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseimportintoedmv1) | **POST** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/importIntoEDM | Import attachments into the Rejectedoffertopurchase
-[**rejectedoffertopurchaseSyncDocumenttypechecklistV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchasesyncdocumenttypechecklistv1) | **POST** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/syncDocumenttypechecklist | Synchronize Document type checklist
 
 
 # **rejectedoffertopurchaseBatchDownloadV1**
@@ -301,51 +299,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **rejectedoffertopurchaseGetDocumenttypechecklistV1**
-> RejectedoffertopurchaseGetDocumenttypechecklistV1Response rejectedoffertopurchaseGetDocumenttypechecklistV1(pkiRejectedoffertopurchaseID)
-
-Retrieve Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectRejectedoffertopurchaseApi();
-final pkiRejectedoffertopurchaseID = 56; // int | 
-
-try {
-    final result = api_instance.rejectedoffertopurchaseGetDocumenttypechecklistV1(pkiRejectedoffertopurchaseID);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectRejectedoffertopurchaseApi->rejectedoffertopurchaseGetDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiRejectedoffertopurchaseID** | **int**|  | 
-
-### Return type
-
-[**RejectedoffertopurchaseGetDocumenttypechecklistV1Response**](RejectedoffertopurchaseGetDocumenttypechecklistV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **rejectedoffertopurchaseGetListV1**
 > RejectedoffertopurchaseGetListV1Response rejectedoffertopurchaseGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
@@ -438,53 +391,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RejectedoffertopurchaseImportIntoEDMV1Response**](RejectedoffertopurchaseImportIntoEDMV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **rejectedoffertopurchaseSyncDocumenttypechecklistV1**
-> RejectedoffertopurchaseSyncDocumenttypechecklistV1Response rejectedoffertopurchaseSyncDocumenttypechecklistV1(pkiRejectedoffertopurchaseID, body)
-
-Synchronize Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectRejectedoffertopurchaseApi();
-final pkiRejectedoffertopurchaseID = 56; // int | 
-final body = Object(); // Object | 
-
-try {
-    final result = api_instance.rejectedoffertopurchaseSyncDocumenttypechecklistV1(pkiRejectedoffertopurchaseID, body);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectRejectedoffertopurchaseApi->rejectedoffertopurchaseSyncDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiRejectedoffertopurchaseID** | **int**|  | 
- **body** | **Object**|  | [optional] 
-
-### Return type
-
-[**RejectedoffertopurchaseSyncDocumenttypechecklistV1Response**](RejectedoffertopurchaseSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

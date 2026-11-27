@@ -15,10 +15,8 @@ Method | HTTP request | Description
 [**electronicfundstransferGetCommunicationListV1**](ObjectElectronicfundstransferApi.md#electronicfundstransfergetcommunicationlistv1) | **GET** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationList | Retrieve Communication list
 [**electronicfundstransferGetCommunicationrecipientsV1**](ObjectElectronicfundstransferApi.md#electronicfundstransfergetcommunicationrecipientsv1) | **GET** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationrecipients | Retrieve Electronicfundstransfer's Communicationrecipient
 [**electronicfundstransferGetCommunicationsendersV1**](ObjectElectronicfundstransferApi.md#electronicfundstransfergetcommunicationsendersv1) | **GET** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationsenders | Retrieve Electronicfundstransfer's Communicationsender
-[**electronicfundstransferGetDocumenttypechecklistV1**](ObjectElectronicfundstransferApi.md#electronicfundstransfergetdocumenttypechecklistv1) | **GET** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getDocumenttypechecklist | Retrieve Document type checklist
 [**electronicfundstransferGetListV1**](ObjectElectronicfundstransferApi.md#electronicfundstransfergetlistv1) | **GET** /1/object/electronicfundstransfer/getList | Retrieve Electronicfundstransfer list
 [**electronicfundstransferImportIntoEDMV1**](ObjectElectronicfundstransferApi.md#electronicfundstransferimportintoedmv1) | **POST** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/importIntoEDM | Import attachments into the Electronicfundstransfer
-[**electronicfundstransferSyncDocumenttypechecklistV1**](ObjectElectronicfundstransferApi.md#electronicfundstransfersyncdocumenttypechecklistv1) | **POST** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/syncDocumenttypechecklist | Synchronize Document type checklist
 
 
 # **electronicfundstransferBatchDownloadV1**
@@ -301,51 +299,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **electronicfundstransferGetDocumenttypechecklistV1**
-> ElectronicfundstransferGetDocumenttypechecklistV1Response electronicfundstransferGetDocumenttypechecklistV1(pkiElectronicfundstransferID)
-
-Retrieve Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectElectronicfundstransferApi();
-final pkiElectronicfundstransferID = 56; // int | 
-
-try {
-    final result = api_instance.electronicfundstransferGetDocumenttypechecklistV1(pkiElectronicfundstransferID);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectElectronicfundstransferApi->electronicfundstransferGetDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiElectronicfundstransferID** | **int**|  | 
-
-### Return type
-
-[**ElectronicfundstransferGetDocumenttypechecklistV1Response**](ElectronicfundstransferGetDocumenttypechecklistV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **electronicfundstransferGetListV1**
 > ElectronicfundstransferGetListV1Response electronicfundstransferGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
@@ -438,53 +391,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ElectronicfundstransferImportIntoEDMV1Response**](ElectronicfundstransferImportIntoEDMV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **electronicfundstransferSyncDocumenttypechecklistV1**
-> ElectronicfundstransferSyncDocumenttypechecklistV1Response electronicfundstransferSyncDocumenttypechecklistV1(pkiElectronicfundstransferID, body)
-
-Synchronize Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectElectronicfundstransferApi();
-final pkiElectronicfundstransferID = 56; // int | 
-final body = Object(); // Object | 
-
-try {
-    final result = api_instance.electronicfundstransferSyncDocumenttypechecklistV1(pkiElectronicfundstransferID, body);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectElectronicfundstransferApi->electronicfundstransferSyncDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiElectronicfundstransferID** | **int**|  | 
- **body** | **Object**|  | [optional] 
-
-### Return type
-
-[**ElectronicfundstransferSyncDocumenttypechecklistV1Response**](ElectronicfundstransferSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

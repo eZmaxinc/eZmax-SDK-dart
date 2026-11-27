@@ -66,60 +66,6 @@ class ObjectCommunicationApi {
     }
   }
 
-  /// Retrieve Document type checklist
-  ///
-  /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiCommunicationID (required):
-  Future<Response> communicationGetDocumenttypechecklistV1WithHttpInfo(int pkiCommunicationID, { Future<void>? abortTrigger, }) async {
-    // ignore: prefer_const_declarations
-    final path = r'/1/object/communication/{pkiCommunicationID}/getDocumenttypechecklist'
-      .replaceAll('{pkiCommunicationID}', pkiCommunicationID.toString());
-
-    // ignore: prefer_final_locals
-    Object? postBody;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>[];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'GET',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-      abortTrigger: abortTrigger,
-    );
-  }
-
-  /// Retrieve Document type checklist
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiCommunicationID (required):
-  Future<CommunicationGetDocumenttypechecklistV1Response?> communicationGetDocumenttypechecklistV1(int pkiCommunicationID, { Future<void>? abortTrigger, }) async {
-    final response = await communicationGetDocumenttypechecklistV1WithHttpInfo(pkiCommunicationID, abortTrigger: abortTrigger,);
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommunicationGetDocumenttypechecklistV1Response',) as CommunicationGetDocumenttypechecklistV1Response;
-    
-    }
-    return null;
-  }
-
   /// Send a new Communication
   ///
   /// The endpoint allows to send one or many elements at once.
@@ -172,64 +118,6 @@ class ObjectCommunicationApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommunicationSendV1Response',) as CommunicationSendV1Response;
-    
-    }
-    return null;
-  }
-
-  /// Synchronize Document type checklist
-  ///
-  /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiCommunicationID (required):
-  ///
-  /// * [Object] body:
-  Future<Response> communicationSyncDocumenttypechecklistV1WithHttpInfo(int pkiCommunicationID, { Object? body, Future<void>? abortTrigger, }) async {
-    // ignore: prefer_const_declarations
-    final path = r'/1/object/communication/{pkiCommunicationID}/syncDocumenttypechecklist'
-      .replaceAll('{pkiCommunicationID}', pkiCommunicationID.toString());
-
-    // ignore: prefer_final_locals
-    Object? postBody = body;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>['application/json'];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'POST',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-      abortTrigger: abortTrigger,
-    );
-  }
-
-  /// Synchronize Document type checklist
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiCommunicationID (required):
-  ///
-  /// * [Object] body:
-  Future<CommunicationSyncDocumenttypechecklistV1Response?> communicationSyncDocumenttypechecklistV1(int pkiCommunicationID, { Object? body, Future<void>? abortTrigger, }) async {
-    final response = await communicationSyncDocumenttypechecklistV1WithHttpInfo(pkiCommunicationID, body: body, abortTrigger: abortTrigger,);
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommunicationSyncDocumenttypechecklistV1Response',) as CommunicationSyncDocumenttypechecklistV1Response;
     
     }
     return null;

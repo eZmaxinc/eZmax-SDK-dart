@@ -344,60 +344,6 @@ class ObjectReconciliationApi {
     return null;
   }
 
-  /// Retrieve Document type checklist
-  ///
-  /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiReconciliationID (required):
-  Future<Response> reconciliationGetDocumenttypechecklistV1WithHttpInfo(int pkiReconciliationID, { Future<void>? abortTrigger, }) async {
-    // ignore: prefer_const_declarations
-    final path = r'/1/object/reconciliation/{pkiReconciliationID}/getDocumenttypechecklist'
-      .replaceAll('{pkiReconciliationID}', pkiReconciliationID.toString());
-
-    // ignore: prefer_final_locals
-    Object? postBody;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>[];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'GET',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-      abortTrigger: abortTrigger,
-    );
-  }
-
-  /// Retrieve Document type checklist
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiReconciliationID (required):
-  Future<ReconciliationGetDocumenttypechecklistV1Response?> reconciliationGetDocumenttypechecklistV1(int pkiReconciliationID, { Future<void>? abortTrigger, }) async {
-    final response = await reconciliationGetDocumenttypechecklistV1WithHttpInfo(pkiReconciliationID, abortTrigger: abortTrigger,);
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'ReconciliationGetDocumenttypechecklistV1Response',) as ReconciliationGetDocumenttypechecklistV1Response;
-    
-    }
-    return null;
-  }
-
   /// Import attachments into the Reconciliation
   ///
   /// Note: This method returns the HTTP [Response].
@@ -451,64 +397,6 @@ class ObjectReconciliationApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'ReconciliationImportIntoEDMV1Response',) as ReconciliationImportIntoEDMV1Response;
-    
-    }
-    return null;
-  }
-
-  /// Synchronize Document type checklist
-  ///
-  /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiReconciliationID (required):
-  ///
-  /// * [Object] body:
-  Future<Response> reconciliationSyncDocumenttypechecklistV1WithHttpInfo(int pkiReconciliationID, { Object? body, Future<void>? abortTrigger, }) async {
-    // ignore: prefer_const_declarations
-    final path = r'/1/object/reconciliation/{pkiReconciliationID}/syncDocumenttypechecklist'
-      .replaceAll('{pkiReconciliationID}', pkiReconciliationID.toString());
-
-    // ignore: prefer_final_locals
-    Object? postBody = body;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>['application/json'];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'POST',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-      abortTrigger: abortTrigger,
-    );
-  }
-
-  /// Synchronize Document type checklist
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiReconciliationID (required):
-  ///
-  /// * [Object] body:
-  Future<ReconciliationSyncDocumenttypechecklistV1Response?> reconciliationSyncDocumenttypechecklistV1(int pkiReconciliationID, { Object? body, Future<void>? abortTrigger, }) async {
-    final response = await reconciliationSyncDocumenttypechecklistV1WithHttpInfo(pkiReconciliationID, body: body, abortTrigger: abortTrigger,);
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'ReconciliationSyncDocumenttypechecklistV1Response',) as ReconciliationSyncDocumenttypechecklistV1Response;
     
     }
     return null;

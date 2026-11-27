@@ -15,10 +15,8 @@ Method | HTTP request | Description
 [**leadGetCommunicationListV1**](ObjectLeadApi.md#leadgetcommunicationlistv1) | **GET** /1/object/lead/{pkiLeadID}/getCommunicationList | Retrieve Communication list
 [**leadGetCommunicationrecipientsV1**](ObjectLeadApi.md#leadgetcommunicationrecipientsv1) | **GET** /1/object/lead/{pkiLeadID}/getCommunicationrecipients | Retrieve Communication recipients
 [**leadGetCommunicationsendersV1**](ObjectLeadApi.md#leadgetcommunicationsendersv1) | **GET** /1/object/lead/{pkiLeadID}/getCommunicationsenders | Retrieve Communication senders
-[**leadGetDocumenttypechecklistV1**](ObjectLeadApi.md#leadgetdocumenttypechecklistv1) | **GET** /1/object/lead/{pkiLeadID}/getDocumenttypechecklist | Retrieve Document type checklist
 [**leadGetListV1**](ObjectLeadApi.md#leadgetlistv1) | **GET** /1/object/lead/getList | Retrieve Lead list
 [**leadImportIntoEDMV1**](ObjectLeadApi.md#leadimportintoedmv1) | **POST** /1/object/lead/{pkiLeadID}/importIntoEDM | Import attachments into the Lead
-[**leadSyncDocumenttypechecklistV1**](ObjectLeadApi.md#leadsyncdocumenttypechecklistv1) | **POST** /1/object/lead/{pkiLeadID}/syncDocumenttypechecklist | Synchronize Document type checklist
 
 
 # **leadBatchDownloadV1**
@@ -293,51 +291,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **leadGetDocumenttypechecklistV1**
-> LeadGetDocumenttypechecklistV1Response leadGetDocumenttypechecklistV1(pkiLeadID)
-
-Retrieve Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectLeadApi();
-final pkiLeadID = 56; // int | 
-
-try {
-    final result = api_instance.leadGetDocumenttypechecklistV1(pkiLeadID);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectLeadApi->leadGetDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiLeadID** | **int**|  | 
-
-### Return type
-
-[**LeadGetDocumenttypechecklistV1Response**](LeadGetDocumenttypechecklistV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **leadGetListV1**
 > LeadGetListV1Response leadGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
@@ -430,53 +383,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**LeadImportIntoEDMV1Response**](LeadImportIntoEDMV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **leadSyncDocumenttypechecklistV1**
-> LeadSyncDocumenttypechecklistV1Response leadSyncDocumenttypechecklistV1(pkiLeadID, body)
-
-Synchronize Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectLeadApi();
-final pkiLeadID = 56; // int | 
-final body = Object(); // Object | 
-
-try {
-    final result = api_instance.leadSyncDocumenttypechecklistV1(pkiLeadID, body);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectLeadApi->leadSyncDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiLeadID** | **int**|  | 
- **body** | **Object**|  | [optional] 
-
-### Return type
-
-[**LeadSyncDocumenttypechecklistV1Response**](LeadSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

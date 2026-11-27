@@ -15,9 +15,7 @@ Method | HTTP request | Description
 [**commissionadvanceGetCommunicationListV1**](ObjectCommissionadvanceApi.md#commissionadvancegetcommunicationlistv1) | **GET** /1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationList | Retrieve Communication list
 [**commissionadvanceGetCommunicationrecipientsV1**](ObjectCommissionadvanceApi.md#commissionadvancegetcommunicationrecipientsv1) | **GET** /1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationrecipients | Retrieve Communication recipients
 [**commissionadvanceGetCommunicationsendersV1**](ObjectCommissionadvanceApi.md#commissionadvancegetcommunicationsendersv1) | **GET** /1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationsenders | Retrieve Communication senders
-[**commissionadvanceGetDocumenttypechecklistV1**](ObjectCommissionadvanceApi.md#commissionadvancegetdocumenttypechecklistv1) | **GET** /1/object/commissionadvance/{pkiCommissionadvanceID}/getDocumenttypechecklist | Retrieve Document type checklist
 [**commissionadvanceImportIntoEDMV1**](ObjectCommissionadvanceApi.md#commissionadvanceimportintoedmv1) | **POST** /1/object/commissionadvance/{pkiCommissionadvanceID}/importIntoEDM | Import attachments into the Commissionadvance
-[**commissionadvanceSyncDocumenttypechecklistV1**](ObjectCommissionadvanceApi.md#commissionadvancesyncdocumenttypechecklistv1) | **POST** /1/object/commissionadvance/{pkiCommissionadvanceID}/syncDocumenttypechecklist | Synchronize Document type checklist
 
 
 # **commissionadvanceBatchDownloadV1**
@@ -292,51 +290,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **commissionadvanceGetDocumenttypechecklistV1**
-> CommissionadvanceGetDocumenttypechecklistV1Response commissionadvanceGetDocumenttypechecklistV1(pkiCommissionadvanceID)
-
-Retrieve Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectCommissionadvanceApi();
-final pkiCommissionadvanceID = 56; // int | 
-
-try {
-    final result = api_instance.commissionadvanceGetDocumenttypechecklistV1(pkiCommissionadvanceID);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectCommissionadvanceApi->commissionadvanceGetDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiCommissionadvanceID** | **int**|  | 
-
-### Return type
-
-[**CommissionadvanceGetDocumenttypechecklistV1Response**](CommissionadvanceGetDocumenttypechecklistV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **commissionadvanceImportIntoEDMV1**
 > CommissionadvanceImportIntoEDMV1Response commissionadvanceImportIntoEDMV1(pkiCommissionadvanceID, commissionadvanceImportIntoEDMV1Request)
 
@@ -372,53 +325,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CommissionadvanceImportIntoEDMV1Response**](CommissionadvanceImportIntoEDMV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **commissionadvanceSyncDocumenttypechecklistV1**
-> CommissionadvanceSyncDocumenttypechecklistV1Response commissionadvanceSyncDocumenttypechecklistV1(pkiCommissionadvanceID, body)
-
-Synchronize Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectCommissionadvanceApi();
-final pkiCommissionadvanceID = 56; // int | 
-final body = Object(); // Object | 
-
-try {
-    final result = api_instance.commissionadvanceSyncDocumenttypechecklistV1(pkiCommissionadvanceID, body);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectCommissionadvanceApi->commissionadvanceSyncDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiCommissionadvanceID** | **int**|  | 
- **body** | **Object**|  | [optional] 
-
-### Return type
-
-[**CommissionadvanceSyncDocumenttypechecklistV1Response**](CommissionadvanceSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

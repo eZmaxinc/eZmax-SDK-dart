@@ -15,10 +15,8 @@ Method | HTTP request | Description
 [**buyercontractGetCommunicationListV1**](ObjectBuyercontractApi.md#buyercontractgetcommunicationlistv1) | **GET** /1/object/buyercontract/{pkiBuyercontractID}/getCommunicationList | Retrieve Communication list
 [**buyercontractGetCommunicationrecipientsV1**](ObjectBuyercontractApi.md#buyercontractgetcommunicationrecipientsv1) | **GET** /1/object/buyercontract/{pkiBuyercontractID}/getCommunicationrecipients | Retrieve Buyercontract's Communicationrecipient
 [**buyercontractGetCommunicationsendersV1**](ObjectBuyercontractApi.md#buyercontractgetcommunicationsendersv1) | **GET** /1/object/buyercontract/{pkiBuyercontractID}/getCommunicationsenders | Retrieve Buyercontract's Communicationsender
-[**buyercontractGetDocumenttypechecklistV1**](ObjectBuyercontractApi.md#buyercontractgetdocumenttypechecklistv1) | **GET** /1/object/buyercontract/{pkiBuyercontractID}/getDocumenttypechecklist | Retrieve Document type checklist
 [**buyercontractGetListV1**](ObjectBuyercontractApi.md#buyercontractgetlistv1) | **GET** /1/object/buyercontract/getList | Retrieve Buyercontract list
 [**buyercontractImportIntoEDMV1**](ObjectBuyercontractApi.md#buyercontractimportintoedmv1) | **POST** /1/object/buyercontract/{pkiBuyercontractID}/importIntoEDM | Import attachments into the Buyercontract
-[**buyercontractSyncDocumenttypechecklistV1**](ObjectBuyercontractApi.md#buyercontractsyncdocumenttypechecklistv1) | **POST** /1/object/buyercontract/{pkiBuyercontractID}/syncDocumenttypechecklist | Synchronize Document type checklist
 
 
 # **buyercontractBatchDownloadV1**
@@ -301,51 +299,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **buyercontractGetDocumenttypechecklistV1**
-> BuyercontractGetDocumenttypechecklistV1Response buyercontractGetDocumenttypechecklistV1(pkiBuyercontractID)
-
-Retrieve Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectBuyercontractApi();
-final pkiBuyercontractID = 56; // int | 
-
-try {
-    final result = api_instance.buyercontractGetDocumenttypechecklistV1(pkiBuyercontractID);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectBuyercontractApi->buyercontractGetDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiBuyercontractID** | **int**|  | 
-
-### Return type
-
-[**BuyercontractGetDocumenttypechecklistV1Response**](BuyercontractGetDocumenttypechecklistV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **buyercontractGetListV1**
 > BuyercontractGetListV1Response buyercontractGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
@@ -438,53 +391,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**BuyercontractImportIntoEDMV1Response**](BuyercontractImportIntoEDMV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **buyercontractSyncDocumenttypechecklistV1**
-> BuyercontractSyncDocumenttypechecklistV1Response buyercontractSyncDocumenttypechecklistV1(pkiBuyercontractID, body)
-
-Synchronize Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectBuyercontractApi();
-final pkiBuyercontractID = 56; // int | 
-final body = Object(); // Object | 
-
-try {
-    final result = api_instance.buyercontractSyncDocumenttypechecklistV1(pkiBuyercontractID, body);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectBuyercontractApi->buyercontractSyncDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiBuyercontractID** | **int**|  | 
- **body** | **Object**|  | [optional] 
-
-### Return type
-
-[**BuyercontractSyncDocumenttypechecklistV1Response**](BuyercontractSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

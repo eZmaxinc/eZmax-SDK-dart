@@ -15,10 +15,8 @@ Method | HTTP request | Description
 [**deposittransitchequeGetCommunicationListV1**](ObjectDeposittransitchequeApi.md#deposittransitchequegetcommunicationlistv1) | **GET** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationList | Retrieve Communication list
 [**deposittransitchequeGetCommunicationrecipientsV1**](ObjectDeposittransitchequeApi.md#deposittransitchequegetcommunicationrecipientsv1) | **GET** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationrecipients | Retrieve Communication recipients
 [**deposittransitchequeGetCommunicationsendersV1**](ObjectDeposittransitchequeApi.md#deposittransitchequegetcommunicationsendersv1) | **GET** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationsenders | Retrieve Communication senders
-[**deposittransitchequeGetDocumenttypechecklistV1**](ObjectDeposittransitchequeApi.md#deposittransitchequegetdocumenttypechecklistv1) | **GET** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getDocumenttypechecklist | Retrieve Document type checklist
 [**deposittransitchequeGetListV1**](ObjectDeposittransitchequeApi.md#deposittransitchequegetlistv1) | **GET** /1/object/deposittransitcheque/getList | Retrieve Deposittransitcheque list
 [**deposittransitchequeImportIntoEDMV1**](ObjectDeposittransitchequeApi.md#deposittransitchequeimportintoedmv1) | **POST** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/importIntoEDM | Import attachments into the Deposittransitcheque
-[**deposittransitchequeSyncDocumenttypechecklistV1**](ObjectDeposittransitchequeApi.md#deposittransitchequesyncdocumenttypechecklistv1) | **POST** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/syncDocumenttypechecklist | Synchronize Document type checklist
 
 
 # **deposittransitchequeBatchDownloadV1**
@@ -293,51 +291,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **deposittransitchequeGetDocumenttypechecklistV1**
-> DeposittransitchequeGetDocumenttypechecklistV1Response deposittransitchequeGetDocumenttypechecklistV1(pkiDeposittransitchequeID)
-
-Retrieve Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectDeposittransitchequeApi();
-final pkiDeposittransitchequeID = 56; // int | 
-
-try {
-    final result = api_instance.deposittransitchequeGetDocumenttypechecklistV1(pkiDeposittransitchequeID);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectDeposittransitchequeApi->deposittransitchequeGetDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiDeposittransitchequeID** | **int**|  | 
-
-### Return type
-
-[**DeposittransitchequeGetDocumenttypechecklistV1Response**](DeposittransitchequeGetDocumenttypechecklistV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **deposittransitchequeGetListV1**
 > DeposittransitchequeGetListV1Response deposittransitchequeGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
@@ -428,53 +381,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DeposittransitchequeImportIntoEDMV1Response**](DeposittransitchequeImportIntoEDMV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **deposittransitchequeSyncDocumenttypechecklistV1**
-> DeposittransitchequeSyncDocumenttypechecklistV1Response deposittransitchequeSyncDocumenttypechecklistV1(pkiDeposittransitchequeID, body)
-
-Synchronize Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectDeposittransitchequeApi();
-final pkiDeposittransitchequeID = 56; // int | 
-final body = Object(); // Object | 
-
-try {
-    final result = api_instance.deposittransitchequeSyncDocumenttypechecklistV1(pkiDeposittransitchequeID, body);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectDeposittransitchequeApi->deposittransitchequeSyncDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiDeposittransitchequeID** | **int**|  | 
- **body** | **Object**|  | [optional] 
-
-### Return type
-
-[**DeposittransitchequeSyncDocumenttypechecklistV1Response**](DeposittransitchequeSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

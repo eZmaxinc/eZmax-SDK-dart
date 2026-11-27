@@ -364,60 +364,6 @@ class ObjectInvoiceApi {
     return null;
   }
 
-  /// Retrieve Document type checklist
-  ///
-  /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiInvoiceID (required):
-  Future<Response> invoiceGetDocumenttypechecklistV1WithHttpInfo(int pkiInvoiceID, { Future<void>? abortTrigger, }) async {
-    // ignore: prefer_const_declarations
-    final path = r'/1/object/invoice/{pkiInvoiceID}/getDocumenttypechecklist'
-      .replaceAll('{pkiInvoiceID}', pkiInvoiceID.toString());
-
-    // ignore: prefer_final_locals
-    Object? postBody;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>[];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'GET',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-      abortTrigger: abortTrigger,
-    );
-  }
-
-  /// Retrieve Document type checklist
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiInvoiceID (required):
-  Future<InvoiceGetDocumenttypechecklistV1Response?> invoiceGetDocumenttypechecklistV1(int pkiInvoiceID, { Future<void>? abortTrigger, }) async {
-    final response = await invoiceGetDocumenttypechecklistV1WithHttpInfo(pkiInvoiceID, abortTrigger: abortTrigger,);
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'InvoiceGetDocumenttypechecklistV1Response',) as InvoiceGetDocumenttypechecklistV1Response;
-    
-    }
-    return null;
-  }
-
   /// Retrieve Invoice list
   ///
   /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eInvoiceType | Commission<br>CommissionAdvance<br>Financed<br>Manual<br>Monthly |
@@ -567,64 +513,6 @@ class ObjectInvoiceApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'InvoiceImportIntoEDMV1Response',) as InvoiceImportIntoEDMV1Response;
-    
-    }
-    return null;
-  }
-
-  /// Synchronize Document type checklist
-  ///
-  /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiInvoiceID (required):
-  ///
-  /// * [Object] body:
-  Future<Response> invoiceSyncDocumenttypechecklistV1WithHttpInfo(int pkiInvoiceID, { Object? body, Future<void>? abortTrigger, }) async {
-    // ignore: prefer_const_declarations
-    final path = r'/1/object/invoice/{pkiInvoiceID}/syncDocumenttypechecklist'
-      .replaceAll('{pkiInvoiceID}', pkiInvoiceID.toString());
-
-    // ignore: prefer_final_locals
-    Object? postBody = body;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>['application/json'];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'POST',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-      abortTrigger: abortTrigger,
-    );
-  }
-
-  /// Synchronize Document type checklist
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiInvoiceID (required):
-  ///
-  /// * [Object] body:
-  Future<InvoiceSyncDocumenttypechecklistV1Response?> invoiceSyncDocumenttypechecklistV1(int pkiInvoiceID, { Object? body, Future<void>? abortTrigger, }) async {
-    final response = await invoiceSyncDocumenttypechecklistV1WithHttpInfo(pkiInvoiceID, body: body, abortTrigger: abortTrigger,);
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'InvoiceSyncDocumenttypechecklistV1Response',) as InvoiceSyncDocumenttypechecklistV1Response;
     
     }
     return null;

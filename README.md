@@ -81,10 +81,8 @@ Class | Method | HTTP request | Description
 *ObjectAdjustmentApi* | [**adjustmentGetCommunicationListV1**](doc//ObjectAdjustmentApi.md#adjustmentgetcommunicationlistv1) | **GET** /1/object/adjustment/{pkiAdjustmentID}/getCommunicationList | Retrieve Communication list
 *ObjectAdjustmentApi* | [**adjustmentGetCommunicationrecipientsV1**](doc//ObjectAdjustmentApi.md#adjustmentgetcommunicationrecipientsv1) | **GET** /1/object/adjustment/{pkiAdjustmentID}/getCommunicationrecipients | Retrieve Communication recipients
 *ObjectAdjustmentApi* | [**adjustmentGetCommunicationsendersV1**](doc//ObjectAdjustmentApi.md#adjustmentgetcommunicationsendersv1) | **GET** /1/object/adjustment/{pkiAdjustmentID}/getCommunicationsenders | Retrieve Communication senders
-*ObjectAdjustmentApi* | [**adjustmentGetDocumenttypechecklistV1**](doc//ObjectAdjustmentApi.md#adjustmentgetdocumenttypechecklistv1) | **GET** /1/object/adjustment/{pkiAdjustmentID}/getDocumenttypechecklist | Retrieve Document type checklist
 *ObjectAdjustmentApi* | [**adjustmentGetListV1**](doc//ObjectAdjustmentApi.md#adjustmentgetlistv1) | **GET** /1/object/adjustment/getList | Retrieve Adjustment list
 *ObjectAdjustmentApi* | [**adjustmentImportIntoEDMV1**](doc//ObjectAdjustmentApi.md#adjustmentimportintoedmv1) | **POST** /1/object/adjustment/{pkiAdjustmentID}/importIntoEDM | Import attachments into the Adjustment
-*ObjectAdjustmentApi* | [**adjustmentSyncDocumenttypechecklistV1**](doc//ObjectAdjustmentApi.md#adjustmentsyncdocumenttypechecklistv1) | **POST** /1/object/adjustment/{pkiAdjustmentID}/syncDocumenttypechecklist | Synchronize Document type checklist
 *ObjectAdjustmentreminderApi* | [**adjustmentreminderGetListV1**](doc//ObjectAdjustmentreminderApi.md#adjustmentremindergetlistv1) | **GET** /1/object/adjustmentreminder/getList | Retrieve Adjustmentreminder list
 *ObjectAgentApi* | [**agentBatchDownloadV1**](doc//ObjectAgentApi.md#agentbatchdownloadv1) | **POST** /1/object/agent/{pkiAgentID}/batchDownload | Download multiples attachments from a Agent
 *ObjectAgentApi* | [**agentGetAttachmentsV1**](doc//ObjectAgentApi.md#agentgetattachmentsv1) | **GET** /1/object/agent/{pkiAgentID}/getAttachments | Retrieve Agent's attachments
@@ -93,10 +91,8 @@ Class | Method | HTTP request | Description
 *ObjectAgentApi* | [**agentGetCommunicationListV1**](doc//ObjectAgentApi.md#agentgetcommunicationlistv1) | **GET** /1/object/agent/{pkiAgentID}/getCommunicationList | Retrieve Communication list
 *ObjectAgentApi* | [**agentGetCommunicationrecipientsV1**](doc//ObjectAgentApi.md#agentgetcommunicationrecipientsv1) | **GET** /1/object/agent/{pkiAgentID}/getCommunicationrecipients | Retrieve Communication recipients
 *ObjectAgentApi* | [**agentGetCommunicationsendersV1**](doc//ObjectAgentApi.md#agentgetcommunicationsendersv1) | **GET** /1/object/agent/{pkiAgentID}/getCommunicationsenders | Retrieve Communication senders
-*ObjectAgentApi* | [**agentGetDocumenttypechecklistV1**](doc//ObjectAgentApi.md#agentgetdocumenttypechecklistv1) | **GET** /1/object/agent/{pkiAgentID}/getDocumenttypechecklist | Retrieve Document type checklist
 *ObjectAgentApi* | [**agentGetListV1**](doc//ObjectAgentApi.md#agentgetlistv1) | **GET** /1/object/agent/getList | Retrieve Agent list
 *ObjectAgentApi* | [**agentImportIntoEDMV1**](doc//ObjectAgentApi.md#agentimportintoedmv1) | **POST** /1/object/agent/{pkiAgentID}/importIntoEDM | Import attachments into the Agent
-*ObjectAgentApi* | [**agentSyncDocumenttypechecklistV1**](doc//ObjectAgentApi.md#agentsyncdocumenttypechecklistv1) | **POST** /1/object/agent/{pkiAgentID}/syncDocumenttypechecklist | Synchronize Document type checklist
 *ObjectAgenttypeApi* | [**agenttypeGetAutocompleteV2**](doc//ObjectAgenttypeApi.md#agenttypegetautocompletev2) | **GET** /2/object/agenttype/getAutocomplete/{sSelector} | Retrieve Agenttypes and IDs
 *ObjectApikeyApi* | [**apikeyCreateObjectV2**](doc//ObjectApikeyApi.md#apikeycreateobjectv2) | **POST** /2/object/apikey | Create a new Apikey
 *ObjectApikeyApi* | [**apikeyEditObjectV1**](doc//ObjectApikeyApi.md#apikeyeditobjectv1) | **PUT** /1/object/apikey/{pkiApikeyID} | Edit an existing Apikey
@@ -131,10 +127,8 @@ Class | Method | HTTP request | Description
 *ObjectBankaccountApi* | [**bankaccountGetCommunicationListV1**](doc//ObjectBankaccountApi.md#bankaccountgetcommunicationlistv1) | **GET** /1/object/bankaccount/{pkiBankaccountID}/getCommunicationList | Retrieve Communication list
 *ObjectBankaccountApi* | [**bankaccountGetCommunicationrecipientsV1**](doc//ObjectBankaccountApi.md#bankaccountgetcommunicationrecipientsv1) | **GET** /1/object/bankaccount/{pkiBankaccountID}/getCommunicationrecipients | Retrieve Communication recipients
 *ObjectBankaccountApi* | [**bankaccountGetCommunicationsendersV1**](doc//ObjectBankaccountApi.md#bankaccountgetcommunicationsendersv1) | **GET** /1/object/bankaccount/{pkiBankaccountID}/getCommunicationsenders | Retrieve Communication senders
-*ObjectBankaccountApi* | [**bankaccountGetDocumenttypechecklistV1**](doc//ObjectBankaccountApi.md#bankaccountgetdocumenttypechecklistv1) | **GET** /1/object/bankaccount/{pkiBankaccountID}/getDocumenttypechecklist | Retrieve Document type checklist
 *ObjectBankaccountApi* | [**bankaccountGetListV1**](doc//ObjectBankaccountApi.md#bankaccountgetlistv1) | **GET** /1/object/bankaccount/getList | Retrieve Bankaccount list
 *ObjectBankaccountApi* | [**bankaccountImportIntoEDMV1**](doc//ObjectBankaccountApi.md#bankaccountimportintoedmv1) | **POST** /1/object/bankaccount/{pkiBankaccountID}/importIntoEDM | Import attachments into the Bankaccount
-*ObjectBankaccountApi* | [**bankaccountSyncDocumenttypechecklistV1**](doc//ObjectBankaccountApi.md#bankaccountsyncdocumenttypechecklistv1) | **POST** /1/object/bankaccount/{pkiBankaccountID}/syncDocumenttypechecklist | Synchronize Document type checklist
 *ObjectBillingentityexternalApi* | [**billingentityexternalGenerateFederationTokenV1**](doc//ObjectBillingentityexternalApi.md#billingentityexternalgeneratefederationtokenv1) | **POST** /1/object/billingentityexternal/{pkiBillingentityexternalID}/generateFederationToken | Generate a federation token
 *ObjectBillingentityexternalApi* | [**billingentityexternalGetAutocompleteV2**](doc//ObjectBillingentityexternalApi.md#billingentityexternalgetautocompletev2) | **GET** /2/object/billingentityexternal/getAutocomplete/{sSelector} | Retrieve Billingentityexternals and IDs
 *ObjectBillingentityinternalApi* | [**billingentityinternalCreateObjectV1**](doc//ObjectBillingentityinternalApi.md#billingentityinternalcreateobjectv1) | **POST** /1/object/billingentityinternal | Create a new Billingentityinternal
@@ -154,10 +148,8 @@ Class | Method | HTTP request | Description
 *ObjectBrokerApi* | [**brokerGetCommunicationListV1**](doc//ObjectBrokerApi.md#brokergetcommunicationlistv1) | **GET** /1/object/broker/{pkiBrokerID}/getCommunicationList | Retrieve Communication list
 *ObjectBrokerApi* | [**brokerGetCommunicationrecipientsV1**](doc//ObjectBrokerApi.md#brokergetcommunicationrecipientsv1) | **GET** /1/object/broker/{pkiBrokerID}/getCommunicationrecipients | Retrieve Communication recipients
 *ObjectBrokerApi* | [**brokerGetCommunicationsendersV1**](doc//ObjectBrokerApi.md#brokergetcommunicationsendersv1) | **GET** /1/object/broker/{pkiBrokerID}/getCommunicationsenders | Retrieve Communication senders
-*ObjectBrokerApi* | [**brokerGetDocumenttypechecklistV1**](doc//ObjectBrokerApi.md#brokergetdocumenttypechecklistv1) | **GET** /1/object/broker/{pkiBrokerID}/getDocumenttypechecklist | Retrieve Document type checklist
 *ObjectBrokerApi* | [**brokerGetListV1**](doc//ObjectBrokerApi.md#brokergetlistv1) | **GET** /1/object/broker/getList | Retrieve Broker list
 *ObjectBrokerApi* | [**brokerImportIntoEDMV1**](doc//ObjectBrokerApi.md#brokerimportintoedmv1) | **POST** /1/object/broker/{pkiBrokerID}/importIntoEDM | Import attachments into the Broker
-*ObjectBrokerApi* | [**brokerSyncDocumenttypechecklistV1**](doc//ObjectBrokerApi.md#brokersyncdocumenttypechecklistv1) | **POST** /1/object/broker/{pkiBrokerID}/syncDocumenttypechecklist | Synchronize Document type checklist
 *ObjectBrokertypeApi* | [**brokertypeGetAutocompleteV2**](doc//ObjectBrokertypeApi.md#brokertypegetautocompletev2) | **GET** /2/object/brokertype/getAutocomplete/{sSelector} | Retrieve Brokertypes and IDs
 *ObjectBuyercontractApi* | [**buyercontractBatchDownloadV1**](doc//ObjectBuyercontractApi.md#buyercontractbatchdownloadv1) | **POST** /1/object/buyercontract/{pkiBuyercontractID}/batchDownload | Download multiples attachments from a Buyercontract
 *ObjectBuyercontractApi* | [**buyercontractGetAttachmentsV1**](doc//ObjectBuyercontractApi.md#buyercontractgetattachmentsv1) | **GET** /1/object/buyercontract/{pkiBuyercontractID}/getAttachments | Retrieve Buyercontract's attachments
@@ -165,10 +157,8 @@ Class | Method | HTTP request | Description
 *ObjectBuyercontractApi* | [**buyercontractGetCommunicationListV1**](doc//ObjectBuyercontractApi.md#buyercontractgetcommunicationlistv1) | **GET** /1/object/buyercontract/{pkiBuyercontractID}/getCommunicationList | Retrieve Communication list
 *ObjectBuyercontractApi* | [**buyercontractGetCommunicationrecipientsV1**](doc//ObjectBuyercontractApi.md#buyercontractgetcommunicationrecipientsv1) | **GET** /1/object/buyercontract/{pkiBuyercontractID}/getCommunicationrecipients | Retrieve Buyercontract's Communicationrecipient
 *ObjectBuyercontractApi* | [**buyercontractGetCommunicationsendersV1**](doc//ObjectBuyercontractApi.md#buyercontractgetcommunicationsendersv1) | **GET** /1/object/buyercontract/{pkiBuyercontractID}/getCommunicationsenders | Retrieve Buyercontract's Communicationsender
-*ObjectBuyercontractApi* | [**buyercontractGetDocumenttypechecklistV1**](doc//ObjectBuyercontractApi.md#buyercontractgetdocumenttypechecklistv1) | **GET** /1/object/buyercontract/{pkiBuyercontractID}/getDocumenttypechecklist | Retrieve Document type checklist
 *ObjectBuyercontractApi* | [**buyercontractGetListV1**](doc//ObjectBuyercontractApi.md#buyercontractgetlistv1) | **GET** /1/object/buyercontract/getList | Retrieve Buyercontract list
 *ObjectBuyercontractApi* | [**buyercontractImportIntoEDMV1**](doc//ObjectBuyercontractApi.md#buyercontractimportintoedmv1) | **POST** /1/object/buyercontract/{pkiBuyercontractID}/importIntoEDM | Import attachments into the Buyercontract
-*ObjectBuyercontractApi* | [**buyercontractSyncDocumenttypechecklistV1**](doc//ObjectBuyercontractApi.md#buyercontractsyncdocumenttypechecklistv1) | **POST** /1/object/buyercontract/{pkiBuyercontractID}/syncDocumenttypechecklist | Synchronize Document type checklist
 *ObjectClonehistoryApi* | [**clonehistoryGetListV1**](doc//ObjectClonehistoryApi.md#clonehistorygetlistv1) | **GET** /1/object/clonehistory/getList | Retrieve Clonehistory list
 *ObjectCommissionadvanceApi* | [**commissionadvanceBatchDownloadV1**](doc//ObjectCommissionadvanceApi.md#commissionadvancebatchdownloadv1) | **POST** /1/object/commissionadvance/{pkiCommissionadvanceID}/batchDownload | Download multiples attachments from a Commission advance
 *ObjectCommissionadvanceApi* | [**commissionadvanceGetAttachmentsV1**](doc//ObjectCommissionadvanceApi.md#commissionadvancegetattachmentsv1) | **GET** /1/object/commissionadvance/{pkiCommissionadvanceID}/getAttachments | Retrieve Commissionadvance's attachments
@@ -176,13 +166,9 @@ Class | Method | HTTP request | Description
 *ObjectCommissionadvanceApi* | [**commissionadvanceGetCommunicationListV1**](doc//ObjectCommissionadvanceApi.md#commissionadvancegetcommunicationlistv1) | **GET** /1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationList | Retrieve Communication list
 *ObjectCommissionadvanceApi* | [**commissionadvanceGetCommunicationrecipientsV1**](doc//ObjectCommissionadvanceApi.md#commissionadvancegetcommunicationrecipientsv1) | **GET** /1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationrecipients | Retrieve Communication recipients
 *ObjectCommissionadvanceApi* | [**commissionadvanceGetCommunicationsendersV1**](doc//ObjectCommissionadvanceApi.md#commissionadvancegetcommunicationsendersv1) | **GET** /1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationsenders | Retrieve Communication senders
-*ObjectCommissionadvanceApi* | [**commissionadvanceGetDocumenttypechecklistV1**](doc//ObjectCommissionadvanceApi.md#commissionadvancegetdocumenttypechecklistv1) | **GET** /1/object/commissionadvance/{pkiCommissionadvanceID}/getDocumenttypechecklist | Retrieve Document type checklist
 *ObjectCommissionadvanceApi* | [**commissionadvanceImportIntoEDMV1**](doc//ObjectCommissionadvanceApi.md#commissionadvanceimportintoedmv1) | **POST** /1/object/commissionadvance/{pkiCommissionadvanceID}/importIntoEDM | Import attachments into the Commissionadvance
-*ObjectCommissionadvanceApi* | [**commissionadvanceSyncDocumenttypechecklistV1**](doc//ObjectCommissionadvanceApi.md#commissionadvancesyncdocumenttypechecklistv1) | **POST** /1/object/commissionadvance/{pkiCommissionadvanceID}/syncDocumenttypechecklist | Synchronize Document type checklist
 *ObjectCommunicationApi* | [**communicationGetCommunicationBodyV1**](doc//ObjectCommunicationApi.md#communicationgetcommunicationbodyv1) | **GET** /1/object/communication/{pkiCommunicationID}/getCommunicationBody | Retrieve the communication body
-*ObjectCommunicationApi* | [**communicationGetDocumenttypechecklistV1**](doc//ObjectCommunicationApi.md#communicationgetdocumenttypechecklistv1) | **GET** /1/object/communication/{pkiCommunicationID}/getDocumenttypechecklist | Retrieve Document type checklist
 *ObjectCommunicationApi* | [**communicationSendV1**](doc//ObjectCommunicationApi.md#communicationsendv1) | **POST** /1/object/communication/send | Send a new Communication
-*ObjectCommunicationApi* | [**communicationSyncDocumenttypechecklistV1**](doc//ObjectCommunicationApi.md#communicationsyncdocumenttypechecklistv1) | **POST** /1/object/communication/{pkiCommunicationID}/syncDocumenttypechecklist | Synchronize Document type checklist
 *ObjectCompanyApi* | [**companyGetAutocompleteV2**](doc//ObjectCompanyApi.md#companygetautocompletev2) | **GET** /2/object/company/getAutocomplete/{sSelector} | Retrieve Companys and IDs
 *ObjectContacttitleApi* | [**contacttitleGetAutocompleteV2**](doc//ObjectContacttitleApi.md#contacttitlegetautocompletev2) | **GET** /2/object/contacttitle/getAutocomplete/{sSelector} | Retrieve Contacttitles and IDs
 *ObjectCorsApi* | [**corsCreateObjectV1**](doc//ObjectCorsApi.md#corscreateobjectv1) | **POST** /1/object/cors | Create a new Cors
@@ -209,12 +195,8 @@ Class | Method | HTTP request | Description
 *ObjectCustomerApi* | [**customerGetCommunicationListV1**](doc//ObjectCustomerApi.md#customergetcommunicationlistv1) | **GET** /1/object/customer/{pkiCustomerID}/getCommunicationList | Retrieve Communication list
 *ObjectCustomerApi* | [**customerGetCommunicationrecipientsV1**](doc//ObjectCustomerApi.md#customergetcommunicationrecipientsv1) | **GET** /1/object/customer/{pkiCustomerID}/getCommunicationrecipients | Retrieve Communication recipients
 *ObjectCustomerApi* | [**customerGetCommunicationsendersV1**](doc//ObjectCustomerApi.md#customergetcommunicationsendersv1) | **GET** /1/object/customer/{pkiCustomerID}/getCommunicationsenders | Retrieve Communication senders
-*ObjectCustomerApi* | [**customerGetDocumenttypechecklistV1**](doc//ObjectCustomerApi.md#customergetdocumenttypechecklistv1) | **GET** /1/object/customer/{pkiCustomerID}/getDocumenttypechecklist | Retrieve Document type checklist
 *ObjectCustomerApi* | [**customerGetObjectV2**](doc//ObjectCustomerApi.md#customergetobjectv2) | **GET** /2/object/customer/{pkiCustomerID} | Retrieve an existing Customer
 *ObjectCustomerApi* | [**customerImportIntoEDMV1**](doc//ObjectCustomerApi.md#customerimportintoedmv1) | **POST** /1/object/customer/{pkiCustomerID}/importIntoEDM | Import attachments into the Customer
-*ObjectCustomerApi* | [**customerSyncDocumenttypechecklistV1**](doc//ObjectCustomerApi.md#customersyncdocumenttypechecklistv1) | **POST** /1/object/customer/{pkiCustomerID}/syncDocumenttypechecklist | Synchronize Document type checklist
-*ObjectCustomertemplateApi* | [**customertemplateGetDocumenttypechecklistV1**](doc//ObjectCustomertemplateApi.md#customertemplategetdocumenttypechecklistv1) | **GET** /1/object/customertemplate/{pkiCustomertemplateID}/getDocumenttypechecklist | Retrieve Document type checklist
-*ObjectCustomertemplateApi* | [**customertemplateSyncDocumenttypechecklistV1**](doc//ObjectCustomertemplateApi.md#customertemplatesyncdocumenttypechecklistv1) | **POST** /1/object/customertemplate/{pkiCustomertemplateID}/syncDocumenttypechecklist | Synchronize Document type checklist
 *ObjectDepartmentApi* | [**departmentGetAutocompleteV2**](doc//ObjectDepartmentApi.md#departmentgetautocompletev2) | **GET** /2/object/department/getAutocomplete/{sSelector} | Retrieve Departments and IDs
 *ObjectDepositApi* | [**depositBatchDownloadV1**](doc//ObjectDepositApi.md#depositbatchdownloadv1) | **POST** /1/object/deposit/{pkiDepositID}/batchDownload | Download multiples attachments from a Deposit
 *ObjectDepositApi* | [**depositGetAttachmentsV1**](doc//ObjectDepositApi.md#depositgetattachmentsv1) | **GET** /1/object/deposit/{pkiDepositID}/getAttachments | Retrieve Deposit's attachments
@@ -222,35 +204,28 @@ Class | Method | HTTP request | Description
 *ObjectDepositApi* | [**depositGetCommunicationListV1**](doc//ObjectDepositApi.md#depositgetcommunicationlistv1) | **GET** /1/object/deposit/{pkiDepositID}/getCommunicationList | Retrieve Communication list
 *ObjectDepositApi* | [**depositGetCommunicationrecipientsV1**](doc//ObjectDepositApi.md#depositgetcommunicationrecipientsv1) | **GET** /1/object/deposit/{pkiDepositID}/getCommunicationrecipients | Retrieve Communication recipients
 *ObjectDepositApi* | [**depositGetCommunicationsendersV1**](doc//ObjectDepositApi.md#depositgetcommunicationsendersv1) | **GET** /1/object/deposit/{pkiDepositID}/getCommunicationsenders | Retrieve Communication senders
-*ObjectDepositApi* | [**depositGetDocumenttypechecklistV1**](doc//ObjectDepositApi.md#depositgetdocumenttypechecklistv1) | **GET** /1/object/deposit/{pkiDepositID}/getDocumenttypechecklist | Retrieve Document type checklist
 *ObjectDepositApi* | [**depositGetListV1**](doc//ObjectDepositApi.md#depositgetlistv1) | **GET** /1/object/deposit/getList | Retrieve Deposit list
 *ObjectDepositApi* | [**depositImportIntoEDMV1**](doc//ObjectDepositApi.md#depositimportintoedmv1) | **POST** /1/object/deposit/{pkiDepositID}/importIntoEDM | Import attachments into the Deposit
-*ObjectDepositApi* | [**depositSyncDocumenttypechecklistV1**](doc//ObjectDepositApi.md#depositsyncdocumenttypechecklistv1) | **POST** /1/object/deposit/{pkiDepositID}/syncDocumenttypechecklist | Synchronize Document type checklist
 *ObjectDeposittransitchequeApi* | [**deposittransitchequeBatchDownloadV1**](doc//ObjectDeposittransitchequeApi.md#deposittransitchequebatchdownloadv1) | **POST** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/batchDownload | Download multiples attachments from a Deposittransitcheque
 *ObjectDeposittransitchequeApi* | [**deposittransitchequeGetAttachmentsV1**](doc//ObjectDeposittransitchequeApi.md#deposittransitchequegetattachmentsv1) | **GET** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getAttachments | Retrieve Deposittransitcheque's attachments
 *ObjectDeposittransitchequeApi* | [**deposittransitchequeGetCommunicationCountV1**](doc//ObjectDeposittransitchequeApi.md#deposittransitchequegetcommunicationcountv1) | **GET** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationCount | Retrieve Communication count
 *ObjectDeposittransitchequeApi* | [**deposittransitchequeGetCommunicationListV1**](doc//ObjectDeposittransitchequeApi.md#deposittransitchequegetcommunicationlistv1) | **GET** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationList | Retrieve Communication list
 *ObjectDeposittransitchequeApi* | [**deposittransitchequeGetCommunicationrecipientsV1**](doc//ObjectDeposittransitchequeApi.md#deposittransitchequegetcommunicationrecipientsv1) | **GET** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationrecipients | Retrieve Communication recipients
 *ObjectDeposittransitchequeApi* | [**deposittransitchequeGetCommunicationsendersV1**](doc//ObjectDeposittransitchequeApi.md#deposittransitchequegetcommunicationsendersv1) | **GET** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationsenders | Retrieve Communication senders
-*ObjectDeposittransitchequeApi* | [**deposittransitchequeGetDocumenttypechecklistV1**](doc//ObjectDeposittransitchequeApi.md#deposittransitchequegetdocumenttypechecklistv1) | **GET** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getDocumenttypechecklist | Retrieve Document type checklist
 *ObjectDeposittransitchequeApi* | [**deposittransitchequeGetListV1**](doc//ObjectDeposittransitchequeApi.md#deposittransitchequegetlistv1) | **GET** /1/object/deposittransitcheque/getList | Retrieve Deposittransitcheque list
 *ObjectDeposittransitchequeApi* | [**deposittransitchequeImportIntoEDMV1**](doc//ObjectDeposittransitchequeApi.md#deposittransitchequeimportintoedmv1) | **POST** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/importIntoEDM | Import attachments into the Deposittransitcheque
-*ObjectDeposittransitchequeApi* | [**deposittransitchequeSyncDocumenttypechecklistV1**](doc//ObjectDeposittransitchequeApi.md#deposittransitchequesyncdocumenttypechecklistv1) | **POST** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/syncDocumenttypechecklist | Synchronize Document type checklist
 *ObjectDisclosureApi* | [**disclosureBatchDownloadV1**](doc//ObjectDisclosureApi.md#disclosurebatchdownloadv1) | **POST** /1/object/disclosure/{pkiDisclosureID}/batchDownload | Download multiples attachments from a Disclosure
 *ObjectDisclosureApi* | [**disclosureGetAttachmentsV1**](doc//ObjectDisclosureApi.md#disclosuregetattachmentsv1) | **GET** /1/object/disclosure/{pkiDisclosureID}/getAttachments | Retrieve Disclosure's attachments
 *ObjectDisclosureApi* | [**disclosureGetCommunicationCountV1**](doc//ObjectDisclosureApi.md#disclosuregetcommunicationcountv1) | **GET** /1/object/disclosure/{pkiDisclosureID}/getCommunicationCount | Retrieve Communication count
 *ObjectDisclosureApi* | [**disclosureGetCommunicationListV1**](doc//ObjectDisclosureApi.md#disclosuregetcommunicationlistv1) | **GET** /1/object/disclosure/{pkiDisclosureID}/getCommunicationList | Retrieve Communication list
 *ObjectDisclosureApi* | [**disclosureGetCommunicationrecipientsV1**](doc//ObjectDisclosureApi.md#disclosuregetcommunicationrecipientsv1) | **GET** /1/object/disclosure/{pkiDisclosureID}/getCommunicationrecipients | Retrieve Communication recipients
 *ObjectDisclosureApi* | [**disclosureGetCommunicationsendersV1**](doc//ObjectDisclosureApi.md#disclosuregetcommunicationsendersv1) | **GET** /1/object/disclosure/{pkiDisclosureID}/getCommunicationsenders | Retrieve Communication senders
-*ObjectDisclosureApi* | [**disclosureGetDocumenttypechecklistV1**](doc//ObjectDisclosureApi.md#disclosuregetdocumenttypechecklistv1) | **GET** /1/object/disclosure/{pkiDisclosureID}/getDocumenttypechecklist | Retrieve Document type checklist
 *ObjectDisclosureApi* | [**disclosureGetListV1**](doc//ObjectDisclosureApi.md#disclosuregetlistv1) | **GET** /1/object/disclosure/getList | Retrieve Disclosure list
 *ObjectDisclosureApi* | [**disclosureImportIntoEDMV1**](doc//ObjectDisclosureApi.md#disclosureimportintoedmv1) | **POST** /1/object/disclosure/{pkiDisclosureID}/importIntoEDM | Import attachments into the Disclosure
-*ObjectDisclosureApi* | [**disclosureSyncDocumenttypechecklistV1**](doc//ObjectDisclosureApi.md#disclosuresyncdocumenttypechecklistv1) | **POST** /1/object/disclosure/{pkiDisclosureID}/syncDocumenttypechecklist | Synchronize Document type checklist
 *ObjectDiscussionApi* | [**discussionChatV1**](doc//ObjectDiscussionApi.md#discussionchatv1) | **POST** /1/object/discussion/chat | Have a Discussion with the AI Chatbot
 *ObjectDiscussionApi* | [**discussionCreateObjectV1**](doc//ObjectDiscussionApi.md#discussioncreateobjectv1) | **POST** /1/object/discussion | Create a new Discussion
 *ObjectDiscussionApi* | [**discussionDeleteObjectV1**](doc//ObjectDiscussionApi.md#discussiondeleteobjectv1) | **DELETE** /1/object/discussion/{pkiDiscussionID} | Delete an existing Discussion
 *ObjectDiscussionApi* | [**discussionGetObjectV2**](doc//ObjectDiscussionApi.md#discussiongetobjectv2) | **GET** /2/object/discussion/{pkiDiscussionID} | Retrieve an existing Discussion
-*ObjectDiscussionApi* | [**discussionImproveMessageV1**](doc//ObjectDiscussionApi.md#discussionimprovemessagev1) | **POST** /1/object/discussion/improveMessage | Improve a message using the AI
 *ObjectDiscussionApi* | [**discussionPatchObjectV1**](doc//ObjectDiscussionApi.md#discussionpatchobjectv1) | **PATCH** /1/object/discussion/{pkiDiscussionID} | Patch an existing Discussion
 *ObjectDiscussionApi* | [**discussionUpdateDiscussionreadstatusV1**](doc//ObjectDiscussionApi.md#discussionupdatediscussionreadstatusv1) | **POST** /1/object/discussion/{pkiDiscussionID}/updateDiscussionreadstatus | Update the read status of the discussion
 *ObjectDiscussionmembershipApi* | [**discussionmembershipCreateObjectV1**](doc//ObjectDiscussionmembershipApi.md#discussionmembershipcreateobjectv1) | **POST** /1/object/discussionmembership | Create a new Discussionmembership
@@ -276,10 +251,8 @@ Class | Method | HTTP request | Description
 *ObjectElectronicfundstransferApi* | [**electronicfundstransferGetCommunicationListV1**](doc//ObjectElectronicfundstransferApi.md#electronicfundstransfergetcommunicationlistv1) | **GET** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationList | Retrieve Communication list
 *ObjectElectronicfundstransferApi* | [**electronicfundstransferGetCommunicationrecipientsV1**](doc//ObjectElectronicfundstransferApi.md#electronicfundstransfergetcommunicationrecipientsv1) | **GET** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationrecipients | Retrieve Electronicfundstransfer's Communicationrecipient
 *ObjectElectronicfundstransferApi* | [**electronicfundstransferGetCommunicationsendersV1**](doc//ObjectElectronicfundstransferApi.md#electronicfundstransfergetcommunicationsendersv1) | **GET** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationsenders | Retrieve Electronicfundstransfer's Communicationsender
-*ObjectElectronicfundstransferApi* | [**electronicfundstransferGetDocumenttypechecklistV1**](doc//ObjectElectronicfundstransferApi.md#electronicfundstransfergetdocumenttypechecklistv1) | **GET** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getDocumenttypechecklist | Retrieve Document type checklist
 *ObjectElectronicfundstransferApi* | [**electronicfundstransferGetListV1**](doc//ObjectElectronicfundstransferApi.md#electronicfundstransfergetlistv1) | **GET** /1/object/electronicfundstransfer/getList | Retrieve Electronicfundstransfer list
 *ObjectElectronicfundstransferApi* | [**electronicfundstransferImportIntoEDMV1**](doc//ObjectElectronicfundstransferApi.md#electronicfundstransferimportintoedmv1) | **POST** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/importIntoEDM | Import attachments into the Electronicfundstransfer
-*ObjectElectronicfundstransferApi* | [**electronicfundstransferSyncDocumenttypechecklistV1**](doc//ObjectElectronicfundstransferApi.md#electronicfundstransfersyncdocumenttypechecklistv1) | **POST** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/syncDocumenttypechecklist | Synchronize Document type checklist
 *ObjectElectronicfundstransfertransactionApi* | [**electronicfundstransfertransactionGetListV1**](doc//ObjectElectronicfundstransfertransactionApi.md#electronicfundstransfertransactiongetlistv1) | **GET** /1/object/electronicfundstransfertransaction/getList | Retrieve Electronicfundstransfertransaction list
 *ObjectEmailtypeApi* | [**emailtypeGetAutocompleteV2**](doc//ObjectEmailtypeApi.md#emailtypegetautocompletev2) | **GET** /2/object/emailtype/getAutocomplete/{sSelector} | Retrieve Emailtypes and IDs
 *ObjectEmployeeApi* | [**employeeBatchDownloadV1**](doc//ObjectEmployeeApi.md#employeebatchdownloadv1) | **POST** /1/object/employee/{pkiEmployeeID}/batchDownload | Download multiples attachments from a Employee
@@ -288,19 +261,15 @@ Class | Method | HTTP request | Description
 *ObjectEmployeeApi* | [**employeeGetCommunicationListV1**](doc//ObjectEmployeeApi.md#employeegetcommunicationlistv1) | **GET** /1/object/employee/{pkiEmployeeID}/getCommunicationList | Retrieve Communication list
 *ObjectEmployeeApi* | [**employeeGetCommunicationrecipientsV1**](doc//ObjectEmployeeApi.md#employeegetcommunicationrecipientsv1) | **GET** /1/object/employee/{pkiEmployeeID}/getCommunicationrecipients | Retrieve Communication recipients
 *ObjectEmployeeApi* | [**employeeGetCommunicationsendersV1**](doc//ObjectEmployeeApi.md#employeegetcommunicationsendersv1) | **GET** /1/object/employee/{pkiEmployeeID}/getCommunicationsenders | Retrieve Communication senders
-*ObjectEmployeeApi* | [**employeeGetDocumenttypechecklistV1**](doc//ObjectEmployeeApi.md#employeegetdocumenttypechecklistv1) | **GET** /1/object/employee/{pkiEmployeeID}/getDocumenttypechecklist | Retrieve Document type checklist
 *ObjectEmployeeApi* | [**employeeGetListV1**](doc//ObjectEmployeeApi.md#employeegetlistv1) | **GET** /1/object/employee/getList | Retrieve Employee list
 *ObjectEmployeeApi* | [**employeeImportIntoEDMV1**](doc//ObjectEmployeeApi.md#employeeimportintoedmv1) | **POST** /1/object/employee/{pkiEmployeeID}/importIntoEDM | Import attachments into the Employee
-*ObjectEmployeeApi* | [**employeeSyncDocumenttypechecklistV1**](doc//ObjectEmployeeApi.md#employeesyncdocumenttypechecklistv1) | **POST** /1/object/employee/{pkiEmployeeID}/syncDocumenttypechecklist | Synchronize Document type checklist
 *ObjectExternalbrokerApi* | [**externalbrokerBatchDownloadV1**](doc//ObjectExternalbrokerApi.md#externalbrokerbatchdownloadv1) | **POST** /1/object/externalbroker/{pkiExternalbrokerID}/batchDownload | Download multiples attachments from an Externalbroker
 *ObjectExternalbrokerApi* | [**externalbrokerGetAttachmentsV1**](doc//ObjectExternalbrokerApi.md#externalbrokergetattachmentsv1) | **GET** /1/object/externalbroker/{pkiExternalbrokerID}/getAttachments | Retrieve Externalbroker's attachments
 *ObjectExternalbrokerApi* | [**externalbrokerGetCommunicationCountV1**](doc//ObjectExternalbrokerApi.md#externalbrokergetcommunicationcountv1) | **GET** /1/object/externalbroker/{pkiExternalbrokerID}/getCommunicationCount | Retrieve Communication count
 *ObjectExternalbrokerApi* | [**externalbrokerGetCommunicationListV1**](doc//ObjectExternalbrokerApi.md#externalbrokergetcommunicationlistv1) | **GET** /1/object/externalbroker/{pkiExternalbrokerID}/getCommunicationList | Retrieve Communication list
 *ObjectExternalbrokerApi* | [**externalbrokerGetCommunicationrecipientsV1**](doc//ObjectExternalbrokerApi.md#externalbrokergetcommunicationrecipientsv1) | **GET** /1/object/externalbroker/{pkiExternalbrokerID}/getCommunicationrecipients | Retrieve Communication recipients
 *ObjectExternalbrokerApi* | [**externalbrokerGetCommunicationsendersV1**](doc//ObjectExternalbrokerApi.md#externalbrokergetcommunicationsendersv1) | **GET** /1/object/externalbroker/{pkiExternalbrokerID}/getCommunicationsenders | Retrieve Communication senders
-*ObjectExternalbrokerApi* | [**externalbrokerGetDocumenttypechecklistV1**](doc//ObjectExternalbrokerApi.md#externalbrokergetdocumenttypechecklistv1) | **GET** /1/object/externalbroker/{pkiExternalbrokerID}/getDocumenttypechecklist | Retrieve Document type checklist
 *ObjectExternalbrokerApi* | [**externalbrokerImportIntoEDMV1**](doc//ObjectExternalbrokerApi.md#externalbrokerimportintoedmv1) | **POST** /1/object/externalbroker/{pkiExternalbrokerID}/importIntoEDM | Import attachments into the Externalbroker
-*ObjectExternalbrokerApi* | [**externalbrokerSyncDocumenttypechecklistV1**](doc//ObjectExternalbrokerApi.md#externalbrokersyncdocumenttypechecklistv1) | **POST** /1/object/externalbroker/{pkiExternalbrokerID}/syncDocumenttypechecklist | Synchronize Document type checklist
 *ObjectEzdoctemplatedocumentApi* | [**ezdoctemplatedocumentCreateObjectV1**](doc//ObjectEzdoctemplatedocumentApi.md#ezdoctemplatedocumentcreateobjectv1) | **POST** /1/object/ezdoctemplatedocument | Create a new Ezdoctemplatedocument
 *ObjectEzdoctemplatedocumentApi* | [**ezdoctemplatedocumentDownloadV1**](doc//ObjectEzdoctemplatedocumentApi.md#ezdoctemplatedocumentdownloadv1) | **GET** /1/object/ezdoctemplatedocument/{pkiEzdoctemplatedocumentID}/download | Retrieve the content
 *ObjectEzdoctemplatedocumentApi* | [**ezdoctemplatedocumentEditObjectV1**](doc//ObjectEzdoctemplatedocumentApi.md#ezdoctemplatedocumenteditobjectv1) | **PUT** /1/object/ezdoctemplatedocument/{pkiEzdoctemplatedocumentID} | Edit an existing Ezdoctemplatedocument
@@ -428,7 +397,6 @@ Class | Method | HTTP request | Description
 *ObjectEzsignfolderApi* | [**ezsignfolderGetCommunicationListV1**](doc//ObjectEzsignfolderApi.md#ezsignfoldergetcommunicationlistv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationList | Retrieve Communication list
 *ObjectEzsignfolderApi* | [**ezsignfolderGetCommunicationrecipientsV1**](doc//ObjectEzsignfolderApi.md#ezsignfoldergetcommunicationrecipientsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationrecipients | Retrieve Ezsignfolder's Communicationrecipient
 *ObjectEzsignfolderApi* | [**ezsignfolderGetCommunicationsendersV1**](doc//ObjectEzsignfolderApi.md#ezsignfoldergetcommunicationsendersv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationsenders | Retrieve Ezsignfolder's Communicationsender
-*ObjectEzsignfolderApi* | [**ezsignfolderGetDocumenttypechecklistV1**](doc//ObjectEzsignfolderApi.md#ezsignfoldergetdocumenttypechecklistv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getDocumenttypechecklist | Retrieve Document type checklist
 *ObjectEzsignfolderApi* | [**ezsignfolderGetEzsignannotationsV1**](doc//ObjectEzsignfolderApi.md#ezsignfoldergetezsignannotationsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignannotations | Retrieve an existing Ezsignfolder's Ezsignannotations
 *ObjectEzsignfolderApi* | [**ezsignfolderGetEzsigndocumentsV1**](doc//ObjectEzsignfolderApi.md#ezsignfoldergetezsigndocumentsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder's Ezsigndocuments
 *ObjectEzsignfolderApi* | [**ezsignfolderGetEzsigndocumentsV2**](doc//ObjectEzsignfolderApi.md#ezsignfoldergetezsigndocumentsv2) | **GET** /2/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder's Ezsigndocuments
@@ -449,7 +417,6 @@ Class | Method | HTTP request | Description
 *ObjectEzsignfolderApi* | [**ezsignfolderReorderV2**](doc//ObjectEzsignfolderApi.md#ezsignfolderreorderv2) | **POST** /2/object/ezsignfolder/{pkiEzsignfolderID}/reorder | Reorder Ezsigndocuments in the Ezsignfolder
 *ObjectEzsignfolderApi* | [**ezsignfolderSendV1**](doc//ObjectEzsignfolderApi.md#ezsignfoldersendv1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/send | Send the Ezsignfolder to the signatories for signature
 *ObjectEzsignfolderApi* | [**ezsignfolderSendV3**](doc//ObjectEzsignfolderApi.md#ezsignfoldersendv3) | **POST** /3/object/ezsignfolder/{pkiEzsignfolderID}/send | Send the Ezsignfolder to the signatories for signature
-*ObjectEzsignfolderApi* | [**ezsignfolderSyncDocumenttypechecklistV1**](doc//ObjectEzsignfolderApi.md#ezsignfoldersyncdocumenttypechecklistv1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/syncDocumenttypechecklist | Synchronize Document type checklist
 *ObjectEzsignfolderApi* | [**ezsignfolderUnsendV1**](doc//ObjectEzsignfolderApi.md#ezsignfolderunsendv1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/unsend | Unsend the Ezsignfolder
 *ObjectEzsignfoldersignerassociationApi* | [**ezsignfoldersignerassociationCreateEmbeddedUrlV1**](doc//ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationcreateembeddedurlv1) | **POST** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/createEmbeddedUrl | Creates an Url to allow embedded signing
 *ObjectEzsignfoldersignerassociationApi* | [**ezsignfoldersignerassociationCreateEmbeddedUrlV2**](doc//ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationcreateembeddedurlv2) | **POST** /2/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/createEmbeddedUrl | Creates an Url to allow embedded signing
@@ -602,9 +569,7 @@ Class | Method | HTTP request | Description
 *ObjectFolderApi* | [**folderGetCommunicationListV1**](doc//ObjectFolderApi.md#foldergetcommunicationlistv1) | **GET** /1/object/folder/{pkiFolderID}/getCommunicationList | Retrieve Communication list
 *ObjectFolderApi* | [**folderGetCommunicationrecipientsV1**](doc//ObjectFolderApi.md#foldergetcommunicationrecipientsv1) | **GET** /1/object/folder/{pkiFolderID}/getCommunicationrecipients | Retrieve Communication recipients
 *ObjectFolderApi* | [**folderGetCommunicationsendersV1**](doc//ObjectFolderApi.md#foldergetcommunicationsendersv1) | **GET** /1/object/folder/{pkiFolderID}/getCommunicationsenders | Retrieve Communication senders
-*ObjectFolderApi* | [**folderGetDocumenttypechecklistV1**](doc//ObjectFolderApi.md#foldergetdocumenttypechecklistv1) | **GET** /1/object/folder/{pkiFolderID}/getDocumenttypechecklist | Retrieve Document type checklist
 *ObjectFolderApi* | [**folderImportIntoEDMV1**](doc//ObjectFolderApi.md#folderimportintoedmv1) | **POST** /1/object/folder/{pkiFolderID}/importIntoEDM | Import attachments into the Folder
-*ObjectFolderApi* | [**folderSyncDocumenttypechecklistV1**](doc//ObjectFolderApi.md#foldersyncdocumenttypechecklistv1) | **POST** /1/object/folder/{pkiFolderID}/syncDocumenttypechecklist | Synchronize Document type checklist
 *ObjectFontApi* | [**fontGetAutocompleteV2**](doc//ObjectFontApi.md#fontgetautocompletev2) | **GET** /2/object/font/getAutocomplete/{sSelector} | Retrieve Fonts and IDs
 *ObjectFranchisebrokerApi* | [**franchisebrokerGetAutocompleteV2**](doc//ObjectFranchisebrokerApi.md#franchisebrokergetautocompletev2) | **GET** /2/object/franchisebroker/getAutocomplete/{sSelector} | Retrieve Franchisebrokers and IDs
 *ObjectFranchiseofficeApi* | [**franchiseofficeGetAutocompleteV2**](doc//ObjectFranchiseofficeApi.md#franchiseofficegetautocompletev2) | **GET** /2/object/franchiseoffice/getAutocomplete/{sSelector} | Retrieve Franchiseoffices and IDs
@@ -618,13 +583,11 @@ Class | Method | HTTP request | Description
 *ObjectInscriptionApi* | [**inscriptionGetCommunicationListV1**](doc//ObjectInscriptionApi.md#inscriptiongetcommunicationlistv1) | **GET** /1/object/inscription/{pkiInscriptionID}/getCommunicationList | Retrieve Communication list
 *ObjectInscriptionApi* | [**inscriptionGetCommunicationrecipientsV1**](doc//ObjectInscriptionApi.md#inscriptiongetcommunicationrecipientsv1) | **GET** /1/object/inscription/{pkiInscriptionID}/getCommunicationrecipients | Retrieve Inscription's Communicationrecipient
 *ObjectInscriptionApi* | [**inscriptionGetCommunicationsendersV1**](doc//ObjectInscriptionApi.md#inscriptiongetcommunicationsendersv1) | **GET** /1/object/inscription/{pkiInscriptionID}/getCommunicationsenders | Retrieve Inscription's Communicationsender
-*ObjectInscriptionApi* | [**inscriptionGetDocumenttypechecklistV1**](doc//ObjectInscriptionApi.md#inscriptiongetdocumenttypechecklistv1) | **GET** /1/object/inscription/{pkiInscriptionID}/getDocumenttypechecklist | Retrieve Document type checklist
 *ObjectInscriptionApi* | [**inscriptionGetInscriptionnotauthenticatedsV1**](doc//ObjectInscriptionApi.md#inscriptiongetinscriptionnotauthenticatedsv1) | **GET** /1/object/inscription/{pkiInscriptionID}/getInscriptionnotauthenticateds | Retrieve Inscription's Inscriptionnotauthenticated
 *ObjectInscriptionApi* | [**inscriptionGetListV1**](doc//ObjectInscriptionApi.md#inscriptiongetlistv1) | **GET** /1/object/inscription/getList | Retrieve Inscription list
 *ObjectInscriptionApi* | [**inscriptionGetObjectV2**](doc//ObjectInscriptionApi.md#inscriptiongetobjectv2) | **GET** /2/object/inscription/{pkiInscriptionID} | Retrieve an existing Inscription
 *ObjectInscriptionApi* | [**inscriptionImportIntoEDMV1**](doc//ObjectInscriptionApi.md#inscriptionimportintoedmv1) | **POST** /1/object/inscription/{pkiInscriptionID}/importIntoEDM | Import attachments into the Inscription
 *ObjectInscriptionApi* | [**inscriptionPrepareFilesTransferV1**](doc//ObjectInscriptionApi.md#inscriptionpreparefilestransferv1) | **POST** /1/object/inscription/{pkiInscriptionID}/prepareFilesTransfer | Prepares file transfer into EDM
-*ObjectInscriptionApi* | [**inscriptionSyncDocumenttypechecklistV1**](doc//ObjectInscriptionApi.md#inscriptionsyncdocumenttypechecklistv1) | **POST** /1/object/inscription/{pkiInscriptionID}/syncDocumenttypechecklist | Synchronize Document type checklist
 *ObjectInscriptionApi* | [**inscriptionSynchronizationDocumenttypeV1**](doc//ObjectInscriptionApi.md#inscriptionsynchronizationdocumenttypev1) | **POST** /1/object/inscription/{pkiInscriptionID}/synchronizationDocumenttype | Synchronization of the Documenttype in the Inscription
 *ObjectInscriptionchecklistApi* | [**inscriptionchecklistGetAutocompleteV3**](doc//ObjectInscriptionchecklistApi.md#inscriptionchecklistgetautocompletev3) | **GET** /3/object/inscriptionchecklist/getAutocomplete/{sSelector} | Retrieve Inscriptionchecklists and IDs
 *ObjectInscriptionnotauthenticatedApi* | [**inscriptionnotauthenticatedBatchDownloadV1**](doc//ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedbatchdownloadv1) | **POST** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/batchDownload | Download multiples attachments from a Inscriptionnotauthenticated
@@ -634,22 +597,18 @@ Class | Method | HTTP request | Description
 *ObjectInscriptionnotauthenticatedApi* | [**inscriptionnotauthenticatedGetCommunicationListV1**](doc//ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedgetcommunicationlistv1) | **GET** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationList | Retrieve Communication list
 *ObjectInscriptionnotauthenticatedApi* | [**inscriptionnotauthenticatedGetCommunicationrecipientsV1**](doc//ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedgetcommunicationrecipientsv1) | **GET** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationrecipients | Retrieve Inscriptionnotauthenticated's Communicationrecipient
 *ObjectInscriptionnotauthenticatedApi* | [**inscriptionnotauthenticatedGetCommunicationsendersV1**](doc//ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedgetcommunicationsendersv1) | **GET** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationsenders | Retrieve Inscriptionnotauthenticated's Communicationsender
-*ObjectInscriptionnotauthenticatedApi* | [**inscriptionnotauthenticatedGetDocumenttypechecklistV1**](doc//ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedgetdocumenttypechecklistv1) | **GET** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getDocumenttypechecklist | Retrieve Document type checklist
 *ObjectInscriptionnotauthenticatedApi* | [**inscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1**](doc//ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedgetinscriptionnotauthenticatedconditionsv1) | **GET** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getInscriptionnotauthenticatedconditions | Retrieve Inscriptionnotauthenticated conditions
 *ObjectInscriptionnotauthenticatedApi* | [**inscriptionnotauthenticatedGetListV1**](doc//ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedgetlistv1) | **GET** /1/object/inscriptionnotauthenticated/getList | Retrieve Inscriptionnotauthenticated list
 *ObjectInscriptionnotauthenticatedApi* | [**inscriptionnotauthenticatedGetObjectV2**](doc//ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedgetobjectv2) | **GET** /2/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID} | Retrieve an existing Inscriptionnotauthenticated
 *ObjectInscriptionnotauthenticatedApi* | [**inscriptionnotauthenticatedImportIntoEDMV1**](doc//ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedimportintoedmv1) | **POST** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/importIntoEDM | Import attachments into the Inscriptionnotauthenticated
-*ObjectInscriptionnotauthenticatedApi* | [**inscriptionnotauthenticatedSyncDocumenttypechecklistV1**](doc//ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedsyncdocumenttypechecklistv1) | **POST** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/syncDocumenttypechecklist | Synchronize Document type checklist
 *ObjectInscriptiontempApi* | [**inscriptiontempBatchDownloadV1**](doc//ObjectInscriptiontempApi.md#inscriptiontempbatchdownloadv1) | **POST** /1/object/inscriptiontemp/{pkiInscriptiontempID}/batchDownload | Download multiples attachments from a Inscriptiontemp
 *ObjectInscriptiontempApi* | [**inscriptiontempGetAttachmentsV1**](doc//ObjectInscriptiontempApi.md#inscriptiontempgetattachmentsv1) | **GET** /1/object/inscriptiontemp/{pkiInscriptiontempID}/getAttachments | Retrieve Inscriptiontemp's attachments
 *ObjectInscriptiontempApi* | [**inscriptiontempGetCommunicationCountV1**](doc//ObjectInscriptiontempApi.md#inscriptiontempgetcommunicationcountv1) | **GET** /1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationCount | Retrieve Communication count
 *ObjectInscriptiontempApi* | [**inscriptiontempGetCommunicationListV1**](doc//ObjectInscriptiontempApi.md#inscriptiontempgetcommunicationlistv1) | **GET** /1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationList | Retrieve Communication list
 *ObjectInscriptiontempApi* | [**inscriptiontempGetCommunicationrecipientsV1**](doc//ObjectInscriptiontempApi.md#inscriptiontempgetcommunicationrecipientsv1) | **GET** /1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationrecipients | Retrieve Inscriptiontemp's Communicationrecipient
 *ObjectInscriptiontempApi* | [**inscriptiontempGetCommunicationsendersV1**](doc//ObjectInscriptiontempApi.md#inscriptiontempgetcommunicationsendersv1) | **GET** /1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationsenders | Retrieve Inscriptiontemp's Communicationsender
-*ObjectInscriptiontempApi* | [**inscriptiontempGetDocumenttypechecklistV1**](doc//ObjectInscriptiontempApi.md#inscriptiontempgetdocumenttypechecklistv1) | **GET** /1/object/inscriptiontemp/{pkiInscriptiontempID}/getDocumenttypechecklist | Retrieve Document type checklist
 *ObjectInscriptiontempApi* | [**inscriptiontempGetListV1**](doc//ObjectInscriptiontempApi.md#inscriptiontempgetlistv1) | **GET** /1/object/inscriptiontemp/getList | Retrieve Inscriptiontemp list
 *ObjectInscriptiontempApi* | [**inscriptiontempImportIntoEDMV1**](doc//ObjectInscriptiontempApi.md#inscriptiontempimportintoedmv1) | **POST** /1/object/inscriptiontemp/{pkiInscriptiontempID}/importIntoEDM | Import attachments into the Inscriptiontemp
-*ObjectInscriptiontempApi* | [**inscriptiontempSyncDocumenttypechecklistV1**](doc//ObjectInscriptiontempApi.md#inscriptiontempsyncdocumenttypechecklistv1) | **POST** /1/object/inscriptiontemp/{pkiInscriptiontempID}/syncDocumenttypechecklist | Synchronize Document type checklist
 *ObjectInscriptiontypeApi* | [**inscriptiontypeGetAutocompleteV2**](doc//ObjectInscriptiontypeApi.md#inscriptiontypegetautocompletev2) | **GET** /2/object/inscriptiontype/getAutocomplete/{sSelector} | Retrieve Inscriptiontypes and IDs
 *ObjectInvoiceApi* | [**invoiceBatchDownloadV1**](doc//ObjectInvoiceApi.md#invoicebatchdownloadv1) | **POST** /1/object/invoice/{pkiInvoiceID}/batchDownload | Download multiples attachments from an Invoice
 *ObjectInvoiceApi* | [**invoiceGetAttachmentsV1**](doc//ObjectInvoiceApi.md#invoicegetattachmentsv1) | **GET** /1/object/invoice/{pkiInvoiceID}/getAttachments | Retrieve Invoice's Attachments
@@ -657,10 +616,8 @@ Class | Method | HTTP request | Description
 *ObjectInvoiceApi* | [**invoiceGetCommunicationListV1**](doc//ObjectInvoiceApi.md#invoicegetcommunicationlistv1) | **GET** /1/object/invoice/{pkiInvoiceID}/getCommunicationList | Retrieve Communication list
 *ObjectInvoiceApi* | [**invoiceGetCommunicationrecipientsV1**](doc//ObjectInvoiceApi.md#invoicegetcommunicationrecipientsv1) | **GET** /1/object/invoice/{pkiInvoiceID}/getCommunicationrecipients | Retrieve Invoice's Communicationrecipient
 *ObjectInvoiceApi* | [**invoiceGetCommunicationsendersV1**](doc//ObjectInvoiceApi.md#invoicegetcommunicationsendersv1) | **GET** /1/object/invoice/{pkiInvoiceID}/getCommunicationsenders | Retrieve Invoice's Communicationsender
-*ObjectInvoiceApi* | [**invoiceGetDocumenttypechecklistV1**](doc//ObjectInvoiceApi.md#invoicegetdocumenttypechecklistv1) | **GET** /1/object/invoice/{pkiInvoiceID}/getDocumenttypechecklist | Retrieve Document type checklist
 *ObjectInvoiceApi* | [**invoiceGetListV1**](doc//ObjectInvoiceApi.md#invoicegetlistv1) | **GET** /1/object/invoice/getList | Retrieve Invoice list
 *ObjectInvoiceApi* | [**invoiceImportIntoEDMV1**](doc//ObjectInvoiceApi.md#invoiceimportintoedmv1) | **POST** /1/object/invoice/{pkiInvoiceID}/importIntoEDM | Import attachments into the Invoice
-*ObjectInvoiceApi* | [**invoiceSyncDocumenttypechecklistV1**](doc//ObjectInvoiceApi.md#invoicesyncdocumenttypechecklistv1) | **POST** /1/object/invoice/{pkiInvoiceID}/syncDocumenttypechecklist | Synchronize Document type checklist
 *ObjectLanguageApi* | [**languageGetAutocompleteV2**](doc//ObjectLanguageApi.md#languagegetautocompletev2) | **GET** /2/object/language/getAutocomplete/{sSelector} | Retrieve Languages and IDs
 *ObjectLeadApi* | [**leadBatchDownloadV1**](doc//ObjectLeadApi.md#leadbatchdownloadv1) | **POST** /1/object/lead/{pkiLeadID}/batchDownload | Download multiples attachments from a Lead
 *ObjectLeadApi* | [**leadGetAttachmentsV1**](doc//ObjectLeadApi.md#leadgetattachmentsv1) | **GET** /1/object/lead/{pkiLeadID}/getAttachments | Retrieve Lead's attachments
@@ -668,10 +625,8 @@ Class | Method | HTTP request | Description
 *ObjectLeadApi* | [**leadGetCommunicationListV1**](doc//ObjectLeadApi.md#leadgetcommunicationlistv1) | **GET** /1/object/lead/{pkiLeadID}/getCommunicationList | Retrieve Communication list
 *ObjectLeadApi* | [**leadGetCommunicationrecipientsV1**](doc//ObjectLeadApi.md#leadgetcommunicationrecipientsv1) | **GET** /1/object/lead/{pkiLeadID}/getCommunicationrecipients | Retrieve Communication recipients
 *ObjectLeadApi* | [**leadGetCommunicationsendersV1**](doc//ObjectLeadApi.md#leadgetcommunicationsendersv1) | **GET** /1/object/lead/{pkiLeadID}/getCommunicationsenders | Retrieve Communication senders
-*ObjectLeadApi* | [**leadGetDocumenttypechecklistV1**](doc//ObjectLeadApi.md#leadgetdocumenttypechecklistv1) | **GET** /1/object/lead/{pkiLeadID}/getDocumenttypechecklist | Retrieve Document type checklist
 *ObjectLeadApi* | [**leadGetListV1**](doc//ObjectLeadApi.md#leadgetlistv1) | **GET** /1/object/lead/getList | Retrieve Lead list
 *ObjectLeadApi* | [**leadImportIntoEDMV1**](doc//ObjectLeadApi.md#leadimportintoedmv1) | **POST** /1/object/lead/{pkiLeadID}/importIntoEDM | Import attachments into the Lead
-*ObjectLeadApi* | [**leadSyncDocumenttypechecklistV1**](doc//ObjectLeadApi.md#leadsyncdocumenttypechecklistv1) | **POST** /1/object/lead/{pkiLeadID}/syncDocumenttypechecklist | Synchronize Document type checklist
 *ObjectLeadsourceApi* | [**leadsourceGetAutocompleteV2**](doc//ObjectLeadsourceApi.md#leadsourcegetautocompletev2) | **GET** /2/object/leadsource/getAutocomplete/{sSelector} | Retrieve Leadsources and IDs
 *ObjectModuleApi* | [**moduleGetAutocompleteV2**](doc//ObjectModuleApi.md#modulegetautocompletev2) | **GET** /2/object/module/getAutocomplete/{sSelector} | Retrieve Modules and IDs
 *ObjectModulegroupApi* | [**modulegroupGetAllV1**](doc//ObjectModulegroupApi.md#modulegroupgetallv1) | **GET** /1/object/modulegroup/getAll/{eContext} | Retrieve all Modulegroups
@@ -681,10 +636,8 @@ Class | Method | HTTP request | Description
 *ObjectNotaryApi* | [**notaryGetCommunicationListV1**](doc//ObjectNotaryApi.md#notarygetcommunicationlistv1) | **GET** /1/object/notary/{pkiNotaryID}/getCommunicationList | Retrieve Communication list
 *ObjectNotaryApi* | [**notaryGetCommunicationrecipientsV1**](doc//ObjectNotaryApi.md#notarygetcommunicationrecipientsv1) | **GET** /1/object/notary/{pkiNotaryID}/getCommunicationrecipients | Retrieve Communication recipients
 *ObjectNotaryApi* | [**notaryGetCommunicationsendersV1**](doc//ObjectNotaryApi.md#notarygetcommunicationsendersv1) | **GET** /1/object/notary/{pkiNotaryID}/getCommunicationsenders | Retrieve Communication senders
-*ObjectNotaryApi* | [**notaryGetDocumenttypechecklistV1**](doc//ObjectNotaryApi.md#notarygetdocumenttypechecklistv1) | **GET** /1/object/notary/{pkiNotaryID}/getDocumenttypechecklist | Retrieve Document type checklist
 *ObjectNotaryApi* | [**notaryGetListV1**](doc//ObjectNotaryApi.md#notarygetlistv1) | **GET** /1/object/notary/getList | Retrieve Notary list
 *ObjectNotaryApi* | [**notaryImportIntoEDMV1**](doc//ObjectNotaryApi.md#notaryimportintoedmv1) | **POST** /1/object/notary/{pkiNotaryID}/importIntoEDM | Import attachments into the Notary
-*ObjectNotaryApi* | [**notarySyncDocumenttypechecklistV1**](doc//ObjectNotaryApi.md#notarysyncdocumenttypechecklistv1) | **POST** /1/object/notary/{pkiNotaryID}/syncDocumenttypechecklist | Synchronize Document type checklist
 *ObjectNotificationsectionApi* | [**notificationsectionGetNotificationtestsV1**](doc//ObjectNotificationsectionApi.md#notificationsectiongetnotificationtestsv1) | **GET** /1/object/notificationsection/{pkiNotificationsectionID}/getNotificationtests | Retrieve an existing Notificationsection's Notificationtests
 *ObjectNotificationtestApi* | [**notificationtestGetElementsV2**](doc//ObjectNotificationtestApi.md#notificationtestgetelementsv2) | **GET** /2/object/notificationtest/{pkiNotificationtestID}/getElements | Retrieve an existing Notificationtest's Elements
 *ObjectOfficetaxreportApi* | [**officetaxreportBatchDownloadV1**](doc//ObjectOfficetaxreportApi.md#officetaxreportbatchdownloadv1) | **POST** /1/object/officetaxreport/{pkiOfficetaxreportID}/batchDownload | Download multiples attachments from an Officetaxreport
@@ -693,20 +646,16 @@ Class | Method | HTTP request | Description
 *ObjectOfficetaxreportApi* | [**officetaxreportGetCommunicationListV1**](doc//ObjectOfficetaxreportApi.md#officetaxreportgetcommunicationlistv1) | **GET** /1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationList | Retrieve Communication list
 *ObjectOfficetaxreportApi* | [**officetaxreportGetCommunicationrecipientsV1**](doc//ObjectOfficetaxreportApi.md#officetaxreportgetcommunicationrecipientsv1) | **GET** /1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationrecipients | Retrieve Communication recipients
 *ObjectOfficetaxreportApi* | [**officetaxreportGetCommunicationsendersV1**](doc//ObjectOfficetaxreportApi.md#officetaxreportgetcommunicationsendersv1) | **GET** /1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationsenders | Retrieve Communication senders
-*ObjectOfficetaxreportApi* | [**officetaxreportGetDocumenttypechecklistV1**](doc//ObjectOfficetaxreportApi.md#officetaxreportgetdocumenttypechecklistv1) | **GET** /1/object/officetaxreport/{pkiOfficetaxreportID}/getDocumenttypechecklist | Retrieve Document type checklist
 *ObjectOfficetaxreportApi* | [**officetaxreportGetListV1**](doc//ObjectOfficetaxreportApi.md#officetaxreportgetlistv1) | **GET** /1/object/officetaxreport/getList | Retrieve Officetaxreport list
 *ObjectOfficetaxreportApi* | [**officetaxreportImportIntoEDMV1**](doc//ObjectOfficetaxreportApi.md#officetaxreportimportintoedmv1) | **POST** /1/object/officetaxreport/{pkiOfficetaxreportID}/importIntoEDM | Import attachments into the Officetaxreport
-*ObjectOfficetaxreportApi* | [**officetaxreportSyncDocumenttypechecklistV1**](doc//ObjectOfficetaxreportApi.md#officetaxreportsyncdocumenttypechecklistv1) | **POST** /1/object/officetaxreport/{pkiOfficetaxreportID}/syncDocumenttypechecklist | Synchronize Document type checklist
 *ObjectOtherincomeApi* | [**otherincomeBatchDownloadV1**](doc//ObjectOtherincomeApi.md#otherincomebatchdownloadv1) | **POST** /1/object/otherincome/{pkiOtherincomeID}/batchDownload | Download multiples attachments from a Otherincome
 *ObjectOtherincomeApi* | [**otherincomeGetAttachmentsV1**](doc//ObjectOtherincomeApi.md#otherincomegetattachmentsv1) | **GET** /1/object/otherincome/{pkiOtherincomeID}/getAttachments | Retrieve Otherincome's attachments
 *ObjectOtherincomeApi* | [**otherincomeGetCommunicationCountV1**](doc//ObjectOtherincomeApi.md#otherincomegetcommunicationcountv1) | **GET** /1/object/otherincome/{pkiOtherincomeID}/getCommunicationCount | Retrieve Communication count
 *ObjectOtherincomeApi* | [**otherincomeGetCommunicationListV1**](doc//ObjectOtherincomeApi.md#otherincomegetcommunicationlistv1) | **GET** /1/object/otherincome/{pkiOtherincomeID}/getCommunicationList | Retrieve Communication list
 *ObjectOtherincomeApi* | [**otherincomeGetCommunicationrecipientsV1**](doc//ObjectOtherincomeApi.md#otherincomegetcommunicationrecipientsv1) | **GET** /1/object/otherincome/{pkiOtherincomeID}/getCommunicationrecipients | Retrieve Otherincome's Communicationrecipient
 *ObjectOtherincomeApi* | [**otherincomeGetCommunicationsendersV1**](doc//ObjectOtherincomeApi.md#otherincomegetcommunicationsendersv1) | **GET** /1/object/otherincome/{pkiOtherincomeID}/getCommunicationsenders | Retrieve Otherincome's Communicationsender
-*ObjectOtherincomeApi* | [**otherincomeGetDocumenttypechecklistV1**](doc//ObjectOtherincomeApi.md#otherincomegetdocumenttypechecklistv1) | **GET** /1/object/otherincome/{pkiOtherincomeID}/getDocumenttypechecklist | Retrieve Document type checklist
 *ObjectOtherincomeApi* | [**otherincomeGetListV1**](doc//ObjectOtherincomeApi.md#otherincomegetlistv1) | **GET** /1/object/otherincome/getList | Retrieve Otherincome list
 *ObjectOtherincomeApi* | [**otherincomeImportIntoEDMV1**](doc//ObjectOtherincomeApi.md#otherincomeimportintoedmv1) | **POST** /1/object/otherincome/{pkiOtherincomeID}/importIntoEDM | Import attachments into the Otherincome
-*ObjectOtherincomeApi* | [**otherincomeSyncDocumenttypechecklistV1**](doc//ObjectOtherincomeApi.md#otherincomesyncdocumenttypechecklistv1) | **POST** /1/object/otherincome/{pkiOtherincomeID}/syncDocumenttypechecklist | Synchronize Document type checklist
 *ObjectOtherincometypeApi* | [**otherincometypeGetAutocompleteV2**](doc//ObjectOtherincometypeApi.md#otherincometypegetautocompletev2) | **GET** /2/object/otherincometype/getAutocomplete/{sSelector} | Retrieve Otherincometypes and IDs
 *ObjectPaymentgatewayApi* | [**paymentgatewayCreateObjectV1**](doc//ObjectPaymentgatewayApi.md#paymentgatewaycreateobjectv1) | **POST** /1/object/paymentgateway | Create a new Paymentgateway
 *ObjectPaymentgatewayApi* | [**paymentgatewayEditObjectV1**](doc//ObjectPaymentgatewayApi.md#paymentgatewayeditobjectv1) | **PUT** /1/object/paymentgateway/{pkiPaymentgatewayID} | Edit an existing Paymentgateway
@@ -720,9 +669,7 @@ Class | Method | HTTP request | Description
 *ObjectPaymentpreparationApi* | [**paymentpreparationGetCommunicationListV1**](doc//ObjectPaymentpreparationApi.md#paymentpreparationgetcommunicationlistv1) | **GET** /1/object/paymentpreparation/{pkiPaymentpreparationID}/getCommunicationList | Retrieve Communication list
 *ObjectPaymentpreparationApi* | [**paymentpreparationGetCommunicationrecipientsV1**](doc//ObjectPaymentpreparationApi.md#paymentpreparationgetcommunicationrecipientsv1) | **GET** /1/object/paymentpreparation/{pkiPaymentpreparationID}/getCommunicationrecipients | Retrieve Communication recipients
 *ObjectPaymentpreparationApi* | [**paymentpreparationGetCommunicationsendersV1**](doc//ObjectPaymentpreparationApi.md#paymentpreparationgetcommunicationsendersv1) | **GET** /1/object/paymentpreparation/{pkiPaymentpreparationID}/getCommunicationsenders | Retrieve Communication senders
-*ObjectPaymentpreparationApi* | [**paymentpreparationGetDocumenttypechecklistV1**](doc//ObjectPaymentpreparationApi.md#paymentpreparationgetdocumenttypechecklistv1) | **GET** /1/object/paymentpreparation/{pkiPaymentpreparationID}/getDocumenttypechecklist | Retrieve Document type checklist
 *ObjectPaymentpreparationApi* | [**paymentpreparationImportIntoEDMV1**](doc//ObjectPaymentpreparationApi.md#paymentpreparationimportintoedmv1) | **POST** /1/object/paymentpreparation/{pkiPaymentpreparationID}/importIntoEDM | Import attachments into the Paymentpreparation
-*ObjectPaymentpreparationApi* | [**paymentpreparationSyncDocumenttypechecklistV1**](doc//ObjectPaymentpreparationApi.md#paymentpreparationsyncdocumenttypechecklistv1) | **POST** /1/object/paymentpreparation/{pkiPaymentpreparationID}/syncDocumenttypechecklist | Synchronize Document type checklist
 *ObjectPaymenttermApi* | [**paymenttermCreateObjectV1**](doc//ObjectPaymenttermApi.md#paymenttermcreateobjectv1) | **POST** /1/object/paymentterm | Create a new Paymentterm
 *ObjectPaymenttermApi* | [**paymenttermEditObjectV1**](doc//ObjectPaymenttermApi.md#paymenttermeditobjectv1) | **PUT** /1/object/paymentterm/{pkiPaymenttermID} | Edit an existing Paymentterm
 *ObjectPaymenttermApi* | [**paymenttermGetAutocompleteV2**](doc//ObjectPaymenttermApi.md#paymenttermgetautocompletev2) | **GET** /2/object/paymentterm/getAutocomplete/{sSelector} | Retrieve Paymentterms and IDs
@@ -742,10 +689,8 @@ Class | Method | HTTP request | Description
 *ObjectPurchaseApi* | [**purchaseGetCommunicationListV1**](doc//ObjectPurchaseApi.md#purchasegetcommunicationlistv1) | **GET** /1/object/purchase/{pkiPurchaseID}/getCommunicationList | Retrieve Communication list
 *ObjectPurchaseApi* | [**purchaseGetCommunicationrecipientsV1**](doc//ObjectPurchaseApi.md#purchasegetcommunicationrecipientsv1) | **GET** /1/object/purchase/{pkiPurchaseID}/getCommunicationrecipients | Retrieve Communication recipients
 *ObjectPurchaseApi* | [**purchaseGetCommunicationsendersV1**](doc//ObjectPurchaseApi.md#purchasegetcommunicationsendersv1) | **GET** /1/object/purchase/{pkiPurchaseID}/getCommunicationsenders | Retrieve Communication senders
-*ObjectPurchaseApi* | [**purchaseGetDocumenttypechecklistV1**](doc//ObjectPurchaseApi.md#purchasegetdocumenttypechecklistv1) | **GET** /1/object/purchase/{pkiPurchaseID}/getDocumenttypechecklist | Retrieve Document type checklist
 *ObjectPurchaseApi* | [**purchaseGetListV1**](doc//ObjectPurchaseApi.md#purchasegetlistv1) | **GET** /1/object/purchase/getList | Retrieve Purchase list
 *ObjectPurchaseApi* | [**purchaseImportIntoEDMV1**](doc//ObjectPurchaseApi.md#purchaseimportintoedmv1) | **POST** /1/object/purchase/{pkiPurchaseID}/importIntoEDM | Import attachments into the Purchase
-*ObjectPurchaseApi* | [**purchaseSyncDocumenttypechecklistV1**](doc//ObjectPurchaseApi.md#purchasesyncdocumenttypechecklistv1) | **POST** /1/object/purchase/{pkiPurchaseID}/syncDocumenttypechecklist | Synchronize Document type checklist
 *ObjectRealestateassociationApi* | [**realestateassociationGetAutocompleteV2**](doc//ObjectRealestateassociationApi.md#realestateassociationgetautocompletev2) | **GET** /2/object/realestateassociation/getAutocomplete/{sSelector} | Retrieve Realestateassociations and IDs
 *ObjectRealestateboardApi* | [**realestateboardGetAutocompleteV2**](doc//ObjectRealestateboardApi.md#realestateboardgetautocompletev2) | **GET** /2/object/realestateboard/getAutocomplete/{sSelector} | Retrieve Realestateboards and IDs
 *ObjectReconciliationApi* | [**reconciliationBatchDownloadV1**](doc//ObjectReconciliationApi.md#reconciliationbatchdownloadv1) | **POST** /1/object/reconciliation/{pkiReconciliationID}/batchDownload | Download multiples attachments from a Reconciliation
@@ -754,29 +699,23 @@ Class | Method | HTTP request | Description
 *ObjectReconciliationApi* | [**reconciliationGetCommunicationListV1**](doc//ObjectReconciliationApi.md#reconciliationgetcommunicationlistv1) | **GET** /1/object/reconciliation/{pkiReconciliationID}/getCommunicationList | Retrieve Communication list
 *ObjectReconciliationApi* | [**reconciliationGetCommunicationrecipientsV1**](doc//ObjectReconciliationApi.md#reconciliationgetcommunicationrecipientsv1) | **GET** /1/object/reconciliation/{pkiReconciliationID}/getCommunicationrecipients | Retrieve Communication recipients
 *ObjectReconciliationApi* | [**reconciliationGetCommunicationsendersV1**](doc//ObjectReconciliationApi.md#reconciliationgetcommunicationsendersv1) | **GET** /1/object/reconciliation/{pkiReconciliationID}/getCommunicationsenders | Retrieve Communication senders
-*ObjectReconciliationApi* | [**reconciliationGetDocumenttypechecklistV1**](doc//ObjectReconciliationApi.md#reconciliationgetdocumenttypechecklistv1) | **GET** /1/object/reconciliation/{pkiReconciliationID}/getDocumenttypechecklist | Retrieve Document type checklist
 *ObjectReconciliationApi* | [**reconciliationImportIntoEDMV1**](doc//ObjectReconciliationApi.md#reconciliationimportintoedmv1) | **POST** /1/object/reconciliation/{pkiReconciliationID}/importIntoEDM | Import attachments into the Reconciliation
-*ObjectReconciliationApi* | [**reconciliationSyncDocumenttypechecklistV1**](doc//ObjectReconciliationApi.md#reconciliationsyncdocumenttypechecklistv1) | **POST** /1/object/reconciliation/{pkiReconciliationID}/syncDocumenttypechecklist | Synchronize Document type checklist
 *ObjectRejectedoffertopurchaseApi* | [**rejectedoffertopurchaseBatchDownloadV1**](doc//ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchasebatchdownloadv1) | **POST** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/batchDownload | Download multiples attachments from a Rejectedoffertopurchase
 *ObjectRejectedoffertopurchaseApi* | [**rejectedoffertopurchaseGetAttachmentsV1**](doc//ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchasegetattachmentsv1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getAttachments | Retrieve Rejectedoffertopurchase's attachments
 *ObjectRejectedoffertopurchaseApi* | [**rejectedoffertopurchaseGetCommunicationCountV1**](doc//ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchasegetcommunicationcountv1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationCount | Retrieve Communication count
 *ObjectRejectedoffertopurchaseApi* | [**rejectedoffertopurchaseGetCommunicationListV1**](doc//ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchasegetcommunicationlistv1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationList | Retrieve Communication list
 *ObjectRejectedoffertopurchaseApi* | [**rejectedoffertopurchaseGetCommunicationrecipientsV1**](doc//ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchasegetcommunicationrecipientsv1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationrecipients | Retrieve Rejectedoffertopurchase's Communicationrecipient
 *ObjectRejectedoffertopurchaseApi* | [**rejectedoffertopurchaseGetCommunicationsendersV1**](doc//ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchasegetcommunicationsendersv1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationsenders | Retrieve Rejectedoffertopurchase's Communicationsender
-*ObjectRejectedoffertopurchaseApi* | [**rejectedoffertopurchaseGetDocumenttypechecklistV1**](doc//ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchasegetdocumenttypechecklistv1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getDocumenttypechecklist | Retrieve Document type checklist
 *ObjectRejectedoffertopurchaseApi* | [**rejectedoffertopurchaseGetListV1**](doc//ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchasegetlistv1) | **GET** /1/object/rejectedoffertopurchase/getList | Retrieve Rejectedoffertopurchase list
 *ObjectRejectedoffertopurchaseApi* | [**rejectedoffertopurchaseImportIntoEDMV1**](doc//ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseimportintoedmv1) | **POST** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/importIntoEDM | Import attachments into the Rejectedoffertopurchase
-*ObjectRejectedoffertopurchaseApi* | [**rejectedoffertopurchaseSyncDocumenttypechecklistV1**](doc//ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchasesyncdocumenttypechecklistv1) | **POST** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/syncDocumenttypechecklist | Synchronize Document type checklist
 *ObjectSalaryApi* | [**salaryBatchDownloadV1**](doc//ObjectSalaryApi.md#salarybatchdownloadv1) | **POST** /1/object/salary/{pkiSalaryID}/batchDownload | Download multiples attachments from a Reconciliation
 *ObjectSalaryApi* | [**salaryGetAttachmentsV1**](doc//ObjectSalaryApi.md#salarygetattachmentsv1) | **GET** /1/object/salary/{pkiSalaryID}/getAttachments | Retrieve Salary's attachments
 *ObjectSalaryApi* | [**salaryGetCommunicationCountV1**](doc//ObjectSalaryApi.md#salarygetcommunicationcountv1) | **GET** /1/object/salary/{pkiSalaryID}/getCommunicationCount | Retrieve Communication count
 *ObjectSalaryApi* | [**salaryGetCommunicationListV1**](doc//ObjectSalaryApi.md#salarygetcommunicationlistv1) | **GET** /1/object/salary/{pkiSalaryID}/getCommunicationList | Retrieve Communication list
 *ObjectSalaryApi* | [**salaryGetCommunicationrecipientsV1**](doc//ObjectSalaryApi.md#salarygetcommunicationrecipientsv1) | **GET** /1/object/salary/{pkiSalaryID}/getCommunicationrecipients | Retrieve Communication recipients
 *ObjectSalaryApi* | [**salaryGetCommunicationsendersV1**](doc//ObjectSalaryApi.md#salarygetcommunicationsendersv1) | **GET** /1/object/salary/{pkiSalaryID}/getCommunicationsenders | Retrieve Communication senders
-*ObjectSalaryApi* | [**salaryGetDocumenttypechecklistV1**](doc//ObjectSalaryApi.md#salarygetdocumenttypechecklistv1) | **GET** /1/object/salary/{pkiSalaryID}/getDocumenttypechecklist | Retrieve Document type checklist
 *ObjectSalaryApi* | [**salaryGetListV1**](doc//ObjectSalaryApi.md#salarygetlistv1) | **GET** /1/object/salary/getList | Retrieve Salary list
 *ObjectSalaryApi* | [**salaryImportIntoEDMV1**](doc//ObjectSalaryApi.md#salaryimportintoedmv1) | **POST** /1/object/salary/{pkiSalaryID}/importIntoEDM | Import attachments into the Salary
-*ObjectSalaryApi* | [**salarySyncDocumenttypechecklistV1**](doc//ObjectSalaryApi.md#salarysyncdocumenttypechecklistv1) | **POST** /1/object/salary/{pkiSalaryID}/syncDocumenttypechecklist | Synchronize Document type checklist
 *ObjectSecretquestionApi* | [**secretquestionGetAutocompleteV2**](doc//ObjectSecretquestionApi.md#secretquestiongetautocompletev2) | **GET** /2/object/secretquestion/getAutocomplete/{sSelector} | Retrieve Secretquestions and IDs
 *ObjectSessionhistoryApi* | [**sessionhistoryGetListV1**](doc//ObjectSessionhistoryApi.md#sessionhistorygetlistv1) | **GET** /1/object/sessionhistory/getList | Retrieve Sessionhistory list
 *ObjectSignatureApi* | [**signatureCreateObjectV1**](doc//ObjectSignatureApi.md#signaturecreateobjectv1) | **POST** /1/object/signature | Create a new Signature
@@ -795,10 +734,8 @@ Class | Method | HTTP request | Description
 *ObjectSupplierApi* | [**supplierGetCommunicationListV1**](doc//ObjectSupplierApi.md#suppliergetcommunicationlistv1) | **GET** /1/object/supplier/{pkiSupplierID}/getCommunicationList | Retrieve Communication list
 *ObjectSupplierApi* | [**supplierGetCommunicationrecipientsV1**](doc//ObjectSupplierApi.md#suppliergetcommunicationrecipientsv1) | **GET** /1/object/supplier/{pkiSupplierID}/getCommunicationrecipients | Retrieve Communication recipients
 *ObjectSupplierApi* | [**supplierGetCommunicationsendersV1**](doc//ObjectSupplierApi.md#suppliergetcommunicationsendersv1) | **GET** /1/object/supplier/{pkiSupplierID}/getCommunicationsenders | Retrieve Communication senders
-*ObjectSupplierApi* | [**supplierGetDocumenttypechecklistV1**](doc//ObjectSupplierApi.md#suppliergetdocumenttypechecklistv1) | **GET** /1/object/supplier/{pkiSupplierID}/getDocumenttypechecklist | Retrieve Document type checklist
 *ObjectSupplierApi* | [**supplierGetListV1**](doc//ObjectSupplierApi.md#suppliergetlistv1) | **GET** /1/object/supplier/getList | Retrieve Supplier list
 *ObjectSupplierApi* | [**supplierImportIntoEDMV1**](doc//ObjectSupplierApi.md#supplierimportintoedmv1) | **POST** /1/object/supplier/{pkiSupplierID}/importIntoEDM | Import attachments into the Supplier
-*ObjectSupplierApi* | [**supplierSyncDocumenttypechecklistV1**](doc//ObjectSupplierApi.md#suppliersyncdocumenttypechecklistv1) | **POST** /1/object/supplier/{pkiSupplierID}/syncDocumenttypechecklist | Synchronize Document type checklist
 *ObjectSupplyApi* | [**supplyCreateObjectV1**](doc//ObjectSupplyApi.md#supplycreateobjectv1) | **POST** /1/object/supply | Create a new Supply
 *ObjectSupplyApi* | [**supplyDeleteObjectV1**](doc//ObjectSupplyApi.md#supplydeleteobjectv1) | **DELETE** /1/object/supply/{pkiSupplyID} | Delete an existing Supply
 *ObjectSupplyApi* | [**supplyEditObjectV1**](doc//ObjectSupplyApi.md#supplyeditobjectv1) | **PUT** /1/object/supply/{pkiSupplyID} | Edit an existing Supply
@@ -814,9 +751,7 @@ Class | Method | HTTP request | Description
 *ObjectTranqcontractApi* | [**tranqcontractGetCommunicationListV1**](doc//ObjectTranqcontractApi.md#tranqcontractgetcommunicationlistv1) | **GET** /1/object/tranqcontract/{pkiTranqcontractID}/getCommunicationList | Retrieve Communication list
 *ObjectTranqcontractApi* | [**tranqcontractGetCommunicationrecipientsV1**](doc//ObjectTranqcontractApi.md#tranqcontractgetcommunicationrecipientsv1) | **GET** /1/object/tranqcontract/{pkiTranqcontractID}/getCommunicationrecipients | Retrieve Tranqcontract's Communicationrecipient
 *ObjectTranqcontractApi* | [**tranqcontractGetCommunicationsendersV1**](doc//ObjectTranqcontractApi.md#tranqcontractgetcommunicationsendersv1) | **GET** /1/object/tranqcontract/{pkiTranqcontractID}/getCommunicationsenders | Retrieve Tranqcontract's Communicationsender
-*ObjectTranqcontractApi* | [**tranqcontractGetDocumenttypechecklistV1**](doc//ObjectTranqcontractApi.md#tranqcontractgetdocumenttypechecklistv1) | **GET** /1/object/tranqcontract/{pkiTranqcontractID}/getDocumenttypechecklist | Retrieve Document type checklist
 *ObjectTranqcontractApi* | [**tranqcontractImportIntoEDMV1**](doc//ObjectTranqcontractApi.md#tranqcontractimportintoedmv1) | **POST** /1/object/tranqcontract/{pkiTranqcontractID}/importIntoEDM | Import attachments into the Tranqcontract
-*ObjectTranqcontractApi* | [**tranqcontractSyncDocumenttypechecklistV1**](doc//ObjectTranqcontractApi.md#tranqcontractsyncdocumenttypechecklistv1) | **POST** /1/object/tranqcontract/{pkiTranqcontractID}/syncDocumenttypechecklist | Synchronize Document type checklist
 *ObjectUserApi* | [**userCreateObjectV1**](doc//ObjectUserApi.md#usercreateobjectv1) | **POST** /1/object/user | Create a new User
 *ObjectUserApi* | [**userCreateObjectV2**](doc//ObjectUserApi.md#usercreateobjectv2) | **POST** /2/object/user | Create a new User
 *ObjectUserApi* | [**userEditColleaguesV2**](doc//ObjectUserApi.md#usereditcolleaguesv2) | **PUT** /2/object/user/{pkiUserID}/editColleagues | Edit multiple Colleagues
@@ -927,16 +862,12 @@ Class | Method | HTTP request | Description
  - [AdjustmentGetCommunicationrecipientsV1ResponseMPayload](doc//AdjustmentGetCommunicationrecipientsV1ResponseMPayload.md)
  - [AdjustmentGetCommunicationsendersV1Response](doc//AdjustmentGetCommunicationsendersV1Response.md)
  - [AdjustmentGetCommunicationsendersV1ResponseMPayload](doc//AdjustmentGetCommunicationsendersV1ResponseMPayload.md)
- - [AdjustmentGetDocumenttypechecklistV1Response](doc//AdjustmentGetDocumenttypechecklistV1Response.md)
- - [AdjustmentGetDocumenttypechecklistV1ResponseMPayload](doc//AdjustmentGetDocumenttypechecklistV1ResponseMPayload.md)
  - [AdjustmentGetListV1Response](doc//AdjustmentGetListV1Response.md)
  - [AdjustmentGetListV1ResponseMPayload](doc//AdjustmentGetListV1ResponseMPayload.md)
  - [AdjustmentImportIntoEDMV1Request](doc//AdjustmentImportIntoEDMV1Request.md)
  - [AdjustmentImportIntoEDMV1Response](doc//AdjustmentImportIntoEDMV1Response.md)
  - [AdjustmentImportIntoEDMV1ResponseMPayload](doc//AdjustmentImportIntoEDMV1ResponseMPayload.md)
  - [AdjustmentListElement](doc//AdjustmentListElement.md)
- - [AdjustmentSyncDocumenttypechecklistV1Response](doc//AdjustmentSyncDocumenttypechecklistV1Response.md)
- - [AdjustmentSyncDocumenttypechecklistV1ResponseMPayload](doc//AdjustmentSyncDocumenttypechecklistV1ResponseMPayload.md)
  - [AdjustmentreminderGetListV1Response](doc//AdjustmentreminderGetListV1Response.md)
  - [AdjustmentreminderGetListV1ResponseMPayload](doc//AdjustmentreminderGetListV1ResponseMPayload.md)
  - [AdjustmentreminderListElement](doc//AdjustmentreminderListElement.md)
@@ -954,16 +885,12 @@ Class | Method | HTTP request | Description
  - [AgentGetCommunicationrecipientsV1ResponseMPayload](doc//AgentGetCommunicationrecipientsV1ResponseMPayload.md)
  - [AgentGetCommunicationsendersV1Response](doc//AgentGetCommunicationsendersV1Response.md)
  - [AgentGetCommunicationsendersV1ResponseMPayload](doc//AgentGetCommunicationsendersV1ResponseMPayload.md)
- - [AgentGetDocumenttypechecklistV1Response](doc//AgentGetDocumenttypechecklistV1Response.md)
- - [AgentGetDocumenttypechecklistV1ResponseMPayload](doc//AgentGetDocumenttypechecklistV1ResponseMPayload.md)
  - [AgentGetListV1Response](doc//AgentGetListV1Response.md)
  - [AgentGetListV1ResponseMPayload](doc//AgentGetListV1ResponseMPayload.md)
  - [AgentImportIntoEDMV1Request](doc//AgentImportIntoEDMV1Request.md)
  - [AgentImportIntoEDMV1Response](doc//AgentImportIntoEDMV1Response.md)
  - [AgentImportIntoEDMV1ResponseMPayload](doc//AgentImportIntoEDMV1ResponseMPayload.md)
  - [AgentListElement](doc//AgentListElement.md)
- - [AgentSyncDocumenttypechecklistV1Response](doc//AgentSyncDocumenttypechecklistV1Response.md)
- - [AgentSyncDocumenttypechecklistV1ResponseMPayload](doc//AgentSyncDocumenttypechecklistV1ResponseMPayload.md)
  - [AgenttypeAutocompleteElementResponse](doc//AgenttypeAutocompleteElementResponse.md)
  - [AgenttypeGetAutocompleteV2Response](doc//AgenttypeGetAutocompleteV2Response.md)
  - [AgenttypeGetAutocompleteV2ResponseMPayload](doc//AgenttypeGetAutocompleteV2ResponseMPayload.md)
@@ -1057,16 +984,12 @@ Class | Method | HTTP request | Description
  - [BankaccountGetCommunicationrecipientsV1ResponseMPayload](doc//BankaccountGetCommunicationrecipientsV1ResponseMPayload.md)
  - [BankaccountGetCommunicationsendersV1Response](doc//BankaccountGetCommunicationsendersV1Response.md)
  - [BankaccountGetCommunicationsendersV1ResponseMPayload](doc//BankaccountGetCommunicationsendersV1ResponseMPayload.md)
- - [BankaccountGetDocumenttypechecklistV1Response](doc//BankaccountGetDocumenttypechecklistV1Response.md)
- - [BankaccountGetDocumenttypechecklistV1ResponseMPayload](doc//BankaccountGetDocumenttypechecklistV1ResponseMPayload.md)
  - [BankaccountGetListV1Response](doc//BankaccountGetListV1Response.md)
  - [BankaccountGetListV1ResponseMPayload](doc//BankaccountGetListV1ResponseMPayload.md)
  - [BankaccountImportIntoEDMV1Request](doc//BankaccountImportIntoEDMV1Request.md)
  - [BankaccountImportIntoEDMV1Response](doc//BankaccountImportIntoEDMV1Response.md)
  - [BankaccountImportIntoEDMV1ResponseMPayload](doc//BankaccountImportIntoEDMV1ResponseMPayload.md)
  - [BankaccountListElement](doc//BankaccountListElement.md)
- - [BankaccountSyncDocumenttypechecklistV1Response](doc//BankaccountSyncDocumenttypechecklistV1Response.md)
- - [BankaccountSyncDocumenttypechecklistV1ResponseMPayload](doc//BankaccountSyncDocumenttypechecklistV1ResponseMPayload.md)
  - [BillingentityexternalAutocompleteElementResponse](doc//BillingentityexternalAutocompleteElementResponse.md)
  - [BillingentityexternalGenerateFederationTokenV1Request](doc//BillingentityexternalGenerateFederationTokenV1Request.md)
  - [BillingentityexternalGenerateFederationTokenV1Response](doc//BillingentityexternalGenerateFederationTokenV1Response.md)
@@ -1125,16 +1048,12 @@ Class | Method | HTTP request | Description
  - [BrokerGetCommunicationrecipientsV1ResponseMPayload](doc//BrokerGetCommunicationrecipientsV1ResponseMPayload.md)
  - [BrokerGetCommunicationsendersV1Response](doc//BrokerGetCommunicationsendersV1Response.md)
  - [BrokerGetCommunicationsendersV1ResponseMPayload](doc//BrokerGetCommunicationsendersV1ResponseMPayload.md)
- - [BrokerGetDocumenttypechecklistV1Response](doc//BrokerGetDocumenttypechecklistV1Response.md)
- - [BrokerGetDocumenttypechecklistV1ResponseMPayload](doc//BrokerGetDocumenttypechecklistV1ResponseMPayload.md)
  - [BrokerGetListV1Response](doc//BrokerGetListV1Response.md)
  - [BrokerGetListV1ResponseMPayload](doc//BrokerGetListV1ResponseMPayload.md)
  - [BrokerImportIntoEDMV1Request](doc//BrokerImportIntoEDMV1Request.md)
  - [BrokerImportIntoEDMV1Response](doc//BrokerImportIntoEDMV1Response.md)
  - [BrokerImportIntoEDMV1ResponseMPayload](doc//BrokerImportIntoEDMV1ResponseMPayload.md)
  - [BrokerListElement](doc//BrokerListElement.md)
- - [BrokerSyncDocumenttypechecklistV1Response](doc//BrokerSyncDocumenttypechecklistV1Response.md)
- - [BrokerSyncDocumenttypechecklistV1ResponseMPayload](doc//BrokerSyncDocumenttypechecklistV1ResponseMPayload.md)
  - [BrokertypeAutocompleteElementResponse](doc//BrokertypeAutocompleteElementResponse.md)
  - [BrokertypeGetAutocompleteV2Response](doc//BrokertypeGetAutocompleteV2Response.md)
  - [BrokertypeGetAutocompleteV2ResponseMPayload](doc//BrokertypeGetAutocompleteV2ResponseMPayload.md)
@@ -1149,8 +1068,6 @@ Class | Method | HTTP request | Description
  - [BuyercontractGetCommunicationrecipientsV1ResponseMPayload](doc//BuyercontractGetCommunicationrecipientsV1ResponseMPayload.md)
  - [BuyercontractGetCommunicationsendersV1Response](doc//BuyercontractGetCommunicationsendersV1Response.md)
  - [BuyercontractGetCommunicationsendersV1ResponseMPayload](doc//BuyercontractGetCommunicationsendersV1ResponseMPayload.md)
- - [BuyercontractGetDocumenttypechecklistV1Response](doc//BuyercontractGetDocumenttypechecklistV1Response.md)
- - [BuyercontractGetDocumenttypechecklistV1ResponseMPayload](doc//BuyercontractGetDocumenttypechecklistV1ResponseMPayload.md)
  - [BuyercontractGetListV1Response](doc//BuyercontractGetListV1Response.md)
  - [BuyercontractGetListV1ResponseMPayload](doc//BuyercontractGetListV1ResponseMPayload.md)
  - [BuyercontractImportIntoEDMV1Request](doc//BuyercontractImportIntoEDMV1Request.md)
@@ -1158,8 +1075,6 @@ Class | Method | HTTP request | Description
  - [BuyercontractImportIntoEDMV1ResponseMPayload](doc//BuyercontractImportIntoEDMV1ResponseMPayload.md)
  - [BuyercontractListElement](doc//BuyercontractListElement.md)
  - [BuyercontractResponse](doc//BuyercontractResponse.md)
- - [BuyercontractSyncDocumenttypechecklistV1Response](doc//BuyercontractSyncDocumenttypechecklistV1Response.md)
- - [BuyercontractSyncDocumenttypechecklistV1ResponseMPayload](doc//BuyercontractSyncDocumenttypechecklistV1ResponseMPayload.md)
  - [ClonehistoryGetListV1Response](doc//ClonehistoryGetListV1Response.md)
  - [ClonehistoryGetListV1ResponseMPayload](doc//ClonehistoryGetListV1ResponseMPayload.md)
  - [ClonehistoryListElement](doc//ClonehistoryListElement.md)
@@ -1178,13 +1093,9 @@ Class | Method | HTTP request | Description
  - [CommissionadvanceGetCommunicationrecipientsV1ResponseMPayload](doc//CommissionadvanceGetCommunicationrecipientsV1ResponseMPayload.md)
  - [CommissionadvanceGetCommunicationsendersV1Response](doc//CommissionadvanceGetCommunicationsendersV1Response.md)
  - [CommissionadvanceGetCommunicationsendersV1ResponseMPayload](doc//CommissionadvanceGetCommunicationsendersV1ResponseMPayload.md)
- - [CommissionadvanceGetDocumenttypechecklistV1Response](doc//CommissionadvanceGetDocumenttypechecklistV1Response.md)
- - [CommissionadvanceGetDocumenttypechecklistV1ResponseMPayload](doc//CommissionadvanceGetDocumenttypechecklistV1ResponseMPayload.md)
  - [CommissionadvanceImportIntoEDMV1Request](doc//CommissionadvanceImportIntoEDMV1Request.md)
  - [CommissionadvanceImportIntoEDMV1Response](doc//CommissionadvanceImportIntoEDMV1Response.md)
  - [CommissionadvanceImportIntoEDMV1ResponseMPayload](doc//CommissionadvanceImportIntoEDMV1ResponseMPayload.md)
- - [CommissionadvanceSyncDocumenttypechecklistV1Response](doc//CommissionadvanceSyncDocumenttypechecklistV1Response.md)
- - [CommissionadvanceSyncDocumenttypechecklistV1ResponseMPayload](doc//CommissionadvanceSyncDocumenttypechecklistV1ResponseMPayload.md)
  - [CommonAudit](doc//CommonAudit.md)
  - [CommonAuditdetail](doc//CommonAuditdetail.md)
  - [CommonFile](doc//CommonFile.md)
@@ -1218,15 +1129,11 @@ Class | Method | HTTP request | Description
  - [CommonResponseRedirectSSecretquestionTextX](doc//CommonResponseRedirectSSecretquestionTextX.md)
  - [CommonResponseWarning](doc//CommonResponseWarning.md)
  - [CommonWebhook](doc//CommonWebhook.md)
- - [CommunicationGetDocumenttypechecklistV1Response](doc//CommunicationGetDocumenttypechecklistV1Response.md)
- - [CommunicationGetDocumenttypechecklistV1ResponseMPayload](doc//CommunicationGetDocumenttypechecklistV1ResponseMPayload.md)
  - [CommunicationRequest](doc//CommunicationRequest.md)
  - [CommunicationRequestCompound](doc//CommunicationRequestCompound.md)
  - [CommunicationSendV1Request](doc//CommunicationSendV1Request.md)
  - [CommunicationSendV1Response](doc//CommunicationSendV1Response.md)
  - [CommunicationSendV1ResponseMPayload](doc//CommunicationSendV1ResponseMPayload.md)
- - [CommunicationSyncDocumenttypechecklistV1Response](doc//CommunicationSyncDocumenttypechecklistV1Response.md)
- - [CommunicationSyncDocumenttypechecklistV1ResponseMPayload](doc//CommunicationSyncDocumenttypechecklistV1ResponseMPayload.md)
  - [CommunicationattachmentRequest](doc//CommunicationattachmentRequest.md)
  - [CommunicationattachmentRequestCompound](doc//CommunicationattachmentRequestCompound.md)
  - [CommunicationexternalrecipientRequest](doc//CommunicationexternalrecipientRequest.md)
@@ -1338,7 +1245,6 @@ Class | Method | HTTP request | Description
  - [CustomCreditcardtransactionresponseResponse](doc//CustomCreditcardtransactionresponseResponse.md)
  - [CustomDiscussionconfigurationResponse](doc//CustomDiscussionconfigurationResponse.md)
  - [CustomDnsrecordResponse](doc//CustomDnsrecordResponse.md)
- - [CustomDocumenttypechecklistResponse](doc//CustomDocumenttypechecklistResponse.md)
  - [CustomDropdownElementRequest](doc//CustomDropdownElementRequest.md)
  - [CustomDropdownElementRequestCompound](doc//CustomDropdownElementRequestCompound.md)
  - [CustomDropdownElementResponse](doc//CustomDropdownElementResponse.md)
@@ -1412,8 +1318,6 @@ Class | Method | HTTP request | Description
  - [CustomerGetCommunicationrecipientsV1ResponseMPayload](doc//CustomerGetCommunicationrecipientsV1ResponseMPayload.md)
  - [CustomerGetCommunicationsendersV1Response](doc//CustomerGetCommunicationsendersV1Response.md)
  - [CustomerGetCommunicationsendersV1ResponseMPayload](doc//CustomerGetCommunicationsendersV1ResponseMPayload.md)
- - [CustomerGetDocumenttypechecklistV1Response](doc//CustomerGetDocumenttypechecklistV1Response.md)
- - [CustomerGetDocumenttypechecklistV1ResponseMPayload](doc//CustomerGetDocumenttypechecklistV1ResponseMPayload.md)
  - [CustomerGetObjectV2Response](doc//CustomerGetObjectV2Response.md)
  - [CustomerGetObjectV2ResponseMPayload](doc//CustomerGetObjectV2ResponseMPayload.md)
  - [CustomerImportIntoEDMV1Request](doc//CustomerImportIntoEDMV1Request.md)
@@ -1421,12 +1325,6 @@ Class | Method | HTTP request | Description
  - [CustomerImportIntoEDMV1ResponseMPayload](doc//CustomerImportIntoEDMV1ResponseMPayload.md)
  - [CustomerResponse](doc//CustomerResponse.md)
  - [CustomerResponseCompound](doc//CustomerResponseCompound.md)
- - [CustomerSyncDocumenttypechecklistV1Response](doc//CustomerSyncDocumenttypechecklistV1Response.md)
- - [CustomerSyncDocumenttypechecklistV1ResponseMPayload](doc//CustomerSyncDocumenttypechecklistV1ResponseMPayload.md)
- - [CustomertemplateGetDocumenttypechecklistV1Response](doc//CustomertemplateGetDocumenttypechecklistV1Response.md)
- - [CustomertemplateGetDocumenttypechecklistV1ResponseMPayload](doc//CustomertemplateGetDocumenttypechecklistV1ResponseMPayload.md)
- - [CustomertemplateSyncDocumenttypechecklistV1Response](doc//CustomertemplateSyncDocumenttypechecklistV1Response.md)
- - [CustomertemplateSyncDocumenttypechecklistV1ResponseMPayload](doc//CustomertemplateSyncDocumenttypechecklistV1ResponseMPayload.md)
  - [DepartmentAutocompleteElementResponse](doc//DepartmentAutocompleteElementResponse.md)
  - [DepartmentGetAutocompleteV2Response](doc//DepartmentGetAutocompleteV2Response.md)
  - [DepartmentGetAutocompleteV2ResponseMPayload](doc//DepartmentGetAutocompleteV2ResponseMPayload.md)
@@ -1441,16 +1339,12 @@ Class | Method | HTTP request | Description
  - [DepositGetCommunicationrecipientsV1ResponseMPayload](doc//DepositGetCommunicationrecipientsV1ResponseMPayload.md)
  - [DepositGetCommunicationsendersV1Response](doc//DepositGetCommunicationsendersV1Response.md)
  - [DepositGetCommunicationsendersV1ResponseMPayload](doc//DepositGetCommunicationsendersV1ResponseMPayload.md)
- - [DepositGetDocumenttypechecklistV1Response](doc//DepositGetDocumenttypechecklistV1Response.md)
- - [DepositGetDocumenttypechecklistV1ResponseMPayload](doc//DepositGetDocumenttypechecklistV1ResponseMPayload.md)
  - [DepositGetListV1Response](doc//DepositGetListV1Response.md)
  - [DepositGetListV1ResponseMPayload](doc//DepositGetListV1ResponseMPayload.md)
  - [DepositImportIntoEDMV1Request](doc//DepositImportIntoEDMV1Request.md)
  - [DepositImportIntoEDMV1Response](doc//DepositImportIntoEDMV1Response.md)
  - [DepositImportIntoEDMV1ResponseMPayload](doc//DepositImportIntoEDMV1ResponseMPayload.md)
  - [DepositListElement](doc//DepositListElement.md)
- - [DepositSyncDocumenttypechecklistV1Response](doc//DepositSyncDocumenttypechecklistV1Response.md)
- - [DepositSyncDocumenttypechecklistV1ResponseMPayload](doc//DepositSyncDocumenttypechecklistV1ResponseMPayload.md)
  - [DeposittransitchequeBatchDownloadV1Request](doc//DeposittransitchequeBatchDownloadV1Request.md)
  - [DeposittransitchequeGetAttachmentsV1Response](doc//DeposittransitchequeGetAttachmentsV1Response.md)
  - [DeposittransitchequeGetAttachmentsV1ResponseMPayload](doc//DeposittransitchequeGetAttachmentsV1ResponseMPayload.md)
@@ -1462,16 +1356,12 @@ Class | Method | HTTP request | Description
  - [DeposittransitchequeGetCommunicationrecipientsV1ResponseMPayload](doc//DeposittransitchequeGetCommunicationrecipientsV1ResponseMPayload.md)
  - [DeposittransitchequeGetCommunicationsendersV1Response](doc//DeposittransitchequeGetCommunicationsendersV1Response.md)
  - [DeposittransitchequeGetCommunicationsendersV1ResponseMPayload](doc//DeposittransitchequeGetCommunicationsendersV1ResponseMPayload.md)
- - [DeposittransitchequeGetDocumenttypechecklistV1Response](doc//DeposittransitchequeGetDocumenttypechecklistV1Response.md)
- - [DeposittransitchequeGetDocumenttypechecklistV1ResponseMPayload](doc//DeposittransitchequeGetDocumenttypechecklistV1ResponseMPayload.md)
  - [DeposittransitchequeGetListV1Response](doc//DeposittransitchequeGetListV1Response.md)
  - [DeposittransitchequeGetListV1ResponseMPayload](doc//DeposittransitchequeGetListV1ResponseMPayload.md)
  - [DeposittransitchequeImportIntoEDMV1Request](doc//DeposittransitchequeImportIntoEDMV1Request.md)
  - [DeposittransitchequeImportIntoEDMV1Response](doc//DeposittransitchequeImportIntoEDMV1Response.md)
  - [DeposittransitchequeImportIntoEDMV1ResponseMPayload](doc//DeposittransitchequeImportIntoEDMV1ResponseMPayload.md)
  - [DeposittransitchequeListElement](doc//DeposittransitchequeListElement.md)
- - [DeposittransitchequeSyncDocumenttypechecklistV1Response](doc//DeposittransitchequeSyncDocumenttypechecklistV1Response.md)
- - [DeposittransitchequeSyncDocumenttypechecklistV1ResponseMPayload](doc//DeposittransitchequeSyncDocumenttypechecklistV1ResponseMPayload.md)
  - [DisclosureBatchDownloadV1Request](doc//DisclosureBatchDownloadV1Request.md)
  - [DisclosureGetAttachmentsV1Response](doc//DisclosureGetAttachmentsV1Response.md)
  - [DisclosureGetAttachmentsV1ResponseMPayload](doc//DisclosureGetAttachmentsV1ResponseMPayload.md)
@@ -1483,16 +1373,12 @@ Class | Method | HTTP request | Description
  - [DisclosureGetCommunicationrecipientsV1ResponseMPayload](doc//DisclosureGetCommunicationrecipientsV1ResponseMPayload.md)
  - [DisclosureGetCommunicationsendersV1Response](doc//DisclosureGetCommunicationsendersV1Response.md)
  - [DisclosureGetCommunicationsendersV1ResponseMPayload](doc//DisclosureGetCommunicationsendersV1ResponseMPayload.md)
- - [DisclosureGetDocumenttypechecklistV1Response](doc//DisclosureGetDocumenttypechecklistV1Response.md)
- - [DisclosureGetDocumenttypechecklistV1ResponseMPayload](doc//DisclosureGetDocumenttypechecklistV1ResponseMPayload.md)
  - [DisclosureGetListV1Response](doc//DisclosureGetListV1Response.md)
  - [DisclosureGetListV1ResponseMPayload](doc//DisclosureGetListV1ResponseMPayload.md)
  - [DisclosureImportIntoEDMV1Request](doc//DisclosureImportIntoEDMV1Request.md)
  - [DisclosureImportIntoEDMV1Response](doc//DisclosureImportIntoEDMV1Response.md)
  - [DisclosureImportIntoEDMV1ResponseMPayload](doc//DisclosureImportIntoEDMV1ResponseMPayload.md)
  - [DisclosureListElement](doc//DisclosureListElement.md)
- - [DisclosureSyncDocumenttypechecklistV1Response](doc//DisclosureSyncDocumenttypechecklistV1Response.md)
- - [DisclosureSyncDocumenttypechecklistV1ResponseMPayload](doc//DisclosureSyncDocumenttypechecklistV1ResponseMPayload.md)
  - [DiscussionChatV1200Response](doc//DiscussionChatV1200Response.md)
  - [DiscussionChatV1Request](doc//DiscussionChatV1Request.md)
  - [DiscussionCreateObjectV1Request](doc//DiscussionCreateObjectV1Request.md)
@@ -1501,9 +1387,6 @@ Class | Method | HTTP request | Description
  - [DiscussionDeleteObjectV1Response](doc//DiscussionDeleteObjectV1Response.md)
  - [DiscussionGetObjectV2Response](doc//DiscussionGetObjectV2Response.md)
  - [DiscussionGetObjectV2ResponseMPayload](doc//DiscussionGetObjectV2ResponseMPayload.md)
- - [DiscussionImproveMessageV1Request](doc//DiscussionImproveMessageV1Request.md)
- - [DiscussionImproveMessageV1Response](doc//DiscussionImproveMessageV1Response.md)
- - [DiscussionImproveMessageV1ResponseMPayload](doc//DiscussionImproveMessageV1ResponseMPayload.md)
  - [DiscussionPatchObjectV1Request](doc//DiscussionPatchObjectV1Request.md)
  - [DiscussionPatchObjectV1Response](doc//DiscussionPatchObjectV1Response.md)
  - [DiscussionRequest](doc//DiscussionRequest.md)
@@ -1580,16 +1463,12 @@ Class | Method | HTTP request | Description
  - [ElectronicfundstransferGetCommunicationrecipientsV1ResponseMPayload](doc//ElectronicfundstransferGetCommunicationrecipientsV1ResponseMPayload.md)
  - [ElectronicfundstransferGetCommunicationsendersV1Response](doc//ElectronicfundstransferGetCommunicationsendersV1Response.md)
  - [ElectronicfundstransferGetCommunicationsendersV1ResponseMPayload](doc//ElectronicfundstransferGetCommunicationsendersV1ResponseMPayload.md)
- - [ElectronicfundstransferGetDocumenttypechecklistV1Response](doc//ElectronicfundstransferGetDocumenttypechecklistV1Response.md)
- - [ElectronicfundstransferGetDocumenttypechecklistV1ResponseMPayload](doc//ElectronicfundstransferGetDocumenttypechecklistV1ResponseMPayload.md)
  - [ElectronicfundstransferGetListV1Response](doc//ElectronicfundstransferGetListV1Response.md)
  - [ElectronicfundstransferGetListV1ResponseMPayload](doc//ElectronicfundstransferGetListV1ResponseMPayload.md)
  - [ElectronicfundstransferImportIntoEDMV1Request](doc//ElectronicfundstransferImportIntoEDMV1Request.md)
  - [ElectronicfundstransferImportIntoEDMV1Response](doc//ElectronicfundstransferImportIntoEDMV1Response.md)
  - [ElectronicfundstransferImportIntoEDMV1ResponseMPayload](doc//ElectronicfundstransferImportIntoEDMV1ResponseMPayload.md)
  - [ElectronicfundstransferListElement](doc//ElectronicfundstransferListElement.md)
- - [ElectronicfundstransferSyncDocumenttypechecklistV1Response](doc//ElectronicfundstransferSyncDocumenttypechecklistV1Response.md)
- - [ElectronicfundstransferSyncDocumenttypechecklistV1ResponseMPayload](doc//ElectronicfundstransferSyncDocumenttypechecklistV1ResponseMPayload.md)
  - [ElectronicfundstransfertransactionGetListV1Response](doc//ElectronicfundstransfertransactionGetListV1Response.md)
  - [ElectronicfundstransfertransactionGetListV1ResponseMPayload](doc//ElectronicfundstransfertransactionGetListV1ResponseMPayload.md)
  - [ElectronicfundstransfertransactionListElement](doc//ElectronicfundstransfertransactionListElement.md)
@@ -1611,16 +1490,12 @@ Class | Method | HTTP request | Description
  - [EmployeeGetCommunicationrecipientsV1ResponseMPayload](doc//EmployeeGetCommunicationrecipientsV1ResponseMPayload.md)
  - [EmployeeGetCommunicationsendersV1Response](doc//EmployeeGetCommunicationsendersV1Response.md)
  - [EmployeeGetCommunicationsendersV1ResponseMPayload](doc//EmployeeGetCommunicationsendersV1ResponseMPayload.md)
- - [EmployeeGetDocumenttypechecklistV1Response](doc//EmployeeGetDocumenttypechecklistV1Response.md)
- - [EmployeeGetDocumenttypechecklistV1ResponseMPayload](doc//EmployeeGetDocumenttypechecklistV1ResponseMPayload.md)
  - [EmployeeGetListV1Response](doc//EmployeeGetListV1Response.md)
  - [EmployeeGetListV1ResponseMPayload](doc//EmployeeGetListV1ResponseMPayload.md)
  - [EmployeeImportIntoEDMV1Request](doc//EmployeeImportIntoEDMV1Request.md)
  - [EmployeeImportIntoEDMV1Response](doc//EmployeeImportIntoEDMV1Response.md)
  - [EmployeeImportIntoEDMV1ResponseMPayload](doc//EmployeeImportIntoEDMV1ResponseMPayload.md)
  - [EmployeeListElement](doc//EmployeeListElement.md)
- - [EmployeeSyncDocumenttypechecklistV1Response](doc//EmployeeSyncDocumenttypechecklistV1Response.md)
- - [EmployeeSyncDocumenttypechecklistV1ResponseMPayload](doc//EmployeeSyncDocumenttypechecklistV1ResponseMPayload.md)
  - [EnumFontunderline](doc//EnumFontunderline.md)
  - [EnumFontweight](doc//EnumFontweight.md)
  - [EnumHorizontalalignment](doc//EnumHorizontalalignment.md)
@@ -1638,13 +1513,9 @@ Class | Method | HTTP request | Description
  - [ExternalbrokerGetCommunicationrecipientsV1ResponseMPayload](doc//ExternalbrokerGetCommunicationrecipientsV1ResponseMPayload.md)
  - [ExternalbrokerGetCommunicationsendersV1Response](doc//ExternalbrokerGetCommunicationsendersV1Response.md)
  - [ExternalbrokerGetCommunicationsendersV1ResponseMPayload](doc//ExternalbrokerGetCommunicationsendersV1ResponseMPayload.md)
- - [ExternalbrokerGetDocumenttypechecklistV1Response](doc//ExternalbrokerGetDocumenttypechecklistV1Response.md)
- - [ExternalbrokerGetDocumenttypechecklistV1ResponseMPayload](doc//ExternalbrokerGetDocumenttypechecklistV1ResponseMPayload.md)
  - [ExternalbrokerImportIntoEDMV1Request](doc//ExternalbrokerImportIntoEDMV1Request.md)
  - [ExternalbrokerImportIntoEDMV1Response](doc//ExternalbrokerImportIntoEDMV1Response.md)
  - [ExternalbrokerImportIntoEDMV1ResponseMPayload](doc//ExternalbrokerImportIntoEDMV1ResponseMPayload.md)
- - [ExternalbrokerSyncDocumenttypechecklistV1Response](doc//ExternalbrokerSyncDocumenttypechecklistV1Response.md)
- - [ExternalbrokerSyncDocumenttypechecklistV1ResponseMPayload](doc//ExternalbrokerSyncDocumenttypechecklistV1ResponseMPayload.md)
  - [EzdoctemplatedocumentAutocompleteElementResponse](doc//EzdoctemplatedocumentAutocompleteElementResponse.md)
  - [EzdoctemplatedocumentCreateObjectV1Request](doc//EzdoctemplatedocumentCreateObjectV1Request.md)
  - [EzdoctemplatedocumentCreateObjectV1Response](doc//EzdoctemplatedocumentCreateObjectV1Response.md)
@@ -1995,8 +1866,6 @@ Class | Method | HTTP request | Description
  - [EzsignfolderGetCommunicationrecipientsV1ResponseMPayload](doc//EzsignfolderGetCommunicationrecipientsV1ResponseMPayload.md)
  - [EzsignfolderGetCommunicationsendersV1Response](doc//EzsignfolderGetCommunicationsendersV1Response.md)
  - [EzsignfolderGetCommunicationsendersV1ResponseMPayload](doc//EzsignfolderGetCommunicationsendersV1ResponseMPayload.md)
- - [EzsignfolderGetDocumenttypechecklistV1Response](doc//EzsignfolderGetDocumenttypechecklistV1Response.md)
- - [EzsignfolderGetDocumenttypechecklistV1ResponseMPayload](doc//EzsignfolderGetDocumenttypechecklistV1ResponseMPayload.md)
  - [EzsignfolderGetEzsignannotationsV1Response](doc//EzsignfolderGetEzsignannotationsV1Response.md)
  - [EzsignfolderGetEzsignannotationsV1ResponseMPayload](doc//EzsignfolderGetEzsignannotationsV1ResponseMPayload.md)
  - [EzsignfolderGetEzsigndocumentsV1Response](doc//EzsignfolderGetEzsigndocumentsV1Response.md)
@@ -2050,8 +1919,6 @@ Class | Method | HTTP request | Description
  - [EzsignfolderSendV1Response](doc//EzsignfolderSendV1Response.md)
  - [EzsignfolderSendV3Request](doc//EzsignfolderSendV3Request.md)
  - [EzsignfolderSendV3Response](doc//EzsignfolderSendV3Response.md)
- - [EzsignfolderSyncDocumenttypechecklistV1Response](doc//EzsignfolderSyncDocumenttypechecklistV1Response.md)
- - [EzsignfolderSyncDocumenttypechecklistV1ResponseMPayload](doc//EzsignfolderSyncDocumenttypechecklistV1ResponseMPayload.md)
  - [EzsignfolderUnsendV1Response](doc//EzsignfolderUnsendV1Response.md)
  - [EzsignfoldersignerassociationCreateEmbeddedUrlV1Request](doc//EzsignfoldersignerassociationCreateEmbeddedUrlV1Request.md)
  - [EzsignfoldersignerassociationCreateEmbeddedUrlV1Response](doc//EzsignfoldersignerassociationCreateEmbeddedUrlV1Response.md)
@@ -2736,13 +2603,9 @@ Class | Method | HTTP request | Description
  - [FolderGetCommunicationrecipientsV1ResponseMPayload](doc//FolderGetCommunicationrecipientsV1ResponseMPayload.md)
  - [FolderGetCommunicationsendersV1Response](doc//FolderGetCommunicationsendersV1Response.md)
  - [FolderGetCommunicationsendersV1ResponseMPayload](doc//FolderGetCommunicationsendersV1ResponseMPayload.md)
- - [FolderGetDocumenttypechecklistV1Response](doc//FolderGetDocumenttypechecklistV1Response.md)
- - [FolderGetDocumenttypechecklistV1ResponseMPayload](doc//FolderGetDocumenttypechecklistV1ResponseMPayload.md)
  - [FolderImportIntoEDMV1Request](doc//FolderImportIntoEDMV1Request.md)
  - [FolderImportIntoEDMV1Response](doc//FolderImportIntoEDMV1Response.md)
  - [FolderImportIntoEDMV1ResponseMPayload](doc//FolderImportIntoEDMV1ResponseMPayload.md)
- - [FolderSyncDocumenttypechecklistV1Response](doc//FolderSyncDocumenttypechecklistV1Response.md)
- - [FolderSyncDocumenttypechecklistV1ResponseMPayload](doc//FolderSyncDocumenttypechecklistV1ResponseMPayload.md)
  - [FontAutocompleteElementResponse](doc//FontAutocompleteElementResponse.md)
  - [FontGetAutocompleteV2Response](doc//FontGetAutocompleteV2Response.md)
  - [FontGetAutocompleteV2ResponseMPayload](doc//FontGetAutocompleteV2ResponseMPayload.md)
@@ -2781,8 +2644,6 @@ Class | Method | HTTP request | Description
  - [InscriptionGetCommunicationrecipientsV1ResponseMPayload](doc//InscriptionGetCommunicationrecipientsV1ResponseMPayload.md)
  - [InscriptionGetCommunicationsendersV1Response](doc//InscriptionGetCommunicationsendersV1Response.md)
  - [InscriptionGetCommunicationsendersV1ResponseMPayload](doc//InscriptionGetCommunicationsendersV1ResponseMPayload.md)
- - [InscriptionGetDocumenttypechecklistV1Response](doc//InscriptionGetDocumenttypechecklistV1Response.md)
- - [InscriptionGetDocumenttypechecklistV1ResponseMPayload](doc//InscriptionGetDocumenttypechecklistV1ResponseMPayload.md)
  - [InscriptionGetInscriptionnotauthenticatedsV1Response](doc//InscriptionGetInscriptionnotauthenticatedsV1Response.md)
  - [InscriptionGetInscriptionnotauthenticatedsV1ResponseMPayload](doc//InscriptionGetInscriptionnotauthenticatedsV1ResponseMPayload.md)
  - [InscriptionGetListV1Response](doc//InscriptionGetListV1Response.md)
@@ -2798,8 +2659,6 @@ Class | Method | HTTP request | Description
  - [InscriptionPrepareFilesTransferV1ResponseMPayload](doc//InscriptionPrepareFilesTransferV1ResponseMPayload.md)
  - [InscriptionResponse](doc//InscriptionResponse.md)
  - [InscriptionResponseCompound](doc//InscriptionResponseCompound.md)
- - [InscriptionSyncDocumenttypechecklistV1Response](doc//InscriptionSyncDocumenttypechecklistV1Response.md)
- - [InscriptionSyncDocumenttypechecklistV1ResponseMPayload](doc//InscriptionSyncDocumenttypechecklistV1ResponseMPayload.md)
  - [InscriptionSynchronizationDocumenttypeV1Response](doc//InscriptionSynchronizationDocumenttypeV1Response.md)
  - [InscriptionchecklistAutocompleteElementResponse](doc//InscriptionchecklistAutocompleteElementResponse.md)
  - [InscriptionchecklistGetAutocompleteV3Response](doc//InscriptionchecklistGetAutocompleteV3Response.md)
@@ -2817,8 +2676,6 @@ Class | Method | HTTP request | Description
  - [InscriptionnotauthenticatedGetCommunicationrecipientsV1ResponseMPayload](doc//InscriptionnotauthenticatedGetCommunicationrecipientsV1ResponseMPayload.md)
  - [InscriptionnotauthenticatedGetCommunicationsendersV1Response](doc//InscriptionnotauthenticatedGetCommunicationsendersV1Response.md)
  - [InscriptionnotauthenticatedGetCommunicationsendersV1ResponseMPayload](doc//InscriptionnotauthenticatedGetCommunicationsendersV1ResponseMPayload.md)
- - [InscriptionnotauthenticatedGetDocumenttypechecklistV1Response](doc//InscriptionnotauthenticatedGetDocumenttypechecklistV1Response.md)
- - [InscriptionnotauthenticatedGetDocumenttypechecklistV1ResponseMPayload](doc//InscriptionnotauthenticatedGetDocumenttypechecklistV1ResponseMPayload.md)
  - [InscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1Response](doc//InscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1Response.md)
  - [InscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1ResponseMPayload](doc//InscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1ResponseMPayload.md)
  - [InscriptionnotauthenticatedGetListV1Response](doc//InscriptionnotauthenticatedGetListV1Response.md)
@@ -2831,8 +2688,6 @@ Class | Method | HTTP request | Description
  - [InscriptionnotauthenticatedListElement](doc//InscriptionnotauthenticatedListElement.md)
  - [InscriptionnotauthenticatedResponse](doc//InscriptionnotauthenticatedResponse.md)
  - [InscriptionnotauthenticatedResponseCompound](doc//InscriptionnotauthenticatedResponseCompound.md)
- - [InscriptionnotauthenticatedSyncDocumenttypechecklistV1Response](doc//InscriptionnotauthenticatedSyncDocumenttypechecklistV1Response.md)
- - [InscriptionnotauthenticatedSyncDocumenttypechecklistV1ResponseMPayload](doc//InscriptionnotauthenticatedSyncDocumenttypechecklistV1ResponseMPayload.md)
  - [InscriptionnotauthenticatedconditionResponse](doc//InscriptionnotauthenticatedconditionResponse.md)
  - [InscriptionnotauthenticatedconditionResponseCompound](doc//InscriptionnotauthenticatedconditionResponseCompound.md)
  - [InscriptiontempBatchDownloadV1Request](doc//InscriptiontempBatchDownloadV1Request.md)
@@ -2846,16 +2701,12 @@ Class | Method | HTTP request | Description
  - [InscriptiontempGetCommunicationrecipientsV1ResponseMPayload](doc//InscriptiontempGetCommunicationrecipientsV1ResponseMPayload.md)
  - [InscriptiontempGetCommunicationsendersV1Response](doc//InscriptiontempGetCommunicationsendersV1Response.md)
  - [InscriptiontempGetCommunicationsendersV1ResponseMPayload](doc//InscriptiontempGetCommunicationsendersV1ResponseMPayload.md)
- - [InscriptiontempGetDocumenttypechecklistV1Response](doc//InscriptiontempGetDocumenttypechecklistV1Response.md)
- - [InscriptiontempGetDocumenttypechecklistV1ResponseMPayload](doc//InscriptiontempGetDocumenttypechecklistV1ResponseMPayload.md)
  - [InscriptiontempGetListV1Response](doc//InscriptiontempGetListV1Response.md)
  - [InscriptiontempGetListV1ResponseMPayload](doc//InscriptiontempGetListV1ResponseMPayload.md)
  - [InscriptiontempImportIntoEDMV1Request](doc//InscriptiontempImportIntoEDMV1Request.md)
  - [InscriptiontempImportIntoEDMV1Response](doc//InscriptiontempImportIntoEDMV1Response.md)
  - [InscriptiontempImportIntoEDMV1ResponseMPayload](doc//InscriptiontempImportIntoEDMV1ResponseMPayload.md)
  - [InscriptiontempListElement](doc//InscriptiontempListElement.md)
- - [InscriptiontempSyncDocumenttypechecklistV1Response](doc//InscriptiontempSyncDocumenttypechecklistV1Response.md)
- - [InscriptiontempSyncDocumenttypechecklistV1ResponseMPayload](doc//InscriptiontempSyncDocumenttypechecklistV1ResponseMPayload.md)
  - [InscriptiontypeAutocompleteElementResponse](doc//InscriptiontypeAutocompleteElementResponse.md)
  - [InscriptiontypeGetAutocompleteV2Response](doc//InscriptiontypeGetAutocompleteV2Response.md)
  - [InscriptiontypeGetAutocompleteV2ResponseMPayload](doc//InscriptiontypeGetAutocompleteV2ResponseMPayload.md)
@@ -2870,16 +2721,12 @@ Class | Method | HTTP request | Description
  - [InvoiceGetCommunicationrecipientsV1ResponseMPayload](doc//InvoiceGetCommunicationrecipientsV1ResponseMPayload.md)
  - [InvoiceGetCommunicationsendersV1Response](doc//InvoiceGetCommunicationsendersV1Response.md)
  - [InvoiceGetCommunicationsendersV1ResponseMPayload](doc//InvoiceGetCommunicationsendersV1ResponseMPayload.md)
- - [InvoiceGetDocumenttypechecklistV1Response](doc//InvoiceGetDocumenttypechecklistV1Response.md)
- - [InvoiceGetDocumenttypechecklistV1ResponseMPayload](doc//InvoiceGetDocumenttypechecklistV1ResponseMPayload.md)
  - [InvoiceGetListV1Response](doc//InvoiceGetListV1Response.md)
  - [InvoiceGetListV1ResponseMPayload](doc//InvoiceGetListV1ResponseMPayload.md)
  - [InvoiceImportIntoEDMV1Request](doc//InvoiceImportIntoEDMV1Request.md)
  - [InvoiceImportIntoEDMV1Response](doc//InvoiceImportIntoEDMV1Response.md)
  - [InvoiceImportIntoEDMV1ResponseMPayload](doc//InvoiceImportIntoEDMV1ResponseMPayload.md)
  - [InvoiceListElement](doc//InvoiceListElement.md)
- - [InvoiceSyncDocumenttypechecklistV1Response](doc//InvoiceSyncDocumenttypechecklistV1Response.md)
- - [InvoiceSyncDocumenttypechecklistV1ResponseMPayload](doc//InvoiceSyncDocumenttypechecklistV1ResponseMPayload.md)
  - [LanguageAutocompleteElementResponse](doc//LanguageAutocompleteElementResponse.md)
  - [LanguageGetAutocompleteV2Response](doc//LanguageGetAutocompleteV2Response.md)
  - [LanguageGetAutocompleteV2ResponseMPayload](doc//LanguageGetAutocompleteV2ResponseMPayload.md)
@@ -2894,16 +2741,12 @@ Class | Method | HTTP request | Description
  - [LeadGetCommunicationrecipientsV1ResponseMPayload](doc//LeadGetCommunicationrecipientsV1ResponseMPayload.md)
  - [LeadGetCommunicationsendersV1Response](doc//LeadGetCommunicationsendersV1Response.md)
  - [LeadGetCommunicationsendersV1ResponseMPayload](doc//LeadGetCommunicationsendersV1ResponseMPayload.md)
- - [LeadGetDocumenttypechecklistV1Response](doc//LeadGetDocumenttypechecklistV1Response.md)
- - [LeadGetDocumenttypechecklistV1ResponseMPayload](doc//LeadGetDocumenttypechecklistV1ResponseMPayload.md)
  - [LeadGetListV1Response](doc//LeadGetListV1Response.md)
  - [LeadGetListV1ResponseMPayload](doc//LeadGetListV1ResponseMPayload.md)
  - [LeadImportIntoEDMV1Request](doc//LeadImportIntoEDMV1Request.md)
  - [LeadImportIntoEDMV1Response](doc//LeadImportIntoEDMV1Response.md)
  - [LeadImportIntoEDMV1ResponseMPayload](doc//LeadImportIntoEDMV1ResponseMPayload.md)
  - [LeadListElement](doc//LeadListElement.md)
- - [LeadSyncDocumenttypechecklistV1Response](doc//LeadSyncDocumenttypechecklistV1Response.md)
- - [LeadSyncDocumenttypechecklistV1ResponseMPayload](doc//LeadSyncDocumenttypechecklistV1ResponseMPayload.md)
  - [LeadsourceAutocompleteElementResponse](doc//LeadsourceAutocompleteElementResponse.md)
  - [LeadsourceGetAutocompleteV2Response](doc//LeadsourceGetAutocompleteV2Response.md)
  - [LeadsourceGetAutocompleteV2ResponseMPayload](doc//LeadsourceGetAutocompleteV2ResponseMPayload.md)
@@ -2959,16 +2802,12 @@ Class | Method | HTTP request | Description
  - [NotaryGetCommunicationrecipientsV1ResponseMPayload](doc//NotaryGetCommunicationrecipientsV1ResponseMPayload.md)
  - [NotaryGetCommunicationsendersV1Response](doc//NotaryGetCommunicationsendersV1Response.md)
  - [NotaryGetCommunicationsendersV1ResponseMPayload](doc//NotaryGetCommunicationsendersV1ResponseMPayload.md)
- - [NotaryGetDocumenttypechecklistV1Response](doc//NotaryGetDocumenttypechecklistV1Response.md)
- - [NotaryGetDocumenttypechecklistV1ResponseMPayload](doc//NotaryGetDocumenttypechecklistV1ResponseMPayload.md)
  - [NotaryGetListV1Response](doc//NotaryGetListV1Response.md)
  - [NotaryGetListV1ResponseMPayload](doc//NotaryGetListV1ResponseMPayload.md)
  - [NotaryImportIntoEDMV1Request](doc//NotaryImportIntoEDMV1Request.md)
  - [NotaryImportIntoEDMV1Response](doc//NotaryImportIntoEDMV1Response.md)
  - [NotaryImportIntoEDMV1ResponseMPayload](doc//NotaryImportIntoEDMV1ResponseMPayload.md)
  - [NotaryListElement](doc//NotaryListElement.md)
- - [NotarySyncDocumenttypechecklistV1Response](doc//NotarySyncDocumenttypechecklistV1Response.md)
- - [NotarySyncDocumenttypechecklistV1ResponseMPayload](doc//NotarySyncDocumenttypechecklistV1ResponseMPayload.md)
  - [NotificationsectionGetNotificationtestsV1Response](doc//NotificationsectionGetNotificationtestsV1Response.md)
  - [NotificationsectionGetNotificationtestsV1ResponseMPayload](doc//NotificationsectionGetNotificationtestsV1ResponseMPayload.md)
  - [NotificationsubsectionResponse](doc//NotificationsubsectionResponse.md)
@@ -2986,16 +2825,12 @@ Class | Method | HTTP request | Description
  - [OfficetaxreportGetCommunicationrecipientsV1ResponseMPayload](doc//OfficetaxreportGetCommunicationrecipientsV1ResponseMPayload.md)
  - [OfficetaxreportGetCommunicationsendersV1Response](doc//OfficetaxreportGetCommunicationsendersV1Response.md)
  - [OfficetaxreportGetCommunicationsendersV1ResponseMPayload](doc//OfficetaxreportGetCommunicationsendersV1ResponseMPayload.md)
- - [OfficetaxreportGetDocumenttypechecklistV1Response](doc//OfficetaxreportGetDocumenttypechecklistV1Response.md)
- - [OfficetaxreportGetDocumenttypechecklistV1ResponseMPayload](doc//OfficetaxreportGetDocumenttypechecklistV1ResponseMPayload.md)
  - [OfficetaxreportGetListV1Response](doc//OfficetaxreportGetListV1Response.md)
  - [OfficetaxreportGetListV1ResponseMPayload](doc//OfficetaxreportGetListV1ResponseMPayload.md)
  - [OfficetaxreportImportIntoEDMV1Request](doc//OfficetaxreportImportIntoEDMV1Request.md)
  - [OfficetaxreportImportIntoEDMV1Response](doc//OfficetaxreportImportIntoEDMV1Response.md)
  - [OfficetaxreportImportIntoEDMV1ResponseMPayload](doc//OfficetaxreportImportIntoEDMV1ResponseMPayload.md)
  - [OfficetaxreportListElement](doc//OfficetaxreportListElement.md)
- - [OfficetaxreportSyncDocumenttypechecklistV1Response](doc//OfficetaxreportSyncDocumenttypechecklistV1Response.md)
- - [OfficetaxreportSyncDocumenttypechecklistV1ResponseMPayload](doc//OfficetaxreportSyncDocumenttypechecklistV1ResponseMPayload.md)
  - [OtherincomeBatchDownloadV1Request](doc//OtherincomeBatchDownloadV1Request.md)
  - [OtherincomeGetAttachmentsV1Response](doc//OtherincomeGetAttachmentsV1Response.md)
  - [OtherincomeGetAttachmentsV1ResponseMPayload](doc//OtherincomeGetAttachmentsV1ResponseMPayload.md)
@@ -3007,16 +2842,12 @@ Class | Method | HTTP request | Description
  - [OtherincomeGetCommunicationrecipientsV1ResponseMPayload](doc//OtherincomeGetCommunicationrecipientsV1ResponseMPayload.md)
  - [OtherincomeGetCommunicationsendersV1Response](doc//OtherincomeGetCommunicationsendersV1Response.md)
  - [OtherincomeGetCommunicationsendersV1ResponseMPayload](doc//OtherincomeGetCommunicationsendersV1ResponseMPayload.md)
- - [OtherincomeGetDocumenttypechecklistV1Response](doc//OtherincomeGetDocumenttypechecklistV1Response.md)
- - [OtherincomeGetDocumenttypechecklistV1ResponseMPayload](doc//OtherincomeGetDocumenttypechecklistV1ResponseMPayload.md)
  - [OtherincomeGetListV1Response](doc//OtherincomeGetListV1Response.md)
  - [OtherincomeGetListV1ResponseMPayload](doc//OtherincomeGetListV1ResponseMPayload.md)
  - [OtherincomeImportIntoEDMV1Request](doc//OtherincomeImportIntoEDMV1Request.md)
  - [OtherincomeImportIntoEDMV1Response](doc//OtherincomeImportIntoEDMV1Response.md)
  - [OtherincomeImportIntoEDMV1ResponseMPayload](doc//OtherincomeImportIntoEDMV1ResponseMPayload.md)
  - [OtherincomeListElement](doc//OtherincomeListElement.md)
- - [OtherincomeSyncDocumenttypechecklistV1Response](doc//OtherincomeSyncDocumenttypechecklistV1Response.md)
- - [OtherincomeSyncDocumenttypechecklistV1ResponseMPayload](doc//OtherincomeSyncDocumenttypechecklistV1ResponseMPayload.md)
  - [OtherincometypeAutocompleteElementResponse](doc//OtherincometypeAutocompleteElementResponse.md)
  - [OtherincometypeGetAutocompleteV2Response](doc//OtherincometypeGetAutocompleteV2Response.md)
  - [OtherincometypeGetAutocompleteV2ResponseMPayload](doc//OtherincometypeGetAutocompleteV2ResponseMPayload.md)
@@ -3051,13 +2882,9 @@ Class | Method | HTTP request | Description
  - [PaymentpreparationGetCommunicationrecipientsV1ResponseMPayload](doc//PaymentpreparationGetCommunicationrecipientsV1ResponseMPayload.md)
  - [PaymentpreparationGetCommunicationsendersV1Response](doc//PaymentpreparationGetCommunicationsendersV1Response.md)
  - [PaymentpreparationGetCommunicationsendersV1ResponseMPayload](doc//PaymentpreparationGetCommunicationsendersV1ResponseMPayload.md)
- - [PaymentpreparationGetDocumenttypechecklistV1Response](doc//PaymentpreparationGetDocumenttypechecklistV1Response.md)
- - [PaymentpreparationGetDocumenttypechecklistV1ResponseMPayload](doc//PaymentpreparationGetDocumenttypechecklistV1ResponseMPayload.md)
  - [PaymentpreparationImportIntoEDMV1Request](doc//PaymentpreparationImportIntoEDMV1Request.md)
  - [PaymentpreparationImportIntoEDMV1Response](doc//PaymentpreparationImportIntoEDMV1Response.md)
  - [PaymentpreparationImportIntoEDMV1ResponseMPayload](doc//PaymentpreparationImportIntoEDMV1ResponseMPayload.md)
- - [PaymentpreparationSyncDocumenttypechecklistV1Response](doc//PaymentpreparationSyncDocumenttypechecklistV1Response.md)
- - [PaymentpreparationSyncDocumenttypechecklistV1ResponseMPayload](doc//PaymentpreparationSyncDocumenttypechecklistV1ResponseMPayload.md)
  - [PaymenttermAutocompleteElementResponse](doc//PaymenttermAutocompleteElementResponse.md)
  - [PaymenttermCreateObjectV1Request](doc//PaymenttermCreateObjectV1Request.md)
  - [PaymenttermCreateObjectV1Response](doc//PaymenttermCreateObjectV1Response.md)
@@ -3116,16 +2943,12 @@ Class | Method | HTTP request | Description
  - [PurchaseGetCommunicationrecipientsV1ResponseMPayload](doc//PurchaseGetCommunicationrecipientsV1ResponseMPayload.md)
  - [PurchaseGetCommunicationsendersV1Response](doc//PurchaseGetCommunicationsendersV1Response.md)
  - [PurchaseGetCommunicationsendersV1ResponseMPayload](doc//PurchaseGetCommunicationsendersV1ResponseMPayload.md)
- - [PurchaseGetDocumenttypechecklistV1Response](doc//PurchaseGetDocumenttypechecklistV1Response.md)
- - [PurchaseGetDocumenttypechecklistV1ResponseMPayload](doc//PurchaseGetDocumenttypechecklistV1ResponseMPayload.md)
  - [PurchaseGetListV1Response](doc//PurchaseGetListV1Response.md)
  - [PurchaseGetListV1ResponseMPayload](doc//PurchaseGetListV1ResponseMPayload.md)
  - [PurchaseImportIntoEDMV1Request](doc//PurchaseImportIntoEDMV1Request.md)
  - [PurchaseImportIntoEDMV1Response](doc//PurchaseImportIntoEDMV1Response.md)
  - [PurchaseImportIntoEDMV1ResponseMPayload](doc//PurchaseImportIntoEDMV1ResponseMPayload.md)
  - [PurchaseListElement](doc//PurchaseListElement.md)
- - [PurchaseSyncDocumenttypechecklistV1Response](doc//PurchaseSyncDocumenttypechecklistV1Response.md)
- - [PurchaseSyncDocumenttypechecklistV1ResponseMPayload](doc//PurchaseSyncDocumenttypechecklistV1ResponseMPayload.md)
  - [RealestateassociationAutocompleteElementResponse](doc//RealestateassociationAutocompleteElementResponse.md)
  - [RealestateassociationGetAutocompleteV2Response](doc//RealestateassociationGetAutocompleteV2Response.md)
  - [RealestateassociationGetAutocompleteV2ResponseMPayload](doc//RealestateassociationGetAutocompleteV2ResponseMPayload.md)
@@ -3143,13 +2966,9 @@ Class | Method | HTTP request | Description
  - [ReconciliationGetCommunicationrecipientsV1ResponseMPayload](doc//ReconciliationGetCommunicationrecipientsV1ResponseMPayload.md)
  - [ReconciliationGetCommunicationsendersV1Response](doc//ReconciliationGetCommunicationsendersV1Response.md)
  - [ReconciliationGetCommunicationsendersV1ResponseMPayload](doc//ReconciliationGetCommunicationsendersV1ResponseMPayload.md)
- - [ReconciliationGetDocumenttypechecklistV1Response](doc//ReconciliationGetDocumenttypechecklistV1Response.md)
- - [ReconciliationGetDocumenttypechecklistV1ResponseMPayload](doc//ReconciliationGetDocumenttypechecklistV1ResponseMPayload.md)
  - [ReconciliationImportIntoEDMV1Request](doc//ReconciliationImportIntoEDMV1Request.md)
  - [ReconciliationImportIntoEDMV1Response](doc//ReconciliationImportIntoEDMV1Response.md)
  - [ReconciliationImportIntoEDMV1ResponseMPayload](doc//ReconciliationImportIntoEDMV1ResponseMPayload.md)
- - [ReconciliationSyncDocumenttypechecklistV1Response](doc//ReconciliationSyncDocumenttypechecklistV1Response.md)
- - [ReconciliationSyncDocumenttypechecklistV1ResponseMPayload](doc//ReconciliationSyncDocumenttypechecklistV1ResponseMPayload.md)
  - [RejectedoffertopurchaseBatchDownloadV1Request](doc//RejectedoffertopurchaseBatchDownloadV1Request.md)
  - [RejectedoffertopurchaseGetAttachmentsV1Response](doc//RejectedoffertopurchaseGetAttachmentsV1Response.md)
  - [RejectedoffertopurchaseGetAttachmentsV1ResponseMPayload](doc//RejectedoffertopurchaseGetAttachmentsV1ResponseMPayload.md)
@@ -3161,16 +2980,12 @@ Class | Method | HTTP request | Description
  - [RejectedoffertopurchaseGetCommunicationrecipientsV1ResponseMPayload](doc//RejectedoffertopurchaseGetCommunicationrecipientsV1ResponseMPayload.md)
  - [RejectedoffertopurchaseGetCommunicationsendersV1Response](doc//RejectedoffertopurchaseGetCommunicationsendersV1Response.md)
  - [RejectedoffertopurchaseGetCommunicationsendersV1ResponseMPayload](doc//RejectedoffertopurchaseGetCommunicationsendersV1ResponseMPayload.md)
- - [RejectedoffertopurchaseGetDocumenttypechecklistV1Response](doc//RejectedoffertopurchaseGetDocumenttypechecklistV1Response.md)
- - [RejectedoffertopurchaseGetDocumenttypechecklistV1ResponseMPayload](doc//RejectedoffertopurchaseGetDocumenttypechecklistV1ResponseMPayload.md)
  - [RejectedoffertopurchaseGetListV1Response](doc//RejectedoffertopurchaseGetListV1Response.md)
  - [RejectedoffertopurchaseGetListV1ResponseMPayload](doc//RejectedoffertopurchaseGetListV1ResponseMPayload.md)
  - [RejectedoffertopurchaseImportIntoEDMV1Request](doc//RejectedoffertopurchaseImportIntoEDMV1Request.md)
  - [RejectedoffertopurchaseImportIntoEDMV1Response](doc//RejectedoffertopurchaseImportIntoEDMV1Response.md)
  - [RejectedoffertopurchaseImportIntoEDMV1ResponseMPayload](doc//RejectedoffertopurchaseImportIntoEDMV1ResponseMPayload.md)
  - [RejectedoffertopurchaseListElement](doc//RejectedoffertopurchaseListElement.md)
- - [RejectedoffertopurchaseSyncDocumenttypechecklistV1Response](doc//RejectedoffertopurchaseSyncDocumenttypechecklistV1Response.md)
- - [RejectedoffertopurchaseSyncDocumenttypechecklistV1ResponseMPayload](doc//RejectedoffertopurchaseSyncDocumenttypechecklistV1ResponseMPayload.md)
  - [SalaryBatchDownloadV1Request](doc//SalaryBatchDownloadV1Request.md)
  - [SalaryGetAttachmentsV1Response](doc//SalaryGetAttachmentsV1Response.md)
  - [SalaryGetAttachmentsV1ResponseMPayload](doc//SalaryGetAttachmentsV1ResponseMPayload.md)
@@ -3182,16 +2997,12 @@ Class | Method | HTTP request | Description
  - [SalaryGetCommunicationrecipientsV1ResponseMPayload](doc//SalaryGetCommunicationrecipientsV1ResponseMPayload.md)
  - [SalaryGetCommunicationsendersV1Response](doc//SalaryGetCommunicationsendersV1Response.md)
  - [SalaryGetCommunicationsendersV1ResponseMPayload](doc//SalaryGetCommunicationsendersV1ResponseMPayload.md)
- - [SalaryGetDocumenttypechecklistV1Response](doc//SalaryGetDocumenttypechecklistV1Response.md)
- - [SalaryGetDocumenttypechecklistV1ResponseMPayload](doc//SalaryGetDocumenttypechecklistV1ResponseMPayload.md)
  - [SalaryGetListV1Response](doc//SalaryGetListV1Response.md)
  - [SalaryGetListV1ResponseMPayload](doc//SalaryGetListV1ResponseMPayload.md)
  - [SalaryImportIntoEDMV1Request](doc//SalaryImportIntoEDMV1Request.md)
  - [SalaryImportIntoEDMV1Response](doc//SalaryImportIntoEDMV1Response.md)
  - [SalaryImportIntoEDMV1ResponseMPayload](doc//SalaryImportIntoEDMV1ResponseMPayload.md)
  - [SalaryListElement](doc//SalaryListElement.md)
- - [SalarySyncDocumenttypechecklistV1Response](doc//SalarySyncDocumenttypechecklistV1Response.md)
- - [SalarySyncDocumenttypechecklistV1ResponseMPayload](doc//SalarySyncDocumenttypechecklistV1ResponseMPayload.md)
  - [ScimAuthenticationScheme](doc//ScimAuthenticationScheme.md)
  - [ScimEmail](doc//ScimEmail.md)
  - [ScimGroup](doc//ScimGroup.md)
@@ -3248,16 +3059,12 @@ Class | Method | HTTP request | Description
  - [SupplierGetCommunicationrecipientsV1ResponseMPayload](doc//SupplierGetCommunicationrecipientsV1ResponseMPayload.md)
  - [SupplierGetCommunicationsendersV1Response](doc//SupplierGetCommunicationsendersV1Response.md)
  - [SupplierGetCommunicationsendersV1ResponseMPayload](doc//SupplierGetCommunicationsendersV1ResponseMPayload.md)
- - [SupplierGetDocumenttypechecklistV1Response](doc//SupplierGetDocumenttypechecklistV1Response.md)
- - [SupplierGetDocumenttypechecklistV1ResponseMPayload](doc//SupplierGetDocumenttypechecklistV1ResponseMPayload.md)
  - [SupplierGetListV1Response](doc//SupplierGetListV1Response.md)
  - [SupplierGetListV1ResponseMPayload](doc//SupplierGetListV1ResponseMPayload.md)
  - [SupplierImportIntoEDMV1Request](doc//SupplierImportIntoEDMV1Request.md)
  - [SupplierImportIntoEDMV1Response](doc//SupplierImportIntoEDMV1Response.md)
  - [SupplierImportIntoEDMV1ResponseMPayload](doc//SupplierImportIntoEDMV1ResponseMPayload.md)
  - [SupplierListElement](doc//SupplierListElement.md)
- - [SupplierSyncDocumenttypechecklistV1Response](doc//SupplierSyncDocumenttypechecklistV1Response.md)
- - [SupplierSyncDocumenttypechecklistV1ResponseMPayload](doc//SupplierSyncDocumenttypechecklistV1ResponseMPayload.md)
  - [SupplyAutocompleteElementResponse](doc//SupplyAutocompleteElementResponse.md)
  - [SupplyCreateObjectV1Request](doc//SupplyCreateObjectV1Request.md)
  - [SupplyCreateObjectV1Response](doc//SupplyCreateObjectV1Response.md)
@@ -3305,13 +3112,9 @@ Class | Method | HTTP request | Description
  - [TranqcontractGetCommunicationrecipientsV1ResponseMPayload](doc//TranqcontractGetCommunicationrecipientsV1ResponseMPayload.md)
  - [TranqcontractGetCommunicationsendersV1Response](doc//TranqcontractGetCommunicationsendersV1Response.md)
  - [TranqcontractGetCommunicationsendersV1ResponseMPayload](doc//TranqcontractGetCommunicationsendersV1ResponseMPayload.md)
- - [TranqcontractGetDocumenttypechecklistV1Response](doc//TranqcontractGetDocumenttypechecklistV1Response.md)
- - [TranqcontractGetDocumenttypechecklistV1ResponseMPayload](doc//TranqcontractGetDocumenttypechecklistV1ResponseMPayload.md)
  - [TranqcontractImportIntoEDMV1Request](doc//TranqcontractImportIntoEDMV1Request.md)
  - [TranqcontractImportIntoEDMV1Response](doc//TranqcontractImportIntoEDMV1Response.md)
  - [TranqcontractImportIntoEDMV1ResponseMPayload](doc//TranqcontractImportIntoEDMV1ResponseMPayload.md)
- - [TranqcontractSyncDocumenttypechecklistV1Response](doc//TranqcontractSyncDocumenttypechecklistV1Response.md)
- - [TranqcontractSyncDocumenttypechecklistV1ResponseMPayload](doc//TranqcontractSyncDocumenttypechecklistV1ResponseMPayload.md)
  - [UserAutocompleteElementResponse](doc//UserAutocompleteElementResponse.md)
  - [UserCreateEzsignuserV1Request](doc//UserCreateEzsignuserV1Request.md)
  - [UserCreateEzsignuserV1Response](doc//UserCreateEzsignuserV1Response.md)

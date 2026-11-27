@@ -15,10 +15,8 @@ Method | HTTP request | Description
 [**purchaseGetCommunicationListV1**](ObjectPurchaseApi.md#purchasegetcommunicationlistv1) | **GET** /1/object/purchase/{pkiPurchaseID}/getCommunicationList | Retrieve Communication list
 [**purchaseGetCommunicationrecipientsV1**](ObjectPurchaseApi.md#purchasegetcommunicationrecipientsv1) | **GET** /1/object/purchase/{pkiPurchaseID}/getCommunicationrecipients | Retrieve Communication recipients
 [**purchaseGetCommunicationsendersV1**](ObjectPurchaseApi.md#purchasegetcommunicationsendersv1) | **GET** /1/object/purchase/{pkiPurchaseID}/getCommunicationsenders | Retrieve Communication senders
-[**purchaseGetDocumenttypechecklistV1**](ObjectPurchaseApi.md#purchasegetdocumenttypechecklistv1) | **GET** /1/object/purchase/{pkiPurchaseID}/getDocumenttypechecklist | Retrieve Document type checklist
 [**purchaseGetListV1**](ObjectPurchaseApi.md#purchasegetlistv1) | **GET** /1/object/purchase/getList | Retrieve Purchase list
 [**purchaseImportIntoEDMV1**](ObjectPurchaseApi.md#purchaseimportintoedmv1) | **POST** /1/object/purchase/{pkiPurchaseID}/importIntoEDM | Import attachments into the Purchase
-[**purchaseSyncDocumenttypechecklistV1**](ObjectPurchaseApi.md#purchasesyncdocumenttypechecklistv1) | **POST** /1/object/purchase/{pkiPurchaseID}/syncDocumenttypechecklist | Synchronize Document type checklist
 
 
 # **purchaseBatchDownloadV1**
@@ -293,51 +291,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **purchaseGetDocumenttypechecklistV1**
-> PurchaseGetDocumenttypechecklistV1Response purchaseGetDocumenttypechecklistV1(pkiPurchaseID)
-
-Retrieve Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectPurchaseApi();
-final pkiPurchaseID = 56; // int | 
-
-try {
-    final result = api_instance.purchaseGetDocumenttypechecklistV1(pkiPurchaseID);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectPurchaseApi->purchaseGetDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiPurchaseID** | **int**|  | 
-
-### Return type
-
-[**PurchaseGetDocumenttypechecklistV1Response**](PurchaseGetDocumenttypechecklistV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **purchaseGetListV1**
 > PurchaseGetListV1Response purchaseGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
@@ -428,53 +381,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PurchaseImportIntoEDMV1Response**](PurchaseImportIntoEDMV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **purchaseSyncDocumenttypechecklistV1**
-> PurchaseSyncDocumenttypechecklistV1Response purchaseSyncDocumenttypechecklistV1(pkiPurchaseID, body)
-
-Synchronize Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectPurchaseApi();
-final pkiPurchaseID = 56; // int | 
-final body = Object(); // Object | 
-
-try {
-    final result = api_instance.purchaseSyncDocumenttypechecklistV1(pkiPurchaseID, body);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectPurchaseApi->purchaseSyncDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiPurchaseID** | **int**|  | 
- **body** | **Object**|  | [optional] 
-
-### Return type
-
-[**PurchaseSyncDocumenttypechecklistV1Response**](PurchaseSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

@@ -16,10 +16,8 @@ Method | HTTP request | Description
 [**agentGetCommunicationListV1**](ObjectAgentApi.md#agentgetcommunicationlistv1) | **GET** /1/object/agent/{pkiAgentID}/getCommunicationList | Retrieve Communication list
 [**agentGetCommunicationrecipientsV1**](ObjectAgentApi.md#agentgetcommunicationrecipientsv1) | **GET** /1/object/agent/{pkiAgentID}/getCommunicationrecipients | Retrieve Communication recipients
 [**agentGetCommunicationsendersV1**](ObjectAgentApi.md#agentgetcommunicationsendersv1) | **GET** /1/object/agent/{pkiAgentID}/getCommunicationsenders | Retrieve Communication senders
-[**agentGetDocumenttypechecklistV1**](ObjectAgentApi.md#agentgetdocumenttypechecklistv1) | **GET** /1/object/agent/{pkiAgentID}/getDocumenttypechecklist | Retrieve Document type checklist
 [**agentGetListV1**](ObjectAgentApi.md#agentgetlistv1) | **GET** /1/object/agent/getList | Retrieve Agent list
 [**agentImportIntoEDMV1**](ObjectAgentApi.md#agentimportintoedmv1) | **POST** /1/object/agent/{pkiAgentID}/importIntoEDM | Import attachments into the Agent
-[**agentSyncDocumenttypechecklistV1**](ObjectAgentApi.md#agentsyncdocumenttypechecklistv1) | **POST** /1/object/agent/{pkiAgentID}/syncDocumenttypechecklist | Synchronize Document type checklist
 
 
 # **agentBatchDownloadV1**
@@ -347,51 +345,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **agentGetDocumenttypechecklistV1**
-> AgentGetDocumenttypechecklistV1Response agentGetDocumenttypechecklistV1(pkiAgentID)
-
-Retrieve Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectAgentApi();
-final pkiAgentID = 56; // int | 
-
-try {
-    final result = api_instance.agentGetDocumenttypechecklistV1(pkiAgentID);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectAgentApi->agentGetDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiAgentID** | **int**|  | 
-
-### Return type
-
-[**AgentGetDocumenttypechecklistV1Response**](AgentGetDocumenttypechecklistV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **agentGetListV1**
 > AgentGetListV1Response agentGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
@@ -484,53 +437,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AgentImportIntoEDMV1Response**](AgentImportIntoEDMV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **agentSyncDocumenttypechecklistV1**
-> AgentSyncDocumenttypechecklistV1Response agentSyncDocumenttypechecklistV1(pkiAgentID, body)
-
-Synchronize Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectAgentApi();
-final pkiAgentID = 56; // int | 
-final body = Object(); // Object | 
-
-try {
-    final result = api_instance.agentSyncDocumenttypechecklistV1(pkiAgentID, body);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectAgentApi->agentSyncDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiAgentID** | **int**|  | 
- **body** | **Object**|  | [optional] 
-
-### Return type
-
-[**AgentSyncDocumenttypechecklistV1Response**](AgentSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

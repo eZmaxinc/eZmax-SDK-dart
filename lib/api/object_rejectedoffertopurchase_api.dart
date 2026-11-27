@@ -360,60 +360,6 @@ class ObjectRejectedoffertopurchaseApi {
     return null;
   }
 
-  /// Retrieve Document type checklist
-  ///
-  /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiRejectedoffertopurchaseID (required):
-  Future<Response> rejectedoffertopurchaseGetDocumenttypechecklistV1WithHttpInfo(int pkiRejectedoffertopurchaseID, { Future<void>? abortTrigger, }) async {
-    // ignore: prefer_const_declarations
-    final path = r'/1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getDocumenttypechecklist'
-      .replaceAll('{pkiRejectedoffertopurchaseID}', pkiRejectedoffertopurchaseID.toString());
-
-    // ignore: prefer_final_locals
-    Object? postBody;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>[];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'GET',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-      abortTrigger: abortTrigger,
-    );
-  }
-
-  /// Retrieve Document type checklist
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiRejectedoffertopurchaseID (required):
-  Future<RejectedoffertopurchaseGetDocumenttypechecklistV1Response?> rejectedoffertopurchaseGetDocumenttypechecklistV1(int pkiRejectedoffertopurchaseID, { Future<void>? abortTrigger, }) async {
-    final response = await rejectedoffertopurchaseGetDocumenttypechecklistV1WithHttpInfo(pkiRejectedoffertopurchaseID, abortTrigger: abortTrigger,);
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'RejectedoffertopurchaseGetDocumenttypechecklistV1Response',) as RejectedoffertopurchaseGetDocumenttypechecklistV1Response;
-    
-    }
-    return null;
-  }
-
   /// Retrieve Rejectedoffertopurchase list
   ///
   /// 
@@ -563,64 +509,6 @@ class ObjectRejectedoffertopurchaseApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'RejectedoffertopurchaseImportIntoEDMV1Response',) as RejectedoffertopurchaseImportIntoEDMV1Response;
-    
-    }
-    return null;
-  }
-
-  /// Synchronize Document type checklist
-  ///
-  /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiRejectedoffertopurchaseID (required):
-  ///
-  /// * [Object] body:
-  Future<Response> rejectedoffertopurchaseSyncDocumenttypechecklistV1WithHttpInfo(int pkiRejectedoffertopurchaseID, { Object? body, Future<void>? abortTrigger, }) async {
-    // ignore: prefer_const_declarations
-    final path = r'/1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/syncDocumenttypechecklist'
-      .replaceAll('{pkiRejectedoffertopurchaseID}', pkiRejectedoffertopurchaseID.toString());
-
-    // ignore: prefer_final_locals
-    Object? postBody = body;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>['application/json'];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'POST',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-      abortTrigger: abortTrigger,
-    );
-  }
-
-  /// Synchronize Document type checklist
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiRejectedoffertopurchaseID (required):
-  ///
-  /// * [Object] body:
-  Future<RejectedoffertopurchaseSyncDocumenttypechecklistV1Response?> rejectedoffertopurchaseSyncDocumenttypechecklistV1(int pkiRejectedoffertopurchaseID, { Object? body, Future<void>? abortTrigger, }) async {
-    final response = await rejectedoffertopurchaseSyncDocumenttypechecklistV1WithHttpInfo(pkiRejectedoffertopurchaseID, body: body, abortTrigger: abortTrigger,);
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'RejectedoffertopurchaseSyncDocumenttypechecklistV1Response',) as RejectedoffertopurchaseSyncDocumenttypechecklistV1Response;
     
     }
     return null;

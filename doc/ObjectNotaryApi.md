@@ -15,10 +15,8 @@ Method | HTTP request | Description
 [**notaryGetCommunicationListV1**](ObjectNotaryApi.md#notarygetcommunicationlistv1) | **GET** /1/object/notary/{pkiNotaryID}/getCommunicationList | Retrieve Communication list
 [**notaryGetCommunicationrecipientsV1**](ObjectNotaryApi.md#notarygetcommunicationrecipientsv1) | **GET** /1/object/notary/{pkiNotaryID}/getCommunicationrecipients | Retrieve Communication recipients
 [**notaryGetCommunicationsendersV1**](ObjectNotaryApi.md#notarygetcommunicationsendersv1) | **GET** /1/object/notary/{pkiNotaryID}/getCommunicationsenders | Retrieve Communication senders
-[**notaryGetDocumenttypechecklistV1**](ObjectNotaryApi.md#notarygetdocumenttypechecklistv1) | **GET** /1/object/notary/{pkiNotaryID}/getDocumenttypechecklist | Retrieve Document type checklist
 [**notaryGetListV1**](ObjectNotaryApi.md#notarygetlistv1) | **GET** /1/object/notary/getList | Retrieve Notary list
 [**notaryImportIntoEDMV1**](ObjectNotaryApi.md#notaryimportintoedmv1) | **POST** /1/object/notary/{pkiNotaryID}/importIntoEDM | Import attachments into the Notary
-[**notarySyncDocumenttypechecklistV1**](ObjectNotaryApi.md#notarysyncdocumenttypechecklistv1) | **POST** /1/object/notary/{pkiNotaryID}/syncDocumenttypechecklist | Synchronize Document type checklist
 
 
 # **notaryBatchDownloadV1**
@@ -293,51 +291,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **notaryGetDocumenttypechecklistV1**
-> NotaryGetDocumenttypechecklistV1Response notaryGetDocumenttypechecklistV1(pkiNotaryID)
-
-Retrieve Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectNotaryApi();
-final pkiNotaryID = 56; // int | 
-
-try {
-    final result = api_instance.notaryGetDocumenttypechecklistV1(pkiNotaryID);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectNotaryApi->notaryGetDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiNotaryID** | **int**|  | 
-
-### Return type
-
-[**NotaryGetDocumenttypechecklistV1Response**](NotaryGetDocumenttypechecklistV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **notaryGetListV1**
 > NotaryGetListV1Response notaryGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
@@ -428,53 +381,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**NotaryImportIntoEDMV1Response**](NotaryImportIntoEDMV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **notarySyncDocumenttypechecklistV1**
-> NotarySyncDocumenttypechecklistV1Response notarySyncDocumenttypechecklistV1(pkiNotaryID, body)
-
-Synchronize Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectNotaryApi();
-final pkiNotaryID = 56; // int | 
-final body = Object(); // Object | 
-
-try {
-    final result = api_instance.notarySyncDocumenttypechecklistV1(pkiNotaryID, body);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectNotaryApi->notarySyncDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiNotaryID** | **int**|  | 
- **body** | **Object**|  | [optional] 
-
-### Return type
-
-[**NotarySyncDocumenttypechecklistV1Response**](NotarySyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

@@ -344,60 +344,6 @@ class ObjectNotaryApi {
     return null;
   }
 
-  /// Retrieve Document type checklist
-  ///
-  /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiNotaryID (required):
-  Future<Response> notaryGetDocumenttypechecklistV1WithHttpInfo(int pkiNotaryID, { Future<void>? abortTrigger, }) async {
-    // ignore: prefer_const_declarations
-    final path = r'/1/object/notary/{pkiNotaryID}/getDocumenttypechecklist'
-      .replaceAll('{pkiNotaryID}', pkiNotaryID.toString());
-
-    // ignore: prefer_final_locals
-    Object? postBody;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>[];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'GET',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-      abortTrigger: abortTrigger,
-    );
-  }
-
-  /// Retrieve Document type checklist
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiNotaryID (required):
-  Future<NotaryGetDocumenttypechecklistV1Response?> notaryGetDocumenttypechecklistV1(int pkiNotaryID, { Future<void>? abortTrigger, }) async {
-    final response = await notaryGetDocumenttypechecklistV1WithHttpInfo(pkiNotaryID, abortTrigger: abortTrigger,);
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'NotaryGetDocumenttypechecklistV1Response',) as NotaryGetDocumenttypechecklistV1Response;
-    
-    }
-    return null;
-  }
-
   /// Retrieve Notary list
   ///
   /// 
@@ -543,64 +489,6 @@ class ObjectNotaryApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'NotaryImportIntoEDMV1Response',) as NotaryImportIntoEDMV1Response;
-    
-    }
-    return null;
-  }
-
-  /// Synchronize Document type checklist
-  ///
-  /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiNotaryID (required):
-  ///
-  /// * [Object] body:
-  Future<Response> notarySyncDocumenttypechecklistV1WithHttpInfo(int pkiNotaryID, { Object? body, Future<void>? abortTrigger, }) async {
-    // ignore: prefer_const_declarations
-    final path = r'/1/object/notary/{pkiNotaryID}/syncDocumenttypechecklist'
-      .replaceAll('{pkiNotaryID}', pkiNotaryID.toString());
-
-    // ignore: prefer_final_locals
-    Object? postBody = body;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>['application/json'];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'POST',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-      abortTrigger: abortTrigger,
-    );
-  }
-
-  /// Synchronize Document type checklist
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiNotaryID (required):
-  ///
-  /// * [Object] body:
-  Future<NotarySyncDocumenttypechecklistV1Response?> notarySyncDocumenttypechecklistV1(int pkiNotaryID, { Object? body, Future<void>? abortTrigger, }) async {
-    final response = await notarySyncDocumenttypechecklistV1WithHttpInfo(pkiNotaryID, body: body, abortTrigger: abortTrigger,);
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'NotarySyncDocumenttypechecklistV1Response',) as NotarySyncDocumenttypechecklistV1Response;
     
     }
     return null;

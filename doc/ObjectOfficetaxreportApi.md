@@ -15,10 +15,8 @@ Method | HTTP request | Description
 [**officetaxreportGetCommunicationListV1**](ObjectOfficetaxreportApi.md#officetaxreportgetcommunicationlistv1) | **GET** /1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationList | Retrieve Communication list
 [**officetaxreportGetCommunicationrecipientsV1**](ObjectOfficetaxreportApi.md#officetaxreportgetcommunicationrecipientsv1) | **GET** /1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationrecipients | Retrieve Communication recipients
 [**officetaxreportGetCommunicationsendersV1**](ObjectOfficetaxreportApi.md#officetaxreportgetcommunicationsendersv1) | **GET** /1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationsenders | Retrieve Communication senders
-[**officetaxreportGetDocumenttypechecklistV1**](ObjectOfficetaxreportApi.md#officetaxreportgetdocumenttypechecklistv1) | **GET** /1/object/officetaxreport/{pkiOfficetaxreportID}/getDocumenttypechecklist | Retrieve Document type checklist
 [**officetaxreportGetListV1**](ObjectOfficetaxreportApi.md#officetaxreportgetlistv1) | **GET** /1/object/officetaxreport/getList | Retrieve Officetaxreport list
 [**officetaxreportImportIntoEDMV1**](ObjectOfficetaxreportApi.md#officetaxreportimportintoedmv1) | **POST** /1/object/officetaxreport/{pkiOfficetaxreportID}/importIntoEDM | Import attachments into the Officetaxreport
-[**officetaxreportSyncDocumenttypechecklistV1**](ObjectOfficetaxreportApi.md#officetaxreportsyncdocumenttypechecklistv1) | **POST** /1/object/officetaxreport/{pkiOfficetaxreportID}/syncDocumenttypechecklist | Synchronize Document type checklist
 
 
 # **officetaxreportBatchDownloadV1**
@@ -293,51 +291,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **officetaxreportGetDocumenttypechecklistV1**
-> OfficetaxreportGetDocumenttypechecklistV1Response officetaxreportGetDocumenttypechecklistV1(pkiOfficetaxreportID)
-
-Retrieve Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectOfficetaxreportApi();
-final pkiOfficetaxreportID = 56; // int | 
-
-try {
-    final result = api_instance.officetaxreportGetDocumenttypechecklistV1(pkiOfficetaxreportID);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectOfficetaxreportApi->officetaxreportGetDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiOfficetaxreportID** | **int**|  | 
-
-### Return type
-
-[**OfficetaxreportGetDocumenttypechecklistV1Response**](OfficetaxreportGetDocumenttypechecklistV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **officetaxreportGetListV1**
 > OfficetaxreportGetListV1Response officetaxreportGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
@@ -428,53 +381,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**OfficetaxreportImportIntoEDMV1Response**](OfficetaxreportImportIntoEDMV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **officetaxreportSyncDocumenttypechecklistV1**
-> OfficetaxreportSyncDocumenttypechecklistV1Response officetaxreportSyncDocumenttypechecklistV1(pkiOfficetaxreportID, body)
-
-Synchronize Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectOfficetaxreportApi();
-final pkiOfficetaxreportID = 56; // int | 
-final body = Object(); // Object | 
-
-try {
-    final result = api_instance.officetaxreportSyncDocumenttypechecklistV1(pkiOfficetaxreportID, body);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectOfficetaxreportApi->officetaxreportSyncDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiOfficetaxreportID** | **int**|  | 
- **body** | **Object**|  | [optional] 
-
-### Return type
-
-[**OfficetaxreportSyncDocumenttypechecklistV1Response**](OfficetaxreportSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

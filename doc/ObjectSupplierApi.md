@@ -15,10 +15,8 @@ Method | HTTP request | Description
 [**supplierGetCommunicationListV1**](ObjectSupplierApi.md#suppliergetcommunicationlistv1) | **GET** /1/object/supplier/{pkiSupplierID}/getCommunicationList | Retrieve Communication list
 [**supplierGetCommunicationrecipientsV1**](ObjectSupplierApi.md#suppliergetcommunicationrecipientsv1) | **GET** /1/object/supplier/{pkiSupplierID}/getCommunicationrecipients | Retrieve Communication recipients
 [**supplierGetCommunicationsendersV1**](ObjectSupplierApi.md#suppliergetcommunicationsendersv1) | **GET** /1/object/supplier/{pkiSupplierID}/getCommunicationsenders | Retrieve Communication senders
-[**supplierGetDocumenttypechecklistV1**](ObjectSupplierApi.md#suppliergetdocumenttypechecklistv1) | **GET** /1/object/supplier/{pkiSupplierID}/getDocumenttypechecklist | Retrieve Document type checklist
 [**supplierGetListV1**](ObjectSupplierApi.md#suppliergetlistv1) | **GET** /1/object/supplier/getList | Retrieve Supplier list
 [**supplierImportIntoEDMV1**](ObjectSupplierApi.md#supplierimportintoedmv1) | **POST** /1/object/supplier/{pkiSupplierID}/importIntoEDM | Import attachments into the Supplier
-[**supplierSyncDocumenttypechecklistV1**](ObjectSupplierApi.md#suppliersyncdocumenttypechecklistv1) | **POST** /1/object/supplier/{pkiSupplierID}/syncDocumenttypechecklist | Synchronize Document type checklist
 
 
 # **supplierBatchDownloadV1**
@@ -293,51 +291,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **supplierGetDocumenttypechecklistV1**
-> SupplierGetDocumenttypechecklistV1Response supplierGetDocumenttypechecklistV1(pkiSupplierID)
-
-Retrieve Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectSupplierApi();
-final pkiSupplierID = 56; // int | 
-
-try {
-    final result = api_instance.supplierGetDocumenttypechecklistV1(pkiSupplierID);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectSupplierApi->supplierGetDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiSupplierID** | **int**|  | 
-
-### Return type
-
-[**SupplierGetDocumenttypechecklistV1Response**](SupplierGetDocumenttypechecklistV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **supplierGetListV1**
 > SupplierGetListV1Response supplierGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
@@ -430,53 +383,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SupplierImportIntoEDMV1Response**](SupplierImportIntoEDMV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **supplierSyncDocumenttypechecklistV1**
-> SupplierSyncDocumenttypechecklistV1Response supplierSyncDocumenttypechecklistV1(pkiSupplierID, body)
-
-Synchronize Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectSupplierApi();
-final pkiSupplierID = 56; // int | 
-final body = Object(); // Object | 
-
-try {
-    final result = api_instance.supplierSyncDocumenttypechecklistV1(pkiSupplierID, body);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectSupplierApi->supplierSyncDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiSupplierID** | **int**|  | 
- **body** | **Object**|  | [optional] 
-
-### Return type
-
-[**SupplierSyncDocumenttypechecklistV1Response**](SupplierSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

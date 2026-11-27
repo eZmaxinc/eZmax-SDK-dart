@@ -13,9 +13,7 @@ Method | HTTP request | Description
 [**tranqcontractGetCommunicationListV1**](ObjectTranqcontractApi.md#tranqcontractgetcommunicationlistv1) | **GET** /1/object/tranqcontract/{pkiTranqcontractID}/getCommunicationList | Retrieve Communication list
 [**tranqcontractGetCommunicationrecipientsV1**](ObjectTranqcontractApi.md#tranqcontractgetcommunicationrecipientsv1) | **GET** /1/object/tranqcontract/{pkiTranqcontractID}/getCommunicationrecipients | Retrieve Tranqcontract's Communicationrecipient
 [**tranqcontractGetCommunicationsendersV1**](ObjectTranqcontractApi.md#tranqcontractgetcommunicationsendersv1) | **GET** /1/object/tranqcontract/{pkiTranqcontractID}/getCommunicationsenders | Retrieve Tranqcontract's Communicationsender
-[**tranqcontractGetDocumenttypechecklistV1**](ObjectTranqcontractApi.md#tranqcontractgetdocumenttypechecklistv1) | **GET** /1/object/tranqcontract/{pkiTranqcontractID}/getDocumenttypechecklist | Retrieve Document type checklist
 [**tranqcontractImportIntoEDMV1**](ObjectTranqcontractApi.md#tranqcontractimportintoedmv1) | **POST** /1/object/tranqcontract/{pkiTranqcontractID}/importIntoEDM | Import attachments into the Tranqcontract
-[**tranqcontractSyncDocumenttypechecklistV1**](ObjectTranqcontractApi.md#tranqcontractsyncdocumenttypechecklistv1) | **POST** /1/object/tranqcontract/{pkiTranqcontractID}/syncDocumenttypechecklist | Synchronize Document type checklist
 
 
 # **tranqcontractGetCommunicationCountV1**
@@ -206,51 +204,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **tranqcontractGetDocumenttypechecklistV1**
-> TranqcontractGetDocumenttypechecklistV1Response tranqcontractGetDocumenttypechecklistV1(pkiTranqcontractID)
-
-Retrieve Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectTranqcontractApi();
-final pkiTranqcontractID = 56; // int | 
-
-try {
-    final result = api_instance.tranqcontractGetDocumenttypechecklistV1(pkiTranqcontractID);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectTranqcontractApi->tranqcontractGetDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiTranqcontractID** | **int**|  | 
-
-### Return type
-
-[**TranqcontractGetDocumenttypechecklistV1Response**](TranqcontractGetDocumenttypechecklistV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **tranqcontractImportIntoEDMV1**
 > TranqcontractImportIntoEDMV1Response tranqcontractImportIntoEDMV1(pkiTranqcontractID, tranqcontractImportIntoEDMV1Request)
 
@@ -288,53 +241,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**TranqcontractImportIntoEDMV1Response**](TranqcontractImportIntoEDMV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **tranqcontractSyncDocumenttypechecklistV1**
-> TranqcontractSyncDocumenttypechecklistV1Response tranqcontractSyncDocumenttypechecklistV1(pkiTranqcontractID, body)
-
-Synchronize Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectTranqcontractApi();
-final pkiTranqcontractID = 56; // int | 
-final body = Object(); // Object | 
-
-try {
-    final result = api_instance.tranqcontractSyncDocumenttypechecklistV1(pkiTranqcontractID, body);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectTranqcontractApi->tranqcontractSyncDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiTranqcontractID** | **int**|  | 
- **body** | **Object**|  | [optional] 
-
-### Return type
-
-[**TranqcontractSyncDocumenttypechecklistV1Response**](TranqcontractSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

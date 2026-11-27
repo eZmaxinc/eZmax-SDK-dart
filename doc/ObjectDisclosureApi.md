@@ -15,10 +15,8 @@ Method | HTTP request | Description
 [**disclosureGetCommunicationListV1**](ObjectDisclosureApi.md#disclosuregetcommunicationlistv1) | **GET** /1/object/disclosure/{pkiDisclosureID}/getCommunicationList | Retrieve Communication list
 [**disclosureGetCommunicationrecipientsV1**](ObjectDisclosureApi.md#disclosuregetcommunicationrecipientsv1) | **GET** /1/object/disclosure/{pkiDisclosureID}/getCommunicationrecipients | Retrieve Communication recipients
 [**disclosureGetCommunicationsendersV1**](ObjectDisclosureApi.md#disclosuregetcommunicationsendersv1) | **GET** /1/object/disclosure/{pkiDisclosureID}/getCommunicationsenders | Retrieve Communication senders
-[**disclosureGetDocumenttypechecklistV1**](ObjectDisclosureApi.md#disclosuregetdocumenttypechecklistv1) | **GET** /1/object/disclosure/{pkiDisclosureID}/getDocumenttypechecklist | Retrieve Document type checklist
 [**disclosureGetListV1**](ObjectDisclosureApi.md#disclosuregetlistv1) | **GET** /1/object/disclosure/getList | Retrieve Disclosure list
 [**disclosureImportIntoEDMV1**](ObjectDisclosureApi.md#disclosureimportintoedmv1) | **POST** /1/object/disclosure/{pkiDisclosureID}/importIntoEDM | Import attachments into the Disclosure
-[**disclosureSyncDocumenttypechecklistV1**](ObjectDisclosureApi.md#disclosuresyncdocumenttypechecklistv1) | **POST** /1/object/disclosure/{pkiDisclosureID}/syncDocumenttypechecklist | Synchronize Document type checklist
 
 
 # **disclosureBatchDownloadV1**
@@ -293,51 +291,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **disclosureGetDocumenttypechecklistV1**
-> DisclosureGetDocumenttypechecklistV1Response disclosureGetDocumenttypechecklistV1(pkiDisclosureID)
-
-Retrieve Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectDisclosureApi();
-final pkiDisclosureID = 56; // int | 
-
-try {
-    final result = api_instance.disclosureGetDocumenttypechecklistV1(pkiDisclosureID);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectDisclosureApi->disclosureGetDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiDisclosureID** | **int**|  | 
-
-### Return type
-
-[**DisclosureGetDocumenttypechecklistV1Response**](DisclosureGetDocumenttypechecklistV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **disclosureGetListV1**
 > DisclosureGetListV1Response disclosureGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
@@ -428,53 +381,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DisclosureImportIntoEDMV1Response**](DisclosureImportIntoEDMV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **disclosureSyncDocumenttypechecklistV1**
-> DisclosureSyncDocumenttypechecklistV1Response disclosureSyncDocumenttypechecklistV1(pkiDisclosureID, body)
-
-Synchronize Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectDisclosureApi();
-final pkiDisclosureID = 56; // int | 
-final body = Object(); // Object | 
-
-try {
-    final result = api_instance.disclosureSyncDocumenttypechecklistV1(pkiDisclosureID, body);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectDisclosureApi->disclosureSyncDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiDisclosureID** | **int**|  | 
- **body** | **Object**|  | [optional] 
-
-### Return type
-
-[**DisclosureSyncDocumenttypechecklistV1Response**](DisclosureSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

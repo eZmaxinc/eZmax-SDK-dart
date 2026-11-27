@@ -15,10 +15,8 @@ Method | HTTP request | Description
 [**salaryGetCommunicationListV1**](ObjectSalaryApi.md#salarygetcommunicationlistv1) | **GET** /1/object/salary/{pkiSalaryID}/getCommunicationList | Retrieve Communication list
 [**salaryGetCommunicationrecipientsV1**](ObjectSalaryApi.md#salarygetcommunicationrecipientsv1) | **GET** /1/object/salary/{pkiSalaryID}/getCommunicationrecipients | Retrieve Communication recipients
 [**salaryGetCommunicationsendersV1**](ObjectSalaryApi.md#salarygetcommunicationsendersv1) | **GET** /1/object/salary/{pkiSalaryID}/getCommunicationsenders | Retrieve Communication senders
-[**salaryGetDocumenttypechecklistV1**](ObjectSalaryApi.md#salarygetdocumenttypechecklistv1) | **GET** /1/object/salary/{pkiSalaryID}/getDocumenttypechecklist | Retrieve Document type checklist
 [**salaryGetListV1**](ObjectSalaryApi.md#salarygetlistv1) | **GET** /1/object/salary/getList | Retrieve Salary list
 [**salaryImportIntoEDMV1**](ObjectSalaryApi.md#salaryimportintoedmv1) | **POST** /1/object/salary/{pkiSalaryID}/importIntoEDM | Import attachments into the Salary
-[**salarySyncDocumenttypechecklistV1**](ObjectSalaryApi.md#salarysyncdocumenttypechecklistv1) | **POST** /1/object/salary/{pkiSalaryID}/syncDocumenttypechecklist | Synchronize Document type checklist
 
 
 # **salaryBatchDownloadV1**
@@ -293,51 +291,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **salaryGetDocumenttypechecklistV1**
-> SalaryGetDocumenttypechecklistV1Response salaryGetDocumenttypechecklistV1(pkiSalaryID)
-
-Retrieve Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectSalaryApi();
-final pkiSalaryID = 56; // int | 
-
-try {
-    final result = api_instance.salaryGetDocumenttypechecklistV1(pkiSalaryID);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectSalaryApi->salaryGetDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiSalaryID** | **int**|  | 
-
-### Return type
-
-[**SalaryGetDocumenttypechecklistV1Response**](SalaryGetDocumenttypechecklistV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **salaryGetListV1**
 > SalaryGetListV1Response salaryGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
@@ -428,53 +381,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SalaryImportIntoEDMV1Response**](SalaryImportIntoEDMV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **salarySyncDocumenttypechecklistV1**
-> SalarySyncDocumenttypechecklistV1Response salarySyncDocumenttypechecklistV1(pkiSalaryID, body)
-
-Synchronize Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectSalaryApi();
-final pkiSalaryID = 56; // int | 
-final body = Object(); // Object | 
-
-try {
-    final result = api_instance.salarySyncDocumenttypechecklistV1(pkiSalaryID, body);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectSalaryApi->salarySyncDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiSalaryID** | **int**|  | 
- **body** | **Object**|  | [optional] 
-
-### Return type
-
-[**SalarySyncDocumenttypechecklistV1Response**](SalarySyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

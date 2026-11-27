@@ -16,10 +16,8 @@ Method | HTTP request | Description
 [**brokerGetCommunicationListV1**](ObjectBrokerApi.md#brokergetcommunicationlistv1) | **GET** /1/object/broker/{pkiBrokerID}/getCommunicationList | Retrieve Communication list
 [**brokerGetCommunicationrecipientsV1**](ObjectBrokerApi.md#brokergetcommunicationrecipientsv1) | **GET** /1/object/broker/{pkiBrokerID}/getCommunicationrecipients | Retrieve Communication recipients
 [**brokerGetCommunicationsendersV1**](ObjectBrokerApi.md#brokergetcommunicationsendersv1) | **GET** /1/object/broker/{pkiBrokerID}/getCommunicationsenders | Retrieve Communication senders
-[**brokerGetDocumenttypechecklistV1**](ObjectBrokerApi.md#brokergetdocumenttypechecklistv1) | **GET** /1/object/broker/{pkiBrokerID}/getDocumenttypechecklist | Retrieve Document type checklist
 [**brokerGetListV1**](ObjectBrokerApi.md#brokergetlistv1) | **GET** /1/object/broker/getList | Retrieve Broker list
 [**brokerImportIntoEDMV1**](ObjectBrokerApi.md#brokerimportintoedmv1) | **POST** /1/object/broker/{pkiBrokerID}/importIntoEDM | Import attachments into the Broker
-[**brokerSyncDocumenttypechecklistV1**](ObjectBrokerApi.md#brokersyncdocumenttypechecklistv1) | **POST** /1/object/broker/{pkiBrokerID}/syncDocumenttypechecklist | Synchronize Document type checklist
 
 
 # **brokerBatchDownloadV1**
@@ -347,51 +345,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **brokerGetDocumenttypechecklistV1**
-> BrokerGetDocumenttypechecklistV1Response brokerGetDocumenttypechecklistV1(pkiBrokerID)
-
-Retrieve Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectBrokerApi();
-final pkiBrokerID = 56; // int | 
-
-try {
-    final result = api_instance.brokerGetDocumenttypechecklistV1(pkiBrokerID);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectBrokerApi->brokerGetDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiBrokerID** | **int**|  | 
-
-### Return type
-
-[**BrokerGetDocumenttypechecklistV1Response**](BrokerGetDocumenttypechecklistV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **brokerGetListV1**
 > BrokerGetListV1Response brokerGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
@@ -484,53 +437,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**BrokerImportIntoEDMV1Response**](BrokerImportIntoEDMV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **brokerSyncDocumenttypechecklistV1**
-> BrokerSyncDocumenttypechecklistV1Response brokerSyncDocumenttypechecklistV1(pkiBrokerID, body)
-
-Synchronize Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectBrokerApi();
-final pkiBrokerID = 56; // int | 
-final body = Object(); // Object | 
-
-try {
-    final result = api_instance.brokerSyncDocumenttypechecklistV1(pkiBrokerID, body);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectBrokerApi->brokerSyncDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiBrokerID** | **int**|  | 
- **body** | **Object**|  | [optional] 
-
-### Return type
-
-[**BrokerSyncDocumenttypechecklistV1Response**](BrokerSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

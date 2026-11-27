@@ -15,10 +15,8 @@ Method | HTTP request | Description
 [**inscriptiontempGetCommunicationListV1**](ObjectInscriptiontempApi.md#inscriptiontempgetcommunicationlistv1) | **GET** /1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationList | Retrieve Communication list
 [**inscriptiontempGetCommunicationrecipientsV1**](ObjectInscriptiontempApi.md#inscriptiontempgetcommunicationrecipientsv1) | **GET** /1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationrecipients | Retrieve Inscriptiontemp's Communicationrecipient
 [**inscriptiontempGetCommunicationsendersV1**](ObjectInscriptiontempApi.md#inscriptiontempgetcommunicationsendersv1) | **GET** /1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationsenders | Retrieve Inscriptiontemp's Communicationsender
-[**inscriptiontempGetDocumenttypechecklistV1**](ObjectInscriptiontempApi.md#inscriptiontempgetdocumenttypechecklistv1) | **GET** /1/object/inscriptiontemp/{pkiInscriptiontempID}/getDocumenttypechecklist | Retrieve Document type checklist
 [**inscriptiontempGetListV1**](ObjectInscriptiontempApi.md#inscriptiontempgetlistv1) | **GET** /1/object/inscriptiontemp/getList | Retrieve Inscriptiontemp list
 [**inscriptiontempImportIntoEDMV1**](ObjectInscriptiontempApi.md#inscriptiontempimportintoedmv1) | **POST** /1/object/inscriptiontemp/{pkiInscriptiontempID}/importIntoEDM | Import attachments into the Inscriptiontemp
-[**inscriptiontempSyncDocumenttypechecklistV1**](ObjectInscriptiontempApi.md#inscriptiontempsyncdocumenttypechecklistv1) | **POST** /1/object/inscriptiontemp/{pkiInscriptiontempID}/syncDocumenttypechecklist | Synchronize Document type checklist
 
 
 # **inscriptiontempBatchDownloadV1**
@@ -301,51 +299,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **inscriptiontempGetDocumenttypechecklistV1**
-> InscriptiontempGetDocumenttypechecklistV1Response inscriptiontempGetDocumenttypechecklistV1(pkiInscriptiontempID)
-
-Retrieve Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectInscriptiontempApi();
-final pkiInscriptiontempID = 56; // int | 
-
-try {
-    final result = api_instance.inscriptiontempGetDocumenttypechecklistV1(pkiInscriptiontempID);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectInscriptiontempApi->inscriptiontempGetDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiInscriptiontempID** | **int**|  | 
-
-### Return type
-
-[**InscriptiontempGetDocumenttypechecklistV1Response**](InscriptiontempGetDocumenttypechecklistV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **inscriptiontempGetListV1**
 > InscriptiontempGetListV1Response inscriptiontempGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
@@ -438,53 +391,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**InscriptiontempImportIntoEDMV1Response**](InscriptiontempImportIntoEDMV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **inscriptiontempSyncDocumenttypechecklistV1**
-> InscriptiontempSyncDocumenttypechecklistV1Response inscriptiontempSyncDocumenttypechecklistV1(pkiInscriptiontempID, body)
-
-Synchronize Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectInscriptiontempApi();
-final pkiInscriptiontempID = 56; // int | 
-final body = Object(); // Object | 
-
-try {
-    final result = api_instance.inscriptiontempSyncDocumenttypechecklistV1(pkiInscriptiontempID, body);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectInscriptiontempApi->inscriptiontempSyncDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiInscriptiontempID** | **int**|  | 
- **body** | **Object**|  | [optional] 
-
-### Return type
-
-[**InscriptiontempSyncDocumenttypechecklistV1Response**](InscriptiontempSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

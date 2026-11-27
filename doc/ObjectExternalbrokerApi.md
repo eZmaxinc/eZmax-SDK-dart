@@ -15,9 +15,7 @@ Method | HTTP request | Description
 [**externalbrokerGetCommunicationListV1**](ObjectExternalbrokerApi.md#externalbrokergetcommunicationlistv1) | **GET** /1/object/externalbroker/{pkiExternalbrokerID}/getCommunicationList | Retrieve Communication list
 [**externalbrokerGetCommunicationrecipientsV1**](ObjectExternalbrokerApi.md#externalbrokergetcommunicationrecipientsv1) | **GET** /1/object/externalbroker/{pkiExternalbrokerID}/getCommunicationrecipients | Retrieve Communication recipients
 [**externalbrokerGetCommunicationsendersV1**](ObjectExternalbrokerApi.md#externalbrokergetcommunicationsendersv1) | **GET** /1/object/externalbroker/{pkiExternalbrokerID}/getCommunicationsenders | Retrieve Communication senders
-[**externalbrokerGetDocumenttypechecklistV1**](ObjectExternalbrokerApi.md#externalbrokergetdocumenttypechecklistv1) | **GET** /1/object/externalbroker/{pkiExternalbrokerID}/getDocumenttypechecklist | Retrieve Document type checklist
 [**externalbrokerImportIntoEDMV1**](ObjectExternalbrokerApi.md#externalbrokerimportintoedmv1) | **POST** /1/object/externalbroker/{pkiExternalbrokerID}/importIntoEDM | Import attachments into the Externalbroker
-[**externalbrokerSyncDocumenttypechecklistV1**](ObjectExternalbrokerApi.md#externalbrokersyncdocumenttypechecklistv1) | **POST** /1/object/externalbroker/{pkiExternalbrokerID}/syncDocumenttypechecklist | Synchronize Document type checklist
 
 
 # **externalbrokerBatchDownloadV1**
@@ -292,51 +290,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **externalbrokerGetDocumenttypechecklistV1**
-> ExternalbrokerGetDocumenttypechecklistV1Response externalbrokerGetDocumenttypechecklistV1(pkiExternalbrokerID)
-
-Retrieve Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectExternalbrokerApi();
-final pkiExternalbrokerID = 56; // int | 
-
-try {
-    final result = api_instance.externalbrokerGetDocumenttypechecklistV1(pkiExternalbrokerID);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectExternalbrokerApi->externalbrokerGetDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiExternalbrokerID** | **int**|  | 
-
-### Return type
-
-[**ExternalbrokerGetDocumenttypechecklistV1Response**](ExternalbrokerGetDocumenttypechecklistV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **externalbrokerImportIntoEDMV1**
 > ExternalbrokerImportIntoEDMV1Response externalbrokerImportIntoEDMV1(pkiExternalbrokerID, externalbrokerImportIntoEDMV1Request)
 
@@ -374,53 +327,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ExternalbrokerImportIntoEDMV1Response**](ExternalbrokerImportIntoEDMV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **externalbrokerSyncDocumenttypechecklistV1**
-> ExternalbrokerSyncDocumenttypechecklistV1Response externalbrokerSyncDocumenttypechecklistV1(pkiExternalbrokerID, body)
-
-Synchronize Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectExternalbrokerApi();
-final pkiExternalbrokerID = 56; // int | 
-final body = Object(); // Object | 
-
-try {
-    final result = api_instance.externalbrokerSyncDocumenttypechecklistV1(pkiExternalbrokerID, body);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectExternalbrokerApi->externalbrokerSyncDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiExternalbrokerID** | **int**|  | 
- **body** | **Object**|  | [optional] 
-
-### Return type
-
-[**ExternalbrokerSyncDocumenttypechecklistV1Response**](ExternalbrokerSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

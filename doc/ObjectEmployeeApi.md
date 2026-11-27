@@ -15,10 +15,8 @@ Method | HTTP request | Description
 [**employeeGetCommunicationListV1**](ObjectEmployeeApi.md#employeegetcommunicationlistv1) | **GET** /1/object/employee/{pkiEmployeeID}/getCommunicationList | Retrieve Communication list
 [**employeeGetCommunicationrecipientsV1**](ObjectEmployeeApi.md#employeegetcommunicationrecipientsv1) | **GET** /1/object/employee/{pkiEmployeeID}/getCommunicationrecipients | Retrieve Communication recipients
 [**employeeGetCommunicationsendersV1**](ObjectEmployeeApi.md#employeegetcommunicationsendersv1) | **GET** /1/object/employee/{pkiEmployeeID}/getCommunicationsenders | Retrieve Communication senders
-[**employeeGetDocumenttypechecklistV1**](ObjectEmployeeApi.md#employeegetdocumenttypechecklistv1) | **GET** /1/object/employee/{pkiEmployeeID}/getDocumenttypechecklist | Retrieve Document type checklist
 [**employeeGetListV1**](ObjectEmployeeApi.md#employeegetlistv1) | **GET** /1/object/employee/getList | Retrieve Employee list
 [**employeeImportIntoEDMV1**](ObjectEmployeeApi.md#employeeimportintoedmv1) | **POST** /1/object/employee/{pkiEmployeeID}/importIntoEDM | Import attachments into the Employee
-[**employeeSyncDocumenttypechecklistV1**](ObjectEmployeeApi.md#employeesyncdocumenttypechecklistv1) | **POST** /1/object/employee/{pkiEmployeeID}/syncDocumenttypechecklist | Synchronize Document type checklist
 
 
 # **employeeBatchDownloadV1**
@@ -293,51 +291,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **employeeGetDocumenttypechecklistV1**
-> EmployeeGetDocumenttypechecklistV1Response employeeGetDocumenttypechecklistV1(pkiEmployeeID)
-
-Retrieve Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectEmployeeApi();
-final pkiEmployeeID = 56; // int | 
-
-try {
-    final result = api_instance.employeeGetDocumenttypechecklistV1(pkiEmployeeID);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectEmployeeApi->employeeGetDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEmployeeID** | **int**|  | 
-
-### Return type
-
-[**EmployeeGetDocumenttypechecklistV1Response**](EmployeeGetDocumenttypechecklistV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **employeeGetListV1**
 > EmployeeGetListV1Response employeeGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
@@ -430,53 +383,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EmployeeImportIntoEDMV1Response**](EmployeeImportIntoEDMV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **employeeSyncDocumenttypechecklistV1**
-> EmployeeSyncDocumenttypechecklistV1Response employeeSyncDocumenttypechecklistV1(pkiEmployeeID, body)
-
-Synchronize Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectEmployeeApi();
-final pkiEmployeeID = 56; // int | 
-final body = Object(); // Object | 
-
-try {
-    final result = api_instance.employeeSyncDocumenttypechecklistV1(pkiEmployeeID, body);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectEmployeeApi->employeeSyncDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEmployeeID** | **int**|  | 
- **body** | **Object**|  | [optional] 
-
-### Return type
-
-[**EmployeeSyncDocumenttypechecklistV1Response**](EmployeeSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

@@ -250,63 +250,6 @@ class ObjectDiscussionApi {
     return null;
   }
 
-  /// Improve a message using the AI
-  ///
-  /// The endpoint allows to improve a discussion message using the AI.
-  ///
-  /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [DiscussionImproveMessageV1Request] discussionImproveMessageV1Request (required):
-  Future<Response> discussionImproveMessageV1WithHttpInfo(DiscussionImproveMessageV1Request discussionImproveMessageV1Request, { Future<void>? abortTrigger, }) async {
-    // ignore: prefer_const_declarations
-    final path = r'/1/object/discussion/improveMessage';
-
-    // ignore: prefer_final_locals
-    Object? postBody = discussionImproveMessageV1Request;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>['application/json'];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'POST',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-      abortTrigger: abortTrigger,
-    );
-  }
-
-  /// Improve a message using the AI
-  ///
-  /// The endpoint allows to improve a discussion message using the AI.
-  ///
-  /// Parameters:
-  ///
-  /// * [DiscussionImproveMessageV1Request] discussionImproveMessageV1Request (required):
-  Future<DiscussionImproveMessageV1Response?> discussionImproveMessageV1(DiscussionImproveMessageV1Request discussionImproveMessageV1Request, { Future<void>? abortTrigger, }) async {
-    final response = await discussionImproveMessageV1WithHttpInfo(discussionImproveMessageV1Request, abortTrigger: abortTrigger,);
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'DiscussionImproveMessageV1Response',) as DiscussionImproveMessageV1Response;
-    
-    }
-    return null;
-  }
-
   /// Patch an existing Discussion
   ///
   /// 

@@ -248,60 +248,6 @@ class ObjectTranqcontractApi {
     return null;
   }
 
-  /// Retrieve Document type checklist
-  ///
-  /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiTranqcontractID (required):
-  Future<Response> tranqcontractGetDocumenttypechecklistV1WithHttpInfo(int pkiTranqcontractID, { Future<void>? abortTrigger, }) async {
-    // ignore: prefer_const_declarations
-    final path = r'/1/object/tranqcontract/{pkiTranqcontractID}/getDocumenttypechecklist'
-      .replaceAll('{pkiTranqcontractID}', pkiTranqcontractID.toString());
-
-    // ignore: prefer_final_locals
-    Object? postBody;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>[];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'GET',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-      abortTrigger: abortTrigger,
-    );
-  }
-
-  /// Retrieve Document type checklist
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiTranqcontractID (required):
-  Future<TranqcontractGetDocumenttypechecklistV1Response?> tranqcontractGetDocumenttypechecklistV1(int pkiTranqcontractID, { Future<void>? abortTrigger, }) async {
-    final response = await tranqcontractGetDocumenttypechecklistV1WithHttpInfo(pkiTranqcontractID, abortTrigger: abortTrigger,);
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'TranqcontractGetDocumenttypechecklistV1Response',) as TranqcontractGetDocumenttypechecklistV1Response;
-    
-    }
-    return null;
-  }
-
   /// Import attachments into the Tranqcontract
   ///
   /// 
@@ -359,64 +305,6 @@ class ObjectTranqcontractApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'TranqcontractImportIntoEDMV1Response',) as TranqcontractImportIntoEDMV1Response;
-    
-    }
-    return null;
-  }
-
-  /// Synchronize Document type checklist
-  ///
-  /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiTranqcontractID (required):
-  ///
-  /// * [Object] body:
-  Future<Response> tranqcontractSyncDocumenttypechecklistV1WithHttpInfo(int pkiTranqcontractID, { Object? body, Future<void>? abortTrigger, }) async {
-    // ignore: prefer_const_declarations
-    final path = r'/1/object/tranqcontract/{pkiTranqcontractID}/syncDocumenttypechecklist'
-      .replaceAll('{pkiTranqcontractID}', pkiTranqcontractID.toString());
-
-    // ignore: prefer_final_locals
-    Object? postBody = body;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>['application/json'];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'POST',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-      abortTrigger: abortTrigger,
-    );
-  }
-
-  /// Synchronize Document type checklist
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiTranqcontractID (required):
-  ///
-  /// * [Object] body:
-  Future<TranqcontractSyncDocumenttypechecklistV1Response?> tranqcontractSyncDocumenttypechecklistV1(int pkiTranqcontractID, { Object? body, Future<void>? abortTrigger, }) async {
-    final response = await tranqcontractSyncDocumenttypechecklistV1WithHttpInfo(pkiTranqcontractID, body: body, abortTrigger: abortTrigger,);
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'TranqcontractSyncDocumenttypechecklistV1Response',) as TranqcontractSyncDocumenttypechecklistV1Response;
     
     }
     return null;

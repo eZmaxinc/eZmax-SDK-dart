@@ -15,9 +15,7 @@ Method | HTTP request | Description
 [**folderGetCommunicationListV1**](ObjectFolderApi.md#foldergetcommunicationlistv1) | **GET** /1/object/folder/{pkiFolderID}/getCommunicationList | Retrieve Communication list
 [**folderGetCommunicationrecipientsV1**](ObjectFolderApi.md#foldergetcommunicationrecipientsv1) | **GET** /1/object/folder/{pkiFolderID}/getCommunicationrecipients | Retrieve Communication recipients
 [**folderGetCommunicationsendersV1**](ObjectFolderApi.md#foldergetcommunicationsendersv1) | **GET** /1/object/folder/{pkiFolderID}/getCommunicationsenders | Retrieve Communication senders
-[**folderGetDocumenttypechecklistV1**](ObjectFolderApi.md#foldergetdocumenttypechecklistv1) | **GET** /1/object/folder/{pkiFolderID}/getDocumenttypechecklist | Retrieve Document type checklist
 [**folderImportIntoEDMV1**](ObjectFolderApi.md#folderimportintoedmv1) | **POST** /1/object/folder/{pkiFolderID}/importIntoEDM | Import attachments into the Folder
-[**folderSyncDocumenttypechecklistV1**](ObjectFolderApi.md#foldersyncdocumenttypechecklistv1) | **POST** /1/object/folder/{pkiFolderID}/syncDocumenttypechecklist | Synchronize Document type checklist
 
 
 # **folderBatchDownloadV1**
@@ -292,51 +290,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **folderGetDocumenttypechecklistV1**
-> FolderGetDocumenttypechecklistV1Response folderGetDocumenttypechecklistV1(pkiFolderID)
-
-Retrieve Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectFolderApi();
-final pkiFolderID = 56; // int | 
-
-try {
-    final result = api_instance.folderGetDocumenttypechecklistV1(pkiFolderID);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectFolderApi->folderGetDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiFolderID** | **int**|  | 
-
-### Return type
-
-[**FolderGetDocumenttypechecklistV1Response**](FolderGetDocumenttypechecklistV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **folderImportIntoEDMV1**
 > FolderImportIntoEDMV1Response folderImportIntoEDMV1(pkiFolderID, folderImportIntoEDMV1Request)
 
@@ -372,53 +325,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**FolderImportIntoEDMV1Response**](FolderImportIntoEDMV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **folderSyncDocumenttypechecklistV1**
-> FolderSyncDocumenttypechecklistV1Response folderSyncDocumenttypechecklistV1(pkiFolderID, body)
-
-Synchronize Document type checklist
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Authorization
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
-
-final api_instance = ObjectFolderApi();
-final pkiFolderID = 56; // int | 
-final body = Object(); // Object | 
-
-try {
-    final result = api_instance.folderSyncDocumenttypechecklistV1(pkiFolderID, body);
-    print(result);
-} catch (e) {
-    print('Exception when calling ObjectFolderApi->folderSyncDocumenttypechecklistV1: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiFolderID** | **int**|  | 
- **body** | **Object**|  | [optional] 
-
-### Return type
-
-[**FolderSyncDocumenttypechecklistV1Response**](FolderSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

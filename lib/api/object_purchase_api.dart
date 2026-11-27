@@ -344,60 +344,6 @@ class ObjectPurchaseApi {
     return null;
   }
 
-  /// Retrieve Document type checklist
-  ///
-  /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiPurchaseID (required):
-  Future<Response> purchaseGetDocumenttypechecklistV1WithHttpInfo(int pkiPurchaseID, { Future<void>? abortTrigger, }) async {
-    // ignore: prefer_const_declarations
-    final path = r'/1/object/purchase/{pkiPurchaseID}/getDocumenttypechecklist'
-      .replaceAll('{pkiPurchaseID}', pkiPurchaseID.toString());
-
-    // ignore: prefer_final_locals
-    Object? postBody;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>[];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'GET',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-      abortTrigger: abortTrigger,
-    );
-  }
-
-  /// Retrieve Document type checklist
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiPurchaseID (required):
-  Future<PurchaseGetDocumenttypechecklistV1Response?> purchaseGetDocumenttypechecklistV1(int pkiPurchaseID, { Future<void>? abortTrigger, }) async {
-    final response = await purchaseGetDocumenttypechecklistV1WithHttpInfo(pkiPurchaseID, abortTrigger: abortTrigger,);
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'PurchaseGetDocumenttypechecklistV1Response',) as PurchaseGetDocumenttypechecklistV1Response;
-    
-    }
-    return null;
-  }
-
   /// Retrieve Purchase list
   ///
   /// 
@@ -543,64 +489,6 @@ class ObjectPurchaseApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'PurchaseImportIntoEDMV1Response',) as PurchaseImportIntoEDMV1Response;
-    
-    }
-    return null;
-  }
-
-  /// Synchronize Document type checklist
-  ///
-  /// Note: This method returns the HTTP [Response].
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiPurchaseID (required):
-  ///
-  /// * [Object] body:
-  Future<Response> purchaseSyncDocumenttypechecklistV1WithHttpInfo(int pkiPurchaseID, { Object? body, Future<void>? abortTrigger, }) async {
-    // ignore: prefer_const_declarations
-    final path = r'/1/object/purchase/{pkiPurchaseID}/syncDocumenttypechecklist'
-      .replaceAll('{pkiPurchaseID}', pkiPurchaseID.toString());
-
-    // ignore: prefer_final_locals
-    Object? postBody = body;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>['application/json'];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'POST',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-      abortTrigger: abortTrigger,
-    );
-  }
-
-  /// Synchronize Document type checklist
-  ///
-  /// Parameters:
-  ///
-  /// * [int] pkiPurchaseID (required):
-  ///
-  /// * [Object] body:
-  Future<PurchaseSyncDocumenttypechecklistV1Response?> purchaseSyncDocumenttypechecklistV1(int pkiPurchaseID, { Object? body, Future<void>? abortTrigger, }) async {
-    final response = await purchaseSyncDocumenttypechecklistV1WithHttpInfo(pkiPurchaseID, body: body, abortTrigger: abortTrigger,);
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-    // When a remote server returns no body with a status of 204, we shall not decode it.
-    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
-    // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'PurchaseSyncDocumenttypechecklistV1Response',) as PurchaseSyncDocumenttypechecklistV1Response;
     
     }
     return null;
