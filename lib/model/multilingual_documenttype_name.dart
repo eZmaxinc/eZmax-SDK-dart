@@ -17,7 +17,7 @@ class MultilingualDocumenttypeName {
     this.sDocumenttypeName2,
   });
 
-  /// The name1 of the Documenttype
+  /// The name of the document type in French
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -26,7 +26,7 @@ class MultilingualDocumenttypeName {
   ///
   String? sDocumenttypeName1;
 
-  /// The name2 of the Documenttype
+  /// The name of the document type in English
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated

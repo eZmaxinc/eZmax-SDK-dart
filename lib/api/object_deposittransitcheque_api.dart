@@ -344,6 +344,60 @@ class ObjectDeposittransitchequeApi {
     return null;
   }
 
+  /// Retrieve Document type checklist
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiDeposittransitchequeID (required):
+  Future<Response> deposittransitchequeGetDocumenttypechecklistV1WithHttpInfo(int pkiDeposittransitchequeID, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getDocumenttypechecklist'
+      .replaceAll('{pkiDeposittransitchequeID}', pkiDeposittransitchequeID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Retrieve Document type checklist
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiDeposittransitchequeID (required):
+  Future<DeposittransitchequeGetDocumenttypechecklistV1Response?> deposittransitchequeGetDocumenttypechecklistV1(int pkiDeposittransitchequeID, { Future<void>? abortTrigger, }) async {
+    final response = await deposittransitchequeGetDocumenttypechecklistV1WithHttpInfo(pkiDeposittransitchequeID, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'DeposittransitchequeGetDocumenttypechecklistV1Response',) as DeposittransitchequeGetDocumenttypechecklistV1Response;
+    
+    }
+    return null;
+  }
+
   /// Retrieve Deposittransitcheque list
   ///
   /// 
@@ -489,6 +543,64 @@ class ObjectDeposittransitchequeApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'DeposittransitchequeImportIntoEDMV1Response',) as DeposittransitchequeImportIntoEDMV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Synchronize Document type checklist
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiDeposittransitchequeID (required):
+  ///
+  /// * [Object] body:
+  Future<Response> deposittransitchequeSyncDocumenttypechecklistV1WithHttpInfo(int pkiDeposittransitchequeID, { Object? body, Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/deposittransitcheque/{pkiDeposittransitchequeID}/syncDocumenttypechecklist'
+      .replaceAll('{pkiDeposittransitchequeID}', pkiDeposittransitchequeID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = body;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Synchronize Document type checklist
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiDeposittransitchequeID (required):
+  ///
+  /// * [Object] body:
+  Future<DeposittransitchequeSyncDocumenttypechecklistV1Response?> deposittransitchequeSyncDocumenttypechecklistV1(int pkiDeposittransitchequeID, { Object? body, Future<void>? abortTrigger, }) async {
+    final response = await deposittransitchequeSyncDocumenttypechecklistV1WithHttpInfo(pkiDeposittransitchequeID, body: body, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'DeposittransitchequeSyncDocumenttypechecklistV1Response',) as DeposittransitchequeSyncDocumenttypechecklistV1Response;
     
     }
     return null;

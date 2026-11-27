@@ -15,8 +15,10 @@ Method | HTTP request | Description
 [**adjustmentGetCommunicationListV1**](ObjectAdjustmentApi.md#adjustmentgetcommunicationlistv1) | **GET** /1/object/adjustment/{pkiAdjustmentID}/getCommunicationList | Retrieve Communication list
 [**adjustmentGetCommunicationrecipientsV1**](ObjectAdjustmentApi.md#adjustmentgetcommunicationrecipientsv1) | **GET** /1/object/adjustment/{pkiAdjustmentID}/getCommunicationrecipients | Retrieve Communication recipients
 [**adjustmentGetCommunicationsendersV1**](ObjectAdjustmentApi.md#adjustmentgetcommunicationsendersv1) | **GET** /1/object/adjustment/{pkiAdjustmentID}/getCommunicationsenders | Retrieve Communication senders
+[**adjustmentGetDocumenttypechecklistV1**](ObjectAdjustmentApi.md#adjustmentgetdocumenttypechecklistv1) | **GET** /1/object/adjustment/{pkiAdjustmentID}/getDocumenttypechecklist | Retrieve Document type checklist
 [**adjustmentGetListV1**](ObjectAdjustmentApi.md#adjustmentgetlistv1) | **GET** /1/object/adjustment/getList | Retrieve Adjustment list
 [**adjustmentImportIntoEDMV1**](ObjectAdjustmentApi.md#adjustmentimportintoedmv1) | **POST** /1/object/adjustment/{pkiAdjustmentID}/importIntoEDM | Import attachments into the Adjustment
+[**adjustmentSyncDocumenttypechecklistV1**](ObjectAdjustmentApi.md#adjustmentsyncdocumenttypechecklistv1) | **POST** /1/object/adjustment/{pkiAdjustmentID}/syncDocumenttypechecklist | Synchronize Document type checklist
 
 
 # **adjustmentBatchDownloadV1**
@@ -291,6 +293,51 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **adjustmentGetDocumenttypechecklistV1**
+> AdjustmentGetDocumenttypechecklistV1Response adjustmentGetDocumenttypechecklistV1(pkiAdjustmentID)
+
+Retrieve Document type checklist
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectAdjustmentApi();
+final pkiAdjustmentID = 56; // int | 
+
+try {
+    final result = api_instance.adjustmentGetDocumenttypechecklistV1(pkiAdjustmentID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectAdjustmentApi->adjustmentGetDocumenttypechecklistV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiAdjustmentID** | **int**|  | 
+
+### Return type
+
+[**AdjustmentGetDocumenttypechecklistV1Response**](AdjustmentGetDocumenttypechecklistV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **adjustmentGetListV1**
 > AdjustmentGetListV1Response adjustmentGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
@@ -381,6 +428,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AdjustmentImportIntoEDMV1Response**](AdjustmentImportIntoEDMV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **adjustmentSyncDocumenttypechecklistV1**
+> AdjustmentSyncDocumenttypechecklistV1Response adjustmentSyncDocumenttypechecklistV1(pkiAdjustmentID, body)
+
+Synchronize Document type checklist
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectAdjustmentApi();
+final pkiAdjustmentID = 56; // int | 
+final body = Object(); // Object | 
+
+try {
+    final result = api_instance.adjustmentSyncDocumenttypechecklistV1(pkiAdjustmentID, body);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectAdjustmentApi->adjustmentSyncDocumenttypechecklistV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiAdjustmentID** | **int**|  | 
+ **body** | **Object**|  | [optional] 
+
+### Return type
+
+[**AdjustmentSyncDocumenttypechecklistV1Response**](AdjustmentSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

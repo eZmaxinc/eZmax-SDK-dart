@@ -16,6 +16,7 @@ enum FieldEDocumenttypechecklistStatus {
   required_._(r'Required'),
   filed._(r'Filed'),
   justified._(r'Justified'),
+  mandatory._(r'Mandatory'),
   ;
 
   /// Instantiate a new enum with the provided value.
@@ -79,6 +80,7 @@ class FieldEDocumenttypechecklistStatusTypeTransformer {
         case r'Required': return FieldEDocumenttypechecklistStatus.required_;
         case r'Filed': return FieldEDocumenttypechecklistStatus.filed;
         case r'Justified': return FieldEDocumenttypechecklistStatus.justified;
+        case r'Mandatory': return FieldEDocumenttypechecklistStatus.mandatory;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');

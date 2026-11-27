@@ -9,21 +9,20 @@ import 'package:openapi/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiDocumenttypeID** | **int** | The unique ID of the Documenttype | 
-**sDocumenttypeNameX** | **String** | The name of the Documenttype in the language of the requester | 
-**sDocumenttypeDefaultfilename** | **String** | The defaultfilename of the Documenttype | 
-**bDocumenttypeShowagent** | **bool** | Whether if it's an showagent | 
+**sDocumenttypeNameX** | **String** | The name of the document type in the requester's language | 
+**sDocumenttypeDefaultfilename** | **String** | The default filename for the document type | 
+**bDocumenttypeShowagent** | **bool** | Whether the document type should be shown to the agent | 
 **bDocumenttypeIsactive** | **bool** | Whether the documenttype is active or not | 
-**bDocumenttypeIsrequired** | **bool** | Whether if it's an isrequired | 
-**bDocumenttypeSale** | **bool** | Whether if it's an sale | 
-**bDocumenttypeRental** | **bool** | Whether if it's an rental | 
-**bDocumenttypeReference** | **bool** | Whether if it's an reference | 
-**bDocumenttypeMortgagereference** | **bool** | Whether if it's an mortgagereference | 
-**bDocumenttypeEvaluation** | **bool** | Whether if it's an evaluation | 
-**bDocumenttypeConsultation** | **bool** | Whether if it's an consultation | 
-**bDocumenttypeOtherservices** | **bool** | Whether if it's an otherservices | 
-**bDocumenttypeForeclosedsale** | **bool** | Whether if it's an foreclosedsale | 
-**bDocumenttypeCommercialfunding** | **bool** | Whether if it's an commercialfunding | 
-**bDocumenttypeCanafe** | **bool** | Whether if it's an canafe | 
+**bDocumenttypeSale** | **bool** | Whether the document type applies to sale transactions | 
+**bDocumenttypeRental** | **bool** | Whether the document type applies to rental transactions | 
+**bDocumenttypeReference** | **bool** | Whether the document type is a reference document | 
+**bDocumenttypeMortgagereference** | **bool** | Whether the document type is a mortgage reference | 
+**bDocumenttypeEvaluation** | **bool** | Whether the document type applies to evaluation transactions | 
+**bDocumenttypeConsultation** | **bool** | Whether the document type applies to consultation transactions | 
+**bDocumenttypeOtherservices** | **bool** | Whether the document type applies to other services | 
+**bDocumenttypeForeclosedsale** | **bool** | Whether the document type applies to foreclosed sale transactions | 
+**bDocumenttypeCommercialfunding** | **bool** | Whether the document type applies to commercial funding transactions | 
+**bDocumenttypeCanafe** | **bool** | Whether the document type applies to Canafe transactions | 
 **eDocumenttypeEzcom** | [**FieldEDocumenttypeEzcom**](FieldEDocumenttypeEzcom.md) |  | [optional] 
 **eDocumenttypePrivacydefault** | [**FieldEDocumenttypePrivacydefault**](FieldEDocumenttypePrivacydefault.md) |  | 
 **eDocumenttypeStatusdefault** | [**FieldEDocumenttypeStatusdefault**](FieldEDocumenttypeStatusdefault.md) |  | 

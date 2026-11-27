@@ -24,7 +24,7 @@ class DocumenttypeAutocompleteElementResponse {
   /// Maximum value: 65535
   int pkiDocumenttypeID;
 
-  /// The name of the Documenttype in the language of the requester
+  /// The name of the document type in the requester's language
   String sDocumenttypeNameX;
 
   /// Whether the documenttype is active or not

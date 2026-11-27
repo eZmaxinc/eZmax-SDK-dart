@@ -10,7 +10,7 @@
 
 part of openapi.api;
 
-/// The salebyowner of the Documenttype
+/// Whether the document type applies to sale by owner transactions
 enum FieldEDocumenttypeSalebyowner {
   all._(r'All'),
   yes._(r'Yes'),

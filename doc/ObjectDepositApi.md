@@ -15,8 +15,10 @@ Method | HTTP request | Description
 [**depositGetCommunicationListV1**](ObjectDepositApi.md#depositgetcommunicationlistv1) | **GET** /1/object/deposit/{pkiDepositID}/getCommunicationList | Retrieve Communication list
 [**depositGetCommunicationrecipientsV1**](ObjectDepositApi.md#depositgetcommunicationrecipientsv1) | **GET** /1/object/deposit/{pkiDepositID}/getCommunicationrecipients | Retrieve Communication recipients
 [**depositGetCommunicationsendersV1**](ObjectDepositApi.md#depositgetcommunicationsendersv1) | **GET** /1/object/deposit/{pkiDepositID}/getCommunicationsenders | Retrieve Communication senders
+[**depositGetDocumenttypechecklistV1**](ObjectDepositApi.md#depositgetdocumenttypechecklistv1) | **GET** /1/object/deposit/{pkiDepositID}/getDocumenttypechecklist | Retrieve Document type checklist
 [**depositGetListV1**](ObjectDepositApi.md#depositgetlistv1) | **GET** /1/object/deposit/getList | Retrieve Deposit list
 [**depositImportIntoEDMV1**](ObjectDepositApi.md#depositimportintoedmv1) | **POST** /1/object/deposit/{pkiDepositID}/importIntoEDM | Import attachments into the Deposit
+[**depositSyncDocumenttypechecklistV1**](ObjectDepositApi.md#depositsyncdocumenttypechecklistv1) | **POST** /1/object/deposit/{pkiDepositID}/syncDocumenttypechecklist | Synchronize Document type checklist
 
 
 # **depositBatchDownloadV1**
@@ -291,6 +293,51 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **depositGetDocumenttypechecklistV1**
+> DepositGetDocumenttypechecklistV1Response depositGetDocumenttypechecklistV1(pkiDepositID)
+
+Retrieve Document type checklist
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectDepositApi();
+final pkiDepositID = 56; // int | 
+
+try {
+    final result = api_instance.depositGetDocumenttypechecklistV1(pkiDepositID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectDepositApi->depositGetDocumenttypechecklistV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiDepositID** | **int**|  | 
+
+### Return type
+
+[**DepositGetDocumenttypechecklistV1Response**](DepositGetDocumenttypechecklistV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **depositGetListV1**
 > DepositGetListV1Response depositGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
@@ -381,6 +428,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DepositImportIntoEDMV1Response**](DepositImportIntoEDMV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **depositSyncDocumenttypechecklistV1**
+> DepositSyncDocumenttypechecklistV1Response depositSyncDocumenttypechecklistV1(pkiDepositID, body)
+
+Synchronize Document type checklist
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectDepositApi();
+final pkiDepositID = 56; // int | 
+final body = Object(); // Object | 
+
+try {
+    final result = api_instance.depositSyncDocumenttypechecklistV1(pkiDepositID, body);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectDepositApi->depositSyncDocumenttypechecklistV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiDepositID** | **int**|  | 
+ **body** | **Object**|  | [optional] 
+
+### Return type
+
+[**DepositSyncDocumenttypechecklistV1Response**](DepositSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

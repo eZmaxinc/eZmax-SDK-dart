@@ -10,7 +10,7 @@
 
 part of openapi.api;
 
-/// The transactiontype of the Documenttype
+/// The transaction type for which the document is applicable
 enum FieldEDocumenttypeTransactiontype {
   all._(r'All'),
   inscriptor._(r'Inscriptor'),

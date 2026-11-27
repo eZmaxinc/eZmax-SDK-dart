@@ -9,15 +9,15 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ezmaxpartnerSubscribeV1**](ExternalEzmaxpartnerApi.md#ezmaxpartnersubscribev1) | **POST** /1/external/ezmaxpartner/subscribe | Subscribe to an Ezmaxparnerproductstage
+[**ezmaxpartnerSubscribeV1**](ExternalEzmaxpartnerApi.md#ezmaxpartnersubscribev1) | **POST** /1/external/ezmaxpartner/subscribe | Subscribe to an Ezmaxpartnerproductstage
 
 
 # **ezmaxpartnerSubscribeV1**
 > EzmaxpartnerSubscribeV1Response ezmaxpartnerSubscribeV1(ezmaxpartnerSubscribeV1Request)
 
-Subscribe to an Ezmaxparnerproductstage
+Subscribe to an Ezmaxpartnerproductstage
 
-Subscribe to an Ezmaxparnerproductstage
+Subscribe to an Ezmaxpartnerproductstage
 
 ### Example
 ```dart

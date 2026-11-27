@@ -15,7 +15,9 @@ Method | HTTP request | Description
 [**paymentpreparationGetCommunicationListV1**](ObjectPaymentpreparationApi.md#paymentpreparationgetcommunicationlistv1) | **GET** /1/object/paymentpreparation/{pkiPaymentpreparationID}/getCommunicationList | Retrieve Communication list
 [**paymentpreparationGetCommunicationrecipientsV1**](ObjectPaymentpreparationApi.md#paymentpreparationgetcommunicationrecipientsv1) | **GET** /1/object/paymentpreparation/{pkiPaymentpreparationID}/getCommunicationrecipients | Retrieve Communication recipients
 [**paymentpreparationGetCommunicationsendersV1**](ObjectPaymentpreparationApi.md#paymentpreparationgetcommunicationsendersv1) | **GET** /1/object/paymentpreparation/{pkiPaymentpreparationID}/getCommunicationsenders | Retrieve Communication senders
+[**paymentpreparationGetDocumenttypechecklistV1**](ObjectPaymentpreparationApi.md#paymentpreparationgetdocumenttypechecklistv1) | **GET** /1/object/paymentpreparation/{pkiPaymentpreparationID}/getDocumenttypechecklist | Retrieve Document type checklist
 [**paymentpreparationImportIntoEDMV1**](ObjectPaymentpreparationApi.md#paymentpreparationimportintoedmv1) | **POST** /1/object/paymentpreparation/{pkiPaymentpreparationID}/importIntoEDM | Import attachments into the Paymentpreparation
+[**paymentpreparationSyncDocumenttypechecklistV1**](ObjectPaymentpreparationApi.md#paymentpreparationsyncdocumenttypechecklistv1) | **POST** /1/object/paymentpreparation/{pkiPaymentpreparationID}/syncDocumenttypechecklist | Synchronize Document type checklist
 
 
 # **paymentpreparationBatchDownloadV1**
@@ -290,6 +292,51 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **paymentpreparationGetDocumenttypechecklistV1**
+> PaymentpreparationGetDocumenttypechecklistV1Response paymentpreparationGetDocumenttypechecklistV1(pkiPaymentpreparationID)
+
+Retrieve Document type checklist
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectPaymentpreparationApi();
+final pkiPaymentpreparationID = 56; // int | 
+
+try {
+    final result = api_instance.paymentpreparationGetDocumenttypechecklistV1(pkiPaymentpreparationID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectPaymentpreparationApi->paymentpreparationGetDocumenttypechecklistV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiPaymentpreparationID** | **int**|  | 
+
+### Return type
+
+[**PaymentpreparationGetDocumenttypechecklistV1Response**](PaymentpreparationGetDocumenttypechecklistV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **paymentpreparationImportIntoEDMV1**
 > PaymentpreparationImportIntoEDMV1Response paymentpreparationImportIntoEDMV1(pkiPaymentpreparationID, paymentpreparationImportIntoEDMV1Request)
 
@@ -325,6 +372,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PaymentpreparationImportIntoEDMV1Response**](PaymentpreparationImportIntoEDMV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **paymentpreparationSyncDocumenttypechecklistV1**
+> PaymentpreparationSyncDocumenttypechecklistV1Response paymentpreparationSyncDocumenttypechecklistV1(pkiPaymentpreparationID, body)
+
+Synchronize Document type checklist
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectPaymentpreparationApi();
+final pkiPaymentpreparationID = 56; // int | 
+final body = Object(); // Object | 
+
+try {
+    final result = api_instance.paymentpreparationSyncDocumenttypechecklistV1(pkiPaymentpreparationID, body);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectPaymentpreparationApi->paymentpreparationSyncDocumenttypechecklistV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiPaymentpreparationID** | **int**|  | 
+ **body** | **Object**|  | [optional] 
+
+### Return type
+
+[**PaymentpreparationSyncDocumenttypechecklistV1Response**](PaymentpreparationSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

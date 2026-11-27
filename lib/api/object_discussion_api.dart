@@ -252,7 +252,7 @@ class ObjectDiscussionApi {
 
   /// Improve a message using the AI
   ///
-  /// Improve a message using the AI.
+  /// The endpoint allows to improve a discussion message using the AI.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -287,7 +287,7 @@ class ObjectDiscussionApi {
 
   /// Improve a message using the AI
   ///
-  /// Improve a message using the AI.
+  /// The endpoint allows to improve a discussion message using the AI.
   ///
   /// Parameters:
   ///

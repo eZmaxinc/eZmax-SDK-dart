@@ -10,7 +10,7 @@
 
 part of openapi.api;
 
-/// The verified of the Attachment
+/// The verification status of the Attachment
 enum FieldEAttachmentVerified {
   no._(r'No'),
   yes._(r'Yes'),

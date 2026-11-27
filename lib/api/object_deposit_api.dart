@@ -344,6 +344,60 @@ class ObjectDepositApi {
     return null;
   }
 
+  /// Retrieve Document type checklist
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiDepositID (required):
+  Future<Response> depositGetDocumenttypechecklistV1WithHttpInfo(int pkiDepositID, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/deposit/{pkiDepositID}/getDocumenttypechecklist'
+      .replaceAll('{pkiDepositID}', pkiDepositID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Retrieve Document type checklist
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiDepositID (required):
+  Future<DepositGetDocumenttypechecklistV1Response?> depositGetDocumenttypechecklistV1(int pkiDepositID, { Future<void>? abortTrigger, }) async {
+    final response = await depositGetDocumenttypechecklistV1WithHttpInfo(pkiDepositID, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'DepositGetDocumenttypechecklistV1Response',) as DepositGetDocumenttypechecklistV1Response;
+    
+    }
+    return null;
+  }
+
   /// Retrieve Deposit list
   ///
   /// 
@@ -489,6 +543,64 @@ class ObjectDepositApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'DepositImportIntoEDMV1Response',) as DepositImportIntoEDMV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Synchronize Document type checklist
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiDepositID (required):
+  ///
+  /// * [Object] body:
+  Future<Response> depositSyncDocumenttypechecklistV1WithHttpInfo(int pkiDepositID, { Object? body, Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/deposit/{pkiDepositID}/syncDocumenttypechecklist'
+      .replaceAll('{pkiDepositID}', pkiDepositID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = body;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Synchronize Document type checklist
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiDepositID (required):
+  ///
+  /// * [Object] body:
+  Future<DepositSyncDocumenttypechecklistV1Response?> depositSyncDocumenttypechecklistV1(int pkiDepositID, { Object? body, Future<void>? abortTrigger, }) async {
+    final response = await depositSyncDocumenttypechecklistV1WithHttpInfo(pkiDepositID, body: body, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'DepositSyncDocumenttypechecklistV1Response',) as DepositSyncDocumenttypechecklistV1Response;
     
     }
     return null;

@@ -10,7 +10,7 @@
 
 part of openapi.api;
 
-/// The privacydefault of the Documenttype
+/// The default privacy setting for the document type
 enum FieldEDocumenttypePrivacydefault {
   administration._(r'Administration'),
   administrator._(r'Administrator'),

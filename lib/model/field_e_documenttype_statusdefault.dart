@@ -10,10 +10,11 @@
 
 part of openapi.api;
 
-/// The statusdefault of the Documenttype
+/// The default status requirement for the document type
 enum FieldEDocumenttypeStatusdefault {
   notRequired._(r'Not required'),
   required_._(r'Required'),
+  mandatory._(r'Mandatory'),
   ;
 
   /// Instantiate a new enum with the provided value.
@@ -75,6 +76,7 @@ class FieldEDocumenttypeStatusdefaultTypeTransformer {
       switch (data) {
         case r'Not required': return FieldEDocumenttypeStatusdefault.notRequired;
         case r'Required': return FieldEDocumenttypeStatusdefault.required_;
+        case r'Mandatory': return FieldEDocumenttypeStatusdefault.mandatory;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');

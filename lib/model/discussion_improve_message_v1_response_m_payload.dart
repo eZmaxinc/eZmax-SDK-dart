@@ -13,27 +13,27 @@ part of openapi.api;
 class DiscussionImproveMessageV1ResponseMPayload {
   /// Returns a new [DiscussionImproveMessageV1ResponseMPayload] instance.
   DiscussionImproveMessageV1ResponseMPayload({
-    this.aPkiDiscussionID = const [],
+    required this.tDiscussionMessage,
   });
 
-  /// An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request.
-  List<int> aPkiDiscussionID;
+  /// The Message of the Discussion
+  String tDiscussionMessage;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is DiscussionImproveMessageV1ResponseMPayload &&
-    _deepEquality.equals(other.aPkiDiscussionID, aPkiDiscussionID);
+    other.tDiscussionMessage == tDiscussionMessage;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (aPkiDiscussionID.hashCode);
+    (tDiscussionMessage.hashCode);
 
   @override
-  String toString() => 'DiscussionImproveMessageV1ResponseMPayload[aPkiDiscussionID=$aPkiDiscussionID]';
+  String toString() => 'DiscussionImproveMessageV1ResponseMPayload[tDiscussionMessage=$tDiscussionMessage]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'a_pkiDiscussionID'] = this.aPkiDiscussionID;
+      json[r'tDiscussionMessage'] = this.tDiscussionMessage;
     return json;
   }
 
@@ -48,15 +48,13 @@ class DiscussionImproveMessageV1ResponseMPayload {
       // Note 1: the values aren't checked for validity beyond being non-null.
       // Note 2: this code is stripped in release mode!
       assert(() {
-        assert(json.containsKey(r'a_pkiDiscussionID'), 'Required key "DiscussionImproveMessageV1ResponseMPayload[a_pkiDiscussionID]" is missing from JSON.');
-        assert(json[r'a_pkiDiscussionID'] != null, 'Required key "DiscussionImproveMessageV1ResponseMPayload[a_pkiDiscussionID]" has a null value in JSON.');
+        assert(json.containsKey(r'tDiscussionMessage'), 'Required key "DiscussionImproveMessageV1ResponseMPayload[tDiscussionMessage]" is missing from JSON.');
+        assert(json[r'tDiscussionMessage'] != null, 'Required key "DiscussionImproveMessageV1ResponseMPayload[tDiscussionMessage]" has a null value in JSON.');
         return true;
       }());
 
       return DiscussionImproveMessageV1ResponseMPayload(
-        aPkiDiscussionID: json[r'a_pkiDiscussionID'] is Iterable
-            ? (json[r'a_pkiDiscussionID'] as Iterable).cast<int>().toList(growable: false)
-            : const [],
+        tDiscussionMessage: mapValueOfType<String>(json, r'tDiscussionMessage')!,
       );
     }
     return null;
@@ -104,7 +102,7 @@ class DiscussionImproveMessageV1ResponseMPayload {
 
   /// The list of required keys that must be present in a JSON.
   static const requiredKeys = <String>{
-    'a_pkiDiscussionID',
+    'tDiscussionMessage',
   };
 }
 

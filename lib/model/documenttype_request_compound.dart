@@ -19,7 +19,6 @@ class DocumenttypeRequestCompound {
     required this.sDocumenttypeDefaultfilename,
     required this.bDocumenttypeShowagent,
     required this.bDocumenttypeIsactive,
-    required this.bDocumenttypeIsrequired,
     required this.bDocumenttypeSale,
     required this.bDocumenttypeRental,
     required this.bDocumenttypeReference,
@@ -56,46 +55,43 @@ class DocumenttypeRequestCompound {
 
   ComputedEDocumenttypeStep eDocumenttypeStep;
 
-  /// The defaultfilename of the Documenttype
+  /// The default filename for the document type
   String sDocumenttypeDefaultfilename;
 
-  /// Whether if it's an showagent
+  /// Whether the document type should be shown to the agent
   bool bDocumenttypeShowagent;
 
   /// Whether the documenttype is active or not
   bool bDocumenttypeIsactive;
 
-  /// Whether if it's an isrequired
-  bool bDocumenttypeIsrequired;
-
-  /// Whether if it's an sale
+  /// Whether the document type applies to sale transactions
   bool bDocumenttypeSale;
 
-  /// Whether if it's an rental
+  /// Whether the document type applies to rental transactions
   bool bDocumenttypeRental;
 
-  /// Whether if it's an reference
+  /// Whether the document type is a reference document
   bool bDocumenttypeReference;
 
-  /// Whether if it's an mortgagereference
+  /// Whether the document type is a mortgage reference
   bool bDocumenttypeMortgagereference;
 
-  /// Whether if it's an evaluation
+  /// Whether the document type applies to evaluation transactions
   bool bDocumenttypeEvaluation;
 
-  /// Whether if it's an consultation
+  /// Whether the document type applies to consultation transactions
   bool bDocumenttypeConsultation;
 
-  /// Whether if it's an otherservices
+  /// Whether the document type applies to other services
   bool bDocumenttypeOtherservices;
 
-  /// Whether if it's an foreclosedsale
+  /// Whether the document type applies to foreclosed sale transactions
   bool bDocumenttypeForeclosedsale;
 
-  /// Whether if it's an commercialfunding
+  /// Whether the document type applies to commercial funding transactions
   bool bDocumenttypeCommercialfunding;
 
-  /// Whether if it's an canafe
+  /// Whether the document type applies to Canafe transactions
   bool bDocumenttypeCanafe;
 
   ///
@@ -128,7 +124,6 @@ class DocumenttypeRequestCompound {
     other.sDocumenttypeDefaultfilename == sDocumenttypeDefaultfilename &&
     other.bDocumenttypeShowagent == bDocumenttypeShowagent &&
     other.bDocumenttypeIsactive == bDocumenttypeIsactive &&
-    other.bDocumenttypeIsrequired == bDocumenttypeIsrequired &&
     other.bDocumenttypeSale == bDocumenttypeSale &&
     other.bDocumenttypeRental == bDocumenttypeRental &&
     other.bDocumenttypeReference == bDocumenttypeReference &&
@@ -157,7 +152,6 @@ class DocumenttypeRequestCompound {
     (sDocumenttypeDefaultfilename.hashCode) +
     (bDocumenttypeShowagent.hashCode) +
     (bDocumenttypeIsactive.hashCode) +
-    (bDocumenttypeIsrequired.hashCode) +
     (bDocumenttypeSale.hashCode) +
     (bDocumenttypeRental.hashCode) +
     (bDocumenttypeReference.hashCode) +
@@ -178,7 +172,7 @@ class DocumenttypeRequestCompound {
     (aFkiInscriptiontypeID.hashCode);
 
   @override
-  String toString() => 'DocumenttypeRequestCompound[pkiDocumenttypeID=$pkiDocumenttypeID, objDocumenttypeName=$objDocumenttypeName, eDocumenttypeStep=$eDocumenttypeStep, sDocumenttypeDefaultfilename=$sDocumenttypeDefaultfilename, bDocumenttypeShowagent=$bDocumenttypeShowagent, bDocumenttypeIsactive=$bDocumenttypeIsactive, bDocumenttypeIsrequired=$bDocumenttypeIsrequired, bDocumenttypeSale=$bDocumenttypeSale, bDocumenttypeRental=$bDocumenttypeRental, bDocumenttypeReference=$bDocumenttypeReference, bDocumenttypeMortgagereference=$bDocumenttypeMortgagereference, bDocumenttypeEvaluation=$bDocumenttypeEvaluation, bDocumenttypeConsultation=$bDocumenttypeConsultation, bDocumenttypeOtherservices=$bDocumenttypeOtherservices, bDocumenttypeForeclosedsale=$bDocumenttypeForeclosedsale, bDocumenttypeCommercialfunding=$bDocumenttypeCommercialfunding, bDocumenttypeCanafe=$bDocumenttypeCanafe, eDocumenttypeEzcom=$eDocumenttypeEzcom, eDocumenttypePrivacydefault=$eDocumenttypePrivacydefault, eDocumenttypeStatusdefault=$eDocumenttypeStatusdefault, eDocumenttypeSalebyowner=$eDocumenttypeSalebyowner, eDocumenttypeSaledisplaybyrole=$eDocumenttypeSaledisplaybyrole, eDocumenttypeTransactiontype=$eDocumenttypeTransactiontype, eDocumenttypeRepossession=$eDocumenttypeRepossession, aFkiInscriptiontypeID=$aFkiInscriptiontypeID]';
+  String toString() => 'DocumenttypeRequestCompound[pkiDocumenttypeID=$pkiDocumenttypeID, objDocumenttypeName=$objDocumenttypeName, eDocumenttypeStep=$eDocumenttypeStep, sDocumenttypeDefaultfilename=$sDocumenttypeDefaultfilename, bDocumenttypeShowagent=$bDocumenttypeShowagent, bDocumenttypeIsactive=$bDocumenttypeIsactive, bDocumenttypeSale=$bDocumenttypeSale, bDocumenttypeRental=$bDocumenttypeRental, bDocumenttypeReference=$bDocumenttypeReference, bDocumenttypeMortgagereference=$bDocumenttypeMortgagereference, bDocumenttypeEvaluation=$bDocumenttypeEvaluation, bDocumenttypeConsultation=$bDocumenttypeConsultation, bDocumenttypeOtherservices=$bDocumenttypeOtherservices, bDocumenttypeForeclosedsale=$bDocumenttypeForeclosedsale, bDocumenttypeCommercialfunding=$bDocumenttypeCommercialfunding, bDocumenttypeCanafe=$bDocumenttypeCanafe, eDocumenttypeEzcom=$eDocumenttypeEzcom, eDocumenttypePrivacydefault=$eDocumenttypePrivacydefault, eDocumenttypeStatusdefault=$eDocumenttypeStatusdefault, eDocumenttypeSalebyowner=$eDocumenttypeSalebyowner, eDocumenttypeSaledisplaybyrole=$eDocumenttypeSaledisplaybyrole, eDocumenttypeTransactiontype=$eDocumenttypeTransactiontype, eDocumenttypeRepossession=$eDocumenttypeRepossession, aFkiInscriptiontypeID=$aFkiInscriptiontypeID]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -192,7 +186,6 @@ class DocumenttypeRequestCompound {
       json[r'sDocumenttypeDefaultfilename'] = this.sDocumenttypeDefaultfilename;
       json[r'bDocumenttypeShowagent'] = this.bDocumenttypeShowagent;
       json[r'bDocumenttypeIsactive'] = this.bDocumenttypeIsactive;
-      json[r'bDocumenttypeIsrequired'] = this.bDocumenttypeIsrequired;
       json[r'bDocumenttypeSale'] = this.bDocumenttypeSale;
       json[r'bDocumenttypeRental'] = this.bDocumenttypeRental;
       json[r'bDocumenttypeReference'] = this.bDocumenttypeReference;
@@ -239,8 +232,6 @@ class DocumenttypeRequestCompound {
         assert(json[r'bDocumenttypeShowagent'] != null, 'Required key "DocumenttypeRequestCompound[bDocumenttypeShowagent]" has a null value in JSON.');
         assert(json.containsKey(r'bDocumenttypeIsactive'), 'Required key "DocumenttypeRequestCompound[bDocumenttypeIsactive]" is missing from JSON.');
         assert(json[r'bDocumenttypeIsactive'] != null, 'Required key "DocumenttypeRequestCompound[bDocumenttypeIsactive]" has a null value in JSON.');
-        assert(json.containsKey(r'bDocumenttypeIsrequired'), 'Required key "DocumenttypeRequestCompound[bDocumenttypeIsrequired]" is missing from JSON.');
-        assert(json[r'bDocumenttypeIsrequired'] != null, 'Required key "DocumenttypeRequestCompound[bDocumenttypeIsrequired]" has a null value in JSON.');
         assert(json.containsKey(r'bDocumenttypeSale'), 'Required key "DocumenttypeRequestCompound[bDocumenttypeSale]" is missing from JSON.');
         assert(json[r'bDocumenttypeSale'] != null, 'Required key "DocumenttypeRequestCompound[bDocumenttypeSale]" has a null value in JSON.');
         assert(json.containsKey(r'bDocumenttypeRental'), 'Required key "DocumenttypeRequestCompound[bDocumenttypeRental]" is missing from JSON.');
@@ -285,7 +276,6 @@ class DocumenttypeRequestCompound {
         sDocumenttypeDefaultfilename: mapValueOfType<String>(json, r'sDocumenttypeDefaultfilename')!,
         bDocumenttypeShowagent: mapValueOfType<bool>(json, r'bDocumenttypeShowagent')!,
         bDocumenttypeIsactive: mapValueOfType<bool>(json, r'bDocumenttypeIsactive')!,
-        bDocumenttypeIsrequired: mapValueOfType<bool>(json, r'bDocumenttypeIsrequired')!,
         bDocumenttypeSale: mapValueOfType<bool>(json, r'bDocumenttypeSale')!,
         bDocumenttypeRental: mapValueOfType<bool>(json, r'bDocumenttypeRental')!,
         bDocumenttypeReference: mapValueOfType<bool>(json, r'bDocumenttypeReference')!,
@@ -358,7 +348,6 @@ class DocumenttypeRequestCompound {
     'sDocumenttypeDefaultfilename',
     'bDocumenttypeShowagent',
     'bDocumenttypeIsactive',
-    'bDocumenttypeIsrequired',
     'bDocumenttypeSale',
     'bDocumenttypeRental',
     'bDocumenttypeReference',

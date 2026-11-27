@@ -10,7 +10,7 @@
 
 part of openapi.api;
 
-/// The repossession of the Documenttype
+/// Whether the document type applies to repossession transactions
 enum FieldEDocumenttypeRepossession {
   all._(r'All'),
   no._(r'No'),

@@ -10,7 +10,7 @@
 
 part of openapi.api;
 
-/// The saledisplaybyrole of the Documenttype
+/// The role that determines document display in sale transactions
 enum FieldEDocumenttypeSaledisplaybyrole {
   inscriptorSeller._(r'InscriptorSeller'),
   inscriptor._(r'Inscriptor'),

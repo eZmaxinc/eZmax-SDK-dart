@@ -10,7 +10,7 @@
 
 part of openapi.api;
 
-/// The ezcom of the Documenttype
+/// The ezcom document type category
 enum FieldEDocumenttypeEzcom {
   promiseToPurchase._(r'PromiseToPurchase'),
   annex._(r'Annex'),

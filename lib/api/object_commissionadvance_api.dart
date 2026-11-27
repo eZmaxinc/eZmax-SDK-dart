@@ -344,6 +344,60 @@ class ObjectCommissionadvanceApi {
     return null;
   }
 
+  /// Retrieve Document type checklist
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiCommissionadvanceID (required):
+  Future<Response> commissionadvanceGetDocumenttypechecklistV1WithHttpInfo(int pkiCommissionadvanceID, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/commissionadvance/{pkiCommissionadvanceID}/getDocumenttypechecklist'
+      .replaceAll('{pkiCommissionadvanceID}', pkiCommissionadvanceID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Retrieve Document type checklist
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiCommissionadvanceID (required):
+  Future<CommissionadvanceGetDocumenttypechecklistV1Response?> commissionadvanceGetDocumenttypechecklistV1(int pkiCommissionadvanceID, { Future<void>? abortTrigger, }) async {
+    final response = await commissionadvanceGetDocumenttypechecklistV1WithHttpInfo(pkiCommissionadvanceID, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommissionadvanceGetDocumenttypechecklistV1Response',) as CommissionadvanceGetDocumenttypechecklistV1Response;
+    
+    }
+    return null;
+  }
+
   /// Import attachments into the Commissionadvance
   ///
   /// Note: This method returns the HTTP [Response].
@@ -397,6 +451,64 @@ class ObjectCommissionadvanceApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommissionadvanceImportIntoEDMV1Response',) as CommissionadvanceImportIntoEDMV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Synchronize Document type checklist
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiCommissionadvanceID (required):
+  ///
+  /// * [Object] body:
+  Future<Response> commissionadvanceSyncDocumenttypechecklistV1WithHttpInfo(int pkiCommissionadvanceID, { Object? body, Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/commissionadvance/{pkiCommissionadvanceID}/syncDocumenttypechecklist'
+      .replaceAll('{pkiCommissionadvanceID}', pkiCommissionadvanceID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = body;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Synchronize Document type checklist
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiCommissionadvanceID (required):
+  ///
+  /// * [Object] body:
+  Future<CommissionadvanceSyncDocumenttypechecklistV1Response?> commissionadvanceSyncDocumenttypechecklistV1(int pkiCommissionadvanceID, { Object? body, Future<void>? abortTrigger, }) async {
+    final response = await commissionadvanceSyncDocumenttypechecklistV1WithHttpInfo(pkiCommissionadvanceID, body: body, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'CommissionadvanceSyncDocumenttypechecklistV1Response',) as CommissionadvanceSyncDocumenttypechecklistV1Response;
     
     }
     return null;

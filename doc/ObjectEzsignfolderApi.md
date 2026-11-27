@@ -30,6 +30,7 @@ Method | HTTP request | Description
 [**ezsignfolderGetCommunicationListV1**](ObjectEzsignfolderApi.md#ezsignfoldergetcommunicationlistv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationList | Retrieve Communication list
 [**ezsignfolderGetCommunicationrecipientsV1**](ObjectEzsignfolderApi.md#ezsignfoldergetcommunicationrecipientsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationrecipients | Retrieve Ezsignfolder's Communicationrecipient
 [**ezsignfolderGetCommunicationsendersV1**](ObjectEzsignfolderApi.md#ezsignfoldergetcommunicationsendersv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationsenders | Retrieve Ezsignfolder's Communicationsender
+[**ezsignfolderGetDocumenttypechecklistV1**](ObjectEzsignfolderApi.md#ezsignfoldergetdocumenttypechecklistv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getDocumenttypechecklist | Retrieve Document type checklist
 [**ezsignfolderGetEzsignannotationsV1**](ObjectEzsignfolderApi.md#ezsignfoldergetezsignannotationsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignannotations | Retrieve an existing Ezsignfolder's Ezsignannotations
 [**ezsignfolderGetEzsigndocumentsV1**](ObjectEzsignfolderApi.md#ezsignfoldergetezsigndocumentsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder's Ezsigndocuments
 [**ezsignfolderGetEzsigndocumentsV2**](ObjectEzsignfolderApi.md#ezsignfoldergetezsigndocumentsv2) | **GET** /2/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder's Ezsigndocuments
@@ -50,6 +51,7 @@ Method | HTTP request | Description
 [**ezsignfolderReorderV2**](ObjectEzsignfolderApi.md#ezsignfolderreorderv2) | **POST** /2/object/ezsignfolder/{pkiEzsignfolderID}/reorder | Reorder Ezsigndocuments in the Ezsignfolder
 [**ezsignfolderSendV1**](ObjectEzsignfolderApi.md#ezsignfoldersendv1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/send | Send the Ezsignfolder to the signatories for signature
 [**ezsignfolderSendV3**](ObjectEzsignfolderApi.md#ezsignfoldersendv3) | **POST** /3/object/ezsignfolder/{pkiEzsignfolderID}/send | Send the Ezsignfolder to the signatories for signature
+[**ezsignfolderSyncDocumenttypechecklistV1**](ObjectEzsignfolderApi.md#ezsignfoldersyncdocumenttypechecklistv1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/syncDocumenttypechecklist | Synchronize Document type checklist
 [**ezsignfolderUnsendV1**](ObjectEzsignfolderApi.md#ezsignfolderunsendv1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/unsend | Unsend the Ezsignfolder
 
 
@@ -1054,6 +1056,51 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **ezsignfolderGetDocumenttypechecklistV1**
+> EzsignfolderGetDocumenttypechecklistV1Response ezsignfolderGetDocumenttypechecklistV1(pkiEzsignfolderID)
+
+Retrieve Document type checklist
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectEzsignfolderApi();
+final pkiEzsignfolderID = 56; // int | 
+
+try {
+    final result = api_instance.ezsignfolderGetDocumenttypechecklistV1(pkiEzsignfolderID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectEzsignfolderApi->ezsignfolderGetDocumenttypechecklistV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **int**|  | 
+
+### Return type
+
+[**EzsignfolderGetDocumenttypechecklistV1Response**](EzsignfolderGetDocumenttypechecklistV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **ezsignfolderGetEzsignannotationsV1**
 > EzsignfolderGetEzsignannotationsV1Response ezsignfolderGetEzsignannotationsV1(pkiEzsignfolderID)
 
@@ -2000,6 +2047,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignfolderSendV3Response**](EzsignfolderSendV3Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ezsignfolderSyncDocumenttypechecklistV1**
+> EzsignfolderSyncDocumenttypechecklistV1Response ezsignfolderSyncDocumenttypechecklistV1(pkiEzsignfolderID, body)
+
+Synchronize Document type checklist
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectEzsignfolderApi();
+final pkiEzsignfolderID = 56; // int | 
+final body = Object(); // Object | 
+
+try {
+    final result = api_instance.ezsignfolderSyncDocumenttypechecklistV1(pkiEzsignfolderID, body);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectEzsignfolderApi->ezsignfolderSyncDocumenttypechecklistV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **int**|  | 
+ **body** | **Object**|  | [optional] 
+
+### Return type
+
+[**EzsignfolderSyncDocumenttypechecklistV1Response**](EzsignfolderSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

@@ -15,7 +15,9 @@ Method | HTTP request | Description
 [**reconciliationGetCommunicationListV1**](ObjectReconciliationApi.md#reconciliationgetcommunicationlistv1) | **GET** /1/object/reconciliation/{pkiReconciliationID}/getCommunicationList | Retrieve Communication list
 [**reconciliationGetCommunicationrecipientsV1**](ObjectReconciliationApi.md#reconciliationgetcommunicationrecipientsv1) | **GET** /1/object/reconciliation/{pkiReconciliationID}/getCommunicationrecipients | Retrieve Communication recipients
 [**reconciliationGetCommunicationsendersV1**](ObjectReconciliationApi.md#reconciliationgetcommunicationsendersv1) | **GET** /1/object/reconciliation/{pkiReconciliationID}/getCommunicationsenders | Retrieve Communication senders
+[**reconciliationGetDocumenttypechecklistV1**](ObjectReconciliationApi.md#reconciliationgetdocumenttypechecklistv1) | **GET** /1/object/reconciliation/{pkiReconciliationID}/getDocumenttypechecklist | Retrieve Document type checklist
 [**reconciliationImportIntoEDMV1**](ObjectReconciliationApi.md#reconciliationimportintoedmv1) | **POST** /1/object/reconciliation/{pkiReconciliationID}/importIntoEDM | Import attachments into the Reconciliation
+[**reconciliationSyncDocumenttypechecklistV1**](ObjectReconciliationApi.md#reconciliationsyncdocumenttypechecklistv1) | **POST** /1/object/reconciliation/{pkiReconciliationID}/syncDocumenttypechecklist | Synchronize Document type checklist
 
 
 # **reconciliationBatchDownloadV1**
@@ -290,6 +292,51 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **reconciliationGetDocumenttypechecklistV1**
+> ReconciliationGetDocumenttypechecklistV1Response reconciliationGetDocumenttypechecklistV1(pkiReconciliationID)
+
+Retrieve Document type checklist
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectReconciliationApi();
+final pkiReconciliationID = 56; // int | 
+
+try {
+    final result = api_instance.reconciliationGetDocumenttypechecklistV1(pkiReconciliationID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectReconciliationApi->reconciliationGetDocumenttypechecklistV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiReconciliationID** | **int**|  | 
+
+### Return type
+
+[**ReconciliationGetDocumenttypechecklistV1Response**](ReconciliationGetDocumenttypechecklistV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **reconciliationImportIntoEDMV1**
 > ReconciliationImportIntoEDMV1Response reconciliationImportIntoEDMV1(pkiReconciliationID, reconciliationImportIntoEDMV1Request)
 
@@ -325,6 +372,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ReconciliationImportIntoEDMV1Response**](ReconciliationImportIntoEDMV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **reconciliationSyncDocumenttypechecklistV1**
+> ReconciliationSyncDocumenttypechecklistV1Response reconciliationSyncDocumenttypechecklistV1(pkiReconciliationID, body)
+
+Synchronize Document type checklist
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectReconciliationApi();
+final pkiReconciliationID = 56; // int | 
+final body = Object(); // Object | 
+
+try {
+    final result = api_instance.reconciliationSyncDocumenttypechecklistV1(pkiReconciliationID, body);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectReconciliationApi->reconciliationSyncDocumenttypechecklistV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiReconciliationID** | **int**|  | 
+ **body** | **Object**|  | [optional] 
+
+### Return type
+
+[**ReconciliationSyncDocumenttypechecklistV1Response**](ReconciliationSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

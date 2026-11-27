@@ -16,10 +16,12 @@ Method | HTTP request | Description
 [**inscriptionnotauthenticatedGetCommunicationListV1**](ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedgetcommunicationlistv1) | **GET** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationList | Retrieve Communication list
 [**inscriptionnotauthenticatedGetCommunicationrecipientsV1**](ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedgetcommunicationrecipientsv1) | **GET** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationrecipients | Retrieve Inscriptionnotauthenticated's Communicationrecipient
 [**inscriptionnotauthenticatedGetCommunicationsendersV1**](ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedgetcommunicationsendersv1) | **GET** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationsenders | Retrieve Inscriptionnotauthenticated's Communicationsender
+[**inscriptionnotauthenticatedGetDocumenttypechecklistV1**](ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedgetdocumenttypechecklistv1) | **GET** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getDocumenttypechecklist | Retrieve Document type checklist
 [**inscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1**](ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedgetinscriptionnotauthenticatedconditionsv1) | **GET** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getInscriptionnotauthenticatedconditions | Retrieve Inscriptionnotauthenticated conditions
 [**inscriptionnotauthenticatedGetListV1**](ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedgetlistv1) | **GET** /1/object/inscriptionnotauthenticated/getList | Retrieve Inscriptionnotauthenticated list
 [**inscriptionnotauthenticatedGetObjectV2**](ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedgetobjectv2) | **GET** /2/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID} | Retrieve an existing Inscriptionnotauthenticated
 [**inscriptionnotauthenticatedImportIntoEDMV1**](ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedimportintoedmv1) | **POST** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/importIntoEDM | Import attachments into the Inscriptionnotauthenticated
+[**inscriptionnotauthenticatedSyncDocumenttypechecklistV1**](ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedsyncdocumenttypechecklistv1) | **POST** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/syncDocumenttypechecklist | Synchronize Document type checklist
 
 
 # **inscriptionnotauthenticatedBatchDownloadV1**
@@ -351,6 +353,51 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **inscriptionnotauthenticatedGetDocumenttypechecklistV1**
+> InscriptionnotauthenticatedGetDocumenttypechecklistV1Response inscriptionnotauthenticatedGetDocumenttypechecklistV1(pkiInscriptionnotauthenticatedID)
+
+Retrieve Document type checklist
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectInscriptionnotauthenticatedApi();
+final pkiInscriptionnotauthenticatedID = 56; // int | 
+
+try {
+    final result = api_instance.inscriptionnotauthenticatedGetDocumenttypechecklistV1(pkiInscriptionnotauthenticatedID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectInscriptionnotauthenticatedApi->inscriptionnotauthenticatedGetDocumenttypechecklistV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiInscriptionnotauthenticatedID** | **int**|  | 
+
+### Return type
+
+[**InscriptionnotauthenticatedGetDocumenttypechecklistV1Response**](InscriptionnotauthenticatedGetDocumenttypechecklistV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **inscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1**
 > InscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1Response inscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1(pkiInscriptionnotauthenticatedID)
 
@@ -537,6 +584,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**InscriptionnotauthenticatedImportIntoEDMV1Response**](InscriptionnotauthenticatedImportIntoEDMV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **inscriptionnotauthenticatedSyncDocumenttypechecklistV1**
+> InscriptionnotauthenticatedSyncDocumenttypechecklistV1Response inscriptionnotauthenticatedSyncDocumenttypechecklistV1(pkiInscriptionnotauthenticatedID, body)
+
+Synchronize Document type checklist
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectInscriptionnotauthenticatedApi();
+final pkiInscriptionnotauthenticatedID = 56; // int | 
+final body = Object(); // Object | 
+
+try {
+    final result = api_instance.inscriptionnotauthenticatedSyncDocumenttypechecklistV1(pkiInscriptionnotauthenticatedID, body);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectInscriptionnotauthenticatedApi->inscriptionnotauthenticatedSyncDocumenttypechecklistV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiInscriptionnotauthenticatedID** | **int**|  | 
+ **body** | **Object**|  | [optional] 
+
+### Return type
+
+[**InscriptionnotauthenticatedSyncDocumenttypechecklistV1Response**](InscriptionnotauthenticatedSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

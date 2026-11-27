@@ -16,8 +16,10 @@ Method | HTTP request | Description
 [**customerGetCommunicationListV1**](ObjectCustomerApi.md#customergetcommunicationlistv1) | **GET** /1/object/customer/{pkiCustomerID}/getCommunicationList | Retrieve Communication list
 [**customerGetCommunicationrecipientsV1**](ObjectCustomerApi.md#customergetcommunicationrecipientsv1) | **GET** /1/object/customer/{pkiCustomerID}/getCommunicationrecipients | Retrieve Communication recipients
 [**customerGetCommunicationsendersV1**](ObjectCustomerApi.md#customergetcommunicationsendersv1) | **GET** /1/object/customer/{pkiCustomerID}/getCommunicationsenders | Retrieve Communication senders
+[**customerGetDocumenttypechecklistV1**](ObjectCustomerApi.md#customergetdocumenttypechecklistv1) | **GET** /1/object/customer/{pkiCustomerID}/getDocumenttypechecklist | Retrieve Document type checklist
 [**customerGetObjectV2**](ObjectCustomerApi.md#customergetobjectv2) | **GET** /2/object/customer/{pkiCustomerID} | Retrieve an existing Customer
 [**customerImportIntoEDMV1**](ObjectCustomerApi.md#customerimportintoedmv1) | **POST** /1/object/customer/{pkiCustomerID}/importIntoEDM | Import attachments into the Customer
+[**customerSyncDocumenttypechecklistV1**](ObjectCustomerApi.md#customersyncdocumenttypechecklistv1) | **POST** /1/object/customer/{pkiCustomerID}/syncDocumenttypechecklist | Synchronize Document type checklist
 
 
 # **customerBatchDownloadV1**
@@ -345,6 +347,51 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **customerGetDocumenttypechecklistV1**
+> CustomerGetDocumenttypechecklistV1Response customerGetDocumenttypechecklistV1(pkiCustomerID)
+
+Retrieve Document type checklist
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectCustomerApi();
+final pkiCustomerID = 56; // int | 
+
+try {
+    final result = api_instance.customerGetDocumenttypechecklistV1(pkiCustomerID);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectCustomerApi->customerGetDocumenttypechecklistV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiCustomerID** | **int**|  | 
+
+### Return type
+
+[**CustomerGetDocumenttypechecklistV1Response**](CustomerGetDocumenttypechecklistV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **customerGetObjectV2**
 > CustomerGetObjectV2Response customerGetObjectV2(pkiCustomerID)
 
@@ -429,6 +476,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CustomerImportIntoEDMV1Response**](CustomerImportIntoEDMV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **customerSyncDocumenttypechecklistV1**
+> CustomerSyncDocumenttypechecklistV1Response customerSyncDocumenttypechecklistV1(pkiCustomerID, body)
+
+Synchronize Document type checklist
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Authorization
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Authorization').apiKeyPrefix = 'Bearer';
+
+final api_instance = ObjectCustomerApi();
+final pkiCustomerID = 56; // int | 
+final body = Object(); // Object | 
+
+try {
+    final result = api_instance.customerSyncDocumenttypechecklistV1(pkiCustomerID, body);
+    print(result);
+} catch (e) {
+    print('Exception when calling ObjectCustomerApi->customerSyncDocumenttypechecklistV1: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiCustomerID** | **int**|  | 
+ **body** | **Object**|  | [optional] 
+
+### Return type
+
+[**CustomerSyncDocumenttypechecklistV1Response**](CustomerSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

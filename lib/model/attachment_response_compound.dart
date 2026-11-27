@@ -559,7 +559,7 @@ class AttachmentResponseCompound {
   ///
   int? fkiDocumenttypechecklistID;
 
-  /// The name of the Documenttype in the language of the requester
+  /// The name of the document type in the requester's language
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -679,10 +679,10 @@ class AttachmentResponseCompound {
   /// The MD5 of the Attachment
   String sAttachmentMD5;
 
-  /// Whether if it's deleted
+  /// Whether the Attachment is deleted or not
   bool bAttachmentDeleted;
 
-  /// Whether if it's valid
+  /// Whether the Attachment is valid or not
   bool bAttachmentValid;
 
   FieldEAttachmentVerified eAttachmentVerified;

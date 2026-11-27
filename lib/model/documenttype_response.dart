@@ -19,7 +19,6 @@ class DocumenttypeResponse {
     required this.sDocumenttypeDefaultfilename,
     required this.bDocumenttypeShowagent,
     required this.bDocumenttypeIsactive,
-    required this.bDocumenttypeIsrequired,
     this.bDocumenttypeSale,
     this.bDocumenttypeRental,
     this.bDocumenttypeReference,
@@ -50,19 +49,16 @@ class DocumenttypeResponse {
 
   ComputedEDocumenttypeStep eDocumenttypeStep;
 
-  /// The defaultfilename of the Documenttype
+  /// The default filename for the document type
   String sDocumenttypeDefaultfilename;
 
-  /// Whether if it's an showagent
+  /// Whether the document type should be shown to the agent
   bool bDocumenttypeShowagent;
 
   /// Whether the documenttype is active or not
   bool bDocumenttypeIsactive;
 
-  /// Whether if it's an isrequired
-  bool bDocumenttypeIsrequired;
-
-  /// Whether if it's an sale
+  /// Whether the document type applies to sale transactions
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -71,7 +67,7 @@ class DocumenttypeResponse {
   ///
   bool? bDocumenttypeSale;
 
-  /// Whether if it's an rental
+  /// Whether the document type applies to rental transactions
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -80,7 +76,7 @@ class DocumenttypeResponse {
   ///
   bool? bDocumenttypeRental;
 
-  /// Whether if it's an reference
+  /// Whether the document type is a reference document
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -89,7 +85,7 @@ class DocumenttypeResponse {
   ///
   bool? bDocumenttypeReference;
 
-  /// Whether if it's an mortgagereference
+  /// Whether the document type is a mortgage reference
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -98,7 +94,7 @@ class DocumenttypeResponse {
   ///
   bool? bDocumenttypeMortgagereference;
 
-  /// Whether if it's an evaluation
+  /// Whether the document type applies to evaluation transactions
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -107,7 +103,7 @@ class DocumenttypeResponse {
   ///
   bool? bDocumenttypeEvaluation;
 
-  /// Whether if it's an consultation
+  /// Whether the document type applies to consultation transactions
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -116,7 +112,7 @@ class DocumenttypeResponse {
   ///
   bool? bDocumenttypeConsultation;
 
-  /// Whether if it's an otherservices
+  /// Whether the document type applies to other services
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -125,7 +121,7 @@ class DocumenttypeResponse {
   ///
   bool? bDocumenttypeOtherservices;
 
-  /// Whether if it's an foreclosedsale
+  /// Whether the document type applies to foreclosed sale transactions
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -134,7 +130,7 @@ class DocumenttypeResponse {
   ///
   bool? bDocumenttypeForeclosedsale;
 
-  /// Whether if it's an commercialfunding
+  /// Whether the document type applies to commercial funding transactions
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -143,7 +139,7 @@ class DocumenttypeResponse {
   ///
   bool? bDocumenttypeCommercialfunding;
 
-  /// Whether if it's an canafe
+  /// Whether the document type applies to Canafe transactions
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -218,7 +214,6 @@ class DocumenttypeResponse {
     other.sDocumenttypeDefaultfilename == sDocumenttypeDefaultfilename &&
     other.bDocumenttypeShowagent == bDocumenttypeShowagent &&
     other.bDocumenttypeIsactive == bDocumenttypeIsactive &&
-    other.bDocumenttypeIsrequired == bDocumenttypeIsrequired &&
     other.bDocumenttypeSale == bDocumenttypeSale &&
     other.bDocumenttypeRental == bDocumenttypeRental &&
     other.bDocumenttypeReference == bDocumenttypeReference &&
@@ -247,7 +242,6 @@ class DocumenttypeResponse {
     (sDocumenttypeDefaultfilename.hashCode) +
     (bDocumenttypeShowagent.hashCode) +
     (bDocumenttypeIsactive.hashCode) +
-    (bDocumenttypeIsrequired.hashCode) +
     (bDocumenttypeSale == null ? 0 : bDocumenttypeSale!.hashCode) +
     (bDocumenttypeRental == null ? 0 : bDocumenttypeRental!.hashCode) +
     (bDocumenttypeReference == null ? 0 : bDocumenttypeReference!.hashCode) +
@@ -268,7 +262,7 @@ class DocumenttypeResponse {
     (aFkiInscriptiontypeID.hashCode);
 
   @override
-  String toString() => 'DocumenttypeResponse[pkiDocumenttypeID=$pkiDocumenttypeID, objDocumenttypeName=$objDocumenttypeName, eDocumenttypeStep=$eDocumenttypeStep, sDocumenttypeDefaultfilename=$sDocumenttypeDefaultfilename, bDocumenttypeShowagent=$bDocumenttypeShowagent, bDocumenttypeIsactive=$bDocumenttypeIsactive, bDocumenttypeIsrequired=$bDocumenttypeIsrequired, bDocumenttypeSale=$bDocumenttypeSale, bDocumenttypeRental=$bDocumenttypeRental, bDocumenttypeReference=$bDocumenttypeReference, bDocumenttypeMortgagereference=$bDocumenttypeMortgagereference, bDocumenttypeEvaluation=$bDocumenttypeEvaluation, bDocumenttypeConsultation=$bDocumenttypeConsultation, bDocumenttypeOtherservices=$bDocumenttypeOtherservices, bDocumenttypeForeclosedsale=$bDocumenttypeForeclosedsale, bDocumenttypeCommercialfunding=$bDocumenttypeCommercialfunding, bDocumenttypeCanafe=$bDocumenttypeCanafe, eDocumenttypeEzcom=$eDocumenttypeEzcom, eDocumenttypePrivacydefault=$eDocumenttypePrivacydefault, eDocumenttypeStatusdefault=$eDocumenttypeStatusdefault, eDocumenttypeSalebyowner=$eDocumenttypeSalebyowner, eDocumenttypeSaledisplaybyrole=$eDocumenttypeSaledisplaybyrole, eDocumenttypeTransactiontype=$eDocumenttypeTransactiontype, eDocumenttypeRepossession=$eDocumenttypeRepossession, aFkiInscriptiontypeID=$aFkiInscriptiontypeID]';
+  String toString() => 'DocumenttypeResponse[pkiDocumenttypeID=$pkiDocumenttypeID, objDocumenttypeName=$objDocumenttypeName, eDocumenttypeStep=$eDocumenttypeStep, sDocumenttypeDefaultfilename=$sDocumenttypeDefaultfilename, bDocumenttypeShowagent=$bDocumenttypeShowagent, bDocumenttypeIsactive=$bDocumenttypeIsactive, bDocumenttypeSale=$bDocumenttypeSale, bDocumenttypeRental=$bDocumenttypeRental, bDocumenttypeReference=$bDocumenttypeReference, bDocumenttypeMortgagereference=$bDocumenttypeMortgagereference, bDocumenttypeEvaluation=$bDocumenttypeEvaluation, bDocumenttypeConsultation=$bDocumenttypeConsultation, bDocumenttypeOtherservices=$bDocumenttypeOtherservices, bDocumenttypeForeclosedsale=$bDocumenttypeForeclosedsale, bDocumenttypeCommercialfunding=$bDocumenttypeCommercialfunding, bDocumenttypeCanafe=$bDocumenttypeCanafe, eDocumenttypeEzcom=$eDocumenttypeEzcom, eDocumenttypePrivacydefault=$eDocumenttypePrivacydefault, eDocumenttypeStatusdefault=$eDocumenttypeStatusdefault, eDocumenttypeSalebyowner=$eDocumenttypeSalebyowner, eDocumenttypeSaledisplaybyrole=$eDocumenttypeSaledisplaybyrole, eDocumenttypeTransactiontype=$eDocumenttypeTransactiontype, eDocumenttypeRepossession=$eDocumenttypeRepossession, aFkiInscriptiontypeID=$aFkiInscriptiontypeID]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -278,7 +272,6 @@ class DocumenttypeResponse {
       json[r'sDocumenttypeDefaultfilename'] = this.sDocumenttypeDefaultfilename;
       json[r'bDocumenttypeShowagent'] = this.bDocumenttypeShowagent;
       json[r'bDocumenttypeIsactive'] = this.bDocumenttypeIsactive;
-      json[r'bDocumenttypeIsrequired'] = this.bDocumenttypeIsrequired;
     if (this.bDocumenttypeSale != null) {
       json[r'bDocumenttypeSale'] = this.bDocumenttypeSale;
     } else {
@@ -391,8 +384,6 @@ class DocumenttypeResponse {
         assert(json[r'bDocumenttypeShowagent'] != null, 'Required key "DocumenttypeResponse[bDocumenttypeShowagent]" has a null value in JSON.');
         assert(json.containsKey(r'bDocumenttypeIsactive'), 'Required key "DocumenttypeResponse[bDocumenttypeIsactive]" is missing from JSON.');
         assert(json[r'bDocumenttypeIsactive'] != null, 'Required key "DocumenttypeResponse[bDocumenttypeIsactive]" has a null value in JSON.');
-        assert(json.containsKey(r'bDocumenttypeIsrequired'), 'Required key "DocumenttypeResponse[bDocumenttypeIsrequired]" is missing from JSON.');
-        assert(json[r'bDocumenttypeIsrequired'] != null, 'Required key "DocumenttypeResponse[bDocumenttypeIsrequired]" has a null value in JSON.');
         assert(json.containsKey(r'a_fkiInscriptiontypeID'), 'Required key "DocumenttypeResponse[a_fkiInscriptiontypeID]" is missing from JSON.');
         assert(json[r'a_fkiInscriptiontypeID'] != null, 'Required key "DocumenttypeResponse[a_fkiInscriptiontypeID]" has a null value in JSON.');
         return true;
@@ -405,7 +396,6 @@ class DocumenttypeResponse {
         sDocumenttypeDefaultfilename: mapValueOfType<String>(json, r'sDocumenttypeDefaultfilename')!,
         bDocumenttypeShowagent: mapValueOfType<bool>(json, r'bDocumenttypeShowagent')!,
         bDocumenttypeIsactive: mapValueOfType<bool>(json, r'bDocumenttypeIsactive')!,
-        bDocumenttypeIsrequired: mapValueOfType<bool>(json, r'bDocumenttypeIsrequired')!,
         bDocumenttypeSale: mapValueOfType<bool>(json, r'bDocumenttypeSale'),
         bDocumenttypeRental: mapValueOfType<bool>(json, r'bDocumenttypeRental'),
         bDocumenttypeReference: mapValueOfType<bool>(json, r'bDocumenttypeReference'),
@@ -479,7 +469,6 @@ class DocumenttypeResponse {
     'sDocumenttypeDefaultfilename',
     'bDocumenttypeShowagent',
     'bDocumenttypeIsactive',
-    'bDocumenttypeIsrequired',
     'a_fkiInscriptiontypeID',
   };
 }

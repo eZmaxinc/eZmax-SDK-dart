@@ -37,7 +37,7 @@ class InscriptionnotauthenticatedconditionResponse {
   /// Minimum value: 0
   int fkiInscriptionnotauthenticatedID;
 
-  /// Can access attachment when we clone a user
+  /// Whether the user can access attachments when their session is cloned
   bool bInscriptionnotauthenticatedconditionFilled;
 
   /// The date the Inscriptionnotauthenticatedcondition was completed

@@ -18,7 +18,7 @@ class ObjectAttachmentApi {
 
   /// Delete an existing attachment
   ///
-  /// Te endpoint allows to delete an attachment.
+  /// The endpoint allows to delete an attachment.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -56,7 +56,7 @@ class ObjectAttachmentApi {
 
   /// Delete an existing attachment
   ///
-  /// Te endpoint allows to delete an attachment.
+  /// The endpoint allows to delete an attachment.
   ///
   /// Parameters:
   ///
@@ -250,7 +250,7 @@ class ObjectAttachmentApi {
 
   /// Restore a deleted attachment
   ///
-  /// The endpoints allows to restore a previously deleted attachment.
+  /// The endpoint allows to restore a previously deleted attachment.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -288,7 +288,7 @@ class ObjectAttachmentApi {
 
   /// Restore a deleted attachment
   ///
-  /// The endpoints allows to restore a previously deleted attachment.
+  /// The endpoint allows to restore a previously deleted attachment.
   ///
   /// Parameters:
   ///
@@ -312,7 +312,7 @@ class ObjectAttachmentApi {
 
   /// Change attachment document type
   ///
-  /// The endpoint allows to change the checklist document type for an attachment.
+  /// The endpoint allows to change the document type for an attachment.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -350,7 +350,7 @@ class ObjectAttachmentApi {
 
   /// Change attachment document type
   ///
-  /// The endpoint allows to change the checklist document type for an attachment.
+  /// The endpoint allows to change the document type for an attachment.
   ///
   /// Parameters:
   ///

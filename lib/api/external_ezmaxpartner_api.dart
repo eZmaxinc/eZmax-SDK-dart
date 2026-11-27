@@ -16,9 +16,9 @@ class ExternalEzmaxpartnerApi {
 
   final ApiClient apiClient;
 
-  /// Subscribe to an Ezmaxparnerproductstage
+  /// Subscribe to an Ezmaxpartnerproductstage
   ///
-  /// Subscribe to an Ezmaxparnerproductstage
+  /// Subscribe to an Ezmaxpartnerproductstage
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -52,9 +52,9 @@ class ExternalEzmaxpartnerApi {
     );
   }
 
-  /// Subscribe to an Ezmaxparnerproductstage
+  /// Subscribe to an Ezmaxpartnerproductstage
   ///
-  /// Subscribe to an Ezmaxparnerproductstage
+  /// Subscribe to an Ezmaxpartnerproductstage
   ///
   /// Parameters:
   ///

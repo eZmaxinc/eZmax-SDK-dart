@@ -360,6 +360,60 @@ class ObjectOtherincomeApi {
     return null;
   }
 
+  /// Retrieve Document type checklist
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiOtherincomeID (required):
+  Future<Response> otherincomeGetDocumenttypechecklistV1WithHttpInfo(int pkiOtherincomeID, { Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/otherincome/{pkiOtherincomeID}/getDocumenttypechecklist'
+      .replaceAll('{pkiOtherincomeID}', pkiOtherincomeID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Retrieve Document type checklist
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiOtherincomeID (required):
+  Future<OtherincomeGetDocumenttypechecklistV1Response?> otherincomeGetDocumenttypechecklistV1(int pkiOtherincomeID, { Future<void>? abortTrigger, }) async {
+    final response = await otherincomeGetDocumenttypechecklistV1WithHttpInfo(pkiOtherincomeID, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'OtherincomeGetDocumenttypechecklistV1Response',) as OtherincomeGetDocumenttypechecklistV1Response;
+    
+    }
+    return null;
+  }
+
   /// Retrieve Otherincome list
   ///
   /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eOtherincomeRemunerationtype | Dollars<br>DollarsTaxesIncluded |
@@ -509,6 +563,64 @@ class ObjectOtherincomeApi {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'OtherincomeImportIntoEDMV1Response',) as OtherincomeImportIntoEDMV1Response;
+    
+    }
+    return null;
+  }
+
+  /// Synchronize Document type checklist
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiOtherincomeID (required):
+  ///
+  /// * [Object] body:
+  Future<Response> otherincomeSyncDocumenttypechecklistV1WithHttpInfo(int pkiOtherincomeID, { Object? body, Future<void>? abortTrigger, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/1/object/otherincome/{pkiOtherincomeID}/syncDocumenttypechecklist'
+      .replaceAll('{pkiOtherincomeID}', pkiOtherincomeID.toString());
+
+    // ignore: prefer_final_locals
+    Object? postBody = body;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
+    );
+  }
+
+  /// Synchronize Document type checklist
+  ///
+  /// Parameters:
+  ///
+  /// * [int] pkiOtherincomeID (required):
+  ///
+  /// * [Object] body:
+  Future<OtherincomeSyncDocumenttypechecklistV1Response?> otherincomeSyncDocumenttypechecklistV1(int pkiOtherincomeID, { Object? body, Future<void>? abortTrigger, }) async {
+    final response = await otherincomeSyncDocumenttypechecklistV1WithHttpInfo(pkiOtherincomeID, body: body, abortTrigger: abortTrigger,);
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'OtherincomeSyncDocumenttypechecklistV1Response',) as OtherincomeSyncDocumenttypechecklistV1Response;
     
     }
     return null;

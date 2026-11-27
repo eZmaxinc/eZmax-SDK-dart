@@ -71,7 +71,7 @@ class ActivesessionResponse {
   /// Whether the active session is superadmin or not
   bool bActivesessionIssuperadmin;
 
-  /// Can access attachment when we clone a user
+  /// Whether the user can access attachments when their session is cloned
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
