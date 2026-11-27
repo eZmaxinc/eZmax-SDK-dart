@@ -1339,12 +1339,6 @@ class ApiClient {
           return DiscussionmessageResponse.fromJson(value);
         case 'DiscussionmessageResponseCompound':
           return DiscussionmessageResponseCompound.fromJson(value);
-        case 'DocumenttypechecklistPatchObjectV1Request':
-          return DocumenttypechecklistPatchObjectV1Request.fromJson(value);
-        case 'DocumenttypechecklistPatchObjectV1Response':
-          return DocumenttypechecklistPatchObjectV1Response.fromJson(value);
-        case 'DocumenttypechecklistRequestPatch':
-          return DocumenttypechecklistRequestPatch.fromJson(value);
         case 'DomainAutocompleteElementResponse':
           return DomainAutocompleteElementResponse.fromJson(value);
         case 'DomainCreateObjectV1Request':
@@ -3381,8 +3375,6 @@ class ApiClient {
           return FieldEDiscussionRobotTypeTransformer().decode(value);
         case 'FieldEDiscussionmessageStatus':
           return FieldEDiscussionmessageStatusTypeTransformer().decode(value);
-        case 'FieldEDocumenttypechecklistStatus':
-          return FieldEDocumenttypechecklistStatusTypeTransformer().decode(value);
         case 'FieldEErrorCode':
           return FieldEErrorCodeTypeTransformer().decode(value);
         case 'FieldEEzdoctemplatedocumentPrivacylevel':

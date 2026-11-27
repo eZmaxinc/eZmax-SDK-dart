@@ -199,9 +199,6 @@ String parameterToString(dynamic value) {
   if (value is FieldEDiscussionmessageStatus) {
     return FieldEDiscussionmessageStatusTypeTransformer().encode(value).toString();
   }
-  if (value is FieldEDocumenttypechecklistStatus) {
-    return FieldEDocumenttypechecklistStatusTypeTransformer().encode(value).toString();
-  }
   if (value is FieldEErrorCode) {
     return FieldEErrorCodeTypeTransformer().encode(value).toString();
   }

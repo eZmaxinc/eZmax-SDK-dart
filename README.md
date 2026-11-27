@@ -232,7 +232,6 @@ Class | Method | HTTP request | Description
 *ObjectDiscussionmessageApi* | [**discussionmessageCreateObjectV1**](doc//ObjectDiscussionmessageApi.md#discussionmessagecreateobjectv1) | **POST** /1/object/discussionmessage | Create a new Discussionmessage
 *ObjectDiscussionmessageApi* | [**discussionmessageDeleteObjectV1**](doc//ObjectDiscussionmessageApi.md#discussionmessagedeleteobjectv1) | **DELETE** /1/object/discussionmessage/{pkiDiscussionmessageID} | Delete an existing Discussionmessage
 *ObjectDiscussionmessageApi* | [**discussionmessagePatchObjectV1**](doc//ObjectDiscussionmessageApi.md#discussionmessagepatchobjectv1) | **PATCH** /1/object/discussionmessage/{pkiDiscussionmessageID} | Patch an existing Discussionmessage
-*ObjectDocumenttypechecklistApi* | [**documenttypechecklistPatchObjectV1**](doc//ObjectDocumenttypechecklistApi.md#documenttypechecklistpatchobjectv1) | **PATCH** /1/object/documenttypechecklist/{pkiDocumenttypechecklistID} | Patch an existing Documenttypechecklist
 *ObjectDomainApi* | [**domainCreateObjectV1**](doc//ObjectDomainApi.md#domaincreateobjectv1) | **POST** /1/object/domain | Create a new Domain
 *ObjectDomainApi* | [**domainDeleteObjectV1**](doc//ObjectDomainApi.md#domaindeleteobjectv1) | **DELETE** /1/object/domain/{pkiDomainID} | Delete an existing Domain
 *ObjectDomainApi* | [**domainGetAutocompleteV2**](doc//ObjectDomainApi.md#domaingetautocompletev2) | **GET** /2/object/domain/getAutocomplete/{sSelector} | Retrieve Domain and IDs
@@ -1403,9 +1402,6 @@ Class | Method | HTTP request | Description
  - [DiscussionmessageRequestPatch](doc//DiscussionmessageRequestPatch.md)
  - [DiscussionmessageResponse](doc//DiscussionmessageResponse.md)
  - [DiscussionmessageResponseCompound](doc//DiscussionmessageResponseCompound.md)
- - [DocumenttypechecklistPatchObjectV1Request](doc//DocumenttypechecklistPatchObjectV1Request.md)
- - [DocumenttypechecklistPatchObjectV1Response](doc//DocumenttypechecklistPatchObjectV1Response.md)
- - [DocumenttypechecklistRequestPatch](doc//DocumenttypechecklistRequestPatch.md)
  - [DomainAutocompleteElementResponse](doc//DomainAutocompleteElementResponse.md)
  - [DomainCreateObjectV1Request](doc//DomainCreateObjectV1Request.md)
  - [DomainCreateObjectV1Response](doc//DomainCreateObjectV1Response.md)
@@ -2424,7 +2420,6 @@ Class | Method | HTTP request | Description
  - [FieldEDisclosureInteresttype](doc//FieldEDisclosureInteresttype.md)
  - [FieldEDiscussionRobot](doc//FieldEDiscussionRobot.md)
  - [FieldEDiscussionmessageStatus](doc//FieldEDiscussionmessageStatus.md)
- - [FieldEDocumenttypechecklistStatus](doc//FieldEDocumenttypechecklistStatus.md)
  - [FieldEErrorCode](doc//FieldEErrorCode.md)
  - [FieldEEzdoctemplatedocumentPrivacylevel](doc//FieldEEzdoctemplatedocumentPrivacylevel.md)
  - [FieldEEzmaxinvoicingPaymenttype](doc//FieldEEzmaxinvoicingPaymenttype.md)
